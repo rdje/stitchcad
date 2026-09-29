@@ -175,7 +175,7 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0009`
 
 - ID: `SPINE.10`
-  Status: `pending`
+  Status: `done`
   Goal: keep project-owned scratch on the repository volume (defect **D16**) — the inherited probe
   suites call `mktemp -d`, which resolves to the system volume (`/var/folders/…` here) while the
   repository lives on another volume; pin scratch with a documented, scripted `TMPDIR` and give the
@@ -183,8 +183,14 @@ mechanically-enforced form:
   Acceptance: `make probes` runs every probe suite with `TMPDIR` inside `target/`; the pin is
   measured (`TMPDIR=… mktemp -d` prints a repository-volume path); all suites still report
   `probes: N pass / 0 fail`; no inherited file is edited (the pin is applied by the caller).
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — `make probes` → `5 suite(s) green`; 37 arms, 0 failures.
+  Commit: `STITCHCAD-SPINE-0010`
+  Residual, accepted and reported rather than hidden: `scripts/check_task_acceptance.sh` (shared,
+  NEUTRAL) still calls `mktemp -d` for a trap-cleaned scratch on every commit, so that one transient
+  directory lands wherever `TMPDIR` points. Pinning it would mean editing shared code or a NEUTRAL
+  hook; the scratch is removed by its own trap and persists nothing, so the accepted residual is
+  recorded here and the upstream suggestion (have the driver export a repo-local `TMPDIR`) is
+  reported with D15/D17.
 
 ## Current Frontier
 
@@ -194,8 +200,8 @@ mechanically-enforced form:
 | 0 | `SPINE.7` | `done` | taken in frontier order: D15 had to be measured before it could be owned |
 | 1 | `SPINE.8` | `done` | landed in frontier order: every code commit from here on is judged by it |
 | 2 | `SPINE.9` | `done` | landed in frontier order: it protects the layer-B index from the documented maintenance command |
-| 3 | `SPINE.10` | `pending` | **next** — scratch locality is a standing directive obligation, cheap once `make probes` exists |
-| 4 | `SPINE.1` | `pending` | identity before content, so the G0 spec chapters grow into a named book |
+| 3 | `SPINE.10` | `done` | landed in frontier order: one entry point, scratch on this volume |
+| 4 | `SPINE.1` | `pending` | **next** — identity before content, so the G0 spec chapters grow into a named book |
 | 5 | `SPINE.2` | `pending` | cleanup cadence is a session-directive obligation and cheap |
 | 6 | `SPINE.3` | `pending` | policy adoptions bind how every later claim and cap is written |
 | 7 | `SPINE.4` | `pending` | containment must exist before 18 spec chapters arrive |
@@ -335,7 +341,38 @@ the director rather than patched here (session directive §21: other repositorie
   new instruments and the pinned-instrument rule; D17 marked fixed in `PLANNING.md`;
   `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and the derived Knowledge Map updated.
 
-Leaves `.1`–`.5` and `.10` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.10` — one entry point for the probes, scratch on the repository volume (defect D16)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the inherited suites take their scratch from `mktemp -d`, which
+  resolves through `TMPDIR` to the system volume: `mktemp -d` →
+  `/var/folders/4h/29gg6nrx2pj9wfjkzc460hlr0000gn/T/tmp.F8p84psWRe` while the repository lives on
+  `/Volumes/SSD`, and `grep -ln 'mktemp -d' docs/tasks/artifacts/*/*.sh scripts/*.sh` →
+  `run_task_acceptance_probes.sh`, `run_waiver_routing_probes.sh`, `check_task_acceptance.sh`
+  (3 files, `rc=0`). Each suite builds throwaway **git repositories** there, so the project's
+  diagnostic work happened off-volume and its cleanup census could not see it.
+- [x] **ADDRESSED (verified)** — before: no single entry point and no pin
+  (`grep -c probes Makefile` at HEAD → `0`); after: `make probes` discovers every
+  `run_*probe*.sh` under `docs/tasks/artifacts/` and runs it with
+  `TMPDIR="$(CURDIR)/target/scratch"` → `make probes: 5 suite(s) green`, `exit=0`, with
+  `9 pass / 0 fail`, `7 pass / 0 fail`, `6 pass / 0 fail`, `10 pass / 0 fail`, `5 pass / 0 fail`
+  (37 arms). The pin is measured, not assumed:
+  `TMPDIR="$PWD/target/scratch" mktemp -d` →
+  `/Volumes/SSD/Documents/github/stitchcad/target/scratch/tmp.2n2Xkkjd4i`.
+- [x] **NO REGRESSION** — no inherited suite was edited (`git diff --stat HEAD --
+  docs/tasks/artifacts/task_acceptance/run_task_acceptance_probes.sh
+  docs/tasks/artifacts/waiver_routing/run_waiver_routing_probes.sh` → empty, `rc=0`); `make check` →
+  `test result: ok. 1 passed; 0 failed`; `scripts/check_doctrines.sh` →
+  `=== all doctrines green ===`, `exit=0`; `git status --short` after the run shows only the intended
+  edits, so nothing leaked into the tree.
+- [x] **FIX** — `Makefile`: a `probes` target (find + pinned `TMPDIR`, per-suite pass-through of
+  failure, a loud refusal when no suite is found) and a help line; `PROBE_TMPDIR` derived from
+  `$(CURDIR)` so the repository stays relocatable. The residual (the shared check's own transient
+  `mktemp -d`) is recorded in the leaf rather than patched into NEUTRAL files.
+- [x] **LOCKSTEP** — `TOOLBOX.md` names `make probes` as the entry point and keeps the pinned-
+  instrument rule; D16 marked fixed-with-residual in `PLANNING.md`; `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` updated.
+
+Leaves `.1`–`.5` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -391,6 +428,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.7` | `run_multileaf_shadowing_probe.sh`; `run_task_acceptance_probes.sh`; `bash -n`; `make check`; `scripts/check_doctrines.sh` | `probes: 6 pass / 0 fail`; `probes: 10 pass / 0 fail`; syntax clean; `test result: ok. 1 passed`; first attempt `exit=1` (D15 facet 3, diagnosed and fixed), then `rc=0` |
 | `2026-09-29` | `SPINE.8` | `run_fresh_evidence_probes.sh`; `check_fresh_acceptance_evidence.sh --self-test`; both inherited suites; `make check`; `scripts/check_doctrines.sh` | `probes: 9 pass / 0 fail`; `8 verdict controls + 6 extractor arms`; `probes: 10 pass / 0 fail`; `probes: 6 pass / 0 fail`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 | `2026-09-29` | `SPINE.9` | `run_update_scaffold_probes.sh`; `bash -n` ×2; the three other probe suites; `make check`; `scripts/check_doctrines.sh` | `probes: 7 pass / 0 fail`; syntax clean; `10/0`, `6/0`, `9/0`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
+| `2026-09-29` | `SPINE.10` | `make probes`; `TMPDIR=… mktemp -d`; `git diff --stat` on the inherited suites; `make check`; `scripts/check_doctrines.sh` | `5 suite(s) green` (37 arms, 0 fail); repo-volume path; no inherited edit; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 
 ## Commit Log
 
@@ -402,7 +440,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.7` | `STITCHCAD-SPINE-0007 (leaf SPINE.7): measure the multi-leaf acceptance-evidence hole` | probe + convention record; D15 published |
 | `SPINE.8` | `STITCHCAD-SPINE-0008 (leaf SPINE.8): require acceptance evidence fresh in the commit` | project doctrine + 9-arm probe; D15 facet 1 closed locally |
 | `SPINE.9` | `STITCHCAD-SPINE-0009 (leaf SPINE.9): guard project content in the scaffold updater` | D17 fixed; 7-arm probe suite + decision record |
-| `SPINE.1` … `.5`, `.10` | `pending` | — |
+| `SPINE.10` | `STITCHCAD-SPINE-0010 (leaf SPINE.10): one probe entry point, scratch on this volume` | D16 fixed (residual recorded) |
+| `SPINE.1` … `.5` | `pending` | — |
 
 ## Changelog
 
@@ -415,6 +454,9 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.10` landed — `make probes` runs all five suites with `TMPDIR` pinned under
+  `target/scratch`; D16 closed with one accepted residual (the shared check's trap-cleaned
+  `mktemp -d`), recorded rather than patched into NEUTRAL files.
 - `2026-09-29`: `SPINE.9` landed — the scaffold updater classifies files (NEUTRAL synced,
   PROJECT-CONTENT backed up and skipped), refuses a dirty tree, and writes nothing on `--dry-run`;
   7-arm probe suite and a layer-C record. D17 closed.

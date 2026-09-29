@@ -53,7 +53,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | Tree | Lane (roadmap source) | Status | Frontier (next leaf) | Owner |
 | --- | --- | --- | --- | --- |
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.3` — seed `G5`–`G7`, `V1`, `V2` + publish the coverage map | repo-local |
-| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.9` — guard the scaffold updater against clobbering project content (D17) | repo-local |
+| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.1` — de-template `README.md` and the mdBook identity | repo-local |
 | [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.1` — glossary of construction terms | repo-local |
 | [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `proposed` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
@@ -65,10 +65,13 @@ The remaining lanes — gates **G5–G7** and the parallel **V1/V2** tracks — 
 `PLANNING.3`, which also publishes the roadmap → tree coverage map. Until a tree exists, its lane's
 requirements are owned by that seeding leaf, so no roadmap clause is ever unowned.
 
-Execution order right now: `SPINE.9` → `SPINE.10` → `PLANNING.3` (G5–G7, V1, V2 + the coverage
-census) → `SPINE.1`–`.5` → `G0-CONTRACT.1`–`.18` → `G1-SLICE` …
-The two spine-integrity leaves come first because one protects the task-tree index from being
-overwritten (D17) and the other keeps scratch on the repository volume (D16); both are cheap and
-both would be expensive to discover late.
+Execution order right now: `SPINE.1`–`.5` (identity, cleanup cadence, policy adoptions, live-document
+containment, toolbox/knowledge map) → `PLANNING.3` (G5–G7, V1, V2 + the coverage census) →
+`G0-CONTRACT.1`–`.18` → `G1-SLICE` …
+The spine-integrity leaves (`.6`–`.10`) were taken first and are done: they protect the task-tree
+index from being overwritten, keep scratch on the repository volume, and make the acceptance gate
+attribute evidence to the leaf that earned it. `SPINE.1`–`.5` come before the G0 chapters on purpose —
+the book's identity and structure, the claim-verification standard and the size ceilings are the rules
+those 18 specification chapters are written under.
 G0 is a specification gate; its only code leaf is `.18` (the two skeleton crates + CI the roadmap's
 G0 CI clause requires).

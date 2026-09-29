@@ -43,10 +43,14 @@ agent should be able to reach for the right tool without reading the source. -->
 | fresh-evidence probe suite | does the fresh-evidence doctrine refuse stale evidence and still accept a co-staged documentation tree? | `bash docs/tasks/artifacts/fresh_evidence/run_fresh_evidence_probes.sh` → `probes: N pass / M fail` |
 | task-acceptance probe suite | does the inherited acceptance gate still hold its shipped properties? | `bash docs/tasks/artifacts/task_acceptance/run_task_acceptance_probes.sh` |
 | Rust gate | do fmt, clippy (deny warnings) and the tests pass? | `make check` |
+| all probe suites | does every diagnostic probe in the repository still discriminate? (scratch pinned to this volume) | `make probes` → per-suite `probes: N pass / M fail`, then `5 suite(s) green` |
 | Knowledge Map | is the derived orientation map in sync with its sources? | `knowledge-map/scripts/check_knowledge_map.sh`; regenerate with `knowledge-map/scripts/gen_knowledge_map.sh > "$(knowledge-map/scripts/gen_knowledge_map.sh --print-map-path)"` |
 
-⚠ Inherited probe suites call `mktemp -d`, which lands on the system volume; pin scratch to the
-repository volume with `TMPDIR="$PWD/target/scratch"` (defect D16, leaf `SPINE.10`).
+⚠ Run probe suites through `make probes`, which pins `TMPDIR` to `target/scratch` on the repository
+volume: the inherited suites call `mktemp -d`, which otherwise lands on the system volume (defect
+D16, leaf `SPINE.10`). The shared `scripts/check_task_acceptance.sh` still takes one trap-cleaned
+scratch directory from `mktemp -d` at commit time; that residual is recorded in the leaf, not
+patched into shared code.
 
 ⚠ Probes and checks must **pin the instrument they measure with**. This machine's `PATH` puts GNU
 coreutils ahead of BSD userland, so `stat -f %m` (BSD mtime) means "filesystem status of a file named

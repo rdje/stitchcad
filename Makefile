@@ -1,7 +1,7 @@
 # Makefile — standard commands. `make gate` = the doctrine enforcer; `make check` = Rust.
 SHELL := /usr/bin/env bash
 
-.PHONY: help gate check fmt clippy test book hooks bootstrap update-scaffold
+.PHONY: help gate check fmt clippy test book hooks bootstrap update-scaffold probes
 
 help:
 	@echo "make gate            - run the doctrine enforcer (scripts/check_doctrines.sh)"
@@ -13,6 +13,7 @@ help:
 	@echo "make hooks           - install the git hooks (core.hooksPath=.githooks)"
 	@echo "make bootstrap       - first-time project bootstrap"
 	@echo "make update-scaffold - pull the latest bedrock spine (set URL=<bedrock-repo>)"
+	@echo "make probes          - run every probe suite under docs/tasks/artifacts/ (scratch on this volume)"
 
 gate:
 	scripts/check_doctrines.sh
@@ -43,3 +44,20 @@ bootstrap:
 
 update-scaffold:
 	scripts/update_scaffold.sh $(URL)
+
+# Scratch stays on the REPOSITORY volume. The inherited probe suites call `mktemp -d`, which
+# otherwise resolves to the system temp directory — another volume on this machine — so their
+# throwaway repositories and logs leave the project (defect D16). The path is derived from
+# $(CURDIR) at run time and never hardcoded, so the repository stays relocatable.
+PROBE_TMPDIR := $(CURDIR)/target/scratch
+
+probes:
+	@mkdir -p "$(PROBE_TMPDIR)"
+	@rc=0; found=0; \
+	for p in $$(find docs/tasks/artifacts -type f -name 'run_*probe*.sh' | sort); do \
+	  found=$$((found+1)); echo "== $$p"; \
+	  TMPDIR="$(PROBE_TMPDIR)" bash "$$p" || rc=1; \
+	done; \
+	if [ "$$found" -eq 0 ]; then echo "make probes: no probe suites found under docs/tasks/artifacts/"; exit 1; fi; \
+	if [ "$$rc" -ne 0 ]; then echo "make probes: FAILED (at least one suite reported failures)"; exit 1; fi; \
+	echo "make probes: $$found suite(s) green (scratch under $(PROBE_TMPDIR))"

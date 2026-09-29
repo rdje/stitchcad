@@ -4,6 +4,27 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0010 — one probe entry point, scratch on the repository volume (leaf `SPINE.10`)
+
+- **Defect D16 fixed.** The inherited probe suites take their scratch from `mktemp -d`, which resolved
+  to `/var/folders/…` — the system volume — while the repository lives on `/Volumes/SSD`, and each
+  suite builds throwaway **git repositories** there (`grep -ln 'mktemp -d' docs/tasks/artifacts/*/*.sh
+  scripts/*.sh` → 3 files). `make probes` now discovers every `run_*probe*.sh` under
+  `docs/tasks/artifacts/` and runs it with `TMPDIR="$(CURDIR)/target/scratch"`, derived at run time so
+  the repository stays relocatable: `make probes: 5 suite(s) green`, `exit=0` — 37 arms across the
+  fresh-evidence (9), scaffold-sync (7), multi-leaf shadowing (6), task-acceptance (10) and
+  waiver-routing (5) suites.
+- **No inherited file was edited** — the pin is applied by the caller (`git diff --stat HEAD --` over
+  the two inherited suites → empty, `rc=0`), which keeps `scripts/update_scaffold.sh` able to sync them.
+- **One residual, recorded instead of hidden:** the shared `scripts/check_task_acceptance.sh` still
+  takes a trap-cleaned `mktemp -d` scratch at commit time, so that single transient directory lands
+  wherever `TMPDIR` points. Pinning it would mean editing shared code or a NEUTRAL hook; it persists
+  nothing, so it is accepted in the leaf and reported upstream with the suggestion that the driver
+  export a repo-local `TMPDIR`.
+- Validation: `make check` → `test result: ok. 1 passed; 0 failed`; `scripts/check_doctrines.sh` →
+  `=== all doctrines green ===`, `exit=0`; `git status --short` after the run shows only the intended
+  edits.
+
 ## STITCHCAD-SPINE-0009 — the scaffold updater can no longer clobber project content (leaf `SPINE.9`)
 
 - **Defect D17 fixed.** `scripts/update_scaffold.sh` carried one list described as "safe to overwrite
