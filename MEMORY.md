@@ -27,6 +27,7 @@
 
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
-- **Push:** 400-commit cadence; count with `git rev-list --count origin/main..HEAD` (`COMMIT.md`).
+- **Push:** 400-commit cadence, **plus** an immediate push whenever an unpushed commit touches CI, a
+  doctrine check, `.doctrine/` or `.githooks/` — derive it with `make push-due` (`COMMIT.md`).
 - **In-flight uncommitted work:** none.
 - **Blockers:** `G0-CONTRACT.14` needs named humans from the director (project owner, procurement).

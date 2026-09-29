@@ -233,6 +233,18 @@ mechanically-enforced form:
   Verification: recorded below — classification census over 7 representative paths, 7 probe suites green.
   Commit: `STITCHCAD-SPINE-0016`
 
+- ID: `SPINE.17`
+  Status: `done`
+  Goal: make the approved push-cadence exception mechanical — an unpushed commit that touches CI, a
+  doctrine check, the `.doctrine/` seams or the hooks owes a push immediately, because layer E4 is the
+  un-bypassable backstop and such a change is unverified until a runner executes it.
+  Acceptance: `COMMIT.md` states the exception and the deriving command; `make push-due` reports the
+  state and exits 1 when a push is owed; the "owed" arm is demonstrated against a revision known to
+  contain CI/doctrine changes; the refusal arm (no upstream / bogus base) is demonstrated.
+  Verification: recorded below — three arms observed, including the one that caught a defect in the
+  trigger list.
+  Commit: `STITCHCAD-SPINE-0017`
+
 - ID: `SPINE.5`
   Status: `pending`
   Goal: seed the orientation surfaces — `TOOLBOX.md` project-toolbox rows for the instruments
@@ -341,6 +353,7 @@ mechanically-enforced form:
 | 10 | `SPINE.13` | `pending` | roadmap navigation + per-section bounds: the `maintained_reference` debt |
 | 11 | `SPINE.14` | `done` | taken before `.4.3`: the ledger had to be inside its window before a baseline could be declared honestly |
 | 12 | `SPINE.15` | `pending` | settle D22 against a real renderer and adopt the wide-row convention |
+| — | `SPINE.17` | `done` | taken out of order: a director-approved rule is recorded when it is made |
 
 ## Decisions
 
@@ -835,6 +848,42 @@ the director rather than patched here (session directive §21: other repositorie
   per `decision_product-work-takes-the-frontier.md`: a spine slice is legitimate when it blocks the
   product slice about to be taken, and this one was refusing it.
 
+### `SPINE.17` — the push-cadence exception, derived rather than remembered
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `COMMIT.md`'s Push cadence section had exactly one escape ("the
+  director asks"), so a change to CI or to a doctrine check could sit unpushed for 400 commits with no
+  runner ever executing it: `git show HEAD~1:COMMIT.md | grep -c 'workflow'` → `0`, `rc=1`. This is not
+  hypothetical for this repository — `eb83f01` rewrote `.github/workflows/rust.yml` (adding the
+  `wasm32-unknown-unknown` target and the smoketest step) and that workflow had never executed anywhere
+  until the exceptional push; and the platform risk is measured, not imagined: BSD awk on this machine
+  lacks `\b` and `{n}`, and its `PATH` shadows BSD userland with GNU coreutils, so a gate can be green
+  here and behave differently on the ubuntu runner.
+- [x] **ADDRESSED (verified)** — `scripts/check_push_due.sh` derives the obligation from git and prints
+  it: `bash scripts/check_push_due.sh` → `push-due: branch main vs origin/main — 0 unpushed commit(s),
+  cadence 400` / `nothing to push.`, `exit=0`. The **owed** arm, against the revision before the
+  workflow change: `PUSH_DUE_BASE=051a075 bash scripts/check_push_due.sh` → `EXCEPTIONAL PUSH DUE —
+  6 unpushed file(s) under CI/doctrine paths are unverified by CI` listing `.github/workflows/rust.yml`,
+  `scripts/check_live_doc_size.sh`, `scripts/check_doctrines.project.sh` and the three `.doctrine/`
+  files, `exit=1`. The refusal arm: `PUSH_DUE_BASE=nope-not-a-ref …` → `REFUSED — … does not resolve to
+  a revision`, `exit=2`. `make push-due` is the entry point; `COMMIT.md` carries the rule and the
+  command; `TOOLBOX.md` names the question it answers.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0` (the new script is a
+  helper, not a registered doctrine: it reports an obligation, it does not judge the tree, so it must
+  not be able to block a commit); `make check` → `test result: ok. 3 passed; 0 failed`; `make probes` →
+  `7 suite(s) green`; `bash -n` clean.
+- [x] **FIX** — added the helper (base defaults to the branch upstream and is overridable, which is what
+  makes the "owed" arm testable without inventing unpushed commits), the `push-due` target, the
+  `COMMIT.md` exception and the `TOOLBOX.md` row. **The RED arm caught a defect in the first cut:** the
+  trigger list used the pathspec `scripts/check_`, which matches nothing because a git pathspec matches
+  whole path components unless it carries a wildcard — so every doctrine check script was silently
+  missed. It is now `scripts/check_*.sh`, and the file header records the lesson.
+- [x] **LOCKSTEP** — the observed CI verdict for the workflow change is recorded in
+  `G0-CONTRACT.18`'s Verification Log (`rust` and `doctrines` both `completed success` at `119946b`);
+  `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` updated. Known over-breadth, stated rather than hidden:
+  this helper matches its own trigger pattern although no runner executes it, so landing it owes one
+  further push — flagged to the director rather than pushed unilaterally, because the authorisation was
+  for one exceptional push.
+
 Leaves `.5`, `.13` and `.15` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
@@ -925,6 +974,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.14` | `STITCHCAD-SPINE-0014 (leaf SPINE.14): seal the inherited changelog into docs/history/` | hash-proven, lossless; ledger inside its window |
 | `SPINE.4.3` | `STITCHCAD-SPINE-0004c (leaf SPINE.4.3): enforce the containment registry` | D13 closed; 2nd project doctrine, 11 self-test arms + 4 probes |
 | `SPINE.16` | `STITCHCAD-SPINE-0016 (leaf SPINE.16): declare the code-path seam` | D25 fixed; prose is no longer judged as code |
+| `SPINE.17` | `STITCHCAD-SPINE-0017 (leaf SPINE.17): the push-cadence exception is derived` | `make push-due`; 3 arms observed |
 | `SPINE.4.3`, `SPINE.5`, `SPINE.13`, `SPINE.14`, `SPINE.15` | `pending` | — |
 
 ## Changelog

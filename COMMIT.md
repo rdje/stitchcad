@@ -96,8 +96,19 @@ apply to code changes.
   last slice committed. The remote never receives a partial unit of work.
 - Before pushing, run the full gate, not the focused checks: `make check`, `make gate`,
   `make probes` (session directive §16 — focused checks per commit, full CI before a push).
-- An earlier push happens only when the director asks for one. Never `--force`, never push a dirty
-  tree, never push a branch that is not this project's.
+- **Exception — CI and doctrine changes push immediately, cadence notwithstanding.** A commit that
+  touches `.github/workflows/`, a `scripts/check_*.sh` doctrine check, the `.doctrine/` seams those
+  checks read, or `.githooks/`, is *unverified until a runner executes it*: layer E4 is the
+  un-bypassable backstop, and a gate that has only ever run on one developer machine has not been
+  verified at all. Push as soon as the slice is committed, then record the **observed** CI verdict in
+  the owning leaf — never before observing it. Derive whether one is owed instead of remembering it:
+
+  ```bash
+  make push-due      # scripts/check_push_due.sh — exit 1 when an exceptional push is due
+  ```
+
+- Any other earlier push happens only when the director asks for one. Never `--force`, never push a
+  dirty tree, never push a branch that is not this project's.
 - **Recorded trade-off, so it is not rediscovered as a surprise:** `MEMORY_ARCHITECTURE.md` §8 asks for
   regular pushes because an unpushed commit dies with the machine, and §13's durability matrix marks
   machine loss as covered only when the work is pushed. A 400-commit cadence deliberately trades that

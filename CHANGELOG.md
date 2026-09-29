@@ -105,6 +105,37 @@ recent entries; when it passes its health target again, the oldest are sealed th
 - Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed;
   0 failed`; `make probes` → `7 suite(s) green`; `bash -n` clean.
 
+## STITCHCAD-SPINE-0017 — the push-cadence exception is derived, not remembered (leaf `SPINE.17`)
+
+- **Director-approved rule change.** The cadence stays 400 commits, with one exception: a commit that
+  touches `.github/workflows/`, a `scripts/check_*.sh` doctrine check, the `.doctrine/` seams those
+  checks read, or `.githooks/` owes a push immediately — because layer E4 is the un-bypassable backstop
+  and such a change is *unverified until a runner executes it*. `COMMIT.md` carries the rule and the
+  deriving command; `make push-due` (`scripts/check_push_due.sh`) reports the state and exits 1 when a
+  push is owed, listing the triggering files.
+- **It is not hypothetical here.** `eb83f01` rewrote `.github/workflows/rust.yml` to add the
+  `wasm32-unknown-unknown` target and its smoketest step, and that workflow had never executed anywhere
+  until the exceptional push. And the platform risk is measured: this machine's BSD awk lacks `\b` and
+  `{n}`, and its `PATH` shadows BSD userland with GNU coreutils — a gate can be green here and behave
+  differently on the ubuntu runner.
+- **Three arms observed:** not-owed (`0 unpushed commit(s)`, `exit=0`); owed
+  (`PUSH_DUE_BASE=051a075 …` → `EXCEPTIONAL PUSH DUE — 6 unpushed file(s) … unverified by CI`, `exit=1`);
+  refused (`PUSH_DUE_BASE=nope-not-a-ref` → `exit=2`). The owed arm is testable because the comparison
+  base is overridable, so it needs no invented commits.
+- **The RED arm caught a defect in the first cut:** the trigger list used the pathspec
+  `scripts/check_`, which matches *nothing* — a git pathspec matches whole path components unless it
+  carries a wildcard — so every doctrine check script was silently missed. Now `scripts/check_*.sh`, with
+  the lesson recorded in the file header. Only the arm that compared against a revision *known* to
+  contain those files could reveal it.
+- **The exceptional push was made and CI observed, not assumed:** `git push origin main` →
+  `051a075..119946b`, and the Actions API for that head sha reports `runs: 2` with **`rust`
+  completed `success`** (the first execution of the new WASM smoketest step) and **`doctrines`
+  completed `success`**. The verdict is recorded in `G0-CONTRACT.18`'s Verification Log.
+- Known over-breadth, stated rather than hidden: the helper matches its own trigger pattern although no
+  runner executes it, so landing it owes one further push. Flagged to the director rather than pushed
+  unilaterally, since the authorisation was for one exceptional push.
+- Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 3 passed;
+  0 failed`; `make probes` → `7 suite(s) green`; `bash -n` clean.
 ## STITCHCAD-SPINE-0016 — prose is no longer judged as code (leaf `SPINE.16`)
 
 - **Defect D25, and it was blocking product work.** The spine's default code-path regex contains
