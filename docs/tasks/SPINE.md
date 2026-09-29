@@ -71,14 +71,14 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0001`
 
 - ID: `SPINE.2`
-  Status: `pending`
+  Status: `done`
   Goal: first artifact cleanup + the cadence record `docs/ARTIFACT_CLEANUP.md` (single latest
   entry: date + one-line summary). Owns defect D8.
   Acceptance: cleanup ran on the repository volume only (`target/`, stray `.log`/`.bin`,
   doctrine scratch dirs); a residue census proves what was removed is gone; `make check` still
   green afterwards; nothing tracked was deleted.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — 4 paths removed, residue census clean, all four make targets green.
+  Commit: `STITCHCAD-SPINE-0002`
 
 - ID: `SPINE.3`
   Status: `pending`
@@ -203,8 +203,8 @@ mechanically-enforced form:
 | 2 | `SPINE.9` | `done` | landed in frontier order: it protects the layer-B index from the documented maintenance command |
 | 3 | `SPINE.10` | `done` | landed in frontier order: one entry point, scratch on this volume |
 | 4 | `SPINE.1` | `done` | identity landed: README, book identity, the `spec/` part, and a clean `make book` |
-| 5 | `SPINE.2` | `pending` | **next** — cleanup cadence is a session-directive obligation and cheap |
-| 6 | `SPINE.3` | `pending` | policy adoptions bind how every later claim and cap is written |
+| 5 | `SPINE.2` | `done` | cleanup ran and the cadence now has a record a next session can read |
+| 6 | `SPINE.3` | `pending` | **next** — policy adoptions bind how every later claim and cap is written |
 | 7 | `SPINE.4` | `pending` | containment must exist before 18 spec chapters arrive |
 | 8 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 
@@ -407,7 +407,34 @@ the director rather than patched here (session directive §21: other repositorie
   `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` updated. The derived Knowledge Map regenerates in the
   hook; `knowledge-map/subsystems.md` rows are `SPINE.5`'s leaf, not this one.
 
-Leaves `.2`–`.5` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.2` — first artifact cleanup and its cadence record (defect D8)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `ls docs/ARTIFACT_CLEANUP.md` → `No such file or directory`, so
+  the 24-hour cadence had no record to read at startup and no way to be audited; meanwhile
+  regenerable artifacts had accumulated: `du -sk target/doctrine_scratch target/scratch
+  target/debug/incremental docs/book/book` → `188`, `0`, `896`, `1068` KB, and
+  `find . -path ./.git -prune -o -name '*.bin' -print | wc -l` → `9` (all cargo incremental caches
+  under `target/debug/incremental/`).
+- [x] **ADDRESSED (verified)** — removed exactly those four paths and nothing else: `du -sh target` →
+  `2.1M` before, `1.2M` after; `docs/book/book` → `1.1M` before, absent after. Residue census:
+  `target/doctrine_scratch`, `target/scratch`, `docs/book/book`, `target/debug/incremental` all report
+  `gone`, and the stray census (`find … -name '*.log' -o -name '*.bin' -o -name '.DS_Store'`) → `0`
+  remaining. The record `docs/ARTIFACT_CLEANUP.md` now exists with one entry (the latest run), the
+  safe / never-remove lists, and the instruction to read it at startup.
+- [x] **NO REGRESSION** — nothing tracked was touched:
+  `git ls-files | grep -cE '\.(log|bin|tmp)$|^target/|^docs/book/book/'` → `0` before and after, and
+  `git status --short` after the cleanup showed no deletion. Every documented command was re-run
+  against the cleaned tree: `make gate` → `=== all doctrines green ===`; `make check` →
+  `test result: ok. 1 passed; 0 failed` (rebuilding the incremental caches it had just removed);
+  `make book` → `INFO HTML book written to …`, `exit=0`; `make probes` → `5 suite(s) green`.
+- [x] **FIX** — deleted four regenerable, gitignored paths on the repository volume; created
+  `docs/ARTIFACT_CLEANUP.md` as the cadence record with the safe / never-remove policy so the next
+  session does not re-derive it. Deliberately kept `target/debug/deps` (current build cache: cheap to
+  keep, slow to rebuild) and said so in the record rather than leaving the choice implicit.
+- [x] **LOCKSTEP** — D8 marked fixed in `PLANNING.md`; `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md`
+  updated; no book chapter changes (the cleanup touches no user-visible behavior).
+
+Leaves `.3`–`.5` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -465,6 +492,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.9` | `run_update_scaffold_probes.sh`; `bash -n` ×2; the three other probe suites; `make check`; `scripts/check_doctrines.sh` | `probes: 7 pass / 0 fail`; syntax clean; `10/0`, `6/0`, `9/0`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 | `2026-09-29` | `SPINE.10` | `make probes`; `TMPDIR=… mktemp -d`; `git diff --stat` on the inherited suites; `make check`; `scripts/check_doctrines.sh` | `5 suite(s) green` (37 arms, 0 fail); repo-volume path; no inherited edit; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 | `2026-09-29` | `SPINE.1` | `check_readme_stability.sh`; `mdbook build docs/book`; `make check`; `make gate`; `make probes`; `git status --short` after the build | `README-STABILITY: OK — 103/300 lines, 6063/16384 bytes`; `exit=0`; `test result: ok. 1 passed`; `=== all doctrines green ===`; `5 suite(s) green`; no `??` entry |
+| `2026-09-29` | `SPINE.2` | before/after `du`; residue + stray censuses; `git ls-files` artifact census; `make gate`, `make check`, `make book`, `make probes` | `target` 2.1M → 1.2M; 4 paths `gone`; `0` strays; `0` tracked artifacts; all four targets green |
 
 ## Commit Log
 
@@ -478,7 +506,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.9` | `STITCHCAD-SPINE-0009 (leaf SPINE.9): guard project content in the scaffold updater` | D17 fixed; 7-arm probe suite + decision record |
 | `SPINE.10` | `STITCHCAD-SPINE-0010 (leaf SPINE.10): one probe entry point, scratch on this volume` | D16 fixed (residual recorded) |
 | `SPINE.1` | `STITCHCAD-SPINE-0001 (leaf SPINE.1): the repository introduces itself as StitchCAD` | D3, D4, D19 fixed |
-| `SPINE.2` … `.5` | `pending` | — |
+| `SPINE.2` | `STITCHCAD-SPINE-0002 (leaf SPINE.2): first artifact cleanup and its cadence record` | D8 fixed |
+| `SPINE.3` … `.5` | `pending` | — |
 
 ## Changelog
 
@@ -491,6 +520,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.2` landed — first artifact cleanup (four regenerable paths, `target`
+  2.1 MB → 1.2 MB) and the cadence record `docs/ARTIFACT_CLEANUP.md`. D8 closed.
 - `2026-09-29`: `SPINE.1` landed — README, mdBook identity, the introduction and the `spec/` part;
   `make book` output ignored (D19). D3 and D4 closed.
 - `2026-09-29`: `SPINE.10` landed — `make probes` runs all five suites with `TMPDIR` pinned under

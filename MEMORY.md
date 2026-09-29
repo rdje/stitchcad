@@ -16,17 +16,16 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe
   designs, versioned evidence-bearing Factory Profiles, deterministic artifact export
   (DXF/HPGL/PDF/tech pack), agent-first via MCP. `ROADMAP.md` v0.2, DRAFT until G0 exits.
-- **Active tree:** `SPINE` → frontier leaf `SPINE.2` (`pending`). `PLANNING.3` is parked mid-tree
+- **Active tree:** `SPINE` → frontier leaf `SPINE.3` (`pending`). `PLANNING.3` is parked mid-tree
   (repo clean) and resumes after the `SPINE` hygiene leaves.
-- **Next action:** run the first artifact cleanup and create its cadence record
-  `docs/ARTIFACT_CLEANUP.md` (single latest entry: absolute date + one-line summary), per the
-  session directive's 24 h rule. Sweep only what is provably safe: `target/` build and doctrine
-  scratch, stray `.log`/`.bin` files, `docs/book/book/` output — never a tracked file, never an
-  ambiguously shared global cache. Prove it with a before/after census and a residue census, keep
-  `make check` green afterwards, then commit `STITCHCAD-SPINE-0002 (leaf SPINE.2)`.
-- **Order after that:** `SPINE.3` (policy adoptions) → `SPINE.4` (live-doc containment) → `SPINE.5`
-  (toolbox/knowledge map) → `PLANNING.3` (G5–G7, V1, V2 + coverage census) → `G0-CONTRACT.1`–`.18`
-  → `G1-SLICE` …
+- **Next action:** adopt the director's external policy references into repository-owned copies —
+  refresh `README_POLICY.md` to the revised neutral body (authority/provenance, duplication probe,
+  routing-pressure closure, derived caps, unconditional check) behind a StitchCAD adoption note, and
+  adopt the claim-verification standard in-repo, wired into the bootstrap reading list. Copy content
+  in; never write to or build against another repository (defects D11, D12). Commit
+  `STITCHCAD-SPINE-0003 (leaf SPINE.3)`.
+- **Order after that:** `SPINE.4` (live-doc containment) → `SPINE.5` (toolbox/knowledge map) →
+  `PLANNING.3` (G5–G7, V1, V2 + coverage census) → `G0-CONTRACT.1`–`.18` → `G1-SLICE` …
 - **In-flight uncommitted work:** none.
 - **Blockers:** `G0-CONTRACT.14` needs named humans from the director (project owner,
   evaluation-seat/plotter procurement). It blocks only itself.

@@ -4,6 +4,25 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0002 — the first artifact cleanup, and a cadence a next session can read (leaf `SPINE.2`)
+
+- **Defect D8 fixed.** `docs/ARTIFACT_CLEANUP.md` did not exist, so the 24-hour cleanup cadence had
+  no record to read at startup and no way to be audited. It now carries one entry (the latest run, by
+  design — history is git's), the list of what is safe to remove, and the list of what is never
+  removed (tracked files, the current build cache, any shared global cache outside the repository).
+- **Cleanup run, measured:** removed four regenerable, gitignored paths — `target/doctrine_scratch`
+  (188 KB of doctrine self-test and debugging scratch), `target/scratch` (probe `TMPDIR`),
+  `target/debug/incremental` (896 KB, 9 `.bin` cargo caches) and `docs/book/book` (1 068 KB of mdBook
+  output). `target` went 2.1 MB → 1.2 MB. Residue census: all four paths `gone`, `0` stray
+  `*.log` / `*.bin` / `.DS_Store` files left.
+- **Nothing tracked was touched:** `git ls-files | grep -cE '\.(log|bin|tmp)$|^target/|^docs/book/book/'`
+  → `0` before and after; `git status --short` showed no deletion. `target/debug/deps` was deliberately
+  kept — current build cache, cheap to keep and slow to rebuild — and the record says so rather than
+  leaving the choice implicit.
+- Validation after the deletion, against the cleaned tree: `make gate` → `=== all doctrines green ===`;
+  `make check` → `test result: ok. 1 passed; 0 failed` (rebuilding exactly what was removed);
+  `make book` → `exit=0`; `make probes` → `5 suite(s) green`.
+
 ## STITCHCAD-SPINE-0001 — the repository introduces itself as StitchCAD (leaf `SPINE.1`)
 
 - **`README.md` is a StitchCAD landing page** (defect D3): what the product is, the three properties
