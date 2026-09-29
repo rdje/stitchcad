@@ -12,9 +12,9 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | --- | --- | --- |
 | Discipline spine (bedrock 0.6.1) | Done | memory · task-trees · commit workflow · doctrine gates · mdBook |
 | Roadmap → task-trees (`PLANNING`) | In Progress | `.1`, `.2` done: 7 trees, 87 leaves. `.3` owes G5–G7, V1, V2 + coverage census |
-| Repo identity & policy (`SPINE`) | In Progress | 12 of 17 leaves done. `.4.2` landed the containment data plane (17 surfaces, 15 routes, derived README caps). `.14` sealed the inherited changelog into `docs/history/` (hash-proven). Next `.4.3` checker, `.5` toolbox/map, `.13`/`.15` containment debt |
+| Repo identity & policy (`SPINE`) | In Progress | 13 of 17 leaves done: identity, policies, containment data plane, changelog sealed to `docs/history/`. Containment is now **enforced** (`LIVE-DOC-SIZE`, 2nd project doctrine). `.5`/`.13`/`.15` remain and block no product work |
 | Adopted policy set | Mostly Done | README policy, claim verification, containment doctrine + data plane in-repo; enforcement owed by `.4.3` |
-| Defect census | In Progress | 21 logged, 16 closed. Open: D7/D9 (`SPINE.5`), D13 (`SPINE.4.3`), D10 (`G1-SLICE.1`), D22 (`SPINE.15`) |
+| Defect census | In Progress | 22 logged, 18 closed. Open: D7/D9 (`SPINE.5`), D10 (`G1-SLICE.1`), D22 (`SPINE.15`) |
 | G0 — product & semantic contract | Not Started | 18 leaves mapped to the gate's exit clauses; spec only, except `.18` (skeleton crates + CI) |
 | G1 — executable architecture slice | Not Started | 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, spikes |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |

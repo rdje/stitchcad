@@ -4,6 +4,37 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0004c — declared ceilings become enforced ones (leaf `SPINE.4.3`)
+
+- **`LIVE-DOC-SIZE` is the second project doctrine** (`scripts/check_live_doc_size.sh`, 271 lines,
+  registered in `scripts/check_doctrines.project.sh`, so it runs in the hook and in CI unconditionally
+  and judges the resulting tree rather than the staged diff). Bash measures — lines, bytes, max content
+  line under `LC_ALL=C`, and for collections file count, per-part maxima and aggregates — one awk pass
+  evaluates every rule, which is what makes the evaluator testable against a synthetic registry without
+  touching the real tree.
+- **It refuses** on an unclassified tracked Markdown surface, a malformed registry row (field count,
+  unknown lifecycle or kind, missing owner/authority, non-numeric bound, a ceiling below its own health
+  target), an absolute or off-volume path in the data plane, a glob that silently matches nothing, a
+  line/byte/maxline/file-count/aggregate overflow, a widened transition-debt baseline, and a route whose
+  destination is unclassified or contradicts its lifecycle. It warns at 80 % of a health target.
+  `--self-test` → `11 arms, 0 failed`, one per refusal class plus a GREEN control.
+- **Coverage proven to have teeth, not assumed:** `run_live_doc_size_probes.sh` → `probes: 4 pass / 0 fail`,
+  where `REAL-2` deletes the `roadmap` row from a *copy* of the real registry and the check names
+  `ROADMAP.md` as an unclassified live surface, and `MISSING` proves an absent data plane refuses with
+  `exit=2` instead of reporting green over nothing. On the real tree:
+  `live-doc-size: OK — 17 surfaces, 15 routes, 41 files measured, 19 warning(s)`, `exit=0`.
+- **Three target corrections, each with its derivation stated rather than fitted to bloat:** `roadmap`
+  health set to `-` (a `maintained_reference` aggregate follows legitimate product scope, so a fixed
+  target would be dishonest — the debt baseline and ceiling govern); `doctrine_docs` per-part health
+  derived from the largest adopted standard (455 lines / 24 573 bytes) plus ~15 % for a local adoption
+  note; and one real fix — the widest `LIVE_STATUS.md` row trimmed from `303` to `207` bytes. Warnings
+  `21` → `19`, breaches `0`.
+- Remaining warnings are owned, not ignored: `decisions_collection` maxline at 153 % of target →
+  `SPINE.15`; `tasks_collection` per-part at 107 % → the convention recorded in its registry row;
+  `roadmap` navigation → `SPINE.13`. Defect D13 closed.
+- Validation: `make gate` → `=== all doctrines green ===`; `make probes` → `7 suite(s) green`;
+  `make check` → `test result: ok. 1 passed; 0 failed`.
+
 ## STITCHCAD-SPINE-0014 — the changelog becomes a ledger with an archive terminal (leaf `SPINE.14`)
 
 - **The inherited bedrock changelog is sealed out** of `CHANGELOG.md` into

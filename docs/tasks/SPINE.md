@@ -172,7 +172,7 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0004b`
 
 - ID: `SPINE.4.3`
-  Status: `pending`
+  Status: `done`
   Goal: the deterministic checker `scripts/check_live_doc_size.sh` registered in the project slot —
   fails on an unclassified surface, a missing owner/lifecycle/ceiling, an absolute or off-volume path
   in the data plane, a line/byte/max-line overflow past a ceiling, a ceiling raised without a recorded
@@ -180,8 +180,9 @@ mechanically-enforced form:
   health target. Plus a probe suite with a RED arm per refusal class.
   Acceptance: `make gate` runs it unconditionally (not staged-scoped); every refusal class has an arm
   seen to fire; the healthy tree passes; `TOOLBOX.md` names it; D13 closes.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — `--self-test` 11 arms (1 GREEN, 10 RED), probe suite `4 pass / 0 fail`,
+  real tree `OK — 17 surfaces, 15 routes, 41 files measured`, `exit=0`.
+  Commit: `STITCHCAD-SPINE-0004c`
 
 - ID: `SPINE.13`
   Status: `pending`
@@ -323,7 +324,7 @@ mechanically-enforced form:
 | 8 | `SPINE.4` | `active` | split into `.4.1`–`.4.3`; the doctrine is adopted, the data plane and the checker follow |
 | 8a | `SPINE.4.1` | `done` | the rules are in-repo, so `.4.2`/`.4.3` choose numbers under a stated contract |
 | 8b | `SPINE.4.2` | `done` | the data plane exists and three surfaces were trimmed before their targets were set |
-| 8c | `SPINE.4.3` | `pending` | **next** — declared rows are not gated rows; the checker makes them real and closes D13 |
+| 8c | `SPINE.4.3` | `done` | declared ceilings are enforced now; D13 closed |
 | 9 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 | 10 | `SPINE.13` | `pending` | roadmap navigation + per-section bounds: the `maintained_reference` debt |
 | 11 | `SPINE.14` | `done` | taken before `.4.3`: the ledger had to be inside its window before a baseline could be declared honestly |
@@ -756,7 +757,43 @@ the director rather than patched here (session directive §21: other repositorie
   passes its health target) is stated in the `changelog` registry row so the next author does not have
   to re-derive it.
 
-Leaves `.4.3`, `.5`, `.13` and `.15` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.4.3` — declared ceilings become enforced ones (defect D13 closed)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the data plane existed and nothing read it:
+  `git ls-tree -r --name-only HEAD | grep -c live_document_size` → `2` (both registries) while
+  `git ls-tree -r --name-only HEAD | grep -c check_live_doc_size` → `0` and
+  `git show HEAD:scripts/check_doctrines.project.sh` registered `1` project doctrine. A ceiling no
+  check reads is a wish: 17 surfaces carried owners, targets and ceilings that no gate would defend.
+- [x] **ADDRESSED (verified)** — `scripts/check_live_doc_size.sh` (271 lines) now measures the tree
+  (lines, bytes, max content line, and for collections file count / per-part / aggregate, all under
+  `LC_ALL=C`) and evaluates every rule in one awk pass: `bash scripts/check_live_doc_size.sh` →
+  `live-doc-size: OK — 17 surfaces, 15 routes, 41 files measured, 19 warning(s)`, `exit=0`.
+  `--self-test` → `11 arms, 0 failed`, one per refusal class (unclassified surface, unknown lifecycle,
+  missing owner, ceiling below health, absolute path, unclassified route destination, widened debt
+  baseline, silently empty glob, wrong field count, unparseable registry) plus a GREEN control.
+  The end-to-end probe adds what a synthetic registry cannot:
+  `bash docs/tasks/artifacts/live_doc_size/run_live_doc_size_probes.sh` → `probes: 4 pass / 0 fail`,
+  where `REAL-2` deletes the `roadmap` row from a COPY of the real registry and the check names
+  `ROADMAP.md` as an unclassified live surface — coverage proven to have teeth, not assumed.
+  Registered as the second project doctrine (`grep -cE '^  "[A-Z-]+\|' scripts/check_doctrines.project.sh`
+  → `2`), so it runs in the hook and in CI unconditionally.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `7 suite(s) green` (the new suite joins the six); `make check` → `test result: ok. 1 passed;
+  0 failed`. Tuning the targets removed two artefacts of my own target-setting rather than real
+  pressure — `roadmap` health set to `-` (a `maintained_reference` aggregate follows product scope, so a
+  fixed target would be dishonest; the debt baseline and ceiling govern) and `doctrine_docs` per-part
+  health derived from the largest adopted standard (455 lines / 24 573 bytes) plus ~15 % for a local
+  note — and one real fix: the widest `LIVE_STATUS.md` row trimmed from `303` to `207` bytes.
+  Warnings `21` → `19`, breaches `0`.
+- [x] **FIX** — added the checker (bash measures, awk evaluates, so the evaluator is testable on a
+  synthetic registry without touching the real tree) and the 4-arm probe suite; registered both in the
+  project slot and `TOOLBOX.md`; tuned three registry rows and recorded the derivation for each.
+- [x] **LOCKSTEP** — D13 marked fixed in `PLANNING.md`; `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md`
+  updated. Remaining warnings are owned, not ignored: `decisions_collection` maxline 153 % →
+  `SPINE.15`; `tasks_collection` per-part 107 % → the convention recorded in its registry row;
+  `roadmap` navigation → `SPINE.13`.
+
+Leaves `.5`, `.13` and `.15` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -822,6 +859,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.4.1` | `wc -lc` and section count on the adopted doctrine; donor-noun and absolute-path greps; `make gate`; `make check` | `386` lines / `23712` bytes, `12` sections; `0` donor nouns, `0` absolute paths; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `SPINE.4.2` | registry censuses (row + field counts, route→surface closure, path census); `wc -lc` and per-file maxline before/after the trims; `make gate`; `make check`; `make probes` | `17` surfaces × `21` fields, `15` routes × `8` fields, closure holds, `0` absolute paths; maxline `1758`→`255`, `1104`→`146`; `=== all doctrines green ===`; `test result: ok. 1 passed`; `6 suite(s) green` |
 | `2026-09-29` | `SPINE.14` | sha256 of the sealed segment vs `git show HEAD:CHANGELOG.md`; `wc -lc` before/after; entry censuses; `check_live_doc_size.sh`; `make gate`; `make check` | `BYTE-IDENTICAL: True`, `sha256:78f43e0f…`; ledger `522`/`42124` → `371`/`30713`; `6` sealed vs `0` in the ledger and `15` of ours; `OK — 17 surfaces, 15 routes, 41 files`; both gates green |
+| `2026-09-29` | `SPINE.4.3` | `check_live_doc_size.sh` on the real tree; `--self-test`; `run_live_doc_size_probes.sh`; `make gate`; `make probes`; `make check` | `OK — 17 surfaces, 15 routes, 41 files measured, 19 warning(s)`, `exit=0`; `11 arms, 0 failed`; `probes: 4 pass / 0 fail`; `=== all doctrines green ===`; `7 suite(s) green`; `test result: ok. 1 passed` |
 
 ## Commit Log
 
@@ -843,6 +881,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.4.1` | `STITCHCAD-SPINE-0004 (leaf SPINE.4.1): adopt the live-document containment doctrine` | partial adoption; deferrals named with triggers |
 | `SPINE.4.2` | `STITCHCAD-SPINE-0004b (leaf SPINE.4.2): the containment data plane` | 17 surfaces, 15 routes, derived README caps, 3 surfaces trimmed |
 | `SPINE.14` | `STITCHCAD-SPINE-0014 (leaf SPINE.14): seal the inherited changelog into docs/history/` | hash-proven, lossless; ledger inside its window |
+| `SPINE.4.3` | `STITCHCAD-SPINE-0004c (leaf SPINE.4.3): enforce the containment registry` | D13 closed; 2nd project doctrine, 11 self-test arms + 4 probes |
 | `SPINE.4.3`, `SPINE.5`, `SPINE.13`, `SPINE.14`, `SPINE.15` | `pending` | — |
 
 ## Changelog
@@ -856,6 +895,9 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.4.3` landed — the containment registry is enforced by a second project doctrine
+  (11 self-test arms, a 4-arm end-to-end probe, unconditional in hook and CI). D13 closed; the
+  remaining `SPINE` leaves (`.5`, `.13`, `.15`) block no product work and are deferred behind it.
 - `2026-09-29`: `SPINE.14` landed — the inherited bedrock changelog segment is sealed into
   `docs/history/` with hash-proven identity; `CHANGELOG.md` is a bounded ledger inside its window and
   its transition debt is cleared.

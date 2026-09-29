@@ -178,9 +178,11 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   `docs/TASK_TREE.md` with 12 trees) have no inventory, ceilings or ratchet
 - Reproduce: `wc -lc ROADMAP.md CHANGELOG.md docs/TASK_TREE.md`
 - Impact: bounded pointer, unbounded neighbours — the failure the containment guide exists to prevent
-- Owner: `SPINE.4` split into `.4.1` (doctrine adopted in-repo — **done**), `.4.2` (surface inventory,
-  derived ceilings, route registry, derived README caps) and `.4.3` (the deterministic checker + RED
-  arms)
+- Owner: `SPINE.4` (**fixed** across `.4.1`–`.4.3`) — doctrine adopted in-repo; 17 surfaces and 15
+  routes classified with derived ceilings; enforced by the `LIVE-DOC-SIZE` project doctrine
+  (`live-doc-size: OK — 17 surfaces, 15 routes, 41 files measured`, 11 self-test arms, 4 end-to-end
+  probes). Residual pressure is owned, not ignored: `SPINE.13` (roadmap navigation) and `SPINE.15`
+  (wide-row convention).
 
 - **D14** — the workspace lockfile is untracked, so the first `make check` in a fresh clone leaves the
   tree dirty
@@ -246,6 +248,19 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Owner: `SPINE.4.2` (**fixed** — the census is bounded prose entries now, so no cell contains a
     pipe; the escape-always convention for any future table is `SPINE.15`).
 
+- **D23** — the containment registry's `book_collection` row declared its glob as
+  `docs/book/src/**/*.md`, which under `git ls-files` pathspec semantics matches **only nested** files
+  and silently misses top-level chapters — so two of the three existing book files would have been
+  outside every per-part and aggregate bound, in the registry whose whole purpose is to leave no
+  surface unbounded.
+  - Reproduce: `git ls-files 'docs/book/src/**/*.md'` → `docs/book/src/spec/index.md` (1 file) while
+    `git ls-files 'docs/book/src/*.md'` → 3 files, `rc=0` both.
+  - Impact: a collection row that under-matches reports green while ungoverning most of the collection;
+    the failure is silent because an empty or small expansion is not an error.
+  - Owner: `SPINE.4.3` (**fixed** — the row now uses `docs/book/src/*.md`, the registry header records
+    the measured glob semantics, and the checker refuses a glob that matches nothing unless the row
+    declares `meas_files=0`).
+
 - **D22** — the inherited `scripts/check_table_arity.sh` documents its cell rule as "pipes NOT inside an
   inline code span" (lines 19–22) and self-tests that rule (line 73: *a pipe inside a code span is not a
   separator*), which is not what the GFM spec text says. The gate therefore cannot see the D21 class.
@@ -258,6 +273,23 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Owner: `SPINE.15` — settle it against a real GFM renderer, record the answer, and adopt the
     table-authoring convention (escape pipes inside code spans) whatever the answer is. The spine file
     itself is NEUTRAL, so an upstream fix is reported, not patched.
+
+- **D24** — a process defect, surfaced by the director rather than by any gate: of this project's first
+  17 commits, 15 were spine/governance slices and none was product work. No garment-domain
+  specification chapter and no line of `sc-*` code existed after a full session, and five of the ten
+  roadmap lanes still had no task-tree, while the spine kept yielding one more defect to chase.
+  - Reproduce: `git log --oneline | grep -cE 'leaf (SPINE|PLANNING)'` → `15`;
+    `git log --oneline | grep -c 'leaf G0-CONTRACT'` → `0`; `ls docs/book/src/spec/` → `index.md` only;
+    `git ls-files 'crates/*'` → the bedrock starter crate alone; and for the unowned lanes:
+    `for g in G5 G6 G7 V1 V2; do ls docs/tasks/${g}* >/dev/null 2>&1 || echo "$g unowned"; done`.
+  - Impact: real defects were genuinely fixed (a data-loss path in the scaffold updater, an unsound
+    acceptance gate, an unbounded live-document set), but governance work is self-rewarding and
+    infinitely discoverable, and nothing in the spine asks whether the frontier is still on the
+    product. The repository's reason to exist — the G0 semantic contract — stayed at zero.
+  - Owner: `PLANNING.3` and `PLANNING.4`. `PLANNING.3` completes the capture (the five missing trees
+    plus a coverage census that makes "every lane is owned" a re-derivable claim instead of an
+    intention); `PLANNING.4` records the sequencing rule in the layer-A pointer so the next session
+    inherits the priority instead of rediscovering the spine.
 
 - **D16** — the inherited probe suites scratch off-volume: they call `mktemp -d`, which resolves to the
   system volume while the repository lives on another one

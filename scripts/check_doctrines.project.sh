@@ -16,6 +16,7 @@
 # | ID | Proves | Check |
 # | --- | --- | --- |
 # | `FRESH-ACCEPTANCE-EVIDENCE` | a staged CODE change adds its OWN ticked, evidence-backed acceptance boxes in this commit — evidence committed for an earlier leaf cannot answer for it (closes defect D15 facet 1, which the universal first-match-per-file scan cannot see) | `scripts/check_fresh_acceptance_evidence.sh` |
+# | `LIVE-DOC-SIZE` | every tracked live document is classified in the containment data plane with an owner, lifecycle, health target and inclusive ceiling; every route ends at a classified destination; and the resulting TREE is inside those bounds (`LIVE_DOCUMENT_SIZE_CONTAINMENT.md`) | `scripts/check_live_doc_size.sh` |
 #
 # Adding a doctrine: write `scripts/check_<name>.sh` (cheap, deterministic, self-describing, with
 # `--self-test` arms including a control seen RED), append its row above, and register it in
@@ -26,6 +27,7 @@ ROOT="$(git rev-parse --show-toplevel)"; cd "$ROOT" || exit 1
 # Each entry: "ID|relative/path/to/check.sh"
 PROJECT_DOCTRINES=(
   "FRESH-ACCEPTANCE-EVIDENCE|scripts/check_fresh_acceptance_evidence.sh"
+  "LIVE-DOC-SIZE|scripts/check_live_doc_size.sh"
 )
 
 fails=0

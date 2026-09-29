@@ -16,14 +16,21 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs,
   versioned evidence-bearing Factory Profiles, deterministic artifact export, agent-first via MCP.
   `ROADMAP.md` v0.2, DRAFT until G0 exits.
-- **Active tree:** `SPINE` → frontier leaf `SPINE.4.3` (`active`).
-- **Next action:** write `scripts/check_live_doc_size.sh` and register it in the project doctrine slot:
-  read `.doctrine/live_document_size/{surfaces,routes}.tsv`, re-measure every surface (lines, bytes,
-  max content line, and for collections file count / per-part / aggregate), refuse on an unclassified
-  surface, a missing owner or ceiling, an absolute or off-volume path in the data plane, an overflow
-  past an inclusive ceiling, a widened debt baseline, a route to an unclassified destination, and a
-  field-count mismatch; warn at 80 % of a health target. Add a probe suite with a RED arm per refusal
-  class. Then commit `STITCHCAD-SPINE-0004c (leaf SPINE.4.3)`.
+- **Active tree:** `PLANNING` → frontier leaf `PLANNING.3` (`pending`). `SPINE` is parked with `.5`,
+  `.13`, `.15` open; none blocks product work.
+- **Next action:** finish the roadmap → tree capture: seed `G5-SHELLS`, `G6-CONFORMANCE`,
+  `G7-RELEASE`, `V1-ASSEMBLY`, `V2-SIM` (leaves at roadmap §11 exit-criterion granularity, each citing
+  its clause), add the coverage census tool `docs/tasks/artifacts/planning/run_tree_coverage_census.sh`
+  proving every §11 gate/track is owned and every tree cites a lane, publish the coverage map, register
+  all five in `docs/TASK_TREE.md`, then commit `STITCHCAD-PLANNING-0003 (leaf PLANNING.3)`.
+  **Measured gap right now:** 5 of 10 roadmap lanes have no tree (`G5`, `G6`, `G7`, `V1`, `V2`).
+- **Then product work, in this order:** `G0-CONTRACT.2` (units & tolerances spec) → `.18` (`sc-units` +
+  `sc-core` skeletons and the G0 CI workflow — the first product code) → `.3` (ontology) → `.13`
+  (reference skirt with numbers) → the rest of G0.
+- **Sequencing rule (director, 2026-09-29):** the roadmap must be fully captured first, then product
+  specification and code take the frontier. Spine work happens only when it blocks product work or a
+  defect is live; the displacement that produced 15 spine commits before any product commit is logged
+  as D24 in `docs/tasks/PLANNING.md`.
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
 - **Push:** 400-commit cadence; count with `git rev-list --count origin/main..HEAD` (`COMMIT.md`).
