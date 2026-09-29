@@ -4,6 +4,37 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-PLANNING-0003 — the whole roadmap is captured, and the claim is derived (leaf `PLANNING.3`)
+
+- **All ten roadmap lanes now have a tree.** Seeded the five that were missing — `G5-SHELLS` (14 leaves:
+  Tauri native + WASM web shells, the six UX panels, the parity table proven by agent E2E, a real native
+  UI suite because MCP tests are not UI tests, the OS/browser matrix, the first complete language pack
+  with RTL verified, the minimum tech pack), `G6-CONFORMANCE` (10: DXF importer with an honest loss
+  report, real import-filter validation with receiver settings recorded, the foreign-DXF semantic diff
+  loop, physical plotter and print checks, a factory pilot cycle whose rejection taxonomy feeds
+  calibration, the reliability matrix, cross-platform regressions, fuzzing, the conformance lab itself),
+  `G7-RELEASE` (7: independent evidence review, the scoped envelope statement, semver/schema policy,
+  install-reopen-upgrade-rollback evidence, release channels, governance in force), `V1-ASSEMBLY`
+  (7: mesh, ease-aware seam resampling that is never welded 1:1, net-line binding, arrangement surfaces
+  and layer index, viewport precision, blinded validation with false-pos/neg rates) and `V2-SIM`
+  (6: `sc-sim` out of the default build, XPBD research as progress reports, labelled approximation,
+  calibration and observables protocols declared before data collection, an evidence-only exit gate).
+  Repository totals: **13 trees, 142 leaves**.
+- **The capture claim is now a command, not a sentence:**
+  `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
+  `census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`. It checks both
+  directions — every §11 lane has a tree whose metadata names it, and every tree on disk is registered
+  in the index with a declared lane — plus dead index links (defect D1's class). The RED state was
+  observed before the fix: mid-slice the same census printed `5 orphan(s)` and exited `1`.
+- The clause-versus-leaf table it prints is **advisory and says so**: more clause rows than roadmap
+  clauses is expected (a tree may split one clause into several leaves, as `G5-SHELLS` does with the
+  "full UX spec" list); fewer rows than clauses is the alarm. A classifier guessing at prose meaning
+  would be worse than the side-by-side.
+- The tool is bash 3.2 compatible (no `mapfile`) because the spine must run on whatever bash a platform
+  ships — the same portability lesson as the awk-versus-grep signature measurement.
+- Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed;
+  0 failed`; `make probes` → `7 suite(s) green`; `bash -n` clean.
+
 ## STITCHCAD-SPINE-0004c — declared ceilings become enforced ones (leaf `SPINE.4.3`)
 
 - **`LIVE-DOC-SIZE` is the second project doctrine** (`scripts/check_live_doc_size.sh`, 271 lines,

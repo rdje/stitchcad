@@ -73,12 +73,25 @@ Two invariants, both directions:
   Commit: `STITCHCAD-PLANNING-0002`
 
 - ID: `PLANNING.3`
-  Status: `pending`
+  Status: `done`
   Goal: seed `G5-SHELLS`, `G6-CONFORMANCE`, `G7-RELEASE`, `V1-ASSEMBLY`, `V2-SIM`, and
   publish the roadmap → tree coverage map proving both invariants above.
   Acceptance: five tree files exist and are registered; the coverage map accounts for every
   G0–G7 and V1–V2 exit criterion; the census command is recorded so the claim is
   re-derivable.
+  Verification: recorded below — census `10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead
+  link(s)`, `exit=0`; 142 leaves across 13 trees.
+  Commit: `STITCHCAD-PLANNING-0003`
+
+- ID: `PLANNING.4`
+  Status: `pending`
+  Goal: close defect **D24** durably — record the sequencing rule (product specification and code take
+  the frontier; spine work only when it blocks product work or a defect is live) as a layer-C decision
+  so the next session inherits the priority instead of rediscovering the spine, and name the symptom
+  that reveals the drift (a run of commits none of which touches the product).
+  Acceptance: the decision record exists, is indexed, and is reachable from the bootstrap reading list;
+  the layer-A pointer names the rule in one line; D24 closes with the census that showed the imbalance
+  (`git log --oneline | grep -cE 'leaf (SPINE|PLANNING)'` versus `grep -c 'leaf G0-CONTRACT'`).
   Verification: `pending`
   Commit: `pending`
 
@@ -86,7 +99,11 @@ Two invariants, both directions:
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| 1 | `PLANNING.3` | `pending` | completes the tree set (G5–G7, V1, V2) and the coverage map; after it, no roadmap clause is unowned |
+| 1 | `PLANNING.4` | `pending` | the sequencing rule is what keeps the frontier on the product; it is one decision record |
+
+`PLANNING.1`–`.3` are done: the whole roadmap is captured, and the capture is a derived claim
+(`bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`). After `.4` this tree closes and the
+frontier belongs to `G0-CONTRACT`.
 
 ## Defects found at startup (2026-09-29) — logged, owned, scheduled
 
@@ -397,12 +414,48 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 - [x] **LOCKSTEP** — index, `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and the derived
   Knowledge Map updated in the same commit.
 
+### `PLANNING.3` — the remaining five lanes, and a census that makes the claim re-derivable
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — five of the roadmap's ten lanes had no tree, so their exit
+  criteria were owned only by a promise in a seeding leaf. Re-derivable against the commit before this
+  one: `git ls-tree --name-only HEAD docs/tasks/ | grep -cE '/(G5|G6|G7|V1|V2)-'` → `0`, `rc=1`
+  (no match), while `grep -cE '^### (G[0-7]|V[12]) ' ROADMAP.md` → `10`, `rc=0`; and the loop form
+  `for g in G5 G6 G7 V1 V2; do ls docs/tasks/${g}* >/dev/null 2>&1 || echo "$g unowned"; done`
+  printed `5` `unowned` lines.
+- [x] **ADDRESSED (verified)** — `G5-SHELLS` (14 leaves), `G6-CONFORMANCE` (10), `G7-RELEASE` (7),
+  `V1-ASSEMBLY` (7) and `V2-SIM` (6) now exist, each citing its §11 lane in its metadata and mapping
+  every exit clause to a named leaf in a clause→leaf table. The capture is proved by a new census
+  rather than asserted: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
+  `census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`, checking both
+  directions (lane→tree, and tree→index+declared lane) plus dead index links. Leaves across all trees:
+  `142`. The RED state was observed, not assumed: before the index rows landed, the same census printed
+  `5 orphan(s)` and exited `1`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make check` →
+  `test result: ok. 1 passed; 0 failed`; `make probes` → `7 suite(s) green`;
+  `bash -n docs/tasks/artifacts/planning/run_tree_coverage_census.sh` → `exit=0`.
+  This commit was **refused twice first, both refusals correct**: the inherited `TASK-ACCEPTANCE`
+  judged all six staged leaf files (D15 facet 3) because five brand-new trees were co-staged with a
+  `.sh` file — the exact case the layer-C record's rule 6 forbids — so the slice was split into a
+  doc-only commit for the trees and this one for the census tool and its owning leaf; and this leaf's
+  own `FRESH-ACCEPTANCE-EVIDENCE` check then refused the ROOT CAUSE box for citing commands with no
+  result token (`exit=1`), the third time that rule caught its author.
+- [x] **FIX** — added the five tree files; wrote the census tool (bash 3.2 compatible — no `mapfile`,
+  because the spine must run on whatever bash a platform ships); registered all five in
+  `docs/TASK_TREE.md` with the derived-census command and the corrected execution order; added
+  `PLANNING.4` to own the D24 sequencing rule.
+- [x] **LOCKSTEP** — index, `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and the derived Knowledge Map
+  updated in this commit. The census is deliberately **advisory** on clause counts and says so in its
+  header: more clause rows than roadmap clauses is expected (a tree may split one clause into several
+  leaves, as `G5-SHELLS` does with the "full UX spec" list); fewer rows than clauses is the alarm. A
+  classifier that guessed at prose meaning would be worse than the side-by-side.
+
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
 | `2026-09-29` | `PLANNING.1` | index↔disk census; `scripts/check_doctrines.sh` | 4 trees registered / 4 tree files (+TEMPLATE); 13 checks green, `rc=0` |
 | `2026-09-29` | `PLANNING.2` | exit-clause census (§11 G1–G4); leaf count; index↔disk census; `make check`; `scripts/check_doctrines.sh` | 4 trees / 58 leaves; every clause mapped; census clean; `test result: ok. 1 passed`; 13 checks green, `rc=0` |
+| `2026-09-29` | `PLANNING.3` | `run_tree_coverage_census.sh` before and after; leaf census; `make gate`; `make check`; `make probes` | before: `5 orphan(s)`, `exit=1`; after: `10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`; `142` leaves; all gates green |
 
 ## Commit Log
 
@@ -410,11 +463,15 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 | --- | --- | --- |
 | `PLANNING.1` | `STITCHCAD-PLANNING-0001 (leaf PLANNING.1): seed roadmap lanes into task-trees` | index repaired; 13 startup defects logged and owned |
 | `PLANNING.2` | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2): seed the engine-stage lanes G1–G4` | +3 G0 leaves; D15 logged and owned |
-| `PLANNING.3` | `pending` | — |
+| `PLANNING.3` | `STITCHCAD-PLANNING-0003 (leaf PLANNING.3): seed G5–G7 and the V-tracks; publish the coverage census` | all 10 lanes owned — derived, not asserted |
+| `PLANNING.4` | `pending` | — |
 
 ## Changelog
 
 - `2026-09-29`: Created tree; `PLANNING.1` landed (index repair + three trees + defect log).
+- `2026-09-29`: `PLANNING.3` landed — the five remaining lanes seeded and registered; the coverage
+  claim is now derived by a census tool (`10 lanes / 13 trees / 0 unowned / 0 orphans / 0 dead links`).
+  `PLANNING.4` added to own the D24 sequencing rule.
 - `2026-09-29`: D20 added — a published measurement whose producer was untracked scratch, found by
   the claim-verification adoption sweep; owned by `SPINE.11` and fixed by it.
 - `2026-09-29`: defect census measured at **19 rows** — `grep -cE '^\| D[0-9]+ ' docs/tasks/PLANNING.md`
