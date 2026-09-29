@@ -105,6 +105,23 @@ recent entries; when it passes its health target again, the oldest are sealed th
 - Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed;
   0 failed`; `make probes` → `7 suite(s) green`; `bash -n` clean.
 
+## STITCHCAD-SPINE-0018 — the push-due trigger means "CI must re-verify this" (leaf `SPINE.18`)
+
+- `SPINE.17` globbed `scripts/check_*.sh`, so the helper matched its own trigger: committing it reported
+  `EXCEPTIONAL PUSH DUE — 1 unpushed file(s) … scripts/check_push_due.sh`, `exit=1`, for a file no CI job
+  executes. A standing false obligation is worse than no instrument — the honest response to a warning
+  that always fires is to stop reading it.
+- The registered checks are now **derived** from the two registries (`registry_checks()` reads the paths
+  cited in `scripts/check_doctrines.sh` and `scripts/check_doctrines.project.sh`, plus the drivers):
+  17 paths, including both project doctrines, excluding this helper. A newly registered check becomes a
+  trigger with no edit here — the property a glob cannot have.
+- Arms re-observed: not-owed → `no push due (1 < 400, no CI/doctrine paths touched)`, `exit=0`; owed →
+  `EXCEPTIONAL PUSH DUE — 6 unpushed file(s)`, naming the workflow, both project-slot files and the three
+  `.doctrine/` seams, `exit=1`; bogus base → `REFUSED`, `exit=2`.
+- Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 3 passed;
+  0 failed`; `make probes` → `7 suite(s) green`; `bash -n` clean. No push is owed by this slice, so the
+  400-commit cadence holds.
+
 ## STITCHCAD-SPINE-0017 — the push-cadence exception is derived, not remembered (leaf `SPINE.17`)
 
 - **Director-approved rule change.** The cadence stays 400 commits, with one exception: a commit that

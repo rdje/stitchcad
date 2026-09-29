@@ -245,6 +245,15 @@ mechanically-enforced form:
   trigger list.
   Commit: `STITCHCAD-SPINE-0017`
 
+- ID: `SPINE.18`
+  Status: `done`
+  Goal: make `SPINE.17`'s trigger set mean what the rule means — "a runner must re-verify this" — by
+  deriving the registered doctrine checks from the two registries instead of globbing filenames.
+  Acceptance: an unregistered helper no longer reports a false exceptional push; a change to a
+  registered check, a workflow, a `.doctrine/` seam or a hook still does; all three arms re-observed.
+  Verification: recorded below — three arms re-run against the derived set.
+  Commit: `STITCHCAD-SPINE-0018`
+
 - ID: `SPINE.5`
   Status: `pending`
   Goal: seed the orientation surfaces — `TOOLBOX.md` project-toolbox rows for the instruments
@@ -354,6 +363,7 @@ mechanically-enforced form:
 | 11 | `SPINE.14` | `done` | taken before `.4.3`: the ledger had to be inside its window before a baseline could be declared honestly |
 | 12 | `SPINE.15` | `pending` | settle D22 against a real renderer and adopt the wide-row convention |
 | — | `SPINE.17` | `done` | taken out of order: a director-approved rule is recorded when it is made |
+| — | `SPINE.18` | `done` | taken immediately after: `.17` shipped a trigger that fired on itself |
 
 ## Decisions
 
@@ -884,6 +894,30 @@ the director rather than patched here (session directive §21: other repositorie
   further push — flagged to the director rather than pushed unilaterally, because the authorisation was
   for one exceptional push.
 
+### `SPINE.18` — a trigger that means "CI must re-verify this", not "the filename looks like a check"
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `SPINE.17`'s trigger list globbed `scripts/check_*.sh`, so the
+  helper itself matched: committing it reported `EXCEPTIONAL PUSH DUE — 1 unpushed file(s) …
+  scripts/check_push_due.sh`, `exit=1`, for a file no CI job executes. A standing false obligation is
+  worse than no instrument, because the honest response to a warning that always fires is to ignore it.
+- [x] **ADDRESSED (verified)** — the registered checks are now **derived** from the two registries
+  (`registry_checks()` reads the paths cited in `scripts/check_doctrines.sh` and
+  `scripts/check_doctrines.project.sh`, plus the drivers themselves): 17 paths, including
+  `scripts/check_live_doc_size.sh` and `scripts/check_fresh_acceptance_evidence.sh`, and excluding this
+  helper. Re-observed arms: `bash scripts/check_push_due.sh` → `no push due (1 < 400, no CI/doctrine
+  paths touched)`, `exit=0`; `PUSH_DUE_BASE=051a075 …` → `EXCEPTIONAL PUSH DUE — 6 unpushed file(s)`
+  naming `.github/workflows/rust.yml`, `scripts/check_live_doc_size.sh`,
+  `scripts/check_doctrines.project.sh` and the three `.doctrine/` files, `exit=1`;
+  `PUSH_DUE_BASE=nope …` → `REFUSED`, `exit=2`. A newly registered check becomes a trigger with no edit
+  here, which is the property a glob cannot have.
+- [x] **NO REGRESSION** — `bash -n` clean; `make gate` → `=== all doctrines green ===`, `exit=0`;
+  `make check` → `test result: ok. 3 passed; 0 failed`; `make probes` → `7 suite(s) green`.
+- [x] **FIX** — replaced the glob with `registry_checks()` and recorded in the file header why the
+  derivation exists (with the measured false obligation that motivated it).
+- [x] **LOCKSTEP** — `COMMIT.md`'s exception is unchanged in substance (it names the paths that owe a
+  push, and the helper now derives the check subset); `TOOLBOX.md`, `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` updated. No push is owed by this slice, so the 400-commit cadence holds.
+
 Leaves `.5`, `.13` and `.15` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
@@ -975,6 +1009,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.4.3` | `STITCHCAD-SPINE-0004c (leaf SPINE.4.3): enforce the containment registry` | D13 closed; 2nd project doctrine, 11 self-test arms + 4 probes |
 | `SPINE.16` | `STITCHCAD-SPINE-0016 (leaf SPINE.16): declare the code-path seam` | D25 fixed; prose is no longer judged as code |
 | `SPINE.17` | `STITCHCAD-SPINE-0017 (leaf SPINE.17): the push-cadence exception is derived` | `make push-due`; 3 arms observed |
+| `SPINE.18` | `STITCHCAD-SPINE-0018 (leaf SPINE.18): derive the push-due trigger set` | false obligation removed; 3 arms re-observed |
 | `SPINE.4.3`, `SPINE.5`, `SPINE.13`, `SPINE.14`, `SPINE.15` | `pending` | — |
 
 ## Changelog

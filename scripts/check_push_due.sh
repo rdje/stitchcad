@@ -34,17 +34,34 @@ if ! git rev-parse --verify --quiet "$BASE" >/dev/null; then
 fi
 
 # Paths whose change is unverified until a runner executes it.
+# What triggers an exceptional push is "a runner must re-verify this", NOT "the filename looks like a
+# check". So the registered doctrine checks are DERIVED from the two registries rather than globbed:
+# an unregistered helper (this file, for one) is not executed by any runner, and treating it as a
+# trigger creates a standing false obligation — measured: the first cut of this list globbed
+# `scripts/check_*.sh`, so committing this very helper reported an exceptional push due for a file no
+# CI job reads.
+#
 # ⚠ Pathspec shapes matter and were measured, not assumed: a bare prefix such as `scripts/check_`
 # matches nothing, because a git pathspec matches whole path components unless it carries a wildcard.
-# The first cut of this list silently missed every doctrine check script, and only the RED arm — which
-# compares against a revision known to contain them — showed the omission.
+# That bug silently missed every doctrine check script, and only the RED arm — which compares against
+# a revision known to contain them — showed the omission.
+registry_checks() {
+  {
+    # the universal registry, the project slot, and the drivers themselves
+    grep -oE '(scripts|knowledge-map/scripts)/[A-Za-z0-9_.-]+\.sh' scripts/check_doctrines.sh 2>/dev/null
+    grep -oE '(scripts|knowledge-map/scripts)/[A-Za-z0-9_.-]+\.sh' scripts/check_doctrines.project.sh 2>/dev/null
+    printf 'scripts/check_doctrines.sh\nscripts/check_doctrines.project.sh\n'
+  } | sed '/^$/d' | LC_ALL=C sort -u
+}
+
 TRIGGER_PATHS=(
   '.github/workflows/*'
-  'scripts/check_*.sh'
-  'scripts/check_doctrines.project.sh'
   '.doctrine/*'
   '.githooks/*'
 )
+while IFS= read -r _c; do
+  [ -n "$_c" ] && TRIGGER_PATHS+=("$_c")
+done < <(registry_checks)
 
 ahead="$(git rev-list --count "$BASE"..HEAD 2>/dev/null || echo 0)"
 cadence=400
