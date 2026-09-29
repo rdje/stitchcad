@@ -16,18 +16,18 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs,
   versioned evidence-bearing Factory Profiles, deterministic artifact export, agent-first via MCP.
   `ROADMAP.md` v0.2, DRAFT until G0 exits.
-- **Active tree:** `PLANNING` → frontier leaf `PLANNING.4` (`pending`), the last one; then this tree
-  closes and the frontier belongs to `G0-CONTRACT`.
-- **Next action:** close defect D24 with a layer-C decision record —
-  `docs/decisions/decision_product-work-takes-the-frontier.md` (indexed, with an `answers:` line, and
-  reachable from `CLAUDE.md`): product specification and code take the frontier; spine/governance work
-  happens only when it blocks product work or a defect is live; the symptom is a run of commits none of
-  which touches the product. Then commit `STITCHCAD-PLANNING-0004 (leaf PLANNING.4)`.
-- **Then product work, in this order:** `G0-CONTRACT.2` (units & tolerance spec) → `.18` (`sc-units` +
-  `sc-core` skeletons and the G0 CI workflow — the first product code) → `.3` (ontology) → `.13`
-  (reference skirt with numbers) → the rest of G0.
-- **Roadmap capture is complete and derived:** `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`
-  → `census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`.
+- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.2` (`pending`). `PLANNING` is closed
+  (all four leaves done); `SPINE` is parked with `.5`, `.13`, `.15` open — none blocks product work.
+- **Next action:** write the units & tolerance specification — `docs/book/src/spec/units-and-tolerances.md`
+  from roadmap §4.2: fixed-point micrometres as the single internal unit, the five tolerance classes
+  and how each is derived, the curve set (line / circular arc / cubic Bézier, NURBS deferred), robust
+  predicates, and the offset error-budget contract. Add it to `docs/book/src/SUMMARY.md`, verify with
+  `mdbook build docs/book`, and commit `STITCHCAD-G0-0002 (leaf G0-CONTRACT.2)`.
+- **Then:** `G0-CONTRACT.18` (`sc-units` + `sc-core` skeletons and the G0 CI workflow — the first
+  product code) → `.3` (ontology) → `.13` (reference skirt with numbers) → the rest of G0.
+- **Sequencing rule (`docs/decisions/decision_product-work-takes-the-frontier.md`):** product work
+  takes the frontier; spine slices only when they block it, a defect is live, or the director asks.
+  Census: `git log --oneline | grep -cE 'leaf (G[0-7]|V[12])'` must start growing.
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
 - **Push:** 400-commit cadence; count with `git rev-list --count origin/main..HEAD` (`COMMIT.md`).

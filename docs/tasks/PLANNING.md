@@ -84,7 +84,7 @@ Two invariants, both directions:
   Commit: `STITCHCAD-PLANNING-0003`
 
 - ID: `PLANNING.4`
-  Status: `pending`
+  Status: `done`
   Goal: close defect **D24** durably — record the sequencing rule (product specification and code take
   the frontier; spine work only when it blocks product work or a defect is live) as a layer-C decision
   so the next session inherits the priority instead of rediscovering the spine, and name the symptom
@@ -92,18 +92,21 @@ Two invariants, both directions:
   Acceptance: the decision record exists, is indexed, and is reachable from the bootstrap reading list;
   the layer-A pointer names the rule in one line; D24 closes with the census that showed the imbalance
   (`git log --oneline | grep -cE 'leaf (SPINE|PLANNING)'` versus `grep -c 'leaf G0-CONTRACT'`).
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — census `20` governance slices vs `0` product slices at the ruling.
+  Commit: `STITCHCAD-PLANNING-0004`
 
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| 1 | `PLANNING.4` | `pending` | the sequencing rule is what keeps the frontier on the product; it is one decision record |
+| — | all leaves | `done` | this tree is closed: the roadmap is captured, the capture is derived, and the sequencing rule that keeps the frontier on the product is recorded |
 
-`PLANNING.1`–`.3` are done: the whole roadmap is captured, and the capture is a derived claim
-(`bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`). After `.4` this tree closes and the
-frontier belongs to `G0-CONTRACT`.
+`PLANNING.1`–`.4` are done. The capture claim is derived, not asserted:
+`bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
+`census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`.
+**The frontier now belongs to `G0-CONTRACT`** — product specification, then the first product code at
+`G0-CONTRACT.18`. Per `docs/decisions/decision_product-work-takes-the-frontier.md`, no further spine or
+governance slice is taken unless it blocks product work, a defect is live, or the director asks.
 
 ## Defects found at startup (2026-09-29) — logged, owned, scheduled
 
@@ -303,7 +306,7 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     acceptance gate, an unbounded live-document set), but governance work is self-rewarding and
     infinitely discoverable, and nothing in the spine asks whether the frontier is still on the
     product. The repository's reason to exist — the G0 semantic contract — stayed at zero.
-  - Owner: `PLANNING.3` and `PLANNING.4`. `PLANNING.3` completes the capture (the five missing trees
+  - Owner: `PLANNING.3` and `PLANNING.4` (**both closed** — the capture is complete and derived by the census tool; the sequencing rule is `docs/decisions/decision_product-work-takes-the-frontier.md`, wired into `CLAUDE.md`). `PLANNING.3` completes the capture (the five missing trees
     plus a coverage census that makes "every lane is owned" a re-derivable claim instead of an
     intention); `PLANNING.4` records the sequencing rule in the layer-A pointer so the next session
     inherits the priority instead of rediscovering the spine.
@@ -449,12 +452,38 @@ anyway, because the claims this leaf makes are census claims and a census is re-
   leaves, as `G5-SHELLS` does with the "full UX spec" list); fewer rows than clauses is the alarm. A
   classifier that guessed at prose meaning would be worse than the side-by-side.
 
+### `PLANNING.4` — the sequencing rule, so the drift is a decision a future session reads
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the frontier drifted off the product and nothing in the spine
+  noticed: `git log --oneline | grep -cE 'leaf (SPINE|PLANNING|BOOTSTRAP)'` → `20` governance slices
+  against `git log --oneline | grep -cE 'leaf (G[0-7]|V[12])'` → `0` product slices, `rc=0` for both;
+  `ls docs/book/src/spec/` → `index.md` alone and `git ls-files 'crates/*'` → the bedrock starter crate,
+  `rc=0`. Each individual slice was defensible — every one closed a real defect with evidence — which
+  is exactly why the pattern needed a rule rather than more care.
+- [x] **ADDRESSED (verified)** — `docs/decisions/decision_product-work-takes-the-frontier.md` now
+  states the rule (product takes the frontier; spine work only when it blocks, when a defect is live,
+  or when the director asks), the symptom to watch (a run of commits none of which touches the
+  product), and the two-command census that measures it. It is indexed
+  (`grep -c product-work-takes-the-frontier docs/decisions/INDEX.md` → `1`, `rc=0`) and wired into the
+  bootstrap every agent reads (`grep -c product-work-takes-the-frontier CLAUDE.md` → `1`, `rc=0`), so
+  the next session inherits the priority instead of rediscovering the spine.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make check` →
+  `test result: ok. 1 passed; 0 failed`; `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`
+  → `census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`.
+- [x] **FIX** — added the decision record; wired it from `CLAUDE.md`'s non-negotiables and the layer-C
+  index; closed D24 in the defect census; set this tree's frontier to closed and moved the repository's
+  frontier to `G0-CONTRACT`.
+- [x] **LOCKSTEP** — D24 marked closed in the census below; `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` and the derived Knowledge Map updated in this commit. This tree records no further
+  work: the roadmap→tree mapping is complete and derived.
+
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
 | `2026-09-29` | `PLANNING.1` | index↔disk census; `scripts/check_doctrines.sh` | 4 trees registered / 4 tree files (+TEMPLATE); 13 checks green, `rc=0` |
 | `2026-09-29` | `PLANNING.2` | exit-clause census (§11 G1–G4); leaf count; index↔disk census; `make check`; `scripts/check_doctrines.sh` | 4 trees / 58 leaves; every clause mapped; census clean; `test result: ok. 1 passed`; 13 checks green, `rc=0` |
+| `2026-09-29` | `PLANNING.4` | governance-vs-product commit census; `grep -c` on `INDEX.md` and `CLAUDE.md`; `make gate`; `make check`; coverage census | `20` vs `0`; `1` and `1`; `=== all doctrines green ===`; `test result: ok. 1 passed`; `0 unowned / 0 orphan(s)` |
 | `2026-09-29` | `PLANNING.3` | `run_tree_coverage_census.sh` before and after; leaf census; `make gate`; `make check`; `make probes` | before: `5 orphan(s)`, `exit=1`; after: `10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`; `142` leaves; all gates green |
 
 ## Commit Log
@@ -464,10 +493,12 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 | `PLANNING.1` | `STITCHCAD-PLANNING-0001 (leaf PLANNING.1): seed roadmap lanes into task-trees` | index repaired; 13 startup defects logged and owned |
 | `PLANNING.2` | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2): seed the engine-stage lanes G1–G4` | +3 G0 leaves; D15 logged and owned |
 | `PLANNING.3` | `STITCHCAD-PLANNING-0003 (leaf PLANNING.3): seed G5–G7 and the V-tracks; publish the coverage census` | all 10 lanes owned — derived, not asserted |
-| `PLANNING.4` | `pending` | — |
+| `PLANNING.4` | `STITCHCAD-PLANNING-0004 (leaf PLANNING.4): product work takes the frontier` | D24 closed; tree complete |
 
 ## Changelog
 
+- `2026-09-29`: `PLANNING.4` landed and this tree closed — the sequencing rule is a layer-C record
+  wired into `CLAUDE.md`, D24 is closed, and the repository's frontier moved to `G0-CONTRACT`.
 - `2026-09-29`: Created tree; `PLANNING.1` landed (index repair + three trees + defect log).
 - `2026-09-29`: `PLANNING.3` landed — the five remaining lanes seeded and registered; the coverage
   claim is now derived by a census tool (`10 lanes / 13 trees / 0 unowned / 0 orphans / 0 dead links`).

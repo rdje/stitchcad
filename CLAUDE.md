@@ -37,6 +37,13 @@ human is working. Follow it exactly.
 - **Activate the hooks once per clone:** `git config core.hooksPath .githooks`. The
   pre-commit hook runs `scripts/check_doctrines.sh` (the general enforcer); CI runs the
   same. These are git-level and harness-agnostic.
+- **Product work takes the frontier.** A spine/governance/hygiene slice is legitimate only when it
+  blocks the product slice about to be taken, when a defect can destroy or corrupt work now, or when
+  the director asks. Log every defect you find; do not let logging become scheduling
+  (`docs/decisions/decision_product-work-takes-the-frontier.md`). The drift census is two commands:
+  `git log --oneline | grep -cE 'leaf (SPINE|PLANNING|BOOTSTRAP)'` against
+  `git log --oneline | grep -cE 'leaf (G[0-7]|V[12])'` — if the first grows and the second does not,
+  re-sequence before taking another slice.
 - **Keep the roadmap, the code, and the docs (README + mdBook) aligned** — locked
   together, no drift, for past, present, and future changes.
 - **No background job at a handoff point.** Before you end a session (`/exit`, a pause, a
