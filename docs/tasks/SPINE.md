@@ -47,7 +47,17 @@ mechanically-enforced form:
 - ID: `SPINE`
   Status: `active`
   Goal: the repository's own surfaces are project-shaped, bounded and enforced.
-  Children: `.1` … `.5`
+  Children: `.1` … `.6`
+
+- ID: `SPINE.6`
+  Status: `done`
+  Goal: track the workspace lockfile so a fresh clone's first `make check` leaves the tree
+  clean (defect D14). Inserted ahead of `.1`–`.5` because the pivot rule defines
+  handoff-ready as *no untracked files*, and the toolchain itself was breaking it.
+  Acceptance: `Cargo.lock` is tracked; `make check` from a clean checkout ends with an empty
+  `git status --short`; `.gitignore`'s stated policy (lockfile deliberately not ignored) holds.
+  Verification: recorded below.
+  Commit: `STITCHCAD-SPINE-0006`
 
 - ID: `SPINE.1`
   Status: `pending`
@@ -111,6 +121,7 @@ mechanically-enforced form:
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
+| 0 | `SPINE.6` | `done` | taken out of order: it repaired a dirty-tree defect found on the first `make check` |
 | 1 | `SPINE.1` | `pending` | after `PLANNING.2`/`.3` — identity before content, so the G0 spec chapters grow into a named book |
 | 2 | `SPINE.2` | `pending` | cleanup cadence is a session-directive obligation and cheap |
 | 3 | `SPINE.3` | `pending` | policy adoptions bind how every later claim and cap is written |
@@ -141,7 +152,26 @@ mechanically-enforced form:
 Documentation and one project-slot script change (`.4`); the leaves that stage a script fill
 this checklist with their own tool output at that time.
 
-- [ ] **ROOT CAUSE (WHY + WHERE)** — _per leaf; D1–D13 census in `PLANNING.md` is the tree-level cause_
+### `SPINE.6` — track the workspace lockfile (defect D14)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the bootstrap commit never ran cargo, so the generated
+  lockfile was absent from the index while `.gitignore` deliberately does not ignore it:
+  `make check && git status --short` → `?? Cargo.lock`; `git check-ignore -v Cargo.lock` →
+  `rc=1` (not ignored); `.gitignore` line: `# Note: Cargo.lock is intentionally NOT ignored —
+  binary/application projects should commit it for reproducible builds.`
+- [x] **ADDRESSED (verified)** — `git ls-files --error-unmatch Cargo.lock` → `Cargo.lock`,
+  `rc=0` (tracked); `git status --short` after `make check` → empty, so a fresh clone that runs
+  the documented check stays handoff-ready.
+- [x] **NO REGRESSION** — `make check` → `cargo fmt --check` clean, clippy clean,
+  `test result: ok. 1 passed; 0 failed`; `scripts/check_doctrines.sh` → `=== all doctrines
+  green ===`, `rc=0`.
+- [x] **FIX** — `git add Cargo.lock` (no hand edit: the file is cargo-generated).
+- [x] **LOCKSTEP** — D14 logged with its reproduce command and owner in `PLANNING.md`; this
+  leaf records the fix; `MEMORY.md` unchanged (frontier did not move).
+
+### Tree-level (filled per leaf)
+
+- [ ] **ROOT CAUSE (WHY + WHERE)** — _per leaf; D1–D14 census in `PLANNING.md` is the tree-level cause_
 - [ ] **ADDRESSED (verified)** — _per leaf_
 - [ ] **NO REGRESSION** — _per leaf: `make gate` + `make check`_
 - [ ] **FIX** — _per leaf_
@@ -152,14 +182,17 @@ this checklist with their own tool output at that time.
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
+| `2026-09-29` | `SPINE.6` | `make check`; `git ls-files --error-unmatch Cargo.lock`; `git status --short` | `test result: ok. 1 passed`; `rc=0`; empty status |
 
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
 | --- | --- | --- |
 | tree seed | `STITCHCAD-PLANNING-0001 (leaf PLANNING.1)` | created by the seeding leaf |
+| `SPINE.6` | `STITCHCAD-SPINE-0006 (leaf SPINE.6): track the workspace lockfile` | fixes D14 |
 | `SPINE.1` … `.5` | `pending` | — |
 
 ## Changelog
 
 - `2026-09-29`: Tree created by `PLANNING.1`; owns startup defects D3, D4, D7–D9, D11–D13.
+- `2026-09-29`: `SPINE.6` added and landed out of order — defect D14 (untracked `Cargo.lock`).

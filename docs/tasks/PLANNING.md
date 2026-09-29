@@ -107,6 +107,7 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 | D11 | the in-repo `README_POLICY.md` is the older neutral body; the director's external reference has been revised (authority/provenance, duplication probe, routing-pressure closure, derived caps, unconditional check) | `diff README_POLICY.md <external reference>` → 100+ differing lines | directive §14 requires applying source updates; the guard lacks the routing-closure rule | `SPINE.3` |
 | D12 | the claim-verification policy (directive §17) is not adopted in-repo | `ls docs/CLAIM_VERIFICATION.md` → No such file | published numbers would have no defined standard for "checked" | `SPINE.3` |
 | D13 | live-document containment (directive §18) is only partially adopted: `MEMORY.md`/`README.md` caps exist, but the surfaces that are about to grow (`ROADMAP.md` 50 821 B, `CHANGELOG.md` 11 761 B, `docs/TASK_TREE.md` with 12 trees) have no inventory, ceilings or ratchet | `wc -lc ROADMAP.md CHANGELOG.md docs/TASK_TREE.md` | bounded pointer, unbounded neighbours — the failure the containment guide exists to prevent | `SPINE.4` |
+| D14 | the workspace lockfile is untracked, so the first `make check` in a fresh clone leaves the tree dirty | `make check && git status --short` → `?? Cargo.lock`; `git check-ignore -v Cargo.lock` → `rc=1` (not ignored) | the pivot rule defines handoff-ready as *no untracked files*, and the toolchain itself violates it; `.gitignore` states the lockfile is deliberately tracked for reproducible builds | `SPINE.6` (fixed) |
 
 ## Decisions
 
@@ -176,3 +177,5 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 ## Changelog
 
 - `2026-09-29`: Created tree; `PLANNING.1` landed (index repair + three trees + defect log).
+- `2026-09-29`: D14 added to the defect census (untracked `Cargo.lock`, found by the first
+  `make check`); owned and fixed by `SPINE.6`.
