@@ -16,7 +16,7 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs,
   versioned evidence-bearing Factory Profiles, deterministic artifact export, agent-first via MCP.
   `ROADMAP.md` v0.2, DRAFT until G0 exits.
-- **Active tree:** `SPINE` → frontier leaf `SPINE.4.3` (`pending`).
+- **Active tree:** `SPINE` → frontier leaf `SPINE.4.3` (`active`).
 - **Next action:** write `scripts/check_live_doc_size.sh` and register it in the project doctrine slot:
   read `.doctrine/live_document_size/{surfaces,routes}.tsv`, re-measure every surface (lines, bytes,
   max content line, and for collections file count / per-part / aggregate), refuse on an unclassified

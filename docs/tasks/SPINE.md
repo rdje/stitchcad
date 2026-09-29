@@ -196,7 +196,7 @@ mechanically-enforced form:
   Commit: `pending`
 
 - ID: `SPINE.14`
-  Status: `pending`
+  Status: `done`
   Goal: make `CHANGELOG.md` a bounded rolling ledger — seal the inherited bedrock-scaffold segment
   (frozen legacy, not this project's history) into `docs/history/` as an immutable archive terminal
   with recorded identity (lines, bytes, sha256, the revision it was sealed at), leave a one-line
@@ -204,8 +204,8 @@ mechanically-enforced form:
   Acceptance: the sealed segment is byte-identical to what was removed (proved by hash before and
   after); `CHANGELOG.md` drops below its health target; the registry's `changelog` debt row is cleared;
   the `history_archive` surface exists and is classified; retrieval is one documented command.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — `BYTE-IDENTICAL: True`, `sha256:78f43e0f…`, ledger 522→371 lines.
+  Commit: `STITCHCAD-SPINE-0014`
 
 - ID: `SPINE.15`
   Status: `pending`
@@ -326,7 +326,7 @@ mechanically-enforced form:
 | 8c | `SPINE.4.3` | `pending` | **next** — declared rows are not gated rows; the checker makes them real and closes D13 |
 | 9 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 | 10 | `SPINE.13` | `pending` | roadmap navigation + per-section bounds: the `maintained_reference` debt |
-| 11 | `SPINE.14` | `pending` | seal the inherited changelog segment into `docs/history/`: the `rolling_ledger` debt |
+| 11 | `SPINE.14` | `done` | taken before `.4.3`: the ledger had to be inside its window before a baseline could be declared honestly |
 | 12 | `SPINE.15` | `pending` | settle D22 against a real renderer and adopt the wide-row convention |
 
 ## Decisions
@@ -725,7 +725,38 @@ the director rather than patched here (session directive §21: other repositorie
   fields instead of `21`. Both fixed, and both are exactly what `SPINE.4.3`'s checker must refuse
   mechanically instead of by luck.
 
-Leaves `.4.3`, `.5`, `.13`, `.14` and `.15` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.14` — the changelog becomes a ledger with an archive terminal
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `CHANGELOG.md` was a rolling ledger carrying another project's
+  frozen history in its live window: `git show HEAD:CHANGELOG.md | grep -n '^# Inherited spine history'`
+  → line `365` of `522`, i.e. a `158`-line / `11 811`-byte segment that can never be trimmed occupied
+  30 % of the window and 30 % of the bytes (`522`/`42124` measured). The containment checker proved the
+  consequence before it was wired into the gate: `LIVE-DOC-SIZE: changelog: transition debt WIDENED on
+  lines (522 > baseline 487)`, `exit=1` — a debt baseline declared while the surface was still growing
+  is a baseline that breaks on the next slice.
+- [x] **ADDRESSED (verified)** — the segment is sealed into
+  `docs/history/bedrock-scaffold-changelog.md` (`174` lines / `12 794` bytes including its identity
+  header) and replaced by a pointer. Losslessness is proved by hash, not asserted: the sealed segment
+  and `git show HEAD:CHANGELOG.md`'s segment are both
+  `sha256:78f43e0fe24c60f7bb8b0bb159a2751cc37f967659111bd81df7d74b22dbeca7` → `BYTE-IDENTICAL: True`.
+  The ledger is now `371` lines / `30 713` bytes / widest line `118`, inside its health target
+  (400 / 32 768), and the debt row is cleared. Retrieval: `grep -c '^## bedrock-scaffold'
+  docs/history/bedrock-scaffold-changelog.md` → `6` entries, while `grep -c '^## bedrock-scaffold'
+  CHANGELOG.md` → `0` and `grep -c '^## STITCHCAD' CHANGELOG.md` → `15` (ours stayed, theirs moved).
+- [x] **NO REGRESSION** — `bash scripts/check_live_doc_size.sh` →
+  `live-doc-size: OK — 17 surfaces, 15 routes, 41 files measured`, `exit=0` (the `history_archive`
+  collection now matches its sealed file); `make gate` → `=== all doctrines green ===`;
+  `make check` → `test result: ok. 1 passed; 0 failed`.
+- [x] **FIX** — created `docs/history/` as the archive terminal with the sealed segment carrying its
+  own identity (lines, bytes, sha256), provenance, retrieval path and a no-write policy; left a pointer
+  in `CHANGELOG.md`; updated the `changelog` and `history_archive` registry rows (measurements, debt
+  cleared, sealed identity recorded in the row notes).
+- [x] **LOCKSTEP** — the seal is recorded in this leaf, the registry, `LIVE_STATUS.md`, `MEMORY.md` and
+  `CHANGELOG.md`'s own pointer; the rollover rule for our own entries (seal the oldest when the window
+  passes its health target) is stated in the `changelog` registry row so the next author does not have
+  to re-derive it.
+
+Leaves `.4.3`, `.5`, `.13` and `.15` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -790,6 +821,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.11` | `run_signature_portability_probe.sh`; `make probes`; `bash -n`; `make gate`; `make check` | `corpus: 36 lines · grep-unmatched: 2 · awk-unmatched: 12`, `probes: 5 pass / 0 fail`; `6 suite(s) green`; syntax clean; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `SPINE.4.1` | `wc -lc` and section count on the adopted doctrine; donor-noun and absolute-path greps; `make gate`; `make check` | `386` lines / `23712` bytes, `12` sections; `0` donor nouns, `0` absolute paths; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `SPINE.4.2` | registry censuses (row + field counts, route→surface closure, path census); `wc -lc` and per-file maxline before/after the trims; `make gate`; `make check`; `make probes` | `17` surfaces × `21` fields, `15` routes × `8` fields, closure holds, `0` absolute paths; maxline `1758`→`255`, `1104`→`146`; `=== all doctrines green ===`; `test result: ok. 1 passed`; `6 suite(s) green` |
+| `2026-09-29` | `SPINE.14` | sha256 of the sealed segment vs `git show HEAD:CHANGELOG.md`; `wc -lc` before/after; entry censuses; `check_live_doc_size.sh`; `make gate`; `make check` | `BYTE-IDENTICAL: True`, `sha256:78f43e0f…`; ledger `522`/`42124` → `371`/`30713`; `6` sealed vs `0` in the ledger and `15` of ours; `OK — 17 surfaces, 15 routes, 41 files`; both gates green |
 
 ## Commit Log
 
@@ -810,6 +842,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.11` | `STITCHCAD-SPINE-0011 (leaf SPINE.11): give the published signature measurement a tracked producer` | D20 fixed; watched constants |
 | `SPINE.4.1` | `STITCHCAD-SPINE-0004 (leaf SPINE.4.1): adopt the live-document containment doctrine` | partial adoption; deferrals named with triggers |
 | `SPINE.4.2` | `STITCHCAD-SPINE-0004b (leaf SPINE.4.2): the containment data plane` | 17 surfaces, 15 routes, derived README caps, 3 surfaces trimmed |
+| `SPINE.14` | `STITCHCAD-SPINE-0014 (leaf SPINE.14): seal the inherited changelog into docs/history/` | hash-proven, lossless; ledger inside its window |
 | `SPINE.4.3`, `SPINE.5`, `SPINE.13`, `SPINE.14`, `SPINE.15` | `pending` | — |
 
 ## Changelog
@@ -823,6 +856,9 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.14` landed — the inherited bedrock changelog segment is sealed into
+  `docs/history/` with hash-proven identity; `CHANGELOG.md` is a bounded ledger inside its window and
+  its transition debt is cleared.
 - `2026-09-29`: `SPINE.4.2` landed — the containment data plane (17 surfaces, 15 routes, derived
   README caps), three surfaces trimmed before their targets were set, and three new leaves owning the
   remaining debt (`SPINE.13` roadmap navigation, `SPINE.14` changelog archive, `SPINE.15` D22).
