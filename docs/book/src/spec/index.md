@@ -23,8 +23,8 @@ must satisfy. It is written during gate G0 (the product-and-semantic-contract ga
 | Chapter | Settles |
 | --- | --- |
 | Glossary | One meaning per construction term, its canonical object, and the synonyms factories and other CADs use |
-| Units and tolerances | The internal unit, the five tolerance classes and how each is derived, the curve set, the offset error budget |
-| Garment ontology | Every first-class object: identity, fields, invariants, and how it carries uncertainty |
+| [Units and tolerances](units-and-tolerances.md) | The internal unit, the five tolerance classes and how each is derived, the curve set, the offset error budget |
+| [Garment ontology](ontology.md) | Every first-class object: identity, fields, invariants, and how it carries uncertainty |
 | Supported envelope | What v1 supports, what it rejects with a diagnostic, and what is deferred — the boundary of the release claim |
 | Instantiation paths | Measurement-driven regeneration and grade-rule instantiation, where they diverge, and the declared equivalence tolerance |
 | Size sets | Size labels versus order, base size, multi-dimensional charts, and which object owns a size set |

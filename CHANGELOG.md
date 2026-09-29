@@ -105,6 +105,49 @@ recent entries; when it passes its health target again, the oldest are sealed th
 - Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed;
   0 failed`; `make probes` → `7 suite(s) green`; `bash -n` clean.
 
+## STITCHCAD-G0-0003 — the garment ontology is normative (leaf `G0-CONTRACT.3`)
+
+`docs/book/src/spec/ontology.md` (295 lines, widest line 198 bytes) turns roadmap §3.1's bullet list of
+objects into a specification an implementer cannot misread — and that `sc-core`'s skeleton already
+points at.
+
+- **Identity first.** ULID entity ids, assigned once and never re-derived from content, plus stable
+  *topological* references (`EdgeRef`, `PointRef` with a rational parameter along the edge) instead of
+  array indices or tessellation vertices. The persistent-identity contract is a table, not a promise:
+  split, merge, reverse, delete and offset-fragmentation each either preserve references or produce a
+  **visible repair task**. No silent reassignment, and a design with unresolved references can be saved
+  and inspected but not released.
+- **Measurement and fit:** `MeasurementTable` entries carry kind (body vs garment POM), landmark,
+  procedure, source and state — and a measurement without a landmark or procedure is *rejected*,
+  because an unrepeatable measurement cannot be evidence and a factory dispute about "the chest" is a
+  dispute about landmarks. `Ease` is a first-class body→garment mapping with fit intent, which is what
+  makes regeneration and grade rules reconcilable.
+- **The design is a recipe:** parameters, formula graph, ordered operations, revision counter, sewing
+  graph, materials, and imported geometry kept as explicit primitives with `origin: imported` and no
+  fabricated history. `walk` and `true` are first-class *operations*, not late-added validation checks.
+- **Geometry-bearing objects** specified field by field with their invariants: `Piece` (CCW closed
+  boundary, holes, internal lines, multiplicity, mirroring, cut-on-fold, face/wrong-side, material,
+  layer index, printable label data), `SeamSpan`/`SewingGraph` (oriented, partial and one-to-many
+  correspondences with declared ease distribution and stop landmarks), darts/tucks/pleats/gathers with
+  conserved intake, `SeamAllowance` as a **per-edge derived object** whose included-vs-generated policy
+  is resolved per Factory Profile and never a project-wide boolean, `Notch` whose type, geometry and
+  encoding are profile parameters, directed `Grainline` with dual stripe/plaid references, and
+  hem/facing/lining/interfacing/closure/pocket as objects rather than drawing conventions.
+- **Uncertainty is part of the object:** known / assumed / unknown / preference / derived, with the rule
+  that an `unknown` is never silently defaulted — defaults exist only as `preference` values with
+  provenance, and the artifact policy matrix decides what an unresolved unknown blocks.
+- **Seven test obligations** close the chapter, including identity stability under boundary edits,
+  invariants enforced at construction, dart-intake conservation, recipe determinism across platforms,
+  and save/load preserving *drafting intent* — two designs with identical contours but different
+  recipes remain distinct.
+- External claims are labelled, not asserted: the ISO 8559 / ASTM D5219 / EN 13402 / ASTM D5585 roles are
+  cited from the roadmap and explicitly owed to the measurement-standards chapter, which owns reading
+  the documents.
+- The containment checker caught a 238-byte table row against the 200-byte health target for book
+  chapters; the verification table became bounded prose and the chapter now sits at 198.
+- Validation: `make book` → `exit=0` with the chapter rendered; `check_live_doc_size.sh` →
+  `OK — 17 surfaces, 15 routes, 50 files measured`; `make gate` → `=== all doctrines green ===`;
+  `make check` → 30 tests, 0 failed; `make probes` → `7 suite(s) green`.
 ## STITCHCAD-G0-0018 — the first product code: `sc-units` implements the numerical contract (leaf `G0-CONTRACT.18`)
 
 - **`crates/sc-units`** — 1 097 lines of library, 564 lines of tests, **zero dependencies** (so it
