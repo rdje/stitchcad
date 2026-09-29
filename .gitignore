@@ -8,6 +8,9 @@ git_message_brief.txt
 # Generated artifacts are regenerated locally, never tracked (see COMMIT.md)
 /generated
 
+# mdBook output (`make book`): a build artifact, regenerated from docs/book/src/
+/docs/book/book/
+
 # Logs & OS cruft
 *.log
 .DS_Store

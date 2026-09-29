@@ -60,14 +60,15 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0006`
 
 - ID: `SPINE.1`
-  Status: `pending`
+  Status: `done`
   Goal: de-template the identity surfaces — `README.md` as the StitchCAD landing page (within
   the reviewed caps), `docs/book/book.toml` identity, `docs/book/src/introduction.md`, and a
-  `SUMMARY.md` skeleton with the `spec/` part that `G0-CONTRACT` fills. Owns defects D3, D4.
+  `SUMMARY.md` skeleton with the `spec/` part that `G0-CONTRACT` fills. Owns defects D3, D4
+  and D19.
   Acceptance: `head -1 README.md` names StitchCAD; `mdbook build docs/book` succeeds; the
   README quick start and links are verified by running them; `README-STABILITY` green.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — every quick-start command run, book builds, `README-STABILITY: OK`.
+  Commit: `STITCHCAD-SPINE-0001`
 
 - ID: `SPINE.2`
   Status: `pending`
@@ -201,8 +202,8 @@ mechanically-enforced form:
 | 1 | `SPINE.8` | `done` | landed in frontier order: every code commit from here on is judged by it |
 | 2 | `SPINE.9` | `done` | landed in frontier order: it protects the layer-B index from the documented maintenance command |
 | 3 | `SPINE.10` | `done` | landed in frontier order: one entry point, scratch on this volume |
-| 4 | `SPINE.1` | `pending` | **next** — identity before content, so the G0 spec chapters grow into a named book |
-| 5 | `SPINE.2` | `pending` | cleanup cadence is a session-directive obligation and cheap |
+| 4 | `SPINE.1` | `done` | identity landed: README, book identity, the `spec/` part, and a clean `make book` |
+| 5 | `SPINE.2` | `pending` | **next** — cleanup cadence is a session-directive obligation and cheap |
 | 6 | `SPINE.3` | `pending` | policy adoptions bind how every later claim and cap is written |
 | 7 | `SPINE.4` | `pending` | containment must exist before 18 spec chapters arrive |
 | 8 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
@@ -372,7 +373,41 @@ the director rather than patched here (session directive §21: other repositorie
   instrument rule; D16 marked fixed-with-residual in `PLANNING.md`; `LIVE_STATUS.md`, `MEMORY.md`,
   `CHANGELOG.md` updated.
 
-Leaves `.1`–`.5` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.1` — the repository introduces itself as StitchCAD (defects D3, D4, D19)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the de-template renamed the crate but left every reader-facing
+  surface describing the template: `git show HEAD:README.md | head -1` →
+  `# bedrock — a Rust project discipline-spine template`, and
+  `git show HEAD:README.md | grep -c StitchCAD` → `0`; `git show HEAD:docs/book/book.toml |
+  grep -nE '^(title|authors)'` → `2:title = "Project Book"`, `4:authors = ["<your name>"]`;
+  `git show HEAD:docs/book/src/SUMMARY.md` → one chapter. A third defect surfaced while verifying
+  the documented commands: `make book` writes `docs/book/book/`, which
+  `git show HEAD:.gitignore | grep -c 'docs/book/book'` → `0` did not ignore, so building the book
+  left `?? docs/book/book/` in the tree and broke handoff-readiness (D19).
+- [x] **ADDRESSED (verified)** — `head -1 README.md` →
+  `# StitchCAD — a sewing CAD whose design never lives in a vendor file format`,
+  `grep -c StitchCAD README.md` → `2`; `scripts/check_readme_stability.sh` →
+  `README-STABILITY: OK — README.md is 103/300 lines, 6063/16384 bytes.`, `exit=0`, with
+  `grep -cE '20[0-9]{2}-[0-9]{2}-[0-9]{2}' README.md` → `0` date-stamped lines; the book builds:
+  `mdbook build docs/book` → `INFO HTML book written to …/docs/book/book`, `exit=0`; and after the
+  `.gitignore` fix the same build leaves the tree clean (`git status --short` lists only the intended
+  edits, no `??` entry).
+- [x] **NO REGRESSION** — every command the README quick start promises was run, not assumed:
+  `make check` → `test result: ok. 1 passed; 0 failed`; `make gate` → `=== all doctrines green ===`;
+  `make probes` → `make probes: 5 suite(s) green`; `make book` → `exit=0`;
+  `git config core.hooksPath` → `.githooks`.
+- [x] **FIX** — rewrote `README.md` as a landing page (purpose, three defining properties, status,
+  audience and non-goals, crate map, verified quick start, a canonical-home table that routes
+  changing detail away, layout, license); set `docs/book/book.toml` identity and repository URL;
+  replaced the template introduction with a real one (the idea, the two commitments, who the book is
+  for, what is true now, how it is organised); added `docs/book/src/spec/index.md` — how to read a
+  specification chapter, and the table of what each G0 chapter settles; pointed `SUMMARY.md` at the
+  new `spec/` part; ignored `/docs/book/book/`.
+- [x] **LOCKSTEP** — D3/D4 marked fixed and D19 logged with its reproduce command in `PLANNING.md`;
+  `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` updated. The derived Knowledge Map regenerates in the
+  hook; `knowledge-map/subsystems.md` rows are `SPINE.5`'s leaf, not this one.
+
+Leaves `.2`–`.5` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -429,6 +464,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.8` | `run_fresh_evidence_probes.sh`; `check_fresh_acceptance_evidence.sh --self-test`; both inherited suites; `make check`; `scripts/check_doctrines.sh` | `probes: 9 pass / 0 fail`; `8 verdict controls + 6 extractor arms`; `probes: 10 pass / 0 fail`; `probes: 6 pass / 0 fail`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 | `2026-09-29` | `SPINE.9` | `run_update_scaffold_probes.sh`; `bash -n` ×2; the three other probe suites; `make check`; `scripts/check_doctrines.sh` | `probes: 7 pass / 0 fail`; syntax clean; `10/0`, `6/0`, `9/0`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 | `2026-09-29` | `SPINE.10` | `make probes`; `TMPDIR=… mktemp -d`; `git diff --stat` on the inherited suites; `make check`; `scripts/check_doctrines.sh` | `5 suite(s) green` (37 arms, 0 fail); repo-volume path; no inherited edit; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
+| `2026-09-29` | `SPINE.1` | `check_readme_stability.sh`; `mdbook build docs/book`; `make check`; `make gate`; `make probes`; `git status --short` after the build | `README-STABILITY: OK — 103/300 lines, 6063/16384 bytes`; `exit=0`; `test result: ok. 1 passed`; `=== all doctrines green ===`; `5 suite(s) green`; no `??` entry |
 
 ## Commit Log
 
@@ -441,7 +477,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.8` | `STITCHCAD-SPINE-0008 (leaf SPINE.8): require acceptance evidence fresh in the commit` | project doctrine + 9-arm probe; D15 facet 1 closed locally |
 | `SPINE.9` | `STITCHCAD-SPINE-0009 (leaf SPINE.9): guard project content in the scaffold updater` | D17 fixed; 7-arm probe suite + decision record |
 | `SPINE.10` | `STITCHCAD-SPINE-0010 (leaf SPINE.10): one probe entry point, scratch on this volume` | D16 fixed (residual recorded) |
-| `SPINE.1` … `.5` | `pending` | — |
+| `SPINE.1` | `STITCHCAD-SPINE-0001 (leaf SPINE.1): the repository introduces itself as StitchCAD` | D3, D4, D19 fixed |
+| `SPINE.2` … `.5` | `pending` | — |
 
 ## Changelog
 
@@ -454,6 +491,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.1` landed — README, mdBook identity, the introduction and the `spec/` part;
+  `make book` output ignored (D19). D3 and D4 closed.
 - `2026-09-29`: `SPINE.10` landed — `make probes` runs all five suites with `TMPDIR` pinned under
   `target/scratch`; D16 closed with one accepted residual (the shared check's trap-cleaned
   `mktemp -d`), recorded rather than patched into NEUTRAL files.

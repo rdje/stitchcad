@@ -4,6 +4,31 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0001 — the repository introduces itself as StitchCAD (leaf `SPINE.1`)
+
+- **`README.md` is a StitchCAD landing page** (defect D3): what the product is, the three properties
+  that define it (uncertainty is data, headless-first, agent-drivable), the current gate, audience and
+  explicit non-goals, the crate map by layer, a verified quick start, a canonical-home table that routes
+  changing detail to `ROADMAP.md` / the book / `LIVE_STATUS.md` / `docs/tasks/` / `docs/decisions/`, the
+  layout and the license. `scripts/check_readme_stability.sh` →
+  `README-STABILITY: OK — README.md is 103/300 lines, 6063/16384 bytes.`, `exit=0`, and zero
+  date-stamped lines. Before: `git show HEAD:README.md | head -1` →
+  `# bedrock — a Rust project discipline-spine template`, with `grep -c StitchCAD` → `0`.
+- **The mdBook is named and has a real front door** (defect D4): `book.toml` title/authors/description
+  and repository URL replace `"Project Book"` / `"<your name>"`; the template introduction is replaced
+  by one that states the idea, the two commitments, who the book is for, what is true right now (G0 —
+  specification, not shipped behavior) and how the book is organised; `docs/book/src/spec/index.md`
+  states how to read a normative chapter (SHALL/SHOULD/MAY, status lives elsewhere, claims carry their
+  verification) and what each G0 chapter settles; `SUMMARY.md` opens the Specification part.
+  `mdbook build docs/book` → `INFO HTML book written to …`, `exit=0`.
+- **Defect D19 found and fixed while verifying the quick start:** `make book` writes
+  `docs/book/book/`, which `.gitignore` did not ignore, so the last documented command left
+  `?? docs/book/book/` in the tree and broke handoff-readiness. Ignored; a build now leaves
+  `git status --short` clean.
+- Every quick-start command was run, not assumed: `make check` → `test result: ok. 1 passed; 0 failed`;
+  `make gate` → `=== all doctrines green ===`; `make probes` → `5 suite(s) green`; `make book` →
+  `exit=0`; `git config core.hooksPath` → `.githooks`.
+
 ## STITCHCAD-SPINE-0010 — one probe entry point, scratch on the repository volume (leaf `SPINE.10`)
 
 - **Defect D16 fixed.** The inherited probe suites take their scratch from `mktemp -d`, which resolved

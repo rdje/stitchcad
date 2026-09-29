@@ -1,10 +1,10 @@
 [book]
-title = "Project Book"
-description = "The public-facing documentation surface. Keep it in lockstep with the code (see COMMIT.md)."
-authors = ["<your name>"]
+title = "StitchCAD"
+description = "A parametric sewing CAD: construction-recipe designs, evidence-bearing factory profiles, and deterministic artifact release packages. This book is the public documentation surface — specifications, guides and reference — kept in lockstep with the code (see COMMIT.md)."
+authors = ["The StitchCAD maintainers"]
 language = "en"
 src = "src"
 
 [output.html]
 default-theme = "rust"
-git-repository-url = ""
+git-repository-url = "https://github.com/rdje/stitchcad"

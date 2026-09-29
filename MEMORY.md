@@ -16,16 +16,17 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe
   designs, versioned evidence-bearing Factory Profiles, deterministic artifact export
   (DXF/HPGL/PDF/tech pack), agent-first via MCP. `ROADMAP.md` v0.2, DRAFT until G0 exits.
-- **Active tree:** `SPINE` → frontier leaf `SPINE.1` (`pending`). `PLANNING.3` is parked mid-tree
-  (repo clean) and resumes after the `SPINE` identity/hygiene leaves.
-- **Next action:** de-template the identity surfaces (defects D3, D4) — rewrite `README.md` as the
-  StitchCAD landing page inside the reviewed caps, set `docs/book/book.toml` title/authors, replace
-  `docs/book/src/introduction.md`, and grow `SUMMARY.md` with the `spec/` part that `G0-CONTRACT`
-  fills; verify with `mdbook build docs/book` and by running the README quick start; then commit
-  `STITCHCAD-SPINE-0001 (leaf SPINE.1)`.
-- **Order after that:** `SPINE.2` (artifact cleanup + `docs/ARTIFACT_CLEANUP.md`) → `SPINE.3` (policy
-  adoptions) → `SPINE.4` (live-doc containment) → `SPINE.5` (toolbox/knowledge map) → `PLANNING.3`
-  (G5–G7, V1, V2 + coverage census) → `G0-CONTRACT.1`–`.18` → `G1-SLICE` …
+- **Active tree:** `SPINE` → frontier leaf `SPINE.2` (`pending`). `PLANNING.3` is parked mid-tree
+  (repo clean) and resumes after the `SPINE` hygiene leaves.
+- **Next action:** run the first artifact cleanup and create its cadence record
+  `docs/ARTIFACT_CLEANUP.md` (single latest entry: absolute date + one-line summary), per the
+  session directive's 24 h rule. Sweep only what is provably safe: `target/` build and doctrine
+  scratch, stray `.log`/`.bin` files, `docs/book/book/` output — never a tracked file, never an
+  ambiguously shared global cache. Prove it with a before/after census and a residue census, keep
+  `make check` green afterwards, then commit `STITCHCAD-SPINE-0002 (leaf SPINE.2)`.
+- **Order after that:** `SPINE.3` (policy adoptions) → `SPINE.4` (live-doc containment) → `SPINE.5`
+  (toolbox/knowledge map) → `PLANNING.3` (G5–G7, V1, V2 + coverage census) → `G0-CONTRACT.1`–`.18`
+  → `G1-SLICE` …
 - **In-flight uncommitted work:** none.
 - **Blockers:** `G0-CONTRACT.14` needs named humans from the director (project owner,
   evaluation-seat/plotter procurement). It blocks only itself.

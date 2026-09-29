@@ -1,74 +1,103 @@
-# bedrock — a Rust project discipline-spine template
+# StitchCAD — a sewing CAD whose design never lives in a vendor file format
 
-**bedrock** is a starting point for a new Rust project that ships with a battle-tested
-*discipline spine* already wired in: durable memory, task-tree tracking, a strict commit
-workflow, mechanical doctrine enforcement, a knowledge map, and an mdBook — all
-project-neutral. Copy it, drop in your roadmap, and grow the project with that spine as its
-backbone.
+StitchCAD is pattern engineering software for garment makers. The canonical design is an abstract
+parametric space — measurement tables, formulas and an ordered **construction recipe** — and a
+versioned, evidence-bearing **Factory Profile** turns that design into a concrete graded **Instance**.
+An artifact generator serializes instances to industry formats (DXF in AAMA and ASTM dialects,
+HPGL/PLT, PDF, tech pack) as an immutable, evidence-bearing release package.
 
-## Why a spine
+Three properties define it:
 
-Discipline that lives in an agent's head evaporates on session loss, a model switch, or a
-new contributor. bedrock puts the discipline **in the repo** and enforces it at the **git
-level** (pre-commit hook + CI), so it holds for any agent — Claude Code, Codex, Gemini,
-Cursor, a custom runner — or a human, identically.
+- **Uncertainty is data.** Every parameter is a known fact (with scoped evidence), an unknown fact
+  (requiring observation), a selectable design choice, an overridable preference or a derived value.
+  Unknown facts are never silently defaulted into geometry, and they govern what may be exported.
+- **Headless-first.** The core is pure Rust libraries with no UI dependency; the CLI, the native app,
+  the WASM web app and AI agents are interchangeable front-ends over one command bus.
+- **Agent-drivable.** Every semantic object is reachable through a stable command API and an MCP
+  façade, with scoped authority — an agent may inspect, propose, commit and generate, but approval
+  stays human.
 
-## What's inside (the spine)
+**Status:** the project is in gate **G0**, the product-and-semantic-contract gate. The repository
+holds the roadmap, the specification being written from it, and a discipline spine that enforces how
+work is tracked and committed. No user-facing application exists yet.
 
-| File / dir | What it gives you |
+## Audience and scope
+
+- **For:** a patternmaker producing a signoff package for a named factory, with an AI agent as
+  co-user and a sewing/factory expert authoring and reviewing profiles.
+- **Explicit non-goals:** marker making, nesting and yield; costing; digitizing paper patterns;
+  cutter/CAM drivers; PLM/ERP integration; body-scan made-to-measure; photorealistic or quantitatively
+  validated drape. `ROADMAP.md` §1.3 is the authoritative list, and §3.2 bounds the supported garment
+  envelope.
+
+## Architecture at a glance
+
+Crates appear as their stage starts; nothing below exists before its gate.
+
+| Layer | Crates |
 | --- | --- |
-| `CLAUDE.md` / `AGENTS.md` | harness-neutral agent bootstrap (read this first) |
-| `MEMORY_ARCHITECTURE.md` | the durable 4-layer memory model (A resume pointer · B task-trees · C decisions · D git) |
-| `docs/TASK_TREE.md` + `docs/tasks/` | task-tree tracking — nothing changes without a leaf |
-| `COMMIT.md` | the strict, repeatable commit workflow |
-| `DOCTRINE_ENFORCEMENT.md` + `scripts/check_doctrines.sh` | the mechanical enforcer (registry + universal checks + a project slot) |
-| `TOOLBOX.md` | the tools-first diagnostic doctrine |
-| `KNOWLEDGE_MAP.md` + `knowledge-map/` | a derived, drift-proof orientation map |
-| `docs/book/` | an mdBook skeleton — the public docs surface |
-| `.githooks/` + `.github/workflows/` | the E3 (hook) + E4 (CI) enforcement layers |
-| `MEMORY.md` · `CHANGELOG.md` · `DEV_NOTES.md` · `LIVE_STATUS.md` | the seeded live-docs |
-| `ROADMAP.md` | **the one file you replace** — your project's roadmap |
-| `Cargo.toml` · `crates/` · `Makefile` | a minimal Rust workspace + `make check`/`make gate` |
+| Domain | `sc-core` (ontology, construction recipe, sewing graph, uncertainty, command bus) · `sc-measure` · `sc-units` |
+| Geometry | `sc-geometry` (curves, robust predicates, offsets) · `sc-mesh` · `sc-viewport` |
+| Instantiation | `sc-grading` (regeneration + grade rules) · `sc-constraints` (deterministic finite-domain CSP) · `sc-sketch` (optional local constraints) |
+| Product surface | `sc-profiles` · `sc-artifacts` (canonicalizer, DXF, HPGL, PDF, tech pack) · `sc-store` |
+| Front-ends | `sc-api` · `sc-mcp` · `sc-cli` · `sc-app-tauri` |
 
-## Use it
+## Quick start
 
-**Option A — `cargo generate` (Rust-native):**
+Requires a stable Rust toolchain (`rust-toolchain.toml`), and `mdbook` for the book.
 
 ```bash
-cargo generate --git <this-repo-url> --name <project>
+git config core.hooksPath .githooks   # activate the discipline gates (once per clone)
+make check                            # cargo fmt --check + clippy -D warnings + cargo test
+make gate                             # the doctrine enforcer
+make probes                           # every diagnostic probe suite
+make book                             # build the mdBook (output: docs/book/book/, untracked)
 ```
 
-**Option B — GitHub "Use this template"** (enable the *Template repository* setting).
+All four commands are verified by the leaf that last touched this page; if one fails, that is a
+defect — log it in a task-tree and fix it (`TOOLBOX.md` explains how to diagnose).
 
-Then, either way, `cd <project>` and finalize with one command:
+## Where to read next
 
-1. `./scripts/bootstrap.sh <project>` — installs the git hooks, sets the crate + roadmap name,
-   generates the Knowledge Map, verifies the enforcer, and seeds the leaf that owns this step —
-   then **commit with the command it prints**. The canonical post-copy step for both paths
-   (option A needs `cargo install cargo-generate`).
-2. Replace `ROADMAP.md` with your project's roadmap, then create your first task-tree
-   (`cp docs/tasks/TEMPLATE.md docs/tasks/<TREE-ID>.md`) and register it in `docs/TASK_TREE.md`.
-3. Grow the project one task-tree leaf at a time, committed via `COMMIT.md`.
+| Question | Canonical home |
+| --- | --- |
+| What is this product meant to become? | [`ROADMAP.md`](ROADMAP.md) |
+| What is specified and agreed so far? | [`docs/book/`](docs/book/src/SUMMARY.md) — the mdBook, the public documentation surface |
+| What is being worked on right now? | [`MEMORY.md`](MEMORY.md) → [`docs/TASK_TREE.md`](docs/TASK_TREE.md) → `docs/tasks/` |
+| What is finished? | [`LIVE_STATUS.md`](LIVE_STATUS.md) and [`CHANGELOG.md`](CHANGELOG.md) |
+| Why was something decided this way? | [`docs/decisions/`](docs/decisions/INDEX.md) |
+| How do I commit work? | [`COMMIT.md`](COMMIT.md) |
+| How do I diagnose a failure? | [`TOOLBOX.md`](TOOLBOX.md) — tools first, never a guessed root cause |
+| What is enforced mechanically, and how? | [`DOCTRINE_ENFORCEMENT.md`](DOCTRINE_ENFORCEMENT.md) |
+| How does durable memory survive a lost session? | [`MEMORY_ARCHITECTURE.md`](MEMORY_ARCHITECTURE.md) |
+| Why does this README stay short? | [`README_POLICY.md`](README_POLICY.md) |
 
-## Keep the spine current
+Agent harnesses enter through [`CLAUDE.md`](CLAUDE.md) / [`AGENTS.md`](AGENTS.md), which point at the
+same documents.
 
-bedrock improves over time. To pull the latest **project-neutral** spine (doctrine docs,
-hooks, universal checks) into a project you already created — without touching your
-roadmap, task-trees, decisions, or code — run:
+## Repository layout
 
-```bash
-./scripts/update_scaffold.sh <bedrock-repo-url>
+```
+ROADMAP.md            the product roadmap (the one file a project replaces when forked from bedrock)
+MEMORY.md             the bounded resume pointer: what is next
+LIVE_STATUS.md        the authoritative progress tracker
+CHANGELOG.md          completed work and how it was validated
+DEV_NOTES.md          engineering continuity: root cause, implementation, validation per slice
+TOOLBOX.md            the tools-first diagnostic doctrine and this project's instruments
+docs/book/            the mdBook: specifications, guides, reference
+docs/tasks/           task-trees — every change is owned by a leaf before it is made
+docs/decisions/       durable facts and decisions, one record per file
+scripts/              the doctrine enforcer, its checks, and the scaffold updater
+crates/               the Rust workspace (grows from G0/G1)
+conformance/          golden files, pathology corpus, fixtures (grows from G2)
 ```
 
-The scaffold version is recorded in `DOCTRINE_VERSION`.
+## License
 
-This README is deliberately a **landing page**, governed by [`README_POLICY.md`](README_POLICY.md)
-and mechanically capped (line **and** byte) by the `README-STABILITY` doctrine. Route changing
-detail to its canonical home rather than growing this file.
+`MIT OR Apache-2.0`, declared once in the workspace `Cargo.toml`. The coupling between license and
+solver choice is a recorded decision, not an accident: see `docs/decisions/` for ADR-0001.
 
-## The non-negotiables (full detail in `CLAUDE.md`)
-
-- Nothing changes without a **task-tree leaf** first.
-- Record durable facts/decisions in `docs/decisions/`.
-- Commit per `COMMIT.md`; the hooks + CI enforce the doctrines.
-- Keep **roadmap ↔ code ↔ docs** in lockstep, always.
+This repository was generated from the `bedrock` discipline-spine template, which is why the memory,
+task-tree, commit and doctrine-enforcement machinery exists before any product code. The spine is
+kept current with `scripts/update_scaffold.sh`, which syncs neutral files and refuses to overwrite
+project content.
