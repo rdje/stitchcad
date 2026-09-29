@@ -1,0 +1,26 @@
+# .doctrine/live_document_size/routes.tsv — the routing-pressure closure (SPINE.4.2).
+# Every destination that a bounded surface routes to, classified. README_POLICY.md's "Routing pressure
+# closure" section requires this: moving content out of a bounded file is not containment if the
+# destination is an unbounded neighbouring sink. Each row names who emits the route, where it lands,
+# which surface row governs that destination, whether the route is for READERS (navigation) or for
+# AUTHORS (overflow — where new prose is told to go), and what bounds it.
+#
+# A route whose destination has no row in surfaces.tsv is an unclassified sink and fails the checker.
+# `class` may be `reader_navigation`, `author_overflow`, or `both`.
+#
+#route_id	emitted_by	destination	surface_id	class	lifecycle	pressure_control	notes
+R01	check_readme_stability.sh routing_hint	docs/book/	book_collection	both	partitioned_canonical	per-part + file-count + aggregate ceilings	user-facing feature detail and examples
+R02	check_readme_stability.sh routing_hint	docs/tasks/	tasks_collection	author_overflow	partitioned_canonical	per-part + file-count + aggregate ceilings	current work; one file per tree, evidence inside its leaf
+R03	check_readme_stability.sh routing_hint	docs/TASK_TREE.md	task_index	reader_navigation	bounded_snapshot	line/byte/maxline ceilings	the index stays one row per tree; leaf detail never moves here
+R04	check_readme_stability.sh routing_hint	ROADMAP.md	roadmap	reader_navigation	maintained_reference	ceiling + transition debt; section index owed by SPINE.13	priorities and scope, revised under its own disposition log
+R05	check_readme_stability.sh routing_hint	CHANGELOG.md	changelog	author_overflow	rolling_ledger	bounded window + rollover to history_archive (SPINE.14)	release history; the inherited bedrock segment is what makes it a ledger with an archive transition
+R06	check_readme_stability.sh routing_hint	git history	git_history	reader_navigation	external_terminal	query-first, never a mandatory read	the audit trail (layer D)
+R07	check_readme_stability.sh routing_hint	docs/decisions/	decisions_collection	author_overflow	partitioned_canonical	per-part + file-count + aggregate ceilings	design rationale, one record per decision, indexed
+R08	check_readme_stability.sh routing_hint	KNOWLEDGE_MAP.md	knowledge_map	reader_navigation	generated_projection	regenerated + freshness-checked by the hook	the "generated index" destination; holds no unique facts
+R09	check_readme_stability.sh routing_hint	TOOLBOX.md	doctrine_docs	reader_navigation	maintained_reference	per-part limits in the doctrine_docs row	diagnostics and procedure
+R10	README.md canonical-home table	LIVE_STATUS.md	live_status	author_overflow	bounded_snapshot	overwrite semantics + line/byte/maxline ceilings	progress state; rows are overwritten, never appended
+R11	README.md canonical-home table	MEMORY.md	memory_pointer	author_overflow	bounded_snapshot	overwrite semantics + the spine's dual caps	the resume pointer; §6 forbids history and standing warnings here
+R12	README.md canonical-home table	COMMIT.md;DOCTRINE_ENFORCEMENT.md;MEMORY_ARCHITECTURE.md;README_POLICY.md;CLAIM_VERIFICATION.md;LIVE_DOCUMENT_SIZE_CONTAINMENT.md	doctrine_docs	reader_navigation	maintained_reference	per-part limits in the doctrine_docs row	the "contributor docs" and adopted-policy destinations
+R13	COMMIT.md lockstep list	DEV_NOTES.md	dev_notes	author_overflow	rolling_ledger	bounded window + LESSON-PROMOTION + rollover to history_archive	root cause / implementation / validation per slice, newest first
+R14	session directive §8	docs/ARTIFACT_CLEANUP.md	artifact_cleanup	author_overflow	bounded_snapshot	single latest entry; overwrite-only	the cleanup cadence record; it must not accumulate entries
+R15	LIVE_DOCUMENT_SIZE_CONTAINMENT.md rollover protocol	docs/history/	history_archive	author_overflow	archive_terminal	immutable sealed segments with recorded identity	the terminal for R05 and R13; created by SPINE.14

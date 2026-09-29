@@ -93,28 +93,192 @@ Two invariants, both directions:
 Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns the fix
 (directive §15 — finding a defect creates the obligation to resolve it).
 
-| # | Defect | Reproduce | Impact | Owner |
-| --- | --- | --- | --- | --- |
-| D1 | layer-B index lists a tree that does not exist (`BEDROCK-MAINTENANCE`, plus a `MAINTAINING.md` reference) and omits one that does (`BOOTSTRAP`) | `grep -oE 'tasks/[A-Za-z0-9_-]+\.md' docs/TASK_TREE.md \| sort -u` vs `ls docs/tasks/*.md` | a resuming agent is pointed at a missing tree and cannot see the real one | `PLANNING.1` (fixed) |
-| D2 | layer-A pointer reports `Latest commit: none yet` although the bootstrap commit landed | `git log --oneline -1` vs `grep -n 'Latest commit' MEMORY.md` | the resume pointer misreports state — the exact drift layer A exists to prevent | `PLANNING.1` (fixed) |
-| D3 | `README.md` still introduces the bedrock template, not StitchCAD | `head -1 README.md` → `# bedrock — a Rust project discipline-spine template` | `COMMIT.md` requires README to carry objective/layout/commands; a visitor reads the wrong project | `SPINE.1` (**fixed** — the landing page now names StitchCAD; `README-STABILITY: OK — 103/300 lines, 6063/16384 bytes`) |
-| D4 | the mdBook carries template identity (`title = "Project Book"`, `authors = ["<your name>"]`) and the template introduction | `grep -nE 'title\|authors' docs/book/book.toml` | the director's only view into the project is unnamed and empty | `SPINE.1` (**fixed** — `book.toml` identity set, real introduction, `spec/` part added; `mdbook build docs/book` → `exit=0`) |
-| D5 | `LIVE_STATUS.md` rows are the template's (`_(your first milestone)_`) | `grep -n 'Not Started' LIVE_STATUS.md` | the authoritative progress tracker says nothing about StitchCAD | `PLANNING.1` (fixed) |
-| D6 | `CHANGELOG.md` holds only bedrock-scaffold history (6 headings), zero StitchCAD entries | `grep -c 'bedrock-scaffold' CHANGELOG.md` → 6; `grep -ci stitchcad CHANGELOG.md` → 0 | layer-D human-readable history has no project entries | `PLANNING.1` (fixed) |
-| D7 | the Knowledge Map documents no subsystems | `grep -n 'no subsystems documented' KNOWLEDGE_MAP.md` | orientation map is empty for a project with a 50 KB roadmap | `SPINE.5` |
-| D8 | `docs/ARTIFACT_CLEANUP.md` is absent, so the 24 h cleanup cadence has no record | `ls docs/ARTIFACT_CLEANUP.md` → No such file | directive §8 cannot be honoured or audited across sessions | `SPINE.2` (**fixed** — first cleanup run: four regenerable paths removed, `target` 2.1 MB → 1.2 MB, residue census clean, record created) |
-| D9 | `TOOLBOX.md` project-toolbox table holds placeholders (`<your-probe>`) | `grep -n 'your-probe' TOOLBOX.md` | tools-first doctrine has no reachable tool list | `SPINE.5` |
-| D10 | the starter crate still prints the bedrock message and is not a roadmap crate | `grep -n bedrock crates/app/src/main.rs` | `cargo run` describes the wrong project; roadmap §4.3 crate layout unrepresented | `G1-SLICE.1` (deferred: G0 is specification-only, no code lands before G1) |
-| D11 | the in-repo `README_POLICY.md` is the older neutral body; the director's external reference has been revised (authority/provenance, duplication probe, routing-pressure closure, derived caps, unconditional check) | `diff README_POLICY.md <external reference>` → 100+ differing lines | directive §14 requires applying source updates; the guard lacks the routing-closure rule | `SPINE.3` (**fixed** — revised neutral body copied in behind a fenced StitchCAD adoption note; `190` lines / `10535` bytes, `0` donor tokens; the derived caps and destination registry it now requires are recorded as owed by `SPINE.4`) |
-| D12 | the claim-verification policy (directive §17) is not adopted in-repo | `ls docs/CLAIM_VERIFICATION.md` → No such file | published numbers would have no defined standard for "checked" | `SPINE.3` (**fixed** — adopted as `CLAIM_VERIFICATION.md` with all three legs restated in this project's terms; `CLAUDE.md` and the README route to it) |
-| D13 | live-document containment (directive §18) is only partially adopted: `MEMORY.md`/`README.md` caps exist, but the surfaces that are about to grow (`ROADMAP.md` 50 821 B, `CHANGELOG.md` 11 761 B, `docs/TASK_TREE.md` with 12 trees) have no inventory, ceilings or ratchet | `wc -lc ROADMAP.md CHANGELOG.md docs/TASK_TREE.md` | bounded pointer, unbounded neighbours — the failure the containment guide exists to prevent | `SPINE.4` split into `.4.1` (doctrine adopted in-repo — **done**), `.4.2` (surface inventory, derived ceilings, route registry, derived README caps) and `.4.3` (the deterministic checker + RED arms) |
-| D14 | the workspace lockfile is untracked, so the first `make check` in a fresh clone leaves the tree dirty | `make check && git status --short` → `?? Cargo.lock`; `git check-ignore -v Cargo.lock` → `rc=1` (not ignored) | the pivot rule defines handoff-ready as *no untracked files*, and the toolchain itself violates it; `.gitignore` states the lockfile is deliberately tracked for reproducible builds | `SPINE.6` (fixed) |
-| D15 | the inherited `TASK-ACCEPTANCE` gate scans a staged tree file for the FIRST box matching each label, so in a multi-leaf file one leaf's evidence satisfies another leaf's code change (false GREEN), and an earlier unticked placeholder rejects a leaf carrying real evidence further down the same file (false RED). **Facet 3, measured in the wild on this repository's own `STITCHCAD-SPINE-0007` attempt:** the check judges *every* staged leaf file, not only the leaf owning the code, so co-staging a documentation tree with a code change imposes the evidence-signature requirement on that doc tree's boxes — `PLANNING.1`'s census bullets cited two commands and their real output and were still refused (`carries no tool-output evidence`, `exit=1`) because a filename listing matches no signature family | `bash docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh` → `HOLE-1 exit=0`, `HOLE-2 exit=1`, `HOLE-3 exit=0`, `probes: 6 pass / 0 fail`; mechanism at `scripts/check_task_acceptance.sh:106-112`; facet 3 reproduced by `scripts/check_doctrines.sh` with the probe staged → `❌ TASK-ACCEPTANCE … docs/tasks/PLANNING.md — the 'ROOT CAUSE' box is ticked but carries no tool-output evidence`, `exit=1` | every code commit in this repository is judged by this gate, and this project's trees are deliberately multi-leaf; the check's own header claims box-scoping closed cross-leaf evidence leakage, and its probe suite exercises that leakage only across files | `SPINE.7` (measured, published — **done**) and `SPINE.8` (local `FRESH-ACCEPTANCE-EVIDENCE` doctrine + the evidence-token convention: cite the invocation, its output **and its exit status**); the upstream fix is reported, not patched — the spine is shared code |
-| D20 | a **published number has no producer**: the awk-versus-grep signature measurement in `SPINE.8`'s record (`12 of 36` unmatched under awk, `2` under grep) was produced by a corpus that lived in untracked scratch and was removed by the `SPINE.2` cleanup — a leg-3 (durability) breach of the claim-verification standard this repository adopted in the same session | `grep -rn '12 of 36' --include='*.md' .` → 2 tracked files publish it; `ls docs/tasks/artifacts/evidence_signatures` → `No such file or directory`; `ls target/doctrine_scratch/evidence_corpus.txt` → `No such file or directory` | the number is quoted in two tracked documents and cannot be re-derived by any command, which is exactly the "trust me with extra steps" failure the adopted standard exists to stop; found by the adoption's own §7 step-3 sweep for untracked producers | `SPINE.11` (**fixed** — corpus + runner tracked under `docs/tasks/artifacts/evidence_signatures/`; one command reproduces `corpus: 36 lines · grep-unmatched: 2 · awk-unmatched: 12`, and the constants are watched so a drift fails the probe instead of silently restating the claim) |
-| D19 | `make book` writes `docs/book/book/`, which `.gitignore` did not ignore, so building the documented book left the tree dirty | `make book && git status --short` → `?? docs/book/book/`; `git show HEAD~1:.gitignore | grep -c 'docs/book/book'` → `0` | the pivot rule defines handoff-ready as *no untracked files*, and the documented quick start violated it on its last command; a build artifact was one `git add -A` away from being committed | `SPINE.1` (**fixed** — `/docs/book/book/` ignored; a build now leaves `git status --short` clean) |
-| D16 | the inherited probe suites scratch off-volume: they call `mktemp -d`, which resolves to the system volume while the repository lives on another one | `mktemp -d` → `/var/folders/…/T/tmp.…`; `TMPDIR="$PWD/target/scratch" mktemp -d` → `<repo>/target/scratch/tmp.…`; both suites pass either way (`probes: 10 pass / 0 fail`) | violates the data-locality rule (project-owned temporary workspaces stay on the repository volume), and scratch invisible to the repository volume is scratch the artifact-cleanup census cannot see | `SPINE.10` (**fixed** — `make probes` pins `TMPDIR` under `target/scratch`; one accepted residual recorded in the leaf: the shared check's trap-cleaned `mktemp -d` at commit time) |
-| D17 | `scripts/update_scaffold.sh` classifies four files that carry project content as NEUTRAL — "safe to overwrite because it never carries project content" — while the template's own instructions tell the project to fill them in | `grep -nE '^  (docs/TASK_TREE\.md|TOOLBOX\.md|README_POLICY\.md|docs/tasks/TEMPLATE\.md)$' scripts/update_scaffold.sh` → lines 27, 28, 31, 33 (`count=4`) | running the documented "keep the spine current" command would silently replace the Active Task Trees index (layer-B navigation), the project toolbox rows and the README-policy adoption note with template blanks — a data-loss path wired into the maintenance instructions | `SPINE.9` (**fixed** — two declared classes, backup + skip, dirty-tree refusal, `--dry-run`; `probes: 7 pass / 0 fail`) |
+Each defect is one bounded entry — what is wrong, how to reproduce it, its impact, and the leaf that
+owns the fix (directive §15: finding a defect creates the obligation to resolve it).
 
+These were a five-column table until `SPINE.4.2`. A table row is a single line, so a long cell is
+invisible pressure under a line-and-byte cap: the widest row here measured **1 758 bytes**, which is
+why maximum-content-line bytes is a separate axis in the containment doctrine. Bounded prose entries
+keep every axis visible, and they remove the ambiguity a raw `|` inside a code span creates (the GFM
+spec asks for `\|`; the inherited arity checker treats a code span as protective — defect D22).
+
+- **D1** — layer-B index lists a tree that does not exist (`BEDROCK-MAINTENANCE`, plus a
+  `MAINTAINING.md` reference) and omits one that does (`BOOTSTRAP`)
+- Reproduce: `grep -oE 'tasks/[A-Za-z0-9_-]+\.md' docs/TASK_TREE.md \| sort -u` vs `ls docs/tasks/*.md`
+- Impact: a resuming agent is pointed at a missing tree and cannot see the real one
+- Owner: `PLANNING.1` (fixed)
+
+- **D2** — layer-A pointer reports `Latest commit: none yet` although the bootstrap commit landed
+- Reproduce: `git log --oneline -1` vs `grep -n 'Latest commit' MEMORY.md`
+- Impact: the resume pointer misreports state — the exact drift layer A exists to prevent
+- Owner: `PLANNING.1` (fixed)
+
+- **D3** — `README.md` still introduces the bedrock template, not StitchCAD
+- Reproduce: `head -1 README.md` → `# bedrock — a Rust project discipline-spine template`
+- Impact: `COMMIT.md` requires README to carry objective/layout/commands; a visitor reads the wrong
+  project
+- Owner: `SPINE.1` (**fixed** — the landing page now names StitchCAD; `README-STABILITY: OK — 103/300
+  lines, 6063/16384 bytes`)
+
+- **D4** — the mdBook carries template identity (`title = "Project Book"`, `authors = ["<your name>"]`)
+  and the template introduction
+- Reproduce: `grep -nE 'title\|authors' docs/book/book.toml`
+- Impact: the director's only view into the project is unnamed and empty
+- Owner: `SPINE.1` (**fixed** — `book.toml` identity set, real introduction, `spec/` part added; `mdbook
+  build docs/book` → `exit=0`)
+
+- **D5** — `LIVE_STATUS.md` rows are the template's (`_(your first milestone)_`)
+- Reproduce: `grep -n 'Not Started' LIVE_STATUS.md`
+- Impact: the authoritative progress tracker says nothing about StitchCAD
+- Owner: `PLANNING.1` (fixed)
+
+- **D6** — `CHANGELOG.md` holds only bedrock-scaffold history (6 headings), zero StitchCAD entries
+- Reproduce: `grep -c 'bedrock-scaffold' CHANGELOG.md` → 6; `grep -ci stitchcad CHANGELOG.md` → 0
+- Impact: layer-D human-readable history has no project entries
+- Owner: `PLANNING.1` (fixed)
+
+- **D7** — the Knowledge Map documents no subsystems
+- Reproduce: `grep -n 'no subsystems documented' KNOWLEDGE_MAP.md`
+- Impact: orientation map is empty for a project with a 50 KB roadmap
+- Owner: `SPINE.5`
+
+- **D8** — `docs/ARTIFACT_CLEANUP.md` is absent, so the 24 h cleanup cadence has no record
+- Reproduce: `ls docs/ARTIFACT_CLEANUP.md` → No such file
+- Impact: directive §8 cannot be honoured or audited across sessions
+- Owner: `SPINE.2` (**fixed** — first cleanup run: four regenerable paths removed, `target` 2.1 MB → 1.2
+  MB, residue census clean, record created)
+
+- **D9** — `TOOLBOX.md` project-toolbox table holds placeholders (`<your-probe>`)
+- Reproduce: `grep -n 'your-probe' TOOLBOX.md`
+- Impact: tools-first doctrine has no reachable tool list
+- Owner: `SPINE.5`
+
+- **D10** — the starter crate still prints the bedrock message and is not a roadmap crate
+- Reproduce: `grep -n bedrock crates/app/src/main.rs`
+- Impact: `cargo run` describes the wrong project; roadmap §4.3 crate layout unrepresented
+- Owner: `G1-SLICE.1` (deferred: G0 is specification-only, no code lands before G1)
+
+- **D11** — the in-repo `README_POLICY.md` is the older neutral body; the director's external reference
+  has been revised (authority/provenance, duplication probe, routing-pressure closure, derived caps,
+  unconditional check)
+- Reproduce: `diff README_POLICY.md <external reference>` → 100+ differing lines
+- Impact: directive §14 requires applying source updates; the guard lacks the routing-closure rule
+- Owner: `SPINE.3` (**fixed** — revised neutral body copied in behind a fenced StitchCAD adoption note;
+  `190` lines / `10535` bytes, `0` donor tokens; the derived caps and destination registry it now
+  requires are recorded as owed by `SPINE.4`)
+
+- **D12** — the claim-verification policy (directive §17) is not adopted in-repo
+- Reproduce: `ls docs/CLAIM_VERIFICATION.md` → No such file
+- Impact: published numbers would have no defined standard for "checked"
+- Owner: `SPINE.3` (**fixed** — adopted as `CLAIM_VERIFICATION.md` with all three legs restated in this
+  project's terms; `CLAUDE.md` and the README route to it)
+
+- **D13** — live-document containment (directive §18) is only partially adopted: `MEMORY.md`/`README.md`
+  caps exist, but the surfaces that are about to grow (`ROADMAP.md` 50 821 B, `CHANGELOG.md` 11 761 B,
+  `docs/TASK_TREE.md` with 12 trees) have no inventory, ceilings or ratchet
+- Reproduce: `wc -lc ROADMAP.md CHANGELOG.md docs/TASK_TREE.md`
+- Impact: bounded pointer, unbounded neighbours — the failure the containment guide exists to prevent
+- Owner: `SPINE.4` split into `.4.1` (doctrine adopted in-repo — **done**), `.4.2` (surface inventory,
+  derived ceilings, route registry, derived README caps) and `.4.3` (the deterministic checker + RED
+  arms)
+
+- **D14** — the workspace lockfile is untracked, so the first `make check` in a fresh clone leaves the
+  tree dirty
+- Reproduce: `make check && git status --short` → `?? Cargo.lock`; `git check-ignore -v Cargo.lock` →
+  `rc=1` (not ignored)
+- Impact: the pivot rule defines handoff-ready as *no untracked files*, and the toolchain itself
+  violates it; `.gitignore` states the lockfile is deliberately tracked for reproducible builds
+- Owner: `SPINE.6` (fixed)
+
+- **D15** — the inherited `TASK-ACCEPTANCE` gate scans a staged tree file for the FIRST box matching
+  each label, so in a multi-leaf file one leaf's evidence satisfies another leaf's code change (false
+  GREEN), and an earlier unticked placeholder rejects a leaf carrying real evidence further down the
+  same file (false RED). **Facet 3, measured in the wild on this repository's own `STITCHCAD-SPINE-0007`
+  attempt:** the check judges *every* staged leaf file, not only the leaf owning the code, so co-staging
+  a documentation tree with a code change imposes the evidence-signature requirement on that doc tree's
+  boxes — `PLANNING.1`'s census bullets cited two commands and their real output and were still refused
+  (`carries no tool-output evidence`, `exit=1`) because a filename listing matches no signature family
+- Reproduce: `bash docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh` → `HOLE-1
+  exit=0`, `HOLE-2 exit=1`, `HOLE-3 exit=0`, `probes: 6 pass / 0 fail`; mechanism at
+  `scripts/check_task_acceptance.sh:106-112`; facet 3 reproduced by `scripts/check_doctrines.sh` with
+  the probe staged → `❌ TASK-ACCEPTANCE … docs/tasks/PLANNING.md — the 'ROOT CAUSE' box is ticked but
+  carries no tool-output evidence`, `exit=1`
+- Impact: every code commit in this repository is judged by this gate, and this project's trees are
+  deliberately multi-leaf; the check's own header claims box-scoping closed cross-leaf evidence leakage,
+  and its probe suite exercises that leakage only across files
+- Owner: `SPINE.7` (measured, published — **done**) and `SPINE.8` (local `FRESH-ACCEPTANCE-EVIDENCE`
+  doctrine + the evidence-token convention: cite the invocation, its output **and its exit status**);
+  the upstream fix is reported, not patched — the spine is shared code
+
+- **D20** — a **published number has no producer**: the awk-versus-grep signature measurement in
+  `SPINE.8`'s record (`12 of 36` unmatched under awk, `2` under grep) was produced by a corpus that
+  lived in untracked scratch and was removed by the `SPINE.2` cleanup — a leg-3 (durability) breach of
+  the claim-verification standard this repository adopted in the same session
+- Reproduce: `grep -rn '12 of 36' --include='*.md' .` → 2 tracked files publish it; `ls
+  docs/tasks/artifacts/evidence_signatures` → `No such file or directory`; `ls
+  target/doctrine_scratch/evidence_corpus.txt` → `No such file or directory`
+- Impact: the number is quoted in two tracked documents and cannot be re-derived by any command, which
+  is exactly the "trust me with extra steps" failure the adopted standard exists to stop; found by the
+  adoption's own §7 step-3 sweep for untracked producers
+- Owner: `SPINE.11` (**fixed** — corpus + runner tracked under
+  `docs/tasks/artifacts/evidence_signatures/`; one command reproduces `corpus: 36 lines · grep-
+  unmatched: 2 · awk-unmatched: 12`, and the constants are watched so a drift fails the probe instead of
+  silently restating the claim)
+
+- **D19** — `make book` writes `docs/book/book/`, which `.gitignore` did not ignore, so building the
+  documented book left the tree dirty
+- Reproduce: `make book && git status --short` → `?? docs/book/book/`; `git show HEAD~1:.gitignore |
+  grep -c 'docs/book/book'` → `0`
+- Impact: the pivot rule defines handoff-ready as *no untracked files*, and the documented quick start
+  violated it on its last command; a build artifact was one `git add -A` away from being committed
+- Owner: `SPINE.1` (**fixed** — `/docs/book/book/` ignored; a build now leaves `git status --short`
+  clean)
+
+- **D21** — a table cell in this census carried a raw `|` inside a code span
+  (`git show HEAD~1:.gitignore | grep -c …`), so the row's cell count depended on which table rule the
+  renderer implements: the GFM spec asks for `\|` even inside a code span, while the inherited arity
+  checker treats a code span as protective. A naive splitter (this leaf's own conversion script) read
+  the row as 6 cells against a 5-cell header.
+  - Reproduce: `git show HEAD~1:docs/tasks/PLANNING.md | grep -c 'gitignore | grep -c'` → `1`, `rc=0`;
+    `bash scripts/check_table_arity.sh --all` → `0 arity-defective row(s)`, `exit=0`.
+  - Impact: the rightmost column (the defect's owner) is exactly what a renderer following the spec
+    drops, so ownership could vanish from the rendered page while every gate stayed green.
+  - Owner: `SPINE.4.2` (**fixed** — the census is bounded prose entries now, so no cell contains a
+    pipe; the escape-always convention for any future table is `SPINE.15`).
+
+- **D22** — the inherited `scripts/check_table_arity.sh` documents its cell rule as "pipes NOT inside an
+  inline code span" (lines 19–22) and self-tests that rule (line 73: *a pipe inside a code span is not a
+  separator*), which is not what the GFM spec text says. The gate therefore cannot see the D21 class.
+  - Reproduce: `grep -n 'code span' scripts/check_table_arity.sh` → lines `19`, `22`, `73`, `99`, `rc=0`;
+    a synthetic row `| x | ` + "`cmd | grep y`" + ` | owner |` under a 3-column header reports
+    `0 arity-defective row(s)`.
+  - Impact: a renderer-dependent row shape passes the gate that exists to catch it. The divergence is
+    **not verified against a real renderer**, so it is logged as a question with an oracle, not as a
+    claim that the spine is wrong.
+  - Owner: `SPINE.15` — settle it against a real GFM renderer, record the answer, and adopt the
+    table-authoring convention (escape pipes inside code spans) whatever the answer is. The spine file
+    itself is NEUTRAL, so an upstream fix is reported, not patched.
+
+- **D16** — the inherited probe suites scratch off-volume: they call `mktemp -d`, which resolves to the
+  system volume while the repository lives on another one
+- Reproduce: `mktemp -d` → `/var/folders/…/T/tmp.…`; `TMPDIR="$PWD/target/scratch" mktemp -d` →
+  `<repo>/target/scratch/tmp.…`; both suites pass either way (`probes: 10 pass / 0 fail`)
+- Impact: violates the data-locality rule (project-owned temporary workspaces stay on the repository
+  volume), and scratch invisible to the repository volume is scratch the artifact-cleanup census cannot
+  see
+- Owner: `SPINE.10` (**fixed** — `make probes` pins `TMPDIR` under `target/scratch`; one accepted
+  residual recorded in the leaf: the shared check's trap-cleaned `mktemp -d` at commit time)
+
+- **D17** — `scripts/update_scaffold.sh` classifies four files that carry project content as NEUTRAL —
+  "safe to overwrite because it never carries project content" — while the template's own instructions
+  tell the project to fill them in
+- Reproduce: `grep -nE '^  (docs/TASK_TREE\.md|TOOLBOX\.md|README_POLICY\.md|docs/tasks/TEMPLATE\.md)$'
+  scripts/update_scaffold.sh` → lines 27, 28, 31, 33 (`count=4`)
+- Impact: running the documented "keep the spine current" command would silently replace the Active Task
+  Trees index (layer-B navigation), the project toolbox rows and the README-policy adoption note with
+  template blanks — a data-loss path wired into the maintenance instructions
+- Owner: `SPINE.9` (**fixed** — two declared classes, backup + skip, dirty-tree refusal, `--dry-run`;
+  `probes: 7 pass / 0 fail`)
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

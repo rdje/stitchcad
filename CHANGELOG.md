@@ -4,6 +4,41 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0004b — the containment data plane, and the trims that make its numbers honest (leaf `SPINE.4.2`)
+
+- **Two bounded TSV registries** now classify every live surface and every route:
+  `.doctrine/live_document_size/surfaces.tsv` — **17** surfaces × **21** fields (path, kind, lifecycle
+  class, owner, authority, measured lines/bytes/max-line/file-count, health target, inclusive ceiling,
+  transition debt, derivation notes) — and `routes.tsv` — **15** routes × **8** fields (emitter,
+  destination, governing surface, reader-vs-author class, lifecycle, pressure control). Route→surface
+  closure is enumerated, so no bounded file routes its overflow into an unclassified sink: the failure
+  the adopted policy's routing-pressure section exists to stop.
+- **Three surfaces were trimmed BEFORE their targets were set**, because a ceiling fitted to today's
+  bloat is not a ceiling: `MEMORY.md` went 38 → 28 lines / 2 633 → 1 780 bytes by moving its priority
+  queue and defect roster back to layer B, where they already lived; `LIVE_STATUS.md`'s widest line
+  went 1 104 → 146 bytes by making notes cells pointers instead of paragraphs; `docs/tasks/PLANNING.md`'s
+  widest line went **1 758 → 255 bytes** by converting the defect census from a five-column table to
+  bounded per-defect entries. Max-content-line is a separate pressure axis precisely because a wide row
+  is invisible to a line-and-byte cap.
+- **Derived README caps recorded:** 160 lines / 9 216 bytes / 320-byte line, health 120 / 7 168, from
+  the trimmed survivor plus modest headroom — replacing the inherited 300 / 16 384 template defaults as
+  the binding limit (the neutral guard still runs as a looser backstop; the stricter binds).
+- **Two defects in this leaf's own census, caught by running it:** the first pass reported a missing
+  surface row and a missing route because the command stripped `^#` lines and then dropped another —
+  and the header itself starts with `#`. The instrument was wrong, not the registry. The second was
+  real: the `git_history` row carried 20 fields instead of 21. Both fixed; both are what `SPINE.4.3`
+  must refuse mechanically.
+- **Three new leaves own the remaining debt** rather than leaving it as prose: `SPINE.13` (roadmap
+  navigation index + per-section bounds), `SPINE.14` (seal the inherited bedrock changelog segment into
+  `docs/history/` as an immutable archive terminal, with hash-proven identity), `SPINE.15` (settle D22
+  against a real GFM renderer and adopt the wide-row convention).
+- **Two defects logged:** D21 (a raw `|` inside a code span in a table cell — fixed by the conversion)
+  and D22 (the inherited arity checker documents "a pipe inside a code span is not a separator", which
+  is not what the GFM spec text says; logged as a question with an oracle, not as a claim).
+- Declared rows are **not yet gated**: enforcement is `SPINE.4.3`. Validation of this slice:
+  `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed; 0 failed`;
+  `make probes` → `6 suite(s) green`; `0` absolute paths in the data plane.
+
 ## STITCHCAD-SPINE-0004 — the containment doctrine is in-repo, with its deferrals named (leaf `SPINE.4.1`)
 
 - **`LIVE_DOCUMENT_SIZE_CONTAINMENT.md` adopted** at the repository root: the external doctrine's

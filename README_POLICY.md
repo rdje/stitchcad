@@ -9,19 +9,20 @@
   upstream. There is no automatic synchronization; later revisions are adopted only by deliberate
   local review. `scripts/update_scaffold.sh` classifies this file as PROJECT-CONTENT, so a spine sync
   backs it up and skips it instead of reverting it.
-- **Reviewed health target:** `README.md` measured **103 lines / 6 063 bytes** at adoption.
-- **Enforcement ceilings:** currently the spine defaults — **300 lines / 16 384 bytes** — read from
-  `README_LINE_CAP` / `README_BYTE_CAP` by `scripts/check_readme_stability.sh`, which applies them
-  unconditionally (it reads `README.md` itself, not the staged path set). ⚠ These are *inherited
-  template defaults, not derived values*, and the body below forbids copying illustrative numbers:
-  leaf `SPINE.4.2` owes ceilings derived from the trimmed survivor with modest explicit headroom,
-  recorded in the containment surface registry.
-- **Routed destinations:** the "Content contract" table in the body names the canonical home for each
-  class of changing detail. The data-only destination registry the body's "Routing pressure closure"
-  section requires — owner, lifecycle class and pressure control per route, followed transitively — is
-  owned by leaf `SPINE.4.2`, under the containment doctrine this repository adopted beside this policy
-  (`LIVE_DOCUMENT_SIZE_CONTAINMENT.md`, and the proportionality decision in `docs/decisions/`). The
-  caps that already exist are `README.md` here and `MEMORY.md` in
+- **Reviewed health target:** `README.md` measured **104 lines / 6 162 bytes / 159-byte widest line**
+  at adoption.
+- **Enforcement ceilings — DERIVED, and now recorded in the containment registry:**
+  **160 lines / 9 216 bytes / 320-byte line** (`.doctrine/live_document_size/surfaces.tsv`, row
+  `readme_landing`), with a health target of 120 lines / 7 168 bytes so the 80 % warning fires with
+  room for one normal edit. They were derived from the trimmed survivor plus modest explicit headroom,
+  not copied from this policy's illustrative numbers. The inherited neutral guard still runs with its
+  300 / 16 384 defaults (`README_LINE_CAP` / `README_BYTE_CAP`) as a looser backstop; the derived caps
+  are enforced by the containment checker in the project slot, and the stricter of the two binds.
+- **Routed destinations:** the data-only registry the body's "Routing pressure closure" section
+  requires now exists — `.doctrine/live_document_size/routes.tsv`, 15 routes, each naming its emitter,
+  destination, governing surface row, reader/author class, lifecycle and pressure control. Closure is
+  checked: a route whose destination has no surface row is an unclassified sink and fails. The caps
+  that already existed are `README.md` here and `MEMORY.md` in
   `scripts/check_memory_architecture.sh`.
 - **Landing-page identity:** top-level `README.md` is the rendered project landing page, so its
   purpose, minimal verified first-use path, architecture summary and canonical navigation remain

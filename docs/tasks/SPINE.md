@@ -157,19 +157,19 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0004`
 
 - ID: `SPINE.4.2`
-  Status: `pending`
+  Status: `done`
   Goal: the local data plane — `.doctrine/live_document_size/surfaces.tsv` (one row per governed
   surface: path or glob, lifecycle class, owner, authority, measured lines/bytes/max-line, health
   target, inclusive ceiling, transition-debt baseline) and `routes.tsv` (every destination the README,
   the policy and the guard's failure guidance route to, with its owner, lifecycle class and pressure
   control). Derive the README caps from the trimmed survivor and set them through
   `README_LINE_CAP`/`README_BYTE_CAP` instead of the inherited 300/16 384 defaults.
-  Acceptance: every live surface in the repository is classified (the census command is recorded); no
-  route ends at an unclassified or unbounded destination; every ceiling is derived from a measurement
-  stated in its row; the README caps are recorded as reviewed values in the adoption note; nothing is
-  copied from the donor project.
-  Verification: `pending`
-  Commit: `pending`
+  Acceptance: every live surface in the repository is classified (the census command is recorded);
+  no route ends at an unclassified or unbounded destination; every ceiling is derived from a
+  measurement stated in its row; the README caps are recorded as reviewed values in the adoption note;
+  nothing is copied from the donor project.
+  Verification: recorded below — 17 surface rows, 15 route rows, three surfaces trimmed first.
+  Commit: `STITCHCAD-SPINE-0004b`
 
 - ID: `SPINE.4.3`
   Status: `pending`
@@ -180,6 +180,43 @@ mechanically-enforced form:
   health target. Plus a probe suite with a RED arm per refusal class.
   Acceptance: `make gate` runs it unconditionally (not staged-scoped); every refusal class has an arm
   seen to fire; the healthy tree passes; `TOOLBOX.md` names it; D13 closes.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `SPINE.13`
+  Status: `pending`
+  Goal: give `ROADMAP.md` the navigation a `maintained_reference` requires — a complete section index
+  with its own bounds, and per-section pressure limits, so the 919-line document is browsable without
+  a full read and its growth is governed rather than merely capped.
+  Acceptance: every top-level section is reachable from the index; the index itself is inside its
+  declared bounds; the containment registry's `roadmap` debt row is cleared or its baseline lowered;
+  no roadmap decision is reopened by the edit (navigation only — the revision policy in the roadmap's
+  own header still governs content changes).
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `SPINE.14`
+  Status: `pending`
+  Goal: make `CHANGELOG.md` a bounded rolling ledger — seal the inherited bedrock-scaffold segment
+  (frozen legacy, not this project's history) into `docs/history/` as an immutable archive terminal
+  with recorded identity (lines, bytes, sha256, the revision it was sealed at), leave a one-line
+  pointer, and state the rollover rule for our own entries.
+  Acceptance: the sealed segment is byte-identical to what was removed (proved by hash before and
+  after); `CHANGELOG.md` drops below its health target; the registry's `changelog` debt row is cleared;
+  the `history_archive` surface exists and is classified; retrieval is one documented command.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `SPINE.15`
+  Status: `pending`
+  Goal: settle defect **D22** with a real oracle — does a GFM renderer split a table cell on a raw `|`
+  inside a code span? — then record the answer and adopt the table-authoring convention for this
+  repository (escape pipes inside code spans; keep cells short enough that the maxline axis stays
+  visible), and clear the `decisions_collection` maxline debt by reformatting the one wide row.
+  Acceptance: the oracle and its output are recorded (a rendered page, not a reading of the spec);
+  the convention is written where authors look (`COMMIT.md`); the widest line in the files this project
+  owns is inside its health target; the inherited checker is left untouched and the upstream question
+  is reported.
   Verification: `pending`
   Commit: `pending`
 
@@ -285,9 +322,12 @@ mechanically-enforced form:
 | 7 | `SPINE.11` | `done` | the published number has a tracked, watched producer again |
 | 8 | `SPINE.4` | `active` | split into `.4.1`–`.4.3`; the doctrine is adopted, the data plane and the checker follow |
 | 8a | `SPINE.4.1` | `done` | the rules are in-repo, so `.4.2`/`.4.3` choose numbers under a stated contract |
-| 8b | `SPINE.4.2` | `pending` | **next** — the inventory and the derived ceilings, before 18 spec chapters arrive |
-| 8c | `SPINE.4.3` | `pending` | enforcement is worthless before the inventory exists, so it follows `.4.2` |
+| 8b | `SPINE.4.2` | `done` | the data plane exists and three surfaces were trimmed before their targets were set |
+| 8c | `SPINE.4.3` | `pending` | **next** — declared rows are not gated rows; the checker makes them real and closes D13 |
 | 9 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
+| 10 | `SPINE.13` | `pending` | roadmap navigation + per-section bounds: the `maintained_reference` debt |
+| 11 | `SPINE.14` | `pending` | seal the inherited changelog segment into `docs/history/`: the `rolling_ledger` debt |
+| 12 | `SPINE.15` | `pending` | settle D22 against a real renderer and adopt the wide-row convention |
 
 ## Decisions
 
@@ -646,7 +686,46 @@ the director rather than patched here (session directive §21: other repositorie
   `MEMORY.md`, `CHANGELOG.md`, `docs/decisions/INDEX.md` and the derived Knowledge Map updated in this
   commit. `.4.2` owes the registry and the derived README caps; `.4.3` owes the checker.
 
-Leaves `.4.2`, `.4.3` and `.5` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.4.2` — the containment data plane, and the trims that make its numbers honest
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the repository enforced two caps and inventoried nothing, so the
+  surfaces that grow every commit had no lifecycle, no owner and no ceiling:
+  `git ls-tree -r --name-only HEAD | grep -c 'live_document_size'` → `0`, `rc=1`. Measured pressure at
+  adoption, on three axes rather than two: `MEMORY.md` `38`/`2633`/maxline `101` (carrying a priority
+  queue and a defect roster that layer B already owns), `LIVE_STATUS.md` maxline `1104`,
+  `docs/tasks/PLANNING.md` maxline `1758` — a five-column table row, i.e. pressure invisible to a
+  line-and-byte cap, which is why the doctrine makes max-content-line a separate axis.
+- [x] **ADDRESSED (verified)** — `.doctrine/live_document_size/surfaces.tsv` now classifies **17**
+  surfaces (`grep -vcE '^(#|$)' …/surfaces.tsv` → `17`, every row `21` tab-separated fields) and
+  `routes.tsv` classifies **15** routes (`8` fields each), with route→surface closure proved by
+  enumerating every route's `surface_id` against the registry (no unclassified sink). The three
+  pathological surfaces were trimmed BEFORE targets were set, so no target was fitted to bloat:
+  `MEMORY.md` → `28`/`1780`/`103`; `LIVE_STATUS.md` maxline → `146`; `PLANNING.md` maxline → `255`
+  (census converted from a wide table to 21 bounded entries). Derived README caps recorded:
+  **160 lines / 9 216 bytes / 320-byte line** (health 120/7 168), replacing the inherited 300/16 384
+  defaults as the binding limit.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make check` →
+  `test result: ok. 1 passed; 0 failed`; `scripts/check_memory_architecture.sh` → `exit=0` after the
+  pointer trim (28 lines / 1 780 bytes against caps of 50 / 7 168); `make probes` →
+  `6 suite(s) green`; the data plane carries no absolute or off-volume path
+  (`grep -cE '/(Users|home|Volumes|private)/' .doctrine/live_document_size/*.tsv` → `0`).
+- [x] **FIX** — added the two bounded TSV registries; trimmed `MEMORY.md` back to the pointer shape
+  (the execution order and defect census are layer B and are named, not restated); rewrote
+  `LIVE_STATUS.md` notes cells as short pointers; converted the `PLANNING.md` defect census to bounded
+  entries; created leaves `SPINE.13` (roadmap navigation), `SPINE.14` (seal the inherited changelog
+  segment into `docs/history/`), `SPINE.15` (settle D22 with a real renderer + the wide-row
+  convention); recorded the derived caps in `README_POLICY.md`'s adoption note.
+- [x] **LOCKSTEP** — D21 and D22 logged in `PLANNING.md`; `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` updated. Enforcement is `SPINE.4.3`: until it lands these rows are **declared, not
+  gated**, and this leaf says so rather than implying a checker exists.
+- ⚠ **Two defects in this leaf's own census, caught by running it:** the first pass reported a missing
+  `memory_pointer` row and a missing `R01` route, because the command stripped `^#` lines and then
+  `tail -n +2` — and the header itself starts with `#`, so the first data row was eaten twice. The
+  instrument was wrong, not the registry. The second was real: the `git_history` row carried `20`
+  fields instead of `21`. Both fixed, and both are exactly what `SPINE.4.3`'s checker must refuse
+  mechanically instead of by luck.
+
+Leaves `.4.3`, `.5`, `.13`, `.14` and `.15` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -710,6 +789,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.3` | `wc -lc` on both adopted copies; donor-token and absolute-path greps; `check_readme_stability.sh`; `make gate`; `make check` | policy `190`/`10535`, claim standard `330`/`21793`; `0` donor tokens, `0` absolute paths; `README-STABILITY: OK`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `SPINE.11` | `run_signature_portability_probe.sh`; `make probes`; `bash -n`; `make gate`; `make check` | `corpus: 36 lines · grep-unmatched: 2 · awk-unmatched: 12`, `probes: 5 pass / 0 fail`; `6 suite(s) green`; syntax clean; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `SPINE.4.1` | `wc -lc` and section count on the adopted doctrine; donor-noun and absolute-path greps; `make gate`; `make check` | `386` lines / `23712` bytes, `12` sections; `0` donor nouns, `0` absolute paths; `=== all doctrines green ===`; `test result: ok. 1 passed` |
+| `2026-09-29` | `SPINE.4.2` | registry censuses (row + field counts, route→surface closure, path census); `wc -lc` and per-file maxline before/after the trims; `make gate`; `make check`; `make probes` | `17` surfaces × `21` fields, `15` routes × `8` fields, closure holds, `0` absolute paths; maxline `1758`→`255`, `1104`→`146`; `=== all doctrines green ===`; `test result: ok. 1 passed`; `6 suite(s) green` |
 
 ## Commit Log
 
@@ -729,7 +809,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.3` | `STITCHCAD-SPINE-0003 (leaf SPINE.3): adopt the external policy references in-repo` | D11, D12 fixed; D20 found by the adoption sweep |
 | `SPINE.11` | `STITCHCAD-SPINE-0011 (leaf SPINE.11): give the published signature measurement a tracked producer` | D20 fixed; watched constants |
 | `SPINE.4.1` | `STITCHCAD-SPINE-0004 (leaf SPINE.4.1): adopt the live-document containment doctrine` | partial adoption; deferrals named with triggers |
-| `SPINE.4.2`, `SPINE.4.3`, `SPINE.5` | `pending` | — |
+| `SPINE.4.2` | `STITCHCAD-SPINE-0004b (leaf SPINE.4.2): the containment data plane` | 17 surfaces, 15 routes, derived README caps, 3 surfaces trimmed |
+| `SPINE.4.3`, `SPINE.5`, `SPINE.13`, `SPINE.14`, `SPINE.15` | `pending` | — |
 
 ## Changelog
 
@@ -742,6 +823,9 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.4.2` landed — the containment data plane (17 surfaces, 15 routes, derived
+  README caps), three surfaces trimmed before their targets were set, and three new leaves owning the
+  remaining debt (`SPINE.13` roadmap navigation, `SPINE.14` changelog archive, `SPINE.15` D22).
 - `2026-09-29`: `SPINE.4` split into `.4.1`–`.4.3`; `.4.1` landed — the containment doctrine adopted
   in-repo behind a fenced local note that names the deferred neutral checker package and the three
   triggers that reopen it.
