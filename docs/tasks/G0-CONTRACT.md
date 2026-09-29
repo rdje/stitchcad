@@ -80,7 +80,7 @@ not a contract.
   Commit: `pending`
 
 - ID: `G0-CONTRACT.2`
-  Status: `pending`
+  Status: `done`
   Goal: units & tolerance policy — internal fixed-point micrometres (i64), the five tolerance
   classes (numerical, geometric approximation, format quantization, importer comparison,
   physical acceptance) with their derivation rule, curve representation set (line/arc/cubic
@@ -88,8 +88,8 @@ not a contract.
   Acceptance: each tolerance class states what it bounds, who sets its value, and how a
   violation is reported; the unit-conversion and rounding rules are stated exactly enough to
   be implemented without a further decision; no single global epsilon anywhere.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — chapter built into the book, arithmetic re-derived, gates green.
+  Commit: `STITCHCAD-G0-0002`
 
 - ID: `G0-CONTRACT.3`
   Status: `pending`
@@ -274,7 +274,11 @@ not a contract.
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G0-CONTRACT.1` | `pending` | not started: `PLANNING` and `SPINE` leaves own the repository state that must be sound before the spec set grows into it |
+| 1 | `G0-CONTRACT.2` | `done` | taken first: every other chapter and every crate quotes a number, so the numerical contract had to exist before them |
+| 2 | `G0-CONTRACT.18` | `pending` | **next** — `sc-units` implements this chapter; the first product code and the G0 CI workflow |
+| 3 | `G0-CONTRACT.3` | `pending` | the ontology is the largest chapter and the dependency of `.4`, `.5`, `.13` |
+| 4 | `G0-CONTRACT.13` | `pending` | the reference skirt gives every later chapter a concrete garment to be checked against |
+| 5 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | remaining G0 chapters, in the order the frontier table below records |
 
 ## Decisions
 
@@ -305,6 +309,43 @@ not a contract.
 
 ## Acceptance Checklist
 
+### `G0-CONTRACT.2` — the numerical contract is written down
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the G0 exit list requires a units & tolerance policy, and before
+  this leaf it existed only as roadmap prose (§4.2: "Single internal unit: fixed-point micrometers
+  (i64) recommended" — note *recommended*, i.e. still a choice): `git ls-tree --name-only HEAD
+  docs/book/src/spec/` → `index.md` alone, `rc=0`, and `git ls-files 'crates/*'` → the bedrock starter
+  crate, `rc=0`. Two implementers reading §4.2 would have chosen different angle units, different
+  rounding and different epsilons, and the divergence would have surfaced as golden-file diffs at G2.
+- [x] **ADDRESSED (verified)** — `docs/book/src/spec/units-and-tolerances.md` is now the normative
+  chapter (`wc -lc` → `291` lines / `17180` bytes, widest line `114` bytes), linked from `SUMMARY.md`,
+  and the book builds:
+  `make book` → `INFO HTML book written to …`, `exit=0`, producing `docs/book/book/spec/units-and-tolerances.html`.
+  It fixes the open choices: i64 micrometres for length, i64 microdegrees for angle, a declared domain
+  tighter than the type, half-away-from-zero rounding, single-step conversions, five tolerance classes
+  each with its setter and derivation, exact integer topology predicates, and the offset error budget.
+  Every arithmetic claim in it was re-derived rather than recalled: `1016 × 25 = 25400` (so an HPGL
+  plotter unit is exactly 25 µm), `25400 ÷ 72 = 352.78` µm per PDF point (not an integer, hence the
+  format-quantization class), `10¹⁸` needs `60` bits and `2 × 10¹⁸` needs `61` (so i128 products of
+  domain-bounded coordinates are exact), `10⁹ µm = 1 km`, `10¹⁸ µm² = 1 km²`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`;
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 47 files
+  measured`, `exit=0`, with the new chapter claimed by `book_collection`; `make check` →
+  `test result: ok. 1 passed; 0 failed`; `make book` → `exit=0`.
+  The containment ceiling set two slices earlier earned its keep on this chapter: the first draft
+  carried five tolerance-class table rows of `311`–`381` bytes against a `book_collection` maxline
+  ceiling of `320`, so the widest was over the limit before the chapter ever shipped. The table became
+  five bounded subsections (widest line now `114` bytes) — which is also the more readable shape in a
+  book, and the reason maximum-content-line is a separate axis from lines and bytes.
+- [x] **FIX** — wrote the chapter; recorded the coupled choices as
+  `docs/decisions/decision_numerical-contract-fixed-point.md` (indexed, with an `answers:` line) so the
+  *why* survives separately from the *what*; labelled every external claim in §8 of the chapter with
+  its verification status (exact arithmetic / cited-from-roadmap / to be confirmed at the gate that
+  needs it) instead of asserting format details nobody has read here.
+- [x] **LOCKSTEP** — `SUMMARY.md` grows the chapter; `LIVE_STATUS.md` moves G0 to In Progress;
+  `MEMORY.md` points at the next leaf; `CHANGELOG.md` records the slice; the derived Knowledge Map
+  picks up the new decision record.
+
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and `.18` (the code leaf) additionally fills a `### G0-CONTRACT.18` checklist
 subsection with real tool output in the same commit as the change. This tree file carries no
@@ -317,6 +358,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
+| `2026-09-29` | `G0-CONTRACT.2` | `wc -lc` and per-line max on the chapter; `make book`; arithmetic re-derivation; `check_live_doc_size.sh`; `make gate`; `make check` | `291` lines / `17180` bytes / maxline `114`; `exit=0`, chapter rendered; 5 arithmetic claims confirmed; `OK — 17 surfaces, 15 routes, 47 files`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 
 ## Commit Log
@@ -325,10 +367,14 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | --- | --- | --- |
 | tree seed | `STITCHCAD-PLANNING-0001 (leaf PLANNING.1)` | created by the seeding leaf |
 | `.16`–`.18` added | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | i18n choice, command-layer contract, G0 CI + skeletons |
-| `G0-CONTRACT.1` … `.18` | `pending` | — |
+| `G0-CONTRACT.2` | `STITCHCAD-G0-0002 (leaf G0-CONTRACT.2): the numerical contract` | first product specification chapter; decision record added |
+| `G0-CONTRACT.1`, `.3`–`.18` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-29`: `.2` landed — the units & tolerance chapter is normative, the numerical contract is a
+  layer-C decision, and the frontier moves to `.18` (the first product code: `sc-units` implements this
+  chapter). The tree's execution order is now recorded in its frontier table.
 - `2026-09-29`: Tree created by `PLANNING.1` with 15 leaves mapped clause-by-clause to the
   roadmap's G0 exit criteria.
 - `2026-09-29`: `PLANNING.2` added `.16` (message system + i18n architecture, §7.6), `.17`

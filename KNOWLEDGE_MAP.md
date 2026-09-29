@@ -30,5 +30,6 @@
 - [`decision_acceptance-evidence-per-leaf.md`](docs/decisions/decision_acceptance-evidence-per-leaf.md)
 - [`decision_adopted-external-policy-references.md`](docs/decisions/decision_adopted-external-policy-references.md)
 - [`decision_live-document-containment-proportionate-adoption.md`](docs/decisions/decision_live-document-containment-proportionate-adoption.md)
+- [`decision_numerical-contract-fixed-point.md`](docs/decisions/decision_numerical-contract-fixed-point.md)
 - [`decision_product-work-takes-the-frontier.md`](docs/decisions/decision_product-work-takes-the-frontier.md)
 - [`decision_scaffold-sync-protects-project-content.md`](docs/decisions/decision_scaffold-sync-protects-project-content.md)

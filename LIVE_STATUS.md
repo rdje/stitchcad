@@ -12,10 +12,10 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | --- | --- | --- |
 | Discipline spine (bedrock 0.6.1) | Done | memory · task-trees · commit workflow · doctrine gates · mdBook |
 | Roadmap → task-trees (`PLANNING`) | Done | **All 10 roadmap lanes owned** — 13 trees, 142 leaves, derived by `run_tree_coverage_census.sh` (`0 unowned / 0 orphans / 0 dead links`). `.4` recorded the sequencing rule and closed D24; tree complete |
-| Repo identity & policy (`SPINE`) | In Progress | 13 of 17 leaves done: identity, policies, containment data plane, changelog sealed to `docs/history/`. Containment is now **enforced** (`LIVE-DOC-SIZE`, 2nd project doctrine). `.5`/`.13`/`.15` remain and block no product work |
-| Adopted policy set | Mostly Done | README policy, claim verification, containment doctrine + data plane in-repo; enforcement owed by `.4.3` |
+| Repo identity & policy (`SPINE`) | In Progress | 14 of 17 leaves done: identity, policies, containment data plane, changelog sealed to `docs/history/`. Containment is now **enforced** (`LIVE-DOC-SIZE`, 2nd project doctrine). `.5`/`.13`/`.15` remain and block no product work |
+| Adopted policy set | Done | README policy, claim verification and the containment doctrine are in-repo, with containment **enforced** by the `LIVE-DOC-SIZE` project doctrine |
 | Defect census | In Progress | 23 logged, 19 closed. Open: D7/D9 (`SPINE.5`), D10 (`G1-SLICE.1`), D22 (`SPINE.15`) |
-| G0 — product & semantic contract | Not Started | 18 leaves mapped to the gate's exit clauses; spec only, except `.18` (skeleton crates + CI) |
+| G0 — product & semantic contract | In Progress | **Active lane.** `.2` done: the numerical contract is normative in the book (291 lines) + a layer-C decision. Next `.18` — `sc-units` implements it: the first product code |
 | G1 — executable architecture slice | Not Started | 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, spikes |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |

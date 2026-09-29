@@ -16,15 +16,19 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs,
   versioned evidence-bearing Factory Profiles, deterministic artifact export, agent-first via MCP.
   `ROADMAP.md` v0.2, DRAFT until G0 exits.
-- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.2` (`pending`). `PLANNING` is closed
-  (all four leaves done); `SPINE` is parked with `.5`, `.13`, `.15` open — none blocks product work.
-- **Next action:** write the units & tolerance specification — `docs/book/src/spec/units-and-tolerances.md`
-  from roadmap §4.2: fixed-point micrometres as the single internal unit, the five tolerance classes
-  and how each is derived, the curve set (line / circular arc / cubic Bézier, NURBS deferred), robust
-  predicates, and the offset error-budget contract. Add it to `docs/book/src/SUMMARY.md`, verify with
-  `mdbook build docs/book`, and commit `STITCHCAD-G0-0002 (leaf G0-CONTRACT.2)`.
-- **Then:** `G0-CONTRACT.18` (`sc-units` + `sc-core` skeletons and the G0 CI workflow — the first
-  product code) → `.3` (ontology) → `.13` (reference skirt with numbers) → the rest of G0.
+- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.18` (`pending`). `.2` (units &
+  tolerances) is done: the numerical contract is normative in the book and recorded in layer C.
+- **Next action — the first product code:** create the `sc-units` and `sc-core` crate skeletons in the
+  workspace per roadmap §4.3, implement `sc-units` from `docs/book/src/spec/units-and-tolerances.md`
+  (i64 µm length, i64 µ° angle, the declared domain limits, half-away-from-zero rounding, single-step
+  conversions, the five tolerance classes as distinct types, dimensional errors as typed errors) with
+  property tests, and add the G0 CI workflow (fmt / clippy / unit+property / a real
+  `cargo build --target wasm32-unknown-unknown` smoketest for those two crates). Retire or repurpose the
+  bedrock starter crate per `G1-SLICE.1`'s ownership note. Commit `STITCHCAD-G0-0018 (leaf
+  G0-CONTRACT.18)`.
+- **Then:** `G0-CONTRACT.3` (garment ontology) → `.13` (reference skirt with numbers) → `.1` (glossary)
+  → the rest of G0.
+
 - **Sequencing rule (`docs/decisions/decision_product-work-takes-the-frontier.md`):** product work
   takes the frontier; spine slices only when they block it, a defect is live, or the director asks.
   Census: `git log --oneline | grep -cE 'leaf (G[0-7]|V[12])'` must start growing.

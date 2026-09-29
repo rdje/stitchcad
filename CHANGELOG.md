@@ -4,6 +4,69 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-G0-0002 — the numerical contract is normative (leaf `G0-CONTRACT.2`)
+
+**The first product deliverable.** `docs/book/src/spec/units-and-tolerances.md` (291 lines, widest line
+114 bytes) is now the chapter every other chapter and every crate quotes when it uses a number.
+
+- **One internal unit:** lengths are `i64` **micrometres** (1 in = `25 400` exactly, 1 mm = `1 000`),
+  angles are `i64` **microdegrees** (a full turn = `360 000 000`), with a declared domain tighter than
+  the type (|length| ≤ 10⁹ µm, area ≤ 10¹⁸ µm²) so intermediate arithmetic cannot overflow and an
+  out-of-domain value is a typed diagnostic rather than a clamp or a wrap.
+- **One rounding rule and one conversion rule:** half away from zero, and every conversion is a single
+  multiply-then-divide with an exact integer ratio. Chained conversions are forbidden because they round
+  more than once and disagree with the direct conversion — a test fails the chained path, it does not
+  document the discrepancy.
+- **Five tolerance classes instead of an epsilon:** numerical (1 µm, one quantum — anything more is a
+  bug), geometric approximation (10 µm internally, 100 µm chordal for polyline-only receivers), format
+  quantization (fixed by the format, published with the artifact), importer comparison (declared per
+  receiver in the profile), physical acceptance (**the factory's number, never ours**). Every comparison
+  names its class; each value carries the requirement it was derived from, so "why 10 µm?" has an answer
+  that is not "it passed".
+- **Topology is exact, not approximate:** with integer coordinates, orientation, segment intersection,
+  point-in-polygon and winding are computed in 128-bit integers with no epsilon, so
+  `if (distance < EPSILON)` over integer coordinates is recorded as a defect. Curved-geometry predicates
+  use adaptive precision bounded by the geometric class.
+- **The offset engine carries a declared error budget** and fails explicitly — naming the edge, the
+  achieved deviation and the requested bound — when a cusp, near-tangency or self-intersection puts it
+  out of tolerance. It never emits out-of-tolerance geometry and never silently repairs topology; the G2
+  pathology corpus is its oracle.
+- **Formats whose quantum is not an integer number of µm** (the PDF point at ≈ 352.78 µm) convert once,
+  at serialization, and the quantization is published with the artifact — precision never flows back
+  into the model.
+- Every arithmetic claim was re-derived, not recalled: `1016 × 25 = 25400` (an HPGL plotter unit is
+  exactly 25 µm), `25400 ÷ 72 ≈ 352.78`, `10¹⁸` needs `60` bits and `2 × 10¹⁸` needs `61` (so i128
+  products of domain-bounded coordinates are exact), `10⁹ µm = 1 km`, `10¹⁸ µm² = 1 km²`. §8 of the
+  chapter labels every external claim as exact arithmetic, cited-from-roadmap, or to-be-confirmed at the
+  gate that needs it — no format detail is asserted that nobody has read here.
+- Recorded as `docs/decisions/decision_numerical-contract-fixed-point.md` (indexed, with an `answers:`
+  line) so the *why* — determinism for golden bytes and CLI replay, decidability of topology, symmetry of
+  rounding under mirroring, degrees as the domain's own vocabulary — survives separately from the *what*.
+- **The containment ceiling caught this chapter before it shipped:** the first draft's tolerance table
+  had rows of `311`–`381` bytes against a `book_collection` maxline ceiling of `320`. It became five
+  bounded subsections — a better shape for a book, and the reason max-content-line is its own axis.
+- Validation: `make book` → `exit=0` with the chapter rendered; `check_live_doc_size.sh` →
+  `OK — 17 surfaces, 15 routes, 47 files measured`; `make gate` → `=== all doctrines green ===`;
+  `make check` → `test result: ok. 1 passed; 0 failed`.
+
+## STITCHCAD-PLANNING-0004 — product work takes the frontier (leaf `PLANNING.4`)
+
+- Defect D24 closed with a rule, not a resolution: at the ruling,
+  `git log --oneline | grep -cE 'leaf (SPINE|PLANNING|BOOTSTRAP)'` → **20** governance slices against
+  `grep -cE 'leaf (G[0-7]|V[12])'` → **0** product slices. Every individual slice was defensible, which
+  is why the pattern needed a decision record rather than more care.
+- `docs/decisions/decision_product-work-takes-the-frontier.md` states the rule (product takes the
+  frontier; spine work only when it blocks the next product slice, when a defect can destroy or corrupt
+  work now, or when the director asks), keeps directive §15 intact (every defect is still logged and
+  owned — logging is not scheduling), and gives the two-command census that reveals the drift. Wired into
+  `CLAUDE.md`'s non-negotiables and the layer-C index.
+- The `PLANNING` tree is complete: all four leaves done, the roadmap→tree capture derived by
+  `run_tree_coverage_census.sh` (`10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`).
+- **This entry landed one commit late, and the reason is worth recording:** the script that was supposed
+  to insert it used `str.replace()` on a heading it had not verified, so the replacement silently did
+  nothing while the script printed success. Found by `grep -n '^## STITCHCAD' CHANGELOG.md` when the next
+  entry would not anchor. Anchor edits are asserted from now on.
+
 ## STITCHCAD-PLANNING-0003 — the whole roadmap is captured, and the claim is derived (leaf `PLANNING.3`)
 
 - **All ten roadmap lanes now have a tree.** Seeded the five that were missing — `G5-SHELLS` (14 leaves:
