@@ -59,6 +59,17 @@ mechanically-enforced form:
   Verification: recorded below.
   Commit: `STITCHCAD-SPINE-0006`
 
+- ID: `SPINE.12`
+  Status: `done`
+  Goal: record the director's push cadence — **400 commits between pushes** — in the workflow document
+  that owns it (`COMMIT.md`), with the count derived rather than hand-carried and the trade-off
+  against `MEMORY_ARCHITECTURE.md` §8's crash-insurance argument stated instead of hidden.
+  Acceptance: `COMMIT.md` carries a Push cadence section naming the threshold, the deriving command,
+  the pre-push gate and the recorded trade-off; the current ahead-count is measured; no push happens
+  before the threshold unless the director asks.
+  Verification: recorded below.
+  Commit: `STITCHCAD-SPINE-0012`
+
 - ID: `SPINE.1`
   Status: `done`
   Goal: de-template the identity surfaces — `README.md` as the StitchCAD landing page (within
@@ -205,6 +216,7 @@ mechanically-enforced form:
 | 4 | `SPINE.1` | `done` | identity landed: README, book identity, the `spec/` part, and a clean `make book` |
 | 5 | `SPINE.2` | `done` | cleanup ran and the cadence now has a record a next session can read |
 | 6 | `SPINE.3` | `pending` | **next** — policy adoptions bind how every later claim and cap is written |
+| — | `SPINE.12` | `done` | taken out of order: a director ruling is recorded when it is made, not at the end of the lane |
 | 7 | `SPINE.4` | `pending` | containment must exist before 18 spec chapters arrive |
 | 8 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 
@@ -434,6 +446,33 @@ the director rather than patched here (session directive §21: other repositorie
 - [x] **LOCKSTEP** — D8 marked fixed in `PLANNING.md`; `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md`
   updated; no book chapter changes (the cleanup touches no user-visible behavior).
 
+### `SPINE.12` — the push cadence is a derived count, not a remembered one
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the workflow document that ends every slice never mentioned
+  pushing at all: `git show HEAD:COMMIT.md | grep -ciE 'push'` → `0` (grep exits `1` on no match), so
+  the cadence lived only in the live conversation — the one place `MEMORY_ARCHITECTURE.md` says is not
+  yet saved. A first draft of this box claimed `1` and was corrected by re-running the command before
+  it shipped, which is the leg-1 discipline the same document demands. Measured state at the ruling:
+  `git rev-list --count origin/main..HEAD` → `10`, i.e. ten commits of this project existed only on
+  this machine.
+- [x] **ADDRESSED (verified)** — `COMMIT.md` now carries a `## Push cadence` section:
+  `grep -c 'Push cadence' COMMIT.md` → `1`, naming the 400-commit threshold, the deriving command
+  (`git rev-list --count origin/main..HEAD`), the pre-push full gate, the "only when the director asks"
+  exception, and the recorded trade-off against §8's crash-insurance argument. `grep -c '400' COMMIT.md`
+  → `3` (threshold, deriving command, exception). The cadence itself did not trigger a push:
+  `10 < 400`; the director then authorised a one-off first push for this project, recorded in the
+  Commit Log below, after which the 400-commit cadence resumes. The push runs immediately after this
+  commit; its CI verdict is appended to this leaf's Verification Log by a follow-up commit, because a
+  verdict written before it is observed is a guess.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `scripts/check_doctrines.sh`
+  reports 13 checks; `make check` → `test result: ok. 1 passed; 0 failed`. `COMMIT.md` is classified
+  PROJECT-CONTENT by `scripts/update_scaffold.sh`, so a spine sync will back it up and skip it rather
+  than silently revert this rule.
+- [x] **FIX** — added the Push cadence section to `COMMIT.md`; added this leaf; recorded the ruling in
+  `LIVE_STATUS.md`, `MEMORY.md` (as the standing next-push condition, not as history) and `CHANGELOG.md`.
+- [x] **LOCKSTEP** — no code, no book chapter and no decision record: `COMMIT.md` is the canonical home
+  for a commit-workflow rule, and duplicating it into a layer-C record would create a second authority.
+
 Leaves `.3`–`.5` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
@@ -492,6 +531,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.9` | `run_update_scaffold_probes.sh`; `bash -n` ×2; the three other probe suites; `make check`; `scripts/check_doctrines.sh` | `probes: 7 pass / 0 fail`; syntax clean; `10/0`, `6/0`, `9/0`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 | `2026-09-29` | `SPINE.10` | `make probes`; `TMPDIR=… mktemp -d`; `git diff --stat` on the inherited suites; `make check`; `scripts/check_doctrines.sh` | `5 suite(s) green` (37 arms, 0 fail); repo-volume path; no inherited edit; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 | `2026-09-29` | `SPINE.1` | `check_readme_stability.sh`; `mdbook build docs/book`; `make check`; `make gate`; `make probes`; `git status --short` after the build | `README-STABILITY: OK — 103/300 lines, 6063/16384 bytes`; `exit=0`; `test result: ok. 1 passed`; `=== all doctrines green ===`; `5 suite(s) green`; no `??` entry |
+| `2026-09-29` | `SPINE.12` | `git rev-list --count origin/main..HEAD`; `grep -c 'Push cadence' COMMIT.md`; `make gate`; `make check` | `10` (below the 400 threshold, so no push); `1`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `SPINE.2` | before/after `du`; residue + stray censuses; `git ls-files` artifact census; `make gate`, `make check`, `make book`, `make probes` | `target` 2.1M → 1.2M; 4 paths `gone`; `0` strays; `0` tracked artifacts; all four targets green |
 
 ## Commit Log
@@ -507,6 +547,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.10` | `STITCHCAD-SPINE-0010 (leaf SPINE.10): one probe entry point, scratch on this volume` | D16 fixed (residual recorded) |
 | `SPINE.1` | `STITCHCAD-SPINE-0001 (leaf SPINE.1): the repository introduces itself as StitchCAD` | D3, D4, D19 fixed |
 | `SPINE.2` | `STITCHCAD-SPINE-0002 (leaf SPINE.2): first artifact cleanup and its cadence record` | D8 fixed |
+| `SPINE.12` | `STITCHCAD-SPINE-0012 (leaf SPINE.12): record the 400-commit push cadence` | director's ruling, in `COMMIT.md`; one-off first push authorised and made, CI verdict recorded below |
 | `SPINE.3` … `.5` | `pending` | — |
 
 ## Changelog
@@ -520,6 +561,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.12` landed — the director's push cadence (400 commits between pushes) recorded
+  in `COMMIT.md` with the deriving command and the trade-off against `MEMORY_ARCHITECTURE.md` §8.
 - `2026-09-29`: `SPINE.2` landed — first artifact cleanup (four regenerable paths, `target`
   2.1 MB → 1.2 MB) and the cadence record `docs/ARTIFACT_CLEANUP.md`. D8 closed.
 - `2026-09-29`: `SPINE.1` landed — README, mdBook identity, the introduction and the `spec/` part;

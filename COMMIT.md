@@ -78,6 +78,29 @@ apply to code changes.
   `Co-Authored-By:` is not affected). Provenance: maintainer ruling 2026-08-22 in the originating
   project, ported by `BEDROCK-MAINTENANCE.2.5`.
 
+## Push cadence
+
+- **400 commits between pushes** (director's ruling, leaf `SPINE.12`). Push when the branch is 400 or
+  more commits ahead of its upstream — not after every slice, and not at the end of every session.
+- **Derive the count; never carry it by hand** — a hand-kept number is stale the moment it is typed:
+
+  ```bash
+  git rev-list --count origin/main..HEAD   # push when this reaches 400
+  ```
+
+- Push only at the end of a completed commit workflow: the tree clean, the message file emptied, the
+  last slice committed. The remote never receives a partial unit of work.
+- Before pushing, run the full gate, not the focused checks: `make check`, `make gate`,
+  `make probes` (session directive §16 — focused checks per commit, full CI before a push).
+- An earlier push happens only when the director asks for one. Never `--force`, never push a dirty
+  tree, never push a branch that is not this project's.
+- **Recorded trade-off, so it is not rediscovered as a surprise:** `MEMORY_ARCHITECTURE.md` §8 asks for
+  regular pushes because an unpushed commit dies with the machine, and §13's durability matrix marks
+  machine loss as covered only when the work is pushed. A 400-commit cadence deliberately trades that
+  crash-insurance property for fewer interruptions; the balance is the director's call, and the local
+  mitigation is that every layer of durable memory (pointer, task-trees, decisions) is committed each
+  slice, so at most the un-pushed commits — never the discipline — are at risk.
+
 ## Command template
 
 ```bash

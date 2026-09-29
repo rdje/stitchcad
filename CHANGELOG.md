@@ -4,6 +4,26 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0012 — the push cadence is now a written rule (leaf `SPINE.12`)
+
+- **Director's ruling recorded:** 400 commits between pushes. `COMMIT.md` had **zero** mentions of
+  pushing (`git show HEAD:COMMIT.md | grep -ciE 'push'` → `0`), so the cadence lived only in
+  conversation — exactly the state `MEMORY_ARCHITECTURE.md` calls "not yet saved". The new
+  `## Push cadence` section names the threshold, the deriving command
+  (`git rev-list --count origin/main..HEAD` — never a hand-carried count), the pre-push full gate
+  (`make check`, `make gate`, `make probes`), and the single exception (the director asks).
+- **The trade-off is written down, not buried:** §8 of the memory architecture argues for frequent
+  pushes because an unpushed commit dies with the machine. A 400-commit cadence trades that away for
+  fewer interruptions; the section says so, and notes the mitigation (every memory layer is committed
+  per slice, so at most un-pushed commits are at risk).
+- The director then authorised a **one-off first push** for this project (10 commits ahead at the
+  ruling); the 400-commit cadence resumes once it is made and CI is green. The CI verdict is recorded
+  in the leaf, by a follow-up commit, after it is observed.
+- A wrong number was caught before it shipped: the first draft of this leaf's evidence claimed
+  `grep -ciE 'push'` → `1`; re-running it gave `0`. Also corrected: `grep -c '400' COMMIT.md` → `3`.
+- Validation: `make check` → `test result: ok. 1 passed; 0 failed`; `make gate` →
+  `=== all doctrines green ===`; `make probes` → `5 suite(s) green`.
+
 ## STITCHCAD-SPINE-0002 — the first artifact cleanup, and a cadence a next session can read (leaf `SPINE.2`)
 
 - **Defect D8 fixed.** `docs/ARTIFACT_CLEANUP.md` did not exist, so the 24-hour cleanup cadence had
