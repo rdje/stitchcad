@@ -461,9 +461,10 @@ the director rather than patched here (session directive §21: other repositorie
   exception, and the recorded trade-off against §8's crash-insurance argument. `grep -c '400' COMMIT.md`
   → `3` (threshold, deriving command, exception). The cadence itself did not trigger a push:
   `10 < 400`; the director then authorised a one-off first push for this project, recorded in the
-  Commit Log below, after which the 400-commit cadence resumes. The push runs immediately after this
-  commit; its CI verdict is appended to this leaf's Verification Log by a follow-up commit, because a
-  verdict written before it is observed is a guess.
+  Commit Log below, after which the 400-commit cadence resumes. The push ran immediately after that
+  commit (`f1dcbe4..051a075`, ahead-count `0`) and its CI verdict was appended to this leaf's
+  Verification Log by a follow-up commit, because a verdict written before it is observed is a guess:
+  both workflows completed `success` — `doctrines` in 11 s, `rust` in 18 s.
 - [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `scripts/check_doctrines.sh`
   reports 13 checks; `make check` → `test result: ok. 1 passed; 0 failed`. `COMMIT.md` is classified
   PROJECT-CONTENT by `scripts/update_scaffold.sh`, so a spine sync will back it up and skip it rather
@@ -531,7 +532,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.9` | `run_update_scaffold_probes.sh`; `bash -n` ×2; the three other probe suites; `make check`; `scripts/check_doctrines.sh` | `probes: 7 pass / 0 fail`; syntax clean; `10/0`, `6/0`, `9/0`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 | `2026-09-29` | `SPINE.10` | `make probes`; `TMPDIR=… mktemp -d`; `git diff --stat` on the inherited suites; `make check`; `scripts/check_doctrines.sh` | `5 suite(s) green` (37 arms, 0 fail); repo-volume path; no inherited edit; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 | `2026-09-29` | `SPINE.1` | `check_readme_stability.sh`; `mdbook build docs/book`; `make check`; `make gate`; `make probes`; `git status --short` after the build | `README-STABILITY: OK — 103/300 lines, 6063/16384 bytes`; `exit=0`; `test result: ok. 1 passed`; `=== all doctrines green ===`; `5 suite(s) green`; no `??` entry |
-| `2026-09-29` | `SPINE.12` | `git rev-list --count origin/main..HEAD`; `grep -c 'Push cadence' COMMIT.md`; `make gate`; `make check` | `10` (below the 400 threshold, so no push); `1`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
+| `2026-09-29` | `SPINE.12` | `git rev-list --count origin/main..HEAD`; `grep -c 'Push cadence' COMMIT.md`; `make gate`; `make check` | `10` (below the 400 threshold); `1`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
+| `2026-09-29` | `SPINE.12` (push addendum) | `git push origin main`; `gh run list`; `curl …/actions/runs?head_sha=051a075…` | `f1dcbe4..051a075  main -> main`, ahead `0`; `doctrines` completed **success** 11 s (run 36622373461), `rust` completed **success** 18 s (run 36622373539); API `total_count: 2`, both `conclusion=success` |
 | `2026-09-29` | `SPINE.2` | before/after `du`; residue + stray censuses; `git ls-files` artifact census; `make gate`, `make check`, `make book`, `make probes` | `target` 2.1M → 1.2M; 4 paths `gone`; `0` strays; `0` tracked artifacts; all four targets green |
 
 ## Commit Log
@@ -547,7 +549,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.10` | `STITCHCAD-SPINE-0010 (leaf SPINE.10): one probe entry point, scratch on this volume` | D16 fixed (residual recorded) |
 | `SPINE.1` | `STITCHCAD-SPINE-0001 (leaf SPINE.1): the repository introduces itself as StitchCAD` | D3, D4, D19 fixed |
 | `SPINE.2` | `STITCHCAD-SPINE-0002 (leaf SPINE.2): first artifact cleanup and its cadence record` | D8 fixed |
-| `SPINE.12` | `STITCHCAD-SPINE-0012 (leaf SPINE.12): record the 400-commit push cadence` | director's ruling, in `COMMIT.md`; one-off first push authorised and made, CI verdict recorded below |
+| `SPINE.12` | `STITCHCAD-SPINE-0012 (leaf SPINE.12): record the 400-commit push cadence` | director's ruling, in `COMMIT.md`; one-off first push made (`f1dcbe4..051a075`), both CI workflows green |
+| `SPINE.12` addendum | `STITCHCAD-SPINE-0012a (leaf SPINE.12): record the observed CI verdict` | push confirmed, cadence resumes at 400 |
 | `SPINE.3` … `.5` | `pending` | — |
 
 ## Changelog
@@ -561,6 +564,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.12` addendum — the authorised first push was made and observed green in CI
+  (`doctrines` 11 s, `rust` 18 s, both `conclusion=success`); the 400-commit cadence is now in force.
 - `2026-09-29`: `SPINE.12` landed — the director's push cadence (400 commits between pushes) recorded
   in `COMMIT.md` with the deriving command and the trade-off against `MEMORY_ARCHITECTURE.md` §8.
 - `2026-09-29`: `SPINE.2` landed — first artifact cleanup (four regenerable paths, `target`

@@ -4,6 +4,18 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0012a — the first push is made and CI is green (leaf `SPINE.12`, addendum)
+
+- `git push origin main` → `f1dcbe4..051a075  main -> main`; ahead-count after the push:
+  `git rev-list --count origin/main..HEAD` → `0`. Eleven commits — the bootstrap, the roadmap→tree
+  seeding, and the spine-integrity leaves — are now off this machine.
+- **CI observed, not assumed:** both workflows completed `success` for the pushed head
+  (`gh run list`, cross-checked against `…/actions/runs?head_sha=051a075…` → `total_count: 2`):
+  `doctrines` in 11 s (run 36622373461) and `rust` in 18 s (run 36622373539). The verdict was
+  recorded in `SPINE.12`'s Verification Log by this follow-up commit, after observation.
+- The 400-commit cadence in `COMMIT.md` is now in force: the next push happens at 400 commits ahead,
+  or earlier only if the director asks.
+
 ## STITCHCAD-SPINE-0012 — the push cadence is now a written rule (leaf `SPINE.12`)
 
 - **Director's ruling recorded:** 400 commits between pushes. `COMMIT.md` had **zero** mentions of

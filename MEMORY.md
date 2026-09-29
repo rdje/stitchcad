@@ -27,8 +27,8 @@
 - **Order after that:** `SPINE.4` (live-doc containment) → `SPINE.5` (toolbox/knowledge map) →
   `PLANNING.3` (G5–G7, V1, V2 + coverage census) → `G0-CONTRACT.1`–`.18` → `G1-SLICE` …
 - **Push cadence:** 400 commits between pushes (`COMMIT.md` → Push cadence); count with
-  `git rev-list --count origin/main..HEAD`. The director authorised a one-off first push; it runs
-  right after this commit and its CI verdict is recorded in `SPINE.12`.
+  `git rev-list --count origin/main..HEAD`. The authorised first push is made and CI is green
+  (`doctrines`, `rust`: both `success`); the cadence is in force, so the next push is at 400.
 - **In-flight uncommitted work:** none.
 - **Blockers:** `G0-CONTRACT.14` needs named humans from the director (project owner,
   evaluation-seat/plotter procurement). It blocks only itself.
