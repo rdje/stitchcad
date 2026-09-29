@@ -13,6 +13,10 @@
 
 - [`BOOTSTRAP.md`](docs/tasks/BOOTSTRAP.md)
 - [`G0-CONTRACT.md`](docs/tasks/G0-CONTRACT.md)
+- [`G1-SLICE.md`](docs/tasks/G1-SLICE.md)
+- [`G2-2D.md`](docs/tasks/G2-2D.md)
+- [`G3-GRADING.md`](docs/tasks/G3-GRADING.md)
+- [`G4-PROFILES.md`](docs/tasks/G4-PROFILES.md)
 - [`PLANNING.md`](docs/tasks/PLANNING.md)
 - [`SPINE.md`](docs/tasks/SPINE.md)
 

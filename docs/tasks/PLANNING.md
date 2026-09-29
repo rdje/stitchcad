@@ -61,14 +61,16 @@ Two invariants, both directions:
   Commit: `STITCHCAD-PLANNING-0001`
 
 - ID: `PLANNING.2`
-  Status: `pending`
+  Status: `done`
   Goal: seed the delivery-lane trees for the engine stages — `G1-SLICE`, `G2-2D`,
   `G3-GRADING`, `G4-PROFILES` — leaves at exit-criterion granularity, each citing its
-  roadmap clause.
+  roadmap clause; and close the G0 coverage gaps this mapping exposed (i18n message-system
+  choice §7.6, command-layer/undo contract §4.4, G0 CI + `sc-units`/`sc-core` skeletons
+  §4.3/§7.3 → `G0-CONTRACT.16`/`.17`/`.18`).
   Acceptance: four tree files exist and are registered; every G1–G4 exit criterion in
   roadmap §11 maps to a named leaf; no criterion is unowned.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — exit-clause census per gate, index↔disk census, gate run.
+  Commit: `STITCHCAD-PLANNING-0002`
 
 - ID: `PLANNING.3`
   Status: `pending`
@@ -84,8 +86,7 @@ Two invariants, both directions:
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| 1 | `PLANNING.2` | `pending` | the engine-stage lanes must be owned before any code exists (code-change doctrine) |
-| 2 | `PLANNING.3` | `pending` | completes the coverage map; after it, no roadmap clause is unowned |
+| 1 | `PLANNING.3` | `pending` | completes the tree set (G5–G7, V1, V2) and the coverage map; after it, no roadmap clause is unowned |
 
 ## Defects found at startup (2026-09-29) — logged, owned, scheduled
 
@@ -108,6 +109,7 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 | D12 | the claim-verification policy (directive §17) is not adopted in-repo | `ls docs/CLAIM_VERIFICATION.md` → No such file | published numbers would have no defined standard for "checked" | `SPINE.3` |
 | D13 | live-document containment (directive §18) is only partially adopted: `MEMORY.md`/`README.md` caps exist, but the surfaces that are about to grow (`ROADMAP.md` 50 821 B, `CHANGELOG.md` 11 761 B, `docs/TASK_TREE.md` with 12 trees) have no inventory, ceilings or ratchet | `wc -lc ROADMAP.md CHANGELOG.md docs/TASK_TREE.md` | bounded pointer, unbounded neighbours — the failure the containment guide exists to prevent | `SPINE.4` |
 | D14 | the workspace lockfile is untracked, so the first `make check` in a fresh clone leaves the tree dirty | `make check && git status --short` → `?? Cargo.lock`; `git check-ignore -v Cargo.lock` → `rc=1` (not ignored) | the pivot rule defines handoff-ready as *no untracked files*, and the toolchain itself violates it; `.gitignore` states the lockfile is deliberately tracked for reproducible builds | `SPINE.6` (fixed) |
+| D15 | the inherited `TASK-ACCEPTANCE` gate scans a staged tree file for the FIRST box matching each label, so in a multi-leaf file one leaf's evidence satisfies another leaf's code change (false GREEN), and an earlier unticked placeholder rejects a leaf carrying real evidence further down the same file (false RED) | scratch probe over the shipped `scripts/check_task_acceptance.sh`: ARM-1 (leaf A ticked above, leaf B unticked, code owned by B) → `task-acceptance: OK …`, `exit=0`; ARM-2 (same file, sections reversed) → `the 'ROOT CAUSE' box is present but NOT ticked`, `exit=1` | every code commit in this repository is judged by this gate, and this project's trees are deliberately multi-leaf; the check's own header claims box-scoping closed cross-leaf evidence leakage, and its probe suite exercises that leakage only across files | `SPINE.7` (probe + convention, then reported upstream — the spine is shared code) and `SPINE.8` (local `FRESH-ACCEPTANCE-EVIDENCE` doctrine in the project slot) |
 
 ## Decisions
 
@@ -119,6 +121,13 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 - `2026-09-29`: later-gate trees are seeded at exit-criterion granularity, not decomposed
   speculatively. Rationale: a leaf written before its gate's evidence exists is a guess, and
   a guess tracked as a commitment is worse than an empty frontier.
+- `2026-09-29`: a tree file carries **no unticked placeholder acceptance boxes**; each completed
+  leaf adds a `### <leaf-id>` checklist subsection in the same commit as its work. Reason:
+  the inherited gate judges the first matching box per file (defect D15), so placeholders both
+  shadow real evidence and falsely reject it.
+- `2026-09-29`: a roadmap clause discovered unowned while mapping a later gate is closed in the
+  gate that owns it, in the same slice — `G0-CONTRACT.16`/`.17`/`.18` were added by `PLANNING.2`,
+  not deferred to `PLANNING.3`, because an unowned clause is a live gap, not a tidiness item.
 - `2026-09-29`: G0 normative specifications live in the mdBook (`docs/book/src/spec/`), not
   in a private `docs/spec/` tree — the director reviews the book, and a spec nobody reviews
   is not a contract. ADR-style decisions stay in `docs/decisions/` (memory layer C), which is
@@ -160,18 +169,44 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 - [x] **LOCKSTEP** — index, live status, layer-A pointer, changelog and the derived
   Knowledge Map all updated in this same commit.
 
+### `PLANNING.2` — the engine-stage lanes (`G1-SLICE`, `G2-2D`, `G3-GRADING`, `G4-PROFILES`)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — after `PLANNING.1` only the G0 lane and the spine lane
+  existed, so the roadmap's engine gates had no owner: `ls docs/tasks/*.md` →
+  `BOOTSTRAP.md G0-CONTRACT.md PLANNING.md SPINE.md TEMPLATE.md` (5 files, 4 trees), while
+  `grep -c '^### G[1-7] ' ROADMAP.md` → `7` gates and `grep -c '^### V[12] ' ROADMAP.md` → `2`
+  parallel tracks are declared in §11.
+- [x] **ADDRESSED (verified)** — leaf declarations, `grep -c '^- ID: ' docs/tasks/<tree>.md` →
+  `G1-SLICE 17`, `G2-2D 15`, `G3-GRADING 15`, `G4-PROFILES 15` (each count = the tree node plus its
+  leaves, i.e. 16 + 14 + 14 + 14 = **58 leaves**). Clause→leaf rows per gate table,
+  `awk '/^## Acceptance Criteria/{s=1;next} /^## /{s=0} s&&/^\|/{print}' docs/tasks/<tree>.md | grep -cE '\|[^|]*\.[0-9]+[^|]*\|[[:space:]]*$'`
+  → `G1 7`, `G2 8`, `G3 8`, `G4 9`, against roadmap §11's own exit-clause counts for those gates
+  (7 / 8 / 8 / 8 — G4's first clause spans two rows, `.2`+`.3` and `.4`), so no clause is unowned.
+  The same census found three G0 clauses with no leaf (§4.3 CI shape, §4.4 undo/redo defined at G0,
+  §7.6 one message system chosen at G0); they are now `G0-CONTRACT.16`/`.17`/`.18`, whose clause
+  table carries 19 rows for 18 leaves (`.14` owns both the governance and the procurement clause).
+- [x] **NO REGRESSION** — `scripts/check_doctrines.sh` → `=== doctrine enforcement (13 checks) ===`,
+  `=== all doctrines green ===`, `rc=0`; `make check` → `test result: ok. 1 passed; 0 failed`;
+  the index↔disk census reports no dead link and no unregistered tree.
+- [x] **FIX** — added the four tree files; extended `G0-CONTRACT` by three leaves and corrected
+  its "no code in G0" reading; added `SPINE.7`/`SPINE.8` to own defect D15; registered all four
+  trees in `docs/TASK_TREE.md`.
+- [x] **LOCKSTEP** — index, `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and the derived
+  Knowledge Map updated in the same commit.
+
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
 | `2026-09-29` | `PLANNING.1` | index↔disk census; `scripts/check_doctrines.sh` | 4 trees registered / 4 tree files (+TEMPLATE); 13 checks green, `rc=0` |
+| `2026-09-29` | `PLANNING.2` | exit-clause census (§11 G1–G4); leaf count; index↔disk census; `make check`; `scripts/check_doctrines.sh` | 4 trees / 58 leaves; every clause mapped; census clean; `test result: ok. 1 passed`; 13 checks green, `rc=0` |
 
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
 | --- | --- | --- |
 | `PLANNING.1` | `STITCHCAD-PLANNING-0001 (leaf PLANNING.1): seed roadmap lanes into task-trees` | index repaired; 13 startup defects logged and owned |
-| `PLANNING.2` | `pending` | — |
+| `PLANNING.2` | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2): seed the engine-stage lanes G1–G4` | +3 G0 leaves; D15 logged and owned |
 | `PLANNING.3` | `pending` | — |
 
 ## Changelog
@@ -179,3 +214,7 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 - `2026-09-29`: Created tree; `PLANNING.1` landed (index repair + three trees + defect log).
 - `2026-09-29`: D14 added to the defect census (untracked `Cargo.lock`, found by the first
   `make check`); owned and fixed by `SPINE.6`.
+- `2026-09-29`: `PLANNING.2` landed — `G1-SLICE`, `G2-2D`, `G3-GRADING`, `G4-PROFILES` seeded
+  (58 leaves); three unowned G0 clauses closed as `.16`/`.17`/`.18`; D15 (multi-leaf
+  acceptance-evidence shadowing in the inherited gate) measured, logged and owned by
+  `SPINE.7`/`SPINE.8`.

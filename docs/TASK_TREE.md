@@ -52,14 +52,20 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 
 | Tree | Lane (roadmap source) | Status | Frontier (next leaf) | Owner |
 | --- | --- | --- | --- | --- |
-| [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.2` — seed the engine-stage lanes `G1`–`G4` | repo-local |
-| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.1` — de-template README + mdBook identity | repo-local |
+| [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.3` — seed `G5`–`G7`, `V1`, `V2` + publish the coverage map | repo-local |
+| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.7` — prove defect D15 with a committed probe | repo-local |
 | [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.1` — glossary of construction terms | repo-local |
+| [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `proposed` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
+| [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
+| [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
+| [`G4-PROFILES`](tasks/G4-PROFILES.md) | §11 gate **G4** — profiles & uncertainty workflow | `proposed` | `.1` — `sc-profiles` schema v2 | repo-local |
 | [`BOOTSTRAP`](tasks/BOOTSTRAP.md) | one-time de-template from bedrock | `done` | — | repo-local |
 
-The delivery-lane trees for gates **G1–G7** and the parallel **V1/V2** tracks are seeded by
-`PLANNING.2` and `PLANNING.3`; until a tree exists, its lane's requirements are owned by the
-seeding leaf, so no roadmap clause is ever unowned.
+The remaining lanes — gates **G5–G7** and the parallel **V1/V2** tracks — are seeded by
+`PLANNING.3`, which also publishes the roadmap → tree coverage map. Until a tree exists, its lane's
+requirements are owned by that seeding leaf, so no roadmap clause is ever unowned.
 
-Execution order right now: `PLANNING.2` → `PLANNING.3` → `SPINE.1`–`.5` → `G0-CONTRACT.1`–`.15`.
-G0 lands specification only; roadmap §4.3 keeps crates out of existence until their stage starts.
+Execution order right now: `PLANNING.3` → `SPINE.7`, `SPINE.8` (the acceptance-gate mitigation,
+which must precede any code leaf) → `SPINE.1`–`.5` → `G0-CONTRACT.1`–`.18` → `G1-SLICE` …
+G0 is a specification gate; its only code leaf is `.18` (the two skeleton crates + CI the roadmap's
+G0 CI clause requires).

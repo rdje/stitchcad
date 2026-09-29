@@ -17,14 +17,18 @@ paths, size-set ownership, the release/approval contract, the four ADRs, the ide
 measurement standards, and the reference-skirt fixture specified with real numbers — plus a
 drafted governance model.
 
-G0 lands **no product code**. Roadmap §4.3 is explicit that crates appear when their stage
-starts; G1 is the first executable slice. The deliverables of this tree are the mdBook
-specification chapters (`docs/book/src/spec/`) and the layer-C decision records
-(`docs/decisions/`), because a contract that is not written and reviewed is not a contract.
+G0 is a **specification** gate with one narrow code exception the roadmap itself demands: §4.3
+(`CI grows with stages (G0: fmt/clippy/unit+property/WASM smoketest)`) and §7.3 (`WASM CI at G0 =
+smoketest that sc-core + sc-units compile to wasm32-unknown-unknown`) require the two smallest
+crates to exist and build for the browser target. Leaf `.18` owns exactly that and nothing more.
+Every other deliverable here is an mdBook specification chapter (`docs/book/src/spec/`) or a
+layer-C decision record (`docs/decisions/`), because a contract that is not written and reviewed is
+not a contract.
 
 ## Non-Goals
 
-- Implementing any crate, solver, exporter or viewer (G1+).
+- Implementing the product: `.18` creates two skeleton crates and the G0 CI workflow, and every
+  other crate, solver, exporter and viewer is G1+ work.
 - Re-opening decisions locked by roadmap §15 — this tree *records* them as ADRs and
   specifies their consequences.
 - Procuring evaluation seats or naming people: this tree drafts the governance model and
@@ -53,6 +57,9 @@ specification chapters (`docs/book/src/spec/`) and the layer-C decision records
 | reference skirt fully specified with numbers | `G0-CONTRACT.13` | `docs/book/src/spec/reference-skirt.md` |
 | governance model drafted; procurement owner named | `G0-CONTRACT.14` | `docs/book/src/governance.md` + decision record (director input required) |
 | evaluation-seat procurement started | `G0-CONTRACT.14` | same leaf — role + fallback documented, name supplied by the director |
+| one message system chosen (§7.6) + externalization architecture | `G0-CONTRACT.16` | decision record + `docs/book/src/spec/i18n-architecture.md` |
+| undo/redo semantics defined (§4.4) + the command-layer contract | `G0-CONTRACT.17` | `docs/book/src/spec/command-layer.md` |
+| G0 CI: fmt/clippy/unit+property/WASM smoketest (§4.3, §7.3) | `G0-CONTRACT.18` | `sc-units` + `sc-core` skeletons, `.github/workflows/`, capability note |
 | gate closure: every clause above evidenced | `G0-CONTRACT.15` | exit review recorded in this tree, `LIVE_STATUS.md`, roadmap status line |
 
 ## Task Tree
@@ -60,7 +67,7 @@ specification chapters (`docs/book/src/spec/`) and the layer-C decision records
 - ID: `G0-CONTRACT`
   Status: `active`
   Goal: gate G0 closed — the semantic contract written, reviewed and traceable.
-  Children: `.1` … `.15`
+  Children: `.1` … `.18`
 
 - ID: `G0-CONTRACT.1`
   Status: `pending`
@@ -224,6 +231,45 @@ specification chapters (`docs/book/src/spec/`) and the layer-C decision records
   Verification: `pending`
   Commit: `pending`
 
+- ID: `G0-CONTRACT.16`
+  Status: `pending`
+  Goal: choose the ONE message system (§7.6: Fluent **or** ICU — not "Fluent or ICU"; if both ends
+  are needed, a designed bridge) and specify the externalization architecture: the CI lint that
+  fails on an inline user-facing string, the glossary/termbase per language (safety-relevant terms
+  first: notch types, sew/cut line aliases factories use in rejection emails), pseudolocalization,
+  and locale-independent canonical files (decimal-comma input ≠ stored meaning).
+  Acceptance: a decision record names the chosen system, the rejected one and the reason; the
+  architecture chapter states the lint rule, the termbase format and the RTL rule (mirrored layout,
+  never mirrored geometry); stable diagnostic codes + typed arguments + units are the API contract,
+  with localized prose as a presentation field only.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G0-CONTRACT.17`
+  Status: `pending`
+  Goal: the command-layer contract (§4.4) — the typed command set, atomic groups, preview/commit,
+  revision preconditions, idempotency, structured errors, progress for long operations, and the
+  **undo/redo semantics that §4.4 requires to be defined at G0** (granularity per command group),
+  plus the UI↔API↔MCP workflow-parity invariant and the shape of the coverage table that proves it.
+  Acceptance: each command class states its granularity, reversibility and precondition; the parity
+  table's columns and its generation rule are specified so G1 can populate it mechanically;
+  agent authority levels (§7.8: inspect / propose / commit / generate / approve) are defined here as
+  command-layer concepts, not as tool descriptions.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G0-CONTRACT.18`
+  Status: `pending`
+  Goal: the G0 CI shape (§4.3, §7.3) — minimal `sc-units` and `sc-core` crate skeletons in the
+  workspace, and a workflow running fmt / clippy / unit+property tests / the WASM smoketest that
+  proves those two crates compile to `wasm32-unknown-unknown`.
+  Acceptance: CI green on all four steps; the WASM step is a real `cargo build --target
+  wasm32-unknown-unknown`, not a `cargo check` on the host; the skeletons carry no domain logic
+  beyond what the `.2`/`.3` specs already fix (types and invariants may land, behaviour may not);
+  the starter crate question is answered — retired here or explicitly handed to `G1-SLICE.1`.
+  Verification: `pending`
+  Commit: `pending`
+
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
@@ -236,9 +282,12 @@ specification chapters (`docs/book/src/spec/`) and the layer-C decision records
   (the director reviews the book); ADR-style *decisions* live in `docs/decisions/` (memory
   layer C) and are summarised — never duplicated — in the book. Realises roadmap §4.3's
   `docs/adr/` as `docs/decisions/` deliberately.
-- `2026-09-29`: no product code in G0. Consequence: this tree's leaves are documentation
-  leaves, and the code-change acceptance gate has no subject here; the evidence each leaf
-  carries is a re-derivable census or a build (`mdbook build`), not a test run.
+- `2026-09-29`, **superseding the same day's earlier "no product code in G0" reading**: G0 owns
+  exactly two skeleton crates and the G0 CI workflow (`.18`), because §4.3 and §7.3 state the G0
+  CI shape and the G0 WASM smoketest in terms of `sc-core` + `sc-units` compiling. The earlier
+  reading took "crates appear when their stage starts" as an absolute and would have left two
+  roadmap clauses unowned. Consequence: `.18` is a CODE leaf and carries the full acceptance
+  checklist with tool output; every other G0 leaf remains documentation-only.
 
 ## Open Questions
 
@@ -256,29 +305,32 @@ specification chapters (`docs/book/src/spec/`) and the layer-C decision records
 
 ## Acceptance Checklist
 
-Gate-level checklist, filled by `G0-CONTRACT.15`; each leaf carries its own evidence in the
-Verification Log. This tree lands documentation only.
-
-- [ ] **ROOT CAUSE (WHY + WHERE)** — _filled at `.15`_
-- [ ] **ADDRESSED (verified)** — _filled at `.15`_
-- [ ] **NO REGRESSION** — _filled at `.15`_
-- [ ] **FIX** — _filled at `.15`_
-- [ ] **LOCKSTEP** — _filled at `.15`_
+Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
+Verification Log, and `.18` (the code leaf) additionally fills a `### G0-CONTRACT.18` checklist
+subsection with real tool output in the same commit as the change. This tree file carries no
+unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in a file, so
+a placeholder shadows real evidence and falsely rejects honest work (defect D15, measured by the
+`SPINE.7` probe; local mitigation `SPINE.8`).
 
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
+| `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
 | --- | --- | --- |
 | tree seed | `STITCHCAD-PLANNING-0001 (leaf PLANNING.1)` | created by the seeding leaf |
-| `G0-CONTRACT.1` … `.15` | `pending` | — |
+| `.16`–`.18` added | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | i18n choice, command-layer contract, G0 CI + skeletons |
+| `G0-CONTRACT.1` … `.18` | `pending` | — |
 
 ## Changelog
 
 - `2026-09-29`: Tree created by `PLANNING.1` with 15 leaves mapped clause-by-clause to the
   roadmap's G0 exit criteria.
+- `2026-09-29`: `PLANNING.2` added `.16` (message system + i18n architecture, §7.6), `.17`
+  (command-layer contract incl. undo/redo granularity, §4.4) and `.18` (G0 CI + `sc-units`/
+  `sc-core` skeletons, §4.3/§7.3), and corrected the tree's "no code in G0" reading.

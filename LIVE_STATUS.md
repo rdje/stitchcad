@@ -7,13 +7,13 @@ summarize the snapshot in every commit-workflow completion message.
 | Area | Status | Notes |
 | --- | --- | --- |
 | Discipline spine (bedrock 0.6.1) | Done | memory architecture · task-trees · commit workflow · doctrine enforcement · mdBook skeleton |
-| Roadmap → task-trees (`PLANNING`) | In Progress | `.1` done (index repaired; `PLANNING`/`SPINE`/`G0-CONTRACT` seeded; 13 startup defects logged and owned). `.2`/`.3` owe the G1–G7 and V-track lanes + the coverage map |
-| Repo identity & adopted policy (`SPINE`) | Not Started | README/book de-template · cleanup cadence · README-policy refresh + claim-verification adoption · live-doc containment · toolbox/knowledge map |
-| G0 — product & semantic contract (`G0-CONTRACT`) | Not Started | 15 leaves mapped clause-by-clause to the gate's exit criteria; specification only, no code |
-| G1 — executable architecture slice | Not Started | tree seeded by `PLANNING.2`; owns the starter-crate replacement (defect D10) |
-| G2 — correct 2D slice (vertical proof) | Not Started | tree seeded by `PLANNING.2` |
-| G3 — construction & grading | Not Started | tree seeded by `PLANNING.2` |
-| G4 — profiles & uncertainty workflow | Not Started | tree seeded by `PLANNING.2` |
+| Roadmap → task-trees (`PLANNING`) | In Progress | `.1`, `.2` done (index repaired; `PLANNING`/`SPINE`/`G0-CONTRACT`/`G1-SLICE`/`G2-2D`/`G3-GRADING`/`G4-PROFILES` seeded — 87 leaves across 7 trees; 15 defects logged and owned). `.3` owes `G5`–`G7`, `V1`, `V2` + the coverage map |
+| Repo identity & adopted policy (`SPINE`) | In Progress | `SPINE.6` done (lockfile tracked). Next: `.7`/`.8` — prove and locally close defect D15 in the inherited acceptance gate; then README/book de-template, cleanup cadence, policy adoptions, containment, toolbox |
+| G0 — product & semantic contract (`G0-CONTRACT`) | Not Started | 18 leaves mapped clause-by-clause to the gate's exit criteria; specification only, except `.18` (skeleton crates + G0 CI) |
+| G1 — executable architecture slice (`G1-SLICE`) | Not Started | 16 leaves; owns the starter-crate replacement (defect D10) and the three runtime profiles |
+| G2 — correct 2D slice (`G2-2D`) | Not Started | 14 leaves; offset pathology corpus, canonicalizer, DXF/PDF, printed scale square, agent gate |
+| G3 — construction & grading (`G3-GRADING`) | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
+| G4 — profiles & uncertainty (`G4-PROFILES`) | Not Started | 14 leaves; CSP + differential oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |
 | G5 — application shells & validated 2D UX | Not Started | tree seeded by `PLANNING.3` |
 | G6 — conformance lab & reliability | Not Started | tree seeded by `PLANNING.3` |
 | G7 — scoped production declaration | Not Started | tree seeded by `PLANNING.3` |

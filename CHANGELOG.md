@@ -4,6 +4,42 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-PLANNING-0002 — the engine-stage lanes are owned (leaf `PLANNING.2`)
+
+- **Seeded four delivery trees** from roadmap §11 exit criteria, 58 leaves in total:
+  `G1-SLICE` (16 — crate layout, `sc-units`, ontology, `sc-measure`, recipe evaluation, command
+  bus, `sc-store`, CSP kernel, `sc-api`/`sc-mcp`, `sc-cli`, three runtime profiles, the browser
+  and canvas-hosting spikes, dev shell, license census), `G2-2D` (14 — geometry kernel, offset
+  engine + pathology corpus, canonicalizer, DXF, PDF, printed scale square, CLI replay, viewer,
+  metamorphic + mutation suites, conformance matrix, agent gate), `G3-GRADING` (14 — closures,
+  walk/true, identity under edit, bodice + set-in sleeve, both instantiation paths, `.rul`,
+  extreme sizes, grading modes, notch set), `G4-PROFILES` (14 — profile schema v2, typed AST,
+  CSP + explained unsat, differential oracle, verification pass, evidence store, policy matrix,
+  composition, minimal Profile Editor, HPGL, private/public paths, usability gate).
+- **Closed three G0 clauses that had no owner**, found by the same census: §7.6 (one message
+  system chosen at G0 + externalization architecture) → `G0-CONTRACT.16`; §4.4 (command-layer
+  contract, undo/redo granularity defined at G0) → `.17`; §4.3 + §7.3 (G0 CI: fmt/clippy/
+  unit+property/WASM smoketest over `sc-core` + `sc-units`) → `.18`. That last clause also
+  corrected this tree's earlier "no code in G0" reading, recorded as a superseding decision.
+- **Logged defect D15 with measured evidence:** the inherited `TASK-ACCEPTANCE` gate judges the
+  FIRST box matching each label in a staged tree file, so in a multi-leaf file one leaf's evidence
+  answers for another leaf's code change (probe ARM-1: `task-acceptance: OK`, `exit=0`) and an
+  earlier unticked placeholder rejects a leaf carrying real evidence below it (ARM-2: three
+  `box is present but NOT ticked` refusals, `exit=1`). Owned by `SPINE.7` (committed probe +
+  authoring convention) and `SPINE.8` (a `FRESH-ACCEPTANCE-EVIDENCE` doctrine in the project
+  slot); the upstream fix is reported, not patched — the spine is shared code.
+- **Convention adopted:** tree files carry no unticked placeholder acceptance boxes; each
+  completed leaf adds a `### <leaf-id>` checklist subsection in the same commit as its work.
+- Validation: `make check` → `test result: ok. 1 passed; 0 failed`; `scripts/check_doctrines.sh`
+  → 13 checks, `=== all doctrines green ===`, `rc=0`.
+
+## STITCHCAD-SPINE-0006 — the workspace lockfile is tracked (leaf `SPINE.6`)
+
+- A fresh clone's first `make check` left `?? Cargo.lock` in the tree, which breaks the pivot
+  rule's definition of handoff-ready while `.gitignore` states the lockfile is deliberately not
+  ignored (defect D14). Tracked the cargo-generated file unedited; `git status --short` is now
+  empty after `make check`.
+
 ## STITCHCAD-PLANNING-0001 — roadmap v0.2 represented as task-trees (leaf `PLANNING.1`)
 
 - **Seeded the lane trees:** `docs/tasks/PLANNING.md` (roadmap → tree mapping),
