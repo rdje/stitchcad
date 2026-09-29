@@ -3,5 +3,12 @@
 version = 4
 
 [[package]]
-name = "stitchcad"
+name = "sc-core"
+version = "0.1.0"
+dependencies = [
+ "sc-units",
+]
+
+[[package]]
+name = "sc-units"
 version = "0.1.0"

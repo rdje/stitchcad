@@ -259,7 +259,7 @@ not a contract.
   Commit: `pending`
 
 - ID: `G0-CONTRACT.18`
-  Status: `pending`
+  Status: `done`
   Goal: the G0 CI shape (§4.3, §7.3) — minimal `sc-units` and `sc-core` crate skeletons in the
   workspace, and a workflow running fmt / clippy / unit+property tests / the WASM smoketest that
   proves those two crates compile to `wasm32-unknown-unknown`.
@@ -267,16 +267,16 @@ not a contract.
   wasm32-unknown-unknown`, not a `cargo check` on the host; the skeletons carry no domain logic
   beyond what the `.2`/`.3` specs already fix (types and invariants may land, behaviour may not);
   the starter crate question is answered — retired here or explicitly handed to `G1-SLICE.1`.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — 30 tests green, WASM cross-build green, clippy at deny-warnings.
+  Commit: `STITCHCAD-G0-0018`
 
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
 | 1 | `G0-CONTRACT.2` | `done` | taken first: every other chapter and every crate quotes a number, so the numerical contract had to exist before them |
-| 2 | `G0-CONTRACT.18` | `pending` | **next** — `sc-units` implements this chapter; the first product code and the G0 CI workflow |
-| 3 | `G0-CONTRACT.3` | `pending` | the ontology is the largest chapter and the dependency of `.4`, `.5`, `.13` |
+| 2 | `G0-CONTRACT.18` | `done` | `sc-units` implements `.2`; the G0 CI workflow builds both crates for WASM |
+| 3 | `G0-CONTRACT.3` | `pending` | **next** — the ontology is the largest chapter and the dependency of `.4`, `.5`, `.13` |
 | 4 | `G0-CONTRACT.13` | `pending` | the reference skirt gives every later chapter a concrete garment to be checked against |
 | 5 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | remaining G0 chapters, in the order the frontier table below records |
 
@@ -346,6 +346,48 @@ not a contract.
   `MEMORY.md` points at the next leaf; `CHANGELOG.md` records the slice; the derived Knowledge Map
   picks up the new decision record.
 
+### `G0-CONTRACT.18` — the first product code: `sc-units` implements the numerical contract
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the roadmap's G0 CI clause (§4.3 "CI grows with stages (G0:
+  fmt/clippy/unit+property/WASM smoketest)", §7.3 "WASM CI at G0 = smoketest that `sc-core` +
+  `sc-units` compile to `wasm32-unknown-unknown`") had nothing to build:
+  `git ls-tree -r --name-only HEAD | grep -c 'crates/sc-'` → `0`, `rc=1`, and the only crate in the
+  workspace was the bedrock starter, whose `main` printed `bedrock: replace this crate with your
+  project` (defect D10). A WASM smoketest over zero crates is a green light on nothing.
+- [x] **ADDRESSED (verified)** — `crates/sc-units` (1 097 lines of library, 564 lines of tests,
+  **zero dependencies** so it serves the `wasm-viewer` profile) now implements the `.2` chapter:
+  `Length` (i64 µm), `Angle` (i64 µ°, normalized), `Area`, `Ratio` (ppm), `Count`, `Unit` with exact
+  integer ratios, the five `ToleranceClass`es with a **mandatory derivation** field, `UnitError`
+  diagnostics for domain/overflow/division-by-zero/non-finite, and `#![forbid(unsafe_code)]`.
+  `crates/sc-core` exists as a documented skeleton naming which leaf owns each future module.
+  `cargo test --all` → **30 tests, 0 failed** (21 conformance properties + 5 rounding unit tests +
+  3 skeleton tests + 1 doc-test); `make wasm` →
+  `wasm-viewer smoketest: sc-units + sc-core build for wasm32-unknown-unknown`; the CI workflow gained
+  the `wasm32-unknown-unknown` target and a smoketest step that lists the produced `.rlib` files.
+- [x] **NO REGRESSION** — `cargo fmt --all -- --check` → clean, `exit=0`;
+  `cargo clippy --all-targets --all-features -- -D warnings` → `Finished`, `exit=0`;
+  `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` → `7 suite(s) green`. The
+  starter crate was retired with `git rm crates/app` (its only content was a template message and a
+  `2 + 2` test), so D10 closes here rather than at `G1-SLICE.1`.
+- [x] **FIX** — added `crates/sc-units` (7 modules) and `crates/sc-core`; workspace lints tightened
+  (`unsafe_code = "forbid"`, `missing_docs`, and `unwrap_used`/`expect_used`/`panic` denied so a
+  geometry kernel cannot abort a session on a degenerate input — with `.clippy.toml` re-allowing them
+  in tests, where a test that cannot fail loudly protects nothing); `rust-toolchain.toml` pins the
+  wasm32 target; `Makefile` gained `make wasm`; the `clippy::all` group needed `priority = -1` to
+  coexist with individual lint levels.
+- [x] **The tests caught a real API defect before it shipped:** `Ratio` conflated *a percentage* with
+  *a multiplier*. `from_percent_rational(2, 100)` returned 200 ppm — self-consistent, and a 100× error
+  for anyone reading the name as "2 percent". The constructors are now `from_percent(2, 1)` (a
+  percentage value → multiplier 0.02) and `from_rational(102, 100)` (the 1.02 a 2 % shrinkage is
+  applied as), each documented with the confusion it prevents. Two further failures were wrong
+  expectations on my side, corrected against the spec: `as_rational_in` returns the *reduced* exact
+  ratio (1 µm = 9/3175 pt, not 72/25400), and a whole-point round trip is bounded by one internal
+  quantum expressed in points (0.00283 pt), not by 1e-6.
+- [x] **LOCKSTEP** — `knowledge-map/subsystems.md` now names both crates and the spec directory (the
+  map was still reporting "no subsystems documented"); `TOOLBOX.md` gained the `make wasm` row;
+  D10 closed in `PLANNING.md`; `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and the derived Knowledge
+  Map updated in this commit.
+
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and `.18` (the code leaf) additionally fills a `### G0-CONTRACT.18` checklist
 subsection with real tool output in the same commit as the change. This tree file carries no
@@ -359,6 +401,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | --- | --- | --- | --- |
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
 | `2026-09-29` | `G0-CONTRACT.2` | `wc -lc` and per-line max on the chapter; `make book`; arithmetic re-derivation; `check_live_doc_size.sh`; `make gate`; `make check` | `291` lines / `17180` bytes / maxline `114`; `exit=0`, chapter rendered; 5 arithmetic claims confirmed; `OK — 17 surfaces, 15 routes, 47 files`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
+| `2026-09-29` | `G0-CONTRACT.18` | `cargo test --all`; `make wasm`; `cargo fmt --check`; `cargo clippy -D warnings`; `make gate`; `make probes` | 30 tests / 0 failed; wasm cross-build green; fmt clean; clippy clean; `=== all doctrines green ===`; `7 suite(s) green` |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 
 ## Commit Log
@@ -368,10 +411,14 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | tree seed | `STITCHCAD-PLANNING-0001 (leaf PLANNING.1)` | created by the seeding leaf |
 | `.16`–`.18` added | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | i18n choice, command-layer contract, G0 CI + skeletons |
 | `G0-CONTRACT.2` | `STITCHCAD-G0-0002 (leaf G0-CONTRACT.2): the numerical contract` | first product specification chapter; decision record added |
-| `G0-CONTRACT.1`, `.3`–`.18` | `pending` | — |
+| `G0-CONTRACT.18` | `STITCHCAD-G0-0018 (leaf G0-CONTRACT.18): the first product code` | `sc-units` implements `.2`; `sc-core` skeleton; G0 CI + WASM smoketest; D10 closed |
+| `G0-CONTRACT.1`, `.3`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-29`: `.18` landed — the first product code. `sc-units` implements the numerical contract
+  (30 tests, dependency-free, builds for `wasm32-unknown-unknown`), `sc-core` is a documented
+  skeleton, the G0 CI shape exists, and the bedrock starter crate is retired (D10).
 - `2026-09-29`: `.2` landed — the units & tolerance chapter is normative, the numerical contract is a
   layer-C decision, and the frontier moves to `.18` (the first product code: `sc-units` implements this
   chapter). The tree's execution order is now recorded in its frontier table.

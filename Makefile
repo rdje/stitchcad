@@ -1,7 +1,7 @@
 # Makefile — standard commands. `make gate` = the doctrine enforcer; `make check` = Rust.
 SHELL := /usr/bin/env bash
 
-.PHONY: help gate check fmt clippy test book hooks bootstrap update-scaffold probes
+.PHONY: help gate check fmt clippy test wasm book hooks bootstrap update-scaffold probes
 
 help:
 	@echo "make gate            - run the doctrine enforcer (scripts/check_doctrines.sh)"
@@ -13,6 +13,7 @@ help:
 	@echo "make hooks           - install the git hooks (core.hooksPath=.githooks)"
 	@echo "make bootstrap       - first-time project bootstrap"
 	@echo "make update-scaffold - pull the latest bedrock spine (set URL=<bedrock-repo>)"
+	@echo "make wasm            - the wasm-viewer smoketest: build sc-units + sc-core for wasm32-unknown-unknown"
 	@echo "make probes          - run every probe suite under docs/tasks/artifacts/ (scratch on this volume)"
 
 gate:
@@ -31,6 +32,14 @@ clippy:
 
 test:
 	cargo test --all
+
+# ROADMAP.md §7.3: the `wasm-viewer` runtime profile is a documented capability subset, and the G0 CI
+# clause is a real cross-compilation, not a host `cargo check`. Run this before claiming a crate is
+# browser-capable.
+wasm:
+	rm -rf target/wasm32-unknown-unknown/debug/.fingerprint 2>/dev/null || true
+	cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core
+	@echo "wasm-viewer smoketest: sc-units + sc-core build for wasm32-unknown-unknown"
 
 book:
 	mdbook build docs/book

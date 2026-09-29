@@ -1,0 +1,15 @@
+[package]
+name = "sc-units"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+description = "StitchCAD's numerical contract: fixed-point micrometre lengths, microdegree angles, exact conversion ratios and the five tolerance classes. No dependencies, so it builds for every runtime profile including wasm-viewer."
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+# Deliberately none. This crate is the foundation of the `wasm-viewer` runtime profile
+# (ROADMAP.md §7.3) and of byte-deterministic golden files (§2.7); a dependency here is a
+# dependency everywhere.

@@ -7,8 +7,24 @@ members = ["crates/*"]
 [workspace.package]
 edition = "2021"
 license = "MIT OR Apache-2.0"
+repository = "https://github.com/rdje/stitchcad"
 
 # Shared lints so every crate inherits the same strictness (opt in per crate with
 # `[lints] workspace = true`). clippy runs at deny-warnings in `make check` / CI.
 [workspace.lints.clippy]
-all = "warn"
+# `all` is a lint GROUP, so it needs a lower priority than the individual lints below;
+# otherwise clippy refuses to compile ("lint group `all` has the same priority as a lint").
+all = { level = "warn", priority = -1 }
+# A geometry kernel that panics on a degenerate input is a crashed session on the cutting-room
+# floor: fallible operations return `Result`, and the lints below keep it that way.
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+indexing_slicing = "warn"
+cast_possible_truncation = "warn"
+cast_sign_loss = "warn"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+missing_debug_implementations = "warn"

@@ -1,0 +1,7 @@
+# Clippy configuration for the StitchCAD workspace.
+#
+# The workspace denies `unwrap_used`, `expect_used` and `panic` because a geometry kernel that panics
+# on a degenerate input is a crashed session on the cutting-room floor. Tests are the exception: a
+# test that cannot unwrap cannot fail loudly, and a silently-skipping assertion is worse than a panic.
+allow-unwrap-in-tests = true
+allow-expect-in-tests = true

@@ -1,3 +1,6 @@
 [toolchain]
 channel = "stable"
 components = ["rustfmt", "clippy"]
+# The `wasm-viewer` runtime profile (ROADMAP.md §7.3) is a first-class target, and the G0 CI
+# clause is a real `cargo build --target wasm32-unknown-unknown`, not a host `cargo check`.
+targets = ["wasm32-unknown-unknown"]

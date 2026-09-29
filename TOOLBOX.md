@@ -47,6 +47,7 @@ agent should be able to reach for the right tool without reading the source. -->
 | fresh-evidence probe suite | does the fresh-evidence doctrine refuse stale evidence and still accept a co-staged documentation tree? | `bash docs/tasks/artifacts/fresh_evidence/run_fresh_evidence_probes.sh` → `probes: N pass / M fail` |
 | task-acceptance probe suite | does the inherited acceptance gate still hold its shipped properties? | `bash docs/tasks/artifacts/task_acceptance/run_task_acceptance_probes.sh` |
 | Rust gate | do fmt, clippy (deny warnings) and the tests pass? | `make check` |
+| WASM smoketest | do the foundation crates really cross-compile for the browser profile (not a host `cargo check`)? | `make wasm` |
 | all probe suites | does every diagnostic probe in the repository still discriminate? (scratch pinned to this volume) | `make probes` → per-suite `probes: N pass / M fail`, then `5 suite(s) green` |
 | Knowledge Map | is the derived orientation map in sync with its sources? | `knowledge-map/scripts/check_knowledge_map.sh`; regenerate with `knowledge-map/scripts/gen_knowledge_map.sh > "$(knowledge-map/scripts/gen_knowledge_map.sh --print-map-path)"` |
 

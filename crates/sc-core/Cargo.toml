@@ -1,0 +1,13 @@
+[package]
+name = "sc-core"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+description = "StitchCAD's garment ontology, construction recipe and command bus. Skeleton at gate G0 (the G0 CI clause names it as a WASM-smoketest crate); the ontology lands with G0-CONTRACT.3 and G1-SLICE.3."
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+sc-units = { path = "../sc-units", version = "0.1.0" }

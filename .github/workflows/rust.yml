@@ -1,4 +1,8 @@
 name: rust
+# The G0 CI shape required by ROADMAP.md §4.3 and §7.3: fmt, clippy at deny-warnings, the unit and
+# property suites, and a REAL wasm32-unknown-unknown build of the crates the wasm-viewer profile
+# depends on. §7.3 is explicit that browser-target compilation is tested for real, not with a host
+# `cargo check` — a crate that only compiles natively is a capability-matrix claim nobody proved.
 on:
   push:
   pull_request:
@@ -11,9 +15,14 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
+          targets: wasm32-unknown-unknown
       - name: Format
         run: cargo fmt --all -- --check
       - name: Clippy (deny warnings)
         run: cargo clippy --all-targets --all-features -- -D warnings
-      - name: Test
+      - name: Test (unit + property + doc)
         run: cargo test --all
+      - name: WASM smoketest (wasm-viewer profile foundations)
+        run: |
+          cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core
+          ls -l target/wasm32-unknown-unknown/debug/*.rlib

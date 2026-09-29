@@ -176,7 +176,10 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
 - **D10** — the starter crate still prints the bedrock message and is not a roadmap crate
 - Reproduce: `grep -n bedrock crates/app/src/main.rs`
 - Impact: `cargo run` describes the wrong project; roadmap §4.3 crate layout unrepresented
-- Owner: `G1-SLICE.1` (deferred: G0 is specification-only, no code lands before G1)
+- Owner: `G1-SLICE.1` (deferred) — **closed early by `G0-CONTRACT.18`**: the roadmap's own G0 CI
+  clause requires `sc-core` + `sc-units` to build for `wasm32-unknown-unknown`, so the starter crate
+  was retired when those two landed (`git rm crates/app`); `G1-SLICE.1` keeps the rest of the §4.3
+  crate layout
 
 - **D11** — the in-repo `README_POLICY.md` is the older neutral body; the director's external reference
   has been revised (authority/provenance, duplication probe, routing-pressure closure, derived caps,
