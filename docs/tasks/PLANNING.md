@@ -271,6 +271,19 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Owner: `SPINE.4.2` (**fixed** — the census is bounded prose entries now, so no cell contains a
     pipe; the escape-always convention for any future table is `SPINE.15`).
 
+- **D25** — the inherited code-path default misclassifies this project's documentation as code:
+  `default_code_re` in `scripts/check_task_acceptance.sh` contains `(^|/)src/`, and the mdBook chapters
+  live in `docs/book/src/`, so writing a specification chapter triggered the code-change acceptance gate
+  and demanded tool-output-backed boxes for prose.
+  - Reproduce: `git ls-files 'docs/book/src/*.md' | wc -l` → `4`, `rc=0`; staging one of them makes
+    `scripts/check_fresh_acceptance_evidence.sh` report `a CODE change is staged`, `exit=1`.
+  - Impact: a false positive on the most common product action at gate G0 (writing spec chapters), and
+    exactly the pressure `.doctrine/README.md` warns about — a gate whose signature does not fit the
+    real corpus teaches authors to paste tokens they do not mean.
+  - Owner: `SPINE.16` (**fixed** — `.doctrine/code_paths.txt` declares the classification for this
+    repository; both acceptance checks read the same seam; the probe suite copies it so it tests the
+    real configuration).
+
 - **D23** — the containment registry's `book_collection` row declared its glob as
   `docs/book/src/**/*.md`, which under `git ls-files` pathspec semantics matches **only nested** files
   and silently misses top-level chapters — so two of the three existing book files would have been

@@ -38,6 +38,7 @@ mkrepo() { # $1 = name -> prints the repo dir
   cp "$UNIVERSAL" "$d/scripts/check_task_acceptance.sh"
   mkdir -p "$d/.doctrine"
   cp "$ROOT/.doctrine/evidence_tokens.txt" "$d/.doctrine/evidence_tokens.txt" 2>/dev/null || true
+  cp "$ROOT/.doctrine/code_paths.txt" "$d/.doctrine/code_paths.txt" 2>/dev/null || true
   git -C "$d" init -q .
   git -C "$d" config user.email probe@example.invalid
   git -C "$d" config user.name probe

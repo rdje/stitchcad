@@ -105,6 +105,61 @@ recent entries; when it passes its health target again, the oldest are sealed th
 - Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed;
   0 failed`; `make probes` → `7 suite(s) green`; `bash -n` clean.
 
+## STITCHCAD-SPINE-0016 — prose is no longer judged as code (leaf `SPINE.16`)
+
+- **Defect D25, and it was blocking product work.** The spine's default code-path regex contains
+  `(^|/)src/`, and this project's mdBook chapters live in `docs/book/src/`. Writing a specification
+  chapter — the main activity at gate G0 — was therefore classified as a CODE change, and
+  `check_fresh_acceptance_evidence.sh` refused the commit demanding tool-output-backed acceptance boxes
+  for prose. Taken ahead of the slice it unblocked, per
+  `docs/decisions/decision_product-work-takes-the-frontier.md`: a spine slice is legitimate when it
+  blocks the product slice about to be taken.
+- **`.doctrine/code_paths.txt`** now declares the classification (10 patterns, with the reason in its
+  header): crates and `.rs`, `scripts/` and any `.sh`, `Makefile`, `Cargo.toml`/`Cargo.lock`,
+  `rust-toolchain.toml`, `.clippy.toml`, CI workflows and `.doctrine/`. Both acceptance checks read the
+  same seam, so they cannot disagree. No spine file was edited — the seam is the documented extension
+  point, and `.doctrine/README.md` is explicit that a signature family which does not fit the real
+  corpus teaches authors to waive it.
+- Census over representative paths: `docs` for `docs/book/src/spec/ontology.md`, `README.md` and
+  `docs/tasks/SPINE.md`; `CODE` for `crates/sc-units/src/lib.rs`, `scripts/check_live_doc_size.sh`,
+  `.doctrine/live_document_size/surfaces.tsv` and `Makefile`.
+- The fresh-evidence probe now copies the seam into its throwaway repositories, so it tests the
+  configuration this repository actually runs rather than the default it replaced.
+- Validation: `make probes` → `7 suite(s) green`; `make gate` → `=== all doctrines green ===`;
+  `make check` → `test result: ok. 3 passed; 0 failed`.
+
+## STITCHCAD-G0-0013 — the reference skirt, specified to the millimetre (leaf `G0-CONTRACT.13`)
+
+`docs/book/src/spec/reference-skirt.md` (245 lines) turns the roadmap's prose fixture — "A-line, one
+waist dart/side, CB zipper, grain ∥ CB, SA 1 cm sides / 3 cm hem, single notches at side seams" — into a
+garment two independent implementers would draft identically. It is the subject of gate G2's CLI replay,
+DXF/PDF goldens, printed scale-square check, offset pathology corpus, mutation tests and agent gate.
+
+- **Every number has a source:** 4 body measurements with landmarks and procedures, 2 ease entries with
+  fit intent, 9 declared drafting constants, and **17 derived values each shown with its formula** —
+  quarter widths, suppression, dart intake and centre, hem width, side-seam slope length, waistband
+  length and cut width.
+- **The allocation balance closes exactly**, which is the fixture's own internal oracle:
+  `4 quadrants × (3.0 side seam + 4.0 dart) = 28.0 cm = garment hip 102.0 − garment waist 74.0`; side
+  seams total 12.0 cm and darts 16.0 cm. If a future edit breaks that equality, the recipe is wrong, not
+  the check.
+- **An interpretation is recorded, not smuggled in:** the roadmap's "one waist dart/side" is realised as
+  one dart per *pattern quadrant* (front piece carries two, symmetric about the fold; each back piece
+  one), with the arithmetic reason stated — a single dart per body side would need 8.0 cm of intake,
+  past the practical single-dart maximum.
+- **8 constants are explicitly `assumed`, not `known`:** the five drafting constants (`ss_suppress`,
+  `dart_intake`, both dart lengths, `a_line_flare`) and three closure constants need a sewing expert's
+  review before the fixture is frozen as a golden at G2, and `G0-CONTRACT.14` owns naming that expert.
+  A golden frozen over an unreviewed assumption freezes a guess — so the chapter says which numbers are
+  arithmetic and which are judgement.
+- It also exercises, by construction: darts with conserved intake, grainlines parallel to CB, variable
+  allowances (1 / 1.5 / 3 cm), notches with matched parameters on both sides of a seam, a fold edge
+  carrying no allowance, a mirrored pair with L/R labels, the included-vs-excluded allowance policy under
+  two profiles, a zero-ease sewing graph (so `walk` must report inside the numerical tolerance class),
+  a closure with notions, and recipe replay determinism. A traceability table maps each property to its
+  ontology clause and the gate that depends on it, and 8 test obligations close the chapter.
+- Validation: `make book` → `exit=0`; `check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 51 files
+  measured`; `make gate` → `=== all doctrines green ===`; `make check` → 30 tests, 0 failed.
 ## STITCHCAD-G0-0003 — the garment ontology is normative (leaf `G0-CONTRACT.3`)
 
 `docs/book/src/spec/ontology.md` (295 lines, widest line 198 bytes) turns roadmap §3.1's bullet list of

@@ -221,6 +221,18 @@ mechanically-enforced form:
   Verification: `pending`
   Commit: `pending`
 
+- ID: `SPINE.16`
+  Status: `done`
+  Goal: declare `.doctrine/code_paths.txt` so the acceptance gates classify **this** repository's files
+  correctly (defect **D25**). The spine's default code-path regex matches any path containing `/src/`,
+  and the mdBook chapters live in `docs/book/src/` — so writing a specification chapter was judged a
+  CODE change and demanded ticked, tool-output-backed acceptance boxes for prose.
+  Acceptance: a specification chapter is no longer classified as code; every genuinely
+  behaviour-altering path still is; both acceptance checks read the same seam; the probe suites still
+  discriminate; `make gate` green.
+  Verification: recorded below — classification census over 7 representative paths, 7 probe suites green.
+  Commit: `STITCHCAD-SPINE-0016`
+
 - ID: `SPINE.5`
   Status: `pending`
   Goal: seed the orientation surfaces — `TOOLBOX.md` project-toolbox rows for the instruments
@@ -793,6 +805,36 @@ the director rather than patched here (session directive §21: other repositorie
   `SPINE.15`; `tasks_collection` per-part 107 % → the convention recorded in its registry row;
   `roadmap` navigation → `SPINE.13`.
 
+### `SPINE.16` — the code-path seam, so prose is not judged as code (defect D25)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `scripts/check_task_acceptance.sh` builds its code test from
+  `default_code_re='(^|/)(crates|src|scripts)/|\.(rs|sh)$|(^|/)Makefile$'` when
+  `.doctrine/code_paths.txt` is absent, and `(^|/)src/` matches this project's documentation tree:
+  `git ls-files 'docs/book/src/*.md' | wc -l` → `4`, `rc=0`. Staging
+  `docs/book/src/spec/reference-skirt.md` therefore made a prose chapter a CODE change, and
+  `scripts/check_fresh_acceptance_evidence.sh` refused the commit demanding an ADDRESSED box backed by
+  tool output (`exit=1`) — a false positive of exactly the kind `.doctrine/README.md` warns creates
+  waivers.
+- [x] **ADDRESSED (verified)** — `.doctrine/code_paths.txt` now declares the classification, and the
+  census over representative paths reads: `docs  docs/book/src/spec/ontology.md`, `CODE
+  crates/sc-units/src/lib.rs`, `CODE  scripts/check_live_doc_size.sh`, `CODE
+  .doctrine/live_document_size/surfaces.tsv`, `CODE  Makefile`, `docs  README.md`,
+  `docs  docs/tasks/SPINE.md` — prose is prose, behaviour-altering files are code. Re-derive with the
+  seam itself: `PAT="$(grep -vE '^[[:space:]]*(#|$)' .doctrine/code_paths.txt | paste -sd'|' -)"` then
+  `printf '%s\n' <path> | grep -qE "$PAT"` for each path — `4` CODE and `3` docs over those seven,
+  `rc=0`; the file declares `10` patterns (`grep -vcE '^[[:space:]]*(#|$)' .doctrine/code_paths.txt` →
+  `10`, `rc=0`). Both acceptance checks consume the same seam, so they cannot disagree.
+- [x] **NO REGRESSION** — the fresh-evidence probe now copies the seam into its throwaway repositories
+  (so it tests the real configuration), and `make probes` → `7 suite(s) green`, `exit=0`; `make gate` →
+  `=== all doctrines green ===`, `exit=0`; `make check` → `test result: ok. 3 passed; 0 failed`.
+- [x] **FIX** — added `.doctrine/code_paths.txt` (10 patterns with the reason recorded in its header);
+  one line added to the fresh-evidence probe so it exercises the declared seam rather than the default.
+  No spine file was edited: the seam is the documented extension point.
+- [x] **LOCKSTEP** — D25 logged in `PLANNING.md` with its reproduce command and this owner;
+  `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` updated. Taken ahead of the product slice it unblocked,
+  per `decision_product-work-takes-the-frontier.md`: a spine slice is legitimate when it blocks the
+  product slice about to be taken, and this one was refusing it.
+
 Leaves `.5`, `.13` and `.15` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
@@ -882,6 +924,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.4.2` | `STITCHCAD-SPINE-0004b (leaf SPINE.4.2): the containment data plane` | 17 surfaces, 15 routes, derived README caps, 3 surfaces trimmed |
 | `SPINE.14` | `STITCHCAD-SPINE-0014 (leaf SPINE.14): seal the inherited changelog into docs/history/` | hash-proven, lossless; ledger inside its window |
 | `SPINE.4.3` | `STITCHCAD-SPINE-0004c (leaf SPINE.4.3): enforce the containment registry` | D13 closed; 2nd project doctrine, 11 self-test arms + 4 probes |
+| `SPINE.16` | `STITCHCAD-SPINE-0016 (leaf SPINE.16): declare the code-path seam` | D25 fixed; prose is no longer judged as code |
 | `SPINE.4.3`, `SPINE.5`, `SPINE.13`, `SPINE.14`, `SPINE.15` | `pending` | — |
 
 ## Changelog
