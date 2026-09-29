@@ -23,3 +23,4 @@
 ## Decision records
 
 - [`decision_acceptance-evidence-per-leaf.md`](docs/decisions/decision_acceptance-evidence-per-leaf.md)
+- [`decision_scaffold-sync-protects-project-content.md`](docs/decisions/decision_scaffold-sync-protects-project-content.md)

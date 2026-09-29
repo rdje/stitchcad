@@ -159,7 +159,7 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0008`
 
 - ID: `SPINE.9`
-  Status: `pending`
+  Status: `done`
   Goal: make the scaffold updater safe for project content (defect **D17**) —
   `scripts/update_scaffold.sh` lists `docs/TASK_TREE.md`, `TOOLBOX.md`, `README_POLICY.md` and
   `docs/tasks/TEMPLATE.md` as NEUTRAL ("safe to overwrite because it never carries project
@@ -171,8 +171,8 @@ mechanically-enforced form:
   neutral ones are; the backup lands on the repository volume; a decision record
   (`decision_scaffold-sync-protects-project-content.md`, already cross-linked from the
   acceptance-evidence record) states the rule; `make gate` green.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — `probes: 7 pass / 0 fail`.
+  Commit: `STITCHCAD-SPINE-0009`
 
 - ID: `SPINE.10`
   Status: `pending`
@@ -193,8 +193,8 @@ mechanically-enforced form:
 | 0 | `SPINE.6` | `done` | taken out of order: it repaired a dirty-tree defect found on the first `make check` |
 | 0 | `SPINE.7` | `done` | taken in frontier order: D15 had to be measured before it could be owned |
 | 1 | `SPINE.8` | `done` | landed in frontier order: every code commit from here on is judged by it |
-| 2 | `SPINE.9` | `pending` | **next** — the updater can silently destroy the layer-B index; guard it before any scaffold sync is run |
-| 3 | `SPINE.10` | `pending` | scratch locality is a standing directive obligation, cheap once `make probes` exists |
+| 2 | `SPINE.9` | `done` | landed in frontier order: it protects the layer-B index from the documented maintenance command |
+| 3 | `SPINE.10` | `pending` | **next** — scratch locality is a standing directive obligation, cheap once `make probes` exists |
 | 4 | `SPINE.1` | `pending` | identity before content, so the G0 spec chapters grow into a named book |
 | 5 | `SPINE.2` | `pending` | cleanup cadence is a session-directive obligation and cheap |
 | 6 | `SPINE.3` | `pending` | policy adoptions bind how every later claim and cap is written |
@@ -299,7 +299,43 @@ the director rather than patched here (session directive §21: other repositorie
   (including the withdrawn D18 near-miss); the layer-C record states the two authoring rules this
   check cannot enforce; `PLANNING.md`, `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` updated.
 
-Leaves `.1`–`.5`, `.9` and `.10` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.9` — the scaffold updater guards project content (defect D17)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `scripts/update_scaffold.sh` at HEAD carried ONE list under the
+  comment `23:# The project-NEUTRAL spine — safe to overwrite because it never carries project
+  content.`, and four of its entries are exactly the files the template tells a project to fill in:
+  `git show HEAD:scripts/update_scaffold.sh | grep -nE '^  (docs/TASK_TREE\.md|TOOLBOX\.md|README_POLICY\.md|docs/tasks/TEMPLATE\.md)$'`
+  → `27:  TOOLBOX.md`, `28:  README_POLICY.md`, `31:  docs/TASK_TREE.md`, `33:  docs/tasks/TEMPLATE.md`,
+  `count=4`, `rc=0`. `docs/TASK_TREE.md`'s own note instructs a generated project to replace the
+  seeded row with its own trees, so one run of the documented "keep the spine current" command would
+  have deleted the Active Task Trees index — layer-B navigation — with `git diff` as the only witness.
+- [x] **ADDRESSED (verified)** — the updater now declares two classes with a recorded reason per
+  guarded file (`awk '/^PROJECT_CONTENT=\(/,/^\)/' scripts/update_scaffold.sh | grep -cE '^\s+\S'` →
+  `8`), refuses a dirty tree, and writes nothing under `--dry-run`. Before: no instrument
+  existed (`ls docs/tasks/artifacts/scaffold_sync` → absent); after:
+  `bash docs/tasks/artifacts/scaffold_sync/run_update_scaffold_probes.sh` →
+  `probes: 7 pass / 0 fail`, including `ARM-2 ⭐ the task-tree index survived; SKIPPED reported; a
+  backup of it exists`, `ARM-4` (whole-tree checksum unchanged by a dry run), `ARM-5`
+  (`exit=1` refused, nothing written; `--allow-dirty` → `exit=0`) and `ARM-6` (`--force` overwrites
+  but the backup still holds the project rows).
+- [x] **NO REGRESSION** — `bash -n` clean on both changed scripts; the other suites are untouched and
+  still green: `run_task_acceptance_probes.sh` → `probes: 10 pass / 0 fail`,
+  `run_multileaf_shadowing_probe.sh` → `probes: 6 pass / 0 fail`,
+  `run_fresh_evidence_probes.sh` → `probes: 9 pass / 0 fail`; `scripts/check_doctrines.sh` →
+  `=== all doctrines green ===`, `exit=0`; `make check` → `test result: ok. 1 passed; 0 failed`.
+- [x] **FIX** — rewrote `scripts/update_scaffold.sh` (NEUTRAL vs PROJECT-CONTENT classification with
+  per-file reasons, backup-before-write under `target/scaffold_backup/`, `--dry-run`,
+  `--force-project-sections`, `--allow-dirty`, dirty-tree refusal, scratch on the repository volume);
+  added the 7-arm probe suite. Two probe defects were caught by its own arms before the leaf closed:
+  a reused output variable that made ARM-5 assert against the wrong run, and `stat -f %m` measuring
+  the GNU coreutils `stat` this machine's `PATH` shadows BSD userland with — the arm now pins
+  `/usr/bin/stat` and fails loudly if neither form works.
+- [x] **LOCKSTEP** — decision record `decision_scaffold-sync-protects-project-content.md` added and
+  indexed (its cross-link from the acceptance-evidence record now resolves); `TOOLBOX.md` names both
+  new instruments and the pinned-instrument rule; D17 marked fixed in `PLANNING.md`;
+  `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and the derived Knowledge Map updated.
+
+Leaves `.1`–`.5` and `.10` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -354,6 +390,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.6` | `make check`; `git ls-files --error-unmatch Cargo.lock`; `git status --short` | `test result: ok. 1 passed`; `rc=0`; empty status |
 | `2026-09-29` | `SPINE.7` | `run_multileaf_shadowing_probe.sh`; `run_task_acceptance_probes.sh`; `bash -n`; `make check`; `scripts/check_doctrines.sh` | `probes: 6 pass / 0 fail`; `probes: 10 pass / 0 fail`; syntax clean; `test result: ok. 1 passed`; first attempt `exit=1` (D15 facet 3, diagnosed and fixed), then `rc=0` |
 | `2026-09-29` | `SPINE.8` | `run_fresh_evidence_probes.sh`; `check_fresh_acceptance_evidence.sh --self-test`; both inherited suites; `make check`; `scripts/check_doctrines.sh` | `probes: 9 pass / 0 fail`; `8 verdict controls + 6 extractor arms`; `probes: 10 pass / 0 fail`; `probes: 6 pass / 0 fail`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
+| `2026-09-29` | `SPINE.9` | `run_update_scaffold_probes.sh`; `bash -n` ×2; the three other probe suites; `make check`; `scripts/check_doctrines.sh` | `probes: 7 pass / 0 fail`; syntax clean; `10/0`, `6/0`, `9/0`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 
 ## Commit Log
 
@@ -364,7 +401,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.7`, `SPINE.8` | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | leaves created to own defect D15 |
 | `SPINE.7` | `STITCHCAD-SPINE-0007 (leaf SPINE.7): measure the multi-leaf acceptance-evidence hole` | probe + convention record; D15 published |
 | `SPINE.8` | `STITCHCAD-SPINE-0008 (leaf SPINE.8): require acceptance evidence fresh in the commit` | project doctrine + 9-arm probe; D15 facet 1 closed locally |
-| `SPINE.1` … `.5`, `.9`, `.10` | `pending` | — |
+| `SPINE.9` | `STITCHCAD-SPINE-0009 (leaf SPINE.9): guard project content in the scaffold updater` | D17 fixed; 7-arm probe suite + decision record |
+| `SPINE.1` … `.5`, `.10` | `pending` | — |
 
 ## Changelog
 
@@ -377,6 +415,9 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.9` landed — the scaffold updater classifies files (NEUTRAL synced,
+  PROJECT-CONTENT backed up and skipped), refuses a dirty tree, and writes nothing on `--dry-run`;
+  7-arm probe suite and a layer-C record. D17 closed.
 - `2026-09-29`: `SPINE.8` landed — `FRESH-ACCEPTANCE-EVIDENCE` registered in the project slot with
   a 9-arm probe suite; D15 facet 1 is now closed mechanically. A candidate defect (D18, "the
   inherited signature list is not portable") was measured and **withdrawn**: the gate matches with

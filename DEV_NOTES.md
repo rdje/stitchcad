@@ -37,6 +37,13 @@
   instrument, not in the gate it was measuring; the candidate defect record was withdrawn, and the
   check now pins the engine choice with a `GREEN-2` arm. Corollary: `\b` and `{n}` are GNU extensions
   that BSD awk lacks, so awk is for structure here and grep is for signatures.
+- **Pin the instrument you measure with — same lesson, second instance, one day later.** The
+  scaffold-sync probe's "an identical file is not rewritten" control read mtimes with `stat -f %m`
+  and got filesystem dumps: this machine's `PATH` puts GNU coreutils ahead of BSD userland, where
+  `-f` means *filesystem status* and `%m` becomes a filename operand. The arm printed a verdict about
+  data it never read. Fixed by pinning `/usr/bin/stat` and failing loudly when neither the BSD nor the
+  GNU form yields a number. General rule, now in `TOOLBOX.md`: a probe that measures with whatever is
+  first in `PATH` measures the `PATH`.
 
 ## _(2026-09-04)_ — a template's trial must include the first commit
 

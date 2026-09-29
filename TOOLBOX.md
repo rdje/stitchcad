@@ -37,6 +37,8 @@ agent should be able to reach for the right tool without reading the source. -->
 | doctrine enforcer | is the repository committable — do all 13 registered doctrines hold right now? | `scripts/check_doctrines.sh` (same as `make gate`; prints `=== all doctrines green ===`) |
 | per-check self-test | does a single doctrine check still discriminate (both arms fire)? | `scripts/check_<name>.sh --self-test` (e.g. `scripts/check_live_doc_currency.sh --self-test`) |
 | multi-leaf shadowing probe | which leaf's evidence does `TASK-ACCEPTANCE` actually judge, and does a placeholder block an honest leaf? (defect D15) | `bash docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh` → `probes: N pass / M fail` |
+| scaffold updater | which spine files would a sync overwrite, and which are guarded project content? (defect D17) | `scripts/update_scaffold.sh <bedrock-url-or-path> --dry-run` (live run needs a clean tree; `--force-project-sections` to override a guard) |
+| scaffold-sync probe suite | does the updater still protect the task-tree index, refuse a dirty tree and write nothing on a dry run? | `bash docs/tasks/artifacts/scaffold_sync/run_update_scaffold_probes.sh` → `probes: N pass / M fail` |
 | fresh-evidence check | does THIS commit add its own ticked, evidence-backed acceptance boxes for the code it stages? (project doctrine `FRESH-ACCEPTANCE-EVIDENCE`) | `scripts/check_fresh_acceptance_evidence.sh` (runs inside `make gate`); arms: `--self-test` |
 | fresh-evidence probe suite | does the fresh-evidence doctrine refuse stale evidence and still accept a co-staged documentation tree? | `bash docs/tasks/artifacts/fresh_evidence/run_fresh_evidence_probes.sh` → `probes: N pass / M fail` |
 | task-acceptance probe suite | does the inherited acceptance gate still hold its shipped properties? | `bash docs/tasks/artifacts/task_acceptance/run_task_acceptance_probes.sh` |
@@ -45,3 +47,8 @@ agent should be able to reach for the right tool without reading the source. -->
 
 ⚠ Inherited probe suites call `mktemp -d`, which lands on the system volume; pin scratch to the
 repository volume with `TMPDIR="$PWD/target/scratch"` (defect D16, leaf `SPINE.10`).
+
+⚠ Probes and checks must **pin the instrument they measure with**. This machine's `PATH` puts GNU
+coreutils ahead of BSD userland, so `stat -f %m` (BSD mtime) means "filesystem status of a file named
+`%m`" and fails; `awk` is BSD awk 20200816, which lacks the GNU regex extensions `\b` and `{n}` that
+`grep -E` here supports. A probe that measures with whatever is first in `PATH` measures the `PATH`.

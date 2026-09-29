@@ -4,6 +4,34 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0009 — the scaffold updater can no longer clobber project content (leaf `SPINE.9`)
+
+- **Defect D17 fixed.** `scripts/update_scaffold.sh` carried one list described as "safe to overwrite
+  because it never carries project content", and four of its entries are the files the template tells
+  a project to fill in — `docs/TASK_TREE.md` (the Active Task Trees index, layer-B navigation),
+  `TOOLBOX.md` (the project toolbox), `README_POLICY.md` (the local adoption note),
+  `docs/tasks/TEMPLATE.md` — at lines `27`, `28`, `31`, `33`. One run of the documented "keep the
+  spine current" command would have replaced the index with template blanks.
+- **Two declared classes now**, with a recorded reason per guarded file: NEUTRAL is synced (previous
+  copy backed up), PROJECT-CONTENT is backed up, reported `SKIPPED` and left alone unless
+  `--force-project-sections` is passed. Added `--dry-run` (reports the classification, writes nothing
+  — no syncs, no backups, no file modes), a dirty-tree refusal with `--allow-dirty` as the explicit
+  override, and scratch/backup paths under `target/` on the repository volume.
+- **Probe suite** `docs/tasks/artifacts/scaffold_sync/run_update_scaffold_probes.sh` →
+  `probes: 7 pass / 0 fail`. ARM-2 rebuilds the founding situation (local index rows + a changed
+  upstream copy) and asserts the rows survive; ARM-4 proves a dry run leaves the whole-tree checksum
+  unchanged; ARM-5 proves the dirty-tree refusal wrote nothing; ARM-6 proves `--force` still backs up.
+- **Two probe defects caught by its own arms before the leaf closed:** a reused output variable made
+  ARM-5 assert against the wrong run, and `stat -f %m` measured the GNU coreutils `stat` that this
+  machine's `PATH` puts ahead of BSD userland — so the arm "measured" filesystem dumps instead of
+  mtimes. The arm now pins `/usr/bin/stat` and fails loudly if neither form works; `TOOLBOX.md` carries
+  the general rule (pin the instrument you measure with).
+- Recorded as `docs/decisions/decision_scaffold-sync-protects-project-content.md` (indexed), which
+  also resolves the forward reference from the acceptance-evidence record.
+- Validation: `bash -n` clean on both scripts; the three other probe suites unchanged at
+  `10/0`, `6/0`, `9/0`; `make check` → `test result: ok. 1 passed; 0 failed`;
+  `scripts/check_doctrines.sh` → `=== all doctrines green ===`, `exit=0`.
+
 ## STITCHCAD-SPINE-0008 — acceptance evidence must be fresh in the commit that lands the work (leaf `SPINE.8`)
 
 - **New project doctrine `FRESH-ACCEPTANCE-EVIDENCE`** (`scripts/check_fresh_acceptance_evidence.sh`,
