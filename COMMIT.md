@@ -44,6 +44,10 @@ apply to code changes.
   `git add` them.
 - Markdown path policy — repo-internal references are repo-root-relative, never
   checkout-specific absolute paths (the DOCPATH doctrine gate enforces this).
+- Live-document size containment — before growing a live document, check its row in the surface
+  registry (`.doctrine/live_document_size/`, see `LIVE_DOCUMENT_SIZE_CONTAINMENT.md`): lifecycle
+  class, owner, health target, enforcement ceiling. A ceiling rises only by a recorded decision,
+  never to land content; trimming is the default answer.
 
 ## Required commit workflow (exact order)
 

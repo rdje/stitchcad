@@ -126,7 +126,7 @@ mechanically-enforced form:
   frontier is where they are tracked rather than forgotten.
 
 - ID: `SPINE.4`
-  Status: `pending`
+  Status: `active`
   Goal: adopt live-document size containment for this repository — surface inventory,
   lifecycle class, health target and enforcement ceiling per governed surface
   (`MEMORY.md`, `README.md`, `ROADMAP.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `LIVE_STATUS.md`,
@@ -136,6 +136,50 @@ mechanically-enforced form:
   over-ceiling surface; its RED arm is demonstrated (a control that has been seen to fire);
   ceilings are derived from the measured survivor with modest headroom, not copied from a
   donor project; existing pressure is recorded as transition debt with an owner.
+  Verification: per sub-leaf below.
+  Commit: per sub-leaf
+  Children: `.4.1` (doctrine adopted in-repo), `.4.2` (inventory, targets, ceilings, routes),
+  `.4.3` (the deterministic checker + probe arms). Split because the adoption guide requires these as
+  separately committable slices, and because one slice that both chose the ceilings and enforced them
+  would have no independent evidence for either.
+
+- ID: `SPINE.4.1`
+  Status: `done`
+  Goal: adopt the containment **doctrine** as a repository-owned copy — neutral body verbatim behind
+  a fenced StitchCAD adoption note stating authority, independence, milestones, locality,
+  serialization, landing-page identity, transition-debt policy, and (because a partial adoption that
+  hides its gaps is worse than none) the **deferred** neutral checker package with three named
+  triggers that reopen the decision.
+  Acceptance: the body is verbatim and donor-free; no absolute path; the note names what is adopted,
+  what is deferred and why; `COMMIT.md` routes authors to it; a layer-C record carries the
+  proportionality call; `make gate` green.
+  Verification: recorded below.
+  Commit: `STITCHCAD-SPINE-0004`
+
+- ID: `SPINE.4.2`
+  Status: `pending`
+  Goal: the local data plane — `.doctrine/live_document_size/surfaces.tsv` (one row per governed
+  surface: path or glob, lifecycle class, owner, authority, measured lines/bytes/max-line, health
+  target, inclusive ceiling, transition-debt baseline) and `routes.tsv` (every destination the README,
+  the policy and the guard's failure guidance route to, with its owner, lifecycle class and pressure
+  control). Derive the README caps from the trimmed survivor and set them through
+  `README_LINE_CAP`/`README_BYTE_CAP` instead of the inherited 300/16 384 defaults.
+  Acceptance: every live surface in the repository is classified (the census command is recorded); no
+  route ends at an unclassified or unbounded destination; every ceiling is derived from a measurement
+  stated in its row; the README caps are recorded as reviewed values in the adoption note; nothing is
+  copied from the donor project.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `SPINE.4.3`
+  Status: `pending`
+  Goal: the deterministic checker `scripts/check_live_doc_size.sh` registered in the project slot —
+  fails on an unclassified surface, a missing owner/lifecycle/ceiling, an absolute or off-volume path
+  in the data plane, a line/byte/max-line overflow past a ceiling, a ceiling raised without a recorded
+  authority, a route to an uncontrolled destination, and a stale derived projection; warns at 80 % of a
+  health target. Plus a probe suite with a RED arm per refusal class.
+  Acceptance: `make gate` runs it unconditionally (not staged-scoped); every refusal class has an arm
+  seen to fire; the healthy tree passes; `TOOLBOX.md` names it; D13 closes.
   Verification: `pending`
   Commit: `pending`
 
@@ -239,7 +283,10 @@ mechanically-enforced form:
 | 6 | `SPINE.3` | `done` | both policies are repository-owned now, so later slices write under them |
 | — | `SPINE.12` | `done` | taken out of order: a director ruling is recorded when it is made, not at the end of the lane |
 | 7 | `SPINE.11` | `done` | the published number has a tracked, watched producer again |
-| 8 | `SPINE.4` | `pending` | **next** — containment must exist before 18 spec chapters arrive; it also owes the derived caps and the destination registry the adopted policy requires |
+| 8 | `SPINE.4` | `active` | split into `.4.1`–`.4.3`; the doctrine is adopted, the data plane and the checker follow |
+| 8a | `SPINE.4.1` | `done` | the rules are in-repo, so `.4.2`/`.4.3` choose numbers under a stated contract |
+| 8b | `SPINE.4.2` | `pending` | **next** — the inventory and the derived ceilings, before 18 spec chapters arrive |
+| 8c | `SPINE.4.3` | `pending` | enforcement is worthless before the inventory exists, so it follows `.4.2` |
 | 9 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 
 ## Decisions
@@ -569,7 +616,37 @@ the director rather than patched here (session directive §21: other repositorie
   `rc=`), not a looser gate — the second time in this repository that the rule "citation + output +
   exit status" earned its keep.
 
-Leaves `.4` and `.5` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.4.1` — the containment doctrine is repository-owned, with its gaps named
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the repository enforced two size caps (`MEMORY.md` in
+  `scripts/check_memory_architecture.sh`, `README.md` in `scripts/check_readme_stability.sh`) with no
+  inventory, no lifecycle classes and no ceilings for the surfaces that grow every commit:
+  `git ls-tree -r --name-only HEAD | grep -c 'LIVE_DOCUMENT_SIZE_CONTAINMENT'` → `0`, `rc=1`, while the
+  policy adopted one leaf earlier requires a routing-destination registry. The pressure is measurable
+  and current: `wc -lc ROADMAP.md CHANGELOG.md docs/tasks/SPINE.md` → `919`/`50821`, `460`/`36698`,
+  `772`/`60433` — the last of those is this tree file, which is itself evidence that per-leaf evidence
+  sections are a scaling term the inventory in `.4.2` must bound.
+- [x] **ADDRESSED (verified)** — `LIVE_DOCUMENT_SIZE_CONTAINMENT.md` now exists in-repo:
+  `wc -lc LIVE_DOCUMENT_SIZE_CONTAINMENT.md` → `386` lines / `23712` bytes, `grep -c '^## '` → `12`
+  sections (the donor's neutral body verbatim at 342 lines, plus a fenced StitchCAD note). The body is
+  donor-free and local: `grep -ciE 'fsmgen|nexsim|\bisf\b|ppif'` → `0`,
+  `grep -cE '/(Users|home|Volumes)/'` → `0`. The note states the milestones (warn at 80 %, inclusive
+  ceiling), locality, the TSV data plane, the landing-page rule, the transition-debt policy, and the
+  **deferred** neutral checker package with three named triggers.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0` (13 checks); the new
+  file is outside the scaffold sync list, so a spine update cannot revert it:
+  `grep -c 'LIVE_DOCUMENT_SIZE_CONTAINMENT' scripts/update_scaffold.sh` → `0`; `make check` →
+  `test result: ok. 1 passed; 0 failed`.
+- [x] **FIX** — copied the neutral body under a fenced adoption note; wired discovery from `COMMIT.md`
+  (where an author updating live docs looks) and cross-linked it from `README_POLICY.md`'s adoption
+  note; recorded the proportionality call as
+  `docs/decisions/decision_live-document-containment-proportionate-adoption.md`; split `SPINE.4` into
+  `.4.1`–`.4.3` so choosing the ceilings and enforcing them are separately verifiable.
+- [x] **LOCKSTEP** — `PLANNING.md` (D13 now owned by the three sub-leaves), `LIVE_STATUS.md`,
+  `MEMORY.md`, `CHANGELOG.md`, `docs/decisions/INDEX.md` and the derived Knowledge Map updated in this
+  commit. `.4.2` owes the registry and the derived README caps; `.4.3` owes the checker.
+
+Leaves `.4.2`, `.4.3` and `.5` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -632,6 +709,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.2` | before/after `du`; residue + stray censuses; `git ls-files` artifact census; `make gate`, `make check`, `make book`, `make probes` | `target` 2.1M → 1.2M; 4 paths `gone`; `0` strays; `0` tracked artifacts; all four targets green |
 | `2026-09-29` | `SPINE.3` | `wc -lc` on both adopted copies; donor-token and absolute-path greps; `check_readme_stability.sh`; `make gate`; `make check` | policy `190`/`10535`, claim standard `330`/`21793`; `0` donor tokens, `0` absolute paths; `README-STABILITY: OK`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `SPINE.11` | `run_signature_portability_probe.sh`; `make probes`; `bash -n`; `make gate`; `make check` | `corpus: 36 lines · grep-unmatched: 2 · awk-unmatched: 12`, `probes: 5 pass / 0 fail`; `6 suite(s) green`; syntax clean; `=== all doctrines green ===`; `test result: ok. 1 passed` |
+| `2026-09-29` | `SPINE.4.1` | `wc -lc` and section count on the adopted doctrine; donor-noun and absolute-path greps; `make gate`; `make check` | `386` lines / `23712` bytes, `12` sections; `0` donor nouns, `0` absolute paths; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 
 ## Commit Log
 
@@ -650,7 +728,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.12` addendum | `STITCHCAD-SPINE-0012a (leaf SPINE.12): record the observed CI verdict` | push confirmed, cadence resumes at 400 |
 | `SPINE.3` | `STITCHCAD-SPINE-0003 (leaf SPINE.3): adopt the external policy references in-repo` | D11, D12 fixed; D20 found by the adoption sweep |
 | `SPINE.11` | `STITCHCAD-SPINE-0011 (leaf SPINE.11): give the published signature measurement a tracked producer` | D20 fixed; watched constants |
-| `SPINE.4`, `SPINE.5` | `pending` | — |
+| `SPINE.4.1` | `STITCHCAD-SPINE-0004 (leaf SPINE.4.1): adopt the live-document containment doctrine` | partial adoption; deferrals named with triggers |
+| `SPINE.4.2`, `SPINE.4.3`, `SPINE.5` | `pending` | — |
 
 ## Changelog
 
@@ -663,6 +742,9 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.4` split into `.4.1`–`.4.3`; `.4.1` landed — the containment doctrine adopted
+  in-repo behind a fenced local note that names the deferred neutral checker package and the three
+  triggers that reopen it.
 - `2026-09-29`: `SPINE.11` landed — the corpus and runner behind the published `12 of 36` /
   `2 of 36` measurement are tracked and watched, so the claim is re-derivable by one command.
   D20 closed; `make probes` now runs 6 suites.

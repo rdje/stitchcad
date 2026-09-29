@@ -4,6 +4,33 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0004 — the containment doctrine is in-repo, with its deferrals named (leaf `SPINE.4.1`)
+
+- **`LIVE_DOCUMENT_SIZE_CONTAINMENT.md` adopted** at the repository root: the external doctrine's
+  neutral body verbatim (`342` lines) behind a fenced StitchCAD adoption note — `386` lines /
+  `23 712` bytes, `12` sections, `0` donor nouns (`grep -ciE 'fsmgen|nexsim|\bisf\b|ppif'` → `0`) and
+  `0` absolute paths. The file is not in the scaffold sync list, so a spine update cannot revert it.
+- **The adoption is PARTIAL and says so.** Adopted now: the doctrine, the surface inventory with
+  lifecycle classes, measured pressure axes, health targets, inclusive ceilings, the routing-destination
+  inventory and one deterministic checker in the project slot (`SPINE.4.2`, `SPINE.4.3`). Deferred: the
+  neutral JSONL checker package (~2 100-line interpreter plus the archive-descriptor, ledger-manifest,
+  derived-state, ceiling-authority and version-retention registries), because this repository has no
+  partitioned archive, no rolling ledger and no derived-state copies yet, and because it would put a
+  non-Rust interpreter in a Rust workspace's commit path. Three triggers reopen the decision, each owned
+  by whoever hits it.
+- **Local parameters:** warn at 80 % of a health target; the enforcement ceiling is inclusive (equality
+  passes, excess fails); a ceiling rises only by a recorded authority; the data plane is bounded TSV
+  parsed with awk, so nothing new enters the hook path. Recorded as
+  `docs/decisions/decision_live-document-containment-proportionate-adoption.md`.
+- **Why now, measured:** `wc -lc ROADMAP.md CHANGELOG.md docs/tasks/SPINE.md` → `919`/`50821`,
+  `460`/`36698`, `772`/`60433`. The last is a task-tree file whose per-leaf evidence sections are a
+  scaling term — the exact shape containment exists to bound, with 18 specification chapters still ahead.
+- `SPINE.4` was split into `.4.1`–`.4.3` so choosing the ceilings and enforcing them are separately
+  verifiable slices; discovery is wired from `COMMIT.md` (where an author updating live docs looks) and
+  cross-linked from `README_POLICY.md`'s adoption note.
+- Validation: `make gate` → `=== all doctrines green ===`, `exit=0`; `make check` →
+  `test result: ok. 1 passed; 0 failed`.
+
 ## STITCHCAD-SPINE-0011 — a published number gets its producer back (leaf `SPINE.11`)
 
 - **Defect D20 fixed.** `SPINE.8`'s record publishes "awk left 12 of 36 corpus evidence lines

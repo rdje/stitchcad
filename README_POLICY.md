@@ -14,13 +14,15 @@
   `README_LINE_CAP` / `README_BYTE_CAP` by `scripts/check_readme_stability.sh`, which applies them
   unconditionally (it reads `README.md` itself, not the staged path set). ⚠ These are *inherited
   template defaults, not derived values*, and the body below forbids copying illustrative numbers:
-  leaf `SPINE.4` owes ceilings derived from the trimmed survivor with modest explicit headroom,
-  recorded in the live-document containment inventory.
+  leaf `SPINE.4.2` owes ceilings derived from the trimmed survivor with modest explicit headroom,
+  recorded in the containment surface registry.
 - **Routed destinations:** the "Content contract" table in the body names the canonical home for each
   class of changing detail. The data-only destination registry the body's "Routing pressure closure"
-  section requires — owner, lifecycle class and pressure control per route, followed transitively —
-  is owed by the same leaf (`SPINE.4`). Until it lands, routes are governed by that table plus the
-  caps that already exist (`README.md` here, `MEMORY.md` in `scripts/check_memory_architecture.sh`).
+  section requires — owner, lifecycle class and pressure control per route, followed transitively — is
+  owned by leaf `SPINE.4.2`, under the containment doctrine this repository adopted beside this policy
+  (`LIVE_DOCUMENT_SIZE_CONTAINMENT.md`, and the proportionality decision in `docs/decisions/`). The
+  caps that already exist are `README.md` here and `MEMORY.md` in
+  `scripts/check_memory_architecture.sh`.
 - **Landing-page identity:** top-level `README.md` is the rendered project landing page, so its
   purpose, minimal verified first-use path, architecture summary and canonical navigation remain
   directly visible there. Containment routes changing detail and chronology away; it does not
