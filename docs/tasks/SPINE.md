@@ -71,7 +71,7 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0012`
 
 - ID: `SPINE.11`
-  Status: `pending`
+  Status: `done`
   Goal: rebuild the evidence-signature corpus as a **tracked** instrument (defect **D20**) so the
   published awk-versus-grep measurement in `SPINE.8`'s record is re-derivable. Deliverable:
   `docs/tasks/artifacts/evidence_signatures/` holding the corpus and a runner that reports, for each
@@ -81,8 +81,9 @@ mechanically-enforced form:
   under grep, the two being bad samples rather than dead families); the corpus and runner are
   tracked (`git ls-files` proves it); `make probes` picks the runner up; a `TOOLBOX.md` row names it;
   the leg-3 claim in `CLAIM_VERIFICATION.md`'s adoption note stops being an open breach.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — `corpus: 36 lines · grep-unmatched: 2 · awk-unmatched: 12`,
+  `probes: 5 pass / 0 fail`, `make probes: 6 suite(s) green`.
+  Commit: `STITCHCAD-SPINE-0011`
 
 - ID: `SPINE.1`
   Status: `done`
@@ -237,8 +238,8 @@ mechanically-enforced form:
 | 5 | `SPINE.2` | `done` | cleanup ran and the cadence now has a record a next session can read |
 | 6 | `SPINE.3` | `done` | both policies are repository-owned now, so later slices write under them |
 | — | `SPINE.12` | `done` | taken out of order: a director ruling is recorded when it is made, not at the end of the lane |
-| 7 | `SPINE.11` | `pending` | **next** — a published number in this repository has no tracked producer (D20), and leg 3 is the leg this project just adopted |
-| 8 | `SPINE.4` | `pending` | containment must exist before 18 spec chapters arrive; it also owes the derived caps and the destination registry the adopted policy requires |
+| 7 | `SPINE.11` | `done` | the published number has a tracked, watched producer again |
+| 8 | `SPINE.4` | `pending` | **next** — containment must exist before 18 spec chapters arrive; it also owes the derived caps and the destination registry the adopted policy requires |
 | 9 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 
 ## Decisions
@@ -530,7 +531,45 @@ the director rather than patched here (session directive §21: other repositorie
   corpus); `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md`, `docs/decisions/INDEX.md` and the derived
   Knowledge Map updated in this commit.
 
-Leaves `.4`, `.5` and `.11` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.11` — a published number gets its producer back (defect D20)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `SPINE.8`'s record publishes a measurement whose instrument was
+  untracked scratch. The claim is in two tracked files at HEAD:
+  `git show HEAD:docs/tasks/SPINE.md | grep -c '12 of 36'` → `1`, `rc=0`, and
+  `git show HEAD:CHANGELOG.md | grep -c '12 of 36'` → `2`, `rc=0`; its producer is in neither:
+  `git ls-tree -r --name-only HEAD -- docs/tasks/artifacts/evidence_signatures | wc -l` → `0`, `rc=0`,
+  against `git ls-tree -r --name-only HEAD -- docs/tasks/artifacts | wc -l` → `5` tracked instruments,
+  and `ls target/doctrine_scratch/evidence_corpus.txt` → `No such file or directory` (removed by the
+  `SPINE.2` cleanup, which was correct to remove untracked scratch and had no way to know a published
+  claim rested on it). That is a leg-3 breach of `CLAIM_VERIFICATION.md`: the number was re-derivable
+  when written and is not now.
+- [x] **ADDRESSED (verified)** — the corpus and its runner are tracked beside the other instruments
+  (`git ls-files docs/tasks/artifacts/evidence_signatures/` → `evidence_corpus.txt`,
+  `run_signature_portability_probe.sh`), and one command reproduces both published numbers:
+  `bash docs/tasks/artifacts/evidence_signatures/run_signature_portability_probe.sh` →
+  `corpus: 36 lines · grep-unmatched: 2 · awk-unmatched: 12`, `probes: 5 pass / 0 fail`, `exit=0`,
+  with the per-line table naming the ten awk-only failures (the `\b` and `{n}` families) and the two
+  bad samples. The constants are **watched**, not decorative: the runner refuses and prints the
+  re-derive instruction if they drift, which is `CLAIM_VERIFICATION.md` §5B applied to our own claim.
+- [x] **NO REGRESSION** — `make probes` → `make probes: 6 suite(s) green` (the new runner is picked
+  up by the existing discovery glob, and the five earlier suites still report `9`, `7`, `6`, `10`,
+  `5` pass / `0` fail); `bash -n` clean on the new script; `make gate` → `=== all doctrines green ===`;
+  `make check` → `test result: ok. 1 passed; 0 failed`.
+- [x] **FIX** — added `docs/tasks/artifacts/evidence_signatures/evidence_corpus.txt` (the 36 lines the
+  claim is stated over) and `run_signature_portability_probe.sh` (census + 5 arms + watched constants
+  + a fail-closed refusal if `DEFAULT_SIG` cannot be read out of the universal check). No tracked
+  document's numbers needed changing: the probe confirms them.
+- [x] **LOCKSTEP** — D20 marked fixed in `PLANNING.md`; `TOOLBOX.md` names the instrument and the
+  question it answers; `CLAIM_VERIFICATION.md`'s adoption-frontier line for `SPINE.11` is now
+  discharged; `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` updated.
+- ⚠ **This commit was refused once, by this repository's own new doctrine, and the refusal was
+  correct:** the first draft of the ROOT CAUSE box above cited `grep -rn` and two `ls` failures but no
+  recognised result token, so `FRESH-ACCEPTANCE-EVIDENCE` reported `Missing box(es): - ROOT CAUSE
+  (WHY + WHERE)`, `exit=1`. The fix was better evidence (counts re-derived against `HEAD` with their
+  `rc=`), not a looser gate — the second time in this repository that the rule "citation + output +
+  exit status" earned its keep.
+
+Leaves `.4` and `.5` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -592,6 +631,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.12` (push addendum) | `git push origin main`; `gh run list`; `curl …/actions/runs?head_sha=051a075…` | `f1dcbe4..051a075  main -> main`, ahead `0`; `doctrines` completed **success** 11 s (run 36622373461), `rust` completed **success** 18 s (run 36622373539); API `total_count: 2`, both `conclusion=success` |
 | `2026-09-29` | `SPINE.2` | before/after `du`; residue + stray censuses; `git ls-files` artifact census; `make gate`, `make check`, `make book`, `make probes` | `target` 2.1M → 1.2M; 4 paths `gone`; `0` strays; `0` tracked artifacts; all four targets green |
 | `2026-09-29` | `SPINE.3` | `wc -lc` on both adopted copies; donor-token and absolute-path greps; `check_readme_stability.sh`; `make gate`; `make check` | policy `190`/`10535`, claim standard `330`/`21793`; `0` donor tokens, `0` absolute paths; `README-STABILITY: OK`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
+| `2026-09-29` | `SPINE.11` | `run_signature_portability_probe.sh`; `make probes`; `bash -n`; `make gate`; `make check` | `corpus: 36 lines · grep-unmatched: 2 · awk-unmatched: 12`, `probes: 5 pass / 0 fail`; `6 suite(s) green`; syntax clean; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 
 ## Commit Log
 
@@ -609,7 +649,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.12` | `STITCHCAD-SPINE-0012 (leaf SPINE.12): record the 400-commit push cadence` | director's ruling, in `COMMIT.md`; one-off first push made (`f1dcbe4..051a075`), both CI workflows green |
 | `SPINE.12` addendum | `STITCHCAD-SPINE-0012a (leaf SPINE.12): record the observed CI verdict` | push confirmed, cadence resumes at 400 |
 | `SPINE.3` | `STITCHCAD-SPINE-0003 (leaf SPINE.3): adopt the external policy references in-repo` | D11, D12 fixed; D20 found by the adoption sweep |
-| `SPINE.4`, `SPINE.5`, `SPINE.11` | `pending` | — |
+| `SPINE.11` | `STITCHCAD-SPINE-0011 (leaf SPINE.11): give the published signature measurement a tracked producer` | D20 fixed; watched constants |
+| `SPINE.4`, `SPINE.5` | `pending` | — |
 
 ## Changelog
 
@@ -622,6 +663,9 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.11` landed — the corpus and runner behind the published `12 of 36` /
+  `2 of 36` measurement are tracked and watched, so the claim is re-derivable by one command.
+  D20 closed; `make probes` now runs 6 suites.
 - `2026-09-29`: `SPINE.3` landed — `README_POLICY.md` refreshed to the revised neutral body behind a
   fenced adoption note, `CLAIM_VERIFICATION.md` adopted with all three legs restated in this
   project's terms, and the adoption rule recorded in layer C. D11/D12 closed; the adoption's own

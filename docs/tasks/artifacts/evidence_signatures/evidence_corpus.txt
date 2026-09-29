@@ -1,0 +1,36 @@
+error[E0432]: unresolved import `foo`
+could not compile `stitchcad`
+warning: clippy::needless_return
+thread 'main' panicked at src/main.rs:3
+assertion failed: x == y
+assertion `left == right` failed
+test result: ok. 3 passed; 0 failed
+test result: FAILED. 0 passed; 1 failed
+running 3 tests
+cargo test --all
+cargo flamegraph -- self-time report
+call-graph dumped
+/usr/bin/sample 1234 5 -f out.txt
+spindump 1234 5
+perf record -g ./prog
+perf stat ./prog
+valgrind --leak-check=full ./prog
+git ls-files | wc -l
+git log -S 'needle' --oneline
+shellcheck scripts/x.sh
+bash -n scripts/x.sh
+make -n check
+E2BIG: argument list too long
+ENOSPC: no space left on device
+EACCES: permission denied
+ARG_MAX exceeded
+exit=1
+exited with code 2
+rc=0
+PIPESTATUS 0 1
+6 pass / 0 fail
+42 passed; 0 failed
+version 20200816
+1.2.3
+probes: 6 pass / 0 fail
+=== all doctrines green ===

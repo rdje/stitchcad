@@ -4,6 +4,32 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0011 — a published number gets its producer back (leaf `SPINE.11`)
+
+- **Defect D20 fixed.** `SPINE.8`'s record publishes "awk left 12 of 36 corpus evidence lines
+  unmatched where `grep -qE` leaves 2", but the corpus that produced it lived in untracked scratch and
+  the `SPINE.2` cleanup removed it — two tracked documents quoting a number no command could re-derive,
+  which is exactly the leg-3 (durability) breach `CLAIM_VERIFICATION.md` §3 names. Found by that
+  standard's own adoption sweep (§7 step 3, untracked producers), one leaf after adopting it.
+- **The instrument is tracked and watched:** `docs/tasks/artifacts/evidence_signatures/` now holds
+  `evidence_corpus.txt` (the 36 lines the claim is stated over) and
+  `run_signature_portability_probe.sh`, which reads the signature list out of the universal check
+  (never a fork), reports per-line verdicts under both engines, and reproduces the published numbers:
+  `corpus: 36 lines · grep-unmatched: 2 · awk-unmatched: 12`, `probes: 5 pass / 0 fail`, `exit=0`.
+  The constants are gated: if they drift the probe refuses and prints the instruction to re-derive the
+  claim in `SPINE.8` and `CHANGELOG.md` rather than retune the number — §5B applied to our own claim.
+- Arms include a control that the census discriminates (a prose line with no tool output matches under
+  neither engine) and one that the two grep-unmatched lines are the documented bad samples, so a third
+  would mean a real evidence family died.
+- `make probes` now discovers six suites (`9`, `7`, `6`, `10`, `5`, `5` arms, all `0 fail`); `TOOLBOX.md`
+  names the new instrument and the question it answers.
+- **A wrong number caught before shipping, again:** the first draft of this slice's census line claimed
+  "20 rows (D1–D20)"; re-running `grep -cE '^\| D[0-9]+ ' docs/tasks/PLANNING.md` gives **19** — there is
+  no D18 row, because that candidate was measured and withdrawn before being logged. The census line now
+  states the count, the command, and why the numbering skips.
+- Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed;
+  0 failed`; `bash -n` clean on the new script.
+
 ## STITCHCAD-SPINE-0003 — the external policy references are repository-owned now (leaf `SPINE.3`)
 
 - **`README_POLICY.md` refreshed** to the revised project-neutral body (defect D11): `71` lines /
