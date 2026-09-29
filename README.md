@@ -69,6 +69,7 @@ defect — log it in a task-tree and fix it (`TOOLBOX.md` explains how to diagno
 | How do I commit work? | [`COMMIT.md`](COMMIT.md) |
 | How do I diagnose a failure? | [`TOOLBOX.md`](TOOLBOX.md) — tools first, never a guessed root cause |
 | What is enforced mechanically, and how? | [`DOCTRINE_ENFORCEMENT.md`](DOCTRINE_ENFORCEMENT.md) |
+| How do I know a published number is earned? | [`CLAIM_VERIFICATION.md`](CLAIM_VERIFICATION.md) |
 | How does durable memory survive a lost session? | [`MEMORY_ARCHITECTURE.md`](MEMORY_ARCHITECTURE.md) |
 | Why does this README stay short? | [`README_POLICY.md`](README_POLICY.md) |
 

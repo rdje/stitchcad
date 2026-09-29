@@ -12,9 +12,12 @@ human is working. Follow it exactly.
    defines how nothing important is lost across sessions, machines, or harness switches).
 3. Read `TOOLBOX.md` — the tools-first doctrine. For ANY unknown / failure / surprising
    result: use or build a diagnostic tool FIRST; never guess a root cause.
-4. Read `DOCTRINE_ENFORCEMENT.md` — how every mechanizable doctrine is enforced, and the
+4. Read `CLAIM_VERIFICATION.md` — what "checked" means before a number is published: re-derive,
+   falsify, make durable; state a missing leg instead of hiding it. Sibling of the next file:
+   that one asks *is this rule enforced?*, this one asks *is this number earned?*
+5. Read `DOCTRINE_ENFORCEMENT.md` — how every mechanizable doctrine is enforced, and the
    task-acceptance checklist a change MUST pass.
-5. Resume from `MEMORY.md` (the bounded layer-A resume pointer) → the active task-tree's
+6. Resume from `MEMORY.md` (the bounded layer-A resume pointer) → the active task-tree's
    frontier under `docs/tasks/`.
 
 ## The non-negotiables
@@ -24,6 +27,10 @@ human is working. Follow it exactly.
   made. Track every activity, task, slice, and lane so the project survives a lost session.
 - **Record durable facts/decisions** as one-file-per-record notes under `docs/decisions/`
   (index there). Convert relative dates to absolute.
+- **Verify a claim three ways before publishing it** (`CLAIM_VERIFICATION.md`): re-derive it by
+  command, try to falsify it with an oracle you did not build, and make it durable (tracked
+  producer, watched). Cite invocation + output + exit status; name a missing leg rather than
+  hiding it.
 - **Commit per `COMMIT.md`** after each completed leaf, with the work-unit id in the
   subject. A code change must pass the `TOOLBOX.md` / `DOCTRINE_ENFORCEMENT.md` acceptance
   checklist (root cause + addressed + no regression) in its task leaf.

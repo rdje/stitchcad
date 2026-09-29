@@ -70,6 +70,20 @@ mechanically-enforced form:
   Verification: recorded below.
   Commit: `STITCHCAD-SPINE-0012`
 
+- ID: `SPINE.11`
+  Status: `pending`
+  Goal: rebuild the evidence-signature corpus as a **tracked** instrument (defect **D20**) so the
+  published awk-versus-grep measurement in `SPINE.8`'s record is re-derivable. Deliverable:
+  `docs/tasks/artifacts/evidence_signatures/` holding the corpus and a runner that reports, for each
+  line, whether the universal signature list matches it under `grep -qE` (the engine the gate uses)
+  and under `awk` (the engine a re-implementation might wrongly choose).
+  Acceptance: one command reproduces both published numbers (`12` of `36` unmatched under awk, `2`
+  under grep, the two being bad samples rather than dead families); the corpus and runner are
+  tracked (`git ls-files` proves it); `make probes` picks the runner up; a `TOOLBOX.md` row names it;
+  the leg-3 claim in `CLAIM_VERIFICATION.md`'s adoption note stops being an open breach.
+  Verification: `pending`
+  Commit: `pending`
+
 - ID: `SPINE.1`
   Status: `done`
   Goal: de-template the identity surfaces — `README.md` as the StitchCAD landing page (within
@@ -92,7 +106,7 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0002`
 
 - ID: `SPINE.3`
-  Status: `pending`
+  Status: `done`
   Goal: adopt the revised external policy references into repository-owned copies — refresh
   `README_POLICY.md` (authority/provenance note, duplication probe, routing-pressure closure,
   derived caps, unconditional check) and add the claim-verification standard in-repo, wired
@@ -101,8 +115,14 @@ mechanically-enforced form:
   path; the README guard still passes and additionally validates its routed destinations where
   the revised policy requires it; a decision record names what was adopted and what was
   deliberately not (donor-specific values).
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — both copies adopted, `README-STABILITY: OK`, `0` donor tokens,
+  `0` absolute paths, adoption frontier owned by named leaves.
+  Commit: `STITCHCAD-SPINE-0003`
+  Note: the revised policy's **routing-pressure closure** (a data-only destination registry with an
+  owner, lifecycle class and pressure control per route) is *not* implemented by this leaf — it is
+  recorded in the adoption note as owed by `SPINE.4`, together with the derived caps the policy
+  requires instead of the inherited template defaults. Adopting a policy creates obligations; the
+  frontier is where they are tracked rather than forgotten.
 
 - ID: `SPINE.4`
   Status: `pending`
@@ -215,10 +235,11 @@ mechanically-enforced form:
 | 3 | `SPINE.10` | `done` | landed in frontier order: one entry point, scratch on this volume |
 | 4 | `SPINE.1` | `done` | identity landed: README, book identity, the `spec/` part, and a clean `make book` |
 | 5 | `SPINE.2` | `done` | cleanup ran and the cadence now has a record a next session can read |
-| 6 | `SPINE.3` | `pending` | **next** — policy adoptions bind how every later claim and cap is written |
+| 6 | `SPINE.3` | `done` | both policies are repository-owned now, so later slices write under them |
 | — | `SPINE.12` | `done` | taken out of order: a director ruling is recorded when it is made, not at the end of the lane |
-| 7 | `SPINE.4` | `pending` | containment must exist before 18 spec chapters arrive |
-| 8 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
+| 7 | `SPINE.11` | `pending` | **next** — a published number in this repository has no tracked producer (D20), and leg 3 is the leg this project just adopted |
+| 8 | `SPINE.4` | `pending` | containment must exist before 18 spec chapters arrive; it also owes the derived caps and the destination registry the adopted policy requires |
+| 9 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 
 ## Decisions
 
@@ -474,7 +495,42 @@ the director rather than patched here (session directive §21: other repositorie
 - [x] **LOCKSTEP** — no code, no book chapter and no decision record: `COMMIT.md` is the canonical home
   for a commit-workflow rule, and duplicating it into a layer-C record would create a second authority.
 
-Leaves `.3`–`.5` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.3` — the external policy references are now repository-owned (defects D11, D12)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the in-repo policy copy was the older body and the
+  claim-verification standard had no in-repo copy at all:
+  `git show HEAD:README_POLICY.md | wc -lc` → `71` lines / `2920` bytes with sections
+  `Storage location | Content contract | Mechanical growth guard | Adoption checklist`, and
+  `git show HEAD:README_POLICY.md | grep -cE '^## (Authority and provenance|Routing pressure closure)'`
+  → `0`; `git ls-tree --name-only HEAD | grep -c CLAIM_VERIFICATION` → `0` and
+  `git show HEAD:CLAUDE.md | grep -c CLAIM_VERIFICATION` → `0`, so no bootstrap route reached it.
+- [x] **ADDRESSED (verified)** — `README_POLICY.md` is now `190` lines / `10535` bytes with `7`
+  sections, the two revised ones present
+  (`grep -cE '^## (Authority and provenance|Routing pressure closure)' README_POLICY.md` → `2`),
+  behind a fenced StitchCAD adoption note; `CLAIM_VERIFICATION.md` is `330` lines / `21793` bytes,
+  its neutral body verbatim (`grep -c '^## '` → `9` = 8 body sections + the note; the final line
+  matches the source byte-for-byte). Donor leakage and locality checked:
+  `grep -ciE 'fsmgen|0024|0038|0040|0041|0044|surfaces\.jsonl|routed_destinations' README_POLICY.md`
+  → `0`; `grep -cE '/(Users|home|Volumes)/'` → `0` in both files. Discovery wired:
+  `grep -c CLAIM_VERIFICATION CLAUDE.md` → `2`, `README.md` → `1`.
+- [x] **NO REGRESSION** — `scripts/check_readme_stability.sh` →
+  `README-STABILITY: OK — README.md is 103/300 lines, 6063/16384 bytes.`, `exit=0`; `make gate` →
+  `=== all doctrines green ===` (after regenerating the derived Knowledge Map for the new decision
+  record, which the pre-commit hook does anyway); `make check` → `test result: ok. 1 passed; 0 failed`.
+- [x] **FIX** — copied the revised neutral body into `README_POLICY.md` under a fenced adoption note
+  (authority, independence, reviewed measurement, current ceilings, routed destinations, adoption
+  frontier); adopted `CLAIM_VERIFICATION.md` with a note that restates all three legs in this
+  project's terms (conformance suites and goldens; independent `.rul` engines, real importers, a
+  ruler on paper, blinded defective assemblies, a non-shipped SMT oracle; tracked producers under
+  `docs/tasks/artifacts/` and `conformance/`) and maps §4's claim tag onto the enforced
+  invocation + output + exit-status rule; added `decision_adopted-external-policy-references.md`;
+  wired `CLAUDE.md` and the README navigation table.
+- [x] **LOCKSTEP** — D11/D12 marked fixed and D20 logged in `PLANNING.md`; the adoption frontier is
+  owned by named leaves (`SPINE.4` derived caps + destination registry, `SPINE.11` the tracked
+  corpus); `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md`, `docs/decisions/INDEX.md` and the derived
+  Knowledge Map updated in this commit.
+
+Leaves `.4`, `.5` and `.11` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -535,6 +591,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | `SPINE.12` | `git rev-list --count origin/main..HEAD`; `grep -c 'Push cadence' COMMIT.md`; `make gate`; `make check` | `10` (below the 400 threshold); `1`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `SPINE.12` (push addendum) | `git push origin main`; `gh run list`; `curl …/actions/runs?head_sha=051a075…` | `f1dcbe4..051a075  main -> main`, ahead `0`; `doctrines` completed **success** 11 s (run 36622373461), `rust` completed **success** 18 s (run 36622373539); API `total_count: 2`, both `conclusion=success` |
 | `2026-09-29` | `SPINE.2` | before/after `du`; residue + stray censuses; `git ls-files` artifact census; `make gate`, `make check`, `make book`, `make probes` | `target` 2.1M → 1.2M; 4 paths `gone`; `0` strays; `0` tracked artifacts; all four targets green |
+| `2026-09-29` | `SPINE.3` | `wc -lc` on both adopted copies; donor-token and absolute-path greps; `check_readme_stability.sh`; `make gate`; `make check` | policy `190`/`10535`, claim standard `330`/`21793`; `0` donor tokens, `0` absolute paths; `README-STABILITY: OK`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 
 ## Commit Log
 
@@ -551,7 +608,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.2` | `STITCHCAD-SPINE-0002 (leaf SPINE.2): first artifact cleanup and its cadence record` | D8 fixed |
 | `SPINE.12` | `STITCHCAD-SPINE-0012 (leaf SPINE.12): record the 400-commit push cadence` | director's ruling, in `COMMIT.md`; one-off first push made (`f1dcbe4..051a075`), both CI workflows green |
 | `SPINE.12` addendum | `STITCHCAD-SPINE-0012a (leaf SPINE.12): record the observed CI verdict` | push confirmed, cadence resumes at 400 |
-| `SPINE.3` … `.5` | `pending` | — |
+| `SPINE.3` | `STITCHCAD-SPINE-0003 (leaf SPINE.3): adopt the external policy references in-repo` | D11, D12 fixed; D20 found by the adoption sweep |
+| `SPINE.4`, `SPINE.5`, `SPINE.11` | `pending` | — |
 
 ## Changelog
 
@@ -564,6 +622,10 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.3` landed — `README_POLICY.md` refreshed to the revised neutral body behind a
+  fenced adoption note, `CLAIM_VERIFICATION.md` adopted with all three legs restated in this
+  project's terms, and the adoption rule recorded in layer C. D11/D12 closed; the adoption's own
+  sweep found D20 (a published number whose producer was untracked scratch) → `SPINE.11`.
 - `2026-09-29`: `SPINE.12` addendum — the authorised first push was made and observed green in CI
   (`doctrines` 11 s, `rust` 18 s, both `conclusion=success`); the 400-commit cadence is now in force.
 - `2026-09-29`: `SPINE.12` landed — the director's push cadence (400 commits between pushes) recorded

@@ -4,6 +4,37 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0003 — the external policy references are repository-owned now (leaf `SPINE.3`)
+
+- **`README_POLICY.md` refreshed** to the revised project-neutral body (defect D11): `71` lines /
+  `2 920` bytes and four sections → `190` lines / `10 535` bytes and seven, adding *Authority and
+  provenance*, the duplication probe before deleting apparent duplication, and *Routing pressure
+  closure* (every route needs an owner, lifecycle class and pressure control, followed transitively).
+  A fenced StitchCAD adoption note above the body records authority, independence (the origin is a
+  read-only source, not an upstream), the reviewed measurement (`README.md` at 103 lines / 6 063 bytes),
+  the ceilings currently in force, the routed destinations and the **adoption frontier**.
+- **`CLAIM_VERIFICATION.md` adopted** (defect D12): `330` lines / `21 793` bytes, the neutral body
+  verbatim, with an adoption note that restates all three legs in this project's terms rather than
+  copying examples — re-derive by re-running the producing command; falsify with an oracle we did not
+  build (an independent engine re-importing `.rul`, a real importer with recorded settings, a ruler on
+  a printed scale square, blinded defective assemblies, a non-shipped SMT oracle); make durable with a
+  tracked producer. §4's claim tag maps onto the rule this repository already enforces mechanically:
+  invocation + output + exit status, fresh in the commit. `CLAUDE.md` and the README now route to it.
+- **Donor values were not copied** — no caps, measurements, surface identifiers, task ids or registry
+  paths: `grep -ciE 'fsmgen|0024|0038|0040|0041|0044|surfaces\.jsonl|routed_destinations' README_POLICY.md`
+  → `0`, and `grep -cE '/(Users|home|Volumes)/'` → `0` in both files, so nothing here depends on a path
+  outside the repository. Recorded as `docs/decisions/decision_adopted-external-policy-references.md`.
+- **The adoption's own sweep found a real breach (defect D20, owned by `SPINE.11`):** the published
+  `12 of 36` awk-versus-grep signature measurement in `SPINE.8`'s record has no producer left — the
+  corpus lived in untracked scratch and the `SPINE.2` cleanup removed it. Two tracked documents quote
+  a number no command can re-derive, which is precisely the leg-3 failure the standard exists to stop.
+- **Obligations adopted but not yet met are tracked, not hidden:** the revised policy forbids copying
+  illustrative caps and requires a destination registry; both are recorded in the adoption note as owed
+  by `SPINE.4`, which is why that leaf's scope grew.
+- Validation: `scripts/check_readme_stability.sh` → `README-STABILITY: OK — README.md is 103/300
+  lines, 6063/16384 bytes.`, `exit=0`; `make gate` → `=== all doctrines green ===`; `make check` →
+  `test result: ok. 1 passed; 0 failed`.
+
 ## STITCHCAD-SPINE-0012a — the first push is made and CI is green (leaf `SPINE.12`, addendum)
 
 - `git push origin main` → `f1dcbe4..051a075  main -> main`; ahead-count after the push:

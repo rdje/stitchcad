@@ -11,3 +11,4 @@ Records carry an `answers:` line so a question can find them — that is what ma
 | --- | --- | --- |
 | [`decision_acceptance-evidence-per-leaf.md`](decision_acceptance-evidence-per-leaf.md) | `decision` | acceptance checkboxes exist only for landed leaves, added fresh in the commit — because the inherited gate judges the first matching box in the file (defect D15) |
 | [`decision_scaffold-sync-protects-project-content.md`](decision_scaffold-sync-protects-project-content.md) | `decision` | the scaffold updater syncs NEUTRAL files and guards project-content files (task-tree index, toolbox, adopted policy) — backed up, skipped, never silently clobbered (defect D17) |
+| [`decision_adopted-external-policy-references.md`](decision_adopted-external-policy-references.md) | `decision` | external policy references are copied in and owned here (fenced adoption note + adoption frontier); the origin is read-only, never an upstream or a build input |
