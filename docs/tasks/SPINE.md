@@ -139,7 +139,7 @@ mechanically-enforced form:
   which is project-owned.
 
 - ID: `SPINE.8`
-  Status: `pending`
+  Status: `done`
   Goal: close D15 locally with a project-slot doctrine — `FRESH-ACCEPTANCE-EVIDENCE`: a staged
   CODE change must be accompanied, **in the same commit's diff**, by added ticked ROOT CAUSE /
   ADDRESSED / NO REGRESSION bullets carrying tool-output signatures, inside a `### <leaf-id>`
@@ -155,8 +155,8 @@ mechanically-enforced form:
   closed); an honest leaf whose checklist is added with its work passes regardless of its position
   in the file (the false RED is closed); `make gate` green; a `TOOLBOX.md` row names the check and
   what question it answers; the two authoring rules are in the layer-C record.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — `probes: 9 pass / 0 fail`, `8 verdict controls + 6 extractor arms`.
+  Commit: `STITCHCAD-SPINE-0008`
 
 - ID: `SPINE.9`
   Status: `pending`
@@ -192,8 +192,8 @@ mechanically-enforced form:
 | --- | --- | --- | --- |
 | 0 | `SPINE.6` | `done` | taken out of order: it repaired a dirty-tree defect found on the first `make check` |
 | 0 | `SPINE.7` | `done` | taken in frontier order: D15 had to be measured before it could be owned |
-| 1 | `SPINE.8` | `pending` | **urgent while any code leaf is open**: until it lands, the inherited gate judges the earliest landed leaf's boxes, so its verdict for a later leaf is vacuous |
-| 2 | `SPINE.9` | `pending` | the updater can silently destroy the layer-B index; guard it before any scaffold sync is run |
+| 1 | `SPINE.8` | `done` | landed in frontier order: every code commit from here on is judged by it |
+| 2 | `SPINE.9` | `pending` | **next** — the updater can silently destroy the layer-B index; guard it before any scaffold sync is run |
 | 3 | `SPINE.10` | `pending` | scratch locality is a standing directive obligation, cheap once `make probes` exists |
 | 4 | `SPINE.1` | `pending` | identity before content, so the G0 spec chapters grow into a named book |
 | 5 | `SPINE.2` | `pending` | cleanup cadence is a session-directive obligation and cheap |
@@ -268,7 +268,38 @@ the director rather than patched here (session directive §21: other repositorie
 - [x] **LOCKSTEP** — D14 logged with its reproduce command and owner in `PLANNING.md`; this
   leaf records the fix; `MEMORY.md` unchanged (frontier did not move).
 
-Leaves `.1`–`.5`, `.7` and `.8` each add their own `### <leaf-id>` subsection here, in the same
+### `SPINE.8` — `FRESH-ACCEPTANCE-EVIDENCE`: evidence must be added by the commit it vouches for
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `scripts/check_task_acceptance.sh:106-112` collects the first
+  bullet matching each label and stops at the next box, so evidence committed for an earlier leaf
+  answers for a later leaf's code change. Reproduced end to end by the new probe's pairing arm:
+  `bash docs/tasks/artifacts/fresh_evidence/run_fresh_evidence_probes.sh` →
+  `✓ RED-1   exit=1  code owned by leaf 2, evidence committed for leaf 1 → REFUSED` followed by
+  `↳ the inherited universal check accepts this same staged state (exit=0)` — one staged state, two
+  verdicts, which is exactly the gap a project-slot check can close and a universal one cannot see.
+- [x] **ADDRESSED (verified)** — before: the project slot was a stub (`grep -c 'PROJECT_DOCTRINES'
+  scripts/check_doctrines.project.sh` → `0`) and no check asked whether evidence was fresh; after:
+  `scripts/check_fresh_acceptance_evidence.sh` is registered, its probe reports
+  `probes: 9 pass / 0 fail` and its self-test `8 verdict controls + 6 extractor arms`, `exit=0`.
+  One defect in the first implementation was caught by its own arm: signature matching written in
+  awk left **12 of 36** corpus evidence lines unmatched on this platform (`\b`, `{n}` are GNU
+  extensions BSD awk 20200816 lacks) where `grep -qE` — the engine the universal check uses —
+  leaves **2**, both bad samples; the check now uses grep and pins it with the `GREEN-2` arm.
+- [x] **NO REGRESSION** — `scripts/check_doctrines.sh` → `=== all doctrines green ===`, `exit=0`
+  (13 checks, project slot now reporting `PROJECT-SPECIFIC: 1 project doctrine(s) green`);
+  the inherited suites are untouched and still discriminate:
+  `bash docs/tasks/artifacts/task_acceptance/run_task_acceptance_probes.sh` → `probes: 10 pass / 0 fail`,
+  `bash docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh` → `probes: 6 pass / 0 fail`;
+  `make check` → `test result: ok. 1 passed; 0 failed`; per-commit cost measured at ~0.3 s.
+- [x] **FIX** — added `scripts/check_fresh_acceptance_evidence.sh` (pure verdict function + ground
+  truth on every invocation, fail-closed signature extraction, scratch on the repository volume);
+  replaced the stub body of `scripts/check_doctrines.project.sh` with a project registry that
+  mirrors the driver's reporting shape; added the 9-arm probe suite. No universal file edited.
+- [x] **LOCKSTEP** — `TOOLBOX.md` names both new instruments; `DEV_NOTES.md` carries the lesson
+  (including the withdrawn D18 near-miss); the layer-C record states the two authoring rules this
+  check cannot enforce; `PLANNING.md`, `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` updated.
+
+Leaves `.1`–`.5`, `.9` and `.10` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
 ### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
@@ -322,6 +353,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
 | `2026-09-29` | `SPINE.6` | `make check`; `git ls-files --error-unmatch Cargo.lock`; `git status --short` | `test result: ok. 1 passed`; `rc=0`; empty status |
 | `2026-09-29` | `SPINE.7` | `run_multileaf_shadowing_probe.sh`; `run_task_acceptance_probes.sh`; `bash -n`; `make check`; `scripts/check_doctrines.sh` | `probes: 6 pass / 0 fail`; `probes: 10 pass / 0 fail`; syntax clean; `test result: ok. 1 passed`; first attempt `exit=1` (D15 facet 3, diagnosed and fixed), then `rc=0` |
+| `2026-09-29` | `SPINE.8` | `run_fresh_evidence_probes.sh`; `check_fresh_acceptance_evidence.sh --self-test`; both inherited suites; `make check`; `scripts/check_doctrines.sh` | `probes: 9 pass / 0 fail`; `8 verdict controls + 6 extractor arms`; `probes: 10 pass / 0 fail`; `probes: 6 pass / 0 fail`; `test result: ok. 1 passed`; `=== all doctrines green ===`, `exit=0` |
 
 ## Commit Log
 
@@ -331,7 +363,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | `SPINE.6` | `STITCHCAD-SPINE-0006 (leaf SPINE.6): track the workspace lockfile` | fixes D14 |
 | `SPINE.7`, `SPINE.8` | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | leaves created to own defect D15 |
 | `SPINE.7` | `STITCHCAD-SPINE-0007 (leaf SPINE.7): measure the multi-leaf acceptance-evidence hole` | probe + convention record; D15 published |
-| `SPINE.1` … `.5`, `.8` … `.10` | `pending` | — |
+| `SPINE.8` | `STITCHCAD-SPINE-0008 (leaf SPINE.8): require acceptance evidence fresh in the commit` | project doctrine + 9-arm probe; D15 facet 1 closed locally |
+| `SPINE.1` … `.5`, `.9`, `.10` | `pending` | — |
 
 ## Changelog
 
@@ -344,3 +377,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
 - `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
   project-content files as neutral) and D16 (inherited probes scratch off-volume).
+- `2026-09-29`: `SPINE.8` landed — `FRESH-ACCEPTANCE-EVIDENCE` registered in the project slot with
+  a 9-arm probe suite; D15 facet 1 is now closed mechanically. A candidate defect (D18, "the
+  inherited signature list is not portable") was measured and **withdrawn**: the gate matches with
+  `grep -qE`, where both GNU and BSD grep handle the families; only the first implementation of our
+  own check, which used awk, was broken.

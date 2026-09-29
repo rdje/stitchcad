@@ -28,6 +28,15 @@
   missing element was a *result token*. Hence two rules: cite invocation + output + **exit status**,
   and never co-stage an unrelated tree with a code change. Also note the asymmetry that shapes the
   local fix: a project-slot check can add refusals but cannot relax a universal one.
+- **Measure a gate with the gate's own instrument.** The first cut of the local fix matched evidence
+  signatures in awk, and a self-test arm failed on `error[E0432]` / `rc=1`. The tempting reading —
+  "the inherited signature list is not portable, log it as a defect" — was wrong, and was killed by
+  one command: the universal check tests signatures with `grep -qE`, and both GNU grep 3.12 and BSD
+  grep 2.6.0-FreeBSD match `\brc=[0-9]+` and `error\[E[0-9]{4}\]`. Over a 36-line corpus of realistic
+  evidence, awk left 12 unmatched and grep left 2 (both bad samples). The defect was in the new
+  instrument, not in the gate it was measuring; the candidate defect record was withdrawn, and the
+  check now pins the engine choice with a `GREEN-2` arm. Corollary: `\b` and `{n}` are GNU extensions
+  that BSD awk lacks, so awk is for structure here and grep is for signatures.
 
 ## _(2026-09-04)_ — a template's trial must include the first commit
 

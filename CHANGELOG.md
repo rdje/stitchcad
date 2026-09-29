@@ -4,6 +4,32 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0008 — acceptance evidence must be fresh in the commit that lands the work (leaf `SPINE.8`)
+
+- **New project doctrine `FRESH-ACCEPTANCE-EVIDENCE`** (`scripts/check_fresh_acceptance_evidence.sh`,
+  registered in `scripts/check_doctrines.project.sh` — the project slot, never the universal
+  driver): a staged CODE change must ADD its own ticked, evidence-backed ROOT CAUSE / ADDRESSED /
+  NO REGRESSION bullets in the same commit, in at least one staged leaf. Evidence committed for an
+  earlier leaf can no longer answer for a later leaf's change, which is defect D15 facet 1 — the
+  inherited first-match-per-file scan cannot see it, and a project check cannot relax a universal one,
+  only add to it.
+- **Probe suite** `docs/tasks/artifacts/fresh_evidence/run_fresh_evidence_probes.sh` →
+  `probes: 9 pass / 0 fail`, including the pairing arm that prints both verdicts for one staged
+  state (`RED-1 exit=1` here, `exit=0` from the inherited check) and `CTRL-4`, which pins that a
+  co-staged documentation tree is not forced to invent evidence (no fourth false-red class).
+  `--self-test` → `8 verdict controls + 6 extractor arms`; ground truth runs on every invocation and
+  refuses (`exit=2`) if a control misses; scratch lives under `target/doctrine_scratch` (repo volume).
+- **A defect in the first implementation, caught by its own arm:** signature matching written in awk
+  left 12 of 36 realistic evidence lines unmatched on this platform (`\b` and `{n}` are GNU
+  extensions BSD awk 20200816 lacks) where `grep -qE` — the engine the universal check uses — leaves
+  2, both bad samples. The check now uses grep for signatures and awk only for bullet structure, and
+  `GREEN-2` pins it. The candidate defect record against the inherited list ("D18, not portable")
+  was **withdrawn**: GNU grep 3.12 and BSD grep 2.6.0-FreeBSD both match those families.
+- Validation: `scripts/check_doctrines.sh` → `=== all doctrines green ===`, `exit=0` (project slot:
+  `PROJECT-SPECIFIC: 1 project doctrine(s) green`); inherited suites untouched at
+  `probes: 10 pass / 0 fail` and `probes: 6 pass / 0 fail`; `make check` →
+  `test result: ok. 1 passed; 0 failed`; per-commit cost ~0.3 s.
+
 ## STITCHCAD-SPINE-0007 — the multi-leaf acceptance-evidence hole is measured, not suspected (leaf `SPINE.7`)
 
 - **New committed probe** `docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh`
