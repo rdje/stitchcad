@@ -34,6 +34,12 @@ agent should be able to reach for the right tool without reading the source. -->
 
 | Tool | Answers | How to invoke |
 | --- | --- | --- |
-| `<your-probe>` | does input X pass/fail, and where does it stop? | `<command>` |
-| `<your-tracer>` | which function/rule owns the failure? | `<command>` |
-| `<your-counter>` | how much / how often (the measured metric)? | `<command>` |
+| doctrine enforcer | is the repository committable — do all 13 registered doctrines hold right now? | `scripts/check_doctrines.sh` (same as `make gate`; prints `=== all doctrines green ===`) |
+| per-check self-test | does a single doctrine check still discriminate (both arms fire)? | `scripts/check_<name>.sh --self-test` (e.g. `scripts/check_live_doc_currency.sh --self-test`) |
+| multi-leaf shadowing probe | which leaf's evidence does `TASK-ACCEPTANCE` actually judge, and does a placeholder block an honest leaf? (defect D15) | `bash docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh` → `probes: N pass / M fail` |
+| task-acceptance probe suite | does the inherited acceptance gate still hold its shipped properties? | `bash docs/tasks/artifacts/task_acceptance/run_task_acceptance_probes.sh` |
+| Rust gate | do fmt, clippy (deny warnings) and the tests pass? | `make check` |
+| Knowledge Map | is the derived orientation map in sync with its sources? | `knowledge-map/scripts/check_knowledge_map.sh`; regenerate with `knowledge-map/scripts/gen_knowledge_map.sh > "$(knowledge-map/scripts/gen_knowledge_map.sh --print-map-path)"` |
+
+⚠ Inherited probe suites call `mktemp -d`, which lands on the system volume; pin scratch to the
+repository volume with `TMPDIR="$PWD/target/scratch"` (defect D16, leaf `SPINE.10`).

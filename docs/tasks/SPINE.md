@@ -47,7 +47,7 @@ mechanically-enforced form:
 - ID: `SPINE`
   Status: `active`
   Goal: the repository's own surfaces are project-shaped, bounded and enforced.
-  Children: `.1` … `.8`
+  Children: `.1` … `.10`
 
 - ID: `SPINE.6`
   Status: `done`
@@ -118,7 +118,7 @@ mechanically-enforced form:
   Commit: `pending`
 
 - ID: `SPINE.7`
-  Status: `pending`
+  Status: `done`
   Goal: prove and publish defect **D15** — the spine's `TASK-ACCEPTANCE` gate judges the FIRST
   box matching each label in a staged tree file, so in a multi-leaf file one leaf's evidence
   answers for another leaf's code change (false GREEN), and an earlier unticked placeholder
@@ -131,8 +131,12 @@ mechanically-enforced form:
   added in the same commit as the work; no unticked placeholder boxes in tree files) is written
   into `docs/tasks/TEMPLATE.md` and the existing tree files; the finding is recorded with its
   measured evidence and flagged to the director as an upstream spine defect.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — `probes: 6 pass / 0 fail`.
+  Commit: `STITCHCAD-SPINE-0007`
+  Note: the convention deliberately did **not** go into `docs/tasks/TEMPLATE.md` — that file is in
+  `scripts/update_scaffold.sh`'s NEUTRAL sync list, so a project convention written there is
+  overwritten by the next spine update (defect D17). It lives in a layer-C decision record instead,
+  which is project-owned.
 
 - ID: `SPINE.8`
   Status: `pending`
@@ -141,10 +145,44 @@ mechanically-enforced form:
   ADDRESSED / NO REGRESSION bullets carrying tool-output signatures, inside a `### <leaf-id>`
   subsection of a staged `docs/tasks/*.md`. Registered in `scripts/check_doctrines.project.sh`
   (never in the universal driver), with `--self-test` arms including a control seen RED.
+  Design constraint, learned from D15 facet 3: a project-slot check can only ADD refusals — it
+  cannot relax a universal one — so this leaf also publishes the two authoring rules that keep the
+  inherited check honest on mixed commits: (i) every evidence bullet cites the invocation, its
+  output **and its exit status** (`rc=0`), because a listing of filenames matches no signature
+  family; (ii) a code commit stages the leaf that owns it, and unrelated tree updates go in their
+  own commit, because the inherited check judges every staged leaf file.
   Acceptance: previously-committed evidence cannot satisfy a new code commit (the false GREEN is
   closed); an honest leaf whose checklist is added with its work passes regardless of its position
   in the file (the false RED is closed); `make gate` green; a `TOOLBOX.md` row names the check and
-  what question it answers.
+  what question it answers; the two authoring rules are in the layer-C record.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `SPINE.9`
+  Status: `pending`
+  Goal: make the scaffold updater safe for project content (defect **D17**) —
+  `scripts/update_scaffold.sh` lists `docs/TASK_TREE.md`, `TOOLBOX.md`, `README_POLICY.md` and
+  `docs/tasks/TEMPLATE.md` as NEUTRAL ("safe to overwrite because it never carries project
+  content"), yet the template's own instructions tell the project to fill exactly those in: the
+  Active Task Trees index (layer-B navigation), the project toolbox table, the README policy's
+  local adoption note. Split the list into truly neutral files and files carrying project
+  sections; the latter are backed up, reported and skipped unless an explicit flag is passed.
+  Acceptance: a dry run against a stub source proves the guarded files are not overwritten and the
+  neutral ones are; the backup lands on the repository volume; a decision record
+  (`decision_scaffold-sync-protects-project-content.md`, already cross-linked from the
+  acceptance-evidence record) states the rule; `make gate` green.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `SPINE.10`
+  Status: `pending`
+  Goal: keep project-owned scratch on the repository volume (defect **D16**) — the inherited probe
+  suites call `mktemp -d`, which resolves to the system volume (`/var/folders/…` here) while the
+  repository lives on another volume; pin scratch with a documented, scripted `TMPDIR` and give the
+  suites one entry point (`make probes`) so nobody has to remember the incantation.
+  Acceptance: `make probes` runs every probe suite with `TMPDIR` inside `target/`; the pin is
+  measured (`TMPDIR=… mktemp -d` prints a repository-volume path); all suites still report
+  `probes: N pass / 0 fail`; no inherited file is edited (the pin is applied by the caller).
   Verification: `pending`
   Commit: `pending`
 
@@ -153,13 +191,15 @@ mechanically-enforced form:
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
 | 0 | `SPINE.6` | `done` | taken out of order: it repaired a dirty-tree defect found on the first `make check` |
-| 1 | `SPINE.7` | `pending` | D15 is live now and judges every future code commit; proving it is a one-file probe |
-| 2 | `SPINE.8` | `pending` | the local mitigation must land before `G0-CONTRACT.18` stages the first code |
-| 3 | `SPINE.1` | `pending` | identity before content, so the G0 spec chapters grow into a named book |
-| 4 | `SPINE.2` | `pending` | cleanup cadence is a session-directive obligation and cheap |
-| 5 | `SPINE.3` | `pending` | policy adoptions bind how every later claim and cap is written |
-| 6 | `SPINE.4` | `pending` | containment must exist before 18 spec chapters arrive |
-| 7 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
+| 0 | `SPINE.7` | `done` | taken in frontier order: D15 had to be measured before it could be owned |
+| 1 | `SPINE.8` | `pending` | **urgent while any code leaf is open**: until it lands, the inherited gate judges the earliest landed leaf's boxes, so its verdict for a later leaf is vacuous |
+| 2 | `SPINE.9` | `pending` | the updater can silently destroy the layer-B index; guard it before any scaffold sync is run |
+| 3 | `SPINE.10` | `pending` | scratch locality is a standing directive obligation, cheap once `make probes` exists |
+| 4 | `SPINE.1` | `pending` | identity before content, so the G0 spec chapters grow into a named book |
+| 5 | `SPINE.2` | `pending` | cleanup cadence is a session-directive obligation and cheap |
+| 6 | `SPINE.3` | `pending` | policy adoptions bind how every later claim and cap is written |
+| 7 | `SPINE.4` | `pending` | containment must exist before 18 spec chapters arrive |
+| 8 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 
 ## Decisions
 
@@ -173,6 +213,11 @@ mechanically-enforced form:
   reported to the director, never patched into the universal checks — those are shared, portable
   code kept in sync by `scripts/update_scaffold.sh`, and a local edit there would be silently
   overwritten or, worse, silently diverge (defect D15 → `SPINE.7`/`SPINE.8`).
+- `2026-09-29`: project conventions do not go into files the scaffold updater treats as neutral
+  (`docs/TASK_TREE.md`, `TOOLBOX.md`, `README_POLICY.md`, `docs/tasks/TEMPLATE.md`). They go into
+  layer-C records and project-owned files, and the updater grows a guard (defect D17 → `SPINE.9`).
+  Content already written into those files stays — it is the guard's job to protect it, not ours to
+  evacuate it.
 
 ## Routing Evidence
 
@@ -226,12 +271,57 @@ the director rather than patched here (session directive §21: other repositorie
 Leaves `.1`–`.5`, `.7` and `.8` each add their own `### <leaf-id>` subsection here, in the same
 commit as their work; this file carries no unticked placeholder boxes (the reason is D15).
 
+### `SPINE.7` — measure and publish defect D15 (multi-leaf acceptance-evidence shadowing)
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `scripts/check_task_acceptance.sh:106-112`: the extractor runs
+  `BEGIN{ inbox=0 }` … `if (inbox) exit` … `if (match(tolower(line), kw)) { inbox=1; print; next }`,
+  i.e. it collects the FIRST bullet whose text matches the label and stops at the next box, so a
+  file holding several leaves is judged on whichever section comes first — not on the leaf that owns
+  the staged change. Measured by the new probe over the shipped check:
+  `bash docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh` →
+  `✓ HOLE-1  exit=0  ⚠ D15 false GREEN: leaf 2's change accepted on leaf 1's evidence`,
+  `✓ HOLE-2  exit=1  ⚠ D15 false RED: an honest, evidenced leaf refused by a placeholder above it`,
+  `✓ HOLE-3  exit=0  the same leaf without the placeholder → accepted`, `probes: 6 pass / 0 fail`.
+- [x] **ADDRESSED (verified)** — before: `git ls-tree --name-only HEAD docs/tasks/artifacts/task_acceptance/`
+  → one suite (`run_task_acceptance_probes.sh`), whose cross-leaf control (`CTRL-2`) stages the
+  other leaf in a *separate file*, so the multi-leaf case had no instrument; after: the same command
+  lists two suites and the new one prints `probes: 6 pass / 0 fail` with three controls
+  (`CTRL-1/2/3` → `exit=0`, `exit=1`, `exit=1`) and three defect arms. The authoring convention that
+  keeps verdicts attributable meanwhile is now a retrievable layer-C record:
+  `docs/decisions/decision_acceptance-evidence-per-leaf.md` (`answers:` line present, indexed).
+- [x] **NO REGRESSION** — the inherited suite is unchanged and still discriminates:
+  `TMPDIR="$PWD/target/scratch" bash docs/tasks/artifacts/task_acceptance/run_task_acceptance_probes.sh`
+  → `probes: 10 pass / 0 fail`; `bash -n` on the new probe → clean; `make check` →
+  `test result: ok. 1 passed; 0 failed`; `scripts/check_doctrines.sh` → `=== all doctrines green ===`,
+  `rc=0`.
+- [x] **FIX** — added the probe (a first-class diagnostic tool, kept in the repo); recorded the
+  convention and its measurement in a decision record; promoted the lesson in `DEV_NOTES.md`;
+  registered the probe in `TOOLBOX.md`. The shared check itself is deliberately untouched.
+- [x] **LOCKSTEP** — `PLANNING.md` carries D15–D17 with reproduce commands and owners; this leaf,
+  `TOOLBOX.md`, `DEV_NOTES.md`, `docs/decisions/INDEX.md`, `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` and the derived Knowledge Map are updated in this commit.
+- ⚠ **Honest note on this very commit:** staging a `.sh` file makes this a CODE change, so the
+  inherited gate ran and — per D15 — read `### SPINE.6`'s boxes (the first in this file), not the
+  ones above. The boxes for THIS leaf are fresh in this commit's diff (3 added ticked boxes:
+  `git diff --cached -U0 -- docs/tasks/SPINE.md | grep -cE '^\+- \[x\] \*\*(ROOT CAUSE|ADDRESSED|NO REGRESSION)'`
+  → `3`); `SPINE.8` makes that property mechanical instead of a note.
+- ⚠ **This commit was REFUSED once, and the refusal was D15's third facet.** With the probe staged,
+  the inherited check judged every staged leaf file, including `docs/tasks/PLANNING.md`, whose
+  `PLANNING.1` census bullets cite two commands and their real output but no recognized signature
+  token: `scripts/check_doctrines.sh` → `❌ TASK-ACCEPTANCE … docs/tasks/PLANNING.md — the
+  'ROOT CAUSE' box is ticked but carries no tool-output evidence`, `exit=1`. Diagnosis
+  (tools-first): the box the gate read is at `docs/tasks/PLANNING.md:155`, and counting signature
+  families inside that bullet gives `0`. Fix: the two bullets now carry their counts and `rc=0`,
+  and the convention (invocation + output + exit status) is recorded for `SPINE.8` to publish.
+  Nothing was waived and no gate was weakened.
+
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
 | `2026-09-29` | `SPINE.6` | `make check`; `git ls-files --error-unmatch Cargo.lock`; `git status --short` | `test result: ok. 1 passed`; `rc=0`; empty status |
+| `2026-09-29` | `SPINE.7` | `run_multileaf_shadowing_probe.sh`; `run_task_acceptance_probes.sh`; `bash -n`; `make check`; `scripts/check_doctrines.sh` | `probes: 6 pass / 0 fail`; `probes: 10 pass / 0 fail`; syntax clean; `test result: ok. 1 passed`; first attempt `exit=1` (D15 facet 3, diagnosed and fixed), then `rc=0` |
 
 ## Commit Log
 
@@ -240,7 +330,8 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 | tree seed | `STITCHCAD-PLANNING-0001 (leaf PLANNING.1)` | created by the seeding leaf |
 | `SPINE.6` | `STITCHCAD-SPINE-0006 (leaf SPINE.6): track the workspace lockfile` | fixes D14 |
 | `SPINE.7`, `SPINE.8` | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | leaves created to own defect D15 |
-| `SPINE.1` … `.5` | `pending` | — |
+| `SPINE.7` | `STITCHCAD-SPINE-0007 (leaf SPINE.7): measure the multi-leaf acceptance-evidence hole` | probe + convention record; D15 published |
+| `SPINE.1` … `.5`, `.8` … `.10` | `pending` | — |
 
 ## Changelog
 
@@ -249,3 +340,7 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 - `2026-09-29`: `SPINE.7`/`SPINE.8` added to own defect D15 (multi-leaf acceptance-evidence
   shadowing in the inherited gate); routing evidence recorded; frontier re-ordered so the
   mitigation lands before the first code leaf (`G0-CONTRACT.18`).
+- `2026-09-29`: `SPINE.7` landed — probe committed (6 arms, 3 controls), convention promoted to a
+  layer-C record, lesson promoted in `DEV_NOTES.md`, `TOOLBOX.md` rows seeded.
+- `2026-09-29`: `SPINE.9`/`SPINE.10` added for defects D17 (scaffold updater treats
+  project-content files as neutral) and D16 (inherited probes scratch off-volume).

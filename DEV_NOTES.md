@@ -1,5 +1,34 @@
 # DEV_NOTES.md
 
+## _(2026-09-29)_ — a gate that scopes evidence to a bullet still scopes it to the WRONG leaf
+
+- The inherited `TASK-ACCEPTANCE` check was distilled to close two leakage holes (a co-staged
+  unrelated file supplying the tokens; a token matched anywhere in the file). Both closures hold.
+  A third hole sits one level up and is measured, not argued: the check takes the **first** bullet
+  matching each label *in the file*, so with two leaves in one file the verdict follows section
+  order, not ownership. `HOLE-1` → a change owned by leaf 2 accepted on leaf 1's evidence
+  (`exit=0`); `HOLE-2` → an honest, evidenced leaf refused because a future leaf's placeholder sat
+  above it (`exit=1`); `HOLE-3` → delete the placeholder, same leaf passes. Probe:
+  `docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh` → `probes: 6 pass / 0 fail`.
+- The general lesson: **box-scoping is a within-bullet property; attribution is a within-unit
+  property.** A gate can satisfy the first and still answer for the wrong unit whenever several
+  units share a file. The shipped probe suite tested the file boundary because that is where the
+  founding incident happened, and a probe suite bounded by its own incident reads as a proof of the
+  wider claim in the header. Promoted to `docs/decisions/decision_acceptance-evidence-per-leaf.md`.
+- Corollary for authors, and the reason this is a convention and not just a bug report: placeholders
+  are not inert decoration. An unticked box is a *claim about a leaf*, and in a first-match gate it
+  is a claim that can silence a genuinely ticked one. Do not pre-create checkboxes for work not
+  yet done.
+- **Facet 3 arrived on the commit that published the probe.** Staging a `.sh` file made it a code
+  commit, so the check judged *every* staged leaf file — including a documentation tree owning no
+  code — and refused it: `❌ TASK-ACCEPTANCE … docs/tasks/PLANNING.md — the 'ROOT CAUSE' box is
+  ticked but carries no tool-output evidence`, `exit=1`. The box it read (`PLANNING.md:155`) cited
+  two census commands and their real listings; recognized signature families inside that bullet:
+  `0`. So the refusal was correct under the gate's contract and the evidence was still honest — the
+  missing element was a *result token*. Hence two rules: cite invocation + output + **exit status**,
+  and never co-stage an unrelated tree with a code change. Also note the asymmetry that shapes the
+  local fix: a project-slot check can add refusals but cannot relax a universal one.
+
 ## _(2026-09-04)_ — a template's trial must include the first commit
 
 - Every gate was green on the generated project and the first commit still failed: the doctrines judge STAGED

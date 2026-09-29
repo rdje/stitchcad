@@ -4,6 +4,39 @@ Newest first. The StitchCAD sections are this project's history; everything belo
 _Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
 provenance of the discipline spine this repository was generated from.
 
+## STITCHCAD-SPINE-0007 — the multi-leaf acceptance-evidence hole is measured, not suspected (leaf `SPINE.7`)
+
+- **New committed probe** `docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh`
+  (6 arms, 3 of them controls) builds throwaway repositories and runs the *shipped*
+  `scripts/check_task_acceptance.sh` against real staged diffs → `probes: 6 pass / 0 fail`.
+- **Defect D15 confirmed in both directions.** `HOLE-1`: a code change owned by leaf `TREE.2` is
+  accepted on leaf `TREE.1`'s ticked evidence because the extractor takes the first bullet matching
+  each label (`scripts/check_task_acceptance.sh:106-112`) — `exit=0`. `HOLE-2`: an honest,
+  evidence-backed leaf is refused because an unticked placeholder for a *future* leaf sits above it
+  — `exit=1`; `HOLE-3` deletes the placeholder and the identical leaf passes, which attributes the
+  refusal. The shipped suite's cross-leaf control stages the other leaf in a separate *file*, so the
+  property its header claims is wider than the property it verifies.
+- **Convention promoted to layer C** — `docs/decisions/decision_acceptance-evidence-per-leaf.md`
+  (indexed, with an `answers:` line so a question can find it): checkboxes exist only for leaves
+  whose work has landed, each in its own `### <leaf-id>` subsection, added in the same commit.
+  Deliberately *not* written into `docs/tasks/TEMPLATE.md`, which the scaffold updater treats as
+  neutral and would overwrite (D17).
+- **Two further defects logged and owned:** D16 — the inherited probe suites `mktemp -d` onto the
+  system volume while the repository lives on another (`SPINE.10`); D17 — `update_scaffold.sh`
+  lists `docs/TASK_TREE.md`, `TOOLBOX.md`, `README_POLICY.md` and `docs/tasks/TEMPLATE.md` as
+  NEUTRAL although the template instructs projects to fill them in, so the documented "keep the
+  spine current" command would silently destroy the task-tree index (`SPINE.9`).
+- **Facet 3, caught by this very commit.** The first attempt was REFUSED: with the probe (a `.sh`
+  file) staged, the check judged every staged leaf file — including a documentation tree owning no
+  code — and reported `❌ TASK-ACCEPTANCE … docs/tasks/PLANNING.md — the 'ROOT CAUSE' box is ticked
+  but carries no tool-output evidence`, `exit=1`. The box it read (`PLANNING.md:155`) cited two
+  census commands and their real listings; recognized signature families inside that bullet: `0`.
+  Fixed by adding each command's counts and `rc=0` to the bullets and by adopting two authoring
+  rules (invocation + output + exit status; never co-stage an unrelated tree with a code change).
+  No gate was weakened and nothing was waived.
+- Validation: inherited suite still `probes: 10 pass / 0 fail`; `bash -n` clean; `make check` →
+  `test result: ok. 1 passed; 0 failed`; `scripts/check_doctrines.sh` → `=== all doctrines green ===`.
+
 ## STITCHCAD-PLANNING-0002 — the engine-stage lanes are owned (leaf `PLANNING.2`)
 
 - **Seeded four delivery trees** from roadmap §11 exit criteria, 58 leaves in total:

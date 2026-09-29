@@ -16,15 +16,17 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe
   designs, versioned evidence-bearing Factory Profiles, deterministic artifact export
   (DXF/HPGL/PDF/tech pack), agent-first via MCP. `ROADMAP.md` v0.2, DRAFT until G0 exits.
-- **Active tree:** `PLANNING` → frontier leaf `PLANNING.3` (`pending`).
-- **Next action:** create `docs/tasks/G5-SHELLS.md`, `docs/tasks/G6-CONFORMANCE.md`,
-  `docs/tasks/G7-RELEASE.md`, `docs/tasks/V1-ASSEMBLY.md`, `docs/tasks/V2-SIM.md` (leaves at
-  roadmap §11 exit-criterion granularity, each citing its clause), add the coverage census tool
-  `docs/tasks/artifacts/planning/run_tree_coverage_census.sh`, publish the roadmap → tree
-  coverage map, register everything in `docs/TASK_TREE.md`, then commit
-  `STITCHCAD-PLANNING-0003 (leaf PLANNING.3)`.
-- **Order after that:** `SPINE.7` → `SPINE.8` (prove then locally close defect D15 — must land
-  before any code leaf) → `SPINE.1`–`.5` → `G0-CONTRACT.1`–`.18` → `G1-SLICE` …
+- **Active tree:** `SPINE` → frontier leaf `SPINE.8` (`pending`). `PLANNING.3` is parked mid-tree
+  (repo clean) because D15's mitigation must land before any code leaf, and `PLANNING.3` stages a
+  census script.
+- **Next action:** implement `FRESH-ACCEPTANCE-EVIDENCE` in `scripts/check_doctrines.project.sh`
+  (or a `scripts/check_fresh_acceptance_evidence.sh` it calls): a staged CODE change must have its
+  ticked ROOT CAUSE / ADDRESSED / NO REGRESSION bullets **added in this commit's diff**, with
+  `--self-test` arms including a control seen RED; register it in the project slot; then commit
+  `STITCHCAD-SPINE-0008 (leaf SPINE.8)`.
+- **Order after that:** `SPINE.9` (scaffold-sync guard, D17) → `SPINE.10` (repo-volume scratch,
+  D16) → `PLANNING.3` (G5–G7, V1, V2 + coverage census) → `SPINE.1`–`.5` → `G0-CONTRACT.1`–`.18`
+  → `G1-SLICE` …
 - **In-flight uncommitted work:** none.
 - **Blockers:** `G0-CONTRACT.14` needs named humans from the director (project owner,
   evaluation-seat/plotter procurement). It blocks only itself.

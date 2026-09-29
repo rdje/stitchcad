@@ -22,4 +22,4 @@
 
 ## Decision records
 
-- _none yet_
+- [`decision_acceptance-evidence-per-leaf.md`](docs/decisions/decision_acceptance-evidence-per-leaf.md)
