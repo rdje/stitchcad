@@ -46,10 +46,20 @@ on the same commit. One commit per completed leaf.
 
 ## Active Task Trees
 
-| Tree | Status | Frontier (next leaf) | Owner |
-| --- | --- | --- | --- |
-| [`BEDROCK-MAINTENANCE`](tasks/BEDROCK-MAINTENANCE.md) | `active` | `.2` — the PGEN→bedrock transfer loop + backlog | repo-local |
+A row appears here only when the tree file exists on disk — the index never links a file
+that is absent, and a tree on disk is always registered. Both directions are censused by
+the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 
-> _Note: `BEDROCK-MAINTENANCE` is bedrock's own maintenance tree (see `MAINTAINING.md`). A
-> project generated from bedrock (via `scripts/bootstrap.sh`) starts with no trees — that
-> row is removed and you seed your own from `ROADMAP.md`._
+| Tree | Lane (roadmap source) | Status | Frontier (next leaf) | Owner |
+| --- | --- | --- | --- | --- |
+| [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.2` — seed the engine-stage lanes `G1`–`G4` | repo-local |
+| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.1` — de-template README + mdBook identity | repo-local |
+| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.1` — glossary of construction terms | repo-local |
+| [`BOOTSTRAP`](tasks/BOOTSTRAP.md) | one-time de-template from bedrock | `done` | — | repo-local |
+
+The delivery-lane trees for gates **G1–G7** and the parallel **V1/V2** tracks are seeded by
+`PLANNING.2` and `PLANNING.3`; until a tree exists, its lane's requirements are owned by the
+seeding leaf, so no roadmap clause is ever unowned.
+
+Execution order right now: `PLANNING.2` → `PLANNING.3` → `SPINE.1`–`.5` → `G0-CONTRACT.1`–`.15`.
+G0 lands specification only; roadmap §4.3 keeps crates out of existence until their stage starts.

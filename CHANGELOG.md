@@ -1,5 +1,30 @@
 # CHANGELOG.md
 
+Newest first. The StitchCAD sections are this project's history; everything below the
+_Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
+provenance of the discipline spine this repository was generated from.
+
+## STITCHCAD-PLANNING-0001 — roadmap v0.2 represented as task-trees (leaf `PLANNING.1`)
+
+- **Seeded the lane trees:** `docs/tasks/PLANNING.md` (roadmap → tree mapping),
+  `docs/tasks/G0-CONTRACT.md` (gate G0, 15 leaves mapped clause-by-clause to the gate's exit
+  criteria), `docs/tasks/SPINE.md` (repository identity, hygiene and adopted policy, 5 leaves).
+- **Repaired the layer-B index:** `docs/TASK_TREE.md` listed bedrock's own maintenance tree
+  (a link to a file that does not exist) and omitted the `BOOTSTRAP` tree that does. The index
+  now registers exactly the trees on disk and states the census rule that keeps it true.
+- **Logged 13 startup defects with owners** (`PLANNING.md` → "Defects found at startup"), each
+  with a reproduce command: template identity in `README.md`/mdBook/`TOOLBOX.md`/starter crate,
+  stale layer-A pointer, bedrock-only changelog, missing cleanup-cadence record, an out-of-date
+  README policy copy, two unadopted director policies, and unbounded live-document growth.
+- **Refreshed the live docs:** `LIVE_STATUS.md` now carries one row per roadmap lane; `MEMORY.md`
+  names the real active tree, next action and order, and derives the latest commit instead of
+  carrying a hash its own commit would invalidate.
+- Validation: `scripts/check_doctrines.sh` → 13 checks, `=== all doctrines green ===`, `rc=0`.
+
+---
+
+# Inherited spine history (bedrock scaffold — provenance only)
+
 ## bedrock-scaffold 0.6.1 — creating a project is foolproof through its first commit
 
 `BEDROCK-MAINTENANCE.2.7`.

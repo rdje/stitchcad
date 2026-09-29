@@ -12,6 +12,9 @@
 ## Active task-trees
 
 - [`BOOTSTRAP.md`](docs/tasks/BOOTSTRAP.md)
+- [`G0-CONTRACT.md`](docs/tasks/G0-CONTRACT.md)
+- [`PLANNING.md`](docs/tasks/PLANNING.md)
+- [`SPINE.md`](docs/tasks/SPINE.md)
 
 ## Decision records
 
