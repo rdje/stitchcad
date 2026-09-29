@@ -34,7 +34,7 @@ must satisfy. It is written during gate G0 (the product-and-semantic-contract ga
 | Formula language | The drafting recipe's expression language: grammar, units inside expressions, conditionals, name binding, evaluation order |
 | Internationalization | The one message system, externalization, termbases, pseudolocalization, locale-independent files, and the RTL geometry rule |
 | Measurement standards | Which external standards the model draws on, what is adopted from each, and the verification status of every claim |
-| Reference skirt | The one garment specified with real numbers, which every conformance suite, golden file and agent gate is built around |
+| [Reference skirt](reference-skirt.md) | The one garment specified with real numbers, which every conformance suite, golden file and agent gate is built around |
 
 Each chapter is added to this book by the task-tree leaf that writes it, so the list above grows into
 the table of contents rather than preceding it.

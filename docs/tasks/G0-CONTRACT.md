@@ -199,7 +199,7 @@ not a contract.
   Commit: `pending`
 
 - ID: `G0-CONTRACT.13`
-  Status: `pending`
+  Status: `done`
   Goal: specify the **reference skirt** with numbers — A-line, one waist dart per side, CB
   zipper, grain ∥ CB, SA 1 cm sides / 3 cm hem, single notches at side seams, cut-on-fold or
   paired front — plus the measurement table, formulas, piece list, seam/sewing graph, notch and
@@ -207,8 +207,9 @@ not a contract.
   Acceptance: a reader can draft the garment from the chapter without asking a question; every
   number has a source (measurement, formula or declared constant); it exercises dart, grain,
   variable SA, notch, fold and the included/excluded allowance policy as the roadmap requires.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — every derived value re-derived, the allocation balance closes,
+  book builds, gates green.
+  Commit: `STITCHCAD-G0-0013`
 
 - ID: `G0-CONTRACT.14`
   Status: `blocked` (director input: named humans)
@@ -277,7 +278,8 @@ not a contract.
 | 1 | `G0-CONTRACT.2` | `done` | taken first: every other chapter and every crate quotes a number, so the numerical contract had to exist before them |
 | 2 | `G0-CONTRACT.18` | `done` | `sc-units` implements `.2`; the G0 CI workflow builds both crates for WASM |
 | 3 | `G0-CONTRACT.3` | `done` | the ontology now exists, so `.4`, `.5` and `.13` have objects to refer to |
-| 4 | `G0-CONTRACT.13` | `pending` | **next** — the reference skirt gives every later chapter a concrete garment to be checked against, and exercises this ontology |
+| 4 | `G0-CONTRACT.13` | `done` | the fixture now gives every later chapter a concrete garment to be checked against |
+| 5 | `G0-CONTRACT.1` | `pending` | **next** — the glossary, so every term the three written chapters use has one meaning |
 | 5 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | remaining G0 chapters, in the order the frontier table below records |
 
 ## Decisions
@@ -420,6 +422,38 @@ not a contract.
   already names `docs/book/src/spec/` as a subsystem, so the derived map needed no edit;
   `sc-core/src/lib.rs`'s module table already points at this leaf as the specifier.
 
+### `G0-CONTRACT.13` — the reference skirt, specified to the millimetre
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — gate G2's exit criteria and the mutation, golden, offset and agent
+  suites all need one subject garment, and the roadmap's G0 fixture clause described it in prose only:
+  "A-line, one waist dart/side, CB zipper, grain ∥ CB, SA 1 cm sides / 3 cm hem, single notches at side
+  seams, cut-on-fold or paired front". Two implementers would have produced two different skirts, and
+  every comparison between them would have been meaningless. `git ls-tree --name-only HEAD
+  docs/book/src/spec/` → `index.md`, `ontology.md`, `units-and-tolerances.md`, `rc=0`: no fixture.
+- [x] **ADDRESSED (verified)** — `docs/book/src/spec/reference-skirt.md` (`wc -lc` → `245` lines /
+  `14538` bytes, widest line `118`) specifies the garment completely: 4 body measurements with
+  landmarks, 2 ease entries with fit intent, 9 declared drafting constants, **17 derived values each
+  with its formula**, a 9-step drafting recipe, 6 pieces with multiplicity/fold/pair/material/layer,
+  per-edge allowances with corner treatment and policy, notch and grainline placement, a 4-span sewing
+  graph with declared zero ease, the closure, a fixture-property → ontology-clause → dependent-gate
+  traceability table, and 8 test obligations. The arithmetic was re-derived rather than asserted, and
+  the allocation **balance closes exactly**: `4 × (3.0 + 4.0) = 28.0` = `garment_hip − garment_waist`
+  = `102.0 − 74.0`; side seams total `12.0` cm and darts `16.0` cm, summing to the same `28.0`.
+- [x] **NO REGRESSION** — `make book` → `INFO HTML book written to …`, `exit=0` with the chapter
+  rendered; `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 51
+  files measured`, `exit=0`; `make gate` → `=== all doctrines green ===`, `exit=0`; `make check` →
+  `test result: ok. 3 passed; 0 failed` (no product code changed).
+- [x] **FIX** — wrote the chapter; **recorded an interpretation rather than silently choosing one**
+  (the roadmap's "one waist dart/side" is realised as one dart per quadrant, with the arithmetic reason:
+  a single dart per body side would need 8.0 cm of intake); marked the 5 drafting constants and 3
+  closure constants as `assumed` pending domain review, with `G0-CONTRACT.14` named as the leaf that
+  owns naming the reviewer, so a golden frozen at G2 cannot freeze an unreviewed guess as if it were a
+  fact; converted the §11 verification table to bounded prose when the containment checker reported a
+  `276`-byte row against the `200`-byte book health target.
+- [x] **LOCKSTEP** — chapter linked from `SUMMARY.md` and the spec index; `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` updated; the fixture's test obligations are the G2 leaves' acceptance inputs, so
+  `G2-2D.3`/`.8`/`.11` now have numbers to assert against.
+
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and `.18` (the code leaf) additionally fills a `### G0-CONTRACT.18` checklist
 subsection with real tool output in the same commit as the change. This tree file carries no
@@ -435,6 +469,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-29` | `G0-CONTRACT.2` | `wc -lc` and per-line max on the chapter; `make book`; arithmetic re-derivation; `check_live_doc_size.sh`; `make gate`; `make check` | `291` lines / `17180` bytes / maxline `114`; `exit=0`, chapter rendered; 5 arithmetic claims confirmed; `OK — 17 surfaces, 15 routes, 47 files`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `G0-CONTRACT.18` | `cargo test --all`; `make wasm`; `cargo fmt --check`; `cargo clippy -D warnings`; `make gate`; `make probes` | 30 tests / 0 failed; wasm cross-build green; fmt clean; clippy clean; `=== all doctrines green ===`; `7 suite(s) green` |
 | `2026-09-29` | `G0-CONTRACT.3` | `wc -lc` + per-line max on the chapter; `make book`; `check_live_doc_size.sh`; `make gate`; `make check`; `make probes` | `295` lines / `16187` B / maxline `198`; `exit=0` and rendered; `OK — 17 surfaces, 15 routes, 50 files`; all gates green |
+| `2026-09-29` | `G0-CONTRACT.13` | arithmetic re-derivation incl. the allocation balance; `wc -lc` + per-line max; `make book`; `check_live_doc_size.sh`; `make gate` | balance `28.0 = 28.0`; `245`/`14538`/maxline `118`; `exit=0`; `OK — 17 surfaces, 15 routes, 51 files`; all green |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 
 ## Commit Log
@@ -446,10 +481,14 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.2` | `STITCHCAD-G0-0002 (leaf G0-CONTRACT.2): the numerical contract` | first product specification chapter; decision record added |
 | `G0-CONTRACT.18` | `STITCHCAD-G0-0018 (leaf G0-CONTRACT.18): the first product code` | `sc-units` implements `.2`; `sc-core` skeleton; G0 CI + WASM smoketest; D10 closed |
 | `G0-CONTRACT.3` | `STITCHCAD-G0-0003 (leaf G0-CONTRACT.3): the garment ontology` | 12 object families, the identity contract, 7 test obligations |
-| `G0-CONTRACT.1`, `.4`–`.17` | `pending` | — |
+| `G0-CONTRACT.13` | `STITCHCAD-G0-0013 (leaf G0-CONTRACT.13): the reference skirt, to the millimetre` | 17 derived values with formulas; 5 constants flagged `assumed` pending review |
+| `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-29`: `.13` landed — the reference skirt is fully specified with numbers, its allocation
+  balance closes exactly, and its 8 unreviewed constants are explicitly `assumed` with an owner named
+  for the review.
 - `2026-09-29`: `.3` landed — the garment ontology is normative: identity and the persistent-reference
   contract, measurement/ease/size-set, the design-as-recipe, every geometry-bearing object with its
   invariants, uncertainty states, serialization and the test obligations that follow.
