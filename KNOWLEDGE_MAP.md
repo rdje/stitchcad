@@ -17,8 +17,13 @@
 - [`G2-2D.md`](docs/tasks/G2-2D.md)
 - [`G3-GRADING.md`](docs/tasks/G3-GRADING.md)
 - [`G4-PROFILES.md`](docs/tasks/G4-PROFILES.md)
+- [`G5-SHELLS.md`](docs/tasks/G5-SHELLS.md)
+- [`G6-CONFORMANCE.md`](docs/tasks/G6-CONFORMANCE.md)
+- [`G7-RELEASE.md`](docs/tasks/G7-RELEASE.md)
 - [`PLANNING.md`](docs/tasks/PLANNING.md)
 - [`SPINE.md`](docs/tasks/SPINE.md)
+- [`V1-ASSEMBLY.md`](docs/tasks/V1-ASSEMBLY.md)
+- [`V2-SIM.md`](docs/tasks/V2-SIM.md)
 
 ## Decision records
 

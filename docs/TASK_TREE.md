@@ -59,19 +59,26 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
 | [`G4-PROFILES`](tasks/G4-PROFILES.md) | §11 gate **G4** — profiles & uncertainty workflow | `proposed` | `.1` — `sc-profiles` schema v2 | repo-local |
+| [`G5-SHELLS`](tasks/G5-SHELLS.md) | §11 gate **G5** — application shells & validated 2D UX | `proposed` | `.1` — Tauri native shell (Win/macOS/Linux) | repo-local |
+| [`G6-CONFORMANCE`](tasks/G6-CONFORMANCE.md) | §11 gate **G6** — conformance lab & reliability | `proposed` | `.1` — DXF importer + honest loss report | repo-local |
+| [`G7-RELEASE`](tasks/G7-RELEASE.md) | §11 gate **G7** — scoped production declaration | `proposed` | `.1` — independent evidence review | repo-local |
+| [`V1-ASSEMBLY`](tasks/V1-ASSEMBLY.md) | §11 track **V1** — assembly visualization (parallel) | `proposed` | `.1` — `sc-mesh` triangulation (post-G3) | repo-local |
+| [`V2-SIM`](tasks/V2-SIM.md) | §11 track **V2** — physically validated simulation (parallel, uncapped) | `proposed` | `.1` — `sc-sim` outside the default build | repo-local |
 | [`BOOTSTRAP`](tasks/BOOTSTRAP.md) | one-time de-template from bedrock | `done` | — | repo-local |
 
-The remaining lanes — gates **G5–G7** and the parallel **V1/V2** tracks — are seeded by
-`PLANNING.3`, which also publishes the roadmap → tree coverage map. Until a tree exists, its lane's
-requirements are owned by that seeding leaf, so no roadmap clause is ever unowned.
+All ten roadmap lanes are now owned. That claim is **derived, not asserted**:
 
-Execution order right now: `SPINE.1`–`.5` (identity, cleanup cadence, policy adoptions, live-document
-containment, toolbox/knowledge map) → `PLANNING.3` (G5–G7, V1, V2 + the coverage census) →
-`G0-CONTRACT.1`–`.18` → `G1-SLICE` …
-The spine-integrity leaves (`.6`–`.10`) were taken first and are done: they protect the task-tree
-index from being overwritten, keep scratch on the repository volume, and make the acceptance gate
-attribute evidence to the leaf that earned it. `SPINE.1`–`.5` come before the G0 chapters on purpose —
-the book's identity and structure, the claim-verification standard and the size ceilings are the rules
-those 18 specification chapters are written under.
-G0 is a specification gate; its only code leaf is `.18` (the two skeleton crates + CI the roadmap's
-G0 CI clause requires).
+```bash
+bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh
+# → census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)
+```
+
+The census checks both directions — every §11 lane has a tree whose metadata names it, and every tree
+on disk is registered here with a declared lane — plus the advisory clause-versus-leaf table. In that
+table, more clause rows than roadmap clauses is expected (a tree may split one clause into several
+leaves, as `G5-SHELLS` does with the "full UX spec" list); fewer rows than clauses is the alarm.
+
+Execution order right now: **`G0-CONTRACT.1`–`.18`** (the product's semantic contract, then the first
+product code at `.18`) → `G1-SLICE` … The `SPINE` lane keeps `.5`, `.13` and `.15` open; none of them
+blocks product work, so they are deferred behind it (defect D24 records why that ordering is explicit
+rather than incidental).
