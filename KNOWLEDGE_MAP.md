@@ -14,10 +14,10 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   profile including `wasm-viewer` can use it. Entry `crates/sc-units/src/lib.rs`, conformance
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`. Owner
   `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/` — **skeleton**: the future ontology, recipe, command bus and uncertainty model, present
-  at G0 only because the roadmap's CI clause needs a real `wasm32-unknown-unknown` build. Entry
-  `crates/sc-core/src/lib.rs`, which names the module each future leaf owns. Owner `G0-CONTRACT.3` (spec),
-  `G1-SLICE.3` (code).
+- `crates/sc-core/` — **the ontology, being built**: the identity layer landed (`G1-SLICE.3a` —
+  `EntityId`/ULID + injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the exact `Rational`/`Param`);
+  the contract (`.3b`), object types (`.3c`), recipe, command bus and uncertainty follow. Entry
+  `crates/sc-core/src/ontology/`. Owner `G0-CONTRACT.3` (spec), `G1-SLICE.3a`/`.3b`/`.3c` (code).
 - `docs/book/src/spec/` — the normative specification the director reviews: overview, glossary, units,
   ontology, formula language, envelope, instantiation paths, size sets, standards, interchange dialects,
   release and approval, the command layer, reference skirt. Owner the `G0-CONTRACT` leaves.- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, in three parts** (contract,

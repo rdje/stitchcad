@@ -80,7 +80,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0002`
 
 - ID: `G1-SLICE.3a`
-  Status: `pending`
+  Status: `done`
   Goal: the identity layer in `sc-core` (ontology §1) — `EntityId` (a dependency-free ULID), the
   injected `IdGenerator`, `EdgeRef`/`PointRef` (the entity id of the creating operation plus a
   persistent local tag), and the bounded exact rational parameter `t` in `[0, 1]`.
@@ -89,8 +89,9 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   the parameter is exact under `+ − × ÷` with reduction, carries a total order and an
   `in_unit_interval` predicate, and reports overflow / division-by-zero as typed diagnostics; the
   crate still compiles for `wasm32-unknown-unknown`.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — 40 tests green (31 unit, 9 property), `make wasm` cross-builds
+  `sc-core`, every criterion re-derived in the `### G1-SLICE.3a` checklist.
+  Commit: `STITCHCAD-G1-0004`
   Design: `decision_entity-identity-ulid-injected-generator.md`,
   `decision_edge-parameter-bounded-exact-rational.md`.
 
@@ -271,7 +272,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3a` | `pending` | the identity layer (`EntityId`/ULID, `EdgeRef`/`PointRef`, the exact rational parameter) — G1's first new product code, designed by the three records this slice landed |
+| — | `G1-SLICE.3b` | `pending` | the persistent-identity contract (ontology §1.1) — reference resolution under split/merge/reverse/delete and the `RepairTask`; consumes `.3a`'s identity types |
 
 ## Decisions
 
@@ -422,6 +423,49 @@ Questions deferred to `.2`; closing the leaf records it.
   16), `CHANGELOG.md`, `DEV_NOTES.md` (the lesson, promoted by the new record's `answers:`) and the
   regenerated Knowledge Map, all in this commit.
 
+### `G1-SLICE.3a` — the identity layer: a ULID with an injected generator, stable references, an exact parameter
+
+G1's first new product code. Ontology §1 requires every entity to carry a ULID stable across saves and
+exports, every geometric sub-entity to be addressed by identity rather than index, and a parameterized
+position to be an exact rational in `[0, 1]`. This slice implements that identity layer in `sc-core::ontology`
+against the two design decisions `.3` recorded — dependency-free, and wasm-safe.
+
+- [x] **REPRODUCE / ISSUE** — the requirement, located: `grep -n 'a ULID, assigned once at creation'
+  docs/book/src/spec/ontology.md` → line 24, `rc=0`, and the glossary's `parameterized reference` → "a
+  position along an edge as a rational in [0, 1]". Before this slice `sc-core` was a skeleton
+  (`git show HEAD:crates/sc-core/src/lib.rs | grep -c 'Status: skeleton'` → `1`, `rc=0`); the identity layer
+  the whole ontology rests on did not exist in code.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the design is the two recorded decisions, not an ad-hoc choice.
+  `EntityId` is a hand-rolled dependency-free ULID because `sc-core` builds for `wasm32-unknown-unknown`
+  (`make wasm` → green) and a ULID crate would pull a clock and entropy into the wasm graph, so generation is
+  behind an injected `IdGenerator` (`decision_entity-identity-ulid-injected-generator.md`); the parameter is a
+  bounded exact `Rational` in `sc-core`, not `sc-units`' ppm `Ratio`, which would round and drift on every
+  split/merge (`decision_edge-parameter-bounded-exact-rational.md`). Both records carry `answers:` and are in
+  the INDEX: `grep -c 'answers:' docs/decisions/decision_entity-identity-ulid-injected-generator.md` → `1`,
+  `rc=0`.
+- [x] **ADDRESSED (verified)** — every acceptance criterion is a passing test. `cargo test -p sc-core` →
+  `test result: ok. 31 passed` (unit) and `9 passed` (property), `rc=0`: an `EntityId` round-trips its
+  26-character Crockford form and its text order equals its byte order
+  (`an_entity_id_round_trips_and_sorts_lexicographically`); a deterministic generator reproduces a sequence
+  byte-for-byte (`a_deterministic_generator_reproduces_its_sequence`); the parameter is exact under the four
+  operators (`arithmetic_is_exact_and_never_rounds`, `subtraction_and_division_are_exact_inverses`), reduced to
+  a canonical form (`reduction_is_canonical`), totally ordered (`ordering_is_exact_and_total`), bounded by
+  `in_unit_interval` (`the_unit_interval_predicate_is_exact_at_its_ends`), and reports overflow and
+  division-by-zero as typed diagnostics (`a_result_past_i64_is_an_overflow_not_a_wrap`,
+  `division_by_zero_is_a_diagnostic`). `make wasm` → `sc-units + sc-core build for wasm32-unknown-unknown`.
+- [x] **NO REGRESSION** — `make check` → fmt clean, clippy `-D warnings` clean, `cargo test --all` green
+  (sc-units' 21 properties and doc-test unaffected); `make gate` → `=== all doctrines green ===`, `rc=0`. The
+  change is additive: `sc-core` gained an `ontology` module and a property-test target, no existing behaviour
+  changed, and `sc-units` was not touched.
+- [x] **FIX** — implemented `sc_core::ontology`: `id` (`EntityId`, `IdError`, `IdGenerator`,
+  `DeterministicIdGenerator`), `rational` (`Rational`), `reference` (`LocalTag`, `EdgeRef`, `PointRef`, `Param`,
+  `ParamError`), re-exported from `ontology/mod.rs`; updated `lib.rs`'s status and module table; 31 unit tests
+  inline and 9 dependency-free recorded-seed properties in `tests/identity_property.rs`.
+- [x] **LOCKSTEP** — `knowledge-map/subsystems.md` (sc-core is no longer a skeleton) and the regenerated
+  `KNOWLEDGE_MAP.md`; `docs/TASK_TREE.md` (frontier cell), `MEMORY.md` (next action → `.3b`), `LIVE_STATUS.md`
+  (G1 → 3 of 18), `CHANGELOG.md`, `DEV_NOTES.md`, and this tree's frontier, logs and changelog.
+  promotion: declined (the durable design choices are the three decision records `.3` landed; this slice's note is one leaf's implementation history, and the two conventions it records are already the house style `sc-units` set, not a new general rule).
+
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
@@ -429,6 +473,7 @@ Questions deferred to `.2`; closing the leaf records it.
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
 | `2026-09-30` | `.1` | `cargo metadata --no-deps`; `make check`; `make wasm`; `make gate`; `run_g0_exit_review.sh` | crates `sc-core, sc-units`; `21 passed` property + `1` doc-test; wasm build green; `=== all doctrines green ===`; `G0-17`/`G0-18` `MET` — every `.1` criterion re-derived, `rc=0` |
 | `2026-09-30` | `.2` | `cargo test -p sc-units --test property`; `make wasm`; `make gate` | `21 passed` (round-trips, class separation, typed dimension/non-finite errors); wasm cross-build green; `=== all doctrines green ===` — every `.2` criterion re-derived, `rc=0` |
+| `2026-09-30` | `.3a` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate` | `31 passed` unit + `9 passed` property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===` — every `.3a` criterion re-derived, `rc=0` |
 
 ## Commit Log
 
@@ -438,7 +483,8 @@ Questions deferred to `.2`; closing the leaf records it.
 | `.1` | `STITCHCAD-G1-0001 (leaf G1-SLICE.1)` | reconciled: delivered by `G0-CONTRACT.18` (`eb83f01`) ahead of this leaf |
 | `.2` | `STITCHCAD-G1-0002 (leaf G1-SLICE.2)` | reconciled: `sc-units` delivered by `G0-CONTRACT.18`; property-test decision recorded |
 | `.3` | `STITCHCAD-G1-0003 (leaf G1-SLICE.3)` | decomposed into `.3a`/`.3b`/`.3c`; the three design boundaries recorded as layer-C decisions |
-| `.3a` … `.16` | `pending` | — |
+| `.3a` | `STITCHCAD-G1-0004 (leaf G1-SLICE.3a)` | the identity layer: `EntityId`/ULID + injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the exact `Rational`/`Param`; 40 tests, wasm green |
+| `.3b` … `.16` | `pending` | — |
 
 ## Changelog
 
@@ -460,3 +506,11 @@ Questions deferred to `.2`; closing the leaf records it.
   bounded exact rational edge parameter in `sc-core` (not `sc-units`, not the formula bigint), and the
   structural-at-G1 / geometric-at-G2 invariant boundary. The tree is 18 leaves; the frontier advances to
   `.3a`.
+- `2026-09-30`: `.3a` landed — G1's first new product code. `sc_core::ontology`'s identity layer:
+  `EntityId` (a dependency-free hand-rolled ULID, Crockford base32, lexicographically sortable) and the
+  injected `IdGenerator` with a `DeterministicIdGenerator` for replay; `EdgeRef`/`PointRef`/`LocalTag` (stable
+  topological references, never indices); the bounded exact `Rational` and its `[0, 1]` `Param`. 31 unit tests
+  and 9 dependency-free recorded-seed properties green, `sc-core` still cross-builds to wasm, `make gate`
+  green. Built against `decision_entity-identity-ulid-injected-generator.md` and
+  `decision_edge-parameter-bounded-exact-rational.md`. The frontier advances to `.3b` (the persistent-identity
+  contract).

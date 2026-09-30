@@ -16,7 +16,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
 | Defect census | In Progress | 7 open, 44 sealed. Open: D34 + D38 (`PLANNING.5`), D35 (`G1-SLICE.3`), D40 + D46 + D51 (`SPINE.19`), D49 (`SPINE.5`). Both counts derive from a `grep -c` over the census and its archive |
 | G0 — product & semantic contract | Mostly Done | Every clause met and derived except evaluation-seat procurement, accepted open by ruling; closure **unapproved** (governance §6.1). `run_g0_exit_review.sh` → `18 met / 1 not met` |
-| G1 — executable architecture slice | In Progress | 2 of 18 leaves done (`.1` workspace shape, `.2` `sc-units` — delivered by `G0-CONTRACT.18`, reconciled). `.3` decomposed into `.3a`/`.3b`/`.3c`, design recorded; next `.3a` the identity layer |
+| G1 — executable architecture slice | In Progress | 3 of 18 leaves done (`.1` workspace shape, `.2` `sc-units`, `.3a` the `sc-core` identity layer — ULID `EntityId`, `EdgeRef`/`PointRef`, exact `Rational`). Next `.3b` the persistent-identity contract |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 leaves; CSP + oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |

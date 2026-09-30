@@ -1,15 +1,16 @@
 //! `sc-core` — the garment ontology, the construction recipe and the command bus.
 //!
-//! **Status: skeleton.** This crate exists at gate G0 for one reason: the roadmap's G0 CI clause
-//! (§4.3, §7.3) requires a real `cargo build --target wasm32-unknown-unknown` smoketest over
-//! `sc-core` and `sc-units`, so the WASM story is proven before the crates have anything to say.
-//! A compile-only check on the host is explicitly not enough.
+//! **Status: the ontology's identity layer has landed (`G1-SLICE.3a`).** The crate began at gate G0 as a
+//! documented skeleton whose one job was to prove the WASM story for real (the roadmap's G0 CI clause, §4.3
+//! and §7.3, requires a real `cargo build --target wasm32-unknown-unknown`, not a host `cargo check`). It now
+//! carries the first of the ontology: entity identity, the stable topological references and the exact
+//! rational parameter, in [`ontology`].
 //!
 //! What lands here, and when:
 //!
 //! | Module | Contents | Leaf |
 //! | --- | --- | --- |
-//! | `ontology` | `Piece`, `SeamSpan`/`SewingGraph`, `Notch`, `Grainline`, `SeamAllowance`, darts and closures — with ULID identity and the persistent-identity contract (references to stable topological entities, never array indices) | `G0-CONTRACT.3` specifies, `G1-SLICE.3` implements |
+//! | `ontology` | **landed (`.3a`):** `EntityId` (a ULID) and the injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the bounded exact `Rational` and its `[0, 1]` `Param`. **pending:** the persistent-identity contract (`.3b`), then `Piece`, `SeamSpan`/`SewingGraph`, `Notch`, `Grainline`, `SeamAllowance`, darts and closures (`.3c`) | `G0-CONTRACT.3` specifies, `G1-SLICE.3a`/`.3b`/`.3c` implement |
 //! | `recipe` | the formula graph and ordered drafting operations, evaluated in one deterministic pass | `G0-CONTRACT.9`, `G1-SLICE.5` |
 //! | `command` | the typed command bus: atomic groups, preview/commit, revision preconditions, idempotency, undo granularity | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |
@@ -20,6 +21,8 @@
 
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
+
+pub mod ontology;
 
 /// The schema version of the canonical project format this crate will read and write.
 ///

@@ -20,13 +20,13 @@
   director's ruling of `2026-09-30`, and the gate's **closure unapproved** because governance §6.1 withholds
   approval of a decision's evidence from its author. `ROADMAP.md` stays DRAFT, correctly: one criterion is
   not met.
-- **Next action:** take **`G1-SLICE.3a`** — the identity layer in `sc-core` (`EntityId`/ULID, the injected
-  `IdGenerator`, `EdgeRef`/`PointRef`, the bounded exact rational parameter), G1's first new product code;
-  `.3` was decomposed into `.3a`/`.3b`/`.3c` with its three design boundaries recorded, so `.3a` builds
-  against a fixed design. Take the three unproven contracts early rather than the plumbing: the formula
-  evaluator against `run_formula_language_census.sh` as a differential oracle, the canvas spike against the
-  protocol in `docs/tasks/artifacts/canvas_spike/` (its `results.tsv` is empty and `G1-SLICE.13` fills it),
-  and one CSP constraint. Re-run `bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` for the gate state.
+- **Next action:** take **`G1-SLICE.3b`** — the persistent-identity contract (ontology §1.1): reference
+  resolution under split/merge/reverse/delete and the `RepairTask` an orphan becomes, with reference stability
+  as a tested property; it consumes `.3a`'s identity types. Then `.3c` (the object types). Take the three
+  unproven contracts early rather than the plumbing: the formula evaluator against
+  `run_formula_language_census.sh` as a differential oracle, the canvas spike against the protocol in
+  `docs/tasks/artifacts/canvas_spike/` (its `results.tsv` is empty and `G1-SLICE.13` fills it), and one CSP
+  constraint. Re-run `bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` for the gate state.
 
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
