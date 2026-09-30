@@ -304,7 +304,9 @@ mechanically-enforced form:
   Status: `pending` (created by `G0-CONTRACT.4b`, which performed the first non-changelog rollover and
   found the archive verifier hardcoded to one ledger — defect **D40**; extended by **D46**, the defect census
   becoming `PLANNING.md`'s dominant mass; deferred behind product work by
-  `decision_product-work-takes-the-frontier.md`)
+  `decision_product-work-takes-the-frontier.md`). **Narrowed by `.19.1`, which sealed the defect census at
+  D49's trigger:** what remains is the durable half — a ledger-agnostic verifier, a segment registry, and an
+  arm that refuses a fixed defect left live in the census.
   Goal: make the sealed-archive verifier ledger-agnostic. `docs/history/` now holds two ledgers'
   segments — the changelog's four and the dev notes' one — and only the changelog's have their
   **Coverage** and **pointer** claims checked: `DESCRIPTOR` (digest + declared line count) already runs
@@ -320,6 +322,22 @@ mechanically-enforced form:
   `TOOLBOX.md`, D40 and D46 updated in the same commit.
   Verification: `pending`
   Commit: `pending`
+
+- ID: `SPINE.19.1`
+  Status: `done` (the first of `.19`'s three ledgers, taken at D49's trigger rather than waited for)
+  Goal: seal the **defect census's closed entries** into `docs/history/stitchcad-defects-part1.md` under the
+  descriptor contract, leaving the live census with the open ones and a pointer — D46's remedy, executed
+  because the trigger D49 declares had fired: `wc -lc docs/tasks/PLANNING.md` → `1133 93378`, i.e. 95 % of
+  the `tasks_collection` per-part byte ceiling, so the next defect any slice logged would have blocked a
+  commit.
+  Acceptance: the sealed segment carries its identity (lines, bytes, sha256) and reproduces under
+  `run_changelog_ledger_probes.sh`'s `DESCRIPTOR` rule; every open defect stays live with its owner; the
+  live section states how to derive both counts rather than asserting them; no entry is lost or duplicated
+  across the two files; the tree returns inside its health target; D46 and D38 record what changed.
+  Verification: recorded below and in the acceptance checklist — `44` closed entries sealed (`624` lines /
+  `53 323` bytes, digest reproduced), `7` open kept, `PLANNING.md` `1133` / `93 378` → `515` / `40 606`,
+  and the ledger probes at `9 pass / 0 fail` with `32` segment verdicts.
+  Commit: `STITCHCAD-SPINE-0019a`
 
 - ID: `SPINE.4.5`
   Status: `done`
@@ -470,6 +488,7 @@ mechanically-enforced form:
 | — | `SPINE.20` | `done` | taken immediately after `.15` on the director's instruction to act on the findings: the convention is now a gate (`TABLE-CODE-PIPE`), because a rule that lives only in `COMMIT.md` is a suggestion and what it prevents is a silently dropped column in the book the director reads |
 | — | `SPINE.17` | `done` | taken out of order: a director-approved rule is recorded when it is made |
 | — | `SPINE.18` | `done` | taken immediately after: `.17` shipped a trigger that fired on itself |
+| — | `SPINE.19.1` | `done` | taken at D49's trigger rather than waited for: `PLANNING.md` was at 95 % of its byte ceiling, so the 44 closed defects were sealed and the live census is now the open set |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
 | — | `SPINE.21` | `done` | the cleanup cadence is recurring, and a recurring obligation with no leaf is one somebody rediscovers: taken between two product slices because the 24-hour mark falls inside this one |
 
@@ -582,6 +601,47 @@ placeholder box (defect D15).
   Lesson promotion: declined (no new dated lesson — the run is a cadence discharge, and the reusable rule
   "a recurring obligation needs a recurring leaf" is recorded in this leaf's goal rather than duplicated).
 
+### `SPINE.19.1` — the closed defects are sealed, so the open ones are what a reader meets
+
+- [x] **REPRODUCE / ISSUE** — `wc -lc docs/tasks/PLANNING.md` → `1133 93378` against a `tasks_collection`
+  per-part health of `800` / `65 536` and a ceiling of `1200` / `98 304`: 95 % of the ceiling, with the
+  census section alone at `sed -n '/^## Defects found/,/^## Decisions/p' docs/tasks/PLANNING.md | wc -c` →
+  `69 898` bytes at `HEAD`, of which the closed entries were `50 292` (the sum over the 44 entries this
+  slice sealed). Every closed defect added to it permanently, and the next one any slice logged would have
+  blocked a commit.
+- [x] **ROOT CAUSE (WHY + WHERE)** — D46 named it and `SPINE.19` owns the durable fix, but the deferral's
+  premise ("the file is inside every ceiling today") had expired: `grep -c '^- \*\*D[0-9]'
+  docs/tasks/PLANNING.md` → `51` entries, of which reading each owner line classifies `44` as fixed. The
+  classification has to be read rather than parsed, which is D38 — the states are prose — and is the reason
+  the seal also fixes D38's harm: with only open entries live, the count a reader needs is the count of rows
+  in the file.
+- [x] **ADDRESSED (verified)** — `44` closed entries sealed into `docs/history/stitchcad-defects-part1.md`
+  (`624` lines / `53 323` bytes / `sha256:1897bde0…`), in the census's own order, with the descriptor
+  contract's byte rule honoured: `TMPDIR=$PWD/target/scratch bash
+  docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` → `probes: 9 pass / 0 fail`, `REAL` at
+  `32 verdicts, 0 failures`, so the new segment's digest reproduces under the standing `DESCRIPTOR` rule.
+  `PLANNING.md` → `515` lines / `40 606` bytes, inside its health on both axes. Nothing lost and nothing in
+  two places: `grep -c '^- \*\*D[0-9]'` over the two files → `7` live and `44` sealed, `51` in total, and
+  `comm -12` over the two id lists is empty.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`; `make probes` → `20 suite(s) green`;
+  `bash scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 111 files measured`, with
+  `tasks_collection` falling from `1133` / `93 378` to `991` / `92 650` at the collection maximum and no new
+  warning; the tree-coverage census still reports `10 lanes / 13 trees / 3 sibling(s) / 0 unowned /
+  0 orphan(s) / 0 dead link(s)`, so the new history segment is not mistaken for a task-tree sibling. One
+  defect in this slice's own work was found and fixed before committing: the first seal wrote the descriptor
+  without the content (a missing concatenation), which the `DESCRIPTOR` rule caught as a `1`-byte segment —
+  the arm that proves the digest leg is load-bearing.
+- [x] **FIX** — sealed the closed entries; rewrote the census's intro to say the section holds the OPEN set,
+  name the segment with its identity, and give the two commands that derive the counts instead of a
+  hand-kept pair; recorded in D46 that its remedy is executed and in D38 that the harm is reduced by
+  structure; created this leaf so `.19` keeps the durable half (a ledger-agnostic verifier and a segment
+  registry) undiluted.
+- [x] **LOCKSTEP** — this leaf and checklist, `SPINE.19`'s status note, the tree's frontier, three logs;
+  `docs/tasks/PLANNING.md` (D46, D38, D49), `LIVE_STATUS.md` and `CHANGELOG.md` in this commit.
+  `MEMORY.md` and `docs/TASK_TREE.md` are unchanged: no product frontier moved. Lesson promotion:
+  declined (no new dated lesson — the reusable rule, "seal at the trigger rather than at the breach", is
+  already D49's recorded trigger and this leaf is its second discharge).
+
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
@@ -614,7 +674,8 @@ placeholder box (defect D15).
 | `2026-09-30` | `SPINE.20` | `check_table_code_pipes.sh --self-test`; a scan of every tracked `.md` for the shape it refuses; `check_doctrines.project.sh`; `make gate`; the render oracle it takes as ground truth | `7 arms, 0 failed`; `0` violations in the tracked book, so the gate is absolute and not a ratchet; `PROJECT-SPECIFIC: 3 project doctrine(s) green`; `=== all doctrines green ===`; `probes: 3 pass / 0 fail` |
 
 | `2026-09-30` | `SPINE.20` (CI verdict, observed after the exceptional push `scripts/` owed) | `make check`/`gate`/`probes`; `git push origin main`; the Actions runs API for `head_sha=a743d53` | `exit=0` all three; `4bd4027..a743d53  main -> main`, ahead `0`; `runs: 2` — **`doctrines` `success`**, **`rust` `success`**, the first runner execution of `TABLE-CODE-PIPE` |
-| `2026-09-30` | `SPINE.21` | `du -sk` before and after; the residue census over all nine paths; `git ls-files` and `git status --porcelain` for tracked damage; `find` for stray artifacts; `make gate`/`check`/`book`/`probes`/`wasm` | `40 648` KB → `10 808` KB plus the book's `4 120` KB; all nine gone; `0` tracked artifact-shaped files before and after; `0` deleted tracked files; `0` stray artifacts; all five targets green, the book regenerated at exactly `4 120` KB |
+| `2026-09-30` | `SPINE.21` | `du -sk` before and after; the residue census over all nine paths; `git ls-files` and `git status --porcelain`; `find` for strays; `make gate`/`check`/`book`/`probes`/`wasm` | `40 648` KB → `10 808` KB plus the book's `4 120` KB; all nine gone; `0` tracked files touched; `0` strays; five targets green |
+| `2026-09-30` | `SPINE.19.1` | the seal's digest under the standing `DESCRIPTOR` rule; both id censuses and their intersection; `wc -lc` before and after; `make gate`/`probes`; containment; the coverage census | `9 pass / 0 fail`, `32` segment verdicts; `7` live + `44` sealed = `51`, intersection `0`; `1133` / `93 378` → `515` / `40 606`; all green |
 
 ## Commit Log
 
@@ -645,6 +706,7 @@ placeholder box (defect D15).
 | `SPINE.15` | `STITCHCAD-SPINE-0015 (leaf SPINE.15): the table convention is settled by a rendered page` | D22 closed, D47 logged and `SPINE.20` created; both prose-derived maxline targets re-derived; the decisions debt cleared |
 | `SPINE.20` | `STITCHCAD-SPINE-0020 (leaf SPINE.20): the table convention becomes a gate` | D47 closed; `TABLE-CODE-PIPE` registered in the project slot; the inherited arity checker untouched |
 | `SPINE.21` | `STITCHCAD-SPINE-0021 (leaf SPINE.21): the cadence runs, and the residue census proves what it took` | 33 960 KB off the volume; nothing tracked touched; all five make targets green afterwards |
+| `SPINE.19.1` | `STITCHCAD-SPINE-0019a (leaf SPINE.19.1): the closed defects are sealed, so the open ones are what a reader meets` | D46's remedy executed at D49's trigger; `SPINE.19` keeps the durable half |
 | `SPINE.5`, `SPINE.13`, `SPINE.19` | `pending` | — |
 
 ## Changelog
@@ -729,3 +791,13 @@ placeholder box (defect D15).
   was touched, and re-ran all five make targets so the removal is shown to cost rebuild time and
   nothing else. `SPINE.20`'s checklist moved to the evidence sibling, as the convention requires of the
   slice after the one that landed it, which also brings this tree back inside its per-part health.
+- `2026-09-30`: `.19.1` landed — D46's remedy executed at the trigger D49 declares, rather than in the
+    commit that would have breached. `PLANNING.md` had reached `1133` lines / `93 378` B, 95 % of its
+    byte ceiling, with `50 292` B of that belonging to defects already fixed; `44` closed entries were
+    sealed into `docs/history/stitchcad-defects-part1.md` under the descriptor contract and the live
+    census kept the `7` open ones, a pointer, and the two commands that derive both counts. The tree is
+    now `515` / `40 606`, inside its health on both axes, and the standing `DESCRIPTOR` rule reproduces
+    the new segment's digest. Classifying the `51` entries needed a reading of each owner line — three
+    of them use wording no marker list anticipated — which is D38 measured again, and is why `.19`'s
+    durable half (a status token a script can read, a segment registry, and an arm that refuses a fixed
+    defect left live) stays open.

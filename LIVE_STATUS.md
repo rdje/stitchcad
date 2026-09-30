@@ -14,8 +14,8 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Roadmap → task-trees (`PLANNING`) | Done | All 10 lanes owned — 13 trees, 3 evidence siblings, `0 unowned / 0 orphan(s) / 0 dead link(s)`, derived by `run_tree_coverage_census.sh` and watched by its probes |
 | Repo identity & policy (`SPINE`) | In Progress | containment, the acceptance gates, the push cadence and the table convention are enforced or written where authors look. Open: `.5`, `.13`, `.19` |
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
-| Defect census | In Progress | open: D34 + D38 (`PLANNING.5`), D35 (`G1-SLICE.3`), D40 + D46 + D51 (`SPINE.19`), D49 (`SPINE.5`). The logged/closed counts are hand-kept and underivable, which is D38 |
-| G0 — product & semantic contract | In Progress | **Active lane.** All four ADRs, §9's release contract and §7.6's i18n architecture land with the glossary, units, ontology, formula language, envelope, paths, sizes, standards and fixture. Next `.17` |
+| Defect census | In Progress | 7 open, 44 sealed. Open: D34 + D38 (`PLANNING.5`), D35 (`G1-SLICE.3`), D40 + D46 + D51 (`SPINE.19`), D49 (`SPINE.5`). Both counts derive from a `grep -c` over the census and its archive |
+| G0 — product & semantic contract | In Progress | **Active lane.** All four ADRs, §9's release contract and §7.6's i18n architecture are specified. Next `.17`, then the `.15` exit review |
 | G1 — executable architecture slice | Not Started | 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, spikes |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
