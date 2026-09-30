@@ -1,0 +1,17 @@
+# docs/tasks/artifacts/canvas_spike/spike_gates.tsv — the ADR-0002 spike's gate data plane.
+# One row per measured metric. `hard=yes` is a disqualifier (rule R2); `hard=no` is recorded and not
+# gated, because gating a G5 question with a G1 harness settles it with the wrong evidence.
+# Thresholds live HERE, not in the verdict script, so tightening one is a diff a reviewer sees.
+# Source: docs/decisions/decision_adr-0002-ui-stack-and-canvas-spike-protocol.md ("The gates").
+#metric	comparator	threshold	hard	why
+capable	eq	yes	yes	a topology that cannot run in the profile, on all three desktop OSes, is not a candidate
+pick_correct	eq	yes	yes	200 of 200 pick probes must resolve to the declared entity id
+snap_exact	eq	yes	yes	200 of 200 snap probes must land on the mathematically nearest entity
+fidelity_max_px	le	0.5	yes	screen to world to screen error across the whole declared zoom range
+fidelity_drift_px	eq	0	yes	exactly zero after 1000 round trips: no accumulated drift (units §1)
+frame_p95_ms	le	16.7	yes	p95 during scripted zoom and pan at 60 Hz; also the scored metric (R3)
+peak_mb	le	1024	yes	peak resident set on the declared corpus; also the first tiebreak (R3)
+unproven_deps	record	-	no	a count of dependencies nobody has shipped: the second tiebreak (R3), never a disqualifier
+frame_median_ms	record	-	no	recorded: a median hides the hitch a user feels
+cold_start_ms	record	-	no	recorded: startup is a G5 exit criterion
+bundle_kb	record	-	no	recorded: the browser budget is G5's, and the wasm-viewer matrix owns it

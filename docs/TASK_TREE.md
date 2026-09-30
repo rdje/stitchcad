@@ -54,7 +54,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | --- | --- | --- | --- | --- |
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.5` — derive the index↔tree frontier agreement (D34, which recurred on `2026-09-30`) | repo-local |
 | [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5` — the toolbox rows for the instruments in use, then `.13`/`.19`/`.20` | repo-local |
-| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.11` — ADR-0002 as a decision structure + the G1 spike protocol | repo-local |
+| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.12` — approval states and the release contract (§9) | repo-local |
 | [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `proposed` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
@@ -79,7 +79,7 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-Execution order right now: **`G0-CONTRACT.11`–`.12` → `.15`–`.17`**, then `G1-SLICE` … (`.1`–`.10`,
+Execution order right now: **`G0-CONTRACT.12` → `.15`–`.17`**, then `G1-SLICE` … (`.1`–`.11`,
 `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`, `.14`/`.14b`/`.14c`, `.18` and `.19` are done, as are `SPINE.4.4`,
 `.4.5`, `.15` and `.20`). The ruling of `2026-09-30` delegated four items — D27, D32, `.14`'s drafting and the
 containment derivation — and a second instruction delegated its three findings; all are landed, `ROADMAP.md` is

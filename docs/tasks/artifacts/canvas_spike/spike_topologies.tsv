@@ -1,0 +1,10 @@
+# docs/tasks/artifacts/canvas_spike/spike_topologies.tsv — which topology is a candidate in which profile.
+# A topology that does not apply to a profile is not "failed" there, it is ineligible (rule R1), and the
+# verdict says so: a native-only winner is a real outcome with a stated cost, not a defect.
+#topology	profile	applies	note
+webgpu-webview	native	yes	one renderer for both profiles if it wins (R4)
+webgpu-webview	browser	yes	the wasm-viewer profile's own path
+native-wgpu-composited	native	yes	a native surface composed with HTML chrome
+native-wgpu-composited	browser	no	native-only by construction: there is no native surface in a browser
+dom-canvas	native	yes	the platform canvas, which the roadmap refuses to rule out a priori
+dom-canvas	browser	yes	the platform canvas in the profile it was built for

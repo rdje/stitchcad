@@ -63,6 +63,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_acceptance-evidence-per-leaf.md`](docs/decisions/decision_acceptance-evidence-per-leaf.md)
 - [`decision_adopted-external-policy-references.md`](docs/decisions/decision_adopted-external-policy-references.md)
 - [`decision_adr-0001-license-and-solver.md`](docs/decisions/decision_adr-0001-license-and-solver.md)
+- [`decision_adr-0002-ui-stack-and-canvas-spike-protocol.md`](docs/decisions/decision_adr-0002-ui-stack-and-canvas-spike-protocol.md)
 - [`decision_adr-0003-construction-recipe-and-formula-language.md`](docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md)
 - [`decision_adr-0004-interchange-dialects.md`](docs/decisions/decision_adr-0004-interchange-dialects.md)
 - [`decision_d32-proving-gates-proposed-roadmap-amendment.md`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)

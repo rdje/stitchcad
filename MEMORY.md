@@ -15,15 +15,15 @@
 
 - **Project:** StitchCAD — a sewing CAD, headless Rust core: construction-recipe designs, evidence-bearing
   Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.3, DRAFT until G0 exits.
-- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.10`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`,
-  `.14`/`.14b`/`.14c`, `.18`, `.19`. Remaining: `.11`, `.12`, `.15`–`.17`.
-- **Next action:** take **`G0-CONTRACT.11`** — ADR-0002 as a decision *structure*: the chrome choice, the
-  three canvas topologies, the egui/iced dev-shell ruling, the TypeScript domain-logic ban, and the exact G1
-  spike protocol (measurements, pass/fail criteria, decision rule) written now so the outcome cannot be
-  argued after the fact. Then `.12`, `.15`–`.17`. ADR-0003 landed at `.9` (the formula language in three
-  censused parts, Aldrich named as the reference drafting system, `G3-GRADING.16` owning the blocks) and
-  ADR-0004 at `.10` (six axes, a closed registry of four targets, the layer table derived against
-  `ROADMAP.md`).
+- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.11`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`,
+  `.14`/`.14b`/`.14c`, `.18`, `.19`. Remaining: `.12`, `.15`–`.17`.
+- **Next action:** take **`G0-CONTRACT.12`** — approval states and the release contract (roadmap §9): the
+  manifest's contents with the source of each field, approval bound to package identity, stale-ification,
+  package-completeness checking, the graduated acceptance states in order with the evidence each requires,
+  the scoped-approval and scope-narrowing rules, and the human-only approval rule for agents. Then `.16`,
+  `.17` and the `.15` exit review. ADR-0002 landed at `.11` as a decision *structure*: chrome, dev shell and
+  the TypeScript ban are `active`, canvas hosting is `proposed`, and the corpus, the seven gates and the
+  six-rule verdict wait in `docs/tasks/artifacts/canvas_spike/` for `G1-SLICE.13` to measure.
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
 - **Push:** 400-commit cadence, **plus** an immediate push whenever an unpushed commit touches CI, a

@@ -15,6 +15,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 | [`part6.md`](docs/history/stitchcad-changelog-part6.md) | slices 32–33, `STITCHCAD-G0-0007` … `STITCHCAD-G0-0006` | 93 lines, 8284 bytes, `sha256:3148dd0f…` |
 | [`part7.md`](docs/history/stitchcad-changelog-part7.md) | slices 34–35, `STITCHCAD-G0-0013d` … `STITCHCAD-G0-0008` | 105 lines, 9793 bytes, `sha256:ff62d418…` |
 | [`part8.md`](docs/history/stitchcad-changelog-part8.md) | slices 41–42, `STITCHCAD-G0-0014` … `STITCHCAD-G0-0004b` | 106 lines, 9766 bytes, `sha256:2c7ee35a…` |
+| [`part9.md`](docs/history/stitchcad-changelog-part9.md) | the two oldest live entries, `STITCHCAD-G0-0004c` and `STITCHCAD-SPINE-0004d` — no slice range, because the earlier ranges have no producer (D51) | 90 lines, 8386 bytes, `sha256:8e4081d4…` |
 
 **Correction (D30).** part1's own descriptor says its coverage runs "through `STITCHCAD-SPINE-0004c`".
 It does not: part1's newest entry is `STITCHCAD-SPINE-0004b`, and `SPINE-0004c` is sealed in part2.
@@ -28,6 +29,41 @@ The live window below holds the most recent slices. When it passes its health ta
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-G0-0011 - the spike's rule is written before its measurement (leaf `G0-CONTRACT.11`)
+
+ADR-0002 was the one ADR whose evidence does not exist yet, and nothing in the repository constrained what a
+G1 spike would be allowed to conclude. The roadmap itself warns why that matters: "Custom wgpu, not DOM
+canvas" is a hypothesis to test, not an axiom. So the rule was written first.
+
+- **the record** - `docs/decisions/decision_adr-0002-ui-stack-and-canvas-spike-protocol.md` (116 lines):
+  the chrome (Tauri + TypeScript/React, Slint as the named fallback, Flutter still rejected), the egui/iced
+  dev shell and the TypeScript domain-logic ban are `active`; canvas hosting is `proposed`, in the status
+  line rather than a footnote, because a decision whose evidence does not exist yet is still a decision
+  *structure*. It carries the three topologies with the hypothesis each tests, a corpus declared before
+  anybody measures it (16 pieces, 400 boundary vertices each, 200 pick probes, 200 snap probes, 1 000
+  fidelity round trips) with a re-run trigger if a G3 garment exceeds it, seven gates each naming what it
+  protects, and six rules: eligibility, correctness outranking speed, scoring inside a declared margin with
+  a total tiebreak order, a one-renderer preference where that is free, escalation with a bounded fallback,
+  and a verdict a human may overrule only by a recorded decision naming the rows.
+- **the data plane and the instrument** - `docs/tasks/artifacts/canvas_spike/` holds the gates, the
+  applicability table and the rule parameters as three TSVs, plus a `results.tsv` that is empty on purpose:
+  `run_spike_verdict.sh` prints `PENDING` with exit=0 until `G1-SLICE.13` measures, refuses a data set that
+  cannot produce a verdict, and otherwise prints the rule that decided each profile. Tightening a threshold
+  is therefore a diff a reviewer sees, which the GATES-READ arm pins by changing the verdict.
+- **the probe suite** - `run_spike_verdict_probes.sh` -> `13 pass / 0 fail` over twelve synthetic result
+  sets whose verdicts are known in advance: a tie broken by memory, the fastest topology losing to
+  `snap_exact = no`, a faster native-only winner giving way to one renderer for both profiles (R4), a
+  profile with no survivor escalating to the `dev-shell` fallback (R5), an unmeasured gate, an undeclared
+  topology, a missing row, a control and a missing plane. Six arms failed first against a correct
+  instrument because each omitted a row the applicability table declared - recorded as the slice's lesson.
+- **the consumer** - `G1-SLICE.13`'s acceptance now names the instrument by path, the corpus by its
+  declared numbers, and requires the hardware, OS versions and corpus script identity in the results file,
+  because a verdict is scoped to them.
+- **the dev-notes ledger rolled over** in the commit whose append crossed it (`devnotes-part4`, 42 lines /
+  3706 bytes, digest reproduced by `run_changelog_ledger_probes.sh` -> `9 pass / 0 fail`).
+- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `18 suite(s) green`; `make book` ->
+  exit=0; all seven book censuses unchanged; containment `OK - 17 surfaces, 15 routes, 99 files measured`
 
 ## STITCHCAD-G0-0010 - the dialects are a closed registry, not a format with flags (leaf `G0-CONTRACT.10`)
 
@@ -234,95 +270,4 @@ cells. Reading a specification cannot settle that, so a page was rendered.
 - gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `14 suite(s) green`; `make book` ->
   exit=0; `check_live_doc_size.sh --self-test` -> `15 arms, 0 failed`; every book census and the coverage
   census at `0 failure(s)` / `0 orphan(s)`
-
-## STITCHCAD-G0-0004c - the envelope criterion is law, not a proposal (leaves `G0-CONTRACT.4c`, `SPINE.4.5`, `PLANNING.6`, `G0-CONTRACT.14b`)
-
-The director delegated the three findings outright, so the amendment `.4b` had prepared as a *proposal* is ruled
-approved and applied - through the roadmap's own machinery, and with two mechanisms the application exposed as
-missing.
-
-- **roadmap v0.3**: §11 G3 gains an *envelope coverage* exit criterion - every garment §3.2 names drafts,
-  grades and exports at that gate or an earlier one; the A-line skirt at G2, the bodice and sleeve at G3, a
-  classic collar with stand, fall and roll line, trousers carrying at least one pocket and one closure whose
-  buttonhole length is derived from its button - and "a garment the envelope names and no exit criterion proves
-  is a gate failure, not a scope note". The old note that an intermediate "may be inserted without shame" is
-  rewritten so an intermediate can never substitute for a criterion. Marked where the roadmap's revision policy
-  requires: the title, the status block, an Appendix A disposition entry naming its source and the defect it
-  closes, and the end line. `947` lines / `52 818` B, +28 / +1 997
-- **the criterion arrives with owners**, because a roadmap clause no leaf owns is D32 one level up:
-  `G3-GRADING.5` became required (trousers + pocket + derived buttonhole, with a mutation test that editing the
-  button changes the hole), `G3-GRADING.15` was created (the collar, its roll line never exported as a cut
-  line), and `.14`'s exit review now fails if a §3.2 garment has no leaf's evidence. The four matrix cells
-  dropped `(proposed)` -> census `105 rows / 29 diagnostics / 0 failure(s)` with `D32 rows: 0` and
-  `proposed cells: 0`; the A3 advisory and the `(proposed)` mechanism stay for the next one, and its probe arm
-  was rebuilt to pin A3 in BOTH directions (0 real, 1 injected) instead of asserting a count that no longer
-  exists
-- **SPINE.4.5, the mechanism the application needed**: the roadmap's transition-debt baseline was measured at
-  exactly the file's size, so v0.3 could only land by hand-widening a number the doctrine forbids widening. The
-  debt column now accepts `at=<revision>` and the checker REFUSES a baseline whose revision the file's first
-  line no longer declares - a revision may re-base its baseline, but only in the commit that revises, which is
-  where the authority has to be anyway. Declaring the right revision does not license growth past the baseline.
-  This is the containment adoption note's deferred trigger 3 (a stored copy of a mechanically owned value needs
-  an executed freshness oracle) fired and discharged locally: six lines in the existing awk evaluator, not the
-  2 100-line neutral interpreter. `--self-test` `11` -> `15` arms; the probe suite gained `REAL-3`, which stales
-  the real registry to `at=v0.2` and requires the refusal -> `probes: 5 pass / 0 fail`
-- **PLANNING.6 / D44, found because a census was finally run**: the tree-coverage census defined a tree by
-  FILENAME, so the evidence siblings the containment registry prescribes were reported as lane-less orphans -
-  `15 trees / 1 unowned / 4 orphan(s)`, red for two committed slices, because `make probes` globs
-  `run_*probe*.sh` and nothing else ran it. A tree is now recognised structurally by its `- Tree ID:` line in
-  both populations AND in the advisory loop (three copies of one assumption; the advisory one hid `G0-CONTRACT`
-  itself behind its sibling and no exit code could show it), a non-tree file must be linked from a tree or it is
-  a stray, and `run_tree_coverage_probes.sh` puts the census under `make probes` with seven arms ->
-  `census: 10 lanes / 13 trees / 2 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `probes: 7 pass / 0 fail`
-- **G0-CONTRACT.14b, the second finding**: no human is named and none is invented. Governance §8 now states
-  which seats are held ACTING by the director (project owner, procurement - authority he already holds, so the
-  arrangement adds a record and no power) and which is openly VACANT (the sewing/factory domain expert, because
-  competence cannot be acted). An acting holder may not confirm the fixture's `assumed` constants, sign a
-  golden's semantic half, rule a safety term, or approve a byte-changing profile - so the first G2 golden stays
-  gated on a real name, and §8.2 writes the ask per seat so naming one is a single act. The fixture and
-  standards chapters now cite the vacant seat instead of a leaf that cannot name anyone
-- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `13 suite(s) green`; `make book` ->
-  exit=0; glossary `276 terms`, standards `6 registered`, fixture `20 rows / 4 checks / 5 pieces`, ledger
-  `9 pass / 0 fail`, all 0 failures; containment OK with the roadmap re-based under its record
-
-## STITCHCAD-SPINE-0004d - the widest-line target is derived from the cell budget (leaf `SPINE.4.4`)
-
-The containment check printed a warning on every run that no defect stood behind: `book_collection: widest
-line 272 B = 136% of its 200 B target`, where the 272-byte line is a five-column termbase row and the 200-byte
-target was derived from the shape of a prose chapter. The director's ruling of 2026-09-30 made re-deriving it
-the fourth of its four items.
-
-- **the target is now a cell budget, measured**: the binding shape is the glossary termbase
-  (`Term｜What it means｜Canonical object｜Also called｜Machine token`, 276 data rows, 5 columns), whose
-  per-column p95 cells sum to 259 B, plus the GFM separator overhead `3 x columns + 1` = 16 B -> **275 B**.
-  Not a round number, and not today's widest line: the registry forbids deriving health from the largest file,
-  and for a maximum axis that prohibition bites hardest, because the widest line is one row's accident while a
-  per-column budget is what each column must carry
-- **the producer is tracked**: `docs/tasks/artifacts/live_doc_size/run_cell_budget_census.sh` walks every
-  table in a population, reports each shape's per-column widest and p95 cells and both derived budgets, and
-  REFUSES (exit 1) when its recommendation does not cover the population's widest actual line ->
-  `cell budget: 36 shapes / 625 data rows measured / recommended maxline health 275 B`, exit=0. Its
-  `--self-test` pins the arithmetic on a synthetic table whose budget is known by construction ->
-  `probes: 7 pass / 0 fail`
-- **the ceiling rises by record, from 320 to 440 B**: the shape's own worst legitimate row (every column at
-  its widest at once) is 379 B, which the old ceiling would have refused, and 440 = 1.6 x health is the ratio
-  every other row in the registry uses. Authorised by
-  `docs/decisions/decision_maxline-health-derived-from-the-cell-budget.md`, which also records the two
-  rejected alternatives with their arithmetic - raising health to 379 to silence the warning (then the
-  denominator is the worst case, and a prose chapter could carry a 500-byte line), and splitting the
-  collection into prose and table rows (measured: `PARTOF[$path] = sid` means the LAST matching row wins, and
-  one registry field holds one glob, so a split needs `:(glob)` pathspec magic and three rows; deferred with
-  the trigger that would reopen it)
-- **the warning survives, and now means something**: 272 B is 99% of 275 B. No health target at or below the
-  old 320 B ceiling could have silenced a 272-byte row - it would need more than 340 B - which is a structural
-  property of a maximum axis, recorded so nobody re-derives it as a surprise. The remedy that would clear it
-  is a table-authoring convention, which is `SPINE.15`'s beside defect D22, not a bigger number
-- **D42 fixed on the way**: SPINE's 17 completed checklists moved byte-identically into
-  `docs/tasks/SPINE-evidence.md`, taking the tree from 1096 lines / 88341 B to 552 / 42028 - the convention
-  `G0-CONTRACT.4b` recorded, performed by the leaf D42 named
-- gates: `check_live_doc_size.sh` -> `OK - 17 surfaces, 15 routes, 80 files measured`, exit=0, and its
-  `--self-test` -> `11 arms, 0 failed`; `run_live_doc_size_probes.sh` -> `probes: 4 pass / 0 fail`;
-  `make gate` -> `=== all doctrines green ===`; `make probes` -> `12 suite(s) green`. `.doctrine/` changed, so
-  the immediate-push exception fires: this slice pushes at once and records the observed CI verdict in the
-  leaf
 

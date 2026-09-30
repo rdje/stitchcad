@@ -1,0 +1,8 @@
+# docs/tasks/artifacts/canvas_spike/results.tsv — the measurements G1-SLICE.13 records.
+# EMPTY ON PURPOSE. Until rows exist, run_spike_verdict.sh prints PENDING and ADR-0002's canvas half
+# stays `proposed`: a verdict without measurements is exactly what the protocol exists to prevent.
+# One row per applicable (topology, profile) pair in spike_topologies.tsv; every `hard=yes` metric in
+# spike_gates.tsv must carry a value, a recorded metric may be `-`. Reference hardware, OS versions and
+# the corpus script's identity go in the comment block G1 adds below this one, because a verdict is
+# scoped to them.
+#topology	profile	capable	pick_correct	snap_exact	fidelity_max_px	fidelity_drift_px	frame_p95_ms	peak_mb	unproven_deps	frame_median_ms	cold_start_ms	bundle_kb

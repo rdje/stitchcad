@@ -889,6 +889,27 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     with the convention, the formula and the trigger recorded in
     `docs/decisions/decision_knowledge-map-entries-are-orientation-sized.md`.
 
+- **D51** — the sealed changelog descriptors carry a "slices N–M" range that no producer derives, and the
+  ranges disagree with git: part7 says `STITCHCAD-G0-0013d` … `STITCHCAD-G0-0008` are slices 34–35 where a
+  derivation puts them at 37 and 35, and part8 says `STITCHCAD-G0-0014` … `STITCHCAD-G0-0004b` are 41–42
+  where the same derivation puts them at 39 and 38.
+  - Reproduce: `git log --reverse --format='%s' | grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' |
+    awk '!s[$0]++ { n++; print n, $0 }'` → the chronological slice ordinal of every work-unit id, against
+    `grep -h 'Coverage:' docs/history/stitchcad-changelog-part[789].md` → the hand-kept ranges. The
+    ledger's own verifier cannot catch it: `run_changelog_ledger_probes.sh`'s COVERAGE rule reads the
+    *ids* a descriptor names and checks they are in the segment, which they are; the numeric range is
+    prose nothing parses.
+  - Impact: small and contained — the ids are right, so retrieval works — but it is the D36/D38 class
+    exactly: a number restated by hand whose producer lives elsewhere, published in an immutable file where
+    a later correction cannot be made by editing it. Two sealed segments now carry a wrong number
+    permanently.
+  - Owner: `SPINE.19`, which owns the ledger archive and its descriptor contract. **Immediate action taken
+    by `G0-CONTRACT.11`:** `stitchcad-changelog-part9.md` declares no slice range, states in its descriptor
+    why, and records the correction for parts 7 and 8 there and in the live pointer — the D30 pattern, since
+    a sealed segment is immutable. The durable fix is `SPINE.19`'s: either the descriptor contract drops
+    the range (an id list is retrievable and a range is not) or the range gains a producer, and the choice
+    belongs with the leaf that owns the contract.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

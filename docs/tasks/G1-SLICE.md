@@ -192,8 +192,16 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Goal: the canvas-hosting spike that settles ADR-0002 against the protocol written at
   `G0-CONTRACT.11` — zoom/pan, snapping, picking, annotations on a realistic pattern set, native
   AND browser, across the three topologies.
-  Acceptance: the measurements the protocol named are recorded; the decision follows the protocol's
-  rule; ADR-0002 moves from `proposed` to `active` citing this evidence.
+  Acceptance: the measurements the protocol named are recorded in
+  `docs/tasks/artifacts/canvas_spike/results.tsv` — one row per applicable (topology, profile) pair, every
+  gated metric filled, with the reference hardware, the OS versions and the corpus script's identity in the
+  file's comment block, because a verdict is scoped to them; the corpus is the declared one (16 pieces,
+  400 boundary vertices each, 200 pick probes, 200 snap probes, 1 000 fidelity round trips) or the
+  deviation is recorded with its reason; the decision is whatever
+  `bash docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh` prints, rule trace included, and a human
+  overruling it does so by a recorded decision naming the rows it overrules (R6); ADR-0002's canvas half
+  moves from `proposed` to `active` citing that output; and where R5 escalates, the fallback named in
+  `spike_rule.tsv` is what ships until a re-spike.
   Verification: `pending`
   Commit: `pending`
 
@@ -258,6 +266,44 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.13` (acceptance rewritten by `G0-CONTRACT.11`) — a consumer leaf names its instrument, not a protocol in prose
+
+This tree had no completed leaf, so it carried no acceptance boxes — and a staged `docs/tasks/*.md` file
+with no ticked box is refused by `scripts/check_task_acceptance.sh` whenever the same commit stages code.
+These boxes are the evidence for the change `G0-CONTRACT.11` made to this tree, added in the commit that
+made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
+
+- [x] **REPRODUCE / ISSUE** — `.13`'s acceptance pointed at a protocol that did not exist anywhere in the
+  repository: `git show HEAD:docs/tasks/G1-SLICE.md | grep -c 'the measurements the protocol named are
+  recorded'` → `1`, `rc=0`, while `git ls-tree HEAD docs/decisions/ | grep -c adr-0002` → `0`, `rc=1`. A
+  leaf whose acceptance names an absent document cannot be verified, and the spike it owns is the one the
+  roadmap warns must not be argued after the fact.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the protocol is `G0-CONTRACT.11`'s deliverable
+  (`grep -n 'ADR-0002 — UI stack' ROADMAP.md` → `328`, `rc=0`), and that leaf had not been taken, so the
+  consumer was written against an intention. The fix is not a better sentence in this tree: it is the
+  protocol existing as an instrument whose output this leaf's acceptance can cite.
+- [x] **ADDRESSED (verified)** — `.13`'s acceptance now names the instrument by path, the corpus by its
+  declared numbers (16 pieces, 400 boundary vertices each, 200 pick probes, 200 snap probes, 1 000 fidelity
+  round trips), and the evidence obligations a verdict is scoped to (reference hardware, OS versions, corpus
+  script identity), and requires a recorded decision naming the rows for any human overruling the printed
+  verdict. The instrument exists and reports the honest state:
+  `bash docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh` → `spike verdict: 0 rows / 0 profiles /
+  PENDING — ADR-0002's canvas half stays `proposed` until G1-SLICE.13 records measurements / 0 refusal(s)`,
+  `exit=0`; `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/canvas_spike/run_spike_verdict_probes.sh`
+  → `probes: 13 pass / 0 fail`.
+- [x] **NO REGRESSION** — `scripts/check_doctrines.sh` → `=== all doctrines green ===` once this section
+  existed (before it, the same command refused this file by name: `TASK-ACCEPTANCE: docs/tasks/G1-SLICE.md
+  has no 'ROOT CAUSE' box in its acceptance checklist`, `exit=1`, which is the gate working rather than a
+  defect in it); `make probes` → `18 suite(s) green`; `bash
+  docs/tasks/artifacts/planning/run_tree_coverage_census.sh` → `census: 10 lanes / 13 trees / 3 sibling(s)
+  / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`. No Rust file changed in this slice, so `make
+  check` is not its gate; the two new instruments are bash and both were run.
+- [x] **FIX** — rewrote `.13`'s acceptance to consume the protocol as an artifact, and added this
+  subsection so the tree file carries fresh evidence for the change it stages.
+- [x] **LOCKSTEP** — `G0-CONTRACT.md`'s leaf `.11`, its frontier, decisions, three logs and checklist;
+  `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md`,
+  `docs/decisions/INDEX.md` and the regenerated Knowledge Map, all in this commit.
 
 ## Verification Log
 

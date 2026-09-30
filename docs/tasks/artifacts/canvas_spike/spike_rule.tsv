@@ -1,0 +1,7 @@
+# docs/tasks/artifacts/canvas_spike/spike_rule.tsv — the parameters of the decision rule.
+# The rule itself is prose in the decision record (R1–R6); these are the numbers it turns on, so a
+# change to one is a diff a reviewer sees rather than an edit inside a script.
+#parameter	value	why
+margin_pct	10	candidates within this percentage of the best frame_p95_ms are tied (R3), and a topology within it in both profiles is preferred for both (R4)
+tiebreak	peak_mb,unproven_deps,topology	the order a tie is broken in, last one alphabetical so the rule is total
+fallback	dev-shell	the bounded fallback when a profile has no survivor (R5): egui/iced hosts the canvas, G1-SLICE.14

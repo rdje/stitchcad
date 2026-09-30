@@ -894,3 +894,58 @@ Order is landing order, oldest first, so this file reads the same way the tree's
   commit. Both ledgers rolled over in the commit whose append crossed them (`devnotes-part3` 50 lines /
   4723 B, `changelog-part8` 106 lines / 9766 B), with `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`
   reproducing both digests. Lesson promotion: **promoted** — the new record carries an `answers:` line.
+
+### `G0-CONTRACT.10` — the dialects are a closed registry, and the layer table is read against the roadmap
+
+- [x] **REPRODUCE / ISSUE** — ADR-0004 was the last of the four ADRs with neither a record nor a chapter.
+  `git ls-files 'docs/book/src/spec/interchange*' | wc -l` → `0`, and
+  `git ls-files docs/decisions/ | grep -c adr-0004` → `0`, `rc=1`. Three chapters already leaned on the
+  missing one: `git show HEAD:docs/book/src/spec/glossary/interchange-and-envelope.md | grep -c
+  'G0-CONTRACT\.10'` → `16` entries whose canonical object was a leaf rather than a clause,
+  `git show HEAD:docs/book/src/spec/ontology.md | grep -c 'interchange-dialects chapter'` → `1`, and
+  `git show HEAD:docs/book/src/spec/instantiation-paths.md | grep -c 'G0-CONTRACT\.10'` → `2`.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n 'ADR-0004 — Interchange dialects' ROADMAP.md` → `356`, and
+  the clause that makes this a G0 deliverable rather than a writer detail is at `358`: `grep -n 'D6673-10
+  is withdrawn' ROADMAP.md` → `358:- **ASTM D6673-10 is withdrawn (Jan 2019, no replacement)** — record
+  this.`, `rc=0`. A withdrawn specification whose convention cutting rooms still enforce is the reason a
+  dialect is a *named target with a validation behind it* instead of a format with flags: there is no
+  document to conform to, so the oracle can only be a receiver reading the file back. Ownership was
+  unambiguous — leaf `.10` held it and the frontier named it next.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/interchange/run_interchange_census.sh` →
+  `interchange census: 17 layers / 4 targets / 12 entities / 0 failure(s)`, `exit=0`, where the `17`
+  layers and `7` AAMA names are parsed out of `ROADMAP.md`'s own bullet rather than listed beside it, so
+  amending the roadmap's convention reddens this run until the chapter dispositions the change. Its
+  discrimination is proved: `TMPDIR=$PWD/target/scratch bash
+  docs/tasks/artifacts/interchange/run_interchange_probes.sh` → `probes: 13 pass / 0 fail`, including
+  ROADMAP-GROWS (a layer added to a *copy* of the roadmap is refused by number), AXIS-COLUMN (registry
+  column and axis disagreeing in either direction) and CONTROL. The chapter is `303` lines / `21 650` B,
+  widest line `227` B, inside the `book_collection` per-part health of `400` / `24 576` / `275`;
+  `make book` → `INFO HTML book written to …`, `exit=0`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `17 suite(s) green`; the neighbouring censuses unchanged: glossary `294 terms / 8 parts / 155 tokens /
+  0 failure(s)` after five new terms and `16` entries repointed from this leaf to a chapter clause, with
+  the A–Z index re-derived; fixture `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`;
+  formula language `17 bindings / 4 assertions / 13 refusals / 0 mismatch(es)`; standards `6 registered /
+  0 failure(s)`; uncertainty and coverage green; `bash scripts/check_live_doc_size.sh` → `OK — 17
+  surfaces, 15 routes, 91 files measured`, `exit=0`. Two arm defects were found while building the probe
+  suite and fixed there rather than in the census: one arm asserted a *second* symptom the property does
+  not require (an invented AAMA name displacing DRAW, which layer 7 still uses), and one cited `units §9`
+  as a dead clause when §9 exists — an arm whose mutation is not a breach is a green arm that tested
+  nothing.
+- [x] **FIX** — wrote the chapter (six axes with the party that resolves each, a closed registry of four
+  targets, the seventeen-layer table in both naming modes with this project's object mapping, cut-as-1
+  against sew-as-1, BLOCK/SST/PST, one polyline-only entity set for both releases with arcs exact as
+  bulges and Béziers tessellated at T2's bound, three grading carriages, HPGL and PDF, the
+  receiver-config record, seven diagnostics); the ADR-0004 record with ten decisions and the sources read
+  and attempted; the census and its 13-arm probe suite; five glossary terms plus `16` repointed entries
+  and a re-derived index; SUMMARY, the spec index and the ontology's cross-reference. **D50 logged and
+  its live pressure discharged in the same commit:** `KNOWLEDGE_MAP.md` had reached `99 %` of its byte
+  ceiling (`99 8128` against `8192`), so the hand-curated input was trimmed to `37` lines / `3 255` B and
+  the map fell to `84` / `6 733`; the convention, the size formula and the trigger for re-deriving the
+  row are recorded in `decision_knowledge-map-entries-are-orientation-sized.md` and the durable half is
+  `SPINE.5`'s.
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's decisions and logs;
+  `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two
+  instrument rows), `docs/decisions/INDEX.md` (two records), `knowledge-map/subsystems.md` and the
+  regenerated Knowledge Map in this commit. Lesson promotion: **promoted** — the ADR-0004 record carries an
+  `answers:` line.
