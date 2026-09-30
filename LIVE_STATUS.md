@@ -14,7 +14,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Roadmap → task-trees (`PLANNING`) | Done | All 10 roadmap lanes owned: 13 trees, 142 leaves, derived by `run_tree_coverage_census.sh` |
 | Repo identity & policy (`SPINE`) | In Progress | 17 of 20 leaves done; containment, the acceptance gates and the push cadence are enforced and derived. Remaining `.5`/`.13`/`.15` block no product work |
 | Adopted policy set | Done | README policy, claim verification and the containment doctrine are in-repo, with containment **enforced** by the `LIVE-DOC-SIZE` project doctrine |
-| Defect census | In Progress | 33 logged, 29 closed. Open: D22 (`SPINE.15`), D27 (`G0-CONTRACT.14`), D32 (`G0-CONTRACT.15`, five envelope rows no gate proves) |
+| Defect census | In Progress | 33 logged, 29 closed. Open: D22 (`SPINE.15`), D27 (`.14`), D32 (`.15`), D34 (`PLANNING.5`) |
 | G0 — product & semantic contract | In Progress | **Active lane.** `.1`–`.8`, `.13`/`.13b`/`.13c`, `.18` done: glossary, units, ontology, envelope, paths, sizes, standards, ADR-0001, fixture, `sc-units`. Next `.9` |
 | G1 — executable architecture slice | Not Started | 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, spikes |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
