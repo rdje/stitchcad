@@ -36,6 +36,13 @@ every human, identically.
 | `KNOWLEDGE-MAP` | the derived Knowledge Map is in sync (if the subsystem exists) | `knowledge-map/scripts/check_knowledge_map.sh` |
 | `PROJECT-SPECIFIC` | this project's own doctrines | `scripts/check_doctrines.project.sh` |
 
+The project slot currently registers three: `FRESH-ACCEPTANCE-EVIDENCE` (a staged code change adds its own
+ticked, evidence-backed acceptance boxes), `LIVE-DOC-SIZE` (every live document is classified and inside its
+bounds) and `TABLE-CODE-PIPE` (no raw pipe inside a code span in a staged table row — a renderer splits the
+cell there and drops the rightmost one silently, which the inherited `TABLE-ARITY-RATCHET` cannot see because
+it treats a code span as protective; settled against a rendered page by `SPINE.15`, defect D22/D47). The
+authoritative list is the registry inside `scripts/check_doctrines.project.sh`.
+
 **Project-specific doctrines go in `scripts/check_doctrines.project.sh`** (the pluggable
 slot) — never in the universal driver. That is where a project adds the equivalent of its
 own build gates, format checks, invariant proofs, etc.

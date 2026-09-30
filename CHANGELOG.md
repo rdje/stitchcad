@@ -28,6 +28,39 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-SPINE-0020 - the table convention becomes a gate (leaf `SPINE.20`)
+
+`SPINE.15` settled D22 against a rendered page and left the answer enforced by nothing: the convention lived in
+`COMMIT.md` prose while the only gate that reads table cells asserts the opposite. A rule that lives in a doc is
+a suggestion, and what this one prevents is a silently dropped column in the book the director reads.
+
+- **`TABLE-CODE-PIPE`** (`scripts/check_table_code_pipes.sh`, registered in the project slot, mirrored in
+  `DOCTRINE_ENFORCEMENT.md`): a staged `.md` table row carrying a raw pipe inside a code span is refused, with
+  the file, the line, the offending span and the escaped form to write instead. Fence-aware (a quoted row inside
+  a code block is documentation, not a table), code-span aware for any backtick run, and scoped to table rows -
+  prose has no cell to split, and an ordinary separator is the arity checker's business, not this one's
+- **seven self-test arms** -> `table-code-pipe --self-test: 7 arms, 0 failed`: raw pipe refused, escaped
+  accepted, ordinary separator accepted, fenced quotation accepted, double-backtick span refused, prose
+  accepted, indented row refused. And it fires in the real hook path, demonstrated rather than assumed: staging
+  a scratch file with a bad row made the enforcer print `PROJECT TABLE-CODE-PIPE: BREACH (exit=1)` before the
+  file was unstaged and deleted
+- **absolute, not a ratchet, and measured before choosing**: `bash scripts/check_table_code_pipes.sh --all` ->
+  `table-code-pipe --all: 88 tracked .md files, 0 offending table rows`, exit=0, so nothing had to be
+  grandfathered. The `--all` mode exists so that claim is re-runnable instead of a memory of the slice that
+  measured it - the precedent is `check_gap_claims.sh --all`, and the breach it avoids is D20
+- **the inherited checker is untouched** (`git diff --stat HEAD -- scripts/check_table_arity.sh` -> empty): a
+  defect in NEUTRAL spine code is fixed in the project slot and reported upstream with its evidence, never
+  patched locally where `scripts/update_scaffold.sh` would silently overwrite or diverge it. D47 closes; the
+  divergence is recorded in `DOCTRINE_ENFORCEMENT.md` and in
+  `decision_table-cells-escape-pipes-render-to-settle.md`
+- the doctrine and probe counts in `LIVE_STATUS.md` are re-derived, not incremented: `scripts/check_doctrines.sh
+  | grep -c '✅'` -> `13` printed rows (12 universal including the conditionally appended `KNOWLEDGE-MAP`, plus
+  the project row), `check_doctrines.project.sh` -> `3 project doctrine(s) green`, `find docs/tasks/artifacts
+  -name 'run_*probe*.sh' | wc -l` -> `14`
+- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `14 suite(s) green`; `make book` ->
+  exit=0; containment `OK - 17 surfaces, 15 routes, 89 files measured`; every census `0 failure(s)`.
+  `scripts/` changed, so the immediate push is owed and the observed CI verdict goes into the leaf
+
 ## STITCHCAD-SPINE-0015 - the table convention is settled by a rendered page (leaf `SPINE.15`)
 
 D22 asked whether a GFM renderer splits a table cell on a raw `|` inside a code span, and was logged as a

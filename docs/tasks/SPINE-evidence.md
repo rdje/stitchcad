@@ -684,3 +684,70 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   `LIVE_STATUS.md`, `CHANGELOG.md` and `DEV_NOTES.md` updated in the commit that lands this leaf
   (`STITCHCAD-G0-0004c`, the slice that hit the trigger). Lesson promotion: **promoted** — the record carries
   an `answers:` line.
+
+### `SPINE.15` — the table convention is settled by a rendered page, and both prose-derived targets are re-derived
+
+- [x] **REPRODUCE / ISSUE** — defect D22 was logged as a *question* because nobody had rendered the case: the
+  inherited `scripts/check_table_arity.sh` documents its cell rule as "pipes NOT inside an inline code span"
+  and self-tests it (`bash scripts/check_table_arity.sh --self-test` → `arm ok  a pipe inside a code span is
+  not a separator (0)`, `exit=0`), while `DOCTRINE_ENFORCEMENT.md` warns that GFM "silently DROPS extra
+  cells". Two tracked instruments disagreed about what a row means, and the repository's convention depended
+  on which was right.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the checker was written against a reading of the specification, and no
+  oracle in the tree ever rendered a page. Settled by rendering one: a scratch mdBook with a 3-column table
+  whose first data cell carries `` `x | y` `` and whose second carries `` `x \| y` ``, built and parsed.
+  `mdbook build` → `INFO HTML book written to …`, `exit=0`, and the rendered rows are
+  `3 cell(s): A raw pipe in a code span: `x │ y` │ 2` and `3 cell(s): B escaped pipe in a code span: x | y │ 2 │ 3`.
+  So the renderer **splits at the raw pipe**, breaks the code span open, shifts the cells and **drops the
+  rightmost one** — the checker's rule is wrong for the renderer this book ships through, and the loss is
+  silent: no diagnostic, and the source still reads correctly. The first cut of this oracle asserted "2
+  cells" from a 2-column page and went red on the 3-column truth, so the arm now asserts the *property* (the
+  first cell truncated at the pipe, the last cell not the one written) rather than a count.
+- [x] **ADDRESSED (verified)** — the oracle is tracked, so the answer is re-runnable rather than remembered:
+  `bash docs/tasks/artifacts/table_render/run_table_render_probes.sh` → `probes: 3 pass / 0 fail`, `exit=0`,
+  printing the rendered rows, and its third arm pins the divergence by requiring the inherited checker's own
+  self-test to still assert the opposite. The convention is written where authors look — `COMMIT.md`'s
+  lockstep list gains **Table authoring**: escape every pipe in a table cell including inside code spans; a
+  cell is not a paragraph, so content that outgrows its column becomes a bounded subsection; and a maxline
+  target is a shape budget whose 80 % warning means *at budget*. Both remaining prose-derived maxline targets
+  are re-derived with the `SPINE.4.4` instrument rather than guessed:
+  `CELL_BUDGET_GLOB='docs/decisions/*.md' bash docs/tasks/artifacts/live_doc_size/run_cell_budget_census.sh` →
+  `8 shapes / 47 data rows measured / recommended maxline health 382 B`, `exit=0` (binding shape: the index's
+  `Record｜Type｜One-line hook` row, 17 rows), and the same over `docs/tasks/*.md` →
+  `13 shapes / 259 data rows measured / recommended maxline health 443 B`, `exit=0` (binding shape: the
+  verification log's `Date｜Leaf｜Checks｜Result` row, 52 rows). The registry now carries `382` and `443`,
+  the `decisions_collection` `maxline=491` debt is **cleared**, and
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 87 files measured`,
+  `exit=0`, with `decisions_collection: widest line 353 B = 92% of its 382 B target` and
+  `tasks_collection: widest line 443 B = 100% of its 443 B target`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `14 suite(s) green`, `exit=0` (thirteen before this leaf; the fourteenth is the render oracle);
+  `bash scripts/check_live_doc_size.sh --self-test` → `15 arms, 0 failed`; the containment probe suite →
+  `probes: 5 pass / 0 fail` including `REAL-3`; every book census green and unchanged — glossary
+  `276 terms / 8 parts / 145 tokens / 0 failure(s)`, matrix `105 rows / 29 diagnostics / 0 failure(s)`,
+  standards `6 registered / 6 designations used / 0 failure(s)`, fixture
+  `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`, coverage
+  `10 lanes / 13 trees / 3 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`; `make book` → `exit=0`.
+  The inherited checker was **not** modified: `git diff --stat HEAD -- scripts/check_table_arity.sh` → empty,
+  `rc=0`, because a NEUTRAL spine file is reported upstream and never patched locally.
+- [x] **FIX** — built the render oracle as a tracked probe (refusing with `exit=2` when `mdbook` is absent,
+  rather than reporting green over a page nobody rendered); wrote the convention into `COMMIT.md`; re-derived
+  both targets and cleared the debt; and removed the fat that the old prose-derived targets had been blamed
+  for — the `491` B `Class｜Behaviour｜Files` row in
+  `decision_scaffold-sync-protects-project-content.md` became two bounded bullets (the house remedy), nine
+  index hooks that had grown into three-line summaries are one line each again, and four verification-log
+  rows above the derived budget were tightened. The target moved *and* the rows moved: raising a number to fit
+  verbosity and trimming rows to fit a guess are both wrong, and this leaf did neither alone.
+- [x] **The upstream question is reported, not patched, and the local gap is owned.** D22 closes with the
+  renderer's answer recorded; **D47** records that nothing in this repository mechanically refuses the row the
+  renderer truncates (the inherited checker reports `0` defects for it), and **`SPINE.20`** owns the
+  project-slot check, with the render probe as its ground truth. A convention in `COMMIT.md` is what authors
+  read; a gate is what holds when they do not, and this repository's own doctrine says a rule that lives only
+  in a doc is a suggestion.
+- [x] **LOCKSTEP** — D22 closed and D47 logged in `docs/tasks/PLANNING.md`; `SPINE.20` created here;
+  `COMMIT.md` gains the convention; `TOOLBOX.md` gains the render oracle; the containment adoption record's
+  trigger 3 was already marked fired by `SPINE.4.5` and its max-axis note is cited by the new convention;
+  `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and `DEV_NOTES.md` updated in this commit; the index carries
+  `docs/decisions/decision_table-cells-escape-pipes-render-to-settle.md`. Lesson promotion: **promoted** — that
+  new record carries the rendered evidence and an `answers:` line, and
+  `decision_maxline-health-derived-from-the-cell-budget.md` gains the max-axis consequence this leaf measured.

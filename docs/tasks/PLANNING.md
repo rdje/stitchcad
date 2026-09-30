@@ -369,10 +369,14 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Impact: the failure is invisible in the source and visible only in the rendered page — a column of a
     contract silently missing from the book the director reads, with every gate green. That is the exact shape
     `TABLE-ARITY-RATCHET` was ported to catch, and its inherited implementation cannot catch this instance.
-  - Owner: `SPINE.20` (new leaf) — a project-slot check that refuses an unescaped `|` inside a code span in a
-    staged `.md` table row, with the render probe as its ground truth and arms for both. The inherited
-    `check_table_arity.sh` stays untouched (NEUTRAL, re-synced by `scripts/update_scaffold.sh`), and the
-    divergence is reported upstream rather than patched locally, per this repository's standing rule.
+  - Owner: `SPINE.20` (**fixed**) — `scripts/check_table_code_pipes.sh` is registered as the project doctrine
+    `TABLE-CODE-PIPE` and refuses a staged `.md` table row carrying a raw pipe inside a code span, naming the
+    file, the line and the escaped form to write instead. Seven `--self-test` arms (raw, escaped, an ordinary
+    separator, a fenced quotation, a double-backtick span, prose, an indented row) → `7 arms, 0 failed`; the
+    whole tracked book measured `0` violations first, so the gate is absolute rather than a ratchet; the render
+    probe stays its ground truth. The inherited `check_table_arity.sh` is untouched (NEUTRAL, re-synced by
+    `scripts/update_scaffold.sh`) and the divergence is mirrored in `DOCTRINE_ENFORCEMENT.md` for the upstream
+    report, per this repository's standing rule.
 
 - **D24** — a process defect, surfaced by the director rather than by any gate: of this project's first
   17 commits, 15 were spine/governance slices and none was product work. No garment-domain
