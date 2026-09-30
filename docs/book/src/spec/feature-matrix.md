@@ -120,14 +120,14 @@ chapter is inside that family or explicitly outside it.
 | ease as a first-class body-to-garment mapping | supported | ontology §2.2; without it the two instantiation paths cannot be reconciled | G3 | — |
 | fit intent as an ordered vocabulary | supported | ontology §2.2: `close`, `semi` and `loose` can be compared, filtered and validated | G3 | — |
 | negative ease | rejected | ontology §2.2 allows it only where declared, and no v1 envelope garment declares it | G3 | `env_negative_ease` |
-| size set: labels, order, base size | supported | ontology §2.3 and roadmap §3.4 make the size set a first-class object | G1 | — |
-| measurement-driven regeneration | supported | roadmap §3.3 path 1 — the parametric vision, MTM-ready | G3 | — |
-| grade-rule instantiation, `.rul` | supported | roadmap §3.3 path 2 — what RTW factories' systems reconstruct | G3 | — |
-| incremental and cumulative rule tables | supported | roadmap §3.3 names both, with stack-point, fixed-perimeter and smoothing attributes | G3 | — |
+| size set: labels, order, base size | supported | ontology §2.3, [size sets §2](size-sets.md) and roadmap §3.4 make it a first-class object | G1 | — |
+| measurement-driven regeneration | supported | roadmap §3.3 path 1 and [instantiation paths §2](instantiation-paths.md) — MTM-ready | G3 | — |
+| grade-rule instantiation, `.rul` | supported | roadmap §3.3 path 2 and [instantiation paths §3](instantiation-paths.md) | G3 | — |
+| incremental and cumulative rule tables | supported | roadmap §3.3 and [instantiation paths §3](instantiation-paths.md), with all three attributes | G3 | — |
 | both paths, with the divergence declared | supported | roadmap §3.3: independently drafted sizes are not exactly reconstructible, and the loss is stated | G3 | — |
-| extreme sizes checked after reconstruction | supported | roadmap §3.3 requires the check on the target system's output, not on the base size | G3 | — |
-| EN 13402 and ASTM D5585 mappings | supported | roadmap §3.4 names both size systems the model must express | G3 | — |
-| multi-dimensional and custom charts | supported | roadmap §3.4 names them; a custom chart is a size system of one's own | G3 | — |
+| extreme sizes checked after reconstruction | supported | roadmap §3.3 and [instantiation paths §7](instantiation-paths.md): on the target system's output | G3 | — |
+| EN 13402 and ASTM D5585 mappings | supported | roadmap §3.4 and [size sets §8](size-sets.md); the standards' content is verified by `G0-CONTRACT.7` | G3 | — |
+| multi-dimensional and custom charts | supported | roadmap §3.4 and [size sets §7](size-sets.md); a custom chart is a size system of one's own | G3 | — |
 | the five uncertainty states on every parameter | supported | ontology §5: a value with no state has no provenance and cannot be exported honestly | G1 model, G4 dashboard | — |
 | body-scan MTM | rejected | roadmap §1.3 makes it a v1 non-goal, and roadmap §4.5 keeps scans out of the repository | G7 or later | `env_body_scan` |
 

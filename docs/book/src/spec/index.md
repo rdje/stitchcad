@@ -27,7 +27,7 @@ must satisfy. It is written during gate G0 (the product-and-semantic-contract ga
 | [Garment ontology](ontology.md) | Every first-class object: identity, fields, invariants, and how it carries uncertainty |
 | [Supported envelope](feature-matrix.md) | What v1 supports, what it rejects with a diagnostic, and what is deferred — the boundary of the release claim |
 | [Instantiation paths](instantiation-paths.md) | Measurement-driven regeneration and grade-rule instantiation, where they diverge, and the declared equivalence tolerance |
-| Size sets | Size labels versus order, base size, multi-dimensional charts, and which object owns a size set |
+| [Size sets](size-sets.md) | Size labels versus order, base size, multi-dimensional charts, and which object owns a size set |
 | Command layer | The typed command set, atomic groups, preview/commit, revision preconditions, undo/redo granularity, and agent authority levels |
 | Release and approval | The manifest, what approval binds to, how it stale-ifies, and the graduated acceptance states |
 | Interchange dialects | AAMA named layers against ASTM numbered layers, R12/R13, blocks, SST/PST, grading modes, tessellation policy |

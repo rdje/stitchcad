@@ -131,14 +131,16 @@ not a contract.
   Commit: `STITCHCAD-G0-0005`
 
 - ID: `G0-CONTRACT.6`
-  Status: `pending`
+  Status: `done`
   Goal: decide and record SizeSet ownership (default per §3.4: referenced by Design,
   overridable per Factory Profile with a recorded transformation).
   Acceptance: a decision record with context/decision/consequences; the spec chapter states
   the object's fields, label-vs-order semantics, base size, multi-dimensional charts and the
   EN 13402 / ASTM D5585 mappings it must express.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — the record carries context, three candidate owners, the decision and its
+  consequences; the chapter states all ten fields, the label/order separation, the base rules, breaks,
+  axes and the five systems; both censuses green; the book builds.
+  Commit: `STITCHCAD-G0-0006`
 
 - ID: `G0-CONTRACT.7`
   Status: `pending`
@@ -316,8 +318,9 @@ not a contract.
 | 7 | `G0-CONTRACT.4` | `done` | the supported / rejected / deferred matrix: 105 rows, 29 diagnostics, and a census that derives its coverage of the ontology, the non-goals and the envelope |
 | 8 | `G0-CONTRACT.13c` | `done` | the fixture's waist geometry is arithmetically wrong (D33): drafted as written its finished waist is 46.0 cm, not the declared 74.0 cm, and its own oracle cannot see it. `.5` uses this fixture for its divergence example, so the numbers must be right first |
 | 9 | `G0-CONTRACT.5` | `done` | both instantiation paths, the three-part information loss, the `.rul` attributes given StitchCAD semantics, the equivalence contract and the eight extreme-size checks |
-| 10 | `G0-CONTRACT.6` | `pending` | **next** — size-set ownership: the decision record plus the chapter on labels vs order, base size, multi-dimensional charts and the EN 13402 / ASTM D5585 mappings |
-| 11 | `G0-CONTRACT.7`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
+| 10 | `G0-CONTRACT.6` | `done` | size-set ownership decided and recorded; the chapter states the object, the label/order separation, breaks, axes and the five designation systems |
+| 11 | `G0-CONTRACT.7` | `pending` | **next** — the measurement and POM standards: what ISO 8559, ASTM D5219, EN 13402 and ASTM D5585 are each used for, what is adopted, and the verification status of every claim about a standard nobody has read in this repository |
+| 12 | `G0-CONTRACT.8`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -343,6 +346,10 @@ not a contract.
   token writes `→ token`. Recorded as `docs/decisions/decision_machine-tokens-declared-where-used.md`
   with the measurement behind it, because the rule binds every later chapter and every crate.
 
+- `2026-09-30`, leaf `.6`: a **size label is prose, not a token**, so labels are written in quotes in the
+  specification and never in a machine-token style. The glossary census found the violation (three example
+  labels in backticks were reported as undeclared tokens) before it became a convention in the chapters
+  that follow.
 - `2026-09-30`, leaf `.4`: a feature matrix row whose proof no gate has accepted says **`unnamed (D32)`**
   rather than borrowing a gate. Assigning a gate would invent a commitment on that gate's behalf, and a
   silently borrowed gate is how an envelope claim becomes untestable. The census prints those rows on
@@ -640,6 +647,57 @@ not a contract.
   subsystem, so the derived map carries it; D32 logged in `PLANNING.md`; `LIVE_STATUS.md`, `MEMORY.md`,
   `CHANGELOG.md` and `docs/TASK_TREE.md` updated in this commit.
 
+### `G0-CONTRACT.6` — size-set ownership decided, and the commit path stops needing a hand-carried variable
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — roadmap §3.4 leaves the owner of the size set open at G0 ("whether it
+  lives in the Design, the Factory Profile, or a third Order object is decided at G0") and ontology §2.3
+  forwards to a chapter that did not exist: `git ls-tree --name-only HEAD docs/book/src/spec/` →
+  `feature-matrix.md`, `glossary/`, `glossary.md`, `index.md`, `instantiation-paths.md`, `ontology.md`,
+  `reference-skirt.md`, `units-and-tolerances.md`, `rc=0`. Two consequences were already live: `.5` consumes
+  a base size and breaks it could not name an owner for, and roadmap §7.5's rule that quantities belong to an
+  Order object had nothing enforcing it, so a size set could have grown a ratio and coupled every commercial
+  change to a design revision. A second, unrelated cause is fixed in the same commit: the ledger probe
+  needed `LEDGER_PENDING=<id>` in the environment, so `make probes` — which `COMMIT.md` requires before a
+  push — was red during every commit that appended a changelog entry (`make probes` → `Error 1`, measured
+  twice this session).
+- [x] **ADDRESSED (verified)** — `docs/decisions/decision_size-set-ownership.md` (context, three candidate
+  owners argued, six operative rules, consequences, re-open condition, `answers:` line, indexed) and
+  `docs/book/src/spec/size-sets.md` (`187` lines / `12 812` B, widest line `216`): ten fields with types and
+  requiredness, the label/order separation with the sort that proves it ("XS, S, M, L, XL, 2XL" sorts 2XL
+  first), the base-size rules, breaks per adjacent pair, multi-dimensional axes, the five designation
+  systems stated as *what the model must express* with EN 13402 and ASTM D5585 content explicitly not
+  asserted and owned by `.7`, and MTM as a set of one. Both censuses green:
+  `run_glossary_census.sh` → `275 terms / 8 parts / 144 tokens / 0 failure(s)`, `exit=0` (the glossary grew
+  by `5` terms and re-derived its index); `run_feature_matrix_census.sh` →
+  `105 rows / 29 diagnostics / 0 failure(s)`, `exit=0`. The probe seam is now derived: with no environment
+  variable set, `run_changelog_ledger_probes.sh` → `probes: 6 pass / 0 fail` and `make probes` →
+  `10 suite(s) green`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `10 suite(s) green` (`73` arms, `0 fail`), including the matrix suite at `probes: 11 pass / 0 fail` after
+  gaining the M7 link rule and its `DEAD-LINK` arm; `make book` → `exit=0` with `8` spec pages rendered;
+  `bash scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 67 files measured`, `exit=0`, with
+  `memory_pointer` back inside its `34`-line health target after trimming and every book part under its
+  per-part ceilings; no product code changed, so `make check` is unaffected (`test result: ok` across the
+  workspace on the last run that touched Rust).
+- [x] **FIX** — wrote the record and the chapter; renamed two size-set fields that would have collided with
+  tokens the glossary already owns (`system` → `size_system`, `base` → `base_size`) so one token keeps one
+  meaning; gave `provenance` and `chart` their own glossary tokens; added the M7 link rule to the matrix
+  census because this slice introduced cross-chapter links into a normative table; replaced the ledger
+  probe's hand-carried variable with a derivation from the working tree (the newest live entry is excused
+  only when `git diff HEAD` shows this tree adding it, so a mistyped id fails on the next run instead of
+  being excused forever).
+- [x] **The census caught a convention violation in the chapter before it shipped** — and the fix was the
+  rule, not an exemption. Three example size labels were written in backticks, so C1 reported `S`, `M` and
+  `L` as machine tokens nothing declared: `glossary census … 3 failure(s)`. A size label is prose a factory
+  reads, not an identifier a program reads, so labels are now quoted and §3 of the chapter states the
+  distinction normatively. That is the token decision record applying itself to a case its author had not
+  thought about, which is the only evidence a convention is real.
+- [x] **LOCKSTEP** — `SUMMARY.md` and `spec/index.md` link the chapter; `ontology.md` §2.3's forward
+  reference resolves; six matrix rows now cite the chapters that specify them (which is what made M7
+  necessary); `docs/decisions/INDEX.md` carries the new record; `TOOLBOX.md`'s matrix row names the link
+  rule; the glossary grew `5` terms with its index re-derived; `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` and `docs/TASK_TREE.md` updated in this commit.
+
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and `.18` (the code leaf) additionally fills a `### G0-CONTRACT.18` checklist
 subsection with real tool output in the same commit as the change. This tree file carries no
@@ -659,6 +717,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-29` | `G0-CONTRACT.18` (CI verdict, observed after the exceptional push) | `git push origin main`; GitHub Actions runs API for `head_sha=119946b` | `051a075..119946b  main -> main`, ahead `0`; **`rust` completed `success`** (first execution of the new wasm32 smoketest step) and **`doctrines` completed `success`**; `runs: 2`, both concluded |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 | `2026-09-29` | `G0-CONTRACT.13b` | token census over the fixture at `HEAD` vs the working tree; `python3` re-derivation of both waistband readings; `make book`; `make gate` | undeclared tokens `19` → `6`, the six being glossary vocabulary; folded band `10.0` cm vs faced `6.0` cm per piece, so §4 and §6 are different garments (D27); no §4 result changed; `exit=0` both |
+| `2026-09-30` | `G0-CONTRACT.6` | glossary, feature-matrix (now with M7 link resolution) and matrix probe suites; `make book`; `make gate`; containment | `275 terms / 8 parts / 0 failure(s)`; `105 rows / 29 diagnostics / 0 failure(s)`; `probes: 11 pass / 0 fail`; `exit=0` with 8 spec pages; chapter `187` lines / `12 812` B |
 | `2026-09-30` | `G0-CONTRACT.5` | `python3` re-derivation of the graded fixture (15 quantities, both routes); glossary and feature-matrix censuses; `make book`; `make gate`; containment | side-seam length `43.104524` cm by both paths, difference `0.00e+00`; graded `waist_closure` `19.500 = 19.500`; `270 terms / 0 failure(s)`; `105 rows / 0 failure(s)`; `exit=0`, 7 spec pages; chapter `254` lines / `19 496` B |
 | `2026-09-30` | `G0-CONTRACT.13c` | `python3` re-derivation of all 18 §4 rows and of both waist readings; glossary census; `make book`; `make gate` | `0` mismatches; finished waist `74.0` cm (was `46.0` as written); `waist_closure` `18.5 = 18.5`; dart centre `11.25`; `265 terms / 0 failure(s)`; `exit=0` both |
 | `2026-09-30` | `G0-CONTRACT.4` | feature-matrix census; both probe suites; glossary census; `make book`; `make gate`; `make probes`; containment | `105 rows / 29 diagnostics / 0 failure(s)`; `probes: 10 pass / 0 fail` twice; `265 terms / 8 parts / 0 failure(s)`; `exit=0`, 6 spec pages; `=== all doctrines green ===`; `10 suite(s) green` |
@@ -679,10 +738,17 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.4` | `STITCHCAD-G0-0004 (leaf G0-CONTRACT.4): the supported envelope` | 105 rows, 29 diagnostics; D32 logged and kept visible by the census |
 | `G0-CONTRACT.13c` | `STITCHCAD-G0-0013c (leaf G0-CONTRACT.13c): the fixture's waist, corrected` | D33 fixed; §4 gains `waist_closure`; the general rule is a layer-C record |
 | `G0-CONTRACT.5` | `STITCHCAD-G0-0005 (leaf G0-CONTRACT.5): both instantiation paths` | the loss stated in three parts; the fixture grades exactly, and the chapter says why that proves nothing general |
+| `G0-CONTRACT.6` | `STITCHCAD-G0-0006 (leaf G0-CONTRACT.6): size-set ownership decided` | a layer-C record plus the chapter; quantities stay out of the size set |
 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-30`: `.6` landed — roadmap §3.4's open question is closed: a `SizeSet` is its own object,
+  referenced by the `Design` at a revision, overridable per Factory Profile through a recorded
+  transformation that produces a *resolved* set, and carrying no quantities (those are order data, §7.5).
+  The chapter states the ten fields, why a label is a name and an order is authored rather than sorted, the
+  base-size rules, breaks, multi-dimensional axes, and what the model must express for each of the five
+  designation systems — with EN 13402 and ASTM D5585 content explicitly *not* asserted and handed to `.7`.
 - `2026-09-30`: `.5` landed — both instantiation paths are normative: inputs, process, outputs, authority
   and oracle per path; grade points as `PointRef`s; allowances re-derived rather than graded (with the
   corner consequence stated); `stack point` / `fixed perimeter` / `smoothing` given StitchCAD semantics and

@@ -19,6 +19,7 @@
 #   MISSING-NONGOAL   a roadmap §1.3 non-goal with no rejected row is refused (M4)
 #   MISSING-ENVELOPE  an envelope garment with no supported row is refused (M5)
 #   BAD-GATE          a gate cell naming a gate roadmap §11 does not have is refused (M6)
+#   DEAD-LINK         a markdown link to a chapter that does not exist is refused (M7)
 #   MISSING           a root with no matrix REFUSES (exit 2) rather than reporting green over nothing
 #
 # Usage:  bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_probes.sh
@@ -122,6 +123,14 @@ out="$(run "$D")"; rc=$?
 if [ "$rc" -eq 1 ] && grep -q 'names no gate, track or recorded gap' <<<"$out"; then
   ok BAD-GATE "a gate cell of prose instead of a gate is refused (exit=$rc)"
 else bad BAD-GATE "a gate-less commitment was accepted (exit=$rc)" "$out"; fi
+
+# ---------------------------------------------------------------- DEAD-LINK (M7)
+D="$WORK/deadlink"; mkroot "$D"
+sedfile "$D/$MATRIX_REL" 's#(reference-skirt\.md)#(reference-skirt-TYPO.md)#'
+out="$(run "$D")"; rc=$?
+if [ "$rc" -eq 1 ] && grep -q 'links to reference-skirt-TYPO.md, which does not exist' <<<"$out"; then
+  ok DEAD-LINK "a link to a chapter that does not exist is refused by name (exit=$rc)"
+else bad DEAD-LINK "a dead link in a normative chapter was accepted (exit=$rc)" "$out"; fi
 
 # ---------------------------------------------------------------- MISSING
 D="$WORK/empty"; mkdir -p "$D"

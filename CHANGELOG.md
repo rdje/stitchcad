@@ -24,6 +24,53 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G0-0006 - size-set ownership decided, and a label is not a token (leaf `G0-CONTRACT.6`)
+
+Roadmap §3.4 left one question open at G0 - "whether [the SizeSet] lives in the Design, the Factory
+Profile, or a third Order object" - and ontology §2.3 pointed at this chapter for the answer. Both now
+exist: `docs/decisions/decision_size-set-ownership.md` and `docs/book/src/spec/size-sets.md` (187 lines /
+12 812 bytes).
+
+- **the decision**: a `SizeSet` is its own object with identity and revision; a `Design` REFERENCES it (by
+  id plus the revision it was authored against, so re-opening a design pins what it was built with); a
+  Factory Profile may override it, and an override is a typed transformation that produces a *resolved*
+  size set naming the design's reference, the profile's revision, the transformation and its evidence -
+  never an in-place relabeling, so a release package can always say whose sizes it cut
+- **quantities stay out**: roadmap §7.5 puts size-run quantities in an Order object, not in the reusable
+  design, so a size set carries none and a tech pack that needs them records an unresolved input rather
+  than inventing a ratio - a ratio baked into a design would make a commercial change stale-ify approvals
+  that geometry never touched
+- **the three candidate owners are argued, not listed**: design-only cannot serve a factory's house chart;
+  profile-only makes a design unsized until a factory exists, which breaks the headless CLI, the WASM
+  viewer and the reference fixture; an Order object owns quantities but must not own sizes, because the
+  recipe has to be evaluable with no order in the loop. Precedence follows roadmap §8: a hard restriction
+  outranks a factory override, and the conflict is visible rather than merged
+- **the chapter is normative about the object**: ten fields with types and requiredness; labels are names
+  and `members` is an AUTHORED order that no code path re-sorts (an alphanumeric sort of "XS, S, M, L, XL,
+  2XL" puts 2XL first); exactly one base size which SHALL be a member and which is what cumulative and
+  incremental breaks are measured from; breaks per adjacent pair so an uneven range is expressible, and a
+  set with no breaks serves regeneration while refusing grading with a diagnostic; multi-dimensional
+  systems as named axes where a member is a point and an absent combination is absent, never interpolated
+- **EN 13402 and ASTM D5585 are named, not quoted**: §8 states what the model must EXPRESS for each of the
+  five designation systems and marks the standards' content as cited-from-the-roadmap with
+  `G0-CONTRACT.7` as the owner that reads them. Asserting a standard's tables without having read it is
+  the exact failure the claim-verification policy exists to stop
+- **MTM is not a special case**: a made-to-measure instance is a `custom` set of one whose chart comes from
+  body measurements, whose base is its only member and whose breaks are empty - so path 2 refuses and
+  path 1 is the only route
+- **the glossary census found a convention violation in the new chapter before it shipped**: three example
+  size labels were written in backticks, so C1 reported `S`, `M` and `L` as undeclared machine tokens. The
+  fix was not an exemption but the rule - a label is prose a factory reads, a token is an identifier a
+  program reads, so labels are quoted and §3 of the chapter now says so. Glossary: 270 -> **275 terms**
+  (`size system`, `axis`, `resolved size set`, `size-set transformation`, `order object`), index re-derived,
+  `275 terms / 8 parts / 144 tokens / 0 failure(s)`
+- **the matrix census grew a link rule (M7)** because this slice added cross-chapter links to the matrix:
+  every markdown link in a normative chapter must resolve, and a cited clause must exist in its target.
+  Its RED arm mutates one link in a copy and requires the refusal -> `probes: 11 pass / 0 fail`
+- gates: `make gate` -> "=== all doctrines green ==="; `make book` -> exit=0 with 8 spec pages;
+  feature-matrix census -> "105 rows / 29 diagnostics / 0 failure(s)"; containment -> OK, 67 files
+  measured; no product code touched
+
 ## STITCHCAD-G0-0005 - both instantiation paths, and the loss between them stated (leaf `G0-CONTRACT.5`)
 
 docs/book/src/spec/instantiation-paths.md specifies the two ways a design becomes a sized garment -

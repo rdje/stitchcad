@@ -26,6 +26,8 @@
 #                  it names as unsupported appears in a `rejected` row
 #   M6 gates       every gate cell names a real gate or track (one that roadmap §11 has a heading for) or
 #                  the literal `unnamed (D32)`; a blank or prose-only cell is refused
+#   M7 links       every markdown link in the chapter resolves to a file that exists, and a link that
+#                  cites a clause cites one the target chapter actually has
 # ADVISORY, printed and never a failure:
 #   A1 the count of `unnamed (D32)` rows, on every run, because §14 of the chapter promises the gap stays
 #      visible rather than being closed by forgetting it
@@ -135,6 +137,13 @@ awk '/^### 1\.3 Non-goals/,/^---$/' "$ROADMAP" | grep '^- ' | sed 's/^- //' \
 
 awk 'match($0, /^### (G[0-7]|V[12]) /) { h = substr($0, RSTART, RLENGTH); sub(/^### /, "", h); sub(/ $/, "", h); print h }' \
   "$ROADMAP" | LC_ALL=C sort -u > "$GATES"
+
+SPEC_DIR="docs/book/src/spec"
+HEADINGS="$SCRATCH/headings.tsv"
+{ find "$SPEC_DIR" -name '*.md' -type f; } | while IFS= read -r f; do
+  awk -v file="$f" 'match($0, /^(##|###|####) [0-9]+(\.[0-9]+)*/) {
+    h = substr($0, RSTART, RLENGTH); sub(/^#+ /, "", h); printf "%s\t%s\n", file, h }' "$f"
+done | LC_ALL=C sort -u > "$HEADINGS"
 
 if [ -d "$GLOSSARY_DIR" ]; then
   awk -F'|' '/^\|/ { t = $2; gsub(/^[ \t]+|[ \t]+$/, "", t)
@@ -293,6 +302,37 @@ m6=$(awk -F'\t' -v gates="$GATES" '
 m6n=${m6##*COUNT }; [ -n "${m6%%COUNT*}" ] && printf '%s' "${m6%%COUNT*}"
 fails=$((fails + m6n))
 echo "  real gates in roadmap §11: $(grep -c . "$GATES") · breaches: $m6n"
+
+# ── M7 every link in the chapter resolves ─────────────────────────────────────────────────────
+echo "-- M7 every link in the chapter resolves"
+m7=$(awk -v mat="$MATRIX" -v specdir="$SPEC_DIR" -v heads="$HEADINGS" '
+  BEGIN { while ((getline l < heads) > 0) { split(l, a, "\t"); H[a[1] "\t" a[2]] = 1 } close(heads); bad = 0 }
+  {
+    rest = $0
+    while (match(rest, /\[[^]]*\]\([^)]*\)/)) {
+      link = substr(rest, RSTART, RLENGTH); rest = substr(rest, RSTART + RLENGTH)
+      match(link, /\(([^)]*)\)/); path = substr(link, RSTART + 1, RLENGTH - 2)
+      if (path ~ /^https?:/) continue
+      target = specdir "/" path
+      gsub(/\/[^\/]*\/\.\.\//, "/", target)
+      if (system("test -f \"" target "\"") != 0) {
+        printf "  x %s:%d links to %s, which does not exist\n", mat, NR, path; bad++; continue
+      }
+      if (match(link, /§/)) {
+        c = substr(link, RSTART + 2)
+        if (match(c, /^[0-9]+(\.[0-9]+)*/)) {
+          clause = substr(c, RSTART, RLENGTH)
+          if (!((target "\t" clause) in H)) {
+            printf "  x %s:%d cites §%s, which %s has no heading for\n", mat, NR, clause, path; bad++
+          }
+        }
+      }
+    }
+  }
+  END { printf "COUNT %d\n", bad }' "$MATRIX")
+m7n=${m7##*COUNT }; [ -n "${m7%%COUNT*}" ] && printf '%s' "${m7%%COUNT*}"
+fails=$((fails + m7n))
+echo "  dead links: $m7n"
 
 # ── A1 advisory: the recorded gap stays visible ───────────────────────────────────────────────
 gap=$(awk -F'\t' '$5 ~ /unnamed \(D32\)/ { n++; printf "    · %s (%s)\n", $2, $3 } END { printf "COUNT %d\n", n+0 }' "$ROWS")

@@ -27,7 +27,7 @@
 | precedence | the order conflicts are resolved in: hard restriction > factory override > preference > default | roadmap §8 | composition order, priority | `precedence` |
 | preference | an overridable default that carries its provenance, unlike an invented value | [ontology §5](../ontology.md) | default, house preference | `preference` |
 | production release | the artifact class a factory cuts from, and the strictest column of the policy matrix | roadmap §8.2 · specified by `G0-CONTRACT.12` | release, production package, *Produktionsfreigabe* | — |
-| provenance | where a value came from, recorded with it — a source, a profile, an assumption, a formula | [ontology §2.2](../ontology.md) | origin, lineage, *Herkunft* | `source` |
+| provenance | where a value came from, recorded with it — a source, a profile, an assumption, a formula | [ontology §2.2](../ontology.md) | origin, lineage, source, *Herkunft* | `provenance` |
 | release package | the immutable set of artifacts plus manifest that a factory receives | roadmap §9 · specified by `G0-CONTRACT.12` | package, delivery, signoff package | — |
 | stale-ification ⚠ | any input or artifact change makes a prior approval void; approval is never inherited silently | roadmap §9 · specified by `G0-CONTRACT.12` | invalidation, approval expiry | — |
 | target system | the specific vendor product and version a profile is written for, with its accepted artifacts | roadmap §8 | receiver, factory system, *Zielsystem* | `system` |

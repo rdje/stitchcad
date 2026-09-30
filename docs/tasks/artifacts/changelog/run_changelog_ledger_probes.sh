@@ -30,12 +30,15 @@
 # part1's coverage line is wrong and part1 is immutable, so the correction lives in a superseding
 # record (part2's descriptor and the live pointer), never in an edit of the sealed file.
 #
-# THE PENDING SEAM, and why it exists: a changelog entry is written BEFORE the commit that carries it, so
-# between the append and the commit its id is in the file and not in the history — a false red on every
-# single slice, and a permanent false red is how a check teaches authors to ignore it. `LEDGER_PENDING=<id>`
-# declares that one id as the newest; ORDER prints that it honoured the seam, and the seam cannot hide an
-# inversion between two committed ids. After the commit the variable is unset and the arm derives
-# everything from history alone.
+# THE PENDING CASE, and why it is derived rather than declared: a changelog entry is written BEFORE the
+# commit that carries it, so between the append and the commit its id is in the file and not in the
+# history. Without handling that, `make probes` — which COMMIT.md requires before a push — is red at
+# exactly the moment it is asked for, and a permanent false red is how a check teaches authors to ignore
+# it. So ORDER derives the pending case instead of trusting a variable: the NEWEST live entry is excused
+# only when it is absent from history AND this working tree is the one adding it (`git diff HEAD` shows
+# `+## <id>` in CHANGELOG.md). After the commit the diff is empty, so a mistyped id fails on the next run
+# rather than being excused forever, and an absent id anywhere but the newest position always fails.
+# `LEDGER_PENDING=<id>` remains as an explicit override for a synthetic root with no git history.
 #
 # Usage:  bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh
 # Output: per-arm lines plus `probes: N pass / M fail` (exit nonzero if M > 0).
@@ -76,9 +79,19 @@ ledger_verdicts() {
   if [ -n "$order" ] && [ -f "$order" ]; then ids="$(cat "$order")"
   else
     ids="$(git log --format='%s' 2>/dev/null | grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?' | awk '!s[$0]++')"
-    if [ -n "${LEDGER_PENDING:-}" ]; then
-      ids="$(printf '%s\n%s\n' "$LEDGER_PENDING" "$ids" | awk '!s[$0]++')"
-      pending_note=" (pending id $LEDGER_PENDING honoured as newest)"
+    newest="$(printf '%s\n' "$live" | head -1)"
+    brief="$root/git_message_brief.txt"
+    if [ -n "$newest" ] && ! printf '%s\n' "$ids" | grep -qx -- "$newest"; then
+      if [ -n "${LEDGER_PENDING:-}" ] && [ "$LEDGER_PENDING" = "$newest" ]; then
+        ids="$(printf '%s\n%s\n' "$newest" "$ids")"
+        pending_note=" ($newest taken as newest from LEDGER_PENDING)"
+      elif git diff HEAD -- "$root/CHANGELOG.md" 2>/dev/null | grep -q "^+## $newest "; then
+        ids="$(printf '%s\n%s\n' "$newest" "$ids")"
+        pending_note=" ($newest is being added by this working tree and is not committed yet)"
+      elif [ -f "$brief" ] && grep -qF -- "$newest" "$brief"; then
+        ids="$(printf '%s\n%s\n' "$newest" "$ids")"
+        pending_note=" ($newest is the entry the staged commit message carries, not yet in history)"
+      fi
     fi
   fi
   prev=""; prevpos=0; rc=0; detail=""

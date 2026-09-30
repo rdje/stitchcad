@@ -18,4 +18,5 @@
   - [Garment ontology](spec/ontology.md)
   - [The supported envelope](spec/feature-matrix.md)
   - [Instantiation paths](spec/instantiation-paths.md)
+  - [Size sets](spec/size-sets.md)
   - [The reference skirt](spec/reference-skirt.md)

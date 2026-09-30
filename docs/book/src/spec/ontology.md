@@ -91,7 +91,7 @@ graded size and a re-drafted size differ by an amount nobody can explain.
 
 The set of sizes a design is instantiated in: labels, their order, the base size, and the mapping to a
 size system (EN 13402, ASTM D5585, alphanumeric, numeric, or custom). Ownership — whether the size set
-belongs to the design, the factory profile, or an order object — is decided in the size-sets chapter.
+belongs to the design, the factory profile, or an order object — is decided in the [size-sets chapter](size-sets.md).
 
 ## 3. The design
 

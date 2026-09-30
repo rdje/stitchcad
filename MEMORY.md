@@ -16,13 +16,13 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs, versioned
   evidence-bearing Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.2, DRAFT
   until G0 exits.
-- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.6`. Done: `.1` glossary (270 terms),
-  `.2` units, `.3` ontology, `.4` envelope (105 rows), `.5` instantiation paths, `.13`/`.13b`/`.13c`
-  fixture, `.18` `sc-units` + `sc-core` + G0 CI.
-- **Next action:** `.6`, size-set ownership — a decision record (default per roadmap §3.4: referenced by
-  the Design, overridable per Factory Profile with a recorded transformation) plus
-  `docs/book/src/spec/size-sets.md`: labels vs order, base size, multi-dimensional charts, the EN 13402
-  and ASTM D5585 mappings, and which object owns a set. Commit `STITCHCAD-G0-0006`.
+- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.7`. Done: `.1` glossary (275 terms),
+  `.2` units, `.3` ontology, `.4` envelope (105 rows), `.5` instantiation paths, `.6` size sets,
+  `.13`/`.13b`/`.13c` fixture, `.18` `sc-units` + `sc-core` + G0 CI.
+- **Next action:** `.7`, the measurement standards — `docs/book/src/spec/standards.md`: what ISO 8559,
+  ASTM D5219, EN 13402 and ASTM D5585 are each used for here, what is adopted and what is not, and a
+  verification status per claim (`read-in-repo` / `cited-from-roadmap` / `unverified-with-owner`). No
+  clause or table is asserted without a source. Commit `STITCHCAD-G0-0007`.
 
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
