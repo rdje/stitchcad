@@ -132,7 +132,7 @@ part_files() { find "$PARTS_DIR" -name '*.md' -type f | LC_ALL=C sort; }
   find "$BOOK_SRC" -name '*.md' -type f
   printf '%s\n' "$ROADMAP"
 } | while IFS= read -r f; do
-  awk -v file="$f" 'match($0, /^#{2,4} [0-9]+(\.[0-9]+)*/) {
+  awk -v file="$f" 'match($0, /^(##|###|####) [0-9]+(\.[0-9]+)*/) {   # h2-h4; alternation, not a `{2,4}` interval   # `###+`, not `#{2,4}`: intervals are a regex extension
     h = substr($0, RSTART, RLENGTH); sub(/^#+ /, "", h); printf "%s\t%s\n", file, h }' "$f"
 done | LC_ALL=C sort -u > "$HEADINGS"
 

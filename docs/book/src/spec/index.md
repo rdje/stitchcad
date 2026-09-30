@@ -25,7 +25,7 @@ must satisfy. It is written during gate G0 (the product-and-semantic-contract ga
 | [Glossary](glossary.md) | One meaning per construction term, its canonical object, the synonyms factories and other CADs use, and the machine token that must never be rendered raw |
 | [Units and tolerances](units-and-tolerances.md) | The internal unit, the five tolerance classes and how each is derived, the curve set, the offset error budget |
 | [Garment ontology](ontology.md) | Every first-class object: identity, fields, invariants, and how it carries uncertainty |
-| Supported envelope | What v1 supports, what it rejects with a diagnostic, and what is deferred — the boundary of the release claim |
+| [Supported envelope](feature-matrix.md) | What v1 supports, what it rejects with a diagnostic, and what is deferred — the boundary of the release claim |
 | Instantiation paths | Measurement-driven regeneration and grade-rule instantiation, where they diverge, and the declared equivalence tolerance |
 | Size sets | Size labels versus order, base size, multi-dimensional charts, and which object owns a size set |
 | Command layer | The typed command set, atomic groups, preview/commit, revision preconditions, undo/redo granularity, and agent authority levels |

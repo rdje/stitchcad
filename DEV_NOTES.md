@@ -1,5 +1,32 @@
 # DEV_NOTES.md
 
+## _(2026-09-30)_ — a boundary is only real if something enumerates it, and a RED arm must remove the property
+
+- **Writing the feature matrix found a roadmap gap that reading it four times had not.** Roadmap §3.2 puts
+  a classic collar and trousers inside the v1 envelope; ontology §4.7 specifies button and pocket objects;
+  and no gate's exit criteria in §11 mention any of them
+  (`sed -n '/### G3 /,/### G4 /p' ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'` → `0`). The
+  gap was invisible while the envelope was prose, because prose does not have to enumerate. It became
+  visible the moment each feature needed a disposition AND a gate, and refusing to invent one produced
+  `unnamed (D32)` — five rows the census now prints on every run. General rule: **a table with a required
+  column is a census of the prose it replaces.** The column nobody can fill is the finding.
+- **A RED arm that mutates one instance of a property tests nothing.** Two of the matrix probe's ten arms
+  passed at `exit=0` on the first run: renaming `` `ngo_costing` `` renamed its §10 declaration and its row
+  together, and de-citing one of three rows citing `ontology §4.4` left the clause covered. Both reported
+  "the census discriminates" while the census was never asked to. The fix was to make the mutation the only
+  copy of the property. Corollary worth keeping beside D15's shadowing probe: a suite's value is
+  concentrated in its RED arms, so an arm deserves the same suspicion as a green gate — **what else in the
+  tree still satisfies this rule?** Promoted to `TOOLBOX.md`'s probe conventions rather than to a layer-C
+  record, because that is the file a probe author is directed to read (`CLAUDE.md` step 3) and a record
+  would duplicate it; `promotion: declined` is recorded in the leaf.
+- **The same slice reproduced the failure mode in the instrument itself.** Replacing a `{2,4}` interval
+  with `###+` "for portability" silently stopped matching `##`-level headings, so the ontology-coverage rule
+  required three clauses fewer and printed `0 failure(s)`. Nothing in the output distinguished "covered"
+  from "not looking". Two guards caught it: a GREEN arm over the real tree (which reports the *count* of
+  required clauses, so a shrinking population is visible) and a RED arm over a single citation. Corollary:
+  **a census should print the size of the population it judged, not only the number of breaches** — a
+  count is the only thing that reveals a rule that quietly stopped looking.
+
 ## _(2026-09-30)_ — a vocabulary census is a domain-defect detector, and a green rule may be a vacuous one
 
 - **The instrument found the domain defect, not the reading.** Building the glossary's token census

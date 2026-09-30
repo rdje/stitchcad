@@ -105,14 +105,16 @@ not a contract.
   Commit: `STITCHCAD-G0-0003`
 
 - ID: `G0-CONTRACT.4`
-  Status: `pending`
+  Status: `done`
   Goal: the supported / rejected / deferred feature matrix bounding the v1 release claim
   (woven family: A-line skirt with waist dart + CB zipper, darted bodice, set-in sleeve,
   classic collar, trousers), with the diagnostic each rejected construction must produce.
   Acceptance: every row is one of supported/rejected/deferred with a reason and a gate;
   nothing in the ontology is silently unlisted; non-goals (§1.3) appear as rejected rows.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below and in the acceptance checklist — 105 rows, 29 declared diagnostics, the
+  coverage census at `0 failure(s)`, its 10 probe arms green, and the ontology/non-goal/envelope
+  coverage all derived rather than asserted.
+  Commit: `STITCHCAD-G0-0004`
 
 - ID: `G0-CONTRACT.5`
   Status: `pending`
@@ -295,8 +297,9 @@ not a contract.
 | 4 | `G0-CONTRACT.13` | `done` | the fixture now gives every later chapter a concrete garment to be checked against |
 | 5 | `G0-CONTRACT.13b` | `done` | the fixture's undeclared tokens (D26) and its disputed waistband (D27), found while building `.1`'s census; the glossary's coverage rule cannot pass over a chapter that uses names it never declares |
 | 6 | `G0-CONTRACT.1` | `done` | the glossary: 239 terms in 8 domain parts, one owner per machine token, ⚠ on the safety-relevant ones, and a census that derives its coverage |
-| 7 | `G0-CONTRACT.4` | `pending` | **next** — the supported / rejected / deferred feature matrix: it bounds the v1 release claim, and every envelope term it introduces joins the glossary |
-| 8 | `G0-CONTRACT.5`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
+| 7 | `G0-CONTRACT.4` | `done` | the supported / rejected / deferred matrix: 105 rows, 29 diagnostics, and a census that derives its coverage of the ontology, the non-goals and the envelope |
+| 8 | `G0-CONTRACT.5` | `pending` | **next** — both instantiation paths: regeneration and `.rul` grade rules, where they diverge, and the declared equivalence tolerance. It also owns the three `.rul` attributes (`stack point`, `fixed perimeter`, `smoothing`) the glossary deliberately leaves unspecified |
+| 9 | `G0-CONTRACT.6`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -321,6 +324,15 @@ not a contract.
 - `2026-09-30`, leaf `.1`: a **machine token has exactly one owner**, and an entry that shares another's
   token writes `→ token`. Recorded as `docs/decisions/decision_machine-tokens-declared-where-used.md`
   with the measurement behind it, because the rule binds every later chapter and every crate.
+
+- `2026-09-30`, leaf `.4`: a feature matrix row whose proof no gate has accepted says **`unnamed (D32)`**
+  rather than borrowing a gate. Assigning a gate would invent a commitment on that gate's behalf, and a
+  silently borrowed gate is how an envelope claim becomes untestable. The census prints those rows on
+  every run (advisory `A1`), so the gap is closed by a decision at `.15`, not by being forgotten.
+- `2026-09-30`, leaf `.4`: a citation in the matrix's reason column repeats its source per clause
+  (`ontology §1, ontology §1.1`, never `ontology §1 and §1.1`), because the census reads citations
+  mechanically and a bare `§1.1` after a comma is ambiguous between two documents with overlapping clause
+  numbers.
 
 ## Open Questions
 
@@ -550,6 +562,66 @@ not a contract.
   the `DEV_NOTES.md` lesson is promoted to; D29/D30/D31 closed in `PLANNING.md`; `LIVE_STATUS.md`,
   `MEMORY.md` and `CHANGELOG.md` updated in this commit.
 
+### `G0-CONTRACT.4` — the release claim gets a boundary, and the boundary is derived
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the G0 exit list requires a "supported/rejected/deferred feature
+  matrix" and roadmap §3.2 promises "A supported/rejected/deferred feature matrix is a G0 deliverable",
+  but the boundary existed only as prose in two places that do not enumerate: `git ls-tree --name-only
+  HEAD docs/book/src/spec/` → `glossary/`, `glossary.md`, `index.md`, `ontology.md`,
+  `reference-skirt.md`, `units-and-tolerances.md`, `rc=0` — no matrix. Without one, three populations
+  stay unchecked: the ontology's object clauses (a feature nobody dispositioned is a feature a factory
+  discovers), roadmap §1.3's non-goals (a refusal a partner does not know about is a refusal they test),
+  and roadmap §3.2's envelope. The gap is not hypothetical — writing the rows surfaced **D32**: collar,
+  trousers, buttons, pockets and the fly they imply are inside the declared envelope and outside every
+  gate's exit criteria, `sed -n '/### G3 /,/### G4 /p' ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'`
+  → `0`.
+- [x] **ADDRESSED (verified)** — `docs/book/src/spec/feature-matrix.md` (`306` lines / `28 646` bytes,
+  widest line `197`) dispositions **105 rows**: `76` supported, `19` rejected, `10` deferred; `29`
+  diagnostic tokens are declared in §10 with the arguments each must carry, and §1 fixes the three rules
+  (no silent approximation, a supported row names its proof, modelled is not supported). Its acceptance
+  clause — "nothing in the ontology is silently unlisted" — is derived, not asserted:
+  `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` →
+  `feature-matrix census: 105 rows / 29 diagnostics / 0 failure(s)`, `exit=0`, with `16` required ontology
+  object clauses all cited, `8` of `8` roadmap §1.3 non-goals matched to a rejected row (the mapping is
+  printed), `5` of `5` envelope garments supported and `3` of `3` named refusals rejected, and every gate
+  cell resolving to a real roadmap §11 gate or to `unnamed (D32)`. The glossary absorbed the `26` terms
+  the matrix introduces (`239` → `265`), re-derived:
+  `bash docs/tasks/artifacts/glossary/run_glossary_census.sh` → `265 terms / 8 parts / 139 tokens /
+  0 failure(s)`, `exit=0`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `10 suite(s) green` (`72` arms, `0 fail`), including the new
+  `run_feature_matrix_probes.sh` → `probes: 10 pass / 0 fail` and the glossary suite still at
+  `10 pass / 0 fail`; `make check` → `5` `test result: ok` lines across the workspace, no product code
+  touched; `make book` → `INFO HTML book written to …`, `exit=0` with `6` spec pages rendered;
+  `bash scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 64 files measured`, `exit=0`.
+  Containment is inside every ceiling with two axes over *health* and recorded here rather than trimmed:
+  the matrix part is `28 646` B against a `24 576` B per-part health (117 %, ceiling `40 960`), and the
+  glossary's widest table row is `268` B against a `200` B health (ceiling `320`) — a five-column
+  reference table is not the prose shape those health targets were derived from. `subsystems_input` is at
+  `3 131` B against `3 072` (102 %, ceiling `6 144`); its registry row already names `SPINE.5` as the
+  owner of re-deriving that target.
+- [x] **FIX** — wrote the chapter (dispositions and their three rules, the garment family, five feature
+  sections, the non-goal table, the D32 gap table, the diagnostic contract, what G7's statement must
+  carry, verification status, the derivation, and the test obligations); added `26` glossary entries and
+  regenerated the A–Z index with `--emit-index`; built the census as the tracked producer and its probe
+  suite as ground truth; logged D32 with the census as its reproduce command so the gap stays visible on
+  every run. The DEV_NOTES lesson's promotion decision, on one line because the gate reads lines:
+  promotion: declined (the rule binds probe authors, so it went into TOOLBOX.md's probe conventions, which CLAUDE.md step 3 sends every agent to; a layer-C record would duplicate it).
+- [x] **Two probe arms were wrong before the census was right, and the census was right** — measured, not
+  assumed. `UNDECLARED-DIAG` renamed `` `ngo_costing` `` everywhere, which renames the §10 declaration and
+  its row together and therefore changes nothing the census can see; `UNCITED-ONTOLOGY` de-cited one of the
+  three rows citing `ontology §4.4`, leaving the clause covered. Both arms passed for the wrong reason —
+  exit `0` where a refusal was owed — until each mutation became the *only* copy of the property. The
+  general rule, which is the same one D15's shadowing probe taught: **a RED arm must remove the property,
+  not one instance of it.** A third bug was mine and not the arms': replacing a `{2,4}` interval with
+  `###+` for portability silently dropped every `##`-level heading, so M3 required three clauses fewer
+  and reported green. Only `REAL` plus the citation arm caught it, which is why both exist.
+- [x] **LOCKSTEP** — `SUMMARY.md` and `spec/index.md` link the chapter; the glossary grew `26` terms and
+  re-derived its index; `TOOLBOX.md` gains the matrix census and its probe suite (and the changelog-ledger
+  probes the previous slice added but had not listed); `knowledge-map/subsystems.md` names the matrix as a
+  subsystem, so the derived map carries it; D32 logged in `PLANNING.md`; `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` and `docs/TASK_TREE.md` updated in this commit.
+
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and `.18` (the code leaf) additionally fills a `### G0-CONTRACT.18` checklist
 subsection with real tool output in the same commit as the change. This tree file carries no
@@ -569,6 +641,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-29` | `G0-CONTRACT.18` (CI verdict, observed after the exceptional push) | `git push origin main`; GitHub Actions runs API for `head_sha=119946b` | `051a075..119946b  main -> main`, ahead `0`; **`rust` completed `success`** (first execution of the new wasm32 smoketest step) and **`doctrines` completed `success`**; `runs: 2`, both concluded |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 | `2026-09-29` | `G0-CONTRACT.13b` | token census over the fixture at `HEAD` vs the working tree; `python3` re-derivation of both waistband readings; `make book`; `make gate` | undeclared tokens `19` → `6`, the six being glossary vocabulary; folded band `10.0` cm vs faced `6.0` cm per piece, so §4 and §6 are different garments (D27); no §4 result changed; `exit=0` both |
+| `2026-09-30` | `G0-CONTRACT.4` | feature-matrix census; both probe suites; glossary census; `make book`; `make gate`; `make probes`; containment | `105 rows / 29 diagnostics / 0 failure(s)`; `probes: 10 pass / 0 fail` twice; `265 terms / 8 parts / 0 failure(s)`; `exit=0`, 6 spec pages; `=== all doctrines green ===`; `10 suite(s) green` |
 | `2026-09-30` | `G0-CONTRACT.1` | glossary census; both probe suites; `make book`; `make gate`; `make probes`; `make check`; containment | `239 terms / 8 parts / 138 tokens / 0 failure(s)`; `probes: 10 pass / 0 fail` and `6 pass / 0 fail`; `exit=0`, 9 pages rendered; `=== all doctrines green ===`; `9 suite(s) green` — detail in the checklist |
 
 ## Commit Log
@@ -583,10 +656,16 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.13` | `STITCHCAD-G0-0013 (leaf G0-CONTRACT.13): the reference skirt, to the millimetre` | 17 derived values with formulas; 5 constants flagged `assumed` pending review |
 | `G0-CONTRACT.13b` | `STITCHCAD-G0-0013b (leaf G0-CONTRACT.13b): the fixture declares its tokens` | D26 and D28 fixed; D27 logged, owned by `.14`, and recorded in the chapter |
 | `G0-CONTRACT.1` | `STITCHCAD-G0-0001 (leaf G0-CONTRACT.1): the glossary` | 239 terms, 8 parts, one census and two probe suites; D29/D30/D31 fixed by the rollover |
+| `G0-CONTRACT.4` | `STITCHCAD-G0-0004 (leaf G0-CONTRACT.4): the supported envelope` | 105 rows, 29 diagnostics; D32 logged and kept visible by the census |
 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-30`: `.4` landed — the v1 release claim has a boundary: 105 rows dispositioned
+  supported/rejected/deferred, 29 declared diagnostics with their required arguments, and a census that
+  derives the coverage of the ontology (16 object clauses cited), of roadmap §1.3 (8 non-goals rejected)
+  and of §3.2 (5 envelope garments supported, 3 named refusals rejected). The glossary absorbed the 26
+  terms the matrix introduces (239 → 265). D32 records the five rows no gate has accepted.
 - `2026-09-30`: `.1` landed — the glossary is normative vocabulary: **239 terms** in 8 domain parts behind
   an index chapter carrying the machine-token rule, the safety-relevant (⚠) policy and the derived A–Z
   index. Its claims are derived by `run_glossary_census.sh` (`0 failure(s)`) and its discrimination proved

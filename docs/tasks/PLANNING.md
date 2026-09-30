@@ -438,6 +438,24 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     their coverage and identity, points at `bedrock-scaffold-changelog.md` explicitly, and the ledger
     probe's `POINTER` rule keeps the pointer and the segments on disk in agreement both directions).
 
+- **D32** — four features the v1 envelope promises have no gate whose exit criteria prove them, and a
+  fifth follows from them: roadmap §3.2 puts a **classic collar** and **trousers** inside the envelope and
+  ontology §4.7 specifies **button/buttonhole** and **pocket** objects, yet no gate's exit criteria in
+  roadmap §11 mention any of them; a **fly construction** follows trousers. G3's exit names a bodice and a
+  set-in sleeve, and its "intermediate complexity note" *permits* a shirt/trousers intermediate without
+  promising one.
+  - Reproduce: `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` → the `A1` advisory
+    lists all five rows with `Proven at` = `unnamed (D32)`, on every run, by design; and
+    `grep -c 'collar\|trousers\|button\|pocket' ROADMAP.md` against `sed -n '/### G3 /,/### G4 /p'
+    ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'` → the second count is `0`.
+  - Impact: gate G7's exit is a "supported-envelope statement with named limitations". An envelope whose
+  collar, trousers, buttons and pockets were never tested cannot be declared honestly, and the gap is
+  invisible today because a feature matrix did not exist to show it.
+  - Owner: `G0-CONTRACT.15` (the G0 exit review) must put the assignment to the director — either the G3
+  exit criteria grow to name these features, or the matrix moves them to `deferred` with a gate that owns
+  them. This chapter does not invent a commitment on a gate's behalf, so the rows say `unnamed (D32)` and
+  the census keeps reporting them until a decision closes it.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

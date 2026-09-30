@@ -50,6 +50,9 @@ agent should be able to reach for the right tool without reading the source. -->
 | WASM smoketest | do the foundation crates really cross-compile for the browser profile (not a host `cargo check`)? | `make wasm` |
 | push-due | is an exceptional push owed — did an unpushed commit touch CI, a doctrine check, the `.doctrine/` seams or the hooks? | `make push-due` (exit 1 = a push is due, and it lists the files) |
 | glossary census | is the vocabulary sound — one meaning per term, one owner per machine token, every canonical reference resolving to a real clause/leaf, every token the spec set uses declared somewhere? | `bash docs/tasks/artifacts/glossary/run_glossary_census.sh` → `glossary census: N terms / M parts / K tokens / 0 failure(s)`; `--emit-index` regenerates the A–Z index the chapter must carry |
+| feature-matrix census | is the envelope complete — every ontology object clause cited by a row, every roadmap non-goal rejected, every envelope garment supported, every refusal naming a declared diagnostic, every gate cell a real gate? | `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` → `feature-matrix census: N rows / M diagnostics / 0 failure(s)`, plus the `A1` list of rows no gate has accepted |
+| feature-matrix probe suite | does that census still NOTICE a dropped non-goal, an uncited ontology clause, an undeclared diagnostic, a prose gate? | `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_probes.sh` → `probes: N pass / M fail` |
+| changelog-ledger probes | is the changelog a ledger — live window in commit order, nothing both live and sealed, every sealed segment's sha256 and coverage claim true, pointer and segments closed? | `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` → `probes: N pass / M fail`; `LEDGER_PENDING=<id>` declares the entry this commit carries |
 | glossary probe suite | does the census still NOTICE a duplicate token, an invented clause, a lost ⚠, an undeclared token, a drifted index? | `bash docs/tasks/artifacts/glossary/run_glossary_probes.sh` → `probes: N pass / M fail` |
 | all probe suites | does every diagnostic probe in the repository still discriminate? (scratch pinned to this volume) | `make probes` → per-suite `probes: N pass / M fail`, then `5 suite(s) green` |
 | Knowledge Map | is the derived orientation map in sync with its sources? | `knowledge-map/scripts/check_knowledge_map.sh`; regenerate with `knowledge-map/scripts/gen_knowledge_map.sh > "$(knowledge-map/scripts/gen_knowledge_map.sh --print-map-path)"` |
@@ -59,6 +62,15 @@ volume: the inherited suites call `mktemp -d`, which otherwise lands on the syst
 D16, leaf `SPINE.10`). The shared `scripts/check_task_acceptance.sh` still takes one trap-cleaned
 scratch directory from `mktemp -d` at commit time; that residual is recorded in the leaf, not
 patched into shared code.
+
+⚠ **A RED arm must remove the property, not one instance of it.** Measured twice in one session: an arm
+that renamed a diagnostic token renamed its declaration and its use together, and an arm that de-cited one
+row left two other rows citing the same clause — both passed at `exit=0` where a refusal was owed, so both
+reported the census sound while testing nothing. Before trusting a RED arm, ask what else in the tree still
+satisfies the rule; if anything does, the arm is a report. Its sibling trap: a "portability" edit to a
+regex (`{2,4}` → `###+`) silently stopped matching `##` headings, so a coverage rule required three clauses
+fewer and still printed green — only a GREEN arm over the real tree plus a RED arm over one citation caught
+it.
 
 ⚠ Probes and checks must **pin the instrument they measure with**. This machine's `PATH` puts GNU
 coreutils ahead of BSD userland, so `stat -f %m` (BSD mtime) means "filesystem status of a file named

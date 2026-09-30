@@ -23,6 +23,49 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G0-0004 - the release claim gets a boundary, and the boundary is derived (leaf `G0-CONTRACT.4`)
+
+docs/book/src/spec/feature-matrix.md dispositions **105 rows** - 76 supported, 19 rejected, 10 deferred -
+each with a reason that cites its source explicitly (`ontology §4.3`, `roadmap §3.2`), the gate whose exit
+criteria prove it, and for every refusal the diagnostic token it must produce. §10 declares those 29
+tokens with the arguments each carries, because an undeclared token has no defined meaning.
+
+- three rules make the table normative rather than descriptive: **no silent approximation** (a refused
+  construction produces its diagnostic and NO geometry - a knit block drafted as woven, a NURBS curve
+  flattened without saying so, a pocket drawn as internal lines are all defects); **a supported row names
+  its proof** (a gate's exit criteria, not a hope); and **modelled is not supported** (an object nobody
+  scheduled a proof for is `deferred` to G7, whose exit is an envelope statement with named limitations)
+- the acceptance clause "nothing in the ontology is silently unlisted" is derived, not asserted:
+  `run_feature_matrix_census.sh` -> "feature-matrix census: 105 rows / 29 diagnostics / 0 failure(s)",
+  exit=0 - all 16 required ontology object clauses cited, 8 of 8 roadmap §1.3 non-goals matched to a
+  rejected row with the mapping printed, 5 of 5 §3.2 envelope garments supported and 3 of 3 named refusals
+  rejected, every gate cell resolving to a real roadmap §11 gate or to `unnamed (D32)`, and every declared
+  diagnostic used by exactly the rows that raise it
+- **D32, found by writing the rows**: roadmap §3.2 puts a classic collar and trousers inside the v1
+  envelope and ontology §4.7 specifies button and pocket objects, yet no gate's exit criteria mention any
+  of them - `sed -n '/### G3 /,/### G4 /p' ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'` -> `0`.
+  G3's note *permits* a shirt/trousers intermediate without promising one. Rather than borrow a gate, those
+  five rows (collar, trousers, buttons, pockets, fly) say `unnamed (D32)` and the census prints them on
+  every run as advisory A1, so `G0-CONTRACT.15` must put the assignment to the director instead of the gap
+  closing by being forgotten
+- the glossary absorbed the 26 terms the matrix introduces (239 -> **265**), index re-derived with
+  `--emit-index`; `run_glossary_census.sh` -> "265 terms / 8 parts / 139 tokens / 0 failure(s)", exit=0.
+  The machine-token convention paid for itself immediately: the matrix's 29 diagnostic tokens are declared
+  by its own §10 table, so the glossary census's coverage rule needed no exemption
+- **two of the ten new probe arms passed for the wrong reason, and the census was right** - measured, not
+  assumed. One renamed a diagnostic token everywhere, which renames a declaration and its use together and
+  changes nothing a census can see; the other de-cited one of three rows citing `ontology §4.4`, leaving
+  the clause covered. A RED arm must remove the PROPERTY, not one instance of it, and the rule is now in
+  TOOLBOX.md's probe conventions where a probe author reads it. A third bug was mine: swapping a `{2,4}`
+  interval for `###+` "for portability" silently dropped every `##`-level heading, so the coverage rule
+  required three clauses fewer and still printed 0 failures - which is why a census prints the size of the
+  population it judged, not only its breaches
+- gates: `make gate` -> "=== all doctrines green ==="; `make probes` -> "10 suite(s) green" (72 arms,
+  0 fail); `make check` -> five "test result: ok" lines, no product code touched; `make book` -> exit=0 with
+  6 spec pages; containment -> "OK - 17 surfaces, 15 routes, 64 files measured", with the matrix part at
+  28 646 B against a 24 576 B per-part health (117%, ceiling 40 960) recorded in the leaf rather than paid
+  for in vaguer rows
+
 ## STITCHCAD-G0-0001 — the glossary: one meaning per term, one owner per token (leaf `G0-CONTRACT.1`)
 
 **The G0 exit clause "glossary of construction terms" is met, and its completeness is derived rather
