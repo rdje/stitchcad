@@ -49,6 +49,8 @@ agent should be able to reach for the right tool without reading the source. -->
 | Rust gate | do fmt, clippy (deny warnings) and the tests pass? | `make check` |
 | WASM smoketest | do the foundation crates really cross-compile for the browser profile (not a host `cargo check`)? | `make wasm` |
 | push-due | is an exceptional push owed — did an unpushed commit touch CI, a doctrine check, the `.doctrine/` seams or the hooks? | `make push-due` (exit 1 = a push is due, and it lists the files) |
+| glossary census | is the vocabulary sound — one meaning per term, one owner per machine token, every canonical reference resolving to a real clause/leaf, every token the spec set uses declared somewhere? | `bash docs/tasks/artifacts/glossary/run_glossary_census.sh` → `glossary census: N terms / M parts / K tokens / 0 failure(s)`; `--emit-index` regenerates the A–Z index the chapter must carry |
+| glossary probe suite | does the census still NOTICE a duplicate token, an invented clause, a lost ⚠, an undeclared token, a drifted index? | `bash docs/tasks/artifacts/glossary/run_glossary_probes.sh` → `probes: N pass / M fail` |
 | all probe suites | does every diagnostic probe in the repository still discriminate? (scratch pinned to this volume) | `make probes` → per-suite `probes: N pass / M fail`, then `5 suite(s) green` |
 | Knowledge Map | is the derived orientation map in sync with its sources? | `knowledge-map/scripts/check_knowledge_map.sh`; regenerate with `knowledge-map/scripts/gen_knowledge_map.sh > "$(knowledge-map/scripts/gen_knowledge_map.sh --print-map-path)"` |
 

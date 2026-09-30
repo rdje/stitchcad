@@ -16,13 +16,14 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs,
   versioned evidence-bearing Factory Profiles, deterministic artifact export, agent-first via MCP.
   `ROADMAP.md` v0.2, DRAFT until G0 exits.
-- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.1`. Done: `.2` units & tolerances, `.3`
-  garment ontology, `.13`+`.13b` reference skirt, `.18` `sc-units` + `sc-core` + G0 CI.
-- **Next action:** land `.1`, the glossary — `docs/book/src/spec/glossary.md` plus 8 domain parts (239
-  terms, one owner per machine token, ⚠ on the safety-relevant ones) and the census that derives its
-  coverage (`docs/tasks/artifacts/glossary/run_glossary_census.sh`). That append crosses the changelog's
-  rollover milestone, so the same commit reorders the live window to git order (D29) and seals the oldest
-  entries into `docs/history/` with part1's coverage line corrected (D30). Then `.4`, the feature matrix.
+- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.4`. Done: `.1` glossary (239 terms, 8
+  parts, census-derived), `.2` units & tolerances, `.3` ontology, `.13`+`.13b` reference skirt, `.18`
+  `sc-units` + `sc-core` + G0 CI.
+- **Next action:** write `.4`, the feature matrix — `docs/book/src/spec/feature-matrix.md`: one row per
+  construction in the v1 woven envelope (A-line skirt, darted bodice, set-in sleeve, classic collar,
+  trousers) marked supported / rejected / deferred with a reason, an owning gate and the diagnostic a
+  rejected construction must produce; the §1.3 non-goals appear as rejected rows; every term it
+  introduces joins the glossary, which the census then enforces. Commit `STITCHCAD-G0-0004`.
 
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
@@ -30,4 +31,4 @@
   doctrine check, `.doctrine/` or `.githooks/` — derive it with `make push-due` (`COMMIT.md`).
 - **In-flight uncommitted work:** none.
 - **Blockers:** `G0-CONTRACT.14` needs named humans from the director (project owner, procurement), and
-  now also owns **D27** — the reference fixture's waistband is two different garments at once.
+  owns **D27** — the reference fixture's waistband is two different garments at once (§4 vs §6).

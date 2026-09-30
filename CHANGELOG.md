@@ -1,15 +1,77 @@
 # CHANGELOG.md
 
-Newest first. The StitchCAD sections are this project's history; everything below the
-_Inherited spine history_ divider is the bedrock scaffold's own changelog, kept as the
-provenance of the discipline spine this repository was generated from.
+Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
+segments under `docs/history/`, each named below with its identity and retrieval path.
 
 # Sealed archive — earlier slices
 
-Slices 1–15 of this project's changelog (`STITCHCAD-PLANNING-0001` … `STITCHCAD-SPINE-0004c`)
-are sealed in [`docs/history/stitchcad-changelog-part1.md`](docs/history/stitchcad-changelog-part1.md)
-— 365 lines, 30452 bytes, `sha256:f4aec75ac7dd1fa5…`, immutable. The live window below holds the most
-recent entries; when it passes its health target again, the oldest are sealed the same way.
+| Segment | Coverage | Sealed identity |
+| --- | --- | --- |
+| [`docs/history/stitchcad-changelog-part1.md`](docs/history/stitchcad-changelog-part1.md) | slices 1–15, `STITCHCAD-PLANNING-0001` … `STITCHCAD-SPINE-0004b` | 365 lines, 30452 bytes, `sha256:f4aec75a…` |
+| [`docs/history/stitchcad-changelog-part2.md`](docs/history/stitchcad-changelog-part2.md) | slices 16–20, `STITCHCAD-SPINE-0014` … `STITCHCAD-G0-0002` | 152 lines, 12811 bytes, `sha256:5783ac36d8bc7cee…` |
+
+**Correction (D30).** part1's own descriptor says its coverage runs "through `STITCHCAD-SPINE-0004c`".
+It does not: part1's newest entry is `STITCHCAD-SPINE-0004b`, and `SPINE-0004c` is sealed in part2.
+Sealed segments are immutable, so the correction is recorded here and in part2's descriptor rather than
+by editing part1.
+
+The bedrock scaffold's own changelog — the provenance of this repository's discipline spine — is sealed
+in [`docs/history/bedrock-scaffold-changelog.md`](docs/history/bedrock-scaffold-changelog.md).
+
+The live window below holds the most recent slices. When it passes its health target (400 lines /
+32 768 bytes) again, the oldest entries are sealed the same way, and
+`bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
+the digests afterwards.
+
+## STITCHCAD-G0-0001 — the glossary: one meaning per term, one owner per token (leaf `G0-CONTRACT.1`)
+
+**The G0 exit clause "glossary of construction terms" is met, and its completeness is derived rather
+than declared.** `docs/book/src/spec/glossary.md` plus eight domain parts carry **239 terms**, each with
+a plain-language meaning, the canonical object that specifies it, the synonyms factories and other CADs
+use, and the machine token — and a ⚠ on the ones whose mistranslation causes a wrong cut.
+
+- **Partitioned because a termbase is not a chapter.** One file would have been ~70 KB of five-column
+  rows against a `book_collection` per-part health of 24 576 bytes, so the glossary is eight parts by
+  domain (29–48 lines, 4.3–7.5 KB each) behind an index chapter that carries the rules and the derived
+  A–Z list. A term sits next to the terms it is confused with, and no part breaches its ceiling.
+- **The machine-token rule is normative** (and is now a layer-C record,
+  `decision_machine-tokens-declared-where-used.md`): a token is never rendered raw to a human; one token
+  has one meaning, so where four terms are all a `Closure`, one entry owns the token and three write
+  `→ Closure`; tokens are ASCII and locale-independent; and where code exists the token is quoted from
+  code — `Micrometre`, `MICRODEGREES_PER_DEGREE`, `UnitError::DomainExceeded`, the six `ToleranceClass`
+  variants — not invented prettier than the crate.
+- **Safety-relevant terms are a shipping rule, not a styling one.** Roadmap §7.6 names notch types and
+  the sew/cut line aliases; §8.3 names units and allowance ownership. 22 entries are required to carry
+  the ⚠ (72 do), and the census refuses any of the 22 that loses it, plus any entry owning a `type`
+  token — so a new notch shape inherits the requirement instead of being forgotten.
+- **Its own claims are re-derived:** `bash docs/tasks/artifacts/glossary/run_glossary_census.sh` →
+  `glossary census: 239 terms / 8 parts / 138 tokens / 0 failure(s)`, `exit=0`. Ten rules: entry
+  structure, parts inventory, term uniqueness, token ownership, cross-references, token shape, every
+  canonical reference resolving to a real chapter clause, roadmap clause, ADR or task-tree leaf (155
+  references, 0 dead), the safety marks, index↔parts equality both directions, and the coverage claim —
+  every machine token the specification uses is owned here, declared by the chapter that uses it, or
+  exempted with a written reason (`82` used, `0` unaccounted).
+- **The probes found three defects in the census before it found any in the glossary**, which is why
+  they exist: `R1` read the *meaning* column instead of the object column, so it checked nothing and
+  reported `dead references: 0` vacantly; the `§` clause slice was one byte off, because `§` is two bytes
+  and `LC_ALL=C` makes awk count bytes; and `resolve()` stripped `/../` without the parent segment, so
+  every `../ontology.md` resolved to a path that does not exist. All three were caught by RED arms
+  (`DEAD-CLAUSE` failing to fire), never by reading the code. `probes: 10 pass / 0 fail`.
+- **A second instrument came with it**, because the rollover this entry triggers is exactly the
+  operation D29/D30 corrupted: `run_changelog_ledger_probes.sh` checks the live window's order against
+  commit order, live-vs-sealed uniqueness, each segment's declared `sha256` against its content, each
+  descriptor's coverage claim, and the pointer↔segment closure — the five checks the containment
+  doctrine's rollover protocol step 6 requires. It verified part1's digest (`365` lines reproduce
+  `sha256:f4aec75a…`) and then proved part1's coverage line wrong (D30).
+- **Rollover performed by this append:** the live window crossed its health target, so the five oldest
+  entries are sealed into `docs/history/stitchcad-changelog-part2.md` with their own descriptor, the
+  window is reordered into commit order (D29), the stale "_Inherited spine history_ divider" sentence is
+  corrected (D31 — that divider left this file in `SPINE-0014`), and part1's coverage claim is corrected
+  by superseding record rather than by editing an immutable segment (D30).
+- Validation: `make book` → `exit=0` with all nine glossary pages rendered; `make probes` →
+  `9 suite(s) green`; `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok`;
+  containment → the widest glossary row is `268` B against a `320` B ceiling (over the `200` B
+  prose-shaped health target, recorded in the leaf rather than trimmed away).
 
 ## STITCHCAD-G0-0013b — the reference fixture declares its own tokens (leaf `G0-CONTRACT.13b`)
 
@@ -39,100 +101,6 @@ each one to a declaration exposed a contradiction in the garment itself.
   reference against real headings, which is that class instrumented rather than eyeballed.
 - Validation: `make book` → `exit=0`; `make gate` → `=== all doctrines green ===`; the token census over
   the fixture at `HEAD` against the working tree → the numbers above.
-
-## STITCHCAD-G0-0002 — the numerical contract is normative (leaf `G0-CONTRACT.2`)
-
-**The first product deliverable.** `docs/book/src/spec/units-and-tolerances.md` (291 lines, widest line
-114 bytes) is now the chapter every other chapter and every crate quotes when it uses a number.
-
-- **One internal unit:** lengths are `i64` **micrometres** (1 in = `25 400` exactly, 1 mm = `1 000`),
-  angles are `i64` **microdegrees** (a full turn = `360 000 000`), with a declared domain tighter than
-  the type (|length| ≤ 10⁹ µm, area ≤ 10¹⁸ µm²) so intermediate arithmetic cannot overflow and an
-  out-of-domain value is a typed diagnostic rather than a clamp or a wrap.
-- **One rounding rule and one conversion rule:** half away from zero, and every conversion is a single
-  multiply-then-divide with an exact integer ratio. Chained conversions are forbidden because they round
-  more than once and disagree with the direct conversion — a test fails the chained path, it does not
-  document the discrepancy.
-- **Five tolerance classes instead of an epsilon:** numerical (1 µm, one quantum — anything more is a
-  bug), geometric approximation (10 µm internally, 100 µm chordal for polyline-only receivers), format
-  quantization (fixed by the format, published with the artifact), importer comparison (declared per
-  receiver in the profile), physical acceptance (**the factory's number, never ours**). Every comparison
-  names its class; each value carries the requirement it was derived from, so "why 10 µm?" has an answer
-  that is not "it passed".
-- **Topology is exact, not approximate:** with integer coordinates, orientation, segment intersection,
-  point-in-polygon and winding are computed in 128-bit integers with no epsilon, so
-  `if (distance < EPSILON)` over integer coordinates is recorded as a defect. Curved-geometry predicates
-  use adaptive precision bounded by the geometric class.
-- **The offset engine carries a declared error budget** and fails explicitly — naming the edge, the
-  achieved deviation and the requested bound — when a cusp, near-tangency or self-intersection puts it
-  out of tolerance. It never emits out-of-tolerance geometry and never silently repairs topology; the G2
-  pathology corpus is its oracle.
-- **Formats whose quantum is not an integer number of µm** (the PDF point at ≈ 352.78 µm) convert once,
-  at serialization, and the quantization is published with the artifact — precision never flows back
-  into the model.
-- Every arithmetic claim was re-derived, not recalled: `1016 × 25 = 25400` (an HPGL plotter unit is
-  exactly 25 µm), `25400 ÷ 72 ≈ 352.78`, `10¹⁸` needs `60` bits and `2 × 10¹⁸` needs `61` (so i128
-  products of domain-bounded coordinates are exact), `10⁹ µm = 1 km`, `10¹⁸ µm² = 1 km²`. §8 of the
-  chapter labels every external claim as exact arithmetic, cited-from-roadmap, or to-be-confirmed at the
-  gate that needs it — no format detail is asserted that nobody has read here.
-- Recorded as `docs/decisions/decision_numerical-contract-fixed-point.md` (indexed, with an `answers:`
-  line) so the *why* — determinism for golden bytes and CLI replay, decidability of topology, symmetry of
-  rounding under mirroring, degrees as the domain's own vocabulary — survives separately from the *what*.
-- **The containment ceiling caught this chapter before it shipped:** the first draft's tolerance table
-  had rows of `311`–`381` bytes against a `book_collection` maxline ceiling of `320`. It became five
-  bounded subsections — a better shape for a book, and the reason max-content-line is its own axis.
-- Validation: `make book` → `exit=0` with the chapter rendered; `check_live_doc_size.sh` →
-  `OK — 17 surfaces, 15 routes, 47 files measured`; `make gate` → `=== all doctrines green ===`;
-  `make check` → `test result: ok. 1 passed; 0 failed`.
-
-## STITCHCAD-PLANNING-0004 — product work takes the frontier (leaf `PLANNING.4`)
-
-- Defect D24 closed with a rule, not a resolution: at the ruling,
-  `git log --oneline | grep -cE 'leaf (SPINE|PLANNING|BOOTSTRAP)'` → **20** governance slices against
-  `grep -cE 'leaf (G[0-7]|V[12])'` → **0** product slices. Every individual slice was defensible, which
-  is why the pattern needed a decision record rather than more care.
-- `docs/decisions/decision_product-work-takes-the-frontier.md` states the rule (product takes the
-  frontier; spine work only when it blocks the next product slice, when a defect can destroy or corrupt
-  work now, or when the director asks), keeps directive §15 intact (every defect is still logged and
-  owned — logging is not scheduling), and gives the two-command census that reveals the drift. Wired into
-  `CLAUDE.md`'s non-negotiables and the layer-C index.
-- The `PLANNING` tree is complete: all four leaves done, the roadmap→tree capture derived by
-  `run_tree_coverage_census.sh` (`10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`).
-- **This entry landed one commit late, and the reason is worth recording:** the script that was supposed
-  to insert it used `str.replace()` on a heading it had not verified, so the replacement silently did
-  nothing while the script printed success. Found by `grep -n '^## STITCHCAD' CHANGELOG.md` when the next
-  entry would not anchor. Anchor edits are asserted from now on.
-
-## STITCHCAD-PLANNING-0003 — the whole roadmap is captured, and the claim is derived (leaf `PLANNING.3`)
-
-- **All ten roadmap lanes now have a tree.** Seeded the five that were missing — `G5-SHELLS` (14 leaves:
-  Tauri native + WASM web shells, the six UX panels, the parity table proven by agent E2E, a real native
-  UI suite because MCP tests are not UI tests, the OS/browser matrix, the first complete language pack
-  with RTL verified, the minimum tech pack), `G6-CONFORMANCE` (10: DXF importer with an honest loss
-  report, real import-filter validation with receiver settings recorded, the foreign-DXF semantic diff
-  loop, physical plotter and print checks, a factory pilot cycle whose rejection taxonomy feeds
-  calibration, the reliability matrix, cross-platform regressions, fuzzing, the conformance lab itself),
-  `G7-RELEASE` (7: independent evidence review, the scoped envelope statement, semver/schema policy,
-  install-reopen-upgrade-rollback evidence, release channels, governance in force), `V1-ASSEMBLY`
-  (7: mesh, ease-aware seam resampling that is never welded 1:1, net-line binding, arrangement surfaces
-  and layer index, viewport precision, blinded validation with false-pos/neg rates) and `V2-SIM`
-  (6: `sc-sim` out of the default build, XPBD research as progress reports, labelled approximation,
-  calibration and observables protocols declared before data collection, an evidence-only exit gate).
-  Repository totals: **13 trees, 142 leaves**.
-- **The capture claim is now a command, not a sentence:**
-  `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
-  `census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`. It checks both
-  directions — every §11 lane has a tree whose metadata names it, and every tree on disk is registered
-  in the index with a declared lane — plus dead index links (defect D1's class). The RED state was
-  observed before the fix: mid-slice the same census printed `5 orphan(s)` and exited `1`.
-- The clause-versus-leaf table it prints is **advisory and says so**: more clause rows than roadmap
-  clauses is expected (a tree may split one clause into several leaves, as `G5-SHELLS` does with the
-  "full UX spec" list); fewer rows than clauses is the alarm. A classifier guessing at prose meaning
-  would be worse than the side-by-side.
-- The tool is bash 3.2 compatible (no `mapfile`) because the spine must run on whatever bash a platform
-  ships — the same portability lesson as the awk-versus-grep signature measurement.
-- Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed;
-  0 failed`; `make probes` → `7 suite(s) green`; `bash -n` clean.
 
 ## STITCHCAD-SPINE-0018 — the push-due trigger means "CI must re-verify this" (leaf `SPINE.18`)
 
@@ -182,28 +150,6 @@ each one to a declaration exposed a contradiction in the garment itself.
   unilaterally, since the authorisation was for one exceptional push.
 - Validation: `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 3 passed;
   0 failed`; `make probes` → `7 suite(s) green`; `bash -n` clean.
-## STITCHCAD-SPINE-0016 — prose is no longer judged as code (leaf `SPINE.16`)
-
-- **Defect D25, and it was blocking product work.** The spine's default code-path regex contains
-  `(^|/)src/`, and this project's mdBook chapters live in `docs/book/src/`. Writing a specification
-  chapter — the main activity at gate G0 — was therefore classified as a CODE change, and
-  `check_fresh_acceptance_evidence.sh` refused the commit demanding tool-output-backed acceptance boxes
-  for prose. Taken ahead of the slice it unblocked, per
-  `docs/decisions/decision_product-work-takes-the-frontier.md`: a spine slice is legitimate when it
-  blocks the product slice about to be taken.
-- **`.doctrine/code_paths.txt`** now declares the classification (10 patterns, with the reason in its
-  header): crates and `.rs`, `scripts/` and any `.sh`, `Makefile`, `Cargo.toml`/`Cargo.lock`,
-  `rust-toolchain.toml`, `.clippy.toml`, CI workflows and `.doctrine/`. Both acceptance checks read the
-  same seam, so they cannot disagree. No spine file was edited — the seam is the documented extension
-  point, and `.doctrine/README.md` is explicit that a signature family which does not fit the real
-  corpus teaches authors to waive it.
-- Census over representative paths: `docs` for `docs/book/src/spec/ontology.md`, `README.md` and
-  `docs/tasks/SPINE.md`; `CODE` for `crates/sc-units/src/lib.rs`, `scripts/check_live_doc_size.sh`,
-  `.doctrine/live_document_size/surfaces.tsv` and `Makefile`.
-- The fresh-evidence probe now copies the seam into its throwaway repositories, so it tests the
-  configuration this repository actually runs rather than the default it replaced.
-- Validation: `make probes` → `7 suite(s) green`; `make gate` → `=== all doctrines green ===`;
-  `make check` → `test result: ok. 3 passed; 0 failed`.
 
 ## STITCHCAD-G0-0013 — the reference skirt, specified to the millimetre (leaf `G0-CONTRACT.13`)
 
@@ -237,6 +183,30 @@ DXF/PDF goldens, printed scale-square check, offset pathology corpus, mutation t
   ontology clause and the gate that depends on it, and 8 test obligations close the chapter.
 - Validation: `make book` → `exit=0`; `check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 51 files
   measured`; `make gate` → `=== all doctrines green ===`; `make check` → 30 tests, 0 failed.
+
+## STITCHCAD-SPINE-0016 — prose is no longer judged as code (leaf `SPINE.16`)
+
+- **Defect D25, and it was blocking product work.** The spine's default code-path regex contains
+  `(^|/)src/`, and this project's mdBook chapters live in `docs/book/src/`. Writing a specification
+  chapter — the main activity at gate G0 — was therefore classified as a CODE change, and
+  `check_fresh_acceptance_evidence.sh` refused the commit demanding tool-output-backed acceptance boxes
+  for prose. Taken ahead of the slice it unblocked, per
+  `docs/decisions/decision_product-work-takes-the-frontier.md`: a spine slice is legitimate when it
+  blocks the product slice about to be taken.
+- **`.doctrine/code_paths.txt`** now declares the classification (10 patterns, with the reason in its
+  header): crates and `.rs`, `scripts/` and any `.sh`, `Makefile`, `Cargo.toml`/`Cargo.lock`,
+  `rust-toolchain.toml`, `.clippy.toml`, CI workflows and `.doctrine/`. Both acceptance checks read the
+  same seam, so they cannot disagree. No spine file was edited — the seam is the documented extension
+  point, and `.doctrine/README.md` is explicit that a signature family which does not fit the real
+  corpus teaches authors to waive it.
+- Census over representative paths: `docs` for `docs/book/src/spec/ontology.md`, `README.md` and
+  `docs/tasks/SPINE.md`; `CODE` for `crates/sc-units/src/lib.rs`, `scripts/check_live_doc_size.sh`,
+  `.doctrine/live_document_size/surfaces.tsv` and `Makefile`.
+- The fresh-evidence probe now copies the seam into its throwaway repositories, so it tests the
+  configuration this repository actually runs rather than the default it replaced.
+- Validation: `make probes` → `7 suite(s) green`; `make gate` → `=== all doctrines green ===`;
+  `make check` → `test result: ok. 3 passed; 0 failed`.
+
 ## STITCHCAD-G0-0003 — the garment ontology is normative (leaf `G0-CONTRACT.3`)
 
 `docs/book/src/spec/ontology.md` (295 lines, widest line 198 bytes) turns roadmap §3.1's bullet list of
@@ -280,6 +250,7 @@ points at.
 - Validation: `make book` → `exit=0` with the chapter rendered; `check_live_doc_size.sh` →
   `OK — 17 surfaces, 15 routes, 50 files measured`; `make gate` → `=== all doctrines green ===`;
   `make check` → 30 tests, 0 failed; `make probes` → `7 suite(s) green`.
+
 ## STITCHCAD-G0-0018 — the first product code: `sc-units` implements the numerical contract (leaf `G0-CONTRACT.18`)
 
 - **`crates/sc-units`** — 1 097 lines of library, 564 lines of tests, **zero dependencies** (so it
@@ -321,56 +292,3 @@ points at.
   -D warnings` clean; `cargo test --all` → 30 passed / 0 failed; `make wasm` green; `make gate` →
   `=== all doctrines green ===`; `make probes` → `7 suite(s) green`;
   `check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 49 files measured`.
-## STITCHCAD-SPINE-0004c — declared ceilings become enforced ones (leaf `SPINE.4.3`)
-
-- **`LIVE-DOC-SIZE` is the second project doctrine** (`scripts/check_live_doc_size.sh`, 271 lines,
-  registered in `scripts/check_doctrines.project.sh`, so it runs in the hook and in CI unconditionally
-  and judges the resulting tree rather than the staged diff). Bash measures — lines, bytes, max content
-  line under `LC_ALL=C`, and for collections file count, per-part maxima and aggregates — one awk pass
-  evaluates every rule, which is what makes the evaluator testable against a synthetic registry without
-  touching the real tree.
-- **It refuses** on an unclassified tracked Markdown surface, a malformed registry row (field count,
-  unknown lifecycle or kind, missing owner/authority, non-numeric bound, a ceiling below its own health
-  target), an absolute or off-volume path in the data plane, a glob that silently matches nothing, a
-  line/byte/maxline/file-count/aggregate overflow, a widened transition-debt baseline, and a route whose
-  destination is unclassified or contradicts its lifecycle. It warns at 80 % of a health target.
-  `--self-test` → `11 arms, 0 failed`, one per refusal class plus a GREEN control.
-- **Coverage proven to have teeth, not assumed:** `run_live_doc_size_probes.sh` → `probes: 4 pass / 0 fail`,
-  where `REAL-2` deletes the `roadmap` row from a *copy* of the real registry and the check names
-  `ROADMAP.md` as an unclassified live surface, and `MISSING` proves an absent data plane refuses with
-  `exit=2` instead of reporting green over nothing. On the real tree:
-  `live-doc-size: OK — 17 surfaces, 15 routes, 41 files measured, 19 warning(s)`, `exit=0`.
-- **Three target corrections, each with its derivation stated rather than fitted to bloat:** `roadmap`
-  health set to `-` (a `maintained_reference` aggregate follows legitimate product scope, so a fixed
-  target would be dishonest — the debt baseline and ceiling govern); `doctrine_docs` per-part health
-  derived from the largest adopted standard (455 lines / 24 573 bytes) plus ~15 % for a local adoption
-  note; and one real fix — the widest `LIVE_STATUS.md` row trimmed from `303` to `207` bytes. Warnings
-  `21` → `19`, breaches `0`.
-- Remaining warnings are owned, not ignored: `decisions_collection` maxline at 153 % of target →
-  `SPINE.15`; `tasks_collection` per-part at 107 % → the convention recorded in its registry row;
-  `roadmap` navigation → `SPINE.13`. Defect D13 closed.
-- Validation: `make gate` → `=== all doctrines green ===`; `make probes` → `7 suite(s) green`;
-  `make check` → `test result: ok. 1 passed; 0 failed`.
-
-## STITCHCAD-SPINE-0014 — the changelog becomes a ledger with an archive terminal (leaf `SPINE.14`)
-
-- **The inherited bedrock changelog is sealed out** of `CHANGELOG.md` into
-  `docs/history/bedrock-scaffold-changelog.md`, classified `archive_terminal`. It was `158` lines /
-  `11 811` bytes of frozen, untrimmable content occupying 30 % of a rolling ledger's window
-  (`git show HEAD:CHANGELOG.md | grep -n '^# Inherited spine history'` → line `365` of `522`).
-- **Losslessness is proved by hash, not asserted:** the sealed segment and the original segment are both
-  `sha256:78f43e0fe24c60f7bb8b0bb159a2751cc37f967659111bd81df7d74b22dbeca7` → `BYTE-IDENTICAL: True`.
-  The archive carries its own identity header (lines, bytes, sha256), provenance, retrieval path and a
-  no-write policy; `CHANGELOG.md` keeps a pointer.
-- **The ledger is now inside its window:** `522`/`42 124` → `371` lines / `30 713` bytes, widest line
-  `185` → `118`, against a health target of 400 / 32 768. Its transition-debt row is cleared, and the
-  rollover rule for our own entries is recorded in the registry row.
-- **This leaf was pulled ahead of `SPINE.4.3` for a measured reason:** the containment checker, run
-  before it was wired into the gate, refused the tree with
-  `LIVE-DOC-SIZE: changelog: transition debt WIDENED on lines (522 > baseline 487)`, `exit=1`. A debt
-  baseline declared while the surface is still growing breaks on the next slice — so the migration had
-  to land before the baseline could be honest.
-- Retrieval censuses: `grep -c '^## bedrock-scaffold'` → `6` in the archive, `0` in the ledger;
-  `grep -c '^## STITCHCAD' CHANGELOG.md` → `15` (ours stayed).
-- Validation: `scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 41 files measured`,
-  `exit=0`; `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed`.

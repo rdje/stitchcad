@@ -70,14 +70,15 @@ not a contract.
   Children: `.1` … `.18`
 
 - ID: `G0-CONTRACT.1`
-  Status: `pending`
+  Status: `done`
   Goal: the glossary of construction terms — one entry per term used anywhere in the spec
   set, each with a plain-language definition, the canonical object it names (ontology id),
   synonyms used by factories/other CADs, and the machine token that must never be rendered raw.
   Acceptance: every domain noun in roadmap §3.1 has an entry; every entry names its ontology
   object; the book chapter builds; terms used later in the spec set are all defined here.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below and in the acceptance checklist — 239 terms across 8 parts, the census at
+  `0 failure(s)`, its 10 probe arms green, the book built, every gate green.
+  Commit: `STITCHCAD-G0-0001`
 
 - ID: `G0-CONTRACT.2`
   Status: `done`
@@ -293,8 +294,9 @@ not a contract.
 | 3 | `G0-CONTRACT.3` | `done` | the ontology now exists, so `.4`, `.5` and `.13` have objects to refer to |
 | 4 | `G0-CONTRACT.13` | `done` | the fixture now gives every later chapter a concrete garment to be checked against |
 | 5 | `G0-CONTRACT.13b` | `done` | the fixture's undeclared tokens (D26) and its disputed waistband (D27), found while building `.1`'s census; the glossary's coverage rule cannot pass over a chapter that uses names it never declares |
-| 6 | `G0-CONTRACT.1` | `pending` | **next** — the glossary, so every term the three written chapters use has one meaning |
-| 7 | `G0-CONTRACT.4`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
+| 6 | `G0-CONTRACT.1` | `done` | the glossary: 239 terms in 8 domain parts, one owner per machine token, ⚠ on the safety-relevant ones, and a census that derives its coverage |
+| 7 | `G0-CONTRACT.4` | `pending` | **next** — the supported / rejected / deferred feature matrix: it bounds the v1 release claim, and every envelope term it introduces joins the glossary |
+| 8 | `G0-CONTRACT.5`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -308,6 +310,17 @@ not a contract.
   reading took "crates appear when their stage starts" as an absolute and would have left two
   roadmap clauses unowned. Consequence: `.18` is a CODE leaf and carries the full acceptance
   checklist with tool output; every other G0 leaf remains documentation-only.
+
+- `2026-09-30`, leaf `.1`: the glossary is **partitioned into eight domain parts behind one index
+  chapter**, not one file. Reason, measured: a single file would have been ~70 KB of five-column rows
+  against a `book_collection` per-part health of 24 576 bytes and a ceiling of 40 960 — a termbase is not
+  the shape of a prose chapter, and one file would have breached its ceiling within two more chapters.
+  Consequences: the A–Z index is **derived** from the parts and compared against them by the census in
+  both directions; a new term goes in the part whose domain it belongs to and in no other; every part
+  carries the same five columns, so the termbase extraction `G0-CONTRACT.16` owes has one shape to read.
+- `2026-09-30`, leaf `.1`: a **machine token has exactly one owner**, and an entry that shares another's
+  token writes `→ token`. Recorded as `docs/decisions/decision_machine-tokens-declared-where-used.md`
+  with the measurement behind it, because the rule binds every later chapter and every crate.
 
 ## Open Questions
 
@@ -468,6 +481,75 @@ not a contract.
   `CHANGELOG.md` updated; the fixture's test obligations are the G2 leaves' acceptance inputs, so
   `G2-2D.3`/`.8`/`.11` now have numbers to assert against.
 
+### `G0-CONTRACT.1` — the glossary, and the census that derives its claims
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the G0 exit clause list requires a "glossary of construction terms"
+  and none existed: `git ls-tree --name-only HEAD docs/book/src/spec/` → `index.md`, `ontology.md`,
+  `reference-skirt.md`, `units-and-tolerances.md`, `rc=0`, and
+  `git ls-tree -r --name-only HEAD docs/book/src/spec/glossary/ | wc -l` → `0`. Three normative chapters
+  were already using the vocabulary with nothing binding a term to one meaning — `ontology.md` said
+  "Terms used below are defined in the glossary" and pointed at a file that did not exist. The population
+  needing definitions is measurable rather than a matter of taste: the census counts `82`
+  identifier-shaped machine tokens and `183` bolded spans across the spec chapters. The blocking part was
+  worse than absence: the reference fixture used `19` tokens no table declared (D26), so a glossary written
+  over that chapter would have defined words the chapter's own formulas contradicted — hence `.13b` first.
+- [x] **ADDRESSED (verified)** — `docs/book/src/spec/glossary.md` plus eight domain parts under
+  `docs/book/src/spec/glossary/` carry **239 terms**, each with a plain-language meaning, the canonical
+  object that specifies it, the synonyms factories and other CADs use, and the machine token; `150` tokens
+  are owned, `19` cross-referenced with `→`, `22` entries are required to carry the safety mark and `72`
+  do. Every claim the glossary makes about itself is derived, not asserted:
+  `bash docs/tasks/artifacts/glossary/run_glossary_census.sh` →
+  `glossary census: 239 terms / 8 parts / 138 tokens / 0 failure(s)`, `exit=0`, with `155` canonical-object
+  references resolved and `0` dead, `82` tokens used by the spec set and `0` unaccounted, index↔parts
+  drift `0`. Its discrimination is proved, not assumed:
+  `bash docs/tasks/artifacts/glossary/run_glossary_probes.sh` → `probes: 10 pass / 0 fail` (two GREEN arms
+  and eight RED arms that break one property each in a copy and require the census to name it). The book
+  builds with all nine glossary pages: `make book` → `INFO HTML book written to …`, `exit=0`,
+  `ls docs/book/book/spec/glossary/*.html | wc -l` → `8`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `9 suite(s) green` (`62` arms across nine suites, `0 fail`); `make check` → `test result: ok. 21 passed;
+  0 failed` and `ok. 5 passed` and `ok. 3 passed` across the workspace, no product code touched;
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 62 files measured`,
+  `exit=0`. Containment is respected per part (largest glossary part `48` lines / `7 471` B against a
+  health of `400` / `24 576`; the index chapter `369` lines / `21 052` B) with **one axis deliberately over
+  health and inside its ceiling**: the widest table row is `268` B against a `200` B maxline health and a
+  `320` B ceiling, because a five-column termbase row is not the shape the prose-derived health target was
+  measured from. It is recorded here rather than paid for in vaguer definitions; if a later chapter pushes
+  the collection past `320` B the answer is a recorded decision and a table-shaped health target, not
+  silent trimming.
+- [x] **FIX** — wrote the index chapter (the machine-token rule, the ⚠ policy, the parts table, the
+  derived A–Z index, the termbase relationship to `G0-CONTRACT.16`, and the verification status of every
+  synonym class) and the eight parts; partitioned rather than filed as one ~70 KB chapter, which would
+  have breached the `book_collection` per-part ceiling within two more chapters; made the index derived
+  (`--emit-index`) and compared in both directions so it cannot drift; built the census as the tracked
+  producer and the probe suite as its ground truth; added
+  `docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` because this slice's changelog append
+  crossed the rollover milestone and the doctrine's step 6 requires ordering, uniqueness and retrieval
+  checks that nothing executed before.
+- [x] **The probes found three defects in the census before it found one in the glossary** — which is the
+  argument for RED arms over reading your own code. (1) `R1` read the *meaning* column instead of the
+  object column, so it examined no cell at all and printed `dead references: 0` — a green verdict on a
+  rule that never ran; only `DEAD-CLAUSE` failing to fire revealed it. (2) The clause slice was one byte
+  off: `§` is two bytes and `LC_ALL=C` makes awk count bytes, so every extracted clause carried a stray
+  `\xa7` and matched nothing. (3) `resolve()` collapsed `a/b/../c.md` by deleting `/../`, leaving
+  `a/b/c.md`, so all `155` references reported dead until the pattern also removed the parent segment.
+  All three were caught by probes; none by inspection.
+- [x] **The rollover this slice triggered is performed and verified in the same commit** — the live window
+  crossed its health target, so the five oldest entries are sealed into
+  `docs/history/stitchcad-changelog-part2.md` (`152` lines / `12 811` B / `sha256:5783ac36d8bc7cee…`), the
+  window is reordered into commit order (D29), the stale "_Inherited spine history_ divider" sentence is
+  corrected (D31), and part1's wrong coverage line is corrected by superseding record rather than by
+  editing an immutable segment (D30). Losslessness is proved, not claimed: all `12` pre-existing entries
+  have byte-identical bodies across live+sealed, `0` missing, `0` changed, no id both live and sealed; and
+  the ledger probe → `probes: 6 pass / 0 fail`, including part1's `365` lines still reproducing
+  `sha256:f4aec75ac7dd1fa5…`.
+- [x] **LOCKSTEP** — `SUMMARY.md` gains the glossary and its eight parts; `spec/index.md` links the
+  Glossary row; `ontology.md`'s forward reference resolves; `TOOLBOX.md` gains the census and its probe
+  suite; `knowledge-map/subsystems.md` names the glossary as a subsystem (the derived map picks up the new
+  decision record); `docs/decisions/decision_machine-tokens-declared-where-used.md` is the layer-C record
+  the `DEV_NOTES.md` lesson is promoted to; D29/D30/D31 closed in `PLANNING.md`; `LIVE_STATUS.md`,
+  `MEMORY.md` and `CHANGELOG.md` updated in this commit.
+
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and `.18` (the code leaf) additionally fills a `### G0-CONTRACT.18` checklist
 subsection with real tool output in the same commit as the change. This tree file carries no
@@ -487,6 +569,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-29` | `G0-CONTRACT.18` (CI verdict, observed after the exceptional push) | `git push origin main`; GitHub Actions runs API for `head_sha=119946b` | `051a075..119946b  main -> main`, ahead `0`; **`rust` completed `success`** (first execution of the new wasm32 smoketest step) and **`doctrines` completed `success`**; `runs: 2`, both concluded |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 | `2026-09-29` | `G0-CONTRACT.13b` | token census over the fixture at `HEAD` vs the working tree; `python3` re-derivation of both waistband readings; `make book`; `make gate` | undeclared tokens `19` → `6`, the six being glossary vocabulary; folded band `10.0` cm vs faced `6.0` cm per piece, so §4 and §6 are different garments (D27); no §4 result changed; `exit=0` both |
+| `2026-09-30` | `G0-CONTRACT.1` | glossary census; both probe suites; `make book`; `make gate`; `make probes`; `make check`; containment | `239 terms / 8 parts / 138 tokens / 0 failure(s)`; `probes: 10 pass / 0 fail` and `6 pass / 0 fail`; `exit=0`, 9 pages rendered; `=== all doctrines green ===`; `9 suite(s) green` — detail in the checklist |
 
 ## Commit Log
 
@@ -499,9 +582,17 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.3` | `STITCHCAD-G0-0003 (leaf G0-CONTRACT.3): the garment ontology` | 12 object families, the identity contract, 7 test obligations |
 | `G0-CONTRACT.13` | `STITCHCAD-G0-0013 (leaf G0-CONTRACT.13): the reference skirt, to the millimetre` | 17 derived values with formulas; 5 constants flagged `assumed` pending review |
 | `G0-CONTRACT.13b` | `STITCHCAD-G0-0013b (leaf G0-CONTRACT.13b): the fixture declares its tokens` | D26 and D28 fixed; D27 logged, owned by `.14`, and recorded in the chapter |
+| `G0-CONTRACT.1` | `STITCHCAD-G0-0001 (leaf G0-CONTRACT.1): the glossary` | 239 terms, 8 parts, one census and two probe suites; D29/D30/D31 fixed by the rollover |
 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
+
+- `2026-09-30`: `.1` landed — the glossary is normative vocabulary: **239 terms** in 8 domain parts behind
+  an index chapter carrying the machine-token rule, the safety-relevant (⚠) policy and the derived A–Z
+  index. Its claims are derived by `run_glossary_census.sh` (`0 failure(s)`) and its discrimination proved
+  by `run_glossary_probes.sh` (`10 pass / 0 fail`). The changelog rollover this slice's append triggered is
+  performed and verified in the same commit (D29, D30, D31), with `run_changelog_ledger_probes.sh` as the
+  standing verifier. The frontier moves to `.4`, the feature matrix.
 
 - `2026-09-29`: `.13b` landed — the reference fixture now declares every machine token it uses
   (D26: `19` used-and-undeclared → `6`, all of them glossary vocabulary), its formulas are written over

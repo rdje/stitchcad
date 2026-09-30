@@ -18,7 +18,15 @@
   `wasm32-unknown-unknown` build of `sc-core` + `sc-units`. Entry point: `crates/sc-core/src/lib.rs`,
   which names the module each future leaf owns. Owner: `G0-CONTRACT.3` (spec) and `G1-SLICE.3` (code).
 - `docs/book/src/spec/` — the normative specification (the director-facing contract). Chapters so far:
-  the G0 contract overview and units & tolerances. Owner: the `G0-CONTRACT` leaves.
+  the G0 contract overview, the glossary, units & tolerances, the garment ontology and the reference
+  skirt. Owner: the `G0-CONTRACT` leaves.
+- `docs/book/src/spec/glossary/` — **the vocabulary, partitioned.** One entry per term across eight
+  domain parts: plain meaning, canonical object, synonyms, and the machine token. The index chapter
+  (`docs/book/src/spec/glossary.md`) carries the machine-token rule, the safety-relevant (⚠) policy and
+  the derived A–Z index. Its claims are re-derived by
+  `docs/tasks/artifacts/glossary/run_glossary_census.sh` — one owner per token, every canonical
+  reference resolving, every token a chapter uses declared somewhere. Owner: `G0-CONTRACT.1`, and every
+  later chapter that introduces a term.
 - `.doctrine/live_document_size/` — the containment data plane: `surfaces.tsv` (every live document with
   its lifecycle, owner, health target and ceiling) and `routes.tsv` (every routing destination).
   Enforced by `scripts/check_live_doc_size.sh`. Owner: `SPINE.4`.
@@ -46,6 +54,7 @@
 - [`decision_acceptance-evidence-per-leaf.md`](docs/decisions/decision_acceptance-evidence-per-leaf.md)
 - [`decision_adopted-external-policy-references.md`](docs/decisions/decision_adopted-external-policy-references.md)
 - [`decision_live-document-containment-proportionate-adoption.md`](docs/decisions/decision_live-document-containment-proportionate-adoption.md)
+- [`decision_machine-tokens-declared-where-used.md`](docs/decisions/decision_machine-tokens-declared-where-used.md)
 - [`decision_numerical-contract-fixed-point.md`](docs/decisions/decision_numerical-contract-fixed-point.md)
 - [`decision_product-work-takes-the-frontier.md`](docs/decisions/decision_product-work-takes-the-frontier.md)
 - [`decision_scaffold-sync-protects-project-content.md`](docs/decisions/decision_scaffold-sync-protects-project-content.md)

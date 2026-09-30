@@ -2,7 +2,7 @@
 
 > **Status:** normative specification, gate **G0** (roadmap §3.1, §4.1). Specified here; implemented by
 > `sc-core` and `sc-measure` at gate G1 (leaves `G1-SLICE.3`, `G1-SLICE.4`). Terms used below are
-> defined in the glossary.
+> defined in the [glossary](glossary.md).
 
 This chapter defines every first-class object in a StitchCAD design: what it is, what it must carry,
 what must hold for it to be valid, and how it keeps its identity when the geometry around it changes.

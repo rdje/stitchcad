@@ -1,5 +1,38 @@
 # DEV_NOTES.md
 
+## _(2026-09-30)_ — a vocabulary census is a domain-defect detector, and a green rule may be a vacuous one
+
+- **The instrument found the domain defect, not the reading.** Building the glossary's token census
+  required deciding what "accounted for" means, and the only honest answer — a token must be declared by
+  a table in the chapter that uses it — immediately failed on the reference fixture: `19` of its `42`
+  tokens were declared nowhere (§4 named its derived values in prose while its own formulas used
+  `quarter_hip`, `front_dart_centre`, `sa_cb`). Forcing each one to a declaration is also what exposed
+  **D27**: `sa_wb_bottom` had no declaring row because the waistband it belongs to is described two
+  incompatible ways in the same chapter (§4's `2 × wb_width + … = 10.0 cm` is one band folded lengthwise;
+  §6's piece list is a faced two-piece band at `6.0 cm` each, and §8 sews only the outer one). A
+  prose-only fixture hides that; a fixture that must name every value cannot. Promoted to
+  `docs/decisions/decision_machine-tokens-declared-where-used.md`.
+- **A rule that reports `0 failures` may have checked nothing.** The census's reference rule printed
+  `dead references: 0` on the first run, and the honest reading is not "the glossary is clean" but "did
+  this rule ever fail?". It had two bugs: it read the *meaning* column instead of the object column, so
+  no cell was ever examined; and it sliced the clause with `substr(link, RSTART + 1, …)` where `§` is
+  **two bytes** and `LC_ALL=C` makes awk count bytes, so every extracted clause carried a stray `\xa7`.
+  Only the `DEAD-CLAUSE` RED arm — which mutates a copy and demands a refusal — showed it: the arm failed
+  to fire. Corollary worth keeping: **a probe suite's value is concentrated in the arms that fail on
+  purpose; a suite of GREEN arms is a report, not a test.** This is the third time this repository has
+  measured that shape (D15's shadowing probe, D20's untracked producer, D25's misclassified prose).
+- **Path arithmetic deserves the same suspicion.** `resolve()` collapsed `a/b/../c.md` by deleting `/../`,
+  which leaves `a/b/c.md` — the parent segment has to go with it. Every one of 155 references was reported
+  dead until the pattern became `/\/[^\/]*\/\.\.\//`. Relative-link resolution is where a census silently
+  becomes a complaint, because both failure directions look like content problems.
+- **A rollover is a transaction, not an append.** `CHANGELOG.md` crossed its health target on this slice,
+  and doing it by hand reproduced the two defects the ledger probe now checks: the window was not in
+  commit order (D29 — so "seal the oldest" seals the wrong end) and part1's descriptor claimed coverage
+  through an entry that never left the live window (D30). The containment doctrine already said this
+  ("run link, freshness, ordering, uniqueness, retrieval … checks"); what was missing was the executable.
+  The sealed-content digest is now re-computed on every `make probes`, and part1's `365` lines still
+  reproduce `sha256:f4aec75a…` — so immutability is a measured property, not a policy sentence.
+
 ## _(2026-09-29)_ — a gate that scopes evidence to a bullet still scopes it to the WRONG leaf
 
 - The inherited `TASK-ACCEPTANCE` check was distilled to close two leakage holes (a co-staged

@@ -160,7 +160,11 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
 - **D7** — the Knowledge Map documents no subsystems
 - Reproduce: `grep -n 'no subsystems documented' KNOWLEDGE_MAP.md`
 - Impact: orientation map is empty for a project with a 50 KB roadmap
-- Owner: `SPINE.5`
+- Owner: `SPINE.5` (**symptom fixed by accretion, verified `2026-09-30`** — `grep -c '^- \`'
+  KNOWLEDGE_MAP.md` → `6` subsystem entries and `grep -c 'no subsystems documented' KNOWLEDGE_MAP.md` →
+  `0`, `rc=1`; the rows were added by `G0-CONTRACT.18`, `SPINE.4.2` and `G0-CONTRACT.1`, not by `SPINE.5`.
+  What `SPINE.5` still owes is its own acceptance clause — invoking each listed tool once and recording
+  its real output shape — which stays open in that leaf.)
 
 - **D8** — `docs/ARTIFACT_CLEANUP.md` is absent, so the 24 h cleanup cadence has no record
 - Reproduce: `ls docs/ARTIFACT_CLEANUP.md` → No such file
@@ -171,7 +175,9 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
 - **D9** — `TOOLBOX.md` project-toolbox table holds placeholders (`<your-probe>`)
 - Reproduce: `grep -n 'your-probe' TOOLBOX.md`
 - Impact: tools-first doctrine has no reachable tool list
-- Owner: `SPINE.5`
+- Owner: `SPINE.5` (**symptom fixed by accretion, verified `2026-09-30`** — `grep -cE '<your-|<fill'
+  TOOLBOX.md` → `0`, `rc=1`, with `18` real instrument rows each carrying an invocation and its output
+  shape. As with D7, the leaf's own verification clause is what remains, and it remains in `SPINE.5`.)
 
 - **D10** — the starter crate still prints the bedrock message and is not a roadmap crate
 - Reproduce: `grep -n bedrock crates/app/src/main.rs`
@@ -401,8 +407,11 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Impact: a reader takes the top entry for the latest slice, and the rollover rule ("seal the oldest")
     would seal the WRONG end — the ordering defect turns into a data-placement defect the first time the
     window crosses its health target, which the next append does.
-  - Owner: `G0-CONTRACT.1` — the append that crosses the rollover milestone performs the rollover, and a
-    rollover over a misordered window cannot be correct, so the reorder lands in the same commit.
+  - Owner: `G0-CONTRACT.1` (**fixed** — the append that crossed the rollover milestone performed the
+    rollover: the live window is reordered into commit order, the five oldest entries are sealed into
+    `docs/history/stitchcad-changelog-part2.md` with their own descriptor, and
+    `docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` now derives the order instead of
+    trusting it → `probes: 6 pass / 0 fail`, `ORDER PASS 8 live entries in commit order`).
 
 - **D30** — the sealed archive's descriptor and the live pointer both misstate what part1 holds: each says
   coverage runs "from `STITCHCAD-PLANNING-0001` through `STITCHCAD-SPINE-0004c`", but part1's newest entry
@@ -411,9 +420,23 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     appears only in its coverage line), while `grep -n '^## STITCHCAD-SPINE-0004c' CHANGELOG.md` → `324`.
   - Impact: a reader who follows the pointer for slice `0004c` searches an immutable segment that does not
     contain it, and the "slices 1–15" count overlaps the live window by one.
-  - Owner: `G0-CONTRACT.1` — sealed segments are immutable, so the correction is a superseding record: the
-    live pointer is corrected to part1's true coverage and part2's descriptor states what part1 actually
-    holds. Editing the sealed header is the one fix this doctrine forbids.
+  - Owner: `G0-CONTRACT.1` (**fixed by superseding record**, the only correction an immutable segment
+    allows: part2's descriptor and the live pointer both state part1's true coverage
+    (`PLANNING-0001` … `SPINE-0004b`) and name the error; part1 is untouched, and the ledger probe's
+    `COVERAGE` rule carries it as a declared, reasoned exemption so the check stays green without
+    pretending the segment is right).
+
+- **D31** — `CHANGELOG.md`'s header told the reader that "everything below the _Inherited spine history_
+  divider is the bedrock scaffold's own changelog", but that divider left the file in `SPINE-0014`: the
+  scaffold's changelog is sealed in `docs/history/bedrock-scaffold-changelog.md`.
+  - Reproduce (before the fix): `grep -c 'Inherited spine history' CHANGELOG.md` → `1`, while
+    `grep -c '^# Inherited spine history' CHANGELOG.md` → `0` — the header named a divider that was not
+    there, and the sentence was quoted back by `SPINE-0014`'s own entry.
+  - Impact: the ledger's own navigation sentence described a structure the file no longer had, so a
+    reader looking for the scaffold's history looked in the wrong file.
+  - Owner: `G0-CONTRACT.1` (**fixed** — the header now names the two sealed segments in a table with
+    their coverage and identity, points at `bedrock-scaffold-changelog.md` explicitly, and the ledger
+    probe's `POINTER` rule keeps the pointer and the segments on disk in agreement both directions).
 
 ## Decisions
 

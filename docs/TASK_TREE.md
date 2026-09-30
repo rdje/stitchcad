@@ -54,7 +54,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | --- | --- | --- | --- | --- |
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.3` — seed `G5`–`G7`, `V1`, `V2` + publish the coverage map | repo-local |
 | [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.1` — de-template `README.md` and the mdBook identity | repo-local |
-| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.1` — glossary of construction terms | repo-local |
+| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.4` — supported / rejected / deferred feature matrix | repo-local |
 | [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `proposed` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
@@ -78,7 +78,7 @@ on disk is registered here with a declared lane — plus the advisory clause-ver
 table, more clause rows than roadmap clauses is expected (a tree may split one clause into several
 leaves, as `G5-SHELLS` does with the "full UX spec" list); fewer rows than clauses is the alarm.
 
-Execution order right now: **`G0-CONTRACT.1`–`.18`** (the product's semantic contract, then the first
-product code at `.18`) → `G1-SLICE` … The `SPINE` lane keeps `.5`, `.13` and `.15` open; none of them
+Execution order right now: **`G0-CONTRACT.4`–`.17`** (the remaining semantic contract; `.1`, `.2`, `.3`,
+`.13`, `.13b` and `.18` are done) → `G1-SLICE` … The `SPINE` lane keeps `.5`, `.13` and `.15` open; none of them
 blocks product work, so they are deferred behind it (defect D24 records why that ordering is explicit
 rather than incidental).
