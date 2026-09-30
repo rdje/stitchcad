@@ -57,14 +57,15 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Children: `.1` … `.16`
 
 - ID: `G1-SLICE.1`
-  Status: `pending`
+  Status: `done`
   Goal: workspace shape per §4.3 — retire the bedrock starter crate (`crates/app`, defect D10),
   create `sc-units` and `sc-core` with the workspace lints inherited, and extend CI to the G0
   workflow shape (fmt / clippy / unit+property / WASM smoketest).
   Acceptance: `cargo metadata` lists the roadmap crates that exist so far; no crate prints the
   template message; CI green on the new layout; the Knowledge Map names the subsystems.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — delivered by `G0-CONTRACT.18` (commit `eb83f01`) ahead of this
+  leaf; every acceptance criterion re-derived by command in the `### G1-SLICE.1` checklist.
+  Commit: `STITCHCAD-G1-0001`
 
 - ID: `G1-SLICE.2`
   Status: `pending`
@@ -238,7 +239,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.1` | `pending` | gated on `G0-CONTRACT` (specs) and `SPINE.8` (sound acceptance gate for multi-leaf files) |
+| — | `G1-SLICE.2` | `pending` | `sc-units` — delivered by `G0-CONTRACT.18`; reconcile-and-close is the next slice |
 
 ## Decisions
 
@@ -305,19 +306,61 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md`,
   `docs/decisions/INDEX.md` and the regenerated Knowledge Map, all in this commit.
 
+### `G1-SLICE.1` (reconciled) — the workspace shape shipped under `G0-CONTRACT.18`, so this leaf closes on re-derived evidence, not new code
+
+`G0-CONTRACT.18` (commit `eb83f01`) landed the G0 CI shape and, in its own words, retired the bedrock
+starter crate "closing defect D10 ahead of `G1-SLICE.1`". It therefore delivered every artifact this leaf
+names, but the leaf was left `pending` — a tree↔code drift: the leaf's status disagreed with the shipped
+workspace. This slice audits that delivery against each acceptance criterion and records the closure. No
+Rust changes; the gate that judges it is the doctrine enforcer plus the re-derived commands below.
+
+- [x] **REPRODUCE / ISSUE** — the leaf said `pending` while its deliverables were committed:
+  `git show HEAD:docs/tasks/G1-SLICE.md | awk '/ID: .G1-SLICE\.1./{f=1} f&&/Status:/{print;exit}'` →
+  ``  Status: `pending` ``, `rc=0`, against `git log --oneline -- crates/sc-units crates/sc-core` →
+  `eb83f01 STITCHCAD-G0-0018 (leaf G0-CONTRACT.18): the first product code - sc-units`, `rc=0`. A frontier
+  that points at a leaf whose work already shipped misdirects the next session into redoing it.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `G0-CONTRACT.18`'s acceptance let it answer the starter-crate question
+  itself ("retired here or explicitly handed to `G1-SLICE.1`"), and its commit message records "The bedrock
+  starter crate is retired (git rm crates/app), closing defect D10 ahead of G1-SLICE.1". The G0 leaf closed;
+  the G1 leaf it pre-empted was never reconciled. The remedy is the audit, not new code: the deliverables
+  exist and are green.
+- [x] **ADDRESSED (verified)** — each acceptance criterion re-derived by command. (1) `cargo metadata
+  --no-deps --format-version 1` lists exactly the roadmap crates that exist so far, `sc-core, sc-units`
+  (§4.3 — the rest appear when their stage starts), `rc=0`. (2) `git ls-tree HEAD crates/` shows only those
+  two trees, so `crates/app` is gone, and `grep -rn 'Hello\|template\|starter' crates/` returns no match —
+  no crate prints the template message. (3) The G0 CI shape is green locally and in the gate: `make check`
+  → `test result: ok. 21 passed` (property) plus `1 passed` (doc-test), `make wasm` → `wasm-viewer
+  smoketest: sc-units + sc-core build for wasm32-unknown-unknown`, and `run_g0_exit_review.sh` reports
+  `G0-17 MET` (CI) and `G0-18 MET` (the wasm build). (4) `KNOWLEDGE_MAP.md` names both subsystems (lines 12
+  and 17, each with entry point, conformance and owner).
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `rc=0`; `make check` green; `make
+  wasm` green. This slice stages no Rust, so the acceptance gate (`check_task_acceptance.sh`, which fires
+  only on staged code) does not govern it; these boxes are the tree's own per-leaf record.
+- [x] **FIX** — marked `.1` `done`, recorded its verification and commit, advanced the frontier, and added
+  this subsection so the closure carries re-derivable evidence.
+- [x] **LOCKSTEP** — `docs/TASK_TREE.md` (frontier cell), `MEMORY.md` (next action), `LIVE_STATUS.md` (G1 row
+  → In Progress), `CHANGELOG.md`, `DEV_NOTES.md` and the regenerated Knowledge Map, all in this commit.
+  promotion: declined (instance of the D34 hand-kept-state class `PLANNING.5` owns; this slice fixes the instance, a new record would duplicate that ownership).
+
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
+| `2026-09-30` | `.1` | `cargo metadata --no-deps`; `make check`; `make wasm`; `make gate`; `run_g0_exit_review.sh` | crates `sc-core, sc-units`; `21 passed` property + `1` doc-test; wasm build green; `=== all doctrines green ===`; `G0-17`/`G0-18` `MET` — every `.1` criterion re-derived, `rc=0` |
 
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
 | --- | --- | --- |
 | tree seed | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | created by the seeding leaf |
-| `.1` … `.16` | `pending` | — |
+| `.1` | `STITCHCAD-G1-0001 (leaf G1-SLICE.1)` | reconciled: delivered by `G0-CONTRACT.18` (`eb83f01`) ahead of this leaf |
+| `.2` … `.16` | `pending` | — |
 
 ## Changelog
 
 - `2026-09-29`: Tree created by `PLANNING.2` with 16 leaves; owns defect D10 (starter crate).
+- `2026-09-30`: `.1` reconciled and closed — its workspace shape (starter crate retired, `sc-units` +
+  `sc-core` created, G0 CI shape) was delivered by `G0-CONTRACT.18` (`eb83f01`) "ahead of `G1-SLICE.1`";
+  every acceptance criterion re-derived by command and recorded in the `### G1-SLICE.1` checklist. D10 was
+  already closed by that commit; the frontier advances to `.2`.
