@@ -426,6 +426,23 @@ mechanically-enforced form:
   recorded here and the upstream suggestion (have the driver export a repo-local `TMPDIR`) is
   reported with D15/D17.
 
+- ID: `SPINE.21`
+  Status: `done` (recurring: the cadence record names the obligation, this leaf owns each run)
+  Goal: the **recurring** artifact cleanup — remove only what is regenerable, gitignored and project-owned
+  (the doctrine and probe scratch trees, cargo's incremental caches, the mdBook output, stray
+  `.log`/`.bin`/`.tmp`/`.orig`/`.rej`/`.DS_Store`), prove by a residue census that what was removed is gone
+  and that nothing tracked was touched, re-run the gates so the removal is shown to cost nothing but time,
+  and overwrite the record's single latest entry.
+  Acceptance: the run is measured before and after; the residue census names every path it checked and
+  finds them absent; `git ls-files` proves no tracked file was deleted; `make gate`, `make check`,
+  `make book` and `make probes` are green afterwards, the last two regenerating exactly what was removed;
+  `docs/ARTIFACT_CLEANUP.md` carries one entry, dated absolutely, and no history (that is git's).
+  Verification: recorded below and in the acceptance checklist — `target` went `40 648` KB → `10 808` KB
+  and `docs/book/book` `4 120` KB → absent, all nine paths found gone by the residue census, `0` stray
+  artifacts, `0` tracked artifact-shaped files before and after, `0` deleted tracked files, and all five
+  make targets green afterwards with the book and the incremental caches regenerated.
+  Commit: `STITCHCAD-SPINE-0021`
+
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
@@ -454,6 +471,7 @@ mechanically-enforced form:
 | — | `SPINE.17` | `done` | taken out of order: a director-approved rule is recorded when it is made |
 | — | `SPINE.18` | `done` | taken immediately after: `.17` shipped a trigger that fired on itself |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
+| — | `SPINE.21` | `done` | the cleanup cadence is recurring, and a recurring obligation with no leaf is one somebody rediscovers: taken between two product slices because the 24-hour mark falls inside this one |
 
 ## Decisions
 
@@ -527,68 +545,42 @@ its checklist here, because `scripts/check_task_acceptance.sh` judges every stag
 refuses one with no ticked boxes; the next slice moves it across. Neither file carries an unticked
 placeholder box (defect D15).
 
-### `SPINE.20` — the table convention becomes a gate, because a rule in a doc is a suggestion
+### `SPINE.21` — the cadence runs, and the residue census proves what it took
 
-- [x] **REPRODUCE / ISSUE** — `SPINE.15` settled D22 against a rendered page and left the answer enforced by
-  nothing: the convention lived in `COMMIT.md` prose, and the only gate in the tree that reads table cells
-  asserts the opposite. Both halves measured — `bash docs/tasks/artifacts/table_render/run_table_render_probes.sh`
-  → `probes: 3 pass / 0 fail`, printing `3 cell(s): A raw pipe in a code span: `x|y`|2` for a row written with
-  four cells; and `bash scripts/check_table_arity.sh --self-test` → `arm ok  a pipe inside a code span is not a
-  separator (0)`, `exit=0`. So a row that loses a column in the built book passes every gate, and
-  `grep -c TABLE-CODE-PIPE scripts/check_doctrines.project.sh` at `HEAD` → `0`, `rc=1`.
-- [x] **ROOT CAUSE (WHY + WHERE)** — the inherited `scripts/check_table_arity.sh` was written against a reading
-  of the specification rather than a renderer, and the assumption is load-bearing in four places:
-  `grep -n 'code span' scripts/check_table_arity.sh` → lines `20`, `22`, `73`, `99`, `rc=0`, where `20` states
-  the cell rule ("and NOT inside an inline code span") and `73` is the self-test arm that pins it
-  (`t 0 "a pipe inside a code span is not a separator"`). It is also NEUTRAL spine code: re-synced by
-  `scripts/update_scaffold.sh`, so patching it locally would be silently overwritten or silently diverge (the
-  rule `SPINE.7`/`SPINE.8` established for defect D15). A defect in an inherited check is therefore fixed in the
-  **project slot**, which can only add refusals — and until this leaf nothing there read table cells:
-  `grep -c 'PROJECT_DOCTRINES' scripts/check_doctrines.project.sh` at `HEAD` listed two entries, neither of
-  them about tables.
-- [x] **ADDRESSED (verified)** — `scripts/check_table_code_pipes.sh` is registered as the project doctrine
-  `TABLE-CODE-PIPE` and mirrored in `DOCTRINE_ENFORCEMENT.md`. Its arms:
-  `bash scripts/check_table_code_pipes.sh --self-test` → `table-code-pipe --self-test: 7 arms, 0 failed`,
-  `exit=0` — a raw pipe refused, an escaped one accepted, an ordinary separator accepted (the arity checker's
-  business, not this one's), a quoted row inside a fence accepted (documentation is not a table), a
-  double-backtick span refused, prose accepted (no cell to split), and an indented row refused. The gate fires
-  in the real hook path, demonstrated rather than assumed: staging a scratch file holding
-  `| `x | y` | 2 | 3 |` and running the enforcer → `PROJECT TABLE-CODE-PIPE: BREACH (exit=1)` with
-  `docs/_pipe_demo.md:5 — a raw `|` inside a code span splits the cell and the renderer drops the rightmost
-  one` and the escaped form to write instead; the file was then unstaged and deleted
-  (`git status --short | wc -l` → `8`, the slice's own edits). `bash scripts/check_doctrines.project.sh` →
-  `PROJECT-SPECIFIC: 3 project doctrine(s) green`, and `make gate` → `=== all doctrines green ===`, `exit=0`.
-- [x] **NO REGRESSION** — the gate is **absolute, not a ratchet**, and that was measured before choosing: a
-  scan of every tracked `.md` for the shape it refuses, re-runnable rather than remembered —
-  `bash scripts/check_table_code_pipes.sh --all` → `table-code-pipe --all: 88 tracked .md files, 0 offending
-  table rows`, `exit=0` — so no existing file blocks and no baseline had to be grandfathered. The `--all` mode
-  exists for exactly this claim, on the precedent of `check_gap_claims.sh --all`: a count quoted from an
-  untracked scan is a memory, and this repository has already shipped that breach once (defect D20). `make probes` → `14 suite(s) green`,
-  `exit=0`, including the render oracle that is this check's ground truth; the inherited checker is untouched —
-  `git diff --stat HEAD -- scripts/check_table_arity.sh` → empty, `rc=0`; `make book` → `exit=0`;
-  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 89 files measured`,
-  `exit=0`; every census green (glossary `276 terms`, matrix `105 rows`, standards `6 registered`, fixture
-  `20 rows / 4 checks / 5 pieces`, coverage `13 trees / 3 sibling(s)` — all `0 failure(s)`).
-- [x] **FIX** — wrote the check (staged-scoped like every sibling doctrine, fence-aware, code-span aware for
-  any backtick run per CommonMark, with the escaped form printed in the refusal so the fix is one edit away);
-  registered it in the project slot's array and its human-readable mirror; mirrored it in
-  `DOCTRINE_ENFORCEMENT.md` with the reason and the divergence from the inherited check; added the `TOOLBOX.md`
-  row; re-derived the doctrine and probe counts in `LIVE_STATUS.md` instead of incrementing them by hand
-  (`scripts/check_doctrines.sh | grep -c '✅'` → `13` printed rows = 12 universal including the conditionally
-  appended `KNOWLEDGE-MAP` plus the project row; `check_doctrines.project.sh` → `3 project doctrine(s)`;
-  `find docs/tasks/artifacts -name 'run_*probe*.sh' | wc -l` → `14`); moved `.15`'s checklist to the evidence
-  sibling per the convention `G0-CONTRACT.4b` recorded.
-- [x] **The upstream report is the other half of the fix.** The inherited check's rule is wrong for the renderer
-  this repository ships through, and the honest disposition of a defect in NEUTRAL code is a report, not a local
-  patch: the divergence is recorded in `DOCTRINE_ENFORCEMENT.md`'s project table and in
-  `docs/decisions/decision_table-cells-escape-pipes-render-to-settle.md`, with the oracle that settles it, so
-  the report carries evidence rather than an opinion.
-- [x] **LOCKSTEP** — D47 closed in `docs/tasks/PLANNING.md`; this tree's leaf, frontier, verification log,
-  commit log and changelog; `DOCTRINE_ENFORCEMENT.md`, `TOOLBOX.md`, `LIVE_STATUS.md`; `MEMORY.md` and
-  `CHANGELOG.md` in this commit. Lesson promotion: declined (the rule — a convention needs a gate, and a
-  defect in inherited code is fixed in the project slot — is already layer C:
-  `decision_table-cells-escape-pipes-render-to-settle.md` and the D15 record; a third copy would be a
-  duplicate, and no new dated lesson was added to `DEV_NOTES.md` this slice).
+- [x] **REPRODUCE / ISSUE** — the cadence record was 23 hours old at the start of this run and the volume
+  had grown: `du -sk target docs/book/book` → `40648` and `4120`, with `find target -name '*.bin' | wc -l`
+  → `57` incremental-cache files. `docs/ARTIFACT_CLEANUP.md`'s latest entry was `SPINE.2`'s run of
+  `2026-09-29`, so the session directive's §8 obligation ("more than 24 hours old … run a cleanup during
+  this session") was about to fire mid-slice with no leaf owning it.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `SPINE.2` discharged the *first* cleanup and wrote the record, but a
+  cadence is a recurring obligation and the tree had no recurring leaf for it: `grep -c 'cleanup'
+  docs/tasks/SPINE.md` matched only `.2`'s block. So each later run would either be unowned (a change with
+  no leaf, which the code-change doctrine forbids) or folded into whatever slice happened to notice the
+  date — which is how a hygiene action ends up inside a product commit.
+- [x] **ADDRESSED (verified)** — nine paths removed, each named by the residue census and each found gone:
+  `target/doctrine_scratch`, `target/scratch`, `target/tmp`, `target/debug/incremental`,
+  `target/wasm32-unknown-unknown/debug/incremental`, `docs/book/book`, and three scratch bodies the
+  containment self-tests had left in `target/`. Measured: `target` `40 648` KB → `10 808` KB (`33 960` KB
+  off the volume, counting the book's `4 120` KB). Nothing tracked was touched:
+  `git ls-files | grep -cE '^(target/|docs/book/book/)'` → `0` before and after,
+  `git ls-files | grep -cE '\.(log|bin|tmp|orig|rej)$'` → `0`, `git status --porcelain | grep -c '^ D\|^D'`
+  → `0`, and `find . -path ./.git -prune -o \( -name '*.log' -o -name '*.bin' -o -name '*.tmp' -o
+  -name '*.orig' -o -name '*.rej' -o -name '.DS_Store' \) -print | wc -l` → `0`.
+- [x] **NO REGRESSION** — every gate re-run after the removal, which is the point of the exercise:
+  `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed; 0 failed`;
+  `make book` → `INFO HTML book written to …` with `docs/book/book` regenerated at exactly `4 120` KB;
+  `make probes` → `20 suite(s) green` with `target/scratch` recreated by the Makefile's own rule;
+  `make wasm` → `wasm-viewer smoketest: sc-units + sc-core build for wasm32-unknown-unknown`. `target`
+  rebuilt to `13 460` KB, i.e. the incremental caches returned as the record promises.
+- [x] **FIX** — removed the nine paths; overwrote the record's single latest entry with the absolute date
+  and time, the byte deltas, the residue census result and the gates re-run; created this leaf so the
+  cadence has a recurring owner; corrected `docs/TASK_TREE.md`'s `SPINE` frontier cell, which still named
+  `.20` as open one commit after it landed (D34's fourth instance).
+- [x] **LOCKSTEP** — this leaf, its frontier row, the tree's three logs; `docs/ARTIFACT_CLEANUP.md`,
+  `docs/TASK_TREE.md`, `CHANGELOG.md` and `docs/tasks/PLANNING.md` (D34's recurrence) in this commit.
+  `MEMORY.md` and `LIVE_STATUS.md` are unchanged: a cleanup moves no product frontier and closes no area.
+  Lesson promotion: declined (no new dated lesson — the run is a cadence discharge, and the reusable rule
+  "a recurring obligation needs a recurring leaf" is recorded in this leaf's goal rather than duplicated).
 
 ## Verification Log
 
@@ -622,6 +614,7 @@ placeholder box (defect D15).
 | `2026-09-30` | `SPINE.20` | `check_table_code_pipes.sh --self-test`; a scan of every tracked `.md` for the shape it refuses; `check_doctrines.project.sh`; `make gate`; the render oracle it takes as ground truth | `7 arms, 0 failed`; `0` violations in the tracked book, so the gate is absolute and not a ratchet; `PROJECT-SPECIFIC: 3 project doctrine(s) green`; `=== all doctrines green ===`; `probes: 3 pass / 0 fail` |
 
 | `2026-09-30` | `SPINE.20` (CI verdict, observed after the exceptional push `scripts/` owed) | `make check`/`gate`/`probes`; `git push origin main`; the Actions runs API for `head_sha=a743d53` | `exit=0` all three; `4bd4027..a743d53  main -> main`, ahead `0`; `runs: 2` — **`doctrines` `success`**, **`rust` `success`**, the first runner execution of `TABLE-CODE-PIPE` |
+| `2026-09-30` | `SPINE.21` | `du -sk` before and after; the residue census over all nine paths; `git ls-files` and `git status --porcelain` for tracked damage; `find` for stray artifacts; `make gate`/`check`/`book`/`probes`/`wasm` | `40 648` KB → `10 808` KB plus the book's `4 120` KB; all nine gone; `0` tracked artifact-shaped files before and after; `0` deleted tracked files; `0` stray artifacts; all five targets green, the book regenerated at exactly `4 120` KB |
 
 ## Commit Log
 
@@ -651,6 +644,7 @@ placeholder box (defect D15).
 | `SPINE.4.5` | `STITCHCAD-G0-0004c (leaf G0-CONTRACT.4c, SPINE.4.5, PLANNING.6, G0-CONTRACT.14b)` | landed in the slice that applied roadmap v0.3 and hit the trigger; CI observed green on `513374c` |
 | `SPINE.15` | `STITCHCAD-SPINE-0015 (leaf SPINE.15): the table convention is settled by a rendered page` | D22 closed, D47 logged and `SPINE.20` created; both prose-derived maxline targets re-derived; the decisions debt cleared |
 | `SPINE.20` | `STITCHCAD-SPINE-0020 (leaf SPINE.20): the table convention becomes a gate` | D47 closed; `TABLE-CODE-PIPE` registered in the project slot; the inherited arity checker untouched |
+| `SPINE.21` | `STITCHCAD-SPINE-0021 (leaf SPINE.21): the cadence runs, and the residue census proves what it took` | 33 960 KB off the volume; nothing tracked touched; all five make targets green afterwards |
 | `SPINE.5`, `SPINE.13`, `SPINE.19` | `pending` | — |
 
 ## Changelog
@@ -727,3 +721,11 @@ placeholder box (defect D15).
   book measured at `0` violations first, so the gate is absolute rather than a ratchet. The inherited
   `check_table_arity.sh` is untouched — NEUTRAL spine code is reported upstream, never patched locally — and
   D47 closes with the divergence recorded in `DOCTRINE_ENFORCEMENT.md`'s mirror.
+- `2026-09-30`: `.21` landed — the artifact-cleanup cadence now has a recurring owner. `SPINE.2`
+  discharged the first run and wrote the record, but a cadence is an obligation that returns, and a
+  returning obligation with no leaf is one somebody rediscovers mid-slice. This run removed nine paths
+  (both scratch trees, both incremental caches, the mdBook output, three self-test scratch bodies),
+  took 33 960 KB off the volume, proved by a residue census that each is gone and that no tracked file
+  was touched, and re-ran all five make targets so the removal is shown to cost rebuild time and
+  nothing else. `SPINE.20`'s checklist moved to the evidence sibling, as the convention requires of the
+  slice after the one that landed it, which also brings this tree back inside its per-part health.

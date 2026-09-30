@@ -594,6 +594,13 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     never wrote the index, which is the same mechanism as both earlier instances: `COMMIT.md` updates that file
     "only if the frontier changes" and nothing derives whether it did. Three instances of one hand-kept
     sentence is the census `PLANNING.5` owes, not a fourth correction.
+  - **Fourth instance, found and removed by `SPINE.21`.** The index's `SPINE` frontier cell still named
+    `.20` as open one commit after `a743d53` landed it, while the same file's execution-order paragraph —
+    corrected by `G0-CONTRACT.9` — had it right. Measured: `grep -n 'SPINE](tasks/SPINE.md)'
+    docs/TASK_TREE.md` → the cell, against `grep -c 'ID: `SPINE.20`' docs/tasks/SPINE.md` and that leaf's
+    `Status: done`. Two sentences in ONE file disagreed about the same lane, which is the strongest argument
+    yet for deriving the cells instead of writing them: a hand-kept value duplicated in the same document
+    drifts against itself, not just against the trees.
 
 - **D35** — the ontology does not say whether a `SeamSpan` may name the same piece on both sides (a
   *self-span*), and the reference fixture needs an answer for its waistband ends: a band folded lengthwise

@@ -751,3 +751,66 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   `docs/decisions/decision_table-cells-escape-pipes-render-to-settle.md`. Lesson promotion: **promoted** — that
   new record carries the rendered evidence and an `answers:` line, and
   `decision_maxline-health-derived-from-the-cell-budget.md` gains the max-axis consequence this leaf measured.
+
+### `SPINE.20` — the table convention becomes a gate, because a rule in a doc is a suggestion
+
+- [x] **REPRODUCE / ISSUE** — `SPINE.15` settled D22 against a rendered page and left the answer enforced by
+  nothing: the convention lived in `COMMIT.md` prose, and the only gate in the tree that reads table cells
+  asserts the opposite. Both halves measured — `bash docs/tasks/artifacts/table_render/run_table_render_probes.sh`
+  → `probes: 3 pass / 0 fail`, printing `3 cell(s): A raw pipe in a code span: `x|y`|2` for a row written with
+  four cells; and `bash scripts/check_table_arity.sh --self-test` → `arm ok  a pipe inside a code span is not a
+  separator (0)`, `exit=0`. So a row that loses a column in the built book passes every gate, and
+  `grep -c TABLE-CODE-PIPE scripts/check_doctrines.project.sh` at `HEAD` → `0`, `rc=1`.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the inherited `scripts/check_table_arity.sh` was written against a reading
+  of the specification rather than a renderer, and the assumption is load-bearing in four places:
+  `grep -n 'code span' scripts/check_table_arity.sh` → lines `20`, `22`, `73`, `99`, `rc=0`, where `20` states
+  the cell rule ("and NOT inside an inline code span") and `73` is the self-test arm that pins it
+  (`t 0 "a pipe inside a code span is not a separator"`). It is also NEUTRAL spine code: re-synced by
+  `scripts/update_scaffold.sh`, so patching it locally would be silently overwritten or silently diverge (the
+  rule `SPINE.7`/`SPINE.8` established for defect D15). A defect in an inherited check is therefore fixed in the
+  **project slot**, which can only add refusals — and until this leaf nothing there read table cells:
+  `grep -c 'PROJECT_DOCTRINES' scripts/check_doctrines.project.sh` at `HEAD` listed two entries, neither of
+  them about tables.
+- [x] **ADDRESSED (verified)** — `scripts/check_table_code_pipes.sh` is registered as the project doctrine
+  `TABLE-CODE-PIPE` and mirrored in `DOCTRINE_ENFORCEMENT.md`. Its arms:
+  `bash scripts/check_table_code_pipes.sh --self-test` → `table-code-pipe --self-test: 7 arms, 0 failed`,
+  `exit=0` — a raw pipe refused, an escaped one accepted, an ordinary separator accepted (the arity checker's
+  business, not this one's), a quoted row inside a fence accepted (documentation is not a table), a
+  double-backtick span refused, prose accepted (no cell to split), and an indented row refused. The gate fires
+  in the real hook path, demonstrated rather than assumed: staging a scratch file holding
+  `| `x | y` | 2 | 3 |` and running the enforcer → `PROJECT TABLE-CODE-PIPE: BREACH (exit=1)` with
+  `docs/_pipe_demo.md:5 — a raw `|` inside a code span splits the cell and the renderer drops the rightmost
+  one` and the escaped form to write instead; the file was then unstaged and deleted
+  (`git status --short | wc -l` → `8`, the slice's own edits). `bash scripts/check_doctrines.project.sh` →
+  `PROJECT-SPECIFIC: 3 project doctrine(s) green`, and `make gate` → `=== all doctrines green ===`, `exit=0`.
+- [x] **NO REGRESSION** — the gate is **absolute, not a ratchet**, and that was measured before choosing: a
+  scan of every tracked `.md` for the shape it refuses, re-runnable rather than remembered —
+  `bash scripts/check_table_code_pipes.sh --all` → `table-code-pipe --all: 88 tracked .md files, 0 offending
+  table rows`, `exit=0` — so no existing file blocks and no baseline had to be grandfathered. The `--all` mode
+  exists for exactly this claim, on the precedent of `check_gap_claims.sh --all`: a count quoted from an
+  untracked scan is a memory, and this repository has already shipped that breach once (defect D20). `make probes` → `14 suite(s) green`,
+  `exit=0`, including the render oracle that is this check's ground truth; the inherited checker is untouched —
+  `git diff --stat HEAD -- scripts/check_table_arity.sh` → empty, `rc=0`; `make book` → `exit=0`;
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 89 files measured`,
+  `exit=0`; every census green (glossary `276 terms`, matrix `105 rows`, standards `6 registered`, fixture
+  `20 rows / 4 checks / 5 pieces`, coverage `13 trees / 3 sibling(s)` — all `0 failure(s)`).
+- [x] **FIX** — wrote the check (staged-scoped like every sibling doctrine, fence-aware, code-span aware for
+  any backtick run per CommonMark, with the escaped form printed in the refusal so the fix is one edit away);
+  registered it in the project slot's array and its human-readable mirror; mirrored it in
+  `DOCTRINE_ENFORCEMENT.md` with the reason and the divergence from the inherited check; added the `TOOLBOX.md`
+  row; re-derived the doctrine and probe counts in `LIVE_STATUS.md` instead of incrementing them by hand
+  (`scripts/check_doctrines.sh | grep -c '✅'` → `13` printed rows = 12 universal including the conditionally
+  appended `KNOWLEDGE-MAP` plus the project row; `check_doctrines.project.sh` → `3 project doctrine(s)`;
+  `find docs/tasks/artifacts -name 'run_*probe*.sh' | wc -l` → `14`); moved `.15`'s checklist to the evidence
+  sibling per the convention `G0-CONTRACT.4b` recorded.
+- [x] **The upstream report is the other half of the fix.** The inherited check's rule is wrong for the renderer
+  this repository ships through, and the honest disposition of a defect in NEUTRAL code is a report, not a local
+  patch: the divergence is recorded in `DOCTRINE_ENFORCEMENT.md`'s project table and in
+  `docs/decisions/decision_table-cells-escape-pipes-render-to-settle.md`, with the oracle that settles it, so
+  the report carries evidence rather than an opinion.
+- [x] **LOCKSTEP** — D47 closed in `docs/tasks/PLANNING.md`; this tree's leaf, frontier, verification log,
+  commit log and changelog; `DOCTRINE_ENFORCEMENT.md`, `TOOLBOX.md`, `LIVE_STATUS.md`; `MEMORY.md` and
+  `CHANGELOG.md` in this commit. Lesson promotion: declined (the rule — a convention needs a gate, and a
+  defect in inherited code is fixed in the project slot — is already layer C:
+  `decision_table-cells-escape-pipes-render-to-settle.md` and the D15 record; a third copy would be a
+  duplicate, and no new dated lesson was added to `DEV_NOTES.md` this slice).

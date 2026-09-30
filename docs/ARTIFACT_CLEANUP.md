@@ -22,10 +22,13 @@ Cleanup is a normal change: it is owned by a task-tree leaf, recorded here, and 
 
 ## Latest run
 
-- **Run:** `2026-09-29` (UTC) by leaf `SPINE.2` — removed the doctrine/probe scratch trees
-  (`target/doctrine_scratch`, `target/scratch`), cargo's incremental caches
-  (`target/debug/incremental`, 896 KB of `.bin` files) and the mdBook output (`docs/book/book`,
-  1 068 KB); `target` went 2.1 MB → 1.2 MB, the residue census found all four paths gone and
-  `0` stray `*.log` / `*.bin` / `.DS_Store` files remained, `0` tracked artifact-shaped files existed
-  before or after, and `make gate`, `make check`, `make book` and `make probes` were all green
-  afterwards (the last two regenerating exactly what was removed).
+- **Run:** `2026-09-30` 21:00 CEST (19:00 UTC) by leaf `SPINE.21` — removed the doctrine and probe scratch
+  trees (`target/doctrine_scratch`, `target/scratch`, `target/tmp`), cargo's incremental caches on both
+  hosts (`target/debug/incremental`, `target/wasm32-unknown-unknown/debug/incremental` — 57 `.bin` files),
+  the mdBook output (`docs/book/book`, 4 120 KB) and three scratch bodies the containment self-tests had
+  left in `target/`; `target` went 40 648 KB → 10 808 KB, so 33 960 KB left the volume. The residue census
+  found all nine paths gone, `0` stray `*.log` / `*.bin` / `*.tmp` / `*.orig` / `*.rej` / `.DS_Store`
+  files anywhere outside `.git`, `0` tracked artifact-shaped files before and after, and `0` deleted
+  tracked files. `make gate`, `make check`, `make book`, `make probes` and `make wasm` were all green
+  afterwards, the last two regenerating exactly what was removed (`docs/book/book` back at 4 120 KB,
+  `target` rebuilding to 13 460 KB).
