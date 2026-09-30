@@ -192,6 +192,7 @@ Derived from the parts by the census; do not edit this list by hand.
 - [format quantization](glossary/model-and-numbers.md)
 - [formula graph](glossary/recipe-and-pieces.md)
 - [front-end adapter](glossary/commands-and-authority.md)
+- [fused attachment](glossary/marks-and-closures.md)
 - [gather](glossary/marks-and-closures.md)
 - [generate (authority)](glossary/commands-and-authority.md)
 - [geometric approximation](glossary/model-and-numbers.md)

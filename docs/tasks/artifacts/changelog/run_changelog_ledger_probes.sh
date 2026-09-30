@@ -19,6 +19,13 @@
 #   COVERAGE   every id a segment's descriptor names as covered is actually in that segment
 #   POINTER    the live pointer and the segments on disk name each other, both directions
 #
+# PLUS ONE GREEN ARM OVER THE ID SHAPE ITSELF: `SUFFIX`. ORDER and NO-DUP both read ids with
+# `STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?`, and that class was `[a-c]?` until defect D39 — the fourth
+# sub-slice of a unit (`…-0013d`) parsed as the unsuffixed id, so a live entry collided with a sealed one
+# (false red) and two live sub-slices would have been indistinguishable (false green). The arm builds a
+# synthetic ledger holding exactly that pair and requires every rule to hold, so a regression in the class
+# fails here by name instead of surfacing as a mysterious duplicate three slices later.
+#
 # THE SEALED CONTENT, defined exactly because a digest is only a proof if both sides mean the same
 # bytes: everything after the segment's first `---` rule and the single blank line that follows it.
 # For part1 that is lines 17–381, 365 lines / 30452 bytes / `sha256:f4aec75a…`, which is what its
@@ -70,15 +77,15 @@ ledger_verdicts() {
   local live sealed ids id pos prev prevpos rc detail dup f base
   [ -f "$log" ] || { printf 'POINTER FAIL no CHANGELOG.md at %s\n' "$root"; return; }
 
-  live="$(grep -oE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?' "$log" | sed 's/^## //')"
-  sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?' "$hist"/*.md 2>/dev/null \
+  live="$(grep -oE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$log" | sed 's/^## //')"
+  sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$hist"/*.md 2>/dev/null \
             | sed 's/^## //' | LC_ALL=C sort -u)"
 
   # ORDER ------------------------------------------------------------------
   local pending_note=""
   if [ -n "$order" ] && [ -f "$order" ]; then ids="$(cat "$order")"
   else
-    ids="$(git log --format='%s' 2>/dev/null | grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?' | awk '!s[$0]++')"
+    ids="$(git log --format='%s' 2>/dev/null | grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' | awk '!s[$0]++')"
     newest="$(printf '%s\n' "$live" | head -1)"
     brief="$root/git_message_brief.txt"
     if [ -n "$newest" ] && ! printf '%s\n' "$ids" | grep -qx -- "$newest"; then
@@ -140,7 +147,7 @@ ledger_verdicts() {
     cov="$(grep -m1 -oE '\*\*Coverage:\*\*.*' "$f")"
     miss=""
     if [ -n "$cov" ]; then
-      for id in $(grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?' <<<"$cov"); do
+      for id in $(grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' <<<"$cov"); do
         grep -q "^## $id " "$f" || miss="$miss $id"
       done
       if [ -z "$miss" ]; then printf 'COVERAGE PASS %s names only ids it contains\n' "$base"
@@ -167,7 +174,7 @@ mkroot() { # a synthetic root: the real ledger copied, to be broken in exactly o
   for f in "$ROOT"/docs/history/stitchcad-changelog-part*.md; do [ -f "$f" ] && cp "$f" "$d/docs/history/"; done
 }
 REAL_ORDER="$WORK/real_order.txt"
-git log --format='%s' | grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?' | awk '!s[$0]++' > "$REAL_ORDER"
+git log --format='%s' | grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' | awk '!s[$0]++' > "$REAL_ORDER"
 
 arm() { # $1 name · $2 rule that must FAIL, or "-" for "everything holds" · $3 root · $4 order · $5 exempt
   local out
@@ -195,9 +202,36 @@ arm ORDER-RED ORDER "$D" "$D/order.txt" "$DEFAULT_EXEMPT"
 
 # ---------------------------------------------------------------- NO-DUP has teeth
 D="$WORK/dup"; mkroot "$D"
-first_sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?' "$D"/docs/history/*.md | head -1 | sed 's/^## //')"
+first_sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$D"/docs/history/*.md | head -1 | sed 's/^## //')"
 printf '\n## %s — sealed, then duplicated back into the live window\n\nbody\n' "$first_sealed" >> "$D/CHANGELOG.md"
 arm DUP-RED NO-DUP "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT"
+
+# ---------------------------------------------------------------- a sub-slice suffix is part of the id
+# Measured, not theorised (defect D39): the id shape above was `[0-9]+[a-c]?`, so the FOURTH sub-slice of a
+# work unit — `STITCHCAD-G0-0013d` — parsed as `STITCHCAD-G0-0013`, collided with the sealed entry of that
+# name, and reported a duplicate that did not exist while making ORDER compare the wrong commit. Two live
+# entries `-0013d` and `-0013e` would have collapsed to one id and a real mis-ordering would have gone
+# unseen: the same regex produced a false red AND a possible false green. This arm is GREEN, and it is the
+# pin: a live `d`-suffixed entry beside the sealed unsuffixed id must satisfy every rule.
+D="$WORK/suffix"; rm -rf "$D"; mkdir -p "$D/docs/history"
+seg="$D/docs/history/stitchcad-changelog-part1.md"
+content="$(printf '## STITCHCAD-G9-0001 — the sealed slice\n\nbody')"
+sha="$(printf '%s\n' "$content" | shasum -a 256 | cut -d' ' -f1)"
+nl="$(printf '%s\n' "$content" | grep -c '')"
+{
+  printf '# Sealed archive — synthetic segment for the SUFFIX arm\n\n'
+  printf -- '- **Coverage:** from `STITCHCAD-G9-0001` through `STITCHCAD-G9-0001`\n'
+  printf -- '- **Sealed identity:** %s lines, `sha256:%s`\n' "$nl" "$sha"
+  printf -- '---\n\n'
+  printf '%s\n' "$content"
+} > "$seg"
+{
+  printf '# CHANGELOG.md\n\n| Segment | Coverage |\n| --- | --- |\n'
+  printf '| [`part1.md`](docs/history/stitchcad-changelog-part1.md) | `STITCHCAD-G9-0001` |\n\n'
+  printf '## STITCHCAD-G9-0001d — the live sub-slice whose suffix used to be mis-parsed\n\nbody\n'
+} > "$D/CHANGELOG.md"
+printf 'STITCHCAD-G9-0001d\n' > "$D/order.txt"
+arm SUFFIX "-" "$D" "$D/order.txt" "$WORK/no_exempt.tsv"
 
 # ---------------------------------------------------------------- DESCRIPTOR has teeth
 D="$WORK/digest"; mkroot "$D"

@@ -1,5 +1,34 @@
 # DEV_NOTES.md
 
+Detailed technical notes — root cause, implementation, validation — per slice. The
+engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
+
+## _(2026-09-30)_ — two tables can each be right and together describe two garments
+
+- D27's shape: §4's `waistband_cut_width` formula and §6's piece list were each internally consistent — the
+  contradiction was *between* tables. Every instrument the chapter had read one table at a time (the token
+  census reads names, the containment checker reads bytes), so nothing could see it; a human writing a
+  sentence about the piece list did. **An invariant that spans tables needs an instrument that spans
+  tables**: `run_fixture_derivation.sh` reads §2, §3, §4, §6, §7, §8 and §12 together and refuses a piece
+  list, a span table, an account and a count that disagree — `7 mismatch(es)` over the chapter as committed,
+  `0` after the decision.
+- **A rule with no legal way to be satisfied is a rule nobody checks.** "Every piece has a span" is false for
+  a fused interfacing, so the invariant that holds is a span *or* a declared non-sewn attachment from a
+  closed list — `fused` alone today, because a sewn-in interlining is sewn and needs a span. Declaring the
+  exception is what made the rule checkable; keeping the list closed is what stops it becoming a shrug.
+- **The instrument that found two defects was scratch.** The arithmetic behind D33 and then D27 lived as
+  `python3 -c` strings inside task leaves: readable, and re-runnable by nobody. That is leg 3 of
+  `CLAIM_VERIFICATION.md`, and the breach this repository had already committed once as D20.
+- **A choice between two real constructions is not arithmetic.** Both waistband readings are real skirts, so
+  the decision needed sources, and what settled it was a *scope* fact rather than a preference: the drafting
+  literature gives a straight band one folded rectangle and reserves the two-piece cut for a **contoured**
+  band. Recorded as `read-external` with URL and date — a label that upgrades nothing, because a source read
+  here is not a standard read here (`standards.md` §1 keeps that vocabulary closed).
+- **When sources disagree, keep the declared constant and record the conflict.** Band height is "usually
+  2–5 cm" in one and "maximum 3 cm for a straight band" in another; the fixture's 4.0 cm stays `assumed`
+  with both cited. Adopting whichever source suits is how a specification launders a guess into a fact.
+- Promoted to `docs/decisions/decision_reference-fixture-waistband-straight-folded.md`.
+
 ## _(2026-09-30)_ — a fixture can be internally consistent and externally wrong
 
 - The reference skirt's allocation balance closed exactly — `4 × (3.0 + 4.0) = 102.0 − 74.0`, i.e.
@@ -145,9 +174,6 @@
   control under `pipefail` (`grep -c` prints 0 and exits 1). A self-test with only GREEN arms would have passed both.
 - The neutrality bar is measured, not felt: `grep -ciE 'grammar|parser|…'` over each ported script → 0, after the
   generic uses of "corpus" and "grammar" were re-worded ("tree", "syntax") so the count means what it says.
-
-Detailed technical notes — root cause, implementation, validation — per slice. The
-engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 ## _(YYYY-MM-DD)_ — bootstrap
 

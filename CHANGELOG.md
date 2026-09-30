@@ -25,6 +25,71 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G0-0013d - one waistband, and the instrument that keeps it one (leaf `G0-CONTRACT.13d`)
+
+The reference fixture described two different garments at once for nine commits: §4 published the cut width
+of ONE band folded lengthwise while §6 listed a faced two-piece band and §8 sewed only the outer one
+(defect D27). The director ruled on 2026-09-30 that the engineer decides it; this slice decides it, and
+makes the agreement between the chapter's tables mechanical rather than a matter of reading.
+
+- **the decision**: one straight band, cut once, folded lengthwise at its midpoint (5.0 cm from either long
+  edge), plus one interfacing piece cut at the band's finished dimensions (77.0 x 4.0 cm, no allowance on
+  any edge) and fused inside the seam lines. Five pieces, not six - `waistband_outer` and `waistband_inner`
+  no longer exist anywhere in the book
+- **sourced, not preferred**: five references read on this machine on 2026-09-30, each cited by URL and date
+  in `docs/decisions/decision_reference-fixture-waistband-straight-folded.md` under a `read-external` label
+  that upgrades no claim about a standard. The decisive fact is that the drafting literature gives the
+  straight band ONE rectangle with a fold line and reserves "cut two pieces - one for the outer waistband,
+  and one for the inner waistband" for the **contoured** band, while this fixture's waist sits at the natural
+  waist where a straight band belongs. The sources disagree about band height (2-5 cm against a 3 cm maximum
+  for a straight band), so `wb_width` = 4.0 cm stays `assumed` with the conflict recorded rather than quietly
+  resolved in favour of the convenient source
+- **every piece is accounted for**: §8 gains an attachment account - a span, or a declared non-sewn method
+  from a closed list that holds `fused` alone. "Every piece has a span" is false for a fused interfacing,
+  and believing it is what let an inner band nobody sewed pass for nine commits
+- **the numbers are derived, not read**: §4 gains `waistband_fold_position` 5.0, `waistband_finished_length`
+  77.0, `wb_interfacing_width` 4.0, `wb_interfacing_length` 77.0 and the band's two closure checks
+  (`waistband_pattern_length - 2 x sa_cb - wb_extension = garment_waist` -> `74.0 = 74.0`, and
+  `waistband_cut_width - sa_waist - sa_wb_bottom = 2 x wb_width` -> `8.0 = 8.0`), so §4.1 carries four
+  oracles: two for the body, two for the band
+- **a tracked producer at last**: `docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh`
+  evaluates every §4 formula over the tables above it, checks the four closures, the piece account, §12's
+  published count against §6's list, and that §4's band width describes the same construction as §6's band
+  pieces (rule `B1`). Over the chapter as committed: `16 derived rows / 2 closure checks / 6 pieces /
+  7 mismatch(es)`, exit=1, naming D27 by shape. Over the chapter now: `20 / 4 / 5 / 0 mismatch(es)`, exit=0.
+  Until this slice the arithmetic that found D33 and then D27 lived as `python3 -c` strings inside task
+  leaves - re-runnable by nobody, which is the leg-3 breach this repository already committed once as D20
+- **the probes are shown to discriminate, not merely to pass**: nine arms (one GREEN, eight RED) ->
+  `probes: 9 pass / 0 fail`, and neutering one rule at a time in a scratch copy reddens exactly the arms
+  that depend on it (`B1` removed -> `8 pass / 1 fail`; `P2` removed -> `7 pass / 2 fail`)
+- **the token census corrected the chapter a fourth time at authoring time**: four undeclared tokens on the
+  first draft - `Fold` (a column name of this chapter's own table), `fused` (a machine enum value a program
+  reads, so it became a glossary term with one owner), and the two names of the rejected reading. The fix was
+  the convention rather than an exemption: prose lost its backticks and the dead piece names survive in the
+  layer-C record for anyone tracing the defect -> `276 terms / 8 parts / 145 tokens / 0 failure(s)`
+- **not decided, deliberately**: whether a `SeamSpan` may name the same piece on both sides - a folded band's
+  short ends are stitched across, which joins one piece to itself. Logged as D35 with `G1-SLICE.3` as owner;
+  §8 records the ends as an edge finish instead of settling a type invariant by accident
+- **the ledger probe refused an honest changelog, and the probe was the thing that was wrong** (D39): its
+  work-unit id shape was `[0-9]+[a-c]?`, so this slice's own id `STITCHCAD-G0-0013d` parsed as
+  `STITCHCAD-G0-0013` and collided with the sealed entry of that name -> `NO-DUP FAIL both live and sealed:
+  STITCHCAD-G0-0013`, a duplicate that did not exist, plus an `ORDER FAIL` comparing the wrong commit. The
+  same collapse hides a real mis-ordering between `-0013d` and `-0013e`, so one regex produced a false red
+  AND a possible false green. Fixed to `[a-z]?` in all six places and pinned by a new GREEN arm `SUFFIX`,
+  shown sensitive by reverting the class in a scratch copy -> `probes: 5 pass / 2 fail`; after the fix
+  `probes: 7 pass / 0 fail`
+- **also in this commit**: D36 logged and fixed (`LIVE_STATUS.md`'s spine row reported 13 universal gates and
+  7 probe suites where `make gate` prints 12 universal plus the project slot's 2 and `make probes` finds 12);
+  D37 logged and fixed (`DEV_NOTES.md` described itself below every lesson, at line 149 of 156); D38 logged
+  (the census's open/closed counts are prose, so a naive derivation reports 33 closed and misses D34 —
+  `PLANNING.5`'s goal is extended to derive them); D34's recurrence recorded - the commit that created `.13d`
+  and `.4b` moved the frontier without writing `docs/TASK_TREE.md`, so the index named a leaf four commits
+  done, and all three stale rows are corrected
+- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `12 suite(s) green`; `make book` ->
+  exit=0; feature-matrix census -> `105 rows / 29 diagnostics / 0 failure(s)`; standards census ->
+  `6 registered / 6 designations used / 0 failure(s)`; containment OK with the chapter and the record both
+  over health and inside every ceiling, recorded in the leaf; no product code touched
+
 ## STITCHCAD-G0-0008 - ADR-0001: licence and solver are one decision (leaf `G0-CONTRACT.8`)
 
 `docs/decisions/decision_adr-0001-license-and-solver.md` settles roadmap §5's ADR-0001 **before any solver

@@ -250,7 +250,7 @@ not a contract.
   Commit: `STITCHCAD-G0-0013c`
 
 - ID: `G0-CONTRACT.13d`
-  Status: `pending`
+  Status: `done`
   Goal: resolve defect **D27** under the director's ruling of `2026-09-30`
   (`docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`): choose ONE waistband
   construction for the reference fixture, make §4, §6, §8, §11 and §12 describe that one garment, and
@@ -262,8 +262,14 @@ not a contract.
   (no piece without a span); both §4.1 closure checks still hold; `waistband_cut_width` is either corrected
   or replaced by per-piece widths; all 18+ derived rows re-derive with 0 mismatches; the glossary and
   feature-matrix censuses stay green; D27 closes with the decision recorded in the chapter.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below and in the acceptance checklist — the chapter re-derives at `20` derived
+  rows / `4` closure checks / `5` pieces / `0 mismatch(es)` where the same instrument reported `7`
+  mismatches over the chapter at `HEAD`; its probe suite is at `9 pass / 0 fail` and was shown sensitive
+  by neutering one rule at a time; the glossary grew to `276` terms with `0 failure(s)`. Its clause "no
+  piece without a span" is met as **no piece without an account**: a fused interfacing is sewn by nobody,
+  so the invariant that holds is a span *or* a declared non-sewn attachment, and that is what rule `P1`
+  checks — recorded in the checklist rather than quietly reinterpreted.
+  Commit: `STITCHCAD-G0-0013d`
 
 - ID: `G0-CONTRACT.4b`
   Status: `pending`
@@ -356,8 +362,8 @@ not a contract.
 | 10 | `G0-CONTRACT.6` | `done` | size-set ownership decided and recorded; the chapter states the object, the label/order separation, breaks, axes and the five designation systems |
 | 11 | `G0-CONTRACT.7` | `done` | the standards registry: six designations with role, adoption, status and owner; the deferral ledger; and a census that refuses an unregistered citation anywhere in the book |
 | 12 | `G0-CONTRACT.8` | `done` | ADR-0001 settled before any solver code exists, as roadmap §5 requires |
-| 13 | `G0-CONTRACT.13d` | `pending` | **next** — the director ruled on `2026-09-30` that the engineer decides D27: one waistband construction for the fixture, every number re-derived |
-| 14 | `G0-CONTRACT.4b` | `pending` | D32: give the five unnamed envelope rows a proving gate and prepare the roadmap amendment as a proposal |
+| 13 | `G0-CONTRACT.13d` | `done` | the director ruled on `2026-09-30` that the engineer decides D27: one straight band, cut once and folded at its midpoint, plus a fused interfacing piece — and the agreement is now derived by a tracked instrument rather than by reading |
+| 14 | `G0-CONTRACT.4b` | `pending` | **next** — D32: give the five unnamed envelope rows a proving gate and prepare the roadmap amendment as a proposal |
 | 15 | `G0-CONTRACT.14` | `pending` | the governance model drafted in full; only the naming of humans stays blocked |
 | 16 | `G0-CONTRACT.9` | `pending` | ADR-0003 plus the formula language v1: grammar, units inside expressions, conditionals, name binding, evaluation order, error and dimension rules, worked over the reference skirt. It also names the drafting system that ships as the reference block set |
 | 17 | `G0-CONTRACT.10`–`.12`, `.15`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
@@ -405,6 +411,27 @@ not a contract.
   ~500 lines it splits by letter range into two derived halves, because `--emit-index` generates whatever
   the census compares. Owner: the next leaf that adds a batch of terms.
 
+- `2026-09-30`, leaf `.13d`: the fixture's waistband is **one straight band, cut once and folded at its
+  midpoint**, plus one interfacing piece cut at the band's finished dimensions and fused — five pieces, not
+  the faced reading's six. The choice is sourced, not preferred: the drafting references prescribe the
+  two-piece cut for a **contoured** band, and this fixture's band is straight at the natural waist.
+  Recorded as `docs/decisions/decision_reference-fixture-waistband-straight-folded.md` with its five
+  sources, their URLs and the date read, the one disagreement between them (`wb_width`), and the re-open
+  condition.
+- `2026-09-30`, leaf `.13d`: **every piece is accounted for — by a span or by a declared non-sewn
+  attachment from a closed list**, which holds `fused` alone. "Every piece has a span" is false for a fused
+  interfacing, and the false invariant is what let D27's inner band pass for nine commits; stating the
+  invariant so a fused piece is *declared* rather than *missing* is what made it checkable. The list is
+  closed on purpose: a sewn-in interlining is sewn, so it would need a span.
+- `2026-09-30`, leaf `.13d`: an external source that is not a standard is labelled **`read-external`** with
+  its URL and the date it was read, and it never upgrades a claim about a standard — that vocabulary stays
+  closed in `docs/book/src/spec/standards.md` §1. A source read and *not* used is recorded too, so the next
+  session does not re-read it.
+- `2026-09-30`, leaf `.13d`: the fixture's arithmetic has a **tracked producer**,
+  `docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh`, with `run_fixture_probes.sh` as its
+  ground truth. Until this leaf the numbers that found D33 and D27 were `python3 -c` strings inside task
+  leaves — re-runnable by nobody, the leg-3 breach this repository had already committed once as D20.
+
 ## Open Questions
 
 - Cut-on-fold vs paired front for the reference skirt: roadmap §11 G0 allows either. Decided
@@ -412,6 +439,10 @@ not a contract.
   notch/fold semantics the fixture must exercise).
 - Which named drafting system ships as the v1 reference block set (roadmap ADR-0003: "one
   documented system, decided at G0") — decided in `G0-CONTRACT.9`.
+- Whether a `SeamSpan` may name the same piece on both sides (a *self-span*), which the fixture's folded
+  waistband ends would need — deliberately **not** decided by `.13d`, logged as D35 and owned by
+  `G1-SLICE.3`, because a type invariant settled by whichever way a fixture happens to be written is a
+  contract settled by accident.
 
 ## Blockers
 
@@ -794,6 +825,108 @@ not a contract.
   `TOOLBOX.md` gains the standards census and its probe suite; `knowledge-map/subsystems.md` lists the
   chapter; `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and this tree updated in this commit.
 
+### `G0-CONTRACT.13d` — one waistband, and the instrument that keeps it one
+
+- [x] **REPRODUCE / ISSUE** — defect D27: §4 published the cut width of ONE band folded lengthwise
+  (`2 × wb_width + sa_waist + sa_wb_bottom` = 10.0 cm) while §6 listed a faced two-piece band
+  (`waistband_outer`, `waistband_inner`, `waistband_interfacing`, each piece 6.0 cm) and §8 sewed only the
+  outer one, so §12's count of 6 was the rejected reading's. Reproduced by the instrument this leaf lands,
+  run over the chapter as committed: `git show HEAD:docs/book/src/spec/reference-skirt.md >
+  target/scratch/before.md && FIXTURE_CHAPTER=$PWD/target/scratch/before.md bash
+  docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh` →
+  `fixture derivation: 16 derived rows / 2 closure checks / 6 pieces / 7 mismatch(es)`, `exit=1`, with the
+  decisive line `B1: §6 describes a faced two-piece band (per-piece cut width 6.0 cm) but
+  `waistband_cut_width` publishes 10.0 cm — §4 and §6 are different garments, which is defect D27` and six
+  `P1` refusals naming every piece §8 accounted for (none). It lived that way for nine commits:
+  `git log --oneline 45e0a46..HEAD | wc -l` → `9`.
+- [x] **ROOT CAUSE (WHY + WHERE)** — two causes, and only the second was visible before this leaf.
+  (1) *The chapter*: a construction decision was never made. §1 said "cut twice plus interfacing", §4's
+  formula described a folded band, §6 listed a faced pair — three cells of three different tables, each
+  internally correct, and no arithmetic in any one of them could contradict another. The census that
+  existed for this chapter read tokens, not tables: `git ls-files docs/tasks/artifacts | grep -c fixture`
+  → `0`, `rc=1` (no tracked instrument over the fixture at `HEAD`), and the arithmetic that found D33 and
+  then D27 was typed into leaf prose — `grep -c 'python3 -c' docs/tasks/PLANNING.md` → `2` — which is
+  re-runnable by nobody and is the leg-3 breach this repository already committed once as D20.
+  (2) *The invariant*: the chapter had no rule a piece must satisfy to be in the piece list, so an inner
+  band nobody sewed was a prose gap rather than a refusal.
+- [x] **ADDRESSED (verified)** — the fixture is one garment and says so with numbers.
+  `bash docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh` →
+  `fixture derivation: 20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`, `exit=0`, against
+  `7 mismatch(es)` over the same chapter at `HEAD` (above): §4 gained `waistband_fold_position` (5.0 cm),
+  `waistband_finished_length` (77.0 cm), `wb_interfacing_width` (4.0 cm), `wb_interfacing_length` (77.0 cm)
+  and the band's two closure checks — `waistband_length_closure` `74.0 = 74.0` and
+  `waistband_width_closure` `8.0 = 8.0`, both printed as `CLOSES`; §6 lists five pieces; §8's attachment
+  account names all five (`accounted: 5`); §12's count agrees (`published count: 5`); and `B1` reports
+  `a single band folded lengthwise · cut width 10.0 cm · agrees with §6's 1 band piece(s)`. The instrument
+  is a tracked producer with ground truth: `TMPDIR=$PWD/target/scratch bash
+  docs/tasks/artifacts/reference_fixture/run_fixture_probes.sh` → `probes: 9 pass / 0 fail`, `exit=0`.
+  The decision is sourced, not preferred — five references read on this machine on `2026-09-30` (reachability
+  re-measured first: `curl -sS -m 12 -o /dev/null -w '%{http_code}' https://en.wikipedia.org/wiki/Waistband`
+  → `200`), the decisive fact being anicka.design's drafting sequence, which gives the **straight** band one
+  rectangle with a fold line and reserves "cut two pieces — one for the outer waistband, and one for the
+  inner waistband" to the **curved** band; recorded with every URL, the date read, the `read-external` label,
+  the one disagreement between sources (`wb_width`: 2–5 cm versus a 3 cm maximum for a straight band, kept
+  `assumed` rather than silently adjusted) and the re-open condition in
+  `docs/decisions/decision_reference-fixture-waistband-straight-folded.md`. The three neighbouring censuses
+  are still green, which is the check that this did not contradict another chapter:
+  `bash docs/tasks/artifacts/glossary/run_glossary_census.sh` → `276 terms / 8 parts / 145 tokens /
+  0 failure(s)`, `exit=0`; `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` →
+  `105 rows / 29 diagnostics / 0 failure(s)`, `exit=0` (its `interfacing` row still says the fixture carries
+  an interfacing piece, and still does); `bash docs/tasks/artifacts/standards/run_standards_census.sh` →
+  `6 registered / 6 designations used / 0 failure(s)`, `exit=0`. `make book` → `INFO HTML book written to
+  …/docs/book/book`, `exit=0`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `make probes: 12 suite(s) green`, `exit=0` (eleven before this leaf, the twelfth being the new one);
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 74 files measured`,
+  `exit=0`; `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` → `probes: 7 pass / 0 fail`,
+  `exit=0`. No Rust changed (`git diff --cached --name-only | grep -c '\.rs$'` → `0`, `rc=1`), so
+  `make check` is unaffected and the crate tests were last green at `.18`. The probe suite was shown to
+  *discriminate* rather than merely to pass, by neutering one rule at a time in a scratch copy of the tool:
+  with `B1` removed, `BAND-PAIR` goes red → `probes: 8 pass / 1 fail`; with `P2`'s comparison removed,
+  `COUNT` and `BAND-PAIR` go red → `probes: 7 pass / 2 fail`. Containment: the chapter is `379` lines /
+  `26 599` B / widest `161` B against a `book_collection` per-part health of `400` / `24 576` / `200` — one
+  axis over health and inside every ceiling (`700` / `40 960` / `320`) — and the decision record is `145`
+  lines / `11 303` B / widest `353` B against a `decisions_collection` health of `120` / `8 192` / `320` and
+  a ceiling of `200` / `16 384` / `600`. The glossary's derived index grew one line with the new term and is
+  now `406` lines against its `400`-line health, which is the growth `G0-CONTRACT.7`'s decision anticipated
+  and whose remedy (`--emit-index` into two letter halves at ~500) is already recorded. Nothing was trimmed
+  to hit a health target, because the bytes are the sourcing the ruling asked for; every overrun is recorded
+  here rather than paid for in vaguer prose, which is the remedy `G0-CONTRACT.1` and `.7` both recorded.
+- [x] **FIX** — chose the construction and made the chapter one garment: §1 ("cut once and folded
+  lengthwise"), §4 (four new rows, the disputed marker removed), §4.1 (two closure checks → four), §5
+  (step 8 rewritten, step 9 added for the interfacing, the mirror step renumbered — nothing referenced
+  step 9, checked: `grep -rn 'step [0-9]' docs/book/src/`), §6 (five pieces, the provisional paragraph
+  replaced), §7 (`sa_cb` and `sa_waist` name the band edges they also serve, the band's free edge
+  described, an allowance-free row for the interfacing), §8 (`waist` span names `waistband`, the attachment
+  account added, the ends recorded as an edge finish), §10 (two new exercised properties), §11 (the D27
+  bullet is now the resolution with its sources and what stays `assumed`), §12 (count 5, three new
+  obligations). Built the instrument and its probe suite; added the glossary entry that owns `fused`.
+  Also fixed in this commit, because it refused this slice's own changelog entry and the probe was what
+  was wrong (defect **D39**): `run_changelog_ledger_probes.sh` read work-unit ids with `[0-9]+[a-c]?`, so
+  `STITCHCAD-G0-0013d` parsed as `STITCHCAD-G0-0013` and collided with the sealed entry of that name. The
+  class is `[a-z]?` in all six places and a new GREEN arm `SUFFIX` pins it — measured sensitive by
+  reverting the class in a scratch copy → `probes: 5 pass / 2 fail`.
+- [x] **The acceptance clause "no piece without a span" is met as *no piece without an account*, and that
+  is recorded rather than quietly reinterpreted.** A fused interfacing is sewn by nobody, so the literal
+  clause is unsatisfiable for the construction the sources prescribe; the invariant that holds is a span
+  *or* a declared non-sewn attachment from a closed list that today contains exactly `fused` (a sewn-in
+  interlining is sewn, so it would need a span). Rule `P1` checks that, and its `NO-ACCOUNT` arm removes
+  the interfacing's row and requires the refusal.
+- [x] **The token census corrected the chapter a fourth time at authoring time, and the fix was again the
+  convention rather than an exemption** — `run_glossary_census.sh` reported `4 failure(s)` on the first
+  draft: `` `Fold` `` (a column name of this chapter's own table, i.e. prose), `` `fused` `` (a machine
+  enum value a program reads — so it became a glossary term with one owner), and the two names of the
+  rejected reading, `` `waistband_outer` `` and `` `waistband_inner` `` (identifiers that no longer exist,
+  so the history sentence names them in prose and the layer-C record keeps the tokens for anyone tracing
+  the defect). After the entry and a re-derived index: `276 terms / 8 parts / 145 tokens / 0 failure(s)`,
+  `exit=0`.
+- [x] **LOCKSTEP** — D27 closed, D35 and D38 logged, D36, D37 and D39 logged and fixed, D34's recurrence
+  recorded in `PLANNING.md`; `docs/TASK_TREE.md`'s three stale frontier cells and its execution-order line
+  corrected; `TOOLBOX.md` gains both instruments; `docs/decisions/INDEX.md` carries the new record and the
+  derived Knowledge Map was regenerated (`make gate` refused until it was); `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` and `DEV_NOTES.md` updated in this commit. Lesson promotion: **promoted** — the new
+  record carries an `answers:` line, which is what `LESSON-PROMOTION` asks for.
+
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and `.18` (the code leaf) additionally fills a `### G0-CONTRACT.18` checklist
 subsection with real tool output in the same commit as the change. This tree file carries no
@@ -805,6 +938,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-09-30` | `G0-CONTRACT.13d` | fixture derivation at `HEAD` vs the working tree; its probes + two neutered-rule meta-checks; the three neighbouring censuses; `make book`/`gate`/`probes`; containment | before `16 rows / 2 checks / 6 pieces / 7 mismatch(es)` `exit=1`, after `20 / 4 / 5 / 0` `exit=0`; `probes: 9 pass / 0 fail`, and neutering `B1` or `P2` reddens the arms that need them; `276 terms`, `105 rows`, `6 registered`, all `0 failure(s)` |
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
 | `2026-09-29` | `G0-CONTRACT.2` | `wc -lc` and per-line max on the chapter; `make book`; arithmetic re-derivation; `check_live_doc_size.sh`; `make gate`; `make check` | `291` lines / `17180` bytes / maxline `114`; `exit=0`, chapter rendered; 5 arithmetic claims confirmed; `OK — 17 surfaces, 15 routes, 47 files`; `=== all doctrines green ===`; `test result: ok. 1 passed` |
 | `2026-09-29` | `G0-CONTRACT.18` | `cargo test --all`; `make wasm`; `cargo fmt --check`; `cargo clippy -D warnings`; `make gate`; `make probes` | 30 tests / 0 failed; wasm cross-build green; fmt clean; clippy clean; `=== all doctrines green ===`; `7 suite(s) green` |
@@ -839,10 +973,24 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.6` | `STITCHCAD-G0-0006 (leaf G0-CONTRACT.6): size-set ownership decided` | a layer-C record plus the chapter; quantities stay out of the size set |
 | `G0-CONTRACT.7` | `STITCHCAD-G0-0007 (leaf G0-CONTRACT.7): the standards registry` | six designations, all `cited-from-roadmap`; no quoted clause anywhere in the book |
 | `G0-CONTRACT.8` | `STITCHCAD-G0-0008 (leaf G0-CONTRACT.8): ADR-0001, license × solver` | permissive dual-licensed core, `slvs` rejected, BSL-1.1 kept a separate category, re-open condition in three parts |
-| `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
+| `G0-CONTRACT.13d` | `STITCHCAD-G0-0013d (leaf G0-CONTRACT.13d): one waistband, and the instrument that keeps it one` | D27 closed; five pieces; the band's two closure checks; `run_fixture_derivation.sh` + its probe suite |
+| `G0-CONTRACT.4b`, `.9`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-30`: `.13d` landed — D27 is closed: the fixture's waistband is ONE straight band, cut once and
+  folded at its midpoint, plus one interfacing piece cut at the band's finished dimensions and fused inside
+  the seam lines. Five pieces, not six; `waistband_outer` and `waistband_inner` are gone; §4 gained four
+  rows (`waistband_fold_position`, `waistband_finished_length`, `wb_interfacing_width`,
+  `wb_interfacing_length`) and §4.1 gained the band's two closure checks; §8 accounts for every piece by a
+  span or by the closed list's one non-sewn method, `fused`. The choice is sourced rather than preferred —
+  five references read on this machine, URLs and dates in
+  `docs/decisions/decision_reference-fixture-waistband-straight-folded.md`, the decisive fact being that
+  the two-piece cut belongs to a **contoured** band while this fixture's is straight at the natural waist.
+  The agreement between §4, §6, §8 and §12 is now derived by a tracked producer
+  (`run_fixture_derivation.sh`: `7` mismatches over the chapter at `HEAD`, `0` after) with a probe suite
+  shown sensitive by neutering one rule at a time. D35 logged and deliberately not decided (may a span name
+  one piece twice); D36 logged and fixed; D34's recurrence recorded.
 - `2026-09-30`, after `.8`: the director ruled that the engineer decides and acts on the four findings
   surfaced this session — D27, D32, `.14`'s drafting and the containment derivation — at signoff grade, with
   external research permitted. Recorded as

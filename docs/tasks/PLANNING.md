@@ -96,14 +96,18 @@ Two invariants, both directions:
   Commit: `STITCHCAD-PLANNING-0004`
 
 - ID: `PLANNING.5`
-  Status: `pending` (deferred behind product work by `decision_product-work-takes-the-frontier.md`)
-  Goal: close defect **D34** durably — derive the agreement between the layer-B index
+  Status: `pending` (deferred behind product work by `decision_product-work-takes-the-frontier.md`; D34
+  recurred on `2026-09-30`, which is the argument for taking it as soon as the ruling's four items land)
+  Goal: close defects **D34** and **D38** durably — derive the agreement between the layer-B index
   (`docs/TASK_TREE.md`'s frontier cell and execution-order line) and each tree's own Current Frontier
-  table, so a session that lands a leaf cannot leave the index pointing at the previous one.
+  table, and derive the defect census's open/closed counts that `LIVE_STATUS.md` restates by hand, so a
+  session that lands a leaf cannot leave either pointing at the previous state.
   Acceptance: a census reports, per tree, the leaf the tree marks `**next**` beside the leaf the index
   names, fails on a disagreement, and handles a closed tree (no `**next**` row) without a false alarm;
-  a RED arm proves it notices a stale index; the instrument is in `TOOLBOX.md` and runs under `make
-  probes`; the index and every tree agree when it is done.
+  every defect carries a status token the census can read, and it prints `logged / closed / open` with the
+  open ids listed, agreeing with `LIVE_STATUS.md`'s row; a RED arm proves it notices a stale index and a
+  RED arm proves it notices a defect whose status token lies; the instrument is in `TOOLBOX.md` and runs
+  under `make probes`; the index and every tree agree when it is done.
   Verification: `pending`
   Commit: `pending`
 
@@ -112,7 +116,7 @@ Two invariants, both directions:
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
 | — | `.1`–`.4` | `done` | the roadmap is captured, the capture is derived, and the sequencing rule that keeps the frontier on the product is recorded |
-| — | `PLANNING.5` | `pending` | derive the index↔tree frontier agreement (D34). Deferred behind `G0-CONTRACT` by the frontier rule: a stale index misdirects a resuming session but destroys no work |
+| — | `PLANNING.5` | `pending` | derive the index↔tree frontier agreement (D34, recurred `2026-09-30`) and the census's open/closed counts (D38). Deferred behind `G0-CONTRACT` by the frontier rule: a stale index misdirects a resuming session but destroys no work |
 
 `PLANNING.1`–`.4` are done. The capture claim is derived, not asserted:
 `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
@@ -394,15 +398,26 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   the faced reading's.
   - Reproduce: `python3 -c "print(2*4.0+1.0+1.0, 4.0+1.0+1.0)"` → `10.0 6.0`, the folded and faced cut
     widths; `grep -c 'waistband' docs/book/src/spec/reference-skirt.md` → the piece list, the span table
-    and the formula disagree about how many bands exist.
+    and the formula disagree about how many bands exist. The **standing** reproduce is now the instrument
+    that refuses the disagreement: `bash docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh`
+    → `0 mismatch(es)`, `exit=0`, and its `BAND-PAIR` probe arm restores the faced reading and requires a
+    refusal naming D27.
   - Impact: the fixture is the subject of every G2 golden, mutation, offset and agent test. Freezing it
     with an unresolved construction freezes a contradiction into the conformance corpus, and the piece
     count (6) is an asserted package-completeness expectation.
-  - Owner: `G0-CONTRACT.13d` — the director ruled on `2026-09-30` that the engineer decides and acts on
-    this (see `docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`), with external sources
-    read and cited, and with the choice still subject to the domain reviewer `.14` names.
+  - Owner: `G0-CONTRACT.13d` (**fixed**) — the director ruled on `2026-09-30` that the engineer decides and
+    acts on this (see `docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`), with external
+    sources read and cited, and with the choice still subject to the domain reviewer `.14` names.
     `G0-CONTRACT.13b` recorded the contradiction **in the chapter** (§6 and §11) so no reader and no golden
-    could take a waistband number as settled while it was open.
+    could take a waistband number as settled while it was open. `.13d` chose the **single straight band,
+    cut once and folded at its midpoint, plus one interfacing piece fused inside the seam lines**: five
+    pieces, not six; `waistband_outer` and `waistband_inner` no longer exist; §4 gained four rows and §4.1
+    gained the band's two closure checks; §8 now accounts for every piece by a span or by a declared
+    non-sewn attachment. The decisive fact was sourced, not preferred — the drafting references prescribe
+    the two-piece cut for a **contoured** band, and this fixture's band is straight at the natural waist.
+    Decision, five sources with URLs and the date read, what stays `assumed`, and the re-open condition:
+    `docs/decisions/decision_reference-fixture-waistband-straight-folded.md`. The agreement between §4, §6,
+    §8 and §12 is now derived by a tracked producer rather than by reading.
 
 - **D28** — the fixture's recipe step 7 sent the reader to the wrong clause: "**allowances** (§6)" where
   allowances are §7 and §6 is the piece list.
@@ -503,6 +518,94 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Owner: the immediate correction is `G0-CONTRACT.7`'s lockstep (index row and execution-order line
     fixed in that commit); the durable fix is `PLANNING.5`, which derives the agreement instead of
     trusting an author to remember a conditional step.
+  - **Recurred `2026-09-30`, and the recurrence is the evidence `PLANNING.5` needs.** The commit that
+    created leaves `.13d` and `.4b` (`STITCHCAD-PLANNING-0005`) moved this tree's frontier and did not
+    touch `docs/TASK_TREE.md`, so the index named `.8` — a leaf four commits done — for the whole session.
+    Measured: `git log --oneline -1 -- docs/TASK_TREE.md` → `194043d` (`G0-CONTRACT.7`), i.e. the index
+    had not been written since `.7` while `.8` and `PLANNING.5` both landed. The `PLANNING` and `SPINE`
+    rows had drifted the same way (`.3` and `.1` where the trees say `.5`). All three rows and the
+    execution-order line are corrected by `G0-CONTRACT.13d`'s lockstep; the durable derivation stays
+    `PLANNING.5`'s, and one repeat occurrence is the argument for taking it as soon as the ruling's four
+    items are done rather than later.
+
+- **D35** — the ontology does not say whether a `SeamSpan` may name the same piece on both sides (a
+  *self-span*), and the reference fixture needs an answer for its waistband ends: a band folded lengthwise
+  has its two short ends folded right sides together and stitched across, which joins one piece to itself.
+  - Reproduce: `grep -n 'the \*\*two sides\*\*' docs/book/src/spec/ontology.md` → §4.2 requires
+    "(piece, EdgeRef, parameter range) each" and permits partial and one-to-many spans, and is silent on
+    both sides naming one piece; `grep -ci 'self-span\|same piece' docs/book/src/spec/ontology.md` → `0`.
+  - Impact: small today — the fixture records the ends as an edge finish and no golden depends on them —
+    but it is a type invariant `sc-core` must settle either way. If a self-span is legal, `walk`, `true`
+    and the V1 stitcher must handle a span whose two sides share a piece and a frame; if it is illegal, a
+    folded band's ends need another representation, and the fixture's assembly order is incomplete without
+    one. Whichever way the first implementation happens to compile is the D27 class one layer up: a
+    contract settled by accident.
+  - Owner: `G1-SLICE.3` (`sc-core` ontology v1 types and invariants) — the invariant must exist before the
+    type does, and `G3-GRADING.2`'s `walk`/`true` and `V1-ASSEMBLY.2`'s stitching both consume the answer.
+    `G0-CONTRACT.13d` recorded the question in the fixture chapter (§8 and §11) so the fixture does not
+    settle it silently, and deliberately chose nothing.
+
+- **D36** — `LIVE_STATUS.md`'s spine row reported the enforcement counts wrong: "13 universal + 2 project
+  doctrine gates · 7 probe suites", where the driver registers 12 universal doctrines plus the project
+  slot's 2, and `make probes` finds 12 suites.
+  - Reproduce: `make gate 2>&1 | grep -c '✅'` → `13` printed lines, the last being the PROJECT-SPECIFIC
+    slot; `bash scripts/check_doctrines.project.sh | tail -1` → `PROJECT-SPECIFIC: 2 project doctrine(s)
+    green`; `find docs/tasks/artifacts -name 'run_*probe*.sh' | wc -l` → `12`.
+  - Impact: the authoritative tracker is what the director reads to know what is enforced, so a stale
+    count misstates the gate set. It drifted for the same reason D34 did — a number restated in prose
+    whose producer lives elsewhere — which `CLAIM_VERIFICATION.md` §5B already names: a constant that is a
+    function of this repository is derived or gated, never remembered.
+  - Owner: `G0-CONTRACT.13d` (**fixed in this commit** — the row carries the corrected counts *and* the
+    two commands that derive them, so the next reader can falsify it in one line instead of trusting it).
+
+- **D37** — `DEV_NOTES.md` described itself 148 lines into itself: the paragraph saying what the surface is
+  ("Detailed technical notes … Newest first") sat *below* every lesson, immediately above the bootstrap
+  entry, where the template's own header had been pushed by years of prepends.
+  - Reproduce (before the fix): `grep -n 'Detailed technical notes' DEV_NOTES.md` → `149`, against
+    `grep -n '^# DEV_NOTES.md' DEV_NOTES.md` → `1`; the description of a newest-first ledger was itself
+    below the newest entry.
+  - Impact: cosmetic for a reader who scrolls, real for the doctrine that reads it — a prepend-only surface
+    whose header lives at the bottom silently loses its contract ("newest first", "this is not the public
+    docs") to the append order, and the next author prepends above a description they never saw.
+  - Owner: `G0-CONTRACT.13d` (**fixed in this commit** — the paragraph moved to line 3, under the title,
+    where a prepend cannot bury it; the bootstrap entry stays last because it is the oldest lesson).
+
+- **D38** — the defect census records each defect's state in prose, so its open/closed counts cannot be
+  derived: `LIVE_STATUS.md` carries "36 logged, 32 closed" by hand, and a naive derivation over the same
+  file disagrees.
+  - Reproduce: count entries whose text contains `fixed` or `closed` — `python3` over the `- **Dn**` blocks
+    reports `logged: 36 / closed: 33 / open: 3 [D22, D32, D35]`, because D34's owner line says the index
+    row was "fixed in that commit" while its durable half (`PLANNING.5`) is still pending. The true open set
+    is `D22, D32, D34, D35`.
+  - Impact: the same class as D34 and D36 — a number restated in prose whose producer is a human reading.
+    Here the prose is *ambiguous* rather than merely unproduced, so a future session that automates the
+    count gets a confident wrong answer, and the layer-A snapshot a director reads cannot be checked.
+  - Owner: `PLANNING.5`, whose goal is extended to cover it: a per-defect status token the census can read,
+    and an instrument that prints `logged / closed / open` beside the index↔tree agreement it already owes.
+    Until then the counts in `LIVE_STATUS.md` are hand-kept and this entry is the record of how to check
+    them by hand.
+
+- **D39** — the changelog ledger's verifier parsed work-unit ids with a hardcoded suffix range
+  (`STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?`), so the FOURTH sub-slice of any unit was mis-read: this slice's
+  own id `STITCHCAD-G0-0013d` became `STITCHCAD-G0-0013`, collided with the sealed entry of that name, and
+  the probe refused an honest ledger.
+  - Reproduce (before the fix): `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` →
+    `probes: 5 pass / 1 fail`, with `NO-DUP FAIL both live and sealed: STITCHCAD-G0-0013` (a duplicate that
+    did not exist) and `ORDER FAIL … STITCHCAD-G0-0008-older-than-STITCHCAD-G0-0013` (comparing the sealed
+    entry's commit position, not the new one's); and the parse itself,
+    `grep -oE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?' CHANGELOG.md` → `STITCHCAD-G0-0013` for a heading
+    that reads `## STITCHCAD-G0-0013d`.
+  - Impact: a false red on the first `d`-suffixed slice of any unit, which is the shape that trains an author
+    to bypass a probe — and the same collapse in the other direction is a false GREEN: two live entries
+    `-0013d` and `-0013e` parse to one id, so `ORDER` cannot see them being swapped. The verifier the
+    containment doctrine's rollover protocol depends on was unsound for a whole family of ids it had never
+    been shown, because `a`–`c` happened to cover every sub-slice written until now.
+  - Owner: `G0-CONTRACT.13d` (**fixed in this commit** — the shape is `[0-9]+[a-z]?` in all six places, and
+    a new GREEN arm `SUFFIX` pins it: a live `d`-suffixed entry beside the sealed unsuffixed id must satisfy
+    every rule. The arm is sensitive, measured by reverting the class in a scratch copy → `probes: 5 pass /
+    2 fail`, `SUFFIX` and `REAL` both red. After the fix: `probes: 7 pass / 0 fail`.) D29's reproduce lines
+    in this census still quote the old `[a-c]?` shape; they are a record of what was run then, and are left
+    as written rather than edited into a command nobody ran.
 
 ## Decisions
 
@@ -669,6 +772,17 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 | `PLANNING.4` | `STITCHCAD-PLANNING-0004 (leaf PLANNING.4): product work takes the frontier` | D24 closed; tree complete |
 
 ## Changelog
+
+- `2026-09-30`: D27 closed by `G0-CONTRACT.13d` — the fixture's waistband is one straight band cut once
+  and folded at its midpoint, plus one interfacing piece fused inside the seam lines; five pieces, the
+  band's two closure checks, and every piece accounted for by a span or a declared non-sewn attachment.
+  D35 added (may a span name the same piece twice — owned by `G1-SLICE.3`, deliberately not decided by
+  the fixture), D36 added and fixed (the spine row's gate and probe counts were stale), D37 added and fixed
+  (`DEV_NOTES.md` described itself below every lesson) and D38 added (the census's open/closed counts are
+  prose, so a naive derivation reports 33 closed and misses D34; `PLANNING.5`'s goal is extended to derive
+  them). D34 recurred: the commit that created `.13d` and `.4b` moved the frontier without writing
+  `docs/TASK_TREE.md`, so the index named a leaf four commits done; all three stale rows are corrected here
+  and the recurrence is recorded in D34 as the argument for taking `PLANNING.5` next.
 
 - `2026-09-30`: D34 added — the layer-B index reported `G0-CONTRACT.4` as the frontier after `.5` and `.6`
   had landed, and its own `PLANNING` children list had drifted the same way. The index is corrected by

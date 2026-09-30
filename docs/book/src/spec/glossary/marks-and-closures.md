@@ -21,6 +21,7 @@
 | double notch ⚠ | two parallel marks, conventionally the back or the second of a matched pair | [ontology §4.5](../ontology.md) | twin notch, 2-notch | type `double` |
 | drill hole ⚠ | a round mark punched inside a piece — a dart apex or a pocket corner, on ASTM DXF layer 13 | [ontology §4.5](../ontology.md) | drill, punch, *Bohrung* | type `drill` |
 | facing | a piece that finishes an edge from the inside, cut from the same shape it faces | [ontology §4.7](../ontology.md) | edge facing, *Beleg* | `Facing` |
+| fused attachment | an interfacing held by heat and adhesive, not by a seam, so the piece it stiffens appears in no span | [ontology §4.7](../ontology.md) | fusible, iron-on, *Fixiereinlage* | `fused` |
 | gather | fullness absorbed by drawing one edge up to a shorter one, distributed along a span | [ontology §4.3](../ontology.md) | gathering, ruching, *Kräuseln* | `Gather` |
 | grain ⚠ | the fabric's weave direction; the warp runs the length of the roll | [ontology §4.6](../ontology.md) | grainline direction, thread, *Fadenlauf* | → `Grainline` |
 | grainline ⚠ | the directed line on a piece that must be laid parallel to the fabric's grain | [ontology §4.6](../ontology.md) | grain arrow, straight-of-grain, *Fadenlaufpfeil* | `Grainline` |

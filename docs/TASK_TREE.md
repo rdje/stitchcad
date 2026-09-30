@@ -52,9 +52,9 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 
 | Tree | Lane (roadmap source) | Status | Frontier (next leaf) | Owner |
 | --- | --- | --- | --- | --- |
-| [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.3` — seed `G5`–`G7`, `V1`, `V2` + publish the coverage map | repo-local |
-| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.1` — de-template `README.md` and the mdBook identity | repo-local |
-| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.8` — ADR-0001, license × solver as one decision | repo-local |
+| [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.5` — derive the index↔tree frontier agreement (D34, which recurred on `2026-09-30`) | repo-local |
+| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.4.4` — re-derive the maxline health of table-shaped book parts, then `.5`/`.13`/`.15` | repo-local |
+| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.4b` — D32: a proving gate per unnamed envelope row + the roadmap amendment as a proposal | repo-local |
 | [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `proposed` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
@@ -78,7 +78,10 @@ on disk is registered here with a declared lane — plus the advisory clause-ver
 table, more clause rows than roadmap clauses is expected (a tree may split one clause into several
 leaves, as `G5-SHELLS` does with the "full UX spec" list); fewer rows than clauses is the alarm.
 
-Execution order right now: **`G0-CONTRACT.8`–`.17`** (the remaining semantic contract; `.1`–`.6`, `.13`,
-`.13b`, `.13c` and `.18` are done) → `G1-SLICE` … The `SPINE` lane keeps `.5`, `.13` and `.15` open; none of them
-blocks product work, so they are deferred behind it (defect D24 records why that ordering is explicit
-rather than incidental).
+Execution order right now: **`G0-CONTRACT.4b` → `.14` → `.9`–`.12` → `.15`–`.17`**, then `SPINE.4.4`,
+then `G1-SLICE` … (`.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d` and `.18` are done). The order follows the
+director's ruling of `2026-09-30`, which delegated D27, D32, `.14`'s drafting and the containment
+derivation; D27 is closed and the remaining three are next. The `SPINE` lane keeps `.5`, `.13` and `.15`
+open; none of them blocks product work, so they are deferred behind it (defect D24 records why that
+ordering is explicit rather than incidental). The frontier cells above are hand-kept and have drifted
+twice (defect D34); `PLANNING.5` derives them.

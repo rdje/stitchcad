@@ -66,5 +66,6 @@
 - [`decision_machine-tokens-declared-where-used.md`](docs/decisions/decision_machine-tokens-declared-where-used.md)
 - [`decision_numerical-contract-fixed-point.md`](docs/decisions/decision_numerical-contract-fixed-point.md)
 - [`decision_product-work-takes-the-frontier.md`](docs/decisions/decision_product-work-takes-the-frontier.md)
+- [`decision_reference-fixture-waistband-straight-folded.md`](docs/decisions/decision_reference-fixture-waistband-straight-folded.md)
 - [`decision_scaffold-sync-protects-project-content.md`](docs/decisions/decision_scaffold-sync-protects-project-content.md)
 - [`decision_size-set-ownership.md`](docs/decisions/decision_size-set-ownership.md)

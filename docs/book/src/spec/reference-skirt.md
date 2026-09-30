@@ -18,7 +18,8 @@ An **A-line skirt**, base size, with:
 
 - one waist dart in each pattern quadrant (four in the assembled garment);
 - a centre-back (CB) seam housing a **centred zipper**;
-- a straight **waistband**, cut twice plus interfacing, closing with a hook and bar;
+- a straight **waistband**, cut once and folded lengthwise, plus a separate interfacing piece,
+  closing with a hook and bar;
 - grain parallel to CB/CF on every body piece;
 - **front cut on the fold**, back as a mirrored pair;
 - seam allowances of 1 cm at the side seams and 3 cm at the hem, with the remaining edges declared
@@ -97,11 +98,18 @@ word appears inside one, which is what makes them checkable by machine.
 | `hip_to_hem_drop` | hip-to-hem drop | `waist_to_hem − waist_to_hip` | 42.0 cm |
 | `side_seam_length` | side-seam length, hip to hem | `√(hip_to_hem_drop² + a_line_flare²)` | 42.107 cm |
 | `waistband_pattern_length` | waistband pattern length | `garment_waist + 2 × sa_cb + wb_extension` | 80.0 cm |
-| `waistband_cut_width` | waistband cut width — **disputed, see §11** | `2 × wb_width + sa_waist + sa_wb_bottom` | 10.0 cm |
+| `waistband_cut_width` | waistband cut width, one band folded | `2 × wb_width + sa_waist + sa_wb_bottom` | 10.0 cm |
+| `waistband_fold_position` | fold line, from either long edge | `waistband_cut_width / 2` | 5.0 cm |
+| `waistband_finished_length` | band length once sewn, with extension | `waistband_pattern_length − 2 × sa_cb` | 77.0 cm |
+| `wb_interfacing_width` | interfacing width, no allowance on it | `wb_width` | 4.0 cm |
+| `wb_interfacing_length` | interfacing length, no allowance on it | `waistband_finished_length` | 77.0 cm |
+| `waistband_length_closure` | the band's net length (§4.1) | `waistband_pattern_length − 2 × sa_cb − wb_extension` = `garment_waist` | 74.0 cm = 74.0 cm |
+| `waistband_width_closure` | the band's net height (§4.1) | `waistband_cut_width − sa_waist − sa_wb_bottom` = `2 × wb_width` | 8.0 cm = 8.0 cm |
 
-### 4.1 The two closure checks
+### 4.1 The four closure checks
 
-The fixture carries two oracles, because they answer different questions and one of them is not enough.
+The fixture carries four oracles in two pairs, because they answer different questions and one of them
+is not enough.
 
 - **`allocation_balance`** — is the waist suppression fully distributed?
   `4 × (ss_suppress + dart_intake) = garment_hip − garment_waist`, here `28.0 cm = 28.0 cm`.
@@ -115,7 +123,16 @@ revision placed the waist side point at `quarter_waist − ss_suppress` = 15.5 c
 allocation balance exactly and drafts a skirt whose finished waist is 46.0 cm instead of 74.0 cm (defect
 **D33**, recorded in §11). A balance over *declared quantities* cannot see a *constructed point*; only a
 check that re-derives the finished dimension from the geometry can. If a future edit changes a measurement
-and either check stops holding, the recipe is wrong, not the check.
+and any check stops holding, the recipe is wrong, not the check.
+
+The band carries the same pair, because its two finished dimensions are constructed too — a band cut to
+the wrong length or the wrong height is the same defect class in a smaller piece (defect **D27**, §11):
+
+- **`waistband_length_closure`** — is the band the length of the waist it is sewn to? Its cut length less
+  its two CB allowances and its extension must equal the garment waist the body pieces produce:
+  `80.0 − 3.0 − 3.0 = 74.0 cm`.
+- **`waistband_width_closure`** — does the cut width produce the band that was asked for? Both allowances
+  come off and what is left is two layers of the finished height: `10.0 − 1.0 − 1.0 = 8.0 = 2 × 4.0 cm`.
 
 ## 5. Drafting recipe
 
@@ -141,11 +158,22 @@ internal unit; the centimetre values above are their display form.
 6. **Hem line.** Straight, perpendicular to CF/CB. Because the side seam flares, the hem corner is
    squared to the grain, not to the seam.
 7. **Notches** (§7), **grainlines** (§7), then **allowances** (§7) as derived offsets.
-8. **Waistband.** A rectangle of `waistband_pattern_length × waistband_cut_width`, with the CB seam
-   positions marked, the hook-and-bar extension marked beyond the left CB, and a notch at each CB and
-   at the quarter points so the band can be matched to the skirt.
-9. **Mirror.** The front piece is used as a half, cut on the CF fold. The back left piece is the mirror
-   of the back right piece about CB.
+8. **Waistband.** ONE rectangle of `waistband_pattern_length` × `waistband_cut_width`, cut once. Its fold
+   line runs the whole length at `waistband_fold_position` from each long edge and is an *internal
+   construction line* (ontology §4.1), never a cut edge: all four sides of the rectangle are cut, and its
+   label does not say "place on fold". The lower long edge carries `sa_waist` and is sewn to the skirt's
+   waist; the free long edge carries `sa_wb_bottom` and is turned to the inside, where stitching from the
+   right side in the seam ditch catches it; each short end carries `sa_cb`, which is why the band is
+   `2 × sa_cb` longer than the garment waist. Mark the CB seam positions, the hook-and-bar extension
+   beyond the left CB, and a notch at each CB and at the quarter points. The fold line sits at the exact
+   midpoint by declared construction; the sewing-room habit of pressing it a millimetre toward the free
+   edge so the fell stitch cannot miss it is a handling adjustment, not pattern geometry, and is not
+   modelled here.
+9. **Interfacing.** A rectangle of `wb_interfacing_length` × `wb_interfacing_width` — the band's finished
+   dimensions, with no allowance on any edge — fused to the wrong side of the half between the fold line
+   and the lower edge, so the half that shows is the stiffened one and the fold stays crisp.
+10. **Mirror.** The front piece is used as a half, cut on the CF fold. The back left piece is the mirror
+    of the back right piece about CB.
 
 The recipe is replayable: given the same measurement table and constants, evaluation produces the same
 geometry on any platform, byte-identically after canonicalization.
@@ -157,34 +185,36 @@ geometry on any platform, byte-identically after canonicalization.
 | `skirt_front` | 1 | CF edge | — | shell | 0 |
 | `skirt_back_right` | 1 | — | with `skirt_back_left` | shell | 0 |
 | `skirt_back_left` | 1 | — | mirror of right | shell | 0 |
-| `waistband_outer` | 1 | — | — | shell + interfacing | 1 |
-| `waistband_inner` | 1 | — | — | shell | 1 |
+| `waistband` | 1 | — | — | shell | 1 |
 | `waistband_interfacing` | 1 | — | — | interfacing | 2 |
 
-Total cut pieces: 6. Printed label data per piece is complete without consulting anything else: piece
+Total cut pieces: 5. Printed label data per piece is complete without consulting anything else: piece
 name, size, cut quantity, L/R where paired, "place on fold" for the front, fabric and colorway.
 
-The three waistband rows are one of the two readings of a band this chapter has not settled: §4's cut
-width describes a single band folded lengthwise, this list describes a faced two-piece band. Defect
-**D27** and §11 own the choice; until it is made, this list and the count of 6 are provisional.
+The band is ONE piece, cut once and folded lengthwise; §11 records that decision, the reading it
+rejected, and the sources it was read from. Two consequences a reader of the piece list must not miss:
+the band's fold column is empty because its fold is an internal construction line and not a fabric fold
+edge (§5 step 8), and the interfacing is a piece of its own because it is cut — carrying no allowance on
+any edge, which is the allowance-free case that is *not* a fold.
 
 ## 7. Seam allowances, notches, grainlines
 
 **Allowances** — a `SeamAllowance` is attached per edge, with its corner treatment and its inclusion
 policy (§4.4 of the ontology):
 
-The token column is what §4's formulas refer to these widths by. `sa_wb_bottom` is declared here because
-`waistband_cut_width` uses it; its width is the one §4's published arithmetic already requires, and it is
-as disputed as the band it belongs to (§11).
+The token column is what §4's formulas refer to these widths by. One token may serve several edges:
+`sa_cb` covers the band's two short ends as well as the CB seam, and `sa_waist` covers the band's lower
+long edge as well as the body pieces' waist edge, because each pair is sewn together at that width.
 
 | Token | Edge | Width | Corner treatment | Policy |
 | --- | --- | --- | --- | --- |
 | `sa_side` | side seams | 1.0 cm | miter | profile-resolved |
-| `sa_cb` | CB seam | 1.5 cm | trim | profile-resolved |
-| `sa_waist` | waist edge | 1.0 cm | trim | profile-resolved |
+| `sa_cb` | CB seam, and the band's short ends | 1.5 cm | trim | profile-resolved |
+| `sa_waist` | waist edge, and the band's lower edge | 1.0 cm | trim | profile-resolved |
 | `sa_hem` | hem | 3.0 cm | envelope | profile-resolved |
-| `sa_wb_bottom` | waistband lower edge | 1.0 cm | trim | profile-resolved |
+| `sa_wb_bottom` | band's free edge, turned under | 1.0 cm | trim | profile-resolved |
 | — | CF (front) | none — fold | — | not an allowance |
+| — | `waistband_interfacing`, every edge | none — fused | — | not an allowance |
 
 "Included in contour" versus "generated downstream" is a **Factory Profile** parameter, and this
 fixture is the one that exercises both: the same design exports with allowances included for one
@@ -209,7 +239,20 @@ length. No bias in this fixture; the bias case is exercised by the bodice at G3.
 | `ss_right` | `skirt_front` right side seam | `skirt_back_right` side seam | 0 (declared) | hip notch |
 | `ss_left` | `skirt_front` left side seam | `skirt_back_left` side seam | 0 (declared) | hip notch |
 | `cb` | `skirt_back_left` CB | `skirt_back_right` CB | 0 (declared) | zipper-stop notch |
-| `waist` | skirt waist edge (all pieces) | `waistband_outer` lower edge | 0 (declared) | quarter notches |
+| `waist` | skirt waist edge (all pieces) | `waistband` lower long edge | 0 (declared) | quarter notches |
+
+Every piece §6 lists is accounted for below, by the spans it participates in or by a declared non-sewn
+attachment from a closed list, which today holds exactly one method: `fused`. A piece with neither is
+exactly how defect D27 hid — an inner band nobody sewed — so the account is a table, and the derivation
+instrument in §11 refuses a piece that is missing from it.
+
+| Piece | How it is accounted for |
+| --- | --- |
+| `skirt_front` | spans `ss_right`, `ss_left`, `waist` |
+| `skirt_back_right` | spans `ss_right`, `cb`, `waist` |
+| `skirt_back_left` | spans `ss_left`, `cb`, `waist` |
+| `waistband` | span `waist` |
+| `waistband_interfacing` | no span — fused to the band's inner side before the band is folded |
 
 All spans declare **zero ease**: this garment has no eased seams, which is precisely what makes it the
 right *first* fixture — the seam-length equality property holds exactly here, and the intentional-ease
@@ -217,8 +260,12 @@ case (a sleeve cap into an armscye) is exercised at G3 where it belongs. `walk` 
 fixture must therefore report a differential inside the numerical tolerance class, and any larger
 differential is a bug rather than ease.
 
-Assembly order: darts → side seams → CB seam (zipper) → waistband to waist → hem. Layer index orders
-the waistband above the body and the interfacing above the waistband for 3D assembly.
+Assembly order: fuse the interfacing → darts → side seams → CB seam (zipper) → waistband to waist →
+hem. Layer index orders the waistband above the body and the interfacing above the waistband for 3D
+assembly. The band's two short ends are folded right sides together and stitched across at their `sa_cb`
+line, then turned; that closure joins one piece to itself, so it is an edge finish and not a span — and
+whether a `SewingGraph` may carry such a self-span at all is a question this fixture deliberately does
+not answer (§11).
 
 ## 9. Closure
 
@@ -239,6 +286,8 @@ notions list matches the geometry.
 | mirrored pair with L/R labels | §4.1 | G2 labels, G5 piece manager |
 | included vs excluded allowance | §4.4 | G4 profile policy, G6 receivers |
 | zero-ease sewing graph | §4.2 | G2 seam-length property, G3 contrast |
+| an interfacing piece, fused and never sewn | §4.7 | G2 export, G4 profile policy |
+| a fold line that must never export as a cut line | §4.1 | G2 export, G6 import-diff |
 | closure + notions | §4.7 | G5 tech pack, G7 completeness |
 | recipe replay determinism | §3.1 | G2 CLI replay, agent gate |
 
@@ -247,27 +296,43 @@ notions list matches the geometry.
 - **Body measurements and ease values** — *declared fixture constants*: a plausible mid-range woven
   base chosen for this repository, not copied from a size standard. The measurement-standards chapter
   owns reconciling them with the ISO 8559 / ASTM D5585 landmarks.
-- **Every §4 derived value** — *exact arithmetic* from §2 and §3, re-derivable by the formula shown
-  beside it; the balance check in §4.1 is the internal oracle. The exception is `waistband_cut_width`,
-  whose construction is disputed (below).
+- **Every §4 derived value** — *exact arithmetic* from §2, §3 and §7, re-derivable by the formula shown
+  beside it, and re-derived by a tracked instrument rather than by reading:
+  `docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh` evaluates every row's formula over
+  the tables above it, compares the result with the published number, and refuses a piece §8 does not
+  account for. The four closure checks in §4.1 are the oracles; the instrument is the proof that the
+  chapter still agrees with itself.
 - **`ss_suppress`, `dart_intake`, `dart_len_front`, `dart_len_back`, `a_line_flare`, and the convention
   that places a dart at the midpoint of its waist edge** — *declared drafting constants requiring domain
   review*. A sewing expert should confirm them before the fixture
   is frozen as a golden at G2; until then they are `assumed`, not `known`, and this chapter says so.
 - **Zipper length, waistband width and extension** — *declared constants* at common industry values,
-  with the same review status.
-- **The waistband is internally inconsistent, and no waistband number here is a fact yet (defect
-  D27).** §4's `waistband_cut_width = 2 × wb_width + sa_waist + sa_wb_bottom = 10.0 cm` is the cut
-  width of ONE band folded lengthwise, finished 4.0 cm with 1.0 cm turned at each raw edge. §6's piece
-  list instead carries `waistband_outer`, `waistband_inner` **and** `waistband_interfacing` — a faced
-  two-piece band, whose pieces would each be cut at `wb_width + sa_waist + sa_wb_bottom = 6.0 cm`, and
-  §6 also lists the outer band's material as "shell + interfacing" while a separate interfacing piece
-  exists. §8 compounds it: the `waist` span sews only the outer band's lower edge, so the inner band
-  has no span at all and the piece count of 6 in §12 is the faced reading's. Both readings are real
-  skirt constructions; they are **different garments**, and a fixture may only be one. Choosing is a
-  domain decision, so it belongs to the review `G0-CONTRACT.14` names the expert for, and until it is
-  made the affected numbers — `waistband_cut_width`, the §6 piece list and count, and the §8 `waist`
-  span — are provisional. A G2 golden must not be frozen over them.
+  with the same review status. `wb_width` is the one the sources read for D27 disagree about: a usual
+  band height of 2–5 cm in one, a maximum of 3 cm for a *straight* band in the other. The fixture's
+  4.0 cm is inside the first range and above the second, so it stays `assumed` and the reviewer `.14`
+  names settles it; both URLs are in the decision record named below.
+- **The waistband is one straight band, folded lengthwise, and every number above follows from it
+  (defect D27, resolved).** The chapter carried two garments at once for nine commits after the one
+  that recorded the contradiction: §4's
+  `waistband_cut_width` was the width of ONE band folded lengthwise, while §6 listed a faced pair —
+  an outer band, an inner band and a separate interfacing piece — whose fabric pieces would each be cut
+  at 6.0 cm — and §8 sewed only the outer one, so the inner band had no span at all. Both readings are
+  real skirt constructions; a fixture may only be one. It keeps the **folded band**, because its waist
+  sits at the natural waist, where the drafting sources describe a straight band as one rectangle
+  interfaced and folded lengthwise, and the faced two-piece cut is what those same sources prescribe for
+  a *contoured* band — which this skirt does not have. Consequences, all re-derived: the piece count is
+  5, the faced pair is gone, the interfacing survives as a piece of its own
+  cut at the band's finished dimensions with no allowance, §4 gained four rows and §4.1 gained the
+  band's two closure checks, and §8 now accounts for every piece. Still `assumed` pending the reviewer
+  `.14` names: the band height (above), that the interfacing covers only the visible half, and that the
+  fold line is the exact midpoint. The decision, its sources with their URLs and the date they were read,
+  and the condition that would re-open it are in
+  `docs/decisions/decision_reference-fixture-waistband-straight-folded.md`.
+- **One question this fixture deliberately does not answer.** The band's short ends are folded right
+  sides together and stitched across, which joins one piece to itself. Whether a `SewingGraph` may carry
+  such a self-span — an edge range sewn to another range of the same piece — is an ontology question,
+  not a fixture question, and deciding it here would settle it by accident. §8 records the ends as an
+  edge finish instead; the question is owned in `docs/tasks/PLANNING.md`.
 
 - **The waist side point was wrong, and the chapter's own oracle could not see it (defect D33,
   corrected).** §5 step 2 placed it at `quarter_waist − ss_suppress` = 15.5 cm from CF; §3's
@@ -292,9 +357,9 @@ naming the expert who reviews them.
 ## 12. Test obligations
 
 - Drafting the fixture through the CLI twice produces byte-identical canonical output (G2 replay).
-- Both §4.1 closure checks hold after any measurement change, or the recipe reports the imbalance. A
+- All four §4.1 closure checks hold after any measurement change, or the recipe reports the imbalance. A
   construction that satisfies `allocation_balance` but not `waist_closure` is the D33 defect class, and
-  is the reason both are obligations rather than one.
+  is the reason both are obligations rather than one; the band's pair exists for the same reason.
 - Dart intake is conserved: closing each dart removes exactly 4.0 cm from its waist edge, within the
   numerical tolerance class.
 - Every `walk` on this fixture reports a differential within the numerical class, because all spans
@@ -304,5 +369,11 @@ naming the expert who reviews them.
 - Exporting with allowances included and excluded differs only by the allowance geometry; the net
   (sew) lines are identical.
 - The front piece has no allowance on its fold edge, and the exported label says "place on fold".
-- Package completeness: 6 pieces, 2 notched side-seam pairs, 1 zipper, 1 hook and bar, and a notions
+- The band's fold line exports as an internal line and never as a cut line, and the band's label does
+  **not** say "place on fold" — the two are different facts about different pieces, and swapping them
+  is the cut/sew-line hazard the glossary marks ⚠.
+- The interfacing piece has no allowance on any edge, is not cut on a fold, and appears in no span: its
+  attachment is the declared `fused` account in §8, so package completeness passes without inventing a
+  seam for it.
+- Package completeness: 5 pieces, 2 notched side-seam pairs, 1 zipper, 1 hook and bar, and a notions
   list that matches.
