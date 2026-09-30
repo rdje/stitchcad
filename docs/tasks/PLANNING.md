@@ -603,7 +603,10 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Owner: `PLANNING.5`, whose goal is extended to cover it: a per-defect status token the census can read,
     and an instrument that prints `logged / closed / open` beside the index↔tree agreement it already owes.
     Until then the counts in `LIVE_STATUS.md` are hand-kept and this entry is the record of how to check
-    them by hand.
+    them by hand. **Second measurement, at `SPINE.4.4`:** the hand-kept count was wrong by one again — the row
+    said `40 logged` while `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` gives `41` (ids D1–D42, no D18 by
+    design), because D42 was written after the row in the same commit. A count its own author cannot keep
+    straight inside the commit that changes it is the argument for the instrument, not for more care.
 
 - **D39** — the changelog ledger's verifier parsed work-unit ids with a hardcoded suffix range
   (`STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?`), so the FOURTH sub-slice of any unit was mis-read: this slice's
@@ -676,10 +679,29 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     `98 304` B gets its commit blocked and performs the split under pressure, in a file it was not working
     on — which is precisely what happened to `.4b` (see D42's sibling evidence in that leaf's NO REGRESSION
     box). The remedy is mechanical and now demonstrated once, so there is nothing to gain by waiting.
-  - Owner: `SPINE.4.4`, the next `SPINE` leaf in frontier order — split SPINE's completed-leaf checklists
-    into `docs/tasks/SPINE-evidence.md` under the convention `G0-CONTRACT.4b` recorded: the leaf being landed
-    keeps its checklist in the tree file, because `scripts/check_task_acceptance.sh` judges every staged
-    `docs/tasks/*.md` and refuses one with no ticked boxes.
+  - Owner: `SPINE.4.4` (**fixed**), the leaf the frontier reached next — it split SPINE's `17` completed
+    checklists into `docs/tasks/SPINE-evidence.md` under the convention `G0-CONTRACT.4b` recorded, taking the
+    tree file from `1096` lines / `88 341` B to `552` / `42 028` (inside its `800` / `65 536` health) with the
+    moved bytes identical, and left this leaf's own checklist in the tree file so the staged-leaf gate still
+    has a box to judge.
+
+- **D43** — a sealed segment's digest depends on a newline convention nothing had written down: sealing
+  `stitchcad-changelog-part6.md` with the raw-byte digest made the ledger's `DESCRIPTOR` rule report a
+  mismatch that read as content drift in an immutable archive, because the rule hashes `content=$(sed …)`
+  followed by `printf '%s\n'`, and bash command substitution strips EVERY trailing newline — so a segment
+  whose sealed content ends with a blank line can never reproduce a raw-byte digest.
+  - Reproduce: at the measurement, `tail -c 12 docs/history/stitchcad-changelog-part6.md | od -c` ended
+    `…touched \n \n` where part5 ended `…touched \n`; the raw-bytes digest of the sealed content was
+    `8553accc…` and the rule's was `3148dd0f…`, one newline apart, with the descriptor declaring the former.
+  - Impact: the failure mode is a MISLEADING refusal. "content hashes to X, its descriptor declares Y" is the
+    most alarming sentence the ledger can print — silent drift in a segment that is supposed to be immutable —
+    and an author chasing it could "repair" a sealed file, which is the one edit the archive forbids. It
+    arrived with the third rollover of the day, i.e. exactly when the trap is cheapest to fall into.
+  - Owner: `SPINE.4.4` (**fixed in this commit** — part6 normalized to end with exactly one newline and its
+    descriptor recomputed by the rule's own method, so the live pointer, the descriptor and the verifier
+    agree; `DESCRIPTOR` now refuses a segment ending in a blank line BY NAME instead of reporting a digest
+    mismatch; the byte contract is written into the probe's header; and a `TRAILING-BLANK` arm pins the named
+    refusal → `probes: 9 pass / 0 fail`).
 
 ## Decisions
 

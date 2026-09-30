@@ -12,10 +12,10 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | --- | --- | --- |
 | Discipline spine (bedrock 0.6.1) | Done | memory · task-trees · commit workflow · 12 universal + 2 project doctrine gates (`make gate`) · 12 probe suites (`make probes`) · mdBook |
 | Roadmap → task-trees (`PLANNING`) | Done | All 10 roadmap lanes owned — 13 trees, `0 unowned / 0 orphan(s) / 0 dead link(s)`, derived by `run_tree_coverage_census.sh` |
-| Repo identity & policy (`SPINE`) | In Progress | containment, the acceptance gates and the push cadence are enforced and derived. Open: `.4.4` (**next**), `.5`, `.13`, `.15`, `.19` — none blocks product work |
+| Repo identity & policy (`SPINE`) | In Progress | containment (its targets now derived per table shape), the acceptance gates and the push cadence are enforced and derived. Open: `.5`, `.13`, `.15`, `.19` — none blocks product work |
 | Adopted policy set | Done | README policy, claim verification and the containment doctrine are in-repo, with containment **enforced** by the `LIVE-DOC-SIZE` project doctrine |
-| Defect census | In Progress | 40 logged, 35 closed. Open: D22 (`SPINE.15`), D34 + D38 (`PLANNING.5`), D35 (`G1-SLICE.3`), D40 (`SPINE.19`) — D32 and D41 closed `2026-09-30` |
-| G0 — product & semantic contract | In Progress | **Active lane.** `.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.14`, `.18` done: glossary, units, ontology, envelope (every row names a proving gate), paths, sizes, standards, ADR-0001, fixture, governance, `sc-units`. Next `SPINE.4.4`, then `.9` |
+| Defect census | In Progress | 41 logged, 36 closed — hand-kept, which is D38. Open: D22 (`SPINE.15`), D34 + D38 (`PLANNING.5`), D35 (`G1-SLICE.3`), D40 (`SPINE.19`) |
+| G0 — product & semantic contract | In Progress | **Active lane.** `.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.14`, `.18` done: glossary, units, ontology, envelope, paths, sizes, standards, ADR-0001, fixture, governance, `sc-units`. Next `.9` |
 | G1 — executable architecture slice | Not Started | 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, spikes |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |

@@ -30,7 +30,9 @@
 # fails here by name instead of surfacing as a mysterious duplicate three slices later.
 #
 # THE SEALED CONTENT, defined exactly because a digest is only a proof if both sides mean the same
-# bytes: everything after the segment's first `---` rule and the single blank line that follows it.
+# bytes: everything after the segment's first `---` rule and the single blank line that follows it,
+# ending with EXACTLY ONE newline — a trailing blank line is refused by name, because bash command
+# substitution strips trailing newlines and the two honest digest methods then disagree (defect D43).
 # For part1 that is lines 17–381, 365 lines / 30452 bytes / `sha256:f4aec75a…`, which is what its
 # descriptor declares — verified, not assumed.
 #
@@ -130,7 +132,14 @@ ledger_verdicts() {
     base="${f##*/}"
     local rule want_sha got_sha content want_lines have_lines
     rule="$(grep -n '^---$' "$f" | head -1 | cut -d: -f1)"
-    if [ -z "$rule" ]; then printf 'DESCRIPTOR FAIL %s has no --- rule sealing its descriptor from its content\n' "$base"
+    if [ -z "$(tail -n 1 "$f")" ]; then
+      # Measured, not theorised (defect D43): a segment whose sealed content ends with a BLANK line hashes
+      # differently by the two honest methods — raw bytes, and `content=$(sed …)` followed by `printf '%s\n'`,
+      # which is what this rule does because bash command substitution strips every trailing newline. Sealing
+      # part6 with the raw-byte digest made this rule report a mismatch that looked like content drift and was
+      # a newline. So the cause is named instead of being reported as a digest failure.
+      printf 'DESCRIPTOR FAIL %s ends with a blank line: the sealed content must end with exactly one newline, or no $( )-based digest can represent it\n' "$base"
+    elif [ -z "$rule" ]; then printf 'DESCRIPTOR FAIL %s has no --- rule sealing its descriptor from its content\n' "$base"
     else
       content="$(sed -n "$((rule + 2)),\$p" "$f")"
       want_sha="$(grep -oE 'sha256:[0-9a-f]{64}' "$f" | head -1 | cut -d: -f2)"
@@ -261,6 +270,18 @@ if [ -f "$D/docs/history/stitchcad-devnotes-part1.md" ]; then
   arm DEVNOTES-DIGEST DESCRIPTOR "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT"
 else
   bad DEVNOTES-DIGEST "no docs/history/stitchcad-devnotes-part1.md to mutate, so the arm proves nothing" ""
+fi
+
+# ---------------------------------------------------------------- DESCRIPTOR names a trailing blank line
+# The pin on D43: a segment sealed with a blank line at EOF must be refused for THAT reason, not merely
+# reported as a digest mismatch that looks like content drift.
+D="$WORK/blank"; mkroot "$D"
+printf '\n' >> "$D/docs/history/stitchcad-changelog-part5.md"
+out="$(ledger_verdicts "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT")"
+if grep -q 'DESCRIPTOR FAIL stitchcad-changelog-part5.md ends with a blank line' <<<"$out"; then
+  ok TRAILING-BLANK "DESCRIPTOR names the newline cause instead of reporting a digest that looks like drift"
+else
+  bad TRAILING-BLANK "a trailing blank line was not named as the cause" "$out"
 fi
 
 # ---------------------------------------------------------------- COVERAGE has teeth

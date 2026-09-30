@@ -53,8 +53,8 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | Tree | Lane (roadmap source) | Status | Frontier (next leaf) | Owner |
 | --- | --- | --- | --- | --- |
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.5` — derive the index↔tree frontier agreement (D34, which recurred on `2026-09-30`) | repo-local |
-| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.4.4` — re-derive the maxline health of table-shaped book parts, then `.5`/`.13`/`.15`/`.19` | repo-local |
-| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.9` — ADR-0003 + the formula language v1 (the ruling puts `SPINE.4.4` first) | repo-local |
+| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5` — the toolbox rows for the instruments in use, then `.13`/`.15`/`.19` | repo-local |
+| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.9` — ADR-0003 + the formula language v1 | repo-local |
 | [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `proposed` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
@@ -78,11 +78,11 @@ on disk is registered here with a declared lane — plus the advisory clause-ver
 table, more clause rows than roadmap clauses is expected (a tree may split one clause into several
 leaves, as `G5-SHELLS` does with the "full UX spec" list); fewer rows than clauses is the alarm.
 
-Execution order right now: **`SPINE.4.4` → `G0-CONTRACT.9`–`.12` → `.15`–`.17`**, then `G1-SLICE` …
-(`.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.14` and `.18` are done). The order follows the director's
-ruling of `2026-09-30`, which delegated D27, D32, `.14`'s drafting and the containment derivation: the first
-three are landed and `SPINE.4.4` is the fourth, after which the frontier returns to product chapters.
-`.15` carries the one thing the ruling reserved besides naming humans — the `ROADMAP.md` §11 G3 amendment
-four matrix cells depend on. The `SPINE` lane keeps `.5`, `.13`, `.15` and `.19` open behind it; none blocks
-product work (defect D24 records why that ordering is explicit rather than incidental). The frontier cells
-above are hand-kept and have drifted twice (defect D34); `PLANNING.5` derives them.
+Execution order right now: **`G0-CONTRACT.9`–`.12` → `.15`–`.17`**, then `G1-SLICE` … (`.1`–`.8`,
+`.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.14` and `.18` are done, and so is `SPINE.4.4`). The ruling of
+`2026-09-30` delegated four items — D27, D32, `.14`'s drafting and the containment derivation — and all four
+are landed; what remains of it is the director's: naming three humans, and ruling on the `ROADMAP.md` §11 G3
+amendment that four matrix cells propose, which `.15` carries into the G0 exit review. The `SPINE` lane keeps
+`.5`, `.13`, `.15` and `.19` open; none blocks product work (defect D24 records why that ordering is explicit
+rather than incidental). The frontier cells above are hand-kept and have drifted twice (defect D34);
+`PLANNING.5` derives them.
