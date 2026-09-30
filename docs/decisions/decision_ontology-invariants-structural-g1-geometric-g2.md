@@ -1,0 +1,47 @@
+# G1 enforces the ontology's structural invariants; the geometric ones are G2-2D.1's
+
+- **Type:** `decision`
+- **Date:** `2026-09-30` (absolute)
+- **Status:** `active`
+- **Owner / source:** repo-local workflow, leaf `G1-SLICE.3c` — the boundary between what the ontology proves
+  at gate G1 and what `sc-geometry` proves at gate G2 (`docs/book/src/spec/ontology.md` §4.1, §9;
+  `docs/tasks/G2-2D.md` leaf `.1`).
+
+answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?"
+
+## The fact / decision
+
+At gate **G1**, `sc-core`'s ontology types enforce the invariants that need **no 2D predicate**: a `Piece`'s
+boundary is a non-empty closed loop of distinct `EdgeRef`s, holes and construction lines reference edges that
+exist, multiplicity ≥ 1, a cut-on-fold piece declares exactly one fold edge, label data is complete enough to
+print, a `SeamSpan` references edges that exist, and every reference either resolves or becomes a visible
+`RepairTask`. The **geometric** invariants — CCW winding, boundary simplicity, holes strictly inside and
+non-intersecting, piece closure, dart-intake conservation against real boundary length — are enforced at gate
+**G2** by `sc-geometry`'s robust predicates (`G2-2D.1` owns "winding and orientation rules, piece closure").
+G1 makes **no 2D-correctness claim**; the geometric obligations are a typed, **visible deferral**, not a silent
+omission.
+
+## Why
+
+1. **The predicates and the offset engine are G2 deliverables.** Roadmap §4.2 puts robust intersection
+   predicates (Shewchuk-style) and the offset pathology corpus at G2; `G2-2D.1`'s goal is the "`sc-geometry` 2D
+   kernel … winding and orientation rules, piece closure". G1 is the "executable architecture slice": the
+   ontology types exist, carry identity and evaluate — the 2D correctness *proof* is explicitly G2's gate.
+2. **Claiming otherwise at G1 would be over-claiming.** A piece with a self-intersecting boundary or a CW
+   winding is *structurally* well-formed and only *geometrically* invalid. Without predicates, "an invalid
+   piece cannot be built" can honestly mean only "a structurally invalid piece cannot be built".
+3. **The deferral must be visible, not silent.** The same discipline the whole repository runs on: an unmet
+   obligation is a named, typed state (a `GeometricValidation` that reads `DeferredToG2` until `sc-geometry`
+   lands), so a reader sees exactly what G1 did and did not prove.
+
+## How to apply
+
+- `G1-SLICE.3c`'s object types enforce the **structural** invariants at construction and return typed
+  diagnostics naming the invariant violated (ontology §9: "the diagnostic names the invariant").
+- Geometric validity is carried as an unverified/deferred state at G1 and **discharged by `G2-2D.1`** when
+  `sc-geometry` provides predicates; the G2 tests assert winding, simplicity, closure and intake conservation.
+- Never mark a piece geometrically valid at G1, and never describe G1 as proving 2D correctness. The acceptance
+  "an invalid piece cannot be built" is met at G1 for the **structural** class and explicitly handed to G2 for
+  the geometric class.
+- Related: [[decision_edge-parameter-bounded-exact-rational]] (the parameter the references carry),
+  [[decision_entity-identity-ulid-injected-generator]] (the identity the references address).

@@ -54,7 +54,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Status: `proposed`
   Goal: the architecture slice runs on native and in a browser, with the command bus and
   persistence as the only mutation path.
-  Children: `.1` … `.16`
+  Children: `.1`, `.2`, `.3a`/`.3b`/`.3c`, `.4` … `.16` (18 leaves; `.3` was decomposed `2026-09-30`)
 
 - ID: `G1-SLICE.1`
   Status: `done`
@@ -79,17 +79,47 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   and the property-test-framework choice recorded as a layer-C decision.
   Commit: `STITCHCAD-G1-0002`
 
-- ID: `G1-SLICE.3`
+- ID: `G1-SLICE.3a`
   Status: `pending`
-  Goal: `sc-core` ontology v1 types and invariants — Piece, SeamSpan/SewingGraph, Notch,
-  Grainline, SeamAllowance, Dart/Tuck/Pleat/Gather, Closure, Pocket — with ULID identity and the
-  persistent-identity contract (references to stable topological entities, never array indices;
-  §4.1, `G0-CONTRACT.3`).
-  Acceptance: invariants are enforced at construction (an invalid piece cannot be built);
-  reference stability is a tested property under split/merge/reverse; unresolved references
-  surface as a repair task, never a silent reassignment.
+  Goal: the identity layer in `sc-core` (ontology §1) — `EntityId` (a dependency-free ULID), the
+  injected `IdGenerator`, `EdgeRef`/`PointRef` (the entity id of the creating operation plus a
+  persistent local tag), and the bounded exact rational parameter `t` in `[0, 1]`.
+  Acceptance: an `EntityId` round-trips its 26-character Crockford form and orders lexicographically
+  by creation; a deterministic `IdGenerator` reproduces ids byte-for-byte (the replay property);
+  the parameter is exact under `+ − × ÷` with reduction, carries a total order and an
+  `in_unit_interval` predicate, and reports overflow / division-by-zero as typed diagnostics; the
+  crate still compiles for `wasm32-unknown-unknown`.
   Verification: `pending`
   Commit: `pending`
+  Design: `decision_entity-identity-ulid-injected-generator.md`,
+  `decision_edge-parameter-bounded-exact-rational.md`.
+
+- ID: `G1-SLICE.3b`
+  Status: `pending`
+  Goal: the persistent-identity contract (ontology §1.1) — reference resolution under split, merge,
+  reverse, delete and offset-fragmentation, and the `RepairTask` an orphaned reference becomes. No
+  silent reassignment.
+  Acceptance: reference stability is a tested property under split/merge/reverse — a reference at the
+  split point resolves to both fragments and the consumer states which it wants, merge recomputes the
+  parameter by arc length, reverse maps `t` to `1 − t`; a deleted edge's references become visible
+  `RepairTask`s naming the reference, the orphaning edit and the candidate resolutions; a design with
+  unresolved references is savable and inspectable but cannot be released.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.3c`
+  Status: `pending`
+  Goal: the geometry-bearing object types (ontology §4) — `Piece`, `SeamSpan`/`SewingGraph`, `Notch`,
+  `Grainline`, `SeamAllowance`, `Dart`/`Tuck`/`Pleat`/`Gather`, `Closure`, `Pocket` — with their
+  structural invariants enforced at construction.
+  Acceptance: a structurally invalid object cannot be built and the diagnostic names the invariant
+  (an empty or self-repeating boundary loop, a reference to a non-existent edge, multiplicity 0, a
+  cut-on-fold piece without exactly one fold edge, incomplete label data); the GEOMETRIC invariants
+  (CCW winding, simplicity, holes strictly inside, closure, dart-intake conservation) are carried as a
+  visible `DeferredToG2` state discharged by `G2-2D.1`, never claimed here.
+  Verification: `pending`
+  Commit: `pending`
+  Design: `decision_ontology-invariants-structural-g1-geometric-g2.md`.
 
 - ID: `G1-SLICE.4`
   Status: `pending`
@@ -241,7 +271,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3` | `pending` | `sc-core` ontology v1 — G1's first new product code; the `G0-CONTRACT.3` spec (`docs/book/src/spec/ontology.md`) is present |
+| — | `G1-SLICE.3a` | `pending` | the identity layer (`EntityId`/ULID, `EdgeRef`/`PointRef`, the exact rational parameter) — G1's first new product code, designed by the three records this slice landed |
 
 ## Decisions
 
@@ -255,6 +285,13 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   `docs/decisions/decision_property-tests-dependency-free-recorded-seed.md` so later crates do not
   re-litigate it. This resolves the Open Question; the choice was made by `G0-CONTRACT.18` when
   `sc-units`' suite landed, because that crate must stay dependency-free for `wasm-viewer`.
+- `2026-09-30`: `.3` (the ontology) is **three slices, not one** — `.3a` the identity types, `.3b` the
+  persistent-identity contract, `.3c` the geometry-bearing object types — because each is a
+  signoff-quality unit and they are strictly ordered (the contract consumes the types; the objects
+  consume both). Its three design boundaries are recorded **before any code**, so each implementation
+  slice builds against a fixed design: `decision_entity-identity-ulid-injected-generator.md`,
+  `decision_edge-parameter-bounded-exact-rational.md`,
+  `decision_ontology-invariants-structural-g1-geometric-g2.md`.
 
 ## Open Questions
 
@@ -400,7 +437,8 @@ Questions deferred to `.2`; closing the leaf records it.
 | tree seed | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | created by the seeding leaf |
 | `.1` | `STITCHCAD-G1-0001 (leaf G1-SLICE.1)` | reconciled: delivered by `G0-CONTRACT.18` (`eb83f01`) ahead of this leaf |
 | `.2` | `STITCHCAD-G1-0002 (leaf G1-SLICE.2)` | reconciled: `sc-units` delivered by `G0-CONTRACT.18`; property-test decision recorded |
-| `.3` … `.16` | `pending` | — |
+| `.3` | `STITCHCAD-G1-0003 (leaf G1-SLICE.3)` | decomposed into `.3a`/`.3b`/`.3c`; the three design boundaries recorded as layer-C decisions |
+| `.3a` … `.16` | `pending` | — |
 
 ## Changelog
 
@@ -415,3 +453,10 @@ Questions deferred to `.2`; closing the leaf records it.
   re-derived against every acceptance criterion. The property-test-framework Open Question is resolved into
   the Decisions section and recorded as `decision_property-tests-dependency-free-recorded-seed.md`. The
   frontier advances to `.3` (the `sc-core` ontology), G1's first new product code.
+- `2026-09-30`: `.3` decomposed into `.3a` (identity types), `.3b` (the persistent-identity contract) and
+  `.3c` (the geometry-bearing object types) — one leaf was three signoff-quality slices in strictly ordered
+  dependency. Its three cross-cutting design boundaries were recorded before any code, so the implementation
+  slices build against a fixed design: a dependency-free ULID `EntityId` with an injected generator, a
+  bounded exact rational edge parameter in `sc-core` (not `sc-units`, not the formula bigint), and the
+  structural-at-G1 / geometric-at-G2 invariant boundary. The tree is 18 leaves; the frontier advances to
+  `.3a`.
