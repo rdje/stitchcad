@@ -574,3 +574,70 @@ Order is landing order, oldest first, so this file reads the same way the tree's
   `CHANGELOG.md` (including the superseding record for the sealed `part4` citation D41 found) and
   `DEV_NOTES.md` (a new lesson, the correction, and the rollover) updated in this commit. Lesson promotion:
   **promoted** — the new record carries an `answers:` line.
+
+### `G0-CONTRACT.14` — the governance model exists before the community does
+
+- [x] **REPRODUCE / ISSUE** — the G0 exit clause requires "governance model drafted (project owner named;
+  sewist-vs-programmer review paths defined)" and roadmap §12 requires four things nothing here had written:
+  a domain-review path that is not code review, golden-file approval ownership, the sewist-vs-programmer
+  conflict rule, and named funding/procurement owners. Measured at `HEAD`:
+  `git ls-tree --name-only HEAD docs/book/src/` → `SUMMARY.md`, `introduction.md`, `spec`, `rc=0` — no
+  governance chapter, while `grep -ci governance ROADMAP.md` → `6` clauses expect one, and `G0-CONTRACT.15`
+  cannot review an exit clause that has no deliverable.
+- [x] **ROOT CAUSE (WHY + WHERE)** — §12 states the requirement as prose with no owner per rule: "a named
+  domain-expert approval path (two-step: expert + maintainer)" says who approves but not which changes take
+  that path, and §14's risk row "community fork over governance" is mitigated only by "governance doc at G0,
+  while the room is empty" — scheduled, and never written. Three of the four rules also depend on a *person*
+  this repository does not have, which is why the leaf stayed blocked until the ruling of `2026-09-30`
+  separated the drafting from the naming; the blocking part was that coupling, not the missing names.
+- [x] **ADDRESSED (verified)** — `docs/book/src/governance.md` (`wc -lc` → `198` lines / `15 593` B, widest
+  line `199` B, inside the `book_collection` per-part health of `400` / `24 576` / `200`) carries ten sections:
+  the classification table putting every change class on exactly one of the two review paths; the conjunctive
+  two-step rule for anything that alters exported bytes; seven roles each with the authority it needs and
+  whether an agent may hold it; the four-step conflict path (classify → make a contested default a profile
+  parameter → escalate by review round, not by date → a fork is a legitimate outcome); golden approval with
+  two signatures and the no-golden-over-an-`assumed`-constant precondition; the public/never-public boundary
+  and its three consequences for the review paths; agents under governance; the procurement table with a
+  fallback and its cost in evidence quality per item; **all four empty seats in one table** (§8), which is the
+  acceptance clause "flagged to the director in one place, not discovered later"; the four questions
+  deliberately left undecided; and a verification-status section separating the roadmap citations from the
+  project decisions. `make book` → `INFO HTML book written to …`, `exit=0`, and
+  `ls docs/book/book/governance.html` → present, wired in as the book's first non-specification part. The six
+  project decisions are recorded separately in
+  `docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md` (`84` lines / `6 600` B,
+  indexed, carrying an `answers:` line), so a reader can tell the citation from the invention.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`;
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 77 files measured`,
+  `exit=0`; the three censuses over the book are green and unchanged by the new chapter —
+  `run_glossary_census.sh` → `276 terms / 8 parts / 145 tokens / 0 failure(s)` (so the chapter introduces no
+  undeclared machine token), `run_feature_matrix_census.sh` → `105 rows / 29 diagnostics / 0 failure(s)`,
+  `run_standards_census.sh` → `6 registered / 6 designations used / 0 failure(s)`; the fixture still re-derives
+  at `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`; `make probes` →
+  `make probes: 12 suite(s) green`, `exit=0`. No Rust and no instrument changed, so the suite count is
+  unchanged; `git diff --cached --name-only | grep -cE '\.(rs|sh)$'` → `0`, `rc=1` — a documentation-only
+  slice, so no instrument and no crate behaviour could regress.
+- [x] **FIX** — wrote the chapter and the record; added the book's `# Governance` part to `SUMMARY.md`;
+  moved `.4b`'s completed checklist into `G0-CONTRACT-evidence.md` in this same commit, which is the
+  convention `.4b` recorded and the first slice to obey it — the leaf being landed keeps its checklist in the
+  tree file, because `scripts/check_task_acceptance.sh` judges every staged `docs/tasks/*.md` and refuses one
+  with no ticked boxes. The tree file is `744` lines / `64 445` B (inside its `800` / `65 536` health) and the
+  evidence sibling holds `10` completed checklists at `576` lines / `53 726` B.
+- [x] **The blocked part is stated as a cost with a schedule attached, not as an apology.** The unnamed domain
+  expert is not a paperwork gap: that seat gates the reference fixture's `assumed` constants, which gate the
+  **first G2 golden** (§4 of the chapter), so the dependency is written where a plan will hit it. Each
+  procurement item likewise carries its fallback *and what the fallback costs in evidence quality*, because
+  roadmap §14 already made the partner-run manual test normative and an unstated cost is how a slip becomes a
+  silent downgrade of the release claim.
+- [x] **The rollover this slice's changelog append triggered is performed and verified in the same commit.**
+  The live window had crossed its health target (`410` lines / `36 632` B against `400` / `32 768`), so the two
+  oldest entries are sealed into `docs/history/stitchcad-changelog-part5.md` (`82` lines / `7 505` B /
+  `sha256:18548ff78f8345d1…`) with a pointer row in the live file, which is back inside health at `329` lines /
+  `29 295` B. Losslessness is proved against the committed state rather than against memory: the sealed bytes
+  are identical to `git show HEAD:CHANGELOG.md` from the same heading onward (`True`), and the standing
+  verifier agrees — `run_changelog_ledger_probes.sh` → `probes: 8 pass / 0 fail`, its `DESCRIPTOR` rule
+  reproducing all seven sealed segments' digests including the new one.
+- [x] **LOCKSTEP** — the leaf's status, the frontier (which now names `SPINE.4.4` as the repository's next
+  slice, per the ruling's order), the tree's decisions, blockers, verification and commit logs and its
+  changelog; `docs/TASK_TREE.md`'s frontier cell; `docs/decisions/INDEX.md` and the regenerated Knowledge Map;
+  `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md` and `DEV_NOTES.md` (a new lesson) updated in this commit.
+  Lesson promotion: **promoted** — the governance record gains an `answers:` line.

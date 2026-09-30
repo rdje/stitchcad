@@ -274,7 +274,8 @@ mechanically-enforced form:
 
 - ID: `SPINE.19`
   Status: `pending` (created by `G0-CONTRACT.4b`, which performed the first non-changelog rollover and
-  found the archive verifier hardcoded to one ledger — defect **D40**; deferred behind product work by
+  found the archive verifier hardcoded to one ledger — defect **D40**; extended by **D46**, the defect census
+  becoming `PLANNING.md`'s dominant mass; deferred behind product work by
   `decision_product-work-takes-the-frontier.md`)
   Goal: make the sealed-archive verifier ledger-agnostic. `docs/history/` now holds two ledgers'
   segments — the changelog's four and the dev notes' one — and only the changelog's have their
@@ -284,10 +285,32 @@ mechanically-enforced form:
   Acceptance: a segment registry declares, per ledger, its live file, its segment glob and the id shape
   its coverage line carries; `COVERAGE` and `POINTER` are derived from it, so adding a third ledger is a
   registry row and not a code change; a RED arm renames a lesson inside the dev-notes segment's coverage
-  list and is caught, and a RED arm deletes `DEV_NOTES.md`'s pointer row and is caught; the existing eight
-  arms stay green; `TOOLBOX.md` and D40 updated in the same commit.
+  list and is caught, and a RED arm deletes `DEV_NOTES.md`'s pointer row and is caught; the existing
+  `DESCRIPTOR` generalisation and its arms stay green; **and the third ledger exists** — `PLANNING.md`'s closed
+  defects sealed into `docs/history/stitchcad-defects-part1.md` under the same descriptor contract, with the
+  live census keeping the open ones and a pointer, so that tree is inside its health target again (D46);
+  `TOOLBOX.md`, D40 and D46 updated in the same commit.
   Verification: `pending`
   Commit: `pending`
+
+- ID: `SPINE.4.5`
+  Status: `done`
+  Goal: make a transition-debt baseline **revision-aware**, so a legitimate revision of a baselined document
+  can land without hand-widening the number the doctrine forbids widening. The `roadmap` row's baseline was
+  measured at exactly the file's size, so roadmap v0.3 could only be applied by editing the baseline — the
+  silent widening the rule exists to prevent. This is the containment adoption note's deferred **trigger 3**
+  ("a stored copy of a mechanically owned value needs an executed freshness oracle"), fired by the first
+  roadmap amendment and owned by whoever hit it.
+  Acceptance: the debt column accepts an `at=<revision>` axis; the checker refuses a row whose revision token
+  the file's first line no longer declares; declaring the right revision does NOT license growth past the
+  baseline; `at=` on a non-`file` surface is refused rather than ignored; the roadmap's baseline is re-based
+  in the same commit as the revision, with the authority cited in the row's notes; the refusal classes fire in
+  `--self-test` and against the real registry in the probe suite; a decision record carries the rule.
+  Verification: recorded below and in the acceptance checklist — `--self-test` grew `11` → `15` arms
+  (`GREEN-AT`, `RED-AT-STALE`, `RED-AT-WIDEN`, `RED-AT-KIND`), the probe suite `4` → `5` arms with `REAL-3`
+  staling the real registry to `at=v0.2`, and the roadmap re-based to `lines=947;bytes=52818;at=v0.3`.
+  Commit: `STITCHCAD-G0-0004c` (landed in the slice that applied roadmap v0.3, which is the slice that hit the
+  trigger)
 
 - ID: `SPINE.5`
   Status: `pending`
@@ -394,6 +417,7 @@ mechanically-enforced form:
 | 8b | `SPINE.4.2` | `done` | the data plane exists and three surfaces were trimmed before their targets were set |
 | 8c | `SPINE.4.3` | `done` | declared ceilings are enforced now; D13 closed |
 | 8d | `SPINE.4.4` | `done` | the maxline target is derived from the binding table shape's cell budget (275 B), not from prose; the ceiling rises to 440 B by record, and D42's split is performed here |
+| 8e | `SPINE.4.5` | `done` | taken inside `G0-CONTRACT.4c`: a debt baseline names the revision it was measured at, and a stale one is refused — containment trigger 3, fired by the first roadmap amendment and discharged locally |
 | 9 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 | 10 | `SPINE.13` | `pending` | roadmap navigation + per-section bounds: the `maintained_reference` debt |
 | 11 | `SPINE.14` | `done` | taken before `.4.3`: the ledger had to be inside its window before a baseline could be declared honestly |
@@ -474,78 +498,54 @@ its checklist here, because `scripts/check_task_acceptance.sh` judges every stag
 refuses one with no ticked boxes; the next slice moves it across. Neither file carries an unticked
 placeholder box (defect D15).
 
-### `SPINE.4.4` — the widest-line target is derived from the cell budget, and D42's split is performed
+### `SPINE.4.5` — a debt baseline knows which revision it was measured at
 
-- [x] **REPRODUCE / ISSUE** — the containment check printed a warning no defect stood behind, on every run:
-  `bash scripts/check_live_doc_size.sh` → `live-doc-size: WARNING book_collection: widest line 272 B = 136%
-  of its 200 B target`, `exit=0`, while the same row's ceiling is `320` B and the widest line belongs to a
-  five-column termbase row in `docs/book/src/spec/glossary/measurements-and-fit.md`. Every glossary part
-  exceeded the target; nothing could be done about it except trim definitions or ignore the warning.
-- [x] **ROOT CAUSE (WHY + WHERE)** — the `200` B target was derived from the shape of a prose chapter, and a
-  termbase row is a different shape: `.doctrine/live_document_size/surfaces.tsv`'s own header says per-part
-  health is "derived from the SHAPE of its content … never from today's largest file", and this row's number
-  predated the book's first reference table. Measured rather than argued —
-  `bash docs/tasks/artifacts/live_doc_size/run_cell_budget_census.sh` → the binding shape is
-  `Term｜What it means｜Canonical object｜Also called｜Machine token` with `276 data rows · 5 columns ·
-  separator overhead 16 B`, per-column p95 cells `21 + 106 + 62 + 50 + 20 = 259` B, and
-  `derived row budget: p95-sum 259 B (+16 overhead = 275 B) · max-sum 363 B (+16 = 379 B)`, `exit=0` — a
-  `275` B budget against a `200` B target, and a `379` B worst legitimate row against a `320` B ceiling. The
-  second candidate cause was measured instead of assumed: a split row cannot carry the fix as the data plane
-  stands, because the checker claims a file with `PARTOF[$2] = sid`
-  (`grep -n 'PARTOF\[' scripts/check_live_doc_size.sh` → one hit, in the measurements branch, `rc=0`) so the
-  LAST matching row wins, and one registry field holds one glob — a narrower row would double-count the same
-  maxima unless the collection's glob stopped matching the termbase parts.
-- [x] **ADDRESSED (verified)** — the target is now derived, and its producer is tracked:
-  `bash docs/tasks/artifacts/live_doc_size/run_cell_budget_census.sh` →
-  `cell budget: 36 shapes / 625 data rows measured / recommended maxline health 275 B`, `exit=0`, printing
-  every shape's per-column widest and p95 cells, both derived row budgets (`p95-sum 259 B (+16 overhead =
-  275 B) · max-sum 363 B (+16 = 379 B)` for the termbase), and the honesty check
-  `covers the population's widest actual line (272 B): yes`. Its arithmetic is pinned on a synthetic table
-  whose budget is known by construction: `--self-test` → `probes: 7 pass / 0 fail`, `exit=0`. The registry row
-  now reads health `275` / ceiling `440` with the derivation, the instrument and the measured widest line in
-  its `notes` column, and the check reports the change: `WARNING book_collection: widest line 272 B = 99% of
-  its 275 B target`. The ceiling rise is authorised by
-  `docs/decisions/decision_maxline-health-derived-from-the-cell-budget.md` (indexed, `answers:` line), which
-  also records the two rejected alternatives with their arithmetic — raising health to `379` to silence the
-  warning, and the split row — so neither is re-litigated by a reader who has not measured them.
-- [x] **NO REGRESSION** — `bash scripts/check_live_doc_size.sh --self-test` → `live-doc-size --self-test: 11
-  arms, 0 failed`; `bash docs/tasks/artifacts/live_doc_size/run_live_doc_size_probes.sh` →
-  `probes: 4 pass / 0 fail`; `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces,
-  15 routes, 80 files measured, 32 warning(s)`, `exit=0`, with no breach and the registry still parsing at
-  `21` fields per row; `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
-  `make probes: 12 suite(s) green`, `exit=0`; the book's own censuses are untouched and green (glossary
-  `276 terms / 0 failure(s)`, matrix `105 rows / 0 failure(s)`, fixture `0 mismatch(es)`). No Rust changed;
-  the one staged `.sh` is a new measurement tool, so this checklist is the evidence the code-path seam asks
-  for.
-- [x] **FIX** — wrote the cell-budget census (a portable file list rather than `mapfile`, because macOS ships
-  bash 3.2; cells split honouring code spans and escaped pipes exactly as `check_table_arity.sh` splits them,
-  so the two instruments agree about where a cell ends); edited the two numbers and the `notes` column of one
-  registry row; wrote the decision record; added the `TOOLBOX.md` row; and performed the evidence split D42
-  assigned to this leaf — `17` completed checklists moved byte-identically out of `docs/tasks/SPINE.md`
-  (`1096` lines / `88 341` B → `552` lines / `42 028` B, inside its `800` / `65 536` health) into
-  `docs/tasks/SPINE-evidence.md`, under the convention `G0-CONTRACT.4b` recorded.
-- [x] **`.doctrine/` changed, so the exceptional push is owed and the verdict is recorded, not assumed** —
-  `make push-due` names the trigger set this commit touches, the push happens immediately after the commit,
-  and the observed CI verdict is written into this leaf's Verification Log row in the commit that follows,
-  which is the shape `G0-CONTRACT.18`'s first wasm-smoketest push established.
-- [x] **The changelog rollover this slice's append triggered is performed here, and it exposed a trap worth
-  more than the rollover (defect D43).** The live window had crossed its byte health (`376` lines /
-  `33 364` B against `400` / `32 768`), so slices 32–33 are sealed into
-  `docs/history/stitchcad-changelog-part6.md` (`93` lines / `8 284` B / `sha256:3148dd0fb5f63088…`), proved
-  byte-identical to `git show HEAD:CHANGELOG.md` rather than to memory, and the window is back inside health
-  at `283` lines / `25 246` B. The first digest it declared did not reproduce, and the cause was one newline:
-  the sealed content ended with a blank line, which `content=$(sed …)` cannot represent because bash strips
-  trailing newlines — so the verifier reported what looks like drift in an immutable archive. Fixed by
-  normalizing the segment, recomputing its descriptor by the verifier's own method, teaching `DESCRIPTOR` to
-  refuse a trailing blank line BY NAME, writing the byte contract into the probe's header, and pinning it with
-  a `TRAILING-BLANK` arm: `run_changelog_ledger_probes.sh` → `probes: 9 pass / 0 fail`, `exit=0`.
-- [x] **LOCKSTEP** — D42 closed and D43 logged-and-fixed in `docs/tasks/PLANNING.md`; D38's entry gains the
-  second measurement of a hand-kept count being wrong by one (`40` written where `41` ids exist), which is the
-  argument for the instrument `PLANNING.5` owes; `TOOLBOX.md` gains the census row;
-  `docs/decisions/INDEX.md` carries the record and the Knowledge Map was regenerated (`make gate` refused
-  until it was); `docs/TASK_TREE.md`'s frontier cells and execution-order line, `LIVE_STATUS.md`,
-  `MEMORY.md` and `CHANGELOG.md` (including the rollover) updated in this commit. Lesson promotion:
-  **promoted** — the new record carries an `answers:` line.
+- [x] **REPRODUCE / ISSUE** — roadmap v0.3 could not be applied honestly. `wc -lc ROADMAP.md` → `919 50821`
+  and the registry's `roadmap` debt read `lines=919;bytes=50821`, so the amendment's `+28` lines / `+1 997` B
+  hit `LIVE-DOC-SIZE: roadmap: transition debt WIDENED on lines (947 > baseline 919) — a baseline never grows`
+  and `make gate` blocked. The rule is right; what was missing is a legitimate path, and the only one available
+  was editing the baseline number — the silent widening the rule exists to prevent.
+- [x] **ROOT CAUSE (WHY + WHERE)** — a debt baseline is a **stored copy of a mechanically owned value** (the
+  file's own size) with nothing tying it to the moment it was taken, so a legitimate revision and a silent
+  widening are indistinguishable to the checker. `grep -n 'debt' .doctrine/live_document_size/surfaces.tsv`
+  → one hit per row, `rc=0`, and shows the header's own rule — "the exact measured baseline at adoption …
+  A baseline never widens" — while the
+  `roadmap` row's note names the missing piece: "a revision-aware baseline+delta adapter is deferred (adoption
+  note trigger 3)". `grep -n -A6 'trigger' docs/decisions/decision_live-document-containment-proportionate-adoption.md`
+  → trigger 3 is "a stored copy of a mechanically owned value needs an executed freshness oracle", and the
+  record says whoever hits it owns it. This slice hit it.
+- [x] **ADDRESSED (verified)** — the debt column now accepts `at=<revision>`, executed rather than documented:
+  the measure step emits each file's first line as a sixth field, and the evaluator refuses a row whose token
+  that line no longer declares. `bash scripts/check_live_doc_size.sh --self-test` →
+  `live-doc-size --self-test: 15 arms, 0 failed`, `exit=0`, the four new arms being `GREEN-AT` (a baseline
+  measured at the revision the file declares passes), `RED-AT-STALE` (a token the file no longer declares is
+  refused), `RED-AT-WIDEN` (declaring the right revision does not license growth past the baseline) and
+  `RED-AT-KIND` (a revision token on a collection row is refused rather than ignored). Against the REAL
+  registry: `bash docs/tasks/artifacts/live_doc_size/run_live_doc_size_probes.sh` → `probes: 5 pass / 0 fail`,
+  where `REAL-3` copies the registry, stales the roadmap row to `at=v0.2` and requires
+  `debt baseline was measured at revision `v0.2`, which ROADMAP.md no longer declares`. The roadmap's baseline
+  is re-based in the revision's own commit — `.doctrine/live_document_size/surfaces.tsv` now reads
+  `lines=947;bytes=52818;at=v0.3` with the authority cited in its notes — and the tree passes:
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 84 files measured`,
+  `exit=0`. The rule is recorded in `docs/decisions/decision_revision-aware-containment-baseline.md`, and the
+  adoption record's trigger 3 is marked fired and discharged locally rather than left owed.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `13 suite(s) green`, `exit=0`; the pre-existing debt arm still fires (`RED-DEBT`, a widened baseline with no
+  `at=` axis, is refused exactly as before, so the new axis added a path and did not relax a rule); the other
+  ten self-test arms are unchanged; no row other than `roadmap` carries `at=`, so every other surface is judged
+  by the same comparison it always was. No Rust changed; `scripts/check_live_doc_size.sh` is a project-doctrine
+  check, so this slice owes the immediate push and the observed CI verdict, recorded in the Verification Log.
+- [x] **FIX** — one measurement field (the first line, tabs stripped), one early branch in the debt loop, four
+  self-test arms, one probe arm, the header's refusal list, the re-based registry row, the decision record, and
+  the adoption record's trigger line. Deliberately NOT done: importing the neutral JSONL checker package that
+  trigger 3 nominally points at — the *contract* (an executed freshness oracle for a stored copy) is what the
+  trigger asks for, and six lines in the existing awk evaluator discharge it without a 2 100-line interpreter
+  in the commit path, which the adoption record's own local parameters forbid.
+- [x] **LOCKSTEP** — the registry row and its notes; `TOOLBOX.md`'s containment rows name the new refusal
+  class; `docs/decisions/INDEX.md` carries the record and the Knowledge Map was regenerated; `MEMORY.md`,
+  `LIVE_STATUS.md`, `CHANGELOG.md` and `DEV_NOTES.md` updated in the commit that lands this leaf
+  (`STITCHCAD-G0-0004c`, the slice that hit the trigger). Lesson promotion: **promoted** — the record carries
+  an `answers:` line.
 
 ## Verification Log
 

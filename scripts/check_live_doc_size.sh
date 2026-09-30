@@ -10,8 +10,10 @@
 # empty owner/authority, unknown lifecycle or kind, non-numeric bound, a ceiling below its health
 # target); an absolute or off-volume path in the data plane; a path/glob that matches nothing when the
 # row does not declare itself empty; a line / byte / max-content-line / file-count / aggregate overflow
-# past a ceiling; a widened transition-debt baseline; and a route whose destination has no surface row
-# or contradicts its lifecycle. It WARNS without failing at 80% of a health target.
+# past a ceiling; a widened transition-debt baseline; a debt baseline measured at a REVISION the file no
+# longer declares (`at=<token>`, which is what makes a baseline revision-aware instead of frozen); and a
+# route whose destination has no surface row or contradicts its lifecycle. It WARNS without failing at
+# 80% of a health target.
 #
 # WHY: a bounded file that routes its overflow into an unbounded neighbour is not contained — the
 # measured upstream failure was a status file that reached 1 547 057 bytes after a README cap displaced
@@ -69,10 +71,11 @@ measure_registry() { # $1 = surfaces.tsv · $2 = output file
     if [ -f "$ROOT/$p" ]; then
       l=$(wc -l < "$ROOT/$p" | tr -d ' '); b=$(wc -c < "$ROOT/$p" | tr -d ' ')
       m=$(awk '{n=length($0); if(n>x)x=n} END{print x+0}' "$ROOT/$p")
+      fl=$(head -1 "$ROOT/$p" | tr '\t' ' ')
     else
-      l=0; b=0; m=0
+      l=0; b=0; m=0; fl=""
     fi
-    printf '%s\t%s\t%s\t%s\t%s\n' "$sid" "$p" "$l" "$b" "$m" >> "$out"
+    printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$sid" "$p" "$l" "$b" "$m" "$fl" >> "$out"
   done < "$out.parts"
   rm -f "$out.parts"
 }
@@ -129,6 +132,7 @@ evaluate() { # $1 surfaces · $2 routes · $3 measurements · $4 tracked-md list
       if ($3+0 > pl[sid]+0) pl[sid]=$3+0
       if ($4+0 > pb[sid]+0) pb[sid]=$4+0
       if ($5+0 > pm[sid]+0) pm[sid]=$5+0
+      if ($6 != "") FIRST[$2]=$6
       al[sid]+=$3+0; ab[sid]+=$4+0
       next
     }
@@ -159,6 +163,23 @@ evaluate() { # $1 surfaces · $2 routes · $3 measurements · $4 tracked-md list
           for (d = 1; d <= nd; d++) {
             split(darr[d], kv, "=")
             axis = kv[1]; base = kv[2]+0
+            # `at=<token>` is not a size axis: it is the REVISION the baselines beside it were measured at,
+            # and it is what makes a baseline revision-aware instead of frozen. A stored copy of a
+            # mechanically owned value needs an executed freshness oracle — the containment adoption note
+            # deferred trigger 3, fired by the first roadmap amendment: if the file no longer declares that
+            # revision on its first line, the baseline is stale and the row is REFUSED, not silently
+            # satisfied. So a revision may re-base its baseline, but only in the commit that revises, which
+            # is where the recorded authority for the growth has to be anyway.
+            if (axis == "at") {
+              token = substr(darr[d], 4)
+              if (KIND[sid] != "file") { bad(sid ": debt axis `at=` needs a kind=file surface, this is `" KIND[sid] "`"); continue }
+              f = PATHG[sid]
+              if (token == "") { bad(sid ": debt axis `at=` declares no revision token"); continue }
+              if (!(f in FIRST)) { bad(sid ": debt axis `at=" token "` but " f " was not measured"); continue }
+              if (index(FIRST[f], token) == 0)
+                bad(sprintf("%s: its debt baseline was measured at revision `%s`, which %s no longer declares (first line: `%s`) — a revision re-bases its own baseline in the same commit, under a recorded authority", sid, token, f, substr(FIRST[f], 1, 60)))
+              continue
+            }
             act = (axis=="lines") ? pl[sid] : (axis=="bytes") ? pb[sid] : (axis=="maxline") ? pm[sid] \
                 : (axis=="agglines") ? al[sid] : (axis=="aggbytes") ? ab[sid] : -1
             if (act < 0) { bad(sid ": debt axis `" axis "` is not one of lines/bytes/maxline/agglines/aggbytes"); continue }
@@ -236,6 +257,23 @@ EOF
   printf 'a much longer tracked file that exceeds its recorded debt baseline by a wide margin\n' >> "$d/tree/ok.md"
   arm RED-DEBT 1 "a widened transition-debt baseline is refused"
   printf 'tracked file\n' > "$d/tree/ok.md"
+
+  # the revision-aware baseline: `at=<token>` must be declared by the file's first line, and declaring it
+  # must NOT disable the size check beside it.
+  mkreg; sed -i.bak 's/\t-\ta note$/\tlines=1;bytes=13;at=tracked\ta note/' "$d/reg/surfaces.tsv"
+  arm GREEN-AT 0 "a baseline measured at the revision the file declares passes"
+
+  mkreg; sed -i.bak 's/\t-\ta note$/\tlines=1;bytes=13;at=v0.9\ta note/' "$d/reg/surfaces.tsv"
+  arm RED-AT-STALE 1 "a baseline measured at a revision the file no longer declares is refused"
+
+  mkreg; sed -i.bak 's/\t-\ta note$/\tlines=1;bytes=13;at=tracked\ta note/' "$d/reg/surfaces.tsv"
+  printf 'a second line, so the file outgrows the baseline it was re-based at\n' >> "$d/tree/ok.md"
+  arm RED-AT-WIDEN 1 "declaring the right revision does not license growth past the baseline"
+  printf 'tracked file\n' > "$d/tree/ok.md"
+
+  mkreg; sed -i.bak 's/\t-\ta note$/\tlines=1;bytes=13;at=tracked\ta note/' "$d/reg/surfaces.tsv"
+  sed -i.bak 's#\ttree/ok.md\tfile#\ttree/ok.md\tcollection#' "$d/reg/surfaces.tsv"
+  arm RED-AT-KIND 1 "a revision token on a collection row is refused rather than ignored"
 
   mkreg; sed -i.bak 's#\ttree/ok.md\tfile#\ttree/absent-*.md\tcollection#' "$d/reg/surfaces.tsv"
   arm RED-GLOB 1 "a collection glob matching nothing, undeclared, is refused"

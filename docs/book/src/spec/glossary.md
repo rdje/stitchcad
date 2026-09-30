@@ -386,7 +386,8 @@ reference resolving to a chapter clause, a roadmap clause or a real task-tree le
 requires still in place, this index equal to the one derived from the parts — and it enforces the
 coverage claim: every machine token the specification chapters use is either owned here, declared by
 the chapter that uses it, or exempted with a written reason. What it cannot judge is whether a
-definition is *correct*; that is the domain review `G0-CONTRACT.14` names a reviewer for.
+definition is *correct*; that is the domain review, and the seat that performs it is **vacant**
+([governance §8.1](../governance.md)).
 
 ## Verification status of the synonyms
 
@@ -399,8 +400,8 @@ definition is *correct*; that is the domain review `G0-CONTRACT.14` names a revi
 - **Trade synonyms in other languages, and other CAD systems' words for a term** — *general industry
   usage, unverified in this repository*. They are offered as recognition aids for a reader who arrives
   from another system, not as claims about any vendor's documentation or user interface. The domain
-  reviewer `G0-CONTRACT.14` names confirms or corrects them, and every ⚠ term's synonyms are the ones
-  that must be confirmed before a termbase ships.
+  reviewer — a seat governance §8.1 records as **vacant** — confirms or corrects them, and every ⚠ term's
+  synonyms are the ones that must be confirmed before a termbase ships.
 - **Terms whose precise meaning a later chapter owns** — the entry says which leaf specifies them
   (`stack point`, `fixed perimeter` and `smoothing` are named by the roadmap's grading clause without
   being defined there, and this glossary does not invent a definition for them).

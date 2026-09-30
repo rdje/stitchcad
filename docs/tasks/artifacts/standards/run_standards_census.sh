@@ -14,8 +14,10 @@
 #   S2 registration    every designation appearing anywhere under docs/book/src/ is a registry row
 #   S3 status          every row's status is one of the three the chapter declares, and no owner cell is
 #                      empty or an em dash
-#   S4 evidence        a row claiming `read-in-repo` carries a citation (a clause or table reference),
-#                      because that status is the only one that permits quoting a document
+#   S4 evidence        a row claiming `read-in-repo` carries a citation (a clause or table reference) in its
+#                      STATUS or ROLE cell, never merely somewhere in the row: an owner cell carrying a
+#                      cross-reference once satisfied the whole-line grep, so an unevidenced claim passed
+#                      (defect D45, found when an owner cell gained a section sign)
 # ADVISORY, printed and never a failure:
 #   A1 where each designation is used, per file, so a claim cannot hide in one chapter
 #
@@ -131,14 +133,18 @@ fails=$((fails + s3n))
 echo "  rows: $registry_rows · breaches: $s3n"
 
 # ── S4 a read-in-repo claim carries its citation ──────────────────────────────────────────────
+# The citation is sought in the STATUS and ROLE cells only. A whole-row grep was satisfied by an owner
+# cell that carried a cross-reference, which is a green verdict on a claim nobody evidenced (D45).
 echo "-- S4 a read-in-repo row carries the citation that earns it"
 s4=$(awk -F'\t' -v ch="$CHAPTER" '
   $2 ~ /^`read-in-repo`/ {
     line = ""
     while ((getline l < ch) > 0) if (l ~ /^\|/ && index(l, $1) == 3) { line = l; break }
     close(ch)
-    if (line !~ /§|clause|table [0-9]|Table [0-9]/) {
-      printf "  x %s:%s claims `read-in-repo` for `%s` but cites no clause or table\n", ch, $4, $1; bad++
+    n = split(line, cells, "|")            # "" | designation | status | owner | role | ""
+    cite = (n >= 3 ? cells[3] : "") " " (n >= 5 ? cells[5] : "")
+    if (cite !~ /§|clause|table [0-9]|Table [0-9]/) {
+      printf "  x %s:%s claims `read-in-repo` for `%s` but its status and role cells cite no clause or table\n", ch, $4, $1; bad++
     }
   }
   END { printf "COUNT %d\n", bad+0 }' "$REGISTRY")

@@ -563,3 +563,75 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   and the convention (invocation + output + exit status) is recorded for `SPINE.8` to publish.
   Nothing was waived and no gate was weakened.
 
+### `SPINE.4.4` — the widest-line target is derived from the cell budget, and D42's split is performed
+
+- [x] **REPRODUCE / ISSUE** — the containment check printed a warning no defect stood behind, on every run:
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: WARNING book_collection: widest line 272 B = 136%
+  of its 200 B target`, `exit=0`, while the same row's ceiling is `320` B and the widest line belongs to a
+  five-column termbase row in `docs/book/src/spec/glossary/measurements-and-fit.md`. Every glossary part
+  exceeded the target; nothing could be done about it except trim definitions or ignore the warning.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the `200` B target was derived from the shape of a prose chapter, and a
+  termbase row is a different shape: `.doctrine/live_document_size/surfaces.tsv`'s own header says per-part
+  health is "derived from the SHAPE of its content … never from today's largest file", and this row's number
+  predated the book's first reference table. Measured rather than argued —
+  `bash docs/tasks/artifacts/live_doc_size/run_cell_budget_census.sh` → the binding shape is
+  `Term｜What it means｜Canonical object｜Also called｜Machine token` with `276 data rows · 5 columns ·
+  separator overhead 16 B`, per-column p95 cells `21 + 106 + 62 + 50 + 20 = 259` B, and
+  `derived row budget: p95-sum 259 B (+16 overhead = 275 B) · max-sum 363 B (+16 = 379 B)`, `exit=0` — a
+  `275` B budget against a `200` B target, and a `379` B worst legitimate row against a `320` B ceiling. The
+  second candidate cause was measured instead of assumed: a split row cannot carry the fix as the data plane
+  stands, because the checker claims a file with `PARTOF[$2] = sid`
+  (`grep -n 'PARTOF\[' scripts/check_live_doc_size.sh` → one hit, in the measurements branch, `rc=0`) so the
+  LAST matching row wins, and one registry field holds one glob — a narrower row would double-count the same
+  maxima unless the collection's glob stopped matching the termbase parts.
+- [x] **ADDRESSED (verified)** — the target is now derived, and its producer is tracked:
+  `bash docs/tasks/artifacts/live_doc_size/run_cell_budget_census.sh` →
+  `cell budget: 36 shapes / 625 data rows measured / recommended maxline health 275 B`, `exit=0`, printing
+  every shape's per-column widest and p95 cells, both derived row budgets (`p95-sum 259 B (+16 overhead =
+  275 B) · max-sum 363 B (+16 = 379 B)` for the termbase), and the honesty check
+  `covers the population's widest actual line (272 B): yes`. Its arithmetic is pinned on a synthetic table
+  whose budget is known by construction: `--self-test` → `probes: 7 pass / 0 fail`, `exit=0`. The registry row
+  now reads health `275` / ceiling `440` with the derivation, the instrument and the measured widest line in
+  its `notes` column, and the check reports the change: `WARNING book_collection: widest line 272 B = 99% of
+  its 275 B target`. The ceiling rise is authorised by
+  `docs/decisions/decision_maxline-health-derived-from-the-cell-budget.md` (indexed, `answers:` line), which
+  also records the two rejected alternatives with their arithmetic — raising health to `379` to silence the
+  warning, and the split row — so neither is re-litigated by a reader who has not measured them.
+- [x] **NO REGRESSION** — `bash scripts/check_live_doc_size.sh --self-test` → `live-doc-size --self-test: 11
+  arms, 0 failed`; `bash docs/tasks/artifacts/live_doc_size/run_live_doc_size_probes.sh` →
+  `probes: 4 pass / 0 fail`; `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces,
+  15 routes, 80 files measured, 32 warning(s)`, `exit=0`, with no breach and the registry still parsing at
+  `21` fields per row; `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `make probes: 12 suite(s) green`, `exit=0`; the book's own censuses are untouched and green (glossary
+  `276 terms / 0 failure(s)`, matrix `105 rows / 0 failure(s)`, fixture `0 mismatch(es)`). No Rust changed;
+  the one staged `.sh` is a new measurement tool, so this checklist is the evidence the code-path seam asks
+  for.
+- [x] **FIX** — wrote the cell-budget census (a portable file list rather than `mapfile`, because macOS ships
+  bash 3.2; cells split honouring code spans and escaped pipes exactly as `check_table_arity.sh` splits them,
+  so the two instruments agree about where a cell ends); edited the two numbers and the `notes` column of one
+  registry row; wrote the decision record; added the `TOOLBOX.md` row; and performed the evidence split D42
+  assigned to this leaf — `17` completed checklists moved byte-identically out of `docs/tasks/SPINE.md`
+  (`1096` lines / `88 341` B → `552` lines / `42 028` B, inside its `800` / `65 536` health) into
+  `docs/tasks/SPINE-evidence.md`, under the convention `G0-CONTRACT.4b` recorded.
+- [x] **`.doctrine/` changed, so the exceptional push is owed and the verdict is recorded, not assumed** —
+  `make push-due` names the trigger set this commit touches, the push happens immediately after the commit,
+  and the observed CI verdict is written into this leaf's Verification Log row in the commit that follows,
+  which is the shape `G0-CONTRACT.18`'s first wasm-smoketest push established.
+- [x] **The changelog rollover this slice's append triggered is performed here, and it exposed a trap worth
+  more than the rollover (defect D43).** The live window had crossed its byte health (`376` lines /
+  `33 364` B against `400` / `32 768`), so slices 32–33 are sealed into
+  `docs/history/stitchcad-changelog-part6.md` (`93` lines / `8 284` B / `sha256:3148dd0fb5f63088…`), proved
+  byte-identical to `git show HEAD:CHANGELOG.md` rather than to memory, and the window is back inside health
+  at `283` lines / `25 246` B. The first digest it declared did not reproduce, and the cause was one newline:
+  the sealed content ended with a blank line, which `content=$(sed …)` cannot represent because bash strips
+  trailing newlines — so the verifier reported what looks like drift in an immutable archive. Fixed by
+  normalizing the segment, recomputing its descriptor by the verifier's own method, teaching `DESCRIPTOR` to
+  refuse a trailing blank line BY NAME, writing the byte contract into the probe's header, and pinning it with
+  a `TRAILING-BLANK` arm: `run_changelog_ledger_probes.sh` → `probes: 9 pass / 0 fail`, `exit=0`.
+- [x] **LOCKSTEP** — D42 closed and D43 logged-and-fixed in `docs/tasks/PLANNING.md`; D38's entry gains the
+  second measurement of a hand-kept count being wrong by one (`40` written where `41` ids exist), which is the
+  argument for the instrument `PLANNING.5` owes; `TOOLBOX.md` gains the census row;
+  `docs/decisions/INDEX.md` carries the record and the Knowledge Map was regenerated (`make gate` refused
+  until it was); `docs/TASK_TREE.md`'s frontier cells and execution-order line, `LIVE_STATUS.md`,
+  `MEMORY.md` and `CHANGELOG.md` (including the rollover) updated in this commit. Lesson promotion:
+  **promoted** — the new record carries an `answers:` line.

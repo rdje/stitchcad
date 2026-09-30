@@ -70,11 +70,15 @@ All ten roadmap lanes are now owned. That claim is **derived, not asserted**:
 
 ```bash
 bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh
-# → census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)
+# → census: 10 lanes / 13 trees / 2 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)
+bash docs/tasks/artifacts/planning/run_tree_coverage_probes.sh
+# → probes: 7 pass / 0 fail   (the census is watched, because a census no gate runs can go red unnoticed — D44)
 ```
 
 The census checks both directions — every §11 lane has a tree whose metadata names it, and every tree
-on disk is registered here with a declared lane — plus the advisory clause-versus-leaf table. In that
+on disk is registered here with a declared lane — plus the advisory clause-versus-leaf table. A file under
+`docs/tasks/` that is not a tree (no `- Tree ID:` line) must be linked from one: that is how the evidence
+siblings the containment registry prescribes are distinguished from strays. In the advisory
 table, more clause rows than roadmap clauses is expected (a tree may split one clause into several
 leaves, as `G5-SHELLS` does with the "full UX spec" list); fewer rows than clauses is the alarm.
 

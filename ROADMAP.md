@@ -1,4 +1,4 @@
-# StitchCAD — Roadmap v0.2 (functionality-first, deadline-free)
+# StitchCAD — Roadmap v0.3 (functionality-first, deadline-free)
 
 > Status: REVISED after peer review (GPT/Codex, Gemini, Grok — 2026-09-27).
 > Revision policy: this is a LIVING document. Additional reviews produce
@@ -8,7 +8,10 @@
 > Version history is preserved in git; earlier revisions remain available.
 > The roadmap remains DRAFT until the G0 exit criteria are met.
 > v0.1 was directionally validated by all three reviewers; v0.2 integrates
-> their findings. Changes are marked conceptually via the Disposition Log
+> their findings. v0.3 amends one gate exit (§11 G3) on the engineer's proposal
+> under the director's delegation, closing defect D32 — envelope garments no
+> exit criterion proved; it is logged in Appendix A with its source. Changes are
+> marked conceptually via the Disposition Log
 > in the Appendix; no timestamps or deadlines exist anywhere in this
 > document — gates are functionality-defined only.
 >
@@ -706,9 +709,17 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
   re-imported into an independent engine; extreme sizes reconstructed and
   measured; grading modes (base+rules / embedded / all-contours) validated
   separately; offset + grading golden suites green.
-- Intermediate complexity note: skirt → bodice+sleeve is a domain jump
-  (armscye, cap ease, balance notches); a shirt/trousers intermediate may
-  be inserted without shame — gates slip on domain evidence, not on engineering.
+- **Exit (envelope coverage):** every garment §3.2 names drafts, grades and
+  exports at this gate or an earlier one — the A-line skirt at G2; the darted
+  bodice and set-in sleeve above; a classic collar with a stand, a fall and a
+  roll line; trousers carrying at least one pocket and one closure whose
+  buttonhole length is derived from its button. A garment the envelope names
+  and no exit criterion proves is a gate failure, not a scope note.
+- Domain-complexity note: skirt → bodice+sleeve is a domain jump (armscye,
+  cap ease, balance notches) and trousers are a second (crotch curve, inseam,
+  waistband); an intermediate garment may be inserted where the domain evidence
+  calls for one — gates slip on domain evidence, not on engineering — but an
+  intermediate is a means, never a substitute for the coverage criterion.
 
 ### G4 — Profiles & uncertainty workflow
 - **Exit:** typed constraint AST + CSP solving with explained unsat mapped
@@ -912,8 +923,25 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
 - Full formula-language spec content: deferred to G0 execution (ADR-0003
   names its scope now).
 
+**Amended after review (v0.3), with source:**
+- §11 G3 gains an **envelope coverage** exit criterion, and its "intermediate
+  complexity note" becomes a domain-complexity note that cannot substitute for
+  one. Source: the engineer's proposal under the director's delegation to decide
+  and act on the findings surfaced at G0, closing defect **D32** — roadmap §3.2
+  puts a classic collar and trousers inside the v1 envelope and the ontology
+  models button/buttonhole and pocket objects, yet no gate's exit criteria proved
+  any of them, so G7's supported-envelope statement would have had to declare
+  four of the envelope's own garments untested. The proposal was prepared with
+  its exact current-and-amended text in
+  `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md` and
+  the criterion is written over §3.2's whole garment list, so a future envelope
+  addition inherits a proof requirement instead of needing its own amendment.
+  No locked decision in §15 is reopened: the envelope was already declared, and
+  this names the gate that proves it. The feature matrix's four `(proposed)`
+  cells become committed gates on this revision.
+
 ---
 
-*End of roadmap v0.2. Functionality is paramount; gates exist to protect it.
+*End of roadmap v0.3. Functionality is paramount; gates exist to protect it.
 "Implementing an exporter" and "proving its compatibility" are different
 achievements — this document tracks the second.*

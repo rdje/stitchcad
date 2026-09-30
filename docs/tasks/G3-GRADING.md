@@ -42,6 +42,7 @@ interchange that an independent engine can re-import, extreme sizes included.
 | extreme sizes reconstructed and measured | `.9` |
 | grading modes (base+rules / embedded / all-contours) validated separately | `.10` |
 | offset + grading golden suites green | `.12` |
+| **envelope coverage** — every §3.2 garment drafts, grades and exports (roadmap v0.3) | `.4` (bodice, sleeve), `.5` (trousers + pocket + derived buttonhole), `.15` (classic collar) |
 
 ## Task Tree
 
@@ -91,12 +92,34 @@ interchange that an independent engine can re-import, extreme sizes included.
   Commit: `pending`
 
 - ID: `G3-GRADING.5`
-  Status: `pending`
-  Goal: the optional intermediate garment (roadmap G3 note: a shirt or trousers may be inserted
-  "without shame") if the skirt→bodice+sleeve jump shows the recipe language or the ontology is
-  missing something.
-  Acceptance: either the leaf is closed with the evidence that no intermediate was needed, or the
-  intermediate garment is drafted and the ontology gaps it exposed are fixed and recorded.
+  Status: `pending` (**required**, not optional, since roadmap v0.3 — the envelope-coverage exit criterion
+  names trousers, so this leaf is a gate clause and not a discretionary intermediate)
+  Goal: the **trousers** garment the envelope-coverage criterion requires (roadmap §11 G3, §3.2): drafted
+  through the recipe, graded, and exported — carrying at least one **pocket** (position, orientation, opening
+  type and piece composition per ontology §4.7) and at least one closure whose **buttonhole length is derived
+  from its button** (ontology §4.7), so the two envelope features the matrix assigns to this gate are proved
+  by a garment rather than by a unit test. A shirt may be substituted for the upper body if the domain
+  evidence calls for it; the trousers may not be dropped, because §3.2 names them.
+  Acceptance: the crotch curve, inseam and waistband draft deterministically and grade without artifact;
+  the pocket's pieces are composed by the recipe and appear in the piece list with their own labels; the
+  buttonhole's length is computed from its button and never entered twice (a mutation test asserts that
+  editing the button changes the hole); the feature matrix's `trousers`, `pocket` and `button and buttonhole`
+  rows cite this leaf's evidence at the G3 exit review (`.14`); any ontology gap the garment exposes is fixed
+  and recorded, which was the old discretionary form of this leaf and remains part of it.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G3-GRADING.15`
+  Status: `pending` (created by the roadmap v0.3 envelope-coverage amendment, which named the classic collar
+  an exit criterion; defect **D32** is what left it unproved until then)
+  Goal: the **classic collar** — a stand, a fall and a roll line — attached to the `.4` bodice's neckline,
+  drafted through the recipe, graded, and exported, so the envelope's fourth garment is proved by the gate
+  that owns construction.
+  Acceptance: the roll line is an internal construction line and never exports as a cut line (the ⚠ hazard
+  the glossary marks); the collar's inner and outer edges differ by the declared roll, and the difference is
+  a recipe quantity rather than a fudge; the stand's height and the fall's depth are graded, not fixed;
+  walking the collar-to-neckline span reports a differential inside the declared ease; the feature matrix's
+  `classic collar` row cites this leaf's evidence at `.14`.
   Verification: `pending`
   Commit: `pending`
 
@@ -178,9 +201,11 @@ interchange that an independent engine can re-import, extreme sizes included.
 
 - ID: `G3-GRADING.14`
   Status: `pending`
-  Goal: G3 exit review — every clause cited against evidence, the equivalence bounds published, the
-  frontier handed to `G4-PROFILES`.
-  Acceptance: each clause `met` with a re-runnable check or `not met` with a named blocker.
+  Goal: G3 exit review — every clause cited against evidence, **including the envelope-coverage criterion**
+  (each §3.2 garment named with the leaf that drafted, graded and exported it), the equivalence bounds
+  published, the frontier handed to `G4-PROFILES`.
+  Acceptance: each clause `met` with a re-runnable check or `not met` with a named blocker; a §3.2 garment
+  with no leaf's evidence behind it fails the review, because that is exactly the gap roadmap v0.3 closed.
   Verification: `pending`
   Commit: `pending`
 
@@ -191,6 +216,16 @@ interchange that an independent engine can re-import, extreme sizes included.
 | — | `G3-GRADING.1` | `pending` | gated on `G2-2D` |
 
 ## Decisions
+
+- `2026-09-30`: **roadmap v0.3 turned `.5` from discretionary into a gate clause and added `.15`.** The
+  amendment's source is defect D32 — §3.2 had promised a classic collar and trousers, and the ontology had
+  modelled buttons and pockets, while no gate's exit criteria proved any of them, so G7's supported-envelope
+  statement would have had to declare four of the envelope's own garments untested. `.5`'s old form ("an
+  intermediate may be inserted without shame") was permission, and permission proves nothing at a gate
+  review; the criterion is now written over §3.2's whole garment list, so a future envelope addition
+  inherits a proof requirement instead of needing its own amendment. Recorded in
+  `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`, applied to the roadmap in its
+  Appendix A disposition log.
 
 - `2026-09-29`: `.5` (the intermediate garment) is a real leaf with a real closure condition, not a
   contingency note — the roadmap explicitly permits it, and permission that is not tracked is
@@ -217,6 +252,54 @@ interchange that an independent engine can re-import, extreme sizes included.
 Filled per leaf, in a `### <leaf-id>` subsection added by the same commit as the work, and
 mechanically required to be fresh in that commit by leaf `SPINE.8`; a tree file carries no unticked
 placeholder boxes (defect D15, measured by the `SPINE.7` probe).
+
+## Acceptance Checklist
+
+### `G3-GRADING.5` / `.15` — the envelope-coverage criterion arrives as leaves, not as prose
+
+This tree had no completed leaf, so it carried no acceptance boxes — and a staged `docs/tasks/*.md` file with
+no ticked box is refused by `scripts/check_task_acceptance.sh` whenever the same commit stages code. These boxes
+are the evidence for the change roadmap v0.3 made to this tree, added in the commit that made it.
+
+- [x] **REPRODUCE / ISSUE** — before roadmap v0.3 this tree owned no envelope garment beyond the bodice and the
+  sleeve: `grep -ci 'collar\|trousers\|pocket\|button' docs/tasks/G3-GRADING.md` over the committed file
+  matched only `.5`'s *optional* intermediate ("a shirt or trousers may be inserted") —
+  `git show HEAD:docs/tasks/G3-GRADING.md | grep -ci 'collar\|trousers\|pocket\|buttonhole'` → `1`, `rc=0`,
+  against `15` leaf declarations in the same revision — while
+  `docs/book/src/spec/feature-matrix.md` had four rows whose proof no gate accepted (defect D32).
+- [x] **ROOT CAUSE (WHY + WHERE)** — the tree was seeded from G3's exit criteria clause by clause
+  (`PLANNING.1`–`.3`), and those clauses named a bodice and a set-in sleeve; §3.2's envelope named two more
+  garments and two more features that no clause carried, and the count is re-derivable rather than recalled:
+  `git show HEAD:ROADMAP.md | sed -n '/^### G3 /,/^### G4 /p' | grep -ci 'collar\|trousers\|button\|pocket'`
+  → `1`, `rc=0`, that one hit being the note that *permitted* an intermediate. A tree seeded from a gate
+  inherits that gate's gaps exactly, which is why the amendment had to change the gate before it could change
+  the tree.
+- [x] **ADDRESSED (verified)** — `.5` is now **required** and named the envelope's trousers, carrying the two
+  features the matrix assigns to this gate: at least one pocket (position, orientation, opening type, piece
+  composition per ontology §4.7) and at least one closure whose buttonhole length is derived from its button,
+  with a mutation test asserting that editing the button changes the hole. `.15` is created for the classic
+  collar — stand, fall and roll line, the roll exported as an internal construction line and never as a cut
+  line. `.14`'s exit review now cites the coverage clause and fails if a §3.2 garment has no leaf's evidence.
+  The tree's acceptance-criteria table gained the clause row, and the capture census still derives:
+  `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
+  `census: 10 lanes / 13 trees / 2 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`; its
+  advisory clause-versus-leaf table shows this tree at `9` clause rows and `15` leaves against G3's `12`
+  semicolon-split roadmap clauses (`bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh |
+  sed -n '/=== 4./,$p'`), which is the expected direction — a tree may split one clause into several leaves.
+- [x] **NO REGRESSION** — no leaf in this tree changed status (all remain `pending`, gated on `G2-2D`), so no
+  commitment moved earlier and nothing was claimed done; the frontier row is unchanged; `make gate` →
+  `=== all doctrines green ===`, `exit=0`, with the `TABLE-ARITY-RATCHET` accepting the new acceptance-criteria
+  row; `bash scripts/check_live_doc_size.sh` → `OK`, `exit=0`, this file at `314` lines / `17 855` B against a
+  `tasks_collection` per-part health of `800` / `65 536`.
+- [x] **FIX** — rewrote `.5` from a discretionary intermediate into a gate clause with the two features it must
+  carry and the substitution it may not make (a shirt may replace the upper body; the trousers may not be
+  dropped, because §3.2 names them); added `.15`; extended `.14`'s goal and acceptance; added the clause row to
+  the acceptance table and a Decisions entry recording that the change came from roadmap v0.3 and why
+  permission is not a criterion.
+- [x] **LOCKSTEP** — the matrix's four cells cite this tree's leaves (`G3-GRADING.5`, `.15`) and no longer say
+  `(proposed)`; `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md` is marked applied;
+  `ROADMAP.md` v0.3 carries the criterion and its Appendix A disposition entry; `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` and `docs/TASK_TREE.md` updated in the same commit.
 
 ## Verification Log
 

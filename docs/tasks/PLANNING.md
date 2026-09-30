@@ -111,16 +111,34 @@ Two invariants, both directions:
   Verification: `pending`
   Commit: `pending`
 
+- ID: `PLANNING.6`
+  Status: `done` (created by the slice that applied roadmap v0.3, which found the capture census red and
+  unwatched — defect **D44**)
+  Goal: close defect **D44** — make the tree-coverage census recognise what a tree IS, and put it under
+  `make probes` so its green is re-derived instead of remembered. It enumerated every `docs/tasks/*.md` as a
+  tree, so the evidence siblings the containment registry prescribes were reported as lane-less orphans, and
+  nothing noticed for two committed slices because no gate and no probe suite ran it.
+  Acceptance: a tree is recognised structurally (it declares `- Tree ID:`), not by filename; a non-tree file
+  must be linked from a tree or it is refused as a stray; population 1 finds a lane's tree by the same rule
+  rather than by alphabetical order; the summary reports siblings separately; a probe suite runs under `make
+  probes` with a RED arm per refusal class; the census is green on the real tree.
+  Verification: recorded below and in the acceptance checklist — `census: 10 lanes / 13 trees / 2 sibling(s) /
+  0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`, and `probes: 7 pass / 0 fail`.
+  Commit: `STITCHCAD-G0-0004c`
+
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
 | — | `.1`–`.4` | `done` | the roadmap is captured, the capture is derived, and the sequencing rule that keeps the frontier on the product is recorded |
 | — | `PLANNING.5` | `pending` | derive the index↔tree frontier agreement (D34, recurred `2026-09-30`) and the census's open/closed counts (D38). Deferred behind `G0-CONTRACT` by the frontier rule: a stale index misdirects a resuming session but destroys no work |
+| — | `PLANNING.6` | `done` | D44 closed: the coverage census recognises a tree structurally and is watched by its own probe suite under `make probes` |
 
 `PLANNING.1`–`.4` are done. The capture claim is derived, not asserted:
 `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
-`census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`.
+`census: 10 lanes / 13 trees / 2 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`, and its probe suite
+`run_tree_coverage_probes.sh` → `probes: 7 pass / 0 fail` (added when D44 showed a census no gate runs can go
+red unnoticed).
 **The frontier now belongs to `G0-CONTRACT`** — product specification, then the first product code at
 `G0-CONTRACT.18`. Per `docs/decisions/decision_product-work-takes-the-frontier.md`, no further spine or
 governance slice is taken unless it blocks product work, a defect is live, or the director asks.
@@ -703,6 +721,63 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     mismatch; the byte contract is written into the probe's header; and a `TRAILING-BLANK` arm pins the named
     refusal → `probes: 9 pass / 0 fail`).
 
+- **D44** — the tree-coverage census enumerated every `docs/tasks/*.md` as a TREE, so the evidence siblings
+  the containment registry prescribes (`G0-CONTRACT-evidence.md`, `SPINE-evidence.md`) were reported as two
+  lane-less orphans and one lane looked unowned — and nothing noticed, because no gate and no probe suite ran
+  that census.
+  - Reproduce: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` at `SPINE.4.4` →
+    `census: 10 lanes / 15 trees / 1 unowned / 4 orphan(s) / 0 dead link(s)`, `exit=1`, with
+    `G0    G0-CONTRACT-evidence   NO — the tree does not name its lane` (population 1 picked the sibling
+    because `X-evidence.md` sorts before `X.md`) and `G0-CONTRACT-evidence NO  NO LANE DECLARED` twice more in
+    population 2. Two commits — `G0-CONTRACT.4b` and `SPINE.4.4` — shipped with that census red.
+  - Impact: two defects in one. The census was wrong (a sibling is not an orphan), and the wrongness was
+    invisible because a census whose green nobody re-derives is a claim, not an instrument: `make probes`
+    globs `run_*probe*.sh`, so a file named `*_census.sh` is watched by nothing. Every other census in this
+    repository has a probe suite; this one did not, and the difference is exactly the two commits it took to
+    find out.
+  - Owner: the slice applying roadmap v0.3 (**fixed**) — a tree is now recognised STRUCTURALLY by its
+    `- Tree ID:` line rather than by its filename, a non-tree file must be linked from a tree or it is
+    refused as a stray, the summary reports siblings separately
+    (`10 lanes / 13 trees / 2 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`), and
+    `run_tree_coverage_probes.sh` puts the census under `make probes` with seven arms — REAL, an unlinked
+    sibling, a stray file, a lane with no tree, a tree with no lane, a dead index link and a missing roadmap
+    → `probes: 7 pass / 0 fail`.
+
+- **D45** — the standards census's S4 rule tested for a citation **anywhere in the registry row**, so an owner
+  cell that happened to carry a cross-reference satisfied it: a `read-in-repo` claim with no clause behind it
+  would have passed, which is a green verdict on the one status that permits quoting a document.
+  - Reproduce: before the fix, `grep -n 'line !~ /§|clause/' docs/tasks/artifacts/standards/run_standards_census.sh`
+    → the test ran over the whole matched line; set any row's status to `read-in-repo` and put a section sign in
+    its OWNER cell, and S4 reported nothing. Found because rewording the ISO 8559 owner cell to
+    `the domain expert — seat vacant (governance §8.1)` made the `BARE-READ` probe arm stop firing —
+    `probes: 4 pass / 2 fail` — i.e. the arm broke honestly and named the weakness instead of hiding it.
+  - Impact: S4 is the only rule standing between "we read the standard" and "we would like to quote the
+    standard", and `standards.md` §1 makes `read-in-repo` the sole status that permits a clause number, a table
+    or a quoted definition anywhere in the book. A rule that can be satisfied by an adjacent cell is the
+    vacuous-green class this repository has now measured four times (the glossary's R1, the matrix's two
+    mis-anchored arms, the coverage census's advisory).
+  - Owner: the slice applying roadmap v0.3 (**fixed** — S4 reads the STATUS and ROLE cells only, its refusal
+    names them, and `BARE-READ` now pins the scoping because the row it mutates carries a section sign in its
+    owner cell → `probes: 6 pass / 0 fail`). The `NO-OWNER` arm was re-anchored on the row rather than on the
+    owner's wording at the same time: an arm whose pattern silently matches nothing reports a failure whose
+    message blames the tree.
+
+- **D46** — the defect census below is now this tree's dominant mass, so splitting off the completed-leaf
+  checklists did not bring the file inside its health target: `wc -lc docs/tasks/PLANNING.md` → `944 75497`
+  against a `tasks_collection` per-part health of `800` lines / `65 536` B, and the census section alone is
+  ~620 of those lines (`sed -n '/^## Defects found/,/^## Decisions/p' docs/tasks/PLANNING.md | grep -c .`).
+  - Reproduce: the two commands above; the ceiling is `1200` / `98 304`, so this is pressure and not yet a
+    breach, and every closed defect adds to it permanently.
+  - Impact: the same shape the changelog had before `SPINE.14` made it a rolling ledger — a live section that
+    grows with history until a slice gets blocked by it and splits under pressure. Closed defects are exactly
+    the content an archive terminal is for: they are cited by id, they are immutable once fixed, and a reader
+    needs the OPEN set to know what to do next.
+  - Owner: `SPINE.19`, whose goal is extended to a third ledger — sealing closed defects into
+    `docs/history/stitchcad-defects-part1.md` under the same descriptor contract, with the live section
+    keeping the open ones and a pointer, and `COVERAGE`/`POINTER` derived from a segment registry rather than
+    hardcoded to the changelog (which is D40). Deferred behind product work by the frontier rule; the file is
+    inside every ceiling today.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a
@@ -738,6 +813,55 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
 
 ## Acceptance Checklist
 
+### `PLANNING.6` — a census nobody runs is a claim, and this one had gone red unnoticed
+
+- [x] **REPRODUCE / ISSUE** — `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` at `SPINE.4.4`
+  → `census: 10 lanes / 15 trees / 1 unowned / 4 orphan(s) / 0 dead link(s)`, `exit=1`, printing
+  `G0    G0-CONTRACT-evidence   NO — the tree does not name its lane` and two `NO LANE DECLARED` orphans. Two
+  commits — `G0-CONTRACT.4b` and `SPINE.4.4` — had already shipped with it red.
+- [x] **ROOT CAUSE (WHY + WHERE)** — two causes, and the second is why the first survived two commits.
+  (1) The census defined a tree by *filename*: population 2 walked `"$TASKS"/*.md` and counted each file, and
+  population 1 found a lane's tree with `ls "$TASKS"/${lane}-*.md | head -1`, which sorts `X-evidence.md`
+  before `X.md` — so the evidence split the containment registry prescribes looked like two lane-less trees and
+  one stolen lane. (2) Nothing ran it: `make probes` globs `run_*probe*.sh` and the file is named
+  `run_tree_coverage_census.sh`, and no doctrine check calls it, so
+  `git ls-tree -r --name-only HEAD docs/tasks/artifacts | grep -c 'run_.*probe.*\.sh'` → `12` at the revision
+  this was measured at, `rc=0`, and none of the twelve was this census; `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` at the
+  measurement → `census: 10 lanes / 15 trees / 1 unowned / 4 orphan(s) / 0 dead link(s)`, `exit=1`.
+  Every other census here has a probe suite; the difference is exactly how long this one stayed wrong.
+  A **third instance** of the same filename rule sat in the advisory table and no exit code could reveal it:
+  `ls ${lane}-*.md | head -1` there too, so the advisory printed `G0-CONTRACT-evidence  0  0  12` and the real
+  `G0-CONTRACT` tree was absent from its own coverage report. Only reading the output found it — after the
+  fix it reads `G0-CONTRACT  19  23  12`. An advisory with no failure mode still has to be *looked at*, which
+  is an argument for printing them in the commit that changes them.
+- [x] **ADDRESSED (verified)** — a tree is now recognised **structurally**, by its `- Tree ID:` line, in both
+  populations; a non-tree file must be linked from a tree (`](<file>.md)`) or it is refused as a stray; and the
+  summary separates the two so a sibling is never counted as a tree:
+  `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
+  `census: 10 lanes / 13 trees / 2 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`, with
+  `G0-CONTRACT-evidence  sibling  evidence of G0-CONTRACT` and `SPINE-evidence  sibling  evidence of SPINE`
+  printed as what they are. The census is watched now:
+  `bash docs/tasks/artifacts/planning/run_tree_coverage_probes.sh` → `probes: 7 pass / 0 fail`, `exit=0`, and
+  `make probes` → `13 suite(s) green` (twelve before). Each refusal class has an arm that removes the property
+  rather than one instance of it: an unlinked sibling, a stray file, a lane with no tree, a tree with no lane,
+  a dead index link, an absent roadmap.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; the census's other claims are
+  unchanged (`10` lanes, `0 dead link(s)`, the advisory clause table still printed); the two live citations of
+  its summary line are updated rather than left stale (`docs/TASK_TREE.md` and this tree's frontier), while the
+  four historical citations in closed leaves keep the output they really produced; `TOOLBOX.md` gains both
+  rows. No Rust changed; the staged `.sh` files are the census, its new suite and the containment check, all
+  owned by leaves staged in the same commit.
+- [x] **FIX** — the structural tree rule in both populations **and in the advisory loop** (three copies of one
+  filename assumption), the sibling/stray distinction with the link it
+  requires, the summary's sibling count, the header's WHAT-IT-CHECKS list, a `TREE_COVERAGE_ROOT` override so
+  the census can be pointed at a synthetic root (the seam every other census already had), and the seven-arm
+  probe suite.
+- [x] **LOCKSTEP** — D44 logged and closed in the census below; `docs/TASK_TREE.md` cites the probe suite
+  beside the census; `TOOLBOX.md`, `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md` and `DEV_NOTES.md` updated in
+  the commit that lands this leaf. Lesson promotion: declined (the rule — a census is an instrument only if
+  something runs it — is already TOOLBOX's probe convention, which CLAUDE.md step 3 sends every agent to; the
+  instance is recorded here and in D44 rather than duplicated in layer C).
+
 This tree lands documentation only (task-trees, index, live docs); it stages no Rust source,
 build file or script, so the code-change gate has no subject here. Evidence is recorded
 anyway, because the claims this leaf makes are census claims and a census is re-runnable.
@@ -764,90 +888,11 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 - [x] **LOCKSTEP** — index, live status, layer-A pointer, changelog and the derived
   Knowledge Map all updated in this same commit.
 
-### `PLANNING.2` — the engine-stage lanes (`G1-SLICE`, `G2-2D`, `G3-GRADING`, `G4-PROFILES`)
-
-- [x] **ROOT CAUSE (WHY + WHERE)** — after `PLANNING.1` only the G0 lane and the spine lane
-  existed, so the roadmap's engine gates had no owner: `ls docs/tasks/*.md` →
-  `BOOTSTRAP.md G0-CONTRACT.md PLANNING.md SPINE.md TEMPLATE.md` (5 files, 4 trees), while
-  `grep -c '^### G[1-7] ' ROADMAP.md` → `7` gates and `grep -c '^### V[12] ' ROADMAP.md` → `2`
-  parallel tracks are declared in §11.
-- [x] **ADDRESSED (verified)** — leaf declarations, `grep -c '^- ID: ' docs/tasks/<tree>.md` →
-  `G1-SLICE 17`, `G2-2D 15`, `G3-GRADING 15`, `G4-PROFILES 15` (each count = the tree node plus its
-  leaves, i.e. 16 + 14 + 14 + 14 = **58 leaves**). Clause→leaf rows per gate table,
-  `awk '/^## Acceptance Criteria/{s=1;next} /^## /{s=0} s&&/^\|/{print}' docs/tasks/<tree>.md | grep -cE '\|[^|]*\.[0-9]+[^|]*\|[[:space:]]*$'`
-  → `G1 7`, `G2 8`, `G3 8`, `G4 9`, against roadmap §11's own exit-clause counts for those gates
-  (7 / 8 / 8 / 8 — G4's first clause spans two rows, `.2`+`.3` and `.4`), so no clause is unowned.
-  The same census found three G0 clauses with no leaf (§4.3 CI shape, §4.4 undo/redo defined at G0,
-  §7.6 one message system chosen at G0); they are now `G0-CONTRACT.16`/`.17`/`.18`, whose clause
-  table carries 19 rows for 18 leaves (`.14` owns both the governance and the procurement clause).
-- [x] **NO REGRESSION** — `scripts/check_doctrines.sh` → `=== doctrine enforcement (13 checks) ===`,
-  `=== all doctrines green ===`, `rc=0`; `make check` → `test result: ok. 1 passed; 0 failed`;
-  the index↔disk census reports no dead link and no unregistered tree.
-- [x] **FIX** — added the four tree files; extended `G0-CONTRACT` by three leaves and corrected
-  its "no code in G0" reading; added `SPINE.7`/`SPINE.8` to own defect D15; registered all four
-  trees in `docs/TASK_TREE.md`.
-- [x] **LOCKSTEP** — index, `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and the derived
-  Knowledge Map updated in the same commit.
-
-### `PLANNING.3` — the remaining five lanes, and a census that makes the claim re-derivable
-
-- [x] **ROOT CAUSE (WHY + WHERE)** — five of the roadmap's ten lanes had no tree, so their exit
-  criteria were owned only by a promise in a seeding leaf. Re-derivable against the commit before this
-  one: `git ls-tree --name-only HEAD docs/tasks/ | grep -cE '/(G5|G6|G7|V1|V2)-'` → `0`, `rc=1`
-  (no match), while `grep -cE '^### (G[0-7]|V[12]) ' ROADMAP.md` → `10`, `rc=0`; and the loop form
-  `for g in G5 G6 G7 V1 V2; do ls docs/tasks/${g}* >/dev/null 2>&1 || echo "$g unowned"; done`
-  printed `5` `unowned` lines.
-- [x] **ADDRESSED (verified)** — `G5-SHELLS` (14 leaves), `G6-CONFORMANCE` (10), `G7-RELEASE` (7),
-  `V1-ASSEMBLY` (7) and `V2-SIM` (6) now exist, each citing its §11 lane in its metadata and mapping
-  every exit clause to a named leaf in a clause→leaf table. The capture is proved by a new census
-  rather than asserted: `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
-  `census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`, checking both
-  directions (lane→tree, and tree→index+declared lane) plus dead index links. Leaves across all trees:
-  `142`. The RED state was observed, not assumed: before the index rows landed, the same census printed
-  `5 orphan(s)` and exited `1`.
-- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make check` →
-  `test result: ok. 1 passed; 0 failed`; `make probes` → `7 suite(s) green`;
-  `bash -n docs/tasks/artifacts/planning/run_tree_coverage_census.sh` → `exit=0`.
-  This commit was **refused twice first, both refusals correct**: the inherited `TASK-ACCEPTANCE`
-  judged all six staged leaf files (D15 facet 3) because five brand-new trees were co-staged with a
-  `.sh` file — the exact case the layer-C record's rule 6 forbids — so the slice was split into a
-  doc-only commit for the trees and this one for the census tool and its owning leaf; and this leaf's
-  own `FRESH-ACCEPTANCE-EVIDENCE` check then refused the ROOT CAUSE box for citing commands with no
-  result token (`exit=1`), the third time that rule caught its author.
-- [x] **FIX** — added the five tree files; wrote the census tool (bash 3.2 compatible — no `mapfile`,
-  because the spine must run on whatever bash a platform ships); registered all five in
-  `docs/TASK_TREE.md` with the derived-census command and the corrected execution order; added
-  `PLANNING.4` to own the D24 sequencing rule.
-- [x] **LOCKSTEP** — index, `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and the derived Knowledge Map
-  updated in this commit. The census is deliberately **advisory** on clause counts and says so in its
-  header: more clause rows than roadmap clauses is expected (a tree may split one clause into several
-  leaves, as `G5-SHELLS` does with the "full UX spec" list); fewer rows than clauses is the alarm. A
-  classifier that guessed at prose meaning would be worse than the side-by-side.
-
-### `PLANNING.4` — the sequencing rule, so the drift is a decision a future session reads
-
-- [x] **ROOT CAUSE (WHY + WHERE)** — the frontier drifted off the product and nothing in the spine
-  noticed: `git log --oneline | grep -cE 'leaf (SPINE|PLANNING|BOOTSTRAP)'` → `20` governance slices
-  against `git log --oneline | grep -cE 'leaf (G[0-7]|V[12])'` → `0` product slices, `rc=0` for both;
-  `ls docs/book/src/spec/` → `index.md` alone and `git ls-files 'crates/*'` → the bedrock starter crate,
-  `rc=0`. Each individual slice was defensible — every one closed a real defect with evidence — which
-  is exactly why the pattern needed a rule rather than more care.
-- [x] **ADDRESSED (verified)** — `docs/decisions/decision_product-work-takes-the-frontier.md` now
-  states the rule (product takes the frontier; spine work only when it blocks, when a defect is live,
-  or when the director asks), the symptom to watch (a run of commits none of which touches the
-  product), and the two-command census that measures it. It is indexed
-  (`grep -c product-work-takes-the-frontier docs/decisions/INDEX.md` → `1`, `rc=0`) and wired into the
-  bootstrap every agent reads (`grep -c product-work-takes-the-frontier CLAUDE.md` → `1`, `rc=0`), so
-  the next session inherits the priority instead of rediscovering the spine.
-- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make check` →
-  `test result: ok. 1 passed; 0 failed`; `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh`
-  → `census: 10 lanes / 13 trees / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`.
-- [x] **FIX** — added the decision record; wired it from `CLAUDE.md`'s non-negotiables and the layer-C
-  index; closed D24 in the defect census; set this tree's frontier to closed and moved the repository's
-  frontier to `G0-CONTRACT`.
-- [x] **LOCKSTEP** — D24 marked closed in the census below; `LIVE_STATUS.md`, `MEMORY.md`,
-  `CHANGELOG.md` and the derived Knowledge Map updated in this commit. This tree records no further
-  work: the roadmap→tree mapping is complete and derived.
+Completed leaves' checklists live in [`PLANNING-evidence.md`](PLANNING-evidence.md), split out at
+`PLANNING.6` under the containment registry's remedy for a tree past 1000 lines. The leaf being landed keeps
+its checklist here, because `scripts/check_task_acceptance.sh` judges every staged `docs/tasks/*.md` and
+refuses one with no ticked boxes; the next slice moves it across. Neither file carries an unticked
+placeholder box (defect D15).
 
 ## Verification Log
 

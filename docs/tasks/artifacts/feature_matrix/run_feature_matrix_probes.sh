@@ -137,15 +137,17 @@ else bad DEAD-LINK "a dead link in a normative chapter was accepted (exit=$rc)" 
 # ---------------------------------------------------------------- PROPOSAL-VISIBLE (A3 advisory)
 # A3 is an advisory, so no mutation can make the census FAIL on it — the arm asserts the count it prints
 # instead, because an advisory that reads nothing prints the same number either way (the vacuous-green
-# shape the glossary census shipped once as its R1 bug).
+# shape the glossary census shipped once as its R1 bug). Both directions are pinned: the real tree reports
+# ZERO proposed cells now that roadmap v0.3 carries the criterion, and injecting one marker into a copy must
+# be counted, so the advisory cannot pass by having nothing left to see.
 D="$WORK/proposal"; mkroot "$D"
 real_n="$(run "$ROOT" | sed -n 's/^  proposed cells: \([0-9]*\).*/\1/p')"
-sedfile "$D/$MATRIX_REL" 's/| G3 (proposed §11 amendment) |/| G3 |/'
+sedfile "$D/$MATRIX_REL" 's/| G3 | — |/| G3 (proposed §11 amendment) | — |/'
 out="$(run "$D")"; rc=$?
 mut_n="$(sed -n 's/^  proposed cells: \([0-9]*\).*/\1/p' <<<"$out")"
-if [ "${real_n:-0}" -ge 4 ] && [ "${mut_n:-99}" -lt "${real_n:-0}" ] && [ "$rc" -eq 0 ]; then
-  ok PROPOSAL-VISIBLE "A3 reads the cells: $real_n proposed on the real tree, $mut_n with the markers removed"
-else bad PROPOSAL-VISIBLE "A3 did not notice a removed proposal marker (real=$real_n mutated=$mut_n exit=$rc)" "$out"; fi
+if [ "${real_n:-x}" = "0" ] && [ "${mut_n:-0}" -ge 1 ] && [ "$rc" -eq 0 ]; then
+  ok PROPOSAL-VISIBLE "A3 reads the cells: 0 proposed on the real tree, $mut_n once a marker is injected"
+else bad PROPOSAL-VISIBLE "A3 did not count an injected proposal marker (real=$real_n mutated=$mut_n exit=$rc)" "$out"; fi
 
 # ---------------------------------------------------------------- MISSING
 D="$WORK/empty"; mkdir -p "$D"

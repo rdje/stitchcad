@@ -3,6 +3,31 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-09-30)_ — a rule whose only compliant path is "don't change the file" gets bypassed
+
+- Applying the roadmap amendment was blocked by the containment gate, and blocked *correctly*: the `roadmap`
+  row's transition debt was measured at exactly the file's size (`lines=919;bytes=50821` = `wc -lc`), so any
+  growth read as a widened baseline. The rule is right; what was missing was a legitimate path, and the only
+  one available was editing the number — the silent widening the rule exists to prevent. **When a gate's only
+  passing move is to falsify its own input, the gate is incomplete, not the change.** The fix was to give the
+  baseline a revision identity (`at=v0.3`) that the checker executes: a revision may re-base its baseline, but
+  only in the commit that revises, which is where the authority has to be anyway.
+- **An exit criterion must arrive with owners.** The same commit that gave G3 the envelope-coverage criterion
+  made `G3-GRADING.5` required, created `.15` and made `.14`'s review fail without a leaf's evidence — because
+  a roadmap clause no leaf owns is defect D32 one level up, and the tree was seeded from the gate's old text so
+  it inherited the gate's gap exactly.
+- **A census nobody runs is a claim, and this one had gone red for two committed slices.** The tree-coverage
+  census defined a tree by *filename*, so the evidence siblings the containment registry prescribes looked like
+  lane-less orphans — and `make probes` globs `run_*probe*.sh`, so nothing re-derived it. Three copies of the
+  same `ls ${lane}-*.md | head -1` assumption existed; the third was in an *advisory* table, where it silently
+  replaced `G0-CONTRACT` with its sibling and no exit code could reveal it. Reading a tool's output, not just
+  its status, is part of running it.
+- **Office can be held acting; competence cannot.** Two of the three empty governance seats are the director's
+  authority already, so acting costs nothing and adds a record. The third — the sewing/factory expert — is
+  knowledge nobody here has, so it is recorded as **vacant** with four explicit prohibitions, and the first G2
+  golden stays gated on a real name. The tempting move (let the engineer act as reviewer) satisfies the wording
+  of the two-step rule and destroys its meaning.
+
 ## _(2026-09-30)_ — a digest is a contract about BYTES, so the bytes have to be written down
 
 - Sealing the third changelog segment of the day produced a refusal that read as the worst thing an archive

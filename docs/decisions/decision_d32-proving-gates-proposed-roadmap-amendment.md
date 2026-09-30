@@ -2,8 +2,15 @@
 
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute)
-- **Status:** `active` — the record is active; the `ROADMAP.md` amendment it carries is **proposed**, not
-  applied, and does not become a commitment until the director rules on it
+- **Status:** `active` — **APPLIED to `ROADMAP.md` as revision v0.3** on `2026-09-30`. The amendment below
+  was first prepared as a *proposal* because the director's ruling of that date reserved amending the roadmap
+  to himself; he then delegated the three findings outright ("make the necessary calls and every needed
+  action"), so the proposal is ruled **approved** and applied through the roadmap's own revision policy —
+  its version marker, its Appendix A disposition log, and the containment baseline re-based in the same
+  commit (`decision_revision-aware-containment-baseline.md`).
+- **Owner / source:** leaf `G0-CONTRACT.4b` prepared it; the slice that applied it is recorded in the
+  roadmap's Appendix A entry and in `CHANGELOG.md`. Reservation 2 of
+  `decision_director-ruling-2026-09-30-four-findings.md` is superseded for this amendment only.
 - **Owner / source:** leaf `G0-CONTRACT.4b`, decided under the director's ruling of `2026-09-30`
   (`decision_director-ruling-2026-09-30-four-findings.md`, item D32). Reservation 2 of that ruling is why
   this is a proposal: **amending `ROADMAP.md` is the director's**, and its changes go through its own
@@ -100,6 +107,13 @@ tech-pack clause already requires notions (`ROADMAP.md:733`).
   matrix's rule 3 already has an honest home for a capability nobody has scheduled.
 
 ## What happens next
+
+**Done — the proposal was approved and applied.** The four matrix cells dropped `(proposed)` and are
+committed gates; `G3-GRADING.5` became a required leaf (trousers, with a pocket and a derived buttonhole)
+and `G3-GRADING.15` was created for the classic collar; `G3-GRADING.14`'s exit review now fails if a §3.2
+garment has no leaf's evidence behind it. The census's A3 advisory reports `0` proposed cells and stays in
+place for the next one. The steps below are the record of what was written before the ruling, kept because
+the rejection path is still the right answer if a future revision withdraws the criterion.
 
 1. `G0-CONTRACT.15` (the G0 exit review) puts this proposal to the director, with the four `(proposed)`
    cells listed, and records the ruling.

@@ -9,6 +9,10 @@
 #   REAL-2  ⭐ delete one row from a COPY of the real registry and the check must refuse that exact
 #           file as an unclassified live surface. Without this arm, "coverage" is a word: a check that
 #           only ever passes on the real tree has never been seen to notice a surface that lost its row.
+#   REAL-3  ⭐ declare a STALE revision in a copy of the real registry (`at=v0.2` where ROADMAP.md says
+#           v0.3) and the check must refuse the roadmap's debt baseline. This is the arm that makes the
+#           baseline revision-aware rather than decorative: a re-based baseline that nobody re-measures
+#           is a silent widening, and only this arm has ever seen the refusal fire on real data.
 #   MISSING a check whose data plane is absent must REFUSE (exit 2), not report green over an absence.
 #
 # The real registry is never mutated: REAL-2 and MISSING run against copies under target/.
@@ -58,6 +62,18 @@ if [ "$rc" -ne 0 ] && grep -q 'unclassified live surface: ROADMAP.md' <<<"$out";
   ok REAL-2 "deleting the roadmap row makes the check name ROADMAP.md as unclassified (exit=$rc)"
 else
   bad REAL-2 "coverage is decorative: removing a row did not produce an unclassified-surface refusal (exit=$rc)" "$out"
+fi
+
+# ---------------------------------------------------------------- REAL-3: a stale revision baseline
+mkdir -p "$WORK/stale"
+sed '/^roadmap/s/at=v0\.3/at=v0.2/' "$REG/surfaces.tsv" > "$WORK/stale/surfaces.tsv"
+cp "$REG/routes.tsv" "$WORK/stale/routes.tsv"
+grep -q 'at=v0.2' "$WORK/stale/surfaces.tsv" || bad REAL-3 "the arm did not manage to stale the registry copy" ""
+out="$(LIVE_DOC_SIZE_REGISTRY="$WORK/stale" bash "$CHECK" 2>&1)"; rc=$?
+if [ "$rc" -ne 0 ] && grep -q 'debt baseline was measured at revision `v0.2`' <<<"$out"; then
+  ok REAL-3 "a baseline measured at a revision the file no longer declares is refused by name (exit=$rc)"
+else
+  bad REAL-3 "a stale revision baseline passed, so `at=` is decoration (exit=$rc)" "$out"
 fi
 
 # ---------------------------------------------------------------- MISSING: refuse, do not skip

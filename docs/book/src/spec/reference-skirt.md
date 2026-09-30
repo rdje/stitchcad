@@ -309,8 +309,9 @@ notions list matches the geometry.
 - **Zipper length, waistband width and extension** — *declared constants* at common industry values,
   with the same review status. `wb_width` is the one the sources read for D27 disagree about: a usual
   band height of 2–5 cm in one, a maximum of 3 cm for a *straight* band in the other. The fixture's
-  4.0 cm is inside the first range and above the second, so it stays `assumed` and the reviewer `.14`
-  names settles it; both URLs are in the decision record named below.
+  4.0 cm is inside the first range and above the second, so it stays `assumed` until the domain expert
+  settles it — and that seat is **vacant**, not acting (`docs/book/src/governance.md` §8.1), so no signature
+  this repository can produce confirms it; both URLs are in the decision record named below.
 - **The waistband is one straight band, folded lengthwise, and every number above follows from it
   (defect D27, resolved).** The chapter carried two garments at once for nine commits after the one
   that recorded the contradiction: §4's
@@ -344,8 +345,8 @@ notions list matches the geometry.
   oracle. The correction changes three published numbers (`front_dart_centre` and `back_dart_centre`
   7.75 → 11.25 cm, and §5 step 3's truing target `quarter_waist − ss_suppress` → `quarter_waist`) and
   adds one row. The dart centre is the midpoint of the corrected waist edge, which is what the original
-  formula meant; *where* a dart sits is a drafting convention, so it joins the `assumed` constants above
-  pending the review `G0-CONTRACT.14` names. The sealed changelog entry for `STITCHCAD-G0-0013` lists
+  formula meant; *where* a dart sits is a drafting convention, so it joins the `assumed` constants above,
+  which the vacant domain seat governs (`docs/book/src/governance.md` §8.1). The sealed changelog entry for `STITCHCAD-G0-0013` lists
   "dart intake and centre" among the derived values and is immutable, so this bullet is the superseding
   record.
 

@@ -38,8 +38,8 @@ because the census in §7 matches designations used anywhere in the book against
 
 | Designation | Status | Owner | Role in this model |
 | --- | --- | --- | --- |
-| ISO 8559 | `cited-from-roadmap` (§3.1) | `G0-CONTRACT.14` names the reviewer | the landmark and procedure semantics body measurements draw on |
-| ASTM D5219 | `cited-from-roadmap` (§3.1) | `G0-CONTRACT.14` | terminology for body measurement landmarks, alongside ISO 8559 |
+| ISO 8559 | `cited-from-roadmap` (§3.1) | the domain expert — seat **vacant** ([governance §8.1](../governance.md)) | the landmark and procedure semantics body measurements draw on |
+| ASTM D5219 | `cited-from-roadmap` (§3.1) | the domain expert — seat **vacant** | terminology for body measurement landmarks, alongside ISO 8559 |
 | EN 13402 | `cited-from-roadmap` (§3.4) | `G0-CONTRACT.6`, data via `.14` | a size-designation system the model must be able to express |
 | ASTM D5585 | `cited-from-roadmap` (§3.4) | `G0-CONTRACT.6`, data via `.14` | a size-designation and figure-table system for missy sizes |
 | ASTM D6673 | `cited-from-roadmap` (ADR-0004) | `G0-CONTRACT.10` | the withdrawn specification whose numbered-layer DXF convention cutting rooms enforce |
@@ -135,8 +135,10 @@ gives: a long cell in a single-line row is invisible pressure under a line cap.
 Verification of a standard's content requires the document, and the documents are not free. So the plan is
 a dependency chain with named owners rather than an intention:
 
-1. **`G0-CONTRACT.14`** (governance) names the sewing/factory expert who reviews domain content, and names
-   the procurement owner for evaluation seats and documents. It is blocked on the director naming humans.
+1. **The domain expert seat must be filled.** [Governance §8.1](../governance.md) records it as **vacant**,
+   not acting: no signature this repository can produce reviews domain content, and the procurement owner's
+   seat is held acting by the director, so the search for texts has an owner but no buyer. Both are the
+   director's to name.
 2. **Procurement** obtains the texts. Until then, no claim in this book can become `read-in-repo`, and this
    chapter says so instead of implying that reading is a formality.
 3. **Reading changes exactly three things:** landmark and procedure references may gain clause-level

@@ -67,18 +67,26 @@ else bad BAD-STATUS "an invented status was accepted (exit=$rc)" "$out"; fi
 
 # ---------------------------------------------------------------- NO-OWNER (S3)
 D="$WORK/owner"; mkroot "$D"
-sedfile "$D/$CHAPTER_REL" 's#| `cited-from-roadmap` (§3.1) | `G0-CONTRACT.14` names the reviewer |#| `cited-from-roadmap` (§3.1) | — |#'
+# Anchor on the ROW and replace its third cell, not on the owner's wording: this arm broke the day the
+# owner cell was reworded (the pattern silently matched nothing, the census stayed green, and the arm
+# reported "an ownerless claim was accepted" for a tree that had no ownerless claim in it).
+sedfile "$D/$CHAPTER_REL" -E 's#^(\| ISO 8559 \|[^|]*)\|[^|]*\|#\1| — |#'
+grep -q '| ISO 8559 | `cited-from-roadmap` (§3.1) | — |' "$D/$CHAPTER_REL" \
+  || bad NO-OWNER "the mutation did not apply, so this arm would prove nothing" "" 
 out="$(run "$D")"; rc=$?
 if [ "$rc" -eq 1 ] && grep -q 'has no owner, so its claim belongs to nobody' <<<"$out"; then
   ok NO-OWNER "a registered standard with no owner is refused (exit=$rc)"
 else bad NO-OWNER "an ownerless claim was accepted (exit=$rc)" "$out"; fi
 
 # ---------------------------------------------------------------- BARE-READ (S4)
+# This arm also pins D45's fix: the ISO 8559 row's OWNER cell carries a cross-reference with a section sign
+# in it, so a whole-row citation grep would find "evidence" and pass. S4 reads the status and role cells
+# only, and this arm is what keeps it that way.
 D="$WORK/bare"; mkroot "$D"
 sedfile "$D/$CHAPTER_REL" 's/^| ISO 8559 | `cited-from-roadmap` (§3.1) |/| ISO 8559 | `read-in-repo` |/'
 out="$(run "$D")"; rc=$?
-if [ "$rc" -eq 1 ] && grep -q 'claims `read-in-repo` for `ISO 8559` but cites no clause or table' <<<"$out"; then
-  ok BARE-READ "a read-in-repo claim with no citation behind it is refused (exit=$rc)"
+if [ "$rc" -eq 1 ] && grep -q 'claims `read-in-repo` for `ISO 8559` but its status and role cells cite no clause' <<<"$out"; then
+  ok BARE-READ "a read-in-repo claim whose own cells cite nothing is refused, section signs in other cells notwithstanding (exit=$rc)"
 else bad BARE-READ "an unevidenced read-in-repo claim was accepted (exit=$rc)" "$out"; fi
 
 # ---------------------------------------------------------------- MISSING

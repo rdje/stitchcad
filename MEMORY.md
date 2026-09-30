@@ -14,7 +14,7 @@
 ## Current state
 
 - **Project:** StitchCAD — a sewing CAD, headless Rust core: construction-recipe designs, evidence-bearing
-  Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.2, DRAFT until G0 exits.
+  Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.3, DRAFT until G0 exits.
 - **Active tree:** `G0-CONTRACT`. Done: `.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.14`, `.18`.
   Remaining: `.9`–`.12`, `.15`–`.17`.
 - **Next action:** take **`G0-CONTRACT.9`** — ADR-0003 (construction recipe primary) plus the formula
@@ -29,5 +29,6 @@
 - **In-flight uncommitted work:** none.
 - **Blockers:** three seats need a named human from the director — project owner, procurement owner, and the
   sewing/factory domain expert, who gates the fixture's `assumed` constants and so the first G2 golden
-  (`docs/book/src/governance.md` §8 lists them in one place). **Awaiting his ruling:** the `ROADMAP.md` §11 G3
-  amendment four matrix cells depend on, which `.15` puts to him; those cells say `(proposed)` and A3 prints them.
+  (`docs/book/src/governance.md` §8 lists them; §2 records the acting authority holding them meanwhile). The
+  roadmap amendment is no longer pending: delegated, ruled approved and applied as **v0.3**, with
+  `G3-GRADING.5`/`.15` owning the garments its envelope-coverage criterion requires.

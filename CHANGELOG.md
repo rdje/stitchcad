@@ -27,6 +27,56 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G0-0004c - the envelope criterion is law, not a proposal (leaves `G0-CONTRACT.4c`, `SPINE.4.5`, `PLANNING.6`)
+
+The director delegated the three findings outright, so the amendment `.4b` had prepared as a *proposal* is ruled
+approved and applied - through the roadmap's own machinery, and with two mechanisms the application exposed as
+missing.
+
+- **roadmap v0.3**: §11 G3 gains an *envelope coverage* exit criterion - every garment §3.2 names drafts,
+  grades and exports at that gate or an earlier one; the A-line skirt at G2, the bodice and sleeve at G3, a
+  classic collar with stand, fall and roll line, trousers carrying at least one pocket and one closure whose
+  buttonhole length is derived from its button - and "a garment the envelope names and no exit criterion proves
+  is a gate failure, not a scope note". The old note that an intermediate "may be inserted without shame" is
+  rewritten so an intermediate can never substitute for a criterion. Marked where the roadmap's revision policy
+  requires: the title, the status block, an Appendix A disposition entry naming its source and the defect it
+  closes, and the end line. `947` lines / `52 818` B, +28 / +1 997
+- **the criterion arrives with owners**, because a roadmap clause no leaf owns is D32 one level up:
+  `G3-GRADING.5` became required (trousers + pocket + derived buttonhole, with a mutation test that editing the
+  button changes the hole), `G3-GRADING.15` was created (the collar, its roll line never exported as a cut
+  line), and `.14`'s exit review now fails if a §3.2 garment has no leaf's evidence. The four matrix cells
+  dropped `(proposed)` -> census `105 rows / 29 diagnostics / 0 failure(s)` with `D32 rows: 0` and
+  `proposed cells: 0`; the A3 advisory and the `(proposed)` mechanism stay for the next one, and its probe arm
+  was rebuilt to pin A3 in BOTH directions (0 real, 1 injected) instead of asserting a count that no longer
+  exists
+- **SPINE.4.5, the mechanism the application needed**: the roadmap's transition-debt baseline was measured at
+  exactly the file's size, so v0.3 could only land by hand-widening a number the doctrine forbids widening. The
+  debt column now accepts `at=<revision>` and the checker REFUSES a baseline whose revision the file's first
+  line no longer declares - a revision may re-base its baseline, but only in the commit that revises, which is
+  where the authority has to be anyway. Declaring the right revision does not license growth past the baseline.
+  This is the containment adoption note's deferred trigger 3 (a stored copy of a mechanically owned value needs
+  an executed freshness oracle) fired and discharged locally: six lines in the existing awk evaluator, not the
+  2 100-line neutral interpreter. `--self-test` `11` -> `15` arms; the probe suite gained `REAL-3`, which stales
+  the real registry to `at=v0.2` and requires the refusal -> `probes: 5 pass / 0 fail`
+- **PLANNING.6 / D44, found because a census was finally run**: the tree-coverage census defined a tree by
+  FILENAME, so the evidence siblings the containment registry prescribes were reported as lane-less orphans -
+  `15 trees / 1 unowned / 4 orphan(s)`, red for two committed slices, because `make probes` globs
+  `run_*probe*.sh` and nothing else ran it. A tree is now recognised structurally by its `- Tree ID:` line in
+  both populations AND in the advisory loop (three copies of one assumption; the advisory one hid `G0-CONTRACT`
+  itself behind its sibling and no exit code could show it), a non-tree file must be linked from a tree or it is
+  a stray, and `run_tree_coverage_probes.sh` puts the census under `make probes` with seven arms ->
+  `census: 10 lanes / 13 trees / 2 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `probes: 7 pass / 0 fail`
+- **G0-CONTRACT.14b, the second finding**: no human is named and none is invented. Governance §8 now states
+  which seats are held ACTING by the director (project owner, procurement - authority he already holds, so the
+  arrangement adds a record and no power) and which is openly VACANT (the sewing/factory domain expert, because
+  competence cannot be acted). An acting holder may not confirm the fixture's `assumed` constants, sign a
+  golden's semantic half, rule a safety term, or approve a byte-changing profile - so the first G2 golden stays
+  gated on a real name, and §8.2 writes the ask per seat so naming one is a single act. The fixture and
+  standards chapters now cite the vacant seat instead of a leaf that cannot name anyone
+- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `13 suite(s) green`; `make book` ->
+  exit=0; glossary `276 terms`, standards `6 registered`, fixture `20 rows / 4 checks / 5 pieces`, ledger
+  `9 pass / 0 fail`, all 0 failures; containment OK with the roadmap re-based under its record
+
 ## STITCHCAD-SPINE-0004d - the widest-line target is derived from the cell budget (leaf `SPINE.4.4`)
 
 The containment check printed a warning on every run that no defect stood behind: `book_collection: widest

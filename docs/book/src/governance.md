@@ -1,9 +1,10 @@
 # Governance
 
 > **Status:** governance model, gate **G0** (roadmap §11: "governance model drafted — project owner named;
-> sewist-vs-programmer review paths defined"; sources §12, §9, §7.8, §10, §13, §14). Drafted in full. The
-> three roles that need a **named human** are blocked on the director and are listed together in §8, so the
-> gap is one place instead of a discovery at each gate.
+> sewist-vs-programmer review paths defined"; sources §12, §9, §7.8, §10, §13, §14). Drafted in full. Two of
+> the three seats that need a **named human** are held acting by the director and one is openly vacant; §8
+> states the acting authority, its hard limits, and the ask per seat, so the gap is one place instead of a
+> discovery at each gate.
 
 **Why this is written while the room is empty.** Roadmap §14 carries the risk "community fork over
 governance" with the mitigation "governance doc at G0, while the room is empty", and §12 names the
@@ -43,10 +44,10 @@ today; §8 lists the ones nobody holds.
 
 | Role | Authority it needs | Agent-eligible? | Currently |
 | --- | --- | --- | --- |
-| project owner | scope, gate exit, the roadmap's disposition log, the last word in §3 | no | **unnamed** (§8) |
+| project owner | scope, gate exit, the roadmap's revision policy and disposition log, the last word in §3 | no | director, acting (§8.1) |
 | maintainer | merges code, owns CI and the doctrine gates, the release channels | no | the engineer of record |
-| domain expert (sewing / factory) | the domain path in §1, golden semantics, safety terms, `assumed` constants | no | **unnamed** (§8) |
-| procurement owner | buys evaluation seats, the physical plotter, standards texts | no | **unnamed** (§8) |
+| domain expert (sewing / factory) | the domain path in §1, golden semantics, safety terms, `assumed` constants | no | **vacant** — no acting holder (§8.1) |
+| procurement owner | buys evaluation seats, the physical plotter, standards texts | no | director, acting (§8.1) |
 | release approver | the human-only `approve` authority over a package (roadmap §9) | **never** | per package |
 | independent evidence reviewer (G7) | signs the evidence pack for a production declaration | no | named at G7 (§8) |
 | contributor | opens a change on one of §1's paths | yes, to `propose` | anyone |
@@ -151,23 +152,57 @@ partner-run manual test as documented fallback", so the fallback is normative ra
 | standards texts (the six registered) | any `read-in-repo` claim | procurement (§8) | none — until a text is read here no clause may be quoted ([standards §1](spec/standards.md)) |
 | a pilot factory partner | G6 — the rejection-reason taxonomy | project owner (§8) | none yet; the partner loop is the evidence, so this one cannot be substituted |
 
-## 8. The named-person gaps — one place, flagged to the director
+## 8. The three seats nobody holds, and who acts in them
 
-The director's ruling of `2026-09-30` delegated the drafting of this chapter and reserved exactly one
-thing: **naming humans** (`docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`). These are
-the gaps. Everything else in this chapter is drafted, reviewable and unblocked.
+The director's ruling of `2026-09-30` delegated the drafting of this chapter and reserved exactly one thing:
+**naming humans**. He then delegated the finding itself, which changes what may be *decided* here and nothing
+about what may be *certified*: a name is still his, and no engineering decision can manufacture the competence
+a domain review requires. So two seats are held **acting**, with limits, one is openly **vacant**, and the ask
+per seat is written down so that naming one is a single act rather than a negotiation.
 
-| Role | Blocked since | What is drafted meanwhile | What unblocks it |
+| Role | Blocked since | Held by | What unblocks it |
 | --- | --- | --- | --- |
-| project owner | G0 exit clause | §3's escalation path names the role, not the person | the director names one |
-| domain expert (sewing / factory) | G0, and G2 depends on it | §1's domain path, §4's golden rule, the fixture's `assumed` constants | the director names one |
-| procurement owner | G0 exit clause ("seats take months") | §7's table, with a fallback per item | the director names one |
-| independent evidence reviewer | G7 | §2's independence criterion, so the search can start early | named at G7 by the project owner |
+| project owner | G0 exit clause | the director, acting (§8.1) | the director names one |
+| domain expert (sewing / factory) | G0, and G2 depends on it | **nobody — vacant, not acting** (§8.1) | the director names one |
+| procurement owner | G0 exit clause ("seats take months") | the director, acting, via §7's fallbacks | the director names one |
+| independent evidence reviewer | G7 | not needed until G7 | named at G7 by the project owner |
 
-Until a name exists, the honest state of each affected clause is the uncertainty vocabulary's `unknown`
-(ontology §5): not silently defaulted, and blocking what it governs. `G0-CONTRACT.15` records the G0
-governance clause as `met — model drafted, named owner pending` or `not met`, and never as met on the
-strength of this chapter alone.
+### 8.1 Acting authority, and the one thing it cannot do
+
+- **The project owner's seat is held acting by the director.** Everything that seat does inside this repository
+  — scope, gate exit, the roadmap's revision policy and its disposition log, §3's last escalation step — is his
+  already, so the arrangement grants no new authority and invents none. What it adds is a record: a ruling made
+  in the seat is logged as the project owner's, so whoever is named inherits decisions instead of archaeology.
+- **The procurement owner's seat is held acting by the director, and §7's fallbacks are the operative path.**
+  No purchase waits on the naming; what waits is *ownership of the search*, which is why each §7 row states its
+  fallback and what that fallback costs in evidence quality.
+- **The domain expert's seat is vacant, and pretending otherwise is the one thing this chapter must not do.**
+  No acting arrangement supplies sewing and factory competence. With the force of a gate, an acting holder may
+  **not** confirm the reference fixture's `assumed` constants, may **not** sign the semantic half of a golden
+  (§4), may **not** rule a safety-relevant glossary term, and may **not** approve a Factory Profile change that
+  alters exported bytes — §1's two-step rule loses its first step, so such a change is unapproved and the
+  tooling reports which half is missing rather than "partially approved". The first G2 golden is therefore gated
+  on a named expert, and the fixture chapter says so where a plan will hit it.
+- **Every affected clause sits in the `unknown` state, not `assumed`** (ontology §5): an unknown requires
+  observation and may not be exported as if it were known. `G0-CONTRACT.15` records the G0 governance clause as
+  `met — model drafted; two seats acting, the domain seat vacant` or as `not met`, and never as met on the
+  strength of this chapter alone.
+
+### 8.2 The ask, per seat
+
+Naming a seat is one act, so each row says what the person must be able to do rather than what the project
+hopes for:
+
+- **Domain expert (sewing / factory)** — competence in woven-garment sample-making or production; able to read
+  a piece list and a tech pack and to say whether a notch default, an allowance width or a corner treatment
+  would be rejected on a cutting floor. Authority: to rule §1's domain path and to sign a golden's semantic
+  half. Cost: a handful of review sessions, not a role in daily work. **This is the seat with a schedule behind
+  it**, because the fixture's constants gate the first G2 golden.
+- **Project owner** — authority to set scope, to close a gate, and to amend the roadmap under its revision
+  policy. Held acting today, so naming it changes the record rather than the decisions.
+- **Procurement owner** — authority to spend, and patience with lead times: evaluation seats in a commercial
+  CAD take months, which is why roadmap §11 asks for the owner at G0 rather than at the gate that needs the
+  seats.
 
 ## 9. What this chapter deliberately does not decide
 

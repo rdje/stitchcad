@@ -288,6 +288,39 @@ not a contract.
   is at `8 pass / 0 fail`.
   Commit: `STITCHCAD-G0-0004b`
 
+- ID: `G0-CONTRACT.4c`
+  Status: `done`
+  Goal: rule on and **apply** the D32 amendment `.4b` prepared. The director's first ruling of `2026-09-30`
+  reserved amending `ROADMAP.md` to himself, so `.4b` landed it as a *proposal* with four matrix cells marked
+  `(proposed)`; his second instruction delegated the finding outright ("make the necessary calls and every
+  needed action"), which turns the proposal into a decision this repository can execute. Applying it means the
+  roadmap's own machinery — a revision marker, an Appendix A disposition entry, a re-based containment
+  baseline — and the trees that must own what the new criterion requires.
+  Acceptance: `ROADMAP.md` §11 G3 carries the envelope-coverage criterion and the file is at a new revision
+  with its disposition logged; no matrix cell says `(proposed)` and the census's A3 reports `0`; every garment
+  the criterion names is owned by a `G3-GRADING` leaf, and that tree's exit review fails without it; the
+  containment baseline is re-based under a recorded authority rather than hand-widened; every census and gate
+  stays green.
+  Verification: recorded below and in the acceptance checklist — `ROADMAP.md` at v0.3 (`947` lines /
+  `52 818` B, baseline re-based `at=v0.3`), the matrix census at `105 rows / 29 diagnostics / 0 failure(s)`
+  with `D32 rows: 0` and `proposed cells: 0`, and the coverage census green with its new `7`-arm suite.
+  Commit: `STITCHCAD-G0-0004c`
+
+- ID: `G0-CONTRACT.14b`
+  Status: `done`
+  Goal: act on the second finding — the three seats governance §8 lists. The director's first ruling reserved
+  **naming humans** to himself and his second delegated the finding, so what is decidable is not who fills a
+  seat but what happens while it is empty: which seats are held *acting*, what an acting holder may not do,
+  and what the project needs from each name.
+  Acceptance: governance §8 states the acting authority and its hard limits, and one seat is openly vacant
+  rather than quietly acting; every clause a vacancy governs is `unknown`, not `assumed`; the ask per seat is
+  written so naming one is a single act; the chapters that pointed at "`.14` names the reviewer" point at the
+  seat's real state; a decision record carries the rule.
+  Verification: recorded below and in the acceptance checklist — the chapter's §8 gained two subsections, the
+  domain seat is vacant with four named prohibitions, and the fixture and standards chapters cite it instead of
+  a leaf that cannot name anyone.
+  Commit: `STITCHCAD-G0-0014b`
+
 - ID: `G0-CONTRACT.14`
   Status: `done` for everything this repository can do — the model is drafted, reviewable and adopted; the
   **naming of the three humans stays blocked** on the director and is carried by §8 of the chapter and by
@@ -371,6 +404,7 @@ not a contract.
 | 13 | `G0-CONTRACT.13d` | `done` | the director ruled on `2026-09-30` that the engineer decides D27: one straight band, cut once and folded at its midpoint, plus a fused interfacing piece — and the agreement is now derived by a tracked instrument rather than by reading |
 | 14 | `G0-CONTRACT.4b` | `done` | D32 resolved: collar, trousers, buttons and pockets get G3 as their proving gate and the fly gets G7, with the roadmap amendment quoted as a **proposal** the director rules on at `.15` |
 | 15 | `G0-CONTRACT.14` | `done` | the governance model is drafted in full — two review paths, roles defined by the decision each may make, goldens signed twice, the procurement fallbacks with their cost in evidence — and the three empty seats are in one table for the director |
+| 15b | `G0-CONTRACT.4c` | `done` | the director delegated the finding outright, so `.4b`'s proposal is ruled approved and applied: roadmap **v0.3** carries the envelope-coverage criterion, the four cells are committed gates, and `G3-GRADING.5`/`.15` own the garments |
 | 16 | `G0-CONTRACT.9` | `pending` | **next in this tree** — but the ruling of `2026-09-30` puts `SPINE.4.4` (the maxline health of table-shaped book parts) between `.14` and this leaf, so the repository's frontier is `SPINE.4.4` and then `.9`: ADR-0003 plus the formula language v1 — grammar, units inside expressions, conditionals, name binding, evaluation order, error and dimension rules, worked over the reference skirt, and the drafting system that ships as the reference block set |
 | 17 | `G0-CONTRACT.10`–`.12`, `.15`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
@@ -479,6 +513,16 @@ not a contract.
   adds the cost of each fallback (a partner run is layer-4 evidence: slower, fewer targets), because a
   fallback without a stated cost is how a procurement slip silently downgrades the release claim.
 
+- `2026-09-30`, leaf `.4c`: **a proposal is a state, not a resting place.** `.4b` marked four cells
+  `(proposed)` because amending the roadmap was reserved; the moment the reservation was lifted, the honest
+  action was to apply it through the roadmap's own revision machinery — version marker, Appendix A disposition
+  entry, containment baseline re-based in the same commit — and not to leave a ratified decision wearing a
+  provisional label. The `(proposed)` mechanism and the A3 advisory stay in place for the next one.
+- `2026-09-30`, leaf `.4c`: **an exit criterion must arrive with owners.** A roadmap clause no leaf owns is
+  the D32 defect one level up, so the same commit that added G3's envelope-coverage criterion made
+  `G3-GRADING.5` required (trousers with a pocket and a derived buttonhole), created `G3-GRADING.15` (the
+  classic collar) and made `.14`'s exit review fail if a §3.2 garment has no leaf's evidence behind it.
+
 ## Open Questions
 
 - Cut-on-fold vs paired front for the reference skirt: roadmap §11 G0 allows either. Decided
@@ -493,15 +537,16 @@ not a contract.
 
 ## Blockers
 
-- `G0-CONTRACT.14`'s model is drafted; **naming humans** (project owner, procurement owner, domain expert)
-  stays with the director, who reserved exactly that in his ruling of `2026-09-30`. Nothing else in `.14` is
-  blocked. The domain expert is the seat with a schedule behind it: the reference fixture's `assumed`
-  constants gate the first G2 golden (governance §4), so a golden frozen before that review freezes a guess.
-  `.15` records the G0 governance clause as `met — model drafted, named owner pending` or `not met`.
-- `G0-CONTRACT.15` additionally carries **one proposal to the director**: the `ROADMAP.md` §11 G3 amendment
-  that four matrix cells depend on (`decision_d32-proving-gates-proposed-roadmap-amendment.md`). Amending
-  the roadmap is reserved to the director, so until he rules the cells say `(proposed)` and the census's A3
-  advisory prints all four on every run.
+- `G0-CONTRACT.14`'s model is drafted and `.14b` settled what an empty seat means: the project owner's and
+  procurement owner's seats are held **acting** by the director (governance §8.1), and the sewing/factory
+  domain expert's seat is **vacant** — no acting holder may confirm the fixture's `assumed` constants, sign a
+  golden's semantic half, rule a safety term or approve a byte-changing profile, so the first G2 golden stays
+  gated on a real name. `.15` records the G0 governance clause accordingly, and never as met on a borrowed
+  signature.
+- `G0-CONTRACT.15` no longer carries a proposal to the director: the roadmap amendment `.4b` prepared was
+  delegated, ruled approved and applied as **v0.3** by `.4c`. What `.15` owes the director is the naming of the
+  three seats governance §8 lists — with §8.2's ask per seat already written — and the ordinary
+  clause-by-clause exit review, in which the governance clause is recorded as `.14b` states it.
 
 ## Acceptance Checklist
 
@@ -511,72 +556,116 @@ here, because `scripts/check_task_acceptance.sh` judges every staged `docs/tasks
 with no ticked boxes; the next slice moves it across. Neither file carries an unticked placeholder box
 (defect D15).
 
-### `G0-CONTRACT.14` — the governance model exists before the community does
+### `G0-CONTRACT.4c` — the proposal is ruled on and applied, and the criterion arrives with owners
 
-- [x] **REPRODUCE / ISSUE** — the G0 exit clause requires "governance model drafted (project owner named;
-  sewist-vs-programmer review paths defined)" and roadmap §12 requires four things nothing here had written:
-  a domain-review path that is not code review, golden-file approval ownership, the sewist-vs-programmer
-  conflict rule, and named funding/procurement owners. Measured at `HEAD`:
-  `git ls-tree --name-only HEAD docs/book/src/` → `SUMMARY.md`, `introduction.md`, `spec`, `rc=0` — no
-  governance chapter, while `grep -ci governance ROADMAP.md` → `6` clauses expect one, and `G0-CONTRACT.15`
-  cannot review an exit clause that has no deliverable.
-- [x] **ROOT CAUSE (WHY + WHERE)** — §12 states the requirement as prose with no owner per rule: "a named
-  domain-expert approval path (two-step: expert + maintainer)" says who approves but not which changes take
-  that path, and §14's risk row "community fork over governance" is mitigated only by "governance doc at G0,
-  while the room is empty" — scheduled, and never written. Three of the four rules also depend on a *person*
-  this repository does not have, which is why the leaf stayed blocked until the ruling of `2026-09-30`
-  separated the drafting from the naming; the blocking part was that coupling, not the missing names.
-- [x] **ADDRESSED (verified)** — `docs/book/src/governance.md` (`wc -lc` → `198` lines / `15 593` B, widest
-  line `199` B, inside the `book_collection` per-part health of `400` / `24 576` / `200`) carries ten sections:
-  the classification table putting every change class on exactly one of the two review paths; the conjunctive
-  two-step rule for anything that alters exported bytes; seven roles each with the authority it needs and
-  whether an agent may hold it; the four-step conflict path (classify → make a contested default a profile
-  parameter → escalate by review round, not by date → a fork is a legitimate outcome); golden approval with
-  two signatures and the no-golden-over-an-`assumed`-constant precondition; the public/never-public boundary
-  and its three consequences for the review paths; agents under governance; the procurement table with a
-  fallback and its cost in evidence quality per item; **all four empty seats in one table** (§8), which is the
-  acceptance clause "flagged to the director in one place, not discovered later"; the four questions
-  deliberately left undecided; and a verification-status section separating the roadmap citations from the
-  project decisions. `make book` → `INFO HTML book written to …`, `exit=0`, and
-  `ls docs/book/book/governance.html` → present, wired in as the book's first non-specification part. The six
-  project decisions are recorded separately in
-  `docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md` (`84` lines / `6 600` B,
-  indexed, carrying an `answers:` line), so a reader can tell the citation from the invention.
+- [x] **REPRODUCE / ISSUE** — two things were true and neither could stand. (1) The envelope was still
+  unproved in the roadmap: `sed -n '/^### G3 /,/^- Domain-complexity/p' ROADMAP.md | grep -ci
+  'collar\|trousers\|button\|pocket'` → `1` before this slice, and that one hit was the *note* that permitted
+  an intermediate, not a criterion; the matrix said so mechanically —
+  `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` → `A3 advisory … proposed cells: 4`.
+  (2) Applying the amendment was impossible without cheating: `wc -lc ROADMAP.md` → `919 50821`, exactly the
+  `roadmap` row's transition-debt baseline (`lines=919;bytes=50821`), and `check_live_doc_size.sh` refuses a
+  widened baseline — so the only way to grow the roadmap was to edit the number, which is the silent widening
+  the rule exists to prevent.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the first cause was authority, not analysis: the director's ruling of
+  `2026-09-30` reserved amending `ROADMAP.md`, and his second instruction delegated the finding outright, so
+  the proposal became a decision this repository could execute. The second cause was a missing mechanism: a
+  debt baseline is a *stored copy* of a file's size at a moment, and nothing tied it to the file's revision
+  identity, so a legitimate revision and a silent widening looked identical to the checker. Measured, because
+  the block is the evidence: `bash scripts/check_live_doc_size.sh` over the amended roadmap →
+  `LIVE-DOC-SIZE: roadmap: transition debt WIDENED on lines (947 > baseline 919) — a baseline never grows`,
+  `exit=1`, against `grep -o 'lines=[0-9]*;bytes=[0-9]*' .doctrine/live_document_size/surfaces.tsv` →
+  `lines=919;bytes=50821`, `rc=0`. That is the containment adoption note's deferred trigger 3 — "a stored copy
+  of a mechanically owned value needs an executed freshness oracle" — fired by the first roadmap amendment,
+  and `SPINE.4.5` discharges it.
+- [x] **ADDRESSED (verified)** — roadmap **v0.3** carries the criterion: `grep -n 'envelope coverage'
+  ROADMAP.md` → line `712`, `- **Exit (envelope coverage):** every garment §3.2 names drafts, grades and
+  exports at this gate or an earlier one …`, and the same census over the section now returns `3` matching
+  lines instead of `1`. The revision is marked where the roadmap's own policy requires —
+  `grep -n 'v0.3' ROADMAP.md` → the title (line 1), the status block (line 11, naming the source), the
+  Appendix A disposition entry (line 926) and the end line (line 945) — and the file measures
+  `wc -lc ROADMAP.md` → `947 52818` (+28 lines / +1 997 B), re-based in the registry as
+  `lines=947;bytes=52818;at=v0.3`. The matrix is committed rather than provisional:
+  `grep -c 'proposed §11 amendment' docs/book/src/spec/feature-matrix.md` → `0`, and
+  `run_feature_matrix_census.sh` → `105 rows / 29 diagnostics / 0 failure(s)`, `exit=0`, with `D32 rows: 0`
+  and `proposed cells: 0`; `run_feature_matrix_probes.sh` → `probes: 12 pass / 0 fail` after its
+  `PROPOSAL-VISIBLE` arm was rebuilt to pin A3 in BOTH directions (0 on the real tree, 1 once a marker is
+  injected) instead of asserting a count that no longer exists. The criterion arrives with owners:
+  `G3-GRADING.5` is required (trousers + pocket + derived buttonhole), `G3-GRADING.15` is created (the classic
+  collar), and `.14`'s exit review fails if a §3.2 garment has no leaf's evidence — so the capture claim still
+  derives: `run_tree_coverage_census.sh` → `census: 10 lanes / 13 trees / 2 sibling(s) / 0 unowned /
+  0 orphan(s) / 0 dead link(s)`, `exit=0`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `13 suite(s) green` (twelve before this slice; the thirteenth is the tree-coverage suite `PLANNING.6` adds),
+  with `run_live_doc_size_probes.sh` → `probes: 5 pass / 0 fail` including the new `REAL-3` arm that stales the
+  real registry to `at=v0.2` and requires the refusal, and `check_live_doc_size.sh --self-test` →
+  `15 arms, 0 failed` (eleven before `SPINE.4.5`); `bash scripts/check_live_doc_size.sh` →
+  `live-doc-size: OK — 17 surfaces, 15 routes, 84 files measured`, `exit=0`, the roadmap row inside its
+  re-based debt and its `240` B maxline health (widest `220` B); the book's other censuses are green and
+  unchanged — glossary `276 terms / 8 parts / 145 tokens / 0 failure(s)`, standards
+  `6 registered / 6 designations used / 0 failure(s)`, fixture `20 derived rows / 4 closure checks / 5 pieces /
+  0 mismatch(es)`; `make book` → `exit=0`. No Rust changed.
+- [x] **FIX** — amended §11 G3 through the roadmap's revision policy (criterion added, the "intermediate
+  complexity" note rewritten so an intermediate can never substitute for a criterion); logged it in Appendix A
+  with its source and the defect it closes; re-based the containment baseline with `at=v0.3` and the authority
+  cited in the row's notes; dropped `(proposed)` from the four cells and rewrote §1 rule 2, §9, §12 and §14 so
+  no sentence still calls the gap open; marked `decision_d32-proving-gates-proposed-roadmap-amendment.md` as
+  **applied** (keeping the rejection path, because a future revision may withdraw the criterion); marked the
+  containment adoption record's trigger 3 as fired and discharged; gave `G3-GRADING` the two leaves and the
+  acceptance-table row; fixed the coverage census's tree enumeration and put it under `make probes` (D44,
+  `PLANNING.6`); and added the revision-aware baseline (`SPINE.4.5`).
+- [x] **LOCKSTEP** — `MEMORY.md` (v0.3, the amendment no longer pending), `LIVE_STATUS.md`, `CHANGELOG.md`,
+  `DEV_NOTES.md`, `docs/TASK_TREE.md` (the coverage claim now cites both the census and its probe suite),
+  `TOOLBOX.md` (two new rows), `docs/decisions/INDEX.md` and the regenerated Knowledge Map; D44 logged and
+  fixed in `PLANNING.md`; `.15`'s scope narrows because the proposal it was to carry is applied. Lesson
+  promotion: **promoted** — `decision_revision-aware-containment-baseline.md` carries an `answers:` line.
+
+### `G0-CONTRACT.14b` — an empty seat is held acting with limits, or it is vacant
+
+- [x] **REPRODUCE / ISSUE** — governance §8 listed three seats as "blocked on the director" and every chapter
+  that needed a domain reviewer pointed at a leaf that cannot name one:
+  `grep -rn 'G0-CONTRACT.14` names' docs/book/src/spec/` → the standards registry's owner cells and the
+  fixture's `assumed`-constant bullets, i.e. three chapters deferring to an event that had no mechanism. The
+  director then delegated the finding ("make the necessary calls and every needed action"), which makes the
+  vacancy this repository's problem to state precisely rather than to wait on.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the chapter was drafted under a ruling that reserved naming humans, so it
+  recorded the gap honestly and stopped there: "blocked" is a state, not a plan. What was missing is the
+  distinction between two kinds of authority — **office**, which the director already holds and can therefore
+  hold *acting*, and **competence**, which nobody in this repository has and no acting arrangement can supply.
+  Treating the three seats alike would either stall the project owner's decisions unnecessarily or, worse,
+  imply that an engineer can certify a sewing judgement.
+- [x] **ADDRESSED (verified)** — `docs/book/src/governance.md` §8 is rewritten as three subsections: the seat
+  table now names who holds each seat (`director, acting (§8.1)` twice, `**nobody — vacant, not acting**` for
+  the domain expert); §8.1 states the acting authority and four hard prohibitions on it (no confirming the
+  fixture's `assumed` constants, no signing a golden's semantic half, no ruling a safety-relevant term, no
+  approving a byte-changing Factory Profile — which under §1's conjunctive rule leaves such a change
+  unapproved with the missing half reported); §8.2 states the ask per seat so naming one is a single act.
+  `wc -lc docs/book/src/governance.md` → `233` lines / `18 465` B, widest line `185` B, inside the
+  `book_collection` per-part health of `400` / `24 576` / `200`; `make book` → `INFO HTML book written to …`,
+  `exit=0`. The rule is recorded in `docs/decisions/decision_unnamed-seats-acting-authority.md` (indexed,
+  `answers:` line) and the deferring chapters now cite the seat's real state:
+  `grep -rc 'vacant' docs/book/src/spec/standards.md docs/book/src/spec/reference-skirt.md
+  docs/book/src/spec/glossary.md` → `3`, `2`, `1`, and the stale deferral is gone —
+  `grep -rn 'G0-CONTRACT.14` names' docs/book/src/spec/ | grep -c .` → `0`, `rc=1`. The standards census still
+  resolves every owner cell: `run_standards_census.sh` → `6 registered / 6 designations used / 0 failure(s)`.
 - [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`;
-  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 77 files measured`,
-  `exit=0`; the three censuses over the book are green and unchanged by the new chapter —
-  `run_glossary_census.sh` → `276 terms / 8 parts / 145 tokens / 0 failure(s)` (so the chapter introduces no
-  undeclared machine token), `run_feature_matrix_census.sh` → `105 rows / 29 diagnostics / 0 failure(s)`,
-  `run_standards_census.sh` → `6 registered / 6 designations used / 0 failure(s)`; the fixture still re-derives
-  at `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`; `make probes` →
-  `make probes: 12 suite(s) green`, `exit=0`. No Rust and no instrument changed, so the suite count is
-  unchanged; `git diff --cached --name-only | grep -cE '\.(rs|sh)$'` → `0`, `rc=1` — a documentation-only
-  slice, so no instrument and no crate behaviour could regress.
-- [x] **FIX** — wrote the chapter and the record; added the book's `# Governance` part to `SUMMARY.md`;
-  moved `.4b`'s completed checklist into `G0-CONTRACT-evidence.md` in this same commit, which is the
-  convention `.4b` recorded and the first slice to obey it — the leaf being landed keeps its checklist in the
-  tree file, because `scripts/check_task_acceptance.sh` judges every staged `docs/tasks/*.md` and refuses one
-  with no ticked boxes. The tree file is `744` lines / `64 445` B (inside its `800` / `65 536` health) and the
-  evidence sibling holds `10` completed checklists at `576` lines / `53 726` B.
-- [x] **The blocked part is stated as a cost with a schedule attached, not as an apology.** The unnamed domain
-  expert is not a paperwork gap: that seat gates the reference fixture's `assumed` constants, which gate the
-  **first G2 golden** (§4 of the chapter), so the dependency is written where a plan will hit it. Each
-  procurement item likewise carries its fallback *and what the fallback costs in evidence quality*, because
-  roadmap §14 already made the partner-run manual test normative and an unstated cost is how a slip becomes a
-  silent downgrade of the release claim.
-- [x] **The rollover this slice's changelog append triggered is performed and verified in the same commit.**
-  The live window had crossed its health target (`410` lines / `36 632` B against `400` / `32 768`), so the two
-  oldest entries are sealed into `docs/history/stitchcad-changelog-part5.md` (`82` lines / `7 505` B /
-  `sha256:18548ff78f8345d1…`) with a pointer row in the live file, which is back inside health at `329` lines /
-  `29 295` B. Losslessness is proved against the committed state rather than against memory: the sealed bytes
-  are identical to `git show HEAD:CHANGELOG.md` from the same heading onward (`True`), and the standing
-  verifier agrees — `run_changelog_ledger_probes.sh` → `probes: 8 pass / 0 fail`, its `DESCRIPTOR` rule
-  reproducing all seven sealed segments' digests including the new one.
-- [x] **LOCKSTEP** — the leaf's status, the frontier (which now names `SPINE.4.4` as the repository's next
-  slice, per the ruling's order), the tree's decisions, blockers, verification and commit logs and its
-  changelog; `docs/TASK_TREE.md`'s frontier cell; `docs/decisions/INDEX.md` and the regenerated Knowledge Map;
-  `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md` and `DEV_NOTES.md` (a new lesson) updated in this commit.
-  Lesson promotion: **promoted** — the governance record gains an `answers:` line.
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 84 files measured`,
+  `exit=0`; the book's censuses are green — glossary `276 terms / 8 parts / 145 tokens / 0 failure(s)` (the new
+  prose introduces no undeclared machine token), standards `6 registered / 0 failure(s)`, matrix
+  `105 rows / 0 failure(s)`, fixture `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`;
+  `make probes` → `13 suite(s) green`. No Rust and no instrument changed in this leaf.
+- [x] **FIX** — rewrote §8 and its status block, §2's "currently" column for the three seats, the fixture
+  chapter's two reviewer references, the glossary's two, the standards registry's two owner cells and its
+  verification-plan step 1 — each cross-chapter link written as `../governance.md`, because a chapter under
+  `spec/` reaches the book's top level one directory up and a dead link here would have been the D28 class
+  (caught by building the book, not by reading the path); added the decision record and its index row.
+- [x] **The first G2 golden stays gated, and that is the point of the leaf.** The tempting move was to record
+  the director as acting domain expert so the schedule clears; the honest one is a vacant seat with a named
+  consequence, because a golden frozen over an unreviewed `assumed` constant freezes a guess with the
+  confidence of a fact, and the fixture chapter says so where a plan will hit it.
+- [x] **LOCKSTEP** — the leaf, this checklist and the tree's blockers; `MEMORY.md`'s blocker bullet;
+  `LIVE_STATUS.md`; `CHANGELOG.md`; `docs/decisions/INDEX.md` and the regenerated Knowledge Map. Lesson
+  promotion: **promoted** — the record carries an `answers:` line.
 
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and a leaf that stages code additionally fills a `### <leaf-id>` checklist subsection
@@ -590,6 +679,8 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-09-30` | `G0-CONTRACT.14b` | the chapter's size and widest line; `make book`; the four book censuses; `grep` for the stale deferrals; `make gate`; containment | `233` lines / `18 465` B / widest `185`; `exit=0`; `276 terms`, `6 registered`, `105 rows`, `20 rows / 4 checks / 5 pieces` — all `0 failure(s)`; `0` stale deferrals left in `spec/`; all doctrines green; `OK — 84 files measured` |
+| `2026-09-30` | `G0-CONTRACT.4c` | the roadmap's own markers; the matrix census + probes; the coverage census + its new suite; containment and its `--self-test`; every other census; `make gate`/`probes`/`book` | v0.3 at `947` lines / `52 818` B with the criterion at line `712` and the disposition logged; `105 rows / 0 failure(s)`, `D32 rows: 0`, `proposed cells: 0`; `10 lanes / 13 trees / 2 sibling(s) / 0 unowned`; `probes: 12 / 7 / 5 / 9 pass, 0 fail`; `15 arms, 0 failed`; all doctrines green; `13 suite(s) green` |
 | `2026-09-30` | `G0-CONTRACT.14` | chapter size and widest line; `make book` and the rendered page; the three book censuses; the fixture derivation; `make gate`; `make probes`; containment | `198` lines / `15 593` B / widest `199`; `exit=0` and `governance.html` present; `276 terms`, `105 rows`, `6 registered`, all `0 failure(s)`; `20 rows / 4 checks / 5 pieces / 0 mismatch(es)`; all doctrines green; `12 suite(s) green`; `OK — 77 files measured` |
 | `2026-09-30` | `G0-CONTRACT.4b` | matrix census + probes; ledger probes (DESCRIPTOR generalized); glossary and standards censuses; the rollover's losslessness; `make book`/`gate`/`probes`; containment | `105 rows / 0 failure(s)`, `D32 rows: 0`, `proposed cells: 4`; `probes: 12 pass / 0 fail` and `8 pass / 0 fail`; the sealed tail is byte-identical to `HEAD`, `sha256:d3b94e9a…` reproducing; `276 terms` and `6 registered`, both `0 failure(s)`; all doctrines green |
 | `2026-09-30` | `G0-CONTRACT.13d` | fixture derivation at `HEAD` vs the working tree; its probes + two neutered-rule meta-checks; the three neighbouring censuses; `make book`/`gate`/`probes`; containment | before `16 rows / 2 checks / 6 pieces / 7 mismatch(es)` `exit=1`, after `20 / 4 / 5 / 0` `exit=0`; `probes: 9 pass / 0 fail`, and neutering `B1` or `P2` reddens the arms that need them; `276 terms`, `105 rows`, `6 registered`, all `0 failure(s)` |
@@ -630,9 +721,21 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.13d` | `STITCHCAD-G0-0013d (leaf G0-CONTRACT.13d): one waistband, and the instrument that keeps it one` | D27 closed; five pieces; the band's two closure checks; `run_fixture_derivation.sh` + its probe suite |
 | `G0-CONTRACT.4b` | `STITCHCAD-G0-0004b (leaf G0-CONTRACT.4b): every envelope feature has a gate that proves it` | D32 resolved; four cells `(proposed)`; the G3 amendment quoted as a proposal; A3 advisory + its arm; the dev-notes rollover |
 | `G0-CONTRACT.14` | `STITCHCAD-G0-0014 (leaf G0-CONTRACT.14): the governance model, and the three empty seats` | two review paths, roles by authority, goldens signed twice, procurement fallbacks with their cost; the naming stays the director's |
+| `G0-CONTRACT.4c` | `STITCHCAD-G0-0004c (leaf G0-CONTRACT.4c): the envelope criterion is law, not a proposal` | roadmap v0.3; four cells committed; `G3-GRADING.5`/`.15` own the garments; the baseline is revision-aware |
+| `G0-CONTRACT.14b` | `STITCHCAD-G0-0014b (leaf G0-CONTRACT.14b): an empty seat is held acting, or it is vacant` | two seats acting with hard limits, the domain seat openly vacant, the ask per seat written down; the first G2 golden stays gated on a real name |
 | `G0-CONTRACT.9`–`.12`, `.15`–`.17` | `pending` | — |
 
 ## Changelog
+
+- `2026-09-30`: `.4c` landed — the D32 proposal is ruled approved and applied. Roadmap **v0.3** gives §11 G3
+  an *envelope coverage* exit criterion (every garment §3.2 names drafts, grades and exports at that gate or an
+  earlier one), logged in Appendix A with its source, and the four matrix cells dropped `(proposed)`. The
+  criterion arrives with owners: `G3-GRADING.5` became required and `.15` was created, and `.14`'s exit review
+  now fails if a §3.2 garment has no leaf's evidence. Applying it needed a mechanism the data plane did not
+  have — the `roadmap` debt baseline was measured at exactly the file's size, so a legitimate revision could
+  only land by hand-widening a number — which is `SPINE.4.5`'s revision-aware baseline, and the containment
+  adoption note's deferred trigger 3, fired and discharged. `PLANNING.6` fixed the coverage census that the
+  evidence siblings had broken (D44) and put it under `make probes`.
 
 - `2026-09-30`: `.14` landed — the governance model is drafted in full: every change class lands on exactly
   one of two review paths, a change that alters exported bytes needs the domain expert **and** the maintainer,

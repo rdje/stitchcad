@@ -25,7 +25,12 @@ answers: "do we use the live-document size containment doctrine?" · "why is the
    - the inventory exceeds roughly 24 surfaces, or the awk checker becomes the limiting factor →
      evaluate the neutral checker and migrate the two TSV registries to its JSONL data plane;
    - a stored copy of a mechanically owned value needs an executed freshness oracle → adopt the
-     derived-state contract family.
+     derived-state contract family. **FIRED `2026-09-30` and discharged locally:** the `roadmap` row's
+     transition-debt baseline blocked a legitimate revision (roadmap v0.3), so the debt column gained an
+     `at=<revision>` axis that the checker executes — a baseline whose revision the file no longer declares
+     is refused, which is the freshness oracle the trigger asks for. Adopted as a contract, implemented in
+     the existing awk checker rather than by importing the neutral interpreter, whose other two triggers have
+     not fired: `decision_revision-aware-containment-baseline.md`.
 4. **Local parameters:** warn at 80 % of a health target; the enforcement ceiling is inclusive
    (equality passes, excess fails); a ceiling rises only by a recorded authority (a decision record
    plus the registry row citing it), never to land content. The data plane is bounded **TSV** parsed
