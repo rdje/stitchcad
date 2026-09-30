@@ -32,6 +32,9 @@
 #   A1 the count of `unnamed (D32)` rows, on every run, because §14 of the chapter promises the gap stays
 #      visible rather than being closed by forgetting it
 #   A2 feature names that are not glossary terms, so the glossary absorbs them instead of drifting
+#   A3 the rows whose `Proven at` cell is a PROPOSAL — a gate this chapter asks the roadmap to carry but
+#      the roadmap does not carry yet (defect D32's resolution). Printed on every run for the same reason
+#      A1 is: a provisional commitment that reads like a settled one is the same gap in better clothes
 #
 # HONEST LIMITS: M4 matches a non-goal bullet to a row by the bullet's FIRST WORD, lowercased — a shape
 # rule, not a classifier, and the mapping it produces is printed so a human can see every pairing. M5's
@@ -348,6 +351,14 @@ awk -F'\t' -v terms="$TERMS" '
   { f = tolower($2); gsub(/^a /, "", f)
     if (!(f in T)) { n++; if (n <= 12) printf "    · %s\n", $2 } }
   END { printf "  feature rows: %d · not a glossary term: %d (a compound feature name is expected here; a new DOMAIN term is not)\n", NR, n+0 }' "$ROWS"
+
+# ── A3 advisory: a proposed gate stays as visible as the gap it replaced ────────────────────
+prop=$(awk -F'\t' '$5 ~ /[Pp]roposed/ { n++; printf "    · %s → %s\n", $2, $5 } END { printf "COUNT %d\n", n+0 }' "$ROWS")
+propn=${prop##*COUNT }
+echo "-- A3 advisory: rows whose gate is a PROPOSAL the roadmap does not carry yet"
+[ -n "${prop%%COUNT*}" ] && printf '%s' "${prop%%COUNT*}"
+echo "  proposed cells: $propn — each one is a commitment the director has not ruled on, printed on every"
+echo "  run so the proposal is closed by a ruling rather than by being read as settled (chapter §9)"
 
 echo "feature-matrix census: $rows_total rows / $diag_total diagnostics / $fails failure(s)"
 [ "$fails" -eq 0 ] || exit 1

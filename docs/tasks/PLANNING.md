@@ -474,17 +474,32 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   set-in sleeve, and its "intermediate complexity note" *permits* a shirt/trousers intermediate without
   promising one.
   - Reproduce: `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` → the `A1` advisory
-    lists all five rows with `Proven at` = `unnamed (D32)`, on every run, by design; and
+    listed all five rows with `Proven at` = `unnamed (D32)`, on every run, by design (before `.4b` resolved
+    it; A1 now reports `0` and the A3 advisory lists the four `(proposed)` cells); and
     `grep -c 'collar\|trousers\|button\|pocket' ROADMAP.md` against `sed -n '/### G3 /,/### G4 /p'
-    ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'` → the second count is `0`.
+    ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'` → the second count is `1`, **not the `0` this
+    entry first recorded** (defect **D41**): a section range also contains G3's complexity note, which says
+    "a shirt/trousers intermediate". The count that supports the claim is over G3's exit criteria alone —
+    `sed -n '702,708p' ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'` → `0` — and the A1
+    advisory, which reads the matrix rather than the roadmap, listed all five rows correctly throughout.
   - Impact: gate G7's exit is a "supported-envelope statement with named limitations". An envelope whose
   collar, trousers, buttons and pockets were never tested cannot be declared honestly, and the gap is
   invisible today because a feature matrix did not exist to show it.
-  - Owner: `G0-CONTRACT.4b` — the director ruled on `2026-09-30` that the engineer decides and acts on
-  this. The matrix gets a proving gate per row, and the `ROADMAP.md` §11 amendment those gates need is
-  prepared as an exact **proposal** in a decision record, because the roadmap is the director's to amend
-  (the ruling reserves it). Until he approves it, the record says so and `.15` carries the proposal into
-  the G0 exit review.
+  - Owner: `G0-CONTRACT.4b` (**resolved**) — the director ruled on `2026-09-30` that the engineer decides
+  and acts on this. The matrix gets a proving gate per row, and the `ROADMAP.md` §11 amendment those gates
+  need is prepared as an exact **proposal** in a decision record, because the roadmap is the director's to
+  amend (the ruling reserves it). Until he approves it, the record says so and `.15` carries the proposal
+  into the G0 exit review. **Landed:** collar, trousers, buttons and pockets are assigned to **G3** (buttons
+  also to **G5**, whose tech-pack clause already requires notions) and the fly to **G7**, whose existing exit
+  already requires named limitations and so needs no amendment. The four cells that depend on the amendment
+  say `(proposed)`; the exact text — one added G3 exit bullet covering every garment §3.2 names, plus the
+  rewritten complexity note — is quoted current-vs-proposed with its line numbers in
+  `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`. Derived, not asserted:
+  `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` → `A1 … D32 rows: 0` and the new
+  `A3` advisory listing all `4` proposed cells; `run_feature_matrix_probes.sh` → `probes: 12 pass / 0 fail`,
+  including an arm that removes the markers and requires the A3 count to fall. The defect closes as a
+  *matrix* gap; the roadmap amendment stays pending the director's ruling, kept visible by A3 on every run
+  and carried into the G0 exit review by `.15`.
 
 - **D33** — the reference fixture's waist geometry was arithmetically wrong, and its own oracle could not
   see it: §5 step 2 placed the waist side point at `quarter_waist − ss_suppress` = 15.5 cm from CF, while
@@ -557,6 +572,11 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     function of this repository is derived or gated, never remembered.
   - Owner: `G0-CONTRACT.13d` (**fixed in this commit** — the row carries the corrected counts *and* the
     two commands that derive them, so the next reader can falsify it in one line instead of trusting it).
+    **Second instance, found and removed by `G0-CONTRACT.4b`:** the same file's `PLANNING` row claimed
+    "142 leaves" and its `SPINE` row "17 of 20 leaves done", where the trees now hold `153` leaf ids
+    (count them with grep over the leaf-id lines of `docs/tasks/*.md`) and `SPINE` has `23`. Neither count has a
+    producer, so both rows now state what their named instrument prints, or name the open leaves instead of
+    counting them — the remedy `CLAIM_VERIFICATION.md` §5B prescribes, applied rather than cited.
 
 - **D37** — `DEV_NOTES.md` described itself 148 lines into itself: the paragraph saying what the surface is
   ("Detailed technical notes … Newest first") sat *below* every lesson, immediately above the bootstrap
@@ -606,6 +626,60 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     2 fail`, `SUFFIX` and `REAL` both red. After the fix: `probes: 7 pass / 0 fail`.) D29's reproduce lines
     in this census still quote the old `[a-c]?` shape; they are a record of what was run then, and are left
     as written rather than edited into a command nobody ran.
+
+- **D40** — a sealed segment's **digest** is verified for every file in `docs/history/`, but its
+  **Coverage** and **pointer** claims are verified only for changelog segments: the ledger probe's COVERAGE
+  rule reads work-unit ids out of a `**Coverage:**` line and its POINTER rule compares
+  `stitchcad-changelog-part*.md` against `CHANGELOG.md`, so the dev-notes segment sealed by
+  `G0-CONTRACT.4b` carries a coverage list and a pointer table that nothing checks.
+  - Reproduce: `grep -c devnotes docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` → `3`, all
+    of them the digest arm; then break a claim the digest cannot see — rename a lesson inside
+    `docs/history/stitchcad-devnotes-part1.md`'s Coverage list, or delete `DEV_NOTES.md`'s pointer row — and
+    `make probes` stays green at `8 pass / 0 fail`.
+  - Impact: the repository now has a second rolling ledger with an archive whose descriptor claims are
+    unverified, so a rolled segment could claim a coverage it does not have. That is the D30 class — a
+    pointer sending a reader to a segment that does not contain what they came for — in a file the D30 fix
+    does not reach, and it arrived with the first non-changelog rollover rather than being imagined.
+  - Owner: `SPINE.19` (new leaf) — generalise the archive verifier per ledger, with a segment registry
+    naming each ledger's live file so COVERAGE and POINTER are derived from it instead of hardcoded to the
+    changelog. Deferred behind product work by the frontier rule; the leg that catches silent content drift
+    (the digest) already covers every segment, and its `DEVNOTES-DIGEST` arm pins that generalisation.
+
+- **D41** — a published measurement did not reproduce: D32's entry cited `0` for
+  `sed -n '/### G3 /,/### G4 /p' ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'`, and the command
+  yields `1`. The same wrong output was quoted in three more places, one of them a sealed changelog segment.
+  - Reproduce: run the cited command → `1`; the matching line is G3's complexity note, "a shirt/trousers
+    intermediate may be inserted without shame". Two candidate causes, both measured: the pattern without
+    `trousers` (`grep -ci 'collar\|button\|pocket'`) → `0`, and G3's **exit bullet alone**
+    (`sed -n '702,708p' ROADMAP.md | grep -ci …`) → `0`. So either the pattern lost a word or the range was
+    narrower than the one written down; the conclusion — no *exit criterion* names the five features — was
+    true either way.
+  - Impact: the claim was right and the citation was wrong, which is the more corrosive of the two: a reader
+    who re-runs a recorded command and gets a different number stops trusting the numbers that are right
+    (`CLAIM_VERIFICATION.md` §4.1, prose must stay true across re-verification). It also hides a real
+    measurement trap — **a section range silently includes that section's notes**, so "no exit criterion
+    mentions X" must be measured over the exit criteria, not over the gate's heading range. `G0-CONTRACT.15`
+    will re-derive every gate clause the same way, so the trap was worth finding now.
+  - Owner: `G0-CONTRACT.4b` (**fixed in this commit** — D32's reproduce line, `.4`'s ROOT CAUSE box and the
+    live DEV_NOTES lesson all carry the corrected pair of commands and the reason; the sealed
+    `stitchcad-changelog-part4.md` citation is immutable, so the `.4b` changelog entry is its superseding
+    record, the shape D30 established). No instrument is owed: the fix is a corrected citation plus the
+    scoping rule, which `.15` inherits.
+
+- **D42** — `docs/tasks/SPINE.md` is past the split threshold the containment registry sets for a tree file
+  and this slice added to it (the `SPINE.19` leaf) without performing the split `G0-CONTRACT.md` just got.
+  - Reproduce: `wc -lc docs/tasks/SPINE.md` → `1096 88341`, against a `tasks_collection` per-part health of
+    `800` lines / `65 536` B and a byte ceiling of `98 304`; the registry's own remedy for that shape is
+    printed in its notes column — "a tree that passes 1000 lines splits its completed-leaf evidence into a
+    sibling file under docs/tasks/ before adding more".
+  - Impact: none today, it is inside the ceiling. The cost of deferring is that whichever slice crosses
+    `98 304` B gets its commit blocked and performs the split under pressure, in a file it was not working
+    on — which is precisely what happened to `.4b` (see D42's sibling evidence in that leaf's NO REGRESSION
+    box). The remedy is mechanical and now demonstrated once, so there is nothing to gain by waiting.
+  - Owner: `SPINE.4.4`, the next `SPINE` leaf in frontier order — split SPINE's completed-leaf checklists
+    into `docs/tasks/SPINE-evidence.md` under the convention `G0-CONTRACT.4b` recorded: the leaf being landed
+    keeps its checklist in the tree file, because `scripts/check_task_acceptance.sh` judges every staged
+    `docs/tasks/*.md` and refuses one with no ticked boxes.
 
 ## Decisions
 
@@ -772,6 +846,15 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 | `PLANNING.4` | `STITCHCAD-PLANNING-0004 (leaf PLANNING.4): product work takes the frontier` | D24 closed; tree complete |
 
 ## Changelog
+
+- `2026-09-30`: D32 resolved by `G0-CONTRACT.4b` — the five unnamed envelope rows now name a proving gate
+  (collar, trousers, buttons, pockets → G3; buttons also G5 for notions; fly → G7, which needs no
+  amendment), the four cells that depend on the roadmap say `(proposed)`, and the exact G3 amendment is a
+  **proposal** quoted current-vs-proposed in
+  `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md` for the director to rule on at
+  `.15`. The census's A1 advisory reports `0` unnamed rows and its new A3 advisory reports the `4` proposed
+  cells on every run. D40 added: the dev-notes rollover this slice performed gave the repository a second
+  sealed archive, and only its digest is verified — `SPINE.19` owns generalising Coverage and POINTER.
 
 - `2026-09-30`: D27 closed by `G0-CONTRACT.13d` — the fixture's waistband is one straight band cut once
   and folded at its midpoint, plus one interfacing piece fused inside the seam lines; five pieces, the

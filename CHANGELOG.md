@@ -25,6 +25,62 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G0-0004b - every envelope feature has a gate that proves it (leaf `G0-CONTRACT.4b`)
+
+Five rows of the supported-envelope matrix said `unnamed (D32)`: roadmap §3.2 promises a classic collar and
+trousers, ontology §4.7 models buttons and pockets, and no gate's exit criteria proved any of them - while
+the census stayed green, because the gap was an advisory. The director ruled on 2026-09-30 that the engineer
+decides it, and reserved one thing: `ROADMAP.md` is his to amend.
+
+- **the assignment**: collar, trousers, button/buttonhole and pocket -> **G3**; buttons also -> **G5**, whose
+  exit already requires a tech pack with a notions list; fly construction -> **G7**, whose exit already
+  requires a supported-envelope statement *with named limitations*, so the deferred row needs no amendment
+  and is treated exactly like the lining row
+- **the reasoning is one rule**: permission is not a criterion. G3's note that an intermediate "may be
+  inserted without shame" schedules nothing, so the proposal adds ONE exit criterion over §3.2's whole
+  garment list - closing the class rather than the four instances - and names the failure mode: a garment the
+  envelope names and no exit criterion proves is a gate failure, not a scope note
+- **a proposal is labelled as one**: the four cells that depend on the amendment say `(proposed)`, the exact
+  text is quoted current-vs-proposed with its line numbers (`ROADMAP.md:701`-`711`) in
+  `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`, and the record states what
+  happens on approval and on rejection. `git diff --name-only HEAD -- ROADMAP.md | grep -c .` -> `0`: the
+  roadmap is untouched. A provisional commitment that reads like a settled one is the same gap in better
+  clothes, so the census gained an **A3** advisory printing all four cells on every run, with a probe arm
+  that removes the markers and requires the count to fall
+- **derived, not asserted**: `run_feature_matrix_census.sh` -> `105 rows / 29 diagnostics / 0 failure(s)`
+  with `D32 rows: 0` (was `5`, re-measured against a synthetic root built from `HEAD`) and `proposed cells:
+  4`; `run_feature_matrix_probes.sh` -> `probes: 12 pass / 0 fail`
+- **D41, found by re-deriving the evidence for D32**: the entry cited `0` for `sed -n '/### G3 /,/### G4 /p'
+  ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'`, and that command yields `1` - the range includes
+  G3's complexity note, which says "a shirt/trousers intermediate". The conclusion was right (over the exit
+  bullet alone, `sed -n '702,708p'`, the count is `0`) and the citation was wrong, in three live places and
+  one sealed segment. All three live citations are corrected with the reason; the sealed `part4` line is
+  immutable, so this entry is its superseding record. The trap generalises: a section range silently includes
+  that section's notes, and `G0-CONTRACT.15` will re-derive every gate clause the same way
+- **the dev-notes rollover this slice's own append triggered**: the four oldest lessons are sealed into
+  `docs/history/stitchcad-devnotes-part1.md` (`66` lines / `5 589` B / `sha256:d3b94e9a…`), proved lossless
+  against `git show HEAD:DEV_NOTES.md` rather than against memory, and the live window is back inside its
+  health at `150` lines / `13 183` B. The ledger probe's `DESCRIPTOR` rule now runs over EVERY
+  `docs/history/*.md` segment (REAL: `11` -> `13` verdicts) with a `DEVNOTES-DIGEST` arm pinning it ->
+  `probes: 8 pass / 0 fail`. Its Coverage and pointer legs stay changelog-only, which is **D40**, owned by a
+  new leaf `SPINE.19`, rather than left implicit in a green run
+- **the token census fired a fifth time at authoring time**: `` `lining` `` and `` `proposed` `` wore token
+  formatting in prose; both were de-tokenized, not exempted -> `276 terms / 8 parts / 145 tokens /
+  0 failure(s)`
+- **the containment ceiling refused this slice, and the registry's own remedy was the fix**: appending the
+  `.4b` checklist put `docs/tasks/G0-CONTRACT.md` at `1182` lines / `104 182` B against a `tasks_collection`
+  per-part byte ceiling of `98 304`, so `make gate` blocked with `104182 bytes exceed the byte ceiling`.
+  A ceiling rises only by a recorded authority and never to land content, so the nine completed-leaf
+  checklists moved to a new sibling `docs/tasks/G0-CONTRACT-evidence.md` (`494` lines / `45 505` B) and the
+  tree file is back inside its health at `729` / `62 087`. The convention is recorded in the tree's decisions
+  with the gate that forces it: `check_task_acceptance.sh` judges EVERY staged `docs/tasks/*.md`, so the leaf
+  being landed keeps its checklist in the tree file - which also means that file's first matching box is now
+  always the current leaf's, closing D15's facet 1 by structure instead of by care. `SPINE.md` is past the
+  same threshold and owes the same split: **D42**, owned by `SPINE.4.4`
+- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `12 suite(s) green`; `make book` ->
+  exit=0; standards census -> `6 registered / 6 designations used / 0 failure(s)`; containment OK with the
+  matrix's two over-health axes recorded in the leaf
+
 ## STITCHCAD-G0-0013d - one waistband, and the instrument that keeps it one (leaf `G0-CONTRACT.13d`)
 
 The reference fixture described two different garments at once for nine commits: §4 published the cut width

@@ -20,6 +20,8 @@
 #   MISSING-ENVELOPE  an envelope garment with no supported row is refused (M5)
 #   BAD-GATE          a gate cell naming a gate roadmap §11 does not have is refused (M6)
 #   DEAD-LINK         a markdown link to a chapter that does not exist is refused (M7)
+#   PROPOSAL-VISIBLE  the A3 advisory really reads the `(proposed)` cells: removing the markers drops the
+#                     count it prints (an advisory that reads nothing prints the same number either way)
 #   MISSING           a root with no matrix REFUSES (exit 2) rather than reporting green over nothing
 #
 # Usage:  bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_probes.sh
@@ -131,6 +133,19 @@ out="$(run "$D")"; rc=$?
 if [ "$rc" -eq 1 ] && grep -q 'links to reference-skirt-TYPO.md, which does not exist' <<<"$out"; then
   ok DEAD-LINK "a link to a chapter that does not exist is refused by name (exit=$rc)"
 else bad DEAD-LINK "a dead link in a normative chapter was accepted (exit=$rc)" "$out"; fi
+
+# ---------------------------------------------------------------- PROPOSAL-VISIBLE (A3 advisory)
+# A3 is an advisory, so no mutation can make the census FAIL on it — the arm asserts the count it prints
+# instead, because an advisory that reads nothing prints the same number either way (the vacuous-green
+# shape the glossary census shipped once as its R1 bug).
+D="$WORK/proposal"; mkroot "$D"
+real_n="$(run "$ROOT" | sed -n 's/^  proposed cells: \([0-9]*\).*/\1/p')"
+sedfile "$D/$MATRIX_REL" 's/| G3 (proposed §11 amendment) |/| G3 |/'
+out="$(run "$D")"; rc=$?
+mut_n="$(sed -n 's/^  proposed cells: \([0-9]*\).*/\1/p' <<<"$out")"
+if [ "${real_n:-0}" -ge 4 ] && [ "${mut_n:-99}" -lt "${real_n:-0}" ] && [ "$rc" -eq 0 ]; then
+  ok PROPOSAL-VISIBLE "A3 reads the cells: $real_n proposed on the real tree, $mut_n with the markers removed"
+else bad PROPOSAL-VISIBLE "A3 did not notice a removed proposal marker (real=$real_n mutated=$mut_n exit=$rc)" "$out"; fi
 
 # ---------------------------------------------------------------- MISSING
 D="$WORK/empty"; mkdir -p "$D"

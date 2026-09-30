@@ -15,18 +15,19 @@
 
 - **Project:** StitchCAD — a sewing CAD, headless Rust core: construction-recipe designs, evidence-bearing
   Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.2, DRAFT until G0 exits.
-- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d`, `.18`. Remaining: `.4b`,
+- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.18`. Remaining:
   `.9`–`.12`, `.14`–`.17`.
-- **Next action:** take **`.4b`** (D32: a proving gate per unnamed envelope row, and the `ROADMAP.md` §11
-  amendment prepared as a *proposal* — the roadmap is the director's to amend) → **`.14`** (governance
-  drafted in full; only naming humans stays blocked) → **`SPINE.4.4`** (maxline health for table-shaped
-  book parts) → **`.9`** (ADR-0003 + the formula language v1: a big chapter, whole slice). The ruling that
-  delegated the first three is `decision_director-ruling-2026-09-30-four-findings.md`; D27 is closed by
-  `.13d`, whose record carries the sources and the re-open condition.
+- **Next action:** take **`.14`** — the governance model drafted in full (sewist-vs-programmer review paths,
+  domain review of profile changes that alter exported bytes, golden-file approval ownership, procurement
+  and its documented fallback); only *naming humans* stays blocked. Then **`SPINE.4.4`** (maxline health for
+  table-shaped book parts) → **`.9`** (ADR-0003 + the formula language v1: a big chapter, whole slice) →
+  `.10`–`.12`, `.15`–`.17`.
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
 - **Push:** 400-commit cadence, **plus** an immediate push whenever an unpushed commit touches CI, a
   doctrine check, `.doctrine/` or `.githooks/` — derive it with `make push-due` (`COMMIT.md`).
 - **In-flight uncommitted work:** none.
 - **Blockers:** `G0-CONTRACT.14` needs named humans from the director (project owner, procurement owner,
-  domain reviewer) and nothing else; `.15` carries D32's roadmap proposal to the G0 exit review.
+  domain reviewer) and nothing else. **Awaiting his ruling:** the `ROADMAP.md` §11 G3 amendment four matrix
+  cells depend on (`decision_d32-proving-gates-proposed-roadmap-amendment.md`), which `.15` puts to him;
+  until then those cells say `(proposed)` and the census's A3 advisory prints them on every run.

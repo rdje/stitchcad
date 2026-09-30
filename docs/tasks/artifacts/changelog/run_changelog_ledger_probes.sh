@@ -15,7 +15,10 @@
 #   ORDER      the live window's entry ids appear in commit order, newest first
 #   NO-DUP     no id in the live window is also an entry of a sealed segment (uniqueness)
 #   DESCRIPTOR every sealed segment's recorded sha256 equals the digest of its sealed content, and its
-#              declared line count equals the content's
+#              declared line count equals the content's. It runs over EVERY `docs/history/*.md` segment,
+#              not only the changelog's, because the rule is content-agnostic — which is what makes a
+#              non-changelog ledger's rollover (the dev-notes segment sealed by `G0-CONTRACT.4b`) watched
+#              by a standing instrument instead of a one-off `shasum` in a task leaf
 #   COVERAGE   every id a segment's descriptor names as covered is actually in that segment
 #   POINTER    the live pointer and the segments on disk name each other, both directions
 #
@@ -119,11 +122,13 @@ ledger_verdicts() {
   if [ -z "${dup// /}" ]; then printf 'NO-DUP PASS no live entry is also sealed\n'
   else printf 'NO-DUP FAIL both live and sealed: %s\n' "$dup"; fi
 
-  # DESCRIPTOR + COVERAGE --------------------------------------------------
-  for f in "$hist"/stitchcad-changelog-part*.md; do
+  # DESCRIPTOR — every sealed segment under docs/history/, whatever ledger it belongs to. The rule is
+  # content-agnostic (a `---` rule, a digest, a declared line count), so it generalises; COVERAGE below is
+  # not, because only a changelog segment's descriptor names work-unit ids.
+  for f in "$hist"/*.md; do
     [ -f "$f" ] || continue
     base="${f##*/}"
-    local rule want_sha got_sha content n want_lines have_lines cov miss exempted
+    local rule want_sha got_sha content want_lines have_lines
     rule="$(grep -n '^---$' "$f" | head -1 | cut -d: -f1)"
     if [ -z "$rule" ]; then printf 'DESCRIPTOR FAIL %s has no --- rule sealing its descriptor from its content\n' "$base"
     else
@@ -142,6 +147,13 @@ ledger_verdicts() {
         printf 'DESCRIPTOR PASS %s: %s lines reproduce sha256:%s…\n' "$base" "$have_lines" "${want_sha:0:16}"
       fi
     fi
+  done
+
+  # COVERAGE — changelog segments, whose descriptors name the work-unit ids they hold ----------------
+  for f in "$hist"/stitchcad-changelog-part*.md; do
+    [ -f "$f" ] || continue
+    base="${f##*/}"
+    local cov miss exempted
     exempted="$(awk -F'\t' -v b="$base" '$1 == b { print $2 }' "$exempt")"
     if [ -n "$exempted" ]; then printf 'COVERAGE SKIP %s exempt — %s\n' "$base" "$exempted"; continue; fi
     cov="$(grep -m1 -oE '\*\*Coverage:\*\*.*' "$f")"
@@ -171,7 +183,7 @@ ledger_verdicts() {
 mkroot() { # a synthetic root: the real ledger copied, to be broken in exactly one way
   local d="$1"; rm -rf "$d"; mkdir -p "$d/docs/history"
   cp "$ROOT/CHANGELOG.md" "$d/CHANGELOG.md"
-  for f in "$ROOT"/docs/history/stitchcad-changelog-part*.md; do [ -f "$f" ] && cp "$f" "$d/docs/history/"; done
+  for f in "$ROOT"/docs/history/*.md; do [ -f "$f" ] && cp "$f" "$d/docs/history/"; done
 }
 REAL_ORDER="$WORK/real_order.txt"
 git log --format='%s' | grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' | awk '!s[$0]++' > "$REAL_ORDER"
@@ -238,6 +250,18 @@ D="$WORK/digest"; mkroot "$D"
 seg="$(ls "$D"/docs/history/stitchcad-changelog-part*.md | head -1)"
 printf '\nOne byte of silent drift in a segment that is supposed to be immutable.\n' >> "$seg"
 arm DIGEST-RED DESCRIPTOR "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT"
+
+# ---------------------------------------------------------------- DESCRIPTOR covers a NON-changelog segment
+# The pin on the generalisation: if the DESCRIPTOR loop is ever narrowed back to
+# `stitchcad-changelog-part*.md`, this arm goes red, because the dev-notes segment would no longer be
+# looked at and a byte of drift in it would be invisible.
+D="$WORK/devdigest"; mkroot "$D"
+if [ -f "$D/docs/history/stitchcad-devnotes-part1.md" ]; then
+  printf '\nOne byte of silent drift in a sealed dev-notes segment.\n' >> "$D/docs/history/stitchcad-devnotes-part1.md"
+  arm DEVNOTES-DIGEST DESCRIPTOR "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT"
+else
+  bad DEVNOTES-DIGEST "no docs/history/stitchcad-devnotes-part1.md to mutate, so the arm proves nothing" ""
+fi
 
 # ---------------------------------------------------------------- COVERAGE has teeth
 D="$WORK/coverage"; mkroot "$D"

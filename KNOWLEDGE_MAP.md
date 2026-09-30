@@ -42,6 +42,7 @@
 ## Active task-trees
 
 - [`BOOTSTRAP.md`](docs/tasks/BOOTSTRAP.md)
+- [`G0-CONTRACT-evidence.md`](docs/tasks/G0-CONTRACT-evidence.md)
 - [`G0-CONTRACT.md`](docs/tasks/G0-CONTRACT.md)
 - [`G1-SLICE.md`](docs/tasks/G1-SLICE.md)
 - [`G2-2D.md`](docs/tasks/G2-2D.md)
@@ -60,6 +61,7 @@
 - [`decision_acceptance-evidence-per-leaf.md`](docs/decisions/decision_acceptance-evidence-per-leaf.md)
 - [`decision_adopted-external-policy-references.md`](docs/decisions/decision_adopted-external-policy-references.md)
 - [`decision_adr-0001-license-and-solver.md`](docs/decisions/decision_adr-0001-license-and-solver.md)
+- [`decision_d32-proving-gates-proposed-roadmap-amendment.md`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)
 - [`decision_director-ruling-2026-09-30-four-findings.md`](docs/decisions/decision_director-ruling-2026-09-30-four-findings.md)
 - [`decision_fixture-oracles-derive-the-finished-dimension.md`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)
 - [`decision_live-document-containment-proportionate-adoption.md`](docs/decisions/decision_live-document-containment-proportionate-adoption.md)

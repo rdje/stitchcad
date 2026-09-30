@@ -26,7 +26,9 @@ Three rules govern the table, and they are requirements, not descriptions:
    pocket drawn as internal lines — is a defect, because the receiver cannot see the substitution.
 2. **A `supported` row names its proof.** "Supported" means a gate's exit criteria include a test over a
    fixture. Where the roadmap names no such gate, the row says `unnamed (D32)` rather than borrowing a
-   gate that never agreed to it; §9 lists those rows.
+   gate that never agreed to it, and where this chapter asks the roadmap to carry a gate it does not carry
+   yet, the cell says `(proposed)` with §9 naming the amendment. Neither shape is a commitment: §9 records
+   the five rows that were unnamed and the proposal that would close them.
 3. **Modelled is not the same as supported.** The ontology specifies objects whose v1 proof nobody has
    scheduled. Such a row is `deferred` with gate **G7**, because G7's exit is a supported-envelope
    statement *with named limitations* — that is where an unproved capability is declared, not hidden.
@@ -45,8 +47,8 @@ chapter is inside that family or explicitly outside it.
 | A-line skirt, waist dart, CB zipper | supported | the [reference fixture](reference-skirt.md) **is** this garment, specified to the millimetre | G2 drafting, export and print; G3 closures | — |
 | darted bodice | supported | roadmap §3.2 and the G3 exit criteria both name it | G3 | — |
 | set-in sleeve with declared cap ease | supported | roadmap §3.2; G3's exit requires ease to be intentional, not an invariant violation | G3 | — |
-| classic collar | supported | roadmap §3.2 names it; **no gate exit proves it** (§9) | `unnamed (D32)` | — |
-| trousers | supported | roadmap §3.2 names it; G3's complexity note allows a trousers intermediate but promises no exit | `unnamed (D32)` | — |
+| classic collar | supported | roadmap §3.2 names it; G3's exit criteria do not, so §9 proposes the amendment that adds it | G3 (proposed §11 amendment) | — |
+| trousers | supported | roadmap §3.2 names it; G3's note permits an intermediate and promises no exit, so §9 proposes the criterion | G3 (proposed §11 amendment) | — |
 | woven fabrics, stable | supported | roadmap §3.2 bounds the envelope to woven garments; the fixture's material is a stable woven | G2 | — |
 | knit or stretch blocks | rejected | roadmap §3.2 names it as unsupported: stretch changes what ease means | G2 | `env_knit_stretch` |
 | leather and non-textile sheets | rejected | roadmap §3.2 names it; the offset and allowance model assumes textile behaviour | G2 | `env_material_leather` |
@@ -106,9 +108,9 @@ chapter is inside that family or explicitly outside it.
 | lining | deferred | ontology §4.7 models it; no v1 envelope garment is lined and no gate proves it | G7 | `env_lining` |
 | zipper, centred | supported | ontology §4.7; the fixture's CB closure is an 18.0 cm centred zipper | G2 | — |
 | hook and bar | supported | ontology §4.7; the fixture's waistband closes with one on its extension | G2 | — |
-| button and buttonhole | supported | ontology §4.7 derives the hole from the button; **no gate exit proves it** (§9) | `unnamed (D32)` | — |
-| fly construction | deferred | a trouser fly follows the trousers themselves, which no gate proves (§9) | `unnamed (D32)` | `env_fly` |
-| pocket | supported | ontology §4.7 models position, orientation, opening type and composition; **no gate proves it** (§9) | `unnamed (D32)` | — |
+| button and buttonhole | supported | ontology §4.7 derives the hole from the button; the fixture closes with a zip and a hook, so the proof needs a garment carrying one | G3 (proposed §11 amendment); G5 notions | — |
+| fly construction | deferred | a fly follows the trousers, and v1 refuses it: rule 3 of §1 puts an unproved capability in the gate that declares limitations | G7 | `env_fly` |
+| pocket | supported | ontology §4.7 models position, orientation, opening type and composition; no fixture carries one yet, so §9 proposes the garment that does | G3 (proposed §11 amendment) | — |
 | notions matched to geometry | supported | roadmap §7.5 puts notions in the tech pack; roadmap §9 makes completeness a release check | G5, G7 | — |
 
 ## 6. Measurements, sizes and instantiation
@@ -181,22 +183,47 @@ roadmap's own list; the diagnostic is what a user or an agent receives instead o
 | spreading and colorway management | rejected | roadmap §1.3 | G7 or later | `ngo_spreading_colorway` |
 | print and artwork placement | rejected | roadmap §1.3; a stripe reference constrains placement, artwork is not geometry | G7 or later | `ngo_print_placement` |
 
-## 9. Rows whose proof nobody has been asked for
+## 9. Rows the roadmap's gates did not schedule, and the gates proposed to carry them
 
-Rule 2 of §1 forbids borrowing a gate. These rows are `supported` because roadmap §3.2 or ontology §4.7
-puts them inside the envelope, and their `Proven at` cell says `unnamed (D32)` because no gate's exit
-criteria mention them. That is a gap in the roadmap's gate list, not in the product's ambition, and it is
-recorded as defect **D32**: gate G7 cannot declare an envelope that features of its own were never tested
-against, and G0's exit review (`G0-CONTRACT.15`) must put the assignment to the director rather than let
-this chapter invent a commitment on a gate's behalf.
+Rule 2 of §1 forbids borrowing a gate, so five rows carried `unnamed (D32)`: a feature inside the envelope
+that no gate's exit criteria proved. Defect **D32** recorded the gap, and the director ruled on
+`2026-09-30` that the engineer decides it — with one reservation, that **`ROADMAP.md` is his to amend**
+(`docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`). So each row now names the gate
+that should carry it, the cell says `(proposed)`, and the exact amendment text is a **proposal** in
+`docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`: not applied to the roadmap, and
+not a commitment any gate has accepted. `G0-CONTRACT.15` puts the proposal to the director before G0
+closes; if he rejects it the cells revert to `unnamed (D32)` and the census's A1 advisory lights up again.
 
-| Feature | Named by | Why no gate proves it |
+| Feature | Named by | Proposed proof |
 | --- | --- | --- |
-| classic collar | roadmap §3.2's envelope list | G3's exit names a bodice and a set-in sleeve; a collar adds a stand, a fall and a roll line nobody scheduled |
-| trousers | roadmap §3.2's envelope list | G3's note allows "a shirt/trousers intermediate … without shame", which is permission, not a criterion |
-| button and buttonhole | ontology §4.7's `Closure` object | the fixture closes with a zipper and a hook and bar, so no gate ever meets a button |
-| pocket | ontology §4.7's `Pocket` object | no envelope garment in the fixture set carries one |
-| fly construction | follows trousers | a fly is a trouser feature, so it inherits the same gap and is `deferred` until trousers are proven |
+| classic collar | roadmap §3.2's envelope list | G3 (proposed) |
+| trousers | roadmap §3.2's envelope list | G3 (proposed) |
+| button and buttonhole | ontology §4.7's `Closure` | G3 (proposed) + G5 notions |
+| pocket | ontology §4.7's `Pocket` | G3 (proposed) |
+| fly construction | follows trousers | G7 — already covered |
+
+Why each lands where it does:
+
+- **classic collar → G3.** A stand, a fall and a roll line are construction geometry, and G3 is the gate
+  that proves construction; its bodice already supplies the neckline a collar attaches to.
+- **trousers → G3.** G3's own complexity note contemplates a trousers intermediate, and the amendment
+  turns that permission into a criterion: a crotch curve, an inseam and a waistband stress the drafting
+  and grading engine differently from a skirt, which is the point of the gate.
+- **button and buttonhole → G3, with G5 for the notions.** The rule that matters is the derivation — a
+  buttonhole's length is computed from its button and never entered twice (ontology §4.7) — and a
+  derivation is construction semantics. G5's exit criteria already require a tech pack whose notions list
+  is complete enough for a factory quote, so the second half needs no amendment.
+- **pocket → G3.** Position, orientation, opening type and piece composition are construction, and the
+  trousers above are the envelope garment that carries one.
+- **fly construction → G7, and no amendment is needed.** v1 refuses a fly with `env_fly`, and rule 3 of §1
+  puts a modelled-but-unproved capability in the gate whose exit is a supported-envelope statement *with
+  named limitations* — exactly what the matrix's lining row already does.
+
+The rule the proposal rests on is that **permission is not a criterion**. A note saying an intermediate
+garment "may be inserted without shame" schedules nothing, and an envelope feature no exit criterion names
+is a feature G7 would have to declare untested. So the amendment closes the *class* rather than the four
+instances: every garment roadmap §3.2 names drafts, grades and exports at the gate that owns construction,
+and a garment the envelope names with no exit criterion proving it is a gate failure, not a scope note.
 
 ## 10. The diagnostic contract
 
@@ -249,7 +276,8 @@ Gate G7's exit is "a supported-envelope statement with named limitations". This 
 the statement is a projection of it rather than a rewrite:
 
 - the supported garment family, with the fixture that proves each member;
-- every `supported` row whose `Proven at` gate has actually passed, and every row still `unnamed (D32)`;
+- every `supported` row whose `Proven at` gate has actually passed, every row still `unnamed (D32)`, and
+  every row whose gate is a *proposal* §9 records, because an unratified commitment is a limitation too;
 - every `deferred` row with the gate or track that owns it, so a limitation has an owner and not a date;
 - every `rejected` row, because a refusal a partner does not know about is a refusal they will test;
 - the diagnostic tokens, so a receiver's rejection email can be matched to a row of this table.
@@ -263,13 +291,17 @@ the statement is a projection of it rather than a rewrite:
 - **The staged notch set, the curve set, the SVG demotion, the dev-shell ruling and the TypeScript ban** —
   *cited from the roadmap* at §15 item 12, §4.2, §7.5 and ADR-0002 respectively.
 - **Every `Proven at` gate** — *derived from that gate's own exit criteria* in roadmap §11, not assumed.
-  Where no exit criterion mentions the feature the cell says `unnamed (D32)`, and §9 lists those rows:
-  that list is the defect's evidence.
+  Where no exit criterion mentions the feature, the cell either says `unnamed (D32)` — the rule §1 states,
+  and no row says it today — or carries `(proposed)`, with §9 naming the amendment that would cover it. A
+  proposed cell is a claim about a *draft* of the roadmap, never about the roadmap as it stands.
 - **The diagnostic tokens and their arguments** — *a project decision*, not an external claim. No
   receiver's behaviour is asserted here; the tokens name what this product says when it refuses.
-- **Collar, trouser, button, pocket and fly construction** — *unverified as v1 commitments*. They are
-  inside the envelope roadmap §3.2 declares and outside every gate's exit criteria, which is exactly the
-  gap D32 records and `G0-CONTRACT.15` must put to the director before G0 closes.
+- **Collar, trouser, button and pocket construction** — *proposed v1 commitments, not ratified ones*.
+  They are inside the envelope roadmap §3.2 declares and outside every gate's exit criteria; §9 names the
+  gate each should be proved at and the decision record carries the exact amendment text as a **proposal**.
+  Until the director rules, the honest status is that the envelope promises them and no gate has accepted
+  the proof. The **fly** needs no ruling: it is `deferred`, refused with `env_fly`, and G7's existing exit
+  criteria already require the limitation to be named.
 
 ## 13. How the coverage claim is derived
 
@@ -302,5 +334,6 @@ decision, and the census only proves the decision was written down.
 - **The envelope is closed under the ontology:** adding an object clause to the ontology without a matrix
   row citing it fails the census, not a reviewer's memory.
 - **A supported row cannot quietly lose its gate:** the census refuses a blank or prose `Proven at` cell.
-- **The five `unnamed (D32)` rows stay visible:** the census reports their count on every run, so the gap
-  cannot be closed by being forgotten.
+- **Neither the gap nor a proposal can be forgotten:** the census reports the count of `unnamed (D32)`
+  rows (advisory A1 — zero today) and the count of cells marked `(proposed)` (advisory A3 — four today) on
+  every run, so an unratified commitment stays as visible as an unassigned one.

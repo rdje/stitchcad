@@ -269,6 +269,23 @@ mechanically-enforced form:
   Verification: recorded below — three arms re-run against the derived set.
   Commit: `STITCHCAD-SPINE-0018`
 
+- ID: `SPINE.19`
+  Status: `pending` (created by `G0-CONTRACT.4b`, which performed the first non-changelog rollover and
+  found the archive verifier hardcoded to one ledger — defect **D40**; deferred behind product work by
+  `decision_product-work-takes-the-frontier.md`)
+  Goal: make the sealed-archive verifier ledger-agnostic. `docs/history/` now holds two ledgers'
+  segments — the changelog's four and the dev notes' one — and only the changelog's have their
+  **Coverage** and **pointer** claims checked: `DESCRIPTOR` (digest + declared line count) already runs
+  over every segment, while `COVERAGE` reads work-unit ids and `POINTER` compares
+  `stitchcad-changelog-part*.md` against `CHANGELOG.md`.
+  Acceptance: a segment registry declares, per ledger, its live file, its segment glob and the id shape
+  its coverage line carries; `COVERAGE` and `POINTER` are derived from it, so adding a third ledger is a
+  registry row and not a code change; a RED arm renames a lesson inside the dev-notes segment's coverage
+  list and is caught, and a RED arm deletes `DEV_NOTES.md`'s pointer row and is caught; the existing eight
+  arms stay green; `TOOLBOX.md` and D40 updated in the same commit.
+  Verification: `pending`
+  Commit: `pending`
+
 - ID: `SPINE.5`
   Status: `pending`
   Goal: seed the orientation surfaces — `TOOLBOX.md` project-toolbox rows for the instruments
@@ -379,6 +396,7 @@ mechanically-enforced form:
 | 12 | `SPINE.15` | `pending` | settle D22 against a real renderer and adopt the wide-row convention |
 | — | `SPINE.17` | `done` | taken out of order: a director-approved rule is recorded when it is made |
 | — | `SPINE.18` | `done` | taken immediately after: `.17` shipped a trigger that fired on itself |
+| — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
 
 ## Decisions
 
