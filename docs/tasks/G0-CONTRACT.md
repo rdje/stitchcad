@@ -117,7 +117,7 @@ not a contract.
   Commit: `STITCHCAD-G0-0004`
 
 - ID: `G0-CONTRACT.5`
-  Status: `pending`
+  Status: `done`
   Goal: both instantiation paths specified — measurement-driven regeneration and grade-rule
   instantiation (`.rul`: incremental vs cumulative, stack-point / fixed-perimeter /
   smoothing attributes) — including where they diverge and the declared equivalence
@@ -125,8 +125,10 @@ not a contract.
   Acceptance: the known information loss between the paths is stated, not hidden; extreme-size
   checking after target-system reconstruction is specified; each path names its inputs,
   outputs and oracle.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — the worked example re-derived (both paths agree to `0.00e+00` on this
+  fixture, and the chapter says why that is the fixture's property and not a general result), the loss
+  stated in three parts, eight extreme-size checks each with its class, the book built, gates green.
+  Commit: `STITCHCAD-G0-0005`
 
 - ID: `G0-CONTRACT.6`
   Status: `pending`
@@ -313,8 +315,9 @@ not a contract.
 | 6 | `G0-CONTRACT.1` | `done` | the glossary: 239 terms in 8 domain parts, one owner per machine token, ⚠ on the safety-relevant ones, and a census that derives its coverage |
 | 7 | `G0-CONTRACT.4` | `done` | the supported / rejected / deferred matrix: 105 rows, 29 diagnostics, and a census that derives its coverage of the ontology, the non-goals and the envelope |
 | 8 | `G0-CONTRACT.13c` | `done` | the fixture's waist geometry is arithmetically wrong (D33): drafted as written its finished waist is 46.0 cm, not the declared 74.0 cm, and its own oracle cannot see it. `.5` uses this fixture for its divergence example, so the numbers must be right first |
-| 9 | `G0-CONTRACT.5` | `pending` | **next** — both instantiation paths: regeneration and `.rul` grade rules, where they diverge, and the declared equivalence tolerance. It also owns the three `.rul` attributes (`stack point`, `fixed perimeter`, `smoothing`) the glossary deliberately leaves unspecified |
-| 10 | `G0-CONTRACT.6`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
+| 9 | `G0-CONTRACT.5` | `done` | both instantiation paths, the three-part information loss, the `.rul` attributes given StitchCAD semantics, the equivalence contract and the eight extreme-size checks |
+| 10 | `G0-CONTRACT.6` | `pending` | **next** — size-set ownership: the decision record plus the chapter on labels vs order, base size, multi-dimensional charts and the EN 13402 / ASTM D5585 mappings |
+| 11 | `G0-CONTRACT.7`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -656,6 +659,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-29` | `G0-CONTRACT.18` (CI verdict, observed after the exceptional push) | `git push origin main`; GitHub Actions runs API for `head_sha=119946b` | `051a075..119946b  main -> main`, ahead `0`; **`rust` completed `success`** (first execution of the new wasm32 smoketest step) and **`doctrines` completed `success`**; `runs: 2`, both concluded |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 | `2026-09-29` | `G0-CONTRACT.13b` | token census over the fixture at `HEAD` vs the working tree; `python3` re-derivation of both waistband readings; `make book`; `make gate` | undeclared tokens `19` → `6`, the six being glossary vocabulary; folded band `10.0` cm vs faced `6.0` cm per piece, so §4 and §6 are different garments (D27); no §4 result changed; `exit=0` both |
+| `2026-09-30` | `G0-CONTRACT.5` | `python3` re-derivation of the graded fixture (15 quantities, both routes); glossary and feature-matrix censuses; `make book`; `make gate`; containment | side-seam length `43.104524` cm by both paths, difference `0.00e+00`; graded `waist_closure` `19.500 = 19.500`; `270 terms / 0 failure(s)`; `105 rows / 0 failure(s)`; `exit=0`, 7 spec pages; chapter `254` lines / `19 496` B |
 | `2026-09-30` | `G0-CONTRACT.13c` | `python3` re-derivation of all 18 §4 rows and of both waist readings; glossary census; `make book`; `make gate` | `0` mismatches; finished waist `74.0` cm (was `46.0` as written); `waist_closure` `18.5 = 18.5`; dart centre `11.25`; `265 terms / 0 failure(s)`; `exit=0` both |
 | `2026-09-30` | `G0-CONTRACT.4` | feature-matrix census; both probe suites; glossary census; `make book`; `make gate`; `make probes`; containment | `105 rows / 29 diagnostics / 0 failure(s)`; `probes: 10 pass / 0 fail` twice; `265 terms / 8 parts / 0 failure(s)`; `exit=0`, 6 spec pages; `=== all doctrines green ===`; `10 suite(s) green` |
 | `2026-09-30` | `G0-CONTRACT.1` | glossary census; both probe suites; `make book`; `make gate`; `make probes`; `make check`; containment | `239 terms / 8 parts / 138 tokens / 0 failure(s)`; `probes: 10 pass / 0 fail` and `6 pass / 0 fail`; `exit=0`, 9 pages rendered; `=== all doctrines green ===`; `9 suite(s) green` — detail in the checklist |
@@ -674,10 +678,18 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.1` | `STITCHCAD-G0-0001 (leaf G0-CONTRACT.1): the glossary` | 239 terms, 8 parts, one census and two probe suites; D29/D30/D31 fixed by the rollover |
 | `G0-CONTRACT.4` | `STITCHCAD-G0-0004 (leaf G0-CONTRACT.4): the supported envelope` | 105 rows, 29 diagnostics; D32 logged and kept visible by the census |
 | `G0-CONTRACT.13c` | `STITCHCAD-G0-0013c (leaf G0-CONTRACT.13c): the fixture's waist, corrected` | D33 fixed; §4 gains `waist_closure`; the general rule is a layer-C record |
+| `G0-CONTRACT.5` | `STITCHCAD-G0-0005 (leaf G0-CONTRACT.5): both instantiation paths` | the loss stated in three parts; the fixture grades exactly, and the chapter says why that proves nothing general |
 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-30`: `.5` landed — both instantiation paths are normative: inputs, process, outputs, authority
+  and oracle per path; grade points as `PointRef`s; allowances re-derived rather than graded (with the
+  corner consequence stated); `stack point` / `fixed perimeter` / `smoothing` given StitchCAD semantics and
+  their `.rul` encoding marked for confirmation at G3; the information loss in three parts; an equivalence
+  contract that reports and never reconciles; eight extreme-size checks run after target-system
+  reconstruction. The graded reference skirt agrees between paths to `0.00e+00`, and §4 records that this is
+  the fixture's affinity, not a general result — the tolerance is exercised at G3.
 - `2026-09-30`: `.13c` landed — the fixture's waist geometry is corrected (D33): the side point moves from
   `quarter_waist − ss_suppress` (15.5 cm) to `quarter_hip − ss_suppress` (22.5 cm), so the finished waist is
   the declared 74.0 cm instead of 46.0 cm; both dart centres move 7.75 → 11.25 cm; §4 gains `waist_closure`,

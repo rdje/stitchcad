@@ -17,14 +17,15 @@
 | derived | a value computed from others, whose uncertainty state follows its inputs | [ontology §5](../ontology.md) | computed, calculated | `derived` |
 | diagnostic ⚠ | a message with a stable code, typed arguments and units; never prose an agent must parse | roadmap §7.8 · specified by `G0-CONTRACT.16` | error message, finding, warning | diagnostic code |
 | disposition | the recorded human decision about an unresolved unknown at release time | roadmap §9 · specified by `G0-CONTRACT.12` | resolution, waiver (⚠ not the same) | — |
+| equivalence report | the per-quantity comparison of the two instantiation paths, carried as release evidence rather than logged | [instantiation paths §6](../instantiation-paths.md) | path comparison, divergence report | — |
 | evidence ⚠ | a scoped record: target system, version, import settings, artifact hashes, procedure, observer, date, result | roadmap §8 · specified by `G0-CONTRACT.12` | proof, validation record, *Nachweis* | `evidence` |
 | Factory Profile ⚠ | the versioned bundle of typed parameters and constraints that turns a design into a factory's bytes | roadmap §8 · specified by `G0-CONTRACT.12` | profile, factory settings, target profile | `profile_id` |
 | hard restriction | a constraint that outranks every factory override — a safety or design limit | roadmap §8 | hard constraint, non-negotiable | `hard_restriction` |
 | known | a fact with scoped evidence behind it; the only state that needs no qualifier on export | [ontology §5](../ontology.md) | established, verified | `known` |
 | manifest | the immutable record of what a release package contains and what was true when it was built | roadmap §9 · specified by `G0-CONTRACT.12` | bill of the package, release record | — |
 | package completeness | the check that every piece, size, multiplicity, material and companion file is actually there | roadmap §9 · specified by `G0-CONTRACT.12` | completeness check, "nothing missing" | — |
-| preference | an overridable default that carries its provenance, unlike an invented value | [ontology §5](../ontology.md) | default, house preference | `preference` |
 | precedence | the order conflicts are resolved in: hard restriction > factory override > preference > default | roadmap §8 | composition order, priority | `precedence` |
+| preference | an overridable default that carries its provenance, unlike an invented value | [ontology §5](../ontology.md) | default, house preference | `preference` |
 | production release | the artifact class a factory cuts from, and the strictest column of the policy matrix | roadmap §8.2 · specified by `G0-CONTRACT.12` | release, production package, *Produktionsfreigabe* | — |
 | provenance | where a value came from, recorded with it — a source, a profile, an assumption, a formula | [ontology §2.2](../ontology.md) | origin, lineage, *Herkunft* | `source` |
 | release package | the immutable set of artifacts plus manifest that a factory receives | roadmap §9 · specified by `G0-CONTRACT.12` | package, delivery, signoff package | — |

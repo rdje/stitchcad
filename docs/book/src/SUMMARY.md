@@ -17,4 +17,5 @@
   - [Units and tolerances](spec/units-and-tolerances.md)
   - [Garment ontology](spec/ontology.md)
   - [The supported envelope](spec/feature-matrix.md)
+  - [Instantiation paths](spec/instantiation-paths.md)
   - [The reference skirt](spec/reference-skirt.md)

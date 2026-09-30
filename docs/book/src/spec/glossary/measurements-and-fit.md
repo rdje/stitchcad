@@ -9,17 +9,19 @@
 | --- | --- | --- | --- | --- |
 | base size | the single size a design is drafted in and that every other size is derived from | [ontology §2.3](../ontology.md) | base, block size, sample size, *Grundschnittgröße* | `base_size` |
 | body measurement | a dimension of the **person**, taken between named landmarks by a documented procedure | [ontology §2.1](../ontology.md) | body size, net measure, "the measurement" | kind `body` |
-| cumulative grading | a grade-rule table whose deltas are all measured **from the base size** | roadmap §3.3 · specified by `G0-CONTRACT.5` | absolute grading, "from base" | `cumulative` |
+| cumulative grading | a grade-rule table whose deltas are all measured **from the base size** | [instantiation paths §3](../instantiation-paths.md) | absolute grading, "from base" | `cumulative` |
 | custom size chart | a size system that is neither EN 13402 nor ASTM D5585 — a factory's or a client's own | [ontology §2.3](../ontology.md) | house chart, bespoke chart, private label chart | `custom` |
+| declared zero | a grade delta of zero the recipe states on purpose, which a round trip must not confuse with a point a table never mentioned | [instantiation paths §5](../instantiation-paths.md) | explicit zero, graded-by-nothing | — |
 | depth | a vertical distance between two landmarks, e.g. waist-to-hip; not a girth and not a length along a seam | [ontology §2.1](../ontology.md) | drop, rise (on trousers), *Höhe* | — |
-| ease | the deliberate difference between a body measurement and the garment measurement at the same place | [ontology §2.2](../ontology.md) | wearing ease, slack, room, *aisance*, *Zugabe* | `Ease` |
 | design ease | ease added for style rather than for movement — the flare of an A-line, the volume of a coat | [ontology §2.2](../ontology.md) | style ease, fashion ease | → `Ease` |
+| ease | the deliberate difference between a body measurement and the garment measurement at the same place | [ontology §2.2](../ontology.md) | wearing ease, slack, room, *aisance*, *Zugabe* | `Ease` |
+| extreme size | the largest or smallest size of a set, always checked after the target system reconstructs it and never only at the base | [instantiation paths §7](../instantiation-paths.md) | end size, size-run edge, *Randgröße* | — |
 | fit intent | the named class an ease value belongs to, so a fit can be compared, filtered and validated | [ontology §2.2](../ontology.md) | fit block, silhouette class, "the fit" | `close` · `semi` · `loose` |
-| fixed perimeter | a grade-rule attribute that keeps a length constant across sizes instead of grading it | roadmap §3.3 · specified by `G0-CONTRACT.5` | locked perimeter, non-graded edge | — |
+| fixed perimeter | a grade-rule attribute that keeps a length constant across sizes instead of grading it | [instantiation paths §3](../instantiation-paths.md) | locked perimeter, non-graded edge | — |
 | girth | a **circumference** taken around the body or the garment, not a flat width | [ontology §2.1](../ontology.md) | circumference, "the measure around", *Umfang* | `*_girth` |
 | grade point | a point of a piece that a grade rule moves, addressed by identity and never by index | [ontology §1](../ontology.md) | grading point, nest point, rule point | `grade_point` |
 | grade rule | a per-point X/Y delta that produces another size from the base size | roadmap §3.3 · specified by `G0-CONTRACT.5` | grading rule, nest rule, *Gradierung* | `grade_rule` |
-| incremental grading | a grade-rule table whose deltas are measured **from the previous size** | roadmap §3.3 · specified by `G0-CONTRACT.5` | relative grading, "size to size" | `incremental` |
+| incremental grading | a grade-rule table whose deltas are measured **from the previous size** | [instantiation paths §3](../instantiation-paths.md) | relative grading, "size to size" | `incremental` |
 | landmark ⚠ | the anatomical or garment point a measurement starts or ends at; without it the number is not repeatable | [ontology §2.1](../ontology.md) | reference point, anatomical point, measuring point | `landmark` |
 | made-to-measure (MTM) | production from one person's measurements, which is what regeneration is for | roadmap §3.3 | bespoke, individual cut, custom fit | — |
 | measurement | one named scalar with a unit, a landmark, a procedure and an uncertainty state | [ontology §2.1](../ontology.md) | dimension, value, "the number" | — |
@@ -28,13 +30,14 @@
 | point of measure (POM) ⚠ | a dimension **of the garment**, measured on the finished piece at a declared place | [ontology §2.1](../ontology.md) | POM, spec measurement, finished measure, *Maßstelle* | kind `garment` |
 | procedure | the documented way a measurement is taken — tape position, posture, tension, which side | [ontology §2.1](../ontology.md) | measuring method, "how to measure", *Messanleitung* | `procedure` |
 | ready-to-wear (RTW) | production in a graded size range, which is what grade-rule instantiation is for | roadmap §3.3 | off-the-rack, confectie, *Konfektion* | — |
+| reconstruction | rebuilding the geometry between moved grade points — what a receiver's own system does with a `.rul` | [instantiation paths §3](../instantiation-paths.md) | regeneration (⚠ a different thing), rebuild | — |
 | shrinkage | a material's dimensional change after a declared treatment, applied as an explicit transformation | [ontology §6](../ontology.md) | contraction, fabric loss, *Einlaufwert* | `shrinkage_xy_pct` |
-| size break | the interval between two adjacent sizes in one dimension — the "2 inch jump" of a grade | roadmap §3.3 · specified by `G0-CONTRACT.5` | grade interval, jump, increment | `size_break` |
+| size break | the interval between two adjacent sizes in one dimension — the "2 inch jump" of a grade | [instantiation paths §3](../instantiation-paths.md) | grade interval, jump, increment | `size_break` |
 | size chart | a table of POMs across the sizes of a size set; the artifact a factory checks the pattern against | [ontology §2.3](../ontology.md) | spec chart, POM sheet, measurement grid | — |
 | size label ⚠ | the **name** of a size ("12", "M", "170/88A"); it is not its position in the range | [ontology §2.3](../ontology.md) | size name, size code, *Größe* | `size_label` |
 | size order ⚠ | the **sequence** sizes are instantiated in, which a label does not determine | [ontology §2.3](../ontology.md) | size run order, grade order, sequence | `size_order` |
 | size set | the sizes a design is instantiated in: labels, their order, the base size, and the size system | [ontology §2.3](../ontology.md) | size range, size run, "the ratio" | `SizeSet` |
-| smoothing | a grade-rule attribute that fairings a graded contour instead of moving each point independently | roadmap §3.3 · specified by `G0-CONTRACT.5` | fairing, curve smoothing, *Ausgleich* | — |
-| stack point | a graded point treated as the anchor of its rule table, so sizes stack rather than drift | roadmap §3.3 · specified by `G0-CONTRACT.5` | anchor point, fixed point, *Aufspringpunkt* | — |
+| smoothing | a grade-rule attribute that fairings a graded contour instead of moving each point independently | [instantiation paths §3](../instantiation-paths.md) | fairing, curve smoothing, *Ausgleich* | — |
+| stack point | a graded point treated as the anchor of its rule table, so sizes stack rather than drift | [instantiation paths §3](../instantiation-paths.md) | anchor point, fixed point, *Aufspringpunkt* | — |
 | wearing ease | the minimum ease a garment needs to be wearable at all, before style is considered | [ontology §2.2](../ontology.md) | movement ease, minimum ease, *Bewegungsweite* | → `Ease` |
 | width (flat) ⚠ | a distance across a garment laid flat — half a girth. Confusing the two halves a pattern | [ontology §2.1](../ontology.md) | flat measure, half girth, "across" | `*_width` |

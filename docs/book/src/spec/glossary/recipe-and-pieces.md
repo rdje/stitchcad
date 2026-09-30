@@ -28,6 +28,7 @@
 | formula graph | the acyclic graph of expressions over measurements, parameters and prior geometry | [ontology §3.1](../ontology.md) | dependency graph, expression graph, "the formulas" | `formula_graph` |
 | hole | a closed internal loop that is cut out of a piece, oriented opposite to the outer boundary | [ontology §4.1](../ontology.md) | internal cutout, void, opening | `hole` |
 | imported geometry | geometry with no history, stored as explicit primitives and always distinguishable from drafted | [ontology §3.1](../ontology.md) | dead geometry, flat import, "dumb" pattern | origin `imported` |
+| instance | the sized result of evaluating a recipe: pieces, sewing graph, closures, labels and the provenance of how it was made | [instantiation paths §2](../instantiation-paths.md) | graded instance, size instance, *Instanz* | `Instance` |
 | internal construction line | non-cutting geometry inside a piece: dart legs, fold lines, placement lines, guidelines | [ontology §4.1](../ontology.md) | internal line, guideline, construction line, *Hilfslinie* | layer `INTCUT` · `8` |
 | knit or stretch block | a block drafted for a fabric that stretches, where the meaning of ease changes; refused in v1 | roadmap §3.2 · named by the [envelope](../feature-matrix.md) | jersey block, stretch sloper, *Strickgrundschnitt* | — |
 | label data ⚠ | the text printed on a piece, complete without consulting anything else | [ontology §4.1](../ontology.md) | piece annotation, marker label, piece ticket | `label` |

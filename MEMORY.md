@@ -16,13 +16,13 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs, versioned
   evidence-bearing Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.2, DRAFT
   until G0 exits.
-- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.5`. Done: `.1` glossary (265 terms),
-  `.2` units, `.3` ontology, `.4` envelope matrix (105 rows), `.13`/`.13b`/`.13c` fixture (waist
-  corrected, D33), `.18` `sc-units` + `sc-core` + G0 CI.
-- **Next action:** write `.5`, both instantiation paths — `docs/book/src/spec/instantiation-paths.md`:
-  regeneration against `.rul` grade rules, where they diverge (the known information loss), the declared
-  equivalence tolerance, extreme-size checking after reconstruction, and the three `.rul` attributes the
-  glossary leaves unspecified (`stack point`, `fixed perimeter`, `smoothing`). Commit `STITCHCAD-G0-0005`.
+- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.6`. Done: `.1` glossary (270 terms),
+  `.2` units, `.3` ontology, `.4` envelope (105 rows), `.5` instantiation paths, `.13`/`.13b`/`.13c`
+  fixture, `.18` `sc-units` + `sc-core` + G0 CI.
+- **Next action:** `.6`, size-set ownership — a decision record (default per roadmap §3.4: referenced by
+  the Design, overridable per Factory Profile with a recorded transformation) plus
+  `docs/book/src/spec/size-sets.md`: labels vs order, base size, multi-dimensional charts, the EN 13402
+  and ASTM D5585 mappings, and which object owns a set. Commit `STITCHCAD-G0-0006`.
 
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
