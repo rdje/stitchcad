@@ -16,13 +16,13 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs, versioned
   evidence-bearing Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.2, DRAFT
   until G0 exits.
-- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.8`. Done: `.1`–`.7` (glossary 275 terms,
-  units, ontology, envelope 105 rows, instantiation paths, size sets, standards registry),
-  `.13`/`.13b`/`.13c` fixture, `.18` `sc-units` + `sc-core` + G0 CI.
-- **Next action:** `.8`, ADR-0001 — one layer-C record coupling license and solver: permissive core,
-  `slvs`/GPLv3 rejected, `sc-sketch` on a custom or least-squares kernel, the BSL-1.1 distinction, what it
-  costs contributors, and the re-open condition (a strong case from the G1 spike). Commit
-  `STITCHCAD-G0-0008`.
+- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.9`. Done: `.1`–`.8`, `.13`/`.13b`/`.13c`,
+  `.18` — glossary (275 terms), units, ontology, envelope (105 rows), instantiation paths, size sets,
+  standards registry, ADR-0001, fixture, `sc-units` + `sc-core` + G0 CI.
+- **Next action:** `.9`, ADR-0003 plus the **formula language v1** — a record and
+  `docs/book/src/spec/formula-language.md`: grammar, units inside expressions, conditionals, name binding,
+  evaluation order, error and dimension rules, worked over the reference skirt; it also names the drafting
+  system that ships as the reference block set. A big chapter — give it a whole slice.
 
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.

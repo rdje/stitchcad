@@ -15,7 +15,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Repo identity & policy (`SPINE`) | In Progress | 17 of 20 leaves done; containment, the acceptance gates and the push cadence are enforced and derived. Remaining `.5`/`.13`/`.15` block no product work |
 | Adopted policy set | Done | README policy, claim verification and the containment doctrine are in-repo, with containment **enforced** by the `LIVE-DOC-SIZE` project doctrine |
 | Defect census | In Progress | 33 logged, 29 closed. Open: D22 (`SPINE.15`), D27 (`G0-CONTRACT.14`), D32 (`G0-CONTRACT.15`, five envelope rows no gate proves) |
-| G0 — product & semantic contract | In Progress | **Active lane.** `.1`–`.7`, `.13`/`.13b`/`.13c`, `.18` done: glossary, units, ontology, envelope, paths, sizes, standards, fixture, `sc-units`. Next `.8` |
+| G0 — product & semantic contract | In Progress | **Active lane.** `.1`–`.8`, `.13`/`.13b`/`.13c`, `.18` done: glossary, units, ontology, envelope, paths, sizes, standards, ADR-0001, fixture, `sc-units`. Next `.9` |
 | G1 — executable architecture slice | Not Started | 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, spikes |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |

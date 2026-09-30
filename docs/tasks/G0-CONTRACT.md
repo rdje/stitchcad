@@ -156,13 +156,15 @@ not a contract.
   Commit: `STITCHCAD-G0-0007`
 
 - ID: `G0-CONTRACT.8`
-  Status: `pending`
+  Status: `done`
   Goal: record ADR-0001 (license × solver) as one coupled decision, per the roadmap default
   (permissive core; `slvs`/GPLv3 rejected; `sc-sketch` uses a custom or least-squares kernel).
   Acceptance: decision record states the options, the coupling, the BSL-1.1 distinction, the
   consequence for contributors and the re-open condition (a strong case from the G1 spike).
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — all five acceptance elements present, indexed with an `answers:` line, the
+  workspace licence field re-read from `Cargo.toml` rather than recalled, and the licence census already
+  owned by `G1-SLICE.15` named as the enforcement.
+  Commit: `STITCHCAD-G0-0008`
 
 - ID: `G0-CONTRACT.9`
   Status: `pending`
@@ -322,8 +324,9 @@ not a contract.
 | 9 | `G0-CONTRACT.5` | `done` | both instantiation paths, the three-part information loss, the `.rul` attributes given StitchCAD semantics, the equivalence contract and the eight extreme-size checks |
 | 10 | `G0-CONTRACT.6` | `done` | size-set ownership decided and recorded; the chapter states the object, the label/order separation, breaks, axes and the five designation systems |
 | 11 | `G0-CONTRACT.7` | `done` | the standards registry: six designations with role, adoption, status and owner; the deferral ledger; and a census that refuses an unregistered citation anywhere in the book |
-| 12 | `G0-CONTRACT.8` | `pending` | **next** — ADR-0001, license × solver as ONE coupled decision: the options, the BSL-1.1 distinction, the consequence for contributors and the re-open condition |
-| 13 | `G0-CONTRACT.9`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
+| 12 | `G0-CONTRACT.8` | `done` | ADR-0001 settled before any solver code exists, as roadmap §5 requires |
+| 13 | `G0-CONTRACT.9` | `pending` | **next** — ADR-0003 plus the formula language v1: grammar, units inside expressions, conditionals, name binding, evaluation order, error and dimension rules, worked over the reference skirt. It also names the drafting system that ships as the reference block set |
+| 14 | `G0-CONTRACT.10`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -776,6 +779,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-29` | `G0-CONTRACT.18` (CI verdict, observed after the exceptional push) | `git push origin main`; GitHub Actions runs API for `head_sha=119946b` | `051a075..119946b  main -> main`, ahead `0`; **`rust` completed `success`** (first execution of the new wasm32 smoketest step) and **`doctrines` completed `success`**; `runs: 2`, both concluded |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 | `2026-09-29` | `G0-CONTRACT.13b` | token census over the fixture at `HEAD` vs the working tree; `python3` re-derivation of both waistband readings; `make book`; `make gate` | undeclared tokens `19` → `6`, the six being glossary vocabulary; folded band `10.0` cm vs faced `6.0` cm per piece, so §4 and §6 are different garments (D27); no §4 result changed; `exit=0` both |
+| `2026-09-30` | `G0-CONTRACT.8` | `grep -n license Cargo.toml`; `grep -rn 'slvs\|GPL' crates/`; `grep -n -i licen docs/tasks/G1-SLICE.md`; `make gate` | `license = "MIT OR Apache-2.0"`, `rc=0`; no `slvs` or GPL reference in any crate, `rc=1`; the licence census is already `G1-SLICE.15`; `=== all doctrines green ===` |
 | `2026-09-30` | `G0-CONTRACT.7` | standards census and its probes; glossary and matrix censuses; `make book`; `make gate`; `make probes`; containment | `6 registered / 6 designations used / 0 failure(s)`; `probes: 6 pass / 0 fail`; `275 terms / 0 failure(s)` after two prose spans were de-tokenized; `105 rows / 0 failure(s)`; `exit=0`, 9 spec pages; chapter `204` lines / `13 849` B, widest `187` |
 | `2026-09-30` | `G0-CONTRACT.6` | glossary, feature-matrix (now with M7 link resolution) and matrix probe suites; `make book`; `make gate`; containment | `275 terms / 8 parts / 0 failure(s)`; `105 rows / 29 diagnostics / 0 failure(s)`; `probes: 11 pass / 0 fail`; `exit=0` with 8 spec pages; chapter `187` lines / `12 812` B |
 | `2026-09-30` | `G0-CONTRACT.5` | `python3` re-derivation of the graded fixture (15 quantities, both routes); glossary and feature-matrix censuses; `make book`; `make gate`; containment | side-seam length `43.104524` cm by both paths, difference `0.00e+00`; graded `waist_closure` `19.500 = 19.500`; `270 terms / 0 failure(s)`; `105 rows / 0 failure(s)`; `exit=0`, 7 spec pages; chapter `254` lines / `19 496` B |
@@ -800,10 +804,17 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.5` | `STITCHCAD-G0-0005 (leaf G0-CONTRACT.5): both instantiation paths` | the loss stated in three parts; the fixture grades exactly, and the chapter says why that proves nothing general |
 | `G0-CONTRACT.6` | `STITCHCAD-G0-0006 (leaf G0-CONTRACT.6): size-set ownership decided` | a layer-C record plus the chapter; quantities stay out of the size set |
 | `G0-CONTRACT.7` | `STITCHCAD-G0-0007 (leaf G0-CONTRACT.7): the standards registry` | six designations, all `cited-from-roadmap`; no quoted clause anywhere in the book |
+| `G0-CONTRACT.8` | `STITCHCAD-G0-0008 (leaf G0-CONTRACT.8): ADR-0001, license × solver` | permissive dual-licensed core, `slvs` rejected, BSL-1.1 kept a separate category, re-open condition in three parts |
 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-30`: `.8` landed — ADR-0001 is one record, not two: the core is dual `MIT OR Apache-2.0`, so
+  `slvs` (GPLv3) is rejected and `sc-sketch` gets a custom or least-squares kernel. The exchange rate is
+  stated (an optional annotation layer is not worth the licence of the product), BSL-1.1 is kept out of the
+  permissive category, no CLA is needed to contribute, an iterative kernel's determinism obligation is named
+  before the kernel exists, and the single re-open condition is written in three parts now so the G1 spike
+  cannot be argued into one later.
 - `2026-09-30`: `.7` landed — the standards registry exists: six designations (ISO 8559, ASTM D5219,
   EN 13402, ASTM D5585, ASTM D6673, AAMA) each with its role, what is adopted, what is not, a status from
   the closed vocabulary and a named owner. All six are `cited-from-roadmap`, so the book quotes no clause
