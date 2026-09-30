@@ -613,7 +613,9 @@ placeholder box (defect D15).
 
 | `2026-09-30` | `SPINE.4.5` (CI verdict, observed after the exceptional push) | `make check`/`gate`/`probes`; `git push origin main`; the Actions runs API for `head_sha=513374c` | `exit=0` all three; `9b58c47..513374c  main -> main`, ahead `0`; `runs: 2` — **`doctrines` completed `success`**, **`rust` completed `success`**, so the revision-aware baseline is verified by a runner and not only here |
 
-| `2026-09-30` | `SPINE.15` | the render oracle and its three arms; both cell-budget derivations; `check_live_doc_size.sh` + `--self-test` + its probes; every book census; `check_table_arity.sh --self-test` and `git diff --stat` on it; `make gate`/`probes`/`book` | `probes: 3 pass / 0 fail` with the raw-pipe row rendered as `A raw pipe in a code span: `x │ y` │ 2` (rightmost cell dropped); `382 B` and `443 B` derived, both `exit=0`; `OK — 87 files measured`, `15 arms, 0 failed`, `probes: 5 pass / 0 fail`; all censuses `0 failure(s)`; the inherited checker untouched; `14 suite(s) green` |
+| `2026-09-30` | `SPINE.15` | the render oracle; both cell-budget derivations; containment + `--self-test` + its probes; every census; `make gate`/`probes`/`book` | `probes: 3 pass / 0 fail`, the raw-pipe row rendered with its rightmost cell dropped; `382 B` and `443 B` derived; `OK — 88 files`, `15 arms, 0 failed`, `probes: 5 pass / 0 fail`; all censuses `0 failure(s)`; `14 suite(s) green` |
+
+| `2026-09-30` | `SPINE.15` (CI verdict, observed after the exceptional push) | `make check`/`gate`/`probes`; `git push origin main`; the Actions runs API for `head_sha=4e34b90` | `exit=0` all three; `513374c..4e34b90  main -> main`, ahead `0`; `runs: 2` — **`doctrines` `success`**, **`rust` `success`** |
 
 ## Commit Log
 
