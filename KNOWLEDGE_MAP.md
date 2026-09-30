@@ -80,6 +80,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_maxline-health-derived-from-the-cell-budget.md`](docs/decisions/decision_maxline-health-derived-from-the-cell-budget.md)
 - [`decision_numerical-contract-fixed-point.md`](docs/decisions/decision_numerical-contract-fixed-point.md)
 - [`decision_product-work-takes-the-frontier.md`](docs/decisions/decision_product-work-takes-the-frontier.md)
+- [`decision_property-tests-dependency-free-recorded-seed.md`](docs/decisions/decision_property-tests-dependency-free-recorded-seed.md)
 - [`decision_reference-fixture-waistband-straight-folded.md`](docs/decisions/decision_reference-fixture-waistband-straight-folded.md)
 - [`decision_release-package-identity-and-scope.md`](docs/decisions/decision_release-package-identity-and-scope.md)
 - [`decision_revision-aware-containment-baseline.md`](docs/decisions/decision_revision-aware-containment-baseline.md)

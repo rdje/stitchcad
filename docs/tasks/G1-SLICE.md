@@ -68,14 +68,16 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0001`
 
 - ID: `G1-SLICE.2`
-  Status: `pending`
+  Status: `done`
   Goal: `sc-units` — fixed-point micrometre quantities (i64), the five tolerance classes as
   distinct types, unit conversions with explicit rounding, rejection of non-finite and
   dimensionally invalid expressions (implements the `G0-CONTRACT.2` spec).
   Acceptance: property tests for conversion round-trips and tolerance-class separation; a
   dimension error is a typed error, never a silent coercion; compiles for `wasm32-unknown-unknown`.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — `sc-units` was delivered in full by `G0-CONTRACT.18` (commit
+  `eb83f01`); every acceptance criterion re-derived by command in the `### G1-SLICE.2` checklist,
+  and the property-test-framework choice recorded as a layer-C decision.
+  Commit: `STITCHCAD-G1-0002`
 
 - ID: `G1-SLICE.3`
   Status: `pending`
@@ -239,7 +241,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.2` | `pending` | `sc-units` — delivered by `G0-CONTRACT.18`; reconcile-and-close is the next slice |
+| — | `G1-SLICE.3` | `pending` | `sc-core` ontology v1 — G1's first new product code; the `G0-CONTRACT.3` spec (`docs/book/src/spec/ontology.md`) is present |
 
 ## Decisions
 
@@ -248,13 +250,16 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   earlier ones and a frontier that jumps is a frontier that stalls.
 - `2026-09-29`: the dev shell (`.14`) is a deliverable of G1, not G2, so the G2 viewer leaf is
   not blocked on the hardest integration in the repository (ADR-0002's stated reason).
+- `2026-09-30`: property tests are dependency-free and hand-rolled with a recorded seed, not
+  `proptest`/`quickcheck` — recorded in
+  `docs/decisions/decision_property-tests-dependency-free-recorded-seed.md` so later crates do not
+  re-litigate it. This resolves the Open Question; the choice was made by `G0-CONTRACT.18` when
+  `sc-units`' suite landed, because that crate must stay dependency-free for `wasm-viewer`.
 
 ## Open Questions
 
 - Which spike runs first, browser (`.12`) or canvas (`.13`)? They share fixtures; decided at gate
   entry, and `.12` is the gate's named exit clause so it wins a tie.
-- Property-test framework choice (`proptest` vs `quickcheck`) — decided in `.2` where the first
-  property tests land, and recorded as a decision record so later crates do not re-litigate it.
 
 ## Blockers
 
@@ -342,12 +347,51 @@ Rust changes; the gate that judges it is the doctrine enforcer plus the re-deriv
   → In Progress), `CHANGELOG.md`, `DEV_NOTES.md` and the regenerated Knowledge Map, all in this commit.
   promotion: declined (instance of the D34 hand-kept-state class `PLANNING.5` owns; this slice fixes the instance, a new record would duplicate that ownership).
 
+### `G1-SLICE.2` (reconciled) — `sc-units` shipped under `G0-CONTRACT.18`, and the property-test choice it made is now a recorded decision
+
+`G0-CONTRACT.18` (commit `eb83f01`) landed `sc-units` in full — 1097 lines of library and 564 lines of
+property tests — as "the first product code", well past the skeleton its own leaf scoped. That is this leaf's
+deliverable, so `.2` closes on the same audit `.1` did: every acceptance criterion re-derived by command, no
+new code. The one thing `eb83f01` left unrecorded was the property-test-framework choice this tree's Open
+Questions deferred to `.2`; closing the leaf records it.
+
+- [x] **REPRODUCE / ISSUE** — the leaf said `pending` while `sc-units` was committed and green:
+  `git show HEAD:docs/tasks/G1-SLICE.md | awk '/ID: .G1-SLICE\.2./{f=1} f&&/Status:/{print;exit}'` →
+  ``  Status: `pending` ``, `rc=0`, against `wc -l crates/sc-units/src/*.rs crates/sc-units/tests/*.rs` →
+  `1723` lines delivered by `eb83f01`. The Open Question "Property-test framework choice … decided in `.2`"
+  was never discharged, so a later crate would re-litigate `proptest` vs `quickcheck`.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the same pre-emption as `.1`: `G0-CONTRACT.18` answered the G0 CI clause
+  by building `sc-units` out fully rather than as a skeleton, and closed only itself. `.2`'s work was done but
+  its leaf, and the decision the Open Question routed to it, were not recorded.
+- [x] **ADDRESSED (verified)** — each acceptance criterion re-derived. (1) Property tests for conversion
+  round-trips and tolerance-class separation: `cargo test -p sc-units --test property` → `test result: ok. 21
+  passed; 0 failed`, including `conversion_round_trips_for_integral_units` (line 62),
+  `the_classes_disagree_so_they_are_load_bearing` (448) and `counts_are_their_own_dimension` (500). (2) A
+  dimension error is a typed error, never a silent coercion: `UnitError` (`crates/sc-units/src/error.rs`)
+  carries `DomainExceeded`/`DivisionByZero`/`NonFinite`/`Overflow`/`EmptyDerivation`, and
+  `non_finite_floats_are_rejected_at_the_boundary` (291) proves the boundary rejects NaN/inf. (3) Compiles for
+  `wasm32-unknown-unknown`: `make wasm` → `wasm-viewer smoketest: sc-units + sc-core build for
+  wasm32-unknown-unknown`. The five tolerance classes are distinct `ToleranceClass` variants (T1–T5,
+  `tolerance.rs`). The framework choice is recorded as
+  `docs/decisions/decision_property-tests-dependency-free-recorded-seed.md` (with `answers:`, listed in the
+  INDEX), resolving the Open Question.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `rc=0`; `make check` green; `make wasm`
+  green. The new decision record is a `docs/decisions` file; the KNOWLEDGE-MAP doctrine confirms the
+  regenerated map is in sync. No Rust staged, so the acceptance gate does not fire.
+- [x] **FIX** — marked `.2` `done`, recorded its verification and commit, resolved the Open Question into the
+  Decisions section and a layer-C record, advanced the frontier to `.3`, and added this subsection.
+- [x] **LOCKSTEP** — `docs/decisions/decision_property-tests-dependency-free-recorded-seed.md` (new) and its
+  INDEX row; `docs/TASK_TREE.md` (frontier cell), `MEMORY.md` (next action), `LIVE_STATUS.md` (G1 row → 2 of
+  16), `CHANGELOG.md`, `DEV_NOTES.md` (the lesson, promoted by the new record's `answers:`) and the
+  regenerated Knowledge Map, all in this commit.
+
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
 | `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
 | `2026-09-30` | `.1` | `cargo metadata --no-deps`; `make check`; `make wasm`; `make gate`; `run_g0_exit_review.sh` | crates `sc-core, sc-units`; `21 passed` property + `1` doc-test; wasm build green; `=== all doctrines green ===`; `G0-17`/`G0-18` `MET` — every `.1` criterion re-derived, `rc=0` |
+| `2026-09-30` | `.2` | `cargo test -p sc-units --test property`; `make wasm`; `make gate` | `21 passed` (round-trips, class separation, typed dimension/non-finite errors); wasm cross-build green; `=== all doctrines green ===` — every `.2` criterion re-derived, `rc=0` |
 
 ## Commit Log
 
@@ -355,7 +399,8 @@ Rust changes; the gate that judges it is the doctrine enforcer plus the re-deriv
 | --- | --- | --- |
 | tree seed | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | created by the seeding leaf |
 | `.1` | `STITCHCAD-G1-0001 (leaf G1-SLICE.1)` | reconciled: delivered by `G0-CONTRACT.18` (`eb83f01`) ahead of this leaf |
-| `.2` … `.16` | `pending` | — |
+| `.2` | `STITCHCAD-G1-0002 (leaf G1-SLICE.2)` | reconciled: `sc-units` delivered by `G0-CONTRACT.18`; property-test decision recorded |
+| `.3` … `.16` | `pending` | — |
 
 ## Changelog
 
@@ -364,3 +409,9 @@ Rust changes; the gate that judges it is the doctrine enforcer plus the re-deriv
   `sc-core` created, G0 CI shape) was delivered by `G0-CONTRACT.18` (`eb83f01`) "ahead of `G1-SLICE.1`";
   every acceptance criterion re-derived by command and recorded in the `### G1-SLICE.1` checklist. D10 was
   already closed by that commit; the frontier advances to `.2`.
+- `2026-09-30`: `.2` reconciled and closed — `sc-units` (fixed-point µm/µ°, the five tolerance classes T1–T5,
+  exact-ratio conversions, typed `UnitError` for domain/overflow/division-by-zero/non-finite) was delivered in
+  full by `G0-CONTRACT.18` (`eb83f01`); its 21 property tests, typed dimension errors and wasm build were
+  re-derived against every acceptance criterion. The property-test-framework Open Question is resolved into
+  the Decisions section and recorded as `decision_property-tests-dependency-free-recorded-seed.md`. The
+  frontier advances to `.3` (the `sc-core` ontology), G1's first new product code.

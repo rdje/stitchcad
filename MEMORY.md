@@ -20,13 +20,13 @@
   director's ruling of `2026-09-30`, and the gate's **closure unapproved** because governance §6.1 withholds
   approval of a decision's evidence from its author. `ROADMAP.md` stays DRAFT, correctly: one criterion is
   not met.
-- **Next action:** take **`G1-SLICE.2`** — reconcile-and-close `sc-units`, whose code (property tests, typed
-  `UnitError`, wasm build) shipped under `G0-CONTRACT.18` ahead of its leaf; recording the property-test
-  framework decision closes it. The frontier then reaches **`G1-SLICE.3`**, the `sc-core` ontology — G1's
-  first new product code. Take the three unproven contracts early rather than the plumbing: the formula
-  evaluator against `run_formula_language_census.sh` as a differential oracle, the canvas spike against the
-  protocol in `docs/tasks/artifacts/canvas_spike/` (its `results.tsv` is empty and `G1-SLICE.13` fills it),
-  and one CSP constraint. Re-run `bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` for the gate state.
+- **Next action:** take **`G1-SLICE.3`** — the `sc-core` ontology v1 (Piece, SeamSpan/SewingGraph, Notch,
+  Grainline, SeamAllowance, darts and closures, with ULID identity and the persistent-identity contract),
+  G1's first new product code, against the `G0-CONTRACT.3` spec at `docs/book/src/spec/ontology.md`. Take the
+  three unproven contracts early rather than the plumbing: the formula evaluator against
+  `run_formula_language_census.sh` as a differential oracle, the canvas spike against the protocol in
+  `docs/tasks/artifacts/canvas_spike/` (its `results.tsv` is empty and `G1-SLICE.13` fills it), and one CSP
+  constraint. Re-run `bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` for the gate state.
 
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
