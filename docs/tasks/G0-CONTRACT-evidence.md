@@ -834,3 +834,63 @@ Order is landing order, oldest first, so this file reads the same way the tree's
   Knowledge Map in this commit. Lesson promotion: declined (the two instrument defects are recorded in this
   checklist and in the tools' own headers, which is where a probe author will look; no new dated lesson was
   added to `DEV_NOTES.md` this slice).
+
+### `G0-CONTRACT.9` — the formula language exists, and its numbers are computed
+
+- [x] **REPRODUCE / ISSUE** — ADR-0003 had two halves and the repository held neither.
+  `git ls-files docs/book/src/spec/ | grep -c formula` → `0`, `rc=1`; `git ls-files docs/decisions/ |
+  grep -c adr-0003` → `0`, `rc=1`. Two chapters already pointed at the missing one —
+  `git show HEAD:docs/book/src/spec/ontology.md | grep -c 'formula-language'` → `1` ("specified in the
+  formula-language chapter") — and the vocabulary had parked the system decision in this leaf:
+  `git show HEAD:docs/book/src/spec/glossary/recipe-and-pieces.md | grep -c 'G0-CONTRACT\.9'` → `2`
+  (`block (pattern)`, `reference drafting`). Roadmap §5 requires the language "specified HERE, not
+  later" and §11's G0 exit clause names it, so the gap was a leaf not yet taken.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the requirement is in two places and neither had an artifact behind
+  it. `grep -n 'specified HERE' ROADMAP.md` → `349:language is specified HERE, not later: operators,
+  units inside expressions,`, `rc=0` — that is §5's ADR-0003, whose second half also requires "a named
+  drafting system ships as reference blocks (v1: free drafting + one documented system, decided at G0)"
+  (`sed -n '345,353p' ROADMAP.md`). `grep -n 'slides into mechanical' ROADMAP.md` → line `831`, whose
+  mitigation cell reads "ADR-0003; formula language specified at G0", `rc=0` — the risk register names the
+  failure this gap produces. Ownership was never in doubt:
+  leaf `.9` held it and the frontier named it next, so the cause is a leaf not taken, and the constraint
+  on *how* to take it is that row: a recipe language specified loosely becomes a solver, and a solver is
+  what roadmap §6.2 and ADR-0001 put elsewhere. The chapter's first exclusion is therefore implicit
+  solving, and its evaluation model is single-pass with no fixpoint.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/formula_language/run_formula_language_census.sh`
+  → `formula-language census: 17 bindings / 4 assertions / 13 refusals / 0 mismatch(es)`, `exit=0`, with
+  `names shared with the fixture: 12 · disagreements: 0`, all four fixture oracles holding as `assert`
+  statements (`280000 = 280000`, `185000 = 185000`, `740000 = 740000`, `80000 = 80000` in internal µm),
+  and each of the 13 refusals raising the token its row names. Discrimination is proved, not assumed:
+  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/formula_language/run_formula_language_probes.sh`
+  → `probes: 15 pass / 0 fail`, including a CONTROL arm that keeps an unrelated prose edit green. Sizes
+  are inside the collection's per-part health (`400` lines / `24 576` B / `275` B): `wc -lc` →
+  `308 20593`, `247 12690`, `92 7116`, widest line `189` B. `make book` → `INFO HTML book written to …`,
+  `exit=0`, with `formula-language.html` and both parts rendered.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `16 suite(s) green`; the neighbouring censuses unchanged: fixture `20 derived rows / 4 closure checks /
+  5 pieces / 0 mismatch(es)`, matrix `105 rows / 29 diagnostics / 0 failure(s)`, standards `6 registered /
+  6 designations used / 0 failure(s)`, coverage `10 lanes / 13 trees / 3 sibling(s) / 0 unowned`,
+  uncertainty `107 markers / 13 files / 0 unowned / 0 failure(s)` (was `88 / 10` — the three new files'
+  markers are all owned); `bash scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 90 files
+  measured`, `exit=0`, at `31 warning(s)` against the `32` before the slice, because four `LIVE_STATUS.md`
+  cells were tightened under D36's third instance and its widest line went `313` B → `213` B inside a
+  `220` B health target. Two instrument bugs were found and
+  fixed while building the census, both recorded in its header: a code-span scanner that paired backticks
+  across newlines read the whole file as one span (a fence's ``` is an odd count) and reported `125`
+  undeclared operators that were EBNF nonterminals, and a link resolver that dropped the leading `/` of an
+  absolute base and so reported every link in the book dead.
+- [x] **FIX** — wrote the three chapter parts; the ADR-0003 record with fourteen language decisions, five
+  read candidates and three re-open conditions; the census and its 15-arm probe suite; `G3-GRADING.16` to
+  own the blocks; twelve glossary terms plus two updated entries with the A–Z index re-derived; SUMMARY,
+  the spec index, the ontology's cross-reference and the fixture's §3 note. **D48 logged and fixed** (a
+  duplicate `## Acceptance Checklist` heading in `G3-GRADING.md` — D15's class by heading instead of by box
+  — and a children range that said `.14` while `.15` was in the file), and **D36's third instance**
+  recorded and removed (`LIVE_STATUS.md` listed D47 open after `SPINE.20` closed it; its probe count is now
+  the command's, not a hand-kept number).
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's decisions and open questions, its
+  three logs; `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`,
+  `TOOLBOX.md` (two instrument rows, and the `make probes` row no longer carries a hand-kept suite count),
+  `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in this
+  commit. Both ledgers rolled over in the commit whose append crossed them (`devnotes-part3` 50 lines /
+  4723 B, `changelog-part8` 106 lines / 9766 B), with `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`
+  reproducing both digests. Lesson promotion: **promoted** — the new record carries an `answers:` line.

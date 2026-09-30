@@ -184,15 +184,20 @@ not a contract.
   Commit: `STITCHCAD-G0-0009`
 
 - ID: `G0-CONTRACT.10`
-  Status: `pending`
+  Status: `done`
   Goal: record ADR-0004 (interchange dialects) and specify the StitchCAD interchange profiles:
   AAMA named layers × ASTM numbered layers, cut-as-1 × sew-as-1, R12 × R13, BLOCK-per-piece,
   SST/PST, grading modes, tessellation policy — with ASTM D6673-10's withdrawal recorded.
   Acceptance: the layer table is reproduced with both naming modes; each mode is a named,
   separately validated export target; no claim of a universal package; every external claim
   carries a verification status.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below and in the acceptance checklist — the chapter is `299` lines /
+  `21 314` B, inside the `book_collection` per-part health of `400` / `24 576`; its census reads the
+  roadmap's own layer bullet and reports `17 layers / 4 targets / 12 entities / 0 failure(s)`; its
+  probe suite is at `13 pass / 0 fail`; the glossary is at `294 terms / 8 parts / 155 tokens /
+  0 failure(s)` with `16` entries repointed from this leaf to a chapter clause; every other census
+  and gate is green.
+  Commit: `STITCHCAD-G0-0010`
 
 - ID: `G0-CONTRACT.11`
   Status: `pending`
@@ -441,8 +446,9 @@ not a contract.
 | 15d | `G0-CONTRACT.19` | `done` | what the project does not know is one command away: the uncertainty census enumerates every marker with its resolving authority and refuses an unowned one |
 | 15b | `G0-CONTRACT.4c` | `done` | the director delegated the finding outright, so `.4b`'s proposal is ruled approved and applied: roadmap **v0.3** carries the envelope-coverage criterion, the four cells are committed gates, and `G3-GRADING.5`/`.15` own the garments |
 | 16 | `G0-CONTRACT.9` | `done` | ADR-0003 landed in full: the formula language v1 as three censused parts (contract, grammar, examples), a reference evaluator that reads the chapter's own tables, Aldrich's metric pattern cutting named as the reference drafting system, and `G3-GRADING.16` created to ship its blocks |
-| 17 | `G0-CONTRACT.10` | `pending` | **next** — ADR-0004 and the interchange profiles: AAMA named layers × ASTM numbered layers, cut-as-1 × sew-as-1, R12 × R13, BLOCK-per-piece, SST/PST, grading modes, tessellation policy, with D6673-10's withdrawal recorded |
-| 18 | `G0-CONTRACT.11`–`.12`, `.15`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
+| 17 | `G0-CONTRACT.10` | `done` | ADR-0004 landed: six axes, a closed registry of four targets, the seventeen-layer table in both naming modes read against the roadmap itself, one polyline-only entity set with arcs exact as bulges, three grading carriages, and the receiver-config record |
+| 18 | `G0-CONTRACT.11` | `pending` | **next** — ADR-0002 as a decision *structure*: chrome, the three canvas topologies, the egui/iced dev-shell ruling, the TypeScript domain-logic ban, and the G1 spike protocol whose measurements and decision rule are written now so the outcome cannot be argued later |
+| 19 | `G0-CONTRACT.12`, `.15`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -585,6 +591,26 @@ not a contract.
   assertion refuses the whole recipe, and the fixture's four closure checks are written in the language as
   well as in its chapter — D33's lesson inside the language rather than beside it.
 
+- `2026-09-30`, leaf `.10`: **an export target is a tuple over declared axes, and the registry is closed.**
+  A writer flag nobody validated is a claim about a receiver nobody tested, so a target exists only as a row
+  with a G6 validation behind it, and a tuple outside the registry is refused naming the nearest target. The
+  axes and the registry columns are censused in both directions, so neither a silent axis nor an undeclared
+  column can appear.
+- `2026-09-30`, leaf `.10`: **the layer table is read against `ROADMAP.md`, not transcribed beside it.**
+  Seventeen layers and seven AAMA names are parsed out of the roadmap's own bullet on every run, which is
+  what makes "every layer the convention names is dispositioned" a derived claim — and the instrument's first
+  cut read one wrapped line of that bullet, found `3` layers, and reported `21` chapter breaches that were
+  the instrument measuring a paragraph's first line.
+- `2026-09-30`, leaf `.10`: **one entity set for both releases, arcs exact as bulges, Béziers tessellated.**
+  A per-release entity set is two writers and two ways to disagree with a legacy importer; a standalone
+  `ARC` is refused although its geometry would be exact, because two families for one boundary is the same
+  disagreement wearing a different entity. The census pins the floor and the ceiling of the set, so a quiet
+  widening reddens.
+- `2026-09-30`, leaf `.10`: **what a receiver owns, this chapter does not invent.** SST and PST are required
+  and their field content is deliberately unspecified: the syntax is case-sensitive and receiver-specific, so
+  a field table written at G0 would be a guess in a normative font, and G6 is the only oracle. The same rule
+  keeps layers 84–87 absent rather than filled with placeholder curves no design authored.
+
 ## Open Questions
 
 - Cut-on-fold vs paired front for the reference skirt: roadmap §11 G0 allows either. Decided
@@ -624,65 +650,60 @@ here, because `scripts/check_task_acceptance.sh` judges every staged `docs/tasks
 with no ticked boxes; the next slice moves it across. Neither file carries an unticked placeholder box
 (defect D15).
 
-### `G0-CONTRACT.9` — the formula language exists, and its numbers are computed
+### `G0-CONTRACT.10` — the dialects are a closed registry, and the layer table is read against the roadmap
 
-- [x] **REPRODUCE / ISSUE** — ADR-0003 had two halves and the repository held neither.
-  `git ls-files docs/book/src/spec/ | grep -c formula` → `0`, `rc=1`; `git ls-files docs/decisions/ |
-  grep -c adr-0003` → `0`, `rc=1`. Two chapters already pointed at the missing one —
-  `git show HEAD:docs/book/src/spec/ontology.md | grep -c 'formula-language'` → `1` ("specified in the
-  formula-language chapter") — and the vocabulary had parked the system decision in this leaf:
-  `git show HEAD:docs/book/src/spec/glossary/recipe-and-pieces.md | grep -c 'G0-CONTRACT\.9'` → `2`
-  (`block (pattern)`, `reference drafting`). Roadmap §5 requires the language "specified HERE, not
-  later" and §11's G0 exit clause names it, so the gap was a leaf not yet taken.
-- [x] **ROOT CAUSE (WHY + WHERE)** — the requirement is in two places and neither had an artifact behind
-  it. `grep -n 'specified HERE' ROADMAP.md` → `349:language is specified HERE, not later: operators,
-  units inside expressions,`, `rc=0` — that is §5's ADR-0003, whose second half also requires "a named
-  drafting system ships as reference blocks (v1: free drafting + one documented system, decided at G0)"
-  (`sed -n '345,353p' ROADMAP.md`). `grep -n 'slides into mechanical' ROADMAP.md` → line `831`, whose
-  mitigation cell reads "ADR-0003; formula language specified at G0", `rc=0` — the risk register names the
-  failure this gap produces. Ownership was never in doubt:
-  leaf `.9` held it and the frontier named it next, so the cause is a leaf not taken, and the constraint
-  on *how* to take it is that row: a recipe language specified loosely becomes a solver, and a solver is
-  what roadmap §6.2 and ADR-0001 put elsewhere. The chapter's first exclusion is therefore implicit
-  solving, and its evaluation model is single-pass with no fixpoint.
-- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/formula_language/run_formula_language_census.sh`
-  → `formula-language census: 17 bindings / 4 assertions / 13 refusals / 0 mismatch(es)`, `exit=0`, with
-  `names shared with the fixture: 12 · disagreements: 0`, all four fixture oracles holding as `assert`
-  statements (`280000 = 280000`, `185000 = 185000`, `740000 = 740000`, `80000 = 80000` in internal µm),
-  and each of the 13 refusals raising the token its row names. Discrimination is proved, not assumed:
-  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/formula_language/run_formula_language_probes.sh`
-  → `probes: 15 pass / 0 fail`, including a CONTROL arm that keeps an unrelated prose edit green. Sizes
-  are inside the collection's per-part health (`400` lines / `24 576` B / `275` B): `wc -lc` →
-  `308 20593`, `247 12690`, `92 7116`, widest line `189` B. `make book` → `INFO HTML book written to …`,
-  `exit=0`, with `formula-language.html` and both parts rendered.
+- [x] **REPRODUCE / ISSUE** — ADR-0004 was the last of the four ADRs with neither a record nor a chapter.
+  `git ls-files 'docs/book/src/spec/interchange*' | wc -l` → `0`, and
+  `git ls-files docs/decisions/ | grep -c adr-0004` → `0`, `rc=1`. Three chapters already leaned on the
+  missing one: `git show HEAD:docs/book/src/spec/glossary/interchange-and-envelope.md | grep -c
+  'G0-CONTRACT\.10'` → `16` entries whose canonical object was a leaf rather than a clause,
+  `git show HEAD:docs/book/src/spec/ontology.md | grep -c 'interchange-dialects chapter'` → `1`, and
+  `git show HEAD:docs/book/src/spec/instantiation-paths.md | grep -c 'G0-CONTRACT\.10'` → `2`.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n 'ADR-0004 — Interchange dialects' ROADMAP.md` → `356`, and
+  the clause that makes this a G0 deliverable rather than a writer detail is at `358`: `grep -n 'D6673-10
+  is withdrawn' ROADMAP.md` → `358:- **ASTM D6673-10 is withdrawn (Jan 2019, no replacement)** — record
+  this.`, `rc=0`. A withdrawn specification whose convention cutting rooms still enforce is the reason a
+  dialect is a *named target with a validation behind it* instead of a format with flags: there is no
+  document to conform to, so the oracle can only be a receiver reading the file back. Ownership was
+  unambiguous — leaf `.10` held it and the frontier named it next.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/interchange/run_interchange_census.sh` →
+  `interchange census: 17 layers / 4 targets / 12 entities / 0 failure(s)`, `exit=0`, where the `17`
+  layers and `7` AAMA names are parsed out of `ROADMAP.md`'s own bullet rather than listed beside it, so
+  amending the roadmap's convention reddens this run until the chapter dispositions the change. Its
+  discrimination is proved: `TMPDIR=$PWD/target/scratch bash
+  docs/tasks/artifacts/interchange/run_interchange_probes.sh` → `probes: 13 pass / 0 fail`, including
+  ROADMAP-GROWS (a layer added to a *copy* of the roadmap is refused by number), AXIS-COLUMN (registry
+  column and axis disagreeing in either direction) and CONTROL. The chapter is `303` lines / `21 650` B,
+  widest line `227` B, inside the `book_collection` per-part health of `400` / `24 576` / `275`;
+  `make book` → `INFO HTML book written to …`, `exit=0`.
 - [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
-  `16 suite(s) green`; the neighbouring censuses unchanged: fixture `20 derived rows / 4 closure checks /
-  5 pieces / 0 mismatch(es)`, matrix `105 rows / 29 diagnostics / 0 failure(s)`, standards `6 registered /
-  6 designations used / 0 failure(s)`, coverage `10 lanes / 13 trees / 3 sibling(s) / 0 unowned`,
-  uncertainty `107 markers / 13 files / 0 unowned / 0 failure(s)` (was `88 / 10` — the three new files'
-  markers are all owned); `bash scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 90 files
-  measured`, `exit=0`, at `31 warning(s)` against the `32` before the slice, because four `LIVE_STATUS.md`
-  cells were tightened under D36's third instance and its widest line went `313` B → `213` B inside a
-  `220` B health target. Two instrument bugs were found and
-  fixed while building the census, both recorded in its header: a code-span scanner that paired backticks
-  across newlines read the whole file as one span (a fence's ``` is an odd count) and reported `125`
-  undeclared operators that were EBNF nonterminals, and a link resolver that dropped the leading `/` of an
-  absolute base and so reported every link in the book dead.
-- [x] **FIX** — wrote the three chapter parts; the ADR-0003 record with fourteen language decisions, five
-  read candidates and three re-open conditions; the census and its 15-arm probe suite; `G3-GRADING.16` to
-  own the blocks; twelve glossary terms plus two updated entries with the A–Z index re-derived; SUMMARY,
-  the spec index, the ontology's cross-reference and the fixture's §3 note. **D48 logged and fixed** (a
-  duplicate `## Acceptance Checklist` heading in `G3-GRADING.md` — D15's class by heading instead of by box
-  — and a children range that said `.14` while `.15` was in the file), and **D36's third instance**
-  recorded and removed (`LIVE_STATUS.md` listed D47 open after `SPINE.20` closed it; its probe count is now
-  the command's, not a hand-kept number).
-- [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's decisions and open questions, its
-  three logs; `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`,
-  `TOOLBOX.md` (two instrument rows, and the `make probes` row no longer carries a hand-kept suite count),
-  `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in this
-  commit. Both ledgers rolled over in the commit whose append crossed them (`devnotes-part3` 50 lines /
-  4723 B, `changelog-part8` 106 lines / 9766 B), with `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`
-  reproducing both digests. Lesson promotion: **promoted** — the new record carries an `answers:` line.
+  `17 suite(s) green`; the neighbouring censuses unchanged: glossary `294 terms / 8 parts / 155 tokens /
+  0 failure(s)` after five new terms and `16` entries repointed from this leaf to a chapter clause, with
+  the A–Z index re-derived; fixture `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`;
+  formula language `17 bindings / 4 assertions / 13 refusals / 0 mismatch(es)`; standards `6 registered /
+  0 failure(s)`; uncertainty and coverage green; `bash scripts/check_live_doc_size.sh` → `OK — 17
+  surfaces, 15 routes, 91 files measured`, `exit=0`. Two arm defects were found while building the probe
+  suite and fixed there rather than in the census: one arm asserted a *second* symptom the property does
+  not require (an invented AAMA name displacing DRAW, which layer 7 still uses), and one cited `units §9`
+  as a dead clause when §9 exists — an arm whose mutation is not a breach is a green arm that tested
+  nothing.
+- [x] **FIX** — wrote the chapter (six axes with the party that resolves each, a closed registry of four
+  targets, the seventeen-layer table in both naming modes with this project's object mapping, cut-as-1
+  against sew-as-1, BLOCK/SST/PST, one polyline-only entity set for both releases with arcs exact as
+  bulges and Béziers tessellated at T2's bound, three grading carriages, HPGL and PDF, the
+  receiver-config record, seven diagnostics); the ADR-0004 record with ten decisions and the sources read
+  and attempted; the census and its 13-arm probe suite; five glossary terms plus `16` repointed entries
+  and a re-derived index; SUMMARY, the spec index and the ontology's cross-reference. **D50 logged and
+  its live pressure discharged in the same commit:** `KNOWLEDGE_MAP.md` had reached `99 %` of its byte
+  ceiling (`99 8128` against `8192`), so the hand-curated input was trimmed to `37` lines / `3 255` B and
+  the map fell to `84` / `6 733`; the convention, the size formula and the trigger for re-deriving the
+  row are recorded in `decision_knowledge-map-entries-are-orientation-sized.md` and the durable half is
+  `SPINE.5`'s.
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's decisions and logs;
+  `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two
+  instrument rows), `docs/decisions/INDEX.md` (two records), `knowledge-map/subsystems.md` and the
+  regenerated Knowledge Map in this commit. Lesson promotion: **promoted** — the ADR-0004 record carries an
+  `answers:` line.
 
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and a leaf that stages code additionally fills a `### <leaf-id>` checklist subsection
@@ -696,6 +717,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-09-30` | `G0-CONTRACT.10` | the interchange census and its 13-arm probe suite; the chapter's size and widest line; the glossary census after five terms and 16 repointed entries; `make book`/`gate`/`probes`; the four neighbouring censuses; containment | `17 layers / 4 targets / 12 entities / 0 failure(s)`; `13 pass / 0 fail`; `303` lines / `21 650` B / widest `227`; `294 terms / 0 failure(s)`; `17 suite(s) green`; detail in the checklist |
 | `2026-09-30` | `G0-CONTRACT.9` | the formula-language census and its 15-arm probe suite; the three parts' sizes and widest line; the glossary census; `make book`/`gate`/`probes`; the four neighbouring censuses; containment | `17 bindings / 4 assertions / 13 refusals / 0 mismatch(es)`, `12` fixture-shared names and `0` disagreements; `15 pass / 0 fail`; `16 suite(s) green`; detail in the checklist |
 | `2026-09-30` | `G0-CONTRACT.14b` | the chapter's size and widest line; `make book`; the four book censuses; `grep` for the stale deferrals; `make gate`; containment | `233` lines / `18 465` B / widest `185`; `exit=0`; `276 terms`, `6 registered`, `105 rows`, `20 rows / 4 checks / 5 pieces` — all `0 failure(s)`; `0` stale deferrals left in `spec/`; all doctrines green; `OK — 84 files measured` |
 | `2026-09-30` | `G0-CONTRACT.4c` | the roadmap's markers; matrix census + probes; coverage census + its new suite; containment and its `--self-test`; `make gate`/`probes`/`book` | v0.3 at `947` lines / `52 818` B, criterion at line `712`, disposition logged; `105 rows / 0 failure(s)`, `D32 rows: 0`, `proposed cells: 0`; `13 trees / 2 sibling(s) / 0 unowned`; `probes: 12 / 7 / 5 / 9`, `15 arms`, all `0 fail`; `13 suite(s) green` |
@@ -749,9 +771,27 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.14c` | `STITCHCAD-G0-0014c (leaf G0-CONTRACT.14c): a delegated decision is bounded, not just disclosed` | governance §6.1; the roadmap's v0.3 entry discloses its author-applier |
 | `G0-CONTRACT.19` | `STITCHCAD-G0-0019 (leaf G0-CONTRACT.19): what the project does not know is derived` | the uncertainty census plus its six arms; the glossary's link resolver fixed |
 | `G0-CONTRACT.9` | `STITCHCAD-G0-0009 (leaf G0-CONTRACT.9): the formula language, and the drafting system named with it` | three censused parts; an evaluator that reads the chapter's own tables; ADR-0003's record; `G3-GRADING.16` owns the blocks; D48 fixed and D36's third instance removed |
-| `G0-CONTRACT.10`–`.12`, `.15`–`.17` | `pending` | — |
+| `G0-CONTRACT.10` | `STITCHCAD-G0-0010 (leaf G0-CONTRACT.10): the dialects are a closed registry, not a format with flags` | six axes, four targets, the seventeen-layer table read against the roadmap, one polyline-only entity set, three grading carriages, the receiver-config record |
+| `G0-CONTRACT.11`–`.12`, `.15`–`.17` | `pending` | — |
 
 ## Changelog
+
+- `2026-09-30`: `.10` landed — ADR-0004 is complete: interchange is specified as **dialects over a
+  format**, not as one format with flags. An export target is a named tuple over six declared axes, each
+  with the party that resolves it; the registry is closed at four targets, so a tuple nobody validated is
+  refused naming the nearest one; the seventeen-layer table carries both naming modes and this project's
+  object mapping, with the named mode's loss of separation declared rather than discovered by a partner;
+  cut-as-1 against sew-as-1 is a profile mapping recorded in three places and never a writer default; one
+  BLOCK per piece with SST and PST mandatory on the ASTM path and their field content deliberately
+  unspecified, because a receiver owns it and G6 is the only oracle; one polyline-only entity set serves
+  both releases, arcs travelling exactly as bulges and Béziers tessellating at T2's chordal bound; three
+  grading carriages, each its own artifact and validation; and a receiver-config record that makes a
+  dispute a comparison of fields. D6673-10's withdrawal is recorded with the convention implemented as
+  de-facto and no conformance claim anywhere. The chapter's closure is derived against `ROADMAP.md` itself
+  by a new census with a 13-arm suite, including an arm that grows the roadmap's convention in a copy and
+  requires the refusal. Five glossary terms were added and `16` entries repointed from this leaf to a
+  clause, and the two probe-arm defects found on the way are recorded in the checklist rather than fixed
+  silently.
 
 - `2026-09-30`: `.9` landed — ADR-0003 is complete, in both halves. The formula language v1 is normative in
   three parts (contract, grammar, examples): eight kinds with no implicit conversion, nine name origins whose

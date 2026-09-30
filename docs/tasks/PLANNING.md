@@ -871,6 +871,24 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     the first slice that leaves a tree file within 15 % of its byte ceiling. Deferred behind product work by
     the frontier rule (`decision_product-work-takes-the-frontier.md`); nothing is blocked today.
 
+- **D50** — `KNOWLEDGE_MAP.md` reached 99 % of its byte ceiling while two product slices were landing:
+  `wc -lc KNOWLEDGE_MAP.md` → `99 8128` against the `knowledge_map` row's ceiling of `8192`, so the next
+  decision record would have blocked a commit on a surface that is generated and holds no unique facts.
+  - Reproduce: the `wc -lc` above at `STITCHCAD-G0-0009`, plus
+    `bash scripts/check_live_doc_size.sh 2>&1 | grep knowledge_map` → `8128 bytes = 198% of its 4096-byte
+    health target`. The cause is measurable: `wc -lc knowledge-map/subsystems.md` → `53 4784`, i.e. the
+    hand-curated input had grown prose entries that duplicated the chapters they point at, while the
+    generated sections (one line per tree, one per record) are content the map cannot trim.
+  - Impact: a blocked commit is a slice that has to make a containment decision under pressure, and the
+    pressure lands on whoever happens to add the next record. The generator is NEUTRAL
+    (`scripts/update_scaffold.sh` line 108), so its format — which carries each record's filename twice,
+    ~128 B per record — cannot be compacted locally.
+  - Owner: `G0-CONTRACT.10` (**fixed in this commit** for the pressure that exists: the input trimmed to
+    `37` lines / `3 255` B and the map to `84` / `6 733`, which is 82 % of the ceiling). The durable half —
+    re-deriving the row's health and ceiling from the generated shape at the named trigger — is `SPINE.5`'s,
+    with the convention, the formula and the trigger recorded in
+    `docs/decisions/decision_knowledge-map-entries-are-orientation-sized.md`.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

@@ -3,44 +3,35 @@
      gen_knowledge_map.sh embeds this section verbatim; the task-tree and decision sections
      are generated automatically. -->
 
-- `crates/sc-units/` — **the numerical contract, implemented.** Fixed-point micrometre lengths,
-  microdegree angles, areas, ratios and counts as distinct types; exact integer conversion ratios with
-  one rounding step (half away from zero); the five tolerance classes, each requiring a derivation;
-  typed diagnostics instead of panics. No dependencies, so it serves every runtime profile including
-  `wasm-viewer`. Entry point: `crates/sc-units/src/lib.rs`; conformance tests:
-  `crates/sc-units/tests/property.rs`. Spec: `docs/book/src/spec/units-and-tolerances.md`.
-  Owner: `G0-CONTRACT.2` (spec), `G0-CONTRACT.18` (code).
-- `crates/sc-core/` — **skeleton.** The future garment ontology, construction recipe, command bus and
-  uncertainty model. Exists at G0 because the roadmap's CI clause requires a real
-  `wasm32-unknown-unknown` build of `sc-core` + `sc-units`. Entry point: `crates/sc-core/src/lib.rs`,
-  which names the module each future leaf owns. Owner: `G0-CONTRACT.3` (spec), `G1-SLICE.3` (code).
-- `docs/book/src/spec/` — the normative specification (the director-facing contract). Chapters so far:
-  the G0 contract overview, the glossary, units & tolerances, the garment ontology, the formula language,
-  the supported envelope, both instantiation paths, size sets, the standards registry and the reference
-  skirt. Owner: the `G0-CONTRACT` leaves.
-- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, partitioned.** The contract
-  (eight kinds, nine name origins, declaration-order evaluation, exact rational arithmetic with two rounding
-  points, twelve diagnostics, four structural limits, the exclusions) plus two parts:
-  `formula-language/grammar.md` (the EBNF, literals and their unit tokens, the display and canonical forms,
-  the operator, function and selector tables) and `formula-language/examples.md` (17 bindings, 4 assertions
-  and 13 refusals over the reference skirt). Every number there is computed rather than typed: the reference
-  evaluator in `docs/tasks/artifacts/formula_language/run_formula_language_census.sh` reads the chapter's own
-  tables and type-checks with them, so a signature nobody wrote down cannot be implemented. Owner:
-  `G0-CONTRACT.9`; implemented by `G1-SLICE.5`.
-- `docs/book/src/spec/feature-matrix.md` — **the boundary of the release claim.** 105 rows, each
-  `supported` / `rejected` / `deferred` with a reason, the gate that proves it and, for every refusal, a
-  diagnostic token from the 29 its §10 declares. Coverage of the ontology, of roadmap §1.3's non-goals and
-  of §3.2's envelope is derived by `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`.
-  Owner: `G0-CONTRACT.4`; G7's envelope statement is a projection of it.
-- `docs/book/src/spec/glossary/` — **the vocabulary, partitioned.** One entry per term across eight
-  domain parts: meaning, canonical object, synonyms, machine token. The index chapter
-  (`docs/book/src/spec/glossary.md`) carries the machine-token rule, the safety-relevant (⚠) policy and
-  the derived A–Z index. Its claims are re-derived by
-  `docs/tasks/artifacts/glossary/run_glossary_census.sh` — one owner per token, every reference
-  resolving, every token a chapter uses declared. Owner: `G0-CONTRACT.1` and every later chapter that
-  introduces a term.
-- `.doctrine/live_document_size/` — the containment data plane: `surfaces.tsv` (every live document with
-  its lifecycle, owner, health target and ceiling) and `routes.tsv` (every routing destination). Enforced
-  by `scripts/check_live_doc_size.sh`. Owner: `SPINE.4`.
-- `docs/tasks/artifacts/` — the diagnostic probe suites, one directory per instrument. Run all of them
-  with `make probes`. Owner: the leaf that needed the instrument.
+Entries are orientation-sized — path, what it is, where to enter, owner — because the map is a projection
+sharing its ceiling with a line per record and per tree: `decision_knowledge-map-entries-are-orientation-sized.md`.
+
+- `crates/sc-units/` — **the numerical contract, implemented**: fixed-point micrometres and microdegrees,
+  exact conversion ratios, five tolerance classes, typed diagnostics; no dependencies, so every runtime
+  profile including `wasm-viewer` can use it. Entry `crates/sc-units/src/lib.rs`, conformance
+  `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`. Owner
+  `G0-CONTRACT.2` / `.18`.
+- `crates/sc-core/` — **skeleton**: the future ontology, recipe, command bus and uncertainty model, present
+  at G0 only because the roadmap's CI clause needs a real `wasm32-unknown-unknown` build. Entry
+  `crates/sc-core/src/lib.rs`, which names the module each future leaf owns. Owner `G0-CONTRACT.3` (spec),
+  `G1-SLICE.3` (code).
+- `docs/book/src/spec/` — the normative specification the director reviews: overview, glossary, units,
+  ontology, formula language, envelope, instantiation paths, size sets, standards, interchange dialects,
+  reference skirt. Owner the `G0-CONTRACT` leaves.- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, in three parts** (contract,
+  `formula-language/grammar.md`, `formula-language/examples.md`). Its numbers are computed, not typed:
+  `docs/tasks/artifacts/formula_language/run_formula_language_census.sh` reads the chapter's own tables.
+  Owner `G0-CONTRACT.9`, implemented by `G1-SLICE.5`.
+- `docs/book/src/spec/interchange-dialects.md` — **dialects, not a format**: six axes, a closed registry of
+  four targets, the seventeen-layer table in both naming modes, one polyline-only entity set, three grading
+  carriages, the receiver-config record. Derived against `ROADMAP.md` by
+  `docs/tasks/artifacts/interchange/run_interchange_census.sh`. Owner `G0-CONTRACT.10`, written from `G2-2D`.
+- `docs/book/src/spec/feature-matrix.md` — **the boundary of the release claim**: 105 dispositioned rows, 29
+  declared diagnostics, coverage derived by
+  `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. Owner `G0-CONTRACT.4`.
+- `docs/book/src/spec/glossary/` — **the vocabulary, partitioned** into eight domain parts behind
+  `glossary.md`'s derived A–Z index: one meaning per term, one owner per machine token, derived by
+  `docs/tasks/artifacts/glossary/run_glossary_census.sh`. Owner `G0-CONTRACT.1` and every later chapter.
+- `.doctrine/live_document_size/` — the containment data plane (`surfaces.tsv`, `routes.tsv`), enforced by
+  `scripts/check_live_doc_size.sh`. Owner `SPINE.4`.
+- `docs/tasks/artifacts/` — the diagnostic probe suites, one directory per instrument; `make probes` runs
+  them all with scratch pinned to this volume. Owner the leaf that needed the instrument.

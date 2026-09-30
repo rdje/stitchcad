@@ -3,6 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-09-30)_ — a RED arm asserts the rule's refusal, and nothing beside it
+
+- Two of thirteen arms failed on a correct instrument, and both failed the same way: they asserted what the
+  author expected the mutation to do rather than what the rule owes. One required a *second* symptom — an
+  invented layer name displacing `DRAW`, when another row still used `DRAW` legitimately; one cited
+  `units §9` as a dead clause when §9 exists, so its mutation was not a breach at all. **An arm's
+  expectation is the refusal and only the refusal**; a second condition makes the arm a test of the
+  mutation's side effects, which is the mirror of the trap `TOOLBOX.md` already records (an arm that
+  removes one instance instead of the property). Both shapes print the same thing: a red suite that means
+  nothing is broken.
+- **The arm that matters most mutates a file the chapter never mentions.** ROADMAP-GROWS copies
+  `ROADMAP.md`, adds a layer to the convention, and requires the census to refuse by number — which is the
+  only demonstration that the census reads the roadmap instead of a list hardcoded beside it. A probe has no
+  business editing a tracked file the director owns, so it edits a copy, and the copy is the point.
+- **A wrapped bullet is a population, not a line.** The first cut of that census read the first line of the
+  roadmap's layer bullet, found `3` of `17` layers, and reported `21` chapter breaches. The chapter was
+  right and the instrument was measuring one line of a paragraph — the same class as the backtick scanner
+  that read a whole file as one code span. When a census reports breaches in bulk against a document a human
+  just checked, suspect the reader before the document.
+
 ## _(2026-09-30)_ — a spec's tables are its test suite, and a code span is a claim
 
 - **A reference evaluator that reads the chapter's own tables turns "implementable from the chapter

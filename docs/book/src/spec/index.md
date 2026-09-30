@@ -31,7 +31,7 @@ must satisfy. It is written during gate G0 (the product-and-semantic-contract ga
 | [Size sets](size-sets.md) | Size labels versus order, base size, multi-dimensional charts, and which object owns a size set |
 | Command layer | The typed command set, atomic groups, preview/commit, revision preconditions, undo/redo granularity, and agent authority levels |
 | Release and approval | The manifest, what approval binds to, how it stale-ifies, and the graduated acceptance states |
-| Interchange dialects | AAMA named layers against ASTM numbered layers, R12/R13, blocks, SST/PST, grading modes, tessellation policy |
+| [Interchange dialects](interchange-dialects.md) | The six axes an export target is made of, the target registry, the layer table in both naming modes, cut-as-1 against sew-as-1, blocks and metadata, the R12/R13 entity policy, tessellation, the three grading carriages |
 | Internationalization | The one message system, externalization, termbases, pseudolocalization, locale-independent files, and the RTL geometry rule |
 | [Measurement standards](standards.md) | Which external standards the model draws on, what is adopted from each, and the verification status of every claim |
 | [Reference skirt](reference-skirt.md) | The one garment specified with real numbers, which every conformance suite, golden file and agent gate is built around |

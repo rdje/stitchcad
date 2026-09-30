@@ -15,14 +15,15 @@
 
 - **Project:** StitchCAD — a sewing CAD, headless Rust core: construction-recipe designs, evidence-bearing
   Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.3, DRAFT until G0 exits.
-- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.9`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`, `.14`/`.14b`/`.14c`,
-  `.18`, `.19`. Remaining: `.10`–`.12`, `.15`–`.17`.
-- **Next action:** take **`G0-CONTRACT.10`** — ADR-0004 (interchange dialects) plus the StitchCAD interchange
-  profiles: AAMA named layers × ASTM numbered layers, cut-as-1 × sew-as-1, R12 × R13, BLOCK-per-piece,
-  SST/PST, the three grading modes, tessellation policy, and ASTM D6673-10's withdrawal recorded — every
-  external claim carrying a status from the standards chapter's closed vocabulary. Then `.11`, `.12`,
-  `.15`–`.17`. ADR-0003 landed at `.9`: the formula language v1 in three censused parts, and Aldrich's metric
-  pattern cutting named as the reference drafting system with `G3-GRADING.16` owning the blocks.
+- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.10`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`,
+  `.14`/`.14b`/`.14c`, `.18`, `.19`. Remaining: `.11`, `.12`, `.15`–`.17`.
+- **Next action:** take **`G0-CONTRACT.11`** — ADR-0002 as a decision *structure*: the chrome choice, the
+  three canvas topologies, the egui/iced dev-shell ruling, the TypeScript domain-logic ban, and the exact G1
+  spike protocol (measurements, pass/fail criteria, decision rule) written now so the outcome cannot be
+  argued after the fact. Then `.12`, `.15`–`.17`. ADR-0003 landed at `.9` (the formula language in three
+  censused parts, Aldrich named as the reference drafting system, `G3-GRADING.16` owning the blocks) and
+  ADR-0004 at `.10` (six axes, a closed registry of four targets, the layer table derived against
+  `ROADMAP.md`).
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
 - **Push:** 400-commit cadence, **plus** an immediate push whenever an unpushed commit touches CI, a

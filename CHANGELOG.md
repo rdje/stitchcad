@@ -29,6 +29,41 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G0-0010 - the dialects are a closed registry, not a format with flags (leaf `G0-CONTRACT.10`)
+
+ADR-0004 was the last of the four ADRs with neither a record nor a chapter, and three chapters already leaned
+on the missing one: sixteen glossary entries named the leaf as their specifier, the ontology pointed at "the
+interchange-dialects chapter", and the instantiation paths deferred their three modes to it.
+
+- **the chapter** - `docs/book/src/spec/interchange-dialects.md` (303 lines / 21 650 B): six axes an export
+  target is a tuple over, each naming the party that resolves it; a **closed** registry of four targets, so a
+  tuple nobody validated is refused naming the nearest one; the seventeen-layer table in both naming modes
+  with this project's object mapping, and the named mode's loss of separation declared instead of discovered
+  by a partner; cut-as-1 against sew-as-1 as a profile mapping recorded in three places and never a writer
+  default; one BLOCK per piece with SST and PST mandatory on the ASTM path; one polyline-only entity set for
+  both releases, arcs travelling exactly as bulges and Beziers tessellating at T2's chordal bound; three
+  grading carriages, each its own artifact and validation; HPGL and PDF; and the receiver-config record that
+  turns a dispute into a comparison of fields. D6673-10's withdrawal is recorded with the convention
+  implemented as de-facto and no conformance claim anywhere.
+- **the instrument** - `run_interchange_census.sh` reads the layer list out of `ROADMAP.md` itself, so
+  `17 layers / 4 targets / 12 entities / 0 failure(s)` is a closure against the roadmap and not against a
+  list kept beside it; the axes and the registry columns are checked in both directions, the entity policy's
+  floor and ceiling are pinned, and every diagnostic and link resolves. `run_interchange_probes.sh` ->
+  `13 pass / 0 fail`, including ROADMAP-GROWS, which adds a layer to a *copy* of the roadmap and requires
+  the refusal - a probe has no business editing a file the director owns.
+- **what the chapter deliberately does not specify** - SST and PST field content. The syntax is
+  case-sensitive and receiver-specific, so a field table written at G0 would be a guess in a normative font;
+  G6 is the only oracle, and layers 84-87 stay absent for the same reason rather than carrying placeholder
+  curves no design authored.
+- **decisions** - `docs/decisions/decision_adr-0004-interchange-dialects.md` records ten decisions with the
+  alternative each rejected, what was read (Wikipedia's DXF article: the published specification is
+  incomplete, which is why the oracle is a receiver) and what was attempted and not read.
+- **glossary** - five new terms, sixteen entries repointed from this leaf to a chapter clause, the A-Z index
+  re-derived: `294 terms / 8 parts / 155 tokens / 0 failure(s)`.
+- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `17 suite(s) green`; `make book` ->
+  exit=0; fixture, formula-language, matrix, standards, uncertainty and coverage censuses all green;
+  containment `OK - 17 surfaces, 15 routes, 91 files measured`
+
 ## STITCHCAD-G0-0009 - the formula language, and the drafting system named with it (leaf `G0-CONTRACT.9`)
 
 ADR-0003 had two halves and the repository held neither: roadmap §5 requires the recipe's expression language

@@ -274,8 +274,9 @@ part of the canonical project; it is regenerated.
   roadmap. The standards' texts have not been read in this repository; they are confirmed against the
   documents in the measurement-standards chapter, which owns that verification.
 - **EN 13402 / ASTM D5585 define size designation systems** — cited from the roadmap; same status.
-- **AAMA/ASTM notch encodings and layer conventions** — recorded in the interchange-dialects chapter
-  with its own verification status.
+- **AAMA/ASTM notch encodings and layer conventions** — recorded in the [interchange
+  dialects](interchange-dialects.md) chapter (§3 for the layers, §6 for the withdrawal) with its own
+  verification status.
 - **ULID as the identity scheme** — a project decision, not an external claim; recorded in the
   decisions index.
 
