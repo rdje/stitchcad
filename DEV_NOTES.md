@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-09-30)_ — an instrument that reads another document's prose must normalise it first, and must fail closed when it reads nothing
+
+- The command-layer census parses two lists out of `ROADMAP.md`: the backticked commands in §4.4 and the
+  slash-separated authority levels in §7.8. The first run parsed **five commands and zero levels**, then
+  reported five invented levels in the chapter — a verdict that was entirely about the reader. The list
+  wraps mid-item (`generate /` newline `approve`), and the character class did not include a newline. The
+  fix is one `re.sub(r"\s+", " ", …)` before the match, and it is the third time this session an instrument
+  mis-read a wrapped structure: the interchange census read one line of the roadmap's layer bullet and
+  reported 21 chapter breaches, and a code-span scanner paired backticks across a fence.
+  **Prose in a source document is a population with a layout; parse the layout away before parsing the
+  population.**
+- What made the bug visible instead of silent is the guard that refuses a zero-length population: the census
+  calls `bad()` when it parses fewer items than the clause it reads is known to carry, so "I read nothing"
+  is a failure and not a green run over an empty set. Every instrument written this session now carries that
+  guard, and it is the cheapest line in each of them. Its mirror is the arm that proves the guard works —
+  ROADMAP-GROWS and CODE-GROWS mutate the *source* document in a copy and require the refusal, so a reader
+  that stops reading is caught by a probe rather than by a reviewer.
+
 ## _(2026-09-30)_ — a count you just wrote by hand is already wrong if the population has a shape you did not grep for
 
 - The i18n chapter's message inventory was written from four chapters' diagnostic tables and one crate's

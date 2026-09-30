@@ -413,7 +413,7 @@ not a contract.
   Commit: `STITCHCAD-G0-0016`
 
 - ID: `G0-CONTRACT.17`
-  Status: `pending`
+  Status: `done`
   Goal: the command-layer contract (§4.4) — the typed command set, atomic groups, preview/commit,
   revision preconditions, idempotency, structured errors, progress for long operations, and the
   **undo/redo semantics that §4.4 requires to be defined at G0** (granularity per command group),
@@ -422,8 +422,13 @@ not a contract.
   table's columns and its generation rule are specified so G1 can populate it mechanically;
   agent authority levels (§7.8: inspect / propose / commit / generate / approve) are defined here as
   command-layer concepts, not as tool descriptions.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below and in the acceptance checklist — the chapter is `264` lines /
+  `18 959` B with a widest line of `174` B, inside the per-part health; its census parses the
+  roadmap's own §4.4 command list and §7.8 level list and reports `17 commands / 5 classes /
+  5 levels / 0 failure(s)`; its probe suite is at `14 pass / 0 fail`; the glossary is at `308 terms
+  / 9 parts / 156 tokens / 0 failure(s)` with `19` entries repointed from this leaf to a clause;
+  every other census and gate is green.
+  Commit: `STITCHCAD-G0-0017`
 
 - ID: `G0-CONTRACT.18`
   Status: `done`
@@ -464,123 +469,15 @@ not a contract.
 | 18 | `G0-CONTRACT.11` | `done` | ADR-0002 recorded as a decision structure: the chrome, the dev shell and the TypeScript ban are `active`, canvas hosting is `proposed`, and the corpus, the seven gates and the six-rule verdict are written down before anybody measures — with an instrument that derives the outcome from a TSV data plane |
 | 19 | `G0-CONTRACT.12` | `done` | the release contract landed: nine manifest fields each with its source, identity as the manifest's digest, completeness against the declared construction, the six acceptance states in the roadmap's order with the evidence each needs, scope that narrows by itself, human-only approval, and §8.2's policy matrix tuned and recorded |
 | 20 | `G0-CONTRACT.16` | `done` | one message system chosen with its evidence read: Fluent at both ends, ICU4X rejected on the boundary rather than on quality; the lint, the termbase, pseudolocalization, the locale-independent canonical file, the RTL geometry rule and three review tiers, with the message inventory derived from four chapters and the crate |
-| 21 | `G0-CONTRACT.17` | `pending` | **next** — the command-layer contract (§4.4): the typed command set, atomic groups, preview/commit, revision preconditions, idempotency, structured errors, progress, and the undo/redo granularity §4.4 requires at G0, plus the UI↔API↔MCP parity invariant and the five agent authority levels |
-| 22 | `G0-CONTRACT.15` | `pending` | the G0 exit review — every clause cited against evidence, `LIVE_STATUS.md` and the roadmap status line updated, the frontier handed to `G1-SLICE` |
+| 21 | `G0-CONTRACT.17` | `done` | the command layer landed: five classes and seventeen commands in one machine-readable table, undo at the atomic group restoring semantics rather than contours, preview/commit with a re-checked precondition, revision preconditions and idempotency keys, the five authority levels as core-enforced permissions with `approve` unholdable by an agent, and a parity table whose columns and generation rule are normative while its rows stay G5's evidence |
+| 22 | `G0-CONTRACT.15` | `pending` | **next, and the last of the gate** — the G0 exit review: walk §11's clause list, cite the deliverable and its re-derivable check for each, update `LIVE_STATUS.md` and the roadmap's status line, and hand the frontier to `G1-SLICE`. The governance clause is recorded as `.14b` states it — the domain seat is vacant, so no clause is marked met on a borrowed signature |
 
 ## Decisions
 
-- `2026-09-29`: normative G0 specifications live in the mdBook under `docs/book/src/spec/`
-  (the director reviews the book); ADR-style *decisions* live in `docs/decisions/` (memory
-  layer C) and are summarised — never duplicated — in the book. Realises roadmap §4.3's
-  `docs/adr/` as `docs/decisions/` deliberately.
-- `2026-09-29`, **superseding the same day's earlier "no product code in G0" reading**: G0 owns
-  exactly two skeleton crates and the G0 CI workflow (`.18`), because §4.3 and §7.3 state the G0
-  CI shape and the G0 WASM smoketest in terms of `sc-core` + `sc-units` compiling. The earlier
-  reading took "crates appear when their stage starts" as an absolute and would have left two
-  roadmap clauses unowned. Consequence: `.18` is a CODE leaf and carries the full acceptance
-  checklist with tool output; every other G0 leaf remains documentation-only.
-
-- `2026-09-30`, leaf `.1`: the glossary is **partitioned into eight domain parts behind one index
-  chapter**, not one file. Reason, measured: a single file would have been ~70 KB of five-column rows
-  against a `book_collection` per-part health of 24 576 bytes and a ceiling of 40 960 — a termbase is not
-  the shape of a prose chapter, and one file would have breached its ceiling within two more chapters.
-  Consequences: the A–Z index is **derived** from the parts and compared against them by the census in
-  both directions; a new term goes in the part whose domain it belongs to and in no other; every part
-  carries the same five columns, so the termbase extraction `G0-CONTRACT.16` owes has one shape to read.
-- `2026-09-30`, leaf `.1`: a **machine token has exactly one owner**, and an entry that shares another's
-  token writes `→ token`. Recorded as `docs/decisions/decision_machine-tokens-declared-where-used.md`
-  with the measurement behind it, because the rule binds every later chapter and every crate.
-
-- `2026-09-30`, leaf `.6`: a **size label is prose, not a token**, so labels are written in quotes in the
-  specification and never in a machine-token style. The glossary census found the violation (three example
-  labels in backticks were reported as undeclared tokens) before it became a convention in the chapters
-  that follow.
-- `2026-09-30`, leaf `.4`: a feature matrix row whose proof no gate has accepted says **`unnamed (D32)`**
-  rather than borrowing a gate. Assigning a gate would invent a commitment on that gate's behalf, and a
-  silently borrowed gate is how an envelope claim becomes untestable. The census prints those rows on
-  every run (advisory `A1`), so the gap is closed by a decision at `.15`, not by being forgotten.
-- `2026-09-30`, leaf `.4`: a citation in the matrix's reason column repeats its source per clause
-  (`ontology §1, ontology §1.1`, never `ontology §1 and §1.1`), because the census reads citations
-  mechanically and a bare `§1.1` after a comma is ambiguous between two documents with overlapping clause
-  numbers.
-
-- `2026-09-30`, leaf `.7`: the glossary's derived A–Z index is the reason `glossary.md` grows one line per
-  term (`405` lines now, against a `400`-line per-part health and a `700`-line ceiling). The remedy is
-  already mechanical and is recorded here so it is not rediscovered as a surprise: when the index passes
-  ~500 lines it splits by letter range into two derived halves, because `--emit-index` generates whatever
-  the census compares. Owner: the next leaf that adds a batch of terms.
-
-- `2026-09-30`, leaf `.13d`: the fixture's waistband is **one straight band, cut once and folded at its
-  midpoint**, plus one interfacing piece cut at the band's finished dimensions and fused — five pieces, not
-  the faced reading's six. The choice is sourced, not preferred: the drafting references prescribe the
-  two-piece cut for a **contoured** band, and this fixture's band is straight at the natural waist.
-  Recorded as `docs/decisions/decision_reference-fixture-waistband-straight-folded.md` with its five
-  sources, their URLs and the date read, the one disagreement between them (`wb_width`), and the re-open
-  condition.
-- `2026-09-30`, leaf `.13d`: **every piece is accounted for — by a span or by a declared non-sewn
-  attachment from a closed list**, which holds `fused` alone. "Every piece has a span" is false for a fused
-  interfacing, and the false invariant is what let D27's inner band pass for nine commits; stating the
-  invariant so a fused piece is *declared* rather than *missing* is what made it checkable. The list is
-  closed on purpose: a sewn-in interlining is sewn, so it would need a span.
-- `2026-09-30`, leaf `.13d`: an external source that is not a standard is labelled **`read-external`** with
-  its URL and the date it was read, and it never upgrades a claim about a standard — that vocabulary stays
-  closed in `docs/book/src/spec/standards.md` §1. A source read and *not* used is recorded too, so the next
-  session does not re-read it.
-- `2026-09-30`, leaf `.13d`: the fixture's arithmetic has a **tracked producer**,
-  `docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh`, with `run_fixture_probes.sh` as its
-  ground truth. Until this leaf the numbers that found D33 and D27 were `python3 -c` strings inside task
-  leaves — re-runnable by nobody, the leg-3 breach this repository had already committed once as D20.
-
-- `2026-09-30`, leaf `.4b`: **permission is not a criterion.** G3's note that an intermediate garment "may
-  be inserted without shame" schedules nothing, so the proposed amendment adds one exit criterion over
-  roadmap §3.2's whole garment list — closing the class rather than the four instances — and names the
-  failure mode: a garment the envelope names and no exit criterion proves is a gate failure, not a scope
-  note. Recorded in `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`.
-- `2026-09-30`, leaf `.4b`: a gate this chapter *proposes* is written `(proposed)` in the cell, and the
-  census prints every such cell on every run (advisory `A3`). A provisional commitment that reads like a
-  settled one is the D32 gap wearing better clothes, so the proposal is as visible as the gap it replaces —
-  and a probe arm removes the markers and requires the printed count to fall, because an advisory that reads
-  nothing prints the same number either way.
-- `2026-09-30`, leaf `.4b`: a **deferred** row names the gate that declares the limitation (G7, per rule 3
-  of the matrix's §1), not a gate that proves the feature. That is why the fly needs no amendment while the
-  four supported rows do, and why the `lining` row was already right.
-- `2026-09-30`, leaf `.4b`: the dev-notes rollover is performed in the commit whose append crossed the
-  window's health target, and the archive verifier's `DESCRIPTOR` rule is generalized to every
-  `docs/history/*.md` segment in the same commit — a sealed segment whose digest nothing watches is a
-  "trust me" with a hash beside it. The Coverage and pointer legs stay changelog-only, which is logged as
-  D40 and owned by `SPINE.19` rather than left implicit.
-
-- `2026-09-30`, leaf `.4b`: **a tree past 1000 lines splits its completed-leaf evidence into a sibling
-  file**, which is the containment registry's own remedy and not an invention of this slice — and the leaf
-  being landed keeps its checklist in the tree file, because `scripts/check_task_acceptance.sh` judges every
-  staged `docs/tasks/*.md` and refuses one with no ticked boxes. Measured, not assumed: emptying the tree
-  file of checklists would have turned an honest slice into a `TASK-ACCEPTANCE` refusal. Consequence: the
-  tree file's first matching box is now always the current leaf's, which is D15's facet 1 closed by
-  structure rather than by care. `G0-CONTRACT-evidence.md` is the sibling; `SPINE.md` owes the same split
-  (defect **D42**, owned by `SPINE.4.4`).
-
-- `2026-09-30`, leaf `.14`: **a role is the decision it may make, not the person holding it.** Every role in
-  the governance chapter carries the authority it needs and whether an agent may hold it, which is what makes
-  an empty seat assignable instead of mysterious: the work is specified and only the name is missing. The
-  three empty seats are in ONE table (§8) rather than discovered at the gate that needs each of them.
-- `2026-09-30`, leaf `.14`: **a contested default becomes a profile parameter, not a verdict.** Where a sewist
-  and a programmer genuinely disagree about a default, the model already carries both readings (roadmap §8.3),
-  so governance records the dissent instead of picking a winner — and §3 classifies the question first,
-  because most such conflicts are two correct answers to different questions.
-- `2026-09-30`, leaf `.14`: **a procurement fallback states what it costs in evidence quality.** Roadmap §14
-  already makes the partner-run manual test the documented fallback for an eval-seat slip; §7 of the chapter
-  adds the cost of each fallback (a partner run is layer-4 evidence: slower, fewer targets), because a
-  fallback without a stated cost is how a procurement slip silently downgrades the release claim.
-
-- `2026-09-30`, leaf `.4c`: **a proposal is a state, not a resting place.** `.4b` marked four cells
-  `(proposed)` because amending the roadmap was reserved; the moment the reservation was lifted, the honest
-  action was to apply it through the roadmap's own revision machinery — version marker, Appendix A disposition
-  entry, containment baseline re-based in the same commit — and not to leave a ratified decision wearing a
-  provisional label. The `(proposed)` mechanism and the A3 advisory stay in place for the next one.
-- `2026-09-30`, leaf `.4c`: **an exit criterion must arrive with owners.** A roadmap clause no leaf owns is
-  the D32 defect one level up, so the same commit that added G3's envelope-coverage criterion made
-  `G3-GRADING.5` required (trousers with a pocket and a derived buttonhole), created `G3-GRADING.15` (the
-  classic collar) and made `.14`'s exit review fail if a §3.2 garment has no leaf's evidence behind it.
+Earlier entries — leaves `.1`, `.4`, `.6`, `.7`, `.13d`, `.4b`, `.14`, `.4c` and the two that opened this
+section — are sealed in
+[`docs/history/stitchcad-g0-contract-decisions-part1.md`](../history/stitchcad-g0-contract-decisions-part1.md)
+(112 lines, 10079 bytes, `sha256:8d22b367…`), under the remedy defect D49 names for a tree file's ledger tail.
 
 - `2026-09-30`, leaf `.9`: **the formula language's tables are its test suite.** The census's reference
   evaluator reads the chapter's own kind, unit-ratio, product-law and signature tables and type-checks every
@@ -684,6 +581,26 @@ not a contract.
   "mirrored layout, never mirrored geometry" is unfalsifiable as a sentence and trivially falsifiable as a
   comparison.
 
+- `2026-09-30`, leaf `.17`: **the undo granularity is the atomic group, and an undo restores semantics.**
+  Per-command undo was rejected because "add a dart" is a centre, two legs, an intake and a truing, and
+  undoing three of the four leaves a piece nobody drafted; contour-level undo was rejected because two
+  designs with identical contours and different recipes are different designs (ontology §9), so restoring
+  pixels can silently change which design is on screen. Evaluations and artifacts are **discarded** rather
+  than undone, and the history is not canonical content.
+- `2026-09-30`, leaf `.17`: **authority is a permission on a command class, enforced in the core.** A
+  per-tool permission list was rejected because a tool manifest is data an adapter ships, and the core is the
+  only place three adapters cannot disagree. A sixth level is refused by the census as a governance change
+  rather than a chapter edit, and `approve` stays unholdable by an agent — the release chapter's
+  `release_approver_not_human` is the same rule seen from the package.
+- `2026-09-30`, leaf `.17`: **the parity table is generated, and empty at G0 on purpose.** Its columns, its
+  closed cell vocabulary and the rule that a workflow is marked present only when a test completes it through
+  that adapter are normative now; its rows are G5's evidence. A table filled in before the adapters exist is
+  a claim about unwritten code — the same reason the canvas spike's `results.tsv` is empty.
+- `2026-09-30`, leaf `.17`: **one number is deliberately not written.** The undo depth is declared to exist,
+  to be bounded and to report when it drops the oldest group, but its value belongs with the resource bounds
+  roadmap §10 requires at G1, where a measurement exists to derive it from. A bound guessed at G0 is a
+  migration later.
+
 ## Open Questions
 
 - Cut-on-fold vs paired front for the reference skirt: roadmap §11 G0 allows either. Decided
@@ -723,62 +640,59 @@ here, because `scripts/check_task_acceptance.sh` judges every staged `docs/tasks
 with no ticked boxes; the next slice moves it across. Neither file carries an unticked placeholder box
 (defect D15).
 
-### `G0-CONTRACT.16` — one message system, chosen on evidence, with an inventory nothing keeps by hand
+### `G0-CONTRACT.17` — the command layer is a contract, and the roadmap's own two lists are parsed to prove it
 
-- [x] **REPRODUCE / ISSUE** — §7.6 required the choice at G0 and the repository had neither the choice nor
-  the architecture. `git ls-files 'docs/book/src/spec/i18n*' | wc -l` → `0`; `git ls-files docs/decisions/ |
-  grep -c i18n` → `0`, `rc=1`; the spec index carried the promise as an unlinked row,
-  `git show HEAD:docs/book/src/spec/index.md | grep -c '^| Internationalization |'` → `1`, `rc=0`; and
-  seven references across five chapters pointed at this leaf instead of a clause:
-  `git grep -c 'G0-CONTRACT\.16' HEAD -- docs/book/src` → `feature-matrix.md:1`, `formula-language.md:1`,
-  `glossary.md:3`, `glossary/profiles-and-release.md:1`, `interchange-dialects.md:1`.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n 'One message system, chosen at G0' ROADMAP.md` → `494`,
-  `rc=0`, whose own parenthesis states the trap: "Fluent OR ICU — not 'Fluent or ICU'; they are distinct
-  systems; if both ends are needed, a designed bridge". A leaf may record that sentence, or it may decide
-  it; deciding needs evidence about two ecosystems that this repository had not read, which is why the
-  clause sat open behind four chapters that each cited it. The second cause is the one an instrument had to
-  close: the message inventory spans four chapters' diagnostic tables **and a crate's error enum**, so a
-  count written by hand is stale the day either grows.
-- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/i18n/run_i18n_census.sh` →
-  `i18n census: 8 families / 64 message ids / 0 failure(s)`, `exit=0`, where every count is re-derived from
-  the envelope's §10, the formula language's §5.2, the dialects' §11, the release contract's §9 and
-  `crates/sc-units/src/error.rs`. Deriving it found two errors in the chapter's own first draft, both
-  corrected before it landed: the envelope's 29th token `geom_offset_budget` had been folded into the
-  `env_*`/`ngo_*` family (the census reads the population by shape, so a sixth prefix could not hide), and
-  `UnitError` carries **five** variants — `EmptyDerivation` has no braces and a first grep for
-  `Variant {` counted four. Discrimination is proved:
-  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/i18n/run_i18n_probes.sh` → `probes: 11 pass /
-  0 fail`, including CODE-GROWS, which adds a variant to a *copy* of the crate's source and requires the
-  inventory's count to be refused. Sizes: the chapter is `250` lines / `17 650` B, widest `202` B, and the
-  record `79` / `5 822`, both inside their per-part health; `make book` → `INFO HTML book written to …`,
-  `exit=0`.
+- [x] **REPRODUCE / ISSUE** — §4.4 required undo/redo semantics at G0 and the repository had none.
+  `git ls-files 'docs/book/src/spec/command*' | wc -l` → `0`; the spec index carried the promise unlinked,
+  `git show HEAD:docs/book/src/spec/index.md | grep -c '^| Command layer |'` → `1`, `rc=0`; and the whole
+  vocabulary part was parked against this leaf,
+  `git show HEAD:docs/book/src/spec/glossary/commands-and-authority.md | grep -c 'G0-CONTRACT\.17'` → `20`
+  entries whose canonical object was a leaf rather than a clause, under a header note reading "until that
+  chapter lands, the roadmap clause is cited".
+- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n 'Undo/redo semantics are defined at G0' ROADMAP.md` →
+  `285:not one tool per getter. Undo/redo semantics are defined at G0 (granularity`, `rc=0`, i.e. §4.4 makes
+  the granularity a G0 deliverable and not an implementation detail; §7.8 adds the five authority levels and
+  §10 the audit trail. The clause had an owner and no artifact, so the cause is a leaf not taken — and the
+  risk in leaving it is that undo granularity decided by an implementation is decided by whatever data
+  structure was convenient, which is the D35 class (a contract settled by accident) at the level of the whole
+  editing model.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/command_layer/run_command_layer_census.sh` →
+  `command-layer census: 17 commands / 5 classes / 5 levels / 0 failure(s)`, `exit=0`, where the five
+  commands come out of roadmap §4.4's own backticked list and the five levels out of §7.8's slash-separated
+  one — the latter wrapped mid-item, which the first cut did not normalise and so parsed zero levels and
+  reported five invented ones. Every §1.1 row's class, authority and reversibility is checked against the
+  vocabularies §1 and §7 declare, derived from those tables rather than listed beside them. Discrimination is
+  proved: `TMPDIR=$PWD/target/scratch bash
+  docs/tasks/artifacts/command_layer/run_command_layer_probes.sh` → `probes: 14 pass / 0 fail`, including
+  LEVEL-EXTRA and LEVEL-MISSING as separate arms (the two directions of K3 proved independently),
+  HUMAN-ONLY (softening "is human-only" to "is usually a person" is refused), and CONTROL. Sizes: the chapter
+  is `264` lines / `18 959` B, widest `174` B, and the record `71` / `6 024`, both inside their per-part
+  health; `make book` → `exit=0`.
 - [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
-  `20 suite(s) green`; the neighbouring censuses unchanged: glossary `305 terms / 9 parts / 156 tokens /
-  0 failure(s)` after a ninth part, seven terms and one repointed entry, with the A–Z index re-derived;
-  interchange `17 layers / 4 targets / 12 entities / 0 failure(s)`; release `9 manifest fields / 6 states /
-  8 matrix rows / 0 failure(s)`; formula language `17 bindings / 4 assertions / 13 refusals /
-  0 mismatch(es)`; fixture `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`; matrix
-  `105 rows / 0 failure(s)`; standards `6 registered / 0 failure(s)`; uncertainty `133 markers / 16 files /
-  0 unowned`; coverage `10 lanes / 13 trees / 0 unowned`. `bash scripts/check_live_doc_size.sh` → `OK — 17
-  surfaces, 15 routes, 105 files measured`, `exit=0`. Two probe arms failed first against a correct census
-  and were fixed in the arms: one expected an "uncovered id" message where the family row still covered the
-  new variant (the property is the count agreeing with the code), and one mutated half a table cell so the
-  reason it meant to delete survived.
-- [x] **FIX** — wrote the chapter (what is externalized and what is not, the choice with its evidence
-  table, message identity, the termbase per language, the lint with five reasoned exemptions,
-  locale-independent canonical files, pseudolocalization, the RTL geometry rule, three review tiers with
-  absolute thresholds for the two that reach fabric, the derived inventory, five diagnostics); the decision
-  record with six rejected alternatives; the census and its 11-arm suite; a ninth glossary part
-  (`localization.md`, seven terms) with the parts table, SUMMARY and index updated; six cross-references
-  repointed from this leaf to a clause. **D49's trigger fired on the tree file itself and was discharged
-  here:** it had reached `89 632` B against a `98 304` ceiling, so the oldest fourteen changelog entries
-  were sealed into `docs/history/stitchcad-g0-contract-changelog-part1.md` (`84` lines / `7 941` B, digest
-  reproduced by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`) and the tree fell to `81 811` B; two
-  verification rows past the `443` B cell budget were tightened rather than the target raised.
+  `21 suite(s) green`; the neighbouring censuses unchanged: glossary `308 terms / 9 parts / 156 tokens /
+  0 failure(s)` after three new terms, nineteen repointed entries and a re-derived index, i18n
+  `8 families / 64 message ids / 0 failure(s)`, release `9 manifest fields / 6 states / 8 matrix rows /
+  0 failure(s)`, interchange `17 layers / 4 targets / 12 entities / 0 failure(s)`, formula language
+  `17 bindings / 4 assertions / 13 refusals / 0 mismatch(es)`, fixture `20 derived rows / 4 closure checks /
+  5 pieces / 0 mismatch(es)`, matrix `105 rows / 0 failure(s)`, standards `6 registered / 0 failure(s)`;
+  `bash scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 113 files measured`, `exit=0`. Two
+  census bugs were found and fixed while building it: the wrapped authority list above, and a K5 population
+  that counted `command_id` — a field of the command shape declared in §2 — as an undeclared diagnostic.
+- [x] **FIX** — wrote the chapter (five classes with the vocabularies they own, seventeen commands in one
+  machine-readable table, the seven fields of a command's shape, the undo rules including the three an
+  implementation gets wrong by accident, preview/commit, revision preconditions and idempotency, structured
+  errors and cancellable progress, the five authority levels with what each may not do, the parity table's
+  eight columns and its generation rule, eight diagnostics); the decision record with ten rejected
+  alternatives; the census and its 14-arm suite; three glossary terms and nineteen repointed entries plus
+  four cross-references in three other chapters. **D49's third trigger discharged here:** the tree had
+  reached 94 % of its byte ceiling, so the decisions of leaves `.1`–`.4c` were sealed into
+  `docs/history/stitchcad-g0-contract-decisions-part1.md` (`112` lines / `10 079` B, digest reproduced by
+  `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`, `33` segment verdicts) and `.16`'s checklist moved
+  to the evidence sibling as the convention requires.
 - [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's decisions and logs; `MEMORY.md`,
-  `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two instrument
-  rows), `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in
-  this commit. Lesson promotion: **promoted** — the new record carries an `answers:` line.
+  `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two instrument rows),
+  `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in this
+  commit. Lesson promotion: **promoted** — the new record carries an `answers:` line.
 
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and a leaf that stages code additionally fills a `### <leaf-id>` checklist subsection
@@ -792,6 +706,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-09-30` | `G0-CONTRACT.17` | the command-layer census and its 14-arm suite; the chapter's and record's sizes; the glossary census after three terms and nineteen repointed entries; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the decisions seal and its digest | `17 commands / 5 classes / 5 levels / 0 failure(s)`; `14 pass / 0 fail`; `264` / `18 959`; `308 terms / 9 parts`; `21 suite(s) green`; sealed `112` / `10 079` |
 | `2026-09-30` | `G0-CONTRACT.16` | the i18n census and its 11-arm suite; the chapter's and record's sizes; the glossary census after a ninth part; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the tree's sealing | `8 families / 64 message ids / 0 failure(s)`; `11 pass / 0 fail`; `250` / `17 650`; `305 terms / 9 parts`; `20 suite(s) green`; tree `81 811` B after sealing `84` / `7 941` |
 | `2026-09-30` | `G0-CONTRACT.12` | the release-contract census and its 14-arm suite; the chapter's size; the glossary census; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the sibling's sealing | `9 manifest fields / 6 states / 8 matrix rows / 0 failure(s)`; `14 pass / 0 fail`; `257` / `19 010`; `298 terms`; `19 suite(s) green`; sibling `449` / `42 065` after sealing `560` / `52 573` |
 | `2026-09-30` | `G0-CONTRACT.11` | the spike verdict instrument on its empty data plane and on twelve synthetic result sets; the record's size; `make gate`/`probes`/`book`; the seven book censuses; containment | `PENDING`, `exit=0`; `13 pass / 0 fail`; `78` lines / `7 244` B; `18 suite(s) green`; all green; `OK — 99 files measured` |
@@ -853,9 +768,26 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.11` | `STITCHCAD-G0-0011 (leaf G0-CONTRACT.11): the spike's rule is written before its measurement` | ADR-0002 as a decision structure: chrome, dev shell and TS ban `active`, canvas `proposed`; a declared corpus, seven gates, six rules and an instrument that derives the verdict from a TSV data plane |
 | `G0-CONTRACT.12` | `STITCHCAD-G0-0012 (leaf G0-CONTRACT.12): the release contract is the roadmap's §9, compared rather than restated` | nine manifest fields with their sources, digest-bound approval, seven completeness checks, the six states in order, scope that narrows by itself, the policy matrix tuned in a recorded table; D49's trigger discharged |
 | `G0-CONTRACT.16` | `STITCHCAD-G0-0016 (leaf G0-CONTRACT.16): one message system, and an inventory nothing keeps by hand` | Fluent at both ends with the licences read; the lint, termbase, pseudolocalization, locale-free canonical files, the RTL geometry test and three review tiers; the 64 ids derived from four chapters and the crate; D49's trigger discharged |
-| `G0-CONTRACT.15`, `.17` | `pending` | — |
+| `G0-CONTRACT.17` | `STITCHCAD-G0-0017 (leaf G0-CONTRACT.17): the command layer is a contract, and the roadmap's own lists prove it` | five classes, seventeen commands, undo at the atomic group, five core-enforced authority levels, a generated parity table; D49's third trigger discharged |
+| `G0-CONTRACT.15` | `pending` | — |
 
 ## Changelog
+
+- `2026-09-30`: `.17` landed — §4.4's contract exists and its two prose lists are parsed rather than copied.
+  Seventeen commands sit in five classes, and a class fixes a command's authority, its reversibility and its
+  undo granularity, so an adapter cannot re-classify one for convenience. **Undo is the atomic group** and
+  restores semantics — recipe, entity identities, revision — rather than contours, because two designs with
+  the same contours and different recipes are different designs; evaluations and artifacts are discarded
+  rather than undone, and the history is not canonical content, so a reopened project starts fresh at its
+  saved revision. Preview needs only `inspect`, and a commit re-checks the precondition the preview passed,
+  because three front-ends and an agent edit one design. Mutations carry a revision precondition and an
+  idempotency key, so a stale revision is refused naming both and a transport retry is a reported replay
+  rather than a second edit. The five authority levels are permissions on classes enforced in the core — a
+  tool manifest is data an adapter ships — and `approve` cannot be held by an agent, which is the release
+  chapter's `release_approver_not_human` seen from the other side. The parity table's eight columns, its
+  closed cell vocabulary and its generation rule are normative while its rows stay empty, because rows at G0
+  would be claims about unwritten adapters. The undo depth is the one number deliberately not written: it is
+  declared to exist and to be bounded, and its value belongs with the resource bounds G1 measures.
 
 - `2026-09-30`: `.16` landed — §7.6's "one message system, chosen at G0" is chosen, on evidence rather than
   familiarity. **Fluent, at both ends**: `fluent-rs` in the Rust core and `fluent.js` in the TypeScript

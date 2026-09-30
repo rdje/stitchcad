@@ -523,3 +523,60 @@ health again, the oldest are sealed the same way, and the `DESCRIPTOR` rule of
   `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two instrument
   rows), `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in
   this commit. Lesson promotion: **promoted** — the new record carries an `answers:` line.
+
+### `G0-CONTRACT.16` — one message system, chosen on evidence, with an inventory nothing keeps by hand
+
+- [x] **REPRODUCE / ISSUE** — §7.6 required the choice at G0 and the repository had neither the choice nor
+  the architecture. `git ls-files 'docs/book/src/spec/i18n*' | wc -l` → `0`; `git ls-files docs/decisions/ |
+  grep -c i18n` → `0`, `rc=1`; the spec index carried the promise as an unlinked row,
+  `git show HEAD:docs/book/src/spec/index.md | grep -c '^| Internationalization |'` → `1`, `rc=0`; and
+  seven references across five chapters pointed at this leaf instead of a clause:
+  `git grep -c 'G0-CONTRACT\.16' HEAD -- docs/book/src` → `feature-matrix.md:1`, `formula-language.md:1`,
+  `glossary.md:3`, `glossary/profiles-and-release.md:1`, `interchange-dialects.md:1`.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n 'One message system, chosen at G0' ROADMAP.md` → `494`,
+  `rc=0`, whose own parenthesis states the trap: "Fluent OR ICU — not 'Fluent or ICU'; they are distinct
+  systems; if both ends are needed, a designed bridge". A leaf may record that sentence, or it may decide
+  it; deciding needs evidence about two ecosystems that this repository had not read, which is why the
+  clause sat open behind four chapters that each cited it. The second cause is the one an instrument had to
+  close: the message inventory spans four chapters' diagnostic tables **and a crate's error enum**, so a
+  count written by hand is stale the day either grows.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/i18n/run_i18n_census.sh` →
+  `i18n census: 8 families / 64 message ids / 0 failure(s)`, `exit=0`, where every count is re-derived from
+  the envelope's §10, the formula language's §5.2, the dialects' §11, the release contract's §9 and
+  `crates/sc-units/src/error.rs`. Deriving it found two errors in the chapter's own first draft, both
+  corrected before it landed: the envelope's 29th token `geom_offset_budget` had been folded into the
+  `env_*`/`ngo_*` family (the census reads the population by shape, so a sixth prefix could not hide), and
+  `UnitError` carries **five** variants — `EmptyDerivation` has no braces and a first grep for
+  `Variant {` counted four. Discrimination is proved:
+  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/i18n/run_i18n_probes.sh` → `probes: 11 pass /
+  0 fail`, including CODE-GROWS, which adds a variant to a *copy* of the crate's source and requires the
+  inventory's count to be refused. Sizes: the chapter is `250` lines / `17 650` B, widest `202` B, and the
+  record `79` / `5 822`, both inside their per-part health; `make book` → `INFO HTML book written to …`,
+  `exit=0`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `20 suite(s) green`; the neighbouring censuses unchanged: glossary `305 terms / 9 parts / 156 tokens /
+  0 failure(s)` after a ninth part, seven terms and one repointed entry, with the A–Z index re-derived;
+  interchange `17 layers / 4 targets / 12 entities / 0 failure(s)`; release `9 manifest fields / 6 states /
+  8 matrix rows / 0 failure(s)`; formula language `17 bindings / 4 assertions / 13 refusals /
+  0 mismatch(es)`; fixture `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`; matrix
+  `105 rows / 0 failure(s)`; standards `6 registered / 0 failure(s)`; uncertainty `133 markers / 16 files /
+  0 unowned`; coverage `10 lanes / 13 trees / 0 unowned`. `bash scripts/check_live_doc_size.sh` → `OK — 17
+  surfaces, 15 routes, 105 files measured`, `exit=0`. Two probe arms failed first against a correct census
+  and were fixed in the arms: one expected an "uncovered id" message where the family row still covered the
+  new variant (the property is the count agreeing with the code), and one mutated half a table cell so the
+  reason it meant to delete survived.
+- [x] **FIX** — wrote the chapter (what is externalized and what is not, the choice with its evidence
+  table, message identity, the termbase per language, the lint with five reasoned exemptions,
+  locale-independent canonical files, pseudolocalization, the RTL geometry rule, three review tiers with
+  absolute thresholds for the two that reach fabric, the derived inventory, five diagnostics); the decision
+  record with six rejected alternatives; the census and its 11-arm suite; a ninth glossary part
+  (`localization.md`, seven terms) with the parts table, SUMMARY and index updated; six cross-references
+  repointed from this leaf to a clause. **D49's trigger fired on the tree file itself and was discharged
+  here:** it had reached `89 632` B against a `98 304` ceiling, so the oldest fourteen changelog entries
+  were sealed into `docs/history/stitchcad-g0-contract-changelog-part1.md` (`84` lines / `7 941` B, digest
+  reproduced by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`) and the tree fell to `81 811` B; two
+  verification rows past the `443` B cell budget were tightened rather than the target raised.
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's decisions and logs; `MEMORY.md`,
+  `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two instrument
+  rows), `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in
+  this commit. Lesson promotion: **promoted** — the new record carries an `answers:` line.

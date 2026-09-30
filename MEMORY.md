@@ -16,14 +16,15 @@
 - **Project:** StitchCAD — a sewing CAD, headless Rust core: construction-recipe designs, evidence-bearing
   Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.3, DRAFT until G0 exits.
 - **Active tree:** `G0-CONTRACT`. Done: `.1`–`.12`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`,
-  `.14`/`.14b`/`.14c`, `.16`, `.18`, `.19`. Remaining: `.17`, then the `.15` exit review.
-- **Next action:** take **`G0-CONTRACT.17`** — the command-layer contract (§4.4): the typed command set,
-  atomic groups, preview/commit, revision preconditions, idempotency keys, structured errors, progress for
-  long operations, and the **undo/redo granularity §4.4 requires to be defined at G0** (per command group),
-  plus the UI↔API↔MCP workflow-parity invariant with the shape of the table that proves it, and the five
-  agent authority levels as command-layer concepts. Then `.15` closes gate G0. `G0-CONTRACT.16` landed
-  Fluent at both ends with the licences read, and a 64-id message inventory derived from four chapters and
-  from `crates/sc-units/src/error.rs`.
+  `.14`/`.14b`/`.14c`, `.16`, `.17`, `.18`, `.19`. Remaining: **`.15`, the gate exit review**.
+- **Next action:** take **`G0-CONTRACT.15`** — the G0 exit review, and the last leaf of the gate: walk
+  §11's clause list, cite the deliverable and its re-derivable check for each (`met` with a cited artifact
+  or `not met` with a named blocker, never met on prose alone), update `LIVE_STATUS.md` and the roadmap's
+  status line, and hand the frontier to `G1-SLICE`. Two clauses are governed by what this tree already
+  established: the governance clause is recorded as `.14b` states it — the domain seat is **vacant**, so no
+  clause is marked met on a borrowed signature — and the evaluation-seat clause is `not met` with the
+  director as the named blocker, because naming humans is his. Every chapter now has an instrument, so the
+  review can cite a command per clause rather than a reading.
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
 - **Push:** 400-commit cadence, **plus** an immediate push whenever an unpushed commit touches CI, a

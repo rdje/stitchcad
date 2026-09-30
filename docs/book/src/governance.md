@@ -131,7 +131,8 @@ Three governance consequences, because the boundary constrains the review paths 
 Roadmap §7.8 and §10 make agents first-class users and second-class authorities, and governance inherits
 both halves:
 
-- The five authority levels are command-layer concepts (`G0-CONTRACT.17` specifies them): an agent may
+- The five authority levels are command-layer concepts ([the command layer](spec/command-layer.md) §7
+  specifies them): an agent may
   inspect, propose, commit within a scope and generate artifacts; approval stays human.
 - Imported files are **data, never instructions** — which is a governance rule before it is a security one,
   because a factory's returned DXF is the most plausible carrier of a request that nobody in this project
@@ -259,7 +260,7 @@ Named so that each is a decision with a record when its time comes, rather than 
   the independence criterion in §2, the classification step in §3, the two-signature golden rule in §4 — it
   is a **project decision**, and it is labelled as one rather than dressed as a citation.
 - **Nothing here is enforced by prose alone forever.** The mechanical parts land as gates: the actor trace
-  and the authority levels at G1 (`G0-CONTRACT.17` specifies the contract), the profile approval path and
+  and the authority levels at G1 (the command layer §7 specifies the contract), the profile approval path and
   the evidence store at G4, the golden and provenance rules at G2/G6 in `conformance/`, and "governance in
   force" as a G7 exit criterion. A rule in this chapter that no gate ever enforces is a defect to be logged
   like any other, and §15's gate-exit review is where that audit happens.

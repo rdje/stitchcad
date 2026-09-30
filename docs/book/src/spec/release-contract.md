@@ -140,7 +140,8 @@ propose, commit and generate, and it may assemble the evidence an approval needs
 - Approval is **deliberate and scoped**: it names the scope it covers (§6), so an approval is never
   broader than the sentence that records it.
 - The authority levels themselves — inspect / propose / commit / generate / approve — are command-layer
-  concepts specified by `G0-CONTRACT.17` and bounded by [governance §6](../governance.md); this chapter
+  concepts specified by the [command layer §7](command-layer.md) and bounded by
+  [governance §6](../governance.md); this chapter
   fixes only the release consequence: the top level cannot be held by a machine.
 - Where a seat is vacant, an approval does not exist and is not inferred. A package needing the domain
   expert's signature stays unapproved, which is the state [governance §8.1](../governance.md) leaves the

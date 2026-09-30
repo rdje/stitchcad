@@ -20,7 +20,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   `G1-SLICE.3` (code).
 - `docs/book/src/spec/` — the normative specification the director reviews: overview, glossary, units,
   ontology, formula language, envelope, instantiation paths, size sets, standards, interchange dialects,
-  release and approval, reference skirt. Owner the `G0-CONTRACT` leaves.- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, in three parts** (contract,
+  release and approval, the command layer, reference skirt. Owner the `G0-CONTRACT` leaves.- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, in three parts** (contract,
   `formula-language/grammar.md`, `formula-language/examples.md`). Its numbers are computed, not typed:
   `docs/tasks/artifacts/formula_language/run_formula_language_census.sh` reads the chapter's own tables.
   Owner `G0-CONTRACT.9`, implemented by `G1-SLICE.5`.
@@ -66,6 +66,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_adr-0002-ui-stack-and-canvas-spike-protocol.md`](docs/decisions/decision_adr-0002-ui-stack-and-canvas-spike-protocol.md)
 - [`decision_adr-0003-construction-recipe-and-formula-language.md`](docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md)
 - [`decision_adr-0004-interchange-dialects.md`](docs/decisions/decision_adr-0004-interchange-dialects.md)
+- [`decision_command-layer-contract-and-undo-granularity.md`](docs/decisions/decision_command-layer-contract-and-undo-granularity.md)
 - [`decision_d32-proving-gates-proposed-roadmap-amendment.md`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)
 - [`decision_director-ruling-2026-09-30-four-findings.md`](docs/decisions/decision_director-ruling-2026-09-30-four-findings.md)
 - [`decision_fixture-oracles-derive-the-finished-dimension.md`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)

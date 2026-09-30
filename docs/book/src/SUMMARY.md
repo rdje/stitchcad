@@ -22,6 +22,7 @@
     - [Worked examples](spec/formula-language/examples.md)
   - [Interchange dialects](spec/interchange-dialects.md)
   - [Release and approval](spec/release-contract.md)
+  - [The command layer](spec/command-layer.md)
   - [Internationalization](spec/i18n-architecture.md)
   - [The supported envelope](spec/feature-matrix.md)
   - [Instantiation paths](spec/instantiation-paths.md)
