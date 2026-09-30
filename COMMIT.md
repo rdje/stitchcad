@@ -121,6 +121,13 @@ apply to code changes.
   make push-due      # scripts/check_push_due.sh — exit 1 when an exceptional push is due
   ```
 
+  **Observe the verdict at job level, not run level.** A run's aggregate status can lag its own jobs: measured
+  on `head_sha=3d9f2be`, the `rust` run reported `in_progress` for about eleven minutes while its only job
+  `check` had already `completed / success` on every step. A session that polls only
+  `/actions/runs?head_sha=<sha>` concludes "still running" and either waits or, worse, records nothing. Query
+  `/actions/runs/<run_id>/jobs` and read the steps before deciding a run is unfinished — and never record a
+  verdict either way until one of the two says `completed`.
+
 - Any other earlier push happens only when the director asks for one. Never `--force`, never push a
   dirty tree, never push a branch that is not this project's.
 - **Recorded trade-off, so it is not rediscovered as a surprise:** `MEMORY_ARCHITECTURE.md` §8 asks for

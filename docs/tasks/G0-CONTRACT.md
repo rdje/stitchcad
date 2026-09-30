@@ -704,6 +704,8 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-30` | `G0-CONTRACT.14c` | governance §6.1 and its size; the roadmap's Appendix A entry and its re-based baseline; `G3-GRADING.14`'s acceptance; `make gate`; containment | five rules in §6.1; the v0.3 entry discloses the self-application; the exit review withholds approval from the criterion's author; `=== all doctrines green ===`; `OK — 89 files measured` with `roadmap` at `lines=951;bytes=53153;at=v0.3` |
 | `2026-09-30` | `G0-CONTRACT.19` | the uncertainty census and its probe suite; the glossary census after the new term; `make book`; `make probes` | `88 markers / 10 files / 0 unowned / 0 failure(s)`, `exit=0`; `probes: 6 pass / 0 fail`; `277 terms / 8 parts / 146 tokens / 0 failure(s)`; `exit=0`; `15 suite(s) green` |
 
+| `2026-09-30` | `.14c`/`.19` (CI verdict, observed after the exceptional push) | `make check`/`gate`/`probes`; `git push origin main`; the Actions runs **and jobs** APIs for `head_sha=3d9f2be` | `exit=0` all three; `a743d53..3d9f2be`, ahead `0`; **`doctrines` `success`**, **`rust` `success`** with job `check` green on every step. Read at job level: the `rust` RUN said `in_progress` for ~11 min after its only job had completed |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
