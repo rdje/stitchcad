@@ -232,9 +232,9 @@ and a garment the envelope names with no exit criterion proving it is a gate fai
 Every `rejected` and `deferred` row names a token. The tokens are declared here with the arguments each
 diagnostic must carry, because an undeclared token has no defined meaning — the rule
 `docs/decisions/decision_machine-tokens-declared-where-used.md` records. Code allocation, localization and
-the typed-argument contract belong to the internationalization chapter (`G0-CONTRACT.16`) and the command
-layer (`G0-CONTRACT.17`); what is fixed here is each diagnostic's identity and what it must tell the
-receiver.
+the typed-argument contract belong to the [internationalization chapter](i18n-architecture.md) (§3 for
+identity and arguments, §10 for the inventory) and the command layer (`G0-CONTRACT.17`); what is fixed
+here is each diagnostic's identity and what it must tell the receiver.
 
 Three properties hold for all of them: a diagnostic is **structured** (a stable token plus typed
 arguments, never prose an agent must parse); it names **what was asked for** and **what to do instead**;

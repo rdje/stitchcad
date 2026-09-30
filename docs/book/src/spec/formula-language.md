@@ -185,8 +185,8 @@ failure abandons the evaluation the same way and never resumes with a substitute
 ### 5.2 The diagnostic set
 
 Every token carries the statement's index, the canonical form of the expression, and the clause it
-broke. A token is stable, is localized as the i18n chapter will specify (`G0-CONTRACT.16`), and is
-never rendered raw to a user.
+broke. A token is stable, is localized as the [internationalization chapter](i18n-architecture.md) §3
+specifies, and is never rendered raw to a user.
 
 | Token | Raised when | Required arguments |
 | --- | --- | --- |

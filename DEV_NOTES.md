@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-09-30)_ — a count you just wrote by hand is already wrong if the population has a shape you did not grep for
+
+- The i18n chapter's message inventory was written from four chapters' diagnostic tables and one crate's
+  error enum, and it was wrong twice before it ever ran: the envelope's 29th token (`geom_offset_budget`)
+  had been folded into the `env_*`/`ngo_*` family, and `UnitError` was counted at four variants when it
+  carries five. The fifth, `EmptyDerivation`, has **no braces** — a first grep for `Variant {` counted the
+  four struct variants and reported a clean answer. **A population enumerated by one member's shape is a
+  population minus the members that differ**, and the missing member is invisible precisely because the
+  count looks plausible.
+- The fix was not a better grep but a different rule: the census derives the population by SHAPE
+  (any snake_case token in a diagnostic table's first cell) and derives the families from the chapter's own
+  inventory, so a sixth prefix appears by itself. A list of prefixes kept beside the chapters is the same
+  hand-kept number in a different file — and it is what the first cut had.
+- **An instrument written in the same slice as the document still earns its cost.** Both errors were caught
+  before the chapter landed, by a census written after it; the alternative was a reviewer reading a table of
+  eight counts and believing six of them. Where a chapter publishes a count of anything, the count is derived
+  in the same commit or it is marked as unverified — there is no third state where it is simply typed.
+
 ## _(2026-09-30)_ — an arm that removes the rule along with the breach reports a green census
 
 - A probe arm meant to prove "a declared disposition no cell carries is refused" replaced **every**
@@ -117,50 +135,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   renderer truncates is logged as D47 with `SPINE.20` owning the project-slot check — the inherited checker
   stays untouched, because a NEUTRAL spine file is reported upstream and never patched locally.
 
-## _(2026-09-30)_ — a rule whose only compliant path is "don't change the file" gets bypassed
-
-- Applying the roadmap amendment was blocked by the containment gate, and blocked *correctly*: the `roadmap`
-  row's transition debt was measured at exactly the file's size (`lines=919;bytes=50821` = `wc -lc`), so any
-  growth read as a widened baseline. The rule is right; what was missing was a legitimate path, and the only
-  one available was editing the number — the silent widening the rule exists to prevent. **When a gate's only
-  passing move is to falsify its own input, the gate is incomplete, not the change.** The fix was to give the
-  baseline a revision identity (`at=v0.3`) that the checker executes: a revision may re-base its baseline, but
-  only in the commit that revises, which is where the authority has to be anyway.
-- **An exit criterion must arrive with owners.** The same commit that gave G3 the envelope-coverage criterion
-  made `G3-GRADING.5` required, created `.15` and made `.14`'s review fail without a leaf's evidence — because
-  a roadmap clause no leaf owns is defect D32 one level up, and the tree was seeded from the gate's old text so
-  it inherited the gate's gap exactly.
-- **A census nobody runs is a claim, and this one had gone red for two committed slices.** The tree-coverage
-  census defined a tree by *filename*, so the evidence siblings the containment registry prescribes looked like
-  lane-less orphans — and `make probes` globs `run_*probe*.sh`, so nothing re-derived it. Three copies of the
-  same `ls ${lane}-*.md | head -1` assumption existed; the third was in an *advisory* table, where it silently
-  replaced `G0-CONTRACT` with its sibling and no exit code could reveal it. Reading a tool's output, not just
-  its status, is part of running it.
-- **Office can be held acting; competence cannot.** Two of the three empty governance seats are the director's
-  authority already, so acting costs nothing and adds a record. The third — the sewing/factory expert — is
-  knowledge nobody here has, so it is recorded as **vacant** with four explicit prohibitions, and the first G2
-  golden stays gated on a real name. The tempting move (let the engineer act as reviewer) satisfies the wording
-  of the two-step rule and destroys its meaning.
-
-## _(2026-09-30)_ — a digest is a contract about BYTES, so the bytes have to be written down
-
-- Sealing the third changelog segment of the day produced a refusal that read as the worst thing an archive
-  can report — "content hashes to `3148dd0f…`, its descriptor declares `8553accc…`" — and the cause was one
-  newline. The verifier hashes `content=$(sed -n 'rule+2,$p' f)` followed by `printf '%s\n'`, and bash command
-  substitution strips EVERY trailing newline, so a segment whose sealed content ends with a blank line can
-  never reproduce a raw-byte digest. Measured: `tail -c 12` showed `…touched\n\n` on the new segment and
-  `…touched\n` on the one sealed an hour earlier.
-- **The general shape: two honest implementations of "the sealed content" disagreed, and nothing said which
-  one was the contract.** A digest proves identity only when both sides mean the same bytes, so the byte rule
-  belongs in the instrument's header, not in the author's head. Fixed by normalizing the segment, recomputing
-  its descriptor with the verifier's own method, teaching the rule to refuse a trailing blank line BY NAME,
-  and pinning that with an arm — because a mismatch that looks like drift in an immutable file invites the one
-  edit the archive forbids.
-- **Corollary for the next rollover:** seal with the verifier's method, not with the language you happen to be
-  scripting in. The check is one command (`sed | shasum`), so running it before writing the descriptor is
-  cheaper than diagnosing the difference afterwards. Promoted, with the day's other containment derivation, to
-  `docs/decisions/decision_maxline-health-derived-from-the-cell-budget.md`.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -169,6 +143,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part2.md`](docs/history/stitchcad-devnotes-part2.md) | the two oldest `2026-09-30` lessons (enumeration, and the vocabulary census) | 62 lines, 5915 bytes, `sha256:edcd0808…` |
 | [`devnotes-part3.md`](docs/history/stitchcad-devnotes-part3.md) | two `2026-09-30` lessons (two tables, one garment; a fixture internally right) | 50 lines, 4723 bytes, `sha256:fcca661d…` |
 | [`devnotes-part4.md`](docs/history/stitchcad-devnotes-part4.md) | two `2026-09-30` lessons (a blocked leaf splits; permission is no criterion) | 42 lines, 3706 bytes, `sha256:c2ac5791…` |
+| [`devnotes-part5.md`](docs/history/stitchcad-devnotes-part5.md) | two `2026-09-30` lessons (a rule whose only path is "don't"; a digest is about bytes) | 43 lines, 3977 bytes, `sha256:859ce981…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

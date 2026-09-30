@@ -32,7 +32,7 @@ must satisfy. It is written during gate G0 (the product-and-semantic-contract ga
 | Command layer | The typed command set, atomic groups, preview/commit, revision preconditions, undo/redo granularity, and agent authority levels |
 | [Release and approval](release-contract.md) | The manifest field by field with its source, package identity and stale-ification, completeness against the declared construction, the six graduated acceptance states, scope narrowing, human-only approval, and the artifact policy matrix |
 | [Interchange dialects](interchange-dialects.md) | The six axes an export target is made of, the target registry, the layer table in both naming modes, cut-as-1 against sew-as-1, blocks and metadata, the R12/R13 entity policy, tessellation, the three grading carriages |
-| Internationalization | The one message system, externalization, termbases, pseudolocalization, locale-independent files, and the RTL geometry rule |
+| [Internationalization](i18n-architecture.md) | The one message system and why, message identity, the termbase per language, the externalization lint and its closed exemptions, locale-independent canonical files, pseudolocalization, the RTL geometry rule, the review tiers, and the derived message inventory |
 | [Measurement standards](standards.md) | Which external standards the model draws on, what is adopted from each, and the verification status of every claim |
 | [Reference skirt](reference-skirt.md) | The one garment specified with real numbers, which every conformance suite, golden file and agent gate is built around |
 

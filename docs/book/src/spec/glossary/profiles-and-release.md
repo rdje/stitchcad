@@ -17,7 +17,7 @@
 | candidate package | a package the generator produced and no human has approved; generation makes one, approval binds to its identity | [release §1](../release-contract.md) | candidate, unapproved package | — |
 | dependency closure | the set of unknowns that actually affect one requested artifact, computed per artifact | [release §8](../release-contract.md) | impact set, relevance closure | — |
 | derived | a value computed from others, whose uncertainty state follows its inputs | [ontology §5](../ontology.md) | computed, calculated | `derived` |
-| diagnostic ⚠ | a message with a stable code, typed arguments and units; never prose an agent must parse | roadmap §7.8 · specified by `G0-CONTRACT.16` | error message, finding, warning | diagnostic code |
+| diagnostic ⚠ | a message with a stable code, typed arguments and units; never prose an agent must parse | roadmap §7.8 · [i18n §3](../i18n-architecture.md) | error message, finding, warning | diagnostic code |
 | disposition | the recorded human decision about an unresolved unknown at release time | [release §8](../release-contract.md) | resolution, waiver (⚠ not the same) | — |
 | equivalence report | the per-quantity comparison of the two instantiation paths, carried as release evidence rather than logged | [instantiation paths §6](../instantiation-paths.md) | path comparison, divergence report | — |
 | evidence ⚠ | a scoped record: target system, version, import settings, artifact hashes, procedure, observer, date, result | [release §5](../release-contract.md) | proof, validation record, *Nachweis* | `evidence` |

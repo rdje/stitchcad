@@ -463,3 +463,63 @@ health again, the oldest are sealed the same way, and the `DESCRIPTOR` rule of
   and the formula-language row tightened under its column's budget), `docs/decisions/INDEX.md` and the
   regenerated Knowledge Map in this commit. Lesson promotion: **promoted** — the new record carries an
   `answers:` line.
+
+### `G0-CONTRACT.12` — the release contract is the roadmap's §9, compared rather than restated
+
+- [x] **REPRODUCE / ISSUE** — roadmap §9 was the last G0 clause with a promised chapter and no chapter.
+  `git ls-files 'docs/book/src/spec/release*' | wc -l` → `0`; the spec index carried the promise as an
+  unlinked row, `git show HEAD:docs/book/src/spec/index.md | grep -c '^| Release and approval |'` → `1`,
+  `rc=0`; and the vocabulary was parked against this leaf,
+  `git show HEAD:docs/book/src/spec/glossary/profiles-and-release.md | grep -c 'G0-CONTRACT\.12'` → `13`
+  (twelve entries plus the part's own header note saying "until that chapter lands, the roadmap clause is
+  cited").
+- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n '^## 9. Signoff' ROADMAP.md` → `626`, `rc=0`, and the exit
+  clause that makes it a G0 deliverable: `grep -n 'approval states & release contract' ROADMAP.md` →
+  `670:  decided; approval states & release contract (§9) specified; ADR-0001`, `rc=0`. §9 is a list — nine
+  manifest fields, six acceptance states, three artifact classes — and a list realised in prose drifts: a
+  field is renamed, a rung is merged, a class is forgotten, and every gate stays green because nothing
+  compares the two documents. So the cause is not only an unwritten chapter but the absence of an
+  instrument that would notice the difference.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/release_contract/run_release_contract_census.sh`
+  → `release-contract census: 9 manifest fields / 6 states / 8 matrix rows / 0 failure(s)`, `exit=0`, where
+  the `9` and the `6` are parsed out of roadmap §9 (parenthesis-aware, because one field carries a nested
+  comma) and the `8 × 3` matrix is compared against §8.2's header and example rows and against the five
+  states ontology §5 declares. Its discrimination is proved:
+  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/release_contract/run_release_contract_probes.sh` →
+  `probes: 14 pass / 0 fail`, including LADDER-ORDER (two rungs swapped, both orders printed),
+  FIELD-INVENTED (a field wearing the roadmap's authority without its wording), DISPOSITION-UNUSED (a
+  vocabulary word no cell carries) and CONTROL. The chapter is `257` lines / `19 010` B, widest line
+  `256` B, inside the `book_collection` per-part health of `400` / `24 576` / `275`; `make book` →
+  `INFO HTML book written to …`, `exit=0`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `19 suite(s) green`; the eight neighbouring censuses unchanged: glossary `298 terms / 8 parts /
+  156 tokens / 0 failure(s)` after four new terms, twelve repointed entries and a re-derived index,
+  interchange `17 layers / 4 targets / 12 entities / 0 failure(s)`, formula language `17 bindings /
+  4 assertions / 13 refusals / 0 mismatch(es)`, fixture `20 derived rows / 4 closure checks / 5 pieces /
+  0 mismatch(es)`, matrix `105 rows / 0 failure(s)`, standards `6 registered / 0 failure(s)`, uncertainty
+  `127 markers / 15 files / 0 unowned`, coverage `10 lanes / 13 trees / 0 unowned`; `bash
+  scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 102 files measured`, `exit=0`. Two probe
+  arms failed first against a correct census and were fixed in the arms, not the tool: one quoted a
+  sentence as it read in a draft rather than as it wraps in the file, and one replaced every occurrence of
+  a disposition token — deleting its declaration along with its uses, which is the "remove the property,
+  not one instance" trap inverted into "remove the rule too".
+- [x] **FIX** — wrote the chapter (nine manifest fields each with its source, identity as the manifest's
+  digest with no in-place amendment, seven completeness checks against the declared construction, the six
+  states in the roadmap's order with the evidence and granter each needs, five scope axes with the
+  intersection rule, human-only approval, §8.2's matrix tuned in a recorded table with a closed
+  four-word disposition vocabulary and the dependency-closure rule, eight diagnostics); the decision record
+  with six rejected alternatives; the census and its 14-arm probe suite; four glossary terms plus twelve
+  repointed entries and a corrected `spi` routing (it pointed at this leaf and belongs to `G5-SHELLS.13`).
+  **D49's trigger fired and was discharged here rather than deferred:** the evidence sibling had reached
+  `1000` lines / `94 086` B against a `98 304`-byte ceiling, so ten completed checklists
+  (`G0-CONTRACT.2` … `.4b`) were sealed into `docs/history/stitchcad-g0-contract-evidence-part1.md`
+  (`560` lines / `52 573` B, digest reproduced by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`)
+  and the live sibling fell to `449` / `42 065`. The seal then exposed **D52**: three completed leaves'
+  ROOT CAUSE boxes (`.14`, `.14b`, `.19`) asserted their evidence with no invocation, which the acceptance
+  gate refused once the seal changed which box comes first — all three now carry the command and its real
+  output, `.19`'s directory count is corrected from twelve to the `13` the command prints, and the sibling's
+  header states the rule (re-run the enforcer after moving checklists, before committing).
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's decisions and logs; `MEMORY.md`,
+  `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two instrument
+  rows), `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in
+  this commit. Lesson promotion: **promoted** — the new record carries an `answers:` line.

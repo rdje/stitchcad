@@ -16,15 +16,14 @@
 - **Project:** StitchCAD — a sewing CAD, headless Rust core: construction-recipe designs, evidence-bearing
   Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.3, DRAFT until G0 exits.
 - **Active tree:** `G0-CONTRACT`. Done: `.1`–`.12`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`,
-  `.14`/`.14b`/`.14c`, `.18`, `.19`. Remaining: `.15`–`.17`.
-- **Next action:** take **`G0-CONTRACT.16`** — the ONE message system (roadmap §7.6: Fluent **or** ICU, not
-  "Fluent or ICU"; if both ends are needed, a designed bridge) plus the externalization architecture: the CI
-  lint that fails on an inline user-facing string, the glossary/termbase per language with the safety terms
-  first (notch types, the sew/cut aliases factories use in rejection emails), pseudolocalization, and
-  locale-independent canonical files (a decimal comma in input ≠ a changed stored meaning). Then `.17` (the
-  command layer with undo/redo granularity) and the `.15` exit review, which closes gate G0. ADR-0002 landed
-  at `.11` as a decision structure and §9 at `.12`: the release contract's nine manifest fields, six
-  acceptance states and tuned policy matrix are compared against the roadmap by an instrument, not restated.
+  `.14`/`.14b`/`.14c`, `.16`, `.18`, `.19`. Remaining: `.17`, then the `.15` exit review.
+- **Next action:** take **`G0-CONTRACT.17`** — the command-layer contract (§4.4): the typed command set,
+  atomic groups, preview/commit, revision preconditions, idempotency keys, structured errors, progress for
+  long operations, and the **undo/redo granularity §4.4 requires to be defined at G0** (per command group),
+  plus the UI↔API↔MCP workflow-parity invariant with the shape of the table that proves it, and the five
+  agent authority levels as command-layer concepts. Then `.15` closes gate G0. `G0-CONTRACT.16` landed
+  Fluent at both ends with the licences read, and a 64-id message inventory derived from four chapters and
+  from `crates/sc-units/src/error.rs`.
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
 - **Push:** 400-commit cadence, **plus** an immediate push whenever an unpushed commit touches CI, a

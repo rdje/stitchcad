@@ -54,7 +54,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | --- | --- | --- | --- | --- |
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.5` — derive the index↔tree frontier agreement (D34, which recurred on `2026-09-30`) | repo-local |
 | [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5` — the toolbox rows for the instruments in use, then `.13`/`.19`/`.20` | repo-local |
-| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.16` — one message system + the externalization architecture | repo-local |
+| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.17` — the command-layer contract, then the `.15` exit review | repo-local |
 | [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `proposed` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
@@ -79,9 +79,9 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-Execution order right now: **`G0-CONTRACT.16` → `.17` → `.15`** (the exit review closes gate G0), then
-`G1-SLICE` … (`.1`–`.12`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`, `.14`/`.14b`/`.14c`, `.18` and `.19`
-are done, as are `SPINE.4.4`, `.4.5`, `.15` and `.20`). The ruling of `2026-09-30` delegated four items — D27, D32, `.14`'s drafting and the
+Execution order right now: **`G0-CONTRACT.17` → `.15`** (the exit review closes gate G0), then
+`G1-SLICE` … (`.1`–`.12`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`, `.14`/`.14b`/`.14c`, `.16`, `.18`
+and `.19` are done, as are `SPINE.4.4`, `.4.5`, `.15` and `.20`). The ruling of `2026-09-30` delegated four items — D27, D32, `.14`'s drafting and the
 containment derivation — and a second instruction delegated its three findings; all are landed, `ROADMAP.md` is
 at **v0.3** carrying G3's envelope-coverage criterion, and what remains of the ruling is the director's alone:
 naming the three humans governance §8 lists. The `SPINE` lane keeps `.5`, `.13` and `.19` open; none blocks

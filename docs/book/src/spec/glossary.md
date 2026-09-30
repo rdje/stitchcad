@@ -40,8 +40,8 @@ machines, and this rule governs them:
 
 1. **A token is never rendered raw to a human.** A user sees the localized term; an artifact carries the
    token only where a machine reads it. A token surfacing in a dialog, a label or a printed tech pack is
-   a defect, and the internationalization chapter's externalization lint is what catches it
-   (`G0-CONTRACT.16`).
+   a defect, and the [internationalization chapter](i18n-architecture.md)'s externalization lint (§5) is
+   what catches it.
 2. **A token has exactly one meaning.** The census below derives this rather than asserting it.
 3. **Tokens are locale-independent ASCII.** A decimal comma, a translated field name or a case-folded
    identifier must never change what a file means (roadmap §7.6). Value tokens are `snake_case`; object
@@ -60,8 +60,9 @@ confusion is physical.
 
 The consequence is a shipping rule, not a styling one: **a ⚠ term must have a reviewed termbase entry in
 every language before that language ships.** Translating the interface around an unreviewed ⚠ term is
-how a cutting room receives a pattern whose "seam line" is its cut line. `G0-CONTRACT.16` owns the
-mechanism; this column owns the list.
+how a cutting room receives a pattern whose "seam line" is its cut line. The
+[internationalization chapter](i18n-architecture.md) §4 owns the mechanism and §9 the threshold; this
+column owns the list.
 
 ## The parts, and what each covers
 
@@ -78,6 +79,7 @@ it is confused with. The A–Z index below is the single-page way in.
 | [Profiles, uncertainty and release](glossary/profiles-and-release.md) | Factory Profiles and their parameters, the five uncertainty states, evidence, the policy matrix, approval and the release package |
 | [Interchange and the envelope](glossary/interchange-and-envelope.md) | artifacts and dialects, DXF layers and metadata blocks, HPGL and PDF, grading interchange, and the supported / rejected / deferred vocabulary |
 | [Commands and agent authority](glossary/commands-and-authority.md) | the command bus, atomic groups, preview and commit, revision preconditions, undo granularity, the five agent authority levels |
+| [Localization](glossary/localization.md) | the one message system, message identity, the termbase per language, the externalization lint, pseudolocalization, locale-independent files, the review tiers |
 
 ## The terms, A–Z
 
@@ -190,6 +192,7 @@ it is confused with. The A–Z index below is the single-page way in.
 - [export target](glossary/interchange-and-envelope.md)
 - [expression](glossary/model-and-numbers.md)
 - [extension](glossary/recipe-and-pieces.md)
+- [externalization lint](glossary/localization.md)
 - [extreme size](glossary/measurements-and-fit.md)
 - [face side](glossary/recipe-and-pieces.md)
 - [facing](glossary/marks-and-closures.md)
@@ -236,6 +239,7 @@ it is confused with. The A–Z index below is the single-page way in.
 - [leather](glossary/recipe-and-pieces.md)
 - [length](glossary/model-and-numbers.md)
 - [lining](glossary/marks-and-closures.md)
+- [locale-independent file](glossary/localization.md)
 - [loss report](glossary/interchange-and-envelope.md)
 - [made-to-measure (MTM)](glossary/measurements-and-fit.md)
 - [manifest](glossary/profiles-and-release.md)
@@ -244,6 +248,8 @@ it is confused with. The A–Z index below is the single-page way in.
 - [MCP](glossary/commands-and-authority.md)
 - [measurement](glossary/measurements-and-fit.md)
 - [measurement table](glossary/measurements-and-fit.md)
+- [message id](glossary/localization.md)
+- [message system](glossary/localization.md)
 - [microdegree](glossary/model-and-numbers.md)
 - [micrometre](glossary/model-and-numbers.md)
 - [mirror](glossary/recipe-and-pieces.md)
@@ -293,6 +299,7 @@ it is confused with. The A–Z index below is the single-page way in.
 - [progress](glossary/commands-and-authority.md)
 - [propose (authority)](glossary/commands-and-authority.md)
 - [provenance](glossary/profiles-and-release.md)
+- [pseudolocalization](glossary/localization.md)
 - [PST](glossary/interchange-and-envelope.md)
 - [quadrant](glossary/recipe-and-pieces.md)
 - [R12 / R13](glossary/interchange-and-envelope.md)
@@ -308,6 +315,7 @@ it is confused with. The A–Z index below is the single-page way in.
 - [release package](glossary/profiles-and-release.md)
 - [repair task](glossary/model-and-numbers.md)
 - [resolved size set](glossary/measurements-and-fit.md)
+- [review tier](glossary/localization.md)
 - [revision](glossary/recipe-and-pieces.md)
 - [revision precondition](glossary/commands-and-authority.md)
 - [robust predicate](glossary/model-and-numbers.md)
@@ -353,6 +361,7 @@ it is confused with. The A–Z index below is the single-page way in.
 - [T-notch](glossary/marks-and-closures.md)
 - [target system](glossary/profiles-and-release.md)
 - [tech pack](glossary/interchange-and-envelope.md)
+- [termbase](glossary/localization.md)
 - [tessellation](glossary/model-and-numbers.md)
 - [tiled export](glossary/interchange-and-envelope.md)
 - [tolerance class](glossary/model-and-numbers.md)
@@ -386,7 +395,8 @@ it is confused with. The A–Z index below is the single-page way in.
 safety-relevant terms first. This chapter is the English source those termbases are built from: the
 term, the token, the ⚠ mark and the canonical object are the four fields a translator needs, and the
 "Also called" column is the list of synonyms a translation must not silently merge. The format a
-shipped termbase takes is `G0-CONTRACT.16`'s decision, not this chapter's.
+shipped termbase takes is the [internationalization chapter](i18n-architecture.md) §4's decision, not
+this chapter's.
 
 **It is not a specification.** Nothing here is normative about behaviour; every rule lives in the
 chapter the "Canonical object" column names. A glossary entry that started stating requirements would

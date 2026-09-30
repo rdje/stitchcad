@@ -394,7 +394,7 @@ not a contract.
   Commit: `pending`
 
 - ID: `G0-CONTRACT.16`
-  Status: `pending`
+  Status: `done`
   Goal: choose the ONE message system (§7.6: Fluent **or** ICU — not "Fluent or ICU"; if both ends
   are needed, a designed bridge) and specify the externalization architecture: the CI lint that
   fails on an inline user-facing string, the glossary/termbase per language (safety-relevant terms
@@ -404,8 +404,13 @@ not a contract.
   architecture chapter states the lint rule, the termbase format and the RTL rule (mirrored layout,
   never mirrored geometry); stable diagnostic codes + typed arguments + units are the API contract,
   with localized prose as a presentation field only.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below and in the acceptance checklist — Fluent is chosen at both ends with
+  both stacks' licences and activity `read-external` in the chapter's §2 table; the chapter is `250`
+  lines / `17 650` B, inside the per-part health; its census derives the message inventory from four
+  chapters' token tables and the crate's own error enum and reports `8 families / 64 message ids /
+  0 failure(s)`; its probe suite is at `11 pass / 0 fail`; the glossary grew to `305 terms / 9 parts
+  / 156 tokens / 0 failure(s)`; every other census and gate is green.
+  Commit: `STITCHCAD-G0-0016`
 
 - ID: `G0-CONTRACT.17`
   Status: `pending`
@@ -458,8 +463,9 @@ not a contract.
 | 17 | `G0-CONTRACT.10` | `done` | ADR-0004 landed: six axes, a closed registry of four targets, the seventeen-layer table in both naming modes read against the roadmap itself, one polyline-only entity set with arcs exact as bulges, three grading carriages, and the receiver-config record |
 | 18 | `G0-CONTRACT.11` | `done` | ADR-0002 recorded as a decision structure: the chrome, the dev shell and the TypeScript ban are `active`, canvas hosting is `proposed`, and the corpus, the seven gates and the six-rule verdict are written down before anybody measures — with an instrument that derives the outcome from a TSV data plane |
 | 19 | `G0-CONTRACT.12` | `done` | the release contract landed: nine manifest fields each with its source, identity as the manifest's digest, completeness against the declared construction, the six acceptance states in the roadmap's order with the evidence each needs, scope that narrows by itself, human-only approval, and §8.2's policy matrix tuned and recorded |
-| 20 | `G0-CONTRACT.16` | `pending` | **next** — the ONE message system (Fluent or ICU, not both) plus the externalization architecture: the CI lint on an inline user-facing string, the termbase per language with the safety terms first, pseudolocalization, and locale-independent canonical files |
-| 21 | `G0-CONTRACT.17`, `.15` | `pending` | the command-layer contract with undo/redo granularity, then the `.15` exit review |
+| 20 | `G0-CONTRACT.16` | `done` | one message system chosen with its evidence read: Fluent at both ends, ICU4X rejected on the boundary rather than on quality; the lint, the termbase, pseudolocalization, the locale-independent canonical file, the RTL geometry rule and three review tiers, with the message inventory derived from four chapters and the crate |
+| 21 | `G0-CONTRACT.17` | `pending` | **next** — the command-layer contract (§4.4): the typed command set, atomic groups, preview/commit, revision preconditions, idempotency, structured errors, progress, and the undo/redo granularity §4.4 requires at G0, plus the UI↔API↔MCP parity invariant and the five agent authority levels |
+| 22 | `G0-CONTRACT.15` | `pending` | the G0 exit review — every clause cited against evidence, `LIVE_STATUS.md` and the roadmap status line updated, the frontier handed to `G1-SLICE` |
 
 ## Decisions
 
@@ -658,6 +664,26 @@ not a contract.
   matrix's cells.** The matrix is consulted for the `unknown` state only — the other four states have fixed
   rules — so a cell saying `permit` would claim an unknown is simply fine, and the census refuses one.
 
+- `2026-09-30`, leaf `.16`: **the message system is chosen on the boundary, not on quality.** Both
+  candidates are alive and permissively licensed, so the deciding fact is that Fluent has an implementation
+  on each side of the Rust/TypeScript boundary reading ONE catalogue format, while ICU4X would leave the
+  browser on the platform's Intl — two dialects, which is the failure §7.6's "not 'Fluent or ICU'" exists to
+  prevent. The bridge stays in reserve for a measured plural-rule or locale-data gap.
+- `2026-09-30`, leaf `.16`: **the message id is the diagnostic token.** No numeric ids and no slugs derived
+  from English copy, so there is no second numbering to keep in step and a token change is an API break
+  rather than a copy edit. The inventory that follows is derived from the chapters and from
+  `crates/sc-units/src/error.rs`, never counted by hand — and deriving it found two errors in the chapter's
+  first draft: a `geom_*` token folded into the `env_*` family, and `UnitError` carrying five variants where
+  the chapter said four.
+- `2026-09-30`, leaf `.16`: **review tiers are absolute where a mistranslation reaches fabric.** `strict`
+  and `safety` ship only at 100 % translated *and* reviewed, and a percentage threshold was rejected
+  because "90 % of the safety tier" means one message in ten may say the wrong thing about a cut line. The
+  consequence is stated rather than hidden: with the domain seat vacant, no pack can ship today.
+- `2026-09-30`, leaf `.16`: **RTL is a test, not an intention.** An RTL render and an LTR render of one
+  design must produce one canonical byte string, and a difference is `i18n_geometry_mirrored` — because
+  "mirrored layout, never mirrored geometry" is unfalsifiable as a sentence and trivially falsifiable as a
+  comparison.
+
 ## Open Questions
 
 - Cut-on-fold vs paired front for the reference skirt: roadmap §11 G0 allows either. Decided
@@ -697,61 +723,58 @@ here, because `scripts/check_task_acceptance.sh` judges every staged `docs/tasks
 with no ticked boxes; the next slice moves it across. Neither file carries an unticked placeholder box
 (defect D15).
 
-### `G0-CONTRACT.12` — the release contract is the roadmap's §9, compared rather than restated
+### `G0-CONTRACT.16` — one message system, chosen on evidence, with an inventory nothing keeps by hand
 
-- [x] **REPRODUCE / ISSUE** — roadmap §9 was the last G0 clause with a promised chapter and no chapter.
-  `git ls-files 'docs/book/src/spec/release*' | wc -l` → `0`; the spec index carried the promise as an
-  unlinked row, `git show HEAD:docs/book/src/spec/index.md | grep -c '^| Release and approval |'` → `1`,
-  `rc=0`; and the vocabulary was parked against this leaf,
-  `git show HEAD:docs/book/src/spec/glossary/profiles-and-release.md | grep -c 'G0-CONTRACT\.12'` → `13`
-  (twelve entries plus the part's own header note saying "until that chapter lands, the roadmap clause is
-  cited").
-- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n '^## 9. Signoff' ROADMAP.md` → `626`, `rc=0`, and the exit
-  clause that makes it a G0 deliverable: `grep -n 'approval states & release contract' ROADMAP.md` →
-  `670:  decided; approval states & release contract (§9) specified; ADR-0001`, `rc=0`. §9 is a list — nine
-  manifest fields, six acceptance states, three artifact classes — and a list realised in prose drifts: a
-  field is renamed, a rung is merged, a class is forgotten, and every gate stays green because nothing
-  compares the two documents. So the cause is not only an unwritten chapter but the absence of an
-  instrument that would notice the difference.
-- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/release_contract/run_release_contract_census.sh`
-  → `release-contract census: 9 manifest fields / 6 states / 8 matrix rows / 0 failure(s)`, `exit=0`, where
-  the `9` and the `6` are parsed out of roadmap §9 (parenthesis-aware, because one field carries a nested
-  comma) and the `8 × 3` matrix is compared against §8.2's header and example rows and against the five
-  states ontology §5 declares. Its discrimination is proved:
-  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/release_contract/run_release_contract_probes.sh` →
-  `probes: 14 pass / 0 fail`, including LADDER-ORDER (two rungs swapped, both orders printed),
-  FIELD-INVENTED (a field wearing the roadmap's authority without its wording), DISPOSITION-UNUSED (a
-  vocabulary word no cell carries) and CONTROL. The chapter is `257` lines / `19 010` B, widest line
-  `256` B, inside the `book_collection` per-part health of `400` / `24 576` / `275`; `make book` →
-  `INFO HTML book written to …`, `exit=0`.
+- [x] **REPRODUCE / ISSUE** — §7.6 required the choice at G0 and the repository had neither the choice nor
+  the architecture. `git ls-files 'docs/book/src/spec/i18n*' | wc -l` → `0`; `git ls-files docs/decisions/ |
+  grep -c i18n` → `0`, `rc=1`; the spec index carried the promise as an unlinked row,
+  `git show HEAD:docs/book/src/spec/index.md | grep -c '^| Internationalization |'` → `1`, `rc=0`; and
+  seven references across five chapters pointed at this leaf instead of a clause:
+  `git grep -c 'G0-CONTRACT\.16' HEAD -- docs/book/src` → `feature-matrix.md:1`, `formula-language.md:1`,
+  `glossary.md:3`, `glossary/profiles-and-release.md:1`, `interchange-dialects.md:1`.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n 'One message system, chosen at G0' ROADMAP.md` → `494`,
+  `rc=0`, whose own parenthesis states the trap: "Fluent OR ICU — not 'Fluent or ICU'; they are distinct
+  systems; if both ends are needed, a designed bridge". A leaf may record that sentence, or it may decide
+  it; deciding needs evidence about two ecosystems that this repository had not read, which is why the
+  clause sat open behind four chapters that each cited it. The second cause is the one an instrument had to
+  close: the message inventory spans four chapters' diagnostic tables **and a crate's error enum**, so a
+  count written by hand is stale the day either grows.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/i18n/run_i18n_census.sh` →
+  `i18n census: 8 families / 64 message ids / 0 failure(s)`, `exit=0`, where every count is re-derived from
+  the envelope's §10, the formula language's §5.2, the dialects' §11, the release contract's §9 and
+  `crates/sc-units/src/error.rs`. Deriving it found two errors in the chapter's own first draft, both
+  corrected before it landed: the envelope's 29th token `geom_offset_budget` had been folded into the
+  `env_*`/`ngo_*` family (the census reads the population by shape, so a sixth prefix could not hide), and
+  `UnitError` carries **five** variants — `EmptyDerivation` has no braces and a first grep for
+  `Variant {` counted four. Discrimination is proved:
+  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/i18n/run_i18n_probes.sh` → `probes: 11 pass /
+  0 fail`, including CODE-GROWS, which adds a variant to a *copy* of the crate's source and requires the
+  inventory's count to be refused. Sizes: the chapter is `250` lines / `17 650` B, widest `202` B, and the
+  record `79` / `5 822`, both inside their per-part health; `make book` → `INFO HTML book written to …`,
+  `exit=0`.
 - [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
-  `19 suite(s) green`; the eight neighbouring censuses unchanged: glossary `298 terms / 8 parts /
-  156 tokens / 0 failure(s)` after four new terms, twelve repointed entries and a re-derived index,
-  interchange `17 layers / 4 targets / 12 entities / 0 failure(s)`, formula language `17 bindings /
-  4 assertions / 13 refusals / 0 mismatch(es)`, fixture `20 derived rows / 4 closure checks / 5 pieces /
-  0 mismatch(es)`, matrix `105 rows / 0 failure(s)`, standards `6 registered / 0 failure(s)`, uncertainty
-  `127 markers / 15 files / 0 unowned`, coverage `10 lanes / 13 trees / 0 unowned`; `bash
-  scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 102 files measured`, `exit=0`. Two probe
-  arms failed first against a correct census and were fixed in the arms, not the tool: one quoted a
-  sentence as it read in a draft rather than as it wraps in the file, and one replaced every occurrence of
-  a disposition token — deleting its declaration along with its uses, which is the "remove the property,
-  not one instance" trap inverted into "remove the rule too".
-- [x] **FIX** — wrote the chapter (nine manifest fields each with its source, identity as the manifest's
-  digest with no in-place amendment, seven completeness checks against the declared construction, the six
-  states in the roadmap's order with the evidence and granter each needs, five scope axes with the
-  intersection rule, human-only approval, §8.2's matrix tuned in a recorded table with a closed
-  four-word disposition vocabulary and the dependency-closure rule, eight diagnostics); the decision record
-  with six rejected alternatives; the census and its 14-arm probe suite; four glossary terms plus twelve
-  repointed entries and a corrected `spi` routing (it pointed at this leaf and belongs to `G5-SHELLS.13`).
-  **D49's trigger fired and was discharged here rather than deferred:** the evidence sibling had reached
-  `1000` lines / `94 086` B against a `98 304`-byte ceiling, so ten completed checklists
-  (`G0-CONTRACT.2` … `.4b`) were sealed into `docs/history/stitchcad-g0-contract-evidence-part1.md`
-  (`560` lines / `52 573` B, digest reproduced by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`)
-  and the live sibling fell to `449` / `42 065`. The seal then exposed **D52**: three completed leaves'
-  ROOT CAUSE boxes (`.14`, `.14b`, `.19`) asserted their evidence with no invocation, which the acceptance
-  gate refused once the seal changed which box comes first — all three now carry the command and its real
-  output, `.19`'s directory count is corrected from twelve to the `13` the command prints, and the sibling's
-  header states the rule (re-run the enforcer after moving checklists, before committing).
+  `20 suite(s) green`; the neighbouring censuses unchanged: glossary `305 terms / 9 parts / 156 tokens /
+  0 failure(s)` after a ninth part, seven terms and one repointed entry, with the A–Z index re-derived;
+  interchange `17 layers / 4 targets / 12 entities / 0 failure(s)`; release `9 manifest fields / 6 states /
+  8 matrix rows / 0 failure(s)`; formula language `17 bindings / 4 assertions / 13 refusals /
+  0 mismatch(es)`; fixture `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`; matrix
+  `105 rows / 0 failure(s)`; standards `6 registered / 0 failure(s)`; uncertainty `133 markers / 16 files /
+  0 unowned`; coverage `10 lanes / 13 trees / 0 unowned`. `bash scripts/check_live_doc_size.sh` → `OK — 17
+  surfaces, 15 routes, 105 files measured`, `exit=0`. Two probe arms failed first against a correct census
+  and were fixed in the arms: one expected an "uncovered id" message where the family row still covered the
+  new variant (the property is the count agreeing with the code), and one mutated half a table cell so the
+  reason it meant to delete survived.
+- [x] **FIX** — wrote the chapter (what is externalized and what is not, the choice with its evidence
+  table, message identity, the termbase per language, the lint with five reasoned exemptions,
+  locale-independent canonical files, pseudolocalization, the RTL geometry rule, three review tiers with
+  absolute thresholds for the two that reach fabric, the derived inventory, five diagnostics); the decision
+  record with six rejected alternatives; the census and its 11-arm suite; a ninth glossary part
+  (`localization.md`, seven terms) with the parts table, SUMMARY and index updated; six cross-references
+  repointed from this leaf to a clause. **D49's trigger fired on the tree file itself and was discharged
+  here:** it had reached `89 632` B against a `98 304` ceiling, so the oldest fourteen changelog entries
+  were sealed into `docs/history/stitchcad-g0-contract-changelog-part1.md` (`84` lines / `7 941` B, digest
+  reproduced by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`) and the tree fell to `81 811` B; two
+  verification rows past the `443` B cell budget were tightened rather than the target raised.
 - [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's decisions and logs; `MEMORY.md`,
   `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two instrument
   rows), `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in
@@ -769,9 +792,10 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
-| `2026-09-30` | `G0-CONTRACT.12` | the release-contract census and its 14-arm probe suite; the chapter's size and widest line; the glossary census after four terms and twelve repointed entries; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the sibling's sealing and its digest | `9 manifest fields / 6 states / 8 matrix rows / 0 failure(s)`; `14 pass / 0 fail`; `257` lines / `19 010` B / widest `256`; `298 terms / 0 failure(s)`; `19 suite(s) green`; `449` / `42 065` after sealing `560` / `52 573` |
+| `2026-09-30` | `G0-CONTRACT.16` | the i18n census and its 11-arm suite; the chapter's and record's sizes; the glossary census after a ninth part; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the tree's sealing | `8 families / 64 message ids / 0 failure(s)`; `11 pass / 0 fail`; `250` / `17 650`; `305 terms / 9 parts`; `20 suite(s) green`; tree `81 811` B after sealing `84` / `7 941` |
+| `2026-09-30` | `G0-CONTRACT.12` | the release-contract census and its 14-arm suite; the chapter's size; the glossary census; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the sibling's sealing | `9 manifest fields / 6 states / 8 matrix rows / 0 failure(s)`; `14 pass / 0 fail`; `257` / `19 010`; `298 terms`; `19 suite(s) green`; sibling `449` / `42 065` after sealing `560` / `52 573` |
 | `2026-09-30` | `G0-CONTRACT.11` | the spike verdict instrument on its empty data plane and on twelve synthetic result sets; the record's size; `make gate`/`probes`/`book`; the seven book censuses; containment | `PENDING`, `exit=0`; `13 pass / 0 fail`; `78` lines / `7 244` B; `18 suite(s) green`; all green; `OK — 99 files measured` |
-| `2026-09-30` | `G0-CONTRACT.10` | the interchange census and its 13-arm probe suite; the chapter's size and widest line; the glossary census after five terms and 16 repointed entries; `make book`/`gate`/`probes`; the four neighbouring censuses; containment | `17 layers / 4 targets / 12 entities / 0 failure(s)`; `13 pass / 0 fail`; `303` lines / `21 650` B / widest `227`; `294 terms / 0 failure(s)`; `17 suite(s) green`; detail in the checklist |
+| `2026-09-30` | `G0-CONTRACT.10` | the interchange census and its 13-arm suite; the chapter's size; the glossary census; `make book`/`gate`/`probes`; the four neighbouring censuses; containment | `17 layers / 4 targets / 12 entities / 0 failure(s)`; `13 pass / 0 fail`; `303` / `21 650`; `294 terms`; `17 suite(s) green`; detail in the checklist |
 | `2026-09-30` | `G0-CONTRACT.9` | the formula-language census and its 15-arm probe suite; the three parts' sizes and widest line; the glossary census; `make book`/`gate`/`probes`; the four neighbouring censuses; containment | `17 bindings / 4 assertions / 13 refusals / 0 mismatch(es)`, `12` fixture-shared names and `0` disagreements; `15 pass / 0 fail`; `16 suite(s) green`; detail in the checklist |
 | `2026-09-30` | `G0-CONTRACT.14b` | the chapter's size and widest line; `make book`; the four book censuses; `grep` for the stale deferrals; `make gate`; containment | `233` lines / `18 465` B / widest `185`; `exit=0`; `276 terms`, `6 registered`, `105 rows`, `20 rows / 4 checks / 5 pieces` — all `0 failure(s)`; `0` stale deferrals left in `spec/`; all doctrines green; `OK — 84 files measured` |
 | `2026-09-30` | `G0-CONTRACT.4c` | the roadmap's markers; matrix census + probes; coverage census + its new suite; containment and its `--self-test`; `make gate`/`probes`/`book` | v0.3 at `947` lines / `52 818` B, criterion at line `712`, disposition logged; `105 rows / 0 failure(s)`, `D32 rows: 0`, `proposed cells: 0`; `13 trees / 2 sibling(s) / 0 unowned`; `probes: 12 / 7 / 5 / 9`, `15 arms`, all `0 fail`; `13 suite(s) green` |
@@ -828,9 +852,28 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.10` | `STITCHCAD-G0-0010 (leaf G0-CONTRACT.10): the dialects are a closed registry, not a format with flags` | six axes, four targets, the seventeen-layer table read against the roadmap, one polyline-only entity set, three grading carriages, the receiver-config record |
 | `G0-CONTRACT.11` | `STITCHCAD-G0-0011 (leaf G0-CONTRACT.11): the spike's rule is written before its measurement` | ADR-0002 as a decision structure: chrome, dev shell and TS ban `active`, canvas `proposed`; a declared corpus, seven gates, six rules and an instrument that derives the verdict from a TSV data plane |
 | `G0-CONTRACT.12` | `STITCHCAD-G0-0012 (leaf G0-CONTRACT.12): the release contract is the roadmap's §9, compared rather than restated` | nine manifest fields with their sources, digest-bound approval, seven completeness checks, the six states in order, scope that narrows by itself, the policy matrix tuned in a recorded table; D49's trigger discharged |
-| `G0-CONTRACT.15`–`.17` | `pending` | — |
+| `G0-CONTRACT.16` | `STITCHCAD-G0-0016 (leaf G0-CONTRACT.16): one message system, and an inventory nothing keeps by hand` | Fluent at both ends with the licences read; the lint, termbase, pseudolocalization, locale-free canonical files, the RTL geometry test and three review tiers; the 64 ids derived from four chapters and the crate; D49's trigger discharged |
+| `G0-CONTRACT.15`, `.17` | `pending` | — |
 
 ## Changelog
+
+- `2026-09-30`: `.16` landed — §7.6's "one message system, chosen at G0" is chosen, on evidence rather than
+  familiarity. **Fluent, at both ends**: `fluent-rs` in the Rust core and `fluent.js` in the TypeScript
+  chrome over one catalogue format, both Apache-2.0 and unarchived, read on `2026-09-30` from the GitHub and
+  crates.io APIs and tabulated in the chapter. ICU4X is the rejected alternative and stays a named one — it
+  is active, Unicode License V3, and built for resource-constrained clients, which is this product's browser
+  profile; it loses on the boundary, because the Rust side would be ICU4X and the browser side the platform's
+  Intl, i.e. two dialects, which is the failure the clause exists to prevent. The architecture is normative:
+  the message id IS the diagnostic token, arguments are typed and carry units, text is a presentation field;
+  the termbase is a projection of the glossary with the ⚠ terms first and no guessed translation; the lint
+  has five exemptions each with a reason; canonical files carry no locale and a decimal comma changes nothing
+  stored; pseudolocalization runs in CI before any translator exists; RTL mirrors layout and never geometry,
+  as a byte-comparison test rather than a sentence; and three review tiers make `strict` and `safety`
+  absolute — which, with the domain seat vacant, means no pack can ship today, stated rather than hidden. The
+  inventory of 64 ids across 8 families is derived from four chapters and from `crates/sc-units/src/error.rs`,
+  and deriving it caught two errors in the chapter's first draft. A ninth glossary part (`localization.md`)
+  carries the new vocabulary, and D49's trigger fired on the tree file itself at 91 % of its ceiling, so the
+  oldest fourteen changelog entries were sealed under the descriptor contract.
 
 - `2026-09-30`: `.12` landed — roadmap §9 is a chapter and §8.2's example matrix is a contract. A release
   package is immutable, its identity is the digest of its canonical manifest (artifact hashes included), an
@@ -943,87 +986,6 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
   the ledger probe's DESCRIPTOR rule to every `docs/history/*.md` segment, with a `DEVNOTES-DIGEST` arm
   pinning the generalization; D40 records the two legs that stay changelog-only, owned by `SPINE.19`.
 
-- `2026-09-30`: `.13d` landed — D27 is closed: the fixture's waistband is ONE straight band, cut once and
-  folded at its midpoint, plus one interfacing piece cut at the band's finished dimensions and fused inside
-  the seam lines. Five pieces, not six; `waistband_outer` and `waistband_inner` are gone; §4 gained four
-  rows (`waistband_fold_position`, `waistband_finished_length`, `wb_interfacing_width`,
-  `wb_interfacing_length`) and §4.1 gained the band's two closure checks; §8 accounts for every piece by a
-  span or by the closed list's one non-sewn method, `fused`. The choice is sourced rather than preferred —
-  five references read on this machine, URLs and dates in
-  `docs/decisions/decision_reference-fixture-waistband-straight-folded.md`, the decisive fact being that
-  the two-piece cut belongs to a **contoured** band while this fixture's is straight at the natural waist.
-  The agreement between §4, §6, §8 and §12 is now derived by a tracked producer
-  (`run_fixture_derivation.sh`: `7` mismatches over the chapter at `HEAD`, `0` after) with a probe suite
-  shown sensitive by neutering one rule at a time. D35 logged and deliberately not decided (may a span name
-  one piece twice); D36 logged and fixed; D34's recurrence recorded.
-- `2026-09-30`, after `.8`: the director ruled that the engineer decides and acts on the four findings
-  surfaced this session — D27, D32, `.14`'s drafting and the containment derivation — at signoff grade, with
-  external research permitted. Recorded as
-  `docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`, which also states what stays
-  reserved (naming humans; amending `ROADMAP.md`). Leaves `.13d` and `.4b` created to own D27 and D32;
-  `.14`'s blocker narrowed to the naming alone. The frontier takes those four before `.9`.
-- `2026-09-30`: `.8` landed — ADR-0001 is one record, not two: the core is dual `MIT OR Apache-2.0`, so
-  `slvs` (GPLv3) is rejected and `sc-sketch` gets a custom or least-squares kernel. The exchange rate is
-  stated (an optional annotation layer is not worth the licence of the product), BSL-1.1 is kept out of the
-  permissive category, no CLA is needed to contribute, an iterative kernel's determinism obligation is named
-  before the kernel exists, and the single re-open condition is written in three parts now so the G1 spike
-  cannot be argued into one later.
-- `2026-09-30`: `.7` landed — the standards registry exists: six designations (ISO 8559, ASTM D5219,
-  EN 13402, ASTM D5585, ASTM D6673, AAMA) each with its role, what is adopted, what is not, a status from
-  the closed vocabulary and a named owner. All six are `cited-from-roadmap`, so the book quotes no clause
-  of any standard — which is the rule, not a gap. The five deferrals from the ontology, the fixture, the
-  size-sets chapter, the glossary and the matrix are dispositioned in a ledger, the verification plan names
-  its procurement dependency, and `run_standards_census.sh` refuses any future chapter that cites a
-  standard the registry does not carry.
-- `2026-09-30`: `.6` landed — roadmap §3.4's open question is closed: a `SizeSet` is its own object,
-  referenced by the `Design` at a revision, overridable per Factory Profile through a recorded
-  transformation that produces a *resolved* set, and carrying no quantities (those are order data, §7.5).
-  The chapter states the ten fields, why a label is a name and an order is authored rather than sorted, the
-  base-size rules, breaks, multi-dimensional axes, and what the model must express for each of the five
-  designation systems — with EN 13402 and ASTM D5585 content explicitly *not* asserted and handed to `.7`.
-- `2026-09-30`: `.5` landed — both instantiation paths are normative: inputs, process, outputs, authority
-  and oracle per path; grade points as `PointRef`s; allowances re-derived rather than graded (with the
-  corner consequence stated); `stack point` / `fixed perimeter` / `smoothing` given StitchCAD semantics and
-  their `.rul` encoding marked for confirmation at G3; the information loss in three parts; an equivalence
-  contract that reports and never reconciles; eight extreme-size checks run after target-system
-  reconstruction. The graded reference skirt agrees between paths to `0.00e+00`, and §4 records that this is
-  the fixture's affinity, not a general result — the tolerance is exercised at G3.
-- `2026-09-30`: `.13c` landed — the fixture's waist geometry is corrected (D33): the side point moves from
-  `quarter_waist − ss_suppress` (15.5 cm) to `quarter_hip − ss_suppress` (22.5 cm), so the finished waist is
-  the declared 74.0 cm instead of 46.0 cm; both dart centres move 7.75 → 11.25 cm; §4 gains `waist_closure`,
-  the constructed oracle the allocation balance could not be. All 18 derived rows re-derive with 0
-  mismatches, and the rule generalises as
-  `docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md`.
-- `2026-09-30`: `.4` landed — the v1 release claim has a boundary: 105 rows dispositioned
-  supported/rejected/deferred, 29 declared diagnostics with their required arguments, and a census that
-  derives the coverage of the ontology (16 object clauses cited), of roadmap §1.3 (8 non-goals rejected)
-  and of §3.2 (5 envelope garments supported, 3 named refusals rejected). The glossary absorbed the 26
-  terms the matrix introduces (239 → 265). D32 records the five rows no gate has accepted.
-- `2026-09-30`: `.1` landed — the glossary is normative vocabulary: **239 terms** in 8 domain parts behind
-  an index chapter carrying the machine-token rule, the safety-relevant (⚠) policy and the derived A–Z
-  index. Its claims are derived by `run_glossary_census.sh` (`0 failure(s)`) and its discrimination proved
-  by `run_glossary_probes.sh` (`10 pass / 0 fail`). The changelog rollover this slice's append triggered is
-  performed and verified in the same commit (D29, D30, D31), with `run_changelog_ledger_probes.sh` as the
-  standing verifier. The frontier moves to `.4`, the feature matrix.
-
-- `2026-09-29`: `.13b` landed — the reference fixture now declares every machine token it uses
-  (D26: `19` used-and-undeclared → `6`, all of them glossary vocabulary), its formulas are written over
-  tokens only, and the waistband contradiction the token census exposed is recorded in the chapter as
-  D27 with `.14`'s domain review as its owner (D28, a wrong clause cross-reference, fixed on the way).
-- `2026-09-29`: `.13` landed — the reference skirt is fully specified with numbers, its allocation
-  balance closes exactly, and its 8 unreviewed constants are explicitly `assumed` with an owner named
-  for the review.
-- `2026-09-29`: `.3` landed — the garment ontology is normative: identity and the persistent-reference
-  contract, measurement/ease/size-set, the design-as-recipe, every geometry-bearing object with its
-  invariants, uncertainty states, serialization and the test obligations that follow.
-- `2026-09-29`: `.18` landed — the first product code. `sc-units` implements the numerical contract
-  (30 tests, dependency-free, builds for `wasm32-unknown-unknown`), `sc-core` is a documented
-  skeleton, the G0 CI shape exists, and the bedrock starter crate is retired (D10).
-- `2026-09-29`: `.2` landed — the units & tolerance chapter is normative, the numerical contract is a
-  layer-C decision, and the frontier moves to `.18` (the first product code: `sc-units` implements this
-  chapter). The tree's execution order is now recorded in its frontier table.
-- `2026-09-29`: Tree created by `PLANNING.1` with 15 leaves mapped clause-by-clause to the
-  roadmap's G0 exit criteria.
-- `2026-09-29`: `PLANNING.2` added `.16` (message system + i18n architecture, §7.6), `.17`
-  (command-layer contract incl. undo/redo granularity, §4.4) and `.18` (G0 CI + `sc-units`/
-  `sc-core` skeletons, §4.3/§7.3), and corrected the tree's "no code in G0" reading.
+Older entries — `.13d` and everything before it, back to the tree's creation by `PLANNING.1` — are sealed
+in [`docs/history/stitchcad-g0-contract-changelog-part1.md`](../history/stitchcad-g0-contract-changelog-part1.md)
+(84 lines, 7941 bytes, `sha256:3a6d091a…`), under the remedy defect D49 names for a tree file's ledger tail.

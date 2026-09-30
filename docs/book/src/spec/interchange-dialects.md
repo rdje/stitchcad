@@ -236,8 +236,8 @@ identity, so a dispute is about data and not about memory:
 | the design and profile revisions, and the approval state | the release contract's binding |
 
 A record whose fields are prose is not a record: each field above is a stable token with a typed
-value, and the localization of any human-readable summary is a presentation layer over it (the i18n
-chapter's rule, `G0-CONTRACT.16`).
+value, and the localization of any human-readable summary is a presentation layer over it (the
+[internationalization chapter](i18n-architecture.md) §3's rule).
 
 ## 11. Diagnostics
 

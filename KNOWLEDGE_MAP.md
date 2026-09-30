@@ -31,7 +31,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - `docs/book/src/spec/feature-matrix.md` — **the boundary of the release claim**: 105 dispositioned rows, 29
   declared diagnostics, coverage derived by
   `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. Owner `G0-CONTRACT.4`.
-- `docs/book/src/spec/glossary/` — **the vocabulary, partitioned** into eight domain parts behind
+- `docs/book/src/spec/glossary/` — **the vocabulary, partitioned** into nine domain parts behind
   `glossary.md`'s derived A–Z index: one meaning per term, one owner per machine token, derived by
   `docs/tasks/artifacts/glossary/run_glossary_census.sh`. Owner `G0-CONTRACT.1` and every later chapter.
 - `.doctrine/live_document_size/` — the containment data plane (`surfaces.tsv`, `routes.tsv`), enforced by
@@ -70,6 +70,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_director-ruling-2026-09-30-four-findings.md`](docs/decisions/decision_director-ruling-2026-09-30-four-findings.md)
 - [`decision_fixture-oracles-derive-the-finished-dimension.md`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)
 - [`decision_governance-two-review-paths-and-the-unnamed-roles.md`](docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md)
+- [`decision_i18n-one-message-system-fluent.md`](docs/decisions/decision_i18n-one-message-system-fluent.md)
 - [`decision_knowledge-map-entries-are-orientation-sized.md`](docs/decisions/decision_knowledge-map-entries-are-orientation-sized.md)
 - [`decision_live-document-containment-proportionate-adoption.md`](docs/decisions/decision_live-document-containment-proportionate-adoption.md)
 - [`decision_machine-tokens-declared-where-used.md`](docs/decisions/decision_machine-tokens-declared-where-used.md)
