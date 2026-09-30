@@ -58,8 +58,10 @@ The waist carries no ease because the closure is a zipper plus a hook-and-bar wa
 ## 3. Declared drafting constants
 
 These are the constants of the **StitchCAD reference drafting**, named here so that the fixture is
-self-consistent and reviewable. They are *not* a reproduction of any commercial drafting system; the
-choice of which named system ships as reference blocks is ADR-0003's.
+self-consistent and reviewable. They are *not* a reproduction of any commercial drafting system:
+ADR-0003 named Aldrich's metric pattern cutting as the system whose blocks ship for reference
+([formula language §1.1](formula-language.md)), and this fixture is deliberately not a transcription
+of it, so its numbers carry none of that decision's verification debt.
 
 | Token | Value | Meaning |
 | --- | --- | --- |

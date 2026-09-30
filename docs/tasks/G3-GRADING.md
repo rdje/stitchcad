@@ -49,7 +49,7 @@ interchange that an independent engine can re-import, extreme sizes included.
 - ID: `G3-GRADING`
   Status: `proposed`
   Goal: construction operations and both instantiation paths work, and their divergence is measured.
-  Children: `.1` … `.14`
+  Children: `.1` … `.16`
 
 - ID: `G3-GRADING.1`
   Status: `pending`
@@ -120,6 +120,22 @@ interchange that an independent engine can re-import, extreme sizes included.
   a recipe quantity rather than a fudge; the stand's height and the fall's depth are graded, not fixed;
   walking the collar-to-neckline span reports a differential inside the declared ease; the feature matrix's
   `classic collar` row cites this leaf's evidence at `.14`.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G3-GRADING.16`
+  Status: `pending` (created by `G0-CONTRACT.9`, which named the drafting system ADR-0003 requires and
+  would otherwise have left the blocks with no owner — a decision with no owner is a wish)
+  Goal: ship the **reference block set**: the blocks of the named system (Aldrich's metric pattern cutting,
+  `docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md`) transcribed into
+  construction recipes — skirt, darted bodice, set-in sleeve, classic collar and trousers — each a recipe in
+  the formula language and each an independent subject for the gates that consume it.
+  Acceptance: every construction number carries a citation to edition and page and enters as `read-external`,
+  or stays `assumed` with the domain seat named, and is never `known` on this repository's authority; no text,
+  table or illustration of the source is reproduced; each block drafts, grades and exports, so `.14`'s
+  envelope-coverage review can cite it as the reference the garments were checked against; a block whose source
+  has not been procured is recorded `not met` with the procurement seat named rather than drafted from
+  recollection; the reference skirt stays independent of the transcription, as `G0-CONTRACT.9` requires.
   Verification: `pending`
   Commit: `pending`
 
@@ -256,8 +272,6 @@ Filled per leaf, in a `### <leaf-id>` subsection added by the same commit as the
 mechanically required to be fresh in that commit by leaf `SPINE.8`; a tree file carries no unticked
 placeholder boxes (defect D15, measured by the `SPINE.7` probe).
 
-## Acceptance Checklist
-
 ### `G3-GRADING.5` / `.15` — the envelope-coverage criterion arrives as leaves, not as prose
 
 This tree had no completed leaf, so it carried no acceptance boxes — and a staged `docs/tasks/*.md` file with
@@ -315,8 +329,12 @@ are the evidence for the change roadmap v0.3 made to this tree, added in the com
 | Leaf | Commit subject or reference | Notes |
 | --- | --- | --- |
 | tree seed | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | created by the seeding leaf |
-| `.1` … `.14` | `pending` | — |
+| `.1` … `.16` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-30`: `.16` added by `G0-CONTRACT.9`, which decided ADR-0003's drafting system and arrived with
+  an owner for the blocks. The same slice removed a duplicate `## Acceptance Checklist` heading this file
+  carried since `G0-CONTRACT.4c` added the boxes below it, and corrected the children range, which still
+  said `.14` while `.15` existed (defect **D48**).
 - `2026-09-29`: Tree created by `PLANNING.2` with 14 leaves mapped to the G3 exit clauses.

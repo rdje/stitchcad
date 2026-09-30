@@ -105,8 +105,8 @@ A `Design` is the construction recipe plus its semantic content:
 - **a `MeasurementTable`** reference and an **`Ease`** set;
 - **a `SizeSet`** reference;
 - **the formula graph** — an acyclic graph of expressions over measurements, parameters, profile
-  parameters and previously constructed points/lengths/angles (specified in the formula-language
-  chapter);
+  parameters and previously constructed points/lengths/angles, in the language the
+  [formula language](formula-language.md) chapter specifies;
 - **the ordered operation list** — the drafting history, replayable from scratch;
 - **the `SewingGraph`**;
 - **materials** and their assignment to pieces;

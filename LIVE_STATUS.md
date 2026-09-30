@@ -10,12 +10,12 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Discipline spine (bedrock 0.6.1) | Done | memory · task-trees · commit workflow · 12 universal + 3 project doctrine gates (`make gate`) · 15 probe suites (`make probes`) · mdBook |
-| Roadmap → task-trees (`PLANNING`) | Done | All 10 roadmap lanes owned — 13 trees, 2 evidence siblings, `0 unowned / 0 orphan(s) / 0 dead link(s)`, derived by `run_tree_coverage_census.sh` and watched by its probe suite |
-| Repo identity & policy (`SPINE`) | In Progress | containment (targets derived per table shape, baselines revision-aware), the acceptance gates, the push cadence and the table convention are enforced or written where authors look. Open: `.5`, `.13`, `.19` |
-| Adopted policy set | Done | README policy, claim verification and the containment doctrine are in-repo, with containment **enforced** by the `LIVE-DOC-SIZE` project doctrine; its debt baselines are revision-aware and its table-shape targets are derived |
-| Defect census | In Progress | 46 logged, 40 closed — hand-kept, and wrong twice, which is D38. Open: D34 + D38 (`PLANNING.5`), D35 (`G1-SLICE.3`), D40 + D46 (`SPINE.19`), D47 (`SPINE.20`) |
-| G0 — product & semantic contract | In Progress | **Active lane.** `.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`, `.14`, `.14b`, `.14c`, `.18`, `.19` done: glossary, units, ontology, envelope (proved by `ROADMAP.md` v0.3), paths, sizes, standards, ADR-0001, fixture, governance, `sc-units`. Next `.9` |
+| Discipline spine (bedrock 0.6.1) | Done | memory · task-trees · commit workflow · 12 universal + 3 project doctrine gates (`make gate`) · 16 probe suites (`make probes`) · mdBook |
+| Roadmap → task-trees (`PLANNING`) | Done | All 10 lanes owned — 13 trees, 3 evidence siblings, `0 unowned / 0 orphan(s) / 0 dead link(s)`, derived by `run_tree_coverage_census.sh` and watched by its probes |
+| Repo identity & policy (`SPINE`) | In Progress | containment, the acceptance gates, the push cadence and the table convention are enforced or written where authors look. Open: `.5`, `.13`, `.19` |
+| Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
+| Defect census | In Progress | 48 logged, 43 closed — hand-kept, and wrong four times, which is D38. Open: D34 + D38 (`PLANNING.5`), D35 (`G1-SLICE.3`), D40 + D46 (`SPINE.19`) |
+| G0 — product & semantic contract | In Progress | **Active lane.** ADR-0003 and the formula language join the glossary, units, ontology, envelope, paths, sizes, standards, fixture and governance. Next `.10` |
 | G1 — executable architecture slice | Not Started | 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, spikes |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |

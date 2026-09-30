@@ -3,6 +3,37 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-09-30)_ — a spec's tables are its test suite, and a code span is a claim
+
+- **A reference evaluator that reads the chapter's own tables turns "implementable from the chapter
+  alone" from an opinion into a measurement.** The formula-language census parses grammar §1, takes its
+  kinds from the contract's §2, its unit ratios from grammar §2.1, its product law from §5.1 and its
+  signatures from §6, then type-checks and evaluates every worked example with them — so a function
+  nobody wrote down cannot be implemented, and a signature written down wrongly reddens the run instead
+  of the product. The price was regularity: `sqrt` needed two rows (`area`→`length`, `ratio`→`ratio`),
+  `min` a variadic marker, and the metavariables a declared notation table, because prose signatures
+  ("≥ 2 values of one kind") are not parseable. **Writing the instrument first would have made the
+  tables regular from the start; writing it second cost one rewrite of two of them.**
+- **A code span is a claim that the span is a machine token**, and grammar notation is not one. The
+  metavariable `T` collided with the `T-notch` entry's token, so "one token, one meaning" was violated by
+  *notation* — invisibly, because the collision satisfied the census (the token was owned, by a notch).
+  Its sibling `N` was reported undeclared, and that is the only reason the collision surfaced.
+  Metavariables are now italic and carry a notation table. Generalized: a single letter in backticks
+  anywhere in this book is a token somebody owns or must own, so notation stays out of code spans.
+- **An instrument that scans inline code must skip fenced blocks first.** The first cut paired backticks
+  across newlines; a fence's ``` is an odd number of them, so the whole file became one span and the run
+  reported 125 "undeclared operators" that were EBNF nonterminals and table separators. The count was
+  large enough to look like a finding and was the instrument measuring the fences. **A refusal list that
+  long is a bug report about the instrument, not about the tree** — read one entry before believing the
+  total. Its sibling in the same run: a link resolver that dropped the leading `/` of an absolute base
+  reported every link in the book as dead, which is the same shape wearing a different rule.
+- **A chapter born at 87 % of its byte ceiling is partitioned, not trimmed.** 599 lines / 37 317 B
+  against a `book_collection` per-part health of 400 / 24 576: every table was normative and the prose
+  that could move had already moved to the decision record, so trimming meant cutting contract. The
+  containment doctrine's own remedy for a `partitioned_canonical` surface applied — contract, grammar,
+  examples, at 308 / 247 / 92 lines and each inside health — with the parts table censused in both
+  directions so a fourth file cannot appear unlisted. The trigger to check is not "am I over health"
+  but "how much ceiling is left on the day this is born".
 ## _(2026-09-30)_ — settle an argument with the artifact, and anchor an arm on the property
 
 - D22 sat for a session as a *question* because two tracked instruments disagreed about what a markdown table
@@ -115,63 +146,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - The token census fired a fifth time at authoring time (`` `lining` `` and `` `proposed` `` wearing token
   formatting in prose): both were de-tokenized, not exempted.
 
-## _(2026-09-30)_ — two tables can each be right and together describe two garments
-
-- D27's shape: §4's `waistband_cut_width` formula and §6's piece list were each internally consistent — the
-  contradiction was *between* tables. Every instrument the chapter had read one table at a time (the token
-  census reads names, the containment checker reads bytes), so nothing could see it; a human writing a
-  sentence about the piece list did. **An invariant that spans tables needs an instrument that spans
-  tables**: `run_fixture_derivation.sh` reads §2, §3, §4, §6, §7, §8 and §12 together and refuses a piece
-  list, a span table, an account and a count that disagree — `7 mismatch(es)` over the chapter as committed,
-  `0` after the decision.
-- **A rule with no legal way to be satisfied is a rule nobody checks.** "Every piece has a span" is false for
-  a fused interfacing, so the invariant that holds is a span *or* a declared non-sewn attachment from a
-  closed list — `fused` alone today, because a sewn-in interlining is sewn and needs a span. Declaring the
-  exception is what made the rule checkable; keeping the list closed is what stops it becoming a shrug.
-- **The instrument that found two defects was scratch.** The arithmetic behind D33 and then D27 lived as
-  `python3 -c` strings inside task leaves: readable, and re-runnable by nobody. That is leg 3 of
-  `CLAIM_VERIFICATION.md`, and the breach this repository had already committed once as D20.
-- **A choice between two real constructions is not arithmetic.** Both waistband readings are real skirts, so
-  the decision needed sources, and what settled it was a *scope* fact rather than a preference: the drafting
-  literature gives a straight band one folded rectangle and reserves the two-piece cut for a **contoured**
-  band. Recorded as `read-external` with URL and date — a label that upgrades nothing, because a source read
-  here is not a standard read here (`standards.md` §1 keeps that vocabulary closed).
-- **When sources disagree, keep the declared constant and record the conflict.** Band height is "usually
-  2–5 cm" in one and "maximum 3 cm for a straight band" in another; the fixture's 4.0 cm stays `assumed`
-  with both cited. Adopting whichever source suits is how a specification launders a guess into a fact.
-- Promoted to `docs/decisions/decision_reference-fixture-waistband-straight-folded.md`.
-
-## _(2026-09-30)_ — a fixture can be internally consistent and externally wrong
-
-- The reference skirt's allocation balance closed exactly — `4 × (3.0 + 4.0) = 102.0 − 74.0`, i.e.
-  `28.0 = 28.0` — for the whole life of a drafting step that produced a garment **28.0 cm too small at the
-  waist**. §5 step 2 put the waist side point at `quarter_waist − ss_suppress` = 15.5 cm from CF; the side
-  seam takes its suppression off the *hip* width, so the point belongs at `quarter_hip − ss_suppress` =
-  22.5 cm, and the finished waist is `4 × (22.5 − 4.0)` = 74.0 cm instead of `4 × (15.5 − 4.0)` = 46.0 cm.
-  Re-derived with `python3`, not with reading: the chapter's declared quantities were all consistent, so no
-  consistency check could have caught it. Promoted to
-  `docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md`.
-- **The general shape:** a *declared* oracle (a balance, a sum, a ratio over quantities the fixture states)
-  and a *constructed* oracle (re-deriving a finished dimension from the geometry the recipe builds) answer
-  different questions, and only the second sees a misplaced point. A fixture needs both. The question that
-  exposes the gap is not "do the checks pass?" but **"which check would fail if a point moved 5 mm?"** — for
-  this fixture, before the fix, the answer was none.
-- **What found it was not a review of the fixture.** It was writing the *instantiation-paths* chapter, which
-  needs the fixture's graded numbers as a worked example: grading a waist point requires knowing which span
-  it sits on, and the two candidate spans disagreed by 7.0 cm. Corollary: a defect hides best in a document
-  nobody has a second use for. The first slice that has to *compute with* a specification is the slice that
-  tests it — which is an argument for writing the dependent chapter early rather than for re-reading.
-- **A correction to a sealed record is a superseding record, not an edit.** The sealed `STITCHCAD-G0-0013`
-  changelog segment lists "dart intake and centre" among the derived values; it is immutable, so §11 of the
-  chapter carries the correction and names the segment it supersedes. The ledger probe's `COVERAGE` rule
-  already needed the same shape for part1's wrong coverage line (D30) — two instances of one rule now.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
 | --- | --- | --- |
 | [`devnotes-part1.md`](docs/history/stitchcad-devnotes-part1.md) | the `2026-09-29` and `2026-09-04` lessons, plus the bootstrap entry | 66 lines, 5589 bytes, `sha256:d3b94e9a…` |
 | [`devnotes-part2.md`](docs/history/stitchcad-devnotes-part2.md) | the two oldest `2026-09-30` lessons (enumeration, and the vocabulary census) | 62 lines, 5915 bytes, `sha256:edcd0808…` |
+| [`devnotes-part3.md`](docs/history/stitchcad-devnotes-part3.md) | the two next-oldest `2026-09-30` lessons (two tables describing two garments, and a fixture internally right) | 50 lines, 4723 bytes, `sha256:fcca661d…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

@@ -18,9 +18,18 @@
   `wasm32-unknown-unknown` build of `sc-core` + `sc-units`. Entry point: `crates/sc-core/src/lib.rs`,
   which names the module each future leaf owns. Owner: `G0-CONTRACT.3` (spec), `G1-SLICE.3` (code).
 - `docs/book/src/spec/` — the normative specification (the director-facing contract). Chapters so far:
-  the G0 contract overview, the glossary, units & tolerances, the garment ontology, the supported
-  envelope, both instantiation paths, size sets, the standards registry and the reference skirt. Owner:
-  the `G0-CONTRACT` leaves.
+  the G0 contract overview, the glossary, units & tolerances, the garment ontology, the formula language,
+  the supported envelope, both instantiation paths, size sets, the standards registry and the reference
+  skirt. Owner: the `G0-CONTRACT` leaves.
+- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, partitioned.** The contract
+  (eight kinds, nine name origins, declaration-order evaluation, exact rational arithmetic with two rounding
+  points, twelve diagnostics, four structural limits, the exclusions) plus two parts:
+  `formula-language/grammar.md` (the EBNF, literals and their unit tokens, the display and canonical forms,
+  the operator, function and selector tables) and `formula-language/examples.md` (17 bindings, 4 assertions
+  and 13 refusals over the reference skirt). Every number there is computed rather than typed: the reference
+  evaluator in `docs/tasks/artifacts/formula_language/run_formula_language_census.sh` reads the chapter's own
+  tables and type-checks with them, so a signature nobody wrote down cannot be implemented. Owner:
+  `G0-CONTRACT.9`; implemented by `G1-SLICE.5`.
 - `docs/book/src/spec/feature-matrix.md` — **the boundary of the release claim.** 105 rows, each
   `supported` / `rejected` / `deferred` with a reason, the gate that proves it and, for every refusal, a
   diagnostic token from the 29 its §10 declares. Coverage of the ontology, of roadmap §1.3's non-goals and
@@ -63,6 +72,7 @@
 - [`decision_acceptance-evidence-per-leaf.md`](docs/decisions/decision_acceptance-evidence-per-leaf.md)
 - [`decision_adopted-external-policy-references.md`](docs/decisions/decision_adopted-external-policy-references.md)
 - [`decision_adr-0001-license-and-solver.md`](docs/decisions/decision_adr-0001-license-and-solver.md)
+- [`decision_adr-0003-construction-recipe-and-formula-language.md`](docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md)
 - [`decision_d32-proving-gates-proposed-roadmap-amendment.md`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)
 - [`decision_director-ruling-2026-09-30-four-findings.md`](docs/decisions/decision_director-ruling-2026-09-30-four-findings.md)
 - [`decision_fixture-oracles-derive-the-finished-dimension.md`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)

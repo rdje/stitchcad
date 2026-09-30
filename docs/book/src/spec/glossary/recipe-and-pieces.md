@@ -8,8 +8,9 @@
 | Term | What it means | Canonical object | Also called | Machine token |
 | --- | --- | --- | --- | --- |
 | A-line | a silhouette that widens steadily from waist or chest to hem, without a shaped hip curve | roadmap §3.2 · exercised by the [reference skirt](../reference-skirt.md) | flare skirt, "A" shape, *A-Linie* | — |
+| assertion (recipe) | a statement comparing two expressions at a named tolerance class, refusing the whole recipe if they differ | [grammar §1.1](../formula-language/grammar.md) | closure check, recipe oracle | `assert` |
 | bespoke structure | a garment with no construction recipe behind it, so there is nothing parametric to re-evaluate | roadmap §3.2 · named by the [envelope](../feature-matrix.md) | freeform, one-off draft, *Einzelanfertigung* | — |
-| block (pattern) | a fitted base pattern, with no style, from which designs are developed by the recipe; nothing to do with a DXF `BLOCK` | roadmap ADR-0003 · the reference set is chosen by `G0-CONTRACT.9` | sloper, master pattern, foundation, *Grundschnitt* | — |
+| block (pattern) | a fitted base pattern, with no style, from which designs are developed by the recipe; nothing to do with a DXF `BLOCK` | roadmap ADR-0003 · [formula language §1.1](../formula-language.md) | sloper, master pattern, foundation, *Grundschnitt* | — |
 | bodice | the upper body section of a garment, shoulder to waist, shaped by darts or seams | roadmap §3.2 · proved at `G3-GRADING` | body, top block, corsage, *Leibchen* | — |
 | bounding box | the smallest axis-aligned rectangle containing a piece; used against fabric width and page size | [units §1.1](../units-and-tolerances.md) | extents, "the piece's size", envelope | — |
 | centre back (CB) ⚠ | the vertical centre line of the back; a seam edge here means the back is cut in two pieces | [reference skirt §5](../reference-skirt.md) | CB, back middle, *hintere Mitte* | `cb` |
@@ -17,12 +18,15 @@
 | classic collar | a collar with a stand and a fall that rolls at a declared line; the envelope names it and no gate proves it | [envelope §9](../feature-matrix.md) | shirt collar, two-piece collar, *Kragen* | — |
 | collar fall | the part of a collar that folds over the stand and shows; its length sets the collar's roll | [envelope §9](../feature-matrix.md) | collar leaf, *Oberkragen* | — |
 | collar stand | the band a collar's fall folds over, which decides how far the collar stands from the neck | [envelope §9](../feature-matrix.md) | collar band, *Steg*, *Unterlagen* | — |
+| conditional | the language's one special form: a boolean test and two branches of one kind, of which only the taken one is evaluated | [grammar §7](../formula-language/grammar.md) | if, branch | `if` |
 | construction recipe | the ordered formula graph and drafting operations that *produce* a garment's geometry | [ontology §3.1](../ontology.md) | recipe, drafting history, construction, "the how" | → `Design` |
 | cut line ⚠ | the boundary the knife follows: the net line pushed out by its seam allowance | [ontology §4.4](../ontology.md) | cutting line, contour, outer edge, *Schnittkante* | layer `CUT` · `1` |
 | cut on fold ⚠ | a piece placed against a fabric fold so one cut yields a symmetric piece twice as wide | [ontology §4.1](../ontology.md) | place on fold, "cut 1 on fold", folded cut | `fold_edge` |
 | cut quantity | how many of a piece are cut, in this size, from this material | [ontology §4.1](../ontology.md) | multiplicity, cut count, "cut 2" | `cut_qty` |
 | design | the authored semantic content: measurements, ease, recipe, sewing graph, materials | [ontology §3.1](../ontology.md) | style, project, garment, pattern (⚠ ambiguous) | `Design` |
 | drafting operation | one typed, ordered, replayable step of the recipe; every mutation goes through the command bus | [ontology §3.2](../ontology.md) | step, edit, command, action | typed command name |
+| drafting system | a documented, named construction method whose blocks patternmakers recognize and whose numbers can be cited per step | [formula language §1.1](../formula-language.md) | cutting system, pattern-drafting method, *Schnittsystem* | — |
+| evaluation order | declaration order, a topological order of the formula graph; a forward reference is refused, never reordered | [formula language §4.1](../formula-language.md) | single pass | — |
 | extension | the part of a waistband or fly that overlaps past the closure to carry it | [reference skirt §3](../reference-skirt.md) | overlap, underlap, fly extension | `wb_extension` |
 | face side ⚠ | the side of the fabric that shows; a piece is stored with the face declared, never assumed | [ontology §4.1](../ontology.md) | right side, RS, good side, *rechte Warenseite* | `face_up` |
 | formula graph | the acyclic graph of expressions over measurements, parameters and prior geometry | [ontology §3.1](../ontology.md) | dependency graph, expression graph, "the formulas" | `formula_graph` |
@@ -37,6 +41,8 @@
 | material | the fabric or notion a piece is cut from, with width, nap, pattern and shrinkage | [ontology §6](../ontology.md) | fabric, cloth, substrate, *Stoff* | `Material` |
 | mirror | reflect geometry about an axis, producing the left of a right-handed piece | [ontology §3.2](../ontology.md) | flip, reflect, *spiegeln* | `mirror` |
 | mirrored pair ⚠ | two pieces that are mirror images of each other, labelled L and R and cut once each | [ontology §4.1](../ontology.md) | pair, L/R pair, left and right | `pair` |
+| multi-size branching | a conditional on the size context or on a measurement — never on a size label, which is prose | [grammar §7.1](../formula-language/grammar.md) | size branch, size-dependent formula | `size_index` |
+| name binding | one statement giving one name one value, once: a recipe is a history, so a name never changes meaning inside it | [formula language §3](../formula-language.md) | binding, declaration | `let` |
 | net line ⚠ | the stitched line: the garment's sewn boundary with **no** allowance on it | [ontology §4.4](../ontology.md) | sew line, seam line, stitching line, *Nahtlinie* | layer `DRAW` · `14` |
 | outer boundary | the closed loop that is a piece's extent, wound counter-clockwise in the piece's own frame | [ontology §4.1](../ontology.md) | contour, perimeter, outline, *Kontur* | `boundary` |
 | parameter | a named value exposed to formulas, carrying an uncertainty state like any other number | [ontology §3.1](../ontology.md) | variable, driver, input | `parameter` |
@@ -44,7 +50,7 @@
 | piece | one pattern shape cut from one material, with identity, label data and geometry | [ontology §4.1](../ontology.md) | pattern piece, part, panel, *Schnittteil* | `Piece` |
 | quadrant | one fourth of a symmetric garment — the unit the reference drafting works in | [reference skirt §3](../reference-skirt.md) | quarter, "1/4 of the body" | `quarter` |
 | recipe replay | re-evaluating the recipe from scratch; the only way geometry is produced or reproduced | [ontology §3.1](../ontology.md) | regeneration, re-evaluation, rebuild | `EvaluateInstance` |
-| reference drafting | the one named drafting system shipped as the v1 reference block set | roadmap ADR-0003 · chosen by `G0-CONTRACT.9` | reference block set, house drafting system | — |
+| reference drafting | the one named drafting system shipped as the v1 reference block set — Aldrich's metric pattern cutting | [formula language §1.1](../formula-language.md) | reference block set, house drafting system, *Referenzschnitt* | — |
 | revision ⚠ | the design's monotonically increasing counter; a command's precondition and an approval bind to it | [ontology §3.1](../ontology.md) | version, edit level, *Stand* | `revision` |
 | roll line | the line a collar, lapel or hem folds along; a construction line and never a cut edge | [envelope §9](../feature-matrix.md) | crease line, fold-over line, *Bruchkante* | — |
 | shirt | a bodice with a front opening, a collar and a sleeve — the intermediate the roadmap permits at G3 | roadmap §11 G3 · permitted, not promised | top, *Hemd* | — |

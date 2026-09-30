@@ -752,3 +752,85 @@ Order is landing order, oldest first, so this file reads the same way the tree's
 - [x] **LOCKSTEP** — the leaf, this checklist and the tree's blockers; `MEMORY.md`'s blocker bullet;
   `LIVE_STATUS.md`; `CHANGELOG.md`; `docs/decisions/INDEX.md` and the regenerated Knowledge Map. Lesson
   promotion: **promoted** — the record carries an `answers:` line.
+
+### `G0-CONTRACT.14c` — a delegated decision is bounded, not merely disclosed
+
+- [x] **REPRODUCE / ISSUE** — finding 1: the engineer proposed the `ROADMAP.md` §11 G3 amendment in `.4b` and
+  applied it in `.4c`, and the only thing recording that was a sentence in a session report.
+  `git show HEAD:docs/book/src/governance.md | grep -ci 'self-appl\|same party'` → `0`, `rc=1`, against `2`
+  after this slice: the governance model covered human seats and agents, and said nothing about the case this
+  project actually runs in.
+- [x] **ROOT CAUSE (WHY + WHERE)** — governance §8 was written to list *vacancies*, and §6 to bound *agents*;
+  neither addresses a party that legitimately holds the pen for both halves of a decision. A disclosure is not a
+  control: it decays with the conversation it was made in, while a rule is read by whoever acts next. The
+  founding instance is measured in the tree: `git log --oneline -3 -- ROADMAP.md` → `513374c` (the v0.3
+  amendment), `5257257` (bootstrap), `f1dcbe4` (initial), `rc=0` — the roadmap's first revision in its life was
+  prepared as a proposal in `4b0bb95` and applied in `513374c`, adjacent commits by the same author.
+- [x] **ADDRESSED (verified)** — `docs/book/src/governance.md` §6.1 carries five rules: record the author and
+  the applier and say so when they are the same; the author of a decision may not approve the evidence that
+  decision requires (approval belongs to a reviewer meeting §2's independence criterion, and where none exists
+  the claim stays **unapproved**); consequences become instruments others can run; the record states what would
+  reverse it and who may; a delegation to decide is not one to upgrade evidence.
+  `wc -lc docs/book/src/governance.md` → `265` lines / `21 303` B, inside the `book_collection` per-part health
+  of `400` / `24 576`; `make book` → `INFO HTML book written to …`, `exit=0`. The rule bites in three places,
+  each verifiable: the roadmap's Appendix A v0.3 entry now states that author and applier were the same party
+  (`grep -c 'same one' ROADMAP.md` → `1`, `rc=0`), `G3-GRADING.14`'s acceptance withholds the review from the
+  criterion's author, and the reasoning is in
+  `docs/decisions/decision_self-application-under-delegation.md` (indexed, `answers:` line).
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; the roadmap grew by four lines
+  and the revision-aware baseline refused it, exactly as `SPINE.4.5` designed:
+  `LIVE-DOC-SIZE: roadmap: transition debt WIDENED on lines (951 > baseline 947)`, `exit=1` — handled by the
+  rule rather than around it, re-basing to v0.3's final state (`lines=951;bytes=53153;at=v0.3`) with the
+  authority cited in the row's notes, and recording in the decision record the limit this exposed (`at=` binds a
+  baseline to a revision marker, not to a commit). `bash scripts/check_live_doc_size.sh` →
+  `live-doc-size: OK — 17 surfaces, 15 routes, 89 files measured`, `exit=0`; `make probes` →
+  `15 suite(s) green`; `make book` → `exit=0`; the book's censuses green.
+- [x] **FIX** — added §6.1 to the governance chapter, the disclosure to the roadmap's disposition entry, the
+  independence requirement to `G3-GRADING.14`'s acceptance, the decision record and its index row; re-based the
+  containment baseline under the rule and recorded that rule's limit.
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier and the tree's logs; `MEMORY.md`, `LIVE_STATUS.md`,
+  `CHANGELOG.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` and the regenerated Knowledge Map in this commit. Lesson
+  promotion: **promoted** — the new record carries an `answers:` line.
+
+### `G0-CONTRACT.19` — what the project does not know is one command away
+
+- [x] **REPRODUCE / ISSUE** — the domain seat is vacant and the book's unverified claims were enumerable only by
+  reading it: `git grep -c '\`assumed\`' HEAD -- docs/book/src` → `18` occurrences across `6` files, with
+  nothing tying them to the seat that owes them and nothing noticing if one disappeared. The roadmap's core
+  property is that uncertainty is data; a datum nobody can list is prose.
+- [x] **ROOT CAUSE (WHY + WHERE)** — every chapter states its own verification status, and no instrument reads
+  them together, so "what waits on a human" lived in the reader's memory. `ls docs/tasks/artifacts/` at `HEAD`
+  → twelve directories, none of them about uncertainty; the population spans nine files and six marker
+  spellings, which is exactly the shape that drifts.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/uncertainty/run_uncertainty_census.sh` →
+  `uncertainty census: 88 markers / 10 files / 0 unowned / 0 failure(s)`, `exit=0`, enumerating every marker in
+  the book's own vocabulary (`assumed`, `unknown`, `unverified-with-owner`, `read-in-repo`,
+  `cited-from-roadmap`, `read-external`, `known`, `derived`, `(proposed)`, `vacant`) per file and per resolving
+  authority, and refusing — rule `U1` — a blocking marker whose verification-status section names no resolver.
+  Its discrimination is proved, not assumed:
+  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/uncertainty/run_uncertainty_probes.sh` →
+  `probes: 6 pass / 0 fail`, with an owned-claim control arm, an unowned synthetic chapter refused by name, a
+  chapter added *after* the census was written refused (so the rule is about the population), a definition left
+  alone, and an absent book refusing with `exit=2`. Governance §8.1 and the fixture's §11 now point at it, so
+  the day a name arrives the work it unblocks is one command away.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `make probes: 15 suite(s) green`, `exit=0`; `make book` → `exit=0`;
+  `bash docs/tasks/artifacts/glossary/run_glossary_census.sh` → `277 terms / 8 parts / 146 tokens /
+  0 failure(s)` after the new `vacant seat` entry and a re-derived index, and its own suite still
+  `probes: 10 pass / 0 fail`; the other censuses unchanged (matrix `105 rows / 0 failure(s)`, standards
+  `6 registered / 0 failure(s)`, fixture `20 rows / 4 checks / 5 pieces / 0 mismatch(es)`, coverage
+  `13 trees / 3 sibling(s) / 0 orphan(s)`); `bash scripts/check_live_doc_size.sh` → `OK — 17 surfaces,
+  15 routes, 89 files measured`, `exit=0`.
+- [x] **FIX** — built the census and its probe suite; added the `vacant seat` glossary entry (the token census
+  demanded an owner for `vacant`, its sixth catch at authoring time) and re-derived the A–Z index; pointed
+  governance §8.1 and the fixture §11 at the census; added both `TOOLBOX.md` rows. **Building it found two
+  defects in existing instruments, both fixed here:** the glossary census's `resolve()` deleted one `/x/../` per
+  `gsub` pass and so reported `../../governance.md` — a file that exists — as a dead reference (it now
+  normalises segment by segment), and this census's first authority list counted a bare gate id as an owner, so
+  "frozen as a golden at G2" satisfied it and the `UNOWNED` arm passed for the wrong reason until the list was
+  narrowed to parties that can *resolve* a claim.
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier and the tree's logs; `TOOLBOX.md`,
+  `LIVE_STATUS.md` (fifteen probe suites, re-derived), `MEMORY.md`, `CHANGELOG.md` and the regenerated
+  Knowledge Map in this commit. Lesson promotion: declined (the two instrument defects are recorded in this
+  checklist and in the tools' own headers, which is where a probe author will look; no new dated lesson was
+  added to `DEV_NOTES.md` this slice).

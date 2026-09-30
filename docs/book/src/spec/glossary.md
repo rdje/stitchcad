@@ -81,10 +81,6 @@ it is confused with. The A–Z index below is the single-page way in.
 
 ## The terms, A–Z
 
-Derived from the parts by the census; do not edit this list by hand.
-
-<!-- the census regenerates and compares everything between this heading and the next one -->
-
 - [.rul](glossary/interchange-and-envelope.md)
 - [A-line](glossary/recipe-and-pieces.md)
 - [AAMA](glossary/interchange-and-envelope.md)
@@ -103,6 +99,7 @@ Derived from the parts by the census; do not edit this list by hand.
 - [artifact](glossary/interchange-and-envelope.md)
 - [artifact policy matrix](glossary/profiles-and-release.md)
 - [assembly order](glossary/seams-and-allowances.md)
+- [assertion (recipe)](glossary/recipe-and-pieces.md)
 - [assumed](glossary/profiles-and-release.md)
 - [ASTM D6673](glossary/interchange-and-envelope.md)
 - [atomic group](glossary/commands-and-authority.md)
@@ -137,6 +134,7 @@ Derived from the parts by the census; do not edit this list by hand.
 - [command](glossary/commands-and-authority.md)
 - [command bus](glossary/commands-and-authority.md)
 - [commit (authority)](glossary/commands-and-authority.md)
+- [conditional](glossary/recipe-and-pieces.md)
 - [conservative default](glossary/profiles-and-release.md)
 - [construction recipe](glossary/recipe-and-pieces.md)
 - [consumption](glossary/interchange-and-envelope.md)
@@ -166,9 +164,11 @@ Derived from the parts by the census; do not edit this list by hand.
 - [diagnostic](glossary/profiles-and-release.md)
 - [differential](glossary/seams-and-allowances.md)
 - [digitizing](glossary/interchange-and-envelope.md)
+- [dimension error](glossary/model-and-numbers.md)
 - [disposition](glossary/profiles-and-release.md)
 - [double notch](glossary/marks-and-closures.md)
 - [drafting operation](glossary/recipe-and-pieces.md)
+- [drafting system](glossary/recipe-and-pieces.md)
 - [drill hole](glossary/marks-and-closures.md)
 - [DXF](glossary/interchange-and-envelope.md)
 - [DXF layer](glossary/interchange-and-envelope.md)
@@ -179,8 +179,11 @@ Derived from the parts by the census; do not edit this list by hand.
 - [envelope (corner)](glossary/seams-and-allowances.md)
 - [equivalence report](glossary/profiles-and-release.md)
 - [ERP](glossary/interchange-and-envelope.md)
+- [evaluation order](glossary/recipe-and-pieces.md)
 - [evidence](glossary/profiles-and-release.md)
 - [exact ratio](glossary/model-and-numbers.md)
+- [exact rational arithmetic](glossary/model-and-numbers.md)
+- [expression](glossary/model-and-numbers.md)
 - [extension](glossary/recipe-and-pieces.md)
 - [extreme size](glossary/measurements-and-fit.md)
 - [face side](glossary/recipe-and-pieces.md)
@@ -219,6 +222,7 @@ Derived from the parts by the census; do not edit this list by hand.
 - [interfacing](glossary/marks-and-closures.md)
 - [internal construction line](glossary/recipe-and-pieces.md)
 - [internal unit](glossary/model-and-numbers.md)
+- [kind (of a value)](glossary/model-and-numbers.md)
 - [knit or stretch block](glossary/recipe-and-pieces.md)
 - [known](glossary/profiles-and-release.md)
 - [label data](glossary/recipe-and-pieces.md)
@@ -240,6 +244,8 @@ Derived from the parts by the census; do not edit this list by hand.
 - [mirror](glossary/recipe-and-pieces.md)
 - [mirrored pair](glossary/recipe-and-pieces.md)
 - [miter (corner)](glossary/seams-and-allowances.md)
+- [multi-size branching](glossary/recipe-and-pieces.md)
+- [name binding](glossary/recipe-and-pieces.md)
 - [nap](glossary/marks-and-closures.md)
 - [negative ease](glossary/measurements-and-fit.md)
 - [nesting](glossary/interchange-and-envelope.md)
@@ -332,6 +338,7 @@ Derived from the parts by the census; do not edit this list by hand.
 - [stitches per inch (SPI)](glossary/seams-and-allowances.md)
 - [stop landmark](glossary/seams-and-allowances.md)
 - [stripe reference](glossary/marks-and-closures.md)
+- [structural limit](glossary/model-and-numbers.md)
 - [supported](glossary/interchange-and-envelope.md)
 - [supported envelope](glossary/interchange-and-envelope.md)
 - [T-notch](glossary/marks-and-closures.md)
@@ -340,6 +347,7 @@ Derived from the parts by the census; do not edit this list by hand.
 - [tessellation](glossary/model-and-numbers.md)
 - [tiled export](glossary/interchange-and-envelope.md)
 - [tolerance class](glossary/model-and-numbers.md)
+- [tolerance name](glossary/model-and-numbers.md)
 - [trim (corner)](glossary/seams-and-allowances.md)
 - [trousers](glossary/recipe-and-pieces.md)
 - [true (operation)](glossary/seams-and-allowances.md)

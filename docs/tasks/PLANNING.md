@@ -587,6 +587,13 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     execution-order line are corrected by `G0-CONTRACT.13d`'s lockstep; the durable derivation stays
     `PLANNING.5`'s, and one repeat occurrence is the argument for taking it as soon as the ruling's four
     items are done rather than later.
+  - **Third instance, found and removed by `G0-CONTRACT.9`.** The index's execution-order line still listed
+    `SPINE.20` among that lane's open leaves one commit after `a743d53` closed it, while `LIVE_STATUS.md` had
+    it right — so the layer-B index drifted against both the tree and the tracker. Measured:
+    `git log --oneline -1 -- docs/TASK_TREE.md` → `4e34b90` (`SPINE.15`), i.e. the commit that landed `.20`
+    never wrote the index, which is the same mechanism as both earlier instances: `COMMIT.md` updates that file
+    "only if the frontier changes" and nothing derives whether it did. Three instances of one hand-kept
+    sentence is the census `PLANNING.5` owes, not a fourth correction.
 
 - **D35** — the ontology does not say whether a `SeamSpan` may name the same piece on both sides (a
   *self-span*), and the reference fixture needs an answer for its waistband ends: a band folded lengthwise
@@ -622,6 +629,14 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     (count them with grep over the leaf-id lines of `docs/tasks/*.md`) and `SPINE` has `23`. Neither count has a
     producer, so both rows now state what their named instrument prints, or name the open leaves instead of
     counting them — the remedy `CLAIM_VERIFICATION.md` §5B prescribes, applied rather than cited.
+    **Third instance, found and removed by `G0-CONTRACT.9`:** the same file's defect-census row listed D47 as
+    open and counted "46 logged, 40 closed" after `SPINE.20` had closed D47 in `a743d53` — the row is
+    hand-kept, which is D38, and the count has no producer, which is this defect. Corrected in that commit's
+    lockstep (D47 closed, D48 logged and closed by the same slice, `16` probe suites named by the command
+    `find docs/tasks/artifacts -name 'run_*probe*.sh' | wc -l` rather than remembered). Its `PLANNING` row
+    claimed "2 evidence siblings" where `run_tree_coverage_census.sh` prints `3 sibling(s)`, and four notes
+    cells were past the surface's 220-byte maxline health, so all four were tightened in the same pass — the
+    remedy `COMMIT.md`'s table convention prescribes rather than a wider target.
 
 - **D37** — `DEV_NOTES.md` described itself 148 lines into itself: the paragraph saying what the surface is
   ("Detailed technical notes … Newest first") sat *below* every lesson, immediately above the bootstrap
@@ -809,6 +824,52 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     keeping the open ones and a pointer, and `COVERAGE`/`POINTER` derived from a segment registry rather than
     hardcoded to the changelog (which is D40). Deferred behind product work by the frontier rule; the file is
     inside every ceiling today.
+  - **Crossed `2026-09-30`, measured:** this file is past the 1000-line convention threshold — it was `994`
+    lines before `G0-CONTRACT.9` logged D48, D49 and two recurrence notes — and still inside both ceilings
+    (`1200` lines / `98 304` B). Re-derive the number rather than trusting this sentence
+    (`wc -lc docs/tasks/PLANNING.md`), because every defect logged here moves it. The convention's first
+    remedy is exhausted (`PLANNING-evidence.md` already holds the completed checklists), so what is left is
+    the archive this entry names. `SPINE.19` is the leaf to take the next time a spine slot is legitimate;
+    until then the pressure is recorded, not silently absorbed.
+
+- **D48** — `docs/tasks/G3-GRADING.md` carried two `## Acceptance Checklist` headings, and a children range
+  that omitted a leaf the file holds: the boilerplate section stayed in place when `G0-CONTRACT.4c` added a
+  second heading above its own boxes, and `Children:` still said `.1` … `.14` after `.15` was created.
+  - Reproduce: `grep -c '^## Acceptance Checklist' docs/tasks/G3-GRADING.md` → `2` at `HEAD`, `1` after the
+    fix; `grep -n 'Children:' docs/tasks/G3-GRADING.md` → a range ending at `.14`, against
+    `grep -c '^- ID: .G3-GRADING\.' docs/tasks/G3-GRADING.md` → `15` leaves at `HEAD` and `16` after this
+    slice added one. The population is every tree
+    file, enumerated: `for f in docs/tasks/*.md; do n=$(grep -c '^## Acceptance Checklist' "$f");
+    [ "$n" -gt 1 ] && echo "$f: $n"; done` → `docs/tasks/G3-GRADING.md: 2`, one file of sixteen.
+  - Impact: two sections with one name, so a reader — and any gate that keys on the heading, as
+    `scripts/check_task_acceptance.sh` keys on the first matching box — meets the boilerplate where the
+    evidence is. That is D15's class one level up: a placeholder shadowing real evidence, by heading rather
+    than by box. The stale children range is D34's class inside one file: a hand-kept summary that no
+    producer re-derives.
+  - Owner: `G0-CONTRACT.9` (**fixed in this commit** — the headings merged into one section, the range
+    corrected to `.1` … `.16` with the leaf this slice added). The durable fix for the range is `PLANNING.5`,
+    which derives index↔tree agreement; for the heading the remedy is a convention recorded here, because
+    `grep -c` over `docs/tasks/*.md` shows no gate counts headings: one `## Acceptance Checklist` per tree
+    file, and a leaf's boxes under it.
+
+- **D49** — a tree file's Verification Log, Commit Log and Changelog are rolling ledgers inside a
+  `partitioned_canonical` file, and nothing seals them: `wc -lc docs/tasks/G0-CONTRACT.md` reports it past the
+  `tasks_collection` per-part health (`800` lines / `65 536` B) at roughly 122 % of the byte axis and about
+  five slices from a ceiling (`1200` / `98 304`) that may only rise by a recorded decision. Re-derive both
+  numbers rather than trusting this sentence, because every landed leaf moves them. The completed-checklist
+  split (`G0-CONTRACT-evidence.md`) already happened and freed what it could; what grows now is the ledgers.
+  - Reproduce: the `wc -lc` above, plus `sed -n '/^## Verification Log/,$p' docs/tasks/G0-CONTRACT.md | wc -l`
+    → the ledger tail's share of the file, and `bash scripts/check_live_doc_size.sh 2>&1 | grep tasks_collection`
+    → the health warning with the same numbers. The population is every tree file:
+    `wc -lc docs/tasks/*.md | sort -k2 -n` → two files over the 65 536-byte health (`PLANNING.md`, this one).
+  - Impact: not a breach today, and that is the point — a ceiling that is five slices away is reached by a
+    slice that has no room to decide anything, and `COMMIT.md` forbids raising one to land content. The slice
+    that hits it would have to trim evidence mid-flight or block.
+  - Owner: `SPINE.19`, whose goal is extended from three ledgers (changelog, dev notes, closed defects) to a
+    fourth: a tree file's ledger tail seals into its evidence sibling under the same descriptor contract, with
+    the live window keeping the most recent entries and a pointer. Trigger, so it is taken before it is urgent:
+    the first slice that leaves a tree file within 15 % of its byte ceiling. Deferred behind product work by
+    the frontier rule (`decision_product-work-takes-the-frontier.md`); nothing is blocked today.
 
 ## Decisions
 

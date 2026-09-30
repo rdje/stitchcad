@@ -25,13 +25,13 @@ must satisfy. It is written during gate G0 (the product-and-semantic-contract ga
 | [Glossary](glossary.md) | One meaning per construction term, its canonical object, the synonyms factories and other CADs use, and the machine token that must never be rendered raw |
 | [Units and tolerances](units-and-tolerances.md) | The internal unit, the five tolerance classes and how each is derived, the curve set, the offset error budget |
 | [Garment ontology](ontology.md) | Every first-class object: identity, fields, invariants, and how it carries uncertainty |
+| [Formula language](formula-language.md) | The recipe's expression language, in three parts: the contract (kinds, names, evaluation, errors, exclusions), the [grammar and its tables](formula-language/grammar.md), and the [worked examples](formula-language/examples.md) over the reference skirt |
 | [Supported envelope](feature-matrix.md) | What v1 supports, what it rejects with a diagnostic, and what is deferred — the boundary of the release claim |
 | [Instantiation paths](instantiation-paths.md) | Measurement-driven regeneration and grade-rule instantiation, where they diverge, and the declared equivalence tolerance |
 | [Size sets](size-sets.md) | Size labels versus order, base size, multi-dimensional charts, and which object owns a size set |
 | Command layer | The typed command set, atomic groups, preview/commit, revision preconditions, undo/redo granularity, and agent authority levels |
 | Release and approval | The manifest, what approval binds to, how it stale-ifies, and the graduated acceptance states |
 | Interchange dialects | AAMA named layers against ASTM numbered layers, R12/R13, blocks, SST/PST, grading modes, tessellation policy |
-| Formula language | The drafting recipe's expression language: grammar, units inside expressions, conditionals, name binding, evaluation order |
 | Internationalization | The one message system, externalization, termbases, pseudolocalization, locale-independent files, and the RTL geometry rule |
 | [Measurement standards](standards.md) | Which external standards the model draws on, what is adopted from each, and the verification status of every claim |
 | [Reference skirt](reference-skirt.md) | The one garment specified with real numbers, which every conformance suite, golden file and agent gate is built around |
