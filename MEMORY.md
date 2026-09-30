@@ -17,8 +17,8 @@
   evidence-bearing Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.2, DRAFT
   until G0 exits.
 - **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.5`. Done: `.1` glossary (265 terms),
-  `.2` units, `.3` ontology, `.4` envelope matrix (105 rows, 29 diagnostics), `.13`+`.13b` fixture,
-  `.18` `sc-units` + `sc-core` + G0 CI.
+  `.2` units, `.3` ontology, `.4` envelope matrix (105 rows), `.13`/`.13b`/`.13c` fixture (waist
+  corrected, D33), `.18` `sc-units` + `sc-core` + G0 CI.
 - **Next action:** write `.5`, both instantiation paths — `docs/book/src/spec/instantiation-paths.md`:
   regeneration against `.rul` grade rules, where they diverge (the known information loss), the declared
   equivalence tolerance, extreme-size checking after reconstruction, and the three `.rul` attributes the

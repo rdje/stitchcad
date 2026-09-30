@@ -1,5 +1,30 @@
 # DEV_NOTES.md
 
+## _(2026-09-30)_ — a fixture can be internally consistent and externally wrong
+
+- The reference skirt's allocation balance closed exactly — `4 × (3.0 + 4.0) = 102.0 − 74.0`, i.e.
+  `28.0 = 28.0` — for the whole life of a drafting step that produced a garment **28.0 cm too small at the
+  waist**. §5 step 2 put the waist side point at `quarter_waist − ss_suppress` = 15.5 cm from CF; the side
+  seam takes its suppression off the *hip* width, so the point belongs at `quarter_hip − ss_suppress` =
+  22.5 cm, and the finished waist is `4 × (22.5 − 4.0)` = 74.0 cm instead of `4 × (15.5 − 4.0)` = 46.0 cm.
+  Re-derived with `python3`, not with reading: the chapter's declared quantities were all consistent, so no
+  consistency check could have caught it. Promoted to
+  `docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md`.
+- **The general shape:** a *declared* oracle (a balance, a sum, a ratio over quantities the fixture states)
+  and a *constructed* oracle (re-deriving a finished dimension from the geometry the recipe builds) answer
+  different questions, and only the second sees a misplaced point. A fixture needs both. The question that
+  exposes the gap is not "do the checks pass?" but **"which check would fail if a point moved 5 mm?"** — for
+  this fixture, before the fix, the answer was none.
+- **What found it was not a review of the fixture.** It was writing the *instantiation-paths* chapter, which
+  needs the fixture's graded numbers as a worked example: grading a waist point requires knowing which span
+  it sits on, and the two candidate spans disagreed by 7.0 cm. Corollary: a defect hides best in a document
+  nobody has a second use for. The first slice that has to *compute with* a specification is the slice that
+  tests it — which is an argument for writing the dependent chapter early rather than for re-reading.
+- **A correction to a sealed record is a superseding record, not an edit.** The sealed `STITCHCAD-G0-0013`
+  changelog segment lists "dart intake and centre" among the derived values; it is immutable, so §11 of the
+  chapter carries the correction and names the segment it supersedes. The ledger probe's `COVERAGE` rule
+  already needed the same shape for part1's wrong coverage line (D30) — two instances of one rule now.
+
 ## _(2026-09-30)_ — a boundary is only real if something enumerates it, and a RED arm must remove the property
 
 - **Writing the feature matrix found a roadmap gap that reading it four times had not.** Roadmap §3.2 puts

@@ -23,6 +23,40 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G0-0013c - the reference fixture's waist, corrected (leaf `G0-CONTRACT.13c`)
+
+The fixture every G2 golden, mutation test and offset-pathology case is built around drafted a skirt whose
+finished waist was **46.0 cm instead of the declared 74.0 cm** - and the check the chapter called "the
+fixture's own invariant" passed throughout (defect D33).
+
+- **the error**: §5 step 2 placed the waist side point at `quarter_waist - ss_suppress` = 15.5 cm from CF.
+  The side seam takes its 3.0 cm of suppression off the **hip** width, not the waist width, so the point
+  belongs at `quarter_hip - ss_suppress` = 22.5 cm. Drafted as written, the panel's waist edge was 7.0 cm
+  short and the dart took another 4.0 cm out of it: `4 x (15.5 - 4.0)` = 46.0 cm against a declared
+  `waist_girth + ease_waist` = 74.0 cm
+- **why no check saw it**: the allocation balance `4 x (ss_suppress + dart_intake) = garment_hip -
+  garment_waist` closes over DECLARED quantities, and every declared quantity was consistent. The error was
+  in where a point is CONSTRUCTED, which no relationship between declared quantities mentions. Re-derived
+  with python3 rather than by reading: `4*((98.0+4.0)/4 - 3.0 - 4.0)` -> `74.0`, `4*((74.0+0.0)/4 - 3.0 -
+  4.0)` -> `46.0`, and the balance -> `28.0 = 28.0` either way
+- **the fix**: §5 steps 2 and 3 corrected; both dart-centre formulas corrected to the span they meant
+  (`(quarter_hip - ss_suppress) / 2`, so 7.75 -> **11.25 cm**, with the legs at 9.25 and 13.25 cm); §4 gains
+  a `waist_closure` row - `(quarter_hip - ss_suppress) - dart_intake = quarter_waist`, `18.5 = 18.5` - as the
+  constructed oracle the balance could not be; §12 makes both checks test obligations; §11 records the
+  correction as the superseding record for the sealed `STITCHCAD-G0-0013` segment, which is immutable
+- **all 18 derived rows re-derived** from §2 and §3 in table order, feeding each result into the rows below
+  as the recipe does: 0 mismatches, and the finished waist, hip and hem now equal their declared values
+- **what found it was not a review of the fixture** but the slice that has to compute with it: `.5` grades
+  this skirt as its worked divergence example, and grading a waist point requires knowing which span it sits
+  on - the two candidate spans disagreed by 7.0 cm. A defect hides best in a document nobody has a second
+  use for
+- the rule generalises as `docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md`: a
+  fixture needs a declared oracle AND a constructed one, and the question to ask before freezing a golden
+  is "which check would fail if a point moved 5 mm?" - for this fixture, before the fix, none
+- gates: `make book` -> exit=0; `make gate` -> "=== all doctrines green ==="; glossary census ->
+  "265 terms / 8 parts / 139 tokens / 0 failure(s)" (the new `waist_closure` token is declared by §4's own
+  table, as the token rule requires); no product code touched
+
 ## STITCHCAD-G0-0004 - the release claim gets a boundary, and the boundary is derived (leaf `G0-CONTRACT.4`)
 
 docs/book/src/spec/feature-matrix.md dispositions **105 rows** - 76 supported, 19 rejected, 10 deferred -

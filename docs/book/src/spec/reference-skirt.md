@@ -86,11 +86,12 @@ word appears inside one, which is what makes them checkable by machine.
 | `quarter_hip` | quarter hip | `garment_hip / 4` | 25.5 cm |
 | `suppression` | waist suppression per quadrant | `quarter_hip − quarter_waist` | 7.0 cm |
 | `dart_intake` | waist dart intake per quadrant | `suppression − ss_suppress` | 4.0 cm |
-| `allocation_balance` | the balance check (§4.1) | `4 × (ss_suppress + dart_intake)` = `garment_hip − garment_waist` | 28.0 cm = 28.0 cm |
+| `allocation_balance` | the allocation balance (§4.1) | `4 × (ss_suppress + dart_intake)` = `garment_hip − garment_waist` | 28.0 cm = 28.0 cm |
+| `waist_closure` | the stitched quarter waist (§4.1) | `(quarter_hip − ss_suppress) − dart_intake` = `quarter_waist` | 18.5 cm = 18.5 cm |
 | `side_seam_total` | side-seam intake, 2 seams × 2 quadrants | `4 × ss_suppress` | 12.0 cm |
 | `dart_total` | dart intake, 4 darts | `4 × dart_intake` | 16.0 cm |
-| `front_dart_centre` | front dart centre, from CF | `(quarter_waist − ss_suppress) / 2` | 7.75 cm |
-| `back_dart_centre` | back dart centre, from CB | `(quarter_waist − ss_suppress) / 2` | 7.75 cm |
+| `front_dart_centre` | front dart centre, from CF | `(quarter_hip − ss_suppress) / 2` | 11.25 cm |
+| `back_dart_centre` | back dart centre, from CB | `(quarter_hip − ss_suppress) / 2` | 11.25 cm |
 | `quarter_hem_width` | quarter hem width | `quarter_hip + a_line_flare` | 28.5 cm |
 | `garment_hem` | garment hem circumference | `4 × quarter_hem_width` | 114.0 cm |
 | `hip_to_hem_drop` | hip-to-hem drop | `waist_to_hem − waist_to_hip` | 42.0 cm |
@@ -98,10 +99,23 @@ word appears inside one, which is what makes them checkable by machine.
 | `waistband_pattern_length` | waistband pattern length | `garment_waist + 2 × sa_cb + wb_extension` | 80.0 cm |
 | `waistband_cut_width` | waistband cut width — **disputed, see §11** | `2 × wb_width + sa_waist + sa_wb_bottom` | 10.0 cm |
 
-### 4.1 The balance check
+### 4.1 The two closure checks
 
-`allocation_balance` is the fixture's own invariant: waist suppression must be fully allocated. If a
-future edit changes a measurement and the check no longer balances, the recipe is wrong, not the check.
+The fixture carries two oracles, because they answer different questions and one of them is not enough.
+
+- **`allocation_balance`** — is the waist suppression fully distributed?
+  `4 × (ss_suppress + dart_intake) = garment_hip − garment_waist`, here `28.0 cm = 28.0 cm`.
+- **`waist_closure`** — does the distribution land where the geometry is? The panel's waist edge is drawn
+  from CF to a side point `ss_suppress` *inside the hip point*, and the dart then removes its intake, so
+  `(quarter_hip − ss_suppress) − dart_intake` must equal the `quarter_waist` the panel owes: here
+  `(25.5 − 3.0) − 4.0 = 18.5 cm`, and `4 × 18.5 = 74.0 cm` is the declared garment waist.
+
+The second check exists because this chapter is the evidence that the first is insufficient: an earlier
+revision placed the waist side point at `quarter_waist − ss_suppress` = 15.5 cm, which satisfies the
+allocation balance exactly and drafts a skirt whose finished waist is 46.0 cm instead of 74.0 cm (defect
+**D33**, recorded in §11). A balance over *declared quantities* cannot see a *constructed point*; only a
+check that re-derives the finished dimension from the geometry can. If a future edit changes a measurement
+and either check stops holding, the recipe is wrong, not the check.
 
 ## 5. Drafting recipe
 
@@ -110,13 +124,15 @@ internal unit; the centimetre values above are their display form.
 
 1. **Construct the frame.** Vertical axis = CF (front) / CB (back). Horizontal lines at waist (y = 0),
    hip (y = −`waist_to_hip`), hem (y = −`waist_to_hem`).
-2. **Front quadrant.** From CF at the hip line, mark `quarter_hip` toward the side. At the waist line,
-   mark `quarter_waist − ss_suppress` from CF; the difference is taken out at the side seam, so the
-   waist side point sits `ss_suppress` inside the hip side point.
+2. **Front quadrant.** From CF at the hip line, mark `quarter_hip` = 25.5 cm toward the side. At the
+   waist line the side point sits `ss_suppress` = 3.0 cm inside the hip side point — that is, at
+   `quarter_hip − ss_suppress` = 22.5 cm from CF — because the side seam is where those 3.0 cm are taken
+   out. The waist edge therefore runs 22.5 cm from CF before the dart closes it, and the dart's 4.0 cm
+   leaves the `quarter_waist` = 18.5 cm this panel owes (§4.1).
 3. **Front dart.** Centre at `front_dart_centre` from CF on the waist line; intake `dart_intake`, split
    equally about the centre; apex `dart_len_front` below the waist line, on the centre line. The two
-   legs are straight lines; the waist line is trued so the stitched length matches
-   `quarter_waist − ss_suppress`.
+   legs are straight lines, at 9.25 cm and 13.25 cm from CF; the waist line is trued so the stitched
+   length matches `quarter_waist` = 18.5 cm (§4.1).
 4. **Back quadrant.** Mirrored construction from CB, with `dart_len_back`. The back piece is *not* cut
    on the fold: CB is a seam edge.
 5. **A-line flare.** From the hip side point, the side seam runs straight to a point `a_line_flare`
@@ -234,8 +250,9 @@ notions list matches the geometry.
 - **Every §4 derived value** — *exact arithmetic* from §2 and §3, re-derivable by the formula shown
   beside it; the balance check in §4.1 is the internal oracle. The exception is `waistband_cut_width`,
   whose construction is disputed (below).
-- **`ss_suppress`, `dart_intake`, `dart_len_front`, `dart_len_back`, `a_line_flare`** — *declared
-  drafting constants requiring domain review*. A sewing expert should confirm them before the fixture
+- **`ss_suppress`, `dart_intake`, `dart_len_front`, `dart_len_back`, `a_line_flare`, and the convention
+  that places a dart at the midpoint of its waist edge** — *declared drafting constants requiring domain
+  review*. A sewing expert should confirm them before the fixture
   is frozen as a golden at G2; until then they are `assumed`, not `known`, and this chapter says so.
 - **Zipper length, waistband width and extension** — *declared constants* at common industry values,
   with the same review status.
@@ -252,14 +269,32 @@ notions list matches the geometry.
   made the affected numbers — `waistband_cut_width`, the §6 piece list and count, and the §8 `waist`
   span — are provisional. A G2 golden must not be frozen over them.
 
+- **The waist side point was wrong, and the chapter's own oracle could not see it (defect D33,
+  corrected).** §5 step 2 placed it at `quarter_waist − ss_suppress` = 15.5 cm from CF; §3's
+  `ss_suppress` = 3.0 cm and §4's allocation balance require `quarter_hip − ss_suppress` = 22.5 cm,
+  because the side seam takes 3.0 cm off the **hip** width, not off the waist width. Drafted as written,
+  the stitched quarter waist is `15.5 − 4.0` = 11.5 cm and the finished garment waist 46.0 cm instead of
+  the declared 74.0 cm — a 28.0 cm error in the fixture every G2 golden is built on — while the
+  allocation balance still closed exactly, which is why §4.1 now carries `waist_closure` as a second
+  oracle. The correction changes three published numbers (`front_dart_centre` and `back_dart_centre`
+  7.75 → 11.25 cm, and §5 step 3's truing target `quarter_waist − ss_suppress` → `quarter_waist`) and
+  adds one row. The dart centre is the midpoint of the corrected waist edge, which is what the original
+  formula meant; *where* a dart sits is a drafting convention, so it joins the `assumed` constants above
+  pending the review `G0-CONTRACT.14` names. The sealed changelog entry for `STITCHCAD-G0-0013` lists
+  "dart intake and centre" among the derived values and is immutable, so this bullet is the superseding
+  record.
+
 The distinction matters: an `assumed` constant is exportable with its assumption recorded, but it is not
-evidence, and a golden file frozen over an unreviewed assumption freezes a guess. `G0-CONTRACT.14`
-(governance) owns naming the expert who reviews them.
+evidence, and a golden file frozen over an unreviewed assumption freezes a guess — and a golden frozen
+over an arithmetic error freezes the error with the same confidence. `G0-CONTRACT.14` (governance) owns
+naming the expert who reviews them.
 
 ## 12. Test obligations
 
 - Drafting the fixture through the CLI twice produces byte-identical canonical output (G2 replay).
-- The §4.1 balance check holds after any measurement change, or the recipe reports the imbalance.
+- Both §4.1 closure checks hold after any measurement change, or the recipe reports the imbalance. A
+  construction that satisfies `allocation_balance` but not `waist_closure` is the D33 defect class, and
+  is the reason both are obligations rather than one.
 - Dart intake is conserved: closing each dart removes exactly 4.0 cm from its waist edge, within the
   numerical tolerance class.
 - Every `walk` on this fixture reports a differential within the numerical class, because all spans

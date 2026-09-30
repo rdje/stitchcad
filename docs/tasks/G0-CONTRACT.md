@@ -227,6 +227,20 @@ not a contract.
   glossary vocabulary, not fixture names; every §4 result is unchanged; the book builds.
   Commit: `STITCHCAD-G0-0013b`
 
+- ID: `G0-CONTRACT.13c`
+  Status: `done`
+  Goal: correct the reference fixture's waist geometry (defect **D33**) — §5 step 2 placed the waist side
+  point at `quarter_waist − ss_suppress` (15.5 cm) where §3's `ss_suppress = 3.0` and §4's allocation
+  balance require `quarter_hip − ss_suppress` (22.5 cm) — and give §4 the oracle that would have caught
+  it, because the balance check the chapter calls its own invariant is blind to where the waist point sits.
+  Acceptance: drafted literally, the fixture's finished waist equals its declared garment waist; every
+  number the correction touches is re-derived and shown; the two dart-centre formulas are corrected to the
+  span they meant; a waist-closure check joins §4 and §12; the correction is recorded in the chapter and
+  the sealed changelog mention is superseded rather than edited; no other derived value changes.
+  Verification: recorded below — all `18` derived rows re-derived from §2 and §3 with `0` mismatches, the
+  finished waist `74.0` cm as declared instead of `46.0` cm, both closure checks closing.
+  Commit: `STITCHCAD-G0-0013c`
+
 - ID: `G0-CONTRACT.14`
   Status: `blocked` (director input: named humans)
   Goal: draft the governance model (§12) — sewist-vs-programmer review paths, domain review of
@@ -298,8 +312,9 @@ not a contract.
 | 5 | `G0-CONTRACT.13b` | `done` | the fixture's undeclared tokens (D26) and its disputed waistband (D27), found while building `.1`'s census; the glossary's coverage rule cannot pass over a chapter that uses names it never declares |
 | 6 | `G0-CONTRACT.1` | `done` | the glossary: 239 terms in 8 domain parts, one owner per machine token, ⚠ on the safety-relevant ones, and a census that derives its coverage |
 | 7 | `G0-CONTRACT.4` | `done` | the supported / rejected / deferred matrix: 105 rows, 29 diagnostics, and a census that derives its coverage of the ontology, the non-goals and the envelope |
-| 8 | `G0-CONTRACT.5` | `pending` | **next** — both instantiation paths: regeneration and `.rul` grade rules, where they diverge, and the declared equivalence tolerance. It also owns the three `.rul` attributes (`stack point`, `fixed perimeter`, `smoothing`) the glossary deliberately leaves unspecified |
-| 9 | `G0-CONTRACT.6`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
+| 8 | `G0-CONTRACT.13c` | `done` | the fixture's waist geometry is arithmetically wrong (D33): drafted as written its finished waist is 46.0 cm, not the declared 74.0 cm, and its own oracle cannot see it. `.5` uses this fixture for its divergence example, so the numbers must be right first |
+| 9 | `G0-CONTRACT.5` | `pending` | **next** — both instantiation paths: regeneration and `.rul` grade rules, where they diverge, and the declared equivalence tolerance. It also owns the three `.rul` attributes (`stack point`, `fixed perimeter`, `smoothing`) the glossary deliberately leaves unspecified |
+| 10 | `G0-CONTRACT.6`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -641,6 +656,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-29` | `G0-CONTRACT.18` (CI verdict, observed after the exceptional push) | `git push origin main`; GitHub Actions runs API for `head_sha=119946b` | `051a075..119946b  main -> main`, ahead `0`; **`rust` completed `success`** (first execution of the new wasm32 smoketest step) and **`doctrines` completed `success`**; `runs: 2`, both concluded |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 | `2026-09-29` | `G0-CONTRACT.13b` | token census over the fixture at `HEAD` vs the working tree; `python3` re-derivation of both waistband readings; `make book`; `make gate` | undeclared tokens `19` → `6`, the six being glossary vocabulary; folded band `10.0` cm vs faced `6.0` cm per piece, so §4 and §6 are different garments (D27); no §4 result changed; `exit=0` both |
+| `2026-09-30` | `G0-CONTRACT.13c` | `python3` re-derivation of all 18 §4 rows and of both waist readings; glossary census; `make book`; `make gate` | `0` mismatches; finished waist `74.0` cm (was `46.0` as written); `waist_closure` `18.5 = 18.5`; dart centre `11.25`; `265 terms / 0 failure(s)`; `exit=0` both |
 | `2026-09-30` | `G0-CONTRACT.4` | feature-matrix census; both probe suites; glossary census; `make book`; `make gate`; `make probes`; containment | `105 rows / 29 diagnostics / 0 failure(s)`; `probes: 10 pass / 0 fail` twice; `265 terms / 8 parts / 0 failure(s)`; `exit=0`, 6 spec pages; `=== all doctrines green ===`; `10 suite(s) green` |
 | `2026-09-30` | `G0-CONTRACT.1` | glossary census; both probe suites; `make book`; `make gate`; `make probes`; `make check`; containment | `239 terms / 8 parts / 138 tokens / 0 failure(s)`; `probes: 10 pass / 0 fail` and `6 pass / 0 fail`; `exit=0`, 9 pages rendered; `=== all doctrines green ===`; `9 suite(s) green` — detail in the checklist |
 
@@ -657,10 +673,17 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.13b` | `STITCHCAD-G0-0013b (leaf G0-CONTRACT.13b): the fixture declares its tokens` | D26 and D28 fixed; D27 logged, owned by `.14`, and recorded in the chapter |
 | `G0-CONTRACT.1` | `STITCHCAD-G0-0001 (leaf G0-CONTRACT.1): the glossary` | 239 terms, 8 parts, one census and two probe suites; D29/D30/D31 fixed by the rollover |
 | `G0-CONTRACT.4` | `STITCHCAD-G0-0004 (leaf G0-CONTRACT.4): the supported envelope` | 105 rows, 29 diagnostics; D32 logged and kept visible by the census |
+| `G0-CONTRACT.13c` | `STITCHCAD-G0-0013c (leaf G0-CONTRACT.13c): the fixture's waist, corrected` | D33 fixed; §4 gains `waist_closure`; the general rule is a layer-C record |
 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-30`: `.13c` landed — the fixture's waist geometry is corrected (D33): the side point moves from
+  `quarter_waist − ss_suppress` (15.5 cm) to `quarter_hip − ss_suppress` (22.5 cm), so the finished waist is
+  the declared 74.0 cm instead of 46.0 cm; both dart centres move 7.75 → 11.25 cm; §4 gains `waist_closure`,
+  the constructed oracle the allocation balance could not be. All 18 derived rows re-derive with 0
+  mismatches, and the rule generalises as
+  `docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md`.
 - `2026-09-30`: `.4` landed — the v1 release claim has a boundary: 105 rows dispositioned
   supported/rejected/deferred, 29 declared diagnostics with their required arguments, and a census that
   derives the coverage of the ontology (16 object clauses cited), of roadmap §1.3 (8 non-goals rejected)

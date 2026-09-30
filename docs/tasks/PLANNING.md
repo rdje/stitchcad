@@ -456,6 +456,26 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   them. This chapter does not invent a commitment on a gate's behalf, so the rows say `unnamed (D32)` and
   the census keeps reporting them until a decision closes it.
 
+- **D33** — the reference fixture's waist geometry was arithmetically wrong, and its own oracle could not
+  see it: §5 step 2 placed the waist side point at `quarter_waist − ss_suppress` = 15.5 cm from CF, while
+  §3's `ss_suppress` = 3.0 cm and §4's allocation balance require `quarter_hip − ss_suppress` = 22.5 cm —
+  the side seam takes its suppression off the **hip** width, not the waist width.
+  - Reproduce: re-derive the finished waist from the drafting steps —
+    `python3 -c "print(4*((98.0+4.0)/4 - 3.0 - 4.0), 4*((74.0+0.0)/4 - 3.0 - 4.0))"` → `74.0 46.0`, the
+    corrected and the as-written garment waists against a declared `waist_girth + ease_waist` = 74.0 cm;
+    and the chapter's own oracle over the same error: `4 × (3.0 + 4.0) = 102.0 − 74.0` → `28.0 = 28.0`,
+    which passes either way.
+  - Impact: a 28.0 cm error in the finished waist of the one garment every G2 golden file, mutation test,
+    offset-pathology case and agent evaluation is built around — and the balance check the chapter
+    described as "the fixture's own invariant" is blind to it, because it closes over *declared* quantities
+    while the error is in a *constructed* point. Frozen as a golden, the error would have become the
+    expected output.
+  - Owner: `G0-CONTRACT.13c` (**fixed** — §5 step 2 and step 3 corrected, the two dart-centre formulas
+    corrected to the span they meant (7.75 → 11.25 cm), §4 gains a `waist_closure` row as a second oracle,
+    §12 makes both checks obligations, §11 records the correction as the superseding record for the sealed
+    `STITCHCAD-G0-0013` entry; all 18 derived rows re-derived with 0 mismatches, and the general rule is
+    promoted to `docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md`).
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a
