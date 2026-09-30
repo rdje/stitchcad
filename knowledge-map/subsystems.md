@@ -16,7 +16,8 @@
   which names the module each future leaf owns. Owner: `G0-CONTRACT.3` (spec), `G1-SLICE.3` (code).
 - `docs/book/src/spec/` — the normative specification (the director-facing contract). Chapters so far:
   the G0 contract overview, the glossary, units & tolerances, the garment ontology, the supported
-  envelope (the feature matrix) and the reference skirt. Owner: the `G0-CONTRACT` leaves.
+  envelope, both instantiation paths, size sets, the standards registry and the reference skirt. Owner:
+  the `G0-CONTRACT` leaves.
 - `docs/book/src/spec/feature-matrix.md` — **the boundary of the release claim.** 105 rows, each
   `supported` / `rejected` / `deferred` with a reason, the gate that proves it and, for every refusal, a
   diagnostic token from the 29 its §10 declares. Coverage of the ontology, of roadmap §1.3's non-goals and

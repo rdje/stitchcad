@@ -47,7 +47,7 @@ Two invariants, both directions:
 - ID: `PLANNING`
   Status: `active`
   Goal: the roadmap is fully represented as registered, resumable task-trees.
-  Children: `PLANNING.1`, `PLANNING.2`, `PLANNING.3`
+  Children: `PLANNING.1` … `PLANNING.5`
 
 - ID: `PLANNING.1`
   Status: `done`
@@ -95,11 +95,24 @@ Two invariants, both directions:
   Verification: recorded below — census `20` governance slices vs `0` product slices at the ruling.
   Commit: `STITCHCAD-PLANNING-0004`
 
+- ID: `PLANNING.5`
+  Status: `pending` (deferred behind product work by `decision_product-work-takes-the-frontier.md`)
+  Goal: close defect **D34** durably — derive the agreement between the layer-B index
+  (`docs/TASK_TREE.md`'s frontier cell and execution-order line) and each tree's own Current Frontier
+  table, so a session that lands a leaf cannot leave the index pointing at the previous one.
+  Acceptance: a census reports, per tree, the leaf the tree marks `**next**` beside the leaf the index
+  names, fails on a disagreement, and handles a closed tree (no `**next**` row) without a false alarm;
+  a RED arm proves it notices a stale index; the instrument is in `TOOLBOX.md` and runs under `make
+  probes`; the index and every tree agree when it is done.
+  Verification: `pending`
+  Commit: `pending`
+
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | all leaves | `done` | this tree is closed: the roadmap is captured, the capture is derived, and the sequencing rule that keeps the frontier on the product is recorded |
+| — | `.1`–`.4` | `done` | the roadmap is captured, the capture is derived, and the sequencing rule that keeps the frontier on the product is recorded |
+| — | `PLANNING.5` | `pending` | derive the index↔tree frontier agreement (D34). Deferred behind `G0-CONTRACT` by the frontier rule: a stale index misdirects a resuming session but destroys no work |
 
 `PLANNING.1`–`.4` are done. The capture claim is derived, not asserted:
 `bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh` →
@@ -476,6 +489,19 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     `STITCHCAD-G0-0013` entry; all 18 derived rows re-derived with 0 mismatches, and the general rule is
     promoted to `docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md`).
 
+- **D34** — the layer-B index reported a stale frontier: `docs/TASK_TREE.md` named `G0-CONTRACT.4` as the
+  tree's next leaf and its execution-order line said "`G0-CONTRACT.4`–`.17`" after `.5` and `.6` had both
+  landed, because `COMMIT.md` updates that file "only if the frontier changes" and nothing derives whether
+  it did. The same file's `PLANNING` children list had also drifted (`.1`, `.2`, `.3` while `.4` was done).
+  - Reproduce: `grep -n 'G0-CONTRACT'\`` docs/TASK_TREE.md against the tree's own marker
+    `grep -n '\*\*next\*\*' docs/tasks/G0-CONTRACT.md` — at the measurement, the index said `.4` and the
+    tree said `.7`.
+  - Impact: the index is the navigation layer a resuming session reads first. A stale frontier sends the
+    next session to a leaf that is already done — the D2 class (layer A misreporting state), one layer down.
+  - Owner: the immediate correction is `G0-CONTRACT.7`'s lockstep (index row and execution-order line
+    fixed in that commit); the durable fix is `PLANNING.5`, which derives the agreement instead of
+    trusting an author to remember a conditional step.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a
@@ -642,6 +668,10 @@ anyway, because the claims this leaf makes are census claims and a census is re-
 
 ## Changelog
 
+- `2026-09-30`: D34 added — the layer-B index reported `G0-CONTRACT.4` as the frontier after `.5` and `.6`
+  had landed, and its own `PLANNING` children list had drifted the same way. The index is corrected by
+  `G0-CONTRACT.7`'s lockstep; `PLANNING.5` is created to derive the agreement durably, deferred behind
+  product work by the frontier rule.
 - `2026-09-29`: `PLANNING.4` landed and this tree closed — the sequencing rule is a layer-C record
   wired into `CLAUDE.md`, D24 is closed, and the repository's frontier moved to `G0-CONTRACT`.
 - `2026-09-29`: Created tree; `PLANNING.1` landed (index repair + three trees + defect log).

@@ -143,15 +143,17 @@ not a contract.
   Commit: `STITCHCAD-G0-0006`
 
 - ID: `G0-CONTRACT.7`
-  Status: `pending`
+  Status: `done`
   Goal: identify the measurement/POM standards the model draws on (ISO 8559, ASTM D5219,
   EN 13402, ASTM D5585) — what each is used for, what is adopted, what is deliberately not,
   and the verification status of every claim about a standard's content.
   Acceptance: each standard has a named role and a claim-verification status
   (read-in-repo / cited-from-roadmap / unverified-with-owner); no clause number or table is
   asserted without a source.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below and in the acceptance checklist — 6 designations registered, all
+  `cited-from-roadmap`, every deferral from three other chapters dispositioned, the census at
+  `0 failure(s)` and its 6 probe arms green, and not one quoted clause anywhere in the book.
+  Commit: `STITCHCAD-G0-0007`
 
 - ID: `G0-CONTRACT.8`
   Status: `pending`
@@ -319,8 +321,9 @@ not a contract.
 | 8 | `G0-CONTRACT.13c` | `done` | the fixture's waist geometry is arithmetically wrong (D33): drafted as written its finished waist is 46.0 cm, not the declared 74.0 cm, and its own oracle cannot see it. `.5` uses this fixture for its divergence example, so the numbers must be right first |
 | 9 | `G0-CONTRACT.5` | `done` | both instantiation paths, the three-part information loss, the `.rul` attributes given StitchCAD semantics, the equivalence contract and the eight extreme-size checks |
 | 10 | `G0-CONTRACT.6` | `done` | size-set ownership decided and recorded; the chapter states the object, the label/order separation, breaks, axes and the five designation systems |
-| 11 | `G0-CONTRACT.7` | `pending` | **next** — the measurement and POM standards: what ISO 8559, ASTM D5219, EN 13402 and ASTM D5585 are each used for, what is adopted, and the verification status of every claim about a standard nobody has read in this repository |
-| 12 | `G0-CONTRACT.8`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
+| 11 | `G0-CONTRACT.7` | `done` | the standards registry: six designations with role, adoption, status and owner; the deferral ledger; and a census that refuses an unregistered citation anywhere in the book |
+| 12 | `G0-CONTRACT.8` | `pending` | **next** — ADR-0001, license × solver as ONE coupled decision: the options, the BSL-1.1 distinction, the consequence for contributors and the re-open condition |
+| 13 | `G0-CONTRACT.9`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -358,6 +361,12 @@ not a contract.
   (`ontology §1, ontology §1.1`, never `ontology §1 and §1.1`), because the census reads citations
   mechanically and a bare `§1.1` after a comma is ambiguous between two documents with overlapping clause
   numbers.
+
+- `2026-09-30`, leaf `.7`: the glossary's derived A–Z index is the reason `glossary.md` grows one line per
+  term (`405` lines now, against a `400`-line per-part health and a `700`-line ceiling). The remedy is
+  already mechanical and is recorded here so it is not rediscovered as a surprise: when the index passes
+  ~500 lines it splits by letter range into two derived halves, because `--emit-index` generates whatever
+  the census compares. Owner: the next leaf that adds a batch of terms.
 
 ## Open Questions
 
@@ -698,6 +707,56 @@ not a contract.
   rule; the glossary grew `5` terms with its index re-derived; `LIVE_STATUS.md`, `MEMORY.md`,
   `CHANGELOG.md` and `docs/TASK_TREE.md` updated in this commit.
 
+### `G0-CONTRACT.7` — the standards registry, and the discipline that keeps a citation honest
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — the G0 exit clause requires the "measurement/POM standards identified
+  (ISO 8559, ASTM D5219, EN 13402, ASTM D5585)" and `git ls-tree --name-only HEAD docs/book/src/spec/` →
+  eight entries, none of them a standards chapter, `rc=0`. Three chapters had already routed their
+  standards claims to it: `ontology.md` §8 ("the standards' texts have not been read in this repository"),
+  `reference-skirt.md` §11 ("the measurement-standards chapter owns reconciling them") and `size-sets.md`
+  §8 — three deferrals to a document that did not exist, which is the shape a claim takes when it is
+  waiting to be asserted by nobody. Meanwhile six designations were already in use across the book with no
+  registry, no status and no owner: `grep -roE 'ISO [0-9]+|ASTM D[0-9]+|EN [0-9]+|AAMA' docs/book/src |
+  wc -l` → `33` occurrences in `9` files.
+- [x] **ADDRESSED (verified)** — `docs/book/src/spec/standards.md` (`204` lines / `13 849` B, widest line
+  `187`) registers all six designations with role, what is adopted, what is deliberately not, a status from
+  the closed three-word vocabulary and a named owner; states the two rules that follow (no clause or table
+  of a standard appears without `read-in-repo` status, and a standard is data with provenance, never
+  authority); gives the four requirements the model places on any standard; dispositions all five
+  deferrals in a ledger; and names the verification plan's real dependency (`.14` names the reviewer,
+  procurement obtains the texts, and until then no claim can become `read-in-repo`). The registry claim is
+  derived: `bash docs/tasks/artifacts/standards/run_standards_census.sh` →
+  `standards census: 6 registered / 6 designations used / 0 failure(s)`, `exit=0`, with a per-designation
+  list of every file that uses it; `bash docs/tasks/artifacts/standards/run_standards_probes.sh` →
+  `probes: 6 pass / 0 fail`, including an arm that smuggles "per ISO 4915" into a chapter and requires the
+  census to name it.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `11 suite(s) green`; `make book` → `exit=0` with `9` spec pages rendered;
+  `bash scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 69 files measured`, `exit=0`, the
+  chapter at `153` lines inside its `400`-line per-part health; the other two censuses still green —
+  `run_glossary_census.sh` → `275 terms / 8 parts / 144 tokens / 0 failure(s)` and
+  `run_feature_matrix_census.sh` → `105 rows / 29 diagnostics / 0 failure(s)`; `make check` unaffected (no
+  Rust touched).
+- [x] **FIX** — wrote the chapter and the census; normalized the registry's first cells to the designations'
+  base forms (`ASTM D6673`, not `ASTM D6673-10`) because the census matches those keys against the whole
+  book; **the containment ceiling refused the first draft** — the six-column registry table had rows of
+  `410` B against a `320` B maxline ceiling and the deferral ledger `398` B, so the registry became four
+  columns plus one bounded subsection per standard, and the ledger became bounded prose entries, exactly
+  the remedy `G0-CONTRACT.2` recorded when the same ceiling caught its tolerance table; taught S3 to read a status token that carries its source in parentheses, which the first cut
+  rejected as an invented status; fixed a `grep -c … || printf 0` that printed `0⏎0` — the same trap
+  DEV_NOTES recorded on 2026-09-04, caught here by its own output.
+- [x] **The glossary census caught two prose spans wearing token formatting before the chapter shipped** —
+  `` `blocked` `` (a task-tree status, not a product identifier) and `` `AAMA` `` inside a sentence
+  describing the census's match shapes. C1 reported both as machine tokens nothing declared
+  (`2 failure(s)`), and the fix was to de-tokenize the prose rather than to exempt it: the convention says a
+  backticked span is an identifier a program reads, and these were not. That is the third time the token
+  census has corrected a chapter at authoring time rather than in review, which is the evidence that the
+  convention is load-bearing rather than decorative.
+- [x] **LOCKSTEP** — `SUMMARY.md` and `spec/index.md` link the chapter; `docs/TASK_TREE.md`'s frontier cell
+  and execution-order line are corrected (the immediate half of D34, whose durable half is `PLANNING.5`);
+  `TOOLBOX.md` gains the standards census and its probe suite; `knowledge-map/subsystems.md` lists the
+  chapter; `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and this tree updated in this commit.
+
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and `.18` (the code leaf) additionally fills a `### G0-CONTRACT.18` checklist
 subsection with real tool output in the same commit as the change. This tree file carries no
@@ -717,6 +776,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-29` | `G0-CONTRACT.18` (CI verdict, observed after the exceptional push) | `git push origin main`; GitHub Actions runs API for `head_sha=119946b` | `051a075..119946b  main -> main`, ahead `0`; **`rust` completed `success`** (first execution of the new wasm32 smoketest step) and **`doctrines` completed `success`**; `runs: 2`, both concluded |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
 | `2026-09-29` | `G0-CONTRACT.13b` | token census over the fixture at `HEAD` vs the working tree; `python3` re-derivation of both waistband readings; `make book`; `make gate` | undeclared tokens `19` → `6`, the six being glossary vocabulary; folded band `10.0` cm vs faced `6.0` cm per piece, so §4 and §6 are different garments (D27); no §4 result changed; `exit=0` both |
+| `2026-09-30` | `G0-CONTRACT.7` | standards census and its probes; glossary and matrix censuses; `make book`; `make gate`; `make probes`; containment | `6 registered / 6 designations used / 0 failure(s)`; `probes: 6 pass / 0 fail`; `275 terms / 0 failure(s)` after two prose spans were de-tokenized; `105 rows / 0 failure(s)`; `exit=0`, 9 spec pages; chapter `204` lines / `13 849` B, widest `187` |
 | `2026-09-30` | `G0-CONTRACT.6` | glossary, feature-matrix (now with M7 link resolution) and matrix probe suites; `make book`; `make gate`; containment | `275 terms / 8 parts / 0 failure(s)`; `105 rows / 29 diagnostics / 0 failure(s)`; `probes: 11 pass / 0 fail`; `exit=0` with 8 spec pages; chapter `187` lines / `12 812` B |
 | `2026-09-30` | `G0-CONTRACT.5` | `python3` re-derivation of the graded fixture (15 quantities, both routes); glossary and feature-matrix censuses; `make book`; `make gate`; containment | side-seam length `43.104524` cm by both paths, difference `0.00e+00`; graded `waist_closure` `19.500 = 19.500`; `270 terms / 0 failure(s)`; `105 rows / 0 failure(s)`; `exit=0`, 7 spec pages; chapter `254` lines / `19 496` B |
 | `2026-09-30` | `G0-CONTRACT.13c` | `python3` re-derivation of all 18 §4 rows and of both waist readings; glossary census; `make book`; `make gate` | `0` mismatches; finished waist `74.0` cm (was `46.0` as written); `waist_closure` `18.5 = 18.5`; dart centre `11.25`; `265 terms / 0 failure(s)`; `exit=0` both |
@@ -739,10 +799,18 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.13c` | `STITCHCAD-G0-0013c (leaf G0-CONTRACT.13c): the fixture's waist, corrected` | D33 fixed; §4 gains `waist_closure`; the general rule is a layer-C record |
 | `G0-CONTRACT.5` | `STITCHCAD-G0-0005 (leaf G0-CONTRACT.5): both instantiation paths` | the loss stated in three parts; the fixture grades exactly, and the chapter says why that proves nothing general |
 | `G0-CONTRACT.6` | `STITCHCAD-G0-0006 (leaf G0-CONTRACT.6): size-set ownership decided` | a layer-C record plus the chapter; quantities stay out of the size set |
+| `G0-CONTRACT.7` | `STITCHCAD-G0-0007 (leaf G0-CONTRACT.7): the standards registry` | six designations, all `cited-from-roadmap`; no quoted clause anywhere in the book |
 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-30`: `.7` landed — the standards registry exists: six designations (ISO 8559, ASTM D5219,
+  EN 13402, ASTM D5585, ASTM D6673, AAMA) each with its role, what is adopted, what is not, a status from
+  the closed vocabulary and a named owner. All six are `cited-from-roadmap`, so the book quotes no clause
+  of any standard — which is the rule, not a gap. The five deferrals from the ontology, the fixture, the
+  size-sets chapter, the glossary and the matrix are dispositioned in a ledger, the verification plan names
+  its procurement dependency, and `run_standards_census.sh` refuses any future chapter that cites a
+  standard the registry does not carry.
 - `2026-09-30`: `.6` landed — roadmap §3.4's open question is closed: a `SizeSet` is its own object,
   referenced by the `Design` at a revision, overridable per Factory Profile through a recorded
   transformation that produces a *resolved* set, and carrying no quantities (those are order data, §7.5).

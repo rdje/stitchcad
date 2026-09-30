@@ -16,13 +16,13 @@
 - **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs, versioned
   evidence-bearing Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.2, DRAFT
   until G0 exits.
-- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.7`. Done: `.1` glossary (275 terms),
-  `.2` units, `.3` ontology, `.4` envelope (105 rows), `.5` instantiation paths, `.6` size sets,
+- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.8`. Done: `.1`–`.7` (glossary 275 terms,
+  units, ontology, envelope 105 rows, instantiation paths, size sets, standards registry),
   `.13`/`.13b`/`.13c` fixture, `.18` `sc-units` + `sc-core` + G0 CI.
-- **Next action:** `.7`, the measurement standards — `docs/book/src/spec/standards.md`: what ISO 8559,
-  ASTM D5219, EN 13402 and ASTM D5585 are each used for here, what is adopted and what is not, and a
-  verification status per claim (`read-in-repo` / `cited-from-roadmap` / `unverified-with-owner`). No
-  clause or table is asserted without a source. Commit `STITCHCAD-G0-0007`.
+- **Next action:** `.8`, ADR-0001 — one layer-C record coupling license and solver: permissive core,
+  `slvs`/GPLv3 rejected, `sc-sketch` on a custom or least-squares kernel, the BSL-1.1 distinction, what it
+  costs contributors, and the re-open condition (a strong case from the G1 spike). Commit
+  `STITCHCAD-G0-0008`.
 
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
