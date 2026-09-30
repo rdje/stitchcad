@@ -347,6 +347,74 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   template blanks — a data-loss path wired into the maintenance instructions
 - Owner: `SPINE.9` (**fixed** — two declared classes, backup + skip, dirty-tree refusal, `--dry-run`;
   `probes: 7 pass / 0 fail`)
+- **D26** — the reference fixture used machine tokens that nothing declared: `docs/book/src/spec/reference-skirt.md`
+  named its 17 derived values in prose ("quarter hip", "front dart centre") while §5's recipe and §4's
+  own formulas referred to them as tokens (`quarter_hip`, `front_dart_centre`), and four allowance/ease
+  tokens (`ease_waist`, `ease_hip`, `sa_cb`, `sa_waist`, `sa_wb_bottom`) appeared in formulas with no
+  declaring table at all.
+  - Reproduce (before the fix): the tokens the chapter used, against the tokens its tables declared —
+
+    ```bash
+    grep -oE '`[^`]+`' docs/book/src/spec/reference-skirt.md | tr -d '`' \
+      | grep -oE '[a-z][a-z0-9]*(_[a-z0-9]+)+' | sort -u
+    ```
+
+    → `front_dart_centre`, `quarter_hip` and four allowance/ease tokens used by §4 and §5, with no table
+    declaring them. From `G0-CONTRACT.1` onward the same population is derived by a tracked census
+    rather than eyeballed, and it reports `unaccounted: 0` over the whole specification set.
+  - Impact: a token nobody declares has no defined meaning, so the fixture G2 freezes as a golden would
+    carry names whose referent a reader has to guess, and no instrument could tell a typo from a value.
+  - Owner: `G0-CONTRACT.13b` (**fixed** — §2's ease table, §4's derived table and §7's allowance table
+    now lead with the token, §4's formulas are written over tokens only, and the census enforces it).
+
+- **D27** — the reference fixture's waistband is two different garments at once: §4's
+  `waistband_cut_width = 2 × wb_width + sa_waist + sa_wb_bottom = 10.0 cm` is the cut width of ONE band
+  folded lengthwise, while §6's piece list carries `waistband_outer`, `waistband_inner` and
+  `waistband_interfacing` — a faced two-piece band whose pieces would each be cut at 6.0 cm — and §8's
+  `waist` span sews only the outer band, so the inner band has no span and §12's count of 6 pieces is
+  the faced reading's.
+  - Reproduce: `python3 -c "print(2*4.0+1.0+1.0, 4.0+1.0+1.0)"` → `10.0 6.0`, the folded and faced cut
+    widths; `grep -c 'waistband' docs/book/src/spec/reference-skirt.md` → the piece list, the span table
+    and the formula disagree about how many bands exist.
+  - Impact: the fixture is the subject of every G2 golden, mutation, offset and agent test. Freezing it
+    with an unresolved construction freezes a contradiction into the conformance corpus, and the piece
+    count (6) is an asserted package-completeness expectation.
+  - Owner: `G0-CONTRACT.14` — choosing between a folded band and a faced band is a domain decision, and
+    `.14` already owns naming the sewing expert who reviews the fixture's `assumed` constants.
+    `G0-CONTRACT.13b` recorded the contradiction **in the chapter** (§6 and §11) so no reader and no
+    golden can take a waistband number as settled while it is open.
+
+- **D28** — the fixture's recipe step 7 sent the reader to the wrong clause: "**allowances** (§6)" where
+  allowances are §7 and §6 is the piece list.
+  - Reproduce (before the fix): `grep -n 'allowances\*\* (§6)' docs/book/src/spec/reference-skirt.md` → `1`.
+  - Impact: small, but it is the class a reader cannot detect — a confident cross-reference to the wrong
+    clause, in the chapter the conformance corpus is built from.
+  - Owner: `G0-CONTRACT.13b` (**fixed** — §5 step 7 now cites §7; the glossary census's R1 rule resolves
+    every canonical-object reference in the glossary against real headings, which is the same class
+    instrumented rather than eyeballed).
+
+- **D29** — `CHANGELOG.md`'s live window is not in the newest-first order its own header declares: three
+  entries (`G0-0002`, `PLANNING-0004`, `PLANNING-0003`) sit above six that are newer than they are.
+  - Reproduce: compare the two orders —
+    `git log --format='%s' | grep -oE 'STITCHCAD-[A-Z0-9]+-[0-9]+[a-c]?'` against
+    `grep -oE '^## STITCHCAD-[A-Z0-9]+-[0-9]+[a-c]?' CHANGELOG.md`; they disagree from the first row.
+  - Impact: a reader takes the top entry for the latest slice, and the rollover rule ("seal the oldest")
+    would seal the WRONG end — the ordering defect turns into a data-placement defect the first time the
+    window crosses its health target, which the next append does.
+  - Owner: `G0-CONTRACT.1` — the append that crosses the rollover milestone performs the rollover, and a
+    rollover over a misordered window cannot be correct, so the reorder lands in the same commit.
+
+- **D30** — the sealed archive's descriptor and the live pointer both misstate what part1 holds: each says
+  coverage runs "from `STITCHCAD-PLANNING-0001` through `STITCHCAD-SPINE-0004c`", but part1's newest entry
+  is `SPINE-0004b` and `SPINE-0004c` is still in the live window.
+  - Reproduce: `grep -c 'STITCHCAD-SPINE-0004c' docs/history/stitchcad-changelog-part1.md` → `0` (the id
+    appears only in its coverage line), while `grep -n '^## STITCHCAD-SPINE-0004c' CHANGELOG.md` → `324`.
+  - Impact: a reader who follows the pointer for slice `0004c` searches an immutable segment that does not
+    contain it, and the "slices 1–15" count overlaps the live window by one.
+  - Owner: `G0-CONTRACT.1` — sealed segments are immutable, so the correction is a superseding record: the
+    live pointer is corrected to part1's true coverage and part2's descriptor states what part1 actually
+    holds. Editing the sealed header is the one fix this doctrine forbids.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

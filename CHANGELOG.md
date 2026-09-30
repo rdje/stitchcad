@@ -11,6 +11,35 @@ are sealed in [`docs/history/stitchcad-changelog-part1.md`](docs/history/stitchc
 — 365 lines, 30452 bytes, `sha256:f4aec75ac7dd1fa5…`, immutable. The live window below holds the most
 recent entries; when it passes its health target again, the oldest are sealed the same way.
 
+## STITCHCAD-G0-0013b — the reference fixture declares its own tokens (leaf `G0-CONTRACT.13b`)
+
+**Found by building the glossary's token census, not by reading.** The fixture every G2 golden, mutation
+suite and agent gate will be frozen over used **19 machine tokens that no table declared** — and forcing
+each one to a declaration exposed a contradiction in the garment itself.
+
+- **D26, fixed.** §4 named its 17 derived values in prose ("quarter hip", "front dart centre") while §5's
+  recipe and §4's own formulas referred to them as `quarter_hip` and `front_dart_centre`; `ease_waist`,
+  `ease_hip`, `sa_cb`, `sa_waist` and `sa_wb_bottom` appeared inside formulas with no declaring table at
+  all. All three tables now lead with a **Token** column, §7 declares `sa_side`/`sa_cb`/`sa_waist`/
+  `sa_hem`/`sa_wb_bottom`, and §4's formulas are written over tokens only — no prose word survives inside
+  one, which is what makes them machine-checkable. Measured: tokens used-and-undeclared `19` → `6`, and
+  the six remaining are glossary vocabulary (`SeamAllowance`, `assumed`, `close`, `known`, `semi`, `walk`),
+  not fixture names. **No derived value changed**: `allocation_balance` still closes `28.0 = 28.0`.
+- **D27, logged and owned, not guessed at.** §4's `waistband_cut_width = 2 × wb_width + sa_waist +
+  sa_wb_bottom = 10.0 cm` is the cut width of ONE band folded lengthwise; §6's piece list carries
+  `waistband_outer`, `waistband_inner` **and** `waistband_interfacing` — a faced two-piece band whose
+  pieces would each be cut at `4.0 + 1.0 + 1.0 = 6.0 cm` (`python3 -c "print(2*4.0+1.0+1.0, 4.0+1.0+1.0)"`
+  → `10.0 6.0`). §8 compounds it: the `waist` span sews only the outer band, so the inner band has no span
+  and §12's count of 6 pieces is the faced reading's. Both are real skirt constructions and they are
+  different garments, so choosing is a domain decision: **`G0-CONTRACT.14`** owns it, with the expert it
+  names. The contradiction is now recorded in the chapter (§6 and §11) with both readings and their
+  arithmetic, so no reader and no golden can take a waistband number as settled while it is open.
+- **D28, fixed.** §5 step 7 sent the reader to "allowances (§6)"; allowances are §7 and §6 is the piece
+  list. `G0-CONTRACT.1`'s glossary census carries an `R1` rule that resolves every canonical-object
+  reference against real headings, which is that class instrumented rather than eyeballed.
+- Validation: `make book` → `exit=0`; `make gate` → `=== all doctrines green ===`; the token census over
+  the fixture at `HEAD` against the working tree → the numbers above.
+
 ## STITCHCAD-G0-0002 — the numerical contract is normative (leaf `G0-CONTRACT.2`)
 
 **The first product deliverable.** `docs/book/src/spec/units-and-tolerances.md` (291 lines, widest line

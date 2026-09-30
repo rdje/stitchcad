@@ -211,6 +211,19 @@ not a contract.
   book builds, gates green.
   Commit: `STITCHCAD-G0-0013`
 
+- ID: `G0-CONTRACT.13b`
+  Status: `done`
+  Goal: declare every machine token the reference fixture uses (defect **D26**), and record the
+  waistband contradiction the token census found in `.13` (defect **D27**), so the chapter a G2 golden
+  will be frozen over carries no undeclared name and no silently disputed number.
+  Acceptance: every snake_case token in the chapter is declared by a table whose first cell names it;
+  no derived value changes; the contradiction is stated in the chapter with both readings, their
+  arithmetic, and the leaf that owns choosing between them; `G0-CONTRACT.1`'s census reports the
+  chapter clean.
+  Verification: recorded below — tokens used-and-undeclared went `19` → `6`, and the six left are
+  glossary vocabulary, not fixture names; every §4 result is unchanged; the book builds.
+  Commit: `STITCHCAD-G0-0013b`
+
 - ID: `G0-CONTRACT.14`
   Status: `blocked` (director input: named humans)
   Goal: draft the governance model (§12) — sewist-vs-programmer review paths, domain review of
@@ -279,8 +292,9 @@ not a contract.
 | 2 | `G0-CONTRACT.18` | `done` | `sc-units` implements `.2`; the G0 CI workflow builds both crates for WASM |
 | 3 | `G0-CONTRACT.3` | `done` | the ontology now exists, so `.4`, `.5` and `.13` have objects to refer to |
 | 4 | `G0-CONTRACT.13` | `done` | the fixture now gives every later chapter a concrete garment to be checked against |
-| 5 | `G0-CONTRACT.1` | `pending` | **next** — the glossary, so every term the three written chapters use has one meaning |
-| 5 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | remaining G0 chapters, in the order the frontier table below records |
+| 5 | `G0-CONTRACT.13b` | `done` | the fixture's undeclared tokens (D26) and its disputed waistband (D27), found while building `.1`'s census; the glossary's coverage rule cannot pass over a chapter that uses names it never declares |
+| 6 | `G0-CONTRACT.1` | `pending` | **next** — the glossary, so every term the three written chapters use has one meaning |
+| 7 | `G0-CONTRACT.4`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -472,6 +486,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-29` | `G0-CONTRACT.13` | arithmetic re-derivation incl. the allocation balance; `wc -lc` + per-line max; `make book`; `check_live_doc_size.sh`; `make gate` | balance `28.0 = 28.0`; `245`/`14538`/maxline `118`; `exit=0`; `OK — 17 surfaces, 15 routes, 51 files`; all green |
 | `2026-09-29` | `G0-CONTRACT.18` (CI verdict, observed after the exceptional push) | `git push origin main`; GitHub Actions runs API for `head_sha=119946b` | `051a075..119946b  main -> main`, ahead `0`; **`rust` completed `success`** (first execution of the new wasm32 smoketest step) and **`doctrines` completed `success`**; `runs: 2`, both concluded |
 | `2026-09-29` | coverage gaps closed | roadmap clause census (§4.3, §4.4, §7.3, §7.6) | 3 clauses were unowned → `.16`, `.17`, `.18` |
+| `2026-09-29` | `G0-CONTRACT.13b` | token census over the fixture at `HEAD` vs the working tree; `python3` re-derivation of both waistband readings; `make book`; `make gate` | undeclared tokens `19` → `6`, the six being glossary vocabulary; folded band `10.0` cm vs faced `6.0` cm per piece, so §4 and §6 are different garments (D27); no §4 result changed; `exit=0` both |
 
 ## Commit Log
 
@@ -483,10 +498,15 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.18` | `STITCHCAD-G0-0018 (leaf G0-CONTRACT.18): the first product code` | `sc-units` implements `.2`; `sc-core` skeleton; G0 CI + WASM smoketest; D10 closed |
 | `G0-CONTRACT.3` | `STITCHCAD-G0-0003 (leaf G0-CONTRACT.3): the garment ontology` | 12 object families, the identity contract, 7 test obligations |
 | `G0-CONTRACT.13` | `STITCHCAD-G0-0013 (leaf G0-CONTRACT.13): the reference skirt, to the millimetre` | 17 derived values with formulas; 5 constants flagged `assumed` pending review |
+| `G0-CONTRACT.13b` | `STITCHCAD-G0-0013b (leaf G0-CONTRACT.13b): the fixture declares its tokens` | D26 and D28 fixed; D27 logged, owned by `.14`, and recorded in the chapter |
 | `G0-CONTRACT.1`, `.4`–`.12`, `.14`–`.17` | `pending` | — |
 
 ## Changelog
 
+- `2026-09-29`: `.13b` landed — the reference fixture now declares every machine token it uses
+  (D26: `19` used-and-undeclared → `6`, all of them glossary vocabulary), its formulas are written over
+  tokens only, and the waistband contradiction the token census exposed is recorded in the chapter as
+  D27 with `.14`'s domain review as its owner (D28, a wrong clause cross-reference, fixed on the way).
 - `2026-09-29`: `.13` landed — the reference skirt is fully specified with numbers, its allocation
   balance closes exactly, and its 8 unreviewed constants are explicitly `assumed` with an owner named
   for the review.

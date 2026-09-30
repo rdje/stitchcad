@@ -14,8 +14,8 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Roadmap → task-trees (`PLANNING`) | Done | All 10 roadmap lanes owned: 13 trees, 142 leaves, derived by `run_tree_coverage_census.sh` |
 | Repo identity & policy (`SPINE`) | In Progress | 17 of 20 leaves done; containment, the acceptance gates and the push cadence are enforced and derived. Remaining `.5`/`.13`/`.15` block no product work |
 | Adopted policy set | Done | README policy, claim verification and the containment doctrine are in-repo, with containment **enforced** by the `LIVE-DOC-SIZE` project doctrine |
-| Defect census | In Progress | 24 logged, 21 closed. Open: D7/D9 (`SPINE.5`), D10 (closed early — verify at `G1-SLICE.1`), D22 (`SPINE.15`) |
-| G0 — product & semantic contract | In Progress | **Active lane.** `.2`, `.3`, `.13`, `.18` done: numerical contract, ontology and reference skirt specified; `sc-units` implemented. Next `.1` glossary |
+| Defect census | In Progress | 27 logged, 23 closed. Open: D7/D9 (`SPINE.5`), D22 (`SPINE.15`), D27 (`G0-CONTRACT.14`), D10 (verify at `G1-SLICE.1`) |
+| G0 — product & semantic contract | In Progress | **Active lane.** `.2`, `.3`, `.13`, `.13b`, `.18` done: contract, ontology, fixture (tokens declared, waistband disputed → D27). Next `.1` glossary |
 | G1 — executable architecture slice | Not Started | 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, spikes |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |

@@ -46,10 +46,10 @@ any size standard (see §11).
 
 Ease, per point of measure (§2.2 of the ontology):
 
-| POM | Body | Ease | Fit intent | Garment |
-| --- | --- | --- | --- | --- |
-| waist | 74.0 cm | 0.0 cm | `close` | 74.0 cm |
-| hip | 98.0 cm | 4.0 cm | `semi` | 102.0 cm |
+| Ease token | POM | Body | Ease | Fit intent | Garment |
+| --- | --- | --- | --- | --- | --- |
+| `ease_waist` | waist | 74.0 cm | 0.0 cm | `close` | 74.0 cm |
+| `ease_hip` | hip | 98.0 cm | 4.0 cm | `semi` | 102.0 cm |
 
 The waist carries no ease because the closure is a zipper plus a hook-and-bar waistband; the hip carries
 4 cm, the conventional minimum for a woven A-line that must clear the seat when sitting.
@@ -74,28 +74,34 @@ choice of which named system ships as reference blocks is ADR-0003's.
 
 ## 4. Derived values (each with its formula)
 
-| Value | Formula | Result |
-| --- | --- | --- |
-| garment waist | `waist_girth + ease_waist` | 74.0 cm |
-| garment hip | `hip_girth + ease_hip` | 102.0 cm |
-| quarter waist | `garment_waist / 4` | 18.5 cm |
-| quarter hip | `garment_hip / 4` | 25.5 cm |
-| suppression per quadrant | `quarter_hip − quarter_waist` | 7.0 cm |
-| dart intake | `suppression − ss_suppress` | 4.0 cm |
-| balance check | `4 quadrants × (ss_suppress + dart_intake)` = `garment_hip − garment_waist` | 28.0 cm = 28.0 cm |
-| side-seam total | `2 side seams × 2 quadrants × ss_suppress` | 12.0 cm |
-| dart total | `4 darts × dart_intake` | 16.0 cm |
-| front dart centre | `(quarter_waist − ss_suppress) / 2` from CF | 7.75 cm |
-| back dart centre | `(quarter_waist − ss_suppress) / 2` from CB | 7.75 cm |
-| quarter hem width | `quarter_hip + a_line_flare` | 28.5 cm |
-| garment hem | `4 × quarter_hem_width` | 114.0 cm |
-| hip-to-hem drop | `waist_to_hem − waist_to_hip` | 42.0 cm |
-| side-seam length hip→hem | `√(drop² + flare²)` | 42.107 cm |
-| waistband pattern length | `garment_waist + 2 × sa_cb + wb_extension` | 80.0 cm |
-| waistband cut width | `2 × wb_width + sa_waist + sa_wb_bottom` | 10.0 cm |
+Every derived value carries the **token** the recipe refers to it by, so a formula in this chapter or in
+code never names something this table has not declared. Formulas are written over tokens only: no prose
+word appears inside one, which is what makes them checkable by machine.
 
-The balance check is the fixture's own invariant: waist suppression must be fully allocated. If a future
-edit changes a measurement and the check no longer balances, the recipe is wrong, not the check.
+| Token | Value | Formula | Result |
+| --- | --- | --- | --- |
+| `garment_waist` | garment waist | `waist_girth + ease_waist` | 74.0 cm |
+| `garment_hip` | garment hip | `hip_girth + ease_hip` | 102.0 cm |
+| `quarter_waist` | quarter waist | `garment_waist / 4` | 18.5 cm |
+| `quarter_hip` | quarter hip | `garment_hip / 4` | 25.5 cm |
+| `suppression` | waist suppression per quadrant | `quarter_hip − quarter_waist` | 7.0 cm |
+| `dart_intake` | waist dart intake per quadrant | `suppression − ss_suppress` | 4.0 cm |
+| `allocation_balance` | the balance check (§4.1) | `4 × (ss_suppress + dart_intake)` = `garment_hip − garment_waist` | 28.0 cm = 28.0 cm |
+| `side_seam_total` | side-seam intake, 2 seams × 2 quadrants | `4 × ss_suppress` | 12.0 cm |
+| `dart_total` | dart intake, 4 darts | `4 × dart_intake` | 16.0 cm |
+| `front_dart_centre` | front dart centre, from CF | `(quarter_waist − ss_suppress) / 2` | 7.75 cm |
+| `back_dart_centre` | back dart centre, from CB | `(quarter_waist − ss_suppress) / 2` | 7.75 cm |
+| `quarter_hem_width` | quarter hem width | `quarter_hip + a_line_flare` | 28.5 cm |
+| `garment_hem` | garment hem circumference | `4 × quarter_hem_width` | 114.0 cm |
+| `hip_to_hem_drop` | hip-to-hem drop | `waist_to_hem − waist_to_hip` | 42.0 cm |
+| `side_seam_length` | side-seam length, hip to hem | `√(hip_to_hem_drop² + a_line_flare²)` | 42.107 cm |
+| `waistband_pattern_length` | waistband pattern length | `garment_waist + 2 × sa_cb + wb_extension` | 80.0 cm |
+| `waistband_cut_width` | waistband cut width — **disputed, see §11** | `2 × wb_width + sa_waist + sa_wb_bottom` | 10.0 cm |
+
+### 4.1 The balance check
+
+`allocation_balance` is the fixture's own invariant: waist suppression must be fully allocated. If a
+future edit changes a measurement and the check no longer balances, the recipe is wrong, not the check.
 
 ## 5. Drafting recipe
 
@@ -118,7 +124,7 @@ internal unit; the centimetre values above are their display form.
    it is the shaped waist curve of step 2.
 6. **Hem line.** Straight, perpendicular to CF/CB. Because the side seam flares, the hem corner is
    squared to the grain, not to the seam.
-7. **Notches** (§7), **grainlines** (§7), then **allowances** (§6) as derived offsets.
+7. **Notches** (§7), **grainlines** (§7), then **allowances** (§7) as derived offsets.
 8. **Waistband.** A rectangle of `waistband_pattern_length × waistband_cut_width`, with the CB seam
    positions marked, the hook-and-bar extension marked beyond the left CB, and a notch at each CB and
    at the quarter points so the band can be matched to the skirt.
@@ -142,18 +148,27 @@ geometry on any platform, byte-identically after canonicalization.
 Total cut pieces: 6. Printed label data per piece is complete without consulting anything else: piece
 name, size, cut quantity, L/R where paired, "place on fold" for the front, fabric and colorway.
 
+The three waistband rows are one of the two readings of a band this chapter has not settled: §4's cut
+width describes a single band folded lengthwise, this list describes a faced two-piece band. Defect
+**D27** and §11 own the choice; until it is made, this list and the count of 6 are provisional.
+
 ## 7. Seam allowances, notches, grainlines
 
 **Allowances** — a `SeamAllowance` is attached per edge, with its corner treatment and its inclusion
 policy (§4.4 of the ontology):
 
-| Edge | Width | Corner treatment | Policy |
-| --- | --- | --- | --- |
-| side seams | 1.0 cm | miter | profile-resolved |
-| CB seam | 1.5 cm | trim | profile-resolved |
-| waist edge | 1.0 cm | trim | profile-resolved |
-| hem | 3.0 cm | envelope | profile-resolved |
-| CF (front) | none — fold | — | not an allowance |
+The token column is what §4's formulas refer to these widths by. `sa_wb_bottom` is declared here because
+`waistband_cut_width` uses it; its width is the one §4's published arithmetic already requires, and it is
+as disputed as the band it belongs to (§11).
+
+| Token | Edge | Width | Corner treatment | Policy |
+| --- | --- | --- | --- | --- |
+| `sa_side` | side seams | 1.0 cm | miter | profile-resolved |
+| `sa_cb` | CB seam | 1.5 cm | trim | profile-resolved |
+| `sa_waist` | waist edge | 1.0 cm | trim | profile-resolved |
+| `sa_hem` | hem | 3.0 cm | envelope | profile-resolved |
+| `sa_wb_bottom` | waistband lower edge | 1.0 cm | trim | profile-resolved |
+| — | CF (front) | none — fold | — | not an allowance |
 
 "Included in contour" versus "generated downstream" is a **Factory Profile** parameter, and this
 fixture is the one that exercises both: the same design exports with allowances included for one
@@ -217,12 +232,25 @@ notions list matches the geometry.
   base chosen for this repository, not copied from a size standard. The measurement-standards chapter
   owns reconciling them with the ISO 8559 / ASTM D5585 landmarks.
 - **Every §4 derived value** — *exact arithmetic* from §2 and §3, re-derivable by the formula shown
-  beside it; the balance check in §4 is the internal oracle.
+  beside it; the balance check in §4.1 is the internal oracle. The exception is `waistband_cut_width`,
+  whose construction is disputed (below).
 - **`ss_suppress`, `dart_intake`, `dart_len_front`, `dart_len_back`, `a_line_flare`** — *declared
   drafting constants requiring domain review*. A sewing expert should confirm them before the fixture
   is frozen as a golden at G2; until then they are `assumed`, not `known`, and this chapter says so.
 - **Zipper length, waistband width and extension** — *declared constants* at common industry values,
   with the same review status.
+- **The waistband is internally inconsistent, and no waistband number here is a fact yet (defect
+  D27).** §4's `waistband_cut_width = 2 × wb_width + sa_waist + sa_wb_bottom = 10.0 cm` is the cut
+  width of ONE band folded lengthwise, finished 4.0 cm with 1.0 cm turned at each raw edge. §6's piece
+  list instead carries `waistband_outer`, `waistband_inner` **and** `waistband_interfacing` — a faced
+  two-piece band, whose pieces would each be cut at `wb_width + sa_waist + sa_wb_bottom = 6.0 cm`, and
+  §6 also lists the outer band's material as "shell + interfacing" while a separate interfacing piece
+  exists. §8 compounds it: the `waist` span sews only the outer band's lower edge, so the inner band
+  has no span at all and the piece count of 6 in §12 is the faced reading's. Both readings are real
+  skirt constructions; they are **different garments**, and a fixture may only be one. Choosing is a
+  domain decision, so it belongs to the review `G0-CONTRACT.14` names the expert for, and until it is
+  made the affected numbers — `waistband_cut_width`, the §6 piece list and count, and the §8 `waist`
+  span — are provisional. A G2 golden must not be frozen over them.
 
 The distinction matters: an `assumed` constant is exportable with its assumption recorded, but it is not
 evidence, and a golden file frozen over an unreviewed assumption freezes a guess. `G0-CONTRACT.14`
@@ -231,7 +259,7 @@ evidence, and a golden file frozen over an unreviewed assumption freezes a guess
 ## 12. Test obligations
 
 - Drafting the fixture through the CLI twice produces byte-identical canonical output (G2 replay).
-- The §4 balance check holds after any measurement change, or the recipe reports the imbalance.
+- The §4.1 balance check holds after any measurement change, or the recipe reports the imbalance.
 - Dart intake is conserved: closing each dart removes exactly 4.0 cm from its waist edge, within the
   numerical tolerance class.
 - Every `walk` on this fixture reports a differential within the numerical class, because all spans
