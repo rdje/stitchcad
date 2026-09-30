@@ -492,3 +492,85 @@ Order is landing order, oldest first, so this file reads the same way the tree's
   `CHANGELOG.md` and `DEV_NOTES.md` updated in this commit. Lesson promotion: **promoted** — the new
   record carries an `answers:` line, which is what `LESSON-PROMOTION` asks for.
 
+### `G0-CONTRACT.4b` — every envelope feature has a gate that proves it, and the proposal says so
+
+- [x] **REPRODUCE / ISSUE** — defect D32: five rows of the envelope matrix named no gate. Measured over the
+  chapter as committed, in a synthetic root built from `HEAD`:
+  `git archive HEAD docs/book/src ROADMAP.md | tar -x -C target/scratch/before4b &&
+  FEATURE_MATRIX_ROOT=$PWD/target/scratch/before4b bash
+  docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` → the A1 advisory lists `classic collar`,
+  `trousers`, `button and buttonhole`, `fly construction`, `pocket` and prints `D32 rows: 5`, with the census
+  itself `exit=0` — an advisory, so the gate was green the whole time the envelope was unprovable. That is
+  the shape A1 exists for, and it is why the count and not the exit code is the evidence.
+- [x] **ROOT CAUSE (WHY + WHERE)** — roadmap §3.2 puts a collar and trousers inside the envelope and ontology
+  §4.7 models buttons and pockets, while §11's exit criteria name none of them:
+  `sed -n '702,708p' ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'` → `0`, `rc=1` (G3's exit
+  bullet). The whole-section range is *not* the measurement, and re-deriving it proved that the hard way:
+  `sed -n '/### G3 /,/### G4 /p' ROADMAP.md | grep -ci 'collar\|trousers\|button\|pocket'` → `1`, `rc=0`,
+  the one match being G3's complexity note "a shirt/trousers intermediate may be inserted without shame" —
+  permission, not a criterion. D32's entry cited `0` for that command, so the citation did not reproduce
+  (**D41**, logged and fixed here); two candidate causes were measured rather than guessed — the pattern
+  without `trousers` → `0`, and the exit-bullet range → `0` — so the conclusion was right and the recorded
+  range was wrong. The trap generalises and `G0-CONTRACT.15` inherits it: a section range silently includes
+  that section's notes, so "no exit criterion mentions X" must be measured over the criteria.
+- [x] **ADDRESSED (verified)** — every row names a gate and the census derives the state:
+  `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` →
+  `feature-matrix census: 105 rows / 29 diagnostics / 0 failure(s)`, `exit=0`, with `A1 … D32 rows: 0`
+  (was `5`) and the new `A3` advisory listing all four proposed cells — `classic collar → G3 (proposed §11
+  amendment)`, `trousers → G3 (proposed §11 amendment)`, `button and buttonhole → G3 (proposed §11
+  amendment); G5 notions`, `pocket → G3 (proposed §11 amendment)` — and printing `proposed cells: 4`.
+  `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_probes.sh` → `probes: 12 pass / 0 fail`,
+  `exit=0`, the new `PROPOSAL-VISIBLE` arm reporting `A3 reads the cells: 4 proposed on the real tree, 1 with
+  the markers removed`. The amendment is quoted current-and-proposed side by side with its line numbers
+  (`ROADMAP.md:701`–`711`) in `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`,
+  marked **proposed**, indexed, and carrying both the approval and the rejection path. The roadmap itself is
+  untouched, which is the reservation the ruling made: `git diff --name-only HEAD -- ROADMAP.md | grep -c .`
+  → `0`, `rc=1`.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `make probes: 12 suite(s) green`, `exit=0`, the ledger suite now at `probes: 8 pass / 0 fail` after its
+  `DESCRIPTOR` rule was generalized from `stitchcad-changelog-part*.md` to every `docs/history/*.md` segment
+  (its REAL arm went from `11 verdicts` to `13`, the bedrock and dev-notes segments) with the new
+  `DEVNOTES-DIGEST` arm pinning the generalization; `make book` → `INFO HTML book written to …`, `exit=0`;
+  the neighbouring censuses are green — `run_glossary_census.sh` → `276 terms / 8 parts / 145 tokens /
+  0 failure(s)`, `run_standards_census.sh` → `6 registered / 6 designations used / 0 failure(s)`;
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 74 files measured`,
+  `exit=0`, with `dev_notes` back inside its health after the rollover (`150` lines / `13 183` B against
+  `200` / `16 384`) and the matrix at `339` lines / `31 807` B / widest `221` B against a `book_collection`
+  per-part health of `400` / `24 576` / `200` and a ceiling of `700` / `40 960` / `320` — bytes and maxline
+  over health, inside every ceiling, recorded rather than trimmed. No Rust changed.
+  **The containment ceiling did refuse this slice, once:** appending the `.4b` checklist put this tree file
+  at `1182` lines / `104 182` B against the `tasks_collection` per-part byte ceiling of `98 304`, so
+  `check_live_doc_size.sh` reported `tasks_collection: 104182 bytes exceed the byte ceiling 98304` and
+  `make gate` blocked. The remedy is the one the registry's own note prescribes — "a tree that passes 1000
+  lines splits its completed-leaf evidence into a sibling file under docs/tasks/ before adding more" — and
+  not a bigger number: the nine completed checklists moved to `G0-CONTRACT-evidence.md`, leaving this file at
+  `729` lines / `62 087` B (inside its `800` / `65 536` health) and the sibling at `494` lines / `45 505` B,
+  and the checker returned to `live-doc-size: OK — 17 surfaces, 15 routes, 75 files measured`, `exit=0`.
+- [x] **FIX** — the five cells and their reasons; §1's rule 2 gains the `(proposed)` shape; §9 rewritten from
+  "rows whose proof nobody has been asked for" into the proposal table plus one bounded reason per feature
+  (the long-cell shape the containment ceiling refused twice before, so the table stayed three short columns);
+  §11, §12 and §14 updated so no sentence still calls the gap open; census advisory `A3` and its probe arm;
+  the decision record; and the dev-notes rollover this slice's own append triggered — the four oldest lessons
+  sealed into `docs/history/stitchcad-devnotes-part1.md` (`66` lines / `5 589` B / `sha256:d3b94e9a…`, the
+  digest re-derived by the same `sed | shasum` the probe runs) with a pointer table in the live window.
+- [x] **The rollover is proved lossless against the committed state, not against memory** —
+  `python3` compared the sealed bytes with `git show HEAD:DEV_NOTES.md` from the same heading onward:
+  `sealed entries byte-identical to HEAD's tail: True`, live window `5` lessons. And the segment is watched
+  from the commit that created it: mutating one byte of it in a scratch copy makes `DESCRIPTOR` name it
+  (`DEVNOTES-DIGEST … content hashes to b97da359f4c21d45…, its descriptor declar…`), which is the leg-3
+  argument D20 already paid for once. What is *not* watched is the segment's Coverage and pointer claims —
+  the ledger probe reads those from `CHANGELOG.md` only — so the gap is logged as **D40** and owned by a new
+  leaf `SPINE.19`, not left implicit in a green run.
+- [x] **The token census fired a fifth time at authoring time** — `run_glossary_census.sh` reported
+  `2 failure(s)` on the first draft: `` `lining` `` (the name of a row of this chapter's own table, i.e.
+  prose) and `` `proposed` `` (a status marker written without the parentheses it actually carries, so it
+  looked like exactly one ASCII identifier). Both were de-tokenized rather than exempted, and the marker is
+  written `(proposed)` everywhere, which is also what the A3 advisory greps for → `276 terms / 0 failure(s)`.
+- [x] **LOCKSTEP** — D32 resolved, D40, D41 and D42 logged in `PLANNING.md` (D41 fixed here); `SPINE.19`
+  created in `docs/tasks/SPINE.md` to own D40 with its acceptance and its two RED arms named; `TOOLBOX.md`'s
+  matrix and ledger rows updated; `docs/TASK_TREE.md`'s frontier cell moved to `.14`; the completed-leaf
+  checklists split into `docs/tasks/G0-CONTRACT-evidence.md`; `docs/decisions/INDEX.md`
+  carries the new record and the Knowledge Map was regenerated; `LIVE_STATUS.md`, `MEMORY.md`,
+  `CHANGELOG.md` (including the superseding record for the sealed `part4` citation D41 found) and
+  `DEV_NOTES.md` (a new lesson, the correction, and the rollover) updated in this commit. Lesson promotion:
+  **promoted** — the new record carries an `answers:` line.

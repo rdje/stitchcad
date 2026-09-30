@@ -21,3 +21,7 @@
   - [Size sets](spec/size-sets.md)
   - [Measurement and size standards](spec/standards.md)
   - [The reference skirt](spec/reference-skirt.md)
+
+# Governance
+
+- [Governance model](governance.md)

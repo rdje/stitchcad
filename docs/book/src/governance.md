@@ -1,0 +1,198 @@
+# Governance
+
+> **Status:** governance model, gate **G0** (roadmap §11: "governance model drafted — project owner named;
+> sewist-vs-programmer review paths defined"; sources §12, §9, §7.8, §10, §13, §14). Drafted in full. The
+> three roles that need a **named human** are blocked on the director and are listed together in §8, so the
+> gap is one place instead of a discovery at each gate.
+
+**Why this is written while the room is empty.** Roadmap §14 carries the risk "community fork over
+governance" with the mitigation "governance doc at G0, while the room is empty", and §12 names the
+cautionary tale: a sewing-CAD community that split over who decides what a factory needs. A governance
+model written after the first conflict is a negotiation between parties; written before, it is a contract
+both parties already signed. So this chapter decides *how* a disagreement is settled, *who* is competent to
+settle each class of it, and *what happens when nobody is named yet* — and it does not decide anything the
+roadmap left open elsewhere.
+
+## 1. Two review paths, because two kinds of correctness exist
+
+Roadmap §12 is explicit: **"Domain review is not code review."** A wrong notch default is a cut-floor
+incident, not a failing test, and the reviewer must be a peer of the knowledge rather than of the code.
+Every change therefore lands on exactly one path, and the paths do not substitute for each other.
+
+| Change class | Path | Approval | What the approver judges |
+| --- | --- | --- | --- |
+| Rust, CLI, CI, doctrine gates — no exported byte changes | code review | maintainer | does it do what the spec says |
+| a Factory Profile change that alters exported bytes | domain review, two-step | domain expert **and** maintainer | are these bytes right for a cutting room |
+| a golden file re-freeze (§4) | golden approval | domain expert **and** maintainer | is the frozen claim still true |
+| a glossary term, or any safety-relevant term (roadmap §7.6) | domain review | domain expert | does the word mean what a factory hears |
+| a specification chapter that changes a construction claim | domain review | domain expert | is the construction real |
+| a specification chapter that changes only wording or structure | code review | maintainer | does it still say what the model does |
+| a translation or termbase contribution | the no-code review queue (§7.6, §12) | domain expert for the terms | is the term the one factories use |
+| a contributed profile or golden from outside | two-step **plus** provenance (§4) | both, with the record | may this be published at all (§5) |
+
+**The two-step rule.** Where a change alters exported bytes, the domain expert's approval and the
+maintainer's approval are both required, and neither implies the other: the expert judges whether a cutting
+room can use the bytes, the maintainer judges whether the change is consistent with the model, the release
+contract (roadmap §9) and the conformance matrix (roadmap §13). A change with one of the two is unapproved,
+and the tooling records which one is missing rather than reporting "partially approved".
+
+## 2. Roles, and the authority each one needs
+
+A role is defined by the decision it may make, not by the person holding it. "Currently" says who holds it
+today; §8 lists the ones nobody holds.
+
+| Role | Authority it needs | Agent-eligible? | Currently |
+| --- | --- | --- | --- |
+| project owner | scope, gate exit, the roadmap's disposition log, the last word in §3 | no | **unnamed** (§8) |
+| maintainer | merges code, owns CI and the doctrine gates, the release channels | no | the engineer of record |
+| domain expert (sewing / factory) | the domain path in §1, golden semantics, safety terms, `assumed` constants | no | **unnamed** (§8) |
+| procurement owner | buys evaluation seats, the physical plotter, standards texts | no | **unnamed** (§8) |
+| release approver | the human-only `approve` authority over a package (roadmap §9) | **never** | per package |
+| independent evidence reviewer (G7) | signs the evidence pack for a production declaration | no | named at G7 (§8) |
+| contributor | opens a change on one of §1's paths | yes, to `propose` | anyone |
+
+Two rules bind the whole table:
+
+- **Approval is human-only.** Roadmap §7.8: `inspect`, `propose`, `commit`, `generate` and `approve` are
+  distinct permissions, and "approval is a human-only capability that a graph mutation can never
+  manufacture". An agent may prepare a profile change, a golden re-freeze and even the *draft* of a
+  governance ruling; it may not approve any of them. Mutating commands carry an actor trace (roadmap §10),
+  so a ruling's provenance is a record and not a memory.
+- **Independence is a rule, not a courtesy.** The G7 reviewer is "a named human outside the implementation
+  team" (roadmap §11). This chapter adds the criterion that makes it checkable: the reviewer must not be an
+  author of the code, the specification or the evidence under review. A reviewer who fails that test is a
+  second opinion, and a second opinion is worth recording and is not an independent review.
+
+## 3. Sewist-versus-programmer conflict resolution
+
+The conflict roadmap §12 anticipates is not personal; it is structural. A sewist asks what a cutting room
+needs and a programmer asks what the model can guarantee, and both answers can be correct.
+
+1. **Classify the question before arguing about it.** A question about what a factory needs is a *domain*
+   question and the domain expert rules. A question about what the model can guarantee — determinism, an
+   error budget, a tolerance class — is an *engineering* question and the maintainer rules against the
+   specification. Most conflicts dissolve here, because the two sides were answering different questions.
+2. **A default is a profile parameter, not a verdict.** Where the two rulings genuinely differ about a
+   default (a notch encoding, an allowance width, a corner treatment), the answer is the one the product
+   already takes: the value becomes a Factory Profile parameter with both readings recorded, because two
+   cutting rooms disagree about exactly these things (roadmap §8.3, and the ontology's inclusion policy).
+   Governance does not have to pick a winner where the model can carry both.
+3. **Escalation is a path, not an appeal to authority.** Reviewer → domain expert and maintainer jointly →
+   project owner. Each step is recorded as a decision record with the evidence and the dissent, so the next
+   conflict starts from the ruling instead of from the argument. There is no calendar in this project
+   (roadmap §11), so the trigger is the review round, not a date: a conflict that survives one round goes up.
+4. **A fork is a legitimate outcome, and the shared assets are the point.** The core is dual-licensed
+   `MIT OR Apache-2.0` (ADR-0001), so anyone may leave with the code. What a fork cannot copy is the
+   conformance corpus, the golden files and the profile registry — the evidence that a claim is earned.
+   Governance worth staying for is governance whose rulings carry their evidence, and that is the whole
+   reason a ruling is a record here rather than a message.
+
+## 4. Golden-file approval ownership
+
+A golden file is a frozen claim about bytes (roadmap §13: canonicalizer output, no timestamps, stable ids,
+fixed float formatting, a cross-platform determinism policy). Freezing one is therefore a release-contract
+event, not a test edit.
+
+- **Two signatures, one record.** The maintainer signs the mechanical half — the bytes are canonical,
+  deterministic and reproducible from the recorded inputs — and the domain expert signs the semantic half:
+  the garment the golden represents is the garment the specification describes. The record names both.
+- **No golden over an unreviewed assumption.** The reference fixture carries constants that are `assumed`
+  pending domain review (§11 of that chapter), and a golden frozen over them would freeze a guess with the
+  same confidence as a fact. The domain expert's confirmation of those constants is a **precondition of the
+  first G2 golden**, which is the concrete dependency §8's blocked role creates.
+- **Stale-ification applies to goldens too.** Roadmap §9: approval binds to package identity, and any input
+  or artifact change creates a new candidate and stale-ifies the prior approval rather than inheriting it.
+  A golden whose inputs changed is a new golden; a golden edited in place without a recorded reason is a
+  defect, and the conformance suite treats it as one.
+- **A contributed golden carries provenance or it is not admissible.** Roadmap §13's layers of truth put
+  "import through actual target products with recorded options" at layer 4, so an externally produced golden
+  must record the product, its version and the import or export settings that produced it. Without that
+  record the file is an opinion about bytes, and the corpus is where opinions go to be checked.
+
+## 5. What is public, and what never is
+
+Roadmap §12 fixes the boundary: **public** — code, reference fixtures, sanitized contributed profiles,
+golden files; **never** — customer data, body scans, factory trade secrets. Profiles are private by
+default, and contribution is an explicit share action with a preview of exactly what leaves the machine.
+
+Three governance consequences, because the boundary constrains the review paths in §1:
+
+- A reviewer of a contributed profile sees only the sanitized artifact. No review path may require a trade
+  secret to operate, or the path is closed to everyone who is not the contributor's employer.
+- Where a domain expert genuinely cannot judge without the real file, the review happens on the
+  contributor's side or under an agreement recorded in the decision — and the **ruling** is published
+  without the data. The reasoning is the shared asset; the file is not.
+- Sanitization is a checked step, not a promise: the share preview is the artifact a contributor approves,
+  and publishing something the preview did not show is a defect against this chapter.
+
+## 6. Agents under this governance
+
+Roadmap §7.8 and §10 make agents first-class users and second-class authorities, and governance inherits
+both halves:
+
+- The five authority levels are command-layer concepts (`G0-CONTRACT.17` specifies them): an agent may
+  inspect, propose, commit within a scope and generate artifacts; approval stays human.
+- Imported files are **data, never instructions** — which is a governance rule before it is a security one,
+  because a factory's returned DXF is the most plausible carrier of a request that nobody in this project
+  authorized.
+- Independent checks evaluate artifacts, never the agent grading its own work (roadmap §7.8). The same rule
+  is why every claim in this book is derived by a tracked census rather than asserted by its author.
+
+## 7. Procurement, and the fallback when it slips
+
+Each item names what is bought, why a gate needs it, who owns it, and the fallback with its cost in evidence
+quality. Roadmap §14 already rules that an eval-seat slip is handled by "a named owner at G0" plus "a
+partner-run manual test as documented fallback", so the fallback is normative rather than a consolation.
+
+| Item | Gate that needs it | Owner | Documented fallback, and what it costs |
+| --- | --- | --- | --- |
+| evaluation seats in a commercial CAD | G2, G6 — import-diff | procurement (§8) | a partner runs it and records product, version and settings: layer-4 evidence, fewer targets |
+| a physical plotter | G6 — plotted output | procurement (§8) | the printed scale-square check at G2 plus a partner plot: proves scale, not the device's quirks |
+| standards texts (the six registered) | any `read-in-repo` claim | procurement (§8) | none — until a text is read here no clause may be quoted ([standards §1](spec/standards.md)) |
+| a pilot factory partner | G6 — the rejection-reason taxonomy | project owner (§8) | none yet; the partner loop is the evidence, so this one cannot be substituted |
+
+## 8. The named-person gaps — one place, flagged to the director
+
+The director's ruling of `2026-09-30` delegated the drafting of this chapter and reserved exactly one
+thing: **naming humans** (`docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`). These are
+the gaps. Everything else in this chapter is drafted, reviewable and unblocked.
+
+| Role | Blocked since | What is drafted meanwhile | What unblocks it |
+| --- | --- | --- | --- |
+| project owner | G0 exit clause | §3's escalation path names the role, not the person | the director names one |
+| domain expert (sewing / factory) | G0, and G2 depends on it | §1's domain path, §4's golden rule, the fixture's `assumed` constants | the director names one |
+| procurement owner | G0 exit clause ("seats take months") | §7's table, with a fallback per item | the director names one |
+| independent evidence reviewer | G7 | §2's independence criterion, so the search can start early | named at G7 by the project owner |
+
+Until a name exists, the honest state of each affected clause is the uncertainty vocabulary's `unknown`
+(ontology §5): not silently defaulted, and blocking what it governs. `G0-CONTRACT.15` records the G0
+governance clause as `met — model drafted, named owner pending` or `not met`, and never as met on the
+strength of this chapter alone.
+
+## 9. What this chapter deliberately does not decide
+
+Named so that each is a decision with a record when its time comes, rather than an emergency:
+
+- **A contributor licence agreement.** ADR-0001 records that none is needed to contribute to a dual-licensed
+  permissive core; reopening that needs the same strength of argument as the ADR's own re-open condition.
+- **A foundation, a trademark policy, or a moderation role.** All three are real questions for a community
+  that has one, and none is a question this repository can answer honestly today.
+- **Paid maintainer funding.** Roadmap §12's governance bullet names funding and procurement *owners*, not
+  a model; the model follows whoever funds the work, and pretending otherwise would be a claim without
+  evidence.
+- **A dispute process involving parties outside the project.** §3 ends at the project owner. What happens if
+  a contributor rejects a ruling is a fork (§3, rule 4), not an arbitration.
+
+## 10. Verification status, and where each rule is enforced later
+
+- **Every clause above is cited from the roadmap** — §12 for the two review paths, the public/private
+  boundary and the governance-before-community rule; §9 for approval, scope and stale-ification; §7.8 and
+  §10 for agent authority and actor trace; §13 for goldens and provenance; §14 for the fork and eval-seat
+  risks; §11 for the named-owner requirements. Where this chapter adds something the roadmap does not say —
+  the independence criterion in §2, the classification step in §3, the two-signature golden rule in §4 — it
+  is a **project decision**, and it is labelled as one rather than dressed as a citation.
+- **Nothing here is enforced by prose alone forever.** The mechanical parts land as gates: the actor trace
+  and the authority levels at G1 (`G0-CONTRACT.17` specifies the contract), the profile approval path and
+  the evidence store at G4, the golden and provenance rules at G2/G6 in `conformance/`, and "governance in
+  force" as a G7 exit criterion. A rule in this chapter that no gate ever enforces is a defect to be logged
+  like any other, and §15's gate-exit review is where that audit happens.

@@ -3,6 +3,28 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-09-30)_ — a blocked leaf splits into what can be drafted and what must be named
+
+- `.14` sat blocked for a session because it needed three named humans. The director's ruling separated the
+  two halves — draft everything, name nobody — and the whole chapter turned out to be draftable: a role is
+  the **decision it may make**, not the person holding it, so each seat could be specified with its authority,
+  its agent-eligibility and what waits for it. What was blocking was the *coupling* of the two halves, not the
+  missing names. General shape: before calling a leaf blocked, ask which of its clauses actually needs the
+  missing input; usually one does and the rest were waiting beside it.
+- **Governance written while the room is empty is a contract; written after the first conflict it is a
+  negotiation.** Roadmap §14's mitigation is literally "governance doc at G0, while the room is empty", and
+  the reason shows up in the drafting: every rule that had to be invented (which changes take the domain
+  path, what makes a reviewer independent, who signs a golden) is cheap to state now and expensive to state
+  after somebody has a position. Promoted to
+  `docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md`.
+- **A fallback that does not state its cost is how a slip becomes a silent downgrade.** The eval-seat fallback
+  (a partner runs the test) is roadmap-mandated, so the only honest addition was what it costs: layer-4
+  evidence with recorded product, version and settings — slower, fewer targets. Same shape as a claim with a
+  missing leg: name the leg, do not hide it.
+- **The empty seat with a schedule behind it is the one to name loudly.** The domain expert gates the fixture's
+  `assumed` constants, which gate the first G2 golden, so the chapter says so where a plan will hit it rather
+  than where a reader will sympathise.
+
 ## _(2026-09-30)_ — permission is not a criterion, and a proposal must be as visible as the gap it replaces
 
 - D32's five rows were not a documentation gap but a **roadmap** gap: §3.2 promises a collar and trousers,

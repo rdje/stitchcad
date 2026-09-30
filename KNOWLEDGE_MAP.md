@@ -64,6 +64,7 @@
 - [`decision_d32-proving-gates-proposed-roadmap-amendment.md`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)
 - [`decision_director-ruling-2026-09-30-four-findings.md`](docs/decisions/decision_director-ruling-2026-09-30-four-findings.md)
 - [`decision_fixture-oracles-derive-the-finished-dimension.md`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)
+- [`decision_governance-two-review-paths-and-the-unnamed-roles.md`](docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md)
 - [`decision_live-document-containment-proportionate-adoption.md`](docs/decisions/decision_live-document-containment-proportionate-adoption.md)
 - [`decision_machine-tokens-declared-where-used.md`](docs/decisions/decision_machine-tokens-declared-where-used.md)
 - [`decision_numerical-contract-fixed-point.md`](docs/decisions/decision_numerical-contract-fixed-point.md)
