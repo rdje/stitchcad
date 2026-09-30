@@ -60,6 +60,7 @@
 - [`decision_acceptance-evidence-per-leaf.md`](docs/decisions/decision_acceptance-evidence-per-leaf.md)
 - [`decision_adopted-external-policy-references.md`](docs/decisions/decision_adopted-external-policy-references.md)
 - [`decision_adr-0001-license-and-solver.md`](docs/decisions/decision_adr-0001-license-and-solver.md)
+- [`decision_director-ruling-2026-09-30-four-findings.md`](docs/decisions/decision_director-ruling-2026-09-30-four-findings.md)
 - [`decision_fixture-oracles-derive-the-finished-dimension.md`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)
 - [`decision_live-document-containment-proportionate-adoption.md`](docs/decisions/decision_live-document-containment-proportionate-adoption.md)
 - [`decision_machine-tokens-declared-where-used.md`](docs/decisions/decision_machine-tokens-declared-where-used.md)

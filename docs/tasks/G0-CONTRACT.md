@@ -249,8 +249,39 @@ not a contract.
   finished waist `74.0` cm as declared instead of `46.0` cm, both closure checks closing.
   Commit: `STITCHCAD-G0-0013c`
 
+- ID: `G0-CONTRACT.13d`
+  Status: `pending`
+  Goal: resolve defect **D27** under the director's ruling of `2026-09-30`
+  (`docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`): choose ONE waistband
+  construction for the reference fixture, make §4, §6, §8, §11 and §12 describe that one garment, and
+  re-derive every number the choice touches. External sources may be read and must be cited with URL and
+  date; a choice resting on general practice rather than a read source stays `assumed` with `.14`'s
+  reviewer named.
+  Acceptance: the finished waistband dimensions follow from §2 and §3 by stated formulas; the piece list,
+  its layer indices and the sewing graph agree with the chosen construction and account for every piece
+  (no piece without a span); both §4.1 closure checks still hold; `waistband_cut_width` is either corrected
+  or replaced by per-piece widths; all 18+ derived rows re-derive with 0 mismatches; the glossary and
+  feature-matrix censuses stay green; D27 closes with the decision recorded in the chapter.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G0-CONTRACT.4b`
+  Status: `pending`
+  Goal: resolve defect **D32** under the same ruling: give each of the five rows §9 lists as
+  `unnamed (D32)` — classic collar, trousers, button/buttonhole, pocket, fly — a **proving gate**, and
+  prepare the exact `ROADMAP.md` §11 amendment text that gate's exit criteria need, as a *proposal* in a
+  decision record (the roadmap itself is the director's to amend).
+  Acceptance: no row in the matrix says `unnamed (D32)`; every reassigned row names a gate whose exit
+  criteria either already cover it or are covered by the proposed amendment; the proposal quotes the
+  current exit text and the proposed text side by side; the census's M6 rule accepts the new cells and its
+  A1 advisory reports `0` unnamed rows; D32 closes with the proposal flagged to the director rather than
+  silently applied.
+  Verification: `pending`
+  Commit: `pending`
+
 - ID: `G0-CONTRACT.14`
-  Status: `blocked` (director input: named humans)
+  Status: `pending` (drafting unblocked by the director's ruling of `2026-09-30`; **only the naming of
+  humans remains blocked** — project owner, procurement owner, domain reviewer)
   Goal: draft the governance model (§12) — sewist-vs-programmer review paths, domain review of
   profile changes that alter exported bytes, golden-file approval ownership, funding/procurement
   owners — and record the roles that need a named person (evaluation seats, physical plotter,
@@ -325,8 +356,11 @@ not a contract.
 | 10 | `G0-CONTRACT.6` | `done` | size-set ownership decided and recorded; the chapter states the object, the label/order separation, breaks, axes and the five designation systems |
 | 11 | `G0-CONTRACT.7` | `done` | the standards registry: six designations with role, adoption, status and owner; the deferral ledger; and a census that refuses an unregistered citation anywhere in the book |
 | 12 | `G0-CONTRACT.8` | `done` | ADR-0001 settled before any solver code exists, as roadmap §5 requires |
-| 13 | `G0-CONTRACT.9` | `pending` | **next** — ADR-0003 plus the formula language v1: grammar, units inside expressions, conditionals, name binding, evaluation order, error and dimension rules, worked over the reference skirt. It also names the drafting system that ships as the reference block set |
-| 14 | `G0-CONTRACT.10`–`.12`, `.14`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
+| 13 | `G0-CONTRACT.13d` | `pending` | **next** — the director ruled on `2026-09-30` that the engineer decides D27: one waistband construction for the fixture, every number re-derived |
+| 14 | `G0-CONTRACT.4b` | `pending` | D32: give the five unnamed envelope rows a proving gate and prepare the roadmap amendment as a proposal |
+| 15 | `G0-CONTRACT.14` | `pending` | the governance model drafted in full; only the naming of humans stays blocked |
+| 16 | `G0-CONTRACT.9` | `pending` | ADR-0003 plus the formula language v1: grammar, units inside expressions, conditionals, name binding, evaluation order, error and dimension rules, worked over the reference skirt. It also names the drafting system that ships as the reference block set |
+| 17 | `G0-CONTRACT.10`–`.12`, `.15`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
 
 ## Decisions
 
@@ -809,6 +843,12 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 
 ## Changelog
 
+- `2026-09-30`, after `.8`: the director ruled that the engineer decides and acts on the four findings
+  surfaced this session — D27, D32, `.14`'s drafting and the containment derivation — at signoff grade, with
+  external research permitted. Recorded as
+  `docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`, which also states what stays
+  reserved (naming humans; amending `ROADMAP.md`). Leaves `.13d` and `.4b` created to own D27 and D32;
+  `.14`'s blocker narrowed to the naming alone. The frontier takes those four before `.9`.
 - `2026-09-30`: `.8` landed — ADR-0001 is one record, not two: the core is dual `MIT OR Apache-2.0`, so
   `slvs` (GPLv3) is rejected and `sc-sketch` gets a custom or least-squares kernel. The exchange rate is
   stated (an optional annotation layer is not worth the licence of the product), BSL-1.1 is kept out of the

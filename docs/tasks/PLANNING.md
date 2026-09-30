@@ -398,10 +398,11 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Impact: the fixture is the subject of every G2 golden, mutation, offset and agent test. Freezing it
     with an unresolved construction freezes a contradiction into the conformance corpus, and the piece
     count (6) is an asserted package-completeness expectation.
-  - Owner: `G0-CONTRACT.14` — choosing between a folded band and a faced band is a domain decision, and
-    `.14` already owns naming the sewing expert who reviews the fixture's `assumed` constants.
-    `G0-CONTRACT.13b` recorded the contradiction **in the chapter** (§6 and §11) so no reader and no
-    golden can take a waistband number as settled while it is open.
+  - Owner: `G0-CONTRACT.13d` — the director ruled on `2026-09-30` that the engineer decides and acts on
+    this (see `docs/decisions/decision_director-ruling-2026-09-30-four-findings.md`), with external sources
+    read and cited, and with the choice still subject to the domain reviewer `.14` names.
+    `G0-CONTRACT.13b` recorded the contradiction **in the chapter** (§6 and §11) so no reader and no golden
+    could take a waistband number as settled while it was open.
 
 - **D28** — the fixture's recipe step 7 sent the reader to the wrong clause: "**allowances** (§6)" where
   allowances are §7 and §6 is the piece list.
@@ -464,10 +465,11 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Impact: gate G7's exit is a "supported-envelope statement with named limitations". An envelope whose
   collar, trousers, buttons and pockets were never tested cannot be declared honestly, and the gap is
   invisible today because a feature matrix did not exist to show it.
-  - Owner: `G0-CONTRACT.15` (the G0 exit review) must put the assignment to the director — either the G3
-  exit criteria grow to name these features, or the matrix moves them to `deferred` with a gate that owns
-  them. This chapter does not invent a commitment on a gate's behalf, so the rows say `unnamed (D32)` and
-  the census keeps reporting them until a decision closes it.
+  - Owner: `G0-CONTRACT.4b` — the director ruled on `2026-09-30` that the engineer decides and acts on
+  this. The matrix gets a proving gate per row, and the `ROADMAP.md` §11 amendment those gates need is
+  prepared as an exact **proposal** in a decision record, because the roadmap is the director's to amend
+  (the ruling reserves it). Until he approves it, the record says so and `.15` carries the proposal into
+  the G0 exit review.
 
 - **D33** — the reference fixture's waist geometry was arithmetically wrong, and its own oracle could not
   see it: §5 step 2 placed the waist side point at `quarter_waist − ss_suppress` = 15.5 cm from CF, while

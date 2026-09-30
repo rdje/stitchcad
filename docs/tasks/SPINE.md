@@ -184,6 +184,21 @@ mechanically-enforced form:
   real tree `OK — 17 surfaces, 15 routes, 41 files measured`, `exit=0`.
   Commit: `STITCHCAD-SPINE-0004c`
 
+- ID: `SPINE.4.4`
+  Status: `pending` (created by the director's ruling of `2026-09-30`; deferred behind the three
+  `G0-CONTRACT` leaves that ruling also owns, per `decision_product-work-takes-the-frontier.md`)
+  Goal: re-derive the `book_collection` **maxline health** for table-shaped reference parts. Measured at
+  the ruling: the glossary's widest entry row is `272` B and the feature matrix's `197` B against a `200` B
+  health and a `320` B ceiling, so a permanent warning has no defect behind it — the health target was
+  derived from the shape of a prose chapter, and a five-column termbase row is a different shape.
+  Acceptance: the derivation is written where the registry's other derivations live (the `notes` column of
+  the `book_collection` row, or a split row if the checker's glob semantics allow one), citing the measured
+  cell budget rather than a round number; the ceiling is unchanged unless a decision record authorises it;
+  the check stays green and the probe suite still discriminates; if `.doctrine/` is touched, the
+  immediate-push exception is honoured and the observed CI verdict is recorded here.
+  Verification: `pending`
+  Commit: `pending`
+
 - ID: `SPINE.13`
   Status: `pending`
   Goal: give `ROADMAP.md` the navigation a `maintained_reference` requires — a complete section index

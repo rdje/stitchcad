@@ -13,16 +13,16 @@
 
 ## Current state
 
-- **Project:** StitchCAD — a sewing CAD with a headless Rust core: construction-recipe designs, versioned
-  evidence-bearing Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.2, DRAFT
-  until G0 exits.
-- **Active tree:** `G0-CONTRACT` → frontier leaf `G0-CONTRACT.9`. Done: `.1`–`.8`, `.13`/`.13b`/`.13c`,
-  `.18` — glossary (275 terms), units, ontology, envelope (105 rows), instantiation paths, size sets,
-  standards registry, ADR-0001, fixture, `sc-units` + `sc-core` + G0 CI.
-- **Next action:** `.9`, ADR-0003 plus the **formula language v1** — a record and
-  `docs/book/src/spec/formula-language.md`: grammar, units inside expressions, conditionals, name binding,
-  evaluation order, error and dimension rules, worked over the reference skirt; it also names the drafting
-  system that ships as the reference block set. A big chapter — give it a whole slice.
+- **Project:** StitchCAD — a sewing CAD, headless Rust core: construction-recipe designs, evidence-bearing
+  Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.2, DRAFT until G0 exits.
+- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.8`, `.13`/`.13b`/`.13c`, `.18`. Remaining: `.9`–`.12`,
+  `.14`–`.17`, plus `.13d` and `.4b` below.
+- **Next action:** the director's ruling of `2026-09-30` delegates four items to the engineer at signoff
+  grade, external research permitted — read `decision_director-ruling-2026-09-30-four-findings.md` (it
+  carries the scope and the two reservations), then take **`.13d`** (D27: one waistband construction, every
+  number re-derived) → **`.4b`** (D32: a proving gate per row, roadmap amendment as a *proposal*) →
+  **`.14`** (governance drafted; only naming humans stays blocked) → **`SPINE.4.4`** (maxline health for
+  table-shaped book parts). Then `.9`, ADR-0003 + the formula language v1 — a big chapter, whole slice.
 
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
