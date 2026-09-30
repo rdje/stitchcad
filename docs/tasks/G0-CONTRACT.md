@@ -3,7 +3,10 @@
 ## Metadata
 
 - Tree ID: `G0-CONTRACT`
-- Status: `active`
+- Status: `done` for everything this repository can do — every engineering clause of gate G0 is met and
+  derived; the gate itself stays **open** on one clause the director's ruling of `2026-09-30` accepts as
+  open (evaluation-seat procurement), and its **closure is unapproved** because the reviewing party
+  authored most of what it reviews (governance §6.1 rule 2). The frontier moves to `G1-SLICE`.
 - Roadmap lane: `ROADMAP.md` §11 gate **G0 — Product & semantic contract** (sources: §2, §3,
   §4.2, §5, §8, §9, §12)
 - Created: `2026-09-29`
@@ -39,6 +42,11 @@ not a contract.
   claim-verification policy.
 
 ## Acceptance Criteria (gate G0 exit, clause by clause)
+
+The **verdicts are not kept in this table**: `bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh`
+derives them from `ROADMAP.md` §11's own clause list and from `docs/tasks/artifacts/g0_exit/g0_exit_clauses.tsv`,
+running the check each clause cites. A second hand-kept verdict column would be the drift this tree spent a
+gate removing.
 
 | Roadmap G0 exit clause | Leaf | Deliverable |
 | --- | --- | --- |
@@ -384,14 +392,23 @@ not a contract.
   Commit: `STITCHCAD-G0-0014`
 
 - ID: `G0-CONTRACT.15`
-  Status: `pending`
+  Status: `done` for everything this repository can do — the review is derived, complete and re-runnable;
+  the **gate stays open** on clause G0-12 and its **closure is unapproved** (governance §6.1 rule 2, and the
+  director's ruling of `2026-09-30` which accepts both facts rather than waiting on them)
   Goal: G0 exit review — walk the gate's exit clause list, cite the deliverable and its
   re-derivable check for each, update `LIVE_STATUS.md` and the roadmap status line, and hand
   the frontier to `G1-SLICE`.
   Acceptance: every clause is `met` with a cited artifact or `not met` with a named blocker;
   no clause is marked met on prose alone.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below and in the acceptance checklist —
+  `bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` → `G0 EXIT: 18 met / 1 not met / 19 clauses —
+  the engineering clauses are met and the gate stays open on 1 human act(s) this repository cannot
+  perform`, `exit=0`, in `2` seconds, with every `met` backed by a check the review *ran* (eleven of them
+  censuses, two of them `cargo test` and `make wasm`); its probe suite is at `10 pass / 0 fail`, including
+  ROADMAP-GROWS, which adds a clause to a copy of §11 and requires the review to refuse. The roadmap's
+  status line is unchanged and that is the finding: it reads "remains DRAFT until the G0 exit criteria are
+  met", and one criterion is not met.
+  Commit: `STITCHCAD-G0-0015`
 
 - ID: `G0-CONTRACT.16`
   Status: `done`
@@ -470,7 +487,8 @@ not a contract.
 | 19 | `G0-CONTRACT.12` | `done` | the release contract landed: nine manifest fields each with its source, identity as the manifest's digest, completeness against the declared construction, the six acceptance states in the roadmap's order with the evidence each needs, scope that narrows by itself, human-only approval, and §8.2's policy matrix tuned and recorded |
 | 20 | `G0-CONTRACT.16` | `done` | one message system chosen with its evidence read: Fluent at both ends, ICU4X rejected on the boundary rather than on quality; the lint, the termbase, pseudolocalization, the locale-independent canonical file, the RTL geometry rule and three review tiers, with the message inventory derived from four chapters and the crate |
 | 21 | `G0-CONTRACT.17` | `done` | the command layer landed: five classes and seventeen commands in one machine-readable table, undo at the atomic group restoring semantics rather than contours, preview/commit with a re-checked precondition, revision preconditions and idempotency keys, the five authority levels as core-enforced permissions with `approve` unholdable by an agent, and a parity table whose columns and generation rule are normative while its rows stay G5's evidence |
-| 22 | `G0-CONTRACT.15` | `pending` | **next, and the last of the gate** — the G0 exit review: walk §11's clause list, cite the deliverable and its re-derivable check for each, update `LIVE_STATUS.md` and the roadmap's status line, and hand the frontier to `G1-SLICE`. The governance clause is recorded as `.14b` states it — the domain seat is vacant, so no clause is marked met on a borrowed signature |
+| 22 | `G0-CONTRACT.15` | `done` | the exit review is a command, not a paragraph: 18 of 19 clauses met with a check the review ran, one `not met` and accepted open by the director's ruling, and the gate's closure recorded **unapproved** under governance §6.1 because its reviewer authored most of what it reviews |
+| 23 | — | — | **gate G0 has no further leaf.** The frontier moves to `G1-SLICE.1` (the workspace crate layout), which is where the specification meets Rust for the first time since `sc-units`. G0's one open clause travels with the ruling that accepted it, and `G2-2D.15` owns the physical evidence that would close the domain questions |
 
 ## Decisions
 
@@ -601,6 +619,28 @@ section — are sealed in
   roadmap §10 requires at G1, where a measurement exists to derive it from. A bound guessed at G0 is a
   migration later.
 
+- `2026-09-30`, leaf `.15`: **a gate review is a command, not a paragraph.** The leaf's acceptance forbids
+  marking a clause met on prose alone, and a review *written* as prose is exactly that, so the review parses
+  the roadmap's own clause list, runs the check each clause cites, and prints the verdict. Two properties
+  follow: a clause cannot be dropped by forgetting to mention it (the closure is both directions), and a
+  reviewer who did not write the chapters can reproduce the whole gate in two seconds.
+- `2026-09-30`, leaf `.15`: **`not met` with a named blocker is a verdict, not a failure of the review.**
+  G0-12 stays open because no evaluation seat is being procured, and the ruling that accepts this names what
+  it costs — no receiver reads our artifacts back, so the interchange claims stay `cited-from-roadmap` and
+  G6's validation falls to the partner-run fallback. A gate that reports 18 of 19 honestly is more useful
+  than one that reports 19 of 19 generously.
+- `2026-09-30`, leaf `.15`: **the gate's closure is unapproved, and that is recorded rather than worked
+  around.** Governance §6.1 rule 2 withholds approval of a decision's evidence from its author; the reviewing
+  party authored sixteen of the nineteen deliverables. The mitigation §6.1 prescribes is in place — the
+  consequences are instruments anybody can run — so independence is *available* to the next reader instead of
+  being held by anyone now. What the review therefore certifies is that the checks pass, not that the gate is
+  approved.
+- `2026-09-30`, leaf `.15`: **a ruling that names a cost must arrive with an owner.** The director's ruling
+  makes the residual dependency a measurement rather than a credential, so `G2-2D.15` was created in the same
+  commit to own the physical-evaluation protocol for the reference skirt: what to cut, sew and measure, which
+  `assumed` constant each measurement falsifies, and what the project does when a measurement disagrees with
+  the drafting.
+
 ## Open Questions
 
 - Cut-on-fold vs paired front for the reference skirt: roadmap §11 G0 allows either. Decided
@@ -694,6 +734,62 @@ with no ticked boxes; the next slice moves it across. Neither file carries an un
   `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in this
   commit. Lesson promotion: **promoted** — the new record carries an `answers:` line.
 
+### `G0-CONTRACT.15` — the gate review is a command, and it reports one clause this repository cannot close
+
+- [x] **REPRODUCE / ISSUE** — gate G0 had nineteen obligations and no verdict for any of them.
+  `git ls-files 'docs/tasks/artifacts/g0_exit/*' | wc -l` → `0`; the leaf was `pending` and the tree's
+  acceptance table mapped each clause to a leaf and a deliverable but carried no verdict column —
+  `git show HEAD:docs/tasks/G0-CONTRACT.md | grep -c 'not met'` → `1`, and that one is the acceptance rule's
+  own wording, not a finding. So the gate's state existed only as an impression: twenty leaves marked `done`,
+  and nothing that answered "is G0 met?".
+- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n '^### G0 — Product' ROADMAP.md` → `666`, `rc=0`, whose
+  `**Exit:**` bullet is a semicolon-separated list of eleven obligations plus a `Fixture:` bullet, i.e. a
+  population with a layout. A review written as prose over such a list drifts the way every other list in
+  this repository drifted, and the leaf's own acceptance forbids the failure mode directly: "no clause is
+  marked met on prose alone". So the cause is not that the review was unwritten but that a *written* review
+  would have been the very thing the acceptance rule refuses — the review had to be derived and executed.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` →
+  `G0 EXIT: 18 met / 1 not met / 19 clauses — the engineering clauses are met and the gate stays open on
+  1 human act(s) this repository cannot perform`, `exit=0`, in `2` seconds. It parses §11's exit bullet into
+  fragments and the fixture bullet as a thirteenth, requires every fragment to be dispositioned by a row of
+  `g0_exit_clauses.tsv` and every row's key to appear in a fragment, then **runs** each row's check: eleven
+  censuses, `cargo test -q -p sc-units`, `make wasm`, `mdbook build`, and five artifact greps. The one
+  `not met` is G0-12, evaluation-seat procurement, which the director's ruling of `2026-09-30` accepts as
+  open with its cost named (no receiver ever reads our artifacts back, so the interchange claims stay
+  `cited-from-roadmap` and G6 falls to the partner-run fallback). G0-13 is `met` as drafted with its
+  qualification printed: the governance model and both review paths exist, the project owner is the director
+  acting, and the domain seat is vacant. Discrimination is proved:
+  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh` →
+  `probes: 10 pass / 0 fail`, including ROADMAP-GROWS (a clause added to a *copy* of §11 is refused),
+  CHECK-FAILS (a failing instrument reads as an unmet clause and `GATE FAILS`, not as a broken review),
+  NO-BLOCKER and CONTROL.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `22 suite(s) green`; every clause's own census re-run inside the review and green: matrix `105 rows /
+  0 failure(s)`, glossary `308 terms / 9 parts / 0 failure(s)`, release `9 manifest fields / 6 states /
+  8 matrix rows`, formula language `17 bindings / 4 assertions / 13 refusals`, interchange `17 layers /
+  4 targets / 12 entities`, standards `6 registered`, fixture `20 derived rows / 4 closure checks /
+  5 pieces / 0 mismatch(es)`, i18n `8 families / 64 message ids`, command layer `17 commands / 5 classes /
+  5 levels`; `bash scripts/check_live_doc_size.sh` → `OK`, `exit=0`. Two instrument bugs were found and
+  fixed while building it, both the same class as the ones this gate keeps producing: the exit-bullet parser
+  looked for `**Exit:**` *after* stripping markdown emphasis, so it read nothing and reported fifteen rows as
+  unmatched; and one roadmap clause spans two `;`-separated fragments, so a row needed a key list rather than
+  a key.
+- [x] **FIX** — built the review as a data plane plus an executor (`g0_exit_clauses.tsv`: 19 rows, each with
+  its source, key, deliverable, check, authority, blocker and note) and its 10-arm probe suite; recorded the
+  director's ruling of `2026-09-30` (no domain expert, no independent reviewer, the project proceeds with
+  claims marked unapproved) as
+  `docs/decisions/decision_director-ruling-2026-09-30-no-seats-proceed-unapproved.md` with its boundary
+  table and the amendment that the residual dependency is a measurement rather than a credential; created
+  `G2-2D.15` to own that measurement — the physical-evaluation protocol for the reference skirt — because a
+  ruling that names a cost without an owner is a wish; and left the roadmap's status line **unchanged**, which
+  is the honest outcome: line 9 reads "remains DRAFT until the G0 exit criteria are met" and one criterion is
+  not met.
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's status and decisions and logs;
+  `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two
+  instrument rows), `docs/decisions/INDEX.md`, `docs/tasks/G2-2D.md` (the new leaf),
+  `knowledge-map/subsystems.md` and the regenerated Knowledge Map in this commit. Lesson promotion:
+  **promoted** — the ruling record carries an `answers:` line.
+
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and a leaf that stages code additionally fills a `### <leaf-id>` checklist subsection
 with real tool output in the same commit as the change — in this file while it is being landed, then in
@@ -706,6 +802,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-09-30` | `G0-CONTRACT.15` | the exit review and its 10-arm probe suite; every clause's own census inside the review; `make gate`/`probes`; containment; the roadmap's status line | `18 met / 1 not met / 19 clauses`, `exit=0`, `2` s; `10 pass / 0 fail`; all eleven censuses green; `OK`; line 9 unchanged and still DRAFT |
 | `2026-09-30` | `G0-CONTRACT.17` | the command-layer census and its 14-arm suite; the chapter's and record's sizes; the glossary census after three terms and nineteen repointed entries; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the decisions seal and its digest | `17 commands / 5 classes / 5 levels / 0 failure(s)`; `14 pass / 0 fail`; `264` / `18 959`; `308 terms / 9 parts`; `21 suite(s) green`; sealed `112` / `10 079` |
 | `2026-09-30` | `G0-CONTRACT.16` | the i18n census and its 11-arm suite; the chapter's and record's sizes; the glossary census after a ninth part; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the tree's sealing | `8 families / 64 message ids / 0 failure(s)`; `11 pass / 0 fail`; `250` / `17 650`; `305 terms / 9 parts`; `20 suite(s) green`; tree `81 811` B after sealing `84` / `7 941` |
 | `2026-09-30` | `G0-CONTRACT.12` | the release-contract census and its 14-arm suite; the chapter's size; the glossary census; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the sibling's sealing | `9 manifest fields / 6 states / 8 matrix rows / 0 failure(s)`; `14 pass / 0 fail`; `257` / `19 010`; `298 terms`; `19 suite(s) green`; sibling `449` / `42 065` after sealing `560` / `52 573` |
@@ -769,9 +866,25 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.12` | `STITCHCAD-G0-0012 (leaf G0-CONTRACT.12): the release contract is the roadmap's §9, compared rather than restated` | nine manifest fields with their sources, digest-bound approval, seven completeness checks, the six states in order, scope that narrows by itself, the policy matrix tuned in a recorded table; D49's trigger discharged |
 | `G0-CONTRACT.16` | `STITCHCAD-G0-0016 (leaf G0-CONTRACT.16): one message system, and an inventory nothing keeps by hand` | Fluent at both ends with the licences read; the lint, termbase, pseudolocalization, locale-free canonical files, the RTL geometry test and three review tiers; the 64 ids derived from four chapters and the crate; D49's trigger discharged |
 | `G0-CONTRACT.17` | `STITCHCAD-G0-0017 (leaf G0-CONTRACT.17): the command layer is a contract, and the roadmap's own lists prove it` | five classes, seventeen commands, undo at the atomic group, five core-enforced authority levels, a generated parity table; D49's third trigger discharged |
-| `G0-CONTRACT.15` | `pending` | — |
+| `G0-CONTRACT.15` | `STITCHCAD-G0-0015 (leaf G0-CONTRACT.15): the gate review is a command, and it reports one clause this repository cannot close` | 18 of 19 clauses met with a check the review ran; G0-12 accepted open by ruling with its cost named; the closure recorded unapproved under governance §6.1; `G2-2D.15` created to own the physical evidence |
+| — | gate G0 has no further leaf | the frontier moves to `G1-SLICE.1`; the one open clause travels with the ruling that accepted it |
 
 ## Changelog
+
+- `2026-09-30`: `.15` landed and **gate G0 has no further leaf**. The exit review is a command:
+  `run_g0_exit_review.sh` parses roadmap §11's own exit bullet into thirteen fragments, requires each to be
+  dispositioned by a row of its data plane and each row's key to appear in a fragment, then runs the check
+  every clause cites — eleven censuses, `cargo test -p sc-units`, `make wasm`, `mdbook build` — and prints
+  `18 met / 1 not met / 19 clauses` in two seconds. The one open clause is evaluation-seat procurement, which
+  the director's ruling of `2026-09-30` accepts as open with its cost named: no receiver reads our artifacts
+  back, so the interchange claims stay `cited-from-roadmap` and G6 falls to the roadmap's partner-run
+  fallback. The gate's **closure is unapproved**, because governance §6.1 withholds approval of a decision's
+  evidence from its author and the reviewing party wrote sixteen of the nineteen deliverables; the mitigation
+  is that every verdict is a command's exit status, so independence is available to whoever reads next. The
+  roadmap's status line is unchanged and that is the finding — it remains DRAFT until the exit criteria are
+  met, and one is not. The same ruling moved the residual dependency from a credential to a measurement, so
+  `G2-2D.15` was created to own the reference skirt's physical-evaluation protocol, and the frontier moves to
+  `G1-SLICE.1`, where the specification meets Rust for the first time since `sc-units`.
 
 - `2026-09-30`: `.17` landed — §4.4's contract exists and its two prose lists are parsed rather than copied.
   Seventeen commands sit in five classes, and a class fixes a command's authority, its reversibility and its
@@ -873,51 +986,9 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
   heading and a stale children range in `G3-GRADING.md`), removed D36's third instance in `LIVE_STATUS.md`,
   and rolled both ledgers over in the commit whose append crossed them.
 
-- `2026-09-30`: `.14c` and `.19` landed, acting on the director's instruction to decide and act on the session's
-  three findings. `.14c` governs self-application under delegation — governance §6.1's five rules (record the
-  author and the applier; the author never approves the evidence their decision requires; consequences become
-  instruments; the record states its reversal; a delegation does not upgrade evidence), the roadmap's v0.3
-  disposition entry now discloses that one party proposed and applied it, and `G3-GRADING.14` may not be signed
-  by the criterion's author. `.19` makes the vacancy's consequences enumerable: the uncertainty census lists
-  every marker the book carries with the authority that resolves it and refuses a blocking marker whose status
-  section names nobody, with six probe arms — and building it found two defects in existing instruments, the
-  glossary's link resolver (one `gsub` could not normalise `../../`) and this census's own first authority list
-  (a bare gate id counted as an owner, which made the rule nearly unfailable).
-
-- `2026-09-30`: `.4c` landed — the D32 proposal is ruled approved and applied. Roadmap **v0.3** gives §11 G3
-  an *envelope coverage* exit criterion (every garment §3.2 names drafts, grades and exports at that gate or an
-  earlier one), logged in Appendix A with its source, and the four matrix cells dropped `(proposed)`. The
-  criterion arrives with owners: `G3-GRADING.5` became required and `.15` was created, and `.14`'s exit review
-  now fails if a §3.2 garment has no leaf's evidence. Applying it needed a mechanism the data plane did not
-  have — the `roadmap` debt baseline was measured at exactly the file's size, so a legitimate revision could
-  only land by hand-widening a number — which is `SPINE.4.5`'s revision-aware baseline, and the containment
-  adoption note's deferred trigger 3, fired and discharged. `PLANNING.6` fixed the coverage census that the
-  evidence siblings had broken (D44) and put it under `make probes`.
-
-- `2026-09-30`: `.14` landed — the governance model is drafted in full: every change class lands on exactly
-  one of two review paths, a change that alters exported bytes needs the domain expert **and** the maintainer,
-  seven roles are defined by the decision each may make and whether an agent may hold it, a golden is a
-  release-contract event with two signatures and is never frozen over an `assumed` constant, a contested
-  default becomes a profile parameter rather than a verdict, and every procurement item carries its fallback
-  with what the fallback costs in evidence. The three seats that need a named human are in one table for the
-  director, and the four questions deliberately left open are named so they arrive as decisions rather than
-  emergencies. Six of the chapter's rules are project decisions and are recorded as such in
-  `docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md`. The slice also obeys the
-  evidence-split convention `.4b` recorded: `.4b`'s checklist moved to `G0-CONTRACT-evidence.md`.
-
-- `2026-09-30`: `.4b` landed — D32 is resolved: classic collar, trousers, button/buttonhole and pocket are
-  assigned to **G3** (buttons also to **G5**, whose tech-pack clause already requires notions) and fly
-  construction to **G7**, whose exit already requires named limitations. No row says `unnamed (D32)` any
-  more — the census's A1 advisory reports `0` — and the four cells that depend on a roadmap change say
-  `(proposed)`, which the new A3 advisory prints on every run with a probe arm that requires it to notice a
-  removed marker. The exact amendment (one added G3 exit criterion over §3.2's garment list, plus the
-  rewritten complexity note) is quoted current-vs-proposed with line numbers in
-  `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`, marked **proposed**: the
-  roadmap is the director's to amend and `.15` puts it to him. The slice also performed the dev-notes
-  rollover its own append triggered (four lessons sealed byte-identically, digest verified) and generalized
-  the ledger probe's DESCRIPTOR rule to every `docs/history/*.md` segment, with a `DEVNOTES-DIGEST` arm
-  pinning the generalization; D40 records the two legs that stay changelog-only, owned by `SPINE.19`.
-
-Older entries — `.13d` and everything before it, back to the tree's creation by `PLANNING.1` — are sealed
-in [`docs/history/stitchcad-g0-contract-changelog-part1.md`](../history/stitchcad-g0-contract-changelog-part1.md)
-(84 lines, 7941 bytes, `sha256:3a6d091a…`), under the remedy defect D49 names for a tree file's ledger tail.
+Older entries — `.14c` and `.19`, `.4c`, `.14` and `.4b`, and below them everything back to the tree's
+creation — are sealed in
+[`docs/history/stitchcad-g0-contract-changelog-part2.md`](../history/stitchcad-g0-contract-changelog-part2.md)
+(48 lines, 4651 bytes, `sha256:00682c0c…`) and, for the oldest of them,
+[`…changelog-part1.md`](../history/stitchcad-g0-contract-changelog-part1.md), under the remedy defect D49
+names for a tree file's ledger tail.

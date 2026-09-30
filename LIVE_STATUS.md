@@ -10,13 +10,13 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Discipline spine (bedrock 0.6.1) | Done | memory · task-trees · commit workflow · 12 universal + 3 project doctrine gates (`make gate`) · 21 probe suites (`make probes`) · mdBook |
+| Discipline spine (bedrock 0.6.1) | Done | memory · task-trees · commit workflow · 12 universal + 3 project doctrine gates (`make gate`) · 22 probe suites (`make probes`) · mdBook |
 | Roadmap → task-trees (`PLANNING`) | Done | All 10 lanes owned — 13 trees, 3 evidence siblings, `0 unowned / 0 orphan(s) / 0 dead link(s)`, derived by `run_tree_coverage_census.sh` and watched by its probes |
 | Repo identity & policy (`SPINE`) | In Progress | containment, the acceptance gates, the push cadence and the table convention are enforced or written where authors look. Open: `.5`, `.13`, `.19` |
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
 | Defect census | In Progress | 7 open, 44 sealed. Open: D34 + D38 (`PLANNING.5`), D35 (`G1-SLICE.3`), D40 + D46 + D51 (`SPINE.19`), D49 (`SPINE.5`). Both counts derive from a `grep -c` over the census and its archive |
-| G0 — product & semantic contract | In Progress | **Active lane.** Every G0 chapter is written and instrumented; all four ADRs are recorded. Next `.15`, the exit review |
-| G1 — executable architecture slice | Not Started | 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, spikes |
+| G0 — product & semantic contract | Mostly Done | Every clause met and derived except evaluation-seat procurement, accepted open by ruling; closure **unapproved** (governance §6.1). `run_g0_exit_review.sh` → `18 met / 1 not met` |
+| G1 — executable architecture slice | Not Started | **Next lane.** 16 leaves; three runtime profiles, command bus, persistence, CSP, API/MCP, the two spikes |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 leaves; CSP + oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |

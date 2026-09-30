@@ -15,16 +15,19 @@
 
 - **Project:** StitchCAD — a sewing CAD, headless Rust core: construction-recipe designs, evidence-bearing
   Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.3, DRAFT until G0 exits.
-- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.12`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`,
-  `.14`/`.14b`/`.14c`, `.16`, `.17`, `.18`, `.19`. Remaining: **`.15`, the gate exit review**.
-- **Next action:** take **`G0-CONTRACT.15`** — the G0 exit review, and the last leaf of the gate: walk
-  §11's clause list, cite the deliverable and its re-derivable check for each (`met` with a cited artifact
-  or `not met` with a named blocker, never met on prose alone), update `LIVE_STATUS.md` and the roadmap's
-  status line, and hand the frontier to `G1-SLICE`. Two clauses are governed by what this tree already
-  established: the governance clause is recorded as `.14b` states it — the domain seat is **vacant**, so no
-  clause is marked met on a borrowed signature — and the evaluation-seat clause is `not met` with the
-  director as the named blocker, because naming humans is his. Every chapter now has an instrument, so the
-  review can cite a command per clause rather than a reading.
+- **Active tree:** `G1-SLICE`. **Gate G0 has no further leaf**: `.15`'s derived review reports
+  `18 met / 1 not met / 19 clauses`, the one open clause (evaluation-seat procurement) accepted open by the
+  director's ruling of `2026-09-30`, and the gate's **closure unapproved** because governance §6.1 withholds
+  approval of a decision's evidence from its author. `ROADMAP.md` stays DRAFT, correctly: one criterion is
+  not met.
+- **Next action:** take **`G1-SLICE.1`** — the workspace crate layout, which retires the starter crate and
+  creates the crates the roadmap names. This is where the specification meets Rust for the first time since
+  `sc-units`, so take the three unproven contracts early rather than the plumbing: the formula evaluator in
+  Rust against `run_formula_language_census.sh` as a differential oracle, the canvas spike against the
+  protocol in `docs/tasks/artifacts/canvas_spike/` (its `results.tsv` is empty and `G1-SLICE.13` fills it),
+  and one CSP constraint. Re-run `bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` any time to see
+  the gate's state.
+
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
 - **Push:** 400-commit cadence, **plus** an immediate push whenever an unpushed commit touches CI, a

@@ -34,4 +34,5 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - `.doctrine/live_document_size/` — the containment data plane (`surfaces.tsv`, `routes.tsv`), enforced by
   `scripts/check_live_doc_size.sh`. Owner `SPINE.4`.
 - `docs/tasks/artifacts/` — the diagnostic probe suites, one directory per instrument; `make probes` runs
-  them all with scratch pinned to this volume. Owner the leaf that needed the instrument.
+  them all with scratch pinned to this volume. `g0_exit/run_g0_exit_review.sh` derives gate G0's verdict from
+  `ROADMAP.md` §11 itself. Owner the leaf that needed the instrument.

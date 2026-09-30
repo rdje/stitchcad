@@ -1,0 +1,40 @@
+# docs/tasks/artifacts/g0_exit/g0_exit_clauses.tsv — the G0 exit review's data plane (leaf `G0-CONTRACT.15`).
+# One row per obligation. The review is DERIVED from this file and from ROADMAP.md: `run_g0_exit_review.sh`
+# parses §11's G0 exit bullet, requires every fragment of it to be dispositioned by an `exit` row and every
+# `exit` row's key to appear in a fragment, then RUNS each row's check and prints the verdict.
+#
+# Columns (tab-separated):
+#   id        the row's stable id, cited by the review and by the tree
+#   source    `exit` = a fragment of roadmap §11's G0 exit bullet, so the closure rule applies;
+#             `clause` = an obligation the roadmap states elsewhere (the column names where)
+#   key       for `exit` rows, a substring that identifies the roadmap fragment; for `clause` rows, `-`
+#   deliverable  what satisfies it, as a path a reader can open
+#   check     a shell command whose exit 0 is the evidence; `-` only where `authority` is not `instrument`
+#   authority `instrument` = the check decides; `director` = a human act this repository cannot perform
+#   blocker   for a `director` row, the named blocker; `-` otherwise
+#   note      a qualification printed with the verdict — how a clause is met, or what a ruling changed; `-`
+#             when the verdict needs no qualification
+#
+# A row whose authority is `director` is NOT a gap in the review: it is the review stating honestly that the
+# clause needs an act this repository has no authority to make, which is what `not met` with a named blocker
+# means in the tree's acceptance rule.
+#id	source	key	deliverable	check	authority	blocker	note
+G0-01	exit	feature matrix	docs/book/src/spec/feature-matrix.md	bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh	instrument	-	-
+G0-02	exit	glossary of	docs/book/src/spec/glossary.md	bash docs/tasks/artifacts/glossary/run_glossary_census.sh	instrument	-	-
+G0-03	exit	units & tolerance	docs/book/src/spec/units-and-tolerances.md	test -f docs/book/src/spec/units-and-tolerances.md && cargo test -q -p sc-units	instrument	-	-
+G0-04	exit	garment ontology	docs/book/src/spec/ontology.md	test -f docs/book/src/spec/ontology.md && grep -q 'persistent-identity contract' docs/book/src/spec/ontology.md	instrument	-	-
+G0-05	exit	instantiation paths	docs/book/src/spec/instantiation-paths.md	test -f docs/book/src/spec/instantiation-paths.md && grep -q 'extreme-size' docs/book/src/spec/instantiation-paths.md	instrument	-	-
+G0-06	exit	size-set ownership	docs/decisions/decision_size-set-ownership.md	test -f docs/decisions/decision_size-set-ownership.md && test -f docs/book/src/spec/size-sets.md	instrument	-	-
+G0-07	exit	release contract	docs/book/src/spec/release-contract.md	bash docs/tasks/artifacts/release_contract/run_release_contract_census.sh	instrument	-	-
+G0-08	exit	ADR-0001	docs/decisions/decision_adr-0001-license-and-solver.md	test -f docs/decisions/decision_adr-0001-license-and-solver.md && grep -q 'MIT OR Apache-2.0' Cargo.toml	instrument	-	-
+G0-09	exit	ADR-0003	docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md	bash docs/tasks/artifacts/formula_language/run_formula_language_census.sh	instrument	-	-
+G0-10	exit	ADR-0004	docs/decisions/decision_adr-0004-interchange-dialects.md	bash docs/tasks/artifacts/interchange/run_interchange_census.sh	instrument	-	-
+G0-11	exit	standards identified	docs/book/src/spec/standards.md	bash docs/tasks/artifacts/standards/run_standards_census.sh	instrument	-	-
+G0-12	exit	procurement	docs/book/src/governance.md	-	director	no evaluation seat is being procured and no searcher exists; the director's ruling of 2026-09-30 accepts this	accepted open by ruling: no target system reads our artifacts back, so the interchange claims stay `cited-from-roadmap` and G6's receiver validation falls to the roadmap's partner-run fallback or does not happen
+G0-13	exit	governance model,review paths	docs/book/src/governance.md	test -f docs/book/src/governance.md && grep -q 'Two review paths' docs/book/src/governance.md && grep -q 'vacant' docs/book/src/governance.md	instrument	-	met as drafted: the model exists, both review paths are defined and the project owner is the director, acting; the domain seat is vacant and governance §8.1 records the four things no acting holder may do (ruling of 2026-09-30)
+G0-14	exit	reference skirt	docs/book/src/spec/reference-skirt.md	bash docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh	instrument	-	-
+G0-15	clause	-	docs/book/src/spec/i18n-architecture.md	bash docs/tasks/artifacts/i18n/run_i18n_census.sh	instrument	-	-
+G0-16	clause	-	docs/book/src/spec/command-layer.md	bash docs/tasks/artifacts/command_layer/run_command_layer_census.sh	instrument	-	-
+G0-17	clause	-	.github/workflows/	bash -c 'test -f .github/workflows/doctrines.yml && test -f .github/workflows/rust.yml'	instrument	-	-
+G0-18	clause	-	crates/sc-units, crates/sc-core	make wasm	instrument	-	-
+G0-19	clause	-	docs/book/src/spec/	bash -c 'test -d docs/book/book/spec && mdbook build docs/book >/dev/null 2>&1'	instrument	-	-

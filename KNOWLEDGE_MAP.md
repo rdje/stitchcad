@@ -37,7 +37,8 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - `.doctrine/live_document_size/` — the containment data plane (`surfaces.tsv`, `routes.tsv`), enforced by
   `scripts/check_live_doc_size.sh`. Owner `SPINE.4`.
 - `docs/tasks/artifacts/` — the diagnostic probe suites, one directory per instrument; `make probes` runs
-  them all with scratch pinned to this volume. Owner the leaf that needed the instrument.
+  them all with scratch pinned to this volume. `g0_exit/run_g0_exit_review.sh` derives gate G0's verdict from
+  `ROADMAP.md` §11 itself. Owner the leaf that needed the instrument.
 
 ## Active task-trees
 
@@ -69,6 +70,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_command-layer-contract-and-undo-granularity.md`](docs/decisions/decision_command-layer-contract-and-undo-granularity.md)
 - [`decision_d32-proving-gates-proposed-roadmap-amendment.md`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)
 - [`decision_director-ruling-2026-09-30-four-findings.md`](docs/decisions/decision_director-ruling-2026-09-30-four-findings.md)
+- [`decision_director-ruling-2026-09-30-no-seats-proceed-unapproved.md`](docs/decisions/decision_director-ruling-2026-09-30-no-seats-proceed-unapproved.md)
 - [`decision_fixture-oracles-derive-the-finished-dimension.md`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)
 - [`decision_governance-two-review-paths-and-the-unnamed-roles.md`](docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md)
 - [`decision_i18n-one-message-system-fluent.md`](docs/decisions/decision_i18n-one-message-system-fluent.md)

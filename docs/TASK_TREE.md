@@ -54,8 +54,8 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | --- | --- | --- | --- | --- |
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.5` — derive the index↔tree frontier agreement (D34, which recurred on `2026-09-30`) | repo-local |
 | [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5` — the toolbox rows for the instruments in use, then `.13`/`.19` (`.21`'s cleanup ran `2026-09-30`) | repo-local |
-| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.15` — the exit review; every other leaf is done | repo-local |
-| [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `proposed` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
+| [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `done` | no further leaf — `18 met / 1 not met` by `run_g0_exit_review.sh`, closure unapproved (§6.1) | repo-local |
+| [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `active` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
 | [`G4-PROFILES`](tasks/G4-PROFILES.md) | §11 gate **G4** — profiles & uncertainty workflow | `proposed` | `.1` — `sc-profiles` schema v2 | repo-local |
@@ -79,8 +79,14 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-Execution order right now: **`G0-CONTRACT.15`** (the exit review closes gate G0), then `G1-SLICE` …
-(every other `G0-CONTRACT` leaf is done, as are `SPINE.4.4`, `.4.5`, `.15`, `.19.1`, `.20` and `.21`). The ruling of `2026-09-30` delegated four items — D27, D32, `.14`'s drafting and the
+Execution order right now: **`G1-SLICE.1`** and the lane that follows it. Gate G0 has no further leaf:
+its review is derived (`bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` → `18 met / 1 not met /
+19 clauses`), the one open clause travels with the director's ruling of `2026-09-30` that accepts it, and the
+gate's closure stays unapproved under governance §6.1 because its reviewer authored most of what it reviews.
+Take the three unproven contracts early in G1 — the formula evaluator against its reference oracle, the
+canvas spike against its protocol, one CSP constraint — rather than the plumbing. `SPINE` keeps `.5`, `.13`
+and `.19` open; none blocks product work (defect D24). The frontier cells above are hand-kept and have
+drifted four times (defect D34); `PLANNING.5` derives them. The ruling of `2026-09-30` delegated four items — D27, D32, `.14`'s drafting and the
 containment derivation — and a second instruction delegated its three findings; all are landed, `ROADMAP.md` is
 at **v0.3** carrying G3's envelope-coverage criterion, and what remains of the ruling is the director's alone:
 naming the three humans governance §8 lists. The `SPINE` lane keeps `.5`, `.13` and `.19` open; none blocks
