@@ -938,7 +938,11 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
   addition inherits a proof requirement instead of needing its own amendment.
   No locked decision in §15 is reopened: the envelope was already declared, and
   this names the gate that proves it. The feature matrix's four `(proposed)`
-  cells become committed gates on this revision.
+  cells become committed gates on this revision. The proposal's author and the
+  party that applied it are the same one, which the governance model permits and
+  bounds: the criterion's evidence is derived by instruments rather than asserted,
+  and its author may not approve it (`docs/book/src/governance.md` §6.1,
+  `docs/decisions/decision_self-application-under-delegation.md`).
 
 ---
 

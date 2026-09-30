@@ -55,6 +55,18 @@ Three rules follow, and each closes a way this could have been faked:
   of the file's size at a moment; without an oracle it goes stale silently the day the file is revised, and
   then it either blocks legitimate work or, worse, is edited by whoever is blocked.
 
+## The limit this rule does not close, stated rather than discovered later
+
+`at=<token>` binds a baseline to a **revision marker**, not to a commit. A marker can stay put while the file
+grows in several commits, and each of those commits can re-base the baseline — so the mechanism guarantees that
+a growth is *visible and reasoned* (the numbers move in a diff beside the content that moved them, and the row's
+`notes` must cite the authority), not that it happens exactly once per revision. Measured on the day it was
+adopted: roadmap v0.3 was re-based at `947` lines / `52 818` B, then again to `951` / `53 153` when the same
+revision's Appendix A entry gained the self-application disclosure `governance.md` §6.1 requires. Closing the
+gap fully would need the checker to compare against the file as it stood at the commit that changed the marker,
+which means reading history inside a doctrine check — deliberate over-engineering for a document that changes
+a few times a year, and recorded here so the choice is a decision rather than an oversight.
+
 ## How to apply
 
 - **Amending a baselined document:** change its revision marker, make the edit, re-measure

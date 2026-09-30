@@ -621,6 +621,8 @@ placeholder box (defect D15).
 
 | `2026-09-30` | `SPINE.20` | `check_table_code_pipes.sh --self-test`; a scan of every tracked `.md` for the shape it refuses; `check_doctrines.project.sh`; `make gate`; the render oracle it takes as ground truth | `7 arms, 0 failed`; `0` violations in the tracked book, so the gate is absolute and not a ratchet; `PROJECT-SPECIFIC: 3 project doctrine(s) green`; `=== all doctrines green ===`; `probes: 3 pass / 0 fail` |
 
+| `2026-09-30` | `SPINE.20` (CI verdict, observed after the exceptional push `scripts/` owed) | `make check`/`gate`/`probes`; `git push origin main`; the Actions runs API for `head_sha=a743d53` | `exit=0` all three; `4bd4027..a743d53  main -> main`, ahead `0`; `runs: 2` — **`doctrines` `success`**, **`rust` `success`**, the first runner execution of `TABLE-CODE-PIPE` |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |

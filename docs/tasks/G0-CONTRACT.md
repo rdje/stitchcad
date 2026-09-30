@@ -321,6 +321,34 @@ not a contract.
   a leaf that cannot name anyone.
   Commit: `STITCHCAD-G0-0014b`
 
+- ID: `G0-CONTRACT.14c`
+  Status: `done`
+  Goal: govern the case this project actually runs in — one party proposing and applying a decision under
+  delegation. Finding 1 of the `2026-09-30` session was that the engineer proposed the `ROADMAP.md` §11 G3
+  amendment in `.4b` and applied it in `.4c`; that was disclosed in a report, and a disclosure decays while a
+  rule does not.
+  Acceptance: governance states the rule for decisions made under delegation; the roadmap's own disposition
+  entry discloses that author and applier were the same party; the gate that consumes the amendment may not be
+  signed by its author; a decision record carries the reasoning and the founding instance.
+  Verification: recorded below and in the acceptance checklist — governance §6.1 carries five rules, the
+  roadmap's Appendix A v0.3 entry names the self-application, `G3-GRADING.14`'s acceptance withholds approval
+  from the criterion's author, and `make gate` is green with the containment baseline re-based to v0.3's final
+  state under the revision-aware rule `SPINE.4.5` built.
+  Commit: `STITCHCAD-G0-0014c`
+
+- ID: `G0-CONTRACT.19`
+  Status: `done`
+  Goal: make "what this project does not know yet" a derived list rather than an impression — finding 2's
+  second half. The domain seat is vacant, so everything waiting on it must be enumerable by one command, and an
+  edit that quietly drops an `assumed` marker must change a count somebody reads.
+  Acceptance: a census enumerates every uncertainty marker the book's own vocabulary uses, with the authority
+  that resolves each; it refuses a blocking marker whose verification-status section names no resolver; a probe
+  suite proves it notices an unowned claim and a chapter added later, and proves it leaves a definition alone;
+  governance and the fixture chapter point at it; both are in `TOOLBOX.md`.
+  Verification: recorded below and in the acceptance checklist — `uncertainty census: 88 markers / 10 files /
+  0 unowned / 0 failure(s)`, `exit=0`, and `probes: 6 pass / 0 fail` including an owned-claim control arm.
+  Commit: `STITCHCAD-G0-0019`
+
 - ID: `G0-CONTRACT.14`
   Status: `done` for everything this repository can do — the model is drafted, reviewable and adopted; the
   **naming of the three humans stays blocked** on the director and is carried by §8 of the chapter and by
@@ -404,6 +432,8 @@ not a contract.
 | 13 | `G0-CONTRACT.13d` | `done` | the director ruled on `2026-09-30` that the engineer decides D27: one straight band, cut once and folded at its midpoint, plus a fused interfacing piece — and the agreement is now derived by a tracked instrument rather than by reading |
 | 14 | `G0-CONTRACT.4b` | `done` | D32 resolved: collar, trousers, buttons and pockets get G3 as their proving gate and the fly gets G7, with the roadmap amendment quoted as a **proposal** the director rules on at `.15` |
 | 15 | `G0-CONTRACT.14` | `done` | the governance model is drafted in full — two review paths, roles defined by the decision each may make, goldens signed twice, the procurement fallbacks with their cost in evidence — and the three empty seats are in one table for the director |
+| 15c | `G0-CONTRACT.14c` | `done` | the case this project runs in is governed: a delegated decision records that its author applied it, its consequences become instruments, and its author never approves its evidence |
+| 15d | `G0-CONTRACT.19` | `done` | what the project does not know is one command away: the uncertainty census enumerates every marker with its resolving authority and refuses an unowned one |
 | 15b | `G0-CONTRACT.4c` | `done` | the director delegated the finding outright, so `.4b`'s proposal is ruled approved and applied: roadmap **v0.3** carries the envelope-coverage criterion, the four cells are committed gates, and `G3-GRADING.5`/`.15` own the garments |
 | 16 | `G0-CONTRACT.9` | `pending` | **next** — ADR-0003 plus the formula language v1: grammar, units inside expressions, conditionals, name binding, evaluation order, error and dimension rules, worked over the reference skirt, and the drafting system that ships as the reference block set. A big chapter, so it is a whole slice |
 | 17 | `G0-CONTRACT.10`–`.12`, `.15`–`.17` | `pending` | the remaining G0 chapters, in the order the acceptance table records |
@@ -556,116 +586,87 @@ here, because `scripts/check_task_acceptance.sh` judges every staged `docs/tasks
 with no ticked boxes; the next slice moves it across. Neither file carries an unticked placeholder box
 (defect D15).
 
-### `G0-CONTRACT.4c` — the proposal is ruled on and applied, and the criterion arrives with owners
+### `G0-CONTRACT.14c` — a delegated decision is bounded, not merely disclosed
 
-- [x] **REPRODUCE / ISSUE** — two things were true and neither could stand. (1) The envelope was still
-  unproved in the roadmap: `sed -n '/^### G3 /,/^- Domain-complexity/p' ROADMAP.md | grep -ci
-  'collar\|trousers\|button\|pocket'` → `1` before this slice, and that one hit was the *note* that permitted
-  an intermediate, not a criterion; the matrix said so mechanically —
-  `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh` → `A3 advisory … proposed cells: 4`.
-  (2) Applying the amendment was impossible without cheating: `wc -lc ROADMAP.md` → `919 50821`, exactly the
-  `roadmap` row's transition-debt baseline (`lines=919;bytes=50821`), and `check_live_doc_size.sh` refuses a
-  widened baseline — so the only way to grow the roadmap was to edit the number, which is the silent widening
-  the rule exists to prevent.
-- [x] **ROOT CAUSE (WHY + WHERE)** — the first cause was authority, not analysis: the director's ruling of
-  `2026-09-30` reserved amending `ROADMAP.md`, and his second instruction delegated the finding outright, so
-  the proposal became a decision this repository could execute. The second cause was a missing mechanism: a
-  debt baseline is a *stored copy* of a file's size at a moment, and nothing tied it to the file's revision
-  identity, so a legitimate revision and a silent widening looked identical to the checker. Measured, because
-  the block is the evidence: `bash scripts/check_live_doc_size.sh` over the amended roadmap →
-  `LIVE-DOC-SIZE: roadmap: transition debt WIDENED on lines (947 > baseline 919) — a baseline never grows`,
-  `exit=1`, against `grep -o 'lines=[0-9]*;bytes=[0-9]*' .doctrine/live_document_size/surfaces.tsv` →
-  `lines=919;bytes=50821`, `rc=0`. That is the containment adoption note's deferred trigger 3 — "a stored copy
-  of a mechanically owned value needs an executed freshness oracle" — fired by the first roadmap amendment,
-  and `SPINE.4.5` discharges it.
-- [x] **ADDRESSED (verified)** — roadmap **v0.3** carries the criterion: `grep -n 'envelope coverage'
-  ROADMAP.md` → line `712`, `- **Exit (envelope coverage):** every garment §3.2 names drafts, grades and
-  exports at this gate or an earlier one …`, and the same census over the section now returns `3` matching
-  lines instead of `1`. The revision is marked where the roadmap's own policy requires —
-  `grep -n 'v0.3' ROADMAP.md` → the title (line 1), the status block (line 11, naming the source), the
-  Appendix A disposition entry (line 926) and the end line (line 945) — and the file measures
-  `wc -lc ROADMAP.md` → `947 52818` (+28 lines / +1 997 B), re-based in the registry as
-  `lines=947;bytes=52818;at=v0.3`. The matrix is committed rather than provisional:
-  `grep -c 'proposed §11 amendment' docs/book/src/spec/feature-matrix.md` → `0`, and
-  `run_feature_matrix_census.sh` → `105 rows / 29 diagnostics / 0 failure(s)`, `exit=0`, with `D32 rows: 0`
-  and `proposed cells: 0`; `run_feature_matrix_probes.sh` → `probes: 12 pass / 0 fail` after its
-  `PROPOSAL-VISIBLE` arm was rebuilt to pin A3 in BOTH directions (0 on the real tree, 1 once a marker is
-  injected) instead of asserting a count that no longer exists. The criterion arrives with owners:
-  `G3-GRADING.5` is required (trousers + pocket + derived buttonhole), `G3-GRADING.15` is created (the classic
-  collar), and `.14`'s exit review fails if a §3.2 garment has no leaf's evidence — so the capture claim still
-  derives: `run_tree_coverage_census.sh` → `census: 10 lanes / 13 trees / 2 sibling(s) / 0 unowned /
-  0 orphan(s) / 0 dead link(s)`, `exit=0`.
+- [x] **REPRODUCE / ISSUE** — finding 1: the engineer proposed the `ROADMAP.md` §11 G3 amendment in `.4b` and
+  applied it in `.4c`, and the only thing recording that was a sentence in a session report.
+  `git show HEAD:docs/book/src/governance.md | grep -ci 'self-appl\|same party'` → `0`, `rc=1`, against `2`
+  after this slice: the governance model covered human seats and agents, and said nothing about the case this
+  project actually runs in.
+- [x] **ROOT CAUSE (WHY + WHERE)** — governance §8 was written to list *vacancies*, and §6 to bound *agents*;
+  neither addresses a party that legitimately holds the pen for both halves of a decision. A disclosure is not a
+  control: it decays with the conversation it was made in, while a rule is read by whoever acts next. The
+  founding instance is measured in the tree: `git log --oneline -3 -- ROADMAP.md` → `513374c` (the v0.3
+  amendment), `5257257` (bootstrap), `f1dcbe4` (initial), `rc=0` — the roadmap's first revision in its life was
+  prepared as a proposal in `4b0bb95` and applied in `513374c`, adjacent commits by the same author.
+- [x] **ADDRESSED (verified)** — `docs/book/src/governance.md` §6.1 carries five rules: record the author and
+  the applier and say so when they are the same; the author of a decision may not approve the evidence that
+  decision requires (approval belongs to a reviewer meeting §2's independence criterion, and where none exists
+  the claim stays **unapproved**); consequences become instruments others can run; the record states what would
+  reverse it and who may; a delegation to decide is not one to upgrade evidence.
+  `wc -lc docs/book/src/governance.md` → `265` lines / `21 303` B, inside the `book_collection` per-part health
+  of `400` / `24 576`; `make book` → `INFO HTML book written to …`, `exit=0`. The rule bites in three places,
+  each verifiable: the roadmap's Appendix A v0.3 entry now states that author and applier were the same party
+  (`grep -c 'same one' ROADMAP.md` → `1`, `rc=0`), `G3-GRADING.14`'s acceptance withholds the review from the
+  criterion's author, and the reasoning is in
+  `docs/decisions/decision_self-application-under-delegation.md` (indexed, `answers:` line).
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; the roadmap grew by four lines
+  and the revision-aware baseline refused it, exactly as `SPINE.4.5` designed:
+  `LIVE-DOC-SIZE: roadmap: transition debt WIDENED on lines (951 > baseline 947)`, `exit=1` — handled by the
+  rule rather than around it, re-basing to v0.3's final state (`lines=951;bytes=53153;at=v0.3`) with the
+  authority cited in the row's notes, and recording in the decision record the limit this exposed (`at=` binds a
+  baseline to a revision marker, not to a commit). `bash scripts/check_live_doc_size.sh` →
+  `live-doc-size: OK — 17 surfaces, 15 routes, 89 files measured`, `exit=0`; `make probes` →
+  `15 suite(s) green`; `make book` → `exit=0`; the book's censuses green.
+- [x] **FIX** — added §6.1 to the governance chapter, the disclosure to the roadmap's disposition entry, the
+  independence requirement to `G3-GRADING.14`'s acceptance, the decision record and its index row; re-based the
+  containment baseline under the rule and recorded that rule's limit.
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier and the tree's logs; `MEMORY.md`, `LIVE_STATUS.md`,
+  `CHANGELOG.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` and the regenerated Knowledge Map in this commit. Lesson
+  promotion: **promoted** — the new record carries an `answers:` line.
+
+### `G0-CONTRACT.19` — what the project does not know is one command away
+
+- [x] **REPRODUCE / ISSUE** — the domain seat is vacant and the book's unverified claims were enumerable only by
+  reading it: `git grep -c '\`assumed\`' HEAD -- docs/book/src` → `18` occurrences across `6` files, with
+  nothing tying them to the seat that owes them and nothing noticing if one disappeared. The roadmap's core
+  property is that uncertainty is data; a datum nobody can list is prose.
+- [x] **ROOT CAUSE (WHY + WHERE)** — every chapter states its own verification status, and no instrument reads
+  them together, so "what waits on a human" lived in the reader's memory. `ls docs/tasks/artifacts/` at `HEAD`
+  → twelve directories, none of them about uncertainty; the population spans nine files and six marker
+  spellings, which is exactly the shape that drifts.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/uncertainty/run_uncertainty_census.sh` →
+  `uncertainty census: 88 markers / 10 files / 0 unowned / 0 failure(s)`, `exit=0`, enumerating every marker in
+  the book's own vocabulary (`assumed`, `unknown`, `unverified-with-owner`, `read-in-repo`,
+  `cited-from-roadmap`, `read-external`, `known`, `derived`, `(proposed)`, `vacant`) per file and per resolving
+  authority, and refusing — rule `U1` — a blocking marker whose verification-status section names no resolver.
+  Its discrimination is proved, not assumed:
+  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/uncertainty/run_uncertainty_probes.sh` →
+  `probes: 6 pass / 0 fail`, with an owned-claim control arm, an unowned synthetic chapter refused by name, a
+  chapter added *after* the census was written refused (so the rule is about the population), a definition left
+  alone, and an absent book refusing with `exit=2`. Governance §8.1 and the fixture's §11 now point at it, so
+  the day a name arrives the work it unblocks is one command away.
 - [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
-  `13 suite(s) green` (twelve before this slice; the thirteenth is the tree-coverage suite `PLANNING.6` adds),
-  with `run_live_doc_size_probes.sh` → `probes: 5 pass / 0 fail` including the new `REAL-3` arm that stales the
-  real registry to `at=v0.2` and requires the refusal, and `check_live_doc_size.sh --self-test` →
-  `15 arms, 0 failed` (eleven before `SPINE.4.5`); `bash scripts/check_live_doc_size.sh` →
-  `live-doc-size: OK — 17 surfaces, 15 routes, 84 files measured`, `exit=0`, the roadmap row inside its
-  re-based debt and its `240` B maxline health (widest `220` B); the book's other censuses are green and
-  unchanged — glossary `276 terms / 8 parts / 145 tokens / 0 failure(s)`, standards
-  `6 registered / 6 designations used / 0 failure(s)`, fixture `20 derived rows / 4 closure checks / 5 pieces /
-  0 mismatch(es)`; `make book` → `exit=0`. No Rust changed.
-- [x] **FIX** — amended §11 G3 through the roadmap's revision policy (criterion added, the "intermediate
-  complexity" note rewritten so an intermediate can never substitute for a criterion); logged it in Appendix A
-  with its source and the defect it closes; re-based the containment baseline with `at=v0.3` and the authority
-  cited in the row's notes; dropped `(proposed)` from the four cells and rewrote §1 rule 2, §9, §12 and §14 so
-  no sentence still calls the gap open; marked `decision_d32-proving-gates-proposed-roadmap-amendment.md` as
-  **applied** (keeping the rejection path, because a future revision may withdraw the criterion); marked the
-  containment adoption record's trigger 3 as fired and discharged; gave `G3-GRADING` the two leaves and the
-  acceptance-table row; fixed the coverage census's tree enumeration and put it under `make probes` (D44,
-  `PLANNING.6`); and added the revision-aware baseline (`SPINE.4.5`).
-- [x] **LOCKSTEP** — `MEMORY.md` (v0.3, the amendment no longer pending), `LIVE_STATUS.md`, `CHANGELOG.md`,
-  `DEV_NOTES.md`, `docs/TASK_TREE.md` (the coverage claim now cites both the census and its probe suite),
-  `TOOLBOX.md` (two new rows), `docs/decisions/INDEX.md` and the regenerated Knowledge Map; D44 logged and
-  fixed in `PLANNING.md`; `.15`'s scope narrows because the proposal it was to carry is applied. Lesson
-  promotion: **promoted** — `decision_revision-aware-containment-baseline.md` carries an `answers:` line.
-
-### `G0-CONTRACT.14b` — an empty seat is held acting with limits, or it is vacant
-
-- [x] **REPRODUCE / ISSUE** — governance §8 listed three seats as "blocked on the director" and every chapter
-  that needed a domain reviewer pointed at a leaf that cannot name one:
-  `grep -rn 'G0-CONTRACT.14` names' docs/book/src/spec/` → the standards registry's owner cells and the
-  fixture's `assumed`-constant bullets, i.e. three chapters deferring to an event that had no mechanism. The
-  director then delegated the finding ("make the necessary calls and every needed action"), which makes the
-  vacancy this repository's problem to state precisely rather than to wait on.
-- [x] **ROOT CAUSE (WHY + WHERE)** — the chapter was drafted under a ruling that reserved naming humans, so it
-  recorded the gap honestly and stopped there: "blocked" is a state, not a plan. What was missing is the
-  distinction between two kinds of authority — **office**, which the director already holds and can therefore
-  hold *acting*, and **competence**, which nobody in this repository has and no acting arrangement can supply.
-  Treating the three seats alike would either stall the project owner's decisions unnecessarily or, worse,
-  imply that an engineer can certify a sewing judgement.
-- [x] **ADDRESSED (verified)** — `docs/book/src/governance.md` §8 is rewritten as three subsections: the seat
-  table now names who holds each seat (`director, acting (§8.1)` twice, `**nobody — vacant, not acting**` for
-  the domain expert); §8.1 states the acting authority and four hard prohibitions on it (no confirming the
-  fixture's `assumed` constants, no signing a golden's semantic half, no ruling a safety-relevant term, no
-  approving a byte-changing Factory Profile — which under §1's conjunctive rule leaves such a change
-  unapproved with the missing half reported); §8.2 states the ask per seat so naming one is a single act.
-  `wc -lc docs/book/src/governance.md` → `233` lines / `18 465` B, widest line `185` B, inside the
-  `book_collection` per-part health of `400` / `24 576` / `200`; `make book` → `INFO HTML book written to …`,
-  `exit=0`. The rule is recorded in `docs/decisions/decision_unnamed-seats-acting-authority.md` (indexed,
-  `answers:` line) and the deferring chapters now cite the seat's real state:
-  `grep -rc 'vacant' docs/book/src/spec/standards.md docs/book/src/spec/reference-skirt.md
-  docs/book/src/spec/glossary.md` → `3`, `2`, `1`, and the stale deferral is gone —
-  `grep -rn 'G0-CONTRACT.14` names' docs/book/src/spec/ | grep -c .` → `0`, `rc=1`. The standards census still
-  resolves every owner cell: `run_standards_census.sh` → `6 registered / 6 designations used / 0 failure(s)`.
-- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`;
-  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 84 files measured`,
-  `exit=0`; the book's censuses are green — glossary `276 terms / 8 parts / 145 tokens / 0 failure(s)` (the new
-  prose introduces no undeclared machine token), standards `6 registered / 0 failure(s)`, matrix
-  `105 rows / 0 failure(s)`, fixture `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`;
-  `make probes` → `13 suite(s) green`. No Rust and no instrument changed in this leaf.
-- [x] **FIX** — rewrote §8 and its status block, §2's "currently" column for the three seats, the fixture
-  chapter's two reviewer references, the glossary's two, the standards registry's two owner cells and its
-  verification-plan step 1 — each cross-chapter link written as `../governance.md`, because a chapter under
-  `spec/` reaches the book's top level one directory up and a dead link here would have been the D28 class
-  (caught by building the book, not by reading the path); added the decision record and its index row.
-- [x] **The first G2 golden stays gated, and that is the point of the leaf.** The tempting move was to record
-  the director as acting domain expert so the schedule clears; the honest one is a vacant seat with a named
-  consequence, because a golden frozen over an unreviewed `assumed` constant freezes a guess with the
-  confidence of a fact, and the fixture chapter says so where a plan will hit it.
-- [x] **LOCKSTEP** — the leaf, this checklist and the tree's blockers; `MEMORY.md`'s blocker bullet;
-  `LIVE_STATUS.md`; `CHANGELOG.md`; `docs/decisions/INDEX.md` and the regenerated Knowledge Map. Lesson
-  promotion: **promoted** — the record carries an `answers:` line.
+  `make probes: 15 suite(s) green`, `exit=0`; `make book` → `exit=0`;
+  `bash docs/tasks/artifacts/glossary/run_glossary_census.sh` → `277 terms / 8 parts / 146 tokens /
+  0 failure(s)` after the new `vacant seat` entry and a re-derived index, and its own suite still
+  `probes: 10 pass / 0 fail`; the other censuses unchanged (matrix `105 rows / 0 failure(s)`, standards
+  `6 registered / 0 failure(s)`, fixture `20 rows / 4 checks / 5 pieces / 0 mismatch(es)`, coverage
+  `13 trees / 3 sibling(s) / 0 orphan(s)`); `bash scripts/check_live_doc_size.sh` → `OK — 17 surfaces,
+  15 routes, 89 files measured`, `exit=0`.
+- [x] **FIX** — built the census and its probe suite; added the `vacant seat` glossary entry (the token census
+  demanded an owner for `vacant`, its sixth catch at authoring time) and re-derived the A–Z index; pointed
+  governance §8.1 and the fixture §11 at the census; added both `TOOLBOX.md` rows. **Building it found two
+  defects in existing instruments, both fixed here:** the glossary census's `resolve()` deleted one `/x/../` per
+  `gsub` pass and so reported `../../governance.md` — a file that exists — as a dead reference (it now
+  normalises segment by segment), and this census's first authority list counted a bare gate id as an owner, so
+  "frozen as a golden at G2" satisfied it and the `UNOWNED` arm passed for the wrong reason until the list was
+  narrowed to parties that can *resolve* a claim.
+- [x] **LOCKSTEP** — the leaf, this checklist, the frontier and the tree's logs; `TOOLBOX.md`,
+  `LIVE_STATUS.md` (fifteen probe suites, re-derived), `MEMORY.md`, `CHANGELOG.md` and the regenerated
+  Knowledge Map in this commit. Lesson promotion: declined (the two instrument defects are recorded in this
+  checklist and in the tools' own headers, which is where a probe author will look; no new dated lesson was
+  added to `DEV_NOTES.md` this slice).
 
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and a leaf that stages code additionally fills a `### <leaf-id>` checklist subsection
@@ -700,6 +701,9 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `2026-09-30` | `G0-CONTRACT.4` | feature-matrix census; both probe suites; glossary census; `make book`; `make gate`; `make probes`; containment | `105 rows / 29 diagnostics / 0 failure(s)`; `probes: 10 pass / 0 fail` twice; `265 terms / 8 parts / 0 failure(s)`; `exit=0`, 6 spec pages; `=== all doctrines green ===`; `10 suite(s) green` |
 | `2026-09-30` | `G0-CONTRACT.1` | glossary census; both probe suites; `make book`; `make gate`; `make probes`; `make check`; containment | `239 terms / 8 parts / 138 tokens / 0 failure(s)`; `probes: 10 pass / 0 fail` and `6 pass / 0 fail`; `exit=0`, 9 pages rendered; `=== all doctrines green ===`; `9 suite(s) green` — detail in the checklist |
 
+| `2026-09-30` | `G0-CONTRACT.14c` | governance §6.1 and its size; the roadmap's Appendix A entry and its re-based baseline; `G3-GRADING.14`'s acceptance; `make gate`; containment | five rules in §6.1; the v0.3 entry discloses the self-application; the exit review withholds approval from the criterion's author; `=== all doctrines green ===`; `OK — 89 files measured` with `roadmap` at `lines=951;bytes=53153;at=v0.3` |
+| `2026-09-30` | `G0-CONTRACT.19` | the uncertainty census and its probe suite; the glossary census after the new term; `make book`; `make probes` | `88 markers / 10 files / 0 unowned / 0 failure(s)`, `exit=0`; `probes: 6 pass / 0 fail`; `277 terms / 8 parts / 146 tokens / 0 failure(s)`; `exit=0`; `15 suite(s) green` |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -723,9 +727,22 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.14` | `STITCHCAD-G0-0014 (leaf G0-CONTRACT.14): the governance model, and the three empty seats` | two review paths, roles by authority, goldens signed twice, procurement fallbacks with their cost; the naming stays the director's |
 | `G0-CONTRACT.4c` | `STITCHCAD-G0-0004c (leaf G0-CONTRACT.4c): the envelope criterion is law, not a proposal` | roadmap v0.3; four cells committed; `G3-GRADING.5`/`.15` own the garments; the baseline is revision-aware |
 | `G0-CONTRACT.14b` | `STITCHCAD-G0-0014b (leaf G0-CONTRACT.14b): an empty seat is held acting, or it is vacant` | two seats acting with hard limits, the domain seat openly vacant, the ask per seat written down; the first G2 golden stays gated on a real name |
+| `G0-CONTRACT.14c` | `STITCHCAD-G0-0014c (leaf G0-CONTRACT.14c): a delegated decision is bounded, not just disclosed` | governance §6.1; the roadmap's v0.3 entry discloses its author-applier |
+| `G0-CONTRACT.19` | `STITCHCAD-G0-0019 (leaf G0-CONTRACT.19): what the project does not know is derived` | the uncertainty census plus its six arms; the glossary's link resolver fixed |
 | `G0-CONTRACT.9`–`.12`, `.15`–`.17` | `pending` | — |
 
 ## Changelog
+
+- `2026-09-30`: `.14c` and `.19` landed, acting on the director's instruction to decide and act on the session's
+  three findings. `.14c` governs self-application under delegation — governance §6.1's five rules (record the
+  author and the applier; the author never approves the evidence their decision requires; consequences become
+  instruments; the record states its reversal; a delegation does not upgrade evidence), the roadmap's v0.3
+  disposition entry now discloses that one party proposed and applied it, and `G3-GRADING.14` may not be signed
+  by the criterion's author. `.19` makes the vacancy's consequences enumerable: the uncertainty census lists
+  every marker the book carries with the authority that resolves it and refuses a blocking marker whose status
+  section names nobody, with six probe arms — and building it found two defects in existing instruments, the
+  glossary's link resolver (one `gsub` could not normalise `../../`) and this census's own first authority list
+  (a bare gate id counted as an owner, which made the rule nearly unfailable).
 
 - `2026-09-30`: `.4c` landed — the D32 proposal is ruled approved and applied. Roadmap **v0.3** gives §11 G3
   an *envelope coverage* exit criterion (every garment §3.2 names drafts, grades and exports at that gate or an

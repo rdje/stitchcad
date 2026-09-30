@@ -26,4 +26,5 @@
 | propose (authority) | the authority to prepare a change for a human to accept, without applying it | roadmap §7.8 · specified by `G0-CONTRACT.17` | suggest right, draft access | `propose` |
 | revision precondition ⚠ | a command's declaration of the revision it is valid against; a stale revision is refused | roadmap §4.4 · specified by `G0-CONTRACT.17` | optimistic lock, version guard | → `revision` |
 | undo/redo granularity | what one undo reverses: a command group, never a half-applied group | roadmap §4.4 · specified by `G0-CONTRACT.17` | undo step, history granularity | — |
+| vacant seat ⚠ | a role nobody holds, where the authority is competence rather than office, so no acting holder may exercise it | [governance §8.1](../../governance.md) | unfilled role, reviewer not named, *unbesetzt* | `vacant` |
 | workflow parity ⚠ | the invariant that UI, API and MCP can each complete the same workflows, proved by a table | roadmap §4.4 · specified by `G0-CONTRACT.17` | front-end parity, feature parity | — |

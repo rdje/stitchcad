@@ -352,6 +352,7 @@ Derived from the parts by the census; do not edit this list by hand.
 - [unknown](glossary/profiles-and-release.md)
 - [unresolved reference](glossary/model-and-numbers.md)
 - [V-notch](glossary/marks-and-closures.md)
+- [vacant seat](glossary/commands-and-authority.md)
 - [waistband](glossary/recipe-and-pieces.md)
 - [walk (operation)](glossary/seams-and-allowances.md)
 - [wearing ease](glossary/measurements-and-fit.md)

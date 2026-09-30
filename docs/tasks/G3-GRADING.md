@@ -205,7 +205,10 @@ interchange that an independent engine can re-import, extreme sizes included.
   (each §3.2 garment named with the leaf that drafted, graded and exported it), the equivalence bounds
   published, the frontier handed to `G4-PROFILES`.
   Acceptance: each clause `met` with a re-runnable check or `not met` with a named blocker; a §3.2 garment
-  with no leaf's evidence behind it fails the review, because that is exactly the gap roadmap v0.3 closed.
+  with no leaf's evidence behind it fails the review, because that is exactly the gap roadmap v0.3 closed; and
+  the review is not signed by the party that proposed the criterion — governance §6.1 rule 2 withholds
+  approval of a decision's evidence from its author, so a self-applied envelope amendment is certified by
+  somebody else or stays unapproved (`decision_self-application-under-delegation.md`).
   Verification: `pending`
   Commit: `pending`
 

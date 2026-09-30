@@ -75,6 +75,7 @@
 - [`decision_reference-fixture-waistband-straight-folded.md`](docs/decisions/decision_reference-fixture-waistband-straight-folded.md)
 - [`decision_revision-aware-containment-baseline.md`](docs/decisions/decision_revision-aware-containment-baseline.md)
 - [`decision_scaffold-sync-protects-project-content.md`](docs/decisions/decision_scaffold-sync-protects-project-content.md)
+- [`decision_self-application-under-delegation.md`](docs/decisions/decision_self-application-under-delegation.md)
 - [`decision_size-set-ownership.md`](docs/decisions/decision_size-set-ownership.md)
 - [`decision_table-cells-escape-pipes-render-to-settle.md`](docs/decisions/decision_table-cells-escape-pipes-render-to-settle.md)
 - [`decision_unnamed-seats-acting-authority.md`](docs/decisions/decision_unnamed-seats-acting-authority.md)

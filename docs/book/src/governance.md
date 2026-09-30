@@ -139,6 +139,32 @@ both halves:
 - Independent checks evaluate artifacts, never the agent grading its own work (roadmap §7.8). The same rule
   is why every claim in this book is derived by a tracked census rather than asserted by its author.
 
+### 6.1 Decisions made under delegation
+
+This project is built by an engineer acting under the director's delegation, so most decisions are both
+authored and applied by the same party. That is not a defect to hide and not a licence: it is a case with its
+own rules, because self-application is where a governance model quietly stops being one.
+
+1. **Record the author and the applier, and say so when they are the same.** A reader must be able to see that
+   one party proposed a change and applied it. The roadmap's Appendix A entry for v0.3 does this: it names the
+   proposal's record, the delegation it was made under, and the defect it closes.
+2. **The author of a decision may not approve the evidence that decision requires.** Approval belongs to the
+   gate's reviewer, who must satisfy §2's independence criterion — not an author of the code, the
+   specification or the evidence under review. Where no independent reviewer exists, the claim stays
+   **unapproved** and is recorded as unapproved; it is never approved by the party that needed it. This is the
+   same rule as a vacant seat (§8.1), applied to a decision instead of a role.
+3. **The consequences of a delegated decision are derived, not asserted.** Anything the decision obliges later
+   work to prove gets an instrument somebody else can run — a census, a probe, a golden — so the check does not
+   rest on the author's honesty or memory. The envelope-coverage criterion v0.3 added is checked against the
+   trees by `run_tree_coverage_census.sh`'s clause-versus-leaf table, and its garments are owned by named
+   leaves, so a future author cannot satisfy it with prose.
+4. **The record states what would reverse it, and who may.** A delegated decision is the principal's decision
+   made in their absence, so it carries its own re-open condition. Reversal must not require archaeology.
+5. **A delegation to decide is not a delegation to upgrade evidence.** External material read here is labelled
+   with its source and date, a claim about a standard stays governed by the standards chapter's closed
+   vocabulary, and a decision resting on general practice stays `assumed` with its reviewer named — the rule
+   the first delegation of `2026-09-30` stated and this section inherits.
+
 ## 7. Procurement, and the fallback when it slips
 
 Each item names what is bought, why a gate needs it, who owns it, and the fallback with its cost in evidence
@@ -187,6 +213,12 @@ per seat is written down so that naming one is a single act rather than a negoti
   observation and may not be exported as if it were known. `G0-CONTRACT.15` records the G0 governance clause as
   `met — model drafted; two seats acting, the domain seat vacant` or as `not met`, and never as met on the
   strength of this chapter alone.
+- **What the vacancy holds up is a list, not an impression.** `bash
+  docs/tasks/artifacts/uncertainty/run_uncertainty_census.sh` enumerates every marker the book carries —
+  `assumed`, `unknown`, `unverified-with-owner`, `read-external`, `(proposed)`, `vacant` — with the authority
+  that resolves each, and **refuses** a blocking marker whose verification-status section names no resolver. So
+  the day a name arrives, the work it unblocks is one command away; and an edit that quietly drops an `assumed`
+  from a fixture constant changes a count somebody reads.
 
 ### 8.2 The ask, per seat
 

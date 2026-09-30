@@ -305,7 +305,10 @@ notions list matches the geometry.
 - **`ss_suppress`, `dart_intake`, `dart_len_front`, `dart_len_back`, `a_line_flare`, and the convention
   that places a dart at the midpoint of its waist edge** — *declared drafting constants requiring domain
   review*. A sewing expert should confirm them before the fixture
-  is frozen as a golden at G2; until then they are `assumed`, not `known`, and this chapter says so.
+  is frozen as a golden at G2; until then they are `assumed`, not `known`, and this chapter says so. The seat
+  that owes the confirmation is **vacant**, not acting (`docs/book/src/governance.md` §8.1), and the population
+  waiting on it is derived by `docs/tasks/artifacts/uncertainty/run_uncertainty_census.sh` rather than
+  remembered.
 - **Zipper length, waistband width and extension** — *declared constants* at common industry values,
   with the same review status. `wb_width` is the one the sources read for D27 disagree about: a usual
   band height of 2–5 cm in one, a maximum of 3 cm for a *straight* band in the other. The fixture's

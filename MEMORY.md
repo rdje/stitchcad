@@ -15,8 +15,8 @@
 
 - **Project:** StitchCAD — a sewing CAD, headless Rust core: construction-recipe designs, evidence-bearing
   Factory Profiles, deterministic export, agent-first via MCP. `ROADMAP.md` v0.3, DRAFT until G0 exits.
-- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.14`, `.18`.
-  Remaining: `.9`–`.12`, `.15`–`.17`.
+- **Active tree:** `G0-CONTRACT`. Done: `.1`–`.8`, `.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`, `.14`, `.14b`,
+  `.14c`, `.18`, `.19`. Remaining: `.9`–`.12`, `.15`–`.17`.
 - **Next action:** take **`G0-CONTRACT.9`** — ADR-0003 (construction recipe primary) plus the formula
   language v1: grammar, units inside expressions, conditionals, name binding, evaluation order, error and
   dimension rules, worked over the reference skirt, and the drafting system that ships as the reference block

@@ -271,10 +271,21 @@ awk -F'\t' '{ print $1 }' "$EXEMPTION_FILE" | LC_ALL=C sort -u > "$EXEMPT_TOKENS
 echo "-- R1 canonical-object references resolve"
 r1_out=$(awk -F'\t' -v heads="$HEADINGS" -v leaves="$LEAVES" -v adrs="$ADRS" -v mdfiles="$MD_FILES" \
        -v partsdir="$PARTS_DIR" -v specdir="$SPEC" -v tasksdir="$TASKS" '
-  function resolve(p,   t) {
-    # a part links with `../chapter.md`: drop the parent segment AND the `..`, not just the `..`
+  function resolve(p,   t, n, i, m, seg, out) {
+    # Normalise properly, segment by segment. The first cut of this function deleted one `/x/../` per pass with
+    # a single gsub, which handled `../chapter.md` and silently failed on `../../governance.md` — a glossary
+    # part reaching a chapter above `spec/` — reporting a file that exists as a dead reference. Measured, not
+    # theorised: the `vacant seat` entry added by G0-CONTRACT.19 is what found it.
     t = partsdir "/" p
-    gsub(/\/[^\/]*\/\.\.\//, "/", t)
+    n = split(t, seg, "/")
+    m = 0
+    for (i = 1; i <= n; i++) {
+      if (seg[i] == "" || seg[i] == ".") continue
+      if (seg[i] == "..") { if (m > 0) m--; continue }
+      out[++m] = seg[i]
+    }
+    t = ""
+    for (i = 1; i <= m; i++) t = t (i > 1 ? "/" : "") out[i]
     return t
   }
   BEGIN {
