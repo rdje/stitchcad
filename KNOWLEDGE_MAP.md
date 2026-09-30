@@ -20,7 +20,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   `G1-SLICE.3` (code).
 - `docs/book/src/spec/` — the normative specification the director reviews: overview, glossary, units,
   ontology, formula language, envelope, instantiation paths, size sets, standards, interchange dialects,
-  reference skirt. Owner the `G0-CONTRACT` leaves.- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, in three parts** (contract,
+  release and approval, reference skirt. Owner the `G0-CONTRACT` leaves.- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, in three parts** (contract,
   `formula-language/grammar.md`, `formula-language/examples.md`). Its numbers are computed, not typed:
   `docs/tasks/artifacts/formula_language/run_formula_language_census.sh` reads the chapter's own tables.
   Owner `G0-CONTRACT.9`, implemented by `G1-SLICE.5`.
@@ -77,6 +77,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_numerical-contract-fixed-point.md`](docs/decisions/decision_numerical-contract-fixed-point.md)
 - [`decision_product-work-takes-the-frontier.md`](docs/decisions/decision_product-work-takes-the-frontier.md)
 - [`decision_reference-fixture-waistband-straight-folded.md`](docs/decisions/decision_reference-fixture-waistband-straight-folded.md)
+- [`decision_release-package-identity-and-scope.md`](docs/decisions/decision_release-package-identity-and-scope.md)
 - [`decision_revision-aware-containment-baseline.md`](docs/decisions/decision_revision-aware-containment-baseline.md)
 - [`decision_scaffold-sync-protects-project-content.md`](docs/decisions/decision_scaffold-sync-protects-project-content.md)
 - [`decision_self-application-under-delegation.md`](docs/decisions/decision_self-application-under-delegation.md)

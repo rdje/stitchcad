@@ -20,6 +20,7 @@
     - [Grammar, operators and functions](spec/formula-language/grammar.md)
     - [Worked examples](spec/formula-language/examples.md)
   - [Interchange dialects](spec/interchange-dialects.md)
+  - [Release and approval](spec/release-contract.md)
   - [The supported envelope](spec/feature-matrix.md)
   - [Instantiation paths](spec/instantiation-paths.md)
   - [Size sets](spec/size-sets.md)

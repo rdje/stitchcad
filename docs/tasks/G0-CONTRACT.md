@@ -214,14 +214,19 @@ not a contract.
   Commit: `STITCHCAD-G0-0011`
 
 - ID: `G0-CONTRACT.12`
-  Status: `pending`
+  Status: `done`
   Goal: specify approval states and the release contract (§9): manifest contents, approval
   binding to package identity, stale-ification, package-completeness checking, the graduated
   acceptance states, and the human-only approval rule for agents.
   Acceptance: every manifest field is named with its source; the graduated states are ordered
   with the evidence each requires; the scoped-approval and scope-narrowing rules are stated.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below and in the acceptance checklist — the chapter is `257` lines /
+  `19 010` B, inside the `book_collection` per-part health of `400` / `24 576`; its census parses
+  roadmap §9 and §8.2 and the ontology's state table and reports `9 manifest fields / 6 states /
+  8 matrix rows / 0 failure(s)`; its probe suite is at `14 pass / 0 fail`; the glossary is at
+  `298 terms / 8 parts / 156 tokens / 0 failure(s)` with `12` entries repointed from this leaf to a
+  clause; every other census and gate is green.
+  Commit: `STITCHCAD-G0-0012`
 
 - ID: `G0-CONTRACT.13`
   Status: `done`
@@ -452,8 +457,9 @@ not a contract.
 | 16 | `G0-CONTRACT.9` | `done` | ADR-0003 landed in full: the formula language v1 as three censused parts (contract, grammar, examples), a reference evaluator that reads the chapter's own tables, Aldrich's metric pattern cutting named as the reference drafting system, and `G3-GRADING.16` created to ship its blocks |
 | 17 | `G0-CONTRACT.10` | `done` | ADR-0004 landed: six axes, a closed registry of four targets, the seventeen-layer table in both naming modes read against the roadmap itself, one polyline-only entity set with arcs exact as bulges, three grading carriages, and the receiver-config record |
 | 18 | `G0-CONTRACT.11` | `done` | ADR-0002 recorded as a decision structure: the chrome, the dev shell and the TypeScript ban are `active`, canvas hosting is `proposed`, and the corpus, the seven gates and the six-rule verdict are written down before anybody measures — with an instrument that derives the outcome from a TSV data plane |
-| 19 | `G0-CONTRACT.12` | `pending` | **next** — approval states and the release contract (§9): manifest contents, approval bound to package identity, stale-ification, package-completeness checking, the graduated acceptance states, and the human-only approval rule for agents |
-| 20 | `G0-CONTRACT.15`–`.17` | `pending` | the remaining G0 leaves, in the order the acceptance table records |
+| 19 | `G0-CONTRACT.12` | `done` | the release contract landed: nine manifest fields each with its source, identity as the manifest's digest, completeness against the declared construction, the six acceptance states in the roadmap's order with the evidence each needs, scope that narrows by itself, human-only approval, and §8.2's policy matrix tuned and recorded |
+| 20 | `G0-CONTRACT.16` | `pending` | **next** — the ONE message system (Fluent or ICU, not both) plus the externalization architecture: the CI lint on an inline user-facing string, the termbase per language with the safety terms first, pseudolocalization, and locale-independent canonical files |
+| 21 | `G0-CONTRACT.17`, `.15` | `pending` | the command-layer contract with undo/redo granularity, then the `.15` exit review |
 
 ## Decisions
 
@@ -636,6 +642,22 @@ not a contract.
   the honest state at G0 and the reason the record's canvas half is `proposed`; a partial one is a refusal,
   because a verdict on unmeasured gates is exactly what the protocol exists to prevent.
 
+- `2026-09-30`, leaf `.12`: **a package is never edited and an approval binds to a digest.** A similarity
+  threshold for stale-ification was rejected because a threshold is a guess about which differences a
+  factory cares about, made by the party that wants the approval to survive. Recorded in
+  `docs/decisions/decision_release-package-identity-and-scope.md` with the five other alternatives it
+  rejected.
+- `2026-09-30`, leaf `.12`: **a claim's scope is the intersection of its evidence, and it narrows by
+  itself.** Widening is a new evidence record, never an inference, which is what makes G7's
+  supported-envelope statement a projection of acceptances rather than an impression of them.
+- `2026-09-30`, leaf `.12`: **§8.2's example matrix is tuned in a table, not silently.** Notch geometry in a
+  draft export became `sidecar` instead of "default + visible badge", because a default is a value
+  substituted for an observation and roadmap §8.3 forbids it; the chapter's tuning table quotes the
+  roadmap's row beside what it became, so a reviewer can see the change rather than trust it.
+- `2026-09-30`, leaf `.12`: **the four dispositions are a closed vocabulary and `permit` is not one of the
+  matrix's cells.** The matrix is consulted for the `unknown` state only — the other four states have fixed
+  rules — so a cell saying `permit` would claim an unknown is simply fine, and the census refuses one.
+
 ## Open Questions
 
 - Cut-on-fold vs paired front for the reference skirt: roadmap §11 G0 allows either. Decided
@@ -675,54 +697,65 @@ here, because `scripts/check_task_acceptance.sh` judges every staged `docs/tasks
 with no ticked boxes; the next slice moves it across. Neither file carries an unticked placeholder box
 (defect D15).
 
-### `G0-CONTRACT.11` — the spike's rule is written before its measurement exists
+### `G0-CONTRACT.12` — the release contract is the roadmap's §9, compared rather than restated
 
-- [x] **REPRODUCE / ISSUE** — ADR-0002 was the one ADR whose evidence did not exist yet, and nothing in the
-  repository constrained what the spike would be allowed to conclude. `git ls-files docs/decisions/ |
-  grep -c adr-0002` → `0`, `rc=1`; `git grep -ci 'spike' HEAD -- docs/decisions/` → only
-  `decision_adr-0001-license-and-solver.md` (which mentions the G1 spike as a re-open condition), so no
-  record carried a measurement protocol; and the consumer was already waiting on one:
-  `git show HEAD:docs/tasks/G1-SLICE.md | grep -c 'G0-CONTRACT\.11'` → `1`, the leaf `G1-SLICE.13` whose
-  acceptance said only "the measurements the protocol named are recorded".
-- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n 'ADR-0002 — UI stack' ROADMAP.md` → `328`, whose own text
-  defers the decision ("A G1 executable spike … settles it with evidence") and warns against the failure
-  mode this leaf exists to close: *"Custom wgpu, not DOM canvas" is a hypothesis to test, not an axiom*.
-  `grep -n 'canvas-hosting' ROADMAP.md` → `685` (G1's exit clause) and `867` (§15.10's locked decision),
-  `rc=0`. So the gap was not a missing opinion but a missing **rule**: a spike run without a written
-  decision rule is argued afterwards, and the argument is won by whoever likes the result.
-- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh` →
-  `spike verdict: 0 rows / 0 profiles / PENDING — ADR-0002's canvas half stays `proposed` until
-  G1-SLICE.13 records measurements / 0 refusal(s)`, `exit=0`: the instrument reads the seven gates, the
-  applicability table and the rule parameters from three TSVs and reports the honest state. Its
-  discrimination is proved on twelve synthetic result sets:
-  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/canvas_spike/run_spike_verdict_probes.sh` →
-  `probes: 13 pass / 0 fail`, including CORRECTNESS (the fastest topology loses to `snap_exact = no` and
-  the gate is named), R4-FREE (a faster native-only winner gives way to one renderer for both profiles),
-  NO-SURVIVOR (R5 escalation naming the `dev-shell` fallback), GATES-READ (tightening `fidelity_max_px`
-  from `0.5` to `0.2` in a copy of the TSV changes the verdict, so the thresholds are read and not
-  hardcoded), INCOMPLETE, UNDECLARED, MISSING-ROW and CONTROL. The record itself is `116` lines /
-  `8 849` B: inside the `decisions_collection` per-part line health of `120` and at 108 % of its `8 192`-byte
-  health, which is a warning and not a breach — the two other ADR records are the same shape.
+- [x] **REPRODUCE / ISSUE** — roadmap §9 was the last G0 clause with a promised chapter and no chapter.
+  `git ls-files 'docs/book/src/spec/release*' | wc -l` → `0`; the spec index carried the promise as an
+  unlinked row, `git show HEAD:docs/book/src/spec/index.md | grep -c '^| Release and approval |'` → `1`,
+  `rc=0`; and the vocabulary was parked against this leaf,
+  `git show HEAD:docs/book/src/spec/glossary/profiles-and-release.md | grep -c 'G0-CONTRACT\.12'` → `13`
+  (twelve entries plus the part's own header note saying "until that chapter lands, the roadmap clause is
+  cited").
+- [x] **ROOT CAUSE (WHY + WHERE)** — `grep -n '^## 9. Signoff' ROADMAP.md` → `626`, `rc=0`, and the exit
+  clause that makes it a G0 deliverable: `grep -n 'approval states & release contract' ROADMAP.md` →
+  `670:  decided; approval states & release contract (§9) specified; ADR-0001`, `rc=0`. §9 is a list — nine
+  manifest fields, six acceptance states, three artifact classes — and a list realised in prose drifts: a
+  field is renamed, a rung is merged, a class is forgotten, and every gate stays green because nothing
+  compares the two documents. So the cause is not only an unwritten chapter but the absence of an
+  instrument that would notice the difference.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/release_contract/run_release_contract_census.sh`
+  → `release-contract census: 9 manifest fields / 6 states / 8 matrix rows / 0 failure(s)`, `exit=0`, where
+  the `9` and the `6` are parsed out of roadmap §9 (parenthesis-aware, because one field carries a nested
+  comma) and the `8 × 3` matrix is compared against §8.2's header and example rows and against the five
+  states ontology §5 declares. Its discrimination is proved:
+  `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/release_contract/run_release_contract_probes.sh` →
+  `probes: 14 pass / 0 fail`, including LADDER-ORDER (two rungs swapped, both orders printed),
+  FIELD-INVENTED (a field wearing the roadmap's authority without its wording), DISPOSITION-UNUSED (a
+  vocabulary word no cell carries) and CONTROL. The chapter is `257` lines / `19 010` B, widest line
+  `256` B, inside the `book_collection` per-part health of `400` / `24 576` / `275`; `make book` →
+  `INFO HTML book written to …`, `exit=0`.
 - [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
-  `18 suite(s) green`; `make book` → `exit=0`; the book's censuses unchanged: glossary `294 terms /
-  8 parts / 155 tokens / 0 failure(s)`, interchange `17 layers / 4 targets / 12 entities / 0 failure(s)`,
-  formula language `17 bindings / 4 assertions / 13 refusals / 0 mismatch(es)`, fixture `20 derived rows /
-  4 closure checks / 5 pieces / 0 mismatch(es)`, standards `6 registered / 0 failure(s)`, matrix
-  `105 rows / 0 failure(s)`, coverage `10 lanes / 13 trees / 0 unowned`; `bash
-  scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 99 files measured`, `exit=0`. No Rust
-  file changed, so `make check` is not this slice's gate; the two new scripts are bash and were run.
-- [x] **FIX** — wrote `docs/decisions/decision_adr-0002-ui-stack-and-canvas-spike-protocol.md` (what is
-  decided, the three topologies and the hypothesis each tests, the declared corpus with its re-run
-  trigger, the seven gates with what each protects, the six-rule decision procedure, what the spike does
-  not decide, and the three reversal conditions); the four-file data plane under
-  `docs/tasks/artifacts/canvas_spike/` with `results.tsv` empty on purpose; the verdict instrument and its
-  13-arm probe suite; and `G1-SLICE.13`'s acceptance rewritten to consume the instrument by path, name the
-  corpus, and require a recorded decision for any human overruling the printed verdict (R6).
+  `19 suite(s) green`; the eight neighbouring censuses unchanged: glossary `298 terms / 8 parts /
+  156 tokens / 0 failure(s)` after four new terms, twelve repointed entries and a re-derived index,
+  interchange `17 layers / 4 targets / 12 entities / 0 failure(s)`, formula language `17 bindings /
+  4 assertions / 13 refusals / 0 mismatch(es)`, fixture `20 derived rows / 4 closure checks / 5 pieces /
+  0 mismatch(es)`, matrix `105 rows / 0 failure(s)`, standards `6 registered / 0 failure(s)`, uncertainty
+  `127 markers / 15 files / 0 unowned`, coverage `10 lanes / 13 trees / 0 unowned`; `bash
+  scripts/check_live_doc_size.sh` → `OK — 17 surfaces, 15 routes, 102 files measured`, `exit=0`. Two probe
+  arms failed first against a correct census and were fixed in the arms, not the tool: one quoted a
+  sentence as it read in a draft rather than as it wraps in the file, and one replaced every occurrence of
+  a disposition token — deleting its declaration along with its uses, which is the "remove the property,
+  not one instance" trap inverted into "remove the rule too".
+- [x] **FIX** — wrote the chapter (nine manifest fields each with its source, identity as the manifest's
+  digest with no in-place amendment, seven completeness checks against the declared construction, the six
+  states in the roadmap's order with the evidence and granter each needs, five scope axes with the
+  intersection rule, human-only approval, §8.2's matrix tuned in a recorded table with a closed
+  four-word disposition vocabulary and the dependency-closure rule, eight diagnostics); the decision record
+  with six rejected alternatives; the census and its 14-arm probe suite; four glossary terms plus twelve
+  repointed entries and a corrected `spi` routing (it pointed at this leaf and belongs to `G5-SHELLS.13`).
+  **D49's trigger fired and was discharged here rather than deferred:** the evidence sibling had reached
+  `1000` lines / `94 086` B against a `98 304`-byte ceiling, so ten completed checklists
+  (`G0-CONTRACT.2` … `.4b`) were sealed into `docs/history/stitchcad-g0-contract-evidence-part1.md`
+  (`560` lines / `52 573` B, digest reproduced by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`)
+  and the live sibling fell to `449` / `42 065`. The seal then exposed **D52**: three completed leaves'
+  ROOT CAUSE boxes (`.14`, `.14b`, `.19`) asserted their evidence with no invocation, which the acceptance
+  gate refused once the seal changed which box comes first — all three now carry the command and its real
+  output, `.19`'s directory count is corrected from twelve to the `13` the command prints, and the sibling's
+  header states the rule (re-run the enforcer after moving checklists, before committing).
 - [x] **LOCKSTEP** — the leaf, this checklist, the frontier, the tree's decisions and logs; `MEMORY.md`,
-  `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two instrument rows,
-  and the formula-language row tightened under its column's budget), `docs/decisions/INDEX.md` and the
-  regenerated Knowledge Map in this commit. Lesson promotion: **promoted** — the new record carries an
-  `answers:` line.
+  `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md` (two instrument
+  rows), `docs/decisions/INDEX.md`, `knowledge-map/subsystems.md` and the regenerated Knowledge Map in
+  this commit. Lesson promotion: **promoted** — the new record carries an `answers:` line.
 
 Gate-level closure is recorded by `G0-CONTRACT.15`; each leaf carries its own evidence in the
 Verification Log, and a leaf that stages code additionally fills a `### <leaf-id>` checklist subsection
@@ -736,6 +769,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-09-30` | `G0-CONTRACT.12` | the release-contract census and its 14-arm probe suite; the chapter's size and widest line; the glossary census after four terms and twelve repointed entries; `make gate`/`probes`/`book`; the eight neighbouring censuses; containment; the sibling's sealing and its digest | `9 manifest fields / 6 states / 8 matrix rows / 0 failure(s)`; `14 pass / 0 fail`; `257` lines / `19 010` B / widest `256`; `298 terms / 0 failure(s)`; `19 suite(s) green`; `449` / `42 065` after sealing `560` / `52 573` |
 | `2026-09-30` | `G0-CONTRACT.11` | the spike verdict instrument on its empty data plane and on twelve synthetic result sets; the record's size; `make gate`/`probes`/`book`; the seven book censuses; containment | `PENDING`, `exit=0`; `13 pass / 0 fail`; `78` lines / `7 244` B; `18 suite(s) green`; all green; `OK — 99 files measured` |
 | `2026-09-30` | `G0-CONTRACT.10` | the interchange census and its 13-arm probe suite; the chapter's size and widest line; the glossary census after five terms and 16 repointed entries; `make book`/`gate`/`probes`; the four neighbouring censuses; containment | `17 layers / 4 targets / 12 entities / 0 failure(s)`; `13 pass / 0 fail`; `303` lines / `21 650` B / widest `227`; `294 terms / 0 failure(s)`; `17 suite(s) green`; detail in the checklist |
 | `2026-09-30` | `G0-CONTRACT.9` | the formula-language census and its 15-arm probe suite; the three parts' sizes and widest line; the glossary census; `make book`/`gate`/`probes`; the four neighbouring censuses; containment | `17 bindings / 4 assertions / 13 refusals / 0 mismatch(es)`, `12` fixture-shared names and `0` disagreements; `15 pass / 0 fail`; `16 suite(s) green`; detail in the checklist |
@@ -793,9 +827,28 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 | `G0-CONTRACT.9` | `STITCHCAD-G0-0009 (leaf G0-CONTRACT.9): the formula language, and the drafting system named with it` | three censused parts; an evaluator that reads the chapter's own tables; ADR-0003's record; `G3-GRADING.16` owns the blocks; D48 fixed and D36's third instance removed |
 | `G0-CONTRACT.10` | `STITCHCAD-G0-0010 (leaf G0-CONTRACT.10): the dialects are a closed registry, not a format with flags` | six axes, four targets, the seventeen-layer table read against the roadmap, one polyline-only entity set, three grading carriages, the receiver-config record |
 | `G0-CONTRACT.11` | `STITCHCAD-G0-0011 (leaf G0-CONTRACT.11): the spike's rule is written before its measurement` | ADR-0002 as a decision structure: chrome, dev shell and TS ban `active`, canvas `proposed`; a declared corpus, seven gates, six rules and an instrument that derives the verdict from a TSV data plane |
-| `G0-CONTRACT.12`, `.15`–`.17` | `pending` | — |
+| `G0-CONTRACT.12` | `STITCHCAD-G0-0012 (leaf G0-CONTRACT.12): the release contract is the roadmap's §9, compared rather than restated` | nine manifest fields with their sources, digest-bound approval, seven completeness checks, the six states in order, scope that narrows by itself, the policy matrix tuned in a recorded table; D49's trigger discharged |
+| `G0-CONTRACT.15`–`.17` | `pending` | — |
 
 ## Changelog
+
+- `2026-09-30`: `.12` landed — roadmap §9 is a chapter and §8.2's example matrix is a contract. A release
+  package is immutable, its identity is the digest of its canonical manifest (artifact hashes included), an
+  approval binds to that identity and to nothing else, and any change produces a new candidate rather than
+  an amendment — with no similarity threshold, because a threshold is a guess about which differences a
+  factory cares about made by the party that wants the approval to survive. Completeness is checked against
+  the declared construction in seven ways, so a geometrically valid file missing a piece is an invalid
+  package. The six acceptance states keep the roadmap's order and each names its evidence and its granter; a
+  state may not be claimed without the rung below it and does not survive a new identity. A claim's scope is
+  the intersection of its evidence over five axes, narrowing by itself and widening only by a new record.
+  Approval is a human act, and a package whose approver is not a human identity is invalid. The policy
+  matrix is consulted for the `unknown` state alone, its four dispositions are a closed vocabulary with
+  `permit` deliberately absent from its cells, and the tuning of the roadmap's example is recorded in a
+  table beside the row it changed — notch geometry in a draft export became a provenance `sidecar` because
+  §8.3 forbids substituting a plausible value for an observation. The census parses §9, §8.2 and the
+  ontology's state table and compares all three with the chapter in both directions. D49's trigger fired on
+  the way (the evidence sibling reached 1000 lines and 96 % of its ceiling) and was discharged in this
+  commit by sealing ten completed checklists under the descriptor contract.
 
 - `2026-09-30`: `.11` landed — ADR-0002 is recorded as a **decision structure** rather than a decision: the
   chrome (Tauri + TypeScript/React, Slint as the named fallback, Flutter still rejected), the egui/iced dev

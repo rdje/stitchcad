@@ -870,6 +870,17 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     the live window keeping the most recent entries and a pointer. Trigger, so it is taken before it is urgent:
     the first slice that leaves a tree file within 15 % of its byte ceiling. Deferred behind product work by
     the frontier rule (`decision_product-work-takes-the-frontier.md`); nothing is blocked today.
+  - **Trigger fired `2026-09-30`, and the remedy was applied by `G0-CONTRACT.12` rather than waited for.**
+    The evidence sibling — not the tree file — is what reached the bound: `wc -lc
+    docs/tasks/G0-CONTRACT-evidence.md` → `1000 94086` after `.11` landed, i.e. exactly at the 1000-line
+    convention threshold and 96 % of the `98 304`-byte ceiling, so the next checklist appended would have
+    breached it and blocked a commit. Ten completed checklists (`G0-CONTRACT.2` … `.4b`, 560 lines /
+    52 573 bytes) were sealed into `docs/history/stitchcad-g0-contract-evidence-part1.md` under the
+    descriptor contract, the live sibling fell to `449` lines / `42 065` bytes, and
+    `run_changelog_ledger_probes.sh` → `9 pass / 0 fail` reproduces the new segment's digest. What remains
+    `SPINE.19`'s: the rule is still applied by hand at a threshold somebody has to notice, and the POINTER
+    leg does not watch this family (D40), so a sealed evidence segment with no live pointer would be
+    invisible.
 
 - **D50** — `KNOWLEDGE_MAP.md` reached 99 % of its byte ceiling while two product slices were landing:
   `wc -lc KNOWLEDGE_MAP.md` → `99 8128` against the `knowledge_map` row's ceiling of `8192`, so the next
@@ -909,6 +920,27 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     a sealed segment is immutable. The durable fix is `SPINE.19`'s: either the descriptor contract drops
     the range (an id list is retrievable and a range is not) or the range gains a producer, and the choice
     belongs with the leaf that owns the contract.
+
+- **D52** — three completed leaves' ROOT CAUSE boxes in `docs/tasks/G0-CONTRACT-evidence.md` asserted their
+  evidence in prose with no invocation, so the file could not be committed at all once a seal changed which
+  box the acceptance gate judges first: `scripts/check_doctrines.sh` →
+  `TASK-ACCEPTANCE: docs/tasks/G0-CONTRACT-evidence.md — the 'ROOT CAUSE' box is ticked but carries no
+  tool-output evidence INSIDE ITS OWN BULLET`, `exit=1`.
+  - Reproduce: the refusal above, at the commit that sealed `G0-CONTRACT.2` … `.4b` out of the sibling. The
+    gate judges the FIRST matching box in a staged file, so while `.2`'s checklist led the file its
+    well-formed boxes shadowed three defective ones behind it. Enumerated rather than sampled:
+    a scan of every `### <leaf>` section in the sibling for the gate's own signature regex reported
+    `G0-CONTRACT.14`/ROOT, `G0-CONTRACT.14b`/ROOT and `G0-CONTRACT.19`/ROOT (plus four REPRODUCE boxes,
+    which the gate does not hard-require).
+  - Impact: a blocked commit is the visible half. The invisible half is that a ticked box citing no command
+    is a "trust me" — the same shape as D20, in the one file whose whole purpose is evidence. It survived
+    eleven commits because the gate's box-scoping, which is correct, means an earlier leaf's good evidence
+    conceals a later leaf's absent evidence.
+  - Owner: `G0-CONTRACT.12` (**fixed in this commit** — all three boxes now carry the invocation and its
+    real output, run at fix time rather than recalled, and `.19`'s "twelve directories" is corrected to the
+    `13` the command prints). The durable half is a convention rather than a new gate: a sealing operation
+    changes which box is first, so **re-run the enforcer after moving checklists between files and before
+    committing** — which is how this was caught, and is recorded in the sibling's own header note.
 
 ## Decisions
 

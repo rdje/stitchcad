@@ -30,6 +30,47 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G0-0012 - the release contract is the roadmap's §9, compared rather than restated (leaf `G0-CONTRACT.12`)
+
+Roadmap §9 was the last G0 clause with a promised chapter and no chapter: the spec index carried "Release and
+approval" as an unlinked row and thirteen glossary references pointed at this leaf. §9 is a list - nine
+manifest fields, six acceptance states, three artifact classes - and a list realised in prose drifts, so the
+chapter ships with an instrument that parses the roadmap and compares.
+
+- **the chapter** - `docs/book/src/spec/release-contract.md` (257 lines / 19 010 B): nine manifest fields
+  each with the object it comes from; identity as the digest of the canonical manifest, artifact hashes
+  included, so a package is never edited and any change makes a new candidate; seven completeness checks
+  against the declared construction, so a geometrically valid file missing a piece is an invalid package; the
+  six acceptance states in the roadmap's order with the evidence and the granter each needs, where a state
+  may not be claimed without the rung below it and does not survive a new identity; five scope axes with the
+  rule that a claim's scope is the INTERSECTION of its evidence, narrowing by itself and widening only by a
+  new record; approval as a human act, with a package whose approver is not a human identity invalid; and
+  §8.2's policy matrix tuned in a recorded table over a closed four-word disposition vocabulary, consulted
+  for the `unknown` state alone, with the dependency closure recorded per artifact and eight diagnostics.
+- **the tuning is visible, not silent** - the roadmap publishes the matrix as an example and invites G0 to
+  tune it, so the chapter quotes each example row beside what it became: notch geometry in a draft export is
+  a provenance `sidecar` instead of "default + visible badge", because a default is a value substituted for
+  an observation and §8.3 forbids it. `permit` is deliberately absent from the matrix's cells - a cell that
+  simply permitted an unknown would be a cell that invented one - and the census refuses one.
+- **the instrument** - `run_release_contract_census.sh` parses roadmap §9 (parenthesis-aware, because one
+  field carries a nested comma), §8.2's header and example rows, and the five states ontology §5 declares,
+  then compares all three with the chapter in BOTH directions: a field the roadmap names and the chapter
+  lacks is a refusal, and so is a field the chapter invents wearing the roadmap's authority.
+  `9 manifest fields / 6 states / 8 matrix rows / 0 failure(s)`, with `run_release_contract_probes.sh` ->
+  `14 pass / 0 fail` over a swapped ladder, an invented field, a dropped artifact class, an unrecorded
+  tuning, an undispositioned state, an undeclared and an unused disposition, and a control.
+- **decisions** - `docs/decisions/decision_release-package-identity-and-scope.md` records the four rules and
+  six rejected alternatives, including the similarity threshold for stale-ification: a threshold is a guess
+  about which differences a factory cares about, made by the party that wants the approval to survive.
+- **D49's trigger fired and was discharged in this commit** - the evidence sibling had reached 1000 lines and
+  96 % of its byte ceiling, so ten completed checklists (`G0-CONTRACT.2` … `.4b`, 560 lines / 52 573 bytes)
+  were sealed into `docs/history/stitchcad-g0-contract-evidence-part1.md` under the descriptor contract and
+  the live sibling fell to 449 / 42 065; `run_changelog_ledger_probes.sh` -> `9 pass / 0 fail` reproduces the
+  digest. Four glossary terms were added, twelve entries repointed from this leaf to a clause, and one
+  misrouting corrected (`spi` belongs to `G5-SHELLS.13`, not here).
+- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `19 suite(s) green`; `make book` ->
+  exit=0; all eight other censuses green; containment `OK - 17 surfaces, 15 routes, 102 files measured`
+
 ## STITCHCAD-G0-0011 - the spike's rule is written before its measurement (leaf `G0-CONTRACT.11`)
 
 ADR-0002 was the one ADR whose evidence does not exist yet, and nothing in the repository constrained what a

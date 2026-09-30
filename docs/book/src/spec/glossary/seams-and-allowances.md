@@ -30,7 +30,7 @@
 | slant (corner) | a corner treatment that bevels one allowance across to the other's direction | [ontology §4.4](../ontology.md) | bevel corner, angled corner, *schräge Ecke* | `slant` |
 | sleeve cap | the curved top edge of a sleeve, longer than the armscye it is set into by the cap ease | roadmap §3.1 · exercised at `G3-GRADING` | cap, sleeve head, *Kugel* | — |
 | step (corner) | a corner treatment that leaves two allowance ends square and apart — a hem step | [ontology §4.4](../ontology.md) | square corner, offset corner, *Stufe* | `step` |
-| stitches per inch (SPI) | a seam's stitch density: a tech-pack field, and not a seam length however much it looks like one | roadmap §7.5 · specified by `G0-CONTRACT.12` | SPI, stitch density, *Stiche pro cm* | `spi` |
+| stitches per inch (SPI) | a seam's stitch density: a tech-pack field, and not a seam length however much it looks like one | roadmap §7.5 · specified by `G5-SHELLS.13` | SPI, stitch density, *Stiche pro cm* | `spi` |
 | stop landmark ⚠ | the notch or turn point where sewing stops or changes direction; a zipper stop is one | [ontology §4.2](../ontology.md) | stop point, sewing stop, backtack point | `stop` |
 | trim (corner) | a corner treatment that cuts one allowance back so the corner lies flat when turned | [ontology §4.4](../ontology.md) | clipped corner, reduced corner, *beschneiden* | `trim` |
 | true (operation) ⚠ | adjust a seam so its two sides match within tolerance, attributing what is left to declared ease | [ontology §3.2](../ontology.md) | truing, trueing, "make it match" | `true` |

@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-09-30)_ — an arm that removes the rule along with the breach reports a green census
+
+- A probe arm meant to prove "a declared disposition no cell carries is refused" replaced **every**
+  occurrence of the token — its five matrix cells *and* the row that declares it. With the declaration gone
+  the rule had nothing to compare against, the census printed `0 failure(s)`, and the arm failed only because
+  it expected a refusal. The trap `TOOLBOX.md` records is an arm that removes one instance instead of the
+  property; this is its mirror, and quieter, because the instrument is green. **Before mutating, ask what
+  else in the file the pattern matches** — a token's uses and its declaration are usually both in scope, and
+  `replace-all` is a whole-file edit wearing a probe's clothes.
+- Its sibling in the same suite: an arm whose mutation quoted a sentence as it read in a draft, not as it
+  wraps in the file, so the mutation refused to apply and the arm reported both "did not apply" and its own
+  failure. A `mutate` helper that exits nonzero on an absent pattern is what turned a silent no-op into a
+  named one; without it the arm would have passed against an unmutated copy.
+- **A trigger is worth what it names.** D49 declared "the first slice that leaves a tree file within 15 % of
+  its byte ceiling" as the moment to act, and this slice found the evidence sibling at exactly 1000 lines and
+  96 % — so the sealing happened with room to choose what to seal, instead of in the commit that breached.
+  A pressure recorded with a number and a trigger is a scheduled action; the same pressure recorded as a
+  worry is a defect waiting for a worse moment.
+
 ## _(2026-09-30)_ — a synthetic input is a fixture, and it must satisfy every rule but the one under test
 
 - Six of twelve new probe arms failed against a **correct** instrument, all for one reason: each synthetic
@@ -148,8 +167,8 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | --- | --- | --- |
 | [`devnotes-part1.md`](docs/history/stitchcad-devnotes-part1.md) | the `2026-09-29` and `2026-09-04` lessons, plus the bootstrap entry | 66 lines, 5589 bytes, `sha256:d3b94e9a…` |
 | [`devnotes-part2.md`](docs/history/stitchcad-devnotes-part2.md) | the two oldest `2026-09-30` lessons (enumeration, and the vocabulary census) | 62 lines, 5915 bytes, `sha256:edcd0808…` |
-| [`devnotes-part3.md`](docs/history/stitchcad-devnotes-part3.md) | the two next-oldest `2026-09-30` lessons (two tables describing two garments, and a fixture internally right) | 50 lines, 4723 bytes, `sha256:fcca661d…` |
-| [`devnotes-part4.md`](docs/history/stitchcad-devnotes-part4.md) | two more `2026-09-30` lessons (a blocked leaf splits, and permission is not a criterion) | 42 lines, 3706 bytes, `sha256:c2ac5791…` |
+| [`devnotes-part3.md`](docs/history/stitchcad-devnotes-part3.md) | two `2026-09-30` lessons (two tables, one garment; a fixture internally right) | 50 lines, 4723 bytes, `sha256:fcca661d…` |
+| [`devnotes-part4.md`](docs/history/stitchcad-devnotes-part4.md) | two `2026-09-30` lessons (a blocked leaf splits; permission is no criterion) | 42 lines, 3706 bytes, `sha256:c2ac5791…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of
