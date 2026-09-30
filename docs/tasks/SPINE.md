@@ -227,7 +227,7 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0014`
 
 - ID: `SPINE.15`
-  Status: `pending`
+  Status: `done`
   Goal: settle defect **D22** with a real oracle — does a GFM renderer split a table cell on a raw `|`
   inside a code span? — then record the answer and adopt the table-authoring convention for this
   repository (escape pipes inside code spans; keep cells short enough that the maxline axis stays
@@ -236,6 +236,28 @@ mechanically-enforced form:
   the convention is written where authors look (`COMMIT.md`); the widest line in the files this project
   owns is inside its health target; the inherited checker is left untouched and the upstream question
   is reported.
+  Verification: recorded below and in the acceptance checklist — the oracle is a tracked probe
+  (`probes: 3 pass / 0 fail`) that renders a page and counts cells: a raw code-span pipe splits the cell and
+  the rightmost cell is dropped, an escaped one does not; the convention is in `COMMIT.md`; both remaining
+  prose-derived maxline targets are re-derived from their binding shapes (`decisions_collection` `320` →
+  `382` B with its `maxline=491` debt cleared, `tasks_collection` `400` → `443` B); the inherited checker is
+  untouched and the divergence is reported as **D47**, owned by `SPINE.20`.
+  Commit: `STITCHCAD-SPINE-0015`
+
+- ID: `SPINE.20`
+  Status: `pending` (created by `SPINE.15`, which settled D22 against a renderer and found that no gate in
+  this repository enforces the convention the answer implies — defect **D47**; deferred behind product work
+  by `decision_product-work-takes-the-frontier.md`)
+  Goal: enforce the table convention in the project doctrine slot — refuse a staged `.md` table row carrying
+  an unescaped `|` inside a code span, which the renderer splits and whose rightmost cell it drops, while the
+  inherited `check_table_arity.sh` reports `0` defects for the same row.
+  Acceptance: `scripts/check_table_code_pipes.sh` exists, is registered in
+  `scripts/check_doctrines.project.sh` and mirrored in `DOCTRINE_ENFORCEMENT.md`; it carries a `--self-test`
+  whose arms include the exact row the render probe renders, a row whose pipes are escaped (accepted), a
+  pipe outside a code span (accepted, the arity checker's business) and a row in a fenced code block
+  (accepted — a block is not a table); the inherited checker is not modified; `docs/tasks/artifacts/
+  table_render/run_table_render_probes.sh` is its ground truth and stays green; the doctrine count in
+  `LIVE_STATUS.md` is re-derived, not incremented by hand.
   Verification: `pending`
   Commit: `pending`
 
@@ -421,7 +443,8 @@ mechanically-enforced form:
 | 9 | `SPINE.5` | `pending` | toolbox rows are honest only once the instruments are in use |
 | 10 | `SPINE.13` | `pending` | roadmap navigation + per-section bounds: the `maintained_reference` debt |
 | 11 | `SPINE.14` | `done` | taken before `.4.3`: the ledger had to be inside its window before a baseline could be declared honestly |
-| 12 | `SPINE.15` | `pending` | settle D22 against a real renderer and adopt the wide-row convention |
+| 12 | `SPINE.15` | `done` | D22 settled against a rendered page: a raw pipe in a code span splits the cell and the rightmost cell is dropped, so the convention is escape-always; both prose-derived maxline targets re-derived from their shapes |
+| — | `SPINE.20` | `pending` | enforce the table convention in the project slot (D47): the inherited arity checker reports `0` defects for a row the renderer truncates. Deferred behind product work — the convention is written where authors look, and the render probe is its ground truth |
 | — | `SPINE.17` | `done` | taken out of order: a director-approved rule is recorded when it is made |
 | — | `SPINE.18` | `done` | taken immediately after: `.17` shipped a trigger that fired on itself |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
@@ -498,54 +521,72 @@ its checklist here, because `scripts/check_task_acceptance.sh` judges every stag
 refuses one with no ticked boxes; the next slice moves it across. Neither file carries an unticked
 placeholder box (defect D15).
 
-### `SPINE.4.5` — a debt baseline knows which revision it was measured at
+### `SPINE.15` — the table convention is settled by a rendered page, and both prose-derived targets are re-derived
 
-- [x] **REPRODUCE / ISSUE** — roadmap v0.3 could not be applied honestly. `wc -lc ROADMAP.md` → `919 50821`
-  and the registry's `roadmap` debt read `lines=919;bytes=50821`, so the amendment's `+28` lines / `+1 997` B
-  hit `LIVE-DOC-SIZE: roadmap: transition debt WIDENED on lines (947 > baseline 919) — a baseline never grows`
-  and `make gate` blocked. The rule is right; what was missing is a legitimate path, and the only one available
-  was editing the baseline number — the silent widening the rule exists to prevent.
-- [x] **ROOT CAUSE (WHY + WHERE)** — a debt baseline is a **stored copy of a mechanically owned value** (the
-  file's own size) with nothing tying it to the moment it was taken, so a legitimate revision and a silent
-  widening are indistinguishable to the checker. `grep -n 'debt' .doctrine/live_document_size/surfaces.tsv`
-  → one hit per row, `rc=0`, and shows the header's own rule — "the exact measured baseline at adoption …
-  A baseline never widens" — while the
-  `roadmap` row's note names the missing piece: "a revision-aware baseline+delta adapter is deferred (adoption
-  note trigger 3)". `grep -n -A6 'trigger' docs/decisions/decision_live-document-containment-proportionate-adoption.md`
-  → trigger 3 is "a stored copy of a mechanically owned value needs an executed freshness oracle", and the
-  record says whoever hits it owns it. This slice hit it.
-- [x] **ADDRESSED (verified)** — the debt column now accepts `at=<revision>`, executed rather than documented:
-  the measure step emits each file's first line as a sixth field, and the evaluator refuses a row whose token
-  that line no longer declares. `bash scripts/check_live_doc_size.sh --self-test` →
-  `live-doc-size --self-test: 15 arms, 0 failed`, `exit=0`, the four new arms being `GREEN-AT` (a baseline
-  measured at the revision the file declares passes), `RED-AT-STALE` (a token the file no longer declares is
-  refused), `RED-AT-WIDEN` (declaring the right revision does not license growth past the baseline) and
-  `RED-AT-KIND` (a revision token on a collection row is refused rather than ignored). Against the REAL
-  registry: `bash docs/tasks/artifacts/live_doc_size/run_live_doc_size_probes.sh` → `probes: 5 pass / 0 fail`,
-  where `REAL-3` copies the registry, stales the roadmap row to `at=v0.2` and requires
-  `debt baseline was measured at revision `v0.2`, which ROADMAP.md no longer declares`. The roadmap's baseline
-  is re-based in the revision's own commit — `.doctrine/live_document_size/surfaces.tsv` now reads
-  `lines=947;bytes=52818;at=v0.3` with the authority cited in its notes — and the tree passes:
-  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 84 files measured`,
-  `exit=0`. The rule is recorded in `docs/decisions/decision_revision-aware-containment-baseline.md`, and the
-  adoption record's trigger 3 is marked fired and discharged locally rather than left owed.
+- [x] **REPRODUCE / ISSUE** — defect D22 was logged as a *question* because nobody had rendered the case: the
+  inherited `scripts/check_table_arity.sh` documents its cell rule as "pipes NOT inside an inline code span"
+  and self-tests it (`bash scripts/check_table_arity.sh --self-test` → `arm ok  a pipe inside a code span is
+  not a separator (0)`, `exit=0`), while `DOCTRINE_ENFORCEMENT.md` warns that GFM "silently DROPS extra
+  cells". Two tracked instruments disagreed about what a row means, and the repository's convention depended
+  on which was right.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the checker was written against a reading of the specification, and no
+  oracle in the tree ever rendered a page. Settled by rendering one: a scratch mdBook with a 3-column table
+  whose first data cell carries `` `x | y` `` and whose second carries `` `x \| y` ``, built and parsed.
+  `mdbook build` → `INFO HTML book written to …`, `exit=0`, and the rendered rows are
+  `3 cell(s): A raw pipe in a code span: `x │ y` │ 2` and `3 cell(s): B escaped pipe in a code span: x | y │ 2 │ 3`.
+  So the renderer **splits at the raw pipe**, breaks the code span open, shifts the cells and **drops the
+  rightmost one** — the checker's rule is wrong for the renderer this book ships through, and the loss is
+  silent: no diagnostic, and the source still reads correctly. The first cut of this oracle asserted "2
+  cells" from a 2-column page and went red on the 3-column truth, so the arm now asserts the *property* (the
+  first cell truncated at the pipe, the last cell not the one written) rather than a count.
+- [x] **ADDRESSED (verified)** — the oracle is tracked, so the answer is re-runnable rather than remembered:
+  `bash docs/tasks/artifacts/table_render/run_table_render_probes.sh` → `probes: 3 pass / 0 fail`, `exit=0`,
+  printing the rendered rows, and its third arm pins the divergence by requiring the inherited checker's own
+  self-test to still assert the opposite. The convention is written where authors look — `COMMIT.md`'s
+  lockstep list gains **Table authoring**: escape every pipe in a table cell including inside code spans; a
+  cell is not a paragraph, so content that outgrows its column becomes a bounded subsection; and a maxline
+  target is a shape budget whose 80 % warning means *at budget*. Both remaining prose-derived maxline targets
+  are re-derived with the `SPINE.4.4` instrument rather than guessed:
+  `CELL_BUDGET_GLOB='docs/decisions/*.md' bash docs/tasks/artifacts/live_doc_size/run_cell_budget_census.sh` →
+  `8 shapes / 47 data rows measured / recommended maxline health 382 B`, `exit=0` (binding shape: the index's
+  `Record｜Type｜One-line hook` row, 17 rows), and the same over `docs/tasks/*.md` →
+  `13 shapes / 259 data rows measured / recommended maxline health 443 B`, `exit=0` (binding shape: the
+  verification log's `Date｜Leaf｜Checks｜Result` row, 52 rows). The registry now carries `382` and `443`,
+  the `decisions_collection` `maxline=491` debt is **cleared**, and
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 87 files measured`,
+  `exit=0`, with `decisions_collection: widest line 353 B = 92% of its 382 B target` and
+  `tasks_collection: widest line 443 B = 100% of its 443 B target`.
 - [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
-  `13 suite(s) green`, `exit=0`; the pre-existing debt arm still fires (`RED-DEBT`, a widened baseline with no
-  `at=` axis, is refused exactly as before, so the new axis added a path and did not relax a rule); the other
-  ten self-test arms are unchanged; no row other than `roadmap` carries `at=`, so every other surface is judged
-  by the same comparison it always was. No Rust changed; `scripts/check_live_doc_size.sh` is a project-doctrine
-  check, so this slice owes the immediate push and the observed CI verdict, recorded in the Verification Log.
-- [x] **FIX** — one measurement field (the first line, tabs stripped), one early branch in the debt loop, four
-  self-test arms, one probe arm, the header's refusal list, the re-based registry row, the decision record, and
-  the adoption record's trigger line. Deliberately NOT done: importing the neutral JSONL checker package that
-  trigger 3 nominally points at — the *contract* (an executed freshness oracle for a stored copy) is what the
-  trigger asks for, and six lines in the existing awk evaluator discharge it without a 2 100-line interpreter
-  in the commit path, which the adoption record's own local parameters forbid.
-- [x] **LOCKSTEP** — the registry row and its notes; `TOOLBOX.md`'s containment rows name the new refusal
-  class; `docs/decisions/INDEX.md` carries the record and the Knowledge Map was regenerated; `MEMORY.md`,
-  `LIVE_STATUS.md`, `CHANGELOG.md` and `DEV_NOTES.md` updated in the commit that lands this leaf
-  (`STITCHCAD-G0-0004c`, the slice that hit the trigger). Lesson promotion: **promoted** — the record carries
-  an `answers:` line.
+  `14 suite(s) green`, `exit=0` (thirteen before this leaf; the fourteenth is the render oracle);
+  `bash scripts/check_live_doc_size.sh --self-test` → `15 arms, 0 failed`; the containment probe suite →
+  `probes: 5 pass / 0 fail` including `REAL-3`; every book census green and unchanged — glossary
+  `276 terms / 8 parts / 145 tokens / 0 failure(s)`, matrix `105 rows / 29 diagnostics / 0 failure(s)`,
+  standards `6 registered / 6 designations used / 0 failure(s)`, fixture
+  `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`, coverage
+  `10 lanes / 13 trees / 3 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`; `make book` → `exit=0`.
+  The inherited checker was **not** modified: `git diff --stat HEAD -- scripts/check_table_arity.sh` → empty,
+  `rc=0`, because a NEUTRAL spine file is reported upstream and never patched locally.
+- [x] **FIX** — built the render oracle as a tracked probe (refusing with `exit=2` when `mdbook` is absent,
+  rather than reporting green over a page nobody rendered); wrote the convention into `COMMIT.md`; re-derived
+  both targets and cleared the debt; and removed the fat that the old prose-derived targets had been blamed
+  for — the `491` B `Class｜Behaviour｜Files` row in
+  `decision_scaffold-sync-protects-project-content.md` became two bounded bullets (the house remedy), nine
+  index hooks that had grown into three-line summaries are one line each again, and four verification-log
+  rows above the derived budget were tightened. The target moved *and* the rows moved: raising a number to fit
+  verbosity and trimming rows to fit a guess are both wrong, and this leaf did neither alone.
+- [x] **The upstream question is reported, not patched, and the local gap is owned.** D22 closes with the
+  renderer's answer recorded; **D47** records that nothing in this repository mechanically refuses the row the
+  renderer truncates (the inherited checker reports `0` defects for it), and **`SPINE.20`** owns the
+  project-slot check, with the render probe as its ground truth. A convention in `COMMIT.md` is what authors
+  read; a gate is what holds when they do not, and this repository's own doctrine says a rule that lives only
+  in a doc is a suggestion.
+- [x] **LOCKSTEP** — D22 closed and D47 logged in `docs/tasks/PLANNING.md`; `SPINE.20` created here;
+  `COMMIT.md` gains the convention; `TOOLBOX.md` gains the render oracle; the containment adoption record's
+  trigger 3 was already marked fired by `SPINE.4.5` and its max-axis note is cited by the new convention;
+  `LIVE_STATUS.md`, `MEMORY.md`, `CHANGELOG.md` and `DEV_NOTES.md` updated in this commit; the index carries
+  `docs/decisions/decision_table-cells-escape-pipes-render-to-settle.md`. Lesson promotion: **promoted** — that
+  new record carries the rendered evidence and an `answers:` line, and
+  `decision_maxline-health-derived-from-the-cell-budget.md` gains the max-axis consequence this leaf measured.
 
 ## Verification Log
 
@@ -567,8 +608,12 @@ placeholder box (defect D15).
 | `2026-09-29` | `SPINE.4.2` | registry censuses (row + field counts, route→surface closure, path census); `wc -lc` and per-file maxline before/after the trims; `make gate`; `make check`; `make probes` | `17` surfaces × `21` fields, `15` routes × `8` fields, closure holds, `0` absolute paths; maxline `1758`→`255`, `1104`→`146`; `=== all doctrines green ===`; `test result: ok. 1 passed`; `6 suite(s) green` |
 | `2026-09-29` | `SPINE.14` | sha256 of the sealed segment vs `git show HEAD:CHANGELOG.md`; `wc -lc` before/after; entry censuses; `check_live_doc_size.sh`; `make gate`; `make check` | `BYTE-IDENTICAL: True`, `sha256:78f43e0f…`; ledger `522`/`42124` → `371`/`30713`; `6` sealed vs `0` in the ledger and `15` of ours; `OK — 17 surfaces, 15 routes, 41 files`; both gates green |
 | `2026-09-29` | `SPINE.4.3` | `check_live_doc_size.sh` on the real tree; `--self-test`; `run_live_doc_size_probes.sh`; `make gate`; `make probes`; `make check` | `OK — 17 surfaces, 15 routes, 41 files measured, 19 warning(s)`, `exit=0`; `11 arms, 0 failed`; `probes: 4 pass / 0 fail`; `=== all doctrines green ===`; `7 suite(s) green`; `test result: ok. 1 passed` |
-| `2026-09-30` | `SPINE.4.4` | `run_cell_budget_census.sh` + `--self-test`; `check_live_doc_size.sh` before/after and its `--self-test`; the size probe suite; `make gate`; `make probes` | `36 shapes / 625 data rows / recommended maxline health 275 B`, `exit=0`; `probes: 7 pass / 0 fail`; the warning moved from `272 B = 136% of its 200 B target` to `272 B = 99% of its 275 B target`, `OK — 80 files measured`; `11 arms, 0 failed`; `probes: 4 pass / 0 fail`; all doctrines green; `12 suite(s) green` |
+| `2026-09-30` | `SPINE.4.4` | `run_cell_budget_census.sh` + `--self-test`; `check_live_doc_size.sh` before/after and its `--self-test`; the size probes; `make gate`/`probes` | `36 shapes / 625 data rows / recommended maxline health 275 B`, `exit=0`; `probes: 7 pass / 0 fail`; the warning moved from `272 B = 136% of its 200 B target` to `272 B = 99% of its 275 B target`; `11 arms, 0 failed`; `probes: 4 pass / 0 fail`; all doctrines green |
 | `2026-09-30` | `SPINE.4.4` (CI verdict, observed after the exceptional push `.doctrine/` owed) | `make check`/`gate`/`probes`; `git push origin main`; the Actions runs API for `head_sha=9b58c47` | `exit=0` all three; `119946b..9b58c47  main -> main` and `git rev-list --count origin/main..HEAD` → `0`; `runs: 2` — **`rust` completed `success`**, **`doctrines` completed `success`** |
+
+| `2026-09-30` | `SPINE.4.5` (CI verdict, observed after the exceptional push) | `make check`/`gate`/`probes`; `git push origin main`; the Actions runs API for `head_sha=513374c` | `exit=0` all three; `9b58c47..513374c  main -> main`, ahead `0`; `runs: 2` — **`doctrines` completed `success`**, **`rust` completed `success`**, so the revision-aware baseline is verified by a runner and not only here |
+
+| `2026-09-30` | `SPINE.15` | the render oracle and its three arms; both cell-budget derivations; `check_live_doc_size.sh` + `--self-test` + its probes; every book census; `check_table_arity.sh --self-test` and `git diff --stat` on it; `make gate`/`probes`/`book` | `probes: 3 pass / 0 fail` with the raw-pipe row rendered as `A raw pipe in a code span: `x │ y` │ 2` (rightmost cell dropped); `382 B` and `443 B` derived, both `exit=0`; `OK — 87 files measured`, `15 arms, 0 failed`, `probes: 5 pass / 0 fail`; all censuses `0 failure(s)`; the inherited checker untouched; `14 suite(s) green` |
 
 ## Commit Log
 
@@ -595,7 +640,9 @@ placeholder box (defect D15).
 | `SPINE.17` | `STITCHCAD-SPINE-0017 (leaf SPINE.17): the push-cadence exception is derived` | `make push-due`; 3 arms observed |
 | `SPINE.18` | `STITCHCAD-SPINE-0018 (leaf SPINE.18): derive the push-due trigger set` | false obligation removed; 3 arms re-observed |
 | `SPINE.4.4` | `STITCHCAD-SPINE-0004d (leaf SPINE.4.4): the maxline target is derived from the cell budget` | D42 fixed by the evidence split; the ceiling rises by record; `.doctrine/` changed, so the immediate push is owed |
-| `SPINE.5`, `SPINE.13`, `SPINE.15`, `SPINE.19` | `pending` | — |
+| `SPINE.4.5` | `STITCHCAD-G0-0004c (leaf G0-CONTRACT.4c, SPINE.4.5, PLANNING.6, G0-CONTRACT.14b)` | landed in the slice that applied roadmap v0.3 and hit the trigger; CI observed green on `513374c` |
+| `SPINE.15` | `STITCHCAD-SPINE-0015 (leaf SPINE.15): the table convention is settled by a rendered page` | D22 closed, D47 logged and `SPINE.20` created; both prose-derived maxline targets re-derived; the decisions debt cleared |
+| `SPINE.5`, `SPINE.13`, `SPINE.19`, `SPINE.20` | `pending` | — |
 
 ## Changelog
 
@@ -652,3 +699,15 @@ placeholder box (defect D15).
   authorising the ceiling's move to `440` B. The warning survives at `99%` of the new target and now says the
   termbase is *at budget*; clearing it is `SPINE.15`'s table-authoring convention. D42 fixed here: SPINE's
   `17` completed checklists moved to `SPINE-evidence.md`, tree file `1096` → `552` lines.
+- `2026-09-30`: `SPINE.15` landed — D22 is settled by a rendered page rather than by reading a specification:
+  a raw `|` inside a table cell's code span **splits the cell** and the renderer drops the rightmost cell
+  silently, while `\|` keeps the row intact. The oracle is tracked
+  (`docs/tasks/artifacts/table_render/run_table_render_probes.sh`, `probes: 3 pass / 0 fail`) and its third arm
+  pins the divergence — the inherited `check_table_arity.sh` still self-tests the opposite, so it under-reports
+  and is left untouched as NEUTRAL, with the gap reported as **D47** and owned by a new leaf **`SPINE.20`**.
+  The convention is in `COMMIT.md` where authors look. Both remaining prose-derived maxline targets are
+  re-derived from their binding shapes with the `SPINE.4.4` instrument (`decisions_collection` `320` → `382` B,
+  its `maxline=491` debt cleared; `tasks_collection` `400` → `443` B), and the fat those targets were blamed
+  for was removed at the same time: one `491` B row became bounded prose, nine index hooks are one line each
+  again, and four verification rows above the derived budget were tightened. `make probes` is now
+  `14 suite(s) green`.

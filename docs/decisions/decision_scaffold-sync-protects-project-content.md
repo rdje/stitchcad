@@ -12,10 +12,16 @@ answers: "is it safe to run scripts/update_scaffold.sh?" · "will a spine update
 
 `scripts/update_scaffold.sh` sorts every file it can sync into two declared classes:
 
-| Class | Behaviour | Files |
-| --- | --- | --- |
-| **NEUTRAL** — carries no project content by construction | overwritten freely, previous copy backed up | the universal check scripts, the hooks, `MEMORY_ARCHITECTURE.md`, `docs/TASK_TREE_README.md`, `.doctrine/README.md`, the knowledge-map scripts, `DOCTRINE_VERSION` |
-| **PROJECT-CONTENT** — the template itself instructs the project to write into it | backed up, reported and **SKIPPED**; overwritten only with `--force-project-sections` | `docs/TASK_TREE.md` (Active Task Trees index), `TOOLBOX.md` (project toolbox), `README_POLICY.md` (local adoption note), `DOCTRINE_ENFORCEMENT.md` (registry mirror invites project rows), `COMMIT.md` (a named per-project knob), `AGENTS.md` (bootstrap pointer), `docs/tasks/TEMPLATE.md`, `docs/decisions/TEMPLATE.md` |
+Two classes, and the difference is whether the template itself asks the project to write into the file:
+
+- **NEUTRAL** — carries no project content by construction, so it is overwritten freely with the previous
+  copy backed up: the universal check scripts, the hooks, `MEMORY_ARCHITECTURE.md`,
+  `docs/TASK_TREE_README.md`, `.doctrine/README.md`, the knowledge-map scripts, `DOCTRINE_VERSION`.
+- **PROJECT-CONTENT** — the template instructs the project to write into it, so it is backed up, reported and
+  **SKIPPED**, and overwritten only with `--force-project-sections`: `docs/TASK_TREE.md` (the Active Task
+  Trees index), `TOOLBOX.md` (project toolbox), `README_POLICY.md` (local adoption note),
+  `DOCTRINE_ENFORCEMENT.md` (its registry mirror invites project rows), `COMMIT.md` (a named per-project
+  knob), `AGENTS.md` (bootstrap pointer), `docs/tasks/TEMPLATE.md`, `docs/decisions/TEMPLATE.md`.
 
 Two further rules: the updater **refuses a dirty working tree** (a sync over uncommitted work hides
 both the update and any loss in `git diff`), and `--dry-run` reports the classification while writing

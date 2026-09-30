@@ -20,15 +20,14 @@
 - **Next action:** take **`G0-CONTRACT.9`** — ADR-0003 (construction recipe primary) plus the formula
   language v1: grammar, units inside expressions, conditionals, name binding, evaluation order, error and
   dimension rules, worked over the reference skirt, and the drafting system that ships as the reference block
-  set. A big chapter, so it is a whole slice. Then `.10`–`.12`, `.15`–`.17`; the ruling's four items are all
-  landed (`.13d`, `.4b`, `.14`, `SPINE.4.4`).
+  set. A big chapter, so it is a whole slice. Then `.10`–`.12`, `.15`–`.17`. The ruling's four items and the
+  three findings are all landed; `ROADMAP.md` is at **v0.3** and the table convention is in `COMMIT.md`.
 - **Execution order and open defects:** `docs/TASK_TREE.md` (order) and `docs/tasks/PLANNING.md`
   (defect census) — both layer B; not restated here.
 - **Push:** 400-commit cadence, **plus** an immediate push whenever an unpushed commit touches CI, a
   doctrine check, `.doctrine/` or `.githooks/` — derive it with `make push-due` (`COMMIT.md`).
 - **In-flight uncommitted work:** none.
-- **Blockers:** three seats need a named human from the director — project owner, procurement owner, and the
-  sewing/factory domain expert, who gates the fixture's `assumed` constants and so the first G2 golden
-  (`docs/book/src/governance.md` §8 lists them; §2 records the acting authority holding them meanwhile). The
-  roadmap amendment is no longer pending: delegated, ruled approved and applied as **v0.3**, with
-  `G3-GRADING.5`/`.15` owning the garments its envelope-coverage criterion requires.
+- **Blockers:** one seat is **vacant** and cannot be acted — the sewing/factory domain expert, who gates the
+  fixture's `assumed` constants and so the first G2 golden. The project owner's and procurement owner's seats
+  are held acting by the director. All three are the director's to name (`docs/book/src/governance.md` §8, with
+  §8.2 stating the ask per seat).

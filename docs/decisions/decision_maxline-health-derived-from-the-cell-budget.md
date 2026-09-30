@@ -72,6 +72,19 @@ Re-derive all of it with one command: `bash docs/tasks/artifacts/live_doc_size/r
 
 ## How to apply
 
+- **A maximum axis does not behave like a line or byte axis, and `SPINE.15` measured the consequence.** A
+  health target derived from the same population it governs always lands near that population's widest row, so
+  the 80 % warning band is tight by construction: after both remaining prose-derived targets were re-derived
+  from their binding shapes, `decisions_collection` sits at `353 B = 92 % of 382` and `tasks_collection` at
+  `443 B = 100 % of 443`. Neither is a defect. Read a maxline warning as **at budget** — an instruction to
+  split the row or tighten the cell — and never as a reason to raise the number: the derived budget is the
+  shape's contract, and the row that exceeds it is the thing that changed.
+- **Trimming and deriving are both tools, and using only one is the mistake.** `SPINE.15` moved the targets
+  (382, 443) *and* the rows: the one `491` B row that had been carried as debt became bounded prose, nine
+  index hooks that had grown into three-line summaries became one line each, and four verification-log rows
+  above the derived budget were tightened. Raising a target to fit verbosity launders the verbosity; trimming
+  rows to fit a guessed target launders the guess.
+
 - **When the warning fires on a table row:** split the row into a bounded subsection, or trim the cell — the
   remedies `G0-CONTRACT.2` and `.7` both used when the same ceiling caught their tables. Do not raise the
   target; a target rises only when the *shape* changes, and then only by re-running the tool.

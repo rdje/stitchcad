@@ -635,3 +635,52 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   until it was); `docs/TASK_TREE.md`'s frontier cells and execution-order line, `LIVE_STATUS.md`,
   `MEMORY.md` and `CHANGELOG.md` (including the rollover) updated in this commit. Lesson promotion:
   **promoted** — the new record carries an `answers:` line.
+
+### `SPINE.4.5` — a debt baseline knows which revision it was measured at
+
+- [x] **REPRODUCE / ISSUE** — roadmap v0.3 could not be applied honestly. `wc -lc ROADMAP.md` → `919 50821`
+  and the registry's `roadmap` debt read `lines=919;bytes=50821`, so the amendment's `+28` lines / `+1 997` B
+  hit `LIVE-DOC-SIZE: roadmap: transition debt WIDENED on lines (947 > baseline 919) — a baseline never grows`
+  and `make gate` blocked. The rule is right; what was missing is a legitimate path, and the only one available
+  was editing the baseline number — the silent widening the rule exists to prevent.
+- [x] **ROOT CAUSE (WHY + WHERE)** — a debt baseline is a **stored copy of a mechanically owned value** (the
+  file's own size) with nothing tying it to the moment it was taken, so a legitimate revision and a silent
+  widening are indistinguishable to the checker. `grep -n 'debt' .doctrine/live_document_size/surfaces.tsv`
+  → one hit per row, `rc=0`, and shows the header's own rule — "the exact measured baseline at adoption …
+  A baseline never widens" — while the
+  `roadmap` row's note names the missing piece: "a revision-aware baseline+delta adapter is deferred (adoption
+  note trigger 3)". `grep -n -A6 'trigger' docs/decisions/decision_live-document-containment-proportionate-adoption.md`
+  → trigger 3 is "a stored copy of a mechanically owned value needs an executed freshness oracle", and the
+  record says whoever hits it owns it. This slice hit it.
+- [x] **ADDRESSED (verified)** — the debt column now accepts `at=<revision>`, executed rather than documented:
+  the measure step emits each file's first line as a sixth field, and the evaluator refuses a row whose token
+  that line no longer declares. `bash scripts/check_live_doc_size.sh --self-test` →
+  `live-doc-size --self-test: 15 arms, 0 failed`, `exit=0`, the four new arms being `GREEN-AT` (a baseline
+  measured at the revision the file declares passes), `RED-AT-STALE` (a token the file no longer declares is
+  refused), `RED-AT-WIDEN` (declaring the right revision does not license growth past the baseline) and
+  `RED-AT-KIND` (a revision token on a collection row is refused rather than ignored). Against the REAL
+  registry: `bash docs/tasks/artifacts/live_doc_size/run_live_doc_size_probes.sh` → `probes: 5 pass / 0 fail`,
+  where `REAL-3` copies the registry, stales the roadmap row to `at=v0.2` and requires
+  `debt baseline was measured at revision `v0.2`, which ROADMAP.md no longer declares`. The roadmap's baseline
+  is re-based in the revision's own commit — `.doctrine/live_document_size/surfaces.tsv` now reads
+  `lines=947;bytes=52818;at=v0.3` with the authority cited in its notes — and the tree passes:
+  `bash scripts/check_live_doc_size.sh` → `live-doc-size: OK — 17 surfaces, 15 routes, 84 files measured`,
+  `exit=0`. The rule is recorded in `docs/decisions/decision_revision-aware-containment-baseline.md`, and the
+  adoption record's trigger 3 is marked fired and discharged locally rather than left owed.
+- [x] **NO REGRESSION** — `make gate` → `=== all doctrines green ===`, `exit=0`; `make probes` →
+  `13 suite(s) green`, `exit=0`; the pre-existing debt arm still fires (`RED-DEBT`, a widened baseline with no
+  `at=` axis, is refused exactly as before, so the new axis added a path and did not relax a rule); the other
+  ten self-test arms are unchanged; no row other than `roadmap` carries `at=`, so every other surface is judged
+  by the same comparison it always was. No Rust changed; `scripts/check_live_doc_size.sh` is a project-doctrine
+  check, so this slice owes the immediate push and the observed CI verdict, recorded in the Verification Log.
+- [x] **FIX** — one measurement field (the first line, tabs stripped), one early branch in the debt loop, four
+  self-test arms, one probe arm, the header's refusal list, the re-based registry row, the decision record, and
+  the adoption record's trigger line. Deliberately NOT done: importing the neutral JSONL checker package that
+  trigger 3 nominally points at — the *contract* (an executed freshness oracle for a stored copy) is what the
+  trigger asks for, and six lines in the existing awk evaluator discharge it without a 2 100-line interpreter
+  in the commit path, which the adoption record's own local parameters forbid.
+- [x] **LOCKSTEP** — the registry row and its notes; `TOOLBOX.md`'s containment rows name the new refusal
+  class; `docs/decisions/INDEX.md` carries the record and the Knowledge Map was regenerated; `MEMORY.md`,
+  `LIVE_STATUS.md`, `CHANGELOG.md` and `DEV_NOTES.md` updated in the commit that lands this leaf
+  (`STITCHCAD-G0-0004c`, the slice that hit the trigger). Lesson promotion: **promoted** — the record carries
+  an `answers:` line.

@@ -48,6 +48,20 @@ apply to code changes.
   registry (`.doctrine/live_document_size/`, see `LIVE_DOCUMENT_SIZE_CONTAINMENT.md`): lifecycle
   class, owner, health target, enforcement ceiling. A ceiling rises only by a recorded decision,
   never to land content; trimming is the default answer.
+- **Table authoring** (settled by a rendered page, not by reading a spec — `SPINE.15`, defect D22):
+  - **Escape every pipe inside a table cell**, code spans included. A raw `|` between backticks still
+    splits the cell: rendered through mdBook, `` | A raw pipe: `x | y` | 2 | 3 | `` came back as three
+    cells — `A raw pipe: `x`, ``y` `` and `2` — with the rightmost cell **silently dropped**. Write
+    `` `x \| y` `` and the row survives intact. Re-run the oracle any time:
+    `bash docs/tasks/artifacts/table_render/run_table_render_probes.sh`.
+  - **A cell is not a paragraph.** When a cell needs more than its column's budget, move the content into a
+    bounded subsection under the table and leave the row a summary — the remedy `G0-CONTRACT.2` and `.7` both
+    used. The widest-line target of a collection is the *cell budget* of its binding table shape, derived by
+    `bash docs/tasks/artifacts/live_doc_size/run_cell_budget_census.sh`; it is never guessed, and it is never
+    raised to fit a row. Tighten the row.
+  - A maximum-content-line target behaves unlike a line or byte target: derived from the same population it
+    governs, it always sits near that population's widest row, so its 80 % warning means **at budget** — an
+    instruction to split or tighten, not a defect report (`decision_maxline-health-derived-from-the-cell-budget.md`).
 
 ## Required commit workflow (exact order)
 

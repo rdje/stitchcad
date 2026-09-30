@@ -347,9 +347,32 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Impact: a renderer-dependent row shape passes the gate that exists to catch it. The divergence is
     **not verified against a real renderer**, so it is logged as a question with an oracle, not as a
     claim that the spine is wrong.
-  - Owner: `SPINE.15` — settle it against a real GFM renderer, record the answer, and adopt the
-    table-authoring convention (escape pipes inside code spans) whatever the answer is. The spine file
-    itself is NEUTRAL, so an upstream fix is reported, not patched.
+  - Owner: `SPINE.15` (**settled against a real renderer** — the answer is that the renderer splits, so the
+    inherited checker's documented rule is wrong for the renderer this repository ships through. Oracle:
+    `bash docs/tasks/artifacts/table_render/run_table_render_probes.sh` → `probes: 3 pass / 0 fail`, with the
+    rendered rows printed: a 3-column row whose first cell carried `` `x | y` `` came back as
+    `A raw pipe in a code span: `x` │ ``y` `` │ `2` — the code span broken open and the rightmost cell
+    **dropped**, while the same row with `` `x \| y` `` kept all three cells and rendered a literal pipe. The
+    third arm pins the divergence: the inherited checker's own self-test still asserts "a pipe inside a code
+    span is not a separator", so the gate under-reports what the renderer does. The convention is adopted in
+    `COMMIT.md` (escape every pipe in a table cell; a cell is not a paragraph), the spine file is left
+    untouched as NEUTRAL, and the upstream question is reported to the director below as **D47**.)
+
+- **D47** — the table convention is prose, and the only gate that could enforce it is the inherited checker
+  whose rule the render oracle just disproved: nothing in this repository mechanically refuses a raw `|`
+  inside a table cell's code span, so the next such row ships and loses its rightmost cell silently.
+  - Reproduce: `printf '| a | b | c |\n|---|---|---|\n| `x | y` | 2 | 3 |\n' | python3 -c "$PY_SRC"` is not
+    reachable from outside the checker, but its documented behaviour is: `bash scripts/check_table_arity.sh
+    --self-test` → `arm ok  a pipe inside a code span is not a separator (0)`, i.e. the gate reports **0**
+    defects for a row that renders with a dropped cell. `scripts/check_doctrines.project.sh` registers two
+    project doctrines, neither of which reads table cells.
+  - Impact: the failure is invisible in the source and visible only in the rendered page — a column of a
+    contract silently missing from the book the director reads, with every gate green. That is the exact shape
+    `TABLE-ARITY-RATCHET` was ported to catch, and its inherited implementation cannot catch this instance.
+  - Owner: `SPINE.20` (new leaf) — a project-slot check that refuses an unescaped `|` inside a code span in a
+    staged `.md` table row, with the render probe as its ground truth and arms for both. The inherited
+    `check_table_arity.sh` stays untouched (NEUTRAL, re-synced by `scripts/update_scaffold.sh`), and the
+    divergence is reported upstream rather than patched locally, per this repository's standing rule.
 
 - **D24** — a process defect, surfaced by the director rather than by any gate: of this project's first
   17 commits, 15 were spine/governance slices and none was product work. No garment-domain
@@ -625,6 +648,11 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     said `40 logged` while `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` gives `41` (ids D1–D42, no D18 by
     design), because D42 was written after the row in the same commit. A count its own author cannot keep
     straight inside the commit that changes it is the argument for the instrument, not for more care.
+    **Third measurement, at `SPINE.15`:** the row was written as `47 logged` where
+    `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` gives `46` (ids D1–D47, no D18 by design) — the third
+    wrong count in three slices, each by the same author, each inside the commit that changed it. The open set
+    is derived here rather than counted: D34 and D38 (`PLANNING.5`), D35 (`G1-SLICE.3`), D40 and D46
+    (`SPINE.19`), D47 (`SPINE.20`) — six open, forty closed.
 
 - **D39** — the changelog ledger's verifier parsed work-unit ids with a hardcoded suffix range
   (`STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-c]?`), so the FOURTH sub-slice of any unit was mis-read: this slice's

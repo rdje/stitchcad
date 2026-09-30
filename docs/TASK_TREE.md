@@ -53,7 +53,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | Tree | Lane (roadmap source) | Status | Frontier (next leaf) | Owner |
 | --- | --- | --- | --- | --- |
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.5` — derive the index↔tree frontier agreement (D34, which recurred on `2026-09-30`) | repo-local |
-| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5` — the toolbox rows for the instruments in use, then `.13`/`.15`/`.19` | repo-local |
+| [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5` — the toolbox rows for the instruments in use, then `.13`/`.19`/`.20` | repo-local |
 | [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `active` | `.9` — ADR-0003 + the formula language v1 | repo-local |
 | [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `proposed` | `.1` — workspace crate layout (retires the starter crate) | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
@@ -66,27 +66,24 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | [`V2-SIM`](tasks/V2-SIM.md) | §11 track **V2** — physically validated simulation (parallel, uncapped) | `proposed` | `.1` — `sc-sim` outside the default build | repo-local |
 | [`BOOTSTRAP`](tasks/BOOTSTRAP.md) | one-time de-template from bedrock | `done` | — | repo-local |
 
-All ten roadmap lanes are now owned. That claim is **derived, not asserted**:
+All ten roadmap lanes are owned, **derived rather than asserted**:
 
 ```bash
-bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh
-# → census: 10 lanes / 13 trees / 2 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)
-bash docs/tasks/artifacts/planning/run_tree_coverage_probes.sh
-# → probes: 7 pass / 0 fail   (the census is watched, because a census no gate runs can go red unnoticed — D44)
+bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh   # → 10 lanes / 13 trees / 3 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)
+bash docs/tasks/artifacts/planning/run_tree_coverage_probes.sh   # → probes: 7 pass / 0 fail — watched, because a census no gate runs can go red unnoticed (D44)
 ```
 
-The census checks both directions — every §11 lane has a tree whose metadata names it, and every tree
-on disk is registered here with a declared lane — plus the advisory clause-versus-leaf table. A file under
+The census checks both directions — every §11 lane has a tree whose metadata names it, and every tree on disk
+is registered here with a declared lane — plus the advisory clause-versus-leaf table. A file under
 `docs/tasks/` that is not a tree (no `- Tree ID:` line) must be linked from one: that is how the evidence
-siblings the containment registry prescribes are distinguished from strays. In the advisory
-table, more clause rows than roadmap clauses is expected (a tree may split one clause into several
-leaves, as `G5-SHELLS` does with the "full UX spec" list); fewer rows than clauses is the alarm.
+siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
+than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
 Execution order right now: **`G0-CONTRACT.9`–`.12` → `.15`–`.17`**, then `G1-SLICE` … (`.1`–`.8`,
-`.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.14` and `.18` are done, and so is `SPINE.4.4`). The ruling of
-`2026-09-30` delegated four items — D27, D32, `.14`'s drafting and the containment derivation — and all four
-are landed; what remains of it is the director's: naming three humans, and ruling on the `ROADMAP.md` §11 G3
-amendment that four matrix cells propose, which `.15` carries into the G0 exit review. The `SPINE` lane keeps
-`.5`, `.13`, `.15` and `.19` open; none blocks product work (defect D24 records why that ordering is explicit
-rather than incidental). The frontier cells above are hand-kept and have drifted twice (defect D34);
+`.13`/`.13b`/`.13c`/`.13d`, `.4b`, `.4c`, `.14`, `.14b` and `.18` are done, as are `SPINE.4.4`, `.4.5` and
+`.15`). The ruling of `2026-09-30` delegated four items — D27, D32, `.14`'s drafting and the containment
+derivation — and a second instruction delegated its three findings; all are landed, `ROADMAP.md` is at **v0.3**
+carrying G3's envelope-coverage criterion, and what remains of the ruling is the director's alone: naming the
+three humans governance §8 lists. The `SPINE` lane keeps `.5`, `.13`, `.19` and `.20` open; none blocks
+product work (defect D24). The frontier cells above are hand-kept and have drifted twice (defect D34);
 `PLANNING.5` derives them.

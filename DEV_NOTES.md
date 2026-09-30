@@ -3,6 +3,31 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-09-30)_ — settle an argument with the artifact, and anchor an arm on the property
+
+- D22 sat for a session as a *question* because two tracked instruments disagreed about what a markdown table
+  row means: the inherited arity checker self-tests that a pipe inside a code span is not a separator, while the
+  doctrine doc warns that GFM drops extra cells. Neither could settle it, and reading the CommonMark/GFM text
+  would have settled nothing either — so a page was rendered. `mdbook build` over a three-column row whose
+  first cell carried a raw pipe in a code span came back as `A raw pipe in a code span: ` + "`x" + ` | ` + "y`" +
+  ` | `2`: the code span broken open, the cells shifted, and the rightmost cell **gone**, with no diagnostic
+  anywhere. **When two instruments disagree, the oracle is the artifact they both claim to describe.**
+- **The first cut of that oracle asserted a count and was wrong on the truth.** From a two-column page the split
+  row yields 2 cells; from a three-column page it yields 3 with the last dropped. An arm anchored on `2` goes red
+  when the renderer does something *worse* than expected, which is the same trap as a RED arm that removes one
+  instance instead of the property: assert the property (first cell truncated at the pipe, rightmost cell not
+  the one written), never the number this morning's input happened to produce.
+- **Raise the target AND trim the rows, or do neither.** Both remaining prose-derived maxline targets were
+  re-derived from their binding shapes (382 B, 443 B) and the fat they had been blamed for was removed in the
+  same slice — one 491 B row became bounded prose, nine index hooks went from three lines to one, four
+  verification rows were tightened. Deriving a target to fit verbosity launders the verbosity; trimming rows to
+  fit a guessed target launders the guess. Doing both is the only combination that leaves the axis meaning
+  something.
+- **A convention in `COMMIT.md` is what authors read; a gate is what holds when they do not.** The convention is
+  written where authors look, and the fact that nothing in this repository mechanically refuses a row the
+  renderer truncates is logged as D47 with `SPINE.20` owning the project-slot check — the inherited checker
+  stays untouched, because a NEUTRAL spine file is reported upstream and never patched locally.
+
 ## _(2026-09-30)_ — a rule whose only compliant path is "don't change the file" gets bypassed
 
 - Applying the roadmap amendment was blocked by the containment gate, and blocked *correctly*: the `roadmap`
