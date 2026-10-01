@@ -54,6 +54,23 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part27.md`](docs/history/stitchcad-changelog-part27.md) | STITCHCAD-G1-0010 | 20 lines, 1663 bytes, `sha256:b3824493…` |
 
+| [`stitchcad-changelog-part28.md`](docs/history/stitchcad-changelog-part28.md) | STITCHCAD-G1-0011 | 20 lines, 1689 bytes, `sha256:6900e83e…` |
+
+## STITCHCAD-G1-0032 - authored size membership (leaf `G1-SLICE.4c.1`)
+
+Immutable size membership separates stable member identities, exact human labels, authored order,
+explicit system and base member from a pinned SizeSet id/Count revision. Empty/duplicate membership,
+blank labels, missing base/lookups and revision overflow refuse. No sorting, label arithmetic,
+quantities, chart values or axis defaults. Custom single-member ranges establish membership only.
+
+Twelve contracts plus three privacy/quantity docs pass. Seven real production mutations fail their
+regression assertions, including an introduced sort and wrapped revision fallback, then restore exact
+source. Strict Rust passes 386 tests; WASM/book/glossary and focused tracking/ledger/staged gates pass.
+The SizeSet family is split before implementation; D70 reproduces contradictory axes cardinality and
+is owned by .4c.2 with a director ruling requested. Independent membership proceeds; all chart/break/
+resolution/review scope remains tracked. G1 stays 5/18, defects 10 open/59 sealed. Completed Ease review
+and oldest live records are retained unchanged; full SizeSet and production proof remain pending.
+
 ## STITCHCAD-G1-0031 - structural Ease milestone review (leaf `G1-SLICE.4b.3`)
 
 Ontology .2.2 fields map to immutable individual/set APIs and current reference/permission contracts.
@@ -356,24 +373,3 @@ suites pass after sharing whole-interval ownership. Ledger probes and staged doc
 Ontology §10 becomes a bounded index; its 231-line executable body moves unchanged to the linked
 implementation chapter, which gains grain examples. Oldest live changelog/dev-note entries seal.
 Next `.3c.3c` implements allowance descriptors; G1 remains 4/18 top-level leaves, 2/4 object families.
-
-## STITCHCAD-G1-0011 - sewing spans address copies and permit disjoint self-seams (leaf `G1-SLICE.3c.2b.2`)
-
-Immutable `SewingGraph`/`SeamSpan` content now names physical CutCopy identities and exact partial
-ranges, with explicit endpoint correspondence, signed ease source/distribution and semantic stops.
-Construction validates the complete cut plan, owned whole intervals and unique endpoints; stops
-resolve to Notches or born-valid TurnPoints on their side. Symbolic amounts supply no defaults.
-Geometry, walking/realized ease and profile/recipe value resolution remain explicit later obligations.
-
-D35 closes: disjoint same-copy ranges may sew together, touching endpoints are legal, and overlapping
-material intervals are refused after current-frame resolution. D57 closes: two copies of one Piece
-have different neighbours, and removed targets remain missing rather than transferring their seams.
-The fixture records the rule while retaining its existing edge-finish procedure until G2 constructs
-actual folded-end ranges. Neither the five physical cuts nor its arithmetic goldens change.
-
-Eighteen sewing contract tests + the graph privacy doctest pass; disabling either self-overlap or
-whole-interval ownership refusal makes its regression red. Strict `make check`, wasm, warning-free
-book, fixture/feature/glossary censuses, ledger probes and staged doctrines pass. The copy milestone's
-full `make probes` passed all 22 suites. Shared anchor validation retains notch behavior and the
-NotchError alias; original notch tests pass. Closed D35/D57 seal together in defects-part7.
-Oldest CHANGELOG/DEV_NOTES entries roll over atomically. Next `.3c.3b` implements directed grainlines.

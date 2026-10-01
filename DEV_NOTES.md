@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — size labels, member identity and sequence are separate data
+
+- Membership stores pinned set id/revision, explicit system, ordered stable members and one base id.
+  Human labels preserve exact Unicode/case/spacing; no token or numeric semantics are inferred. Missing
+  ids never transfer to a same-label replacement. Explicit validated reconstruction preserves originals.
+- Nonempty/unique membership and base existence are structural requirements. Count successor refuses
+  overflow but does not replace current-registry/command revision checks. Single custom membership is
+  not yet an MTM-ready body chart; quantities, chart and axes are separate owned contracts.
+- Twelve contracts/three privacy-quantity docs and seven real guard/order mutations pass; exact restore,
+  strict 386 tests/WASM/book verify the foundation. D70's source census pinpoints contradictory axes
+  cardinality in size-sets .2/.7; director ruling requested before .4c.2, no representation defaulted.
+- promotion: promoted by `decision_size-set-ownership.md`'s membership foundation section.
+
 ## _(2026-10-02)_ — structural Ease review retains independent proof boundaries
 
 - Every ontology .2.2 field maps to current API/contracts; sets enforce per-POM identity and table
@@ -99,21 +112,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   unrelated staged cleanup decline; SPINE.22 owns the scoped verifier, with fresh questions added now.
 - promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s metadata section.
 
-## _(2026-10-01)_ — identifier syntax and binding authority are separate checks
-
-- Core MachineToken is shared below metadata and recipes. It preserves ASCII lower-snake bytes,
-  refusing malformed starts/segments, whitespace, Unicode lookalikes, uppercase and the three grammar
-  keywords. Built-in parameter names remain valid references; metadata/recipe owners must separately
-  refuse rebinding. Tokens provide no localized display label, text scalar or source-truth claim.
-- Six contracts and a private-field doc-test pass. Four independent spelling/keyword mutations fail
-  actual regressions; restored strict Rust executes 305 tests with WASM/book green. Grammar and book
-  declare the same syntax, including digit-bearing segments; there is no normalization or auto-rename.
-- Measurement metadata/runtime integration and observed-CI signoff are separate safe slices. The
-  completed length-input contract/checklist moves unchanged to a bounded semantic sibling before
-  parent pressure grows; the current checklist remains first. D66 landing-page status is owned by
-  the runtime slice; D65 remains scheduled at its required-seal trigger, with history now 62/64 files.
-- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s token section.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -162,3 +160,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part29.md`](docs/history/stitchcad-devnotes-part29.md) | coverage probe calibration lesson | 15 lines, 1383 bytes, `sha256:d6d266b6…` |
 
 | [`stitchcad-devnotes-part30.md`](docs/history/stitchcad-devnotes-part30.md) | numeric availability/source-truth lesson | 15 lines, 1356 bytes, `sha256:7fa4db87…` |
+
+| [`stitchcad-devnotes-part31.md`](docs/history/stitchcad-devnotes-part31.md) | identifier grammar/binding lesson | 14 lines, 1283 bytes, `sha256:317f385a…` |

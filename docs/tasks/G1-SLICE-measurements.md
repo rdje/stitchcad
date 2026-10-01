@@ -342,3 +342,18 @@ Return to the [active frontier](G1-SLICE.md#current-frontier).
   preserve exact predecessor records. Set intent implemented; .4b.3 structural review next, then SizeSet.
 
 Return to the [active frontier](G1-SLICE.md#current-frontier).
+
+## Structural Ease review — preserved from b6bd985
+
+### `G1-SLICE.4b.3` — structural Ease family review
+
+Review scope: ontology .2.2, .3.1, instantiation-paths .2 and ease-inputs implementation guide.
+`rg` over EaseDefinition/EaseSetDefinition and both contract files maps every required field to its
+canonical representation. The book's structural review table names current checks and deferred proofs.
+No product code changes; strict 371-test/WASM evidence at b4e0bc7 is for unchanged current code.
+Fresh `cargo test -p sc-measure` → 65 tests/docs, rc=0; `make probes` → 23 suites green, rc=0;
+warning-free `make book`, rc=0. All .2.2 structural fields covered; .4b closes, .4c/.4d remain.
+promotion: declined (routine milestone review; canonical decisions unchanged, results in book/task).
+Completed set contract/checklist is retained byte-identically against b4e0bc7 in the measurement sibling.
+
+Return to the [active frontier](G1-SLICE.md#current-frontier).

@@ -6,7 +6,7 @@
 - **Owner / source:** leaf `G0-CONTRACT.6`, resolving the question roadmap §3.4 leaves open at G0 and
   ontology §2.3 refers here ("Ownership … is decided in the size-sets chapter")
 
-answers: "who owns a size set?" · "can a factory change my sizes?" · "where do size-run quantities live?" · "why is a size set referenced rather than embedded in a design?" · "what must a profile record to override sizes?" · "how does made-to-measure fit a size set?"
+answers: "who owns a size set?" · "can a factory change my sizes?" · "where do size-run quantities live?" · "why is a size set referenced rather than embedded in a design?" · "what must a profile record to override sizes?" · "how does made-to-measure fit a size set?" · "can label order choose the base?" · "can a size revision wrap?"
 
 ## The fact / decision
 
@@ -87,3 +87,13 @@ promise, the V1 assembly view and the reference fixture, none of which have a fa
 Related: [[decision_numerical-contract-fixed-point]] · [[decision_machine-tokens-declared-where-used]] ·
 `docs/book/src/spec/size-sets.md` (the normative chapter) · `docs/book/src/spec/instantiation-paths.md`
 §2–§3 (what each path consumes) · `docs/tasks/G0-CONTRACT.md` leaf `.6`.
+
+## Membership foundation — G1-SLICE.4c.1
+
+Stable member identities and exact nonblank human labels are distinct from authored vector order.
+The base names one existing member identity; labels have no numeric, machine-token or quantity
+semantics. Empty/duplicate membership or absent base refuses. A custom member of one establishes only
+membership, not MTM body-chart provenance. Pinned SizeSetReference uses Count revision; a successor
+retains identity and refuses overflow. Currentness/authorized monotonic transitions remain registry/
+command obligations. Axes/chart/break/resolution contracts remain separate; D70's axes cardinality
+conflict requires a ruling before .4c.2, and no axis representation is selected by this foundation.

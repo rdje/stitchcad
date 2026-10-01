@@ -1,7 +1,8 @@
 # Size sets
 
 > **Status:** normative specification, gate **G0** (roadmap §3.4, §7.5, §8). Implemented by `sc-measure` at
-> gate **G1** (leaf `G1-SLICE.4`) and consumed by both instantiation paths at **G3**. The ownership
+> gate **G1** (leaf `G1-SLICE.4`) and consumed by both instantiation paths at **G3**. The
+> [membership foundation](size-membership.md) is executable; full SizeSet implementation remains in progress. The ownership
 > question roadmap §3.4 leaves open is decided here and recorded as
 > `docs/decisions/decision_size-set-ownership.md`. Terms are in the [glossary](glossary.md).
 
@@ -93,6 +94,10 @@ a rule table *implements* them as per-point deltas.
   is missing rather than grading by zero.
 
 ## 7. Multi-dimensional systems
+
+**Implementation conflict D70:** §2 calls axes optional and multidimensional-only; this section requires
+one axis for one-dimensional sets and no second representation. G1-SLICE.4c.2 awaits a director ruling
+on cardinality before implementing axes. The requirements below are retained for that decision.
 
 Some systems designate a size by two or more body dimensions rather than one label. The model expresses
 that without inventing a second mechanism:

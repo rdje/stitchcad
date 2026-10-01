@@ -431,12 +431,64 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `STITCHCAD-G1-0031`
 
 - ID: `G1-SLICE.4c`
-  Status: `pending`
+  Status: `in_progress`
+  Children: .4c.1 (membership), .4c.2 (axes), .4c.3 (chart/breaks), .4c.4 (resolution), .4c.5 (review).
   Goal: SizeSet identity/revision/system, authored ordered labels/base, chart/state/provenance, adjacent
   breaks and axes; immutable profile resolution/transformation intent per canonical SizeSet decision.
   Acceptance: label/order/base distinct; path-2 missing-break refusal, MTM of one, no quantities/defaults;
   profile transformations never mutate Design references; execution/equivalence/approval later owned.
   Split into safe slices before implementation; preserve every size-sets chapter requirement.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4c.1`
+  Status: `done`
+  Goal: immutable membership foundation: SizeSetReference(id, Count revision), SizeSystem, validated
+  human SizeLabel, stable SizeMember ids, authored ordered members and exactly one base member.
+  Pre-code protocol: SizeMembershipDefinition has reference/system/member list/base id. It contains
+  no chart, breaks, quantities, axes or physical defaults; .4c.2/.3/.4 supply those distinct contracts.
+  Reject empty members, repeated member/set ids, exact duplicate labels and absent base; nonblank
+  labels preserve exact Unicode/spacing/case and carry no machine-token or numerical semantics.
+  Id/label queries are order-independent; inventory order is never sorted. Revision successor retains
+  identity and checks Count overflow, without pretending to enforce command-registry currentness.
+  Acceptance: custom single member/base supported, author order preserved, blank labels/duplicate ids/
+  labels/missing base refused, same labels in different sets carry distinct identity; immutable/private
+  content, structured diagnostics and overflow refusal. Canonical charts/axes/evidence remain deferred.
+  Verification: 12 contracts + three privacy/quantity docs, seven real assertion reds; restored
+  strict 386 tests/book/glossary; WASM and staged gate below. D70 ruling remains pending for axes.
+  Commit: `STITCHCAD-G1-0032`
+
+- ID: `G1-SLICE.4c.2`
+  Status: `pending`
+  Goal: axes with ordered values and member coordinate references; incomplete grids remain explicit.
+  Resolve D70's optional-versus-universal-axis specification conflict before choosing its representation.
+  Acceptance: current axis/value identities and complete member points validated, no grid interpolation;
+  no label-derived body measurements or silent axis defaults. Preserve source/state for numeric axes.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4c.3`
+  Status: `pending`
+  Goal: complete SizeSet chart/break object over membership/axes, canonical per-member POM scalars,
+  landmarks/procedures/state/provenance and adjacent signed breaks; current references and path readiness.
+  Acceptance: chart and generated POMs distinct; missing breaks name dimension/pair and refuse path 2;
+  zero/uneven breaks legal; MTM of one uses body provenance and only path 1; no quantity/default values.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4c.4`
+  Status: `pending`
+  Goal: immutable resolved SizeSet/profile transformation intent, pinned Design reference/profile revision,
+  typed label mapping/break scaling/base substitution/chart replacement with state/evidence provenance.
+  Acceptance: new resolved object retains original reference and records transformation; no in-place
+  mutation. Execution, precedence/hard restrictions, equivalence and release approval retain later owners.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4c.5`
+  Status: `pending`
+  Goal: review every size-sets/ownership requirement and deferred execution/proof boundary; milestone
+  checks and book sync before closing .4c structurally, then combined measurement/Ease/SizeSet .4d review.
   Verification: `pending`
   Commit: `pending`
 
@@ -618,8 +670,8 @@ metadata signoff unchanged; the named table slice follows.
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
 | done | `G1-SLICE.4a.3` | `done` | Named table/unique current bindings complete .4a structurally |
-| done | `G1-SLICE.4b.3` | `done` | Ease structural family reviewed; milestone green |
-| next | `G1-SLICE.4c` | `pending` | SizeSet contracts, authored ordering/base and chart/break inputs |
+| done | `G1-SLICE.4c.1` | `done` | Size membership identity/order/base and revision foundation |
+| next | `G1-SLICE.4c.2` | `pending` | Axes model awaits D70 cardinality ruling; independent chart review remains possible |
 
 ## Routing Evidence — D67, lesson decision freshness
 
@@ -700,18 +752,36 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
-### `G1-SLICE.4b.3` — structural Ease family review
+### `G1-SLICE.4c.1` — size membership without inferred order or measurements
 
-Review scope: ontology .2.2, .3.1, instantiation-paths .2 and ease-inputs implementation guide.
-`rg` over EaseDefinition/EaseSetDefinition and both contract files maps every required field to its
-canonical representation. The book's structural review table names current checks and deferred proofs.
-No product code changes; strict 371-test/WASM evidence at b4e0bc7 is for unchanged current code.
-Fresh `cargo test -p sc-measure` → 65 tests/docs, rc=0; `make probes` → 23 suites green, rc=0;
-warning-free `make book`, rc=0. All .2.2 structural fields covered; .4b closes, .4c/.4d remain.
-promotion: declined (routine milestone review; canonical decisions unchanged, results in book/task).
-Completed set contract/checklist is retained byte-identically against b4e0bc7 in the measurement sibling.
+- [x] **REPRODUCE / ISSUE** — `git grep -n -E 'SizeMembership|SizeSetReference' b6bd985 --
+  crates/sc-measure/src` → 0 matches, expected rc=1: no executable membership; size-sets .2–.4/.11 requires identity/revision, human labels,
+  authored order and exactly one existing base, with no quantity or label-derived measurements.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `rg -n 'axes|single axis|two representations'
+  docs/book/src/spec/size-sets.md` → conflicting field row/one-axis rule, rc=0; sc-units ratio.rs
+  inspection → Count(u32), checked successor required. Membership separates identity/label/position.
+  D70 source census pins contradictory optional/multidimensional-only versus single-axis requirements;
+  axes representation is not needed by this independently owned membership foundation.
+- [x] **FIX** — private nonblank exact SizeLabel and immutable SizeMembership; stable member ids,
+  explicit system, pinned reference/revision and base identity. Refuse empty/duplicate members/labels,
+  missing base/lookups and overflow. Never sort, normalize, parse a measurement or invent quantities.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test size_membership_contract` →
+  12 passed, rc=0; three privacy/quantity docs pass. `bash docs/tasks/artifacts/size_membership/
+  run_size_membership_mutations.sh` → seven real assertion reds, rc=101 each; source restored exactly.
+  Authored sort mutation and wrapped revision fallback fail real regressions, not compilation.
+- [x] **NO REGRESSION** — `make check` → 386 tests, strict fmt/clippy, rc=0; three-crate `make wasm`
+  and warning-free book, rc=0. Glossary → 310 terms/9 parts/158 tokens/0 failures, rc=0;
+  tree census → 10 lanes/13 trees/6 siblings/0 gaps, rc=0; ledger → 9 pass/0 fail, rc=0.
+  Final staged `make gate` → all doctrines green, rc=0. Uncertainty census → 133 markers/16 files/
+  0 unowned/0 failures, rc=0. No implicit axis, chart measurement or default quantity.
+- [x] **LOCKSTEP** — API/book/partial SizeSet status, canonical ownership record, live pointers and
+  logs agree. Completed Ease review retains exact predecessor text; rolling records seal unchanged.
+  D70 logged/owned for .4c.2 with director question; .4c.3/.4/.5/.4d preserve all remaining scope.
+  Membership is not a complete SizeSet, MTM-ready chart, current-registry certificate or release proof.
 
 ## Verification Log
+
+| `2026-10-02` | `.4c.1` | membership contracts/guard mutations, strict Rust/WASM/book, glossary/uncertainty/tree/ledger, staged gate | 12 contracts/three docs, seven real reds, 386 tests; 10 open/59 sealed; D70 ruling pending |
 
 | `2026-10-02` | `.4b.3` | ontology/API/test field review, current measure tests, full probes/book, ledger/staged gate | 65 current tests/docs, 23 suites green; unchanged b4e0bc7 product code; .4b structural closure |
 
@@ -818,3 +888,16 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
   rc=0. .4b closes structurally; next .4c SizeSet, then combined .4d review.
 
 | `.4b.3` | `STITCHCAD-G1-0031 (leaf G1-SLICE.4b.3): Ease structural review passes the milestone gate` | field/currentness review, 65 current tests, full 23 suites/book; .4b structural closure |
+
+- `2026-10-02`: .4c splits before code into membership, axes, charts/breaks, resolved intent and
+  review. .4c.1 verifies label/order/base/reference separation; D70 axes conflict reproduced and owned,
+  director cardinality question pending. Independent membership neither selects nor defaults axes.
+
+| `.4c.1` | `STITCHCAD-G1-0032 (leaf G1-SLICE.4c.1): size membership preserves authored order and base identity` | 12 contracts/three docs, seven real reds, strict 386 tests; axes D70 ruling pending |
+
+- .4c.1 verification caught the draft D70 entry at an inline quoted heading marker: live census was
+  nine instead of ten. A newline-anchored heading correction retains all prior PLANNING text exactly;
+  re-derived census is 10 open/59 sealed, disjoint identities. No old planning record changed.
+
+- .4c.1 staged containment refused a 329-byte product-status row; the measured row is shortened to
+  260 bytes under the unchanged 320-byte ceiling. Final staged doctrines pass, rc=0.

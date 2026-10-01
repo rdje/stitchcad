@@ -425,6 +425,18 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     verified by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`.
 
 
+- **D70** — SizeSet axes cardinality has conflicting normative requirements.
+  - Reproduce: rg -n 'axes|single axis|two representations' docs/book/src/spec/size-sets.md reports
+    .2 field row: axes optional and present only for multidimensional systems; .7: one-dimensional
+    system has a single axis and the model does not carry two representations. Ownership decision
+    names multidimensional axes but does not resolve this cardinality contradiction.
+  - Impact: a production schema cannot decide whether an ordinary one-dimensional range requires
+    an explicit axis or may omit it; the choice changes authored data, validation and agent APIs.
+  - Owner/schedule: G1-SLICE.4c.2 before axes implementation; director ruling requested. Independent
+    membership .4c.1 proceeds, chart/resolution contracts remain fully owned. No axis default invented.
+  - Decision requested: explicit axes for every range (including one-dimensional; recommended) versus
+    allowing one-dimensional ranges to omit axes, with explicit axes required for multidimensional sets.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

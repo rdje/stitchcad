@@ -5,11 +5,12 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.4c`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** read SizeSet ontology, size-sets chapter, ownership decision and both instantiation
-  paths. Split .4c safely and record design before code: label/order/base, system, chart/state/provenance,
-  adjacent breaks/axes and immutable profile transformation intent. .4a/.4b close structurally; .4d
-  combined family review remains. Source/evaluation/physical/release proofs remain later work.
+- **Active tree:** `G1-SLICE`, frontier **`.4c.2`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** resolve D70's axes cardinality contradiction before implementing axes (.4c.2).
+  The director was asked: explicit axes for every range (recommended) versus axes optional for 1D.
+  Membership .4c.1 is implemented; chart/breaks .4c.3, profile resolution .4c.4, review .4c.5/.4d
+  remain owned. Independent chart contract review may proceed while the ruling is pending; never
+  infer an answer from elapsed time or default axes. Source/evaluation/physical/release proofs later.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats
   require human acts; governance §8 and G3 `.16` own the details.
