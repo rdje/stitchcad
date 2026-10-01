@@ -146,7 +146,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0006`
 
 - ID: `G1-SLICE.3c.2`
-  Status: `pending`
+  Status: `active`
   Goal: first discharge D55 with full-range resolution/repair (endpoints cannot certify an interior);
   then `SeamSpan` and immutable `SewingGraph`, partial and one-to-many edge ranges, declared ease
   distribution, direction and stop landmarks; resolve D35's same-piece seam rule against the supported
@@ -155,6 +155,30 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   absent pieces/edges, empty or reversed parameter ranges, duplicate span identities and
   missing stop references are typed refusals; same-piece seams have an explicit tested contract;
   edits expose repairs without rewriting authored ranges. Geometric differential checks remain G2.
+  Verification: `pending`
+  Commit: `pending`
+
+  Children: `.3c.2a` (full-range resolution), `.3c.2b` (sewing graph and D35).
+
+- ID: `G1-SLICE.3c.2a`
+  Status: `done`
+  Goal: discharge D55 by folding the entire positive-length interval through the identity journal;
+  expose every surviving fragment, deleted/trimmed interval and arithmetic refusal, preserve traversal
+  order and never rewrite the authored range. Piece full-edge queries consume this contract.
+  Acceptance: D55's middle deletion produces a visible range repair despite resolved endpoints;
+  partial/full ranges survive split/merge/reverse exactly, offset gaps stay visible, every diagnostic
+  names the held range and orphaning operation, and undeclared edges are refused. Endpoint point
+  ambiguity stays governed by `.3b`; full interval coverage is not a geometric or release certification.
+  Verification: 13 range-contract tests + existing suites green; strict clippy, wasm, book,
+  feature census, ledger probes and staged doctrine gate green. D55 closed in defects-part2.
+  Commit: `STITCHCAD-G1-0007`
+  Design: `decision_range-resolution-preserves-entire-interval.md`, recorded before code.
+
+- ID: `G1-SLICE.3c.2b`
+  Status: `pending`
+  Goal: implement the sewing graph content and D35 after `.3c.2a` supplies its range contract.
+  Acceptance: all `.3c.2` sewing-graph criteria met; range and endpoint ambiguity visible; same-piece
+  seams explicitly specified and tested. Then close the `.3c.2` parent.
   Verification: `pending`
   Commit: `pending`
 
@@ -207,7 +231,8 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   undo/redo granularity decided at G0.
   Acceptance: no mutation path bypasses the bus (enforced by module privacy and a test that the
   domain types expose no public mutators); a stale revision is rejected; undo/redo restores
-  semantics, not just geometry.
+  semantics, not just geometry. Design-level reference validation consumes BOTH point registrations
+  and whole-range repair evidence (`.3c.2a`); a lost interior blocks readiness even with live endpoints.
   Verification: `pending`
   Commit: `pending`
 
@@ -329,9 +354,14 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.2` | `pending` | full-range integrity (D55) before sewing spans; same-piece seam rule (D35), partial and one-to-many correspondences with declared ease |
+| — | `G1-SLICE.3c.2b` | `pending` | sewing spans consume whole-range repairs; settle same-piece seam rule D35, carry partial and one-to-many correspondences with declared ease |
 
 ## Decisions
+
+- `2026-10-01`: `.3c.2` has two children: full-range identity resolution (`.3c.2a`, fixing D55),
+  then the sewing graph and same-piece seam contract (`.3c.2b`, fixing D35). The range-fold decision
+  precedes implementation and preserves the distinction between coverage, endpoint resolution and
+  geometric validity. A complete interval cannot be certified by sampling, even at both endpoints.
 
 - `2026-10-01`: `.3c` is decomposed into four child leaves before implementation: pieces, sewing
   graph, marks/allowances, garment constructions. The parent preserves its full ontology §4 scope;
@@ -379,6 +409,44 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3c.2a` — whole-range resolution, fixing D55 before sewing spans
+
+- [x] **REPRODUCE / ISSUE** — D55's tracked point-only counterexample at `0d7a4a5` leaves both held
+  endpoints resolved after deleting the middle of three fragments. Its ledger verdict is still
+  `Releasable`, correctly scoped to point registrations. `cargo test -p sc-core --test piece_contract
+  endpoint_inventory_cannot_certify_the_interior_of_an_edge_range` → `1 passed`, `rc=0`: sampling
+  cannot prove an interval's integrity, and the new piece assertion now demands a visible range repair.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the point fold answers one parameter's fate, while a sewing span
+  holds an interval; the error is treating those as the same quantity. `cargo test -p sc-core --test
+  range_contract arbitrarily_narrow_trimmed_gaps_cannot_escape_the_interval_fold` → `1 passed`, `rc=0`:
+  every hundredths-grid point resolves while the exact uncovered interval is returned as a repair.
+  The solution is interval partition through the journal, recorded before code in
+  `decision_range-resolution-preserves-entire-interval.md`, not adding more sampling points.
+- [x] **FIX** — `ontology::range`: `EdgeRange`, `RangeResolution`, `ResolvedRange`, ordered
+  `RangePortion`s, typed `RangeRepairTask`/`RangeIssue`, and the exact whole-interval fold on the
+  existing public journal. Split/offset use interval intersection (offset gaps retained); merge uses
+  declared arc lengths; reversal preserves authored traversal; deletion and arithmetic refusal retain
+  visible tasks. `Piece::range_resolutions` exposes the full-edge evidence. Point API unchanged.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test range_contract` → `13 passed`, `rc=0`:
+  D55 returns a task naming the original held range, deleted middle fragment and delete operation,
+  despite resolved endpoints; partial ranges, merge/reverse, offset order/gaps, missing sources and
+  overflow are checked by exact payload. Generated scripts compare the interval fold with the
+  independent existing point fold away from ambiguous boundaries. Disabling the range-delete arm
+  makes `d55_deleted_interior_blocks_range_coverage_despite_two_resolved_endpoints` fail, `rc=101`;
+  restored source passes. D55 closes in immutable `stitchcad-defects-part2.md`.
+- [x] **NO REGRESSION** — `make check` → fmt, strict clippy and all unit/property/contract/doc suites
+  green, `rc=0` (62 core unit, 8 identity-contract, 9 identity-property, 12 piece-contract and 13
+  range-contract tests; sc-units unchanged). `make wasm` → wasm cross-build green; `make book` →
+  warning-free build; feature census → `0 failure(s)`; ledger probes → `9 pass / 0 fail`; `make gate`
+  → `=== all doctrines green ===`, all `rc=0`. The point registration verdict is not broadened:
+  full coverage, endpoint ambiguity and G2 geometric validity remain separately visible.
+- [x] **LOCKSTEP** — pre-code decision + INDEX, ontology §10, feature-matrix identity row, crate
+  module docs, task decomposition/evidence/frontier, task index, resume pointer, LIVE_STATUS,
+  CHANGELOG and DEV_NOTES; regenerated Knowledge Map. Rollover seals the oldest changelog entry
+  into part14 and two dev-note lessons into part8, with exact digests watched by ledger probes.
+  The closed-defect pointer names new part2; counts derive to 9 open / 45 sealed. The map's
+  interchange orientation entry is shortened without losing its entry path or owner; D53 remains owned.
 
 ### `G1-SLICE.3c.1` — immutable structural pieces with visibly deferred geometry
 
@@ -646,6 +714,7 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `2026-09-30` | `.3a` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate` | `31 passed` unit + `9 passed` property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===` — every `.3a` criterion re-derived, `rc=0` |
 | `2026-10-01` | `.3b` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate`; `make probes`; `run_changelog_ledger_probes.sh` | `62 passed` unit + `8 passed` contract property + `9 passed` identity property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===`; `22 suite(s) green`; ledger probes `9 pass / 0 fail` — every `.3b` criterion re-derived, `rc=0` |
 | `2026-10-01` | `.3c.1` | `make check`; piece contract; `make wasm`; `make book`; `make gate`; release/feature censuses; ledger probes | `12 passed`; privacy doctest green; wasm green; book warning-free; all doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
+| `2026-10-01` | `.3c.2a` | range contract; `make check`; wasm; book; gate; feature census; ledger probes | `13 passed`; all Rust suites green; wasm green; book warning-free; doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
 
 ## Commit Log
 
@@ -658,7 +727,8 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `.3a` | `STITCHCAD-G1-0004 (leaf G1-SLICE.3a)` | the identity layer: `EntityId`/ULID + injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the exact `Rational`/`Param`; 40 tests, wasm green |
 | `.3b` | `STITCHCAD-G1-0005 (leaf G1-SLICE.3b)` | the persistent-identity contract: `IdentityLedger`'s append-only edit journal, fold resolution under split/merge/reverse/delete/offset, derived `RepairTask`s + release rule; 62 unit + 8 property tests, wasm green; recorded in `decision_reference-resolution-journal-fold.md` |
 | `.3c.1` | `STITCHCAD-G1-0006 (leaf G1-SLICE.3c.1)` | immutable structural pieces with deferred geometry; D55 owned by the next child |
-| `.3c.2` … `.16` | `pending` | `.3c` closes after all four children |
+| `.3c.2a` | `STITCHCAD-G1-0007 (leaf G1-SLICE.3c.2a)` | exact whole-range journal fold and visible range repairs; D55 fixed |
+| `.3c.2b` … `.16` | `pending` | `.3c` closes after all four children |
 
 ## Changelog
 
@@ -710,3 +780,9 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
   deletion counterexample creates D55, owned immediately by `.3c.2` before sewing spans are built.
   The book's two literal scope placeholders were repaired after the renderer diagnosed hidden HTML;
   feature coverage now cites the implemented piece contract. All focused gates pass; next `.3c.2`.
+
+- `2026-10-01`: `.3c.2` split into range resolution (`.2a`) and sewing graph (`.2b`). `.2a` fixes
+  D55: the exact interval fold retains deleted/trimmed portions and arithmetic failures as repairs,
+  separately from point endpoint ambiguity and G2 geometry. Thirteen contract tests and the existing
+  suites pass, with the delete arm observed red when disabled. The ledgers roll over atomically;
+  D55 is sealed closed in defects-part2. Next `.3c.2b` implements sewing spans and settles D35.

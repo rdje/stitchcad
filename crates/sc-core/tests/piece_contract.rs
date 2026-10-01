@@ -344,5 +344,12 @@ fn endpoint_inventory_cannot_certify_the_interior_of_an_edge_range() {
         piece.geometric_validation(),
         GeometricValidation::DeferredToG2
     );
-    // G1-SLICE.3c.2 owns range resolution; G2 must still certify full contours.
+    let whole = piece
+        .range_resolutions(&ledger)
+        .find(|(item, _)| item.edge == edge)
+        .unwrap()
+        .1;
+    assert!(!whole.has_full_coverage());
+    assert_eq!(whole.repairs().count(), 1);
+    // G1-SLICE.3c.2a supplies range evidence; G2 must still certify full contours.
 }

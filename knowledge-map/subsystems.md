@@ -21,10 +21,8 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   `formula-language/grammar.md`, `formula-language/examples.md`). Its numbers are computed, not typed:
   `docs/tasks/artifacts/formula_language/run_formula_language_census.sh` reads the chapter's own tables.
   Owner `G0-CONTRACT.9`, implemented by `G1-SLICE.5`.
-- `docs/book/src/spec/interchange-dialects.md` — **dialects, not a format**: six axes, a closed registry of
-  four targets, the seventeen-layer table in both naming modes, one polyline-only entity set, three grading
-  carriages, the receiver-config record. Derived against `ROADMAP.md` by
-  `docs/tasks/artifacts/interchange/run_interchange_census.sh`. Owner `G0-CONTRACT.10`, written from `G2-2D`.
+- `docs/book/src/spec/interchange-dialects.md` — six-axis target registry, layers, entities and grading.
+  Checked by `docs/tasks/artifacts/interchange/run_interchange_census.sh`. Owner `G0-CONTRACT.10` / `G2-2D`.
 - `docs/book/src/spec/feature-matrix.md` — **the boundary of the release claim**: 105 dispositioned rows, 29
   declared diagnostics, coverage derived by
   `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. Owner `G0-CONTRACT.4`.

@@ -150,11 +150,12 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 
 **This section holds the OPEN defects.** The closed ones are sealed in
 [`docs/history/stitchcad-defects-part1.md`](../history/stitchcad-defects-part1.md)
-(44 entries, 624 lines, 53323 bytes, `sha256:1897bde0…`), under the remedy D46 prescribes and D49's trigger
-required; every id cited anywhere in this repository resolves there or in git history. Derive the counts
+(44 entries, 624 lines, 53323 bytes, `sha256:1897bde0…`) and
+[`stitchcad-defects-part2.md`](../history/stitchcad-defects-part2.md)
+(D55; 19 lines, 1834 bytes, `sha256:e8c7c2f0…`), under the remedy D46 prescribes; every id cited anywhere in this repository resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
-`grep -c '^- \*\*D[0-9]' docs/history/stitchcad-defects-part1.md` for the sealed one. A defect closes by
-moving to the sealed segment in the commit that fixes it, which is the per-defect status token D38 asks
+`grep -h '^- \*\*D[0-9]' docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by
+moving to a new sealed segment in the commit that fixes it, which is the per-defect status token D38 asks
 for, arrived at by structure instead of by a new field.
 
 These were a five-column table until `SPINE.4.2`. A table row is a single line, so a long cell is
@@ -396,21 +397,6 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     `stitchcad-devnotes-part7.md` (57 lines / 5120 bytes) and brought both ledgers back under health,
     verified by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`.
 
-- **D55** — a point-reference endpoint inventory cannot certify the interior of a boundary or sewing
-  range after fragmentation. Found and reproduced by `G1-SLICE.3c.1` (`2026-10-01`); the point ledger
-  itself is correct for the registrations it receives, but using its verdict alone for an edge range
-  would hide a deleted interior fragment.
-  - Reproduce: `cargo test -p sc-core --test piece_contract
-    endpoint_inventory_cannot_certify_the_interior_of_an_edge_range` → `1 passed`, `rc=0`. Split an edge
-    at one third, split its second fragment at one half, delete the middle fragment, and resolve the
-    original start/end: both endpoints still resolve and endpoint registrations report `Releasable`.
-    The complete authored edge has lost its middle. The tracked test asserts both observations.
-  - Impact: no release generator exists, and pieces visibly defer geometric validity; no invalid release
-    is emitted. The risk becomes active when sewing spans or the command bus interpret endpoint repair
-    counts as range completeness. That inference would violate ontology §1.1's no-silent-reassignment rule.
-  - Owner and schedule: **`G1-SLICE.3c.2`, immediately next**, implements a full-range resolution/repair
-    contract before sewing spans use it; `.6` consumes that contract in design validation and G2 still
-    proves geometric contour closure. `.3c.1` documents the endpoint query's exact scope now.
 
 ## Decisions
 

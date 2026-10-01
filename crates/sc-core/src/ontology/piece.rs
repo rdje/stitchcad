@@ -8,7 +8,9 @@
 use core::fmt;
 use std::collections::BTreeSet;
 
-use super::{Direction, EdgeRef, EntityId, IdentityLedger, Param, Resolution};
+use super::{
+    Direction, EdgeRange, EdgeRef, EntityId, IdentityLedger, Param, RangeResolution, Resolution,
+};
 
 /// The geometric obligation carried by every G1 piece.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -330,6 +332,19 @@ impl Piece {
             .chain(self.definition.holes.iter().flatten())
             .chain(self.definition.construction_lines.iter())
             .copied()
+    }
+
+    /// Full-edge interval evidence for every held edge, including lost interior fragments.
+    ///
+    /// Range portions are ordered in the stored edge's forward frame; the accompanying directed edge
+    /// tells a contour consumer whether to reverse that traversal. This evidence does not certify
+    /// geometric continuity or release readiness.
+    pub fn range_resolutions<'a>(
+        &'a self,
+        ledger: &'a IdentityLedger,
+    ) -> impl Iterator<Item = (DirectedEdge, RangeResolution)> + 'a {
+        self.edges()
+            .map(|item| (item, ledger.resolve_range(EdgeRange::whole(item.edge))))
     }
 
     /// Both authored traversal endpoints for each edge, suitable for reference registration.

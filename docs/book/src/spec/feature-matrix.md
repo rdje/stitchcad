@@ -62,7 +62,7 @@ chapter is inside that family or explicitly outside it.
 | --- | --- | --- | --- | --- |
 | construction recipe as the authoring model | supported | ontology §3.1 and roadmap ADR-0003: geometry is derived, never authoritative | G1 evaluation, G2 replay | — |
 | formula language v1 | supported | roadmap ADR-0003 requires it specified at G0 and implemented at G1 | G1 | — |
-| stable identity and topological references | supported | ontology §1, ontology §1.1: a reference survives an edit or becomes a visible repair task | G3 | — |
+| stable identity and topological references | supported | ontology §1, ontology §1.1, ontology §10: point and whole-range references survive edits or expose repairs | G3 | — |
 | canonical project format, byte-identical saves | supported | ontology §7: derived data is never authoritative and two saves of one state are identical | G1 persistence, G2 save and load | — |
 | NURBS-class curves and expressions | deferred | roadmap §4.2 fixes the curve set as line, arc and cubic Bézier — "the AAMA/ASTM diet" | G7 or later | `env_nurbs` |
 | geometric sketch constraints (`sc-sketch`) | deferred | roadmap §4.3 marks it OPTIONAL and ADR-0001, not v1, settles its solver | G7 or later | `env_sketch_constraints` |

@@ -5,13 +5,13 @@
 //! wasm32-unknown-unknown`, not a host `cargo check`). It now carries entity identity, the stable
 //! topological references, the exact rational parameter, and the reference-resolution contract under
 //! split/merge/reverse/delete/offset with its repair tasks, and immutable structurally validated pieces
-//! with explicit deferred geometric obligations, in [`ontology`].
+//! with explicit deferred geometric obligations and whole-interval repair evidence, in [`ontology`].
 //!
 //! What lands here, and when:
 //!
 //! | Module | Contents | Leaf |
 //! | --- | --- | --- |
-//! | `ontology` | identity, exact parameters, topology journal and repairs; structural `Piece` with deferred geometric validation; sewing spans and other objects follow | `G1-SLICE.3a`/`.3b`/`.3c` |
+//! | `ontology` | identity, exact parameters, point/range topology resolution and repairs; structural `Piece` with deferred geometry; sewing spans and other objects follow | `G1-SLICE.3a`/`.3b`/`.3c` |
 //! | `recipe` | the formula graph and ordered drafting operations, evaluated in one deterministic pass | `G0-CONTRACT.9`, `G1-SLICE.5` |
 //! | `command` | the typed command bus: atomic groups, preview/commit, revision preconditions, idempotency, undo granularity | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |

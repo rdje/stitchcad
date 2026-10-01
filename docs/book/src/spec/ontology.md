@@ -2,7 +2,7 @@
 
 > **Status:** normative specification, gate **G0** (roadmap §3.1, §4.1). Specified here; implemented by
 > `sc-core` and `sc-measure` at gate G1 (leaves `G1-SLICE.3`, `G1-SLICE.4`). Pieces are now structurally
-> implemented (§10); other object types follow. Terms used below are
+> implemented with whole-interval repair queries (§10); other object types follow. Terms used below are
 > defined in the [glossary](glossary.md).
 
 This chapter defines every first-class object in a StitchCAD design: what it is, what it must carry,
@@ -329,12 +329,43 @@ fold indicator derive from the cut plan rather than being separately editable in
 validated piece. `edges()` includes boundary, hole and construction-line references. After a ledger
 edit, `endpoint_resolutions()` resolves the held traversal endpoints and exposes `Resolution` values,
 including repair tasks; it never rewrites the authored references. `endpoint_references()` supplies
-an endpoint inventory for the command bus's future atomic registration step. These queries **do not
-reconstruct a contour or certify complete-edge integrity**: deleting an interior split fragment can
-leave both original endpoints resolvable. Full recipe/geometry validation remains required before release.
+an endpoint inventory for the command bus's future atomic registration step. Endpoint queries **do not
+certify complete-edge integrity**: deleting an interior split fragment can leave both original endpoints
+resolvable. Whole-interval evidence now answers that separate question, as described below. Full
+recipe/geometry validation remains required before release.
 
 Every piece reports `GeometricValidation::DeferredToG2`. This is deliberately **not** a valid-geometry
 badge. Endpoint closure, CCW outer winding, opposite hole winding, simplicity, holes strictly inside
 and non-intersecting, and intake conservation remain `G2-2D.1`'s obligations. G1 has no constructor
 that marks these checks passed; this implements the boundary recorded in
 `decision_ontology-invariants-structural-g1-geometric-g2.md`.
+
+**Whole-interval queries (`G1-SLICE.3c.2a`).** `EdgeRange::new(edge, from, to)` requires exact
+ascending bounds `from < to`; `EdgeRange::whole(edge)` covers `[0,1]`. A zero-length anchor is a
+point reference. `IdentityLedger::resolve_range` partitions the entire interval through each journal
+edit, with no grid or endpoint sampling. Its `RangeResolution` retains every `RangePortion`, in the
+held edge's original forward traversal: live portions carry the current edge, local bounds and
+`Direction`; lost portions carry a `RangeRepairTask` naming the original held range, affected local
+interval and the orphaning operation/cause. Existing causes have no candidate interval mapping;
+endpoint ambiguity carries its candidates in the separate point-resolution answer.
+
+For example, split a boundary edge into three equal fragments and delete the middle. Resolving the
+original endpoints still succeeds, but resolving the entire edge returns live first fragment, a
+repair for the deleted middle fragment, live last fragment. `has_full_coverage()` is false. The same
+query on a sub-range entirely inside the first surviving third has full coverage. An offset gap,
+however narrow, likewise becomes an explicit uncovered interval; exact-arithmetic overflow becomes a
+recomputation repair, never an approximation. An edge never created in the ledger is `UnknownSource`.
+
+`start()` and `end()` on the range result are the original endpoint **point** resolutions. A bound
+exactly at a split point can still offer both sides; a bound on a shared offset boundary can still be
+ambiguous. Full positive-length coverage does not resolve those choices. It also does not prove
+continuity, winding or geometric validity, and grants no approval. A repair remains visible after
+later edits: a surviving endpoint or new unrelated edge cannot silently reattach lost interval content.
+
+`Piece::range_resolutions()` supplies this full-edge evidence for boundary, holes and construction
+lines, alongside each authored `DirectedEdge`. Range portions are ordered forward in the stored edge's
+frame; a reversed authored traversal consumes that sequence backwards and reverses the fragment
+directions. The future command bus must consider range repairs **as well as** point repairs. The
+existing point-only registration verdict keeps its narrower meaning until design-level registration
+and validation land. The interval contract and its limits are recorded in
+`decision_range-resolution-preserves-entire-interval.md`.

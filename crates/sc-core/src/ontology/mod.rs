@@ -14,12 +14,14 @@
 //! | --- | --- | --- |
 //! | [`piece`] | immutable structurally validated `Piece`, complete label view, deferred geometry | `.3c.1` |
 //! | [`id`] | `EntityId` (a ULID) and the injected `IdGenerator` | `.3a` |
+//! | [`range`] | whole-interval coverage and visible range repairs, distinct from endpoint queries | `.3c.2a` |
 //! | [`rational`] | the bounded exact rational a parameter is stored in | `.3a` |
 //! | [`reference`] | `EdgeRef`, `PointRef`, `LocalTag` and the `[0, 1]` `Param` | `.3a` |
 //! | [`topology`] | the persistent-identity contract: the edit journal, resolution, `RepairTask`s | `.3b` |
 
 pub mod id;
 pub mod piece;
+pub mod range;
 pub mod rational;
 pub mod reference;
 pub mod topology;
@@ -36,4 +38,9 @@ pub use topology::{
 pub use piece::{
     CuttingSide, DirectedEdge, GeometricValidation, LabelField, LabelText, LoopLocation,
     MaterialAssignment, Mirroring, Piece, PieceDefinition, PieceError, PrintedLabel,
+};
+
+pub use range::{
+    EdgeRange, RangeError, RangeIssue, RangePortion, RangeRepairTask, RangeResolution,
+    ResolvedRange,
 };

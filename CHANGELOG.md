@@ -20,6 +20,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 | [`part11.md`](docs/history/stitchcad-changelog-part11.md) | the delegation-and-uncertainty slice, `STITCHCAD-G0-0014c` | 46 lines, 4507 bytes, `sha256:de34382e…` |
 | [`part12.md`](docs/history/stitchcad-changelog-part12.md) | the dialects and formula-language slices, `STITCHCAD-G0-0010` and `STITCHCAD-G0-0009` | 84 lines, 7767 bytes, `sha256:9c61ba7c…` |
 | [`part13.md`](docs/history/stitchcad-changelog-part13.md) | the release-contract and canvas-spike-rule slices, `STITCHCAD-G0-0012` and `STITCHCAD-G0-0011` | 75 lines, 7188 bytes, `sha256:1e52b5c9…` |
+| [`part14.md`](docs/history/stitchcad-changelog-part14.md) | the i18n slice, `STITCHCAD-G0-0016` | 38 lines, 3631 bytes, `sha256:2c895780…` |
 
 **Correction (D30).** part1's own descriptor says its coverage runs "through `STITCHCAD-SPINE-0004c`".
 It does not: part1's newest entry is `STITCHCAD-SPINE-0004b`, and `SPINE-0004c` is sealed in part2.
@@ -33,6 +34,27 @@ The live window below holds the most recent slices. When it passes its health ta
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-G1-0007 - whole-interval reference resolution keeps lost interiors visible (leaf `G1-SLICE.3c.2a`)
+
+`IdentityLedger::resolve_range(EdgeRange)` now folds the complete positive-length interval through
+split/merge/reverse/delete/offset. `RangeResolution` preserves ordered directed live fragments and
+`RangeRepairTask`s for deleted or trimmed portions, missing source edges and exact-arithmetic refusal.
+Endpoint point queries stay separate, so a full-coverage interval can still carry a boundary choice.
+No query rewrites the stored reference or claims geometric validity or approval. Piece full-edge
+queries consume this contract; the point-only registration verdict keeps its original scope.
+
+D55 is fixed: deleting a middle fragment produces a visible range repair while both endpoints resolve.
+The regression test goes red if the range-delete arm is removed. Thirteen range tests cover exact
+partial bounds, traversal order, narrow gaps, arithmetic refusal and a recorded-seed differential
+comparison with the existing point resolver. `make check`, `make wasm`, `make book`, doctrine gate,
+feature-matrix census and ledger probes pass. The pre-code decision records the coverage/point/geometry
+boundary; next `.3c.2b` implements sewing spans and resolves D35.
+
+The same append rolls CHANGELOG's oldest entry into `part14` and DEV_NOTES' oldest two lessons into
+`devnotes-part8`; closed D55 moves to immutable `defects-part2`. Their content identities are re-derived
+by the ledger probes. The new Knowledge Map record fits after its interchange orientation entry is
+tightened; D53's durable generator remedy remains separately owned.
 
 ## STITCHCAD-G1-0006 - immutable structural pieces, with geometry visibly deferred (leaf `G1-SLICE.3c.1`)
 
@@ -320,43 +342,3 @@ cadence is an obligation that returns, and this one was 23 hours from firing mid
 - `SPINE.20`'s checklist moved to `SPINE-evidence.md`, as the convention requires of the slice after the one
   that landed it, bringing the tree back inside its per-part health (683 lines / 56 833 B); the changelog's own
   rollover follows in this entry (`part10`).
-
-## STITCHCAD-G0-0016 - one message system, and an inventory nothing keeps by hand (leaf `G0-CONTRACT.16`)
-
-Roadmap §7.6 required the choice at G0 and refused "Fluent or ICU" as an answer. The repository had neither the
-choice nor the architecture, and seven references across five chapters pointed at this leaf instead of a clause.
-
-- **the choice, on evidence** - **Fluent at both ends**: `fluent-rs` in the Rust core and `fluent.js` in the
-  TypeScript chrome over one catalogue format, both Apache-2.0 and unarchived, read on `2026-09-30` from the
-  GitHub and crates.io APIs and tabulated in the chapter. ICU4X is the rejected alternative and stays a named
-  one - active, Unicode License V3, built for resource-constrained clients, which is this product's browser
-  profile - and it loses on the boundary: ICU4X in Rust and the platform's Intl in the browser are two message
-  dialects, the failure the clause exists to prevent. The bridge stays in reserve for a measured plural-rule or
-  locale-data gap, which is `unverified-with-owner` with G5.
-- **the architecture** - the message id IS the diagnostic token, so there is no second numbering to drift;
-  arguments are typed and carry units and text is a presentation field; the termbase is a projection of the
-  glossary with the ⚠ terms first and no guessed translation; the externalization lint has five exemptions
-  each carrying a reason; canonical files are locale-free, so a decimal comma changes nothing stored;
-  pseudolocalization runs in CI before any translator exists; RTL mirrors layout and never geometry, as a
-  byte-comparison test (`i18n_geometry_mirrored`) rather than a sentence; and three review tiers make `strict`
-  and `safety` absolute - so with the domain seat vacant no pack can ship today, stated rather than hidden.
-- **the instrument** - `run_i18n_census.sh` derives the inventory from the envelope's §10, the formula
-  language's §5.2, the dialects' §11, the release contract's §9 and `crates/sc-units/src/error.rs`:
-  `8 families / 64 message ids / 0 failure(s)`. Deriving it caught two errors in the chapter's own first
-  draft - the envelope's 29th token `geom_offset_budget` folded into the `env_*` family, and `UnitError`
-  counted at four variants when it carries five, because the fifth has no braces and a first grep looked for
-  braces. `run_i18n_probes.sh` -> `11 pass / 0 fail`, including CODE-GROWS, which adds a variant to a COPY of
-  the crate's source and requires the count to be refused.
-- **decisions** - `docs/decisions/decision_i18n-one-message-system-fluent.md` records the choice, the
-  comparison table and six rejected alternatives, including percentages as review thresholds ("90 % of the
-  safety tier" is one message in ten saying the wrong thing about a cut line).
-- **glossary** - a ninth part, `localization.md`, with seven terms; the parts table, SUMMARY and the A-Z index
-  updated; six cross-references repointed from this leaf to a clause: `305 terms / 9 parts / 156 tokens /
-  0 failure(s)`.
-- **D49's trigger fired on the tree file itself** at 91 % of its byte ceiling, so the oldest fourteen
-  changelog entries were sealed into `g0-contract-changelog-part1` (84 lines / 7941 bytes, digest reproduced)
-  and the tree fell to 81 811 B; the dev-notes ledger rolled over in the same commit (`devnotes-part5`,
-  43 lines / 3977 bytes), `run_changelog_ledger_probes.sh` -> `9 pass / 0 fail`.
-- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `20 suite(s) green`; `make book` ->
-  exit=0; all eight other censuses green; containment `OK - 17 surfaces, 15 routes, 105 files measured`
-
