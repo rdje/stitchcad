@@ -210,6 +210,14 @@ The parity claim is about **workflows**, not commands: three adapters may expose
 still be at parity, and an adapter that exposes a command no workflow uses has added surface without adding
 capability.
 
+The director reaffirmed comprehensive external-agent control on 2026-10-01: supported inspection,
+authoring, preview/commit, evaluation, recovery and artifact workflows must be reachable through
+the API/MCP adapters with discoverable typed contracts, units, current identities and actionable
+diagnostics. The shared command bus supplies behavior; tools expose coherent workflows. Discovery,
+invalid-input correction, interruption/resume and provenance explanation need agent evaluation
+and independent artifact checks (roadmap §7.8). MCP access alone is not measured stitching expertise.
+The authority contract in §7 and parity evidence requirements above still apply.
+
 ## 9. Diagnostics
 
 | Token | Raised when | Required arguments |

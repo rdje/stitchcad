@@ -19,6 +19,7 @@
 #   MISSING-NONGOAL   a roadmap §1.3 non-goal with no rejected row is refused (M4)
 #   MISSING-ENVELOPE  an envelope garment with no supported row is refused (M5)
 #   BAD-GATE          a gate cell naming a gate roadmap §11 does not have is refused (M6)
+#   BAD-GATE-MISSING / BAD-GATE-DUPLICATE  malformed fixtures cannot count as mutation evidence
 #   DEAD-LINK         a markdown link to a chapter that does not exist is refused (M7)
 #   PROPOSAL-VISIBLE  the A3 advisory really reads the `(proposed)` cells: removing the markers drops the
 #                     count it prints (an advisory that reads nothing prints the same number either way)
@@ -119,12 +120,49 @@ if [ "$rc" -eq 1 ] && grep -q "envelope garment \`classic collar\`" <<<"$out"; t
 else bad MISSING-ENVELOPE "a dropped envelope garment was accepted (exit=$rc)" "$out"; fi
 
 # ---------------------------------------------------------------- BAD-GATE (M6)
+# Mutate the declared gate cell by stable feature name, independent of its explanatory prose.
+# A missing/duplicate target or wrong row shape is setup failure, never evidence of census behavior.
+mutate_gate() {
+  local f="$1"
+  awk -F '|' 'BEGIN { OFS="|"; found=0; malformed=0 }
+    { name=$2; gsub(/^[ \t]+|[ \t]+$/, "", name)
+      if (name == "tuck and pleat") {
+        found++; if (NF != 7) malformed=1
+        $5=" soon "
+      }
+      print
+    }
+    END { if (found != 1 || malformed) exit 2 }' "$f" > "$f.tmp" || {
+      rm -f "$f.tmp"; return 2;
+    }
+  # Independently prove that exactly one target acquired the invalid gate before running the census.
+  if ! awk -F '|' '
+    { name=$2; gate=$5; gsub(/^[ \t]+|[ \t]+$/, "", name); gsub(/^[ \t]+|[ \t]+$/, "", gate)
+      if (name == "tuck and pleat" && gate == "soon") changed++ }
+    END { exit (changed != 1) }' "$f.tmp"; then
+    rm -f "$f.tmp"; return 2
+  fi
+  mv "$f.tmp" "$f"
+}
 D="$WORK/gate"; mkroot "$D"
-sedfile "$D/$MATRIX_REL" 's/^| tuck and pleat | supported | ontology §4.3 models both; G3'"'"'s exit names "darts, folds" | G3 |/| tuck and pleat | supported | ontology §4.3 models both | soon |/'
-out="$(run "$D")"; rc=$?
-if [ "$rc" -eq 1 ] && grep -q 'names no gate, track or recorded gap' <<<"$out"; then
-  ok BAD-GATE "a gate cell of prose instead of a gate is refused (exit=$rc)"
-else bad BAD-GATE "a gate-less commitment was accepted (exit=$rc)" "$out"; fi
+if mutate_gate "$D/$MATRIX_REL"; then
+  out="$(run "$D")"; rc=$?
+  if [ "$rc" -eq 1 ] && grep -q 'names no gate, track or recorded gap' <<<"$out"; then
+    ok BAD-GATE "proven gate-cell mutation is refused (exit=$rc)"
+  else bad BAD-GATE "a gate-less commitment was accepted (exit=$rc)" "$out"; fi
+else bad BAD-GATE "fixture did not acquire exactly one malformed gate"; fi
+
+# Guard the fixture mutation itself: prose drift is legal, absent/ambiguous targets are not.
+D="$WORK/gate-missing"; mkroot "$D"
+sedfile "$D/$MATRIX_REL" 's/^| tuck and pleat |/| missing target |/'
+mutate_gate "$D/$MATRIX_REL"; rc=$?
+if [ "$rc" -eq 2 ]; then ok BAD-GATE-MISSING "missing target refuses fixture setup (exit=$rc)"
+else bad BAD-GATE-MISSING "missing target was accepted as mutation evidence (exit=$rc)"; fi
+D="$WORK/gate-duplicate"; mkroot "$D"
+printf '| tuck and pleat | supported | another explanation | G3 | — |\n' >> "$D/$MATRIX_REL"
+mutate_gate "$D/$MATRIX_REL"; rc=$?
+if [ "$rc" -eq 2 ]; then ok BAD-GATE-DUPLICATE "duplicate target refuses fixture setup (exit=$rc)"
+else bad BAD-GATE-DUPLICATE "ambiguous target was accepted as mutation evidence (exit=$rc)"; fi
 
 # ---------------------------------------------------------------- DEAD-LINK (M7)
 D="$WORK/deadlink"; mkroot "$D"

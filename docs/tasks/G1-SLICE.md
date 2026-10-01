@@ -113,7 +113,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   `decision_edge-parameter-bounded-exact-rational.md`.
 
 - ID: `G1-SLICE.3c`
-  Status: `active`
+  Status: `done`
   Goal: the geometry-bearing object types (ontology §4) — `Piece`, `SeamSpan`/`SewingGraph`, `Notch`,
   `Grainline`, `SeamAllowance`, `Dart`/`Tuck`/`Pleat`/`Gather`, `Closure`, `Pocket` — with their
   structural invariants enforced at construction.
@@ -122,8 +122,9 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   cut-on-fold piece without exactly one fold edge, incomplete label data); the GEOMETRIC invariants
   (CCW winding, simplicity, holes strictly inside, closure, dart-intake conservation) are carried as a
   visible `DeferredToG2` state discharged by `G2-2D.1`, never claimed here.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: object/support suites 149 contracts; sc-core 260 tests incl. 18 docs; full strict
+  Rust/WASM/book, 22 probe suites, focused censuses/ledger and staged doctrine gates green.
+  Commit: `STITCHCAD-G1-0023`
   Design: `decision_ontology-invariants-structural-g1-geometric-g2.md`.
   Children: `.3c.1` (pieces), `.3c.2` (sewing graph), `.3c.3` (marks and allowances),
   `.3c.4` (garment constructions). The parent closes only after all four children.
@@ -322,15 +323,16 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   before this slice's checklist crosses 1000 lines; preserve evidence and revalidate staged gates.
 
 - ID: `G1-SLICE.3c.4`
-  Status: `active`
+  Status: `done`
   Goal: semantic `Dart`/`Tuck`/`Pleat`/`Gather`, `Hem`, `Facing`/`Lining`/`Interfacing`, `Closure` and
   `Pocket` with required content and validated structural references; close the object-type parent.
   Acceptance: required anchors, operation identities, composition and parameter references are carried;
   buttonhole size derives from its button rather than a second input; unsupported constructions are
   refused explicitly; intake conservation stays visibly deferred to G2. Every ontology §4 object has
   implementation evidence, synchronized book content and wasm-safe tests.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: object/support suites 149 contracts; sc-core 260 tests incl. 18 docs; full strict
+  Rust/WASM/book, 22 probe suites, focused censuses/ledger and staged doctrine gates green.
+  Commit: `STITCHCAD-G1-0023`
 
   Children: `.3c.4a` (intake constructions), `.3c.4b` (hem/layers), `.3c.4c` (closures),
   `.3c.4d` (pockets and family signoff). Safe child slices preserve the entire §4.3/§4.7 scope.
@@ -540,14 +542,15 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0021`
 
 - ID: `G1-SLICE.3c.4d`
-  Status: `active`
+  Status: `done`
   Goal: Pocket position, orientation, opening and component Piece references; complete construction
   family signoff and close `.3c` after all child types have structural evidence and book coverage.
   Acceptance: every component exists, composition required, owned placement/direction references,
   symbolic opening resolution and execution scope remain G3 obligations; named envelope diagnostics
   must be consumed before execution, not replaced by approximation. All §4 families accounted for.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: object/support suites 149 contracts; sc-core 260 tests incl. 18 docs; full strict
+  Rust/WASM/book, 22 probe suites, focused censuses/ledger and staged doctrine gates green.
+  Commit: `STITCHCAD-G1-0023`
 
   Children: `.3c.4d.1` (Pocket metadata/composition), `.3c.4d.2` (construction/object-family signoff).
 
@@ -573,7 +576,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0022`
 
 - ID: `G1-SLICE.3c.4d.2`
-  Status: `pending`
+  Status: `done`
   Goal: re-derive all geometry-bearing object families against roadmap/ontology contracts, tests,
   immutable interfaces, current repair behavior, deferred obligations and mdBook implementation index.
   Acceptance: every child structurally complete with owned later obligations; full milestone checks/
@@ -582,8 +585,22 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Director reaffirmed SOTA, signoff and production-grade as the bar on 2026-10-01. Structural
   completion is not production certification: geometry/interoperability/reliability and independent
   review gates retain their owned proofs; measured evidence, not API presence, earns signoff.
-  Verification: `pending`
-  Commit: `pending`
+  Review plan before changes: inspect every ontology §4 object against immutable public interfaces,
+  focused test inventory and bounded book examples; derive test populations from cargo output.
+  Run full Rust/WASM/book and all 22 probe suites. Preserve completed acceptance evidence unchanged
+  in the existing sibling before parent growth; review-only docs/module status and containment
+  rollovers are owned here. Later recipe/profile/Design checks remain explicit release obligations.
+  Signoff defects owned now: D62 — LIVE_STATUS attributes workspace-level 30 tests to sc-units
+  (current 5 unit + 21 property + 1 doc = 27; original sc-core had three smoke tests). D63 —
+  feature-matrix BAD-GATE mutation matches old tuck/pleat explanation, so it no longer changes the
+  fixture and full probes report 11 pass / 1 fail. Fix row/cell targeting and assert fixture mutation
+  before accepting red evidence; census predicate stays unchanged. Both are immediate priority.
+  Director 2026-10-01: external agents must control an instance through MCP over the API and gain
+  stitching competence through observable contracts/validation. Workflow discovery and full parity
+  belong .6/.9 and G5; MCP control alone cannot certify expertise or production artifact correctness.
+  Verification: object/support suites 149 contracts; sc-core 260 tests incl. 18 docs; full strict
+  Rust/WASM/book, 22 probe suites, focused censuses/ledger and staged doctrine gates green.
+  Commit: `STITCHCAD-G1-0023`
 
 - ID: `G1-SLICE.4`
   Status: `pending`
@@ -676,6 +693,11 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Acceptance: authority is enforced by tests that a scoped token cannot exceed (an `approve`
   attempt from a `propose` token fails); stdio-only transport; the parity table's API column is
   populated from the same command list the bus exposes.
+  Director 2026-10-01 reaffirmed comprehensive external-agent control through MCP/API. Curated
+  workflows must expose every supported user operation with typed discovery, units, stable identities,
+  current-state/provenance and actionable diagnostics. Evaluate discovery, invalid-input recovery,
+  interruption/resume and parity using independent artifact checks (§7.8); API/MCP control is not a
+  measured stitching-expertise claim. Existing human-only release approval remains §10's contract.
   Verification: `pending`
   Commit: `pending`
 
@@ -760,7 +782,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.4d.2` | `pending` | Re-derive construction/object-family structural signoff |
+| — | `G1-SLICE.4` | `pending` | Measurements/ease/sizes consume the completed structural ontology |
 
 ## Decisions
 
@@ -833,59 +855,36 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
-### `G1-SLICE.3c.4d.1` — Pocket retains physical composition and owned placement intent
 
-- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires Pocket placement, opening and component Pieces;
-  the prior object families have no Pocket API. Explicit physical-copy identity applies to composition.
-- [x] **ROOT CAUSE (WHY + WHERE)** — pattern-only references cannot distinguish multiple physical
-  components or refuse reassignment. `cargo test -p sc-core --test pocket_contract
-  physical_components_borrow_canonical_pattern_metadata_and_retain_all_deferred_proofs` → `1 passed`,
-  `rc=0`: distinct copy references borrow the same canonical Piece. `orientation_cannot_hide_foreign_middle_geometry_behind_owned_live_endpoints`
-  → `1 passed`, `rc=0`: valid ends cannot prove whole-range ownership, even after reversal.
-- [x] **FIX** — immutable Pocket holds served copy/source guard, position/directed orientation,
-  logical opening and nonempty unique component copy/source references. Current validation repeats
-  target/placement checks; component queries borrow canonical metadata without copying geometry.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test pocket_contract` → `11 passed`, `rc=0`:
-  composition, ambiguity/missing/reassigned targets, canonical metadata, historical point choices,
-  interior loss/foreign geometry and updated same-id Piece ownership covered. Disabling copy-source,
-  orientation-ownership and nonempty-component guards independently yields actual test failures,
-  `rc=101`; restored suite and compile-fail privacy pass. Component repairs stay visible separately.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; restored `make wasm`
-  → green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
-  tree → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`; staged `make gate`
-  → `=== all doctrines green ===`, all `rc=0`. Existing structural object families remain green.
-- [x] **LOCKSTEP** — structural/geometric decision extended before code; recipe/Design opening and
-  component-contour obligations named. API/module/map, Pocket examples/local vocabulary, feature
-  row, tree/frontier/index/live docs align. Oldest changelog/lesson seal unchanged to part22/part21.
-  Director's quality bar remains explicit in `.3c.4d.2`; physical scope/geometry are not approved here.
+### `G1-SLICE.3c.4d.2` — structural object families reviewed against the production-grade bar
 
-### `G1-SLICE.3c.4c.2` — buttonhole length has one canonical button/operation source
-
-- [x] **REPRODUCE / ISSUE** — ontology §4.7 forbids entering buttonhole length twice. The prior Closure
-  supports zipper/hook-bar, but has no button pair or canonical derived-hole source.
-- [x] **ROOT CAUSE (WHY + WHERE)** — an operation id alone leaves the queried size source unspecified.
-  `cargo test -p sc-core --test closure_contract
-  buttonhole_length_source_borrows_the_canonical_button_size_and_derivation_without_defaulting` →
-  `1 passed`, `rc=0`: pointer equality proves both fields borrow canonical authored declarations.
-  `replacing_button_size_or_operation_changes_the_single_observed_hole_source` → `1 passed`, `rc=0`:
-  replacement changes the observed source without mutating the old revision's view.
-- [x] **FIX** — distinct ButtonAndButtonhole kind shares stable instance/count/target validation;
-  required button-size binding and derivation operation have no separate hole-length input/cache.
-  Read-only source view names Closure and borrows both inputs; actual derivation reports DeferredToG3.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test closure_contract` → `15 passed`, `rc=0`:
-  five new contracts cover recipe/profile size origins, canonical borrowing/replacement, non-button
-  absence, existing count/reuse/missing-target rules and current repair blocking. Button-size and
-  operation sources substituted independently → regressions red, `rc=101`; restored strict/privacy
-  checks pass. A compile-fail example proves a second length field is unavailable. Moved closure
-  checklist and task changelog compare unchanged to HEAD, with staged revalidation.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
-  green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
-  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
-  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Existing closure kinds stay green.
-- [x] **LOCKSTEP** — pre-code closure decision, typed recipe dependency obligation, module/map,
-  closure examples/API vocabulary and feature row, parent closure, evidence/history retrieval and
-  live frontier/index/docs align. Oldest entries seal unchanged to changelog-part21/devnotes-part20. No formula
-  or default is invented; G3-GRADING.5 still owes executed derivation proof. Next `.3c.4d` pockets.
+- [x] **REPRODUCE / ISSUE** — all individual §4 objects are delivered; parents still await a complete
+  review. Full probes expose D63 (feature `11 pass / 1 fail`), and crate-scoped test counts expose D62.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-core -- --list` → `260` tests including `18`
+  docs, `rc=0`; fourteen object/support suites contain `149` contracts. Source/API review accounts
+  for sixteen §4 objects in four families. `cargo test -p sc-units` → `5 + 21 + 1`, `rc=0`;
+  `git show eb83f01:crates/sc-core/src/lib.rs` → three original smoke tests, explaining workspace 30.
+  D63's literal old explanation matches no current tuck/pleat row; fixture unchanged, census green.
+- [x] **FIX** — close structural object parents after review; retain all geometric, recipe/profile,
+  current-registry and release obligations. Correct crate-scoped live counts (D62). D63 targets the
+  feature's gate cell and independently proves one malformed gate; absent/duplicate targets refuse
+  setup. Director's API/MCP control requirement belongs existing .6/.9/G5 parity/evaluation contracts.
+- [x] **ADDRESSED (verified)** — `run_feature_matrix_probes.sh` → `14 pass / 0 fail`, `rc=0`:
+  malformed gate refused by unchanged census; missing/duplicate target setup refused. No-op mutation
+  of gate writer → `13 pass / 1 fail`, `rc=1`, naming fixture setup failure; restored suite passes.
+  `make check` executes `287` tests including `19` docs, `rc=0`; all 149 object/support contracts pass.
+  Completed Pocket/button checklists compare unchanged to HEAD and staged gates revalidate them.
+- [x] **NO REGRESSION** — strict `make check`, `make wasm`, warning-free `make book`, full `make probes`
+  → `22 suite(s) green`; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`; tree →
+  `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`; staged `make gate` →
+  `=== all doctrines green ===`, all `rc=0`. No census predicate, diagnostic or envelope was weakened.
+- [x] **LOCKSTEP** — object status/module/map, bounded book review and current-query limits,
+  command/MCP requirement, parent closures, fresh frontier/index/live records align. D62/D63 close
+  in the sealed defect ledger; 8 open / 54 sealed. G1 → 5/18 leaves, all four structural families;
+  next .4 measurements/ease/sizes. G0 stays unapproved and production declaration remains G7.
+  Review examples have a bounded ontology-review chapter; oldest allowance lesson seals unchanged
+  to devnotes-part22. Completed historical checklists retain independent HEAD comparison evidence.
+  promotion: declined (review re-verifies existing canonical decisions; D63 is a local fixture repair).
 
 ### `G1-SLICE.13` (acceptance rewritten by `G0-CONTRACT.11`) — a consumer leaf names its instrument, not a protocol in prose
 
@@ -940,6 +939,8 @@ unchanged in the evidence sibling; fresh current-slice checks remain here.
 
 | `2026-10-01` | `.3c.4d.1` | Pocket; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `11 passed`; three mutations red; restored checks/gates green, `rc=0` |
 
+| `2026-10-01` | `.3c.4d.2` | full check/wasm/book/probes; censuses/ledger; staged gate | `287` tests; `149` object contracts; `22 suite(s)` green; D62/D63 fixed, `rc=0` |
+
 ## Commit Log
 
 [Completed commits through physical placements](G1-SLICE-evidence.md#historical-commit-log) are
@@ -952,6 +953,8 @@ preserved unchanged in the evidence sibling; fresh current-slice entries remain 
 | `.3c.4c.2` | `STITCHCAD-G1-0021 (leaf G1-SLICE.3c.4c.2)` | canonical buttonhole source; Closure parent closed |
 
 | `.3c.4d.1` | `STITCHCAD-G1-0022 (leaf G1-SLICE.3c.4d.1)` | physical Pocket composition, placement, explicit opening deferral |
+
+| `.3c.4d.2` | `STITCHCAD-G1-0023 (leaf G1-SLICE.3c.4d.2)` | four structural families closed; D62/D63; API/MCP requirement retained |
 
 ## Changelog
 
@@ -966,3 +969,8 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
 
 - `2026-10-01`: `.3c.4d.1` implements Pocket physical composition/placement intent and visible opening
   deferral; next `.3c.4d.2` re-derives structural family signoff against the director's quality bar.
+
+- `2026-10-01`: `.3c.4d.2` closes all four structural object families and fixes D62/D63. All sixteen
+  §4 objects have immutable content/reference contracts and book evidence; later physical/release
+  proofs retain their owners. Director's comprehensive external-agent MCP/API control requirement
+  reinforces existing .6/.9/G5 parity/discovery/recovery evaluation. Next .4 measurements/ease/sizes.

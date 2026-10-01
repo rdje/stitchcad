@@ -311,3 +311,5 @@ block; no unread binding produces a default. The fixture's five pieces and golde
 | `GeneratedDownstream` | Resolved policy delegates allowance generation to the receiver |
 | `SeamAllowanceDefinition` | Editable per-edge descriptor input |
 | `SeamAllowanceError` | Typed negative-width or unresolved/foreign-edge refusal |
+
+[Structural object-family review](ontology-review.md) records the completed scope and remaining proofs.

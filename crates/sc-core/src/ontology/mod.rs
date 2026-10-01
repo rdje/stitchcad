@@ -4,8 +4,9 @@
 //! Normative source: `docs/book/src/spec/ontology.md` (gate G0, specified by `G0-CONTRACT.3`). Implemented
 //! across three ordered slices: **`.3a`** the identity layer, **`.3b`** the persistent-identity contract
 //! that resolves references under split/merge/reverse/delete (both landed), and **`.3c`** the
-//! geometry-bearing object types (pieces, copy plans, notches, grainlines, allowances, intake/layer/hem/closure intent and
-//! sewing graphs landed; object-family signoff follows).
+//! geometry-bearing object types (all four structural families landed: pieces, sewing,
+//! marks/allowances and garment construction intent). Geometry, recipe execution, profiles and
+//! Design/release validation remain their named later gates.
 //!
 //! The identity layer is the foundation the other two consume: a reference is meaningless without a stable
 //! id to point at, and the contract is meaningless without a reference to resolve. It is dependency-free and

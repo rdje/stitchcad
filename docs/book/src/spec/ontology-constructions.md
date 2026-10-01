@@ -37,7 +37,7 @@ prove existence, kind and dependencies before design/recipe validation can certi
 Every dart reports `GeometricValidation::DeferredToG2` and `IntakeValidation::DeferredToG2AndG3`.
 A profile intake binding reports `ProfileBindingValidation::DeferredToG4`; absence of that field means
 only that the intake source is not a profile binding. Structural birth is not executed closure,
-conserved intake, export readiness or a production approval. Other construction objects are later owned child slices.
+conserved intake, export readiness or a production approval. All §4 construction types now carry structural intent; their physical execution remains later work.
 
 | API token | Meaning in the dart implementation |
 | --- | --- |

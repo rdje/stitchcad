@@ -164,7 +164,9 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 [`stitchcad-defects-part7.md`](../history/stitchcad-defects-part7.md)
 (D35, D57; 43 lines, 4172 bytes, `sha256:79373c0f…`) and
 [`stitchcad-defects-part8.md`](../history/stitchcad-defects-part8.md)
-(D61; 13 lines, 1214 bytes, `sha256:af043224…`), under D46's remedy. Every cited defect
+(D61; 13 lines, 1214 bytes, `sha256:af043224…`) and
+[`stitchcad-defects-part9.md`](../history/stitchcad-defects-part9.md)
+(D62, D63; 14 lines, 1370 bytes, `sha256:5c7cd18f…`), under D46's remedy. Every cited defect
 resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
 `grep -h '^- \*\*D[0-9]' docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by
@@ -429,6 +431,25 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
 - None for `PLANNING.2`/`PLANNING.3`.
 
 ## Acceptance Checklist
+
+### D62/D63 — closed by `G1-SLICE.3c.4d.2`
+
+- [x] **REPRODUCE / ISSUE** — signoff exposes a crate-misattributed test count and obsolete-prose
+  fixture mutation; both are recorded in defects-part9 with owner, reproduction, impact and closure.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-units` → `5 + 21 + 1`, `rc=0`;
+  `git show eb83f01:crates/sc-core/src/lib.rs` → three original smoke tests. Workspace 30 was copied
+  into the crate row. BAD-GATE's old literal explanation no longer matched; census input stayed valid.
+- [x] **FIX** — correct live crate scope; target the gate cell by feature id, prove mutation separately,
+  refuse absent/duplicate fixture targets, retain the census predicate and close both owned defects.
+- [x] **ADDRESSED (verified)** — `run_feature_matrix_probes.sh` → `14 pass / 0 fail`, `rc=0`;
+  no-op gate-writer mutation → `13 pass / 1 fail`, `rc=1`, naming setup refusal. Restored checks pass.
+  Crate-only execution and full Rust output agree; archive records the original attribution cause.
+- [x] **NO REGRESSION** — full `make check`, wasm/book/probes → `287` tests / `22` green suites;
+  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
+  staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+- [x] **LOCKSTEP** — defects-part9 descriptor/retrieval pointer and live census agree: 8 open /
+  54 sealed. Owning G1 review, book, frontier/index, resume/live records and history align.
+
 
 ### `PLANNING.6` — a census nobody runs is a claim, and this one had gone red unnoticed
 

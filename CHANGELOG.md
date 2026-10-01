@@ -44,6 +44,22 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0023 - all four structural ontology families pass milestone review (leaf `G1-SLICE.3c.4d.2`)
+
+Review accounts for sixteen ontology §4 objects with immutable content and current reference evidence.
+Four families close structurally; geometry, construction execution, profile values, Design registries
+and production-release review retain their later owners. Fourteen object/support suites execute 149
+contracts; full strict Rust executes 287 tests including 19 doc-tests, with WASM/book and all 22 probe
+suites green. G1 becomes 5/18 leaves; measurement/ease/size modelling is next.
+
+Two signoff defects close: D62 attributed the original workspace's 30 tests to sc-units, whose count
+is 26 regular + 1 doc. D63's negative feature probe matched obsolete prose and changed no fixture;
+it now targets the gate cell by feature identity and independently proves the mutation. Missing/
+duplicate targets refuse setup; a no-op writer mutation makes the suite red. Census predicates stay
+unchanged. Defects seal in part9; 8 open / 54 sealed. Pocket/button evidence relocates unchanged.
+Director reaffirmed SOTA/signoff/production-grade and comprehensive external-agent MCP/API control;
+book and .6/.9/G5 acceptance retain discoverability, recovery, parity and independent evaluation.
+
 ## STITCHCAD-G1-0022 - Pocket retains physical composition and owned placement intent (leaf `G1-SLICE.3c.4d.1`)
 
 Immutable Pocket binds served/component physical copies to explicit source Pieces, owned position

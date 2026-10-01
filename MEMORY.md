@@ -5,13 +5,14 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.3c.4d.2`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** `.3c.4d.2` — construction/object-family structural signoff, re-derived against
-  roadmap, ontology, immutable/current-reference contracts and book evidence. Pocket intent now
-  preserves explicit physical copy/source composition and owned placement. Opening execution/scope
-  remains G3; Design must inspect component contour repairs before execution/release. Run full
-  milestone checks/probes before closing object parents. G1 remains 4/18 leaves, 3/4 families.
-  Director reaffirmed SOTA/signoff/production-grade as the bar; structural APIs do not certify release.
+- **Active tree:** `G1-SLICE`, frontier **`.4`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** `.4` — sc-measure: MeasurementTable, body/garment POM, landmarks/procedures,
+  first-class per-POM ease/fit intent and SizeSet. Read canonical measurement/ease/size chapters,
+  decisions and affected units/APIs; split into safe owned slices and record design before code.
+  All four structural ontology families are complete; G1 is 5/18 leaves. Geometry, executed recipes,
+  profiles and Design/release proofs remain named later obligations. Director reaffirmed SOTA/signoff/
+  production-grade and comprehensive external-agent MCP/API control; .6/.9 and G5 own workflow parity,
+  discovery/recovery and independent agent evaluation. Approval remains the existing human contract.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

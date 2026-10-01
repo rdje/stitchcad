@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — a negative probe must prove it changed the intended contract field
+
+- Full milestone probes found BAD-GATE anchored to an obsolete tuck/pleat explanation. Its sed
+  replacement matched nothing, so a valid matrix reached the census and was accepted. Targeting the
+  feature's gate cell avoids unrelated prose; independent post-mutation inspection proves exactly one
+  invalid gate. Missing/duplicate targets refuse setup, distinct from the census's malformed-gate red.
+  A no-op writer mutation now fails loudly as setup failure; the census itself is unchanged.
+- Crate-scoped unit execution exposed a live count copied from the original whole workspace: 30
+  meant 5 unit + 21 property + 1 doc in sc-units, plus three sc-core smoke tests. No tests disappeared;
+  live counts now identify their scope. Historical delivered-workspace records stay unchanged.
+- Sixteen §4 objects pass structural review: 149 object/support contracts, 260 sc-core tests including
+  18 docs; full workspace 287 including 19 docs. Later geometry/recipe/profile/Design/release owners
+  remain explicit. API/MCP workflow control requires observable contracts and independently checked
+  artifacts; access alone is no measurement of garment expertise. This restates the canonical roadmap.
+- promotion: declined (local fixture repair and re-verification of already canonical contracts).
+
 ## _(2026-10-01)_ — Pocket composition names physical copies and guards each source
 
 - Component references pair a physical copy with its expected source Piece, retaining multiple copies
@@ -129,19 +145,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   companion. No physical dart result or fixture golden is changed by carrying structural intent.
 - promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s dart boundary.
 
-## _(2026-10-01)_ — allowance intent does not resolve a receiver policy or construct an offset
-
-- Width origin and per-edge corner intent are canonical content. Explicit values retain the authored
-  parameter identity; formula/profile sources retain declaration ids without copying uncertainty.
-  Inclusion always names a logical profile declaration, so target profiles can resolve the same design
-  differently. There is no unread-value fallback, global flag or generated contour in the G1 object.
-- Eight contracts distinguish authored zero, negative refusal, symbolic width, all corner choices,
-  shared width origins, immutable replacement and topology evidence. The foreign-middle merge case
-  fails when whole-interval ownership refusal is disabled; restored strict Rust and WASM pass.
-- The marks/allowances family is complete structurally, while G2 offsets/error bounds and G4 resolved
-  policies remain named obligations. Older object checklists move unchanged to the existing evidence
-  sibling before the parent exceeds 1000 lines; staged gates revalidate every moved checklist.
-- promotion: promoted by `decision_profile-bindings-stay-symbolic-at-g1.md`'s allowance subsection.
 
 
 
@@ -171,6 +174,8 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part20.md`](docs/history/stitchcad-devnotes-part20.md) | physical sewing-interval lesson | 15 lines, 1375 bytes, `sha256:34867dc9…` |
 
 | [`devnotes-part21.md`](docs/history/stitchcad-devnotes-part21.md) | directed-grainline lesson | 13 lines, 1212 bytes, `sha256:c31c3298…` |
+
+| [`devnotes-part22.md`](docs/history/stitchcad-devnotes-part22.md) | per-edge allowance lesson | 13 lines, 1192 bytes, `sha256:1807ae98…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

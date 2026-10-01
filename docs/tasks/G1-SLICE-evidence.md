@@ -870,3 +870,57 @@ decision recorded before the code, dependency-free and wasm-safe.
 
 - `2026-10-01`: `.3c.4c.1b` lands centred zipper/hook-bar intent with stable physical instances,
   canonical current placements and named env_fly refusal. Next `.3c.4c.2` button/buttonhole derivation.
+
+### `G1-SLICE.3c.4c.2` — buttonhole length has one canonical button/operation source
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.7 forbids entering buttonhole length twice. The prior Closure
+  supports zipper/hook-bar, but has no button pair or canonical derived-hole source.
+- [x] **ROOT CAUSE (WHY + WHERE)** — an operation id alone leaves the queried size source unspecified.
+  `cargo test -p sc-core --test closure_contract
+  buttonhole_length_source_borrows_the_canonical_button_size_and_derivation_without_defaulting` →
+  `1 passed`, `rc=0`: pointer equality proves both fields borrow canonical authored declarations.
+  `replacing_button_size_or_operation_changes_the_single_observed_hole_source` → `1 passed`, `rc=0`:
+  replacement changes the observed source without mutating the old revision's view.
+- [x] **FIX** — distinct ButtonAndButtonhole kind shares stable instance/count/target validation;
+  required button-size binding and derivation operation have no separate hole-length input/cache.
+  Read-only source view names Closure and borrows both inputs; actual derivation reports DeferredToG3.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test closure_contract` → `15 passed`, `rc=0`:
+  five new contracts cover recipe/profile size origins, canonical borrowing/replacement, non-button
+  absence, existing count/reuse/missing-target rules and current repair blocking. Button-size and
+  operation sources substituted independently → regressions red, `rc=101`; restored strict/privacy
+  checks pass. A compile-fail example proves a second length field is unavailable. Moved closure
+  checklist and task changelog compare unchanged to HEAD, with staged revalidation.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
+  green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
+  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
+  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Existing closure kinds stay green.
+- [x] **LOCKSTEP** — pre-code closure decision, typed recipe dependency obligation, module/map,
+  closure examples/API vocabulary and feature row, parent closure, evidence/history retrieval and
+  live frontier/index/docs align. Oldest entries seal unchanged to changelog-part21/devnotes-part20. No formula
+  or default is invented; G3-GRADING.5 still owes executed derivation proof. Next `.3c.4d` pockets.
+
+### `G1-SLICE.3c.4d.1` — Pocket retains physical composition and owned placement intent
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires Pocket placement, opening and component Pieces;
+  the prior object families have no Pocket API. Explicit physical-copy identity applies to composition.
+- [x] **ROOT CAUSE (WHY + WHERE)** — pattern-only references cannot distinguish multiple physical
+  components or refuse reassignment. `cargo test -p sc-core --test pocket_contract
+  physical_components_borrow_canonical_pattern_metadata_and_retain_all_deferred_proofs` → `1 passed`,
+  `rc=0`: distinct copy references borrow the same canonical Piece. `orientation_cannot_hide_foreign_middle_geometry_behind_owned_live_endpoints`
+  → `1 passed`, `rc=0`: valid ends cannot prove whole-range ownership, even after reversal.
+- [x] **FIX** — immutable Pocket holds served copy/source guard, position/directed orientation,
+  logical opening and nonempty unique component copy/source references. Current validation repeats
+  target/placement checks; component queries borrow canonical metadata without copying geometry.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test pocket_contract` → `11 passed`, `rc=0`:
+  composition, ambiguity/missing/reassigned targets, canonical metadata, historical point choices,
+  interior loss/foreign geometry and updated same-id Piece ownership covered. Disabling copy-source,
+  orientation-ownership and nonempty-component guards independently yields actual test failures,
+  `rc=101`; restored suite and compile-fail privacy pass. Component repairs stay visible separately.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; restored `make wasm`
+  → green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
+  tree → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`; staged `make gate`
+  → `=== all doctrines green ===`, all `rc=0`. Existing structural object families remain green.
+- [x] **LOCKSTEP** — structural/geometric decision extended before code; recipe/Design opening and
+  component-contour obligations named. API/module/map, Pocket examples/local vocabulary, feature
+  row, tree/frontier/index/live docs align. Oldest changelog/lesson seal unchanged to part22/part21.
+  Director's quality bar remains explicit in `.3c.4d.2`; physical scope/geometry are not approved here.
