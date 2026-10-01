@@ -877,3 +877,37 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   and unchanged product resume/frontier agree. LIVE_STATUS still G1 5/18, four structural families,
   8 open / 54 sealed; no area status changes. Memory continues to point to G1 .4.
   promotion: declined (routine cadence discharge; ownership/safe-removal rules already canonical).
+
+### `SPINE.19.2` — self-contained history windows before the next product seal
+
+- [x] **REPRODUCE / ISSUE** — f61db3b `wc -lc CHANGELOG.md` → `395 32579`; forecast 373 B
+  requires seal 65 against inclusive 64. Old coverage-arm reproduction → part2 PASS despite its
+  appended fabricated Coverage; part1 FAIL is unrelated immutable D30. Both reproduce with rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — surfaces.tsv counts working files; each ordinary seal consumes
+  capacity despite only 440958 full-file B / 5239 lines retained. No archive transition existed.
+  Original run_changelog_ledger_probes.sh reads first Coverage (`grep -m1`), so appending a second
+  never mutates the predicate; no-exemption arm passes on D30. Source/call-path review and isolated
+  old-function fixture → part2 COVERAGE PASS / part1 FAIL, exit=0, proves both causes.
+  D65/D68 owned here; coverage generalization stays .19.
+- [x] **FIX** — digest-named tar.gz retains all original bytes; closed bounded manifests/catalog,
+  Python-standard-library reader and registered ARCHIVE-RETENTION guard. No tar extraction; paths,
+  same-volume writes, symlinks, nested repositories and overwrite checked. Binary sizing separates
+  byte/count from text axes. Ledger consumes reconstructed logical records; first part2 Coverage is
+  mutated, D30 exemption retained, and exactly that refusal required. Git supplies capture, not reads.
+- [x] **ADDRESSED (verified)** — `bash scripts/history_archive.sh prove-source window1` → `64
+  byte-identical full files; 0 missing/extra`, rc=0, before/after exact source-copy retirement.
+  `verify` → `67 logical records; 4 working Markdown; 5625 decoded lines; 459910 decoded bytes;
+  186520 resident bytes`, rc=0. All 67 current navigation links/anchors resolve. Python reader with
+  PATH empty on installed fixture passes without a Git executable. Logical per-part and aggregate
+  ceilings remain; no file count/aggregate ceiling raised. Three seals compare unchanged to HEAD.
+- [x] **NO REGRESSION** — `make check` → strict fmt/clippy and 325 tests, rc=0; `make wasm`/`book`
+  green, rc=0. `check_archive_retention.sh --self-test` → `26 pass / 0 fail`; binary sizing →
+  `17 arms, 0 failed`; sequential ledger → `9 pass / 0 fail`, all rc=0. HEAD immutability mutation
+  awaits first transition commit and is owned by .19.2v. Sequential `make probes` → `23 suite(s)
+  green`, rc=0; staged `make gate` → `=== all doctrines green ===`, rc=0. Scratch-overlap run was discarded.
+  Inherited first-keyword scan matched the FIX opener containing “addressed”; D15 authoring remedy
+  keeps unrelated gated keywords out of box openers. Corrected opener, not the neutral checker.
+- [x] **LOCKSTEP** — live pointers/book/prerequisites/toolbox/doctrine mirror and finite data plane
+  agree; old checklist relocates unchanged to SPINE-evidence. Counts independently derive 9 open /
+  58 sealed. G1 remains 5/18, four structural families; CI observation precedes product .4a.3.
+  Fresh lesson question promoted in `decision_history-windows-retain-self-contained-bytes.md`.

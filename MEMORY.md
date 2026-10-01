@@ -5,17 +5,17 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `SPINE`, frontier **`.19.2v`** in `docs/tasks/SPINE.md`.
-- **Next action:** observe .19.2 exceptional push CI at job/step level and record exact verdict;
-  then return to product `G1-SLICE.4a.3` MeasurementTable. D65 transition retains 64 original full
-  files byte-identically in a self-contained window. Reader supports stable logical paths; no old Git
-  objects required. Decoded/resident bounds and immutable-window guard are registered. D68 coverage
-  mutation now proves its actual predicate. Initial HEAD immutability mutation runs after commit.
-  G1 .4a.2 structurally complete, 325 tests; four families and 5/18 criteria, physical proofs deferred.
+- **Active tree:** `G1-SLICE`, frontier **`.4a.3`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** MeasurementTable stable name/id and unique inventory/current bindings; read
+  ontology/metadata contracts and record design before code. .4a.2 structurally closed, 325 tests,
+  native/WASM/observed CI green. Four structural families; G1 5/18, physical proofs deferred.
+  D65 archive transition closed: all 64 original full files retained exactly, stable logical paths,
+  independent decoded/resident bounds; ebed2c5 both CI jobs/all steps successful, 27 post-commit arms.
+  Use `bash scripts/history_archive.sh` with list, read, materialize or verify for logical history;
+  no historical Git objects needed. D68 coverage mutation fixed; nine open / 58 sealed defects.
   Director requires SOTA/signoff/production quality and comprehensive external-agent MCP/API control;
-  .6/.9/G5 own parity/discovery/recovery/evaluation. D67 fresh/scoped promotion adapter remains SPINE.22.
-- **In-flight work:** .19.2v must observe the required archive CI after the implementation commit/push;
-  derive Git state with `git status --short`. No product slice may start before that workflow finishes.
+  .6/.9/G5 own parity/discovery/recovery/evaluation. D67 scoped promotion adapter remains SPINE.22.
+- **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;
   see `docs/book/src/governance.md` §8 and `docs/tasks/G3-GRADING.md` `.16`.

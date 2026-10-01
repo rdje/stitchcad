@@ -48,6 +48,13 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-SPINE-0019c - observed archive CI (leaf `SPINE.19.2v`)
+
+For ebed2c5, doctrine run36931196049/job110600555955 and Rust run36931196050/job110600556738
+completed success; every step successful, including Python prerequisite/enforcer and Rust/WASM.
+Post-commit archive probes 27/0 include committed-window mutation. Doc-only verdict; book/censuses/
+staged gate pass. Archive transition closes; next product G1 .4a.3. No new seal or status change.
+
 ## STITCHCAD-SPINE-0019b - self-contained bounded history windows (leaf `SPINE.19.2`)
 
 D65: retained all 64 historical files byte for byte in a content-addressed window; complete manifests

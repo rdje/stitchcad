@@ -310,3 +310,10 @@ named capture commit when that Git object is available; ordinary retrieval does 
 The existing ledger probes read recovered logical records and retain their order, uniqueness,
 coverage, descriptor and pointer checks. Generalizing coverage/pointers to other ledgers remains
 SPINE.19's separate obligation. Content integrity proves neither semantic truth nor physical signoff.
+
+For the first archive implementation head ebed2c5, the
+[doctrine run](https://github.com/rdje/stitchcad/actions/runs/36931196049) (job 110600555955) and
+[Rust run](https://github.com/rdje/stitchcad/actions/runs/36931196050) (job 110600556738) were observed
+completed successfully with every step successful, including the Python prerequisite, archive
+enforcer and native/WASM checks. Post-commit refusal probes also reject an edit to a committed
+window. This is tooling/structural evidence; it grants no domain or physical production approval.

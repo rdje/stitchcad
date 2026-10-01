@@ -17,8 +17,9 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   appended a declaration grep -m1 ignored and passed on unexempted D30. Replace the actual first
   declaration in part2 and require exactly that refusal with D30's exemption retained.
 - Calibrated archive refusals, exact source reproof, strict Rust/WASM/book/full probes and staged
-  gates validate the transition. HEAD immutability mutation awaits first transition commit;
-  .19.2v owns observed remote verdict. No source/physical/release truth is inferred from a digest.
+  gates validate the transition. Post-commit probes 27/0 include committed-window mutation.
+  .19.2v observes ebed2c5 Rust/doctrine jobs and all steps successful, including Python prerequisite
+  and native/WASM. No source/physical/release truth is inferred from a digest.
 - promotion: promoted by `decision_history-windows-retain-self-contained-bytes.md`.
 
 ## _(2026-10-01)_ — documented procedure content lives in one canonical record
