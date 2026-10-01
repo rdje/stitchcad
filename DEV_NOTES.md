@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — modelled layer content and executable envelope are separate checks
+
+- Facing/Lining/Interfacing share structural validation but retain distinct kinds. Their recipe offset
+  operation owns dimensions; the descriptors retain directed source intent without caching generated
+  contours or parameter states. Served identity, whole-source ownership and material reason are local
+  invariants; operation/parameter/material registries and physical geometry remain later obligations.
+- Feature-matrix rule 3 permits inspecting modelled lining. Its explicit execution check refuses
+  env_lining with the served Piece and G7; Facing/Interfacing passing that check grants only scope,
+  never geometric or release approval. Design validation must apply it before construction execution.
+- Nine contracts and three privacy checks cover all kinds. Disabling lining scope and interval
+  ownership independently produces red regressions; restored strict Rust/WASM/book pass. Piece shares
+  its original material-reason guard and all existing contracts stay green. Fold evidence relocates
+  unchanged and is revalidated by the staged gate.
+- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s layer boundary.
+
 ## _(2026-10-01)_ — gather intent belongs to stable material and one canonical ease source
 
 - A Gather names graph/span/side plus its original physical copy. Span-side retargeting to another copy
@@ -132,20 +147,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   The director's decision is pending; marking it explicit allows independent marks to proceed.
 - promotion: promoted by `decision_piece-pair-members-have-explicit-handedness.md`.
 
-## _(2026-10-01)_ — interval coverage and endpoint identity answer different questions
-
-- `G1-SLICE.3c.2a` fixes D55 with a pure exact whole-interval journal fold. Split and offset partition
-  ranges by intersection; merge rescales by declared lengths; reverse reflects bounds and direction;
-  deleted or trimmed positive-length content becomes a visible repair. No sampling can certify an
-  interval: a nanowide gap escapes a hundredths grid and is still detected by the interval fold.
-- Coverage, point ambiguity and geometry remain separate. The result retains endpoint point queries
-  alongside ordered interval portions. A split-boundary choice is not silently picked just because
-  a positive-length interval maps uniquely. G2 still owns continuity and geometric closure.
-- Thirteen range tests include a differential comparison against the already-tested point fold,
-  exact integer-length merge expectations, terminal repairs and a deliberately disabled delete arm
-  observed red. Piece range queries now catch the original counterexample. Existing suites stay green.
-- promotion: promoted by `decision_range-resolution-preserves-entire-interval.md`, recorded before code.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -165,6 +166,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part13.md`](docs/history/stitchcad-devnotes-part13.md) | injected identity lesson | 18 lines, 1612 bytes, `sha256:38e83349…` |
 | [`devnotes-part14.md`](docs/history/stitchcad-devnotes-part14.md) | persistent-identity lesson | 24 lines, 2230 bytes, `sha256:2b6aebd3…` |
 | [`devnotes-part15.md`](docs/history/stitchcad-devnotes-part15.md) | structural-piece lesson | 15 lines, 1334 bytes, `sha256:1b362d26…` |
+| [`devnotes-part16.md`](docs/history/stitchcad-devnotes-part16.md) | interval-coverage lesson | 13 lines, 1183 bytes, `sha256:fcf7c475…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

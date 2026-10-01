@@ -81,6 +81,13 @@ pub enum MaterialAssignment {
     Unresolved(String),
 }
 
+impl MaterialAssignment {
+    // Shared local invariant only: assigned material existence/kind/state belongs to Design.
+    pub(crate) fn has_required_reason(&self) -> bool {
+        !matches!(self, Self::Unresolved(reason) if reason.trim().is_empty())
+    }
+}
+
 /// The authored text required on a printed piece label.
 ///
 /// Quantity, pair L/R and fold indication are derived from the piece's cut plan, never entered twice.
@@ -319,8 +326,7 @@ impl Piece {
                 return Err(PieceError::IncompleteLabel { field });
             }
         }
-        if matches!(&definition.material, MaterialAssignment::Unresolved(reason) if reason.trim().is_empty())
-        {
+        if !definition.material.has_required_reason() {
             return Err(PieceError::UnexplainedMaterial);
         }
         Ok(Self { definition })

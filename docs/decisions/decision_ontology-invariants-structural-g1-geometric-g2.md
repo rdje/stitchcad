@@ -7,7 +7,7 @@
   at gate G1 and what `sc-geometry` proves at gate G2 (`docs/book/src/spec/ontology.md` §4.1, §9;
   `docs/tasks/G2-2D.md` leaf `.1`).
 
-answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?" · "how do tucks and pleats retain distinct semantic kinds?"
+answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?" · "how do tucks and pleats retain distinct semantic kinds?" · "can lining be modelled while remaining outside v1 execution scope?"
 
 ## The fact / decision
 
@@ -79,3 +79,16 @@ operation identity. Exact duplicate held intervals are refused regardless of tra
 G1 validates full owned interval coverage and endpoint uniqueness. No physical pleat-count rule,
 actual fold shape, coincidence or conserved intake is inferred from a reference list. G2/G3 executes
 and verifies the typed closing operation; recipe/Design validates its identity, kind and dependencies.
+
+## Served layer intent (`G1-SLICE.3c.4b.1`)
+
+Facing/Lining/Interfacing are distinct immutable semantic types. Each names the served Piece, a
+recipe offset operation and nonempty directed owned source ranges, plus explicit material assignment.
+The recipe owns offset dimensions/input states; descriptors cache neither generated contours nor a
+second output-Piece material state. G1 validates identity/scope, complete intervals, unique endpoints
+and nonblank unresolved-material reasons; G2 proves actual offsets and shape/material relationships.
+
+Feature matrix rule 3 separates modelled content from supported execution. Lining is structurally
+representable, but `require_in_scope()` returns env_lining with served Piece and gate G7. Facing and
+Interfacing pass that envelope check only, without geometry/release certification. G1-SLICE.6 must
+apply the refusal before requested construction execution; inspection may retain modelled content.

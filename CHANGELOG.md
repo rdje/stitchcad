@@ -39,6 +39,20 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0017 - served layers retain recipe and material intent with explicit lining scope (leaf `G1-SLICE.3c.4b.1`)
+
+Immutable Facing/Lining/Interfacing types retain served Piece, recipe offset operation and directed
+sources, plus material assignment. Complete owned sources and unique endpoints are required;
+blank unresolved-material reasons, wrong owners and duplicate sources are typed refusals. Recipe
+operations own dimensions; G1 generates no contour. Lining can be inspected but execution refuses
+`env_lining` with served Piece and proving gate G7; `.6` must enforce this boundary before execution.
+
+Nine contracts and three privacy checks pass. Disabling scope and ownership refusals independently
+makes their regressions red; restored strict Rust, wasm, warning-free book, fixture/feature/glossary/
+tree censuses, ledger and staged gates pass. Piece's extracted shared material invariant preserves
+its original contracts. The fold checklist moves unchanged to the evidence sibling; docs and
+frontier align. G1 remains 4/18 top-level leaves, 3/4 families; next `.3c.4b.2` Hem.
+
 ## STITCHCAD-G1-0016 - gathers bind physical span sides and borrow canonical ease (leaf `G1-SLICE.3c.4a.2b`)
 
 Immutable Gather binds graph/span/side/physical-copy ids, direction and closing operation. Attachment

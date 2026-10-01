@@ -104,9 +104,9 @@ chapter is inside that family or explicitly outside it.
 | tuck and pleat | supported | ontology §4.3/§10; distinct structural intent implemented; executed folds/conservation remain G3 | G3 | — |
 | gather | supported | ontology §4.3/§10; structural binding borrows span ease; G3 proves realized gathering | G3 | — |
 | hem, turned or faced | supported | ontology §4.7; the fixture's hem is 3.0 cm with an envelope corner | G2 | — |
-| facing | supported | ontology §4.7; a bodice and a waistband both need one | G3 | — |
-| interfacing | supported | ontology §4.7; the fixture's waistband carries an interfacing piece | G2 | — |
-| lining | deferred | ontology §4.7 models it; no v1 envelope garment is lined and no gate proves it | G7 | `env_lining` |
+| facing | supported | ontology §4.7/§10; structural facing intent implemented; physical offset/drafting proof remains G3 | G3 | — |
+| interfacing | supported | ontology §4.7/§10; structural interfacing intent implemented; physical fixture offset remains G2 | G2 | — |
+| lining | deferred | ontology §4.7/§10; modelled lining implemented; execution refuses env_lining; G7 owns limitation | G7 | `env_lining` |
 | zipper, centred | supported | ontology §4.7; the fixture's CB closure is an 18.0 cm centred zipper | G2 | — |
 | hook and bar | supported | ontology §4.7; the fixture's waistband closes with one on its extension | G2 | — |
 | button and buttonhole | supported | ontology §4.7 derives the hole from the button; §11 G3's coverage criterion requires a garment carrying one, and G5's tech pack already requires the notions list | G3 derivation; G5 notions | — |

@@ -415,11 +415,43 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   rollover remains part of synchronized docs when health targets require it.
 
 - ID: `G1-SLICE.3c.4b`
-  Status: `pending`
+  Status: `active`
   Goal: Hem and Facing/Lining/Interfacing descriptors with served edges/Pieces, depth/fold method,
   offset relationship and material assignment; deferred/out-of-envelope constructions typed refusals.
   Acceptance: owned live references, positive composition links, explicit symbolic parameters and no
   generated offset claim; lining refuses its named deferred-envelope diagnostic in executable scope.
+  Verification: `pending`
+  Commit: `pending`
+
+  Children: `.3c.4b.1` (served layers), `.3c.4b.2` (hem including faced-hem links).
+
+- ID: `G1-SLICE.3c.4b.1`
+  Status: `done`
+  Goal: distinct immutable Facing/Lining/Interfacing descriptors with served Piece, explicit
+  recipe offset relationship and material assignment. Modelled lining must refuse execution in v1.
+  Acceptance: served identity matches the provided Piece, source ranges are nonempty/owned/complete
+  with unique endpoints, unresolved material has a nonblank reason, raw repairs remain visible.
+  Offset relationship carries operation identity + directed source ranges; recipe owns dimensions
+  and resolves operation inputs, without duplicate uncertainty/default values here. Geometry is G2.
+  Design before code: the canonical recipe is authoritative (ontology principle 1), so offset
+  dimensions remain on the named recipe operation. Distinct layer types share structural validation;
+  no separately generated contour or duplicated output-Piece material state is cached. Lining can be
+  modelled structurally (feature matrix rule 3) but `require_in_scope()` returns `env_lining`, served
+  Piece and proving gate G7. Facing/Interfacing pass only this envelope check, not geometry approval.
+  `.6` must apply that check before requested construction execution, not before inspecting content.
+  Share Piece's existing material-reason invariant and prove the original Piece contracts unchanged.
+  Seal the oldest DEV_NOTES lesson unchanged if the synchronized entry crosses its health target.
+  Extend the existing structural/geometric decision before code. Move completed fold evidence to the
+  sibling before the parent's next checklist approaches 1000 lines; preserve and revalidate it.
+  Verification: 9 layer contracts + 3 privacy tests; two refusal mutations red; restored checks green.
+  Commit: `STITCHCAD-G1-0017`
+
+- ID: `G1-SLICE.3c.4b.2`
+  Status: `pending`
+  Goal: immutable Hem with owned finish edge, depth origin, explicit fold-type declaration and
+  turned/faced method; faced hems bind an existing Facing serving the same Piece.
+  Acceptance: all required references resolve, missing/wrong facing links are typed refusals,
+  symbolic dimensions/fold type have no defaults; raw repairs stay visible; physical folding G2/G3.
   Verification: `pending`
   Commit: `pending`
 
@@ -477,6 +509,9 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   declarations before design acceptance; symbolic identities are not valid parameter values.
   Verification: `pending`
   Commit: `pending`
+
+  Layer execution scope: `.3c.4b.1` models lining but its `require_in_scope()` returns env_lining.
+  Apply envelope refusals before requested construction execution; inspection preserves modelled content.
 
 - ID: `G1-SLICE.7`
   Status: `pending`
@@ -596,7 +631,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.4b` | `pending` | hem/layer descriptors; all intake kinds have structural APIs |
+| — | `G1-SLICE.3c.4b.2` | `pending` | Hem; faced methods bind existing Facing layers |
 
 ## Decisions
 
@@ -669,6 +704,33 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
+### `G1-SLICE.3c.4b.1` — served layers retain recipe and material intent with explicit lining scope
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires distinct served layers; feature-matrix rule 3
+  separates modelled content from executable support. The prior commit has no layer descriptors.
+- [x] **ROOT CAUSE (WHY + WHERE)** — a structurally valid Lining is still outside the v1 envelope.
+  `cargo test -p sc-core --test layer_contract
+  modelled_lining_refuses_v1_execution_with_named_diagnostic_piece_and_proving_gate` → `1 passed`,
+  `rc=0`: inspection succeeds while execution returns env_lining, served Piece and G7.
+  `foreign_middle_of_merged_offset_source_is_refused_despite_owned_ends_after_reversal` → `1 passed`,
+  `rc=0`: live endpoints alone cannot establish whole-source ownership.
+- [x] **FIX** — separate immutable Facing/Lining/Interfacing wrappers share owned-source and material
+  validation. Offset operation/source intent stays authored; recipe owns dimensions and operation
+  inputs. Explicit envelope checks distinguish inspection from execution; physical geometry is G2.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test layer_contract` → `9 passed`, `rc=0`:
+  all kinds, materials, duplicates, wrong served Piece, split choices, hidden interiors, repair order
+  and immutability. Three privacy doctests pass. Disabling lining scope and interval ownership
+  separately makes each regression red, `rc=101`; restored checks pass. Moved fold checklist compares
+  unchanged with `git show HEAD:docs/tasks/G1-SLICE.md`; existing Piece contracts remain green.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
+  green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
+  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
+  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Fixture goldens stay unchanged.
+- [x] **LOCKSTEP** — pre-code decision, `.6` envelope obligation, module/subsystem status, construction
+  examples/API vocabulary, feature reasons, evidence relocation, frontier/logs/index and live memory
+  are synchronized. The oldest interval lesson seals unchanged to devnotes-part16 with a verified
+  digest. No geometric or release approval is implied. Next `.3c.4b.2` implements Hem.
+
 ### `G1-SLICE.3c.4a.2b` — gathers bind physical span sides and borrow canonical ease
 
 - [x] **REPRODUCE / ISSUE** — feature matrix §5 defines gathering through seam ease distribution;
@@ -699,35 +761,6 @@ measured by the `SPINE.7` probe).
   examples/API vocabulary/ontology index and feature row, intake parents closed, evidence relocation,
   frontier/logs/index, MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES. Oldest lesson seals to
   devnotes-part15. Three of four object families remain done; next `.3c.4b` hem/layer descriptors.
-
-### `G1-SLICE.3c.4a.2a` — distinct tuck/pleat intent with shared structural checks
-
-- [x] **REPRODUCE / ISSUE** — ontology §4.3 requires semantic tucks and pleats, not line art;
-  `8753290` has only dart intent. A fold-reference list and a declared intake cannot certify a
-  physical fold shape, type-specific closing operation or conservation proof.
-- [x] **ROOT CAUSE (WHY + WHERE)** — current interval ownership matters independently of endpoints.
-  `cargo test -p sc-core --test fold_contract
-  foreign_middle_of_a_merged_fold_line_is_refused_despite_owned_endpoints_after_reversal` → `1 passed`,
-  `rc=0`: both Tuck/Pleat refuse the owned-ends/foreign-middle merge before/after reversal.
-  Shared structural inputs must not collapse the two semantic kinds into one untyped recipe operation.
-- [x] **FIX** — separate immutable wrappers share validated fold content: intake provenance,
-  nonempty directed ranges, explicit direction and required closing-operation identity. Reject negative
-  explicit intake, empty/duplicate held intervals, unresolved endpoints and unowned current portions.
-  Query authored line order + directed raw evidence; retain typed physical/registry obligations.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test fold_contract` → `9 passed`, `rc=0`;
-  both types discriminate empty/duplicate opposite lines, explicit/symbolic intake, all reference roles,
-  split choices, hidden foreign interiors, directed repairs, partial ranges and immutable replacement.
-  Ownership refusal disabled → merged-middle regression fails, `rc=101`; restored strict check passes.
-  Two privacy doctests are green; no physical fold-count/shape or executed-conservation claim.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
-  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
-  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
-  ledger probes → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
-  Earlier dart/mark/sewing contracts stay green; no numerical golden changes.
-- [x] **LOCKSTEP** — `.3c.4a.2` decomposed before code; existing structural/geometric decision,
-  Rust/subsystem status, bounded construction examples/API vocabulary/ontology index and feature row,
-  task evidence/frontier/logs, TASK_TREE/MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES.
-  Oldest changelog/dev-note entries seal to part18/part14. Next `.3c.4a.2b` gathers.
 
 ### `G1-SLICE.13` (acceptance rewritten by `G0-CONTRACT.11`) — a consumer leaf names its instrument, not a protocol in prose
 
@@ -796,6 +829,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 | `2026-10-01` | `.3c.4a.2b` | gather contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `11 passed`; copy/ownership mutations red; restored focused checks/gates green, `rc=0` |
 
+| `2026-10-01` | `.3c.4b.1` | layer contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; scope/ownership mutations red; restored focused checks/gates green, `rc=0` |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -817,7 +852,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 | `.3c.4a.1` | `STITCHCAD-G1-0014 (leaf G1-SLICE.3c.4a.1)` | semantic dart intent; explicit conservation deferral |
 | `.3c.4a.2a` | `STITCHCAD-G1-0015 (leaf G1-SLICE.3c.4a.2a)` | distinct tuck/pleat intent; shared validation |
 | `.3c.4a.2b` | `STITCHCAD-G1-0016 (leaf G1-SLICE.3c.4a.2b)` | gather physical-side binding; canonical ease; intake parents closed |
-| `.3c.4b` … `.16` | `pending` | remaining constructions and G1 execution leaves |
+| `.3c.4b.1` | `STITCHCAD-G1-0017 (leaf G1-SLICE.3c.4b.1)` | served-layer intent; lining execution scope refusal |
+| `.3c.4b.2` … `.16` | `pending` | remaining constructions and G1 execution leaves |
 
 ## Changelog
 
@@ -930,3 +966,9 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 - `2026-10-01`: `.3c.4a.2b` lands immutable gather bindings and borrowed canonical span ease,
   preserving original physical material targets and raw repair evidence. Intake parents close with
   all four kinds implemented structurally; actual closing remains G2/G3. Next `.3c.4b`.
+
+- `2026-10-01`: `.3c.4b.1` containment moves completed fold evidence unchanged to the sibling: 28
+  lines / 2558 bytes, SHA256 `a5723a6070b5da7125c5d7bf6d455123703ba8f55a65a96a521697235e0c69ad`.
+
+- `2026-10-01`: `.3c.4b.1` lands three served-layer types and explicit lining scope refusal; recipe
+  owns offset dimensions, shared material guard preserves Piece behavior. Next `.3c.4b.2` Hem.

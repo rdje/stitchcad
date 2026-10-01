@@ -117,3 +117,43 @@ obligations. All four intake kinds now have structural APIs; none certifies phys
 | `GatherIntakeSource` | Borrowed signed canonical ease declaration with selected gathered side |
 | `GatherReferenceRole` | Attachment or authored direction field |
 | `CopyBindingChanged` | Selected span side no longer names the held physical copy |
+
+**Facing, Lining and Interfacing (`G1-SLICE.3c.4b.1`).** Distinct immutable layer types share
+editable `LayerDefinition` input and structural validation. A definition names its served Piece,
+explicit `LayerOffsetRelationship` and material assignment. The relationship holds a required recipe
+offset-operation id and nonempty directed source ranges in that Piece's frame. The recipe owns offset
+dimensions/input states: descriptors do not cache generated contours, defaults or a second output-Piece
+material state. Recipe/Design must validate the named operation's existence, kind and dependencies.
+
+For example, an interfacing descriptor can serve the waistband and name an offset operation using
+owned construction ranges for its inner half. The fixture's recipe still supplies the 4.0 × 77.0 cm
+finished rectangle and non-sewn fused attachment; this descriptor does not generate or prove it.
+A facing similarly retains its served Piece and recipe relationship, rather than recovering a facing
+from line art. Assigned material holds an entity id whose registry remains a Design check; unresolved
+material carries a nonblank reason without a substitute assignment. The shared local reason check
+preserves the original Piece invariant too.
+
+Constructors require the supplied Piece to match the held served id. Unknown/foreign source portions,
+interval repairs, endpoint choices, empty source lists and exact duplicate held intervals are typed
+`LayerError`s. `source_resolutions()` keeps authored input-list order and directed raw range/endpoint
+evidence. Merging owned ends around a foreign middle does not make that source owned, even after
+reversal. An interior deletion stays visible; editing cloned material/offset input cannot mutate a
+validated layer. Actual offset shape, bounded error and physical relationships remain G2 obligations.
+
+**Modelled content and execution scope are separate.** The feature matrix's rule 3 permits a lining
+object to be modelled while deferring supported execution. `Lining::new` validates structural content;
+`require_in_scope()` refuses requested v1 execution with `LayerEnvelopeError::LiningDeferred`.
+Its `diagnostic()` is env_lining, the payload names the served Piece, and `proving_gate()` is G7.
+No facing or interfacing is silently substituted. G1-SLICE.6 must apply that refusal before requested
+construction execution while allowing inspection to retain modelled content. Facing and Interfacing
+pass only this envelope check; every layer still reports `GeometricValidation::DeferredToG2`.
+Neither successful structural birth nor an envelope check proves geometry or grants release approval.
+
+| API token | Meaning in the served-layer implementation |
+| --- | --- |
+| `LayerDefinition` | Editable served Piece, offset relationship and material input |
+| `LayerOffsetRelationship` | Recipe offset-operation identity and owned directed source ranges |
+| `LayerKind` | Distinct facing, lining or interfacing semantic kind |
+| `LayerError` | Typed target, source-range or material-reason refusal |
+| `LayerEnvelopeError` | Typed execution-scope refusal independent of structural birth |
+| `LiningDeferred` | Modelled lining request refuses with env_lining, served Piece and G7 |

@@ -496,3 +496,32 @@ decision recorded before the code, dependency-free and wasm-safe.
   structural/geometric decision extended, Rust/subsystem status, bounded construction book companion
   + SUMMARY/ontology index and feature coverage, frontier/evidence/logs, TASK_TREE/MEMORY/LIVE_STATUS,
   CHANGELOG and promoted DEV_NOTES. Three of four object families remain done; next `.3c.4a.2`.
+
+### `G1-SLICE.3c.4a.2a` — distinct tuck/pleat intent with shared structural checks
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.3 requires semantic tucks and pleats, not line art;
+  `8753290` has only dart intent. A fold-reference list and a declared intake cannot certify a
+  physical fold shape, type-specific closing operation or conservation proof.
+- [x] **ROOT CAUSE (WHY + WHERE)** — current interval ownership matters independently of endpoints.
+  `cargo test -p sc-core --test fold_contract
+  foreign_middle_of_a_merged_fold_line_is_refused_despite_owned_endpoints_after_reversal` → `1 passed`,
+  `rc=0`: both Tuck/Pleat refuse the owned-ends/foreign-middle merge before/after reversal.
+  Shared structural inputs must not collapse the two semantic kinds into one untyped recipe operation.
+- [x] **FIX** — separate immutable wrappers share validated fold content: intake provenance,
+  nonempty directed ranges, explicit direction and required closing-operation identity. Reject negative
+  explicit intake, empty/duplicate held intervals, unresolved endpoints and unowned current portions.
+  Query authored line order + directed raw evidence; retain typed physical/registry obligations.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test fold_contract` → `9 passed`, `rc=0`;
+  both types discriminate empty/duplicate opposite lines, explicit/symbolic intake, all reference roles,
+  split choices, hidden foreign interiors, directed repairs, partial ranges and immutable replacement.
+  Ownership refusal disabled → merged-middle regression fails, `rc=101`; restored strict check passes.
+  Two privacy doctests are green; no physical fold-count/shape or executed-conservation claim.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
+  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
+  ledger probes → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Earlier dart/mark/sewing contracts stay green; no numerical golden changes.
+- [x] **LOCKSTEP** — `.3c.4a.2` decomposed before code; existing structural/geometric decision,
+  Rust/subsystem status, bounded construction examples/API vocabulary/ontology index and feature row,
+  task evidence/frontier/logs, TASK_TREE/MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES.
+  Oldest changelog/dev-note entries seal to part18/part14. Next `.3c.4a.2b` gathers.
