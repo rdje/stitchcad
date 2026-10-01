@@ -5,11 +5,11 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.4b.3`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** review ontology .2.2 and implemented Ease fields/current queries against the book,
-  then run the milestone checks and close .4b structurally. Individual mappings and unique per-POM
-  sets/table membership are implemented; .4c SizeSet and .4d family review follow. Source/evaluation/
-  physical/release proof remains later work.
+- **Active tree:** `G1-SLICE`, frontier **`.4c`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** read SizeSet ontology, size-sets chapter, ownership decision and both instantiation
+  paths. Split .4c safely and record design before code: label/order/base, system, chart/state/provenance,
+  adjacent breaks/axes and immutable profile transformation intent. .4a/.4b close structurally; .4d
+  combined family review remains. Source/evaluation/physical/release proofs remain later work.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats
   require human acts; governance §8 and G3 `.16` own the details.

@@ -54,6 +54,15 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part27.md`](docs/history/stitchcad-changelog-part27.md) | STITCHCAD-G1-0010 | 20 lines, 1663 bytes, `sha256:b3824493…` |
 
+## STITCHCAD-G1-0031 - structural Ease milestone review (leaf `G1-SLICE.4b.3`)
+
+Ontology .2.2 fields map to immutable individual/set APIs and current reference/permission contracts.
+The book distinguishes structural proof from evaluation, chart/physical fit, source truth and release.
+Current sc-measure tests/docs pass 65; full milestone probes pass all 23 suites; warning-free book and
+staged doctrines pass. Product code remains unchanged from b4e0bc7 strict 371-test/WASM verification;
+no new remote-CI claim. Set contract/checklist retained unchanged. .4b closes structurally, .4 remains
+active for SizeSet .4c and combined review .4d. G1 stays 5/18, defects 9 open/59 sealed.
+
 ## STITCHCAD-G1-0030 - current per-POM Ease sets (leaf `G1-SLICE.4b.2`)
 
 Immutable ordered sets bind unique mapping identities, machine tokens and POM identities to named

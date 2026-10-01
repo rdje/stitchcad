@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — structural Ease review retains independent proof boundaries
+
+- Every ontology .2.2 field maps to current API/contracts; sets enforce per-POM identity and table
+  membership. Canonical uncertainty/provenance and explicit compression remain distinct from truth.
+- Current measure tests/docs pass 65; full 23-suite milestone/book pass with product code unchanged
+  from b4e0bc7 strict Rust/WASM. Completed set contract/evidence relocates unchanged. .4b closes
+  structurally; SizeSet and combined review remain. Physical/evaluation/release proofs are still owned.
+- promotion: declined (routine milestone review; results owned by book/task, canonical decisions unchanged).
+
 ## _(2026-10-02)_ — per-POM queries preserve current mapping and table identities
 
 - Set entries pin mapping/body/POM/amount targets; fit, provenance and numeric state stay in current
@@ -105,22 +114,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   the runtime slice; D65 remains scheduled at its required-seal trigger, with history now 62/64 files.
 - promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s token section.
 
-## _(2026-10-01)_ — numeric availability and source truth are separate contracts
-
-- A shared core LengthDeclaration holds exactly one authored state and source. Known requires a
-  nonempty distinct evidence inventory; assumed, unknown, preference and derived carry their distinct
-  required record identities. Unknown and derived cannot store numeric values, and their queries name
-  the observation or formula they require. Signed lengths and explicit zero remain authored input;
-  procedure-specific physical domains belong to measurement/recipe validation, not a generic guard.
-- sc-measure can borrow core declarations without copying state or introducing a core→measurement
-  dependency cycle. A known claim is not proof that evidence exists or fits a scope. Design/recipe and
-  G4 retain those checks; no global export approval is inferred from authored state.
-- Eight contracts plus three privacy/state doc-tests pass; disabling empty/duplicate evidence checks
-  or returning zero for unknown/derived each makes its regression fail. Strict Rust executes 298
-  tests; WASM/book and focused censuses pass. D64 corrects stale ontology coverage prose; completed
-  construction contracts and ten checklists partition unchanged with committed-payload comparison.
-- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -167,3 +160,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part28.md`](docs/history/stitchcad-devnotes-part28.md) | Pocket composition lesson | 14 lines, 1301 bytes, `sha256:764116ee…` |
 
 | [`stitchcad-devnotes-part29.md`](docs/history/stitchcad-devnotes-part29.md) | coverage probe calibration lesson | 15 lines, 1383 bytes, `sha256:d6d266b6…` |
+
+| [`stitchcad-devnotes-part30.md`](docs/history/stitchcad-devnotes-part30.md) | numeric availability/source-truth lesson | 15 lines, 1356 bytes, `sha256:7fa4db87…` |

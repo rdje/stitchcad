@@ -294,3 +294,51 @@ Return to the [active frontier](G1-SLICE.md#current-frontier).
   G1 stays 5/18, four completed ontology families; physical fit/source/evaluation/release proof owned.
 
 Return to the [active frontier](G1-SLICE.md#current-frontier).
+
+## Per-POM set contract and evidence — preserved from b4e0bc7
+
+- ID: `G1-SLICE.4b.2`
+  Status: `done`
+  Goal: ordered immutable Ease set with unique mapping identity/token/POM and per-POM lookup;
+  explicit table-membership/current binding contract and current inventory validation.
+  Pre-code protocol: EaseSetDefinition has stable id, body/garment table ids (one mixed table legal),
+  and authored EaseBinding entries: set-scoped token, Ease id, saved body/POM four-field bindings and
+  amount id. Namespaces are unique by token, mapping id and POM id; shared body/amount sources legal.
+  EaseSetContext borrows canonical tables/Ease records and existing MeasurementTableContext; reject
+  duplicate and cross-kind record identities before lookup. Set identity cannot alias supplied records.
+  Queries select saved id/POM/token, resolve current Ease by id, compare body/POM/amount expectations,
+  require both measurements in their named current tables and validate current Ease. Current fit,
+  provenance/compression and canonical amount/state/source edits visible; retarget requires explicit
+  replacement. Empty drafts legal with existing table references; unselected bad entries do not block
+  selected lookup, full validation checks all mappings. No fabricated coverage, arithmetic or release
+  proof. Own package-status defect D69 repair, existing D34 stale census correction and normal seals.
+  Acceptance: unique per-POM mappings, shared body sources legal, current ambiguity/missing members
+  refused, lookup order independent, no default mapping or numeric fallback.
+  Verification: 14 contracts + privacy, ten real guard assertion reds; strict 371 tests/WASM/book;
+  current canonical bindings, selected membership and namespace checks pass locally.
+  Commit: `STITCHCAD-G1-0030`
+
+### `G1-SLICE.4b.2` — unique current per-POM sets
+
+- [x] **REPRODUCE / ISSUE** — `rg 'EaseSet' crates/sc-measure/src` at 0088969 → no executable set;
+  ontology .2.2/.3.1 and instantiation-paths .2 require a per-POM mapping namespace and table ownership.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-measure --test ease_contract` predecessor
+  → 13 passed, rc=0: individual current mappings exist, but do not bind selected tables or unique POMs.
+  New set module borrows canonical mappings/tables and existing current metadata context.
+- [x] **FIX** — immutable ordered mapping-id/token/POM-unique namespace; saved target bindings,
+  explicit body/garment table ids, no copied fit/value/state/source. Current queries resolve saved
+  mapping id, refuse target reassignment, require both table memberships and validate current Ease.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test ease_set_contract` → 14 passed,
+  rc=0, plus privacy doc. `bash docs/tasks/artifacts/ease/run_ease_set_mutations.sh` → ten real guard
+  assertion reds, rc=101 each, source restored byte-identically. Duplicate POM uses two valid canonical
+  mappings to the same POM; removing only its uniqueness guard accepts that genuinely ambiguous set.
+- [x] **NO REGRESSION** — `make check` → 371 tests with strict fmt/clippy, rc=0; three-crate WASM
+  and warning-free book, rc=0. Glossary → 310 terms/9 parts/158 tokens/0 failures, rc=0.
+  Tree census → 10 lanes/13 trees/6 siblings/0 gaps, rc=0; ledger → 9 pass/0 fail, rc=0;
+  staged `make gate` → all doctrines green, rc=0.
+- [x] **LOCKSTEP** — code/book/API/canonical decision and live pointers agree; individual contract/
+  checklist retained unchanged against 0088969. Package metadata verifies D69 repaired; corrected
+  existing D34's stale sibling example, with its mechanical ownership retained. Normal history seals
+  preserve exact predecessor records. Set intent implemented; .4b.3 structural review next, then SizeSet.
+
+Return to the [active frontier](G1-SLICE.md#current-frontier).

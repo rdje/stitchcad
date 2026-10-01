@@ -144,3 +144,29 @@ Set contracts add per-POM/id/token lookup, three uniqueness rules, shared body/a
 tables, empty drafts, current context collisions, missing/reassigned mappings/tables, current intent/
 state edits and selected versus full validation. Ten production guard removals must fail real test
 assertions and restore exact source. These local checks do not claim observed remote CI for this slice.
+
+## Structural Ease review at G1
+
+G1-SLICE.4b.3 reviews the individual and set APIs against ontology §2.2:
+
+| Required contract | Executable representation | Verified boundary |
+| --- | --- | --- |
+| Body source | Saved Body MeasurementBinding | Wrong domain, missing/reassigned metadata and foreign table membership refuse |
+| Produced garment POM | Saved Garment MeasurementBinding; unique set POM | Wrong domain, duplicate POM, missing mapping and current table membership checked |
+| Signed amount | Distinct current LengthDeclaration | Exact sign retained; negative numeric states and supplied evaluated results need explicit permission |
+| Ordered fit intent | FitIntent Close < Semi < Loose | Order verified; current same-id fit edits visible; quantitative chart/fit criteria deferred |
+| State | Sole canonical LengthState | Current edits visible; unknown/derived numeric queries refuse without fallback |
+| Provenance | Amount source/state records, mapping and compression references | References retained; existence/scope/truth/human attribution deferred to Design/G4 |
+| Per-POM relationship | EaseSet bound to current mappings and table identities | POM/id/token lookup, unique targets and explicit replacement; no inferred complete chart coverage |
+
+The Rust contracts and privacy tests prove the structural family. The tracked guard diagnostics
+have observed seven individual and ten set guard removals failing assertions, then restored exact
+source. Their regression tests run in the standard Rust gate; the destructive mutation diagnostics
+must run sequentially before a restored build. The milestone probe suite additionally verifies the
+repository/spec instruments, including formula, glossary, uncertainty, feature and release contracts.
+
+This closes .4b's structural scope, not G1-SLICE.4: SizeSet and combined family review remain. Actual
+body-plus-ease evaluation/current Design registry belongs to G1 .5/.6; chart reconciliation and
+physical fit to G2/G3; scoped evidence and envelope/export policy to G3/G4; independent conformance
+and production declaration to G6/G7. Local native/WASM proof is not a remote-CI verdict or permission
+to release a garment.
