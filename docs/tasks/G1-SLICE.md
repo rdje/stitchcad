@@ -336,9 +336,13 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   `.3c.4d` (pockets and family signoff). Safe child slices preserve the entire §4.3/§4.7 scope.
 
 - ID: `G1-SLICE.3c.4a`
-  Status: `active`
+  Status: `done`
   Goal: semantic intake constructions, owned anchors/direction and explicit closing operation.
   Children: `.3c.4a.1` (dart), `.3c.4a.2` (tuck/pleat/gather).
+
+  Verification: all four semantic kinds have immutable structural APIs and deferred closure checks;
+  dart/fold/gather tests + privacy, Rust/WASM/book and focused gates pass in child commits.
+  Commit: children `STITCHCAD-G1-0014` … `STITCHCAD-G1-0016`.
 
 - ID: `G1-SLICE.3c.4a.1`
   Status: `done`
@@ -360,13 +364,13 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0014`
 
 - ID: `G1-SLICE.3c.4a.2`
-  Status: `active`
+  Status: `done`
   Goal: immutable Tuck/Pleat/Gather with explicit intake, owned fold/attachment geometry, direction
   and closing operation; type-specific semantic content and deferred physical conservation.
   Acceptance: validate all required scope references and intake domains, preserve repairs and defaults
   prohibition; G2/G3 must prove the actual closing operations and gather distribution.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: Tuck/Pleat/Gather contracts + privacy, Rust/WASM/book and focused gates pass.
+  Commit: child slices `STITCHCAD-G1-0015`, `STITCHCAD-G1-0016`
 
   Children: `.3c.4a.2a` (tucks/pleats), `.3c.4a.2b` (gathers linked to a sewing span).
 
@@ -389,13 +393,26 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0015`
 
 - ID: `G1-SLICE.3c.4a.2b`
-  Status: `pending`
+  Status: `done`
   Goal: Gather with intake origin, owned direction/attachment and explicit graph/span/side identity,
   using declared sewing ease allocation without a separate hidden distribution or physical stretch.
   Acceptance: named span/copy side exists and belongs to the Piece; all anchors/intervals resolve;
   no copied ease/profile state or claimed executed conservation; immutable queries expose removals.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: eleven gather contracts + privacy; copy-binding and ownership mutations red;
+  strict Rust, wasm, book, focused censuses, ledger and staged doctrines green.
+  Commit: `STITCHCAD-G1-0016`
+
+  Design before code: Gather names graph/span/side and the held physical-copy id. Attachment range,
+  signed intake source and distribution are borrowed from that span, not independently authored
+  or cached. A-side gathering interprets A-minus-B directly; B-side gathering interprets its negation.
+  An explicit differential with the wrong sign is refused; symbols remain G2/G3/G4 obligations.
+  The raw signed source is exposed with its side, preserving provenance without invented values.
+  Direction and closing operation are explicit; complete owned attachment/direction ranges required.
+  Target queries report missing graph/span/copy or a changed side-copy binding without retargeting.
+  Extend the existing sewing decision before code; retain graph distribution as the single source.
+  Containment ownership: move recent completed mark/dart checklists unchanged to the existing evidence
+  sibling before this checklist crosses 1000 lines; revalidate every staged checklist. Live-window
+  rollover remains part of synchronized docs when health targets require it.
 
 - ID: `G1-SLICE.3c.4b`
   Status: `pending`
@@ -579,7 +596,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.4a.2b` | `pending` | gather graph/span/side semantics; tuck/pleat intent landed |
+| — | `G1-SLICE.3c.4b` | `pending` | hem/layer descriptors; all intake kinds have structural APIs |
 
 ## Decisions
 
@@ -652,6 +669,37 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
+### `G1-SLICE.3c.4a.2b` — gathers bind physical span sides and borrow canonical ease
+
+- [x] **REPRODUCE / ISSUE** — feature matrix §5 defines gathering through seam ease distribution;
+  `0cb97e4` has no Gather. An independent intake/allocation would duplicate the span's source, while
+  binding only a span side would silently transfer gathering to a replacement physical copy.
+- [x] **ROOT CAUSE (WHY + WHERE)** — span side and physical-copy identity are separate authored facts.
+  `cargo test -p sc-core --test gather_contract
+  wrong_graph_missing_span_and_changed_side_copy_are_refused_without_retargeting` → `1 passed`,
+  `rc=0`: a changed A-side copy sharing the same Piece/range returns CopyBindingChanged.
+  `uniform_weighted_and_between_notch_allocation_have_one_canonical_graph_source` → `1 passed`,
+  `rc=0`: pointer equality proves each allocation view borrows the graph's existing declaration.
+- [x] **FIX** — immutable graph/span/side/copy binding, explicit direction and closing operation;
+  borrow attachment and signed intake/allocation from the canonical span. Validate explicit ease
+  sign, copy owner and complete owned attachment/direction with unique endpoints. Target queries
+  refuse missing/changed bindings; raw evidence and independent current-plan checks remain visible.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test gather_contract` → `11 passed`,
+  `rc=0`: both gathered sides, symbolic sources, canonical allocations, changed/missing targets,
+  copy reassignment, hidden merged interiors, split choices, repairs and immutable replacement.
+  Copy-binding and ownership refusals disabled separately → their regressions fail, `rc=101`;
+  restored `make check` passes. Privacy doctest green; three moved mark/dart checklists compare
+  unchanged to committed originals. Four public intake structs re-derived from dart/fold/gather sources.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
+  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
+  ledger → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Earlier sewing/intake/mark contracts stay green; no fixture golden changes.
+- [x] **LOCKSTEP** — pre-code sewing decision extended, module/subsystem status, bounded construction
+  examples/API vocabulary/ontology index and feature row, intake parents closed, evidence relocation,
+  frontier/logs/index, MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES. Oldest lesson seals to
+  devnotes-part15. Three of four object families remain done; next `.3c.4b` hem/layer descriptors.
+
 ### `G1-SLICE.3c.4a.2a` — distinct tuck/pleat intent with shared structural checks
 
 - [x] **REPRODUCE / ISSUE** — ontology §4.3 requires semantic tucks and pleats, not line art;
@@ -680,97 +728,6 @@ measured by the `SPINE.7` probe).
   Rust/subsystem status, bounded construction examples/API vocabulary/ontology index and feature row,
   task evidence/frontier/logs, TASK_TREE/MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES.
   Oldest changelog/dev-note entries seal to part18/part14. Next `.3c.4a.2b` gathers.
-
-### `G1-SLICE.3c.4a.1` — semantic dart intent with visible closure obligations
-
-- [x] **REPRODUCE / ISSUE** — ontology §4.3 and the reference skirt require semantic darts;
-  `0c65d75` has no construction object. Intake declaration, geometric apex/legs and the executed
-  closing operation must remain distinguishable so G1 cannot silently certify conservation.
-- [x] **ROOT CAUSE (WHY + WHERE)** — a valid endpoint or declared intake is insufficient physical
-  evidence. `cargo test -p sc-core --test dart_contract
-  foreign_middle_of_merged_direction_is_refused_despite_owned_endpoints_after_reversal` → `1 passed`,
-  `rc=0`: complete ledger coverage/live owned ends conceal a foreign middle, refused before/after
-  reversal. `interior_apex_owned_legs_intake_origin_and_operation_identity_are_immutable_content`
-  → `1 passed`, `rc=0`: an internal apex is valid structural intent with visible conservation deferral.
-- [x] **FIX** — immutable Dart with intake origin, interior edge-anchored apex, two directed legs,
-  explicit directed closing/folding reference and required closing-operation identity. Validate
-  nonnegative authored intake, distinct held leg intervals, apex scope and all positive interval
-  ownership/coverage/unique endpoints. Preserve raw topology evidence and operation/parameter
-  registry obligations; expose G2 geometry and G2/G3 executed-conservation deferrals.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test dart_contract` → `9 passed`, `rc=0`;
-  intake/symbolic values, opposite duplicate legs, each field's unknown/foreign scope, internal apex,
-  split choice, foreign-middle merge/reversal, directed deletion evidence and immutable replacement
-  discriminate. Disable ownership refusal → merged-middle test fails, `rc=101`; restored strict
-  `make check` passes. The privacy doctest is green; queries never rewrite the original definition.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
-  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
-  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
-  ledger probes → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
-  Existing marks/allowance/sewing contracts remain green and numerical goldens do not change.
-- [x] **LOCKSTEP** — construction family decomposed into owned semantic children before code;
-  structural/geometric decision extended, Rust/subsystem status, bounded construction book companion
-  + SUMMARY/ontology index and feature coverage, frontier/evidence/logs, TASK_TREE/MEMORY/LIVE_STATUS,
-  CHANGELOG and promoted DEV_NOTES. Three of four object families remain done; next `.3c.4a.2`.
-
-### `G1-SLICE.3c.3c` — per-edge allowance intent and symbolic target policy
-
-- [x] **REPRODUCE / ISSUE** — ontology §4.4 requires derived per-edge width, corner and target
-  inclusion; `11eac44` has no allowance descriptor. Neither structural ownership nor a symbolic
-  profile declaration proves an offset or resolves an inclusion policy.
-- [x] **ROOT CAUSE (WHY + WHERE)** — owned endpoints cannot certify a whole merged edge.
-  `cargo test -p sc-core --test allowance_contract
-  a_merged_edge_with_owned_endpoints_and_foreign_middle_is_not_an_owned_allowance_edge` → `1 passed`,
-  `rc=0`: a current edge has full ledger coverage and owned ends but includes a foreign middle;
-  construction refuses that interval before and after reversal. Logical inclusion cannot select
-  a value without a target profile, as the existing profile-binding decision specifies.
-- [x] **FIX** — immutable per-edge descriptor holds width origin, explicit corner and mandatory
-  profile inclusion declaration. Validate nonnegative authored width, complete interval coverage,
-  unique endpoints and Piece scope through the shared ownership fold. Query raw evidence without
-  rewriting held content. Offset/error-bound and target binding validation remain typed deferrals.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test allowance_contract` → `8 passed`,
-  `rc=0`: explicit zero/negative width, symbolic sources, every corner, shared origins, immutable
-  replacement and split/merge/reverse/delete evidence discriminate. Ownership refusal disabled →
-  foreign-middle regression fails, `rc=101`; restored `make check` green. The privacy doctest passes.
-  Earlier object checklists compare unchanged with the committed originals before relocation.
-- [x] **NO REGRESSION** — `make check` → strict clippy/fmt/all Rust + privacy green, `rc=0`;
-  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
-  feature/glossary → `0 failure(s)`; ledger → `9 pass / 0 fail`; staged `make gate` →
-  `=== all doctrines green ===`, all `rc=0`. Earlier sewing/notch/grain suites remain green.
-- [x] **LOCKSTEP** — pre-code profile decision extended, shared geometric deferral docs generalized,
-  Rust module/subsystem status, ontology §10 companion/examples/vocabulary and feature coverage,
-  marks/allowances parent closed, frontier/evidence/logs/index, MEMORY/LIVE_STATUS/CHANGELOG and
-  promoted DEV_NOTES; oldest lesson sealed to devnotes-part13. Next `.3c.4` constructions.
-
-### `G1-SLICE.3c.3b` — directed grainlines and independent print references
-
-- [x] **REPRODUCE / ISSUE** — ontology §4.6 requires direction, explicit angular intent and dual
-  print references; `ea631c6` has no grainline object. Directed arrow semantics cannot collapse to
-  endpoint-only identity or an undirected axis. D61 misstates the glossary declaration scope.
-- [x] **ROOT CAUSE (WHY + WHERE)** — ordered interval traversal and authored direction are distinct
-  from point fate and journal direction. `cargo test -p sc-core --test grain_contract
-  reversed_traversal_orders_split_fragments_and_interior_repairs_from_its_own_start` → `1 passed`,
-  `rc=0`: reverse traversal visits the second split fragment first and retains a lost middle repair
-  in traversal position. `sed -n '388,426p' docs/tasks/artifacts/glossary/run_glossary_census.sh`
-  → a global DECLARED_TOKENS set supplies C1, locating D61's diagnostic-only discrepancy, `rc=0`.
-- [x] **FIX** — immutable Grainline with directed arrow, explicit alignment/angle source and optional
-  independent stripe/plaid ranges; all fields require complete owned intervals and unique endpoints.
-  Directional views reverse fragment order and compose reversal without rewriting raw range evidence.
-  Reuse the tested ownership fold; expose G2 geometry and G4 profile-value obligations explicitly.
-  Correct D61's diagnostic scope without changing predicates or exemptions.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test grain_contract` → `9 passed`, `rc=0`;
-  opposite arrows, reversed split/repair order, all field scopes, ambiguous endpoints, merged foreign
-  remainder after reversal, explicit/symbolic angles, optional metadata and immutability discriminate.
-  Disable reversed next_back → order regression fails, `rc=101`; restored `make check` passes.
-  Glossary probes → `10 pass / 0 fail`, `rc=0`; D61 closes in defects-part8. The partition oracle
-  compares the old executable body to the linked chapter → `231 lines / 18018 bytes unchanged`, `rc=0`.
-- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust suites + privacy green, `rc=0`;
-  `make wasm` → green; `make book` → warning-free; feature/glossary censuses → `0 failure(s)`;
-  ledger probes → `9 pass / 0 fail`; `make gate` → `=== all doctrines green ===`, all `rc=0`.
-  Existing eighteen sewing and seven notch contracts remain green after ownership sharing.
-- [x] **LOCKSTEP** — existing structural/geometric decision extended before code; module/subsystem
-  status, ontology bounded §10 index + linked implementation examples/SUMMARY, feature matrix,
-  G1 frontier/evidence/logs, TASK_TREE, MEMORY, LIVE_STATUS, CHANGELOG and promoted DEV_NOTES.
-  D61 seal/pointer; changelog-part17/devnotes-part12 preserve oldest live entries. Next `.3c.3c`.
 
 ### `G1-SLICE.13` (acceptance rewritten by `G0-CONTRACT.11`) — a consumer leaf names its instrument, not a protocol in prose
 
@@ -837,6 +794,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 | `2026-10-01` | `.3c.4a.2a` | fold contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; ownership mutation red; restored checks/censuses/gates green, `rc=0` |
 
+| `2026-10-01` | `.3c.4a.2b` | gather contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `11 passed`; copy/ownership mutations red; restored focused checks/gates green, `rc=0` |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -857,7 +816,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 | `.3c.3c` | `STITCHCAD-G1-0013 (leaf G1-SLICE.3c.3c)` | per-edge allowance intent; marks/allowances parent closed |
 | `.3c.4a.1` | `STITCHCAD-G1-0014 (leaf G1-SLICE.3c.4a.1)` | semantic dart intent; explicit conservation deferral |
 | `.3c.4a.2a` | `STITCHCAD-G1-0015 (leaf G1-SLICE.3c.4a.2a)` | distinct tuck/pleat intent; shared validation |
-| `.3c.4a.2b` … `.16` | `pending` | remaining constructions and G1 execution leaves |
+| `.3c.4a.2b` | `STITCHCAD-G1-0016 (leaf G1-SLICE.3c.4a.2b)` | gather physical-side binding; canonical ease; intake parents closed |
+| `.3c.4b` … `.16` | `pending` | remaining constructions and G1 execution leaves |
 
 ## Changelog
 
@@ -962,3 +922,11 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 - `2026-10-01`: `.3c.4a.2a` lands distinct immutable tuck/pleat intent with shared fold validation
   and directed repair evidence. Parent `.2` splits to keep sewing-linked gathers separate. Physical
   shape/conservation remain G2/G3; live-window rollover owned and verified. Next `.3c.4a.2b`.
+
+- `2026-10-01`: `.3c.4a.2b` containment moves three recent completed mark/dart checklists
+  unchanged to the existing sibling: 90 lines / 8135 bytes, SHA256
+  `7ca4e34bf67fc0cd9b5d708d51ec00443f88225b8aaedb603fa235670a87a1b0`. Current gather evidence stays first.
+
+- `2026-10-01`: `.3c.4a.2b` lands immutable gather bindings and borrowed canonical span ease,
+  preserving original physical material targets and raw repair evidence. Intake parents close with
+  all four kinds implemented structurally; actual closing remains G2/G3. Next `.3c.4b`.

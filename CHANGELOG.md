@@ -39,6 +39,21 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0016 - gathers bind physical span sides and borrow canonical ease (leaf `G1-SLICE.3c.4a.2b`)
+
+Immutable Gather binds graph/span/side/physical-copy ids, direction and closing operation. Attachment
+and signed intake/allocation come from the canonical sewing span; no second authored distribution or
+cached parameter state exists. Explicit ease sign must fit the selected gathered side. Current target
+queries expose missing/reassigned copies and changed span-side bindings without transferring intent.
+Owned whole intervals and unique endpoints are structural checks; executed conservation remains G2/G3.
+
+Eleven contracts + privacy pass. Disabling copy-binding and interval-ownership refusals separately
+makes their regressions red; restored strict Rust, wasm, warning-free book, fixture/feature/glossary/tree
+censuses, ledger and staged gates pass. Three recent mark/dart checklists move unchanged to the evidence
+sibling; every staged checklist is revalidated. Oldest dev-note lesson seals to part15. No goldens change.
+Intake parents close: all four kinds have structural APIs. G1 remains 4/18 top-level leaves, 3/4 object
+families. Next `.3c.4b` implements hem/layer descriptors.
+
 ## STITCHCAD-G1-0015 - distinct tucks and pleats retain owned fold intent (leaf `G1-SLICE.3c.4a.2a`)
 
 Separate immutable Tuck/Pleat types share structural validation of intake provenance, nonempty

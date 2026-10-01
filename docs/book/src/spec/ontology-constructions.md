@@ -37,7 +37,7 @@ prove existence, kind and dependencies before design/recipe validation can certi
 Every dart reports `GeometricValidation::DeferredToG2` and `IntakeValidation::DeferredToG2AndG3`.
 A profile intake binding reports `ProfileBindingValidation::DeferredToG4`; absence of that field means
 only that the intake source is not a profile binding. Structural birth is not executed closure,
-conserved intake, export readiness or a production approval. Gather and other construction objects are later owned child slices.
+conserved intake, export readiness or a production approval. Other construction objects are later owned child slices.
 
 | API token | Meaning in the dart implementation |
 | --- | --- |
@@ -78,3 +78,42 @@ The physical intake-conservation proof and fold-count/shape checks remain G2/G3 
 | `FoldDefinition` | Editable intake, fold ranges, direction and operation input |
 | `FoldError` | Typed intake, empty/duplicate-line or unresolved/foreign-range refusal |
 | `FoldReferenceRole` | Semantic fold-list position or authored direction field |
+
+**Gather (`G1-SLICE.3c.4a.2b`).** A Gather binds a sewing graph, span, selected side and held
+physical-copy identity, plus an explicit directed reference and closing-operation id. There is no
+independently authored gather intake or second hidden allocation: `intake_source()` borrows the
+span's existing DeclaredEase, retaining the raw signed A-minus-B source and selected gathered side.
+Uniform, weighted and between-notch allocations therefore stay the canonical graph declaration.
+
+For example, a span declaring A-minus-B = +5 000 µm permits gathering A; −5 000 µm permits gathering
+B. Explicit wrong-sign selection is refused, and an authored zero is legal no-op intent. Formula or
+profile sources provide no value/default; their resolved sign and actual walking/shortening must be
+verified later. Borrowing a declaration is not evidence that material has physically shortened.
+
+`Gather::new` requires the named graph/span/side-copy binding, a current CutPlan copy belonging to
+the source Piece, and complete owned attachment/direction intervals with unique endpoints. A copy
+change on the span returns `CopyBindingChanged`, even when the new copy shares the same Piece/source
+range. A missing graph/span/copy or reassigned Piece is a typed target refusal. A replacement copy
+cannot inherit an old gather. The held graph/span/copy ids remain visible in the immutable definition.
+
+`copy()` checks the current plan; `intake_source()` checks the current graph/span/copy binding and
+explicit ease sign. Those are independent target queries: the graph query alone does not assert a
+copy is still present in a separately changed plan. `attachment_resolution()` and
+`direction_resolution()` expose current raw interval/endpoint and directed evidence, including
+interior deletions and split choices. A removed middle stays visible despite live endpoints; no
+repair selects another span/copy by convention. Global Design validation must check all current
+registries and the source graph's landmarks/bindings too; these queries do not grant release readiness.
+
+Every Gather reports `GeometricValidation::DeferredToG2` and `IntakeValidation::DeferredToG2AndG3`.
+A present profile ease source reports `ProfileBindingValidation::DeferredToG4`; the descriptor caches
+no profile values/states. G2/G3 executes the required typed closing operation, walks actual intervals
+and proves realized intake/allocation. Operation/parameter existence/kinds remain `.5`/`.6` and G4
+obligations. All four intake kinds now have structural APIs; none certifies physical closing behavior.
+
+| API token | Meaning in the gather implementation |
+| --- | --- |
+| `GatherDefinition` | Editable graph/span/side/copy binding, direction and operation intent |
+| `GatherError` | Typed changed/missing target, wrong sign or invalid reference refusal |
+| `GatherIntakeSource` | Borrowed signed canonical ease declaration with selected gathered side |
+| `GatherReferenceRole` | Attachment or authored direction field |
+| `CopyBindingChanged` | Selected span side no longer names the held physical copy |

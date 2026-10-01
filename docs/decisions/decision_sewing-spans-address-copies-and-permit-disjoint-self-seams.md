@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.2b.2`, D35/D57, ontology §4.2, reference skirt §8.
 
-answers: "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?"
+answers: "does a gather duplicate sewing ease or transfer to a replacement physical copy?" · "may a seam join one physical copy to itself?" · "how are source references and reflection separated?" · "what does declared seam ease mean before geometric walking?"
 
 ## Context
 
@@ -47,3 +47,13 @@ intent and checks structural domains; it never claims measured seam equality or 
   range geometry remains the executable G2 fixture's obligation, not a invented numeric golden here.
 - Unknown copies/landmarks, unresolved born references and overlapping self-seams are explicit failures.
 - Global id, command revision, geometry, profile resolution and release checks remain separate gates.
+
+## Gather binding (`G1-SLICE.3c.4a.2b`)
+
+A Gather binds an explicit graph/span/side/physical-copy identity. Its attachment interval, signed
+intake source and allocation come from the existing span; there is no independently authored intake
+or hidden second distribution. A-minus-B is nonnegative for gathering A and nonpositive for gathering
+B; explicit wrong-sign declarations are refused, while symbolic value/sign/conservation remains a
+later validation obligation. Queries expose the raw signed declaration plus selected side, preserving its signed provenance. Direction and closing-operation identity remain
+explicit intent. Missing targets or a changed side-copy binding are typed failures; a replacement
+copy never inherits this gather. Current raw geometry evidence is retained without automatic rewriting.

@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — gather intent belongs to stable material and one canonical ease source
+
+- A Gather names graph/span/side plus its original physical copy. Span-side retargeting to another copy
+  is a typed binding change, even for the same Piece/range. Attachment and signed intake/allocation
+  are borrowed from the canonical span; a second distribution would drift independently.
+- Explicit A-minus-B sign fits the selected side; symbolic sign/value resolution and realized walking
+  remain later obligations. Current-plan and current-graph queries are independent and neither grants
+  release readiness. Design validation still checks every current registry and source-graph landmark.
+- Eleven tests distinguish target changes, both signs, canonical allocations, interval repairs and
+  immutable replacement. Disabling copy binding and interval ownership each makes its regression red;
+  restored strict Rust/WASM/book pass. All intake kinds now have structural APIs, with physical closure
+  and conservation visibly deferred to G2/G3.
+- promotion: promoted by `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`'s gather binding.
+
 ## _(2026-10-01)_ — shared structural input must preserve distinct tuck and pleat kinds
 
 - Tuck/Pleat wrappers share one immutable content validator but remain distinct semantic types for
@@ -132,22 +146,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   observed red. Piece range queries now catch the original counterexample. Existing suites stay green.
 - promotion: promoted by `decision_range-resolution-preserves-entire-interval.md`, recorded before code.
 
-## _(2026-10-01)_ — structural pieces and the endpoint/range distinction
-
-- `G1-SLICE.3c.1` implements immutable pieces with private validated content. A public definition is
-  editable input; the constructor checks live references, distinct cyclic cut loops, the cut plan,
-  complete labels and explicit unresolved-material reasons. Cut quantity means total physical copies;
-  mirrored pairs require an even quantity. Label cut information derives from the plan.
-- The geometric state has only `DeferredToG2`; cyclic ordering cannot prove endpoint coincidence,
-  winding or containment. Endpoint queries likewise do not certify an entire contour. The tracked D55
-  counterexample deletes a middle fragment while both original endpoints still resolve. `.3c.2` owns
-  the range contract immediately next, before sewing spans can make that mistaken inference.
-- Checks: 12 piece-contract tests, existing unit/property suites, a compile-fail privacy check, strict
-  clippy, wasm cross-build and book build. The first clippy run refused manual divisibility syntax;
-  using the toolchain's integer predicate resolved it before signoff.
-- promotion: declined (structural/geometric separation is already a decision record; the new range
-  risk is an open defect and scheduled implementation contract in the task tree, not a settled rule).
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -166,6 +164,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part12.md`](docs/history/stitchcad-devnotes-part12.md) | ontology slice decomposition | 16 lines, 1570 bytes, `sha256:a2f04e3d…` |
 | [`devnotes-part13.md`](docs/history/stitchcad-devnotes-part13.md) | injected identity lesson | 18 lines, 1612 bytes, `sha256:38e83349…` |
 | [`devnotes-part14.md`](docs/history/stitchcad-devnotes-part14.md) | persistent-identity lesson | 24 lines, 2230 bytes, `sha256:2b6aebd3…` |
+| [`devnotes-part15.md`](docs/history/stitchcad-devnotes-part15.md) | structural-piece lesson | 15 lines, 1334 bytes, `sha256:1b362d26…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

@@ -316,6 +316,7 @@ bounded; all existing examples and local API vocabulary are preserved there.
 | Notch | Semantic anchor, symbolic profile bindings | G4 physical geometry/encoding |
 | Sewing graph | Copy-addressed spans, disjoint self-seams, explicit ease and stops | G2/G3 walking; recipe/profile values |
 | SeamAllowance | Per-edge width origins, corner intent, symbolic inclusion | G2 bounded offsets; G4 target policy |
+| Gather | Physical span-side binding, borrowed intake/allocation | G2/G3 executed gathering/walking; current registries |
 | Tuck/Pleat | Distinct immutable kinds with owned fold ranges and intake intent | G2/G3 executed folds/conservation; registries |
 | Dart | Immutable owned apex/legs, intake and closing-operation intent | G2/G3 executed closure/intake; registry values |
 | Grainline | Directed owned references and explicit angle/print intent | G2 straightness/actual angles; symbolic values |

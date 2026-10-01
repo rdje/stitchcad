@@ -405,3 +405,94 @@ decision recorded before the code, dependency-free and wasm-safe.
   evidence/frontier/logs, index, MEMORY, LIVE_STATUS, CHANGELOG and promoted DEV_NOTES. D35/D57
   closure descriptor + live pointer; changelog-part16/devnotes-part11 seal oldest entries atomically.
   The map keeps paths/owners after shortening its glossary orientation. Next `.3c.3b` is grainlines.
+
+### `G1-SLICE.3c.3b` — directed grainlines and independent print references
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.6 requires direction, explicit angular intent and dual
+  print references; `ea631c6` has no grainline object. Directed arrow semantics cannot collapse to
+  endpoint-only identity or an undirected axis. D61 misstates the glossary declaration scope.
+- [x] **ROOT CAUSE (WHY + WHERE)** — ordered interval traversal and authored direction are distinct
+  from point fate and journal direction. `cargo test -p sc-core --test grain_contract
+  reversed_traversal_orders_split_fragments_and_interior_repairs_from_its_own_start` → `1 passed`,
+  `rc=0`: reverse traversal visits the second split fragment first and retains a lost middle repair
+  in traversal position. `sed -n '388,426p' docs/tasks/artifacts/glossary/run_glossary_census.sh`
+  → a global DECLARED_TOKENS set supplies C1, locating D61's diagnostic-only discrepancy, `rc=0`.
+- [x] **FIX** — immutable Grainline with directed arrow, explicit alignment/angle source and optional
+  independent stripe/plaid ranges; all fields require complete owned intervals and unique endpoints.
+  Directional views reverse fragment order and compose reversal without rewriting raw range evidence.
+  Reuse the tested ownership fold; expose G2 geometry and G4 profile-value obligations explicitly.
+  Correct D61's diagnostic scope without changing predicates or exemptions.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test grain_contract` → `9 passed`, `rc=0`;
+  opposite arrows, reversed split/repair order, all field scopes, ambiguous endpoints, merged foreign
+  remainder after reversal, explicit/symbolic angles, optional metadata and immutability discriminate.
+  Disable reversed next_back → order regression fails, `rc=101`; restored `make check` passes.
+  Glossary probes → `10 pass / 0 fail`, `rc=0`; D61 closes in defects-part8. The partition oracle
+  compares the old executable body to the linked chapter → `231 lines / 18018 bytes unchanged`, `rc=0`.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust suites + privacy green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; feature/glossary censuses → `0 failure(s)`;
+  ledger probes → `9 pass / 0 fail`; `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Existing eighteen sewing and seven notch contracts remain green after ownership sharing.
+- [x] **LOCKSTEP** — existing structural/geometric decision extended before code; module/subsystem
+  status, ontology bounded §10 index + linked implementation examples/SUMMARY, feature matrix,
+  G1 frontier/evidence/logs, TASK_TREE, MEMORY, LIVE_STATUS, CHANGELOG and promoted DEV_NOTES.
+  D61 seal/pointer; changelog-part17/devnotes-part12 preserve oldest live entries. Next `.3c.3c`.
+
+### `G1-SLICE.3c.3c` — per-edge allowance intent and symbolic target policy
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.4 requires derived per-edge width, corner and target
+  inclusion; `11eac44` has no allowance descriptor. Neither structural ownership nor a symbolic
+  profile declaration proves an offset or resolves an inclusion policy.
+- [x] **ROOT CAUSE (WHY + WHERE)** — owned endpoints cannot certify a whole merged edge.
+  `cargo test -p sc-core --test allowance_contract
+  a_merged_edge_with_owned_endpoints_and_foreign_middle_is_not_an_owned_allowance_edge` → `1 passed`,
+  `rc=0`: a current edge has full ledger coverage and owned ends but includes a foreign middle;
+  construction refuses that interval before and after reversal. Logical inclusion cannot select
+  a value without a target profile, as the existing profile-binding decision specifies.
+- [x] **FIX** — immutable per-edge descriptor holds width origin, explicit corner and mandatory
+  profile inclusion declaration. Validate nonnegative authored width, complete interval coverage,
+  unique endpoints and Piece scope through the shared ownership fold. Query raw evidence without
+  rewriting held content. Offset/error-bound and target binding validation remain typed deferrals.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test allowance_contract` → `8 passed`,
+  `rc=0`: explicit zero/negative width, symbolic sources, every corner, shared origins, immutable
+  replacement and split/merge/reverse/delete evidence discriminate. Ownership refusal disabled →
+  foreign-middle regression fails, `rc=101`; restored `make check` green. The privacy doctest passes.
+  Earlier object checklists compare unchanged with the committed originals before relocation.
+- [x] **NO REGRESSION** — `make check` → strict clippy/fmt/all Rust + privacy green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
+  feature/glossary → `0 failure(s)`; ledger → `9 pass / 0 fail`; staged `make gate` →
+  `=== all doctrines green ===`, all `rc=0`. Earlier sewing/notch/grain suites remain green.
+- [x] **LOCKSTEP** — pre-code profile decision extended, shared geometric deferral docs generalized,
+  Rust module/subsystem status, ontology §10 companion/examples/vocabulary and feature coverage,
+  marks/allowances parent closed, frontier/evidence/logs/index, MEMORY/LIVE_STATUS/CHANGELOG and
+  promoted DEV_NOTES; oldest lesson sealed to devnotes-part13. Next `.3c.4` constructions.
+
+### `G1-SLICE.3c.4a.1` — semantic dart intent with visible closure obligations
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.3 and the reference skirt require semantic darts;
+  `0c65d75` has no construction object. Intake declaration, geometric apex/legs and the executed
+  closing operation must remain distinguishable so G1 cannot silently certify conservation.
+- [x] **ROOT CAUSE (WHY + WHERE)** — a valid endpoint or declared intake is insufficient physical
+  evidence. `cargo test -p sc-core --test dart_contract
+  foreign_middle_of_merged_direction_is_refused_despite_owned_endpoints_after_reversal` → `1 passed`,
+  `rc=0`: complete ledger coverage/live owned ends conceal a foreign middle, refused before/after
+  reversal. `interior_apex_owned_legs_intake_origin_and_operation_identity_are_immutable_content`
+  → `1 passed`, `rc=0`: an internal apex is valid structural intent with visible conservation deferral.
+- [x] **FIX** — immutable Dart with intake origin, interior edge-anchored apex, two directed legs,
+  explicit directed closing/folding reference and required closing-operation identity. Validate
+  nonnegative authored intake, distinct held leg intervals, apex scope and all positive interval
+  ownership/coverage/unique endpoints. Preserve raw topology evidence and operation/parameter
+  registry obligations; expose G2 geometry and G2/G3 executed-conservation deferrals.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test dart_contract` → `9 passed`, `rc=0`;
+  intake/symbolic values, opposite duplicate legs, each field's unknown/foreign scope, internal apex,
+  split choice, foreign-middle merge/reversal, directed deletion evidence and immutable replacement
+  discriminate. Disable ownership refusal → merged-middle test fails, `rc=101`; restored strict
+  `make check` passes. The privacy doctest is green; queries never rewrite the original definition.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
+  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
+  ledger probes → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Existing marks/allowance/sewing contracts remain green and numerical goldens do not change.
+- [x] **LOCKSTEP** — construction family decomposed into owned semantic children before code;
+  structural/geometric decision extended, Rust/subsystem status, bounded construction book companion
+  + SUMMARY/ontology index and feature coverage, frontier/evidence/logs, TASK_TREE/MEMORY/LIVE_STATUS,
+  CHANGELOG and promoted DEV_NOTES. Three of four object families remain done; next `.3c.4a.2`.
