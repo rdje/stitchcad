@@ -497,13 +497,25 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0019`
 
 - ID: `G1-SLICE.3c.4c.1b`
-  Status: `pending`
+  Status: `done`
   Goal: centred zipper and hook/bar descriptors with physical notion-placement pairs, explicit sizes,
   counts derived from nonempty placements and named env_fly refusal. No physical placement claim.
   Acceptance: all placements revalidate current contexts; supported kinds stay distinct; empty/duplicate
   physical instances refused; no fallback sizes; fly refusal names requested closure/trousers gap/G7.
-  Verification: `pending`
-  Commit: `pending`
+  Design before code: each ClosureInstance has its own stable id and two distinct current
+  NotionPlacement ids. Count is derived as sc_units::Count from nonempty instances, never authored
+  twice; overflow is typed. Reused instance/placement identities are refused; geometric coincidence
+  remains G2. Centred zipper length is Explicit(parameter/positive Length), Formula or Profile;
+  hook/bar sizes each name a logical recipe declaration or Profile binding, with no vendor default.
+  Closure borrows canonical current placements and validates their Piece/plan/ledger contexts;
+  duplicate context ids are typed refusals rather than first-match choices. Fly scope is checked
+  before geometry and returns env_fly with requested Closure, declared trousers gap and gate G7.
+  Extend the existing physical-copy decision first. Move completed placement evidence unchanged to
+  the sibling before this checklist exceeds 1000 lines; live ledger/lesson rollovers owned here.
+  Preserve the completed commit-log table unchanged in the sibling, with a direct retrieval pointer
+  and a fresh current-slice commit table, so history growth does not displace active contracts.
+  Verification: 10 closure contracts + Count domain + privacy; four mutations red; focused checks green.
+  Commit: `STITCHCAD-G1-0020`
 
 - ID: `G1-SLICE.3c.4c.2`
   Status: `pending`
@@ -559,6 +571,9 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   declarations before design acceptance; symbolic identities are not valid parameter values.
   Verification: `pending`
   Commit: `pending`
+
+  Closures: validate every current placement/instance, declaration and notion count before execution;
+  unsupported fly requests retain named env_fly with requested Closure/trousers gap/G7.
 
   Notion placements: validate current plan, original source Piece and all held anchor/direction
   references with validate_current(); raw evidence alone is not a registry/release certificate.
@@ -687,7 +702,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.4c.1b` | `pending` | zipper/hook-bar descriptors and fly scope refusal |
+| — | `G1-SLICE.3c.4c.2` | `pending` | button/buttonhole pairs and canonical hole derivation |
 
 ## Decisions
 
@@ -760,32 +775,32 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
-### `G1-SLICE.3c.4c.1a` — physical notion placements preserve stable copy bindings
+### `G1-SLICE.3c.4c.1b` — zipper/hook-bar instances borrow current placements and refuse fly scope
 
-- [x] **REPRODUCE / ISSUE** — closure components attach to physical material; Piece-only positions
-  cannot distinguish copies. The prior commit has CutCopy identities but no notion-placement API.
-- [x] **ROOT CAUSE (WHY + WHERE)** — birth and current anchor validation have different contracts.
-  `cargo test -p sc-core --test notion_contract
-  current_validation_follows_historical_anchors_but_reports_current_choice_and_repairs` → `1 passed`,
-  `rc=0`: historical anchors resolve while split choices/deletions remain current repair evidence.
-  `copy_source_reassignment_and_wrong_provided_piece_are_typed_refusals` → `1 passed`, `rc=0`:
-  the original copy id cannot silently adopt another source Piece.
-- [x] **FIX** — immutable placement id/copy/anchor/direction plus original source identity guard.
-  Born-live anchoring keeps existing errors; shared current validation follows journal ownership.
-  Current copy/Piece checks and whole direction intervals refuse retargeting, lost/foreign material.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test notion_contract` → `10 passed`, `rc=0`:
-  distinct copies, ordering/removal/reassignment, historical anchors, current ownership, choices,
-  interior repairs, directed order and immutable input. Four mutations (copy binding, range ownership,
-  historical resolution and current anchor ownership) independently fail red, `rc=101`; restored
-  privacy/checks pass. Hem checklist and completed verification table compare unchanged to HEAD.
+- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires closure kinds, placement, count and sizes;
+  fixture §9 names a zipper and hook/bar. The prior commit only supplies notion placements.
+- [x] **ROOT CAUSE (WHY + WHERE)** — current placements can lose interior material after birth.
+  `cargo test -p sc-core --test closure_contract
+  current_placement_repairs_are_revalidated_at_birth_all_target_checks_and_borrowed_queries` →
+  `1 passed`, `rc=0`: birth/all-target/borrowed queries return the same current interval evidence.
+  `fly_scope_refusal_precedes_geometry_and_names_requested_closure_gap_and_gate` → `1 passed`,
+  `rc=0`: env_fly carries Closure/trousers gap/G7 even before any geometry context exists.
+- [x] **FIX** — immutable stable instances and canonical placement ids; Count derives from nonempty
+  instances. Distinct zipper/hook-bar size origins stay symbolic; no defaults. Current targets and
+  unambiguous registry ids validate; fly scope refuses before geometry. Nested evidence is boxed.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test closure_contract` → `10 passed`, `rc=0`:
+  kinds/sizes/counts/reordering, identity reuse, ambiguous/missing contexts, current repairs/removals,
+  scope and immutability. Count boundary unit + privacy pass. Scope, reuse, length and current-target
+  mutations each fail red, `rc=101`; restored strict checks pass. Placement checklist/commit table
+  compare unchanged with `git show HEAD:docs/tasks/G1-SLICE.md`, with staged revalidation.
 - [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
   green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
   tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
-  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Notch/TurnPoint contracts unchanged.
-- [x] **LOCKSTEP** — pre-code copy decision, closure children, current Design obligations, module/map,
-  bounded closure chapter/API vocabulary and feature reasons, evidence/log retrieval, frontier/index
-  and live docs align. The oldest lesson seals unchanged to devnotes-part18. No closure kind/count/size or
-  physical transform claim yet; next `.3c.4c.1b`. G1 remains 3/4 object families.
+  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Earlier placement contracts pass.
+- [x] **LOCKSTEP** — pre-code copy/instance decision, Design obligations, modules/map, closure examples/
+  API vocabulary and feature reasons, bounded evidence/commit retrieval, frontier/index and live docs
+  align. Oldest entries seal unchanged to changelog-part20/devnotes-part19. Hardware remains G2/G3; buttons
+  follow `.3c.4c.2`. G1 remains 4/18 top-level leaves and 3/4 object families.
 
 ### `G1-SLICE.13` (acceptance rewritten by `G0-CONTRACT.11`) — a consumer leaf names its instrument, not a protocol in prose
 
@@ -834,31 +849,16 @@ unchanged in the evidence sibling; fresh current-slice checks remain here.
 | --- | --- | --- | --- |
 | `2026-10-01` | `.3c.4c.1a` | notion contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `10 passed`; four mutations red; restored checks/gates green, `rc=0` |
 
+| `2026-10-01` | `.3c.4c.1b` | closure contracts; Count domain; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `10 passed`; four mutations red; restored checks/gates green, `rc=0` |
+
 ## Commit Log
+
+[Completed commits through physical placements](G1-SLICE-evidence.md#historical-commit-log) are
+preserved unchanged in the evidence sibling; fresh current-slice entries remain here.
 
 | Leaf | Commit subject or reference | Notes |
 | --- | --- | --- |
-| tree seed | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | created by the seeding leaf |
-| `.1` | `STITCHCAD-G1-0001 (leaf G1-SLICE.1)` | reconciled: delivered by `G0-CONTRACT.18` (`eb83f01`) ahead of this leaf |
-| `.2` | `STITCHCAD-G1-0002 (leaf G1-SLICE.2)` | reconciled: `sc-units` delivered by `G0-CONTRACT.18`; property-test decision recorded |
-| `.3` | `STITCHCAD-G1-0003 (leaf G1-SLICE.3)` | decomposed into `.3a`/`.3b`/`.3c`; the three design boundaries recorded as layer-C decisions |
-| `.3a` | `STITCHCAD-G1-0004 (leaf G1-SLICE.3a)` | the identity layer: `EntityId`/ULID + injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the exact `Rational`/`Param`; 40 tests, wasm green |
-| `.3b` | `STITCHCAD-G1-0005 (leaf G1-SLICE.3b)` | the persistent-identity contract: `IdentityLedger`'s append-only edit journal, fold resolution under split/merge/reverse/delete/offset, derived `RepairTask`s + release rule; 62 unit + 8 property tests, wasm green; recorded in `decision_reference-resolution-journal-fold.md` |
-| `.3c.1` | `STITCHCAD-G1-0006 (leaf G1-SLICE.3c.1)` | immutable structural pieces with deferred geometry; D55 owned by the next child |
-| `.3c.2a` | `STITCHCAD-G1-0007 (leaf G1-SLICE.3c.2a)` | exact whole-range journal fold and visible range repairs; D55 fixed |
-| `.3c.1a` | `STITCHCAD-G1-0008 (leaf G1-SLICE.3c.1a)` | D56 fixed: separate cut-once L/R members, explicit companion metadata |
-| `.3c.3a` | `STITCHCAD-G1-0009 (leaf G1-SLICE.3c.3a)` | semantic notches and symbolic bindings; D58 fixed |
-| `.3c.2b.1` | `STITCHCAD-G1-0010 (leaf G1-SLICE.3c.2b.1)` | explicit physical-copy plan; D59/D60 fixed |
-| `.3c.2b.2` | `STITCHCAD-G1-0011 (leaf G1-SLICE.3c.2b.2)` | copy-addressed sewing; D35/D57 fixed; sewing parents closed |
-| `.3c.3b` | `STITCHCAD-G1-0012 (leaf G1-SLICE.3c.3b)` | directed grainlines; independent print references; D61 fixed |
-| `.3c.3c` | `STITCHCAD-G1-0013 (leaf G1-SLICE.3c.3c)` | per-edge allowance intent; marks/allowances parent closed |
-| `.3c.4a.1` | `STITCHCAD-G1-0014 (leaf G1-SLICE.3c.4a.1)` | semantic dart intent; explicit conservation deferral |
-| `.3c.4a.2a` | `STITCHCAD-G1-0015 (leaf G1-SLICE.3c.4a.2a)` | distinct tuck/pleat intent; shared validation |
-| `.3c.4a.2b` | `STITCHCAD-G1-0016 (leaf G1-SLICE.3c.4a.2b)` | gather physical-side binding; canonical ease; intake parents closed |
-| `.3c.4b.1` | `STITCHCAD-G1-0017 (leaf G1-SLICE.3c.4b.1)` | served-layer intent; lining execution scope refusal |
-| `.3c.4b.2` | `STITCHCAD-G1-0018 (leaf G1-SLICE.3c.4b.2)` | Hem depth/fold intent and current Facing composition; hem/layer parent closed |
-| `.3c.4c.1a` | `STITCHCAD-G1-0019 (leaf G1-SLICE.3c.4c.1a)` | physical notion placements; current copy/anchor/direction validation |
-| `.3c.4c.1b` … `.16` | `pending` | remaining constructions and G1 execution leaves |
+| `.3c.4c.1b` | `STITCHCAD-G1-0020 (leaf G1-SLICE.3c.4c.1b)` | zipper/hook-bar instances, derived Count, current targets, env_fly |
 
 ## Changelog
 
@@ -992,3 +992,9 @@ unchanged in the evidence sibling; fresh current-slice checks remain here.
 
 - `2026-10-01`: `.3c.4c.1a` lands stable physical notion placements and shared current anchor checks;
   raw repairs remain visible. Closure kinds/counts/sizes follow `.1b`/`.2`, with geometry deferred.
+
+- `2026-10-01`: `.3c.4c.1b` preserves completed placement evidence and commit-log history unchanged
+  in the evidence sibling, with independent committed-content comparison and direct retrieval.
+
+- `2026-10-01`: `.3c.4c.1b` lands centred zipper/hook-bar intent with stable physical instances,
+  canonical current placements and named env_fly refusal. Next `.3c.4c.2` button/buttonhole derivation.

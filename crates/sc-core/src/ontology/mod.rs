@@ -4,7 +4,7 @@
 //! Normative source: `docs/book/src/spec/ontology.md` (gate G0, specified by `G0-CONTRACT.3`). Implemented
 //! across three ordered slices: **`.3a`** the identity layer, **`.3b`** the persistent-identity contract
 //! that resolves references under split/merge/reverse/delete (both landed), and **`.3c`** the
-//! geometry-bearing object types (pieces, copy plans, notches, grainlines, allowances, intake/layer/hem/placement intent and
+//! geometry-bearing object types (pieces, copy plans, notches, grainlines, allowances, intake/layer/hem/closure intent and
 //! sewing graphs landed; remaining constructions follow).
 //!
 //! The identity layer is the foundation the other two consume: a reference is meaningless without a stable
@@ -15,6 +15,7 @@
 //! | --- | --- | --- |
 //! | [`allowance`] | per-edge width origins, corner intent and symbolic profile inclusion | `.3c.3c` |
 //! | [`anchor`] | shared born-valid semantic anchor checks and typed refusals | `.3c.3a`/`.3c.2b.2` |
+//! | [`closure`] | zipper/hook-bar instances, current placement targets and explicit fly refusal | `.3c.4c.1b` |
 //! | [`cut`] | explicit physical-copy identities, complete quantity/orientation validation | `.3c.2b.1` |
 //! | [`dart`] | owned apex/legs, intake provenance and closing-operation intent, deferred conservation | `.3c.4a.1` |
 //! | [`fold`] | distinct tuck/pleat intent, owned fold references and deferred conservation | `.3c.4a.2a` |
@@ -34,6 +35,7 @@
 
 pub mod allowance;
 pub mod anchor;
+pub mod closure;
 pub mod cut;
 pub mod dart;
 pub mod fold;
@@ -111,3 +113,8 @@ pub use layer::{
 pub use hem::{Hem, HemDefinition, HemDepth, HemError, HemFoldType, HemMethod};
 
 pub use notion::{NotionPlacement, NotionPlacementDefinition, NotionPlacementError};
+
+pub use closure::{
+    Closure, ClosureDefinition, ClosureEnvelopeError, ClosureError, ClosureInstance, ClosureKind,
+    ClosureLength, ClosurePlacementRole, NotionSize,
+};

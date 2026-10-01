@@ -34,11 +34,27 @@ by editing part1.
 The bedrock scaffold's own changelog — the provenance of this repository's discipline spine — is sealed
 in [`docs/history/bedrock-scaffold-changelog.md`](docs/history/bedrock-scaffold-changelog.md).
 | [`changelog-part19.md`](docs/history/stitchcad-changelog-part19.md) | STITCHCAD-G1-0001 | 21 lines, 1770 bytes, `sha256:2f602e9a…` |
+| [`changelog-part20.md`](docs/history/stitchcad-changelog-part20.md) | STITCHCAD-G1-0002 | 19 lines, 1598 bytes, `sha256:a3918baa…` |
 
 The live window below holds the most recent slices. When it passes its health target (400 lines /
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-G1-0020 - zipper/hook-bar instances borrow current placements and refuse fly scope (leaf `G1-SLICE.3c.4c.1b`)
+
+Immutable Closure retains distinct centred-zipper/hook-bar intent, required size origins and stable
+physical instances. Typed Count derives from nonempty instances; duplicate ids/placement reuse,
+ambiguous contexts, missing targets and current repairs are refused. Borrowed placements remain
+canonical. Zipper length is explicitly positive or symbolic, hardware sizes remain logical bindings.
+Fly requests refuse env_fly with requested Closure, trousers gap and G7 before geometry validation.
+
+Ten contracts, Count-domain unit and privacy pass. Scope/reuse/length/current-target mutations each
+fail red; restored strict Rust, wasm, warning-free book, fixture/feature/glossary/tree censuses,
+ledger and staged gates pass. Nested target evidence is boxed for the strict error-size lint.
+Placement evidence and commit history relocate unchanged with independent committed-content oracles
+and retrieval pointers. Book/live records align; no hardware geometry is claimed. G1 stays 4/18
+leaves, 3/4 families; next `.3c.4c.2` button/buttonhole derivation.
 
 ## STITCHCAD-G1-0019 - physical notion placements preserve stable copy bindings (leaf `G1-SLICE.3c.4c.1a`)
 
@@ -369,23 +385,3 @@ never a 2D-correctness claim.
 
 No Rust changes; `make gate` stays `=== all doctrines green ===` and the regenerated Knowledge Map carries the
 three new records. The tree is 18 leaves; the frontier advances to `.3a`, G1's first new product code.
-
-## STITCHCAD-G1-0002 - the first property tests set the framework every later crate inherits (leaf `G1-SLICE.2`)
-
-`G1-SLICE.2` (`sc-units`) was the second leaf `G0-CONTRACT.18` (commit `eb83f01`) pre-empted: that commit
-landed `sc-units` in full — 1097 lines of library, 564 lines of property tests — as "the first product code",
-not the skeleton its own leaf scoped. Like `.1`, the leaf stayed `pending` while its deliverable shipped. This
-slice reconciles it: an audit, no new code.
-
-Every acceptance criterion was re-derived by command and pasted into the leaf's `### G1-SLICE.2` checklist:
-`cargo test -p sc-units --test property` → `21 passed` (conversion round-trips,
-`the_classes_disagree_so_they_are_load_bearing` for class separation, `counts_are_their_own_dimension` and
-`non_finite_floats_are_rejected_at_the_boundary` for typed dimension/non-finite errors); `UnitError` is a typed
-enum, never a silent coercion; `make wasm` cross-builds the crate; the five tolerance classes are distinct
-`ToleranceClass` variants (T1–T5).
-
-The slice also discharges the Open Question `eb83f01` left open — "property-test framework choice, decided in
-`.2`" — by recording `decision_property-tests-dependency-free-recorded-seed.md`: dependency-free hand-rolled
-properties with a recorded seed are the default on the `wasm-viewer` critical path, and a framework off that
-path is a per-crate recorded decision. The record carries `answers:`, which promotes this slice's `DEV_NOTES`
-lesson. `make gate` stays `=== all doctrines green ===`. The frontier advances to `.3`, the `sc-core` ontology.

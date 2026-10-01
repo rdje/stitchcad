@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.2b`, director ruling answering D57, ontology §4.1–§4.2.
 
-answers: "how does a seam distinguish copies of a cut-two piece?" · "are cut-copy ids derived from order?" · "how do mirrored copies appear in a cut plan?" · "how do closure notions distinguish physical copies?"
+answers: "how does a seam distinguish copies of a cut-two piece?" · "are cut-copy ids derived from order?" · "how do mirrored copies appear in a cut plan?" · "how do closure notions distinguish physical copies?" · "are closure counts independently authored?"
 
 ## Context
 
@@ -53,3 +53,14 @@ source owner, live uniquely owned anchor and complete owned direction. Current v
 uniquely resolved historical anchors while refusing split choices, missing copies, changed source
 owners and lost/foreign material. No geometry is copied or reflected at G1; G2/V1 consumes copy
 orientation separately from journal direction. Raw queries do not grant release readiness.
+
+## Closure instances (`G1-SLICE.3c.4c.1b`)
+
+Closure instances have stable ids and pairs of stable notion-placement ids. Their count is derived
+as Count from the nonempty instance list, not independently entered. Instance/placement ids cannot
+be reused inside one Closure; supplied registry ids must be unambiguous. Closure borrows and validates
+current canonical placements against their Piece/plan/ledger contexts, without copying their inputs.
+Centred zipper length retains explicit positive authored length or formula/profile origin. Hook/bar
+sizes each name a logical recipe or target-profile declaration, with no implicit vendor selection.
+Fly scope is refused before geometry with env_fly, requested Closure, declared trousers gap and G7.
+Actual attachment coincidence, hardware shape and resolved size/profile values remain later checks.

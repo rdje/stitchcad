@@ -647,3 +647,58 @@ decision recorded before the code, dependency-free and wasm-safe.
 | `2026-10-01` | `.3c.4b.1` | layer contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; scope/ownership mutations red; restored focused checks/gates green, `rc=0` |
 
 | `2026-10-01` | `.3c.4b.2` | Hem contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `10 passed`; identity/current-layer/ownership mutations red; restored checks/gates green, `rc=0` |
+
+### `G1-SLICE.3c.4c.1a` — physical notion placements preserve stable copy bindings
+
+- [x] **REPRODUCE / ISSUE** — closure components attach to physical material; Piece-only positions
+  cannot distinguish copies. The prior commit has CutCopy identities but no notion-placement API.
+- [x] **ROOT CAUSE (WHY + WHERE)** — birth and current anchor validation have different contracts.
+  `cargo test -p sc-core --test notion_contract
+  current_validation_follows_historical_anchors_but_reports_current_choice_and_repairs` → `1 passed`,
+  `rc=0`: historical anchors resolve while split choices/deletions remain current repair evidence.
+  `copy_source_reassignment_and_wrong_provided_piece_are_typed_refusals` → `1 passed`, `rc=0`:
+  the original copy id cannot silently adopt another source Piece.
+- [x] **FIX** — immutable placement id/copy/anchor/direction plus original source identity guard.
+  Born-live anchoring keeps existing errors; shared current validation follows journal ownership.
+  Current copy/Piece checks and whole direction intervals refuse retargeting, lost/foreign material.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test notion_contract` → `10 passed`, `rc=0`:
+  distinct copies, ordering/removal/reassignment, historical anchors, current ownership, choices,
+  interior repairs, directed order and immutable input. Four mutations (copy binding, range ownership,
+  historical resolution and current anchor ownership) independently fail red, `rc=101`; restored
+  privacy/checks pass. Hem checklist and completed verification table compare unchanged to HEAD.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
+  green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
+  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
+  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Notch/TurnPoint contracts unchanged.
+- [x] **LOCKSTEP** — pre-code copy decision, closure children, current Design obligations, module/map,
+  bounded closure chapter/API vocabulary and feature reasons, evidence/log retrieval, frontier/index
+  and live docs align. The oldest lesson seals unchanged to devnotes-part18. No closure kind/count/size or
+  physical transform claim yet; next `.3c.4c.1b`. G1 remains 3/4 object families.
+
+## Historical commit log
+
+## Commit Log
+
+| Leaf | Commit subject or reference | Notes |
+| --- | --- | --- |
+| tree seed | `STITCHCAD-PLANNING-0002 (leaf PLANNING.2)` | created by the seeding leaf |
+| `.1` | `STITCHCAD-G1-0001 (leaf G1-SLICE.1)` | reconciled: delivered by `G0-CONTRACT.18` (`eb83f01`) ahead of this leaf |
+| `.2` | `STITCHCAD-G1-0002 (leaf G1-SLICE.2)` | reconciled: `sc-units` delivered by `G0-CONTRACT.18`; property-test decision recorded |
+| `.3` | `STITCHCAD-G1-0003 (leaf G1-SLICE.3)` | decomposed into `.3a`/`.3b`/`.3c`; the three design boundaries recorded as layer-C decisions |
+| `.3a` | `STITCHCAD-G1-0004 (leaf G1-SLICE.3a)` | the identity layer: `EntityId`/ULID + injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the exact `Rational`/`Param`; 40 tests, wasm green |
+| `.3b` | `STITCHCAD-G1-0005 (leaf G1-SLICE.3b)` | the persistent-identity contract: `IdentityLedger`'s append-only edit journal, fold resolution under split/merge/reverse/delete/offset, derived `RepairTask`s + release rule; 62 unit + 8 property tests, wasm green; recorded in `decision_reference-resolution-journal-fold.md` |
+| `.3c.1` | `STITCHCAD-G1-0006 (leaf G1-SLICE.3c.1)` | immutable structural pieces with deferred geometry; D55 owned by the next child |
+| `.3c.2a` | `STITCHCAD-G1-0007 (leaf G1-SLICE.3c.2a)` | exact whole-range journal fold and visible range repairs; D55 fixed |
+| `.3c.1a` | `STITCHCAD-G1-0008 (leaf G1-SLICE.3c.1a)` | D56 fixed: separate cut-once L/R members, explicit companion metadata |
+| `.3c.3a` | `STITCHCAD-G1-0009 (leaf G1-SLICE.3c.3a)` | semantic notches and symbolic bindings; D58 fixed |
+| `.3c.2b.1` | `STITCHCAD-G1-0010 (leaf G1-SLICE.3c.2b.1)` | explicit physical-copy plan; D59/D60 fixed |
+| `.3c.2b.2` | `STITCHCAD-G1-0011 (leaf G1-SLICE.3c.2b.2)` | copy-addressed sewing; D35/D57 fixed; sewing parents closed |
+| `.3c.3b` | `STITCHCAD-G1-0012 (leaf G1-SLICE.3c.3b)` | directed grainlines; independent print references; D61 fixed |
+| `.3c.3c` | `STITCHCAD-G1-0013 (leaf G1-SLICE.3c.3c)` | per-edge allowance intent; marks/allowances parent closed |
+| `.3c.4a.1` | `STITCHCAD-G1-0014 (leaf G1-SLICE.3c.4a.1)` | semantic dart intent; explicit conservation deferral |
+| `.3c.4a.2a` | `STITCHCAD-G1-0015 (leaf G1-SLICE.3c.4a.2a)` | distinct tuck/pleat intent; shared validation |
+| `.3c.4a.2b` | `STITCHCAD-G1-0016 (leaf G1-SLICE.3c.4a.2b)` | gather physical-side binding; canonical ease; intake parents closed |
+| `.3c.4b.1` | `STITCHCAD-G1-0017 (leaf G1-SLICE.3c.4b.1)` | served-layer intent; lining execution scope refusal |
+| `.3c.4b.2` | `STITCHCAD-G1-0018 (leaf G1-SLICE.3c.4b.2)` | Hem depth/fold intent and current Facing composition; hem/layer parent closed |
+| `.3c.4c.1a` | `STITCHCAD-G1-0019 (leaf G1-SLICE.3c.4c.1a)` | physical notion placements; current copy/anchor/direction validation |
+| `.3c.4c.1b` … `.16` | `pending` | remaining constructions and G1 execution leaves |

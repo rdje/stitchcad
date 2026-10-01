@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — closure counts derive from physical instances and current placements stay canonical
+
+- Stable instance ids survive ordering; nonempty physical pairs derive one typed Count, without a
+  separately authored quantity. Component placement reuse and ambiguous supplied ids refuse rather
+  than inflate counts or select an arbitrary target. Zipper length is positive authored content or
+  symbolic origin; hook/bar sizes retain logical declarations and no vendor/default size.
+- Closure borrows current placements and validates every copy/Piece/anchor/direction context.
+  Cached placement birth approval cannot certify an interior deletion or missing copy. Fly scope
+  refuses before geometry with env_fly and request/gap/G7, preserving the declared envelope.
+- Ten contracts, Count-boundary unit and privacy pass; four independent mutations fail red. Strict
+  lint found a large nested target error; boxing that evidence keeps all typed refusals readable and
+  compact. Restored Rust/WASM/book pass; physical hardware/size resolution remains later work.
+- promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`'s closure instances.
+
 ## _(2026-10-01)_ — physical placement validation follows current material without changing identity
 
 - A notion placement names a stable physical copy and retains its original source Piece binding.
@@ -130,24 +144,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   notches retain behavior after extracting shared anchor validation; strict checks and WASM pass.
 - promotion: promoted by `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`.
 
-## _(2026-10-01)_ — physical-copy identity is authored content, independent of list order
-
-- D57's director ruling makes every physical copy separately addressable. The complete cut plan
-  validates explicit ids, source Piece, quantity and authored/reflected populations. It neither
-  generates missing copies nor duplicates pattern geometry. Reordering retains identity; replacing
-  a copy leaves the removed identity absent so graph validation can expose its missing target.
-- Nine tests cover identity/reordering/replay, disjoint namespaces, missing targets, exact counts,
-  mirrored populations and authored-only modes. Disabling quantity refusal makes its regression
-  red. The plan's private content is checked by a compile-fail doctest; strict checks and WASM pass.
-- D59 was already present in the committed docs: a snapshot census at `6abfac3` reports 15 API tokens
-  unaccounted for. Chapter-local declarations explain API names without polluting garment vocabulary;
-  only cut plan and physical cut copy add new glossary concepts. The regenerated index and census
-  pass. Every future ontology update must run that census, alongside feature coverage and rendering.
-- D60 appeared only when the moved historical doc-only checklists met the staged-code gate. Their
-  `.1`/`.2` ROOT CAUSE bullets gain re-derived evidence from the actual delivery commit; all four
-  moved checklists are checked individually before the staged gate passes. This revalidation follows
-  the existing `decision_acceptance-evidence-per-leaf.md`, rather than masking old boxes with a new one.
-- promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`.
 
 # Sealed archive — earlier lessons
 
@@ -171,8 +167,8 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part16.md`](docs/history/stitchcad-devnotes-part16.md) | interval-coverage lesson | 13 lines, 1183 bytes, `sha256:fcf7c475…` |
 | [`devnotes-part17.md`](docs/history/stitchcad-devnotes-part17.md) | separate-pair-member lesson | 12 lines, 1049 bytes, `sha256:140c4c41…` |
 | [`devnotes-part18.md`](docs/history/stitchcad-devnotes-part18.md) | semantic-anchor/profile-binding lesson | 12 lines, 1102 bytes, `sha256:61a13500…` |
+| [`devnotes-part19.md`](docs/history/stitchcad-devnotes-part19.md) | physical-copy identity lesson | 18 lines, 1663 bytes, `sha256:c0e3c442…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of
 `run_changelog_ledger_probes.sh` proves the digest afterwards.
-
