@@ -55,7 +55,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.5` — derive the index↔tree frontier agreement (D34, which recurred on `2026-09-30`) | repo-local |
 | [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5` — the toolbox rows for the instruments in use, then `.13`/`.19` (`.21`'s cleanup ran `2026-09-30`) | repo-local |
 | [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `done` | no further leaf — `18 met / 1 not met` by `run_g0_exit_review.sh`, closure unapproved (§6.1) | repo-local |
-| [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `active` | `.3c.2b` — physical-copy identities and sewing; D57 ruling received | repo-local |
+| [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `active` | `.3c.2b.2` — sewing spans; physical-copy identities landed | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
 | [`G4-PROFILES`](tasks/G4-PROFILES.md) | §11 gate **G4** — profiles & uncertainty workflow | `proposed` | `.1` — `sc-profiles` schema v2 | repo-local |
@@ -69,7 +69,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 All ten roadmap lanes are owned, **derived rather than asserted**:
 
 ```bash
-bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh   # → 10 lanes / 13 trees / 3 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)
+bash docs/tasks/artifacts/planning/run_tree_coverage_census.sh   # → 10 lanes / 13 trees / 4 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)
 bash docs/tasks/artifacts/planning/run_tree_coverage_probes.sh   # → probes: 7 pass / 0 fail — watched, because a census no gate runs can go red unnoticed (D44)
 ```
 
@@ -79,7 +79,7 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-Execution order right now: **`G1-SLICE.3c.2b`** (physical-copy identities per the director ruling) and the lane that follows it. Gate G0 has no further leaf:
+Execution order right now: **`G1-SLICE.3c.2b.2`** (spans address the committed physical-copy plan) and the lane that follows it. Gate G0 has no further leaf:
 its review is derived (`bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` → `18 met / 1 not met /
 19 clauses`), the one open clause travels with the director's ruling of `2026-09-30` that accepts it, and the
 gate's closure stays unapproved under governance §6.1 because its reviewer authored most of what it reviews.

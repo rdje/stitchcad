@@ -1,18 +1,18 @@
 //! `sc-core` — the garment ontology, the construction recipe and the command bus.
 //!
-//! **Status: identity (`.3a`), reference resolution (`.3b`) structural pieces (`.3c.1`) and semantic notches (`.3c.3a`) landed.** The crate began at gate G0 as a documented skeleton whose one job was to prove the WASM story
+//! **Status: identity (`.3a`), reference resolution (`.3b`) structural pieces (`.3c.1`) physical copies (`.3c.2b.1`) and semantic notches (`.3c.3a`) landed.** The crate began at gate G0 as a documented skeleton whose one job was to prove the WASM story
 //! for real (the roadmap's G0 CI clause, §4.3 and §7.3, requires a real `cargo build --target
 //! wasm32-unknown-unknown`, not a host `cargo check`). It now carries entity identity, the stable
 //! topological references, the exact rational parameter, and the reference-resolution contract under
 //! split/merge/reverse/delete/offset with its repair tasks, and immutable structurally validated pieces
 //! with explicit deferred geometric obligations, whole-interval repair evidence, and semantic notches
-//! with symbolic target-profile bindings, in [`ontology`].
+//! with symbolic target-profile bindings, plus complete physical-copy plans, in [`ontology`].
 //!
 //! What lands here, and when:
 //!
 //! | Module | Contents | Leaf |
 //! | --- | --- | --- |
-//! | `ontology` | identity, exact parameters, point/range topology resolution and repairs; structural `Piece`, semantic `Notch` and symbolic profile bindings; other objects follow | `G1-SLICE.3a`/`.3b`/`.3c` |
+//! | `ontology` | identity, exact parameters, point/range topology resolution and repairs; structural `Piece`, explicit `CutPlan` copies, semantic `Notch` and symbolic profile bindings; other objects follow | `G1-SLICE.3a`/`.3b`/`.3c` |
 //! | `recipe` | the formula graph and ordered drafting operations, evaluated in one deterministic pass | `G0-CONTRACT.9`, `G1-SLICE.5` |
 //! | `command` | the typed command bus: atomic groups, preview/commit, revision preconditions, idempotency, undo granularity | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |

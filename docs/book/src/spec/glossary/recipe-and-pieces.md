@@ -22,6 +22,7 @@
 | construction recipe | the ordered formula graph and drafting operations that *produce* a garment's geometry | [ontology §3.1](../ontology.md) | recipe, drafting history, construction, "the how" | → `Design` |
 | cut line ⚠ | the boundary the knife follows: the net line pushed out by its seam allowance | [ontology §4.4](../ontology.md) | cutting line, contour, outer edge, *Schnittkante* | layer `CUT` · `1` |
 | cut on fold ⚠ | a piece placed against a fabric fold so one cut yields a symmetric piece twice as wide | [ontology §4.1](../ontology.md) | place on fold, "cut 1 on fold", folded cut | `fold_edge` |
+| cut plan | the complete set of identified physical copies requested by the pattern pieces | [ontology §4.2](../ontology.md) | physical-copy plan | `CutPlan` |
 | cut quantity | how many of a piece are cut, in this size, from this material | [ontology §4.1](../ontology.md) | multiplicity, cut count, "cut 2" | `cut_qty` |
 | design | the authored semantic content: measurements, ease, recipe, sewing graph, materials | [ontology §3.1](../ontology.md) | style, project, garment, pattern (⚠ ambiguous) | `Design` |
 | drafting operation | one typed, ordered, replayable step of the recipe; every mutation goes through the command bus | [ontology §3.2](../ontology.md) | step, edit, command, action | typed command name |
@@ -47,6 +48,7 @@
 | outer boundary | the closed loop that is a piece's extent, wound counter-clockwise in the piece's own frame | [ontology §4.1](../ontology.md) | contour, perimeter, outline, *Kontur* | `boundary` |
 | parameter | a named value exposed to formulas, carrying an uncertainty state like any other number | [ontology §3.1](../ontology.md) | variable, driver, input | `parameter` |
 | pattern ⚠ | ambiguous in English: the **design**, one **piece**, or a **marker**. StitchCAD never uses it alone | — (deliberately undefined) | Schnitt (also ambiguous), pattern piece | — |
+| physical cut copy | one identified physical copy of a pattern piece; different copies can have different seam neighbours | [ontology §4.2](../ontology.md) | cut instance, physical copy | `CutCopy` |
 | piece | one pattern shape cut from one material, with identity, label data and geometry | [ontology §4.1](../ontology.md) | pattern piece, part, panel, *Schnittteil* | `Piece` |
 | quadrant | one fourth of a symmetric garment — the unit the reference drafting works in | [reference skirt §3](../reference-skirt.md) | quarter, "1/4 of the body" | `quarter` |
 | recipe replay | re-evaluating the recipe from scratch; the only way geometry is produced or reproduced | [ontology §3.1](../ontology.md) | regeneration, re-evaluation, rebuild | `EvaluateInstance` |

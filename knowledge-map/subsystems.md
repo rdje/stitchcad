@@ -11,11 +11,10 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
 - `crates/sc-core/` — **ontology in progress**: identity, topology-journal resolution and repairs, immutable
-  structural pieces, semantic notches and symbolic profile bindings. Other objects, recipe and bus follow. Entry
+  pieces, cut-copy plans and semantic notches. Other objects, recipe and bus follow. Entry
   `crates/sc-core/src/ontology/`; tests `crates/sc-core/tests/`. Owner `G0-CONTRACT.3` / `G1-SLICE.3`.
-- `docs/book/src/spec/` — the normative specification the director reviews: one chapter per contract
-  family (units, ontology, formula language, envelope, interchange, release, command layer, and the
-  rest). Owner the `G0-CONTRACT` leaves; chapter index `docs/book/src/SUMMARY.md`.
+- `docs/book/src/spec/` — normative contracts reviewed by the director. Entry
+  `docs/book/src/SUMMARY.md`; owner `G0-CONTRACT` and later implementation gates.
 - `docs/book/src/spec/formula-language.md` — expression contract, with linked grammar and examples.
   Oracle `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
   `G0-CONTRACT.9` / `G1-SLICE.5`.

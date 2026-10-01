@@ -159,7 +159,8 @@ data is complete enough to print without consulting anything else.
 
 A `SeamSpan` is an oriented correspondence between two edge ranges:
 
-- the **two sides** — `(piece, EdgeRef, parameter range)` each;
+- the **two sides** — `(physical cut-copy identity, EdgeRef, parameter range)` each; the copy
+  names its pattern Piece and orientation through a complete `CutPlan`;
 - **direction** — which end of side A meets which end of side B;
 - **declared ease distribution** — how a length differential is spread along the span (uniform,
   weighted to a region, anchored between notches);
@@ -405,3 +406,56 @@ G1 supplies no fallback dimensions, style or encoding. The normative release §8
 badge an unknown notch geometry in previews, carry a sidecar in drafts and block production; none of
 those outcomes permits inventing geometry. The boundary is recorded in
 `decision_profile-bindings-stay-symbolic-at-g1.md`.
+
+**Physical copies (`G1-SLICE.3c.2b.1`).** The director's D57 ruling gives every physical cut
+copy its own persistent identity, so two copies of one pattern Piece can have different seam
+neighbours. `CutPlan::new(definitions, pieces)` validates an explicit complete plan; it never derives
+ids from ordinals or generates missing copies. Each `CutCopyDefinition` supplies a copy id, pattern
+Piece id and `CopyOrientation::Authored` or `Reflected`. `copy(id)` addresses a physical copy;
+`copies_for_piece(piece_id)` finds its siblings without collapsing their identities.
+
+For a single pattern Piece requesting two authored copies, supply ids A and B with the
+same Piece id. Reordering A/B to B/A retains each identity and orientation.
+Replacing B with a newly identified C leaves B absent; its seams must not silently
+transfer to C. The sewing-graph slice next integrates this addressing contract and exposes
+missing copy references; the command bus later owns atomic replacements and revision checks.
+
+Piece ids and copy ids must be unique and disjoint, every named Piece must exist, and counts must
+exactly equal each Piece's cut quantity. A `MirroredPairs` request has equal authored and reflected
+populations. `Single` and separate L/R `PairMember` definitions allow authored copies only: the
+separate members already have their own handed geometry. For the reference skirt, the cut plan has
+five individually identified authored copies of its five cut-once Piece definitions; unfolding the
+front's fabric-fold contour does not create a second physical copy.
+
+Copy orientation is independent of topological traversal direction. Copy edges use the pattern's
+source frame; G2/V1 applies the physical reflection transform. `CutPlan` exposes shared immutable
+copies and always reports `GeometricValidation::DeferredToG2`; it certifies no contour, placement,
+cutting or release result. Companion reciprocity and design-wide identity checks remain `.6` duties.
+See `decision_physical-cut-copies-have-stable-identities.md` for the identity and replacement rule.
+
+**Implementation vocabulary.** These are API names used in the executable examples above,
+distinct from the garment concepts the glossary defines. The table declares their local meaning;
+it supplies no new validation or physical-output claim.
+
+| API token | Meaning here |
+| --- | --- |
+| `PieceDefinition` | Editable structural input, validated to construct a Piece |
+| `PieceError` | Typed structural Piece refusal |
+| `DirectedEdge` | Held edge identity plus authored traversal |
+| `Direction` | Original or accumulated reversed traversal |
+| `Single` | Piece cut mode retaining its authored handedness |
+| `MirroredPairs` | One Piece requesting equal authored/reflected copies |
+| `PairMember` | Separately identified L/R member with companion metadata |
+| `Resolution` | Unique point, explicit split choice or repair task |
+| `SplitPoint` | Both split fragments offered for one held point |
+| `SplitSide` | Consumer's explicit choice of split fragment |
+| `RangeResolution` | Whole-range evidence plus separate endpoint answers |
+| `RangePortion` | One live or unresolved positive-length portion |
+| `RangeRepairTask` | Held range, affected interval and failure cause |
+| `UnknownSource` | Edge never declared in the identity journal |
+| `ProfileParameterRef` | Logical target-profile declaration, without a value |
+| `NotchProfileBindings` | Style, dimensions and encoding declaration references |
+| `NotchStyle` | Possible profile-selected style values; no G1 geometry |
+| `NotchEncoding` | Possible export forms; no G1 encoder |
+| `CutCopyDefinition` | Editable physical-copy identity, Piece and orientation |
+| `Reflected` | Copy orientation requiring a later geometric transform |

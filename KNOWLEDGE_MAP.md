@@ -14,11 +14,10 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
 - `crates/sc-core/` — **ontology in progress**: identity, topology-journal resolution and repairs, immutable
-  structural pieces, semantic notches and symbolic profile bindings. Other objects, recipe and bus follow. Entry
+  pieces, cut-copy plans and semantic notches. Other objects, recipe and bus follow. Entry
   `crates/sc-core/src/ontology/`; tests `crates/sc-core/tests/`. Owner `G0-CONTRACT.3` / `G1-SLICE.3`.
-- `docs/book/src/spec/` — the normative specification the director reviews: one chapter per contract
-  family (units, ontology, formula language, envelope, interchange, release, command layer, and the
-  rest). Owner the `G0-CONTRACT` leaves; chapter index `docs/book/src/SUMMARY.md`.
+- `docs/book/src/spec/` — normative contracts reviewed by the director. Entry
+  `docs/book/src/SUMMARY.md`; owner `G0-CONTRACT` and later implementation gates.
 - `docs/book/src/spec/formula-language.md` — expression contract, with linked grammar and examples.
   Oracle `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
   `G0-CONTRACT.9` / `G1-SLICE.5`.
@@ -41,6 +40,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`BOOTSTRAP.md`](docs/tasks/BOOTSTRAP.md)
 - [`G0-CONTRACT-evidence.md`](docs/tasks/G0-CONTRACT-evidence.md)
 - [`G0-CONTRACT.md`](docs/tasks/G0-CONTRACT.md)
+- [`G1-SLICE-evidence.md`](docs/tasks/G1-SLICE-evidence.md)
 - [`G1-SLICE.md`](docs/tasks/G1-SLICE.md)
 - [`G2-2D.md`](docs/tasks/G2-2D.md)
 - [`G3-GRADING.md`](docs/tasks/G3-GRADING.md)
@@ -78,6 +78,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_maxline-health-derived-from-the-cell-budget.md`](docs/decisions/decision_maxline-health-derived-from-the-cell-budget.md)
 - [`decision_numerical-contract-fixed-point.md`](docs/decisions/decision_numerical-contract-fixed-point.md)
 - [`decision_ontology-invariants-structural-g1-geometric-g2.md`](docs/decisions/decision_ontology-invariants-structural-g1-geometric-g2.md)
+- [`decision_physical-cut-copies-have-stable-identities.md`](docs/decisions/decision_physical-cut-copies-have-stable-identities.md)
 - [`decision_piece-pair-members-have-explicit-handedness.md`](docs/decisions/decision_piece-pair-members-have-explicit-handedness.md)
 - [`decision_product-work-takes-the-frontier.md`](docs/decisions/decision_product-work-takes-the-frontier.md)
 - [`decision_profile-bindings-stay-symbolic-at-g1.md`](docs/decisions/decision_profile-bindings-stay-symbolic-at-g1.md)

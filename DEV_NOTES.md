@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — physical-copy identity is authored content, independent of list order
+
+- D57's director ruling makes every physical copy separately addressable. The complete cut plan
+  validates explicit ids, source Piece, quantity and authored/reflected populations. It neither
+  generates missing copies nor duplicates pattern geometry. Reordering retains identity; replacing
+  a copy leaves the removed identity absent so graph validation can expose its missing target.
+- Nine tests cover identity/reordering/replay, disjoint namespaces, missing targets, exact counts,
+  mirrored populations and authored-only modes. Disabling quantity refusal makes its regression
+  red. The plan's private content is checked by a compile-fail doctest; strict checks and WASM pass.
+- D59 was already present in the committed docs: a snapshot census at `6abfac3` reports 15 API tokens
+  unaccounted for. Chapter-local declarations explain API names without polluting garment vocabulary;
+  only cut plan and physical cut copy add new glossary concepts. The regenerated index and census
+  pass. Every future ontology update must run that census, alongside feature coverage and rendering.
+- D60 appeared only when the moved historical doc-only checklists met the staged-code gate. Their
+  `.1`/`.2` ROOT CAUSE bullets gain re-derived evidence from the actual delivery commit; all four
+  moved checklists are checked individually before the staged gate passes. This revalidation follows
+  the existing `decision_acceptance-evidence-per-leaf.md`, rather than masking old boxes with a new one.
+- promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`.
+
 ## _(2026-10-01)_ — semantic anchoring and target-profile resolution have separate obligations
 
 - A valid notch anchor does not supply factory-specific dimensions or encoding. Stable logical
@@ -136,22 +155,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - This entry is the promoted lesson for the slice: the new decision record carries `answers:`, which is the
   LESSON-PROMOTION promote path, so no decline token is needed.
 
-## _(2026-09-30)_ — a leaf marked `pending` whose work shipped under a sibling is a frontier that lies
-
-- `G0-CONTRACT.18` retired the starter crate and created `sc-units` + `sc-core` "closing defect D10 ahead of
-  `G1-SLICE.1`" — then closed only itself. The G1 leaf kept saying `pending` while its deliverables were
-  committed and green, so the layer-B frontier pointed the next session at finished work. The drift is not a
-  bad sentence in the tree; it is a missing reconciliation step: when a leaf pre-empts a sibling, the sibling's
-  status is part of that commit's lockstep, or it must be audited promptly after.
-- The closure is an audit, not new code: each acceptance criterion re-derived by command (`cargo metadata`,
-  `git ls-tree`, `make check`/`wasm`/`gate`, the G0 exit review, the Knowledge Map), the verdicts pasted into
-  the leaf's checklist so a reader who wrote none of it can reproduce the whole closure. **The certification of
-  finished work gets the same treatment as the work** — a derived verdict, not a confident one (the rule
-  `G0-CONTRACT.15`'s gate review runs on).
-- promotion: declined — the lesson is an instance of the D34 hand-kept-state class (a tree cell no derivation
-  watches) already owned by `PLANNING.5`; a new decision record would duplicate that ownership. The instance is
-  fixed here, the class stays with its derivation.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -165,6 +168,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part7.md`](docs/history/stitchcad-devnotes-part7.md) | three `2026-09-30` lessons (an arm that removes the rule; a synthetic input is a fixture; a RED arm asserts the refusal) | 57 lines, 5120 bytes, `sha256:13fd6c73…` |
 | [`devnotes-part8.md`](docs/history/stitchcad-devnotes-part8.md) | two `2026-09-30` lessons (source layout; i18n population) | 35 lines, 3196 bytes, `sha256:04ab285c…` |
 | [`devnotes-part9.md`](docs/history/stitchcad-devnotes-part9.md) | the `2026-09-30` certifying-artifact lesson | 15 lines, 1343 bytes, `sha256:bc7fae65…` |
+| [`devnotes-part10.md`](docs/history/stitchcad-devnotes-part10.md) | the `2026-09-30` shipped-work reconciliation lesson | 15 lines, 1380 bytes, `sha256:701d33f2…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

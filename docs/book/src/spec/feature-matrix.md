@@ -75,7 +75,7 @@ chapter is inside that family or explicitly outside it.
 | an offset that cannot meet its budget | rejected | roadmap §4.2: exports fail explicitly rather than emit self-intersecting geometry | G2 | `geom_offset_budget` |
 | piece holes and internal construction lines | supported | ontology §4.1 requires them, oriented opposite to the boundary | G2 | — |
 | cut on fold | supported | ontology §4.1; the fixture's front piece is cut on the CF fold with no allowance there | G2 | — |
-| multiplicity, cut quantity and label data | supported | ontology §4.1, ontology §10: complete labels derive cut information from the validated plan | G1 structure, G2 labels, G5 piece manager | — |
+| multiplicity, cut quantity and label data | supported | ontology §4.1, ontology §10: labels derive from the plan; physical copies have explicit identities | G1 structure, G2 labels, G5 piece manager | — |
 | layer index for 3D ordering | deferred | ontology §4.1 stores it, but assembly is the V1 track's proof | V1 | `env_layer_index_3d` |
 
 ## 4. Seams, allowances and marks
@@ -83,7 +83,7 @@ chapter is inside that family or explicitly outside it.
 | Feature | Disposition | Why | Proven at | Diagnostic |
 | --- | --- | --- | --- | --- |
 | seam spans, partial and one-to-many | supported | ontology §4.2; a sleeve cap meets an armscye between notches | G3 | — |
-| the sewing graph as a first-class object | supported | ontology §4.2: it lives in the design, not in a renderer | G2 fixture, G3 | — |
+| the sewing graph as a first-class object | supported | ontology §4.2, ontology §10: physical-copy identities landed; graph content follows | G2 fixture, G3 | — |
 | declared ease distribution along a span | supported | ontology §4.2; G3's exit requires cap ease to be declared, not absorbed | G3 | — |
 | seam allowance per edge, variable widths | supported | ontology §4.4; the fixture carries 1.0 / 1.5 / 3.0 cm in one garment | G2 | — |
 | the five corner treatments | supported | ontology §4.4 names miter, slant, envelope, trim and step as the vocabulary | G2 | — |
