@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — Pocket composition names physical copies and guards each source
+
+- Component references pair a physical copy with its expected source Piece, retaining multiple copies
+  of one pattern without duplicated geometry. Canonical component metadata is borrowed by copy id;
+  current removal/reassignment cannot silently select another target. Same-id Piece replacement is
+  inspected as current content. Served-copy membership alone proves no physical shape or recipe rule.
+- Position follows shared birth/current anchor contracts; orientation requires complete owned ranges,
+  not just live ends. Component contour repairs remain exposed through Piece range evidence and must
+  be consumed by Design before execution/release. Opening Declaration/Profile preserves origin but
+  reports DeferredToG3, separately from geometry/profile deferrals; no opening catalogue is invented.
+- Eleven contracts and privacy pass; three independent guard mutations fail red. Strict Rust rejects
+  unchecked fixture indexing, corrected before final checks. Restored WASM/book/censuses/gates pass.
+  Director's SOTA/signoff/production-grade ruling remains the review bar, not an API-presence claim.
+- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s Pocket boundary.
+
 ## _(2026-10-01)_ — buttonhole length retains a single canonical derivation source
 
 - Button/hole pairs share current placement/count validation. The hole source borrows its owning
@@ -128,19 +143,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   sibling before the parent exceeds 1000 lines; staged gates revalidate every moved checklist.
 - promotion: promoted by `decision_profile-bindings-stay-symbolic-at-g1.md`'s allowance subsection.
 
-## _(2026-10-01)_ — a directed arrow needs ordered intervals as well as endpoint identity
-
-- A reversed authored range traverses split fragments in reverse order and composes its direction with
-  journal reversal. Preserving raw range evidence keeps split choices and lost interiors visible while
-  the directed view remains useful. Disabling the reverse iterator makes the order/repair regression red.
-- Grain, alignment, stripe and plaid references each require complete owned intervals. The shared sewing
-  ownership fold guards merged foreign remainders after reversal. Nine contracts distinguish optional
-  fields, explicit bias/antiparallel intent and symbolic angles from actual straightness/angular proof.
-- Ontology §10's executable body moves unchanged (231 lines / 18018 bytes, SHA256
-  `20c5442203f3a39c33ace68a426ec48e6c8aaec0a6017eb4b998e9c0a511671c`) to its own chapter; the normative
-  clauses stay in place. D61 corrects only a diagnostic about the census's global declaration scope;
-  its ten probes pass. This is containment with preserved examples and predicates, not a policy change.
-- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s grain boundary.
 
 
 # Sealed archive — earlier lessons
@@ -167,6 +169,8 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part18.md`](docs/history/stitchcad-devnotes-part18.md) | semantic-anchor/profile-binding lesson | 12 lines, 1102 bytes, `sha256:61a13500…` |
 | [`devnotes-part19.md`](docs/history/stitchcad-devnotes-part19.md) | physical-copy identity lesson | 18 lines, 1663 bytes, `sha256:c0e3c442…` |
 | [`devnotes-part20.md`](docs/history/stitchcad-devnotes-part20.md) | physical sewing-interval lesson | 15 lines, 1375 bytes, `sha256:34867dc9…` |
+
+| [`devnotes-part21.md`](docs/history/stitchcad-devnotes-part21.md) | directed-grainline lesson | 13 lines, 1212 bytes, `sha256:c31c3298…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

@@ -200,3 +200,51 @@ finishing remain G2/G3, and every Hem reports `GeometricValidation::DeferredToG2
 | `WrongFacing` | Provided target differs from the held stable Facing identity |
 | `FacingOutsidePiece` | Current target serves a different Piece |
 | `InvalidFacing` | Current target's source/material content fails layer validation |
+
+## Pocket placement and physical composition
+
+`PocketDefinition` binds a served physical copy and its source Piece, a held position anchor,
+owned directed orientation, required logical opening and nonempty component references. Each
+`PocketPieceRef` pairs a stable copy id with the expected source Piece. For example, a pocket on
+copy `front-left` can name components `bag-left` and `bag-right`, both sourced from the same
+pattern “bag”. The components remain distinct physical objects; their pattern geometry is shared.
+The served copy may itself appear explicitly as a component. G1 does not infer construction
+support or recipe-cycle correctness from that relationship.
+
+`Pocket::new` requires current copies/Pieces, unambiguous Piece ids, unique component copy ids,
+a live owned birth anchor and complete owned orientation intervals with uniquely resolved ends.
+`validate_current()` repeats target and placement checks. Removing a copy does not select its
+peer; assigning the same copy id to a different source Piece fails its explicit source guard.
+Historical anchors may resolve after split/reversal, while a split choice or deletion remains a
+visible refusal. Orientation cannot hide foreign or deleted middle geometry behind valid ends.
+Authored direction is separate from the copy's reflected geometry, which remains G2/V1 work.
+
+`component(copy, plan, pieces)` borrows the current canonical Piece, including its labels/material
+and raw contour repair evidence. Reordering components does not change the queried target.
+Replacing a same-id Piece changes the newly observed metadata without rewriting old Pocket intent.
+This target query and Pocket placement validation do **not** certify component contours: Design
+must inspect every component's `range_resolutions()` and reject lost interiors before execution
+or release. Complete contour evidence still requires G2 geometry validation.
+
+`PocketOpening::Declaration(operation)` and `PocketOpening::Profile(parameter)` preserve logical
+origins without inventing an opening vocabulary or default. Every Pocket reports
+`PocketOpeningValidation::DeferredToG3`; carrying a binding does not establish supported execution
+scope. Recipe/Design resolves its declaration, domain/state and dependencies; G3 executes pocket
+construction and consumes named envelope diagnostics before execution. A profile opening also
+reports `Some(ProfileBindingValidation::DeferredToG4)`. `None` means only no profile opening was
+authored. Placement/contour geometry reports `GeometricValidation::DeferredToG2` independently.
+
+| API token | Meaning in the Pocket implementation |
+| --- | --- |
+| `PocketDefinition` | Editable served target, placement, opening and explicit composition |
+| `PocketPieceRef` | Stable physical-copy id plus expected source Piece id |
+| `PocketOpening` | Required recipe/Design or profile opening declaration |
+| `PocketOpeningValidation` | Opening resolution and executable scope remain G3 |
+| `None` | No profile opening field was authored; no resolved-value proof |
+| `PocketError` | Typed target, composition, anchor and orientation refusal |
+| `NoComponents` | No authored composition references |
+| `DuplicateComponent` | Repeated physical component copy, regardless of claimed source |
+| `WrongCopyPiece` | Current copy source differs from its held expected source |
+| `MissingComponent` | Query names no authored component copy |
+| `UnresolvedOrientation` | Raw incomplete interval or endpoint-choice evidence |
+| `OrientationOutsidePiece` | Some current orientation interval is foreign to the served Piece |

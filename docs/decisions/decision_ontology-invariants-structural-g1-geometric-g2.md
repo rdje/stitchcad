@@ -7,7 +7,7 @@
   at gate G1 and what `sc-geometry` proves at gate G2 (`docs/book/src/spec/ontology.md` §4.1, §9;
   `docs/tasks/G2-2D.md` leaf `.1`).
 
-answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" ·
+answers: "how do Pocket components retain explicit physical-copy and source-Piece references?" · "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" ·
   "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?" ·
   "how do tucks and pleats retain distinct semantic kinds?" · "can lining be modelled while remaining outside v1 execution scope?" · "how does a faced hem bind a current Facing without duplicating it?"
 
@@ -104,3 +104,15 @@ method names an existing Facing serving the same Piece. Birth and current-target
 that stable identity, served owner and current layer sources. Missing, reassigned or invalid targets
 are typed refusals rather than substitutes. Geometry and executed folds remain G2/G3 obligations;
 recipe/Design still validates all declaration, operation and material registries.
+
+## Pocket placement/composition (`G1-SLICE.3c.4d.1`)
+
+PocketPieceRef explicitly names physical copy and source Piece for the served target and each
+component. G1 requires nonempty distinct component copies, existing unambiguous current targets,
+matching copy/source bindings, live owned birth anchoring and complete owned orientation. Current
+validation follows historical anchors while retaining choices/repairs. The served target may also
+be an explicit component; recipe dependency cycles and physical pocket shape belong `.5`/G3.
+Opening type retains a logical recipe/Profile declaration with DeferredToG3 resolution/scope.
+G1 invents no opening vocabulary or support approval. Component queries borrow current Piece
+metadata; Design/G2 must inspect all component contour repairs and geometry before execution/release.
+Known envelope diagnostics remain execution obligations, never silent approximation of an opening.

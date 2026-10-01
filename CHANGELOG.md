@@ -37,10 +37,26 @@ in [`docs/history/bedrock-scaffold-changelog.md`](docs/history/bedrock-scaffold-
 | [`changelog-part20.md`](docs/history/stitchcad-changelog-part20.md) | STITCHCAD-G1-0002 | 19 lines, 1598 bytes, `sha256:a3918baa…` |
 | [`changelog-part21.md`](docs/history/stitchcad-changelog-part21.md) | STITCHCAD-G1-0003 | 21 lines, 1831 bytes, `sha256:ab5e04ca…` |
 
+| [`changelog-part22.md`](docs/history/stitchcad-changelog-part22.md) | STITCHCAD-G1-0004 | 24 lines, 2100 bytes, `sha256:9050689c…` |
+
 The live window below holds the most recent slices. When it passes its health target (400 lines /
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-G1-0022 - Pocket retains physical composition and owned placement intent (leaf `G1-SLICE.3c.4d.1`)
+
+Immutable Pocket binds served/component physical copies to explicit source Pieces, owned position
+and directed orientation, and a required logical opening. Nonempty unique components, unambiguous
+current Piece contexts and copy/source guards refuse silent substitution. Borrowed component metadata
+is canonical; its contour repairs remain separate Design/G2 obligations. Opening resolution and
+supported execution remain G3, without invented vocabulary/defaults or a scope approval.
+
+Eleven contracts + privacy pass. Independent copy-source, orientation-ownership and nonempty-list
+mutations fail red; restored strict Rust/WASM/book, fixture/feature/glossary/tree, ledger and staged
+gates pass. Book/live records and pre-code decision align. Oldest committed changelog/lesson seal
+unchanged to part22/part21. Director reaffirmed the SOTA/signoff/production-grade bar; object-family
+signoff now re-derives the structural evidence. G1 remains 4/18 leaves, 3/4 families; next `.3c.4d.2`.
 
 ## STITCHCAD-G1-0021 - buttonhole length has one canonical button/operation source (leaf `G1-SLICE.3c.4c.2`)
 
@@ -353,28 +369,3 @@ Two containment obligations this append discharged atomically, both surfaced as 
   `knowledge-map/subsystems.md` + regenerated `KNOWLEDGE_MAP.md`, `docs/TASK_TREE.md`, `MEMORY.md`,
   `LIVE_STATUS.md` (G1 → 4 of 18, census → 9 open), `PLANNING.md` (D53, D54), `DEV_NOTES.md` (the lesson +
   its own rollover), `CHANGELOG.md` (this entry + the part13 rollover).
-
-## STITCHCAD-G1-0004 - the identity layer: determinism is a property of the generator, not the id (leaf `G1-SLICE.3a`)
-
-G1's first new product code. `sc_core::ontology` now carries the identity layer the whole ontology rests on,
-implemented against the two design decisions `G1-SLICE.3` recorded:
-
-- `id` — `EntityId`, a hand-rolled dependency-free ULID (128 bits: a 48-bit timestamp and 80 bits of
-  randomness, 26-character Crockford base32, lexicographically sortable), and the injected `IdGenerator` trait
-  with a `DeterministicIdGenerator`. The design point: a real ULID embeds a wall-clock and randomness, yet
-  recipe re-evaluation and CLI replay must be byte-identical and canonical content carries no wall-clock — so
-  determinism lives in the *generator*, not the id. Domain code never reads a clock; the composition root
-  injects a deterministic generator for replay and a clock-plus-entropy one for production (`G1-SLICE.6`).
-- `rational` — `Rational`, a bounded exact rational (`i64` numerator/denominator, `i128` intermediates, reduced
-  canonical form). The four operators never round, so a parameter survives unbounded splits and merges with no
-  drift; a result past `i64` is a typed `UnitError::Overflow`, never a wrap. Not `sc-units`' ppm `Ratio`, not
-  the formula evaluator's bigint.
-- `reference` — `EdgeRef`/`PointRef` (the creating operation's `EntityId` plus a persistent `LocalTag`, never
-  an array index) and `Param`, a `Rational` constrained to `[0, 1]` at construction.
-
-Validation: `cargo test -p sc-core` → 31 unit + 9 dependency-free recorded-seed properties, all green;
-`make check` clean at clippy `-D warnings`; `make wasm` cross-builds `sc-core`; `make gate` → `=== all doctrines
-green ===`. Two house conventions re-confirmed: fallible arithmetic is `checked_*` (clippy's
-`should_implement_trait`, the precedent `sc-units` set), and a non-`#[test]` helper carries its own targeted
-`#[allow(clippy::expect_used)]` because `.clippy.toml`'s `allow-expect-in-tests` does not reach it. The
-frontier advances to `.3b` (the persistent-identity contract).

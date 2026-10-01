@@ -5,12 +5,13 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.3c.4d`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** `.3c.4d` — Pocket position/orientation/opening/component references, then
-  structural construction-family signoff. Split safely before code if needed. Closure intent now
-  covers zipper/hook-bar/button pairs, typed counts, canonical hole source and env_fly refusal.
-  Buttonhole source has no independent length; G3 executes its typed operation. Current registries
-  and copy/source/anchor/range validation remain required; G1 has 3/4 object families.
+- **Active tree:** `G1-SLICE`, frontier **`.3c.4d.2`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** `.3c.4d.2` — construction/object-family structural signoff, re-derived against
+  roadmap, ontology, immutable/current-reference contracts and book evidence. Pocket intent now
+  preserves explicit physical copy/source composition and owned placement. Opening execution/scope
+  remains G3; Design must inspect component contour repairs before execution/release. Run full
+  milestone checks/probes before closing object parents. G1 remains 4/18 leaves, 3/4 families.
+  Director reaffirmed SOTA/signoff/production-grade as the bar; structural APIs do not certify release.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

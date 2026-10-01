@@ -111,7 +111,7 @@ chapter is inside that family or explicitly outside it.
 | hook and bar | supported | ontology §4.7/§10; structural instances/size origins implemented; G2 proves the fixture closure | G2 | — |
 | button and buttonhole | supported | ontology §4.7/§10; canonical buttonhole source implemented; G3 proves physical derivation, G5 notions | G3 derivation; G5 notions | — |
 | fly construction | deferred | ontology §4.7/§10; execution refuses env_fly with closure/trousers-gap context; G7 owns limitation | G7 | `env_fly` |
-| pocket | supported | ontology §4.7 models position, orientation, opening type and composition; §11 G3's coverage criterion requires the trousers to carry one | G3 | — |
+| pocket | supported | ontology §4.7/§10; structural copy/source composition and placement implemented; G3 proves physical pocket construction | G3 | — |
 | notions matched to geometry | supported | roadmap §7.5 puts notions in the tech pack; roadmap §9 makes completeness a release check | G5, G7 | — |
 
 ## 6. Measurements, sizes and instantiation

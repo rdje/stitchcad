@@ -540,11 +540,48 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0021`
 
 - ID: `G1-SLICE.3c.4d`
-  Status: `pending`
+  Status: `active`
   Goal: Pocket position, orientation, opening and component Piece references; complete construction
   family signoff and close `.3c` after all child types have structural evidence and book coverage.
   Acceptance: every component exists, composition required, owned placement/direction references,
-  explicit unsupported-envelope refusal; all ontology §4 families accounted for without G2 claims.
+  symbolic opening resolution and execution scope remain G3 obligations; named envelope diagnostics
+  must be consumed before execution, not replaced by approximation. All §4 families accounted for.
+  Verification: `pending`
+  Commit: `pending`
+
+  Children: `.3c.4d.1` (Pocket metadata/composition), `.3c.4d.2` (construction/object-family signoff).
+
+- ID: `G1-SLICE.3c.4d.1`
+  Status: `done`
+  Goal: immutable Pocket with served physical copy/source Piece, owned position and directed orientation,
+  required logical opening binding and nonempty explicit component copy/Piece references.
+  Acceptance: current targets are unambiguous/existing; copy/source mismatch, duplicate components,
+  unresolved/foreign anchors and whole orientation intervals are typed refusals. No substituted pieces.
+  Design before code: PocketPieceRef explicitly pairs copy id with source Piece id for served target
+  and every component; multiple copies of one pattern Piece remain distinct. Source reassignment
+  cannot silently satisfy the old reference. The served copy may also be an explicit component;
+  G1 infers no recipe-cycle or physical-shape rule from that relationship. Recipe dependency cycles
+  and physical pocket construction remain `.5`/G3. Opening is a logical recipe/Profile declaration,
+  with DeferredToG3 resolution/scope rather than invented opening vocabulary or support approval.
+  Birth/current anchor validation follows existing shared contracts; orientation requires complete
+  owned intervals/unique endpoints. Component queries borrow current Piece metadata; Design/G2 must
+  inspect all component contour repairs and geometry before execution/release. Extend the existing
+  structural/geometric decision first. Bounded Pocket examples/API vocabulary and ledger/lesson
+  rollovers are owned synchronized docs; completed evidence moves if containment requires it.
+  Verification: eleven Pocket contracts + privacy; three mutations red; strict Rust/WASM/book,
+  fixture/feature/glossary/tree, ledger and staged doctrine gates green.
+  Commit: `STITCHCAD-G1-0022`
+
+- ID: `G1-SLICE.3c.4d.2`
+  Status: `pending`
+  Goal: re-derive all geometry-bearing object families against roadmap/ontology contracts, tests,
+  immutable interfaces, current repair behavior, deferred obligations and mdBook implementation index.
+  Acceptance: every child structurally complete with owned later obligations; full milestone checks/
+  probes green; no geometric or unsupported-envelope support claim inferred from modelled metadata.
+  Close `.4d`, `.3c.4`, `.3c` and top-level `.3` only after all structural criteria are verified.
+  Director reaffirmed SOTA, signoff and production-grade as the bar on 2026-10-01. Structural
+  completion is not production certification: geometry/interoperability/reliability and independent
+  review gates retain their owned proofs; measured evidence, not API presence, earns signoff.
   Verification: `pending`
   Commit: `pending`
 
@@ -566,6 +603,8 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Acceptance: evaluation is byte-reproducible across runs and platforms; a cycle or unbound name
   is a structured diagnostic naming the formula; every spec example in the formula chapter is a
   test.
+  Pocket openings: validate logical declaration kind/domain/state and component recipe dependencies;
+  G3 executes physical construction and determines supported opening scope without approximation.
   Buttonhole derivation: validate typed operation/dependency on the canonical button-size declaration;
   G3 executes it and validates positive physical length without a separately authored hole length.
   Verification: `pending`
@@ -586,6 +625,10 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   declarations before design acceptance; symbolic identities are not valid parameter values.
   Verification: `pending`
   Commit: `pending`
+
+  Pockets: validate current copy/source bindings, position/orientation and opening declarations;
+  inspect every component Piece contour repair before execution/release. A borrowed target or
+  successful Pocket placement check does not certify component geometry or opening scope.
 
   Closures: validate every current placement/instance, declaration and notion count before execution;
   unsupported fly requests retain named env_fly with requested Closure/trousers gap/G7.
@@ -717,7 +760,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.4d` | `pending` | Pocket descriptors and structural construction-family signoff |
+| — | `G1-SLICE.3c.4d.2` | `pending` | Re-derive construction/object-family structural signoff |
 
 ## Decisions
 
@@ -789,6 +832,32 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3c.4d.1` — Pocket retains physical composition and owned placement intent
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires Pocket placement, opening and component Pieces;
+  the prior object families have no Pocket API. Explicit physical-copy identity applies to composition.
+- [x] **ROOT CAUSE (WHY + WHERE)** — pattern-only references cannot distinguish multiple physical
+  components or refuse reassignment. `cargo test -p sc-core --test pocket_contract
+  physical_components_borrow_canonical_pattern_metadata_and_retain_all_deferred_proofs` → `1 passed`,
+  `rc=0`: distinct copy references borrow the same canonical Piece. `orientation_cannot_hide_foreign_middle_geometry_behind_owned_live_endpoints`
+  → `1 passed`, `rc=0`: valid ends cannot prove whole-range ownership, even after reversal.
+- [x] **FIX** — immutable Pocket holds served copy/source guard, position/directed orientation,
+  logical opening and nonempty unique component copy/source references. Current validation repeats
+  target/placement checks; component queries borrow canonical metadata without copying geometry.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test pocket_contract` → `11 passed`, `rc=0`:
+  composition, ambiguity/missing/reassigned targets, canonical metadata, historical point choices,
+  interior loss/foreign geometry and updated same-id Piece ownership covered. Disabling copy-source,
+  orientation-ownership and nonempty-component guards independently yields actual test failures,
+  `rc=101`; restored suite and compile-fail privacy pass. Component repairs stay visible separately.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; restored `make wasm`
+  → green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
+  tree → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`; staged `make gate`
+  → `=== all doctrines green ===`, all `rc=0`. Existing structural object families remain green.
+- [x] **LOCKSTEP** — structural/geometric decision extended before code; recipe/Design opening and
+  component-contour obligations named. API/module/map, Pocket examples/local vocabulary, feature
+  row, tree/frontier/index/live docs align. Oldest changelog/lesson seal unchanged to part22/part21.
+  Director's quality bar remains explicit in `.3c.4d.2`; physical scope/geometry are not approved here.
 
 ### `G1-SLICE.3c.4c.2` — buttonhole length has one canonical button/operation source
 
@@ -869,6 +938,8 @@ unchanged in the evidence sibling; fresh current-slice checks remain here.
 
 | `2026-10-01` | `.3c.4c.2` | closure contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `15 passed`; two source mutations red; restored checks/gates green, `rc=0` |
 
+| `2026-10-01` | `.3c.4d.1` | Pocket; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `11 passed`; three mutations red; restored checks/gates green, `rc=0` |
+
 ## Commit Log
 
 [Completed commits through physical placements](G1-SLICE-evidence.md#historical-commit-log) are
@@ -880,6 +951,8 @@ preserved unchanged in the evidence sibling; fresh current-slice entries remain 
 
 | `.3c.4c.2` | `STITCHCAD-G1-0021 (leaf G1-SLICE.3c.4c.2)` | canonical buttonhole source; Closure parent closed |
 
+| `.3c.4d.1` | `STITCHCAD-G1-0022 (leaf G1-SLICE.3c.4d.1)` | physical Pocket composition, placement, explicit opening deferral |
+
 ## Changelog
 
 [Completed task changelog through zipper/hook-bar](G1-SLICE-evidence.md#historical-task-changelog)
@@ -890,3 +963,6 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
 
 - `2026-10-01`: `.3c.4c.2` lands button/hole pairs with one canonical size/operation source; Closure
   parent closes structurally. Physical hole derivation remains G3; next `.3c.4d` pockets/signoff.
+
+- `2026-10-01`: `.3c.4d.1` implements Pocket physical composition/placement intent and visible opening
+  deferral; next `.3c.4d.2` re-derives structural family signoff against the director's quality bar.
