@@ -173,6 +173,9 @@ impl<'a> MeasurementContext<'a> {
         }
         Ok(context)
     }
+    pub(crate) fn current_declaration(&self, id: EntityId) -> Option<&'a LengthDeclaration> {
+        self.declarations.get(&id).copied()
+    }
     pub(crate) fn contains(&self, id: EntityId) -> bool {
         self.declarations.contains_key(&id)
             || self.landmarks.contains_key(&id)

@@ -388,39 +388,53 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4a.3`
   Status: `done`
-  Goal: MeasurementTable stable identity/name and unique measurement id/token inventory with current
-  metadata queries; complete measurement-family signoff against ontology .2.1 and book contracts.
-  Acceptance: ambiguity/missing targets/current reassignment refused; immutable input; focused and
-  milestone gates prove all measurement content without certifying source truth or release readiness.
-  Pre-code contract: TableDefinition holds id/name and authored ordered MeasurementBinding entries.
-  Each binding pins measurement id, exact token, body/POM kind and canonical declaration id; captures
-  may derive from existing immutable metadata. No values/state/source/procedure prose copied into tables.
-  Empty draft tables legal (no normative nonempty rule); names nonblank, binding ids/tokens unique.
-  TableContext borrows current Measurement inventory plus existing MeasurementContext; rejects duplicate
-  metadata ids and cross-kind target identity collisions before lookup. Token uniqueness is table-scoped,
-  not imposed over unrelated tables' canonical inventory. Table id cannot reuse a supplied record id.
-  Current lookup first selects saved binding by exact token or id, then resolves its measurement id;
-  removed ids never select peers by token. Kind/token/declaration reassignment returns typed expected/
-  actual evidence; same-id canonical declaration state/source changes remain visible. Display labels,
-  entered units and procedure/landmark metadata are current canonical content, with all target checks
-  retained. Target query validates selected binding/current metadata; validate_current checks all entries.
-  Explicit validated table replacement may rebind and leaves original unchanged. Immutable fields/private
-  representation; errors implement Display/Error with structural source. No global Design revision,
-  source/evidence truth, formula/profile evaluation, physical repeatability or release proof claimed.
-  Own runtime metadata/book/API vocabulary, independent real guard mutations, field-by-field .4a
-  structural signoff, focused checks and milestone checks. Previously closed metadata signoff records
-  relocate unchanged to the measurements sibling; normal live rollovers if health requires them.
-  Verification: 16 contracts + privacy, eight real red guard assertions, restored 342 strict tests;
-  three-crate WASM/book/glossary/formula green. Milestone full probes and staged gate recorded
-  below. Canonical field review closes .4a structurally; .4b per-POM Ease follows.
+  Goal: named tables/current bindings and .4a structural signoff.
+  Verification: [complete preserved contract and checklist](G1-SLICE-measurements.md#named-table-contract-and-evidence--preserved-from-f19982d).
   Commit: `STITCHCAD-G1-0028`
 
 - ID: `G1-SLICE.4b`
-  Status: `pending`
+  Status: `in_progress`
+  Children: .4b.1 (individual intent), .4b.2 (set/membership), .4b.3 (structural review).
   Goal: first-class body-to-garment per-POM Ease, signed Length declaration and ordered close/semi/loose
   fit intent; explicit negative-ease authorization, canonical source/state/provenance and current links.
   Acceptance: lookup per POM, kind correctness, declared compression and no default unknown; only typed
   intent here, actual garment fit/physical construction remains G2/G3. Split safely before code if needed.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4b.1`
+  Status: `done`
+  Goal: immutable individual Ease mappings over saved body/POM bindings and one canonical signed
+  LengthDeclaration; FitIntent ordered Close < Semi < Loose, explicit compression provenance.
+  Pre-code protocol: retain measurement id/token/kind/scalar expectations, resolve current metadata
+  by id, require Body then Garment and all current landmark/procedure targets. Reject mapping-id
+  collisions and amount-id aliasing either measurement scalar. Reuse the borrowed unambiguous
+  inventory; matching tokens across distinct measurement namespaces remain legal here.
+  The canonical amount owns numeric state/source; mapping provenance owns fit/correspondence intent.
+  Compression is Forbidden or Declared with a provenance id, never inferred from fit class. Accept
+  unknown/derived drafts without numeric fallback; enforce permission on every present/current or
+  externally evaluated signed amount. No body-plus-ease computation, fitted thresholds, source truth,
+  v1-envelope expansion or physical/release certificate. Explicit replacements preserve old mappings.
+  Acceptance: current reassignment/removal/invalid metadata refuse; negative known/assumed/preference
+  without declaration refuses; declared negatives/zero/positives preserved; unresolved states remain
+  queryable and numeric queries refuse. Typed errors retain mapping/side/target and underlying cause.
+  Verification: 13 contracts + privacy, seven real guard reds, strict 356 tests/WASM/book; current
+  binding/source/uncertainty and compression permission verified locally.
+  Commit: `STITCHCAD-G1-0029`
+
+- ID: `G1-SLICE.4b.2`
+  Status: `pending`
+  Goal: ordered immutable Ease set with unique mapping identity/token/POM and per-POM lookup;
+  explicit table-membership/current binding contract and current inventory validation.
+  Acceptance: unique per-POM mappings, shared body sources legal, current ambiguity/missing members
+  refused, lookup order independent, no default mapping or numeric fallback.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4b.3`
+  Status: `pending`
+  Goal: re-derive ontology .2.2 field coverage, reference/currentness and compression boundaries;
+  review book and milestone checks before closing .4b structurally.
   Verification: `pending`
   Commit: `pending`
 
@@ -612,7 +626,8 @@ metadata signoff unchanged; the named table slice follows.
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
 | done | `G1-SLICE.4a.3` | `done` | Named table/unique current bindings complete .4a structurally |
-| next | `G1-SLICE.4b` | `pending` | First-class per-POM Ease with explicit compression and fit intent |
+| done | `G1-SLICE.4b.1` | `done` | Individual Ease bindings, signed amount and explicit compression |
+| next | `G1-SLICE.4b.2` | `pending` | Unique per-POM Ease sets with explicit table membership |
 
 ## Routing Evidence — D67, lesson decision freshness
 
@@ -693,37 +708,32 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
-### `G1-SLICE.4a.3` — named tables with stable current bindings
+### `G1-SLICE.4b.1` — individual canonical Ease intent
 
-- [x] **REPRODUCE / ISSUE** — `rg 'MeasurementTable' crates/sc-measure/src` before implementation
-  → only deferred documentation, no executable table. Ontology .2.1 requires a named set and stable
-  scalars; standalone metadata alone could not bind a unique table namespace or reject reassignment.
-- [x] **ROOT CAUSE (WHY + WHERE)** — code-path review and `cargo test -p sc-measure --test
-  measurement_contract` → `16 passed`, rc=0: canonical targets/state already exist, but named-table
-  binding ownership was missing. Recipe has one flat namespace; table uniqueness must be scoped to
-  its authored entries, resolving current metadata by id rather than selecting a same-token peer.
-- [x] **FIX** — immutable named table and ordered id/token/kind/declaration bindings; borrowed current
-  context rejects duplicate/cross-kind identities. Queries resolve saved id and compare expected
-  token/domain/scalar identity, then validate all selected metadata targets. No scalar/source/state
-  cache. Full validation checks every entry; explicit validated rebinding preserves prior objects.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test table_contract` → `16 passed`,
-  rc=0, plus private-field doc. Removal with surviving peer, metadata/scalar reassignment, unknown/
-  derived, current source/document/unit edits, duplicates/collisions, shared declarations and reorder
-  covered. `bash docs/tasks/artifacts/measurement_table/run_table_mutations.sh` → eight real guard
-  reds, each rc=101/actual regression assertion; original source restored byte-identically.
-- [x] **NO REGRESSION** — restored `make check` → 342 tests with strict fmt/clippy, rc=0; three-crate
-  `make wasm` and warning-free `make book`, rc=0. Glossary → 310 terms/9 parts/0 failures; formula
-  → 17 bindings/4 assertions/13 refusals/0 mismatches, rc=0. Full milestone `make probes` →
-  `23 suite(s) green`, rc=0; staged `make gate` → `=== all doctrines green ===`, rc=0.
-  Final isolated-interpreter mutation run repeats eight assertion reds, restores source exactly;
-  restored table contracts again `16 passed`, rc=0.
-- [x] **LOCKSTEP** — table/code/API vocabulary, package/README/book and fresh decision questions agree;
-  metadata CI review/checklist relocates unchanged to measurement sibling. Changelog-part25 and
-  devnotes-part27 seal unchanged predecessor content. .4a closes structurally; .4 remains active
-  for Ease/SizeSet/signoff. G1 stays 5/18, four structural families, nine open/58 sealed defects.
-  Current-revision source/evidence truth, physical repeatability and release certification deferred.
+- [x] **REPRODUCE / ISSUE** — `rg 'Ease' crates/sc-measure/src` at f19982d → deferred documentation
+  only; ontology .2.2 requires a body-to-POM mapping, signed amount, fit, state and provenance.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-measure --test table_contract` predecessor
+  → 16 passed, rc=0: current canonical measurements exist, but cannot alone express correspondence,
+  fit or permission. New ease module borrows existing context; no numeric/state cache is needed.
+- [x] **FIX** — immutable mapping, saved four-field side bindings, distinct canonical amount,
+  ordered FitIntent and explicit compression/provenance. Current queries refuse reassignment, missing
+  metadata and undeclared negative values; unknown/derived remain inspectable without numeric values.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test ease_contract` → 13 passed, rc=0;
+  private-field doc passes. `bash docs/tasks/artifacts/ease/run_ease_mutations.sh` → seven real guard
+  assertion reds, rc=101 each; source restored byte-identically. Permission tested in all three numeric
+  states and externally supplied derived results; current edits/reorder/namespace/metadata covered.
+- [x] **NO REGRESSION** — `make check` → 356 tests, strict fmt/clippy, rc=0; three-crate `make wasm`
+  and warning-free `make book`, rc=0. Glossary → 310 terms/9 parts/158 tokens/0 failures, rc=0.
+  Final mutation run restores exactly; tree census → 10 lanes/13 trees/6 siblings/0 gaps, rc=0;
+  ledger probes → 9 pass/0 fail, rc=0; staged `make gate` → all doctrines green, rc=0.
+- [x] **LOCKSTEP** — book fields/examples/API, canonical decision, live pointers and logs agree;
+  completed table contract/checklist relocates unchanged against f19982d. Routine rolling records
+  retained unchanged. Individual intent only; set/table membership .4b.2 and family review .4b.3 remain.
+  G1 stays 5/18, four completed ontology families; physical fit/source/evaluation/release proof owned.
 
 ## Verification Log
+
+| `2026-10-02` | `.4b.1` | strict Rust/WASM/book; seven guard mutations; restored Ease/table tests; glossary/tree/ledger/staged gate | 356 tests, 13 Ease contracts/privacy, 7 real reds; all focused checks green, rc=0 |
 
 [Completed verification through Hem](G1-SLICE-evidence.md#historical-verification-log) is preserved
 unchanged in the evidence sibling; fresh current-slice checks remain here.
@@ -804,3 +814,10 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
   structurally; G1 stays 5/18. Ease .4b follows; full .4 needs Ease/SizeSet/.4d signoff.
 
 | `.4a.3` | `STITCHCAD-G1-0028 (leaf G1-SLICE.4a.3): named measurement tables retain stable current bindings` | 16 contracts + privacy; eight real guard reds; 342 tests; WASM/book; full 23 suites; .4a structurally closed |
+
+- `2026-10-02`: .4b.1 implements individual canonical Ease intent; .4b.2 set/membership follows.
+  Strict lint found large reassignment error payloads; boxed binding snapshots retain exact structured
+  evidence. Mutation diagnostic rejected an unwrap panic until an explicit error assertion preceded it.
+  All seven final real guard mutations fail assertions, restore exact source; 356 strict tests pass.
+
+| `.4b.1` | `STITCHCAD-G1-0029 (leaf G1-SLICE.4b.1): individual Ease mappings retain current signed intent` | 13 contracts + privacy, seven guard reds, 356 tests/WASM/book; set/membership next |

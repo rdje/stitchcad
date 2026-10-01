@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.4a.1`; ontology §2.1/§2.2/§5, formula-language §2/§3 and roadmap §2.3.
 
-answers: "where do measurement state and source live?" · "can unknown inputs default to zero?" · "does known prove evidence?" · "how are core dependency cycles avoided?" · "how do shared machine tokens preserve spelling?" · "where is procedure documentation stored?" · "can body and garment references interchange?" · "how does a measurement table refuse token or scalar reassignment?"
+answers: "where do measurement state and source live?" · "can unknown inputs default to zero?" · "does known prove evidence?" · "how are core dependency cycles avoided?" · "how do shared machine tokens preserve spelling?" · "where is procedure documentation stored?" · "can body and garment references interchange?" · "how does a measurement table refuse token or scalar reassignment?" · "does close fit authorize compression?"
 
 ## The fact / decision
 
@@ -95,3 +95,14 @@ ambiguities. Empty draft tables are legal; the normative contract declares no mi
 Context rejects duplicate/cross-kind canonical identities before lookup. Table validation checks all
 current metadata and its required targets; a targeted query proves just the selected entry. It does
 not certify a caller's Design revision, evidence truth, physical repeatability or export permission.
+
+## Individual Ease — G1-SLICE.4b.1
+
+The immutable mapping retains expected body/POM id/token/kind/scalar bindings and a distinct canonical
+signed amount declaration. Amount state/source/provenance is borrowed, never copied. Mapping provenance
+owns correspondence/fit intent; explicit Declared compression carries its own provenance identity.
+Close < Semi < Loose is an ordered vocabulary, not numerical thresholds or compression authorization.
+Current same-id amount edits re-run negative permission; unknown/derived drafts retain no numeric
+fallback. Evaluators must check signed result permission explicitly, then separately prove current
+inputs and provenance. Individual mappings do not yet certify selected table membership (.4b.2).
+Structural compression declarations do not expand the v1 garment envelope; G3 owns its refusal.

@@ -3,8 +3,8 @@
 //! G1-SLICE.4a.2b implements immutable metadata and typed current-reference checks. Value, state
 //! and source are borrowed from canonical sc-core length declarations. Caller-authored landmarks
 //! and documented procedures do not certify source truth, physical repeatability or release approval.
-//! MeasurementTable pins stable bindings over borrowed current records. Ease and SizeSet follow
-//! in their separate owned G1 slices.
+//! MeasurementTable and individual Ease mappings pin stable bindings over borrowed current records.
+//! Ease sets and SizeSet follow in their separate owned G1 slices.
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
@@ -19,3 +19,6 @@ pub use table::{
     MeasurementBinding, MeasurementTable, MeasurementTableContext, MeasurementTableDefinition,
     MeasurementTableError,
 };
+
+mod ease;
+pub use ease::{CompressionPermission, Ease, EaseDefinition, EaseError, EaseSide, FitIntent};

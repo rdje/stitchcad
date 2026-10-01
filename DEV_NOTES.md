@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — Ease intent never supplies an unresolved numeric fallback
+
+- Individual mappings pin body/POM metadata bindings and borrow a distinct signed amount declaration.
+  Fit classes are ordered but carry no numerical thresholds. Mapping and compression provenance are
+  explicit references, separate from canonical amount state/source. Current reassignments refuse.
+- Unknown/derived amounts stay inspectable without authored results; numeric queries retain the exact
+  observation/evaluation refusal. All present current negatives require compression declaration,
+  including same-id edits and externally evaluated results. The v1 envelope remains separately scoped.
+- Thirteen contracts/privacy and seven real guard removals verify borrowing/currentness/permission.
+  Strict lint required boxing large expected/actual binding snapshots. The mutation tool refused an
+  unwrap panic as proof until a direct error assertion was added; final seven arms fail assertions,
+  restore exact source, and strict checks/WASM/book pass. Ease sets/table membership follow separately.
+- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s Ease section.
+
 ## _(2026-10-02)_ — measurement tables pin bindings and borrow current scalar records
 
 - A table owns stable id/name and authored order of measurement/token/kind/declaration bindings.
@@ -109,21 +123,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   artifacts; access alone is no measurement of garment expertise. This restates the canonical roadmap.
 - promotion: declined (local fixture repair and re-verification of already canonical contracts).
 
-## _(2026-10-01)_ — Pocket composition names physical copies and guards each source
-
-- Component references pair a physical copy with its expected source Piece, retaining multiple copies
-  of one pattern without duplicated geometry. Canonical component metadata is borrowed by copy id;
-  current removal/reassignment cannot silently select another target. Same-id Piece replacement is
-  inspected as current content. Served-copy membership alone proves no physical shape or recipe rule.
-- Position follows shared birth/current anchor contracts; orientation requires complete owned ranges,
-  not just live ends. Component contour repairs remain exposed through Piece range evidence and must
-  be consumed by Design before execution/release. Opening Declaration/Profile preserves origin but
-  reports DeferredToG3, separately from geometry/profile deferrals; no opening catalogue is invented.
-- Eleven contracts and privacy pass; three independent guard mutations fail red. Strict Rust rejects
-  unchecked fixture indexing, corrected before final checks. Restored WASM/book/censuses/gates pass.
-  Director's SOTA/signoff/production-grade ruling remains the review bar, not an API-presence claim.
-- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s Pocket boundary.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -166,3 +165,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part26.md`](docs/history/stitchcad-devnotes-part26.md) | closure and notion-placement lessons | 27 lines, 2385 bytes, `sha256:b4b58e1b…` |
 
 | [`devnotes-part27.md`](docs/history/stitchcad-devnotes-part27.md) | canonical buttonhole derivation lesson | 13 lines, 1158 bytes, `sha256:319f11b3…` |
+
+| [`stitchcad-devnotes-part28.md`](docs/history/stitchcad-devnotes-part28.md) | Pocket composition lesson | 14 lines, 1301 bytes, `sha256:764116ee…` |

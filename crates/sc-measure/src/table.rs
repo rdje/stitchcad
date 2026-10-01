@@ -83,7 +83,10 @@ impl<'a> MeasurementTableContext<'a> {
     pub const fn records(&self) -> &'a MeasurementContext<'a> {
         self.records
     }
-    fn contains(&self, id: EntityId) -> bool {
+    pub(crate) fn current_measurement(&self, id: EntityId) -> Option<&'a Measurement> {
+        self.measurements.get(&id).copied()
+    }
+    pub(crate) fn contains(&self, id: EntityId) -> bool {
         self.measurements.contains_key(&id) || self.records.contains(id)
     }
 }

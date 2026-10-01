@@ -16,7 +16,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
 | Defect census | In Progress | 9 open, 58 sealed. Open: D34 + D38 (`PLANNING.5`), D40 + D46 + D51 (`SPINE.19`), D49 (`SPINE.5`), D53 + D54 (`SPINE.4`), D67 (`SPINE.22`). Counts derive from live census and reader-materialized logical archive; D65/D68 closed in .19.2 |
 | G0 — product & semantic contract | Mostly Done | Every clause met and derived except evaluation-seat procurement, accepted open by ruling; closure **unapproved** (governance §6.1). `run_g0_exit_review.sh` → `18 met / 1 not met` |
-| G1 — executable architecture slice | In Progress | 5 of 18 top-level leaves done; all 4 structural object families complete. Geometry/recipe/profile/release proofs remain owned; next `.4b` per-POM Ease |
+| G1 — executable architecture slice | In Progress | 5 of 18 top-level leaves done; all 4 structural object families complete. Geometry/recipe/profile/release proofs remain owned; next `.4b.2` Ease sets; individual intent implemented |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 leaves; CSP + oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |
@@ -25,4 +25,4 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | G7 — scoped production declaration | Not Started | 7 leaves: independent review, envelope statement, semver policy, upgrade/rollback, channels, governance |
 | V1 — assembly visualization | Not Started | parallel, never blocks a G-gate; 7 leaves: mesh, ease-aware stitching, net-line binding, arrangement, viewport, blinded validation |
 | V2 — physically validated simulation | Not Started | parallel, uncapped; 6 leaves: `sc-sim` out of the default build, XPBD research, labelled approximation, calibration + observables, evidence-gated exit |
-| Product code (`crates/`) | In Progress | `sc-units` has 26 regular + 1 doc test; `sc-core` has structural ontology/canonical inputs; `sc-measure` has immutable body/POM metadata and named current tables. Native/WASM green; metadata CI observed; truth/physical/release proof deferred |
+| Product code (`crates/`) | In Progress | `sc-units` has 26 regular + 1 doc test; `sc-core` has structural ontology/canonical inputs; `sc-measure` has immutable body/POM metadata, named current tables and individual Ease intent. Native/WASM green; metadata CI observed; truth/physical/release proof deferred |

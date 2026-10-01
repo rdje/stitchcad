@@ -184,3 +184,66 @@ Historical verification/commit tables remain in the parent and [evidence sibling
 - [x] **LOCKSTEP** — .4a.2 closes; .4a.3 table remains next and G1 stays 5/18. Book records scoped
   runtime proof; live/resume/index, task evidence and logs match. D65 retention and D67 promotion
   remain owned; no additional seal was needed for this review.
+
+## Named table contract and evidence — preserved from f19982d
+
+- ID: `G1-SLICE.4a.3`
+  Status: `done`
+  Goal: MeasurementTable stable identity/name and unique measurement id/token inventory with current
+  metadata queries; complete measurement-family signoff against ontology .2.1 and book contracts.
+  Acceptance: ambiguity/missing targets/current reassignment refused; immutable input; focused and
+  milestone gates prove all measurement content without certifying source truth or release readiness.
+  Pre-code contract: TableDefinition holds id/name and authored ordered MeasurementBinding entries.
+  Each binding pins measurement id, exact token, body/POM kind and canonical declaration id; captures
+  may derive from existing immutable metadata. No values/state/source/procedure prose copied into tables.
+  Empty draft tables legal (no normative nonempty rule); names nonblank, binding ids/tokens unique.
+  TableContext borrows current Measurement inventory plus existing MeasurementContext; rejects duplicate
+  metadata ids and cross-kind target identity collisions before lookup. Token uniqueness is table-scoped,
+  not imposed over unrelated tables' canonical inventory. Table id cannot reuse a supplied record id.
+  Current lookup first selects saved binding by exact token or id, then resolves its measurement id;
+  removed ids never select peers by token. Kind/token/declaration reassignment returns typed expected/
+  actual evidence; same-id canonical declaration state/source changes remain visible. Display labels,
+  entered units and procedure/landmark metadata are current canonical content, with all target checks
+  retained. Target query validates selected binding/current metadata; validate_current checks all entries.
+  Explicit validated table replacement may rebind and leaves original unchanged. Immutable fields/private
+  representation; errors implement Display/Error with structural source. No global Design revision,
+  source/evidence truth, formula/profile evaluation, physical repeatability or release proof claimed.
+  Own runtime metadata/book/API vocabulary, independent real guard mutations, field-by-field .4a
+  structural signoff, focused checks and milestone checks. Previously closed metadata signoff records
+  relocate unchanged to the measurements sibling; normal live rollovers if health requires them.
+  Verification: 16 contracts + privacy, eight real red guard assertions, restored 342 strict tests;
+  three-crate WASM/book/glossary/formula green. Milestone full probes and staged gate recorded
+  below. Canonical field review closes .4a structurally; .4b per-POM Ease follows.
+  Commit: `STITCHCAD-G1-0028`
+
+### `G1-SLICE.4a.3` — named tables with stable current bindings
+
+- [x] **REPRODUCE / ISSUE** — `rg 'MeasurementTable' crates/sc-measure/src` before implementation
+  → only deferred documentation, no executable table. Ontology .2.1 requires a named set and stable
+  scalars; standalone metadata alone could not bind a unique table namespace or reject reassignment.
+- [x] **ROOT CAUSE (WHY + WHERE)** — code-path review and `cargo test -p sc-measure --test
+  measurement_contract` → `16 passed`, rc=0: canonical targets/state already exist, but named-table
+  binding ownership was missing. Recipe has one flat namespace; table uniqueness must be scoped to
+  its authored entries, resolving current metadata by id rather than selecting a same-token peer.
+- [x] **FIX** — immutable named table and ordered id/token/kind/declaration bindings; borrowed current
+  context rejects duplicate/cross-kind identities. Queries resolve saved id and compare expected
+  token/domain/scalar identity, then validate all selected metadata targets. No scalar/source/state
+  cache. Full validation checks every entry; explicit validated rebinding preserves prior objects.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test table_contract` → `16 passed`,
+  rc=0, plus private-field doc. Removal with surviving peer, metadata/scalar reassignment, unknown/
+  derived, current source/document/unit edits, duplicates/collisions, shared declarations and reorder
+  covered. `bash docs/tasks/artifacts/measurement_table/run_table_mutations.sh` → eight real guard
+  reds, each rc=101/actual regression assertion; original source restored byte-identically.
+- [x] **NO REGRESSION** — restored `make check` → 342 tests with strict fmt/clippy, rc=0; three-crate
+  `make wasm` and warning-free `make book`, rc=0. Glossary → 310 terms/9 parts/0 failures; formula
+  → 17 bindings/4 assertions/13 refusals/0 mismatches, rc=0. Full milestone `make probes` →
+  `23 suite(s) green`, rc=0; staged `make gate` → `=== all doctrines green ===`, rc=0.
+  Final isolated-interpreter mutation run repeats eight assertion reds, restores source exactly;
+  restored table contracts again `16 passed`, rc=0.
+- [x] **LOCKSTEP** — table/code/API vocabulary, package/README/book and fresh decision questions agree;
+  metadata CI review/checklist relocates unchanged to measurement sibling. Changelog-part25 and
+  devnotes-part27 seal unchanged predecessor content. .4a closes structurally; .4 remains active
+  for Ease/SizeSet/signoff. G1 stays 5/18, four structural families, nine open/58 sealed defects.
+  Current-revision source/evidence truth, physical repeatability and release certification deferred.
+
+Return to the [active frontier](G1-SLICE.md#current-frontier).

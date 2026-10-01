@@ -50,6 +50,23 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+| [`stitchcad-changelog-part26.md`](docs/history/stitchcad-changelog-part26.md) | STITCHCAD-G1-0009 | 16 lines, 1371 bytes, `sha256:ff2d0b1c…` |
+
+## STITCHCAD-G1-0029 - individual canonical Ease intent (leaf `G1-SLICE.4b.1`)
+
+sc-measure implements immutable body-to-POM mappings with saved current bindings, a distinct signed
+LengthDeclaration, ordered fit intent and explicit compression provenance. Current queries retain
+canonical state/source, reject reassigned or missing metadata, and recheck authorization for negative
+amounts. Unknown/derived drafts remain inspectable but numeric queries refuse; supplied evaluated
+results have an explicit permission check. No quantitative fit thresholds or envelope expansion.
+
+Thirteen contracts plus privacy pass; seven production guard mutations produce real assertion reds
+and restore exact source. Strict Rust passes 356 tests; three-crate WASM/book/glossary and focused
+tracking/ledger/staged gates pass. Reassignment error snapshots are boxed to satisfy strict lint.
+Book examples are assumed inputs, not physical-fit proof. Table evidence moves unchanged to its
+sibling; oldest live records seal unchanged as changelog-part26/devnotes-part28. .4b.2 sets and table
+membership follow, then .4b.3 review; G1 remains 5/18, physical/evaluation/release proofs deferred.
+
 ## STITCHCAD-G1-0028 - named current measurement tables (leaf `G1-SLICE.4a.3`)
 
 sc-measure adds immutable MeasurementTable identity/name and ordered unique measurement-id/token
@@ -355,20 +372,3 @@ historical doc-only ROOT CAUSE bullets: `.1`/`.2` retain their prose plus re-der
 and all four moved checklists are audited separately.
 The copy-identity decision records replacement/orientation rules and the required token census.
 Next `.3c.2b.2` lands sewing spans and settles D35 explicitly.
-
-## STITCHCAD-G1-0009 - semantic notch anchors with symbolic profile bindings (leaf `G1-SLICE.3c.3a`)
-
-`Notch` is immutable semantic content: a born-live, uniquely resolved point on a surviving interval
-of its named Piece, plus logical target-profile declarations for style, sample/production depth and
-width, and encoding. Construction refuses absent/foreign anchors, including a merged edge's foreign
-remainder. Edits expose split choices, exact recomputation and repair tasks without rewriting anchors.
-Bindings always report `DeferredToG4`; no physical values, profile pin or defaults are supplied.
-
-Seven contract tests and the privacy doctest pass. Disabling ownership refusal makes the partial-merge
-regression fail. Strict `make check`, wasm, warning-free book, feature/release censuses, ledger probes
-and doctrine gate pass. The book documents examples and the unimplemented physical-export boundary.
-D58 closes: G4's contradictory default-plus-sidecar acceptance now matches release §8's no-default
-matrix; G4 still owns enforcement. The symbolic-binding decision is recorded and promoted.
-The oldest changelog and dev-note entries roll into sealed segments in the same commit.
-The director answered D57 before commit: each physical cut copy has a stable identity so seams can
-differ. Next `.3c.2b` implements that contract; D57 closes after verified delivery.
