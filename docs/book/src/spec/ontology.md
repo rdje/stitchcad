@@ -377,3 +377,31 @@ directions. The future command bus must consider range repairs **as well as** po
 existing point-only registration verdict keeps its narrower meaning until design-level registration
 and validation land. The interval contract and its limits are recorded in
 `decision_range-resolution-preserves-entire-interval.md`.
+
+**Semantic notches (`G1-SLICE.3c.3a`).** `Notch::new(definition, &piece, &ledger)` stores an
+immutable semantic matching mark with a piece identity and an exact `EdgeAnchor { edge, param }`.
+The anchor must be live and uniquely resolved at construction, and its resolved position must lie
+in a surviving interval of that piece's boundary, hole or construction edge. A foreign live edge
+is refused separately from a missing edge. After a merge, the piece may own only part of the resulting
+edge; an anchor in the foreign remainder is refused, including after reversal.
+
+For example, a notch held at `t = 2/5` survives a split at `2/5` as a `SplitPoint` answer: first
+fragment at `1`, second at `0`. The consumer states `SplitSide`; the notch never silently picks one.
+A reversal reports `1 − t` and accumulated direction. Deletion returns the original held anchor and
+orphaning operation in a repair task. `definition()` remains unchanged throughout these edits.
+New marks cannot be born on a retired source; use an owned live fragment when authoring a new mark.
+
+The definition's `NotchProfileBindings` contains logical `ProfileParameterRef` identities for style,
+sample depth/width, production depth/width and encoding. These are declarations to resolve against
+the eventual target Factory Profile, not copied values or a selected profile version. Sample and
+production are separate fields; they may deliberately name the same declarations. `NotchStyle` and
+`NotchEncoding` describe possible profile values from §4.5; this slice implements no notch geometry
+or encoder and does not widen the release feature matrix's staged style set.
+
+Every notch reports `ProfileBindingValidation::DeferredToG4`. Even an unknown declaration identity
+can be retained as symbolic content; this is no claim that a profile contains or resolves it. G4 must
+check each binding's declaration, expected type, uncertainty/evidence state and artifact policy.
+G1 supplies no fallback dimensions, style or encoding. The normative release §8 matrix continues to
+badge an unknown notch geometry in previews, carry a sidecar in drafts and block production; none of
+those outcomes permits inventing geometry. The boundary is recorded in
+`decision_profile-bindings-stay-symbolic-at-g1.md`.

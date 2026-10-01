@@ -14,15 +14,14 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
 - `crates/sc-core/` — **ontology in progress**: identity, topology-journal resolution and repairs, immutable
-  structural `Piece` with deferred geometry. Sewing spans, marks, recipe and bus follow. Entry
+  structural pieces, semantic notches and symbolic profile bindings. Other objects, recipe and bus follow. Entry
   `crates/sc-core/src/ontology/`; tests `crates/sc-core/tests/`. Owner `G0-CONTRACT.3` / `G1-SLICE.3`.
 - `docs/book/src/spec/` — the normative specification the director reviews: one chapter per contract
   family (units, ontology, formula language, envelope, interchange, release, command layer, and the
   rest). Owner the `G0-CONTRACT` leaves; chapter index `docs/book/src/SUMMARY.md`.
-- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, in three parts** (contract,
-  `formula-language/grammar.md`, `formula-language/examples.md`). Its numbers are computed, not typed:
-  `docs/tasks/artifacts/formula_language/run_formula_language_census.sh` reads the chapter's own tables.
-  Owner `G0-CONTRACT.9`, implemented by `G1-SLICE.5`.
+- `docs/book/src/spec/formula-language.md` — expression contract, with linked grammar and examples.
+  Oracle `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
+  `G0-CONTRACT.9` / `G1-SLICE.5`.
 - `docs/book/src/spec/interchange-dialects.md` — six-axis target registry, layers, entities and grading.
   Checked by `docs/tasks/artifacts/interchange/run_interchange_census.sh`. Owner `G0-CONTRACT.10` / `G2-2D`.
 - `docs/book/src/spec/feature-matrix.md` — **the boundary of the release claim**: 105 dispositioned rows, 29
@@ -81,6 +80,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_ontology-invariants-structural-g1-geometric-g2.md`](docs/decisions/decision_ontology-invariants-structural-g1-geometric-g2.md)
 - [`decision_piece-pair-members-have-explicit-handedness.md`](docs/decisions/decision_piece-pair-members-have-explicit-handedness.md)
 - [`decision_product-work-takes-the-frontier.md`](docs/decisions/decision_product-work-takes-the-frontier.md)
+- [`decision_profile-bindings-stay-symbolic-at-g1.md`](docs/decisions/decision_profile-bindings-stay-symbolic-at-g1.md)
 - [`decision_property-tests-dependency-free-recorded-seed.md`](docs/decisions/decision_property-tests-dependency-free-recorded-seed.md)
 - [`decision_range-resolution-preserves-entire-interval.md`](docs/decisions/decision_range-resolution-preserves-entire-interval.md)
 - [`decision_reference-fixture-waistband-straight-folded.md`](docs/decisions/decision_reference-fixture-waistband-straight-folded.md)

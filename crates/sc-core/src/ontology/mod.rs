@@ -4,7 +4,7 @@
 //! Normative source: `docs/book/src/spec/ontology.md` (gate G0, specified by `G0-CONTRACT.3`). Implemented
 //! across three ordered slices: **`.3a`** the identity layer, **`.3b`** the persistent-identity contract
 //! that resolves references under split/merge/reverse/delete (both landed), and **`.3c`** the
-//! geometry-bearing object types (`Piece` landed at `.3c.1`; sewing spans, marks and constructions follow).
+//! geometry-bearing object types (`Piece` and `Notch` landed; sewing spans, other marks and constructions follow).
 //!
 //! The identity layer is the foundation the other two consume: a reference is meaningless without a stable
 //! id to point at, and the contract is meaningless without a reference to resolve. It is dependency-free and
@@ -12,6 +12,7 @@
 //!
 //! | Submodule | Contents | Leaf |
 //! | --- | --- | --- |
+//! | [`notch`] | immutable semantic anchors and symbolic profile bindings, deferred physical validation | `.3c.3a` |
 //! | [`piece`] | immutable structurally validated `Piece`, complete label view, deferred geometry | `.3c.1` |
 //! | [`id`] | `EntityId` (a ULID) and the injected `IdGenerator` | `.3a` |
 //! | [`range`] | whole-interval coverage and visible range repairs, distinct from endpoint queries | `.3c.2a` |
@@ -20,6 +21,7 @@
 //! | [`topology`] | the persistent-identity contract: the edit journal, resolution, `RepairTask`s | `.3b` |
 
 pub mod id;
+pub mod notch;
 pub mod piece;
 pub mod range;
 pub mod rational;
@@ -43,4 +45,9 @@ pub use piece::{
 pub use range::{
     EdgeRange, RangeError, RangeIssue, RangePortion, RangeRepairTask, RangeResolution,
     ResolvedRange,
+};
+
+pub use notch::{
+    EdgeAnchor, Notch, NotchDefinition, NotchDimensionBindings, NotchEncoding, NotchError,
+    NotchProfileBindings, NotchStyle, ProfileBindingValidation, ProfileParameterRef,
 };

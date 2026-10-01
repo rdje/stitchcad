@@ -88,9 +88,9 @@ chapter is inside that family or explicitly outside it.
 | seam allowance per edge, variable widths | supported | ontology §4.4; the fixture carries 1.0 / 1.5 / 3.0 cm in one garment | G2 | — |
 | the five corner treatments | supported | ontology §4.4 names miter, slant, envelope, trim and step as the vocabulary | G2 | — |
 | allowance included in contour, or generated downstream | supported | ontology §4.4 resolves it per Factory Profile, never as a project boolean | G4 policy, G6 receivers | — |
-| notch: single, double, drill | supported | roadmap §15 item 12 makes these three the v1 typed set; ontology §4.5 stores the semantics | G3 | — |
+| notch: single, double, drill | supported | roadmap §15 item 12 makes these three the v1 typed set; ontology §4.5, ontology §10: symbolic semantic anchors landed; no geometry defaults | G3 | — |
 | notch: V, I, T, U, castle | deferred | roadmap §15 item 12 stages them to G4 export | G4 | `env_notch_type` |
-| notch encoding: coded point or drawn geometry | supported | ontology §4.5 makes encoding a profile parameter; both forms are export targets | G4 | — |
+| notch encoding: coded point or drawn geometry | supported | ontology §4.5, ontology §10: encoding binding is symbolic; both forms remain export targets | G4 | — |
 | grainline, directed | supported | ontology §4.6; the fixture's grain is parallel to CB/CF and therefore checkable | G2 | — |
 | bias and off-grain placement | supported | ontology §4.6 supports an angle; the fixture defers the case to the G3 bodice | G3 | — |
 | dual grain reference for a stripe or plaid | supported | ontology §4.6 requires it, because a stripe constrains placement independently | G3 | — |

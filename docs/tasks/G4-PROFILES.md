@@ -123,9 +123,12 @@ a known-good real-plotter fixture.
   Goal: the artifact policy matrix enforced (§8.2, §8.3) — states × artifact effects per requested
   artifact, with dependency closure computed per request so an irrelevant unknown cannot block an
   unrelated export, and no conservative default ever substituting for observation.
-  Acceptance: the §8.2 example rows are tests (cosmetic label → badge, notch geometry → default +
-  sidecar, units → blocked everywhere); a blocked export names the unknown, its field and its resolve
-  policy; the closure computation is proved minimal by a case where an unrelated unknown does not block.
+  Acceptance: the normative release §8 matrix is tested per artifact: cosmetic label → badge in
+  previews/drafts, block in production; notch geometry → badge in preview, sidecar in draft, block
+  in production; units → blocked everywhere. No default replaces an unknown. A blocked export names
+  the unknown, its field and its resolve policy; symbolic G1 profile bindings must resolve declarations and expected field kinds before
+  physical output. The closure computation is proved minimal by a case where an unrelated unknown
+  does not block.
   Verification: `pending`
   Commit: `pending`
 
@@ -234,6 +237,27 @@ Filled per leaf, in a `### <leaf-id>` subsection added by the same commit as the
 mechanically required to be fresh in that commit by leaf `SPINE.8`; a tree file carries no unticked
 placeholder boxes (defect D15, measured by the `SPINE.7` probe).
 
+### `G1-SLICE.3c.3a` — dependency alignment for `.7` (D58 only)
+
+This checklist verifies the dependent test contract corrected by the G1 notch leaf. All G4
+implementation leaves remain pending; this is no claim that profile policy executes yet.
+
+- [x] **REPRODUCE / ISSUE** — `.7` asked for a notch default while its Goal and normative release
+  §8 forbid defaults. D58 preserves the original contradiction and its impact in defects-part4.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `.7` retained obsolete example wording after G0's tuned
+  matrix. `bash docs/tasks/artifacts/release_contract/run_release_contract_census.sh` →
+  `8 matrix rows / 0 failure(s)`, `rc=0`: notch geometry is badge/sidecar/block, with no default.
+- [x] **FIX** — align `.7` Acceptance with the canonical per-artifact matrix; require symbolic G1
+  bindings to resolve declarations and expected field kinds before physical output.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/release_contract/run_release_contract_census.sh`
+  → `0 failure(s)`, `rc=0`; `cargo test -p sc-core --test notch_contract` → `7 passed`, `rc=0`:
+  G1 retains declarations and always exposes `DeferredToG4`, without supplying physical values.
+- [x] **NO REGRESSION** — `make check` → strict clippy/all Rust tests green; `make wasm` → green;
+  `make book` → warning-free; release/feature censuses → `0 failure(s)`, all `rc=0`. The normative
+  policy itself is unchanged and G4's actual policy enforcement stays pending.
+- [x] **LOCKSTEP** — `.7` Acceptance, G1 evidence/decision, ontology implementation examples,
+  closed D58 record and the live defect pointer; no G4 leaf status advances.
+
 ## Verification Log
 
 | Date | Leaf | Checks | Result |
@@ -250,3 +274,6 @@ placeholder boxes (defect D15, measured by the `SPINE.7` probe).
 ## Changelog
 
 - `2026-09-29`: Tree created by `PLANNING.2` with 14 leaves mapped to the G4 exit clauses.
+
+- `2026-10-01`: `G1-SLICE.3c.3a` corrects `.7`'s contradictory no-default acceptance (D58).
+  All G4 implementation leaves stay pending; the dependency checklist records this limited change.

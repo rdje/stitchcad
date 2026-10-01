@@ -5,11 +5,12 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.3c.3`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** take `.3c.3` — semantic notches, directed/dual grainline references and per-edge
-  allowance descriptors. They use stable references and profile-parameter identities, without invented
-  defaults. `.3c.2b` sewing spans await D57's physical-copy addressing decision (asked of the director);
-  return there when answered. Pieces, full-range resolution and cut-once L/R member labels are committed.
+- **Active tree:** `G1-SLICE`, frontier **`.3c.2b`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** `.3c.2b` — stable identities for every physical cut copy and sewing spans.
+  The director answered D57 (`2026-10-01`): physical copies have stable identities so their seams
+  can differ. Record the schema decision before code; D57 closes after verified implementation.
+  Semantic notches are committed with symbolic profile bindings; G4 physical validation is deferred.
+  Independent grainlines/allowances (`.3c.3b`/`.3c.3c`) remain pending.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

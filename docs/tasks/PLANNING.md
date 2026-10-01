@@ -154,7 +154,9 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 [`stitchcad-defects-part2.md`](../history/stitchcad-defects-part2.md)
 (D55; 19 lines, 1834 bytes, `sha256:e8c7c2f0…`) and
 [`stitchcad-defects-part3.md`](../history/stitchcad-defects-part3.md)
-(D56; 15 lines, 1425 bytes, `sha256:84eb4014…`), under D46's remedy. Every cited defect
+(D56; 15 lines, 1425 bytes, `sha256:84eb4014…`) and
+[`stitchcad-defects-part4.md`](../history/stitchcad-defects-part4.md)
+(D58; 16 lines, 1458 bytes, `sha256:4406d117…`), under D46's remedy. Every cited defect
 resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
 `grep -h '^- \*\*D[0-9]' docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by
@@ -414,7 +416,9 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Owner/schedule: **`G1-SLICE.3c.2b` before implementation**. The director was asked whether to give
     every physical copy a stable identity (recommended) or retain a pattern-level graph with expansion
     at assembly. This is a product-model decision, not an access request. Independent piece/mark work
-    proceeds while the answer is pending; no copy-address schema is inferred from elapsed time.
+    proceeded while the answer was pending; no copy-address schema was inferred from elapsed time.
+  - **Director ruling (`2026-10-01`):** give every physical cut copy a stable identity so its seams
+    can differ. `.3c.2b` implements and verifies that contract next; D57 stays open until delivered.
 
 ## Decisions
 

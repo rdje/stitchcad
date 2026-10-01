@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — semantic anchoring and target-profile resolution have separate obligations
+
+- A valid notch anchor does not supply factory-specific dimensions or encoding. Stable logical
+  parameter declarations retain all sample/production fields without copying values or uncertainty
+  flags. `DeferredToG4` exposes the missing binding/type/evidence check; G1 has no physical defaults.
+- Anchor ownership must use resolved ranges and positions. After merging an owned edge with a foreign
+  one, only its surviving portion belongs to the Piece; reversal changes both frames. Seven contract
+  tests cover that boundary, split choice, exact merge, deletion and metadata immutability. Disabling
+  the membership refusal makes the partial-merge regression red; strict checks and WASM remain green.
+- D58 was a contradictory future acceptance, not another policy: canonical release §8 explicitly
+  supplies sidecar draft output and forbids defaults. The dependent G4 leaf now matches that authority.
+- promotion: promoted by `decision_profile-bindings-stay-symbolic-at-g1.md`, recorded before code.
+
 ## _(2026-10-01)_ — separate L/R members differ from one even-total pair request
 
 - The canonical fixture's back pair is two Piece identities, each cut once. `.3c.1` enforced only
@@ -139,22 +152,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   watches) already owned by `PLANNING.5`; a new decision record would duplicate that ownership. The instance is
   fixed here, the class stays with its derivation.
 
-## _(2026-09-30)_ — the artifact that certifies everything else must itself be derived
-
-- A gate review written as prose is the one document whose acceptance rule it violates: `G0-CONTRACT.15`'s
-  own criterion is "no clause is marked met on prose alone", and a paragraph asserting nineteen verdicts is
-  nineteen prose claims wearing a table. So the review parses `ROADMAP.md` §11's exit bullet, requires every
-  fragment to be dispositioned and every row to match a fragment, then **runs** each row's check and prints
-  the verdict. Two seconds, nineteen clauses, and a reader who wrote none of the chapters can reproduce the
-  whole gate. The general rule: **the certification layer gets the same treatment as the numbers** — a
-  derived verdict, not a confident one.
-- Its honest output is `18 met / 1 not met`, and the one is more useful than a clean sweep would have been:
-  a review that reports 19 of 19 invites the reader to stop reading, while a named gap carries its cost
-  (no receiver ever reads our artifacts back) and its owner. Related, and worth keeping: the review prints
-  `closure unapproved` even when every check passes, because the party running it authored sixteen of the
-  nineteen deliverables — a verdict and an approval are different claims, and conflating them is how a
-  self-review becomes a certificate.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -167,6 +164,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part6.md`](docs/history/stitchcad-devnotes-part6.md) | two `2026-09-30` lessons (a spec's tables are its test suite; settle it with the artifact) | 55 lines, 5359 bytes, `sha256:129d50d8…` |
 | [`devnotes-part7.md`](docs/history/stitchcad-devnotes-part7.md) | three `2026-09-30` lessons (an arm that removes the rule; a synthetic input is a fixture; a RED arm asserts the refusal) | 57 lines, 5120 bytes, `sha256:13fd6c73…` |
 | [`devnotes-part8.md`](docs/history/stitchcad-devnotes-part8.md) | two `2026-09-30` lessons (source layout; i18n population) | 35 lines, 3196 bytes, `sha256:04ab285c…` |
+| [`devnotes-part9.md`](docs/history/stitchcad-devnotes-part9.md) | the `2026-09-30` certifying-artifact lesson | 15 lines, 1343 bytes, `sha256:bc7fae65…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

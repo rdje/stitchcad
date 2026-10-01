@@ -21,6 +21,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 | [`part12.md`](docs/history/stitchcad-changelog-part12.md) | the dialects and formula-language slices, `STITCHCAD-G0-0010` and `STITCHCAD-G0-0009` | 84 lines, 7767 bytes, `sha256:9c61ba7c…` |
 | [`part13.md`](docs/history/stitchcad-changelog-part13.md) | the release-contract and canvas-spike-rule slices, `STITCHCAD-G0-0012` and `STITCHCAD-G0-0011` | 75 lines, 7188 bytes, `sha256:1e52b5c9…` |
 | [`part14.md`](docs/history/stitchcad-changelog-part14.md) | the i18n slice, `STITCHCAD-G0-0016` | 38 lines, 3631 bytes, `sha256:2c895780…` |
+| [`part15.md`](docs/history/stitchcad-changelog-part15.md) | the recurring cleanup slice, `STITCHCAD-SPINE-0021` | 23 lines, 2123 bytes, `sha256:f93154e3…` |
 
 **Correction (D30).** part1's own descriptor says its coverage runs "through `STITCHCAD-SPINE-0004c`".
 It does not: part1's newest entry is `STITCHCAD-SPINE-0004b`, and `SPINE-0004c` is sealed in part2.
@@ -34,6 +35,23 @@ The live window below holds the most recent slices. When it passes its health ta
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-G1-0009 - semantic notch anchors with symbolic profile bindings (leaf `G1-SLICE.3c.3a`)
+
+`Notch` is immutable semantic content: a born-live, uniquely resolved point on a surviving interval
+of its named Piece, plus logical target-profile declarations for style, sample/production depth and
+width, and encoding. Construction refuses absent/foreign anchors, including a merged edge's foreign
+remainder. Edits expose split choices, exact recomputation and repair tasks without rewriting anchors.
+Bindings always report `DeferredToG4`; no physical values, profile pin or defaults are supplied.
+
+Seven contract tests and the privacy doctest pass. Disabling ownership refusal makes the partial-merge
+regression fail. Strict `make check`, wasm, warning-free book, feature/release censuses, ledger probes
+and doctrine gate pass. The book documents examples and the unimplemented physical-export boundary.
+D58 closes: G4's contradictory default-plus-sidecar acceptance now matches release §8's no-default
+matrix; G4 still owns enforcement. The symbolic-binding decision is recorded and promoted.
+The oldest changelog and dev-note entries roll into sealed segments in the same commit.
+The director answered D57 before commit: each physical cut copy has a stable identity so seams can
+differ. Next `.3c.2b` implements that contract; D57 closes after verified delivery.
 
 ## STITCHCAD-G1-0008 - separate cut-once L/R members are explicit piece content (leaf `G1-SLICE.3c.1a`)
 
@@ -336,27 +354,3 @@ blocked a commit, so the seal happened at the trigger D49 declares rather than a
   `OK - 17 surfaces, 15 routes, 111 files measured`; the coverage census still `10 lanes / 13 trees /
   3 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`, so a history segment is not mistaken for a task
   tree
-
-## STITCHCAD-SPINE-0021 - the cadence runs, and the residue census proves what it took (leaf `SPINE.21`)
-
-The cleanup cadence had no recurring owner: `SPINE.2` discharged the first run and wrote the record, but a
-cadence is an obligation that returns, and this one was 23 hours from firing mid-slice with no leaf to own it.
-
-- **the run** - nine paths removed, each named by the residue census and each found gone: both scratch trees
-  (`target/doctrine_scratch`, `target/scratch`, `target/tmp`), both incremental caches
-  (`target/debug/incremental`, `target/wasm32-unknown-unknown/debug/incremental`, 57 `.bin` files), the mdBook
-  output (`docs/book/book`, 4 120 KB) and three scratch bodies the containment self-tests had left in
-  `target/`. `target` went 40 648 KB -> 10 808 KB, so 33 960 KB left the volume counting the book.
-- **nothing tracked was touched** - `git ls-files | grep -cE '^(target/|docs/book/book/)'` -> `0` before and
-  after, `0` tracked artifact-shaped files, `0` deleted tracked files in `git status --porcelain`, and `0`
-  stray `*.log` / `*.bin` / `*.tmp` / `*.orig` / `*.rej` / `.DS_Store` anywhere outside `.git`.
-- **the removal is shown to cost rebuild time and nothing else** - `make gate` -> `=== all doctrines green ===`;
-  `make check` -> `test result: ok. 1 passed; 0 failed`; `make book` -> regenerated at exactly 4 120 KB;
-  `make probes` -> `20 suite(s) green` with `target/scratch` recreated by the Makefile's own rule;
-  `make wasm` -> the smoketest green. `target` rebuilt to 13 460 KB.
-- **D34's fourth instance removed** - the index's `SPINE` frontier cell still named `.20` as open one commit
-  after it landed, while the execution-order paragraph in the SAME file had it right: two hand-kept sentences
-  about one lane, drifting against each other, which is the strongest argument yet for deriving the cells.
-- `SPINE.20`'s checklist moved to `SPINE-evidence.md`, as the convention requires of the slice after the one
-  that landed it, bringing the tree back inside its per-part health (683 lines / 56 833 B); the changelog's own
-  rollover follows in this entry (`part10`).

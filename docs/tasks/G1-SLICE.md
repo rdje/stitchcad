@@ -191,21 +191,58 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 - ID: `G1-SLICE.3c.2b`
   Status: `pending`
   Goal: implement the sewing graph content and D35 after `.3c.2a` supplies its range contract.
-  Pending director decision (D57): stable identity per physical cut copy versus pattern-level graph
-  with copy expansion at assembly. Asked `2026-10-01` through the session's input tool; the spec
-  carries cut quantity but no copy-address contract. Do not pick implicitly in the span schema.
+  Director decision (D57), `2026-10-01`: every physical cut copy has a stable identity, so its
+  seams can differ. Implement this explicit addressing contract before sewing spans; do not expand
+  an underspecified pattern-only graph by renderer convention. D57 closes after verified code.
   Acceptance: all `.3c.2` sewing-graph criteria met; range and endpoint ambiguity visible; same-piece
   seams explicitly specified and tested. Then close the `.3c.2` parent.
   Verification: `pending`
   Commit: `pending`
 
 - ID: `G1-SLICE.3c.3`
-  Status: `pending`
+  Status: `active`
   Goal: `Notch`, directed and dual-reference `Grainline`, per-edge derived `SeamAllowance`; profile
   parameters are identity references rather than invented defaults until G4 supplies parameter states.
   Acceptance: references exist at construction; notch export geometry and encoding remain profile-owned;
   unknown profile parameters are never replaced by a value; directed references survive reversal or
   show repairs, and allowance inclusion is resolved per profile rather than as a global switch.
+  Verification: `pending`
+  Commit: `pending`
+  Children: `.3c.3a` (notches), `.3c.3b` (grainlines), `.3c.3c` (allowances).
+
+- ID: `G1-SLICE.3c.3a`
+  Status: `done`
+  Goal: semantic `Notch` with stable piece/edge/parameter anchoring and symbolic Factory Profile
+  bindings for style, sample/production depth/width and encoding. Bindings carry no scalar values;
+  their validation is visibly `DeferredToG4`, rather than treating an unread profile as resolved.
+  Acceptance: absent edges and anchors outside the named piece are typed refusals; a split/merge/
+  reverse/delete exposes the existing point-resolution contract without changing stored references;
+  style vocabulary matches §4.5, sample/production bindings remain distinct, and no unresolved binding
+  can supply default geometry or an encoding. The object is immutable and wasm-safe.
+  Signoff alignment: fix D58's obsolete `G4-PROFILES.7` acceptance, which contradicts its own
+  no-default Goal and the normative release §8 matrix (draft notch unknown → sidecar, never default).
+  Verification: seven notch-contract tests + privacy doctest; strict check, wasm, book,
+  feature/release censuses, ledger probes and doctrine gate green. D58 closed in defects-part4.
+  Commit: `STITCHCAD-G1-0009`
+  Design: `decision_profile-bindings-stay-symbolic-at-g1.md`.
+
+- ID: `G1-SLICE.3c.3b`
+  Status: `pending`
+  Goal: directed `Grainline`, explicit parallel/off-grain angle binding and independent stripe/plaid
+  references, with born-valid anchors and visible resolution/repair after topology edits.
+  Acceptance: every geometric reference exists and belongs to its declared scope; opposite directions
+  are distinct; reversal reports its accumulated direction; angle bindings do not invent values;
+  dual print references are first-class and no geometric direction equality is asserted until G2.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.3c.3c`
+  Status: `pending`
+  Goal: per-edge derived allowance descriptors, authored width-parameter origin, explicit corner choice
+  and symbolic per-profile inclusion policy; then close the marks/allowances parent.
+  Acceptance: live owned edges required; width may come from formula/profile/explicit parameter
+  entities without duplicating their uncertainty state; corner vocabulary matches §4.4; inclusion is
+  resolved per target profile; offset geometry/error-budget checks remain visibly G2 obligations.
   Verification: `pending`
   Commit: `pending`
 
@@ -373,7 +410,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.3` | `pending` | semantic notches, grainlines and allowances are independent of D57's pending sewing-copy identity decision |
+| — | `G1-SLICE.3c.2b` | `pending` | stable physical-copy identities and sewing spans per the director ruling |
 
 ## Decisions
 
@@ -433,6 +470,39 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3c.3a` — semantic notches; physical profile bindings stay unresolved
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.5 requires semantic edge/parameter anchoring with
+  profile-owned style, sample/production dimensions and encoding. At `486607b` no `Notch` exists.
+  D58's dependent G4 acceptance says default-plus-sidecar despite its no-default Goal and release §8.
+- [x] **ROOT CAUSE (WHY + WHERE)** — G1 needs semantic identity before G4's target-profile schema
+  exists; copying physical values would invent facts and duplicate parameter state. Ownership must
+  compare current ranges and current positions, not only live edge ids. `cargo test -p sc-core
+  --test notch_contract ownership_uses_surviving_partial_ranges_and_resolved_parameters` → `1 passed`,
+  `rc=0`: the independently expected owned `[0,3/10]` portion refuses the merged foreign remainder,
+  including after reversal. `run_release_contract_census.sh` → `8 matrix rows / 0 failure(s)`, `rc=0`
+  identifies the canonical matrix D58's Acceptance must follow.
+- [x] **FIX** — immutable `Notch`, editable `NotchDefinition`, exact `EdgeAnchor`, symbolic
+  `ProfileParameterRef` and complete sample/production/style/encoding bindings. Construction requires
+  a live unique owned point; edits return the original ledger's choices/repairs without mutations.
+  `ProfileBindingValidation::DeferredToG4` exposes the missing physical validation. G4 acceptance
+  now names badge preview / sidecar draft / block production and no defaults; G4 still owns execution.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test notch_contract` → `7 passed`, `rc=0`:
+  boundary/hole/construction anchors and endpoints accepted, absent/foreign anchors refused, exact
+  reverse/merge recomputation, split-side choice, deletion operation/held-reference evidence and
+  preserved symbolic fields tested. Disabling ownership refusal makes the partial-merge test fail
+  (`rc=101`); restored source passes. The privacy doctest also passes. D58 closes in defects-part4.
+- [x] **NO REGRESSION** — `make check` → fmt, strict clippy, all existing/new suites green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; feature/release censuses → `0 failure(s)`;
+  ledger probes → `9 pass / 0 fail`; `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  The style vocabularies implement no geometry and do not widen the staged release envelope.
+- [x] **LOCKSTEP** — binding decision + INDEX, Rust module docs, ontology §10 + feature matrix,
+  G4 dependent acceptance, task status/frontier/evidence/logs, index, MEMORY, LIVE_STATUS,
+  CHANGELOG and promoted DEV_NOTES; D58 closure + descriptor and live pointer. Oldest ledger
+  entries seal in changelog-part15/devnotes-part9; map orientation is tightened and regenerated.
+  D57 was answered before commit: stable identities per physical cut copy. Next `.3c.2b` implements
+  that contract and sewing spans; D57 closes only after verification.
 
 ### `G1-SLICE.3c.1a` — the canonical fixture's separate cut-once L/R members (D56)
 
@@ -774,6 +844,8 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `2026-10-01` | `.3c.2a` | range contract; `make check`; wasm; book; gate; feature census; ledger probes | `13 passed`; all Rust suites green; wasm green; book warning-free; doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
 | `2026-10-01` | `.3c.1a` | piece contract; `make check`; wasm; book; fixture/feature censuses; ledger probes; gate | `14 passed`; all Rust suites green; wasm/book green; `0 mismatch(es)`; `0 failure(s)`; `9 pass / 0 fail`; doctrines green, `rc=0` |
 
+| `2026-10-01` | `.3c.3a` | notch contract; `make check`; wasm; book; feature/release censuses; ledger probes; gate | `7 passed`; privacy check green; Rust/WASM/book green; `0 failure(s)`; `9 pass / 0 fail`; doctrines green, `rc=0` |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -787,7 +859,8 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `.3c.1` | `STITCHCAD-G1-0006 (leaf G1-SLICE.3c.1)` | immutable structural pieces with deferred geometry; D55 owned by the next child |
 | `.3c.2a` | `STITCHCAD-G1-0007 (leaf G1-SLICE.3c.2a)` | exact whole-range journal fold and visible range repairs; D55 fixed |
 | `.3c.1a` | `STITCHCAD-G1-0008 (leaf G1-SLICE.3c.1a)` | D56 fixed: separate cut-once L/R members, explicit companion metadata |
-| `.3c.2b` … `.16` | `pending` | `.3c` closes after its four object families; D57 pending, `.3c.3` proceeds independently |
+| `.3c.3a` | `STITCHCAD-G1-0009 (leaf G1-SLICE.3c.3a)` | semantic notches and symbolic bindings; D58 fixed |
+| `.3c.2b`, `.3c.3b` … `.16` | `pending` | `.3c` closes after its four object families; D57 decided, sewing resumes next |
 
 ## Changelog
 
@@ -851,3 +924,9 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
   Existing even-total pair requests stay supported. Fourteen piece tests and all focused checks pass;
   D56 is sealed closed. D57's physical-copy addressing is asked of the director and owned by `.3c.2b`;
   the frontier takes independent marks/allowances (`.3c.3`) while that decision is pending.
+
+- `2026-10-01`: `.3c.3` decomposed into notches, grainlines and allowances; `.3c.3a` lands
+  immutable semantic Notch anchors and symbolic target-profile bindings with no physical defaults.
+  Seven contract tests + privacy doctest pass; ownership mutation goes red. D58's G4 acceptance
+  aligns with the normative release matrix and seals closed. Ledgers roll over atomically;
+  the director answered D57 before commit: stable physical-copy identities; next `.3c.2b`.

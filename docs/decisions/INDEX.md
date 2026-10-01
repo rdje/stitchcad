@@ -45,3 +45,5 @@ Records carry an `answers:` line so a question can find them — that is what ma
 | [`decision_range-resolution-preserves-entire-interval.md`](decision_range-resolution-preserves-entire-interval.md) | `decision` | entire intervals fold through topology edits; gaps and lost fragments become repairs, distinct from endpoint ambiguity and geometric validity |
 
 | [`decision_piece-pair-members-have-explicit-handedness.md`](decision_piece-pair-members-have-explicit-handedness.md) | `decision` | separate cut-once L/R members carry handedness and companion identity; even-total pair requests remain supported |
+
+| [`decision_profile-bindings-stay-symbolic-at-g1.md`](decision_profile-bindings-stay-symbolic-at-g1.md) | `decision` | G1 semantic marks carry symbolic profile-parameter identities and a visible G4 validation deferral; no physical defaults |
