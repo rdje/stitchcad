@@ -22,13 +22,6 @@ Cleanup is a normal change: it is owned by a task-tree leaf, recorded here, and 
 
 ## Latest run
 
-- **Run:** `2026-09-30` 21:00 CEST (19:00 UTC) by leaf `SPINE.21` — removed the doctrine and probe scratch
-  trees (`target/doctrine_scratch`, `target/scratch`, `target/tmp`), cargo's incremental caches on both
-  hosts (`target/debug/incremental`, `target/wasm32-unknown-unknown/debug/incremental` — 57 `.bin` files),
-  the mdBook output (`docs/book/book`, 4 120 KB) and three scratch bodies the containment self-tests had
-  left in `target/`; `target` went 40 648 KB → 10 808 KB, so 33 960 KB left the volume. The residue census
-  found all nine paths gone, `0` stray `*.log` / `*.bin` / `*.tmp` / `*.orig` / `*.rej` / `.DS_Store`
-  files anywhere outside `.git`, `0` tracked artifact-shaped files before and after, and `0` deleted
-  tracked files. `make gate`, `make check`, `make book`, `make probes` and `make wasm` were all green
-  afterwards, the last two regenerating exactly what was removed (`docs/book/book` back at 4 120 KB,
-  `target` rebuilding to 13 460 KB).
+- **Run:** `2026-10-01` 18:56 UTC by leaf `SPINE.21a`.
+- **Summary:** removed six ignored scratch/incremental/book trees and 255 safe stray artifacts;
+  339180 KB reclaimed; residue 0, tracked deletions 0. Rust/WASM/book/probes/gates passed after regeneration.

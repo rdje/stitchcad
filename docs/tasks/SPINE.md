@@ -461,6 +461,19 @@ mechanically-enforced form:
   make targets green afterwards with the book and the incremental caches regenerated.
   Commit: `STITCHCAD-SPINE-0021`
 
+- ID: `SPINE.21a`
+  Status: `done`
+  Goal: recurring cleanup on 2026-10-01 before the next product slice crosses the 24-hour mark;
+  remove only regenerable, ignored project artifacts after proving no tracked input or live job is held.
+  Acceptance: census before/after names every removed path, proves residue absent and no tracked
+  deletion; release/debug incremental/deps log/bin scan included, built dependencies retained.
+  Re-run check/book/wasm/gate/probes after removal, overwrite only latest cleanup entry, preserve
+  product frontier .4 and synchronize bounded live/history/book records. Prior cleanup checklist
+  may relocate unchanged to the existing evidence sibling; ledger rollovers owned here if needed.
+  Verification: 6 roots + 255 strays removed; target 663084 → 328736 KB; residue 0, tracked
+  deletions 0; regenerated check/WASM/book, 22 probes, ledger and staged gates green.
+  Commit: `STITCHCAD-SPINE-0021a`
+
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
@@ -564,42 +577,32 @@ its checklist here, because `scripts/check_task_acceptance.sh` judges every stag
 refuses one with no ticked boxes; the next slice moves it across. Neither file carries an unticked
 placeholder box (defect D15).
 
-### `SPINE.21` — the cadence runs, and the residue census proves what it took
 
-- [x] **REPRODUCE / ISSUE** — the cadence record was 23 hours old at the start of this run and the volume
-  had grown: `du -sk target docs/book/book` → `40648` and `4120`, with `find target -name '*.bin' | wc -l`
-  → `57` incremental-cache files. `docs/ARTIFACT_CLEANUP.md`'s latest entry was `SPINE.2`'s run of
-  `2026-09-29`, so the session directive's §8 obligation ("more than 24 hours old … run a cleanup during
-  this session") was about to fire mid-slice with no leaf owning it.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `SPINE.2` discharged the *first* cleanup and wrote the record, but a
-  cadence is a recurring obligation and the tree had no recurring leaf for it: `grep -c 'cleanup'
-  docs/tasks/SPINE.md` matched only `.2`'s block. So each later run would either be unowned (a change with
-  no leaf, which the code-change doctrine forbids) or folded into whatever slice happened to notice the
-  date — which is how a hygiene action ends up inside a product commit.
-- [x] **ADDRESSED (verified)** — nine paths removed, each named by the residue census and each found gone:
-  `target/doctrine_scratch`, `target/scratch`, `target/tmp`, `target/debug/incremental`,
-  `target/wasm32-unknown-unknown/debug/incremental`, `docs/book/book`, and three scratch bodies the
-  containment self-tests had left in `target/`. Measured: `target` `40 648` KB → `10 808` KB (`33 960` KB
-  off the volume, counting the book's `4 120` KB). Nothing tracked was touched:
-  `git ls-files | grep -cE '^(target/|docs/book/book/)'` → `0` before and after,
-  `git ls-files | grep -cE '\.(log|bin|tmp|orig|rej)$'` → `0`, `git status --porcelain | grep -c '^ D\|^D'`
-  → `0`, and `find . -path ./.git -prune -o \( -name '*.log' -o -name '*.bin' -o -name '*.tmp' -o
-  -name '*.orig' -o -name '*.rej' -o -name '.DS_Store' \) -print | wc -l` → `0`.
-- [x] **NO REGRESSION** — every gate re-run after the removal, which is the point of the exercise:
-  `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed; 0 failed`;
-  `make book` → `INFO HTML book written to …` with `docs/book/book` regenerated at exactly `4 120` KB;
-  `make probes` → `20 suite(s) green` with `target/scratch` recreated by the Makefile's own rule;
-  `make wasm` → `wasm-viewer smoketest: sc-units + sc-core build for wasm32-unknown-unknown`. `target`
-  rebuilt to `13 460` KB, i.e. the incremental caches returned as the record promises.
-- [x] **FIX** — removed the nine paths; overwrote the record's single latest entry with the absolute date
-  and time, the byte deltas, the residue census result and the gates re-run; created this leaf so the
-  cadence has a recurring owner; corrected `docs/TASK_TREE.md`'s `SPINE` frontier cell, which still named
-  `.20` as open one commit after it landed (D34's fourth instance).
-- [x] **LOCKSTEP** — this leaf, its frontier row, the tree's three logs; `docs/ARTIFACT_CLEANUP.md`,
-  `docs/TASK_TREE.md`, `CHANGELOG.md` and `docs/tasks/PLANNING.md` (D34's recurrence) in this commit.
-  `MEMORY.md` and `LIVE_STATUS.md` are unchanged: a cleanup moves no product frontier and closes no area.
-  Lesson promotion: declined (no new dated lesson — the run is a cadence discharge, and the reusable rule
-  "a recurring obligation needs a recurring leaf" is recorded in this leaf's goal rather than duplicated).
+### `SPINE.21a` — recurring cleanup before the next product slice
+
+- [x] **REPRODUCE / ISSUE** — prior run was 2026-09-30 19:00 UTC; the 24-hour mark falls inside
+  the next product slice. `du -sk target docs/book/book` → `663084`, `4832`, `rc=0`;
+  release/debug incremental/deps artifact scan → `237` bin/log files, all incremental caches.
+- [x] **ROOT CAUSE (WHY + WHERE)** — Cargo/probe/book outputs accumulate as expected; recurring
+  .21 owns the obligation. `git ls-files` census → `0` tracked artifact-shaped files, `rc=0`;
+  `check_no_background_jobs.sh` → `handoff: OK`, `rc=0`; candidate-tree `.git` scan → none.
+  Deleting ignored regenerable outputs can reclaim storage without touching tracked input.
+- [x] **FIX** — removed six declared scratch/incremental/book roots and 255 ignored project strays;
+  removed roots: target doctrine/scratch/tmp, host + WASM incremental caches and rendered book.
+  Checked tracked descendants and symlinks before deletion. Kept built dependencies/shared stores;
+  record overwrites its latest entry and product frontier stays G1 .4.
+- [x] **ADDRESSED (verified)** — `du -sk target` immediately after deletion → `328736`, `rc=0`:
+  `339180` KB reclaimed including book. Independent `find` artifact census → `0`, `rc=0`;
+  every planned path absent and `git status --porcelain` → `0` tracked deletions. Release/deps
+  bin/log census was `0` each. Rebuild regenerates scratch, incremental caches and rendered book.
+- [x] **NO REGRESSION** — `make check` → strict fmt/clippy + `287` tests green; `make wasm`/`book`
+  → green, warning-free; full `make probes` → `22 suite(s) green`; ledger → `9 pass / 0 fail`;
+  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; staged `make gate` →
+  `=== all doctrines green ===`, all `rc=0`. Completed prior cleanup checklist compares unchanged to HEAD.
+- [x] **LOCKSTEP** — cleanup record, recurring leaf/logs, bounded book upkeep, changelog rollover,
+  and unchanged product resume/frontier agree. LIVE_STATUS still G1 5/18, four structural families,
+  8 open / 54 sealed; no area status changes. Memory continues to point to G1 .4.
+  promotion: declined (routine cadence discharge; ownership/safe-removal rules already canonical).
 
 ### `SPINE.19.1` — the closed defects are sealed, so the open ones are what a reader meets
 
@@ -677,6 +680,8 @@ placeholder box (defect D15).
 | `2026-09-30` | `SPINE.21` | `du -sk` before and after; the residue census over all nine paths; `git ls-files` and `git status --porcelain`; `find` for strays; `make gate`/`check`/`book`/`probes`/`wasm` | `40 648` KB → `10 808` KB plus the book's `4 120` KB; all nine gone; `0` tracked files touched; `0` strays; five targets green |
 | `2026-09-30` | `SPINE.19.1` | the seal's digest under the standing `DESCRIPTOR` rule; both id censuses and their intersection; `wc -lc` before and after; `make gate`/`probes`; containment; the coverage census | `9 pass / 0 fail`, `32` segment verdicts; `7` live + `44` sealed = `51`, intersection `0`; `1133` / `93 378` → `515` / `40 606`; all green |
 
+| `2026-10-01` | `SPINE.21a` | ownership/residue census; check/wasm/book/probes; ledger/tree; staged gate | 6 roots + 255 strays gone, 0 residue/tracked deletion; `287` tests, `22` suites green |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -708,6 +713,8 @@ placeholder box (defect D15).
 | `SPINE.21` | `STITCHCAD-SPINE-0021 (leaf SPINE.21): the cadence runs, and the residue census proves what it took` | 33 960 KB off the volume; nothing tracked touched; all five make targets green afterwards |
 | `SPINE.19.1` | `STITCHCAD-SPINE-0019a (leaf SPINE.19.1): the closed defects are sealed, so the open ones are what a reader meets` | D46's remedy executed at D49's trigger; `SPINE.19` keeps the durable half |
 | `SPINE.5`, `SPINE.13`, `SPINE.19` | `pending` | — |
+
+| `SPINE.21a` | `STITCHCAD-SPINE-0021a (leaf SPINE.21a)` | recurring cleanup, verified regeneration; product frontier unchanged |
 
 ## Changelog
 
@@ -801,3 +808,7 @@ placeholder box (defect D15).
     of them use wording no marker list anticipated — which is D38 measured again, and is why `.19`'s
     durable half (a status token a script can read, a segment registry, and an arm that refuses a fixed
     defect left live) stays open.
+
+- `2026-10-01`: `.21a` discharges the recurring cleanup before the next product slice crosses the
+  24-hour mark. Six regenerable roots + 255 strays removed, residue/tracked-deletion proof clean;
+  workflows regenerate successfully. Prior cleanup evidence moves unchanged; product frontier .4.

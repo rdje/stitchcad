@@ -814,3 +814,40 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   defect in inherited code is fixed in the project slot — is already layer C:
   `decision_table-cells-escape-pipes-render-to-settle.md` and the D15 record; a third copy would be a
   duplicate, and no new dated lesson was added to `DEV_NOTES.md` this slice).
+
+### `SPINE.21` — the cadence runs, and the residue census proves what it took
+
+- [x] **REPRODUCE / ISSUE** — the cadence record was 23 hours old at the start of this run and the volume
+  had grown: `du -sk target docs/book/book` → `40648` and `4120`, with `find target -name '*.bin' | wc -l`
+  → `57` incremental-cache files. `docs/ARTIFACT_CLEANUP.md`'s latest entry was `SPINE.2`'s run of
+  `2026-09-29`, so the session directive's §8 obligation ("more than 24 hours old … run a cleanup during
+  this session") was about to fire mid-slice with no leaf owning it.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `SPINE.2` discharged the *first* cleanup and wrote the record, but a
+  cadence is a recurring obligation and the tree had no recurring leaf for it: `grep -c 'cleanup'
+  docs/tasks/SPINE.md` matched only `.2`'s block. So each later run would either be unowned (a change with
+  no leaf, which the code-change doctrine forbids) or folded into whatever slice happened to notice the
+  date — which is how a hygiene action ends up inside a product commit.
+- [x] **ADDRESSED (verified)** — nine paths removed, each named by the residue census and each found gone:
+  `target/doctrine_scratch`, `target/scratch`, `target/tmp`, `target/debug/incremental`,
+  `target/wasm32-unknown-unknown/debug/incremental`, `docs/book/book`, and three scratch bodies the
+  containment self-tests had left in `target/`. Measured: `target` `40 648` KB → `10 808` KB (`33 960` KB
+  off the volume, counting the book's `4 120` KB). Nothing tracked was touched:
+  `git ls-files | grep -cE '^(target/|docs/book/book/)'` → `0` before and after,
+  `git ls-files | grep -cE '\.(log|bin|tmp|orig|rej)$'` → `0`, `git status --porcelain | grep -c '^ D\|^D'`
+  → `0`, and `find . -path ./.git -prune -o \( -name '*.log' -o -name '*.bin' -o -name '*.tmp' -o
+  -name '*.orig' -o -name '*.rej' -o -name '.DS_Store' \) -print | wc -l` → `0`.
+- [x] **NO REGRESSION** — every gate re-run after the removal, which is the point of the exercise:
+  `make gate` → `=== all doctrines green ===`; `make check` → `test result: ok. 1 passed; 0 failed`;
+  `make book` → `INFO HTML book written to …` with `docs/book/book` regenerated at exactly `4 120` KB;
+  `make probes` → `20 suite(s) green` with `target/scratch` recreated by the Makefile's own rule;
+  `make wasm` → `wasm-viewer smoketest: sc-units + sc-core build for wasm32-unknown-unknown`. `target`
+  rebuilt to `13 460` KB, i.e. the incremental caches returned as the record promises.
+- [x] **FIX** — removed the nine paths; overwrote the record's single latest entry with the absolute date
+  and time, the byte deltas, the residue census result and the gates re-run; created this leaf so the
+  cadence has a recurring owner; corrected `docs/TASK_TREE.md`'s `SPINE` frontier cell, which still named
+  `.20` as open one commit after it landed (D34's fourth instance).
+- [x] **LOCKSTEP** — this leaf, its frontier row, the tree's three logs; `docs/ARTIFACT_CLEANUP.md`,
+  `docs/TASK_TREE.md`, `CHANGELOG.md` and `docs/tasks/PLANNING.md` (D34's recurrence) in this commit.
+  `MEMORY.md` and `LIVE_STATUS.md` are unchanged: a cleanup moves no product frontier and closes no area.
+  Lesson promotion: declined (no new dated lesson — the run is a cadence discharge, and the reusable rule
+  "a recurring obligation needs a recurring leaf" is recorded in this leaf's goal rather than duplicated).

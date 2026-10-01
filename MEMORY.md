@@ -18,4 +18,5 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;
   see `docs/book/src/governance.md` §8 and `docs/tasks/G3-GRADING.md` `.16`.
 - **Push:** derive with `make push-due`; cadence and exceptions in `COMMIT.md`.
-- **Cleanup:** read `docs/ARTIFACT_CLEANUP.md`; run when its latest entry is over 24 hours old.
+- **Cleanup:** `SPINE.21a` completed the recurring run; derive the next due time from
+  `docs/ARTIFACT_CLEANUP.md`, which retains only the latest dated entry.

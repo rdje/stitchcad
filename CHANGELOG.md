@@ -39,10 +39,22 @@ in [`docs/history/bedrock-scaffold-changelog.md`](docs/history/bedrock-scaffold-
 
 | [`changelog-part22.md`](docs/history/stitchcad-changelog-part22.md) | STITCHCAD-G1-0004 | 24 lines, 2100 bytes, `sha256:9050689c…` |
 
+| [`changelog-part23.md`](docs/history/stitchcad-changelog-part23.md) | STITCHCAD-G1-0005 | 48 lines, 4079 bytes, `sha256:e74210d6…` |
+
 The live window below holds the most recent slices. When it passes its health target (400 lines /
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-SPINE-0021a - recurring artifact cleanup preserves the product frontier (leaf `SPINE.21a`)
+
+Before the next product slice crosses the 24-hour mark, removed six ignored scratch/incremental/book
+roots and 255 safe stray artifacts. Target went 663084 → 328736 KB; book removal adds 4832 KB,
+for 339180 KB reclaimed. Independent residue census found zero remaining artifacts and no tracked
+deletion; release/deps bin/log scans were zero. Shared stores, other repositories and built dependency
+outputs remain untouched. Strict Rust's 287 tests, WASM, book, all 22 probe suites and staged gates
+pass after regeneration. Prior cleanup checklist moves unchanged, and oldest changelog entry seals
+to part23. Latest-run record and bounded book upkeep align; G1 .4 remains the product frontier.
 
 ## STITCHCAD-G1-0023 - all four structural ontology families pass milestone review (leaf `G1-SLICE.3c.4d.2`)
 
@@ -336,52 +348,3 @@ Validation: `make check` (fmt, strict clippy, unit/property suites and private-c
 `cargo test -p sc-core --test piece_contract` (12 contract tests), `make wasm`, `make book`, doctrine gate
 and changelog-ledger probes, all green. Startup compared the neutral README, claim-verification and
 containment policy bodies with their read-only sources: no differences. Cleanup remained within 24 hours.
-
-## STITCHCAD-G1-0005 - the persistent-identity contract: a reference is never rewritten, the journal folds (leaf `G1-SLICE.3b`)
-
-G1's second new product code. `sc_core::ontology` now carries the persistent-identity contract the whole
-design's reference integrity rests on, implemented against the design decision this slice recorded,
-dependency-free and wasm-safe:
-
-- `topology` — the `IdentityLedger`: an append-only journal of typed `TopologyEdit`s (declare, split, merge,
-  reverse, delete, offset-fragment). A stored reference is **never rewritten by an edit** — the `(EdgeRef,
-  Param)` a consumer holds stays byte-identical, and resolution is a pure fold of the journal, so a replay
-  reproduces every fragment identity. Split resolves a reference into the fragment holding its parameter and
-  offers BOTH sides at the split point for the consumer to state (`SplitSide`); merge recomputes by
-  caller-declared arc length (exact `Rational`, never a rounding); reverse maps `t` to `1 − t` and tells
-  directed consumers through `Direction`; delete and offset-fragmentation orphan references into visible
-  `RepairTask`s naming the reference, the orphaning edit and the candidate resolutions. No silent
-  reassignment: repair state is *derived* (`open_repairs`, `release_readiness`), never stored, so it cannot
-  drift from the journal. A design with unresolved references stays inspectable — every query answers
-  identically — but is `Blocked` from release, which is §1.1's rule.
-
-Validation: `cargo test -p sc-core` → 62 unit + 8 contract-property + 9 identity-property, all green (the
-properties prove split's trichotomy and both-sides split point, merge's arc-length recomputation against a
-cross-multiplied oracle, reverse an involution, split↔merge round-trips to the identical reduced rational
-with zero drift, a delete orphaning exactly the references resolving onto the victim and nothing else,
-offset against a hundredths-grid oracle, the live-edge set equal to the journal replayed, and byte-identical
-replay of one script); `make check` clean at clippy `-D warnings`; `make wasm` cross-builds `sc-core`;
-`make gate` → `=== all doctrines green ===`. The design is recorded in
-`decision_reference-resolution-journal-fold.md`.
-
-Two containment obligations this append discharged atomically, both surfaced as defects:
-
-- **CHANGELOG rolled over** — the prior append (`STITCHCAD-G1-0004`) crossed the live window's 32 768-byte
-  health target (31 237 → 33 338) without sealing, which the protocol requires of the crossing commit. The
-  rollover milestone is a convention the size checker only *warns* at (rc=0 past a health target; only the
-  ceiling fails), so the miss passed every gate — defect **D54**. Sealed `STITCHCAD-G0-0012` +
-  `STITCHCAD-G0-0011` into `stitchcad-changelog-part13.md` (75 lines / 7188 bytes, digest reproduced by
-  `run_changelog_ledger_probes.sh`).
-- **KNOWLEDGE_MAP hit its 8192-byte ceiling** — the pressure `STITCHCAD-G1-0004` flagged ("99% … for the
-  next record/tree addition"): this slice's decision record tipped it to 8216. Tightened two subsystem
-  entries (the containment doctrine's only local lever) back under → 8187. The structural cause — the
-  generated decision-record and task-tree sections grow a line per slice while the sole trim lever is the
-  bounded subsystem list — is defect **D53** for the containment owner. The same edit repaired a run-on
-  bullet in `knowledge-map/subsystems.md` (two entries shared one line, invisible to the sync gate, which
-  checks derivation not source form).
-
-- lockstep: `G1-SLICE.md` (`.3b` done, a fresh evidence-backed acceptance subsection, frontier → `.3c`,
-  verification + commit logs, changelog), `lib.rs` status + module table, `ontology/mod.rs` re-exports,
-  `knowledge-map/subsystems.md` + regenerated `KNOWLEDGE_MAP.md`, `docs/TASK_TREE.md`, `MEMORY.md`,
-  `LIVE_STATUS.md` (G1 → 4 of 18, census → 9 open), `PLANNING.md` (D53, D54), `DEV_NOTES.md` (the lesson +
-  its own rollover), `CHANGELOG.md` (this entry + the part13 rollover).

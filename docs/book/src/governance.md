@@ -264,3 +264,13 @@ Named so that each is a decision with a record when its time comes, rather than 
   the evidence store at G4, the golden and provenance rules at G2/G6 in `conformance/`, and "governance in
   force" as a G7 exit criterion. A rule in this chapter that no gate ever enforces is a defect to be logged
   like any other, and §15's gate-exit review is where that audit happens.
+
+## 11. Repository artifact upkeep
+
+The director requires roughly daily removal of safe, regenerable project artifacts. The recurring
+SPINE cleanup leaf verifies ignored ownership, absent residue and unchanged tracked inputs, then
+rebuilds/tests the affected workflows. `docs/ARTIFACT_CLEANUP.md` holds one dated latest-run entry;
+history remains in Git. Scratch, incremental caches and rendered book output stay on the repository
+volume. Built dependency outputs are retained; shared stores and other repositories are read-only.
+The 2026-10-01 run removed scratch/cache/book trees and stray artifacts, with no tracked deletion;
+Rust, WASM, book and probe workflows regenerated successfully. This moves no product frontier.
