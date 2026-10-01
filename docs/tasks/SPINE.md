@@ -340,7 +340,7 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0019a`
 
 - ID: `SPINE.19.2`
-  Status: `pending`
+  Status: `done` (local implementation; observed CI remains .19.2v)
   Goal: D65 — perform an archive transition before ordinary seals exhaust the 64-file ceiling.
   Acceptance: retained historical segments remain byte-identical and addressable by stable identity;
   descriptors declare complete contents, digests, portable retrieval and retention ownership. Prove
@@ -350,6 +350,44 @@ mechanically-enforced form:
   Priority: before a required product seal would exceed 64 files; audit the projected transaction
   at each rollover. Do not pivot dirty. Keep .19's
   ledger-agnostic coverage/pointer obligations distinct unless this transition requires them.
+  Trigger proved after clean f61db3b: changelog 32579 B + forecast-only next-table summary 373 B
+  = 32952 B, above 32768 health; its required seal would be 65 files against inclusive 64.
+  Pre-code experiment: compare a repository-volume, deterministic Git-archive tar.gz of the immutable
+  64-file bf29b03 history snapshot against each original source file. Prefer self-contained
+  content-addressed retained bytes over a shallow-history/network-dependent version-object archive.
+  Scope includes bounded manifests, portable list/read/materialize/verify, all ledger consumers,
+  exact source reconstruction, separate working/retained pressure and calibrated refusals. No source
+  deletion until reader/verifier and source→payload proof succeed. No edits to sealed record content.
+  Protocol fixed before implementation: one immutable content-addressed tar.gz window, JSON manifests
+  with closed schemas/duplicate-key refusals, catalog anchors preserving every logical basename.
+  Python 3 standard library is a maintenance prerequisite (no packages/cache/network); Bash invokes it
+  from the repository root. Bounded decompression precedes tar parsing; extraction never follows tar
+  paths or links. Reader commands list/read/materialize/verify; materialize only into a fresh target/
+  descendant on the root volume, rejecting symlinks and overwrite. No Git history needed for retrieval.
+  Limits: 16 windows, 256 members/window; 8 MiB decompressed tar/window; original logical per-part
+  2000 lines/160000 bytes/maxline400 and combined 60000 lines/4000000 bytes remain. Actual resident
+  history (catalogs/raw/payload/control) also <=4000000 bytes; working Markdown remains <=64 files.
+  Controls: master <=8192 B, manifests <=65536 B each and <=262144 B together; payloads <=1 MiB
+  each and <=4000000 B together. These are independent additional axes, never exemptions from the
+  original aggregate. Original 64-file window is 154404 compressed B / 440958 full-file B / 5239 lines.
+  Pre-retirement proof: fixture containing installed payload/manifest/catalog and no raw source copies
+  passes reader; independently compare every recovered file to git-show bf29b03:path. Then retire
+  exactly those source copies. Ledger probes retain all nine arms over materialized logical segments.
+  Source snapshot, archive descriptor, stable navigation and pressure are separate verification legs.
+  D68 discovered during consumer review: the old COVERAGE-RED appended an ignored second declaration
+  and passed on unexempted D30. Reproduce original arm; fix the first declaration in part2 and require
+  it to be the sole refusal, preserving D30 exemption. Owned/fixed within this transition.
+  Verification: source proof 64 exact files; 67 logical records / 4 working Markdown after three seals;
+  5625 decoded lines / 459910 decoded bytes / 186520 resident bytes. Archive 26 calibrated arms;
+  binary sizing 17 arms; ledger 9/0; native 325 tests, WASM/book green. Full staged gates/probes
+  recorded below; observed CI will be recorded by follow-up `.19.2v` after the required push.
+  Commit: `STITCHCAD-SPINE-0019b`
+
+- ID: `SPINE.19.2v`
+  Status: `pending`
+  Goal: observe archive doctrine CI jobs/steps after .19.2's exceptional push; close structural
+  transition only on actual success, then resume product G1-SLICE.4a.3. No physical signoff claim.
+  Acceptance: exact head SHA/run/job/step verdicts retained, reader requires no historical Git objects.
   Verification: `pending`
   Commit: `pending`
 
@@ -529,7 +567,8 @@ mechanically-enforced form:
 | — | `SPINE.17` | `done` | taken out of order: a director-approved rule is recorded when it is made |
 | — | `SPINE.18` | `done` | taken immediately after: `.17` shipped a trigger that fired on itself |
 | guarded | `SPINE.22` | `pending` | D67: require fresh/scoped lesson decisions; current lessons use explicit fresh questions until enforced |
-| trigger | `SPINE.19.2` | `pending` | D65: archive transition before a required product seal exceeds the 64-file ceiling |
+| done | `SPINE.19.2` | `done` | D65/D68: exact self-contained history retention; unchanged decoded/resident bounds |
+| next | `SPINE.19.2v` | `pending` | observe exceptional-push archive CI jobs/steps, then resume G1 .4a.3 |
 | — | `SPINE.19.1` | `done` | taken at D49's trigger rather than waited for: `PLANNING.md` was at 95 % of its byte ceiling, so the 44 closed defects were sealed and the live census is now the open set |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
 | — | `SPINE.21` | `done` | the cleanup cadence is recurring, and a recurring obligation with no leaf is one somebody rediscovers: taken between two product slices because the 24-hour mark falls inside this one |
@@ -607,31 +646,39 @@ refuses one with no ticked boxes; the next slice moves it across. Neither file c
 placeholder box (defect D15).
 
 
-### `SPINE.21a` — recurring cleanup before the next product slice
+### `SPINE.19.2` — self-contained history windows before the next product seal
 
-- [x] **REPRODUCE / ISSUE** — prior run was 2026-09-30 19:00 UTC; the 24-hour mark falls inside
-  the next product slice. `du -sk target docs/book/book` → `663084`, `4832`, `rc=0`;
-  release/debug incremental/deps artifact scan → `237` bin/log files, all incremental caches.
-- [x] **ROOT CAUSE (WHY + WHERE)** — Cargo/probe/book outputs accumulate as expected; recurring
-  .21 owns the obligation. `git ls-files` census → `0` tracked artifact-shaped files, `rc=0`;
-  `check_no_background_jobs.sh` → `handoff: OK`, `rc=0`; candidate-tree `.git` scan → none.
-  Deleting ignored regenerable outputs can reclaim storage without touching tracked input.
-- [x] **FIX** — removed six declared scratch/incremental/book roots and 255 ignored project strays;
-  removed roots: target doctrine/scratch/tmp, host + WASM incremental caches and rendered book.
-  Checked tracked descendants and symlinks before deletion. Kept built dependencies/shared stores;
-  record overwrites its latest entry and product frontier stays G1 .4.
-- [x] **ADDRESSED (verified)** — `du -sk target` immediately after deletion → `328736`, `rc=0`:
-  `339180` KB reclaimed including book. Independent `find` artifact census → `0`, `rc=0`;
-  every planned path absent and `git status --porcelain` → `0` tracked deletions. Release/deps
-  bin/log census was `0` each. Rebuild regenerates scratch, incremental caches and rendered book.
-- [x] **NO REGRESSION** — `make check` → strict fmt/clippy + `287` tests green; `make wasm`/`book`
-  → green, warning-free; full `make probes` → `22 suite(s) green`; ledger → `9 pass / 0 fail`;
-  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; staged `make gate` →
-  `=== all doctrines green ===`, all `rc=0`. Completed prior cleanup checklist compares unchanged to HEAD.
-- [x] **LOCKSTEP** — cleanup record, recurring leaf/logs, bounded book upkeep, changelog rollover,
-  and unchanged product resume/frontier agree. LIVE_STATUS still G1 5/18, four structural families,
-  8 open / 54 sealed; no area status changes. Memory continues to point to G1 .4.
-  promotion: declined (routine cadence discharge; ownership/safe-removal rules already canonical).
+- [x] **REPRODUCE / ISSUE** — f61db3b `wc -lc CHANGELOG.md` → `395 32579`; forecast 373 B
+  requires seal 65 against inclusive 64. Old coverage-arm reproduction → part2 PASS despite its
+  appended fabricated Coverage; part1 FAIL is unrelated immutable D30. Both reproduce with rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — surfaces.tsv counts working files; each ordinary seal consumes
+  capacity despite only 440958 full-file B / 5239 lines retained. No archive transition existed.
+  Original run_changelog_ledger_probes.sh reads first Coverage (`grep -m1`), so appending a second
+  never mutates the predicate; no-exemption arm passes on D30. Source/call-path review and isolated
+  old-function fixture → part2 COVERAGE PASS / part1 FAIL, exit=0, proves both causes.
+  D65/D68 owned here; coverage generalization stays .19.
+- [x] **FIX** — digest-named tar.gz retains all original bytes; closed bounded manifests/catalog,
+  Python-standard-library reader and registered ARCHIVE-RETENTION guard. No tar extraction; paths,
+  same-volume writes, symlinks, nested repositories and overwrite checked. Binary sizing separates
+  byte/count from text axes. Ledger consumes reconstructed logical records; first part2 Coverage is
+  mutated, D30 exemption retained, and exactly that refusal required. Git supplies capture, not reads.
+- [x] **ADDRESSED (verified)** — `bash scripts/history_archive.sh prove-source window1` → `64
+  byte-identical full files; 0 missing/extra`, rc=0, before/after exact source-copy retirement.
+  `verify` → `67 logical records; 4 working Markdown; 5625 decoded lines; 459910 decoded bytes;
+  186520 resident bytes`, rc=0. All 67 current navigation links/anchors resolve. Python reader with
+  PATH empty on installed fixture passes without a Git executable. Logical per-part and aggregate
+  ceilings remain; no file count/aggregate ceiling raised. Three seals compare unchanged to HEAD.
+- [x] **NO REGRESSION** — `make check` → strict fmt/clippy and 325 tests, rc=0; `make wasm`/`book`
+  green, rc=0. `check_archive_retention.sh --self-test` → `26 pass / 0 fail`; binary sizing →
+  `17 arms, 0 failed`; sequential ledger → `9 pass / 0 fail`, all rc=0. HEAD immutability mutation
+  awaits first transition commit and is owned by .19.2v. Sequential `make probes` → `23 suite(s)
+  green`, rc=0; staged `make gate` → `=== all doctrines green ===`, rc=0. Scratch-overlap run was discarded.
+  Inherited first-keyword scan matched the FIX opener containing “addressed”; D15 authoring remedy
+  keeps unrelated gated keywords out of box openers. Corrected opener, not the neutral checker.
+- [x] **LOCKSTEP** — live pointers/book/prerequisites/toolbox/doctrine mirror and finite data plane
+  agree; old checklist relocates unchanged to SPINE-evidence. Counts independently derive 9 open /
+  58 sealed. G1 remains 5/18, four structural families; CI observation precedes product .4a.3.
+  Fresh lesson question promoted in `decision_history-windows-retain-self-contained-bytes.md`.
 
 ### `SPINE.19.1` — the closed defects are sealed, so the open ones are what a reader meets
 
@@ -841,3 +888,10 @@ placeholder box (defect D15).
 - `2026-10-01`: `.21a` discharges the recurring cleanup before the next product slice crosses the
   24-hour mark. Six regenerable roots + 255 strays removed, residue/tracked-deletion proof clean;
   workflows regenerate successfully. Prior cleanup evidence moves unchanged; product frontier .4.
+
+- `2026-10-01`: .19.2 retains all 64 source full files exactly; D65/D68 closed; local archive
+  refusals/source proof and strict Rust/WASM/book pass. Full probes/staged gate logged in current
+  checklist: sequential 23 suites and staged gate green, rc=0. .19.2v owns exceptional-push CI
+  observation before return to G1 .4a.3.
+
+| `SPINE.19.2` | `STITCHCAD-SPINE-0019b (leaf SPINE.19.2): retain bounded history in self-contained byte-identical windows` | 64 exact source files; 26 archive arms; 23 full suites; staged gate green; CI observation .19.2v |

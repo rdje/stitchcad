@@ -58,8 +58,10 @@ set -uo pipefail
 export LC_ALL=C
 ROOT="$(git rev-parse --show-toplevel)"; cd "$ROOT"
 
-WORK="${TMPDIR:-$ROOT/target/scratch}/changelog_ledger_probes"
+WORK="$ROOT/target/scratch/changelog_ledger_probes"
 rm -rf "$WORK"; mkdir -p "$WORK"; trap 'rm -rf "$WORK"' EXIT
+bash scripts/history_archive.sh materialize target/scratch/changelog_ledger_probes/logical >/dev/null || exit 1
+VERIFIED_HISTORY="$WORK/logical/docs/history"
 
 pass=0; fail=0
 ok()  { printf '  ✓ %-11s %s\n' "$1" "$2"; pass=$((pass+1)); }
@@ -79,6 +81,7 @@ EOF
 ledger_verdicts() {
   local root="$1" order="${2:-}" exempt="${3:-/dev/null}"
   local log="$root/CHANGELOG.md" hist="$root/docs/history"
+  [ "$root" != "$ROOT" ] || hist="$VERIFIED_HISTORY"
   local live sealed ids id pos prev prevpos rc detail dup f base
   [ -f "$log" ] || { printf 'POINTER FAIL no CHANGELOG.md at %s\n' "$root"; return; }
 
@@ -192,10 +195,18 @@ ledger_verdicts() {
 mkroot() { # a synthetic root: the real ledger copied, to be broken in exactly one way
   local d="$1"; rm -rf "$d"; mkdir -p "$d/docs/history"
   cp "$ROOT/CHANGELOG.md" "$d/CHANGELOG.md"
-  for f in "$ROOT"/docs/history/*.md; do [ -f "$f" ] && cp "$f" "$d/docs/history/"; done
+  for f in "$VERIFIED_HISTORY"/*.md; do [ -f "$f" ] && cp "$f" "$d/docs/history/"; done
 }
 REAL_ORDER="$WORK/real_order.txt"
 git log --format='%s' | grep -oE 'STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' | awk '!s[$0]++' > "$REAL_ORDER"
+# Synthetic copies need the real tree's derived pending newest entry too; their
+# own paths are not staged, so they cannot derive it with git diff themselves.
+newest="$(grep -m1 -oE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$ROOT/CHANGELOG.md" | sed 's/^## //')"
+if ! grep -qx -- "$newest" "$REAL_ORDER" && \
+   git diff HEAD -- CHANGELOG.md | grep -q "^+## $newest "; then
+  { printf '%s\n' "$newest"; cat "$REAL_ORDER"; } > "$WORK/pending-order.txt"
+  mv "$WORK/pending-order.txt" "$REAL_ORDER"
+fi
 
 arm() { # $1 name · $2 rule that must FAIL, or "-" for "everything holds" · $3 root · $4 order · $5 exempt
   local out
@@ -286,9 +297,17 @@ fi
 
 # ---------------------------------------------------------------- COVERAGE has teeth
 D="$WORK/coverage"; mkroot "$D"
-seg="$(ls "$D"/docs/history/stitchcad-changelog-part*.md | tail -1)"
-printf '\n- **Coverage:** from `STITCHCAD-NOTHING-9999` through `STITCHCAD-NOTHING-9998`\n' >> "$seg"
-arm COVERAGE-RED COVERAGE "$D" "$REAL_ORDER" "$WORK/no_exempt.tsv"
+seg="$D/docs/history/stitchcad-changelog-part2.md"
+# Replace the declaration the checker actually reads, preserve the D30 exemption.
+# Previously appending a second declaration left the first intact and passed only
+# because the unrelated immutable part1 correction was deliberately unexempted (D68).
+sed 's/\*\*Coverage:\*\*.*/**Coverage:** STITCHCAD-NOTHING-9999/' "$seg" > "$D/broken.md"
+mv "$D/broken.md" "$seg"
+out="$(ledger_verdicts "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT")"
+if grep -q '^COVERAGE FAIL stitchcad-changelog-part2.md' <<<"$out" && \
+   [ "$(grep -c ' FAIL ' <<<"$out")" -eq 1 ]; then
+  ok COVERAGE-RED "only the mutated first declaration in part2 is refused"
+else bad COVERAGE-RED "the actual coverage mutation was not the sole refusal" "$out"; fi
 
 # ---------------------------------------------------------------- POINTER has teeth
 D="$WORK/pointer"; mkroot "$D"

@@ -3,8 +3,7 @@
      gen_knowledge_map.sh embeds this section verbatim; the task-tree and decision sections
      are generated automatically. -->
 
-Entries are orientation-sized — path, what it is, where to enter, owner — because the map is a projection
-sharing its ceiling with a line per record and per tree: `decision_knowledge-map-entries-are-orientation-sized.md`.
+Entries give paths, entry points and owners.
 
 - `crates/sc-units/` — fixed-point units/conversions and typed tolerances/errors; wasm-safe. Entry `crates/sc-units/src/lib.rs`, tests
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.

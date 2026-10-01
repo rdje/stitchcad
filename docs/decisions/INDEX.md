@@ -53,3 +53,4 @@ Records carry an `answers:` line so a question can find them — that is what ma
 | [`decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`](decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md) | `decision` | copy-addressed spans, disjoint self-seams, explicit direction/ease/stops; physical validation remains deferred |
 
 | [`decision_length-declarations-retain-state-and-provenance.md`](decision_length-declarations-retain-state-and-provenance.md) | `decision` | canonical length/state/source inputs; unknown/derived give no numeric fallback; evidence truth and policy remain later proofs |
+| [`decision_history-windows-retain-self-contained-bytes.md`](decision_history-windows-retain-self-contained-bytes.md) | `decision` | bounded self-contained history windows preserve every logical path and byte; verify reconstruction before retiring copies |

@@ -24,7 +24,7 @@ sealed out (defect **D52**, fixed with the invocations they should have carried)
 
 | Segment | Coverage | Sealed identity |
 | --- | --- | --- |
-| [`g0-contract-evidence-part1.md`](../history/stitchcad-g0-contract-evidence-part1.md) | the first 10 completed leaves, `G0-CONTRACT.2` … `G0-CONTRACT.4b` | 560 lines, 52573 bytes, `sha256:cf35caab…` |
+| [`g0-contract-evidence-part1.md`](../history/window1.md#stitchcad-g0-contract-evidence-part1md) | the first 10 completed leaves, `G0-CONTRACT.2` … `G0-CONTRACT.4b` | 560 lines, 52573 bytes, `sha256:cf35caab…` |
 
 The live window below holds the more recent checklists. When it passes the `tasks_collection` per-part
 health again, the oldest are sealed the same way, and the `DESCRIPTOR` rule of

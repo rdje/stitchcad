@@ -19,6 +19,8 @@
 # | `LIVE-DOC-SIZE` | every tracked live document is classified in the containment data plane with an owner, lifecycle, health target and inclusive ceiling; every route ends at a classified destination; and the resulting TREE is inside those bounds (`LIVE_DOCUMENT_SIZE_CONTAINMENT.md`) | `scripts/check_live_doc_size.sh` |
 # | `TABLE-CODE-PIPE` | a staged `.md` table row carries no raw pipe inside a code span — a renderer splits the cell there and drops the rightmost one silently, which the inherited arity checker cannot see because it treats a code span as protective (defects D22 settled by a rendered page, D47 owned here) | `scripts/check_table_code_pipes.sh` |
 #
+# | `ARCHIVE-RETENTION` | complete self-contained retained bytes, stable logical identities, immutable windows and independent resident/decoded pressure | `scripts/check_archive_retention.sh` |
+#
 # Adding a doctrine: write `scripts/check_<name>.sh` (cheap, deterministic, self-describing, with
 # `--self-test` arms including a control seen RED), append its row above, and register it in
 # PROJECT_DOCTRINES below.
@@ -30,6 +32,7 @@ PROJECT_DOCTRINES=(
   "FRESH-ACCEPTANCE-EVIDENCE|scripts/check_fresh_acceptance_evidence.sh"
   "LIVE-DOC-SIZE|scripts/check_live_doc_size.sh"
   "TABLE-CODE-PIPE|scripts/check_table_code_pipes.sh"
+  "ARCHIVE-RETENTION|scripts/check_archive_retention.sh"
 )
 
 fails=0

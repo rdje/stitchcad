@@ -1,0 +1,397 @@
+{
+  "version": 1,
+  "id": "window1",
+  "source_revision": "bf29b031033ad7ce198db0a02a5c1d205d5594aa",
+  "created": "2026-10-01",
+  "owner": "SPINE.19.2",
+  "reason": "D65: consolidate the full immutable 64-file history capture before working-file capacity blocks product retention.",
+  "payload": "docs/history/payloads/8c5f5999a53c5379b9d6a1e78a242108586458d58eb64b71833d1013a9babb59.tar.gz",
+  "payload_sha256": "8c5f5999a53c5379b9d6a1e78a242108586458d58eb64b71833d1013a9babb59",
+  "catalog": "docs/history/window1.md",
+  "members": [
+    {
+      "path": "docs/history/bedrock-scaffold-changelog.md",
+      "lines": 174,
+      "bytes": 12794,
+      "sha256": "7207e5d66cb18d151c40433cbe4890a827ff2bcfab7c37a7c5b0150236ce6999"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part1.md",
+      "lines": 381,
+      "bytes": 31336,
+      "sha256": "7739fc9900a981db724b36bf9b4177a5d33f3e6a5a3ce131a9ed3dc7a2bb8b35"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part10.md",
+      "lines": 90,
+      "bytes": 7736,
+      "sha256": "9dbed7438f6efc21bad4c24ab4fa4e6cf5bec7492b775dbc8d0f26bc669ac6d7"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part11.md",
+      "lines": 63,
+      "bytes": 5571,
+      "sha256": "b100c0309532391f1eca354b94fa3ab70887645b6b6bb32e49e0c46b6044c0a0"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part12.md",
+      "lines": 100,
+      "bytes": 8867,
+      "sha256": "2a9a4a674c30f325ff79efec2f718723ef789d1e90b293c5d5997a4ad3d7bf90"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part13.md",
+      "lines": 92,
+      "bytes": 8422,
+      "sha256": "1ee60cc6a7fc23dd0d9a4363463581b7ade70f9ff6d8edef67b8546f1000146d"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part14.md",
+      "lines": 49,
+      "bytes": 4203,
+      "sha256": "3d06effbf968b2061e8313738248bf7545416b184fec0745b1fd469a3c26685f"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part15.md",
+      "lines": 34,
+      "bytes": 2711,
+      "sha256": "d17e53fc2fe4c8dabf6e64b9fc9b11e719a3896dd2f507f5564d30187b9ced50"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part16.md",
+      "lines": 38,
+      "bytes": 3036,
+      "sha256": "28ab88e0c81db9f831e56ed3b78d8de57880eca91c9733043009fac4f34f41d6"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part17.md",
+      "lines": 49,
+      "bytes": 4181,
+      "sha256": "b01cf0f5a3f26815239b9373395b98d94426fa0f654b6a90b4b11019d3e0d7a3"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part18.md",
+      "lines": 49,
+      "bytes": 4244,
+      "sha256": "1dfff467862c3fd800351b9b4f26a56f98db41d81e4ab3d8021527218c3ca31e"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part19.md",
+      "lines": 32,
+      "bytes": 2297,
+      "sha256": "6228c990fb68ffdca7c09609170c3195e5547a811f14167fde459010d1820ab0"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part2.md",
+      "lines": 177,
+      "bytes": 14549,
+      "sha256": "60dae2669632df2db278004cae5882edef213bb587bead1b2cbb9ad8ab98abc1"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part20.md",
+      "lines": 30,
+      "bytes": 2126,
+      "sha256": "a734975f5b16e4f086a363bc55dc420d09ad723109f6d9d814337c3b6e901a4b"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part21.md",
+      "lines": 32,
+      "bytes": 2357,
+      "sha256": "679f58802e58eed3aaeeb17eb167e1f4bf2c98b048cb31d861fdf6ddc69a086c"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part22.md",
+      "lines": 35,
+      "bytes": 2632,
+      "sha256": "9517dc64af34745b6776389ef7b97875e5b2285a888823411d4de0e73acd77e5"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part23.md",
+      "lines": 59,
+      "bytes": 4604,
+      "sha256": "e0f3d719afea5a71072faade6c0721992426f7ba0a4beb5ec9db78577c6df40b"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part3.md",
+      "lines": 170,
+      "bytes": 14010,
+      "sha256": "0884e34ec104b5c1937796e86bdc8e075a77c83718539f428a0470dad8c2798f"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part4.md",
+      "lines": 199,
+      "bytes": 17028,
+      "sha256": "0394dd7bb549e6b28d4d787e9c83d26deb2e1cd19a26961bd6a64da41c6e4b77"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part5.md",
+      "lines": 103,
+      "bytes": 9021,
+      "sha256": "c013b35c95f1b07f33d78e412c86c578a9d25db7cf2407653ea09a38b4207a96"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part6.md",
+      "lines": 113,
+      "bytes": 9724,
+      "sha256": "8a528db45d4180edcc4dcafaddf9ca5a0c53b974ebef20bde354ad60c95ecbfd"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part7.md",
+      "lines": 123,
+      "bytes": 11074,
+      "sha256": "3aaa518f00eda3a83aff29ad02de16d585115f71ab93188cd32afe54da796971"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part8.md",
+      "lines": 121,
+      "bytes": 10629,
+      "sha256": "b8c35bc82cd9faa785ad95cb3d4f03b043ba3e6d84608ecd1736f16700d8165a"
+    },
+    {
+      "path": "docs/history/stitchcad-changelog-part9.md",
+      "lines": 111,
+      "bytes": 9831,
+      "sha256": "549e55dacb0bb764e47d02b5e335b8a405c9a2811d781fd2629580d854d343b9"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part1.md",
+      "lines": 643,
+      "bytes": 54821,
+      "sha256": "48393567df85954b2015229a85a73877711a78026912c6045973e353f30a7439"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part10.md",
+      "lines": 19,
+      "bytes": 1350,
+      "sha256": "cd473a24634958357fa12a82b60299b9210ba38227d4c7a7965759febd6fce75"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part11.md",
+      "lines": 21,
+      "bytes": 1480,
+      "sha256": "8049467e2f6de242743402bb941ab9d9276d25f7fa555862bc4dd6bd5cd97ad6"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part2.md",
+      "lines": 30,
+      "bytes": 2386,
+      "sha256": "3207d72ab5942399e1e9df5817316562926b67e544cf5822c504dc6f283e57c6"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part3.md",
+      "lines": 26,
+      "bytes": 1977,
+      "sha256": "e663c08b24d042c600993d8e5d6c2abe0b2dc862b5909a5cea509a4666864a6c"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part4.md",
+      "lines": 27,
+      "bytes": 1994,
+      "sha256": "4222390587a58a90c2b357186784bc657e9552e5a7b9f475bb5ac9c39eff0f2a"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part5.md",
+      "lines": 27,
+      "bytes": 2010,
+      "sha256": "9e21f8927ae79d9b129cc7f43b5e33ab09a02a453d7731daaac64a4a6b8281c2"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part6.md",
+      "lines": 24,
+      "bytes": 1813,
+      "sha256": "aa0055919bb3f3f96b447731f96c5cca87da23c85555d6054a84aaa092386eb2"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part7.md",
+      "lines": 54,
+      "bytes": 4746,
+      "sha256": "6c783bc054698288cf58883592e2abffe3e5a3d13e2f8f9dbcc2e891eed251a9"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part8.md",
+      "lines": 24,
+      "bytes": 1757,
+      "sha256": "22952ee3c583926822b2625d5702e5cc18c49e2a6db81c596999de55b3280dec"
+    },
+    {
+      "path": "docs/history/stitchcad-defects-part9.md",
+      "lines": 25,
+      "bytes": 1938,
+      "sha256": "cede4f349f26110279fc02107f8c438a17367411f01fd1e1d1e4ad036234ee4d"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part1.md",
+      "lines": 87,
+      "bytes": 6888,
+      "sha256": "b69e79839e0d84152009e2675cb8e7034eaf0fa076bea111bf0c418de3db1aaa"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part10.md",
+      "lines": 26,
+      "bytes": 1973,
+      "sha256": "b7efc039ba2ec0575016d442ad6aacf864c4be8e1a0e2fb036757eb77fb3a214"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part11.md",
+      "lines": 26,
+      "bytes": 1966,
+      "sha256": "25821d06df2f6ea8b60e74eb3924376ead8bcb8487d5997ef380b6a554e131fe"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part12.md",
+      "lines": 27,
+      "bytes": 2130,
+      "sha256": "20d34626264cd7b7e97bf2bb8a128592f511cb704a3c61a31b2572ab91d4fb39"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part13.md",
+      "lines": 29,
+      "bytes": 2162,
+      "sha256": "6c7f7c5a532a59d2f690fc5e2d954358f16f2051188f4a5b9213486277d66d91"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part14.md",
+      "lines": 35,
+      "bytes": 2785,
+      "sha256": "9a076893dc3039ee1bb7eb54bb38e65a95fb61b19b5cfdff5f383e638ffd7d18"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part15.md",
+      "lines": 26,
+      "bytes": 1884,
+      "sha256": "e600c33a400d6cc2e51701f4d1ef57f890a7c51dd5a4436d009fd1a1bdfc1ec5"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part16.md",
+      "lines": 24,
+      "bytes": 1733,
+      "sha256": "c4a9ce8942556417782a1643b4a0b4f6a5f710badd3d8d09c14a07dfdfc16b10"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part17.md",
+      "lines": 23,
+      "bytes": 1584,
+      "sha256": "c10144e7c259459ccf4d3c4d3e454f8d100df9f789cfa347c5de6dccbf51cdb8"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part18.md",
+      "lines": 23,
+      "bytes": 1665,
+      "sha256": "0316c25d7bb76332cf2649715f2d9239b762f6a7c07081e6c0e71dd804cd4f8c"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part19.md",
+      "lines": 29,
+      "bytes": 2202,
+      "sha256": "71580d9b9569325291c775f4fd3dbad7ad002dfbf9794a9832ed8d1d32c60505"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part2.md",
+      "lines": 79,
+      "bytes": 7014,
+      "sha256": "f802749c4ea15fd7ffd3bae824ec11d0219f5dc2f9f98023d07419a9e639ead9"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part20.md",
+      "lines": 26,
+      "bytes": 1918,
+      "sha256": "37166df3a21b497d6b86b692350682ede37c609d27e757f35f77e8854dbf5534"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part21.md",
+      "lines": 24,
+      "bytes": 1749,
+      "sha256": "0405c20065274f2c8d97f32366ace2b90c84b4d62c558a64ec911358c4850ae9"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part22.md",
+      "lines": 24,
+      "bytes": 1729,
+      "sha256": "912026fe63ba881a0fa8196f8df90460d9a0e3b9f7f4e98c83e94cb6f01fcd79"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part23.md",
+      "lines": 36,
+      "bytes": 2729,
+      "sha256": "5cdd70f1bfe87015fbdc164d681a767d2a797e68be4b5f60b6cb0a2844a1f742"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part24.md",
+      "lines": 24,
+      "bytes": 1691,
+      "sha256": "d7c9f31155b30371e7cb87a17c0d73c797361ed4e491458f94cc715929f469d0"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part25.md",
+      "lines": 39,
+      "bytes": 2976,
+      "sha256": "1720ca856b0f07ae4124fea3435d22e407c732740f3c2eb61841b1961259d68e"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part3.md",
+      "lines": 67,
+      "bytes": 5803,
+      "sha256": "03261fc3966a5df3abae8c5d395dfbff620060f40181936f88032cbf9aee5053"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part4.md",
+      "lines": 59,
+      "bytes": 4815,
+      "sha256": "7b55616f28e1a134b82ad48368e053272a86bd790ec3133bbeff288e85869b91"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part5.md",
+      "lines": 60,
+      "bytes": 5076,
+      "sha256": "2036209dcba39a887f78e0436022abd590ea773e3e0879d701d012ea677eaca2"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part6.md",
+      "lines": 73,
+      "bytes": 6506,
+      "sha256": "b10ea03ae5554b8ce674710d11d9e533f6b96f04219d50f8b7f155fc32b14106"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part7.md",
+      "lines": 73,
+      "bytes": 6346,
+      "sha256": "779b9f73c242416bdd5e58b497ac78714a9da519b223b64c4c4d0386dec01b6b"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part8.md",
+      "lines": 46,
+      "bytes": 3817,
+      "sha256": "5ffebd5cfc7f337443381b0d076ffe7ae52158b1fd0b40ed4d1f6ba27d143303"
+    },
+    {
+      "path": "docs/history/stitchcad-devnotes-part9.md",
+      "lines": 26,
+      "bytes": 1932,
+      "sha256": "02a79b2b889c363b050d93769aa1fc681d7066e3d5eb1aaf8bafd73ca397ea89"
+    },
+    {
+      "path": "docs/history/stitchcad-g0-contract-changelog-part1.md",
+      "lines": 104,
+      "bytes": 9246,
+      "sha256": "2ff9bb54a17de6973e2796123962a66d564d7a86d46722d74babf805ff7ab894"
+    },
+    {
+      "path": "docs/history/stitchcad-g0-contract-changelog-part2.md",
+      "lines": 69,
+      "bytes": 6161,
+      "sha256": "e24a0fff8167fa6634cae4e8a373542b902c6024359da3d8c086fc883a8adcbd"
+    },
+    {
+      "path": "docs/history/stitchcad-g0-contract-decisions-part1.md",
+      "lines": 133,
+      "bytes": 11441,
+      "sha256": "2ec03375cd516fd9d3df503469c53e22d28ab9546fa58a32dc8640049c608aa2"
+    },
+    {
+      "path": "docs/history/stitchcad-g0-contract-evidence-part1.md",
+      "lines": 578,
+      "bytes": 53782,
+      "sha256": "0b29d38e2bf8bb66940a6576dd6d438f713924c0305d5ea54b930b4ac5fcce50"
+    }
+  ]
+}

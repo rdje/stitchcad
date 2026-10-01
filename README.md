@@ -45,7 +45,8 @@ Crates appear as their stage starts; nothing below exists before its gate.
 
 ## Quick start
 
-Requires a stable Rust toolchain (`rust-toolchain.toml`), and `mdbook` for the book.
+Requires a stable Rust toolchain (`rust-toolchain.toml`), `mdbook` for the book, and Python 3.9+
+(standard library only) for repository history verification/retrieval.
 
 ```bash
 git config core.hooksPath .githooks   # activate the discipline gates (once per clone)

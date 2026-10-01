@@ -149,31 +149,34 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 (directive §15 — finding a defect creates the obligation to resolve it).
 
 **This section holds the OPEN defects.** The closed ones are sealed in
-[`docs/history/stitchcad-defects-part1.md`](../history/stitchcad-defects-part1.md)
+[`docs/history/stitchcad-defects-part1.md`](../history/window1.md#stitchcad-defects-part1md)
 (44 entries, 624 lines, 53323 bytes, `sha256:1897bde0…`) and
-[`stitchcad-defects-part2.md`](../history/stitchcad-defects-part2.md)
+[`stitchcad-defects-part2.md`](../history/window1.md#stitchcad-defects-part2md)
 (D55; 19 lines, 1834 bytes, `sha256:e8c7c2f0…`) and
-[`stitchcad-defects-part3.md`](../history/stitchcad-defects-part3.md)
+[`stitchcad-defects-part3.md`](../history/window1.md#stitchcad-defects-part3md)
 (D56; 15 lines, 1425 bytes, `sha256:84eb4014…`) and
-[`stitchcad-defects-part4.md`](../history/stitchcad-defects-part4.md)
+[`stitchcad-defects-part4.md`](../history/window1.md#stitchcad-defects-part4md)
 (D58; 16 lines, 1458 bytes, `sha256:4406d117…`) and
-[`stitchcad-defects-part5.md`](../history/stitchcad-defects-part5.md)
+[`stitchcad-defects-part5.md`](../history/window1.md#stitchcad-defects-part5md)
 (D59; 16 lines, 1457 bytes, `sha256:bdf6db85…`) and
-[`stitchcad-defects-part6.md`](../history/stitchcad-defects-part6.md)
+[`stitchcad-defects-part6.md`](../history/window1.md#stitchcad-defects-part6md)
 (D60; 13 lines, 1268 bytes, `sha256:3bc74c83…`) and
-[`stitchcad-defects-part7.md`](../history/stitchcad-defects-part7.md)
+[`stitchcad-defects-part7.md`](../history/window1.md#stitchcad-defects-part7md)
 (D35, D57; 43 lines, 4172 bytes, `sha256:79373c0f…`) and
-[`stitchcad-defects-part8.md`](../history/stitchcad-defects-part8.md)
+[`stitchcad-defects-part8.md`](../history/window1.md#stitchcad-defects-part8md)
 (D61; 13 lines, 1214 bytes, `sha256:af043224…`) and
-[`stitchcad-defects-part9.md`](../history/stitchcad-defects-part9.md)
+[`stitchcad-defects-part9.md`](../history/window1.md#stitchcad-defects-part9md)
 (D62, D63; 14 lines, 1370 bytes, `sha256:5c7cd18f…`) and
-[`stitchcad-defects-part10.md`](../history/stitchcad-defects-part10.md)
+[`stitchcad-defects-part10.md`](../history/window1.md#stitchcad-defects-part10md)
 (D64; 8 lines, 801 bytes, `sha256:a33e5ff9…`) and
-[`stitchcad-defects-part11.md`](../history/stitchcad-defects-part11.md)
-(D66; 10 lines, 919 bytes, `sha256:4d46b154…`), under D46's remedy. Every cited defect
+[`stitchcad-defects-part11.md`](../history/window1.md#stitchcad-defects-part11md)
+(D66; 10 lines, 919 bytes, `sha256:4d46b154…`) and
+[`stitchcad-defects-part12.md`](../history/stitchcad-defects-part12.md)
+(D65/D68; 20 lines, 1830 bytes, `sha256:0693a241…`), under D46's remedy. Every cited defect
 resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
-`grep -h '^- \*\*D[0-9]' docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by
+`bash scripts/history_archive.sh materialize target/defect-census` then
+`grep -h '^- \*\*D[0-9]' target/defect-census/docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by
 moving to a new sealed segment in the commit that fixes it, which is the per-defect status token D38 asks
 for, arrived at by structure instead of by a new field.
 
@@ -194,17 +197,6 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Owner/schedule: `SPINE.22`, P1; project-slot fresh/scoped decision adapter plus calibrated old/
     unrelated-decline red arms. Until it lands, each new lesson must carry a fresh answers question
     or a current-leaf explicit decline; G1-SLICE.4a.2b does so. Preserve the neutral source boundary.
-
-- **D65** — sealed-history file count is approaching its enforced 64-file ceiling; normal
-  per-slice retention will soon block product commits even though each segment is small.
-  - Reproduce: `git ls-files -- 'docs/history/*.md' | wc -l` → 59 at `2db924b`; the two seals
-    owned by G1-SLICE.4a.1 bring it to 61. surfaces.tsv declares 64; check_live_doc_size.sh
-    compares measured collection cardinality against that ceiling, with no archive transition.
-  - Impact: three ordinary seals consume the remaining capacity; nesting files cannot remedy it
-    because git's glob crosses directories. Raising the ceiling would merely defer unbounded growth.
-  - Owner/schedule: `SPINE.19.2`, before a required product seal would exceed the 64-file limit.
-    Preserve exact historical bytes, order, identifiers and complete portable retrieval; bound both
-    archive descriptors and retained storage under the adopted archive contract. No ceiling increase.
 
 - **D34** — the layer-B index reported a stale frontier: `docs/TASK_TREE.md` named `G0-CONTRACT.4` as the
   tree's next leaf and its execution-order line said "`G0-CONTRACT.4`–`.17`" after `.5` and `.6` had both

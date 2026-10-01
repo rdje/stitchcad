@@ -851,3 +851,29 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   `MEMORY.md` and `LIVE_STATUS.md` are unchanged: a cleanup moves no product frontier and closes no area.
   Lesson promotion: declined (no new dated lesson — the run is a cadence discharge, and the reusable rule
   "a recurring obligation needs a recurring leaf" is recorded in this leaf's goal rather than duplicated).
+
+### `SPINE.21a` — recurring cleanup before the next product slice
+
+- [x] **REPRODUCE / ISSUE** — prior run was 2026-09-30 19:00 UTC; the 24-hour mark falls inside
+  the next product slice. `du -sk target docs/book/book` → `663084`, `4832`, `rc=0`;
+  release/debug incremental/deps artifact scan → `237` bin/log files, all incremental caches.
+- [x] **ROOT CAUSE (WHY + WHERE)** — Cargo/probe/book outputs accumulate as expected; recurring
+  .21 owns the obligation. `git ls-files` census → `0` tracked artifact-shaped files, `rc=0`;
+  `check_no_background_jobs.sh` → `handoff: OK`, `rc=0`; candidate-tree `.git` scan → none.
+  Deleting ignored regenerable outputs can reclaim storage without touching tracked input.
+- [x] **FIX** — removed six declared scratch/incremental/book roots and 255 ignored project strays;
+  removed roots: target doctrine/scratch/tmp, host + WASM incremental caches and rendered book.
+  Checked tracked descendants and symlinks before deletion. Kept built dependencies/shared stores;
+  record overwrites its latest entry and product frontier stays G1 .4.
+- [x] **ADDRESSED (verified)** — `du -sk target` immediately after deletion → `328736`, `rc=0`:
+  `339180` KB reclaimed including book. Independent `find` artifact census → `0`, `rc=0`;
+  every planned path absent and `git status --porcelain` → `0` tracked deletions. Release/deps
+  bin/log census was `0` each. Rebuild regenerates scratch, incremental caches and rendered book.
+- [x] **NO REGRESSION** — `make check` → strict fmt/clippy + `287` tests green; `make wasm`/`book`
+  → green, warning-free; full `make probes` → `22 suite(s) green`; ledger → `9 pass / 0 fail`;
+  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; staged `make gate` →
+  `=== all doctrines green ===`, all `rc=0`. Completed prior cleanup checklist compares unchanged to HEAD.
+- [x] **LOCKSTEP** — cleanup record, recurring leaf/logs, bounded book upkeep, changelog rollover,
+  and unchanged product resume/frontier agree. LIVE_STATUS still G1 5/18, four structural families,
+  8 open / 54 sealed; no area status changes. Memory continues to point to G1 .4.
+  promotion: declined (routine cadence discharge; ownership/safe-removal rules already canonical).

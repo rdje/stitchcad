@@ -494,7 +494,7 @@ gate removing.
 
 Earlier entries — leaves `.1`, `.4`, `.6`, `.7`, `.13d`, `.4b`, `.14`, `.4c` and the two that opened this
 section — are sealed in
-[`docs/history/stitchcad-g0-contract-decisions-part1.md`](../history/stitchcad-g0-contract-decisions-part1.md)
+[`docs/history/stitchcad-g0-contract-decisions-part1.md`](../history/window1.md#stitchcad-g0-contract-decisions-part1md)
 (112 lines, 10079 bytes, `sha256:8d22b367…`), under the remedy defect D49 names for a tree file's ledger tail.
 
 - `2026-09-30`, leaf `.9`: **the formula language's tables are its test suite.** The census's reference
@@ -988,7 +988,7 @@ a placeholder shadows real evidence and falsely rejects honest work (defect D15,
 
 Older entries — `.14c` and `.19`, `.4c`, `.14` and `.4b`, and below them everything back to the tree's
 creation — are sealed in
-[`docs/history/stitchcad-g0-contract-changelog-part2.md`](../history/stitchcad-g0-contract-changelog-part2.md)
+[`docs/history/stitchcad-g0-contract-changelog-part2.md`](../history/window1.md#stitchcad-g0-contract-changelog-part2md)
 (48 lines, 4651 bytes, `sha256:00682c0c…`) and, for the oldest of them,
-[`…changelog-part1.md`](../history/stitchcad-g0-contract-changelog-part1.md), under the remedy defect D49
+[`…changelog-part1.md`](../history/window1.md#stitchcad-g0-contract-changelog-part1md), under the remedy defect D49
 names for a tree file's ledger tail.

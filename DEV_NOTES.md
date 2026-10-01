@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — archive capacity and retrieval must be verified together
+
+- D65's 64-file limit blocks ordinary rollover despite a small decoded archive. One immutable
+  content-addressed window retains all 64 original full files; bounded manifests/catalog preserve
+  logical addresses. Copy/verify/use/source reconstruction precede exact working-copy retirement.
+- Python standard-library maintenance tool uses bounded decompression and safe in-memory record
+  reads, no tar extraction/network/old-Git dependency. Fresh same-volume target materialization
+  refuses symlinks, nested repositories and overwrite. Hook/CI checks committed window immutability.
+- Original per-part/aggregate bounds still govern decoded records; compressed resident history and
+  finite control/payload collections are counted independently. Compression cannot hide growth.
+- Existing ledger probes consume materialized logical records. D68: original coverage mutation
+  appended a declaration grep -m1 ignored and passed on unexempted D30. Replace the actual first
+  declaration in part2 and require exactly that refusal with D30's exemption retained.
+- Calibrated archive refusals, exact source reproof, strict Rust/WASM/book/full probes and staged
+  gates validate the transition. HEAD immutability mutation awaits first transition commit;
+  .19.2v owns observed remote verdict. No source/physical/release truth is inferred from a digest.
+- promotion: promoted by `decision_history-windows-retain-self-contained-bytes.md`.
+
 ## _(2026-10-01)_ — documented procedure content lives in one canonical record
 
 - Measurement metadata holds stable name/token/unit/kind and declaration/landmark/procedure ids.
@@ -100,69 +118,43 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   inspection remains available even while current placement repairs block execution.
 - promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`'s button/hole source.
 
-## _(2026-10-01)_ — closure counts derive from physical instances and current placements stay canonical
-
-- Stable instance ids survive ordering; nonempty physical pairs derive one typed Count, without a
-  separately authored quantity. Component placement reuse and ambiguous supplied ids refuse rather
-  than inflate counts or select an arbitrary target. Zipper length is positive authored content or
-  symbolic origin; hook/bar sizes retain logical declarations and no vendor/default size.
-- Closure borrows current placements and validates every copy/Piece/anchor/direction context.
-  Cached placement birth approval cannot certify an interior deletion or missing copy. Fly scope
-  refuses before geometry with env_fly and request/gap/G7, preserving the declared envelope.
-- Ten contracts, Count-boundary unit and privacy pass; four independent mutations fail red. Strict
-  lint found a large nested target error; boxing that evidence keeps all typed refusals readable and
-  compact. Restored Rust/WASM/book pass; physical hardware/size resolution remains later work.
-- promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`'s closure instances.
-
-## _(2026-10-01)_ — physical placement validation follows current material without changing identity
-
-- A notion placement names a stable physical copy and retains its original source Piece binding.
-  Reordering preserves identity; removal or source reassignment cannot transfer hardware to a peer.
-  Reflection is separate from source-frame journal direction and supplies no inferred coordinates.
-- Birth requires live uniquely owned anchoring; current validation follows historical references and
-  preserves split choices/deletions as CurrentUnresolved evidence. The shared helper maps birth errors
-  back to their existing variants, preserving Notch/TurnPoint contracts. A Piece id surviving an edit
-  is insufficient: current resolved anchor and whole direction ownership must still be checked.
-- Ten contracts + privacy pass. Four independent mutations fail red for copy binding, range ownership,
-  historical resolution and anchor ownership; restored strict Rust/WASM/book pass. Raw queries are
-  independent of registry/release approval. Hem checklist and verification history relocate unchanged.
-- promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`'s notion placement.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
 | --- | --- | --- |
-| [`devnotes-part1.md`](docs/history/stitchcad-devnotes-part1.md) | the `2026-09-29` and `2026-09-04` lessons, plus the bootstrap entry | 66 lines, 5589 bytes, `sha256:d3b94e9a…` |
-| [`devnotes-part2.md`](docs/history/stitchcad-devnotes-part2.md) | the two oldest `2026-09-30` lessons (enumeration, and the vocabulary census) | 62 lines, 5915 bytes, `sha256:edcd0808…` |
-| [`devnotes-part3.md`](docs/history/stitchcad-devnotes-part3.md) | two `2026-09-30` lessons (two tables, one garment; a fixture internally right) | 50 lines, 4723 bytes, `sha256:fcca661d…` |
-| [`devnotes-part4.md`](docs/history/stitchcad-devnotes-part4.md) | two `2026-09-30` lessons (a blocked leaf splits; permission is no criterion) | 42 lines, 3706 bytes, `sha256:c2ac5791…` |
-| [`devnotes-part5.md`](docs/history/stitchcad-devnotes-part5.md) | two `2026-09-30` lessons (a rule whose only path is "don't"; a digest is about bytes) | 43 lines, 3977 bytes, `sha256:859ce981…` |
-| [`devnotes-part6.md`](docs/history/stitchcad-devnotes-part6.md) | two `2026-09-30` lessons (a spec's tables are its test suite; settle it with the artifact) | 55 lines, 5359 bytes, `sha256:129d50d8…` |
-| [`devnotes-part7.md`](docs/history/stitchcad-devnotes-part7.md) | three `2026-09-30` lessons (an arm that removes the rule; a synthetic input is a fixture; a RED arm asserts the refusal) | 57 lines, 5120 bytes, `sha256:13fd6c73…` |
-| [`devnotes-part8.md`](docs/history/stitchcad-devnotes-part8.md) | two `2026-09-30` lessons (source layout; i18n population) | 35 lines, 3196 bytes, `sha256:04ab285c…` |
-| [`devnotes-part9.md`](docs/history/stitchcad-devnotes-part9.md) | the `2026-09-30` certifying-artifact lesson | 15 lines, 1343 bytes, `sha256:bc7fae65…` |
-| [`devnotes-part10.md`](docs/history/stitchcad-devnotes-part10.md) | the `2026-09-30` shipped-work reconciliation lesson | 15 lines, 1380 bytes, `sha256:701d33f2…` |
-| [`devnotes-part11.md`](docs/history/stitchcad-devnotes-part11.md) | the `2026-09-30` property-test framework lesson | 15 lines, 1384 bytes, `sha256:ae04eadf…` |
-| [`devnotes-part12.md`](docs/history/stitchcad-devnotes-part12.md) | ontology slice decomposition | 16 lines, 1570 bytes, `sha256:a2f04e3d…` |
-| [`devnotes-part13.md`](docs/history/stitchcad-devnotes-part13.md) | injected identity lesson | 18 lines, 1612 bytes, `sha256:38e83349…` |
-| [`devnotes-part14.md`](docs/history/stitchcad-devnotes-part14.md) | persistent-identity lesson | 24 lines, 2230 bytes, `sha256:2b6aebd3…` |
-| [`devnotes-part15.md`](docs/history/stitchcad-devnotes-part15.md) | structural-piece lesson | 15 lines, 1334 bytes, `sha256:1b362d26…` |
-| [`devnotes-part16.md`](docs/history/stitchcad-devnotes-part16.md) | interval-coverage lesson | 13 lines, 1183 bytes, `sha256:fcf7c475…` |
-| [`devnotes-part17.md`](docs/history/stitchcad-devnotes-part17.md) | separate-pair-member lesson | 12 lines, 1049 bytes, `sha256:140c4c41…` |
-| [`devnotes-part18.md`](docs/history/stitchcad-devnotes-part18.md) | semantic-anchor/profile-binding lesson | 12 lines, 1102 bytes, `sha256:61a13500…` |
-| [`devnotes-part19.md`](docs/history/stitchcad-devnotes-part19.md) | physical-copy identity lesson | 18 lines, 1663 bytes, `sha256:c0e3c442…` |
-| [`devnotes-part20.md`](docs/history/stitchcad-devnotes-part20.md) | physical sewing-interval lesson | 15 lines, 1375 bytes, `sha256:34867dc9…` |
+| [`devnotes-part1.md`](docs/history/window1.md#stitchcad-devnotes-part1md) | the `2026-09-29` and `2026-09-04` lessons, plus the bootstrap entry | 66 lines, 5589 bytes, `sha256:d3b94e9a…` |
+| [`devnotes-part2.md`](docs/history/window1.md#stitchcad-devnotes-part2md) | the two oldest `2026-09-30` lessons (enumeration, and the vocabulary census) | 62 lines, 5915 bytes, `sha256:edcd0808…` |
+| [`devnotes-part3.md`](docs/history/window1.md#stitchcad-devnotes-part3md) | two `2026-09-30` lessons (two tables, one garment; a fixture internally right) | 50 lines, 4723 bytes, `sha256:fcca661d…` |
+| [`devnotes-part4.md`](docs/history/window1.md#stitchcad-devnotes-part4md) | two `2026-09-30` lessons (a blocked leaf splits; permission is no criterion) | 42 lines, 3706 bytes, `sha256:c2ac5791…` |
+| [`devnotes-part5.md`](docs/history/window1.md#stitchcad-devnotes-part5md) | two `2026-09-30` lessons (a rule whose only path is "don't"; a digest is about bytes) | 43 lines, 3977 bytes, `sha256:859ce981…` |
+| [`devnotes-part6.md`](docs/history/window1.md#stitchcad-devnotes-part6md) | two `2026-09-30` lessons (a spec's tables are its test suite; settle it with the artifact) | 55 lines, 5359 bytes, `sha256:129d50d8…` |
+| [`devnotes-part7.md`](docs/history/window1.md#stitchcad-devnotes-part7md) | three `2026-09-30` lessons (an arm that removes the rule; a synthetic input is a fixture; a RED arm asserts the refusal) | 57 lines, 5120 bytes, `sha256:13fd6c73…` |
+| [`devnotes-part8.md`](docs/history/window1.md#stitchcad-devnotes-part8md) | two `2026-09-30` lessons (source layout; i18n population) | 35 lines, 3196 bytes, `sha256:04ab285c…` |
+| [`devnotes-part9.md`](docs/history/window1.md#stitchcad-devnotes-part9md) | the `2026-09-30` certifying-artifact lesson | 15 lines, 1343 bytes, `sha256:bc7fae65…` |
+| [`devnotes-part10.md`](docs/history/window1.md#stitchcad-devnotes-part10md) | the `2026-09-30` shipped-work reconciliation lesson | 15 lines, 1380 bytes, `sha256:701d33f2…` |
+| [`devnotes-part11.md`](docs/history/window1.md#stitchcad-devnotes-part11md) | the `2026-09-30` property-test framework lesson | 15 lines, 1384 bytes, `sha256:ae04eadf…` |
+| [`devnotes-part12.md`](docs/history/window1.md#stitchcad-devnotes-part12md) | ontology slice decomposition | 16 lines, 1570 bytes, `sha256:a2f04e3d…` |
+| [`devnotes-part13.md`](docs/history/window1.md#stitchcad-devnotes-part13md) | injected identity lesson | 18 lines, 1612 bytes, `sha256:38e83349…` |
+| [`devnotes-part14.md`](docs/history/window1.md#stitchcad-devnotes-part14md) | persistent-identity lesson | 24 lines, 2230 bytes, `sha256:2b6aebd3…` |
+| [`devnotes-part15.md`](docs/history/window1.md#stitchcad-devnotes-part15md) | structural-piece lesson | 15 lines, 1334 bytes, `sha256:1b362d26…` |
+| [`devnotes-part16.md`](docs/history/window1.md#stitchcad-devnotes-part16md) | interval-coverage lesson | 13 lines, 1183 bytes, `sha256:fcf7c475…` |
+| [`devnotes-part17.md`](docs/history/window1.md#stitchcad-devnotes-part17md) | separate-pair-member lesson | 12 lines, 1049 bytes, `sha256:140c4c41…` |
+| [`devnotes-part18.md`](docs/history/window1.md#stitchcad-devnotes-part18md) | semantic-anchor/profile-binding lesson | 12 lines, 1102 bytes, `sha256:61a13500…` |
+| [`devnotes-part19.md`](docs/history/window1.md#stitchcad-devnotes-part19md) | physical-copy identity lesson | 18 lines, 1663 bytes, `sha256:c0e3c442…` |
+| [`devnotes-part20.md`](docs/history/window1.md#stitchcad-devnotes-part20md) | physical sewing-interval lesson | 15 lines, 1375 bytes, `sha256:34867dc9…` |
 
-| [`devnotes-part21.md`](docs/history/stitchcad-devnotes-part21.md) | directed-grainline lesson | 13 lines, 1212 bytes, `sha256:c31c3298…` |
+| [`devnotes-part21.md`](docs/history/window1.md#stitchcad-devnotes-part21md) | directed-grainline lesson | 13 lines, 1212 bytes, `sha256:c31c3298…` |
 
-| [`devnotes-part22.md`](docs/history/stitchcad-devnotes-part22.md) | per-edge allowance lesson | 13 lines, 1192 bytes, `sha256:1807ae98…` |
+| [`devnotes-part22.md`](docs/history/window1.md#stitchcad-devnotes-part22md) | per-edge allowance lesson | 13 lines, 1192 bytes, `sha256:1807ae98…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of
 `run_changelog_ledger_probes.sh` proves the digest afterwards.
 
-| [`devnotes-part23.md`](docs/history/stitchcad-devnotes-part23.md) | tuck/pleat and dart lessons | 25 lines, 2172 bytes, `sha256:ba5ee2a7…` |
+| [`devnotes-part23.md`](docs/history/window1.md#stitchcad-devnotes-part23md) | tuck/pleat and dart lessons | 25 lines, 2172 bytes, `sha256:ba5ee2a7…` |
 
-| [`devnotes-part24.md`](docs/history/stitchcad-devnotes-part24.md) | canonical gather lesson | 13 lines, 1160 bytes, `sha256:2a10a04e…` |
+| [`devnotes-part24.md`](docs/history/window1.md#stitchcad-devnotes-part24md) | canonical gather lesson | 13 lines, 1160 bytes, `sha256:2a10a04e…` |
 
-| [`devnotes-part25.md`](docs/history/stitchcad-devnotes-part25.md) | Hem and served-layer lessons | 28 lines, 2416 bytes, `sha256:a95d8c77…` |
+| [`devnotes-part25.md`](docs/history/window1.md#stitchcad-devnotes-part25md) | Hem and served-layer lessons | 28 lines, 2416 bytes, `sha256:a95d8c77…` |
+
+| [`devnotes-part26.md`](docs/history/stitchcad-devnotes-part26.md) | closure and notion-placement lessons | 27 lines, 2385 bytes, `sha256:b4b58e1b…` |

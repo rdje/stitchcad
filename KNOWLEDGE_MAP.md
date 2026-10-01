@@ -6,8 +6,7 @@
 
 ## Key subsystems
 
-Entries are orientation-sized — path, what it is, where to enter, owner — because the map is a projection
-sharing its ceiling with a line per record and per tree: `decision_knowledge-map-entries-are-orientation-sized.md`.
+Entries give paths, entry points and owners.
 
 - `crates/sc-units/` — fixed-point units/conversions and typed tolerances/errors; wasm-safe. Entry `crates/sc-units/src/lib.rs`, tests
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
@@ -69,6 +68,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_entity-identity-ulid-injected-generator.md`](docs/decisions/decision_entity-identity-ulid-injected-generator.md)
 - [`decision_fixture-oracles-derive-the-finished-dimension.md`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)
 - [`decision_governance-two-review-paths-and-the-unnamed-roles.md`](docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md)
+- [`decision_history-windows-retain-self-contained-bytes.md`](docs/decisions/decision_history-windows-retain-self-contained-bytes.md)
 - [`decision_i18n-one-message-system-fluent.md`](docs/decisions/decision_i18n-one-message-system-fluent.md)
 - [`decision_knowledge-map-entries-are-orientation-sized.md`](docs/decisions/decision_knowledge-map-entries-are-orientation-sized.md)
 - [`decision_length-declarations-retain-state-and-provenance.md`](docs/decisions/decision_length-declarations-retain-state-and-provenance.md)

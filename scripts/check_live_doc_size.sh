@@ -60,7 +60,7 @@ measure_registry() { # $1 = surfaces.tsv · $2 = output file
       file)       printf '%s\t%s\n' "$sid" "$glob" >> "$out.parts" ;;
       list)       printf '%s\n' "$glob" | tr ';' '\n' | sed '/^$/d' \
                     | while IFS= read -r p; do printf '%s\t%s\n' "$sid" "$p"; done >> "$out.parts" ;;
-      collection) git -C "$ROOT" ls-files -- "$glob" 2>/dev/null \
+      collection|binary_collection) git -C "$ROOT" ls-files -- "$glob" 2>/dev/null \
                     | while IFS= read -r p; do printf '%s\t%s\n' "$sid" "$p"; done >> "$out.parts" ;;
       external)   : ;;
       *)          printf '%s\t%s\n' "$sid" "$glob" >> "$out.parts" ;;
@@ -69,9 +69,14 @@ measure_registry() { # $1 = surfaces.tsv · $2 = output file
   : > "$out"
   while IFS=$'\t' read -r sid p; do
     if [ -f "$ROOT/$p" ]; then
-      l=$(wc -l < "$ROOT/$p" | tr -d ' '); b=$(wc -c < "$ROOT/$p" | tr -d ' ')
-      m=$(awk '{n=length($0); if(n>x)x=n} END{print x+0}' "$ROOT/$p")
-      fl=$(head -1 "$ROOT/$p" | tr '\t' ' ')
+      b=$(wc -c < "$ROOT/$p" | tr -d ' ')
+      if awk -F'\t' -v id="$sid" '$1==id && $3=="binary_collection" {found=1} END{exit !found}' "$1"; then
+        l=0; m=0; fl=""
+      else
+        l=$(wc -l < "$ROOT/$p" | tr -d ' ')
+        m=$(awk '{n=length($0); if(n>x)x=n} END{print x+0}' "$ROOT/$p")
+        fl=$(head -1 "$ROOT/$p" | tr '\t' ' ')
+      fi
     else
       l=0; b=0; m=0; fl=""
     fi
@@ -100,7 +105,7 @@ evaluate() { # $1 surfaces · $2 routes · $3 measurements · $4 tracked-md list
       HL[sid]=$11; HB[sid]=$12; HM[sid]=$13
       CL[sid]=$14; CB[sid]=$15; CM[sid]=$16; CF[sid]=$17; AL[sid]=$18; AB[sid]=$19
       EMPTY[sid]=($10 == "0") ? 1 : 0
-      if ($3 !~ /^(file|list|collection|external)$/) bad(sid ": unknown kind `" $3 "`")
+      if ($3 !~ /^(file|list|collection|binary_collection|external)$/) bad(sid ": unknown kind `" $3 "`")
       if (!($4 in OKLC))                              bad(sid ": unknown lifecycle class `" $4 "`")
       if ($5 == "" || $5 == "-")                      bad(sid ": no owner")
       if ($6 == "" || $6 == "-")                      bad(sid ": no authority")
@@ -284,6 +289,25 @@ EOF
   mkreg; sed -i.bak 's/\tbounded_snapshot\tleaf-x\t/\tbounded_snapshot\tleaf-x\t/' "$d/reg/surfaces.tsv"
   printf 'x' >> "$d/reg/surfaces.tsv"   # break the trailing row shape
   arm RED-EMPTY 1 "a registry that stops being parseable is refused, not skipped"
+
+  # Exercise binary measurement on an existing tracked input, without creating
+  # a nested Git repository. It must count real bytes and suppress text axes.
+  printf 'bin\t.githooks/commit-msg\tbinary_collection\n' > "$d/binary.tsv"
+  measure_registry "$d/binary.tsv" "$d/binary-measured.tsv"
+  arms=$((arms+1))
+  if awk -F'\t' '$3==0 && $4>0 && $5==0 && $6=="" {ok=1} END{exit !ok}' "$d/binary-measured.tsv"; then
+    printf '  ✓ BINARY-MEASURE exit=0  actual bytes counted; line/maxline axes suppressed\n'
+  else
+    printf '  ✗ BINARY-MEASURE text parsing or lost byte measurement\n'; fails=$((fails+1))
+  fi
+  printf 'bin\t.githooks/commit-msg\tbinary_collection\tarchive_terminal\tSPINE.19.2\tCOMMIT.md\t0\t0\t0\t1\t-\t-\t-\t0\t1\t0\t1\t0\t1\t-\tprobe\n' > "$d/binary.tsv"
+  : > "$d/no-routes.tsv"; : > "$d/no-tracked.txt"
+  arms=$((arms+1))
+  if evaluate "$d/binary.tsv" "$d/no-routes.tsv" "$d/binary-measured.tsv" "$d/no-tracked.txt" >/dev/null 2>&1; then
+    printf '  ✗ BINARY-BOUND actual binary overflow passed\n'; fails=$((fails+1))
+  else
+    printf '  ✓ BINARY-BOUND exit=1  real binary bytes exceed their bound\n'
+  fi
 
   rm -rf "$d"
   printf 'live-doc-size --self-test: %d arms, %d failed\n' "$arms" "$fails"

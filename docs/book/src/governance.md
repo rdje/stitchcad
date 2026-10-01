@@ -274,3 +274,39 @@ history remains in Git. Scratch, incremental caches and rendered book output sta
 volume. Built dependency outputs are retained; shared stores and other repositories are read-only.
 The 2026-10-01 run removed scratch/cache/book trees and stray artifacts, with no tracked deletion;
 Rust, WASM, book and probe workflows regenerated successfully. This moves no product frontier.
+
+## 12. Historical records and bounded retention
+
+Completed records keep their original logical path, descriptor, coverage and bytes. Older records
+are retained in a self-contained, content-addressed window with a bounded manifest and catalog.
+Live ledger links land on the record's catalog heading; use the reader to obtain the full record.
+Python 3.9+ is required for this maintenance tool; it uses only the standard library. The Rust
+application does not depend on Python. A shallow checkout needs no older Git objects or network:
+
+```bash
+bash scripts/history_archive.sh list
+bash scripts/history_archive.sh read docs/history/stitchcad-changelog-part1.md
+bash scripts/history_archive.sh read docs/history/stitchcad-defects-part1.md
+bash scripts/history_archive.sh materialize target/history-review
+bash scripts/history_archive.sh verify
+```
+
+The read command emits exact full-file bytes, including the original sealed descriptor; the descriptor's body
+digest and the window's full-file digest intentionally cover different byte ranges. The materialize command
+requires a fresh directory below `target/` on the repository volume and refuses symlinks/overwrite.
+Remove a review copy only when no longer needed; ordinary artifact cleanup owns ignored copies.
+An unknown logical path is refused rather than replaced by another record.
+
+`ARCHIVE-RETENTION` runs in hooks and CI. It checks exact membership, catalog headings, all full-file
+digests, closed manifest schemas and finite decompression, then measures resident and decoded history
+independently. The original logical per-record bounds (2000 lines, 160000 bytes, maxline 400) and
+combined history bounds (60000 lines, 4000000 bytes) still apply. Working Markdown has at most 64
+files. Packing does not expand aggregate capacity; retained payloads and controls consume resident
+storage too. Committed windows are immutable; corrections use new records.
+
+The first transition reconstructs all 64 source files exactly before retiring their working copies.
+`bash scripts/history_archive.sh prove-source window1` independently compares every member to its
+named capture commit when that Git object is available; ordinary retrieval does not require it.
+The existing ledger probes read recovered logical records and retain their order, uniqueness,
+coverage, descriptor and pointer checks. Generalizing coverage/pointers to other ledgers remains
+SPINE.19's separate obligation. Content integrity proves neither semantic truth nor physical signoff.

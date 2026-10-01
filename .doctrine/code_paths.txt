@@ -19,3 +19,4 @@
 (^|/)\.clippy\.toml$
 \.github/workflows/
 (^|/)\.doctrine/
+\.py$

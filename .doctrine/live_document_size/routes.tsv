@@ -24,3 +24,5 @@ R12	README.md canonical-home table	COMMIT.md;DOCTRINE_ENFORCEMENT.md;MEMORY_ARCH
 R13	COMMIT.md lockstep list	DEV_NOTES.md	dev_notes	author_overflow	rolling_ledger	bounded window + LESSON-PROMOTION + rollover to history_archive	root cause / implementation / validation per slice, newest first
 R14	session directive §8	docs/ARTIFACT_CLEANUP.md	artifact_cleanup	author_overflow	bounded_snapshot	single latest entry; overwrite-only	the cleanup cadence record; it must not accumulate entries
 R15	LIVE_DOCUMENT_SIZE_CONTAINMENT.md rollover protocol	docs/history/	history_archive	author_overflow	archive_terminal	immutable sealed segments with recorded identity	the terminal for R05 and R13; created by SPINE.14
+R16	docs/history/window catalogs	docs/history/payloads/	history_payloads	reader_navigation	archive_terminal	byte/count ceilings plus combined archive pressure	self-contained content-addressed bytes, never an unbounded sink
+R17	docs/history/window catalogs	.doctrine/history_archive/	history_controls	reader_navigation	partitioned_canonical	finite schemas/records plus control aggregate	complete member identity and retention metadata

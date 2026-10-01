@@ -7,24 +7,24 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 | Segment | Coverage | Sealed identity |
 | --- | --- | --- |
-| [`part1.md`](docs/history/stitchcad-changelog-part1.md) | slices 1–15, `STITCHCAD-PLANNING-0001` … `STITCHCAD-SPINE-0004b` | 365 lines, 30452 bytes, `sha256:f4aec75a…` |
-| [`part2.md`](docs/history/stitchcad-changelog-part2.md) | slices 16–20, `STITCHCAD-SPINE-0014` … `STITCHCAD-G0-0002` | 152 lines, 12811 bytes, `sha256:5783ac36…` |
-| [`part3.md`](docs/history/stitchcad-changelog-part3.md) | slices 21–24, `STITCHCAD-G0-0013` … `STITCHCAD-G0-0018` | 147 lines, 12289 bytes, `sha256:14ad5278…` |
-| [`part4.md`](docs/history/stitchcad-changelog-part4.md) | slices 25–29, `STITCHCAD-G0-0004` … `STITCHCAD-SPINE-0017` | 177 lines, 15440 bytes, `sha256:a8cc1de6…` |
-| [`part5.md`](docs/history/stitchcad-changelog-part5.md) | slices 30–31, `STITCHCAD-G0-0005` … `STITCHCAD-G0-0013c` | 82 lines, 7505 bytes, `sha256:18548ff7…` |
-| [`part6.md`](docs/history/stitchcad-changelog-part6.md) | slices 32–33, `STITCHCAD-G0-0007` … `STITCHCAD-G0-0006` | 93 lines, 8284 bytes, `sha256:3148dd0f…` |
-| [`part7.md`](docs/history/stitchcad-changelog-part7.md) | slices 34–35, `STITCHCAD-G0-0013d` … `STITCHCAD-G0-0008` | 105 lines, 9793 bytes, `sha256:ff62d418…` |
-| [`part8.md`](docs/history/stitchcad-changelog-part8.md) | slices 41–42, `STITCHCAD-G0-0014` … `STITCHCAD-G0-0004b` | 106 lines, 9766 bytes, `sha256:2c7ee35a…` |
-| [`part9.md`](docs/history/stitchcad-changelog-part9.md) | the two oldest live entries, `STITCHCAD-G0-0004c` and `STITCHCAD-SPINE-0004d` — no slice range, because the earlier ranges have no producer (D51) | 90 lines, 8386 bytes, `sha256:8e4081d4…` |
-| [`part10.md`](docs/history/stitchcad-changelog-part10.md) | two spine slices on the table convention, `STITCHCAD-SPINE-0020` and `STITCHCAD-SPINE-0015` | 73 lines, 6652 bytes, `sha256:062ccfa3…` |
-| [`part11.md`](docs/history/stitchcad-changelog-part11.md) | the delegation-and-uncertainty slice, `STITCHCAD-G0-0014c` | 46 lines, 4507 bytes, `sha256:de34382e…` |
-| [`part12.md`](docs/history/stitchcad-changelog-part12.md) | the dialects and formula-language slices, `STITCHCAD-G0-0010` and `STITCHCAD-G0-0009` | 84 lines, 7767 bytes, `sha256:9c61ba7c…` |
-| [`part13.md`](docs/history/stitchcad-changelog-part13.md) | the release-contract and canvas-spike-rule slices, `STITCHCAD-G0-0012` and `STITCHCAD-G0-0011` | 75 lines, 7188 bytes, `sha256:1e52b5c9…` |
-| [`part14.md`](docs/history/stitchcad-changelog-part14.md) | the i18n slice, `STITCHCAD-G0-0016` | 38 lines, 3631 bytes, `sha256:2c895780…` |
-| [`part15.md`](docs/history/stitchcad-changelog-part15.md) | the recurring cleanup slice, `STITCHCAD-SPINE-0021` | 23 lines, 2123 bytes, `sha256:f93154e3…` |
-| [`part16.md`](docs/history/stitchcad-changelog-part16.md) | the closed-defect sealing slice, `STITCHCAD-SPINE-0019a` | 27 lines, 2450 bytes, `sha256:211f9bec…` |
-| [`part17.md`](docs/history/stitchcad-changelog-part17.md) | the command-layer contract, `STITCHCAD-G0-0017` | 38 lines, 3626 bytes, `sha256:819f240a…` |
-| [`part18.md`](docs/history/stitchcad-changelog-part18.md) | the G0 exit review, `STITCHCAD-G0-0015` | 38 lines, 3694 bytes, `sha256:22d63ec4…` |
+| [`stitchcad-changelog-part1.md`](docs/history/window1.md#stitchcad-changelog-part1md) | slices 1–15, `STITCHCAD-PLANNING-0001` … `STITCHCAD-SPINE-0004b` | 365 lines, 30452 bytes, `sha256:f4aec75a…` |
+| [`stitchcad-changelog-part2.md`](docs/history/window1.md#stitchcad-changelog-part2md) | slices 16–20, `STITCHCAD-SPINE-0014` … `STITCHCAD-G0-0002` | 152 lines, 12811 bytes, `sha256:5783ac36…` |
+| [`stitchcad-changelog-part3.md`](docs/history/window1.md#stitchcad-changelog-part3md) | slices 21–24, `STITCHCAD-G0-0013` … `STITCHCAD-G0-0018` | 147 lines, 12289 bytes, `sha256:14ad5278…` |
+| [`stitchcad-changelog-part4.md`](docs/history/window1.md#stitchcad-changelog-part4md) | slices 25–29, `STITCHCAD-G0-0004` … `STITCHCAD-SPINE-0017` | 177 lines, 15440 bytes, `sha256:a8cc1de6…` |
+| [`stitchcad-changelog-part5.md`](docs/history/window1.md#stitchcad-changelog-part5md) | slices 30–31, `STITCHCAD-G0-0005` … `STITCHCAD-G0-0013c` | 82 lines, 7505 bytes, `sha256:18548ff7…` |
+| [`stitchcad-changelog-part6.md`](docs/history/window1.md#stitchcad-changelog-part6md) | slices 32–33, `STITCHCAD-G0-0007` … `STITCHCAD-G0-0006` | 93 lines, 8284 bytes, `sha256:3148dd0f…` |
+| [`stitchcad-changelog-part7.md`](docs/history/window1.md#stitchcad-changelog-part7md) | slices 34–35, `STITCHCAD-G0-0013d` … `STITCHCAD-G0-0008` | 105 lines, 9793 bytes, `sha256:ff62d418…` |
+| [`stitchcad-changelog-part8.md`](docs/history/window1.md#stitchcad-changelog-part8md) | slices 41–42, `STITCHCAD-G0-0014` … `STITCHCAD-G0-0004b` | 106 lines, 9766 bytes, `sha256:2c7ee35a…` |
+| [`stitchcad-changelog-part9.md`](docs/history/window1.md#stitchcad-changelog-part9md) | the two oldest live entries, `STITCHCAD-G0-0004c` and `STITCHCAD-SPINE-0004d` — no slice range, because the earlier ranges have no producer (D51) | 90 lines, 8386 bytes, `sha256:8e4081d4…` |
+| [`stitchcad-changelog-part10.md`](docs/history/window1.md#stitchcad-changelog-part10md) | two spine slices on the table convention, `STITCHCAD-SPINE-0020` and `STITCHCAD-SPINE-0015` | 73 lines, 6652 bytes, `sha256:062ccfa3…` |
+| [`stitchcad-changelog-part11.md`](docs/history/window1.md#stitchcad-changelog-part11md) | the delegation-and-uncertainty slice, `STITCHCAD-G0-0014c` | 46 lines, 4507 bytes, `sha256:de34382e…` |
+| [`stitchcad-changelog-part12.md`](docs/history/window1.md#stitchcad-changelog-part12md) | the dialects and formula-language slices, `STITCHCAD-G0-0010` and `STITCHCAD-G0-0009` | 84 lines, 7767 bytes, `sha256:9c61ba7c…` |
+| [`stitchcad-changelog-part13.md`](docs/history/window1.md#stitchcad-changelog-part13md) | the release-contract and canvas-spike-rule slices, `STITCHCAD-G0-0012` and `STITCHCAD-G0-0011` | 75 lines, 7188 bytes, `sha256:1e52b5c9…` |
+| [`stitchcad-changelog-part14.md`](docs/history/window1.md#stitchcad-changelog-part14md) | the i18n slice, `STITCHCAD-G0-0016` | 38 lines, 3631 bytes, `sha256:2c895780…` |
+| [`stitchcad-changelog-part15.md`](docs/history/window1.md#stitchcad-changelog-part15md) | the recurring cleanup slice, `STITCHCAD-SPINE-0021` | 23 lines, 2123 bytes, `sha256:f93154e3…` |
+| [`stitchcad-changelog-part16.md`](docs/history/window1.md#stitchcad-changelog-part16md) | the closed-defect sealing slice, `STITCHCAD-SPINE-0019a` | 27 lines, 2450 bytes, `sha256:211f9bec…` |
+| [`stitchcad-changelog-part17.md`](docs/history/window1.md#stitchcad-changelog-part17md) | the command-layer contract, `STITCHCAD-G0-0017` | 38 lines, 3626 bytes, `sha256:819f240a…` |
+| [`stitchcad-changelog-part18.md`](docs/history/window1.md#stitchcad-changelog-part18md) | the G0 exit review, `STITCHCAD-G0-0015` | 38 lines, 3694 bytes, `sha256:22d63ec4…` |
 
 **Correction (D30).** part1's own descriptor says its coverage runs "through `STITCHCAD-SPINE-0004c`".
 It does not: part1's newest entry is `STITCHCAD-SPINE-0004b`, and `SPINE-0004c` is sealed in part2.
@@ -32,19 +32,31 @@ Sealed segments are immutable, so the correction is recorded here and in part2's
 by editing part1.
 
 The bedrock scaffold's own changelog — the provenance of this repository's discipline spine — is sealed
-in [`docs/history/bedrock-scaffold-changelog.md`](docs/history/bedrock-scaffold-changelog.md).
-| [`changelog-part19.md`](docs/history/stitchcad-changelog-part19.md) | STITCHCAD-G1-0001 | 21 lines, 1770 bytes, `sha256:2f602e9a…` |
-| [`changelog-part20.md`](docs/history/stitchcad-changelog-part20.md) | STITCHCAD-G1-0002 | 19 lines, 1598 bytes, `sha256:a3918baa…` |
-| [`changelog-part21.md`](docs/history/stitchcad-changelog-part21.md) | STITCHCAD-G1-0003 | 21 lines, 1831 bytes, `sha256:ab5e04ca…` |
+in [`docs/history/bedrock-scaffold-changelog.md`](docs/history/window1.md#bedrock-scaffold-changelogmd).
+| [`stitchcad-changelog-part19.md`](docs/history/window1.md#stitchcad-changelog-part19md) | STITCHCAD-G1-0001 | 21 lines, 1770 bytes, `sha256:2f602e9a…` |
+| [`stitchcad-changelog-part20.md`](docs/history/window1.md#stitchcad-changelog-part20md) | STITCHCAD-G1-0002 | 19 lines, 1598 bytes, `sha256:a3918baa…` |
+| [`stitchcad-changelog-part21.md`](docs/history/window1.md#stitchcad-changelog-part21md) | STITCHCAD-G1-0003 | 21 lines, 1831 bytes, `sha256:ab5e04ca…` |
 
-| [`changelog-part22.md`](docs/history/stitchcad-changelog-part22.md) | STITCHCAD-G1-0004 | 24 lines, 2100 bytes, `sha256:9050689c…` |
+| [`stitchcad-changelog-part22.md`](docs/history/window1.md#stitchcad-changelog-part22md) | STITCHCAD-G1-0004 | 24 lines, 2100 bytes, `sha256:9050689c…` |
 
-| [`changelog-part23.md`](docs/history/stitchcad-changelog-part23.md) | STITCHCAD-G1-0005 | 48 lines, 4079 bytes, `sha256:e74210d6…` |
+| [`stitchcad-changelog-part23.md`](docs/history/window1.md#stitchcad-changelog-part23md) | STITCHCAD-G1-0005 | 48 lines, 4079 bytes, `sha256:e74210d6…` |
+
+| [`changelog-part24.md`](docs/history/stitchcad-changelog-part24.md) | STITCHCAD-G1-0007, STITCHCAD-G1-0006 | 39 lines, 3139 bytes, `sha256:30ff1380…` |
 
 The live window below holds the most recent slices. When it passes its health target (400 lines /
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-SPINE-0019b - self-contained bounded history windows (leaf `SPINE.19.2`)
+
+D65: retained all 64 historical files byte for byte in a content-addressed window; complete manifests
+and catalog preserve logical paths. Reader list/read/materialize/verify works without historical Git
+objects; exact capture reconstruction is independently proved. Decoded and resident storage retain
+original aggregate bounds, with finite controls/payload/decompression and immutable committed windows.
+Ledger probes consume logical records, all nine arms pass. D68 fixes the coverage mutation's unrelated
+false pass. New archive refusals, binary sizing, strict Rust/WASM/book/full probes and staged gates pass;
+exceptional push/observed CI follow in .19.2v. Older live records seal unchanged; product remains G1 .4a.3.
 
 ## STITCHCAD-G1-0027 - observed metadata CI/signoff (leaf `G1-SLICE.4a.2c`)
 
@@ -353,43 +365,3 @@ regression fail. D56 closes in defects-part3; the decision records the two pairi
 D57 is logged and owned by `.3c.2b`: the spec does not decide how a sewing side names physical cut copies.
 The director was asked to choose stable copy identities or pattern-level references with later expansion.
 No answer is inferred; independent marks/allowances (`.3c.3`) proceed while that decision is pending.
-
-## STITCHCAD-G1-0007 - whole-interval reference resolution keeps lost interiors visible (leaf `G1-SLICE.3c.2a`)
-
-`IdentityLedger::resolve_range(EdgeRange)` now folds the complete positive-length interval through
-split/merge/reverse/delete/offset. `RangeResolution` preserves ordered directed live fragments and
-`RangeRepairTask`s for deleted or trimmed portions, missing source edges and exact-arithmetic refusal.
-Endpoint point queries stay separate, so a full-coverage interval can still carry a boundary choice.
-No query rewrites the stored reference or claims geometric validity or approval. Piece full-edge
-queries consume this contract; the point-only registration verdict keeps its original scope.
-
-D55 is fixed: deleting a middle fragment produces a visible range repair while both endpoints resolve.
-The regression test goes red if the range-delete arm is removed. Thirteen range tests cover exact
-partial bounds, traversal order, narrow gaps, arithmetic refusal and a recorded-seed differential
-comparison with the existing point resolver. `make check`, `make wasm`, `make book`, doctrine gate,
-feature-matrix census and ledger probes pass. The pre-code decision records the coverage/point/geometry
-boundary; next `.3c.2b` implements sewing spans and resolves D35.
-
-The same append rolls CHANGELOG's oldest entry into `part14` and DEV_NOTES' oldest two lessons into
-`devnotes-part8`; closed D55 moves to immutable `defects-part2`. Their content identities are re-derived
-by the ledger probes. The new Knowledge Map record fits after its interchange orientation entry is
-tightened; D53's durable generator remedy remains separately owned.
-
-## STITCHCAD-G1-0006 - immutable structural pieces, with geometry visibly deferred (leaf `G1-SLICE.3c.1`)
-
-`sc_core::ontology::piece` now builds immutable `Piece` objects from editable `PieceDefinition` input.
-Directed cyclic cut loops must be nonempty, distinct and live in the identity ledger; construction lines
-must also exist. Cut quantities, mirrored pairs, fold-edge declarations, material explanations and complete
-print text are checked with typed `PieceError` diagnostics. Quantity, pair and fold print fields derive
-from the cut plan. Every piece reports `GeometricValidation::DeferredToG2`; no winding, simplicity,
-containment or geometric-closure claim is made.
-
-The object-type leaf `.3c` now has four independently committed children. Piece endpoint queries expose
-repair tasks after edits without rewriting authored content. A tracked counterexample proves endpoints
-cannot certify an entire fragmented edge (D55); the next child `.3c.2` owns full-range resolution before
-sewing spans use it. Ontology §10 documents the implemented API and its limits.
-
-Validation: `make check` (fmt, strict clippy, unit/property suites and private-content compile-fail test),
-`cargo test -p sc-core --test piece_contract` (12 contract tests), `make wasm`, `make book`, doctrine gate
-and changelog-ledger probes, all green. Startup compared the neutral README, claim-verification and
-containment policy bodies with their read-only sources: no differences. Cleanup remained within 24 hours.
