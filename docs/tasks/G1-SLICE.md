@@ -360,11 +360,40 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0014`
 
 - ID: `G1-SLICE.3c.4a.2`
-  Status: `pending`
+  Status: `active`
   Goal: immutable Tuck/Pleat/Gather with explicit intake, owned fold/attachment geometry, direction
   and closing operation; type-specific semantic content and deferred physical conservation.
   Acceptance: validate all required scope references and intake domains, preserve repairs and defaults
   prohibition; G2/G3 must prove the actual closing operations and gather distribution.
+  Verification: `pending`
+  Commit: `pending`
+
+  Children: `.3c.4a.2a` (tucks/pleats), `.3c.4a.2b` (gathers linked to a sewing span).
+
+- ID: `G1-SLICE.3c.4a.2a`
+  Status: `done`
+  Goal: immutable, distinctly typed Tuck and Pleat with nonempty directed fold-line geometry,
+  intake origin, explicit folding direction and closing-operation identity.
+  Acceptance: all lines/direction are owned complete ranges with unique endpoints; empty or duplicate
+  held fold intervals and negative explicit intake refused; symbolic intake supplies no default;
+  queries preserve direction/repairs; physical fold shape/conserved intake remains G2/G3.
+  Design before code: shared FoldDefinition input/validation, separate immutable Tuck/Pleat wrappers
+  preserve semantic kind. A nonempty list supports one or multiple authored fold lines without
+  inventing a physical pleat-count rule. Exact duplicate held intervals ignore traversal direction.
+  Reuse IntakeAmount and whole-interval ownership; folding operation existence/kind is `.5`/`.6`.
+  Broader actual geometry tests remain G2/G3, including coincidence between distinct held names.
+  Extend the existing structural/geometric record before code. Live-window rollover is part of
+  this slice's doc sync if the next entry crosses CHANGELOG/DEV_NOTES health targets.
+  Verification: nine shared tuck/pleat contracts + two privacy doctests; ownership mutation red;
+  strict Rust, wasm, book, focused censuses, ledger and staged doctrine gate green.
+  Commit: `STITCHCAD-G1-0015`
+
+- ID: `G1-SLICE.3c.4a.2b`
+  Status: `pending`
+  Goal: Gather with intake origin, owned direction/attachment and explicit graph/span/side identity,
+  using declared sewing ease allocation without a separate hidden distribution or physical stretch.
+  Acceptance: named span/copy side exists and belongs to the Piece; all anchors/intervals resolve;
+  no copied ease/profile state or claimed executed conservation; immutable queries expose removals.
   Verification: `pending`
   Commit: `pending`
 
@@ -550,7 +579,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.4a.2` | `pending` | tuck/pleat/gather; dart intent landed |
+| — | `G1-SLICE.3c.4a.2b` | `pending` | gather graph/span/side semantics; tuck/pleat intent landed |
 
 ## Decisions
 
@@ -622,6 +651,35 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3c.4a.2a` — distinct tuck/pleat intent with shared structural checks
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.3 requires semantic tucks and pleats, not line art;
+  `8753290` has only dart intent. A fold-reference list and a declared intake cannot certify a
+  physical fold shape, type-specific closing operation or conservation proof.
+- [x] **ROOT CAUSE (WHY + WHERE)** — current interval ownership matters independently of endpoints.
+  `cargo test -p sc-core --test fold_contract
+  foreign_middle_of_a_merged_fold_line_is_refused_despite_owned_endpoints_after_reversal` → `1 passed`,
+  `rc=0`: both Tuck/Pleat refuse the owned-ends/foreign-middle merge before/after reversal.
+  Shared structural inputs must not collapse the two semantic kinds into one untyped recipe operation.
+- [x] **FIX** — separate immutable wrappers share validated fold content: intake provenance,
+  nonempty directed ranges, explicit direction and required closing-operation identity. Reject negative
+  explicit intake, empty/duplicate held intervals, unresolved endpoints and unowned current portions.
+  Query authored line order + directed raw evidence; retain typed physical/registry obligations.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test fold_contract` → `9 passed`, `rc=0`;
+  both types discriminate empty/duplicate opposite lines, explicit/symbolic intake, all reference roles,
+  split choices, hidden foreign interiors, directed repairs, partial ranges and immutable replacement.
+  Ownership refusal disabled → merged-middle regression fails, `rc=101`; restored strict check passes.
+  Two privacy doctests are green; no physical fold-count/shape or executed-conservation claim.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
+  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
+  ledger probes → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Earlier dart/mark/sewing contracts stay green; no numerical golden changes.
+- [x] **LOCKSTEP** — `.3c.4a.2` decomposed before code; existing structural/geometric decision,
+  Rust/subsystem status, bounded construction examples/API vocabulary/ontology index and feature row,
+  task evidence/frontier/logs, TASK_TREE/MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES.
+  Oldest changelog/dev-note entries seal to part18/part14. Next `.3c.4a.2b` gathers.
 
 ### `G1-SLICE.3c.4a.1` — semantic dart intent with visible closure obligations
 
@@ -777,6 +835,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 | `2026-10-01` | `.3c.4a.1` | dart contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; ownership mutation red; restored checks/censuses/gates green, `rc=0` |
 
+| `2026-10-01` | `.3c.4a.2a` | fold contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; ownership mutation red; restored checks/censuses/gates green, `rc=0` |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -796,7 +856,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 | `.3c.3b` | `STITCHCAD-G1-0012 (leaf G1-SLICE.3c.3b)` | directed grainlines; independent print references; D61 fixed |
 | `.3c.3c` | `STITCHCAD-G1-0013 (leaf G1-SLICE.3c.3c)` | per-edge allowance intent; marks/allowances parent closed |
 | `.3c.4a.1` | `STITCHCAD-G1-0014 (leaf G1-SLICE.3c.4a.1)` | semantic dart intent; explicit conservation deferral |
-| `.3c.4a.2` … `.16` | `pending` | remaining constructions and G1 execution leaves |
+| `.3c.4a.2a` | `STITCHCAD-G1-0015 (leaf G1-SLICE.3c.4a.2a)` | distinct tuck/pleat intent; shared validation |
+| `.3c.4a.2b` … `.16` | `pending` | remaining constructions and G1 execution leaves |
 
 ## Changelog
 
@@ -897,3 +958,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 - `2026-10-01`: `.3c.4` decomposes into intake/finish/closure/pocket children; `.3c.4a.1` lands
   semantic dart intent with an internal apex and explicit intake/operation provenance. Conservation
   remains G2/G3. A bounded construction companion carries examples. Next `.3c.4a.2`.
+
+- `2026-10-01`: `.3c.4a.2a` lands distinct immutable tuck/pleat intent with shared fold validation
+  and directed repair evidence. Parent `.2` splits to keep sewing-linked gathers separate. Physical
+  shape/conservation remain G2/G3; live-window rollover owned and verified. Next `.3c.4a.2b`.

@@ -7,7 +7,7 @@
   at gate G1 and what `sc-geometry` proves at gate G2 (`docs/book/src/spec/ontology.md` §4.1, §9;
   `docs/tasks/G2-2D.md` leaf `.1`).
 
-answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?"
+answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?" · "how do tucks and pleats retain distinct semantic kinds?"
 
 ## The fact / decision
 
@@ -70,3 +70,12 @@ conservation under the closing operation. An explicit intake retains its paramet
 Length; formula/profile declarations retain identities without defaults or copied states. The closing
 operation is a required identity, with existence/kind/dependency validation owned by `.5`/`.6`, not
 an executed or certified closure. Post-edit queries preserve raw repairs/choices and held content.
+
+## Tuck and pleat intent (`G1-SLICE.3c.4a.2a`)
+
+Separate immutable Tuck/Pleat types share structural input/validation. Each holds a nonempty list
+of directed fold ranges, intake provenance, an explicit directed folding reference and a closing
+operation identity. Exact duplicate held intervals are refused regardless of traversal direction;
+G1 validates full owned interval coverage and endpoint uniqueness. No physical pleat-count rule,
+actual fold shape, coincidence or conserved intake is inferred from a reference list. G2/G3 executes
+and verifies the typed closing operation; recipe/Design validates its identity, kind and dependencies.

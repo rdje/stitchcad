@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — shared structural input must preserve distinct tuck and pleat kinds
+
+- Tuck/Pleat wrappers share one immutable content validator but remain distinct semantic types for
+  the recipe's typed closing operations. Their nonempty fold lists, intake origin and direction are
+  authored intent; reference count alone cannot certify physical pleat shape or conserved intake.
+- Duplicate held intervals ignore authored traversal; every line/direction checks complete owned
+  current intervals and unique endpoints. Nine contracts exercise both wrappers, including an owned
+  endpoints/foreign-middle merge after reversal. Disabling ownership refusal makes that regression
+  red. Queries preserve raw split choices, fragment order and interior repairs without mutation.
+- Symbolic intake/operation identities preserve registry obligations and provide no defaults.
+  Physical fold shape and executed conservation remain G2/G3; strict Rust/WASM and book checks pass.
+- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s tuck/pleat boundary.
+
 ## _(2026-10-01)_ — a declared dart intake is not an executed conserved closure
 
 - An internal apex can be anchored to a Piece-owned construction leg without assigning it to the cut
@@ -135,31 +148,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - promotion: declined (structural/geometric separation is already a decision record; the new range
   risk is an open defect and scheduled implementation contract in the task tree, not a settled rule).
 
-## _(2026-10-01)_ — the persistent-identity contract: a reference is never rewritten, the journal folds
-
-- `G1-SLICE.3b` landed the persistent-identity contract — `sc_core::ontology::topology`'s `IdentityLedger`:
-  an append-only journal of typed edits and a pure fold resolving a held `(EdgeRef, Param)` through split,
-  merge, reverse, delete and offset-fragmentation. 62 unit tests + 8 recorded-seed properties green, and
-  `sc-core` still cross-builds to wasm.
-- The design point worth keeping: **an edit never rewrites a stored reference.** The obvious implementation
-  — mutating every consumer of the edited edge in place — is the silent reassignment §1.1 forbids, and a
-  missed consumer is silent corruption. Instead the reference is immutable and resolution is a fold of the
-  journal, so no consumer can be missed: the answer is computed *from the reference the consumer holds*.
-  Repair state (`open_repairs`, `release_readiness`) is **derived** on every query, never stored, so it cannot
-  drift from the journal — the discipline every derived-vs-hand-kept count here enforces. Undo (`.6`) then
-  becomes journal algebra, not consumer archaeology.
-- The exact-arithmetic choice paid off in the property suite: a split↔merge round trip returns the IDENTICAL
-  reduced `Rational` (zero drift), and merge's arc-length recomputation is checked against its defining
-  proportion cross-multiplied in `i128` — an oracle sharing no code with the fold. A fixed-point parameter
-  would drift under the same round trip.
-- One contract subtlety the tests pin: at a split point the reference resolves to BOTH fragments and the
-  ledger never picks — the consumer states a `SplitSide`. If one side is later deleted, the fold still offers
-  the survivor and shows the task on the dead side; whether it is an open repair depends on the stated side.
-  "No silent reassignment" holds on every path.
-- promotion: promoted by `decision_reference-resolution-journal-fold.md` (which carries `answers:`) — the
-  durable boundary (immutable references, fold resolution, derived repair state, offset-consumes-declared-
-  intervals until G2 geometry) is recorded there so `.3c`/`.6`/`.7` inherit it rather than re-litigate.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -177,6 +165,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part11.md`](docs/history/stitchcad-devnotes-part11.md) | the `2026-09-30` property-test framework lesson | 15 lines, 1384 bytes, `sha256:ae04eadf…` |
 | [`devnotes-part12.md`](docs/history/stitchcad-devnotes-part12.md) | ontology slice decomposition | 16 lines, 1570 bytes, `sha256:a2f04e3d…` |
 | [`devnotes-part13.md`](docs/history/stitchcad-devnotes-part13.md) | injected identity lesson | 18 lines, 1612 bytes, `sha256:38e83349…` |
+| [`devnotes-part14.md`](docs/history/stitchcad-devnotes-part14.md) | persistent-identity lesson | 24 lines, 2230 bytes, `sha256:2b6aebd3…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

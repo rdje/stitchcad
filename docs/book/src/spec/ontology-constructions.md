@@ -37,8 +37,7 @@ prove existence, kind and dependencies before design/recipe validation can certi
 Every dart reports `GeometricValidation::DeferredToG2` and `IntakeValidation::DeferredToG2AndG3`.
 A profile intake binding reports `ProfileBindingValidation::DeferredToG4`; absence of that field means
 only that the intake source is not a profile binding. Structural birth is not executed closure,
-conserved intake, export readiness or a production approval. Tuck/pleat/gather and other construction
-objects are the next owned child slices; this chapter claims no running implementation for them yet.
+conserved intake, export readiness or a production approval. Gather and other construction objects are later owned child slices.
 
 | API token | Meaning in the dart implementation |
 | --- | --- |
@@ -47,3 +46,35 @@ objects are the next owned child slices; this chapter claims no running implemen
 | `DartReferenceRole` | First leg, second leg or authored direction field |
 | `IntakeAmount` | Explicit parameter/value, formula declaration or profile declaration |
 | `IntakeValidation` | Physical conservation obligation separate from a declared amount |
+
+**Tuck and Pleat (`G1-SLICE.3c.4a.2a`).** These are distinct immutable semantic types even when
+their editable `FoldDefinition` inputs happen to match. Each carries its id, intake source, a
+nonempty ordered list of directed fold ranges, explicit directed folding reference and required
+closing-operation identity. Their shared structural validator names the failed line/direction field;
+empty lists, duplicate held intervals (including opposite traversal) and negative explicit intake
+are refused. Every positive interval must be owned and complete with unique endpoints. Distinct
+partial ranges on one owned edge are valid authored intent; the list alone proves neither a physical
+pleat-count rule nor coincidence/fold shape.
+
+For example, a tuck may name one internal fold range and a direction along an owned construction
+line, while a pleat can retain several authored fold ranges in order. Both retain intake parameter
+origin and operation identity. An authored zero remains explicit; a formula/profile intake produces
+no value or fallback. The operation registry must validate the typed closing operation before use.
+G2/G3 executes it and compares removed boundary length with the resolved declared intake.
+
+`references()` lists fold lines in authored order, then the direction. `reference_resolutions()`
+keeps directed traversal and raw endpoint/range evidence. A reversed split line visits its fragments
+in the opposite order; deleting its middle preserves a repair despite live held endpoints. An
+owned-endpoints/foreign-middle merge is refused before and after reversal. Editing a cloned input
+cannot mutate either validated semantic object.
+
+Both types report `GeometricValidation::DeferredToG2` and `IntakeValidation::DeferredToG2AndG3`.
+Present profile intake reports `ProfileBindingValidation::DeferredToG4`; absence means only no such
+field. These are semantic descriptors, not executed folds or production-ready physical constructions.
+The physical intake-conservation proof and fold-count/shape checks remain G2/G3 obligations.
+
+| API token | Meaning in the tuck/pleat implementation |
+| --- | --- |
+| `FoldDefinition` | Editable intake, fold ranges, direction and operation input |
+| `FoldError` | Typed intake, empty/duplicate-line or unresolved/foreign-range refusal |
+| `FoldReferenceRole` | Semantic fold-list position or authored direction field |

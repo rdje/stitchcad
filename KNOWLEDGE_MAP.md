@@ -13,8 +13,8 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   errors; dependency-free and wasm-safe. Entry `crates/sc-units/src/lib.rs`, tests
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/` — **ontology in progress**: identity, topology-journal resolution and repairs, immutable
-  pieces/copy plans, marks, allowances, darts and sewing graphs. Other constructions, recipe and bus follow. Entry
+- `crates/sc-core/` — **ontology in progress**: identity, topology resolution/repairs, immutable
+  pieces/copy plans, marks, allowances, dart/fold intent and sewing graphs. Other constructions, recipe and bus follow. Entry
   `crates/sc-core/src/ontology/`; tests `crates/sc-core/tests/`. Owner `G0-CONTRACT.3` / `G1-SLICE.3`.
 - `docs/book/src/spec/` — normative contracts reviewed by the director. Entry
   `docs/book/src/SUMMARY.md`; owner `G0-CONTRACT` and later implementation gates.
