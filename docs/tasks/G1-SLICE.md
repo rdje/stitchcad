@@ -364,60 +364,32 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
 boundary unchanged; current metadata children remain below.
 
 - ID: `G1-SLICE.4a.2`
-  Status: `active`
+  Status: `done`
   Goal: immutable body/garment measurement metadata with stable lower-snake token, entered unit,
   canonical declaration link, two landmark references, procedure and source; typed current registries.
   Children: .4a.2a (shared machine tokens), .4a.2b (metadata/records + runtime integration),
   .4a.2c (observed CI and metadata signoff).
   Acceptance: missing/foreign/ambiguous landmark/procedure metadata refuses; body/POM never interchanged;
   declaration borrowing preserves source/state without a duplicate value cache. No standards data invented.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: shared tokens and all metadata/reference fields covered by child contracts;
+  observed bf29b03 Rust/doctrine jobs and all steps completed success. Physical/source proof deferred.
+  Commit: children `STITCHCAD-G1-0025` … `STITCHCAD-G1-0027`
 
 [Completed .4a.2a contract/evidence](G1-SLICE-measurements.md) preserves the shared token grammar
 unchanged; the metadata/runtime child below remains the current unit.
 
-- ID: `G1-SLICE.4a.2b`
-  Status: `done`
-  Goal: introduce sc-measure with immutable Measurement, landmark and documented-procedure records;
-  validate current record/declaration registries and preserve entered unit plus canonical state/source.
-  Pre-code design: metadata references two landmark identities (same identity allowed for a girth
-  location), procedure identity and canonical LengthDeclaration. Landmark and procedure record kinds
-  must match body/garment; no source standard vocabulary/procedure content is invented. Procedure
-  documentation is required nonblank content on the canonical procedure record; metadata carries only
-  the procedure id. This proves documented content exists, without inferring physical repeatability or
-  source truth (Design/G4). Names must be nonblank;
-  Tokens use the shared core type, and reserved formula inputs cannot be rebound. Context duplicates refuse
-  before lookup across all three record inventories, never pick the first. Measurement identity
-  cannot collide with a supplied context record. Global Design identity/source registries remain .6. Current same-id replacements are inspected; old input stays
-  immutable. No subject/domain constraints are fabricated from the standards not read in-repo.
-  Own new crate/Cargo.lock, local and CI WASM integration, README standard-command/status scope and book.
-  D66 owned here: README reports only G0 work and the workspace header asks to retire the removed
-  starter; both misreport delivered foundations.
-  Repair status/header while preserving G0 closure-unapproved and no-application facts.
-  Acceptance: all metadata fields/canonical queries and typed missing/foreign/ambiguous refusals tested;
-  strict Rust/WASM/book/focused and full milestone gates pass. CI verdict remains .2c's obligation.
-  Verification: sixteen contracts + three privacy docs; six actual guard mutations red; restored
-  strict Rust 325 tests, three-crate WASM/book, full 22 probe suites and staged doctrines green.
-  Exceptional push/observed CI belongs to .4a.2c; no remote success is claimed here.
-  Commit: `STITCHCAD-G1-0026`
-
-  API before code: MeasurementContext borrows declarations/landmarks/procedures with typed identity
-  maps. Landmark and MeasurementProcedure use private validated definitions (nonblank names and
-  procedure documentation); kinds are explicit Body/Garment. Measurement holds entered Unit, token,
-  kind, two landmark ids, procedure and declaration id. Current context queries borrow canonical
-  targets, reject removed/mismatched/ambiguous targets, and preserve authored metadata/state. Target
-  queries prove only the named target; validate_current checks the whole measurement. Shared core
-  token exposes reserved-input classification for metadata and later recipe binding.
+[Completed .4a.2b contract/evidence](G1-SLICE-measurements.md) retains metadata/runtime
+implementation scope unchanged; the observed-CI signoff below completes the parent.
 
 - ID: `G1-SLICE.4a.2c`
-  Status: `pending`
+  Status: `done`
   Goal: observe exceptional runtime/CI integration push at job/step level; independently sign off
   measurement metadata against ontology, close .4a.2 and hand to table .4a.3.
   Acceptance: CI rust/doctrine jobs completed success, exact revision recorded; all metadata fields
   accounted for without claiming source truth, procedure repeatability or release approval.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: GitHub jobs 110566989457 (check) / 110566988221 (enforce), all steps
+  completed success at bf29b031033ad7ce198db0a02a5c1d205d5594aa; field review and local book/gates green.
+  Commit: `STITCHCAD-G1-0027`
 
 - ID: `G1-SLICE.4a.3`
   Status: `pending`
@@ -624,7 +596,7 @@ unchanged; the metadata/runtime child below remains the current unit.
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.4a.2c` | `pending` | Exceptional push/observed CI and metadata signoff before parent closure |
+| — | `G1-SLICE.4a.3` | `pending` | Named table/unique inventory completes the measurement family |
 
 ## Routing Evidence — D67, lesson decision freshness
 
@@ -705,31 +677,27 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
-### `G1-SLICE.4a.2b` — metadata references canonical documented records
+### `G1-SLICE.4a.2c` — observed CI and scoped metadata review
 
-- [x] **REPRODUCE / ISSUE** — ontology §2.1 requires body/POM distinction, entered unit, landmark and
-  documented-procedure references. Only shared core values/tokens existed; README/workspace status
-  still described earlier bootstrap work (D66). Current metadata belongs to a higher measurement crate.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-measure --test measurement_contract` →
-  `16 passed`, `rc=0`: metadata needs typed canonical record references, not copied values/state or
-  per-entry procedure prose. A body record cannot supply a garment POM. `cargo metadata --no-deps
-  --format-version 1` → sc-core/sc-measure/sc-units with path-only dependencies, `rc=0`.
-- [x] **FIX** — immutable Measurement/Landmark/MeasurementProcedure retain required fields; canonical
-  documentation must be nonblank. Borrowed context rejects repeated identity before lookup; constructor
-  validates body/garment targets, identity ownership and reserved binding. Target queries validate their
-  own references; validate_current covers all metadata. Source/physical truth retains its later owners.
-- [x] **ADDRESSED (verified)** — sixteen contracts and three private-field docs pass. Disabling
-  documentation, landmark/procedure kind, reserved binding, context duplication or measurement-identity
-  guards each fails the intended regression, independently `rc=101`; restored strict checks pass.
-  Same-id source/state/document changes are read as current content; old metadata remains unchanged.
-- [x] **NO REGRESSION** — `make check` → `325` tests, strict fmt/lint green; `make wasm` builds all
-  three crates; book warning-free; focused censuses green; ledger `9 pass / 0 fail`; `make probes` →
-  `22 suite(s)` green; staged `make gate` → `=== all doctrines green ===`, `rc=0`.
-  Completed .4a.2a contract/checklist compare byte-identical to the committed predecessor.
-- [x] **LOCKSTEP** — new crate/lockfile, shared name classification, local+CI WASM commands, README,
-  book/spec/decision/map, live/resume/index and task/history align. D66 closes in defects-part11;
-  oldest two lessons seal unchanged in devnotes-part25. G1 stays 5/18; .2c owns observed CI. D67
-  promotion freshness is owned by SPINE.22; current decision gains explicit token/metadata questions.
+- [x] **REPRODUCE / ISSUE** — .2b added a runtime crate and changed CI; local success could not
+  satisfy the COMMIT.md exceptional-push/runner obligation. .2c also owns metadata-family review.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `gh api repos/rdje/stitchcad/actions/runs/36921077740/jobs`
+  and `/36921077711/jobs` → jobs check/enforce completed/success, all steps completed/success,
+  `rc=0`; runs match bf29b031033ad7ce198db0a02a5c1d205d5594aa. Explicit job evidence closes the
+  runner gap; a run-summary-only inference is not used.
+- [x] **FIX** — clean push 3d9f2be..bf29b03 main→main; record exact revision/run/job/step evidence.
+  Review maps name/token/unit/kind/landmark/procedure/source/state to canonical immutable APIs and
+  current-reference tests. Documentation presence remains distinct from physical/source truth.
+- [x] **ADDRESSED (verified)** — rust run 36921077740/job 110566989457: fmt, strict Clippy,
+  all tests and three-crate WASM success. Doctrine run 36921077711/job 110566988221: enforcer success.
+  Sixteen metadata contracts and three privacy docs already passed locally with six actual red guards.
+- [x] **NO REGRESSION** — no code change in this review; book/focused tree and glossary censuses,
+  ledger `9 pass / 0 fail` and staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Completed .2b contract/checklist compare unchanged to bf29b03. Pre-push strict 325 tests and all
+  22 probe suites were green; both runner jobs independently agree.
+- [x] **LOCKSTEP** — .4a.2 closes; .4a.3 table remains next and G1 stays 5/18. Book records scoped
+  runtime proof; live/resume/index, task evidence and logs match. D65 retention and D67 promotion
+  remain owned; no additional seal was needed for this review.
 
 ## Verification Log
 
@@ -738,6 +706,7 @@ unchanged in the evidence sibling; fresh current-slice checks remain here.
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-10-01` | `.4a.2c` | pushed bf29b03; Actions runs/jobs/steps; metadata review; book/censuses/ledger/gate | both CI jobs/all steps success; scoped metadata parent closed; local green, `rc=0` |
 | `2026-10-01` | `.4a.2b` | metadata contracts; check/wasm/book; full probes/ledger/gate | `16 passed`; six real mutations red; `325` tests; green, `rc=0`; CI .2c |
 | `2026-10-01` | `.4a.2a` | token contracts; check/wasm/book; censuses/ledger; staged gate | `6 passed`; four real mutations red; `305` tests; green, `rc=0` |
 | `2026-10-01` | `.4a.1` | value contracts; check/wasm/book; focused censuses/ledger; staged gate | `8 passed`; four red mutations; `298` tests; green, `rc=0` |
@@ -772,6 +741,8 @@ preserved unchanged in the evidence sibling; fresh current-slice entries remain 
 
 | `.4a.2b` | `STITCHCAD-G1-0026 (leaf G1-SLICE.4a.2b)` | canonical metadata/records; native/WASM; CI observation pending .2c |
 
+| `.4a.2c` | `STITCHCAD-G1-0027 (leaf G1-SLICE.4a.2c)` | observed bf29b03 runtime/doctrine jobs; metadata parent closes |
+
 ## Changelog
 
 [Completed task changelog through zipper/hook-bar](G1-SLICE-evidence.md#historical-task-changelog)
@@ -799,3 +770,6 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
 
 - `2026-10-01`: .4a.2b adds sc-measure standalone metadata/current records and three-crate WASM
   integration; D66 closes. .2c observes the required exceptional CI push before parent signoff.
+
+- `2026-10-01`: .4a.2c observes Rust/doctrine CI jobs and every step successful at bf29b03;
+  metadata parent closes structurally. .4a.3 table follows; physical/source/release proof stays deferred.

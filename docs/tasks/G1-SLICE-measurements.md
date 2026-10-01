@@ -46,6 +46,39 @@ Historical verification/commit tables remain in the parent and [evidence sibling
   restored strict Rust 305 tests, WASM/book, focused censuses/ledger and staged doctrines green.
   Commit: `STITCHCAD-G1-0025`
 
+- ID: `G1-SLICE.4a.2b`
+  Status: `done`
+  Goal: introduce sc-measure with immutable Measurement, landmark and documented-procedure records;
+  validate current record/declaration registries and preserve entered unit plus canonical state/source.
+  Pre-code design: metadata references two landmark identities (same identity allowed for a girth
+  location), procedure identity and canonical LengthDeclaration. Landmark and procedure record kinds
+  must match body/garment; no source standard vocabulary/procedure content is invented. Procedure
+  documentation is required nonblank content on the canonical procedure record; metadata carries only
+  the procedure id. This proves documented content exists, without inferring physical repeatability or
+  source truth (Design/G4). Names must be nonblank;
+  Tokens use the shared core type, and reserved formula inputs cannot be rebound. Context duplicates refuse
+  before lookup across all three record inventories, never pick the first. Measurement identity
+  cannot collide with a supplied context record. Global Design identity/source registries remain .6. Current same-id replacements are inspected; old input stays
+  immutable. No subject/domain constraints are fabricated from the standards not read in-repo.
+  Own new crate/Cargo.lock, local and CI WASM integration, README standard-command/status scope and book.
+  D66 owned here: README reports only G0 work and the workspace header asks to retire the removed
+  starter; both misreport delivered foundations.
+  Repair status/header while preserving G0 closure-unapproved and no-application facts.
+  Acceptance: all metadata fields/canonical queries and typed missing/foreign/ambiguous refusals tested;
+  strict Rust/WASM/book/focused and full milestone gates pass. CI verdict remains .2c's obligation.
+  Verification: sixteen contracts + three privacy docs; six actual guard mutations red; restored
+  strict Rust 325 tests, three-crate WASM/book, full 22 probe suites and staged doctrines green.
+  Exceptional push/observed CI belongs to .4a.2c; no remote success is claimed here.
+  Commit: `STITCHCAD-G1-0026`
+
+  API before code: MeasurementContext borrows declarations/landmarks/procedures with typed identity
+  maps. Landmark and MeasurementProcedure use private validated definitions (nonblank names and
+  procedure documentation); kinds are explicit Body/Garment. Measurement holds entered Unit, token,
+  kind, two landmark ids, procedure and declaration id. Current context queries borrow canonical
+  targets, reject removed/mismatched/ambiguous targets, and preserve authored metadata/state. Target
+  queries prove only the named target; validate_current checks the whole measurement. Shared core
+  token exposes reserved-input classification for metadata and later recipe binding.
+
 ## Completed acceptance checklists
 
 ### `G1-SLICE.4a.1` — one canonical length state, no numeric unknown default
@@ -93,3 +126,29 @@ Historical verification/commit tables remain in the parent and [evidence sibling
 - [x] **LOCKSTEP** — core API/tests and input chapter/grammar/vocabulary match the promoted decision;
   live/resume/tree/map/history align. .4a.2b introduces metadata/runtime integration, then .2c observes
   CI before parent closure. D66 is owned there; D65 archive transition keeps its actual seal trigger.
+
+### `G1-SLICE.4a.2b` — metadata references canonical documented records
+
+- [x] **REPRODUCE / ISSUE** — ontology §2.1 requires body/POM distinction, entered unit, landmark and
+  documented-procedure references. Only shared core values/tokens existed; README/workspace status
+  still described earlier bootstrap work (D66). Current metadata belongs to a higher measurement crate.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-measure --test measurement_contract` →
+  `16 passed`, `rc=0`: metadata needs typed canonical record references, not copied values/state or
+  per-entry procedure prose. A body record cannot supply a garment POM. `cargo metadata --no-deps
+  --format-version 1` → sc-core/sc-measure/sc-units with path-only dependencies, `rc=0`.
+- [x] **FIX** — immutable Measurement/Landmark/MeasurementProcedure retain required fields; canonical
+  documentation must be nonblank. Borrowed context rejects repeated identity before lookup; constructor
+  validates body/garment targets, identity ownership and reserved binding. Target queries validate their
+  own references; validate_current covers all metadata. Source/physical truth retains its later owners.
+- [x] **ADDRESSED (verified)** — sixteen contracts and three private-field docs pass. Disabling
+  documentation, landmark/procedure kind, reserved binding, context duplication or measurement-identity
+  guards each fails the intended regression, independently `rc=101`; restored strict checks pass.
+  Same-id source/state/document changes are read as current content; old metadata remains unchanged.
+- [x] **NO REGRESSION** — `make check` → `325` tests, strict fmt/lint green; `make wasm` builds all
+  three crates; book warning-free; focused censuses green; ledger `9 pass / 0 fail`; `make probes` →
+  `22 suite(s)` green; staged `make gate` → `=== all doctrines green ===`, `rc=0`.
+  Completed .4a.2a contract/checklist compare byte-identical to the committed predecessor.
+- [x] **LOCKSTEP** — new crate/lockfile, shared name classification, local+CI WASM commands, README,
+  book/spec/decision/map, live/resume/index and task/history align. D66 closes in defects-part11;
+  oldest two lessons seal unchanged in devnotes-part25. G1 stays 5/18; .2c owns observed CI. D67
+  promotion freshness is owned by SPINE.22; current decision gains explicit token/metadata questions.

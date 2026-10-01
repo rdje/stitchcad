@@ -15,7 +15,8 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   while full current validation checks every reference; Design/G4 still owns global source/evidence.
 - Sixteen contracts plus three privacy docs pass. Six actual guard mutations fail; restored strict
   Rust executes 325 tests, with three-crate WASM, book and full probes/gates green. CI integration
-  requires the exceptional push and observed job/step verdict in .4a.2c, not an inferred remote success.
+  required the exceptional push; .4a.2c observed bf29b03 Rust/doctrine jobs and every step successful,
+  including the three-crate WASM build. Metadata parent closes; physical/source proof remains deferred.
 - D66 corrects README/workspace starter status. Older lessons and token task records move unchanged;
   canonical retrieval pointers retain exact identity. Archive is 64/64 files; the next required seal
   must take D65's owned SPINE.19.2 transition before further product growth.

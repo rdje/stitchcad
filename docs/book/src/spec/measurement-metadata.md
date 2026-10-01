@@ -6,6 +6,11 @@ per-POM Ease and SizeSet follow separately; this partial family does not close G
 [Ontology §2.1](ontology.md) remains the normative field contract. These libraries compile on the
 native and WASM targets; the command/API/MCP facade follows in its owned G1 slices.
 
+Runtime review captured at bf29b03: the [Rust run](https://github.com/rdje/stitchcad/actions/runs/36921077740)
+and [doctrine run](https://github.com/rdje/stitchcad/actions/runs/36921077711) completed successfully;
+job/step queries confirm every step, including strict lint/tests and the three-crate WASM build.
+This is structural/runtime evidence for metadata, with source/physical/release proof still deferred.
+
 ## Content and references
 
 Each MeasurementDefinition has identity, human-readable name, exact MachineToken, entered Unit,
