@@ -2,7 +2,7 @@
 
 > **Status:** normative specification, gate **G0** (roadmap §3.1, §4.1). Specified here; implemented by
 > `sc-core` and `sc-measure` at gate G1 (leaves `G1-SLICE.3`, `G1-SLICE.4`). Pieces are now structurally
-> implemented with whole-interval repair queries (§10); other object types follow. Terms used below are
+> implemented with whole-interval repair queries (§10); all four structural object families are complete. Terms below are
 > defined in the [glossary](glossary.md).
 
 This chapter defines every first-class object in a StitchCAD design: what it is, what it must carry,

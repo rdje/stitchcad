@@ -51,3 +51,5 @@ Records carry an `answers:` line so a question can find them — that is what ma
 | [`decision_physical-cut-copies-have-stable-identities.md`](decision_physical-cut-copies-have-stable-identities.md) | `decision` | explicit copy identities and orientations, complete validated cut plan; sewing neighbours can differ per copy |
 
 | [`decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`](decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md) | `decision` | copy-addressed spans, disjoint self-seams, explicit direction/ease/stops; physical validation remains deferred |
+
+| [`decision_length-declarations-retain-state-and-provenance.md`](decision_length-declarations-retain-state-and-provenance.md) | `decision` | canonical length/state/source inputs; unknown/derived give no numeric fallback; evidence truth and policy remain later proofs |

@@ -166,7 +166,9 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 [`stitchcad-defects-part8.md`](../history/stitchcad-defects-part8.md)
 (D61; 13 lines, 1214 bytes, `sha256:af043224…`) and
 [`stitchcad-defects-part9.md`](../history/stitchcad-defects-part9.md)
-(D62, D63; 14 lines, 1370 bytes, `sha256:5c7cd18f…`), under D46's remedy. Every cited defect
+(D62, D63; 14 lines, 1370 bytes, `sha256:5c7cd18f…`) and
+[`stitchcad-defects-part10.md`](../history/stitchcad-defects-part10.md)
+(D64; 8 lines, 801 bytes, `sha256:a33e5ff9…`), under D46's remedy. Every cited defect
 resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
 `grep -h '^- \*\*D[0-9]' docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by
@@ -178,6 +180,17 @@ invisible pressure under a line-and-byte cap: the widest row here measured **1 7
 why maximum-content-line bytes is a separate axis in the containment doctrine. Bounded prose entries
 keep every axis visible, and they remove the ambiguity a raw `|` inside a code span creates (the GFM
 spec asks for `\|`; the inherited arity checker treats a code span as protective — defect D22).
+
+- **D65** — sealed-history file count is approaching its enforced 64-file ceiling; normal
+  per-slice retention will soon block product commits even though each segment is small.
+  - Reproduce: `git ls-files -- 'docs/history/*.md' | wc -l` → 59 at `2db924b`; the two seals
+    owned by G1-SLICE.4a.1 bring it to 61. surfaces.tsv declares 64; check_live_doc_size.sh
+    compares measured collection cardinality against that ceiling, with no archive transition.
+  - Impact: three ordinary seals consume the remaining capacity; nesting files cannot remedy it
+    because git's glob crosses directories. Raising the ceiling would merely defer unbounded growth.
+  - Owner/schedule: `SPINE.19.2`, before a required product seal would exceed the 64-file limit.
+    Preserve exact historical bytes, order, identifiers and complete portable retrieval; bound both
+    archive descriptors and retained storage under the adopted archive contract. No ceiling increase.
 
 - **D34** — the layer-B index reported a stale frontier: `docs/TASK_TREE.md` named `G0-CONTRACT.4` as the
   tree's next leaf and its execution-order line said "`G0-CONTRACT.4`–`.17`" after `.5` and `.6` had both
@@ -431,6 +444,22 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
 - None for `PLANNING.2`/`PLANNING.3`.
 
 ## Acceptance Checklist
+
+### D64 — closed by `G1-SLICE.4a.1`; D65 retention is owned
+
+- [x] **REPRODUCE / ISSUE** — introduction/module inventory still said other objects follow after
+  the four-family review closed; D64 names reproduction, impact and the immediate repair owner.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `git show HEAD:docs/book/src/spec/ontology-review.md` →
+  sixteen objects/all four structural families, `rc=0`; introductory text was omitted from signoff
+  synchronization. The implemented API inventory and structural/physical boundary already agreed.
+- [x] **FIX** — correct both status summaries without changing ontology behavior or claiming physical
+  production proof. Seal D64 with its reproduction/closure; own D65's independently measured pressure.
+- [x] **ADDRESSED (verified)** — warning-free `make book` and strict `make check` → `298` tests,
+  `rc=0`; introduction/module status matches the committed review; D64 descriptor reproduces exactly.
+- [x] **NO REGRESSION** — WASM/focused censuses/ledger/staged doctrines green, `rc=0`; tree census
+  `10 lanes / 13 trees / 5 siblings / 0 unowned / 0 orphan(s) / 0 dead link(s)`.
+- [x] **LOCKSTEP** — D64 in defects-part10; live census 9 open / 55 sealed includes D65 under
+  SPINE.19.2, taken before a product seal would exceed the archive limit. Live/resume/tree/book align.
 
 ### D62/D63 — closed by `G1-SLICE.3c.4d.2`
 

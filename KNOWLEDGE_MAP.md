@@ -9,13 +9,12 @@
 Entries are orientation-sized — path, what it is, where to enter, owner — because the map is a projection
 sharing its ceiling with a line per record and per tree: `decision_knowledge-map-entries-are-orientation-sized.md`.
 
-- `crates/sc-units/` — fixed-point lengths/angles, exact conversions, five tolerance classes and typed
-  errors; dependency-free and wasm-safe. Entry `crates/sc-units/src/lib.rs`, tests
+- `crates/sc-units/` — fixed-point units/conversions and typed tolerances/errors; wasm-safe. Entry `crates/sc-units/src/lib.rs`, tests
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/` — **structural ontology**: identity, topology resolution/repairs, immutable
-  pieces/copy plans, marks, allowances, construction/closure/pocket intent and sewing graphs. Entry
-  `crates/sc-core/src/ontology/`; tests `crates/sc-core/tests/`. Owner `G0-CONTRACT.3` / `G1-SLICE.3`.
+- `crates/sc-core/` — identity/topology, immutable ontology and canonical length states. Entry
+  `crates/sc-core/src/ontology/`, `crates/sc-core/src/value.rs`; tests `crates/sc-core/tests/`.
+  Owner `G0-CONTRACT.3` / `G1-SLICE.3` / `.4a.1`.
 - `docs/book/src/spec/` — normative contracts reviewed by the director. Entry
   `docs/book/src/SUMMARY.md`; owner `G0-CONTRACT` and later implementation gates.
 - `docs/book/src/spec/formula-language.md` — expression contract, with linked grammar and examples.
@@ -23,22 +22,21 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   `G0-CONTRACT.9` / `G1-SLICE.5`.
 - `docs/book/src/spec/interchange-dialects.md` — six-axis target registry, layers, entities and grading.
   Checked by `docs/tasks/artifacts/interchange/run_interchange_census.sh`. Owner `G0-CONTRACT.10` / `G2-2D`.
-- `docs/book/src/spec/feature-matrix.md` — **the boundary of the release claim**: 105 dispositioned rows, 29
-  declared diagnostics, coverage derived by
+- `docs/book/src/spec/feature-matrix.md` — release boundary: 105 rows/29 diagnostics, derived by
   `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. Owner `G0-CONTRACT.4`.
 - `docs/book/src/spec/glossary/` — nine vocabulary parts; A–Z entry `glossary.md`. Checked by
   `docs/tasks/artifacts/glossary/run_glossary_census.sh`; owner `G0-CONTRACT.1` and later gates.
 - `.doctrine/live_document_size/` — the containment data plane (`surfaces.tsv`, `routes.tsv`), enforced by
   `scripts/check_live_doc_size.sh`. Owner `SPINE.4`.
-- `docs/tasks/artifacts/` — the diagnostic probe suites, one directory per instrument; `make probes` runs
-  them all with scratch pinned to this volume. `g0_exit/run_g0_exit_review.sh` derives gate G0's verdict from
-  `ROADMAP.md` §11 itself. Owner the leaf that needed the instrument.
+- `docs/tasks/artifacts/` — probe instruments; `make probes` uses repo-volume scratch.
+  `g0_exit/run_g0_exit_review.sh` derives G0 from `ROADMAP.md` §11. Owner each instrument's leaf.
 
 ## Active task-trees
 
 - [`BOOTSTRAP.md`](docs/tasks/BOOTSTRAP.md)
 - [`G0-CONTRACT-evidence.md`](docs/tasks/G0-CONTRACT-evidence.md)
 - [`G0-CONTRACT.md`](docs/tasks/G0-CONTRACT.md)
+- [`G1-SLICE-constructions.md`](docs/tasks/G1-SLICE-constructions.md)
 - [`G1-SLICE-evidence.md`](docs/tasks/G1-SLICE-evidence.md)
 - [`G1-SLICE.md`](docs/tasks/G1-SLICE.md)
 - [`G2-2D.md`](docs/tasks/G2-2D.md)
@@ -72,6 +70,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_governance-two-review-paths-and-the-unnamed-roles.md`](docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md)
 - [`decision_i18n-one-message-system-fluent.md`](docs/decisions/decision_i18n-one-message-system-fluent.md)
 - [`decision_knowledge-map-entries-are-orientation-sized.md`](docs/decisions/decision_knowledge-map-entries-are-orientation-sized.md)
+- [`decision_length-declarations-retain-state-and-provenance.md`](docs/decisions/decision_length-declarations-retain-state-and-provenance.md)
 - [`decision_live-document-containment-proportionate-adoption.md`](docs/decisions/decision_live-document-containment-proportionate-adoption.md)
 - [`decision_machine-tokens-declared-where-used.md`](docs/decisions/decision_machine-tokens-declared-where-used.md)
 - [`decision_maxline-health-derived-from-the-cell-budget.md`](docs/decisions/decision_maxline-health-derived-from-the-cell-budget.md)

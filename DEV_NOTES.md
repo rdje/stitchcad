@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — numeric availability and source truth are separate contracts
+
+- A shared core LengthDeclaration holds exactly one authored state and source. Known requires a
+  nonempty distinct evidence inventory; assumed, unknown, preference and derived carry their distinct
+  required record identities. Unknown and derived cannot store numeric values, and their queries name
+  the observation or formula they require. Signed lengths and explicit zero remain authored input;
+  procedure-specific physical domains belong to measurement/recipe validation, not a generic guard.
+- sc-measure can borrow core declarations without copying state or introducing a core→measurement
+  dependency cycle. A known claim is not proof that evidence exists or fits a scope. Design/recipe and
+  G4 retain those checks; no global export approval is inferred from authored state.
+- Eight contracts plus three privacy/state doc-tests pass; disabling empty/duplicate evidence checks
+  or returning zero for unknown/derived each makes its regression fail. Strict Rust executes 298
+  tests; WASM/book and focused censuses pass. D64 corrects stale ontology coverage prose; completed
+  construction contracts and ten checklists partition unchanged with committed-payload comparison.
+- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`.
+
 ## _(2026-10-01)_ — a negative probe must prove it changed the intended contract field
 
 - Full milestone probes found BAD-GATE anchored to an obsolete tuck/pleat explanation. Its sed
@@ -119,35 +135,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   and conservation visibly deferred to G2/G3.
 - promotion: promoted by `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`'s gather binding.
 
-## _(2026-10-01)_ — shared structural input must preserve distinct tuck and pleat kinds
-
-- Tuck/Pleat wrappers share one immutable content validator but remain distinct semantic types for
-  the recipe's typed closing operations. Their nonempty fold lists, intake origin and direction are
-  authored intent; reference count alone cannot certify physical pleat shape or conserved intake.
-- Duplicate held intervals ignore authored traversal; every line/direction checks complete owned
-  current intervals and unique endpoints. Nine contracts exercise both wrappers, including an owned
-  endpoints/foreign-middle merge after reversal. Disabling ownership refusal makes that regression
-  red. Queries preserve raw split choices, fragment order and interior repairs without mutation.
-- Symbolic intake/operation identities preserve registry obligations and provide no defaults.
-  Physical fold shape and executed conservation remain G2/G3; strict Rust/WASM and book checks pass.
-- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s tuck/pleat boundary.
-
-## _(2026-10-01)_ — a declared dart intake is not an executed conserved closure
-
-- An internal apex can be anchored to a Piece-owned construction leg without assigning it to the cut
-  boundary. Directed legs/references carry intent; G2 checks actual coincidence/straightness, and G2/G3
-  compares removed boundary length with declared intake after executing the named closing operation.
-- Intake provenance and operation identity stay authored content. Symbolic sources carry no defaults
-  or copied states. Nine tests cover birth refusals, duplicate legs, internal apex, split choices,
-  current-frame ownership and immutable post-edit evidence. The foreign-middle mutation fails red;
-  restored strict Rust/WASM pass. Registries still own operation/parameter existence and kinds.
-- The remaining construction scope is split into safe semantic children; examples have a bounded book
-  companion. No physical dart result or fixture golden is changed by carrying structural intent.
-- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s dart boundary.
-
-
-
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -180,3 +167,5 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of
 `run_changelog_ledger_probes.sh` proves the digest afterwards.
+
+| [`devnotes-part23.md`](docs/history/stitchcad-devnotes-part23.md) | tuck/pleat and dart lessons | 25 lines, 2172 bytes, `sha256:ba5ee2a7…` |

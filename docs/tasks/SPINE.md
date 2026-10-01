@@ -339,6 +339,20 @@ mechanically-enforced form:
   and the ledger probes at `9 pass / 0 fail` with `32` segment verdicts.
   Commit: `STITCHCAD-SPINE-0019a`
 
+- ID: `SPINE.19.2`
+  Status: `pending`
+  Goal: D65 — perform an archive transition before ordinary seals exhaust the 64-file ceiling.
+  Acceptance: retained historical segments remain byte-identical and addressable by stable identity;
+  descriptors declare complete contents, digests, portable retrieval and retention ownership. Prove
+  reconstruction, unique coverage, live/history navigation and pressure independently. Bound retained
+  aggregate storage and reader working set; no nested-glob evasion or ceiling increase. Review current
+  ledger consumers and adopted archive contract before choosing a safe storage topology.
+  Priority: before a required product seal would exceed 64 files; audit the projected transaction
+  at each rollover. Do not pivot dirty. Keep .19's
+  ledger-agnostic coverage/pointer obligations distinct unless this transition requires them.
+  Verification: `pending`
+  Commit: `pending`
+
 - ID: `SPINE.4.5`
   Status: `done`
   Goal: make a transition-debt baseline **revision-aware**, so a legitimate revision of a baselined document
@@ -501,6 +515,7 @@ mechanically-enforced form:
 | — | `SPINE.20` | `done` | taken immediately after `.15` on the director's instruction to act on the findings: the convention is now a gate (`TABLE-CODE-PIPE`), because a rule that lives only in `COMMIT.md` is a suggestion and what it prevents is a silently dropped column in the book the director reads |
 | — | `SPINE.17` | `done` | taken out of order: a director-approved rule is recorded when it is made |
 | — | `SPINE.18` | `done` | taken immediately after: `.17` shipped a trigger that fired on itself |
+| trigger | `SPINE.19.2` | `pending` | D65: 61/64 files; archive transition before a required product seal exceeds the ceiling |
 | — | `SPINE.19.1` | `done` | taken at D49's trigger rather than waited for: `PLANNING.md` was at 95 % of its byte ceiling, so the 44 closed defects were sealed and the live census is now the open set |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
 | — | `SPINE.21` | `done` | the cleanup cadence is recurring, and a recurring obligation with no leaf is one somebody rediscovers: taken between two product slices because the 24-hour mark falls inside this one |

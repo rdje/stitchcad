@@ -337,278 +337,94 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Children: `.3c.4a` (intake constructions), `.3c.4b` (hem/layers), `.3c.4c` (closures),
   `.3c.4d` (pockets and family signoff). Safe child slices preserve the entire §4.3/§4.7 scope.
 
-- ID: `G1-SLICE.3c.4a`
-  Status: `done`
-  Goal: semantic intake constructions, owned anchors/direction and explicit closing operation.
-  Children: `.3c.4a.1` (dart), `.3c.4a.2` (tuck/pleat/gather).
-
-  Verification: all four semantic kinds have immutable structural APIs and deferred closure checks;
-  dart/fold/gather tests + privacy, Rust/WASM/book and focused gates pass in child commits.
-  Commit: children `STITCHCAD-G1-0014` … `STITCHCAD-G1-0016`.
-
-- ID: `G1-SLICE.3c.4a.1`
-  Status: `done`
-  Goal: immutable Dart with intake origin, apex, two directed legs, declared direction and closing
-  operation identity; actual closure/intake conservation remains G2/G3.
-  Acceptance: required references are born-valid and owned; identical held leg intervals refused;
-  nonnegative explicit intake retains its parameter origin, symbols supply no default; edits expose
-  raw repairs/choices; no intake conservation or operation execution claim. Privacy and WASM pass.
-  Design before code: apex is an EdgeAnchor on owned internal construction geometry, so an interior
-  apex is expressible without pretending it lies on the cut boundary. G2 proves geometric leg/apex
-  coincidence; two directed leg ranges and an explicit directed reference carry geometric intent.
-  Intake has explicit parameter/value or formula/profile declarations; closing operation is held
-  identity whose existence/kind/dependency is `.5`/`.6`'s obligation. Common reusable intake source
-  stays distinct from allowance width. Extend the structural/geometric boundary record before code.
-  Book containment: add a separate construction implementation companion before growing the current
-  24135-byte executable chapter beyond its 24576-byte health target; normative clauses stay put.
-  Verification: nine dart contracts + privacy; ownership mutation red; strict Rust, wasm, book,
-  fixture/feature/glossary/tree censuses, ledger and staged doctrines green.
-  Commit: `STITCHCAD-G1-0014`
-
-- ID: `G1-SLICE.3c.4a.2`
-  Status: `done`
-  Goal: immutable Tuck/Pleat/Gather with explicit intake, owned fold/attachment geometry, direction
-  and closing operation; type-specific semantic content and deferred physical conservation.
-  Acceptance: validate all required scope references and intake domains, preserve repairs and defaults
-  prohibition; G2/G3 must prove the actual closing operations and gather distribution.
-  Verification: Tuck/Pleat/Gather contracts + privacy, Rust/WASM/book and focused gates pass.
-  Commit: child slices `STITCHCAD-G1-0015`, `STITCHCAD-G1-0016`
-
-  Children: `.3c.4a.2a` (tucks/pleats), `.3c.4a.2b` (gathers linked to a sewing span).
-
-- ID: `G1-SLICE.3c.4a.2a`
-  Status: `done`
-  Goal: immutable, distinctly typed Tuck and Pleat with nonempty directed fold-line geometry,
-  intake origin, explicit folding direction and closing-operation identity.
-  Acceptance: all lines/direction are owned complete ranges with unique endpoints; empty or duplicate
-  held fold intervals and negative explicit intake refused; symbolic intake supplies no default;
-  queries preserve direction/repairs; physical fold shape/conserved intake remains G2/G3.
-  Design before code: shared FoldDefinition input/validation, separate immutable Tuck/Pleat wrappers
-  preserve semantic kind. A nonempty list supports one or multiple authored fold lines without
-  inventing a physical pleat-count rule. Exact duplicate held intervals ignore traversal direction.
-  Reuse IntakeAmount and whole-interval ownership; folding operation existence/kind is `.5`/`.6`.
-  Broader actual geometry tests remain G2/G3, including coincidence between distinct held names.
-  Extend the existing structural/geometric record before code. Live-window rollover is part of
-  this slice's doc sync if the next entry crosses CHANGELOG/DEV_NOTES health targets.
-  Verification: nine shared tuck/pleat contracts + two privacy doctests; ownership mutation red;
-  strict Rust, wasm, book, focused censuses, ledger and staged doctrine gate green.
-  Commit: `STITCHCAD-G1-0015`
-
-- ID: `G1-SLICE.3c.4a.2b`
-  Status: `done`
-  Goal: Gather with intake origin, owned direction/attachment and explicit graph/span/side identity,
-  using declared sewing ease allocation without a separate hidden distribution or physical stretch.
-  Acceptance: named span/copy side exists and belongs to the Piece; all anchors/intervals resolve;
-  no copied ease/profile state or claimed executed conservation; immutable queries expose removals.
-  Verification: eleven gather contracts + privacy; copy-binding and ownership mutations red;
-  strict Rust, wasm, book, focused censuses, ledger and staged doctrines green.
-  Commit: `STITCHCAD-G1-0016`
-
-  Design before code: Gather names graph/span/side and the held physical-copy id. Attachment range,
-  signed intake source and distribution are borrowed from that span, not independently authored
-  or cached. A-side gathering interprets A-minus-B directly; B-side gathering interprets its negation.
-  An explicit differential with the wrong sign is refused; symbols remain G2/G3/G4 obligations.
-  The raw signed source is exposed with its side, preserving provenance without invented values.
-  Direction and closing operation are explicit; complete owned attachment/direction ranges required.
-  Target queries report missing graph/span/copy or a changed side-copy binding without retargeting.
-  Extend the existing sewing decision before code; retain graph distribution as the single source.
-  Containment ownership: move recent completed mark/dart checklists unchanged to the existing evidence
-  sibling before this checklist crosses 1000 lines; revalidate every staged checklist. Live-window
-  rollover remains part of synchronized docs when health targets require it.
-
-- ID: `G1-SLICE.3c.4b`
-  Status: `done`
-  Goal: Hem and Facing/Lining/Interfacing descriptors with served edges/Pieces, depth/fold method,
-  offset relationship and material assignment; deferred/out-of-envelope constructions typed refusals.
-  Acceptance: owned live references, positive composition links, explicit symbolic parameters and no
-  generated offset claim; lining refuses its named deferred-envelope diagnostic in executable scope.
-  Verification: served-layer + Hem contracts green; current composition and ownership mutations red.
-  Commit: `STITCHCAD-G1-0018`
-
-  Children: `.3c.4b.1` (served layers), `.3c.4b.2` (hem including faced-hem links).
-
-- ID: `G1-SLICE.3c.4b.1`
-  Status: `done`
-  Goal: distinct immutable Facing/Lining/Interfacing descriptors with served Piece, explicit
-  recipe offset relationship and material assignment. Modelled lining must refuse execution in v1.
-  Acceptance: served identity matches the provided Piece, source ranges are nonempty/owned/complete
-  with unique endpoints, unresolved material has a nonblank reason, raw repairs remain visible.
-  Offset relationship carries operation identity + directed source ranges; recipe owns dimensions
-  and resolves operation inputs, without duplicate uncertainty/default values here. Geometry is G2.
-  Design before code: the canonical recipe is authoritative (ontology principle 1), so offset
-  dimensions remain on the named recipe operation. Distinct layer types share structural validation;
-  no separately generated contour or duplicated output-Piece material state is cached. Lining can be
-  modelled structurally (feature matrix rule 3) but `require_in_scope()` returns `env_lining`, served
-  Piece and proving gate G7. Facing/Interfacing pass only this envelope check, not geometry approval.
-  `.6` must apply that check before requested construction execution, not before inspecting content.
-  Share Piece's existing material-reason invariant and prove the original Piece contracts unchanged.
-  Seal the oldest DEV_NOTES lesson unchanged if the synchronized entry crosses its health target.
-  Extend the existing structural/geometric decision before code. Move completed fold evidence to the
-  sibling before the parent's next checklist approaches 1000 lines; preserve and revalidate it.
-  Verification: 9 layer contracts + 3 privacy tests; two refusal mutations red; restored checks green.
-  Commit: `STITCHCAD-G1-0017`
-
-- ID: `G1-SLICE.3c.4b.2`
-  Status: `done`
-  Goal: immutable Hem with owned finish edge, depth origin, explicit fold-type declaration and
-  turned/faced method; faced hems bind an existing Facing serving the same Piece.
-  Acceptance: all required references resolve, missing/wrong facing links are typed refusals,
-  symbolic dimensions/fold type have no defaults; raw repairs stay visible; physical folding G2/G3.
-  Design before code: depth is Explicit(parameter/value), Formula or Profile; explicit nonnegative
-  zero is authored, never a fallback. Fold type names a logical declaration or Profile binding;
-  recipe/Design owns its domain/state, so G1 invents no physical fold vocabulary. Method is Turned
-  or Faced with a stable Facing id. Validate its id, same served Piece and current source ranges;
-  later queries refuse removed/reassigned/invalid targets without retargeting. Whole finish-edge
-  coverage and unique endpoints are required; raw interval repairs remain queryable. Registries
-  validate parameter/fold kinds; G2/G3 prove physical folding. Extend the existing decision first.
-  Move completed gather/layer checklists unchanged to the evidence sibling for bounded continuity;
-  seal oldest live ledger/lesson entries unchanged if the synchronized docs cross health targets.
-  Verification: served-layer + Hem contracts green; current composition and ownership mutations red.
-  Commit: `STITCHCAD-G1-0018`
-
-- ID: `G1-SLICE.3c.4c`
-  Status: `done`
-  Goal: Closure descriptors with button/buttonhole derivation, centred zipper and hook/bar placement,
-  count and sizes; unsupported fly refusal. Derived buttonhole length cannot be independently entered.
-  Acceptance: typed supported/deferred variants, required owned anchors and composition/count domains;
-  no physical placement or resolved buttonhole-size claim before G2/G3.
-  Verification: all closure child contracts green; canonical source mutations red; geometry remains deferred.
-  Commit: `STITCHCAD-G1-0021`
-
-  Children: `.3c.4c.1a` (physical notion placements), `.3c.4c.1b` (centred zipper/hook-bar/fly),
-  `.3c.4c.2` (button/buttonhole pairs and one canonical length derivation).
-
-- ID: `G1-SLICE.3c.4c.1a`
-  Status: `done`
-  Goal: immutable semantic placement of a notion on a stable physical CutCopy, with an owned anchor
-  and directed orientation range, reusable by all closure components without duplicated geometry.
-  Acceptance: missing copy, wrong/reassigned source Piece, invalid anchors and incomplete/foreign
-  orientation ranges are typed refusals. Current queries never retarget to another copy.
-  Design before code: stable placement id + physical-copy id + anchor/direction are authored input;
-  private born Piece identity guards copy reassignment, without caching geometry or reflected coordinates.
-  Birth anchors require live edges; current validation accepts uniquely resolved historical anchors,
-  while retaining split choices/repairs. Extract the shared current-anchor validator behind the
-  existing born-live guard so original Notch/TurnPoint behavior stays unchanged. Independent raw
-  anchor/direction queries remain visible; Design validates all current copy/Piece registries.
-  Extend the physical-copy decision before code; G2/V1 consumes reflection. Hardware/count/size
-  descriptors follow in `.1b`/`.2`. Move completed Hem evidence unchanged to the existing sibling;
-  bounded closure book examples and live ledger/lesson rollovers are owned synchronized docs.
-  Move the completed verification-log table unchanged to the evidence sibling before the new checklist
-  crosses 1000 lines; retain a direct retrieval pointer and fresh current verification log here.
-  Verification: 10 placement contracts + privacy; four mutations red; restored focused checks green.
-  Commit: `STITCHCAD-G1-0019`
-
-- ID: `G1-SLICE.3c.4c.1b`
-  Status: `done`
-  Goal: centred zipper and hook/bar descriptors with physical notion-placement pairs, explicit sizes,
-  counts derived from nonempty placements and named env_fly refusal. No physical placement claim.
-  Acceptance: all placements revalidate current contexts; supported kinds stay distinct; empty/duplicate
-  physical instances refused; no fallback sizes; fly refusal names requested closure/trousers gap/G7.
-  Design before code: each ClosureInstance has its own stable id and two distinct current
-  NotionPlacement ids. Count is derived as sc_units::Count from nonempty instances, never authored
-  twice; overflow is typed. Reused instance/placement identities are refused; geometric coincidence
-  remains G2. Centred zipper length is Explicit(parameter/positive Length), Formula or Profile;
-  hook/bar sizes each name a logical recipe declaration or Profile binding, with no vendor default.
-  Closure borrows canonical current placements and validates their Piece/plan/ledger contexts;
-  duplicate context ids are typed refusals rather than first-match choices. Fly scope is checked
-  before geometry and returns env_fly with requested Closure, declared trousers gap and gate G7.
-  Extend the existing physical-copy decision first. Move completed placement evidence unchanged to
-  the sibling before this checklist exceeds 1000 lines; live ledger/lesson rollovers owned here.
-  Preserve the completed commit-log table unchanged in the sibling, with a direct retrieval pointer
-  and a fresh current-slice commit table, so history growth does not displace active contracts.
-  Verification: 10 closure contracts + Count domain + privacy; four mutations red; focused checks green.
-  Commit: `STITCHCAD-G1-0020`
-
-- ID: `G1-SLICE.3c.4c.2`
-  Status: `done`
-  Goal: button/buttonhole pairs with owned placements and button sizes, single canonical derived hole
-  length source; no separately authored or cached hole length. Explicit profile/recipe provenance.
-  Acceptance: required pairs/counts/targets validate; changing button size changes the source observed
-  by derived holes; physical length resolution/derivation and placements remain G2/G3 obligations.
-  Design before code: ButtonAndButtonhole is a distinct supported ClosureKind, using existing
-  stable physical instance/placement pairs (first button, second hole). Button size retains a
-  required NotionSize logical recipe/Profile declaration. ButtonholeDerivation names the recipe
-  operation; there is no independently authored/cached hole length. buttonhole_length_source()
-  borrows that same canonical size and derivation with Closure id; replacement size/operation
-  changes the observed source. Recipe/Design must validate that typed operation consumes this size;
-  G3 executes it and checks positive physical length, not an invented G1 formula or clearance.
-  Separate DeferredToG3 derivation state from geometric DeferredToG2 and profile DeferredToG4.
-  Extend the existing closure decision first; use existing current target/count validation for
-  button/hole instances. Move completed zipper/hook-bar evidence and its completed log rows unchanged
-  to the existing sibling before growing beyond 1000 lines; live ledger/lesson rollovers owned here.
-  Move the completed task changelog unchanged to the sibling with a direct pointer, preserving
-  current logs here and avoiding a repeatedly displaced active contract.
-  Verification: all closure child contracts green; canonical source mutations red; geometry remains deferred.
-  Commit: `STITCHCAD-G1-0021`
-
-- ID: `G1-SLICE.3c.4d`
-  Status: `done`
-  Goal: Pocket position, orientation, opening and component Piece references; complete construction
-  family signoff and close `.3c` after all child types have structural evidence and book coverage.
-  Acceptance: every component exists, composition required, owned placement/direction references,
-  symbolic opening resolution and execution scope remain G3 obligations; named envelope diagnostics
-  must be consumed before execution, not replaced by approximation. All §4 families accounted for.
-  Verification: object/support suites 149 contracts; sc-core 260 tests incl. 18 docs; full strict
-  Rust/WASM/book, 22 probe suites, focused censuses/ledger and staged doctrine gates green.
-  Commit: `STITCHCAD-G1-0023`
-
-  Children: `.3c.4d.1` (Pocket metadata/composition), `.3c.4d.2` (construction/object-family signoff).
-
-- ID: `G1-SLICE.3c.4d.1`
-  Status: `done`
-  Goal: immutable Pocket with served physical copy/source Piece, owned position and directed orientation,
-  required logical opening binding and nonempty explicit component copy/Piece references.
-  Acceptance: current targets are unambiguous/existing; copy/source mismatch, duplicate components,
-  unresolved/foreign anchors and whole orientation intervals are typed refusals. No substituted pieces.
-  Design before code: PocketPieceRef explicitly pairs copy id with source Piece id for served target
-  and every component; multiple copies of one pattern Piece remain distinct. Source reassignment
-  cannot silently satisfy the old reference. The served copy may also be an explicit component;
-  G1 infers no recipe-cycle or physical-shape rule from that relationship. Recipe dependency cycles
-  and physical pocket construction remain `.5`/G3. Opening is a logical recipe/Profile declaration,
-  with DeferredToG3 resolution/scope rather than invented opening vocabulary or support approval.
-  Birth/current anchor validation follows existing shared contracts; orientation requires complete
-  owned intervals/unique endpoints. Component queries borrow current Piece metadata; Design/G2 must
-  inspect all component contour repairs and geometry before execution/release. Extend the existing
-  structural/geometric decision first. Bounded Pocket examples/API vocabulary and ledger/lesson
-  rollovers are owned synchronized docs; completed evidence moves if containment requires it.
-  Verification: eleven Pocket contracts + privacy; three mutations red; strict Rust/WASM/book,
-  fixture/feature/glossary/tree, ledger and staged doctrine gates green.
-  Commit: `STITCHCAD-G1-0022`
-
-- ID: `G1-SLICE.3c.4d.2`
-  Status: `done`
-  Goal: re-derive all geometry-bearing object families against roadmap/ontology contracts, tests,
-  immutable interfaces, current repair behavior, deferred obligations and mdBook implementation index.
-  Acceptance: every child structurally complete with owned later obligations; full milestone checks/
-  probes green; no geometric or unsupported-envelope support claim inferred from modelled metadata.
-  Close `.4d`, `.3c.4`, `.3c` and top-level `.3` only after all structural criteria are verified.
-  Director reaffirmed SOTA, signoff and production-grade as the bar on 2026-10-01. Structural
-  completion is not production certification: geometry/interoperability/reliability and independent
-  review gates retain their owned proofs; measured evidence, not API presence, earns signoff.
-  Review plan before changes: inspect every ontology §4 object against immutable public interfaces,
-  focused test inventory and bounded book examples; derive test populations from cargo output.
-  Run full Rust/WASM/book and all 22 probe suites. Preserve completed acceptance evidence unchanged
-  in the existing sibling before parent growth; review-only docs/module status and containment
-  rollovers are owned here. Later recipe/profile/Design checks remain explicit release obligations.
-  Signoff defects owned now: D62 — LIVE_STATUS attributes workspace-level 30 tests to sc-units
-  (current 5 unit + 21 property + 1 doc = 27; original sc-core had three smoke tests). D63 —
-  feature-matrix BAD-GATE mutation matches old tuck/pleat explanation, so it no longer changes the
-  fixture and full probes report 11 pass / 1 fail. Fix row/cell targeting and assert fixture mutation
-  before accepting red evidence; census predicate stays unchanged. Both are immediate priority.
-  Director 2026-10-01: external agents must control an instance through MCP over the API and gain
-  stitching competence through observable contracts/validation. Workflow discovery and full parity
-  belong .6/.9 and G5; MCP control alone cannot certify expertise or production artifact correctness.
-  Verification: object/support suites 149 contracts; sc-core 260 tests incl. 18 docs; full strict
-  Rust/WASM/book, 22 probe suites, focused censuses/ledger and staged doctrine gates green.
-  Commit: `STITCHCAD-G1-0023`
+[Completed construction child contracts and acceptance evidence](G1-SLICE-constructions.md)
+are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-G1-0023.
 
 - ID: `G1-SLICE.4`
-  Status: `pending`
+  Status: `active`
   Goal: `sc-measure` — MeasurementTable (body vs garment POM, landmarks, source, procedure),
   Ease as a first-class body→garment mapping with fit intent, and SizeSet (implements
   `G0-CONTRACT.4`/`.6`).
   Acceptance: a POM without a landmark or procedure is rejected; ease is queryable per POM;
   size labels vs order vs base size are distinct fields with tested semantics.
+  Children: .4a (measurement declarations/tables), .4b (per-POM ease), .4c (SizeSet), .4d (signoff).
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4a`
+  Status: `active`
+  Goal: canonical value/state/provenance plus MeasurementTable body/POM metadata and reference registries.
+  Children: .4a.1 (shared length declarations), .4a.2 (measurement metadata/context), .4a.3 (table/signoff).
+  Acceptance: all ontology .2.1 fields present; unknowns supply no numeric value; stable landmark/
+  procedure references, kind separation and current context validation are explicit and tested.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4a.1`
+  Status: `done`
+  Goal: core immutable length-valued declaration with canonical authored state/source references:
+  known with required evidence ids, assumed with assumption id, unknown with observation id,
+  preference with provenance id, derived with formula id and no independently entered result.
+  Acceptance: required state provenance is unrepresentable as absent; empty/duplicate known evidence
+  refused; unknown/derived cannot produce a numeric fallback; explicit values retain Length units.
+  Pre-code design: common declaration lives in sc-core, so sc-measure can depend on identity/value
+  without core depending on the higher measurement crate. Formula inputs later read a core contract;
+  .5/.6 validate declaration and dependency registries; G4 validates scoped evidence and artifact
+  policy. Declared state is authored content, not independent proof of factual truth or exportability.
+  Signed Length/explicit zero stay unchanged; per-measurement procedure/domain constraints are not
+  invented here. No generic text-valued parameter API, cached formula output or global export gate.
+  Record this boundary before code. Own bounded book vocabulary/examples and live/history/map updates.
+  D64 owned now: ontology introduction still says other object types follow after .3c completed;
+  fix intro and stale module-inventory tail; verify scope against committed .3c review.
+  Impact: book/module status misreports implementation.
+  Containment: relocate completed signoff/.13 checklists unchanged; partition completed construction
+  child contracts/checklists into a bounded linked sibling if the existing evidence file approaches
+  its ceiling. All committed payloads compare unchanged; current checklist remains first in parent.
+  Verification: eight contracts + three privacy/state doc-tests; four independent actual red mutations;
+  restored strict Rust 298 tests, WASM/book, focused censuses, ledger and staged doctrines green.
+  Commit: `STITCHCAD-G1-0024`
+
+- ID: `G1-SLICE.4a.2`
+  Status: `pending`
+  Goal: immutable body/garment measurement metadata with stable lower-snake token, entered unit,
+  canonical declaration link, two landmark references, procedure and source; typed current registries.
+  Acceptance: missing/foreign/ambiguous landmark/procedure metadata refuses; body/POM never interchanged;
+  declaration borrowing preserves source/state without a duplicate value cache. No standards data invented.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4a.3`
+  Status: `pending`
+  Goal: MeasurementTable stable identity/name and unique measurement id/token inventory with current
+  metadata queries; complete measurement-family signoff against ontology .2.1 and book contracts.
+  Acceptance: ambiguity/missing targets/current reassignment refused; immutable input; focused and
+  milestone gates prove all measurement content without certifying source truth or release readiness.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4b`
+  Status: `pending`
+  Goal: first-class body-to-garment per-POM Ease, signed Length declaration and ordered close/semi/loose
+  fit intent; explicit negative-ease authorization, canonical source/state/provenance and current links.
+  Acceptance: lookup per POM, kind correctness, declared compression and no default unknown; only typed
+  intent here, actual garment fit/physical construction remains G2/G3. Split safely before code if needed.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4c`
+  Status: `pending`
+  Goal: SizeSet identity/revision/system, authored ordered labels/base, chart/state/provenance, adjacent
+  breaks and axes; immutable profile resolution/transformation intent per canonical SizeSet decision.
+  Acceptance: label/order/base distinct; path-2 missing-break refusal, MTM of one, no quantities/defaults;
+  profile transformations never mutate Design references; execution/equivalence/approval later owned.
+  Split into safe slices before implementation; preserve every size-sets chapter requirement.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4d`
+  Status: `pending`
+  Goal: re-derive measurement/ease/size structural requirements, current reference contracts and book
+  evidence; full milestone verification, close .4 only after every child acceptance is verified.
   Verification: `pending`
   Commit: `pending`
 
@@ -782,7 +598,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.4` | `pending` | Measurements/ease/sizes consume the completed structural ontology |
+| — | `G1-SLICE.4a.2` | `pending` | Measurement metadata borrows the canonical length declaration |
 
 ## Decisions
 
@@ -856,73 +672,32 @@ file, so a placeholder both shadows real evidence and falsely rejects honest wor
 measured by the `SPINE.7` probe).
 
 
-### `G1-SLICE.3c.4d.2` — structural object families reviewed against the production-grade bar
 
-- [x] **REPRODUCE / ISSUE** — all individual §4 objects are delivered; parents still await a complete
-  review. Full probes expose D63 (feature `11 pass / 1 fail`), and crate-scoped test counts expose D62.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-core -- --list` → `260` tests including `18`
-  docs, `rc=0`; fourteen object/support suites contain `149` contracts. Source/API review accounts
-  for sixteen §4 objects in four families. `cargo test -p sc-units` → `5 + 21 + 1`, `rc=0`;
-  `git show eb83f01:crates/sc-core/src/lib.rs` → three original smoke tests, explaining workspace 30.
-  D63's literal old explanation matches no current tuck/pleat row; fixture unchanged, census green.
-- [x] **FIX** — close structural object parents after review; retain all geometric, recipe/profile,
-  current-registry and release obligations. Correct crate-scoped live counts (D62). D63 targets the
-  feature's gate cell and independently proves one malformed gate; absent/duplicate targets refuse
-  setup. Director's API/MCP control requirement belongs existing .6/.9/G5 parity/evaluation contracts.
-- [x] **ADDRESSED (verified)** — `run_feature_matrix_probes.sh` → `14 pass / 0 fail`, `rc=0`:
-  malformed gate refused by unchanged census; missing/duplicate target setup refused. No-op mutation
-  of gate writer → `13 pass / 1 fail`, `rc=1`, naming fixture setup failure; restored suite passes.
-  `make check` executes `287` tests including `19` docs, `rc=0`; all 149 object/support contracts pass.
-  Completed Pocket/button checklists compare unchanged to HEAD and staged gates revalidate them.
-- [x] **NO REGRESSION** — strict `make check`, `make wasm`, warning-free `make book`, full `make probes`
-  → `22 suite(s) green`; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`; tree →
-  `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`; staged `make gate` →
-  `=== all doctrines green ===`, all `rc=0`. No census predicate, diagnostic or envelope was weakened.
-- [x] **LOCKSTEP** — object status/module/map, bounded book review and current-query limits,
-  command/MCP requirement, parent closures, fresh frontier/index/live records align. D62/D63 close
-  in the sealed defect ledger; 8 open / 54 sealed. G1 → 5/18 leaves, all four structural families;
-  next .4 measurements/ease/sizes. G0 stays unapproved and production declaration remains G7.
-  Review examples have a bounded ontology-review chapter; oldest allowance lesson seals unchanged
-  to devnotes-part22. Completed historical checklists retain independent HEAD comparison evidence.
-  promotion: declined (review re-verifies existing canonical decisions; D63 is a local fixture repair).
 
-### `G1-SLICE.13` (acceptance rewritten by `G0-CONTRACT.11`) — a consumer leaf names its instrument, not a protocol in prose
+### `G1-SLICE.4a.1` — one canonical length state, no numeric unknown default
 
-This tree had no completed leaf, so it carried no acceptance boxes — and a staged `docs/tasks/*.md` file
-with no ticked box is refused by `scripts/check_task_acceptance.sh` whenever the same commit stages code.
-These boxes are the evidence for the change `G0-CONTRACT.11` made to this tree, added in the commit that
-made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
-
-- [x] **REPRODUCE / ISSUE** — `.13`'s acceptance pointed at a protocol that did not exist anywhere in the
-  repository: `git show HEAD:docs/tasks/G1-SLICE.md | grep -c 'the measurements the protocol named are
-  recorded'` → `1`, `rc=0`, while `git ls-tree HEAD docs/decisions/ | grep -c adr-0002` → `0`, `rc=1`. A
-  leaf whose acceptance names an absent document cannot be verified, and the spike it owns is the one the
-  roadmap warns must not be argued after the fact.
-- [x] **ROOT CAUSE (WHY + WHERE)** — the protocol is `G0-CONTRACT.11`'s deliverable
-  (`grep -n 'ADR-0002 — UI stack' ROADMAP.md` → `328`, `rc=0`), and that leaf had not been taken, so the
-  consumer was written against an intention. The fix is not a better sentence in this tree: it is the
-  protocol existing as an instrument whose output this leaf's acceptance can cite.
-- [x] **ADDRESSED (verified)** — `.13`'s acceptance now names the instrument by path, the corpus by its
-  declared numbers (16 pieces, 400 boundary vertices each, 200 pick probes, 200 snap probes, 1 000 fidelity
-  round trips), and the evidence obligations a verdict is scoped to (reference hardware, OS versions, corpus
-  script identity), and requires a recorded decision naming the rows for any human overruling the printed
-  verdict. The instrument exists and reports the honest state:
-  `bash docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh` → `spike verdict: 0 rows / 0 profiles /
-  PENDING — ADR-0002's canvas half stays `proposed` until G1-SLICE.13 records measurements / 0 refusal(s)`,
-  `exit=0`; `TMPDIR=$PWD/target/scratch bash docs/tasks/artifacts/canvas_spike/run_spike_verdict_probes.sh`
-  → `probes: 13 pass / 0 fail`.
-- [x] **NO REGRESSION** — `scripts/check_doctrines.sh` → `=== all doctrines green ===` once this section
-  existed (before it, the same command refused this file by name: `TASK-ACCEPTANCE: docs/tasks/G1-SLICE.md
-  has no 'ROOT CAUSE' box in its acceptance checklist`, `exit=1`, which is the gate working rather than a
-  defect in it); `make probes` → `18 suite(s) green`; `bash
-  docs/tasks/artifacts/planning/run_tree_coverage_census.sh` → `census: 10 lanes / 13 trees / 3 sibling(s)
-  / 0 unowned / 0 orphan(s) / 0 dead link(s)`, `exit=0`. No Rust file changed in this slice, so `make
-  check` is not its gate; the two new instruments are bash and both were run.
-- [x] **FIX** — rewrote `.13`'s acceptance to consume the protocol as an artifact, and added this
-  subsection so the tree file carries fresh evidence for the change it stages.
-- [x] **LOCKSTEP** — `G0-CONTRACT.md`'s leaf `.11`, its frontier, decisions, three logs and checklist;
-  `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md`,
-  `docs/decisions/INDEX.md` and the regenerated Knowledge Map, all in this commit.
+- [x] **REPRODUCE / ISSUE** — ontology §2.1/§5 requires authored measurement states/provenance;
+  no executable shared declaration existed. D64 left the introduction and module inventory behind
+  the committed four-family review. D65's 59/64 history census is owned for its archive trigger.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-core --test value_contract
+  all_five_states_retain_one_canonical_source_and_their_distinct_required_provenance` → `1 passed`,
+  `rc=0`: metadata needs a single lower-layer value source to avoid copied state/dependency cycles.
+  Known ids prove only authored inventory, not source truth; observation/evaluation require different
+  records. `git show HEAD:docs/book/src/spec/ontology-review.md` confirms completed structural scope.
+- [x] **FIX** — immutable core length declaration carries source plus one of five required-provenance
+  states. Empty/duplicate known evidence refuses; unknown/derived carry no numeric field or fallback.
+  Signed/zero authored input stays exact; Design/recipe/G4 own source, domain and scoped truth checks.
+- [x] **ADDRESSED (verified)** — value suite `8 passed`, `rc=0`; three compile-fail examples prove
+  immutable fields and absent unknown/derived numeric input. Disabling empty/duplicate evidence guards
+  and returning zero for unknown/derived each makes the intended assertion fail, independently,
+  `rc=101`; restored full checks pass. Source/state/value replacement preserves the earlier object.
+- [x] **NO REGRESSION** — `make check` → `298` tests, strict lint/fmt green; WASM/book warning-free;
+  fixture/feature/glossary/tree censuses green; ledger `9 pass / 0 fail`; staged `make gate` →
+  `=== all doctrines green ===`, all `rc=0`. Committed-payload oracle proves complete unchanged
+  construction contracts and ten checklists; partitioned sibling roots revalidate in the staged gate.
+- [x] **LOCKSTEP** — core/value/tests, bounded input chapter/vocabulary, ontology status, decision/map,
+  live/resume/index, task graph and histories align. D64 seals to defects-part10; two oldest lessons
+  seal unchanged to devnotes-part23. G1 remains 5/18; .4a.2 is next. D65 remains open under SPINE.19.2.
 
 ## Verification Log
 
@@ -931,6 +706,7 @@ unchanged in the evidence sibling; fresh current-slice checks remain here.
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-10-01` | `.4a.1` | value contracts; check/wasm/book; focused censuses/ledger; staged gate | `8 passed`; four red mutations; `298` tests; green, `rc=0` |
 | `2026-10-01` | `.3c.4c.1a` | notion contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `10 passed`; four mutations red; restored checks/gates green, `rc=0` |
 
 | `2026-10-01` | `.3c.4c.1b` | closure contracts; Count domain; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `10 passed`; four mutations red; restored checks/gates green, `rc=0` |
@@ -956,6 +732,8 @@ preserved unchanged in the evidence sibling; fresh current-slice entries remain 
 
 | `.3c.4d.2` | `STITCHCAD-G1-0023 (leaf G1-SLICE.3c.4d.2)` | four structural families closed; D62/D63; API/MCP requirement retained |
 
+| `.4a.1` | `STITCHCAD-G1-0024 (leaf G1-SLICE.4a.1)` | canonical length/state/provenance; D64; bounded construction sibling |
+
 ## Changelog
 
 [Completed task changelog through zipper/hook-bar](G1-SLICE-evidence.md#historical-task-changelog)
@@ -974,3 +752,6 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
   §4 objects have immutable content/reference contracts and book evidence; later physical/release
   proofs retain their owners. Director's comprehensive external-agent MCP/API control requirement
   reinforces existing .6/.9/G5 parity/discovery/recovery evaluation. Next .4 measurements/ease/sizes.
+
+- `2026-10-01`: `.4a.1` preserves canonical length inputs with explicit authored-state availability;
+  D64 closes, D65 is scheduled at the archive trigger. Next .4a.2 metadata consumes core declarations.

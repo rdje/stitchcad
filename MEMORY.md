@@ -5,14 +5,15 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.4`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** `.4` — sc-measure: MeasurementTable, body/garment POM, landmarks/procedures,
-  first-class per-POM ease/fit intent and SizeSet. Read canonical measurement/ease/size chapters,
-  decisions and affected units/APIs; split into safe owned slices and record design before code.
-  All four structural ontology families are complete; G1 is 5/18 leaves. Geometry, executed recipes,
-  profiles and Design/release proofs remain named later obligations. Director reaffirmed SOTA/signoff/
-  production-grade and comprehensive external-agent MCP/API control; .6/.9 and G5 own workflow parity,
-  discovery/recovery and independent agent evaluation. Approval remains the existing human contract.
+- **Active tree:** `G1-SLICE`, frontier **`.4a.2`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** `.4a.2` — immutable measurement metadata/current registries in sc-measure,
+  borrowing core length declarations. Read ontology/standards/units and the length-input decision;
+  record the current-reference design before code. .4a.3 tables, .4b ease, .4c sizes then .4d signoff.
+  Four structural families complete; G1 remains 5/18. Geometry/recipes/profiles/release proof deferred.
+  Director requires SOTA/signoff/production quality and comprehensive external-agent MCP/API control;
+  .6/.9/G5 own workflow parity/discovery/recovery and independent evaluation; approval contract stays.
+  D65: history 61/64 files after this slice; SPINE.19.2 must perform the archive transition before a
+  required product seal exceeds the ceiling. No ceiling increase or nested-glob evasion.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

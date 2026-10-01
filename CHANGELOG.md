@@ -46,6 +46,19 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0024 - canonical length inputs preserve authored state (leaf `G1-SLICE.4a.1`)
+
+Immutable core declarations retain source plus known/assumed/unknown/preference/derived state and
+required provenance references. Known inventory refuses empty/duplicates; unknown and derived inputs
+have no numeric field or fallback, naming the observation or formula they need. Signed values and
+explicit zero remain exact. Evidence existence/scope/truth and evaluated state remain Design/recipe/G4.
+Eight contracts and three compile-fail examples pass; four independent guard/fallback mutations fail
+with actual assertions. Strict Rust executes 298 tests; WASM/book/focused censuses/ledger/gates green.
+D64 corrects stale ontology coverage, sealed in defects-part10. Completed construction contracts/ten
+checklists partition unchanged; two oldest lessons seal unchanged in devnotes-part23. G1 remains
+5/18, next .4a.2 measurement metadata. D65 owns retention at 61/64 archive files before the limit blocks
+required seals; the product frontier stays active until that trigger.
+
 ## STITCHCAD-SPINE-0021a - recurring artifact cleanup preserves the product frontier (leaf `SPINE.21a`)
 
 Before the next product slice crosses the 24-hour mark, removed six ignored scratch/incremental/book
