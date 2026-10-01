@@ -43,10 +43,28 @@ in [`docs/history/bedrock-scaffold-changelog.md`](docs/history/window1.md#bedroc
 
 | [`changelog-part24.md`](docs/history/stitchcad-changelog-part24.md) | STITCHCAD-G1-0007, STITCHCAD-G1-0006 | 39 lines, 3139 bytes, `sha256:30ff1380…` |
 
+| [`changelog-part25.md`](docs/history/stitchcad-changelog-part25.md) | STITCHCAD-G1-0008 | 17 lines, 1371 bytes, `sha256:d57637be…` |
+
 The live window below holds the most recent slices. When it passes its health target (400 lines /
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-G1-0028 - named current measurement tables (leaf `G1-SLICE.4a.3`)
+
+sc-measure adds immutable MeasurementTable identity/name and ordered unique measurement-id/token
+bindings. Each captures expected metadata id/token/body-POM kind/canonical declaration; current
+queries borrow records, refuse missing peers or reassignment, and retain actionable underlying
+metadata errors. Same-id source/state/document edits stay visible without numeric caching. Table
+names preserve authored content; empty drafts and shared declarations are legal, token uniqueness
+is per table. Private representation prevents unchecked mutation. Design revision, source truth,
+physical repeatability, formula/evidence policy and release certification remain separate proofs.
+
+Sixteen table contracts plus privacy pass. Eight independent real guard mutations fail their intended
+regressions; restored strict checks execute 342 tests, with WASM/book/censuses green. Milestone probes report 23 green suites; the staged doctrine gate passes. All ontology .2.1 length-input fields and table bindings
+are mapped to executable APIs; .4a closes structurally, .4 stays active for Ease/SizeSet/signoff. G1
+remains 5/18; next .4b per-POM Ease. Completed metadata review moves unchanged to its sibling; oldest
+live records seal unchanged as changelog-part25 and devnotes-part27. README/package/book/decision and live pointers agree.
 
 ## STITCHCAD-SPINE-0019c - observed archive CI (leaf `SPINE.19.2v`)
 
@@ -354,21 +372,3 @@ matrix; G4 still owns enforcement. The symbolic-binding decision is recorded and
 The oldest changelog and dev-note entries roll into sealed segments in the same commit.
 The director answered D57 before commit: each physical cut copy has a stable identity so seams can
 differ. Next `.3c.2b` implements that contract; D57 closes after verified delivery.
-
-## STITCHCAD-G1-0008 - separate cut-once L/R members are explicit piece content (leaf `G1-SLICE.3c.1a`)
-
-Fixed D56: the canonical skirt's separate left/right back members, each cut once, were not representable
-by the even-total mirrored-pair mode. `Mirroring::PairMember { handedness, companion }` now carries the
-member's own L/R label and distinct companion Piece identity; quantity counts this member's copies.
-Self-companions are refused. Existing even-total pair requests retain their original meaning.
-The book documents both forms; collection-level reciprocity and equal quantities are owned by `.6`,
-and geometric mirroring remains G2's obligation.
-
-Validation: 14 piece-contract tests (including the canonical fixture-shaped pair and self-companion
-refusal), strict `make check`, `make wasm`, `make book`, reference-fixture derivation, feature census,
-doctrine gate and ledger probes green. Applying the even-total rule to all pair modes makes the fixture
-regression fail. D56 closes in defects-part3; the decision records the two pairing forms.
-
-D57 is logged and owned by `.3c.2b`: the spec does not decide how a sewing side names physical cut copies.
-The director was asked to choose stable copy identities or pattern-level references with later expansion.
-No answer is inferred; independent marks/allowances (`.3c.3`) proceed while that decision is pending.

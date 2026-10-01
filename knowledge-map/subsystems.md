@@ -8,7 +8,7 @@ Entries give paths, entry points and owners.
 - `crates/sc-units/` — fixed-point units/conversions and typed tolerances/errors; wasm-safe. Entry `crates/sc-units/src/lib.rs`, tests
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/`, `crates/sc-measure/` — ontology, identity/topology and canonical inputs/metadata.
+- `crates/sc-core/`, `crates/sc-measure/` — ontology, identity/topology and canonical inputs/measurement tables.
   Entry `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs`; tests in each crate.
   Owner `G0-CONTRACT.3`, `G1-SLICE.3` / `.4`.
 - `docs/book/src/spec/` — normative contracts reviewed by the director. Entry

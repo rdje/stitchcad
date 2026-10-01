@@ -352,13 +352,15 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Commit: `pending`
 
 - ID: `G1-SLICE.4a`
-  Status: `active`
+  Status: `done`
   Goal: canonical value/state/provenance plus MeasurementTable body/POM metadata and reference registries.
   Children: .4a.1 (shared length declarations), .4a.2 (measurement metadata/context), .4a.3 (table/signoff).
   Acceptance: all ontology .2.1 fields present; unknowns supply no numeric value; stable landmark/
   procedure references, kind separation and current context validation are explicit and tested.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: .4a.1/.2/.3 supply canonical length state/source, metadata/targets and named unique
+  current table bindings; all ontology .2.1 fields covered structurally. Native/WASM checked,
+  metadata runner proof captured; source/physical/formula/profile/release proof remains deferred.
+  Commit: children `STITCHCAD-G1-0024` … `STITCHCAD-G1-0028`
 
 [Completed .4a.1 contract and evidence](G1-SLICE-measurements.md) retain the shared length input
 boundary unchanged; current metadata children remain below.
@@ -381,24 +383,37 @@ unchanged; the metadata/runtime child below remains the current unit.
 [Completed .4a.2b contract/evidence](G1-SLICE-measurements.md) retains metadata/runtime
 implementation scope unchanged; the observed-CI signoff below completes the parent.
 
-- ID: `G1-SLICE.4a.2c`
-  Status: `done`
-  Goal: observe exceptional runtime/CI integration push at job/step level; independently sign off
-  measurement metadata against ontology, close .4a.2 and hand to table .4a.3.
-  Acceptance: CI rust/doctrine jobs completed success, exact revision recorded; all metadata fields
-  accounted for without claiming source truth, procedure repeatability or release approval.
-  Verification: GitHub jobs 110566989457 (check) / 110566988221 (enforce), all steps
-  completed success at bf29b031033ad7ce198db0a02a5c1d205d5594aa; field review and local book/gates green.
-  Commit: `STITCHCAD-G1-0027`
+[Completed .4a.2c observed-CI contract/evidence](G1-SLICE-measurements.md) preserves its exact
+metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4a.3`
-  Status: `pending`
+  Status: `done`
   Goal: MeasurementTable stable identity/name and unique measurement id/token inventory with current
   metadata queries; complete measurement-family signoff against ontology .2.1 and book contracts.
   Acceptance: ambiguity/missing targets/current reassignment refused; immutable input; focused and
   milestone gates prove all measurement content without certifying source truth or release readiness.
-  Verification: `pending`
-  Commit: `pending`
+  Pre-code contract: TableDefinition holds id/name and authored ordered MeasurementBinding entries.
+  Each binding pins measurement id, exact token, body/POM kind and canonical declaration id; captures
+  may derive from existing immutable metadata. No values/state/source/procedure prose copied into tables.
+  Empty draft tables legal (no normative nonempty rule); names nonblank, binding ids/tokens unique.
+  TableContext borrows current Measurement inventory plus existing MeasurementContext; rejects duplicate
+  metadata ids and cross-kind target identity collisions before lookup. Token uniqueness is table-scoped,
+  not imposed over unrelated tables' canonical inventory. Table id cannot reuse a supplied record id.
+  Current lookup first selects saved binding by exact token or id, then resolves its measurement id;
+  removed ids never select peers by token. Kind/token/declaration reassignment returns typed expected/
+  actual evidence; same-id canonical declaration state/source changes remain visible. Display labels,
+  entered units and procedure/landmark metadata are current canonical content, with all target checks
+  retained. Target query validates selected binding/current metadata; validate_current checks all entries.
+  Explicit validated table replacement may rebind and leaves original unchanged. Immutable fields/private
+  representation; errors implement Display/Error with structural source. No global Design revision,
+  source/evidence truth, formula/profile evaluation, physical repeatability or release proof claimed.
+  Own runtime metadata/book/API vocabulary, independent real guard mutations, field-by-field .4a
+  structural signoff, focused checks and milestone checks. Previously closed metadata signoff records
+  relocate unchanged to the measurements sibling; normal live rollovers if health requires them.
+  Verification: 16 contracts + privacy, eight real red guard assertions, restored 342 strict tests;
+  three-crate WASM/book/glossary/formula green. Milestone full probes and staged gate recorded
+  below. Canonical field review closes .4a structurally; .4b per-POM Ease follows.
+  Commit: `STITCHCAD-G1-0028`
 
 - ID: `G1-SLICE.4b`
   Status: `pending`
@@ -596,7 +611,8 @@ implementation scope unchanged; the observed-CI signoff below completes the pare
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.4a.3` | `pending` | Named table/unique inventory completes the measurement family |
+| done | `G1-SLICE.4a.3` | `done` | Named table/unique current bindings complete .4a structurally |
+| next | `G1-SLICE.4b` | `pending` | First-class per-POM Ease with explicit compression and fit intent |
 
 ## Routing Evidence — D67, lesson decision freshness
 
@@ -677,27 +693,35 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
-### `G1-SLICE.4a.2c` — observed CI and scoped metadata review
+### `G1-SLICE.4a.3` — named tables with stable current bindings
 
-- [x] **REPRODUCE / ISSUE** — .2b added a runtime crate and changed CI; local success could not
-  satisfy the COMMIT.md exceptional-push/runner obligation. .2c also owns metadata-family review.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `gh api repos/rdje/stitchcad/actions/runs/36921077740/jobs`
-  and `/36921077711/jobs` → jobs check/enforce completed/success, all steps completed/success,
-  `rc=0`; runs match bf29b031033ad7ce198db0a02a5c1d205d5594aa. Explicit job evidence closes the
-  runner gap; a run-summary-only inference is not used.
-- [x] **FIX** — clean push 3d9f2be..bf29b03 main→main; record exact revision/run/job/step evidence.
-  Review maps name/token/unit/kind/landmark/procedure/source/state to canonical immutable APIs and
-  current-reference tests. Documentation presence remains distinct from physical/source truth.
-- [x] **ADDRESSED (verified)** — rust run 36921077740/job 110566989457: fmt, strict Clippy,
-  all tests and three-crate WASM success. Doctrine run 36921077711/job 110566988221: enforcer success.
-  Sixteen metadata contracts and three privacy docs already passed locally with six actual red guards.
-- [x] **NO REGRESSION** — no code change in this review; book/focused tree and glossary censuses,
-  ledger `9 pass / 0 fail` and staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
-  Completed .2b contract/checklist compare unchanged to bf29b03. Pre-push strict 325 tests and all
-  22 probe suites were green; both runner jobs independently agree.
-- [x] **LOCKSTEP** — .4a.2 closes; .4a.3 table remains next and G1 stays 5/18. Book records scoped
-  runtime proof; live/resume/index, task evidence and logs match. D65 retention and D67 promotion
-  remain owned; no additional seal was needed for this review.
+- [x] **REPRODUCE / ISSUE** — `rg 'MeasurementTable' crates/sc-measure/src` before implementation
+  → only deferred documentation, no executable table. Ontology .2.1 requires a named set and stable
+  scalars; standalone metadata alone could not bind a unique table namespace or reject reassignment.
+- [x] **ROOT CAUSE (WHY + WHERE)** — code-path review and `cargo test -p sc-measure --test
+  measurement_contract` → `16 passed`, rc=0: canonical targets/state already exist, but named-table
+  binding ownership was missing. Recipe has one flat namespace; table uniqueness must be scoped to
+  its authored entries, resolving current metadata by id rather than selecting a same-token peer.
+- [x] **FIX** — immutable named table and ordered id/token/kind/declaration bindings; borrowed current
+  context rejects duplicate/cross-kind identities. Queries resolve saved id and compare expected
+  token/domain/scalar identity, then validate all selected metadata targets. No scalar/source/state
+  cache. Full validation checks every entry; explicit validated rebinding preserves prior objects.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test table_contract` → `16 passed`,
+  rc=0, plus private-field doc. Removal with surviving peer, metadata/scalar reassignment, unknown/
+  derived, current source/document/unit edits, duplicates/collisions, shared declarations and reorder
+  covered. `bash docs/tasks/artifacts/measurement_table/run_table_mutations.sh` → eight real guard
+  reds, each rc=101/actual regression assertion; original source restored byte-identically.
+- [x] **NO REGRESSION** — restored `make check` → 342 tests with strict fmt/clippy, rc=0; three-crate
+  `make wasm` and warning-free `make book`, rc=0. Glossary → 310 terms/9 parts/0 failures; formula
+  → 17 bindings/4 assertions/13 refusals/0 mismatches, rc=0. Full milestone `make probes` →
+  `23 suite(s) green`, rc=0; staged `make gate` → `=== all doctrines green ===`, rc=0.
+  Final isolated-interpreter mutation run repeats eight assertion reds, restores source exactly;
+  restored table contracts again `16 passed`, rc=0.
+- [x] **LOCKSTEP** — table/code/API vocabulary, package/README/book and fresh decision questions agree;
+  metadata CI review/checklist relocates unchanged to measurement sibling. Changelog-part25 and
+  devnotes-part27 seal unchanged predecessor content. .4a closes structurally; .4 remains active
+  for Ease/SizeSet/signoff. G1 stays 5/18, four structural families, nine open/58 sealed defects.
+  Current-revision source/evidence truth, physical repeatability and release certification deferred.
 
 ## Verification Log
 
@@ -706,6 +730,7 @@ unchanged in the evidence sibling; fresh current-slice checks remain here.
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-10-02` | `.4a.3` | table contracts; eight guard mutations; check/wasm/book/censuses; milestone probes/staged gate | 16 contracts + privacy; 342 strict tests; 23 full suites; table field review; staged gate below |
 | `2026-10-01` | `.4a.2c` | pushed bf29b03; Actions runs/jobs/steps; metadata review; book/censuses/ledger/gate | both CI jobs/all steps success; scoped metadata parent closed; local green, `rc=0` |
 | `2026-10-01` | `.4a.2b` | metadata contracts; check/wasm/book; full probes/ledger/gate | `16 passed`; six real mutations red; `325` tests; green, `rc=0`; CI .2c |
 | `2026-10-01` | `.4a.2a` | token contracts; check/wasm/book; censuses/ledger; staged gate | `6 passed`; four real mutations red; `305` tests; green, `rc=0` |
@@ -773,3 +798,9 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
 
 - `2026-10-01`: .4a.2c observes Rust/doctrine CI jobs and every step successful at bf29b03;
   metadata parent closes structurally. .4a.3 table follows; physical/source/release proof stays deferred.
+
+- `2026-10-02`: .4a.3 supplies named-table current bindings; sixteen contracts/privacy and eight
+  real guards validate id/token/kind/scalar pinning and borrowed canonical state. Parent .4a closes
+  structurally; G1 stays 5/18. Ease .4b follows; full .4 needs Ease/SizeSet/.4d signoff.
+
+| `.4a.3` | `STITCHCAD-G1-0028 (leaf G1-SLICE.4a.3): named measurement tables retain stable current bindings` | 16 contracts + privacy; eight real guard reds; 342 tests; WASM/book; full 23 suites; .4a structurally closed |

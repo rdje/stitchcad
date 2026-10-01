@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — measurement tables pin bindings and borrow current scalar records
+
+- A table owns stable id/name and authored order of measurement/token/kind/declaration bindings.
+  It holds no copied values, source/state or procedure text. Context borrows unambiguous metadata
+  and existing canonical targets; tokens are unique per table, while unrelated tables may share
+  spelling. Empty named drafts and shared declarations are legal; names never establish identity.
+- Saved bindings resolve by measurement id before expected token/domain/declaration checks. Removed
+  measurements never transfer a token to peers. Same-id declaration state/source or procedure text
+  revisions stay canonical/current; scalar identity reassignment requires explicit validated rebinding.
+  Targeted queries check the selected metadata's required references; whole-table validation checks all.
+- Sixteen contracts and a privacy doc pass; eight real production guard mutations fail assertions,
+  not compilation, and restore source byte-identically. The initial mutation diagnostic rejected an
+  unwrap_err panic as lacking an assertion marker; direct err comparison makes the contract explicit.
+  Strict Rust executes 342 tests; WASM/book/censuses and milestone probes/gates verify the restore.
+- Named tables complete .4a's structural field/reference contract; Ease/SizeSet/family signoff remain
+  .4b/.4c/.4d, G1 stays 5/18. Caller Design revision, source/evidence truth, formula evaluation and
+  physical procedure repeatability remain separate proofs. Completed metadata review relocates unchanged.
+- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s table section.
+
 ## _(2026-10-01)_ — archive capacity and retrieval must be verified together
 
 - D65's 64-file limit blocks ordinary rollover despite a small decoded archive. One immutable
@@ -105,20 +124,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   Director's SOTA/signoff/production-grade ruling remains the review bar, not an API-presence claim.
 - promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s Pocket boundary.
 
-## _(2026-10-01)_ — buttonhole length retains a single canonical derivation source
-
-- Button/hole pairs share current placement/count validation. The hole source borrows its owning
-  Closure's button-size declaration and recipe operation; no second authored/cached physical length
-  can drift. Replacement size/operation changes the observed source while old revision views remain
-  unchanged. Current Design queries, not old views, must drive execution and approvals.
-- Recipe/Design validates operation kind/dependency; G3 executes physical derivation. The ontology
-  specifies that dependency but no physical formula or clearance, so G1 invents neither. DeferredToG3
-  keeps that missing execution proof separate from geometric/profile validation and readable sources.
-- Five new tests bring Closure contracts to fifteen; independent substitute-source mutations fail
-  red. Compile-fail coverage refuses a separate length field; strict Rust/WASM/book pass. Source
-  inspection remains available even while current placement repairs block execution.
-- promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`'s button/hole source.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -159,3 +164,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part25.md`](docs/history/window1.md#stitchcad-devnotes-part25md) | Hem and served-layer lessons | 28 lines, 2416 bytes, `sha256:a95d8c77…` |
 
 | [`devnotes-part26.md`](docs/history/stitchcad-devnotes-part26.md) | closure and notion-placement lessons | 27 lines, 2385 bytes, `sha256:b4b58e1b…` |
+
+| [`devnotes-part27.md`](docs/history/stitchcad-devnotes-part27.md) | canonical buttonhole derivation lesson | 13 lines, 1158 bytes, `sha256:319f11b3…` |

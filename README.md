@@ -19,7 +19,7 @@ Three properties define it:
 
 **Status:** executable Rust foundations are available; no user-facing application exists yet.
 The G0 semantic contract has been reviewed, with its human closure still unapproved. G1 implements
-ontology, canonical inputs and measurement metadata. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks
+ontology, canonical inputs and measurement metadata/tables. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks
 verified progress; the mdBook explains implemented behavior and the remaining proof boundaries.
 
 ## Audience and scope

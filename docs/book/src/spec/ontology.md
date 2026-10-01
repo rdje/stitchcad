@@ -310,6 +310,7 @@ bounded; all existing examples and local API vocabulary are preserved there.
 
 | Content | Implemented scope | Deferred obligation |
 | --- | --- | --- |
+| MeasurementTable | Named stable bindings, canonical current inputs, unique id/token inventory | Design/evidence registry; evaluator; physical repeatability; G4 release policy |
 | Piece | Immutable structural content and complete labels | G2 geometry; design companion checks |
 | Point and range references | Journal resolution, endpoint choices and interval repairs | G2 geometric continuity; design/release validation |
 | Physical cut copies | Explicit identities, exact quantity/orientation plan | G2/V1 physical transforms |

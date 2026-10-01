@@ -152,3 +152,35 @@ Historical verification/commit tables remain in the parent and [evidence sibling
   book/spec/decision/map, live/resume/index and task/history align. D66 closes in defects-part11;
   oldest two lessons seal unchanged in devnotes-part25. G1 stays 5/18; .2c owns observed CI. D67
   promotion freshness is owned by SPINE.22; current decision gains explicit token/metadata questions.
+
+- ID: `G1-SLICE.4a.2c`
+  Status: `done`
+  Goal: observe exceptional runtime/CI integration push at job/step level; independently sign off
+  measurement metadata against ontology, close .4a.2 and hand to table .4a.3.
+  Acceptance: CI rust/doctrine jobs completed success, exact revision recorded; all metadata fields
+  accounted for without claiming source truth, procedure repeatability or release approval.
+  Verification: GitHub jobs 110566989457 (check) / 110566988221 (enforce), all steps
+  completed success at bf29b031033ad7ce198db0a02a5c1d205d5594aa; field review and local book/gates green.
+  Commit: `STITCHCAD-G1-0027`
+
+### `G1-SLICE.4a.2c` — observed CI and scoped metadata review
+
+- [x] **REPRODUCE / ISSUE** — .2b added a runtime crate and changed CI; local success could not
+  satisfy the COMMIT.md exceptional-push/runner obligation. .2c also owns metadata-family review.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `gh api repos/rdje/stitchcad/actions/runs/36921077740/jobs`
+  and `/36921077711/jobs` → jobs check/enforce completed/success, all steps completed/success,
+  `rc=0`; runs match bf29b031033ad7ce198db0a02a5c1d205d5594aa. Explicit job evidence closes the
+  runner gap; a run-summary-only inference is not used.
+- [x] **FIX** — clean push 3d9f2be..bf29b03 main→main; record exact revision/run/job/step evidence.
+  Review maps name/token/unit/kind/landmark/procedure/source/state to canonical immutable APIs and
+  current-reference tests. Documentation presence remains distinct from physical/source truth.
+- [x] **ADDRESSED (verified)** — rust run 36921077740/job 110566989457: fmt, strict Clippy,
+  all tests and three-crate WASM success. Doctrine run 36921077711/job 110566988221: enforcer success.
+  Sixteen metadata contracts and three privacy docs already passed locally with six actual red guards.
+- [x] **NO REGRESSION** — no code change in this review; book/focused tree and glossary censuses,
+  ledger `9 pass / 0 fail` and staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Completed .2b contract/checklist compare unchanged to bf29b03. Pre-push strict 325 tests and all
+  22 probe suites were green; both runner jobs independently agree.
+- [x] **LOCKSTEP** — .4a.2 closes; .4a.3 table remains next and G1 stays 5/18. Book records scoped
+  runtime proof; live/resume/index, task evidence and logs match. D65 retention and D67 promotion
+  remain owned; no additional seal was needed for this review.

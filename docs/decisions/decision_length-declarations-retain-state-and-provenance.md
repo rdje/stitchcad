@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.4a.1`; ontology §2.1/§2.2/§5, formula-language §2/§3 and roadmap §2.3.
 
-answers: "where do measurement state and source live?" · "can unknown inputs default to zero?" · "does known prove evidence?" · "how are core dependency cycles avoided?" · "how do shared machine tokens preserve spelling?" · "where is procedure documentation stored?" · "can body and garment references interchange?"
+answers: "where do measurement state and source live?" · "can unknown inputs default to zero?" · "does known prove evidence?" · "how are core dependency cycles avoided?" · "how do shared machine tokens preserve spelling?" · "where is procedure documentation stored?" · "can body and garment references interchange?" · "how does a measurement table refuse token or scalar reassignment?"
 
 ## The fact / decision
 
@@ -78,3 +78,20 @@ The core contract tests must cover all five states, required provenance, nonempt
 evidence, explicit signed/zero lengths, structured unknown/derived refusals and immutable replacement.
 Independent guard/query mutations must fail real regressions, with restored strict checks and WASM.
 The book documents authored-state limits; later consumers retain their owned registry/evidence proofs.
+
+## Measurement tables retain bindings, not duplicate scalar records
+
+G1-SLICE.4a.3 gives each named table stable identity and ordered bindings that capture measurement
+identity, exact machine token, body/POM kind and canonical declaration identity. These are the
+binding's expected targets; queries borrow the supplied current records. Same-id changes to canonical
+state/source remain visible without numeric caching. A missing measurement never transfers a token
+to a surviving peer; changed token/kind/declaration requires an explicit validated table replacement.
+This mirrors the ontology's no-silent-reassignment rule, rather than inferring identity from a label.
+
+Unique measurement identities and tokens are enforced per table. Distinct tables may use the same
+spelling for distinct canonical measurements; recipe composition later enforces its one flat
+namespace. Shared declarations, repeated display labels and mixed body/POM entries are not invented
+ambiguities. Empty draft tables are legal; the normative contract declares no minimum cardinality.
+Context rejects duplicate/cross-kind canonical identities before lookup. Table validation checks all
+current metadata and its required targets; a targeted query proves just the selected entry. It does
+not certify a caller's Design revision, evidence truth, physical repeatability or export permission.

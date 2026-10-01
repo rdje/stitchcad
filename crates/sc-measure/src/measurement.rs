@@ -173,7 +173,7 @@ impl<'a> MeasurementContext<'a> {
         }
         Ok(context)
     }
-    fn contains(&self, id: EntityId) -> bool {
+    pub(crate) fn contains(&self, id: EntityId) -> bool {
         self.declarations.contains_key(&id)
             || self.landmarks.contains_key(&id)
             || self.procedures.contains_key(&id)
