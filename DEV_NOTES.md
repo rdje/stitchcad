@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — sewing joins physical material intervals, not pattern names
+
+- D57's copy identities make two copies of one Piece distinct sewing domains. D35 allows a physical
+  copy to join itself only where current positive-length interiors are disjoint. Comparing held edge
+  names cannot prove that: a merge can make formerly different names share a current frame. The
+  constructor compares resolved fragments and checks every owned portion, including hidden interiors.
+- Correspondence, journal traversal and reflection remain separate authored facts. Stops use semantic
+  Notches/TurnPoints rather than physical notch representation. Ease is a signed declared source and
+  explicit allocation; structural domains are checked, actual walking/arc lengths and resolved values
+  are later obligations. A typed failure never silently stretches or reassigns material.
+- Eighteen tests cover copies with different neighbours, partial/one-to-many spans, self-seams after
+  merge/reversal, interior ownership/repairs, endpoint choices, stop/ease domains and removed targets.
+  Disabling self-overlap and interval ownership refusals each produces a red regression. Existing
+  notches retain behavior after extracting shared anchor validation; strict checks and WASM pass.
+- promotion: promoted by `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`.
+
 ## _(2026-10-01)_ — physical-copy identity is authored content, independent of list order
 
 - D57's director ruling makes every physical copy separately addressable. The complete cut plan
@@ -139,22 +155,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   rather than claiming a 2D proof it cannot make. **Decide and record the boundaries a slice inherits, then
   implement inside them** — the records are why the next session does not reopen them.
 
-## _(2026-09-30)_ — the first property tests quietly set the framework every later crate inherits
-
-- `sc-units`' suite (`crates/sc-units/tests/property.rs`) hand-rolls 21 properties over a deterministic
-  xorshift64* generator with a recorded seed and zero dev-dependencies. That was not a stylistic preference:
-  the crate must stay dependency-free to serve `wasm-viewer` and byte-stable golden files, and a framework's
-  shrinker pulls a tree into the graph. The choice was made implicitly when `G0-CONTRACT.18` landed the suite,
-  but recorded nowhere — so the G1 Open Question "proptest vs quickcheck, decided in `.2`" was still open with
-  the answer already shipped beside it.
-- Closing `.2` records it as `decision_property-tests-dependency-free-recorded-seed.md` (with `answers:`, so a
-  later crate asking "do we use proptest?" finds it): dependency-free hand-rolled with a recorded seed is the
-  default on the wasm-viewer critical path; a crate off that path may adopt a framework only by its own
-  recorded decision that must not leak into a dependency-free graph. **The first instance of a pattern is the
-  decision; record it where the pattern is set, not where the tenth crate re-argues it.**
-- This entry is the promoted lesson for the slice: the new decision record carries `answers:`, which is the
-  LESSON-PROMOTION promote path, so no decline token is needed.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -169,6 +169,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part8.md`](docs/history/stitchcad-devnotes-part8.md) | two `2026-09-30` lessons (source layout; i18n population) | 35 lines, 3196 bytes, `sha256:04ab285c…` |
 | [`devnotes-part9.md`](docs/history/stitchcad-devnotes-part9.md) | the `2026-09-30` certifying-artifact lesson | 15 lines, 1343 bytes, `sha256:bc7fae65…` |
 | [`devnotes-part10.md`](docs/history/stitchcad-devnotes-part10.md) | the `2026-09-30` shipped-work reconciliation lesson | 15 lines, 1380 bytes, `sha256:701d33f2…` |
+| [`devnotes-part11.md`](docs/history/stitchcad-devnotes-part11.md) | the `2026-09-30` property-test framework lesson | 15 lines, 1384 bytes, `sha256:ae04eadf…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

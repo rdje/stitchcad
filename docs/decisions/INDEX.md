@@ -49,3 +49,5 @@ Records carry an `answers:` line so a question can find them — that is what ma
 | [`decision_profile-bindings-stay-symbolic-at-g1.md`](decision_profile-bindings-stay-symbolic-at-g1.md) | `decision` | G1 semantic marks carry symbolic profile-parameter identities and a visible G4 validation deferral; no physical defaults |
 
 | [`decision_physical-cut-copies-have-stable-identities.md`](decision_physical-cut-copies-have-stable-identities.md) | `decision` | explicit copy identities and orientations, complete validated cut plan; sewing neighbours can differ per copy |
+
+| [`decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`](decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md) | `decision` | copy-addressed spans, disjoint self-seams, explicit direction/ease/stops; physical validation remains deferred |

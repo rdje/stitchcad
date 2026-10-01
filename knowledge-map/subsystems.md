@@ -11,7 +11,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
 - `crates/sc-core/` — **ontology in progress**: identity, topology-journal resolution and repairs, immutable
-  pieces, cut-copy plans and semantic notches. Other objects, recipe and bus follow. Entry
+  pieces/copy plans, notches and sewing graphs. Other objects, recipe and bus follow. Entry
   `crates/sc-core/src/ontology/`; tests `crates/sc-core/tests/`. Owner `G0-CONTRACT.3` / `G1-SLICE.3`.
 - `docs/book/src/spec/` — normative contracts reviewed by the director. Entry
   `docs/book/src/SUMMARY.md`; owner `G0-CONTRACT` and later implementation gates.
@@ -23,9 +23,8 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - `docs/book/src/spec/feature-matrix.md` — **the boundary of the release claim**: 105 dispositioned rows, 29
   declared diagnostics, coverage derived by
   `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. Owner `G0-CONTRACT.4`.
-- `docs/book/src/spec/glossary/` — **the vocabulary, partitioned** into nine domain parts behind
-  `glossary.md`'s derived A–Z index: one meaning per term, one owner per machine token, derived by
-  `docs/tasks/artifacts/glossary/run_glossary_census.sh`. Owner `G0-CONTRACT.1` and every later chapter.
+- `docs/book/src/spec/glossary/` — nine vocabulary parts; A–Z entry `glossary.md`. Checked by
+  `docs/tasks/artifacts/glossary/run_glossary_census.sh`; owner `G0-CONTRACT.1` and later gates.
 - `.doctrine/live_document_size/` — the containment data plane (`surfaces.tsv`, `routes.tsv`), enforced by
   `scripts/check_live_doc_size.sh`. Owner `SPINE.4`.
 - `docs/tasks/artifacts/` — the diagnostic probe suites, one directory per instrument; `make probes` runs

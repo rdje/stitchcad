@@ -160,7 +160,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Design: `decision_piece-pair-members-have-explicit-handedness.md`.
 
 - ID: `G1-SLICE.3c.2`
-  Status: `active`
+  Status: `done`
   Goal: first discharge D55 with full-range resolution/repair (endpoints cannot certify an interior);
   then `SeamSpan` and immutable `SewingGraph`, partial and one-to-many edge ranges, declared ease
   distribution, direction and stop landmarks; resolve D35's same-piece seam rule against the supported
@@ -169,8 +169,9 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   absent pieces/edges, empty or reversed parameter ranges, duplicate span identities and
   missing stop references are typed refusals; same-piece seams have an explicit tested contract;
   edits expose repairs without rewriting authored ranges. Geometric differential checks remain G2.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: 18 sewing contracts + existing range/copy/notch suites, strict check, wasm,
+  book, fixture/feature/glossary censuses, ledger probes and staged doctrines green. D35/D57 closed.
+  Commit: `STITCHCAD-G1-0011`
 
   Children: `.3c.2a` (full-range resolution), `.3c.2b` (sewing graph and D35).
 
@@ -189,15 +190,16 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Design: `decision_range-resolution-preserves-entire-interval.md`, recorded before code.
 
 - ID: `G1-SLICE.3c.2b`
-  Status: `active`
+  Status: `done`
   Goal: implement the sewing graph content and D35 after `.3c.2a` supplies its range contract.
   Director decision (D57), `2026-10-01`: every physical cut copy has a stable identity, so its
   seams can differ. Implement this explicit addressing contract before sewing spans; do not expand
   an underspecified pattern-only graph by renderer convention. D57 closes after verified code.
   Acceptance: all `.3c.2` sewing-graph criteria met; range and endpoint ambiguity visible; same-piece
   seams explicitly specified and tested. Then close the `.3c.2` parent.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: 18 sewing contracts + existing range/copy/notch suites, strict check, wasm,
+  book, fixture/feature/glossary censuses, ledger probes and staged doctrines green. D35/D57 closed.
+  Commit: `STITCHCAD-G1-0011`
 
   Children: `.3c.2b.1` (explicit cut-copy plan), `.3c.2b.2` (sewing spans and D35).
 
@@ -222,15 +224,26 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Design: `decision_physical-cut-copies-have-stable-identities.md` (director ruling, before code).
 
 - ID: `G1-SLICE.3c.2b.2`
-  Status: `pending`
+  Status: `done`
   Goal: immutable sewing graph whose sides name validated CutCopy identities and partial edge ranges;
   explicit correspondence direction, ease declaration and stop anchors. Settle D35 before code.
   Acceptance: partial and one-to-many spans distinguish physical copies of one Piece; graph references
   resolve through the cut plan and owned topology; missing/duplicate references refused. Same-copy
   seams have an explicit tested contract, positive-range interiors and endpoint choices stay visible.
   D57 closes after sewing integration; D35 closes after its self-seam regression and documentation.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: 18 sewing contracts + existing range/copy/notch suites, strict check, wasm,
+  book, fixture/feature/glossary censuses, ledger probes and staged doctrines green. D35/D57 closed.
+  Commit: `STITCHCAD-G1-0011`
+
+  Design: `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`, before code.
+  Same-copy contract (D35): legal for ranges whose current positive-length interiors are disjoint;
+  shared endpoints are legal, an overlapping/identical material interval sewn to itself is refused.
+  Different copies of the same Piece may correspond over the same source interval. Same-copy
+  disjointness is checked in resolved topology, not only by authored EdgeRef inequality.
+  Stop landmarks: semantic Notch or born-valid edge-anchored TurnPoint, named by stable id and
+  attached to an explicit span side/copy. Stops must belong to that side's current interval.
+  Ease: signed A-minus-B declaration (explicit length or symbolic parameter); uniform, weighted
+  parameter regions or between explicit notch landmarks. G2/G3 owns geometric differential checks.
 
 - ID: `G1-SLICE.3c.3`
   Status: `active`
@@ -322,6 +335,8 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   and whole-range repair evidence (`.3c.2a`); a lost interior blocks readiness even with live endpoints.
   Pair-member metadata (`.3c.1a`) is checked against the design collection: companions exist, name
   each other, have opposite handedness and equal quantities. Geometric mirroring stays G2's check.
+  Sewing amount references (`.3c.2b.2`) also resolve to existing length-valued formula/profile
+  declarations before design acceptance; symbolic identities are not valid parameter values.
   Verification: `pending`
   Commit: `pending`
 
@@ -443,9 +458,15 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.2b.2` | `pending` | sewing spans address physical copy ids; settle D35 and verify D57 |
+| — | `G1-SLICE.3c.3b` | `pending` | directed and dual stripe/plaid grainline references; sewing content landed |
 
 ## Decisions
+
+- `2026-10-01`: D35/D57 settled and implemented by `.3c.2b`: physical copies have stable ids
+  (director ruling), spans address those copies, and same-copy seams are permitted only for disjoint
+  current positive-length interiors. Explicit correspondence/ease/stops remain separate from journal
+  traversal and physical reflection. `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`
+  records the contract before code; G2/G3/G4 owns geometry/realized ease/profile values.
 
 - `2026-10-01`: reviewing the reference skirt before spans reproduces D56: its separate cut-once
   L/R members cannot be represented by `.3c.1`'s total-quantity pair mode. `.3c.1a` corrects that
@@ -509,6 +530,41 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3c.2b.2` — copy-addressed sewing spans; D35/D57 verified closed
+
+- [x] **REPRODUCE / ISSUE** — D57 requires physical-copy addressing so cut-two copies can have
+  different neighbours; D35 needs an explicit same-copy sewing rule before the type exists.
+  At `9ba32e0`, copy plans exist but no graph does. The canonical folded band's short-end finish
+  is the relevant same-copy case; G1 must not invent its unconstructed numeric G2 ranges.
+- [x] **ROOT CAUSE (WHY + WHERE)** — Piece identity alone conflates physical material domains;
+  different held edge names alone cannot certify self-seam disjointness. `cargo test -p sc-core
+  --test sewing_contract self_seam_disjointness_is_checked_after_merge_instead_of_by_edge_name`
+  → `1 passed`, `rc=0`: two held edges resolve to disjoint current intervals, while a new merged
+  overlapping range is refused before/after reversal. The separate hidden-interior ownership
+  regression expects refusal of an unowned middle third despite owned endpoints.
+- [x] **FIX** — immutable SewingGraph/SeamSpan with copy ids, exact positive ranges, explicit
+  correspondence, signed ease source/distribution and side-specific semantic stop ids. Validate
+  the complete plan, scope identities, interval ownership/coverage, endpoint uniqueness, disjoint
+  self-seams, stops and weighted/notch-anchored domains. Shared born-valid anchor validation supplies
+  TurnPoint without changing the NotchError API alias. Queries preserve held content and missing ids.
+  Geometry/realized ease and formula/profile value resolution remain explicit later obligations.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test sewing_contract` → `18 passed`,
+  `rc=0`: copy-specific neighbours, partial/one-to-many spans, disjoint self-seams and overlap
+  after merge/reversal, complete ownership, interior repairs and endpoint choices, stop/ease
+  domains and missing replacement targets discriminate. Self-overlap and ownership refusals each
+  disabled → their independent regression red (`rc=101`); restored source passes. D35/D57 close
+  in defects-part7; graph privacy doctest passes, and all seven existing notch contracts pass.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust suites green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; fixture → `20 derived rows / 4 closure checks /
+  5 pieces / 0 mismatch(es)`; feature/glossary censuses → `0 failure(s)`; ledger probes →
+  `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  The prior copy milestone's full `make probes` → `22 suite(s) green`, `rc=0`; no golden numbers change.
+- [x] **LOCKSTEP** — pre-code sewing decision + INDEX, Rust module docs, ontology §4.2/§10 +
+  local API vocabulary, feature matrix, fixture's now-settled self-seam record, task status/parents/
+  evidence/frontier/logs, index, MEMORY, LIVE_STATUS, CHANGELOG and promoted DEV_NOTES. D35/D57
+  closure descriptor + live pointer; changelog-part16/devnotes-part11 seal oldest entries atomically.
+  The map keeps paths/owners after shortening its glossary orientation. Next `.3c.3b` is grainlines.
 
 ### `G1-SLICE.3c.2b.1` — explicit physical-copy identities, quantities and orientations
 
@@ -744,6 +800,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 | `2026-10-01` | `.3c.2b.1` | cut contract; check; wasm; book; feature/glossary/tree censuses; ledger; gate | `9 passed`; privacy green; all Rust/WASM/book green; censuses green; ledger `9 pass / 0 fail`; doctrines green, `rc=0` |
 
+| `2026-10-01` | `.3c.2b.2` | sewing contracts; check; wasm; book; fixture/feature/glossary; ledger; gate | `18 passed`; graph privacy + notch suites green; Rust/WASM/book green; censuses/ledger/doctrines green, `rc=0`; prior copy milestone full probes `22 suite(s) green` |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -759,7 +817,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 | `.3c.1a` | `STITCHCAD-G1-0008 (leaf G1-SLICE.3c.1a)` | D56 fixed: separate cut-once L/R members, explicit companion metadata |
 | `.3c.3a` | `STITCHCAD-G1-0009 (leaf G1-SLICE.3c.3a)` | semantic notches and symbolic bindings; D58 fixed |
 | `.3c.2b.1` | `STITCHCAD-G1-0010 (leaf G1-SLICE.3c.2b.1)` | explicit physical-copy plan; D59/D60 fixed |
-| `.3c.2b.2`, `.3c.3b` … `.16` | `pending` | `.3c` closes after its four object families; D57 decided, sewing resumes next |
+| `.3c.2b.2` | `STITCHCAD-G1-0011 (leaf G1-SLICE.3c.2b.2)` | copy-addressed sewing; D35/D57 fixed; sewing parents closed |
+| `.3c.3b` … `.16` | `pending` | marks/allowances and constructions remain in `.3c` |
 
 ## Changelog
 
@@ -841,3 +900,9 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   re-derived delivery evidence inside their ROOT CAUSE bullets; all four moved checklists pass
   the per-bullet audit and staged gate. Original payload checksum above describes the pre-supplement
   move, not the final augmented sibling.
+
+- `2026-10-01`: `.3c.2b.2` lands immutable copy-addressed sewing intent, disjoint same-copy seams,
+  semantic stops and explicit ease distributions. Eighteen tests and graph privacy pass; both
+  self-overlap and interval-ownership mutations go red. D35/D57 seal verified closed; `.3c.2b`
+  and `.3c.2` close. Prior copy milestone full probes: 22 suites green. Books/censuses remain aligned,
+  with no invented folded-end geometry or changed arithmetic golden. Next `.3c.3b` grainlines.

@@ -82,9 +82,9 @@ chapter is inside that family or explicitly outside it.
 
 | Feature | Disposition | Why | Proven at | Diagnostic |
 | --- | --- | --- | --- | --- |
-| seam spans, partial and one-to-many | supported | ontology §4.2; a sleeve cap meets an armscye between notches | G3 | — |
-| the sewing graph as a first-class object | supported | ontology §4.2, ontology §10: physical-copy identities landed; graph content follows | G2 fixture, G3 | — |
-| declared ease distribution along a span | supported | ontology §4.2; G3's exit requires cap ease to be declared, not absorbed | G3 | — |
+| seam spans, partial and one-to-many | supported | ontology §4.2, ontology §10: copy-addressed partial spans and explicit same-copy rule landed | G3 | — |
+| the sewing graph as a first-class object | supported | ontology §4.2, ontology §10: immutable graph addresses physical-copy identities | G2 fixture, G3 | — |
+| declared ease distribution along a span | supported | ontology §4.2, ontology §10: explicit distribution intent landed; G3 checks actual cap ease | G3 | — |
 | seam allowance per edge, variable widths | supported | ontology §4.4; the fixture carries 1.0 / 1.5 / 3.0 cm in one garment | G2 | — |
 | the five corner treatments | supported | ontology §4.4 names miter, slant, envelope, trim and step as the vocabulary | G2 | — |
 | allowance included in contour, or generated downstream | supported | ontology §4.4 resolves it per Factory Profile, never as a project boolean | G4 policy, G6 receivers | — |

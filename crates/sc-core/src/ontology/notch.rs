@@ -3,9 +3,10 @@
 //! Anchor identity is validated now; physical representation belongs to the target profile at
 //! instantiation/export. There is no method that turns an unread binding into geometry or an encoding.
 
-use core::fmt;
+use super::anchor::validate_anchor;
+use super::{EntityId, IdentityLedger, Piece, Resolution};
 
-use super::{EdgeRef, EntityId, IdentityLedger, Param, Piece, RangePortion, Resolution};
+pub use super::anchor::{AnchorError as NotchError, EdgeAnchor};
 
 /// A logical profile-parameter declaration, resolved by the target profile at instantiation.
 ///
@@ -89,15 +90,6 @@ pub struct NotchProfileBindings {
     pub encoding: ProfileParameterRef,
 }
 
-/// A held point along a stable edge reference.
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub struct EdgeAnchor {
-    /// Persistent edge identity.
-    pub edge: EdgeRef,
-    /// Exact parameter in the edge's original frame.
-    pub param: Param,
-}
-
 /// Editable input, distinct from a validated semantic [`Notch`].
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct NotchDefinition {
@@ -122,56 +114,6 @@ pub struct Notch {
     definition: NotchDefinition,
 }
 
-/// Structural notch-construction refusal; unresolved profile bindings remain explicit metadata.
-#[derive(Clone, Debug, PartialEq, Eq)]
-pub enum NotchError {
-    /// The requested anchor's edge does not exist now; creation never invents a repairable reference.
-    MissingEdge {
-        /// Requested edge identity.
-        edge: EdgeRef,
-    },
-    /// The anchor resolves outside every surviving edge interval of the named piece.
-    AnchorOutsidePiece {
-        /// Named owner.
-        piece: EntityId,
-        /// Requested held anchor.
-        anchor: EdgeAnchor,
-    },
-    /// A supplied edge/parameter is not uniquely born-resolved.
-    BornUnresolved {
-        /// Requested held anchor.
-        anchor: EdgeAnchor,
-        /// The exact resolution requiring repair or an explicit consumer choice.
-        resolution: Box<Resolution>,
-    },
-}
-
-impl fmt::Display for NotchError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            Self::MissingEdge { edge } => {
-                write!(f, "notch anchor edge {edge} must exist at construction")
-            }
-            Self::AnchorOutsidePiece { piece, anchor } => {
-                write!(
-                    f,
-                    "notch anchor {} at {} must belong to piece {piece}",
-                    anchor.edge, anchor.param
-                )
-            }
-            Self::BornUnresolved { anchor, .. } => {
-                write!(
-                    f,
-                    "notch anchor {} at {} must be born uniquely resolved",
-                    anchor.edge, anchor.param
-                )
-            }
-        }
-    }
-}
-
-impl std::error::Error for NotchError {}
-
 impl Notch {
     /// Validate the anchor against the current topology and its named piece's surviving intervals.
     ///
@@ -183,33 +125,7 @@ impl Notch {
         piece: &Piece,
         ledger: &IdentityLedger,
     ) -> Result<Self, NotchError> {
-        let anchor = definition.anchor;
-        if !ledger.is_live(anchor.edge) {
-            return Err(NotchError::MissingEdge { edge: anchor.edge });
-        }
-        let resolution = ledger.resolve(anchor.edge, anchor.param);
-        let Some(point) = resolution.resolved() else {
-            return Err(NotchError::BornUnresolved {
-                anchor,
-                resolution: Box::new(resolution),
-            });
-        };
-        let belongs = piece.range_resolutions(ledger).any(|(_, range)| {
-            range.portions().iter().any(|portion| match portion {
-                RangePortion::Resolved(part) => {
-                    part.range().edge() == point.edge()
-                        && part.range().from() <= point.param()
-                        && point.param() <= part.range().to()
-                }
-                RangePortion::Unresolved(_) => false,
-            })
-        });
-        if !belongs {
-            return Err(NotchError::AnchorOutsidePiece {
-                piece: piece.id(),
-                anchor,
-            });
-        }
+        validate_anchor(definition.anchor, piece, ledger)?;
         Ok(Self {
             piece: piece.id(),
             definition,

@@ -162,8 +162,8 @@ A `SeamSpan` is an oriented correspondence between two edge ranges:
 - the **two sides** — `(physical cut-copy identity, EdgeRef, parameter range)` each; the copy
   names its pattern Piece and orientation through a complete `CutPlan`;
 - **direction** — which end of side A meets which end of side B;
-- **declared ease distribution** — how a length differential is spread along the span (uniform,
-  weighted to a region, anchored between notches);
+- **declared ease distribution** — signed side-A-minus-side-B length, with explicit allocation
+  (uniform, weighted to a region, anchored between notches);
 - **stop landmarks** — notches or turn points where the sewing stops or changes direction.
 
 Spans may be **partial** (a sub-range of an edge) and **one-to-many** (one edge range sewn to several),
@@ -172,6 +172,11 @@ which is how a sleeve cap meets an armscye with a shoulder notch in between.
 The `SewingGraph` is the first-class object holding the spans. It lives in the `Design`, not inside the
 meshing code: assembly order, walk/true operations and 3D stitching all read it, and a garment whose
 sewing graph is an implementation detail of its renderer cannot be validated.
+
+Same-copy seams are legal when the two current ranges have disjoint positive-length interiors;
+shared endpoints are legal. Identical/overlapping material intervals on one physical copy are refused.
+Two different copies of the same Piece may use the same source interval. See §10 for the structural
+implementation and its deferred geometric/ease checks (D35/D57).
 
 Invariant: every span references edges that exist; a differential beyond the declared ease distribution
 is a *finding* (reported by `walk`), not a silent stretch.
@@ -297,7 +302,7 @@ part of the canonical project; it is regenerated.
 - **Save/load preserves semantics**, including drafting intent: two designs with identical contours but
   different recipes remain distinct.
 
-## 10. Executable pieces at G1
+## 10. Executable structural ontology at G1
 
 `sc_core::ontology::piece` implements §4.1's **structural** content (`G1-SLICE.3c.1`).
 `Piece::new(PieceDefinition, &IdentityLedger)` returns an immutable `Piece` or a typed `PieceError`
@@ -459,3 +464,74 @@ it supplies no new validation or physical-output claim.
 | `NotchEncoding` | Possible export forms; no G1 encoder |
 | `CutCopyDefinition` | Editable physical-copy identity, Piece and orientation |
 | `Reflected` | Copy orientation requiring a later geometric transform |
+
+**Copy-addressed sewing (`G1-SLICE.3c.2b.2`).** `SewingGraph::new` validates the graph against
+its complete CutPlan, Piece collection, semantic landmark registry and topology ledger. Each
+`SeamSpanDefinition` supplies its id, A/B `SeamSide`s (copy id plus positive EdgeRange), an explicit
+`SeamDirection`, signed `DeclaredEase` and `StopLandmark`s on explicit sides. The immutable graph
+exposes shared spans, not public mutators; commands will construct and validate atomic replacements.
+Ids across this supplied scope must be unique. A missing copy, landmark, source interval or owned
+material portion is a typed `SewingError`, with resolution evidence retained for repair/choice cases.
+
+For example, two physical copies of a cut-two Piece can join different neighbours while using the
+same pattern-frame edge interval. A one-to-many correspondence can use two spans: A's first half to
+copy B, A's second half to copy C. A folded-piece self-seam can join `[0,1/2]` and `[1/2,1]` of one
+edge on one copy, if the geometry supports that construction. The shared midpoint is legal; joining
+`[0,1/2]` to `[1/3,1]` on that same copy is refused because their interiors overlap. Merging edges
+does not bypass this rule: disjointness is checked on resolved fragments, rather than different held
+edge names. G1 does not claim that the example's fold, net line or seam length has been constructed.
+
+`SeamDirection::Same` means A's lower endpoint meets B's lower; `Opposite` means A's lower meets B's
+upper. Later ledger reversal reports accumulated traversal through each side's range result; physical
+copy reflection is the CutPlan's separate orientation. None rewrites the authored correspondence.
+`resolve_side()` retains whole-interval and separate endpoint evidence: a lost middle fragment remains
+a repair even if both endpoints resolve, and an endpoint at a split remains an explicit choice.
+Born graph ranges must have full coverage and unique endpoints. Piece ownership covers every positive
+portion, so an unowned middle interval between two owned endpoints is refused too.
+
+`EaseAmount` is an explicit signed Length, a formula parameter identity, or a logical profile binding;
+positive means A is longer than B, negative means B is longer. This is seam differential, separate
+from the garment's body-to-garment ease policy. `EaseDistribution::Uniform` is explicit, not a default.
+`Weighted` carries an explicit side and nonempty ordered regions of normalized span arc-length progress:
+bounds ascend, relative densities are positive and regions do not overlap; omitted regions receive
+none of the declared allocation. `BetweenNotches` requires two distinct, noncoincident semantic notch
+stops on its named side. A turn point cannot silently substitute for a notch. No G1 method evaluates
+a symbolic amount, measures geometry or realizes the distribution. Formula evaluation belongs to
+`.5`; profile declaration/type/state resolution belongs to G4. The command bus must validate these
+references as well as geometry before accepting a complete design.
+
+`SewingLandmark` registers existing semantic Notches or born-valid edge-anchored `TurnPoint`s.
+Every stop must belong to its side's source Piece and resolved interval; duplicate stops on one side,
+missing landmarks, out-of-range stops and ambiguous/orphaned anchors have separate refusals. Physical
+notch geometry is irrelevant to locating a semantic stop. TurnPoint asserts a sewing landmark; its
+actual geometric turning is still unproved. The shared `AnchorError` vocabulary keeps `NotchError`
+as a compatible alias for the existing notch construction API.
+
+After an explicit plan/landmark replacement, `missing_copies()` and `missing_landmarks()` expose the
+original targets still held by the graph. A new copy does not inherit an old copy's seams. Queries do
+not mutate stored content or certify release. Every graph reports `GeometricValidation::DeferredToG2`
+and `EaseValidation::DeferredToG2AndG3`; `walk`/`true`, actual length differential, source transforms,
+net-line geometry and assembly completeness remain later checks. An empty graph is structurally legal
+but makes no garment-assembly completeness claim. The contract is recorded in
+`decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`.
+
+| API token | Meaning in the sewing implementation |
+| --- | --- |
+| `AnchorError` | Shared born-valid semantic-anchor refusal |
+| `NotchError` | Compatible alias of the shared anchor refusal |
+| `TurnPoint` | Immutable semantic edge-anchored sewing turn |
+| `SewingLandmark` | Registry entry for a Notch or TurnPoint |
+| `SeamSide` | Physical-copy id and source-frame EdgeRange |
+| `SeamSideId` | Explicit A/B side selector |
+| `SeamDirection` | Authored endpoint correspondence |
+| `Opposite` | A lower endpoint meets B upper endpoint |
+| `SeamSpanDefinition` | Editable oriented sewing-span input |
+| `SewingGraphDefinition` | Editable graph id and span list |
+| `SewingError` | Typed structural graph refusal |
+| `DeclaredEase` | Signed amount source and allocation intent |
+| `EaseAmount` | Explicit, formula or profile differential source |
+| `EaseDistribution` | Uniform, weighted or between-notches allocation |
+| `Uniform` | Explicit uniform allocation declaration |
+| `Weighted` | Ordered positive-weight region declaration |
+| `BetweenNotches` | Allocation between two named notch stops |
+| `StopLandmark` | Semantic stop identity on an explicit side |

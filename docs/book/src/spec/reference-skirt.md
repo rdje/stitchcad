@@ -265,9 +265,9 @@ differential is a bug rather than ease.
 Assembly order: fuse the interfacing → darts → side seams → CB seam (zipper) → waistband to waist →
 hem. Layer index orders the waistband above the body and the interfacing above the waistband for 3D
 assembly. The band's two short ends are folded right sides together and stitched across at their `sa_cb`
-line, then turned; that closure joins one piece to itself, so it is an edge finish and not a span — and
-whether a `SewingGraph` may carry such a self-span at all is a question this fixture deliberately does
-not answer (§11).
+line, then turned. D35 is now resolved by the ontology: a span may join disjoint material ranges on
+one physical copy. The fixture retains this edge-finish procedure until G2 constructs the actual
+folded short-end ranges; it does not invent an extra copy or numeric span geometry. See §11.
 
 ## 9. Closure
 
@@ -334,11 +334,14 @@ notions list matches the geometry.
   fold line is the exact midpoint. The decision, its sources with their URLs and the date they were read,
   and the condition that would re-open it are in
   `docs/decisions/decision_reference-fixture-waistband-straight-folded.md`.
-- **One question this fixture deliberately does not answer.** The band's short ends are folded right
-  sides together and stitched across, which joins one piece to itself. Whether a `SewingGraph` may carry
-  such a self-span — an edge range sewn to another range of the same piece — is an ontology question,
-  not a fixture question, and deciding it here would settle it by accident. §8 records the ends as an
-  edge finish instead; the question is owned in `docs/tasks/PLANNING.md`.
+- **The same-copy sewing question is resolved (D35).** This fixture originally left self-spans
+  undecided and recorded the band's short ends as an edge finish. `G1-SLICE.3c.2b.2` now permits
+  seams between disjoint positive-length ranges of one physical copy; shared endpoints are legal,
+  overlapping/identical material intervals are refused. The director's D57 ruling gives each physical
+  copy its own stable identity, so two copies of one pattern Piece are distinct sewing domains.
+  `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md` records the contract.
+  The G2 fixture must construct the actual folded-end range geometry before making it an executable
+  span or claiming length equality; the four existing span rows and five physical cuts are unchanged.
 
 - **The waist side point was wrong, and the chapter's own oracle could not see it (defect D33,
   corrected).** §5 step 2 placed it at `quarter_waist − ss_suppress` = 15.5 cm from CF; §3's
