@@ -353,6 +353,49 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     the range (an id list is retrievable and a range is not) or the range gains a producer, and the choice
     belongs with the leaf that owns the contract.
 
+- **D53** — the derived `KNOWLEDGE_MAP.md` shares one 8192-byte ceiling with two generated sections that
+  grow a line per slice (one per decision record, one per active task-tree), while the only hand-trimmable
+  lever is the bounded `knowledge-map/subsystems.md` list. The map is a projection whose unbounded part
+  outgrows its trim lever. (Found during `G1-SLICE.3b`, `2026-10-01`; `STITCHCAD-G1-0004` had flagged it at
+  99 % one slice earlier.)
+  - Reproduce: at `.3b`'s start, `knowledge-map/scripts/gen_knowledge_map.sh | wc -c` → `8216` with the new
+    decision record added, against the `knowledge_map` row's `ceil_bytes=8192` in
+    `.doctrine/live_document_size/surfaces.tsv`. The generated record list is one line per row of
+    `docs/decisions/INDEX.md` (`grep -c '^| ' docs/decisions/INDEX.md`), which only grows.
+  - Impact: contained this slice — two subsystem entries were tightened (the doctrine's default answer) to
+    land the map at `8187`, under the ceiling — but the lever is finite. Subsystem entries cannot shrink
+    below orientation size while records and trees only increase, so within a few more decision records a
+    trim will no longer fit the map under 8192. At that point the ceiling must rise by a recorded decision,
+    or the generator must route the unbounded sections to their canonical indexes (`INDEX.md`,
+    `docs/TASK_TREE.md`) as a count-plus-pointer instead of re-listing them.
+  - Owner: the containment / knowledge-map authority (`SPINE.4` family, which owns `surfaces.tsv` and the
+    generator). Durable remedy: prefer the bounded projection (count + pointer to the canonical index) over
+    a ceiling raise, per `LIVE_DOCUMENT_SIZE_CONTAINMENT.md` ("trimming is the default answer"). Deferred
+    behind product work by `decision_product-work-takes-the-frontier.md`; the instance is remediated.
+
+- **D54** — a `rolling_ledger` surface's health target is its rollover milestone ("ordinary appends stop
+  unless the same change performs the declared rollover"), but `scripts/check_live_doc_size.sh` reports a
+  surface past its health target as a WARNING and returns rc=0; only the inclusive ceiling fails. So an
+  append that crosses the milestone can pass `make gate` without rolling, and the convention depends on the
+  author remembering. (Found during `G1-SLICE.3b`, `2026-10-01`.)
+  - Reproduce: `STITCHCAD-G1-0004` grew `CHANGELOG.md` from `31237` to `33338` bytes
+    (`git show 7edfa93:CHANGELOG.md | wc -c` vs `git show c0d6301:CHANGELOG.md | wc -c`), crossing the
+    `32768` health target, without sealing a segment; `scripts/check_live_doc_size.sh` returned rc=0 with the
+    warning `changelog: 33338 bytes = 102% of its 32768-byte health target`, and `make gate` was green. Both
+    rolling ledgers (`changelog` at `33338`, `dev_notes` at `17330`) stayed past health until `G1-SLICE.3b`
+    rolled them.
+  - Impact: a rolling ledger can drift toward its ceiling — where the checker does fail — while the
+    seal-the-oldest protocol and its digest/ordering discipline (the D29/D30/D39/D43 lineage) are skipped
+    instead of performed at the milestone. A milestone backed only by author memory lapses; it lapsed for one
+    commit here.
+  - Owner: the containment authority (`SPINE.4` family, which owns `check_live_doc_size.sh`). Durable remedy:
+    fail — not warn — when a `rolling_ledger` surface is past its health target unless the same staged change
+    performs the declared rollover, or emit a derived "rollover due" signal the commit workflow must consume.
+    Deferred behind product work by `decision_product-work-takes-the-frontier.md`; **instance remediated by
+    `G1-SLICE.3b`**, which sealed `stitchcad-changelog-part13.md` (75 lines / 7188 bytes) and
+    `stitchcad-devnotes-part7.md` (57 lines / 5120 bytes) and brought both ledgers back under health,
+    verified by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

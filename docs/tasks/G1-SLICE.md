@@ -96,7 +96,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   `decision_edge-parameter-bounded-exact-rational.md`.
 
 - ID: `G1-SLICE.3b`
-  Status: `pending`
+  Status: `done`
   Goal: the persistent-identity contract (ontology §1.1) — reference resolution under split, merge,
   reverse, delete and offset-fragmentation, and the `RepairTask` an orphaned reference becomes. No
   silent reassignment.
@@ -105,8 +105,12 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   parameter by arc length, reverse maps `t` to `1 − t`; a deleted edge's references become visible
   `RepairTask`s naming the reference, the orphaning edit and the candidate resolutions; a design with
   unresolved references is savable and inspectable but cannot be released.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: recorded below — 62 unit + 8 contract-property + 9 identity-property tests green,
+  `make wasm` cross-builds `sc-core`, every criterion re-derived in the `### G1-SLICE.3b` checklist.
+  Commit: `STITCHCAD-G1-0005`
+  Design: `decision_reference-resolution-journal-fold.md` (recorded before the code, per the `.3`
+  decomposition's discipline), inheriting `decision_entity-identity-ulid-injected-generator.md` and
+  `decision_edge-parameter-bounded-exact-rational.md`.
 
 - ID: `G1-SLICE.3c`
   Status: `pending`
@@ -272,10 +276,15 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3b` | `pending` | the persistent-identity contract (ontology §1.1) — reference resolution under split/merge/reverse/delete and the `RepairTask`; consumes `.3a`'s identity types |
+| — | `G1-SLICE.3c` | `pending` | the geometry-bearing object types (ontology §4) — `Piece`, `SeamSpan`/`SewingGraph`, `Notch`, `Grainline`, `SeamAllowance`, darts and closures, structural invariants enforced at construction; consumes `.3a`'s identity types and `.3b`'s resolution contract |
 
 ## Decisions
 
+- `2026-10-01`: `.3b`'s design boundary is recorded BEFORE the code, per the `.3` decomposition's discipline:
+  `decision_reference-resolution-journal-fold.md` — a stored reference is never rewritten, resolution is a
+  pure fold of an append-only edit journal, repair state is derived not stored, the offset contract consumes
+  declared intervals until G2 geometry supplies real ones, and undo (`.6`) becomes journal algebra. Recorded
+  so `.3c`/`.6`/`.7` inherit it rather than re-litigate.
 - `2026-09-29`: leaves are numbered in dependency order (units → ontology → measure → recipe →
   bus → store → CSP → API/MCP → CLI → profiles → spikes), because every later leaf consumes the
   earlier ones and a frontier that jumps is a frontier that stalls.
@@ -310,6 +319,66 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3b` — the persistent-identity contract: a reference is never rewritten, the journal folds
+
+G1's second new product code. Ontology §1.1 requires that when an edit changes the topology a reference
+points into, the reference either resolves onto the new topology or becomes a visible repair task — never a
+silent reassignment. This slice implements that contract in `sc_core::ontology::topology` against the design
+decision recorded before the code, dependency-free and wasm-safe.
+
+- [x] **REPRODUCE / ISSUE** — the requirement, located and unimplemented: `grep -n 'The persistent-identity
+  contract' docs/book/src/spec/ontology.md` → line 39, `rc=0` (§1.1's five-row edit table and the "no silent
+  reassignment" rule), against `git show HEAD:crates/sc-core/src/ontology/mod.rs | grep -c topology` → `0`,
+  `rc=1`. `.3a` landed the identity *types* (`EdgeRef`/`Param`); nothing resolved a reference through an edit
+  and nothing turned an orphan into a repair task, so the contract the whole design's reference integrity
+  rests on was spec-only.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the design is a recorded decision, not an ad-hoc choice:
+  `decision_reference-resolution-journal-fold.md` (`grep -c '^answers:' …` → `1`, `rc=0`) — a stored reference
+  is never rewritten; resolution is a pure fold of an append-only edit journal, so no consumer can be missed,
+  and repair state is *derived* (`open_repairs`/`release_readiness`), never stored, so it cannot drift. It
+  inherits `.3`'s two prior boundaries: the injected-generator ULID
+  (`decision_entity-identity-ulid-injected-generator.md`) and the bounded exact rational
+  (`decision_edge-parameter-bounded-exact-rational.md`), which is why split/merge recompute with zero drift.
+- [x] **ADDRESSED (verified)** — every acceptance criterion is a passing test. `cargo test -p sc-core` →
+  `62 passed` (unit) + `8 passed` (contract property) + `9 passed` (identity property), `rc=0`. **Split**:
+  the trichotomy resolves into the containing fragment, and a reference at the split point returns a
+  `SplitPoint` with both sides for the consumer to state (`SplitSide`) —
+  `a_reference_at_the_split_point_resolves_to_both_and_the_consumer_states_which_it_wants`, property
+  `split_resolves_by_trichotomy_and_the_split_point_offers_both_sides`. **Merge by arc length**:
+  `merge_recomputes_the_parameter_by_arc_length` (1 cm + 3 cm maps `t=1/2` to `1/8` and `5/8` exactly), and
+  the property checks the defining proportion cross-multiplied in `i128`, an oracle sharing no code with the
+  fold. **Reverse**: `1 − t` + `Direction::Reversed`, an involution. **Delete → RepairTask**:
+  `delete_orphans_a_reference_into_a_visible_repair_task` — the task names the reference, the orphaning edit
+  (`Deleted { operation, edge }`) and the candidates (empty for a deletion); the property proves exactly the
+  references resolving onto the victim orphan and nothing else moves. **Savable/inspectable/not-releasable**:
+  `a_design_with_unresolved_references_is_inspectable_but_not_releasable` — every query still answers and
+  `release_readiness()` → `Blocked { unresolved: 1 }`. `make wasm` → `sc-units + sc-core build for
+  wasm32-unknown-unknown`.
+- [x] **NO REGRESSION** — `make check` → fmt clean, clippy `-D warnings` clean, `cargo test --all` green
+  (sc-units' 21 properties + doc-test and `.3a`'s 9 identity properties unaffected); `make gate` → `=== all
+  doctrines green ===`, `rc=0`; `make probes` → `22 suite(s) green`; `make wasm` green. The change is
+  additive: `sc-core` gained an `ontology::topology` module and a second property-test target, no existing
+  behaviour changed, and `sc-units` and `.3a`'s `id`/`rational`/`reference` were untouched. The two
+  rolling-ledger rollovers this append owed (D54) are verified by `run_changelog_ledger_probes.sh` →
+  `9 pass / 0 fail`.
+- [x] **FIX** — implemented `sc_core::ontology::topology`: `IdentityLedger` (an append-only journal +
+  live-edge index + registrations), `TopologyEdit` (declare/split/merge/reverse/delete/offset),
+  `Resolution`/`ResolvedRef`/`Direction`/`SplitSide`, `RepairTask`/`OrphaningEdit`/`OpenRepair`,
+  `ReleaseReadiness`, `OffsetInterval`/`OffsetFragment`, `LedgerError`, `MAX_EDGES_PER_OPERATION`;
+  re-exported from `ontology/mod.rs`; updated `lib.rs`'s status + module table; 31 inline unit tests and 8
+  dependency-free recorded-seed properties in `tests/identity_contract_property.rs`. Also repaired two
+  hand-kept-doc defects the sync gates cannot see (they check derivation, not source form): a run-on bullet
+  in `knowledge-map/subsystems.md` (two entries shared one line) and an accidental duplicated sentence in
+  `docs/TASK_TREE.md`'s execution-order prose (a D34-class drift, logged in the leaf rather than a new id
+  since `PLANNING.5` owns deriving that index).
+- [x] **LOCKSTEP** — `decision_reference-resolution-journal-fold.md` (new) + its INDEX row;
+  `knowledge-map/subsystems.md` + regenerated `KNOWLEDGE_MAP.md` (trimmed under its 8192 ceiling, D53);
+  `docs/TASK_TREE.md` (frontier cell), `MEMORY.md` (next action → `.3c`), `LIVE_STATUS.md` (G1 → 4 of 18,
+  census → 9 open), `CHANGELOG.md` (entry + the part13 rollover), `DEV_NOTES.md` (lesson + the part7
+  rollover), `PLANNING.md` (D53, D54), and this tree's frontier, three logs and changelog.
+  promotion: promoted by `decision_reference-resolution-journal-fold.md` (carries `answers:`) — the durable
+  design boundary is recorded there so `.3c`/`.6`/`.7` inherit it rather than re-litigate.
 
 ### `G1-SLICE.13` (acceptance rewritten by `G0-CONTRACT.11`) — a consumer leaf names its instrument, not a protocol in prose
 
@@ -474,6 +543,7 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `2026-09-30` | `.1` | `cargo metadata --no-deps`; `make check`; `make wasm`; `make gate`; `run_g0_exit_review.sh` | crates `sc-core, sc-units`; `21 passed` property + `1` doc-test; wasm build green; `=== all doctrines green ===`; `G0-17`/`G0-18` `MET` — every `.1` criterion re-derived, `rc=0` |
 | `2026-09-30` | `.2` | `cargo test -p sc-units --test property`; `make wasm`; `make gate` | `21 passed` (round-trips, class separation, typed dimension/non-finite errors); wasm cross-build green; `=== all doctrines green ===` — every `.2` criterion re-derived, `rc=0` |
 | `2026-09-30` | `.3a` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate` | `31 passed` unit + `9 passed` property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===` — every `.3a` criterion re-derived, `rc=0` |
+| `2026-10-01` | `.3b` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate`; `make probes`; `run_changelog_ledger_probes.sh` | `62 passed` unit + `8 passed` contract property + `9 passed` identity property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===`; `22 suite(s) green`; ledger probes `9 pass / 0 fail` — every `.3b` criterion re-derived, `rc=0` |
 
 ## Commit Log
 
@@ -484,7 +554,8 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `.2` | `STITCHCAD-G1-0002 (leaf G1-SLICE.2)` | reconciled: `sc-units` delivered by `G0-CONTRACT.18`; property-test decision recorded |
 | `.3` | `STITCHCAD-G1-0003 (leaf G1-SLICE.3)` | decomposed into `.3a`/`.3b`/`.3c`; the three design boundaries recorded as layer-C decisions |
 | `.3a` | `STITCHCAD-G1-0004 (leaf G1-SLICE.3a)` | the identity layer: `EntityId`/ULID + injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the exact `Rational`/`Param`; 40 tests, wasm green |
-| `.3b` … `.16` | `pending` | — |
+| `.3b` | `STITCHCAD-G1-0005 (leaf G1-SLICE.3b)` | the persistent-identity contract: `IdentityLedger`'s append-only edit journal, fold resolution under split/merge/reverse/delete/offset, derived `RepairTask`s + release rule; 62 unit + 8 property tests, wasm green; recorded in `decision_reference-resolution-journal-fold.md` |
+| `.3c` … `.16` | `pending` | — |
 
 ## Changelog
 
@@ -514,3 +585,18 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
   green. Built against `decision_entity-identity-ulid-injected-generator.md` and
   `decision_edge-parameter-bounded-exact-rational.md`. The frontier advances to `.3b` (the persistent-identity
   contract).
+- `2026-10-01`: `.3b` landed — G1's second new product code. `sc_core::ontology::topology`: the
+  `IdentityLedger` (an append-only journal of typed `TopologyEdit`s + a live-edge index + registrations) and
+  the pure fold that resolves a held `(EdgeRef, Param)` through split, merge, reverse, delete and
+  offset-fragmentation. A stored reference is never rewritten; repair state (`RepairTask`, `open_repairs`,
+  `release_readiness`) is derived, never stored, so it cannot drift from the journal. Split offers both
+  fragments at the split point for the consumer to state a `SplitSide`; merge recomputes by caller-declared
+  arc length in exact `Rational`; reverse maps `t` to `1 − t` and tells directed consumers via `Direction`;
+  delete and offset orphan references into visible `RepairTask`s naming the reference, the orphaning edit and
+  the candidates — no silent reassignment. 62 unit + 8 recorded-seed contract properties green (merge checked
+  against a cross-multiplied `i128` oracle, offset against a hundredths grid, the live set against the journal
+  replayed, replay byte-identical), `sc-core` still cross-builds to wasm, `make gate` + `make probes` (22
+  suites) green. Built against `decision_reference-resolution-journal-fold.md`, recorded before the code. The
+  append also discharged two containment obligations it owed (D54: the CHANGELOG and DEV_NOTES rollovers the
+  prior slice crossed without sealing) and surfaced D53 (the KNOWLEDGE_MAP ceiling pressure `.3a` flagged).
+  The frontier advances to `.3c` (the geometry-bearing object types).

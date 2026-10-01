@@ -2,8 +2,8 @@
 //! together.
 //!
 //! Normative source: `docs/book/src/spec/ontology.md` (gate G0, specified by `G0-CONTRACT.3`). Implemented
-//! across three ordered slices: **`.3a`** the identity layer (this module today), **`.3b`** the
-//! persistent-identity contract that resolves references under split/merge/reverse/delete, and **`.3c`** the
+//! across three ordered slices: **`.3a`** the identity layer, **`.3b`** the persistent-identity contract
+//! that resolves references under split/merge/reverse/delete (both landed), and **`.3c`** the
 //! geometry-bearing object types (`Piece`, `SeamSpan`/`SewingGraph`, `Notch`, and the rest).
 //!
 //! The identity layer is the foundation the other two consume: a reference is meaningless without a stable
@@ -15,11 +15,18 @@
 //! | [`id`] | `EntityId` (a ULID) and the injected `IdGenerator` | `.3a` |
 //! | [`rational`] | the bounded exact rational a parameter is stored in | `.3a` |
 //! | [`reference`] | `EdgeRef`, `PointRef`, `LocalTag` and the `[0, 1]` `Param` | `.3a` |
+//! | [`topology`] | the persistent-identity contract: the edit journal, resolution, `RepairTask`s | `.3b` |
 
 pub mod id;
 pub mod rational;
 pub mod reference;
+pub mod topology;
 
 pub use id::{DeterministicIdGenerator, EntityId, IdError, IdGenerator, MAX_TIMESTAMP_MS};
 pub use rational::Rational;
 pub use reference::{EdgeRef, LocalTag, Param, ParamError, PointRef};
+pub use topology::{
+    Direction, IdentityLedger, JournalEntry, LedgerError, OffsetFragment, OffsetInterval,
+    OpenRepair, OrphaningEdit, Registration, ReleaseReadiness, RepairTask, Resolution, ResolvedRef,
+    SplitFragments, SplitSide, TopologyEdit, MAX_EDGES_PER_OPERATION,
+};

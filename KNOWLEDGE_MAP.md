@@ -14,13 +14,14 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   profile including `wasm-viewer` can use it. Entry `crates/sc-units/src/lib.rs`, conformance
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`. Owner
   `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/` — **the ontology, being built**: the identity layer landed (`G1-SLICE.3a` —
-  `EntityId`/ULID + injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the exact `Rational`/`Param`);
-  the contract (`.3b`), object types (`.3c`), recipe, command bus and uncertainty follow. Entry
-  `crates/sc-core/src/ontology/`. Owner `G0-CONTRACT.3` (spec), `G1-SLICE.3a`/`.3b`/`.3c` (code).
-- `docs/book/src/spec/` — the normative specification the director reviews: overview, glossary, units,
-  ontology, formula language, envelope, instantiation paths, size sets, standards, interchange dialects,
-  release and approval, the command layer, reference skirt. Owner the `G0-CONTRACT` leaves.- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, in three parts** (contract,
+- `crates/sc-core/` — **the ontology, being built**: identity (`.3a`) and the persistent-identity contract
+  (`.3b` — `IdentityLedger`: resolution under split/merge/reverse/delete/offset, derived
+  `RepairTask`s) landed; object types (`.3c`), recipe, command bus, uncertainty follow. Entry
+  `crates/sc-core/src/ontology/`. Owner `G0-CONTRACT.3` (spec), `G1-SLICE.3a`–`.3c` (code).
+- `docs/book/src/spec/` — the normative specification the director reviews: one chapter per contract
+  family (units, ontology, formula language, envelope, interchange, release, command layer, and the
+  rest). Owner the `G0-CONTRACT` leaves; chapter index `docs/book/src/SUMMARY.md`.
+- `docs/book/src/spec/formula-language.md` — **the recipe's expression language, in three parts** (contract,
   `formula-language/grammar.md`, `formula-language/examples.md`). Its numbers are computed, not typed:
   `docs/tasks/artifacts/formula_language/run_formula_language_census.sh` reads the chapter's own tables.
   Owner `G0-CONTRACT.9`, implemented by `G1-SLICE.5`.
@@ -85,6 +86,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_product-work-takes-the-frontier.md`](docs/decisions/decision_product-work-takes-the-frontier.md)
 - [`decision_property-tests-dependency-free-recorded-seed.md`](docs/decisions/decision_property-tests-dependency-free-recorded-seed.md)
 - [`decision_reference-fixture-waistband-straight-folded.md`](docs/decisions/decision_reference-fixture-waistband-straight-folded.md)
+- [`decision_reference-resolution-journal-fold.md`](docs/decisions/decision_reference-resolution-journal-fold.md)
 - [`decision_release-package-identity-and-scope.md`](docs/decisions/decision_release-package-identity-and-scope.md)
 - [`decision_revision-aware-containment-baseline.md`](docs/decisions/decision_revision-aware-containment-baseline.md)
 - [`decision_scaffold-sync-protects-project-content.md`](docs/decisions/decision_scaffold-sync-protects-project-content.md)
