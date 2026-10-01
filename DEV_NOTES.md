@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — per-POM queries preserve current mapping and table identities
+
+- Set entries pin mapping/body/POM/amount targets; fit, provenance and numeric state stay in current
+  canonical records. Retargeting needs validated set replacement. Unique POM/id/token inventories
+  permit shared body/amount declarations; selecting a peer by same POM or table content is forbidden.
+- Current queries check both named table memberships and current mapping/permission. Targeted queries
+  do not certify unrelated entries, complete table/size-chart coverage, Design revision or release.
+  Unknown/derived amounts still return their required observation/evaluation source, never zero.
+- Fourteen contracts/privacy and ten real guard mutations verify namespace and membership boundaries.
+  The duplicate-POM regression uses two individually valid mappings to one POM, so removing only that
+  guard accepts genuine ambiguity. Restored strict Rust/WASM/book pass; D69 package wording is repaired
+  and verified with cargo metadata. Existing D34 stale index example is corrected within this slice.
+- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s set section.
+
 ## _(2026-10-02)_ — Ease intent never supplies an unresolved numeric fallback
 
 - Individual mappings pin body/POM metadata bindings and borrow a distinct signed amount declaration.
@@ -107,22 +121,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   construction contracts and ten checklists partition unchanged with committed-payload comparison.
 - promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`.
 
-## _(2026-10-01)_ — a negative probe must prove it changed the intended contract field
-
-- Full milestone probes found BAD-GATE anchored to an obsolete tuck/pleat explanation. Its sed
-  replacement matched nothing, so a valid matrix reached the census and was accepted. Targeting the
-  feature's gate cell avoids unrelated prose; independent post-mutation inspection proves exactly one
-  invalid gate. Missing/duplicate targets refuse setup, distinct from the census's malformed-gate red.
-  A no-op writer mutation now fails loudly as setup failure; the census itself is unchanged.
-- Crate-scoped unit execution exposed a live count copied from the original whole workspace: 30
-  meant 5 unit + 21 property + 1 doc in sc-units, plus three sc-core smoke tests. No tests disappeared;
-  live counts now identify their scope. Historical delivered-workspace records stay unchanged.
-- Sixteen §4 objects pass structural review: 149 object/support contracts, 260 sc-core tests including
-  18 docs; full workspace 287 including 19 docs. Later geometry/recipe/profile/Design/release owners
-  remain explicit. API/MCP workflow control requires observable contracts and independently checked
-  artifacts; access alone is no measurement of garment expertise. This restates the canonical roadmap.
-- promotion: declined (local fixture repair and re-verification of already canonical contracts).
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -167,3 +165,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part27.md`](docs/history/stitchcad-devnotes-part27.md) | canonical buttonhole derivation lesson | 13 lines, 1158 bytes, `sha256:319f11b3…` |
 
 | [`stitchcad-devnotes-part28.md`](docs/history/stitchcad-devnotes-part28.md) | Pocket composition lesson | 14 lines, 1301 bytes, `sha256:764116ee…` |
+
+| [`stitchcad-devnotes-part29.md`](docs/history/stitchcad-devnotes-part29.md) | coverage probe calibration lesson | 15 lines, 1383 bytes, `sha256:d6d266b6…` |

@@ -52,6 +52,23 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part26.md`](docs/history/stitchcad-changelog-part26.md) | STITCHCAD-G1-0009 | 16 lines, 1371 bytes, `sha256:ff2d0b1c…` |
 
+| [`stitchcad-changelog-part27.md`](docs/history/stitchcad-changelog-part27.md) | STITCHCAD-G1-0010 | 20 lines, 1663 bytes, `sha256:b3824493…` |
+
+## STITCHCAD-G1-0030 - current per-POM Ease sets (leaf `G1-SLICE.4b.2`)
+
+Immutable ordered sets bind unique mapping identities, machine tokens and POM identities to named
+current body/garment tables. Borrowed canonical mappings retain current fit, provenance/permission and
+amount state/source; retargeting or missing identities refuse. Both selected table memberships and
+current Ease validate before lookup returns. Shared body/amount sources, one mixed table and empty
+drafts are legal; missing POMs never acquire default mappings or zero ease.
+
+Fourteen contracts plus privacy pass. Ten production guard removals each produce an actual assertion
+failure and restore exact source. Strict Rust passes 371 tests, with WASM/book/glossary and focused
+tracking/ledger/staged gates green. D69 fixes stale package discovery, verified by cargo metadata;
+it seals in defects-part13. Existing D34's stale sibling example is corrected; derivation remains
+owned. Prior individual Ease contract/checklist retained unchanged; oldest live entries seal unchanged
+as changelog-part27/devnotes-part29. Next .4b.3 structural Ease review; G1 stays 5/18.
+
 ## STITCHCAD-G1-0029 - individual canonical Ease intent (leaf `G1-SLICE.4b.1`)
 
 sc-measure implements immutable body-to-POM mappings with saved current bindings, a distinct signed
@@ -351,24 +368,3 @@ book, fixture/feature/glossary censuses, ledger probes and staged doctrines pass
 full `make probes` passed all 22 suites. Shared anchor validation retains notch behavior and the
 NotchError alias; original notch tests pass. Closed D35/D57 seal together in defects-part7.
 Oldest CHANGELOG/DEV_NOTES entries roll over atomically. Next `.3c.3b` implements directed grainlines.
-
-## STITCHCAD-G1-0010 - physical cut copies have explicit stable identities (leaf `G1-SLICE.3c.2b.1`)
-
-Per the director's D57 ruling, `CutPlan` carries immutable `CutCopy` identities separately from the
-pattern Piece. Callers supply copy ids, Piece ids and authored/reflected orientation. Validation checks
-unique/disjoint identities, existing Pieces, exact quantities and equal mirrored-pair populations;
-Single and separate L/R members retain authored orientation. List order supplies no identity and a
-removed copy never transfers its id to a replacement. Geometry transforms remain deferred to G2/V1.
-
-Nine contract tests and the privacy doctest pass; disabling quantity refusal makes its regression red.
-Strict `make check`, wasm, warning-free book, feature/glossary/tree censuses, ledger probes and doctrine
-gate pass. D59 is fixed: the glossary census reproduced 15 undeclared API terms against `6abfac3`;
-a meaningful local API table plus the two new glossary concepts brings the census to zero failures.
-The new terms are indexed from the producer. D57 stays open until the sewing graph exercises copy ids.
-
-Completed `.1`, `.2`, `.3a` and `.3b` checklists move to `G1-SLICE-evidence.md` before
-this append would take the parent past 1000 lines. Coverage confirms a fourth legitimate sibling. D60 closes after the staged gate exposes the
-historical doc-only ROOT CAUSE bullets: `.1`/`.2` retain their prose plus re-derived delivery evidence,
-and all four moved checklists are audited separately.
-The copy-identity decision records replacement/orientation rules and the required token census.
-Next `.3c.2b.2` lands sewing spans and settles D35 explicitly.

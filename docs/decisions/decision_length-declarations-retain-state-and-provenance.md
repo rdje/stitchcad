@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.4a.1`; ontology §2.1/§2.2/§5, formula-language §2/§3 and roadmap §2.3.
 
-answers: "where do measurement state and source live?" · "can unknown inputs default to zero?" · "does known prove evidence?" · "how are core dependency cycles avoided?" · "how do shared machine tokens preserve spelling?" · "where is procedure documentation stored?" · "can body and garment references interchange?" · "how does a measurement table refuse token or scalar reassignment?" · "does close fit authorize compression?"
+answers: "where do measurement state and source live?" · "can unknown inputs default to zero?" · "does known prove evidence?" · "how are core dependency cycles avoided?" · "how do shared machine tokens preserve spelling?" · "where is procedure documentation stored?" · "can body and garment references interchange?" · "how does a measurement table refuse token or scalar reassignment?" · "does close fit authorize compression?" · "how are per-POM ease mappings tied to current tables?"
 
 ## The fact / decision
 
@@ -106,3 +106,13 @@ Current same-id amount edits re-run negative permission; unknown/derived drafts 
 fallback. Evaluators must check signed result permission explicitly, then separately prove current
 inputs and provenance. Individual mappings do not yet certify selected table membership (.4b.2).
 Structural compression declarations do not expand the v1 garment envelope; G3 owns its refusal.
+
+## Per-POM Ease sets — G1-SLICE.4b.2
+
+The ordered immutable set owns unique Ease-id/token/POM bindings plus explicit body/garment table
+identities; one mixed table is legal. Shared body and amount declarations are not ambiguity. Bindings
+pin each mapping's body/POM metadata expectations and amount identity, never its fit or state/provenance.
+Current lookup borrows the canonical mapping, refuses retargeting or missing identities, validates both
+selected table memberships and current Ease. Same-id intent/permission and scalar-state edits stay
+visible. Empty drafts and targeted queries do not certify complete chart/Design coverage; full set
+validation checks all entries. Identity, scope, factual evidence and evaluation remain distinct.

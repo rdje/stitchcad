@@ -404,32 +404,30 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4b.1`
   Status: `done`
-  Goal: immutable individual Ease mappings over saved body/POM bindings and one canonical signed
-  LengthDeclaration; FitIntent ordered Close < Semi < Loose, explicit compression provenance.
-  Pre-code protocol: retain measurement id/token/kind/scalar expectations, resolve current metadata
-  by id, require Body then Garment and all current landmark/procedure targets. Reject mapping-id
-  collisions and amount-id aliasing either measurement scalar. Reuse the borrowed unambiguous
-  inventory; matching tokens across distinct measurement namespaces remain legal here.
-  The canonical amount owns numeric state/source; mapping provenance owns fit/correspondence intent.
-  Compression is Forbidden or Declared with a provenance id, never inferred from fit class. Accept
-  unknown/derived drafts without numeric fallback; enforce permission on every present/current or
-  externally evaluated signed amount. No body-plus-ease computation, fitted thresholds, source truth,
-  v1-envelope expansion or physical/release certificate. Explicit replacements preserve old mappings.
-  Acceptance: current reassignment/removal/invalid metadata refuse; negative known/assumed/preference
-  without declaration refuses; declared negatives/zero/positives preserved; unresolved states remain
-  queryable and numeric queries refuse. Typed errors retain mapping/side/target and underlying cause.
-  Verification: 13 contracts + privacy, seven real guard reds, strict 356 tests/WASM/book; current
-  binding/source/uncertainty and compression permission verified locally.
+  Goal: individual canonical Ease intent and explicit signed permission.
+  Verification: [complete preserved contract/checklist](G1-SLICE-measurements.md#individual-ease-contract-and-evidence--preserved-from-0088969).
   Commit: `STITCHCAD-G1-0029`
 
 - ID: `G1-SLICE.4b.2`
-  Status: `pending`
+  Status: `done`
   Goal: ordered immutable Ease set with unique mapping identity/token/POM and per-POM lookup;
   explicit table-membership/current binding contract and current inventory validation.
+  Pre-code protocol: EaseSetDefinition has stable id, body/garment table ids (one mixed table legal),
+  and authored EaseBinding entries: set-scoped token, Ease id, saved body/POM four-field bindings and
+  amount id. Namespaces are unique by token, mapping id and POM id; shared body/amount sources legal.
+  EaseSetContext borrows canonical tables/Ease records and existing MeasurementTableContext; reject
+  duplicate and cross-kind record identities before lookup. Set identity cannot alias supplied records.
+  Queries select saved id/POM/token, resolve current Ease by id, compare body/POM/amount expectations,
+  require both measurements in their named current tables and validate current Ease. Current fit,
+  provenance/compression and canonical amount/state/source edits visible; retarget requires explicit
+  replacement. Empty drafts legal with existing table references; unselected bad entries do not block
+  selected lookup, full validation checks all mappings. No fabricated coverage, arithmetic or release
+  proof. Own package-status defect D69 repair, existing D34 stale census correction and normal seals.
   Acceptance: unique per-POM mappings, shared body sources legal, current ambiguity/missing members
   refused, lookup order independent, no default mapping or numeric fallback.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: 14 contracts + privacy, ten real guard assertion reds; strict 371 tests/WASM/book;
+  current canonical bindings, selected membership and namespace checks pass locally.
+  Commit: `STITCHCAD-G1-0030`
 
 - ID: `G1-SLICE.4b.3`
   Status: `pending`
@@ -626,8 +624,8 @@ metadata signoff unchanged; the named table slice follows.
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
 | done | `G1-SLICE.4a.3` | `done` | Named table/unique current bindings complete .4a structurally |
-| done | `G1-SLICE.4b.1` | `done` | Individual Ease bindings, signed amount and explicit compression |
-| next | `G1-SLICE.4b.2` | `pending` | Unique per-POM Ease sets with explicit table membership |
+| done | `G1-SLICE.4b.2` | `done` | Unique per-POM sets validate current targets/table membership |
+| next | `G1-SLICE.4b.3` | `pending` | Structural Ease field/currentness review and milestone checks |
 
 ## Routing Evidence — D67, lesson decision freshness
 
@@ -708,30 +706,32 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
-### `G1-SLICE.4b.1` — individual canonical Ease intent
+### `G1-SLICE.4b.2` — unique current per-POM sets
 
-- [x] **REPRODUCE / ISSUE** — `rg 'Ease' crates/sc-measure/src` at f19982d → deferred documentation
-  only; ontology .2.2 requires a body-to-POM mapping, signed amount, fit, state and provenance.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-measure --test table_contract` predecessor
-  → 16 passed, rc=0: current canonical measurements exist, but cannot alone express correspondence,
-  fit or permission. New ease module borrows existing context; no numeric/state cache is needed.
-- [x] **FIX** — immutable mapping, saved four-field side bindings, distinct canonical amount,
-  ordered FitIntent and explicit compression/provenance. Current queries refuse reassignment, missing
-  metadata and undeclared negative values; unknown/derived remain inspectable without numeric values.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test ease_contract` → 13 passed, rc=0;
-  private-field doc passes. `bash docs/tasks/artifacts/ease/run_ease_mutations.sh` → seven real guard
-  assertion reds, rc=101 each; source restored byte-identically. Permission tested in all three numeric
-  states and externally supplied derived results; current edits/reorder/namespace/metadata covered.
-- [x] **NO REGRESSION** — `make check` → 356 tests, strict fmt/clippy, rc=0; three-crate `make wasm`
-  and warning-free `make book`, rc=0. Glossary → 310 terms/9 parts/158 tokens/0 failures, rc=0.
-  Final mutation run restores exactly; tree census → 10 lanes/13 trees/6 siblings/0 gaps, rc=0;
-  ledger probes → 9 pass/0 fail, rc=0; staged `make gate` → all doctrines green, rc=0.
-- [x] **LOCKSTEP** — book fields/examples/API, canonical decision, live pointers and logs agree;
-  completed table contract/checklist relocates unchanged against f19982d. Routine rolling records
-  retained unchanged. Individual intent only; set/table membership .4b.2 and family review .4b.3 remain.
-  G1 stays 5/18, four completed ontology families; physical fit/source/evaluation/release proof owned.
+- [x] **REPRODUCE / ISSUE** — `rg 'EaseSet' crates/sc-measure/src` at 0088969 → no executable set;
+  ontology .2.2/.3.1 and instantiation-paths .2 require a per-POM mapping namespace and table ownership.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-measure --test ease_contract` predecessor
+  → 13 passed, rc=0: individual current mappings exist, but do not bind selected tables or unique POMs.
+  New set module borrows canonical mappings/tables and existing current metadata context.
+- [x] **FIX** — immutable ordered mapping-id/token/POM-unique namespace; saved target bindings,
+  explicit body/garment table ids, no copied fit/value/state/source. Current queries resolve saved
+  mapping id, refuse target reassignment, require both table memberships and validate current Ease.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test ease_set_contract` → 14 passed,
+  rc=0, plus privacy doc. `bash docs/tasks/artifacts/ease/run_ease_set_mutations.sh` → ten real guard
+  assertion reds, rc=101 each, source restored byte-identically. Duplicate POM uses two valid canonical
+  mappings to the same POM; removing only its uniqueness guard accepts that genuinely ambiguous set.
+- [x] **NO REGRESSION** — `make check` → 371 tests with strict fmt/clippy, rc=0; three-crate WASM
+  and warning-free book, rc=0. Glossary → 310 terms/9 parts/158 tokens/0 failures, rc=0.
+  Tree census → 10 lanes/13 trees/6 siblings/0 gaps, rc=0; ledger → 9 pass/0 fail, rc=0;
+  staged `make gate` → all doctrines green, rc=0.
+- [x] **LOCKSTEP** — code/book/API/canonical decision and live pointers agree; individual contract/
+  checklist retained unchanged against 0088969. Package metadata verifies D69 repaired; corrected
+  existing D34's stale sibling example, with its mechanical ownership retained. Normal history seals
+  preserve exact predecessor records. Set intent implemented; .4b.3 structural review next, then SizeSet.
 
 ## Verification Log
+
+| `2026-10-02` | `.4b.2` | Rust/WASM/book, set guards, glossary/tree/ledger/staged gate, metadata/defect census | 371 tests, 14 contracts/privacy, ten real reds; 9 open/59 sealed, rc=0 |
 
 | `2026-10-02` | `.4b.1` | strict Rust/WASM/book; seven guard mutations; restored Ease/table tests; glossary/tree/ledger/staged gate | 356 tests, 13 Ease contracts/privacy, 7 real reds; all focused checks green, rc=0 |
 
@@ -821,3 +821,9 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
   All seven final real guard mutations fail assertions, restore exact source; 356 strict tests pass.
 
 | `.4b.1` | `STITCHCAD-G1-0029 (leaf G1-SLICE.4b.1): individual Ease mappings retain current signed intent` | 13 contracts + privacy, seven guard reds, 356 tests/WASM/book; set/membership next |
+
+- `2026-10-02`: .4b.2 supplies unique per-POM sets with current canonical mappings and selected
+  table membership. Same-id fit/provenance/state edits remain visible; retargeting requires explicit
+  set replacement. Fourteen contracts/privacy, ten real guard reds, strict 371 tests pass. D69 fixed.
+
+| `.4b.2` | `STITCHCAD-G1-0030 (leaf G1-SLICE.4b.2): per-POM Ease sets validate current table membership` | 14 contracts/privacy, ten guard reds, 371 strict tests/WASM/book; .4b.3 review next |

@@ -2,7 +2,7 @@
 
 sc-measure implements standalone immutable Measurement metadata and current references at
 G1-SLICE.4a.2b, consuming [core length inputs](measurement-inputs.md). G1-SLICE.4a.3 adds the
-named MeasurementTable. [Individual Ease intent](ease-inputs.md) is implemented separately; Ease sets and SizeSet follow.
+named MeasurementTable. [Per-POM Ease mappings/sets](ease-inputs.md) are implemented separately; SizeSet follows.
 This family does not close G1-SLICE.4.
 [Ontology §2.1](ontology.md) remains the normative field contract. These libraries compile on the
 native and WASM targets; the command/API/MCP facade follows in its owned G1 slices.

@@ -172,7 +172,9 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 [`stitchcad-defects-part11.md`](../history/window1.md#stitchcad-defects-part11md)
 (D66; 10 lines, 919 bytes, `sha256:4d46b154…`) and
 [`stitchcad-defects-part12.md`](../history/stitchcad-defects-part12.md)
-(D65/D68; 20 lines, 1830 bytes, `sha256:0693a241…`), under D46's remedy. Every cited defect
+(D65/D68; 20 lines, 1830 bytes, `sha256:0693a241…`), under D46's remedy.
+D69 is sealed in [`stitchcad-defects-part13.md`](../history/stitchcad-defects-part13.md)
+(7 lines, 672 bytes, `sha256:6ed0c7dd…`). Every cited defect
 resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
 `bash scripts/history_archive.sh materialize target/defect-census` then
@@ -238,6 +240,9 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Recurrence at G1-SLICE.4a.2b: SPINE's root child range still ended at .10 while .11–.21
     existed. Adding .22 corrected the range to .1–.22; PLANNING.5 retains mechanical graph/index
     agreement ownership. This is another instance of the already owned hand-kept child-index drift.
+
+  - Recurrence at G1-SLICE.4b.2: the index command's example still says four siblings while the
+    actual census derives six. This leaf corrects the example; PLANNING.5 retains derivation ownership.
 
 - **D38** — the defect census records each defect's state in prose, so its open/closed counts cannot be
   derived: `LIVE_STATUS.md` carries "36 logged, 32 closed" by hand, and a naive derivation over the same

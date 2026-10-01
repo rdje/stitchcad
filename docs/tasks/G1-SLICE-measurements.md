@@ -247,3 +247,50 @@ Historical verification/commit tables remain in the parent and [evidence sibling
   Current-revision source/evidence truth, physical repeatability and release certification deferred.
 
 Return to the [active frontier](G1-SLICE.md#current-frontier).
+
+## Individual Ease contract and evidence — preserved from 0088969
+
+- ID: `G1-SLICE.4b.1`
+  Status: `done`
+  Goal: immutable individual Ease mappings over saved body/POM bindings and one canonical signed
+  LengthDeclaration; FitIntent ordered Close < Semi < Loose, explicit compression provenance.
+  Pre-code protocol: retain measurement id/token/kind/scalar expectations, resolve current metadata
+  by id, require Body then Garment and all current landmark/procedure targets. Reject mapping-id
+  collisions and amount-id aliasing either measurement scalar. Reuse the borrowed unambiguous
+  inventory; matching tokens across distinct measurement namespaces remain legal here.
+  The canonical amount owns numeric state/source; mapping provenance owns fit/correspondence intent.
+  Compression is Forbidden or Declared with a provenance id, never inferred from fit class. Accept
+  unknown/derived drafts without numeric fallback; enforce permission on every present/current or
+  externally evaluated signed amount. No body-plus-ease computation, fitted thresholds, source truth,
+  v1-envelope expansion or physical/release certificate. Explicit replacements preserve old mappings.
+  Acceptance: current reassignment/removal/invalid metadata refuse; negative known/assumed/preference
+  without declaration refuses; declared negatives/zero/positives preserved; unresolved states remain
+  queryable and numeric queries refuse. Typed errors retain mapping/side/target and underlying cause.
+  Verification: 13 contracts + privacy, seven real guard reds, strict 356 tests/WASM/book; current
+  binding/source/uncertainty and compression permission verified locally.
+  Commit: `STITCHCAD-G1-0029`
+
+### `G1-SLICE.4b.1` — individual canonical Ease intent
+
+- [x] **REPRODUCE / ISSUE** — `rg 'Ease' crates/sc-measure/src` at f19982d → deferred documentation
+  only; ontology .2.2 requires a body-to-POM mapping, signed amount, fit, state and provenance.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-measure --test table_contract` predecessor
+  → 16 passed, rc=0: current canonical measurements exist, but cannot alone express correspondence,
+  fit or permission. New ease module borrows existing context; no numeric/state cache is needed.
+- [x] **FIX** — immutable mapping, saved four-field side bindings, distinct canonical amount,
+  ordered FitIntent and explicit compression/provenance. Current queries refuse reassignment, missing
+  metadata and undeclared negative values; unknown/derived remain inspectable without numeric values.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test ease_contract` → 13 passed, rc=0;
+  private-field doc passes. `bash docs/tasks/artifacts/ease/run_ease_mutations.sh` → seven real guard
+  assertion reds, rc=101 each; source restored byte-identically. Permission tested in all three numeric
+  states and externally supplied derived results; current edits/reorder/namespace/metadata covered.
+- [x] **NO REGRESSION** — `make check` → 356 tests, strict fmt/clippy, rc=0; three-crate `make wasm`
+  and warning-free `make book`, rc=0. Glossary → 310 terms/9 parts/158 tokens/0 failures, rc=0.
+  Final mutation run restores exactly; tree census → 10 lanes/13 trees/6 siblings/0 gaps, rc=0;
+  ledger probes → 9 pass/0 fail, rc=0; staged `make gate` → all doctrines green, rc=0.
+- [x] **LOCKSTEP** — book fields/examples/API, canonical decision, live pointers and logs agree;
+  completed table contract/checklist relocates unchanged against f19982d. Routine rolling records
+  retained unchanged. Individual intent only; set/table membership .4b.2 and family review .4b.3 remain.
+  G1 stays 5/18, four completed ontology families; physical fit/source/evaluation/release proof owned.
+
+Return to the [active frontier](G1-SLICE.md#current-frontier).
