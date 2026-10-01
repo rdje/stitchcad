@@ -273,14 +273,29 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Design: `decision_profile-bindings-stay-symbolic-at-g1.md`.
 
 - ID: `G1-SLICE.3c.3b`
-  Status: `pending`
+  Status: `done`
   Goal: directed `Grainline`, explicit parallel/off-grain angle binding and independent stripe/plaid
   references, with born-valid anchors and visible resolution/repair after topology edits.
   Acceptance: every geometric reference exists and belongs to its declared scope; opposite directions
   are distinct; reversal reports its accumulated direction; angle bindings do not invent values;
   dual print references are first-class and no geometric direction equality is asserted until G2.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: nine grain contracts + privacy doctest; strict Rust, wasm, book, feature/glossary
+  censuses, ten glossary probes, ledger and doctrine gates green; reverse-order mutation red.
+  Commit: `STITCHCAD-G1-0012`
+
+  Design: directed positive EdgeRanges in the source Piece's frame; semantic arrow plus explicit
+  alignment reference, independent optional stripe and plaid references. Parallel means codirected;
+  AtAngle carries an explicit Angle or formula/profile declaration, including 45° bias or 180°.
+  Whole-range ownership/coverage and endpoint uniqueness checked now, straightness/actual angular
+  relationship deferred to G2. Query traversal composes authored and journal direction, reverses
+  fragment order for opposite traversal, and preserves raw endpoint choices/interval repair evidence.
+  Implementation shares the already-tested sewing range-ownership fold instead of duplicating it.
+  Book containment: split §10's executable examples into `ontology-implementation.md` before this
+  append approaches the ontology chapter's 40960-byte ceiling. Keep §10 as a bounded implementation
+  index, preserve all existing examples/API vocabulary, and register the chapter in SUMMARY.
+  D61 signoff alignment: the glossary census's C1 diagnostic says no table "in that chapter"
+  declares a token, while its actual declared-token set aggregates all spec tables. Correct the
+  wording to name the actual scope; preserve the global one-token vocabulary contract and probes.
 
 - ID: `G1-SLICE.3c.3c`
   Status: `pending`
@@ -458,7 +473,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.3b` | `pending` | directed and dual stripe/plaid grainline references; sewing content landed |
+| — | `G1-SLICE.3c.3c` | `pending` | allowance descriptors; directed grainline content landed |
 
 ## Decisions
 
@@ -530,6 +545,37 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3c.3b` — directed grainlines and independent print references
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.6 requires direction, explicit angular intent and dual
+  print references; `ea631c6` has no grainline object. Directed arrow semantics cannot collapse to
+  endpoint-only identity or an undirected axis. D61 misstates the glossary declaration scope.
+- [x] **ROOT CAUSE (WHY + WHERE)** — ordered interval traversal and authored direction are distinct
+  from point fate and journal direction. `cargo test -p sc-core --test grain_contract
+  reversed_traversal_orders_split_fragments_and_interior_repairs_from_its_own_start` → `1 passed`,
+  `rc=0`: reverse traversal visits the second split fragment first and retains a lost middle repair
+  in traversal position. `sed -n '388,426p' docs/tasks/artifacts/glossary/run_glossary_census.sh`
+  → a global DECLARED_TOKENS set supplies C1, locating D61's diagnostic-only discrepancy, `rc=0`.
+- [x] **FIX** — immutable Grainline with directed arrow, explicit alignment/angle source and optional
+  independent stripe/plaid ranges; all fields require complete owned intervals and unique endpoints.
+  Directional views reverse fragment order and compose reversal without rewriting raw range evidence.
+  Reuse the tested ownership fold; expose G2 geometry and G4 profile-value obligations explicitly.
+  Correct D61's diagnostic scope without changing predicates or exemptions.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test grain_contract` → `9 passed`, `rc=0`;
+  opposite arrows, reversed split/repair order, all field scopes, ambiguous endpoints, merged foreign
+  remainder after reversal, explicit/symbolic angles, optional metadata and immutability discriminate.
+  Disable reversed next_back → order regression fails, `rc=101`; restored `make check` passes.
+  Glossary probes → `10 pass / 0 fail`, `rc=0`; D61 closes in defects-part8. The partition oracle
+  compares the old executable body to the linked chapter → `231 lines / 18018 bytes unchanged`, `rc=0`.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust suites + privacy green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; feature/glossary censuses → `0 failure(s)`;
+  ledger probes → `9 pass / 0 fail`; `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Existing eighteen sewing and seven notch contracts remain green after ownership sharing.
+- [x] **LOCKSTEP** — existing structural/geometric decision extended before code; module/subsystem
+  status, ontology bounded §10 index + linked implementation examples/SUMMARY, feature matrix,
+  G1 frontier/evidence/logs, TASK_TREE, MEMORY, LIVE_STATUS, CHANGELOG and promoted DEV_NOTES.
+  D61 seal/pointer; changelog-part17/devnotes-part12 preserve oldest live entries. Next `.3c.3c`.
 
 ### `G1-SLICE.3c.2b.2` — copy-addressed sewing spans; D35/D57 verified closed
 
@@ -802,6 +848,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 | `2026-10-01` | `.3c.2b.2` | sewing contracts; check; wasm; book; fixture/feature/glossary; ledger; gate | `18 passed`; graph privacy + notch suites green; Rust/WASM/book green; censuses/ledger/doctrines green, `rc=0`; prior copy milestone full probes `22 suite(s) green` |
 
+| `2026-10-01` | `.3c.3b` | grain contracts; check; wasm; book; feature/glossary/probes; ledger; gate | `9 passed`; reversal mutation red; all restored checks green, `rc=0`; D61 fixed |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -818,7 +866,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 | `.3c.3a` | `STITCHCAD-G1-0009 (leaf G1-SLICE.3c.3a)` | semantic notches and symbolic bindings; D58 fixed |
 | `.3c.2b.1` | `STITCHCAD-G1-0010 (leaf G1-SLICE.3c.2b.1)` | explicit physical-copy plan; D59/D60 fixed |
 | `.3c.2b.2` | `STITCHCAD-G1-0011 (leaf G1-SLICE.3c.2b.2)` | copy-addressed sewing; D35/D57 fixed; sewing parents closed |
-| `.3c.3b` … `.16` | `pending` | marks/allowances and constructions remain in `.3c` |
+| `.3c.3b` | `STITCHCAD-G1-0012 (leaf G1-SLICE.3c.3b)` | directed grainlines; independent print references; D61 fixed |
+| `.3c.3c` … `.16` | `pending` | marks/allowances and constructions remain in `.3c` |
 
 ## Changelog
 
@@ -906,3 +955,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   self-overlap and interval-ownership mutations go red. D35/D57 seal verified closed; `.3c.2b`
   and `.3c.2` close. Prior copy milestone full probes: 22 suites green. Books/censuses remain aligned,
   with no invented folded-end geometry or changed arithmetic golden. Next `.3c.3b` grainlines.
+
+- `2026-10-01`: `.3c.3b` lands directed grain and independent stripe/plaid references with
+  explicit angle intent and deferred geometric/value validation. D61 diagnostic fixed; ontology §10
+  executable examples move unchanged to a linked chapter. Next `.3c.3c` allowances.

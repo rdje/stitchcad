@@ -162,7 +162,9 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 [`stitchcad-defects-part6.md`](../history/stitchcad-defects-part6.md)
 (D60; 13 lines, 1268 bytes, `sha256:3bc74c83…`) and
 [`stitchcad-defects-part7.md`](../history/stitchcad-defects-part7.md)
-(D35, D57; 43 lines, 4172 bytes, `sha256:79373c0f…`), under D46's remedy. Every cited defect
+(D35, D57; 43 lines, 4172 bytes, `sha256:79373c0f…`) and
+[`stitchcad-defects-part8.md`](../history/stitchcad-defects-part8.md)
+(D61; 13 lines, 1214 bytes, `sha256:af043224…`), under D46's remedy. Every cited defect
 resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
 `grep -h '^- \*\*D[0-9]' docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by

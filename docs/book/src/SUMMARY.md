@@ -17,6 +17,7 @@
     - [Localization](spec/glossary/localization.md)
   - [Units and tolerances](spec/units-and-tolerances.md)
   - [Garment ontology](spec/ontology.md)
+    - [Executable ontology at G1](spec/ontology-implementation.md)
   - [The formula language](spec/formula-language.md)
     - [Grammar, operators and functions](spec/formula-language/grammar.md)
     - [Worked examples](spec/formula-language/examples.md)

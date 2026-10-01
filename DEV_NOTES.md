@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — a directed arrow needs ordered intervals as well as endpoint identity
+
+- A reversed authored range traverses split fragments in reverse order and composes its direction with
+  journal reversal. Preserving raw range evidence keeps split choices and lost interiors visible while
+  the directed view remains useful. Disabling the reverse iterator makes the order/repair regression red.
+- Grain, alignment, stripe and plaid references each require complete owned intervals. The shared sewing
+  ownership fold guards merged foreign remainders after reversal. Nine contracts distinguish optional
+  fields, explicit bias/antiparallel intent and symbolic angles from actual straightness/angular proof.
+- Ontology §10's executable body moves unchanged (231 lines / 18018 bytes, SHA256
+  `20c5442203f3a39c33ace68a426ec48e6c8aaec0a6017eb4b998e9c0a511671c`) to its own chapter; the normative
+  clauses stay in place. D61 corrects only a diagnostic about the census's global declaration scope;
+  its ten probes pass. This is containment with preserved examples and predicates, not a policy change.
+- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s grain boundary.
+
 ## _(2026-10-01)_ — sewing joins physical material intervals, not pattern names
 
 - D57's copy identities make two copies of one Piece distinct sewing domains. D35 allows a physical
@@ -138,23 +152,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - promotion: declined — the durable design choices are the three decision records `G1-SLICE.3` landed; this is
   one slice's implementation history, and the two conventions are already the house style, not a new rule.
 
-## _(2026-09-30)_ — decompose a too-big leaf and record its design boundaries before writing code
-
-- `G1-SLICE.3` (the whole garment ontology — identity, the persistent-identity contract, and nine
-  geometry-bearing object types with their invariants) was one leaf but is three signoff-quality slices:
-  `.3a` the identity types, `.3b` the contract that resolves references under split/merge/reverse/delete,
-  `.3c` the object types. They are strictly ordered — the contract consumes the types, the objects consume
-  both — so a frontier that tried to take them as one would have produced one unreviewable commit.
-- The three cross-cutting design questions were settled and recorded as layer-C decisions BEFORE any code,
-  because each is the kind of choice a later slice would otherwise re-litigate or silently contradict: the
-  `EntityId` is a dependency-free hand-rolled ULID with an **injected** generator (so recipe/CLI replay stays
-  byte-deterministic and the wall-clock never enters canonical content); the edge parameter is a **bounded
-  exact rational in `sc-core`**, not the ppm `Ratio` and not the formula evaluator's bigint — with a named
-  promotion trigger if `sc-geometry` ever needs it in `sc-units`; and G1 enforces only the **structural**
-  invariants, handing CCW winding, simplicity and closure to `G2-2D.1` as a visible `DeferredToG2` state
-  rather than claiming a 2D proof it cannot make. **Decide and record the boundaries a slice inherits, then
-  implement inside them** — the records are why the next session does not reopen them.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -170,6 +167,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part9.md`](docs/history/stitchcad-devnotes-part9.md) | the `2026-09-30` certifying-artifact lesson | 15 lines, 1343 bytes, `sha256:bc7fae65…` |
 | [`devnotes-part10.md`](docs/history/stitchcad-devnotes-part10.md) | the `2026-09-30` shipped-work reconciliation lesson | 15 lines, 1380 bytes, `sha256:701d33f2…` |
 | [`devnotes-part11.md`](docs/history/stitchcad-devnotes-part11.md) | the `2026-09-30` property-test framework lesson | 15 lines, 1384 bytes, `sha256:ae04eadf…` |
+| [`devnotes-part12.md`](docs/history/stitchcad-devnotes-part12.md) | ontology slice decomposition | 16 lines, 1570 bytes, `sha256:a2f04e3d…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

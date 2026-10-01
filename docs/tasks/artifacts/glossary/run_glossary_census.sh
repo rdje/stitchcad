@@ -411,7 +411,7 @@ c1_out=$(awk -F'\t' '
   FNR == 1 { src++ }
   src <= 3 { have[$1] = 1; next }
   !($1 in have) {
-    printf "  x `%s` is used by %s but no glossary entry owns it, no table in that chapter declares it, and no exemption covers it\n", $1, $2
+    printf "  x `%s` is used by %s but no glossary entry owns it, no spec table declares it, and no exemption covers it\n", $1, $2
     bad++
   }
   END { printf "COUNT %d\n", bad+0 }' "$GLOSSARY_TOKENS" "$EXEMPT_TOKENS" "$DECLARED_TOKENS" "$USED_PAIRS")

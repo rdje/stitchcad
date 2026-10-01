@@ -23,6 +23,7 @@ segments under `docs/history/`, each named below with its identity and retrieval
 | [`part14.md`](docs/history/stitchcad-changelog-part14.md) | the i18n slice, `STITCHCAD-G0-0016` | 38 lines, 3631 bytes, `sha256:2c895780…` |
 | [`part15.md`](docs/history/stitchcad-changelog-part15.md) | the recurring cleanup slice, `STITCHCAD-SPINE-0021` | 23 lines, 2123 bytes, `sha256:f93154e3…` |
 | [`part16.md`](docs/history/stitchcad-changelog-part16.md) | the closed-defect sealing slice, `STITCHCAD-SPINE-0019a` | 27 lines, 2450 bytes, `sha256:211f9bec…` |
+| [`part17.md`](docs/history/stitchcad-changelog-part17.md) | the command-layer contract, `STITCHCAD-G0-0017` | 38 lines, 3626 bytes, `sha256:819f240a…` |
 
 **Correction (D30).** part1's own descriptor says its coverage runs "through `STITCHCAD-SPINE-0004c`".
 It does not: part1's newest entry is `STITCHCAD-SPINE-0004b`, and `SPINE-0004c` is sealed in part2.
@@ -36,6 +37,22 @@ The live window below holds the most recent slices. When it passes its health ta
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-G1-0012 - directed grainlines retain independent print references (leaf `G1-SLICE.3c.3b`)
+
+Immutable Grainline content holds a directed arrow, explicit parallel/angle intent and independent
+optional stripe/plaid ranges. All born references require complete owned intervals and unique endpoints.
+Directed queries preserve raw evidence, reverse fragment order for reverse traversal and compose journal
+direction; repairs stay visible in traversal order. Explicit 45°/180° and symbolic angle declarations
+supply intent without geometry proof or default values. G2/G4 retain physical/value validation.
+
+Nine grain contracts and privacy doctest pass. Disabling reverse fragment order makes the independent
+regression red; restored strict Rust, wasm, warning-free book and feature/glossary censuses pass.
+D61 closes with unchanged census predicates and ten green/red glossary probes. Existing sewing/notch
+suites pass after sharing whole-interval ownership. Ledger probes and staged doctrines pass.
+Ontology §10 becomes a bounded index; its 231-line executable body moves unchanged to the linked
+implementation chapter, which gains grain examples. Oldest live changelog/dev-note entries seal.
+Next `.3c.3c` implements allowance descriptors; G1 remains 4/18 top-level leaves, 2/4 object families.
 
 ## STITCHCAD-G1-0011 - sewing spans address copies and permit disjoint self-seams (leaf `G1-SLICE.3c.2b.2`)
 
@@ -330,42 +347,3 @@ WRITTEN as prose is exactly that - so the review parses the roadmap and runs the
   `g0-contract-changelog-part2` (48 lines / 4651 bytes, digest reproduced) and the tree fell to 94 923.
 - gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `22 suite(s) green`; the review re-runs
   every clause's own census green; containment `OK`
-
-## STITCHCAD-G0-0017 - the command layer is a contract, and the roadmap's own lists prove it (leaf `G0-CONTRACT.17`)
-
-§4.4 makes undo/redo granularity a G0 deliverable rather than an implementation detail, and twenty glossary
-entries were parked against this leaf under a header note saying "until that chapter lands, the roadmap clause
-is cited". The chapter lands, and the two lists the roadmap carries in prose are parsed out of it.
-
-- **the contract** - `docs/book/src/spec/command-layer.md` (264 lines / 18 959 B): seventeen commands in five
-  classes, where a class fixes a command's authority, its reversibility and its undo granularity, so an adapter
-  cannot re-classify one for convenience; the seven fields of a command's shape; **undo at the atomic group,
-  restoring semantics - recipe, entity identities, revision - rather than contours**, because two designs with
-  the same contours and different recipes are different designs; evaluations and artifacts discarded rather
-  than undone; the history not canonical content, so a reopened project starts fresh at its saved revision.
-- **preview/commit, preconditions and idempotency** - a preview needs only `inspect` and a commit re-checks
-  the precondition the preview passed, because three front-ends and an agent edit one design; a mutation
-  carries the revision it was authored against and an idempotency key, so a stale revision is refused naming
-  both and a transport retry is a reported replay rather than a second edit; the audit trail is append-only
-  and is not the undo history.
-- **authority as a core-enforced permission on a class** - the five levels of §7.8, with `approve` unholdable
-  by an agent, which is the release chapter's `release_approver_not_human` seen from the other side. The
-  parity table's eight columns, closed cell vocabulary and generation rule are normative while its rows stay
-  empty, because rows at G0 would be claims about unwritten adapters - the same reason the canvas spike's
-  results file is empty. The undo depth is the one number deliberately not written: declared to exist and to
-  be bounded, with its value belonging to the resource bounds G1 measures.
-- **the instrument** - `run_command_layer_census.sh` parses roadmap §4.4's backticked command list and §7.8's
-  slash-separated levels and compares both with the chapter, in both directions for the levels:
-  `17 commands / 5 classes / 5 levels / 0 failure(s)`. Its first run parsed zero levels - the list wraps
-  mid-item - and reported five invented ones, so the fix is whitespace normalisation and the lesson is that a
-  reader must fail closed when it reads nothing. `run_command_layer_probes.sh` -> `14 pass / 0 fail`, with
-  LEVEL-EXTRA and LEVEL-MISSING as separate arms and HUMAN-ONLY refusing a softened rule.
-- **decisions** - `docs/decisions/decision_command-layer-contract-and-undo-granularity.md` records ten
-  rejected alternatives, including per-command undo, contour-level undo, undoing a generated instance,
-  persisting the stack, trusting a preview, retry-by-repeat, per-tool permission lists and a hand-written
-  parity table.
-- **D49's third trigger discharged** - the tree had reached 94 % of its byte ceiling, so the decisions of
-  leaves `.1`-`.4c` were sealed into `g0-contract-decisions-part1` (112 lines / 10 079 bytes, digest
-  reproduced, 33 segment verdicts) and `.16`'s checklist moved to the evidence sibling.
-- gates: `make gate` -> `=== all doctrines green ===`; `make probes` -> `21 suite(s) green`; `make book` ->
-  exit=0; all nine other censuses green; containment `OK - 17 surfaces, 15 routes, 113 files measured`

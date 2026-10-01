@@ -1,5 +1,6 @@
 //! Copy-addressed sewing intent; geometric walking and realized ease remain G2/G3 obligations.
 use super::anchor::validate_anchor;
+use super::range::range_is_owned;
 use super::{
     AnchorError, CutPlan, CutPlanError, EdgeAnchor, EdgeRange, EntityId, GeometricValidation,
     IdentityLedger, Notch, Param, Piece, ProfileParameterRef, RangePortion, RangeResolution,
@@ -617,39 +618,6 @@ fn ranges_overlap(a: &RangeResolution, b: &RangeResolution) -> bool {
             }
             _ => false,
         })
-    })
-}
-fn range_is_owned(range: &RangeResolution, piece: &Piece, ledger: &IdentityLedger) -> bool {
-    let mut owned = Vec::new();
-    for (_, resolution) in piece.range_resolutions(ledger) {
-        for portion in resolution.portions() {
-            if let RangePortion::Resolved(part) = portion {
-                owned.push(part.range());
-            }
-        }
-    }
-    range.portions().iter().all(|part| {
-        let RangePortion::Resolved(part) = part else {
-            return false;
-        };
-        let requested = part.range();
-        let mut intervals = owned
-            .iter()
-            .filter(|range| range.edge() == requested.edge())
-            .copied()
-            .collect::<Vec<_>>();
-        intervals.sort_by_key(|range| range.from());
-        let mut covered = requested.from();
-        for interval in intervals {
-            if interval.from() > covered {
-                break;
-            }
-            covered = covered.max(interval.to());
-            if covered >= requested.to() {
-                return true;
-            }
-        }
-        false
     })
 }
 fn validate_distribution(

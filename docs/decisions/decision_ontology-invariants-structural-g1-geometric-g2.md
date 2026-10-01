@@ -7,7 +7,7 @@
   at gate G1 and what `sc-geometry` proves at gate G2 (`docs/book/src/spec/ontology.md` §4.1, §9;
   `docs/tasks/G2-2D.md` leaf `.1`).
 
-answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?"
+answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?"
 
 ## The fact / decision
 
@@ -45,3 +45,17 @@ omission.
   the geometric class.
 - Related: [[decision_edge-parameter-bounded-exact-rational]] (the parameter the references carry),
   [[decision_entity-identity-ulid-injected-generator]] (the identity the references address).
+
+## Directed grain references (`G1-SLICE.3c.3b`)
+
+A grainline's semantic arrow, its alignment reference and independent optional stripe/plaid
+references are directed positive EdgeRanges in their source Piece's frame. G1 validates complete
+owned intervals and unique endpoints; G2 proves actual straightness, direction and angular relation.
+Opposite authored direction is distinct; resolving composes it with journal reversal and reverses
+fragment order where needed. Raw interval repairs and endpoint choices remain available unchanged.
+
+Parallel declares codirection explicitly. AtAngle carries an authored Angle or formula/profile
+parameter identity expected to resolve to an angle. Bias at 45° and opposite direction at 180° are
+expressible without treating a grainline as an undirected axis. Symbolic inputs never supply values
+or defaults; recipe/profile owners validate their declarations and G2 consumes resolved values.
+There is no G1 geometric-equality or fabric-placement certificate.

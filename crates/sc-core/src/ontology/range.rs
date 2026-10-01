@@ -445,3 +445,42 @@ fn step(
         _ => Ok(vec![RangePortion::Resolved(current)]),
     }
 }
+
+// Shared structural ownership: endpoints alone cannot certify a requested material interval.
+pub(crate) fn range_is_owned(
+    range: &RangeResolution,
+    piece: &super::Piece,
+    ledger: &IdentityLedger,
+) -> bool {
+    let mut owned = Vec::new();
+    for (_, resolution) in piece.range_resolutions(ledger) {
+        for portion in resolution.portions() {
+            if let RangePortion::Resolved(part) = portion {
+                owned.push(part.range());
+            }
+        }
+    }
+    range.portions().iter().all(|part| {
+        let RangePortion::Resolved(part) = part else {
+            return false;
+        };
+        let requested = part.range();
+        let mut intervals = owned
+            .iter()
+            .filter(|range| range.edge() == requested.edge())
+            .copied()
+            .collect::<Vec<_>>();
+        intervals.sort_by_key(|range| range.from());
+        let mut covered = requested.from();
+        for interval in intervals {
+            if interval.from() > covered {
+                break;
+            }
+            covered = covered.max(interval.to());
+            if covered >= requested.to() {
+                return true;
+            }
+        }
+        false
+    })
+}

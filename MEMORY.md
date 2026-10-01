@@ -5,12 +5,11 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.3c.3b`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** `.3c.3b` — directed grainline and dual stripe/plaid references; then `.3c.3c`
-  allowance descriptors. Pieces, physical-copy plans, semantic notches and copy-addressed sewing
-  graphs are committed. D35/D57 close: disjoint self-seams are legal; copies have explicit ids and
-  can have different neighbours. Geometry/realized ease/profile values remain later obligations.
-  Run glossary + feature censuses on ontology docs; the copy milestone's full 22 probe suites pass.
+- **Active tree:** `G1-SLICE`, frontier **`.3c.3c`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** `.3c.3c` — per-edge allowance descriptors; then construction objects `.3c.4`.
+  Pieces, copy-addressed sewing, notches and directed grainlines are committed. Physical geometry,
+  realized ease and resolved profile values remain later obligations. Ontology §10 links the executable
+  examples chapter. Run glossary + feature censuses after ontology updates; D61 is verified closed.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

@@ -4,7 +4,7 @@
 //! Normative source: `docs/book/src/spec/ontology.md` (gate G0, specified by `G0-CONTRACT.3`). Implemented
 //! across three ordered slices: **`.3a`** the identity layer, **`.3b`** the persistent-identity contract
 //! that resolves references under split/merge/reverse/delete (both landed), and **`.3c`** the
-//! geometry-bearing object types (pieces, copy plans, notches and sewing graphs landed;
+//! geometry-bearing object types (pieces, copy plans, notches, grainlines and sewing graphs landed;
 //! other marks and constructions follow).
 //!
 //! The identity layer is the foundation the other two consume: a reference is meaningless without a stable
@@ -15,6 +15,7 @@
 //! | --- | --- | --- |
 //! | [`anchor`] | shared born-valid semantic anchor checks and typed refusals | `.3c.3a`/`.3c.2b.2` |
 //! | [`cut`] | explicit physical-copy identities, complete quantity/orientation validation | `.3c.2b.1` |
+//! | [`grain`] | directed grainline and independent stripe/plaid references, deferred angles | `.3c.3b` |
 //! | [`notch`] | immutable semantic anchors and symbolic profile bindings, deferred physical validation | `.3c.3a` |
 //! | [`piece`] | immutable structurally validated `Piece`, complete label view, deferred geometry | `.3c.1` |
 //! | [`id`] | `EntityId` (a ULID) and the injected `IdGenerator` | `.3a` |
@@ -26,6 +27,7 @@
 
 pub mod anchor;
 pub mod cut;
+pub mod grain;
 pub mod id;
 pub mod notch;
 pub mod piece;
@@ -67,4 +69,9 @@ pub use sewing::{
     DeclaredEase, EaseAmount, EaseDistribution, EaseValidation, SeamDirection, SeamSide,
     SeamSideId, SeamSpan, SeamSpanDefinition, SewingError, SewingGraph, SewingGraphDefinition,
     SewingLandmark, StopLandmark, TurnPoint, WeightIssue, WeightedEaseRegion,
+};
+
+pub use grain::{
+    DirectedRange, DirectedRangePortion, DirectedRangeResolution, GrainAlignment, GrainAngle,
+    GrainReferenceRole, Grainline, GrainlineDefinition, GrainlineError,
 };

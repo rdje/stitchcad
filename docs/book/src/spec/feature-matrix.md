@@ -91,9 +91,9 @@ chapter is inside that family or explicitly outside it.
 | notch: single, double, drill | supported | roadmap §15 item 12 makes these three the v1 typed set; ontology §4.5, ontology §10: symbolic semantic anchors landed; no geometry defaults | G3 | — |
 | notch: V, I, T, U, castle | deferred | roadmap §15 item 12 stages them to G4 export | G4 | `env_notch_type` |
 | notch encoding: coded point or drawn geometry | supported | ontology §4.5, ontology §10: encoding binding is symbolic; both forms remain export targets | G4 | — |
-| grainline, directed | supported | ontology §4.6; the fixture's grain is parallel to CB/CF and therefore checkable | G2 | — |
-| bias and off-grain placement | supported | ontology §4.6 supports an angle; the fixture defers the case to the G3 bodice | G3 | — |
-| dual grain reference for a stripe or plaid | supported | ontology §4.6 requires it, because a stripe constrains placement independently | G3 | — |
+| grainline, directed | supported | ontology §4.6/§10; directed intent implemented at G1, physical parallelism remains G2 | G2 | — |
+| bias and off-grain placement | supported | ontology §4.6/§10; explicit or symbolic angle intent implemented; physical bias case at G3 | G3 | — |
+| dual grain reference for a stripe or plaid | supported | ontology §4.6/§10; independent stripe/plaid references implemented, placement proof at G3 | G3 | — |
 | nap and directional-print layout | deferred | ontology §6 stores the flag; layout consequences belong with the marker work this product refuses | G7 or later | `env_nap_layout` |
 
 ## 5. Closures, finishes and notions
