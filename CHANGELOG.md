@@ -35,11 +35,26 @@ The bedrock scaffold's own changelog — the provenance of this repository's dis
 in [`docs/history/bedrock-scaffold-changelog.md`](docs/history/bedrock-scaffold-changelog.md).
 | [`changelog-part19.md`](docs/history/stitchcad-changelog-part19.md) | STITCHCAD-G1-0001 | 21 lines, 1770 bytes, `sha256:2f602e9a…` |
 | [`changelog-part20.md`](docs/history/stitchcad-changelog-part20.md) | STITCHCAD-G1-0002 | 19 lines, 1598 bytes, `sha256:a3918baa…` |
+| [`changelog-part21.md`](docs/history/stitchcad-changelog-part21.md) | STITCHCAD-G1-0003 | 21 lines, 1831 bytes, `sha256:ab5e04ca…` |
 
 The live window below holds the most recent slices. When it passes its health target (400 lines /
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-G1-0021 - buttonhole length has one canonical button/operation source (leaf `G1-SLICE.3c.4c.2`)
+
+ButtonAndButtonhole joins the distinct Closure kinds and existing stable instance/count/target
+rules. Required button-size binding and recipe operation provide one borrowed canonical hole-length
+source, without a separately authored or cached length. Recipe/Design must validate the typed
+operation dependency; G3 executes it. DeferredToG3 remains distinct from geometry/profile checks.
+
+Fifteen Closure contracts pass, including five new button tests. Substituting button-size or operation
+source independently makes a regression red; restored strict Rust, wasm, warning-free book,
+fixture/feature/glossary/tree censuses, ledger and staged gates pass. Compile-fail coverage refuses
+a second length field. Completed closure evidence and task changelog relocate unchanged with
+committed-content oracles. Book/live records align; no physical formula/default is invented.
+Closure parent closes structurally; G1 stays 4/18 leaves, 3/4 families. Next `.3c.4d` pockets/signoff.
 
 ## STITCHCAD-G1-0020 - zipper/hook-bar instances borrow current placements and refuse fly scope (leaf `G1-SLICE.3c.4c.1b`)
 
@@ -363,25 +378,3 @@ green ===`. Two house conventions re-confirmed: fallible arithmetic is `checked_
 `should_implement_trait`, the precedent `sc-units` set), and a non-`#[test]` helper carries its own targeted
 `#[allow(clippy::expect_used)]` because `.clippy.toml`'s `allow-expect-in-tests` does not reach it. The
 frontier advances to `.3b` (the persistent-identity contract).
-
-## STITCHCAD-G1-0003 - the ontology leaf is three slices, and its design boundaries are recorded first (leaf `G1-SLICE.3`)
-
-`G1-SLICE.3` named the whole garment ontology as one leaf — identity, the persistent-identity contract, and
-nine geometry-bearing object types with their invariants. That is three signoff-quality slices, not one, and
-they are strictly ordered (the contract consumes the identity types; the objects consume both). This slice
-decomposes `.3` into `.3a` (identity types), `.3b` (the persistent-identity contract) and `.3c` (the object
-types), and records the three cross-cutting design boundaries BEFORE any code, so each implementation slice
-builds against a fixed design rather than re-deciding it.
-
-The three decisions, each a layer-C record with `answers:` so a later slice asking the question finds it:
-`decision_entity-identity-ulid-injected-generator.md` — an `EntityId` is a dependency-free hand-rolled ULID
-produced through an injected `IdGenerator`, because `sc-core` builds for wasm and recipe/CLI determinism
-forbids a free-function clock; `decision_edge-parameter-bounded-exact-rational.md` — the edge parameter `t` is
-a bounded exact rational in `sc-core`'s ontology, not the ppm `Ratio` and not the formula evaluator's
-arbitrary-precision rational, with a named promotion trigger to `sc-units` if `sc-geometry` (G2) needs it;
-`decision_ontology-invariants-structural-g1-geometric-g2.md` — G1 enforces the structural invariants and hands
-CCW winding, simplicity, closure and intake conservation to `G2-2D.1` as a visible `DeferredToG2` state,
-never a 2D-correctness claim.
-
-No Rust changes; `make gate` stays `=== all doctrines green ===` and the regenerated Knowledge Map carries the
-three new records. The tree is 18 leaves; the frontier advances to `.3a`, G1's first new product code.

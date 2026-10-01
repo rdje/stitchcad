@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.2b`, director ruling answering D57, ontology §4.1–§4.2.
 
-answers: "how does a seam distinguish copies of a cut-two piece?" · "are cut-copy ids derived from order?" · "how do mirrored copies appear in a cut plan?" · "how do closure notions distinguish physical copies?" · "are closure counts independently authored?"
+answers: "how does a seam distinguish copies of a cut-two piece?" · "are cut-copy ids derived from order?" · "how do mirrored copies appear in a cut plan?" · "how do closure notions distinguish physical copies?" · "are closure counts independently authored?" · "how does derived buttonhole length retain one canonical button-size source?"
 
 ## Context
 
@@ -64,3 +64,13 @@ Centred zipper length retains explicit positive authored length or formula/profi
 sizes each name a logical recipe or target-profile declaration, with no implicit vendor selection.
 Fly scope is refused before geometry with env_fly, requested Closure, declared trousers gap and G7.
 Actual attachment coincidence, hardware shape and resolved size/profile values remain later checks.
+
+## Button/buttonhole source (`G1-SLICE.3c.4c.2`)
+
+ButtonAndButtonhole is a distinct supported closure kind with stable instance pairs: first placement
+is the button, second the hole. The button's required NotionSize retains a logical recipe/Profile
+binding. ButtonholeDerivation names a recipe operation, without a separate authored/cached length.
+The query borrows the same canonical size and derivation alongside Closure identity. Recipe/Design
+validates the operation's kind/dependency on that size; G3 executes it and checks physical length.
+No formula or clearance default is invented at G1. A visible DeferredToG3 state distinguishes the
+unexecuted derivation from geometric and profile validation. Existing count/current-target rules apply.

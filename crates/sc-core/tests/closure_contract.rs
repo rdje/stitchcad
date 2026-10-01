@@ -1,12 +1,13 @@
 //! Closure instances: canonical physical placements, derived counts and explicit scope.
 #![allow(clippy::expect_used, clippy::unwrap_used, clippy::panic)]
 use sc_core::ontology::{
-    Closure, ClosureDefinition, ClosureEnvelopeError, ClosureError, ClosureInstance, ClosureKind,
-    ClosureLength, ClosurePlacementRole, CopyOrientation, CutCopyDefinition, CutPlan, CuttingSide,
-    DeterministicIdGenerator, DirectedEdge, DirectedRange, Direction, EdgeAnchor, EdgeRange,
-    EntityId, GeometricValidation, IdGenerator, IdentityLedger, LabelText, MaterialAssignment,
-    Mirroring, NotionPlacement, NotionPlacementDefinition, NotionPlacementError, NotionSize, Param,
-    Piece, PieceDefinition, ProfileBindingValidation, ProfileParameterRef, Rational,
+    ButtonholeDerivation, ButtonholeValidation, Closure, ClosureDefinition, ClosureEnvelopeError,
+    ClosureError, ClosureInstance, ClosureKind, ClosureLength, ClosurePlacementRole,
+    CopyOrientation, CutCopyDefinition, CutPlan, CuttingSide, DeterministicIdGenerator,
+    DirectedEdge, DirectedRange, Direction, EdgeAnchor, EdgeRange, EntityId, GeometricValidation,
+    IdGenerator, IdentityLedger, LabelText, MaterialAssignment, Mirroring, NotionPlacement,
+    NotionPlacementDefinition, NotionPlacementError, NotionSize, Param, Piece, PieceDefinition,
+    ProfileBindingValidation, ProfileParameterRef, Rational,
 };
 use sc_units::{Count, Length};
 fn t(n: i64, d: i64) -> Param {
@@ -506,4 +507,194 @@ fn current_targets_are_borrowed_and_cloned_input_cannot_mutate_kind_or_instances
     let replacement = f.closure(changed, &placements).unwrap();
     assert_ne!(replacement.definition(), &input);
     assert_eq!(closure.definition(), &input);
+}
+
+fn button_kind(button: NotionSize, operation: EntityId) -> ClosureKind {
+    ClosureKind::ButtonAndButtonhole {
+        button,
+        hole: ButtonholeDerivation { operation },
+    }
+}
+#[test]
+fn buttonhole_length_source_borrows_the_canonical_button_size_and_derivation_without_defaulting() {
+    let f = fixture();
+    let placements = f.placements();
+    let mut input = f.closure_input();
+    let size = EntityId::from_bits(820);
+    let operation = EntityId::from_bits(821);
+    for button in [
+        NotionSize::Declaration(size),
+        NotionSize::Profile(ProfileParameterRef::new(size)),
+    ] {
+        input.kind = button_kind(button, operation);
+        let closure = f.closure(input.clone(), &placements).unwrap();
+        let source = closure.buttonhole_length_source().unwrap();
+        let ClosureKind::ButtonAndButtonhole {
+            button: canonical,
+            hole,
+        } = &closure.definition().kind
+        else {
+            panic!("expected button pair")
+        };
+        assert!(core::ptr::eq(source.button_size(), canonical));
+        assert!(core::ptr::eq(source.derivation(), hole));
+        assert_eq!(source.closure(), closure.id());
+        assert_eq!(*source.button_size(), button);
+        assert_eq!(source.derivation().operation, operation);
+        assert_eq!(source.validation(), ButtonholeValidation::DeferredToG3);
+        assert_eq!(
+            closure.geometric_validation(),
+            GeometricValidation::DeferredToG2
+        );
+        assert_eq!(closure.count(), Count::new(1));
+        assert_eq!(
+            closure.profile_binding_validation(),
+            if matches!(button, NotionSize::Profile(_)) {
+                Some(ProfileBindingValidation::DeferredToG4)
+            } else {
+                None
+            }
+        );
+    }
+}
+#[test]
+fn replacing_button_size_or_operation_changes_the_single_observed_hole_source() {
+    let f = fixture();
+    let placements = f.placements();
+    let mut input = f.closure_input();
+    input.kind = button_kind(
+        NotionSize::Declaration(EntityId::from_bits(822)),
+        EntityId::from_bits(823),
+    );
+    let original = f.closure(input.clone(), &placements).unwrap();
+    let original_source = original.buttonhole_length_source().unwrap();
+    input.kind = button_kind(
+        NotionSize::Profile(ProfileParameterRef::new(EntityId::from_bits(824))),
+        EntityId::from_bits(825),
+    );
+    let replacement = f.closure(input.clone(), &placements).unwrap();
+    let current_source = replacement.buttonhole_length_source().unwrap();
+    assert_eq!(current_source.closure(), original_source.closure());
+    assert_ne!(current_source.button_size(), original_source.button_size());
+    assert_ne!(current_source.derivation(), original_source.derivation());
+    assert_eq!(
+        current_source.derivation().operation,
+        EntityId::from_bits(825)
+    );
+    assert_eq!(
+        *original_source.button_size(),
+        NotionSize::Declaration(EntityId::from_bits(822))
+    );
+    assert_eq!(
+        original_source.derivation().operation,
+        EntityId::from_bits(823)
+    );
+    assert_eq!(replacement.definition(), &input);
+}
+#[test]
+fn non_button_closures_do_not_offer_a_buttonhole_source_or_claim_a_derived_length() {
+    let f = fixture();
+    let placements = f.placements();
+    let mut input = f.closure_input();
+    assert!(f
+        .closure(input.clone(), &placements)
+        .unwrap()
+        .buttonhole_length_source()
+        .is_none());
+    input.kind = ClosureKind::HookAndBar {
+        hook: NotionSize::Declaration(EntityId::from_bits(826)),
+        bar: NotionSize::Declaration(EntityId::from_bits(827)),
+    };
+    assert!(f
+        .closure(input, &placements)
+        .unwrap()
+        .buttonhole_length_source()
+        .is_none());
+}
+#[test]
+fn button_pairs_use_existing_nonempty_count_reuse_and_missing_target_refusals() {
+    let f = fixture();
+    let placements = f.placements();
+    let mut input = f.closure_input();
+    input.kind = button_kind(
+        NotionSize::Declaration(EntityId::from_bits(828)),
+        EntityId::from_bits(829),
+    );
+    let instance = *input.instances.first().unwrap();
+    let closure = f.closure(input.clone(), &placements).unwrap();
+    for role in [ClosurePlacementRole::First, ClosurePlacementRole::Second] {
+        let target = closure
+            .placement(
+                instance.id,
+                role,
+                &placements,
+                &f.plan(),
+                std::slice::from_ref(&f.piece),
+                &f.ledger,
+            )
+            .unwrap();
+        assert_eq!(target.id(), instance.placement(role));
+    }
+    let mut empty = input.clone();
+    empty.instances.clear();
+    assert_eq!(
+        f.closure(empty, &placements),
+        Err(ClosureError::NoInstances)
+    );
+    let mut reused = input.clone();
+    reused.instances.first_mut().unwrap().second = instance.first;
+    assert_eq!(
+        f.closure(reused, &placements),
+        Err(ClosureError::ReusedPlacement(instance.first))
+    );
+    assert_eq!(
+        f.closure(input, std::slice::from_ref(placements.first().unwrap())),
+        Err(ClosureError::MissingPlacement {
+            instance: instance.id,
+            role: ClosurePlacementRole::Second,
+            placement: instance.second
+        })
+    );
+}
+#[test]
+fn button_source_does_not_bypass_current_physical_placement_validation() {
+    let mut f = fixture();
+    let placements = f.placements();
+    let mut input = f.closure_input();
+    input.kind = button_kind(
+        NotionSize::Declaration(EntityId::from_bits(830)),
+        EntityId::from_bits(831),
+    );
+    let instance = *input.instances.first().unwrap();
+    let closure = f.closure(input.clone(), &placements).unwrap();
+    let source = placements
+        .first()
+        .unwrap()
+        .definition()
+        .direction
+        .range
+        .edge();
+    let parts = f.ledger.split(&mut f.ids, source, t(1, 3)).unwrap();
+    let tail = f.ledger.split(&mut f.ids, parts.second(), t(1, 2)).unwrap();
+    f.ledger.delete(&mut f.ids, tail.first()).unwrap();
+    let raw = placements.first().unwrap().direction_resolution(&f.ledger);
+    let expected = ClosureError::InvalidPlacement {
+        instance: instance.id,
+        role: ClosurePlacementRole::First,
+        placement: instance.first,
+        error: Box::new(NotionPlacementError::UnresolvedDirection(Box::new(
+            raw.evidence().clone(),
+        ))),
+    };
+    assert!(closure.buttonhole_length_source().is_some());
+    assert_eq!(f.closure(input, &placements), Err(expected.clone()));
+    assert_eq!(
+        closure.validate_current(
+            &placements,
+            &f.plan(),
+            std::slice::from_ref(&f.piece),
+            &f.ledger
+        ),
+        Err(expected)
+    );
 }

@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — buttonhole length retains a single canonical derivation source
+
+- Button/hole pairs share current placement/count validation. The hole source borrows its owning
+  Closure's button-size declaration and recipe operation; no second authored/cached physical length
+  can drift. Replacement size/operation changes the observed source while old revision views remain
+  unchanged. Current Design queries, not old views, must drive execution and approvals.
+- Recipe/Design validates operation kind/dependency; G3 executes physical derivation. The ontology
+  specifies that dependency but no physical formula or clearance, so G1 invents neither. DeferredToG3
+  keeps that missing execution proof separate from geometric/profile validation and readable sources.
+- Five new tests bring Closure contracts to fifteen; independent substitute-source mutations fail
+  red. Compile-fail coverage refuses a separate length field; strict Rust/WASM/book pass. Source
+  inspection remains available even while current placement repairs block execution.
+- promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`'s button/hole source.
+
 ## _(2026-10-01)_ — closure counts derive from physical instances and current placements stay canonical
 
 - Stable instance ids survive ordering; nonempty physical pairs derive one typed Count, without a
@@ -128,22 +142,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   its ten probes pass. This is containment with preserved examples and predicates, not a policy change.
 - promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s grain boundary.
 
-## _(2026-10-01)_ — sewing joins physical material intervals, not pattern names
-
-- D57's copy identities make two copies of one Piece distinct sewing domains. D35 allows a physical
-  copy to join itself only where current positive-length interiors are disjoint. Comparing held edge
-  names cannot prove that: a merge can make formerly different names share a current frame. The
-  constructor compares resolved fragments and checks every owned portion, including hidden interiors.
-- Correspondence, journal traversal and reflection remain separate authored facts. Stops use semantic
-  Notches/TurnPoints rather than physical notch representation. Ease is a signed declared source and
-  explicit allocation; structural domains are checked, actual walking/arc lengths and resolved values
-  are later obligations. A typed failure never silently stretches or reassigns material.
-- Eighteen tests cover copies with different neighbours, partial/one-to-many spans, self-seams after
-  merge/reversal, interior ownership/repairs, endpoint choices, stop/ease domains and removed targets.
-  Disabling self-overlap and interval ownership refusals each produces a red regression. Existing
-  notches retain behavior after extracting shared anchor validation; strict checks and WASM pass.
-- promotion: promoted by `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`.
-
 
 # Sealed archive — earlier lessons
 
@@ -168,6 +166,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part17.md`](docs/history/stitchcad-devnotes-part17.md) | separate-pair-member lesson | 12 lines, 1049 bytes, `sha256:140c4c41…` |
 | [`devnotes-part18.md`](docs/history/stitchcad-devnotes-part18.md) | semantic-anchor/profile-binding lesson | 12 lines, 1102 bytes, `sha256:61a13500…` |
 | [`devnotes-part19.md`](docs/history/stitchcad-devnotes-part19.md) | physical-copy identity lesson | 18 lines, 1663 bytes, `sha256:c0e3c442…` |
+| [`devnotes-part20.md`](docs/history/stitchcad-devnotes-part20.md) | physical sewing-interval lesson | 15 lines, 1375 bytes, `sha256:34867dc9…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

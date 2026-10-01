@@ -702,3 +702,171 @@ decision recorded before the code, dependency-free and wasm-safe.
 | `.3c.4b.2` | `STITCHCAD-G1-0018 (leaf G1-SLICE.3c.4b.2)` | Hem depth/fold intent and current Facing composition; hem/layer parent closed |
 | `.3c.4c.1a` | `STITCHCAD-G1-0019 (leaf G1-SLICE.3c.4c.1a)` | physical notion placements; current copy/anchor/direction validation |
 | `.3c.4c.1b` … `.16` | `pending` | remaining constructions and G1 execution leaves |
+
+### `G1-SLICE.3c.4c.1b` — zipper/hook-bar instances borrow current placements and refuse fly scope
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires closure kinds, placement, count and sizes;
+  fixture §9 names a zipper and hook/bar. The prior commit only supplies notion placements.
+- [x] **ROOT CAUSE (WHY + WHERE)** — current placements can lose interior material after birth.
+  `cargo test -p sc-core --test closure_contract
+  current_placement_repairs_are_revalidated_at_birth_all_target_checks_and_borrowed_queries` →
+  `1 passed`, `rc=0`: birth/all-target/borrowed queries return the same current interval evidence.
+  `fly_scope_refusal_precedes_geometry_and_names_requested_closure_gap_and_gate` → `1 passed`,
+  `rc=0`: env_fly carries Closure/trousers gap/G7 even before any geometry context exists.
+- [x] **FIX** — immutable stable instances and canonical placement ids; Count derives from nonempty
+  instances. Distinct zipper/hook-bar size origins stay symbolic; no defaults. Current targets and
+  unambiguous registry ids validate; fly scope refuses before geometry. Nested evidence is boxed.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test closure_contract` → `10 passed`, `rc=0`:
+  kinds/sizes/counts/reordering, identity reuse, ambiguous/missing contexts, current repairs/removals,
+  scope and immutability. Count boundary unit + privacy pass. Scope, reuse, length and current-target
+  mutations each fail red, `rc=101`; restored strict checks pass. Placement checklist/commit table
+  compare unchanged with `git show HEAD:docs/tasks/G1-SLICE.md`, with staged revalidation.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
+  green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
+  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
+  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Earlier placement contracts pass.
+- [x] **LOCKSTEP** — pre-code copy/instance decision, Design obligations, modules/map, closure examples/
+  API vocabulary and feature reasons, bounded evidence/commit retrieval, frontier/index and live docs
+  align. Oldest entries seal unchanged to changelog-part20/devnotes-part19. Hardware remains G2/G3; buttons
+  follow `.3c.4c.2`. G1 remains 4/18 top-level leaves and 3/4 object families.
+
+## Historical task changelog
+
+## Changelog
+
+- `2026-09-29`: Tree created by `PLANNING.2` with 16 leaves; owns defect D10 (starter crate).
+- `2026-09-30`: `.1` reconciled and closed — its workspace shape (starter crate retired, `sc-units` +
+  `sc-core` created, G0 CI shape) was delivered by `G0-CONTRACT.18` (`eb83f01`) "ahead of `G1-SLICE.1`";
+  every acceptance criterion re-derived by command and recorded in the `### G1-SLICE.1` checklist. D10 was
+  already closed by that commit; the frontier advances to `.2`.
+- `2026-09-30`: `.2` reconciled and closed — `sc-units` (fixed-point µm/µ°, the five tolerance classes T1–T5,
+  exact-ratio conversions, typed `UnitError` for domain/overflow/division-by-zero/non-finite) was delivered in
+  full by `G0-CONTRACT.18` (`eb83f01`); its 21 property tests, typed dimension errors and wasm build were
+  re-derived against every acceptance criterion. The property-test-framework Open Question is resolved into
+  the Decisions section and recorded as `decision_property-tests-dependency-free-recorded-seed.md`. The
+  frontier advances to `.3` (the `sc-core` ontology), G1's first new product code.
+- `2026-09-30`: `.3` decomposed into `.3a` (identity types), `.3b` (the persistent-identity contract) and
+  `.3c` (the geometry-bearing object types) — one leaf was three signoff-quality slices in strictly ordered
+  dependency. Its three cross-cutting design boundaries were recorded before any code, so the implementation
+  slices build against a fixed design: a dependency-free ULID `EntityId` with an injected generator, a
+  bounded exact rational edge parameter in `sc-core` (not `sc-units`, not the formula bigint), and the
+  structural-at-G1 / geometric-at-G2 invariant boundary. The tree is 18 leaves; the frontier advances to
+  `.3a`.
+- `2026-09-30`: `.3a` landed — G1's first new product code. `sc_core::ontology`'s identity layer:
+  `EntityId` (a dependency-free hand-rolled ULID, Crockford base32, lexicographically sortable) and the
+  injected `IdGenerator` with a `DeterministicIdGenerator` for replay; `EdgeRef`/`PointRef`/`LocalTag` (stable
+  topological references, never indices); the bounded exact `Rational` and its `[0, 1]` `Param`. 31 unit tests
+  and 9 dependency-free recorded-seed properties green, `sc-core` still cross-builds to wasm, `make gate`
+  green. Built against `decision_entity-identity-ulid-injected-generator.md` and
+  `decision_edge-parameter-bounded-exact-rational.md`. The frontier advances to `.3b` (the persistent-identity
+  contract).
+- `2026-10-01`: `.3b` landed — G1's second new product code. `sc_core::ontology::topology`: the
+  `IdentityLedger` (an append-only journal of typed `TopologyEdit`s + a live-edge index + registrations) and
+  the pure fold that resolves a held `(EdgeRef, Param)` through split, merge, reverse, delete and
+  offset-fragmentation. A stored reference is never rewritten; repair state (`RepairTask`, `open_repairs`,
+  `release_readiness`) is derived, never stored, so it cannot drift from the journal. Split offers both
+  fragments at the split point for the consumer to state a `SplitSide`; merge recomputes by caller-declared
+  arc length in exact `Rational`; reverse maps `t` to `1 − t` and tells directed consumers via `Direction`;
+  delete and offset orphan references into visible `RepairTask`s naming the reference, the orphaning edit and
+  the candidates — no silent reassignment. 62 unit + 8 recorded-seed contract properties green (merge checked
+  against a cross-multiplied `i128` oracle, offset against a hundredths grid, the live set against the journal
+  replayed, replay byte-identical), `sc-core` still cross-builds to wasm, `make gate` + `make probes` (22
+  suites) green. Built against `decision_reference-resolution-journal-fold.md`, recorded before the code. The
+  append also discharged two containment obligations it owed (D54: the CHANGELOG and DEV_NOTES rollovers the
+  prior slice crossed without sealing) and surfaced D53 (the KNOWLEDGE_MAP ceiling pressure `.3a` flagged).
+  The frontier advances to `.3c` (the geometry-bearing object types).
+
+- `2026-10-01`: `.3c` decomposed into four children; `.3c.1` landed `Piece`, its immutable validated
+  content and complete derived label view. Structural refusals are tested, geometry is always
+  `DeferredToG2`, endpoints expose repairs without rewriting references. A tracked middle-fragment
+  deletion counterexample creates D55, owned immediately by `.3c.2` before sewing spans are built.
+  The book's two literal scope placeholders were repaired after the renderer diagnosed hidden HTML;
+  feature coverage now cites the implemented piece contract. All focused gates pass; next `.3c.2`.
+
+- `2026-10-01`: `.3c.2` split into range resolution (`.2a`) and sewing graph (`.2b`). `.2a` fixes
+  D55: the exact interval fold retains deleted/trimmed portions and arithmetic failures as repairs,
+  separately from point endpoint ambiguity and G2 geometry. Thirteen contract tests and the existing
+  suites pass, with the delete arm observed red when disabled. The ledgers roll over atomically;
+  D55 is sealed closed in defects-part2. Next `.3c.2b` implements sewing spans and settles D35.
+
+- `2026-10-01`: `.3c.1a` fixes D56, found by comparing the new model with the canonical fixture:
+  separate cut-once L/R members now carry explicit hand/companion metadata; self-pairing is refused.
+  Existing even-total pair requests stay supported. Fourteen piece tests and all focused checks pass;
+  D56 is sealed closed. D57's physical-copy addressing is asked of the director and owned by `.3c.2b`;
+  the frontier takes independent marks/allowances (`.3c.3`) while that decision is pending.
+
+- `2026-10-01`: `.3c.3` decomposed into notches, grainlines and allowances; `.3c.3a` lands
+  immutable semantic Notch anchors and symbolic target-profile bindings with no physical defaults.
+  Seven contract tests + privacy doctest pass; ownership mutation goes red. D58's G4 acceptance
+  aligns with the normative release matrix and seals closed. Ledgers roll over atomically;
+  the director answered D57 before commit: stable physical-copy identities; next `.3c.2b`.
+
+- `2026-10-01`: `.3c.2b` splits into copy plan and spans. `.3c.2b.1` implements the director's
+  stable-copy ruling with explicit identities and complete quantity/orientation validation. Nine
+  contract tests pass and quantity mutation goes red. D59's committed-baseline vocabulary failures
+  are repaired; glossary census is a required focused ontology check. Completed `.1`/`.2`/`.3a`/`.3b`
+  evidence blocks move to a linked sibling (SHA-256
+  `ab447c14f2db092114863e1ccbb4f555441dbb204abe18de80cbe19fd8698517`). Next `.3c.2b.2`.
+
+  D60's staged relocation refusal is fixed by preserving the original `.1`/`.2` text and adding
+  re-derived delivery evidence inside their ROOT CAUSE bullets; all four moved checklists pass
+  the per-bullet audit and staged gate. Original payload checksum above describes the pre-supplement
+  move, not the final augmented sibling.
+
+- `2026-10-01`: `.3c.2b.2` lands immutable copy-addressed sewing intent, disjoint same-copy seams,
+  semantic stops and explicit ease distributions. Eighteen tests and graph privacy pass; both
+  self-overlap and interval-ownership mutations go red. D35/D57 seal verified closed; `.3c.2b`
+  and `.3c.2` close. Prior copy milestone full probes: 22 suites green. Books/censuses remain aligned,
+  with no invented folded-end geometry or changed arithmetic golden. Next `.3c.3b` grainlines.
+
+- `2026-10-01`: `.3c.3b` lands directed grain and independent stripe/plaid references with
+  explicit angle intent and deferred geometric/value validation. D61 diagnostic fixed; ontology §10
+  executable examples move unchanged to a linked chapter. Next `.3c.3c` allowances.
+
+- `2026-10-01`: `.3c.3c` lands per-edge allowance descriptors and closes marks/allowances.
+  Earlier object checklists move unchanged to the existing evidence sibling before 1000 lines.
+  Moved payload: 213 lines / 19504 bytes, SHA256
+  `d07e9e3c21252f6d903cb5fcedfde703897a34074e7efe7fce70efe5862a1dff`. Next `.3c.4` constructions.
+
+- `2026-10-01`: `.3c.4` decomposes into intake/finish/closure/pocket children; `.3c.4a.1` lands
+  semantic dart intent with an internal apex and explicit intake/operation provenance. Conservation
+  remains G2/G3. A bounded construction companion carries examples. Next `.3c.4a.2`.
+
+- `2026-10-01`: `.3c.4a.2a` lands distinct immutable tuck/pleat intent with shared fold validation
+  and directed repair evidence. Parent `.2` splits to keep sewing-linked gathers separate. Physical
+  shape/conservation remain G2/G3; live-window rollover owned and verified. Next `.3c.4a.2b`.
+
+- `2026-10-01`: `.3c.4a.2b` containment moves three recent completed mark/dart checklists
+  unchanged to the existing sibling: 90 lines / 8135 bytes, SHA256
+  `7ca4e34bf67fc0cd9b5d708d51ec00443f88225b8aaedb603fa235670a87a1b0`. Current gather evidence stays first.
+
+- `2026-10-01`: `.3c.4a.2b` lands immutable gather bindings and borrowed canonical span ease,
+  preserving original physical material targets and raw repair evidence. Intake parents close with
+  all four kinds implemented structurally; actual closing remains G2/G3. Next `.3c.4b`.
+
+- `2026-10-01`: `.3c.4b.1` containment moves completed fold evidence unchanged to the sibling: 28
+  lines / 2558 bytes, SHA256 `a5723a6070b5da7125c5d7bf6d455123703ba8f55a65a96a521697235e0c69ad`.
+
+- `2026-10-01`: `.3c.4b.1` lands three served-layer types and explicit lining scope refusal; recipe
+  owns offset dimensions, shared material guard preserves Piece behavior. Next `.3c.4b.2` Hem.
+
+- `2026-10-01`: `.3c.4b.2` moves completed layer/gather checklists unchanged to the evidence sibling;
+  independent committed-payload comparison passes, with staged revalidation before commit.
+
+- `2026-10-01`: `.3c.4b.2` lands Hem intent with explicit depth/fold origins and stable current Facing
+  validation. Hem/layer parent closes structurally; physical folding remains G2/G3. Next `.3c.4c`.
+
+- `2026-10-01`: `.3c.4c.1a` moves completed Hem evidence unchanged to the existing sibling: 28
+  lines / 2590 bytes; SHA256 `6ab6459295f45c7c816826b47810e301f07949dbba070c5ca60a1cc4b3f960f1`.
+
+- `2026-10-01`: `.3c.4c.1a` verification-log containment preserves the completed table unchanged:
+  32 lines / 4337 bytes; SHA256 `ba3645f60a7be24edcc500079448238f951041de50cd45af09da22223825aac4`.
+
+- `2026-10-01`: `.3c.4c.1a` lands stable physical notion placements and shared current anchor checks;
+  raw repairs remain visible. Closure kinds/counts/sizes follow `.1b`/`.2`, with geometry deferred.
+
+- `2026-10-01`: `.3c.4c.1b` preserves completed placement evidence and commit-log history unchanged
+  in the evidence sibling, with independent committed-content comparison and direct retrieval.
+
+- `2026-10-01`: `.3c.4c.1b` lands centred zipper/hook-bar intent with stable physical instances,
+  canonical current placements and named env_fly refusal. Next `.3c.4c.2` button/buttonhole derivation.

@@ -5,12 +5,12 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.3c.4c.2`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** `.3c.4c.2` — button/buttonhole pairs with owned physical placements, button-size
-  origins and one canonical derived hole-length source; no independent hole length. Closure already
-  has zipper/hook-bar instances, typed derived counts, symbolic size origins and env_fly refusal.
-  Current placement validation rechecks copy/Piece/anchor/direction registries. Pockets/signoff follow;
-  physical geometry G2/G3, reflection G2/V1 and profiles G4 remain explicit; G1 has 3/4 object families.
+- **Active tree:** `G1-SLICE`, frontier **`.3c.4d`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** `.3c.4d` — Pocket position/orientation/opening/component references, then
+  structural construction-family signoff. Split safely before code if needed. Closure intent now
+  covers zipper/hook-bar/button pairs, typed counts, canonical hole source and env_fly refusal.
+  Buttonhole source has no independent length; G3 executes its typed operation. Current registries
+  and copy/source/anchor/range validation remain required; G1 has 3/4 object families.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

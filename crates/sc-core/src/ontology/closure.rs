@@ -30,6 +30,56 @@ pub enum NotionSize {
     /// Target-profile declaration, without a default selection.
     Profile(ProfileParameterRef),
 }
+/// Recipe operation deriving hole length from the canonical button-size declaration.
+/// No independent hole length can be authored through this input.
+/// ```compile_fail
+/// use sc_core::ontology::{ButtonholeDerivation, EntityId};
+/// use sc_units::Length;
+/// let derivation = ButtonholeDerivation {
+///     operation: EntityId::from_bits(1),
+///     length: Length::from_micrometres(20_000).unwrap(),
+/// };
+/// ```
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct ButtonholeDerivation {
+    /// Recipe validates operation existence, kind and dependency on this Closure's button size.
+    pub operation: EntityId,
+}
+/// Deriving physical hole length is separate from retaining its canonical source.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ButtonholeValidation {
+    /// G3 must execute the typed operation using resolved button size and declared policy inputs.
+    DeferredToG3,
+}
+/// Read-only borrowed provenance view; no independently entered or cached hole length.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct ButtonholeLengthSource<'a> {
+    closure: EntityId,
+    button_size: &'a NotionSize,
+    derivation: &'a ButtonholeDerivation,
+}
+impl<'a> ButtonholeLengthSource<'a> {
+    /// Closure owning the canonical button-size and derivation input.
+    #[must_use]
+    pub const fn closure(self) -> EntityId {
+        self.closure
+    }
+    /// Borrowed canonical size declaration; its owner supplies selected value/state.
+    #[must_use]
+    pub const fn button_size(self) -> &'a NotionSize {
+        self.button_size
+    }
+    /// Borrowed canonical recipe operation declaration.
+    #[must_use]
+    pub const fn derivation(self) -> &'a ButtonholeDerivation {
+        self.derivation
+    }
+    /// Actual derived physical length remains uncomputed and unproved at G1.
+    #[must_use]
+    pub const fn validation(self) -> ButtonholeValidation {
+        ButtonholeValidation::DeferredToG3
+    }
+}
 /// Authored closure kind; unsupported requests receive explicit envelope diagnostics.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ClosureKind {
@@ -44,6 +94,13 @@ pub enum ClosureKind {
         hook: NotionSize,
         /// Required bar size declaration.
         bar: NotionSize,
+    },
+    /// Button/buttonhole pairs; first placement is button, second hole.
+    ButtonAndButtonhole {
+        /// Required canonical logical button-size origin.
+        button: NotionSize,
+        /// Recipe operation deriving hole length; no separate physical length field.
+        hole: ButtonholeDerivation,
     },
     /// Fly request, refused in the v1 envelope before constructing geometry.
     Fly {
@@ -64,9 +121,9 @@ pub struct ClosureInstance {
 /// Component roles in deterministic validation/query order.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ClosurePlacementRole {
-    /// First zipper side, or hook.
+    /// First zipper side, hook or button.
     First,
-    /// Second zipper side, or bar.
+    /// Second zipper side, bar or buttonhole.
     Second,
 }
 impl ClosureInstance {
@@ -134,7 +191,9 @@ impl ClosureDefinition {
                 closure: self.id,
                 trousers_gap,
             }),
-            ClosureKind::CentredZipper { .. } | ClosureKind::HookAndBar { .. } => Ok(()),
+            ClosureKind::CentredZipper { .. }
+            | ClosureKind::HookAndBar { .. }
+            | ClosureKind::ButtonAndButtonhole { .. } => Ok(()),
         }
     }
 }
@@ -339,6 +398,19 @@ impl Closure {
             .ok_or(ClosureError::MissingInstance(instance))?;
         PlacementContext::new(placements, pieces)?.placement(*instance, role, plan, ledger)
     }
+    /// Borrow the one canonical source of derived hole length; None means a different closure kind.
+    /// This resolves neither size/policy values nor physical length, and does not validate placements.
+    #[must_use]
+    pub const fn buttonhole_length_source(&self) -> Option<ButtonholeLengthSource<'_>> {
+        match &self.definition.kind {
+            ClosureKind::ButtonAndButtonhole { button, hole } => Some(ButtonholeLengthSource {
+                closure: self.id(),
+                button_size: button,
+                derivation: hole,
+            }),
+            _ => None,
+        }
+    }
     /// Actual hardware/attachment geometry remains unproved.
     #[must_use]
     pub const fn geometric_validation(&self) -> GeometricValidation {
@@ -357,6 +429,10 @@ impl Closure {
             }
             | ClosureKind::HookAndBar {
                 bar: NotionSize::Profile(_),
+                ..
+            }
+            | ClosureKind::ButtonAndButtonhole {
+                button: NotionSize::Profile(_),
                 ..
             } => Some(ProfileBindingValidation::DeferredToG4),
             _ => None,

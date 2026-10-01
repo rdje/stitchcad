@@ -316,7 +316,7 @@ bounded; all existing examples and local API vocabulary are preserved there.
 | Notch | Semantic anchor, symbolic profile bindings | G4 physical geometry/encoding |
 | Sewing graph | Copy-addressed spans, disjoint self-seams, explicit ease and stops | G2/G3 walking; recipe/profile values |
 | SeamAllowance | Per-edge width origins, corner intent, symbolic inclusion | G2 bounded offsets; G4 target policy |
-| Closure (zipper/hook-bar) | Stable instances/counts, size origins, current targets; env_fly | G2/G3 hardware geometry; registries; G4 profile fields; buttons follow |
+| Closure (zipper/hook-bar/button) | Stable instances/counts, canonical hole source, current targets; env_fly | G2/G3 hardware/derived hole length; registries; G4 profile fields |
 | Notion placements | Stable physical-copy anchors/orientation, current validation | G2/V1 physical transforms; current registry validation |
 | Hem | Whole finish edge, depth/fold origins, current Facing links | G2/G3 executed folding; registries; G4 profile fields |
 | Facing/Lining/Interfacing | Served Piece, recipe offset relationship, material intent | G2 offsets; registries; lining execution deferred to G7 |
