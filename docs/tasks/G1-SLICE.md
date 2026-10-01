@@ -322,13 +322,76 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   before this slice's checklist crosses 1000 lines; preserve evidence and revalidate staged gates.
 
 - ID: `G1-SLICE.3c.4`
-  Status: `pending`
+  Status: `active`
   Goal: semantic `Dart`/`Tuck`/`Pleat`/`Gather`, `Hem`, `Facing`/`Lining`/`Interfacing`, `Closure` and
   `Pocket` with required content and validated structural references; close the object-type parent.
   Acceptance: required anchors, operation identities, composition and parameter references are carried;
   buttonhole size derives from its button rather than a second input; unsupported constructions are
   refused explicitly; intake conservation stays visibly deferred to G2. Every ontology §4 object has
   implementation evidence, synchronized book content and wasm-safe tests.
+  Verification: `pending`
+  Commit: `pending`
+
+  Children: `.3c.4a` (intake constructions), `.3c.4b` (hem/layers), `.3c.4c` (closures),
+  `.3c.4d` (pockets and family signoff). Safe child slices preserve the entire §4.3/§4.7 scope.
+
+- ID: `G1-SLICE.3c.4a`
+  Status: `active`
+  Goal: semantic intake constructions, owned anchors/direction and explicit closing operation.
+  Children: `.3c.4a.1` (dart), `.3c.4a.2` (tuck/pleat/gather).
+
+- ID: `G1-SLICE.3c.4a.1`
+  Status: `done`
+  Goal: immutable Dart with intake origin, apex, two directed legs, declared direction and closing
+  operation identity; actual closure/intake conservation remains G2/G3.
+  Acceptance: required references are born-valid and owned; identical held leg intervals refused;
+  nonnegative explicit intake retains its parameter origin, symbols supply no default; edits expose
+  raw repairs/choices; no intake conservation or operation execution claim. Privacy and WASM pass.
+  Design before code: apex is an EdgeAnchor on owned internal construction geometry, so an interior
+  apex is expressible without pretending it lies on the cut boundary. G2 proves geometric leg/apex
+  coincidence; two directed leg ranges and an explicit directed reference carry geometric intent.
+  Intake has explicit parameter/value or formula/profile declarations; closing operation is held
+  identity whose existence/kind/dependency is `.5`/`.6`'s obligation. Common reusable intake source
+  stays distinct from allowance width. Extend the structural/geometric boundary record before code.
+  Book containment: add a separate construction implementation companion before growing the current
+  24135-byte executable chapter beyond its 24576-byte health target; normative clauses stay put.
+  Verification: nine dart contracts + privacy; ownership mutation red; strict Rust, wasm, book,
+  fixture/feature/glossary/tree censuses, ledger and staged doctrines green.
+  Commit: `STITCHCAD-G1-0014`
+
+- ID: `G1-SLICE.3c.4a.2`
+  Status: `pending`
+  Goal: immutable Tuck/Pleat/Gather with explicit intake, owned fold/attachment geometry, direction
+  and closing operation; type-specific semantic content and deferred physical conservation.
+  Acceptance: validate all required scope references and intake domains, preserve repairs and defaults
+  prohibition; G2/G3 must prove the actual closing operations and gather distribution.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.3c.4b`
+  Status: `pending`
+  Goal: Hem and Facing/Lining/Interfacing descriptors with served edges/Pieces, depth/fold method,
+  offset relationship and material assignment; deferred/out-of-envelope constructions typed refusals.
+  Acceptance: owned live references, positive composition links, explicit symbolic parameters and no
+  generated offset claim; lining refuses its named deferred-envelope diagnostic in executable scope.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.3c.4c`
+  Status: `pending`
+  Goal: Closure descriptors with button/buttonhole derivation, centred zipper and hook/bar placement,
+  count and sizes; unsupported fly refusal. Derived buttonhole length cannot be independently entered.
+  Acceptance: typed supported/deferred variants, required owned anchors and composition/count domains;
+  no physical placement or resolved buttonhole-size claim before G2/G3.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.3c.4d`
+  Status: `pending`
+  Goal: Pocket position, orientation, opening and component Piece references; complete construction
+  family signoff and close `.3c` after all child types have structural evidence and book coverage.
+  Acceptance: every component exists, composition required, owned placement/direction references,
+  explicit unsupported-envelope refusal; all ontology §4 families accounted for without G2 claims.
   Verification: `pending`
   Commit: `pending`
 
@@ -487,7 +550,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.4` | `pending` | garment constructions; three object families landed |
+| — | `G1-SLICE.3c.4a.2` | `pending` | tuck/pleat/gather; dart intent landed |
 
 ## Decisions
 
@@ -559,6 +622,37 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3c.4a.1` — semantic dart intent with visible closure obligations
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.3 and the reference skirt require semantic darts;
+  `0c65d75` has no construction object. Intake declaration, geometric apex/legs and the executed
+  closing operation must remain distinguishable so G1 cannot silently certify conservation.
+- [x] **ROOT CAUSE (WHY + WHERE)** — a valid endpoint or declared intake is insufficient physical
+  evidence. `cargo test -p sc-core --test dart_contract
+  foreign_middle_of_merged_direction_is_refused_despite_owned_endpoints_after_reversal` → `1 passed`,
+  `rc=0`: complete ledger coverage/live owned ends conceal a foreign middle, refused before/after
+  reversal. `interior_apex_owned_legs_intake_origin_and_operation_identity_are_immutable_content`
+  → `1 passed`, `rc=0`: an internal apex is valid structural intent with visible conservation deferral.
+- [x] **FIX** — immutable Dart with intake origin, interior edge-anchored apex, two directed legs,
+  explicit directed closing/folding reference and required closing-operation identity. Validate
+  nonnegative authored intake, distinct held leg intervals, apex scope and all positive interval
+  ownership/coverage/unique endpoints. Preserve raw topology evidence and operation/parameter
+  registry obligations; expose G2 geometry and G2/G3 executed-conservation deferrals.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test dart_contract` → `9 passed`, `rc=0`;
+  intake/symbolic values, opposite duplicate legs, each field's unknown/foreign scope, internal apex,
+  split choice, foreign-middle merge/reversal, directed deletion evidence and immutable replacement
+  discriminate. Disable ownership refusal → merged-middle test fails, `rc=101`; restored strict
+  `make check` passes. The privacy doctest is green; queries never rewrite the original definition.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
+  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
+  ledger probes → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Existing marks/allowance/sewing contracts remain green and numerical goldens do not change.
+- [x] **LOCKSTEP** — construction family decomposed into owned semantic children before code;
+  structural/geometric decision extended, Rust/subsystem status, bounded construction book companion
+  + SUMMARY/ontology index and feature coverage, frontier/evidence/logs, TASK_TREE/MEMORY/LIVE_STATUS,
+  CHANGELOG and promoted DEV_NOTES. Three of four object families remain done; next `.3c.4a.2`.
 
 ### `G1-SLICE.3c.3c` — per-edge allowance intent and symbolic target policy
 
@@ -681,6 +775,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 | `2026-10-01` | `.3c.3c` | allowance contracts; check; wasm; book; fixture/feature/glossary; ledger; gate | `8 passed`; ownership mutation red; restored Rust/WASM/book/censuses/gates green, `rc=0` |
 
+| `2026-10-01` | `.3c.4a.1` | dart contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; ownership mutation red; restored checks/censuses/gates green, `rc=0` |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -699,7 +795,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 | `.3c.2b.2` | `STITCHCAD-G1-0011 (leaf G1-SLICE.3c.2b.2)` | copy-addressed sewing; D35/D57 fixed; sewing parents closed |
 | `.3c.3b` | `STITCHCAD-G1-0012 (leaf G1-SLICE.3c.3b)` | directed grainlines; independent print references; D61 fixed |
 | `.3c.3c` | `STITCHCAD-G1-0013 (leaf G1-SLICE.3c.3c)` | per-edge allowance intent; marks/allowances parent closed |
-| `.3c.4` … `.16` | `pending` | constructions remain in `.3c` |
+| `.3c.4a.1` | `STITCHCAD-G1-0014 (leaf G1-SLICE.3c.4a.1)` | semantic dart intent; explicit conservation deferral |
+| `.3c.4a.2` … `.16` | `pending` | remaining constructions and G1 execution leaves |
 
 ## Changelog
 
@@ -796,3 +893,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   Earlier object checklists move unchanged to the existing evidence sibling before 1000 lines.
   Moved payload: 213 lines / 19504 bytes, SHA256
   `d07e9e3c21252f6d903cb5fcedfde703897a34074e7efe7fce70efe5862a1dff`. Next `.3c.4` constructions.
+
+- `2026-10-01`: `.3c.4` decomposes into intake/finish/closure/pocket children; `.3c.4a.1` lands
+  semantic dart intent with an internal apex and explicit intake/operation provenance. Conservation
+  remains G2/G3. A bounded construction companion carries examples. Next `.3c.4a.2`.

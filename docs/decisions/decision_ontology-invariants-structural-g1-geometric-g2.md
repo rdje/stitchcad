@@ -7,7 +7,7 @@
   at gate G1 and what `sc-geometry` proves at gate G2 (`docs/book/src/spec/ontology.md` §4.1, §9;
   `docs/tasks/G2-2D.md` leaf `.1`).
 
-answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?"
+answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?"
 
 ## The fact / decision
 
@@ -59,3 +59,14 @@ parameter identity expected to resolve to an angle. Bias at 45° and opposite di
 expressible without treating a grainline as an undirected axis. Symbolic inputs never supply values
 or defaults; recipe/profile owners validate their declarations and G2 consumes resolved values.
 There is no G1 geometric-equality or fabric-placement certificate.
+
+## Dart intent (`G1-SLICE.3c.4a.1`)
+
+A Dart's apex is an EdgeAnchor on Piece-owned internal construction geometry; it need not be a cut
+boundary point. Two directed leg ranges and an explicit directed reference retain geometric intent.
+G1 validates complete owned intervals, unique endpoints, the born-valid apex and distinct held leg
+intervals. G2 proves actual leg/apex coincidence and physical straightness; G2/G3 proves intake
+conservation under the closing operation. An explicit intake retains its parameter id and nonnegative
+Length; formula/profile declarations retain identities without defaults or copied states. The closing
+operation is a required identity, with existence/kind/dependency validation owned by `.5`/`.6`, not
+an executed or certified closure. Post-edit queries preserve raw repairs/choices and held content.

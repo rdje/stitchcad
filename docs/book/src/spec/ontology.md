@@ -316,7 +316,9 @@ bounded; all existing examples and local API vocabulary are preserved there.
 | Notch | Semantic anchor, symbolic profile bindings | G4 physical geometry/encoding |
 | Sewing graph | Copy-addressed spans, disjoint self-seams, explicit ease and stops | G2/G3 walking; recipe/profile values |
 | SeamAllowance | Per-edge width origins, corner intent, symbolic inclusion | G2 bounded offsets; G4 target policy |
+| Dart | Immutable owned apex/legs, intake and closing-operation intent | G2/G3 executed closure/intake; registry values |
 | Grainline | Directed owned references and explicit angle/print intent | G2 straightness/actual angles; symbolic values |
 
-The companion chapter exposes the validation boundary and its testable limits. These APIs do not
+[Garment construction examples](ontology-constructions.md) have their own bounded companion.
+The companion chapters expose the validation boundary and its testable limits. These APIs do not
 replace the command bus's future atomic design validation or grant production-release permission.

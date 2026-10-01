@@ -38,6 +38,20 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0014 - semantic darts retain intake and closing-operation intent (leaf `G1-SLICE.3c.4a.1`)
+
+Dart is immutable structural content: intake origin, apex on owned internal construction geometry,
+two directed legs, explicit direction reference and closing-operation identity. Born references need
+owned full intervals and unique endpoints; identical held legs, negative authored intake and invalid
+apices are typed refusals. Symbols provide no values/defaults. Physical coincidence and executed
+intake conservation remain explicit G2/G3 obligations; registries must validate parameters/operations.
+
+Nine contracts + privacy pass. Ownership refusal disabled makes the merged foreign-middle regression
+red; restored strict Rust, wasm, warning-free book, fixture/feature/glossary/tree censuses, ledger and
+staged doctrines pass. Construction objects now have safe owned child slices; a bounded construction
+book companion preserves examples and physical limits. No goldens change. G1 remains 4/18 top-level
+leaves, 3/4 object families; next `.3c.4a.2` implements tuck/pleat/gather intent.
+
 ## STITCHCAD-G1-0013 - per-edge allowances retain width origin and symbolic target policy (leaf `G1-SLICE.3c.3c`)
 
 Immutable SeamAllowance descriptors retain whole owned source edges, authored width parameter/value

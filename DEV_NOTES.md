@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — a declared dart intake is not an executed conserved closure
+
+- An internal apex can be anchored to a Piece-owned construction leg without assigning it to the cut
+  boundary. Directed legs/references carry intent; G2 checks actual coincidence/straightness, and G2/G3
+  compares removed boundary length with declared intake after executing the named closing operation.
+- Intake provenance and operation identity stay authored content. Symbolic sources carry no defaults
+  or copied states. Nine tests cover birth refusals, duplicate legs, internal apex, split choices,
+  current-frame ownership and immutable post-edit evidence. The foreign-middle mutation fails red;
+  restored strict Rust/WASM pass. Registries still own operation/parameter existence and kinds.
+- The remaining construction scope is split into safe semantic children; examples have a bounded book
+  companion. No physical dart result or fixture golden is changed by carrying structural intent.
+- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s dart boundary.
+
 ## _(2026-10-01)_ — allowance intent does not resolve a receiver policy or construct an offset
 
 - Width origin and per-edge corner intent are canonical content. Explicit values retain the authored

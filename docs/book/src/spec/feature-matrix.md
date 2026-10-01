@@ -100,7 +100,7 @@ chapter is inside that family or explicitly outside it.
 
 | Feature | Disposition | Why | Proven at | Diagnostic |
 | --- | --- | --- | --- | --- |
-| dart with conserved intake | supported | ontology §4.3; the fixture's four darts each remove exactly 4.0 cm | G2, G3 | — |
+| dart with conserved intake | supported | ontology §4.3/§10; structural dart intent implemented, physical 4.0 cm closure remains G2/G3 | G2, G3 | — |
 | tuck and pleat | supported | ontology §4.3 models both; G3's exit names "darts, folds" | G3 | — |
 | gather | supported | ontology §4.3; a gather is an ease distribution along a span, which G3 proves | G3 | — |
 | hem, turned or faced | supported | ontology §4.7; the fixture's hem is 3.0 cm with an envelope corner | G2 | — |
