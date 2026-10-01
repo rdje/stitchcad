@@ -44,6 +44,23 @@ pub enum Mirroring {
     Single,
     /// Copies are cut in left/right pairs; the total quantity must be even.
     MirroredPairs,
+    /// A separately identified left or right member, paired with a distinct companion piece.
+    /// Its quantity counts copies of this member, not both members together.
+    PairMember {
+        /// The handedness printed on this member's label.
+        handedness: Handedness,
+        /// The companion's stable piece identity; the design validates reciprocity and quantity.
+        companion: EntityId,
+    },
+}
+
+/// The handedness of a separately identified mirrored-pair member.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Handedness {
+    /// Left member.
+    Left,
+    /// Right member.
+    Right,
 }
 
 /// The face presented when cutting.
@@ -98,7 +115,8 @@ pub enum LabelField {
 pub struct PrintedLabel<'a> {
     /// Authored label text.
     pub text: &'a LabelText,
-    /// Total cut quantity, including both members of every mirrored pair.
+    /// Physical copies represented by this piece definition. `MirroredPairs` includes both hands;
+    /// `PairMember` counts this member's copies only.
     pub quantity: u32,
     /// Whether the label must indicate pair L/R.
     pub mirroring: Mirroring,
@@ -176,6 +194,11 @@ pub enum PieceError {
         /// The odd cut quantity.
         quantity: u32,
     },
+    /// A separately identified pair member cannot be its own companion.
+    SelfCompanion {
+        /// The piece incorrectly named as both members.
+        piece: EntityId,
+    },
     /// Fold declarations do not agree with the cut plan.
     FoldCount {
         /// Required declaration count (zero or one).
@@ -216,6 +239,10 @@ impl fmt::Display for PieceError {
                     "mirrored pairs require an even total cut quantity, got {quantity}"
                 )
             }
+            Self::SelfCompanion { piece } => write!(
+                f,
+                "mirrored-pair member {piece} must name a distinct companion"
+            ),
             Self::FoldCount { expected, actual } => {
                 write!(f, "cut plan requires {expected} fold edges, got {actual}")
             }
@@ -262,6 +289,12 @@ impl Piece {
         {
             return Err(PieceError::UnpairedQuantity {
                 quantity: definition.quantity,
+            });
+        }
+        if matches!(definition.mirroring, Mirroring::PairMember { companion, .. } if companion == definition.id)
+        {
+            return Err(PieceError::SelfCompanion {
+                piece: definition.id,
             });
         }
         let expected = usize::from(definition.cut_on_fold);

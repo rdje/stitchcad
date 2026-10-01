@@ -152,7 +152,10 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 [`docs/history/stitchcad-defects-part1.md`](../history/stitchcad-defects-part1.md)
 (44 entries, 624 lines, 53323 bytes, `sha256:1897bde0…`) and
 [`stitchcad-defects-part2.md`](../history/stitchcad-defects-part2.md)
-(D55; 19 lines, 1834 bytes, `sha256:e8c7c2f0…`), under the remedy D46 prescribes; every id cited anywhere in this repository resolves there or in git history. Derive the counts
+(D55; 19 lines, 1834 bytes, `sha256:e8c7c2f0…`) and
+[`stitchcad-defects-part3.md`](../history/stitchcad-defects-part3.md)
+(D56; 15 lines, 1425 bytes, `sha256:84eb4014…`), under D46's remedy. Every cited defect
+resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
 `grep -h '^- \*\*D[0-9]' docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by
 moving to a new sealed segment in the commit that fixes it, which is the per-defect status token D38 asks
@@ -397,6 +400,21 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     `stitchcad-devnotes-part7.md` (57 lines / 5120 bytes) and brought both ledgers back under health,
     verified by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`.
 
+
+- **D57** — a sewing side addresses a pattern Piece and edge range, while a Piece can request
+  multiple physical cut copies. The spec has not decided whether copies have stable identities in
+  the sewing graph or are expanded later by assembly. Found `2026-10-01` before sewing-schema code.
+  - Census: `rg -n -i 'copy id|copy identity|copy reference|cut.copy|physical cop|occurrence|multiplicity|mirrored pair'
+    docs/book/src ROADMAP.md crates/sc-core/src --glob '*.md' --glob '*.rs'` enumerates the quantity,
+    mirrored-pair and print obligations, but no copy selector or identity contract. Ontology §4.2's
+    side tuple is `(piece, EdgeRef, parameter range)`; the fixture distinguishes back members by Piece
+    identity. Instantiation §2's output is sized pieces and a graph, without a cut-copy addressing rule.
+  - Impact: two physical copies may have different neighbours; choosing which copy a span joins by
+    renderer convention would silently widen the canonical semantics and risk incorrect assembly.
+  - Owner/schedule: **`G1-SLICE.3c.2b` before implementation**. The director was asked whether to give
+    every physical copy a stable identity (recommended) or retain a pattern-level graph with expansion
+    at assembly. This is a product-model decision, not an access request. Independent piece/mark work
+    proceeds while the answer is pending; no copy-address schema is inferred from elapsed time.
 
 ## Decisions
 

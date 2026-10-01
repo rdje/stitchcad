@@ -145,6 +145,20 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   warning-free `make book`, feature/release censuses and staged doctrine gate green.
   Commit: `STITCHCAD-G1-0006`
 
+- ID: `G1-SLICE.3c.1a`
+  Status: `done`
+  Goal: fix D56 — the shipped piece cut plan cannot represent the reference skirt's separate
+  cut-once L/R back members. Add explicit handedness and companion-piece identity while retaining
+  the existing total-quantity mirrored-pair mode. Printed labels derive the member's L/R information.
+  Acceptance: cut-once left/right pieces can carry reciprocal companion identities; missing hand or
+  companion is unrepresentable, self-companion is refused, existing even-quantity mirrored pairs
+  remain valid and odd totals in that mode remain refused. No geometric mirror claim is invented;
+  companion existence/reciprocity is a design-collection obligation at `.6`.
+  Verification: 14 piece-contract tests, strict `make check`, wasm, book, fixture/feature censuses,
+  ledger probes and staged doctrine gate green. D56 closed in defects-part3.
+  Commit: `STITCHCAD-G1-0008`
+  Design: `decision_piece-pair-members-have-explicit-handedness.md`.
+
 - ID: `G1-SLICE.3c.2`
   Status: `active`
   Goal: first discharge D55 with full-range resolution/repair (endpoints cannot certify an interior);
@@ -177,6 +191,9 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 - ID: `G1-SLICE.3c.2b`
   Status: `pending`
   Goal: implement the sewing graph content and D35 after `.3c.2a` supplies its range contract.
+  Pending director decision (D57): stable identity per physical cut copy versus pattern-level graph
+  with copy expansion at assembly. Asked `2026-10-01` through the session's input tool; the spec
+  carries cut quantity but no copy-address contract. Do not pick implicitly in the span schema.
   Acceptance: all `.3c.2` sewing-graph criteria met; range and endpoint ambiguity visible; same-piece
   seams explicitly specified and tested. Then close the `.3c.2` parent.
   Verification: `pending`
@@ -233,6 +250,8 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   domain types expose no public mutators); a stale revision is rejected; undo/redo restores
   semantics, not just geometry. Design-level reference validation consumes BOTH point registrations
   and whole-range repair evidence (`.3c.2a`); a lost interior blocks readiness even with live endpoints.
+  Pair-member metadata (`.3c.1a`) is checked against the design collection: companions exist, name
+  each other, have opposite handedness and equal quantities. Geometric mirroring stays G2's check.
   Verification: `pending`
   Commit: `pending`
 
@@ -354,9 +373,14 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.2b` | `pending` | sewing spans consume whole-range repairs; settle same-piece seam rule D35, carry partial and one-to-many correspondences with declared ease |
+| — | `G1-SLICE.3c.3` | `pending` | semantic notches, grainlines and allowances are independent of D57's pending sewing-copy identity decision |
 
 ## Decisions
+
+- `2026-10-01`: reviewing the reference skirt before spans reproduces D56: its separate cut-once
+  L/R members cannot be represented by `.3c.1`'s total-quantity pair mode. `.3c.1a` corrects that
+  omission before proceeding. D57's physical-copy addressing is a genuinely unspecified graph
+  contract, asked of the director; independent piece/mark work can proceed while it is pending.
 
 - `2026-10-01`: `.3c.2` has two children: full-range identity resolution (`.3c.2a`, fixing D55),
   then the sewing graph and same-piece seam contract (`.3c.2b`, fixing D35). The range-fold decision
@@ -409,6 +433,39 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3c.1a` — the canonical fixture's separate cut-once L/R members (D56)
+
+- [x] **REPRODUCE / ISSUE** — `reference-skirt.md` §6 declares separate `skirt_back_right` and
+  `skirt_back_left` Piece identities, quantity one each and reciprocal pairing. At `0a64a17`,
+  `piece.rs`'s mirroring enum has only `Single` and even-total `MirroredPairs`; it cannot carry a
+  cut-once member's hand/companion. Applying an even-total restriction to every pair mode makes
+  `the_reference_skirts_cut_once_pair_members_print_their_own_handedness` fail (`rc=101`).
+- [x] **ROOT CAUSE (WHY + WHERE)** — the first implementation conflated two pairing forms: one
+  definition requesting both hands, and two separately identified members. The glossary's mirrored
+  pair and the fixture's explicit Piece rows are the independent authorities. `cargo test -p sc-core
+  --test piece_contract the_reference_skirts_cut_once_pair_members_print_their_own_handedness` →
+  `1 passed`, `rc=0`: preserving cut-one quantities requires explicit member metadata, not name parsing.
+- [x] **FIX** — `Mirroring::PairMember { handedness, companion }` and `Handedness::Left/Right`;
+  this mode counts only this member's copies. `PieceError::SelfCompanion` rejects a member naming
+  itself. The existing even-total mode is unchanged. Complete printed labels derive both forms
+  from their cut plan. `.6` owns collection-level reciprocity/opposite-hand/equal-quantity checks;
+  G2 owns geometric mirroring. D57's copy-address question stays separate and unanswered.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test piece_contract` → `14 passed`,
+  `rc=0`: the fixture-shaped separate cut-one L/R members retain reciprocal ids and exact label
+  metadata; self-companion is the expected typed refusal, and existing even-total and odd-total
+  cases still discriminate. Reinstating the overbroad even-total condition makes the new fixture
+  regression red (`rc=101`); restored source passes. D56 is sealed closed in defects-part3.
+- [x] **NO REGRESSION** — `make check` → fmt, clippy `-D warnings`, all existing suites and new
+  pair-member tests green, `rc=0`; `make wasm` → cross-build green; `make book` → warning-free;
+  fixture derivation → `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`;
+  feature census → `0 failure(s)`; ledger probes → `9 pass / 0 fail`; `make gate` →
+  `=== all doctrines green ===`, all `rc=0`. No fixture cut quantity, pairing or geometry was edited.
+- [x] **LOCKSTEP** — pairing decision + INDEX, ontology §10 and label examples, Rust type docs,
+  task evidence/frontier, task index, resume pointer, LIVE_STATUS, CHANGELOG and promoted DEV_NOTES
+  lesson; closed D56 pointer and sealed descriptor, open D57 with the exact census and pending
+  director question. The generated map retains orientation paths/owners after its units entry is
+  shortened. Next `.3c.3` is independent work while the sewing-copy decision is pending.
 
 ### `G1-SLICE.3c.2a` — whole-range resolution, fixing D55 before sewing spans
 
@@ -715,6 +772,7 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `2026-10-01` | `.3b` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate`; `make probes`; `run_changelog_ledger_probes.sh` | `62 passed` unit + `8 passed` contract property + `9 passed` identity property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===`; `22 suite(s) green`; ledger probes `9 pass / 0 fail` — every `.3b` criterion re-derived, `rc=0` |
 | `2026-10-01` | `.3c.1` | `make check`; piece contract; `make wasm`; `make book`; `make gate`; release/feature censuses; ledger probes | `12 passed`; privacy doctest green; wasm green; book warning-free; all doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
 | `2026-10-01` | `.3c.2a` | range contract; `make check`; wasm; book; gate; feature census; ledger probes | `13 passed`; all Rust suites green; wasm green; book warning-free; doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
+| `2026-10-01` | `.3c.1a` | piece contract; `make check`; wasm; book; fixture/feature censuses; ledger probes; gate | `14 passed`; all Rust suites green; wasm/book green; `0 mismatch(es)`; `0 failure(s)`; `9 pass / 0 fail`; doctrines green, `rc=0` |
 
 ## Commit Log
 
@@ -728,7 +786,8 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `.3b` | `STITCHCAD-G1-0005 (leaf G1-SLICE.3b)` | the persistent-identity contract: `IdentityLedger`'s append-only edit journal, fold resolution under split/merge/reverse/delete/offset, derived `RepairTask`s + release rule; 62 unit + 8 property tests, wasm green; recorded in `decision_reference-resolution-journal-fold.md` |
 | `.3c.1` | `STITCHCAD-G1-0006 (leaf G1-SLICE.3c.1)` | immutable structural pieces with deferred geometry; D55 owned by the next child |
 | `.3c.2a` | `STITCHCAD-G1-0007 (leaf G1-SLICE.3c.2a)` | exact whole-range journal fold and visible range repairs; D55 fixed |
-| `.3c.2b` … `.16` | `pending` | `.3c` closes after all four children |
+| `.3c.1a` | `STITCHCAD-G1-0008 (leaf G1-SLICE.3c.1a)` | D56 fixed: separate cut-once L/R members, explicit companion metadata |
+| `.3c.2b` … `.16` | `pending` | `.3c` closes after its four object families; D57 pending, `.3c.3` proceeds independently |
 
 ## Changelog
 
@@ -786,3 +845,9 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
   separately from point endpoint ambiguity and G2 geometry. Thirteen contract tests and the existing
   suites pass, with the delete arm observed red when disabled. The ledgers roll over atomically;
   D55 is sealed closed in defects-part2. Next `.3c.2b` implements sewing spans and settles D35.
+
+- `2026-10-01`: `.3c.1a` fixes D56, found by comparing the new model with the canonical fixture:
+  separate cut-once L/R members now carry explicit hand/companion metadata; self-pairing is refused.
+  Existing even-total pair requests stay supported. Fourteen piece tests and all focused checks pass;
+  D56 is sealed closed. D57's physical-copy addressing is asked of the director and owned by `.3c.2b`;
+  the frontier takes independent marks/allowances (`.3c.3`) while that decision is pending.

@@ -35,6 +35,24 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0008 - separate cut-once L/R members are explicit piece content (leaf `G1-SLICE.3c.1a`)
+
+Fixed D56: the canonical skirt's separate left/right back members, each cut once, were not representable
+by the even-total mirrored-pair mode. `Mirroring::PairMember { handedness, companion }` now carries the
+member's own L/R label and distinct companion Piece identity; quantity counts this member's copies.
+Self-companions are refused. Existing even-total pair requests retain their original meaning.
+The book documents both forms; collection-level reciprocity and equal quantities are owned by `.6`,
+and geometric mirroring remains G2's obligation.
+
+Validation: 14 piece-contract tests (including the canonical fixture-shaped pair and self-companion
+refusal), strict `make check`, `make wasm`, `make book`, reference-fixture derivation, feature census,
+doctrine gate and ledger probes green. Applying the even-total rule to all pair modes makes the fixture
+regression fail. D56 closes in defects-part3; the decision records the two pairing forms.
+
+D57 is logged and owned by `.3c.2b`: the spec does not decide how a sewing side names physical cut copies.
+The director was asked to choose stable copy identities or pattern-level references with later expansion.
+No answer is inferred; independent marks/allowances (`.3c.3`) proceed while that decision is pending.
+
 ## STITCHCAD-G1-0007 - whole-interval reference resolution keeps lost interiors visible (leaf `G1-SLICE.3c.2a`)
 
 `IdentityLedger::resolve_range(EdgeRange)` now folds the complete positive-length interval through

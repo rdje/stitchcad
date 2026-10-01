@@ -36,8 +36,8 @@ pub use topology::{
 };
 
 pub use piece::{
-    CuttingSide, DirectedEdge, GeometricValidation, LabelField, LabelText, LoopLocation,
-    MaterialAssignment, Mirroring, Piece, PieceDefinition, PieceError, PrintedLabel,
+    CuttingSide, DirectedEdge, GeometricValidation, Handedness, LabelField, LabelText,
+    LoopLocation, MaterialAssignment, Mirroring, Piece, PieceDefinition, PieceError, PrintedLabel,
 };
 
 pub use range::{

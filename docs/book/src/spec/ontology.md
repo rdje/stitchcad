@@ -310,7 +310,13 @@ rejected. Construction lines must also name live edges. A cyclic list does not p
 endpoints coincide: even a one-edge curve loop still requires G2's closure check.
 
 The cut quantity is the **total number of physical copies**. `Mirroring::Single` accepts any positive
-quantity; `Mirroring::MirroredPairs` requires an even quantity (two means one L/R pair). A cut-on-fold
+quantity; `Mirroring::MirroredPairs` requires an even quantity (two means one L/R pair within one
+piece definition). Separate cut-once L/R members use `Mirroring::PairMember { handedness, companion }`:
+quantity counts this member's copies, the handedness is explicitly left or right, and the companion is
+another Piece identity. This is the reference skirt §6's back-piece form. A member cannot name itself
+as its companion; companion existence, reciprocity, opposite hands and equal quantities are checked
+at design-collection validation (`G1-SLICE.6`), not guessed by the standalone constructor. Actual
+geometric mirroring stays G2's obligation. A cut-on-fold
 piece declares exactly one fold edge on its outer boundary; other pieces declare none. The fabric
 side and assembly layer index are explicit content. Material assignment is either a material id or
 `Unresolved(reason)` with a nonblank explanation: an unresolved assignment is not defaulted to fabric.
@@ -319,7 +325,9 @@ The design will validate material identities against its material collection whe
 Printed labels carry nonblank name, size, fabric and colorway text. Their cut quantity, pair L/R and
 fold indicator derive from the cut plan rather than being separately editable inputs. For example:
 
-- A mirrored skirt front with quantity `2` prints cut two, pair L/R.
+- One mirrored-pair definition with quantity `2` prints cut two, pair L/R.
+- Separate `skirt_back_right` and `skirt_back_left` definitions with quantity `1` each carry opposite
+  handedness and reciprocal companion ids, and print their own cut-one R / cut-one L labels.
 - A single front on fold with quantity `1` and one boundary fold edge prints cut one on fold.
 - A material awaiting selection may carry the explicit reason "awaiting fabric selection" and print
   "unassigned woven fabric" / "undetermined" for fabric and colorway. This is inspectable content,

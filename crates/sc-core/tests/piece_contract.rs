@@ -6,7 +6,7 @@
 
 use sc_core::ontology::{
     CuttingSide, DeterministicIdGenerator, DirectedEdge, Direction, EdgeRef, EntityId,
-    GeometricValidation, IdGenerator, IdentityLedger, LabelField, LabelText, LocalTag,
+    GeometricValidation, Handedness, IdGenerator, IdentityLedger, LabelField, LabelText, LocalTag,
     LoopLocation, MaterialAssignment, Mirroring, Param, Piece, PieceDefinition, PieceError,
     Rational, ReleaseReadiness, Resolution,
 };
@@ -352,4 +352,73 @@ fn endpoint_inventory_cannot_certify_the_interior_of_an_edge_range() {
     assert!(!whole.has_full_coverage());
     assert_eq!(whole.repairs().count(), 1);
     // G1-SLICE.3c.2a supplies range evidence; G2 must still certify full contours.
+}
+
+#[test]
+fn the_reference_skirts_cut_once_pair_members_print_their_own_handedness() {
+    // D56: reference-skirt §6 has separate L/R back Piece entities, each cut once.
+    let (mut right, mut ledger, mut ids) = fixture();
+    let left_id = ids.next_id();
+    let mut left = right.clone();
+    left.id = left_id;
+    let left_edges = ledger.declare_edges(&mut ids, 8).unwrap();
+    let mut refs = left_edges.into_iter();
+    for item in left
+        .boundary
+        .iter_mut()
+        .chain(left.holes.iter_mut().flatten())
+        .chain(left.construction_lines.iter_mut())
+    {
+        item.edge = refs.next().unwrap();
+    }
+    right.quantity = 1;
+    right.label.name = "skirt back right".into();
+    right.mirroring = Mirroring::PairMember {
+        handedness: Handedness::Right,
+        companion: left_id,
+    };
+    left.quantity = 1;
+    left.label.name = "skirt back left".into();
+    left.mirroring = Mirroring::PairMember {
+        handedness: Handedness::Left,
+        companion: right.id,
+    };
+    let right = Piece::new(right, &ledger).unwrap();
+    let left = Piece::new(left, &ledger).unwrap();
+    assert_eq!(right.printed_label().quantity, 1);
+    assert_eq!(left.printed_label().quantity, 1);
+    assert_eq!(
+        right.printed_label().mirroring,
+        Mirroring::PairMember {
+            handedness: Handedness::Right,
+            companion: left.id(),
+        }
+    );
+    assert_eq!(
+        left.printed_label().mirroring,
+        Mirroring::PairMember {
+            handedness: Handedness::Left,
+            companion: right.id(),
+        }
+    );
+    // Labels encode intent; neither constructor certifies that the geometry is a mirror.
+    assert_eq!(
+        left.geometric_validation(),
+        GeometricValidation::DeferredToG2
+    );
+}
+
+#[test]
+fn a_pair_member_cannot_name_itself_as_its_companion() {
+    let (mut definition, ledger, _) = fixture();
+    definition.quantity = 1;
+    definition.mirroring = Mirroring::PairMember {
+        handedness: Handedness::Left,
+        companion: definition.id,
+    };
+    let id = definition.id;
+    assert_eq!(
+        Piece::new(definition, &ledger),
+        Err(PieceError::SelfCompanion { piece: id })
+    );
 }

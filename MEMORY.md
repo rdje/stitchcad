@@ -5,11 +5,11 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.3c.2b`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** settle D35's same-piece seam rule against the folded waistband fixture, then build
-  `SeamSpan`/`SewingGraph` with partial/one-to-many correspondences, declared ease and stop landmarks.
-  `.3c.2a`'s whole-range fold fixes D55; consume range repairs alongside endpoint choices. `.3c` remains
-  open until all four children close. Execution order: `docs/TASK_TREE.md`.
+- **Active tree:** `G1-SLICE`, frontier **`.3c.3`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** take `.3c.3` — semantic notches, directed/dual grainline references and per-edge
+  allowance descriptors. They use stable references and profile-parameter identities, without invented
+  defaults. `.3c.2b` sewing spans await D57's physical-copy addressing decision (asked of the director);
+  return there when answered. Pieces, full-range resolution and cut-once L/R member labels are committed.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

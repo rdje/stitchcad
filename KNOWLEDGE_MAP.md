@@ -9,11 +9,10 @@
 Entries are orientation-sized — path, what it is, where to enter, owner — because the map is a projection
 sharing its ceiling with a line per record and per tree: `decision_knowledge-map-entries-are-orientation-sized.md`.
 
-- `crates/sc-units/` — **the numerical contract, implemented**: fixed-point micrometres and microdegrees,
-  exact conversion ratios, five tolerance classes, typed diagnostics; no dependencies, so every runtime
-  profile including `wasm-viewer` can use it. Entry `crates/sc-units/src/lib.rs`, conformance
-  `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`. Owner
-  `G0-CONTRACT.2` / `.18`.
+- `crates/sc-units/` — fixed-point lengths/angles, exact conversions, five tolerance classes and typed
+  errors; dependency-free and wasm-safe. Entry `crates/sc-units/src/lib.rs`, tests
+  `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
+  Owner `G0-CONTRACT.2` / `.18`.
 - `crates/sc-core/` — **ontology in progress**: identity, topology-journal resolution and repairs, immutable
   structural `Piece` with deferred geometry. Sewing spans, marks, recipe and bus follow. Entry
   `crates/sc-core/src/ontology/`; tests `crates/sc-core/tests/`. Owner `G0-CONTRACT.3` / `G1-SLICE.3`.
@@ -80,6 +79,7 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - [`decision_maxline-health-derived-from-the-cell-budget.md`](docs/decisions/decision_maxline-health-derived-from-the-cell-budget.md)
 - [`decision_numerical-contract-fixed-point.md`](docs/decisions/decision_numerical-contract-fixed-point.md)
 - [`decision_ontology-invariants-structural-g1-geometric-g2.md`](docs/decisions/decision_ontology-invariants-structural-g1-geometric-g2.md)
+- [`decision_piece-pair-members-have-explicit-handedness.md`](docs/decisions/decision_piece-pair-members-have-explicit-handedness.md)
 - [`decision_product-work-takes-the-frontier.md`](docs/decisions/decision_product-work-takes-the-frontier.md)
 - [`decision_property-tests-dependency-free-recorded-seed.md`](docs/decisions/decision_property-tests-dependency-free-recorded-seed.md)
 - [`decision_range-resolution-preserves-entire-interval.md`](docs/decisions/decision_range-resolution-preserves-entire-interval.md)
