@@ -3,7 +3,7 @@
 ## Metadata
 
 - Tree ID: `G1-SLICE`
-- Status: `proposed`
+- Status: `active`
 - Roadmap lane: `ROADMAP.md` §11 gate **G1 — Executable architecture slice** (sources: §4
   architecture, §5 ADR-0001/0002, §6 constraint machinery, §7.3 runtime profiles, §7.8 API+MCP,
   §10 security)
@@ -51,7 +51,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 ## Task Tree
 
 - ID: `G1-SLICE`
-  Status: `proposed`
+  Status: `active`
   Goal: the architecture slice runs on native and in a browser, with the command bus and
   persistence as the only mutation path.
   Children: `.1`, `.2`, `.3a`/`.3b`/`.3c`, `.4` … `.16` (18 leaves; `.3` was decomposed `2026-09-30`)
@@ -113,7 +113,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   `decision_edge-parameter-bounded-exact-rational.md`.
 
 - ID: `G1-SLICE.3c`
-  Status: `pending`
+  Status: `active`
   Goal: the geometry-bearing object types (ontology §4) — `Piece`, `SeamSpan`/`SewingGraph`, `Notch`,
   `Grainline`, `SeamAllowance`, `Dart`/`Tuck`/`Pleat`/`Gather`, `Closure`, `Pocket` — with their
   structural invariants enforced at construction.
@@ -125,6 +125,59 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Verification: `pending`
   Commit: `pending`
   Design: `decision_ontology-invariants-structural-g1-geometric-g2.md`.
+  Children: `.3c.1` (pieces), `.3c.2` (sewing graph), `.3c.3` (marks and allowances),
+  `.3c.4` (garment constructions). The parent closes only after all four children.
+
+- ID: `G1-SLICE.3c.1`
+  Status: `done`
+  Goal: immutable `Piece` content, directed cyclic edge loops, complete printed labels, explicit
+  material assignment or unresolved state, and visible `GeometricValidation::DeferredToG2`.
+  Signoff finding (owned here): `make book` warns that release §6's literal `<receiver>` and
+  `<version>` scope placeholders are interpreted as unclosed HTML tags. Their rendered content is
+  hidden instead of showing the intended scope example. Reproduce in `target/piece-book.log`;
+  fix by code-formatting the literal placeholders and verify the rendered HTML escapes them.
+  Acceptance: empty/repeated loops, missing edges, zero multiplicity, invalid fold declarations and
+  incomplete labels are typed refusals; no public mutation bypasses validation; identity-ledger edits
+  do not rewrite the piece's references and endpoint resolution exposes orphaned references; geometric
+  winding, simplicity, containment and endpoint closure remain explicitly deferred. Rust checks, the
+  wasm cross-build and mdBook build pass.
+  Verification: 12 contract tests, privacy compile-fail test, `make check`, `make wasm`,
+  warning-free `make book`, feature/release censuses and staged doctrine gate green.
+  Commit: `STITCHCAD-G1-0006`
+
+- ID: `G1-SLICE.3c.2`
+  Status: `pending`
+  Goal: first discharge D55 with full-range resolution/repair (endpoints cannot certify an interior);
+  then `SeamSpan` and immutable `SewingGraph`, partial and one-to-many edge ranges, declared ease
+  distribution, direction and stop landmarks; resolve D35's same-piece seam rule against the supported
+  dart and trouser constructions before code.
+  Acceptance: a deleted interior fragment blocks full-range integrity even when endpoints resolve;
+  absent pieces/edges, empty or reversed parameter ranges, duplicate span identities and
+  missing stop references are typed refusals; same-piece seams have an explicit tested contract;
+  edits expose repairs without rewriting authored ranges. Geometric differential checks remain G2.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.3c.3`
+  Status: `pending`
+  Goal: `Notch`, directed and dual-reference `Grainline`, per-edge derived `SeamAllowance`; profile
+  parameters are identity references rather than invented defaults until G4 supplies parameter states.
+  Acceptance: references exist at construction; notch export geometry and encoding remain profile-owned;
+  unknown profile parameters are never replaced by a value; directed references survive reversal or
+  show repairs, and allowance inclusion is resolved per profile rather than as a global switch.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.3c.4`
+  Status: `pending`
+  Goal: semantic `Dart`/`Tuck`/`Pleat`/`Gather`, `Hem`, `Facing`/`Lining`/`Interfacing`, `Closure` and
+  `Pocket` with required content and validated structural references; close the object-type parent.
+  Acceptance: required anchors, operation identities, composition and parameter references are carried;
+  buttonhole size derives from its button rather than a second input; unsupported constructions are
+  refused explicitly; intake conservation stays visibly deferred to G2. Every ontology §4 object has
+  implementation evidence, synchronized book content and wasm-safe tests.
+  Verification: `pending`
+  Commit: `pending`
 
 - ID: `G1-SLICE.4`
   Status: `pending`
@@ -276,9 +329,16 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c` | `pending` | the geometry-bearing object types (ontology §4) — `Piece`, `SeamSpan`/`SewingGraph`, `Notch`, `Grainline`, `SeamAllowance`, darts and closures, structural invariants enforced at construction; consumes `.3a`'s identity types and `.3b`'s resolution contract |
+| — | `G1-SLICE.3c.2` | `pending` | full-range integrity (D55) before sewing spans; same-piece seam rule (D35), partial and one-to-many correspondences with declared ease |
 
 ## Decisions
+
+- `2026-10-01`: `.3c` is decomposed into four child leaves before implementation: pieces, sewing
+  graph, marks/allowances, garment constructions. The parent preserves its full ontology §4 scope;
+  each child is committed and verified independently. Directed loops encode cyclic ordering, not a
+  claim about endpoint closure. Printed cut quantity, pair and fold fields derive from the piece's
+  cut plan so the label cannot contradict it. Parameter states remain G4's contract; later children
+  carry parameter identities until then rather than manufacture defaults.
 
 - `2026-10-01`: `.3b`'s design boundary is recorded BEFORE the code, per the `.3` decomposition's discipline:
   `decision_reference-resolution-journal-fold.md` — a stored reference is never rewritten, resolution is a
@@ -319,6 +379,47 @@ mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file 
 unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
+
+### `G1-SLICE.3c.1` — immutable structural pieces with visibly deferred geometry
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.1 requires piece content and invariants, but
+  `git grep -n 'pub struct Piece' a6d465f -- crates` → no matches, `rc=1`. The existing identity types
+  and journal do not supply a piece constructor. `make book` also exposed a formatting defect in
+  release §6: literal scope placeholders were parsed as unclosed `<receiver>` / `<version>` HTML tags.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the missing constructor is the next ontology layer, not a
+  geometry-kernel defect: `cargo test -p sc-core --test piece_contract` → `12 passed`, `rc=0`, with
+  invalid-loop/cut-plan/label/live-reference cases pinpointing the constructor boundary in `piece.rs`.
+  The structural/geometric decision remains authoritative. An intentional mutation replacing the
+  empty-loop predicate with `false` makes `empty_boundary_and_each_empty_hole_name_the_exact_loop`
+  fail at the expected empty-boundary assertion (`rc=101`); the source was restored before signoff.
+- [x] **FIX** — `ontology::piece` adds immutable `Piece`, editable `PieceDefinition`, directed cyclic
+  edge lists, explicit material assignment, complete label view, typed `PieceError` and the only
+  geometric state `DeferredToG2`. Labels derive cut information from the plan. Public access is
+  shared-only; a compile-fail doctest exercises private-content protection. Literal release scope
+  placeholders are code-formatted, so they render visibly. `.3c`'s four children own the remaining scope.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test piece_contract` → `12 passed`, `rc=0`:
+  all required content retained; invalid boundary/hole/live-edge/cut-plan/fold/material/label cases
+  name their exact typed refusal; cloned-input mutation leaves the validated object unchanged;
+  reverse/delete endpoint queries expose direction and repair without rewriting authored content.
+  `make wasm` → cross-build green, `rc=0`. `make book` → no warnings, `rc=0`; rendered release HTML
+  contains `<code>&lt;receiver&gt;</code> <code>&lt;version&gt;</code>` instead of hidden raw tags.
+  D55's passing counterexample explicitly proves the endpoint inventory is not range completeness;
+  its repair is scheduled immediately at `.3c.2`, before sewing spans consume the journal.
+- [x] **NO REGRESSION** — `make check` → fmt and clippy `-D warnings` clean, existing 62 unit +
+  8 contract-property + 9 identity-property tests, 12 piece-contract tests and the privacy doctest
+  green; `sc-units` unchanged and its unit/property/doc tests green, `rc=0`. `make gate` →
+  `=== all doctrines green ===`, `rc=0`; release and feature-matrix censuses → `0 failure(s)`, `rc=0`;
+  `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`, `rc=0`. The new ontology §10 initially made
+  feature coverage red (one uncited clause); citing it in the label row restored the census without
+  weakening its coverage rule.
+- [x] **LOCKSTEP** — ontology §10 and its implementation-status note, feature-matrix label row,
+  release-scope rendering, crate docs/description, subsystem map input and generated Knowledge Map;
+  `.3c` decomposition and evidence, defect D55 with its scheduled owner, task index, resume pointer,
+  LIVE_STATUS, CHANGELOG and DEV_NOTES in this commit. Reviewed read-only source policy bodies match
+  the local neutral bodies; cleanup is not due (latest run `2026-09-30` 19:00 UTC, startup
+  `2026-10-01` 12:47 UTC).
+  promotion: declined (the structural/geometric boundary is already a decision; D55 is a tracked
+  open contract to be resolved, rather than a settled general rule).
 
 ### `G1-SLICE.3b` — the persistent-identity contract: a reference is never rewritten, the journal folds
 
@@ -544,6 +645,7 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `2026-09-30` | `.2` | `cargo test -p sc-units --test property`; `make wasm`; `make gate` | `21 passed` (round-trips, class separation, typed dimension/non-finite errors); wasm cross-build green; `=== all doctrines green ===` — every `.2` criterion re-derived, `rc=0` |
 | `2026-09-30` | `.3a` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate` | `31 passed` unit + `9 passed` property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===` — every `.3a` criterion re-derived, `rc=0` |
 | `2026-10-01` | `.3b` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate`; `make probes`; `run_changelog_ledger_probes.sh` | `62 passed` unit + `8 passed` contract property + `9 passed` identity property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===`; `22 suite(s) green`; ledger probes `9 pass / 0 fail` — every `.3b` criterion re-derived, `rc=0` |
+| `2026-10-01` | `.3c.1` | `make check`; piece contract; `make wasm`; `make book`; `make gate`; release/feature censuses; ledger probes | `12 passed`; privacy doctest green; wasm green; book warning-free; all doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
 
 ## Commit Log
 
@@ -555,7 +657,8 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
 | `.3` | `STITCHCAD-G1-0003 (leaf G1-SLICE.3)` | decomposed into `.3a`/`.3b`/`.3c`; the three design boundaries recorded as layer-C decisions |
 | `.3a` | `STITCHCAD-G1-0004 (leaf G1-SLICE.3a)` | the identity layer: `EntityId`/ULID + injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the exact `Rational`/`Param`; 40 tests, wasm green |
 | `.3b` | `STITCHCAD-G1-0005 (leaf G1-SLICE.3b)` | the persistent-identity contract: `IdentityLedger`'s append-only edit journal, fold resolution under split/merge/reverse/delete/offset, derived `RepairTask`s + release rule; 62 unit + 8 property tests, wasm green; recorded in `decision_reference-resolution-journal-fold.md` |
-| `.3c` … `.16` | `pending` | — |
+| `.3c.1` | `STITCHCAD-G1-0006 (leaf G1-SLICE.3c.1)` | immutable structural pieces with deferred geometry; D55 owned by the next child |
+| `.3c.2` … `.16` | `pending` | `.3c` closes after all four children |
 
 ## Changelog
 
@@ -600,3 +703,10 @@ against the two design decisions `.3` recorded — dependency-free, and wasm-saf
   append also discharged two containment obligations it owed (D54: the CHANGELOG and DEV_NOTES rollovers the
   prior slice crossed without sealing) and surfaced D53 (the KNOWLEDGE_MAP ceiling pressure `.3a` flagged).
   The frontier advances to `.3c` (the geometry-bearing object types).
+
+- `2026-10-01`: `.3c` decomposed into four children; `.3c.1` landed `Piece`, its immutable validated
+  content and complete derived label view. Structural refusals are tested, geometry is always
+  `DeferredToG2`, endpoints expose repairs without rewriting references. A tracked middle-fragment
+  deletion counterexample creates D55, owned immediately by `.3c.2` before sewing spans are built.
+  The book's two literal scope placeholders were repaired after the renderer diagnosed hidden HTML;
+  feature coverage now cites the implemented piece contract. All focused gates pass; next `.3c.2`.

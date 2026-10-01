@@ -1,17 +1,17 @@
 //! `sc-core` — the garment ontology, the construction recipe and the command bus.
 //!
-//! **Status: the ontology's identity layer (`.3a`) and its persistent-identity contract (`.3b`) have
-//! landed.** The crate began at gate G0 as a documented skeleton whose one job was to prove the WASM story
+//! **Status: identity (`.3a`), reference resolution (`.3b`) and structural pieces (`.3c.1`) landed.** The crate began at gate G0 as a documented skeleton whose one job was to prove the WASM story
 //! for real (the roadmap's G0 CI clause, §4.3 and §7.3, requires a real `cargo build --target
 //! wasm32-unknown-unknown`, not a host `cargo check`). It now carries entity identity, the stable
 //! topological references, the exact rational parameter, and the reference-resolution contract under
-//! split/merge/reverse/delete/offset with its repair tasks, in [`ontology`].
+//! split/merge/reverse/delete/offset with its repair tasks, and immutable structurally validated pieces
+//! with explicit deferred geometric obligations, in [`ontology`].
 //!
 //! What lands here, and when:
 //!
 //! | Module | Contents | Leaf |
 //! | --- | --- | --- |
-//! | `ontology` | **landed (`.3a`):** `EntityId` (a ULID) and the injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, the bounded exact `Rational` and its `[0, 1]` `Param`. **landed (`.3b`):** the persistent-identity contract — the `IdentityLedger`'s append-only edit journal, reference resolution under split/merge/reverse/delete/offset, `RepairTask`s and the release rule. **pending:** `Piece`, `SeamSpan`/`SewingGraph`, `Notch`, `Grainline`, `SeamAllowance`, darts and closures (`.3c`) | `G0-CONTRACT.3` specifies, `G1-SLICE.3a`/`.3b`/`.3c` implement |
+//! | `ontology` | identity, exact parameters, topology journal and repairs; structural `Piece` with deferred geometric validation; sewing spans and other objects follow | `G1-SLICE.3a`/`.3b`/`.3c` |
 //! | `recipe` | the formula graph and ordered drafting operations, evaluated in one deterministic pass | `G0-CONTRACT.9`, `G1-SLICE.5` |
 //! | `command` | the typed command bus: atomic groups, preview/commit, revision preconditions, idempotency, undo granularity | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |

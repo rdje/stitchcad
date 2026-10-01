@@ -75,7 +75,7 @@ chapter is inside that family or explicitly outside it.
 | an offset that cannot meet its budget | rejected | roadmap §4.2: exports fail explicitly rather than emit self-intersecting geometry | G2 | `geom_offset_budget` |
 | piece holes and internal construction lines | supported | ontology §4.1 requires them, oriented opposite to the boundary | G2 | — |
 | cut on fold | supported | ontology §4.1; the fixture's front piece is cut on the CF fold with no allowance there | G2 | — |
-| multiplicity, cut quantity and label data | supported | ontology §4.1: label data must print without consulting anything else | G2 labels, G5 piece manager | — |
+| multiplicity, cut quantity and label data | supported | ontology §4.1, ontology §10: complete labels derive cut information from the validated plan | G1 structure, G2 labels, G5 piece manager | — |
 | layer index for 3D ordering | deferred | ontology §4.1 stores it, but assembly is the V1 track's proof | V1 | `env_layer_index_3d` |
 
 ## 4. Seams, allowances and marks

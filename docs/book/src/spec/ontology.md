@@ -1,7 +1,8 @@
 # Garment ontology
 
 > **Status:** normative specification, gate **G0** (roadmap §3.1, §4.1). Specified here; implemented by
-> `sc-core` and `sc-measure` at gate G1 (leaves `G1-SLICE.3`, `G1-SLICE.4`). Terms used below are
+> `sc-core` and `sc-measure` at gate G1 (leaves `G1-SLICE.3`, `G1-SLICE.4`). Pieces are now structurally
+> implemented (§10); other object types follow. Terms used below are
 > defined in the [glossary](glossary.md).
 
 This chapter defines every first-class object in a StitchCAD design: what it is, what it must carry,
@@ -294,3 +295,46 @@ part of the canonical project; it is regenerated.
   form, and any export that needs it is blocked or badged per the policy matrix.
 - **Save/load preserves semantics**, including drafting intent: two designs with identical contours but
   different recipes remain distinct.
+
+## 10. Executable pieces at G1
+
+`sc_core::ontology::piece` implements §4.1's **structural** content (`G1-SLICE.3c.1`).
+`Piece::new(PieceDefinition, &IdentityLedger)` returns an immutable `Piece` or a typed `PieceError`
+naming the failed invariant. `PieceDefinition` is editable input; it is not a validated domain object.
+A command replaces a piece through this constructor rather than modifying its validated fields.
+
+The boundary and each hole are cyclic sequences of `DirectedEdge { edge, direction }`. The last edge
+implicitly precedes the first; **do not repeat the first edge at the end**. Empty loops, repeated cut
+edges (including an edge shared by two cut loops), and references absent from the current ledger are
+rejected. Construction lines must also name live edges. A cyclic list does not prove that geometric
+endpoints coincide: even a one-edge curve loop still requires G2's closure check.
+
+The cut quantity is the **total number of physical copies**. `Mirroring::Single` accepts any positive
+quantity; `Mirroring::MirroredPairs` requires an even quantity (two means one L/R pair). A cut-on-fold
+piece declares exactly one fold edge on its outer boundary; other pieces declare none. The fabric
+side and assembly layer index are explicit content. Material assignment is either a material id or
+`Unresolved(reason)` with a nonblank explanation: an unresolved assignment is not defaulted to fabric.
+The design will validate material identities against its material collection when that collection lands.
+
+Printed labels carry nonblank name, size, fabric and colorway text. Their cut quantity, pair L/R and
+fold indicator derive from the cut plan rather than being separately editable inputs. For example:
+
+- A mirrored skirt front with quantity `2` prints cut two, pair L/R.
+- A single front on fold with quantity `1` and one boundary fold edge prints cut one on fold.
+- A material awaiting selection may carry the explicit reason "awaiting fabric selection" and print
+  "unassigned woven fabric" / "undetermined" for fabric and colorway. This is inspectable content,
+  not evidence that a production release is acceptable.
+
+`definition()` exposes authored content by shared reference; editing a clone does not change the
+validated piece. `edges()` includes boundary, hole and construction-line references. After a ledger
+edit, `endpoint_resolutions()` resolves the held traversal endpoints and exposes `Resolution` values,
+including repair tasks; it never rewrites the authored references. `endpoint_references()` supplies
+an endpoint inventory for the command bus's future atomic registration step. These queries **do not
+reconstruct a contour or certify complete-edge integrity**: deleting an interior split fragment can
+leave both original endpoints resolvable. Full recipe/geometry validation remains required before release.
+
+Every piece reports `GeometricValidation::DeferredToG2`. This is deliberately **not** a valid-geometry
+badge. Endpoint closure, CCW outer winding, opposite hole winding, simplicity, holes strictly inside
+and non-intersecting, and intake conservation remain `G2-2D.1`'s obligations. G1 has no constructor
+that marks these checks passed; this implements the boundary recorded in
+`decision_ontology-invariants-structural-g1-geometric-g2.md`.

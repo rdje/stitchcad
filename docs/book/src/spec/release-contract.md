@@ -128,7 +128,7 @@ acceptance record and every approval names its scope, and a scope is a tuple, no
   target system nobody tested is `release_scope_widened`, and G7's supported-envelope statement is built
   from these scopes rather than from an impression of them.
 - **A production claim names its scope in the same sentence.** "Validated for woven womenswear skirts on
-  <receiver> <version>" is a claim; "validated" is not.
+  `<receiver>` `<version>`" is a claim; "validated" is not.
 
 ## 7. Human approval, and what an agent may do
 

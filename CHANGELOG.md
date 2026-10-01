@@ -34,6 +34,25 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0006 - immutable structural pieces, with geometry visibly deferred (leaf `G1-SLICE.3c.1`)
+
+`sc_core::ontology::piece` now builds immutable `Piece` objects from editable `PieceDefinition` input.
+Directed cyclic cut loops must be nonempty, distinct and live in the identity ledger; construction lines
+must also exist. Cut quantities, mirrored pairs, fold-edge declarations, material explanations and complete
+print text are checked with typed `PieceError` diagnostics. Quantity, pair and fold print fields derive
+from the cut plan. Every piece reports `GeometricValidation::DeferredToG2`; no winding, simplicity,
+containment or geometric-closure claim is made.
+
+The object-type leaf `.3c` now has four independently committed children. Piece endpoint queries expose
+repair tasks after edits without rewriting authored content. A tracked counterexample proves endpoints
+cannot certify an entire fragmented edge (D55); the next child `.3c.2` owns full-range resolution before
+sewing spans use it. Ontology §10 documents the implemented API and its limits.
+
+Validation: `make check` (fmt, strict clippy, unit/property suites and private-content compile-fail test),
+`cargo test -p sc-core --test piece_contract` (12 contract tests), `make wasm`, `make book`, doctrine gate
+and changelog-ledger probes, all green. Startup compared the neutral README, claim-verification and
+containment policy bodies with their read-only sources: no differences. Cleanup remained within 24 hours.
+
 ## STITCHCAD-G1-0005 - the persistent-identity contract: a reference is never rewritten, the journal folds (leaf `G1-SLICE.3b`)
 
 G1's second new product code. `sc_core::ontology` now carries the persistent-identity contract the whole

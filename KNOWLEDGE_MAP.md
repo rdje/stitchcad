@@ -14,10 +14,9 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
   profile including `wasm-viewer` can use it. Entry `crates/sc-units/src/lib.rs`, conformance
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`. Owner
   `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/` — **the ontology, being built**: identity (`.3a`) and the persistent-identity contract
-  (`.3b` — `IdentityLedger`: resolution under split/merge/reverse/delete/offset, derived
-  `RepairTask`s) landed; object types (`.3c`), recipe, command bus, uncertainty follow. Entry
-  `crates/sc-core/src/ontology/`. Owner `G0-CONTRACT.3` (spec), `G1-SLICE.3a`–`.3c` (code).
+- `crates/sc-core/` — **ontology in progress**: identity, topology-journal resolution and repairs, immutable
+  structural `Piece` with deferred geometry. Sewing spans, marks, recipe and bus follow. Entry
+  `crates/sc-core/src/ontology/`; tests `crates/sc-core/tests/`. Owner `G0-CONTRACT.3` / `G1-SLICE.3`.
 - `docs/book/src/spec/` — the normative specification the director reviews: one chapter per contract
   family (units, ontology, formula language, envelope, interchange, release, command layer, and the
   rest). Owner the `G0-CONTRACT` leaves; chapter index `docs/book/src/SUMMARY.md`.
