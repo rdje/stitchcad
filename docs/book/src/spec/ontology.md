@@ -315,6 +315,7 @@ bounded; all existing examples and local API vocabulary are preserved there.
 | Physical cut copies | Explicit identities, exact quantity/orientation plan | G2/V1 physical transforms |
 | Notch | Semantic anchor, symbolic profile bindings | G4 physical geometry/encoding |
 | Sewing graph | Copy-addressed spans, disjoint self-seams, explicit ease and stops | G2/G3 walking; recipe/profile values |
+| SeamAllowance | Per-edge width origins, corner intent, symbolic inclusion | G2 bounded offsets; G4 target policy |
 | Grainline | Directed owned references and explicit angle/print intent | G2 straightness/actual angles; symbolic values |
 
 The companion chapter exposes the validation boundary and its testable limits. These APIs do not

@@ -277,3 +277,37 @@ in `decision_ontology-invariants-structural-g1-geometric-g2.md`.
 | `ParallelTo` | Explicit codirected alignment intent |
 | `AtAngle` | Declared angle from a directed reference to the arrow |
 | `DeferredToG4` | Profile declaration identity held without resolved value validation |
+
+**Per-edge allowance descriptors (`G1-SLICE.3c.3c`).** `SeamAllowance::new` holds a source
+Piece's whole edge, width origin, explicit corner and mandatory logical inclusion declaration. Unknown,
+orphaned or ambiguous references and foreign current intervals are typed refusals. Whole-interval
+coverage matters: after a merge, owned endpoints cannot conceal a foreign middle segment. Split,
+merge, reversal and deletion queries expose the raw interval/endpoint evidence and never rewrite the
+held descriptor or attach it to a replacement edge.
+
+An explicit width carries both its authored parameter id and nonnegative Length. An authored zero is
+legal explicit content, not an inferred absence or a fallback; the fixture's fold and fused interfacing
+retain their absent allowance descriptors. Formula/profile width sources carry only declaration ids,
+without evaluated values or copied uncertainty states. For example, distinct side-seam edges may share
+one 10 000 µm width parameter while the hem names a 30 000 µm source and an envelope corner. Each
+edge keeps its own descriptor identity and corner choice. Miter, slant, envelope, trim and step are
+intent here; none constructs an offset until G2.
+
+Inclusion carries a mandatory ProfileParameterRef, with possible resolved policy vocabulary
+`IncludedInContour` and `GeneratedDownstream`. The design can retain one logical declaration while
+two target profiles resolve it differently. G1 returns no resolved policy, cached flag, global boolean
+or exported contour. Every descriptor reports `ProfileBindingValidation::DeferredToG4` and
+`GeometricValidation::DeferredToG2`. `.5`/`.6` and G4 validate parameter existence, kinds, values and
+states; G2-2D.2/.3 owns bounded offsets, corner geometry, logged topology repair and pathology tests.
+The release matrix still gives unknown ownership/width a preview badge, draft sidecar and production
+block; no unread binding produces a default. The fixture's five pieces and goldens remain unchanged.
+
+| API token | Meaning in the allowance implementation |
+| --- | --- |
+| `AllowanceWidth` | Explicit authored parameter/value, formula declaration or profile declaration |
+| `CornerTreatment` | Authored miter/slant/envelope/trim/step intent |
+| `AllowanceInclusion` | Possible target-profile inclusion vocabulary, without a G1 selection |
+| `IncludedInContour` | Resolved policy includes allowance in the contour |
+| `GeneratedDownstream` | Resolved policy delegates allowance generation to the receiver |
+| `SeamAllowanceDefinition` | Editable per-edge descriptor input |
+| `SeamAllowanceError` | Typed negative-width or unresolved/foreign-edge refusal |

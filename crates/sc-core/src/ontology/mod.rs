@@ -4,7 +4,7 @@
 //! Normative source: `docs/book/src/spec/ontology.md` (gate G0, specified by `G0-CONTRACT.3`). Implemented
 //! across three ordered slices: **`.3a`** the identity layer, **`.3b`** the persistent-identity contract
 //! that resolves references under split/merge/reverse/delete (both landed), and **`.3c`** the
-//! geometry-bearing object types (pieces, copy plans, notches, grainlines and sewing graphs landed;
+//! geometry-bearing object types (pieces, copy plans, notches, grainlines, allowances and sewing graphs landed;
 //! other marks and constructions follow).
 //!
 //! The identity layer is the foundation the other two consume: a reference is meaningless without a stable
@@ -13,6 +13,7 @@
 //!
 //! | Submodule | Contents | Leaf |
 //! | --- | --- | --- |
+//! | [`allowance`] | per-edge width origins, corner intent and symbolic profile inclusion | `.3c.3c` |
 //! | [`anchor`] | shared born-valid semantic anchor checks and typed refusals | `.3c.3a`/`.3c.2b.2` |
 //! | [`cut`] | explicit physical-copy identities, complete quantity/orientation validation | `.3c.2b.1` |
 //! | [`grain`] | directed grainline and independent stripe/plaid references, deferred angles | `.3c.3b` |
@@ -25,6 +26,7 @@
 //! | [`sewing`] | copy-addressed spans, disjoint self-seams, declared ease and semantic stops | `.3c.2b.2` |
 //! | [`topology`] | the persistent-identity contract: the edit journal, resolution, `RepairTask`s | `.3b` |
 
+pub mod allowance;
 pub mod anchor;
 pub mod cut;
 pub mod grain;
@@ -74,4 +76,9 @@ pub use sewing::{
 pub use grain::{
     DirectedRange, DirectedRangePortion, DirectedRangeResolution, GrainAlignment, GrainAngle,
     GrainReferenceRole, Grainline, GrainlineDefinition, GrainlineError,
+};
+
+pub use allowance::{
+    AllowanceInclusion, AllowanceWidth, CornerTreatment, SeamAllowance, SeamAllowanceDefinition,
+    SeamAllowanceError,
 };

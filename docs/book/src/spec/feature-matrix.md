@@ -85,9 +85,9 @@ chapter is inside that family or explicitly outside it.
 | seam spans, partial and one-to-many | supported | ontology §4.2, ontology §10: copy-addressed partial spans and explicit same-copy rule landed | G3 | — |
 | the sewing graph as a first-class object | supported | ontology §4.2, ontology §10: immutable graph addresses physical-copy identities | G2 fixture, G3 | — |
 | declared ease distribution along a span | supported | ontology §4.2, ontology §10: explicit distribution intent landed; G3 checks actual cap ease | G3 | — |
-| seam allowance per edge, variable widths | supported | ontology §4.4; the fixture carries 1.0 / 1.5 / 3.0 cm in one garment | G2 | — |
+| seam allowance per edge, variable widths | supported | ontology §4.4/§10; descriptors implemented at G1; actual variable offsets at G2 | G2 | — |
 | the five corner treatments | supported | ontology §4.4 names miter, slant, envelope, trim and step as the vocabulary | G2 | — |
-| allowance included in contour, or generated downstream | supported | ontology §4.4 resolves it per Factory Profile, never as a project boolean | G4 policy, G6 receivers | — |
+| allowance included in contour, or generated downstream | supported | ontology §4.4/§10; symbolic inclusion binding implemented; target value resolution at G4 | G4 policy, G6 receivers | — |
 | notch: single, double, drill | supported | roadmap §15 item 12 makes these three the v1 typed set; ontology §4.5, ontology §10: symbolic semantic anchors landed; no geometry defaults | G3 | — |
 | notch: V, I, T, U, castle | deferred | roadmap §15 item 12 stages them to G4 export | G4 | `env_notch_type` |
 | notch encoding: coded point or drawn geometry | supported | ontology §4.5, ontology §10: encoding binding is symbolic; both forms remain export targets | G4 | — |

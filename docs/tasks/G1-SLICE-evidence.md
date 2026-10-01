@@ -192,3 +192,216 @@ decision recorded before the code, dependency-free and wasm-safe.
   promotion: promoted by `decision_reference-resolution-journal-fold.md` (carries `answers:`) — the durable
   design boundary is recorded there so `.3c`/`.6`/`.7` inherit it rather than re-litigate.
 
+### `G1-SLICE.3c.1` — immutable structural pieces with visibly deferred geometry
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.1 requires piece content and invariants, but
+  `git grep -n 'pub struct Piece' a6d465f -- crates` → no matches, `rc=1`. The existing identity types
+  and journal do not supply a piece constructor. `make book` also exposed a formatting defect in
+  release §6: literal scope placeholders were parsed as unclosed `<receiver>` / `<version>` HTML tags.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the missing constructor is the next ontology layer, not a
+  geometry-kernel defect: `cargo test -p sc-core --test piece_contract` → `12 passed`, `rc=0`, with
+  invalid-loop/cut-plan/label/live-reference cases pinpointing the constructor boundary in `piece.rs`.
+  The structural/geometric decision remains authoritative. An intentional mutation replacing the
+  empty-loop predicate with `false` makes `empty_boundary_and_each_empty_hole_name_the_exact_loop`
+  fail at the expected empty-boundary assertion (`rc=101`); the source was restored before signoff.
+- [x] **FIX** — `ontology::piece` adds immutable `Piece`, editable `PieceDefinition`, directed cyclic
+  edge lists, explicit material assignment, complete label view, typed `PieceError` and the only
+  geometric state `DeferredToG2`. Labels derive cut information from the plan. Public access is
+  shared-only; a compile-fail doctest exercises private-content protection. Literal release scope
+  placeholders are code-formatted, so they render visibly. `.3c`'s four children own the remaining scope.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test piece_contract` → `12 passed`, `rc=0`:
+  all required content retained; invalid boundary/hole/live-edge/cut-plan/fold/material/label cases
+  name their exact typed refusal; cloned-input mutation leaves the validated object unchanged;
+  reverse/delete endpoint queries expose direction and repair without rewriting authored content.
+  `make wasm` → cross-build green, `rc=0`. `make book` → no warnings, `rc=0`; rendered release HTML
+  contains `<code>&lt;receiver&gt;</code> <code>&lt;version&gt;</code>` instead of hidden raw tags.
+  D55's passing counterexample explicitly proves the endpoint inventory is not range completeness;
+  its repair is scheduled immediately at `.3c.2`, before sewing spans consume the journal.
+- [x] **NO REGRESSION** — `make check` → fmt and clippy `-D warnings` clean, existing 62 unit +
+  8 contract-property + 9 identity-property tests, 12 piece-contract tests and the privacy doctest
+  green; `sc-units` unchanged and its unit/property/doc tests green, `rc=0`. `make gate` →
+  `=== all doctrines green ===`, `rc=0`; release and feature-matrix censuses → `0 failure(s)`, `rc=0`;
+  `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`, `rc=0`. The new ontology §10 initially made
+  feature coverage red (one uncited clause); citing it in the label row restored the census without
+  weakening its coverage rule.
+- [x] **LOCKSTEP** — ontology §10 and its implementation-status note, feature-matrix label row,
+  release-scope rendering, crate docs/description, subsystem map input and generated Knowledge Map;
+  `.3c` decomposition and evidence, defect D55 with its scheduled owner, task index, resume pointer,
+  LIVE_STATUS, CHANGELOG and DEV_NOTES in this commit. Reviewed read-only source policy bodies match
+  the local neutral bodies; cleanup is not due (latest run `2026-09-30` 19:00 UTC, startup
+  `2026-10-01` 12:47 UTC).
+  promotion: declined (the structural/geometric boundary is already a decision; D55 is a tracked
+  open contract to be resolved, rather than a settled general rule).
+
+### `G1-SLICE.3c.2a` — whole-range resolution, fixing D55 before sewing spans
+
+- [x] **REPRODUCE / ISSUE** — D55's tracked point-only counterexample at `0d7a4a5` leaves both held
+  endpoints resolved after deleting the middle of three fragments. Its ledger verdict is still
+  `Releasable`, correctly scoped to point registrations. `cargo test -p sc-core --test piece_contract
+  endpoint_inventory_cannot_certify_the_interior_of_an_edge_range` → `1 passed`, `rc=0`: sampling
+  cannot prove an interval's integrity, and the new piece assertion now demands a visible range repair.
+- [x] **ROOT CAUSE (WHY + WHERE)** — the point fold answers one parameter's fate, while a sewing span
+  holds an interval; the error is treating those as the same quantity. `cargo test -p sc-core --test
+  range_contract arbitrarily_narrow_trimmed_gaps_cannot_escape_the_interval_fold` → `1 passed`, `rc=0`:
+  every hundredths-grid point resolves while the exact uncovered interval is returned as a repair.
+  The solution is interval partition through the journal, recorded before code in
+  `decision_range-resolution-preserves-entire-interval.md`, not adding more sampling points.
+- [x] **FIX** — `ontology::range`: `EdgeRange`, `RangeResolution`, `ResolvedRange`, ordered
+  `RangePortion`s, typed `RangeRepairTask`/`RangeIssue`, and the exact whole-interval fold on the
+  existing public journal. Split/offset use interval intersection (offset gaps retained); merge uses
+  declared arc lengths; reversal preserves authored traversal; deletion and arithmetic refusal retain
+  visible tasks. `Piece::range_resolutions` exposes the full-edge evidence. Point API unchanged.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test range_contract` → `13 passed`, `rc=0`:
+  D55 returns a task naming the original held range, deleted middle fragment and delete operation,
+  despite resolved endpoints; partial ranges, merge/reverse, offset order/gaps, missing sources and
+  overflow are checked by exact payload. Generated scripts compare the interval fold with the
+  independent existing point fold away from ambiguous boundaries. Disabling the range-delete arm
+  makes `d55_deleted_interior_blocks_range_coverage_despite_two_resolved_endpoints` fail, `rc=101`;
+  restored source passes. D55 closes in immutable `stitchcad-defects-part2.md`.
+- [x] **NO REGRESSION** — `make check` → fmt, strict clippy and all unit/property/contract/doc suites
+  green, `rc=0` (62 core unit, 8 identity-contract, 9 identity-property, 12 piece-contract and 13
+  range-contract tests; sc-units unchanged). `make wasm` → wasm cross-build green; `make book` →
+  warning-free build; feature census → `0 failure(s)`; ledger probes → `9 pass / 0 fail`; `make gate`
+  → `=== all doctrines green ===`, all `rc=0`. The point registration verdict is not broadened:
+  full coverage, endpoint ambiguity and G2 geometric validity remain separately visible.
+- [x] **LOCKSTEP** — pre-code decision + INDEX, ontology §10, feature-matrix identity row, crate
+  module docs, task decomposition/evidence/frontier, task index, resume pointer, LIVE_STATUS,
+  CHANGELOG and DEV_NOTES; regenerated Knowledge Map. Rollover seals the oldest changelog entry
+  into part14 and two dev-note lessons into part8, with exact digests watched by ledger probes.
+  The closed-defect pointer names new part2; counts derive to 9 open / 45 sealed. The map's
+  interchange orientation entry is shortened without losing its entry path or owner; D53 remains owned.
+
+### `G1-SLICE.3c.1a` — the canonical fixture's separate cut-once L/R members (D56)
+
+- [x] **REPRODUCE / ISSUE** — `reference-skirt.md` §6 declares separate `skirt_back_right` and
+  `skirt_back_left` Piece identities, quantity one each and reciprocal pairing. At `0a64a17`,
+  `piece.rs`'s mirroring enum has only `Single` and even-total `MirroredPairs`; it cannot carry a
+  cut-once member's hand/companion. Applying an even-total restriction to every pair mode makes
+  `the_reference_skirts_cut_once_pair_members_print_their_own_handedness` fail (`rc=101`).
+- [x] **ROOT CAUSE (WHY + WHERE)** — the first implementation conflated two pairing forms: one
+  definition requesting both hands, and two separately identified members. The glossary's mirrored
+  pair and the fixture's explicit Piece rows are the independent authorities. `cargo test -p sc-core
+  --test piece_contract the_reference_skirts_cut_once_pair_members_print_their_own_handedness` →
+  `1 passed`, `rc=0`: preserving cut-one quantities requires explicit member metadata, not name parsing.
+- [x] **FIX** — `Mirroring::PairMember { handedness, companion }` and `Handedness::Left/Right`;
+  this mode counts only this member's copies. `PieceError::SelfCompanion` rejects a member naming
+  itself. The existing even-total mode is unchanged. Complete printed labels derive both forms
+  from their cut plan. `.6` owns collection-level reciprocity/opposite-hand/equal-quantity checks;
+  G2 owns geometric mirroring. D57's copy-address question stays separate and unanswered.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test piece_contract` → `14 passed`,
+  `rc=0`: the fixture-shaped separate cut-one L/R members retain reciprocal ids and exact label
+  metadata; self-companion is the expected typed refusal, and existing even-total and odd-total
+  cases still discriminate. Reinstating the overbroad even-total condition makes the new fixture
+  regression red (`rc=101`); restored source passes. D56 is sealed closed in defects-part3.
+- [x] **NO REGRESSION** — `make check` → fmt, clippy `-D warnings`, all existing suites and new
+  pair-member tests green, `rc=0`; `make wasm` → cross-build green; `make book` → warning-free;
+  fixture derivation → `20 derived rows / 4 closure checks / 5 pieces / 0 mismatch(es)`;
+  feature census → `0 failure(s)`; ledger probes → `9 pass / 0 fail`; `make gate` →
+  `=== all doctrines green ===`, all `rc=0`. No fixture cut quantity, pairing or geometry was edited.
+- [x] **LOCKSTEP** — pairing decision + INDEX, ontology §10 and label examples, Rust type docs,
+  task evidence/frontier, task index, resume pointer, LIVE_STATUS, CHANGELOG and promoted DEV_NOTES
+  lesson; closed D56 pointer and sealed descriptor, open D57 with the exact census and pending
+  director question. The generated map retains orientation paths/owners after its units entry is
+  shortened. Next `.3c.3` is independent work while the sewing-copy decision is pending.
+
+### `G1-SLICE.3c.3a` — semantic notches; physical profile bindings stay unresolved
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.5 requires semantic edge/parameter anchoring with
+  profile-owned style, sample/production dimensions and encoding. At `486607b` no `Notch` exists.
+  D58's dependent G4 acceptance says default-plus-sidecar despite its no-default Goal and release §8.
+- [x] **ROOT CAUSE (WHY + WHERE)** — G1 needs semantic identity before G4's target-profile schema
+  exists; copying physical values would invent facts and duplicate parameter state. Ownership must
+  compare current ranges and current positions, not only live edge ids. `cargo test -p sc-core
+  --test notch_contract ownership_uses_surviving_partial_ranges_and_resolved_parameters` → `1 passed`,
+  `rc=0`: the independently expected owned `[0,3/10]` portion refuses the merged foreign remainder,
+  including after reversal. `run_release_contract_census.sh` → `8 matrix rows / 0 failure(s)`, `rc=0`
+  identifies the canonical matrix D58's Acceptance must follow.
+- [x] **FIX** — immutable `Notch`, editable `NotchDefinition`, exact `EdgeAnchor`, symbolic
+  `ProfileParameterRef` and complete sample/production/style/encoding bindings. Construction requires
+  a live unique owned point; edits return the original ledger's choices/repairs without mutations.
+  `ProfileBindingValidation::DeferredToG4` exposes the missing physical validation. G4 acceptance
+  now names badge preview / sidecar draft / block production and no defaults; G4 still owns execution.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test notch_contract` → `7 passed`, `rc=0`:
+  boundary/hole/construction anchors and endpoints accepted, absent/foreign anchors refused, exact
+  reverse/merge recomputation, split-side choice, deletion operation/held-reference evidence and
+  preserved symbolic fields tested. Disabling ownership refusal makes the partial-merge test fail
+  (`rc=101`); restored source passes. The privacy doctest also passes. D58 closes in defects-part4.
+- [x] **NO REGRESSION** — `make check` → fmt, strict clippy, all existing/new suites green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; feature/release censuses → `0 failure(s)`;
+  ledger probes → `9 pass / 0 fail`; `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  The style vocabularies implement no geometry and do not widen the staged release envelope.
+- [x] **LOCKSTEP** — binding decision + INDEX, Rust module docs, ontology §10 + feature matrix,
+  G4 dependent acceptance, task status/frontier/evidence/logs, index, MEMORY, LIVE_STATUS,
+  CHANGELOG and promoted DEV_NOTES; D58 closure + descriptor and live pointer. Oldest ledger
+  entries seal in changelog-part15/devnotes-part9; map orientation is tightened and regenerated.
+  D57 was answered before commit: stable identities per physical cut copy. Next `.3c.2b` implements
+  that contract and sewing spans; D57 closes only after verification.
+
+### `G1-SLICE.3c.2b.1` — explicit physical-copy identities, quantities and orientations
+
+- [x] **REPRODUCE / ISSUE** — D57's director ruling (`2026-10-01`) requires stable physical-copy
+  identities so copies of a cut-two Piece can have different neighbours. At `6abfac3` only Piece
+  quantity exists. The glossary census against that committed snapshot also reports `15 failure(s)`
+  (`rc=1`, D59), showing existing API terms lacked vocabulary ownership before this slice.
+- [x] **ROOT CAUSE (WHY + WHERE)** — pattern identity/quantity cannot select one physical copy;
+  ordinal-derived ids would change under reordering. `cargo test -p sc-core --test cut_contract
+  copies_retain_explicit_identity_when_reordered_and_geometry_stays_deferred` → `1 passed`, `rc=0`:
+  the explicit-id oracle retains both copy definitions across reversed list order. The committed
+  snapshot's `GLOSSARY_ROOT` census → `15 failure(s)`, `rc=1`, pins D59 to undeclared API tokens
+  in ontology prose, not an index or glossary-term duplication.
+- [x] **FIX** — immutable `CutPlan`/`CutCopy`, editable explicit ids/source Piece/orientation.
+  Validate unique/disjoint identities, known Pieces, exact quantity and equal authored/reflected
+  populations for MirroredPairs; authored-only modes refuse reflection. No id is minted or reassigned.
+  Geometry stays DeferredToG2; companion and global design checks remain `.6`. Genuine new concepts
+  enter the glossary; the chapter-local API table declares implementation names without exemptions.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test cut_contract` → `9 passed`, `rc=0`:
+  identity/reorder/replay, duplicates/collisions, unknown/unmentioned Pieces, exact quantities,
+  mirroring, explicit replacement and empty plan contracts pass. Disabling quantity refusal turns
+  its regression red (`rc=101`), restored source passes. Glossary census → `310 terms / 9 parts /
+  158 tokens / 0 failure(s)`, `rc=0`; D59 closes in defects-part5. D60 closes in defects-part6 after historical-root revalidation;
+  staged `make gate` → all doctrines green, `rc=0`. D57 awaits graph integration.
+- [x] **NO REGRESSION** — `make check` → strict clippy, all suites and three core privacy doctests
+  green; `make wasm` → green; `make book` → warning-free; feature/glossary censuses → `0 failure(s)`;
+  tree coverage → `10 lanes / 13 trees / 4 sibling(s) / 0 unowned / 0 orphan(s) / 0 dead link(s)`;
+  ledger probes → `9 pass / 0 fail`; `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  The original moved payload was byte-identical before D60 added revalidation evidence to the
+  historical doc-only `.1`/`.2` ROOT CAUSE bullets; all four checklists are validated separately.
+- [x] **LOCKSTEP** — copy-identity decision + INDEX, source/module docs, ontology §4.2/§10,
+  feature matrix, two glossary entries + derived A–Z index, G1 task evidence sibling/status/logs,
+  task index, MEMORY, LIVE_STATUS, CHANGELOG, promoted DEV_NOTES, closed D59/D60 descriptors/live pointers;
+  devnotes-part10 seals the oldest lesson. Next `.3c.2b.2` implements copy-addressed sewing spans.
+
+### `G1-SLICE.3c.2b.2` — copy-addressed sewing spans; D35/D57 verified closed
+
+- [x] **REPRODUCE / ISSUE** — D57 requires physical-copy addressing so cut-two copies can have
+  different neighbours; D35 needs an explicit same-copy sewing rule before the type exists.
+  At `9ba32e0`, copy plans exist but no graph does. The canonical folded band's short-end finish
+  is the relevant same-copy case; G1 must not invent its unconstructed numeric G2 ranges.
+- [x] **ROOT CAUSE (WHY + WHERE)** — Piece identity alone conflates physical material domains;
+  different held edge names alone cannot certify self-seam disjointness. `cargo test -p sc-core
+  --test sewing_contract self_seam_disjointness_is_checked_after_merge_instead_of_by_edge_name`
+  → `1 passed`, `rc=0`: two held edges resolve to disjoint current intervals, while a new merged
+  overlapping range is refused before/after reversal. The separate hidden-interior ownership
+  regression expects refusal of an unowned middle third despite owned endpoints.
+- [x] **FIX** — immutable SewingGraph/SeamSpan with copy ids, exact positive ranges, explicit
+  correspondence, signed ease source/distribution and side-specific semantic stop ids. Validate
+  the complete plan, scope identities, interval ownership/coverage, endpoint uniqueness, disjoint
+  self-seams, stops and weighted/notch-anchored domains. Shared born-valid anchor validation supplies
+  TurnPoint without changing the NotchError API alias. Queries preserve held content and missing ids.
+  Geometry/realized ease and formula/profile value resolution remain explicit later obligations.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test sewing_contract` → `18 passed`,
+  `rc=0`: copy-specific neighbours, partial/one-to-many spans, disjoint self-seams and overlap
+  after merge/reversal, complete ownership, interior repairs and endpoint choices, stop/ease
+  domains and missing replacement targets discriminate. Self-overlap and ownership refusals each
+  disabled → their independent regression red (`rc=101`); restored source passes. D35/D57 close
+  in defects-part7; graph privacy doctest passes, and all seven existing notch contracts pass.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust suites green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; fixture → `20 derived rows / 4 closure checks /
+  5 pieces / 0 mismatch(es)`; feature/glossary censuses → `0 failure(s)`; ledger probes →
+  `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  The prior copy milestone's full `make probes` → `22 suite(s) green`, `rc=0`; no golden numbers change.
+- [x] **LOCKSTEP** — pre-code sewing decision + INDEX, Rust module docs, ontology §4.2/§10 +
+  local API vocabulary, feature matrix, fixture's now-settled self-seam record, task status/parents/
+  evidence/frontier/logs, index, MEMORY, LIVE_STATUS, CHANGELOG and promoted DEV_NOTES. D35/D57
+  closure descriptor + live pointer; changelog-part16/devnotes-part11 seal oldest entries atomically.
+  The map keeps paths/owners after shortening its glossary orientation. Next `.3c.3b` is grainlines.

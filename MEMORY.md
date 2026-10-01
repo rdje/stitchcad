@@ -5,11 +5,11 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.3c.3c`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** `.3c.3c` — per-edge allowance descriptors; then construction objects `.3c.4`.
-  Pieces, copy-addressed sewing, notches and directed grainlines are committed. Physical geometry,
-  realized ease and resolved profile values remain later obligations. Ontology §10 links the executable
-  examples chapter. Run glossary + feature censuses after ontology updates; D61 is verified closed.
+- **Active tree:** `G1-SLICE`, frontier **`.3c.4`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** `.3c.4` — garment construction objects; decompose into safe semantic slices before
+  implementation. Three object families are committed: pieces, sewing, marks/allowances. Allowances
+  retain width origin/corner intent and symbolic per-profile inclusion; offsets remain G2, values G4.
+  Ontology §10 links executable examples. Older object evidence lives in G1-SLICE-evidence.md.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

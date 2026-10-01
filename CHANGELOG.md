@@ -38,6 +38,21 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0013 - per-edge allowances retain width origin and symbolic target policy (leaf `G1-SLICE.3c.3c`)
+
+Immutable SeamAllowance descriptors retain whole owned source edges, authored width parameter/value
+or formula/profile declaration, explicit five-way corner intent and mandatory logical profile inclusion.
+Born references require full interval coverage and unique endpoints; symbolic widths/policies supply no
+values or defaults. Explicit zero is authored content; negative explicit width is a typed refusal.
+Offsets, error budgets and target policy resolution remain visibly G2/G4 obligations.
+
+Eight contracts + privacy doctest pass. Disabling ownership refusal makes the foreign-middle merge
+regression red despite live owned endpoints; restored strict Rust, wasm, warning-free book, fixture,
+feature/glossary censuses, ledger probes and staged gates pass. Earlier object checklists move unchanged
+to the existing evidence sibling before the parent reaches 1000 lines; every staged checklist passes.
+The oldest dev-note lesson seals to part13. No fixture golden changes. Marks/allowances closes;
+G1 remains 4/18 top-level leaves and advances to 3/4 object families. Next `.3c.4` constructions.
+
 ## STITCHCAD-G1-0012 - directed grainlines retain independent print references (leaf `G1-SLICE.3c.3b`)
 
 Immutable Grainline content holds a directed arrow, explicit parallel/angle intent and independent

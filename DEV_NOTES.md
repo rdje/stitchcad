@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — allowance intent does not resolve a receiver policy or construct an offset
+
+- Width origin and per-edge corner intent are canonical content. Explicit values retain the authored
+  parameter identity; formula/profile sources retain declaration ids without copying uncertainty.
+  Inclusion always names a logical profile declaration, so target profiles can resolve the same design
+  differently. There is no unread-value fallback, global flag or generated contour in the G1 object.
+- Eight contracts distinguish authored zero, negative refusal, symbolic width, all corner choices,
+  shared width origins, immutable replacement and topology evidence. The foreign-middle merge case
+  fails when whole-interval ownership refusal is disabled; restored strict Rust and WASM pass.
+- The marks/allowances family is complete structurally, while G2 offsets/error bounds and G4 resolved
+  policies remain named obligations. Older object checklists move unchanged to the existing evidence
+  sibling before the parent exceeds 1000 lines; staged gates revalidate every moved checklist.
+- promotion: promoted by `decision_profile-bindings-stay-symbolic-at-g1.md`'s allowance subsection.
+
 ## _(2026-10-01)_ — a directed arrow needs ordered intervals as well as endpoint identity
 
 - A reversed authored range traverses split fragments in reverse order and composes its direction with
@@ -133,25 +147,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   durable boundary (immutable references, fold resolution, derived repair state, offset-consumes-declared-
   intervals until G2 geometry) is recorded there so `.3c`/`.6`/`.7` inherit it rather than re-litigate.
 
-## _(2026-09-30)_ — the identity layer: determinism is a property of the generator, not the id
-
-- `G1-SLICE.3a` landed G1's first new product code: `sc_core::ontology`'s `EntityId` (a hand-rolled
-  dependency-free ULID), the injected `IdGenerator`, `EdgeRef`/`PointRef`/`LocalTag`, and the bounded exact
-  `Rational` a parameter is stored in — 40 tests (31 unit, 9 recorded-seed properties), and `sc-core` still
-  cross-builds to wasm.
-- The design point worth keeping: a real ULID embeds a wall-clock timestamp and randomness, yet recipe
-  re-evaluation and CLI replay must be byte-identical and canonical content carries no wall-clock. So
-  **determinism lives in the generator, not the id** — `EntityId` is just 128 bits, and whoever creates objects
-  injects either a `DeterministicIdGenerator` (a counter, for tests and replay) or a clock-plus-entropy
-  generator (production, from the command bus at `G1-SLICE.6`). The clock never enters domain code, so the same
-  commands always yield the same ids.
-- Two house conventions re-confirmed, not reinvented: fallible arithmetic is `checked_*`, not `add`/`sub`
-  (clippy's `should_implement_trait`; the precedent `sc-units` set), and a test *helper* that is not a `#[test]`
-  fn is not covered by `.clippy.toml`'s `allow-expect-in-tests`, so it carries its own targeted `#[allow]`
-  rather than swallowing a failure with `unwrap_or`.
-- promotion: declined — the durable design choices are the three decision records `G1-SLICE.3` landed; this is
-  one slice's implementation history, and the two conventions are already the house style, not a new rule.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -168,6 +163,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part10.md`](docs/history/stitchcad-devnotes-part10.md) | the `2026-09-30` shipped-work reconciliation lesson | 15 lines, 1380 bytes, `sha256:701d33f2…` |
 | [`devnotes-part11.md`](docs/history/stitchcad-devnotes-part11.md) | the `2026-09-30` property-test framework lesson | 15 lines, 1384 bytes, `sha256:ae04eadf…` |
 | [`devnotes-part12.md`](docs/history/stitchcad-devnotes-part12.md) | ontology slice decomposition | 16 lines, 1570 bytes, `sha256:a2f04e3d…` |
+| [`devnotes-part13.md`](docs/history/stitchcad-devnotes-part13.md) | injected identity lesson | 18 lines, 1612 bytes, `sha256:38e83349…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

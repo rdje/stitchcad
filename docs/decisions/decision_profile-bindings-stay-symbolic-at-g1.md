@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.3a` and its marks/allowances siblings; ontology §4.4–§4.6, §5.
 
-answers: "does a G1 notch default its geometry?" · "where do notch style and encoding live?" · "can symbolic profile bindings generate physical geometry?"
+answers: "does a G1 notch default its geometry?" · "where do notch style and encoding live?" · "can symbolic profile bindings generate physical geometry?" · "how does an allowance retain its width origin and per-profile inclusion policy?"
 
 ## Context
 
@@ -38,3 +38,13 @@ Neither a valid anchor nor a symbolic binding grants physical export readiness.
   field kinds. This slice implements neither profile validation nor the artifact generator.
 - The no-default contract uses the normative release §8 tuning. D58's contradictory future-task
   acceptance is corrected as dependency alignment, not treated as an alternate policy authority.
+
+## Per-edge allowances (`G1-SLICE.3c.3c`)
+
+An allowance descriptor names one owned source edge and an explicit corner treatment. An authored
+width retains its parameter identity and nonnegative Length; formula/profile widths retain only their
+logical declarations. An explicit zero is distinguishable from an absent descriptor and never serves
+as a fallback for unknown input. Parameter existence/kind/state remains its owning registry's check.
+Inclusion is a mandatory logical profile declaration, resolved separately for each target profile;
+G1 exposes possible policy vocabulary but no resolved selection or export geometry. Interval coverage,
+owned scope and unique endpoints are structural checks; actual offsets and error bounds remain G2.

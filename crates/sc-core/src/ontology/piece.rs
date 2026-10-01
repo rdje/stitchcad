@@ -12,10 +12,10 @@ use super::{
     Direction, EdgeRange, EdgeRef, EntityId, IdentityLedger, Param, RangeResolution, Resolution,
 };
 
-/// The geometric obligation carried by every G1 piece.
+/// The geometric obligation carried by G1 ontology objects.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GeometricValidation {
-    /// G2-2D.1 must check endpoint closure, winding, simplicity and hole containment.
+    /// G2 must check the object's physical geometry: closure/winding, angles, offsets and error bounds.
     DeferredToG2,
 }
 
