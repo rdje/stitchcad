@@ -3,6 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — documented procedure content lives in one canonical record
+
+- Measurement metadata holds stable name/token/unit/kind and declaration/landmark/procedure ids.
+  sc-measure depends on core, never the reverse. Value/state/source borrow the canonical declaration;
+  documented procedure text lives once on its immutable referenced record. Nonblank text establishes
+  content presence, not physical repeatability or source truth. Caller records invent no standard data.
+- Borrowed current inventories reject within-/cross-kind identity collisions before lookup. Body and
+  garment references cannot interchange. Repeated girth-level landmarks preserve authored intent;
+  no distinct-endpoint or physical-domain rule is guessed. Separate target queries aid inspection,
+  while full current validation checks every reference; Design/G4 still owns global source/evidence.
+- Sixteen contracts plus three privacy docs pass. Six actual guard mutations fail; restored strict
+  Rust executes 325 tests, with three-crate WASM, book and full probes/gates green. CI integration
+  requires the exceptional push and observed job/step verdict in .4a.2c, not an inferred remote success.
+- D66 corrects README/workspace starter status. Older lessons and token task records move unchanged;
+  canonical retrieval pointers retain exact identity. Archive is 64/64 files; the next required seal
+  must take D65's owned SPINE.19.2 transition before further product growth.
+- Promotion gate initially refused missing fresh questions. D67 traces an earlier false pass to an
+  unrelated staged cleanup decline; SPINE.22 owns the scoped verifier, with fresh questions added now.
+- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s metadata section.
+
 ## _(2026-10-01)_ — identifier syntax and binding authority are separate checks
 
 - Core MachineToken is shared below metadata and recipes. It preserves ASCII lower-snake bytes,
@@ -107,35 +127,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   independent of registry/release approval. Hem checklist and verification history relocate unchanged.
 - promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`'s notion placement.
 
-## _(2026-10-01)_ — a faced hem needs current target validation, not cached birth approval
-
-- Hem binds one stable Facing identity without copying its material or source definition. Current
-  queries check target identity, served owner and source ranges again; an interior deletion can
-  invalidate an old Facing while its original endpoints remain live. Same-id current replacement is
-  inspected as current content. Independent edge and target queries do not certify release readiness.
-- Depth and fold origins retain logical declarations and no symbolic defaults. Fold type, finishing
-  method and allowance corner treatment are separate semantic facts. Recipe/Design owns declaration
-  kinds/domains/states; G2/G3 owns physical folds, not the G1 reference validator.
-- Ten contracts + privacy pass; disabling identity, current-layer and ownership checks separately
-  produces red regressions. Restored strict Rust/WASM/book pass. Gather/layer evidence relocates
-  unchanged with an independent committed-payload oracle and staged per-checklist revalidation.
-- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s Hem boundary.
-
-## _(2026-10-01)_ — modelled layer content and executable envelope are separate checks
-
-- Facing/Lining/Interfacing share structural validation but retain distinct kinds. Their recipe offset
-  operation owns dimensions; the descriptors retain directed source intent without caching generated
-  contours or parameter states. Served identity, whole-source ownership and material reason are local
-  invariants; operation/parameter/material registries and physical geometry remain later obligations.
-- Feature-matrix rule 3 permits inspecting modelled lining. Its explicit execution check refuses
-  env_lining with the served Piece and G7; Facing/Interfacing passing that check grants only scope,
-  never geometric or release approval. Design validation must apply it before construction execution.
-- Nine contracts and three privacy checks cover all kinds. Disabling lining scope and interval
-  ownership independently produces red regressions; restored strict Rust/WASM/book pass. Piece shares
-  its original material-reason guard and all existing contracts stay green. Fold evidence relocates
-  unchanged and is revalidated by the staged gate.
-- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s layer boundary.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -172,3 +163,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part23.md`](docs/history/stitchcad-devnotes-part23.md) | tuck/pleat and dart lessons | 25 lines, 2172 bytes, `sha256:ba5ee2a7…` |
 
 | [`devnotes-part24.md`](docs/history/stitchcad-devnotes-part24.md) | canonical gather lesson | 13 lines, 1160 bytes, `sha256:2a10a04e…` |
+
+| [`devnotes-part25.md`](docs/history/stitchcad-devnotes-part25.md) | Hem and served-layer lessons | 28 lines, 2416 bytes, `sha256:a95d8c77…` |

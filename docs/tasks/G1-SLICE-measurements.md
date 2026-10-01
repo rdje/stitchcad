@@ -30,6 +30,22 @@ Historical verification/commit tables remain in the parent and [evidence sibling
   restored strict Rust 298 tests, WASM/book, focused censuses, ledger and staged doctrines green.
   Commit: `STITCHCAD-G1-0024`
 
+- ID: `G1-SLICE.4a.2a`
+  Status: `done`
+  Goal: core immutable MachineToken, shared by measurement metadata and the future recipe namespace.
+  Pre-code design: formalize the specified ASCII lower-snake syntax as [a-z][a-z0-9]* with optional
+  underscore-separated nonempty alphanumeric segments. Reject the three grammar keywords let/assert/if;
+  reserved built-in parameter names remain legal references, while metadata .2b and recipe .5 reject
+  rebinding them. No Unicode normalization, automatic renaming, token→user-label conversion or text value.
+  Acceptance: accepted tokens retain exact bytes/order; malformed ASCII/Unicode/separators/keywords
+  refuse explicitly; immutable representation/private-field proof; no body/POM or state conversion.
+  Own core API/tests, grammar/input-book vocabulary, existing length-input decision promotion and docs.
+  Containment: move the completed .4a.1 contract/checklist unchanged to a linked measurement sibling
+  before the parent exceeds its health target; retain the current checklist first.
+  Verification: six contracts + private-field doc-test; four real regression mutations red;
+  restored strict Rust 305 tests, WASM/book, focused censuses/ledger and staged doctrines green.
+  Commit: `STITCHCAD-G1-0025`
+
 ## Completed acceptance checklists
 
 ### `G1-SLICE.4a.1` — one canonical length state, no numeric unknown default
@@ -56,3 +72,24 @@ Historical verification/commit tables remain in the parent and [evidence sibling
 - [x] **LOCKSTEP** — core/value/tests, bounded input chapter/vocabulary, ontology status, decision/map,
   live/resume/index, task graph and histories align. D64 seals to defects-part10; two oldest lessons
   seal unchanged to devnotes-part23. G1 remains 5/18; .4a.2 is next. D65 remains open under SPINE.19.2.
+
+### `G1-SLICE.4a.2a` — machine identifiers preserve exact spelling
+
+- [x] **REPRODUCE / ISSUE** — metadata/formula names share the specified ASCII lower-snake rule;
+  constructing independent string validators would permit spelling drift across the common API.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-core --test name_contract` → `6 passed`,
+  `rc=0`: stable machine spelling needs one lower-layer contract distinct from display labels and
+  formula binding authority. Grammar §1 keywords and contract §3.1 reserved inputs have different roles.
+- [x] **FIX** — immutable MachineToken retains exact bytes or typed InvalidSyntax/ReservedKeyword;
+  formal shared grammar permits lowercase-start alphanumeric segments separated by single underscores.
+  No normalization, inferred display name, text scalar or reserved-input binding authority.
+- [x] **ADDRESSED (verified)** — six contracts cover spelling, Unicode lookalikes, whitespace,
+  separators, digits, keywords, reserved references, exact collection keys and immutable replacement;
+  private-field compile-fail passes. Disabling start, empty-segment or keyword guards, or accepting
+  uppercase internal letters, each makes its intended regression fail `rc=101`; restored suite green.
+- [x] **NO REGRESSION** — `make check` → `305` tests, strict fmt/lint green; WASM/book green;
+  focused censuses and ledger `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`,
+  `rc=0`. Completed .4a.1 contract/checklist compare byte-identical against committed predecessor.
+- [x] **LOCKSTEP** — core API/tests and input chapter/grammar/vocabulary match the promoted decision;
+  live/resume/tree/map/history align. .4a.2b introduces metadata/runtime integration, then .2c observes
+  CI before parent closure. D66 is owned there; D65 archive transition keeps its actual seal trigger.

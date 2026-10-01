@@ -5,15 +5,15 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.4a.2b`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** `.4a.2b` — immutable measurement metadata/current registries in sc-measure,
-  borrowing core length declarations. Read ontology/standards/units and the length-input decision;
-  shared tokens are ready. .2c observes CI/signoff, then .4a.3 tables, .4b ease, .4c sizes, .4d review.
-  Four structural families complete; G1 remains 5/18. Geometry/recipes/profiles/release proof deferred.
+- **Active tree:** `G1-SLICE`, frontier **`.4a.2c`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** exceptional push for .4a.2b's Rust CI change, observe job/step verdict, then
+  .4a.2c metadata signoff before .4a.3 tables. Local Rust 325 tests, three-crate WASM/book and full
+  probes/gates pass. Do not infer remote success; record exact revision and observed CI evidence.
+  Four structural families complete; G1 stays 5/18. Geometry/recipe/profile/release proofs deferred.
   Director requires SOTA/signoff/production quality and comprehensive external-agent MCP/API control;
-  .6/.9/G5 own workflow parity/discovery/recovery and independent evaluation; approval contract stays.
-  D65: history 62/64 files after this slice; SPINE.19.2 must perform the archive transition before a
-  required product seal exceeds the ceiling. No ceiling increase or nested-glob evasion.
+  .6/.9/G5 own parity/discovery/recovery and independent evaluation; approval contract stays.
+  D65: history 64/64 files; before any required new seal, SPINE.19.2 must perform the owned archive
+  transition with exact portable retrieval, no ceiling increase or nested-glob evasion.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

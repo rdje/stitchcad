@@ -10,5 +10,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "sc-measure"
+version = "0.1.0"
+dependencies = [
+ "sc-core",
+ "sc-units",
+]
+
+[[package]]
 name = "sc-units"
 version = "0.1.0"

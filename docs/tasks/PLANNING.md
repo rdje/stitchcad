@@ -168,7 +168,9 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 [`stitchcad-defects-part9.md`](../history/stitchcad-defects-part9.md)
 (D62, D63; 14 lines, 1370 bytes, `sha256:5c7cd18f…`) and
 [`stitchcad-defects-part10.md`](../history/stitchcad-defects-part10.md)
-(D64; 8 lines, 801 bytes, `sha256:a33e5ff9…`), under D46's remedy. Every cited defect
+(D64; 8 lines, 801 bytes, `sha256:a33e5ff9…`) and
+[`stitchcad-defects-part11.md`](../history/stitchcad-defects-part11.md)
+(D66; 10 lines, 919 bytes, `sha256:4d46b154…`), under D46's remedy. Every cited defect
 resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
 `grep -h '^- \*\*D[0-9]' docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by
@@ -181,11 +183,17 @@ why maximum-content-line bytes is a separate axis in the containment doctrine. B
 keep every axis visible, and they remove the ambiguity a raw `|` inside a code span creates (the GFM
 spec asks for `\|`; the inherited arity checker treats a code span as protective — defect D22).
 
-- **D66** — README status reports only G0 contract work after executable G1 foundations landed.
-  - Reproduce: README's status paragraph against committed G1 .3c family review and .4a.1 core input.
-  - Impact: the landing page understates implementation, although LIVE_STATUS and the book are accurate.
-  - Owner/schedule: `G1-SLICE.4a.2b`, next metadata/runtime integration slice; repair status without
-    implying G0 human approval or an existing user application.
+- **D67** — an unrelated historical decline in a staged task file satisfies lesson promotion for a
+  new lesson, even when the promoted decision gains no retrieval question.
+  - Reproduce: `git diff b3b9e3a^ b3b9e3a -- docs/decisions` adds no answers line, while
+    name-gate/commit logs report LESSON-PROMOTION green. Its staged SPINE file contains the old
+    cleanup decline at line 620. check_lesson_promotion.sh scans entire staged task files for any
+    decline; it does not bind that decision to the current lesson or diff.
+  - Impact: durable lesson decisions can lack their question route without a gate refusal. The
+    token lesson's content was preserved, so no content was lost; missing questions are repaired now.
+  - Owner/schedule: `SPINE.22`, P1; project-slot fresh/scoped decision adapter plus calibrated old/
+    unrelated-decline red arms. Until it lands, each new lesson must carry a fresh answers question
+    or a current-leaf explicit decline; G1-SLICE.4a.2b does so. Preserve the neutral source boundary.
 
 - **D65** — sealed-history file count is approaching its enforced 64-file ceiling; normal
   per-slice retention will soon block product commits even though each segment is small.
@@ -234,6 +242,10 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     yet for deriving the cells instead of writing them: a hand-kept value duplicated in the same document
     drifts against itself, not just against the trees.
 
+
+  - Recurrence at G1-SLICE.4a.2b: SPINE's root child range still ended at .10 while .11–.21
+    existed. Adding .22 corrected the range to .1–.22; PLANNING.5 retains mechanical graph/index
+    agreement ownership. This is another instance of the already owned hand-kept child-index drift.
 
 - **D38** — the defect census records each defect's state in prose, so its open/closed counts cannot be
   derived: `LIVE_STATUS.md` carries "36 logged, 32 closed" by hand, and a naive derivation over the same
@@ -450,6 +462,22 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
 - None for `PLANNING.2`/`PLANNING.3`.
 
 ## Acceptance Checklist
+
+### D66 — landing/workspace status corrected by `G1-SLICE.4a.2b`
+
+- [x] **REPRODUCE / ISSUE** — README described only G0 contract work; Cargo workspace header asked
+  to retire the removed starter. D66 records the contradictory committed G1 evidence and repair owner.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo metadata --no-deps --format-version 1` →
+  sc-core/sc-measure/sc-units, `rc=0`; bootstrap descriptions had not followed actual crate delivery.
+  G0 approval and application availability are distinct facts, retained as unapproved/not yet present.
+- [x] **FIX** — correct README status/workspace header and document the new three-crate make wasm
+  path; seal D66 without changing implementation/release claims beyond the delivered library scope.
+- [x] **ADDRESSED (verified)** — `make wasm` → all three domain crates built for wasm32-unknown-unknown,
+  `rc=0`; warning-free `make book` and strict `make check` → `325` tests, `rc=0`.
+- [x] **NO REGRESSION** — full probes `22 suite(s)` green, ledger `9 pass / 0 fail`, focused censuses
+  and staged doctrines green, `rc=0`; no tracked or archived historical bytes are silently rewritten.
+- [x] **LOCKSTEP** — D66 seals to defects-part11; live census 10 open / 56 sealed, D65/D67 still owned
+  before any seal beyond 64 history files. Landing/runtime/book/task/live/resume records agree.
 
 ### D64 — closed by `G1-SLICE.4a.1`; D65 retention is owned
 

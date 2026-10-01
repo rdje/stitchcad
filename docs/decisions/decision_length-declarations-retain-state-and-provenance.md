@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.4a.1`; ontology §2.1/§2.2/§5, formula-language §2/§3 and roadmap §2.3.
 
-answers: "where do measurement values and states live?" · "can an unknown measurement become zero?" · "does a declared known state prove scoped evidence?" · "how do measurement inputs avoid a core dependency cycle?"
+answers: "where do measurement state and source live?" · "can unknown inputs default to zero?" · "does known prove evidence?" · "how are core dependency cycles avoided?" · "how do shared machine tokens preserve spelling?" · "where is procedure documentation stored?" · "can body and garment references interchange?"
 
 ## The fact / decision
 
@@ -54,6 +54,23 @@ unchanged, with no normalization or display-name inference. Built-in reserved na
 are valid references; measurement/recipe namespace binding rejects attempts to redeclare them.
 MachineToken is neither a scalar text value nor a localized label. Its private representation needs
 validated reconstruction to replace a token; a cloned replacement never mutates earlier metadata.
+
+## Measurement metadata — G1-SLICE.4a.2b
+
+sc-measure borrows core declarations and tokens. A measurement retains name, token, entered unit,
+body/garment kind, two landmark identities, procedure identity and declaration identity. Landmarks
+have explicit kind and source; the canonical procedure record holds nonblank documentation, kind
+and source. Metadata never copies procedure prose, value or state. Requiring canonical documentation
+here avoids a dangling document-id claim while still treating physical repeatability and source
+truth as separately unproved. Caller-authored fixture procedures are not sourced standard content.
+
+Current context rejects duplicate identities across its declaration/landmark/procedure inventories;
+a measurement id cannot reuse one of those record identities. Landmark/procedure kind mismatches
+refuse rather than interchange body and garment. Same landmark at both ends is legal for girth-level
+intent; no unproved straight-line or distinct-endpoint rule is invented. Target queries validate only
+the requested reference; complete current validation checks all references. Same-id record replacement
+is read as current content, with no automatic retargeting. Design still validates global registries,
+source provenance and evidence validity. Metadata cannot rebind the eight reserved formula inputs.
 
 ## Verification
 

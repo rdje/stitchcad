@@ -17,9 +17,10 @@ Three properties define it:
   façade, with scoped authority — an agent may inspect, propose, commit and generate, but approval
   stays human.
 
-**Status:** the project is in gate **G0**, the product-and-semantic-contract gate. The repository
-holds the roadmap, the specification being written from it, and a discipline spine that enforces how
-work is tracked and committed. No user-facing application exists yet.
+**Status:** executable Rust foundations are available; no user-facing application exists yet.
+The G0 semantic contract has been reviewed, with its human closure still unapproved. G1 implements
+ontology, canonical inputs and measurement metadata. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks
+verified progress; the mdBook explains implemented behavior and the remaining proof boundaries.
 
 ## Audience and scope
 
@@ -49,12 +50,13 @@ Requires a stable Rust toolchain (`rust-toolchain.toml`), and `mdbook` for the b
 ```bash
 git config core.hooksPath .githooks   # activate the discipline gates (once per clone)
 make check                            # cargo fmt --check + clippy -D warnings + cargo test
+make wasm                             # compile sc-units, sc-core, sc-measure for the browser profile
 make gate                             # the doctrine enforcer
 make probes                           # every diagnostic probe suite
 make book                             # build the mdBook (output: docs/book/book/, untracked)
 ```
 
-All four commands are verified by the leaf that last touched this page; if one fails, that is a
+These commands are verified by the leaf that last touched this page; if one fails, that is a
 defect — log it in a task-tree and fix it (`TOOLBOX.md` explains how to diagnose).
 
 ## Where to read next

@@ -21,6 +21,7 @@
     - [Executable garment constructions](spec/ontology-constructions.md)
     - [Structural ontology review](spec/ontology-review.md)
     - [Measurement length inputs](spec/measurement-inputs.md)
+    - [Measurement metadata](spec/measurement-metadata.md)
     - [Executable closure intent](spec/ontology-closures.md)
   - [The formula language](spec/formula-language.md)
     - [Grammar, operators and functions](spec/formula-language/grammar.md)

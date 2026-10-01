@@ -1,0 +1,14 @@
+[package]
+name = "sc-measure"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "StitchCAD measurement metadata, body/garment landmarks and documented procedures. Canonical values are borrowed from sc-core; tables, ease and size sets follow at G1."
+
+[lints]
+workspace = true
+
+[dependencies]
+sc-core = { path = "../sc-core", version = "0.1.0" }
+sc-units = { path = "../sc-units", version = "0.1.0" }

@@ -59,6 +59,22 @@ impl MachineToken {
     pub fn as_str(&self) -> &str {
         &self.0
     }
+
+    /// Whether this is a built-in parameter name that authored inputs may reference but not rebind.
+    #[must_use]
+    pub fn is_reserved_input_name(&self) -> bool {
+        matches!(
+            self.as_str(),
+            "eps_num"
+                | "eps_geo"
+                | "eps_fmt"
+                | "eps_imp"
+                | "eps_phys"
+                | "size_index"
+                | "size_count"
+                | "is_base_size"
+        )
+    }
 }
 
 impl fmt::Display for MachineToken {

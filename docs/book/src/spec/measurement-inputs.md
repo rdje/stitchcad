@@ -2,8 +2,8 @@
 
 [Ontology §2.1/§5](ontology.md) requires measurement state and provenance as content. Measurement,
 ease and chart metadata need one canonical source; `G1-SLICE.4a.1` supplies the shared length
-contract in sc-core before sc-measure consumes it. The measurement table, repeatable landmark/
-procedure registry, ease mapping and SizeSet are subsequent owned slices. No standard's measurement
+contract in sc-core, consumed by [sc-measure metadata](measurement-metadata.md). The measurement
+table, ease mapping and SizeSet are subsequent owned slices. No standard's measurement
 values or landmark vocabulary are invented here ([standards](standards.md)).
 
 ## Authored value and state
@@ -25,7 +25,7 @@ even if a separate preference declaration contains zero. An explicitly authored 
 length remains unchanged; the general declaration imposes no invented body-measurement positivity
 rule. Each procedure's domain constraints and actual repeatability are separate validation.
 A fractional-inch input converts once through sc-units, then the declaration retains internal Length;
-original entered units belong to the forthcoming measurement metadata.
+original entered units are retained in the measurement metadata.
 
 `state()` borrows the canonical authored state and `definition()` exposes it without mutation.
 Replacing a cloned definition with a new value/state/source cannot alter the prior object. Known
@@ -46,11 +46,11 @@ A query of authored content grants neither factual certification nor release per
 The dependency direction is explicit: sc-measure consumes core identities and these inputs; core
 does not depend on sc-measure. Formula evaluation will consume its core input contract through the
 host context. Consumers borrow canonical declarations instead of keeping independent numeric/state
-copies. Structural APIs are available now; measurement metadata and executed evaluation follow.
+copies. Structural metadata/reference APIs are available now; executed evaluation follows.
 
 ## Stable machine tokens
 
-Measurement metadata will carry a core `MachineToken`, separate from its localized name and scalar
+Measurement metadata carries a core `MachineToken`, separate from its localized name and scalar
 input. `MachineToken::new` preserves exact ASCII lower-snake spelling or returns `MachineTokenError`:
 `InvalidSyntax` retains malformed input; `ReservedKeyword` names let/assert/if. There is no trimming,
 normalization or automatic renaming. For example, waist_girth and waist_girth_2 are valid, while
@@ -59,8 +59,8 @@ lives in [formula syntax §1](formula-language/grammar.md). Private representati
 mutation; a validated replacement leaves the original token unchanged.
 
 The built-in eps_geo is a valid reference token. Lexical acceptance grants no permission to bind a
-new measurement to it: measurement metadata and recipe namespace validation must refuse reserved
-input redeclarations. The token API provides no source truth, measurement value or display text.
+new measurement to it: MachineToken.is_reserved_input_name classifies the eight built-in names;
+measurement metadata refuses their redeclaration. Recipe namespace validation retains the same rule. The token API provides no source truth, measurement value or display text.
 
 | API token | Meaning in the length-input implementation |
 | --- | --- |

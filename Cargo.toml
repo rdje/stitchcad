@@ -1,5 +1,5 @@
-# Workspace root. Add crates under crates/*. Rename/replace the starter `app` crate with
-# your project's crates (cargo-generate substitutes {{project-name}} if you use that path).
+# Workspace root. Roadmap crates join as their owned implementation slices start.
+# Each crate inherits the common package identity and strict lints below.
 [workspace]
 resolver = "2"
 members = ["crates/*"]

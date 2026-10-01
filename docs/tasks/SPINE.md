@@ -47,7 +47,7 @@ mechanically-enforced form:
 - ID: `SPINE`
   Status: `active`
   Goal: the repository's own surfaces are project-shaped, bounded and enforced.
-  Children: `.1` … `.10`
+  Children: `.1` … `.22` (sub-leaves remain in their owning parent contracts)
 
 - ID: `SPINE.6`
   Status: `done`
@@ -404,6 +404,19 @@ mechanically-enforced form:
   overwritten by the next spine update (defect D17). It lives in a layer-C decision record instead,
   which is project-owned.
 
+- ID: `SPINE.22`
+  Status: `pending`
+  Goal: D67 — require a fresh, lesson-scoped promotion/decline decision; unrelated historical
+  decisions cannot satisfy a new lesson's obligation. Add refusals in the project slot, preserving
+  the inherited neutral-source boundary and the valid promoted/current-leaf decline workflows.
+  Acceptance: historical and unrelated decline fixtures fail, fresh retrieval questions and owning
+  leaf declines pass, every staged new lesson is accounted for. Missing/ambiguous attribution refuses
+  rather than guesses. Calibrated self-tests/probes, full gates/CI and toolbox/book doctrine sync.
+  Priority: P1, after triggered archive retention; before a new lesson relies on an old decline or
+  extends a reused decision without a fresh question. Current metadata fixes its question route now.
+  Verification: `pending`
+  Commit: `pending`
+
 - ID: `SPINE.8`
   Status: `done`
   Goal: close D15 locally with a project-slot doctrine — `FRESH-ACCEPTANCE-EVIDENCE`: a staged
@@ -515,6 +528,7 @@ mechanically-enforced form:
 | — | `SPINE.20` | `done` | taken immediately after `.15` on the director's instruction to act on the findings: the convention is now a gate (`TABLE-CODE-PIPE`), because a rule that lives only in `COMMIT.md` is a suggestion and what it prevents is a silently dropped column in the book the director reads |
 | — | `SPINE.17` | `done` | taken out of order: a director-approved rule is recorded when it is made |
 | — | `SPINE.18` | `done` | taken immediately after: `.17` shipped a trigger that fired on itself |
+| guarded | `SPINE.22` | `pending` | D67: require fresh/scoped lesson decisions; current lessons use explicit fresh questions until enforced |
 | trigger | `SPINE.19.2` | `pending` | D65: archive transition before a required product seal exceeds the 64-file ceiling |
 | — | `SPINE.19.1` | `done` | taken at D49's trigger rather than waited for: `PLANNING.md` was at 95 % of its byte ceiling, so the 44 closed defects were sealed and the live census is now the open set |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |

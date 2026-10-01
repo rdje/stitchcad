@@ -13,7 +13,7 @@ help:
 	@echo "make hooks           - install the git hooks (core.hooksPath=.githooks)"
 	@echo "make bootstrap       - first-time project bootstrap"
 	@echo "make update-scaffold - pull the latest bedrock spine (set URL=<bedrock-repo>)"
-	@echo "make wasm            - the wasm-viewer smoketest: build sc-units + sc-core for wasm32-unknown-unknown"
+	@echo "make wasm            - the wasm-viewer smoketest: build sc-units + sc-core + sc-measure for wasm32-unknown-unknown"
 	@echo "make push-due        - is an exceptional push owed? (CI/doctrine paths changed since origin)"
 	@echo "make probes          - run every probe suite under docs/tasks/artifacts/ (scratch on this volume)"
 
@@ -39,8 +39,8 @@ test:
 # browser-capable.
 wasm:
 	rm -rf target/wasm32-unknown-unknown/debug/.fingerprint 2>/dev/null || true
-	cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core
-	@echo "wasm-viewer smoketest: sc-units + sc-core build for wasm32-unknown-unknown"
+	cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure
+	@echo "wasm-viewer smoketest: sc-units + sc-core + sc-measure build for wasm32-unknown-unknown"
 
 # Is an exceptional push owed? CI and doctrine changes are unverified until a runner executes them,
 # so they push immediately regardless of the 400-commit cadence (COMMIT.md -> Push cadence).

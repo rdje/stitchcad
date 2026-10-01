@@ -46,6 +46,20 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0026 - canonical measurement metadata and current records (leaf `G1-SLICE.4a.2b`)
+
+sc-measure adds immutable Measurement/Landmark/MeasurementProcedure with body/POM kind, entered unit,
+required named/documented records and stable references. Value/state/source borrow core declarations;
+current context refuses duplicate identity, missing targets, kind mismatch and reserved-input binding.
+Target queries prove their own reference; full validation covers all metadata. Source truth, physical
+repeatability, global Design registries and release proof retain later owners. Sixteen contracts plus
+three privacy docs pass; six real guard mutations fail. Strict Rust 325 tests, three-crate WASM/book,
+full 22 probes and staged gates pass. Runtime CI integration requires immediate push/observed .2c
+verdict. D66 fixes README/workspace status and seals in defects-part11; Hem/layer lessons seal unchanged
+in devnotes-part25. Completed token task records move unchanged. G1 stays 5/18, next .2c CI/signoff;
+archive reaches 64/64 files, so D65 must precede any further required seal. D67 owns the promotion
+verifier's unrelated historical-decline weakness; fresh token/metadata retrieval questions are added.
+
 ## STITCHCAD-G1-0025 - shared machine tokens retain exact identifiers (leaf `G1-SLICE.4a.2a`)
 
 Core MachineToken validates ASCII lower-snake identifiers and refuses let/assert/if without trimming,

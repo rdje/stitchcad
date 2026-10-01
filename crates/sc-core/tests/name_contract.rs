@@ -74,9 +74,25 @@ fn reserved_namespace_inputs_are_valid_references_not_automatically_rebound() {
         "size_count",
         "is_base_size",
     ] {
-        assert_eq!(MachineToken::new(spelling).unwrap().as_str(), spelling);
+        let token = MachineToken::new(spelling).unwrap();
+        assert_eq!(token.as_str(), spelling);
+        assert!(token.is_reserved_input_name());
     }
     // Metadata/recipe binding must refuse redeclaration; lexical validity grants no binding authority.
+}
+
+#[test]
+fn similarly_named_authored_inputs_do_not_rebind_the_reserved_namespace() {
+    for spelling in [
+        "eps_geo_input",
+        "epsilon_geo",
+        "size_index_2",
+        "is_base_size_override",
+    ] {
+        assert!(!MachineToken::new(spelling)
+            .unwrap()
+            .is_reserved_input_name());
+    }
 }
 
 #[test]

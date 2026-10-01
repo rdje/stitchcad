@@ -12,9 +12,9 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - `crates/sc-units/` — fixed-point units/conversions and typed tolerances/errors; wasm-safe. Entry `crates/sc-units/src/lib.rs`, tests
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/` — identity/topology, ontology, canonical length states and tokens. Entry
-  `crates/sc-core/src/lib.rs`; tests `crates/sc-core/tests/`.
-  Owner `G0-CONTRACT.3` / `G1-SLICE.3` / `.4a.1`.
+- `crates/sc-core/`, `crates/sc-measure/` — ontology, identity/topology and canonical inputs/metadata.
+  Entry `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs`; tests in each crate.
+  Owner `G0-CONTRACT.3`, `G1-SLICE.3` / `.4`.
 - `docs/book/src/spec/` — normative contracts reviewed by the director. Entry
   `docs/book/src/SUMMARY.md`; owner `G0-CONTRACT` and later implementation gates.
 - `docs/book/src/spec/formula-language.md` — expression contract, with linked grammar and examples.
