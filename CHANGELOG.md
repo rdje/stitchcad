@@ -46,6 +46,17 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0025 - shared machine tokens retain exact identifiers (leaf `G1-SLICE.4a.2a`)
+
+Core MachineToken validates ASCII lower-snake identifiers and refuses let/assert/if without trimming,
+normalization or auto-renaming. Built-in input names remain legal references; their rebinding belongs
+to metadata/recipe namespace validation. Six contracts plus privacy cover spelling, lookalikes,
+keywords, collection identity and replacement; four guard mutations fail actual assertions. Restored
+strict Rust executes 305 tests; WASM/book/focused censuses/ledger/staged gates pass. Grammar, input
+chapter and promoted decision agree. Completed .4a.1 contract/evidence moves unchanged to a bounded
+measurement sibling; oldest gather lesson seals in devnotes-part24. D66 owns stale README status in
+next .4a.2b metadata/runtime integration; .2c observes CI/signoff. G1 remains 5/18.
+
 ## STITCHCAD-G1-0024 - canonical length inputs preserve authored state (leaf `G1-SLICE.4a.1`)
 
 Immutable core declarations retain source plus known/assumed/unknown/preference/derived state and

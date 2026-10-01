@@ -9,6 +9,9 @@
 
 The machine form is ASCII, and an identifier is lower snake_case — the machine-token rule the
 [glossary](../glossary.md) states.
+The shared core MachineToken makes that spelling exact: a lowercase letter starts the token,
+letters/digits continue each nonempty segment, and one underscore separates segments. No whitespace,
+uppercase, Unicode, leading/trailing underscore or empty segment is accepted or normalized.
 
 ```
 recipe    := statement*
@@ -27,6 +30,8 @@ atom      := "(" expr ")" | LITERAL | IDENT
 LITERAL   := DIGITS ( "." DIGITS )? ( " " UNIT )?
 KIND      := "length" | "angle" | "area" | "ratio" | "count" | "boolean"
 TOLERANCE := "eps_num" | "eps_geo" | "eps_fmt" | "eps_imp" | "eps_phys"
+IDENT     := LOWER ( LOWER | DIGIT )* ( "_" ( LOWER | DIGIT )+ )*
+LOWER     := "a" ... "z"       DIGIT := "0" ... "9"
 CMPOP     := "==" | "!=" | "<=" | ">=" | "<" | ">"
 ADDOP     := "+" | "-"      MULOP := "*" | "/"
 UNIT      := "um" | "mm" | "cm" | "m" | "in" | "deg" | "pct"

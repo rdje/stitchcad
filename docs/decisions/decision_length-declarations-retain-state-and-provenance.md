@@ -44,6 +44,17 @@ This slice introduces only the length-valued contract required by measurement/ea
 does not introduce text-valued formula parameters, new physical measurement vocabulary, standards
 mapping data, solver assignment to unknown facts or an artifact policy default.
 
+## Shared machine tokens — G1-SLICE.4a.2a
+
+Measurement tokens and recipe identifiers share a core MachineToken. This avoids a higher-crate
+lexical dependency or divergent validators. The grammar's ASCII lower-snake rule is made exact:
+a lowercase letter starts the token; letters/digits continue each nonempty segment; one underscore
+separates segments. Keywords let/assert/if refuse at token construction. Exact authored bytes remain
+unchanged, with no normalization or display-name inference. Built-in reserved names such as eps_geo
+are valid references; measurement/recipe namespace binding rejects attempts to redeclare them.
+MachineToken is neither a scalar text value nor a localized label. Its private representation needs
+validated reconstruction to replace a token; a cloned replacement never mutates earlier metadata.
+
 ## Verification
 
 The core contract tests must cover all five states, required provenance, nonempty/distinct known

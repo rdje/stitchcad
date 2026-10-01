@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — identifier syntax and binding authority are separate checks
+
+- Core MachineToken is shared below metadata and recipes. It preserves ASCII lower-snake bytes,
+  refusing malformed starts/segments, whitespace, Unicode lookalikes, uppercase and the three grammar
+  keywords. Built-in parameter names remain valid references; metadata/recipe owners must separately
+  refuse rebinding. Tokens provide no localized display label, text scalar or source-truth claim.
+- Six contracts and a private-field doc-test pass. Four independent spelling/keyword mutations fail
+  actual regressions; restored strict Rust executes 305 tests with WASM/book green. Grammar and book
+  declare the same syntax, including digit-bearing segments; there is no normalization or auto-rename.
+- Measurement metadata/runtime integration and observed-CI signoff are separate safe slices. The
+  completed length-input contract/checklist moves unchanged to a bounded semantic sibling before
+  parent pressure grows; the current checklist remains first. D66 landing-page status is owned by
+  the runtime slice; D65 remains scheduled at its required-seal trigger, with history now 62/64 files.
+- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s token section.
+
 ## _(2026-10-01)_ — numeric availability and source truth are separate contracts
 
 - A shared core LengthDeclaration holds exactly one authored state and source. Known requires a
@@ -121,20 +136,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   unchanged and is revalidated by the staged gate.
 - promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s layer boundary.
 
-## _(2026-10-01)_ — gather intent belongs to stable material and one canonical ease source
-
-- A Gather names graph/span/side plus its original physical copy. Span-side retargeting to another copy
-  is a typed binding change, even for the same Piece/range. Attachment and signed intake/allocation
-  are borrowed from the canonical span; a second distribution would drift independently.
-- Explicit A-minus-B sign fits the selected side; symbolic sign/value resolution and realized walking
-  remain later obligations. Current-plan and current-graph queries are independent and neither grants
-  release readiness. Design validation still checks every current registry and source-graph landmark.
-- Eleven tests distinguish target changes, both signs, canonical allocations, interval repairs and
-  immutable replacement. Disabling copy binding and interval ownership each makes its regression red;
-  restored strict Rust/WASM/book pass. All intake kinds now have structural APIs, with physical closure
-  and conservation visibly deferred to G2/G3.
-- promotion: promoted by `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`'s gather binding.
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -169,3 +170,5 @@ The live window below holds the most recent lessons. When it passes its health t
 `run_changelog_ledger_probes.sh` proves the digest afterwards.
 
 | [`devnotes-part23.md`](docs/history/stitchcad-devnotes-part23.md) | tuck/pleat and dart lessons | 25 lines, 2172 bytes, `sha256:ba5ee2a7…` |
+
+| [`devnotes-part24.md`](docs/history/stitchcad-devnotes-part24.md) | canonical gather lesson | 13 lines, 1160 bytes, `sha256:2a10a04e…` |

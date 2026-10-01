@@ -48,6 +48,20 @@ does not depend on sc-measure. Formula evaluation will consume its core input co
 host context. Consumers borrow canonical declarations instead of keeping independent numeric/state
 copies. Structural APIs are available now; measurement metadata and executed evaluation follow.
 
+## Stable machine tokens
+
+Measurement metadata will carry a core `MachineToken`, separate from its localized name and scalar
+input. `MachineToken::new` preserves exact ASCII lower-snake spelling or returns `MachineTokenError`:
+`InvalidSyntax` retains malformed input; `ReservedKeyword` names let/assert/if. There is no trimming,
+normalization or automatic renaming. For example, waist_girth and waist_girth_2 are valid, while
+Waist_Girth, waist__girth and a token containing a Cyrillic lookalike are refused. The exact grammar
+lives in [formula syntax §1](formula-language/grammar.md). Private representation prevents unchecked
+mutation; a validated replacement leaves the original token unchanged.
+
+The built-in eps_geo is a valid reference token. Lexical acceptance grants no permission to bind a
+new measurement to it: measurement metadata and recipe namespace validation must refuse reserved
+input redeclarations. The token API provides no source truth, measurement value or display text.
+
 | API token | Meaning in the length-input implementation |
 | --- | --- |
 | `LengthState` | Exactly one authored state with required state-specific provenance |
@@ -61,3 +75,7 @@ copies. Structural APIs are available now; measurement metadata and executed eva
 | `RequiresEvaluation` | Declaration and sole formula source; no authored derived result |
 | `ValueProvenanceValidation` | Registry/evidence/uncertainty policy still need their owned proofs |
 | `DeferredToDesignAndG4` | Content is inspectable without certifying factual truth or exportability |
+| `MachineToken` | Validated exact ASCII lower-snake identifier; not a display label |
+| `MachineTokenError` | Invalid spelling or grammar-keyword refusal |
+| `InvalidSyntax` | Authored token does not meet the shared identifier grammar |
+| `ReservedKeyword` | let/assert/if cannot name an identifier |

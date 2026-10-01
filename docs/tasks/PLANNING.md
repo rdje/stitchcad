@@ -181,6 +181,12 @@ why maximum-content-line bytes is a separate axis in the containment doctrine. B
 keep every axis visible, and they remove the ambiguity a raw `|` inside a code span creates (the GFM
 spec asks for `\|`; the inherited arity checker treats a code span as protective — defect D22).
 
+- **D66** — README status reports only G0 contract work after executable G1 foundations landed.
+  - Reproduce: README's status paragraph against committed G1 .3c family review and .4a.1 core input.
+  - Impact: the landing page understates implementation, although LIVE_STATUS and the book are accurate.
+  - Owner/schedule: `G1-SLICE.4a.2b`, next metadata/runtime integration slice; repair status without
+    implying G0 human approval or an existing user application.
+
 - **D65** — sealed-history file count is approaching its enforced 64-file ceiling; normal
   per-slice retention will soon block product commits even though each segment is small.
   - Reproduce: `git ls-files -- 'docs/history/*.md' | wc -l` → 59 at `2db924b`; the two seals
@@ -458,7 +464,7 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   `rc=0`; introduction/module status matches the committed review; D64 descriptor reproduces exactly.
 - [x] **NO REGRESSION** — WASM/focused censuses/ledger/staged doctrines green, `rc=0`; tree census
   `10 lanes / 13 trees / 5 siblings / 0 unowned / 0 orphan(s) / 0 dead link(s)`.
-- [x] **LOCKSTEP** — D64 in defects-part10; live census 9 open / 55 sealed includes D65 under
+- [x] **LOCKSTEP** — D64 in defects-part10; closure census 9 open / 55 sealed included D65 under
   SPINE.19.2, taken before a product seal would exceed the archive limit. Live/resume/tree/book align.
 
 ### D62/D63 — closed by `G1-SLICE.3c.4d.2`

@@ -9,8 +9,8 @@ sharing its ceiling with a line per record and per tree: `decision_knowledge-map
 - `crates/sc-units/` — fixed-point units/conversions and typed tolerances/errors; wasm-safe. Entry `crates/sc-units/src/lib.rs`, tests
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/` — identity/topology, immutable ontology and canonical length states. Entry
-  `crates/sc-core/src/ontology/`, `crates/sc-core/src/value.rs`; tests `crates/sc-core/tests/`.
+- `crates/sc-core/` — identity/topology, ontology, canonical length states and tokens. Entry
+  `crates/sc-core/src/lib.rs`; tests `crates/sc-core/tests/`.
   Owner `G0-CONTRACT.3` / `G1-SLICE.3` / `.4a.1`.
 - `docs/book/src/spec/` — normative contracts reviewed by the director. Entry
   `docs/book/src/SUMMARY.md`; owner `G0-CONTRACT` and later implementation gates.
