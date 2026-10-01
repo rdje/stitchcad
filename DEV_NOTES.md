@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — physical placement validation follows current material without changing identity
+
+- A notion placement names a stable physical copy and retains its original source Piece binding.
+  Reordering preserves identity; removal or source reassignment cannot transfer hardware to a peer.
+  Reflection is separate from source-frame journal direction and supplies no inferred coordinates.
+- Birth requires live uniquely owned anchoring; current validation follows historical references and
+  preserves split choices/deletions as CurrentUnresolved evidence. The shared helper maps birth errors
+  back to their existing variants, preserving Notch/TurnPoint contracts. A Piece id surviving an edit
+  is insufficient: current resolved anchor and whole direction ownership must still be checked.
+- Ten contracts + privacy pass. Four independent mutations fail red for copy binding, range ownership,
+  historical resolution and anchor ownership; restored strict Rust/WASM/book pass. Raw queries are
+  independent of registry/release approval. Hem checklist and verification history relocate unchanged.
+- promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`'s notion placement.
+
 ## _(2026-10-01)_ — a faced hem needs current target validation, not cached birth approval
 
 - Hem binds one stable Facing identity without copying its material or source definition. Current
@@ -135,20 +149,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   the existing `decision_acceptance-evidence-per-leaf.md`, rather than masking old boxes with a new one.
 - promotion: promoted by `decision_physical-cut-copies-have-stable-identities.md`.
 
-## _(2026-10-01)_ — semantic anchoring and target-profile resolution have separate obligations
-
-- A valid notch anchor does not supply factory-specific dimensions or encoding. Stable logical
-  parameter declarations retain all sample/production fields without copying values or uncertainty
-  flags. `DeferredToG4` exposes the missing binding/type/evidence check; G1 has no physical defaults.
-- Anchor ownership must use resolved ranges and positions. After merging an owned edge with a foreign
-  one, only its surviving portion belongs to the Piece; reversal changes both frames. Seven contract
-  tests cover that boundary, split choice, exact merge, deletion and metadata immutability. Disabling
-  the membership refusal makes the partial-merge regression red; strict checks and WASM remain green.
-- D58 was a contradictory future acceptance, not another policy: canonical release §8 explicitly
-  supplies sidecar draft output and forbids defaults. The dependent G4 leaf now matches that authority.
-- promotion: promoted by `decision_profile-bindings-stay-symbolic-at-g1.md`, recorded before code.
-
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -170,6 +170,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part15.md`](docs/history/stitchcad-devnotes-part15.md) | structural-piece lesson | 15 lines, 1334 bytes, `sha256:1b362d26…` |
 | [`devnotes-part16.md`](docs/history/stitchcad-devnotes-part16.md) | interval-coverage lesson | 13 lines, 1183 bytes, `sha256:fcf7c475…` |
 | [`devnotes-part17.md`](docs/history/stitchcad-devnotes-part17.md) | separate-pair-member lesson | 12 lines, 1049 bytes, `sha256:140c4c41…` |
+| [`devnotes-part18.md`](docs/history/stitchcad-devnotes-part18.md) | semantic-anchor/profile-binding lesson | 12 lines, 1102 bytes, `sha256:61a13500…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

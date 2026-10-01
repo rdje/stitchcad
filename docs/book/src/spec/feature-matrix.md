@@ -107,8 +107,8 @@ chapter is inside that family or explicitly outside it.
 | facing | supported | ontology §4.7/§10; structural facing intent implemented; physical offset/drafting proof remains G3 | G3 | — |
 | interfacing | supported | ontology §4.7/§10; structural interfacing intent implemented; physical fixture offset remains G2 | G2 | — |
 | lining | deferred | ontology §4.7/§10; modelled lining implemented; execution refuses env_lining; G7 owns limitation | G7 | `env_lining` |
-| zipper, centred | supported | ontology §4.7; the fixture's CB closure is an 18.0 cm centred zipper | G2 | — |
-| hook and bar | supported | ontology §4.7; the fixture's waistband closes with one on its extension | G2 | — |
+| zipper, centred | supported | ontology §4.7/§10; physical placements landed, descriptor follows; G2 proves the 18.0 cm fixture zip | G2 | — |
+| hook and bar | supported | ontology §4.7/§10; physical placements landed, descriptor follows; G2 proves the fixture closure | G2 | — |
 | button and buttonhole | supported | ontology §4.7 derives the hole from the button; §11 G3's coverage criterion requires a garment carrying one, and G5's tech pack already requires the notions list | G3 derivation; G5 notions | — |
 | fly construction | deferred | a fly follows the trousers, and v1 refuses it: rule 3 of §1 puts an unproved capability in the gate that declares limitations | G7 | `env_fly` |
 | pocket | supported | ontology §4.7 models position, orientation, opening type and composition; §11 G3's coverage criterion requires the trousers to carry one | G3 | — |

@@ -465,11 +465,52 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Commit: `STITCHCAD-G1-0018`
 
 - ID: `G1-SLICE.3c.4c`
-  Status: `pending`
+  Status: `active`
   Goal: Closure descriptors with button/buttonhole derivation, centred zipper and hook/bar placement,
   count and sizes; unsupported fly refusal. Derived buttonhole length cannot be independently entered.
   Acceptance: typed supported/deferred variants, required owned anchors and composition/count domains;
   no physical placement or resolved buttonhole-size claim before G2/G3.
+  Verification: `pending`
+  Commit: `pending`
+
+  Children: `.3c.4c.1a` (physical notion placements), `.3c.4c.1b` (centred zipper/hook-bar/fly),
+  `.3c.4c.2` (button/buttonhole pairs and one canonical length derivation).
+
+- ID: `G1-SLICE.3c.4c.1a`
+  Status: `done`
+  Goal: immutable semantic placement of a notion on a stable physical CutCopy, with an owned anchor
+  and directed orientation range, reusable by all closure components without duplicated geometry.
+  Acceptance: missing copy, wrong/reassigned source Piece, invalid anchors and incomplete/foreign
+  orientation ranges are typed refusals. Current queries never retarget to another copy.
+  Design before code: stable placement id + physical-copy id + anchor/direction are authored input;
+  private born Piece identity guards copy reassignment, without caching geometry or reflected coordinates.
+  Birth anchors require live edges; current validation accepts uniquely resolved historical anchors,
+  while retaining split choices/repairs. Extract the shared current-anchor validator behind the
+  existing born-live guard so original Notch/TurnPoint behavior stays unchanged. Independent raw
+  anchor/direction queries remain visible; Design validates all current copy/Piece registries.
+  Extend the physical-copy decision before code; G2/V1 consumes reflection. Hardware/count/size
+  descriptors follow in `.1b`/`.2`. Move completed Hem evidence unchanged to the existing sibling;
+  bounded closure book examples and live ledger/lesson rollovers are owned synchronized docs.
+  Move the completed verification-log table unchanged to the evidence sibling before the new checklist
+  crosses 1000 lines; retain a direct retrieval pointer and fresh current verification log here.
+  Verification: 10 placement contracts + privacy; four mutations red; restored focused checks green.
+  Commit: `STITCHCAD-G1-0019`
+
+- ID: `G1-SLICE.3c.4c.1b`
+  Status: `pending`
+  Goal: centred zipper and hook/bar descriptors with physical notion-placement pairs, explicit sizes,
+  counts derived from nonempty placements and named env_fly refusal. No physical placement claim.
+  Acceptance: all placements revalidate current contexts; supported kinds stay distinct; empty/duplicate
+  physical instances refused; no fallback sizes; fly refusal names requested closure/trousers gap/G7.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.3c.4c.2`
+  Status: `pending`
+  Goal: button/buttonhole pairs with owned placements and button sizes, single canonical derived hole
+  length source; no separately authored or cached hole length. Explicit profile/recipe provenance.
+  Acceptance: required pairs/counts/targets validate; changing button size changes the source observed
+  by derived holes; physical length resolution/derivation and placements remain G2/G3 obligations.
   Verification: `pending`
   Commit: `pending`
 
@@ -518,6 +559,9 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   declarations before design acceptance; symbolic identities are not valid parameter values.
   Verification: `pending`
   Commit: `pending`
+
+  Notion placements: validate current plan, original source Piece and all held anchor/direction
+  references with validate_current(); raw evidence alone is not a registry/release certificate.
 
   Hem composition: validate current Facing identities/served owners/sources and depth/fold declarations
   before execution; independent edge/target queries alone do not grant release readiness.
@@ -643,7 +687,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| — | `G1-SLICE.3c.4c` | `pending` | closure descriptors; hem/layer intent complete |
+| — | `G1-SLICE.3c.4c.1b` | `pending` | zipper/hook-bar descriptors and fly scope refusal |
 
 ## Decisions
 
@@ -716,34 +760,32 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
-### `G1-SLICE.3c.4b.2` — Hem retains depth/fold intent and validates current Facing targets
+### `G1-SLICE.3c.4c.1a` — physical notion placements preserve stable copy bindings
 
-- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires Hem depth, fold type, finish edge and turned/faced
-  method; the prior commit has served layers but no Hem. Birth approval cannot certify later edits.
-- [x] **ROOT CAUSE (WHY + WHERE)** — a Facing can lose interior source material while its original
-  endpoints stay live. `cargo test -p sc-core --test hem_contract
-  old_facing_is_revalidated_against_current_ledger_instead_of_reusing_birth_approval` → `1 passed`,
-  `rc=0`: current queries and Hem birth both return InvalidFacing with the raw interior repair.
-  `foreign_middle_of_finish_edge_is_refused_despite_owned_ends_after_reversal` → `1 passed`, `rc=0`:
-  full live coverage still fails whole-source ownership, including after reversal.
-- [x] **FIX** — immutable finish edge, explicit/symbolic depth, required logical fold binding and
-  authored Turned/Faced method. Faced composition borrows the original current Facing after checking
-  identity, served Piece and source validation. No duplicated layer data, solved values or defaults.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test hem_contract` → `10 passed`, `rc=0`:
-  authored/symbolic depth and fold types, both methods, canonical target borrowing, missing/replaced/
-  reassigned targets, stale interiors, foreign finish material, raw directions/repairs and immutability.
-  Identity, current-layer and interval-ownership refusals disabled independently → each regression red,
-  `rc=101`; restored strict checks and privacy pass. Gather/layer checklist relocation compares
-  unchanged to `git show HEAD:docs/tasks/G1-SLICE.md`, with per-checklist staged revalidation.
+- [x] **REPRODUCE / ISSUE** — closure components attach to physical material; Piece-only positions
+  cannot distinguish copies. The prior commit has CutCopy identities but no notion-placement API.
+- [x] **ROOT CAUSE (WHY + WHERE)** — birth and current anchor validation have different contracts.
+  `cargo test -p sc-core --test notion_contract
+  current_validation_follows_historical_anchors_but_reports_current_choice_and_repairs` → `1 passed`,
+  `rc=0`: historical anchors resolve while split choices/deletions remain current repair evidence.
+  `copy_source_reassignment_and_wrong_provided_piece_are_typed_refusals` → `1 passed`, `rc=0`:
+  the original copy id cannot silently adopt another source Piece.
+- [x] **FIX** — immutable placement id/copy/anchor/direction plus original source identity guard.
+  Born-live anchoring keeps existing errors; shared current validation follows journal ownership.
+  Current copy/Piece checks and whole direction intervals refuse retargeting, lost/foreign material.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test notion_contract` → `10 passed`, `rc=0`:
+  distinct copies, ordering/removal/reassignment, historical anchors, current ownership, choices,
+  interior repairs, directed order and immutable input. Four mutations (copy binding, range ownership,
+  historical resolution and current anchor ownership) independently fail red, `rc=101`; restored
+  privacy/checks pass. Hem checklist and completed verification table compare unchanged to HEAD.
 - [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
   green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
   tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
-  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Earlier layer/intake contracts pass.
-- [x] **LOCKSTEP** — pre-code decision, Design composition/declaration obligations, module/map status,
-  construction examples/API vocabulary, feature reason, `.4b` parent closure, frontier/logs/index and
-  live docs align. Oldest entries seal unchanged to changelog-part19/devnotes-part17, with verified
-  digests. Three of four
-  object families remain done; physical folding remains G2/G3. Next `.3c.4c` closures.
+  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Notch/TurnPoint contracts unchanged.
+- [x] **LOCKSTEP** — pre-code copy decision, closure children, current Design obligations, module/map,
+  bounded closure chapter/API vocabulary and feature reasons, evidence/log retrieval, frontier/index
+  and live docs align. The oldest lesson seals unchanged to devnotes-part18. No closure kind/count/size or
+  physical transform claim yet; next `.3c.4c.1b`. G1 remains 3/4 object families.
 
 ### `G1-SLICE.13` (acceptance rewritten by `G0-CONTRACT.11`) — a consumer leaf names its instrument, not a protocol in prose
 
@@ -785,36 +827,12 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 ## Verification Log
 
+[Completed verification through Hem](G1-SLICE-evidence.md#historical-verification-log) is preserved
+unchanged in the evidence sibling; fresh current-slice checks remain here.
+
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
-| `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
-| `2026-09-30` | `.1` | `cargo metadata --no-deps`; `make check`; `make wasm`; `make gate`; `run_g0_exit_review.sh` | crates `sc-core, sc-units`; `21 passed` property + `1` doc-test; wasm build green; `=== all doctrines green ===`; `G0-17`/`G0-18` `MET` — every `.1` criterion re-derived, `rc=0` |
-| `2026-09-30` | `.2` | `cargo test -p sc-units --test property`; `make wasm`; `make gate` | `21 passed` (round-trips, class separation, typed dimension/non-finite errors); wasm cross-build green; `=== all doctrines green ===` — every `.2` criterion re-derived, `rc=0` |
-| `2026-09-30` | `.3a` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate` | `31 passed` unit + `9 passed` property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===` — every `.3a` criterion re-derived, `rc=0` |
-| `2026-10-01` | `.3b` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate`; `make probes`; `run_changelog_ledger_probes.sh` | `62 passed` unit + `8 passed` contract property + `9 passed` identity property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===`; `22 suite(s) green`; ledger probes `9 pass / 0 fail` — every `.3b` criterion re-derived, `rc=0` |
-| `2026-10-01` | `.3c.1` | `make check`; piece contract; `make wasm`; `make book`; `make gate`; release/feature censuses; ledger probes | `12 passed`; privacy doctest green; wasm green; book warning-free; all doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
-| `2026-10-01` | `.3c.2a` | range contract; `make check`; wasm; book; gate; feature census; ledger probes | `13 passed`; all Rust suites green; wasm green; book warning-free; doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
-| `2026-10-01` | `.3c.1a` | piece contract; `make check`; wasm; book; fixture/feature censuses; ledger probes; gate | `14 passed`; all Rust suites green; wasm/book green; `0 mismatch(es)`; `0 failure(s)`; `9 pass / 0 fail`; doctrines green, `rc=0` |
-
-| `2026-10-01` | `.3c.3a` | notch contract; `make check`; wasm; book; feature/release censuses; ledger probes; gate | `7 passed`; privacy check green; Rust/WASM/book green; `0 failure(s)`; `9 pass / 0 fail`; doctrines green, `rc=0` |
-
-| `2026-10-01` | `.3c.2b.1` | cut contract; check; wasm; book; feature/glossary/tree censuses; ledger; gate | `9 passed`; privacy green; all Rust/WASM/book green; censuses green; ledger `9 pass / 0 fail`; doctrines green, `rc=0` |
-
-| `2026-10-01` | `.3c.2b.2` | sewing contracts; check; wasm; book; fixture/feature/glossary; ledger; gate | `18 passed`; graph privacy + notch suites green; Rust/WASM/book green; censuses/ledger/doctrines green, `rc=0`; prior copy milestone full probes `22 suite(s) green` |
-
-| `2026-10-01` | `.3c.3b` | grain contracts; check; wasm; book; feature/glossary/probes; ledger; gate | `9 passed`; reversal mutation red; all restored checks green, `rc=0`; D61 fixed |
-
-| `2026-10-01` | `.3c.3c` | allowance contracts; check; wasm; book; fixture/feature/glossary; ledger; gate | `8 passed`; ownership mutation red; restored Rust/WASM/book/censuses/gates green, `rc=0` |
-
-| `2026-10-01` | `.3c.4a.1` | dart contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; ownership mutation red; restored checks/censuses/gates green, `rc=0` |
-
-| `2026-10-01` | `.3c.4a.2a` | fold contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; ownership mutation red; restored checks/censuses/gates green, `rc=0` |
-
-| `2026-10-01` | `.3c.4a.2b` | gather contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `11 passed`; copy/ownership mutations red; restored focused checks/gates green, `rc=0` |
-
-| `2026-10-01` | `.3c.4b.1` | layer contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; scope/ownership mutations red; restored focused checks/gates green, `rc=0` |
-
-| `2026-10-01` | `.3c.4b.2` | Hem contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `10 passed`; identity/current-layer/ownership mutations red; restored checks/gates green, `rc=0` |
+| `2026-10-01` | `.3c.4c.1a` | notion contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `10 passed`; four mutations red; restored checks/gates green, `rc=0` |
 
 ## Commit Log
 
@@ -839,7 +857,8 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 | `.3c.4a.2b` | `STITCHCAD-G1-0016 (leaf G1-SLICE.3c.4a.2b)` | gather physical-side binding; canonical ease; intake parents closed |
 | `.3c.4b.1` | `STITCHCAD-G1-0017 (leaf G1-SLICE.3c.4b.1)` | served-layer intent; lining execution scope refusal |
 | `.3c.4b.2` | `STITCHCAD-G1-0018 (leaf G1-SLICE.3c.4b.2)` | Hem depth/fold intent and current Facing composition; hem/layer parent closed |
-| `.3c.4c` … `.16` | `pending` | remaining constructions and G1 execution leaves |
+| `.3c.4c.1a` | `STITCHCAD-G1-0019 (leaf G1-SLICE.3c.4c.1a)` | physical notion placements; current copy/anchor/direction validation |
+| `.3c.4c.1b` … `.16` | `pending` | remaining constructions and G1 execution leaves |
 
 ## Changelog
 
@@ -964,3 +983,12 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 - `2026-10-01`: `.3c.4b.2` lands Hem intent with explicit depth/fold origins and stable current Facing
   validation. Hem/layer parent closes structurally; physical folding remains G2/G3. Next `.3c.4c`.
+
+- `2026-10-01`: `.3c.4c.1a` moves completed Hem evidence unchanged to the existing sibling: 28
+  lines / 2590 bytes; SHA256 `6ab6459295f45c7c816826b47810e301f07949dbba070c5ca60a1cc4b3f960f1`.
+
+- `2026-10-01`: `.3c.4c.1a` verification-log containment preserves the completed table unchanged:
+  32 lines / 4337 bytes; SHA256 `ba3645f60a7be24edcc500079448238f951041de50cd45af09da22223825aac4`.
+
+- `2026-10-01`: `.3c.4c.1a` lands stable physical notion placements and shared current anchor checks;
+  raw repairs remain visible. Closure kinds/counts/sizes follow `.1b`/`.2`, with geometry deferred.

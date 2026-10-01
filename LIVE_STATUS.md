@@ -16,7 +16,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
 | Defect census | In Progress | 8 open, 52 sealed. Open: D34 + D38 (`PLANNING.5`), D40 + D46 + D51 (`SPINE.19`), D49 (`SPINE.5`), D53 + D54 (`SPINE.4`). Counts derive from a `grep -c` over the census and its archive |
 | G0 — product & semantic contract | Mostly Done | Every clause met and derived except evaluation-seat procurement, accepted open by ruling; closure **unapproved** (governance §6.1). `run_g0_exit_review.sh` → `18 met / 1 not met` |
-| G1 — executable architecture slice | In Progress | 4 of 18 top-level leaves done; `.3c` object types has 3 of 4 object families done (pieces, sewing, marks/allowances). Intake/Hem/layer intent landed; next `.3c.4c` |
+| G1 — executable architecture slice | In Progress | 4 of 18 top-level leaves done; `.3c` object types has 3 of 4 object families done (pieces, sewing, marks/allowances). Construction/placement intent landed; next `.3c.4c.1b` |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 leaves; CSP + oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |
@@ -25,4 +25,4 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | G7 — scoped production declaration | Not Started | 7 leaves: independent review, envelope statement, semver policy, upgrade/rollback, channels, governance |
 | V1 — assembly visualization | Not Started | parallel, never blocks a G-gate; 7 leaves: mesh, ease-aware stitching, net-line binding, arrangement, viewport, blinded validation |
 | V2 — physically validated simulation | Not Started | parallel, uncapped; 6 leaves: `sc-sim` out of the default build, XPBD research, labelled approximation, calibration + observables, evidence-gated exit |
-| Product code (`crates/`) | In Progress | `sc-units` implements the numerical contract (30 tests, no deps, WASM build green); `sc-core` has identity, point/range repairs, immutable pieces, cut plans, marks, allowances, intake/Hem/layer intent and sewing graphs; physical validation deferred; starter retired |
+| Product code (`crates/`) | In Progress | `sc-units` implements the numerical contract (30 tests, no deps, WASM build green); `sc-core` has identity, point/range repairs, immutable pieces, cut plans, marks, allowances, construction/placement intent and sewing graphs; physical validation deferred; starter retired |

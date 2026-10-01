@@ -40,6 +40,21 @@ The live window below holds the most recent slices. When it passes its health ta
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
 
+## STITCHCAD-G1-0019 - physical notion placements preserve stable copy bindings (leaf `G1-SLICE.3c.4c.1a`)
+
+Immutable NotionPlacement retains stable id/copy, source-frame anchor/orientation and original
+Piece binding. Current validation refuses missing/reassigned copies, lost or foreign anchors and
+incomplete orientation intervals. It accepts uniquely resolved historical anchors while preserving
+current choices/repairs. The shared current-anchor validator keeps original birth errors and
+Notch/TurnPoint behavior. Reflection remains separate G2/V1 geometry, without copied coordinates.
+
+Ten contracts + privacy pass; copy binding, range ownership, historical resolution and current-anchor
+ownership mutations each fail red. Restored strict Rust, wasm, warning-free book, fixture/feature/
+glossary/tree censuses, ledger and staged gates pass. A bounded closure chapter documents the API;
+closure kinds/counts/sizes still follow. Completed Hem evidence and verification table move unchanged
+with committed-payload oracles and staged revalidation. G1 stays 4/18 top-level leaves, 3/4 families;
+next `.3c.4c.1b` zipper/hook-bar/fly, then `.4c.2` button/buttonhole derivation.
+
 ## STITCHCAD-G1-0018 - Hem retains depth/fold intent and validates current Facing targets (leaf `G1-SLICE.3c.4b.2`)
 
 Immutable Hem retains an owned finish edge, explicit/formula/profile depth, required fold-type

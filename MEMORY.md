@@ -5,12 +5,12 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.3c.4c`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** `.3c.4c` — Closure descriptors: button/buttonhole derivation, centred zipper and
-  hook/bar placement/count/size intent; unsupported fly diagnostic. Split into safe children before
-  code if needed. Intake and Hem/layer intent have structural APIs. Current Facing targets revalidate
-  sources; modelled lining refuses env_lining. Registries `.5`/`.6`, geometry G2/G3, profiles G4 remain
-  explicit obligations. G1 has 3/4 object families; pockets/signoff follow closures.
+- **Active tree:** `G1-SLICE`, frontier **`.3c.4c.1b`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** `.3c.4c.1b` — centred zipper/hook-bar descriptors with stable physical placement
+  pairs, explicit sizes/counts and named env_fly refusal. `.4c.1a` landed immutable NotionPlacement
+  with current copy/source/anchor/direction validation; raw queries do not grant release readiness.
+  Button/buttonhole derivation follows `.4c.2`, then pockets/signoff. Registries `.5`/`.6`, geometry
+  G2/G3, reflection G2/V1 and profiles G4 remain explicit obligations; G1 has 3/4 object families.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

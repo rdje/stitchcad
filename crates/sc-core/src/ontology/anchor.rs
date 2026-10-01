@@ -1,4 +1,4 @@
-//! Born-valid semantic edge anchors, shared by notches and sewing turn points.
+//! Born-live and current semantic edge-anchor validation, shared by marks and construction placements.
 use super::{EdgeRef, EntityId, IdentityLedger, Param, Piece, RangePortion, Resolution};
 use core::fmt;
 
@@ -33,6 +33,13 @@ pub enum AnchorError {
         /// The exact resolution requiring repair or an explicit consumer choice.
         resolution: Box<Resolution>,
     },
+    /// A previously valid held anchor now needs repair or an explicit consumer choice.
+    CurrentUnresolved {
+        /// Held anchor.
+        anchor: EdgeAnchor,
+        /// Current raw resolution evidence.
+        resolution: Box<Resolution>,
+    },
 }
 
 impl fmt::Display for AnchorError {
@@ -48,6 +55,11 @@ impl fmt::Display for AnchorError {
                     anchor.edge, anchor.param
                 )
             }
+            Self::CurrentUnresolved { anchor, .. } => write!(
+                f,
+                "semantic anchor {} at {} currently needs repair or an explicit choice",
+                anchor.edge, anchor.param
+            ),
             Self::BornUnresolved { anchor, .. } => {
                 write!(
                     f,
@@ -70,9 +82,24 @@ pub(crate) fn validate_anchor(
     if !ledger.is_live(anchor.edge) {
         return Err(AnchorError::MissingEdge { edge: anchor.edge });
     }
+    validate_current_anchor(anchor, piece, ledger).map_err(|error| match error {
+        AnchorError::CurrentUnresolved { anchor, resolution } => {
+            AnchorError::BornUnresolved { anchor, resolution }
+        }
+        other => other,
+    })
+}
+
+/// Validate current resolved ownership; a held historical edge need not still be live itself.
+/// Unlike birth validation, this follows the journal and preserves choices or repair evidence.
+pub(crate) fn validate_current_anchor(
+    anchor: EdgeAnchor,
+    piece: &Piece,
+    ledger: &IdentityLedger,
+) -> Result<(), AnchorError> {
     let resolution = ledger.resolve(anchor.edge, anchor.param);
     let Some(point) = resolution.resolved() else {
-        return Err(AnchorError::BornUnresolved {
+        return Err(AnchorError::CurrentUnresolved {
             anchor,
             resolution: Box::new(resolution),
         });

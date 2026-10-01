@@ -316,6 +316,7 @@ bounded; all existing examples and local API vocabulary are preserved there.
 | Notch | Semantic anchor, symbolic profile bindings | G4 physical geometry/encoding |
 | Sewing graph | Copy-addressed spans, disjoint self-seams, explicit ease and stops | G2/G3 walking; recipe/profile values |
 | SeamAllowance | Per-edge width origins, corner intent, symbolic inclusion | G2 bounded offsets; G4 target policy |
+| Notion placements | Stable physical-copy anchors/orientation, current validation | G2/V1 physical transforms; closure kinds/counts/sizes follow |
 | Hem | Whole finish edge, depth/fold origins, current Facing links | G2/G3 executed folding; registries; G4 profile fields |
 | Facing/Lining/Interfacing | Served Piece, recipe offset relationship, material intent | G2 offsets; registries; lining execution deferred to G7 |
 | Gather | Physical span-side binding, borrowed intake/allocation | G2/G3 executed gathering/walking; current registries |
@@ -326,3 +327,5 @@ bounded; all existing examples and local API vocabulary are preserved there.
 [Garment construction examples](ontology-constructions.md) have their own bounded companion.
 The companion chapters expose the validation boundary and its testable limits. These APIs do not
 replace the command bus's future atomic design validation or grant production-release permission.
+
+[Closure placement and descriptor examples](ontology-closures.md) are independently bounded.

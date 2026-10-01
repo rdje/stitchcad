@@ -583,3 +583,67 @@ decision recorded before the code, dependency-free and wasm-safe.
   examples/API vocabulary/ontology index and feature row, intake parents closed, evidence relocation,
   frontier/logs/index, MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES. Oldest lesson seals to
   devnotes-part15. Three of four object families remain done; next `.3c.4b` hem/layer descriptors.
+
+### `G1-SLICE.3c.4b.2` — Hem retains depth/fold intent and validates current Facing targets
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires Hem depth, fold type, finish edge and turned/faced
+  method; the prior commit has served layers but no Hem. Birth approval cannot certify later edits.
+- [x] **ROOT CAUSE (WHY + WHERE)** — a Facing can lose interior source material while its original
+  endpoints stay live. `cargo test -p sc-core --test hem_contract
+  old_facing_is_revalidated_against_current_ledger_instead_of_reusing_birth_approval` → `1 passed`,
+  `rc=0`: current queries and Hem birth both return InvalidFacing with the raw interior repair.
+  `foreign_middle_of_finish_edge_is_refused_despite_owned_ends_after_reversal` → `1 passed`, `rc=0`:
+  full live coverage still fails whole-source ownership, including after reversal.
+- [x] **FIX** — immutable finish edge, explicit/symbolic depth, required logical fold binding and
+  authored Turned/Faced method. Faced composition borrows the original current Facing after checking
+  identity, served Piece and source validation. No duplicated layer data, solved values or defaults.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test hem_contract` → `10 passed`, `rc=0`:
+  authored/symbolic depth and fold types, both methods, canonical target borrowing, missing/replaced/
+  reassigned targets, stale interiors, foreign finish material, raw directions/repairs and immutability.
+  Identity, current-layer and interval-ownership refusals disabled independently → each regression red,
+  `rc=101`; restored strict checks and privacy pass. Gather/layer checklist relocation compares
+  unchanged to `git show HEAD:docs/tasks/G1-SLICE.md`, with per-checklist staged revalidation.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
+  green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
+  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
+  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Earlier layer/intake contracts pass.
+- [x] **LOCKSTEP** — pre-code decision, Design composition/declaration obligations, module/map status,
+  construction examples/API vocabulary, feature reason, `.4b` parent closure, frontier/logs/index and
+  live docs align. Oldest entries seal unchanged to changelog-part19/devnotes-part17, with verified
+  digests. Three of four
+  object families remain done; physical folding remains G2/G3. Next `.3c.4c` closures.
+
+## Historical verification log
+
+## Verification Log
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-09-29` | tree seeded | `scripts/check_doctrines.sh` | `=== all doctrines green ===`, `rc=0` |
+| `2026-09-30` | `.1` | `cargo metadata --no-deps`; `make check`; `make wasm`; `make gate`; `run_g0_exit_review.sh` | crates `sc-core, sc-units`; `21 passed` property + `1` doc-test; wasm build green; `=== all doctrines green ===`; `G0-17`/`G0-18` `MET` — every `.1` criterion re-derived, `rc=0` |
+| `2026-09-30` | `.2` | `cargo test -p sc-units --test property`; `make wasm`; `make gate` | `21 passed` (round-trips, class separation, typed dimension/non-finite errors); wasm cross-build green; `=== all doctrines green ===` — every `.2` criterion re-derived, `rc=0` |
+| `2026-09-30` | `.3a` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate` | `31 passed` unit + `9 passed` property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===` — every `.3a` criterion re-derived, `rc=0` |
+| `2026-10-01` | `.3b` | `cargo test -p sc-core`; `make check`; `make wasm`; `make gate`; `make probes`; `run_changelog_ledger_probes.sh` | `62 passed` unit + `8 passed` contract property + `9 passed` identity property; fmt/clippy `-D warnings` clean; `sc-core` cross-builds to wasm; `=== all doctrines green ===`; `22 suite(s) green`; ledger probes `9 pass / 0 fail` — every `.3b` criterion re-derived, `rc=0` |
+| `2026-10-01` | `.3c.1` | `make check`; piece contract; `make wasm`; `make book`; `make gate`; release/feature censuses; ledger probes | `12 passed`; privacy doctest green; wasm green; book warning-free; all doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
+| `2026-10-01` | `.3c.2a` | range contract; `make check`; wasm; book; gate; feature census; ledger probes | `13 passed`; all Rust suites green; wasm green; book warning-free; doctrines green; `0 failure(s)`; `9 pass / 0 fail`, `rc=0` |
+| `2026-10-01` | `.3c.1a` | piece contract; `make check`; wasm; book; fixture/feature censuses; ledger probes; gate | `14 passed`; all Rust suites green; wasm/book green; `0 mismatch(es)`; `0 failure(s)`; `9 pass / 0 fail`; doctrines green, `rc=0` |
+
+| `2026-10-01` | `.3c.3a` | notch contract; `make check`; wasm; book; feature/release censuses; ledger probes; gate | `7 passed`; privacy check green; Rust/WASM/book green; `0 failure(s)`; `9 pass / 0 fail`; doctrines green, `rc=0` |
+
+| `2026-10-01` | `.3c.2b.1` | cut contract; check; wasm; book; feature/glossary/tree censuses; ledger; gate | `9 passed`; privacy green; all Rust/WASM/book green; censuses green; ledger `9 pass / 0 fail`; doctrines green, `rc=0` |
+
+| `2026-10-01` | `.3c.2b.2` | sewing contracts; check; wasm; book; fixture/feature/glossary; ledger; gate | `18 passed`; graph privacy + notch suites green; Rust/WASM/book green; censuses/ledger/doctrines green, `rc=0`; prior copy milestone full probes `22 suite(s) green` |
+
+| `2026-10-01` | `.3c.3b` | grain contracts; check; wasm; book; feature/glossary/probes; ledger; gate | `9 passed`; reversal mutation red; all restored checks green, `rc=0`; D61 fixed |
+
+| `2026-10-01` | `.3c.3c` | allowance contracts; check; wasm; book; fixture/feature/glossary; ledger; gate | `8 passed`; ownership mutation red; restored Rust/WASM/book/censuses/gates green, `rc=0` |
+
+| `2026-10-01` | `.3c.4a.1` | dart contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; ownership mutation red; restored checks/censuses/gates green, `rc=0` |
+
+| `2026-10-01` | `.3c.4a.2a` | fold contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; ownership mutation red; restored checks/censuses/gates green, `rc=0` |
+
+| `2026-10-01` | `.3c.4a.2b` | gather contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `11 passed`; copy/ownership mutations red; restored focused checks/gates green, `rc=0` |
+
+| `2026-10-01` | `.3c.4b.1` | layer contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `9 passed`; scope/ownership mutations red; restored focused checks/gates green, `rc=0` |
+
+| `2026-10-01` | `.3c.4b.2` | Hem contracts; check; wasm; book; fixture/feature/glossary/tree; ledger; gate | `10 passed`; identity/current-layer/ownership mutations red; restored checks/gates green, `rc=0` |

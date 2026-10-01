@@ -4,7 +4,7 @@
 //! Normative source: `docs/book/src/spec/ontology.md` (gate G0, specified by `G0-CONTRACT.3`). Implemented
 //! across three ordered slices: **`.3a`** the identity layer, **`.3b`** the persistent-identity contract
 //! that resolves references under split/merge/reverse/delete (both landed), and **`.3c`** the
-//! geometry-bearing object types (pieces, copy plans, notches, grainlines, allowances, intake/layer/hem intent and
+//! geometry-bearing object types (pieces, copy plans, notches, grainlines, allowances, intake/layer/hem/placement intent and
 //! sewing graphs landed; remaining constructions follow).
 //!
 //! The identity layer is the foundation the other two consume: a reference is meaningless without a stable
@@ -22,6 +22,7 @@
 //! | [`grain`] | directed grainline and independent stripe/plaid references, deferred angles | `.3c.3b` |
 //! | [`hem`] | finish edge, depth/fold intent and stable current Facing links | `.3c.4b.2` |
 //! | [`layer`] | served layer/recipe/material intent; explicit lining execution-scope refusal | `.3c.4b.1` |
+//! | [`notion`] | physical-copy placements, owned anchors/orientation and current target validation | `.3c.4c.1a` |
 //! | [`notch`] | immutable semantic anchors and symbolic profile bindings, deferred physical validation | `.3c.3a` |
 //! | [`piece`] | immutable structurally validated `Piece`, complete label view, deferred geometry | `.3c.1` |
 //! | [`id`] | `EntityId` (a ULID) and the injected `IdGenerator` | `.3a` |
@@ -42,6 +43,7 @@ pub mod hem;
 pub mod id;
 pub mod layer;
 pub mod notch;
+pub mod notion;
 pub mod piece;
 pub mod range;
 pub mod rational;
@@ -107,3 +109,5 @@ pub use layer::{
 };
 
 pub use hem::{Hem, HemDefinition, HemDepth, HemError, HemFoldType, HemMethod};
+
+pub use notion::{NotionPlacement, NotionPlacementDefinition, NotionPlacementError};

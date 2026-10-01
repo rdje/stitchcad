@@ -5,7 +5,7 @@
 - **Status:** `active`
 - **Owner / source:** `G1-SLICE.3c.2b`, director ruling answering D57, ontology §4.1–§4.2.
 
-answers: "how does a seam distinguish copies of a cut-two piece?" · "are cut-copy ids derived from order?" · "how do mirrored copies appear in a cut plan?"
+answers: "how does a seam distinguish copies of a cut-two piece?" · "are cut-copy ids derived from order?" · "how do mirrored copies appear in a cut plan?" · "how do closure notions distinguish physical copies?"
 
 ## Context
 
@@ -43,3 +43,13 @@ The command bus owns atomic replacements and global design-level identity/refere
 - Implementation prose must declare API names in the chapter's local vocabulary table, and garment
   concepts in the glossary. Run the glossary census on every ontology implementation slice: D59
   reproduced 15 undeclared names at the committed baseline, despite other focused gates being green.
+
+## Physical notion placement (`G1-SLICE.3c.4c.1a`)
+
+Closure components attach to physical material, so their placements name stable CutCopy identities,
+not implicit ordinal copies. Each immutable placement retains its own id, held anchor and directed
+orientation range; its private born Piece id detects later copy reassignment. Birth validates copy,
+source owner, live uniquely owned anchor and complete owned direction. Current validation accepts
+uniquely resolved historical anchors while refusing split choices, missing copies, changed source
+owners and lost/foreign material. No geometry is copied or reflected at G1; G2/V1 consumes copy
+orientation separately from journal direction. Raw queries do not grant release readiness.

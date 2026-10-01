@@ -19,6 +19,7 @@
   - [Garment ontology](spec/ontology.md)
     - [Executable ontology at G1](spec/ontology-implementation.md)
     - [Executable garment constructions](spec/ontology-constructions.md)
+    - [Executable closure intent](spec/ontology-closures.md)
   - [The formula language](spec/formula-language.md)
     - [Grammar, operators and functions](spec/formula-language/grammar.md)
     - [Worked examples](spec/formula-language/examples.md)

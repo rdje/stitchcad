@@ -1,7 +1,7 @@
 //! `sc-core` — the garment ontology, the construction recipe and the command bus.
 //!
 //! **Status:** identity, point/range reference resolution, structural pieces/copy plans, semantic
-//! notches, directed grainlines, allowance descriptors, intake/layer/Hem construction intent and
+//! notches, directed grainlines, allowance descriptors, intake/layer/Hem/placement intent and
 //! copy-addressed sewing graphs are implemented in [`ontology`]. Geometric correctness,
 //! realized ease and target-profile binding validation remain explicit deferred obligations.
 //! The core cross-builds to `wasm32-unknown-unknown`; recipe and command-bus implementation follow.
@@ -10,7 +10,7 @@
 //!
 //! | Module | Contents | Leaf |
 //! | --- | --- | --- |
-//! | `ontology` | identity, exact parameters, point/range topology resolution and repairs; structural pieces/copy plans, semantic notches, grainlines, allowances, intake/layer/Hem construction intent, sewing graphs; other objects follow | `G1-SLICE.3a`/`.3b`/`.3c` |
+//! | `ontology` | identity, exact parameters, point/range topology resolution and repairs; structural pieces/copy plans, semantic notches, grainlines, allowances, intake/layer/Hem/placement intent, sewing graphs; other objects follow | `G1-SLICE.3a`/`.3b`/`.3c` |
 //! | `recipe` | the formula graph and ordered drafting operations, evaluated in one deterministic pass | `G0-CONTRACT.9`, `G1-SLICE.5` |
 //! | `command` | the typed command bus: atomic groups, preview/commit, revision preconditions, idempotency, undo granularity | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |
