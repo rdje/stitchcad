@@ -103,7 +103,7 @@ chapter is inside that family or explicitly outside it.
 | dart with conserved intake | supported | ontology §4.3/§10; structural dart intent implemented, physical 4.0 cm closure remains G2/G3 | G2, G3 | — |
 | tuck and pleat | supported | ontology §4.3/§10; distinct structural intent implemented; executed folds/conservation remain G3 | G3 | — |
 | gather | supported | ontology §4.3/§10; structural binding borrows span ease; G3 proves realized gathering | G3 | — |
-| hem, turned or faced | supported | ontology §4.7; the fixture's hem is 3.0 cm with an envelope corner | G2 | — |
+| hem, turned or faced | supported | ontology §4.7/§10; structural depth/fold/Facing intent implemented; G2 proves the fixture hem | G2 | — |
 | facing | supported | ontology §4.7/§10; structural facing intent implemented; physical offset/drafting proof remains G3 | G3 | — |
 | interfacing | supported | ontology §4.7/§10; structural interfacing intent implemented; physical fixture offset remains G2 | G2 | — |
 | lining | deferred | ontology §4.7/§10; modelled lining implemented; execution refuses env_lining; G7 owns limitation | G7 | `env_lining` |

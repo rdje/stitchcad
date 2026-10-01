@@ -7,7 +7,9 @@
   at gate G1 and what `sc-geometry` proves at gate G2 (`docs/book/src/spec/ontology.md` §4.1, §9;
   `docs/tasks/G2-2D.md` leaf `.1`).
 
-answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" · "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?" · "how do tucks and pleats retain distinct semantic kinds?" · "can lining be modelled while remaining outside v1 execution scope?"
+answers: "can G1 build an invalid piece?" · "are piece invariants enforced at G1?" · "who checks CCW winding and piece closure?" · "what does 'an invalid piece cannot be built' mean at G1?" ·
+  "are geometric invariants deferred or dropped?" · "does G1 claim 2D correctness?" · "how are directed grainline and stripe/plaid references represented?" · "can a dart apex reference interior geometry?" ·
+  "how do tucks and pleats retain distinct semantic kinds?" · "can lining be modelled while remaining outside v1 execution scope?" · "how does a faced hem bind a current Facing without duplicating it?"
 
 ## The fact / decision
 
@@ -92,3 +94,13 @@ Feature matrix rule 3 separates modelled content from supported execution. Linin
 representable, but `require_in_scope()` returns env_lining with served Piece and gate G7. Facing and
 Interfacing pass that envelope check only, without geometry/release certification. G1-SLICE.6 must
 apply the refusal before requested construction execution; inspection may retain modelled content.
+
+## Hem intent (`G1-SLICE.3c.4b.2`)
+
+Hem retains a whole owned finish edge, explicit depth provenance and a required logical fold-type
+binding. Fold declarations/target-profile bindings own their domains/states; G1 does not invent a
+physical fold vocabulary or cache solved values. Turned/Faced is a separate authored method; a faced
+method names an existing Facing serving the same Piece. Birth and current-target queries validate
+that stable identity, served owner and current layer sources. Missing, reassigned or invalid targets
+are typed refusals rather than substitutes. Geometry and executed folds remain G2/G3 obligations;
+recipe/Design still validates all declaration, operation and material registries.

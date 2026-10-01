@@ -5,11 +5,12 @@ Latest commit: derive with `git log --oneline -1` (the recording commit invalida
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.3c.4b.2`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** `.3c.4b.2` — Hem with owned finish edge, depth/fold declaration and turned/faced
-  method; faced hems bind an existing Facing serving the same Piece. All intake and served-layer
-  kinds have structural APIs. Modelled lining refuses execution with env_lining; `.6` must apply
-  envelope checks before execution. Geometry/conservation stay G2/G3. G1 has 3/4 object families.
+- **Active tree:** `G1-SLICE`, frontier **`.3c.4c`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** `.3c.4c` — Closure descriptors: button/buttonhole derivation, centred zipper and
+  hook/bar placement/count/size intent; unsupported fly diagnostic. Split into safe children before
+  code if needed. Intake and Hem/layer intent have structural APIs. Current Facing targets revalidate
+  sources; modelled lining refuses env_lining. Registries `.5`/`.6`, geometry G2/G3, profiles G4 remain
+  explicit obligations. G1 has 3/4 object families; pockets/signoff follow closures.
 - **In-flight uncommitted work:** none.
 - **Gate/authority constraints:** G0 closure remains unapproved; `ROADMAP.md` remains DRAFT.
   Domain-expert appointment and the drafting-source licence/procurement decisions remain human acts;

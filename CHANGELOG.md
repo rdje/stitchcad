@@ -33,11 +33,26 @@ by editing part1.
 
 The bedrock scaffold's own changelog — the provenance of this repository's discipline spine — is sealed
 in [`docs/history/bedrock-scaffold-changelog.md`](docs/history/bedrock-scaffold-changelog.md).
+| [`changelog-part19.md`](docs/history/stitchcad-changelog-part19.md) | STITCHCAD-G1-0001 | 21 lines, 1770 bytes, `sha256:2f602e9a…` |
 
 The live window below holds the most recent slices. When it passes its health target (400 lines /
 32 768 bytes) again, the oldest entries are sealed the same way, and
 `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` proves the order, the uniqueness and
 the digests afterwards.
+
+## STITCHCAD-G1-0018 - Hem retains depth/fold intent and validates current Facing targets (leaf `G1-SLICE.3c.4b.2`)
+
+Immutable Hem retains an owned finish edge, explicit/formula/profile depth, required fold-type
+binding and turned/faced method. Faced composition borrows its original current Facing after
+checking identity, served Piece and current layer sources. Removed/replaced/reassigned targets and
+lost interiors are typed refusals, even with live endpoints. No layer data or solved state is copied;
+physical folding remains G2/G3 and declaration/profile validation remains `.5`/`.6`/G4.
+
+Ten contracts + privacy pass. Identity, current-source and ownership mutations each fail red;
+restored strict Rust, wasm, warning-free book, fixture/feature/glossary/tree censuses, ledger and
+staged gates pass. Gather/layer checklists relocate unchanged with an independent committed-content
+oracle and staged revalidation. Book examples distinguish hem fold binding from allowance corners.
+Hem/layer parent closes; G1 stays 4/18 top-level leaves, 3/4 families. Next `.3c.4c` closures.
 
 ## STITCHCAD-G1-0017 - served layers retain recipe and material intent with explicit lining scope (leaf `G1-SLICE.3c.4b.1`)
 
@@ -359,25 +374,3 @@ The slice also discharges the Open Question `eb83f01` left open — "property-te
 properties with a recorded seed are the default on the `wasm-viewer` critical path, and a framework off that
 path is a per-crate recorded decision. The record carries `answers:`, which promotes this slice's `DEV_NOTES`
 lesson. `make gate` stays `=== all doctrines green ===`. The frontier advances to `.3`, the `sc-core` ontology.
-
-## STITCHCAD-G1-0001 - the frontier pointed at a leaf whose work had already shipped (leaf `G1-SLICE.1`)
-
-The G1 frontier named `G1-SLICE.1` (the workspace crate layout) as the next slice to take, but its every
-deliverable had already shipped: `G0-CONTRACT.18` (commit `eb83f01`) retired the bedrock starter crate
-"closing defect D10 ahead of `G1-SLICE.1`", created `sc-units` and `sc-core` with the workspace lints
-inherited, and landed the G0 CI shape (fmt / clippy / unit+property / a real `wasm32-unknown-unknown` build).
-The leaf was left `pending`, so the tree's status disagreed with the workspace — a resuming session pointed at
-`.1` would have re-done finished work.
-
-This slice is the reconciliation: it audits `eb83f01` against each of `.1`'s acceptance criteria and records
-the closure rather than writing new code. Every criterion was re-derived by command — `cargo metadata
---no-deps` lists exactly `sc-core, sc-units` (the roadmap crates that exist so far; §4.3 grows the rest at
-their gates); `git ls-tree HEAD crates/` shows `crates/app` gone and no crate prints the template message;
-`make check` is green (21 property tests + doc-test), `make wasm` cross-builds both crates, and
-`run_g0_exit_review.sh` reports `G0-17 MET` (CI) and `G0-18 MET` (the wasm build); `KNOWLEDGE_MAP.md` names
-both subsystems. `make gate` stays `=== all doctrines green ===`.
-
-The lesson is recorded in `DEV_NOTES.md` and promotion declined there: a leaf's status drifting when a sibling
-leaf delivers its work early is an instance of the D34 hand-kept-state class `PLANNING.5` owns, so this slice
-fixes the instance and leaves the class to its derivation. The frontier advances to `.2` (`sc-units`), whose
-code likewise shipped under `eb83f01` and is reconciled next.

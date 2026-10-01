@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-01)_ — a faced hem needs current target validation, not cached birth approval
+
+- Hem binds one stable Facing identity without copying its material or source definition. Current
+  queries check target identity, served owner and source ranges again; an interior deletion can
+  invalidate an old Facing while its original endpoints remain live. Same-id current replacement is
+  inspected as current content. Independent edge and target queries do not certify release readiness.
+- Depth and fold origins retain logical declarations and no symbolic defaults. Fold type, finishing
+  method and allowance corner treatment are separate semantic facts. Recipe/Design owns declaration
+  kinds/domains/states; G2/G3 owns physical folds, not the G1 reference validator.
+- Ten contracts + privacy pass; disabling identity, current-layer and ownership checks separately
+  produces red regressions. Restored strict Rust/WASM/book pass. Gather/layer evidence relocates
+  unchanged with an independent committed-payload oracle and staged per-checklist revalidation.
+- promotion: promoted by `decision_ontology-invariants-structural-g1-geometric-g2.md`'s Hem boundary.
+
 ## _(2026-10-01)_ — modelled layer content and executable envelope are separate checks
 
 - Facing/Lining/Interfacing share structural validation but retain distinct kinds. Their recipe offset
@@ -134,18 +148,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   supplies sidecar draft output and forbids defaults. The dependent G4 leaf now matches that authority.
 - promotion: promoted by `decision_profile-bindings-stay-symbolic-at-g1.md`, recorded before code.
 
-## _(2026-10-01)_ — separate L/R members differ from one even-total pair request
-
-- The canonical fixture's back pair is two Piece identities, each cut once. `.3c.1` enforced only
-  an even-total pair mode, so it could not encode the fixture's L/R member labels. `PairMember`
-  adds explicit handedness and a distinct companion identity; the old pair mode remains supported.
-- A fixture-shaped test guards both cut-one quantities and reciprocal label metadata. Applying an
-  even-total restriction to every pair mode turns that test red; self-companion is also a typed refusal.
-  The constructor cannot prove companion existence or mirroring from one definition: `.6` owns the
-  collection checks and G2 the geometry. These obligations are explicit rather than presumed.
-- The related physical-copy addressing question (D57) is a separate, unspecified graph contract.
-  The director's decision is pending; marking it explicit allows independent marks to proceed.
-- promotion: promoted by `decision_piece-pair-members-have-explicit-handedness.md`.
 
 # Sealed archive — earlier lessons
 
@@ -167,6 +169,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 | [`devnotes-part14.md`](docs/history/stitchcad-devnotes-part14.md) | persistent-identity lesson | 24 lines, 2230 bytes, `sha256:2b6aebd3…` |
 | [`devnotes-part15.md`](docs/history/stitchcad-devnotes-part15.md) | structural-piece lesson | 15 lines, 1334 bytes, `sha256:1b362d26…` |
 | [`devnotes-part16.md`](docs/history/stitchcad-devnotes-part16.md) | interval-coverage lesson | 13 lines, 1183 bytes, `sha256:fcf7c475…` |
+| [`devnotes-part17.md`](docs/history/stitchcad-devnotes-part17.md) | separate-pair-member lesson | 12 lines, 1049 bytes, `sha256:140c4c41…` |
 
 The live window below holds the most recent lessons. When it passes its health target (200 lines /
 16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of

@@ -525,3 +525,61 @@ decision recorded before the code, dependency-free and wasm-safe.
   Rust/subsystem status, bounded construction examples/API vocabulary/ontology index and feature row,
   task evidence/frontier/logs, TASK_TREE/MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES.
   Oldest changelog/dev-note entries seal to part18/part14. Next `.3c.4a.2b` gathers.
+
+### `G1-SLICE.3c.4b.1` — served layers retain recipe and material intent with explicit lining scope
+
+- [x] **REPRODUCE / ISSUE** — ontology §4.7 requires distinct served layers; feature-matrix rule 3
+  separates modelled content from executable support. The prior commit has no layer descriptors.
+- [x] **ROOT CAUSE (WHY + WHERE)** — a structurally valid Lining is still outside the v1 envelope.
+  `cargo test -p sc-core --test layer_contract
+  modelled_lining_refuses_v1_execution_with_named_diagnostic_piece_and_proving_gate` → `1 passed`,
+  `rc=0`: inspection succeeds while execution returns env_lining, served Piece and G7.
+  `foreign_middle_of_merged_offset_source_is_refused_despite_owned_ends_after_reversal` → `1 passed`,
+  `rc=0`: live endpoints alone cannot establish whole-source ownership.
+- [x] **FIX** — separate immutable Facing/Lining/Interfacing wrappers share owned-source and material
+  validation. Offset operation/source intent stays authored; recipe owns dimensions and operation
+  inputs. Explicit envelope checks distinguish inspection from execution; physical geometry is G2.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test layer_contract` → `9 passed`, `rc=0`:
+  all kinds, materials, duplicates, wrong served Piece, split choices, hidden interiors, repair order
+  and immutability. Three privacy doctests pass. Disabling lining scope and interval ownership
+  separately makes each regression red, `rc=101`; restored checks pass. Moved fold checklist compares
+  unchanged with `git show HEAD:docs/tasks/G1-SLICE.md`; existing Piece contracts remain green.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green; `make wasm` →
+  green; `make book` → warning-free; fixture → `0 mismatch(es)`; feature/glossary → `0 failure(s)`;
+  tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`; ledger → `9 pass / 0 fail`;
+  staged `make gate` → `=== all doctrines green ===`, all `rc=0`. Fixture goldens stay unchanged.
+- [x] **LOCKSTEP** — pre-code decision, `.6` envelope obligation, module/subsystem status, construction
+  examples/API vocabulary, feature reasons, evidence relocation, frontier/logs/index and live memory
+  are synchronized. The oldest interval lesson seals unchanged to devnotes-part16 with a verified
+  digest. No geometric or release approval is implied. Next `.3c.4b.2` implements Hem.
+
+### `G1-SLICE.3c.4a.2b` — gathers bind physical span sides and borrow canonical ease
+
+- [x] **REPRODUCE / ISSUE** — feature matrix §5 defines gathering through seam ease distribution;
+  `0cb97e4` has no Gather. An independent intake/allocation would duplicate the span's source, while
+  binding only a span side would silently transfer gathering to a replacement physical copy.
+- [x] **ROOT CAUSE (WHY + WHERE)** — span side and physical-copy identity are separate authored facts.
+  `cargo test -p sc-core --test gather_contract
+  wrong_graph_missing_span_and_changed_side_copy_are_refused_without_retargeting` → `1 passed`,
+  `rc=0`: a changed A-side copy sharing the same Piece/range returns CopyBindingChanged.
+  `uniform_weighted_and_between_notch_allocation_have_one_canonical_graph_source` → `1 passed`,
+  `rc=0`: pointer equality proves each allocation view borrows the graph's existing declaration.
+- [x] **FIX** — immutable graph/span/side/copy binding, explicit direction and closing operation;
+  borrow attachment and signed intake/allocation from the canonical span. Validate explicit ease
+  sign, copy owner and complete owned attachment/direction with unique endpoints. Target queries
+  refuse missing/changed bindings; raw evidence and independent current-plan checks remain visible.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test gather_contract` → `11 passed`,
+  `rc=0`: both gathered sides, symbolic sources, canonical allocations, changed/missing targets,
+  copy reassignment, hidden merged interiors, split choices, repairs and immutable replacement.
+  Copy-binding and ownership refusals disabled separately → their regressions fail, `rc=101`;
+  restored `make check` passes. Privacy doctest green; three moved mark/dart checklists compare
+  unchanged to committed originals. Four public intake structs re-derived from dart/fold/gather sources.
+- [x] **NO REGRESSION** — `make check` → fmt/strict clippy/all Rust + privacy green, `rc=0`;
+  `make wasm` → green; `make book` → warning-free; fixture → `0 mismatch(es)`;
+  feature/glossary → `0 failure(s)`; tree census → `0 unowned / 0 orphan(s) / 0 dead link(s)`;
+  ledger → `9 pass / 0 fail`; staged `make gate` → `=== all doctrines green ===`, all `rc=0`.
+  Earlier sewing/intake/mark contracts stay green; no fixture golden changes.
+- [x] **LOCKSTEP** — pre-code sewing decision extended, module/subsystem status, bounded construction
+  examples/API vocabulary/ontology index and feature row, intake parents closed, evidence relocation,
+  frontier/logs/index, MEMORY/LIVE_STATUS/CHANGELOG and promoted DEV_NOTES. Oldest lesson seals to
+  devnotes-part15. Three of four object families remain done; next `.3c.4b` hem/layer descriptors.

@@ -157,3 +157,46 @@ Neither successful structural birth nor an envelope check proves geometry or gra
 | `LayerError` | Typed target, source-range or material-reason refusal |
 | `LayerEnvelopeError` | Typed execution-scope refusal independent of structural birth |
 | `LiningDeferred` | Modelled lining request refuses with env_lining, served Piece and G7 |
+
+## Hem: depth, fold binding and current Facing composition
+
+`Hem` retains a stable identity, whole owned finish edge, `HemDepth`, `HemFoldType` and `HemMethod`.
+Depth is an explicit parameter/value, formula declaration or logical target-profile declaration.
+Explicit values are nonnegative: a deliberately authored zero is retained, while negative depth is a
+`HemError::NegativeDepth`. Symbolic bindings supply no zero or other fallback. Fold type is required
+and names a recipe/Design declaration or target-profile declaration; that owner retains its domain,
+uncertainty and selected value. G1 invents no physical fold vocabulary from drawn lines.
+
+For example, the reference skirt's 3.0 cm hem intent can retain its authored depth parameter and fold
+binding on the finish edge. This descriptor performs no turning, truing or offset. The fixture's
+**envelope corner** belongs to SeamAllowance corner treatment, not an implicit Hem fold type.
+`HemMethod::Turned` and `HemMethod::Faced { facing: id }` separately state the finishing method.
+A faced hem requires an existing Facing serving the same Piece: there is no generated substitute,
+second material assignment or copied Facing source list in the Hem.
+
+`Hem::new` checks complete owned finish-edge coverage and unique endpoints. It checks the held Facing
+identity, served Piece and its current sources through the layer validator. `facing()` borrows that
+canonical current target after repeating those checks. A removed target, replacement id, reassigned
+served Piece or invalid source returns a typed refusal. In particular, an old Facing whose source
+loses its middle interval is refused even if both original endpoints remain live. Same-id replacement
+content is inspected as current content, preserving its authored material/source intent.
+
+`edge_resolution()` preserves current fragment directions and raw interior repairs without rewriting
+the Hem. Facing and edge queries are independent: a valid Facing target does not certify the Hem's
+finish edge, physical fold or release readiness. Recipe/Design validates every declaration's existence,
+kind/domain/state and all current composition registries before execution. Profile fields report
+`DeferredToG4`; absence means only no profile field was authored. Actual fold geometry and executed
+finishing remain G2/G3, and every Hem reports `GeometricValidation::DeferredToG2`.
+
+| API token | Meaning in the Hem implementation |
+| --- | --- |
+| `HemDefinition` | Editable finish edge, depth/fold origins and finishing method |
+| `HemDepth` | Explicit authored nonnegative depth or formula/profile declaration |
+| `HemFoldType` | Required logical recipe or target-profile fold-type binding |
+| `HemMethod` | Turned finish or faced finish bound to a stable Facing identity |
+| `HemError` | Typed depth, finish-edge and current composition-target refusal |
+| `NegativeDepth` | Explicit authored depth is below zero |
+| `MissingFacing` | Held faced-method target is absent |
+| `WrongFacing` | Provided target differs from the held stable Facing identity |
+| `FacingOutsidePiece` | Current target serves a different Piece |
+| `InvalidFacing` | Current target's source/material content fails layer validation |
