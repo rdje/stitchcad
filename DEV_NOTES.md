@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — retained controls need an observed runner verdict
+
+- G1-0052 changes doctrine archive inputs, requiring immediate push despite the400 cadence.
+  Verified exact f876913 heads and observed both completed CI jobs, every step success; archive
+  prerequisite/enforcer plus Rust fmt/clippy/tests/WASM pass. Post-commit CLI140 controls also pass.
+- The newest catalog immutability arm now executes against committed bytes and refuses its actual
+  edit. Earlier capture and task/ledger payloads remain exact; no product behavior changed here.
+- Initial automatic approval rejected default-main export. Existing public origin/push permission and
+  task-owned outgoing payload were checked; the same required push then approved and succeeded.
+- Book/task/pointers now carry actual remote job/step evidence. D83 complete review .2 follows;
+  no numerical/geometry or production signoff is inferred from this maintenance CI result.
+- promotion: declined (routine observed verification of the existing CI exception and archive contract).
+
 ## _(2026-10-02)_ — a second retained window keeps exact history while freeing working slots
 
 - D83 review reached64 history Markdown; another seal would exceed the fixed limit.

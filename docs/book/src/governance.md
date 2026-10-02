@@ -329,8 +329,12 @@ Git object is available. The bounded reader and aggregate ceilings are unchanged
 The watched archive CLI controls verify every logical read and materialized file against full-file
 identity, plus newest-window digest/member/catalog and cross-window collision refusals. An unrelated
 fixture prose edit remains green for inventory; committed catalogs still refuse edits through the
-retention guard. Window2’s remote CI observation remains G1-SLICE.5a.3b.3b.3c.1v until actual
-job/step verdicts are recorded. These are retention/instrument proofs, not garment signoff.
+retention guard. At pushed f876913, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/36989497775/job/110782133989)
+and [Rust job](https://github.com/rdje/stitchcad/actions/runs/36989497872/job/110782134441)
+completed successfully with all seven/nine steps successful. The archive prerequisite/enforcer and
+fmt/clippy/tests/real WASM passed;140 post-commit local CLI controls also verify newest immutable
+catalog refusal. G1-SLICE.5a.3b.3b.3c.1v records the exact head/job observations.
+These are retention/instrument proofs, not garment signoff.
 
 The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
 labels are display text: short or mistaken labels do not change the retained identity. Filename text

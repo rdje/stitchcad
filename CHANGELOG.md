@@ -94,6 +94,16 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part47.md`](docs/history/stitchcad-changelog-part47.md) | G1-0029 | 14 lines, 1170 bytes, `sha256:575d31eb…` |
 
+| [`stitchcad-changelog-part48.md`](docs/history/stitchcad-changelog-part48.md) | G1-0030 | 14 lines, 1137 bytes, `sha256:0f58d786…` |
+
+## STITCHCAD-G1-0053 - second-window CI observed (leaf `G1-SLICE.5a.3b.3b.3c.1v`)
+
+At pushed f876913, doctrine job110782133989 and Rust job110782134441 completed successfully with
+all seven/nine steps successful. Archive prerequisite/enforcer and fmt/clippy/tests/real WASM pass.
+Post-commit archive controls140 pass; newest committed catalog edit refuses by immutability, rc=1.
+Remote/local heads agree; previous ledger/task bytes stay exact. Book/live/pointers reflect observed
+proof, not an inferred run status. G1 stays5/18, defects12/83; next .3c.2 D83 complete review.
+
 ## STITCHCAD-G1-0052 - retained history frees the next review seal (leaf `G1-SLICE.5a.3b.3b.3c.1`)
 
 Window2 retains63 full source files/122566 bytes at372033f; installed reader independently
@@ -373,18 +383,3 @@ Current sc-measure tests/docs pass 65; full milestone probes pass all 23 suites;
 staged doctrines pass. Product code remains unchanged from b4e0bc7 strict 371-test/WASM verification;
 no new remote-CI claim. Set contract/checklist retained unchanged. .4b closes structurally, .4 remains
 active for SizeSet .4c and combined review .4d. G1 stays 5/18, defects 9 open/59 sealed.
-
-## STITCHCAD-G1-0030 - current per-POM Ease sets (leaf `G1-SLICE.4b.2`)
-
-Immutable ordered sets bind unique mapping identities, machine tokens and POM identities to named
-current body/garment tables. Borrowed canonical mappings retain current fit, provenance/permission and
-amount state/source; retargeting or missing identities refuse. Both selected table memberships and
-current Ease validate before lookup returns. Shared body/amount sources, one mixed table and empty
-drafts are legal; missing POMs never acquire default mappings or zero ease.
-
-Fourteen contracts plus privacy pass. Ten production guard removals each produce an actual assertion
-failure and restore exact source. Strict Rust passes 371 tests, with WASM/book/glossary and focused
-tracking/ledger/staged gates green. D69 fixes stale package discovery, verified by cargo metadata;
-it seals in defects-part13. Existing D34's stale sibling example is corrected; derivation remains
-owned. Prior individual Ease contract/checklist retained unchanged; oldest live entries seal unchanged
-as changelog-part27/devnotes-part29. Next .4b.3 structural Ease review; G1 stays 5/18.

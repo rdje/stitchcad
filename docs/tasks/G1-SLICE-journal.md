@@ -598,3 +598,59 @@ retains exact predecessor evidence.
 
 [Previous canonical proof and recording journal](G1-SLICE-journal.md#canonical-literal-progress--preserved-from-372033f)
 retain exact committed evidence.
+
+## Second-window local proof — preserved from f876913
+
+### `G1-SLICE.5a.3b.3b.3c.1` — exact second window and D96 target coverage
+
+- [x] **REPRODUCE / ISSUE** — at372033f archive verify→127 logical/64 working Markdown, rc=0;
+  next review seal would exceed the fixed working limit. Actual ledger→7 pass/2 fail, full probes
+  rc=2 after valid short-label catalog routing; opposite wrong-target control falsely passed.
+- [x] **ROOT CAUSE (WHY + WHERE)** — immutable raw duplicates filled working slots. Capture tool
+  reconstructs63 full source files/122566 bytes and all127 logical files exactly without raw copies,
+  rc=0. D96 actual function pre-fix contract→AssertionError for valid catalog and wrong-target cases,
+  rc=1 each: filename text, not link destination, was used as pointer evidence.
+- [x] **FIX** — deterministic self-contained window2, exact identities and catalog routes; retire only
+  independently verified raw duplicates. Existing window1, reader/generator/caps stay fixed. Resolve
+  actual archive-index raw/registered-catalog targets, ignore display labels/prose/code/comments,
+  refuse extra invalid destinations. Watch published CLI and actual pointer verdicts.
+- [x] **ADDRESSED (verified)** — capture/source/materialize/read→63 new/127 total exact files,
+  0 missing/extra/raw residue, rc=0. Ledger→9 pass/0 fail and13 independent actual verdicts, rc=0;
+  ledger_pointer_mutations.py→four syntax-checked actual assertion reds, rc1 each, exact source
+  restoration/runner0. Archive probes28 pass; newest digest/member/catalog/collision refusals
+  require intended errors, rc=1 each. Committed-newest immutability/remote CI remain .1v.
+- [x] **NO REGRESSION** — make check→488 strict tests including docs, rc=0; make wasm→all3 crates,
+  rc=0; make book rc=0; make probes→25 suites green, rc=0. Canonical146/binding80 and earlier
+  numeric controls remain green. Previous task evidence and old ledger payloads preserve exact
+  committed bytes; D30 exemption remains. Recording/gate evidence below; no garment signoff.
+- [x] **LOCKSTEP** — book upkeep, toolbox, ledgers/live pointers reflect packed retrieval and D96.
+  D96 closes with retained original reproduction; G1 stays5/18. D83 review .2 and D84 separate.
+  Local proof commits before immediate exception push; .1v records observed CI at exact pushed SHA.
+
+## Verification Log
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.3b.3c.1` | capture/source/retention/ledger mutations/full local gate | exact history; D96 closed; remote CI .1v next |
+
+Final publication→48 chapters/16 scoped APIs/1001 source/1531 rendered links; nine probes, rc=0.
+Ledger9/13 pointer verdicts and archive28/new window139 controls pass, rc=0. Inventory/retention→
+131 logical/6 working Markdown/7564 decoded lines/591157 decoded bytes/247479 resident bytes,
+rc=0; source proof63 byte-identical files/zero missing-extra, rc=0. Tree10/13/eight/zero gaps;
+glossary310/nine/158/zero index drift; feature105/29; uncertainty133/16/zero unowned;
+fixture20/four/five/zero mismatches, rc=0. Defects12 open/83 sealed/zero overlap; old task payloads,
+window1 and captured records retain exact bytes. README reviewed unchanged; LIVE G1 stays5/18.
+Full local Rust/WASM/book/probes green; staged make gate→all doctrines green, rc=0.
+Remote/newest-committed proof .1v.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3b.3c.1` | `STITCHCAD-G1-0052 (leaf G1-SLICE.5a.3b.3b.3c.1): retain a second exact history window` | local full proof; observed remote verdict separately owned |
+
+## Changelog
+
+- `2026-10-02`: window2 exact capture/retirement; D96 target coverage repaired. Required observed
+  CI .1v precedes D83 complete numeric review .2; D84 remains next prerequisite.
+- promotion: declined (routine reuse of retained-window contract and repair of actual pointer evidence).

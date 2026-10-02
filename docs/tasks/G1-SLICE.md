@@ -737,14 +737,15 @@ Completed reference input contract .5a.2b.1 is preserved in
   Goal: retain63 exact raw records in window2; repair D96 blocking ledger targets.
   Protocol: [second-window pre-code plan](G1-SLICE-journal.md#second-window-pre-code-protocol--completed-in-g1-0052).
   Verification:63 source files/127 isolated logical files exact; archive controls/ledger13/four reds;
-  full native488/WASM3/book/probes25 pass, rc=0. Local proof below; observed CI is .1v.
+  full native488/WASM3/book/probes25 pass, rc=0. [Local proof](G1-SLICE-journal.md#second-window-local-proof--preserved-from-f876913).
   Commit: `STITCHCAD-G1-0052`.
 
 - ID: `G1-SLICE.5a.3b.3b.3c.1v`
-  Status: `pending`
+  Status: `done`
   Goal: observe exact .1 head SHA doctrine/Rust CI job/step verdicts; only close capacity on success.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: pushed f876913; both completed jobs/all steps successful; CLI140 and newest
+  committed catalog refusal pass. Full actual job IDs/checks below; D83 review .2 next.
+  Commit: `STITCHCAD-G1-0053`.
 
 - ID: `G1-SLICE.5a.3b.3b.3c.2`
   Status: `pending`
@@ -967,7 +968,7 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
 | done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
-| next | `G1-SLICE.5a.3b.3b.3c.1v` | `pending` | Required window2 CI job/step observation |
+| next | `G1-SLICE.5a.3b.3b.3c.2` | `pending` | D83 complete numeric boundary review |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -996,56 +997,51 @@ also run glossary/API, feature and publication checks. Prior checklists and auth
 [retained navigation](G1-SLICE-journal.md#acceptance-navigation--retained-during-g1-0052),
 [formula evidence](G1-SLICE-formulas.md) and [object evidence](G1-SLICE-evidence.md).
 
-### `G1-SLICE.5a.3b.3b.3c.1` — exact second window and D96 target coverage
+[Previous exact capture/D96 proof and commit journal](G1-SLICE-journal.md#second-window-local-proof--preserved-from-f876913)
+retain exact committed evidence.
 
-- [x] **REPRODUCE / ISSUE** — at372033f archive verify→127 logical/64 working Markdown, rc=0;
-  next review seal would exceed the fixed working limit. Actual ledger→7 pass/2 fail, full probes
-  rc=2 after valid short-label catalog routing; opposite wrong-target control falsely passed.
-- [x] **ROOT CAUSE (WHY + WHERE)** — immutable raw duplicates filled working slots. Capture tool
-  reconstructs63 full source files/122566 bytes and all127 logical files exactly without raw copies,
-  rc=0. D96 actual function pre-fix contract→AssertionError for valid catalog and wrong-target cases,
-  rc=1 each: filename text, not link destination, was used as pointer evidence.
-- [x] **FIX** — deterministic self-contained window2, exact identities and catalog routes; retire only
-  independently verified raw duplicates. Existing window1, reader/generator/caps stay fixed. Resolve
-  actual archive-index raw/registered-catalog targets, ignore display labels/prose/code/comments,
-  refuse extra invalid destinations. Watch published CLI and actual pointer verdicts.
-- [x] **ADDRESSED (verified)** — capture/source/materialize/read→63 new/127 total exact files,
-  0 missing/extra/raw residue, rc=0. Ledger→9 pass/0 fail and13 independent actual verdicts, rc=0;
-  ledger_pointer_mutations.py→four syntax-checked actual assertion reds, rc1 each, exact source
-  restoration/runner0. Archive probes28 pass; newest digest/member/catalog/collision refusals
-  require intended errors, rc=1 each. Committed-newest immutability/remote CI remain .1v.
-- [x] **NO REGRESSION** — make check→488 strict tests including docs, rc=0; make wasm→all3 crates,
-  rc=0; make book rc=0; make probes→25 suites green, rc=0. Canonical146/binding80 and earlier
-  numeric controls remain green. Previous task evidence and old ledger payloads preserve exact
-  committed bytes; D30 exemption remains. Recording/gate evidence below; no garment signoff.
-- [x] **LOCKSTEP** — book upkeep, toolbox, ledgers/live pointers reflect packed retrieval and D96.
-  D96 closes with retained original reproduction; G1 stays5/18. D83 review .2 and D84 separate.
-  Local proof commits before immediate exception push; .1v records observed CI at exact pushed SHA.
+### `G1-SLICE.5a.3b.3b.3c.1v` — second-window observed CI
+
+- [x] **REPRODUCE / ISSUE** — make push-due→exceptional push due for two archive controls,
+  26 unpushed commits, rc=1 at G1-0052. Local success does not observe the required runner.
+- [x] **ROOT CAUSE (WHY + WHERE)** — COMMIT.md requires CI observation after doctrine-input
+  changes. gh API at exact f876913→doctrine run36989497775/Rust run36989497872 completed success,
+  rc=0; job queries below independently identify completed steps, not just aggregate run status.
+- [x] **FIX** — push clean committed project main, observe exact head SHA job/step metadata;
+  execute newest committed catalog refusal. Record proof; preserve earlier local/source evidence.
+- [x] **ADDRESSED (verified)** — gh API /actions/runs/36989497775/jobs→job110782133989 enforce,
+  completed/success, all7 steps completed/success, rc=0; /36989497872/jobs→job110782134441 check,
+  completed/success, all9 steps success, rc=0. Archive prerequisite/enforcer, fmt/clippy/unit+
+  property+doc tests and real WASM succeeded. window_contract.py→140 controls/131 reads, rc=0;
+  newest committed catalog edit requires named retention refusal, rc=1.
+- [x] **NO REGRESSION** — git rev-parse HEAD origin/main→same full f876913e60591936ca509e9a7eb1fda69bd9d8cf,
+  rc=0; push-due→0 unpushed/nothing to push, rc=0; handoff: OK, rc=0. Previous local full25 probes,
+  native488/WASM3 evidence retained. Focused doc/archive/ledger/book/gate recording checks below.
+- [x] **LOCKSTEP** — book upkeep replaces pending CI with linked observed jobs; live/frontier point
+  to D83 complete review .2. G1 stays5/18, defects12/83. No domain/geometry signoff inferred.
 
 ## Verification Log
 
-| Date | Leaf | Checks | Result |
-| --- | --- | --- | --- |
-| `2026-10-02` | `.5a.3b.3b.3c.1` | capture/source/retention/ledger mutations/full local gate | exact history; D96 closed; remote CI .1v next |
-
-Final publication→48 chapters/16 scoped APIs/1001 source/1531 rendered links; nine probes, rc=0.
-Ledger9/13 pointer verdicts and archive28/new window139 controls pass, rc=0. Inventory/retention→
-131 logical/6 working Markdown/7564 decoded lines/591157 decoded bytes/247479 resident bytes,
-rc=0; source proof63 byte-identical files/zero missing-extra, rc=0. Tree10/13/eight/zero gaps;
-glossary310/nine/158/zero index drift; feature105/29; uncertainty133/16/zero unowned;
-fixture20/four/five/zero mismatches, rc=0. Defects12 open/83 sealed/zero overlap; old task payloads,
-window1 and captured records retain exact bytes. README reviewed unchanged; LIVE G1 stays5/18.
-Full local Rust/WASM/book/probes green; staged make gate→all doctrines green, rc=0.
-Remote/newest-committed proof .1v.
+CI commands: gh api repos/rdje/stitchcad/actions/runs with head_sha=f876913e60591936ca509e9a7eb1fda69bd9d8cf;
+gh api repos/rdje/stitchcad/actions/runs/36989497775/jobs and /36989497872/jobs. All rc=0.
+Initial automatic approval refused the default-main export; read-only origin metadata and182-path
+outgoing census established the existing public project, push permission and task-owned payload.
+Same authorized push succeeded without an alternate destination or bypass. Source control
+postconditions were clean. Final recording: book/publication9→48 chapters/16 APIs/1001 source/
+1531 rendered links, rc=0; ledger9+13 pointer controls, rc=0; retained archive132 logical/7 working
+Markdown/7589 lines/592830 decoded bytes/249152 resident bytes, rc=0. Current CLI141 controls
+include newest committed refusal, rc=0. Tree10/13/eight/zero gaps, rc=0. Prior window2 proof/task
+journal and oldest live ledger payload preserve exact committed bytes. README reviewed unchanged;
+LIVE G1 stays5/18, defects12/83. Staged make gate→all doctrines green, rc=0.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3b.3b.3c.1` | `STITCHCAD-G1-0052 (leaf G1-SLICE.5a.3b.3b.3c.1): retain a second exact history window` | local full proof; observed remote verdict separately owned |
+| `.5a.3b.3b.3c.1v` | `STITCHCAD-G1-0053 (leaf G1-SLICE.5a.3b.3b.3c.1v): record second-window CI success` | exact pushed head; both completed jobs/all steps success |
 
 ## Changelog
 
-- `2026-10-02`: window2 exact capture/retirement; D96 target coverage repaired. Required observed
-  CI .1v precedes D83 complete numeric review .2; D84 remains next prerequisite.
-- promotion: declined (routine reuse of retained-window contract and repair of actual pointer evidence).
+- `2026-10-02`: observed window2 CI and post-commit immutability close capacity prerequisite.
+  Resume complete D83 boundary review .2; D84 and production normalization remain separately owned.
+- promotion: declined (routine observed CI and retention evidence for existing contracts).
