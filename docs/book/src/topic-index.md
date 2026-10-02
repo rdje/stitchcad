@@ -57,6 +57,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Sizes and grading](learn/sizes-and-grading.md)
 - [Specification and reference](spec/index.md)
 - [Structural ontology review](spec/ontology-review.md)
+- [Ordered formula recipe syntax](annexes/formula-statements.md#parse-an-ordered-recipe)
 - [The command layer](spec/command-layer.md)
 - [The formula language](spec/formula-language.md)
 - [The model and its numbers](spec/glossary/model-and-numbers.md)

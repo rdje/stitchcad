@@ -1,0 +1,10 @@
+# Independently authored whole source, original ordered statements and operand canonical bytes; dash is empty.
+-	-	-
+ \t\r\n\f\v	-	-
+let waist: length = 25 mm	let waist: length = 25 mm	length:25000
+let a: count = 1 let b: ratio = 1.5	let a: count = 1 | let b: ratio = 1.5	count:1 | ratio:1500000
+ \nlet\nwaist:\tlength\r\n= 25 mm\n+ ease\n\nassert closure: eps_num = waist == target\n	let\nwaist:\tlength\r\n= 25 mm\n+ ease | assert closure: eps_num = waist == target	(+ length:25000 ease) | waist ~ target
+assert check: eps_num = (a == b) == if(c == d, e, f) let next: boolean = (g != h)	assert check: eps_num = (a == b) == if(c == d, e, f) | let next: boolean = (g != h)	(== a b) ~ (if (== c d) e f) | (!= g h)
+let a: count = -1 let a: boolean = 1 cm assert a: eps_phys = 1 cm == 2 cm	let a: count = -1 | let a: boolean = 1 cm | assert a: eps_phys = 1 cm == 2 cm	(- count:1) | length:10000 | length:10000 ~ length:20000
+let letter: count = 1 let assertion: count = letter + 2	let letter: count = 1 | let assertion: count = letter + 2	count:1 | (+ letter count:2)
+let a: count = if(a,\n 1, 2)\nassert b: eps_imp = probe(a, b) == (b)	let a: count = if(a,\n 1, 2) | assert b: eps_imp = probe(a, b) == (b)	(if a count:1 count:2) | (probe a b) ~ b

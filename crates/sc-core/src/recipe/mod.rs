@@ -6,7 +6,8 @@
 //! on parsed nodes or a separate whole normalized arena; neither evaluates operators. Normalized
 //! expressions can produce owned canonical identity bytes without name/type validation or execution.
 //! Standalone let/assert statements preserve closed annotations, full-source spans and operand
-//! refusals without binding or evaluating; ordered recipe composition and statement identity follow.
+//! refusals without binding or evaluating. Complete recipes retain authored order, global spans and
+//! the fixed statement bound; statement identity and semantic validation/evaluation follow.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -40,3 +41,6 @@ pub use statement::{
     FormulaBindingKind, FormulaStatement, FormulaStatementError, FormulaStatementExpression,
     FormulaStatementKind, FormulaStatementRule, FormulaToleranceName,
 };
+
+mod ordered;
+pub use ordered::{FormulaRecipe, FormulaRecipeError, FormulaRecipeRule};

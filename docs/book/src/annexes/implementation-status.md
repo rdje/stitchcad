@@ -22,6 +22,7 @@ requires the named contracts and later proof owners.
 | Formula literal inputs/normalized arenas | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3c.2/.3 | [Literal normalization](formula-literals.md) |
 | Canonical expression identity | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3d.2/.3 | [Owned canonical bytes](formula-literals.md#serialize-canonical-expression-identity) |
 | Single formula statement syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3e.1 | [Statement API](formula-statements.md) |
+| Ordered formula recipe syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3e.2 | [Recipe API](formula-statements.md#parse-an-ordered-recipe) |
 | Formula lexing/expression syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.1/.2b.2 | [Syntax API](formula-syntax.md) |
 
 ## Remaining proofs

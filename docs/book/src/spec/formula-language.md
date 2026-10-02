@@ -4,8 +4,8 @@
 > "ADR-0003 (drafting paradigm + formula language v1)"). `sc-core` currently implements
 > [borrowed lexing and bounded expression syntax](../annexes/formula-syntax.md) at G1-SLICE.5a.1/.2.
 > [Owned canonical expression identity](../annexes/formula-literals.md#serialize-canonical-expression-identity)
-> is implemented and reviewed; [single statement syntax](../annexes/formula-statements.md) is also available.
-> Ordered recipes and evaluation remain G1-SLICE.5 work; final acceptance
+> is implemented and reviewed; [ordered statement syntax](../annexes/formula-statements.md#parse-an-ordered-recipe) is also available.
+> Statement identity and evaluation remain G1-SLICE.5 work; final acceptance
 > makes every worked example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
 > every number's representation is the [units chapter](units-and-tolerances.md)'s.
@@ -78,8 +78,8 @@ The [reference boundary review](../annexes/formula-syntax.md#complete-reference-
 maps the four verified numeric boundaries to their independent controls. Individual literals and whole product syntax arenas have [explicit input normalization](../annexes/formula-literals.md).
 The [coupled normalization review](../annexes/formula-literals.md#coupled-normalization-review) is complete.
 [Canonical expression serialization](../annexes/formula-literals.md#serialize-canonical-expression-identity)
-is implemented; single statements also have [explicit syntax inspection](../annexes/formula-statements.md).
-Ordered recipe composition, bindings and evaluation remain pending. Reference instruments
+is implemented; ordered statements also have [explicit syntax inspection](../annexes/formula-statements.md#parse-an-ordered-recipe).
+Statement identity, bindings and evaluation remain pending. Reference instruments
 supply no product execution claim.
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.

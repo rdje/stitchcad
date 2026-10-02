@@ -373,3 +373,107 @@ retain committed evidence unchanged.
 retain committed evidence unchanged.
 
 Current frontier remains in G1-SLICE.md.
+
+## Single-statement closure — preserved during G1-0066
+
+### `G1-SLICE.5a.3e.1` — standalone immutable statement syntax
+
+- [x] **REPRODUCE / ISSUE** — existing expression syntax cannot retain let/assert headers or their
+  operand roles; complete recipe syntax requires that owned layer before ordered composition.
+  D106 current literal decision incorrectly calls expression canonicalization future work.
+- [x] **ROOT CAUSE (WHY + WHERE)** — statement header/separator lives only in the curated reference;
+  product recipe module has no statement type. Trapped actual reference header/parser agrees with
+  authored15 operand/header rows/six refusal families, rc=0. D107 whole-output marker accepts an
+  expect-only fault by reading a passing test name; failed-body classifier rejects that noise, rc=0.
+- [x] **FIX** — private borrowed statement, six kind/five symbolic tolerance annotations, immutable
+  views/Clone/opaque Debug; original operand slices and flat span rebasing retain full-source nodes/
+  typed error part. Assertion separator respects grouping and preserves both bounded operands.
+  Explicit fixture acceptance/refusal assertions and failed-body classifier fix D107; D106 docs fixed.
+- [x] **ADDRESSED (verified)** — cargo statement contract→nine pass, rc=0; all21 book statements/
+  25 expression identities and15 authored reference rows/six refusals agree, rc=0. Final15 actual
+  keyword/name/annotation/separator/operand/span/privacy faults compile and fail assertions, rc=101
+  each; runner/exact restoration rc=0. Initial14 expect-based classification is explicitly superseded.
+- [x] **NO REGRESSION** — final make check→538 pass, strict fmt/clippy, rc=0; release9/WASM3, rc=0.
+  Three compile-fail/runnable docs pass;64KiB stack retains256-node operands/16 if levels/50000
+  groups/100000-byte names;257/17 refusals and exact original unit gaps remain. Structural/reference,
+  language16/publication9 checks pass, rc=0. No statement evaluation or browser runtime claim.
+- [x] **LOCKSTEP** — README/book statement annex/progressive links/grammar/API map/index/current
+  decision/live/task pointers agree. D106/D107 originals and oldest ledgers preserved exactly;
+  completed identity proof/subtree stays discoverable in semantic sibling, no ceiling increase.
+  G1 remains5/18; .3e.2 ordered4096 recipe/context next; statement identity/evaluation remain owned.
+
+## Verification Log
+
+Final target/g1-0065-{reds-final,native,release,wasm,statement-restored,structure,language,publication}.log
+are terminal rc=0. Fifteen actual faults fail assertions inside failed-test bodies, rc=101 each, then
+restore exact source. First14 output-wide classifications are superseded by the failed-body proof;
+observed expect-only log4 cannot satisfy its new predicate. Tracked passing-name/expect-only/compiler
+noise countercases refuse, rc=0, and the structural suite watches classifier-only mode.
+Initial E0716 fixture temporary and strict collapsible-match lint failed before correction; neither
+is counted as compiled assertion evidence. No code in the existing expression/normalization/canonical/
+rounding implementations changed. Full source/node/error spans are retained by the new statement layer.
+Final publication51 chapters/20 scoped APIs/1051 source/1621 rendered links and9 controls pass, rc=0;
+language16 and full structural/reference suite pass, rc=0. Ordinary statement identity/ordered recipe/
+semantic binding/execution remain distinct requirements. D106/D107 repaired and original text sealed.
+
+Recording checks: ledger9 arms/13 pointer controls and archive28 arms/175 CLI controls pass, rc=0.
+Retention166 logical records/41 working Markdown/8464 decoded lines/655449 decoded bytes/311771
+resident bytes, rc=0. Tree10 lanes/13 trees/nine siblings/zero gaps; glossary310/nine/158, feature105/
+29, uncertainty133/16/zero unowned and fixture20/four/five/zero mismatch pass, rc=0.
+Defects10open/96 unique sealed/no overlap derive from fresh target/g1-0065-defect-census, rc=0.
+Final public statement9/language16/publication9 controls pass, rc=0. Prior parser/expression/literal/
+normalized/canonical/round sources and preserved completed proof/subtree compare exact HEAD, rc=0.
+Statement source SHA256 is6fcda5ff5efe31787e6d06c70b0d1a09b0562f3f873584803e292f1a6c775956.
+Staged make gate→=== all doctrines green ===, rc=0; all scoped verification jobs observed terminal.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3e.1` | `STITCHCAD-G1-0065 (leaf G1-SLICE.5a.3e.1): parse immutable single formula statements` | nine contracts/15 rows/15 actual reds/native538 |
+
+Current ordered-recipe work follows the protocol below.
+
+## Ordered-recipe pre-code protocol
+
+- ID: `G1-SLICE.5a.3e.2`
+  Status: `done`
+  Goal: complete immutable ordered formula syntax, including empty/multiline recipes.
+  Scoped sources: README/roadmap ADR-0003, formula contract4.3/5, full grammar/examples, lexer/
+  statement/expression parser and actual curated single-statement reference. Clean1ac495b, no jobs
+  or user changes; no new authority decision required for this syntax-only public interface.
+  Plan: private FormulaRecipe owns an ordered Vec of immutable borrowed FormulaStatement values;
+  immutable slice access/Clone/opaque Debug and private construction/source/view lifetime docs.
+  Reuse the same statement header/operand parser, lexing original complete source. A top-level
+  let/assert after the valid header is the next boundary; headers consume their required tokens
+  before any boundary recognition. Nested keywords remain invalid expressions. Grammar statement*
+  requires no newline or punctuation separator: newline/header/operator whitespace is permitted,
+  numeric-unit gap stays exactly one ASCII space. No token rejoining or recursive arena traversal.
+  Standalone statement API still consumes the whole source and rejects a second statement. All
+  statement/header/node/refusal spans refer to original whole recipe source; missing operands end
+  at the next keyword or final EOF. Statement indices in recipe errors are1-based, including the
+  first malformed statement. Global ASCII preflight has no known index (None), never a guess.
+  Fixed MAX_STATEMENTS4096: a recognized4097th statement keyword is formula_domain with bound4096/
+  measured4097 and exact keyword span before parsing that excess statement. Other nonstatement
+  trailing input remains formula_parse. Whole-source ASCII preflight retains precedence.
+  No partial accepted recipe on any failure; error payload has index/global span/typed nested
+  header or expression refusal and omits customer content. No canonical context is fabricated,
+  input conversion/static names/types/numeric/tolerance evaluation/storage remain .3f/.5 owners.
+  Authored boundary fixtures independently specify complete source and ordered original statements;
+  actual recursive reference checks each authored statement after header trapping, not a claimed
+  complete reference recipe parser. Product tests consume the same original whole sources and
+  authored ranges/roles/bytes; cover all21 worked statements composed into one ordered recipe.
+  Empty/all ASCII whitespace, multiline headers/operands, same-line adjacent statements, malformed
+  headers/nested keywords/incomplete operands/trailing junk/unit gaps and no normalization covered.
+  Public tests verify max4096 and first4097 even with malformed excess body, ordinal/global errors
+  on later statements, opacity/Clone/lifetimes, each expression limit and large grouping/name data
+  on64KiB stack. Actual boundary/header/index/limit/span/whole-input/privacy faults must compile
+  and fail assertions; exclusive runner/finally restores exact source, failed-body classifier only.
+  Run focused/native/release/WASM, structural/language/publication and record/census checks.
+  Extend existing statement annex with recipe inspection and progressive status/API/index routes;
+  retain exact completed proof/oldest ledger payloads, no ceiling rises or new Knowledge Map sprawl.
+  Verification: eight contracts/nine sources/14 statements/18 identities/all21 worked statements,
+  new15/prior15 actual assertion reds/exact restore/native550/release17/WASM3; D108 repaired.
+  D108 P2 owned here before repair: delimiter offset copied an extra heading byte in new archive;
+  original HEAD is authoritative. Exact split/comparison and watched ledger/archive proof required.
+  Commit: `STITCHCAD-G1-0066`

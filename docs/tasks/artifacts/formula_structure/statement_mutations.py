@@ -27,7 +27,7 @@ cases = [
     ('assignment role', 'K::Assign, R::ExpectedAssignment', 'K::Equal, R::ExpectedAssignment'),
     ('nested separator', 'head.kind() == K::Assert && depth == 0', 'head.kind() == K::Assert'),
     ('second separator', 'if current.is_some()', 'if current.is_some() && false'),
-    ('left/right coverage', 'Span::new(separator.end(), source.len()),',
+    ('left/right coverage', 'Span::new(separator.end(), range_end),',
      'Span::new(assignment.span().end(), separator.start()),'),
     ('node span origin', 'range.start() + node.span.start(),', 'node.span.start(),'),
     ('error span origin', 'range.start() + error.span.start(),', 'error.span.start(),'),

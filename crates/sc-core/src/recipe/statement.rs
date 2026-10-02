@@ -4,6 +4,7 @@ use super::{
     FormulaParseError, FormulaSourceSpan as Span,
 };
 use core::fmt;
+use core::iter::Peekable;
 
 /// The six kinds a formula statement may declare, without inferring its expression's kind.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -290,7 +291,7 @@ fn refusal(rule: FormulaStatementRule, span: Span) -> FormulaStatementError {
     FormulaStatementError { rule, span }
 }
 fn header<'a>(
-    lexer: &mut FormulaLexer<'a>,
+    lexer: &mut Peekable<FormulaLexer<'a>>,
     source_end: usize,
     kind: K,
     rule: FormulaStatementRule,
@@ -345,8 +346,16 @@ fn record_separator(current: &mut Option<Span>, span: Span) -> Result<(), Formul
 }
 
 fn parse(source: &str) -> Result<FormulaStatement<'_>, FormulaStatementError> {
+    parse_next(source, &mut FormulaLexer::new(source).peekable(), false)
+}
+
+/// Shared original-source parser; only the containing recipe permits another statement boundary.
+pub(super) fn parse_next<'a>(
+    source: &'a str,
+    lexer: &mut Peekable<FormulaLexer<'a>>,
+    recipe_boundary: bool,
+) -> Result<FormulaStatement<'a>, FormulaStatementError> {
     use FormulaStatementRule as R;
-    let mut lexer = FormulaLexer::new(source);
     let head = match lexer.next().transpose() {
         Ok(Some(token)) if matches!(token.kind(), K::Let | K::Assert) => token,
         Ok(token) => {
@@ -357,14 +366,9 @@ fn parse(source: &str) -> Result<FormulaStatement<'_>, FormulaStatementError> {
         }
         Err(error) => return Err(refusal(R::Lexical(error.rule()), error.span())),
     };
-    let name = header(&mut lexer, source.len(), K::Identifier, R::ExpectedName)?;
-    let _ = header(&mut lexer, source.len(), K::Colon, R::ExpectedColon)?;
-    let annotation = header(
-        &mut lexer,
-        source.len(),
-        K::Identifier,
-        R::ExpectedAnnotation,
-    )?;
+    let name = header(lexer, source.len(), K::Identifier, R::ExpectedName)?;
+    let _ = header(lexer, source.len(), K::Colon, R::ExpectedColon)?;
+    let annotation = header(lexer, source.len(), K::Identifier, R::ExpectedAnnotation)?;
     // Refuse closed annotation vocabulary before parsing an expression, as the reference does.
     let binding_kind = if head.kind() == K::Let {
         Some(
@@ -382,9 +386,20 @@ fn parse(source: &str) -> Result<FormulaStatement<'_>, FormulaStatementError> {
     } else {
         None
     };
-    let assignment = header(&mut lexer, source.len(), K::Assign, R::ExpectedAssignment)?;
+    let assignment = header(lexer, source.len(), K::Assign, R::ExpectedAssignment)?;
     let (mut depth, mut separator, mut end) = (0_usize, None, assignment.span().end());
-    for token in lexer {
+    let mut range_end = source.len();
+    loop {
+        match lexer.peek() {
+            Some(Ok(next))
+                if recipe_boundary && depth == 0 && matches!(next.kind(), K::Let | K::Assert) =>
+            {
+                range_end = next.span().start();
+                break;
+            }
+            _ => {}
+        }
+        let Some(token) = lexer.next() else { break };
         let token = token.map_err(|error| {
             let part = if binding_kind.is_some() {
                 FormulaStatementExpression::Binding
@@ -421,13 +436,13 @@ fn parse(source: &str) -> Result<FormulaStatement<'_>, FormulaStatementError> {
             kind,
             expression(
                 source,
-                Span::new(assignment.span().end(), source.len()),
+                Span::new(assignment.span().end(), range_end),
                 FormulaStatementExpression::Binding,
             )?,
         )
     } else if let Some(tolerance) = tolerance {
         let separator = separator
-            .ok_or_else(|| refusal(R::AssertionSeparator, Span::new(source.len(), source.len())))?;
+            .ok_or_else(|| refusal(R::AssertionSeparator, Span::new(range_end, range_end)))?;
         let left = expression(
             source,
             Span::new(assignment.span().end(), separator.start()),
@@ -435,7 +450,7 @@ fn parse(source: &str) -> Result<FormulaStatement<'_>, FormulaStatementError> {
         )?;
         let right = expression(
             source,
-            Span::new(separator.end(), source.len()),
+            Span::new(separator.end(), range_end),
             FormulaStatementExpression::AssertionRight,
         )?;
         StatementData::Assert(tolerance, left, right)

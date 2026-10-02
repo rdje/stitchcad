@@ -807,3 +807,11 @@ The new statement fault runner now inspects failed-test bodies only; passing-nam
 noise controls refuse. Explicit fixture acceptance/refusal assertions and all15 actual compiled
 fault reds pass with exact source restoration, rc=0; original unearned14 classification is superseded.
 Current book/API/literal ruling agree. Original defect descriptions remain byte-identical.
+
+D108 is sealed in [`stitchcad-defects-part38.md`](../history/stitchcad-defects-part38.md).
+G1-SLICE.5a.3e.2 replaces the erroneous delimiter offset with exact delimiter splitting. New archive
+payload compares byte-identically with the full predecessor G1-0044/G1-0043 entries,2471 bytes/
+sha2565484241b…. The observed ledger red becomes nine passing arms/thirteen pointer controls, rc=0;
+archive28/177 CLI controls and retention168 logical records pass before sealing this report, rc=0.
+No committed history or product parser was corrupted. The report wording is retained; its heading
+uses the standard defect-entry marker. Final archive inventory is re-derived after this seal.

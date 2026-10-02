@@ -120,6 +120,24 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part60.md`](docs/history/stitchcad-changelog-part60.md) | STITCHCAD-G1-0042 | 11 lines, 999 bytes, `sha256:717945df…` |
 
+| [`stitchcad-changelog-part61.md`](docs/history/stitchcad-changelog-part61.md) | STITCHCAD-G1-0044 / STITCHCAD-G1-0043 | 28 lines, 2471 bytes, `sha256:5484241b…` |
+
+## STITCHCAD-G1-0066 - ordered original-source recipe syntax (leaf `G1-SLICE.5a.3e.2`)
+
+FormulaRecipe retains immutable authored let/assert order, empty/multiline/same-line lists and
+original whole-source statement/header/node/error spans. Shared statement parsing keeps strict
+standalone consumption; nested keywords remain invalid expressions. Errors identify1-based
+statement indices where known; global ASCII preflight supplies no guessed ordinal. The fixed4096
+bound refuses the recognized4097th keyword with exact span/bound/measured count before its body.
+
+Eight public contracts/nine authored whole sources/14 original statements/18 operand identities,
+all21 worked statements/25 existing bytes,15 new actual compiled assertion reds and the prior15
+statement faults pass with exact restoration. Strict native550/release17/WASM3 and scoped checks
+pass. Recipe annex/progressive links/API map/index/README/live/task pointers align; prior proof
+and oldest ledgers retain exact payloads. G1 stays5/18; next .3e.3 coupled syntax/diagnostic review.
+D108 archive-copy offset is fixed with exact predecessor comparison and watched ledger checks.
+Complete recipe normalization/identity, static names/types/bindings and evaluation remain owned.
+
 ## STITCHCAD-G1-0065 - single immutable formula statements (leaf `G1-SLICE.5a.3e.1`)
 
 FormulaStatement parses one complete let/assert form with six kind/five tolerance annotations,
@@ -368,32 +386,3 @@ masked pole-guard test by requiring its mathematical-domain reason, not just an 
 Exact predecessor angular evidence/journals and oldest live records are preserved. Scalar domains/
 i64 and D84 signed-angle verification remain owned; no new Rust/production evaluator claim.
 G1 remains 5/18; defects 12 open/75 sealed; next .5a.3b.3b scalar domains, D70 decision pending.
-
-## STITCHCAD-G1-0044 - reference angular conversion and guards agree (leaf `G1-SLICE.5a.3b.3a.1`)
-
-D85/D86/D87 close: microdegrees convert directly to radians at the correct scale, dir rounds before
-normalization, and exact odd-quarter tangent poles raise formula_domain. Signed/multi-turn/fractional
-sweeps remain intact. Forty-two explicit rows/72 controls agree with an independent standard-library
-math oracle on defined curated arguments; seven actual conversion/precision/direction/pole mutations
-require assertion reds and exact restoration. Restored structural/input/literal/arithmetic/angle,
-language 15/publication nine and recording checks pass. The diagnostic now reports full-turn radius1
-arc length6, sin90 ratio1000000, dir80537678 and typed tangent pole refusal.
-Normative tan domain and expert annex align; no complete transcendental/production/geometry proof
-is claimed. The director resolves D84: formula angles retain sign/turns; entity directions normalize.
-The decision and specifications align; D84 binding/equality/inverse-trig proof stays owned by .3c.
-D83 rational/scalar repairs continue independently. Prior arithmetic/history payloads preserve predecessor
-bytes. G1 remains 5/18; defects 12 open/74 sealed; next .5a.3b.3a.2 rational bounds, D70 also pending.
-
-## STITCHCAD-G1-0043 - exact reference arithmetic retains sub-quantum results (leaf `G1-SLICE.5a.3b.2`)
-
-D82 closes: square/product/quotient and the length-only rational selector return exact reduced
-Fractions in result-kind internal units, without rounding before binding. Explicit round_to and
-irrational-call rounding remain; dimension signatures, zero division and lazy branches are unchanged.
-Twenty-four explicit rows/100 independent Fraction parameter cases supply 162 controls, including
-re-association, binding ties and selector model scope. Nine actual precision/scale/refusal/branch/
-quantization mutations require assertion reds and exact source restoration. The corrected contracts
-also fail the committed predecessor on its rounded 1 um / 2 result, then restore the candidate.
-Restored reference/input/literal/structural and language 15/publication nine/recording checks pass.
-Expert annex and rounding contract state exact arithmetic and explicit quantization boundaries;
-previous literal evidence/oldest ledgers preserve predecessor text. D83 numeric-domain/stored-angle
-handling is owned next before product normalization. G1 stays 5/18; defects 11 open/71 sealed.

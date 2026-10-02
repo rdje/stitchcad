@@ -711,11 +711,14 @@ Completed identity children are preserved in
   Commit: `STITCHCAD-G1-0065`.
 
 - ID: `G1-SLICE.5a.3e.2`
-  Status: `pending`
+  Status: `done`
   Goal: ordered complete recipe syntax, empty/multiline lists, fixed4096 statement bound and measured
   first-excess refusal, statement indices/global spans, no partial accepted result or evaluation.
-  Verification: `pending`
-  Commit: `pending`
+  Protocol: [ordered recipe plan](G1-SLICE-canonical.md#ordered-recipe-pre-code-protocol).
+  Verification: eight public contracts/nine authored whole sources/14 statements/18 identities,
+  all21 worked statements/25 bytes;15 new actual assertion reds/prior15 statement faults/exact restore;
+  native550/release17/WASM3, three private/lifetime docs/runnable API; D108 archive copy repaired.
+  Commit: `STITCHCAD-G1-0066`
 
 - ID: `G1-SLICE.5a.3e.3`
   Status: `pending`
@@ -930,7 +933,8 @@ Completed identity children are preserved in
 | done | `G1-SLICE.5a.3d.2` | `done` | Owned iterative canonical expression serializer |
 | done | `G1-SLICE.5a.3d.3` | `done` | Complete expression identity proof map |
 | done | `G1-SLICE.5a.3e.1` | `done` | Single immutable let/assert syntax |
-| next | `G1-SLICE.5a.3e.2` | `pending` | Ordered recipe/4096/context |
+| done | `G1-SLICE.5a.3e.2` | `done` | Ordered recipe/4096/context |
+| next | `G1-SLICE.5a.3e.3` | `pending` | Coupled syntax/diagnostic review |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -964,63 +968,54 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
 
 
-### `G1-SLICE.5a.3e.1` — standalone immutable statement syntax
+### `G1-SLICE.5a.3e.2` — ordered immutable recipe syntax
 
-- [x] **REPRODUCE / ISSUE** — existing expression syntax cannot retain let/assert headers or their
-  operand roles; complete recipe syntax requires that owned layer before ordered composition.
-  D106 current literal decision incorrectly calls expression canonicalization future work.
-- [x] **ROOT CAUSE (WHY + WHERE)** — statement header/separator lives only in the curated reference;
-  product recipe module has no statement type. Trapped actual reference header/parser agrees with
-  authored15 operand/header rows/six refusal families, rc=0. D107 whole-output marker accepts an
-  expect-only fault by reading a passing test name; failed-body classifier rejects that noise, rc=0.
-- [x] **FIX** — private borrowed statement, six kind/five symbolic tolerance annotations, immutable
-  views/Clone/opaque Debug; original operand slices and flat span rebasing retain full-source nodes/
-  typed error part. Assertion separator respects grouping and preserves both bounded operands.
-  Explicit fixture acceptance/refusal assertions and failed-body classifier fix D107; D106 docs fixed.
-- [x] **ADDRESSED (verified)** — cargo statement contract→nine pass, rc=0; all21 book statements/
-  25 expression identities and15 authored reference rows/six refusals agree, rc=0. Final15 actual
-  keyword/name/annotation/separator/operand/span/privacy faults compile and fail assertions, rc=101
-  each; runner/exact restoration rc=0. Initial14 expect-based classification is explicitly superseded.
-- [x] **NO REGRESSION** — final make check→538 pass, strict fmt/clippy, rc=0; release9/WASM3, rc=0.
-  Three compile-fail/runnable docs pass;64KiB stack retains256-node operands/16 if levels/50000
-  groups/100000-byte names;257/17 refusals and exact original unit gaps remain. Structural/reference,
-  language16/publication9 checks pass, rc=0. No statement evaluation or browser runtime claim.
-- [x] **LOCKSTEP** — README/book statement annex/progressive links/grammar/API map/index/current
-  decision/live/task pointers agree. D106/D107 originals and oldest ledgers preserved exactly;
-  completed identity proof/subtree stays discoverable in semantic sibling, no ceiling increase.
-  G1 remains5/18; .3e.2 ordered4096 recipe/context next; statement identity/evaluation remain owned.
+- [x] **REPRODUCE / ISSUE** — standalone syntax cannot retain complete ordered recipes, their count
+  bound or diagnostic indices. D108 new archive copy has an extra heading byte; actual ledger red.
+- [x] **ROOT CAUSE (WHY + WHERE)** — statement* permits empty/multiline/same-line lists without a
+  newline delimiter; product lacked its owner. Nine authored source/token covers and actual recursive
+  reference14 statements/18 identities agree, rc=0. D108 delimiter index+7 retains one extra byte.
+- [x] **FIX** — private ordered borrowed recipe/immutable slice/Clone/opaque Debug; shared header
+  parser recognizes top-level keywords after headers, preserves nested refusal/global spans and
+  standalone whole-input. Typed contextual errors/known1-based indices/None ASCII preflight; fixed4096.
+- [x] **ADDRESSED (verified)** — recipe8 contracts/all21 worked statements/25 existing bytes pass,
+  rc=0;15 new actual compiled faults fail assertions, rc=101 each, runner/exact two-source restore0.
+  D108 full2471-byte predecessor archive comparison and ledger9/13 controls pass, rc=0.
+- [x] **NO REGRESSION** — strict make check→550 pass/45 groups, fmt/clippy, rc=0; release17/WASM3,
+  rc=0. Existing15 statement faults compile/fail assertions and restore; statement9+recipe8 pass0.
+  64KiB-stack4096/256 nodes/16 if/50000 groups/100000 name and257/17 refusals; book/reference gates0.
+- [x] **LOCKSTEP** — book recipe inspection/grammar/progressive routes/index/API/README/live/task
+  pointers agree, language16/publication9 pass, rc=0. Prior closure/oldest ledgers preserved exactly,
+  D108 wording retained with standard marker. .3e.3 review/.3f identity/.5 execution remain owned.
 
 ## Verification Log
 
-Final target/g1-0065-{reds-final,native,release,wasm,statement-restored,structure,language,publication}.log
-are terminal rc=0. Fifteen actual faults fail assertions inside failed-test bodies, rc=101 each, then
-restore exact source. First14 output-wide classifications are superseded by the failed-body proof;
-observed expect-only log4 cannot satisfy its new predicate. Tracked passing-name/expect-only/compiler
-noise countercases refuse, rc=0, and the structural suite watches classifier-only mode.
-Initial E0716 fixture temporary and strict collapsible-match lint failed before correction; neither
-is counted as compiled assertion evidence. No code in the existing expression/normalization/canonical/
-rounding implementations changed. Full source/node/error spans are retained by the new statement layer.
-Final publication51 chapters/20 scoped APIs/1051 source/1621 rendered links and9 controls pass, rc=0;
-language16 and full structural/reference suite pass, rc=0. Ordinary statement identity/ordered recipe/
-semantic binding/execution remain distinct requirements. D106/D107 repaired and original text sealed.
-
-Recording checks: ledger9 arms/13 pointer controls and archive28 arms/175 CLI controls pass, rc=0.
-Retention166 logical records/41 working Markdown/8464 decoded lines/655449 decoded bytes/311771
-resident bytes, rc=0. Tree10 lanes/13 trees/nine siblings/zero gaps; glossary310/nine/158, feature105/
-29, uncertainty133/16/zero unowned and fixture20/four/five/zero mismatch pass, rc=0.
-Defects10open/96 unique sealed/no overlap derive from fresh target/g1-0065-defect-census, rc=0.
-Final public statement9/language16/publication9 controls pass, rc=0. Prior parser/expression/literal/
-normalized/canonical/round sources and preserved completed proof/subtree compare exact HEAD, rc=0.
-Statement source SHA256 is6fcda5ff5efe31787e6d06c70b0d1a09b0562f3f873584803e292f1a6c775956.
+Pre-code protocol preceded Rust/test/instrument edits. Previous complete single-statement proof stays
+exact in [semantic sibling](G1-SLICE-canonical.md#single-statement-closure--preserved-during-g1-0066).
+Final native550/45groups, release17/WASM3, recipe8/statement9, new15/prior15 actual compiled assertion
+reds and exact source restoration observed terminal rc=0. Structural/reference producer watches nine
+whole sources/14 ordered statements/18 identities plus failed-body classifier; no independent whole
+reference recipe parser or numerical runtime/browser claim. Global spans/ordinal/first4097 all pass.
+Language16 and publication51 chapters/21 APIs/1055 source/1630 rendered links/nine controls pass0.
+D108 ledger initial7 pass/2 fail is superseded by repaired9 arms/13 pointer controls, rc=0. Predecessor
+1ac495b archive payload/oldest lesson/current single-statement closure compare byte-identically0.
+Archive28 arms/178 CLI controls/169 logical reads and retention169 records/44 working Markdown/
+8553 decoded lines/662134 decoded bytes/318456 resident bytes pass, rc=0. Fresh reconstructed defect
+census10open/97 unique sealed/zero overlap, rc=0. Tree10 lanes/13 trees/nine siblings/zero gaps,
+glossary310/nine/158, feature105/29, uncertainty133/16/zero unowned, fixture20/four/five/zero mismatch0.
+Lexer/expression/parser/literal/normalized/canonical implementations compare exact1ac495b, rc=0;
+only shared statement source changes, plus the new ordered owner. No live-doc ceiling raised.
+Final source SHA256: statement23b14cda34302dd52f9ddbf1a71e27d7fc6995c787ab26022ceed3e20bb1da08;
+ordered a66a8914a09c54de746ceace0b0d338286df475c0893769092c7ee6d0865d160.
 Staged make gate→=== all doctrines green ===, rc=0; all scoped verification jobs observed terminal.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3e.1` | `STITCHCAD-G1-0065 (leaf G1-SLICE.5a.3e.1): parse immutable single formula statements` | nine contracts/15 rows/15 actual reds/native538 |
+| `.5a.3e.2` | `STITCHCAD-G1-0066 (leaf G1-SLICE.5a.3e.2): parse ordered formula recipes with contextual refusals` | eight contracts/15 new reds/native550 |
 
 ## Changelog
 
-- `2026-10-02`: standalone statement syntax complete; ordered recipe composition/context next.
-- promotion: declined (routine statement implementation and local verification repair, no new policy).
+- `2026-10-02`: ordered recipe syntax complete; coupled syntax/diagnostic review next.
+- promotion: declined (routine ordered grammar implementation and archive-copy repair, no new policy).

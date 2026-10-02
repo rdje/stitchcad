@@ -3,6 +3,27 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — recipe boundaries preserve source order rather than line structure
+
+- Grammar statement* has no newline/semicolon delimiter. Shared header parsing consumes required
+  tokens before top-level let/assert boundary detection; nested keywords stay expression refusals.
+  Original complete-source lexer and operand slices preserve exact gaps/global spans without
+  token rejoining, source normalization or recursive arenas. Standalone mode stays whole-input.
+- Private ordered recipe/slice/Clone/opaque Debug preserves ownership; no partial result on failure.
+  Recipe errors add1-based indices; whole-source ASCII preflight has no knowable statement index.
+  MAX_STATEMENTS4096 measures only the recognized4097th keyword before its body, not an unparsed total.
+- Eight contracts/nine authored sources/14 original statements/18 independent reference identities
+  and all21 worked statements/25 bytes pass. Actual reference traps semantics per authored statement;
+  it is not a complete independent recipe parser. New15 compiled assertion reds and existing15
+  statement faults restore both sources exactly. Strict native550/release17/WASM3 pass.
+- Statement annex/progressive routes/API map/index and current docs distinguish syntax acceptance
+  from pending complete recipe normalization/identity, name/type/binding/evaluation. Prior closure
+  proof/oldest ledgers retain exact payloads. Coupled syntax/diagnostic review .3e.3 follows.
+- D108 archive one-shot delimiter index+7 retained an extra heading byte; actual ledger refused.
+  Exact delimiter splitting restores the full HEAD payload/digest; watched ledger/archive checks pass.
+  Original report wording retained with the standard defect-entry marker; no product code corruption.
+- promotion: declined (routine implementation of the existing ordered grammar, no new policy).
+
 ## _(2026-10-02)_ — standalone statement syntax retains whole-source evidence
 
 - Private borrowed statement construction keeps closed six kind/five tolerance annotations and
@@ -36,25 +57,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   status is fixed, retaining explicit syntax/reference/evaluation boundaries. .3d expression identity
   closes; .3e ordered statements follows. Previous serializer proof and oldest ledger payload stay exact.
 - promotion: declined (routine coupled contract review and documentation alignment, no new policy).
-
-## _(2026-10-02)_ — canonical expression identity owns bytes rather than source lifetimes
-
-- A private owned result exposes canonical bytes explicitly, with byte Eq/Clone and opaque Debug.
-  Iterative LIFO actions retain all normalized nodes/names/operators/ordered children; kind/full-u128
-  magnitude is read without conversion/rounding. Output excludes spans/aliases/grouping/padding/newline.
-- D103 unary (- child)/square (^2 child) keeps operators distinct from ordinary neg/square calls.
-  No sign fold, simplification, name/type validation, numeric evaluation, project hash or command.
-- Seven public contracts compare55 authored byte fixtures with recursive actual-reference rendering,
-  nested100 Fraction inputs and six book examples. Owned lifetime/clone/extraction/privacy, identity
-  differences/aliases and unevaluated branches pass. Nineteen actual compiled serializer faults fail
-  assertions and restore exact source; final native523/release7/WASM3 and book/reference checks pass.
-- Flat traversal handles256-node chains/16 if levels/50000 groups/100000-byte names on64KiB stack.
-  D104 root crate/API metadata now distinguishes i64 entity directions from raw-u128 literal inputs
-  and later i64 bindings. Book/learning/availability/API map/index/decision/live/task docs agree.
-- Completed byte-contract/protocol histories retain exact text in the semantic canonical sibling;
-  bounded navigation keeps canonical paths/owners. Next .3d.3 coupled review, then ordered statements.
-- promotion: declined (routine implementation of the received canonical byte contract and docs repair).
-
 
 # Sealed archive — earlier lessons
 
@@ -169,3 +171,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part63.md`](docs/history/stitchcad-devnotes-part63.md) | coupled normalization review lesson | 34 lines, 3069 bytes, `sha256:99a6f002…` |
 
 | [`stitchcad-devnotes-part64.md`](docs/history/stitchcad-devnotes-part64.md) | G1-0062 inspection tags | 15 lines, 1345 bytes, `sha256:5699b48e…` |
+
+| [`stitchcad-devnotes-part65.md`](docs/history/stitchcad-devnotes-part65.md) | G1-0063 expression identity | 17 lines, 1602 bytes, `sha256:377fd96c…` |

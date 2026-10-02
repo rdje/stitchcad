@@ -10,11 +10,11 @@ Imagine changing the intended skirt length. A recipe identifies the measurement 
 steps that depend on it. Re-evaluating those steps should produce the new shape without guessing
 which drawing lines must move. Recipe evaluation is planned work; the current libraries describe
 many of the inputs and garment objects it will consume. The syntax parser can now check how an
-expression groups its words, numbers and operators. It does not yet calculate a result or validate
-a complete recipe.
-The libraries also parse one statement, such as let garment_waist: length = waist_girth + ease_waist.
-That records a name, its intended kind and an expression. An assert statement records a named check
-and tolerance class; parsing preserves it for later checking. The developer contracts are in the
+expression groups its words, numbers and operators and can retain an ordered list of statements.
+It does not yet calculate a result or check the complete recipe’s names and types.
+A statement such as let garment_waist: length = waist_girth + ease_waist records a name, its intended
+kind and an expression. An assert statement records a named check and tolerance class. Parsing
+keeps their authored order and points to a statement when its syntax is refused. The developer contracts are in the
 [expression syntax](../annexes/formula-syntax.md) and [statement syntax](../annexes/formula-statements.md) annexes.
 
 You author formulas with familiar operators, such as -x or x ^ 2. Internally, a canonical form gives
