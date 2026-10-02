@@ -154,6 +154,14 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
+
+Post-commit handoff first refuses malformed lsof name evidence2. Captured fresh actual census
+completes0 with0blocking/11advisory; canonical retry0. First failed record was not retained, so exact
+cause remains unconfirmed and P1 capture/reproduction is owned by SPINE.23r on recurrence.
+Current product frontier stays D121 .5e.3b; book/live/task/resume records agree. No source guard
+relaxed, no verified defect classification added; G1 remains5/18 and defects12open/115sealed.
+
 ## STITCHCAD-G1-0080 - reference origin/context diagnostics (leaf `G1-SLICE.5e.1a`)
 
 D122 closes: absent facts, geometry/recipe/size bindings and tolerances retain distinct tokens and

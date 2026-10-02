@@ -391,3 +391,9 @@ At exact pushed10e19f2, the [doctrine job](https://github.com/rdje/stitchcad/act
 and [Rust job](https://github.com/rdje/stitchcad/actions/runs/37062714007/job/111022944767)
 completed successfully with every reported step successful. The new handoff guard step executed
 43 fixtures/13 actual assertion reds, confirmed by the runner log; SPINE.23v retains the receipt.
+
+One handoff-only observation after G1-SLICE.5e.1a returned exit2 for a malformed lsof name field.
+A fresh captured census was complete with no blocking process; the canonical retry passed0.
+The first failed record was not retained, so its exact cause remains unconfirmed. SPINE.23r owns
+bounded failed-record capture and reproduction on recurrence. A later complete observation proves
+its own snapshot; it does not explain or retroactively validate the earlier refused evidence.

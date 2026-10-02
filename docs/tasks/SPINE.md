@@ -967,3 +967,14 @@ Completed .21b acceptance is retained verbatim in [SPINE evidence](SPINE-evidenc
 - `2026-10-02`: SPINE.23/STITCHCAD-SPINE-0023 repairs canonical handoff workflow; .23v observes CI before G1 namespace.
 
 - `2026-10-02`: SPINE.23v/STITCHCAD-SPINE-0023v records exact10e19f2 two jobs/all steps success; runner43/13 verified. promotion: declined (routine observed-CI receipt).
+
+- ID: `SPINE.23r`
+  Status: `pending`
+  Priority: P1; take on recurrence that blocks handoff, otherwise after current product work.
+  Goal: capture/reproduce the exact structural OS record behind an intermittent handoff refusal.
+  Baseline: G1-SLICE.5e.1a post-commit canonical census refuses2 malformed lsof name; first raw
+  record not saved. Captured fresh census and canonical retry pass0; exact initial cause unknown.
+  Acceptance: safe bounded failed-record evidence, sanitized diagnostics/no command argument dump,
+  actual OS/public lsof format reproduction and independently authored fault/refusal controls;
+  preserve fail-closed behavior and never exempt unreadable handles to manufacture green.
+  Verification: `pending`; Commit: `pending`.

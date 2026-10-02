@@ -15,6 +15,9 @@ Latest commit: derive with `git log --oneline -1`.
   New runtime annex keeps book details bounded. D124 director diagnostic ruling still pending
   .5b.1c.2, concrete ADR-0003 proposal; do not invent excluded source forms or reserved names.
   D70 axes waits .4c.2. Cleanup current: docs/ARTIFACT_CLEANUP.md.
+- **Handoff observation:** .5e.1a.h records one malformed-name census refusal2; exact first OS
+  record was not retained. Captured complete repeat and canonical retry0; cause unconfirmed,
+  P1 capture/reproduction owned SPINE.23r. Product .5e.3b stays next.
 - **Handoff:** bash scripts/check_handoff.sh with OS-visible process access; --idle-cua only
   when no CUA call/result is pending. Neutral inherited checker remains non-authoritative/unchanged.
 - **In-flight uncommitted work:** none after recording commit; D124 director answer remains pending.

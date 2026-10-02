@@ -977,3 +977,19 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 - `2026-10-02` (UTC): .5b.1c.1/STITCHCAD-G1-0078 maps static obligations, fixes D126; D124 diagnostic ruling .1c.2, D125 runtime .5e.3.
 - `2026-10-02` (UTC): .5e.3a/STITCHCAD-G1-0079 fixes D125 reference assertions;262 cases/eight actual reds. D124 pending, D122 independent next.
 - `2026-10-02` (UTC): .5e.1a/STITCHCAD-G1-0080 fixes D122/D127/D128 reference origin/context reads;1466 cases/thirteen actual reds. Next D121; D124 pending.
+
+- ID: `G1-SLICE.5e.1a.h`
+  Status: `done`
+  Goal: finish post-commit handoff evidence and own an unexplained structural census refusal.
+  Acceptance: inspect actual parser/source and fresh captured OS evidence; do not guess the first
+  record's root cause; schedule exact refusal capture/reproduction, keep current product frontier.
+  Verification: first canonical census refuses2 (malformed lsof name field); actual name parser
+  has missing process/file/type or repeated-name guards. Fresh lsof snapshot has0 malformed names;
+  captured actual census completes with0blocking/11advisory; canonical retry passes0. First failed
+  record was not retained, exact cause unconfirmed. SPINE.23r owns P1 capture/reproduction, not a
+  verified defect classification. No background job or pending CUA result remains.
+  ROUTING EVIDENCE: parser/current OS lsof fields, independently of formula reference execution;
+  failure repeats in a handoff-only workflow only if captured again. No formula-family cause claimed.
+  Commit: `STITCHCAD-G1-0080h`; publication/ledger/gate receipts below before commit.
+  Recording checks: current publication9/ledger9 and embedded pointer13 terminal0; staged doctrine
+  and hook repeat final records before commit. Source/guard bytes unchanged, product frontier .3b.
