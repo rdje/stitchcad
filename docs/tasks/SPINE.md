@@ -558,7 +558,7 @@ mechanically-enforced form:
   Commit: `STITCHCAD-SPINE-0021b`.
 
 - ID: `SPINE.23`
-  Status: `pending`
+  Status: `done`
   Goal: D114/D115 census refuses unavailable evidence and distinguishes idle harness metadata.
   Acceptance: actual restricted denial and controlled live process baseline; refuse failed/empty
   primary process or handle census with a named nonzero diagnostic, preserve legitimate no-jobs
@@ -567,6 +567,23 @@ mechanically-enforced form:
   normal OS-visible handoff green after all children stop. No writes outside this repository.
   Schedule: P0 immediately after G1-SLICE.5b.1b.0/.0v clean archive/observed-CI completion,
   before .1b namespace work. COMMIT exception/full CI applies if check_* changes.
+  Pre-code protocol: preserve inherited NEUTRAL checker verbatim; project-owned check_handoff.sh
+  uses strict single ps/lsof snapshots and caller ancestry. Failed/empty/malformed primary evidence
+  refuses. Narrow CUA kernel/worker sandbox forms require --idle-cua attestation, zero repo handles,
+  exact launch metadata/parent shape; all active handles and ordinary root arguments still block.
+  CI doctrines job runs the project handoff fixture/fault contract; handoff census itself stays
+  outside commit gates because active verification is legitimate during commits.
+  Independent in-memory subprocess fixtures and actual predicate faults; real restricted/OS-visible
+  process checks. Canonical bootstrap/book/tool routes use replacement; upstream remains read-only.
+  Own exact .21b checklist relocation and normal live ledger/defect rollover if needed.
+  Verification:43 fixtures/13 actual reds, real denied/live/restored controls; native591,
+  WASM/book/full27 suites terminal0. CI .23v remains required. Commit: `STITCHCAD-SPINE-0023`.
+
+- ID: `SPINE.23v`
+  Status: `pending`
+  Goal: observed exact-head CI jobs/steps for handoff replacement after its exceptional push.
+  Acceptance: full local checks before push; both jobs/all steps observed success; durable receipt
+  and clean OS-visible no-needed-jobs handoff before G1-SLICE.5b.1b resumes.
   Verification: `pending`; Commit: `pending`.
 
 ## Current Frontier
@@ -601,7 +618,7 @@ mechanically-enforced form:
 | done | `SPINE.19.2v` | `done` | exact head/jobs/steps successful; resume G1 .4a.3 |
 | — | `SPINE.19.1` | `done` | taken at D49's trigger rather than waited for: `PLANNING.md` was at 95 % of its byte ceiling, so the 44 closed defects were sealed and the live census is now the open set |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
-| next integrity | `SPINE.23` | `pending` | D114/D115 blind/idle census; after clean current archive/CI, before namespace |
+| next integrity | `SPINE.23v` | `pending` | observed exact-head handoff CI before G1 namespace |
 | done | `SPINE.21b` | `done` | due cleanup discharged; product G1 .5b.1 resumes |
 | — | `SPINE.21` | `done` | the cleanup cadence is recurring, and a recurring obligation with no leaf is one somebody rediscovers: taken between two product slices because the 24-hour mark falls inside this one |
 
@@ -677,6 +694,22 @@ its checklist here, because `scripts/check_task_acceptance.sh` judges every stag
 refuses one with no ticked boxes; the next slice moves it across. Neither file carries an unticked
 placeholder box (defect D15).
 
+
+### `SPINE.23` — strict project-owned handoff census
+
+- [x] **REPRODUCE / ISSUE** — inherited restricted checker printed OK0 while PID46805 held a file;
+  OS-visible checker blocked idle CUA metadata. Original D114/D115 reports retained unchanged.
+- [x] **ROOT CAUSE (WHY + WHERE)** — inherited primary statuses suppressed; command-text arm
+  ignores idle launch roles. contract.py →43 fixtures/13 actual guard assertion reds, rc=0.
+- [x] **FIX** — strict typed single ps/lsof snapshots, caller ancestry/visibility, project-owned
+  entry point; attested matching CUA pairs with no handles advisory. Neutral checker byte-exact.
+- [x] **ADDRESSED (verified)** — restricted check_handoff.sh refuses2; tracked contract.py --real
+  →PID18980 held-file blocks1, child terminal0/restored census OK0, rc=0; no shared services stopped.
+- [x] **NO REGRESSION** — make check →591 passed/48groups; wasm terminal0; make probes →27 suites
+  green, rc=0; focused publication9 →53chapters/25 APIs/1103source/1707rendered links, rc=0.
+- [x] **LOCKSTEP** — bootstrap/tool/book/index/live/task/CI agree; defects10open/104sealed,
+  G1 stays5/18. .23v owns exceptional push/actual CI. Exact historical checklist/ledger bytes retained.
+  promotion: declined (existing locality, neutral preservation and independent-evidence principles).
 
 ### `SPINE.19.2v` — observed archive CI and post-commit immutable-window refusal
 
@@ -928,33 +961,6 @@ placeholder box (defect D15).
   protect inputs/stores/repository boundaries. Six roots/1281 strays removed, regeneration green;
   stale index SPINE frontier corrected within the existing D34 owner. Product resumes G1 .5b.1.
 
-### `SPINE.21b` — frozen cleanup and immediate residue evidence
+Completed .21b acceptance is retained verbatim in [SPINE evidence](SPINE-evidence.md).
 
-- [x] **REPRODUCE / ISSUE** — latest record 2026-10-01 18:56 UTC became due;
-  `du -sk target docs/book/book` → 1955324 / 7172 KB, rc=0. Required release/debug
-  deps/incremental and WASM scans found600 incremental bin/log files, no release/deps strays.
-- [x] **ROOT CAUSE (WHY + WHERE)** — regenerable Cargo/probe/book output accumulates normally.
-  Same-device/symlink/Git-boundary/ignored/tracked censuses and no-jobs check admit six roots;
-  package/dependency stores, backups and audit records stay protected. `git ls-files` generated
-  prefix census →0 tracked inputs; `bash scripts/check_no_background_jobs.sh` →handoff: OK,
-  rc=0. No new numbered defect.
-- [x] **FIX** — cleanup.py freezes content, tracked set/bytes, HEAD and producer identity,
-  refuses drift, rechecks each path and writes an exclusive result manifest. Only the final plan
-  in target/artifact_cleanup_audit/spine-21b-final was applied; exploratory plan never applied.
-- [x] **ADDRESSED (verified)** — plan/apply → 1287 candidates, 0 skipped; six trees/1281 strays,
-  10015 files/1112101558 file bytes removed, rc=0. Independent lexists census proves1287 absent;
-  tracked changes/deletions0. Immediate du target1071060KB: reclaimed891436KB including book.
-  Immediate required bin/log locations residue0; rebuilt outputs are not this residue claim.
-- [x] **NO REGRESSION** — run_artifact_cleanup_probes.sh → 15 pass/0 fail, eleven actual
-  in-memory removed-guard assertion reds (device metadata simulated), source unchanged, rc=0.
-  make check → fmt/clippy/native591/48groups; wasm → three crates compile; book warning-free;
-  make probes →26 suites green; publication →9 pass/0 fail,52 chapters/25 APIs, rc=0.
-  Tree census →10 lanes/13 trees/10 siblings/0 gaps; staged make gate →all doctrines green,
-  rc=0. Ledger →9 pass/0 fail, pointer controls13; retained CLI195 controls/186 logical reads,
-  archive186 records/61 working Markdown/9009 lines/695198 decodedB/351520 residentB, rc=0.
-  First gate rejected the root-cause box lacking an explicit invocation/exit receipt; added the
-  observed census/no-jobs receipt and reran successfully, without changing a checker.
-- [x] **LOCKSTEP** — latest cleanup entry, tool route, book upkeep, live26 suites, resume and
-  task frontier agree; G1 remains5/18, defects10 open/100 sealed. Old ledger payloads and prior
-  completed cleanup records retained exactly; README layout/commands unchanged.
-  promotion: declined (routine cadence discharge under already canonical safety/locality rules).
+- `2026-10-02`: SPINE.23/STITCHCAD-SPINE-0023 repairs canonical handoff workflow; .23v observes CI before G1 namespace.

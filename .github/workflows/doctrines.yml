@@ -18,3 +18,5 @@ jobs:
         run: chmod +x scripts/*.sh knowledge-map/scripts/*.sh .githooks/pre-commit .githooks/commit-msg || true
       - name: Run the doctrine enforcer
         run: scripts/check_doctrines.sh
+      - name: Verify project handoff census guards
+        run: bash docs/tasks/artifacts/handoff/run_handoff_probes.sh

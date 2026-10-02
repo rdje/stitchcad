@@ -142,6 +142,17 @@ the digests afterwards.
 
 | [`changelog-part71.md`](docs/history/stitchcad-changelog-part71.md) | STITCHCAD-G1-0057 | 11 lines, 887 bytes, `sha256:e144c5ec…` |
 
+| [`changelog-part72.md`](docs/history/stitchcad-changelog-part72.md) | STITCHCAD-G1-0058 | 12 lines, 970 bytes, `sha256:ef59b0a1…` |
+
+## STITCHCAD-SPINE-0023 - strict project handoff evidence (leaf `SPINE.23`)
+
+Project-owned check_handoff.sh refuses failed/empty/incomplete ps/lsof evidence. Explicit idle-CUA
+attestation applies only to paired kernel/worker launch metadata without repo file handles; real
+handles and ordinary checkout arguments still block. Neutral inherited checker remains unchanged.
+43 independent fixtures/13 actual guard reds and real restricted/live-file/restored controls pass.
+Book/bootstrap/tool/task/live records agree; G1 stays5/18, defects10open/104sealed. Full checks and
+exceptional push/observed CI are owned by .23v before namespace work resumes.
+
 ## STITCHCAD-G1-0075 - observed third-window CI and immutability (leaf `G1-SLICE.5b.1b.0v`)
 
 Exact pushed b595a37: both CI jobs/all steps completed success. Exclusive archive checks pass28
@@ -372,16 +383,3 @@ actual mutation reds pass, with exact source restoration. Strict native501, rele
 focused reference/book checks pass. README/current availability, grammar/language, indexed expert
 annex/status map and live/task records align; prior histories remain exact. G1 stays5/18; next .3c.3
 immutable normalized expression arena. D70 axes and later binding/geometry/API/MCP remain separately owned.
-
-## STITCHCAD-G1-0058 - full-width unsigned rounding (leaf `G1-SLICE.5a.3c.1`)
-
-A new sc-units unsigned128 API shares the signed half-away magnitude rule, preserving wide positive
-literal children before later signed binding. Subtraction replaces doubled remainder so every
-nonzero u128 ratio rounds without narrowing, overflow or wrap; zero names the public operation.
-Signed i64 endpoints, signs and overflow remain unchanged. No formula conversion/execution yet.
-
-Five public contracts/138 independent Decimal rows, nine actual debug mutation reds and one release
-red pass with exact source restoration. Existing signed contracts/36 Fraction rows/five reds remain
-required. Strict Rust494 (units46), release public tests, three WASM crates and focused book/reference
-checks pass. Indexed expert annex and unit API/example align with task/live records; prior evidence
-and oldest ledger payloads remain exact. G1 stays5/18; next .5a.3c.2 exact typed literal conversion.

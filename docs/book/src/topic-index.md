@@ -35,6 +35,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Garment ontology](spec/ontology.md)
 - [Glossary](spec/glossary.md)
 - [Governance model](governance.md)
+- [Session handoff evidence](governance.md#handoff-evidence-before-clearing-a-session)
 - [Grammar, operators and functions](spec/formula-language/grammar.md)
 - [Implementation status and requirement owners](annexes/implementation-status.md)
 - [Instantiation paths](spec/instantiation-paths.md)

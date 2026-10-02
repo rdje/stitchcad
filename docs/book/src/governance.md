@@ -363,3 +363,26 @@ For push-status automation, use `bash scripts/check_push_due.sh`: exit0 means no
 is due, exit1 means due, and exit2 means the comparison was refused. `make push-due` is a diagnostic
 report that intentionally ignores the checker’s nonzero exit. Read its report; do not treat Make’s
 success as evidence that no push is owed. This distinction changes no push authority or cadence.
+
+### Handoff evidence before clearing a session
+
+From the repository root, run `bash scripts/check_handoff.sh` with operating-system process access.
+Exit0 and `handoff: OK` mean its observed process/file-handle census found no project work; exit1
+means project processes remain, and exit2 means evidence is unavailable or incomplete. Restricted
+execution that cannot inspect processes must refuse rather than turn missing evidence into success.
+A clean Git tree alone does not prove that verification jobs or writers have finished.
+
+If every CUA call has finished and no CUA result needs action, `bash scripts/check_handoff.sh --idle-cua`
+explicitly attests that state. Only matching CUA sandbox/kernel or sandbox/worker pairs with no
+project file handles become advisory. Without that attestation, their checkout arguments still block.
+A real project handle always blocks, including one held by an attested tool runtime. `--all` lists
+advisory PIDs without exposing command arguments. Stop owned jobs and their children; preserve idle
+shared tool infrastructure. Then rerun the census and confirm all needed tool results are terminal.
+
+The project-owned entry point replaces the inherited neutral checker for this workflow; the inherited
+copy remains unchanged as scaffold provenance.43 independent fixtures/13 actual in-memory guard faults
+and an OS-visible controlled live-file process verify this scope. This is a snapshot of this user's
+visible processes, not future-write prediction: jobs under other users and processes that close every
+handle and remove their checkout argument are outside the observation. The idle attestation concerns
+agent state that a process snapshot alone cannot establish. It is never appropriate while a CUA call
+or result remains pending.

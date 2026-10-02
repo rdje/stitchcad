@@ -911,3 +911,68 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
   agree; old checklist relocates unchanged to SPINE-evidence. Counts independently derive 9 open /
   58 sealed. G1 remains 5/18, four structural families; CI observation precedes product .4a.3.
   Fresh lesson question promoted in `decision_history-windows-retain-self-contained-bytes.md`.
+
+### `SPINE.21b` — frozen cleanup and immediate residue evidence
+
+- [x] **REPRODUCE / ISSUE** — latest record 2026-10-01 18:56 UTC became due;
+  `du -sk target docs/book/book` → 1955324 / 7172 KB, rc=0. Required release/debug
+  deps/incremental and WASM scans found600 incremental bin/log files, no release/deps strays.
+- [x] **ROOT CAUSE (WHY + WHERE)** — regenerable Cargo/probe/book output accumulates normally.
+  Same-device/symlink/Git-boundary/ignored/tracked censuses and no-jobs check admit six roots;
+  package/dependency stores, backups and audit records stay protected. `git ls-files` generated
+  prefix census →0 tracked inputs; `bash scripts/check_no_background_jobs.sh` →handoff: OK,
+  rc=0. No new numbered defect.
+- [x] **FIX** — cleanup.py freezes content, tracked set/bytes, HEAD and producer identity,
+  refuses drift, rechecks each path and writes an exclusive result manifest. Only the final plan
+  in target/artifact_cleanup_audit/spine-21b-final was applied; exploratory plan never applied.
+- [x] **ADDRESSED (verified)** — plan/apply → 1287 candidates, 0 skipped; six trees/1281 strays,
+  10015 files/1112101558 file bytes removed, rc=0. Independent lexists census proves1287 absent;
+  tracked changes/deletions0. Immediate du target1071060KB: reclaimed891436KB including book.
+  Immediate required bin/log locations residue0; rebuilt outputs are not this residue claim.
+- [x] **NO REGRESSION** — run_artifact_cleanup_probes.sh → 15 pass/0 fail, eleven actual
+  in-memory removed-guard assertion reds (device metadata simulated), source unchanged, rc=0.
+  make check → fmt/clippy/native591/48groups; wasm → three crates compile; book warning-free;
+  make probes →26 suites green; publication →9 pass/0 fail,52 chapters/25 APIs, rc=0.
+  Tree census →10 lanes/13 trees/10 siblings/0 gaps; staged make gate →all doctrines green,
+  rc=0. Ledger →9 pass/0 fail, pointer controls13; retained CLI195 controls/186 logical reads,
+  archive186 records/61 working Markdown/9009 lines/695198 decodedB/351520 residentB, rc=0.
+  First gate rejected the root-cause box lacking an explicit invocation/exit receipt; added the
+  observed census/no-jobs receipt and reran successfully, without changing a checker.
+- [x] **LOCKSTEP** — latest cleanup entry, tool route, book upkeep, live26 suites, resume and
+  task frontier agree; G1 remains5/18, defects10 open/100 sealed. Old ledger payloads and prior
+  completed cleanup records retained exactly; README layout/commands unchanged.
+  promotion: declined (routine cadence discharge under already canonical safety/locality rules).
+
+### `SPINE.23` — project handoff evidence, `2026-10-02`
+
+- Scope: D114/D115 repaired in canonical project entry point, not by forking inherited NEUTRAL
+  source. check_no_background_jobs.sh exact HEAD SHA256
+  98cfbc15e3fcbf94b1c5e0ed7261f28bbd7cd35e039b271c7da859735db2240b. Upstream defect retained
+  in exact sealed reports; no external repository written or message sent. Bootstrap routes replacement.
+- Strict status/nonempty/parse/ancestry/handle visibility prevents unavailable evidence becoming
+  absence. lsof -Fpftn establishes typed names; actual222 unnamed PIPE/NPOLICY/NEXUS records
+  explain initial strict-name refusal. Named paths still checked; unnamed filesystem/unknown types refuse.
+- Explicit --idle-cua attests no pending CUA call/result. Only exact sandbox-child launch pairs
+  with zero repo handles qualify; parent/child handles, other commands/extra args remain blocking.
+  No process-name blanket exclusion. Snapshot limitations and attestation obligation are in book.
+- `run_handoff_probes.sh` terminal0:43 independent fixtures/13 compiled actual guard assertion reds,
+  producer unchanged. CLI help0/unknown option2 verified via subprocess statuses; shell syntax clean.
+- Actual restricted invocation refuses2 with Operation not permitted. OS-visible tracked
+  `contract.py --real` terminal0: PID18980 holds local file, census blocks1, holder terminal0,
+  restored census OK0. Earlier repeat overlapped make check and correctly blocked three active build
+  processes before creating its child; discarded that baseline and repeated exclusively.
+- Completed .21b checklist exact30lines/2623B/SHA256
+  7a377c45120fd61369f22ee21b97683467d1a4ffc1916945e7bc4cad4d36a7bf relocated to this sibling;
+  original G1-0058 ledger and D114/D115 full reports independently compare exact predecessor bytes.
+- Full `make check` terminal0:strict fmt/clippy,591 tests/48groups. Standalone make wasm terminal0;
+  publication runner warning-free builds book,9 controls,53chapters/25 APIs/1103source/1707rendered
+  links. Initial full wrapper did not expose wasm status separately; standalone repetition does.
+- `make probes` terminal0:27 suites, handoff43/13, archive28/203 CLIcontrols/194 logical reads,
+  ledger9/pointer13 and publication9 green. Final focused publication includes new handoff index link.
+- Canonical defect census10open/104unique sealed/overlap0. History194logical/8workingMarkdown/
+  9487decodedlines/720051decodedB/308565residentB. Prior windows/reader/schema/caps unchanged.
+- CI doctrines job explicitly executes new handoff contracts. .23v owns observed exact-head
+  job/step success; no local result is called remote evidence. Final staged gate receipt follows.
+- First staged gate refused ADDRESSED for missing recognized exit syntax; added actual rc=0
+  receipt to that box without changing checker/signatures. Required gate repetition follows.
+- Repeated final staged make gate →all13 doctrines green, terminal exit0.

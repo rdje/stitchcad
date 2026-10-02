@@ -34,6 +34,8 @@ agent should be able to reach for the right tool without reading the source. -->
 
 | Tool | Answers | How to invoke |
 | --- | --- | --- |
+| handoff census | are process/handle observations available, and does project work remain? | `bash scripts/check_handoff.sh` (OS-visible); `--idle-cua` attests no pending CUA call/result; `--all` lists advisories |
+| handoff controls | do unavailable evidence, real handles and narrow idle metadata still discriminate? | `bash docs/tasks/artifacts/handoff/run_handoff_probes.sh` →43 fixtures/13 actual guard assertion reds |
 | doctrine enforcer | is the repository committable — do all 13 registered doctrines hold right now? | `scripts/check_doctrines.sh` (same as `make gate`; prints `=== all doctrines green ===`) |
 | per-check self-test | does a single doctrine check still discriminate (both arms fire)? | `scripts/check_<name>.sh --self-test` (e.g. `scripts/check_live_doc_currency.sh --self-test`) |
 | multi-leaf shadowing probe | which leaf's evidence does `TASK-ACCEPTANCE` actually judge, and does a placeholder block an honest leaf? (defect D15) | `bash docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh` → `probes: N pass / M fail` |

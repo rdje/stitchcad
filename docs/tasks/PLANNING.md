@@ -844,31 +844,10 @@ producer bytes unchanged. Product validation/whole static preflight remain owned
 reference namespace/preflight review .5b.1b follows. Report bodies are retained; draft heading markers were normalized to the canonical defect entry
 marker before final sealing, so the standing defect census counts both new records.
 
-- **D114** — handoff census reports success when restricted process visibility fails.
-  - Reproduce: a controlled Python process PID46805 held target/window3-handoff-visibility.txt
-    open and remained live; restricted check_no_background_jobs.sh printed handoff: OK, exit0.
-    Direct /bin/ps raises PermissionError (Operation not permitted); CTRL-C afterwards terminated
-    that same still-running process with KeyboardInterrupt, exit1. Tool sessions prove its lifetime.
-  - Root: script suppresses primary ps/lsof stderr and does not refuse their nonzero statuses;
-    empty SNAP falls through to the clean verdict. An ancestry lookup can fail separately, but
-    the whole-process census must not turn unavailable evidence into absence.
-  - Impact: false safe-to-clear status can strand a writer or lose verification continuity.
-  - Owner/schedule: SPINE.23, P0; take immediately after current G1-SLICE.5b.1b.0/.0v commits/CI
-    leave a clean tree, before namespace code. Add real denial/empty/success/live controls and
-    fix the appropriate project-local seam; do not change any other Git repository.
-  - Interim: all handoff censuses in this run use authorized OS visibility plus terminal tool-handle
-    receipts. The controlled fixture process is stopped; restricted green alone is never evidence.
-
-- **D115** — OS-visible handoff census treats idle CUA runtime metadata as project work.
-  - Reproduce: the OS-visible D114 control snapshot blocks four persistent Codex CUA kernel/worker
-    services as well as the actual controlled process. After stopping the controlled process,
-    lsof -a -p13406,13407,14498,14499 reports only repo cwd entries and zero repo file handles.
-    No CUA operation/tool result is in flight. Controlled PID46805 is absent in real ps, exit1.
-  - Root: command lines carry the inherited workspace in harness configuration/working-dir metadata;
-    the command-text arm calls that project work despite the documented inherited-cwd discriminator.
-    Existing own-harness exclusions do not recognize these runtime invocation forms.
-  - Impact: an authorized census can prevent legitimate clean handoffs indefinitely, while restricted
-    execution masks the problem with D114's false green. Do not kill shared tool infrastructure.
-  - Owner/schedule: SPINE.23, P0 alongside D114 after current archive/CI becomes Git-clean.
-    Preserve detection of real project handles and active jobs; narrowly characterize idle runtime
-    forms, test actual-handle controls and caller ancestry without blanket process-name exclusions.
+D114/D115 are sealed in [`stitchcad-defects-part43.md`](../history/stitchcad-defects-part43.md).
+SPINE.23 repairs the project's canonical handoff path with check_handoff.sh/handoff_census.py;
+neutral inherited checker bytes are preserved and its upstream deficiency is retained in the reports,
+not claimed repaired. Failed/empty/incomplete evidence refuses; explicit no-pending-CUA attestation
+admits only matching sandbox/child pairs without real repo handles.43 independent fixtures/13 actual
+compiled guard faults pass. Actual restricted invocation refuses2; OS-visible held-file PID78489
+blocks1, controlled child finishes0, restored census green0. No shared tool service is stopped.

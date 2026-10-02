@@ -47,9 +47,13 @@ human is working. Follow it exactly.
 - **Keep the roadmap, the code, and the docs (README + mdBook) aligned** — locked
   together, no drift, for past, present, and future changes.
 - **No background job at a handoff point.** Before you end a session (`/exit`, a pause, a
-  handover), run `bash scripts/check_no_background_jobs.sh` and make it print `handoff: OK`:
+  handover), run `bash scripts/check_handoff.sh` with OS-visible process access and make it print `handoff: OK`:
   a job that outlives its session rewrites tracked files under the next one, with its log
-  gone. Kill stragglers AND their children — a parent's death does not propagate.
+  gone. Stop owned stragglers AND their children — a parent's death does not propagate.
+  If no CUA call/result is pending, `--idle-cua` attests that state; only paired idle runtime metadata
+  without project file handles becomes advisory. Denied/empty census refuses: rerun with OS visibility,
+  never infer absence. The inherited neutral checker is retained as scaffold provenance, not this
+  project's authoritative handoff entry point.
 - **A commit message ends with its own last line** — no agent/tool attribution trailers
   (`COMMIT.md`); the `commit-msg` hook refuses them.
 

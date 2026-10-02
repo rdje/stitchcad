@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — handoff absence requires available evidence
+
+- D114's restricted fail-open and D115's idle CUA false block reproduce independently. Inherited
+  checker is NEUTRAL; preserve its exact bytes and repair canonical workflow through project-owned
+  check_handoff.sh/handoff_census.py, bootstrap/book/tool routes. No other repository is modified.
+- Single ps/lsof snapshots validate status, nonempty parse, caller ancestry/handle visibility and
+  complete typed file records. Actual unnamed PIPE/NPOLICY/NEXUS records are valid; unnamed file
+  or unknown types refuse. User-visible diagnostics omit raw command arguments.
+- Idle CUA requires explicit no-pending-result attestation plus exact child launch/parent pairing
+  and zero repo handles.43 independent fixtures/13 compiled actual guard assertion reds pass.
+  Actual denied process access refuses2; held-file child PID78489 blocks1, child ends0, restored
+  OS-visible attested census returns0. No shared tool infrastructure is killed.
+  One real repeat overlapped make check and correctly blocked its active processes; discarded that
+  baseline and repeated exclusively via the tracked --real producer: PID18980 blocks1, holder0, restored0.
+- Completed .21b checklist moves verbatim:30lines/2623B/SHA256
+  7a377c45120fd61369f22ee21b97683467d1a4ffc1916945e7bc4cad4d36a7bf. Historical no-jobs claims
+  remain historical evidence; D114 prevents reusing restricted green for a current handoff.
+- promotion: declined (existing locality, neutral preservation and independent-evidence principles).
+
 ## _(2026-10-02)_ — third retained window earns remote evidence
 
 - Full exact SHA b595a37bda29a8f019e06bdb09c79ef395decb4d, not the abbreviated filter:
