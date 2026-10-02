@@ -386,3 +386,8 @@ visible processes, not future-write prediction: jobs under other users and proce
 handle and remove their checkout argument are outside the observation. The idle attestation concerns
 agent state that a process snapshot alone cannot establish. It is never appropriate while a CUA call
 or result remains pending.
+
+At exact pushed10e19f2, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/37062714117/job/111022944363)
+and [Rust job](https://github.com/rdje/stitchcad/actions/runs/37062714007/job/111022944767)
+completed successfully with every reported step successful. The new handoff guard step executed
+43 fixtures/13 actual assertion reds, confirmed by the runner log; SPINE.23v retains the receipt.

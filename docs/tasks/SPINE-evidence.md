@@ -976,3 +976,17 @@ commit as their work; this file carries no unticked placeholder boxes (the reaso
 - First staged gate refused ADDRESSED for missing recognized exit syntax; added actual rc=0
   receipt to that box without changing checker/signatures. Required gate repetition follows.
 - Repeated final staged make gate →all13 doctrines green, terminal exit0.
+
+### `SPINE.23v` — observed handoff CI, `2026-10-02`
+
+- Push terminal0: b595a37..10e19f2; ahead0/clean. Exact10e19f2e7764619c5fd97a9eee9a2195f745c6b2.
+  doctrines run37062714117/job111022944363 enforce; rust run37062714007/job111022944767 check;
+  both completed/success, every reported step success. APIs terminal0; Rust aggregate initially lagged.
+- New Verify project handoff census guards step completed/success. Runner log safely extracted:
+  handoff contract43 fixtures/13 actual assertion reds/producer unchanged; handoff probes1/0.
+  Initial gh log call refused escape formatting; saved raw log locally and displayed only known summary
+  matches, terminal0. No raw terminal control sequence displayed or external write performed.
+- OS-visible check_handoff.sh --idle-cua returns handoff: OK, rc=0;11 advisories/no needed jobs.
+  No CUA call/result pending; shared infrastructure preserved. Product G1 .5b.1b resumes.
+- Full local native/WASM/book/probes/gate receipts in .23; focused receipt-leaf checks follow.
+- Receipt publication9/book53/25 APIs/1103source/1707rendered, tree10/13/10/zero gaps, ledger order/uniqueness and staged gate all pass terminal0.

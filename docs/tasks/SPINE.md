@@ -580,11 +580,12 @@ mechanically-enforced form:
   WASM/book/full27 suites terminal0. CI .23v remains required. Commit: `STITCHCAD-SPINE-0023`.
 
 - ID: `SPINE.23v`
-  Status: `pending`
+  Status: `done`
   Goal: observed exact-head CI jobs/steps for handoff replacement after its exceptional push.
   Acceptance: full local checks before push; both jobs/all steps observed success; durable receipt
   and clean OS-visible no-needed-jobs handoff before G1-SLICE.5b.1b resumes.
-  Verification: `pending`; Commit: `pending`.
+  Verification: both exact-head jobs/all steps completed-success; runner43/13 log confirmed.
+  Commit: `STITCHCAD-SPINE-0023v`; resume product G1-SLICE.5b.1b.
 
 ## Current Frontier
 
@@ -618,7 +619,7 @@ mechanically-enforced form:
 | done | `SPINE.19.2v` | `done` | exact head/jobs/steps successful; resume G1 .4a.3 |
 | — | `SPINE.19.1` | `done` | taken at D49's trigger rather than waited for: `PLANNING.md` was at 95 % of its byte ceiling, so the 44 closed defects were sealed and the live census is now the open set |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
-| next integrity | `SPINE.23v` | `pending` | observed exact-head handoff CI before G1 namespace |
+| done | `SPINE.23v` | `done` | exact head/jobs/guard log success; G1 namespace resumes |
 | done | `SPINE.21b` | `done` | due cleanup discharged; product G1 .5b.1 resumes |
 | — | `SPINE.21` | `done` | the cleanup cadence is recurring, and a recurring obligation with no leaf is one somebody rediscovers: taken between two product slices because the 24-hour mark falls inside this one |
 
@@ -964,3 +965,5 @@ placeholder box (defect D15).
 Completed .21b acceptance is retained verbatim in [SPINE evidence](SPINE-evidence.md).
 
 - `2026-10-02`: SPINE.23/STITCHCAD-SPINE-0023 repairs canonical handoff workflow; .23v observes CI before G1 namespace.
+
+- `2026-10-02`: SPINE.23v/STITCHCAD-SPINE-0023v records exact10e19f2 two jobs/all steps success; runner43/13 verified. promotion: declined (routine observed-CI receipt).

@@ -144,6 +144,12 @@ the digests afterwards.
 
 | [`changelog-part72.md`](docs/history/stitchcad-changelog-part72.md) | STITCHCAD-G1-0058 | 12 lines, 970 bytes, `sha256:ef59b0a1…` |
 
+## STITCHCAD-SPINE-0023v - observed handoff CI guards (leaf `SPINE.23v`)
+
+Exact pushed10e19f2: both jobs/all steps completed success; runner log confirms43 fixtures/13
+actual guard reds. OS-visible attested handoff green. Book/live/task receipts agree; G1 stays5/18,
+defects10open/104sealed. Product namespace/preflight G1 .5b.1b resumes.
+
 ## STITCHCAD-SPINE-0023 - strict project handoff evidence (leaf `SPINE.23`)
 
 Project-owned check_handoff.sh refuses failed/empty/incomplete ps/lsof evidence. Explicit idle-CUA

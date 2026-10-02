@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — runner executes the handoff contract
+
+- Exact head10e19f2e7764619c5fd97a9eee9a2195f745c6b2: doctrines run37062714117/job111022944363
+  and rust run37062714007/job111022944767 both completed/success, every reported step successful.
+  New guard step's runner log confirms43fixtures/13 actual assertion reds and handoff probes1/0.
+- Raw CI log formatting is saved under target; only known summary strings extracted for display.
+  Local OS-visible attested census returns0; no pending CUA call/result. Product .5b.1b resumes.
+- promotion: declined (existing exact-job/log evidence policy, no new doctrine).
+
 ## _(2026-10-02)_ — handoff absence requires available evidence
 
 - D114's restricted fail-open and D115's idle CUA false block reproduce independently. Inherited
