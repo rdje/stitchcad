@@ -56,7 +56,7 @@ block set is that system's blocks transcribed into recipes. Four rules follow:
 A value has exactly one **kind**: the units chapter's dimensions (§1.3) plus the three the language
 needs for geometry and conditions.
 
-| Kind | Internal form | Holds | Bindable by `let` |
+| Kind | Bound form | Holds | Bindable by `let` |
 | --- | --- | --- | --- |
 | `length` | i64 micrometres | a distance, a coordinate, an allowance width | yes |
 | `angle` | signed i64 microdegrees, turns preserved | a direction, a sweep, a grain deviation | yes |
@@ -66,6 +66,12 @@ needs for geometry and conditions.
 | `boolean` | one of two values | the result of a comparison | yes |
 | `point` | a `PointRef` | a point an operation constructed | no |
 | `edge` | an `EdgeRef` | an edge an operation constructed | no |
+
+These numeric i64 forms describe **bound values**. Canonical literal nodes and exact expression
+values may be wider, up to the 128-bit rational limit (§4.3); unary minus keeps its own node.
+A numeric binding rounds once and refuses an integer outside its signed i64 range. Count stays
+nonnegative; length/area also retain their smaller scalar domains. See the
+[expert binding annex](../annexes/formula-syntax.md#reference-numeric-binding-storage-controls).
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.
 For example, bound 360 degrees differs from zero and retains a full-turn sweep. Direction fields on
@@ -157,7 +163,10 @@ Implicit rounding has two boundaries:
   nearest internal quantum to the true value, ties away from zero. They are specified by that
   *result*, not by an algorithm, so an implementation may not use a different libm and get a
   different answer;
-- **a binding** — a `let` stores the internal integer, by the one rounding rule (units §2).
+- **a binding** — a numeric `let` rounds once by the units §2 rule, checks its signed i64 storage
+  range and scalar domain, and exposes that stored integer to subsequent statements. An out-of-range
+  integer is `formula_domain`, naming the binding, kind, bounds and rounded measured value.
+  Boolean bindings keep their boolean kind.
 
 The explicit `round_to` function is an authored quantization operation: its step is part of the
 recipe ([grammar §6](formula-language/grammar.md)). Ordinary rational operators do not add that

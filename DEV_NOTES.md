@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — bound numeric storage is distinct from literal identity
+
+- D83 predecessor accepts Count MAX+1 at let and returns fractional length bindings. Actual let now
+  rounds half away once, checks declared signed storage plus scalar domains, and returns an integer.
+  L2 consumes it without rounding again. Unbound expressions retain exact wider/fractional values.
+- Eighty independent Fraction/Decimal controls and twelve compiled actual assertion reds cover
+  endpoints/ties, typed context, Boolean, caller writes, changed declarations and copied-book replay.
+  Existing scalar57/rational61 and literal6/arith9/angle7/inline5 mutation controls retain proof.
+- Director D95 ruling allows128-bit canonical literal nodes and requires i64 only at numeric binding.
+  Unary minus preserves a positive2^63 child for signed MIN; no identity-changing sign fold.
+  Book/grammar/roadmap and decision agree. Full canonical proof/review remain .3b/.3c before D83/D95 close.
+- Earlier task payloads and oldest ledger records retain exact committed bytes. Curated map entry
+  compaction makes room for the new decision without changing generator or ceilings.
+  No Rust changed; no production evaluator, arbitrary-input transcendental, geometry/MCP/release claim.
+- promotion: promoted by `decision_literals.md` (director's canonical-node/bound-storage ruling).
+
 ## _(2026-10-02)_ — scalar domains guard exact values at the correct boundary
 
 - D83 predecessor accepts1000000001 um; its result wrapper checks width only. Scalar domains
@@ -78,25 +94,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   Explicit Rust fences unblock publication; .3b.1c owns context-aware census proof after D90.
 - Completed rational protocol/checklist/journal and oldest live payloads preserve predecessor bytes.
 - promotion: declined (routine enforcement of the existing numeric domain and typed-refusal contract).
-
-## _(2026-10-02)_ — rational limits bound reduced values, not hidden temporaries
-
-- D83 see measured width but returned success; L8's final census verdict was not runtime refusal.
-  Canonical input rounded away oversized sub-quantum fractions before any width observation.
-- see now raises formula_domain with operation, published max_rational_bits and measured width.
-  Check converted exact input before rounding and every completed numeric node in result-kind
-  internal units. Remove true-unit temporary observations; their scale can inflate a valid fraction.
-  Fraction reduction precedes width checks; lexical digit count and raw cross-products are not values.
-- Sixty-one independently authored Fraction controls cover 127/128/129-bit edges, exact input,
-  signs, cancellation, scale, selectors and lazy branches; twelve actual guard mutations turn red.
-  Existing literal/arith/angle six/nine/seven mutations retain exact restoration. Literal controls
-  now number361: the oversized 100-zero fraction refuses; a reducible long-zero spelling stays valid.
-- D88 surfaced because token-only tan tests accepted an unrelated rational refusal after pole guard
-  removal. The mutation runner caught this masked failure. Require the exact mathematical-domain
-  reason, distinct from atan2-zero refusal; all seven actual reds then discriminate again.
-- D83 scalar domains/i64 and D84 signed-angle verification remain owned next; no new Rust evaluator,
-  arbitrary-input transcendental, release or MCP proof. Predecessor evidence/history retain exact bytes.
-- promotion: declined (routine enforcement of existing rational/domain and verification contracts).
 
 # Sealed archive — earlier lessons
 
@@ -179,3 +176,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part47.md`](docs/history/stitchcad-devnotes-part47.md) | literal identity lesson | 17 lines, 1561 bytes, `sha256:1b718cca…` |
 
 | [`devnotes-part48.md`](docs/history/stitchcad-devnotes-part48.md) | angular conversion lesson | 18 lines, 1649 bytes, `sha256:376d37ac…` |
+
+| [`stitchcad-devnotes-part49.md`](docs/history/stitchcad-devnotes-part49.md) | reduced-width lesson | 18 lines, 1658 bytes, `sha256:0317bfcf…` |

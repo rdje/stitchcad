@@ -90,6 +90,19 @@ the digests afterwards.
 
 | [`changelog-part45.md`](docs/history/stitchcad-changelog-part45.md) | STITCHCAD-SPINE-0019b | 9 lines, 809 bytes, `sha256:dfe49803…` |
 
+| [`stitchcad-changelog-part46.md`](docs/history/stitchcad-changelog-part46.md) | G1-0028 and SPINE-0019c | 22 lines, 1861 bytes, `sha256:62f1e78a…` |
+
+## STITCHCAD-G1-0050 - reference bindings store bounded integers (leaf `G1-SLICE.5a.3b.3b.3a`)
+
+Numeric let rounds once, checks declared signed storage/scalar domains and returns the stored integer;
+L2 consumes it directly. Exact temporaries remain wider. Binding80 independent controls/twelve
+compiled actual reds verify endpoints/ties/context/Boolean/environment/replay. Existing numeric
+families retain focused controls and literal6/arith9/angle7/rational12/scalar11/inline5 actual reds.
+D95 director ruling: exact128-bit canonical literal nodes, i64 numeric bindings, unary identity kept.
+Book/grammar/roadmap/decision and live task records agree; prior task/oldest ledger payloads preserved.
+G1 stays5/18, defects13 open/81 sealed; next canonical proof .3b and complete review .3c. No new Rust,
+production evaluator, real geometry, MCP or release claim.
+
 ## STITCHCAD-G1-0049 - reference scalar domains refuse exact excess (leaf `G1-SLICE.5a.3b.3b.2`)
 
 D83 signed length/area and nonnegative Count domains now consume normative declarations. Rounded
@@ -369,26 +382,3 @@ tracking/ledger/staged gates pass. Reassignment error snapshots are boxed to sat
 Book examples are assumed inputs, not physical-fit proof. Table evidence moves unchanged to its
 sibling; oldest live records seal unchanged as changelog-part26/devnotes-part28. .4b.2 sets and table
 membership follow, then .4b.3 review; G1 remains 5/18, physical/evaluation/release proofs deferred.
-
-## STITCHCAD-G1-0028 - named current measurement tables (leaf `G1-SLICE.4a.3`)
-
-sc-measure adds immutable MeasurementTable identity/name and ordered unique measurement-id/token
-bindings. Each captures expected metadata id/token/body-POM kind/canonical declaration; current
-queries borrow records, refuse missing peers or reassignment, and retain actionable underlying
-metadata errors. Same-id source/state/document edits stay visible without numeric caching. Table
-names preserve authored content; empty drafts and shared declarations are legal, token uniqueness
-is per table. Private representation prevents unchecked mutation. Design revision, source truth,
-physical repeatability, formula/evidence policy and release certification remain separate proofs.
-
-Sixteen table contracts plus privacy pass. Eight independent real guard mutations fail their intended
-regressions; restored strict checks execute 342 tests, with WASM/book/censuses green. Milestone probes report 23 green suites; the staged doctrine gate passes. All ontology .2.1 length-input fields and table bindings
-are mapped to executable APIs; .4a closes structurally, .4 stays active for Ease/SizeSet/signoff. G1
-remains 5/18; next .4b per-POM Ease. Completed metadata review moves unchanged to its sibling; oldest
-live records seal unchanged as changelog-part25 and devnotes-part27. README/package/book/decision and live pointers agree.
-
-## STITCHCAD-SPINE-0019c - observed archive CI (leaf `SPINE.19.2v`)
-
-For ebed2c5, doctrine run36931196049/job110600555955 and Rust run36931196050/job110600556738
-completed success; every step successful, including Python prerequisite/enforcer and Rust/WASM.
-Post-commit archive probes 27/0 include committed-window mutation. Doc-only verdict; book/censuses/
-staged gate pass. Archive transition closes; next product G1 .4a.3. No new seal or status change.

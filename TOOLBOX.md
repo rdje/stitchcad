@@ -190,3 +190,10 @@ supply signed length/area and nonnegative Count bounds; quiet numeric setup exec
 contracts. `bash docs/tasks/artifacts/formula_structure/run_scalar_mutations.sh` requires eleven
 actual assertion reds and multi-source byte restoration; run alone. Scalar checks do not close
 D83 i64 storage or D84 signed-angle verification, nor supply production numeric evaluation.
+
+Numeric binding reference: `python3 -I -B docs/tasks/artifacts/formula_structure/binding_contract.py`
+checks80 independent Fraction/Decimal controls; structural probes watch them. Numeric let rounds
+once into declared signed storage; exact temporaries retain wider width. Count/scalar domains still
+apply. `bash docs/tasks/artifacts/formula_structure/run_binding_mutations.sh` requires twelve
+compiled actual assertion reds and byte restoration; run alone. Copied-book replay verifies the
+census consumes returned bound integers. Production evaluation and full canonical proof remain owned.

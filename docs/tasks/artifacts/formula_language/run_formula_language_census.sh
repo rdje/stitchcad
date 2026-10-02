@@ -293,10 +293,10 @@ class Val:
 
 # ── the evaluator: written from grammar §1–§7, driven by the chapter's own tables ──────────
 class Evaluator:
-    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units, domains):
+    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage):
         self.bindable, self.pairs, self.sigs = bindable, pairs, sigs
         self.reserved, self.envelope, self.limits, self.units = reserved, envelope, limits, units
-        self.domains = domains
+        self.domains, self.storage = domains, storage
         self.max_nodes = self.max_bits = self.max_if = 0
 
     TOK = re.compile(r"""(?P<cmp>==|!=|<=|>=|<|>)|(?P<op>[-+*/^=(),:])|(?P<num>\d+\.\d+|\d+)
@@ -512,6 +512,18 @@ class Evaluator:
             bound = "[%s, %s]" % (low, high if high is not None else "unbounded")
             raise FErr("formula_domain", "%s: %s domain=%s, measured=%s"
                        % (operation, kind, bound, value))
+
+    def stored(self, value, operation):
+        """Bind once-rounded numeric integers; exact expression nodes remain wider."""
+        if value.kind not in ARITH:
+            return value
+        integer = rnd(value.v)
+        self.scalar(value.kind, integer, operation)
+        bits, low, high = self.storage[value.kind]
+        if integer < low or integer > high:
+            raise FErr("formula_domain", "%s: %s storage=i%d [%s, %s], measured=%s"
+                       % (operation, value.kind, bits, low, high, integer))
+        return Val(value.kind, Fraction(integer))
 
     def literal(self, kind, exact):
         rounded = Fraction(rnd(exact))
@@ -785,6 +797,7 @@ class Evaluator:
             if name in env and env[name].get("origin") == "recipe":
                 raise FErr("formula_rebinding", "`%s` is bound twice in one recipe" % name)
             val = self.evaluate(node, env)
+            val = self.stored(val, "let %s binding" % name)
             return ("let", name, kind, val, node)
         if head == "assert":
             self.take()
@@ -896,6 +909,24 @@ def scalar_domains(book):
     domains["count"] = (0, None)
     return domains
 
+def storage_domains(book):
+    """Consume the numeric binding representations declared in formula §2."""
+    kinds = sections(str(pathlib.Path(book) / "spec/formula-language.md"))
+    storage = {}
+    for row in table_in(kinds["2"], "Kind")[1]:
+        kind = debacktick(row[0])
+        if kind not in ARITH:
+            continue
+        match = re.search(r"\bi([0-9]+)\b", row[1])
+        if match is None or kind in storage or int(match[1]) < 2:
+            raise ValueError("formula §2: invalid or duplicate %s binding storage" % kind)
+        bits = int(match[1])
+        low = 0 if kind == "count" else -(1 << (bits - 1))
+        storage[kind] = (bits, low, (1 << (bits - 1)) - 1)
+    if set(storage) != set(ARITH):
+        raise ValueError("formula §2: missing numeric binding storage")
+    return storage
+
 print("=== formula-language census ===")
 
 # ── read the chapter's own tables ─────────────────────────────────────────────────────────
@@ -986,10 +1017,11 @@ declared_functions = set(sigs)
 
 try:
     domains = scalar_domains(BOOK)
+    storage = storage_domains(BOOK)
 except (OSError, ValueError, KeyError) as error:
-    print("formula-language census: REFUSED — scalar domain source: %s" % error)
+    print("formula-language census: REFUSED — numeric domain source: %s" % error)
     sys.exit(2)
-EV = Evaluator(bindable, pairs, sigs, reserved, envelope, limits, units, domains)
+EV = Evaluator(bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage)
 print("-- tables read from the chapter")
 print("  kinds: %d (%d bindable) · unit tokens: %d · reserved: %d · signature rows: %d"
       % (len(kinds), len(bindable), len(units), len(reserved), sum(len(v) for v in sigs.values())))
@@ -1103,7 +1135,9 @@ for r in bind_rows:
         l2 += 1; continue
     if val.kind == "point" or isinstance(val.v, tuple):
         bad("examples §2 `%s`: a let bound a point" % token); l2 += 1; continue
-    internal = rnd(val.v)
+    if val.v.denominator != 1:
+        bad("examples §2 `%s`: a binding returned a noninteger" % token); l2 += 1; continue
+    internal = val.v.numerator
     env[token] = {"kind": val.kind, "value": internal, "origin": "recipe", "state": "derived"}
     m = re.match(r"^([-+]?\d+(?:\.\d+)?)(?:\s*(cm|deg))?$", debacktick(value_cell).strip())
     if not m:

@@ -937,12 +937,12 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
   `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`.
   The proposal author applied it under governance §6.1; its evidence is derived
   by instruments and that author may not approve it (self-application decision).
-**Director clarification applied within v0.3, with source:**
-- §2 director publication ruling: roadmap/code/book lockstep; progressive learning,
-  glossary/index and expert annexes: G1-SLICE.4d.1, `docs/decisions/decision_book-progression.md`.
-- G0 D84 director ruling (2026-10-02): signed/multi-turn formula angles,
-  normalized entity directions. G1-SLICE.5a.3b.3c owns verification;
-  `docs/decisions/decision_angles.md`. Both clarify obligations; scope/gate exits stay unchanged.
+**Director clarifications within v0.3; scope/exits unchanged:**
+- §2 book ruling: learning, glossary/index, annexes and roadmap/code/book lockstep:
+  G1-SLICE.4d.1, `docs/decisions/decision_book-progression.md`.
+- D84 (2026-10-02): signed/multi-turn formula angles, normalized entity directions;
+  G1-SLICE.5a.3b.3c, `docs/decisions/decision_angles.md`.
+- D95 (2026-10-02): exact128-bit literals, i64 bindings; G1-SLICE.5a.3b.3b.3, `docs/decisions/decision_literals.md`.
 
 ---
 

@@ -396,6 +396,42 @@ angular context no longer executes another family's tests. The quiet-load contro
 verify this boundary. Shared setup is not an independent numeric oracle; each family's explicit
 expected values/refusals remain independently authored.
 
-D83 signed i64 canonical-input/binding limits remain .3b.3, and D84 signed-angle verification remains
-.3c. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
+D83 binding storage controls follow; full canonical/review proof remains .3b.3b/.3c, and D84
+signed-angle verification remains .3c. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
 normalization/evaluation, real geometry, command/API/MCP and production release remain separate work.
+
+
+## Reference numeric binding storage controls
+
+The director’s D95 ruling separates canonical literal width from bound storage. Exact literal nodes
+retain the existing128-bit rational limit; signed unary operators keep their identity. Numeric let
+rounds once, checks the kind’s declared signed storage and existing scalar domain, then returns
+that integer. Count stays nonnegative; Boolean stays Boolean. Subsequent statements read the stored
+integer. An exact unbound expression can remain fractional or wider than i64 within its other limits.
+
+For example, length expression1 um /2 is exactly half a micrometre, but binding it stores1 µm.
+Reading that binding twice produces2 µm. At the signed i64 endpoint, adding0.49 internal units
+still binds to the endpoint; adding0.5 refuses after rounding. The direct lowest signed angle
+spelling retains unary minus of a positive2^63 literal. A positive bound2^63 refuses with binding,
+kind, inclusive bounds and measured integer; subtracting1 first may give a valid binding.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_binding_mutations.sh
+```
+
+Eighty independent Fraction/Decimal controls verify inclusive endpoints, signed half-quanta,
+negative Count refusal, exact unbound/cancelled results, Boolean preservation, unchanged caller-owned
+binding environments and replay. An altered copied specification supplies32-bit angle storage to
+prove the reader consumes declarations; a missing declaration refuses. Two copied-book bindings
+verify the actual census/replay consumer. Twelve compiled actual mutations cover binding bypass,
+truncation, omitted/excluded bounds, duplicated width, token/context loss, Boolean reclassification,
+caller-environment writes and altered census consumption. Each requires an assertion red and exact
+source restoration; run alone.
+
+This reference statement method returns a binding without publishing it into the caller’s supplied
+environment. The curated replay caller stores that result explicitly; this is not a production
+transaction guarantee or a general environment implementation. Existing scalar/rational controls
+remain separate. D95 complete canonical-input proof and D83 boundary review remain .3b.3b/.3c;
+D84 inverse-trig/equality verification remains .3c. Production normalization/serialization/evaluation,
+real geometry, API/MCP control and release signoff remain future work.

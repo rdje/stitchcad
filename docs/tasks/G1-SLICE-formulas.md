@@ -667,3 +667,55 @@ Current work remains in the parent.
   payloads exactly. D83 remains open for i64 .3; no production evaluator or geometry/MCP claim.
   Verification: scalar57/eleven actual reds; rational61/twelve reds; restored focused checks.
   Commit: `STITCHCAD-G1-0049` (this recording commit).
+
+## Scalar-domain acceptance — preserved from 86b81a9
+
+### `G1-SLICE.5a.3b.3b.2` — exact scalar domains and isolated numeric setup
+
+- [x] **REPRODUCE / ISSUE** — scalar_contract.py against predecessor→AssertionError:
+  1000000001 um accepted, rc=1. D94 lower-endpoint mutation runner refuses unhandled Count0 FErr
+  inside imported arithmetic_contract before scalar assertions run, rc=1; no scalar red claimed.
+- [x] **ROOT CAUSE (WHY + WHERE)** — predecessor 0a6e9b0 result wrapper invokes width-only see;
+  p_atom rounds without scalar check. Source-signature assertions verify absent scalar guard and
+  numeric-family runpy execution of arithmetic_contract, rc=0. D94 trace confirms unrelated test path.
+- [x] **FIX** — read normative signed length/area and nonnegative Count declarations; canonical
+  inputs round once then check; exact completed numeric nodes check after width before binding.
+  Actual operation/kind/bounds/fraction retained. Table-only shared setup replaces contract imports.
+  Width fixtures use unrestricted kinds/tiny fractions; no runtime exemption or extra rounding.
+- [x] **ADDRESSED (verified)** — scalar_contract.py→57 independent Fraction/domain controls/0 fail,
+  rc=0; run_scalar_mutations.sh→eleven actual assertion reds, rc1 each, exact two-source restoration/
+  runner0. Quiet-context assertion and actual output mutation distinguish D94. Rational61/twelve
+  actual reds; literal6/arith9/angle7/inline5 actual reds and byte restoration, rc=0.
+- [x] **NO REGRESSION** — run_formula_structure_probes.sh→structural16/end-to-end2, input130/3,
+  expression fixtures12, literal60/361, arithmetic24/100/162, angle42/72/math42, rational61/scalar57
+  green, rc=0. Focused language/book/ledger/archive/censuses green, rc=0; staged make gate→all
+  doctrines green, rc=0 (details below).
+  No Rust changed or new native/WASM/remote CI claim; selectors certify only the curated edge model.
+- [x] **LOCKSTEP** — formula normative boundaries and expert annex match scalar/refusal behavior;
+  Count fractions and geometry-only box scope explicit. Learner/glossary/index routes retained;
+  exact predecessor task/oldest payloads preserved. G1 stays5/18; live12/sealed81; next i64 .3.
+
+
+## Numeric binding protocol — completed in G1-0050
+
+- ID: `G1-SLICE.5a.3b.3b.3a`
+  Status: `done`
+  Goal: actual reference let binding rounds once and refuses stored numeric integers outside i64.
+  Pre-code protocol: formula2/4.2 and units1/1.2 declare signed64 stored length/area/ratio/angle/count.
+  Completed exact nodes retain128-bit rational width and scalar domains; no i64 cap on temporaries.
+  Binding rounds half away once, checks inclusive -2^63..2^63-1 plus existing scalar domain, and
+  returns the stored value. Count stays nonnegative. Boolean remains a boolean; no opaque geometry
+  numeric reclassification. L2 consumes that actual bound integer without its own second round.
+  Independent Fraction/Decimal controls must reproduce predecessor let retaining fractions or storing
+  oversize values; verify both endpoints, half-quantum edges, negative Count refusal, sign/turn
+  preservation, exact unbound temporaries/cancellation, atomic refusal and actual replay behavior.
+  Mutate real binding/round/limit/census-consumption guards, require assertion reds and exact restore;
+  re-run scalar/width/literal/arithmetic/angular/inline controls without exempting boundaries.
+  Adopt the received D95 ruling in a decision/book/roadmap; full canonical proof remains .3b.
+  Compact curated Knowledge Map orientation before adding its derived decision row; no cap changes.
+  Preserve prior
+  task/ledger payloads and synchronize normative binding explanation/expert annex/live pointers.
+  Focused reference/language/publication/ledger/archive/censuses and staged gate before commit.
+  No Rust evaluator, caller environment mutation, full DAG/geometry/MCP or release claim.
+  Verification: binding80/twelve actual reds; focused checks and gate in parent.
+  Commit: `STITCHCAD-G1-0050`.

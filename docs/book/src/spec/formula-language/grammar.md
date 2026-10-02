@@ -124,6 +124,13 @@ let side_seam_length: length = hypot(hip_to_hem_drop, a_line_flare)
     → (bind side_seam_length length (hypot hip_to_hem_drop a_line_flare))
 ```
 
+Canonical literal integers may use the existing 128-bit rational width; i64 is required for bound
+numeric values, not for each literal child. Unary minus remains an operator: the lowest signed
+microdegree angle uses a positive 2^63 literal below that operator. It can bind to signed i64 MIN
+without sign folding. Literal conversion/rounding and scalar domains still apply ([contract §4.2](../formula-language.md)).
+The director’s D95 ruling is recorded in `docs/decisions/decision_literals.md`; full reference
+canonical-boundary verification remains G1-SLICE.5a.3b.3b.3b, with production normalization later.
+
 **A formula's identity is its canonical form.** `2.5 cm` and `25 mm` canonicalize to one node
 (`length:25000`), so they are one formula: a diff, a hash and a golden compare canonical forms and
 never spellings. Documentation of a step lives on the drafting operation that consumes the value,

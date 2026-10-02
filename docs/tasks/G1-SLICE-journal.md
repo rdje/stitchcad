@@ -348,3 +348,35 @@ verified, rc=0. README unchanged. Staged make gate→all doctrines green, rc=0.
 - `2026-10-02`: D91 explicit local Rust context; D93 annex rational count matches the actual suite;
   D34 current index cell synchronized. D83 scalar/i64 and D84 signed-angle proofs retain next ownership.
 - promotion: declined (routine book-instrument context and evidence synchronization repair).
+
+## Scalar-domain progress — preserved from 86b81a9
+
+## Verification Log
+
+[Historical inline-context journals](G1-SLICE-journal.md#inline-context-progress--preserved-from-0a6e9b0)
+retain prior evidence.
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.3b.2` | scalar57/eleven reds; rational61/twelve reds; literal6/arith9/angle7/inline5 reds | scalar/D94 repaired; i64 remains |
+
+Focused recording checks: language16/publication9/ledger9 pass, rc=0;48 chapters/16 APIs/998 source/
+1526 rendered links. Archive verify/retention→124 logical/61 working Markdown/7107 lines/567107
+decoded bytes/293717 resident bytes, rc=0. Tree10/13/eight/zero gaps; glossary310/nine/158/no index
+drift; feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/zero mismatch, rc=0.
+Exact prior protocol/checklist/journal/oldest payload preservation and reconstructed defect
+census→12 open/81 sealed/zero overlap verified, rc=0. README unchanged. Staged make gate→all doctrines green, rc=0.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3b.2` | `STITCHCAD-G1-0049 (leaf G1-SLICE.5a.3b.3b.2): reference scalar domains refuse exact excess` | scalar57/eleven actual reds; isolated context/restored focused checks |
+
+## Changelog
+
+- `2026-10-02`: D83 signed length/area/nonnegative Count domains enforced at canonical/exact
+  boundaries; D94 quiet numeric context. D83 i64 and D84 signed-angle proof retain next ownership.
+- `2026-10-02` DBINP: director asked where DSL syntax/semantics are specified. Existing formula
+  chapter, grammar, examples and expert annex are the review surface; no semantic ruling or pivot.
+- promotion: declined (routine enforcement of existing scalar domains and isolated verification).

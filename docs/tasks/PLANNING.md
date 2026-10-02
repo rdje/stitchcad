@@ -474,7 +474,8 @@ implicit operator rounding is removed, explicit and irrational quantization rema
   - Impact: reference success is insufficient evidence for numeric/binding domains.
   - Width repair: .5a.3b.3a.2 now refuses reduced values above128 bits at input/result boundaries;
     61 controls/twelve actual reds verify this portion. Scalar .3b.2 now verifies signed length/area
-    and nonnegative count with57 controls/eleven actual reds; D83 remains open for i64 storage .3.
+    and nonnegative count with57 controls/eleven actual reds. Binding .3a verifies80 controls/twelve
+    actual reds; canonical proof .3b and complete review .3c remain before D83 closure.
   - Owner/schedule: G1-SLICE.5a.3b.3b, after width enforcement and before product normalization.
     D84 records the director’s direction/sweep distinction; rational/scalar repairs implement no
     formula modulo. Remaining signed-angle verification stays owned by .3c.
@@ -754,3 +755,17 @@ D94 is sealed in [`stitchcad-defects-part26.md`](../history/stitchcad-defects-pa
 G1-SLICE.5a.3b.3b.2 supplies quiet table-only numeric setup; scalar/rational/angular families no
 longer execute arithmetic assertions on import. The quiet-loader mutation fails its own assertion;
 all family guard mutations and restored controls pass independently.
+
+- **D95** — signed literal endpoint policy is ambiguous between canonical storage and unary syntax.
+  - Reproduce: actual parse -9223372036854.775808 deg creates neg(lit angle:9223372036854775808)
+    and evaluates to i64 MIN; the literal child alone is positive2^63 and cannot fit signed i64.
+    -9223372036854.775807 deg - 0.000001 deg reaches the same endpoint using i64-safe children.
+  - Contract tension: formula2 gives i64 internal values; grammar1/4 separates minus and stores
+    kind:integer literal nodes; exact arithmetic uses128-bit-bounded rational values. The contract
+    does not explicitly choose whether that literal-node integer is itself restricted to i64.
+  - Impact: an undocumented choice would reject a valid signed endpoint spelling, widen persisted
+    literal nodes, or alter canonical operator identity by sign folding.
+  - Ruling received: exact128-bit literal nodes; i64 only for bound numeric values.
+    Adopted by .3a in `docs/decisions/decision_literals.md`; no sign folding.
+  - Owner/schedule: G1-SLICE.5a.3b.3b.3b verifies the canonical boundary before D95 closure.
+    Independent .3a repairs numeric binding storage now; .3c owns complete boundary review.
