@@ -319,9 +319,13 @@ Read-only: a selector reports what an operation constructed and constructs nothi
 
 A parameter is the [ontology](../ontology.md) §1 rational in `[0, 1]` of an edge's own length, so a
 notch placed by `param_at` survives an edit to the edge, a change of tessellation and a change of
-units. The ratio's 10⁻⁶ quantum places it within 5 µm on an edge at the declared 10 m bounding-box
-limit ([units §1.1](../units-and-tolerances.md)) — inside the T2 class, so a notch by parameter is
-finer than the geometry it sits on.
+units. A ratio rounded to its10⁻⁶ quantum can move an arc-length position by up to half that quantum
+times the actual edge length. For a10m straight edge this is5µm. The10m piece bounding-box limit
+([units §1.1](../units-and-tolerances.md)) does not bound a curved edge's length: a270° arc of radius5m
+fits that box but gives about11.78µm displacement, exceeding internal T2. Parameter quantization and
+geometry approximation therefore need a combined error budget; the box alone guarantees neither5µm
+placement nor T2 compliance. The [review counterexample](../../annexes/formula-static-validation.md#parameter-quantization-and-curve-length)
+records the arithmetic proof; actual selector/geometry verification remains .5f.3/G2.
 
 ## 7. Conditionals
 

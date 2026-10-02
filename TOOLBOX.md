@@ -256,3 +256,5 @@ Static namespace/header oracle: `python3 -I -B docs/tasks/artifacts/formula_stru
 checks1139 metadata-only cases/thirteen actual guard reds; the existing structural runner watches it.
 Whole static recipe/consumer oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations`
 checks196 cases, replay/measurement controls and actual guard reds; watched by the structural runner.
+Static review: `python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations`
+checks21/13 book rows, envelope precedence and observed D124 forms; no runtime/exclusion approval.

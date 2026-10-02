@@ -11,6 +11,8 @@
 > is complete; [independent static signature checks](../annexes/formula-static-validation.md)
 > now review the book reference, including [namespaces and static headers](../annexes/formula-static-validation.md#names-and-single-statement-static-checking)
 > and [whole-recipe preflight](../annexes/formula-static-validation.md#whole-recipe-before-execution).
+> The [complete static review map](../annexes/formula-static-validation.md#complete-static-review-and-remaining-contracts)
+> records remaining diagnostic/runtime contracts; D124 excluded-form recognition awaits a ruling.
 > Product name/type/binding validation and evaluation remain G1-SLICE.5b–.5g work; final acceptance
 > makes every worked example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
@@ -270,6 +272,12 @@ and two token sets must not compete for one refusal.
 | `solve`, `constraint`, `fixpoint` | `env_sketch_constraints` | the matrix §10 |
 
 ## 6. Exclusions
+
+**Diagnostic recognition under review (D124).** The capabilities below remain excluded. V1 has no
+specified source forms for recognizing loop/function definitions; its actual unknown-call and
+malformed-syntax diagnostics are mapped in the [static review annex](../annexes/formula-static-validation.md#complete-static-review-and-remaining-contracts).
+The director's ruling at G1-SLICE.5b.1c.2 will settle that boundary; the reference is not currently
+an oracle for those unspecified source forms. This note does not add executable capabilities.
 
 | Excluded | Why | Diagnostic |
 | --- | --- | --- |

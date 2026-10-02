@@ -815,7 +815,7 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
 | done | `G1-SLICE.5a.3f.2` | `done` | Coupled whole input and identity review |
 | done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
-| next | `G1-SLICE.5b.1c` | `pending` | Reference signatures/namespaces/whole preflight done; full static obligation review |
+| next | `G1-SLICE.5b.1c.2` | `pending` | Static obligation map reviewed; D124 excluded-form diagnostic ruling required |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -847,6 +847,25 @@ also run glossary/API, feature and publication checks. Prior checklists and auth
 Completed lexical/expression/numeric/identity protocols, checklists and commit journals remain in
 [formula evidence](G1-SLICE-formulas.md), [numeric journal](G1-SLICE-journal.md) and
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
+
+### `G1-SLICE.5b.1c.1` — static review and diagnostic proposal
+
+- [x] **REPRODUCE / ISSUE** — actual unknown loop calls/invalid definitions differ from contract6's
+  unspecified unsupported forms; D124 owned .1c.2. False assertion returns False (D125, .5e.3).
+- [x] **ROOT CAUSE (WHY + WHERE)** — static_review_contract.py --mutations →67 actual cases/
+  four body assertion reds, rc=0; v1 has three reserved keywords but no excluded-form syntax.
+  Independent270deg/radius5m chord≈11.78um defeats bbox-only5um promise (D126), rc=0.
+- [x] **FIX** — preserve existing semantics pending D124 ruling; concrete ADR-0003 proposal,
+  complete static owner map/product protocols. Correct D126 prose; record D125 runtime owner.
+- [x] **ADDRESSED (verified)** — static_review_contract.py --mutations →67 cases/four actual
+  assertion reds, rc=0; actual21/13 populations exact, execution trapped. Exact chord lower bound
+  >10um and independent/reference calculations agree, rc=0. D124/D125 remain explicitly open.
+- [x] **NO REGRESSION** — run_formula_structure_probes.sh →rc=0, existing4032/1139/196 matrices
+  retained; static review/fault producer →rc=0; language16/publication9/ledger9/pointer13 pass,
+  rc=0; staged make gate →all doctrines green, rc=0. Rust source/test behavior unchanged.
+- [x] **LOCKSTEP** — book/grammar/annex/index/ADR/live/task records agree; .1c.2 awaits D124.
+  G1 remains5/18; no complete static, runtime, physical geometry or production approval claimed.
+  promotion: declined (existing closed grammar and independently falsified evidence principles).
 
 ### `G1-SLICE.5b.1b.2` — whole reference static preflight
 
@@ -970,3 +989,4 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 
 - `2026-10-02`: .5b.1b.1/STITCHCAD-G1-0076 repairs reference namespace/header phase; static1139/13 actual reds. D119 whole preflight next.
 - `2026-10-02`: .5b.1b.2/STITCHCAD-G1-0077 repairs whole preflight/measurement D119/D123;196 cases/14 actual reds. .1b done, .1c next.
+- `2026-10-02` (UTC): .5b.1c.1/STITCHCAD-G1-0078 maps static obligations, fixes D126; D124 diagnostic ruling .1c.2, D125 runtime .5e.3.

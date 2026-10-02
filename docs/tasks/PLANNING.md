@@ -882,3 +882,28 @@ D119/D123 close at G1-SLICE.5b.1b.2; original reports retained in
 [`stitchcad-defects-part45.md`](../history/stitchcad-defects-part45.md). Whole preflight196 cases/
 14 actual assertion reds and consumer/measurement controls pass. No statement executes after a
 late static refusal; recipe size excludes unrelated candidates. D121/D122 retain .5e.3/.5e.1 owners.
+
+- **D124** — excluded loop/function forms have no diagnostic recognition contract.
+  - Reproduce: actual static_statement loop(width), repeat(2,width), while(width>0 um) raise
+    formula_unbound_name; fn helper(width)=width and macro helper(width)=width raise formula_parse.
+    Declared loop scalar is accepted. Direct static baseline exit0, execution callbacks trapped.
+  - Root: contract6 promises formula_unsupported for loops/iteration/recursion and functions/macros,
+    but grammar1.1 reserves only let/assert/if, no excluded source forms are specified, and grammar6
+    requires unknown calls formula_unbound_name. A new reserved spelling would change valid names.
+  - Impact: no signoff-quality reproducible boundary for product exclusion diagnostics. Owner:
+  G1-SLICE.5b.1c.1 diagnosis/proposal now; .1c.2 applies director ruling before product .5b.3.
+
+- **D125** — reference runtime assertion adapter returns false without its required diagnostic.
+  - Reproduce: statement('assert false_closure: eps_num = 1 cm == 2 cm', {}) returns
+    ('assert', 'false_closure', False); the equal-value control returns True. Baseline exit0.
+  - Root: statement computes the holds Boolean and returns it, while the book consumer only
+    calls bad on False. Neither raises formula_assertion as contract5.2/9 requires.
+  - Impact: general runtime reference cannot prove falsified-assertion diagnostic/payload behavior.
+  - Owner: G1-SLICE.5e.3, high priority with D121 before product assertion/tolerance evidence;
+    preserve expected valid tuples but raise named error on false, test values/class/name payload.
+    Static type/name checking remains valid without computing any assertion verdict.
+
+D126 closes at G1-SLICE.5b.1c.1; original report retained in
+[`stitchcad-defects-part46.md`](../history/stitchcad-defects-part46.md). Geometry selector prose now
+uses actual curve length for parameter error; independent exact chord bound defeats the old bbox
+claim. Product combined parameter/geometry budget remains explicitly owned at .5f.3/G2.

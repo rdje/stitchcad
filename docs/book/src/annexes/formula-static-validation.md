@@ -197,3 +197,100 @@ D119's reference ordering and D123's measurement defects are repaired at .5b.1b.
 dependency graphs and complete typed diagnostics remain .5b.2–.4. Reference numeric provenance
 and origin/context value routing remain D121/D122 at .5e.3/.5e.1; static checking cannot settle
 those execution obligations.
+
+## Complete static review and remaining contracts
+
+The .5b.1c.1 review checks all21 worked statements and all13 refusal sources against independently
+authored expected static outcomes. Three refusal examples are statically valid: division by zero,
+unknown material shrinkage and an unavailable factory tolerance fail only when executed. A false
+arithmetic assertion is also statically valid; its failure belongs to execution. All other listed
+refusals fail syntax or static checking. No numerical or geometry callback runs in these controls.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations
+```
+
+The67 cases also check all six envelope call spellings before operand name/kind resolution,
+including either conditional branch. Envelope dispatch begins after valid syntax: malformed calls
+still fail parsing. Expected envelope populations and book statement/refusal populations are compared
+in both directions; four actual compiled faults must fail body assertions. Source remains unchanged.
+
+| Requirement | Reference evidence | Remaining product owner |
+| --- | --- | --- |
+| Eight kinds, six let kinds; no implicit conversion | signature4032 and namespace1139 controls | .5b.2/.3 |
+| Nine origins, eight reserved names, collisions and spelling | namespace1139, recipe196 controls | .5b.2 |
+| Every operator/function/selector signature and arity | closed signature matrix;22 names | .5b.3 |
+| Tolerance-name roles; Boolean test; both branches | signature/namespace matrices, recipe preflight | .5b.3/.4 |
+| Declaration order, headers, no accepted prefix on late error | whole-source196, actual consumer ordering | .5b.4 |
+| Statement4096, expression256, conditional16 boundaries | recipe boundaries; earlier syntax/input controls | product syntax implemented; .5b.4 integration |
+| All worked and refusal static outcomes | independently authored21/13 populations | .5b.4; runtime rows .5e |
+| Envelope dispatch before operand semantics | six calls/either branch; actual guard fault | .5b.3 |
+| Exact source and canonical identity | earlier product syntax/input/identity controls | .5b.4 semantic error context |
+| Complete typed diagnostic arguments | reference tokens/messages only | .5b.2–.4 and command .6 |
+| Persisted cycles and atomic runtime/replay behavior | outside these static instrument controls | .5e/.5f and storage .7 |
+| Physical geometry and cross-platform computed values | outside these static instrument controls | G2 and .5g |
+
+**D124 remains a diagnostic decision.** Contract6 excludes loops and function/macro definitions
+and assigns formula_unsupported, but v1 specifies no source forms for recognizing them. The actual
+reference treats loop(width), repeat(2,width) and while(width>0 um) as unknown calls, and fn/macro
+definition shapes as malformed syntax. A declared scalar named loop remains valid. These are
+observations, not a new grammar or an approved classification of excluded source forms.
+
+The recommended clarification preserves the three grammar keywords: unknown calls raise
+formula_unbound_name, malformed definitions raise formula_parse, and recognized non-square
+exponents keep formula_unsupported. The alternative needs an explicit closed set of excluded
+forms and a decision about their effect on valid names. The concrete proposal is in
+docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md under D124;
+.5b.1c.2 owns the director ruling before complete review closure and product dispatch implementation.
+
+Runtime evidence also has an explicit open defect, D125: the reference statement adapter returns
+a False verdict for assert false_closure:eps_num=1 cm==2 cm, rather than raising formula_assertion.
+Its equal-value control returns True. The book consumer refuses a false check, but that does not
+prove the required runtime diagnostic or its typed payload. .5e.3 owns repair with D121's irrational
+provenance rule; D122's missing-origin/context routing remains .5e.1. No static review result approves
+these runtime gaps, numerical determinism, a physical garment or a production release.
+
+### Implementation sequence after the review
+
+The product namespace slice .5b.2 will accept immutable typed declarations from canonical inputs,
+validate machine names and consume declaration pairs before an index can discard collisions.
+Kinds and origins are separate from numeric availability. Reserved names have known kinds even
+without an instance/export context. Geometry declarations refer to prior operation outputs;
+they do not authorize construction. Input adapters must preserve existing source identities and
+avoid a sc-core to sc-measure dependency cycle. D124's ruling must settle diagnostic recognition
+without silently reserving additional valid names.
+
+The product type-checking slice .5b.3 will consume bounded normalized syntax and the checked
+namespace, preserving all ordered operands and checking both conditional branches. Each refusal
+must carry its actual operator/function, operand kinds and expected rule, with the existing
+angle-times-length hint. Function/selector and tolerance-role populations must match the chapter
+in both directions. Envelope dispatch applies before operand semantics after syntax succeeds.
+No numerical, tolerance-value, storage, geometry or solver callback belongs in this stage.
+
+The whole-validator slice .5b.4 will inspect every statement in declaration order and return an
+immutable typed dependency graph only after complete success. Dependency edges include untaken
+branches; each name resolves to an initial declaration or a prior statement. A late error returns
+no accepted graph prefix. Diagnostics retain actual source spans, known statement indices and
+canonical identity where available; invalid syntax/input must not acquire invented context.
+Syntax and identity APIs keep their existing scopes. Persisted corrupt-cycle diagnostics remain
+the loader/replay obligation at .5e.4/.7; ordinary forward/self names remain unbound-name refusals.
+
+### Parameter quantization and curve length
+
+D126 corrected grammar6.1's claim that the10m piece bounding box guarantees5µm parameter
+placement. The supported circular arc with centre(0,0), radius5m, start0°, end270° counter-clockwise
+contains all four circle extrema and fits a10m square. Its length is7.5πm, about23.562m;
+half a10⁻⁶ ratio quantum gives about11.780972451µm displacement. The endpoint chord displacement
+is also about11.780972451µm, exceeding the internal10µm T2 value.
+
+The static_review_contract.py producer verifies the public curve/box/T2 declarations, actual
+reference arc-length binding23561945µm, an independent standard-library chord calculation and
+an exact rational lower bound. Using3<π<22/7 and sin(x)>x−x³/6 at these small positive angles
+proves chord displacement>10µm without trusting the reference approximation or floating-point π.
+This is a mathematical counterexample, not an executable product geometry test.
+
+For an edge of actual length L, half-quantum parameter error can contribute up to L/(2×10⁶)
+of arc-length displacement before geometry approximation is added. A10m straight edge gives5µm;
+a bounding box is insufficient evidence of that length. Product selectors and their combined
+quantization/geometry error budgets remain .5f.3/G2. The correction changes no units, ratio quantum,
+structural domain or tolerance class.

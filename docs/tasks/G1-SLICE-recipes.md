@@ -705,12 +705,21 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Children .1b.1/.1b.2 done, full .1c review remains. Commit: `STITCHCAD-G1-0076`/`STITCHCAD-G1-0077`.
 
 - ID: `G1-SLICE.5b.1c`
-  Status: `pending`
+  Status: `in_progress`
   Goal: close full static obligation map against contract2/3/5/6/9 and grammar5/6/7 after .1a/.1b;
   named exclusions/envelope precedence and prior syntax limits in both directions. Independently
   review all actual worked/refusal examples; any remaining contract ambiguity settled before code.
   Acceptance: complete map, actual static/no-execution evidence and precise remaining numeric/
   geometry/runtime/production proof boundaries; safe implementation protocols for .5b.2–.4.
+  Pre-code review: inspect normative contract2/3/4.1/4.3/5/6/9 and grammar1/5/6/7 against actual
+  parse/infer/namespace/preflight and all worked/refusal rows. Reuse independent4032/1139/196
+  matrices, map every obligation/remaining proof owner explicitly, and exercise exclusion spellings
+  through actual public reference entry points before accepting any diagnostic contract. Record
+  any ambiguity with concrete source/result evidence; do not silently redefine exclusions or
+  claim typed product errors, persistence, numerical execution or physical geometry from reference
+  token checks. Detailed review evidence/proposals live in G1-SLICE-evidence.md.
+  Children .1c.1 (complete map and D124 diagnostic proposal), .1c.2 (ruling and review closure),
+  owned in G1-SLICE-evidence.md. Excluded loop/function syntax has no recognition contract yet.
   Verification: `pending`; Commit: `pending`.
 
 - ID: `G1-SLICE.5b.2`
@@ -836,7 +845,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5e.3`
   Status: `pending`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.
-  D121: repair/verify reference provenance before using it for this product execution slice.
+  D121/D125: repair/verify reference provenance and false-assertion diagnostics before product proof.
   Acceptance: all five named classes, context-supplied missing values, T2-or-looser when an
   irrational result contributes (including subsequent binding/reads), exact bare comparisons,
   assertion failure values/class/name and no substituted value/geometry after failure.
@@ -876,6 +885,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: operation formulas evaluate at their actual position, x/y/dist/dir/len/param_at/
   point_at domains and direction-only normalization, stable current references and envelope
   refusal; G2 supplies geometry and G3 physical construction/positive hole-length acceptance.
+  Parameter quantization and geometry approximation share an explicit error budget based on actual
+  edge length; D126's270deg/radius5m counterexample must not inherit a bbox-only5um guarantee.
   Core interfaces cannot read upstream submodule implementation or silently fake selectors.
   Verification: `pending`; Commit: `pending`.
 

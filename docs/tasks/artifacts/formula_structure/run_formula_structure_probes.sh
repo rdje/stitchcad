@@ -36,3 +36,4 @@ python3 -I -B docs/tasks/artifacts/formula_structure/canonical_literal_contract.
 python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations

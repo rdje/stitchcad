@@ -148,6 +148,19 @@ the digests afterwards.
 
 | [`changelog-part74.md`](docs/history/stitchcad-changelog-part74.md) | STITCHCAD-G1-0060 | 13 lines, 1090 bytes, `sha256:ab4422c6…` |
 
+| [`changelog-part75.md`](docs/history/stitchcad-changelog-part75.md) | STITCHCAD-G1-0061 | 13 lines, 1091 bytes, `sha256:c4bbd66c…` |
+
+## STITCHCAD-G1-0078 - static review and diagnostic proposal (leaf `G1-SLICE.5b.1c.1`)
+
+Independent21 worked/13 refusal static populations, envelope6,67 cases/four actual guard assertion
+reds pass; prior reference matrices/language16/publication9 green. Complete static owner map and
+product namespace/type/graph protocols recorded in annex. No Rust/product execution change.
+D124 excluded-form diagnostic recognition lacks source syntax; concrete ADR proposal awaits director
+ruling at .1c.2, parent review not closed. D125 false assertion lacks named runtime error, owned .5e.3.
+D126 bbox-to-edge-length tolerance claim corrected: radius5m/270deg arc fits10m square yet gives
+11.78um half-quantum chord error; exact independent lower bound exceeds10um. Actual budgets .5f.3/G2.
+Book/grammar/index/live/task/ADR agree; G1 stays5/18, defects14open/111sealed, exact old records retained.
+
 ## STITCHCAD-G1-0077 - whole reference static preflight (leaf `G1-SLICE.5b.1b.2`)
 
 Original recipe source is statically checked in order before any statement executes; names publish
@@ -372,17 +385,3 @@ Four actual inventory-renderer assertion reds restore exact source; these are in
 Scoped reference/language/publication and recording checks pass; Rust implementation is unchanged.
 Book/index/live/task pointers align and prior history stays exact. G1 remains5/18; defects10open/
 92sealed. Next .3d.2 product canonical serializer, then .3d.3 review; no execution or persistence claim.
-
-## STITCHCAD-G1-0061 - coupled normalization review (leaf `G1-SLICE.5a.3c.4`)
-
-Production literal/arena input normalization now has a complete scoped obligation map. Independent
-Fraction176 reduction-frontier cases exercise valid large raw mantissas after unit cancellation and
-located reduced-width refusals through both individual and nested whole APIs:103 accepted/73 refused.
-Four actual compiled early-scale/raw-mantissa/cancellation assertion reds pass with exact restoration.
-Production implementations retain exact prior identities; no language or execution behavior changes.
-
-Strict native514, release14 public contracts, three WASM builds and reference/book controls pass.
-D101 stale-variable topic index overwrite and D102 misplaced defect entry are diagnosed, owned and
-fixed; publication/exact historical-record checks verify repairs. Book/grammar/decisions/live/task
-pointers agree and old payloads remain exact. .5a.3c closes for input normalization; next .5a.3d canonical
-identity. G1 stays5/18; defects10open/91sealed. Ordered recipes/binding/evaluation remain future work.

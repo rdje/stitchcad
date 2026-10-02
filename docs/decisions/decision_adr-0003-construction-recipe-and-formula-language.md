@@ -113,3 +113,23 @@ re-cites every number; (2) a G1 or G2 measurement shows the exact-rational evalu
 performance budget the product needs, in which case the fix is a representation change under the
 same value semantics and never a change of the rounding points; (3) a real recipe needs a construct
 [formula exclusions §6](../book/src/spec/formula-language.md#6-exclusions) excludes, which arrives as a v2 candidate with a worked example over a garment, or not at all.
+
+## D124 diagnostic recognition proposal — pending director ruling
+
+Reviewed2026-10-02 at G1-SLICE.5b.1c.1. Contract6 assigns formula_unsupported to loops and
+function/macro definitions, but v1 defines no source forms for them. Actual reference returns
+formula_unbound_name for loop(width), repeat(2,width) and while(width>0 um); fn helper(width)=width
+and macro helper(width)=width return formula_parse. A declared loop identifier remains valid.
+This is a diagnostic-contract gap, not permission to add executable loops or functions.
+
+Recommended: retain the three reserved grammar keywords. Unknown calls stay formula_unbound_name;
+malformed loop/definition syntax stays formula_parse. Recognized non-square exponents retain
+formula_unsupported, and envelope calls retain their envelope tokens. Clarify the exclusions table
+to separate unsupported capabilities from diagnostic recognition by the closed grammar.
+
+Alternative: define an explicit closed set of recognizable excluded forms that raise
+formula_unsupported. That requires exact source spellings and keyword/call-role rules, including
+whether a previously valid parameter named loop, repeat, fn or macro remains valid. No such list
+is inferred from these illustrative examples. Neither choice enables any excluded capability.
+G1-SLICE.5b.1c.2 owns the ruling, implementation and closure; until then the reference is not an
+oracle for the table's unspecified excluded-form diagnostics. Other static evidence retains scope.
