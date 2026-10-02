@@ -108,6 +108,22 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part54.md`](docs/history/stitchcad-changelog-part54.md) | STITCHCAD-G1-0036 | 15 lines, 1273 bytes, `sha256:d5122987…` |
 
+| [`stitchcad-changelog-part55.md`](docs/history/stitchcad-changelog-part55.md) | STITCHCAD-G1-0037 | 15 lines, 1284 bytes, `sha256:49280c1f…` |
+
+## STITCHCAD-G1-0060 - immutable normalized expression arenas (leaf `G1-SLICE.5a.3c.3`)
+
+Whole syntax arenas now explicitly normalize every literal into separate immutable source-borrowing
+storage. Nodes/operators/names/ordered children/spans/depth remain intact; unary minus and raw angle
+turns survive. All call arguments/both branches convert; an input refusal returns its original location
+and aborts atomically. Syntax stays reusable; normalized views/iterators retain private arena handles.
+No operator/name/type validation, execution or canonical serialization is inferred from this stage.
+
+Eight public contracts/24 independent reference shapes/nested100 literal rows/25 worked expressions,
+three privacy-lifetime docs and seventeen actual compiled assertion reds pass with exact restoration.
+Flat conversion/clone/drop passes on64KiB stack. Strict native513, release eight, WASM3, book/reference
+checks pass. README/book/API map/decisions/live/task docs align; prior histories remain exact. G1 stays
+5/18; next .5a.3c.4 coupled normalization review before canonical serialization.
+
 ## STITCHCAD-G1-0059 - exact typed individual literals (leaf `G1-SLICE.5a.3c.2`)
 
 Parsed literal views now explicitly convert into private typed128-bit canonical inputs. Exact bounded
@@ -369,19 +385,3 @@ Completed lexical contracts/journal and older
 ledger payloads preserve predecessor bytes. Book annex/reference scope, toolbox and live/task records
 align. D76 malformed reference identifiers/missing unit separator is owned next by .5a.2b.1 before the
 product parser; D70 axes still requires a ruling. G1 remains 5/18; no production-readiness claim.
-
-## STITCHCAD-G1-0037 - borrowed machine-form lexing retains exact source spans (leaf `G1-SLICE.5a.1`)
-
-The new core recipe front-end scans ASCII keywords, identifiers, numbers, operators and punctuation
-without cloning source names/numbers or interpreting values. Immutable lexemes retain original text
-and half-open byte spans; first error/end fuse the iterator. Shared spelling/keyword classification
-preserves MachineToken behavior. Typed errors and lexer Debug do not dump customer source. Lexical
-success supplies no valid-expression, numeric, canonical-identity or executable-recipe claim.
-
-Thirteen contracts scan every worked machine example and exercise borrowing, precise refusals and
-parser-owned boundaries; two privacy/lifetime doctests pass. Nine actual guard mutations fail contract
-assertions, restore exact production bytes, and final strict native/WASM checks pass. D73 obsolete ADR
-clause links and D74 vertical-tab handling are fixed. Book learning/status/index and the detailed syntax
-annex align with code/roadmap ownership; 48 chapters/15 APIs and nine publication probes pass. Older
-publication evidence and sealed histories retain exact predecessor bytes. G1 remains 5/18 top-level;
-next .5a.2 expression trees. D70's required axes ruling remains unanswered.

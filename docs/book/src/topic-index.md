@@ -61,5 +61,6 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Uncertainty and numeric refusals](spec/measurement-inputs.md)
 - [Units and tolerances](spec/units-and-tolerances.md)
 - [What you can use today](availability.md)
+- [Whole-expression literal normalization](annexes/formula-literals.md#normalize-every-literal-in-an-expression)
 - [Worked examples](spec/formula-language/examples.md)
 - [Working with agents](learn/agents-and-workflows.md)

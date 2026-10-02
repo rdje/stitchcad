@@ -73,8 +73,8 @@ A numeric binding rounds once and refuses an integer outside its signed i64 rang
 nonnegative; length/area also retain their smaller scalar domains. See the
 [expert binding annex](../annexes/formula-syntax.md#reference-numeric-binding-storage-controls).
 The [reference boundary review](../annexes/formula-syntax.md#complete-reference-numeric-boundary-review)
-maps the four verified numeric boundaries to their independent controls. Individual product literals have [explicit input normalization](../annexes/formula-literals.md).
-Whole-expression normalization and evaluation remain pending; reference instruments supply no product
+maps the four verified numeric boundaries to their independent controls. Individual literals and whole product syntax arenas have [explicit input normalization](../annexes/formula-literals.md).
+Canonical serialization, bindings and evaluation remain pending; reference instruments supply no product
 execution claim.
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.

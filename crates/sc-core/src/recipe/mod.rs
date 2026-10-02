@@ -1,9 +1,9 @@
-//! Formula syntax, individual literal conversion and later ordered recipe validation/evaluation.
+//! Formula syntax/literal normalization and later ordered recipe validation/evaluation.
 //!
 //! The lexical stream and immutable expression trees borrow machine-form source with precise spans.
 //! Expression parsing checks grammar and node/conditional limits, not numeric conversion,
-//! canonical identity, statements, type/name validity or execution. Individual literal conversion
-//! is explicit on parsed node views and does not evaluate or normalize a whole expression.
+//! canonical identity, statements, type/name validity or execution. Literal conversion is explicit
+//! on parsed nodes or a separate whole normalized arena; neither evaluates operators.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -21,4 +21,10 @@ mod literal;
 pub use literal::{
     FormulaLiteral, FormulaLiteralError, FormulaLiteralKind, FormulaLiteralRule,
     FormulaRationalComponent,
+};
+
+mod normalized;
+pub use normalized::{
+    FormulaNormalizedArguments, FormulaNormalizedExpression, FormulaNormalizedNode,
+    FormulaNormalizedNodeKind,
 };

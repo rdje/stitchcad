@@ -135,6 +135,12 @@ artifact directory independently verifies 36 exact Fraction rows; that directory
 runs it. `bash docs/tasks/artifacts/formula_structure/run_round_mutations.sh` requires five real
 production assertion reds/exact restoration; run alone. No complete literal/evaluation proof implied.
 
+Whole normalized arenas: `cargo test -p sc-core --test formula_normalized_contract` exercises eight
+public contracts/24 independent reference shape rows/nested100 literal inputs/25 book expressions,
+source/privacy/atomic refusal/argument/limit/small-stack behavior. Structural probes watch
+`normalized_expression_reference.py`; `run_normalized_expression_mutations.sh` requires17 actual
+compiled assertion reds/exact restoration, exclusively. No type/name/binding/evaluation certificate.
+
 Individual product literal conversion: five public contracts/100 independent Fraction rows in
 `literal_normalization_reference.py` cover exact unit/reduction/width/quantum/scalar boundaries.
 `run_literal_normalization_mutations.sh` compiles13 actual assertion reds and restores exact source;

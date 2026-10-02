@@ -1085,3 +1085,85 @@ rc=0. Fresh source/dependency choices remain .2.
   Commit: `pending`
 
 [Current product frontier](G1-SLICE.md#current-frontier).
+
+## Individual literal proof — preserved from 15d1520
+
+### `G1-SLICE.5a.3c.2` — exact typed individual literal conversion
+
+- [x] **REPRODUCE / ISSUE** — syntax retains raw numeric text but supplies no typed canonical input;
+  D95 requires positive128-bit children before signed binding. Independent fixtures establish input
+  conversion/width/quantum/scalar behavior before production code; this is a feature prerequisite.
+- [x] **ROOT CAUSE (WHY + WHERE)** — expression.rs literal view retains borrowed number/unit only.
+  Raw mantissas may exceed128 bits before valid cancellation; Fraction oracle→100 rows pass, rc=0.
+  Public contracts cover both wide reducible mantissas and excessive pre-round denominators, rc=0.
+- [x] **FIX** — private typed literal API uses exact bounded decimal reduction, reduced converted
+  width check, shared unsigned rounding and rounded length guard. Text/span/kind/unary identity
+  survives; errors report honest lower-bound width witnesses; no float/dependency/new language cap.
+- [x] **ADDRESSED (verified)** — five public tests/two compile-fail docs pass, rc=0. Thirteen actual
+  compiled conversion/reduction/width/kind/modulo/narrowing/domain/diagnostic/source faults→public
+  assertion reds, rc=101 each, runner rc=0; source restores byte-identically. Release five pass, rc=0.
+- [x] **NO REGRESSION** — make check→501 passed across workspace, rc=0; make wasm→three crates,
+  rc=0 (cross-compilation only). Structural/reference suite, language16/publication9 pass, rc=0;
+  all earlier reference families remain green. No whole-arena/type/binding/execution claim.
+- [x] **LOCKSTEP** — README/availability/language/grammar/API/status/index/annex/live/task pointers
+  agree on individual literal conversion; prior task/oldest ledger bytes retain exact records.
+  G1 remains5/18, defects10open/89sealed; next .5a.3c.3 normalized immutable arena.
+
+## Verification Log
+
+Tracked literal_normalization_reference.py watches100 independent Fraction rows in the existing
+structural suite; product formula_literal_contract.rs consumes them. Actual source faults require
+compiled assertions and exact restoration. Logs: target/g1-0059-{native,release,wasm,structure,
+language,publication,reds}.log, all final producer rc=0. Publication50chapters/17scopedAPIs/
+1019source/1569rendered links. Ledger9 arms/13 pointer controls, archive28 arms/158 CLI controls
+and retention149 logical/24 working Markdown/8030 decoded lines/624215 decoded bytes/280537 resident
+bytes pass, rc=0. Tree10lanes/13trees/eight siblings/zero gaps; glossary310/nine/158/zero drift;
+feature105/29, uncertainty133/16/zero unowned and fixture20/four/five/zero mismatches pass, rc=0.
+Initial fixture span expected30 instead of32; explicit string-index diagnostic corrected the oracle.
+First mutation runner correctly refused an expect-panic verdict; positive fixtures now assert acceptance
+before reading values. All13 final fault verdicts are actual compiled public assertion reds.
+README status changes only; commands/objective/layout unchanged. Whole normalization/serialization later. Initial staged gate refused live-status328B line/journal1261
+lines. Shorten the row; relocate the exact completed reference subtree to the existing formula sibling
+and retain its journal anchor/route. No limits widened; committed10437B subtree compares exact, rc=0. Final staged make gate→
+=== all doctrines green ===, rc=0.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3c.2` | `STITCHCAD-G1-0059 (leaf G1-SLICE.5a.3c.2): normalize exact typed literal inputs` | independent100/thirteen actual reds/native501 |
+
+## Changelog
+
+- `2026-10-02`: individual typed literal conversion complete; next immutable normalized arena.
+- promotion: declined (routine bounded literal conversion implementing the received D95/D84 contracts).
+
+## Normalized arena pre-code protocol — completed in G1-0060
+
+- ID: `G1-SLICE.5a.3c.3`
+  Status: `in_progress`
+  Goal: normalize every literal into an immutable source-borrowing expression arena while retaining
+  names/operators/ordered children/spans and existing256-node/16-if limits; no execution or sign folding.
+  Pre-code protocol: FormulaExpression.normalize_literals(&self) returns a separately owned flat
+  FormulaNormalizedExpression borrowing only original source, without mutating/consuming syntax.
+  Iterate the validated private arena once; preserve indices/root/spans/depth exactly, convert each
+  raw literal with the completed .2 helper and clone bounded call-edge lists. Any literal refusal
+  returns the original located FormulaLiteralError; no partial arena escapes. All call arguments and
+  both conditional branches normalize, including untaken branches; unknown names/type errors/zero
+  divisions remain syntax because no operator/name/type/evaluation phase is performed.
+  Public normalized root/node-kind/ordered exact-size fused argument views have private handles,
+  no supplied indices/cross-arena edges, text-free Debug and source/arena lifetime enforcement.
+  Clone/drop/conversion use flat bounded storage, never recursive source-depth traversal. Individual
+  FormulaNode.normalized_literal keeps its existing only-this-node API; no canonical serializer yet.
+  Independently authored shape/count/depth fixtures shared with the actual reference; public all-
+  variant/operator/argument-order/branch/unary/kind/wide/source-span/borrowing/repeat/clone/refusal/
+  privacy controls; parse all25 worked example/assertion expressions. Exercise256 nodes/16 levels,
+  huge grouping/unary/wide calls and normalized drop on64KiB stack; syntax257/17 still refuse.
+  Compile actual child/order/operator/root/span/depth/iterator/literal/refusal faults, require public
+  assertion reds and exact source restoration. Watch reference fixture verifier in structural suite.
+  Strict native/release/WASM, focused reference/language/publication/ledger/archive/censuses and
+  staged gate; book/API map/index/status/live/task docs and prior exact histories; commit before .4.
+  Verification: `pending`
+  Commit: `pending`
+
+[Current product frontier](G1-SLICE.md#current-frontier).

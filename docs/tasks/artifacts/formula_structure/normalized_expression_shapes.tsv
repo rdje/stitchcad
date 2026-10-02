@@ -1,0 +1,25 @@
+# source	inspected normalized shape	nodes	conditional depth
+2.5 cm	length:25000	1	0
+25 mm	length:25000	1	0
+4	count:4	1	0
+4.0	ratio:4000000	1	0
+-9223372036854.775808 deg	(neg angle:9223372036854775808)	2	0
+-720 deg	(neg angle:720000000)	2	0
+0.00004 cm + 0.00004 cm	(Add length:0 length:0)	3	0
+2.5 cm / 2	(Divide length:25000 count:2)	3	0
+-x ^ 2	(neg (square x))	3	0
+(-x) ^ 2	(square (neg x))	3	0
+within(a, b, eps_num)	(within a b eps_num)	4	0
+f(1 cm, 2 mm, 3 um)	(f length:10000 length:2000 length:3)	4	0
+if(a < b, abs(-2.5 cm), max(25 mm, 3 cm))	(if (Less a b) (abs (neg length:25000)) (max length:25000 length:30000))	10	1
+if(a, if(b, 1 cm, 2 cm), if(c, 3 cm, 4 cm))	(if a (if b length:10000 length:20000) (if c length:30000 length:40000))	10	2
+abs(if(a, 1 cm, if(b, 2 cm, 3 cm)))	(abs (if a length:10000 (if b length:20000 length:30000)))	8	2
+-f(1 cm, 2 cm)^2 + 3 cm	(Add (neg (square (f length:10000 length:20000))) length:30000)	7	0
+1 cm == 10 mm	(Equal length:10000 length:10000)	3	0
+1 cm != 10 mm	(NotEqual length:10000 length:10000)	3	0
+1 cm <= 10 mm	(LessEqual length:10000 length:10000)	3	0
+1 cm >= 10 mm	(GreaterEqual length:10000 length:10000)	3	0
+1 cm < 10 mm	(Less length:10000 length:10000)	3	0
+1 cm > 10 mm	(Greater length:10000 length:10000)	3	0
+3 cm - 1 cm * 2	(Subtract length:30000 (Multiply length:10000 count:2))	5	0
+1 / 0	(Divide count:1 count:0)	3	0

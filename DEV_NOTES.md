@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — normalize all inputs while retaining an immutable syntax graph
+
+- Whole-arena conversion copies every validated flat node/edge and uses the completed literal helper.
+  Call arguments and both branches convert even when future evaluation would skip one. Any input
+  refusal keeps its original span/rule and aborts without publishing a partial arena or altering syntax.
+- Separate storage borrows original source and survives syntax drop. Private normalized root/child
+  views retain arena lifetime; argument iterators preserve order/exact size/fusion. Debug omits names/
+  spellings. Unary/count/angle kinds, raw turns and operators stay intact; no type/name/execution phase.
+- Eight public contracts/24 independently authored reference shapes/nested100 literal rows/25 book
+  expressions and three privacy-lifetime docs plus runnable example pass. Seventeen actual compiled
+  assertion reds discriminate root/name/unary/operator/order/coverage/depth/span/unit/refusal/iterator/
+  privacy faults and restore exact bytes. Native513/release eight/WASM3 and book/reference checks pass.
+- Flat conversion/clone/drop handles256 nodes/16 if levels and50000 grouping pairs on64KiB stack.
+  Initial fixture context lacked units; use actual quiet published context. A duplicate fault anchor
+  was refused before mutation; target the actual builder specifically before counting final reds.
+- Book/API/status/index/decisions and live/task pointers agree; prior histories retain exact bytes.
+  Coupled review .5a.3c.4 precedes canonical serialization .3d; binding/evaluation/geometry/MCP later.
+- promotion: declined (routine immutable normalization stage under the received D95/D84 contracts).
+
 ## _(2026-10-02)_ — reduce exact converted literals before imposing numeric width
 
 - Raw decimal mantissas wider than128 bits may cancel into allowed exact unit values. Keep source
@@ -50,22 +69,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   entity integration and arbitrary-input/cross-platform proof remain separately owned. No runtime
   source changed; the next frontier is production numeric normalization .5a.3c.
 - promotion: declined (routine scoped obligation review and alignment under received decisions).
-
-## _(2026-10-02)_ — principal angles retain their sign; directions normalize explicitly
-
-- D84 reference atan(-1.0) reproduces315 degrees instead of-45. Remove outer inverse modulo only;
-  the signed helpers, nearest-microdegree rounding and normalized dir selector retain their roles.
-- Grammar now states atan true(-90,+90)/rounded[-90,+90], atan2 true(-180,+180]/rounded[-180,+180],
-  y/x argument order and one exact zero: negative-x axis gives+180; both zero refuses.
-- Ninety independent signed principal/binding/equality/sweep/replay controls and fifteen compiled
-  actual faults distinguish raw formula values from normalized directions; sources restore exact.
-  Three negative rows in the42-row math oracle now carry signed expectations; all72 existing angular
-  controls/seven reds pass. Binding80/twelve reds and replay19/nine reds still pass independently.
-- Raw full/multi-turn bindings preserve equality/order and signed arcs. Fractional versus stored
-  input yields different later arcs; copied-book25 rows replay and a wrong unsigned Value refuses.
-- Function reference/units/annex/decision agree; final D84 review is .3c.3. Product normalization,
-  entity integration/evaluation and arbitrary-input transcendental/cross-platform proof remain pending.
-- promotion: declined (routine implementation/verification of the received signed-angle ruling).
 
 # Sealed archive — earlier lessons
 
@@ -168,3 +171,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part57.md`](docs/history/stitchcad-devnotes-part57.md) | scoped numeric review lesson | 15 lines, 1350 bytes, `sha256:a196cecf…` |
 
 | [`stitchcad-devnotes-part58.md`](docs/history/stitchcad-devnotes-part58.md) | six-kind replay lesson | 15 lines, 1327 bytes, `sha256:f5820b9c…` |
+
+| [`stitchcad-devnotes-part59.md`](docs/history/stitchcad-devnotes-part59.md) | signed principal angle lesson | 15 lines, 1367 bytes, `sha256:19cb42c9…` |

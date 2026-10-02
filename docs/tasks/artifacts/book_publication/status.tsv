@@ -16,3 +16,4 @@ MTM	spec/mtm-input-charts.md	crates/sc-measure/src/mtm_chart.rs	MtmChart	G1-SLIC
 formula lexing	annexes/formula-syntax.md	crates/sc-core/src/recipe/lexer.rs	FormulaLexer	G1-SLICE.5a.1	4.1
 formula expression syntax	annexes/formula-syntax.md	crates/sc-core/src/recipe/expression.rs	FormulaExpression	G1-SLICE.5a.2b.2	4.1
 formula literal inputs	annexes/formula-literals.md	crates/sc-core/src/recipe/literal.rs	FormulaLiteral	G1-SLICE.5a.3c.2	4.1
+formula normalized arena	annexes/formula-literals.md	crates/sc-core/src/recipe/normalized.rs	FormulaNormalizedExpression	G1-SLICE.5a.3c.3	4.1

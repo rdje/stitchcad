@@ -3,7 +3,8 @@
 The current sc-core recipe API can convert an individual parsed literal into its typed canonical
 integer. Parsing and input conversion remain separate operations: parsing checks syntax;
 conversion checks exact rational width, rounds once and checks the input scalar domain.
-Whole normalized expressions, canonical serialization, binding and evaluation remain later work.
+The [whole-expression API](#normalize-every-literal-in-an-expression) converts every literal while
+retaining the syntax graph. Canonical serialization, binding and evaluation remain later work.
 See the [language](../spec/formula-language.md) and [grammar](../spec/formula-language/grammar.md).
 
 ## Inspect one literal
@@ -39,40 +40,41 @@ includes grouping parentheses, matching the syntax view; source locations are no
 ## Exact conversion order
 
 A bare integer is a count. A bare decimal is a ratio in parts per million, even when its fraction
-contains only zeroes. Length factors are um1/mm1000/cm10000/m1000000/in25400; degree inputs multiply
-by1000000, and pct inputs multiply by10000 to obtain parts per million. The original spelling survives.
+contains only zeroes. Length factors are 1 for um, 1,000 for mm, 10,000 for cm, 1,000,000 for m and 25,400 for in.
+Degree inputs multiply
+by 1,000,000, and pct inputs multiply by 10,000 to obtain parts per million. The original spelling survives.
 
 1. Interpret the unsigned decimal and unit multiplier exactly.
-2. Reduce the converted rational and require each component to fit128 magnitude bits.
+2. Reduce the converted rational and require each component to fit 128 magnitude bits.
 3. Use the [shared unsigned rounding primitive](numeric-rounding.md) once, half away from zero.
-4. Check the rounded length input against1000000000 micrometres. Count, ratio and raw angle retain
-   the full128-bit magnitude; signed binding width is a later boundary.
+4. Check the rounded length input against 1,000,000,000 micrometres. Count, ratio and raw angle retain
+   the full 128-bit magnitude; signed binding width is a later boundary.
 
 A value below half a quantum becomes a canonical zero only if its exact pre-round rational fits.
-Thus rounding cannot rescue an excessive denominator. Conversely,1000000000.4 um is allowed because
-its once-rounded length is at the scalar bound, while1000000000.5 um refuses. Formula angles retain
-complete turns:360 deg is360000000 microdegrees, and720 deg is720000000. There is no direction modulo.
-A raw mantissa wider than128 bits may be valid after reduction; it is not parsed prematurely as i128.
+Thus rounding cannot rescue an excessive denominator. Conversely, 1000000000.4 um is allowed because
+its once-rounded length is at the scalar bound, while 1000000000.5 um refuses. Formula angles retain
+complete turns: 360 deg is 360,000,000 microdegrees, and 720 deg is 720,000,000. There is no direction modulo.
+A raw mantissa wider than 128 bits may be valid after reduction; it is not parsed prematurely as i128.
 
 ## Bounded decimal workspace
 
 The converter borrows the already validated ASCII spelling. It virtually removes leading zeroes and
-only fractional trailing zeroes; an all-zero spelling reduces to0/1 regardless of its length. This
+only fractional trailing zeroes; an all-zero spelling reduces to 0/1 regardless of its length. This
 preserves count/ratio kind and integer trailing zeroes.
 
-For a nonzero fractional mantissa after trimming, at least one of factors2/5 is absent. Every closed
-unit multiplier contains at most six of either factor. A fractional scale greater than134 therefore
-proves an excessive denominator. More than scale+39 significant digits implies a value at least10^39,
+For a nonzero fractional mantissa after trimming, at least one of factors 2/5 is absent. Every closed
+unit multiplier contains at most six of either factor. A fractional scale greater than 134 therefore
+proves an excessive denominator. More than scale + 39 significant digits implies a value at least 10^39,
 so the reduced numerator exceeds u128 MAX. These are mathematical refusal witnesses for the existing
 128-bit rule, not added spelling limits. Arbitrarily long leading/trailing zeroes remain accepted.
 
-The remaining mantissa needs at most173 decimal digits of temporary storage. Exact long division by
-2 and5 cancels denominator factors against the multiplier and mantissa. Checked u128 construction
+The remaining mantissa needs at most 173 decimal digits of temporary storage. Exact long division by
+2 and 5 cancels denominator factors against the multiplier and mantissa. Checked u128 construction
 then establishes the reduced numerator/denominator before rounding. No floating point, new dependency
 or input-sized allocation is used. Work scans the borrowed spelling and then operates on bounded digits.
 
-Rational-width errors name max_rational_bits, bound128, the excessive component and an explicit
-measured lower bound of at least129 bits. They do not pretend to compute an exact bit count for a huge
+Rational-width errors name max_rational_bits, bound 128, the excessive component and an explicit
+measured lower bound of at least 129 bits. They do not pretend to compute an exact bit count for a huge
 input. Length errors report the actual rounded value and maximum. Low-level spans do not supply
 statement/canonical command context; that belongs to future recipe/command layers.
 
@@ -86,14 +88,85 @@ python3 -I -B docs/tasks/artifacts/formula_structure/literal_normalization_refer
 bash docs/tasks/artifacts/formula_structure/run_literal_normalization_mutations.sh
 ```
 
-Five public contracts consume100 independently authored Fraction fixture rows covering unit/kind/
+Five public contracts consume 100 independently authored Fraction fixture rows covering unit/kind/
 quantum/width/scalar boundaries and wide cancellable mantissas. Additional source/privacy/unary and
-100000-digit zero/padding/refusal cases exercise the public node API. Two compile-fail doctests retain
+100,000-digit zero/padding/refusal cases exercise the public node API. Two compile-fail doctests retain
 private construction and source lifetime. The structural suite watches the independent fixture oracle.
 Actual compiled conversion, reduction, width, kind, direction, narrowing, domain, diagnostic and source
 faults must fail public assertions; the exclusive runner restores source byte-identically.
 
-G1-SLICE.5a.3c.2 owns this API. This is single-literal input conversion; it does not normalize a whole
-arena, check operators/names, fold sign, bind values, evaluate, serialize canonical bytes or construct
-geometry. Strict native checks and real WASM cross-compilation verify their stated scope; cross-
+G1-SLICE.5a.3c.2 owns this API. This API converts one literal; the separate whole-arena API below converts all literal inputs.
+Neither checks operators/names, folds sign, binds values, evaluates, serializes canonical bytes or
+constructs geometry. Strict native checks and real WASM cross-compilation verify their stated scope; cross-
 compilation alone is not a browser runtime or cross-platform numeric certificate.
+
+## Normalize every literal in an expression
+
+FormulaExpression.normalize_literals builds a separate FormulaNormalizedExpression in one flat pass.
+The syntax arena stays unchanged and may be reused. The new arena owns its node and call-edge storage
+while borrowing original names and literal spellings; it remains usable after the syntax arena is dropped.
+
+```rust
+use sc_core::recipe::{FormulaExpression, FormulaNormalizedNodeKind};
+
+let syntax = FormulaExpression::parse("-720 deg + turn_allowance")?;
+let normalized = syntax.normalize_literals()?;
+drop(syntax);
+assert_eq!(normalized.node_count(), 4);
+assert_eq!(normalized.conditional_depth(), 0);
+if let FormulaNormalizedNodeKind::Binary { left, right, .. } = normalized.root().kind() {
+    assert!(matches!(left.kind(), FormulaNormalizedNodeKind::Negate(_)));
+    assert!(matches!(right.kind(), FormulaNormalizedNodeKind::Name("turn_allowance")));
+}
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+| Public API | Contract |
+| --- | --- |
+| FormulaNormalizedExpression | Immutable, privately constructed flat arena; root/count/conditional depth; source-borrowing clone |
+| FormulaNormalizedNode | Read-only source span and kind; children belong to the same arena |
+| FormulaNormalizedNodeKind | Typed literal, borrowed name, unary minus, square, binary operator, ordered call or three-part conditional |
+| FormulaNormalizedArguments | Ordered, exact-size, fused iterator; cloning preserves its current position |
+
+Every semantic node, operator, name, ordered child, source span and depth survives. Literals use the
+individual conversion above. Unary minus stays a node; the positive 2^63 angle child is retained.
+Grouping changes spans rather than node counts, and a square's exponent is operator payload.
+Root/child indices are private; callers cannot forge handles or join different arenas. Views cannot
+outlive their normalized arena. Debug of the arena, node view and argument iterator omits customer
+source. Explicit kind inspection exposes borrowed names and literal read access deliberately.
+
+All literals are converted, including every call argument and both conditional branches. An invalid
+literal in an untaken branch still refuses input normalization. The first refused literal in arena
+construction order returns its original FormulaLiteralError/span; no partial result is published.
+Repeated attempts leave syntax unchanged and return the same refusal.
+
+This stage does not validate operator dimensions or names and does not run arithmetic. For example,
+an unknown function, unary minus on a count, mixed length/angle addition and 1/0 remain inspectable
+normalized syntax for later validators. A valid wide literal followed by an overflowing addition is
+retained without executing that addition. Successful normalization is not permission to execute a recipe.
+
+## Whole-arena proof
+
+```bash
+cargo test -p sc-core --test formula_normalized_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/normalized_expression_reference.py
+bash docs/tasks/artifacts/formula_structure/run_normalized_expression_mutations.sh
+```
+
+Eight public contracts cover 24 authored shape/count/depth rows checked by the independent book
+reference, all 100 literal rows nested in calls, all 25 worked binding/assertion expressions, immutable
+source spans/borrowing/clone/drop, every literal position's atomic refusal, unevaluated syntax,
+argument order/size/fusion and privacy. Three compile-fail doctests enforce private construction,
+source lifetime and view lifetime; a runnable doctest demonstrates independence from syntax storage.
+
+On a 64 KiB stack, conversion/clone/drop handles 50,000 grouping pairs, 256 unary/call nodes and 16 nested
+conditional levels. Syntax at 257 nodes or 17 levels still refuses. The flat normalizer preserves the
+existing bounds; it adds no new cap or recursive traversal. Call-edge storage stays bounded by the
+validated syntax graph, and per-literal decimal workspace retains the bound described above.
+
+Seventeen actual compiled faults alter root/name/unary/square/operator identity, child/branch order,
+call coverage, depth/span, literal unit/refusal, iterator behavior or Debug privacy. They must fail
+public assertions; the exclusive runner restores exact source. The structural suite watches the
+independent shape verifier. G1-SLICE.5a.3c.3 owns this whole-arena stage; .4 owns its coupled review.
+Canonical S-expression serialization, ordered statements, name/type/binding/evaluation, geometry and
+command/API/MCP integration remain later work. Native/release/WASM checks retain their stated scope.
