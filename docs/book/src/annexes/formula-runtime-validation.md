@@ -46,7 +46,7 @@ formula_assertion with length80000 versus40000 at eps_num1. Eight actual compile
 faults must fail body assertions: false guard, inclusive boundary, token, label, operand order/kind,
 class and class value. The reference source stays byte-identical during these in-memory faults.
 G1-SLICE.5e.3a owns this repair. D122 reference missing-value routing is described below.
-Irrational provenance D121, product evaluation, geometry and API/MCP/release remain pending.
+D121 reference contribution provenance is verified below. Product evaluation, geometry and API/MCP/release remain pending.
 
 ## Missing values by origin
 
@@ -107,4 +107,55 @@ eps_fmt at runtime with their distinct tokens. Thirteen compiled predicate/paylo
 assertion reds; the reference source remains unchanged during those in-memory faults. Existing
 namespace1139/thirteen fault controls still trap all numerical/state/geometry access.
 G1-SLICE.5e.1a closes D122 origin/context routing and D127 malformed-input exceptions and D128 uncertainty-state bypass. Product
-adapters, complete diagnostic context and irrational provenance retain their separate owners.
+adapters and complete production diagnostic/provenance context retain their separate owners.
+
+## Approximation contributions and admissible classes
+
+A value retains an immutable set of approximation-producing calls in its executed dependencies.
+The set is evidence about how the result was obtained: sin(90 deg) remains a sine contribution
+even though its rounded answer equals ratio1.0. Named T1 comparisons require an empty set.
+T2 or looser admits those contributions and then applies the usual inclusive threshold.
+
+```text
+assert direct: eps_num = sin(90 deg) == 1.0
+let rounded: ratio = sin(90 deg)
+assert stored: eps_num = rounded == 1.0
+within(rounded, 1.0, eps_geo)
+```
+
+Both assertions raise formula_domain. The within comparison holds. The owned diagnostic arguments
+are comparison (the assertion label or within), tolerance_class and sorted contribution_sources.
+These examples retain sin as the source. Choosing eps_num with a larger supplied numeric value
+still refuses: admissibility follows the symbolic class. The director's D121 ruling is recorded
+in ADR-0003; these instrument fields are separate from the pending production typed diagnostic API.
+
+The reference marks sqrt, hypot, sin, cos, tan, atan, atan2, arc_length, dist and dir, and the
+authored round_to quantization operation from contract4.2. Exact rational operations and input or
+binding rounding alone add no approximation source. Arithmetic carries all executed inputs,
+including cancellation to zero. min/max/clamp retain evaluated candidates/bounds; an evaluated
+Boolean condition also contributes to the branch it selects. Bare exact comparisons retain their
+existing numeric behavior and carry their inputs' sources into the Boolean result.
+
+Only the taken branch executes. For example, within(if(1 == 1, 1.0, sin(90 deg)), 1.0, eps_num)
+holds with no sine contribution. A binding stores and subsequently reads both its integer value
+and contribution set; rounding and later reads cannot erase that evidence. The actual book consumer
+publishes the returned sources alongside each stored binding.
+
+Lazy point/edge operations retain the sources of their evaluated arguments after successful
+resolution. Point coordinates retain separate sets: if x=1 um and y=hypot(3 um,4 um), a comparison
+of x against1um may use T1, while y requires T2 or looser. Cached reads preserve the same distinction.
+An error in a later point coordinate publishes neither a value nor new provenance. The opaque
+point_at and length-only edge fixtures remain arithmetic models, with no curve-accuracy proof.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mutations
+```
+
+The structural runner watches425 independent controls across all approximation signatures, five
+arithmetic kinds/classes, operand orders, named refusals, ordinary operators, stored/Boolean reads,
+lazy branches, geometry/cache/coordinate separation, earlier errors and exact controls. A copied
+worked book compares equal side_seam_length bindings at T1: all21 statements preflight, then the
+actual consumer refuses with allocation_balance, eps_num and hypot.26 compiled actual guard/source/
+cache/consumer faults must fail body assertions; the reference source remains byte-identical.
+G1-SLICE.5e.3b closes D121's reference scope. Arbitrary-input transcendental rounding, product
+execution, real geometry, replay, API/MCP and release correctness remain separate obligations.

@@ -135,7 +135,7 @@ static validation refuses them. No Rust syntax or serializer behavior changed.
 
 This proves metadata namespace and single-statement checking in the reference. It does not validate
 canonical input adapters, physical geometry or typed product diagnostic payloads; those retain
-.5e.1, G2 and .5b.2–.4 owners. Whole-recipe checking is described below. D121 irrational-result provenance at T1 remains .5e.3. D122 reference origin/context routing is
+.5e.1, G2 and .5b.2–.4 owners. Whole-recipe checking is described below. D121 reference provenance at T1 is [verified separately](formula-runtime-validation.md#approximation-contributions-and-admissible-classes). D122 reference origin/context routing is
 [separately verified](formula-runtime-validation.md#missing-values-by-origin); these static controls
 make no runtime correctness claim. Product input adapters remain .5e.1.
 
@@ -194,7 +194,7 @@ remains4096; the smaller value is used only to falsify the measurement in a copi
 
 D119's reference ordering and D123's measurement defects are repaired at .5b.1b.2. Product static namespaces, immutable
 dependency graphs and complete typed diagnostics remain .5b.2–.4. Reference numeric provenance
-remains D121 at .5e.3; reference origin/context routing is separately verified at .5e.1a. Static checking cannot settle
+is [verified separately](formula-runtime-validation.md#approximation-contributions-and-admissible-classes); reference origin/context routing is verified at .5e.1a. Static checking cannot settle
 those execution obligations.
 
 ## Complete static review and remaining contracts
@@ -246,7 +246,7 @@ The reference runtime assertion repair closes D125 at G1-SLICE.5e.3a. A false as
 formula_assertion; its name, exact left/right values and kinds, and symbolic tolerance class/value
 are retained. A statically valid false assertion still passes preflight, because preflight computes
 no verdict. [Runtime assertion controls](formula-runtime-validation.md#reference-runtime-assertion-controls) describe the repair.
-D121's irrational provenance remains .5e.3. D122 reference origin/context routing is verified
+D121 reference provenance is [verified separately](formula-runtime-validation.md#approximation-contributions-and-admissible-classes). D122 reference origin/context routing is verified
 [separately](formula-runtime-validation.md#missing-values-by-origin); product adapters remain .5e.1.
 No static review result approves numerical determinism, a physical garment or a production release.
 

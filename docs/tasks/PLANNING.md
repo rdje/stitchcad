@@ -852,27 +852,23 @@ admits only matching sandbox/child pairs without real repo handles.43 independen
 compiled guard faults pass. Actual restricted invocation refuses2; OS-visible held-file PID78489
 blocks1, controlled child finishes0, restored census green0. No shared tool service is stopped.
 
-- **D121** — reference comparison loses irrational-call provenance required for T1 refusal.
-  - Reproduce: assert approx:eps_num=sin(90 deg)==1.0 ACCEPTs true, baseline exit0, contrary
-    contract4.2/9's T2-or-looser rule when an irrational result contributes.
-  - Root: Val carries only kind/value and assertion applies distance without irrational provenance.
-  - Impact: current numeric reference is not a general tolerance/provenance oracle.
-  - Owner: G1-SLICE.5e.3, high priority before using reference for product tolerance execution;
-    retain/prove through bindings/reads/operators. Does not block static name/kind checks, whose
-    controls trap all numerical execution. No current reference approval of T1 provenance claimed.
-
+D121 closes at G1-SLICE.5e.3b; original report retained in
+[`stitchcad-defects-part50.md`](../history/stitchcad-defects-part50.md). Director's formula_domain
+ruling, executed-call provenance through binding/reads/operators and precise lazy geometry/cache
+are verified by425 independent controls/26 actual body assertion reds and actual copied-book refusal.
+Product numerical/provenance/geometry execution remains .5c–.5g; reference scope is explicit.
 
 D116/D117/D118/D120 close at G1-SLICE.5b.1b.1; original reports are sealed in
 [`stitchcad-defects-part44.md`](../history/stitchcad-defects-part44.md). Actual namespace/header
 controls1139/13 guard assertion reds and full reference/language checks pass. The reference now
 separates syntax, static statements and numerical execution; reserved/input/recipe collisions and
 assertion class/arithmetic kinds refuse before execution. Whole preflight D119 closes at .1b.2;
-D121/D122 stay owned runtime reference repairs. Product validation/typed payloads remain .5b.2–.4.
+D121/D122 reference repairs are verified at .5e.3b/.5e.1a. Product validation/typed payloads remain .5b.2–.4.
 
 D119/D123 close at G1-SLICE.5b.1b.2; original reports retained in
 [`stitchcad-defects-part45.md`](../history/stitchcad-defects-part45.md). Whole preflight196 cases/
 14 actual assertion reds and consumer/measurement controls pass. No statement executes after a
-late static refusal; recipe size excludes unrelated candidates. D121/D122 retain .5e.3/.5e.1 owners.
+late static refusal; recipe size excludes unrelated candidates. D121/D122 reference repairs are verified.
 
 - **D124** — excluded loop/function forms have no diagnostic recognition contract.
   - Reproduce: actual static_statement loop(width), repeat(2,width), while(width>0 um) raise
@@ -887,7 +883,7 @@ late static refusal; recipe size excludes unrelated candidates. D121/D122 retain
 D125 closes at G1-SLICE.5e.3a; original report retained in
 [`stitchcad-defects-part47.md`](../history/stitchcad-defects-part47.md). False runtime assertions
 raise formula_assertion with exact values/kinds, name and class;262 cases/eight actual assertion
-reds and copied-book refusal verify the repair. D121/D122 and product execution remain pending.
+reds and copied-book refusal verify the repair. D121/D122 reference repairs are verified; product execution remains pending.
 
 D126 closes at G1-SLICE.5b.1c.1; original report retained in
 [`stitchcad-defects-part46.md`](../history/stitchcad-defects-part46.md). Geometry selector prose now
@@ -898,7 +894,7 @@ D122/D127 close at G1-SLICE.5e.1a; original reports retained in
 [`stitchcad-defects-part48.md`](../history/stitchcad-defects-part48.md). Origin/context reads retain
 correct tokens/arguments, optional values are readable, malformed metadata refuses by name.
 1466 independent controls/thirteen actual body assertion reds/two actual copied-book refusals pass0.
-D121 irrational provenance remains .5e.3; product adapters/typed diagnostic context remain pending.
+D121 reference provenance closes at .5e.3b; product adapters/typed diagnostic context remain pending.
 
 D128 closes at G1-SLICE.5e.1a; original report retained in
 [`stitchcad-defects-part49.md`](../history/stitchcad-defects-part49.md). Explicit populated states

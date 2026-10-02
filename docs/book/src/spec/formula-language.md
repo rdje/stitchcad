@@ -197,7 +197,11 @@ recipe ([grammar §6](formula-language/grammar.md)). Ordinary rational operators
 operation implicitly. An expression with no irrational or explicit rounding call therefore computes
 exactly and rounds once at binding. A value produced
 by one is the nearest representable approximation and not a value identical by construction, which
-is why a comparison involving one names **T2 or looser** and never T1 (units §3).
+is why a comparison involving one names **T2 or looser** and never T1 (units §3). An inadmissible
+T1 class raises formula_domain, retaining the comparison, requested class and contribution sources.
+Input conversion and binding rounding alone do not introduce an irrational or explicit-quantization
+contribution. The [runtime controls](../annexes/formula-runtime-validation.md) distinguish retained
+contributions from untaken branches and independent point coordinates.
 
 ### 4.3 Structural limits
 
@@ -259,7 +263,7 @@ specifies, and is never rendered raw to a user.
 | `formula_ambiguous_name` | two origins bind one name | the name, both origins |
 | `formula_rebinding` | a `let` re-binds a name this recipe already bound | the name, both statement indices |
 | `formula_division` | a divisor is zero | the expression, the divisor's name or literal |
-| `formula_domain` | a value is outside its declared domain (units §1.1) or a §4.3 limit | the quantity, the operation, the bound, the measured size |
+| `formula_domain` | a value/domain or §4.3 limit is exceeded, or a comparison uses inadmissible T1 (§4.2) | quantity/operation/bound/measured size; for T1: comparison, requested class, contribution sources |
 | `formula_unknown` | an operand's state is `unknown`, so it has no value | the name, its state, its origin, the artifact the policy matrix blocks |
 | `formula_tolerance_unbound` | a context-supplied tolerance is read where no context supplies it | the name, the context it was read in |
 | `formula_assertion` | an `assert` does not hold at its class | the assertion's name, both values, the tolerance class |

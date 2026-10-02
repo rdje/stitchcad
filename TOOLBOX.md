@@ -28,10 +28,6 @@ because predicate P is false" before writing a single line of fix.
 
 ## This project's toolbox
 
-<!-- Fill this in as your project grows. List each diagnostic tool, what question it
-answers (WHY / WHERE / how-much), and how to invoke it (binary, flag, env var). The next
-agent should be able to reach for the right tool without reading the source. -->
-
 | Tool | Answers | How to invoke |
 | --- | --- | --- |
 | handoff census | are process/handle observations available, and does project work remain? | `bash scripts/check_handoff.sh` (OS-visible); `--idle-cua` attests no pending CUA call/result; `--all` lists advisories |
@@ -261,3 +257,5 @@ checks21/13 book rows, envelope precedence and observed D124 forms; no runtime/e
 
 Assertion diagnostics: `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`; watched by structural suite.
 Origin/context reads: `python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations`; watched.
+
+Contribution provenance: `python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mutations`; watched by structural suite.

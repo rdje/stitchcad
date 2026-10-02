@@ -291,8 +291,16 @@ IMPLEMENTED = {"sqrt", "hypot", "abs", "min", "max", "clamp", "round_to", "sin",
                "x", "y", "dist", "dir", "len", "param_at", "point_at"}
 
 class Val:
-    def __init__(self, kind, v):
+    def __init__(self, kind, v, sources=(), components=None):
         self.kind, self.v = kind, v
+        self.sources = frozenset(sources)
+        self.components = components
+
+    def influenced(self, *values, sources=()):
+        """Retain executed dependencies even when their numeric contribution cancels."""
+        combined = self.sources.union(sources, *(value.sources for value in values))
+        return Val(self.kind, self.v, combined, self.components)
+
     def __repr__(self):
         return "%s:%s" % (self.kind, self.v)
 
@@ -532,7 +540,7 @@ class Evaluator:
         if integer < low or integer > high:
             raise FErr("formula_domain", "%s: %s storage=i%d [%s, %s], measured=%s"
                        % (operation, value.kind, bits, low, high, integer))
-        return Val(value.kind, Fraction(integer))
+        return Val(value.kind, Fraction(integer)).influenced(value)
 
     def literal(self, kind, exact):
         rounded = Fraction(rnd(exact))
@@ -647,32 +655,32 @@ class Evaluator:
         if tag == "name": return self.value_of_name(node[1], env)
         if tag == "neg":
             v = self.evaluate(node[1], env)
-            return Val(v.kind, -v.v)
+            return Val(v.kind, -v.v).influenced(v)
         if tag == "sq":
             v = self.evaluate(node[1], env)
             res = self.infer(node, env)
             exact = to_true(v.kind, v.v) ** 2
-            return Val(res, from_true(res, exact))
+            return Val(res, from_true(res, exact)).influenced(v)
         if tag == "cmp":
             a = self.evaluate(node[2], env); b = self.evaluate(node[3], env)
             ok = {"==": a.v == b.v, "!=": a.v != b.v, "<": a.v < b.v,
                   "<=": a.v <= b.v, ">": a.v > b.v, ">=": a.v >= b.v}[node[1]]
-            return Val("boolean", Fraction(1 if ok else 0))
+            return Val("boolean", Fraction(1 if ok else 0)).influenced(a, b)
         if tag == "bin":
             op = node[1]
             a = self.evaluate(node[2], env); b = self.evaluate(node[3], env)
             res = self.infer(node, env)
-            if op == "+": return Val(res, a.v + b.v)
-            if op == "-": return Val(res, a.v - b.v)
+            if op == "+": return Val(res, a.v + b.v).influenced(a, b)
+            if op == "-": return Val(res, a.v - b.v).influenced(a, b)
             ta, tb = to_true(a.kind, a.v), to_true(b.kind, b.v)
             if op == "*":
-                return Val(res, from_true(res, ta * tb))
+                return Val(res, from_true(res, ta * tb)).influenced(a, b)
             if tb == 0:
                 raise FErr("formula_division", "the divisor is zero")
-            return Val(res, from_true(res, ta / tb))
+            return Val(res, from_true(res, ta / tb)).influenced(a, b)
         if tag == "if":
             c = self.evaluate(node[1], env)
-            return self.evaluate(node[2] if c.v else node[3], env)
+            return self.evaluate(node[2] if c.v else node[3], env).influenced(c)
         if tag == "call":
             return self.call(node[1], node[2], env)
         raise FErr("formula_parse", "unknown node %r" % (tag,))
@@ -725,7 +733,7 @@ class Evaluator:
             if not isinstance(origin, str) or origin not in self.origins:
                 raise FErr("formula_parse", "missing value for `%s` has no valid declaration origin" % name)
             self._missing_name(name, origin, e.get("state"))
-        return Val(e["kind"], e["value"])
+        return Val(e["kind"], e["value"], e.get("sources", ()), e.get("components"))
 
     def resolve_geometry(self, entry, env):
         """An operation's argument formulas are evaluated at the operation's position (§4.1)."""
@@ -733,10 +741,22 @@ class Evaluator:
             v = self.evaluate(self.parse(entry["exprs"]["len"]), env)
             if v.kind != "length":
                 raise FErr("formula_dimension", "an edge's length is %s" % v.kind)
+            entry["sources"] = v.sources
             return Fraction(v.v)
         xs = self.evaluate(self.parse(entry["exprs"]["x"]), env)
         ys = self.evaluate(self.parse(entry["exprs"]["y"]), env)
+        entry["sources"] = xs.sources | ys.sources
+        entry["components"] = (xs.sources, ys.sources)
         return (Fraction(xs.v), Fraction(ys.v))
+
+    @staticmethod
+    def tolerance_class(comparison, name, a, b):
+        sources = a.sources | b.sources
+        if name == "eps_num" and sources:
+            raise FErr("formula_domain", "%s: `%s` requires T2 or looser; contributions=%s"
+                       % (comparison, name, ", ".join(sorted(sources))),
+                       {"comparison": comparison, "tolerance_class": name,
+                        "contribution_sources": tuple(sorted(sources))})
 
     def call(self, name, args, env):
         if name in self.envelope:
@@ -746,68 +766,71 @@ class Evaluator:
         if name == "within":
             a = self.evaluate(args[0], env); b = self.evaluate(args[1], env)
             tol = self.evaluate(args[2], env)
-            return Val("boolean", Fraction(1 if abs(a.v - b.v) <= tol.v else 0))
+            self.tolerance_class("within", args[2][1], a, b)
+            return Val("boolean", Fraction(1 if abs(a.v - b.v) <= tol.v else 0)).influenced(a, b, tol)
         if name in ("min", "max"):
             vs = [self.evaluate(a, env) for a in args]
-            return Val(vs[0].kind, (min if name == "min" else max)(v.v for v in vs))
+            return Val(vs[0].kind, (min if name == "min" else max)(v.v for v in vs)).influenced(*vs)
         vs = [self.evaluate(a, env) for a in args]
         k0 = vs[0].kind
-        if name == "x": return Val("length", vs[0].v[0])
-        if name == "y": return Val("length", vs[0].v[1])
-        if name == "len": return Val("length", vs[0].v)
+        if name in ("x", "y"):
+            index = 0 if name == "x" else 1
+            sources = vs[0].components[index] if vs[0].components is not None else vs[0].sources
+            return Val("length", vs[0].v[index], sources)
+        if name == "len": return Val("length", vs[0].v).influenced(*vs)
         if name == "dist":
             p, q = vs
-            return Val("length", self._hypot(p.v[0] - q.v[0], p.v[1] - q.v[1]))
+            return Val("length", self._hypot(p.v[0] - q.v[0], p.v[1] - q.v[1])).influenced(*vs, sources=(name,))
         if name == "dir":
             p, q = vs
-            return Val("angle", norm_angle(rnd(self._deg2(q.v[1] - p.v[1], q.v[0] - p.v[0]))))
+            return Val("angle", norm_angle(rnd(self._deg2(q.v[1] - p.v[1], q.v[0] - p.v[0])))).influenced(*vs, sources=(name,))
         if name == "param_at":
             e, l = vs
             if l.v > e.v:
                 raise FErr("formula_domain", "param_at: %d is past the edge's %d" % (l.v, e.v))
             return Val("ratio", from_true("ratio", to_true("length", l.v)
-                                         / to_true("length", e.v)))
+                                         / to_true("length", e.v))).influenced(*vs)
         if name == "point_at":
             t = to_true("ratio", vs[1].v)
             if t < 0 or t > 1:
                 raise FErr("formula_domain", "point_at: parameter %s is outside [0, 1]" % t)
-            return Val("point", vs[1].v)      # opaque: the position is the operation's, not the formula's
-        if name == "abs": return Val(k0, abs(vs[0].v))
+            return Val("point", vs[1].v).influenced(*vs)  # opaque position; no curve model
+        if name == "abs": return Val(k0, abs(vs[0].v)).influenced(*vs)
         if name == "clamp":
             lo, hi = vs[1].v, vs[2].v
             if lo > hi:
                 raise FErr("formula_domain", "clamp: low %s is above high %s" % (lo, hi))
-            return Val(k0, min(max(vs[0].v, lo), hi))
+            return Val(k0, min(max(vs[0].v, lo), hi)).influenced(*vs)
         if name == "round_to":
             step = vs[1].v
             if step == 0:
                 raise FErr("formula_division", "round_to's step is zero")
-            return Val(k0, rnd(Fraction(vs[0].v) / Fraction(step)) * step)
+            return Val(k0, rnd(Fraction(vs[0].v) / Fraction(step)) * step).influenced(*vs, sources=(name,))
         if name == "sqrt":
             if vs[0].v < 0:
                 raise FErr("formula_domain", "sqrt of a negative %s" % k0)
             if k0 == "area":
-                return Val("length", rnd(dfraction(vs[0].v).sqrt()))
-            return Val("ratio", rnd(from_true("ratio", d_sqrt_ratio(vs[0].v))))
+                return Val("length", rnd(dfraction(vs[0].v).sqrt())).influenced(*vs, sources=(name,))
+            return Val("ratio", rnd(from_true("ratio", d_sqrt_ratio(vs[0].v)))).influenced(*vs, sources=(name,))
         if name == "hypot":
-            return Val("length", self._hypot(vs[0].v, vs[1].v))
+            return Val("length", self._hypot(vs[0].v, vs[1].v)).influenced(*vs, sources=(name,))
         if name in ("sin", "cos", "tan"):
             if name == "tan" and vs[0].v % (180 * 1000000) == 90 * 1000000:
                 raise FErr("formula_domain", "tan: angle is an exact odd-quarter-turn pole")
             rad = d_radians(vs[0].v)
             r = {"sin": d_sin, "cos": d_cos,
                  "tan": lambda z: d_sin(z) / d_cos(z)}[name](rad)
-            return Val("ratio", rnd(from_true("ratio", r)))
+            return Val("ratio", rnd(from_true("ratio", r))).influenced(*vs, sources=(name,))
         if name == "atan":
             return Val("angle", rnd(d_atan(dfraction(to_true("ratio", vs[0].v)))
-                                     * 180 / PI * 1000000))
+                                     * 180 / PI * 1000000)).influenced(*vs, sources=(name,))
         if name == "atan2":
             ya = dfraction(to_true(vs[0].kind, vs[0].v))
             xb = dfraction(to_true(vs[1].kind, vs[1].v))
-            return Val("angle", rnd(d_atan2(ya, xb) * 180 / PI * 1000000))
+            return Val("angle", rnd(d_atan2(ya, xb) * 180 / PI * 1000000)).influenced(*vs, sources=(name,))
         if name == "arc_length":
             rad = d_radians(vs[0].v)
-            return Val("length", rnd(rad * dfraction(to_true("length", vs[1].v))))
+            return Val("length", rnd(rad * dfraction(to_true("length", vs[1].v)))).influenced(*vs, sources=(name,))
         raise FErr("formula_unsupported", "`%s` is declared but not implemented here" % name)
 
     def _hypot(self, a, b):
@@ -936,6 +959,7 @@ class Evaluator:
             _, _, tol_name, left, right = checked
             a = self.evaluate(left, env); b = self.evaluate(right, env)
             tol = self.evaluate(("name", tol_name), env)
+            self.tolerance_class(name, tol_name, a, b)
             if abs(a.v - b.v) > tol.v:
                 raise FErr("formula_assertion", "assert `%s`: %s != %s at `%s` (%s)"
                            % (name, a, b, tol_name, tol.v),
@@ -1293,6 +1317,7 @@ for r in bind_rows:
         bad("examples §2 `%s`: a binding returned a noninteger" % token); l2 += 1; continue
     internal = val.v.numerator
     env[token] = {"kind": val.kind, "value": internal, "origin": "recipe", "state": "derived"}
+    env[token]["sources"] = val.sources
     published = debacktick(value_cell).strip()
     if val.kind == "boolean":
         if published not in ("true", "false"):

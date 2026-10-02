@@ -39,3 +39,4 @@ python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py -
 python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mutations

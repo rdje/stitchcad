@@ -851,38 +851,14 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 [Exact completed records](G1-SLICE-canonical.md#completed-namespace-and-preflight-receipts--preserved-from13f8c75) are retained in the canonical sibling.
 
-## Runtime assertion repair
-
-- ID: `G1-SLICE.5e.3a`
-  Status: `done`
-  Goal: independent D125 reference false-assertion diagnostic repair while D124 is pending.
-  Acceptance: valid assertion tuples preserved; false raises formula_assertion with name/values/
-  class; five classes and numeric kinds, inclusive threshold, earlier static/runtime errors,
-  actual consumer refusal and actual guard faults verified. D121 provenance remains separate.
-  Containment prerequisite: move exact completed receipts/checklists into existing canonical sibling
-  before primary/evidence exceed1000 lines; update links, retain hashes; no new path or cap increase.
-  Pre-code protocol: contract5.1/5.2/9, grammar1.1 assert and existing class/context/value stages.
-  FErr gains an optional owned arguments dictionary; false assertion carries label, both exact
-  values/kinds and symbolic tolerance class/value. No fabricated ordinal/canonical bytes or claim
-  of typed production payloads. Preserve true five-element tuple and <= threshold; earlier static,
-  numeric and missing-context errors retain their tokens. Consumer L4 must report named failure
-  instead of testing a False tuple; numerical provenance D121 and context routing D122 stay owned.
-  Independently author all five arithmetic kinds/classes, below/at/above threshold/signed values,
-  caller immutability/static-valid false example and actual copied-book consumer diagnostic.
-  Compile guard/payload faults in memory; require actual body assertion reds, unchanged producer.
-  Focus reference/language/publication/ledger/gate; synchronize current docs and commit .3a.
-  Root-cause check of initial fixture failure: grammar5.1 and independent signature matrix both
-  declare Count*Ratio -> Ratio, while Count/Ratio -> Count. The actual loader agrees; no contract
-  drift. Use doubled integer bindings divided by2.0 to produce exact halves in all five kinds.
-  Verification:262 cases/eight actual body assertion reds/copied-book named refusal/full reference
-  terminal0; publication/ledger/gate receipts below before commit. Commit: `STITCHCAD-G1-0079`.
+[Exact completed assertion node](G1-SLICE-canonical.md#completed-assertion-node--preserved-from-b2c4d6e) retained.
 
 ## Complete static review: exclusion diagnostic boundary
 
 [Exact completed record](G1-SLICE-canonical.md#completed-static-review-node--preserved-fromac7f0bf) is retained in the canonical sibling.
 
 - ID: `G1-SLICE.5b.1c.2`
-  Status: `pending`
+  Status: `blocked`
   Goal: settle D124 excluded-syntax diagnostic ruling, implement its exact recognizable forms and
   exclusions/precedence controls, then close complete .1c static obligation map.
   Acceptance: chapter/grammar/reference diagnostic rules agree, no unintended identifier reservation;
@@ -892,27 +868,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 [Exact completed record](G1-SLICE-canonical.md#completed-static-review-receipts--preserved-fromac7f0bf) is retained in the canonical sibling.
 
-### Assertion repair receipts — `G1-SLICE.5e.3a`, `2026-10-02` (UTC)
-
-- `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`
-  terminal0:262 independently authored cases/five arithmetic kinds/five classes/inclusive boundary,
-  exact owned failure arguments and caller unchanged. Actual copied-book consumer refuses1 with
-  formula_assertion/waistband_width_closure/length80000vs40000/eps_num1; producer verdict0.
-- Eight actual in-memory compiled false-guard/boundary/token/label/order/kind/class/value faults
-  require body assertion reds; source unchanged. Full structural runner terminal0 retains prior
-  signature4032/namespace1139/recipe196/review67 and numerical/canonical/binding families.
-- Initial test syntax/setup errors were discarded before evidence; Count*Ratio failure diagnosed
-  through actual loaded table, grammar5.1 and independent signature matrix. All specify Ratio;
-  correct Count/Ratio control preserves Count. No new contract or hidden table repair.
-- Language16 and publication9 terminal0; runtime assertion annex/index/contract/tool route agree.
-  D125 original report, oldest G1-0062 ledger and two oldest lessons independently match Git HEAD
-  before sealing. Completed52/63line task blocks retain exact predecessor bytes in existing sibling;
-  Knowledge Map path set unchanged, no cap raised. Rust/serializer source bytes unchanged.
-
-- Publication53chapters/25 API rows/1114source/1725rendered links; nine refusal controls, terminal0.
-  Ledger9/pointer13 and tree census10lanes/13trees/10siblings/0unowned-orphan-deadlinks pass0.
-  Independent materialized defect census13open/112unique sealed/overlap0/duplicates0, rc=0.
-  Staged doctrine registry13 checks terminal0; hook repeats this final staged record.
+[Exact completed assertion receipts](G1-SLICE-canonical.md#completed-assertion-receipts--preserved-from-b2c4d6e) retained.
 
 ## Missing-value routing
 
@@ -982,9 +938,61 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 - Final staged doctrine registry13 checks terminal0; hook repeats final committed records.
 
 - ID: `G1-SLICE.5e.3b`
-  Status: `pending`
+  Status: `done`
   Goal: repair D121 reference irrational-result provenance through reads/bindings/operators and
   named within/assertion tolerances before product provenance execution proof.
   Acceptance: T1 refuses when an irrational result contributes; T2-or-looser remains admissible;
   exact operations retain existing behavior, independent controls and actual fault reds.
-  Verification: `pending`; Commit: `pending`.
+  Verification:425 cases/26 actual body reds/copied-book refusal/full reference green.
+  Commit: `STITCHCAD-G1-0081`.
+  Pre-code protocol: contract4.2/5.2/9, grammar6/6.1/7 and actual numeric/read/binding/lazy
+  geometry/book-consumer paths reviewed. Director selected formula_domain for inadmissible T1;
+  record the ruling in ADR-0003 and normative diagnostics before the guard. Propagate immutable
+  source-call sets through executed numeric/Boolean operators, stored bindings, reads and lazy
+  geometry. Keep coordinate-specific sources so unrelated point coordinates do not taint x/y;
+  retain cached evidence only after successful complete resolution. Untaken branches contribute
+  nothing; executed arguments/conditions contribute even if arithmetic cancels their value.
+  Irrational built-ins plus dist/dir create approximation sources; explicit round_to follows
+  contract4.2's authored quantization rule. Input/binding rounding alone introduces no such source.
+  Preserve numeric values, successful tuple/representation, static metadata isolation and exact
+  comparison behavior. Retain returned value provenance at the actual
+  book consumer publication site alongside the existing stored binding. Refuse named T1 after operands and
+  tolerance have evaluated, preserving earlier errors, with comparison/class/source arguments.
+  Independently author function/operator/storage/lazy/cache/selection/conditional matrices and
+  copied-book consumer refusal; actual compiled faults must fail body assertions, source unchanged.
+  Own exact completed-task/oldest-ledger retention before live surfaces cross their targets;
+  synchronize runtime annex/live/task/ADR; run focused reference/language/publication/ledger/gates.
+
+## Completed namespace checklist — preserved from b2c4d6e
+
+### `G1-SLICE.5b.1b.1` — reference namespace and static headers
+
+- [x] **REPRODUCE / ISSUE** — actual predecessor accepts four reserved/shadow/assertion defects;
+  table-loaded statement baselines print ACCEPT, exit=0. Original D116/D117/D118/D120 retained.
+- [x] **ROOT CAUSE (WHY + WHERE)** — statement's recipe-only collision, all-reserved tolerance
+  and equal-kind-only assertion guards miss normative roles. static_namespace_contract.py
+  --mutations →1139 cases/13 actual body assertion reds, rc=0, with execution/metadata traps.
+- [x] **FIX** — checked declaration pairs; actual syntax/static/runtime phases; preserve source
+  identity fixtures and runtime tuple shapes. Canonical fixture origins replace computed_fixture.
+- [x] **ADDRESSED (verified)** — static_namespace_contract.py --mutations →1139 cases/13 reds,
+  rc=0; runtime adapter refuses four original defects before numerical callbacks. Source unchanged
+  during controls; D119/D121/D122 separately owned, no full static/evaluation approval claimed.
+- [x] **NO REGRESSION** — full reference suite/static signatures4032/12reds green; language16/
+  publication9 pass, rc=0; cargo test statement/recipe/canonical-recipe →30passed/three groups.
+- [x] **LOCKSTEP** — book/annex/index/live/task/ledgers agree, G1 stays5/18, defects13open/108sealed;
+  .1b.2 next. Old record bytes preserved; product namespace/type/graph remain .5b.2–.4.
+  promotion: declined (existing flat namespace, single-assignment and independent-evidence principles).
+
+
+### D121 recording receipts — G1-SLICE.5e.3b
+
+-425 independently authored cases/26 actual compiled body reds/copied-book named refusal pass0;
+  full structural reference and language16 terminal0. No source mutation during the new fault controls.
+- Publication9 terminal0; source/rendered links and warning-free build verified. Tree census10lanes/
+  13trees/10siblings/0unowned-orphan-deadlinks terminal0. Final ledger/defect/gate receipts follow.
+- Final publication54chapters/25APIrows/1126source/1745rendered links and ledger9/pointer13
+  terminal0. Archive materialize212 records; independent recursive report census11open/116sealed.
+  Four complete relocated task blocks match Git predecessor byte-exact; three original sealed
+  payloads match predecessor text with the canonical single terminal newline. Rust bytes unchanged.
+- Initial gate refuses TOOLBOX34123B; remove obsolete scaffold placeholder, final33867B.
+  Final staged make gate prints all doctrines green, terminal0; hook repeats this record.

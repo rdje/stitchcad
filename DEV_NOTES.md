@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02 UTC)_ — a rounded answer does not erase its derivation
+
+- D121 accepted sin90 at T1 because Val/stored/read/operator/book paths kept only numeric values.
+  Immutable source sets retain executed dependencies, including zero cancellation and conditions.
+  Untaken branches contribute nothing; separate coordinate sets prevent unrelated x/y taint.
+- Actual book publication and lazy geometry/cache retain sources. Director selects formula_domain;
+  both class guards preserve earlier errors and symbolic classes independent of supplied magnitudes.
+-425 independent cases/26 in-memory actual body reds and copied-book equal bound operands refusal
+  verify the repair; full reference/language16 green. No arbitrary transcendental/product proof.
+- Oldest complete ledger/lesson/D121 report and completed task blocks retain original payloads;
+  adopted external policy bodies independently match read-only sources; cleanup remains current.
+- promotion: declined (existing provenance, laziness and independently falsified evidence rules).
+
 ## _(2026-10-02 UTC)_ — absent values need origin and context
 
 - D122 actual size context was reported as tolerance-unbound, missing geometry/tolerance as unknown,
@@ -19,20 +32,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Exact completed27/35line blocks retained in canonical sibling; oldest ledger/lesson and original
   D122 plus new D127 reports sealed without altering payloads. No cap raised or Rust source changed.
 - promotion: declined (existing origin, uncertainty and independently falsified evidence principles).
-
-## _(2026-10-02 UTC)_ — false assertions must raise their named diagnostic
-
-- D125 reference returnsFalse. Now raises formula_assertion with exact ordered values/kinds,
-  label and class/value; preserves True tuple/inclusive threshold/earlier errors. FErr owns arguments.
-- Independent262 cases/five kinds/classes and actual copied-book failure80000vs40000/eps_num1
-  pass. Eight in-memory guard/payload faults earn body assertion reds; reference bytes unchanged.
-  Full reference green. No product runtime/typed payload claim; D121/D122/D124 remain owned.
-- Initial Count*Ratio fixture expectation was wrong: grammar table/independent signature matrix/
-  actual loader all give Ratio. Use Count/Ratio and integer bindings divided by2.0 for exact halves.
-  Syntax and invalid fractional-input setup failures corrected before green evidence.
-- Completed52/63line task blocks moved byte-exact to existing sibling, no new path/cap increase.
-  Oldest two lessons, G1-0062 ledger and original D125 report retain exact Git predecessor bytes.
-- promotion: declined (existing diagnostic, dimensional algebra and independent-evidence rules).
 
 # Sealed archive — earlier lessons
 
@@ -169,3 +168,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part76.md`](docs/history/stitchcad-devnotes-part76.md) | observed handoff CI lesson | 8 lines, 625 bytes, `sha256:f9b6ffbc…` |
 | [`devnotes-part77.md`](docs/history/stitchcad-devnotes-part77.md) | whole preflight/namespace lessons | 41 lines, 3724 bytes, `sha256:898aab4a…` |
 | [`devnotes-part78.md`](docs/history/stitchcad-devnotes-part78.md) | static recognition review lesson | 17 lines, 1566 bytes, `sha256:94655e7b…` |
+
+| [`stitchcad-devnotes-part79.md`](docs/history/stitchcad-devnotes-part79.md) | G1-0079 assertion lesson | 13 lines, 1135 bytes, `sha256:71b5fdbc…` |

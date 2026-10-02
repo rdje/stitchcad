@@ -154,6 +154,17 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0081 - reference contribution provenance (leaf `G1-SLICE.5e.3b`)
+
+The reference retains approximation-call sources through executed operators/conditions, numeric
+and Boolean bindings/reads, actual book publication and precise lazy geometry/cache coordinates.
+Named T1 assertion/within comparisons now raise formula_domain under the director's ruling;
+T2-or-looser keeps its threshold and exact/untaken/independent-coordinate T1 controls still pass.
+425 independent controls/26 actual compiled body assertion reds and actual copied-book bound-value
+refusal pass; full reference/language16/publication/ledger/gate checks recorded in the leaf.
+Runtime/diagnostic/ADR/live/task records agree; oldest complete ledger/lesson/D121 report and task
+receipts retain predecessor payloads. G1 stays5/18; product evaluation/real geometry/release pending.
+
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 
 Post-commit handoff first refuses malformed lsof name evidence2. Captured fresh actual census
@@ -378,16 +389,5 @@ progressive links/API map/index/README/live/task records align; D106 literal dec
 Completed subtree/proof and oldest ledgers remain exact in bounded parts. G1 stays5/18; defects10open/
 96sealed. Next .3e.2 ordered recipe/4096/context; statement identity and evaluation remain later work.
 
-## STITCHCAD-G1-0064 - coupled canonical identity review (leaf `G1-SLICE.5a.3d.3`)
 
-Expression identity now has a complete scoped obligation map against grammar4/5 and D84/D95/D103.
-All25 worked expressions match independently checked authored bytes and exact book population;
-a distinct255-argument call preserves complete order on64KiB stack. Nested unit/whitespace aliases
-preserve identity while raw turns and kind remain distinct. Product serializer source stays exact.
-
-Nine public contracts/three additional actual compiled symbol/order/truncation assertion reds pass
-with byte-identical restoration. Strict native525, release9/WASM3 and structural/book controls pass.
-D105 stale syntax-annex/introduction status is corrected. Current grammar/decision/API status/index/
-live/task pointers agree; earlier serializer proof and oldest ledger payload retain exact text in
-bounded parts. .5a.3d closes for expressions only; next .3e ordered let/assert syntax. G1 stays5/18;
-defects10open/94sealed. Binding/evaluation, geometry, storage and command/API/MCP remain later work.
+| [`stitchcad-changelog-part78.md`](docs/history/stitchcad-changelog-part78.md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |

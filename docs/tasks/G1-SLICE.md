@@ -818,7 +818,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | pending | `G1-SLICE.5b.1c.2` | `pending` | Static obligation map reviewed; D124 excluded-form diagnostic ruling required |
 | done | `G1-SLICE.5e.3a` | `done` | D125 named reference assertion diagnostics; product execution pending |
 | done | `G1-SLICE.5e.1a` | `done` | D122/D127/D128 reference origin/context and state/metadata refusals |
-| next | `G1-SLICE.5e.3b` | `pending` | Independent D121 reference irrational-result provenance repair |
+| done | `G1-SLICE.5e.3b` | `done` | D121 reference contributions/class refusal verified |
+| next | `G1-SLICE.5b.1c.2` | `blocked` | Director D124 excluded-form ruling and full static review closure |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -842,6 +843,26 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Acceptance Checklist
 
+### G1-SLICE.5e.3b — D121 executed contribution provenance
+
+- [x] **REPRODUCE / ISSUE** — actual predecessor reference accepts sin90 at T1 in both
+  assertion and within; scoped loader reproduction prints ACCEPT True/boolean1, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual Val only carries kind/value; stored/read/operator/
+  lazy/book paths discard derivation. provenance_contract.py --mutations exercises425 cases and
+  26 actual compiled guard/source/cache/consumer body assertion reds, rc=0, locating those seams.
+- [x] **FIX** — immutable sources through executed dependencies, coordinate-specific cache evidence,
+  actual book binding publication and two named-class guards. Director selects formula_domain.
+- [x] **ADDRESSED (verified)** — provenance_contract.py --mutations →425 cases/26 body reds,
+  rc=0; actual copied-book equal bound operands preflight21 then refuse named eps_num/hypot.
+  Exact/untaken/coordinate-independent T1 stays admissible; no product execution claim.
+- [x] **NO REGRESSION** — full reference runner and language16 pass, rc=0; earlier numeric/static/
+  origin/assertion controls remain watched. Publication/ledger/tree/staged-gate receipts recorded
+  in the evidence sibling before commit; Rust/serializer bytes unchanged.
+- [x] **LOCKSTEP** — ADR/ruling, diagnostic/runtime/static book, task/live/resume/tool routes align;
+  oldest ledger/lesson/D121 report and completed task payloads retained exactly in bounded parts.
+  promotion: declined (existing provenance, lazy execution and independent-evidence principles).
+
+
 Current code evidence is fresh, ticked and tool-backed in its owning leaf. Future ontology changes
 also run glossary/API, feature and publication checks. Prior checklists and authoring rules remain in
 [retained navigation](G1-SLICE-journal.md#acceptance-navigation--retained-during-g1-0052),
@@ -851,24 +872,7 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
 [formula evidence](G1-SLICE-formulas.md), [numeric journal](G1-SLICE-journal.md) and
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
 
-### `G1-SLICE.5b.1c.1` — static review and diagnostic proposal
-
-- [x] **REPRODUCE / ISSUE** — actual unknown loop calls/invalid definitions differ from contract6's
-  unspecified unsupported forms; D124 owned .1c.2. False assertion returns False (D125, .5e.3).
-- [x] **ROOT CAUSE (WHY + WHERE)** — static_review_contract.py --mutations →67 actual cases/
-  four body assertion reds, rc=0; v1 has three reserved keywords but no excluded-form syntax.
-  Independent270deg/radius5m chord≈11.78um defeats bbox-only5um promise (D126), rc=0.
-- [x] **FIX** — preserve existing semantics pending D124 ruling; concrete ADR-0003 proposal,
-  complete static owner map/product protocols. Correct D126 prose; record D125 runtime owner.
-- [x] **ADDRESSED (verified)** — static_review_contract.py --mutations →67 cases/four actual
-  assertion reds, rc=0; actual21/13 populations exact, execution trapped. Exact chord lower bound
-  >10um and independent/reference calculations agree, rc=0. D124/D125 remain explicitly open.
-- [x] **NO REGRESSION** — run_formula_structure_probes.sh →rc=0, existing4032/1139/196 matrices
-  retained; static review/fault producer →rc=0; language16/publication9/ledger9/pointer13 pass,
-  rc=0; staged make gate →all doctrines green, rc=0. Rust source/test behavior unchanged.
-- [x] **LOCKSTEP** — book/grammar/annex/index/ADR/live/task records agree; .1c.2 awaits D124.
-  G1 remains5/18; no complete static, runtime, physical geometry or production approval claimed.
-  promotion: declined (existing closed grammar and independently falsified evidence principles).
+[Exact completed static review checklist](G1-SLICE-canonical.md#completed-static-review-checklist--preserved-from-b2c4d6e) retained.
 
 ### `G1-SLICE.5b.1b.2` — whole reference static preflight
 
@@ -889,23 +893,7 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
   G1 stays5/18, defects12open/110sealed; .1b done, .1c next. Exact old records retained.
   promotion: declined (existing whole-refusal, declaration-order and independent-evidence principles).
 
-### `G1-SLICE.5b.1b.1` — reference namespace and static headers
-
-- [x] **REPRODUCE / ISSUE** — actual predecessor accepts four reserved/shadow/assertion defects;
-  table-loaded statement baselines print ACCEPT, exit=0. Original D116/D117/D118/D120 retained.
-- [x] **ROOT CAUSE (WHY + WHERE)** — statement's recipe-only collision, all-reserved tolerance
-  and equal-kind-only assertion guards miss normative roles. static_namespace_contract.py
-  --mutations →1139 cases/13 actual body assertion reds, rc=0, with execution/metadata traps.
-- [x] **FIX** — checked declaration pairs; actual syntax/static/runtime phases; preserve source
-  identity fixtures and runtime tuple shapes. Canonical fixture origins replace computed_fixture.
-- [x] **ADDRESSED (verified)** — static_namespace_contract.py --mutations →1139 cases/13 reds,
-  rc=0; runtime adapter refuses four original defects before numerical callbacks. Source unchanged
-  during controls; D119/D121/D122 separately owned, no full static/evaluation approval claimed.
-- [x] **NO REGRESSION** — full reference suite/static signatures4032/12reds green; language16/
-  publication9 pass, rc=0; cargo test statement/recipe/canonical-recipe →30passed/three groups.
-- [x] **LOCKSTEP** — book/annex/index/live/task/ledgers agree, G1 stays5/18, defects13open/108sealed;
-  .1b.2 next. Old record bytes preserved; product namespace/type/graph remain .5b.2–.4.
-  promotion: declined (existing flat namespace, single-assignment and independent-evidence principles).
+[Exact completed namespace checklist](G1-SLICE-evidence.md#completed-namespace-checklist--preserved-from-b2c4d6e) retained.
 
 ### G1-SLICE.5e.1a — D122/D127/D128 origin/context reads
 
@@ -993,3 +981,5 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
   Commit: `STITCHCAD-G1-0080h`; publication/ledger/gate receipts below before commit.
   Recording checks: current publication9/ledger9 and embedded pointer13 terminal0; staged doctrine
   and hook repeat final records before commit. Source/guard bytes unchanged, product frontier .3b.
+
+- `2026-10-02` (UTC): .5e.3b/STITCHCAD-G1-0081 repairs D121;425 cases/26 actual reds; director formula_domain ruling. Next D124 ruling/closure.

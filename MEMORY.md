@@ -1,28 +1,15 @@
 # MEMORY — resume pointer (layer A; overwrite-only)
 
-Read `CLAUDE.md` and its doctrine pointers, then the active task-tree frontier.
-Latest commit: derive with `git log --oneline -1`.
+Read CLAUDE.md and the doctrine pointers, then the active frontier.
+Latest commit: derive with git log --oneline -1.
 
 ## Current state
 
-- **Active tree:** G1-SLICE; frontier .5e.3b (independent D121 reference irrational provenance).
-- **Next action:** read canonical approximation/tolerance contracts, reproduce D121 through
-  actual reference, then repair/verify contribution provenance across bindings/reads/operations,
-  within and assertions. Owner in G1-SLICE-evidence.md; product execution remains pending.
-  D122/D127/D128 close at .5e.1a: nine-origin/context routing, supplied optional values and named malformed
-  metadata/state refusals;1466 cases/thirteen actual reds/two copied-book consumers/full reference green.
-  D125 assertion repair verified at .5e.3a; syntax/input/identity implemented, no product evaluator.
-  New runtime annex keeps book details bounded. D124 director diagnostic ruling still pending
-  .5b.1c.2, concrete ADR-0003 proposal; do not invent excluded source forms or reserved names.
-  D70 axes waits .4c.2. Cleanup current: docs/ARTIFACT_CLEANUP.md.
-- **Handoff observation:** .5e.1a.h records one malformed-name census refusal2; exact first OS
-  record was not retained. Captured complete repeat and canonical retry0; cause unconfirmed,
-  P1 capture/reproduction owned SPINE.23r. Product .5e.3b stays next.
-- **Handoff:** bash scripts/check_handoff.sh with OS-visible process access; --idle-cua only
-  when no CUA call/result is pending. Neutral inherited checker remains non-authoritative/unchanged.
-- **In-flight uncommitted work:** none after recording commit; D124 director answer remains pending.
-  Derive git status --short and run the canonical handoff census before clearing.
-- **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Procurement/expert acts:
-  governance §8 and G3 .16.
-- **Push:** derive with make push-due; COMMIT.md defines cadence and exceptions.
-- **Cleanup:** derive due time from docs/ARTIFACT_CLEANUP.md.
+- Active tree: G1-SLICE; frontier .5b.1c.2 in G1-SLICE-evidence.md.
+- Next action: obtain D124 excluded-form diagnostic ruling on the concrete ADR-0003 proposal,
+  then implement/verify it and close the static review before .5b.2–.4 product validation.
+  D121 reference provenance is verified; product evaluation remains .5c–.5g.
+- In-flight uncommitted: none after the recording commit; D124 answer pending.
+- Read the leaf's blocked contract before choosing independent work; SizeSet D70 remains .4c.2.
+- Verify Git state and OS-visible bash scripts/check_handoff.sh --idle-cua before clearing.
+  Cleanup due time is derived from docs/ARTIFACT_CLEANUP.md; push cadence from COMMIT.md.

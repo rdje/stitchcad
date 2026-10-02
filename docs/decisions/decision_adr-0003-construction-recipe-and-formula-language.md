@@ -133,3 +133,12 @@ whether a previously valid parameter named loop, repeat, fn or macro remains val
 is inferred from these illustrative examples. Neither choice enables any excluded capability.
 G1-SLICE.5b.1c.2 owns the ruling, implementation and closure; until then the reference is not an
 oracle for the table's unspecified excluded-form diagnostics. Other static evidence retains scope.
+
+## D121 tolerance-class diagnostic ruling — 2026-10-02 (UTC)
+
+The director selected formula_domain for a T1 comparison whose operands carry an approximation
+contribution. Contract4.2 already requires T2 or looser; the diagnostic table now explicitly covers
+an inadmissible tolerance class. The reference records comparison (within or the actual assertion
+name), requested tolerance_class and sorted contribution_sources. An equal numeric answer does not
+erase its derivation. Product typed context and arbitrary-input transcendental accuracy remain
+separate .5b–.5g obligations. This ruling does not settle the pending D124 exclusion proposal.
