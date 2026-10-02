@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — canonical literal display must not conceal a different value
+
+- Actual reference diagnostic reproduces fractional unit and bare-decimal nodes: two canonical-zero
+  literals accumulate 4/5 internal quantum and bind 1. L1 previously rounded only the displayed node,
+  masking the disagreement with canonical kind:integer identity. Scoped source history identifies
+  3704b8a G0-CONTRACT.9 as the introducing parser; later D75/D76 repairs did not alter literal values.
+- Convert/round each literal once at input, before expression arithmetic. Counts retain kind and
+  bare decimals/pct retain ratio scaling; no angle modulo or arithmetic-node folding is introduced.
+  Sixty explicit rows/360 controls use an independent Decimal rounding oracle and kind-preserving
+  respellings; six actual guards discriminate quantum, ties, scale, kind and direct unit factors.
+- D80/D81 repair duplicate units numbering and a stale live next pointer. Formula contract now
+  explains the existing canonical-input boundary; details and honest proof gaps stay in the annex.
+- The wider diagnostic exposes D82 early operator rounding and D83 unenforced numeric domains;
+  .5a.3b.2/.3 own immediate repairs before product normalization. Published example agreement is
+  still curated scope, not complete exact-arithmetic or arbitrary-input production verification.
+- Completed rounding evidence and oldest live payloads preserve committed predecessor text.
+- promotion: declined (routine reference repair; literal conversion/canonical identity policy unchanged).
+
 ## _(2026-10-02)_ — signed reconstruction must follow checked magnitude narrowing
 
 - D78's sole introducing round.rs revision is eb83f01 (G0-CONTRACT.18). The public diagnostic
@@ -77,34 +95,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   the main tree space for current work without raising caps. Book details stay in the syntax annex.
 - promotion: declined (reference-tool repair; fixed language limits and ADR-0003 authority unchanged).
 
-## _(2026-10-02)_ — lexical source is borrowed and expression authority stays separate
-
-- FormulaLexer borrows exact machine source and produces immutable text/span/kind tokens. One shared
-  private spelling/keyword classifier preserves MachineToken public errors. ASCII preflight occurs
-  before any token; token/error iteration fuses. Debug/errors omit source, while lexeme text is explicit.
-- Successful lexing is deliberately weaker than valid expression/recipe: adjacent atoms, comments,
-  unsupported calls/units/powers and type/name/numeric bounds stay with the parser/checker/evaluator.
-  Leading zeroes/precision and whitespace gaps are retained for later exact literal/canonical work.
-- The gap contract found D74: Rust's ASCII-whitespace helper omits vertical tab. Explicit handling and
-  a real guard mutation verify the fix. D73 stale ADR clause references now target actual examples and
-  exclusions. The mutation runner initially rejected custom assertion text lacking its output marker;
-  named assertion messages correct the evidence. Strict lint exposed test indexing/helper expect and
-  iterator style; safe access and a borrowing iterator correct the harness without loosening lints.
-- Thirteen lexical contracts/two privacy-lifetime docs, nine actual production assertion reds and
-  restored native/WASM checks pass. Book source/rendered/status/index checks cover 48 chapters/15 APIs.
-  Checks use repository-local Cargo/scratch storage; installed toolchains remain read-only dependencies.
-- Completed publication evidence and oldest live ledger payloads retain predecessor bytes; D73/D74
-  seal with logged descriptions unchanged. No cap changes, remote-CI or recipe-execution claim.
-- promotion: declined (routine syntax subleaf; canonical language/identity decisions remain ADR-0003).
-
-
-
-
-
-
-
-
-
 
 # Sealed archive — earlier lessons
 
@@ -171,3 +161,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part38.md`](docs/history/stitchcad-devnotes-part38.md) | chart correspondence lesson | 14 lines, 1281 bytes, `sha256:453f9677…` |
 | [`devnotes-part39.md`](docs/history/stitchcad-devnotes-part39.md) | MTM/coverage lessons | 31 lines, 2736 bytes, `sha256:c7d16877…` |
 | [`devnotes-part40.md`](docs/history/stitchcad-devnotes-part40.md) | progressive book lesson | 18 lines, 1677 bytes, `sha256:89bc77bc…` |
+
+| [`devnotes-part41.md`](docs/history/stitchcad-devnotes-part41.md) | borrowed lexical source lesson | 19 lines, 1811 bytes, `sha256:92361240…` |

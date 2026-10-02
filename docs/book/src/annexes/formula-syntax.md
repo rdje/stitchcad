@@ -214,12 +214,34 @@ bounds belong to .5a.3/.4 and later numeric checking; name/type checks, exact ev
 operation recipes and geometry remain explicit owners under .5 and later gates. Parsing an unknown
 value's name does not read it or grant a numeric fallback.
 
-## Known reference literal-identity gap
+## Reference literal quantum and identity controls
 
-D79 remains open under G1-SLICE.5a.3b. The reference retains fractional unit literals while its
-canonical display rounds them to internal integers. `0.00004 cm + 0.00004 cm` therefore binds 1 um
-in that instrument, but respelling each canonical-zero literal as `0 um + 0 um` binds 0. This is a
-reference defect against the identity/conversion contract, not permission to alter that contract.
-Current published example checks remain scoped to their rows. Do not use the reference to sign off
-identity-preserving literal respelling until the owned repair is verified. Product canonicalization
-and evaluation remain pending; the syntax parser above performs no numeric computation.
+D79 is repaired at the input boundary: bare decimals and all seven unit forms convert exactly once
+and round half away from zero to their canonical internal integer. Counts remain counts; a bare
+decimal or percent remains a ratio. Minus is still a separate operator, preserving sign symmetry.
+The census compares that actual node to the published canonical integer; it no longer rounds a
+fractional node's display to conceal a mismatch.
+
+For example, each literal in `0.00004 cm + 0.00004 cm` becomes length:0 before addition, matching
+`0 um + 0 um`. The same holds for two bare `0.0000004` ratios. `0.00005 cm` becomes length:1,
+while `0.0000005` becomes ratio:1. Kind is part of identity: count 1 and ratio 1.0 remain distinct.
+Angles retain their literal microdegree value here; stored-angle normalization is a separate audit.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_literal_mutations.sh
+python3 -I -B docs/tasks/artifacts/formula_structure/literal_diagnostic.py
+```
+
+Sixty explicit rows and 360 controls check all unit factors, below/at/above ties, zeroes, leading
+zeroes, decimal precision, kind-preserving respellings, sign symmetry and sums of converted inputs.
+An independent standard-library Decimal oracle checks every explicit row. Six actual reference
+mutations require assertion failures and exact source restoration; run that command alone.
+The diagnostic prints observations, and its exit status alone is not a correctness verdict.
+
+The reference remains a curated book instrument. D82's premature intermediate arithmetic rounding
+and D83's incomplete numeric-domain/stored-angle enforcement remain owned by G1-SLICE.5a.3b.2/.3.
+For instance, the instrument currently computes `1 um / 2 + 1 um / 2` as 2 rather than exact 1.
+This literal proof does not certify exact operator evaluation, rational bounds, all numeric domains
+or stored angles. Current published example checks retain their row scope. Product canonicalization
+and evaluation remain pending; the syntax API above performs no numeric computation.

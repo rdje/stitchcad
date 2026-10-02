@@ -74,6 +74,20 @@ the digests afterwards.
 
 | [`changelog-part37.md`](docs/history/stitchcad-changelog-part37.md) | STITCHCAD-G1-0021 | 13 lines, 1082 bytes, `sha256:2feb224c…` |
 
+| [`changelog-part38.md`](docs/history/stitchcad-changelog-part38.md) | STITCHCAD-G1-0022 | 13 lines, 1098 bytes, `sha256:fbe202b2…` |
+
+## STITCHCAD-G1-0042 - reference literals preserve canonical integer identity (leaf `G1-SLICE.5a.3b.1`)
+
+D79 closes: bare decimals and all seven unit forms convert once and round once into canonical
+integer literals before arithmetic. The census compares the actual node, without rounding its
+presentation to hide a fraction. Sixty explicit rows/360 controls agree with an independent Decimal
+oracle; six actual quantum/tie/scale/kind/conversion guard reds restore exact reference source.
+Structural/input/reference/Fraction controls, language 15/publication nine and recording gates pass.
+D80 duplicate units section numbering and D81 stale G1 status routing are corrected; glossary/index
+and progressive learning stay intact. Completed rounding evidence/oldest ledgers preserve predecessor
+bytes. D82 premature arithmetic rounding and D83 numeric-domain/stored-angle enforcement are owned
+next under .5a.3b.2/.3. G1 remains 5/18, defects 12 open/70 sealed; no production numeric/evaluation claim.
+
 ## STITCHCAD-G1-0041 - total extreme-magnitude rounding (leaf `G1-SLICE.5a.3a`)
 
 D78 closes: public i128 MIN/1 previously panicked before its checked i64 conversion. Checked unsigned
@@ -364,17 +378,3 @@ duplicate targets refuse setup; a no-op writer mutation makes the suite red. Cen
 unchanged. Defects seal in part9; 8 open / 54 sealed. Pocket/button evidence relocates unchanged.
 Director reaffirmed SOTA/signoff/production-grade and comprehensive external-agent MCP/API control;
 book and .6/.9/G5 acceptance retain discoverability, recovery, parity and independent evaluation.
-
-## STITCHCAD-G1-0022 - Pocket retains physical composition and owned placement intent (leaf `G1-SLICE.3c.4d.1`)
-
-Immutable Pocket binds served/component physical copies to explicit source Pieces, owned position
-and directed orientation, and a required logical opening. Nonempty unique components, unambiguous
-current Piece contexts and copy/source guards refuse silent substitution. Borrowed component metadata
-is canonical; its contour repairs remain separate Design/G2 obligations. Opening resolution and
-supported execution remain G3, without invented vocabulary/defaults or a scope approval.
-
-Eleven contracts + privacy pass. Independent copy-source, orientation-ownership and nonempty-list
-mutations fail red; restored strict Rust/WASM/book, fixture/feature/glossary/tree, ledger and staged
-gates pass. Book/live records and pre-code decision align. Oldest committed changelog/lesson seal
-unchanged to part22/part21. Director reaffirmed the SOTA/signoff/production-grade bar; object-family
-signoff now re-derives the structural evidence. G1 remains 4/18 leaves, 3/4 families; next `.3c.4d.2`.

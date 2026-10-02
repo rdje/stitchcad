@@ -130,6 +130,11 @@ cached result that differs from a fresh one is a defect.
 
 ### 4.2 Exact arithmetic, and the two places a value rounds
 
+Literal input first converts once into its canonical internal integer, by
+[grammar §2](formula-language/grammar.md). That input conversion precedes expression arithmetic:
+two literals each below half a quantum are two canonical zeros. The rounding points below concern
+operations on those canonical inputs; they do not retain hidden fractions in an integer literal.
+
 Arithmetic is **exact rational arithmetic** — `+` `-` `*` `/` never round, and an implementation uses
 arbitrary-precision integers for numerator and denominator. The contract is the value, not the
 representation: a numerator or denominator past `max_rational_bits` (§4.3) is `formula_domain`, not a

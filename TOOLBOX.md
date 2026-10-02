@@ -138,3 +138,10 @@ production assertion reds/exact restoration; run alone. No complete literal/eval
 Public round diagnostic: `bash docs/tasks/artifacts/formula_structure/run_round_diagnostic.sh`
 links the actual current Cargo artifact and prints caught unwinds/typed results for six fixed inputs.
 It is a diagnostic producer, not a passing verdict; round_contract judges the values.
+
+Reference literal identity: `literal_contract.py` in formula_structure checks 60 explicit rows/360
+controls with independent Decimal rounding, kind-preserving respellings and sums/signs; the structural
+suite runs it. `bash docs/tasks/artifacts/formula_structure/run_literal_mutations.sh` requires six
+actual guard assertion reds/exact restoration; run alone. `literal_diagnostic.py` in that directory
+prints actual literal/arithmetic/domain observations; diagnostic rc=0 is not a correctness verdict.
+D82/D83 own remaining exact arithmetic/numeric-domain proof before this is a production oracle.

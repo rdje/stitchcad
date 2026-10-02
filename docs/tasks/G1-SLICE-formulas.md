@@ -244,3 +244,61 @@ exact committed text; the current frontier and verification/commit journal remai
   exact predecessor bytes; no cap changed. G1 remains 5/18, D70 pending; next .5a.3.
 
 Further syntax work remains owned by the parent frontier.
+
+## Rounding contract and evidence — preserved from 543dfa6
+
+- ID: `G1-SLICE.5a.3a`
+  Status: `done`
+  Goal: investigate/repair D78 total public rounding at extreme i128 magnitudes before conversion.
+  Pre-code protocol: round.rs public i128 numerator/denominator has no narrowing precondition;
+  units chapter 1/2/9, numerical ADR and library docs require UnitError rather than panic/wrap.
+  Suspected path: n=i128::MIN, d=1 yields unsigned q=2^127; casting q to i128 gives MIN and
+  negating it overflows before the existing i64 try_from can refuse. Build a repo-local actual
+  public-interface diagnostic first, catch unwinds and compare positive/negative extremes/control.
+  Confirmed actual public probe: MIN/1 unwinds, MAX/1 and MIN/-1 return typed Overflow; controls
+  succeed, rc=0. Scoped history: eb83f01 G0-CONTRACT.18 introduced the only round.rs revision.
+  Preserve half-away quotient/remainder behavior; checked magnitude-to-i64/sign
+  reconstruction must allow exactly |i64::MIN| for negative results and refuse every wider magnitude.
+  No float, saturation, changed rounding/tie rule or narrower caller precondition. Cover i128 MIN/MAX,
+  both signs, denominator MIN/zero, i64 endpoints and just-outside values; real guard mutations must
+  discriminate magnitude bounds/sign/negative endpoint/ties and restore original source bytes.
+  Strict Rust/WASM, scoped book/reference/ledger/archive/censuses and staged doctrines; report root
+  and measured public behavior. No canonical literal/evaluation claim. D79 reference literal identity
+  is already independently reproduced and scheduled next by .3b; do not use it as canonical oracle yet.
+  Preserve completed AST protocol/checklist and oldest live ledgers at health, sync numerical annex
+  and live resume/status; commit before reference repair/product normalization.
+  Verification: four public contracts/36 Fraction rows; five actual assertion reds/exact restoration;
+  strict 476 tests, release four and three-library WASM green.
+  Commit: `STITCHCAD-G1-0041` (this recording commit).
+
+### `G1-SLICE.5a.3a` — total extreme-magnitude public rounding
+
+- [x] **REPRODUCE / ISSUE** — actual public-interface diagnostic catches an unwind for MIN/1;
+  MAX/1 and MIN/-1 return typed Overflow, i64 MIN/1 and ±1/2 controls succeed. D78 is owned before fix.
+- [x] **ROOT CAUSE (WHY + WHERE)** — rustc repo-local probe linked to actual debug sc-units, then
+  target/formula-round-diagnostic/probe → MIN/1 Err(Any), controls as above, rc=0; tracked
+  round_diagnostic.rs/run_round_diagnostic.sh preserve that public producer. round.rs casts
+  unsigned q=2^127 to i128 MIN and negates it before checked i64 narrowing. git log --follow round.rs
+  → sole introduction eb83f01 G0-CONTRACT.18, rc=0. Public i128 signature promises typed failure.
+- [x] **FIX** — explicit negative i64 endpoint and checked unsigned-to-i64 conversion before sign;
+  no wider quotient is cast/negated, no caller restriction or rounding/error-family change.
+- [x] **ADDRESSED (verified)** — cargo test -p sc-units --test round_contract → four passed/0 failed,
+  rc=0; independent round_reference.py → 36 exact Fraction rows pass, rc=0. run_round_mutations.sh
+  → five actual assertion reds/rc=101 each and exact source restoration, runner rc=0. Rebuilt public
+  probe → all wide cases typed Overflow, controls unchanged, no unwind, rc=0. D78 description seals.
+- [x] **NO REGRESSION** — make check → strict lint/476 tests including docs green, rc=0; make wasm
+  → three-library cross-build green, rc=0; cargo test -p sc-units --release --test round_contract
+  → four passed/0 failed, rc=0. Structural/input/reference/Fraction controls and language 15 probes pass, rc=0; publication nine
+  probes and warning-free book: 48 chapters/16 APIs, 993 source/1514 rendered links, rc=0. Ledger
+  nine probes and archive verify/verify-retention → 100 records/250460 resident bytes, rc=0. Tree
+  10 lanes/13 trees/eight siblings/zero gaps; glossary 310 terms/nine parts/158 tokens; feature/
+  uncertainty/fixture censuses green, rc=0. Exact AST/ledger preservation and 11/67 defect census
+  verified; durable public diagnostic agrees with typed results. Staged `make gate` → all doctrines green, rc=0.
+  No new remote-CI, full canonical identity or product evaluation claim.
+- [x] **LOCKSTEP** — expert numerical annex explains endpoint/error behavior and scoped proof;
+  formula annex records D79's independently observed identity gap with immediate .3b ownership.
+  Normative rounding/roadmap, learner routes, glossary/index remain unchanged. Completed AST
+  contract/checklist and oldest live payloads preserve b681a49 bytes; no cap changes. Live snapshot
+  11 open/67 sealed, G1 5/18, sc-units 31 tests including its doc; next .3b, D70 pending.
+
+Current work remains in the parent frontier.

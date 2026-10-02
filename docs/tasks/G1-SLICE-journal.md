@@ -99,3 +99,23 @@ Lesson promotion declined for .5a.1: routine lexical mechanics; language/canonic
 - [x] **NO REGRESSION** — `make probes` → 25 suite(s) green, rc=0; ledger nine pass/0 fail and tree
   nine pass/0 fail. Tree census verifies eight linked siblings/zero orphans; archive retention green.
   Partition preserves historical claims as dated snapshots, not new runtime or closure certificates.
+
+## Formula journals — preserved from 543dfa6
+
+| `2026-10-02` | `.5a.2a` | reference direct/end-to-end controls; actual mutations/restoration; tree; full probes/book/ledger/archives; staged gate | 16+2 controls, four reds; tree nine; full 25 suites green; D75/D77 fixed; D76 next |
+
+| `2026-10-02` | `.5a.2b.1` | input 130+3; nine guard reds/restoration; structural 16+2; language 15; Rust 20; recording checks | focused/book nine/ledger nine/archive/censuses green; exact preservation and 10/66 defect census verified |
+
+| `2026-10-02` | `.5a.2b.2` | product contracts/mutations/reference fixtures; strict native/WASM; recording checks | 15+3/eleven reds/twelve fixtures; strict 472/WASM, publication nine/ledger nine/archive/censuses green |
+
+| `2026-10-02` | `.5a.3a` | public diagnostic/contracts/Fraction/mutations; native/release/WASM; recording checks | four/36/five reds; strict 476/release four/WASM green, typed diagnostic restored |
+
+| `.5a.2a` | `STITCHCAD-G1-0038 (leaf G1-SLICE.5a.2a): reference structural checks include every call argument` | 16+2 controls/four actual reds; tree nine; full 25 suites; book/ledger/archive green |
+
+| `.5a.2b.1` | `STITCHCAD-G1-0039 (leaf G1-SLICE.5a.2b.1): reference machine input preserves spelling and unit separators` | 130+3 input controls/nine actual reds; structural/language/Rust checks green |
+
+| `.5a.2b.2` | `STITCHCAD-G1-0040 (leaf G1-SLICE.5a.2b.2): production expressions parse with bounded iterative syntax` | product 15+3, eleven assertion reds; twelve reference fixtures; strict 472/WASM green |
+
+| `.5a.3a` | `STITCHCAD-G1-0041 (leaf G1-SLICE.5a.3a): extreme rounding magnitudes return typed overflow` | four public/36 Fraction/five reds; strict 476/release four/WASM green |
+
+Current journal remains in the parent.

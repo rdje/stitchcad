@@ -116,7 +116,7 @@ above and never store a float. Locale handling is specified in the international
 particular a decimal comma in input SHALL NOT change the stored meaning of a value, and canonical
 project files are locale-independent.
 
-### 2.2 Public rounding endpoints
+### 2.3 Public rounding endpoints
 
 The shared `sc_units::round::div_round_half_away_from_zero` accepts signed i128 numerator and
 denominator and returns an i64 or UnitError. A zero denominator returns DivisionByZero; a rounded

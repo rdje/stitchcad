@@ -1,0 +1,61 @@
+# source	kind	internal integer
+0 um	length	0
+0.49 um	length	0
+0.5 um	length	1
+0.51 um	length	1
+1.5 um	length	2
+0001.000 um	length	1
+25 um	length	25
+0 mm	length	0
+0.00049 mm	length	0
+0.0005 mm	length	1
+0.00051 mm	length	1
+0.0015 mm	length	2
+0001.000 mm	length	1000
+25 mm	length	25000
+0 cm	length	0
+0.000049 cm	length	0
+0.00005 cm	length	1
+0.000051 cm	length	1
+0.00015 cm	length	2
+0001.000 cm	length	10000
+2.5 cm	length	25000
+0 m	length	0
+0.00000049 m	length	0
+0.0000005 m	length	1
+0.00000051 m	length	1
+0.0000015 m	length	2
+0001.000 m	length	1000000
+0.025 m	length	25000
+0 in	length	0
+0.002499 in	length	63
+0.0025 in	length	64
+0.002501 in	length	64
+0.0075 in	length	191
+0001.000 in	length	25400
+0.5 in	length	12700
+0 deg	angle	0
+0.00000049 deg	angle	0
+0.0000005 deg	angle	1
+0.00000051 deg	angle	1
+0.0000015 deg	angle	2
+0001.000 deg	angle	1000000
+90 deg	angle	90000000
+0 pct	ratio	0
+0.000049 pct	ratio	0
+0.00005 pct	ratio	1
+0.000051 pct	ratio	1
+0.00015 pct	ratio	2
+0001.000 pct	ratio	10000
+150 pct	ratio	1500000
+0.0	ratio	0
+0.0000004	ratio	0
+0.0000005	ratio	1
+0.0000006	ratio	1
+0.0000015	ratio	2
+00.00000050	ratio	1
+1.0500	ratio	1050000
+0	count	0
+0004	count	4
+123456789	count	123456789
+9223372036854775807	count	9223372036854775807

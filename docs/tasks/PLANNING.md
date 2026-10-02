@@ -458,15 +458,25 @@ G1-SLICE.5a.3a proves total extreme-magnitude rounding with four public contract
 36-row Fraction oracle and five actual guard reds; strict native/release/WASM checks pass.
 
 
-- **D79** — reference unit literal evaluation disagrees with its canonical integer identity.
-  - Reproduce: actual reference through formula_input.py load_context; parse/infer/evaluate
-    0.00004 cm + 0.00004 cm → length 4/5, rounded binding 1. Respelling the two individual
-    canonical length:0 literals as 0 um + 0 um → length 0, rounded binding 0.
-  - Root: L1 rounds literal canonical displays, while p_atom retains exact fractional unit values.
-  - Impact: canonically identical formulas produce different reference results; this oracle cannot
-    sign off product literal normalization or identity-preserving recipe respelling.
-  - Owner/schedule: G1-SLICE.5a.3b, next after primitive rounding; fix/verify before .3c/.3d product
-    canonicalization. Check stored-angle/literal domain parity with the authoritative contracts.
+D79, D80 and D81 are sealed in
+[`stitchcad-defects-part19.md`](../history/stitchcad-defects-part19.md). G1-SLICE.5a.3b.1 verifies
+60 literal rows/360 controls/six actual reds and corrects the duplicate units heading/stale status route.
+
+- **D82** — reference arithmetic rounds exact intermediate operators.
+  - Reproduce: literal_diagnostic.py actual evaluator: 1 um / 2 + 1 um / 2 → 2 rather than 1;
+    0.000001 ^ 2 → ratio 0 rather than exact internal 1/1000000.
+  - Root: evaluate square/product/quotient and param_at call rnd before binding, contrary to 4.2.
+  - Impact: curated examples can miss accumulated quantization and this is not an exact oracle.
+  - Owner/schedule: G1-SLICE.5a.3b.2, immediately after D79 literal repair, before product proof.
+
+- **D83** — reference numeric domains are measured without complete typed refusal enforcement.
+  - Reproduce: literal_diagnostic.py accepts count 2^128 (129 numerator bits) and length
+    1000000001 um, with no formula_domain; source see only updates max_bits, L8 is a census verdict.
+    L2 stores rnd(val.v), so 360 deg remains unnormalized at a stored angle binding.
+  - Impact: reference success is insufficient evidence for numeric/binding domains and normalization.
+  - Owner/schedule: G1-SLICE.5a.3b.3, after exact arithmetic and before product normalization.
+    Inspect complete angle/sweep contracts before choosing literal vs stored-angle normalization;
+    raw expression angle and stored entity angle are distinct, and no modulo rule is invented here.
 
 ## Decisions
 

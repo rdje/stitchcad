@@ -421,10 +421,10 @@ class Evaluator:
                 unit = self.take()[1]
             if unit is None:
                 if "." in text:
-                    return ("lit", "ratio", from_true("ratio", value))
+                    return ("lit", "ratio", Fraction(rnd(from_true("ratio", value))))
                 return ("lit", "count", value)
             ukind, factor = self.units[unit]
-            return ("lit", ukind, value * factor)
+            return ("lit", ukind, Fraction(rnd(value * factor)))
         if kind == "id":
             self._identifier(text)
             self.take()
@@ -1000,9 +1000,9 @@ for r in table_in(GRA["2"], "Literal")[1]:
         bad("grammar §2: `%s` is declared %s, canonicalizes to %s and publishes %s"
             % (literal, kind, node[1], m.group(1)))
         l1 += 1; continue
-    if rnd(node[2]) != int(m.group(2)):
-        bad("grammar §2: `%s` canonicalizes to %s:%d, the chapter publishes %s"
-            % (literal, node[1], rnd(node[2]), canonical))
+    if node[2] != int(m.group(2)):
+        bad("grammar §2: `%s` canonicalizes to %s:%s, the chapter publishes %s"
+            % (literal, node[1], node[2], canonical))
         l1 += 1
 print("  literal rows: %d · mismatches: %d" % (len(table_in(GRA["2"], "Literal")[1]), l1))
 
