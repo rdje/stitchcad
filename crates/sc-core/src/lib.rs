@@ -7,7 +7,8 @@
 //! Canonical length declarations retain authored state/source/provenance in [`value`], without
 //! default unknowns or cached derived results; registry/evidence proof remains Design/G4.
 //! Shared [`name::MachineToken`] validates stable ASCII identifiers without deriving display labels.
-//! Borrowed formula lexing/expression syntax are implemented in [`recipe`]; recipe validation,
+//! Borrowed formula lexing/expression syntax, individual/whole literal normalization and canonical
+//! expression identity are implemented in [`recipe`]; ordered recipes, name/type/binding validation,
 //! evaluation and the command bus remain future work. The core cross-builds to `wasm32-unknown-unknown`.
 //!
 //! What lands here, and when:
@@ -17,13 +18,14 @@
 //! | `ontology` | identity, exact parameters, point/range topology resolution and repairs; structural pieces/copy plans, semantic notches, grainlines, allowances, construction/closure/pocket intent and sewing graphs; all four structural families complete | `G1-SLICE.3a`/`.3b`/`.3c` |
 //! | `value` | canonical length declarations with authored state/source/provenance; no unknown fallback or cached derived result | `G1-SLICE.4a.1` |
 //! | `name` | immutable ASCII lower-snake tokens, refusing grammar keywords; binding authority stays with the namespace owner | `G1-SLICE.4a.2a` |
-//! | `recipe` | borrowed lexing/expression syntax with spans and structural limits; canonical recipes/evaluation follow | `G1-SLICE.5a.1/.2b.2`; remaining `G1-SLICE.5` |
+//! | `recipe` | borrowed syntax/spans/limits, literal normalization and owned canonical expression identity; ordered recipes/evaluation follow | `G1-SLICE.5a.1/.2b.2`; remaining `G1-SLICE.5` |
 //! | `command` | the typed command bus: atomic groups, preview/commit, revision preconditions, idempotency, undo granularity | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |
 //!
-//! The numerical contract this crate builds on is [`sc_units`], already implemented: every length is
-//! an `i64` count of micrometres, every angle an `i64` count of microdegrees, and no comparison is
-//! written without naming its tolerance class.
+//! Entity numerical storage uses [`sc_units`]: lengths are signed `i64` micrometres and entity
+//! directions are normalized `i64` microdegrees. Formula literals instead retain unsigned `u128`
+//! canonical magnitudes with separate unary syntax and raw angle turns. Future numeric bindings
+//! must fit signed `i64`; tolerance-aware numerical evaluation remains a separate contract.
 
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
@@ -41,8 +43,9 @@ pub mod value;
 
 /// The schema version of the canonical project format this crate will read and write.
 ///
-/// Declared now, before any serialization exists, so that the first project file ever written carries
-/// a version and the migration path (roadmap §4.5) has something to migrate *from*.
+/// Declared before project-directory serialization exists, so the first project file carries
+/// a version and the migration path (roadmap §4.5) has something to migrate *from*. Expression
+/// canonical bytes are a separate identity contract; they are not a versioned project envelope.
 pub const SCHEMA_VERSION: u32 = 0;
 
 /// The specification this crate implements, as a repository-relative path.
@@ -56,7 +59,7 @@ mod tests {
     use super::{ONTOLOGY_SPEC, SCHEMA_VERSION};
 
     #[test]
-    fn the_schema_starts_at_zero_before_any_format_exists() {
+    fn the_project_schema_starts_at_zero_before_project_serialization() {
         assert_eq!(SCHEMA_VERSION, 0);
     }
 

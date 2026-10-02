@@ -3,14 +3,13 @@
      gen_knowledge_map.sh embeds this section verbatim; the task-tree and decision sections
      are generated automatically. -->
 
-- `crates/sc-units/` — units/errors. Entry `crates/sc-units/src/lib.rs`, tests
+- `crates/sc-units/src/lib.rs` — units/errors; tests
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/`, `crates/sc-measure/` — ontology/measurement inputs/recipe syntax/literals.
-  Entry `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs`; crate tests.
+- `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs` — ontology/measurement inputs;
+  recipe syntax/literals/identity; crate tests.
   Owner `G1-SLICE.3` / `.4` / `.5`.
-- `docs/book/src/` — learning/index/annexes. Entry `docs/book/src/SUMMARY.md`;
-  owner `G0-CONTRACT` / `G1-SLICE.4d.1`; feature leaves.
+- `docs/book/src/SUMMARY.md` — learning/index/annexes; owner `G0-CONTRACT` / `G1-SLICE.4d.1`; feature leaves.
 - `docs/book/src/spec/formula-language.md` — formula contract.
   Oracle `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
   `G0-CONTRACT.9` / `G1-SLICE.5`.

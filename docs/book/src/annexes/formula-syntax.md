@@ -3,8 +3,8 @@
 The formula contract is normative. The current `sc_core::recipe` implementation supplies a borrowed
 lexical stream and an immutable expression syntax tree with exact source spans and structural bounds.
 Syntax parsing does not perform numeric conversion. Parsed literals and whole expression arenas now have explicit
-[normalization APIs](formula-literals.md). Whole canonical identity, ordered recipes, binding, type/name
-validation and evaluation remain G1-SLICE.5 work. See [availability](../availability.md) and
+[normalization APIs](formula-literals.md). [Canonical expression identity](formula-literals.md#serialize-canonical-expression-identity) is now
+implemented separately; ordered recipes, binding, type/name validation and evaluation remain G1-SLICE.5 work. See [availability](../availability.md) and
 [the complete grammar](../spec/formula-language/grammar.md).
 
 ## Read a machine statement
@@ -587,7 +587,8 @@ D100 corrects an adjacent live task label missed by D97: canonical literal width
 numeric binding storage is i64. The previous parent and defect text remain intact in task/history
 records. Current goals, function/type contracts, independent controls and the roadmap agree.
 
-The reference prerequisites are complete. Product literal normalization, canonical serialization,
-ordered recipe/binding/evaluation, entity direction integration, real geometry and production
+The reference prerequisites are complete. Product literal normalization/canonical expression bytes
+have [separate scoped proof](formula-literals.md). Ordered recipe/binding/evaluation, entity direction
+integration, real geometry and production
 API/MCP/release remain future work. Curated inverse results certify neither arbitrary-input
 correct rounding nor cross-platform transcendental behavior.

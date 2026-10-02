@@ -483,6 +483,7 @@ G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exa
 
 
 
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a
@@ -782,3 +783,11 @@ Director ruling received 2026-10-02: (- child) and (^2 child). G1-SLICE.5a.3d.1 
 expression byte contract; seven reference roles/ten symbols/two distinct named calls/six authored
 byte examples verify it, rc=0. The specification gap is fixed; production implementation .3d.2 and
 coupled review .3d.3 stay separately pending. Canonical decision records the received authority.
+
+D104 is sealed in [`stitchcad-defects-part35.md`](../history/stitchcad-defects-part35.md).
+G1-SLICE.5a.3d.2 corrects crates/sc-core/src/lib.rs, recipe module status and crate metadata.
+Entity directions use normalized i64 storage; formula literals retain u128/raw turns/unary structure;
+numeric bindings require i64 at their later boundary. Actual public wide-byte contracts, book reference
+and strict native523 including Rust docs pass, rc=0. No runtime unit-storage behavior changed.
+The project schema comment/test label also explicitly scopes project-directory serialization; current
+expression bytes do not claim a versioned project envelope. Original D104 description stays exact.

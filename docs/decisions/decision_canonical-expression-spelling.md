@@ -8,7 +8,7 @@
 answers: "which unary-minus and fixed-square bytes identify an expression?" · "can operator tags collide with call names?"
 
 The director chose **(- child)** and **(^2 child)**. This establishes the expression byte contract;
-production serialization remains .3d.2, with coupled review .3d.3. It changes no authored syntax.
+production serialization is implemented by .3d.2, with coupled review .3d.3 pending. It changes no authored syntax.
 
 The existing contract specifies ASCII S-expressions, bare names, typed integer literals, one space
 between parts, no comments/trailing spaces/floats, and preservation of operator/ordered-child identity.
@@ -56,3 +56,7 @@ probe(-1 um, 1 um ^ 2)  => (probe (- length:1) (^2 length:1))
 These are specified wire bytes, not executable recipe claims. Statement bind/assert serialization,
 recipe envelopes, hashing/project persistence and numerical evaluation remain separate work.
 The received ruling settles both operator spellings; .3d.2 must implement and verify these exact bytes.
+
+G1-SLICE.5a.3d.2 implements owned expression bytes, preserving full128 literal magnitude and all
+ordered unevaluated structure; independent55 fixtures/seven public contracts/nineteen actual
+compiled assertion reds verify the scoped API. Ordered statements, storage and execution remain later work.

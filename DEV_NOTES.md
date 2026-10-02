@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — canonical expression identity owns bytes rather than source lifetimes
+
+- A private owned result exposes canonical bytes explicitly, with byte Eq/Clone and opaque Debug.
+  Iterative LIFO actions retain all normalized nodes/names/operators/ordered children; kind/full-u128
+  magnitude is read without conversion/rounding. Output excludes spans/aliases/grouping/padding/newline.
+- D103 unary (- child)/square (^2 child) keeps operators distinct from ordinary neg/square calls.
+  No sign fold, simplification, name/type validation, numeric evaluation, project hash or command.
+- Seven public contracts compare55 authored byte fixtures with recursive actual-reference rendering,
+  nested100 Fraction inputs and six book examples. Owned lifetime/clone/extraction/privacy, identity
+  differences/aliases and unevaluated branches pass. Nineteen actual compiled serializer faults fail
+  assertions and restore exact source; final native523/release7/WASM3 and book/reference checks pass.
+- Flat traversal handles256-node chains/16 if levels/50000 groups/100000-byte names on64KiB stack.
+  D104 root crate/API metadata now distinguishes i64 entity directions from raw-u128 literal inputs
+  and later i64 bindings. Book/learning/availability/API map/index/decision/live/task docs agree.
+- Completed byte-contract/protocol histories retain exact text in the semantic canonical sibling;
+  bounded navigation keeps canonical paths/owners. Next .3d.3 coupled review, then ordered statements.
+- promotion: declined (routine implementation of the received canonical byte contract and docs repair).
+
 ## _(2026-10-02)_ — inspection tags do not establish persistent byte identity
 
 - Canonical grammar4 had no exact unary/square bytes. The actual book reference returns tuples;
@@ -18,41 +36,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   Grammar/expert annex/canonical decision/index/live/task pointers agree. .3d.2 implementation and
   .3d.3 review remain pending; Rust source stays unchanged. Scoped book/reference checks pass.
 - Promotion: canonical expression spelling decision answers exact operator identity/call collisions.
-
-## _(2026-10-02)_ — couple normalization proof with valid reduction frontiers
-
-- Full scoped obligation map connects spelling/kind/unit/width/quantum/scalar/source/unary/turns/
-  all structural roles/privacy/lifetimes/limits to public tests and exact previously verified sources.
-  Independent Fraction176 rows cover multiplier valuations6 and denominator frontiers:103 accept,
-  73 refuse; degree scale133 is valid while134 refuses. Bounds39/134/173 are independently derived.
-- New public contract checks each row individually and nested in a whole arena, including located
-  typed refusal. Four compiled actual early-scale/raw-mantissa/cancellation faults fail assertions and
-  restore exact bytes. Current strict native514/release14/WASM3 and structural/book controls pass.
-- D101: my stale edit variable replaced the topic index; restore exact HEAD plus intended link.
-  D102: defect insertion matched a heading inside an old quoted command; restore exact D46 and use
-  the anchored section. Publication checks and exact record comparison verify both repairs.
-- Input normalization .5a.3c closes only within its scoped contract; canonical serializer .3d is next.
-  Source implementations and earlier evidence remain exact. No execution, direction or release claim.
-- promotion: declined (routine coupled proof and correction of two local editing mistakes).
-
-## _(2026-10-02)_ — normalize all inputs while retaining an immutable syntax graph
-
-- Whole-arena conversion copies every validated flat node/edge and uses the completed literal helper.
-  Call arguments and both branches convert even when future evaluation would skip one. Any input
-  refusal keeps its original span/rule and aborts without publishing a partial arena or altering syntax.
-- Separate storage borrows original source and survives syntax drop. Private normalized root/child
-  views retain arena lifetime; argument iterators preserve order/exact size/fusion. Debug omits names/
-  spellings. Unary/count/angle kinds, raw turns and operators stay intact; no type/name/execution phase.
-- Eight public contracts/24 independently authored reference shapes/nested100 literal rows/25 book
-  expressions and three privacy-lifetime docs plus runnable example pass. Seventeen actual compiled
-  assertion reds discriminate root/name/unary/operator/order/coverage/depth/span/unit/refusal/iterator/
-  privacy faults and restore exact bytes. Native513/release eight/WASM3 and book/reference checks pass.
-- Flat conversion/clone/drop handles256 nodes/16 if levels and50000 grouping pairs on64KiB stack.
-  Initial fixture context lacked units; use actual quiet published context. A duplicate fault anchor
-  was refused before mutation; target the actual builder specifically before counting final reds.
-- Book/API/status/index/decisions and live/task pointers agree; prior histories retain exact bytes.
-  Coupled review .5a.3c.4 precedes canonical serialization .3d; binding/evaluation/geometry/MCP later.
-- promotion: declined (routine immutable normalization stage under the received D95/D84 contracts).
 
 # Sealed archive — earlier lessons
 
@@ -163,3 +146,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part61.md`](docs/history/stitchcad-devnotes-part61.md) | unsigned magnitude rounding lesson | 15 lines, 1322 bytes, `sha256:90999a24…` |
 
 | [`stitchcad-devnotes-part62.md`](docs/history/stitchcad-devnotes-part62.md) | individual literal normalization lesson | 18 lines, 1637 bytes, `sha256:69a0a9b4…` |
+
+| [`stitchcad-devnotes-part63.md`](docs/history/stitchcad-devnotes-part63.md) | coupled normalization review lesson | 34 lines, 3069 bytes, `sha256:99a6f002…` |

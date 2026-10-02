@@ -4,7 +4,8 @@ The current sc-core recipe API can convert an individual parsed literal into its
 integer. Parsing and input conversion remain separate operations: parsing checks syntax;
 conversion checks exact rational width, rounds once and checks the input scalar domain.
 The [whole-expression API](#normalize-every-literal-in-an-expression) converts every literal while
-retaining the syntax graph. Canonical serialization, binding and evaluation remain later work.
+retaining the syntax graph. The [canonical serializer](#serialize-canonical-expression-identity) emits
+owned expression identity bytes; ordered statements, binding and evaluation remain later work.
 See the [language](../spec/formula-language.md) and [grammar](../spec/formula-language/grammar.md).
 
 ## Inspect one literal
@@ -96,8 +97,8 @@ Actual compiled conversion, reduction, width, kind, direction, narrowing, domain
 faults must fail public assertions; the exclusive runner restores source byte-identically.
 
 G1-SLICE.5a.3c.2 owns this API. This API converts one literal; the separate whole-arena API below converts all literal inputs.
-Neither checks operators/names, folds sign, binds values, evaluates, serializes canonical bytes or
-constructs geometry. Strict native checks and real WASM cross-compilation verify their stated scope; cross-
+Neither checks operators/names, folds sign, binds values, evaluates or constructs geometry.
+The separate canonical serializer below emits normalized expression bytes without execution. Strict native checks and real WASM cross-compilation verify their stated scope; cross-
 compilation alone is not a browser runtime or cross-platform numeric certificate.
 
 ## Normalize every literal in an expression
@@ -168,8 +169,8 @@ Seventeen actual compiled faults alter root/name/unary/square/operator identity,
 call coverage, depth/span, literal unit/refusal, iterator behavior or Debug privacy. They must fail
 public assertions; the exclusive runner restores exact source. The structural suite watches the
 independent shape verifier. G1-SLICE.5a.3c.3 owns this whole-arena stage; .4 completes its coupled review below.
-Canonical S-expression serialization, ordered statements, name/type/binding/evaluation, geometry and
-command/API/MCP integration remain later work. Native/release/WASM checks retain their stated scope.
+Canonical S-expression serialization is implemented separately below. Ordered statements,
+name/type/binding/evaluation, geometry and command/API/MCP integration remain later work. Native/release/WASM checks retain their stated scope.
 
 ## Coupled normalization review
 
@@ -216,7 +217,8 @@ contracts include the original five plus this coupled check; the eight arena con
 These controls and the bounded arithmetic argument establish the stated normalization scope.
 They provide no correctly rounded arbitrary transcendental or cross-platform numerical certificate.
 
-Canonical serialization is G1-SLICE.5a.3d. Ordered statements, names/types, numeric binding/evaluation,
+Canonical serialization is [G1-SLICE.5a.3d.2](#serialize-canonical-expression-identity), with coupled
+identity review .3d.3 still pending. Ordered statements, names/types, numeric binding/evaluation,
 entity direction integration, geometry, storage and command/API/MCP execution remain later work.
 A normalized graph contains literal inputs and unevaluated operators; it is not an executable recipe.
 
@@ -266,7 +268,8 @@ faults must fail those byte assertions; the exclusive runner restores the produc
 These are interpreter assertion controls, not compiled product serializer proof. The structural suite
 watches the inventory. The detailed repository
 decision is docs/decisions/decision_canonical-expression-spelling.md. D103 closes for the missing
-byte contract; the .3d.2 product serializer and .3d.3 contract review remain unimplemented. Ordered statements,
+byte contract; the .3d.2 product serializer is implemented below and .3d.3 review remains pending.
+Ordered statements,
 recipe envelopes, hashes, persistence and execution remain separate work.
 
 
@@ -274,3 +277,69 @@ recipe envelopes, hashes, persistence and execution remain separate work.
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_contract_inventory.py
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_contract_inventory_mutations.py
 ```
+
+
+## Serialize canonical expression identity
+
+FormulaNormalizedExpression.canonical_form produces a privately constructed FormulaCanonicalExpression.
+The result owns its ASCII bytes and outlives source, syntax and normalized arenas. Explicit as_str
+reads those bytes; into_string transfers them into an ordinary owned string. Clone preserves identity;
+Eq compares exact bytes, rather than evaluated values. Debug shows only byte count, omitting customer
+names and literal magnitudes. Canonical content is explicit customer data when accessed deliberately.
+
+```rust
+use sc_core::recipe::FormulaExpression;
+
+let canonical = {
+    let source = String::from("-2.5 cm ^ 2");
+    let syntax = FormulaExpression::parse(&source)?;
+    let normalized = syntax.normalize_literals()?;
+    normalized.canonical_form()
+};
+assert_eq!(canonical.as_str(), "(- (^2 length:25000))");
+let equivalent = FormulaExpression::parse("-25 mm ^ 2")?.normalize_literals()?.canonical_form();
+assert_eq!(canonical, equivalent);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The serializer implements the exact expression mapping above, without another input conversion,
+rounding or arithmetic step. A flat heap action stack emits nodes in source child order. It retains
+full u128 magnitudes, every ordinary argument and all three conditional children. One ASCII space
+separates parts; output has no comments, grouping spans, unit aliases, padding or terminal newline.
+There is no recursive traversal and no added numerical/input cap. Memory holds the output bytes and
+an action stack bounded by the validated expression's existing node/edge limits. Large valid names
+require corresponding output storage; the serializer does not silently truncate or reject them.
+
+Unary and square operators remain distinct from calls named neg/square. Zero/sign/kind, comparison
+symbols, call order and branch order remain part of identity. No algebraic simplification occurs:
+a + 0 differs from a. Unknown functions, incompatible dimensions, negative counts and division by
+zero can serialize as syntax; later recipe validators still own their refusal. Serialization does not
+certify a valid or executable recipe and produces no geometry, command, project envelope or hash.
+FormulaExpression.parse reads the authored machine syntax, such as -x or x ^ 2; canonical bytes
+are identity output, not an additional input syntax accepted by that parser. Canonical decoding and
+project persistence are not supplied by this API.
+
+## Canonical serializer proof
+
+```bash
+cargo test -p sc-core --test formula_canonical_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py
+```
+
+Seven public contracts compare 55 authored byte fixtures with the independent recursive book-reference
+renderer, cover all 100 Fraction literal inputs/refusals nested in calls, and verify the six canonical
+examples above. They check unit aliases/Eq versus unequal kind/sign/operator/order, owned lifetimes,
+clone/extraction/privacy and unevaluated branches. Private construction has a compile-fail doctest;
+a runnable doctest demonstrates the public API. The structural suite watches the byte fixture oracle.
+
+On a 64 KiB stack, parsing/normalization/serialization handles 256-node unary and call chains, 16 if
+levels, 50,000 grouping pairs and a 100,000-byte identifier. Existing node257/if17 refusals stay intact.
+Nineteen actual compiled faults alter root, kind/magnitude/full width, name/sign/square/symbols,
+ordered binary/call/conditional children, call coverage, whitespace/newline or Debug privacy. They
+must fail public assertions; the exclusive runner restores exact source. Run mutations alone.
+
+G1-SLICE.5a.3d.2 owns this product serializer; .3d.3 owns the coupled identity review. Ordered recipe
+statements, name/type/binding/evaluation, geometric construction, storage and command/API/MCP remain
+later work. Native/release checks and WASM cross-compilation retain their stated scope; compilation
+alone is not a browser runtime or cross-platform numerical certificate.

@@ -114,6 +114,23 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part57.md`](docs/history/stitchcad-changelog-part57.md) | STITCHCAD-G1-0039 | 12 lines, 958 bytes, `sha256:8ee0ecac…` |
 
+| [`stitchcad-changelog-part58.md`](docs/history/stitchcad-changelog-part58.md) | STITCHCAD-G1-0040 | 15 lines, 1267 bytes, `sha256:5d9ffa4d…` |
+
+## STITCHCAD-G1-0063 - owned canonical expression bytes (leaf `G1-SLICE.5a.3d.2`)
+
+Normalized expressions now emit privately constructed owned ASCII identity bytes using a flat action
+stack. Full-u128 literal magnitudes/kinds, source names, all operators and ordered children survive;
+D103 unary/square symbols remain distinct from ordinary calls. Eq/Clone, explicit as_str/into_string
+and opaque Debug preserve source-independent identity. No folding, evaluation or project hash added.
+
+Seven public contracts/55 independent byte fixtures/nested100 Fraction rows/six book examples and
+nineteen actual compiled assertion reds pass with exact restoration. Small64KiB stack covers256-node
+chains/16 if levels/50000 groups/100000-byte names. Final native523, release7/WASM3 and scoped
+book/reference checks pass. D104 crate overview/status numerical drift is fixed. README/progressive
+learning/availability/grammar/API map/expert annex/decision/index/live/task records align; prior proof
+and ledger bytes remain exact in bounded parts. G1 stays5/18; defects10open/93sealed; next .3d.3 review.
+Ordered recipes, names/types/bindings/evaluation, geometry, storage and command/API/MCP remain later work.
+
 ## STITCHCAD-G1-0062 - exact canonical byte contract (leaf `G1-SLICE.5a.3d.1`)
 
 D103 closes: director chose unary (- child) and square (^2 child) before production serialization.
@@ -373,19 +390,3 @@ WASM pass; book/reference/ledger/archive/censuses/staged doctrines verify the re
 Completed AST evidence and oldest live payloads preserve b681a49 bytes. D79 reference literal identity
 was independently found/logged and is scheduled next before product canonicalization; its open scope
 is stated in the expert annex. G1 stays 5/18; defects 11 open/67 sealed; D70 axes ruling remains pending.
-
-## STITCHCAD-G1-0040 - production expression syntax (leaf `G1-SLICE.5a.2b.2`)
-
-FormulaExpression parses one complete machine expression with precedence, closed literal units,
-mandatory conditional branches and exact source gaps/spans. A private flat arena exposes immutable
-borrowed views; explicit parser stacks avoid input recursion. Measured node 257/if level 17 refuses
-unchanged limits. Unsupported exponents retain formula_unsupported; other grammar refusals are typed.
-
-15 contracts, three privacy/lifetime doctests and eleven actual guard/order mutation reds pass with
-exact restoration. Twelve independently enumerated shape/count/depth fixtures agree with the existing
-reference. A 20736-input short-token corpus has no internal-structure refusals; a small-stack test
-handles 50000 nested parentheses. Restored strict 472 native tests and three-library WASM pass.
-Book/reference/ledger/archive/censuses and staged doctrines verify the recording commit. Scope stays
-syntax: no conversion, canonical identity, recipe/name/type validation or evaluation. Book/API status
-and progressive learning align; completed input evidence and oldest ledgers preserve predecessor bytes.
-Next .5a.3 exact literals/canonical ordered recipes; D70 axes ruling remains pending.

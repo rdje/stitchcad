@@ -75,8 +75,9 @@ nonnegative; length/area also retain their smaller scalar domains. See the
 The [reference boundary review](../annexes/formula-syntax.md#complete-reference-numeric-boundary-review)
 maps the four verified numeric boundaries to their independent controls. Individual literals and whole product syntax arenas have [explicit input normalization](../annexes/formula-literals.md).
 The [coupled normalization review](../annexes/formula-literals.md#coupled-normalization-review) is complete.
-Canonical serialization, bindings and evaluation remain pending; reference instruments supply no product
-execution claim.
+[Canonical expression serialization](../annexes/formula-literals.md#serialize-canonical-expression-identity)
+is implemented; ordered statements, bindings and evaluation remain pending. Reference instruments
+supply no product execution claim.
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.
 For example, bound 360 degrees differs from zero and retains a full-turn sweep. Direction fields on

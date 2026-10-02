@@ -1,0 +1,56 @@
+# Authored source	canonical expression bytes
+1	count:1
+1.0	ratio:1000000
+1 pct	ratio:10000
+1 um	length:1
+1 mm	length:1000
+1 cm	length:10000
+1 m	length:1000000
+1 in	length:25400
+1 deg	angle:1000000
+a	a
+a + b	(+ a b)
+a - b	(- a b)
+a * b	(* a b)
+a / b	(/ a b)
+a == b	(== a b)
+a != b	(!= a b)
+a < b	(< a b)
+a <= b	(<= a b)
+a > b	(> a b)
+a >= b	(>= a b)
+-a ^ 2	(- (^2 a))
+(-a) ^ 2	(^2 (- a))
+-(a - b) ^ 2	(- (^2 (- a b)))
+a + b * c	(+ a (* b c))
+a - b - c	(- (- a b) c)
+a / b * c	(* (/ a b) c)
+a / (b * c)	(/ a (* b c))
+if(a, foo(b, c), d)	(if a (foo b c) d)
+foo(a, if(b, c, d), e)	(foo a (if b c d) e)
+-0 deg	(- angle:0)
+--0 deg	(- (- angle:0))
+360 deg	angle:360000000
+-720 deg	(- angle:720000000)
+1.0 ^ 2	(^2 ratio:1000000)
+neg(1 um)	(neg length:1)
+-1 um	(- length:1)
+square(1 um)	(square length:1)
+1 um ^ 2	(^2 length:1)
+if(a, 1 / 0, b)	(if a (/ count:1 count:0) b)
+0.0000004	ratio:0
+0.0000005	ratio:1
+0.0000005 deg	angle:1
+0.5 pct	ratio:5000
+340282366920938463463374607431768211455	count:340282366920938463463374607431768211455
+340282366920938463463374607431768.211455 deg	angle:340282366920938463463374607431768211455
+340282366920938463463374607431768.211455	ratio:340282366920938463463374607431768211455
+34028236692093846346337460743176821.1455 pct	ratio:340282366920938463463374607431768211455
+-9223372036854.775808 deg	(- angle:9223372036854775808)
+1000000000.4 um	length:1000000000
+2.5 cm	length:25000
+25 mm	length:25000
+25000 um	length:25000
+0.025 m	length:25000
+25.000000 mm	length:25000
+((2.5 cm))	length:25000

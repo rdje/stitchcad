@@ -14,6 +14,12 @@ expression groups its words, numbers and operators. It does not yet calculate a 
 a complete recipe.
 The [formula syntax annex](../annexes/formula-syntax.md) gives the developer contract.
 
+You author formulas with familiar operators, such as -x or x ^ 2. Internally, a canonical form gives
+each expression a stable identity: 2.5 cm and 25 mm become the same typed length. This lets a change
+review focus on meaning rather than a unit respelling. The current libraries can produce that
+identity without calculating the expression. Experts can inspect the exact
+[canonical byte contract and API](../annexes/formula-literals.md#serialize-canonical-expression-identity).
+
 A design therefore has several layers:
 
 | Layer | A skirt example |
