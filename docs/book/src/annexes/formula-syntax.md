@@ -213,3 +213,13 @@ G1-SLICE.5a.2 is complete for expression syntax. Canonical literals/recipes and 
 bounds belong to .5a.3/.4 and later numeric checking; name/type checks, exact evaluation/DAG,
 operation recipes and geometry remain explicit owners under .5 and later gates. Parsing an unknown
 value's name does not read it or grant a numeric fallback.
+
+## Known reference literal-identity gap
+
+D79 remains open under G1-SLICE.5a.3b. The reference retains fractional unit literals while its
+canonical display rounds them to internal integers. `0.00004 cm + 0.00004 cm` therefore binds 1 um
+in that instrument, but respelling each canonical-zero literal as `0 um + 0 um` binds 0. This is a
+reference defect against the identity/conversion contract, not permission to alter that contract.
+Current published example checks remain scoped to their rows. Do not use the reference to sign off
+identity-preserving literal respelling until the owned repair is verified. Product canonicalization
+and evaluation remain pending; the syntax parser above performs no numeric computation.

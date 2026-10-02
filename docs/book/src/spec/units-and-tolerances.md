@@ -116,6 +116,31 @@ above and never store a float. Locale handling is specified in the international
 particular a decimal comma in input SHALL NOT change the stored meaning of a value, and canonical
 project files are locale-independent.
 
+### 2.2 Public rounding endpoints
+
+The shared `sc_units::round::div_round_half_away_from_zero` accepts signed i128 numerator and
+denominator and returns an i64 or UnitError. A zero denominator returns DivisionByZero; a rounded
+quotient wider than i64 returns Overflow. Both i64 endpoints remain valid, including the negative
+endpoint whose magnitude is one greater than the positive endpoint's. There is no narrower input
+precondition, clamping or wrapping.
+
+D78's extreme negative i128 input previously panicked before the checked conversion. The repair
+narrows an unsigned magnitude safely before reconstructing its sign, with the negative i64 endpoint
+handled explicitly. Quotient/remainder arithmetic stays exact: absolute i128 values are at most
+2^127, and twice a remainder below that denominator fits u128. The half-away rule is unchanged.
+
+```bash
+cargo test -p sc-units --test round_contract
+cargo test -p sc-units --release --test round_contract
+bash docs/tasks/artifacts/formula_structure/run_round_mutations.sh
+```
+
+Four public contracts cover wide inputs, signed endpoints, denominators, ties and zero. Thirty-six
+explicit rows agree with an independent arbitrary-precision Fraction oracle; five actual production
+guard mutations require assertion failures and exact restoration. Run mutation checks alone, without
+other builds/probes/gates. These are primitive numeric checks, separate from formula evaluation,
+geometry, physical acceptance and release proofs.
+
 ## 3. The five tolerance classes
 
 There is no global epsilon. **Every comparison names its class**, and each class's value is *derived

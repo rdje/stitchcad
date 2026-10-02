@@ -598,45 +598,80 @@ Completed reference input contract .5a.2b.1 is preserved in
 
 - ID: `G1-SLICE.5a.2b.2`
   Status: `done`
-  Goal: immutable borrowed expression syntax with normative precedence/if and precise refusals.
-  Pre-code protocol: read full formula contract/grammar/examples, ADR-0003, roadmap 4.1/4.2/10/G1,
-  existing lexer/name contracts and book availability/annex. Syntax success grants no value, current
-  name, call vocabulary, dimension, binding, statement, canonical identity or evaluation certificate.
-  FormulaExpression privately owns a flat semantic-node arena borrowing number/name spellings; only
-  read-only root/child views and argument iteration are exposed. No forgeable/cross-tree node indices.
-  Literal units use the seven closed tokens and original exact one-space gap; retain decimal text
-  without conversion/rounding. Grouping extends spans but creates no node; exponent 2 is square payload.
-  Iterative operator/value/delimiter stacks enforce comparison/add/mul/unary/power precedence, left
-  associativity, square tighter than unary minus, exactly one comparison per grammatical expr, and
-  square-only power. Parenthesized comparisons remain independently syntactic; type checking is later.
-  Ordinary calls require at least one argument; if requires exactly three. Keywords cannot be names.
-  Unknown well-spelled call names remain syntax until the later closed vocabulary/name checker.
-  Stream existing lexer, preserving ASCII preflight/errors. Reject adjacent atoms, comments, assignments,
-  missing operands/delimiters, empty/trailing arguments, invalid gaps and chained comparison precisely.
-  Reserve each semantic node on encounter and refuse measured 257 > 256; conditional frames refuse
-  measured 17 > 16, including calls and every branch. Flat arena/drop and explicit stacks avoid input
-  recursion; parentheses do not gain an invented language cap. Workspace is linear in source size,
-  semantic arena bounded; command-layer input-byte/work budgets remain roadmap 10 owned future work.
-  Parse errors carry source span/refused rule; limit errors carry typed limit/bound/measured size with
-  formula_domain, unsupported exponent formula_unsupported, syntax/lexical errors formula_parse.
-  Debug/error output omits customer source. Statement/canonical context is unavailable at this low-level
-  syntax API and remains later wrapper responsibility; never fabricate a canonical expression.
-  Native contracts independently enumerate precedence/spans/roles/unit forms/refusals; all current
-  book expressions scanned with syntax-only verdicts. Exact node/depth boundaries, hidden branches,
-  long prefix/ordinary-call/grouping inputs and small-thread stack tests cover arbitrary source shapes.
-  Privacy/lifetime doctests and actual production guard mutations require assertion reds/exact restore.
-  Compare independent reference shape controls with current product trees; strict Rust/WASM plus
-  scoped book/reference/ledger/archive/censuses. No new dependencies; no need for web/library lookup.
-  Update progressive availability and expert annex/API map with exact scope; glossary/index routes
-  retained. Seal oldest history/lessons at health, preserve predecessor evidence, commit before .3.
-  Verification: product 15 contracts/three privacy-lifetime docs; eleven actual assertion reds;
-  reference twelve shape/count/depth fixtures; restored strict 472 tests/WASM green.
-  Commit: `STITCHCAD-G1-0040` (this recording commit).
+  Contract/checklist: [preserved production syntax](G1-SLICE-formulas.md#production-expression-contract-and-evidence--preserved-from-b681a49).
+  Verification: 15 contracts/three docs, eleven actual reds, twelve reference fixtures; strict 472/WASM.
+  Commit: `STITCHCAD-G1-0040`.
 
 - ID: `G1-SLICE.5a.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: exact literal normalization and canonical S-expressions, ordered binding/assert recipes and
-  statement limits. Finalize numeric/identity protocol from normative contract before code.
+  statement limits. Finalize each numeric/identity protocol from full normative contracts before code.
+  Children: .3a rounding primitive guard, .3b reference literal identity, .3c exact literals,
+  .3d canonical expressions, .3e ordered recipe syntax, .3f coupled contract review.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3a`
+  Status: `done`
+  Goal: investigate/repair D78 total public rounding at extreme i128 magnitudes before conversion.
+  Pre-code protocol: round.rs public i128 numerator/denominator has no narrowing precondition;
+  units chapter 1/2/9, numerical ADR and library docs require UnitError rather than panic/wrap.
+  Suspected path: n=i128::MIN, d=1 yields unsigned q=2^127; casting q to i128 gives MIN and
+  negating it overflows before the existing i64 try_from can refuse. Build a repo-local actual
+  public-interface diagnostic first, catch unwinds and compare positive/negative extremes/control.
+  Confirmed actual public probe: MIN/1 unwinds, MAX/1 and MIN/-1 return typed Overflow; controls
+  succeed, rc=0. Scoped history: eb83f01 G0-CONTRACT.18 introduced the only round.rs revision.
+  Preserve half-away quotient/remainder behavior; checked magnitude-to-i64/sign
+  reconstruction must allow exactly |i64::MIN| for negative results and refuse every wider magnitude.
+  No float, saturation, changed rounding/tie rule or narrower caller precondition. Cover i128 MIN/MAX,
+  both signs, denominator MIN/zero, i64 endpoints and just-outside values; real guard mutations must
+  discriminate magnitude bounds/sign/negative endpoint/ties and restore original source bytes.
+  Strict Rust/WASM, scoped book/reference/ledger/archive/censuses and staged doctrines; report root
+  and measured public behavior. No canonical literal/evaluation claim. D79 reference literal identity
+  is already independently reproduced and scheduled next by .3b; do not use it as canonical oracle yet.
+  Preserve completed AST protocol/checklist and oldest live ledgers at health, sync numerical annex
+  and live resume/status; commit before reference repair/product normalization.
+  Verification: four public contracts/36 Fraction rows; five actual assertion reds/exact restoration;
+  strict 476 tests, release four and three-library WASM green.
+  Commit: `STITCHCAD-G1-0041` (this recording commit).
+
+- ID: `G1-SLICE.5a.3b`
+  Status: `pending`
+  Goal: repair D79 reference literal/canonical identity before independent product normalization proof.
+  Reproduce: actual reference 0.00004 cm + 0.00004 cm evaluates 4/5 um and binding rounds 1;
+  individually canonical unit literals are length:0, so respelling as 0 um + 0 um evaluates 0.
+  L1 canonical display rounds each literal but p_atom retains fractional unit values. Validate all
+  unit conversions/quantum ties, identity-preserving respellings and stored-angle normalization;
+  diagnose any additional mismatch before finalizing repair protocol. Canonical/evaluation production
+  work remains .3c/.3d/.5; corrected reference still has curated-book scope.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3c`
+  Status: `pending`
+  Goal: exact bounded literal normalization with typed kind/integer/source and shared rounding;
+  finalize full numeric/domain/reduced-rational protocol after reference prerequisites; no evaluation.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3d`
+  Status: `pending`
+  Goal: iterative canonical S-expression identity over privately normalized expression nodes;
+  preserve operators/names/child order, source locations distinct from canonical bytes, explicit scope.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3e`
+  Status: `pending`
+  Goal: ordered immutable let/assert syntax, six bindable kinds/five tolerances, statement boundaries,
+  4096 limit and diagnostic statement/expression context where available; no binding/evaluation claim.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3f`
+  Status: `pending`
+  Goal: coupled normalization/canonical/recipe contract review and examples before .5a.4 milestone;
+  syntax-only success never grants static name/type/evaluation or geometry acceptance.
   Verification: `pending`
   Commit: `pending`
 
@@ -812,7 +847,8 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.2a` | `done` | Complete reference node/depth traversal and fragment ownership, D75/D77 fixed |
 | done | `G1-SLICE.5a.2b.1` | `done` | D76 input parity fixed; 130+3 controls/nine actual reds |
 | done | `G1-SLICE.5a.2b.2` | `done` | Immutable iterative expression syntax and structural bounds |
-| next | `G1-SLICE.5a.3` | `pending` | Exact literals/canonical expressions and ordered recipe syntax |
+| done | `G1-SLICE.5a.3a` | `done` | D78 extreme public rounding fixed with actual boundary proof |
+| next | `G1-SLICE.5a.3b` | `pending` | D79 reference literal/canonical identity before normalization |
 
 ## Routing Evidence — D72, milestone fixture calibration
 
@@ -906,34 +942,35 @@ measured by the `SPINE.7` probe).
 
 
 
-### `G1-SLICE.5a.2b.2` — immutable production expression syntax
+### `G1-SLICE.5a.3a` — total extreme-magnitude public rounding
 
-- [x] **REPRODUCE / ISSUE** — prior lexer certifies tokens but no expression grammar/AST. Full
-  language/grammar/examples, affected code/tests/ADR/roadmap/book read before explicit pre-code protocol.
-- [x] **ROOT CAUSE (WHY + WHERE)** — git ls-tree -r --name-only e797874 -- crates/sc-core/src/recipe → lexer.rs/mod.rs only,
-  rc=0 at e797874; expression parser absent, a planned feature. Grammar grouping creates no node,
-  so post-recursive semantic bounds cannot prove input stack safety. Existing reference is a book
-  instrument, not production arbitrary-input parsing. Typed syntax must precede canonical/evaluation work.
-- [x] **FIX** — private flat borrowed arena and read-only child views; explicit parser stacks, exact
-  unit gaps, precedence, three-part if/nonempty calls, measured node/depth refusal and source-private
-  errors. No forgeable indices or dependency added. Existing lexical contracts remain authoritative.
-- [x] **ADDRESSED (verified)** — make check → formula_expression_contract 15
-  passed/0 failed, rc=0, including 20736 short inputs, 50000-level grouping on 64 KiB thread stack,
-  exact 256/16 bounds and measured 257/17 refusals. run_formula_expression_mutations.sh → eleven
-  assertion reds/rc=101 each, exact restoration, runner rc=0. Shared reference fixture command →
-  twelve shape/count/depth controls pass, rc=0. Three privacy/source/arena lifetime doctests pass.
-- [x] **NO REGRESSION** — CARGO_HOME=target/cargo-home TMPDIR=target/scratch make check → strict
-  lint and 472 tests including docs green, rc=0; make wasm → three-library cross-build green, rc=0.
-  Initial borrow-check and test-helper lint errors corrected before restored signoff. Structural/input
-  reference controls 16+2/130+3/twelve fixtures and language 15 probes pass, rc=0. Publication nine
-  probes, warning-free book: 48 chapters/16 APIs, 993 source/1512 rendered links, rc=0. Ledger nine
-  probes; archive verify/verify-retention → 97 records/245151 resident bytes, rc=0. Tree 10 lanes/13
-  trees/eight siblings/zero gaps; glossary 310 terms/nine parts/158 tokens; feature/uncertainty/fixture
-  censuses green, rc=0. Staged make gate → all doctrines green, rc=0; no new remote-CI claim.
-- [x] **LOCKSTEP** — README/package/module, learner/availability, API map and expert syntax annex
-  state actual syntax scope. Glossary/index routes retained; numeric/canonical/statement/name/type/
-  evaluation work stays owned and unclaimed. Completed .2b.1 and oldest ledger payloads preserve
-  exact predecessor bytes; no cap changed. G1 remains 5/18, D70 pending; next .5a.3.
+- [x] **REPRODUCE / ISSUE** — actual public-interface diagnostic catches an unwind for MIN/1;
+  MAX/1 and MIN/-1 return typed Overflow, i64 MIN/1 and ±1/2 controls succeed. D78 is owned before fix.
+- [x] **ROOT CAUSE (WHY + WHERE)** — rustc repo-local probe linked to actual debug sc-units, then
+  target/formula-round-diagnostic/probe → MIN/1 Err(Any), controls as above, rc=0; tracked
+  round_diagnostic.rs/run_round_diagnostic.sh preserve that public producer. round.rs casts
+  unsigned q=2^127 to i128 MIN and negates it before checked i64 narrowing. git log --follow round.rs
+  → sole introduction eb83f01 G0-CONTRACT.18, rc=0. Public i128 signature promises typed failure.
+- [x] **FIX** — explicit negative i64 endpoint and checked unsigned-to-i64 conversion before sign;
+  no wider quotient is cast/negated, no caller restriction or rounding/error-family change.
+- [x] **ADDRESSED (verified)** — cargo test -p sc-units --test round_contract → four passed/0 failed,
+  rc=0; independent round_reference.py → 36 exact Fraction rows pass, rc=0. run_round_mutations.sh
+  → five actual assertion reds/rc=101 each and exact source restoration, runner rc=0. Rebuilt public
+  probe → all wide cases typed Overflow, controls unchanged, no unwind, rc=0. D78 description seals.
+- [x] **NO REGRESSION** — make check → strict lint/476 tests including docs green, rc=0; make wasm
+  → three-library cross-build green, rc=0; cargo test -p sc-units --release --test round_contract
+  → four passed/0 failed, rc=0. Structural/input/reference/Fraction controls and language 15 probes pass, rc=0; publication nine
+  probes and warning-free book: 48 chapters/16 APIs, 993 source/1514 rendered links, rc=0. Ledger
+  nine probes and archive verify/verify-retention → 100 records/250460 resident bytes, rc=0. Tree
+  10 lanes/13 trees/eight siblings/zero gaps; glossary 310 terms/nine parts/158 tokens; feature/
+  uncertainty/fixture censuses green, rc=0. Exact AST/ledger preservation and 11/67 defect census
+  verified; durable public diagnostic agrees with typed results. Staged `make gate` → all doctrines green, rc=0.
+  No new remote-CI, full canonical identity or product evaluation claim.
+- [x] **LOCKSTEP** — expert numerical annex explains endpoint/error behavior and scoped proof;
+  formula annex records D79's independently observed identity gap with immediate .3b ownership.
+  Normative rounding/roadmap, learner routes, glossary/index remain unchanged. Completed AST
+  contract/checklist and oldest live payloads preserve b681a49 bytes; no cap changes. Live snapshot
+  11 open/67 sealed, G1 5/18, sc-units 31 tests including its doc; next .3b, D70 pending.
 
 ## Verification Log
 
@@ -948,6 +985,8 @@ Current slice verification follows here.
 
 | `2026-10-02` | `.5a.2b.2` | product contracts/mutations/reference fixtures; strict native/WASM; recording checks | 15+3/eleven reds/twelve fixtures; strict 472/WASM, publication nine/ledger nine/archive/censuses green |
 
+| `2026-10-02` | `.5a.3a` | public diagnostic/contracts/Fraction/mutations; native/release/WASM; recording checks | four/36/five reds; strict 476/release four/WASM green, typed diagnostic restored |
+
 ## Commit Log
 
 Older journals remain linked above.
@@ -959,6 +998,8 @@ Older journals remain linked above.
 | `.5a.2b.1` | `STITCHCAD-G1-0039 (leaf G1-SLICE.5a.2b.1): reference machine input preserves spelling and unit separators` | 130+3 input controls/nine actual reds; structural/language/Rust checks green |
 
 | `.5a.2b.2` | `STITCHCAD-G1-0040 (leaf G1-SLICE.5a.2b.2): production expressions parse with bounded iterative syntax` | product 15+3, eleven assertion reds; twelve reference fixtures; strict 472/WASM green |
+
+| `.5a.3a` | `STITCHCAD-G1-0041 (leaf G1-SLICE.5a.3a): extreme rounding magnitudes return typed overflow` | four public/36 Fraction/five reds; strict 476/release four/WASM green |
 
 ## Changelog
 
@@ -973,3 +1014,6 @@ Older journals remain linked above.
 
 - `2026-10-02`: .5a.2 product syntax closes with independent shape/bound evidence; .5a.3 follows.
 - promotion: declined (routine syntax implementation; normative grammar/identity policy already ADR-0003).
+
+- `2026-10-02`: D78 rounding totality closes; D79 reference literal identity is owned next.
+- promotion: declined (routine totality repair; original fixed-point/rounding policy unchanged).

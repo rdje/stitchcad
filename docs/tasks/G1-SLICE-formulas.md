@@ -175,4 +175,72 @@ exact committed text; the current frontier and verification/commit journal remai
   Exact completed .2a contract/checklist and oldest history payloads preserve predecessor bytes.
   Live defect census 10 open/66 sealed; G1 stays 5/18, D70 pending, next .5a.2b.2.
 
+## Production expression contract and evidence — preserved from b681a49
+
+- ID: `G1-SLICE.5a.2b.2`
+  Status: `done`
+  Goal: immutable borrowed expression syntax with normative precedence/if and precise refusals.
+  Pre-code protocol: read full formula contract/grammar/examples, ADR-0003, roadmap 4.1/4.2/10/G1,
+  existing lexer/name contracts and book availability/annex. Syntax success grants no value, current
+  name, call vocabulary, dimension, binding, statement, canonical identity or evaluation certificate.
+  FormulaExpression privately owns a flat semantic-node arena borrowing number/name spellings; only
+  read-only root/child views and argument iteration are exposed. No forgeable/cross-tree node indices.
+  Literal units use the seven closed tokens and original exact one-space gap; retain decimal text
+  without conversion/rounding. Grouping extends spans but creates no node; exponent 2 is square payload.
+  Iterative operator/value/delimiter stacks enforce comparison/add/mul/unary/power precedence, left
+  associativity, square tighter than unary minus, exactly one comparison per grammatical expr, and
+  square-only power. Parenthesized comparisons remain independently syntactic; type checking is later.
+  Ordinary calls require at least one argument; if requires exactly three. Keywords cannot be names.
+  Unknown well-spelled call names remain syntax until the later closed vocabulary/name checker.
+  Stream existing lexer, preserving ASCII preflight/errors. Reject adjacent atoms, comments, assignments,
+  missing operands/delimiters, empty/trailing arguments, invalid gaps and chained comparison precisely.
+  Reserve each semantic node on encounter and refuse measured 257 > 256; conditional frames refuse
+  measured 17 > 16, including calls and every branch. Flat arena/drop and explicit stacks avoid input
+  recursion; parentheses do not gain an invented language cap. Workspace is linear in source size,
+  semantic arena bounded; command-layer input-byte/work budgets remain roadmap 10 owned future work.
+  Parse errors carry source span/refused rule; limit errors carry typed limit/bound/measured size with
+  formula_domain, unsupported exponent formula_unsupported, syntax/lexical errors formula_parse.
+  Debug/error output omits customer source. Statement/canonical context is unavailable at this low-level
+  syntax API and remains later wrapper responsibility; never fabricate a canonical expression.
+  Native contracts independently enumerate precedence/spans/roles/unit forms/refusals; all current
+  book expressions scanned with syntax-only verdicts. Exact node/depth boundaries, hidden branches,
+  long prefix/ordinary-call/grouping inputs and small-thread stack tests cover arbitrary source shapes.
+  Privacy/lifetime doctests and actual production guard mutations require assertion reds/exact restore.
+  Compare independent reference shape controls with current product trees; strict Rust/WASM plus
+  scoped book/reference/ledger/archive/censuses. No new dependencies; no need for web/library lookup.
+  Update progressive availability and expert annex/API map with exact scope; glossary/index routes
+  retained. Seal oldest history/lessons at health, preserve predecessor evidence, commit before .3.
+  Verification: product 15 contracts/three privacy-lifetime docs; eleven actual assertion reds;
+  reference twelve shape/count/depth fixtures; restored strict 472 tests/WASM green.
+  Commit: `STITCHCAD-G1-0040` (this recording commit).
+
+### `G1-SLICE.5a.2b.2` — immutable production expression syntax
+
+- [x] **REPRODUCE / ISSUE** — prior lexer certifies tokens but no expression grammar/AST. Full
+  language/grammar/examples, affected code/tests/ADR/roadmap/book read before explicit pre-code protocol.
+- [x] **ROOT CAUSE (WHY + WHERE)** — git ls-tree -r --name-only e797874 -- crates/sc-core/src/recipe → lexer.rs/mod.rs only,
+  rc=0 at e797874; expression parser absent, a planned feature. Grammar grouping creates no node,
+  so post-recursive semantic bounds cannot prove input stack safety. Existing reference is a book
+  instrument, not production arbitrary-input parsing. Typed syntax must precede canonical/evaluation work.
+- [x] **FIX** — private flat borrowed arena and read-only child views; explicit parser stacks, exact
+  unit gaps, precedence, three-part if/nonempty calls, measured node/depth refusal and source-private
+  errors. No forgeable indices or dependency added. Existing lexical contracts remain authoritative.
+- [x] **ADDRESSED (verified)** — make check → formula_expression_contract 15
+  passed/0 failed, rc=0, including 20736 short inputs, 50000-level grouping on 64 KiB thread stack,
+  exact 256/16 bounds and measured 257/17 refusals. run_formula_expression_mutations.sh → eleven
+  assertion reds/rc=101 each, exact restoration, runner rc=0. Shared reference fixture command →
+  twelve shape/count/depth controls pass, rc=0. Three privacy/source/arena lifetime doctests pass.
+- [x] **NO REGRESSION** — CARGO_HOME=target/cargo-home TMPDIR=target/scratch make check → strict
+  lint and 472 tests including docs green, rc=0; make wasm → three-library cross-build green, rc=0.
+  Initial borrow-check and test-helper lint errors corrected before restored signoff. Structural/input
+  reference controls 16+2/130+3/twelve fixtures and language 15 probes pass, rc=0. Publication nine
+  probes, warning-free book: 48 chapters/16 APIs, 993 source/1512 rendered links, rc=0. Ledger nine
+  probes; archive verify/verify-retention → 97 records/245151 resident bytes, rc=0. Tree 10 lanes/13
+  trees/eight siblings/zero gaps; glossary 310 terms/nine parts/158 tokens; feature/uncertainty/fixture
+  censuses green, rc=0. Staged make gate → all doctrines green, rc=0; no new remote-CI claim.
+- [x] **LOCKSTEP** — README/package/module, learner/availability, API map and expert syntax annex
+  state actual syntax scope. Glossary/index routes retained; numeric/canonical/statement/name/type/
+  evaluation work stays owned and unclaimed. Completed .2b.1 and oldest ledger payloads preserve
+  exact predecessor bytes; no cap changed. G1 remains 5/18, D70 pending; next .5a.3.
+
 Further syntax work remains owned by the parent frontier.

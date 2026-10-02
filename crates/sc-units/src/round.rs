@@ -33,10 +33,17 @@ pub fn div_round_half_away_from_zero(numerator: i128, denominator: i128) -> Resu
     if r * 2 >= d {
         q += 1;
     }
-    let signed: i128 = if negative { -(q as i128) } else { q as i128 };
-    i64::try_from(signed).map_err(|_| UnitError::Overflow {
+    // The negative endpoint has one more unit of magnitude than i64::MAX. Handle it without
+    // ever casting a wider unsigned quotient to a signed type: 2^127 is a valid i128 magnitude,
+    // but casting it first would create i128::MIN and negating that value would panic.
+    if negative && q == u128::from(i64::MIN.unsigned_abs()) {
+        return Ok(i64::MIN);
+    }
+    let magnitude = i64::try_from(q).map_err(|_| UnitError::Overflow {
         operation: "div_round_half_away_from_zero",
-    })
+    })?;
+    // Checked conversion proved magnitude <= i64::MAX, so its negation is representable.
+    Ok(if negative { -magnitude } else { magnitude })
 }
 
 #[cfg(test)]

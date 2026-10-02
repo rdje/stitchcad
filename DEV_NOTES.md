@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — signed reconstruction must follow checked magnitude narrowing
+
+- D78's sole introducing round.rs revision is eb83f01 (G0-CONTRACT.18). The public diagnostic
+  proves i128 MIN/1 unwinds while other wide sign cases return Overflow and controls pass.
+  An unsigned quotient 2^127 was cast to i128 MIN and then negated before checked i64 narrowing.
+- Preserve the quotient/remainder rounding rule. Allow the negative i64 endpoint explicitly, then
+  checked-convert every other unsigned magnitude to i64 before sign reconstruction. No negation can
+  overflow that proven nonnegative range; denominator zero retains its existing diagnostic.
+- Four public contracts, 36 arbitrary-precision Fraction oracle rows and five actual guard assertion
+  reds verify signs/endpoints/ties/zero; exact restoration, strict 476 tests, release four and WASM pass.
+  Debug/release public behavior now agrees; no customer scalar is added to error payloads.
+- D79 is separate reference debt: sub-quantum unit literals retain fractions while L1 canonical
+  display rounds them. A pair of 0.4 um literals binds 1, but their canonical-zero respelling binds 0.
+  Own .5a.3b next before using that oracle for normalization; retain the book instrument's honest scope.
+- Completed AST protocol/checklist and oldest ledger/lesson payloads preserve exact predecessor bytes.
+  Numeric details stay in the expert units annex; no evaluation/canonical product claim or cap change.
+- promotion: declined (routine totality repair; original fixed-point/rounding policy unchanged).
+
 ## _(2026-10-02)_ — semantic bounds and delimiter nesting are different parser obligations
 
 - The formula grammar permits unlimited grouping, which creates no semantic node. Checking a bound
@@ -79,24 +97,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   seal with logged descriptions unchanged. No cap changes, remote-CI or recipe-execution claim.
 - promotion: declined (routine syntax subleaf; canonical language/identity decisions remain ADR-0003).
 
-## _(2026-10-02)_ — teach progressively while verifying public implementation scope
-
-- The director requires roadmap/code/book lockstep, incremental teaching and direct expert routes.
-  Five learning chapters precede detailed annexes; the existing glossary and new complete topic index
-  remain independent navigation surfaces. Original chapter URLs/anchors and normative rules stay intact.
-- Fourteen public-API rows bind book chapters, code, roadmap clauses and task owners. Source/rendered
-  navigation and chapter/index coverage are checked, with eight copied-fixture refusal mutations.
-  These are scoped structural/status proofs; prose semantics and later execution/approval still need
-  their canonical contracts and evidence. D71 corrects old G0-only/Ease-future statements.
-- The full milestone exposed D72: history growth made a fixed resident-limit fixture exceed the decoded
-  limit first. Production validation was correct. A minimal independent archive, matched positive
-  control and resident overflow arm fix the test; 28 archive arms and all 24 suites pass.
-- Roadmap growth is contained by retaining D32's exact older explanation in its canonical decision;
-  951 lines/53129 bytes remain within the original 951/53153 baseline. Map input is compacted rather
-  than raising its cap. Completed MTM and sealed payloads preserve exact predecessor bytes.
-- Browser local-file policy blocks screenshot review; source/rendered HTML links and table cells are
-  inspected without a policy bypass. No visual browser or new runtime/remote-CI verdict is claimed.
-- promotion: promoted by `decision_book-progression.md` (fresh answers/director publication requirement).
 
 
 
@@ -170,3 +170,4 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part37.md`](docs/history/stitchcad-devnotes-part37.md) | membership/Ease review lessons | 21 lines, 1781 bytes, `sha256:6a76a906…` |
 | [`devnotes-part38.md`](docs/history/stitchcad-devnotes-part38.md) | chart correspondence lesson | 14 lines, 1281 bytes, `sha256:453f9677…` |
 | [`devnotes-part39.md`](docs/history/stitchcad-devnotes-part39.md) | MTM/coverage lessons | 31 lines, 2736 bytes, `sha256:c7d16877…` |
+| [`devnotes-part40.md`](docs/history/stitchcad-devnotes-part40.md) | progressive book lesson | 18 lines, 1677 bytes, `sha256:89bc77bc…` |

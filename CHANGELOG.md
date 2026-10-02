@@ -72,6 +72,22 @@ the digests afterwards.
 
 | [`changelog-part36.md`](docs/history/stitchcad-changelog-part36.md) | STITCHCAD-G1-0020 / STITCHCAD-G1-0019 | 29 lines, 2350 bytes, `sha256:64af4d6d…` |
 
+| [`changelog-part37.md`](docs/history/stitchcad-changelog-part37.md) | STITCHCAD-G1-0021 | 13 lines, 1082 bytes, `sha256:2feb224c…` |
+
+## STITCHCAD-G1-0041 - total extreme-magnitude rounding (leaf `G1-SLICE.5a.3a`)
+
+D78 closes: public i128 MIN/1 previously panicked before its checked i64 conversion. Checked unsigned
+quotient narrowing and an explicit negative i64 endpoint preserve half-away rounding and return typed
+Overflow for wider magnitudes. No clamp, wrap, new precondition or changed UnitError is introduced.
+
+Four public contracts/36 independent Fraction rows and five actual guard assertion reds pass with exact
+restoration. The public diagnostic now returns typed errors for all three wide magnitude cases;
+controls and both i64 endpoints pass. Restored strict 476 tests, release four contracts and three-library
+WASM pass; book/reference/ledger/archive/censuses/staged doctrines verify the recording commit.
+Completed AST evidence and oldest live payloads preserve b681a49 bytes. D79 reference literal identity
+was independently found/logged and is scheduled next before product canonicalization; its open scope
+is stated in the expert annex. G1 stays 5/18; defects 11 open/67 sealed; D70 axes ruling remains pending.
+
 ## STITCHCAD-G1-0040 - production expression syntax (leaf `G1-SLICE.5a.2b.2`)
 
 FormulaExpression parses one complete machine expression with precedence, closed literal units,
@@ -362,17 +378,3 @@ mutations fail red; restored strict Rust/WASM/book, fixture/feature/glossary/tre
 gates pass. Book/live records and pre-code decision align. Oldest committed changelog/lesson seal
 unchanged to part22/part21. Director reaffirmed the SOTA/signoff/production-grade bar; object-family
 signoff now re-derives the structural evidence. G1 remains 4/18 leaves, 3/4 families; next `.3c.4d.2`.
-
-## STITCHCAD-G1-0021 - buttonhole length has one canonical button/operation source (leaf `G1-SLICE.3c.4c.2`)
-
-ButtonAndButtonhole joins the distinct Closure kinds and existing stable instance/count/target
-rules. Required button-size binding and recipe operation provide one borrowed canonical hole-length
-source, without a separately authored or cached length. Recipe/Design must validate the typed
-operation dependency; G3 executes it. DeferredToG3 remains distinct from geometry/profile checks.
-
-Fifteen Closure contracts pass, including five new button tests. Substituting button-size or operation
-source independently makes a regression red; restored strict Rust, wasm, warning-free book,
-fixture/feature/glossary/tree censuses, ledger and staged gates pass. Compile-fail coverage refuses
-a second length field. Completed closure evidence and task changelog relocate unchanged with
-committed-content oracles. Book/live records align; no physical formula/default is invented.
-Closure parent closes structurally; G1 stays 4/18 leaves, 3/4 families. Next `.3c.4d` pockets/signoff.

@@ -453,6 +453,21 @@ D76 is sealed in [`stitchcad-defects-part17.md`](../history/stitchcad-defects-pa
 G1-SLICE.5a.2b.1 verifies machine spelling/keyword roles, unit separators and nonempty arguments;
 130 direct controls, three copied-book refusals and nine actual guard reds verify closure.
 
+D78 is sealed in [`stitchcad-defects-part18.md`](../history/stitchcad-defects-part18.md).
+G1-SLICE.5a.3a proves total extreme-magnitude rounding with four public contracts, an independent
+36-row Fraction oracle and five actual guard reds; strict native/release/WASM checks pass.
+
+
+- **D79** — reference unit literal evaluation disagrees with its canonical integer identity.
+  - Reproduce: actual reference through formula_input.py load_context; parse/infer/evaluate
+    0.00004 cm + 0.00004 cm → length 4/5, rounded binding 1. Respelling the two individual
+    canonical length:0 literals as 0 um + 0 um → length 0, rounded binding 0.
+  - Root: L1 rounds literal canonical displays, while p_atom retains exact fractional unit values.
+  - Impact: canonically identical formulas produce different reference results; this oracle cannot
+    sign off product literal normalization or identity-preserving recipe respelling.
+  - Owner/schedule: G1-SLICE.5a.3b, next after primitive rounding; fix/verify before .3c/.3d product
+    canonicalization. Check stored-angle/literal domain parity with the authoritative contracts.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

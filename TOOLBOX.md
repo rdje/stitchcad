@@ -128,3 +128,13 @@ spans, units, bounds, 20736 short inputs and small-stack grouping. The structura
 explicit shared shape/count/depth fixtures with the actual reference. Production guard/order proof:
 `bash docs/tasks/artifacts/formula_structure/run_formula_expression_mutations.sh` requires eleven
 assertion reds and exact restoration. Run alone; no overlapping build/reference/probe/gate/commit.
+
+Public rounding endpoints: `cargo test -p sc-units --test round_contract` (also `--release`)
+checks i128 inputs and signed i64/zero/tie refusals. `round_reference.py` in the formula_structure
+artifact directory independently verifies 36 exact Fraction rows; that directory's structural suite
+runs it. `bash docs/tasks/artifacts/formula_structure/run_round_mutations.sh` requires five real
+production assertion reds/exact restoration; run alone. No complete literal/evaluation proof implied.
+
+Public round diagnostic: `bash docs/tasks/artifacts/formula_structure/run_round_diagnostic.sh`
+links the actual current Cargo artifact and prints caught unwinds/typed results for six fixed inputs.
+It is a diagnostic producer, not a passing verdict; round_contract judges the values.
