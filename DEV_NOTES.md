@@ -13,7 +13,8 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   Existing scalar57/rational61 and literal6/arith9/angle7/inline5 mutation controls retain proof.
 - Director D95 ruling allows128-bit canonical literal nodes and requires i64 only at numeric binding.
   Unary minus preserves a positive2^63 child for signed MIN; no identity-changing sign fold.
-  Book/grammar/roadmap and decision agree. Full canonical proof/review remain .3b/.3c before D83/D95 close.
+  Book/grammar/roadmap agree. G1-0051 .3b adds146 canonical node/Decimal controls/twelve compiled
+  width/identity/quantum/domain reds; D95 closes. D83 .3c still reviews complete boundaries.
 - Earlier task payloads and oldest ledger records retain exact committed bytes. Curated map entry
   compaction makes room for the new decision without changing generator or ceilings.
   No Rust changed; no production evaluator, arbitrary-input transcendental, geometry/MCP/release claim.

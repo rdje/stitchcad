@@ -719,16 +719,18 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0050`.
 
 - ID: `G1-SLICE.5a.3b.3b.3b`
-  Status: `pending`
-  Goal: verify the received D95 ruling: exact literal nodes retain128-bit rational width, bound numeric
-  values fit i64; prove lexical rounding/domain/width and update normalization prerequisites.
-  Verification: `pending`
-  Commit: `pending`
+  Status: `done`
+  Goal: D95 exact canonical literal width, quantum/scalar boundary and unary/kind identity.
+  Protocol: [completed canonical pre-code plan](G1-SLICE-journal.md#canonical-literal-pre-code-protocol--completed-in-g1-0051).
+  Verification: canonical146/twelve compiled actual reds; focused checks/current acceptance below.
+  Commit: `STITCHCAD-G1-0051`.
 
 - ID: `G1-SLICE.5a.3b.3b.3c`
   Status: `pending`
   Goal: review canonical/binding storage and exact temporary boundaries after .3a/.3b; close D83 only
   when all original numeric obligations and their actual mutation controls are verified.
+  Retention census is64 working Markdown: before another seal, own a verified capacity transition
+  under this review prerequisite; preserve all decoded bytes and follow required CI/push workflow.
   Verification: `pending`
   Commit: `pending`
 
@@ -743,7 +745,9 @@ Completed reference input contract .5a.2b.1 is preserved in
 - ID: `G1-SLICE.5a.3c`
   Status: `pending`
   Goal: exact bounded literal normalization with typed kind/integer/source and shared rounding;
-  finalize full numeric/domain/reduced-rational protocol after reference prerequisites; no evaluation.
+  D95 literal magnitude/reduced rational width128 is distinct from bound signed64. Preserve kind
+  and unary syntax, input quantum/scalar boundaries; normalized Angle cannot hold raw sweeps.
+  Finalize numeric protocol after reference review/D84 prerequisites; no evaluation.
   Verification: `pending`
   Commit: `pending`
 
@@ -944,24 +948,10 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
 | done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
-| next | `G1-SLICE.5a.3b.3b.3b` | `pending` | D95 canonical proof, then D83 review and D84 |
+| next | `G1-SLICE.5a.3b.3b.3c` | `pending` | D83 complete boundary review, then D84 |
 
-## Routing Evidence — D72, milestone fixture calibration
-
-Full `make probes` reaches history_archive_probes.py's resident-overflow arm and fails with
-`decoded history aggregate bound exceeded`, not its expected resident error. Inventory at 285e238
-is 486538 decoded bytes; 22 × 160000 makes 4006538, above the unchanged 4000000 limit. The reader's
-ordering/cap is correct. This reproduces outside garment logic in the archive test fixture. It is
-kept in .4d.1 as a small prerequisite of this publication milestone, not routed to an unowned report;
-production archive retention and SPINE.19's other obligations are unchanged.
-
-## Routing Evidence — D67, lesson decision freshness
-
-`git diff b3b9e3a^ b3b9e3a -- docs/decisions` adds no answers line; the staged SPINE file at that
-revision carries a routine cleanup decline (line 620), and the commit log shows promotion green.
-`check_lesson_promotion.sh` lines 93–101 scan whole staged task files, so the unrelated historical
-lesson is the cause. This is outside measurement logic and reproduces in SPINE's cleanup evidence;
-SPINE.22 owns the project-slot adapter. Current metadata/token questions are explicitly added now.
+[Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
+retains exact D72/D67 diagnostics and ownership.
 
 ## Decisions
 
@@ -978,7 +968,7 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 ## Blockers
 
 - D70 awaits director decision for complete SizeSet under .4c.2. D84 ruling is received;
-  .5a.3b.3c owns binding/equality/inverse-trig verification, with independent rational/scalar work next.
+  .5a.3b.3c owns binding/equality/inverse-trig verification; D83 complete boundary review is next.
 
 ## Acceptance Checklist
 
@@ -1028,57 +1018,60 @@ retains exact predecessor evidence.
 [Completed scalar-domain acceptance](G1-SLICE-formulas.md#scalar-domain-acceptance--preserved-from-86b81a9)
 retains exact predecessor evidence.
 
-### `G1-SLICE.5a.3b.3b.3a` — once-rounded numeric binding storage
+[Completed numeric binding acceptance](G1-SLICE-formulas.md#numeric-binding-acceptance--preserved-from-9b3b9b3)
+retains exact predecessor evidence.
 
-- [x] **REPRODUCE / ISSUE** — binding_contract.py against predecessor accepts Count MAX+1 at let:
-  AssertionError oversize bound integer accepted, rc=1 (target/binding-pre-fix.log). Half-length
-  bindings also retained fractions because statement returned evaluate unchanged; L2 rounded later.
-- [x] **ROOT CAUSE (WHY + WHERE)** — predecessor let returns exact val without storage validation;
-  normative §2/4.2 declares bound integers. run_binding_mutations.sh bypass→assertion red, rc=1;
-  source restored byte-identically, runner0.
-- [x] **FIX** — read declared numeric binding widths, round once in actual statement, check inclusive
-  signed storage and scalar domain with binding/kind/bounds/rounded integer. Boolean stays Boolean.
-  L2 consumes the returned integer without another round; unbound exact temporaries remain wider.
-  D95 ruling is adopted without sign folding; full canonical proof remains separately owned .3b.
-- [x] **ADDRESSED (verified)** — binding_contract.py→80 independent Fraction/Decimal controls/0 fail,
-  rc=0; run_binding_mutations.sh→twelve compiled actual assertion reds, rc1 each, exact restoration/
-  runner0. Copied specification width32 and missing declaration controls prove source consumption;
-  two copied-book bindings verify actual replay/census. Valid/refused bindings do not publish to caller.
+### `G1-SLICE.5a.3b.3b.3b` — canonical literal width and operator identity
+
+- [x] **REPRODUCE / ISSUE** — actual canonical diagnostic parses signed MIN as neg(lit angle2^63),
+  while literal2^63 exceeds i64; canonical_literal_contract.py independently verifies this node and
+  later signed binding, rc=0. Director D95 ruling resolves the previously ambiguous representation.
+- [x] **ROOT CAUSE (WHY + WHERE)** — formula2 bound-form table had not distinguished grammar4
+  literal nodes from bound storage. Canonical146 independently authored controls reproduce the
+  positive wide child/unary identity; actual i64-literal restriction mutation→assertion red, rc=1,
+  source restored byte-identically, run_canonical_literal_mutations.sh runner0.
+- [x] **FIX** — adopt/verify received128-bit literal magnitude versus i64 bound-value distinction.
+  Existing reference behavior is correct under this ruling; no runtime change needed. Add watched
+  independent nodes/Decimal controls and real guard mutations. Preserve unary/kind identities,
+  exact pre-round width, input quantum and scalar domains; update normalization prerequisites.
+- [x] **ADDRESSED (verified)** — canonical_literal_contract.py→146 independent node/Decimal controls/
+  0 fail, rc=0; run_canonical_literal_mutations.sh→twelve compiled actual assertion reds, rc1 each,
+  byte-identical restoration/runner0. Covers63/64/127/128/129 bits, signs/Count refusal, aliases/long
+  reducible spellings, zero/operator shapes, half-quanta and canonical versus binding boundaries.
 - [x] **NO REGRESSION** — structural16+2/input130+3/expression12/literal60/361/arithmetic24/100/162/
-  angle42/72/math42/rational61/scalar57/binding80 all green, rc=0. Literal6/arith9/angle7/rational12/
-  scalar11/inline5 actual reds and exact restoration, rc=0. Language16/publication9 pass, rc=0.
-  Ledger/archive/censuses and staged make gate green, rc=0 (details below).
-  No Rust changed or new native/WASM/remote CI claim; curated reference is not production evaluation.
-- [x] **LOCKSTEP** — D95 decision, formula binding distinction, grammar/unary identity, expert annex,
-  roadmap and live task pointers agree. Prior task/oldest ledger payloads preserve committed bytes;
-  map regeneration uses compact curated input, unchanged ceilings/generator. G1 stays5/18; next .3b.
+  angle42/72/math42/rational61/scalar57/binding80/canonical146 green, rc=0. Binding mutations still
+  require twelve compiled actual reds/byte restore, runner0. Focused recording checks pass below;
+  staged make gate→all doctrines green, rc=0.
+  No Rust/runtime changed or new native/WASM/remote CI claim; reference nodes certify no serializer.
+- [x] **LOCKSTEP** — D95 closes with received ruling, reference proof and retained original record;
+  grammar/decision/expert annex/live task pointers agree. Prior binding acceptance/journal and
+  existing siblings preserve exact bytes. G1 stays5/18, defects12 open/82 sealed; D83 review next.
 
 ## Verification Log
 
-[Historical scalar-domain journals](G1-SLICE-journal.md#scalar-domain-progress--preserved-from-86b81a9)
-retain prior evidence.
+[Historical binding journals](G1-SLICE-journal.md#numeric-binding-progress--preserved-from-9b3b9b3)
+retain prior evidence and the completed pre-code plan.
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
-| `2026-10-02` | `.5a.3b.3b.3a` | binding80/twelve reds; existing reference and mutation controls | bound storage verified; canonical/review remain |
+| `2026-10-02` | `.5a.3b.3b.3b` | canonical146/twelve reds; reference controls/binding twelve reds | D95 closed; D83 complete review next |
 
-Recording checks: language16/publication9/ledger9 pass, rc=0;48 chapters/16 APIs/1000 source/
-1529 rendered links. Archive verify/retention→126 logical/63 working Markdown/7169 lines/571699
-decoded bytes/298309 resident bytes, rc=0. Tree10/13/eight/zero gaps; glossary310/nine/158/no index
+Recording checks: language16/publication9/ledger9 pass, rc=0;48 chapters/16 APIs/1001 source/
+1531 rendered links. Archive verify/retention→127 logical/64 working Markdown/7193 lines/573489
+decoded bytes/300099 resident bytes, rc=0. Tree10/13/eight/zero gaps; glossary310/nine/158/no index
 drift; feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/zero mismatch, rc=0.
-Existing sibling bytes and preceding acceptance/journal preserved exactly; reconstructed defect
-census→13 open/81 sealed/zero overlap, rc=0. README unchanged. First staged gate refused roadmap952>951 lines; clarification compacted
-within existing baseline, no cap change. Corrected staged make gate→all doctrines green, rc=0.
-LIVE reviewed: G1 stays5/18. No new production or numerical signoff.
+Previous siblings/acceptance/journal/routing and sealed D95 description preserve exact committed
+bytes; reconstructed defect census12 open/82 sealed/zero overlap, rc=0. README unchanged; LIVE
+reviewed: G1 stays5/18. Staged make gate→all doctrines green, rc=0; production normalization/evaluation and D84 remain owned.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3b.3b.3a` | `STITCHCAD-G1-0050 (leaf G1-SLICE.5a.3b.3b.3a): reference bindings store bounded integers` | binding80/twelve compiled actual reds and exact restoration |
+| `.5a.3b.3b.3b` | `STITCHCAD-G1-0051 (leaf G1-SLICE.5a.3b.3b.3b): canonical literals retain wide exact identity` | canonical146/twelve compiled actual reds/exact restore |
 
 ## Changelog
 
-- `2026-10-02`: D95 director ruling adopted; numeric binding storage verified. Complete canonical
-  proof .3b/review .3c precede D83/D95 closure; D84 retains inverse-trig/equality verification.
-- promotion: promoted by `decision_literals.md` (director's canonical-node/bound-storage ruling).
+- `2026-10-02`: D95 canonical-node width/identity verified, received ruling closed. D83 full
+  numeric boundary review .3c then D84 verification; production normalization remains .5a.3c.
+- promotion: declined (routine conformance verification of the already recorded D95 ruling).

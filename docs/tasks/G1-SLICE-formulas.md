@@ -719,3 +719,33 @@ Current work remains in the parent.
   No Rust evaluator, caller environment mutation, full DAG/geometry/MCP or release claim.
   Verification: binding80/twelve actual reds; focused checks and gate in parent.
   Commit: `STITCHCAD-G1-0050`.
+
+## Numeric binding acceptance — preserved from 9b3b9b3
+
+### `G1-SLICE.5a.3b.3b.3a` — once-rounded numeric binding storage
+
+- [x] **REPRODUCE / ISSUE** — binding_contract.py against predecessor accepts Count MAX+1 at let:
+  AssertionError oversize bound integer accepted, rc=1 (target/binding-pre-fix.log). Half-length
+  bindings also retained fractions because statement returned evaluate unchanged; L2 rounded later.
+- [x] **ROOT CAUSE (WHY + WHERE)** — predecessor let returns exact val without storage validation;
+  normative §2/4.2 declares bound integers. run_binding_mutations.sh bypass→assertion red, rc=1;
+  source restored byte-identically, runner0.
+- [x] **FIX** — read declared numeric binding widths, round once in actual statement, check inclusive
+  signed storage and scalar domain with binding/kind/bounds/rounded integer. Boolean stays Boolean.
+  L2 consumes the returned integer without another round; unbound exact temporaries remain wider.
+  D95 ruling is adopted without sign folding; full canonical proof remains separately owned .3b.
+- [x] **ADDRESSED (verified)** — binding_contract.py→80 independent Fraction/Decimal controls/0 fail,
+  rc=0; run_binding_mutations.sh→twelve compiled actual assertion reds, rc1 each, exact restoration/
+  runner0. Copied specification width32 and missing declaration controls prove source consumption;
+  two copied-book bindings verify actual replay/census. Valid/refused bindings do not publish to caller.
+- [x] **NO REGRESSION** — structural16+2/input130+3/expression12/literal60/361/arithmetic24/100/162/
+  angle42/72/math42/rational61/scalar57/binding80 all green, rc=0. Literal6/arith9/angle7/rational12/
+  scalar11/inline5 actual reds and exact restoration, rc=0. Language16/publication9 pass, rc=0.
+  Ledger/archive/censuses and staged make gate green, rc=0 (details below).
+  No Rust changed or new native/WASM/remote CI claim; curated reference is not production evaluation.
+- [x] **LOCKSTEP** — D95 decision, formula binding distinction, grammar/unary identity, expert annex,
+  roadmap and live task pointers agree. Prior task/oldest ledger payloads preserve committed bytes;
+  map regeneration uses compact curated input, unchanged ceilings/generator. G1 stays5/18; next .3b.
+
+
+Current canonical verification remains in [G1-SLICE](G1-SLICE.md).

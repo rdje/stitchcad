@@ -380,3 +380,78 @@ census→12 open/81 sealed/zero overlap verified, rc=0. README unchanged. Staged
 - `2026-10-02` DBINP: director asked where DSL syntax/semantics are specified. Existing formula
   chapter, grammar, examples and expert annex are the review surface; no semantic ruling or pivot.
 - promotion: declined (routine enforcement of existing scalar domains and isolated verification).
+
+## Numeric binding progress — preserved from 9b3b9b3
+
+## Verification Log
+
+[Historical scalar-domain journals](G1-SLICE-journal.md#scalar-domain-progress--preserved-from-86b81a9)
+retain prior evidence.
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.3b.3a` | binding80/twelve reds; existing reference and mutation controls | bound storage verified; canonical/review remain |
+
+Recording checks: language16/publication9/ledger9 pass, rc=0;48 chapters/16 APIs/1000 source/
+1529 rendered links. Archive verify/retention→126 logical/63 working Markdown/7169 lines/571699
+decoded bytes/298309 resident bytes, rc=0. Tree10/13/eight/zero gaps; glossary310/nine/158/no index
+drift; feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/zero mismatch, rc=0.
+Existing sibling bytes and preceding acceptance/journal preserved exactly; reconstructed defect
+census→13 open/81 sealed/zero overlap, rc=0. README unchanged. First staged gate refused roadmap952>951 lines; clarification compacted
+within existing baseline, no cap change. Corrected staged make gate→all doctrines green, rc=0.
+LIVE reviewed: G1 stays5/18. No new production or numerical signoff.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3b.3a` | `STITCHCAD-G1-0050 (leaf G1-SLICE.5a.3b.3b.3a): reference bindings store bounded integers` | binding80/twelve compiled actual reds and exact restoration |
+
+## Changelog
+
+- `2026-10-02`: D95 director ruling adopted; numeric binding storage verified. Complete canonical
+  proof .3b/review .3c precede D83/D95 closure; D84 retains inverse-trig/equality verification.
+- promotion: promoted by `decision_literals.md` (director's canonical-node/bound-storage ruling).
+
+## Canonical literal pre-code protocol — completed in G1-0051
+
+- ID: `G1-SLICE.5a.3b.3b.3b`
+  Status: `done`
+  Goal: verify the received D95 ruling: exact literal nodes retain128-bit rational width, bound numeric
+  values fit i64; prove lexical rounding/domain/width and update normalization prerequisites.
+  Pre-code protocol: decision_literals plus formula2/4.2/4.3 and grammar1/2/4 govern canonical
+  literal integers versus bound storage. Keep128-bit absolute numerator/denominator limits and
+  existing exact conversion, input rounding, scalar domains, kind identity and unary operator nodes.
+  Independently authored canonical nodes/Decimal conversions must verify 63/64/127/128/129-bit
+  values, both signed endpoint spellings, unit aliases, long reducible decimals, pre-round width
+  refusal, Count negation refusal and later i64 binding refusal/cancellation. Do not fold signs or
+  reuse normalized Angle for raw formula values. Actual wide-literal/sign/kind/quantum/width faults
+  must produce assertion reds and exact restoration; retain all earlier numeric controls.
+  Complete D95 only after full canonical proof; D83 .3c review stays separate. Update book/grammar/
+  decision proof boundaries, product normalization prerequisites and live records. Preserve prior
+  task/ledger payloads; any required archive capacity transition remains explicitly owned here.
+  Focused reference/language/publication/ledger/census/archive and staged gate before commit;
+  no production canonicalizer/serializer/evaluator, arbitrary-input numeric or MCP/release claim.
+  Verification: canonical146/twelve actual reds; current parent acceptance/journal.
+  Commit: `STITCHCAD-G1-0051`.
+
+## Milestone routing evidence — preserved from 9b3b9b3
+
+## Routing Evidence — D72, milestone fixture calibration
+
+Full `make probes` reaches history_archive_probes.py's resident-overflow arm and fails with
+`decoded history aggregate bound exceeded`, not its expected resident error. Inventory at 285e238
+is 486538 decoded bytes; 22 × 160000 makes 4006538, above the unchanged 4000000 limit. The reader's
+ordering/cap is correct. This reproduces outside garment logic in the archive test fixture. It is
+kept in .4d.1 as a small prerequisite of this publication milestone, not routed to an unowned report;
+production archive retention and SPINE.19's other obligations are unchanged.
+
+## Routing Evidence — D67, lesson decision freshness
+
+`git diff b3b9e3a^ b3b9e3a -- docs/decisions` adds no answers line; the staged SPINE file at that
+revision carries a routine cleanup decline (line 620), and the commit log shows promotion green.
+`check_lesson_promotion.sh` lines 93–101 scan whole staged task files, so the unrelated historical
+lesson is the cause. This is outside measurement logic and reproduces in SPINE's cleanup evidence;
+SPINE.22 owns the project-slot adapter. Current metadata/token questions are explicitly added now.
+
+Current canonical verification remains in [G1-SLICE](G1-SLICE.md).

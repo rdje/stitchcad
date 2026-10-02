@@ -197,3 +197,9 @@ once into declared signed storage; exact temporaries retain wider width. Count/s
 apply. `bash docs/tasks/artifacts/formula_structure/run_binding_mutations.sh` requires twelve
 compiled actual assertion reds and byte restoration; run alone. Copied-book replay verifies the
 census consumes returned bound integers. Production evaluation and full canonical proof remain owned.
+
+Canonical literal reference: `canonical_literal_contract.py` under `docs/tasks/artifacts/formula_structure/`
+checks146 independent node/Decimal controls; the structural suite watches them. Width128 means
+absolute reduced magnitude, not signed i128; unary identity and later binding storage remain distinct.
+`bash docs/tasks/artifacts/formula_structure/run_canonical_literal_mutations.sh` requires twelve
+compiled actual assertion reds/exact restore; run alone. D95 closes; D83 review and production proof remain.

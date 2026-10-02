@@ -92,6 +92,14 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part46.md`](docs/history/stitchcad-changelog-part46.md) | G1-0028 and SPINE-0019c | 22 lines, 1861 bytes, `sha256:62f1e78a…` |
 
+## STITCHCAD-G1-0051 - canonical literals retain wide exact identity (leaf `G1-SLICE.5a.3b.3b.3b`)
+
+D95 closes:146 independent node/Decimal controls verify128-bit canonical magnitudes, unary identity,
+i64 binding distinction, aliases/quanta/scalar bounds and129-bit refusal. Twelve compiled actual
+faults produce assertion reds/exact restoration. Existing reference/binding controls pass; no runtime
+behavior changes. Book/grammar/decision/live pointers and preserved prior records agree. G1 stays5/18;
+defects12 open/82 sealed; D83 full review .3c next. No production normalization/serializer signoff.
+
 ## STITCHCAD-G1-0050 - reference bindings store bounded integers (leaf `G1-SLICE.5a.3b.3b.3a`)
 
 Numeric let rounds once, checks declared signed storage/scalar domains and returns the stored integer;

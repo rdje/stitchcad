@@ -5,10 +5,11 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3b.3b`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** verify D95 exact128-bit canonical literal boundaries and unary identity .3b;
-  numeric binding .3a is committed with80 controls/twelve actual reds. D83 complete review .3c
-  follows. Ruling is received/adopted in `docs/decisions/decision_literals.md`, not awaiting input.
+- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3b.3c`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** D83 complete numeric boundary review .3c; binding80/twelve actual reds and
+  canonical146/twelve actual reds are committed. D95 closes under received ruling in
+  `docs/decisions/decision_literals.md`: exact128-bit literals, signed64 numeric bindings.
+  Archive has64 working Markdown: own capacity transition before another seal, preserve bytes.
   D84 signed-angle binding/equality and inverse-trig verification follows under .5a.3b.3c;
   `docs/decisions/decision_angles.md` owns raw-formula/normalized-direction semantics.
   Product normalization .5a.3c follows prerequisites. D70 axes ruling remains pending under .4c.2.

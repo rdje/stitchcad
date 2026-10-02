@@ -14,3 +14,4 @@ python3 -I -B docs/tasks/artifacts/formula_structure/angle_math_oracle.py
 python3 -I -B docs/tasks/artifacts/formula_structure/rational_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/scalar_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/binding_contract.py
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_literal_contract.py

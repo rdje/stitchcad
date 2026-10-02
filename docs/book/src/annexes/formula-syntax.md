@@ -268,7 +268,7 @@ rounding/refusal boundaries. Nine actual arithmetic/scale/zero/branch/quantizati
 assertion failures and byte-identical restoration; run alone. The selector checks use the reference's
 length-only edge model, and certify no real curve inversion or geometric accuracy.
 
-D83 remains open for i64 input/binding limits; rational and scalar proofs appear below. D84 owns
+D83 complete boundary review remains open; current width/scalar/binding/literal proofs appear below. D84 owns
 signed-angle verification. This is partial
 reference evidence, not a complete production evaluator, cross-platform numerical signoff, command
 API or release certificate. The next audit must close those gaps before product normalization uses
@@ -331,8 +331,8 @@ assertion failures and exact restoration; run alone. The earlier literal/arithme
 seven mutation controls also pass. Angle tests require the exact pole reason: an unrelated rational
 refusal cannot count as evidence for a missing mathematical-domain guard (D88).
 
-D83's scalar domains are checked below; signed i64 input/binding limits remain owned by
-G1-SLICE.5a.3b.3b.3; D84 signed-angle verification remains .3c. Product numeric normalization and
+D83's scalar/binding/literal controls appear below; complete boundary review remains
+G1-SLICE.5a.3b.3b.3c; D84 signed-angle verification remains .3c. Product numeric normalization and
 full evaluation are still pending. The curated transcendental reference is not a production certificate.
 
 ## Inline documentation language context
@@ -396,8 +396,8 @@ angular context no longer executes another family's tests. The quiet-load contro
 verify this boundary. Shared setup is not an independent numeric oracle; each family's explicit
 expected values/refusals remain independently authored.
 
-D83 binding storage controls follow; full canonical/review proof remains .3b.3b/.3c, and D84
-signed-angle verification remains .3c. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
+D83 binding/literal controls follow; complete boundary review remains .3b.3c, and D84 signed-angle
+verification remains .3c. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
 normalization/evaluation, real geometry, command/API/MCP and production release remain separate work.
 
 
@@ -432,6 +432,34 @@ source restoration; run alone.
 This reference statement method returns a binding without publishing it into the caller’s supplied
 environment. The curated replay caller stores that result explicitly; this is not a production
 transaction guarantee or a general environment implementation. Existing scalar/rational controls
-remain separate. D95 complete canonical-input proof and D83 boundary review remain .3b.3b/.3c;
+remain separate. D95 canonical-node controls follow; D83 boundary review remains .3b.3c.
 D84 inverse-trig/equality verification remains .3c. Production normalization/serialization/evaluation,
 real geometry, API/MCP control and release signoff remain future work.
+
+
+## Reference canonical literal width and identity controls
+
+D95’s received ruling is verified at the reference parser’s literal nodes. The128-bit limit means
+absolute reduced numerator/denominator magnitude, including unsigned magnitudes above signed i128
+MAX. A canonical literal may exceed i64. Numeric binding is the later signed64 boundary, with its
+other scalar rules. Unary minus retains its node; no sign folding or algebraic simplification is
+introduced. Positive zero, unary-negative zero and double negation keep distinct operator shapes.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_canonical_literal_mutations.sh
+```
+
+One hundred forty-six independently authored node/Decimal controls cover63/64/127/128-bit literal
+magnitudes,129-bit refusals, signed i64 MIN’s wide child, Count negation refusal, later binding
+refusal/cancellation, unit aliases, kind identity, reducible long spellings, input half-quanta,
+pre-round rational width and post-round scalar bounds. Decimal supplies independent quantum results;
+expected literal/operator tuples are authored separately from the reference parser. Twelve compiled
+actual faults change width, unary identity, kind, quantization or domain guards; each requires an
+assertion red and exact source restoration. Run mutations alone.
+
+Together with binding80 and the preceding lexical/scalar/rational suites, these controls close
+D95’s specification ambiguity. D83’s complete boundary review remains G1-SLICE.5a.3b.3b.3c;
+production normalization .5a.3c must preserve this width, kind and unary structure and provide its
+own public-contract proof. These tuples are reference-model nodes; no production canonical
+serializer, persistent formula identity or evaluator is certified by this slice.
