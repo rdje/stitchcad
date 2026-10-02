@@ -668,15 +668,15 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0045`.
 
 - ID: `G1-SLICE.5a.3b.3b`
-  Status: `in_progress`
-  Goal: D83 declared length/area/count domains and canonical/binding i64 bounds with typed operations;
+  Status: `done`
+  Goal: D83 declared length/area/count domains,128-bit canonical literals and i64 numeric bindings with typed operations;
   finalize boundary checks from complete contracts, not a caller narrowing precondition. D84 signed-angle
   verification remains separate; scalar repair can proceed under the recorded ruling.
   Children: .3b.1a D89 public operators; .3b.1b D90 operation context; .3b.1c D91 code-language context;
   .3b.2 reference scalar domains;
   .3b.3 reference canonical/binding i64 limits. Each prerequisite is independently committed.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: complete scoped D83 review below; four independent families/47 actual reds.
+  Commit: children complete through `STITCHCAD-G1-0054`.
 
 - ID: `G1-SLICE.5a.3b.3b.1a`
   Status: `done`
@@ -704,12 +704,12 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0049` (this recording commit).
 
 - ID: `G1-SLICE.5a.3b.3b.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: D83 bounded i64 bindings; D95 canonical literals and exact temporaries retain128-bit width.
   Children: .3a numeric binding storage, .3b D95 signed literal ruling/canonical input, .3c review.
   D95 director ruling received: exact canonical literals retain128-bit width; bound numeric values fit i64.
-  Verification: `pending`
-  Commit: children pending.
+  Verification: complete scoped D83 review below; four independent families/47 actual reds.
+  Commit: children complete through `STITCHCAD-G1-0054`.
 
 - ID: `G1-SLICE.5a.3b.3b.3a`
   Status: `done`
@@ -726,11 +726,11 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0051`.
 
 - ID: `G1-SLICE.5a.3b.3b.3c`
-  Status: `in_progress`
+  Status: `done`
   Goal: review all D83 numeric obligations after binding/canonical proof; close only after complete review.
   Children: .1 triggered archive capacity, .1v observed CI, .2 complete numeric boundary review.
-  Verification: `pending`
-  Commit: children pending.
+  Verification: complete scoped D83 review below; four independent families/47 actual reds.
+  Commit: children complete through `STITCHCAD-G1-0054`.
 
 - ID: `G1-SLICE.5a.3b.3b.3c.1`
   Status: `done`
@@ -744,15 +744,17 @@ Completed reference input contract .5a.2b.1 is preserved in
   Status: `done`
   Goal: observe exact .1 head SHA doctrine/Rust CI job/step verdicts; only close capacity on success.
   Verification: pushed f876913; both completed jobs/all steps successful; CLI140 and newest
-  committed catalog refusal pass. Full actual job IDs/checks below; D83 review .2 next.
+  committed catalog refusal pass. [Observed jobs](G1-SLICE-journal.md#second-window-ci-evidence--preserved-from-a5159ba);
+  capacity prerequisite complete.
   Commit: `STITCHCAD-G1-0053`.
 
 - ID: `G1-SLICE.5a.3b.3b.3c.2`
-  Status: `pending`
-  Goal: complete D83 original width/scalar/binding review and its actual mutation obligations;
-  keep D84 inverse-trig/equality separate, close D83 only with complete scoped evidence.
-  Verification: `pending`
-  Commit: `pending`
+  Status: `done`
+  Goal: complete scoped D83 boundaries; correct D97 goal and D98 verdict attribution.
+  Protocol: [completed review plan](G1-SLICE-journal.md#numeric-boundary-review-protocol--completed-in-g1-0054).
+  Verification:61/57/80/146 independent controls;12/11/12/12 actual reds/exact restoration;
+  prerequisite source identity/language16. Complete current acceptance below; D84 separate.
+  Commit: `STITCHCAD-G1-0054`.
 
 - ID: `G1-SLICE.5a.3b.3c`
   Status: `pending`
@@ -968,7 +970,7 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
 | done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
-| next | `G1-SLICE.5a.3b.3b.3c.2` | `pending` | D83 complete numeric boundary review |
+| next | `G1-SLICE.5a.3b.3c` | `pending` | D84 signed-angle/inverse-trig/equality proof |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -988,7 +990,7 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 ## Blockers
 
 - D70 awaits director decision for complete SizeSet under .4c.2. D84 ruling is received;
-  .5a.3b.3c owns binding/equality/inverse-trig verification; D83 complete boundary review is next.
+  .5a.3b.3c owns binding/equality/inverse-trig verification; D83 scoped reference review is complete; production proof remains separate.
 
 ## Acceptance Checklist
 
@@ -1000,48 +1002,61 @@ also run glossary/API, feature and publication checks. Prior checklists and auth
 [Previous exact capture/D96 proof and commit journal](G1-SLICE-journal.md#second-window-local-proof--preserved-from-f876913)
 retain exact committed evidence.
 
-### `G1-SLICE.5a.3b.3b.3c.1v` — second-window observed CI
+[Previous observed-CI proof and commit journal](G1-SLICE-journal.md#second-window-ci-evidence--preserved-from-a5159ba)
+retain exact committed evidence.
 
-- [x] **REPRODUCE / ISSUE** — make push-due→exceptional push due for two archive controls,
-  26 unpushed commits, rc=1 at G1-0052. Local success does not observe the required runner.
-- [x] **ROOT CAUSE (WHY + WHERE)** — COMMIT.md requires CI observation after doctrine-input
-  changes. gh API at exact f876913→doctrine run36989497775/Rust run36989497872 completed success,
-  rc=0; job queries below independently identify completed steps, not just aggregate run status.
-- [x] **FIX** — push clean committed project main, observe exact head SHA job/step metadata;
-  execute newest committed catalog refusal. Record proof; preserve earlier local/source evidence.
-- [x] **ADDRESSED (verified)** — gh API /actions/runs/36989497775/jobs→job110782133989 enforce,
-  completed/success, all7 steps completed/success, rc=0; /36989497872/jobs→job110782134441 check,
-  completed/success, all9 steps success, rc=0. Archive prerequisite/enforcer, fmt/clippy/unit+
-  property+doc tests and real WASM succeeded. window_contract.py→140 controls/131 reads, rc=0;
-  newest committed catalog edit requires named retention refusal, rc=1.
-- [x] **NO REGRESSION** — git rev-parse HEAD origin/main→same full f876913e60591936ca509e9a7eb1fda69bd9d8cf,
-  rc=0; push-due→0 unpushed/nothing to push, rc=0; handoff: OK, rc=0. Previous local full25 probes,
-  native488/WASM3 evidence retained. Focused doc/archive/ledger/book/gate recording checks below.
-- [x] **LOCKSTEP** — book upkeep replaces pending CI with linked observed jobs; live/frontier point
-  to D83 complete review .2. G1 stays5/18, defects12/83. No domain/geometry signoff inferred.
+### `G1-SLICE.5a.3b.3b.3c.2` — complete scoped numeric boundary review
+
+- [x] **REPRODUCE / ISSUE** — original D83 accepts count2^128 and1000000001 um. Current actual
+  rational61 and scalar57 controls require formula_domain at these exact cases, rc=0. D97 rg
+  matches the superseded canonical/binding i64 parent Goal while D95 permits128-bit literal nodes.
+- [x] **ROOT CAUSE (WHY + WHERE)** — former see measured width without refusal; binding consumer
+  rounded outside the statement method. Four actual guard families now isolate width, scalar,
+  stored values and literal identity. Runs→61/57/80/146 independent controls, rc=0; bypass/endpoint/
+  declaration/context/identity mutations→12/11/12/12 actual assertion reds, rc=1 each, runner0.
+- [x] **FIX** — complete obligation-to-proof review in the expert annex; close D83 only for the
+  curated reference boundaries and repaired prerequisites. Correct live D97 Goal, preserve earlier
+  evidence. D84 signed inverse-trig/equality and product canonical/evaluation scope remain open.
+- [x] **ADDRESSED (verified)** — restored run_formula_structure_probes.sh→rational61/scalar57/
+  binding80/canonical146 all0 fail, rc=0. Four existing mutation runners require47 actual reds;
+  evaluator/setup byte comparisons equal HEAD, rc=0. Independent Fraction/Decimal and authored
+  nodes verify exact conversion/result width, input quantum, scalar endpoints/intermediates,
+  inclusive i64 binding/ties, declaration changes, caller writes and replay. Eight prerequisite
+  Rust files remain byte-identical to G1-0047; latest G1-0052 native/WASM and observed CI retained.
+- [x] **NO REGRESSION** — complete reference structure/input/expression/literal/arithmetic/angle/
+  math families remain green, rc=0; language16 passes including explicit Rust context, rc=0.
+  Runtime source restored. Focused recording/gate checks below;
+  old task/defect/ledger bytes retained. No general numerical certificate.
+- [x] **LOCKSTEP** — D83/D97/D98 descriptions seal unchanged; annex/decision/live task ancestors agree
+  with128-bit literals versus signed64 bindings. Scalar/binding parents close; G1 stays5/18.
+  D84 remains next, production normalization/evaluation retain separate ownership.
 
 ## Verification Log
 
-CI commands: gh api repos/rdje/stitchcad/actions/runs with head_sha=f876913e60591936ca509e9a7eb1fda69bd9d8cf;
-gh api repos/rdje/stitchcad/actions/runs/36989497775/jobs and /36989497872/jobs. All rc=0.
-Initial automatic approval refused the default-main export; read-only origin metadata and182-path
-outgoing census established the existing public project, push permission and task-owned payload.
-Same authorized push succeeded without an alternate destination or bypass. Source control
-postconditions were clean. Final recording: book/publication9→48 chapters/16 APIs/1001 source/
-1531 rendered links, rc=0; ledger9+13 pointer controls, rc=0; retained archive132 logical/7 working
-Markdown/7589 lines/592830 decoded bytes/249152 resident bytes, rc=0. Current CLI141 controls
-include newest committed refusal, rc=0. Tree10/13/eight/zero gaps, rc=0. Prior window2 proof/task
-journal and oldest live ledger payload preserve exact committed bytes. README reviewed unchanged;
-LIVE G1 stays5/18, defects12/83. Staged make gate→all doctrines green, rc=0.
+Commands: run_formula_structure_probes.sh before and after the four mutation runners;
+run_rational_mutations.sh, run_scalar_mutations.sh, run_binding_mutations.sh,
+run_canonical_literal_mutations.sh. All runners rc=0;47 actual assertion reds rc=1 each;
+CASES counts equal observed reds12/11/12/12. Evaluator/setup equal HEAD; eight prerequisite Rust files equal G1-0047. Language16 rc=0.
+Recording: language16/publication9/ledger9+13 pointer controls/archive28+145 CLI controls, rc=0.
+Publication48 chapters/16 scoped APIs/1002 source/1533 rendered links; retention136 logical/
+11 working Markdown/7691 lines/600019 decoded bytes/256341 resident bytes, rc=0. Tree10/13/eight/
+zero gaps; glossary310/nine/158/zero index drift; feature105/29; uncertainty133/16/zero unowned;
+fixture20/four/five/zero mismatch, rc=0. Defects11 open/86 sealed/zero overlap; parent Goal matches literal/binding rules. Prior CI evidence, both windows and oldest payloads
+preserve exact bytes. README reviewed unchanged; LIVE G1 stays5/18. No runtime/Rust source changed;
+focused checks appropriate to this review. First staged gate rc=2: live_status324 B row exceeds320 B;
+notes tightened without changing the ceiling. Final staged make gate→all doctrines green, rc=0.
+D98 supersedes preserved G1-0053's make-push-due rc=1 attribution: actual due-base checker1/Make0
+and HEAD control0/0 pass, rc=0. Published PUSH_DUE_BASE supplies test cases without Git mutation.
+COMMIT/book clarify wrapper versus machine verdict; no authority/cadence/build rule changes.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3b.3b.3c.1v` | `STITCHCAD-G1-0053 (leaf G1-SLICE.5a.3b.3b.3c.1v): record second-window CI success` | exact pushed head; both completed jobs/all steps success |
+| `.5a.3b.3b.3c.2` | `STITCHCAD-G1-0054 (leaf G1-SLICE.5a.3b.3b.3c.2): complete numeric boundary review` | four independent families/47 actual reds/exact restore |
 
 ## Changelog
 
-- `2026-10-02`: observed window2 CI and post-commit immutability close capacity prerequisite.
-  Resume complete D83 boundary review .2; D84 and production normalization remain separately owned.
-- promotion: declined (routine observed CI and retention evidence for existing contracts).
+- `2026-10-02`: D83 scoped reference boundary review and D97 live-goal correction complete.
+  D84 signed inverse-trig/equality is next; product normalization/evaluation remain pending.
+- promotion: declined (routine conformance review and planning alignment under existing contracts).

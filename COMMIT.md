@@ -118,7 +118,8 @@ apply to code changes.
   the owning leaf — never before observing it. Derive whether one is owed instead of remembering it:
 
   ```bash
-  make push-due      # scripts/check_push_due.sh — exit 1 when an exceptional push is due
+  make push-due      # diagnostic report; Make intentionally ignores the checker's nonzero status
+  bash scripts/check_push_due.sh  # machine verdict: 0 = none due, 1 = due, 2 = refused
   ```
 
   **Observe the verdict at job level, not run level.** A run's aggregate status can lag its own jobs: measured

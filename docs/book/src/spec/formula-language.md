@@ -72,6 +72,9 @@ values may be wider, up to the 128-bit rational limit (§4.3); unary minus keeps
 A numeric binding rounds once and refuses an integer outside its signed i64 range. Count stays
 nonnegative; length/area also retain their smaller scalar domains. See the
 [expert binding annex](../annexes/formula-syntax.md#reference-numeric-binding-storage-controls).
+The [reference boundary review](../annexes/formula-syntax.md#complete-reference-numeric-boundary-review)
+maps the four verified numeric boundaries to their independent controls. Product normalization and
+evaluation remain pending; these book instruments supply no production execution claim.
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.
 For example, bound 360 degrees differs from zero and retains a full-turn sweep. Direction fields on

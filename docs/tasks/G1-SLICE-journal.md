@@ -654,3 +654,73 @@ Remote/newest-committed proof .1v.
 - `2026-10-02`: window2 exact capture/retirement; D96 target coverage repaired. Required observed
   CI .1v precedes D83 complete numeric review .2; D84 remains next prerequisite.
 - promotion: declined (routine reuse of retained-window contract and repair of actual pointer evidence).
+
+## Second-window CI evidence — preserved from a5159ba
+
+### `G1-SLICE.5a.3b.3b.3c.1v` — second-window observed CI
+
+- [x] **REPRODUCE / ISSUE** — make push-due→exceptional push due for two archive controls,
+  26 unpushed commits, rc=1 at G1-0052. Local success does not observe the required runner.
+- [x] **ROOT CAUSE (WHY + WHERE)** — COMMIT.md requires CI observation after doctrine-input
+  changes. gh API at exact f876913→doctrine run36989497775/Rust run36989497872 completed success,
+  rc=0; job queries below independently identify completed steps, not just aggregate run status.
+- [x] **FIX** — push clean committed project main, observe exact head SHA job/step metadata;
+  execute newest committed catalog refusal. Record proof; preserve earlier local/source evidence.
+- [x] **ADDRESSED (verified)** — gh API /actions/runs/36989497775/jobs→job110782133989 enforce,
+  completed/success, all7 steps completed/success, rc=0; /36989497872/jobs→job110782134441 check,
+  completed/success, all9 steps success, rc=0. Archive prerequisite/enforcer, fmt/clippy/unit+
+  property+doc tests and real WASM succeeded. window_contract.py→140 controls/131 reads, rc=0;
+  newest committed catalog edit requires named retention refusal, rc=1.
+- [x] **NO REGRESSION** — git rev-parse HEAD origin/main→same full f876913e60591936ca509e9a7eb1fda69bd9d8cf,
+  rc=0; push-due→0 unpushed/nothing to push, rc=0; handoff: OK, rc=0. Previous local full25 probes,
+  native488/WASM3 evidence retained. Focused doc/archive/ledger/book/gate recording checks below.
+- [x] **LOCKSTEP** — book upkeep replaces pending CI with linked observed jobs; live/frontier point
+  to D83 complete review .2. G1 stays5/18, defects12/83. No domain/geometry signoff inferred.
+
+## Verification Log
+
+CI commands: gh api repos/rdje/stitchcad/actions/runs with head_sha=f876913e60591936ca509e9a7eb1fda69bd9d8cf;
+gh api repos/rdje/stitchcad/actions/runs/36989497775/jobs and /36989497872/jobs. All rc=0.
+Initial automatic approval refused the default-main export; read-only origin metadata and182-path
+outgoing census established the existing public project, push permission and task-owned payload.
+Same authorized push succeeded without an alternate destination or bypass. Source control
+postconditions were clean. Final recording: book/publication9→48 chapters/16 APIs/1001 source/
+1531 rendered links, rc=0; ledger9+13 pointer controls, rc=0; retained archive132 logical/7 working
+Markdown/7589 lines/592830 decoded bytes/249152 resident bytes, rc=0. Current CLI141 controls
+include newest committed refusal, rc=0. Tree10/13/eight/zero gaps, rc=0. Prior window2 proof/task
+journal and oldest live ledger payload preserve exact committed bytes. README reviewed unchanged;
+LIVE G1 stays5/18, defects12/83. Staged make gate→all doctrines green, rc=0.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3b.3c.1v` | `STITCHCAD-G1-0053 (leaf G1-SLICE.5a.3b.3b.3c.1v): record second-window CI success` | exact pushed head; both completed jobs/all steps success |
+
+## Changelog
+
+- `2026-10-02`: observed window2 CI and post-commit immutability close capacity prerequisite.
+  Resume complete D83 boundary review .2; D84 and production normalization remain separately owned.
+- promotion: declined (routine observed CI and retention evidence for existing contracts).
+
+## Numeric boundary review protocol — completed in G1-0054
+
+- ID: `G1-SLICE.5a.3b.3b.3c.2`
+  Status: `in_progress`
+  Goal: complete D83 original width/scalar/binding review and its actual mutation obligations;
+  keep D84 inverse-trig/equality separate, close D83 only with complete scoped evidence.
+  Pre-change review protocol: formula2/4.2/4.3, grammar2/4/5 and units1.1 define four boundaries:
+  reduced128-bit conversion/results; signed scalar length/area and nonnegative Count;
+  once-rounded numeric i64 bindings; wide exact literal/unary identity under D95. Read actual
+  p_atom/see/scalar/evaluate/stored/statement and normative domain loaders, all four independent
+  control families and real mutations. Re-run61/57/80/146 controls and12/11/12/12 actual reds,
+  require exact source restoration, and retain whole reference language/structural checks.
+  Review D89/D90/D91 prerequisites from committed evidence plus current source identity; no new
+  production numerical claim or general transcendental certificate. Complete only scoped reference
+  D83 obligations; D84 stays open. Publish obligation-to-proof map in the expert annex; synchronize
+  current task parents/live pointers, preserve predecessor and original defect/oldest ledger bytes.
+  D97: parent Goal still says canonical/binding i64 although D95 allows128-bit literals; correct
+  this live planning contradiction now, without rewriting historical evidence or narrowing nodes.
+  Focused language/publication/ledger/archive/censuses and staged gate before per-slice commit.
+  Verification: `pending`
+  Commit: `pending`

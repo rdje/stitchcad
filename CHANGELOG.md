@@ -96,6 +96,18 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part48.md`](docs/history/stitchcad-changelog-part48.md) | G1-0030 | 14 lines, 1137 bytes, `sha256:0f58d786…` |
 
+| [`stitchcad-changelog-part49.md`](docs/history/stitchcad-changelog-part49.md) | G1-0031 | 8 lines, 682 bytes, `sha256:ed0742e6…` |
+
+## STITCHCAD-G1-0054 - complete scoped numeric boundary review (leaf `G1-SLICE.5a.3b.3b.3c.2`)
+
+D83 closes: reduced128-bit input/results, exact signed scalar/Count domains, once-rounded signed64
+bindings and D95 wide literal/unary identities map to61/57/80/146 independent controls. Re-run
+12/11/12/12 actual assertion reds with exact source restoration; existing language16 stays green.
+D97 corrects the live parent’s canonical-i64 goal; D98 distinguishes checker1/Make0 push verdicts.
+Earlier prerequisites/source/task and
+oldest ledger payloads stay exact; annex maps each obligation. G1 stays5/18, defects11/86; next
+D84 signed inverse-trig/equality. No production evaluator or general transcendental proof inferred.
+
 ## STITCHCAD-G1-0053 - second-window CI observed (leaf `G1-SLICE.5a.3b.3b.3c.1v`)
 
 At pushed f876913, doctrine job110782133989 and Rust job110782134441 completed successfully with
@@ -374,12 +386,3 @@ The SizeSet family is split before implementation; D70 reproduces contradictory 
 is owned by .4c.2 with a director ruling requested. Independent membership proceeds; all chart/break/
 resolution/review scope remains tracked. G1 stays 5/18, defects 10 open/59 sealed. Completed Ease review
 and oldest live records are retained unchanged; full SizeSet and production proof remain pending.
-
-## STITCHCAD-G1-0031 - structural Ease milestone review (leaf `G1-SLICE.4b.3`)
-
-Ontology .2.2 fields map to immutable individual/set APIs and current reference/permission contracts.
-The book distinguishes structural proof from evaluation, chart/physical fit, source truth and release.
-Current sc-measure tests/docs pass 65; full milestone probes pass all 23 suites; warning-free book and
-staged doctrines pass. Product code remains unchanged from b4e0bc7 strict 371-test/WASM verification;
-no new remote-CI claim. Set contract/checklist retained unchanged. .4b closes structurally, .4 remains
-active for SizeSet .4c and combined review .4d. G1 stays 5/18, defects 9 open/59 sealed.

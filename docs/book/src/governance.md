@@ -341,3 +341,8 @@ labels are display text: short or mistaken labels do not change the retained ide
 in prose, code or comments cannot establish coverage, and a valid link cannot mask an extra broken
 index target. Thirteen independent verdicts and four actual checker fault controls verify this D96
 repair while preserving the earlier nine ledger arms and historical descriptor exemption.
+
+For push-status automation, use `bash scripts/check_push_due.sh`: exit0 means no exceptional push
+is due, exit1 means due, and exit2 means the comparison was refused. `make push-due` is a diagnostic
+report that intentionally ignores the checker’s nonzero exit. Read its report; do not treat Make’s
+success as evidence that no push is owed. This distinction changes no push authority or cadence.

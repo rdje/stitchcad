@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — review numeric boundaries separately from production evaluation
+
+- D83's original count129-bit/length-over-domain defects, conversion and completed-result width,
+  signed scalar domains, nonnegative Count, rounded binding storage and literal identity all map
+  to four independent control families. Re-run61/57/80/146 controls and12/11/12/12 actual reds;
+  evaluator/setup restore exact HEAD bytes. Existing watch runs the four families independently.
+- Eight D89/D90 Rust prerequisite files remain exact G1-0047 bytes; latest full native/WASM/CI
+  verifies that source. D91 language16 still verifies explicit context and refusal isolation.
+- D97 corrects the live parent’s superseded canonical-i64 phrase; D95’s wide literal rule remains.
+  Parent scalar/binding review closes; D84 signed inverse-trig/equality remains separately open.
+- The annex records each obligation, producer and refusal boundary. Original defect descriptions,
+  prior task progress and oldest ledger payloads stay exact. Production normalization, serializer,
+  evaluator and arbitrary-input transcendental/cross-platform proofs are still future product work.
+- D98 corrects preserved push-status attribution: direct checker due1, diagnostic Make0.
+- promotion: declined (routine scoped conformance review of received numeric and literal contracts).
+
 ## _(2026-10-02)_ — retained controls need an observed runner verdict
 
 - G1-0052 changes doctrine archive inputs, requiring immediate push despite the400 cadence.
@@ -70,25 +86,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Book/live/task records and exact earlier payloads agree. D83 i64 .3 and D84 signed-angle .3c
   remain next; no production evaluator, real geometry, MCP or arbitrary-input numerical certificate.
 - promotion: declined (routine enforcement of existing scalar domains and isolated verification).
-
-## _(2026-10-02)_ — code language is declared per span, never inferred from punctuation
-
-- D91 L6b chose inline spans by formula-like operators; valid Rust question-mark handling therefore
-  refused. An exact immediate Rust marker now excludes one span outside normative formula parts.
-  Adjacent spans remain checked; invalid/normative context refuses L6e and enters final mismatch
-  counts. No formula character is added.
-- Thirteen independent copied-book verdicts cover positive Rust, ordinary/invalid/adjacent formulas,
-  unknown/malformed/duplicate/detached context, normative position and existing fences. The actual
-  predecessor valid-Rust fixture fails with L6b.
-- Five actual classifier mutations produce assertion reds and exact restoration. The existing
-  watched suite includes thirteen context verdicts; numeric interpretation is unchanged. This
-  authoring declaration certifies no Rust compilation or product language API.
-- D93 annex said ten rational mutations while CASES declared twelve; actual twelve-red re-run
-  confirms the correction. D34’s stale index label now matches the frontier; its general derived
-  pointer work stays PLANNING.5. Prior task evidence and oldest ledgers retain exact bytes.
-- Authoring details stay in the expert annex; next D83 scalar/i64 then D84. No new native/WASM,
-  MCP or release claim.
-- promotion: declined (routine book-instrument context and evidence synchronization repair).
 
 # Sealed archive — earlier lessons
 
@@ -177,3 +174,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part50.md`](docs/history/stitchcad-devnotes-part50.md) | public-operator lesson | 18 lines, 1673 bytes, `sha256:2f4b81de…` |
 
 | [`stitchcad-devnotes-part51.md`](docs/history/stitchcad-devnotes-part51.md) | domain-context lesson | 19 lines, 1705 bytes, `sha256:6c25796f…` |
+
+| [`stitchcad-devnotes-part52.md`](docs/history/stitchcad-devnotes-part52.md) | inline-language lesson | 18 lines, 1440 bytes, `sha256:f9fdf033…` |

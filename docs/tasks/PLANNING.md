@@ -466,20 +466,11 @@ D82 is sealed in [`stitchcad-defects-part20.md`](../history/window2.md#stitchcad
 G1-SLICE.5a.3b.2 verifies 24 exact rows/100 independent Fraction cases/162 controls/nine actual reds;
 implicit operator rounding is removed, explicit and irrational quantization remains.
 
-- **D83** — reference numeric domains are measured without complete typed refusal enforcement.
-  - Original reproduce: literal_diagnostic.py accepted count 2^128 (129 numerator bits) and length
-    1000000001 um, with no formula_domain; source see only updates max_bits, L8 is a census verdict.
-    L2 stores rnd(val.v), so 360 deg remains unnormalized at a stored angle binding. The director's
-    D84 ruling confirms this raw sweep behavior is desired; it is not a missing modulo defect.
-  - Impact: reference success is insufficient evidence for numeric/binding domains.
-  - Width repair: .5a.3b.3a.2 now refuses reduced values above128 bits at input/result boundaries;
-    61 controls/twelve actual reds verify this portion. Scalar .3b.2 now verifies signed length/area
-    and nonnegative count with57 controls/eleven actual reds. Binding .3a verifies80 controls/twelve
-    actual reds. Canonical .3b verifies146 controls/twelve actual reds and closes D95; complete
-    review .3c remains before D83 closure.
-  - Owner/schedule: G1-SLICE.5a.3b.3b, after width enforcement and before product normalization.
-    D84 records the director’s direction/sweep distinction; rational/scalar repairs implement no
-    formula modulo. Remaining signed-angle verification stays owned by .3c.
+D83 is sealed in [`stitchcad-defects-part29.md`](../history/stitchcad-defects-part29.md).
+G1-SLICE.5a.3b.3b.3c.2 completes the scoped reference boundary review: rational61/scalar57/
+binding80/canonical146 controls and12/11/12/12 actual reds/exact restoration. Width, exact scalar,
+once-rounded signed storage and wide literal identity obey the received contracts. D84 signed-angle
+verification and production normalization/evaluation remain separately owned; no general numeric certificate.
 
 - **D84** — normalized formula angle storage conflates direction with signed/multi-turn sweep.
   - Contract evidence: formula kind table 2 says angle is normalized and includes direction/sweep/
@@ -767,3 +758,12 @@ G1-SLICE.5a.3b.3b.3c.1 resolves actual raw/catalog index destinations, independe
 Thirteen independent actual verdicts and four syntax-checked assertion reds/exact restoration verify
 coverage and false-green prevention. Existing nine ledger arms and D30 exemption still pass;
 full make probes reports25 suites green, rc=0. No retained record or reader change.
+
+D97 is sealed with D83 in [`stitchcad-defects-part29.md`](../history/stitchcad-defects-part29.md).
+Current scalar parent now explicitly distinguishes128-bit canonical literals and i64 numeric bindings;
+canonical146 proof and the reviewed parent/contract agree. Historical pre-ruling plans stay intact.
+
+D98 is sealed in [`stitchcad-defects-part30.md`](../history/stitchcad-defects-part30.md).
+Correction to preserved G1-0053 .1v evidence: checker due rc=1, diagnostic Make wrapper rc=0.
+Actual older-base due and HEAD no-due controls verify both commands; COMMIT.md/book now distinguish
+their statuses. Prior evidence bytes, push/CI success, authority/cadence and build behavior stay fixed.

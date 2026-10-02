@@ -5,13 +5,14 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3b.3c.2`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** complete D83 original numeric width/scalar/binding review; close only with full
-  scoped proof. Binding80/canonical146 and actual mutations are committed; D95 ruling closed.
-  Archive capacity is verified: G1-0052 f876913 pushed, both CI jobs/all steps successful;
-  post-commit CLI140 verifies newest immutability. History retrieval needs no historical Git objects.
-  D84 signed-angle binding/equality and inverse-trig verification follows under .5a.3b.3c.
-  Product normalization .5a.3c follows prerequisites; D70 axes ruling remains pending under .4c.2.
+- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3c`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** D84 signed/multi-turn binding/equality and inverse-trig proof. Received ruling in
+  decision_angles preserves formula values and normalizes entity directions; reference atan/atan2
+  still normalize outputs. Finalize signed range/rounding controls before changing actual code.
+  D83 scoped reference boundaries are reviewed/closed:61/57/80/146 controls and47 actual reds;
+  D97 stale parent goal corrected. D95 literal128-bit versus binding-i64 ruling remains adopted.
+  Product normalization .5a.3c follows reference prerequisites; D70 axes ruling awaits under .4c.2.
+  Archive capacity is verified: G1-0052 f876913 pushed, both CI jobs/all steps successful.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats
   require human acts; governance §8 and G3 `.16` own the details.

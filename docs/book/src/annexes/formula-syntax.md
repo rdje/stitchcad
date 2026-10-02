@@ -240,7 +240,8 @@ mutations require assertion failures and exact source restoration; run that comm
 The diagnostic prints observations, and its exit status alone is not a correctness verdict.
 
 The reference remains a curated book instrument. These literal controls do not certify rational
-bounds, all numeric domains or stored angles: D83 owns that audit under G1-SLICE.5a.3b.3. Operator
+bounds, all numeric domains or stored angles on their own: the scoped boundary review below joins
+those proofs; D84 still owns signed-angle semantics. Operator
 precision has its separate proof below. Current published example checks retain their row scope.
 Product canonicalization and evaluation remain pending; the syntax API above performs no computation.
 
@@ -268,7 +269,8 @@ rounding/refusal boundaries. Nine actual arithmetic/scale/zero/branch/quantizati
 assertion failures and byte-identical restoration; run alone. The selector checks use the reference's
 length-only edge model, and certify no real curve inversion or geometric accuracy.
 
-D83 complete boundary review remains open; current width/scalar/binding/literal proofs appear below. D84 owns
+D83’s scoped reference boundary review is complete below; width/scalar/binding/literal proofs
+retain their separate oracles. D84 owns
 signed-angle verification. This is partial
 reference evidence, not a complete production evaluator, cross-platform numerical signoff, command
 API or release certificate. The next audit must close those gaps before product normalization uses
@@ -307,7 +309,7 @@ it to zero. `dir` still normalizes by its explicit function contract. The durabl
 D84 remains owned by G1-SLICE.5a.3b.3c for binding/equality controls and inverse-trig contract repair:
 the reference still normalizes atan/atan2 outputs, and the current 42-row evidence describes that
 behavior, not completed signed inverse-trig semantics. Product numeric binding/evaluation is pending.
-D83 rational/scalar guards continue independently under .3b.3a/.3b.
+D83’s scoped rational/scalar/binding review is complete below; it supplies no signed inverse-trig proof.
 
 ## Reference rational-value boundaries
 
@@ -331,8 +333,8 @@ assertion failures and exact restoration; run alone. The earlier literal/arithme
 seven mutation controls also pass. Angle tests require the exact pole reason: an unrelated rational
 refusal cannot count as evidence for a missing mathematical-domain guard (D88).
 
-D83's scalar/binding/literal controls appear below; complete boundary review remains
-G1-SLICE.5a.3b.3b.3c; D84 signed-angle verification remains .3c. Product numeric normalization and
+D83's scalar/binding/literal controls and completed scoped boundary review appear below.
+D84 signed-angle verification remains .3c. Product numeric normalization and
 full evaluation are still pending. The curated transcendental reference is not a production certificate.
 
 ## Inline documentation language context
@@ -396,7 +398,7 @@ angular context no longer executes another family's tests. The quiet-load contro
 verify this boundary. Shared setup is not an independent numeric oracle; each family's explicit
 expected values/refusals remain independently authored.
 
-D83 binding/literal controls follow; complete boundary review remains .3b.3c, and D84 signed-angle
+D83 binding/literal controls and completed scoped review follow; D84 signed-angle
 verification remains .3c. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
 normalization/evaluation, real geometry, command/API/MCP and production release remain separate work.
 
@@ -432,7 +434,7 @@ source restoration; run alone.
 This reference statement method returns a binding without publishing it into the caller’s supplied
 environment. The curated replay caller stores that result explicitly; this is not a production
 transaction guarantee or a general environment implementation. Existing scalar/rational controls
-remain separate. D95 canonical-node controls follow; D83 boundary review remains .3b.3c.
+remain separate. D95 canonical-node controls and the completed D83 scoped review follow.
 D84 inverse-trig/equality verification remains .3c. Production normalization/serialization/evaluation,
 real geometry, API/MCP control and release signoff remain future work.
 
@@ -459,7 +461,44 @@ actual faults change width, unary identity, kind, quantization or domain guards;
 assertion red and exact source restoration. Run mutations alone.
 
 Together with binding80 and the preceding lexical/scalar/rational suites, these controls close
-D95’s specification ambiguity. D83’s complete boundary review remains G1-SLICE.5a.3b.3b.3c;
+D95’s specification ambiguity. D83’s scoped reference review is complete below;
 production normalization .5a.3c must preserve this width, kind and unary structure and provide its
 own public-contract proof. These tuples are reference-model nodes; no production canonical
 serializer, persistent formula identity or evaluator is certified by this slice.
+
+## Complete reference numeric boundary review
+
+G1-SLICE.5a.3b.3b.3c.2 closes D83 for the curated reference model after reviewing all original
+numeric obligations. The following boundaries are distinct; passing one cannot stand in for another.
+The four families re-run344 independently authored controls, and47 actual implementation faults
+produce assertion reds before byte-identical evaluator/setup restoration.
+
+| Boundary | Independent producer | Required behavior |
+| --- | --- | --- |
+| Reduced width | `rational_contract.py`,61 controls/12 actual reds | Converted exact inputs and every completed numeric node obey128-bit numerator/denominator width; oversized children cannot cancel later |
+| Scalar domain | `scalar_contract.py`,57 controls/11 actual reds | Canonical input checks its rounded quantum; completed length/area/Count results check exact signed/nonnegative limits before binding |
+| Stored numeric value | `binding_contract.py`,80 controls/12 actual reds | Numeric let rounds once, checks inclusive signed i64/scalar bounds and returns the stored integer; Boolean and caller state keep their contracts |
+| Literal/operator identity | `canonical_literal_contract.py`,146 controls/12 actual reds | D95 literals may exceed i64 up to128-bit magnitude; kind/unary nodes, input quantum and later binding refusal remain distinct |
+
+All producers and mutation runners live in `docs/tasks/artifacts/formula_structure/`:
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_rational_mutations.sh
+bash docs/tasks/artifacts/formula_structure/run_scalar_mutations.sh
+bash docs/tasks/artifacts/formula_structure/run_binding_mutations.sh
+bash docs/tasks/artifacts/formula_structure/run_canonical_literal_mutations.sh
+```
+
+Run mutations exclusively; they temporarily alter the actual reference source and restore it.
+Fraction/Decimal and authored canonical tuples supply the independent expectations. Altered or
+missing specification declarations, exact intermediate refusals, inclusive endpoints, storage ties,
+typed operation context, caller state and actual book replay retain discriminating controls.
+D89/D90 public-operator/diagnostic prerequisite sources remain byte-identical to their verified
+G1-0047 state; D91’s explicit language-context family still passes. D97 corrects only the live
+parent’s superseded canonical-i64 wording; past plans and original defect descriptions stay intact.
+
+This completes the reference boundary repair. D84 signed inverse-trig/binding/equality verification
+remains owned by G1-SLICE.5a.3b.3c. Production canonical literals, serialization, full evaluation,
+real geometry and arbitrary-input transcendental/cross-platform correctness still require their
+own product proofs. The reference model is an instrument for this book, not a shipped evaluator.
