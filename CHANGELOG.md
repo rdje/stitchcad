@@ -128,6 +128,22 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part64.md`](docs/history/stitchcad-changelog-part64.md) | STITCHCAD-G1-0047 | 11 lines, 995 bytes, `sha256:339b8cba…` |
 
+| [`stitchcad-changelog-part65.md`](docs/history/stitchcad-changelog-part65.md) | STITCHCAD-G1-0049, STITCHCAD-G1-0048 | 15 lines, 1114 bytes, `sha256:e746de86…` |
+
+## STITCHCAD-G1-0070 - owned statement and recipe identity bytes (leaf `G1-SLICE.5a.3f.1c`)
+
+Private typed canonical statement/recipe owners retain exact names/annotations and authored order,
+using existing normalized inputs/expression identity. One ASCII space/no newline; empty recipe
+retains its wrapper. Clone/Eq/explicit extraction outlive all source/arenas; Debug omits customer text.
+Ten public contracts compare16 authored statements/nine recipes,55 expressions×three roles and100
+independent numeric rows×three roles, actual four published examples and two typed text collisions.
+Full4096×2×256/16if serialization, long names/grouping/deep/wide calls pass on64KiB stack.
+Twenty-one actual compiled assertion reds/exact restoration; five negative/two runnable API docs.
+Strict native586/47groups, release10/WASM3 and scoped reference/language16/publication9 pass;
+book52 chapters/25 APIs/1083 source/1674 rendered links. Shared nine sources/prior records exact.
+Book/API/live/task records agree; G1 stays5/18, defects10open/99sealed; next .5a.3f.2 coupled review.
+No static validation, binding/evaluation, typed project hashes/storage, MCP or production approval.
+
 ## STITCHCAD-G1-0069 - complete recipe literal input normalization (leaf `G1-SLICE.5a.3f.1b`)
 
 Private normalized statement/recipe owners retain names, closed annotations, all original global
@@ -378,19 +394,3 @@ D95 director ruling: exact128-bit canonical literal nodes, i64 numeric bindings,
 Book/grammar/roadmap/decision and live task records agree; prior task/oldest ledger payloads preserved.
 G1 stays5/18, defects13 open/81 sealed; next canonical proof .3b and complete review .3c. No new Rust,
 production evaluator, real geometry, MCP or release claim.
-
-## STITCHCAD-G1-0049 - reference scalar domains refuse exact excess (leaf `G1-SLICE.5a.3b.3b.2`)
-
-D83 signed length/area and nonnegative Count domains now consume normative declarations. Rounded
-canonical inputs and exact completed results check at their own boundaries; no extra operator
-rounding. Scalar57/eleven actual reds and rational61/twelve reds pass; literal6/arith9/angle7/inline5
-reds restore exact sources. D94 quiet context loading separates each test family’s assertions.
-Book semantics/annex/live records and retained history agree; G1 stays5/18;
-defects12 open/81 sealed. Next D83 i64 storage .3 then D84. No new production evaluator/MCP claim.
-
-## STITCHCAD-G1-0048 - inline code language context stays local (leaf `G1-SLICE.5a.3b.3b.1c`)
-
-D91 accepts one explicit Rust span; normative/adjacent formulas remain checked. Context13/five actual
-reds/exact restore and language16 pass. D93 annex matches12 rational reds; D34 frontier corrected,
-derivation owned. Book/task/history synchronized; checks pass. G1 stays5/18, defects12/80;
-next D83 scalar/i64 then D84. No new product or release claim.

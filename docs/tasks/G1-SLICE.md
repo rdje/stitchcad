@@ -706,43 +706,36 @@ Completed identity children are preserved in
   Commit: `pending`
 
 - ID: `G1-SLICE.5a.3f.1`
-  Status: `in_progress`
+  Status: `done`
   Goal: finalize exact statement/ordered-recipe byte contract and scoped complete-recipe input
   normalization; preserve names/annotations/order/spans and owned identity without binding/evaluation.
   Children: .1a exact byte contract/D109; .1b complete statement/recipe literal normalization;
   .1c owned statement/recipe serialization; each independently completed and committed.
   D109 exact assertion/empty/ordered-recipe bytes are specified by completed .1a before serializer
-  code; input normalization .1b is done; serializer .1c and coupled review .3f.2 remain pending.
-  Verification: `pending`
-  Commit: `pending`
+  code; input normalization .1b and serializer .1c are done; coupled review .3f.2 remains pending.
+  Verification: exact contract and all input/identity children complete; coupled review remains .2.
+  Commit: `STITCHCAD-G1-0068`, `STITCHCAD-G1-0069`, `STITCHCAD-G1-0070`.
 
 - ID: `G1-SLICE.5a.3f.1a`
   Status: `done`
-  Goal: settle D109 exact binding/assertion/empty/ordered-recipe bytes before serialization.
-  Protocol: [contract pre-change plan](G1-SLICE-canonical.md#complete-recipe-byte-contract-protocol).
-  Verification: sixteen authored statement bytes/six kinds/five tolerances; nine whole sources/
-  twelve ordered chunks/all four actual book-decision examples match actual reference syntax.
-  Nine renderer authored-byte assertion reds/exact restoration; watched structural suite and
-  focused syntax20/language16/publication9 pass0. Technical decision under delegation, unapproved
-  independent evidence; all Rust source/test bytes unchanged eee15a8.
+  Goal: D109 exact binding/assertion/whole recipe byte contract.
+  Verification: [complete prior record](G1-SLICE-canonical.md#complete-recipe-input-predecessors--preserved-during-g1-0070).
   Commit: `STITCHCAD-G1-0068`.
 
 - ID: `G1-SLICE.5a.3f.1b`
   Status: `done`
-  Goal: immutable normalized statements/recipes retaining all names/annotations/global spans/order;
-  normalize all literal inputs through existing expression API, with precise refusal context and no
-  partial accepted result. Explicit lifetimes/privacy/Clone and256/4096/16 limits; no type/evaluation.
-  Protocol: [normalization plan](G1-SLICE-canonical.md#whole-statement-recipe-normalization-protocol).
-  Verification: eight public contracts/300 independent numeric operand controls;17 actual compiled
-  assertion reds/exact restore; strict native569/release8/WASM3 and book52/23 pass0.
+  Goal: immutable complete statement/recipe literal inputs and contextual refusals.
+  Verification: [complete prior record](G1-SLICE-canonical.md#complete-recipe-input-predecessors--preserved-during-g1-0070).
   Commit: `STITCHCAD-G1-0069`.
 
 - ID: `G1-SLICE.5a.3f.1c`
-  Status: `pending`
+  Status: `done`
   Goal: owned canonical statement/recipe identity from validated normalized arenas, exact .1a bytes,
   flat traversal/order/empty/Eq/Clone/privacy and no numerical execution or project-store envelope.
-  Verification: `pending`
-  Commit: `pending`
+  Protocol: [serializer plan](G1-SLICE-canonical.md#whole-recipe-identity-serializer-protocol).
+  Verification: ten public contracts/16 statements/nine recipes/165 expression and300 numeric
+  operand controls;21 compiled assertion reds/exact restore; native586/release10/WASM3 pass0.
+  Commit: `STITCHCAD-G1-0070`.
 
 - ID: `G1-SLICE.5a.3f.2`
   Status: `pending`
@@ -941,7 +934,8 @@ Completed identity children are preserved in
 | done | `G1-SLICE.5a.3e.3` | `done` | Coupled syntax/diagnostic review |
 | done | `G1-SLICE.5a.3f.1a` | `done` | Exact complete recipe byte contract |
 | done | `G1-SLICE.5a.3f.1b` | `done` | Complete immutable recipe input normalization |
-| next | `G1-SLICE.5a.3f.1c` | `pending` | Owned exact statement/recipe identity bytes |
+| done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
+| next | `G1-SLICE.5a.3f.2` | `pending` | Coupled whole input and identity review |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -974,36 +968,35 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
 [formula evidence](G1-SLICE-formulas.md), [numeric journal](G1-SLICE-journal.md) and
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
 
+### `G1-SLICE.5a.3f.1c` — owned statement/recipe identity
 
-### `G1-SLICE.5a.3f.1b` — whole statement/recipe input normalization
-
-- [x] **REPRODUCE / ISSUE** — `git diff -- crates/sc-core/src/recipe/statement.rs
-  crates/sc-core/src/recipe/ordered.rs` identifies predecessor's missing whole-input conversion, rc=0.
-- [x] **ROOT CAUSE (WHY + WHERE)** — shared expression normalization existed; statement/recipe
-  composition was missing. `cargo check -p sc-core` confirms the new composition compiles, rc=0.
-- [x] **FIX** — private immutable normalized owners/views retain source/header/global spans/order;
-  both assertion inputs convert, original literal refusal gains operand/known ordinal/source chain.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test formula_normalized_recipe_contract`:
-  eight public contracts,16 authored statements/nine sources/300 Decimal-Fraction operands, rc=0;
-  `normalized_recipe_mutations.py`:17 actual compiled assertion reds/exact three-source restore, rc=0.
-- [x] **NO REGRESSION** — `make check`:569 tests/46 groups; release8 and `make wasm`:three libs,
-  rc=0; original shared lexer/parser/literal/normalized/canonical/expression sources exact839f2c1.
-- [x] **LOCKSTEP** — publication9/language16/structure suites pass0; book52 chapters/23 scoped APIs,
-  original closure/two ledger payloads exact; live/tree/archive/censuses align without raised ceilings.
+- [x] **REPRODUCE / ISSUE** — `git diff HEAD -- crates/sc-core/src/recipe/mod.rs` identifies the
+  predecessor's missing typed whole identity API, rc=0; exact byte contract is already settled.
+- [x] **ROOT CAUSE (WHY + WHERE)** — composition of normalized owners/header views with existing
+  expression serializer was missing; `cargo check -p sc-core` confirms new composition, rc=0.
+- [x] **FIX** — private owned canonical statement/recipe types, exact authored bytes/order/empty,
+  Eq/Clone/opaque Debug/explicit extraction; no new conversion, name/type/binding or evaluation.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test formula_canonical_recipe_contract`:
+  ten contracts/16 statements/nine recipes/165 expression and300 numeric operands, rc=0;
+  `canonical_recipe_mutations.py`:21 actual compiled assertion reds/exact source restoration, rc=0.
+- [x] **NO REGRESSION** — `make check`:586 tests/47 groups; release10/`make wasm`:three libs, rc=0;
+  all nine prior shared syntax/input/expression identity implementation sources exact c4d6252.
+- [x] **LOCKSTEP** — structure/language16/publication9 pass0;52 chapters/25 APIs/1083 source/
+  1674 rendered links, prior closure/nodes/ledger bytes exact and live/status/frontier synchronized.
 
 ## Verification Log
 
-Pre-code protocol and final results: [canonical evidence](G1-SLICE-canonical.md#whole-statement-recipe-normalization-protocol).
-Six private/lifetime compile-fail and two runnable API docs pass;64KiB full4096×2×256-node
-normalize/clone/drop contract passes. The API converts inputs; type/binding/evaluation remains future.
+[Pre-code protocol and final evidence](G1-SLICE-canonical.md#whole-recipe-identity-serializer-protocol).
+Five private/cross-type compile-fail and two runnable docs pass; maximal4096×2×256/16if identity on
+64KiB stack passes. These bytes grant no evaluation, project storage or production approval.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3f.1b` | `STITCHCAD-G1-0069 (leaf G1-SLICE.5a.3f.1b): normalize complete formula statement and recipe inputs` | eight contracts/17 actual reds/native569 |
+| `.5a.3f.1c` | `STITCHCAD-G1-0070 (leaf G1-SLICE.5a.3f.1c): serialize owned canonical statement and recipe identity` | ten contracts/21 actual reds/native586 |
 
 ## Changelog
 
-- `2026-10-02`: complete immutable normalized statement/recipe inputs; owned serializer .1c follows.
-- promotion: declined — routine composition under established literal/privacy/ordering policies.
+- `2026-10-02`: owned typed whole identity completes .3f.1; coupled .3f.2 review follows.
+- promotion: declined — routine composition of established exact-byte/privacy/typed-domain contracts.

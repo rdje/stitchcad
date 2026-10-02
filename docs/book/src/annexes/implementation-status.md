@@ -24,6 +24,7 @@ requires the named contracts and later proof owners.
 | Single formula statement syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3e.1 | [Statement API](formula-statements.md) |
 | Ordered formula recipe syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3e.2 | [Recipe API](formula-statements.md#parse-an-ordered-recipe) |
 | Complete recipe literal inputs | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3f.1b | [Normalized statements/recipes](formula-recipe-inputs.md) |
+| Owned statement/recipe identity | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3f.1c | [Exact owned bytes](formula-recipe-inputs.md#own-canonical-statement-and-recipe-identity) |
 | Formula lexing/expression syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.1/.2b.2 | [Syntax API](formula-syntax.md) |
 
 ## Remaining proofs

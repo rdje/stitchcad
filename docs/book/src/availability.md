@@ -9,7 +9,7 @@ G0 contract review is mostly complete with human closure unapproved. G1 remains 
 | Library | Available behavior |
 | --- | --- |
 | sc-units | Fixed-point units, explicit conversions, rounding and typed tolerances/errors |
-| sc-core | Stable identities/references, structural garment objects, physical copy identities, canonical length inputs, borrowed formula lexing, bounded expression/ordered-recipe syntax, individual/whole-expression literal normalization and canonical expression identity |
+| sc-core | Stable identities/references, structural garment objects, physical copy identities, canonical length inputs, borrowed formula lexing, bounded expression/ordered-recipe syntax, whole-recipe literal normalization and owned expression/statement/recipe identity |
 | sc-measure | Body/garment metadata and tables, Ease mappings/sets, size membership and authored garment/MTM charts |
 
 These APIs can inspect authored content and refuse invalid current references. Unknown/derived scalar
@@ -22,7 +22,9 @@ libraries is not evidence of a working browser application. Older metadata CI ha
 there is no new remote-run claim for later local slices.
 
 Whole statement/recipe [literal normalization](annexes/formula-recipe-inputs.md) preserves input
-metadata and global refusal context; it grants no binding or numerical execution.
+metadata and global refusal context. The same normalized owners produce owned statement/recipe
+identity bytes for comparison; [the example](annexes/formula-recipe-inputs.md#own-canonical-statement-and-recipe-identity)
+shows alias equality and preserved order. Binding, numerical execution and project storage follow.
 
 ## Planned workflows
 

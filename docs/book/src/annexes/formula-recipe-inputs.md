@@ -1,8 +1,8 @@
-# Annex: complete formula recipe input normalization
+# Annex: complete formula recipe inputs and identity
 
 > **Status:** G1-SLICE.5a.3f.1b implements immutable normalized statements and complete recipes in
 > sc-core. It converts input literals and preserves syntax metadata. Statement/recipe canonical
-> serialization follows .1c; name/type checking, binding and evaluation remain G1-SLICE.5 work.
+> serialization is implemented at .1c; name/type checking, binding and evaluation remain G1-SLICE.5 work.
 
 The [statement parser](formula-statements.md) records what you wrote. Input normalization then
 converts every literal to the [canonical internal units](formula-literals.md), without calculating
@@ -123,6 +123,89 @@ refusal. Recipe errors are Clone; standalone/literal errors retain Copy. Display
 names and original source spelling. Numeric bound/measured witnesses remain deliberately available
 as structured diagnostic data. Human localization and the full command argument envelope belong to .6.
 
+## Own canonical statement and recipe identity
+
+After all input literals convert successfully, canonical_form produces owned identity bytes.
+Use this when comparing authored inputs across source formatting or unit aliases. It retains the
+statement name, annotation and every operand in order, without evaluating their numeric result.
+
+```rust
+use sc_core::recipe::FormulaStatement;
+
+let identity = {
+    let source = String::from("let width: length = 2.5 cm");
+    FormulaStatement::parse(&source)?.normalize_literals()?.canonical_form()
+};
+assert_eq!(identity.as_str(), "(bind width length length:25000)");
+let alias = FormulaStatement::parse(" let width : length = ((25 mm)) ")?
+    .normalize_literals()?.canonical_form();
+assert_eq!(identity, alias);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+FormulaCanonicalStatement owns a private String. FormulaCanonicalRecipe does the same for the
+complete authored sequence. Both outlive the source and every syntax/normalized arena. Their public
+as_str returns explicit customer-bearing bytes; into_string transfers the owned text. Editing a
+transferred clone cannot change the original identity. Clone and Eq compare complete exact bytes;
+Debug reports byte_count and omits customer names and literal values.
+
+```rust
+use sc_core::recipe::FormulaRecipe;
+
+let identity = {
+    let source = String::from("let n: count = 1\nassert check: eps_num = n == 1");
+    FormulaRecipe::parse(&source)?.normalize_literals()?.canonical_form()
+};
+assert_eq!(identity.as_str(),
+    "(recipe (bind n count count:1) (assert check eps_num n count:1))");
+assert_eq!(FormulaRecipe::parse(" \n\t")?.normalize_literals()?.canonical_form().as_str(), "(recipe)");
+let mut editable = identity.clone().into_string();
+editable.clear();
+assert!(!identity.as_str().is_empty());
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+A recipe always has its wrapper, even with one statement. The serializer uses the exact
+[grammar §4.1 templates](../spec/formula-language/grammar.md#41-statement-and-whole-recipe-bytes):
+one ASCII space between parts, no outer padding or terminal newline. Both assertion operands remain
+flat children, while comparisons inside an operand keep their expression nodes. Empty and
+whitespace-only recipes share (recipe). Reordering statements, changing an annotation or swapping
+operands changes identity. Duplicate/forward declarations stay present; no sorting or merging occurs.
+
+Expression, statement and recipe identities are distinct Rust types. Their raw text can overlap:
+the ordinary expression bind(width, length, 25 mm) has the same bytes as the binding statement
+let width: length = 25 mm. The expression recipe(bind(n, count, 1)) has the same bytes as a
+one-statement recipe. Cross-type equality is unavailable. Persistence must frame the known type
+in each field/digest domain; these bytes supply no universal reader, project version or hash namespace.
+
+Serialization iterates statements and reuses the existing iterative expression serializer. It
+introduces no new scalar conversion or structural limits, and preserves raw turns, wide literal
+children, unknown names/calls, unevaluated branches and incompatible declared/input kinds. A syntax
+or input-conversion refusal has no successfully normalized owner from which to produce whole identity.
+Name/type/binding validation, tolerance resolution and numerical execution remain separate steps.
+
+Ten public identity contracts check sixteen authored statements/nine complete sources, all55
+independently authored expression rows through all three operand roles (165 controls), and100
+independent Decimal/Fraction rows through those roles (300 controls). The actual four normative
+book/decision examples, alias equality/order distinctions, two actual cross-type text collisions,
+ownership/privacy/extraction and large sources are covered. On64KiB stack, the full4096-statement,
+two256-node/16-if-level operands per assertion serialize to exact independently composed bytes;
+100000-character names,50000 grouping levels and deepest/widest calls also retain exact identity.
+These are flat-shape/byte contracts, not a browser, performance or production certification.
+
+Five compile-fail docs check private construction and all three cross-domain equality pairings;
+two runnable API docs check source-independent usage. Twenty-one actual production serializer faults
+must compile and fail public assertions, covering headers, operands, envelope/order/count/spacing,
+empty identity, terminal newline, opaque Debug and exact extraction. The exclusive runner restores
+its source exactly; its classifier refuses compiler/expect-only/passing-name noise. Existing authored
+fixtures remain checked by the actual independent recursive reference; no independent whole-recipe
+parser or numerical evaluation proof is claimed. Coupled review .3f.2 follows this implementation.
+
+```bash
+cargo test -p sc-core --test formula_canonical_recipe_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py
+```
+
 ## Verification scope
 
 Eight public contracts check sixteen independently authored statement/header/operand-byte rows,
@@ -149,6 +232,6 @@ cargo test -p sc-core --test formula_normalized_recipe_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py
 ```
 
-Numerical binding/evaluation, canonical statement/recipe serialization, typed project hashes,
+Numerical binding/evaluation, typed project hashes,
 storage/recovery, geometry, command/API/MCP control and production approval retain their task owners.
 This input API supplies none of those later results or approvals.

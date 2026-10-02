@@ -3,6 +3,29 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — owned recipe bytes compose verified inputs without execution
+
+- Separate private canonical statement/recipe types expose exact bytes/extraction, Clone and byte Eq.
+  Flat authored iteration reuses the existing expression serializer; names/annotations/duplicates/
+  forward bindings and both assertion operands remain unchanged. Empty wrapper/spacing/no newline
+  follow the settled contract. Debug reveals byte count, omitting customer source/names/values.
+- Ten public contracts cover16 authored statements/nine whole recipes,55 expressions in all three
+  operand roles and100 independent numeric rows in those roles; all four normative examples and
+  two actual raw-text collisions establish why the typed identity field matters. Five compile-fail
+  docs verify constructors/all three cross-domain Eq pairings; two runnable docs verify ownership.
+- Full4096×2×256/16if identity bytes,100000-character names/50000 grouping/deep and wide calls pass
+  on64KiB stack. This verifies flat shape/exact bytes, not browser/runtime performance or evaluation.
+  Twenty-one actual compiled serializer faults fail assertions, with exact restoration and watched
+  anchors/classifier controls. Strict native586/47groups, release10 and WASM3 pass after restoration.
+- Initial test reader dropped the first multiline normative source line; clear only after an
+  expected-byte boundary and assert no trailing source. Strict panic lint then caught an explicit
+  escape-reader panic; closed replacements/residual assertion preserve fixture validation without
+  a lint allowance. Neither development repair changed product bytes or normative examples.
+- Book52/25 APIs/1083 source/1674 rendered links, scope/reference checks and exact prior-source/
+  closure/ledger comparisons align. Coupled .3f.2 review follows; .7 still owns typed persisted
+  fields/digest framing, and static validation/binding/evaluation remain later work.
+- promotion: declined (routine composition under established exact-byte/privacy/typed-domain policies).
+
 ## _(2026-10-02)_ — whole recipe normalization preserves accepted syntax and literal causes
 
 - Separate normalized owners reuse every existing expression literal conversion, retaining original
@@ -23,25 +46,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   Shared literal/normalized/expression/canonical sources and preserved history stay exact. Owned
   statement/recipe serialization .1c follows; numerical execution and approval remain separate.
 - promotion: declined (routine composition of verified input APIs; byte-policy decision already recorded).
-
-## _(2026-10-02)_ — exact recipe bytes precede their product serializer
-
-- D109 lacked assertion and complete/empty envelope bytes despite exact binding/expression rules.
-  Flat assertion payload mirrors the existing two-operand API; explicit recipe parentheses preserve
-  order/empty identity without newline conventions. One ASCII space/no final newline closes spelling.
-- The decision is authored/applied by the engineer under existing delegation; independent evidence
-  approval remains unapproved. Principal reversal and future persisted schema/migration owners are
-  explicit. Typed expression/statement/recipe identities must be framed by .7 before hashes/storage;
-  ordinary bind/recipe call names remain valid expression syntax, not new reserved keywords.
-- Sixteen independently authored statement rows cover six kinds/five tolerances and aliases/raw
-  angles/unary/calls/grouped comparisons; nine sources/twelve complete ordered chunks cover empties,
-  adjacency, duplicate/forward declarations and nested operands. Actual reference syntax supplies
-  trees while inference/evaluation traps prevent numerical execution. This is not a whole-recipe parser.
-- Nine actual renderer faults fail authored-byte assertions/exact restore; tracked structural suite
-  watches producer/classifier/anchors. Focused syntax20 and book/language controls pass. Rust code,
-  complete previous syntax subtree/closure and oldest ledger bytes stay exact. Map orientation text
-  is shortened within its unchanged ceiling; no unique maintained fact is removed.
-- promotion: promoted to docs/decisions/decision_recipe-bytes.md; exact bytes and reversal contract.
 
 # Sealed archive — earlier lessons
 
@@ -164,3 +168,4 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part67.md`](docs/history/stitchcad-devnotes-part67.md) | G1-0066 ordered recipe boundaries | 20 lines, 1850 bytes, `sha256:934aee26…` |
 
 | [`stitchcad-devnotes-part68.md`](docs/history/stitchcad-devnotes-part68.md) | G1-0067 coupled recipe review | 18 lines, 1629 bytes, `sha256:6a16cabe…` |
+| [`stitchcad-devnotes-part69.md`](docs/history/stitchcad-devnotes-part69.md) | G1-0068 exact recipe bytes | 18 lines, 1651 bytes, `sha256:e352ef3b…` |

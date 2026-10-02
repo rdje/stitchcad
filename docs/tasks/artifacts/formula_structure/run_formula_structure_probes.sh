@@ -20,6 +20,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_mutations.py --class
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_byte_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_byte_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/literal_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/arithmetic_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/angle_contract.py

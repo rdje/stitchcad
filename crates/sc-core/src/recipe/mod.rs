@@ -8,7 +8,8 @@
 //! Standalone let/assert statements preserve closed annotations, full-source spans and operand
 //! refusals without binding or evaluating. Complete recipes retain authored order, global spans and
 //! the fixed statement bound. Whole statement/recipe input normalization preserves metadata and
-//! contextual literal refusals; statement identity and semantic validation/evaluation follow.
+//! contextual literal refusals. Owned expression/statement/recipe bytes preserve typed identity;
+//! semantic validation, binding and evaluation follow.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -51,3 +52,6 @@ pub use normalized_recipe::{
     FormulaNormalizedRecipe, FormulaNormalizedStatement, FormulaNormalizedStatementKind,
     FormulaRecipeLiteralError, FormulaStatementLiteralError,
 };
+
+mod canonical_recipe;
+pub use canonical_recipe::{FormulaCanonicalRecipe, FormulaCanonicalStatement};

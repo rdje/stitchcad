@@ -65,7 +65,8 @@ are independently authored and checked for complete ordered token coverage; this
 independent complete-recipe parser. Actual renderer faults must fail authored byte assertions and
 restore exact source. The structural suite watches this producer and its fault anchors.
 These controls establish the technical specification, not compiled product serialization proof.
-Product normalized statements/recipes are implemented by .1b; their owned serializer follows .1c.
+Product normalized statements/recipes are implemented by .1b and their owned serializer by .1c;
+compiled byte/fault controls are recorded in the recipe-input annex. Coupled review .3f.2 follows.
 
 ## Re-open condition
 

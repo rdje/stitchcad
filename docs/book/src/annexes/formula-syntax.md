@@ -4,7 +4,8 @@ The formula contract is normative. The current `sc_core::recipe` implementation 
 lexical stream and an immutable expression syntax tree with exact source spans and structural bounds.
 Syntax parsing does not perform numeric conversion. Parsed literals and whole expression arenas now have explicit
 [normalization APIs](formula-literals.md). [Canonical expression identity](formula-literals.md#serialize-canonical-expression-identity) is now
-implemented separately; statement identity, binding, type/name validation and evaluation remain G1-SLICE.5 work. See [availability](../availability.md) and
+implemented separately, as is [whole statement/recipe identity](formula-recipe-inputs.md). Binding,
+type/name validation and evaluation remain G1-SLICE.5 work. See [availability](../availability.md) and
 [the complete grammar](../spec/formula-language/grammar.md).
 Single forms and ordered recipes have a separate [statement syntax API](formula-statements.md).
 

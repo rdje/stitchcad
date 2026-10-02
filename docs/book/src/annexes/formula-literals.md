@@ -169,8 +169,9 @@ Seventeen actual compiled faults alter root/name/unary/square/operator identity,
 call coverage, depth/span, literal unit/refusal, iterator behavior or Debug privacy. They must fail
 public assertions; the exclusive runner restores exact source. The structural suite watches the
 independent shape verifier. G1-SLICE.5a.3c.3 owns this whole-arena stage; .4 completes its coupled review below.
-Canonical S-expression serialization is implemented separately below. Ordered statement identity,
-name/type/binding/evaluation, geometry and command/API/MCP integration remain later work. Native/release/WASM checks retain their stated scope.
+Canonical S-expression serialization is implemented separately below;
+[ordered statement/recipe identity](formula-recipe-inputs.md) is also available.
+Name/type/binding/evaluation, geometry and command/API/MCP integration remain later work. Native/release/WASM checks retain their stated scope.
 
 ## Coupled normalization review
 
@@ -218,7 +219,8 @@ These controls and the bounded arithmetic argument establish the stated normaliz
 They provide no correctly rounded arbitrary transcendental or cross-platform numerical certificate.
 
 Canonical serialization is [G1-SLICE.5a.3d.2](#serialize-canonical-expression-identity), with coupled
-identity review .3d.3 complete below. Ordered statement identity, names/types, numeric binding/evaluation,
+identity review .3d.3 complete below; [ordered statement identity](formula-recipe-inputs.md) is available.
+Names/types, numeric binding/evaluation,
 entity direction integration, geometry, storage and command/API/MCP execution remain later work.
 A normalized graph contains literal inputs and unevaluated operators; it is not an executable recipe.
 
@@ -269,8 +271,8 @@ These are interpreter assertion controls, not compiled product serializer proof.
 watches the inventory. The detailed repository
 decision is docs/decisions/decision_canonical-expression-spelling.md. D103 closes for the missing
 byte contract; the .3d.2 product serializer and .3d.3 identity review are complete below.
-Ordered statement identity,
-recipe envelopes, hashes, persistence and execution remain separate work.
+[Ordered statement/recipe identity](formula-recipe-inputs.md) is implemented separately.
+Hashes, project persistence and execution remain future work.
 
 
 ```bash
@@ -339,9 +341,9 @@ Nineteen actual compiled faults alter root, kind/magnitude/full width, name/sign
 ordered binary/call/conditional children, call coverage, whitespace/newline or Debug privacy. They
 must fail public assertions; the exclusive runner restores exact source. Run mutations alone.
 
-G1-SLICE.5a.3d.2 owns this product serializer; .3d.3 completes the coupled identity review below. Ordered recipe
-normalization/statement identity, name/type/binding/evaluation, geometry, storage and command/API/MCP
-remain later work. [Ordered statements](formula-statements.md#parse-an-ordered-recipe) now have a separate syntax API. Native/release checks and WASM cross-compilation retain their stated scope; compilation
+G1-SLICE.5a.3d.2 owns this product serializer; .3d.3 completes the coupled identity review below.
+[Ordered recipe normalization/statement identity](formula-recipe-inputs.md) is now available.
+Name/type/binding/evaluation, geometry, storage and command/API/MCP remain later work. [Ordered statements](formula-statements.md#parse-an-ordered-recipe) now have a separate syntax API. Native/release checks and WASM cross-compilation retain their stated scope; compilation
 alone is not a browser runtime or cross-platform numerical certificate.
 
 

@@ -290,8 +290,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_mutations.py --coupl
 ```
 
 D109 identified the exact assertion/whole-recipe byte gap before serializer implementation. The
-contract below now settles it; product statement/recipe normalization and serialization follow
-.3f.1b/.1c. This syntax review grants no persistent statement identity, project hash, storage or
+contract below now settles it; product statement/recipe normalization and serialization are available at
+.3f.1b/.1c. This syntax review grants no project hash, storage or
 production approval.
 
 ## Canonical statement and recipe byte contract
@@ -329,7 +329,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_byte_mutations.py
 
 D109's technical decision is docs/decisions/decision_recipe-bytes.md. The engineer authored and
 applied it under standing delegation; independent evidence approval remains unapproved and the
-director may re-open the spelling. Product immutable normalization is [available](formula-recipe-inputs.md) at .3f.1b, owned identity .1c,
-and coupled contract review .3f.2. Future .7 frames typed schema/digest domains: bind/recipe are valid
+director may re-open the spelling. Product immutable normalization is [available](formula-recipe-inputs.md) at .3f.1b, with [owned identity](formula-recipe-inputs.md#own-canonical-statement-and-recipe-identity) at .1c.
+Coupled contract review .3f.2 follows. Future .7 frames typed schema/digest domains: bind/recipe are valid
 ordinary expression call names, so canonical text is interpreted within its known identity type.
 No project format, hash, save/recovery, evaluator, MCP or production release is supplied by this record.
