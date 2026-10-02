@@ -246,3 +246,6 @@ restoration. Run mutations exclusively: they temporarily edit the checker they t
 Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan
  target/artifact_cleanup_audit/<run>; apply the same run with apply. Safety/exclusions:
 docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
+
+Static signature oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations`
+checks closed kind/function matrices with value access trapped; the structural runner watches it.

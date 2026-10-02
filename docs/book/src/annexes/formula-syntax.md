@@ -590,7 +590,9 @@ D100 corrects an adjacent live task label missed by D97: canonical literal width
 numeric binding storage is i64. The previous parent and defect text remain intact in task/history
 records. Current goals, function/type contracts, independent controls and the roadmap agree.
 
-The reference prerequisites are complete. Product literal normalization/canonical expression bytes
+The numerical reference prerequisites above are complete. [Static signature review](formula-static-validation.md)
+repairs tolerance roles and variadic arity; namespace/whole static preflight remain .5b.1b/.1c.
+Product literal normalization/canonical expression bytes
 have [separate scoped proof](formula-literals.md). Ordered recipe/binding/evaluation, entity direction
 integration, real geometry and production
 API/MCP/release remain future work. Curated inverse results certify neither arbitrary-input

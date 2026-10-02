@@ -263,6 +263,9 @@ An angle times a length is refused and the diagnostic names `arc_length`: the on
 product of an angle and a radius is an arc's length, and it needs π, so it is a function with a
 declared rounding rather than a product the model has no kind for.
 
+For min and max, *T, …* starts at one argument: min(width) and max(width) return
+that width. Zero arguments are a syntax refusal; extra arguments must share its arithmetic kind.
+
 ## 6. Built-in functions
 
 The set is closed. A name that is not in it, not bound and not reserved is `formula_unbound_name`; a
@@ -295,6 +298,11 @@ reach either endpoint. Atan2's true branch is (−180, +180] degrees, and its ro
 [−180, +180]. Exact zero has no sign: zero *y* with negative *x* gives +180 degrees, while a
 negative *y* very near that axis may round to −180. Both components zero refuse with
 `formula_domain`. Neither function applies direction modulo. The dir selector below does.
+
+The tolerance operand of within is one of eps_num, eps_geo, eps_fmt, eps_imp or eps_phys,
+not any reserved name: size_index, size_count and is_base_size are size inputs, not tolerance classes.
+The [static signature controls](../../annexes/formula-static-validation.md) check every kind/role
+without reading numeric values; product static validation remains pending.
 
 ### 6.1 Geometry selectors
 

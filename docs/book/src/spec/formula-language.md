@@ -8,7 +8,8 @@
 > [Complete recipe input normalization and identity](../annexes/formula-recipe-inputs.md) are implemented
 > and [reviewed together](../annexes/formula-recipe-inputs.md#coupled-input-and-identity-review);
 > the [syntax milestone](../annexes/formula-recipe-inputs.md#syntax-milestone-and-the-route-to-execution)
-> is complete; name/type/binding validation and evaluation remain G1-SLICE.5b–.5g work; final acceptance
+> is complete; [independent static signature checks](../annexes/formula-static-validation.md)
+> now review the book reference. Product name/type/binding validation and evaluation remain G1-SLICE.5b–.5g work; final acceptance
 > makes every worked example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
 > every number's representation is the [units chapter](units-and-tolerances.md)'s.

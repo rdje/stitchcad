@@ -576,7 +576,7 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
   Commit: `STITCHCAD-G1-0072`.
 
 - ID: `G1-SLICE.5b`
-  Status: `pending`
+  Status: `in_progress`
   Goal: namespace, origin and static kind validation before any value is computed (contract2/3/5).
   Children: .5b.1 complete independent obligation/oracle review; .2 typed declarations/context;
   .3 all operator/function/selector signatures; .4 whole ordered static graph and atomic refusal.
@@ -815,7 +815,7 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
 | done | `G1-SLICE.5a.3f.2` | `done` | Coupled whole input and identity review |
 | done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
-| next | `G1-SLICE.5b.1` | `pending` | Complete static obligation and independent oracle review |
+| next | `G1-SLICE.5b.1b` | `pending` | Namespace/context and whole static preflight reference review; .1a signatures complete |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -848,6 +848,24 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
 [formula evidence](G1-SLICE-formulas.md), [numeric journal](G1-SLICE-journal.md) and
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
 
+### `G1-SLICE.5b.1a` — current static signature slice
+
+Full protocol, fixtures, diagnosis and detailed receipts are in the recipe sibling's .5b.1a node.
+
+- [x] **REPRODUCE / ISSUE** — actual baseline rejects min/max(length) and admits size tolerances;
+  static_signature_contract.py initially fails its min(v_length) assertion, rc=1.
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual infer_call/_matches guards differ from grammar5/6;
+  static_signature_contract.py --mutations distinguishes twelve actual predicate faults, rc=0.
+- [x] **FIX** — exact five-name tolerance role and listed variadic minimum; independent closed
+  eight-kind/22-name matrix, environmental reads and execution trapped.
+- [x] **ADDRESSED (verified)** — static_signature_contract.py --mutations →4032 cases/12 actual
+  assertion reds, rc=0; producer unchanged on disk. D112/D113 close; product static checking pending.
+- [x] **NO REGRESSION** — reference structure suite green; language16/publication9 pass, rc=0;
+  focused cargo test expression/canonical/recipe →34 passed/3 groups; staged make gate green, rc=0.
+- [x] **LOCKSTEP** — reference/book/annex/index/live/task/history agree; G1 stays5/18,
+  defects10open/102sealed. Next .5b.1b; prior milestone checklist retained verbatim below.
+  promotion: declined (existing independent-evidence policy; no new cross-cutting doctrine).
+
 ### `G1-SLICE.5a.4` — full syntax milestone review
 
 - [x] **REPRODUCE / ISSUE** — full contract/grammar/examples reviewed against ten public formula
@@ -873,13 +891,20 @@ D111 source-status contradiction fixed and verified; original report retained in
 D34's six-sibling example corrected to actual ten; mechanical derivation stays PLANNING.5.
 No product evaluator, geometry, storage, browser, MCP or independent production approval claimed.
 
+| `2026-10-02` | `G1-SLICE.5b.1a` | actual static matrix/faults; reference/language/publication |4032 cases/12 reds,16 language/9 publication green; namespace review .1b next |
+
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
 | `.5a.4` | `STITCHCAD-G1-0072 (leaf G1-SLICE.5a.4): close syntax milestone and own evaluator stages` | native591/WASM3/probes25/coupled7 actual reds |
 
+| `G1-SLICE.5b.1a` | `STITCHCAD-G1-0073` | D112/D113 static reference signatures fixed; product validator pending |
+
 ## Changelog
 
 - `2026-10-02`: full syntax/input/identity milestone closes .5a; .5b–.5g remain owned and pending.
 - promotion: declined (routine contract review, current-status repair and existing containment).
+
+- `2026-10-02`: .5b.1 signature child .1a closes; independent full kind/arity/tolerance/envelope
+  matrix verifies two reference repairs. Namespace/preflight .1b and full static closure .1c follow.

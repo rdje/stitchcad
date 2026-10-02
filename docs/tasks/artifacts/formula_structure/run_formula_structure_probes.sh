@@ -33,3 +33,4 @@ python3 -I -B docs/tasks/artifacts/formula_structure/scalar_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/binding_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/binding_replay_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_literal_contract.py
+python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations

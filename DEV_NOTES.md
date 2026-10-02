@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — static signature coverage is a closed kind matrix
+
+- Actual reference baseline refused min/max(length) and accepted three size reserved names as
+  within tolerances. D112/D113 were logged before repair, with source guards and normative clauses.
+  No grammar extension: one-kind variadic rows start at one; tolerances are five named classes.
+- Expected eight kinds/22 closed names and complete positional products/quotients are authored
+  independently and compared against actual loaded populations in both directions.4032 parse/infer
+  cases trap all environmental value/state/origin/geometry access and numeric execution callbacks.
+  Literal conversion retains its own numeric-input scope; no whole-recipe preflight claim is made.
+- Twelve in-memory actual predicate faults fail the body assertions; no producer rewrite. Source
+  tables/definition loading is actual reference code, rather than another evaluator implementation.
+  Namespace/rebinding/context/whole static preflight remain .5b.1b; full static closure .1c; product
+  declaration/type/graph implementation .5b.2–.4. Existing syntax/identity bytes stay unchanged.
+- promotion: declined (existing independent-evidence policy applied; no new cross-cutting doctrine).
+
 ## _(2026-10-02)_ — cleanup proves ownership and residue before regeneration
 
 - The daily record became due during the prior syntax milestone. Its clean commit allowed the
@@ -20,25 +35,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   caches and book; normal rebuild outputs therefore are not counted as cleanup residue.
   Rust591/WASM3/book/probes26/gates pass; old live ledger payloads remain exact.
 - promotion: declined (routine application of canonical locality, safety and claim policies).
-
-## _(2026-10-02)_ — syntax closure requires explicit execution ownership
-
-- Full normative syntax/input/canonical map agrees with ten public contract families (94 test
-  attributes); native591/48groups, WASM3 and all25 probes pass. Seven coupled actual assertion
-  faults restore four sources exactly; no existing Rust source/test changed. Earlier fault
-  receipts remain historical, not relabelled as rerun by this milestone.
-- D111 was a stale current-status paragraph, not a serializer defect. The contract and ADR now
-  name implemented statement/recipe identity while evaluation/storage/approval remain pending.
-- .5b–.5g own23 future children covering the complete nine-origin namespace/type contract,
-  exact reduced rational/result/storage boundaries, correctly rounded irrational functions,
-  uncertainty/tolerances/lazy atomic replay, complete operations and final platform/example proof.
-  Curated Decimal/reference controls cannot certify arbitrary production transcendental rounding.
-- Completed node graph11075B and previous closure1912B compare byte-exact with ee42f5d after
-  relocation; oldest ledger records are sealed whole. First dev-note rollover attempt searched
-  for a rule instead of its explicit archive heading and stopped before writing DEV_NOTES;
-  exact heading boundaries and independent HEAD equality now verify the complete payload.
-  No caps, language or authority changed. External policy neutral bodies still match sources.
-- promotion: declined (routine scoped milestone and already adopted identity/containment policies).
 
 # Sealed archive — earlier lessons
 
@@ -165,3 +161,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part70.md`](docs/history/stitchcad-devnotes-part70.md) | G1-0069 whole input normalization | 20 lines, 1874 bytes, `sha256:ce41946c…` |
 | [`stitchcad-devnotes-part71.md`](docs/history/stitchcad-devnotes-part71.md) | G1-0070 identity lesson | 22 lines, 2039 bytes, `sha256:364f5f56…` |
 | [`stitchcad-devnotes-part72.md`](docs/history/stitchcad-devnotes-part72.md) | G1-0071 coupled review lesson | 20 lines, 1758 bytes, `sha256:0b6fd7f2…` |
+
+| [`devnotes-part73.md`](docs/history/stitchcad-devnotes-part73.md) | G1-0072 syntax closure | 18 lines, 1564 bytes, `sha256:e6407999…` |

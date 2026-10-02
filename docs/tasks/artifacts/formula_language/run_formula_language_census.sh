@@ -594,7 +594,7 @@ class Evaluator:
         if name not in self.sigs:
             raise FErr("formula_unbound_name", "`%s` is no declared function, selector or name" % name)
         if name == "within" and not (len(args) == 3 and args[2][0] == "name"
-                                     and args[2][1] in self.reserved):
+                                     and args[2][1] in {"eps_num", "eps_geo", "eps_fmt", "eps_imp", "eps_phys"}):
             raise FErr("formula_dimension", "within's third argument is a tolerance name")
         kinds = [self.infer(a, env) for a in args]
         for arg_kinds, variadic, result in self.sigs[name]:
@@ -606,7 +606,7 @@ class Evaluator:
     def _matches(self, want_list, variadic, kinds):
         """False when the signature does not fit; otherwise the kind `T` bound to (None if it has no T)."""
         if variadic:
-            if len(kinds) < max(2, len(want_list)): return False
+            if len(kinds) < len(want_list): return False
             first = kinds[0]
             if first not in ARITH: return False
             if not all(k == first for k in kinds): return False

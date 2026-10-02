@@ -136,6 +136,19 @@ the digests afterwards.
 
 | [`changelog-part68.md`](docs/history/stitchcad-changelog-part68.md) | STITCHCAD-G1-0054/0053 | 17 lines, 1299 bytes, `sha256:5a46d26d…` |
 
+| [`changelog-part69.md`](docs/history/stitchcad-changelog-part69.md) | STITCHCAD-G1-0055 | 10 lines, 776 bytes, `sha256:e3db9c94…` |
+
+## STITCHCAD-G1-0073 - independent complete static signature review (leaf `G1-SLICE.5b.1a`)
+
+D112/D113 close: within admits exactly five tolerance names; min/max accept their documented
+one-argument base case. Independently authored closed populations and4032 actual parse/infer cases
+cover all eight kinds/22 names/operators/arity boundaries/conditionals/tolerance candidates/envelope
+precedence, with numeric/state/geometry reads and execution trapped. Twelve compiled actual guard
+faults fail body assertions; producer remains byte-identical on disk. Existing reference controls green.
+New expert annex preserves progressive reading; product namespace/type/whole preflight/execution
+remain pending. Review .5b.1 splits into signature .1a, namespace/preflight .1b and full closure .1c.
+Oldest ledger reports retained whole; G1 stays5/18; defects10open/102sealed. Next .5b.1b.
+
 ## STITCHCAD-SPINE-0021b - due safe artifact cleanup (leaf `SPINE.21b`)
 
 Tracked plan/apply producer verifies local ignored ownership, content/HEAD/input identity and protected
@@ -376,14 +389,3 @@ nine reds remain green, with exact restoration. Book/units/decision/task/live re
 payloads retain exact bytes. D84 final review follows; G1 stays5/18, defects12open/87sealed.
 D100’s stale adjacent parent label is logged/owned by the next review.
 No production evaluator or general transcendental/cross-platform certificate is claimed.
-
-## STITCHCAD-G1-0055 - complete reference binding replay (leaf `G1-SLICE.5a.3b.3c.1`)
-
-D99's actual book consumer now accepts all six normative bindable kinds. Derived Area displays in
-cm² with fixed decimals; Boolean displays true/false and replays its kind/value in subsequent
-statements. Invalid state/units/text refuse. Area/Boolean source literal syntax stays unchanged.
-
-Nineteen independent consumer verdicts and nine compiled actual assertion reds verify the repair;
-existing binding80/twelve reds, full reference/language and publication checks remain green. All
-seventeen original worked rows and prior task/oldest ledger payloads retain exact bytes. Book/live/
-task pointers agree; D99 closes, D84 signed-angle proof is next. G1 stays5/18, defects11open/87sealed.

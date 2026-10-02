@@ -835,3 +835,11 @@ normalization/serializer status. Exact public serializer/input controls and rend
 pass; evaluation, storage and approval remain pending. Original report is preserved unchanged.
 D34 recurred in TASK_TREE's six-sibling census example; .5a.4 corrects it to the actual ten siblings.
 PLANNING.5 retains mechanical frontier/count derivation ownership and its existing product priority.
+
+D112/D113 are sealed in [`stitchcad-defects-part42.md`](../history/stitchcad-defects-part42.md).
+They close at G1-SLICE.5b.1a: reference within admits exactly five tolerance names; min/max accept
+one homogeneous arithmetic operand as the published variadic row specifies. Actual4032 parse/infer
+controls and twelve compiled in-memory guard faults pass, with value/geometry access trapped and
+producer bytes unchanged. Product validation/whole static preflight remain owned by .5b.2–.4;
+reference namespace/preflight review .5b.1b follows. Report bodies are retained; draft heading markers were normalized to the canonical defect entry
+marker before final sealing, so the standing defect census counts both new records.

@@ -654,7 +654,7 @@ Completed identity children are preserved in
 
 ## Remaining formula and construction implementation contracts
 
-All children are pending, unverified and uncommitted. Parent .5 stays in_progress after syntax
+Uncompleted children remain unverified until their own receipts. Parent .5 stays in_progress after syntax
 closure. This is an owned execution plan, not an implementation or changed language contract.
 Each child records its own full pre-code protocol, independent fixtures, actual assertion faults,
 focused checks, book/live sync and per-leaf commit before selecting the next child.
@@ -662,13 +662,49 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 ### Namespace and static validation
 
 - ID: `G1-SLICE.5b.1`
-  Status: `pending`
+  Status: `in_progress`
   Goal: enumerate every static obligation from contract2/3/5/6/9 and grammar5/6/7; exercise the
   actual reference with independently authored namespace/kind/refusal cases before trusting it.
   Acceptance: all nine origins/eight reserved names, single assignment/ambiguous collisions,
   forward names, all signatures and dimensional/exclusion/envelope rules mapped both directions;
   both branches inspected without value access. Log/repair discovered reference defects first.
   No curated example-only or runtime oracle claim. Resolve any contract ambiguity before .2/.3.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.1a`
+  Status: `done`
+  Goal: independent complete operator/function/selector signature review of the actual reference;
+  enumerate all eight operand kinds, positional product/quotient rules, generic arithmetic kinds,
+  closed arities, conditional kind rules and all eight reserved candidates for tolerance roles.
+  Pre-code contract: grammar5/5.1/6/6.1/7 and contract2/3.1/5.3/6 govern. Author expected tables
+  independently, compare table populations in both directions, then exercise actual parse/infer
+  with numeric reads and geometry resolution trapped. Every arithmetic kind/generic signature,
+  commutative product versus directed quotient, wrong arity/kind and both static branches tested.
+  Prove controls fail on actual in-memory reference guard faults; preserve producer bytes.
+  Diagnose/repair observed signature defects here, with exact before/after refusals. No namespace,
+  typed diagnostic payload, runtime domain, whole-recipe atomic preflight or product validator claim.
+  Acceptance: full expected/actual population equality, exhaustive bounded matrix and named defects
+  fixed; focused current reference/syntax/book controls green, live/book/task lockstep and commit.
+  Verification:4032 actual parse/infer cases/22 closed names; twelve compiled body assertion
+  faults, no numeric/environmental/geometry reads; full reference and language16 green, rc=0.
+  Commit: `STITCHCAD-G1-0073`.
+
+- ID: `G1-SLICE.5b.1b`
+  Status: `pending`
+  Goal: all nine origins/eight reserved names, spelling/context, collision/rebinding/forward names
+  and static whole-recipe preflight in the reference, with independent declaration fixtures.
+  Acceptance: both-origin collision evidence, whole-recipe no-value-access proof, ordered namespace
+  and header checks; resolve discovered defects before trusting the reference for .5b.2/.4.
+  Typed production diagnostic arguments retain their .5b.2/.4 owners; no runtime/MCP claim.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.1c`
+  Status: `pending`
+  Goal: close full static obligation map against contract2/3/5/6/9 and grammar5/6/7 after .1a/.1b;
+  named exclusions/envelope precedence and prior syntax limits in both directions. Independently
+  review all actual worked/refusal examples; any remaining contract ambiguity settled before code.
+  Acceptance: complete map, actual static/no-execution evidence and precise remaining numeric/
+  geometry/runtime/production proof boundaries; safe implementation protocols for .5b.2–.4.
   Verification: `pending`; Commit: `pending`.
 
 - ID: `G1-SLICE.5b.2`
@@ -896,3 +932,41 @@ verdicts pass0. Archive CLI:193 controls/184 full logical reads, rc=0. Retention
 Fresh materialized defect census:10 open/100 unique sealed/zero duplicates or overlap; D111 closed.
 Post-edit make check repeats native591/48groups/zero failures; publication9 and tree10/13/10/zero
 gaps complete in one set-e shell, rc=0. No verification handle remains live before commit.
+
+### `G1-SLICE.5b.1a` — complete finite static signature evidence
+
+- [x] **REPRODUCE / ISSUE** — direct actual reference baseline →min/max(length) refuse
+  formula_dimension; within(..., size_index/size_count/is_base_size) accepts boolean, rc=0.
+  New static_signature_contract.py first run →actual min(v_length) body assertion red, rc=1.
+- [x] **ROOT CAUSE (WHY + WHERE)** — infer_call admits all reserved names while _matches skips
+  tolerance kind; variadic _matches imposes max(2, listed arity). Actual prefix/call-path review
+  and direct baseline rc=0 pinpoint those guards against grammar5/6 and ADR five-class rule.
+  static_signature_contract.py --mutations →12 actual predicate faults fail body assertions, rc=0.
+- [x] **FIX** — within guard admits exactly five tolerance names; min/max use the documented
+  one-kind minimum. Independent hardcoded dimensional tables compare actual loaded populations
+  in both directions; signature matrix traps environmental reads and execution callbacks.
+- [x] **ADDRESSED (verified)** — static_signature_contract.py --mutations →4032 actual
+  parse/infer cases,22 closed names,12 compiled actual predicate/body assertion reds, rc=0.
+  Each faulty guard fails the assertion; producer on disk unchanged. D112/D113 close; no new
+  grammar/identity/storage or product type/evaluation implementation claim.
+- [x] **NO REGRESSION** — run_formula_structure_probes.sh →all existing structural/input/
+  canonical/numeric/replay controls plus4032/12 green; language probes →16 pass/0 fail, rc=0.
+  Publication →53 chapters/25 APIs/1102 source/1705 rendered links,9 pass/0 fail; bash -n
+  on both shell producers →rc=0. Focused cargo test -p sc-core expression/canonical/recipe
+  contracts →34 pass/3 groups; staged make gate →all doctrines green, rc=0.
+- [x] **LOCKSTEP** — expert annex/grammar/type contract/index/status, complete .1a–.1c ownership,
+  defect closure/history/live/resume agree; Rust sources/tests unchanged. G1 stays5/18;
+  canonical defect marker census →10 open/102 unique sealed/0 intersection, rc=0. First scratch
+  census incorrectly counted task headings; canonical markers corrected the query and draft
+  defect markers before final sealing. Original report bodies/oldest ledger payloads retained.
+  promotion: declined (already canonical independent-evidence doctrine; no new durable policy).
+
+Final staged gate:all doctrines green, rc=0. Ledger:nine arms/thirteen pointer controls pass, rc=0.
+Archive CLI:198 controls/189 full logical reads, rc=0; retention189 logical records/64 working
+Markdown/9092 decoded lines/700909 decodedB/357231 residentB, rc=0. Prior main milestone checklist
+1474B and recipe completed prefix47500B retained exactly; oldest live ledger payloads exact HEAD.
+The first gate selected the primary tree's historical checklist lacking a recognized result shape;
+added current owning .1a evidence before it, leaving historical bytes unchanged. Matrix guard review
+replaced a kind-only dict with Mapping so get(value) cannot silently default; actual twelfth fault
+proves the read trap. Draft count replacement was corrected for D112/D113 and1102 link identities
+before final checks. No checker, cap, grammar or product Rust changed; no needed job remains live.

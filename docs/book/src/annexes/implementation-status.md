@@ -27,6 +27,10 @@ requires the named contracts and later proof owners.
 | Owned statement/recipe identity | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3f.1c | [Exact owned bytes](formula-recipe-inputs.md#own-canonical-statement-and-recipe-identity) |
 | Formula lexing/expression syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.1/.2b.2 | [Syntax API](formula-syntax.md) |
 
+Reference [static signature evidence](formula-static-validation.md) covers the complete finite
+kind/function matrix without executing values; product static validation and whole-recipe preflight
+remain pending. Reference namespace/preflight review resumes at G1-SLICE.5b.1b.
+
 ## Remaining proofs
 
 Full SizeSet axes/breaks/composition and resolved profile intent remain G1-SLICE.4c work. D70's axes
