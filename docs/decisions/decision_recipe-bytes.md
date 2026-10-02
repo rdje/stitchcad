@@ -66,7 +66,8 @@ independent complete-recipe parser. Actual renderer faults must fail authored by
 restore exact source. The structural suite watches this producer and its fault anchors.
 These controls establish the technical specification, not compiled product serialization proof.
 Product normalized statements/recipes are implemented by .1b and their owned serializer by .1c;
-compiled byte/fault controls are recorded in the recipe-input annex. Coupled review .3f.2 follows.
+compiled byte/fault controls and completed coupled review .3f.2 are recorded in the recipe-input annex.
+Static validation, numerical evaluation and typed persistence remain separate obligations.
 
 ## Re-open condition
 

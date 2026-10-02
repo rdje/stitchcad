@@ -1,0 +1,14 @@
+# Actual example code<TAB>current stage<TAB>eventual diagnostic<TAB>authored statement identity or -.
+waist_girth + 2.5	semantic	formula_dimension	(bind candidate length (+ waist_girth ratio:2500000))
+dart_intake / 0	semantic	formula_division	(bind candidate length (/ dart_intake count:0))
+sqrt(hip_to_hem_drop)	semantic	formula_dimension	(bind candidate length (sqrt hip_to_hem_drop))
+dart_leg_angle * dart_len_front	semantic	formula_dimension	(bind candidate length (* dart_leg_angle dart_len_front))
+- dart_count	semantic	formula_dimension	(bind candidate length (- dart_count))
+let dart_intake_share: ratio = suppression / dart_intake	semantic	formula_rebinding	(bind dart_intake_share ratio (/ suppression dart_intake))
+let a: length = b + 1 cm	semantic	formula_unbound_name	(bind a length (+ b length:10000))
+if(dart_intake > 4 cm, 5 cm)	syntax	formula_parse	-
+"wide"	syntax	formula_parse	-
+dart_intake ^ 3	syntax	formula_unsupported	-
+garment_hem * (100 pct + shrinkage)	semantic	formula_unknown	(bind candidate length (* garment_hem (+ ratio:1000000 shrinkage)))
+eps_phys + 1 cm	semantic	formula_tolerance_unbound	(bind candidate length (+ eps_phys length:10000))
+spline(cb_seam, 3)	semantic	env_nurbs	(bind candidate length (spline cb_seam count:3))

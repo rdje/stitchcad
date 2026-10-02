@@ -19,6 +19,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Coupled statement and recipe review](annexes/formula-statements.md#coupled-syntax-and-diagnostic-review)
 - [Canonical statement and recipe bytes](annexes/formula-statements.md#canonical-statement-and-recipe-byte-contract)
 - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)
+- [Recipe input/identity proof and remaining owners](annexes/formula-recipe-inputs.md#coupled-input-and-identity-review)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
 - [Executable closure intent](spec/ontology-closures.md)
 - [Executable garment constructions](spec/ontology-constructions.md)

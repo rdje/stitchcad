@@ -130,6 +130,23 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part65.md`](docs/history/stitchcad-changelog-part65.md) | STITCHCAD-G1-0049, STITCHCAD-G1-0048 | 15 lines, 1114 bytes, `sha256:e746de86…` |
 
+| [`stitchcad-changelog-part66.md`](docs/history/stitchcad-changelog-part66.md) | STITCHCAD-G1-0051, STITCHCAD-G1-0050 | 18 lines, 1463 bytes, `sha256:3dcee333…` |
+
+## STITCHCAD-G1-0071 - coupled whole input and identity review (leaf `G1-SLICE.5a.3f.2`)
+
+Actual17 worked bindings/four assertions produce21 exact statements/25 operands and a complete
+ordered identity. Independently authored whole statement bytes agree with actual reference syntax,
+with semantics trapped. All13 actual refusal examples distinguish3 syntax errors from10 deferred
+semantic checks. Later branch/call input errors and combined maximum/first excess retain context.
+Five new public contracts/seven actual compiled assertion reds/exact four-source restoration;
+strict native591/48groups, release5/WASM3, scoped reference/language16/publication9 pass.
+Book52 chapters/25 APIs/1089 source/1682 rendered links publishes the complete obligation map and
+remaining static/binding/evaluation/geometry/store/MCP owners. Every existing Rust source/test exact.
+Complete recipe evidence/closure moved byte-identically to bounded sibling with old anchor routes;
+map orientation shortened under unchanged cap. Oldest ledger payloads independently compare exact.
+G1 stays5/18, defects10open/99sealed; tree13/10 siblings. .3f/.3 input-identity scope closes;
+next .5a.4 full syntax/canonical milestone and safe evaluator decomposition. No evaluation/signoff claim.
+
 ## STITCHCAD-G1-0070 - owned statement and recipe identity bytes (leaf `G1-SLICE.5a.3f.1c`)
 
 Private typed canonical statement/recipe owners retain exact names/annotations and authored order,
@@ -375,22 +392,3 @@ D96 resolves actual index targets instead of filename text:13 independent verdic
 Oldest payloads stay exact; book/live/tasks agree. Full local Rust/WASM/book/probes/gate precede
 required exception push; observed CI .1v next. G1 stays5/18, defects12/83;
 D83 review remains .2. No reader, scope or aggregate-cap change; no domain/production signoff.
-
-## STITCHCAD-G1-0051 - canonical literals retain wide exact identity (leaf `G1-SLICE.5a.3b.3b.3b`)
-
-D95 closes:146 independent node/Decimal controls verify128-bit canonical magnitudes, unary identity,
-i64 binding distinction, aliases/quanta/scalar bounds and129-bit refusal. Twelve compiled actual
-faults produce assertion reds/exact restoration. Existing reference/binding controls pass; no runtime
-behavior changes. Book/grammar/decision/live pointers and preserved prior records agree. G1 stays5/18;
-defects12 open/82 sealed; D83 full review .3c next. No production normalization/serializer signoff.
-
-## STITCHCAD-G1-0050 - reference bindings store bounded integers (leaf `G1-SLICE.5a.3b.3b.3a`)
-
-Numeric let rounds once, checks declared signed storage/scalar domains and returns the stored integer;
-L2 consumes it directly. Exact temporaries remain wider. Binding80 independent controls/twelve
-compiled actual reds verify endpoints/ties/context/Boolean/environment/replay. Existing numeric
-families retain focused controls and literal6/arith9/angle7/rational12/scalar11/inline5 actual reds.
-D95 director ruling: exact128-bit canonical literal nodes, i64 numeric bindings, unary identity kept.
-Book/grammar/roadmap/decision and live task records agree; prior task/oldest ledger payloads preserved.
-G1 stays5/18, defects13 open/81 sealed; next canonical proof .3b and complete review .3c. No new Rust,
-production evaluator, real geometry, MCP or release claim.

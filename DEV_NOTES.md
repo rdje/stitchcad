@@ -3,6 +3,27 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — coupled recipe review separates inputs from eventual acceptance
+
+- Actual17 bindings/four assertions=21 statements/25 operands now have independently authored
+  complete statement bytes and exact whole-product identity. Actual recursive reference syntax
+  agrees, including full ordered token coverage, with inference/evaluation trapped. This does
+  not supply an independent whole-recipe parser or product evaluator.
+- All13 refusal examples are stage-owned: missing if branch/text/cube are3 current syntax
+  refusals;10 semantic checks still normalize/serialize and remain .5's acceptance obligation.
+  Later bad inputs in either branch/call arguments abort whole normalization at exact original
+  span/operand/ordinal22; maxima4096/256/16 and each first excess preserve stage/context.
+- Five new public controls/seven actual targeted compiled assertion reds/exact restoration cover
+  metadata, later coverage/index, order/operand identity, combined bound and Debug privacy.
+  Strict native591/48groups, release5/WASM3 and reference/book checks pass. All existing Rust
+  sources/tests stay byte-exact. Initial test compiler refused a temporary borrowed excess
+  source; naming its owner fixes test lifetime without any product change or earned assertion red.
+- Book52/25 APIs/1089 source/1682 rendered links exposes the complete prerequisite/remaining-owner
+  map. Whole recipe evidence and serializer closure move exactly to bounded sibling, with old
+  anchor routes retained. Source map orientation shrinks without deleting canonical facts or
+  changing ceilings. Coupled .3f/.3 scope closes; .5a.4 milestone/decomposition follows.
+- promotion: declined (routine coupled proof and containment under established contracts/policies).
+
 ## _(2026-10-02)_ — owned recipe bytes compose verified inputs without execution
 
 - Separate private canonical statement/recipe types expose exact bytes/extraction, Clone and byte Eq.
@@ -25,27 +46,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   closure/ledger comparisons align. Coupled .3f.2 review follows; .7 still owns typed persisted
   fields/digest framing, and static validation/binding/evaluation remain later work.
 - promotion: declined (routine composition under established exact-byte/privacy/typed-domain policies).
-
-## _(2026-10-02)_ — whole recipe normalization preserves accepted syntax and literal causes
-
-- Separate normalized owners reuse every existing expression literal conversion, retaining original
-  names/annotations/global spans and borrowing source after syntax drop. Source-order short-circuit
-  returns no partial accepted normalized object. No i64 binding/names/types/evaluation/tolerance step.
-- Standalone input error adds expression role; complete recipe error adds known1-based ordinal,
-  nested original rule/span and standard Error chain. Strict clippy caught128-byte Err; boxed nested
-  context makes the recipe error compact/Clone without a lint allowance or successful-path box.
-- Eight contracts cover16 authored statement rows/nine recipes,100 independent Decimal/Fraction
-  inputs across three roles, original metadata/privacy/lifetimes and simultaneous4096×2×256/16if
-  conversion/clone/drop on64KiB stack. Six compile-fail docs/two runnable docs verify public usage.
-- Initial fixture reds confused10m piece-box limit with1km scalar input domain; exact unit constant
-  and existing literal boundary rows correct the fixtures without changing production limits.
-  First fault run correctly refused an expect-only source-chain panic after15 actual reds. Explicit
-  cause/type assertions precede extraction; all17 rerun compiled assertion reds/exact restore pass.
-- Final strict native569/release8/WASM3 and scoped structure/language16/publication9 pass. Book52
-  chapters/23 APIs/1073 source/1663 rendered links align with the new annex/progressive routes.
-  Shared literal/normalized/expression/canonical sources and preserved history stay exact. Owned
-  statement/recipe serialization .1c follows; numerical execution and approval remain separate.
-- promotion: declined (routine composition of verified input APIs; byte-policy decision already recorded).
 
 # Sealed archive — earlier lessons
 
@@ -169,3 +169,4 @@ The live window below holds the most recent lessons. When it passes its health t
 
 | [`stitchcad-devnotes-part68.md`](docs/history/stitchcad-devnotes-part68.md) | G1-0067 coupled recipe review | 18 lines, 1629 bytes, `sha256:6a16cabe…` |
 | [`stitchcad-devnotes-part69.md`](docs/history/stitchcad-devnotes-part69.md) | G1-0068 exact recipe bytes | 18 lines, 1651 bytes, `sha256:e352ef3b…` |
+| [`stitchcad-devnotes-part70.md`](docs/history/stitchcad-devnotes-part70.md) | G1-0069 whole input normalization | 20 lines, 1874 bytes, `sha256:ce41946c…` |

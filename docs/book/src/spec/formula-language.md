@@ -5,7 +5,8 @@
 > [borrowed lexing and bounded expression syntax](../annexes/formula-syntax.md) at G1-SLICE.5a.1/.2.
 > [Owned canonical expression identity](../annexes/formula-literals.md#serialize-canonical-expression-identity)
 > is implemented and reviewed; [ordered statement syntax](../annexes/formula-statements.md#parse-an-ordered-recipe) is also available.
-> [Complete recipe input normalization and identity](../annexes/formula-recipe-inputs.md) are available;
+> [Complete recipe input normalization and identity](../annexes/formula-recipe-inputs.md) are implemented
+> and [reviewed together](../annexes/formula-recipe-inputs.md#coupled-input-and-identity-review);
 > name/type/binding validation and evaluation remain G1-SLICE.5 work; final acceptance
 > makes every worked example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and

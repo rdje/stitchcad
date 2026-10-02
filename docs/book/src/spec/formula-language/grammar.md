@@ -202,7 +202,7 @@ the director's standing delegation. Its independent evidence approval stays unap
 governance §6.1; the director can re-open the contract with compatibility consequences recorded.
 The [byte-contract controls](../../annexes/formula-statements.md#canonical-statement-and-recipe-byte-contract)
 verify this specification with authored fixtures and actual reference syntax. Whole normalization .1b
-and owned serialization .1c are available; coupled review .3f.2 follows. These controls grant no
+and owned serialization .1c are available; [coupled review .3f.2](../../annexes/formula-recipe-inputs.md#coupled-input-and-identity-review) is complete. These controls grant no
 execution or release approval.
 
 ## 5. Operators

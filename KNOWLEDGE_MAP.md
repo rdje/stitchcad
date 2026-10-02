@@ -10,13 +10,12 @@
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
 - `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs` — ontology/measurements;
-  recipe syntax/literals/identity.
   Owner `G1-SLICE.3` / `.4` / `.5`.
-- `docs/book/src/SUMMARY.md` — learning/index/annexes; owner `G0-CONTRACT` / `G1-SLICE.4d.1`.
+- `docs/book/src/SUMMARY.md` — book; owner `G0-CONTRACT` / `G1-SLICE.4d.1`.
 - `docs/book/src/spec/formula-language.md` — formula contract.
   Oracle `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
   `G0-CONTRACT.9` / `G1-SLICE.5`.
-- `docs/book/src/spec/interchange-dialects.md` — dialect registry.
+- `docs/book/src/spec/interchange-dialects.md` — dialects.
   Tool `docs/tasks/artifacts/interchange/run_interchange_census.sh`. Owner `G0-CONTRACT.10` / `G2-2D`.
 - `docs/book/src/spec/feature-matrix.md` — release scope;
   `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. Owner `G0-CONTRACT.4`.
@@ -38,6 +37,7 @@
 - [`G1-SLICE-formulas.md`](docs/tasks/G1-SLICE-formulas.md)
 - [`G1-SLICE-journal.md`](docs/tasks/G1-SLICE-journal.md)
 - [`G1-SLICE-measurements.md`](docs/tasks/G1-SLICE-measurements.md)
+- [`G1-SLICE-recipes.md`](docs/tasks/G1-SLICE-recipes.md)
 - [`G1-SLICE.md`](docs/tasks/G1-SLICE.md)
 - [`G2-2D.md`](docs/tasks/G2-2D.md)
 - [`G3-GRADING.md`](docs/tasks/G3-GRADING.md)

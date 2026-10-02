@@ -199,7 +199,7 @@ must compile and fail public assertions, covering headers, operands, envelope/or
 empty identity, terminal newline, opaque Debug and exact extraction. The exclusive runner restores
 its source exactly; its classifier refuses compiler/expect-only/passing-name noise. Existing authored
 fixtures remain checked by the actual independent recursive reference; no independent whole-recipe
-parser or numerical evaluation proof is claimed. Coupled review .3f.2 follows this implementation.
+parser or numerical evaluation proof is claimed. [Coupled review .3f.2](#coupled-input-and-identity-review) is complete below.
 
 ```bash
 cargo test -p sc-core --test formula_canonical_recipe_contract
@@ -231,6 +231,55 @@ Test-side header/operand byte composition is inspection, not a product statement
 cargo test -p sc-core --test formula_normalized_recipe_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py
 ```
+
+## Coupled input and identity review
+
+G1-SLICE.5a.3f.2 checks the complete path from authored statements to normalized inputs and owned
+identity. The [worked skirt examples](../spec/formula-language/examples.md) supply 17 bindings and
+four assertions:21 statements with 25 expression operands. Independently authored complete statement
+bytes match the actual published names/kinds/operands and the complete ordered recipe. The recursive
+reference checks syntax with inference/evaluation trapped, plus complete ordered token coverage;
+authored statement chunks do not supply an independent whole-recipe parser.
+
+The 13 refusal examples also have a current stage. The missing conditional branch, text value and
+unsupported cube refuse during syntax parsing. The other 10 still produce input identity: their
+kind/name/division/unknown/tolerance/envelope checks belong to later static validation and evaluation.
+Accepting their syntax and inputs does not accept their use in a garment. A bad literal in an
+untaken branch or a call argument still aborts whole normalization, retaining the original span,
+known statement ordinal 22 and operand role after the 21 valid worked statements.
+
+| Obligation | Current evidence | Remaining implementation owner |
+| --- | --- | --- |
+| Whole let/assert syntax, order and fixed bounds | Statement/recipe contracts and coupled maximum/first excess tests | Full syntax milestone G1-SLICE.5a.4 |
+| All literal inputs, including untaken branches | Literal/normalized contracts and later whole-input refusal tests | Numeric binding G1-SLICE.5 |
+| Names, annotations and original global metadata | 21 worked statements, source borrowing and Clone checks | Namespace/type acceptance G1-SLICE.5 |
+| Exact typed identity, empty/order/alias behavior | Owned identity contracts, actual worked recipe and typed collision controls | Typed project fields/digests G1-SLICE.7 |
+| Source/arena-independent identity, privacy and extraction | Ownership contracts and actual statement Debug controls | Command diagnostic envelope G1-SLICE.6 |
+| All 13 worked refusals | Three syntax refusals; ten semantic checks explicitly deferred | Static validation/evaluation G1-SLICE.5 |
+| Published values/assertion verdicts, lazy execution and replay | Independent reference only; inputs/identity compute no values | Product evaluator/DAG G1-SLICE.5 |
+| Geometry selectors and construction | Syntax/identity retain ordered selector calls | G1-SLICE.5 and G2-2D |
+| Storage, API/MCP and production acceptance | Distinct future workflow/approval requirements | G1-SLICE.7/.9 and G7-RELEASE |
+
+Five new public controls check the actual worked/refusal populations, metadata and complete bytes,
+whole later literal failures, alias/order invariants and combined limits of 4096 statements, 256 nodes and 16 nested conditionals
+with first excesses. The bounded maximum serializes on a 64 KiB stack. Existing tests additionally
+exercise all 4096 assertions with both 256-node operands; neither case is a performance/browser proof.
+Seven actual production faults target metadata, missing later inputs, flattened refusal index,
+recipe order, assertion operand identity, combined bound and normalized Debug privacy. Each compiles
+and fails a new public assertion; the exclusive runner restores all four sources exactly. The
+structural suite watches the independent authored/reference population and classifier/actual anchors.
+Every production Rust source remains byte-identical to the predecessor implementing owned identity.
+
+```bash
+cargo test -p sc-core --test formula_recipe_input_review
+python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
+```
+
+This closes the scoped normalization/identity review. The full syntax milestone .5a.4 follows;
+before evaluator work starts, .5 must be decomposed into safe static validation, binding, exact
+execution/DAG and operations slices. The formula contract §9's product numeric/cross-platform and
+refusal requirements remain open; this review grants no execution, geometry or release approval.
 
 Numerical binding/evaluation, typed project hashes,
 storage/recovery, geometry, command/API/MCP control and production approval retain their task owners.
