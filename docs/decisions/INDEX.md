@@ -54,4 +54,5 @@ Records carry an `answers:` line so a question can find them — that is what ma
 
 | [`decision_length-declarations-retain-state-and-provenance.md`](decision_length-declarations-retain-state-and-provenance.md) | `decision` | canonical length/state/source inputs; unknown/derived give no numeric fallback; evidence truth and policy remain later proofs |
 | [`decision_history-windows-retain-self-contained-bytes.md`](decision_history-windows-retain-self-contained-bytes.md) | `decision` | bounded self-contained history windows preserve every logical path and byte; verify reconstruction before retiring copies |
+| [`decision_angles.md`](decision_angles.md) | `decision` | signed and multi-turn formula bindings; normalized entity directions; D84 verification remains owned |
 | [`decision_book-progression.md`](decision_book-progression.md) | `decision` | progressive learning, glossary/index and expert annexes; roadmap/code/book share verified scope |

@@ -353,3 +353,52 @@ Current work remains in the parent frontier.
   payloads retain predecessor text. Live 12 open/70 sealed, G1 5/18; next .3b.2, D70 pending.
 
 Current work remains in the parent.
+
+## Exact arithmetic contract and evidence — preserved from f70edf7
+
+- ID: `G1-SLICE.5a.3b.2`
+  Status: `done`
+  Goal: repair reproduced D82 exact reference arithmetic against formula contract 4.2 before oracle use.
+  Pre-code protocol: complete formula contract/grammar/ADR exact + - * /, square and rational selector;
+  canonical integer inputs (.3b.1) precede expression arithmetic. Current actual diagnostic returns
+  2 for 1 um / 2 + 1 um / 2, and zero for ratio 0.000001 squared. evaluate square/product/quotient
+  and param_at explicitly call rnd before binding. Remove only these premature rounding steps and
+  return exact reduced Fraction in result-kind internal units. Keep +/-, comparisons, lazy branches,
+  dimension signatures, direct ratio scaling, zero division, explicit round_to quantization and
+  irrational nearest-quantum results. Binding rounding remains census L2; no product evaluator/API.
+  Own explicit exact result fixtures, independent Fraction parameter controls/reassociation/binding
+  tie proof, read-only selector model controls, lazy/nonzero/irrational/round_to controls and actual
+  arithmetic guard mutation/restoration. Do not invent arbitrary curve geometry for reference edges.
+  Rational/domain/binding enforcement D83 stays next .3b.3. Clarify explicit round_to vs implicit
+  arithmetic rounding in the book without adding/removing any declared language operation.
+  Run restored structural/input/literal/language/publication/recording checks and stage doctrine gate;
+  preserve prior exact protocol/evidence and oldest live ledgers at health before growth.
+  Verification: 24 rows/100 independent Fraction cases/162 controls, nine actual reds/exact restore; focused checks green.
+  Commit: `STITCHCAD-G1-0043` (this recording commit).
+
+### `G1-SLICE.5a.3b.2` — exact reference arithmetic
+
+- [x] **REPRODUCE / ISSUE** — actual literal_diagnostic.py at 6f26ca3 → division sum 2 instead of 1;
+  tiny ratio square zero instead of 1/1000000, rc=0 observations. Corrected arithmetic_contract.py
+  against committed predecessor → exact-result assertion failure on 1 um / 2, rc=1; candidate restored.
+- [x] **ROOT CAUSE (WHY + WHERE)** — git show 3704b8a reference source → square/product/quotient/
+  param_at explicitly rnd before binding; actual diagnostic/exact Fraction controls disagree with
+  formula 4.2/ADR-0003, rc=0 observation. Earlier input/walker/literal repairs retain those paths.
+- [x] **FIX** — preserve result-kind exact Fraction through square/product/quotient/selector; keep
+  canonical integer input, explicit round_to/irrational rounding and census L2 binding quantization.
+  No dimension/branch/zero-divisor/scale/geometry contract change; D83 remains owned next.
+- [x] **ADDRESSED (verified)** — arithmetic_contract.py → 24 rows/100 independent Fraction cases/
+  162 controls/0 fail, rc=0. run_arithmetic_mutations.sh → nine actual assertion reds/rc=1 each,
+  exact source restoration, runner rc=0. Predecessor/candidate round trip confirms real regression.
+- [x] **NO REGRESSION** — structural suite → structural 16+2/input 130+3/expression twelve/Fraction
+  36/literal 60+360/arithmetic 24+100+162 pass, rc=0; language 15/publication nine green, rc=0.
+  Warning-free book: 48 chapters/16 APIs, 995 source/1517 rendered links, rc=0. Ledger nine/archive verify/retention pass, rc=0;
+  106 records/261782 resident bytes. Tree 10/13/eight/zero gaps, glossary 310/nine/158, feature 105/29,
+  uncertainty 133/16/zero unowned, fixture 20/four/five/zero mismatch, rc=0. Predecessor payload/
+  checklist and 11/71 defect census verified. Staged `make gate` → all doctrines green, rc=0.
+  No Rust changed; strict native/release/WASM evidence remains .3a, no new runtime/remote-CI claim.
+- [x] **LOCKSTEP** — exact/operator vs explicit quantization boundaries described in contract and
+  annex; learner/glossary/index routes retained. Prior literal evidence/oldest ledgers preserve
+  committed bytes. Live 11 open/71 sealed, G1 5/18, next .3b.3; D70 pending.
+
+Current work remains in the parent.

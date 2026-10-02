@@ -151,3 +151,9 @@ Reference exact arithmetic: `arithmetic_contract.py` in formula_structure checks
 structural suite runs it. `bash docs/tasks/artifacts/formula_structure/run_arithmetic_mutations.sh`
 requires nine actual assertion reds/exact restoration; run alone. Numeric domains/stored angles
 remain D83's next owner .5a.3b.3; selector scope is the reference length-only model, not curve accuracy.
+
+Reference angular guards: `angle_contract.py` in formula_structure checks 42 angular rows/72 controls;
+`angle_math_oracle.py` independently checks those defined curated rows with standard-library math.
+Structural suite runs both. `bash docs/tasks/artifacts/formula_structure/run_angle_mutations.sh`
+requires seven actual conversion/direction/pole reds/exact restoration; run alone. Decimal60 proof
+scope is curated, not arbitrary transcendental correctness. D83 guards/D84 angle ruling remain owned.

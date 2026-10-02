@@ -938,11 +938,11 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
   The proposal author applied it under governance §6.1; its evidence is derived
   by instruments and that author may not approve it (self-application decision).
 **Director clarification applied within v0.3, with source:**
-- §2 adds the director's explicit incremental-publication requirement: roadmap,
-  code and book in lockstep, glossary and topic index, detailed expert annexes.
-  G1-SLICE.4d.1 owns adoption and scoped status/navigation verification. This
-  changes documentation obligations, not locked product scope or gate exits;
-  `docs/decisions/decision_book-progression.md` records the source and application.
+- §2 director publication ruling: roadmap/code/book lockstep; progressive learning,
+  glossary/index and expert annexes: G1-SLICE.4d.1, `docs/decisions/decision_book-progression.md`.
+- G0 D84 director ruling (2026-10-02): signed/multi-turn formula angles,
+  normalized entity directions. G1-SLICE.5a.3b.3c owns verification;
+  `docs/decisions/decision_angles.md`. Both clarify obligations; scope/gate exits stay unchanged.
 
 ---
 

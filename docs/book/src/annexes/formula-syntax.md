@@ -268,7 +268,42 @@ rounding/refusal boundaries. Nine actual arithmetic/scale/zero/branch/quantizati
 assertion failures and byte-identical restoration; run alone. The selector checks use the reference's
 length-only edge model, and certify no real curve inversion or geometric accuracy.
 
-D83 remains open for numeric domains, rational limits and stored-angle handling. This is partial
+D83 remains open for numeric domains and rational limits; D84 owns signed-angle verification. This is partial
 reference evidence, not a complete production evaluator, cross-platform numerical signoff, command
 API or release certificate. The next audit must close those gaps before product normalization uses
 this instrument as an oracle.
+
+## Reference angle conversion and direction controls
+
+Reference D85/D86/D87 are repaired. Trigonometric input and arc_length convert internal microdegrees
+directly to radians by multiplying by pi/(180*1000000). A full-turn sweep remains a full turn and a
+signed or fractional sweep remains signed or fractional; this conversion does not normalize a sweep.
+The read-only dir selector rounds its microdegree result to the nearest quantum before direction
+normalization, matching atan2 on the same vector. Tangent at an exact odd quarter-turn refuses
+formula_domain, including negative and multi-turn poles; neighboring microdegree inputs remain finite.
+
+For example, `arc_length(360 deg, 1 um)` returns 6 um at the declared rounding, `sin(90 deg)` returns
+ratio 1000000, and `dir` for the vector (1,6) returns normalized angle 80537678. Previously, degrees
+were scaled incorrectly by a million and direction output truncated rather than rounding.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_angle_mutations.sh
+python3 -I -B docs/tasks/artifacts/formula_structure/literal_diagnostic.py
+```
+
+Forty-two explicit angular identities/results agree with an independent standard-library math
+oracle on defined curated arguments. They supply 72 controls, including quadrant/dir agreement,
+full/signed/multi-turn sweeps, fractional microdegrees, exact poles and finite neighbors. Seven actual
+conversion/sweep/precision/direction/pole mutations require assertion reds and exact restoration;
+run alone. This remains a curated 60-digit Decimal reference, not an arbitrary-input certificate of
+correctly rounded transcendental evaluation or a production geometry implementation.
+
+The director's D84 ruling preserves signed/multi-turn formula angles and normalizes entity direction
+fields. A bound 360-degree sweep therefore retains its full turn; formula equality does not collapse
+it to zero. `dir` still normalizes by its explicit function contract. The durable record is `docs/decisions/decision_angles.md`.
+
+D84 remains owned by G1-SLICE.5a.3b.3c for binding/equality controls and inverse-trig contract repair:
+the reference still normalizes atan/atan2 outputs, and the current 42-row evidence describes that
+behavior, not completed signed inverse-trig semantics. Product numeric binding/evaluation is pending.
+D83 rational/scalar guards continue independently under .3b.3a/.3b.

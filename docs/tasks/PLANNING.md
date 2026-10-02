@@ -469,11 +469,31 @@ implicit operator rounding is removed, explicit and irrational quantization rema
 - **D83** — reference numeric domains are measured without complete typed refusal enforcement.
   - Reproduce: literal_diagnostic.py accepts count 2^128 (129 numerator bits) and length
     1000000001 um, with no formula_domain; source see only updates max_bits, L8 is a census verdict.
-    L2 stores rnd(val.v), so 360 deg remains unnormalized at a stored angle binding.
-  - Impact: reference success is insufficient evidence for numeric/binding domains and normalization.
+    L2 stores rnd(val.v), so 360 deg remains unnormalized at a stored angle binding. The director's
+    D84 ruling confirms this raw sweep behavior is desired; it is not a missing modulo defect.
+  - Impact: reference success is insufficient evidence for numeric/binding domains.
   - Owner/schedule: G1-SLICE.5a.3b.3, after exact arithmetic and before product normalization.
-    Inspect complete angle/sweep contracts before choosing literal vs stored-angle normalization;
-    raw expression angle and stored entity angle are distinct, and no modulo rule is invented here.
+    D84 records the director’s direction/sweep distinction; rational/scalar repairs implement no
+    formula modulo. Remaining signed-angle verification stays owned by .3c.
+
+- **D84** — normalized formula angle storage conflates direction with signed/multi-turn sweep.
+  - Contract evidence: formula kind table 2 says angle is normalized and includes direction/sweep/
+    grain deviation; units 1.2 normalizes entity angles and equality; grammar 6 arc_length uses
+    angle * pi/180 * radius, and unary/ordinary angle arithmetic is exact by formula 4.2.
+  - Consequence: binding 360 deg then using it as sweep becomes zero if every let angle normalizes,
+    unlike the same direct full-turn expression. Normalizing a negative sweep also changes its sign.
+    sc-units Angle explicitly represents a normalized direction; it cannot preserve a full turn.
+  - Impact: canonical literal/binding/equality semantics cannot safely inherit that entity type without
+    a direction/sweep distinction. This is a contract decision, not just a missed modulo call.
+  - Owner/schedule: G1-SLICE.5a.3b.3c verifies bindings/equality and signed inverse-trig behavior.
+    Director ruling received 2026-10-02: preserve signed/multi-turn formula angles; normalize entity
+    directions. Canonical record: `docs/decisions/decision_angles.md`.
+    Specifications align now; reference atan/atan2 still normalize outputs, owned repair pending.
+    Scalar/rational domain repairs .3a/.3b proceed independently. D84 remains open until verified.
+
+D85/D86/D87 are sealed in [`stitchcad-defects-part21.md`](../history/stitchcad-defects-part21.md).
+G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exact tan pole refusal;
+42 rows/72 controls agree with an independent standard-library math oracle, seven actual reds restore.
 
 ## Decisions
 

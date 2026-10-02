@@ -259,6 +259,10 @@ def d_cos(x): return _series(x, False)
 def norm_angle(udeg):
     return int(udeg) % (360 * 1000000)
 
+def d_radians(udeg):
+    """One direct conversion from internal microdegrees; preserve signed/fractional sweeps."""
+    return dfraction(udeg) * PI / (180 * 1000000)
+
 ARITH = ("length", "angle", "area", "ratio", "count")
 NEGATABLE = ("length", "angle", "area", "ratio")
 IMPLEMENTED = {"sqrt", "hypot", "abs", "min", "max", "clamp", "round_to", "sin", "cos", "tan",
@@ -656,7 +660,7 @@ class Evaluator:
             return Val("length", self._hypot(p.v[0] - q.v[0], p.v[1] - q.v[1]))
         if name == "dir":
             p, q = vs
-            return Val("angle", norm_angle(self._deg2(q.v[1] - p.v[1], q.v[0] - p.v[0])))
+            return Val("angle", norm_angle(rnd(self._deg2(q.v[1] - p.v[1], q.v[0] - p.v[0]))))
         if name == "param_at":
             e, l = vs
             if l.v > e.v:
@@ -688,7 +692,9 @@ class Evaluator:
         if name == "hypot":
             return Val("length", self._hypot(vs[0].v, vs[1].v))
         if name in ("sin", "cos", "tan"):
-            rad = dfraction(to_true("angle", vs[0].v)) * PI / 180
+            if name == "tan" and vs[0].v % (180 * 1000000) == 90 * 1000000:
+                raise FErr("formula_domain", "tan: angle is an exact odd-quarter-turn pole")
+            rad = d_radians(vs[0].v)
             r = {"sin": d_sin, "cos": d_cos,
                  "tan": lambda z: d_sin(z) / d_cos(z)}[name](rad)
             return Val("ratio", rnd(from_true("ratio", r)))
@@ -700,7 +706,7 @@ class Evaluator:
             xb = dfraction(to_true(vs[1].kind, vs[1].v))
             return Val("angle", norm_angle(rnd(d_atan2(ya, xb) * 180 / PI * 1000000)))
         if name == "arc_length":
-            rad = dfraction(to_true("angle", vs[0].v)) * PI / 180
+            rad = d_radians(vs[0].v)
             return Val("length", rnd(rad * dfraction(to_true("length", vs[1].v))))
         raise FErr("formula_unsupported", "`%s` is declared but not implemented here" % name)
 

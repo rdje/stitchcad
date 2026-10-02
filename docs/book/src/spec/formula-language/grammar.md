@@ -203,7 +203,7 @@ construct the envelope owns is refused with the envelope's own token ([the contr
 | `max` | T, … | T | — |
 | `clamp` | T, T, T | T | low above high is `formula_domain` |
 | `round_to` | T, T | T | the nearest multiple of the second argument, ties away from zero; the step is part of the recipe, so a coarser quantum is visible in a diff |
-| `sin` `cos` `tan` | angle | ratio | — |
+| `sin` `cos` `tan` | angle | ratio | `tan` at an exact odd quarter-turn is `formula_domain` |
 | `atan` | ratio | angle | `atan2` is preferred: it resolves the quadrant |
 | `atan2` | length, length | angle | — |
 | `atan2` | ratio, ratio | angle | — |

@@ -52,8 +52,16 @@ is stored **exactly**, while π-based storage would make the commonest angles ap
 functions are evaluated in `f64` at the point of use and their results are rounded into the internal
 units (§2); an angle *value* is never stored as a float.
 
-Angles SHALL be normalized to `[0, 360 000 000)` µ° when stored on an entity, and the unnormalized form
-SHALL NOT be compared for equality without normalization.
+Direction fields on entities SHALL be normalized to `[0, 360 000 000)` µ° and compared as normalized
+directions. Formula angles and sweep fields SHALL preserve sign and complete turns; formula bindings
+round at their declared quantum without direction modulo, and equality compares their signed values.
+Thus a formula sweep of 360 degrees differs from zero even though both give the same direction.
+
+This is the director's D84 clarification. The normalized `sc-units::Angle` represents a direction;
+product formula storage/evaluation remains pending. The reference's signed inverse-trig outputs and
+binding/equality controls remain owned by G1-SLICE.5a.3b.3c; the
+[angle annex](../annexes/formula-syntax.md#reference-angle-conversion-and-direction-controls) states
+current verification boundaries.
 
 ### 1.3 Dimensional typing
 

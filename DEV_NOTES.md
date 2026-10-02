@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — angle storage units must reach the irrational call unchanged
+
+- The angle audit found a foundational scale error, not merely a missing binding modulo: to_true
+  rescales ratio only, while trig/arc_length treated internal microdegrees as degrees. Full-turn arc
+  around radius1 um returned6283185 rather than6; sin90 returned0 and cos90 returned1000000.
+  Source history 3704b8a introduced both unscaled radian paths, dir truncation and no tangent pole guard.
+- One shared direct conversion divides microdegrees by180000000 before multiplying by pi; it keeps
+  signed/multi-turn/fractional sweeps. dir rounds before normalization, agreeing with atan2. Exact
+  tangent poles use rational modulo180deg and raise formula_domain; representable neighbors remain finite.
+- Forty-two explicit rows/72 controls and an independent standard-library math oracle agree on defined
+  curated arguments. Seven actual source mutations discriminate scale, sweep, fractional precision,
+  dir rounding, pole/period/token. Decimal60 scope remains curated, not an arbitrary-input certificate.
+- The director resolved D84: signed/multi-turn formula values persist; entity direction fields
+  normalize. Specifications and the durable decision align; .3c still owns binding/equality and
+  signed inverse-trig verification. D83 rational/scalar guards continue independently.
+- Expert annex/grammar and live task pointers match the repair; prior arithmetic and history payloads
+  preserve exact text. Older task decisions/journals are retained rather than expanding live caps.
+- promotion: promoted by `decision_angles.md` (director’s storage ruling).
+
 ## _(2026-10-02)_ — exact operators must retain the sub-quantum result
 
 - D82's actual reference diagnostic returned 2 for 1 um / 2 + 1 um / 2 and zero for a tiny ratio
@@ -77,22 +96,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   canonical identity or validated recipe; .5a.3 and later static/evaluation owners remain explicit.
 - promotion: declined (routine syntax implementation; normative grammar/identity policy already ADR-0003).
 
-## _(2026-10-02)_ — original input gaps and keyword positions are grammar evidence
-
-- D76's tokenizer accepted broad word captures and inspected a three-token whitespace pattern;
-  absent whitespace escaped the check. Parse roles also admitted bare/declaration keywords and empty
-  call arguments. Shared private spelling/keyword checks and original-source gap slices repair these
-  paths. Whole-source ASCII preflight precedes capture; all general ASCII whitespace remains valid.
-- Direct controls derive all seven unit factors from the canonical table and load the actual reference,
-  rather than reimplementing parsing. Positive and negative roles, spacing, call shapes and original
-  positions are covered: 130 pass. Three real copied-book edits refuse by named grammar signature.
-- Nine actual guards disabled individually produce assertion reds and exact restoration. Structural
-  16+2 controls, language 15 probes and 20 unchanged Rust machine-name/lexer contracts stay green.
-  This is reference input-shape evidence, not complete binding/type/evaluation or product parser proof.
-- Completed structural protocol/checklist moves with exact predecessor bytes. Oldest live payloads
-  seal at health without raising caps. Expert details stay in the annex; next .5a.2b.2 owns product ASTs.
-- promotion: declined (routine reference repair; normative grammar and canonical ADR-0003 unchanged).
-
 
 # Sealed archive — earlier lessons
 
@@ -163,3 +166,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part41.md`](docs/history/stitchcad-devnotes-part41.md) | borrowed lexical source lesson | 19 lines, 1811 bytes, `sha256:92361240…` |
 
 | [`devnotes-part42.md`](docs/history/stitchcad-devnotes-part42.md) | complete argument traversal lesson | 19 lines, 1781 bytes, `sha256:f77b3cf9…` |
+
+| [`devnotes-part43.md`](docs/history/stitchcad-devnotes-part43.md) | source gaps and keyword roles | 15 lines, 1397 bytes, `sha256:3d7763a5…` |

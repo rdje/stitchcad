@@ -119,3 +119,98 @@ Lesson promotion declined for .5a.1: routine lexical mechanics; language/canonic
 | `.5a.3a` | `STITCHCAD-G1-0041 (leaf G1-SLICE.5a.3a): extreme rounding magnitudes return typed overflow` | four public/36 Fraction/five reds; strict 476/release four/WASM green |
 
 Current journal remains in the parent.
+
+## Ontology design decisions — preserved from f70edf7
+
+## Decisions
+
+- `2026-10-01`: D35/D57 settled and implemented by `.3c.2b`: physical copies have stable ids
+  (director ruling), spans address those copies, and same-copy seams are permitted only for disjoint
+  current positive-length interiors. Explicit correspondence/ease/stops remain separate from journal
+  traversal and physical reflection. `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`
+  records the contract before code; G2/G3/G4 owns geometry/realized ease/profile values.
+
+- `2026-10-01`: reviewing the reference skirt before spans reproduces D56: its separate cut-once
+  L/R members cannot be represented by `.3c.1`'s total-quantity pair mode. `.3c.1a` corrects that
+  omission before proceeding. D57's physical-copy addressing is a genuinely unspecified graph
+  contract, asked of the director; independent piece/mark work can proceed while it is pending.
+
+- `2026-10-01`: `.3c.2` has two children: full-range identity resolution (`.3c.2a`, fixing D55),
+  then the sewing graph and same-piece seam contract (`.3c.2b`, fixing D35). The range-fold decision
+  precedes implementation and preserves the distinction between coverage, endpoint resolution and
+  geometric validity. A complete interval cannot be certified by sampling, even at both endpoints.
+
+- `2026-10-01`: `.3c` is decomposed into four child leaves before implementation: pieces, sewing
+  graph, marks/allowances, garment constructions. The parent preserves its full ontology §4 scope;
+  each child is committed and verified independently. Directed loops encode cyclic ordering, not a
+  claim about endpoint closure. Printed cut quantity, pair and fold fields derive from the piece's
+  cut plan so the label cannot contradict it. Parameter states remain G4's contract; later children
+  carry parameter identities until then rather than manufacture defaults.
+
+- `2026-10-01`: `.3b`'s design boundary is recorded BEFORE the code, per the `.3` decomposition's discipline:
+  `decision_reference-resolution-journal-fold.md` — a stored reference is never rewritten, resolution is a
+  pure fold of an append-only edit journal, repair state is derived not stored, the offset contract consumes
+  declared intervals until G2 geometry supplies real ones, and undo (`.6`) becomes journal algebra. Recorded
+  so `.3c`/`.6`/`.7` inherit it rather than re-litigate.
+- `2026-09-29`: leaves are numbered in dependency order (units → ontology → measure → recipe →
+  bus → store → CSP → API/MCP → CLI → profiles → spikes), because every later leaf consumes the
+  earlier ones and a frontier that jumps is a frontier that stalls.
+- `2026-09-29`: the dev shell (`.14`) is a deliverable of G1, not G2, so the G2 viewer leaf is
+  not blocked on the hardest integration in the repository (ADR-0002's stated reason).
+- `2026-09-30`: property tests are dependency-free and hand-rolled with a recorded seed, not
+  `proptest`/`quickcheck` — recorded in
+  `docs/decisions/decision_property-tests-dependency-free-recorded-seed.md` so later crates do not
+  re-litigate it. This resolves the Open Question; the choice was made by `G0-CONTRACT.18` when
+  `sc-units`' suite landed, because that crate must stay dependency-free for `wasm-viewer`.
+- `2026-09-30`: `.3` (the ontology) is **three slices, not one** — `.3a` the identity types, `.3b` the
+  persistent-identity contract, `.3c` the geometry-bearing object types — because each is a
+  signoff-quality unit and they are strictly ordered (the contract consumes the types; the objects
+  consume both). Its three design boundaries are recorded **before any code**, so each implementation
+  slice builds against a fixed design: `decision_entity-identity-ulid-injected-generator.md`,
+  `decision_edge-parameter-bounded-exact-rational.md`,
+  `decision_ontology-invariants-structural-g1-geometric-g2.md`.
+
+
+## Reference progress journals — preserved from f70edf7
+
+## Verification Log
+
+[Completed verification and commit journal](G1-SLICE-journal.md) retains exact 60c7305 bytes.
+Current slice verification follows here; [formula journals](G1-SLICE-journal.md#formula-journals--preserved-from-543dfa6) preserve earlier rows.
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.2` | exact 24/100/162; nine reds; restored reference/language/book; recording | D82 fixed; D83 domains/angles owned next |
+| `2026-10-02` | `.5a.3b.1` | literal 60/360; six actual reds; structural/input/language/book; recording | literal input now canonical; D79/D80/D81 fixed; D82/D83 owned next |
+## Commit Log
+
+Older journals remain linked above.
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.2` | `STITCHCAD-G1-0043 (leaf G1-SLICE.5a.3b.2): exact reference arithmetic retains sub-quantum results` | 24/100/162/nine reds; scoped recording checks |
+| `.5a.3b.1` | `STITCHCAD-G1-0042 (leaf G1-SLICE.5a.3b.1): reference literals preserve canonical integer identity` | literal 60/360/six reds; scoped publication/recording checks |
+## Changelog
+
+
+- `2026-10-02`: D75 complete call-argument traversal/depth refusal and D77 fragment ownership are
+  fixed with real regression controls; no cap changed. D76 input parity is owned next before expression
+  trees. Reference parser remains a book instrument.
+- promotion: declined (routine instrument repair; language limits and canonical ADR-0003 unchanged).
+
+- `2026-10-02`: D76 reference machine input repaired/verified; .2b.2 product AST follows.
+- promotion: declined (routine reference repair; normative grammar and canonical ADR-0003 unchanged).
+
+- `2026-10-02`: .5a.2 product syntax closes with independent shape/bound evidence; .5a.3 follows.
+- promotion: declined (routine syntax implementation; normative grammar/identity policy already ADR-0003).
+
+- `2026-10-02`: D78 rounding totality closes; D79 reference literal identity is owned next.
+- promotion: declined (routine totality repair; original fixed-point/rounding policy unchanged).
+
+- `2026-10-02`: .3b has committed subleaves for literal identity, exact arithmetic and numeric/angle
+  domains; D79/D80/D81 close in .3b.1, D82/D83 are owned next before production normalization.
+- promotion: declined (routine reference repair; literal conversion/canonical identity policy unchanged).
+
+- `2026-10-02`: D82 exact reference operators close in .3b.2; D83 domains/stored angles remain next.
+- promotion: declined (routine reference repair; exact arithmetic and rounding policy unchanged).
+Current progress remains in the parent.

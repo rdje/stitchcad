@@ -59,13 +59,19 @@ needs for geometry and conditions.
 | Kind | Internal form | Holds | Bindable by `let` |
 | --- | --- | --- | --- |
 | `length` | i64 micrometres | a distance, a coordinate, an allowance width | yes |
-| `angle` | i64 microdegrees, normalized | a direction, a sweep, a grain deviation | yes |
+| `angle` | signed i64 microdegrees, turns preserved | a direction, a sweep, a grain deviation | yes |
 | `area` | i64 square micrometres | a derived product of two lengths, never an input | yes |
 | `ratio` | i64 parts per 10⁶ | a scale factor, a shrinkage, an edge parameter | yes |
 | `count` | i64, never negative | pieces, darts, plies, a size ordinal | yes |
 | `boolean` | one of two values | the result of a comparison | yes |
 | `point` | a `PointRef` | a point an operation constructed | no |
 | `edge` | an `EdgeRef` | an edge an operation constructed | no |
+
+Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.
+For example, bound 360 degrees differs from zero and retains a full-turn sweep. Direction fields on
+entities normalize under [units §1.2](units-and-tolerances.md#12-angles-fixed-point-microdegrees).
+The [expert angle annex](../annexes/formula-syntax.md#reference-angle-conversion-and-direction-controls)
+records the D84 ruling and remaining verification; product syntax supplies no numeric binding yet.
 
 A `point` and an `edge` are values but not numbers: they may be arguments of the geometry selectors
 ([grammar §6.1](formula-language/grammar.md)) and nothing else, because only a drafting operation

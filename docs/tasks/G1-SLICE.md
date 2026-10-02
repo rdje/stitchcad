@@ -635,28 +635,80 @@ Completed reference input contract .5a.2b.1 is preserved in
 
 - ID: `G1-SLICE.5a.3b.2`
   Status: `done`
-  Goal: repair reproduced D82 exact reference arithmetic against formula contract 4.2 before oracle use.
-  Pre-code protocol: complete formula contract/grammar/ADR exact + - * /, square and rational selector;
-  canonical integer inputs (.3b.1) precede expression arithmetic. Current actual diagnostic returns
-  2 for 1 um / 2 + 1 um / 2, and zero for ratio 0.000001 squared. evaluate square/product/quotient
-  and param_at explicitly call rnd before binding. Remove only these premature rounding steps and
-  return exact reduced Fraction in result-kind internal units. Keep +/-, comparisons, lazy branches,
-  dimension signatures, direct ratio scaling, zero division, explicit round_to quantization and
-  irrational nearest-quantum results. Binding rounding remains census L2; no product evaluator/API.
-  Own explicit exact result fixtures, independent Fraction parameter controls/reassociation/binding
-  tie proof, read-only selector model controls, lazy/nonzero/irrational/round_to controls and actual
-  arithmetic guard mutation/restoration. Do not invent arbitrary curve geometry for reference edges.
-  Rational/domain/binding enforcement D83 stays next .3b.3. Clarify explicit round_to vs implicit
-  arithmetic rounding in the book without adding/removing any declared language operation.
-  Run restored structural/input/literal/language/publication/recording checks and stage doctrine gate;
-  preserve prior exact protocol/evidence and oldest live ledgers at health before growth.
-  Verification: 24 rows/100 independent Fraction cases/162 controls, nine actual reds/exact restore; focused checks green.
-  Commit: `STITCHCAD-G1-0043` (this recording commit).
+  Contract/checklist: [preserved arithmetic evidence](G1-SLICE-formulas.md#exact-arithmetic-contract-and-evidence--preserved-from-f70edf7).
+  Verification: 24 rows/100 Fraction cases/162 controls/nine actual reds; focused gates green.
+  Commit: `STITCHCAD-G1-0043`.
 
 - ID: `G1-SLICE.5a.3b.3`
+  Status: `in_progress`
+  Goal: repair D83 numeric domains and resolve D84 angle contract before product normalization.
+  Children: .3b.3a exact rational bit limit; .3b.3b scalar domains/storage bounds; .3b.3c signed-angle contract verification.
+  .3a is independent of binding/direction semantics; D84 now preserves formula sign/turns.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3b.3a`
+  Status: `in_progress`
+  Goal: trustworthy reference angle conversions then rational-value bounds before scalar repair.
+  Children: .3a.1 D85/D86/D87 angle conversion/rounding/pole guards; .3a.2 D83 rational bit limit.
+  The diagnostic exposed wrong degree scaling, so fix that before trusting angle audit/width controls.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3b.3a.1`
+  Status: `done`
+  Goal: repair D85 direction truncation, D86 microdegree/radian scaling and D87 exact tan pole refusal.
+  Pre-code protocol: units 1.2/formula 4.2 and grammar 6/6.1 require microdegree inputs, nearest internal
+  quantum for irrational results, normalized dir, and typed refusal outside a mathematical domain.
+  Actual diagnostic: arc_length(360 deg,1 um) → 6283185, not rounded6; dir((0,0),(1,6)) → 80537677,
+  nearest80537678. Trig source treats to_true(angle) as degrees though it returns microdegrees; dir
+  normalizes int(Decimal) without rnd. tan odd-quarter turns are undefined, independent of rounding.
+  Shared exact microdegree-to-radian helper divides by 180*1000000 before applying pi; no change to
+  arithmetic internal units or modulo sweep. Round dir before normalization; refuse exact rational
+  tan poles using microdegree modulo180deg, with formula_domain quantity/operation context.
+  Own independently expected quarter/half/full/signed/multi-turn and fractional angle controls,
+  Decimal precision/model scope, dir/atan2 agreement, preserved arithmetic/literal contracts and actual
+  guard mutations/exact restoration. Clarify tan domain in grammar, details only in expert annex.
+  D84 director ruling preserves formula sign/turns; .3c owns verification. D83 width/domains stay pending.
+  Verify focused reference/language/book/recording/doctrines; commit before rational-bound repair.
+  Verification: 42 rows/72 controls, independent math42, seven actual reds/exact restore; focused gates green.
+  Commit: `STITCHCAD-G1-0044` (this recording commit).
+
+- ID: `G1-SLICE.5a.3b.3a.2`
   Status: `pending`
-  Goal: diagnose/repair reproduced D83 literal/binding domains, rational limits and stored-angle normalization against units
-  and complete formula/geometry contracts; resolve any genuine contract conflict before dependent work.
+  Goal: D83 exact rational limit refusal at actual literal/value boundaries, before product oracle use.
+  Pre-code protocol: contract 4.2/4.3/5.2 max_rational_bits=128 on reduced exact numerator/denominator;
+  see currently only measures and L8 only reddens book census after evaluation. Introduce measured
+  typed formula_domain on the first value wider than128, with unchanged bound and named operation.
+  Test 127/128/129 bit numerators/denominators, reduced fractions, converted input before quantum
+  rounding, positive/negative values, zero and trailing-zero spellings. Preserve .3b.1 input rounding
+  after exact conversion; a long sub-quantum literal must not hide an oversized converted fraction.
+  Actual evaluation checks result-kind internal Fractions at every completed numeric node, including
+  literals/names/unary/+/-/square/products/quotients/selectors; only taken branches compute values.
+  Do not bound unreduced raw products or intermediate representation temporaries: the declared value
+  is the reduced rational. Literal normalization checks converted exact value before its input round;
+  static node/depth/statement bounds are distinct from runtime rational width on computed values.
+  Own actual reference diagnostic/contracts/guard mutations/restoration, including angle contract
+  observations under the recorded D84 ruling without changing angle semantics; fix the earlier 100-zero
+  literal control to demand width refusal and keep a separate reducible long-zero positive control.
+  No scalar-domain or complete angle implementation is claimed; .3b/.3c own those prerequisites next.
+  Verify focused reference/language/book/ledger/archive/censuses and doctrine; preserve completed text.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3b.3b`
+  Status: `pending`
+  Goal: D83 declared length/area/count domains and canonical/binding i64 bounds with typed operations;
+  finalize boundary checks from complete contracts, not a caller narrowing precondition. D84 signed-angle
+  verification remains separate; scalar repair can proceed under the recorded ruling.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3b.3c`
+  Status: `pending`
+  Goal: apply D84 director ruling: preserve signed/multi-turn formula values, normalize entity directions.
+  Verify binding/equality and signed inverse-trig contracts with full/signed/multi-turn examples;
+  reference atan/atan2 still normalize outputs. Decision: `decision_angles.md`.
   Verification: `pending`
   Commit: `pending`
 
@@ -863,7 +915,8 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3a` | `done` | D78 extreme public rounding fixed with actual boundary proof |
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
-| next | `G1-SLICE.5a.3b.3` | `pending` | D83 numeric-domain and stored-angle audit before product proof |
+| done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
+| next | `G1-SLICE.5a.3b.3a.2` | `pending` | D83 rational bounds; D84 implementation verification remains owned |
 
 ## Routing Evidence — D72, milestone fixture calibration
 
@@ -884,51 +937,10 @@ SPINE.22 owns the project-slot adapter. Current metadata/token questions are exp
 
 ## Decisions
 
-- `2026-10-01`: D35/D57 settled and implemented by `.3c.2b`: physical copies have stable ids
-  (director ruling), spans address those copies, and same-copy seams are permitted only for disjoint
-  current positive-length interiors. Explicit correspondence/ease/stops remain separate from journal
-  traversal and physical reflection. `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`
-  records the contract before code; G2/G3/G4 owns geometry/realized ease/profile values.
-
-- `2026-10-01`: reviewing the reference skirt before spans reproduces D56: its separate cut-once
-  L/R members cannot be represented by `.3c.1`'s total-quantity pair mode. `.3c.1a` corrects that
-  omission before proceeding. D57's physical-copy addressing is a genuinely unspecified graph
-  contract, asked of the director; independent piece/mark work can proceed while it is pending.
-
-- `2026-10-01`: `.3c.2` has two children: full-range identity resolution (`.3c.2a`, fixing D55),
-  then the sewing graph and same-piece seam contract (`.3c.2b`, fixing D35). The range-fold decision
-  precedes implementation and preserves the distinction between coverage, endpoint resolution and
-  geometric validity. A complete interval cannot be certified by sampling, even at both endpoints.
-
-- `2026-10-01`: `.3c` is decomposed into four child leaves before implementation: pieces, sewing
-  graph, marks/allowances, garment constructions. The parent preserves its full ontology §4 scope;
-  each child is committed and verified independently. Directed loops encode cyclic ordering, not a
-  claim about endpoint closure. Printed cut quantity, pair and fold fields derive from the piece's
-  cut plan so the label cannot contradict it. Parameter states remain G4's contract; later children
-  carry parameter identities until then rather than manufacture defaults.
-
-- `2026-10-01`: `.3b`'s design boundary is recorded BEFORE the code, per the `.3` decomposition's discipline:
-  `decision_reference-resolution-journal-fold.md` — a stored reference is never rewritten, resolution is a
-  pure fold of an append-only edit journal, repair state is derived not stored, the offset contract consumes
-  declared intervals until G2 geometry supplies real ones, and undo (`.6`) becomes journal algebra. Recorded
-  so `.3c`/`.6`/`.7` inherit it rather than re-litigate.
-- `2026-09-29`: leaves are numbered in dependency order (units → ontology → measure → recipe →
-  bus → store → CSP → API/MCP → CLI → profiles → spikes), because every later leaf consumes the
-  earlier ones and a frontier that jumps is a frontier that stalls.
-- `2026-09-29`: the dev shell (`.14`) is a deliverable of G1, not G2, so the G2 viewer leaf is
-  not blocked on the hardest integration in the repository (ADR-0002's stated reason).
-- `2026-09-30`: property tests are dependency-free and hand-rolled with a recorded seed, not
-  `proptest`/`quickcheck` — recorded in
-  `docs/decisions/decision_property-tests-dependency-free-recorded-seed.md` so later crates do not
-  re-litigate it. This resolves the Open Question; the choice was made by `G0-CONTRACT.18` when
-  `sc-units`' suite landed, because that crate must stay dependency-free for `wasm-viewer`.
-- `2026-09-30`: `.3` (the ontology) is **three slices, not one** — `.3a` the identity types, `.3b` the
-  persistent-identity contract, `.3c` the geometry-bearing object types — because each is a
-  signoff-quality unit and they are strictly ordered (the contract consumes the types; the objects
-  consume both). Its three design boundaries are recorded **before any code**, so each implementation
-  slice builds against a fixed design: `decision_entity-identity-ulid-injected-generator.md`,
-  `decision_edge-parameter-bounded-exact-rational.md`,
-  `decision_ontology-invariants-structural-g1-geometric-g2.md`.
+[Historical design boundaries](G1-SLICE-journal.md#ontology-design-decisions--preserved-from-f70edf7)
+retain exact committed notes and their canonical decision links. D84 director ruling preserves signed/
+multi-turn formula values and normalizes entity directions; [decision](../decisions/decision_angles.md).
+.5a.3b.3c owns verification. D70 SizeSet axes remains pending under .4c.2.
 
 ## Open Questions
 
@@ -937,7 +949,8 @@ SPINE.22 owns the project-slot adapter. Current metadata/token questions are exp
 
 ## Blockers
 
-- None intrinsic. Entry depends on `G0-CONTRACT` and `SPINE.8`.
+- D70 awaits director decision for complete SizeSet under .4c.2. D84 ruling is received;
+  .5a.3b.3c owns binding/equality/inverse-trig verification, with independent rational/scalar work next.
 
 ## Acceptance Checklist
 
@@ -963,68 +976,51 @@ Completed rounding checklist is preserved in
 Completed literal identity checklist is preserved in
 [G1-SLICE-formulas](G1-SLICE-formulas.md#literal-identity-contract-and-evidence--preserved-from-6f26ca3).
 
-### `G1-SLICE.5a.3b.2` — exact reference arithmetic
+Completed exact arithmetic checklist is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#exact-arithmetic-contract-and-evidence--preserved-from-f70edf7).
 
-- [x] **REPRODUCE / ISSUE** — actual literal_diagnostic.py at 6f26ca3 → division sum 2 instead of 1;
-  tiny ratio square zero instead of 1/1000000, rc=0 observations. Corrected arithmetic_contract.py
-  against committed predecessor → exact-result assertion failure on 1 um / 2, rc=1; candidate restored.
-- [x] **ROOT CAUSE (WHY + WHERE)** — git show 3704b8a reference source → square/product/quotient/
-  param_at explicitly rnd before binding; actual diagnostic/exact Fraction controls disagree with
-  formula 4.2/ADR-0003, rc=0 observation. Earlier input/walker/literal repairs retain those paths.
-- [x] **FIX** — preserve result-kind exact Fraction through square/product/quotient/selector; keep
-  canonical integer input, explicit round_to/irrational rounding and census L2 binding quantization.
-  No dimension/branch/zero-divisor/scale/geometry contract change; D83 remains owned next.
-- [x] **ADDRESSED (verified)** — arithmetic_contract.py → 24 rows/100 independent Fraction cases/
-  162 controls/0 fail, rc=0. run_arithmetic_mutations.sh → nine actual assertion reds/rc=1 each,
-  exact source restoration, runner rc=0. Predecessor/candidate round trip confirms real regression.
-- [x] **NO REGRESSION** — structural suite → structural 16+2/input 130+3/expression twelve/Fraction
-  36/literal 60+360/arithmetic 24+100+162 pass, rc=0; language 15/publication nine green, rc=0.
-  Warning-free book: 48 chapters/16 APIs, 995 source/1517 rendered links, rc=0. Ledger nine/archive verify/retention pass, rc=0;
-  106 records/261782 resident bytes. Tree 10/13/eight/zero gaps, glossary 310/nine/158, feature 105/29,
-  uncertainty 133/16/zero unowned, fixture 20/four/five/zero mismatch, rc=0. Predecessor payload/
-  checklist and 11/71 defect census verified. Staged `make gate` → all doctrines green, rc=0.
-  No Rust changed; strict native/release/WASM evidence remains .3a, no new runtime/remote-CI claim.
-- [x] **LOCKSTEP** — exact/operator vs explicit quantization boundaries described in contract and
-  annex; learner/glossary/index routes retained. Prior literal evidence/oldest ledgers preserve
-  committed bytes. Live 11 open/71 sealed, G1 5/18, next .3b.3; D70 pending.
+### `G1-SLICE.5a.3b.3a.1` — reference angular conversion and domain guards
+
+- [x] **REPRODUCE / ISSUE** — literal_diagnostic.py → full-turn radius1 arc6283185, sin90=0,
+  cos90=1000000, dir80537677 vs nearest80537678, tan90/-90/270=0, rc=0 observations. New angle
+  contract → sin30 result assertion failure, rc=1. D84 storage conflict is logged/asked, not inferred.
+- [x] **ROOT CAUSE (WHY + WHERE)** — git show 3704b8a → two pi/180 paths over internal microdegrees,
+  to_true only rescales ratio; dir passes Decimal to norm_angle's int truncation, no tangent pole guard;
+  source signatures verified, rc=0. Direct post-fix sweep vs normalized-binding model →6 vs0 proves D84.
+- [x] **FIX** — shared direct microdegree/radian conversion preserves sign/turn/fraction; round dir
+  before normalization; exact rational odd-quarter pole guard uses stable formula_domain. No binding
+  modulo choice, new product API, geometry solver or changed scalar/rational cap.
+- [x] **ADDRESSED (verified)** — angle_contract.py →42 rows/72 controls/0 fail, rc=0; independent
+  angle_math_oracle.py →42 defined curated rows agree, rc=0. run_angle_mutations.sh →seven actual
+  assertion reds/rc=1 each, exact restoration, runner rc=0. Diagnostic now returns6/1000000/0/
+  80537678 and typed poles, rc=0. D85/D86/D87 seal unchanged; D84 verification/D83 guards remain owned.
+- [x] **NO REGRESSION** — restored structural/input/literal/arithmetic/angle controls green, rc=0;
+  language15/publication9 pass, rc=0; warning-free book48 chapters/16 APIs,998 source/1521 rendered
+  links. Ledger9/archive verify/retention pass, rc=0;109 records/267226 resident
+  bytes. Tree10/13/eight/zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16/zero
+  unowned, fixture20/four/five/zero mismatch pass, rc=0. Exact predecessor preservation and12/74
+  defect census verified; independent math42 agrees. Staged make gate after bounded ruling records: all doctrines green, rc=0. No Rust changed; no new native/WASM/remote-CI verdict implied.
+- [x] **LOCKSTEP** — tan domain/annex/director angle ruling and live pointers match; learner,
+  glossary/index routes unchanged. Exact predecessor arithmetic/decisions/journals/oldest payloads
+  retained without cap growth. Live12 open/74 sealed, G1 5/18; next.3a.2, D84 verification/D70 ruling pending.
 
 ## Verification Log
 
-[Completed verification and commit journal](G1-SLICE-journal.md) retains exact 60c7305 bytes.
-Current slice verification follows here; [formula journals](G1-SLICE-journal.md#formula-journals--preserved-from-543dfa6) preserve earlier rows.
+[Historical reference journals](G1-SLICE-journal.md#reference-progress-journals--preserved-from-f70edf7)
+preserve completed rows and technical chronology. Current slice follows here.
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
-| `2026-10-02` | `.5a.3b.2` | exact 24/100/162; nine reds; restored reference/language/book; recording | D82 fixed; D83 domains/angles owned next |
-| `2026-10-02` | `.5a.3b.1` | literal 60/360; six actual reds; structural/input/language/book; recording | literal input now canonical; D79/D80/D81 fixed; D82/D83 owned next |
-## Commit Log
+| `2026-10-02` | `.5a.3b.3a.1` | angular42/72; math42; seven reds; restored focused/recording checks | D85/D86/D87 fixed, D84 ruling received; rational/scalar guards next |
 
-Older journals remain linked above.
+## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3b.2` | `STITCHCAD-G1-0043 (leaf G1-SLICE.5a.3b.2): exact reference arithmetic retains sub-quantum results` | 24/100/162/nine reds; scoped recording checks |
-| `.5a.3b.1` | `STITCHCAD-G1-0042 (leaf G1-SLICE.5a.3b.1): reference literals preserve canonical integer identity` | literal 60/360/six reds; scoped publication/recording checks |
+| `.5a.3b.3a.1` | `STITCHCAD-G1-0044 (leaf G1-SLICE.5a.3b.3a.1): reference angular conversion and domain guards agree` | 42/72/math42/seven actual reds; scoped focused checks |
+
 ## Changelog
 
-
-- `2026-10-02`: D75 complete call-argument traversal/depth refusal and D77 fragment ownership are
-  fixed with real regression controls; no cap changed. D76 input parity is owned next before expression
-  trees. Reference parser remains a book instrument.
-- promotion: declined (routine instrument repair; language limits and canonical ADR-0003 unchanged).
-
-- `2026-10-02`: D76 reference machine input repaired/verified; .2b.2 product AST follows.
-- promotion: declined (routine reference repair; normative grammar and canonical ADR-0003 unchanged).
-
-- `2026-10-02`: .5a.2 product syntax closes with independent shape/bound evidence; .5a.3 follows.
-- promotion: declined (routine syntax implementation; normative grammar/identity policy already ADR-0003).
-
-- `2026-10-02`: D78 rounding totality closes; D79 reference literal identity is owned next.
-- promotion: declined (routine totality repair; original fixed-point/rounding policy unchanged).
-
-- `2026-10-02`: .3b has committed subleaves for literal identity, exact arithmetic and numeric/angle
-  domains; D79/D80/D81 close in .3b.1, D82/D83 are owned next before production normalization.
-- promotion: declined (routine reference repair; literal conversion/canonical identity policy unchanged).
-
-- `2026-10-02`: D82 exact reference operators close in .3b.2; D83 domains/stored angles remain next.
-- promotion: declined (routine reference repair; exact arithmetic and rounding policy unchanged).
+- `2026-10-02`: angle diagnostic exposes D84 contract distinction and D85/D86/D87 numeric defects.
+  Numeric guards close in .3a.1 before rational limits .3a.2; D84 ruling received, verification owned.
+- promotion: promoted by `decision_angles.md` (director’s storage ruling).

@@ -62,6 +62,7 @@ Paths, entry points and owners.
 - [`decision_adr-0002-ui-stack-and-canvas-spike-protocol.md`](docs/decisions/decision_adr-0002-ui-stack-and-canvas-spike-protocol.md)
 - [`decision_adr-0003-construction-recipe-and-formula-language.md`](docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md)
 - [`decision_adr-0004-interchange-dialects.md`](docs/decisions/decision_adr-0004-interchange-dialects.md)
+- [`decision_angles.md`](docs/decisions/decision_angles.md)
 - [`decision_book-progression.md`](docs/decisions/decision_book-progression.md)
 - [`decision_command-layer-contract-and-undo-granularity.md`](docs/decisions/decision_command-layer-contract-and-undo-granularity.md)
 - [`decision_d32-proving-gates-proposed-roadmap-amendment.md`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)

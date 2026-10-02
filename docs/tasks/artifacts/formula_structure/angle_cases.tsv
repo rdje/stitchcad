@@ -1,0 +1,43 @@
+# source	kind	internal integer
+sin(0 deg)	ratio	0
+cos(0 deg)	ratio	1000000
+tan(0 deg)	ratio	0
+sin(30 deg)	ratio	500000
+cos(60 deg)	ratio	500000
+tan(45 deg)	ratio	1000000
+sin(90 deg)	ratio	1000000
+cos(90 deg)	ratio	0
+sin(180 deg)	ratio	0
+cos(180 deg)	ratio	-1000000
+sin(270 deg)	ratio	-1000000
+cos(270 deg)	ratio	0
+sin(360 deg)	ratio	0
+cos(360 deg)	ratio	1000000
+sin(-30 deg)	ratio	-500000
+cos(-60 deg)	ratio	500000
+tan(-45 deg)	ratio	-1000000
+tan(135 deg)	ratio	-1000000
+tan(225 deg)	ratio	1000000
+tan(315 deg)	ratio	-1000000
+tan(405 deg)	ratio	1000000
+sin(450 deg)	ratio	1000000
+cos(450 deg)	ratio	0
+sin(-450 deg)	ratio	-1000000
+cos(-450 deg)	ratio	0
+arc_length(360 deg, 1 um)	length	6
+arc_length(180 deg, 1 um)	length	3
+arc_length(90 deg, 1 um)	length	2
+arc_length(-90 deg, 1 um)	length	-2
+arc_length(720 deg, 1 um)	length	13
+arc_length(0 deg, 1 um)	length	0
+arc_length(360 deg, 1 mm)	length	6283
+arc_length(90 deg, 1 mm)	length	1571
+arc_length(1 deg / 2, 1 mm)	length	9
+arc_length(0.000001 deg / 2, 1000 m)	length	9
+atan(1.0)	angle	45000000
+atan(-1.0)	angle	315000000
+atan2(1 um, 6 um)	angle	9462322
+atan2(6 um, 1 um)	angle	80537678
+atan2(-1 um, 6 um)	angle	350537678
+atan2(1 um, -6 um)	angle	170537678
+atan2(-1 um, -6 um)	angle	189462322

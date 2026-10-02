@@ -78,6 +78,23 @@ the digests afterwards.
 
 | [`changelog-part39.md`](docs/history/stitchcad-changelog-part39.md) | STITCHCAD-G1-0023 | 15 lines, 1292 bytes, `sha256:b06df32f…` |
 
+| [`changelog-part40.md`](docs/history/stitchcad-changelog-part40.md) | STITCHCAD-SPINE-0021a | 9 lines, 799 bytes, `sha256:156e9198…` |
+
+## STITCHCAD-G1-0044 - reference angular conversion and guards agree (leaf `G1-SLICE.5a.3b.3a.1`)
+
+D85/D86/D87 close: microdegrees convert directly to radians at the correct scale, dir rounds before
+normalization, and exact odd-quarter tangent poles raise formula_domain. Signed/multi-turn/fractional
+sweeps remain intact. Forty-two explicit rows/72 controls agree with an independent standard-library
+math oracle on defined curated arguments; seven actual conversion/precision/direction/pole mutations
+require assertion reds and exact restoration. Restored structural/input/literal/arithmetic/angle,
+language 15/publication nine and recording checks pass. The diagnostic now reports full-turn radius1
+arc length6, sin90 ratio1000000, dir80537678 and typed tangent pole refusal.
+Normative tan domain and expert annex align; no complete transcendental/production/geometry proof
+is claimed. The director resolves D84: formula angles retain sign/turns; entity directions normalize.
+The decision and specifications align; D84 binding/equality/inverse-trig proof stays owned by .3c.
+D83 rational/scalar repairs continue independently. Prior arithmetic/history payloads preserve predecessor
+bytes. G1 remains 5/18; defects 12 open/74 sealed; next .5a.3b.3a.2 rational bounds, D70 also pending.
+
 ## STITCHCAD-G1-0043 - exact reference arithmetic retains sub-quantum results (leaf `G1-SLICE.5a.3b.2`)
 
 D82 closes: square/product/quotient and the length-only rational selector return exact reduced
@@ -368,13 +385,3 @@ D64 corrects stale ontology coverage, sealed in defects-part10. Completed constr
 checklists partition unchanged; two oldest lessons seal unchanged in devnotes-part23. G1 remains
 5/18, next .4a.2 measurement metadata. D65 owns retention at 61/64 archive files before the limit blocks
 required seals; the product frontier stays active until that trigger.
-
-## STITCHCAD-SPINE-0021a - recurring artifact cleanup preserves the product frontier (leaf `SPINE.21a`)
-
-Before the next product slice crosses the 24-hour mark, removed six ignored scratch/incremental/book
-roots and 255 safe stray artifacts. Target went 663084 → 328736 KB; book removal adds 4832 KB,
-for 339180 KB reclaimed. Independent residue census found zero remaining artifacts and no tracked
-deletion; release/deps bin/log scans were zero. Shared stores, other repositories and built dependency
-outputs remain untouched. Strict Rust's 287 tests, WASM, book, all 22 probe suites and staged gates
-pass after regeneration. Prior cleanup checklist moves unchanged, and oldest changelog entry seals
-to part23. Latest-run record and bounded book upkeep align; G1 .4 remains the product frontier.
