@@ -250,13 +250,14 @@ Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py
 docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
 
 Static signature oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations`
-checks closed kind/function matrices with value access trapped; the structural runner watches it.
+checks closed kind/function matrices; value access trapped, watched.
 
 Static namespace/header oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations`
-checks1139 metadata-only cases/thirteen actual guard reds; the existing structural runner watches it.
+checks1139 metadata-only cases/thirteen actual guard reds; watched.
 Whole static recipe/consumer oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations`
-checks196 cases, replay/measurement controls and actual guard reds; watched by the structural runner.
+checks196 cases/replay/measurement and actual guard reds; watched.
 Static review: `python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations`
 checks21/13 book rows, envelope precedence and observed D124 forms; no runtime/exclusion approval.
 
 Assertion diagnostics: `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`; watched by structural suite.
+Origin/context reads: `python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations`; watched.

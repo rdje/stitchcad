@@ -879,32 +879,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 
 ## Complete static review: exclusion diagnostic boundary
 
-- ID: `G1-SLICE.5b.1c.1`
-  Status: `done`
-  Goal: map static obligations and reproduce undefined excluded-construct recognition before
-  implementing product .5b.2–.4. Parent .1c owns complete review; this child owns D124 diagnosis,
-  reproducible baseline producer, concrete decision proposal and synchronized book/live records.
-  Pre-code evidence: actual static_statement with numerical/storage/geometry callbacks trapped:
-  loop(width), repeat(2,width), while(width>0 um) raise formula_unbound_name; fn/macro definition
-  shapes raise formula_parse; width^3 raises formula_unsupported; spline/solve preserve envelope
-  tokens. Declared scalar name loop is accepted. Contract6 requires unsupported loops/functions,
-  while grammar1.1 reserves only let/assert/if and grammar6 requires unknown calls unbound.
-  Protocol: compare closed populations/clauses and existing4032/1139/196 matrices in both directions;
-  independently retain these actual baseline source/token results and envelope precedence faults.
-  All21 worked static headers and13 independently authored refusal sources/outcomes are checked
-  against actual book rows, including static acceptance of runtime-only failures. D125 actual false
-  assertion returns a Boolean verdict, equal control returns True; schedule runtime repair .5e.3.
-  D126: public arc radius5m/sweep270deg fits10m square; actual reference length23561945um,
-  half-ratio-quantum distance11.7809725um; pi>3 proves>11.25um>T2. Repair grammar6.1's false
-  bbox-to-edge-length implication; add independent arithmetic counterexample, no geometry claim.
-  Do not pretend example spellings define v1 excluded syntax. Record recommended diagnostic policy
-  and alternative with compatibility effects; obtain director clarification before changing it.
-  Acceptance: pending boundary explicitly owned, producer/fault controls green, all remaining
-  static proof owners mapped, book/task/live records honest, commit completed diagnostic child.
-  Verification:67 actual static cases/four compiled guard assertion reds;21/13 book populations
-  exact, execution/value/geometry trapped. D126 independent exact chord bound and current reference
-  arithmetic control pass0. Full reference/language16/publication9 pass0; D124/D125 remain open.
-  Commit: `STITCHCAD-G1-0078`; .1c.2 awaits director ruling, parent not complete.
+[Exact completed record](G1-SLICE-canonical.md#completed-static-review-node--preserved-fromac7f0bf) is retained in the canonical sibling.
 
 - ID: `G1-SLICE.5b.1c.2`
   Status: `pending`
@@ -915,40 +890,7 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   Director diagnostic choice required; independent static review continues at .1c.1 meanwhile.
   Verification: `pending`; Commit: `pending`.
 
-### Static review receipts — `G1-SLICE.5b.1c.1`, `2026-10-02` (UTC)
-
-- Actual static_review_contract.py --mutations terminal0:67 cases,21 worked headers and13 refusal
-  sources/outcomes independently authored;6 envelope calls retain precedence over unknown operands/
-  kinds, including either conditional branch. Four actual compiled body assertion reds and unchanged
-  source. Metadata-only fixture declarations/reserved views, all execution/storage/geometry trapped.
-- Three refusal candidates statically pass and retain runtime owners; a false numeric assertion also
-  passes static checking. Separate actual runtime D125 baseline returnsFalse for1cm==2cm, True for
-  equal-value control, exit0; .5e.3 owns named diagnostic repair with D121. No runtime approval.
-- D124 scope census: read full canonical contract2/3/5/6/9 and grammar1/5/6/7; three keywords
-  let/assert/if, unknown-call rule and excluded rows. Actual loop/repeat/while calls unbound, fn/macro
-  definition shapes parse, scalar loop accepted, ^3 unsupported. No recognized excluded source forms
-  declared there. This gap concerns normative source recognition, not a claim about all repositories.
-  ADR-0003 concrete proposal preserves existing grammar; alternative requires exact forms/name effects.
-  Director clarification requested; parent .1c and production exclusion dispatch remain unapproved.
-- D126 root/public contracts: units1.1 permits10m square; units4 permits270deg/radius5m arc.
-  Actual reference length23561945um, independent chord11.780972451um, exact3<pi<22/7 and
-  sine lower inequality prove chord>10um. Correct false bbox-to-length implication in grammar6.1;
-  counterexample watched by structural runner. Pure arithmetic proof, no product geometry execution.
-  ROUTING EVIDENCE: curve/box/T2 facts come from separate units contracts; independent exact
-  primitive-arc inequality reproduces without the formula evaluator. Actual selector integration/
-  combined error budget stays .5f.3/G2, with acceptance explicitly added to .5f.3; no fabricated case.
-- Current language16/publication9 terminal0;53chapters/25scoped APIs/1112source/1721rendered links,
-  warning-free book. Full reference runner terminal0 includes4032/1139/196 prior matrices and review67;
-  focused final producer also earns D126 arithmetic controls. Rust source/test bytes unchanged.
-- Complete static obligation table and public-input implementation sequence .5b.2–.4 recorded in
-  existing annex. Storage/bus owners checked against actual .7/.6 nodes, not guessed .9/.5f paths.
-  Original D126 report retained in part46; D124 recognition and D125 runtime errors remain owned.
-- Final ledger9/pointer13 and staged gate13 doctrine checks terminal0. Initial gate caught334B G1
-  live-row width; first shortening targeted the wrong row, corrected actual row without raising320B
-  ceiling. Retention202logical/16workingMarkdown/9731decodedlines/737344decodedB/325858residentB;
-  independent14open/111unique sealed/overlap0. Tree10lanes/13trees/10siblings/0unowned-orphan-deadlinks.
-  Old G1-0061 ledger1091B/CI lesson625B independently match Git predecessor slices. No Rust diff;
-  map100lines/8181B, diff check0. D124 choice remains pending; no implementation change while awaiting it.
+[Exact completed record](G1-SLICE-canonical.md#completed-static-review-receipts--preserved-fromac7f0bf) is retained in the canonical sibling.
 
 ### Assertion repair receipts — `G1-SLICE.5e.3a`, `2026-10-02` (UTC)
 
@@ -975,9 +917,74 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 ## Missing-value routing
 
 - ID: `G1-SLICE.5e.1a`
-  Status: `pending`
+  Status: `done`
   Goal: independently repair D122 reference missing-value diagnostic routing across nine origins
   and reserved size/tolerance contexts before product .5e.1 adapter proof.
   Acceptance: canonical origin-specific tokens/arguments, populated values unchanged, malformed
   metadata refused, actual fault controls and book/runtime replay remain honest; D124 untouched.
+  Pre-code contract: formula3/3.1/5.1/5.2, grammar7/7.1, namespace metadata-only interfaces and
+  existing geometry/lazy/replay boundaries reviewed. Actual baseline size_index -> tolerance-unbound,
+  missing geometry/tolerance -> unknown, and supplied eps_fmt25 still refused because always=False.
+  Related D127: missing kind/origin/state and unhashable origin leak KeyError/TypeError; own/fix here.
+  Scope: origin-specific missing-value routing, explicit reserved context values independent of
+  always-available metadata, named malformed declaration/absent-fact-state refusals. Preserve populated
+  values, kind/value units, static metadata isolation, optional lazy geometry and earlier error order.
+  Reference diagnostic arguments include name/origin, actual state for unknown facts, searched
+  origin vocabulary for unbound names and explicitly supplied context label for tolerances. No
+  invented artifact policy, statement ordinal/canonical bytes or production typed diagnostic claim.
+  Independently author closed nine-origin/eight-kind/five-state missing population, four populated
+  states, reserved no-context/provided contexts, taken-only reads, lazy geometry and malformed inputs.
+  Actual in-memory predicate/payload faults must fail body assertions; full reference/language/book/
+  ledger/gate and exact task/ledger/report containment before commit. D124/D121 stay separate.
+  Verification:1466 actual cases/thirteen actual body reds/two actual copied-book consumer refusals,
+  final full reference/language/book checks rerun for D128 before commit. Commit: `STITCHCAD-G1-0080`.
+  Containment exact completed block: 27lines/2348B/SHA256 4ae12e55e188117d0bb18e9bb54ca18f363b66e08106616433d4359ad4eb529c; existing sibling, no cap/path change.
+  Containment exact completed block: 35lines/3250B/SHA256 10fcfb9c08fe35156ff789ded8c71d4952169e91d4ee68217a9ddf71ff76e061; existing sibling, no cap/path change.
+  Initial full runner correctly refused obsolete namespace fault anchors after the declaration
+  guard moved into try. Retarget spelling/origin/value-read faults at the same actual predicates
+  with valid indentation; retain all1139 expected cases and thirteen body assertion reds.
+  Documentation prerequisite: static annex338lines/23868B is near its400line/24576B health target.
+  Move runtime assertion details into a dedicated runtime annex before adding origin/context detail;
+  update SUMMARY/index/contract/cross-links, preserve current scope and verify source/rendered links.
+
+### Origin/context receipts — `G1-SLICE.5e.1a`, `2026-10-02` (UTC)
+
+- Actual origin_value_contract.py --mutations terminal0:1466 cases/thirteen actual body assertion reds,
+  actual loaded table/definitions; two copied books preflight21 then report distinct missing
+  size_index/eps_fmt runtime tokens, consumer1/producer0. Named metadata refusals replace host errors.
+- Full structural reference runner terminal0 retains signature4032/namespace1139/thirteen faults,
+  whole recipe196/review67/assertion262 and all numerical/canonical/binding families. Source stays
+  unchanged during in-memory faults. Initial full runner's stale anchor refusal was corrected;
+  an anchor or syntax error never counted as a body red. No Rust source/test/serializer diff.
+- Language16 terminal0 after book split. Origin/context arguments remain scoped: no artifact policy,
+  typed production diagnostic, guessed statement ordinal or object/entity geometry certificate.
+- Completed node27lines/2348B/SHA4ae12e55e188117d0bb18e9bb54ca18f363b66e08106616433d4359ad4eb529c
+  and receipts35lines/3250B/SHA10fcfb9c08fe35156ff789ded8c71d4952169e91d4ee68217a9ddf71ff76e061
+  match Gitac7f0bf byte-exact in canonical sibling; no new task path/map growth or cap change.
+
+- Publication9 terminal0:54chapters/25APIrows/1122source/1740rendered links, no build warnings.
+  Ledger9/pointer13/tree10lanes/13trees/10siblings/0unowned-orphan-deadlinks terminal0.
+  Materialized independent defects12open/115unique sealed/overlap0/duplicate0; old D122 report,
+  G1-0063 ledger and recognition lesson independently match Git predecessor payloads, rc=0.
+
+- D128 tools-first final state audit: actual measurement/length/value17 returns17 with unknown
+  and invalid states, baseline0. Owned here before commit: explicit invalid state and unknown+
+  populated value refuse parse before lazy work; unknown lazy geometry refuses by its origin before
+  constructing/caching data. Independently expand nine-origin/eight-kind populated-state controls,
+  valid no-state computed fixtures and trapped unknown geometry, then rerun reference/book checks.
+
+- Final D128-expanded source: full reference runner1466 cases/thirteen actual origin/state faults
+  terminal0; current language16/publication9/ledger9 and embedded pointer13 terminal0. Publication
+  remains54chapters/25APIrows/1122source/1740rendered links. Final independent defects12open/
+  115unique sealed/overlap0/duplicates0, rc=0. Unknown payload/state/lazy guards fail actual body
+  assertions when removed; valid/no-state fixtures and static metadata-only controls stay green.
+
+- Final staged doctrine registry13 checks terminal0; hook repeats final committed records.
+
+- ID: `G1-SLICE.5e.3b`
+  Status: `pending`
+  Goal: repair D121 reference irrational-result provenance through reads/bindings/operators and
+  named within/assertion tolerances before product provenance execution proof.
+  Acceptance: T1 refuses when an irrational result contributes; T2-or-looser remains admissible;
+  exact operations retain existing behavior, independent controls and actual fault reds.
   Verification: `pending`; Commit: `pending`.

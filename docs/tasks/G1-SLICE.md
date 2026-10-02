@@ -817,7 +817,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
 | pending | `G1-SLICE.5b.1c.2` | `pending` | Static obligation map reviewed; D124 excluded-form diagnostic ruling required |
 | done | `G1-SLICE.5e.3a` | `done` | D125 named reference assertion diagnostics; product execution pending |
-| next | `G1-SLICE.5e.1a` | `pending` | Independent D122 reference origin/context missing-value repair |
+| done | `G1-SLICE.5e.1a` | `done` | D122/D127/D128 reference origin/context and state/metadata refusals |
+| next | `G1-SLICE.5e.3b` | `pending` | Independent D121 reference irrational-result provenance repair |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -906,6 +907,22 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
   .1b.2 next. Old record bytes preserved; product namespace/type/graph remain .5b.2–.4.
   promotion: declined (existing flat namespace, single-assignment and independent-evidence principles).
 
+### G1-SLICE.5e.1a — D122/D127/D128 origin/context reads
+
+- [x] **TOOLS-FIRST / ROOT CAUSE** — actual missing size/geometry/tolerance baselines and supplied
+  optional eps_fmt misroute; malformed declarations leak host exceptions. Independent1466 controls
+  against actual reference diagnose origin/presence/metadata guards, producer rc=0.
+- [x] **ADDRESSED** — actual token/argument routing, supplied optional values and metadata refusals
+  verified across nine origins/eight kinds/five absent states; thirteen actual body assertion reds, rc=0.
+- [x] **NO REGRESSION** — full reference suite and namespace1139/thirteen faults/language16 pass,
+  rc=0; two actual copied-book consumers distinguish missing size/tolerance after static preflight21.
+  Lazy geometry cache/upstream failure and taken-only branch reads preserved; Rust bytes unchanged.
+- [x] **LOCKSTEP / RETENTION** — publication9/ledger9/pointer13/tree census/independent defects
+  12open/115sealed pass, rc=0;54chapters/25APIrows/1122source/1740rendered links checked.
+  Completed27/35line and ledger/lesson/report payloads retained exact; G1 remains5/18.
+  Staged doctrine/hook receipts recorded before commit; no product runtime or policy claim.
+  promotion: declined (standing origin, uncertainty and independent-evidence principles).
+
 ### G1-SLICE.5e.3a — D125 reference assertion repair
 
 - [x] **TOOLS-FIRST / ROOT CAUSE** — actual statement returnedFalse instead of formula_assertion;
@@ -959,3 +976,4 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 - `2026-10-02`: .5b.1b.2/STITCHCAD-G1-0077 repairs whole preflight/measurement D119/D123;196 cases/14 actual reds. .1b done, .1c next.
 - `2026-10-02` (UTC): .5b.1c.1/STITCHCAD-G1-0078 maps static obligations, fixes D126; D124 diagnostic ruling .1c.2, D125 runtime .5e.3.
 - `2026-10-02` (UTC): .5e.3a/STITCHCAD-G1-0079 fixes D125 reference assertions;262 cases/eight actual reds. D124 pending, D122 independent next.
+- `2026-10-02` (UTC): .5e.1a/STITCHCAD-G1-0080 fixes D122/D127/D128 reference origin/context reads;1466 cases/thirteen actual reds. Next D121; D124 pending.

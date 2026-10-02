@@ -861,15 +861,6 @@ blocks1, controlled child finishes0, restored census green0. No shared tool serv
     retain/prove through bindings/reads/operators. Does not block static name/kind checks, whose
     controls trap all numerical execution. No current reference approval of T1 provenance claimed.
 
-- **D122** — reference missing-value reads use the wrong origin/context diagnostic.
-  - Reproduce: actual size_index without context raises formula_tolerance_unbound; geometry p with
-    no value raises formula_unknown; tolerance-origin missing_tol with no value also raises
-    formula_unknown. Direct statement baselines exit0 after catching actual refusals.
-  - Root: value_of_name uses one reserved unavailable branch and one generic absent-value branch;
-    contract3 assigns unbound-name to geometry/recipe/size and tolerance-unbound to tolerance.
-  - Impact: reference numeric reads cannot prove origin-specific context/error arguments.
-  - Owner: G1-SLICE.5e.1, high priority before using the reference for product input-adapter proof;
-    test every origin/available-context distinction. Static metadata-only proof is unaffected.
 
 D116/D117/D118/D120 close at G1-SLICE.5b.1b.1; original reports are sealed in
 [`stitchcad-defects-part44.md`](../history/stitchcad-defects-part44.md). Actual namespace/header
@@ -902,3 +893,14 @@ D126 closes at G1-SLICE.5b.1c.1; original report retained in
 [`stitchcad-defects-part46.md`](../history/stitchcad-defects-part46.md). Geometry selector prose now
 uses actual curve length for parameter error; independent exact chord bound defeats the old bbox
 claim. Product combined parameter/geometry budget remains explicitly owned at .5f.3/G2.
+
+D122/D127 close at G1-SLICE.5e.1a; original reports retained in
+[`stitchcad-defects-part48.md`](../history/stitchcad-defects-part48.md). Origin/context reads retain
+correct tokens/arguments, optional values are readable, malformed metadata refuses by name.
+1466 independent controls/thirteen actual body assertion reds/two actual copied-book refusals pass0.
+D121 irrational provenance remains .5e.3; product adapters/typed diagnostic context remain pending.
+
+D128 closes at G1-SLICE.5e.1a; original report retained in
+[`stitchcad-defects-part49.md`](../history/stitchcad-defects-part49.md). Explicit populated states
+are checked; unknown-plus-value and invalid states refuse, unknown lazy geometry cannot resolve.
+Final1466 controls/thirteen actual body reds verify state guards and prior origin/context repairs.

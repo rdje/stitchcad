@@ -825,7 +825,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5e.1`
   Status: `pending`
-  D122: reference child .5e.1a in G1-SLICE-evidence.md repairs nine-origin/context diagnostics.
+  D122/D127/D128 reference child .5e.1a verified; product input adapters below remain pending.
   Goal: explicit adapters for measurement/Ease/design/profile/material/size inputs and five
   authored states, preserving canonical identity, kind, source and provenance requirements.
   Acceptance: unknown has no value, derived reads follow their dependencies, assumed/preference
@@ -845,7 +845,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5e.3`
   Status: `pending`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.
-  D121/D125: repair/verify reference provenance and false-assertion diagnostics before product proof.
+  D121 reference provenance child .5e.3b pending; D125 reference assertions .3a verified.
   Independent reference D125 repair .5e.3a is verified in G1-SLICE-evidence.md while D124 awaits ruling.
   Acceptance: all five named classes, context-supplied missing values, T2-or-looser when an
   irrational result contributes (including subsequent binding/reads), exact bare comparisons,

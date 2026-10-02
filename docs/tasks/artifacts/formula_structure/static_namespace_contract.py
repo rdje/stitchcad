@@ -162,8 +162,9 @@ def contracts(replacement=None, verbose=True):
 
 
 FAULTS = [
-    ('namespace spelling', '            self._identifier(name)\n            kind, origin', '            kind, origin'),
-    ('declaration metadata', 'or origin not in self.origins:', 'or False:'),
+    ('namespace spelling', '            self._identifier(name)\n            try:', '            try:'),
+    ('declaration metadata', 'or kind not in (*self.bindable, "point", "edge") or origin not in self.origins):',
+     'or kind not in (*self.bindable, "point", "edge") or False):'),
     ('namespace reserved rebinding', 'if name in self.reserved:\n                raise FErr("formula_rebinding", "reserved `%s` cannot be declared', 'if False:\n                raise FErr("formula_rebinding", "reserved `%s` cannot be declared'),
     ('pair collision erased', 'if name in env:\n                raise FErr("formula_ambiguous_name", "`%s` is declared by both %s and %s"', 'if False:\n                raise FErr("formula_ambiguous_name", "`%s` is declared by both %s and %s"'),
     ('let reserved rebinding', 'if name in self.reserved:\n                raise FErr("formula_rebinding", "reserved `%s` cannot be rebound', 'if False:\n                raise FErr("formula_rebinding", "reserved `%s` cannot be rebound'),
@@ -172,7 +173,7 @@ FAULTS = [
     ('let kind mismatch', 'if got != kind:', 'if False:'),
     ('assertion tolerance role', 'if tol_name not in {"eps_num", "eps_geo", "eps_fmt", "eps_imp", "eps_phys"}:', 'if tol_name not in self.reserved:'),
     ('assertion comparison omitted', 'self.infer(("cmp", "==", left, right), env)', 'self.infer(left, env)'),
-    ('value metadata read', 'kind, origin = entry["kind"], entry["origin"]', 'kind, origin = entry["kind"], entry["origin"]\n            entry.get("value")'),
+    ('value metadata read', 'kind, origin = entry["kind"], entry["origin"]', 'kind, origin = entry["kind"], entry["origin"]\n                entry.get("value")'),
     ('runtime static phase bypass', 'checked = self.static_statement(src, env)',
      'self.evaluate(self.parse("1"), env)\n        checked = self.static_statement(src, env)'),
     ('numeric execution added', '            return checked\n        if role == "assert":', '            self.evaluate(node, env)\n            return checked\n        if role == "assert":'),

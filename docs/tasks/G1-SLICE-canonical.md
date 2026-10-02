@@ -836,3 +836,72 @@ Original docs/tasks/G1-SLICE-evidence.md block: 63 lines/5643B/SHA256 6e7c34b99a
   321822residentB. Rust source/test diff0; KnowledgeMap100lines/8181B; diff check0.
 
 Current frontier remains in [G1-SLICE](G1-SLICE.md#current-frontier).
+
+## Completed static review node — preserved fromac7f0bf
+
+- ID: `G1-SLICE.5b.1c.1`
+  Status: `done`
+  Goal: map static obligations and reproduce undefined excluded-construct recognition before
+  implementing product .5b.2–.4. Parent .1c owns complete review; this child owns D124 diagnosis,
+  reproducible baseline producer, concrete decision proposal and synchronized book/live records.
+  Pre-code evidence: actual static_statement with numerical/storage/geometry callbacks trapped:
+  loop(width), repeat(2,width), while(width>0 um) raise formula_unbound_name; fn/macro definition
+  shapes raise formula_parse; width^3 raises formula_unsupported; spline/solve preserve envelope
+  tokens. Declared scalar name loop is accepted. Contract6 requires unsupported loops/functions,
+  while grammar1.1 reserves only let/assert/if and grammar6 requires unknown calls unbound.
+  Protocol: compare closed populations/clauses and existing4032/1139/196 matrices in both directions;
+  independently retain these actual baseline source/token results and envelope precedence faults.
+  All21 worked static headers and13 independently authored refusal sources/outcomes are checked
+  against actual book rows, including static acceptance of runtime-only failures. D125 actual false
+  assertion returns a Boolean verdict, equal control returns True; schedule runtime repair .5e.3.
+  D126: public arc radius5m/sweep270deg fits10m square; actual reference length23561945um,
+  half-ratio-quantum distance11.7809725um; pi>3 proves>11.25um>T2. Repair grammar6.1's false
+  bbox-to-edge-length implication; add independent arithmetic counterexample, no geometry claim.
+  Do not pretend example spellings define v1 excluded syntax. Record recommended diagnostic policy
+  and alternative with compatibility effects; obtain director clarification before changing it.
+  Acceptance: pending boundary explicitly owned, producer/fault controls green, all remaining
+  static proof owners mapped, book/task/live records honest, commit completed diagnostic child.
+  Verification:67 actual static cases/four compiled guard assertion reds;21/13 book populations
+  exact, execution/value/geometry trapped. D126 independent exact chord bound and current reference
+  arithmetic control pass0. Full reference/language16/publication9 pass0; D124/D125 remain open.
+  Commit: `STITCHCAD-G1-0078`; .1c.2 awaits director ruling, parent not complete.
+
+
+## Completed static review receipts — preserved fromac7f0bf
+
+### Static review receipts — `G1-SLICE.5b.1c.1`, `2026-10-02` (UTC)
+
+- Actual static_review_contract.py --mutations terminal0:67 cases,21 worked headers and13 refusal
+  sources/outcomes independently authored;6 envelope calls retain precedence over unknown operands/
+  kinds, including either conditional branch. Four actual compiled body assertion reds and unchanged
+  source. Metadata-only fixture declarations/reserved views, all execution/storage/geometry trapped.
+- Three refusal candidates statically pass and retain runtime owners; a false numeric assertion also
+  passes static checking. Separate actual runtime D125 baseline returnsFalse for1cm==2cm, True for
+  equal-value control, exit0; .5e.3 owns named diagnostic repair with D121. No runtime approval.
+- D124 scope census: read full canonical contract2/3/5/6/9 and grammar1/5/6/7; three keywords
+  let/assert/if, unknown-call rule and excluded rows. Actual loop/repeat/while calls unbound, fn/macro
+  definition shapes parse, scalar loop accepted, ^3 unsupported. No recognized excluded source forms
+  declared there. This gap concerns normative source recognition, not a claim about all repositories.
+  ADR-0003 concrete proposal preserves existing grammar; alternative requires exact forms/name effects.
+  Director clarification requested; parent .1c and production exclusion dispatch remain unapproved.
+- D126 root/public contracts: units1.1 permits10m square; units4 permits270deg/radius5m arc.
+  Actual reference length23561945um, independent chord11.780972451um, exact3<pi<22/7 and
+  sine lower inequality prove chord>10um. Correct false bbox-to-length implication in grammar6.1;
+  counterexample watched by structural runner. Pure arithmetic proof, no product geometry execution.
+  ROUTING EVIDENCE: curve/box/T2 facts come from separate units contracts; independent exact
+  primitive-arc inequality reproduces without the formula evaluator. Actual selector integration/
+  combined error budget stays .5f.3/G2, with acceptance explicitly added to .5f.3; no fabricated case.
+- Current language16/publication9 terminal0;53chapters/25scoped APIs/1112source/1721rendered links,
+  warning-free book. Full reference runner terminal0 includes4032/1139/196 prior matrices and review67;
+  focused final producer also earns D126 arithmetic controls. Rust source/test bytes unchanged.
+- Complete static obligation table and public-input implementation sequence .5b.2–.4 recorded in
+  existing annex. Storage/bus owners checked against actual .7/.6 nodes, not guessed .9/.5f paths.
+  Original D126 report retained in part46; D124 recognition and D125 runtime errors remain owned.
+- Final ledger9/pointer13 and staged gate13 doctrine checks terminal0. Initial gate caught334B G1
+  live-row width; first shortening targeted the wrong row, corrected actual row without raising320B
+  ceiling. Retention202logical/16workingMarkdown/9731decodedlines/737344decodedB/325858residentB;
+  independent14open/111unique sealed/overlap0. Tree10lanes/13trees/10siblings/0unowned-orphan-deadlinks.
+  Old G1-0061 ledger1091B/CI lesson625B independently match Git predecessor slices. No Rust diff;
+  map100lines/8181B, diff check0. D124 choice remains pending; no implementation change while awaiting it.
+
+Current frontier remains in [G1-SLICE](G1-SLICE.md#current-frontier).

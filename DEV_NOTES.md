@@ -3,6 +3,23 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02 UTC)_ — absent values need origin and context
+
+- D122 actual size context was reported as tolerance-unbound, missing geometry/tolerance as unknown,
+  and supplied optional eps_fmt25 was rejected by always=False. Runtime now checks value presence
+  and routes nine origins, retaining actual name/origin/state/search vocabulary/explicit context.
+- D127 metadata leaks KeyError/TypeError; D128 populated unknown/invalid states expose17. Named
+  guards refuse both before reading/resolving; valid/no-state fixtures and static isolation retained.
+- Independent1466 cases/thirteen actual predicate/payload body reds/two actual copied-book consumers
+  verify defaults/context supply/false size flag/taken-only reads/lazy geometry/cache failure safety.
+  No artifact policy or typed production context invented; product adapters and D121 remain pending.
+- Full runner first refused stale namespace mutation anchors after try guard insertion. Retargeted
+  the same spelling/origin/value-read predicates with valid indentation;1139/13 actual reds retained.
+  Full reference/language16 green. Runtime details move to their own annex before static health growth.
+- Exact completed27/35line blocks retained in canonical sibling; oldest ledger/lesson and original
+  D122 plus new D127 reports sealed without altering payloads. No cap raised or Rust source changed.
+- promotion: declined (existing origin, uncertainty and independently falsified evidence principles).
+
 ## _(2026-10-02 UTC)_ — false assertions must raise their named diagnostic
 
 - D125 reference returnsFalse. Now raises formula_assertion with exact ordered values/kinds,
@@ -16,24 +33,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Completed52/63line task blocks moved byte-exact to existing sibling, no new path/cap increase.
   Oldest two lessons, G1-0062 ledger and original D125 report retain exact Git predecessor bytes.
 - promotion: declined (existing diagnostic, dimensional algebra and independent-evidence rules).
-
-## _(2026-10-02 UTC)_ — source recognition must precede diagnostic promises
-
-- .1c.1 independent review maps actual21 worked statements/13 refusal sources and all remaining
-  static/product proof owners.67 cases/four actual guard assertion reds trap values/execution/geometry;
-  all6 envelope calls win over operand errors, in either branch, after syntax succeeds.
-- D124: contract6 says unsupported loops/functions but grammar gives no recognizable source forms.
-  loop/repeat/while calls are unknown; fn/macro definition shapes parse-refused; scalar loop valid.
-  Recommended ADR-0003 proposal keeps three reserved keywords and existing lexical/call diagnostics;
-  alternative requires exact excluded spellings/name effects. Director choice pending; .1c.2 owns it.
-- D125: actual false assertion returnsFalse rather than formula_assertion; equal control True.
-  Owned .5e.3 with D121 before product assertion evidence, outside these static controls.
-- D126: grammar6.1 equates10m box with10m edge length. Public radius5m/270deg arc fits10m square,
-  reference length23561945um; independent chord11.780972451um and exact rational lower bound>10um.
-  Corrected book claim and added watched counterexample; product quantization/geometry budget .5f.3/G2.
-- Existing signature4032/namespace1139/recipe196 matrices and language16/publication9 green; no Rust
-  source/test change, no product validator or runtime/physical/release claim. Owner paths .6/.7 verified.
-- promotion: declined (existing closed grammar, actual contracts and independently falsified evidence).
 
 # Sealed archive — earlier lessons
 
@@ -169,3 +168,4 @@ The live window below holds the most recent lessons. When it passes its health t
 
 | [`devnotes-part76.md`](docs/history/stitchcad-devnotes-part76.md) | observed handoff CI lesson | 8 lines, 625 bytes, `sha256:f9b6ffbc…` |
 | [`devnotes-part77.md`](docs/history/stitchcad-devnotes-part77.md) | whole preflight/namespace lessons | 41 lines, 3724 bytes, `sha256:898aab4a…` |
+| [`devnotes-part78.md`](docs/history/stitchcad-devnotes-part78.md) | static recognition review lesson | 17 lines, 1566 bytes, `sha256:94655e7b…` |

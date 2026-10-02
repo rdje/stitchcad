@@ -5,16 +5,16 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** G1-SLICE; frontier .5e.1a (independent D122 reference missing-value routing).
-- **Next action:** read canonical nine-origin/context/error contracts, reproduce D122 through
-  actual reference, then repair/verify owned origin-specific refusals before product adapters.
-  Owner/protocol in G1-SLICE-evidence.md; product .5e.1 remains pending. D125 closes at .5e.3a:
-  false assertions raise formula_assertion with exact values/kinds/name/class;262 controls/eight
-  actual reds/copied-book named refusal/full reference green. D121 irrational provenance remains
-  .5e.3; no production evaluator/typed payload/geometry approval. Syntax/input/identity implemented.
-  D124 director diagnostic ruling still pending at .5b.1c.2; concrete two-option proposal in
-  ADR-0003. Do not invent excluded source forms or reserved names. D70 axes waits .4c.2.
-  Roadmap/book/task/code scopes agree; cleanup current: docs/ARTIFACT_CLEANUP.md.
+- **Active tree:** G1-SLICE; frontier .5e.3b (independent D121 reference irrational provenance).
+- **Next action:** read canonical approximation/tolerance contracts, reproduce D121 through
+  actual reference, then repair/verify contribution provenance across bindings/reads/operations,
+  within and assertions. Owner in G1-SLICE-evidence.md; product execution remains pending.
+  D122/D127/D128 close at .5e.1a: nine-origin/context routing, supplied optional values and named malformed
+  metadata/state refusals;1466 cases/thirteen actual reds/two copied-book consumers/full reference green.
+  D125 assertion repair verified at .5e.3a; syntax/input/identity implemented, no product evaluator.
+  New runtime annex keeps book details bounded. D124 director diagnostic ruling still pending
+  .5b.1c.2, concrete ADR-0003 proposal; do not invent excluded source forms or reserved names.
+  D70 axes waits .4c.2. Cleanup current: docs/ARTIFACT_CLEANUP.md.
 - **Handoff:** bash scripts/check_handoff.sh with OS-visible process access; --idle-cua only
   when no CUA call/result is pending. Neutral inherited checker remains non-authoritative/unchanged.
 - **In-flight uncommitted work:** none after recording commit; D124 director answer remains pending.

@@ -152,6 +152,20 @@ the digests afterwards.
 
 | [`changelog-part76.md`](docs/history/stitchcad-changelog-part76.md) | STITCHCAD-G1-0062 | 13 lines, 1068 bytes, `sha256:a0da7975…` |
 
+| [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
+
+## STITCHCAD-G1-0080 - reference origin/context diagnostics (leaf `G1-SLICE.5e.1a`)
+
+D122 closes: absent facts, geometry/recipe/size bindings and tolerances retain distinct tokens and
+actual name/origin/state/search vocabulary/explicit context arguments. Supplied optional values,
+including Boolean false size context, are readable. D127/D128 malformed metadata/states refuse by name.
+1466 independent cases/thirteen actual body assertion reds/two copied-book consumers and full reference/
+language16 pass. Prior1139 namespace cases/thirteen faults retain metadata-only static checking.
+Runtime annex, progressive links/index and live/task records align; exact old reports/ledger/lesson/
+completed task blocks retained without cap growth. Rust/source identity unchanged; product adapters,
+irrational provenance and execution remain pending. G1 stays5/18; defects12open/115sealed.
+Next independent D121 reference provenance repair; D124 director syntax ruling remains pending.
+
 ## STITCHCAD-G1-0079 - named reference assertion failures (leaf `G1-SLICE.5e.3a`)
 
 D125 closes: a false runtime assertion raises formula_assertion with label, exact ordered values/
@@ -369,18 +383,3 @@ D105 stale syntax-annex/introduction status is corrected. Current grammar/decisi
 live/task pointers agree; earlier serializer proof and oldest ledger payload retain exact text in
 bounded parts. .5a.3d closes for expressions only; next .3e ordered let/assert syntax. G1 stays5/18;
 defects10open/94sealed. Binding/evaluation, geometry, storage and command/API/MCP remain later work.
-
-## STITCHCAD-G1-0063 - owned canonical expression bytes (leaf `G1-SLICE.5a.3d.2`)
-
-Normalized expressions now emit privately constructed owned ASCII identity bytes using a flat action
-stack. Full-u128 literal magnitudes/kinds, source names, all operators and ordered children survive;
-D103 unary/square symbols remain distinct from ordinary calls. Eq/Clone, explicit as_str/into_string
-and opaque Debug preserve source-independent identity. No folding, evaluation or project hash added.
-
-Seven public contracts/55 independent byte fixtures/nested100 Fraction rows/six book examples and
-nineteen actual compiled assertion reds pass with exact restoration. Small64KiB stack covers256-node
-chains/16 if levels/50000 groups/100000-byte names. Final native523, release7/WASM3 and scoped
-book/reference checks pass. D104 crate overview/status numerical drift is fixed. README/progressive
-learning/availability/grammar/API map/expert annex/decision/index/live/task records align; prior proof
-and ledger bytes remain exact in bounded parts. G1 stays5/18; defects10open/93sealed; next .3d.3 review.
-Ordered recipes, names/types/bindings/evaluation, geometry, storage and command/API/MCP remain later work.

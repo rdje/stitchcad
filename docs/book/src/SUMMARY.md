@@ -58,6 +58,7 @@
   - [Formula statements and ordered recipe syntax](annexes/formula-statements.md)
   - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)
   - [Static formula validation evidence](annexes/formula-static-validation.md)
+  - [Runtime formula validation evidence](annexes/formula-runtime-validation.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
 - [Made-to-measure API contract](annexes/mtm-input-contract.md)
 - [Implementation status and requirement owners](annexes/implementation-status.md)

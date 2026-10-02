@@ -1,6 +1,6 @@
 # Static formula validation evidence
 
-> **Status:** reference-instrument evidence at G1-SLICE.5b.1a/.1b. The product libraries still stop at
+> **Status:** reference-instrument evidence at G1-SLICE.5b.1a/.1b/.1c.1. The product libraries still stop at
 > [syntax, inputs and canonical identity](formula-recipe-inputs.md). A valid syntax tree is not yet
 > a statically accepted recipe, a computed garment or a production approval.
 
@@ -135,10 +135,9 @@ static validation refuses them. No Rust syntax or serializer behavior changed.
 
 This proves metadata namespace and single-statement checking in the reference. It does not validate
 canonical input adapters, physical geometry or typed product diagnostic payloads; those retain
-.5e.1, G2 and .5b.2–.4 owners. Whole-recipe checking is described below. D121 (irrational-result
-provenance at T1) and D122 (origin-specific missing-value diagnostic routing) are scheduled .5e.3
-and .5e.1 reference repairs before their product execution evidence. Neither reference behavior is
-claimed correct by these static controls.
+.5e.1, G2 and .5b.2–.4 owners. Whole-recipe checking is described below. D121 irrational-result provenance at T1 remains .5e.3. D122 reference origin/context routing is
+[separately verified](formula-runtime-validation.md#missing-values-by-origin); these static controls
+make no runtime correctness claim. Product input adapters remain .5e.1.
 
 ## Whole recipe before execution
 
@@ -195,7 +194,7 @@ remains4096; the smaller value is used only to falsify the measurement in a copi
 
 D119's reference ordering and D123's measurement defects are repaired at .5b.1b.2. Product static namespaces, immutable
 dependency graphs and complete typed diagnostics remain .5b.2–.4. Reference numeric provenance
-and origin/context value routing remain D121/D122 at .5e.3/.5e.1; static checking cannot settle
+remains D121 at .5e.3; reference origin/context routing is separately verified at .5e.1a. Static checking cannot settle
 those execution obligations.
 
 ## Complete static review and remaining contracts
@@ -246,8 +245,9 @@ docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md und
 The reference runtime assertion repair closes D125 at G1-SLICE.5e.3a. A false assertion now raises
 formula_assertion; its name, exact left/right values and kinds, and symbolic tolerance class/value
 are retained. A statically valid false assertion still passes preflight, because preflight computes
-no verdict. [Runtime assertion controls](#reference-runtime-assertion-controls) describe the repair.
-D121's irrational provenance and D122's missing-origin/context routing remain .5e.3/.5e.1.
+no verdict. [Runtime assertion controls](formula-runtime-validation.md#reference-runtime-assertion-controls) describe the repair.
+D121's irrational provenance remains .5e.3. D122 reference origin/context routing is verified
+[separately](formula-runtime-validation.md#missing-values-by-origin); product adapters remain .5e.1.
 No static review result approves numerical determinism, a physical garment or a production release.
 
 ### Implementation sequence after the review
@@ -294,45 +294,3 @@ of arc-length displacement before geometry approximation is added. A10m straight
 a bounding box is insufficient evidence of that length. Product selectors and their combined
 quantization/geometry error budgets remain .5f.3/G2. The correction changes no units, ratio quantum,
 structural domain or tolerance class.
-
-## Reference runtime assertion controls
-
-An assertion uses an inclusive tolerance: it holds when the absolute difference is at most the
-class value in the operands' internal units. The reference preserves the successful five-element
-assertion result, including the evaluated operands. A larger difference raises formula_assertion
-before any false result can be returned. For example:
-
-```text
-assert width_closure: eps_num = 1 cm == 1 cm
-assert false_closure: eps_num = 1 cm == 2 cm
-```
-
-The first holds. The second raises formula_assertion with false_closure, length values10000 and
-20000, and eps_num value1. The diagnostic's owned arguments dictionary contains assertion_name,
-left_kind, left_value, right_kind, right_value, tolerance_class and tolerance_value. Values remain
-exact rational results, in authored operand order; this instrument does not invent a recipe ordinal
-or canonical source identity. These reference fields are not a production typed diagnostic API.
-
-Syntax/name/kind checking still precedes runtime work. Once static checking succeeds, the existing
-operand and tolerance evaluation order is preserved: division by zero, unknown values and missing
-class context retain their own diagnostic tokens rather than becoming assertion failures. The
-book consumer reports the raised token, label, values and class through its existing error path.
-
-```bash
-python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations
-```
-
-The existing structural runner watches this producer.262 independently authored controls cover all
-five arithmetic kinds and all five classes, zero/below/at/above thresholds in both operand orders,
-signed values where permitted, unchanged caller bindings, static acceptance of false checks and
-earlier static/runtime errors. Context-dependent classes use explicit fixture values25/40/100;
-these are controls, not new defaults. Canonical integer input bindings divided by ratio2.0 supply
-exact half-unit results. The grammar deliberately makes Count*Ratio a Ratio and Count/Ratio a Count;
-the controls follow those declared kinds rather than changing the table to fit a fixture.
-
-A copied worked book falsifies waistband_width_closure: the actual consumer returns1 and reports
-formula_assertion with length80000 versus40000 at eps_num1. Eight actual compiled predicate/payload
-faults must fail body assertions: false guard, inclusive boundary, token, label, operand order/kind,
-class and class value. The reference source stays byte-identical during these in-memory faults.
-G1-SLICE.5e.3a owns this repair; irrational provenance D121, missing-origin/context routing D122,
-product evaluation, geometry and API/MCP/release remain separately owned and pending.

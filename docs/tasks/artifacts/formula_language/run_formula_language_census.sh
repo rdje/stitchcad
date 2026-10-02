@@ -298,13 +298,14 @@ class Val:
 
 # ── the evaluator: written from grammar §1–§7, driven by the chapter's own tables ──────────
 class Evaluator:
-    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage, origins=None):
+    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage, origins=None, context=None):
         self.bindable, self.pairs, self.sigs = bindable, pairs, sigs
         self.reserved, self.envelope, self.limits, self.units = reserved, envelope, limits, units
         self.domains, self.storage = domains, storage
         self.origins = frozenset(origins if origins is not None else
                                 ("measurement", "ease", "parameter", "profile", "material",
                                  "geometry", "recipe", "size", "tolerance"))
+        self.context = context
         self.max_nodes = self.max_bits = self.max_if = 0
 
     TOK = re.compile(r"""(?P<cmp>==|!=|<=|>=|<|>)|(?P<op>[-+*/^=(),:])|(?P<num>\d+\.\d+|\d+)
@@ -590,7 +591,7 @@ class Evaluator:
     def kind_of_name(self, name, env):
         if name in self.reserved: return self.reserved[name][0]
         if name in env: return env[name]["kind"]
-        raise FErr("formula_unbound_name", "`%s` is declared by no origin visible here" % name)
+        self._missing_name(name)
 
     def infer_call(self, name, args, env):
         if name in self.envelope:
@@ -676,22 +677,54 @@ class Evaluator:
             return self.call(node[1], node[2], env)
         raise FErr("formula_parse", "unknown node %r" % (tag,))
 
+    def _missing_name(self, name, origin=None, state=None):
+        """Route absent values by declared origin; attach only actually available context."""
+        arguments = {"name": name}
+        if origin is not None:
+            arguments["origin"] = origin
+        if origin in ("measurement", "ease", "parameter", "profile", "material"):
+            if state not in ("known", "assumed", "preference", "derived", "unknown"):
+                raise FErr("formula_parse", "missing value for `%s` has no valid authored state" % name)
+            token = "formula_unknown"
+            arguments["state"] = state
+            message = "`%s` is %s, so it has no value and none is invented" % (name, state)
+        elif origin == "tolerance":
+            token = "formula_tolerance_unbound"
+            if self.context is not None:
+                arguments["context"] = self.context
+            message = "`%s` is read in a context that supplies no value for it" % name
+        else:
+            token = "formula_unbound_name"
+            arguments["origins_searched"] = tuple(sorted(self.origins))
+            message = "`%s` is declared by no origin visible here" % name if origin is None else (
+                "`%s` has no visible value from origin %s" % (name, origin))
+        raise FErr(token, message, arguments)
+
     def value_of_name(self, name, env):
         if name in self.reserved:
             kind, always, value = self.reserved[name]
-            if not always:
-                raise FErr("formula_tolerance_unbound",
-                           "`%s` is read in a context that supplies no value for it" % name)
+            if value is None:
+                self._missing_name(name, "tolerance" if name in
+                                   {"eps_num", "eps_geo", "eps_fmt", "eps_imp", "eps_phys"} else "size")
             return Val(kind, Fraction(value))
         if name not in env:
-            raise FErr("formula_unbound_name", "`%s` is declared by no origin visible here" % name)
+            self._missing_name(name)
         e = env[name]
+        state = e.get("state")
+        if "state" in e and state not in ("known", "assumed", "preference", "derived", "unknown"):
+            raise FErr("formula_parse", "value for `%s` has no valid authored state" % name)
+        if state == "unknown" and e.get("value") is not None:
+            raise FErr("formula_parse", "unknown `%s` cannot supply a value" % name)
+        if state == "unknown" and e.get("lazy"):
+            self._missing_name(name, e["origin"], state)
         if e.get("lazy"):
             e["value"] = self.resolve_geometry(e, env)
             e["lazy"] = False
-        if e["value"] is None:
-            raise FErr("formula_unknown", "`%s` is %s, so it has no value and none is invented"
-                       % (name, e["state"]))
+        if e.get("value") is None:
+            origin = e.get("origin")
+            if not isinstance(origin, str) or origin not in self.origins:
+                raise FErr("formula_parse", "missing value for `%s` has no valid declaration origin" % name)
+            self._missing_name(name, origin, e.get("state"))
         return Val(e["kind"], e["value"])
 
     def resolve_geometry(self, entry, env):
@@ -789,8 +822,12 @@ class Evaluator:
         env = {}
         for name, entry in declarations:
             self._identifier(name)
-            kind, origin = entry["kind"], entry["origin"]
-            if kind not in (*self.bindable, "point", "edge") or origin not in self.origins:
+            try:
+                kind, origin = entry["kind"], entry["origin"]
+            except (KeyError, TypeError):
+                raise FErr("formula_parse", "missing declaration kind/origin for `%s`" % name)
+            if (not isinstance(kind, str) or not isinstance(origin, str)
+                    or kind not in (*self.bindable, "point", "edge") or origin not in self.origins):
                 raise FErr("formula_parse", "invalid declaration kind/origin for `%s`" % name)
             if name in self.reserved:
                 raise FErr("formula_rebinding", "reserved `%s` cannot be declared by %s" % (name, origin))

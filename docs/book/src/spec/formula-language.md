@@ -123,6 +123,9 @@ from and what happens when there is none:
 | `size` | the size context ([grammar §7.1](formula-language/grammar.md)) | `formula_unbound_name` — no size, no instance |
 | `tolerance` | a reserved name (§3.1) | `formula_tolerance_unbound` |
 
+The book reference has [scoped origin/context read controls](../annexes/formula-runtime-validation.md#missing-values-by-origin),
+including supplied optional contexts and named missing-value refusals. Product adapters remain pending.
+
 Three rules make the namespace safe rather than convenient. A name is bound **once** per recipe — a
 second `let` for it is `formula_rebinding` — because a recipe is a history and a name that changes
 meaning halfway through makes every later statement ambiguous. Two origins binding one name is
@@ -231,7 +234,7 @@ the node, statement and conditional limits of §4.3.
 **Runtime — while evaluating:** reduced numeric-value widths (§4.3), `formula_division`, `formula_domain`, `formula_unknown`,
 `formula_tolerance_unbound`, `formula_assertion`, and `formula_cycle` at load.
 
-The book's [reference assertion controls](../annexes/formula-static-validation.md#reference-runtime-assertion-controls)
+The book's [reference assertion controls](../annexes/formula-runtime-validation.md#reference-runtime-assertion-controls)
 verify named false-assertion diagnostics and their values/class. Product evaluation remains pending.
 
 A static refusal rejects the recipe whole: no statement is evaluated and no geometry is produced,
