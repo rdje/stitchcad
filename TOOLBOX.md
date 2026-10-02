@@ -144,19 +144,19 @@ controls with independent Decimal rounding, kind-preserving respellings and sums
 suite runs it. `bash docs/tasks/artifacts/formula_structure/run_literal_mutations.sh` requires six
 actual guard assertion reds/exact restoration; run alone. `literal_diagnostic.py` in that directory
 prints actual literal/arithmetic/domain observations; diagnostic rc=0 is not a correctness verdict.
-D83 owns remaining scalar-domain proof before this is a production oracle.
+D83/D84 scoped reference reviews are complete; production normalization/evaluation remain separate.
 
 Reference exact arithmetic: `arithmetic_contract.py` in formula_structure checks 24 explicit rows,
 100 independent Fraction parameter cases and 162 precision/dimension/binding/selector controls;
 structural suite runs it. `bash docs/tasks/artifacts/formula_structure/run_arithmetic_mutations.sh`
-requires nine actual assertion reds/exact restoration; run alone. Numeric domains/stored angles
-remain D83/D84’s owners .5a.3b.3b/.3c; selector scope is the reference length-only model, not curve accuracy.
+requires nine actual assertion reds/exact restoration; run alone. D83 numeric/D84 angle reference
+reviews are complete; selector scope is the reference length-only model, not curve accuracy.
 
 Reference angular guards: `angle_contract.py` in formula_structure checks 42 angular rows/72 controls;
 `angle_math_oracle.py` independently checks those defined curated rows with standard-library math.
 Structural suite runs both. `bash docs/tasks/artifacts/formula_structure/run_angle_mutations.sh`
 requires seven actual conversion/direction/pole reds/exact restoration; run alone. Decimal60 proof
-scope is curated, not arbitrary transcendental correctness. D83 scalar guards/D84 signed-angle verification remain owned.
+scope is curated, not arbitrary transcendental correctness. D83/D84 reference reviews are complete.
 
 Signed-angle reference: `signed_angle_contract.py` in formula_structure supplies90 independent
 principal/binding/equality/sweep/copied-book controls. Structural suite watches it;
@@ -168,7 +168,7 @@ boundaries, reduced internal results, converted input before rounding and taken-
 Structural suite runs it. `bash docs/tasks/artifacts/formula_structure/run_rational_mutations.sh`
 requires twelve actual assertion reds/exact restoration; run alone. Bound/measurement/operation must
 appear in formula_domain. Angle pole tests require their reason, so another domain failure cannot mask
-removed guards. Scalar limits/i64 and signed-angle verification remain pending; no product evaluator.
+removed guards. Scalar/i64/signed-angle reference controls pass; no product evaluator.
 
 Public length operators: `cargo test -p sc-units --test length_operator_contract` checks four contracts
 with a nine-by-nine i128 oracle, inclusive endpoints, signed crossings and explicit Result typing.
@@ -193,8 +193,8 @@ Scalar reference: `python3 -I -B docs/tasks/artifacts/formula_structure/scalar_c
 57 independent Fraction/domain controls; the structural suite watches them. Actual declarations
 supply signed length/area and nonnegative Count bounds; quiet numeric setup executes no unrelated
 contracts. `bash docs/tasks/artifacts/formula_structure/run_scalar_mutations.sh` requires eleven
-actual assertion reds and multi-source byte restoration; run alone. Scalar checks do not close
-D83 i64 storage or D84 signed-angle verification, nor supply production numeric evaluation.
+actual assertion reds and multi-source byte restoration; run alone. Separate binding/angle families
+complete the scoped D83/D84 review; scalar checks alone supply no production numeric evaluation.
 
 Numeric binding reference: `python3 -I -B docs/tasks/artifacts/formula_structure/binding_contract.py`
 checks80 independent Fraction/Decimal controls; structural probes watch them. Numeric let rounds

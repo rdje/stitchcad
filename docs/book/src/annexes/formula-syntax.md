@@ -241,7 +241,7 @@ The diagnostic prints observations, and its exit status alone is not a correctne
 
 The reference remains a curated book instrument. These literal controls do not certify rational
 bounds, all numeric domains or stored angles on their own: the scoped boundary review below joins
-those proofs; D84 still owns signed-angle semantics. Operator
+those proofs; the signed-angle review below completes D84 reference semantics. Operator
 precision has its separate proof below. Current published example checks retain their row scope.
 Product canonicalization and evaluation remain pending; the syntax API above performs no computation.
 
@@ -270,11 +270,10 @@ assertion failures and byte-identical restoration; run alone. The selector check
 length-only edge model, and certify no real curve inversion or geometric accuracy.
 
 D83’s scoped reference boundary review is complete below; width/scalar/binding/literal proofs
-retain their separate oracles. D84 owns
-signed-angle verification. This is partial
-reference evidence, not a complete production evaluator, cross-platform numerical signoff, command
-API or release certificate. The next audit must close those gaps before product normalization uses
-this instrument as an oracle.
+retain their separate oracles; the signed-angle review below completes D84 reference semantics.
+These curated book controls can check their exact stated boundaries. They do not supply a production
+evaluator, cross-platform numerical signoff, command API or release certificate; those remain
+separate product obligations.
 
 ## Reference angle conversion and direction controls
 
@@ -308,7 +307,7 @@ it to zero. `dir` still normalizes by its explicit function contract. The durabl
 
 G1-SLICE.5a.3b.3c.2 removes only outer inverse modulo and updates three negative inverse rows in the
 42-row oracle set to signed principal results. The signed binding/equality/sweep controls below
-verify D84 separately from D83's numeric boundaries; final D84/reference review remains .3c.3.
+verify D84 separately from D83's numeric boundaries; the final review below closes both prerequisites.
 Product numeric binding/evaluation is pending.
 
 ## Reference rational-value boundaries
@@ -334,7 +333,7 @@ seven mutation controls also pass. Angle tests require the exact pole reason: an
 refusal cannot count as evidence for a missing mathematical-domain guard (D88).
 
 D83's scalar/binding/literal controls and completed scoped boundary review appear below.
-D84 signed-angle verification remains .3c. Product numeric normalization and
+D84 signed-angle verification is reviewed below. Product numeric normalization and
 full evaluation are still pending. The curated transcendental reference is not a production certificate.
 
 ## Inline documentation language context
@@ -399,7 +398,7 @@ verify this boundary. Shared setup is not an independent numeric oracle; each fa
 expected values/refusals remain independently authored.
 
 D83 binding/literal controls and completed scoped review follow; D84 signed-angle
-verification remains .3c. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
+verification is reviewed below. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
 normalization/evaluation, real geometry, command/API/MCP and production release remain separate work.
 
 
@@ -435,7 +434,7 @@ This reference statement method returns a binding without publishing it into the
 environment. The curated replay caller stores that result explicitly; this is not a production
 transaction guarantee or a general environment implementation. Existing scalar/rational controls
 remain separate. D95 canonical-node controls and the completed D83 scoped review follow.
-D84 inverse-trig/equality verification remains .3c. Production normalization/serialization/evaluation,
+D84 inverse-trig/equality verification is reviewed below. Production normalization/serialization/evaluation,
 real geometry, API/MCP control and release signoff remain future work.
 
 
@@ -499,7 +498,7 @@ G1-0047 state; D91’s explicit language-context family still passes. D97 correc
 parent’s superseded canonical-i64 wording; past plans and original defect descriptions stay intact.
 
 This completes the reference boundary repair. D84 signed inverse-trig/binding/equality verification
-remains owned by G1-SLICE.5a.3b.3c. Production canonical literals, serialization, full evaluation,
+is reviewed below. Production canonical literals, serialization, full evaluation,
 real geometry and arbitrary-input transcendental/cross-platform correctness still require their
 own product proofs. The reference model is an instrument for this book, not a shipped evaluator.
 
@@ -560,4 +559,33 @@ Existing42-row/72-control/math42 angular controls and seven actual angular reds 
 
 This is curated reference proof, not arbitrary-input correctly rounded transcendental evaluation,
 a cross-platform certificate, entity direction integration or a production formula evaluator.
-G1-SLICE.5a.3b.3c.3 owns the final D84/reference review before production normalization .5a.3c.
+G1-SLICE.5a.3b.3c.3 completes the final D84/reference review below; production normalization .5a.3c follows.
+
+
+## Completed angle and reference obligation review
+
+G1-SLICE.5a.3b.3c.3 closes D84's received contract and scoped reference repair. Every original
+consequence has a discriminating control; the prerequisite evaluator/setup/oracle sources remain
+byte-identical to their verified G1-0056 state.
+
+| Obligation | Independent control | Discriminating actual fault |
+| --- | --- | --- |
+| Signed principal inverse result | signed90 axes/quadrants, both signatures, branch/rounded endpoints and one exact zero | inverse modulo/sign/argument order/axis/zero-vector/truncation |
+| Raw formula bindings/equality | signed90 ties/full turns/order; binding80 storage; real copied-book replay | binding/literal/comparison modulo and binding tie truncation |
+| Signed/full/multi-turn sweep | signed90 direct/bound arcs and fractional input; angular72/math42 | arc/conversion modulo or lost fractional precision |
+| Explicit normalized direction | signed90 negative vectors; angular72 nearest quantum | missing dir modulo or direction truncation |
+| Six-kind replay | replay19 verdicts, Area/Boolean stored reads and refusals | kind/state/value/scale/unit/format faults |
+
+Re-run the structural suite, signed-angle and angular mutation runners named above. Signed90 and
+angular72/math42 controls pass; fifteen/seven compiled actual faults require assertion reds with
+exact restoration. Existing numeric and six-kind replay families also pass. This joins D83's earlier
+rational/scalar/binding/literal review without treating a diagnostic exit as a correctness verdict.
+
+D100 corrects an adjacent live task label missed by D97: canonical literal width is128-bit,
+numeric binding storage is i64. The previous parent and defect text remain intact in task/history
+records. Current goals, function/type contracts, independent controls and the roadmap agree.
+
+The reference prerequisites are complete. Product literal normalization, canonical serialization,
+ordered recipe/binding/evaluation, entity direction integration, real geometry and production
+API/MCP/release remain future work. Curated inverse results certify neither arbitrary-input
+correct rounding nor cross-platform transcendental behavior.

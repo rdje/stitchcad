@@ -618,14 +618,14 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0041`.
 
 - ID: `G1-SLICE.5a.3b`
-  Status: `in_progress`
+  Status: `done`
   Goal: repair D79 reference literal/canonical identity before independent product normalization proof.
   Children: .3b.1 literal quantum/identity, .3b.2 exact arithmetic audit/repair, .3b.3 numeric domain
   and stored-angle audit. Each child diagnoses actual behavior before finalizing its protocol.
   Original reproduction: two 0.00004 cm literals evaluate 4/5 um and bind 1 while their canonical-zero
   respelling evaluates 0. Correct the literal input boundary first; evaluator findings remain owned.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: completed scoped reference review below; independent controls/actual reds pass.
+  Commit: `STITCHCAD-G1-0057`
 
 - ID: `G1-SLICE.5a.3b.1`
   Status: `done`
@@ -640,12 +640,12 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0043`.
 
 - ID: `G1-SLICE.5a.3b.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: repair D83 numeric domains and resolve D84 angle contract before product normalization.
   Children: .3b.3a exact rational bit limit; .3b.3b scalar domains/storage bounds; .3b.3c signed-angle contract verification.
   .3a is independent of binding/direction semantics; D84 now preserves formula sign/turns.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: completed scoped reference review below; independent controls/actual reds pass.
+  Commit: `STITCHCAD-G1-0057`
 
 - ID: `G1-SLICE.5a.3b.3a`
   Status: `done`
@@ -674,7 +674,7 @@ Completed reference input contract .5a.2b.1 is preserved in
   verification remains separate; scalar repair can proceed under the recorded ruling.
   Children: .3b.1a D89 public operators; .3b.1b D90 operation context; .3b.1c D91 code-language context;
   .3b.2 reference scalar domains;
-  .3b.3 reference canonical/binding i64 limits. Each prerequisite is independently committed.
+  .3b.3 reference128-bit canonical literals/i64 numeric bindings. Each prerequisite is independently committed.
   Verification: complete scoped D83 review below; four independent families/47 actual reds.
   Commit: children complete through `STITCHCAD-G1-0054`.
 
@@ -757,14 +757,14 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0054`.
 
 - ID: `G1-SLICE.5a.3b.3c`
-  Status: `in_progress`
+  Status: `done`
   Goal: apply D84 director ruling: preserve signed/multi-turn formula values, normalize entity directions.
   Verify binding/equality and signed inverse-trig contracts with full/signed/multi-turn examples;
-  reference signed controls now pass; final review remains .3. Decision: `decision_angles.md`.
+  reference signed controls and complete .3 review pass. Decision: `decision_angles.md`.
   Children: .1 six-kind book replay prerequisite; .2 signed inverse-trig/binding/equality repair;
   .3 complete angle/reference review. D84 closes only after the full contract is verified.
-  Verification: `pending`
-  Commit: children pending.
+  Verification: completed scoped reference review below; independent controls/actual reds pass.
+  Commit: children complete through `STITCHCAD-G1-0057`.
 
 - ID: `G1-SLICE.5a.3b.3c.1`
   Status: `done`
@@ -785,12 +785,14 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0056`.
 
 - ID: `G1-SLICE.5a.3b.3c.3`
-  Status: `pending`
+  Status: `done`
   Goal: complete D84/reference obligation review, align all current contract/status pointers and close
   .5a.3b only after .1/.2 verified; correct D100 stale children label and retain its original bytes.
   Product literal normalization stays separately owned by .5a.3c.
-  Verification: `pending`
-  Commit: `pending`
+  Protocol: [original review plan](G1-SLICE-journal.md#complete-reference-review-protocol--completed-in-g1-0057).
+  Verification: signed90/15 actual reds; angular72/math42/seven reds; six source bytes equal c099aee.
+  D84/D100 close for received contract/scoped reference; production remains separate.
+  Commit: `STITCHCAD-G1-0057`.
 
 - ID: `G1-SLICE.5a.3c`
   Status: `pending`
@@ -998,7 +1000,7 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
 | done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
-| next | `G1-SLICE.5a.3b.3c.3` | `pending` | Complete D84/reference review before product normalization |
+| next | `G1-SLICE.5a.3c` | `pending` | Production literal normalization after complete scoped reference review |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -1008,7 +1010,7 @@ retains exact D72/D67 diagnostics and ownership.
 [Historical design boundaries](G1-SLICE-journal.md#ontology-design-decisions--preserved-from-f70edf7)
 retain exact committed notes and their canonical decision links. D84 director ruling preserves signed/
 multi-turn formula values and normalizes entity directions; [decision](../decisions/decision_angles.md).
-.5a.3b.3c owns verification. D70 SizeSet axes remains pending under .4c.2.
+.5a.3b.3c verification is complete. D70 SizeSet axes remains pending under .4c.2.
 
 ## Open Questions
 
@@ -1017,8 +1019,8 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Blockers
 
-- D70 awaits director decision for complete SizeSet under .4c.2. D84 ruling is received;
-  .5a.3b.3c owns binding/equality/inverse-trig verification; D83 scoped reference review is complete; production proof remains separate.
+- D70 awaits director decision for complete SizeSet under .4c.2. D83/D84 scoped reference review
+  is complete; production literal/binding/evaluation proof remains separate.
 
 ## Acceptance Checklist
 
@@ -1034,52 +1036,46 @@ retain exact committed evidence.
 retain exact committed evidence.
 
 [Completed numeric review and corrections](G1-SLICE-journal.md#numeric-review-evidence--preserved-from-a6fa253)
-retain exact committed checklist/journal bytes. Current D84 work is owned above.
+retain exact committed checklist/journal bytes. Current reference review is owned above.
 
 [Previous exact six-kind replay proof and commit journal](G1-SLICE-journal.md#six-kind-replay-evidence--preserved-from-57c94ad)
 retain committed evidence unchanged.
 
-### `G1-SLICE.5a.3b.3c.2` — signed principal formula angles
+[Previous exact signed-angle proof and commit journal](G1-SLICE-journal.md#signed-angle-evidence--preserved-from-c099aee)
+retain committed evidence unchanged.
 
-- [x] **REPRODUCE / ISSUE** — signed_angle_contract.py before repair→AssertionError:
-  atan(-1.0) angle315000000 versus expected-45000000, rc=1 (target/g1-0056-before.log).
-- [x] **ROOT CAUSE (WHY + WHERE)** — actual call atan/atan2 applies outer norm_angle to signed
-  rounded helpers. New contract→90 independent principal/binding/equality/sweep/replay controls,
-  0 fail, rc=0; fifteen compiled actual mutations→contract AssertionError, rc=1 each, runner rc=0.
-- [x] **FIX** — remove inverse outer modulo only; retain nearest quantum and normalized dir.
-  Declare principal branches/rounded endpoints/one zero; update three negative oracle rows.
-- [x] **ADDRESSED (verified)** — signed_angle_contract.py→90 independent controls /0 fail, rc=0.
-  Authored integers/Fraction/curated math distinguish signed quadrants/axes, signatures/domain,
-  rounded branch endpoints, raw signed/full/multi-turn bindings/ties/equality/order, full/signed
-  arcs, fractional versus stored input and normalized directions. Actual25-row book replay passes;
-  wrong unsigned Value refuses. Fifteen actual faults produce assertions; source restores exact.
-- [x] **NO REGRESSION** — full structural runner→angle42rows/72controls/math42, rational61/scalar57/
-  binding80/replay19/canonical146, all0 fail, rc=0. Existing angle7/binding12/replay9 actual reds,
-  exact restore, runners rc=0. Language→probes:16 pass /0 fail, rc=0; publication9/ledger9+13/
-  archive28+150 CLI controls pass, rc=0. Complete worked chapter and prior proof tail compare exact.
-- [x] **LOCKSTEP** — function reference/units/annex/decision/tools/live task pointers agree.
-  D84/D100 remain for final .3 review. G1 stays5/18, defects12open/87sealed; product proof separate.
+### `G1-SLICE.5a.3b.3c.3` — complete scoped reference review
+
+- [x] **REPRODUCE / ISSUE** — rg finds D100 old canonical/binding-i64 child label; D84 original
+  signed/full-turn consequences map to current controls and actual faults in the annex.
+- [x] **ROOT CAUSE (WHY + WHERE)** — D97 changed Goal only; adjacent label retained old width.
+  Literal146/binding80 pass, rc=0; signed90→0 fail, rc=0; fifteen compiled actual faults→assertion
+  reds, rc=1 each, runner rc=0. Parent old bytes retained; actual reference distinguishes raw/direction.
+- [x] **FIX** — correct children width label; reconcile current pending language and publish full
+  D84 obligation map. Close reference parents, retain production ownership/proof boundary.
+- [x] **ADDRESSED (verified)** — structural runner→signed90/angle72/math42/replay19/canonical146/
+  binding80/rational61/scalar57,0 fail, rc=0. Signed15/angular7 actual reds restore exact bytes,
+  runners rc=0. Six actual source/setup/contract/oracle files compare equal c099aee, rc=0.
+- [x] **NO REGRESSION** — language→probes:16 pass /0 fail; publication9/ledger9+13/archive28+153
+  CLI controls pass, rc=0. Prior complete proof tail, original parent and defect text retained exact.
+- [x] **LOCKSTEP** — book/tools/decisions/ancestors/live pointers agree; D84/D100 seal unchanged.
+  G1 remains5/18, defects10open/89sealed; next .5a.3c production literal normalization.
 
 ## Verification Log
 
-Signed90/fifteen compiled actual reds; angular72/math42/seven reds; binding80/twelve reds;
-replay19/nine reds; all runners rc=0, actual assertion reds rc=1, exact restoration. All structural
-families green; language16/publication9/ledger9+13/archive28+150 CLI controls, rc=0.
-Publication48chapters/16APIs/1002source/1535rendered links. Retention141logical/16working Markdown/
-7817 decoded lines/608877 decoded bytes/265199 resident bytes, rc=0. Tree10/13/eight/zero gaps;
-glossary310/nine/158/zero drift; feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/
-zero mismatches, rc=0. Old task/ledger payloads exact; original worked chapter byte-identical.
-README reviewed unchanged; focused checks appropriate for actual reference-angle repair.
-Staged make gate→=== all doctrines green ===, rc=0. No Rust/entity integration/production evaluator changed;
-no arbitrary-input transcendental or cross-platform certificate.
+Focused runners above rc=0; actual mutation assertions rc=1. Publication48chapters/16APIs/
+1002source/1536rendered links. Retention144logical/19working Markdown/7905decoded lines/
+615469decoded bytes/271791resident bytes, rc=0. Tree10/13/eight/zero gaps; glossary310/nine/158/
+zero drift; feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/zero mismatches, rc=0.
+README unchanged; no runtime source change. Staged make gate→=== all doctrines green ===, rc=0.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3b.3c.2` | `STITCHCAD-G1-0056 (leaf G1-SLICE.5a.3b.3c.2): preserve signed principal formula angles` | 90 independent controls/15 actual reds/exact restore |
+| `.5a.3b.3c.3` | `STITCHCAD-G1-0057 (leaf G1-SLICE.5a.3b.3c.3): complete scoped formula reference review` | original obligations/22 actual reds/exact source |
 
 ## Changelog
 
-- `2026-10-02`: signed inverse-trig/binding/equality/sweep controls complete; final D84 review .3 next.
-- promotion: declined (routine implementation/verification of the director's signed-angle ruling).
+- `2026-10-02`: D84/D100/reference review complete; product numeric normalization next.
+- promotion: declined (routine scoped review/alignment under received contracts).

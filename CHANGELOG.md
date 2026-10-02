@@ -102,6 +102,20 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part51.md`](docs/history/stitchcad-changelog-part51.md) | STITCHCAD-G1-0033 | 13 lines, 1094 bytes, `sha256:8f279ee4…` |
 
+| [`stitchcad-changelog-part52.md`](docs/history/stitchcad-changelog-part52.md) | STITCHCAD-G1-0034 | 14 lines, 1219 bytes, `sha256:43a87a6f…` |
+
+## STITCHCAD-G1-0057 - complete scoped reference review (leaf `G1-SLICE.5a.3b.3c.3`)
+
+D84 received contract/reference obligations are verified: signed principal angles, raw binding/
+equality/full turns, signed/fractional arcs and explicit normalized dir. The annex maps every
+obligation to independent controls and actual faults. D100's adjacent parent label now distinguishes
+128-bit canonical literals from i64 numeric bindings; original records/parent/evidence remain exact.
+
+Signed90/fifteen actual reds and angular72/math42/seven reds pass with exact restoration; all existing
+reference/language/publication/recording checks remain green. Reference parents close and product
+normalization .5a.3c is next. G1 stays5/18; defects10open/89sealed. Production evaluator, geometry,
+entity integration, arbitrary-input transcendental/cross-platform and API/MCP/release proof remain future.
+
 ## STITCHCAD-G1-0056 - signed principal formula angles (leaf `G1-SLICE.5a.3b.3c.2`)
 
 Reference atan/atan2 retain signed principal results at the nearest microdegree; dir stays normalized.
@@ -370,18 +384,3 @@ teaches a waist example and links detailed API/currentness/verification in an an
 collection evidence and oldest history payloads retain exact predecessor bytes. D71 landing status is
 logged/owned; next .4d.1 applies the director's incremental book/glossary/index requirement. G1 remains
 5/18; D70 axes ruling pending; full SizeSet, geometry, app/MCP and release proofs remain later work.
-
-## STITCHCAD-G1-0034 - exact current chart coverage (leaf `G1-SLICE.4c.3b`)
-
-Immutable garment charts bind explicit POM targets and canonical member observations. Draft validation
-checks authored targets without inventing missing cells; completeness checks a nonempty exact target
-inventory against the entire current Design table and one observation per member/POM. Reduced targets
-cannot hide Design quantities; new Design POMs invalidate prior coverage. Members and row queries retain
-explicit authored order. Values/state/source/provenance remain canonical; retargeting requires replacement.
-
-Eighteen contracts/privacy and fourteen actual production mutation reds verify identity/domain/coverage
-and unresolved numeric refusal. Restored strict Rust executes 422 tests, WASM/book and focused glossary/
-uncertainty/tree/feature/ledger/staged doctrine checks pass. Shared measurements need explicit member
-correspondences; full structural coverage does not certify numeric/path/physical/release readiness.
-Completed observation evidence retains exact predecessor bytes; rolling windows stay below health targets.
-G1 remains 5/18. Next .4c.3c MTM/body; axes D70 ruling remains pending, no representation is defaulted.

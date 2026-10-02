@@ -188,14 +188,6 @@ why maximum-content-line bytes is a separate axis in the containment doctrine. B
 keep every axis visible, and they remove the ambiguity a raw `|` inside a code span creates (the GFM
 spec asks for `\|`; the inherited arity checker treats a code span as protective — defect D22).
 
-- **D100** — the current numeric parent’s children summary still calls canonical limits i64.
-  - Reproduce: inspect G1-SLICE.5a.3b.3b Children: “reference canonical/binding i64 limits”.
-    Its .3b child and decision_literals specify128-bit canonical literal width versus i64 bindings.
-  - Root/impact: D97 corrected the parent Goal, but the adjacent live children label escaped that
-    scoped repair; it can misdirect a reader even though the verified numeric implementation agrees.
-  - Owner/schedule: `G1-SLICE.5a.3b.3c.3`, P2 next in the final reference review; preserve the old
-    label/evidence, correct the live summary and verify current parent/child contract agreement.
-
 - **D67** — an unrelated historical decline in a staged task file satisfies lesson promotion for a
   new lesson, even when the promoted decision gains no retrieval question.
   - Reproduce: `git diff b3b9e3a^ b3b9e3a -- docs/decisions` adds no answers line, while
@@ -479,21 +471,6 @@ G1-SLICE.5a.3b.3b.3c.2 completes the scoped reference boundary review: rational6
 binding80/canonical146 controls and12/11/12/12 actual reds/exact restoration. Width, exact scalar,
 once-rounded signed storage and wide literal identity obey the received contracts. D84 signed-angle
 verification and production normalization/evaluation remain separately owned; no general numeric certificate.
-
-- **D84** — normalized formula angle storage conflates direction with signed/multi-turn sweep.
-  - Contract evidence: formula kind table 2 says angle is normalized and includes direction/sweep/
-    grain deviation; units 1.2 normalizes entity angles and equality; grammar 6 arc_length uses
-    angle * pi/180 * radius, and unary/ordinary angle arithmetic is exact by formula 4.2.
-  - Consequence: binding 360 deg then using it as sweep becomes zero if every let angle normalizes,
-    unlike the same direct full-turn expression. Normalizing a negative sweep also changes its sign.
-    sc-units Angle explicitly represents a normalized direction; it cannot preserve a full turn.
-  - Impact: canonical literal/binding/equality semantics cannot safely inherit that entity type without
-    a direction/sweep distinction. This is a contract decision, not just a missed modulo call.
-  - Owner/schedule: G1-SLICE.5a.3b.3c verifies bindings/equality and signed inverse-trig behavior.
-    Director ruling received 2026-10-02: preserve signed/multi-turn formula angles; normalize entity
-    directions. Canonical record: `docs/decisions/decision_angles.md`.
-    Specifications align now; reference atan/atan2 still normalize outputs, owned repair pending.
-    Scalar/rational domain repairs .3a/.3b proceed independently. D84 remains open until verified.
 
 D85/D86/D87 are sealed in [`stitchcad-defects-part21.md`](../history/window2.md#stitchcad-defects-part21md).
 G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exact tan pole refusal;
@@ -780,3 +757,9 @@ D99 is sealed in [`stitchcad-defects-part31.md`](../history/stitchcad-defects-pa
 G1-SLICE.5a.3b.3c.1 repairs the actual six-kind replay consumer and cm²/Boolean display;
 nineteen independent verdicts and nine compiled actual assertion reds verify the repair,
 with exact source restoration. No source literal or production evaluator added.
+
+D84/D100 are sealed in [`stitchcad-defects-part32.md`](../history/stitchcad-defects-part32.md).
+G1-SLICE.5a.3b.3c.3 completes received signed-angle/scoped reference obligations: signed90/fifteen
+actual reds, angular72/math42/seven reds and exact source restoration. Canonical literals128-bit
+versus numeric bindings-i64 also reaches the corrected adjacent parent label. Original descriptions
+and prior parent/evidence bytes remain unchanged; product integration/evaluation stay future work.

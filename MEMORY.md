@@ -5,13 +5,14 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3c.3`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** final D84/reference review and D100 adjacent parent-label correction, then .5a.3c.
-  Signed principal atan/atan2, raw binding/equality/full sweeps verified:90 independent controls/
-  fifteen compiled actual reds, existing angle72/math42/seven reds remain green. Dir stays normalized.
-  D99 six-kind actual book replay repaired; D83 numeric review and D95 wide-literal/i64-binding
-  ruling complete. Preserve reference/production proof boundary; D70 axes ruling awaits .4c.2.
-  G1-0052 f876913 is pushed and both CI jobs/all steps succeeded; derive current push cadence.
+- **Active tree:** `G1-SLICE`, frontier **`.5a.3c`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** production numeric literal normalization in sc-core: finalize exact bounded
+  conversion/representation protocol from formula2/4.2, grammar2/2.1/4, units and D95/D84 decisions.
+  Typed literal nodes retain128-bit magnitude/unary identity; bound numeric values later fit i64.
+  Raw formula angles preserve sign/turns; normalized sc-units Angle is only a direction type.
+  D83/D84/D95/D99/D100 scoped reference prerequisites are complete. No production numeric execution
+  yet; serializer/recipe/binding/evaluation and transcendental proof have separate leaves.
+  D70 SizeSet axes awaits .4c.2. G1-0052 f876913 pushed; both CI jobs/all steps succeeded.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats
   require human acts; governance §8 and G3 `.16` own the details.

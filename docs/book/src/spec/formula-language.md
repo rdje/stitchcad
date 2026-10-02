@@ -80,7 +80,7 @@ Formula angle bindings preserve sign and complete turns; equality does not apply
 For example, bound 360 degrees differs from zero and retains a full-turn sweep. Direction fields on
 entities normalize under [units §1.2](units-and-tolerances.md#12-angles-fixed-point-microdegrees).
 The [expert angle annex](../annexes/formula-syntax.md#reference-angle-conversion-and-direction-controls)
-records the D84 ruling and remaining verification; product syntax supplies no numeric binding yet.
+records the verified D84 reference contract and its proof boundary; product numeric binding is pending.
 
 A `point` and an `edge` are values but not numbers: they may be arguments of the geometry selectors
 ([grammar §6.1](formula-language/grammar.md)) and nothing else, because only a drafting operation

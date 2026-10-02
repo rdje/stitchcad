@@ -30,5 +30,5 @@ binding. Signed and multi-turn angles retain the separate D84 rule in `decision_
 The formula chapter/grammar and roadmap adopt this clarification; gate exits and product scope
 stay unchanged. The recording leaf verifies the reference binding boundary. `.3b` verifies146
 independent canonical-node/Decimal controls and twelve compiled actual mutation reds, preserving
-unary identity and the128-bit input boundary; D95 closes. `.3c.2` completes D83’s scoped reference review with four independent families/47 actual
+unary identity and the128-bit input boundary; D95 closes. `G1-SLICE.5a.3b.3b.3c.2` completes D83’s scoped reference review with four independent families/47 actual
 mutation reds and exact restoration. Product numeric normalization, canonical serialization and evaluation remain future G1 work; this decision grants no production signoff.

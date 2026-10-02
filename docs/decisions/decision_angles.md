@@ -29,7 +29,8 @@ including bindings/equality, signed inverse-trig result contracts and full/signe
 G1-SLICE.5a.3b.3c.2 verifies90 independent principal/binding/equality/sweep/replay controls and
 fifteen compiled actual assertion reds, with byte-identical source restoration. The existing42-row
 math oracle/72 angular controls now retain signed inverse outputs while dir stays normalized;
-seven existing angular mutation reds retain conversion/pole proof. D84 final review remains .3c.3.
+seven existing angular mutation reds retain conversion/pole proof. G1-SLICE.5a.3b.3c.3 completes
+the original-obligation review; D84 closes for the received contract/scoped reference repair.
 Numeric normalization, entity integration, binding/evaluation in the product and arbitrary-input
 transcendental/cross-platform certification remain separate G1 obligations. D83 scoped reference
 boundaries are reviewed separately. This ruling grants no production or general numerical signoff.

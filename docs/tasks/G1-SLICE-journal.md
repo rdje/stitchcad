@@ -867,3 +867,77 @@ Corrected status spelling; signatures/enforcement unchanged. Final staged make g
   No arbitrary-input correct rounding/cross-platform/production evaluator certificate.
   Verification: `pending`
   Commit: `pending`
+
+## Signed-angle evidence — preserved from c099aee
+
+### `G1-SLICE.5a.3b.3c.2` — signed principal formula angles
+
+- [x] **REPRODUCE / ISSUE** — signed_angle_contract.py before repair→AssertionError:
+  atan(-1.0) angle315000000 versus expected-45000000, rc=1 (target/g1-0056-before.log).
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual call atan/atan2 applies outer norm_angle to signed
+  rounded helpers. New contract→90 independent principal/binding/equality/sweep/replay controls,
+  0 fail, rc=0; fifteen compiled actual mutations→contract AssertionError, rc=1 each, runner rc=0.
+- [x] **FIX** — remove inverse outer modulo only; retain nearest quantum and normalized dir.
+  Declare principal branches/rounded endpoints/one zero; update three negative oracle rows.
+- [x] **ADDRESSED (verified)** — signed_angle_contract.py→90 independent controls /0 fail, rc=0.
+  Authored integers/Fraction/curated math distinguish signed quadrants/axes, signatures/domain,
+  rounded branch endpoints, raw signed/full/multi-turn bindings/ties/equality/order, full/signed
+  arcs, fractional versus stored input and normalized directions. Actual25-row book replay passes;
+  wrong unsigned Value refuses. Fifteen actual faults produce assertions; source restores exact.
+- [x] **NO REGRESSION** — full structural runner→angle42rows/72controls/math42, rational61/scalar57/
+  binding80/replay19/canonical146, all0 fail, rc=0. Existing angle7/binding12/replay9 actual reds,
+  exact restore, runners rc=0. Language→probes:16 pass /0 fail, rc=0; publication9/ledger9+13/
+  archive28+150 CLI controls pass, rc=0. Complete worked chapter and prior proof tail compare exact.
+- [x] **LOCKSTEP** — function reference/units/annex/decision/tools/live task pointers agree.
+  D84/D100 remain for final .3 review. G1 stays5/18, defects12open/87sealed; product proof separate.
+
+## Verification Log
+
+Signed90/fifteen compiled actual reds; angular72/math42/seven reds; binding80/twelve reds;
+replay19/nine reds; all runners rc=0, actual assertion reds rc=1, exact restoration. All structural
+families green; language16/publication9/ledger9+13/archive28+150 CLI controls, rc=0.
+Publication48chapters/16APIs/1002source/1535rendered links. Retention141logical/16working Markdown/
+7817 decoded lines/608877 decoded bytes/265199 resident bytes, rc=0. Tree10/13/eight/zero gaps;
+glossary310/nine/158/zero drift; feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/
+zero mismatches, rc=0. Old task/ledger payloads exact; original worked chapter byte-identical.
+README reviewed unchanged; focused checks appropriate for actual reference-angle repair.
+Staged make gate→=== all doctrines green ===, rc=0. No Rust/entity integration/production evaluator changed;
+no arbitrary-input transcendental or cross-platform certificate.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3c.2` | `STITCHCAD-G1-0056 (leaf G1-SLICE.5a.3b.3c.2): preserve signed principal formula angles` | 90 independent controls/15 actual reds/exact restore |
+
+## Changelog
+
+- `2026-10-02`: signed inverse-trig/binding/equality/sweep controls complete; final D84 review .3 next.
+- promotion: declined (routine implementation/verification of the director's signed-angle ruling).
+
+## Numeric parent before D100 correction — preserved from c099aee
+
+- ID: `G1-SLICE.5a.3b.3b`
+  Status: `done`
+  Goal: D83 declared length/area/count domains,128-bit canonical literals and i64 numeric bindings with typed operations;
+  finalize boundary checks from complete contracts, not a caller narrowing precondition. D84 signed-angle
+  verification remains separate; scalar repair can proceed under the recorded ruling.
+  Children: .3b.1a D89 public operators; .3b.1b D90 operation context; .3b.1c D91 code-language context;
+  .3b.2 reference scalar domains;
+  .3b.3 reference canonical/binding i64 limits. Each prerequisite is independently committed.
+  Verification: complete scoped D83 review below; four independent families/47 actual reds.
+  Commit: children complete through `STITCHCAD-G1-0054`.
+
+## Complete reference review protocol — completed in G1-0057
+
+  Pre-change review: map D84 sign/turn/equality/binding/principal/dir/sweep obligations to existing
+  signed90/15 actual reds plus angular72/math42/seven reds, binding80 and replay19. Re-run current
+  controls and signed/angular mutations exclusively; prove actual source/setup equal c099aee.
+  Review formula2/4.2, grammar6/6.1, units1.2, angle/literal decisions and all current proof/pending
+  language in annex/tools/task ancestors. Correct D100 adjacent label and ambiguous reviewed-leaf
+  shorthand without changing contracts; preserve exact parent/defect/prior evidence bytes.
+  Close D84 only for received contract/reference obligations; entity integration/product evaluator
+  and arbitrary-input/cross-platform proof remain future. Publish obligation map in existing annex.
+  Focused language/publication/ledger/archive/censuses and staged gate; per-leaf commit before .5a.3c.
+  Verification: completed scoped reference review below; independent controls/actual reds pass.
+  Commit: `STITCHCAD-G1-0057`
