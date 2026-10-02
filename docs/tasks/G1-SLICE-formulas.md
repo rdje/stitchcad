@@ -930,3 +930,101 @@ Current canonical verification remains in [G1-SLICE](G1-SLICE.md).
   Commit: `STITCHCAD-G1-0057`.
 
 [Current product frontier](G1-SLICE.md#current-frontier).
+
+## Normalized arena proof — preserved from b41418d
+
+### `G1-SLICE.5a.3c.3` — immutable normalized expression arena
+
+- [x] **REPRODUCE / ISSUE** — .2 converts one literal view, while the recipe needs all literal inputs
+  retained in an immutable whole graph before serialization. Actual syntax has private flat nodes/
+  edges; new independent reference fixtures establish normalized shape/count/depth before code.
+- [x] **ROOT CAUSE (WHY + WHERE)** — expression.rs keeps raw literals across all structural roles.
+  Normalization must copy every node/edge, not only root/taken branch. Actual reference→24 authored
+  normalized shape/count/depth rows pass, rc=0; product public tests→eight pass, rc=0.
+- [x] **FIX** — separate privately built flat normalized arena; explicit normalize_literals borrows
+  original source, keeps syntax reusable, converts every literal and returns unchanged located errors.
+  Public root/kind/argument views retain arena lifetime/ordered edges; no operator/name/type evaluation.
+- [x] **ADDRESSED (verified)** — eight public contracts include24 shapes/100 nested literal rows/
+  25 book expressions/all input positions/refusals/source/iterator/privacy/small-stack controls, rc=0.
+  Seventeen actual compiled root/name/operator/edge/order/coverage/depth/span/unit/refusal/iterator/
+  Debug faults→assertion reds, rc=101 each, runner rc=0; exact production source restored.
+- [x] **NO REGRESSION** — make check→513 passed, including three privacy-lifetime compile-fail docs
+  and one runnable doc, rc=0; release eight pass, rc=0. WASM three crates compile, rc=0 (compile only).
+  Reference/structural families, language16/publication9 controls pass, rc=0; no recipe execution claim.
+- [x] **LOCKSTEP** — README/availability/language/grammar/API map/index/expert annex/decisions/live/
+  task pointers agree; prior evidence/oldest ledger bytes retained exact. G1 still5/18, defects10open/
+  89sealed; .5a.3c.4 owns coupled review, serializer/binding/evaluation remain separate.
+
+## Verification Log
+
+normalized_expression_reference.py watches24 independent authored rows through the actual book
+reference/context; public formula_normalized_contract.rs consumes them. All100 independent literal
+rows also normalize/refuse nested in product calls. Actual compiled mutation runner requires assertion
+reds and exact restoration. Logs: target/g1-0060-{native,release-confirmed,wasm,structure,language-final,
+publication-final,reds-final}.log, all final producers rc=0. Publication50chapters/18scopedAPIs/
+1020source/1573rendered links. Ledger9 arms/13 pointer controls, archive28 arms/160 CLI controls and retention151
+logical/26 working Markdown/8082 decoded lines/627932 decoded bytes/284254 resident bytes pass,
+rc=0. Tree10lanes/13trees/eight siblings/zero gaps; glossary310/nine/158/zero drift; feature105/29,
+uncertainty133/16/zero unowned and fixture20/four/five/zero mismatches pass, rc=0.
+Initial fixture setup used empty unit context; load_context supplies the actual published unit table.
+Initial binary-operator fault anchor matched builder and view; runner refused before mutation, then
+anchored the builder specifically. Final all17 faults compile and fail public assertions.
+README status only; objective/layout/commands unchanged. Prior protocol/history payloads retained exact.
+Staged make gate→=== all doctrines green ===, rc=0; no project-owned background job remains.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3c.3` | `STITCHCAD-G1-0060 (leaf G1-SLICE.5a.3c.3): retain normalized literal expression arenas` | independent24/nested100/seventeen actual reds/native513 |
+
+## Changelog
+
+- `2026-10-02`: whole immutable normalized syntax arena complete; next coupled normalization review.
+- promotion: declined (routine literal normalization/immutable arena under received D95/D84 contracts).
+
+## Coupled normalization pre-code review — completed in G1-0061
+
+- ID: `G1-SLICE.5a.3c.4`
+  Status: `in_progress`
+  Goal: complete scoped production normalization review against formula2/4.2/4.3, grammar2/2.1/4,
+  numerical input contract and D95/D84; close .5a.3c only after every obligation has concrete proof.
+  Pre-code review protocol: retain prior byte-exact proof/source identities; map spelling/kind/unit,
+  converted reduced128-bit width, shared half-away rounding, length-after-round, source/unary/raw
+  turns, every child/branch/span/count/depth, atomic refusal/privacy/lifetime/flat clone/drop to public
+  controls and actual fault evidence. Re-derive current producers; no evaluator/entity/serializer claim.
+  Add independent Fraction reduction-boundary fixtures for all seven unit multipliers plus bare
+  decimal ratios: powers2 at scales54..63 and powers5 at125..136, checking both sides of denominator
+  width after exact cancellation. Verify actual published factors and valuations <=6; derive134/39/
+  173 refusal/workspace witnesses. New public contract exercises each fixture through individual
+  conversion and a nested whole arena; preserve exact kinds/errors/spans. Four compiled actual early-
+  scale/raw-mantissa/mantissa-cancellation/unit-cancellation faults must fail this new assertion oracle,
+  restore exact source; watch fixture verifier in structural suite. Production implementations unchanged.
+  Run strict native/release/WASM and scoped reference/language/publication/ledger/archive/censuses/gate;
+  publish obligation map in existing expert annex, update live/task parents and retain old evidence
+  exactly within fixed document budgets. Commit before .5a.3d canonical serialization.
+  D101 immediate/P1: publication caught stale-variable index overwrite; root identified in edit,
+  restore committed index plus intended link and verify all chapter/source/render routes before closure.
+  D102 immediate/P2: D101 log matched ## Decisions inside a quoted historical command;
+  record before repair, restore exact D46 bytes and verify distinct heading/defect placement.
+  Verification: `pending`
+  Commit: `pending`
+
+
+## Literal normalization parent — preserved during G1-0061
+
+- ID: `G1-SLICE.5a.3c`
+  Status: `in_progress`
+  Goal: exact bounded literal normalization with typed kind/integer/source and shared rounding;
+  D95 literal magnitude/reduced rational width128 is distinct from bound signed64. Preserve kind
+  and unary syntax, input quantum/scalar boundaries; normalized Angle cannot hold raw sweeps.
+  Children: .1 shared unsigned128 magnitude rounding; .2 exact typed literal normalization;
+  .3 immutable normalized expression arena; .4 coupled normalization review. No evaluation.
+  Literal conversion must reduce exact converted rational before its128-bit width check; scalar
+  length bound follows input rounding. Arbitrarily large raw decimals must not narrow before valid
+  cancellation, and pathological input must not require unbounded workspace. The completed .2 protocol uses bounded exact decimal reduction with no added dependency; whole
+  arena normalization and its coupled review remain .3/.4.
+  Verification: `pending`
+  Commit: `pending`
+
+[Current canonical-expression frontier](G1-SLICE.md#current-frontier).

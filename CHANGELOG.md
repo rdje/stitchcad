@@ -110,6 +110,22 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part55.md`](docs/history/stitchcad-changelog-part55.md) | STITCHCAD-G1-0037 | 15 lines, 1284 bytes, `sha256:49280c1f…` |
 
+| [`stitchcad-changelog-part56.md`](docs/history/stitchcad-changelog-part56.md) | STITCHCAD-G1-0038 | 14 lines, 1147 bytes, `sha256:8f2b2b4f…` |
+
+## STITCHCAD-G1-0061 - coupled normalization review (leaf `G1-SLICE.5a.3c.4`)
+
+Production literal/arena input normalization now has a complete scoped obligation map. Independent
+Fraction176 reduction-frontier cases exercise valid large raw mantissas after unit cancellation and
+located reduced-width refusals through both individual and nested whole APIs:103 accepted/73 refused.
+Four actual compiled early-scale/raw-mantissa/cancellation assertion reds pass with exact restoration.
+Production implementations retain exact prior identities; no language or execution behavior changes.
+
+Strict native514, release14 public contracts, three WASM builds and reference/book controls pass.
+D101 stale-variable topic index overwrite and D102 misplaced defect entry are diagnosed, owned and
+fixed; publication/exact historical-record checks verify repairs. Book/grammar/decisions/live/task
+pointers agree and old payloads remain exact. .5a.3c closes for input normalization; next .5a.3d canonical
+identity. G1 stays5/18; defects10open/91sealed. Ordered recipes/binding/evaluation remain future work.
+
 ## STITCHCAD-G1-0060 - immutable normalized expression arenas (leaf `G1-SLICE.5a.3c.3`)
 
 Whole syntax arenas now explicitly normalize every literal into separate immutable source-borrowing
@@ -370,18 +386,3 @@ contracts pass. Book/ledger/archive/censuses and staged doctrines verify the rec
 Completed .2a evidence and oldest lessons/ledger payloads retain exact predecessor bytes. Technical
 proof stays in the annex; progressive learning, glossary and index remain intact. Next .2b.2 product
 expression trees; no product parsing/evaluation certification. D70 axes ruling remains unanswered.
-
-## STITCHCAD-G1-0038 - reference structural bounds include all function arguments (leaf `G1-SLICE.5a.2a`)
-
-D75's reference walkers omitted call argument lists, falsely accepting 258-node/17-level fixtures.
-Complete iterative semantic traversal and early conditional-depth refusal now preserve the unchanged
-256-node/16-level limits. Sixteen direct controls/refusals, two copied-book refusals and four actual
-guard mutations verify measured sizes and byte-identical restoration. This repairs a book oracle;
-product expression parsing/evaluation remain pending, and the lexer behavior is unchanged.
-
-D77's sibling-owner matcher now accepts section fragments while requiring the exact target; nine
-coverage probes retain unlinked/wrong-target refusals. Full 25 suites/book/ledger/archive checks pass.
-Completed lexical contracts/journal and older
-ledger payloads preserve predecessor bytes. Book annex/reference scope, toolbox and live/task records
-align. D76 malformed reference identifiers/missing unit separator is owned next by .5a.2b.1 before the
-product parser; D70 axes still requires a ruling. G1 remains 5/18; no production-readiness claim.

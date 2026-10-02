@@ -480,6 +480,8 @@ D85/D86/D87 are sealed in [`stitchcad-defects-part21.md`](../history/window2.md#
 G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exact tan pole refusal;
 42 rows/72 controls agree with an independent standard-library math oracle, seven actual reds restore.
 
+
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a
@@ -767,3 +769,9 @@ G1-SLICE.5a.3b.3c.3 completes received signed-angle/scoped reference obligations
 actual reds, angular72/math42/seven reds and exact source restoration. Canonical literals128-bit
 versus numeric bindings-i64 also reaches the corrected adjacent parent label. Original descriptions
 and prior parent/evidence bytes remain unchanged; product integration/evaluation stay future work.
+
+D101/D102 are sealed in [`stitchcad-defects-part33.md`](../history/stitchcad-defects-part33.md).
+G1-SLICE.5a.3c.4 restores the topic index from exact HEAD plus the intended review link; publication
+50 chapters/49 indexed chapter routes/1026 source/1580 rendered links and nine refusal controls pass,
+rc=0. D46's quoted historical command is byte-identical to HEAD again; actual Decisions heading and
+separate defect entries were verified before sealing, rc=0. Both editing mistakes are fixed.

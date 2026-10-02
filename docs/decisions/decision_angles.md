@@ -32,7 +32,8 @@ math oracle/72 angular controls now retain signed inverse outputs while dir stay
 seven existing angular mutation reds retain conversion/pole proof. G1-SLICE.5a.3b.3c.3 completes
 the original-obligation review; D84 closes for the received contract/scoped reference repair.
 Individual product angle literals retain complete turns under G1-SLICE.5a.3c.2. Whole-expression literal
-normalization under .5a.3c.3 preserves unary sign and every angle child. Entity integration,
+normalization under .5a.3c.3 preserves unary sign and every angle child; .5a.3c.4 completes the
+coupled normalization review. Entity integration,
 binding/evaluation in the product and arbitrary-input
 transcendental/cross-platform certification remain separate G1 obligations. D83 scoped reference
 boundaries are reviewed separately. This ruling grants no production or general numerical signoff.

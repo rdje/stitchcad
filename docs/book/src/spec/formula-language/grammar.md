@@ -129,9 +129,10 @@ numeric values, not for each literal child. Unary minus remains an operator: the
 microdegree angle uses a positive 2^63 literal below that operator. It can bind to signed i64 MIN
 without sign folding. Literal conversion/rounding and scalar domains still apply ([contract §4.2](../formula-language.md)).
 The director’s D95 ruling is recorded in `docs/decisions/decision_literals.md`; reference
-node-boundary reference verification is recorded in the [expert annex](../../annexes/formula-syntax.md#reference-canonical-literal-width-and-identity-controls). Individual product literals now have
+node-boundary verification is recorded in the [expert annex](../../annexes/formula-syntax.md#reference-canonical-literal-width-and-identity-controls). Individual product literals now have
 [explicit input normalization](../../annexes/formula-literals.md), including whole normalized syntax
-arenas. Canonical serialization remains later work.
+arenas. The [coupled product review](../../annexes/formula-literals.md#coupled-normalization-review)
+completes normalization prerequisites; canonical serialization remains later work.
 
 **A formula's identity is its canonical form.** `2.5 cm` and `25 mm` canonicalize to one node
 (`length:25000`), so they are one formula: a diff, a hash and a golden compare canonical forms and

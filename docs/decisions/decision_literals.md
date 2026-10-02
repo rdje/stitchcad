@@ -34,4 +34,6 @@ unary identity and the128-bit input boundary; D95 closes. `G1-SLICE.5a.3b.3b.3c.
 mutation reds and exact restoration. Individual product literals now convert under G1-SLICE.5a.3c.2 with five public contracts/100
 independent Fraction rows/thirteen actual compiled assertion reds. Whole-expression literal normalization now has a separate immutable arena under .5a.3c.3,
 verified by eight public contracts/24 independent shape rows/seventeen actual compiled assertion reds.
+G1-SLICE.5a.3c.4 completes the coupled normalization review, adding176 independent Fraction frontier
+rows/four actual compiled assertion reds while production implementations retain exact prior bytes.
 Canonical serialization and evaluation remain future G1 work; this decision grants no production signoff.

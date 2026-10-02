@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — couple normalization proof with valid reduction frontiers
+
+- Full scoped obligation map connects spelling/kind/unit/width/quantum/scalar/source/unary/turns/
+  all structural roles/privacy/lifetimes/limits to public tests and exact previously verified sources.
+  Independent Fraction176 rows cover multiplier valuations6 and denominator frontiers:103 accept,
+  73 refuse; degree scale133 is valid while134 refuses. Bounds39/134/173 are independently derived.
+- New public contract checks each row individually and nested in a whole arena, including located
+  typed refusal. Four compiled actual early-scale/raw-mantissa/cancellation faults fail assertions and
+  restore exact bytes. Current strict native514/release14/WASM3 and structural/book controls pass.
+- D101: my stale edit variable replaced the topic index; restore exact HEAD plus intended link.
+  D102: defect insertion matched a heading inside an old quoted command; restore exact D46 and use
+  the anchored section. Publication checks and exact record comparison verify both repairs.
+- Input normalization .5a.3c closes only within its scoped contract; canonical serializer .3d is next.
+  Source implementations and earlier evidence remain exact. No execution, direction or release claim.
+- promotion: declined (routine coupled proof and correction of two local editing mistakes).
+
 ## _(2026-10-02)_ — normalize all inputs while retaining an immutable syntax graph
 
 - Whole-arena conversion copies every validated flat node/edge and uses the completed literal helper.
@@ -40,35 +56,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   task/ledger bytes remain exact. Whole normalized arena, identity serialization, bindings and
   execution remain separate leaves. Next .5a.3c.3; G1 stays5/18.
 - promotion: declined (routine exact bounded input conversion under the received D95/D84 contracts).
-
-## _(2026-10-02)_ — unsigned canonical magnitudes need a full-width rounding result
-
-- D95 permits128-bit positive literal children before signed binding. Existing signed rounding
-  correctly returns i64; add a separate unsigned result sharing the same private magnitude rule.
-  Compare r >= d-r so full-u128 remainders cannot overflow; preserve caller operation and signed
-  MIN/overflow/sign reconstruction. No new dependency, scalar/domain rule or formula execution.
-- Five public contracts consume138 Decimal120-digit oracle rows and check wide/tie/zero/signed
-  boundaries. Nine actual compiled debug faults and one release wrapped-remainder fault fail
-  assertions, restore exact bytes; all five existing signed faults remain discriminating.
-- Strict native494 (units46), release signed/unsigned public tests and three real WASM builds pass.
-  Book adds a progressive unit API/example and indexed expert proof annex; language/publication pass.
-  Literal normalization/arena/serializer/binding/evaluation remain separate product leaves.
-- Prior protocol/checklist/oldest ledger bytes retain exact histories. Correct another existing D34
-  stale execution-order pointer; PLANNING.5 still owns derived synchronization.
-- promotion: declined (routine full-width rounding prerequisite under the received D95 contract).
-
-## _(2026-10-02)_ — close scoped reference obligations without claiming production execution
-
-- D84 original sign/turn/binding/equality consequences map to signed90/15 actual reds and angular72/
-  math42/seven reds, plus the independent binding and six-kind replay controls. Re-runs pass;
-  evaluator/setup/contract/oracle sources remain exact G1-0056 bytes. The annex makes the map explicit.
-- D100 corrects the adjacent children label missed by D97's Goal correction:128-bit literals and
-  i64 numeric binding storage are distinct. Original parent and both defect records remain exact.
-  Current pending/proof language is reconciled in tools/book/decisions/task ancestors and pointers.
-- D84/reference parents close; product canonical literals, serializer, recipe/binding/evaluation,
-  entity integration and arbitrary-input/cross-platform proof remain separately owned. No runtime
-  source changed; the next frontier is production numeric normalization .5a.3c.
-- promotion: declined (routine scoped obligation review and alignment under received decisions).
 
 # Sealed archive — earlier lessons
 
@@ -173,3 +160,7 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part58.md`](docs/history/stitchcad-devnotes-part58.md) | six-kind replay lesson | 15 lines, 1327 bytes, `sha256:f5820b9c…` |
 
 | [`stitchcad-devnotes-part59.md`](docs/history/stitchcad-devnotes-part59.md) | signed principal angle lesson | 15 lines, 1367 bytes, `sha256:19cb42c9…` |
+
+| [`stitchcad-devnotes-part60.md`](docs/history/stitchcad-devnotes-part60.md) | scoped reference review lesson | 12 lines, 1063 bytes, `sha256:29112bc9…` |
+
+| [`stitchcad-devnotes-part61.md`](docs/history/stitchcad-devnotes-part61.md) | unsigned magnitude rounding lesson | 15 lines, 1322 bytes, `sha256:90999a24…` |

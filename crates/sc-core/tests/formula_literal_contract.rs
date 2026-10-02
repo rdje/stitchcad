@@ -177,3 +177,94 @@ fn huge_spelling_refuses_or_reduces_without_new_language_caps() {
         matches!(value(&huge),Err(error) if matches!(error.rule(),R::RationalWidth{component:C::Numerator,..}))
     );
 }
+
+#[test]
+#[allow(clippy::expect_used)] // Fixture shape/data failures and unexpected refusals are assertions.
+fn coupled_reduction_frontier_preserves_valid_inputs_and_located_width_refusals() {
+    use sc_core::recipe::FormulaNormalizedNodeKind as NK;
+    let rows = include_str!(
+        "../../../docs/tasks/artifacts/formula_structure/reduction_boundary_cases.tsv"
+    );
+    let (mut count, mut accepted, mut refused) = (0, 0, 0);
+    for row in rows
+        .lines()
+        .filter(|line| !line.is_empty() && !line.starts_with('#'))
+    {
+        let cells: Vec<_> = row.split('\t').collect();
+        let source = *cells.first().expect("source");
+        let kind = *cells.get(1).expect("kind");
+        let want = *cells.get(2).expect("verdict");
+        let individual = value(source);
+        let nested = format!("if(a, 1, probe({source}))");
+        let syntax = E::parse(&nested).expect("valid input spelling");
+        let whole = syntax.normalize_literals();
+        if want == "width" {
+            assert!(
+                individual.is_err(),
+                "assertion: exact width must refuse {source}"
+            );
+            assert!(
+                whole.is_err(),
+                "assertion: every branch input must refuse {source}"
+            );
+            for error in [
+                individual.expect_err("asserted refusal"),
+                whole.expect_err("asserted refusal"),
+            ] {
+                assert_eq!(
+                    error.rule(),
+                    R::RationalWidth {
+                        component: C::Denominator,
+                        measured_bits_at_least: 129
+                    }
+                );
+                assert_eq!(error.diagnostic_code(), "formula_domain");
+                assert_eq!(error.rational_bit_bound(), Some(128));
+            }
+            let error = syntax
+                .normalize_literals()
+                .expect_err("assertion: repeat refusal");
+            assert_eq!(
+                nested.get(error.span().start()..error.span().end()),
+                Some(source)
+            );
+            refused += 1;
+        } else {
+            assert!(
+                individual.is_ok(),
+                "assertion: reduced input must remain valid {source}: {individual:?}"
+            );
+            assert!(
+                whole.is_ok(),
+                "assertion: nested reduced input must remain valid {source}: {whole:?}"
+            );
+            let (actual_kind, magnitude) = individual.expect("asserted acceptance");
+            assert_eq!((actual_kind.token(), magnitude), (kind, 0));
+            let whole = whole.expect("asserted acceptance");
+            let branch = match whole.root().kind() {
+                NK::Conditional { else_branch, .. } => Some(else_branch),
+                _ => None,
+            }
+            .expect("assertion: else branch retained");
+            let child = match branch.kind() {
+                NK::Call { mut arguments, .. } => arguments.next(),
+                _ => None,
+            }
+            .expect("assertion: nested call child retained");
+            let literal = match child.kind() {
+                NK::Literal(literal) => Some(literal),
+                _ => None,
+            }
+            .expect("assertion: literal retained");
+            assert_eq!((literal.kind().token(), literal.magnitude()), (kind, 0));
+            assert_eq!(literal.span(), child.span());
+            assert_eq!(
+                nested.get(child.span().start()..child.span().end()),
+                Some(source)
+            );
+            accepted += 1;
+        }
+        count += 1;
+    }
+    assert_eq!((count, accepted, refused), (176, 103, 73));
+}

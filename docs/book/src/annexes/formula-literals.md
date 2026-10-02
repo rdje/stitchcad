@@ -131,7 +131,7 @@ if let FormulaNormalizedNodeKind::Binary { left, right, .. } = normalized.root()
 Every semantic node, operator, name, ordered child, source span and depth survives. Literals use the
 individual conversion above. Unary minus stays a node; the positive 2^63 angle child is retained.
 Grouping changes spans rather than node counts, and a square's exponent is operator payload.
-Root/child indices are private; callers cannot forge handles or join different arenas. Views cannot
+Root/child indices are private; callers cannot forge stored arena handles or retarget its edges. Views cannot
 outlive their normalized arena. Debug of the arena, node view and argument iterator omits customer
 source. Explicit kind inspection exposes borrowed names and literal read access deliberately.
 
@@ -167,6 +167,55 @@ validated syntax graph, and per-literal decimal workspace retains the bound desc
 Seventeen actual compiled faults alter root/name/unary/square/operator identity, child/branch order,
 call coverage, depth/span, literal unit/refusal, iterator behavior or Debug privacy. They must fail
 public assertions; the exclusive runner restores exact source. The structural suite watches the
-independent shape verifier. G1-SLICE.5a.3c.3 owns this whole-arena stage; .4 owns its coupled review.
+independent shape verifier. G1-SLICE.5a.3c.3 owns this whole-arena stage; .4 completes its coupled review below.
 Canonical S-expression serialization, ordered statements, name/type/binding/evaluation, geometry and
 command/API/MCP integration remain later work. Native/release/WASM checks retain their stated scope.
+
+## Coupled normalization review
+
+G1-SLICE.5a.3c.4 closes the scoped production normalization prerequisites. It checks the
+[language's input and structural rules](../spec/formula-language.md#42-exact-arithmetic-and-the-two-places-a-value-rounds),
+[literal/unit/canonical rules](../spec/formula-language/grammar.md#2-literals-and-their-units),
+[shared rounding](numeric-rounding.md), and the D95/D84 width/angle rulings against actual public APIs.
+
+| Obligation | Current product evidence |
+| --- | --- |
+| Closed spelling/unit vocabulary and separate unary syntax | Existing lexical/expression contracts and privacy/lifetime docs |
+| Integer count versus decimal/percent ratio; exact unit factors | Original 100 independent Fraction rows and individual/nested public tests |
+| Reduced converted rational width before input rounding | Width/cancellable-mantissa controls; new 176 reduction-frontier rows below |
+| One input rounding; sub-quantum zeros; scalar length after rounding | Public literal/Fraction controls and shared unsigned/signed rounding contracts |
+| Positive 128-bit child before signed binding; raw angle turns | Wide/unary/turn shape controls; bindings remain a separate future boundary |
+| Source spelling/unit/span/kind and all ordered structure | 24 independent shape rows, 25 book expressions, public source/iterator/clone tests |
+| Every call argument and both branches; atomic located refusal | Nested 100-row controls and all-position refusal/repeat tests |
+| Private storage and source/arena lifetimes; text-free Debug | Compile-fail doctests and public source/privacy controls |
+| Existing 256-node/16-if bounds; flat conversion/clone/drop | Boundary/50,000-grouping controls on a 64 KiB stack |
+| Existing bounds reject no valid long input | Fraction reduction-frontier controls and bounded-workspace witnesses |
+
+The reduction-frontier producer checks all seven unit multipliers and bare decimal ratios. Powers
+of 2 at fractional scales 54–63 and powers of 5 at scales 125–136 isolate the two uncancelled
+prime factors. Fraction computes each exact reduced value independently of decimal long division.
+Of 176 rows, 103 are valid canonical zeros and 73 exceed the denominator width. The new public
+contract checks each row individually and inside a call in a conditional's else branch, including
+original error spans and repeated refusal. The angle cases accept scale 133 and refuse scale 134.
+
+The producer also verifies the actual published unit factors, maximum prime valuations of six,
+39 digits for u128 MAX, and the conservative scale/workspace witnesses 134/173. Four compiled
+actual faults prematurely restrict scale/raw digits or remove mantissa/unit cancellation; each must
+fail this new public assertion oracle. The runner restores exact production source. Existing
+rounding, individual-conversion and arena mutation families retain their separate proof scopes.
+
+```bash
+cargo test -p sc-core --test formula_literal_contract coupled_reduction_frontier_preserves_valid_inputs_and_located_width_refusals -- --exact
+python3 -I -B docs/tasks/artifacts/formula_structure/reduction_boundary_reference.py
+bash docs/tasks/artifacts/formula_structure/run_reduction_boundary_mutations.sh
+```
+
+The structural suite watches the new independent producer. Production rounding, conversion and
+arena sources remain byte-identical to G1-0058/G1-0059/G1-0060. Six current individual-literal
+contracts include the original five plus this coupled check; the eight arena contracts are unchanged.
+These controls and the bounded arithmetic argument establish the stated normalization scope.
+They provide no correctly rounded arbitrary transcendental or cross-platform numerical certificate.
+
+Canonical serialization is G1-SLICE.5a.3d. Ordered statements, names/types, numeric binding/evaluation,
+entity direction integration, geometry, storage and command/API/MCP execution remain later work.
+A normalized graph contains literal inputs and unevaluated operators; it is not an executable recipe.
