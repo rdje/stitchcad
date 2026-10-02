@@ -110,4 +110,29 @@ bash docs/tasks/artifacts/formula_structure/run_formula_structure_mutations.sh
 The first command runs 16 structural controls/refusals and two copied-book refusal cases. The second
 runs alone: it disables four actual reference traversal/depth guards, requires assertion failures,
 and restores exact source bytes. Existing formula-language probes still verify chapter/fixture/value
-agreement. G1-SLICE.5a.2b owns product expression trees after this repaired prerequisite.
+agreement. G1-SLICE.5a.2b.2 owns product expression trees after the reference prerequisites.
+
+## Reference machine-input controls
+
+The book's reference input parser now refuses malformed lower-snake identifiers, non-ASCII machine
+source, keywords used as ordinary names/declaration names/call names, and empty call argument lists.
+`if(a, b, c)` retains its special three-part grammar; `if_else(a)` is an ordinary syntactic call.
+These controls do not grant permission to call an unknown function or rebind a reserved input.
+
+A numeric token followed by a known unit must have exactly one original ASCII space between them:
+`1 cm` is valid; `1cm`, `1  cm` and `1\tcm` refuse formula_parse. Other general ASCII whitespace
+remains valid between tokens. Source positions survive filtering, so assertion splitting cannot
+silently repair an invalid unit separator. This repairs D76; it changes no normative language rule.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_formula_input_mutations.sh
+```
+
+The suite also runs 130 machine-input controls using the actual reference and all seven canonical
+unit-table entries, plus three copied-book refusal cases. The mutation command runs alone, disables
+nine actual input guards, requires assertion failures and restores exact source bytes. Existing
+structural and numerical chapter checks retain their separate scope. The reference is a curated
+book instrument; these results are not arbitrary-input production safety, full binding/type checking,
+complete command diagnostics or a product parsing/evaluation API. Product AST work belongs to
+G1-SLICE.5a.2b.2; canonical recipes and later checker/evaluator owners remain pending.

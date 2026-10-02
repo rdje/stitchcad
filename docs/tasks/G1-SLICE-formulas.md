@@ -60,4 +60,66 @@ exact committed text; the current frontier and verification/commit journal remai
   predecessor publication contract/checklist and oldest ledger payloads preserved; no cap raised.
   D70 required axes ruling stays pending. G1 remains 5/18 top-level leaves with .4/.5 structurally partial.
 
+## Structural reference contract and evidence — preserved from 9d26ddc
+
+- ID: `G1-SLICE.5a.2a`
+  Status: `done`
+  Goal: repair D75 reference-oracle traversal of all call arguments and conditional-depth refusal.
+  Reproduce: repo-local copied-book diagnostic replaces only dart_count's expression, keeping value 1;
+  abs(1 + 128 zero terms) has 258 semantic nodes and abs-wrapped 17-level if has depth 17. Both
+  `FORMULA_BOOK=target/formula-structural-diagnostic/<case>/src run_formula_language_census.sh`
+  return rc=0, measured seven nodes/zero depth, zero mismatches. Expression bounds falsely certify.
+  Pre-edit protocol: explicit child traversal includes call argument lists and every static if branch.
+  Count expression nodes/depth iteratively without recursive walker stack; grouping/exponent payloads
+  retain original semantic-node definition. Refuse max_if_depth with formula_domain before inference/
+  evaluation, measured depth and unchanged bound. Existing per-expression node refusal stays strict.
+  Add paired controls just below/at bounds and actual over-bound forms, including ifs inside ordinary
+  calls and untaken branches. Count/depth probes independently construct fixture sizes and verify exact
+  typed domain signatures, not failure on unrelated values/vocabulary/margins. Actual guard mutations
+  distinguish both child walkers and early depth refusal, restoring original bytes. Register durable
+  root-cause diagnostic/toolbox; update live/book/roadmap-owned limits and scope, retain lexer behavior.
+  D77 milestone prerequisite: sibling-owner census rejects a valid .md#fragment link as orphan;
+  recognize optional fragments without admitting different target names; add paired green/red probes.
+  D76 malformed reference names/unit gap is owned next by .2b.1 before product parser implementation.
+  This fixes the reference instrument, not the product evaluator or a declaration of G1 completion.
+  Preserve completed lexical contract/checklist exactly if main task health needs partition; roll live
+  ledgers at health without changing caps. Focused checks, full reference suite and commit before .2b.
+  Verification: 16 structural controls/refusals plus two copied-book refusals; four actual guard reds
+  and exact restoration; tree nine, reference language 15, full 25 suites green.
+  Commit: `STITCHCAD-G1-0038` (this recording commit).
+
+### `G1-SLICE.5a.2a` — complete reference structural bounds and owned evidence links
+
+- [x] **REPRODUCE / ISSUE** — real copied-book dart_count forms preserve value 1 but exceed
+  256 nodes/16 if levels; old census returns rc=0, measured seven nodes/zero depth/zero mismatches.
+  Full milestone initially fails the new evidence sibling's anchored link as ORPHAN.
+- [x] **ROOT CAUSE (WHY + WHERE)** — copied-book diagnostic under target/formula-structural-diagnostic
+  → both call_nodes/call_if_depth rc=0, although independently constructed shapes have 258 nodes/
+  17 levels. count_nodes/if_depth only visited tuple children, skipping call arguments stored in lists;
+  if depth was only checked in aggregate L8. `make probes` → tree 5 pass/2 fail, overall rc=2;
+  `run_tree_coverage_census.sh` owner regex demands .md immediately followed by closing parenthesis,
+  excluding the actual .md#fragment link. D75/D77 are instrument defects, not missing product evaluation.
+- [x] **FIX** — explicit semantic children include all call arguments/if branches; iterative node/depth
+  walkers count nodes without list/group/exponent payload inflation. Early measured depth refusal retains
+  formula_domain and unchanged bounds. Reference controls load actual definitions, not a copied parser.
+  Task owner matching permits an optional fragment with exact filename; paired target controls retain
+  orphan refusals. Completed lexical contract/checklist and historical journal preserve predecessor bytes.
+- [x] **ADDRESSED (verified)** — `run_formula_structure_probes.sh` → 16 pass/0 fail plus copied-book
+  two pass/0 fail, rc=0: 256 nodes/16 levels accepted, 257/258 nodes and 17 levels refused with exact
+  measured domain signatures. Four actual reference guard mutations yield AssertionError/rc=1 and
+  byte-identical source restoration, runner rc=0. Tree coverage probes → nine pass/0 fail, rc=0;
+  fragment control passes while different target and unlinked siblings refuse. D75/D77 descriptions seal.
+- [x] **NO REGRESSION** — `CARGO_HOME="$PWD/target/cargo-home" TMPDIR="$PWD/target/scratch" make probes`
+  → 25 suite(s) green, rc=0; reference language 15, publication nine, ledger nine, archive 28 pass;
+  glossary 310 terms/9 parts/158 tokens, tree 10 lanes/13 trees/8 siblings/zero gaps. Warning-free book:
+  48 chapters/15 APIs, 992 source/1508 rendered links. `git diff --name-only -- crates` is empty, rc=0;
+  native/WASM behavior stays the strict 454-test baseline at 60c7305. Staged `make gate` → all
+  doctrines green, rc=0, after adding journal preservation boxes and the exact decline token.
+  No new runtime/remote-CI claim.
+- [x] **LOCKSTEP** — node/depth proof scope and reproduction commands are in the expert syntax annex;
+  learner progression, glossary/index and normative caps remain unchanged. No product expression tree,
+  evaluation or arbitrary-input reference-parser safety is claimed. D76 names/unit-gap debt is owned
+  next by .2b.1; D70 required axes ruling stays unanswered. G1 remains 5/18 top-level. Live defect census
+  re-derived as 11 open/65 sealed; journal/oldest live payloads retain exact predecessor bytes.
+
 Further syntax work remains owned by the parent frontier.

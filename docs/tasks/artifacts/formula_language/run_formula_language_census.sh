@@ -279,9 +279,19 @@ class Evaluator:
         self.max_nodes = self.max_bits = self.max_if = 0
 
     TOK = re.compile(r"""(?P<cmp>==|!=|<=|>=|<|>)|(?P<op>[-+*/^=(),:])|(?P<num>\d+\.\d+|\d+)
-                       |(?P<str>"[^"]*")|(?P<id>[A-Za-z_][A-Za-z0-9_]*)|(?P<sp>[ \t]+)|(?P<bad>.)""", re.X)
+                       |(?P<str>"[^"]*")|(?P<id>[A-Za-z_][A-Za-z0-9_]*)|(?P<sp>[ \t\n\r\f\v]+)|(?P<bad>.)""", re.X)
+
+    @staticmethod
+    def _identifier(text, allow_keyword=False):
+        if not re.fullmatch(r"[a-z][a-z0-9]*(?:_[a-z0-9]+)*", text):
+            raise FErr("formula_parse", "identifier %r violates lower-snake spelling" % text)
+        if not allow_keyword and text in {"let", "assert", "if"}:
+            raise FErr("formula_parse", "keyword %r is not an identifier here" % text)
+        return text
 
     def tokenize(self, src):
+        if not src.isascii():
+            raise FErr("formula_parse", "machine syntax must be ASCII")
         raw, i = [], 0
         while i < len(src):
             m = self.TOK.match(src, i)
@@ -293,13 +303,16 @@ class Evaluator:
                 raise FErr("formula_parse", "character %r is not in the grammar" % text)
             if kind == "str":
                 raise FErr("formula_parse", "the language has no text value (%s)" % text)
+            if kind == "id":
+                self._identifier(text, allow_keyword=True)
             raw.append((kind, text, m.start()))
-        # the one-space rule between a number and its unit (grammar §2)
-        for k in range(len(raw) - 2):
-            if raw[k][0] == "num" and raw[k + 1][0] == "sp" and raw[k + 2][0] == "id" \
-               and raw[k + 2][1] in self.units and raw[k + 1][1] != " ":
-                raise FErr("formula_parse", "a literal's unit follows it with exactly one space")
         kept = [t for t in raw if t[0] != "sp"]
+        # Inspect original source gaps, including absent whitespace, before any source respelling.
+        for left, right in zip(kept, kept[1:]):
+            if left[0] == "num" and right[0] == "id" and right[1] in self.units:
+                gap = src[left[2] + len(left[1]):right[2]]
+                if gap != " ":
+                    raise FErr("formula_parse", "a literal's unit follows it with exactly one space")
         return [(k, t) for k, t, _ in kept], [s for _, _, s in kept]
 
     def parse(self, src):
@@ -366,6 +379,8 @@ class Evaluator:
         kind, text = self.peek()
         if kind == "id" and self.peek(1)[1] == "(":
             name = self.take()[1]
+            if name != "if":
+                self._identifier(name)
             self.take()
             args = self.p_args()
             if name == "if":
@@ -378,7 +393,7 @@ class Evaluator:
     def p_args(self):
         args = []
         if self.peek()[1] == ")":
-            self.take(); return args
+            raise FErr("formula_parse", "call arguments require at least one expression")
         while True:
             args.append(self.p_expr())
             if self.peek()[1] == ",":
@@ -411,6 +426,7 @@ class Evaluator:
             ukind, factor = self.units[unit]
             return ("lit", ukind, value * factor)
         if kind == "id":
+            self._identifier(text)
             self.take()
             return ("name", text)
         raise FErr("formula_parse", "unexpected %r" % text)
@@ -702,7 +718,7 @@ class Evaluator:
         head = self.peek()[1]
         if head == "let":
             self.take()
-            name = self._want("id")
+            name = self._want_identifier()
             self._want_op(":")
             kind = self._want("id")
             if kind not in self.bindable:
@@ -720,7 +736,7 @@ class Evaluator:
             return ("let", name, kind, val, node)
         if head == "assert":
             self.take()
-            name = self._want("id")
+            name = self._want_identifier()
             self._want_op(":")
             tol_name = self._want("id")
             if tol_name not in self.reserved:
@@ -748,6 +764,9 @@ class Evaluator:
         if k != kind:
             raise FErr("formula_parse", "expected %s and found %r" % (kind, text))
         self.take(); return text
+
+    def _want_identifier(self):
+        return self._identifier(self._want("id"))
 
     def _want_op(self, op):
         text = self.peek()[1]

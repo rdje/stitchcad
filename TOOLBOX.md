@@ -117,3 +117,8 @@ Formula structural controls: `bash docs/tasks/artifacts/formula_structure/run_fo
 loads the actual reference definitions and checks independently built node/depth boundary fixtures plus
 copied-book refusals. `run_formula_structure_mutations.sh` in that directory disables four actual
 reference guards and restores exact bytes; run alone. This is reference evidence, not a product parser.
+
+Reference input parity: the structural suite also runs 130 spelling/keyword/unit-gap/argument controls
+and three copied-book refusals. `bash docs/tasks/artifacts/formula_structure/run_formula_input_mutations.sh`
+disables nine actual input guards, requires assertion reds and restores exact source bytes. Run alone;
+no overlapping reference/probe/build/gate/commit. This verifies curated reference input, not product parsing.

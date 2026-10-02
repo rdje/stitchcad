@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — original input gaps and keyword positions are grammar evidence
+
+- D76's tokenizer accepted broad word captures and inspected a three-token whitespace pattern;
+  absent whitespace escaped the check. Parse roles also admitted bare/declaration keywords and empty
+  call arguments. Shared private spelling/keyword checks and original-source gap slices repair these
+  paths. Whole-source ASCII preflight precedes capture; all general ASCII whitespace remains valid.
+- Direct controls derive all seven unit factors from the canonical table and load the actual reference,
+  rather than reimplementing parsing. Positive and negative roles, spacing, call shapes and original
+  positions are covered: 130 pass. Three real copied-book edits refuse by named grammar signature.
+- Nine actual guards disabled individually produce assertion reds and exact restoration. Structural
+  16+2 controls, language 15 probes and 20 unchanged Rust machine-name/lexer contracts stay green.
+  This is reference input-shape evidence, not complete binding/type/evaluation or product parser proof.
+- Completed structural protocol/checklist moves with exact predecessor bytes. Oldest live payloads
+  seal at health without raising caps. Expert details stay in the annex; next .5a.2b.2 owns product ASTs.
+- promotion: declined (routine reference repair; normative grammar and canonical ADR-0003 unchanged).
+
 ## _(2026-10-02)_ — structural measurement must visit call argument lists
 
 - D75's reference AST stores ordinary call arguments in lists. Tuple-only walkers skipped all of
@@ -94,20 +110,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   checks pass. Completed observations preserve predecessor evidence; MTM/axes/breaks remain owned.
 - promotion: declined (routine current-reference/coverage implementation; book/task own the contract).
 
-## _(2026-10-02)_ — chart correspondence retains authored and generated measurement roles
-
-- An authored observation pins the member/set revision, named tables and two garment bindings.
-  Tables validate current measurement metadata; observation bindings also refuse explicit table
-  retargeting from transferring old intent. Selected-role queries do not certify the other role;
-  declaration/numeric queries validate both. Same-label/member or same-content/table peers never substitute.
-- Design input POMs identify logical quantities, not regenerated geometry results. Base authored
-  inputs may serve both roles without duplicating scalar/state. G3 still creates distinct generated
-  measurements and proves physical equivalence; mapping provenance alone cannot establish that truth.
-- Sixteen contracts/privacy and eight actual assertion reds verify domains/currentness/identity;
-  restored strict 403 tests, WASM/book and focused censuses pass. Unknown/derived values remain readable
-  but refuse numeric defaults. Completed membership retains exact predecessor evidence; rolling seals
-  preserve historical bytes. D70 axes ruling remains independent and pending; .3b coverage follows.
-- promotion: promoted by `decision_size-set-ownership.md`'s chart observations section.
 
 
 
@@ -177,3 +179,4 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part36.md`](docs/history/stitchcad-devnotes-part36.md) | per-POM Ease query lesson | 13 lines, 1196 bytes, `sha256:f0b78fd7…` |
 
 | [`devnotes-part37.md`](docs/history/stitchcad-devnotes-part37.md) | membership/Ease review lessons | 21 lines, 1781 bytes, `sha256:6a76a906…` |
+| [`devnotes-part38.md`](docs/history/stitchcad-devnotes-part38.md) | chart correspondence lesson | 14 lines, 1281 bytes, `sha256:453f9677…` |

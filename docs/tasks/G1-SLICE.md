@@ -580,34 +580,11 @@ metadata signoff unchanged; the named table slice follows.
   Verification: `pending`
   Commit: `pending`
 
-- ID: `G1-SLICE.5a.2a`
-  Status: `done`
-  Goal: repair D75 reference-oracle traversal of all call arguments and conditional-depth refusal.
-  Reproduce: repo-local copied-book diagnostic replaces only dart_count's expression, keeping value 1;
-  abs(1 + 128 zero terms) has 258 semantic nodes and abs-wrapped 17-level if has depth 17. Both
-  `FORMULA_BOOK=target/formula-structural-diagnostic/<case>/src run_formula_language_census.sh`
-  return rc=0, measured seven nodes/zero depth, zero mismatches. Expression bounds falsely certify.
-  Pre-edit protocol: explicit child traversal includes call argument lists and every static if branch.
-  Count expression nodes/depth iteratively without recursive walker stack; grouping/exponent payloads
-  retain original semantic-node definition. Refuse max_if_depth with formula_domain before inference/
-  evaluation, measured depth and unchanged bound. Existing per-expression node refusal stays strict.
-  Add paired controls just below/at bounds and actual over-bound forms, including ifs inside ordinary
-  calls and untaken branches. Count/depth probes independently construct fixture sizes and verify exact
-  typed domain signatures, not failure on unrelated values/vocabulary/margins. Actual guard mutations
-  distinguish both child walkers and early depth refusal, restoring original bytes. Register durable
-  root-cause diagnostic/toolbox; update live/book/roadmap-owned limits and scope, retain lexer behavior.
-  D77 milestone prerequisite: sibling-owner census rejects a valid .md#fragment link as orphan;
-  recognize optional fragments without admitting different target names; add paired green/red probes.
-  D76 malformed reference names/unit gap is owned next by .2b.1 before product parser implementation.
-  This fixes the reference instrument, not the product evaluator or a declaration of G1 completion.
-  Preserve completed lexical contract/checklist exactly if main task health needs partition; roll live
-  ledgers at health without changing caps. Focused checks, full reference suite and commit before .2b.
-  Verification: 16 structural controls/refusals plus two copied-book refusals; four actual guard reds
-  and exact restoration; tree nine, reference language 15, full 25 suites green.
-  Commit: `STITCHCAD-G1-0038` (this recording commit).
+Completed reference structural contract .5a.2a is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#structural-reference-contract-and-evidence--preserved-from-9d26ddc).
 
 - ID: `G1-SLICE.5a.2b`
-  Status: `pending`
+  Status: `in_progress`
   Children: `.5a.2b.1` reference machine-input parity; `.5a.2b.2` product expression trees.
   Goal: finalize expression-tree protocol from complete grammar and corrected reference bounds, then
   implement immutable precedence/conditional syntax with precise refusals; no numeric evaluation claim.
@@ -615,11 +592,30 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `pending`
 
 - ID: `G1-SLICE.5a.2b.1`
-  Status: `pending`
+  Status: `done`
   Goal: fix D76 reference machine identifier/keyword-position and literal unit-gap parity before
   using it as an independent product parser oracle; explicit pre-code protocol and mutation controls.
-  Verification: `pending`
-  Commit: `pending`
+  Pre-code protocol: repair the actual reference tokenizer/parser without changing language or Rust
+  behavior. Whole-source ASCII preflight precedes tokens; validate captured lower-snake words without
+  trimming/normalization. Keep let/assert/if recognized only in their grammar positions: no bare-name,
+  ordinary-call or declaration-name use. Share a private reference identifier check across those paths.
+  Retain original source positions through filtering; a numeric token immediately followed by a known
+  unit requires the exact gap " ", including zero-gap/tabs/multiple-space refusals. General ASCII
+  whitespace matches the lexer; units remain the canonical table's closed set. Do not transform an
+  invalid gap into a valid literal during assert splitting. Existing supported if form remains intact.
+  Diagnostic widening found zero-argument calls accepted as ASTs although args requires an expression;
+  refuse before returning a call. Add that observation to D76 and cover nonempty/trailing-comma controls.
+  Tests load actual reference definitions with canonical unit/binding contexts; positive names/reserved
+  inputs, three keyword roles/declarations, all seven unit gaps, ASCII/whitespace, malformed numbers,
+  empty calls and current worked examples. Cross-check unchanged Rust token/name contracts. Add paired
+  copied-book controls and actual guard mutations, with exact restoration and no overlapping gates.
+  Extend the existing structural suite with input controls so registered suite count remains 25.
+  Reference checks are not product parsing, complete name/type/evaluation proof or command diagnostics.
+  Keep remaining .2b.2 AST, .5a.3 canonical literal/recipe and later checker owners explicit; sync expert
+  annex/live records; preserve completed .2a contract/checklist at health; rollover exact old ledgers.
+  Verification: 130 input controls/three copied-book refusals; nine actual guard reds/exact restore;
+  existing structural 16+2, language 15 and unchanged Rust name/lexer 20 green.
+  Commit: `STITCHCAD-G1-0039` (this recording commit).
 
 - ID: `G1-SLICE.5a.2b.2`
   Status: `pending`
@@ -805,7 +801,8 @@ metadata signoff unchanged; the named table slice follows.
 | done | `G1-SLICE.4d.1` | `done` | Incremental book, glossary/index/annexes; D71/D72 fixed |
 | done | `G1-SLICE.5a.1` | `done` | Borrowed source tokens/spans; no expression-validation/execution claim |
 | done | `G1-SLICE.5a.2a` | `done` | Complete reference node/depth traversal and fragment ownership, D75/D77 fixed |
-| next | `G1-SLICE.5a.2b.1` | `pending` | D76 reference input parity before .2b.2 expression trees |
+| done | `G1-SLICE.5a.2b.1` | `done` | D76 input parity fixed; 130+3 controls/nine actual reds |
+| next | `G1-SLICE.5a.2b.2` | `pending` | Production expression trees after repaired reference prerequisites |
 
 ## Routing Evidence — D72, milestone fixture calibration
 
@@ -899,39 +896,30 @@ measured by the `SPINE.7` probe).
 
 
 
-### `G1-SLICE.5a.2a` — complete reference structural bounds and owned evidence links
+### `G1-SLICE.5a.2b.1` — reference machine-input parity
 
-- [x] **REPRODUCE / ISSUE** — real copied-book dart_count forms preserve value 1 but exceed
-  256 nodes/16 if levels; old census returns rc=0, measured seven nodes/zero depth/zero mismatches.
-  Full milestone initially fails the new evidence sibling's anchored link as ORPHAN.
-- [x] **ROOT CAUSE (WHY + WHERE)** — copied-book diagnostic under target/formula-structural-diagnostic
-  → both call_nodes/call_if_depth rc=0, although independently constructed shapes have 258 nodes/
-  17 levels. count_nodes/if_depth only visited tuple children, skipping call arguments stored in lists;
-  if depth was only checked in aggregate L8. `make probes` → tree 5 pass/2 fail, overall rc=2;
-  `run_tree_coverage_census.sh` owner regex demands .md immediately followed by closing parenthesis,
-  excluding the actual .md#fragment link. D75/D77 are instrument defects, not missing product evaluation.
-- [x] **FIX** — explicit semantic children include all call arguments/if branches; iterative node/depth
-  walkers count nodes without list/group/exponent payload inflation. Early measured depth refusal retains
-  formula_domain and unchanged bounds. Reference controls load actual definitions, not a copied parser.
-  Task owner matching permits an optional fragment with exact filename; paired target controls retain
-  orphan refusals. Completed lexical contract/checklist and historical journal preserve predecessor bytes.
-- [x] **ADDRESSED (verified)** — `run_formula_structure_probes.sh` → 16 pass/0 fail plus copied-book
-  two pass/0 fail, rc=0: 256 nodes/16 levels accepted, 257/258 nodes and 17 levels refused with exact
-  measured domain signatures. Four actual reference guard mutations yield AssertionError/rc=1 and
-  byte-identical source restoration, runner rc=0. Tree coverage probes → nine pass/0 fail, rc=0;
-  fragment control passes while different target and unlinked siblings refuse. D75/D77 descriptions seal.
-- [x] **NO REGRESSION** — `CARGO_HOME="$PWD/target/cargo-home" TMPDIR="$PWD/target/scratch" make probes`
-  → 25 suite(s) green, rc=0; reference language 15, publication nine, ledger nine, archive 28 pass;
-  glossary 310 terms/9 parts/158 tokens, tree 10 lanes/13 trees/8 siblings/zero gaps. Warning-free book:
-  48 chapters/15 APIs, 992 source/1508 rendered links. `git diff --name-only -- crates` is empty, rc=0;
-  native/WASM behavior stays the strict 454-test baseline at 60c7305. Staged `make gate` → all
-  doctrines green, rc=0, after adding journal preservation boxes and the exact decline token.
-  No new runtime/remote-CI claim.
-- [x] **LOCKSTEP** — node/depth proof scope and reproduction commands are in the expert syntax annex;
-  learner progression, glossary/index and normative caps remain unchanged. No product expression tree,
-  evaluation or arbitrary-input reference-parser safety is claimed. D76 names/unit-gap debt is owned
-  next by .2b.1; D70 required axes ruling stays unanswered. G1 remains 5/18 top-level. Live defect census
-  re-derived as 11 open/65 sealed; journal/oldest live payloads retain exact predecessor bytes.
+- [x] **REPRODUCE / ISSUE** — actual reference accepts Upper/_a/a__b, 1cm, bare/declared keywords
+  and abs(); all violate canonical spelling, gap, keyword role or nonempty-argument grammar.
+- [x] **ROOT CAUSE (WHY + WHERE)** — load_reference/direct parse/statement diagnostic → invalid forms
+  return ASTs/bindings, rc=0. tokenize permits broad words and only checks a present sp token; parser
+  roles omit keyword checks and p_args explicitly returns an empty list. This is D76 instrument debt.
+- [x] **FIX** — whole-source ASCII, private captured spelling/role checks, original-source unit gap,
+  nonempty arguments and all ASCII whitespace. Tests load actual reference and canonical unit table;
+  paired direct/copied-book controls and isolated guard mutations restore exact bytes.
+- [x] **ADDRESSED (verified)** — run_formula_structure_probes.sh → structural 16+2 and input 130+3
+  pass/0 fail, rc=0. run_formula_input_mutations.sh → nine assertion reds/rc=1 each and exact
+  restoration, runner rc=0. Invalid unit gaps inside assert remain refused; D76 description seals intact.
+- [x] **NO REGRESSION** — run_formula_language_probes.sh → 15 pass/0 fail, rc=0; cargo test -p sc-core
+  --test name_contract --test formula_lex_contract → 20 passed/0 failed, rc=0. Rust files unchanged;
+  strict native/WASM baseline remains 60c7305. Publication nine and ledger nine probes pass/0 fail;
+  history_archive.sh verify/verify-retention → 95 records/32 working MD/238983 resident bytes, rc=0.
+  Tree 10 lanes/13 trees/8 siblings/zero gaps; glossary 310 terms/9 parts/158 tokens; feature, uncertainty
+  and fixture censuses green, rc=0. Book warning-free: 48 chapters/15 APIs, 992 source/1509 rendered links.
+  Staged make gate → all doctrines green, rc=0; no new runtime or remote-CI claim.
+- [x] **LOCKSTEP** — expert annex/toolbox describe actual input proof scope and remaining product
+  AST/canonical/checker owners. Progressive book, glossary/index, normative roadmap and limits unchanged.
+  Exact completed .2a contract/checklist and oldest history payloads preserve predecessor bytes.
+  Live defect census 10 open/66 sealed; G1 stays 5/18, D70 pending, next .5a.2b.2.
 
 ## Verification Log
 
@@ -942,6 +930,8 @@ Current slice verification follows here.
 | --- | --- | --- | --- |
 | `2026-10-02` | `.5a.2a` | reference direct/end-to-end controls; actual mutations/restoration; tree; full probes/book/ledger/archives; staged gate | 16+2 controls, four reds; tree nine; full 25 suites green; D75/D77 fixed; D76 next |
 
+| `2026-10-02` | `.5a.2b.1` | input 130+3; nine guard reds/restoration; structural 16+2; language 15; Rust 20; recording checks | focused/book nine/ledger nine/archive/censuses green; exact preservation and 10/66 defect census verified |
+
 ## Commit Log
 
 Older journals remain linked above.
@@ -950,6 +940,8 @@ Older journals remain linked above.
 | --- | --- | --- |
 | `.5a.2a` | `STITCHCAD-G1-0038 (leaf G1-SLICE.5a.2a): reference structural checks include every call argument` | 16+2 controls/four actual reds; tree nine; full 25 suites; book/ledger/archive green |
 
+| `.5a.2b.1` | `STITCHCAD-G1-0039 (leaf G1-SLICE.5a.2b.1): reference machine input preserves spelling and unit separators` | 130+3 input controls/nine actual reds; structural/language/Rust checks green |
+
 ## Changelog
 
 
@@ -957,3 +949,6 @@ Older journals remain linked above.
   fixed with real regression controls; no cap changed. D76 input parity is owned next before expression
   trees. Reference parser remains a book instrument.
 - promotion: declined (routine instrument repair; language limits and canonical ADR-0003 unchanged).
+
+- `2026-10-02`: D76 reference machine input repaired/verified; .2b.2 product AST follows.
+- promotion: declined (routine reference repair; normative grammar and canonical ADR-0003 unchanged).

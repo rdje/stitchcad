@@ -68,6 +68,21 @@ the digests afterwards.
 
 | [`changelog-part34.md`](docs/history/stitchcad-changelog-part34.md) | STITCHCAD-G1-0017 | 13 lines, 1094 bytes, `sha256:a8c9973a…` |
 
+| [`changelog-part35.md`](docs/history/stitchcad-changelog-part35.md) | STITCHCAD-G1-0018 | 13 lines, 1081 bytes, `sha256:74e03b90…` |
+
+## STITCHCAD-G1-0039 - reference machine-input parity (leaf `G1-SLICE.5a.2b.1`)
+
+D76 closes: reference input now enforces ASCII/lower-snake spelling, keyword positions, original
+single-space unit separators and nonempty call arguments. General ASCII whitespace stays valid;
+assert splitting cannot repair invalid unit gaps. No grammar or product behavior changes.
+
+130 direct controls, three copied-book refusals and nine actual guard assertion reds pass with exact
+source restoration. Existing structural 16+2 controls, language 15 probes and 20 Rust name/lexer
+contracts pass. Book/ledger/archive/censuses and staged doctrines verify the recording commit.
+Completed .2a evidence and oldest lessons/ledger payloads retain exact predecessor bytes. Technical
+proof stays in the annex; progressive learning, glossary and index remain intact. Next .2b.2 product
+expression trees; no product parsing/evaluation certification. D70 axes ruling remains unanswered.
+
 ## STITCHCAD-G1-0038 - reference structural bounds include all function arguments (leaf `G1-SLICE.5a.2a`)
 
 D75's reference walkers omitted call argument lists, falsely accepting 258-node/17-level fixtures.
@@ -373,17 +388,3 @@ glossary/tree censuses, ledger and staged gates pass. A bounded closure chapter 
 closure kinds/counts/sizes still follow. Completed Hem evidence and verification table move unchanged
 with committed-payload oracles and staged revalidation. G1 stays 4/18 top-level leaves, 3/4 families;
 next `.3c.4c.1b` zipper/hook-bar/fly, then `.4c.2` button/buttonhole derivation.
-
-## STITCHCAD-G1-0018 - Hem retains depth/fold intent and validates current Facing targets (leaf `G1-SLICE.3c.4b.2`)
-
-Immutable Hem retains an owned finish edge, explicit/formula/profile depth, required fold-type
-binding and turned/faced method. Faced composition borrows its original current Facing after
-checking identity, served Piece and current layer sources. Removed/replaced/reassigned targets and
-lost interiors are typed refusals, even with live endpoints. No layer data or solved state is copied;
-physical folding remains G2/G3 and declaration/profile validation remains `.5`/`.6`/G4.
-
-Ten contracts + privacy pass. Identity, current-source and ownership mutations each fail red;
-restored strict Rust, wasm, warning-free book, fixture/feature/glossary/tree censuses, ledger and
-staged gates pass. Gather/layer checklists relocate unchanged with an independent committed-content
-oracle and staged revalidation. Book examples distinguish hem fold binding from allowance corners.
-Hem/layer parent closes; G1 stays 4/18 top-level leaves, 3/4 families. Next `.3c.4c` closures.
