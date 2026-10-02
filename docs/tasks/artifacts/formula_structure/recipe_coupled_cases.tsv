@@ -1,0 +1,5 @@
+# Independently authored token-distinguishable zero-gap whole sources, ordered chunks and operand bytes.
+let a: count = 1let b: count = 2	let a: count = 1 | let b: count = 2	count:1 | count:2
+let a: count = probe(1)assert b: eps_num = a == b	let a: count = probe(1) | assert b: eps_num = a == b	(probe count:1) | a ~ b
+assert a: eps_num = (x == y) == (z)let b: angle = -360 deg	assert a: eps_num = (x == y) == (z) | let b: angle = -360 deg	(== x y) ~ z | (- angle:360000000)
+let a: count = let_value(1)let assertion: length = 25 mm	let a: count = let_value(1) | let assertion: length = 25 mm	(let_value count:1) | length:25000

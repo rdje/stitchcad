@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — coupled recipe syntax review preserves explicit proof boundaries
+
+- Three new public controls add token-distinguishable zero-gap/ASCII whitespace boundaries and
+  exact later-statement index3/header/operand/EOF rules. Four authored whole sources/eight original
+  chunks/ten operand bytes agree with actual reference syntax; twelve header/four prefix refusals
+  remain syntax-only. Authored chunks are not an independent whole-reference-recipe parser.
+- A reference-built256-node/16-if expression shape reaches all4096 assertions/two operands on64KiB
+  stack;2097152 accepted nodes demonstrate no hidden aggregate budget for this bounded case.
+  Five actual boundary/index/rule/EOF/limit faults fail assertions only in the three new controls;
+  failed-body classification excludes compiler/expect noise and exact restoration is observed.
+- All product Rust source bytes stay exact415d577. Strict native553/45groups, release20/WASM3,
+  watched reference/language16/publication9 pass; book publishes51 chapters/21 APIs/1058 source/
+  1636 rendered links. The statement annex maps syntax obligations and deferred .3f/.5 owners.
+- D110 contract/ADR diagnostic contexts now say where available, preserving exact span/typed rule
+  without fabricated canonical bytes. D109 missing assertion/whole-recipe byte envelope is owned
+  next .3f.1 before implementation; no further-decision-needed overclaim remains. G1 .3e closes
+  for syntax only; normalization/identity/static binding/evaluation remain distinct obligations.
+- promotion: declined (routine coupled review; existing ADR clarified, no new policy adopted).
+
 ## _(2026-10-02)_ — recipe boundaries preserve source order rather than line structure
 
 - Grammar statement* has no newline/semicolon delimiter. Shared header parsing consumes required
@@ -23,40 +42,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   Exact delimiter splitting restores the full HEAD payload/digest; watched ledger/archive checks pass.
   Original report wording retained with the standard defect-entry marker; no product code corruption.
 - promotion: declined (routine implementation of the existing ordered grammar, no new policy).
-
-## _(2026-10-02)_ — standalone statement syntax retains whole-source evidence
-
-- Private borrowed statement construction keeps closed six kind/five tolerance annotations and
-  independent flat expression arenas. Original operand slices preserve exact unit gaps; global span
-  rebasing reaches all nodes and nested errors. Lexical tail errors retain their known operand role.
-  Exactly one depth-zero assertion separator is required; grouping/call comparisons stay inside operands.
-- Nine public contracts check15 independently authored rows/six actual-reference refusal families,
-  all21 worked statements/25 canonical expression bytes, no conversion/type/name/execution claim,
-  privacy/Clone and64KiB-stack bounds. Three compile-fail docs/runnable API doc pass.
-- Initial test fixture compile failed E0716 on a borrowed temporary; explicit named source fixes it.
-  Strict clippy identified the nested separator match; a small explicit recording helper satisfies
-  the lint and preserves the guard. Neither compile/lint refusal is counted as a fault assertion red.
-- D107 new runner initially found its assertion marker in passing test names while a fixture expect
-  panicked. Failed-test-body classification and explicit acceptance/refusal assertions remove that
-  false classification. Negative noise controls and15 rerun actual compiled assertion reds pass;
-  exact source restored. The earlier14 classification is superseded, not retained as assertion proof.
-- Final strict native538/release9/WASM3 and scoped book/reference checks pass. D106 literal decision
-  status now separates completed expression identity from future statement identity/evaluation.
-  Public statement annex/progressive links/current API/live/task records align; ordered recipe .2 next.
-- promotion: declined (routine statement implementation and local verification repair, no new policy).
-
-## _(2026-10-02)_ — coupled expression identity review closes its scoped contract
-
-- Review maps grammar4/5 and D84/D95/D103 to the exact unchanged production pipeline and public proof.
-  Authored25 byte fixtures match every actual worked expression plus recursive book-reference output;
-  source membership is checked, so a substituted/dropped row cannot silently weaken the population.
-- Maximum255 distinct call arguments preserve order on64KiB stack. Nested aliases/ASCII whitespace
-  preserve identity, while kind/raw turns remain distinct. Nine public tests pass; three actual
-  symbol/order/last-argument faults fail only the new coupled controls and restore exact source.
-- Strict native525/release9/WASM3 and structural/language/publication checks pass. D105 stale book
-  status is fixed, retaining explicit syntax/reference/evaluation boundaries. .3d expression identity
-  closes; .3e ordered statements follows. Previous serializer proof and oldest ledger payload stay exact.
-- promotion: declined (routine coupled contract review and documentation alignment, no new policy).
 
 # Sealed archive — earlier lessons
 
@@ -173,3 +158,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part64.md`](docs/history/stitchcad-devnotes-part64.md) | G1-0062 inspection tags | 15 lines, 1345 bytes, `sha256:5699b48e…` |
 
 | [`stitchcad-devnotes-part65.md`](docs/history/stitchcad-devnotes-part65.md) | G1-0063 expression identity | 17 lines, 1602 bytes, `sha256:377fd96c…` |
+
+| [`stitchcad-devnotes-part66.md`](docs/history/stitchcad-devnotes-part66.md) | G1-0065/0064 syntax and identity lessons | 33 lines, 2960 bytes, `sha256:01527194…` |

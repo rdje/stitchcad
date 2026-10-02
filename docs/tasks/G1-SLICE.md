@@ -693,12 +693,14 @@ Completed identity children are preserved in
 [G1-SLICE-canonical](G1-SLICE-canonical.md#completed-expression-identity-subtree--preserved-from-5d8ab5b).
 
 - ID: `G1-SLICE.5a.3e`
-  Status: `in_progress`
+  Status: `done`
   Children: .1 single immutable statements, .2 ordered recipe/4096/context, .3 coupled syntax review.
   Goal: ordered immutable let/assert syntax, six bindable kinds/five tolerances, statement boundaries,
   4096 limit and diagnostic statement/expression context where available; no binding/evaluation claim.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: [coupled syntax proof map](../book/src/annexes/formula-statements.md#coupled-syntax-and-diagnostic-review);
+  statement9/recipe11, native553/release20/WASM3, five new actual assertion reds/source exact.
+  D110 fixed; D109 exact recipe byte contract explicitly next .3f.1; no numerical acceptance.
+  Commit: `STITCHCAD-G1-0065` … `STITCHCAD-G1-0067`.
 
 - ID: `G1-SLICE.5a.3e.1`
   Status: `done`
@@ -721,11 +723,15 @@ Completed identity children are preserved in
   Commit: `STITCHCAD-G1-0066`
 
 - ID: `G1-SLICE.5a.3e.3`
-  Status: `pending`
+  Status: `done`
   Goal: coupled recipe/statement syntax and diagnostic review with all worked statements; keep
   normalization/statement canonical bytes/static binding/evaluation owners explicit before .3f.
-  Verification: `pending`
-  Commit: `pending`
+  Protocol: [coupled syntax review plan](G1-SLICE-canonical.md#coupled-statement-recipe-review-protocol).
+  Verification: three coupled controls/four authored sources/eight chunks/ten identities; twelve
+  header/four prefix reference refusals; simultaneous4096×2×256/16 on64KiB; five new compiled
+  assertion reds/exact restore and all product sources unchanged415d577. Native553/release20/WASM3;
+  structural/reference, language16/publication9 and book proof map pass. D110 wording fixed.
+  Commit: `STITCHCAD-G1-0067`.
 
 - ID: `G1-SLICE.5a.3f`
   Status: `pending`
@@ -739,6 +745,8 @@ Completed identity children are preserved in
   Status: `pending`
   Goal: finalize exact statement/ordered-recipe byte contract and scoped complete-recipe input
   normalization; preserve names/annotations/order/spans and owned identity without binding/evaluation.
+  D109 P2 prerequisite: exact assertion/empty/ordered-recipe bytes and spacing/envelope/terminal-newline
+  contract must be settled with concrete examples before any serializer or persistent identity.
   Verification: `pending`
   Commit: `pending`
 
@@ -934,7 +942,8 @@ Completed identity children are preserved in
 | done | `G1-SLICE.5a.3d.3` | `done` | Complete expression identity proof map |
 | done | `G1-SLICE.5a.3e.1` | `done` | Single immutable let/assert syntax |
 | done | `G1-SLICE.5a.3e.2` | `done` | Ordered recipe/4096/context |
-| next | `G1-SLICE.5a.3e.3` | `pending` | Coupled syntax/diagnostic review |
+| done | `G1-SLICE.5a.3e.3` | `done` | Coupled syntax/diagnostic review |
+| next | `G1-SLICE.5a.3f.1` | `pending` | D109 exact recipe bytes, then normalization/identity |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -968,54 +977,50 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
 
 
-### `G1-SLICE.5a.3e.2` — ordered immutable recipe syntax
+### `G1-SLICE.5a.3e.3` — coupled statement/recipe syntax review
 
-- [x] **REPRODUCE / ISSUE** — standalone syntax cannot retain complete ordered recipes, their count
-  bound or diagnostic indices. D108 new archive copy has an extra heading byte; actual ledger red.
-- [x] **ROOT CAUSE (WHY + WHERE)** — statement* permits empty/multiline/same-line lists without a
-  newline delimiter; product lacked its owner. Nine authored source/token covers and actual recursive
-  reference14 statements/18 identities agree, rc=0. D108 delimiter index+7 retains one extra byte.
-- [x] **FIX** — private ordered borrowed recipe/immutable slice/Clone/opaque Debug; shared header
-  parser recognizes top-level keywords after headers, preserves nested refusal/global spans and
-  standalone whole-input. Typed contextual errors/known1-based indices/None ASCII preflight; fixed4096.
-- [x] **ADDRESSED (verified)** — recipe8 contracts/all21 worked statements/25 existing bytes pass,
-  rc=0;15 new actual compiled faults fail assertions, rc=101 each, runner/exact two-source restore0.
-  D108 full2471-byte predecessor archive comparison and ledger9/13 controls pass, rc=0.
-- [x] **NO REGRESSION** — strict make check→550 pass/45 groups, fmt/clippy, rc=0; release17/WASM3,
-  rc=0. Existing15 statement faults compile/fail assertions and restore; statement9+recipe8 pass0.
-  64KiB-stack4096/256 nodes/16 if/50000 groups/100000 name and257/17 refusals; book/reference gates0.
-- [x] **LOCKSTEP** — book recipe inspection/grammar/progressive routes/index/API/README/live/task
-  pointers agree, language16/publication9 pass, rc=0. Prior closure/oldest ledgers preserved exactly,
-  D108 wording retained with standard marker. .3e.3 review/.3f identity/.5 execution remain owned.
+- [x] **REPRODUCE / ISSUE** — complete grammar/contract/API review identifies D109 missing future
+  recipe byte envelope and D110 impossible unconditional diagnostic context; tracked before edits.
+- [x] **ROOT CAUSE (WHY + WHERE)** — grammar4 lacks assertion/envelope exact bytes; contract5.2
+  assumes accepted canonical/index context before malformed syntax can supply it. Syntax API is sound.
+  `git diff -- docs/book/src/spec/formula-language.md` shows old unconditional versus available
+  context wording, rc=0.
+- [x] **FIX** — qualify book/ADR context availability; map every syntax obligation to public proof,
+  add coupled token/diagnostic/maximum controls and reference fixtures; schedule D109 next .3f.1.
+- [x] **ADDRESSED (verified)** — five actual compiled boundary/index/rule/EOF/limit faults fail
+  assertions only in new controls; failed-body classifier and exact restoration observed, rc=0.
+- [x] **NO REGRESSION** — strict native553/45groups, release20/WASM3, syntax reference/language16/
+  publication9 pass; all product Rust sources byte-identical415d577. Maxima checked on64KiB stack.
+  `make check` and release `cargo test` observed terminal rc=0;553/20 passing tests.
+- [x] **LOCKSTEP** — book proof map/index/grammar/contract/existing ADR and live/current records
+  align; original closure/oldest ledger payloads preserved exactly. D110 closed, D109 owned next.
 
 ## Verification Log
 
-Pre-code protocol preceded Rust/test/instrument edits. Previous complete single-statement proof stays
-exact in [semantic sibling](G1-SLICE-canonical.md#single-statement-closure--preserved-during-g1-0066).
-Final native550/45groups, release17/WASM3, recipe8/statement9, new15/prior15 actual compiled assertion
-reds and exact source restoration observed terminal rc=0. Structural/reference producer watches nine
-whole sources/14 ordered statements/18 identities plus failed-body classifier; no independent whole
-reference recipe parser or numerical runtime/browser claim. Global spans/ordinal/first4097 all pass.
-Language16 and publication51 chapters/21 APIs/1055 source/1630 rendered links/nine controls pass0.
-D108 ledger initial7 pass/2 fail is superseded by repaired9 arms/13 pointer controls, rc=0. Predecessor
-1ac495b archive payload/oldest lesson/current single-statement closure compare byte-identically0.
-Archive28 arms/178 CLI controls/169 logical reads and retention169 records/44 working Markdown/
-8553 decoded lines/662134 decoded bytes/318456 resident bytes pass, rc=0. Fresh reconstructed defect
-census10open/97 unique sealed/zero overlap, rc=0. Tree10 lanes/13 trees/nine siblings/zero gaps,
-glossary310/nine/158, feature105/29, uncertainty133/16/zero unowned, fixture20/four/five/zero mismatch0.
-Lexer/expression/parser/literal/normalized/canonical implementations compare exact1ac495b, rc=0;
-only shared statement source changes, plus the new ordered owner. No live-doc ceiling raised.
-Final source SHA256: statement23b14cda34302dd52f9ddbf1a71e27d7fc6995c787ab26022ceed3e20bb1da08;
-ordered a66a8914a09c54de746ceace0b0d338286df475c0893769092c7ee6d0865d160.
-Staged make gate→=== all doctrines green ===, rc=0; all scoped verification jobs observed terminal.
+Pre-change review protocol preceded test/instrument/doc edits. Prior ordered-recipe closure remains
+exact in [semantic sibling](G1-SLICE-canonical.md#ordered-recipe-closure--preserved-during-g1-0067).
+Three new public controls bring recipe suite11, statement suite9. Actual coupled fault runner5
+compiled assertion reds/exact restoration; strict native553/45groups and release20/WASM3 observed0.
+Reference legacy9/14/18 and coupled4/8/10 authored sources/statements/operand identities; maxshape
+256nodes/16if;12 header/four prefix refusals;20 unique actual fault anchors/noise controls pass0.
+All product Rust sources compare byte-identically415d577, rc=0. Simultaneous4096 assertions×two256
+nodes/16if on64KiB is syntax shape proof, not numerical execution or unbounded-memory certification.
+Language16/publication9,51 chapters/21 APIs/1058 source/1636 rendered links pass0. D110 context
+fixed/sealed with original report; D109 exact assert/recipe byte contract stays next .3f.1.
+Ledger9 arms/13 pointer controls, archive28 arms/181 CLI controls/172 logical reads and retention
+172 records/47 working Markdown/8639 decoded lines/668602 decoded bytes/324924 resident bytes0.
+Fresh reconstructed defects11open/98unique sealed/zero overlap; tree10 lanes/13trees/nine siblings/
+zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16, fixture20/four/five all pass0.
+Predecessor415d577 closure and oldest ledger/lesson payloads compare exact0; final whitespace check0.
+Staged `make gate` → === all doctrines green ===, rc=0; all scoped jobs observed terminal.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3e.2` | `STITCHCAD-G1-0066 (leaf G1-SLICE.5a.3e.2): parse ordered formula recipes with contextual refusals` | eight contracts/15 new reds/native550 |
+| `.5a.3e.3` | `STITCHCAD-G1-0067 (leaf G1-SLICE.5a.3e.3): complete coupled statement and recipe syntax review` | recipe11/five new reds/native553 |
 
 ## Changelog
 
-- `2026-10-02`: ordered recipe syntax complete; coupled syntax/diagnostic review next.
-- promotion: declined (routine ordered grammar implementation and archive-copy repair, no new policy).
+- `2026-10-02`: coupled recipe syntax review closes .3e; D109 exact recipe bytes next .3f.1.
+- promotion: declined (routine coupled syntax review and existing ADR clarification, no new policy).

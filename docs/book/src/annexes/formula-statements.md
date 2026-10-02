@@ -226,5 +226,69 @@ On64KiB stacks the API parses/clones/drops4096 statements, preserves50000 groupi
 indices/spans/whole-input/privacy compile and fail assertions. The existing fifteen statement faults
 also pass against the shared parser. Both exclusive runners restore exact production bytes; run them
 alone. The structural suite watches the independent producer and failure-classifier controls.
-Native/release and WASM cross-compilation retain their stated scope. Coupled syntax review .3e.3,
-complete recipe normalization/identity .3f, numerical execution and production approval remain owned.
+Native/release and WASM cross-compilation retain their stated scope. Coupled syntax review .3e.3
+is complete below; recipe normalization/identity .3f, numerical execution and production approval
+remain owned future work.
+
+## Coupled syntax and diagnostic review
+
+G1-SLICE.5a.3e.3 reviews the complete standalone/ordered syntax obligation set against grammar1,
+contract2/4.3/5 and the worked statements. It closes .3e for immutable syntax and available diagnostic
+context. No product parser/serializer implementation changes in this review; the public recipe suite
+now has eleven tests. Exact numerical evaluation and the full command diagnostic envelope remain later.
+
+| Obligation | Product evidence | Independent check or remaining owner |
+| --- | --- | --- |
+| ASCII/lower-snake/three keywords | Lexical and statement contracts, original spans | Shared machine-token fixtures and actual recursive reference |
+| Closed six kind/five tolerance annotations | Fifteen statement rows and typed header refusals | Actual reference headers; no type inference or tolerance values |
+| Empty/ordered/multiline/same-line recipes | Original source/ordered slice tests | Nine authored complete sources, fourteen statements/eighteen identities |
+| Token boundaries, grouping, exact unit gaps | New coupled zero-gap/whitespace/prefix controls | Four authored sources/eight statements/ten identities; sixteen malformed reference cases |
+| Assertion separator and both operands | Grouped/call comparisons and missing/multiple-separator refusals | Actual reference split; independent operand bytes |
+| Global header/node/error spans and known indices | Exact later-statement twelve-header/eight-operand matrix | Authored source positions; global ASCII preflight has no known index |
+| Separate256-node/4096-statement/16-if budgets | New simultaneous maximum on64KiB stack | Independent256-node/16-depth shape; normative4096 cap |
+| Immutability/source/view lifetimes/Clone/privacy | Private constructors, six compile-fail docs, two runnable docs, opaque Debug controls | Actual statement/recipe fault controls; explicit inspection remains customer-bearing |
+| All worked source statements and operand identity | Seventeen bindings/four assertions in order; twenty-five expression byte controls | Independently authored byte population and actual recursive reference |
+| Complete recipe normalization/identity | Syntax retains names/annotations/order/source without conversion | .3f.1/.3f.2; D109 exact assertion/recipe bytes must be settled first |
+| Static names/types, numeric binding, assertion execution and geometry | Syntax accepts unevaluated expressions; it grants no result | G1-SLICE.5; later tasks decomposed before implementation |
+| Semantic diagnostic arguments/localized command envelope | Typed syntax refusal/source/known index only | G1-SLICE.5/.6; no invented canonical context for malformed input |
+
+### Token boundaries need distinct tokens
+
+The grammar requires no delimiter between statements. If tokenization can distinguish a keyword,
+after a digit or closing parenthesis for example, no whitespace is required: let a: count = 1let b:
+count = 2 is two statements. Prefer one statement per line when authoring. A keyword prefix inside
+an identifier remains one name: let_value and assertion are ordinary identifiers. A name ending
+with let, or a unit followed by let with no gap, is also one word; blet or mmlet does not secretly
+start another statement. The new controls check these cases and every ASCII whitespace character.
+
+### Context survives without claiming evaluation
+
+The later-statement matrix checks exact byte positions and typed rules for twelve malformed headers
+and eight missing/invalid operands. Known indices remain1-based even after two accepted statements.
+A missing operand ends at the next keyword or EOF. Its error exposes no partially accepted recipe.
+The contract5.2 D110 correction supplies index/canonical identity where available: global ASCII
+preflight has no identified statement, and refused/non-normalizable syntax has no canonical identity.
+Exact source rule/span remain mandatory; semantic diagnostics still owe their table's arguments.
+
+The simultaneous maximum uses4096 assertions, each with two256-node operands containing16 if
+levels. Each operand has one literal, sixteen conditionals adding three nodes apiece, and207 unary
+nodes. The actual recursive reference checks that independently constructed shape before the public
+product test parses and drops the whole recipe on a64KiB stack. This proves the three syntax budgets
+remain separate for that maximum; it supplies no browser runtime, numerical or memory-performance
+certificate. The small-stack source/Clone/grouping/name controls keep their earlier scope.
+
+Five additional actual compiled faults require failure in only the new coupled tests: invented
+boundary whitespace, a flattened later index, substituted nested rule, wrong header EOF origin
+and refusal of the valid simultaneous maximum. The exclusive runner restores both product sources
+byte-identically; the tracked structural suite watches its anchors and failure classifier.
+
+```bash
+cargo test -p sc-core --test formula_recipe_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/recipe_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/recipe_mutations.py --coupled
+```
+
+D109 remains an owned prerequisite under .3f.1: grammar4 currently shows binding bytes and exact
+expression bytes, but does not settle assertion bytes or the complete/empty ordered recipe envelope.
+Those choices will be documented with concrete examples and verified before implementation. This
+syntax review grants no persistent statement identity, project hash, storage or production approval.

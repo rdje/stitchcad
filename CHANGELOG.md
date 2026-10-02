@@ -122,6 +122,20 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part61.md`](docs/history/stitchcad-changelog-part61.md) | STITCHCAD-G1-0044 / STITCHCAD-G1-0043 | 28 lines, 2471 bytes, `sha256:5484241b…` |
 
+| [`stitchcad-changelog-part62.md`](docs/history/stitchcad-changelog-part62.md) | STITCHCAD-G1-0045 | 11 lines, 970 bytes, `sha256:a334432a…` |
+
+## STITCHCAD-G1-0067 - coupled statement and recipe syntax review (leaf `G1-SLICE.5a.3e.3`)
+
+Three new public controls verify authored zero-gap/token-prefix boundaries, exact later-statement
+header/operand diagnostics and simultaneous4096×2×256-node/16-if maxima on64KiB stack. Five actual
+compiled assertion reds target only those controls and restore source exactly; all product Rust sources
+remain byte-identical to415d577. Independent fixtures/reference and syntax-only proof map agree.
+D110 diagnostic context wording is fixed; D109 exact assertion/recipe identity contract remains owned
+next before serializer implementation. Strict native553/45groups, release20/WASM3 and scoped book
+checks pass:51 chapters/21 API rows/1058 source/1636 rendered links, language16/publication9.
+Prior proof/oldest ledgers preserve exact bytes. G1 stays5/18, defects11 open/98 sealed;
+next .5a.3f.1 exact recipe byte contract and normalization. No numeric runtime/MCP/signoff claim.
+
 ## STITCHCAD-G1-0066 - ordered original-source recipe syntax (leaf `G1-SLICE.5a.3e.2`)
 
 FormulaRecipe retains immutable authored let/assert order, empty/multiline/same-line lists and
@@ -374,15 +388,3 @@ Strict native/release/WASM and focused book/recording checks verify the restored
 D90 missing operation context is owned immediately next; D83 scalar/reference i64 and D84 signed-angle
 proof remain owned. D91 language context follows D90; prior evidence/history preserves exact bytes.
 G1 remains 5/18; defects14 open/76 sealed; next .5a.3b.3b.1b operation context, D70 decision pending.
-
-## STITCHCAD-G1-0045 - reference rational widths refuse oversized values (leaf `G1-SLICE.5a.3b.3a.2`)
-
-D83 rational width checks now raise typed formula_domain at converted exact input and completed
-numeric results, using reduced numerator/denominator widths in result-kind internal units. Input
-rounding cannot hide an oversized fraction; unscaled temporaries and untaken computed branches do
-not acquire false limits. Sixty-one independent Fraction controls and twelve actual mutations pass;
-restored structural/language and earlier six/nine/seven mutation suites are green. D88 fixes a
-masked pole-guard test by requiring its mathematical-domain reason, not just an error token.
-Exact predecessor angular evidence/journals and oldest live records are preserved. Scalar domains/
-i64 and D84 signed-angle verification remain owned; no new Rust/production evaluator claim.
-G1 remains 5/18; defects 12 open/75 sealed; next .5a.3b.3b scalar domains, D70 decision pending.

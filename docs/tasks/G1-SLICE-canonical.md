@@ -477,3 +477,105 @@ Current ordered-recipe work follows the protocol below.
   D108 P2 owned here before repair: delimiter offset copied an extra heading byte in new archive;
   original HEAD is authoritative. Exact split/comparison and watched ledger/archive proof required.
   Commit: `STITCHCAD-G1-0066`
+
+## Ordered-recipe closure — preserved during G1-0067
+
+### `G1-SLICE.5a.3e.2` — ordered immutable recipe syntax
+
+- [x] **REPRODUCE / ISSUE** — standalone syntax cannot retain complete ordered recipes, their count
+  bound or diagnostic indices. D108 new archive copy has an extra heading byte; actual ledger red.
+- [x] **ROOT CAUSE (WHY + WHERE)** — statement* permits empty/multiline/same-line lists without a
+  newline delimiter; product lacked its owner. Nine authored source/token covers and actual recursive
+  reference14 statements/18 identities agree, rc=0. D108 delimiter index+7 retains one extra byte.
+- [x] **FIX** — private ordered borrowed recipe/immutable slice/Clone/opaque Debug; shared header
+  parser recognizes top-level keywords after headers, preserves nested refusal/global spans and
+  standalone whole-input. Typed contextual errors/known1-based indices/None ASCII preflight; fixed4096.
+- [x] **ADDRESSED (verified)** — recipe8 contracts/all21 worked statements/25 existing bytes pass,
+  rc=0;15 new actual compiled faults fail assertions, rc=101 each, runner/exact two-source restore0.
+  D108 full2471-byte predecessor archive comparison and ledger9/13 controls pass, rc=0.
+- [x] **NO REGRESSION** — strict make check→550 pass/45 groups, fmt/clippy, rc=0; release17/WASM3,
+  rc=0. Existing15 statement faults compile/fail assertions and restore; statement9+recipe8 pass0.
+  64KiB-stack4096/256 nodes/16 if/50000 groups/100000 name and257/17 refusals; book/reference gates0.
+- [x] **LOCKSTEP** — book recipe inspection/grammar/progressive routes/index/API/README/live/task
+  pointers agree, language16/publication9 pass, rc=0. Prior closure/oldest ledgers preserved exactly,
+  D108 wording retained with standard marker. .3e.3 review/.3f identity/.5 execution remain owned.
+
+## Verification Log
+
+Pre-code protocol preceded Rust/test/instrument edits. Previous complete single-statement proof stays
+exact in [semantic sibling](G1-SLICE-canonical.md#single-statement-closure--preserved-during-g1-0066).
+Final native550/45groups, release17/WASM3, recipe8/statement9, new15/prior15 actual compiled assertion
+reds and exact source restoration observed terminal rc=0. Structural/reference producer watches nine
+whole sources/14 ordered statements/18 identities plus failed-body classifier; no independent whole
+reference recipe parser or numerical runtime/browser claim. Global spans/ordinal/first4097 all pass.
+Language16 and publication51 chapters/21 APIs/1055 source/1630 rendered links/nine controls pass0.
+D108 ledger initial7 pass/2 fail is superseded by repaired9 arms/13 pointer controls, rc=0. Predecessor
+1ac495b archive payload/oldest lesson/current single-statement closure compare byte-identically0.
+Archive28 arms/178 CLI controls/169 logical reads and retention169 records/44 working Markdown/
+8553 decoded lines/662134 decoded bytes/318456 resident bytes pass, rc=0. Fresh reconstructed defect
+census10open/97 unique sealed/zero overlap, rc=0. Tree10 lanes/13 trees/nine siblings/zero gaps,
+glossary310/nine/158, feature105/29, uncertainty133/16/zero unowned, fixture20/four/five/zero mismatch0.
+Lexer/expression/parser/literal/normalized/canonical implementations compare exact1ac495b, rc=0;
+only shared statement source changes, plus the new ordered owner. No live-doc ceiling raised.
+Final source SHA256: statement23b14cda34302dd52f9ddbf1a71e27d7fc6995c787ab26022ceed3e20bb1da08;
+ordered a66a8914a09c54de746ceace0b0d338286df475c0893769092c7ee6d0865d160.
+Staged make gate→=== all doctrines green ===, rc=0; all scoped verification jobs observed terminal.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3e.2` | `STITCHCAD-G1-0066 (leaf G1-SLICE.5a.3e.2): parse ordered formula recipes with contextual refusals` | eight contracts/15 new reds/native550 |
+
+Current coupled syntax review follows the protocol below.
+
+## Coupled statement/recipe review protocol
+
+- ID: `G1-SLICE.5a.3e.3`
+  Status: `done`
+  Goal: complete scoped syntax/diagnostic obligation map before closing .3e.
+  Sources: full grammar/contract/worked examples/ADR-0003 and D84/D95/D103; actual lexer/statement/
+  ordered/expression implementations and public tests, independent authored fixtures/reference.
+  Clean415d577; no jobs/user edits. Production code should remain byte-identical unless a defect
+  reproduces. Review flags D109 future canonical assert/recipe byte gap (.3f.1 before implementation)
+  and D110 impossible unconditional canonical/statement diagnostic context (.3e.3 fix now).
+  Map grammar1/header/keywords/bindable kinds/tolerance classes/statement order/empty forms,
+  boundaries/assertion grouping/full-source spans/typed errors/known1-based indices/ASCII precedence,
+  immutability/lifetimes/privacy/Clone and256/4096/16 independent limits to actual product evidence.
+  Keep literal conversion/recipe serialization/.3f.1 and static names/types/binding/evaluation/.5
+  owners explicit; .5a.4 decomposes later evaluator tasks before implementation. No numerical runtime,
+  browser, geometry, storage, project hash, command/API/MCP or production signoff claim.
+  Add independently authored zero-gap boundary sources and lexical keyword-prefix refusals; actual
+  reference token/statement API checks original authored chunks, not a whole-reference-recipe claim.
+  Product checks all ASCII whitespace, token-distinguishable keyword adjacency, reserved header
+  positions, nested/trailing text and typed later-statement header/operand/EOF refusal matrix.
+  Combined maximum4096 assertions each with two256-node expressions and16 if levels on64KiB
+  stack proves there is no hidden aggregate node/depth budget. Independent recursive reference checks
+  the bounded256-node/16-depth authored expression shape before product uses it. Existing all21 worked
+  statements/25 canonical expression bytes retain their scope; no evaluation reclassification.
+  Falsify only new coupled tests with actual spacing-boundary/later-index/nested-rule/bound faults;
+  compiled assertion reds/failed-body classifier/exclusive finally exact source restoration.
+  Strict native/release/WASM, structural/language/publication and ledger/archive/censuses; retain
+  completed proof/oldest ledger payloads exactly via delimiter splitting and independent comparisons.
+  Update statement annex proof map and diagnostic context, progressive/current links and live docs.
+  Verification: statement9/recipe11, native553/45groups, release20/WASM3; five new compiled
+  assertion reds/exact restore; source bytes exact415d577. Reference fixtures9/14/18 and4/8/10,
+  maxshape256/16,12 header/four prefix refusals; book language16/publication9 with51 chapters/21 APIs/
+  1058 source/1636 rendered links pass0. D110 fixed; D109 next .3f.1 before serializer code.
+  Commit: `STITCHCAD-G1-0067`.
+
+### Coupled review recording receipts
+
+Focused ledger9 arms/13 independent pointer controls and archive28/181 CLI controls/172 logical
+reads pass0. Retention172 logical records/47 working Markdown/8639 decoded lines/668602 decoded
+bytes/324924 resident bytes0; fresh reconstructed defects11open/98unique sealed/zero overlap0.
+Tree10lanes/13trees/nine siblings/zero gaps; glossary310/nine/158; feature105/29; uncertainty133/16/
+zero unowned; fixture20/four/five/zero mismatch pass0. Previous415d577 .3e.2 closure remains exact
+in this sibling; archived oldest G1-0045 and G1-0065/0064 lessons compare byte-identically0.
+A trailing blank line in the new live changelog was caught by git diff --check and removed;
+final whitespace check0. No product/parser fault remained; no live-doc ceiling was raised.
+Initial staged gate refused TASK-ACCEPTANCE because root-cause/no-regression bullets omitted tool
+invocations/result signatures despite results in the log. The actual before/after git diff and
+observed make check/release cargo test rc=0 are now attached inside those same bullets; no checker
+or evidence-signature seam changed. Final staged gate must be observed green before recording.
+Final staged make gate → === all doctrines green ===, rc=0; every scoped verification job terminal.

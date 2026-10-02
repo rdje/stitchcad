@@ -11,8 +11,8 @@ answers: "what is the formula language?" · "why does a recipe round twice and n
 
 ## The decision
 
-**The construction recipe is the primary authoring model, its expression language is specified in
-full at G0, and the one documented drafting system that ships as reference blocks is Aldrich's
+**The construction recipe is the primary authoring model, its expression language has a normative
+G0 specification, and the one documented drafting system that ships as reference blocks is Aldrich's
 metric pattern cutting** (Winifred Aldrich, *Metric Pattern Cutting for Women's Wear*, Wiley).
 Geometric sketch constraints stay optional local annotations, and grading stays a second
 instantiation path rather than a re-solve. The paradigm itself is roadmap §15.1 and is not reopened
@@ -95,6 +95,10 @@ assume the answer is no.
 - A new operator, function, kind, diagnostic or unit token is a change to the chapter's tables first;
   the census refuses an example that uses vocabulary no table declares, and refuses a declared
   function the evaluator does not implement.
+- Refinement at G1-SLICE.5a.3e.3: diagnostic index/canonical expression are supplied where known;
+  malformed syntax retains exact span/rule and never invented canonical context (D110). Complete
+  assertion/recipe identity bytes remain D109 under .3f.1 before serialization; expression bytes
+  are settled by D103. These qualifications do not change numeric or evaluation semantics.
 - Never widen a structural limit to land a recipe, and never add a rounding step: both are recorded
   decisions, not implementation conveniences.
 - Cite the system per step and reproduce nothing; a number with no citation is `assumed` and belongs

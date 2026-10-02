@@ -11,8 +11,9 @@
 > every number's representation is the [units chapter](units-and-tolerances.md)'s.
 
 A construction recipe is a list of statements and every statement is one formula. This chapter
-defines that language completely — grammar, values, names, order, rounding, errors — so an
-implementation has no further decision to make. Four properties are requirements, not taste:
+defines the normative grammar, values, names, order, rounding and errors. The exact assertion and
+complete-recipe identity bytes still need the contract owned by G1-SLICE.5a.3f.1 before serialization
+([canonical grammar](formula-language/grammar.md#4-the-canonical-form)). Four properties are requirements, not taste:
 
 - **Statically dimensioned.** Every name and literal has a kind and every operation declares the
   kinds it accepts, so a recipe that does not check is refused *before any value is computed*.
@@ -225,8 +226,12 @@ failure abandons the evaluation the same way and never resumes with a substitute
 
 ### 5.2 The diagnostic set
 
-Every token carries the statement's index, the canonical form of the expression, and the clause it
-broke. A token is stable, is localized as the [internationalization chapter](i18n-architecture.md) §3
+A diagnostic carries the statement index and canonical expression where available, together with
+the clause or source rule it broke. A parsing failure retains its exact offending span and typed
+rule. Whole-source ASCII preflight precedes identified statement boundaries and therefore supplies
+no guessed index; malformed or non-normalizable syntax has no accepted canonical expression.
+Do not fabricate that context. The [syntax evidence map](../annexes/formula-statements.md#coupled-syntax-and-diagnostic-review) distinguishes available context from later semantic/command arguments.
+A token is stable, is localized as the [internationalization chapter](i18n-architecture.md) §3
 specifies, and is never rendered raw to a user.
 
 | Token | Raised when | Required arguments |

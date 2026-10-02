@@ -438,3 +438,220 @@ fn all_worked_statements_compose_in_authored_order_with_unchanged_operand_identi
     assert_eq!(actual, expected);
     assert_eq!(actual.len(), 25);
 }
+
+#[test]
+#[allow(clippy::expect_used)]
+fn coupled_token_boundaries_preserve_zero_gap_and_all_whitespace() {
+    let fixture =
+        include_str!("../../../docs/tasks/artifacts/formula_structure/recipe_coupled_cases.tsv");
+    let mut rows = 0;
+    for row in fixture.lines().filter(|row| !row.starts_with('#')) {
+        let cells: Vec<_> = row.split('\t').collect();
+        assert_eq!(cells.len(), 3);
+        let source = cells.first().expect("whole source");
+        let chunks: Vec<_> = cells
+            .get(1)
+            .expect("authored chunks")
+            .split(" | ")
+            .collect();
+        let bytes: Vec<_> = cells.get(2).expect("operand bytes").split(" | ").collect();
+        let recipe = parse(source);
+        assert_eq!(recipe.statements().len(), 2);
+        assert_eq!(chunks.len(), 2);
+        assert_eq!(bytes.len(), 2);
+        let mut cursor = 0;
+        for (index, statement) in recipe.statements().iter().enumerate() {
+            let chunk = chunks.get(index).expect("original statement");
+            assert_eq!(statement.span().start(), cursor);
+            assert_eq!(statement.span().end(), cursor + chunk.len());
+            assert_eq!(source.get(cursor..cursor + chunk.len()), Some(*chunk));
+            assert_eq!(
+                operands(statement),
+                *bytes.get(index).expect("authored identity")
+            );
+            cursor += chunk.len();
+        }
+        assert_eq!(cursor, source.len());
+        rows += 1;
+    }
+    assert_eq!(rows, 4);
+    for whitespace in [" ", "\t", "\r", "\n", "\x0c", "\x0b"] {
+        let source = format!("let{whitespace}a:{whitespace}count{whitespace}={whitespace}1{whitespace}let{whitespace}b: count = a + 2{whitespace}");
+        let recipe = parse(&source);
+        assert_eq!(recipe.statements().len(), 2);
+        assert_eq!(recipe.statements().first().expect("first").name(), "a");
+        assert_eq!(recipe.statements().get(1).expect("second").name(), "b");
+    }
+    for source in [
+        "let a: count = blet b: count = 2",
+        "let a: length = 1 mmlet b: count = 2",
+        "let a: count = 1let_value(2)",
+        "let a: count = 1assertion(2)",
+    ] {
+        let error = refuse(source);
+        assert_eq!(error.statement_index(), Some(1));
+        assert_eq!(error.diagnostic_code(), "formula_parse");
+    }
+}
+
+#[test]
+fn coupled_later_header_and_operand_rules_keep_exact_global_provenance() {
+    let prefix = "let first: count = 1\nassert prior: eps_num = 1 == 1\n";
+    for (tail, expected, start, end) in [
+        ("let", SR::ExpectedName, 3, 3),
+        ("let let: count = 1", SR::ExpectedName, 4, 7),
+        ("assert if: eps_num = a == b", SR::ExpectedName, 7, 9),
+        ("let b", SR::ExpectedColon, 5, 5),
+        ("let b count = 1", SR::ExpectedColon, 6, 11),
+        ("let b:", SR::ExpectedAnnotation, 6, 6),
+        ("let b: 1 = 1", SR::ExpectedAnnotation, 7, 8),
+        ("let b: point = p", SR::UnbindableKind, 7, 12),
+        ("assert b: eps_chord = a == b", SR::UnknownTolerance, 10, 19),
+        ("let b: count", SR::ExpectedAssignment, 12, 12),
+        ("let b: count == 1", SR::ExpectedAssignment, 13, 15),
+        (
+            "let Upper: count = 1",
+            SR::Lexical(X::IdentifierSpelling),
+            4,
+            9,
+        ),
+    ] {
+        let source = prefix.to_owned() + tail;
+        let error = refuse(&source);
+        assert_eq!(error.statement_index(), Some(3));
+        assert_eq!(
+            error.span().start(),
+            prefix.len() + start,
+            "assertion: {tail}"
+        );
+        assert_eq!(error.span().end(), prefix.len() + end, "assertion: {tail}");
+        let Rule::Statement(nested) = error.rule() else {
+            role(false);
+            continue;
+        };
+        assert_eq!(nested.rule(), expected, "assertion: {tail}");
+        assert_eq!(nested.span(), error.span());
+    }
+    for (tail, part, rule, needle, width) in [
+        (
+            "let b: count = \nlet fourth: count = 4",
+            Part::Binding,
+            P::ExpectedOperand,
+            "let fourth",
+            0,
+        ),
+        (
+            "assert b: eps_num = == a",
+            Part::AssertionLeft,
+            P::ExpectedOperand,
+            "==",
+            0,
+        ),
+        (
+            "assert b: eps_num = a == \nlet fourth: count = 4",
+            Part::AssertionRight,
+            P::ExpectedOperand,
+            "let fourth",
+            0,
+        ),
+        (
+            "let b: length = 1\tcm",
+            Part::Binding,
+            P::UnitSeparator,
+            "\t",
+            1,
+        ),
+        (
+            "assert b: eps_num = a == 1 ^ 3",
+            Part::AssertionRight,
+            P::UnsupportedExponent,
+            "3",
+            1,
+        ),
+        (
+            "assert b: eps_num = a! == b",
+            Part::AssertionLeft,
+            P::Lexical(X::ComparisonPair),
+            "!",
+            1,
+        ),
+        (
+            "assert b: eps_num = a == b!",
+            Part::AssertionRight,
+            P::Lexical(X::ComparisonPair),
+            "!",
+            1,
+        ),
+        (
+            "let b: count = (let fourth: count = 4)",
+            Part::Binding,
+            P::ExpectedOperand,
+            "let fourth",
+            3,
+        ),
+    ] {
+        let source = prefix.to_owned() + tail;
+        let error = refuse(&source);
+        assert_eq!(error.statement_index(), Some(3));
+        #[allow(clippy::expect_used)]
+        let expected = prefix.len() + tail.find(needle).expect("authored offending span");
+        assert_eq!(error.span().start(), expected, "assertion: {tail}");
+        assert_eq!(error.span().end(), expected + width, "assertion: {tail}");
+        let Rule::Statement(nested) = error.rule() else {
+            role(false);
+            continue;
+        };
+        let SR::Expression {
+            part: actual,
+            error: nested,
+        } = nested.rule()
+        else {
+            role(false);
+            continue;
+        };
+        assert_eq!(actual, part);
+        assert_eq!(nested.rule(), rule);
+        assert_eq!(nested.span(), error.span());
+        assert_eq!(nested.diagnostic_code(), error.diagnostic_code());
+    }
+}
+
+#[test]
+#[allow(clippy::expect_used)]
+fn coupled_all_statement_and_expression_limits_reach_their_maximum_together() {
+    std::thread::Builder::new()
+        .stack_size(64 * 1024)
+        .spawn(|| {
+            // Each conditional adds three nodes to a literal;207 unary nodes complete256.
+            let mut expression = String::from("1 um");
+            for _ in 0..16 {
+                expression = format!("if(flag, {expression}, 2 um)");
+            }
+            let expression = "-".repeat(207) + &expression;
+            let mut source = String::new();
+            for index in 0..4096 {
+                source.push_str(&format!(
+                    "assert check_{index}: eps_num = {expression} == {expression}\n"
+                ));
+            }
+            let recipe = parse(&source);
+            assert_eq!(recipe.statements().len(), 4096);
+            let mut nodes = 0;
+            for statement in recipe.statements() {
+                let K::Assert { left, right, .. } = statement.kind() else {
+                    role(false);
+                    continue;
+                };
+                assert_eq!(left.node_count(), 256);
+                assert_eq!(right.node_count(), 256);
+                assert_eq!(left.conditional_depth(), 16);
+                assert_eq!(right.conditional_depth(), 16);
+                nodes += left.node_count() + right.node_count();
+            }
+            assert_eq!(nodes, 4096 * 2 * 256);
+            drop(recipe);
+        })
+        .expect("small-stack combined limits")
+        .join()
+        .expect("assertion: independent simultaneous syntax limits");
+}

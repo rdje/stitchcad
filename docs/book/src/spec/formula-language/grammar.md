@@ -154,7 +154,10 @@ No sign folding, argument reordering, algebraic simplification or evaluation cha
 Source spans, grouping and original unit spellings remain outside canonical bytes. A canonical
 expression has no terminal newline. Production expression serialization is .5a.3d.2; the
 [coupled identity review](../../annexes/formula-literals.md#coupled-canonical-identity-review) closes .3d.
-Ordered statement serialization and recipe execution remain separate requirements.
+Ordered statement serialization and recipe execution remain separate requirements. Binding examples
+above do not settle assertion opcode/payload order or the empty/ordered-recipe envelope, separators
+and terminal newline. D109 is owned by G1-SLICE.5a.3f.1 before implementation; expression bytes are
+complete, while those complete-recipe identity requirements remain open.
 
 **A formula's identity is its canonical form.** `2.5 cm` and `25 mm` canonicalize to one node
 (`length:25000`), so they are one formula: a diff, a hash and a golden compare canonical forms and
