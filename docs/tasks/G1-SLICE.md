@@ -521,36 +521,9 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4d.1`
   Status: `done`
-  Goal: apply the director's 2026-10-02 book requirement: roadmap, code and book in lockstep;
-  incremental learning path for students/newcomers, direct expert navigation, glossary and index,
-  detailed contracts/verification in annexes. Preserve canonical anchors and normative requirements.
-  Reproduce D71: introduction.md says "project is in gate G0" while LIVE_STATUS/sc-measure report G1
-  runtime libraries. Impact: readers cannot distinguish built capabilities from future contracts.
-  Priority: next safe leaf after MTM commit; correct landing/status and review the current chapter
-  inventory against roadmap/code/task owners. No app, MCP server, geometry or release claim before proof.
-  Acceptance: bounded newcomer progression, expert annex/reference links, complete topic index plus
-  existing verified glossary; source/rendered-link checks, status/requirement map and owned remaining
-  chapter migrations when too large for one safe leaf. D71 fixed and verified before closing.
-  Pre-edit publication protocol: new learning chapters progressively introduce recipe, measurements,
-  pieces, sizes and agents using declared examples; plain availability page distinguishes existing
-  libraries from future application/geometry/MCP/release. Existing detailed contracts enter the Annexes
-  navigation section at their unchanged source URLs/anchors; glossary remains independently reachable.
-  Topic index covers the entire registered chapter population, with expert links for current APIs.
-  Add a scoped roadmap/code/book status map and standard-library publication checker with actual
-  copied-fixture refusal probes for orphaned/missing chapters, missing index coverage, invalid source/
-  rendered links and status/API mismatch. Fixtures and generated HTML remain on this repo volume.
-  Adopt directive in a decision and roadmap principle/disposition; compact map input at unchanged cap.
-  Correct D71 landing and measurement-input status; preserve earlier checklists/journals unchanged,
-  D72 milestone blocker: archive resident-limit RED uses the live archive plus 22 fixed records;
-  486538 + 3520000 decoded bytes exceeds 4000000, so decoded-limit refusal preempts its intended
-  resident predicate. Fix this small fixture defect here before closing publication verification:
-  use a fixed minimal valid archive, paired passing/overflow resident cases, no reader/bound changes.
-  Keep ROADMAP within its original baseline by moving its exact D32 explanation into the existing
-  canonical decision and leaving a concise disposition link; no registry/ceiling changes.
-  Roll live records by exact predecessor bytes if required. Focused checks plus full probe milestone.
-  Verification: 47 chapters/14 scoped public APIs, all source/rendered links; nine publication probes,
-  28 archive arms and full 24 suites green; glossary/ledger/censuses and staged doctrines.
-  Commit: `STITCHCAD-G1-0036` (this recording commit).
+  Contract/checklist: [preserved publication evidence](G1-SLICE-measurements.md#publication-contract-and-evidence--preserved-from-9ef9602).
+  Verification: 47 chapters/14 APIs; publication nine, archive 28, full 24 suites green.
+  Commit: `STITCHCAD-G1-0036`.
 
 - ID: `G1-SLICE.4d.2`
   Status: `pending`
@@ -560,7 +533,7 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `pending`
 
 - ID: `G1-SLICE.5`
-  Status: `pending`
+  Status: `in_progress`
   Syntax frontier: `.5a` may proceed while D70 blocks complete SizeSet. Membership/table/Ease
   foundations are implemented; expression syntax consumes no axis or full SizeSet representation.
   This dependency exception leaves .4's remaining children owned and unclosed.
@@ -578,13 +551,60 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `pending`
 
 - ID: `G1-SLICE.5a`
-  Status: `pending`
+  Status: `in_progress`
+  Children: `.5a.1` lexical stream, `.5a.2` expression trees, `.5a.3` literal/canonical recipes,
+  `.5a.4` syntax review. Finalize each protocol after reading its complete affected contracts.
   Goal: expression-language syntax from the full formula contract/grammar/examples. Read all three
   before finalizing a pre-code protocol and safe parser subleaves; introduce immutable syntax and
   precise source diagnostics without claiming evaluation, generated geometry or resolved SizeSet.
   Acceptance: syntax, keywords, literals/units, precedence/conditionals, structural bounds and
   rejected forms conform to the normative language; canonical/display forms and source spans are
   explicit. Type/name binding, exact evaluation/DAG and operation recipes remain .5's later children.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.1`
+  Status: `done`
+  Goal: borrowed ASCII lexical stream for the normative machine-form formula syntax; explicit
+  lexical kind, original text and byte span, with typed first-error refusal and fused termination.
+  Pre-code protocol: sc_core::recipe owns the syntax front-end. Immutable FormulaLexeme and
+  FormulaSourceSpan retain exact source text/positions; FormulaLexer scans borrowed input without
+  cloning names/numbers or interpreting values. Classify three keywords using one shared private
+  name-module classifier; preserve all existing MachineToken public constructor/error behavior.
+  ASCII preflight reports the first full offending Unicode scalar before producing tokens. General
+  ASCII whitespace is ignored between tokens but span gaps remain; the later parser enforces the
+  literal's exact single-space unit separator. Identifier spelling uses the same allocation-free
+  lower-snake predicate as MachineToken. Number tokens retain digits/optional nonempty fraction,
+  with no numeric conversion/rounding/implicit unit. Punctuation/operators include longest paired
+  comparisons; malformed identifiers, decimal fraction, lone ! and unsupported characters refuse.
+  After first error/end, iterator remains ended. Debug of lexer reveals scope/position, not source.
+  Lexical success certifies only tokens: adjacent atoms, comments assembled from slash operators,
+  unsupported calls/exponents/units, type/name errors and recipe bounds retain parser/checker owners.
+  Own native/WASM tests, borrowing/privacy docs, every current worked example's machine-token scan,
+  actual guard mutations, book/public-status map/index, canonical ADR clause-link fix D73, bounded
+  live/evidence seals and commit. No evaluation, canonical formula identity or app/MCP claimed.
+  Verification: 13 lexical contracts/two privacy-lifetime docs; nine actual assertion reds/exact restore;
+  454 strict native tests, WASM/book; publication nine, formula 15 and ledger nine probes green.
+  Commit: `STITCHCAD-G1-0037` (this recording commit).
+
+- ID: `G1-SLICE.5a.2`
+  Status: `pending`
+  Goal: expression syntax/precedence/conditional trees with node/depth bounds and precise parse
+  refusals; finalize the full pre-code protocol before implementation, preserve static/runtime split.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3`
+  Status: `pending`
+  Goal: exact literal normalization and canonical S-expressions, ordered binding/assert recipes and
+  statement limits. Finalize numeric/identity protocol from normative contract before code.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.4`
+  Status: `pending`
+  Goal: review all syntax/canonical-form requirements and deferred name/type/evaluation owners,
+  full milestone gate before closing .5a; exact evaluator/DAG and operations remain .5 children.
   Verification: `pending`
   Commit: `pending`
 
@@ -749,7 +769,8 @@ metadata signoff unchanged; the named table slice follows.
 | done | `G1-SLICE.4c.3b` | `done` | Explicit current Design/member/POM coverage |
 | done | `G1-SLICE.4c.3c` | `done` | Custom member-of-one body/Ease inputs |
 | done | `G1-SLICE.4d.1` | `done` | Incremental book, glossary/index/annexes; D71/D72 fixed |
-| next | `G1-SLICE.5a` | `pending` | Read expression contracts, then syntax slices; D70 axes remains pending |
+| done | `G1-SLICE.5a.1` | `done` | Borrowed source tokens/spans; no expression-validation/execution claim |
+| next | `G1-SLICE.5a.2` | `pending` | Expression-tree protocol/precedence/bounds; D70 remains pending |
 
 ## Routing Evidence — D72, milestone fixture calibration
 
@@ -843,39 +864,40 @@ measured by the `SPINE.7` probe).
 
 
 
-### `G1-SLICE.4d.1` — progressive publication and scoped lockstep
+### `G1-SLICE.5a.1` — borrowed lexical syntax with explicit parser boundaries
 
-- [x] **REPRODUCE / ISSUE** — `git show 285e238:docs/book/src/introduction.md` reports G0-only
-  status despite G1 libraries; measurement-inputs calls implemented Ease future work. Full milestone
-  initially fails archive resident fixture with decoded-limit error and roadmap baseline growth.
-- [x] **ROOT CAUSE (WHY + WHERE)** — first `make probes` → archive `AssertionError` naming
-  decoded versus resident predicate, rc=2; `wc -lc ROADMAP.md` → 964/54067, rc=0. D71 is stale
-  landing/status prose, not missing code. D72 is
-  history_archive_probes.py: 486538 + 22 × 160000 = 4006538 exceeds decoded 4000000 before resident
-  validation. The reader is correct; a production-sized baseline made the intended RED dependent on
-  unrelated growth. Roadmap 964/54067 exceeds unchanged 951/53153 baseline; trimming is the remedy.
-- [x] **FIX** — five progressive learning chapters, truthful availability, independent glossary/
-  topic index and detailed annex navigation with preserved URLs/anchors. Fourteen API/status rows
-  link roadmap/code/book/task owners; publication refusal probes own regression coverage. Fixed
-  independent resident fixture plus green/control arm; D32 disposition retained exactly in its
-  canonical decision while roadmap becomes concise, 951 lines/53129 B. No cap or reader changed.
-- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/book_publication/run_book_publication_probes.sh`
-  → 47 chapters/14 rows/983 source links/1489 rendered links; eight named refusal mutations and
-  one real-tree green, nine pass/0 fail, rc=0. Archive → 28 pass/0 fail, rc=0. Landing G1 and Ease
-  scope corrected; D71/D72 close with exact historical descriptions preserved in defects part14.
-- [x] **NO REGRESSION** — `TMPDIR="$PWD/target/scratch" make probes` → 24 suites green, rc=0;
-  glossary → 310 terms/9 parts/158 tokens/0 failures; tree/feature/uncertainty/ledger green, rc=0.
-  Warning-free book and source/rendered table cells pass; staged `make gate` → all doctrines green.
-  Rust/Cargo unchanged from strict 439-test native/WASM 285e238; no new runtime or remote-CI claim.
-  Browser screenshot review is unavailable under the environment's local-URL policy; rendered
-  artifact checks verify content/navigation instead, without asserting a visual browser inspection.
-- [x] **LOCKSTEP** — director directive adopted in roadmap §2/disposition and indexed retrievable
-  decision. Public source map and availability distinguish structural libraries from future geometry/
-  API/MCP/apps/approval. Original D32 disposition and completed MTM contract/checklist retain exact
-  HEAD bytes. Rolling seals preserve payloads; no baseline/ceiling raised. .4d.2 combined review stays
-  pending; .5a syntax can progress independently of D70's required unanswered axes ruling.
+- [x] **REPRODUCE / ISSUE** — complete formula contract/grammar/examples and ADR read before
+  lexical protocol/subleaves. No recipe module existed at predecessor 9ef9602. D73 ADR names absent
+  examples/exclusions clauses. First gap contract finds D74: 12 pass/1 fail, rc=101, byte 11 refused.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `cargo test -p sc-core --test formula_lex_contract` →
+  UnsupportedCharacter at bytes 11..12, 12 passed/1 failed, rc=101; lexical whitespace helper omits
+  vertical tab. `rg -n '§10|§11' docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md`
+  found two obsolete clause pointers, rc=0; main headings are §1–§9 and actual exclusions §6.
+  Missing lexical front-end is a planned feature; it must borrow source and carry no evaluation authority.
+- [x] **FIX** — immutable token/kind/span and typed source-private first-error/fused scanner; shared
+  spelling/three-keyword classifiers retain MachineToken behavior. Full ASCII preflight precedes tokens;
+  number spelling and whitespace gaps retain later parser authority. Added vertical tab, corrected ADR
+  clause links, contract/privacy tests, isolated actual source mutations and indexed syntax annex.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test formula_lex_contract` → 13 passed,
+  0 failed, rc=0; all 17 bindings/four assertions/13 refusal forms consumed with explicit lexical scope.
+  `bash docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh` → nine actual assertion reds,
+  rc=101 each, runner rc=0; both sources restored byte-identically. Two privacy/lifetime doctests pass.
+  D73 targets exist and D74 gap regression remains green; exact logged descriptions seal to part15.
+- [x] **NO REGRESSION** — `CARGO_HOME="$PWD/target/cargo-home" TMPDIR="$PWD/target/scratch" make check`
+  → strict lint and 454 tests including docs green, rc=0; `make wasm` → three-library cross-build, rc=0.
+  Formula-language probes 15 pass/0 fail, ledger nine pass/0 fail, publication nine pass/0 fail, rc=0.
+  Feature/tree/glossary/uncertainty/fixture censuses green; source/rendered publication links verified.
+  Staged `make gate` → all doctrines green, rc=0. Focused checks are appropriate for this syntax
+  subleaf; full milestone belongs .5a.4. No remote-CI claim.
+- [x] **LOCKSTEP** — roadmap language unchanged; .5a.2/.3/.4 own parser/canonical/bounds completion.
+  Learning/availability/module/package/README/status map/index and detailed API annex state actual
+  lexical scope. Forty-eight chapters/15 API rows, 991 source/1506 rendered links checked. Exact
+  predecessor publication contract/checklist and oldest ledger payloads preserved; no cap raised.
+  D70 required axes ruling stays pending. G1 remains 5/18 top-level leaves with .4/.5 structurally partial.
 
 ## Verification Log
+
+| `2026-10-02` | `.5a.1` | lexical contracts/docs; actual mutation/restoration; strict native/WASM; book/publication/language/censuses/ledger/archive/staged gate | 13 contracts/two docs; nine assertion reds; 454 tests; focused checks green, rc=0 |
 
 | `2026-10-02` | `.4d.1` | book/source/render/status/index; nine publication probes; archive/control; full milestone/censuses/ledger/staged gate | 47 chapters/14 APIs, 983/1489 links, 28 archive arms, 24 suites green; D71/D72 fixed |
 
@@ -947,3 +969,11 @@ retains exact e299771 bytes; earlier journals remain linked there. Current entri
 - Staged acceptance initially refused the ROOT CAUSE bullet's missing command-output signature;
   the actual first milestone invocation/refusal and rc=2 are now cited inside that bullet. The
   mechanical gate remains unchanged; final staged verification is rerun before committing.
+
+- `2026-10-02`: .5a.1 introduces borrowed machine tokens/spans, preserving namespace and parser
+  authority boundaries; D73 clause links/D74 whitespace corrected. Nine actual guard reds and exact
+  restoration; strict 454 native tests/WASM/book, focused publication/language/censuses/ledger green.
+  .5a.2 expression trees is the next product slice; D70 axes remains unanswered.
+
+| `.5a.1` | `STITCHCAD-G1-0037 (leaf G1-SLICE.5a.1): formula lexing preserves borrowed machine source and precise spans` | 13 contracts/two docs; nine actual reds; strict 454 tests/WASM; publication/language/ledger green |
+Lesson promotion declined for .5a.1: routine lexical mechanics; language/canonical authority stays ADR-0003.

@@ -108,3 +108,7 @@ resident/decoded bounds; `list`, `read docs/history/<basename>` and `materialize
 recover exact original records without Git history. `prove-source window1` separately compares the
 capture against its named Git snapshot when available. Calibrated refusals:
 `bash scripts/check_archive_retention.sh --self-test` (Python 3.9+ standard library; no packages).
+
+Formula lexer guard proof: `bash docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh`
+mutates actual production sources, expects nine assertion reds and restores exact bytes. Run alone;
+no overlapping build/gate/commit. The library contract tests cover borrowed spans and lexical scope.

@@ -1,8 +1,10 @@
 # The formula language
 
 > **Status:** normative specification, gate **G0** (roadmap ADR-0003 and §11's G0 exit clause:
-> "ADR-0003 (drafting paradigm + formula language v1)"). Implemented by `sc-core` at gate G1
-> (leaf `G1-SLICE.5`), whose acceptance makes every worked example a test. Terms are defined in the
+> "ADR-0003 (drafting paradigm + formula language v1)"). `sc-core` currently implements
+> [borrowed machine-form lexing](../annexes/formula-syntax.md) at G1-SLICE.5a.1. Parsing, canonical
+> expressions and recipe evaluation remain G1-SLICE.5 work; final acceptance makes every worked
+> example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
 > every number's representation is the [units chapter](units-and-tolerances.md)'s.
 

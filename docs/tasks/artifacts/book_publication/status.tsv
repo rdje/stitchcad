@@ -13,3 +13,4 @@ membership	spec/size-membership.md	crates/sc-measure/src/size_membership.rs	Size
 garment observations	spec/size-chart-observations.md	crates/sc-measure/src/size_chart.rs	SizeChartObservation	G1-SLICE.4c.3a	3.3
 garment collections	spec/size-chart-collections.md	crates/sc-measure/src/size_chart_collection.rs	SizeChart	G1-SLICE.4c.3b	3.4
 MTM	spec/mtm-input-charts.md	crates/sc-measure/src/mtm_chart.rs	MtmChart	G1-SLICE.4c.3c	3.3
+formula lexing	annexes/formula-syntax.md	crates/sc-core/src/recipe/lexer.rs	FormulaLexer	G1-SLICE.5a.1	4.1

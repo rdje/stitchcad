@@ -32,23 +32,44 @@ impl fmt::Display for MachineTokenError {
 }
 impl std::error::Error for MachineTokenError {}
 
+/// Shared lexical keyword classification; only these three spellings are reserved identifiers.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub(crate) enum GrammarKeyword {
+    Let,
+    Assert,
+    If,
+}
+
+pub(crate) fn grammar_keyword(input: &str) -> Option<GrammarKeyword> {
+    match input {
+        "let" => Some(GrammarKeyword::Let),
+        "assert" => Some(GrammarKeyword::Assert),
+        "if" => Some(GrammarKeyword::If),
+        _ => None,
+    }
+}
+
+/// Check the shared identifier spelling without allocating or assigning namespace authority.
+pub(crate) fn valid_spelling(input: &str) -> bool {
+    input.bytes().next().is_some_and(|c| c.is_ascii_lowercase())
+        && input.split('_').all(|part| {
+            !part.is_empty()
+                && part
+                    .bytes()
+                    .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit())
+        })
+}
+
 impl MachineToken {
     /// Validate without trimming, normalizing or automatically renaming the input.
     /// # Errors
     /// Returns [`MachineTokenError`] for malformed syntax or the keywords `let`, `assert`, `if`.
     pub fn new(input: impl Into<String>) -> Result<Self, MachineTokenError> {
         let input = input.into();
-        let valid_start = input.bytes().next().is_some_and(|c| c.is_ascii_lowercase());
-        let valid_segments = input.split('_').all(|part| {
-            !part.is_empty()
-                && part
-                    .bytes()
-                    .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit())
-        });
-        if !valid_start || !valid_segments {
+        if !valid_spelling(&input) {
             return Err(MachineTokenError::InvalidSyntax(input));
         }
-        if matches!(input.as_str(), "let" | "assert" | "if") {
+        if grammar_keyword(&input).is_some() {
             return Err(MachineTokenError::ReservedKeyword(input));
         }
         Ok(Self(input))

@@ -9,7 +9,9 @@ you use and the decisions that affect the result. StitchCAD calls that record a 
 Imagine changing the intended skirt length. A recipe identifies the measurement and the construction
 steps that depend on it. Re-evaluating those steps should produce the new shape without guessing
 which drawing lines must move. Recipe evaluation is planned work; the current libraries describe
-many of the inputs and garment objects it will consume.
+many of the inputs and garment objects it will consume. A lexical scanner can now read the recipe
+words and symbols with precise source locations; it does not yet validate or execute a recipe.
+The [formula syntax annex](../annexes/formula-syntax.md) gives the developer contract.
 
 A design therefore has several layers:
 

@@ -695,3 +695,72 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
   pointers agree. Completed .3b contract/checklist retains exact e299771 bytes in the linked sibling;
   oldest changelog/lesson payloads seal unchanged. Director's publication requirement and landing
   status defect D71 are owned by .4d.1 next; axes D70 remains unanswered, with no representation default.
+
+## Publication contract and evidence — preserved from 9ef9602
+
+- ID: `G1-SLICE.4d.1`
+  Status: `done`
+  Goal: apply the director's 2026-10-02 book requirement: roadmap, code and book in lockstep;
+  incremental learning path for students/newcomers, direct expert navigation, glossary and index,
+  detailed contracts/verification in annexes. Preserve canonical anchors and normative requirements.
+  Reproduce D71: introduction.md says "project is in gate G0" while LIVE_STATUS/sc-measure report G1
+  runtime libraries. Impact: readers cannot distinguish built capabilities from future contracts.
+  Priority: next safe leaf after MTM commit; correct landing/status and review the current chapter
+  inventory against roadmap/code/task owners. No app, MCP server, geometry or release claim before proof.
+  Acceptance: bounded newcomer progression, expert annex/reference links, complete topic index plus
+  existing verified glossary; source/rendered-link checks, status/requirement map and owned remaining
+  chapter migrations when too large for one safe leaf. D71 fixed and verified before closing.
+  Pre-edit publication protocol: new learning chapters progressively introduce recipe, measurements,
+  pieces, sizes and agents using declared examples; plain availability page distinguishes existing
+  libraries from future application/geometry/MCP/release. Existing detailed contracts enter the Annexes
+  navigation section at their unchanged source URLs/anchors; glossary remains independently reachable.
+  Topic index covers the entire registered chapter population, with expert links for current APIs.
+  Add a scoped roadmap/code/book status map and standard-library publication checker with actual
+  copied-fixture refusal probes for orphaned/missing chapters, missing index coverage, invalid source/
+  rendered links and status/API mismatch. Fixtures and generated HTML remain on this repo volume.
+  Adopt directive in a decision and roadmap principle/disposition; compact map input at unchanged cap.
+  Correct D71 landing and measurement-input status; preserve earlier checklists/journals unchanged,
+  D72 milestone blocker: archive resident-limit RED uses the live archive plus 22 fixed records;
+  486538 + 3520000 decoded bytes exceeds 4000000, so decoded-limit refusal preempts its intended
+  resident predicate. Fix this small fixture defect here before closing publication verification:
+  use a fixed minimal valid archive, paired passing/overflow resident cases, no reader/bound changes.
+  Keep ROADMAP within its original baseline by moving its exact D32 explanation into the existing
+  canonical decision and leaving a concise disposition link; no registry/ceiling changes.
+  Roll live records by exact predecessor bytes if required. Focused checks plus full probe milestone.
+  Verification: 47 chapters/14 scoped public APIs, all source/rendered links; nine publication probes,
+  28 archive arms and full 24 suites green; glossary/ledger/censuses and staged doctrines.
+  Commit: `STITCHCAD-G1-0036` (this recording commit).
+
+### `G1-SLICE.4d.1` — progressive publication and scoped lockstep
+
+- [x] **REPRODUCE / ISSUE** — `git show 285e238:docs/book/src/introduction.md` reports G0-only
+  status despite G1 libraries; measurement-inputs calls implemented Ease future work. Full milestone
+  initially fails archive resident fixture with decoded-limit error and roadmap baseline growth.
+- [x] **ROOT CAUSE (WHY + WHERE)** — first `make probes` → archive `AssertionError` naming
+  decoded versus resident predicate, rc=2; `wc -lc ROADMAP.md` → 964/54067, rc=0. D71 is stale
+  landing/status prose, not missing code. D72 is
+  history_archive_probes.py: 486538 + 22 × 160000 = 4006538 exceeds decoded 4000000 before resident
+  validation. The reader is correct; a production-sized baseline made the intended RED dependent on
+  unrelated growth. Roadmap 964/54067 exceeds unchanged 951/53153 baseline; trimming is the remedy.
+- [x] **FIX** — five progressive learning chapters, truthful availability, independent glossary/
+  topic index and detailed annex navigation with preserved URLs/anchors. Fourteen API/status rows
+  link roadmap/code/book/task owners; publication refusal probes own regression coverage. Fixed
+  independent resident fixture plus green/control arm; D32 disposition retained exactly in its
+  canonical decision while roadmap becomes concise, 951 lines/53129 B. No cap or reader changed.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/book_publication/run_book_publication_probes.sh`
+  → 47 chapters/14 rows/983 source links/1489 rendered links; eight named refusal mutations and
+  one real-tree green, nine pass/0 fail, rc=0. Archive → 28 pass/0 fail, rc=0. Landing G1 and Ease
+  scope corrected; D71/D72 close with exact historical descriptions preserved in defects part14.
+- [x] **NO REGRESSION** — `TMPDIR="$PWD/target/scratch" make probes` → 24 suites green, rc=0;
+  glossary → 310 terms/9 parts/158 tokens/0 failures; tree/feature/uncertainty/ledger green, rc=0.
+  Warning-free book and source/rendered table cells pass; staged `make gate` → all doctrines green.
+  Rust/Cargo unchanged from strict 439-test native/WASM 285e238; no new runtime or remote-CI claim.
+  Browser screenshot review is unavailable under the environment's local-URL policy; rendered
+  artifact checks verify content/navigation instead, without asserting a visual browser inspection.
+- [x] **LOCKSTEP** — director directive adopted in roadmap §2/disposition and indexed retrievable
+  decision. Public source map and availability distinguish structural libraries from future geometry/
+  API/MCP/apps/approval. Original D32 disposition and completed MTM contract/checklist retain exact
+  HEAD bytes. Rolling seals preserve payloads; no baseline/ceiling raised. .4d.2 combined review stays
+  pending; .5a syntax can progress independently of D70's required unanswered axes ruling.
+
+Publication continuation is owned by the current parent frontier.

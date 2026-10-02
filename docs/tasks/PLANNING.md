@@ -441,6 +441,10 @@ D71 and D72 are sealed in [`stitchcad-defects-part14.md`](../history/stitchcad-d
 G1-SLICE.4d.1 fixes stale book status and the archive probe's production-sized fixture; source/rendered
 publication checks, paired archive predicates and the 24-suite milestone verify both closures.
 
+D73 and D74 are sealed in [`stitchcad-defects-part15.md`](../history/stitchcad-defects-part15.md).
+G1-SLICE.5a.1 corrects ADR clause links and ASCII vertical-tab handling; lexical contracts and
+actual guard mutations verify the fixes.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

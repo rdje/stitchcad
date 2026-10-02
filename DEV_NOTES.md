@@ -3,6 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — lexical source is borrowed and expression authority stays separate
+
+- FormulaLexer borrows exact machine source and produces immutable text/span/kind tokens. One shared
+  private spelling/keyword classifier preserves MachineToken public errors. ASCII preflight occurs
+  before any token; token/error iteration fuses. Debug/errors omit source, while lexeme text is explicit.
+- Successful lexing is deliberately weaker than valid expression/recipe: adjacent atoms, comments,
+  unsupported calls/units/powers and type/name/numeric bounds stay with the parser/checker/evaluator.
+  Leading zeroes/precision and whitespace gaps are retained for later exact literal/canonical work.
+- The gap contract found D74: Rust's ASCII-whitespace helper omits vertical tab. Explicit handling and
+  a real guard mutation verify the fix. D73 stale ADR clause references now target actual examples and
+  exclusions. The mutation runner initially rejected custom assertion text lacking its output marker;
+  named assertion messages correct the evidence. Strict lint exposed test indexing/helper expect and
+  iterator style; safe access and a borrowing iterator correct the harness without loosening lints.
+- Thirteen lexical contracts/two privacy-lifetime docs, nine actual production assertion reds and
+  restored native/WASM checks pass. Book source/rendered/status/index checks cover 48 chapters/15 APIs.
+  Checks use repository-local Cargo/scratch storage; installed toolchains remain read-only dependencies.
+- Completed publication evidence and oldest live ledger payloads retain predecessor bytes; D73/D74
+  seal with logged descriptions unchanged. No cap changes, remote-CI or recipe-execution claim.
+- promotion: declined (routine syntax subleaf; canonical language/identity decisions remain ADR-0003).
+
 ## _(2026-10-02)_ — teach progressively while verifying public implementation scope
 
 - The director requires roadmap/code/book lockstep, incremental teaching and direct expert routes.
@@ -91,33 +111,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   structurally; SizeSet and combined review remain. Physical/evaluation/release proofs are still owned.
 - promotion: declined (routine milestone review; results owned by book/task, canonical decisions unchanged).
 
-## _(2026-10-02)_ — per-POM queries preserve current mapping and table identities
 
-- Set entries pin mapping/body/POM/amount targets; fit, provenance and numeric state stay in current
-  canonical records. Retargeting needs validated set replacement. Unique POM/id/token inventories
-  permit shared body/amount declarations; selecting a peer by same POM or table content is forbidden.
-- Current queries check both named table memberships and current mapping/permission. Targeted queries
-  do not certify unrelated entries, complete table/size-chart coverage, Design revision or release.
-  Unknown/derived amounts still return their required observation/evaluation source, never zero.
-- Fourteen contracts/privacy and ten real guard mutations verify namespace and membership boundaries.
-  The duplicate-POM regression uses two individually valid mappings to one POM, so removing only that
-  guard accepts genuine ambiguity. Restored strict Rust/WASM/book pass; D69 package wording is repaired
-  and verified with cargo metadata. Existing D34 stale index example is corrected within this slice.
-- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s set section.
-
-## _(2026-10-02)_ — Ease intent never supplies an unresolved numeric fallback
-
-- Individual mappings pin body/POM metadata bindings and borrow a distinct signed amount declaration.
-  Fit classes are ordered but carry no numerical thresholds. Mapping and compression provenance are
-  explicit references, separate from canonical amount state/source. Current reassignments refuse.
-- Unknown/derived amounts stay inspectable without authored results; numeric queries retain the exact
-  observation/evaluation refusal. All present current negatives require compression declaration,
-  including same-id edits and externally evaluated results. The v1 envelope remains separately scoped.
-- Thirteen contracts/privacy and seven real guard removals verify borrowing/currentness/permission.
-  Strict lint required boxing large expected/actual binding snapshots. The mutation tool refused an
-  unwrap panic as proof until a direct error assertion was added; final seven arms fail assertions,
-  restore exact source, and strict checks/WASM/book pass. Ease sets/table membership follow separately.
-- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s Ease section.
 
 
 
@@ -178,3 +172,7 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part33.md`](docs/history/stitchcad-devnotes-part33.md) | archive capacity/retrieval lesson | 18 lines, 1591 bytes, `sha256:aad7494a…` |
 
 | [`stitchcad-devnotes-part34.md`](docs/history/stitchcad-devnotes-part34.md) | measurement table binding lesson | 18 lines, 1699 bytes, `sha256:3dc0b619…` |
+
+| [`devnotes-part35.md`](docs/history/stitchcad-devnotes-part35.md) | individual Ease mapping lesson | 13 lines, 1190 bytes, `sha256:de68d50d…` |
+
+| [`devnotes-part36.md`](docs/history/stitchcad-devnotes-part36.md) | per-POM Ease query lesson | 13 lines, 1196 bytes, `sha256:f0b78fd7…` |

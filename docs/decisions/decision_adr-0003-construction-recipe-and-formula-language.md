@@ -89,7 +89,7 @@ assume the answer is no.
 
 ## How to apply
 
-- Implement `G1-SLICE.5` against the chapter, and make every §10 example a test — the census at
+- Implement `G1-SLICE.5` against the chapter, and make every [worked example (§§2–4)](../book/src/spec/formula-language/examples.md) a test — the census at
   `docs/tasks/artifacts/formula_language/run_formula_language_census.sh` is the oracle those tests
   are written from, and its evaluator reads the chapter's own tables rather than a copy of them.
 - A new operator, function, kind, diagnostic or unit token is a change to the chapter's tables first;
@@ -107,4 +107,4 @@ drafting system — Müller & Sohn is the standing candidate — which re-derive
 re-cites every number; (2) a G1 or G2 measurement shows the exact-rational evaluator cannot meet a
 performance budget the product needs, in which case the fix is a representation change under the
 same value semantics and never a change of the rounding points; (3) a real recipe needs a construct
-§11 excludes, which arrives as a v2 candidate with a worked example over a garment, or not at all.
+[formula exclusions §6](../book/src/spec/formula-language.md#6-exclusions) excludes, which arrives as a v2 candidate with a worked example over a garment, or not at all.
