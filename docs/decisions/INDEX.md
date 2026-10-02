@@ -57,3 +57,5 @@ Records carry an `answers:` line so a question can find them — that is what ma
 | [`decision_angles.md`](decision_angles.md) | `decision` | signed and multi-turn formula bindings; normalized entity directions; D84 verification remains owned |
 | [`decision_book-progression.md`](decision_book-progression.md) | `decision` | progressive learning, glossary/index and expert annexes; roadmap/code/book share verified scope |
 | [`decision_literals.md`](decision_literals.md) | `decision` | exact128-bit canonical literal nodes; once-rounded i64 numeric bindings; unary operator identity retained |
+
+| [`decision_canonical-expression-spelling.md`](decision_canonical-expression-spelling.md) | `decision` | D103: unary (- child), square (^2 child); exact canonical expression byte contract |

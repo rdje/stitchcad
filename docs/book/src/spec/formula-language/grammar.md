@@ -133,6 +133,14 @@ node-boundary verification is recorded in the [expert annex](../../annexes/formu
 [explicit input normalization](../../annexes/formula-literals.md), including whole normalized syntax
 arenas. The [coupled product review](../../annexes/formula-literals.md#coupled-normalization-review)
 completes normalization prerequisites; canonical serialization remains later work.
+The director's D103 ruling fixes unary minus as (- child) and square as (^2 child). Binary nodes use
+(operator left right) with the authored machine symbol; unary minus differs by arity. Calls retain
+(function arg1 arg2 ...) and conditionals use (if condition then else), with every child in order.
+The [complete expression byte contract](../../annexes/formula-literals.md#canonical-expression-bytes)
+provides examples and explains why named neg/square tags would collide with ordinary calls.
+No sign folding, argument reordering, algebraic simplification or evaluation changes identity.
+Source spans, grouping and original unit spellings remain outside canonical bytes. A canonical
+expression has no terminal newline. Production serialization remains .5a.3d.2; this is the contract.
 
 **A formula's identity is its canonical form.** `2.5 cm` and `25 mm` canonicalize to one node
 (`length:25000`), so they are one formula: a diff, a hash and a golden compare canonical forms and

@@ -680,9 +680,39 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0061`.
 
 - ID: `G1-SLICE.5a.3d`
-  Status: `pending`
+  Status: `in_progress`
   Goal: iterative canonical S-expression identity over privately normalized expression nodes;
   preserve operators/names/child order, source locations distinct from canonical bytes, explicit scope.
+  Children: .1 complete byte-contract inventory/proposal; .2 serializer after D103 ruling;
+  .3 coupled canonical identity review. Existing numeric normalization is complete, not execution.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3d.1`
+  Status: `done`
+  Goal: settle exact canonical expression byte contract before product serializer implementation.
+  Protocol: [complete prior inventory/proposal plan](G1-SLICE-formulas.md#canonical-byte-contract-pre-change-protocol--completed-in-g1-0062).
+  Verification: seven actual reference roles/ten binary symbols/two distinct call collisions/six
+  authored canonical examples. Director D103 ruling: unary (- child), square (^2 child); complete
+  contract adopted in grammar/expert annex/canonical decision. Scoped structural/language/book pass.
+  Containment protocol: derive Knowledge Map after the new decision, compact existing curated
+  labels while retaining canonical paths/owners; no budget or doctrine configuration change.
+  Final falsification protocol: four actual inventory-renderer tag/branch/argument faults must fail
+  authored-byte assertions; record interpreter refusals distinctly from product compiled proof,
+  restore exact tracked producer before checks/commit.
+  Commit: `STITCHCAD-G1-0062`; production serializer .3d.2 remains pending.
+
+- ID: `G1-SLICE.5a.3d.2`
+  Status: `pending`
+  Goal: implement iterative canonical expression serialization once D103 byte spelling is settled.
+  Before code, finalize exact independent byte fixtures/rounding aliases/source independence/order/
+  privacy/lifetime/limits/fault protocol against full reviewed canonical contract. No evaluation.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3d.3`
+  Status: `pending`
+  Goal: review complete expression identity contract and public serializer proof before closing .3d.
   Verification: `pending`
   Commit: `pending`
 
@@ -880,7 +910,8 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3c.2` | `done` | Exact typed individual literal inputs |
 | done | `G1-SLICE.5a.3c.3` | `done` | Immutable normalized syntax arena/all literal inputs |
 | done | `G1-SLICE.5a.3c.4` | `done` | Complete coupled normalization input review |
-| next | `G1-SLICE.5a.3d` | `pending` | Canonical identity over normalized immutable expressions |
+| done | `G1-SLICE.5a.3d.1` | `done` | Exact byte contract settled by D103 director ruling |
+| next | `G1-SLICE.5a.3d.2` | `pending` | Production canonical expression serializer |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -936,55 +967,60 @@ retain committed evidence unchanged.
 [Previous exact normalized arena proof and commit journal](G1-SLICE-formulas.md#normalized-arena-proof--preserved-from-b41418d)
 retain committed evidence unchanged.
 
-### `G1-SLICE.5a.3c.4` — coupled production normalization review
+[Previous exact coupled normalization proof and commit journal](G1-SLICE-formulas.md#coupled-normalization-proof--preserved-from-168bf0f)
+retain committed evidence unchanged.
 
-- [x] **REPRODUCE / ISSUE** — .1/.2/.3 have isolated proofs; verify their coupled input obligations
-  before identity serialization. Fraction controls expose valid reduced decimals beyond raw width.
-- [x] **ROOT CAUSE (WHY + WHERE)** — literal.rs reduces decimal/unit factors before width/rounding;
-  normalized.rs visits all structural roles with private flat storage. Actual producer→176 rows,
-  103 valid/73 width refusals, valuations6/digits39/scale134/workspace173 witnesses pass, rc=0.
-  Source SHA identities equal exact 97f124c/15d1520/b41418d implementations, rc=0. D101 stale local
-  edit variable and D102 unanchored heading match were diagnosed from actual file/tool failures.
-- [x] **FIX** — add independent conversion-frontier fixtures/producer/watched suite and one public
-  contract exercising individual and nested whole conversion; publish full scoped obligation map.
-  Restore index from HEAD plus intended link, and exact historical D46 bytes before sealing defects.
-- [x] **ADDRESSED (verified)** — six literal/eight arena contracts include176 frontier rows and
-  previous100 literal/24 shape/25 worked-expression controls, rc=0. Four actual scale/mantissa/unit
-  cancellation faults compile and fail public assertions, rc=101 each; runner/restoration rc=0.
-  D101 publication→50 chapters/49 indexed routes/1026 source/1580 rendered links, rc=0; D102 exact
-  D46 comparison/one actual Decisions heading/two distinct entries before sealing pass, rc=0.
-- [x] **NO REGRESSION** — strict make check→514 passed, rc=0; release six+eight contracts pass,
-  rc=0. WASM three crates compile, rc=0 (compile only). Structural/reference families/language16/
-  publication9 pass, rc=0. Exact production implementations unchanged; evaluation remains future.
-- [x] **LOCKSTEP** — scoped normalization .5a.3c closes; book/grammar/decisions/live/task pointers
-  agree. README objective/layout/commands unchanged. G1 remains5/18; serializer .5a.3d is next.
-  Prior task/ledger payloads retained exact; D101/D102 fixed, remaining defects still owned.
+### `G1-SLICE.5a.3d.1` — exact canonical expression byte contract
+
+- [x] **REPRODUCE / ISSUE** — grammar4 leaves exact unary/square bytes unstated; actual book
+  reference produces tuples. Inspection neg/square labels are not persistent byte specifications.
+- [x] **ROOT CAUSE (WHY + WHERE)** — canonical examples cover two bindings/binary/ordinary call;
+  neither exact unary/square operator spelling is fixed. Actual reference-backed inventory→seven
+  distinct node roles/ten binary symbols/two distinct named calls checked, rc=0. Symbolic operators
+  cannot be ordinary identifiers; reusing named tags would merge operator and unknown-call syntax.
+- [x] **FIX** — D103 logged/owned before implementation; concrete proposal and director ruling fix
+  (- child)/(^2 child). Grammar/expert annex define every expression role and exact output spacing,
+  unsigned literal kind/magnitude, ordered arguments/branches, no newline/simplification/evaluation.
+- [x] **ADDRESSED (verified)** — six independently authored canonical examples agree with recursive
+  rendering of actual reference tuples, rc=0. Book/decision copies agree, rc=0. Watched inventory
+  keeps seven roles/ten symbols/named-call separation explicit. Four actual inventory tag/branch/call
+  faults fail authored-byte assertions, interpreter rc=1 each; runner/exact restoration rc=0.
+  This is reference inventory proof, not compiled product serializer proof. D103 contract gap closes.
+- [x] **NO REGRESSION** — complete structural/reference suite passes, rc=0; language16/publication9
+  pass, rc=0. Rust implementation unchanged; prior native514/release14/WASM3 is retained evidence,
+  not a new build claim. No product canonical serializer or recipe execution is claimed.
+- [x] **LOCKSTEP** — current grammar/decision/expert annex/index/live/task pointers agree; exact
+  completed proofs/old ledger payloads retained. README objective/layout/commands unchanged.
+  Next .3d.2 implementation then .3d.3 review; G1 remains5/18 and other roadmap work stays owned.
 
 ## Verification Log
 
-Logs target/g1-0061-{coupled,reds,native,release,wasm,structure,language,publication-final}.log are
-observed terminal rc=0. New Fraction producer derives exact converted denominator widths and verifies
-published multipliers; accepted scale133 angle versus refused134 challenges early guards. Public
-checks compare typed kind/magnitude/refusal/span through both APIs. All four mutations require actual
-compiled assertion failure and exact restore. Initial publication failure came from my stale edit
-variable; restored index plus intended link passes. Record insertion then matched a quoted heading;
-D46 restores byte-identical to HEAD, D101/D102 original logged payloads seal with verified disposition.
-Ledger nine arms/13 pointer controls, archive28 arms/164 CLI controls and retention155 logical/30
-working Markdown/8181 decoded lines/634890 decoded bytes/291212 resident bytes pass, rc=0.
-Tree10 lanes/13 trees/eight siblings/zero gaps, glossary310/nine/158/zero drift, feature105/29,
-uncertainty133/16/zero unowned and fixture20/four/five/zero mismatches pass, rc=0. Defects10open/
-91sealed derive from live entries and reconstructed archives; prior payloads retained unchanged.
-No new public behavior, numerical rule, dependency, binding or execution added. Complete normalization
-obligation map is in the expert annex; canonical serialization and remaining recipe stages stay open.
-Staged make gate→=== all doctrines green ===, rc=0; no unresolved verification remains.
+Actual scoped source search and canonical grammar inspection establish D103; no product/reference
+byte serializer was inferred from inspection fixtures. canonical_contract_inventory.py tests seven
+hand-authored tuple roles/ten symbols/two call-role distinctions and six authored byte examples with
+independent recursive reference rendering. Structural suite watches the producer. Initial index-link
+insertion assertion refused because the label was shorter than expected; explicit actual label used,
+no wrong index was written. Logs target/g1-0062-{structure,language,publication}.log are terminal rc=0.
+Publication50 chapters/18 scoped APIs/1028 source/1583 rendered links, language16, ledger9 arms/
+13 pointer controls and archive28 arms/167 CLI controls pass, rc=0. Retention158 logical/33 working
+Markdown/8255 decoded lines/640175 decoded bytes/296497 resident bytes passes, rc=0. Tree10 lanes/
+13 trees/eight siblings/zero gaps and glossary310/nine/158/zero drift pass, rc=0. Defects10open/
+92sealed derive from current live entries and a fresh materialized archive; rc=0. Existing destination
+refusal preserved retrieval safety; a unique project-local directory supplied the fresh census.
+Derived Knowledge Map was8254 bytes with the new decision; compact curated labels/retain paths and
+owners, re-derive8192 bytes without changing its ceiling. Earlier record bytes remain exact.
+No Rust/dependency/build/CI/doctrine behavior changed. Later implementation must preserve the received
+wire contract, source independence, full128 literal magnitudes, order, privacy and iterative limits.
+Staged make gate→=== all doctrines green ===, rc=0; all scoped jobs observed terminal.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3c.4` | `STITCHCAD-G1-0061 (leaf G1-SLICE.5a.3c.4): complete coupled normalization review` | independent176/four actual reds/native514/release14 |
+| `.5a.3d.1` | `STITCHCAD-G1-0062 (leaf G1-SLICE.5a.3d.1): settle canonical expression byte spellings` | seven roles/ten symbols/two call distinctions/six byte examples |
 
 ## Changelog
 
-- `2026-10-02`: coupled production input normalization review complete; canonical serializer next.
-- promotion: declined (routine scoped normalization review and repair of two local documentation edits).
+- `2026-10-02`: received D103 symbolic operator ruling adopted; production canonical serializer next.
+- promotion: [canonical expression spelling decision](../decisions/decision_canonical-expression-spelling.md)
+  answers exact unary/square identity and ordinary-call collision questions from this review.

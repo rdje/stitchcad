@@ -482,6 +482,7 @@ G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exa
 
 
 
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a
@@ -775,3 +776,9 @@ G1-SLICE.5a.3c.4 restores the topic index from exact HEAD plus the intended revi
 50 chapters/49 indexed chapter routes/1026 source/1580 rendered links and nine refusal controls pass,
 rc=0. D46's quoted historical command is byte-identical to HEAD again; actual Decisions heading and
 separate defect entries were verified before sealing, rc=0. Both editing mistakes are fixed.
+
+D103 is sealed in [`stitchcad-defects-part34.md`](../history/stitchcad-defects-part34.md).
+Director ruling received 2026-10-02: (- child) and (^2 child). G1-SLICE.5a.3d.1 publishes the complete
+expression byte contract; seven reference roles/ten symbols/two distinct named calls/six authored
+byte examples verify it, rc=0. The specification gap is fixed; production implementation .3d.2 and
+coupled review .3d.3 stay separately pending. Canonical decision records the received authority.

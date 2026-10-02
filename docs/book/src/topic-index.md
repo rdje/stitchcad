@@ -12,6 +12,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Commands and agent authority](spec/glossary/commands-and-authority.md)
 - [Current-reference repairs](spec/ontology-implementation.md)
 - [Draft and complete chart coverage](spec/size-chart-collections.md)
+- [Canonical expression bytes](annexes/formula-literals.md#canonical-expression-bytes)
 - [Coupled normalization review](annexes/formula-literals.md#coupled-normalization-review)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
 - [Executable closure intent](spec/ontology-closures.md)

@@ -1028,3 +1028,74 @@ Staged make gate→=== all doctrines green ===, rc=0; no project-owned backgroun
   Commit: `pending`
 
 [Current canonical-expression frontier](G1-SLICE.md#current-frontier).
+
+## Coupled normalization proof — preserved from 168bf0f
+
+### `G1-SLICE.5a.3c.4` — coupled production normalization review
+
+- [x] **REPRODUCE / ISSUE** — .1/.2/.3 have isolated proofs; verify their coupled input obligations
+  before identity serialization. Fraction controls expose valid reduced decimals beyond raw width.
+- [x] **ROOT CAUSE (WHY + WHERE)** — literal.rs reduces decimal/unit factors before width/rounding;
+  normalized.rs visits all structural roles with private flat storage. Actual producer→176 rows,
+  103 valid/73 width refusals, valuations6/digits39/scale134/workspace173 witnesses pass, rc=0.
+  Source SHA identities equal exact 97f124c/15d1520/b41418d implementations, rc=0. D101 stale local
+  edit variable and D102 unanchored heading match were diagnosed from actual file/tool failures.
+- [x] **FIX** — add independent conversion-frontier fixtures/producer/watched suite and one public
+  contract exercising individual and nested whole conversion; publish full scoped obligation map.
+  Restore index from HEAD plus intended link, and exact historical D46 bytes before sealing defects.
+- [x] **ADDRESSED (verified)** — six literal/eight arena contracts include176 frontier rows and
+  previous100 literal/24 shape/25 worked-expression controls, rc=0. Four actual scale/mantissa/unit
+  cancellation faults compile and fail public assertions, rc=101 each; runner/restoration rc=0.
+  D101 publication→50 chapters/49 indexed routes/1026 source/1580 rendered links, rc=0; D102 exact
+  D46 comparison/one actual Decisions heading/two distinct entries before sealing pass, rc=0.
+- [x] **NO REGRESSION** — strict make check→514 passed, rc=0; release six+eight contracts pass,
+  rc=0. WASM three crates compile, rc=0 (compile only). Structural/reference families/language16/
+  publication9 pass, rc=0. Exact production implementations unchanged; evaluation remains future.
+- [x] **LOCKSTEP** — scoped normalization .5a.3c closes; book/grammar/decisions/live/task pointers
+  agree. README objective/layout/commands unchanged. G1 remains5/18; serializer .5a.3d is next.
+  Prior task/ledger payloads retained exact; D101/D102 fixed, remaining defects still owned.
+
+## Verification Log
+
+Logs target/g1-0061-{coupled,reds,native,release,wasm,structure,language,publication-final}.log are
+observed terminal rc=0. New Fraction producer derives exact converted denominator widths and verifies
+published multipliers; accepted scale133 angle versus refused134 challenges early guards. Public
+checks compare typed kind/magnitude/refusal/span through both APIs. All four mutations require actual
+compiled assertion failure and exact restore. Initial publication failure came from my stale edit
+variable; restored index plus intended link passes. Record insertion then matched a quoted heading;
+D46 restores byte-identical to HEAD, D101/D102 original logged payloads seal with verified disposition.
+Ledger nine arms/13 pointer controls, archive28 arms/164 CLI controls and retention155 logical/30
+working Markdown/8181 decoded lines/634890 decoded bytes/291212 resident bytes pass, rc=0.
+Tree10 lanes/13 trees/eight siblings/zero gaps, glossary310/nine/158/zero drift, feature105/29,
+uncertainty133/16/zero unowned and fixture20/four/five/zero mismatches pass, rc=0. Defects10open/
+91sealed derive from live entries and reconstructed archives; prior payloads retained unchanged.
+No new public behavior, numerical rule, dependency, binding or execution added. Complete normalization
+obligation map is in the expert annex; canonical serialization and remaining recipe stages stay open.
+Staged make gate→=== all doctrines green ===, rc=0; no unresolved verification remains.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3c.4` | `STITCHCAD-G1-0061 (leaf G1-SLICE.5a.3c.4): complete coupled normalization review` | independent176/four actual reds/native514/release14 |
+
+## Changelog
+
+- `2026-10-02`: coupled production input normalization review complete; canonical serializer next.
+- promotion: declined (routine scoped normalization review and repair of two local documentation edits).
+
+## Canonical byte-contract pre-change protocol — completed in G1-0062
+
+- ID: `G1-SLICE.5a.3d.1`
+  Status: `in_progress`
+  Goal: resolve the specification gap before production identity bytes become persistent contract.
+  Pre-change protocol: inspect complete grammar4/operators/keywords and actual reference tuple nodes;
+  derive coverage over all seven expression roles/ten binary operators. D103 owns missing exact unary/
+  square bytes, P1 before serializer. Record concrete symbolic proposals; demonstrate named neg/square
+  tags collide with distinct ordinary-call syntax while symbolic opcodes cannot be ordinary names.
+  Add a tracked reference-backed contract audit, watch it in structural suite, publish proposal in
+  existing expert annex/grammar/decision index without claiming implementation or changing semantics.
+  Run scoped structural/language/publication/ledger/archive/tree/feature/glossary/gate controls; retain
+  exact completed proofs and update resume/live/task pointers. No production byte serializer yet.
+  Verification: `pending`
+  Commit: `pending`

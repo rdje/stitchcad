@@ -219,3 +219,58 @@ They provide no correctly rounded arbitrary transcendental or cross-platform num
 Canonical serialization is G1-SLICE.5a.3d. Ordered statements, names/types, numeric binding/evaluation,
 entity direction integration, geometry, storage and command/API/MCP execution remain later work.
 A normalized graph contains literal inputs and unevaluated operators; it is not an executable recipe.
+
+## Canonical expression bytes
+
+Before implementing the canonical serializer, G1-SLICE.5a.3d.1 found D103: grammar §4 previously did not
+spell unary-minus or square nodes byte for byte. The reference models them as tuples; the normalized
+shape fixtures are inspection labels. Those labels do not select a persistent interchange format.
+
+The director settled D103 on 2026-10-02: unary (- child), square (^2 child). The complete mapping is:
+
+| Role | Canonical bytes |
+| --- | --- |
+| Literal | kind:unsigned-decimal-integer, using the existing normalized magnitude |
+| Name | bare lower-snake identifier |
+| Unary minus | (- child) |
+| Fixed square | (^2 child) |
+| Binary operation | (symbol left right), using +, -, *, /, ==, !=, <, <=, > or >= |
+| Ordinary call | (function arg1 arg2 ...), retaining every argument in order |
+| Conditional | (if condition then else), retaining all branches |
+
+One ASCII space separates parts; there is no terminal newline or extra padding. Names and integer
+magnitudes are explicit customer data, while source spellings, unit aliases and grouping spans stay
+outside identity. Canonicalization does not simplify signs, reorder children, evaluate arithmetic,
+validate names/types or discard a branch. A serialized expression is not an executable recipe.
+
+```text
+-0 deg                  => (- angle:0)
+--0 deg                 => (- (- angle:0))
+-2.5 cm ^ 2             => (- (^2 length:25000))
+(2.5 cm + 25 mm) ^ 2    => (^2 (+ length:25000 length:25000))
+if(a, 360 deg, -720 deg) => (if a angle:360000000 (- angle:720000000))
+probe(-1 um, 1 um ^ 2)  => (probe (- length:1) (^2 length:1))
+```
+
+The unselected alternative fixed-square spelling was (^ child count:2). Its exponent is fixed operator payload,
+not another semantic node. The ruling chooses the shorter ^2 opcode to retain the one-child shape.
+Both symbolic forms distinguish the operator from an ordinary call. Named neg/square tags would
+collide with neg(1 um)/square(1 um): these names are not reserved, and parsing/normalization retains
+them as ordinary calls before later function validation. Unary (- child) differs from binary
+subtraction by arity. Neither choice changes the authored machine syntax or numeric semantics.
+
+The tracked canonical_contract_inventory.py checks seven reference node roles, all ten binary symbols,
+both distinct named-call examples and all six authored byte examples above. Its recursive renderer
+uses the independent book reference, never a product arena. Four actual renderer tag/branch/argument
+faults must fail those byte assertions; the exclusive runner restores the producer byte-identically.
+These are interpreter assertion controls, not compiled product serializer proof. The structural suite
+watches the inventory. The detailed repository
+decision is docs/decisions/decision_canonical-expression-spelling.md. D103 closes for the missing
+byte contract; the .3d.2 product serializer and .3d.3 contract review remain unimplemented. Ordered statements,
+recipe envelopes, hashes, persistence and execution remain separate work.
+
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_contract_inventory.py
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_contract_inventory_mutations.py
+```

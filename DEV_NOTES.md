@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — inspection tags do not establish persistent byte identity
+
+- Canonical grammar4 had no exact unary/square bytes. The actual book reference returns tuples;
+  inspection neg/square tags also collide with distinct ordinary calls before function validation.
+  D103 was logged/owned and a complete symbolic proposal presented before product implementation.
+- Director ruling chooses (- child)/(^2 child). All seven expression roles now specify ASCII bytes,
+  original name/ordered children, typed normalized magnitude and exact spacing/no newline. No sign
+  folding/evaluation/type validity is implied; source spellings/spans remain outside identity.
+- Seven authored tuple roles/ten symbols/two distinct call roles/six authored byte examples pass
+  against the actual reference plus independent recursive rendering; the structural suite watches it.
+  Four actual inventory-renderer tag/branch/argument faults fail byte assertions and restore exact
+  producer; these interpreter controls supply no compiled product serializer proof.
+  Grammar/expert annex/canonical decision/index/live/task pointers agree. .3d.2 implementation and
+  .3d.3 review remain pending; Rust source stays unchanged. Scoped book/reference checks pass.
+- Promotion: canonical expression spelling decision answers exact operator identity/call collisions.
+
 ## _(2026-10-02)_ — couple normalization proof with valid reduction frontiers
 
 - Full scoped obligation map connects spelling/kind/unit/width/quantum/scalar/source/unary/turns/
@@ -37,25 +53,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Book/API/status/index/decisions and live/task pointers agree; prior histories retain exact bytes.
   Coupled review .5a.3c.4 precedes canonical serialization .3d; binding/evaluation/geometry/MCP later.
 - promotion: declined (routine immutable normalization stage under the received D95/D84 contracts).
-
-## _(2026-10-02)_ — reduce exact converted literals before imposing numeric width
-
-- Raw decimal mantissas wider than128 bits may cancel into allowed exact unit values. Keep source
-  borrowed; trim zeroes virtually and prove early width refusals from missing factors2/5. Surviving
-  mantissas need at most173 temporary digits; exact small long division reduces before checked-u128
-  construction. Width diagnostics state an honest measured lower bound>=129, not an invented exact size.
-- Explicit parsed-node literal conversion preserves count/ratio/length/raw-angle kind,128 magnitude,
-  source/unit/span and unary-node separation. Rational width precedes shared once-rounding; scalar
-  length follows it. No raw-i128 narrowing, float, dependency, new spelling cap or direction modulo.
-- Five public contracts/100 independent Fraction rows/two privacy-lifetime docs, thirteen compiled
-  actual assertion reds/exact restoration, strict native501/release five/WASM3 pass. Huge zero/padding
-  inputs remain accepted; pathological nonzero width refuses without input-sized allocation.
-- Initial authored span expected30 but direct string indices proved32; fix the fixture. Positive
-  acceptance uses an assertion before expect, so actual fault verdicts distinguish contract reds.
-- Book availability/language/grammar/index/new expert annex and public status map agree. Earlier
-  task/ledger bytes remain exact. Whole normalized arena, identity serialization, bindings and
-  execution remain separate leaves. Next .5a.3c.3; G1 stays5/18.
-- promotion: declined (routine exact bounded input conversion under the received D95/D84 contracts).
 
 # Sealed archive — earlier lessons
 
@@ -164,3 +161,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part60.md`](docs/history/stitchcad-devnotes-part60.md) | scoped reference review lesson | 12 lines, 1063 bytes, `sha256:29112bc9…` |
 
 | [`stitchcad-devnotes-part61.md`](docs/history/stitchcad-devnotes-part61.md) | unsigned magnitude rounding lesson | 15 lines, 1322 bytes, `sha256:90999a24…` |
+
+| [`stitchcad-devnotes-part62.md`](docs/history/stitchcad-devnotes-part62.md) | individual literal normalization lesson | 18 lines, 1637 bytes, `sha256:69a0a9b4…` |
