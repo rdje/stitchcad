@@ -649,13 +649,14 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0058`; no literal conversion/arena/evaluation claim.
 
 - ID: `G1-SLICE.5a.3c.2`
-  Status: `pending`
-  Goal: privately construct exact typed canonical literals from validated borrowed numeric syntax;
-  preserve count/ratio/length/raw-angle kind, source span,128-bit magnitude and unary-node separation.
-  Finalize bounded decimal reduction/converted rational-width/input-rounding/scalar protocol and
-  independent fixtures before code. Consume shared unsigned round; no numeric binding/evaluation.
-  Verification: `pending`
-  Commit: `pending`
+  Status: `done`
+  Goal: exact typed canonical literal inputs from validated borrowed syntax; retain kind/span/source,
+  full128 magnitude and unary separation. Bounded decimal reduction precedes128-bit rational check,
+  then shared input rounding and scalar length check. Raw angles retain turns; no binding/evaluation.
+  Protocol: [complete pre-code contract](G1-SLICE-journal.md#literal-conversion-pre-code-protocol--completed-in-g1-0059).
+  Verification: five public contracts/100 independent Fraction rows/two privacy-lifetime docs;
+  thirteen compiled actual assertion reds/exact restoration; strict native501, release five/WASM3.
+  Commit: `STITCHCAD-G1-0059`.
 
 - ID: `G1-SLICE.5a.3c.3`
   Status: `pending`
@@ -871,7 +872,8 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
 | done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
 | done | `G1-SLICE.5a.3c.1` | `done` | Shared unsigned128 rounding prerequisite |
-| next | `G1-SLICE.5a.3c.2` | `pending` | Exact typed literal normalization; bounded conversion protocol first |
+| done | `G1-SLICE.5a.3c.2` | `done` | Exact typed individual literal inputs |
+| next | `G1-SLICE.5a.3c.3` | `pending` | Immutable normalized expression arena; no evaluation |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -918,45 +920,55 @@ retain committed evidence unchanged.
 [Previous exact scoped reference review proof and commit journal](G1-SLICE-journal.md#scoped-reference-review-evidence--preserved-from-ea3f64f)
 retain committed evidence unchanged.
 
-### `G1-SLICE.5a.3c.1` — unsigned full-width rounding
+[Previous exact unsigned rounding proof and commit journal](G1-SLICE-journal.md#unsigned-rounding-evidence--preserved-from-97f124c)
+retain committed evidence unchanged.
 
-- [x] **REPRODUCE / ISSUE** — existing signed API returns i64, so it cannot carry the positive2^63
-  child required by D95. This is a new primitive prerequisite, not a defect in the signed contract.
-- [x] **ROOT CAUSE (WHY + WHERE)** — round.rs signed magnitude reconstruction imposes i64 only
-  at its public result boundary. New public contracts retain fullu128, rc=0; independent Decimal
-  verifier→138 boundary/tie/zero rows pass, rc=0. Shared subtraction avoids full-width r*2 overflow.
-- [x] **FIX** — add unsigned public API; share one private magnitude rule/caller diagnostic context.
-  Preserve signed i64 limits/MIN/signs. No scalar-domain, binding, direction or literal semantics added.
-- [x] **ADDRESSED (verified)** — five unsigned/four signed contracts pass debug/release, rc=0;
-  nine actual compiled debug mutations and one release overflow mutation→assertion reds, rc=101
-  each, runner rc=0; exact source restored. Existing five actual signed reds still discriminate, rc=0.
-- [x] **NO REGRESSION** — make check→494 passed across workspace, sc-units46, rc=0;
-  make wasm→three crates compiled, rc=0 (cross-compilation only). Structural reference suite and
-  language16/publication9 controls pass, rc=0. No parser/evaluator/geometry/MCP completion claimed.
-- [x] **LOCKSTEP** — public API/units/book/index/annex/live/task docs agree; earlier evidence and
-  oldest ledger payloads retain exact bytes. Existing D34 stale execution-order prose corrected here;
-  mechanical derivation remains owned by PLANNING.5. G1 still5/18, defects10open/89sealed.
+### `G1-SLICE.5a.3c.2` — exact typed individual literal conversion
+
+- [x] **REPRODUCE / ISSUE** — syntax retains raw numeric text but supplies no typed canonical input;
+  D95 requires positive128-bit children before signed binding. Independent fixtures establish input
+  conversion/width/quantum/scalar behavior before production code; this is a feature prerequisite.
+- [x] **ROOT CAUSE (WHY + WHERE)** — expression.rs literal view retains borrowed number/unit only.
+  Raw mantissas may exceed128 bits before valid cancellation; Fraction oracle→100 rows pass, rc=0.
+  Public contracts cover both wide reducible mantissas and excessive pre-round denominators, rc=0.
+- [x] **FIX** — private typed literal API uses exact bounded decimal reduction, reduced converted
+  width check, shared unsigned rounding and rounded length guard. Text/span/kind/unary identity
+  survives; errors report honest lower-bound width witnesses; no float/dependency/new language cap.
+- [x] **ADDRESSED (verified)** — five public tests/two compile-fail docs pass, rc=0. Thirteen actual
+  compiled conversion/reduction/width/kind/modulo/narrowing/domain/diagnostic/source faults→public
+  assertion reds, rc=101 each, runner rc=0; source restores byte-identically. Release five pass, rc=0.
+- [x] **NO REGRESSION** — make check→501 passed across workspace, rc=0; make wasm→three crates,
+  rc=0 (cross-compilation only). Structural/reference suite, language16/publication9 pass, rc=0;
+  all earlier reference families remain green. No whole-arena/type/binding/execution claim.
+- [x] **LOCKSTEP** — README/availability/language/grammar/API/status/index/annex/live/task pointers
+  agree on individual literal conversion; prior task/oldest ledger bytes retain exact records.
+  G1 remains5/18, defects10open/89sealed; next .5a.3c.3 normalized immutable arena.
 
 ## Verification Log
 
-Tracked unsigned_round_reference.py watches138 rows in the existing structural suite; production
-unsigned_round_contract.rs consumes them. Compiled mutation runner requires actual test assertion
-reds and exact restoration. Logs: target/g1-0058-{native,release,wasm,structure,language,publication,
-unsigned-reds-final,signed-reds}.log, all producer rc=0. Publication49chapters/16scopedAPIs/
-1007source/1548rendered links. Ledger9 arms/13 independent pointer controls, archive28 arms/155 CLI controls and retention146
-logical records/21 working Markdown/7952 decoded lines/618662 decoded bytes/274984 resident bytes
-pass, rc=0. Tree10lanes/13trees/eight siblings/zero gaps; glossary310/nine/158/zero drift; feature
-105/29, uncertainty133/16/zero unowned and fixture20/four/five/zero mismatches pass, rc=0.
-README objective/layout/standard commands unchanged. Staged make gate→=== all doctrines green ===,
-rc=0. Fresh source/dependency choices remain .2.
+Tracked literal_normalization_reference.py watches100 independent Fraction rows in the existing
+structural suite; product formula_literal_contract.rs consumes them. Actual source faults require
+compiled assertions and exact restoration. Logs: target/g1-0059-{native,release,wasm,structure,
+language,publication,reds}.log, all final producer rc=0. Publication50chapters/17scopedAPIs/
+1019source/1569rendered links. Ledger9 arms/13 pointer controls, archive28 arms/158 CLI controls
+and retention149 logical/24 working Markdown/8030 decoded lines/624215 decoded bytes/280537 resident
+bytes pass, rc=0. Tree10lanes/13trees/eight siblings/zero gaps; glossary310/nine/158/zero drift;
+feature105/29, uncertainty133/16/zero unowned and fixture20/four/five/zero mismatches pass, rc=0.
+Initial fixture span expected30 instead of32; explicit string-index diagnostic corrected the oracle.
+First mutation runner correctly refused an expect-panic verdict; positive fixtures now assert acceptance
+before reading values. All13 final fault verdicts are actual compiled public assertion reds.
+README status changes only; commands/objective/layout unchanged. Whole normalization/serialization later. Initial staged gate refused live-status328B line/journal1261
+lines. Shorten the row; relocate the exact completed reference subtree to the existing formula sibling
+and retain its journal anchor/route. No limits widened; committed10437B subtree compares exact, rc=0. Final staged make gate→
+=== all doctrines green ===, rc=0.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3c.1` | `STITCHCAD-G1-0058 (leaf G1-SLICE.5a.3c.1): round full-width unsigned magnitudes` | full-u128/independent138/ten actual reds/native494 |
+| `.5a.3c.2` | `STITCHCAD-G1-0059 (leaf G1-SLICE.5a.3c.2): normalize exact typed literal inputs` | independent100/thirteen actual reds/native501 |
 
 ## Changelog
 
-- `2026-10-02`: shared unsigned128 rounding prerequisite complete; next .5a.3c.2 literal conversion.
-- promotion: declined (routine exact rounding prerequisite implementing the received D95 contract).
+- `2026-10-02`: individual typed literal conversion complete; next immutable normalized arena.
+- promotion: declined (routine bounded literal conversion implementing the received D95/D84 contracts).

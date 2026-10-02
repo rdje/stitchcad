@@ -106,6 +106,22 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part53.md`](docs/history/stitchcad-changelog-part53.md) | STITCHCAD-G1-0035 | 13 lines, 1094 bytes, `sha256:83494a18…` |
 
+| [`stitchcad-changelog-part54.md`](docs/history/stitchcad-changelog-part54.md) | STITCHCAD-G1-0036 | 15 lines, 1273 bytes, `sha256:d5122987…` |
+
+## STITCHCAD-G1-0059 - exact typed individual literals (leaf `G1-SLICE.5a.3c.2`)
+
+Parsed literal views now explicitly convert into private typed128-bit canonical inputs. Exact bounded
+reduction precedes the rational-width check, then shared input rounding and the scalar length guard.
+Wide reducible raw mantissas stay valid; huge zero padding stays accepted. Original source/unit/span,
+count-versus-ratio and raw angle turns survive; unary minus remains its own syntax node. Structured
+width errors report an honest>=129-bit lower bound. No whole-arena, binding or execution claim yet.
+
+Five public contracts/100 independent Fraction rows/two privacy-lifetime docs and thirteen compiled
+actual mutation reds pass, with exact source restoration. Strict native501, release five, WASM3 and
+focused reference/book checks pass. README/current availability, grammar/language, indexed expert
+annex/status map and live/task records align; prior histories remain exact. G1 stays5/18; next .3c.3
+immutable normalized expression arena. D70 axes and later binding/geometry/API/MCP remain separately owned.
+
 ## STITCHCAD-G1-0058 - full-width unsigned rounding (leaf `G1-SLICE.5a.3c.1`)
 
 A new sc-units unsigned128 API shares the signed half-away magnitude rule, preserving wide positive
@@ -369,19 +385,3 @@ clause links and D74 vertical-tab handling are fixed. Book learning/status/index
 annex align with code/roadmap ownership; 48 chapters/15 APIs and nine publication probes pass. Older
 publication evidence and sealed histories retain exact predecessor bytes. G1 remains 5/18 top-level;
 next .5a.2 expression trees. D70's required axes ruling remains unanswered.
-
-## STITCHCAD-G1-0036 - progressive book and indexed expert annexes (leaf `G1-SLICE.4d.1`)
-
-Five learning chapters introduce recipes, measurements, physical copies, sizes and agent workflows.
-Truthful availability separates current libraries from future applications/execution. The glossary
-remains reachable, a topic index covers every other registered chapter, and detailed contracts move
-into Annexes navigation at preserved URLs/anchors. Roadmap §2 adopts the director's policy, with an
-indexed decision; D32's older disposition is preserved exactly while keeping the unchanged baseline.
-
-Publication checks verify 47 chapters, 14 scoped public API/requirement rows, 983 source and 1489
-rendered links; eight refusal fixtures plus real-tree green pass. D71 stale G0/Ease status is fixed.
-D72 isolates the archive resident probe from growing production history and adds a green control;
-28 archive arms and all 24 full suites pass, with glossary/ledger/staged doctrines green. Browser
-local-URL policy prevents screenshot inspection; rendered HTML content/navigation is checked.
-Completed MTM and oldest ledger/lesson/defect descriptions retain exact bytes. G1 stays 5/18;
-next .5a syntax is independent of D70 axes, which remains awaiting the required director ruling.

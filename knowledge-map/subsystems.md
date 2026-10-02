@@ -8,7 +8,7 @@ Entries and owners.
 - `crates/sc-units/` — fixed-point units/errors. Entry `crates/sc-units/src/lib.rs`, tests
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/`, `crates/sc-measure/` — ontology, measurement inputs and recipe syntax.
+- `crates/sc-core/`, `crates/sc-measure/` — ontology, measurement inputs and recipe syntax/literals.
   Entry `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs`; tests in each crate.
   Owner `G1-SLICE.3` / `.4` / `.5`.
 - `docs/book/src/` — learning/index/annexes. Entry `docs/book/src/SUMMARY.md`;

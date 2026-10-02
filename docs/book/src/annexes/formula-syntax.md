@@ -2,8 +2,9 @@
 
 The formula contract is normative. The current `sc_core::recipe` implementation supplies a borrowed
 lexical stream and an immutable expression syntax tree with exact source spans and structural bounds.
-Syntax does not supply numeric conversion, canonical identity, ordered recipes, binding, type/name
-validation or evaluation. Those remain G1-SLICE.5 work. See [availability](../availability.md) and
+Syntax parsing does not perform numeric conversion. Individual parsed literals now have an explicit
+[normalization API](formula-literals.md). Whole canonical identity, ordered recipes, binding, type/name
+validation and evaluation remain G1-SLICE.5 work. See [availability](../availability.md) and
 [the complete grammar](../spec/formula-language/grammar.md).
 
 ## Read a machine statement
@@ -333,8 +334,8 @@ seven mutation controls also pass. Angle tests require the exact pole reason: an
 refusal cannot count as evidence for a missing mathematical-domain guard (D88).
 
 D83's scalar/binding/literal controls and completed scoped boundary review appear below.
-D84 signed-angle verification is reviewed below. Product numeric normalization and
-full evaluation are still pending. The curated transcendental reference is not a production certificate.
+D84 signed-angle verification is reviewed below. [Individual product literals](formula-literals.md)
+now normalize explicitly; whole-expression normalization and full evaluation remain pending. The curated transcendental reference is not a production certificate.
 
 ## Inline documentation language context
 
@@ -461,8 +462,8 @@ assertion red and exact source restoration. Run mutations alone.
 
 Together with binding80 and the preceding lexical/scalar/rational suites, these controls close
 D95’s specification ambiguity. D83’s scoped reference review is complete below;
-production normalization .5a.3c must preserve this width, kind and unary structure and provide its
-own public-contract proof. These tuples are reference-model nodes; no production canonical
+Individual product conversion .5a.3c.2 now supplies [public-contract proof](formula-literals.md)
+for width/kind/source and unary separation; whole normalized expressions remain .5a.3c.3. These tuples are reference-model nodes; no production canonical
 serializer, persistent formula identity or evaluator is certified by this slice.
 
 ## Complete reference numeric boundary review
@@ -559,7 +560,8 @@ Existing42-row/72-control/math42 angular controls and seven actual angular reds 
 
 This is curated reference proof, not arbitrary-input correctly rounded transcendental evaluation,
 a cross-platform certificate, entity direction integration or a production formula evaluator.
-G1-SLICE.5a.3b.3c.3 completes the final D84/reference review below; production normalization .5a.3c follows.
+G1-SLICE.5a.3b.3c.3 completes the final D84/reference review below; individual literals now normalize
+under .5a.3c.2, with whole-expression normalization still pending.
 
 
 ## Completed angle and reference obligation review

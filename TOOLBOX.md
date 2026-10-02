@@ -135,6 +135,12 @@ artifact directory independently verifies 36 exact Fraction rows; that directory
 runs it. `bash docs/tasks/artifacts/formula_structure/run_round_mutations.sh` requires five real
 production assertion reds/exact restoration; run alone. No complete literal/evaluation proof implied.
 
+Individual product literal conversion: five public contracts/100 independent Fraction rows in
+`literal_normalization_reference.py` cover exact unit/reduction/width/quantum/scalar boundaries.
+`run_literal_normalization_mutations.sh` compiles13 actual assertion reds and restores exact source;
+run exclusively. Structural probes watch the fixture verifier. Native/release/WASM/source/privacy
+proof is scoped to one literal, not a normalized arena or recipe execution.
+
 Unsigned round primitive: `cargo test -p sc-units --test unsigned_round_contract` exercises five
 public full-u128/tie/zero/context/signed-bridge contracts and138 Decimal fixture rows. The structural
 suite watches `unsigned_round_reference.py`; --emit reproduces its authored boundary population.

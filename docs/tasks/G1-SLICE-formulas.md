@@ -749,3 +749,184 @@ Current work remains in the parent.
 
 
 Current canonical verification remains in [G1-SLICE](G1-SLICE.md).
+
+## Completed reference subtree — preserved during G1-0058
+
+- ID: `G1-SLICE.5a.3b`
+  Status: `done`
+  Goal: repair D79 reference literal/canonical identity before independent product normalization proof.
+  Children: .3b.1 literal quantum/identity, .3b.2 exact arithmetic audit/repair, .3b.3 numeric domain
+  and stored-angle audit. Each child diagnoses actual behavior before finalizing its protocol.
+  Original reproduction: two 0.00004 cm literals evaluate 4/5 um and bind 1 while their canonical-zero
+  respelling evaluates 0. Correct the literal input boundary first; evaluator findings remain owned.
+  Verification: completed scoped reference review below; independent controls/actual reds pass.
+  Commit: `STITCHCAD-G1-0057`
+
+- ID: `G1-SLICE.5a.3b.1`
+  Status: `done`
+  Contract/checklist: [preserved literal evidence](G1-SLICE-formulas.md#literal-identity-contract-and-evidence--preserved-from-6f26ca3).
+  Verification: 60 rows/360 controls/six actual reds; focused reference/book/recording checks green.
+  Commit: `STITCHCAD-G1-0042`.
+
+- ID: `G1-SLICE.5a.3b.2`
+  Status: `done`
+  Contract/checklist: [preserved arithmetic evidence](G1-SLICE-formulas.md#exact-arithmetic-contract-and-evidence--preserved-from-f70edf7).
+  Verification: 24 rows/100 Fraction cases/162 controls/nine actual reds; focused gates green.
+  Commit: `STITCHCAD-G1-0043`.
+
+- ID: `G1-SLICE.5a.3b.3`
+  Status: `done`
+  Goal: repair D83 numeric domains and resolve D84 angle contract before product normalization.
+  Children: .3b.3a exact rational bit limit; .3b.3b scalar domains/storage bounds; .3b.3c signed-angle contract verification.
+  .3a is independent of binding/direction semantics; D84 now preserves formula sign/turns.
+  Verification: completed scoped reference review below; independent controls/actual reds pass.
+  Commit: `STITCHCAD-G1-0057`
+
+- ID: `G1-SLICE.5a.3b.3a`
+  Status: `done`
+  Goal: trustworthy reference angle conversions then rational-value bounds before scalar repair.
+  Children: .3a.1 D85/D86/D87 angle conversion/rounding/pole guards; .3a.2 D83 rational bit limit.
+  The diagnostic exposed wrong degree scaling, so fix that before trusting angle audit/width controls.
+  Verification: angular42/72/math42/seven reds plus rational61/twelve reds; focused checks green.
+  Commit: `STITCHCAD-G1-0044` and `STITCHCAD-G1-0045`.
+
+- ID: `G1-SLICE.5a.3b.3a.1`
+  Status: `done`
+  Contract/checklist: [preserved angular evidence](G1-SLICE-formulas.md#angular-contract-and-evidence--preserved-from-1c95ea4).
+  Verification: 42 rows/72 controls/math42/seven actual reds; focused gates green, D84 ruling recorded.
+  Commit: `STITCHCAD-G1-0044`.
+
+- ID: `G1-SLICE.5a.3b.3a.2`
+  Status: `done`
+  Contract/checklist: [preserved rational evidence](G1-SLICE-formulas.md#rational-contract-and-evidence--preserved-from-b8ed62d).
+  Verification: 61 Fraction controls/twelve actual reds; focused gates green, D88 refusal reasons repaired.
+  Commit: `STITCHCAD-G1-0045`.
+
+- ID: `G1-SLICE.5a.3b.3b`
+  Status: `done`
+  Goal: D83 declared length/area/count domains,128-bit canonical literals and i64 numeric bindings with typed operations;
+  finalize boundary checks from complete contracts, not a caller narrowing precondition. D84 signed-angle
+  verification remains separate; scalar repair can proceed under the recorded ruling.
+  Children: .3b.1a D89 public operators; .3b.1b D90 operation context; .3b.1c D91 code-language context;
+  .3b.2 reference scalar domains;
+  .3b.3 reference128-bit canonical literals/i64 numeric bindings. Each prerequisite is independently committed.
+  Verification: complete scoped D83 review below; four independent families/47 actual reds.
+  Commit: children complete through `STITCHCAD-G1-0054`.
+
+- ID: `G1-SLICE.5a.3b.3b.1a`
+  Status: `done`
+  Goal: fallible public Length operators preserve the declared domain.
+  Verification: [preserved contract/checklist](G1-SLICE-formulas.md#length-operator-contract-and-evidence--preserved-from-f432d68).
+  Commit: `STITCHCAD-G1-0046`
+
+- ID: `G1-SLICE.5a.3b.3b.1b`
+  Status: `done`
+  Goal: actual-operation and truthful domain errors.
+  Verification: [preserved contract/checklist](G1-SLICE-formulas.md#domain-context-contract-and-evidence--preserved-from-d91df0a).
+  Commit: `STITCHCAD-G1-0047`
+
+- ID: `G1-SLICE.5a.3b.3b.1c`
+  Status: `done`
+  Goal: inline documentation language context stays local.
+  Verification: [preserved contract/checklist](G1-SLICE-formulas.md#inline-context-contract-and-evidence--preserved-from-0a6e9b0).
+  Commit: `STITCHCAD-G1-0048`
+
+- ID: `G1-SLICE.5a.3b.3b.2`
+  Status: `done`
+  Goal: exact scalar domains and isolated numeric setup.
+  Verification: [complete contract](G1-SLICE-formulas.md#scalar-domain-contract--completed-in-g1-0049)
+  and current acceptance below: scalar57/eleven reds; rational61/twelve reds; focused checks.
+  Commit: `STITCHCAD-G1-0049` (this recording commit).
+
+- ID: `G1-SLICE.5a.3b.3b.3`
+  Status: `done`
+  Goal: D83 bounded i64 bindings; D95 canonical literals and exact temporaries retain128-bit width.
+  Children: .3a numeric binding storage, .3b D95 signed literal ruling/canonical input, .3c review.
+  D95 director ruling received: exact canonical literals retain128-bit width; bound numeric values fit i64.
+  Verification: complete scoped D83 review below; four independent families/47 actual reds.
+  Commit: children complete through `STITCHCAD-G1-0054`.
+
+- ID: `G1-SLICE.5a.3b.3b.3a`
+  Status: `done`
+  Goal: once-rounded numeric binding storage; exact wide temporaries retain their boundary.
+  Contract/evidence: [numeric binding protocol](G1-SLICE-formulas.md#numeric-binding-protocol--completed-in-g1-0050).
+  Verification: binding80/twelve compiled actual reds; focused checks/current acceptance below.
+  Commit: `STITCHCAD-G1-0050`.
+
+- ID: `G1-SLICE.5a.3b.3b.3b`
+  Status: `done`
+  Goal: D95 exact canonical literal width, quantum/scalar boundary and unary/kind identity.
+  Protocol: [completed canonical pre-code plan](G1-SLICE-journal.md#canonical-literal-pre-code-protocol--completed-in-g1-0051).
+  Verification: canonical146/twelve compiled actual reds; focused checks/current acceptance below.
+  Commit: `STITCHCAD-G1-0051`.
+
+- ID: `G1-SLICE.5a.3b.3b.3c`
+  Status: `done`
+  Goal: review all D83 numeric obligations after binding/canonical proof; close only after complete review.
+  Children: .1 triggered archive capacity, .1v observed CI, .2 complete numeric boundary review.
+  Verification: complete scoped D83 review below; four independent families/47 actual reds.
+  Commit: children complete through `STITCHCAD-G1-0054`.
+
+- ID: `G1-SLICE.5a.3b.3b.3c.1`
+  Status: `done`
+  Goal: retain63 exact raw records in window2; repair D96 blocking ledger targets.
+  Protocol: [second-window pre-code plan](G1-SLICE-journal.md#second-window-pre-code-protocol--completed-in-g1-0052).
+  Verification:63 source files/127 isolated logical files exact; archive controls/ledger13/four reds;
+  full native488/WASM3/book/probes25 pass, rc=0. [Local proof](G1-SLICE-journal.md#second-window-local-proof--preserved-from-f876913).
+  Commit: `STITCHCAD-G1-0052`.
+
+- ID: `G1-SLICE.5a.3b.3b.3c.1v`
+  Status: `done`
+  Goal: observe exact .1 head SHA doctrine/Rust CI job/step verdicts; only close capacity on success.
+  Verification: pushed f876913; both completed jobs/all steps successful; CLI140 and newest
+  committed catalog refusal pass. [Observed jobs](G1-SLICE-journal.md#second-window-ci-evidence--preserved-from-a5159ba);
+  capacity prerequisite complete.
+  Commit: `STITCHCAD-G1-0053`.
+
+- ID: `G1-SLICE.5a.3b.3b.3c.2`
+  Status: `done`
+  Goal: complete scoped D83 boundaries; correct D97 goal and D98 verdict attribution.
+  Protocol: [completed review plan](G1-SLICE-journal.md#numeric-boundary-review-protocol--completed-in-g1-0054).
+  Verification:61/57/80/146 independent controls;12/11/12/12 actual reds/exact restoration;
+  prerequisite source identity/language16. Complete current acceptance below; D84 separate.
+  Commit: `STITCHCAD-G1-0054`.
+
+- ID: `G1-SLICE.5a.3b.3c`
+  Status: `done`
+  Goal: apply D84 director ruling: preserve signed/multi-turn formula values, normalize entity directions.
+  Verify binding/equality and signed inverse-trig contracts with full/signed/multi-turn examples;
+  reference signed controls and complete .3 review pass. Decision: `decision_angles.md`.
+  Children: .1 six-kind book replay prerequisite; .2 signed inverse-trig/binding/equality repair;
+  .3 complete angle/reference review. D84 closes only after the full contract is verified.
+  Verification: completed scoped reference review below; independent controls/actual reds pass.
+  Commit: children complete through `STITCHCAD-G1-0057`.
+
+- ID: `G1-SLICE.5a.3b.3c.1`
+  Status: `done`
+  Goal: actual book replay must accept every declared bindable kind before signed-angle replay proof.
+  Protocol: [original pre-code plan](G1-SLICE-journal.md#six-kind-replay-protocol--completed-in-g1-0055).
+  Verification:19 independent actual consumer/format/declaration verdicts; nine compiled actual
+  assertion reds/exact restoration; binding80/twelve existing reds. D99 closed, no new literals.
+  Commit: `STITCHCAD-G1-0055`.
+
+- ID: `G1-SLICE.5a.3b.3c.2`
+  Status: `done`
+  Goal: D84 signed principal atan/atan2, raw once-rounded angle binding/equality and full signed/multi-turn
+  sweeps; keep dir explicitly normalized. Finalize principal branch/rounded range and independent
+  controls before changing actual reference; no arbitrary-input transcendental certificate.
+  Protocol: [original pre-code plan](G1-SLICE-journal.md#signed-angle-protocol--completed-in-g1-0056).
+  Verification:90 independent controls/fifteen compiled actual reds/exact restoration;
+  existing angular72/math42/seven reds, binding80/twelve reds and replay19/nine reds pass.
+  Commit: `STITCHCAD-G1-0056`.
+
+- ID: `G1-SLICE.5a.3b.3c.3`
+  Status: `done`
+  Goal: complete D84/reference obligation review, align all current contract/status pointers and close
+  .5a.3b only after .1/.2 verified; correct D100 stale children label and retain its original bytes.
+  Product literal normalization stays separately owned by .5a.3c.
+  Protocol: [original review plan](G1-SLICE-journal.md#complete-reference-review-protocol--completed-in-g1-0057).
+  Verification: signed90/15 actual reds; angular72/math42/seven reds; six source bytes equal c099aee.
+  D84/D100 close for received contract/scoped reference; production remains separate.
+  Commit: `STITCHCAD-G1-0057`.
+
+[Current product frontier](G1-SLICE.md#current-frontier).

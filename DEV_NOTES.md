@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — reduce exact converted literals before imposing numeric width
+
+- Raw decimal mantissas wider than128 bits may cancel into allowed exact unit values. Keep source
+  borrowed; trim zeroes virtually and prove early width refusals from missing factors2/5. Surviving
+  mantissas need at most173 temporary digits; exact small long division reduces before checked-u128
+  construction. Width diagnostics state an honest measured lower bound>=129, not an invented exact size.
+- Explicit parsed-node literal conversion preserves count/ratio/length/raw-angle kind,128 magnitude,
+  source/unit/span and unary-node separation. Rational width precedes shared once-rounding; scalar
+  length follows it. No raw-i128 narrowing, float, dependency, new spelling cap or direction modulo.
+- Five public contracts/100 independent Fraction rows/two privacy-lifetime docs, thirteen compiled
+  actual assertion reds/exact restoration, strict native501/release five/WASM3 pass. Huge zero/padding
+  inputs remain accepted; pathological nonzero width refuses without input-sized allocation.
+- Initial authored span expected30 but direct string indices proved32; fix the fixture. Positive
+  acceptance uses an assertion before expect, so actual fault verdicts distinguish contract reds.
+- Book availability/language/grammar/index/new expert annex and public status map agree. Earlier
+  task/ledger bytes remain exact. Whole normalized arena, identity serialization, bindings and
+  execution remain separate leaves. Next .5a.3c.3; G1 stays5/18.
+- promotion: declined (routine exact bounded input conversion under the received D95/D84 contracts).
+
 ## _(2026-10-02)_ — unsigned canonical magnitudes need a full-width rounding result
 
 - D95 permits128-bit positive literal children before signed binding. Existing signed rounding
@@ -47,38 +66,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Function reference/units/annex/decision agree; final D84 review is .3c.3. Product normalization,
   entity integration/evaluation and arbitrary-input transcendental/cross-platform proof remain pending.
 - promotion: declined (routine implementation/verification of the received signed-angle ruling).
-
-## _(2026-10-02)_ — complete binding kinds must reach the example consumer
-
-- D99: actual statement/stored accepts Area/Boolean, but L2's four-kind whitelist refuses them.
-  Independent copied-book rows reproduce rc1, while actual methods return area4000000/boolean1.
-  L2 now consumes declared bindable kinds and displays cm²/true/false without new source literals.
-- Tiny Area controls catch Decimal's scientific spelling; fixed-decimal output matches the Value
-  cell grammar. Internal Boolean values outside0/1 refuse instead of becoming arbitrary truth text.
-- Nineteen independent actual consumer/format/declaration verdicts include all six kinds, fifteen
-  added positive rows, signed/tiny Area rounding/replay, Boolean reads/conditionals and wrong formats.
-  Nine compiled actual mutations fail assertions and restore exact source; existing binding80 and
-  twelve actual binding reds retain storage/quantum/publication proof. The structural suite watches
-  this consumer family, without a new suite or a mirrored evaluator.
-- Book Value explanation/expert annex agree; prior task evidence and oldest ledger/defect payloads
-  remain exact. D84 signed-angle proof follows. No Rust or production evaluator behavior changed.
-- promotion: declined (routine repair of the consumer against the existing six-kind contract).
-
-## _(2026-10-02)_ — review numeric boundaries separately from production evaluation
-
-- D83's original count129-bit/length-over-domain defects, conversion and completed-result width,
-  signed scalar domains, nonnegative Count, rounded binding storage and literal identity all map
-  to four independent control families. Re-run61/57/80/146 controls and12/11/12/12 actual reds;
-  evaluator/setup restore exact HEAD bytes. Existing watch runs the four families independently.
-- Eight D89/D90 Rust prerequisite files remain exact G1-0047 bytes; latest full native/WASM/CI
-  verifies that source. D91 language16 still verifies explicit context and refusal isolation.
-- D97 corrects the live parent’s superseded canonical-i64 phrase; D95’s wide literal rule remains.
-  Parent scalar/binding review closes; D84 signed inverse-trig/equality remains separately open.
-- The annex records each obligation, producer and refusal boundary. Original defect descriptions,
-  prior task progress and oldest ledger payloads stay exact. Production normalization, serializer,
-  evaluator and arbitrary-input transcendental/cross-platform proofs are still future product work.
-- D98 corrects preserved push-status attribution: direct checker due1, diagnostic Make0.
-- promotion: declined (routine scoped conformance review of received numeric and literal contracts).
 
 # Sealed archive — earlier lessons
 
@@ -177,3 +164,7 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part55.md`](docs/history/stitchcad-devnotes-part55.md) | archive capacity and D96 lesson | 19 lines, 1731 bytes, `sha256:12f0338c…` |
 
 | [`devnotes-part56.md`](docs/history/stitchcad-devnotes-part56.md) | observed CI lesson | 12 lines, 1047 bytes, `sha256:cb01f979…` |
+
+| [`stitchcad-devnotes-part57.md`](docs/history/stitchcad-devnotes-part57.md) | scoped numeric review lesson | 15 lines, 1350 bytes, `sha256:a196cecf…` |
+
+| [`stitchcad-devnotes-part58.md`](docs/history/stitchcad-devnotes-part58.md) | six-kind replay lesson | 15 lines, 1327 bytes, `sha256:f5820b9c…` |
