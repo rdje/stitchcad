@@ -11,6 +11,9 @@ pub struct FormulaSourceSpan {
     end: usize,
 }
 impl FormulaSourceSpan {
+    pub(super) const fn new(start: usize, end: usize) -> Self {
+        Self { start, end }
+    }
     /// First byte, inclusive.
     #[must_use]
     pub const fn start(self) -> usize {

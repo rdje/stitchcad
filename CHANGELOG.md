@@ -70,6 +70,24 @@ the digests afterwards.
 
 | [`changelog-part35.md`](docs/history/stitchcad-changelog-part35.md) | STITCHCAD-G1-0018 | 13 lines, 1081 bytes, `sha256:74e03b90…` |
 
+| [`changelog-part36.md`](docs/history/stitchcad-changelog-part36.md) | STITCHCAD-G1-0020 / STITCHCAD-G1-0019 | 29 lines, 2350 bytes, `sha256:64af4d6d…` |
+
+## STITCHCAD-G1-0040 - production expression syntax (leaf `G1-SLICE.5a.2b.2`)
+
+FormulaExpression parses one complete machine expression with precedence, closed literal units,
+mandatory conditional branches and exact source gaps/spans. A private flat arena exposes immutable
+borrowed views; explicit parser stacks avoid input recursion. Measured node 257/if level 17 refuses
+unchanged limits. Unsupported exponents retain formula_unsupported; other grammar refusals are typed.
+
+15 contracts, three privacy/lifetime doctests and eleven actual guard/order mutation reds pass with
+exact restoration. Twelve independently enumerated shape/count/depth fixtures agree with the existing
+reference. A 20736-input short-token corpus has no internal-structure refusals; a small-stack test
+handles 50000 nested parentheses. Restored strict 472 native tests and three-library WASM pass.
+Book/reference/ledger/archive/censuses and staged doctrines verify the recording commit. Scope stays
+syntax: no conversion, canonical identity, recipe/name/type validation or evaluation. Book/API status
+and progressive learning align; completed input evidence and oldest ledgers preserve predecessor bytes.
+Next .5a.3 exact literals/canonical ordered recipes; D70 axes ruling remains pending.
+
 ## STITCHCAD-G1-0039 - reference machine-input parity (leaf `G1-SLICE.5a.2b.1`)
 
 D76 closes: reference input now enforces ASCII/lower-snake spelling, keyword positions, original
@@ -358,33 +376,3 @@ fixture/feature/glossary/tree censuses, ledger and staged gates pass. Compile-fa
 a second length field. Completed closure evidence and task changelog relocate unchanged with
 committed-content oracles. Book/live records align; no physical formula/default is invented.
 Closure parent closes structurally; G1 stays 4/18 leaves, 3/4 families. Next `.3c.4d` pockets/signoff.
-
-## STITCHCAD-G1-0020 - zipper/hook-bar instances borrow current placements and refuse fly scope (leaf `G1-SLICE.3c.4c.1b`)
-
-Immutable Closure retains distinct centred-zipper/hook-bar intent, required size origins and stable
-physical instances. Typed Count derives from nonempty instances; duplicate ids/placement reuse,
-ambiguous contexts, missing targets and current repairs are refused. Borrowed placements remain
-canonical. Zipper length is explicitly positive or symbolic, hardware sizes remain logical bindings.
-Fly requests refuse env_fly with requested Closure, trousers gap and G7 before geometry validation.
-
-Ten contracts, Count-domain unit and privacy pass. Scope/reuse/length/current-target mutations each
-fail red; restored strict Rust, wasm, warning-free book, fixture/feature/glossary/tree censuses,
-ledger and staged gates pass. Nested target evidence is boxed for the strict error-size lint.
-Placement evidence and commit history relocate unchanged with independent committed-content oracles
-and retrieval pointers. Book/live records align; no hardware geometry is claimed. G1 stays 4/18
-leaves, 3/4 families; next `.3c.4c.2` button/buttonhole derivation.
-
-## STITCHCAD-G1-0019 - physical notion placements preserve stable copy bindings (leaf `G1-SLICE.3c.4c.1a`)
-
-Immutable NotionPlacement retains stable id/copy, source-frame anchor/orientation and original
-Piece binding. Current validation refuses missing/reassigned copies, lost or foreign anchors and
-incomplete orientation intervals. It accepts uniquely resolved historical anchors while preserving
-current choices/repairs. The shared current-anchor validator keeps original birth errors and
-Notch/TurnPoint behavior. Reflection remains separate G2/V1 geometry, without copied coordinates.
-
-Ten contracts + privacy pass; copy binding, range ownership, historical resolution and current-anchor
-ownership mutations each fail red. Restored strict Rust, wasm, warning-free book, fixture/feature/
-glossary/tree censuses, ledger and staged gates pass. A bounded closure chapter documents the API;
-closure kinds/counts/sizes still follow. Completed Hem evidence and verification table move unchanged
-with committed-payload oracles and staged revalidation. G1 stays 4/18 top-level leaves, 3/4 families;
-next `.3c.4c.1b` zipper/hook-bar/fly, then `.4c.2` button/buttonhole derivation.

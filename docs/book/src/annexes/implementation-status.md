@@ -19,7 +19,7 @@ requires the named contracts and later proof owners.
 | Garment chart observations/collections | §3.3/§3.4; G1 | sc-measure; G1-SLICE.4c.3a/.3b | [Observations](../spec/size-chart-observations.md), [collections](../spec/size-chart-collections.md) |
 | MTM inputs | §3.3/§3.4; G1 | sc-measure; G1-SLICE.4c.3c | [MTM introduction](../spec/mtm-input-charts.md), [API](mtm-input-contract.md) |
 
-| Formula lexical stream | §4.1; G1 | sc-core recipe; G1-SLICE.5a.1 | [Syntax API](formula-syntax.md) |
+| Formula lexing/expression syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.1/.2b.2 | [Syntax API](formula-syntax.md) |
 
 ## Remaining proofs
 

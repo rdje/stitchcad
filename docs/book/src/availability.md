@@ -9,7 +9,7 @@ G0 contract review is mostly complete with human closure unapproved. G1 remains 
 | Library | Available behavior |
 | --- | --- |
 | sc-units | Fixed-point units, explicit conversions, rounding and typed tolerances/errors |
-| sc-core | Stable identities/references, structural garment objects, physical copy identities, canonical length inputs and borrowed formula lexing |
+| sc-core | Stable identities/references, structural garment objects, physical copy identities, canonical length inputs, borrowed formula lexing and bounded expression syntax |
 | sc-measure | Body/garment metadata and tables, Ease mappings/sets, size membership and authored garment/MTM charts |
 
 These APIs can inspect authored content and refuse invalid current references. Unknown/derived scalar

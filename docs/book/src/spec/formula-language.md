@@ -2,8 +2,8 @@
 
 > **Status:** normative specification, gate **G0** (roadmap ADR-0003 and §11's G0 exit clause:
 > "ADR-0003 (drafting paradigm + formula language v1)"). `sc-core` currently implements
-> [borrowed machine-form lexing](../annexes/formula-syntax.md) at G1-SLICE.5a.1. Parsing, canonical
-> expressions and recipe evaluation remain G1-SLICE.5 work; final acceptance makes every worked
+> [borrowed lexing and bounded expression syntax](../annexes/formula-syntax.md) at G1-SLICE.5a.1/.2.
+> Canonical expressions and recipe evaluation remain G1-SLICE.5 work; final acceptance makes every worked
 > example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
 > every number's representation is the [units chapter](units-and-tolerances.md)'s.
@@ -304,7 +304,8 @@ here, and the census §8 names refuses a part that is not:
   irrational call is refused at T1.
 - The structural limits refuse a pathological recipe rather than exhausting memory. Current
   [reference node/depth controls](../annexes/formula-syntax.md#reference-structural-limit-controls)
-  have explicit instrument scope; product expression parsing remains G1 work. The largest
+  have explicit instrument scope; [product syntax controls](../annexes/formula-syntax.md#product-structural-bounds-and-refusal-scope)
+  check parser bounds independently. The largest
   expression in the book's examples stays inside `max_expression_nodes` by the margin §4.3 claims.
 - Every display operator this book uses has a machine form in [grammar
   §3](formula-language/grammar.md), every part of this chapter is listed in §7, and every operator,

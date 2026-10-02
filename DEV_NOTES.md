@@ -3,6 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — semantic bounds and delimiter nesting are different parser obligations
+
+- The formula grammar permits unlimited grouping, which creates no semantic node. Checking a bound
+  after recursive descent would still overflow the call stack. Explicit operator/value/delimiter stacks
+  and a flat arena parse/drop without input recursion; no new grammar cap is invented for parentheses.
+- Nodes are reserved on encounter; the 257th refuses before unbounded prefix/call construction.
+  Conditional frames count every branch and nested ordinary call, refuse level 17 and maximize sibling
+  depths. Grouping extends source spans without adding nodes; square payload 2 is not a child.
+- Arena edges/root are privately generated from existing nodes; read-only views bind children to that
+  same arena. Three localized inspection indexing allowances rely on those construction invariants;
+  the parser itself uses fallible stack/arena access. A 20736-token corpus checks no internal refusal
+  and that every successful arena node belongs to its root. Customer source stays out of Debug/errors.
+- 15 contracts/three privacy-lifetime docs, twelve independent reference shape/count/depth fixtures and
+  eleven actual mutation assertion reds pass. Small-stack grouping at 50000 levels exercises parse/drop;
+  restored strict 472 tests/WASM pass. Initial borrow-check/helper-lint errors were corrected before
+  signoff; test-helper expect allowances do not relax production panic/error rules.
+- The API retains number spelling/unit tokens without converting or evaluating. AST structure is not
+  canonical identity or validated recipe; .5a.3 and later static/evaluation owners remain explicit.
+- promotion: declined (routine syntax implementation; normative grammar/identity policy already ADR-0003).
+
 ## _(2026-10-02)_ — original input gaps and keyword positions are grammar evidence
 
 - D76's tokenizer accepted broad word captures and inspected a three-token whitespace pattern;
@@ -78,37 +98,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   inspected without a policy bypass. No visual browser or new runtime/remote-CI verdict is claimed.
 - promotion: promoted by `decision_book-progression.md` (fresh answers/director publication requirement).
 
-## _(2026-10-02)_ — MTM charts preserve distinct body inputs and garment targets
-
-- A custom sole-member chart pins its canonical Ease-set reference snapshot, not numeric/fit/state
-  copies. Current sources, uncertainty and mapping intent are borrowed; retargeting requires explicit
-  chart replacement. Full coverage is measured against the current Design garment inventory.
-- Body, signed Ease amount and garment POM metadata remain different roles. Unknown/derived inputs
-  refuse numeric queries; a chart supplies no body-plus-Ease result and no grade-rule path. Structural
-  completeness does not establish numeric, physical, fit or release readiness.
-- Fifteen contracts/two privacy-role docs and twelve actual source guard/fallback mutations pass;
-  strict 439 tests/WASM/book and focused checks are green. A fixture initially expected an extra
-  terminal error source; exact typed wrappers correct it. Explicit fixture panic is replaced with a
-  typed assertion under the unchanged strict lint. Production diagnostics were already correct.
-- Main book prose introduces a waist example; API/currentness/verification moves to an annex. The
-  director's publication requirement is owned next by .4d.1, including D71's stale G0 landing status.
-  Completed .3b and oldest history payloads retain predecessor bytes; D70 axes remains pending.
-- promotion: declined (routine MTM contract; publication requirement stays owned for .4d.1 adoption).
-
-## _(2026-10-02)_ — chart coverage is measured against the current Design inventory
-
-- A chart's explicit targets cannot certify their own completeness: full coverage requires every
-  current Design garment POM and one valid canonical observation per authored member/POM cell.
-  Draft validation checks existing targets; row queries check their declared cells. Complete validation
-  also checks the full named Design table, including valid metadata for its non-chart body inputs.
-- Saved observation reference targets refuse retargeting; current correspondence provenance and
-  scalar source/state remain borrowed. Explicitly shared measurement inputs use separate member
-  observations. Structural completeness accepts unresolved values but numeric queries refuse defaults.
-- Eighteen contracts/privacy and fourteen real production mutation reds verify coverage/currentness,
-  including reduced targets, valid duplicate cells and a zero fallback. Strict lint rejected a fixture
-  integer truncation cast; checked conversion fixes it. Restored strict 422 tests/WASM/book and focused
-  checks pass. Completed observations preserve predecessor evidence; MTM/axes/breaks remain owned.
-- promotion: declined (routine current-reference/coverage implementation; book/task own the contract).
 
 
 
@@ -180,3 +169,4 @@ The live window below holds the most recent lessons. When it passes its health t
 
 | [`devnotes-part37.md`](docs/history/stitchcad-devnotes-part37.md) | membership/Ease review lessons | 21 lines, 1781 bytes, `sha256:6a76a906…` |
 | [`devnotes-part38.md`](docs/history/stitchcad-devnotes-part38.md) | chart correspondence lesson | 14 lines, 1281 bytes, `sha256:453f9677…` |
+| [`devnotes-part39.md`](docs/history/stitchcad-devnotes-part39.md) | MTM/coverage lessons | 31 lines, 2736 bytes, `sha256:c7d16877…` |

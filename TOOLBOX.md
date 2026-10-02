@@ -122,3 +122,9 @@ Reference input parity: the structural suite also runs 130 spelling/keyword/unit
 and three copied-book refusals. `bash docs/tasks/artifacts/formula_structure/run_formula_input_mutations.sh`
 disables nine actual input guards, requires assertion reds and restores exact source bytes. Run alone;
 no overlapping reference/probe/build/gate/commit. This verifies curated reference input, not product parsing.
+
+Product expression syntax: `cargo test -p sc-core --test formula_expression_contract` covers precedence,
+spans, units, bounds, 20736 short inputs and small-stack grouping. The structural suite checks twelve
+explicit shared shape/count/depth fixtures with the actual reference. Production guard/order proof:
+`bash docs/tasks/artifacts/formula_structure/run_formula_expression_mutations.sh` requires eleven
+assertion reds and exact restoration. Run alone; no overlapping build/reference/probe/gate/commit.

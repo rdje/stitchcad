@@ -1,9 +1,9 @@
 # Annex: formula syntax API
 
-The formula contract is normative; the current `sc_core::recipe` implementation supplies a borrowed
-**lexical stream**. It separates words, numbers and symbols, retaining exact machine spelling and
-half-open byte spans. It supplies no expression tree, numeric conversion, binding, evaluation or
-canonical formula identity. Those remain G1-SLICE.5 work. See [availability](../availability.md) and
+The formula contract is normative. The current `sc_core::recipe` implementation supplies a borrowed
+lexical stream and an immutable expression syntax tree with exact source spans and structural bounds.
+Syntax does not supply numeric conversion, canonical identity, ordered recipes, binding, type/name
+validation or evaluation. Those remain G1-SLICE.5 work. See [availability](../availability.md) and
 [the complete grammar](../spec/formula-language/grammar.md).
 
 ## Read a machine statement
@@ -78,13 +78,13 @@ cargo test -p sc-core --test formula_lex_contract
 bash docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh
 ```
 
-G1-SLICE.5a.2 owns expression trees; .5a.3 owns exact literals/canonical ordered recipes and .5a.4
+G1-SLICE.5a.2b.2 implements expression trees below; .5a.3 owns exact literals/canonical ordered recipes and .5a.4
 reviews syntax completion. Exact evaluation, geometry, command/API/MCP workflows and release proofs
 remain pending. A successful library WASM build is not a working browser application.
 
 ## Reference structural-limit controls
 
-The chapter census is a reference evaluator, separate from the product lexer and future parser.
+The chapter census is a reference evaluator, separate from the product lexer and syntax parser.
 G1-SLICE.5a.2a corrected D75: its walkers previously skipped ordinary calls' argument lists, letting
 258-node and 17-level conditional fixtures pass while reporting only seven nodes/zero depth. This
 was an instrument defect; no production evaluation API existed to certify those forms.
@@ -110,7 +110,7 @@ bash docs/tasks/artifacts/formula_structure/run_formula_structure_mutations.sh
 The first command runs 16 structural controls/refusals and two copied-book refusal cases. The second
 runs alone: it disables four actual reference traversal/depth guards, requires assertion failures,
 and restores exact source bytes. Existing formula-language probes still verify chapter/fixture/value
-agreement. G1-SLICE.5a.2b.2 owns product expression trees after the reference prerequisites.
+agreement. The product syntax parser below has its own boundary and stack-safety contracts.
 
 ## Reference machine-input controls
 
@@ -134,5 +134,82 @@ unit-table entries, plus three copied-book refusal cases. The mutation command r
 nine actual input guards, requires assertion failures and restores exact source bytes. Existing
 structural and numerical chapter checks retain their separate scope. The reference is a curated
 book instrument; these results are not arbitrary-input production safety, full binding/type checking,
-complete command diagnostics or a product parsing/evaluation API. Product AST work belongs to
-G1-SLICE.5a.2b.2; canonical recipes and later checker/evaluator owners remain pending.
+complete command diagnostics or a product parsing/evaluation API. Product AST work is implemented by
+G1-SLICE.5a.2b.2 below; canonical recipes and later checker/evaluator owners remain pending.
+
+## Parse and inspect one expression
+
+```rust
+use sc_core::recipe::{FormulaExpression, FormulaNodeKind};
+
+let expression = FormulaExpression::parse("waist_girth + 1 cm").expect("valid syntax");
+assert_eq!(expression.node_count(), 3);
+assert_eq!(expression.conditional_depth(), 0);
+assert!(matches!(expression.root().kind(), FormulaNodeKind::Binary { .. }));
+```
+
+FormulaExpression borrows name and numeric spelling while privately owning a flat semantic arena.
+Root/child views cannot outlive that arena, and callers cannot forge indices, mutate its nodes or
+transfer an index from another expression. Explicit inspection returns source text; Debug of the
+expression, node view, argument iterator and errors omits customer source. A cloned tree owns its
+own arena and still borrows the original spelling.
+
+| API | Meaning |
+| --- | --- |
+| FormulaExpression | Whole-expression syntax, read-only root/count/depth; no statement or value |
+| FormulaNode / FormulaNodeKind | Read-only source extent and inspected literal/name/operator/call/if structure |
+| FormulaArguments | Ordered nonempty call arguments; exact-size, fused iteration |
+| FormulaUnit | Seven closed machine unit tokens; no conversion here |
+| FormulaBinaryOperator | Syntax role, with no dimensional permission implied |
+| FormulaParseError / FormulaParseRule | Source span and typed syntax or measured-limit refusal |
+| FormulaExpressionLimit | Fixed max_expression_nodes 256 and max_if_depth 16 |
+
+`-x ^ 2` has a negation around a square; `(-x) ^ 2` has a square around a negation.
+Addition/multiplication/division associate left. A comparison cannot chain within one expression;
+parenthesized comparisons form separate syntax, with their dimensional validity checked later.
+The exact exponent token is `2`; `02`, `2.0`, `3` or a name raises formula_unsupported. A second
+ungrouped square suffix is a grammar refusal. Calls require at least one argument; the `if` special
+form requires exactly three and preserves both branches. An unknown well-spelled call name is still
+syntax: the later closed-vocabulary/name checker owns permission to call it.
+
+Literal units use exactly one original ASCII space. Numeric digits/precision remain unconverted:
+`2.5 cm` and `25 mm` are not yet one canonical syntax identity. Units/kinds, semantic node structure
+and source locations are distinct concepts. Grouping extends the enclosed node's extent without
+adding a semantic node; a square exponent is operator payload, not another literal node.
+
+## Product structural bounds and refusal scope
+
+The parser streams the existing lexer with explicit operator/value/delimiter stacks. Parse and arena
+destruction do not recurse with input nesting. Exactly 256 semantic nodes and 16 conditional levels
+are permitted. The next encountered node/conditional raises formula_domain with a typed limit,
+fixed bound and measured 257/17 size. That measurement is the refusal point, not an invented final
+size. Ordinary call arguments and every static branch count; sibling conditional depths maximize.
+
+Grouping has no invented language cap: a small-stack contract parses/drops 50000 nested parentheses,
+while pathological unary/call chains refuse at the semantic bound. Delimiter workspace is linear in
+source length, the semantic arena is bounded. Input-byte/work budgets at exposed command/API/MCP
+boundaries remain roadmap §10 work; this library is not that complete workflow.
+
+Syntax/lexical refusals carry formula_parse, except unsupported exponents. They locate offending
+tokens/gaps, an unclosed opener or zero-width EOF. Errors preserve lexical rule/spans. This low-level
+expression API has no statement index or canonical expression context; later recipe/command wrappers
+must attach available context. It cannot invent a canonical form for unparseable source.
+
+```bash
+cargo test -p sc-core --test formula_expression_contract
+bash docs/tasks/artifacts/formula_structure/run_formula_expression_mutations.sh
+```
+
+Fifteen contracts include all 17 published binding expressions, eight assertion sides, three syntax
+refusals and ten forms retained for later semantic refusal owners. A 20736-input short-token corpus
+checks internal construction and root reachability. Three privacy/lifetime doctests cover the arena
+and source borrows. Twelve explicit shape/count/depth fixtures are independently checked by the
+product and the existing reference; the structural probe suite runs their reference half. Eleven
+actual production guard/order mutations require assertion reds and byte-identical restoration; run
+that command alone, without builds, probes or gates overlapping it. Strict native and three-library
+WASM checks pass locally; no browser application or new remote-CI result is implied.
+
+G1-SLICE.5a.2 is complete for expression syntax. Canonical literals/recipes and statement/rational
+bounds belong to .5a.3/.4 and later numeric checking; name/type checks, exact evaluation/DAG,
+operation recipes and geometry remain explicit owners under .5 and later gates. Parsing an unknown
+value's name does not read it or grant a numeric fallback.

@@ -122,4 +122,57 @@ exact committed text; the current frontier and verification/commit journal remai
   next by .2b.1; D70 required axes ruling stays unanswered. G1 remains 5/18 top-level. Live defect census
   re-derived as 11 open/65 sealed; journal/oldest live payloads retain exact predecessor bytes.
 
+## Reference input contract and evidence — preserved from e797874
+
+- ID: `G1-SLICE.5a.2b.1`
+  Status: `done`
+  Goal: fix D76 reference machine identifier/keyword-position and literal unit-gap parity before
+  using it as an independent product parser oracle; explicit pre-code protocol and mutation controls.
+  Pre-code protocol: repair the actual reference tokenizer/parser without changing language or Rust
+  behavior. Whole-source ASCII preflight precedes tokens; validate captured lower-snake words without
+  trimming/normalization. Keep let/assert/if recognized only in their grammar positions: no bare-name,
+  ordinary-call or declaration-name use. Share a private reference identifier check across those paths.
+  Retain original source positions through filtering; a numeric token immediately followed by a known
+  unit requires the exact gap " ", including zero-gap/tabs/multiple-space refusals. General ASCII
+  whitespace matches the lexer; units remain the canonical table's closed set. Do not transform an
+  invalid gap into a valid literal during assert splitting. Existing supported if form remains intact.
+  Diagnostic widening found zero-argument calls accepted as ASTs although args requires an expression;
+  refuse before returning a call. Add that observation to D76 and cover nonempty/trailing-comma controls.
+  Tests load actual reference definitions with canonical unit/binding contexts; positive names/reserved
+  inputs, three keyword roles/declarations, all seven unit gaps, ASCII/whitespace, malformed numbers,
+  empty calls and current worked examples. Cross-check unchanged Rust token/name contracts. Add paired
+  copied-book controls and actual guard mutations, with exact restoration and no overlapping gates.
+  Extend the existing structural suite with input controls so registered suite count remains 25.
+  Reference checks are not product parsing, complete name/type/evaluation proof or command diagnostics.
+  Keep remaining .2b.2 AST, .5a.3 canonical literal/recipe and later checker owners explicit; sync expert
+  annex/live records; preserve completed .2a contract/checklist at health; rollover exact old ledgers.
+  Verification: 130 input controls/three copied-book refusals; nine actual guard reds/exact restore;
+  existing structural 16+2, language 15 and unchanged Rust name/lexer 20 green.
+  Commit: `STITCHCAD-G1-0039` (this recording commit).
+
+### `G1-SLICE.5a.2b.1` — reference machine-input parity
+
+- [x] **REPRODUCE / ISSUE** — actual reference accepts Upper/_a/a__b, 1cm, bare/declared keywords
+  and abs(); all violate canonical spelling, gap, keyword role or nonempty-argument grammar.
+- [x] **ROOT CAUSE (WHY + WHERE)** — load_reference/direct parse/statement diagnostic → invalid forms
+  return ASTs/bindings, rc=0. tokenize permits broad words and only checks a present sp token; parser
+  roles omit keyword checks and p_args explicitly returns an empty list. This is D76 instrument debt.
+- [x] **FIX** — whole-source ASCII, private captured spelling/role checks, original-source unit gap,
+  nonempty arguments and all ASCII whitespace. Tests load actual reference and canonical unit table;
+  paired direct/copied-book controls and isolated guard mutations restore exact bytes.
+- [x] **ADDRESSED (verified)** — run_formula_structure_probes.sh → structural 16+2 and input 130+3
+  pass/0 fail, rc=0. run_formula_input_mutations.sh → nine assertion reds/rc=1 each and exact
+  restoration, runner rc=0. Invalid unit gaps inside assert remain refused; D76 description seals intact.
+- [x] **NO REGRESSION** — run_formula_language_probes.sh → 15 pass/0 fail, rc=0; cargo test -p sc-core
+  --test name_contract --test formula_lex_contract → 20 passed/0 failed, rc=0. Rust files unchanged;
+  strict native/WASM baseline remains 60c7305. Publication nine and ledger nine probes pass/0 fail;
+  history_archive.sh verify/verify-retention → 95 records/32 working MD/238983 resident bytes, rc=0.
+  Tree 10 lanes/13 trees/8 siblings/zero gaps; glossary 310 terms/9 parts/158 tokens; feature, uncertainty
+  and fixture censuses green, rc=0. Book warning-free: 48 chapters/15 APIs, 992 source/1509 rendered links.
+  Staged make gate → all doctrines green, rc=0; no new runtime or remote-CI claim.
+- [x] **LOCKSTEP** — expert annex/toolbox describe actual input proof scope and remaining product
+  AST/canonical/checker owners. Progressive book, glossary/index, normative roadmap and limits unchanged.
+  Exact completed .2a contract/checklist and oldest history payloads preserve predecessor bytes.
+  Live defect census 10 open/66 sealed; G1 stays 5/18, D70 pending, next .5a.2b.2.
+
 Further syntax work remains owned by the parent frontier.

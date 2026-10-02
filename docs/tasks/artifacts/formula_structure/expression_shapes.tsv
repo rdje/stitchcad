@@ -1,0 +1,13 @@
+# source\tshape\tnodes\tconditional depth
+a + b * c	(Add a (Multiply b c))	5	0
+a / b * c	(Multiply (Divide a b) c)	5	0
+-x ^ 2	(neg (square x))	3	0
+(-x) ^ 2	(square (neg x))	3	0
+(a ^ 2) ^ 2	(square (square a))	3	0
+(a < b) < c	(Less (Less a b) c)	5	0
+f(a < b, c < d)	(f (Less a b) (Less c d))	7	0
+if(a < b, abs(-x), max(y, z))	(if (Less a b) (abs (neg x)) (max y z))	10	1
+if(a, if(b, c, d), if(e, f, g))	(if a (if b c d) (if e f g))	10	2
+abs(if(a, b, if(c, d, e)))	(abs (if a b (if c d e)))	8	2
+within(a, b, eps_num)	(within a b eps_num)	4	0
+-f(a, b)^2 + c	(Add (neg (square (f a b))) c)	7	0
