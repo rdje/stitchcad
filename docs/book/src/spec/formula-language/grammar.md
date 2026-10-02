@@ -56,6 +56,15 @@ that a fixture must derive its own finished dimensions.
 not chain, so `a < b < c` is `formula_parse`. And `^` accepts the literal `2` and nothing else
 ([the contract §6](../formula-language.md)).
 
+### 1.3 Inspect one statement
+
+The [single statement API](../../annexes/formula-statements.md) checks one complete let/assert form
+and retains original header/operand spans. An assertion has exactly one top-level == separator;
+comparisons within operands are grouped or occur inside calls. This retains the non-chaining rule
+and the curated reference's assertion split. All operands remain unevaluated syntax.
+Ordered recipe composition and its4096-statement limit remain G1-SLICE.5a.3e.2; successful parsing
+alone does not grant name/type/binding or tolerance-value authority.
+
 ## 2. Literals and their units
 
 | Literal | Kind | Canonical form | Note |

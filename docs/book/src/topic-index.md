@@ -22,6 +22,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Executable ontology at G1](spec/ontology-implementation.md)
 - [Formula literal normalization](annexes/formula-literals.md)
 - [Formula syntax API](annexes/formula-syntax.md)
+- [Single formula statement API](annexes/formula-statements.md)
 - [From an idea to a pattern](learn/design-to-pattern.md)
 - [Garment chart collections](spec/size-chart-collections.md)
 - [Garment chart observations](spec/size-chart-observations.md)

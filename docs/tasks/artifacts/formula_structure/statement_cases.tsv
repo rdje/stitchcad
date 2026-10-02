@@ -1,0 +1,16 @@
+# source	role	name	annotation	left/binding identity	right identity or -
+let distance: length = 2.5 cm	let	distance	length	length:25000	-
+let sweep: angle = -720 deg	let	sweep	angle	(- angle:720000000)	-
+let patch: area = 2 mm * 2 mm	let	patch	area	(* length:2000 length:2000)	-
+let scale: ratio = 50 pct	let	scale	ratio	ratio:500000	-
+let layers: count = 4	let	layers	count	count:4	-
+let condition: boolean = 1 == 1	let	condition	boolean	(== count:1 count:1)	-
+assert numerical_check: eps_num = 1 cm == 10 mm	assert	numerical_check	eps_num	length:10000	length:10000
+assert geometric_check: eps_geo = 1 cm == 10 mm	assert	geometric_check	eps_geo	length:10000	length:10000
+assert format_check: eps_fmt = 1 cm == 10 mm	assert	format_check	eps_fmt	length:10000	length:10000
+assert importer_check: eps_imp = 1 cm == 10 mm	assert	importer_check	eps_imp	length:10000	length:10000
+assert physical_check: eps_phys = 1 cm == 10 mm	assert	physical_check	eps_phys	length:10000	length:10000
+let letter: length = unknown_name + 1 cm	let	letter	length	(+ unknown_name length:10000)	-
+let eps_num: count = -1	let	eps_num	count	(- count:1)	-
+assert grouped: eps_num = (a == b) == if(c < d, e, f)	assert	grouped	eps_num	(== a b)	(if (< c d) e f)
+let assertion: ratio = if(a, x ^ 2, unknown_fn(b))	let	assertion	ratio	(if a (^2 x) (unknown_fn b))	-

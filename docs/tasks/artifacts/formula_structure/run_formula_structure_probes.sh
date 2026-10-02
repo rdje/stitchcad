@@ -13,6 +13,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/normalized_expression_refer
 python3 -I -B docs/tasks/artifacts/formula_structure/reduction_boundary_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_contract_inventory.py
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/statement_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/statement_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/literal_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/arithmetic_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/angle_contract.py

@@ -5,7 +5,7 @@ integer. Parsing and input conversion remain separate operations: parsing checks
 conversion checks exact rational width, rounds once and checks the input scalar domain.
 The [whole-expression API](#normalize-every-literal-in-an-expression) converts every literal while
 retaining the syntax graph. The [canonical serializer](#serialize-canonical-expression-identity) emits
-owned expression identity bytes; ordered statements, binding and evaluation remain later work.
+owned expression identity bytes; complete recipes, binding and evaluation remain later work.
 See the [language](../spec/formula-language.md) and [grammar](../spec/formula-language/grammar.md).
 
 ## Inspect one literal
@@ -340,8 +340,8 @@ ordered binary/call/conditional children, call coverage, whitespace/newline or D
 must fail public assertions; the exclusive runner restores exact source. Run mutations alone.
 
 G1-SLICE.5a.3d.2 owns this product serializer; .3d.3 completes the coupled identity review below. Ordered recipe
-statements, name/type/binding/evaluation, geometric construction, storage and command/API/MCP remain
-later work. Native/release checks and WASM cross-compilation retain their stated scope; compilation
+composition/statement identity, name/type/binding/evaluation, geometry, storage and command/API/MCP
+remain later work. [Standalone statements](formula-statements.md) now have a separate syntax API. Native/release checks and WASM cross-compilation retain their stated scope; compilation
 alone is not a browser runtime or cross-platform numerical certificate.
 
 

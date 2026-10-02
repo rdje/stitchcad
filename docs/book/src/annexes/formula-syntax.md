@@ -6,6 +6,7 @@ Syntax parsing does not perform numeric conversion. Parsed literals and whole ex
 [normalization APIs](formula-literals.md). [Canonical expression identity](formula-literals.md#serialize-canonical-expression-identity) is now
 implemented separately; ordered recipes, binding, type/name validation and evaluation remain G1-SLICE.5 work. See [availability](../availability.md) and
 [the complete grammar](../spec/formula-language/grammar.md).
+Single let/assert forms now have a separate [statement syntax API](formula-statements.md).
 
 ## Read a machine statement
 

@@ -118,6 +118,23 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part59.md`](docs/history/stitchcad-changelog-part59.md) | STITCHCAD-G1-0041 | 13 lines, 1098 bytes, `sha256:38e6cdf2…` |
 
+| [`stitchcad-changelog-part60.md`](docs/history/stitchcad-changelog-part60.md) | STITCHCAD-G1-0042 | 11 lines, 999 bytes, `sha256:717945df…` |
+
+## STITCHCAD-G1-0065 - single immutable formula statements (leaf `G1-SLICE.5a.3e.1`)
+
+FormulaStatement parses one complete let/assert form with six kind/five tolerance annotations,
+full-source statement/name/annotation/node spans and typed operand refusals. Assertions preserve
+exactly one top-level separator and both independently bounded expression arenas. Private borrowed
+construction/Clone/opaque Debug retain source lifetimes without conversion, binding or execution.
+
+Nine public contracts/fifteen independent reference header/operand rows/six refusal families and
+all21 worked statements/25 expression identities pass. Fifteen actual compiled faults fail assertions
+in failed-test bodies and restore exact source; D107 false assertion classification is repaired.
+Strict native538/release9/WASM3 and structural/language/publication checks pass. New statement annex,
+progressive links/API map/index/README/live/task records align; D106 literal decision status is fixed.
+Completed subtree/proof and oldest ledgers remain exact in bounded parts. G1 stays5/18; defects10open/
+96sealed. Next .3e.2 ordered recipe/4096/context; statement identity and evaluation remain later work.
+
 ## STITCHCAD-G1-0064 - coupled canonical identity review (leaf `G1-SLICE.5a.3d.3`)
 
 Expression identity now has a complete scoped obligation map against grammar4/5 and D84/D95/D103.
@@ -380,15 +397,3 @@ Restored reference/input/literal/structural and language 15/publication nine/rec
 Expert annex and rounding contract state exact arithmetic and explicit quantization boundaries;
 previous literal evidence/oldest ledgers preserve predecessor text. D83 numeric-domain/stored-angle
 handling is owned next before product normalization. G1 stays 5/18; defects 11 open/71 sealed.
-
-## STITCHCAD-G1-0042 - reference literals preserve canonical integer identity (leaf `G1-SLICE.5a.3b.1`)
-
-D79 closes: bare decimals and all seven unit forms convert once and round once into canonical
-integer literals before arithmetic. The census compares the actual node, without rounding its
-presentation to hide a fraction. Sixty explicit rows/360 controls agree with an independent Decimal
-oracle; six actual quantum/tie/scale/kind/conversion guard reds restore exact reference source.
-Structural/input/reference/Fraction controls, language 15/publication nine and recording gates pass.
-D80 duplicate units section numbering and D81 stale G1 status routing are corrected; glossary/index
-and progressive learning stay intact. Completed rounding evidence/oldest ledgers preserve predecessor
-bytes. D82 premature arithmetic rounding and D83 numeric-domain/stored-angle enforcement are owned
-next under .5a.3b.2/.3. G1 remains 5/18, defects 12 open/70 sealed; no production numeric/evaluation claim.

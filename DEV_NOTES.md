@@ -3,6 +3,27 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — standalone statement syntax retains whole-source evidence
+
+- Private borrowed statement construction keeps closed six kind/five tolerance annotations and
+  independent flat expression arenas. Original operand slices preserve exact unit gaps; global span
+  rebasing reaches all nodes and nested errors. Lexical tail errors retain their known operand role.
+  Exactly one depth-zero assertion separator is required; grouping/call comparisons stay inside operands.
+- Nine public contracts check15 independently authored rows/six actual-reference refusal families,
+  all21 worked statements/25 canonical expression bytes, no conversion/type/name/execution claim,
+  privacy/Clone and64KiB-stack bounds. Three compile-fail docs/runnable API doc pass.
+- Initial test fixture compile failed E0716 on a borrowed temporary; explicit named source fixes it.
+  Strict clippy identified the nested separator match; a small explicit recording helper satisfies
+  the lint and preserves the guard. Neither compile/lint refusal is counted as a fault assertion red.
+- D107 new runner initially found its assertion marker in passing test names while a fixture expect
+  panicked. Failed-test-body classification and explicit acceptance/refusal assertions remove that
+  false classification. Negative noise controls and15 rerun actual compiled assertion reds pass;
+  exact source restored. The earlier14 classification is superseded, not retained as assertion proof.
+- Final strict native538/release9/WASM3 and scoped book/reference checks pass. D106 literal decision
+  status now separates completed expression identity from future statement identity/evaluation.
+  Public statement annex/progressive links/current API/live/task records align; ordered recipe .2 next.
+- promotion: declined (routine statement implementation and local verification repair, no new policy).
+
 ## _(2026-10-02)_ — coupled expression identity review closes its scoped contract
 
 - Review maps grammar4/5 and D84/D95/D103 to the exact unchanged production pipeline and public proof.
@@ -34,21 +55,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   bounded navigation keeps canonical paths/owners. Next .3d.3 coupled review, then ordered statements.
 - promotion: declined (routine implementation of the received canonical byte contract and docs repair).
 
-## _(2026-10-02)_ — inspection tags do not establish persistent byte identity
-
-- Canonical grammar4 had no exact unary/square bytes. The actual book reference returns tuples;
-  inspection neg/square tags also collide with distinct ordinary calls before function validation.
-  D103 was logged/owned and a complete symbolic proposal presented before product implementation.
-- Director ruling chooses (- child)/(^2 child). All seven expression roles now specify ASCII bytes,
-  original name/ordered children, typed normalized magnitude and exact spacing/no newline. No sign
-  folding/evaluation/type validity is implied; source spellings/spans remain outside identity.
-- Seven authored tuple roles/ten symbols/two distinct call roles/six authored byte examples pass
-  against the actual reference plus independent recursive rendering; the structural suite watches it.
-  Four actual inventory-renderer tag/branch/argument faults fail byte assertions and restore exact
-  producer; these interpreter controls supply no compiled product serializer proof.
-  Grammar/expert annex/canonical decision/index/live/task pointers agree. .3d.2 implementation and
-  .3d.3 review remain pending; Rust source stays unchanged. Scoped book/reference checks pass.
-- Promotion: canonical expression spelling decision answers exact operator identity/call collisions.
 
 # Sealed archive — earlier lessons
 
@@ -161,3 +167,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part62.md`](docs/history/stitchcad-devnotes-part62.md) | individual literal normalization lesson | 18 lines, 1637 bytes, `sha256:69a0a9b4…` |
 
 | [`stitchcad-devnotes-part63.md`](docs/history/stitchcad-devnotes-part63.md) | coupled normalization review lesson | 34 lines, 3069 bytes, `sha256:99a6f002…` |
+
+| [`stitchcad-devnotes-part64.md`](docs/history/stitchcad-devnotes-part64.md) | G1-0062 inspection tags | 15 lines, 1345 bytes, `sha256:5699b48e…` |

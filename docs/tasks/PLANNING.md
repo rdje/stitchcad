@@ -485,6 +485,7 @@ G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exa
 
 
 
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a
@@ -799,3 +800,10 @@ API. The coupled review maps every expression obligation to public proof; all25 
 maximum255-argument call and nested aliases pass. Scoped language16/publication9 verify current
 source/rendered book status, rc=0. Ordered statements and evaluation remain explicitly pending.
 Original defect description is retained unchanged; no runtime identity behavior was changed.
+
+D106/D107 are sealed in [`stitchcad-defects-part37.md`](../history/stitchcad-defects-part37.md).
+G1-SLICE.5a.3e.1 corrects the literal decision's current expression-versus-statement/evaluation status.
+The new statement fault runner now inspects failed-test bodies only; passing-name/expect-only/compiler
+noise controls refuse. Explicit fixture acceptance/refusal assertions and all15 actual compiled
+fault reds pass with exact source restoration, rc=0; original unearned14 classification is superseded.
+Current book/API/literal ruling agree. Original defect descriptions remain byte-identical.

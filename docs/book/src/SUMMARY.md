@@ -55,6 +55,7 @@
 
 - [Formula syntax API](annexes/formula-syntax.md)
   - [Formula literal normalization](annexes/formula-literals.md)
+  - [Single formula statement syntax](annexes/formula-statements.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
 - [Made-to-measure API contract](annexes/mtm-input-contract.md)
 - [Implementation status and requirement owners](annexes/implementation-status.md)

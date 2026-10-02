@@ -18,3 +18,4 @@ formula expression syntax	annexes/formula-syntax.md	crates/sc-core/src/recipe/ex
 formula literal inputs	annexes/formula-literals.md	crates/sc-core/src/recipe/literal.rs	FormulaLiteral	G1-SLICE.5a.3c.2	4.1
 formula normalized arena	annexes/formula-literals.md	crates/sc-core/src/recipe/normalized.rs	FormulaNormalizedExpression	G1-SLICE.5a.3c.3	4.1
 formula canonical expression identity	annexes/formula-literals.md	crates/sc-core/src/recipe/canonical.rs	FormulaCanonicalExpression	G1-SLICE.5a.3d.2	4.1
+formula single statement syntax	annexes/formula-statements.md	crates/sc-core/src/recipe/statement.rs	FormulaStatement	G1-SLICE.5a.3e.1	4.1

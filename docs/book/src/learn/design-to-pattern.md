@@ -12,7 +12,10 @@ which drawing lines must move. Recipe evaluation is planned work; the current li
 many of the inputs and garment objects it will consume. The syntax parser can now check how an
 expression groups its words, numbers and operators. It does not yet calculate a result or validate
 a complete recipe.
-The [formula syntax annex](../annexes/formula-syntax.md) gives the developer contract.
+The libraries also parse one statement, such as let garment_waist: length = waist_girth + ease_waist.
+That records a name, its intended kind and an expression. An assert statement records a named check
+and tolerance class; parsing preserves it for later checking. The developer contracts are in the
+[expression syntax](../annexes/formula-syntax.md) and [statement syntax](../annexes/formula-statements.md) annexes.
 
 You author formulas with familiar operators, such as -x or x ^ 2. Internally, a canonical form gives
 each expression a stable identity: 2.5 cm and 25 mm become the same typed length. This lets a change

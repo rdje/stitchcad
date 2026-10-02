@@ -196,3 +196,180 @@ Staged make gate→=== all doctrines green ===, rc=0; all verification jobs obse
 
 - `2026-10-02`: owned expression canonical bytes implemented; coupled identity review next.
 - promotion: declined (routine implementation of the received exact byte contract and documentation alignment).
+
+
+## Coupled identity proof — preserved from 5d8ab5b
+
+### `G1-SLICE.5a.3d.3` — coupled expression identity review
+
+- [x] **REPRODUCE / ISSUE** — expression serializer is implemented; closing its parent requires
+  every grammar4/5/D84/D95/D103 obligation to map to actual product proof. D105 book status still
+  says product canonicalization pending despite the public owned-expression API.
+- [x] **ROOT CAUSE (WHY + WHERE)** — scoped source/book census locates stale annex/introduction
+  wording. Existing seven contracts cover55 byte fixtures/nested100 inputs/six canonical examples;
+  coupled25 worked-source/wide255-child controls complete planned review. Independent recursive
+  reference agrees with authored25 bytes and exact book population, rc=0.
+- [x] **FIX** — add two public coupled controls, independent worked fixture/population watcher and
+  focused exclusive fault mode. Update scoped book status/obligation map; serializer/literal/arena/
+  round production sources remain byte-identical. D105 fixed; .3d closes for expression identity.
+- [x] **ADDRESSED (verified)** — cargo test canonical contract→nine pass, rc=0; independent25
+  worked rows agree, rc=0. Actual symbol/call-order/final-argument faults compile and fail only new
+  coupled assertions, rc=101 each; --coupled runner/exact source restoration rc=0. Max255 arguments
+  and nested alias/raw-turn/kind controls pass; original nineteen-fault proof retained unchanged.
+- [x] **NO REGRESSION** — make check→525 pass/strict fmt/clippy, rc=0; release9/WASM3, rc=0.
+  Structural/reference/language16/publication9 checks pass, rc=0; source/arena/lifetime/opaque Debug
+  and previous syntax limits remain covered. Cross-compilation supplies no browser runtime proof.
+- [x] **LOCKSTEP** — current grammar/decision/book/API map/index/live/task pointers align; D105
+  repaired and original description sealed exactly. Prior serializer proof and oldest ledger payload
+  retained byte-identically, no ceiling raised. G1 remains5/18; .3e pending next, no full G1 exit.
+
+## Verification Log
+
+Logs target/g1-0064-{canonical-restored,reds,native,release,wasm,structure,language,publication}.log
+are terminal rc=0. Three faults each compiled and returned101 on actual new coupled assertions;
+exact canonical source SHA256 remains3f1c304abb1a7850f46f6314d2be202d8975e1fd3bdec798576a2f29c7ff0c06.
+All four production sources compare byte-identically with8ed2893, rc=0; previous nineteen serializer
+fault controls remain historical proof. No runtime product implementation changed.
+Publication50 chapters/19 scoped APIs/1039 source/1599 rendered links and all9 refusal probes pass,
+rc=0; language16 and full structural suite pass, rc=0. D105 fixes current book status without changing
+normative numerical rules or claiming recipe execution. Coupled proof closes .3d expression scope only.
+
+Final recording checks: ledger9 arms/13 pointer controls and archive28 arms/172 CLI controls pass,
+rc=0. Retention163 logical records/38 working Markdown/8389 decoded lines/650011 decoded bytes/
+306333 resident bytes, rc=0. Tree10 lanes/13 trees/nine siblings/zero gaps; glossary310/nine/158,
+feature105/29, uncertainty133/16/zero unowned and fixture20/four/five/zero mismatch pass, rc=0.
+Defects10 open/94 unique sealed/no overlap derive from fresh target/g1-0064-defect-census, rc=0.
+Final canonical9/language16/publication9 checks pass, rc=0; current links remain1039 source/1599
+rendered. README objective/layout/commands and availability remain accurate; no edit required.
+Previous serializer proof equals the exact8ed2893 parent tail inside the linked sibling, rc=0.
+
+Staged make gate→=== all doctrines green ===, rc=0; all verification jobs observed terminal.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3d.3` | `STITCHCAD-G1-0064 (leaf G1-SLICE.5a.3d.3): complete coupled expression identity review` | authored25/nine contracts/three actual reds/native525 |
+
+## Changelog
+
+- `2026-10-02`: coupled expression identity review complete; ordered statements next.
+- promotion: declined (routine coupled contract review and documentation alignment, no new policy).
+
+
+## Single-statement pre-code protocol
+
+- ID: `G1-SLICE.5a.3e.1`
+  Status: `done`
+  Goal: parse one complete immutable source-borrowing let/assert statement without execution.
+  Scoped source: complete formula contract/grammar/examples; ADR-0003/D84/D95/D103; borrowed lexer,
+  flat expression parser/arena, literal normalization/canonical APIs and actual reference statement
+  method/separator. Clean5d8ab5b before taking this slice; no user edits or pending jobs.
+  Plan: closed FormulaBindingKind (six kinds) and FormulaToleranceName (five symbolic classes),
+  privately constructed FormulaStatement with explicit name/annotation/expression inspection and
+  opaque Debug/Clone. Preserve names/literals/spans/ordered branches, no source/string cloning or
+  AST recursion. Statement span/name/header and expression node spans refer to original whole source.
+  Reuse expression parser through a private range/rebasing helper; errors retain precise global span,
+  typed rule/expression role. Standalone syntax has no recipe ordinal; .2 supplies it. Canonical context
+  is unavailable before explicit successful input normalization; do not fabricate it or normalize
+  literals as a parsing side effect. No semantic name/type/literal/binding/tolerance-value execution.
+  Parse exact keyword/name/colon/annotation/assignment header. Unknown or unbindable kind annotation
+  follows reference formula_dimension; unknown tolerance annotation follows formula_tolerance_unbound.
+  Other malformed headers are formula_parse. Assertions require exactly one depth-zero == separator;
+  preserve original operand substrings rather than rejoining lexemes. Each side has independent256/
+  16 structural limits; grouped/call comparisons cannot be mistaken for the assertion separator.
+  A standalone statement consumes whole input; no implicit bare expression, comment, semicolon or
+  second statement is accepted. Empty recipe and keyword statement boundaries belong .2.
+  Independent authored statement fixtures cover six kinds/five tolerances/keywords/headers/operand
+  spans/unknown annotation/expression refusals. Check header tuples using actual reference with
+  inference/evaluation replaced by deliberate traps only after header inspection; recursive parser
+  independently checks each operand. Book21 statements must preserve names/annotations/full canonical
+  expression bytes via explicit normalization. Public controls cover privacy/lifetimes/no mutable
+  construction, max nodes/depth on both sides, small64KiB stacks/50000 grouping/100000-byte names.
+  Actual production keyword/name/annotation/separator/unit/span/operand/coverage faults must compile
+  and fail public assertions; exclusive runner/finally restores bytes. Focused/native/release/WASM,
+  structure/language/book/publication and record gates; synchronize current APIs/book/live/task docs.
+  New progressive annex for standalone syntax; full recipe limits/statement identity and runtime proof
+  remain explicit. Preserve completed proof/oldest ledgers exactly, no ceiling increases.
+  D106 P2 here: current literal decision still calls canonical serialization future work despite
+  reviewed public expression identity; update scoped expression versus statement/evaluation boundary.
+  Verification: nine public contracts/15 independent rows/six refusals/all21 worked statements,
+  final15 actual assertion reds/source restore/native538/release9/WASM3; D106/D107 fixed.
+  Commit: `STITCHCAD-G1-0065`.
+
+
+## Completed expression identity subtree — preserved from 5d8ab5b
+
+- ID: `G1-SLICE.5a.3d.1`
+  Status: `done`
+  Goal: exact expression byte contract settled by D103 director ruling, before implementation.
+  Verification: seven reference roles/ten symbols/two call distinctions/six authored examples;
+  four actual inventory assertion reds. [Exact contract/evidence](G1-SLICE-canonical.md#byte-contract-leaf--preserved-from-ed21ce2).
+  Commit: `STITCHCAD-G1-0062`.
+
+- ID: `G1-SLICE.5a.3d.2`
+  Status: `done`
+  Goal: privately constructed owned canonical expression bytes from immutable normalized syntax;
+  preserve full-u128 magnitude/all ordered syntax under D103, source outside identity, no execution.
+  Protocol: [complete pre-code plan](G1-SLICE-canonical.md#serializer-pre-code-protocol--completed-in-g1-0063).
+  Verification: seven public contracts/55 independent byte fixtures/nested100 Fraction inputs/six book
+  examples; nineteen actual compiled assertion reds/exact source restoration. Native523/release7/
+  WASM3; private-construction compile-fail and runnable docs. Small64KiB stack/large names pass.
+  D104 root crate/API numerical/status drift corrected; .3d.3 owns coupled identity review.
+  Commit: `STITCHCAD-G1-0063`.
+
+- ID: `G1-SLICE.5a.3d.3`
+  Status: `done`
+  Goal: review complete expression identity contract and public serializer proof before closing .3d.
+  Protocol: [coupled review plan](G1-SLICE-canonical.md#coupled-identity-review-pre-change-protocol).
+  Verification: complete obligation map; nine contracts/authored25 actual worked expressions,
+  max255 arguments/nested aliases/three additional compiled reds/exact restoration, native525/
+  release9/WASM3. D105 book status repaired; production sources unchanged.
+  Commit: `STITCHCAD-G1-0064`.
+
+Current statement closure is recorded by G1-SLICE.5a.3e.1; ordered recipe composition follows.
+
+
+## Prior resume routes — preserved during G1-0065
+
+[Previous exact capture/D96 proof and commit journal](G1-SLICE-journal.md#second-window-local-proof--preserved-from-f876913)
+retain exact committed evidence.
+
+[Previous observed-CI proof and commit journal](G1-SLICE-journal.md#second-window-ci-evidence--preserved-from-a5159ba)
+retain exact committed evidence.
+
+[Completed numeric review and corrections](G1-SLICE-journal.md#numeric-review-evidence--preserved-from-a6fa253)
+retain exact committed checklist/journal bytes. Current reference review is owned above.
+
+[Previous exact six-kind replay proof and commit journal](G1-SLICE-journal.md#six-kind-replay-evidence--preserved-from-57c94ad)
+retain committed evidence unchanged.
+
+[Previous exact signed-angle proof and commit journal](G1-SLICE-journal.md#signed-angle-evidence--preserved-from-c099aee)
+retain committed evidence unchanged.
+
+[Previous exact scoped reference review proof and commit journal](G1-SLICE-journal.md#scoped-reference-review-evidence--preserved-from-ea3f64f)
+retain committed evidence unchanged.
+
+[Previous exact unsigned rounding proof and commit journal](G1-SLICE-journal.md#unsigned-rounding-evidence--preserved-from-97f124c)
+retain committed evidence unchanged.
+
+[Previous exact individual literal proof and commit journal](G1-SLICE-journal.md#individual-literal-proof--preserved-from-15d1520)
+retain committed evidence unchanged.
+
+[Previous exact normalized arena proof and commit journal](G1-SLICE-formulas.md#normalized-arena-proof--preserved-from-b41418d)
+retain committed evidence unchanged.
+
+[Previous exact coupled normalization proof and commit journal](G1-SLICE-formulas.md#coupled-normalization-proof--preserved-from-168bf0f)
+retain committed evidence unchanged.
+
+[Previous exact byte-contract proof and commit journal](G1-SLICE-canonical.md#byte-contract-proof--preserved-from-ed21ce2)
+retain committed evidence unchanged.
+
+[Previous exact serializer proof and commit journal](G1-SLICE-canonical.md#serializer-proof--preserved-from-8ed2893)
+retain committed evidence unchanged.
+
+
+[Previous exact coupled identity proof and journal](G1-SLICE-canonical.md#coupled-identity-proof--preserved-from-5d8ab5b)
+retain committed evidence unchanged.
+
+Current frontier remains in G1-SLICE.md.
