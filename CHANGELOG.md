@@ -134,6 +134,18 @@ the digests afterwards.
 
 | [`changelog-part67.md`](docs/history/stitchcad-changelog-part67.md) | STITCHCAD-G1-0052 | 10 lines, 844 bytes, `sha256:d0d97d54…` |
 
+| [`changelog-part68.md`](docs/history/stitchcad-changelog-part68.md) | STITCHCAD-G1-0054/0053 | 17 lines, 1299 bytes, `sha256:5a46d26d…` |
+
+## STITCHCAD-SPINE-0021b - due safe artifact cleanup (leaf `SPINE.21b`)
+
+Tracked plan/apply producer verifies local ignored ownership, content/HEAD/input identity and protected
+stores before removal. Fifteen controls/eleven actual compiled guard assertion reds pass without source
+mutation; new standing suite makes26. Removed six output roots/1281 strays/1112101558 file bytes;
+independent residue0/tracked deletion0, target1955324→1071060KB plus7172KB book removed.
+Rust591/WASM3/book/full26 probes and staged gates regenerate/pass; exact ledger records preserved.
+Latest cleanup record and book/tool/live navigation aligned; G1 stays5/18, defects10open/100sealed.
+Return to G1-SLICE.5b.1 static review. No product scope, dependency stores or other repository changed.
+
 ## STITCHCAD-G1-0072 - syntax milestone and evaluator ownership (leaf `G1-SLICE.5a.4`)
 
 Complete syntax/input/identity proof map closes .5a without evaluator or geometry claims. Full native
@@ -375,21 +387,3 @@ Nineteen independent consumer verdicts and nine compiled actual assertion reds v
 existing binding80/twelve reds, full reference/language and publication checks remain green. All
 seventeen original worked rows and prior task/oldest ledger payloads retain exact bytes. Book/live/
 task pointers agree; D99 closes, D84 signed-angle proof is next. G1 stays5/18, defects11open/87sealed.
-
-## STITCHCAD-G1-0054 - complete scoped numeric boundary review (leaf `G1-SLICE.5a.3b.3b.3c.2`)
-
-D83 closes: reduced128-bit input/results, exact signed scalar/Count domains, once-rounded signed64
-bindings and D95 wide literal/unary identities map to61/57/80/146 independent controls. Re-run
-12/11/12/12 actual assertion reds with exact source restoration; existing language16 stays green.
-D97 corrects the live parent’s canonical-i64 goal; D98 distinguishes checker1/Make0 push verdicts.
-Earlier prerequisites/source/task and
-oldest ledger payloads stay exact; annex maps each obligation. G1 stays5/18, defects11/86; next
-D84 signed inverse-trig/equality. No production evaluator or general transcendental proof inferred.
-
-## STITCHCAD-G1-0053 - second-window CI observed (leaf `G1-SLICE.5a.3b.3b.3c.1v`)
-
-At pushed f876913, doctrine job110782133989 and Rust job110782134441 completed successfully with
-all seven/nine steps successful. Archive prerequisite/enforcer and fmt/clippy/tests/real WASM pass.
-Post-commit archive controls140 pass; newest committed catalog edit refuses by immutability, rc=1.
-Remote/local heads agree; previous ledger/task bytes stay exact. Book/live/pointers reflect observed
-proof, not an inferred run status. G1 stays5/18, defects12/83; next .3c.2 D83 complete review.

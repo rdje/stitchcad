@@ -242,3 +242,7 @@ Ledger target controls: `python3 -I -B docs/tasks/artifacts/changelog/ledger_poi
 checks13 independently authored actual POINTER verdicts; the ledger runner watches them.
 `ledger_pointer_mutations.py` in that directory requires four actual assertion reds and exact source
 restoration. Run mutations exclusively: they temporarily edit the checker they test.
+
+Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan
+ target/artifact_cleanup_audit/<run>; apply the same run with apply. Safety/exclusions:
+docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.

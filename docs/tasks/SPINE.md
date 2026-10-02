@@ -541,6 +541,22 @@ mechanically-enforced form:
   deletions 0; regenerated check/WASM/book, 22 probes, ledger and staged gates green.
   Commit: `STITCHCAD-SPINE-0021a`
 
+- ID: `SPINE.21b`
+  Status: `done`
+  Goal: recurring cleanup due after 2026-10-02 18:56 UTC; preserve G1-SLICE.5b.1 product frontier.
+  Pre-change protocol: derive candidate inventory and ignored/tracked ownership, same-device paths,
+  symlinks/nested repositories, dependency/package-store protections and no live jobs before deletion.
+  A tracked conservative census/removal tool and refusal controls own repeatable safety evidence;
+  known regenerable roots only, ignored target strays only, no cross-repository/volume write.
+  Prove selected residue absent and tracked content unchanged, then regenerate Rust/WASM/book/probes.
+  Release/debug deps/log/bin locations are inspected, retained build outputs not deleted wholesale.
+  Acceptance: named before/after manifest, independently checked absence/content, safe refusal arms,
+  all regeneration/gates terminal; single latest cleanup entry, book/live/history/Memory synchronized.
+  Preserve old records exactly; seal oldest live ledger records before crossing health targets.
+  Verification: six roots/1281 strays removed; residue 0, tracked changes 0; native591,
+  WASM3/book/full26 probes and publication9 pass, rc=0; staged gate recorded below.
+  Commit: `STITCHCAD-SPINE-0021b`.
+
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
@@ -573,6 +589,7 @@ mechanically-enforced form:
 | done | `SPINE.19.2v` | `done` | exact head/jobs/steps successful; resume G1 .4a.3 |
 | — | `SPINE.19.1` | `done` | taken at D49's trigger rather than waited for: `PLANNING.md` was at 95 % of its byte ceiling, so the 44 closed defects were sealed and the live census is now the open set |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
+| done | `SPINE.21b` | `done` | due cleanup discharged; product G1 .5b.1 resumes |
 | — | `SPINE.21` | `done` | the cleanup cadence is recurring, and a recurring obligation with no leaf is one somebody rediscovers: taken between two product slices because the 24-hour mark falls inside this one |
 
 ## Decisions
@@ -750,6 +767,8 @@ placeholder box (defect D15).
 
 | `2026-10-01` | `SPINE.21a` | ownership/residue census; check/wasm/book/probes; ledger/tree; staged gate | 6 roots + 255 strays gone, 0 residue/tracked deletion; `287` tests, `22` suites green |
 
+| `2026-10-02` | `SPINE.21b` | frozen census/removal; independent absence; check/wasm/book/probes/publication | 6 trees/1281 strays gone, 0 residue/tracked change; native591/48 groups, 26 suites, publication9, rc=0 |
+
 ## Commit Log
 
 | Leaf | Commit subject or reference | Notes |
@@ -783,6 +802,8 @@ placeholder box (defect D15).
 | `SPINE.5`, `SPINE.13`, `SPINE.19` | `pending` | — |
 
 | `SPINE.21a` | `STITCHCAD-SPINE-0021a (leaf SPINE.21a)` | recurring cleanup, verified regeneration; product frontier unchanged |
+
+| `SPINE.21b` | `STITCHCAD-SPINE-0021b (leaf SPINE.21b): clean local artifacts with frozen safety evidence` | safe recurring cleanup, product resumes G1 .5b.1 |
 
 ## Changelog
 
@@ -889,3 +910,38 @@ placeholder box (defect D15).
 | `SPINE.19.2` | `STITCHCAD-SPINE-0019b (leaf SPINE.19.2): retain bounded history in self-contained byte-identical windows` | 64 exact source files; 26 archive arms; 23 full suites; staged gate green; CI observation .19.2v |
 
 | `SPINE.19.2v` | `STITCHCAD-SPINE-0019c (leaf SPINE.19.2v): archive transition passes observed CI and immutable-window refusal` | ebed2c5 both jobs/every step success; 27 post-commit archive arms; product resumes .4a.3 |
+
+- `2026-10-02`: .21b discharges the daily cleanup; frozen local census and tested refusal guards
+  protect inputs/stores/repository boundaries. Six roots/1281 strays removed, regeneration green;
+  stale index SPINE frontier corrected within the existing D34 owner. Product resumes G1 .5b.1.
+
+### `SPINE.21b` — frozen cleanup and immediate residue evidence
+
+- [x] **REPRODUCE / ISSUE** — latest record 2026-10-01 18:56 UTC became due;
+  `du -sk target docs/book/book` → 1955324 / 7172 KB, rc=0. Required release/debug
+  deps/incremental and WASM scans found600 incremental bin/log files, no release/deps strays.
+- [x] **ROOT CAUSE (WHY + WHERE)** — regenerable Cargo/probe/book output accumulates normally.
+  Same-device/symlink/Git-boundary/ignored/tracked censuses and no-jobs check admit six roots;
+  package/dependency stores, backups and audit records stay protected. `git ls-files` generated
+  prefix census →0 tracked inputs; `bash scripts/check_no_background_jobs.sh` →handoff: OK,
+  rc=0. No new numbered defect.
+- [x] **FIX** — cleanup.py freezes content, tracked set/bytes, HEAD and producer identity,
+  refuses drift, rechecks each path and writes an exclusive result manifest. Only the final plan
+  in target/artifact_cleanup_audit/spine-21b-final was applied; exploratory plan never applied.
+- [x] **ADDRESSED (verified)** — plan/apply → 1287 candidates, 0 skipped; six trees/1281 strays,
+  10015 files/1112101558 file bytes removed, rc=0. Independent lexists census proves1287 absent;
+  tracked changes/deletions0. Immediate du target1071060KB: reclaimed891436KB including book.
+  Immediate required bin/log locations residue0; rebuilt outputs are not this residue claim.
+- [x] **NO REGRESSION** — run_artifact_cleanup_probes.sh → 15 pass/0 fail, eleven actual
+  in-memory removed-guard assertion reds (device metadata simulated), source unchanged, rc=0.
+  make check → fmt/clippy/native591/48groups; wasm → three crates compile; book warning-free;
+  make probes →26 suites green; publication →9 pass/0 fail,52 chapters/25 APIs, rc=0.
+  Tree census →10 lanes/13 trees/10 siblings/0 gaps; staged make gate →all doctrines green,
+  rc=0. Ledger →9 pass/0 fail, pointer controls13; retained CLI195 controls/186 logical reads,
+  archive186 records/61 working Markdown/9009 lines/695198 decodedB/351520 residentB, rc=0.
+  First gate rejected the root-cause box lacking an explicit invocation/exit receipt; added the
+  observed census/no-jobs receipt and reran successfully, without changing a checker.
+- [x] **LOCKSTEP** — latest cleanup entry, tool route, book upkeep, live26 suites, resume and
+  task frontier agree; G1 remains5/18, defects10 open/100 sealed. Old ledger payloads and prior
+  completed cleanup records retained exactly; README layout/commands unchanged.
+  promotion: declined (routine cadence discharge under already canonical safety/locality rules).

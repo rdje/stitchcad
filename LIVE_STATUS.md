@@ -10,7 +10,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Discipline spine (bedrock 0.6.1) | Done | memory · task-trees · commit workflow · 12 universal + 4 project doctrine gates (`make gate`) · 25 probe suites (`make probes`) · mdBook |
+| Discipline spine (bedrock 0.6.1) | Done | memory · task-trees · commit workflow · 12 universal + 4 project doctrine gates (`make gate`) · 26 probe suites (`make probes`) · mdBook |
 | Roadmap → task-trees (`PLANNING`) | Done | All 10 lanes owned — 13 trees, 10 evidence siblings, `0 unowned / 0 orphan(s) / 0 dead link(s)`, derived by `run_tree_coverage_census.sh` and watched by its probes |
 | Repo identity & policy (`SPINE`) | In Progress | containment, the acceptance gates, the push cadence and the table convention are enforced or written where authors look. Open: `.5`, `.13`, `.19`, `.22` |
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |

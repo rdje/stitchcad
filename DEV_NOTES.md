@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — cleanup proves ownership and residue before regeneration
+
+- The daily record became due during the prior syntax milestone. Its clean commit allowed the
+  SPINE.21b cleanup pivot; G1-SLICE.5b.1 remains the product frontier.
+- The reusable census fingerprints selected contents, tracked input, HEAD and its own producer.
+  Local ignored paths only; links, special entries, nested repositories and foreign devices
+  refuse, with dependency/package stores, scaffold backups and audit manifests protected.
+  First exploratory plan preceded producer-identity refinement; only the final frozen plan
+  was applied. Python compiles guard variants in memory, never rewrites the tracked source.
+- Fifteen controls include eleven real removed-guard assertion reds. Device metadata is simulated
+  without mounting another volume. Selected six roots and 1281 strays disappear; independent
+  filesystem absence and Git deletion/content checks agree. File bytes 1112101558 are logical
+  data, separate from du's target 1955324→1071060KB and removed 7172KB book output.
+- Immediate release/deps/incremental bin/log scans return 0. Regeneration restores scratch,
+  caches and book; normal rebuild outputs therefore are not counted as cleanup residue.
+  Rust591/WASM3/book/probes26/gates pass; old live ledger payloads remain exact.
+- promotion: declined (routine application of canonical locality, safety and claim policies).
+
 ## _(2026-10-02)_ — syntax closure requires explicit execution ownership
 
 - Full normative syntax/input/canonical map agrees with ten public contract families (94 test
@@ -21,27 +39,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   exact heading boundaries and independent HEAD equality now verify the complete payload.
   No caps, language or authority changed. External policy neutral bodies still match sources.
 - promotion: declined (routine scoped milestone and already adopted identity/containment policies).
-
-## _(2026-10-02)_ — coupled recipe review separates inputs from eventual acceptance
-
-- Actual17 bindings/four assertions=21 statements/25 operands now have independently authored
-  complete statement bytes and exact whole-product identity. Actual recursive reference syntax
-  agrees, including full ordered token coverage, with inference/evaluation trapped. This does
-  not supply an independent whole-recipe parser or product evaluator.
-- All13 refusal examples are stage-owned: missing if branch/text/cube are3 current syntax
-  refusals;10 semantic checks still normalize/serialize and remain .5's acceptance obligation.
-  Later bad inputs in either branch/call arguments abort whole normalization at exact original
-  span/operand/ordinal22; maxima4096/256/16 and each first excess preserve stage/context.
-- Five new public controls/seven actual targeted compiled assertion reds/exact restoration cover
-  metadata, later coverage/index, order/operand identity, combined bound and Debug privacy.
-  Strict native591/48groups, release5/WASM3 and reference/book checks pass. All existing Rust
-  sources/tests stay byte-exact. Initial test compiler refused a temporary borrowed excess
-  source; naming its owner fixes test lifetime without any product change or earned assertion red.
-- Book52/25 APIs/1089 source/1682 rendered links exposes the complete prerequisite/remaining-owner
-  map. Whole recipe evidence and serializer closure move exactly to bounded sibling, with old
-  anchor routes retained. Source map orientation shrinks without deleting canonical facts or
-  changing ceilings. Coupled .3f/.3 scope closes; .5a.4 milestone/decomposition follows.
-- promotion: declined (routine coupled proof and containment under established contracts/policies).
 
 # Sealed archive — earlier lessons
 
@@ -167,3 +164,4 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part69.md`](docs/history/stitchcad-devnotes-part69.md) | G1-0068 exact recipe bytes | 18 lines, 1651 bytes, `sha256:e352ef3b…` |
 | [`stitchcad-devnotes-part70.md`](docs/history/stitchcad-devnotes-part70.md) | G1-0069 whole input normalization | 20 lines, 1874 bytes, `sha256:ce41946c…` |
 | [`stitchcad-devnotes-part71.md`](docs/history/stitchcad-devnotes-part71.md) | G1-0070 identity lesson | 22 lines, 2039 bytes, `sha256:364f5f56…` |
+| [`stitchcad-devnotes-part72.md`](docs/history/stitchcad-devnotes-part72.md) | G1-0071 coupled review lesson | 20 lines, 1758 bytes, `sha256:0b6fd7f2…` |

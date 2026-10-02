@@ -272,8 +272,16 @@ SPINE cleanup leaf verifies ignored ownership, absent residue and unchanged trac
 rebuilds/tests the affected workflows. `docs/ARTIFACT_CLEANUP.md` holds one dated latest-run entry;
 history remains in Git. Scratch, incremental caches and rendered book output stay on the repository
 volume. Built dependency outputs are retained; shared stores and other repositories are read-only.
-The 2026-10-01 run removed scratch/cache/book trees and stray artifacts, with no tracked deletion;
-Rust, WASM, book and probe workflows regenerated successfully. This moves no product frontier.
+The 2026-10-02 run removed six output trees and 1281 target strays, with no tracked change or deletion.
+Rust, WASM, book and probe workflows regenerated successfully. Product frontier stays G1-SLICE.5b.1.
+
+The tracked cleanup.py under docs/tasks/artifacts/artifact_cleanup/ plans before removal. Its frozen
+manifest names relative candidates and their content, tracked-input fingerprint, HEAD and producer
+identity. Drift, symlinks, special files, nested repositories and other volumes refuse; package stores,
+scaffold backups and built dependencies remain protected. Apply checks for active jobs, rechecks each
+candidate, then records selected residue and tracked-input equality. Controlled refusal/fault probes
+run through make probes. Audit manifests live in ignored target/artifact_cleanup_audit/; immediate
+absence is checked before builds recreate caches and book output.
 
 ## 12. Historical records and bounded retention
 
