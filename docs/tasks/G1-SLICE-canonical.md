@@ -717,3 +717,116 @@ framing is therefore a concrete .7 acceptance obligation, not a new keyword or u
 Producer and watched structural rerun observed terminal rc=0 after all nine actual renderer reds;
 source restoration remains exact. Product implementations are unchanged.
 Staged make gate → === all doctrines green ===, rc=0; every scoped verification job observed terminal.
+
+## Complete recipe byte closure — preserved during G1-0069
+
+### `G1-SLICE.5a.3f.1a` — exact complete recipe byte contract
+
+- [x] **REPRODUCE / ISSUE** — D109 exact assertion/empty/envelope bytes absent from grammar4;
+  original report preserved byte-identically in sealed part40. Existing binding bytes stay fixed.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `git diff -- docs/book/src/spec/formula-language/grammar.md`
+  shows predecessor's explicit missing contract versus exact new4.1 templates/examples, rc=0.
+- [x] **FIX** — retained bind, flat assert payload, ordered/empty recipe wrapper/single spaces/no
+  final newline; decision discloses same-party author/applier, review/reversal and future typed .7 owner.
+- [x] **ADDRESSED (verified)** — `recipe_byte_contract.py` actual reference syntax matches16 authored
+  statements/nine whole sources/twelve chunks/all four published examples; `recipe_byte_mutations.py`
+  nine actual authored-byte assertion reds/exact restoration, rc=0. No compiled product claim.
+- [x] **NO REGRESSION** — focused `cargo test` recipe11/statement9:20 passed, rc=0; structural/
+  language16/publication9 all rc=0. Every Rust source/test byte equals eee15a8; no behavior changed.
+- [x] **LOCKSTEP** — normative grammar/annex/index and decision/ADR/current live records align;
+  old subtree/closure/three sealed payloads exact; D109 technical gap closed, .1b normalization next.
+
+## Verification Log
+
+Pre-change protocol precedes instruments/book edits. Actual recursive reference syntax independently
+renders16 authored statement rows (six kinds/five tolerances), nine complete sources/twelve chunks and
+all four actual book/decision examples. Inference/evaluation trapped; no whole-reference-recipe parser
+or compiled product serializer claim. Two actual ordinary-call byte collisions confirm the typed
+identity boundary assigned to .7. Nine actual interpreter authored-byte assertion reds/exact
+source restore and normal rerun observed terminal0; classifier anchors/noise controls watched.
+Focused syntax20 (recipe11/statement9), structural suite/language16 and publication9 pass0:
+51 chapters/21 APIs/1060 source/1640 rendered links. Rust source/test bytes compare exact eee15a8.
+Ledger9 arms/13 pointers, archive28 arms/184 CLI controls/175 logical reads and retention175 records/
+50 working Markdown/8712 decoded lines/673893 decoded bytes/330215 resident bytes pass0.
+Fresh reconstructed defects10open/99unique sealed/zero overlap; tree10 lanes/13trees/nine siblings/
+zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16, fixture20/four/five pass0.
+Predecessor complete syntax subtree/closure and three sealed payloads compare byte-identically0.
+Map orientation shortened within unchanged ceiling; no unique maintained facts or ceilings removed.
+Staged make gate → === all doctrines green ===, rc=0; independent evidence approval unapproved.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3f.1a` | `STITCHCAD-G1-0068 (leaf G1-SLICE.5a.3f.1a): specify exact statement and ordered recipe identity bytes` | 16 statements/nine sources/nine actual reds |
+
+
+## Whole statement/recipe normalization protocol
+
+- ID: `G1-SLICE.5a.3f.1b`
+  Status: `done`
+  Clean839f2c1; no jobs/user changes. Relevant grammar1/4/4.1, contract2/4.2/4.3/5.2, D84/D95/D103/
+  D109 decisions, statement/ordered/expression normalized/literal APIs and public tests reviewed.
+  Implement private normalized statement/recipe owners retaining original source/header/global spans,
+  exact names/declared kinds/symbolic tolerance and every expression child via shared normalize_literals.
+  Normalized owners outlive syntax allocations but not source; immutable views cannot detach arenas;
+  Clone/flat drop/opaque Debug preserve established privacy and stack contracts. No new dependencies.
+  Standalone literal error adds operand role; recipe adds known1-based ordinal and nested original
+  literal rule/span/diagnostic with Error source chain. No partial accepted normalized object on failure.
+  Normalize both assertion operands/all branches/call arguments/source order; no static name/type/
+  duplicate checks, i64 binding narrowing, tolerance resolution, numerical evaluation or geometry.
+  Canonical statement/recipe serializer .1c and review .3f.2 remain future; existing expression bytes
+  are explicit inspection in tests, not an invented production recipe serializer.
+  Independent authored16 statement/nine recipe byte fixtures and actual reference syntax supply
+  operand identity; independent Fraction/Decimal fixtures exercise whole-operand canonical inputs.
+  Tests original borrowed names/literals/global spans, lifetime/private constructors/views, all three
+  expression roles/later ordinal/typed width/length refusal/source chain and earliest source refusal;
+  syntax remains usable after failure. Check nested untaken inputs/unknown calls/wide/raw-angle identity,
+  empty/order/duplicate/forward syntax and fixed256/4096/16 flat bounds on64KiB stack.
+  Actual production constructor/header/operand/ordinal/order/context/iteration faults must compile
+  and fail explicit public assertions; exclusive runner classifies failed bodies and restores exact
+  source before any probe/build. Standing structural suite watches fixture/reference/anchor controls.
+  Strict native/release/WASM plus scoped reference/book/API publication and ledger/archive/censuses.
+  Keep all previous literal/normalized/canonical/lexer/parser implementation sources exact, except
+  statement/ordered composition; preserve old closure/oldest ledgers exactly and maintain live caps.
+  Verification: final results below; all terminal rc=0 after restoration.
+  Commit: `STITCHCAD-G1-0069`.
+Initial public run: five pass/two fail because new refusal fixtures used10.000001 m against the
+10m geometry bound. Tool census located literal.rs maximum from sc_units::MAX_LENGTH_UM=1000000000
+(1km), independently confirmed by existing literal fixture .5um refusal. Fixtures now exceed1km;
+production conversion and both distinct normative limits are unchanged. This is a new-test fixture
+repair, not a product scalar-domain change or an earned mutation red.
+Initial strict clippy refused result_large_err at ordered.rs normalize_literals: unboxed recipe
+context made the Err variant128 bytes. Box the nested standalone literal-context error only on
+failure; getters/source chain preserve typed information, error becomes Clone rather than Copy.
+No lint allowance, successful-path allocation or numerical contract is introduced by this repair.
+Initial fault run observed15 actual compiled assertion reds, then correctly refused counting fault16:
+missing literal Error source triggered an expect-only panic. Finally restored all three sources.
+Public cause/type presence now has explicit assertions before extraction; rerun all17 actual faults
+before claiming the final proof. Classifier rules stay unchanged; the initial incomplete run is not
+17-fault verification and neither compilation nor expect-only failure is counted.
+
+Final verification (all observed terminal0): `cargo test -p sc-core --test
+formula_normalized_recipe_contract` passes eight public contracts,16 authored statement bytes/nine
+whole sources and100 independently produced Decimal/Fraction rows through all three operand roles
+(300 controls). Complete4096×2×256-node parse/normalize/clone/drop on64KiB stack passes; six
+private/lifetime compile-fail and two runnable API docs pass. Existing expression byte inspection
+in tests is not a product recipe serializer or independent whole-recipe parser.
+`python3 -B docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py` final exclusive
+rerun observes all17 actual compiled assertion reds and restores all three sources byte-exact;
+restored public eight pass. Explicit cause/type assertions supersede the initial incomplete run.
+`make check`:569 tests/46 groups, fmt and strict clippy; release public eight and `make wasm` three
+libraries pass. WASM is cross-compilation, not browser execution or performance certification.
+Structural/reference suite, formula-language16 and publication9 pass:52 chapters/23 scoped API
+rows/1073 source/1663 rendered links. Shared six lexer/expression/parser/literal/normalized/canonical
+sources equal839f2c1 byte-exact; preceding full closure and two oldest sealed ledger payloads exact.
+Tree10 lanes/13trees/nine siblings/zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16,
+fixture20/four/five all pass0. Ledger9 arms/13 actual pointer verdicts; archive28 arms/186 CLI
+controls/177 logical reads and retention177 records/52 working Markdown/8763 decoded lines/
+677590 decoded bytes/333912 resident bytes pass0. Fresh reconstructed defects10open/99unique
+sealed/zero duplicate/overlap. No numerical/type/name/tolerance/binding/evaluation authority added;
+private constructors, flat storage and input-only scope documented in the new book annex.
+Initial staged gate refused the new product-code status row at348 bytes against its320-byte ceiling;
+`target/g1-0069-gate.log` identifies LIVE-DOC-SIZE as the sole failed check (make rc=2). Tighten
+that summary, retaining detailed per-family facts in the task tree/book; no containment ceiling rises.
+Final staged `make gate` → === all doctrines green ===, observed terminal rc=0; all jobs terminal.

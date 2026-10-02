@@ -21,6 +21,9 @@ Strict native tests and the three-library WASM cross-compilation are checked loc
 libraries is not evidence of a working browser application. Older metadata CI has been observed;
 there is no new remote-run claim for later local slices.
 
+Whole statement/recipe [literal normalization](annexes/formula-recipe-inputs.md) preserves input
+metadata and global refusal context; it grants no binding or numerical execution.
+
 ## Planned workflows
 
 Recipe evaluation, geometric construction, grading, profiles, storage and crash recovery, the command

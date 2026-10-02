@@ -20,7 +20,9 @@ keeps their authored order and points to a statement when its syntax is refused.
 You author formulas with familiar operators, such as -x or x ^ 2. Internally, a canonical form gives
 each expression a stable identity: 2.5 cm and 25 mm become the same typed length. This lets a change
 review focus on meaning rather than a unit respelling. The current libraries can produce that
-identity without calculating the expression. Experts can inspect the exact
+identity without calculating the expression. You can also convert every literal input in a whole
+recipe while keeping its names, checks and order. The [recipe input annex](../annexes/formula-recipe-inputs.md)
+shows how to inspect that result and locate a refused input. Experts can inspect the exact
 [canonical byte contract and API](../annexes/formula-literals.md#serialize-canonical-expression-identity).
 
 A design therefore has several layers:

@@ -2,7 +2,8 @@
 
 > **Status:** single statements (.3e.1) and ordered recipe syntax (.3e.2) are implemented in sc-core.
 > The complete recipe API retains authored order, the4096-statement limit and diagnostic indices.
-> Statement/recipe identity is owned by .3f.1; name/type/binding validation and evaluation remain G1-SLICE.5 work.
+> Whole input normalization is [implemented](formula-recipe-inputs.md) at .3f.1b;
+> statement/recipe identity is owned by .3f.1c; name/type/binding validation and evaluation remain G1-SLICE.5 work.
 
 The [formula grammar](../spec/formula-language/grammar.md#1-the-grammar) gives two statement forms:
 let declares a name and kind; assert names a closure check and its tolerance class. The public
@@ -328,7 +329,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_byte_mutations.py
 
 D109's technical decision is docs/decisions/decision_recipe-bytes.md. The engineer authored and
 applied it under standing delegation; independent evidence approval remains unapproved and the
-director may re-open the spelling. Product immutable normalization is .3f.1b, owned identity .1c,
+director may re-open the spelling. Product immutable normalization is [available](formula-recipe-inputs.md) at .3f.1b, owned identity .1c,
 and coupled contract review .3f.2. Future .7 frames typed schema/digest domains: bind/recipe are valid
 ordinary expression call names, so canonical text is interpreted within its known identity type.
 No project format, hash, save/recovery, evaluator, MCP or production release is supplied by this record.

@@ -712,7 +712,7 @@ Completed identity children are preserved in
   Children: .1a exact byte contract/D109; .1b complete statement/recipe literal normalization;
   .1c owned statement/recipe serialization; each independently completed and committed.
   D109 exact assertion/empty/ordered-recipe bytes are specified by completed .1a before serializer
-  code; implementation .1b/.1c and coupled review .3f.2 remain separately pending.
+  code; input normalization .1b is done; serializer .1c and coupled review .3f.2 remain pending.
   Verification: `pending`
   Commit: `pending`
 
@@ -728,12 +728,14 @@ Completed identity children are preserved in
   Commit: `STITCHCAD-G1-0068`.
 
 - ID: `G1-SLICE.5a.3f.1b`
-  Status: `pending`
+  Status: `done`
   Goal: immutable normalized statements/recipes retaining all names/annotations/global spans/order;
   normalize all literal inputs through existing expression API, with precise refusal context and no
   partial accepted result. Explicit lifetimes/privacy/Clone and256/4096/16 limits; no type/evaluation.
-  Verification: `pending`
-  Commit: `pending`
+  Protocol: [normalization plan](G1-SLICE-canonical.md#whole-statement-recipe-normalization-protocol).
+  Verification: eight public contracts/300 independent numeric operand controls;17 actual compiled
+  assertion reds/exact restore; strict native569/release8/WASM3 and book52/23 pass0.
+  Commit: `STITCHCAD-G1-0069`.
 
 - ID: `G1-SLICE.5a.3f.1c`
   Status: `pending`
@@ -938,7 +940,8 @@ Completed identity children are preserved in
 | done | `G1-SLICE.5a.3e.2` | `done` | Ordered recipe/4096/context |
 | done | `G1-SLICE.5a.3e.3` | `done` | Coupled syntax/diagnostic review |
 | done | `G1-SLICE.5a.3f.1a` | `done` | Exact complete recipe byte contract |
-| next | `G1-SLICE.5a.3f.1b` | `pending` | Complete recipe literal normalization |
+| done | `G1-SLICE.5a.3f.1b` | `done` | Complete immutable recipe input normalization |
+| next | `G1-SLICE.5a.3f.1c` | `pending` | Owned exact statement/recipe identity bytes |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -972,47 +975,35 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
 
 
-### `G1-SLICE.5a.3f.1a` — exact complete recipe byte contract
+### `G1-SLICE.5a.3f.1b` — whole statement/recipe input normalization
 
-- [x] **REPRODUCE / ISSUE** — D109 exact assertion/empty/envelope bytes absent from grammar4;
-  original report preserved byte-identically in sealed part40. Existing binding bytes stay fixed.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `git diff -- docs/book/src/spec/formula-language/grammar.md`
-  shows predecessor's explicit missing contract versus exact new4.1 templates/examples, rc=0.
-- [x] **FIX** — retained bind, flat assert payload, ordered/empty recipe wrapper/single spaces/no
-  final newline; decision discloses same-party author/applier, review/reversal and future typed .7 owner.
-- [x] **ADDRESSED (verified)** — `recipe_byte_contract.py` actual reference syntax matches16 authored
-  statements/nine whole sources/twelve chunks/all four published examples; `recipe_byte_mutations.py`
-  nine actual authored-byte assertion reds/exact restoration, rc=0. No compiled product claim.
-- [x] **NO REGRESSION** — focused `cargo test` recipe11/statement9:20 passed, rc=0; structural/
-  language16/publication9 all rc=0. Every Rust source/test byte equals eee15a8; no behavior changed.
-- [x] **LOCKSTEP** — normative grammar/annex/index and decision/ADR/current live records align;
-  old subtree/closure/three sealed payloads exact; D109 technical gap closed, .1b normalization next.
+- [x] **REPRODUCE / ISSUE** — `git diff -- crates/sc-core/src/recipe/statement.rs
+  crates/sc-core/src/recipe/ordered.rs` identifies predecessor's missing whole-input conversion, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — shared expression normalization existed; statement/recipe
+  composition was missing. `cargo check -p sc-core` confirms the new composition compiles, rc=0.
+- [x] **FIX** — private immutable normalized owners/views retain source/header/global spans/order;
+  both assertion inputs convert, original literal refusal gains operand/known ordinal/source chain.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test formula_normalized_recipe_contract`:
+  eight public contracts,16 authored statements/nine sources/300 Decimal-Fraction operands, rc=0;
+  `normalized_recipe_mutations.py`:17 actual compiled assertion reds/exact three-source restore, rc=0.
+- [x] **NO REGRESSION** — `make check`:569 tests/46 groups; release8 and `make wasm`:three libs,
+  rc=0; original shared lexer/parser/literal/normalized/canonical/expression sources exact839f2c1.
+- [x] **LOCKSTEP** — publication9/language16/structure suites pass0; book52 chapters/23 scoped APIs,
+  original closure/two ledger payloads exact; live/tree/archive/censuses align without raised ceilings.
 
 ## Verification Log
 
-Pre-change protocol precedes instruments/book edits. Actual recursive reference syntax independently
-renders16 authored statement rows (six kinds/five tolerances), nine complete sources/twelve chunks and
-all four actual book/decision examples. Inference/evaluation trapped; no whole-reference-recipe parser
-or compiled product serializer claim. Two actual ordinary-call byte collisions confirm the typed
-identity boundary assigned to .7. Nine actual interpreter authored-byte assertion reds/exact
-source restore and normal rerun observed terminal0; classifier anchors/noise controls watched.
-Focused syntax20 (recipe11/statement9), structural suite/language16 and publication9 pass0:
-51 chapters/21 APIs/1060 source/1640 rendered links. Rust source/test bytes compare exact eee15a8.
-Ledger9 arms/13 pointers, archive28 arms/184 CLI controls/175 logical reads and retention175 records/
-50 working Markdown/8712 decoded lines/673893 decoded bytes/330215 resident bytes pass0.
-Fresh reconstructed defects10open/99unique sealed/zero overlap; tree10 lanes/13trees/nine siblings/
-zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16, fixture20/four/five pass0.
-Predecessor complete syntax subtree/closure and three sealed payloads compare byte-identically0.
-Map orientation shortened within unchanged ceiling; no unique maintained facts or ceilings removed.
-Staged make gate → === all doctrines green ===, rc=0; independent evidence approval unapproved.
+Pre-code protocol and final results: [canonical evidence](G1-SLICE-canonical.md#whole-statement-recipe-normalization-protocol).
+Six private/lifetime compile-fail and two runnable API docs pass;64KiB full4096×2×256-node
+normalize/clone/drop contract passes. The API converts inputs; type/binding/evaluation remains future.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3f.1a` | `STITCHCAD-G1-0068 (leaf G1-SLICE.5a.3f.1a): specify exact statement and ordered recipe identity bytes` | 16 statements/nine sources/nine actual reds |
+| `.5a.3f.1b` | `STITCHCAD-G1-0069 (leaf G1-SLICE.5a.3f.1b): normalize complete formula statement and recipe inputs` | eight contracts/17 actual reds/native569 |
 
 ## Changelog
 
-- `2026-10-02`: exact recipe byte contract closes D109; immutable normalization .1b follows.
-- promotion: promoted to docs/decisions/decision_recipe-bytes.md, exact bytes and reversal contract.
+- `2026-10-02`: complete immutable normalized statement/recipe inputs; owned serializer .1c follows.
+- promotion: declined — routine composition under established literal/privacy/ordering policies.

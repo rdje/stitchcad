@@ -5,11 +5,11 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.5a.3f.1b`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** implement immutable normalized statements/recipes through the existing expression
-  literal API, preserving names/annotations/order/global spans and precise refused operand/index.
-  .1a exact byte contract/D109 is committed in decision_recipe-bytes.md; normalization has no
-  name/type/evaluation authority. Own pre-code protocol first; .1c serialization follows.
+- **Active tree:** `G1-SLICE`, frontier **`.5a.3f.1c`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** implement owned canonical statement/recipe bytes from the new immutable normalized
+  owners, preserving exact templates/order/empty identity/Eq/Clone/privacy and flat traversal.
+  Contract: docs/decisions/decision_recipe-bytes.md; input API/proof: annex formula-recipe-inputs.md.
+  Own pre-code protocol first; .3f.2 coupled review follows. No binding/evaluation authority yet.
   D70 waits .4c.2; typed schema/digest framing is owned by .7.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats

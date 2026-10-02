@@ -223,6 +223,47 @@ impl<'a> FormulaStatement<'a> {
     pub fn parse(source: &'a str) -> Result<Self, FormulaStatementError> {
         parse(source)
     }
+    /// Convert every input literal in source operand order, preserving this syntax unchanged.
+    /// The returned owner borrows original source, not this statement allocation. Declared kinds,
+    /// names and tolerances are retained without static validation, binding or evaluation.
+    /// ```
+    /// use sc_core::recipe::{FormulaStatement, FormulaNormalizedStatementKind};
+    /// let syntax = FormulaStatement::parse("let width: length = 2.5 cm")?;
+    /// let normalized = syntax.normalize_literals()?;
+    /// drop(syntax);
+    /// if let FormulaNormalizedStatementKind::Let { expression, .. } = normalized.kind() {
+    ///     assert_eq!(expression.canonical_form().as_str(), "length:25000");
+    /// }
+    /// # Ok::<(), Box<dyn std::error::Error>>(())
+    /// ```
+    pub fn normalize_literals(
+        &self,
+    ) -> Result<super::FormulaNormalizedStatement<'a>, super::FormulaStatementLiteralError> {
+        use super::normalized_recipe::NormalizedStatementData as D;
+        let convert = |expression: &FormulaExpression<'a>, part| {
+            expression
+                .normalize_literals()
+                .map_err(|error| super::FormulaStatementLiteralError { part, error })
+        };
+        let data = match &self.data {
+            StatementData::Let(kind, expression) => D::Let(
+                *kind,
+                convert(expression, FormulaStatementExpression::Binding)?,
+            ),
+            StatementData::Assert(tolerance, left, right) => D::Assert(
+                *tolerance,
+                convert(left, FormulaStatementExpression::AssertionLeft)?,
+                convert(right, FormulaStatementExpression::AssertionRight)?,
+            ),
+        };
+        Ok(super::FormulaNormalizedStatement {
+            span: self.span,
+            name_span: self.name_span,
+            annotation_span: self.annotation_span,
+            name: self.name,
+            data,
+        })
+    }
     /// Complete statement span, excluding outer whitespace.
     #[must_use]
     pub const fn span(&self) -> Span {

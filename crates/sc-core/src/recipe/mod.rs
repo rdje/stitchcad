@@ -7,7 +7,8 @@
 //! expressions can produce owned canonical identity bytes without name/type validation or execution.
 //! Standalone let/assert statements preserve closed annotations, full-source spans and operand
 //! refusals without binding or evaluating. Complete recipes retain authored order, global spans and
-//! the fixed statement bound; statement identity and semantic validation/evaluation follow.
+//! the fixed statement bound. Whole statement/recipe input normalization preserves metadata and
+//! contextual literal refusals; statement identity and semantic validation/evaluation follow.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -44,3 +45,9 @@ pub use statement::{
 
 mod ordered;
 pub use ordered::{FormulaRecipe, FormulaRecipeError, FormulaRecipeRule};
+
+mod normalized_recipe;
+pub use normalized_recipe::{
+    FormulaNormalizedRecipe, FormulaNormalizedStatement, FormulaNormalizedStatementKind,
+    FormulaRecipeLiteralError, FormulaStatementLiteralError,
+};

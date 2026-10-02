@@ -126,6 +126,21 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part63.md`](docs/history/stitchcad-changelog-part63.md) | STITCHCAD-G1-0046 | 11 lines, 950 bytes, `sha256:939369e8…` |
 
+| [`stitchcad-changelog-part64.md`](docs/history/stitchcad-changelog-part64.md) | STITCHCAD-G1-0047 | 11 lines, 995 bytes, `sha256:339b8cba…` |
+
+## STITCHCAD-G1-0069 - complete recipe literal input normalization (leaf `G1-SLICE.5a.3f.1b`)
+
+Private normalized statement/recipe owners retain names, closed annotations, all original global
+spans/order and source borrowing after syntax drop. Shared expression conversion normalizes every
+input; contextual literal errors retain operand/known1-based index/rule/span and Error source chain.
+Eight contracts compare authored16 statements/nine recipes and100 independent numeric rows in
+all three roles; simultaneous4096×2×256 nodes/16if conversion/Clone/drop passes on64KiB stack.
+Seventeen actual compiled assertion reds/exact source restoration verify production composition.
+Strict native569/46groups, release8/WASM3 and focused reference/book checks pass:52 chapters/23 APIs/
+1073 source/1663 rendered links, language16/publication9. Prior sources/closure/oldest records exact.
+Book/API/status/progressive routes and live docs align; G1 stays5/18, defects10open/99sealed.
+Next .5a.3f.1c owned statement/recipe serializer; no binding/evaluation/storage/MCP/signoff claim.
+
 ## STITCHCAD-G1-0068 - exact statement and recipe byte contract (leaf `G1-SLICE.5a.3f.1a`)
 
 D109 closes technically: retained bind bytes, flat named/tolerance assertion operands, explicit
@@ -379,15 +394,3 @@ D91 accepts one explicit Rust span; normative/adjacent formulas remain checked. 
 reds/exact restore and language16 pass. D93 annex matches12 rational reds; D34 frontier corrected,
 derivation owned. Book/task/history synchronized; checks pass. G1 stays5/18, defects12/80;
 next D83 scalar/i64 then D84. No new product or release claim.
-
-## STITCHCAD-G1-0047 - domain errors retain operation context (leaf `G1-SLICE.5a.3b.3b.1b`)
-
-D90 DomainExceeded now carries the actual producing operation across direct/forwarded constructors,
-checked arithmetic, Ratio scaling and core bridges. D92 display reports signed values and limits
-without inventing a conversion cause or false upper-bound relation; numeric limits are unchanged.
-Five public/three private guard contracts and fourteen actual compiled assertion reds verify context
-and truthful rendering; six D89 operator reds remain green as discriminators, with exact restoration.
-Strict native488 including docs, release5 and all three WASM libraries pass. Book API migration/proof
-boundaries and live/task records agree; earlier task evidence and oldest ledgers preserve exact bytes.
-G1 stays5/18; sc-units40; defects13 open/78 sealed. Next D91 .3b.1c, then D83 domains/i64 and D84;
-D70 axes decision remains pending. No evaluator, MCP, geometry or production-release certification.

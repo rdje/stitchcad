@@ -145,6 +145,33 @@ impl<'a> FormulaRecipe<'a> {
         Ok(Self { statements })
     }
 
+    /// Convert every input literal in authored order; the first failure returns its ordinal/operand.
+    /// No partially normalized result escapes. This does not execute statements, validate names or
+    /// inferred kinds, resolve tolerances, or serialize a canonical recipe.
+    /// ```
+    /// use sc_core::recipe::FormulaRecipe;
+    /// let syntax = FormulaRecipe::parse("let width: length = 25 mm")?;
+    /// let normalized = syntax.normalize_literals()?;
+    /// drop(syntax);
+    /// assert_eq!(normalized.statements()[0].name(), "width");
+    /// # Ok::<(), Box<dyn std::error::Error>>(())
+    /// ```
+    pub fn normalize_literals(
+        &self,
+    ) -> Result<super::FormulaNormalizedRecipe<'a>, super::FormulaRecipeLiteralError> {
+        let mut statements = Vec::with_capacity(self.statements.len());
+        for (index, statement) in self.statements.iter().enumerate() {
+            let normalized = statement.normalize_literals().map_err(|error| {
+                super::FormulaRecipeLiteralError {
+                    statement_index: index + 1,
+                    error: Box::new(error),
+                }
+            })?;
+            statements.push(normalized);
+        }
+        Ok(super::FormulaNormalizedRecipe { statements })
+    }
+
     /// Immutable authored order. A view cannot outlive the recipe that owns its arenas.
     /// ```compile_fail
     /// fn escaped(source: &str) -> &[sc_core::recipe::FormulaStatement<'_>] {

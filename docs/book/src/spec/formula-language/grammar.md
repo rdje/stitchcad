@@ -155,7 +155,8 @@ Source spans, grouping and original unit spellings remain outside canonical byte
 expression has no terminal newline. Production expression serialization is .5a.3d.2; the
 [coupled identity review](../../annexes/formula-literals.md#coupled-canonical-identity-review) closes .3d.
 D109's exact statement/recipe byte contract is now specified below under engineering delegation;
-product normalization and statement/recipe serialization follow .5a.3f.1b/.1c. Recipe execution and
+product [whole input normalization](../../annexes/formula-recipe-inputs.md) is implemented at .5a.3f.1b,
+while statement/recipe serialization follows .1c. Recipe execution and
 project storage remain separate requirements.
 
 **A formula's identity is its canonical form.** `2.5 cm` and `25 mm` canonicalize to one node
@@ -200,8 +201,8 @@ The engineering decision is docs/decisions/decision_recipe-bytes.md, authored an
 the director's standing delegation. Its independent evidence approval stays unapproved under
 governance §6.1; the director can re-open the contract with compatibility consequences recorded.
 The [byte-contract controls](../../annexes/formula-statements.md#canonical-statement-and-recipe-byte-contract)
-verify this specification with authored fixtures and actual reference syntax. Product APIs follow
-.1b/.1c and their coupled review follows .3f.2; these controls grant no execution or release approval.
+verify this specification with authored fixtures and actual reference syntax. Whole normalization .1b is available; serialization .1c
+and coupled review .3f.2 follow; these controls grant no execution or release approval.
 
 ## 5. Operators
 

@@ -5,7 +5,8 @@
 > [borrowed lexing and bounded expression syntax](../annexes/formula-syntax.md) at G1-SLICE.5a.1/.2.
 > [Owned canonical expression identity](../annexes/formula-literals.md#serialize-canonical-expression-identity)
 > is implemented and reviewed; [ordered statement syntax](../annexes/formula-statements.md#parse-an-ordered-recipe) is also available.
-> Statement identity and evaluation remain G1-SLICE.5 work; final acceptance
+> [Complete recipe input normalization](../annexes/formula-recipe-inputs.md) is available;
+> statement identity and evaluation remain G1-SLICE.5 work; final acceptance
 > makes every worked example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
 > every number's representation is the [units chapter](units-and-tolerances.md)'s.
@@ -13,7 +14,8 @@
 A construction recipe is a list of statements and every statement is one formula. This chapter
 defines the normative grammar, values, names, order, rounding and errors, including exact expression,
 statement and ordered-recipe identity bytes ([canonical grammar](formula-language/grammar.md#4-the-canonical-form)).
-Product statement/recipe normalization and serialization follow G1-SLICE.5a.3f.1b/.1c.
+Product statement/recipe [input normalization](../annexes/formula-recipe-inputs.md) is implemented at
+G1-SLICE.5a.3f.1b; serialization follows .1c.
 Four properties are requirements, not taste:
 
 - **Statically dimensioned.** Every name and literal has a kind and every operation declares the
