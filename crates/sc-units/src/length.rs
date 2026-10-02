@@ -272,21 +272,24 @@ impl fmt::Display for Area {
     }
 }
 
-/// Length addition that cannot fail for values inside the domain in ordinary drafting use.
+/// Adds two lengths with the same domain checks as [`Length::checked_add`].
 ///
-/// Panics are forbidden in this crate, so the `Add` impl saturates *nothing*: it returns the exact
-/// sum, and the domain is wide enough (±1 km) that a sum of two real lengths cannot leave it. Use
-/// [`Length::checked_add`] whenever the operands come from user input, a file, or a multiplication.
+/// The result is fallible even when both operands are valid lengths: their sum may leave the
+/// declared domain. Use `(left + right)?` to propagate the typed refusal.
 impl Add for Length {
-    type Output = Self;
-    fn add(self, rhs: Self) -> Self {
-        Self(self.0 + rhs.0)
+    type Output = Result<Self, UnitError>;
+    fn add(self, rhs: Self) -> Self::Output {
+        self.checked_add(rhs)
     }
 }
 
+/// Subtracts two lengths with the same domain checks as [`Length::checked_sub`].
+///
+/// Use `(left - right)?` to propagate the typed refusal; a valid pair of operands does not imply
+/// that their difference is inside the declared domain.
 impl Sub for Length {
-    type Output = Self;
-    fn sub(self, rhs: Self) -> Self {
-        Self(self.0 - rhs.0)
+    type Output = Result<Self, UnitError>;
+    fn sub(self, rhs: Self) -> Self::Output {
+        self.checked_sub(rhs)
     }
 }

@@ -82,6 +82,20 @@ the digests afterwards.
 
 | [`changelog-part41.md`](docs/history/stitchcad-changelog-part41.md) | STITCHCAD-G1-0024 | 12 lines, 1073 bytes, `sha256:5f9373df…` |
 
+| [`changelog-part42.md`](docs/history/stitchcad-changelog-part42.md) | STITCHCAD-G1-0025 | 10 lines, 880 bytes, `sha256:d8268d8b…` |
+
+## STITCHCAD-G1-0046 - public length operators preserve the domain (leaf `G1-SLICE.5a.3b.3b.1a`)
+
+D89 closes: Length + / - return Result using checked arithmetic, so valid operands cannot construct
+an invalid length. Use `(left + right)?` / `(left - right)?`; no silent
+clamp or saturation. Four public contracts include signed boundaries, inclusive endpoints, ordinary
+values/cancellation, Result typing and i128 pair expectations. Six actual production
+bypass/operation/saturation mutations compile and fail assertions, with exact source restoration.
+Strict native/release/WASM and focused book/recording checks verify the restored candidate.
+D90 missing operation context is owned immediately next; D83 scalar/reference i64 and D84 signed-angle
+proof remain owned. D91 language context follows D90; prior evidence/history preserves exact bytes.
+G1 remains 5/18; defects14 open/76 sealed; next .5a.3b.3b.1b operation context, D70 decision pending.
+
 ## STITCHCAD-G1-0045 - reference rational widths refuse oversized values (leaf `G1-SLICE.5a.3b.3a.2`)
 
 D83 rational width checks now raise typed formula_domain at converted exact input and completed
@@ -375,14 +389,3 @@ verdict. D66 fixes README/workspace status and seals in defects-part11; Hem/laye
 in devnotes-part25. Completed token task records move unchanged. G1 stays 5/18, next .2c CI/signoff;
 archive reaches 64/64 files, so D65 must precede any further required seal. D67 owns the promotion
 verifier's unrelated historical-decline weakness; fresh token/metadata retrieval questions are added.
-
-## STITCHCAD-G1-0025 - shared machine tokens retain exact identifiers (leaf `G1-SLICE.4a.2a`)
-
-Core MachineToken validates ASCII lower-snake identifiers and refuses let/assert/if without trimming,
-normalization or auto-renaming. Built-in input names remain legal references; their rebinding belongs
-to metadata/recipe namespace validation. Six contracts plus privacy cover spelling, lookalikes,
-keywords, collection identity and replacement; four guard mutations fail actual assertions. Restored
-strict Rust executes 305 tests; WASM/book/focused censuses/ledger/staged gates pass. Grammar, input
-chapter and promoted decision agree. Completed .4a.1 contract/evidence moves unchanged to a bounded
-measurement sibling; oldest gather lesson seals in devnotes-part24. D66 owns stale README status in
-next .4a.2b metadata/runtime integration; .2c observes CI/signoff. G1 remains 5/18.

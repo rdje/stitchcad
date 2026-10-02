@@ -5,13 +5,14 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3b`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** repair D83 scalar domains and i64 storage bounds .5a.3b.3b.
-  Rational widths are enforced by .3a.2; signed-angle contract verification .3c follows.
-  D85/D86/D87 angle conversions/direction rounding/tan pole guards are fixed. D84 formula signed/
-  multi-turn formula values are preserved by the director’s ruling; entity directions normalize.
-  The decision record and .3b.3c own remaining binding/equality and inverse-trig verification. D70 axes ruling also pending under .4c.2;
-  .4c.3d/.3e/.4/.5/.4d.2 retain ownership. Product normalization .3c follows these prerequisites.
+- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3b.1b`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** repair D90 domain-error operation context .5a.3b.3b.1b, after verified
+  D89 fallible Length operators. D91 code-language context .3b.1c follows, then D83 reference
+  scalar domains .3b.2 and i64 boundaries .3b.3.
+  D84 signed-angle binding/equality and inverse-trig verification follows under .3c, using the
+  director’s raw-formula/normalized-direction ruling in `docs/decisions/decision_angles.md`.
+  Product normalization .5a.3c follows these prerequisites. D70 axes ruling remains pending;
+  .4c.2 and its SizeSet children retain ownership.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats
   require human acts; governance §8 and G3 `.16` own the details.

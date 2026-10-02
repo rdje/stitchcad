@@ -734,3 +734,26 @@ placeholder box (defect D15).
 D88 is sealed in [`stitchcad-defects-part22.md`](../history/stitchcad-defects-part22.md).
 G1-SLICE.5a.3b.3a.2 requires the exact tangent pole reason, so an unrelated rational refusal cannot
 mask a removed pole guard; seven actual angle mutation reds/restoration verify the repair.
+
+D89 is sealed in [`stitchcad-defects-part23.md`](../history/stitchcad-defects-part23.md).
+G1-SLICE.5a.3b.3b.1a makes public Length + / - fallible through checked methods; four public contracts
+and six actual compiled guard reds/exact restoration verify domain closure. D90 context stays owned.
+
+- **D90** — UnitError DomainExceeded omits the failing operation required by the numeric contract.
+  - Reproduce: error.rs DomainExceeded contains kind/value/limit only; checked_add/sub reuse
+    from_micrometres, and the rendered diagnostic cannot identify the operation that produced it.
+  - Impact: failures lack required context for users, command diagnostics and agent-controlled repair.
+  - Owner/schedule: G1-SLICE.5a.3b.3b.1b, immediately after D89; retain the actual constructor/caller
+    operation through the public error, update all construction/match sites, test typed and display
+    context plus actual guards. Reference scalar bounds follow .3b.2; no missing context is certified.
+
+- **D91** — formula vocabulary census mistakes valid inline Rust migration expressions for formulas.
+  - Reproduce: units chapter documents `(left + right)?`; L6b scans the inline span as formula
+    vocabulary and refuses ?, so run_formula_language_probes.sh returns13 pass/2 fail (REAL/CONTROL).
+    The same Rust handling in a rust-fenced block is outside that inline heuristic’s scope.
+  - Impact: valid API documentation can cause a false formula-vocabulary failure; language context is
+    not established by the heuristic. Moving examples into explicit Rust fences unblocks publication,
+    but does not repair inline classification. No broad prose/foreign-language certificate is claimed.
+  - Owner/schedule: G1-SLICE.5a.3b.3b.1c, after D90 before further normalization oracle use. Own an
+    explicit context/annotation contract for foreign code, preserve formula bad-operator reds and
+    add actual Rust-positive/formula-negative controls without exempting whole chapters or ? generally.

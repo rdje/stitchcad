@@ -448,3 +448,56 @@ Current work remains in the parent.
 - [x] **LOCKSTEP** — tan domain/annex/director angle ruling and live pointers match; learner,
   glossary/index routes unchanged. Exact predecessor arithmetic/decisions/journals/oldest payloads
   retained without cap growth. Live12 open/74 sealed, G1 5/18; next.3a.2, D84 verification/D70 ruling pending.
+
+## Rational contract and evidence — preserved from b8ed62d
+
+- ID: `G1-SLICE.5a.3b.3a.2`
+  Status: `done`
+  Goal: D83 exact rational limit refusal at actual literal/value boundaries, before product oracle use.
+  Pre-code protocol: contract 4.2/4.3/5.2 max_rational_bits=128 on reduced exact numerator/denominator;
+  see currently only measures and L8 only reddens book census after evaluation. Introduce measured
+  typed formula_domain on the first value wider than128, with unchanged bound and named operation.
+  Test 127/128/129 bit numerators/denominators, reduced fractions, converted input before quantum
+  rounding, positive/negative values, zero and trailing-zero spellings. Preserve .3b.1 input rounding
+  after exact conversion; a long sub-quantum literal must not hide an oversized converted fraction.
+  Actual evaluation checks result-kind internal Fractions at every completed numeric node, including
+  literals/names/unary/+/-/square/products/quotients/selectors; only taken branches compute values.
+  Do not bound unreduced raw products or intermediate representation temporaries: the declared value
+  is the reduced rational. Literal normalization checks converted exact value before its input round;
+  static node/depth/statement bounds are distinct from runtime rational width on computed values.
+  Own actual reference diagnostic/contracts/guard mutations/restoration, including angle contract
+  observations under the recorded D84 ruling without changing angle semantics; fix the earlier 100-zero
+  literal control to demand width refusal and keep a separate reducible long-zero positive control.
+  D88 is additionally owned here: the new width guard masks a removed tan pole guard because the
+  angle contract checks only formula_domain. Require the mathematical pole reason, distinct from
+  atan2 zero-vector refusal, and rerun existing mutation suites with exact restoration.
+  No scalar-domain or complete angle implementation is claimed; .3b/.3c own those prerequisites next.
+  Verify focused reference/language/book/ledger/archive/censuses and doctrine; preserve completed text.
+  Verification: 61 Fraction controls/twelve actual reds; existing six/nine/seven reds and exact restoration.
+  Commit: `STITCHCAD-G1-0045` (this recording commit).
+
+### `G1-SLICE.5a.3b.3a.2` — reduced rational refusal and discriminating domain reasons
+
+- [x] **REPRODUCE / ISSUE** — new rational_contract.py against predecessor accepts 129-bit literal,
+  raising its oversized-value assertion, rc=1. Diagnostic previously accepted count2^128. D88 actual
+  angle mutation5 removed pole guard yet contract returned0; mutation runner refused, rc=1.
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual see only measured; L8 reddened the final census; p_atom
+  rounded without exact-width check. Old product/square/quotient see observed true-unit temporaries,
+  not result-kind values. git show 1c95ea4 source-signature assertion → measurement-only see/three
+  true-unit observations/no exact-input guard verified, rc=0. D88 checked only formula_domain;
+  run_angle_mutations.sh exposed mutation5 contract rc=0 instead of assertion red, runner rc=1.
+- [x] **FIX** — measured typed refusal in see, converted literal guards before rnd, one numeric result
+  wrapper around recursive evaluation. Check reduced internal values, not unscaled temporaries;
+  retain lazy branch computation. Angle refusals require exact pole/zero-vector reason. Caps unchanged.
+- [x] **ADDRESSED (verified)** — rational_contract.py →61 independent Fraction controls/0 fail, rc=0;
+  run_rational_mutations.sh →twelve actual assertion reds/rc1 each, exact restoration, runner0. Existing
+  literal/arithmetic/angle runners →six/nine/seven actual reds/exact restore, rc=0; D88 seal unchanged.
+- [x] **NO REGRESSION** — restored structural suite and language15 green, rc=0; literal60/361,
+  arithmetic24/100/162, angle42/72/math42 and rational61 agree. Publication9/ledger9/archive verify/
+  retention green, rc=0:48 chapters/16 APIs/998 source/1522 rendered links;112 records/272155 resident
+  bytes. Tree10/13/eight/zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16/zero unowned,
+  fixture20/four/five/zero mismatch green, rc=0. Exact preservation/live12/sealed75/no overlap verified.
+  Staged make gate → all doctrines green, rc=0; no Rust changed or new native/WASM/remote-CI claim.
+- [x] **LOCKSTEP** — reference input/result rational bounds and partial scalar/signed-angle status
+  match book/live/task records. Glossary/index/learner routes retained; predecessor angular contract/
+  checklist/journal and oldest history preserve exact bytes. G1 5/18; live12/75; next scalar .3b.

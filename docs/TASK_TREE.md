@@ -79,7 +79,7 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-Execution order right now: **`G1-SLICE.5a.3b.3b`** (scalar domains; axes .4c.2 awaits D70) and the lane that follows it. Gate G0 has no further leaf:
+Execution order right now: **`G1-SLICE.5a.3b.3b.1b`** (domain-error context; axes .4c.2 awaits D70) and the lane that follows it. Gate G0 has no further leaf:
 its review is derived (`bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` → `18 met / 1 not met /
 19 clauses`), the one open clause travels with the director's ruling of `2026-09-30` that accepts it, and the
 gate's closure stays unapproved under governance §6.1 because its reviewer authored most of what it reviews.

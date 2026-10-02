@@ -45,10 +45,10 @@
 //! assert_eq!(bias.as_microdegrees(), 45_000_000);
 //!
 //! // Two values identical by construction agree within T1 — one quantum. Note that arithmetic which
-//! // can leave the domain is `checked_*`, not an operator: this crate never panics.
+//! // can leave the domain is fallible: checked_* methods and + / - return Result.
 //! let doubled = side_allowance.checked_add(side_allowance)?;
 //! let t1 = Tolerance::numerical()?;
-//! assert!(side_allowance.eq_within(hem_allowance - doubled, t1));
+//! assert!(side_allowance.eq_within((hem_allowance - doubled)?, t1));
 //! # Ok::<(), sc_units::UnitError>(())
 //! ```
 //!

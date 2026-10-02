@@ -237,3 +237,26 @@ preserve completed rows and technical chronology. Current slice follows here.
 - `2026-10-02`: angle diagnostic exposes D84 contract distinction and D85/D86/D87 numeric defects.
   Numeric guards close in .3a.1 before rational limits .3a.2; D84 ruling received, verification owned.
 - promotion: promoted by `decision_angles.md` (director’s storage ruling).
+
+## Rational reference progress — preserved from b8ed62d
+
+## Verification Log
+
+[Historical angular journals](G1-SLICE-journal.md#angular-reference-progress--preserved-from-1c95ea4)
+preserve completed rows and technical chronology. Current slice follows here.
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.3a.2` | rational61/twelve reds; existing six/nine/seven reds; restored focused checks | width refusal repaired, D88 discrimination fixed; scalar domains next |
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3a.2` | `STITCHCAD-G1-0045 (leaf G1-SLICE.5a.3b.3a.2): reference rational widths refuse oversized values` | 61 Fraction controls/twelve actual reds; focused checks |
+
+## Changelog
+
+- `2026-10-02`: D83 rational widths refuse at exact input/result boundaries; D88 requires pole reason.
+  Scalar domains .3b and signed-angle verification .3c remain pending; no product evaluator claim.
+- promotion: declined (routine enforcement of the existing reduced-rational limit; no new policy).

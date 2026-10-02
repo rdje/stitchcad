@@ -663,34 +663,62 @@ Completed reference input contract .5a.2b.1 is preserved in
 
 - ID: `G1-SLICE.5a.3b.3a.2`
   Status: `done`
-  Goal: D83 exact rational limit refusal at actual literal/value boundaries, before product oracle use.
-  Pre-code protocol: contract 4.2/4.3/5.2 max_rational_bits=128 on reduced exact numerator/denominator;
-  see currently only measures and L8 only reddens book census after evaluation. Introduce measured
-  typed formula_domain on the first value wider than128, with unchanged bound and named operation.
-  Test 127/128/129 bit numerators/denominators, reduced fractions, converted input before quantum
-  rounding, positive/negative values, zero and trailing-zero spellings. Preserve .3b.1 input rounding
-  after exact conversion; a long sub-quantum literal must not hide an oversized converted fraction.
-  Actual evaluation checks result-kind internal Fractions at every completed numeric node, including
-  literals/names/unary/+/-/square/products/quotients/selectors; only taken branches compute values.
-  Do not bound unreduced raw products or intermediate representation temporaries: the declared value
-  is the reduced rational. Literal normalization checks converted exact value before its input round;
-  static node/depth/statement bounds are distinct from runtime rational width on computed values.
-  Own actual reference diagnostic/contracts/guard mutations/restoration, including angle contract
-  observations under the recorded D84 ruling without changing angle semantics; fix the earlier 100-zero
-  literal control to demand width refusal and keep a separate reducible long-zero positive control.
-  D88 is additionally owned here: the new width guard masks a removed tan pole guard because the
-  angle contract checks only formula_domain. Require the mathematical pole reason, distinct from
-  atan2 zero-vector refusal, and rerun existing mutation suites with exact restoration.
-  No scalar-domain or complete angle implementation is claimed; .3b/.3c own those prerequisites next.
-  Verify focused reference/language/book/ledger/archive/censuses and doctrine; preserve completed text.
-  Verification: 61 Fraction controls/twelve actual reds; existing six/nine/seven reds and exact restoration.
-  Commit: `STITCHCAD-G1-0045` (this recording commit).
+  Contract/checklist: [preserved rational evidence](G1-SLICE-formulas.md#rational-contract-and-evidence--preserved-from-b8ed62d).
+  Verification: 61 Fraction controls/twelve actual reds; focused gates green, D88 refusal reasons repaired.
+  Commit: `STITCHCAD-G1-0045`.
 
 - ID: `G1-SLICE.5a.3b.3b`
-  Status: `pending`
+  Status: `in_progress`
   Goal: D83 declared length/area/count domains and canonical/binding i64 bounds with typed operations;
   finalize boundary checks from complete contracts, not a caller narrowing precondition. D84 signed-angle
   verification remains separate; scalar repair can proceed under the recorded ruling.
+  Children: .3b.1a D89 public operators; .3b.1b D90 operation context; .3b.1c D91 code-language context;
+  .3b.2 reference scalar domains;
+  .3b.3 reference canonical/binding i64 limits. Each prerequisite is independently committed.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3b.3b.1a`
+  Status: `done`
+  Goal: close D89: every public Length + and - preserves the constructor’s ±MAX_LENGTH_UM invariant.
+  Pre-code protocol: units1.1/9 and private Length fields require checked, non-saturating results.
+  Trait Output becomes Result<Length,UnitError>; delegate to existing checked_add/checked_sub instead
+  of constructing Self. UnitError shape is unchanged here; .1b owns missing operation context D90.
+  Public tests first reproduce actual old-operator values, then verify inclusive endpoints, signed
+  crossings, zero/cancellation/ordinary values, refusal identity and no unwinding. Curated independent
+  i128 pair oracle decides expected sum/difference, never a second Length implementation. Real source
+  mutations must compile and fail assertions, restore bytes; no probe/build overlap during mutation.
+  Update crate docs with ? migration and the book’s exact public contract/proof boundary. Update
+  live/task records, preserve completed reference history/ledgers unchanged; strict Rust/release/WASM,
+  focused publication/censuses/recording gates before commit. No formula evaluator/MCP signoff.
+  Verification: four public contracts/six compiled reds/exact restore; strict native480/release4/WASM green.
+  Commit: `STITCHCAD-G1-0046` (this recording commit).
+
+- ID: `G1-SLICE.5a.3b.3b.1b`
+  Status: `pending`
+  Goal: D90 typed/display domain failures retain actual operation, including forwarding constructors
+  and checked arithmetic; read public interfaces/call sites before finalizing this separate protocol.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3b.3b.1c`
+  Status: `pending`
+  Goal: D91 formula-vocabulary census honors explicit foreign-code context; preserve actual formula
+  operator refusals and add Rust-positive/formula-negative controls before normalization oracle use.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3b.3b.2`
+  Status: `pending`
+  Goal: D83 reference signed length/area and nonnegative count domains at completed value boundaries;
+  align exact Fraction tests with production invariants after .1a/.1b, no extra arithmetic rounding.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3b.3b.3`
+  Status: `pending`
+  Goal: D83 canonical-literal and bound integer i64 limits; exact expression rational temporaries are
+  distinct from stored values. Finalize inclusive signed endpoint/input-round protocol before code.
   Verification: `pending`
   Commit: `pending`
 
@@ -906,7 +934,7 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
 | done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
-| next | `G1-SLICE.5a.3b.3b` | `pending` | D83 scalar domains/i64; D84 verification remains owned |
+| next | `G1-SLICE.5a.3b.3b.1b` | `pending` | D90 operation context, then D83 domains/i64 and D84 verification |
 
 ## Routing Evidence — D72, milestone fixture calibration
 
@@ -972,49 +1000,54 @@ Completed exact arithmetic checklist is preserved in
 Completed angular checklist is preserved in
 [G1-SLICE-formulas](G1-SLICE-formulas.md#angular-contract-and-evidence--preserved-from-1c95ea4).
 
-### `G1-SLICE.5a.3b.3a.2` — reduced rational refusal and discriminating domain reasons
+Completed rational checklist is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#rational-contract-and-evidence--preserved-from-b8ed62d).
 
-- [x] **REPRODUCE / ISSUE** — new rational_contract.py against predecessor accepts 129-bit literal,
-  raising its oversized-value assertion, rc=1. Diagnostic previously accepted count2^128. D88 actual
-  angle mutation5 removed pole guard yet contract returned0; mutation runner refused, rc=1.
-- [x] **ROOT CAUSE (WHY + WHERE)** — actual see only measured; L8 reddened the final census; p_atom
-  rounded without exact-width check. Old product/square/quotient see observed true-unit temporaries,
-  not result-kind values. git show 1c95ea4 source-signature assertion → measurement-only see/three
-  true-unit observations/no exact-input guard verified, rc=0. D88 checked only formula_domain;
-  run_angle_mutations.sh exposed mutation5 contract rc=0 instead of assertion red, runner rc=1.
-- [x] **FIX** — measured typed refusal in see, converted literal guards before rnd, one numeric result
-  wrapper around recursive evaluation. Check reduced internal values, not unscaled temporaries;
-  retain lazy branch computation. Angle refusals require exact pole/zero-vector reason. Caps unchanged.
-- [x] **ADDRESSED (verified)** — rational_contract.py →61 independent Fraction controls/0 fail, rc=0;
-  run_rational_mutations.sh →twelve actual assertion reds/rc1 each, exact restoration, runner0. Existing
-  literal/arithmetic/angle runners →six/nine/seven actual reds/exact restore, rc=0; D88 seal unchanged.
-- [x] **NO REGRESSION** — restored structural suite and language15 green, rc=0; literal60/361,
-  arithmetic24/100/162, angle42/72/math42 and rational61 agree. Publication9/ledger9/archive verify/
-  retention green, rc=0:48 chapters/16 APIs/998 source/1522 rendered links;112 records/272155 resident
-  bytes. Tree10/13/eight/zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16/zero unowned,
-  fixture20/four/five/zero mismatch green, rc=0. Exact preservation/live12/sealed75/no overlap verified.
-  Staged make gate → all doctrines green, rc=0; no Rust changed or new native/WASM/remote-CI claim.
-- [x] **LOCKSTEP** — reference input/result rational bounds and partial scalar/signed-angle status
-  match book/live/task records. Glossary/index/learner routes retained; predecessor angular contract/
-  checklist/journal and oldest history preserve exact bytes. G1 5/18; live12/75; next scalar .3b.
+### `G1-SLICE.5a.3b.3b.1a` — fallible public length operators
+
+- [x] **REPRODUCE / ISSUE** — cargo test --test length_operator_contract against predecessor →three
+  public assertion failures, rc=101: valid operands return1000000001 and±2000000000 instead of typed
+  domain refusal. Output names failed addition/subtraction/independent pair contracts, no compile error.
+- [x] **ROOT CAUSE (WHY + WHERE)** — length.rs Add/Sub directly construct Self from raw arithmetic,
+  while checked_add/sub call the bounded constructor. git show b8ed62d source assertions → unchecked
+  operator construction/bounded checked methods verified, rc=0. Private field did not close the
+  invariant. D90 error shape omits operation; D91 valid-Rust L6b false refusal →13 pass/2 fail, rc=1.
+  Both have scheduled owners; explicit Rust fences unblock publication without claiming classifier repair.
+- [x] **FIX** — public traits return Result<Length,UnitError> through checked_add/sub; migrate crate
+  doctest to ?, document breaking result handling. No clamp, panic or inferred caller precondition;
+  no UnitError shape change here. D90 is scheduled immediately next; scalar reference remains later.
+- [x] **ADDRESSED (verified)** — public length_operator_contract →four tests pass, rc=0; nine-by-nine
+  i128 oracle agrees on both operations/inclusive/signed/ordinary routes; explicit Result output.
+  run_length_operator_mutations.sh →six compiled actual assertion reds/rc101 each, runner rc=0,
+  production source restored byte-identically. Release four pass, rc=0; predecessor D89 seals unchanged.
+- [x] **NO REGRESSION** — restored make check →fmt/clippy strict/native480 incl docs pass, rc=0;
+  make wasm →sc-units/core/measure build browser target, rc=0. Restored structural and language15,
+  publication9/ledger9/archive verify/retention green, rc=0:48 chapters/16 APIs/998 source/1523 rendered
+  links;115 records/277423 resident bytes. Tree10/13/eight/zero gaps, glossary310/nine/158, feature105/29,
+  uncertainty133/16/zero unowned, fixture20/four/five/zero mismatch pass, rc=0. Exact predecessor
+  preservation/live14/sealed76/no overlap verified. Staged make gate: all doctrines green, rc=0; no remote-CI
+  or full release claim.
+- [x] **LOCKSTEP** — public Result migration and pending D90 context are explicit in expert units/
+  status; current/next tasks and live pointers match. Predecessor rational protocol/checklist/journal
+  and oldest ledgers retain exact bytes. G1 remains5/18; sc-units35, live14/76; next .3b.1b.
 
 ## Verification Log
 
-[Historical angular journals](G1-SLICE-journal.md#angular-reference-progress--preserved-from-1c95ea4)
+[Historical rational journals](G1-SLICE-journal.md#rational-reference-progress--preserved-from-b8ed62d)
 preserve completed rows and technical chronology. Current slice follows here.
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
-| `2026-10-02` | `.5a.3b.3a.2` | rational61/twelve reds; existing six/nine/seven reds; restored focused checks | width refusal repaired, D88 discrimination fixed; scalar domains next |
+| `2026-10-02` | `.5a.3b.3b.1a` | public length4; six actual reds; restored strict/native/release/WASM; focused records | D89 operator domain repaired; D90 context next |
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3b.3a.2` | `STITCHCAD-G1-0045 (leaf G1-SLICE.5a.3b.3a.2): reference rational widths refuse oversized values` | 61 Fraction controls/twelve actual reds; focused checks |
+| `.5a.3b.3b.1a` | `STITCHCAD-G1-0046 (leaf G1-SLICE.5a.3b.3b.1a): public length operators preserve the domain` | public4/six actual reds; strict native/release/WASM and focused checks |
 
 ## Changelog
 
-- `2026-10-02`: D83 rational widths refuse at exact input/result boundaries; D88 requires pole reason.
-  Scalar domains .3b and signed-angle verification .3c remain pending; no product evaluator claim.
-- promotion: declined (routine enforcement of the existing reduced-rational limit; no new policy).
+- `2026-10-02`: D89 public + / - return Result via checked methods; D90 operation context is owned next.
+  Reference scalar domains/i64 .3b.2/.3 and signed-angle .3c remain pending; no evaluator/release claim.
+- promotion: declined (routine closure of the existing numeric invariant; no new product policy).

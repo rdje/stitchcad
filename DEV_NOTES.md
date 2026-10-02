@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — public operators must close the constructor invariant
+
+- D89 review found Length’s Add/Sub directly construct Self from raw integer sums/differences. Valid
+  ±1 km operands produce ±2 km lengths without typed refusal; constructors and checked methods
+  reject those results. The private-field domain guarantee was therefore false for public operators.
+- Trait Output now returns Result<Length,UnitError>, delegating to checked_add/checked_sub. Ordinary
+  values, inclusive endpoints, cancellation and signed crossings preserve the same exact numeric
+  contract. Callers migrate to `(left + right)?` / `(left - right)?`; crate docs demonstrate handling.
+- Public predecessor tests fail three assertions, not compilation. Four current contracts include an
+  explicit Result type and a nine-by-nine i128 pair oracle; six actual production bypass/operation/
+  saturation mutations compile and fail assertions, then restore source bytes exactly.
+- D90 also surfaced: DomainExceeded lacks the failing operation. .3b.1b owns its public error/call-site
+  repair immediately next. This slice certifies operator domain closure, not complete diagnostic
+  context, formula normalization/evaluation, geometry, MCP or production release. D83/D84 retain owners.
+- D91: book L6b mistook valid inline Rust question-mark handling for formula syntax (13 pass/2 fail).
+  Explicit Rust fences unblock publication; .3b.1c owns context-aware census proof after D90.
+- Completed rational protocol/checklist/journal and oldest live payloads preserve predecessor bytes.
+- promotion: declined (routine enforcement of the existing numeric domain and typed-refusal contract).
+
 ## _(2026-10-02)_ — rational limits bound reduced values, not hidden temporaries
 
 - D83 see measured width but returned success; L8's final census verdict was not runtime refusal.
@@ -77,27 +96,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   Numeric details stay in the expert units annex; no evaluation/canonical product claim or cap change.
 - promotion: declined (routine totality repair; original fixed-point/rounding policy unchanged).
 
-## _(2026-10-02)_ — semantic bounds and delimiter nesting are different parser obligations
-
-- The formula grammar permits unlimited grouping, which creates no semantic node. Checking a bound
-  after recursive descent would still overflow the call stack. Explicit operator/value/delimiter stacks
-  and a flat arena parse/drop without input recursion; no new grammar cap is invented for parentheses.
-- Nodes are reserved on encounter; the 257th refuses before unbounded prefix/call construction.
-  Conditional frames count every branch and nested ordinary call, refuse level 17 and maximize sibling
-  depths. Grouping extends source spans without adding nodes; square payload 2 is not a child.
-- Arena edges/root are privately generated from existing nodes; read-only views bind children to that
-  same arena. Three localized inspection indexing allowances rely on those construction invariants;
-  the parser itself uses fallible stack/arena access. A 20736-token corpus checks no internal refusal
-  and that every successful arena node belongs to its root. Customer source stays out of Debug/errors.
-- 15 contracts/three privacy-lifetime docs, twelve independent reference shape/count/depth fixtures and
-  eleven actual mutation assertion reds pass. Small-stack grouping at 50000 levels exercises parse/drop;
-  restored strict 472 tests/WASM pass. Initial borrow-check/helper-lint errors were corrected before
-  signoff; test-helper expect allowances do not relax production panic/error rules.
-- The API retains number spelling/unit tokens without converting or evaluating. AST structure is not
-  canonical identity or validated recipe; .5a.3 and later static/evaluation owners remain explicit.
-- promotion: declined (routine syntax implementation; normative grammar/identity policy already ADR-0003).
-
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -171,3 +169,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part43.md`](docs/history/stitchcad-devnotes-part43.md) | source gaps and keyword roles | 15 lines, 1397 bytes, `sha256:3d7763a5…` |
 
 | [`devnotes-part44.md`](docs/history/stitchcad-devnotes-part44.md) | exact arithmetic results | 17 lines, 1562 bytes, `sha256:a378e4ad…` |
+
+| [`devnotes-part45.md`](docs/history/stitchcad-devnotes-part45.md) | semantic bounds and delimiter nesting | 19 lines, 1803 bytes, `sha256:c9686523…` |

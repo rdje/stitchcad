@@ -164,3 +164,9 @@ Structural suite runs it. `bash docs/tasks/artifacts/formula_structure/run_ratio
 requires twelve actual assertion reds/exact restoration; run alone. Bound/measurement/operation must
 appear in formula_domain. Angle pole tests require their reason, so another domain failure cannot mask
 removed guards. Scalar limits/i64 and signed-angle verification remain pending; no product evaluator.
+
+Public length operators: `cargo test -p sc-units --test length_operator_contract` checks four contracts
+with a nine-by-nine i128 oracle, inclusive endpoints, signed crossings and explicit Result typing.
+`bash docs/tasks/artifacts/formula_structure/run_length_operator_mutations.sh` requires six compiled
+production bypass/operation/saturation assertion reds and exact source restoration; run alone. D90
+operation context remains next; these primitive checks certify no formula evaluation or release.

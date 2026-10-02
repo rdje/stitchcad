@@ -33,7 +33,7 @@ arithmetic (products, sums, offsets) cannot overflow:
 | Quantity | Declared limit | In human units |
 | --- | --- | --- |
 | a coordinate or a length | \|v\| ≤ 10⁹ µm | ±1 km |
-| an area (a product of two lengths) | ≤ 10¹⁸ µm² | 1 km² |
+| an area (a product of two lengths) | \|v\| ≤ 10¹⁸ µm² | ±1 km² |
 | a piece bounding box | ≤ 10⁷ µm per side | 10 m |
 
 A value outside the declared domain is a **typed error** naming the quantity and the operation, never a
@@ -148,6 +148,56 @@ explicit rows agree with an independent arbitrary-precision Fraction oracle; fiv
 guard mutations require assertion failures and exact restoration. Run mutation checks alone, without
 other builds/probes/gates. These are primitive numeric checks, separate from formula evaluation,
 geometry, physical acceptance and release proofs.
+
+### 2.4 Public length arithmetic
+
+| Public name | Context | Contract |
+| --- | --- | --- |
+| `checked_add` | Length method | Exact addition with domain refusal |
+| `checked_sub` | Length method | Exact subtraction with domain refusal |
+| `Result` | Rust return type | A valid Length or a typed UnitError; caller handles both |
+| `DomainExceeded` | UnitError variant | Kind, measured value and declared limit; operation context remains D90 |
+
+`Length + Length` and `Length - Length` return `Result<Length, UnitError>`, delegating to
+`checked_add` and `checked_sub`. Valid operands can still produce a sum or difference outside ±1 km;
+those operators refuse with `DomainExceeded` instead of constructing an invalid length. Endpoints
+are inclusive; ordinary values, signed subtraction, cancellation and zero remain exact.
+
+```rust
+use sc_units::{Length, UnitError, MAX_LENGTH_UM};
+
+let maximum = Length::from_micrometres(MAX_LENGTH_UM)?;
+assert!(matches!(maximum + maximum, Err(UnitError::DomainExceeded { .. })));
+let hem = Length::from_micrometres(30_000)?;
+let doubled_allowance = Length::from_micrometres(20_000)?;
+let difference = (hem - doubled_allowance)?;
+assert_eq!(difference.as_micrometres(), 10_000);
+# Ok::<(), UnitError>(())
+```
+
+This repairs D89. The previous operators returned a `Length` directly, so callers must migrate to
+the Rust question-mark operator, or handle the `Result` explicitly:
+
+```rust
+let sum = (left + right)?;
+let difference = (left - right)?;
+```
+
+Unary negation remains infallible because the domain is symmetric. No silent clamp, saturation or
+caller precondition is used.
+
+```bash
+cargo test -p sc-units --test length_operator_contract
+cargo test -p sc-units --release --test length_operator_contract
+bash docs/tasks/artifacts/formula_structure/run_length_operator_mutations.sh
+```
+
+Four public contracts include a nine-by-nine independent i128 pair oracle and explicit Result typing.
+Six compiled production mutations prove domain, operation and saturation discrimination with assertion
+failures and exact restoration; run alone. Strict native/release and three-library WASM checks are
+separate from formula evaluation, geometry and release proof. D90 operation context in the typed/
+rendered domain error remains owned immediately next by G1-SLICE.5a.3b.3b.1b; this repair certifies
+domain closure, not that remaining diagnostic requirement.
 
 ## 3. The five tolerance classes
 
