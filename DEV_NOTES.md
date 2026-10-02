@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — code language is declared per span, never inferred from punctuation
+
+- D91 L6b chose inline spans by formula-like operators; valid Rust question-mark handling therefore
+  refused. An exact immediate Rust marker now excludes one span outside normative formula parts.
+  Adjacent spans remain checked; invalid/normative context refuses L6e and enters final mismatch
+  counts. No formula character is added.
+- Thirteen independent copied-book verdicts cover positive Rust, ordinary/invalid/adjacent formulas,
+  unknown/malformed/duplicate/detached context, normative position and existing fences. The actual
+  predecessor valid-Rust fixture fails with L6b.
+- Five actual classifier mutations produce assertion reds and exact restoration. The existing
+  watched suite includes thirteen context verdicts; numeric interpretation is unchanged. This
+  authoring declaration certifies no Rust compilation or product language API.
+- D93 annex said ten rational mutations while CASES declared twelve; actual twelve-red re-run
+  confirms the correction. D34’s stale index label now matches the frontier; its general derived
+  pointer work stays PLANNING.5. Prior task evidence and oldest ledgers retain exact bytes.
+- Authoring details stay in the expert annex; next D83 scalar/i64 then D84. No new native/WASM,
+  MCP or release claim.
+- promotion: declined (routine book-instrument context and evidence synchronization repair).
+
 ## _(2026-10-02)_ — domain diagnostics need context without an invented cause
 
 - D90's public DomainExceeded variant lacked operation; forwarded Length construction reused the
@@ -79,24 +98,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Expert annex/grammar and live task pointers match the repair; prior arithmetic and history payloads
   preserve exact text. Older task decisions/journals are retained rather than expanding live caps.
 - promotion: promoted by `decision_angles.md` (director’s storage ruling).
-
-## _(2026-10-02)_ — canonical literal display must not conceal a different value
-
-- Actual reference diagnostic reproduces fractional unit and bare-decimal nodes: two canonical-zero
-  literals accumulate 4/5 internal quantum and bind 1. L1 previously rounded only the displayed node,
-  masking the disagreement with canonical kind:integer identity. Scoped source history identifies
-  3704b8a G0-CONTRACT.9 as the introducing parser; later D75/D76 repairs did not alter literal values.
-- Convert/round each literal once at input, before expression arithmetic. Counts retain kind and
-  bare decimals/pct retain ratio scaling; no angle modulo or arithmetic-node folding is introduced.
-  Sixty explicit rows/360 controls use an independent Decimal rounding oracle and kind-preserving
-  respellings; six actual guards discriminate quantum, ties, scale, kind and direct unit factors.
-- D80/D81 repair duplicate units numbering and a stale live next pointer. Formula contract now
-  explains the existing canonical-input boundary; details and honest proof gaps stay in the annex.
-- The wider diagnostic exposes D82 early operator rounding and D83 unenforced numeric domains;
-  .5a.3b.2/.3 own immediate repairs before product normalization. Published example agreement is
-  still curated scope, not complete exact-arithmetic or arbitrary-input production verification.
-- Completed rounding evidence and oldest live payloads preserve committed predecessor text.
-- promotion: declined (routine reference repair; literal conversion/canonical identity policy unchanged).
 
 # Sealed archive — earlier lessons
 
@@ -175,3 +176,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part45.md`](docs/history/stitchcad-devnotes-part45.md) | semantic bounds and delimiter nesting | 19 lines, 1803 bytes, `sha256:c9686523…` |
 
 | [`devnotes-part46.md`](docs/history/stitchcad-devnotes-part46.md) | signed reconstruction lesson | 17 lines, 1562 bytes, `sha256:d00c7340…` |
+
+| [`devnotes-part47.md`](docs/history/stitchcad-devnotes-part47.md) | literal identity lesson | 17 lines, 1561 bytes, `sha256:1b718cca…` |

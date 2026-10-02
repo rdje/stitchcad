@@ -258,6 +258,13 @@ else
   bad MISSING "a missing book did not refuse (exit=$rc)" "$out"
 fi
 
+# D91 single-span context controls use an independent scratch book and exact refusal reasons.
+if python3 -I -B docs/tasks/artifacts/formula_language/inline_context_contract.py; then
+  ok INLINE-CONTEXT "thirteen independently authored foreign/formula book verdicts"
+else
+  bad INLINE-CONTEXT "single-span context contract failed" ""
+fi
+
 echo
 printf 'probes: %d pass / %d fail\n' "$pass" "$fail"
 [ "$fail" -eq 0 ] || exit 1

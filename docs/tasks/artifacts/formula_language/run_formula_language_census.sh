@@ -30,6 +30,7 @@
 #                  span in the three parts and every span elsewhere in the book that carries a
 #                  declared operator, because a span whose only operator is an invented one carries no
 #                  declared operator to be found by; (c) the evaluator implements exactly what the chapter declares;
+#                  (e) explicit single-span Rust annotations outside normative parts are well formed;
 #                  (d) every `formula_*` / `env_*` token the three parts name is declared by the
 #                  contract's §5.2 or §5.3.
 #   L7 references  every link in the three parts resolves, a `§n` inside a link names a heading the
@@ -104,10 +105,13 @@ def read(p):
 def debacktick(s):
     return s.replace("`", "").strip()
 
-def code_spans(text):
-    """Inline code spans, per line and never inside a fenced block — a fence's ``` is an odd number of
-    backticks, and pairing them across lines would read the whole file as one span (measured: the first
-    cut reported 125 'undeclared operators' that were EBNF nonterminals and table separators)."""
+def code_spans(text, allow_foreign=False):
+    """Line-local inline spans outside fences, with an explicit one-span Rust annotation.
+
+    Only callers scanning non-normative book chapters may allow foreign code. Invalid or detached
+    markers refuse rather than silently changing a formula population. This is author-declared
+    language context, not inference from punctuation or a Rust parser.
+    """
     out, fenced = [], False
     for line in text.splitlines():
         if line.lstrip().startswith("```"):
@@ -115,7 +119,19 @@ def code_spans(text):
             continue
         if fenced:
             continue
-        out.extend(re.findall(r"`([^`]+)`", line))
+        spans = list(re.finditer(r"`([^`]+)`", line))
+        excluded = set()
+        for marker in re.finditer(r"<!--\s*stitchcad-inline\b.*?(?:-->|$)", line):
+            if any(span.start() < marker.start() < span.end() for span in spans):
+                continue  # A marker quoted inside code is literal content.
+            next_span = next((span for span in spans if span.start() >= marker.end()), None)
+            valid = marker.group() == "<!-- stitchcad-inline: rust -->" and next_span is not None \
+                and not line[marker.end():next_span.start()].strip()
+            if not allow_foreign or not valid:
+                bad("L6e inline context: expected one immediate Rust span outside normative formula parts")
+                continue
+            excluded.add(next_span.start())
+        out.extend(span.group(1) for span in spans if span.start() not in excluded)
     return out
 
 def identifiers(cell):
@@ -1107,6 +1123,7 @@ print("  refusals: %d · wrong or missing: %d" % (len(refusals), l5))
 # ── L6: the vocabulary is closed ──────────────────────────────────────────────────────────
 print("-- L6 the vocabulary is declared, implemented and closed")
 parts = [CONTRACT, GRAMMAR, EXAMPLES]
+l6_start = fails
 l6 = 0
 # (a) every call is declared
 callable_names = declared_functions | {"if"} | set(envelope)
@@ -1135,7 +1152,7 @@ for p in parts:
 for f in sorted(pathlib.Path(BOOK).rglob("*.md")):
     if str(f) in {str(pathlib.Path(p)) for p in parts}:
         continue
-    for span in code_spans(f.read_text(encoding="utf-8")):
+    for span in code_spans(f.read_text(encoding="utf-8"), allow_foreign=True):
         if set(span) & formula_ops and re.search(r"[A-Za-z0-9]", span):
             population.append((f.name, span))
 for fname, span in population:
@@ -1156,6 +1173,7 @@ for p in parts:
         if name not in declared_tokens:
             bad("L6d %s names `%s`, which neither contract §5.2 nor §5.3 declares"
                 % (pathlib.Path(p).name, name)); l6 += 1
+l6 = fails - l6_start
 print("  calls checked · %d formula spans over an alphabet of %d characters · declared functions %d · "
       "implemented %d · diagnostics %d · breaches: %d"
       % (len(population), len(alphabet), len(declared_functions), len(IMPLEMENTED),

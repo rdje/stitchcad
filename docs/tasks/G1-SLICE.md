@@ -686,32 +686,31 @@ Completed reference input contract .5a.2b.1 is preserved in
 
 - ID: `G1-SLICE.5a.3b.3b.1b`
   Status: `done`
-  Goal: D90 typed/display domain failures retain actual operation, including forwarding constructors
-  and checked arithmetic; update every in-repo construction/match site without changing numeric limits.
-  Pre-code protocol: units1.1/9 and UnitError’s own contract require operation plus kind/value/limit.
-  D92 is also owned here: generic display says zero range width exceeds1 and invents unit conversion
-  as its cause. Render neutral outside-domain wording with no unsupported cause; own signed/zero
-  message controls and actual rendering mutation, preserving all numeric fields and other variants.
-  Add static operation field to DomainExceeded and render it. Length/Area private checked construction
-  accepts caller context; direct public constructors name themselves; conversion/arithmetic callers
-  retain their operation. Ratio::scale forwards its context. Other error variants retain existing labels.
-  Core range/topology bridges name resolve_range/resolve; their invalid-rational arms are totality guards,
-  unreachable through validated journals, so private tests check those arms without claiming geometry.
-  Public tests require direct/forwarded signed context, add/sub/mul, Ratio scale and unchanged refusals;
-  inclusive endpoints and D89 Result semantics remain.
-  First prove pre-fix displayed operation absence with actual public calls; add compiled actual field/
-  forwarding/display mutations and restore exact sources. Update existing full-variant test matches,
-  public API migration and numeric annex; preserve prior evidence/ledgers. Strict native/release/WASM,
-  focused book/reference/censuses/recording gates before commit. D91 context, D83/D84 remain later.
-  Verification: public5/private3/fourteen compiled reds; restored strict488/release5/WASM and focused gates.
-  Commit: `STITCHCAD-G1-0047` (this recording commit).
+  Goal: actual-operation and truthful domain errors.
+  Verification: [preserved contract/checklist](G1-SLICE-formulas.md#domain-context-contract-and-evidence--preserved-from-d91df0a).
+  Commit: `STITCHCAD-G1-0047`
 
 - ID: `G1-SLICE.5a.3b.3b.1c`
-  Status: `pending`
+  Status: `done`
   Goal: D91 formula-vocabulary census honors explicit foreign-code context; preserve actual formula
   operator refusals and add Rust-positive/formula-negative controls before normalization oracle use.
-  Verification: `pending`
-  Commit: `pending`
+  Pre-code protocol: read L6a/b/d populations and line-local code-span extraction, existing fifteen
+  end-to-end probes and expert annex. Formula characters stay closed; ? is never globally permitted.
+  Outside the three normative formula parts only, allow an exact immediate inline annotation
+  <!-- stitchcad-inline: rust --> before one backtick span. Skip that single declared foreign span,
+  never adjacent unannotated spans, a whole line/chapter or formula positions in the normative parts.
+  Refuse unknown/malformed/detached annotations and any foreign annotation inside formula parts.
+  New scratch-book controls must reproduce predecessor Rust-positive failure, verify Rust ? accepted,
+  unannotated/formula ? and adjacent bad operator still refused, malformed context and normative
+  exemption refused. Add real census mutations removing/overbroadening exemption; prove actual
+  contract assertion reds/restoration. Keep reference evaluator/parser/numeric contracts unchanged.
+  D93 annex mutation-count drift is also owned here; derive twelve actual cases and re-run their reds.
+  Repair the stale D34 task index cell to match this verified frontier; D34’s derived-pointer task
+  remains owned by PLANNING.5. Synchronize book authoring annex and live records; preserve preceding
+  task protocol/checklist/journal and oldest ledgers byte-exact. Run focused language/structural/
+  publication/ledger/archive/censuses and staged gate before commit; no new Rust product claim.
+  Verification: thirteen independent copied-book verdicts/five actual reds/exact restore; focused gates.
+  Commit: `STITCHCAD-G1-0048` (this recording commit).
 
 - ID: `G1-SLICE.5a.3b.3b.2`
   Status: `pending`
@@ -939,7 +938,7 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
 | done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
-| next | `G1-SLICE.5a.3b.3b.1c` | `pending` | D91 code-language context, then D83 domains/i64 and D84 verification |
+| next | `G1-SLICE.5a.3b.3b.2` | `pending` | D83 scalar domains, then i64 and D84 verification |
 
 ## Routing Evidence — D72, milestone fixture calibration
 
@@ -1012,55 +1011,57 @@ Completed rational checklist is preserved in
 retains exact predecessor evidence; current domain-context acceptance follows.
 
 
-### `G1-SLICE.5a.3b.3b.1b` — actual-operation and truthful domain errors
+[Completed domain-context acceptance](G1-SLICE-formulas.md#domain-context-contract-and-evidence--preserved-from-d91df0a)
+retains exact predecessor evidence; current inline-context acceptance follows.
 
-- [x] **REPRODUCE / ISSUE** — predecessor public domain_context_contract before source repair:
-  two compiled assertions fail, rc=101 (missing operation, invented zero-width cause).
-- [x] **ROOT CAUSE (WHY + WHERE)** — error.rs DomainExceeded omitted operation; Length callers reused
-  the base constructor and Display asserted upper-bound excess/conversion cause for every kind.
-  Predecessor f432d68 source-signature assertions verify absent field/direct forwarding/false cause,
-  rc=0. Core zero-width guard makes the unsupported cause independently reproducible.
-- [x] **FIX** — static operation field; shared private checked Length/Area construction forwards
-  actual caller labels; Ratio/core bridges retain their operation. Neutral outside-domain display
-  preserves kind/signed value/limit; all other variant labels and numeric limits remain unchanged.
-- [x] **ADDRESSED (verified)** — public domain_context_contract →5 pass/0 fail; private core guards
-  →3 pass/0 fail, rc=0. run_domain_context_mutations.sh →fourteen actual compiled assertion reds,
-  rc101 each, exact multi-source restoration/runner0; predecessor D89 operator runner→six reds/0.
-- [x] **NO REGRESSION** — make check →strict fmt/lint/native488 including docs, rc=0; release public5
-  and make wasm→all three libraries, rc=0. Focused reference/language/publication/ledger/archive/
-  census checks green, rc=0; staged make gate→all doctrines green, rc=0. Private invalid core arms are
-  totality guards, not a geometry certificate; valid Length divide/area cannot leave their domain.
-- [x] **LOCKSTEP** — book operation-field migration, signed/zero truthful messages and honest proof
-  boundaries match Rust. Learner/glossary/index/annex routes retained. Exact prior task evidence and
-  oldest live payloads preserved. G1 stays5/18, sc-units40; live13/sealed78, next D91 .3b.1c.
+
+### `G1-SLICE.5a.3b.3b.1c` — inline code language context
+
+- [x] **REPRODUCE / ISSUE** — predecessor inline_context_contract.py→AssertionError on valid
+  annotated Rust, rc=1; actual census names L6b question mark, not a syntax/loading failure.
+- [x] **ROOT CAUSE (WHY + WHERE)** — census code_spans discarded language context; outside-part
+  L6b operator heuristic classified Rust as formula. Inspect actual HEAD d91df0a signatures→no
+  annotation/context argument and operator-driven population, rc=0. D93 AST case count→12 versus
+  annex Ten, rc=0; D34 index cell still D79 while committed MEMORY points to D91 (rg, rc=0).
+- [x] **FIX** — exact immediate single Rust annotation outside normative parts; adjacent spans remain
+  in the operator population. Malformed/unknown/detached/normative annotations refuse L6e and count
+  in final mismatches; ? is unchanged. Correct D93 annex to twelve and D34 current index cell.
+- [x] **ADDRESSED (verified)** — inline_context_contract.py→13 independent book verdicts/0 fail,
+  rc=0. run_inline_context_mutations.sh→five actual assertion reds, rc1 each, exact restoration/
+  runner0. run_rational_mutations.sh→twelve actual reds and exact restoration, rc=0; annex corrected.
+- [x] **NO REGRESSION** — run_formula_language_probes.sh→16 pass/0 fail, rc=0; structural/numeric
+  reference, publication9/ledger9/archive/censuses green, rc=0 (details below). Staged make gate→all doctrines green, rc=0.
+  No Rust changed; no new native/WASM/CI claim. Marker declares author intent, not Rust validity.
+- [x] **LOCKSTEP** — inline migration examples and expert context annex match executable census;
+  progressive learner/glossary/index routes retained. Exact previous task protocol/checklist/journal
+  and oldest payloads preserved. G1 stays5/18; live12/sealed80; next D83 .3b.2. D34 derivation stays owned.
 
 ## Verification Log
 
-[Historical operator journals](G1-SLICE-journal.md#length-operator-progress--preserved-from-f432d68)
+[Historical domain-context journals](G1-SLICE-journal.md#domain-context-progress--preserved-from-d91df0a)
 retain prior evidence.
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
-| `2026-10-02` | `.5a.3b.3b.1b` | public5/private3; fourteen reds; operator six reds; strict488/release5/WASM | D90/D92 repaired; focused records follow |
+| `2026-10-02` | `.5a.3b.3b.1c` | context13/five reds; rational twelve reds; restored focused checks | D91 context/D93 count repaired; scalar domains next |
 
-Focused recording checks: structural16/end-to-end2, input130/end-to-end3, expression fixtures12,
-literal60/361, arithmetic24/100/162,
-angle42/72/math42, rational61 all green; language15/publication9/ledger9 pass, rc=0. Publication derives
-48 chapters/16 scoped APIs/998 source and1524 rendered links. Archive verify/retention→118 logical/
-55 working Markdown/6964 lines/556744 decoded bytes/283354 resident bytes, rc=0. Tree10/13/eight/
-zero gaps; glossary310/nine/158; feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/
-zero mismatch, rc=0. Exact HEAD predecessor protocol/checklist/journal/oldest-ledger preservation and
-reconstructed defect census→13 open/78 sealed/zero overlap, rc=0. README objective/layout/commands
-reviewed unchanged. Staged make gate→all doctrines green, rc=0.
+Focused recording checks: language16 including context13 pass, rc=0. Structural16/end-to-end2,
+input130/end-to-end3, expression fixtures12; literals60/361, arithmetic24/100/162, angle42/72/math42
+and rational61 green, rc=0. Publication9/ledger9 pass;48 chapters/16 APIs/998 source/1525 rendered
+links, rc=0. Archive verify/retention→121 logical/58 working Markdown/7037 lines/561998 decoded/
+288608 resident bytes, rc=0. Tree10/13/eight/zero gaps; glossary310/nine/158/no index drift;
+feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/zero mismatch, rc=0. Exact
+predecessor evidence/ledger preservation and reconstructed defects12 open/80 sealed/zero overlap
+verified, rc=0. README unchanged. Staged make gate→all doctrines green, rc=0.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3b.3b.1b` | `STITCHCAD-G1-0047 (leaf G1-SLICE.5a.3b.3b.1b): domain errors retain operation context` | public5/private3/fourteen reds; strict native/release/WASM and focused checks |
+| `.5a.3b.3b.1c` | `STITCHCAD-G1-0048 (leaf G1-SLICE.5a.3b.3b.1c): inline code language context stays local` | context13/five actual reds; focused language/reference/publication checks |
 
 ## Changelog
 
-- `2026-10-02`: D90 actual operation retained through typed/rendered domain failures; D92 cause/relation
-  inference removed. D91 context, D83 scalar/i64 and D84 signed-angle proofs retain next ownership.
-- promotion: declined (routine completion of the existing typed-error and truthful-diagnostic contract).
+- `2026-10-02`: D91 explicit local Rust context; D93 annex rational count matches the actual suite;
+  D34 current index cell synchronized. D83 scalar/i64 and D84 signed-angle proofs retain next ownership.
+- promotion: declined (routine book-instrument context and evidence synchronization repair).

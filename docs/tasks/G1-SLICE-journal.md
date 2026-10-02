@@ -283,3 +283,36 @@ preserve completed rows and technical chronology. Current slice follows here.
 - `2026-10-02`: D89 public + / - return Result via checked methods; D90 operation context is owned next.
   Reference scalar domains/i64 .3b.2/.3 and signed-angle .3c remain pending; no evaluator/release claim.
 - promotion: declined (routine closure of the existing numeric invariant; no new product policy).
+
+## Domain-context progress — preserved from d91df0a
+
+## Verification Log
+
+[Historical operator journals](G1-SLICE-journal.md#length-operator-progress--preserved-from-f432d68)
+retain prior evidence.
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.3b.1b` | public5/private3; fourteen reds; operator six reds; strict488/release5/WASM | D90/D92 repaired; focused records follow |
+
+Focused recording checks: structural16/end-to-end2, input130/end-to-end3, expression fixtures12,
+literal60/361, arithmetic24/100/162,
+angle42/72/math42, rational61 all green; language15/publication9/ledger9 pass, rc=0. Publication derives
+48 chapters/16 scoped APIs/998 source and1524 rendered links. Archive verify/retention→118 logical/
+55 working Markdown/6964 lines/556744 decoded bytes/283354 resident bytes, rc=0. Tree10/13/eight/
+zero gaps; glossary310/nine/158; feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/
+zero mismatch, rc=0. Exact HEAD predecessor protocol/checklist/journal/oldest-ledger preservation and
+reconstructed defect census→13 open/78 sealed/zero overlap, rc=0. README objective/layout/commands
+reviewed unchanged. Staged make gate→all doctrines green, rc=0.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3b.1b` | `STITCHCAD-G1-0047 (leaf G1-SLICE.5a.3b.3b.1b): domain errors retain operation context` | public5/private3/fourteen reds; strict native/release/WASM and focused checks |
+
+## Changelog
+
+- `2026-10-02`: D90 actual operation retained through typed/rendered domain failures; D92 cause/relation
+  inference removed. D91 context, D83 scalar/i64 and D84 signed-angle proofs retain next ownership.
+- promotion: declined (routine completion of the existing typed-error and truthful-diagnostic contract).

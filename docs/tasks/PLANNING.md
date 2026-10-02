@@ -739,17 +739,12 @@ D89 is sealed in [`stitchcad-defects-part23.md`](../history/stitchcad-defects-pa
 G1-SLICE.5a.3b.3b.1a makes public Length + / - fallible through checked methods; four public contracts
 and six actual compiled guard reds/exact restoration verify domain closure. D90 context stays owned.
 
-- **D91** — formula vocabulary census mistakes valid inline Rust migration expressions for formulas.
-  - Reproduce: units chapter documents `(left + right)?`; L6b scans the inline span as formula
-    vocabulary and refuses ?, so run_formula_language_probes.sh returns13 pass/2 fail (REAL/CONTROL).
-    The same Rust handling in a rust-fenced block is outside that inline heuristic’s scope.
-  - Impact: valid API documentation can cause a false formula-vocabulary failure; language context is
-    not established by the heuristic. Moving examples into explicit Rust fences unblocks publication,
-    but does not repair inline classification. No broad prose/foreign-language certificate is claimed.
-  - Owner/schedule: G1-SLICE.5a.3b.3b.1c, after D90 before further normalization oracle use. Own an
-    explicit context/annotation contract for foreign code, preserve formula bad-operator reds and
-    add actual Rust-positive/formula-negative controls without exempting whole chapters or ? generally.
-
 D90/D92 are sealed in [`stitchcad-defects-part24.md`](../history/stitchcad-defects-part24.md).
 G1-SLICE.5a.3b.3b.1b adds actual-operation context and neutral domain wording; five public and three
 private guard contracts, fourteen compiled mutation reds and exact restoration verify the repair.
+
+D91/D93 are sealed in [`stitchcad-defects-part25.md`](../history/stitchcad-defects-part25.md).
+G1-SLICE.5a.3b.3b.1c accepts only explicit single-span Rust context outside normative formula parts;
+thirteen independent book verdicts/five actual mutation reds verify isolation and refusals. D93’s
+annex count now matches twelve observed rational mutation reds; D34’s index label is corrected,
+while PLANNING.5 retains derived-frontier ownership.

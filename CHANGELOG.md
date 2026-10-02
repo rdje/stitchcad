@@ -86,6 +86,15 @@ the digests afterwards.
 
 | [`changelog-part43.md`](docs/history/stitchcad-changelog-part43.md) | STITCHCAD-G1-0026 | 13 lines, 1217 bytes, `sha256:30323afa…` |
 
+| [`changelog-part44.md`](docs/history/stitchcad-changelog-part44.md) | STITCHCAD-G1-0027 | 6 lines, 465 bytes, `sha256:2c04058f…` |
+
+## STITCHCAD-G1-0048 - inline code language context stays local (leaf `G1-SLICE.5a.3b.3b.1c`)
+
+D91 accepts one explicit Rust span; normative/adjacent formulas remain checked. Context13/five actual
+reds/exact restore and language16 pass. D93 annex matches12 rational reds; D34 frontier corrected,
+derivation owned. Book/task/history synchronized; checks pass. G1 stays5/18, defects12/80;
+next D83 scalar/i64 then D84. No new product or release claim.
+
 ## STITCHCAD-G1-0047 - domain errors retain operation context (leaf `G1-SLICE.5a.3b.3b.1b`)
 
 D90 DomainExceeded now carries the actual producing operation across direct/forwarded constructors,
@@ -382,10 +391,3 @@ original aggregate bounds, with finite controls/payload/decompression and immuta
 Ledger probes consume logical records, all nine arms pass. D68 fixes the coverage mutation's unrelated
 false pass. New archive refusals, binary sizing, strict Rust/WASM/book/full probes and staged gates pass;
 exceptional push/observed CI follow in .19.2v. Older live records seal unchanged; product remains G1 .4a.3.
-
-## STITCHCAD-G1-0027 - observed metadata CI/signoff (leaf `G1-SLICE.4a.2c`)
-
-Pushed bf29b03; Rust run 36921077740/job 110566989457 and doctrine run 36921077711/job
-110566988221 completed success, every step successful. Metadata fields/current refusals match the
-ontology; source/physical/release proof stays deferred. Parent .4a.2 closes; G1 stays 5/18, next table
-.4a.3. Book/censuses/ledger/staged gates pass; .2b contract/checklist moves unchanged. No new seal.

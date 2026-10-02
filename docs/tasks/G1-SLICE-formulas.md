@@ -547,3 +547,49 @@ Current work remains in the parent.
 - [x] **LOCKSTEP** — public Result migration and pending D90 context are explicit in expert units/
   status; current/next tasks and live pointers match. Predecessor rational protocol/checklist/journal
   and oldest ledgers retain exact bytes. G1 remains5/18; sc-units35, live14/76; next .3b.1b.
+
+## Domain-context contract and evidence — preserved from d91df0a
+
+- ID: `G1-SLICE.5a.3b.3b.1b`
+  Status: `done`
+  Goal: D90 typed/display domain failures retain actual operation, including forwarding constructors
+  and checked arithmetic; update every in-repo construction/match site without changing numeric limits.
+  Pre-code protocol: units1.1/9 and UnitError’s own contract require operation plus kind/value/limit.
+  D92 is also owned here: generic display says zero range width exceeds1 and invents unit conversion
+  as its cause. Render neutral outside-domain wording with no unsupported cause; own signed/zero
+  message controls and actual rendering mutation, preserving all numeric fields and other variants.
+  Add static operation field to DomainExceeded and render it. Length/Area private checked construction
+  accepts caller context; direct public constructors name themselves; conversion/arithmetic callers
+  retain their operation. Ratio::scale forwards its context. Other error variants retain existing labels.
+  Core range/topology bridges name resolve_range/resolve; their invalid-rational arms are totality guards,
+  unreachable through validated journals, so private tests check those arms without claiming geometry.
+  Public tests require direct/forwarded signed context, add/sub/mul, Ratio scale and unchanged refusals;
+  inclusive endpoints and D89 Result semantics remain.
+  First prove pre-fix displayed operation absence with actual public calls; add compiled actual field/
+  forwarding/display mutations and restore exact sources. Update existing full-variant test matches,
+  public API migration and numeric annex; preserve prior evidence/ledgers. Strict native/release/WASM,
+  focused book/reference/censuses/recording gates before commit. D91 context, D83/D84 remain later.
+  Verification: public5/private3/fourteen compiled reds; restored strict488/release5/WASM and focused gates.
+  Commit: `STITCHCAD-G1-0047` (this recording commit).
+
+### `G1-SLICE.5a.3b.3b.1b` — actual-operation and truthful domain errors
+
+- [x] **REPRODUCE / ISSUE** — predecessor public domain_context_contract before source repair:
+  two compiled assertions fail, rc=101 (missing operation, invented zero-width cause).
+- [x] **ROOT CAUSE (WHY + WHERE)** — error.rs DomainExceeded omitted operation; Length callers reused
+  the base constructor and Display asserted upper-bound excess/conversion cause for every kind.
+  Predecessor f432d68 source-signature assertions verify absent field/direct forwarding/false cause,
+  rc=0. Core zero-width guard makes the unsupported cause independently reproducible.
+- [x] **FIX** — static operation field; shared private checked Length/Area construction forwards
+  actual caller labels; Ratio/core bridges retain their operation. Neutral outside-domain display
+  preserves kind/signed value/limit; all other variant labels and numeric limits remain unchanged.
+- [x] **ADDRESSED (verified)** — public domain_context_contract →5 pass/0 fail; private core guards
+  →3 pass/0 fail, rc=0. run_domain_context_mutations.sh →fourteen actual compiled assertion reds,
+  rc101 each, exact multi-source restoration/runner0; predecessor D89 operator runner→six reds/0.
+- [x] **NO REGRESSION** — make check →strict fmt/lint/native488 including docs, rc=0; release public5
+  and make wasm→all three libraries, rc=0. Focused reference/language/publication/ledger/archive/
+  census checks green, rc=0; staged make gate→all doctrines green, rc=0. Private invalid core arms are
+  totality guards, not a geometry certificate; valid Length divide/area cannot leave their domain.
+- [x] **LOCKSTEP** — book operation-field migration, signed/zero truthful messages and honest proof
+  boundaries match Rust. Learner/glossary/index/annex routes retained. Exact prior task evidence and
+  oldest live payloads preserved. G1 stays5/18, sc-units40; live13/sealed78, next D91 .3b.1c.

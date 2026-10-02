@@ -176,12 +176,8 @@ assert_eq!(difference.as_micrometres(), 10_000);
 ```
 
 This repairs D89. The previous operators returned a `Length` directly, so callers must migrate to
-the Rust question-mark operator, or handle the `Result` explicitly:
-
-```rust
-let sum = (left + right)?;
-let difference = (left - right)?;
-```
+the Rust question-mark operator, or handle the `Result` explicitly. Short call-site forms are
+<!-- stitchcad-inline: rust -->`(left + right)?` and <!-- stitchcad-inline: rust -->`(left - right)?`.
 
 Unary negation remains infallible because the domain is symmetric. No silent clamp, saturation or
 caller precondition is used.

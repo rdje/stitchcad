@@ -325,7 +325,7 @@ bash docs/tasks/artifacts/formula_structure/run_rational_mutations.sh
 ```
 
 Sixty-one independent Fraction controls cover 127/128/129-bit boundaries, denominator width,
-converted input, signs, reduction, scale, selectors and lazy branches. Ten actual mutations require
+converted input, signs, reduction, scale, selectors and lazy branches. Twelve actual mutations require
 assertion failures and exact restoration; run alone. The earlier literal/arithmetic/angle six/nine/
 seven mutation controls also pass. Angle tests require the exact pole reason: an unrelated rational
 refusal cannot count as evidence for a missing mathematical-domain guard (D88).
@@ -333,3 +333,31 @@ refusal cannot count as evidence for a missing mathematical-domain guard (D88).
 This closes only D83's width portion. Scalar domains and signed i64 storage bounds remain owned by
 G1-SLICE.5a.3b.3b; D84 signed-angle verification remains .3c. Product numeric normalization and
 full evaluation are still pending. The curated transcendental reference is not a production certificate.
+
+## Inline documentation language context
+
+The book vocabulary census cannot infer a code span's language from punctuation: a Rust error-handling
+expression can resemble a formula but legitimately use a question mark. D91 supplies explicit author
+context for a single inline span in chapters outside the three normative formula parts:
+
+```markdown
+<!-- stitchcad-inline: rust -->`(left + right)?` and `waist_girth + ease_waist`
+```
+
+The marker must be exact, on the same line and immediately followed by the one backtick span (optional
+whitespace only). It excludes that Rust span from formula-vocabulary classification; the adjacent
+formula remains checked. Unknown, malformed, duplicate or detached markers refuse L6e. Normative
+formula contract/grammar/example parts reject foreign annotations, preserving their formula positions.
+Rust fences retain their existing scope. This declares author intent; it does not compile or certify
+Rust and does not extend the formula alphabet. An unannotated question mark still refuses L6b.
+
+```bash
+bash docs/tasks/artifacts/formula_language/run_formula_language_probes.sh
+bash docs/tasks/artifacts/formula_language/run_inline_context_mutations.sh
+```
+
+The watched suite includes thirteen independently authored copied-book context verdicts alongside
+its fifteen existing agreement/refusal arms. Five actual classifier mutations discriminate removed,
+whole-line or normative exemptions, missing refusal counts and unknown-language acceptance; they
+require assertion reds and byte-identical restoration. Run mutations alone. Numeric reference and
+product syntax behavior are unchanged; evaluator/API/MCP and release proof remain separately owned.

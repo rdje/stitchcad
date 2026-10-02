@@ -177,3 +177,9 @@ verifies three private totality guards; invalid arms are unreachable through val
 `bash docs/tasks/artifacts/formula_structure/run_domain_context_mutations.sh` requires fourteen
 compiled context/rendering assertion reds and exact multi-source restoration; run alone. Operation
 labels and neutral wording preserve numeric payloads; no external geometry or MCP proof is claimed.
+
+Inline documentation context: `bash docs/tasks/artifacts/formula_language/run_inline_context_contract.sh`
+checks thirteen independent copied-book verdicts; the existing language probe suite watches them.
+`bash docs/tasks/artifacts/formula_language/run_inline_context_mutations.sh` requires five actual
+classifier assertion reds and exact restoration; run alone. Explicit Rust context excludes one
+span outside normative formula parts only; malformed context refuses, adjacent formulas stay checked.
