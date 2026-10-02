@@ -250,14 +250,14 @@ known statement ordinal 22 and operand role after the 21 valid worked statements
 
 | Obligation | Current evidence | Remaining implementation owner |
 | --- | --- | --- |
-| Whole let/assert syntax, order and fixed bounds | Statement/recipe contracts and coupled maximum/first excess tests | Full syntax milestone G1-SLICE.5a.4 |
-| All literal inputs, including untaken branches | Literal/normalized contracts and later whole-input refusal tests | Numeric binding G1-SLICE.5 |
-| Names, annotations and original global metadata | 21 worked statements, source borrowing and Clone checks | Namespace/type acceptance G1-SLICE.5 |
+| Whole let/assert syntax, order and fixed bounds | Statement/recipe contracts and coupled maximum/first excess tests | Syntax milestone G1-SLICE.5a.4 complete |
+| All literal inputs, including untaken branches | Literal/normalized contracts and later whole-input refusal tests | Numeric binding G1-SLICE.5c |
+| Names, annotations and original global metadata | 21 worked statements, source borrowing and Clone checks | Namespace/type acceptance G1-SLICE.5b |
 | Exact typed identity, empty/order/alias behavior | Owned identity contracts, actual worked recipe and typed collision controls | Typed project fields/digests G1-SLICE.7 |
 | Source/arena-independent identity, privacy and extraction | Ownership contracts and actual statement Debug controls | Command diagnostic envelope G1-SLICE.6 |
-| All 13 worked refusals | Three syntax refusals; ten semantic checks explicitly deferred | Static validation/evaluation G1-SLICE.5 |
-| Published values/assertion verdicts, lazy execution and replay | Independent reference only; inputs/identity compute no values | Product evaluator/DAG G1-SLICE.5 |
-| Geometry selectors and construction | Syntax/identity retain ordered selector calls | G1-SLICE.5 and G2-2D |
+| All 13 worked refusals | Three syntax refusals; ten semantic checks explicitly deferred | Static validation/evaluation G1-SLICE.5b/.5e |
+| Published values/assertion verdicts, lazy execution and replay | Independent reference only; inputs/identity compute no values | Product evaluator/DAG G1-SLICE.5e |
+| Geometry selectors and construction | Syntax/identity retain ordered selector calls | G1-SLICE.5f and G2-2D |
 | Storage, API/MCP and production acceptance | Distinct future workflow/approval requirements | G1-SLICE.7/.9 and G7-RELEASE |
 
 Five new public controls check the actual worked/refusal populations, metadata and complete bytes,
@@ -276,11 +276,65 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_referen
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
 ```
 
-This closes the scoped normalization/identity review. The full syntax milestone .5a.4 follows;
-before evaluator work starts, .5 must be decomposed into safe static validation, binding, exact
-execution/DAG and operations slices. The formula contract §9's product numeric/cross-platform and
+This closes the scoped normalization/identity review. The full syntax milestone .5a.4 is complete;
+remaining implementation is owned by .5b–.5g, as mapped below. The formula contract §9's product numeric/cross-platform and
 refusal requirements remain open; this review grants no execution, geometry or release approval.
 
 Numerical binding/evaluation, typed project hashes,
 storage/recovery, geometry, command/API/MCP control and production approval retain their task owners.
 This input API supplies none of those later results or approvals.
+
+## Syntax milestone and the route to execution
+
+The syntax milestone G1-SLICE.5a.4 closes syntax, literal inputs and canonical identity. A recipe
+can now be inspected and compared reproducibly. It still cannot compute garment dimensions.
+The source you author uses -x and x ^ 2; (- child) and (^2 child) are canonical serializer output,
+with child standing for the operand. Display glyphs remain presentation, outside machine parsing.
+
+The proof map below names public test families under crates/sc-core/tests/. Their independently
+authored fixtures/reference checks verify these scoped obligations. Prior exclusive fault runners
+supply actual compiled assertion failures; the milestone reruns the seven coupled input faults
+and confirms exact source restoration. It does not claim to rerun every earlier fault family.
+
+| Requirement | Public contract family | Reviewed scope |
+| --- | --- | --- |
+| ASCII, identifier spelling, three keywords, longest operators | formula_lex_contract | Borrowed tokens, full-source preflight and exact lexical rules |
+| Decimal syntax, closed units and one-space separator | formula_expression_contract | Original spelling/span; display and exponent notation refused |
+| Precedence, associativity, square payload, comparisons | formula_expression_contract | Explicit ordered trees; non-chaining and unsupported exponent |
+| Ordered calls and all three conditional children | formula_expression_contract | Syntax only; function names/types remain unchecked |
+| Source borrowing, privacy, clone/drop and flat limits | formula_lex_contract / formula_expression_contract | Located refusals, 256 nodes and 16 conditional levels |
+| Exact input conversion, reduction, width and scalar domains | formula_literal_contract | Independent Fraction/Decimal rows and pathological spellings |
+| Every literal position, aliases, raw turns and atomic failure | formula_normalized_contract | Unevaluated whole arena with original metadata |
+| Every expression role, operator/order and exact owned bytes | formula_canonical_contract | Typed identity, explicit extraction, no simplification |
+| Six binding annotations, five assertion classes and operands | formula_statement_contract | Complete headers/global spans; no binding or tolerance resolution |
+| Empty/ordered statement boundaries and 4096 bound | formula_recipe_contract | Full-source consumption; later errors and combined maxima |
+| Every statement input and contextual normalization refusal | formula_normalized_recipe_contract | Both assertion operands; known ordinal and nested Error chain |
+| Owned statement/recipe identity and typed text collisions | formula_canonical_recipe_contract | Empty wrapper, ordered metadata/operands and domain distinction |
+| Actual worked/refusal population and all first excesses | formula_recipe_input_review | 21 statements/25 operands; 3 syntax and 10 deferred semantic refusals |
+
+The machine/display/canonical distinctions, span availability and all four language limits remain
+specified by the [grammar](../spec/formula-language/grammar.md) and
+[contract](../spec/formula-language.md). Rational width128 applies to literal conversion now;
+exact result width and numeric binding still require execution implementation. Privacy checks cover
+Debug/error shape; explicitly requesting canonical bytes reveals customer formula content.
+The full milestone runs native fmt/clippy/tests, the three-library WASM build, every diagnostic
+probe suite and the doctrine gate. WASM compilation is not a real-browser execution certificate.
+
+### Remaining implementation owners
+
+| Stage | Owner | Required result before closure |
+| --- | --- | --- |
+| Names and static kinds | G1-SLICE.5b | All origins/reserved names/signatures; validate both branches before computing any value |
+| Exact arithmetic and bindings | G1-SLICE.5c | Reduced rational width, per-result domains, explicit quantization and once-rounded signed storage |
+| Irrational functions | G1-SLICE.5d | True-value nearest-quantum result, principal branches/poles and algorithm-independent proof |
+| Execution and replay | G1-SLICE.5e | Taken-only computation, uncertainty/tolerances, atomic results, declaration order and dependency validation |
+| Construction operations | G1-SLICE.5f | Complete typed v1 operation list, prior geometry dependencies and selectors through G2/G3 contracts |
+| Full formula acceptance | G1-SLICE.5g | Product examples/refusals/fixture agreement and observed two-platform byte reproducibility |
+
+Each stage has separately owned pending children in docs/tasks/G1-SLICE-recipes.md, refined before
+its code begins. The first is .5b.1: complete static obligation and independent oracle review.
+Unknown inputs retain declared kinds but no invented numeric value. Factory artifact blocking
+remains G4's policy; size-axis integration still waits for D70. Command atomicity/localization (.6),
+typed project fields/digests and cycle loading (.7), API/MCP (.9), browser execution (.12), geometry
+(G2/G3) and human production approval (G7) remain separately required. Closing syntax closes none
+of these later obligations.

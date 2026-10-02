@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — syntax closure requires explicit execution ownership
+
+- Full normative syntax/input/canonical map agrees with ten public contract families (94 test
+  attributes); native591/48groups, WASM3 and all25 probes pass. Seven coupled actual assertion
+  faults restore four sources exactly; no existing Rust source/test changed. Earlier fault
+  receipts remain historical, not relabelled as rerun by this milestone.
+- D111 was a stale current-status paragraph, not a serializer defect. The contract and ADR now
+  name implemented statement/recipe identity while evaluation/storage/approval remain pending.
+- .5b–.5g own23 future children covering the complete nine-origin namespace/type contract,
+  exact reduced rational/result/storage boundaries, correctly rounded irrational functions,
+  uncertainty/tolerances/lazy atomic replay, complete operations and final platform/example proof.
+  Curated Decimal/reference controls cannot certify arbitrary production transcendental rounding.
+- Completed node graph11075B and previous closure1912B compare byte-exact with ee42f5d after
+  relocation; oldest ledger records are sealed whole. First dev-note rollover attempt searched
+  for a rule instead of its explicit archive heading and stopped before writing DEV_NOTES;
+  exact heading boundaries and independent HEAD equality now verify the complete payload.
+  No caps, language or authority changed. External policy neutral bodies still match sources.
+- promotion: declined (routine scoped milestone and already adopted identity/containment policies).
+
 ## _(2026-10-02)_ — coupled recipe review separates inputs from eventual acceptance
 
 - Actual17 bindings/four assertions=21 statements/25 operands now have independently authored
@@ -23,29 +42,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   anchor routes retained. Source map orientation shrinks without deleting canonical facts or
   changing ceilings. Coupled .3f/.3 scope closes; .5a.4 milestone/decomposition follows.
 - promotion: declined (routine coupled proof and containment under established contracts/policies).
-
-## _(2026-10-02)_ — owned recipe bytes compose verified inputs without execution
-
-- Separate private canonical statement/recipe types expose exact bytes/extraction, Clone and byte Eq.
-  Flat authored iteration reuses the existing expression serializer; names/annotations/duplicates/
-  forward bindings and both assertion operands remain unchanged. Empty wrapper/spacing/no newline
-  follow the settled contract. Debug reveals byte count, omitting customer source/names/values.
-- Ten public contracts cover16 authored statements/nine whole recipes,55 expressions in all three
-  operand roles and100 independent numeric rows in those roles; all four normative examples and
-  two actual raw-text collisions establish why the typed identity field matters. Five compile-fail
-  docs verify constructors/all three cross-domain Eq pairings; two runnable docs verify ownership.
-- Full4096×2×256/16if identity bytes,100000-character names/50000 grouping/deep and wide calls pass
-  on64KiB stack. This verifies flat shape/exact bytes, not browser/runtime performance or evaluation.
-  Twenty-one actual compiled serializer faults fail assertions, with exact restoration and watched
-  anchors/classifier controls. Strict native586/47groups, release10 and WASM3 pass after restoration.
-- Initial test reader dropped the first multiline normative source line; clear only after an
-  expected-byte boundary and assert no trailing source. Strict panic lint then caught an explicit
-  escape-reader panic; closed replacements/residual assertion preserve fixture validation without
-  a lint allowance. Neither development repair changed product bytes or normative examples.
-- Book52/25 APIs/1083 source/1674 rendered links, scope/reference checks and exact prior-source/
-  closure/ledger comparisons align. Coupled .3f.2 review follows; .7 still owns typed persisted
-  fields/digest framing, and static validation/binding/evaluation remain later work.
-- promotion: declined (routine composition under established exact-byte/privacy/typed-domain policies).
 
 # Sealed archive — earlier lessons
 
@@ -170,3 +166,4 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part68.md`](docs/history/stitchcad-devnotes-part68.md) | G1-0067 coupled recipe review | 18 lines, 1629 bytes, `sha256:6a16cabe…` |
 | [`stitchcad-devnotes-part69.md`](docs/history/stitchcad-devnotes-part69.md) | G1-0068 exact recipe bytes | 18 lines, 1651 bytes, `sha256:e352ef3b…` |
 | [`stitchcad-devnotes-part70.md`](docs/history/stitchcad-devnotes-part70.md) | G1-0069 whole input normalization | 20 lines, 1874 bytes, `sha256:ce41946c…` |
+| [`stitchcad-devnotes-part71.md`](docs/history/stitchcad-devnotes-part71.md) | G1-0070 identity lesson | 22 lines, 2039 bytes, `sha256:364f5f56…` |

@@ -413,3 +413,486 @@ bytes pass0; fresh reconstruction10open/99unique sealed/zero duplicate/overlap. 
 inputs/identity only. .5a.4 full milestone and .5 decomposition remain next; evaluation/store/API/
 MCP/geometry/production approval remain their recorded obligations.
 Staged `make gate` → === all doctrines green ===, observed terminal rc=0; every scoped job terminal.
+
+## Coupled whole input closure — preserved during G1-0072
+
+### `G1-SLICE.5a.3f.2` — coupled whole input and identity review
+
+- [x] **REPRODUCE / ISSUE** — `recipe_input_review_reference.py` derives actual17 bindings/four
+  assertions/21 statements/25 operands and13 refusal-stage rows from the book, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — coupled closure needs the complete header/operand/identity
+  path and remaining-stage map; actual authored/reference population comparison agrees, rc=0.
+- [x] **FIX** — five direct public contracts, independent complete-byte/stage fixtures and explicit
+  book prerequisite/remaining-owner map; all existing product Rust implementations unchanged.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-core --test formula_recipe_input_review`:five
+  controls pass; `recipe_input_review_mutations.py`:seven compiled assertion reds/exact restore, rc=0.
+- [x] **NO REGRESSION** — `make check`:591 tests/48 groups, release5 and `make wasm`:three libs,
+  rc=0; all existing tracked Rust sources/tests compare byte-identical to7c81533, rc=0.
+- [x] **LOCKSTEP** — structure/language16/publication9 pass0; book52/25 APIs/1089 source/1682
+  rendered links; exact predecessor records/ledger payloads preserved and current owners aligned.
+
+## Verification Log
+
+[Complete pre-change protocol and receipts](G1-SLICE-recipes.md#coupled-whole-input-and-identity-review-protocol).
+Scoped .3f/.3 closure is complete; static validation/numerical execution and full .5a.4 gate remain open.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3f.2` | `STITCHCAD-G1-0071 (leaf G1-SLICE.5a.3f.2): complete coupled recipe input and identity review` | five contracts/seven actual reds/native591 |
+
+## Changelog
+
+- `2026-10-02`: coupled actual worked/refusal review closes .3f/.3; .5a.4 full milestone follows.
+- promotion: declined — routine coupled proof/containment under existing byte and scope policies.
+
+## Completed syntax node graph — preserved during G1-0072
+
+- ID: `G1-SLICE.5a.1`
+  Status: `done`
+  Contract/checklist: [preserved lexical evidence](G1-SLICE-formulas.md#lexical-contract-and-evidence--preserved-from-60c7305).
+  Verification: 13 contracts/two privacy-lifetime docs; nine actual reds; strict 454 tests/WASM/book green.
+  Commit: `STITCHCAD-G1-0037`.
+
+- ID: `G1-SLICE.5a.2`
+  Status: `done`
+  Goal: expression syntax/precedence/conditional trees with node/depth bounds and precise parse
+  refusals; finalize the full pre-code protocol before implementation, preserve static/runtime split.
+  Children: `.5a.2a` reference structural-bound control; `.5a.2b` bounded expression trees.
+  Prerequisite D75: live census passes abs-wrapped expressions with 258 nodes/17 conditional levels,
+  reporting only seven/zero because its tuple-only walker skips call argument lists. Correct oracle
+  traversal/early depth refusal before using it as independent parser evidence; language caps stay fixed.
+  Verification: product 15 contracts/three privacy-lifetime docs; eleven actual assertion reds;
+  reference twelve shape/count/depth fixtures; restored strict 472 tests/WASM green.
+  Commit: `STITCHCAD-G1-0040` (this recording commit).
+
+Completed reference structural contract .5a.2a is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#structural-reference-contract-and-evidence--preserved-from-9d26ddc).
+
+- ID: `G1-SLICE.5a.2b`
+  Status: `done`
+  Children: `.5a.2b.1` reference machine-input parity; `.5a.2b.2` product expression trees.
+  Goal: finalize expression-tree protocol from complete grammar and corrected reference bounds, then
+  implement immutable precedence/conditional syntax with precise refusals; no numeric evaluation claim.
+  Verification: product 15 contracts/three privacy-lifetime docs; eleven actual assertion reds;
+  reference twelve shape/count/depth fixtures; restored strict 472 tests/WASM green.
+  Commit: `STITCHCAD-G1-0040` (this recording commit).
+
+Completed reference input contract .5a.2b.1 is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#reference-input-contract-and-evidence--preserved-from-e797874).
+
+- ID: `G1-SLICE.5a.2b.2`
+  Status: `done`
+  Contract/checklist: [preserved production syntax](G1-SLICE-formulas.md#production-expression-contract-and-evidence--preserved-from-b681a49).
+  Verification: 15 contracts/three docs, eleven actual reds, twelve reference fixtures; strict 472/WASM.
+  Commit: `STITCHCAD-G1-0040`.
+
+- ID: `G1-SLICE.5a.3`
+  Status: `done`
+  Goal: exact literal normalization and canonical S-expressions, ordered binding/assert recipes and
+  statement limits. Finalize each numeric/identity protocol from full normative contracts before code.
+  Children: .3a rounding primitive guard, .3b reference literal identity, .3c exact literals,
+  .3d canonical expressions, .3e ordered recipe syntax, .3f coupled contract review.
+  Verification: all literal/expression/statement/recipe children and coupled reviews complete; .5a.4 follows.
+  Commit: child commits and final `STITCHCAD-G1-0071`.
+
+- ID: `G1-SLICE.5a.3a`
+  Status: `done`
+  Contract/checklist: [preserved rounding evidence](G1-SLICE-formulas.md#rounding-contract-and-evidence--preserved-from-543dfa6).
+  Verification: four public/36 Fraction/five reds; strict 476/release four/WASM green.
+  Commit: `STITCHCAD-G1-0041`.
+
+- ID: `G1-SLICE.5a.3b`
+  Status: `done`
+  Goal: repair D79/D83 reference numeric identity/domains and resolve D84/D95 before product proof.
+  Children/contracts: [complete preserved reference subtree](G1-SLICE-journal.md#completed-reference-subtree--preserved-during-g1-0058).
+  Verification: independent rational/scalar/binding/canonical/angular/replay controls and actual
+  compiled assertion reds; [scoped review](G1-SLICE-journal.md#scoped-reference-review-evidence--preserved-from-ea3f64f).
+  Commit: `STITCHCAD-G1-0057`; production conversion/evaluation remains separately owned.
+
+- ID: `G1-SLICE.5a.3c`
+  Status: `done`
+  Goal: exact bounded literal normalization with typed kind/integer/source and shared rounding;
+  D95 literal magnitude/reduced rational width128 is distinct from bound signed64. Preserve kind
+  and unary syntax, input quantum/scalar boundaries; normalized Angle cannot hold raw sweeps.
+  Children: .1 shared unsigned128 magnitude rounding; .2 exact typed literal normalization;
+  .3 immutable normalized expression arena; .4 coupled normalization review. No evaluation.
+  Literal conversion must reduce exact converted rational before its128-bit width check; scalar
+  length bound follows input rounding. Arbitrarily large raw decimals must not narrow before valid
+  cancellation, and pathological input must not require unbounded workspace. The completed .2 protocol uses bounded exact decimal reduction with no added dependency; whole
+  arena normalization and its coupled review are complete in .3/.4.
+  Verification: exact source identities and full obligation map; independent frontier176/four actual
+  compiled reds/current native514/release14/WASM3. No binding/evaluation/serializer/entity claim.
+  Commit: `STITCHCAD-G1-0058` … `STITCHCAD-G1-0061`.
+
+- ID: `G1-SLICE.5a.3c.1`
+  Status: `done`
+  Goal: shared unsigned128 half-away magnitude rounding for wide positive canonical literal nodes.
+  Verification: five public contracts/138 independent Decimal rows, nine compiled debug reds/one
+  release red; original signed four contracts/36 Fraction rows/five reds retained. Strict native494,
+  sc-units46, release public contracts and three WASM crates pass. Source restoration exact.
+  [Complete pre-code protocol](G1-SLICE-journal.md#unsigned-rounding-pre-code-protocol--preserved-during-g1-0058).
+  Commit: `STITCHCAD-G1-0058`; no literal conversion/arena/evaluation claim.
+
+- ID: `G1-SLICE.5a.3c.2`
+  Status: `done`
+  Goal: exact typed canonical literal inputs from validated borrowed syntax; retain kind/span/source,
+  full128 magnitude and unary separation. Bounded decimal reduction precedes128-bit rational check,
+  then shared input rounding and scalar length check. Raw angles retain turns; no binding/evaluation.
+  Protocol: [complete pre-code contract](G1-SLICE-journal.md#literal-conversion-pre-code-protocol--completed-in-g1-0059).
+  Verification: five public contracts/100 independent Fraction rows/two privacy-lifetime docs;
+  thirteen compiled actual assertion reds/exact restoration; strict native501, release five/WASM3.
+  Commit: `STITCHCAD-G1-0059`.
+
+- ID: `G1-SLICE.5a.3c.3`
+  Status: `done`
+  Goal: immutable normalized arena retains every node/edge/name/operator/span and syntax bound;
+  convert all literals with .2, preserve unary separation/raw turns and source borrowing. No execution.
+  Protocol: [complete pre-code plan](G1-SLICE-journal.md#normalized-arena-pre-code-protocol--completed-in-g1-0060).
+  Verification: eight public contracts/24 independent shape rows/nested100 literal rows/25 book
+  expressions/three privacy-lifetime docs plus runnable doc; seventeen compiled actual assertion reds/
+  exact restoration; strict native513, release eight/WASM3. Flat conversion/clone/drop on64KiB stack.
+  Commit: `STITCHCAD-G1-0060`.
+
+- ID: `G1-SLICE.5a.3c.4`
+  Status: `done`
+  Goal: coupled scoped production normalization review against the numerical input contract/D95/D84.
+  Protocol: [complete pre-code review](G1-SLICE-formulas.md#coupled-normalization-pre-code-review--completed-in-g1-0061).
+  Verification: all obligations mapped to public controls/source identities; independent176 Fraction
+  frontier rows/103 accepted/73 width refusals through individual and nested whole APIs; four actual
+  compiled assertion reds/exact restoration. Strict native514, release14, WASM3, book checks pass.
+  D101 index/D102 record placement repaired and independently checked; .5a.3c closes for inputs only.
+  Commit: `STITCHCAD-G1-0061`.
+
+- ID: `G1-SLICE.5a.3d`
+  Status: `done`
+  Goal: iterative canonical S-expression identity over privately normalized expression nodes;
+  preserve operators/names/child order, source locations distinct from canonical bytes, explicit scope.
+  Children: .1 byte contract/D103; .2 owned serializer; .3 coupled identity review, all done.
+  Verification: [complete expression proof map](../book/src/annexes/formula-literals.md#coupled-canonical-identity-review);
+  nine public contracts/25 worked expressions/max255 arguments/three new compiled assertion reds,
+  native525/release9/WASM3 pass. No statement/binding/evaluation or project-storage claim.
+  Commit: `STITCHCAD-G1-0062` … `STITCHCAD-G1-0064`.
+
+Completed identity children are preserved in
+[G1-SLICE-canonical](G1-SLICE-canonical.md#completed-expression-identity-subtree--preserved-from-5d8ab5b).
+
+- ID: `G1-SLICE.5a.3e`
+  Status: `done`
+  Verification: [complete ordered syntax subtree](G1-SLICE-canonical.md#completed-ordered-syntax-subtree--preserved-during-g1-0068).
+  Commit: `STITCHCAD-G1-0065` … `STITCHCAD-G1-0067`.
+
+- ID: `G1-SLICE.5a.3f`
+  Status: `done`
+  Children: .1 complete recipe literal normalization/canonical bytes, .2 coupled contract review.
+  Goal: complete canonical recipes and coupled contract review before .5a.4 milestone;
+  syntax-only success never grants static name/type/evaluation or geometry acceptance.
+  Verification: complete input/identity children and actual worked/refusal review; numerical execution remains .5.
+  Commit: child commits and final `STITCHCAD-G1-0071`.
+
+- ID: `G1-SLICE.5a.3f.1`
+  Status: `done`
+  Goal: exact complete recipe input normalization and owned identity without execution.
+  Verification: [complete predecessor](G1-SLICE-recipes.md#completed-input-and-identity-nodes--preserved-during-g1-0071).
+  Commit: `STITCHCAD-G1-0068`, `STITCHCAD-G1-0069`, `STITCHCAD-G1-0070`.
+
+- ID: `G1-SLICE.5a.3f.1a`
+  Status: `done`
+  Goal: D109 exact binding/assertion/whole recipe byte contract.
+  Verification: [complete prior record](G1-SLICE-canonical.md#complete-recipe-input-predecessors--preserved-during-g1-0070).
+  Commit: `STITCHCAD-G1-0068`.
+
+- ID: `G1-SLICE.5a.3f.1b`
+  Status: `done`
+  Goal: immutable complete statement/recipe literal inputs and contextual refusals.
+  Verification: [complete prior record](G1-SLICE-canonical.md#complete-recipe-input-predecessors--preserved-during-g1-0070).
+  Commit: `STITCHCAD-G1-0069`.
+
+- ID: `G1-SLICE.5a.3f.1c`
+  Status: `done`
+  Goal: exact owned statement/recipe identity with Eq/Clone/opaque Debug, without execution.
+  Verification: [complete predecessor](G1-SLICE-recipes.md#completed-input-and-identity-nodes--preserved-during-g1-0071).
+  Commit: `STITCHCAD-G1-0070`.
+
+- ID: `G1-SLICE.5a.3f.2`
+  Status: `done`
+  Goal: coupled statement/recipe normalization/identity review and all worked examples, prerequisite
+  map and full syntax-scope closure before .5a.4; no numerical or geometry execution claim.
+  Protocol: [coupled review plan](G1-SLICE-recipes.md#coupled-whole-input-and-identity-review-protocol).
+  Verification: five new public contracts/actual21 statements/13 refusal stages, seven compiled
+  assertion reds/exact restore; strict native591/release5/WASM3/reference/book pass0.
+  Commit: `STITCHCAD-G1-0071`.
+
+## Full syntax milestone protocol
+
+- ID: `G1-SLICE.5a.4`
+  Status: `done`
+  Work unit: `STITCHCAD-G1-0072`; clean predecessor ee42f5d, no initial jobs/user edits.
+  Scope: complete syntax/input/canonical review and safe remaining evaluator decomposition.
+  Read: bootstrap/README/memory/task doctrine, full formula contract/grammar/examples, units,
+  ontology3/5, ADR-0003/D84/D95/D103/D109, current immutable APIs and ten public test families.
+  No product source edit, new syntax, inference/evaluation, geometry or independent approval.
+  Obligations: ASCII/token spelling/keywords, all units/literals/input rounding/width/domains,
+  precedence and ordered calls/conditionals, let/assert/recipe boundaries and all four limits,
+  exact canonical roles/domains/order/empty/aliases, original spans/ordinal/context and privacy.
+  Display stays presentation; syntax parser admits only machine ASCII, no locale/display reader.
+  Deferred: all nine origins/reserved collisions, every kind signature/exclusion, static whole
+  acceptance, exact result arithmetic/storage, true irrational rounding, state/lazy execution,
+  tolerances/atomic replay/cycle loading and complete construction operation dependencies.
+  Each .5b–.5g child below owns a safe contract before code; refine further if a unit grows.
+  Full milestone: make check, make wasm, make probes, final staged make gate. Rerun existing
+  coupled seven actual assertion faults alone and verify exact restoration before other checks.
+  Existing earlier fault receipts stay historical; this review does not claim re-running them all.
+  D111: one current contract paragraph still calls completed statement identity pending; repair
+  current prose plus ADR implementation status, retaining evaluation/storage/approval boundaries.
+  D34 recurrence: TASK_TREE census example still says six siblings against actual ten; correct
+  example here, mechanical frontier/count derivation stays PLANNING.5, without pivoting to it.
+  Containment: preserve complete prior closure/node graph exactly in this bounded sibling; seal
+  oldest complete changelog/dev-note records before growth crosses their health targets.
+  Verification: completed receipts below; final commit hook repeats the staged doctrine gate.
+
+## Remaining formula and construction implementation contracts
+
+All children are pending, unverified and uncommitted. Parent .5 stays in_progress after syntax
+closure. This is an owned execution plan, not an implementation or changed language contract.
+Each child records its own full pre-code protocol, independent fixtures, actual assertion faults,
+focused checks, book/live sync and per-leaf commit before selecting the next child.
+
+### Namespace and static validation
+
+- ID: `G1-SLICE.5b.1`
+  Status: `pending`
+  Goal: enumerate every static obligation from contract2/3/5/6/9 and grammar5/6/7; exercise the
+  actual reference with independently authored namespace/kind/refusal cases before trusting it.
+  Acceptance: all nine origins/eight reserved names, single assignment/ambiguous collisions,
+  forward names, all signatures and dimensional/exclusion/envelope rules mapped both directions;
+  both branches inspected without value access. Log/repair discovered reference defects first.
+  No curated example-only or runtime oracle claim. Resolve any contract ambiguity before .2/.3.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.2`
+  Status: `pending`
+  Goal: immutable typed origin declarations and namespace/context resolution; numeric availability
+  remains separate from declared kind. Geometry names identify prior operation outputs only.
+  Acceptance: all origins/reserved contexts, spelling, collision/rebinding/forward refusal
+  arguments and searched origins preserved; no implicit shadow/default or value computation.
+  Core input boundary does not introduce sc-core→sc-measure dependency cycle; existing canonical
+  declarations remain the sole authored values. D70 axes remain outside this namespace foundation.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3`
+  Status: `pending`
+  Goal: every unary/square/binary/product/quotient/comparison, built-in and selector signature,
+  all arities, conditional branch types and tolerance-name operand role.
+  Acceptance: closed tables checked in both directions, Boolean condition/numeric branches,
+  no implicit conversion/geometry creation, arc_length hint for angle×length, named envelope
+  precedence and unsupported constructs. Unknown declared values still have checkable kinds.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.4`
+  Status: `pending`
+  Goal: validate the whole ordered recipe and construct its immutable typed dependency graph.
+  Acceptance: every statement/header/operand including untaken branches checked before any
+  evaluation callback; prior declaration ordering/collision context, original spans and known
+  ordinal/canonical identity where available. A late static defect accepts no partial graph.
+  Syntax/input APIs retain their existing scopes and bytes; no evaluator authority from parsing.
+  Verification: `pending`; Commit: `pending`.
+
+### Exact arithmetic and bindings
+
+- ID: `G1-SLICE.5c.1`
+  Status: `pending`
+  Goal: exact signed rational value primitive with positive denominator and reduced width128.
+  Acceptance: full unsigned magnitudes/signs, zero, reduction and cancellation before width
+  judgment, overflow-safe bounded workspace and typed numerator/denominator measured refusal.
+  Independent arbitrary-precision oracle checks arithmetic; no dependency/license/WASM guess.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5c.2`
+  Status: `pending`
+  Goal: all typed rational operators and abs/min/max/clamp without implicit rounding.
+  Acceptance: dimension/scaling tables, exact fractional Count, signed length/area per-result
+  domains, literal input boundary distinct from result boundary, zero division and invalid clamp;
+  later cancellation never rescues an invalid completed intermediate. Raw formula turns preserved.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5c.3`
+  Status: `pending`
+  Goal: explicit round_to and one binding conversion for all five numeric kinds plus Boolean.
+  Acceptance: exact ties away at authored step/binding, full i64 endpoints including MIN, wider
+  exact literal/temporary permitted, Count nonnegative and scalar bounds checked; later reads
+  use the returned stored integer. No Angle direction modulo for formula sweeps/equality.
+  Diagnostics retain binding name/kind/bounds/rounded measured result, without a silent clamp.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5c.4`
+  Status: `pending`
+  Goal: coupled reduced-width/scalar/storage/literal versus result review before replay integration.
+  Acceptance: D83/D84/D95 product obligations match independent rational and numeric boundary
+  fixtures, all roles and intermediate-first-excess cases; actual compiled faults discriminate.
+  Existing curated Python reference evidence is separate from production arithmetic proof.
+  Verification: `pending`; Commit: `pending`.
+
+### Irrational functions
+
+- ID: `G1-SLICE.5d.1`
+  Status: `pending`
+  Goal: finalize deterministic true-value rounding algorithms and independent proof/oracle plan
+  for every admitted sqrt/hypot/trig/inverse/arc_length input before implementation.
+  Acceptance: rigorous rounding-boundary/termination/resource argument over width128 inputs,
+  signed/multi-turn reduction, principal branches/poles, half-away rules and declared domains;
+  ordinary platform libm/curated Decimal60 agreement cannot establish correct arbitrary rounding.
+  Any unresolved algorithm or dependency/license requirement is owned before implementation.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5d.2`
+  Status: `pending`
+  Goal: correctly rounded sqrt(area/ratio) and hypot(length,length) under .1's reviewed algorithm.
+  Acceptance: negative root refusal, exact square/tie neighbors, full input domains, true rounded
+  quantum and hypot without materializing an out-of-domain area; irrational provenance retained.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5d.3`
+  Status: `pending`
+  Goal: sin/cos/tan, atan, atan2 and arc_length with signed sweeps and reviewed rounding.
+  Acceptance: exact odd-quarter-turn tan poles, signed principal branches, atan2(y,x)/(0,0),
+  zero axis and near-axis rounded endpoints, complete turns and signed/multiple-turn sweeps;
+  no blanket angle normalization, quantum/source-domain errors or libm-dependent result.
+  Split functions into further owned children if this unit exceeds a safe implementation slice.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5d.4`
+  Status: `pending`
+  Goal: coupled complete irrational function proof and error/provenance review.
+  Acceptance: independent correctly rounded oracle and adversarial threshold/pole/branch/domain
+  cases, cross-platform determinism evidence, actual fault controls and rigorous admitted-input
+  coverage; no scoped reference accuracy promoted to a general numerical certificate.
+  Verification: `pending`; Commit: `pending`.
+
+### Execution, uncertainty and replay
+
+- ID: `G1-SLICE.5e.1`
+  Status: `pending`
+  Goal: explicit adapters for measurement/Ease/design/profile/material/size inputs and five
+  authored states, preserving canonical identity, kind, source and provenance requirements.
+  Acceptance: unknown has no value, derived reads follow their dependencies, assumed/preference
+  remain labelled; all six bindable kinds supported, optional tolerance context explicit.
+  Source truth/artifact blocking belongs G4; no invented policy or duplicated authored values.
+  Full SizeSet/axis integration waits .4c.2 D70, without dropping size-context acceptance.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5e.2`
+  Status: `pending`
+  Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.
+  Acceptance: always-visible versus prior names, stored numeric/Boolean reads, both-branch static
+  validation but taken-only computation, unknown untaken succeeds/taken refuses with full context.
+  Numeric domain/division/width errors occur at the actual completed operation; no reordering.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5e.3`
+  Status: `pending`
+  Goal: within/assertion execution and tolerance/irrational-result provenance propagation.
+  Acceptance: all five named classes, context-supplied missing values, T2-or-looser when an
+  irrational result contributes (including subsequent binding/reads), exact bare comparisons,
+  assertion failure values/class/name and no substituted value/geometry after failure.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5e.4`
+  Status: `pending`
+  Goal: atomic replay and dependency validation, including corrupted persisted cycle evidence.
+  Acceptance: failure yields no accepted partial evaluation, repeat/from-statement1 byte equality,
+  invisible-cache equivalence, cycle names and unbound/rebinding/ambiguity context. Loader/storage
+  .7 consumes graph validation; canonical text alone is not a loader or authoritative graph.
+  Verification: `pending`; Commit: `pending`.
+
+### Construction operations and final acceptance
+
+- ID: `G1-SLICE.5f.1`
+  Status: `pending`
+  Goal: complete public operation/dependency/interface inventory from ontology3.1/3.2, roadmap6.1
+  and feature matrix before construction code. All v1 operations must have explicit typed schemas.
+  Acceptance: points, lines/arcs/Béziers, offset, slash/spread, close dart, notch/grainline,
+  walk/true, mirror and join covered; stable output identities/reference contracts, numerical
+  argument kinds and semantic preconditions explicit. No formula creates geometry or calls CSP.
+  Concrete geometry execution stays G2/G3; missing operation contracts are repaired first.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5f.2`
+  Status: `pending`
+  Goal: typed ordered operation declarations and formula/geometry graph dependencies.
+  Acceptance: every argument sees only prior/always-visible names, output provenance/identity,
+  Pocket logical opening kind/domain/state and component dependencies, Buttonhole dependency on
+  canonical button-size declaration. No separately authored hole length or approximation.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5f.3`
+  Status: `pending`
+  Goal: operation execution/geometry-selector bridge through published typed contracts.
+  Acceptance: operation formulas evaluate at their actual position, x/y/dist/dir/len/param_at/
+  point_at domains and direction-only normalization, stable current references and envelope
+  refusal; G2 supplies geometry and G3 physical construction/positive hole-length acceptance.
+  Core interfaces cannot read upstream submodule implementation or silently fake selectors.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5f.4`
+  Status: `pending`
+  Goal: coupled operation replay/dependency/construction integration review.
+  Acceptance: all v1 schemas/execution owners, canonical result identity, no partial geometry,
+  operation-order/cycle/stale-reference failures and Pocket/Buttonhole obligations accounted for.
+  Bus .6 remains the mutation boundary; missing G2/G3 execution is not a G1 geometry certificate.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5g.1`
+  Status: `pending`
+  Goal: turn all worked bindings/assertions/refusals and fixture overlaps into product tests.
+  Acceptance: complete actual population in both directions, exact stored values/kinds/diagnostic
+  arguments, zero geometry after refusal and independently falsified assertion/class controls;
+  no reference-only execution used as product evidence. Full selectors use actual geometry contracts.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5g.2`
+  Status: `pending`
+  Goal: actual two-platform byte reproducibility, replay and runtime capability evidence.
+  Acceptance: same inputs/canonical bound outputs on named platforms with observed terminal jobs,
+  not inferred from WASM compilation; deterministic fault/replay controls and artifact provenance.
+  Cross-platform CI/push follows COMMIT cadence/exception rules; browser execution stays .12.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5g.3`
+  Status: `pending`
+  Goal: full contract9/.5 milestone, complete obligation and defect/remaining-owner audit.
+  Acceptance: every name/type/numeric/state/tolerance/replay/operation example requirement proven
+  at its claimed scope; full CI/probes/book and relevant fault suites pass before .5 closure.
+  Storage/commands/API/MCP/browser/production approval stay separately owned and unclaimed.
+  Verification: `pending`; Commit: `pending`.
+
+## Syntax milestone verification receipts
+
+Full make check:591 passing native tests/48 groups, zero failures; make wasm:three foundation libs,
+compile-only; make probes:25 suites green. All three commands finished in one set-e shell, rc=0.
+Coupled recipe input fault runner:seven actual compiled assertion reds, rc=0, exact four-source
+restoration. Restored public review:five tests pass. Existing earlier fault receipts are unchanged.
+Post-book-edit language16/publication9 pass; publication52 chapters/25 scoped API rows/1093 source
+links/1688 rendered links. Tree10lanes/13trees/10siblings/zero unowned/orphan/dead targets.
+Independent git-show comparison: every tracked crate source/manifest/test equals ee42f5d bytes;
+complete syntax node graph11075B and predecessor closure1912B preserved exactly. G1-0052 ledger
+844B and G1-0070 lesson2039B compare exact complete HEAD payloads. Initial dev-note delimiter lookup
+failed before that file was written; explicit archive-heading boundary and equality fix it.
+D111 closes only the stale current-status sentence; original report sealed unchanged. D34's
+six-versus-ten sibling example is corrected; PLANNING.5 retains derivation ownership.
+All three adopted external policy neutral bodies compare exact with their read-only sources.
+Cleanup became due during this milestone; finish this leaf/clean commit before the next SPINE.21
+cleanup leaf, then .5b.1. No background process or unsaved verification survives the handoff.
+Final ledger/retention/materialized defect census and staged doctrine receipt follow below.
+
+First staged gate correctly refused the new lesson because its task decline used an em dash;
+the required promotion: declined (<reason>) spelling now records the same routine decision.
+No gate or doctrine requirement is changed; rerun precedes commit.
+
+Final staged make gate:all doctrines green, rc=0. Ledger:nine arms/thirteen independent pointer
+verdicts pass0. Archive CLI:193 controls/184 full logical reads, rc=0. Retention:184 logical records,
+59 working Markdown,8950 decoded lines,691041 decoded bytes,347363 resident bytes, rc=0.
+Fresh materialized defect census:10 open/100 unique sealed/zero duplicates or overlap; D111 closed.
+Post-edit make check repeats native591/48groups/zero failures; publication9 and tree10/13/10/zero
+gaps complete in one set-e shell, rc=0. No verification handle remains live before commit.

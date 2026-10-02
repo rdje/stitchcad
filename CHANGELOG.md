@@ -132,6 +132,18 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part66.md`](docs/history/stitchcad-changelog-part66.md) | STITCHCAD-G1-0051, STITCHCAD-G1-0050 | 18 lines, 1463 bytes, `sha256:3dcee333…` |
 
+| [`changelog-part67.md`](docs/history/stitchcad-changelog-part67.md) | STITCHCAD-G1-0052 | 10 lines, 844 bytes, `sha256:d0d97d54…` |
+
+## STITCHCAD-G1-0072 - syntax milestone and evaluator ownership (leaf `G1-SLICE.5a.4`)
+
+Complete syntax/input/identity proof map closes .5a without evaluator or geometry claims. Full native
+591 tests/48groups, WASM3 and all25 probe suites pass; seven coupled actual compiled assertion reds
+restore all four product sources exactly, then public review5 passes. All existing Rust bytes stay exact.
+D111 fixes current statement-identity status; .5b–.5g own23 pending static/numeric/irrational/replay/
+operation/final acceptance children. Book52/25 APIs/1093 source/1688 rendered links and task pointers
+agree. Completed node graph/prior closure and oldest ledger payloads preserved exactly; G1 stays5/18,
+defects10open/100sealed. Next .5b.1 independent static review, checking cleanup due first.
+
 ## STITCHCAD-G1-0071 - coupled whole input and identity review (leaf `G1-SLICE.5a.3f.2`)
 
 Actual17 worked bindings/four assertions produce21 exact statements/25 operands and a complete
@@ -381,14 +393,3 @@ all seven/nine steps successful. Archive prerequisite/enforcer and fmt/clippy/te
 Post-commit archive controls140 pass; newest committed catalog edit refuses by immutability, rc=1.
 Remote/local heads agree; previous ledger/task bytes stay exact. Book/live/pointers reflect observed
 proof, not an inferred run status. G1 stays5/18, defects12/83; next .3c.2 D83 complete review.
-
-## STITCHCAD-G1-0052 - retained history frees the next review seal (leaf `G1-SLICE.5a.3b.3b.3c.1`)
-
-Window2 retains63 full source files/122566 bytes at372033f; installed reader independently
-reconstructs every byte before retirement. Previous window and127 logical records remain exact;
-working catalogs replace raw duplicates, maintained pointers retarget, residue0. New watched CLI
-contracts verify all records and newest-window digest/member/catalog/cross-window refusals.
-D96 resolves actual index targets instead of filename text:13 independent verdicts/four actual reds.
-Oldest payloads stay exact; book/live/tasks agree. Full local Rust/WASM/book/probes/gate precede
-required exception push; observed CI .1v next. G1 stays5/18, defects12/83;
-D83 review remains .2. No reader, scope or aggregate-cap change; no domain/production signoff.

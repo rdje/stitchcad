@@ -7,7 +7,8 @@
 > is implemented and reviewed; [ordered statement syntax](../annexes/formula-statements.md#parse-an-ordered-recipe) is also available.
 > [Complete recipe input normalization and identity](../annexes/formula-recipe-inputs.md) are implemented
 > and [reviewed together](../annexes/formula-recipe-inputs.md#coupled-input-and-identity-review);
-> name/type/binding validation and evaluation remain G1-SLICE.5 work; final acceptance
+> the [syntax milestone](../annexes/formula-recipe-inputs.md#syntax-milestone-and-the-route-to-execution)
+> is complete; name/type/binding validation and evaluation remain G1-SLICE.5b–.5g work; final acceptance
 > makes every worked example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
 > every number's representation is the [units chapter](units-and-tolerances.md)'s.
@@ -84,7 +85,8 @@ maps the four verified numeric boundaries to their independent controls. Individ
 The [coupled normalization review](../annexes/formula-literals.md#coupled-normalization-review) is complete.
 [Canonical expression serialization](../annexes/formula-literals.md#serialize-canonical-expression-identity)
 is implemented; ordered statements also have [explicit syntax inspection](../annexes/formula-statements.md#parse-an-ordered-recipe).
-Statement identity, bindings and evaluation remain pending. Reference instruments
+Statement and whole-recipe identity are implemented and reviewed; bindings and evaluation remain
+pending. Reference instruments
 supply no product execution claim.
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.

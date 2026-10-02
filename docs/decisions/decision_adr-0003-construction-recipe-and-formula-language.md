@@ -98,7 +98,7 @@ assume the answer is no.
 - Refinement at G1-SLICE.5a.3e.3: diagnostic index/canonical expression are supplied where known;
   malformed syntax retains exact span/rule and never invented canonical context (D110). Complete
   assertion/recipe identity bytes are specified by D109/.3f.1a under engineering delegation; expression bytes
-  are settled by D103. Product recipe normalization/serialization follows .1b/.1c. These
+  are settled by D103. Product recipe normalization/serialization is implemented at .1b/.1c and reviewed at .3f.2. These
   qualifications do not change numeric or evaluation semantics.
 - Never widen a structural limit to land a recipe, and never add a rounding step: both are recorded
   decisions, not implementation conveniences.

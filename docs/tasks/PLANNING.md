@@ -828,3 +828,10 @@ G1-SLICE.5a.3e.3 qualifies formula contract5.2/ADR-0003: exact source span/typed
 statement index/canonical expression are supplied where available, never fabricated for ASCII preflight
 or non-normalizable syntax. Later-statement index3/header/operand matrices and book publication pass0.
 Future localized semantic/command arguments remain owned by .5. Original report is retained unchanged.
+
+D111 is sealed in [`stitchcad-defects-part41.md`](../history/stitchcad-defects-part41.md).
+G1-SLICE.5a.4 corrects the formula contract's pending statement-identity sentence and ADR's current
+normalization/serializer status. Exact public serializer/input controls and rendered publication
+pass; evaluation, storage and approval remain pending. Original report is preserved unchanged.
+D34 recurred in TASK_TREE's six-sibling census example; .5a.4 corrects it to the actual ten siblings.
+PLANNING.5 retains mechanical frontier/count derivation ownership and its existing product priority.
