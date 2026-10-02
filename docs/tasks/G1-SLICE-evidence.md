@@ -849,68 +849,33 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   measurement control green, runtime/value/geometry trapped; full reference/language16/publication9
   pass0. D119/D123 fixed, original reports retained. Commit: `STITCHCAD-G1-0077`.
 
-### Namespace/header receipts — `G1-SLICE.5b.1b.1`, `2026-10-02`
+[Exact completed records](G1-SLICE-canonical.md#completed-namespace-and-preflight-receipts--preserved-from13f8c75) are retained in the canonical sibling.
 
-- Actual pre-repair four examples ACCEPTed, exit0: reserved let eps_num; measurement waist let
-  shadow; size_index assertion class with a bound context fixture; Boolean flag assertion. Actual
-  reserved T1 sin assertion ACCEPTed and missing-context reads misrouted, owned D121/D122, not fixed
-  or approved here. Whole preflight D119 absent and still next. Original report bodies retained.
-- Namespace producer independently compares nine declared origins/eight reserved names/six let kinds;
-  1139 cases, all81 ordered origin pairs,72 origin-kind combinations, every reserved binding/origin,
-  assertion64kind pairs/five classes, spelling/context/both-branch/forward/self/header refusals.
-  Kind/origin-only mappings and reserved kind-only views trap value/state/availability/geometry;
-  execution/storage/geometry callbacks trap. Parsing retains canonical literal-input work.
-- Thirteen compiled in-memory actual guard changes must fail named body assertions, not source-anchor
-  or input errors. Source unchanged. Initial uppercase kind fixture incorrectly expected dimension;
-  lexical parse refusal is correct, changed expectation only. Independent runtime-adapter controls
-  prove each original static defect refuses before execution.
-- First full reference suite exposed syntax-only tests relying on runtime infer traps: syntactically
-  legal reserved let now correctly refuses before those traps. Added actual syntax_statement phase;
-  fifteen header rows/6refusals and whole/canonical/worked source fixtures retain original bytes.
-  Invalid eps_chord expected token becomes grammar parse; canonical parameter replaces two fixture-only
-  computed_fixture origins. No grammar extension, numeric value or Rust API/serializer change.
-- Full reference suite terminal0: new1139/13 and existing4032signature/12actual reds, all original
-  syntax/input/numeric/identity checks green. Language runner16 controls terminal0. Focused cargo
-  statement/recipe/canonical-recipe30 tests/3groups terminal0; all tracked Rust source/tests exactHEAD.
-- Publication runner warning-free book rebuild/9controls terminal0:53chapters/25scoped APIs/
-  1105source/1710rendered links. New namespace annex/index/contract route and proof boundaries agree.
-- Canonical defect census13open/108unique sealed/overlap0. History196logical/10workingMarkdown/
-  9548decodedlines/724342decodedB/312856residentB; unchanged prior windows/reader/schema/caps.
-  Whole oldest G1-0059 payload independently matches Git predecessor; four original report bodies
-  retained in defects-part44. Ordinary focused gate/ledger receipts follow; no push exception touched.
-- Final ledger9/pointer13 and staged make gate13 doctrines green terminal0; toolbox route added.
+## Runtime assertion repair
 
-### Whole preflight receipts — `G1-SLICE.5b.1b.2`, `2026-10-02`
-
-- Reference previously has no preflight; L2 discovers errors during replay (D119). New196 independent
-  whole-source controls/14 compiled actual body assertion reds pass0. Metadata-only declarations,
-  reserved kind-only views and execution/storage/geometry traps; original slices/order/headers,
-  every origin/81 collisions/reserved names, no caller mutation or accepted prefix on late error.
-- Actual4095/4096 success, either header4097 domain refusal;255/256 nodes and15/16 if levels
-  success,257 nodes/depth17 refuse, including last-statement cases. Source unchanged during faults.
-- Full worked21-statement static preflight precedes L2. Two copied books' last assertion kind/name
-  errors precede first binding's zero divisor; every consumer execution callback trapped. Actual
-  shell control preserves17 bindings/four assertions/thirteen refusals, zero mismatches. Consumer
-  bypass/early numerical call fail body assertions. Product immutable graph remains .5b.2–.4.
-- D123 tools baseline copied25 ceiling: preflight21 succeeds, old L8 sums unrelated13 refusals
-  into34 and exits1. Actual accepted-plan measurement now21; copied25 control exits0, restoring
-  old aggregate in memory fails named body assertion. Limit remains4096 in canonical chapter.
-- Full reference suite terminal0, existing4032 signatures/12 reds and1139 namespaces/13 reds
-  retained; final whole-recipe producer terminal0 at14 reds. Language16/publication9 terminal0;
-  publication53chapters/25scoped APIs/1108source/1714rendered links, warning-free book.
-- First fault anchor matched both recipe-role refusals; it was rejected as setup evidence. Fixed
-  unique anchor, all claimed reds are actual body failures. L6 mutations now target non-executed
-  formula spans; L8 margin mutation100 avoids preempting its intended20x-margin proof. New producer
-  guards prove actual limits separately. No Rust source/test changed; no product validator claim.
-- Oldest G1-0060 ledger1090B and four old lesson records5136B match exact Git predecessor slices;
-  D119 original report retained, D123 added before repair. Existing archived windows/reader/caps
-  unchanged. Current ledger/retention/gate receipts follow; .1c takes next clean frontier.
-- Final ledger9/pointer13/publication9 and staged make gate13 doctrine checks pass, terminal0.
-  First gate refused missing explicit command-output/rc evidence in three new checklist boxes;
-  corrected the record using observed outputs, without weakening any checker. Tree census10lanes/
-  13trees/10siblings/0unowned-orphan-deadlinks. Defect census12open/110unique sealed/overlap0 from
-  materialized199 logical history records;13workingMarkdown/9669decodedlines/733308decodedB/
-  321822residentB. Rust source/test diff0; KnowledgeMap100lines/8181B; diff check0.
+- ID: `G1-SLICE.5e.3a`
+  Status: `done`
+  Goal: independent D125 reference false-assertion diagnostic repair while D124 is pending.
+  Acceptance: valid assertion tuples preserved; false raises formula_assertion with name/values/
+  class; five classes and numeric kinds, inclusive threshold, earlier static/runtime errors,
+  actual consumer refusal and actual guard faults verified. D121 provenance remains separate.
+  Containment prerequisite: move exact completed receipts/checklists into existing canonical sibling
+  before primary/evidence exceed1000 lines; update links, retain hashes; no new path or cap increase.
+  Pre-code protocol: contract5.1/5.2/9, grammar1.1 assert and existing class/context/value stages.
+  FErr gains an optional owned arguments dictionary; false assertion carries label, both exact
+  values/kinds and symbolic tolerance class/value. No fabricated ordinal/canonical bytes or claim
+  of typed production payloads. Preserve true five-element tuple and <= threshold; earlier static,
+  numeric and missing-context errors retain their tokens. Consumer L4 must report named failure
+  instead of testing a False tuple; numerical provenance D121 and context routing D122 stay owned.
+  Independently author all five arithmetic kinds/classes, below/at/above threshold/signed values,
+  caller immutability/static-valid false example and actual copied-book consumer diagnostic.
+  Compile guard/payload faults in memory; require actual body assertion reds, unchanged producer.
+  Focus reference/language/publication/ledger/gate; synchronize current docs and commit .3a.
+  Root-cause check of initial fixture failure: grammar5.1 and independent signature matrix both
+  declare Count*Ratio -> Ratio, while Count/Ratio -> Count. The actual loader agrees; no contract
+  drift. Use doubled integer bindings divided by2.0 to produce exact halves in all five kinds.
+  Verification:262 cases/eight actual body assertion reds/copied-book named refusal/full reference
+  terminal0; publication/ledger/gate receipts below before commit. Commit: `STITCHCAD-G1-0079`.
 
 ## Complete static review: exclusion diagnostic boundary
 
@@ -984,3 +949,35 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   independent14open/111unique sealed/overlap0. Tree10lanes/13trees/10siblings/0unowned-orphan-deadlinks.
   Old G1-0061 ledger1091B/CI lesson625B independently match Git predecessor slices. No Rust diff;
   map100lines/8181B, diff check0. D124 choice remains pending; no implementation change while awaiting it.
+
+### Assertion repair receipts — `G1-SLICE.5e.3a`, `2026-10-02` (UTC)
+
+- `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`
+  terminal0:262 independently authored cases/five arithmetic kinds/five classes/inclusive boundary,
+  exact owned failure arguments and caller unchanged. Actual copied-book consumer refuses1 with
+  formula_assertion/waistband_width_closure/length80000vs40000/eps_num1; producer verdict0.
+- Eight actual in-memory compiled false-guard/boundary/token/label/order/kind/class/value faults
+  require body assertion reds; source unchanged. Full structural runner terminal0 retains prior
+  signature4032/namespace1139/recipe196/review67 and numerical/canonical/binding families.
+- Initial test syntax/setup errors were discarded before evidence; Count*Ratio failure diagnosed
+  through actual loaded table, grammar5.1 and independent signature matrix. All specify Ratio;
+  correct Count/Ratio control preserves Count. No new contract or hidden table repair.
+- Language16 and publication9 terminal0; runtime assertion annex/index/contract/tool route agree.
+  D125 original report, oldest G1-0062 ledger and two oldest lessons independently match Git HEAD
+  before sealing. Completed52/63line task blocks retain exact predecessor bytes in existing sibling;
+  Knowledge Map path set unchanged, no cap raised. Rust/serializer source bytes unchanged.
+
+- Publication53chapters/25 API rows/1114source/1725rendered links; nine refusal controls, terminal0.
+  Ledger9/pointer13 and tree census10lanes/13trees/10siblings/0unowned-orphan-deadlinks pass0.
+  Independent materialized defect census13open/112unique sealed/overlap0/duplicates0, rc=0.
+  Staged doctrine registry13 checks terminal0; hook repeats this final staged record.
+
+## Missing-value routing
+
+- ID: `G1-SLICE.5e.1a`
+  Status: `pending`
+  Goal: independently repair D122 reference missing-value diagnostic routing across nine origins
+  and reserved size/tolerance contexts before product .5e.1 adapter proof.
+  Acceptance: canonical origin-specific tokens/arguments, populated values unchanged, malformed
+  metadata refused, actual fault controls and book/runtime replay remain honest; D124 untouched.
+  Verification: `pending`; Commit: `pending`.

@@ -12,6 +12,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Commands and agent authority](spec/glossary/commands-and-authority.md)
 - [Current-reference repairs](spec/ontology-implementation.md)
 - [Draft and complete chart coverage](spec/size-chart-collections.md)
+- [Assertion runtime diagnostics](annexes/formula-static-validation.md#reference-runtime-assertion-controls)
 - [Canonical expression API](annexes/formula-literals.md#serialize-canonical-expression-identity)
 - [Canonical expression bytes](annexes/formula-literals.md#canonical-expression-bytes)
 - [Canonical identity proof review](annexes/formula-literals.md#coupled-canonical-identity-review)

@@ -893,15 +893,10 @@ late static refusal; recipe size excludes unrelated candidates. D121/D122 retain
   - Impact: no signoff-quality reproducible boundary for product exclusion diagnostics. Owner:
   G1-SLICE.5b.1c.1 diagnosis/proposal now; .1c.2 applies director ruling before product .5b.3.
 
-- **D125** — reference runtime assertion adapter returns false without its required diagnostic.
-  - Reproduce: statement('assert false_closure: eps_num = 1 cm == 2 cm', {}) returns
-    ('assert', 'false_closure', False); the equal-value control returns True. Baseline exit0.
-  - Root: statement computes the holds Boolean and returns it, while the book consumer only
-    calls bad on False. Neither raises formula_assertion as contract5.2/9 requires.
-  - Impact: general runtime reference cannot prove falsified-assertion diagnostic/payload behavior.
-  - Owner: G1-SLICE.5e.3, high priority with D121 before product assertion/tolerance evidence;
-    preserve expected valid tuples but raise named error on false, test values/class/name payload.
-    Static type/name checking remains valid without computing any assertion verdict.
+D125 closes at G1-SLICE.5e.3a; original report retained in
+[`stitchcad-defects-part47.md`](../history/stitchcad-defects-part47.md). False runtime assertions
+raise formula_assertion with exact values/kinds, name and class;262 cases/eight actual assertion
+reds and copied-book refusal verify the repair. D121/D122 and product execution remain pending.
 
 D126 closes at G1-SLICE.5b.1c.1; original report retained in
 [`stitchcad-defects-part46.md`](../history/stitchcad-defects-part46.md). Geometry selector prose now

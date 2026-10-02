@@ -231,6 +231,9 @@ the node, statement and conditional limits of §4.3.
 **Runtime — while evaluating:** reduced numeric-value widths (§4.3), `formula_division`, `formula_domain`, `formula_unknown`,
 `formula_tolerance_unbound`, `formula_assertion`, and `formula_cycle` at load.
 
+The book's [reference assertion controls](../annexes/formula-static-validation.md#reference-runtime-assertion-controls)
+verify named false-assertion diagnostics and their values/class. Product evaluation remains pending.
+
 A static refusal rejects the recipe whole: no statement is evaluated and no geometry is produced,
 which is the property the [envelope](feature-matrix.md) §10 requires of every refusal. A runtime
 failure abandons the evaluation the same way and never resumes with a substituted value.

@@ -150,6 +150,19 @@ the digests afterwards.
 
 | [`changelog-part75.md`](docs/history/stitchcad-changelog-part75.md) | STITCHCAD-G1-0061 | 13 lines, 1091 bytes, `sha256:c4bbd66c…` |
 
+| [`changelog-part76.md`](docs/history/stitchcad-changelog-part76.md) | STITCHCAD-G1-0062 | 13 lines, 1068 bytes, `sha256:a0da7975…` |
+
+## STITCHCAD-G1-0079 - named reference assertion failures (leaf `G1-SLICE.5e.3a`)
+
+D125 closes: a false runtime assertion raises formula_assertion with label, exact ordered values/
+kinds and symbolic tolerance class/value. Successful tuples, inclusive boundaries and earlier error
+precedence are preserved.262 independent cases/five kinds/five classes/eight actual body assertion
+reds and actual copied-book consumer refusal pass; full reference suite remains green.
+Book/annex/index/tool/task/live records align. D124 ruling pending; D121/D122 reference repairs and
+product evaluation remain owned, with no Rust source change or runtime/physical/release approval.
+Exact completed task blocks and oldest ledger/lesson/report payloads retained in bounded records.
+G1 stays5/18; defects13open/112sealed. Next D124 answer when received; D122 independent repair.
+
 ## STITCHCAD-G1-0078 - static review and diagnostic proposal (leaf `G1-SLICE.5b.1c.1`)
 
 Independent21 worked/13 refusal static populations, envelope6,67 cases/four actual guard assertion
@@ -371,17 +384,3 @@ book/reference checks pass. D104 crate overview/status numerical drift is fixed.
 learning/availability/grammar/API map/expert annex/decision/index/live/task records align; prior proof
 and ledger bytes remain exact in bounded parts. G1 stays5/18; defects10open/93sealed; next .3d.3 review.
 Ordered recipes, names/types/bindings/evaluation, geometry, storage and command/API/MCP remain later work.
-
-## STITCHCAD-G1-0062 - exact canonical byte contract (leaf `G1-SLICE.5a.3d.1`)
-
-D103 closes: director chose unary (- child) and square (^2 child) before production serialization.
-Grammar/expert annex/canonical decision specify all seven expression roles, exact ASCII spacing,
-no terminal newline and preservation of normalized literals/ordered unevaluated syntax. Symbolic
-opcodes distinguish operators from ordinary neg/square calls; authored syntax is unchanged.
-
-Tracked inventory checks seven actual reference roles/ten binary symbols/two call distinctions and
-six authored byte examples through independent reference rendering, watched by the structural suite.
-Four actual inventory-renderer assertion reds restore exact source; these are interpreter controls.
-Scoped reference/language/publication and recording checks pass; Rust implementation is unchanged.
-Book/index/live/task pointers align and prior history stays exact. G1 remains5/18; defects10open/
-92sealed. Next .3d.2 product canonical serializer, then .3d.3 review; no execution or persistence claim.

@@ -815,7 +815,9 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
 | done | `G1-SLICE.5a.3f.2` | `done` | Coupled whole input and identity review |
 | done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
-| next | `G1-SLICE.5b.1c.2` | `pending` | Static obligation map reviewed; D124 excluded-form diagnostic ruling required |
+| pending | `G1-SLICE.5b.1c.2` | `pending` | Static obligation map reviewed; D124 excluded-form diagnostic ruling required |
+| done | `G1-SLICE.5e.3a` | `done` | D125 named reference assertion diagnostics; product execution pending |
+| next | `G1-SLICE.5e.1a` | `pending` | Independent D122 reference origin/context missing-value repair |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -904,57 +906,23 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
   .1b.2 next. Old record bytes preserved; product namespace/type/graph remain .5b.2–.4.
   promotion: declined (existing flat namespace, single-assignment and independent-evidence principles).
 
-### `G1-SLICE.5b.1b.0` — third exact retained window
+### G1-SLICE.5e.3a — D125 reference assertion repair
 
-- [x] **REPRODUCE / ISSUE** — predecessor history has64 working Markdown files; capture_window3.py
-  freezes exact af98fff and derives62 raw records before another normal seal, rc=0.
-- [x] **ROOT CAUSE (WHY + WHERE)** — unchanged64-file working bound includes two retained catalogs;
-  capture_window3.py proves189 logical full files against Git and repeated deterministic payloads, rc=0.
-- [x] **FIX** — retain window3 with existing reader/schema/caps; copy/prove/use before deleting
-  exactly62 raw copies, redirect63 maintained link destinations; prior windows remain exact.
-- [x] **ADDRESSED (verified)** — history_archive.py prove-source window3 →62 byte-identical full
-  files/0 missing-extra, rc=0; exclusive archive suite →28 pass/0 fail, CLI199 controls/191 reads.
-- [x] **NO REGRESSION** — make check →591 passed/48groups; make wasm/book terminal0;
-  make probes →26 suites green, rc=0; publication53/25 APIs/1102 source/1705 rendered links.
-- [x] **LOCKSTEP** — book/live/task/ledgers retained; G1 stays5/18, defects12open/102sealed;
-  .0v owns exceptional push/observed CI and newest committed refusal. D114/D115 scheduled SPINE.23.
-  promotion: declined (existing exact-window and independent-evidence policy applied).
+- [x] **TOOLS-FIRST / ROOT CAUSE** — actual statement returnedFalse instead of formula_assertion;
+  equal control True, actual contract5/9 requires named failure; tracked producer262 controls, rc=0.
+- [x] **ADDRESSED** — false raises owned name/values/kinds/class arguments, true tuple/boundary
+  preserved; actual copied-book consumer raises formula_assertion and refuses1, producer rc=0.
+- [x] **NO REGRESSION** — full structural reference suite and eight actual guard/payload assertion
+  reds pass, rc=0; original serializer/Rust bytes unchanged. D121/D122/D124 remain separate owners.
+- [x] **RETENTION** — completed52line/4156B and63line/5643B blocks retained byte-exact in canonical
+  sibling. SHA c701597a4f5cbd2435cd336f62253fc0ff3d32c951fb9077969f7d89b4e27634 and
+  6e7c34b99aabe774e372162cf60219bd28d61a8715f0d1185a5ec59ca013da29 match Git13f8c75, rc=0.
+- [x] **LOCKSTEP** — language16/publication9/ledger9/pointer13/tree census green, rc=0;
+  book/live/task records agree, G1 stays5/18,13open/112sealed; D125 original report preserved.
+  Staged doctrine registry13 checks pass, rc=0; hook repeats final records. No product runtime claim.
+  promotion: declined (existing independent-diagnostic/dimensional-algebra/retention principles).
 
-### `G1-SLICE.5b.1a` — current static signature slice
-
-Full protocol, fixtures, diagnosis and detailed receipts are in the recipe sibling's .5b.1a node.
-
-- [x] **REPRODUCE / ISSUE** — actual baseline rejects min/max(length) and admits size tolerances;
-  static_signature_contract.py initially fails its min(v_length) assertion, rc=1.
-- [x] **ROOT CAUSE (WHY + WHERE)** — actual infer_call/_matches guards differ from grammar5/6;
-  static_signature_contract.py --mutations distinguishes twelve actual predicate faults, rc=0.
-- [x] **FIX** — exact five-name tolerance role and listed variadic minimum; independent closed
-  eight-kind/22-name matrix, environmental reads and execution trapped.
-- [x] **ADDRESSED (verified)** — static_signature_contract.py --mutations →4032 cases/12 actual
-  assertion reds, rc=0; producer unchanged on disk. D112/D113 close; product static checking pending.
-- [x] **NO REGRESSION** — reference structure suite green; language16/publication9 pass, rc=0;
-  focused cargo test expression/canonical/recipe →34 passed/3 groups; staged make gate green, rc=0.
-- [x] **LOCKSTEP** — reference/book/annex/index/live/task/history agree; G1 stays5/18,
-  defects10open/102sealed. Next .5b.1b; prior milestone checklist retained verbatim below.
-  promotion: declined (existing independent-evidence policy; no new cross-cutting doctrine).
-
-### `G1-SLICE.5a.4` — full syntax milestone review
-
-- [x] **REPRODUCE / ISSUE** — full contract/grammar/examples reviewed against ten public formula
-  families; source census derives94 tests, native make check591/48groups pass0. D111 stale paragraph
-  contradicts canonical_recipe.rs and its public controls; original report sealed exactly.
-- [x] **ROOT CAUSE (WHY + WHERE)** — current contract2/ADR implementation prose lagged .3f.1c;
-  syntax scope required explicit complete and deferred maps. All existing Rust source/test bytes
-  compare exact ee42f5d; remaining .5 obligations map to23 safe children, rc=0.
-- [x] **FIX** — repair current status, publish full syntax proof map and .5b–.5g contracts;
-  preserve completed node graph11075B and prior closure1912B byte-identically in recipe sibling.
-- [x] **ADDRESSED (verified)** — coupled fault runner:seven actual compiled assertion reds/exact
-  four-source restore, rc=0; restored public input review5 pass0. Product syntax/identity unchanged.
-- [x] **NO REGRESSION** — make check591 tests/48groups, make wasm3 libraries and make probes25
-  suites terminal0; post-edit language16/publication9 pass0, tree10/13/10/zero gaps.
-- [x] **LOCKSTEP** — .5a closed; .5b.1 next, evaluator/operations pending. Book52/25 APIs/1093
-  source/1688 rendered links, D111 seal/current status and preserved history aligned; final staged
-  doctrine/retention/ledger receipts recorded in the recipe sibling before commit.
+[Exact completed records](G1-SLICE-canonical.md#completed-static-checklists--preserved-from13f8c75) are retained in the canonical sibling.
 
 ## Verification Log
 
@@ -990,3 +958,4 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 - `2026-10-02`: .5b.1b.1/STITCHCAD-G1-0076 repairs reference namespace/header phase; static1139/13 actual reds. D119 whole preflight next.
 - `2026-10-02`: .5b.1b.2/STITCHCAD-G1-0077 repairs whole preflight/measurement D119/D123;196 cases/14 actual reds. .1b done, .1c next.
 - `2026-10-02` (UTC): .5b.1c.1/STITCHCAD-G1-0078 maps static obligations, fixes D126; D124 diagnostic ruling .1c.2, D125 runtime .5e.3.
+- `2026-10-02` (UTC): .5e.3a/STITCHCAD-G1-0079 fixes D125 reference assertions;262 cases/eight actual reds. D124 pending, D122 independent next.

@@ -710,3 +710,129 @@ Staged `make gate` → === all doctrines green ===, rc=0; all scoped jobs observ
 ### Whole recipe identity final receipts
 
 [Exact complete record](G1-SLICE-recipes.md#whole-recipe-identity-final-receipts).
+
+## Completed static checklists — preserved from13f8c75
+
+Original docs/tasks/G1-SLICE.md block: 52 lines/4156B/SHA256 c701597a4f5cbd2435cd336f62253fc0ff3d32c951fb9077969f7d89b4e27634.
+
+### `G1-SLICE.5b.1b.0` — third exact retained window
+
+- [x] **REPRODUCE / ISSUE** — predecessor history has64 working Markdown files; capture_window3.py
+  freezes exact af98fff and derives62 raw records before another normal seal, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — unchanged64-file working bound includes two retained catalogs;
+  capture_window3.py proves189 logical full files against Git and repeated deterministic payloads, rc=0.
+- [x] **FIX** — retain window3 with existing reader/schema/caps; copy/prove/use before deleting
+  exactly62 raw copies, redirect63 maintained link destinations; prior windows remain exact.
+- [x] **ADDRESSED (verified)** — history_archive.py prove-source window3 →62 byte-identical full
+  files/0 missing-extra, rc=0; exclusive archive suite →28 pass/0 fail, CLI199 controls/191 reads.
+- [x] **NO REGRESSION** — make check →591 passed/48groups; make wasm/book terminal0;
+  make probes →26 suites green, rc=0; publication53/25 APIs/1102 source/1705 rendered links.
+- [x] **LOCKSTEP** — book/live/task/ledgers retained; G1 stays5/18, defects12open/102sealed;
+  .0v owns exceptional push/observed CI and newest committed refusal. D114/D115 scheduled SPINE.23.
+  promotion: declined (existing exact-window and independent-evidence policy applied).
+
+### `G1-SLICE.5b.1a` — current static signature slice
+
+Full protocol, fixtures, diagnosis and detailed receipts are in the recipe sibling's .5b.1a node.
+
+- [x] **REPRODUCE / ISSUE** — actual baseline rejects min/max(length) and admits size tolerances;
+  static_signature_contract.py initially fails its min(v_length) assertion, rc=1.
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual infer_call/_matches guards differ from grammar5/6;
+  static_signature_contract.py --mutations distinguishes twelve actual predicate faults, rc=0.
+- [x] **FIX** — exact five-name tolerance role and listed variadic minimum; independent closed
+  eight-kind/22-name matrix, environmental reads and execution trapped.
+- [x] **ADDRESSED (verified)** — static_signature_contract.py --mutations →4032 cases/12 actual
+  assertion reds, rc=0; producer unchanged on disk. D112/D113 close; product static checking pending.
+- [x] **NO REGRESSION** — reference structure suite green; language16/publication9 pass, rc=0;
+  focused cargo test expression/canonical/recipe →34 passed/3 groups; staged make gate green, rc=0.
+- [x] **LOCKSTEP** — reference/book/annex/index/live/task/history agree; G1 stays5/18,
+  defects10open/102sealed. Next .5b.1b; prior milestone checklist retained verbatim below.
+  promotion: declined (existing independent-evidence policy; no new cross-cutting doctrine).
+
+### `G1-SLICE.5a.4` — full syntax milestone review
+
+- [x] **REPRODUCE / ISSUE** — full contract/grammar/examples reviewed against ten public formula
+  families; source census derives94 tests, native make check591/48groups pass0. D111 stale paragraph
+  contradicts canonical_recipe.rs and its public controls; original report sealed exactly.
+- [x] **ROOT CAUSE (WHY + WHERE)** — current contract2/ADR implementation prose lagged .3f.1c;
+  syntax scope required explicit complete and deferred maps. All existing Rust source/test bytes
+  compare exact ee42f5d; remaining .5 obligations map to23 safe children, rc=0.
+- [x] **FIX** — repair current status, publish full syntax proof map and .5b–.5g contracts;
+  preserve completed node graph11075B and prior closure1912B byte-identically in recipe sibling.
+- [x] **ADDRESSED (verified)** — coupled fault runner:seven actual compiled assertion reds/exact
+  four-source restore, rc=0; restored public input review5 pass0. Product syntax/identity unchanged.
+- [x] **NO REGRESSION** — make check591 tests/48groups, make wasm3 libraries and make probes25
+  suites terminal0; post-edit language16/publication9 pass0, tree10/13/10/zero gaps.
+- [x] **LOCKSTEP** — .5a closed; .5b.1 next, evaluator/operations pending. Book52/25 APIs/1093
+  source/1688 rendered links, D111 seal/current status and preserved history aligned; final staged
+  doctrine/retention/ledger receipts recorded in the recipe sibling before commit.
+
+
+## Completed namespace and preflight receipts — preserved from13f8c75
+
+Original docs/tasks/G1-SLICE-evidence.md block: 63 lines/5643B/SHA256 6e7c34b99aabe774e372162cf60219bd28d61a8715f0d1185a5ec59ca013da29.
+
+### Namespace/header receipts — `G1-SLICE.5b.1b.1`, `2026-10-02`
+
+- Actual pre-repair four examples ACCEPTed, exit0: reserved let eps_num; measurement waist let
+  shadow; size_index assertion class with a bound context fixture; Boolean flag assertion. Actual
+  reserved T1 sin assertion ACCEPTed and missing-context reads misrouted, owned D121/D122, not fixed
+  or approved here. Whole preflight D119 absent and still next. Original report bodies retained.
+- Namespace producer independently compares nine declared origins/eight reserved names/six let kinds;
+  1139 cases, all81 ordered origin pairs,72 origin-kind combinations, every reserved binding/origin,
+  assertion64kind pairs/five classes, spelling/context/both-branch/forward/self/header refusals.
+  Kind/origin-only mappings and reserved kind-only views trap value/state/availability/geometry;
+  execution/storage/geometry callbacks trap. Parsing retains canonical literal-input work.
+- Thirteen compiled in-memory actual guard changes must fail named body assertions, not source-anchor
+  or input errors. Source unchanged. Initial uppercase kind fixture incorrectly expected dimension;
+  lexical parse refusal is correct, changed expectation only. Independent runtime-adapter controls
+  prove each original static defect refuses before execution.
+- First full reference suite exposed syntax-only tests relying on runtime infer traps: syntactically
+  legal reserved let now correctly refuses before those traps. Added actual syntax_statement phase;
+  fifteen header rows/6refusals and whole/canonical/worked source fixtures retain original bytes.
+  Invalid eps_chord expected token becomes grammar parse; canonical parameter replaces two fixture-only
+  computed_fixture origins. No grammar extension, numeric value or Rust API/serializer change.
+- Full reference suite terminal0: new1139/13 and existing4032signature/12actual reds, all original
+  syntax/input/numeric/identity checks green. Language runner16 controls terminal0. Focused cargo
+  statement/recipe/canonical-recipe30 tests/3groups terminal0; all tracked Rust source/tests exactHEAD.
+- Publication runner warning-free book rebuild/9controls terminal0:53chapters/25scoped APIs/
+  1105source/1710rendered links. New namespace annex/index/contract route and proof boundaries agree.
+- Canonical defect census13open/108unique sealed/overlap0. History196logical/10workingMarkdown/
+  9548decodedlines/724342decodedB/312856residentB; unchanged prior windows/reader/schema/caps.
+  Whole oldest G1-0059 payload independently matches Git predecessor; four original report bodies
+  retained in defects-part44. Ordinary focused gate/ledger receipts follow; no push exception touched.
+- Final ledger9/pointer13 and staged make gate13 doctrines green terminal0; toolbox route added.
+
+### Whole preflight receipts — `G1-SLICE.5b.1b.2`, `2026-10-02`
+
+- Reference previously has no preflight; L2 discovers errors during replay (D119). New196 independent
+  whole-source controls/14 compiled actual body assertion reds pass0. Metadata-only declarations,
+  reserved kind-only views and execution/storage/geometry traps; original slices/order/headers,
+  every origin/81 collisions/reserved names, no caller mutation or accepted prefix on late error.
+- Actual4095/4096 success, either header4097 domain refusal;255/256 nodes and15/16 if levels
+  success,257 nodes/depth17 refuse, including last-statement cases. Source unchanged during faults.
+- Full worked21-statement static preflight precedes L2. Two copied books' last assertion kind/name
+  errors precede first binding's zero divisor; every consumer execution callback trapped. Actual
+  shell control preserves17 bindings/four assertions/thirteen refusals, zero mismatches. Consumer
+  bypass/early numerical call fail body assertions. Product immutable graph remains .5b.2–.4.
+- D123 tools baseline copied25 ceiling: preflight21 succeeds, old L8 sums unrelated13 refusals
+  into34 and exits1. Actual accepted-plan measurement now21; copied25 control exits0, restoring
+  old aggregate in memory fails named body assertion. Limit remains4096 in canonical chapter.
+- Full reference suite terminal0, existing4032 signatures/12 reds and1139 namespaces/13 reds
+  retained; final whole-recipe producer terminal0 at14 reds. Language16/publication9 terminal0;
+  publication53chapters/25scoped APIs/1108source/1714rendered links, warning-free book.
+- First fault anchor matched both recipe-role refusals; it was rejected as setup evidence. Fixed
+  unique anchor, all claimed reds are actual body failures. L6 mutations now target non-executed
+  formula spans; L8 margin mutation100 avoids preempting its intended20x-margin proof. New producer
+  guards prove actual limits separately. No Rust source/test changed; no product validator claim.
+- Oldest G1-0060 ledger1090B and four old lesson records5136B match exact Git predecessor slices;
+  D119 original report retained, D123 added before repair. Existing archived windows/reader/caps
+  unchanged. Current ledger/retention/gate receipts follow; .1c takes next clean frontier.
+- Final ledger9/pointer13/publication9 and staged make gate13 doctrine checks pass, terminal0.
+  First gate refused missing explicit command-output/rc evidence in three new checklist boxes;
+  corrected the record using observed outputs, without weakening any checker. Tree census10lanes/
+  13trees/10siblings/0unowned-orphan-deadlinks. Defect census12open/110unique sealed/overlap0 from
+  materialized199 logical history records;13workingMarkdown/9669decodedlines/733308decodedB/
+  321822residentB. Rust source/test diff0; KnowledgeMap100lines/8181B; diff check0.
+
+Current frontier remains in [G1-SLICE](G1-SLICE.md#current-frontier).

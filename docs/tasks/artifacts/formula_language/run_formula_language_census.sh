@@ -226,9 +226,10 @@ def render(kind, internal, dp):
 
 # ── irrational functions, with pi derived rather than typed ────────────────────────────────
 class FErr(Exception):
-    def __init__(self, token, msg):
+    def __init__(self, token, msg, arguments=None):
         Exception.__init__(self, "%s: %s" % (token, msg))
         self.token, self.msg = token, msg
+        self.arguments = dict(arguments) if arguments is not None else {}
 
 def _atan_series(x):
     total, num, x2 = Decimal(0), x, x * x
@@ -898,7 +899,13 @@ class Evaluator:
             _, _, tol_name, left, right = checked
             a = self.evaluate(left, env); b = self.evaluate(right, env)
             tol = self.evaluate(("name", tol_name), env)
-            return ("assert", name, abs(a.v - b.v) <= tol.v, a, b)
+            if abs(a.v - b.v) > tol.v:
+                raise FErr("formula_assertion", "assert `%s`: %s != %s at `%s` (%s)"
+                           % (name, a, b, tol_name, tol.v),
+                           {"assertion_name": name, "left_kind": a.kind, "left_value": a.v,
+                            "right_kind": b.kind, "right_value": b.v,
+                            "tolerance_class": tol_name, "tolerance_value": tol.v})
+            return ("assert", name, True, a, b)
         _, _, kind, node = checked
         val = self.evaluate(node, env)
         return ("expr", None, val.kind, val, node)

@@ -258,3 +258,5 @@ Whole static recipe/consumer oracle: `python3 -I -B docs/tasks/artifacts/formula
 checks196 cases, replay/measurement controls and actual guard reds; watched by the structural runner.
 Static review: `python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations`
 checks21/13 book rows, envelope precedence and observed D124 forms; no runtime/exclusion approval.
+
+Assertion diagnostics: `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`; watched by structural suite.

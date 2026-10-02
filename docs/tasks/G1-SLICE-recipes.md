@@ -825,7 +825,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5e.1`
   Status: `pending`
-  D122: reference missing-value diagnostics must distinguish all nine origins before adapter proof.
+  D122: reference child .5e.1a in G1-SLICE-evidence.md repairs nine-origin/context diagnostics.
   Goal: explicit adapters for measurement/Ease/design/profile/material/size inputs and five
   authored states, preserving canonical identity, kind, source and provenance requirements.
   Acceptance: unknown has no value, derived reads follow their dependencies, assumed/preference
@@ -846,6 +846,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `pending`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.
   D121/D125: repair/verify reference provenance and false-assertion diagnostics before product proof.
+  Independent reference D125 repair .5e.3a is verified in G1-SLICE-evidence.md while D124 awaits ruling.
   Acceptance: all five named classes, context-supplied missing values, T2-or-looser when an
   irrational result contributes (including subsequent binding/reads), exact bare comparisons,
   assertion failure values/class/name and no substituted value/geometry after failure.
