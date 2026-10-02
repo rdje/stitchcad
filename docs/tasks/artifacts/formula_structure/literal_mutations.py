@@ -9,16 +9,16 @@ WORK.mkdir(exist_ok=True)
 ORIGINAL = SOURCE.read_bytes()
 TEXT = ORIGINAL.decode()
 CASES = [
-    ('unit input quantum', 'return ("lit", ukind, Fraction(rnd(value * factor)))',
+    ('unit input quantum', 'return self.literal(ukind, value * factor)',
      'return ("lit", ukind, value * factor)'),
-    ('bare decimal quantum', 'return ("lit", "ratio", Fraction(rnd(from_true("ratio", value))))',
+    ('bare decimal quantum', 'return self.literal("ratio", from_true("ratio", value))',
      'return ("lit", "ratio", from_true("ratio", value))'),
     ('tie away from zero', 'if 2 * r >= d: q += 1', 'if 2 * r > d: q += 1'),
     ('ratio scale', 'return Fraction(x) * RATIO_SCALE if kind == "ratio" else Fraction(x)',
      'return Fraction(x) * (RATIO_SCALE - 1) if kind == "ratio" else Fraction(x)'),
     ('count kind', 'return ("lit", "count", value)', 'return ("lit", "ratio", value)'),
-    ('direct unit factor', 'return ("lit", ukind, Fraction(rnd(value * factor)))',
-     'return ("lit", ukind, Fraction(rnd(value / factor)))'),
+    ('direct unit factor', 'return self.literal(ukind, value * factor)',
+     'return self.literal(ukind, value / factor)'),
 ]
 try:
     for number, (name, before, after) in enumerate(CASES, 1):

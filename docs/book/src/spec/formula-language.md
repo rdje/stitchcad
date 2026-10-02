@@ -144,7 +144,14 @@ operations on those canonical inputs; they do not retain hidden fractions in an 
 Arithmetic is **exact rational arithmetic** — `+` `-` `*` `/` never round, and an implementation uses
 arbitrary-precision integers for numerator and denominator. The contract is the value, not the
 representation: a numerator or denominator past `max_rational_bits` (§4.3) is `formula_domain`, not a
-hang. Implicit rounding has two boundaries:
+hang. The signed length/area domains in units §1.1 and the nonnegative count domain (§2) apply to
+every completed numeric expression result, using its exact internal-unit value before binding
+rounding. A later cancellation or rounding cannot rescue an out-of-domain intermediate. Canonical
+literal inputs are checked after their one input conversion/rounding; their exact pre-round value
+still obeys the reduced-rational width bound. An exact count fraction may remain nonnegative until
+binding rounds it to an integer; unary count negation remains a dimensional refusal (grammar §5).
+The geometry-only piece-box limit needs geometry context and is not a smaller scalar length bound.
+Implicit rounding has two boundaries:
 
 - **an irrational call** — `sqrt`, `hypot`, the trigonometric functions and `arc_length` return the
   nearest internal quantum to the true value, ties away from zero. They are specified by that

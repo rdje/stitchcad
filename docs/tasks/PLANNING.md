@@ -473,7 +473,8 @@ implicit operator rounding is removed, explicit and irrational quantization rema
     D84 ruling confirms this raw sweep behavior is desired; it is not a missing modulo defect.
   - Impact: reference success is insufficient evidence for numeric/binding domains.
   - Width repair: .5a.3b.3a.2 now refuses reduced values above128 bits at input/result boundaries;
-    61 controls/twelve actual reds verify this portion. D83 remains open for scalar domains/i64.
+    61 controls/twelve actual reds verify this portion. Scalar .3b.2 now verifies signed length/area
+    and nonnegative count with57 controls/eleven actual reds; D83 remains open for i64 storage .3.
   - Owner/schedule: G1-SLICE.5a.3b.3b, after width enforcement and before product normalization.
     D84 records the director’s direction/sweep distinction; rational/scalar repairs implement no
     formula modulo. Remaining signed-angle verification stays owned by .3c.
@@ -748,3 +749,8 @@ G1-SLICE.5a.3b.3b.1c accepts only explicit single-span Rust context outside norm
 thirteen independent book verdicts/five actual mutation reds verify isolation and refusals. D93’s
 annex count now matches twelve observed rational mutation reds; D34’s index label is corrected,
 while PLANNING.5 retains derived-frontier ownership.
+
+D94 is sealed in [`stitchcad-defects-part26.md`](../history/stitchcad-defects-part26.md).
+G1-SLICE.5a.3b.3b.2 supplies quiet table-only numeric setup; scalar/rational/angular families no
+longer execute arithmetic assertions on import. The quiet-loader mutation fails its own assertion;
+all family guard mutations and restored controls pass independently.

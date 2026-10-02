@@ -268,7 +268,8 @@ rounding/refusal boundaries. Nine actual arithmetic/scale/zero/branch/quantizati
 assertion failures and byte-identical restoration; run alone. The selector checks use the reference's
 length-only edge model, and certify no real curve inversion or geometric accuracy.
 
-D83 remains open for numeric domains and rational limits; D84 owns signed-angle verification. This is partial
+D83 remains open for i64 input/binding limits; rational and scalar proofs appear below. D84 owns
+signed-angle verification. This is partial
 reference evidence, not a complete production evaluator, cross-platform numerical signoff, command
 API or release certificate. The next audit must close those gaps before product normalization uses
 this instrument as an oracle.
@@ -330,8 +331,8 @@ assertion failures and exact restoration; run alone. The earlier literal/arithme
 seven mutation controls also pass. Angle tests require the exact pole reason: an unrelated rational
 refusal cannot count as evidence for a missing mathematical-domain guard (D88).
 
-This closes only D83's width portion. Scalar domains and signed i64 storage bounds remain owned by
-G1-SLICE.5a.3b.3b; D84 signed-angle verification remains .3c. Product numeric normalization and
+D83's scalar domains are checked below; signed i64 input/binding limits remain owned by
+G1-SLICE.5a.3b.3b.3; D84 signed-angle verification remains .3c. Product numeric normalization and
 full evaluation are still pending. The curated transcendental reference is not a production certificate.
 
 ## Inline documentation language context
@@ -361,3 +362,40 @@ its fifteen existing agreement/refusal arms. Five actual classifier mutations di
 whole-line or normative exemptions, missing refusal counts and unknown-language acceptance; they
 require assertion reds and byte-identical restoration. Run mutations alone. Numeric reference and
 product syntax behavior are unchanged; evaluator/API/MCP and release proof remain separately owned.
+
+## Reference scalar-domain boundaries
+
+D83 length and area results now obey the signed limits from the units chapter; count results never
+become negative. The reference reads those declarations rather than copying numeric constants.
+Reduced rational width is checked first. Canonical literals check their rounded input value even in
+untaken branches; completed expression values check their exact fraction before binding rounding.
+For example, `1000000000.4 um` rounds to a valid endpoint at input, but
+`1000000000 um + 1 um / 10` refuses before a binding can hide its excess. A count expression `0 - 1`
+also refuses, while an exact nonnegative count fraction can survive until its binding round.
+
+Every numeric name, operator and call result enters the same scalar boundary, including selectors
+and implicit tolerance reads. Refusals name the actual operation, kind, signed measured fraction and
+inclusive bounds. A lazy branch's arithmetic does not run, but its literals still canonicalize.
+Opaque point/edge references are not scalar numbers; selecting their numeric contents checks those
+returned values. This is the curated reference's limited geometry model, not geometric signoff.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_scalar_mutations.sh
+```
+
+Fifty-seven independent Fraction/domain controls cover endpoints, fractional excess, signs,
+canonical half-quantum boundaries, calls/selectors/tolerances, lazy branches, declared-bound changes
+and quiet shared setup. Eleven actual scalar/context mutations require assertion reds and exact
+restoration; run alone. Existing twelve rational, six literal, nine arithmetic, seven angular and
+five inline-context mutation controls also pass. Width fixtures that used invalid huge lengths now
+use unrestricted kinds or tiny valid fractions, preserving their sixty-one width controls.
+
+D94 separates shared table-driven setup from arithmetic assertions: loading scalar, rational or
+angular context no longer executes another family's tests. The quiet-load control and mutation
+verify this boundary. Shared setup is not an independent numeric oracle; each family's explicit
+expected values/refusals remain independently authored.
+
+D83 signed i64 canonical-input/binding limits remain .3b.3, and D84 signed-angle verification remains
+.3c. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
+normalization/evaluation, real geometry, command/API/MCP and production release remain separate work.

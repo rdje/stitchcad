@@ -3,9 +3,7 @@ from pathlib import Path
 from fractions import Fraction
 import runpy
 ROOT = Path(__file__).resolve().parents[4]
-# Reuse table-only reference context; this executes its restored arithmetic contracts as a control.
-context = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/arithmetic_contract.py'))
-namespace, reference = context['namespace'], context['reference']
+namespace, reference = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/formula_input.py'))['load_arithmetic_context']()
 reference.sigs.update({name: [(['angle'], False, 'ratio')] for name in ['sin', 'cos', 'tan']})
 reference.sigs.update({'arc_length': [(['angle', 'length'], False, 'length')],
                        'atan': [(['ratio'], False, 'angle')],

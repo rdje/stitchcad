@@ -3,21 +3,7 @@ from fractions import Fraction
 from pathlib import Path
 import runpy
 ROOT = Path(__file__).resolve().parents[4]
-namespace, reference = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/formula_input.py'))['load_context']()
-grammar = namespace['sections'](str(ROOT / 'docs/book/src/spec/formula-language/grammar.md'))
-# Load only published dimension signatures. This is test context, not another evaluator/parser.
-for left, right, product, quotient in namespace['table_in'](grammar['5.1'], 'Left')[1]:
-    left, right = namespace['debacktick'](left), namespace['debacktick'](right)
-    product, quotient = namespace['debacktick'](product), namespace['debacktick'](quotient)
-    product = None if product == '—' else product
-    quotient = None if quotient == '—' else quotient
-    reference.pairs[left, right] = {'*': product, '/': quotient}
-    if product:
-        reference.pairs.setdefault((right, left), {})['*'] = product
-reference.sigs = {'param_at': [(['edge', 'length'], False, 'ratio')],
-                  'round_to': [(['T', 'T'], False, 'T')],
-                  'sqrt': [(['area'], False, 'length'), (['ratio'], False, 'ratio')],
-                  'hypot': [(['length', 'length'], False, 'length')]}
+namespace, reference = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/formula_input.py'))['load_arithmetic_context']()
 checks = 0
 
 def value(source, kind, expected, env=None):

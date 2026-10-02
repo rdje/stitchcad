@@ -316,3 +316,35 @@ reviewed unchanged. Staged make gate→all doctrines green, rc=0.
 - `2026-10-02`: D90 actual operation retained through typed/rendered domain failures; D92 cause/relation
   inference removed. D91 context, D83 scalar/i64 and D84 signed-angle proofs retain next ownership.
 - promotion: declined (routine completion of the existing typed-error and truthful-diagnostic contract).
+
+## Inline-context progress — preserved from 0a6e9b0
+
+## Verification Log
+
+[Historical domain-context journals](G1-SLICE-journal.md#domain-context-progress--preserved-from-d91df0a)
+retain prior evidence.
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.3b.1c` | context13/five reds; rational twelve reds; restored focused checks | D91 context/D93 count repaired; scalar domains next |
+
+Focused recording checks: language16 including context13 pass, rc=0. Structural16/end-to-end2,
+input130/end-to-end3, expression fixtures12; literals60/361, arithmetic24/100/162, angle42/72/math42
+and rational61 green, rc=0. Publication9/ledger9 pass;48 chapters/16 APIs/998 source/1525 rendered
+links, rc=0. Archive verify/retention→121 logical/58 working Markdown/7037 lines/561998 decoded/
+288608 resident bytes, rc=0. Tree10/13/eight/zero gaps; glossary310/nine/158/no index drift;
+feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/zero mismatch, rc=0. Exact
+predecessor evidence/ledger preservation and reconstructed defects12 open/80 sealed/zero overlap
+verified, rc=0. README unchanged. Staged make gate→all doctrines green, rc=0.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3b.1c` | `STITCHCAD-G1-0048 (leaf G1-SLICE.5a.3b.3b.1c): inline code language context stays local` | context13/five actual reds; focused language/reference/publication checks |
+
+## Changelog
+
+- `2026-10-02`: D91 explicit local Rust context; D93 annex rational count matches the actual suite;
+  D34 current index cell synchronized. D83 scalar/i64 and D84 signed-angle proofs retain next ownership.
+- promotion: declined (routine book-instrument context and evidence synchronization repair).

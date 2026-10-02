@@ -33,6 +33,26 @@ def load_context():
     return namespace, reference
 
 
+def load_arithmetic_context():
+    """Table-driven numeric fixture context only; never execute a contract as an import."""
+    namespace, reference = load_context()
+    grammar = namespace['sections'](str(ROOT / 'docs/book/src/spec/formula-language/grammar.md'))
+    # Load only published dimension signatures. This is test context, not another evaluator/parser.
+    for left, right, product, quotient in namespace['table_in'](grammar['5.1'], 'Left')[1]:
+        left, right = namespace['debacktick'](left), namespace['debacktick'](right)
+        product, quotient = namespace['debacktick'](product), namespace['debacktick'](quotient)
+        product = None if product == '—' else product
+        quotient = None if quotient == '—' else quotient
+        reference.pairs[left, right] = {'*': product, '/': quotient}
+        if product:
+            reference.pairs.setdefault((right, left), {})['*'] = product
+    reference.sigs = {'param_at': [(['edge', 'length'], False, 'ratio')],
+                      'round_to': [(['T', 'T'], False, 'T')],
+                      'sqrt': [(['area'], False, 'length'), (['ratio'], False, 'ratio')],
+                      'hypot': [(['length', 'length'], False, 'length')]}
+    return namespace, reference
+
+
 def contracts():
     namespace, reference = load_context()
     error_type = namespace['FErr']

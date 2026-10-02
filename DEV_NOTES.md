@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — scalar domains guard exact values at the correct boundary
+
+- D83 predecessor accepts1000000001 um; its result wrapper checks width only. Scalar domains
+  now read normative declarations. Canonical inputs round once before validation; exact completed
+  nodes check before binding. Fractional excess and invalid children cannot be rescued by rounding.
+- Count stays nonnegative with exact fractions until binding; unary negation still refuses by kind.
+  Ratio/angle gain no magnitude bound here. Piece-box10m stays geometry context. Typed errors retain
+  operation/kind/bounds/fraction.
+- Scalar57/eleven actual reds verify boundaries, half-quanta, lazy branches and changed declarations.
+  Width fixtures replace invalid huge lengths with unrestricted kinds/tiny fractions:61 controls/
+  twelve actual reds retain discrimination. Literal6/arith9/angle7/inline5 reds restore exact bytes.
+- D94's mutation trace exposed unrelated arithmetic execution during context loading. Quiet shared
+  setup now separates each family's assertions; its output mutation proves isolation. The setup
+  is not an independent oracle. Each family retains its independently authored expected outcomes.
+- Book/live/task records and exact earlier payloads agree. D83 i64 .3 and D84 signed-angle .3c
+  remain next; no production evaluator, real geometry, MCP or arbitrary-input numerical certificate.
+- promotion: declined (routine enforcement of existing scalar domains and isolated verification).
+
 ## _(2026-10-02)_ — code language is declared per span, never inferred from punctuation
 
 - D91 L6b chose inline spans by formula-like operators; valid Rust question-mark handling therefore
@@ -79,25 +97,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - D83 scalar domains/i64 and D84 signed-angle verification remain owned next; no new Rust evaluator,
   arbitrary-input transcendental, release or MCP proof. Predecessor evidence/history retain exact bytes.
 - promotion: declined (routine enforcement of existing rational/domain and verification contracts).
-
-## _(2026-10-02)_ — angle storage units must reach the irrational call unchanged
-
-- The angle audit found a foundational scale error, not merely a missing binding modulo: to_true
-  rescales ratio only, while trig/arc_length treated internal microdegrees as degrees. Full-turn arc
-  around radius1 um returned6283185 rather than6; sin90 returned0 and cos90 returned1000000.
-  Source history 3704b8a introduced both unscaled radian paths, dir truncation and no tangent pole guard.
-- One shared direct conversion divides microdegrees by180000000 before multiplying by pi; it keeps
-  signed/multi-turn/fractional sweeps. dir rounds before normalization, agreeing with atan2. Exact
-  tangent poles use rational modulo180deg and raise formula_domain; representable neighbors remain finite.
-- Forty-two explicit rows/72 controls and an independent standard-library math oracle agree on defined
-  curated arguments. Seven actual source mutations discriminate scale, sweep, fractional precision,
-  dir rounding, pole/period/token. Decimal60 scope remains curated, not an arbitrary-input certificate.
-- The director resolved D84: signed/multi-turn formula values persist; entity direction fields
-  normalize. Specifications and the durable decision align; .3c still owns binding/equality and
-  signed inverse-trig verification. D83 rational/scalar guards continue independently.
-- Expert annex/grammar and live task pointers match the repair; prior arithmetic and history payloads
-  preserve exact text. Older task decisions/journals are retained rather than expanding live caps.
-- promotion: promoted by `decision_angles.md` (director’s storage ruling).
 
 # Sealed archive — earlier lessons
 
@@ -178,3 +177,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part46.md`](docs/history/stitchcad-devnotes-part46.md) | signed reconstruction lesson | 17 lines, 1562 bytes, `sha256:d00c7340…` |
 
 | [`devnotes-part47.md`](docs/history/stitchcad-devnotes-part47.md) | literal identity lesson | 17 lines, 1561 bytes, `sha256:1b718cca…` |
+
+| [`devnotes-part48.md`](docs/history/stitchcad-devnotes-part48.md) | angular conversion lesson | 18 lines, 1649 bytes, `sha256:376d37ac…` |

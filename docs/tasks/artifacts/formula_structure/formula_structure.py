@@ -33,7 +33,8 @@ def load_reference():
         r'^\| `(max_[a-z_]+)` \| ([0-9]+) \|', contract, re.M)}
     assert limits == {'max_expression_nodes': 256, 'max_recipe_statements': 4096,
                       'max_if_depth': 16, 'max_rational_bits': 128}, 'normative limits changed'
-    evaluator = namespace['Evaluator']([], {}, {}, {}, {}, limits, {})
+    domains = namespace['scalar_domains'](str(ROOT / 'docs/book/src'))
+    evaluator = namespace['Evaluator']([], {}, {}, {}, {}, limits, {}, domains)
     return namespace, evaluator
 
 

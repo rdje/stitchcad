@@ -183,3 +183,10 @@ checks thirteen independent copied-book verdicts; the existing language probe su
 `bash docs/tasks/artifacts/formula_language/run_inline_context_mutations.sh` requires five actual
 classifier assertion reds and exact restoration; run alone. Explicit Rust context excludes one
 span outside normative formula parts only; malformed context refuses, adjacent formulas stay checked.
+
+Scalar reference: `python3 -I -B docs/tasks/artifacts/formula_structure/scalar_contract.py` checks
+57 independent Fraction/domain controls; the structural suite watches them. Actual declarations
+supply signed length/area and nonnegative Count bounds; quiet numeric setup executes no unrelated
+contracts. `bash docs/tasks/artifacts/formula_structure/run_scalar_mutations.sh` requires eleven
+actual assertion reds and multi-source byte restoration; run alone. Scalar checks do not close
+D83 i64 storage or D84 signed-angle verification, nor supply production numeric evaluation.

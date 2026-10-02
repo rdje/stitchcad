@@ -593,3 +593,77 @@ Current work remains in the parent.
 - [x] **LOCKSTEP** — book operation-field migration, signed/zero truthful messages and honest proof
   boundaries match Rust. Learner/glossary/index/annex routes retained. Exact prior task evidence and
   oldest live payloads preserved. G1 stays5/18, sc-units40; live13/sealed78, next D91 .3b.1c.
+
+## Inline-context contract and evidence — preserved from 0a6e9b0
+
+- ID: `G1-SLICE.5a.3b.3b.1c`
+  Status: `done`
+  Goal: D91 formula-vocabulary census honors explicit foreign-code context; preserve actual formula
+  operator refusals and add Rust-positive/formula-negative controls before normalization oracle use.
+  Pre-code protocol: read L6a/b/d populations and line-local code-span extraction, existing fifteen
+  end-to-end probes and expert annex. Formula characters stay closed; ? is never globally permitted.
+  Outside the three normative formula parts only, allow an exact immediate inline annotation
+  <!-- stitchcad-inline: rust --> before one backtick span. Skip that single declared foreign span,
+  never adjacent unannotated spans, a whole line/chapter or formula positions in the normative parts.
+  Refuse unknown/malformed/detached annotations and any foreign annotation inside formula parts.
+  New scratch-book controls must reproduce predecessor Rust-positive failure, verify Rust ? accepted,
+  unannotated/formula ? and adjacent bad operator still refused, malformed context and normative
+  exemption refused. Add real census mutations removing/overbroadening exemption; prove actual
+  contract assertion reds/restoration. Keep reference evaluator/parser/numeric contracts unchanged.
+  D93 annex mutation-count drift is also owned here; derive twelve actual cases and re-run their reds.
+  Repair the stale D34 task index cell to match this verified frontier; D34’s derived-pointer task
+  remains owned by PLANNING.5. Synchronize book authoring annex and live records; preserve preceding
+  task protocol/checklist/journal and oldest ledgers byte-exact. Run focused language/structural/
+  publication/ledger/archive/censuses and staged gate before commit; no new Rust product claim.
+  Verification: thirteen independent copied-book verdicts/five actual reds/exact restore; focused gates.
+  Commit: `STITCHCAD-G1-0048` (this recording commit).
+
+### `G1-SLICE.5a.3b.3b.1c` — inline code language context
+
+- [x] **REPRODUCE / ISSUE** — predecessor inline_context_contract.py→AssertionError on valid
+  annotated Rust, rc=1; actual census names L6b question mark, not a syntax/loading failure.
+- [x] **ROOT CAUSE (WHY + WHERE)** — census code_spans discarded language context; outside-part
+  L6b operator heuristic classified Rust as formula. Inspect actual HEAD d91df0a signatures→no
+  annotation/context argument and operator-driven population, rc=0. D93 AST case count→12 versus
+  annex Ten, rc=0; D34 index cell still D79 while committed MEMORY points to D91 (rg, rc=0).
+- [x] **FIX** — exact immediate single Rust annotation outside normative parts; adjacent spans remain
+  in the operator population. Malformed/unknown/detached/normative annotations refuse L6e and count
+  in final mismatches; ? is unchanged. Correct D93 annex to twelve and D34 current index cell.
+- [x] **ADDRESSED (verified)** — inline_context_contract.py→13 independent book verdicts/0 fail,
+  rc=0. run_inline_context_mutations.sh→five actual assertion reds, rc1 each, exact restoration/
+  runner0. run_rational_mutations.sh→twelve actual reds and exact restoration, rc=0; annex corrected.
+- [x] **NO REGRESSION** — run_formula_language_probes.sh→16 pass/0 fail, rc=0; structural/numeric
+  reference, publication9/ledger9/archive/censuses green, rc=0 (details below). Staged make gate→all doctrines green, rc=0.
+  No Rust changed; no new native/WASM/CI claim. Marker declares author intent, not Rust validity.
+- [x] **LOCKSTEP** — inline migration examples and expert context annex match executable census;
+  progressive learner/glossary/index routes retained. Exact previous task protocol/checklist/journal
+  and oldest payloads preserved. G1 stays5/18; live12/sealed80; next D83 .3b.2. D34 derivation stays owned.
+
+## Scalar-domain contract — completed in G1-0049
+
+- ID: `G1-SLICE.5a.3b.3b.2`
+  Status: `done`
+  Goal: D83 reference signed length/area and nonnegative count domains at completed value boundaries;
+  align exact Fraction tests with production invariants after .1a/.1b, no extra arithmetic rounding.
+  Pre-code protocol: units1.1 declares signed length±10^9/area±10^18; formula2 declares Count
+  never negative, formula4.2 retains exact arithmetic and grammar5 forbids Count unary negation.
+  Read length/area bounds from the actual units table and confirm the nonnegative Count contract;
+  no duplicate hardcoded numeric limit or scalar use of the geometry-only piece-box10m bound.
+  Add typed scalar check to every completed numeric node, after existing rational-width refusal;
+  canonical literals check their rounded input value during parsing, including untaken branches.
+  Exact expression fractions are checked before binding rounding. Count fractions remain exact and
+  nonnegative until binding; ratio/angle have no extra scalar bound here (i64 storage is .3).
+  Test independent Fraction endpoints/signs/just-outside values, input half-quantum boundaries,
+  literal/name/operator/call/selector/tolerance paths, lazy branches and unchanged opaque refs.
+  First reproduce actual predecessor length acceptance; require specific operation/kind/bounds/
+  measured value and token for refusals, not just any domain error. Mutate actual guards and restore
+  bytes with no overlapping build/probe. Update width fixtures whose huge lengths are now invalid:
+  retain 128-bit refusal controls using unrestricted ratio/count values or tiny valid fractions,
+  never exempt domain checks to keep old fixtures green. Re-run twelve width/six literal/nine
+  arithmetic/seven angular/five inline mutations and focused structural/language/book checks.
+  D94 is also owned here: extract table-only context loading from arithmetic test execution so
+  unrelated failures cannot contaminate scalar/rational/angular mutation evidence; prove quiet load.
+  Update normative boundary explanation/expert annex and live records; preserve prior task/ledger
+  payloads exactly. D83 remains open for i64 .3; no production evaluator or geometry/MCP claim.
+  Verification: scalar57/eleven actual reds; rational61/twelve reds; restored focused checks.
+  Commit: `STITCHCAD-G1-0049` (this recording commit).

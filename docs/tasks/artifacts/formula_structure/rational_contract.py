@@ -3,8 +3,7 @@ from fractions import Fraction
 from pathlib import Path
 import runpy
 ROOT = Path(__file__).resolve().parents[4]
-context = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/arithmetic_contract.py'))
-namespace, reference = context['namespace'], context['reference']
+namespace, reference = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/formula_input.py'))['load_arithmetic_context']()
 checks = 0
 
 def run(source, env=None):
@@ -74,15 +73,16 @@ refuse(str(2 ** 127) + ' m', 147, 'literal length')
 big = 2 ** 127
 # Every completed node is bounded: a later cancellation must not rescue an oversized sum/product.
 refuse('%d + %d - %d' % (big, big, big), 129, 'bin')
-refuse('%d um - -%d um' % (big, big), 129, 'bin')
-refuse('(%d um) ^ 2' % (2 ** 64), 129, 'sq')
+wide_ratio = {'x': {'kind': 'ratio', 'value': Fraction(big), 'origin': 'parameter'}}
+refuse('x - -x', 129, 'bin', wide_ratio)
+refuse('(1 um / %d) ^ 2' % (2 ** 64), 129, 'sq')
 refuse('%d * %d' % (2 ** 64, 2 ** 64), 129, 'bin')
 refuse('(1 um / %d) / %d' % (2 ** 64, 2 ** 65), 130, 'bin')
 sum_env = {name: {'kind': 'length', 'value': Fraction(1, denominator), 'origin': 'parameter'}
            for name, denominator in [('x', 2 ** 65 - 1), ('y', 2 ** 65 + 1)]}
 refuse('x + y', 130, 'bin', sum_env)
 accept('0', 0)
-accept('-%d um' % big, -big)
+accept('-x', -big, {'x': {'kind': 'angle', 'value': Fraction(big), 'origin': 'parameter'}})
 # The published bound is consumed, never duplicated as an evaluator constant.
 reference.limits['max_rational_bits'] = 127
 error = None

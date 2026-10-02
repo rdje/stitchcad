@@ -88,6 +88,17 @@ the digests afterwards.
 
 | [`changelog-part44.md`](docs/history/stitchcad-changelog-part44.md) | STITCHCAD-G1-0027 | 6 lines, 465 bytes, `sha256:2c04058f…` |
 
+| [`changelog-part45.md`](docs/history/stitchcad-changelog-part45.md) | STITCHCAD-SPINE-0019b | 9 lines, 809 bytes, `sha256:dfe49803…` |
+
+## STITCHCAD-G1-0049 - reference scalar domains refuse exact excess (leaf `G1-SLICE.5a.3b.3b.2`)
+
+D83 signed length/area and nonnegative Count domains now consume normative declarations. Rounded
+canonical inputs and exact completed results check at their own boundaries; no extra operator
+rounding. Scalar57/eleven actual reds and rational61/twelve reds pass; literal6/arith9/angle7/inline5
+reds restore exact sources. D94 quiet context loading separates each test family’s assertions.
+Book semantics/annex/live records and retained history agree; G1 stays5/18;
+defects12 open/81 sealed. Next D83 i64 storage .3 then D84. No new production evaluator/MCP claim.
+
 ## STITCHCAD-G1-0048 - inline code language context stays local (leaf `G1-SLICE.5a.3b.3b.1c`)
 
 D91 accepts one explicit Rust span; normative/adjacent formulas remain checked. Context13/five actual
@@ -381,13 +392,3 @@ For ebed2c5, doctrine run36931196049/job110600555955 and Rust run36931196050/job
 completed success; every step successful, including Python prerequisite/enforcer and Rust/WASM.
 Post-commit archive probes 27/0 include committed-window mutation. Doc-only verdict; book/censuses/
 staged gate pass. Archive transition closes; next product G1 .4a.3. No new seal or status change.
-
-## STITCHCAD-SPINE-0019b - self-contained bounded history windows (leaf `SPINE.19.2`)
-
-D65: retained all 64 historical files byte for byte in a content-addressed window; complete manifests
-and catalog preserve logical paths. Reader list/read/materialize/verify works without historical Git
-objects; exact capture reconstruction is independently proved. Decoded and resident storage retain
-original aggregate bounds, with finite controls/payload/decompression and immutable committed windows.
-Ledger probes consume logical records, all nine arms pass. D68 fixes the coverage mutation's unrelated
-false pass. New archive refusals, binary sizing, strict Rust/WASM/book/full probes and staged gates pass;
-exceptional push/observed CI follow in .19.2v. Older live records seal unchanged; product remains G1 .4a.3.

@@ -293,9 +293,10 @@ class Val:
 
 # ── the evaluator: written from grammar §1–§7, driven by the chapter's own tables ──────────
 class Evaluator:
-    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units):
+    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units, domains):
         self.bindable, self.pairs, self.sigs = bindable, pairs, sigs
         self.reserved, self.envelope, self.limits, self.units = reserved, envelope, limits, units
+        self.domains = domains
         self.max_nodes = self.max_bits = self.max_if = 0
 
     TOK = re.compile(r"""(?P<cmp>==|!=|<=|>=|<|>)|(?P<op>[-+*/^=(),:])|(?P<num>\d+\.\d+|\d+)
@@ -442,12 +443,13 @@ class Evaluator:
             if unit is None:
                 if "." in text:
                     self.see(from_true("ratio", value), "literal ratio conversion")
-                    return ("lit", "ratio", Fraction(rnd(from_true("ratio", value))))
+                    return self.literal("ratio", from_true("ratio", value))
                 self.see(value, "literal count")
+                self.scalar("count", value, "literal count input")
                 return ("lit", "count", value)
             ukind, factor = self.units[unit]
             self.see(value * factor, "literal %s conversion" % ukind)
-            return ("lit", ukind, Fraction(rnd(value * factor)))
+            return self.literal(ukind, value * factor)
         if kind == "id":
             self._identifier(text)
             self.take()
@@ -499,6 +501,22 @@ class Evaluator:
         if bits > bound:
             raise FErr("formula_domain", "%s: rational max_rational_bits=%d, measured=%d"
                        % (operation, bound, bits))
+
+    def scalar(self, kind, value, operation):
+        """Exact completed scalar domain; independent of rounding and reduced-value width."""
+        if kind not in self.domains:
+            return
+        low, high = self.domains[kind]
+        value = Fraction(value)
+        if value < low or (high is not None and value > high):
+            bound = "[%s, %s]" % (low, high if high is not None else "unbounded")
+            raise FErr("formula_domain", "%s: %s domain=%s, measured=%s"
+                       % (operation, kind, bound, value))
+
+    def literal(self, kind, exact):
+        rounded = Fraction(rnd(exact))
+        self.scalar(kind, rounded, "literal %s input" % kind)
+        return ("lit", kind, rounded)
 
     # -- static kind inference --
     def infer(self, node, env):
@@ -598,6 +616,8 @@ class Evaluator:
         value = self._evaluate(node, env)
         if value.kind in ARITH:
             self.see(value.v, "%s %s result" % (node[0], value.kind))
+            operation = node[0] + (" " + node[1] if node[0] in ("name", "bin", "call") else "")
+            self.scalar(value.kind, value.v, "%s %s result" % (operation, value.kind))
         return value
 
     def _evaluate(self, node, env):
@@ -853,6 +873,29 @@ def parse_ratio_literal(cell):
     if not m: return None
     return Fraction(Decimal(m.group(1))) / Fraction(Decimal(m.group(2)))
 
+def scalar_domains(book):
+    """Consume the declared scalar domains; the piece-box row requires geometry context."""
+    unit_sections = sections(str(pathlib.Path(book) / "spec/units-and-tolerances.md"))
+    domains = {}
+    digits = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹", "0123456789")
+    for row in table_in(unit_sections["1.1"], "Quantity")[1]:
+        kind = "length" if row[0] == "a coordinate or a length" else "area" if row[0].startswith("an area") else None
+        if kind is None:
+            continue
+        match = re.fullmatch(r"\|v\| ≤ 10([⁰¹²³⁴⁵⁶⁷⁸⁹]+) µm(²)?", row[1])
+        if match is None or bool(match[2]) != (kind == "area") or kind in domains:
+            raise ValueError("units §1.1: invalid or duplicate %s scalar domain" % kind)
+        bound = 10 ** int(match[1].translate(digits))
+        domains[kind] = (-bound, bound)
+    if set(domains) != {"length", "area"}:
+        raise ValueError("units §1.1: missing length/area scalar domain")
+    kinds = sections(str(pathlib.Path(book) / "spec/formula-language.md"))
+    count = [row for row in table_in(kinds["2"], "Kind")[1] if debacktick(row[0]) == "count"]
+    if len(count) != 1 or "never negative" not in count[0][1]:
+        raise ValueError("formula §2: missing nonnegative Count contract")
+    domains["count"] = (0, None)
+    return domains
+
 print("=== formula-language census ===")
 
 # ── read the chapter's own tables ─────────────────────────────────────────────────────────
@@ -941,7 +984,12 @@ read_sigs("6", "Function")
 read_sigs("6.1", "Selector")
 declared_functions = set(sigs)
 
-EV = Evaluator(bindable, pairs, sigs, reserved, envelope, limits, units)
+try:
+    domains = scalar_domains(BOOK)
+except (OSError, ValueError, KeyError) as error:
+    print("formula-language census: REFUSED — scalar domain source: %s" % error)
+    sys.exit(2)
+EV = Evaluator(bindable, pairs, sigs, reserved, envelope, limits, units, domains)
 print("-- tables read from the chapter")
 print("  kinds: %d (%d bindable) · unit tokens: %d · reserved: %d · signature rows: %d"
       % (len(kinds), len(bindable), len(units), len(reserved), sum(len(v) for v in sigs.values())))
