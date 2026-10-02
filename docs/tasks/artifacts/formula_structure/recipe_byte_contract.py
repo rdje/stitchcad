@@ -36,12 +36,8 @@ def statement_bytes(source):
     role, name, colon, annotation, assignment = [value for _, value in tokens[:5]]
     assert colon == ':' and assignment == '=' and role in ['let', 'assert']
     parsed.clear()
-    try:
-        reference.statement(source, {})
-    except SyntaxReached:
-        pass
-    else:
-        raise AssertionError(('reference unexpectedly executed statement', source))
+    checked = reference.syntax_statement(source)
+    assert checked[:3] == (role, name, annotation), ('actual syntax header', source, checked)
     operands = list(map(render, parsed))
     assert len(operands) == (1 if role == 'let' else 2)
     opcode = 'bind' if role == 'let' else 'assert'

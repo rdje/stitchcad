@@ -144,6 +144,17 @@ the digests afterwards.
 
 | [`changelog-part72.md`](docs/history/stitchcad-changelog-part72.md) | STITCHCAD-G1-0058 | 12 lines, 970 bytes, `sha256:ef59b0a1…` |
 
+| [`changelog-part73.md`](docs/history/stitchcad-changelog-part73.md) | STITCHCAD-G1-0059 | 13 lines, 1095 bytes, `sha256:eea1fea0…` |
+
+## STITCHCAD-G1-0076 - reference namespace and static headers (leaf `G1-SLICE.5b.1b.1`)
+
+Reference syntax/static/runtime phases separate. Declaration pairs retain nine-origin collisions;
+reserved/input/recipe rebinding and assertion tolerance/arithmetic roles refuse before execution.
+1139 independent metadata-only cases/13 compiled actual guard reds pass; existing syntax/identity,
+numeric and language16 controls remain green. Book explains scope; Rust behavior unchanged.
+D116/D117/D118/D120 close; D119 whole preflight next, D121/D122 owned runtime repairs.
+G1 stays5/18; defects13open/108sealed. Complete oldest ledger/report bytes retained.
+
 ## STITCHCAD-SPINE-0023v - observed handoff CI guards (leaf `SPINE.23v`)
 
 Exact pushed10e19f2: both jobs/all steps completed success; runner log confirms43 fixtures/13
@@ -375,17 +386,3 @@ three privacy-lifetime docs and seventeen actual compiled assertion reds pass wi
 Flat conversion/clone/drop passes on64KiB stack. Strict native513, release eight, WASM3, book/reference
 checks pass. README/book/API map/decisions/live/task docs align; prior histories remain exact. G1 stays
 5/18; next .5a.3c.4 coupled normalization review before canonical serialization.
-
-## STITCHCAD-G1-0059 - exact typed individual literals (leaf `G1-SLICE.5a.3c.2`)
-
-Parsed literal views now explicitly convert into private typed128-bit canonical inputs. Exact bounded
-reduction precedes the rational-width check, then shared input rounding and the scalar length guard.
-Wide reducible raw mantissas stay valid; huge zero padding stays accepted. Original source/unit/span,
-count-versus-ratio and raw angle turns survive; unary minus remains its own syntax node. Structured
-width errors report an honest>=129-bit lower bound. No whole-arena, binding or execution claim yet.
-
-Five public contracts/100 independent Fraction rows/two privacy-lifetime docs and thirteen compiled
-actual mutation reds pass, with exact source restoration. Strict native501, release five, WASM3 and
-focused reference/book checks pass. README/current availability, grammar/language, indexed expert
-annex/status map and live/task records align; prior histories remain exact. G1 stays5/18; next .3c.3
-immutable normalized expression arena. D70 axes and later binding/geometry/API/MCP remain separately owned.

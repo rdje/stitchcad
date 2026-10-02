@@ -1,6 +1,6 @@
 # Static formula validation evidence
 
-> **Status:** reference-instrument evidence at G1-SLICE.5b.1a. The product libraries still stop at
+> **Status:** reference-instrument evidence at G1-SLICE.5b.1a/.1b.1. The product libraries still stop at
 > [syntax, inputs and canonical identity](formula-recipe-inputs.md). A valid syntax tree is not yet
 > a statically accepted recipe, a computed garment or a production approval.
 
@@ -75,9 +75,67 @@ inputs. It now admits precisely the five tolerance names. D113 repaired min/max'
 minimum of two operands; their one-kind variadic rows require one. This clarifies existing rules
 and changes no authored grammar or canonical identity bytes.
 
-This matrix is complete for its stated finite signature populations. It does not validate origin
-collisions, rebinding, declaration order, whole-recipe atomic preflight, typed diagnostic argument
-payloads, uncertainty reads or numeric domains. Reference namespace/preflight review is owned by
-G1-SLICE.5b.1b; full static obligation closure by .1c. Product declarations, signatures and whole
-static graph remain .5b.2–.4. Numerical execution, operations, geometry and two-platform final
-acceptance retain their .5c–.5g owners. No product evaluation or API/MCP release claim follows.
+The signature matrix is complete for its stated finite populations. The namespace/header review
+below is separate; atomic whole-recipe preflight remains G1-SLICE.5b.1b.2. Full static obligation
+closure belongs .1c. Product declarations, signatures and whole static graph remain .5b.2–.4.
+Numerical execution, operations, geometry and two-platform final acceptance retain their .5c–.5g
+owners. No product evaluation or API/MCP release claim follows.
+
+## Names and single-statement static checking
+
+The reference now separates three stages: syntax_statement parses a header and its operands;
+static_statement checks declaration metadata, names and kinds; statement executes only after that
+static stage succeeds. These are reference maintenance interfaces, not new sc-core APIs. The
+product syntax parser still exposes unevaluated syntax and has not acquired static acceptance.
+
+| Statement or declarations | Static result |
+| --- | --- |
+| let width:length=body_width, with body_width declared length but unknown | accepted without reading its state/value |
+| let body_width:length=1 cm, with body_width already from measurement | formula_ambiguous_name, preserving measurement and recipe origins |
+| a second let width:length=1 cm, after a prior recipe binding | formula_rebinding |
+| let eps_num:length=1 cm | formula_rebinding; reserved context names cannot be authored bindings |
+| assert closure:eps_geo=width==height, with both declared length | accepted without fetching the tolerance value |
+| assert closure:eps_fmt=width==height outside export context | statically accepted; missing valid context value is a runtime check |
+| assert closure:size_index=width==height | formula_parse; size_index is outside the closed TOLERANCE grammar role |
+| assert closure:eps_num=flag==flag, with flag Boolean | formula_dimension; closure comparisons require arithmetic operands |
+| let width:length=if(is_base_size, known_width, missing_width) | formula_unbound_name even if the missing branch would not execute |
+
+Declarations are consumed as ordered pairs before a dictionary can discard a duplicate. The
+reference checks machine spelling, declared kind/origin membership, reserved binding and duplicate
+names; duplicate reports retain both source origins, including two declarations from the same
+origin. A let collision with an earlier recipe binding is rebinding; one with an input origin is
+ambiguity. Neither shadows silently. An assertion label names a check and introduces no value
+binding; it does not make a later expression name visible.
+
+The nine origin labels are measurement, ease, parameter, profile, material, geometry, recipe, size
+and tolerance. All eight reserved names have statically known kinds, even where a context has not
+provided their values. The five tolerance annotations are eps_num, eps_geo, eps_fmt, eps_imp and
+eps_phys. A non-class annotation such as eps_chord is outside that grammar role; a valid class
+with no supplied value has the separate runtime formula_tolerance_unbound rule.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations
+```
+
+The 1139 independent cases cover all nine-origin/eight-kind metadata combinations, all81 ordered
+origin collision pairs, every reserved name against each origin and all six let kinds, spelling,
+headers, kind mismatches, forward/self names, either conditional branch and both assertion operands.
+Every arithmetic assertion kind pair is checked at all five tolerance classes. Environment entries
+expose only kind/origin; any value, state, availability or geometry read fails. Evaluation, storage
+and geometry callbacks fail if called, including through the runtime adapter for a static refusal.
+Parsing retains its existing canonical literal-input conversion; this is not a claim that parsing
+performs no numerical work.
+
+Thirteen compiled in-memory changes to actual guards must fail body assertions. They cover spelling,
+origin validation, pair collisions, reserved/input/recipe rebinding, let kind mismatches, assertion
+class/kind roles, metadata value reads and execution before static acceptance. Source on disk remains
+unchanged during those controls. Existing syntax-only fixtures now use syntax_statement directly,
+so syntactically valid reserved-name bindings still have their original canonical bytes while later
+static validation refuses them. No Rust syntax or serializer behavior changed.
+
+This proves metadata namespace and single-statement checking in the reference. It does not validate
+canonical input adapters, physical geometry or typed product diagnostic payloads; those retain
+.5e.1, G2 and .5b.2–.4 owners. Whole-recipe no-execution proof remains .1b.2. D121 (irrational-result
+provenance at T1) and D122 (origin-specific missing-value diagnostic routing) are scheduled .5e.3
+and .5e.1 reference repairs before their product execution evidence. Neither reference behavior is
+claimed correct by these static controls.

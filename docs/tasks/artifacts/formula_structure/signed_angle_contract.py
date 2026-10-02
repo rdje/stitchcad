@@ -70,7 +70,7 @@ value('atan2(-0 um, -1 um)', 'angle', 180000000)
 value('atan2(-0.0, -1.0)', 'angle', 180000000)
 # Finite real atan is open at ±90, but the stored microdegree may round to either endpoint.
 for number, expected in [(2**100, 90000000), (-2**100, -90000000), (Fraction(1, 10**12), 0)]:
-    env = {'input': {'kind': 'ratio', 'value': number * 1000000, 'origin': 'computed_fixture'}}
+    env = {'input': {'kind': 'ratio', 'value': number * 1000000, 'origin': 'parameter'}}
     value('atan(input)', 'angle', expected, env)
 for source in ['atan2(0 um, 0 um)', 'atan2(0.0, 0.0)']:
     refusal(source, 'formula_domain', 'atan2(0, 0) has no direction')

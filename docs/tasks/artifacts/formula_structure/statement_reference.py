@@ -34,24 +34,20 @@ for source, role, name, annotation, left, right in rows:
     tokens, _ = reference.tokenize(source)
     assert [text for _, text in tokens[:5]] == [role, name, ':', annotation, '=']
     parsed.clear()
-    try:
-        reference.statement(source, {})
-    except HeaderReached:
-        pass
-    else:
-        raise AssertionError(('unexpected reference execution', source))
+    checked = reference.syntax_statement(source)
+    assert checked[:3] == (role, name, annotation), ('actual syntax header', source, checked)
     assert list(map(render, parsed)) == ([left] if role == 'let' else [left, right]), source
 refusals = [
     ('let if: count = 1', 'formula_parse'),
     ('let a: point = p', 'formula_dimension'),
-    ('assert a: eps_chord = 1 cm == 1 cm', 'formula_tolerance_unbound'),
+    ('assert a: eps_chord = 1 cm == 1 cm', 'formula_parse'),
     ('assert a: eps_num = 1 cm == 1 cm == 1 cm', 'formula_parse'),
     ('assert a: eps_num = 1\tcm == 1 cm', 'formula_parse'),
     ('let a: count = 1 ^ 3', 'formula_unsupported'),
 ]
 for source, expected in refusals:
     try:
-        reference.statement(source, {})
+        reference.syntax_statement(source)
     except namespace['FErr'] as error:
         assert error.token == expected, (source, error.token, expected)
     else:

@@ -696,6 +696,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: both-origin collision evidence, whole-recipe no-value-access proof, ordered namespace
   and header checks; resolve discovered defects before trusting the reference for .5b.2/.4.
   Typed production diagnostic arguments retain their .5b.2/.4 owners; no runtime/MCP claim.
+  Children .1b.1 (namespace/header static phase), .1b.2 (whole-recipe preflight);
+  detailed pre-code protocols/receipts in G1-SLICE-evidence.md.
   Prerequisite .1b.0/.0v:64-file history capacity, exact retained window and observed CI;
   owned in G1-SLICE-evidence.md, no domain-scope pivot or limit increase.
   Verification: `pending`; Commit: `pending`.
@@ -812,6 +814,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5e.1`
   Status: `pending`
+  D122: reference missing-value diagnostics must distinguish all nine origins before adapter proof.
   Goal: explicit adapters for measurement/Ease/design/profile/material/size inputs and five
   authored states, preserving canonical identity, kind, source and provenance requirements.
   Acceptance: unknown has no value, derived reads follow their dependencies, assumed/preference
@@ -831,6 +834,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5e.3`
   Status: `pending`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.
+  D121: repair/verify reference provenance before using it for this product execution slice.
   Acceptance: all five named classes, context-supplied missing values, T2-or-looser when an
   irrational result contributes (including subsequent binding/reads), exact bare comparisons,
   assertion failure values/class/name and no substituted value/geometry after failure.

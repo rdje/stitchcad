@@ -795,3 +795,69 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   P0 SPINE.23 now takes clean frontier; D114/D115 remain12open/102sealed until verified repair.
 - promotion: declined (canonical observed-job and actual-refusal policy applied).
 - Receipt leaf focused publication9, ledger9/pointer13 and staged make gate all terminal0; no needed job remains.
+
+## Namespace and whole static preflight review
+
+- ID: `G1-SLICE.5b.1b.1`
+  Status: `done`
+  Goal: D116/D117/D118/D120 reference namespace and single-statement static header repair.
+  Pre-code contract: formula contract2/3/3.1/4.1/5.1/5.2 and grammar1/1.1/5/7. Expected nine
+  origins/eight reserved names authored independently; read actual declared populations both ways.
+  Build namespace from declaration pairs before a dictionary can hide duplicates. Validate machine
+  names/kinds/origins with no value/state/geometry reads; reject reserved rebinding and collisions.
+  Separate syntax_statement, static_statement and runtime statement, preserving syntax-only
+  fixture/canonical bytes and runtime tuple shapes. Prior syntax controls use the actual syntax phase,
+  not runtime inference traps that can now be preempted by valid early namespace refusals.
+  All six let kinds, eight reserved bindings, prior recipe/input collisions and both arithmetic
+  assertion operands checked before evaluation; header tolerance roles use precisely five names.
+  Non-class tolerance annotation violates grammar TOLERANCE and raises formula_parse; unavailable
+  valid tolerance remains a runtime refusal. Preserve original assertion spacing and syntax scope.
+  Fixture-only computed_fixture origin becomes canonical parameter in existing numeric controls.
+  Independent metadata-only declarations, role/context/spelling/collision/header matrices and actual
+  compiled in-memory guard assertion faults, source unchanged during controls. Runtime T1 provenance
+  D121 belongs .5e.3; atomic whole-recipe no-execution D119 belongs next .1b.2.
+  Acceptance: every scoped reference defect fixed, focused existing signature/syntax/binding/book
+  controls green; current book/live/task records synchronized, exact old records retained, commit.
+  Verification:1139 metadata/static cases/13 actual body assertion reds; full reference/language16,
+  Rust30/3groups/publication9 pass0. Commit: `STITCHCAD-G1-0076`; .1b.2 next.
+
+- ID: `G1-SLICE.5b.1b.2`
+  Status: `pending`
+  Goal: D119 whole ordered static preflight before any reference value computation.
+  Acceptance: all statements/branches/headers and declaration order checked, no execution/value
+  reads, no accepted partial plan after late static refusal; initial-origin collision and last
+  statement/structural limits independently tested. Integrate book replay after full preflight,
+  preserving valid values and runtime refusal examples' separate execution stage. All namespace/
+  signature controls remain watched. Product graph/typed argument payloads remain .5b.2–.4.
+  Verification: `pending`; Commit: `pending`.
+
+### Namespace/header receipts — `G1-SLICE.5b.1b.1`, `2026-10-02`
+
+- Actual pre-repair four examples ACCEPTed, exit0: reserved let eps_num; measurement waist let
+  shadow; size_index assertion class with a bound context fixture; Boolean flag assertion. Actual
+  reserved T1 sin assertion ACCEPTed and missing-context reads misrouted, owned D121/D122, not fixed
+  or approved here. Whole preflight D119 absent and still next. Original report bodies retained.
+- Namespace producer independently compares nine declared origins/eight reserved names/six let kinds;
+  1139 cases, all81 ordered origin pairs,72 origin-kind combinations, every reserved binding/origin,
+  assertion64kind pairs/five classes, spelling/context/both-branch/forward/self/header refusals.
+  Kind/origin-only mappings and reserved kind-only views trap value/state/availability/geometry;
+  execution/storage/geometry callbacks trap. Parsing retains canonical literal-input work.
+- Thirteen compiled in-memory actual guard changes must fail named body assertions, not source-anchor
+  or input errors. Source unchanged. Initial uppercase kind fixture incorrectly expected dimension;
+  lexical parse refusal is correct, changed expectation only. Independent runtime-adapter controls
+  prove each original static defect refuses before execution.
+- First full reference suite exposed syntax-only tests relying on runtime infer traps: syntactically
+  legal reserved let now correctly refuses before those traps. Added actual syntax_statement phase;
+  fifteen header rows/6refusals and whole/canonical/worked source fixtures retain original bytes.
+  Invalid eps_chord expected token becomes grammar parse; canonical parameter replaces two fixture-only
+  computed_fixture origins. No grammar extension, numeric value or Rust API/serializer change.
+- Full reference suite terminal0: new1139/13 and existing4032signature/12actual reds, all original
+  syntax/input/numeric/identity checks green. Language runner16 controls terminal0. Focused cargo
+  statement/recipe/canonical-recipe30 tests/3groups terminal0; all tracked Rust source/tests exactHEAD.
+- Publication runner warning-free book rebuild/9controls terminal0:53chapters/25scoped APIs/
+  1105source/1710rendered links. New namespace annex/index/contract route and proof boundaries agree.
+- Canonical defect census13open/108unique sealed/overlap0. History196logical/10workingMarkdown/
+  9548decodedlines/724342decodedB/312856residentB; unchanged prior windows/reader/schema/caps.
+  Whole oldest G1-0059 payload independently matches Git predecessor; four original report bodies
+  retained in defects-part44. Ordinary focused gate/ledger receipts follow; no push exception touched.
+- Final ledger9/pointer13 and staged make gate13 doctrines green terminal0; toolbox route added.

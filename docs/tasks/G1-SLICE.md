@@ -815,7 +815,7 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
 | done | `G1-SLICE.5a.3f.2` | `done` | Coupled whole input and identity review |
 | done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
-| next | `G1-SLICE.5b.1b` | `in_progress` | Retention/handoff CI complete; namespace/preflight review next |
+| next | `G1-SLICE.5b.1b.2` | `pending` | Namespace/header reference repairs complete; whole preflight D119 next |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -847,6 +847,24 @@ also run glossary/API, feature and publication checks. Prior checklists and auth
 Completed lexical/expression/numeric/identity protocols, checklists and commit journals remain in
 [formula evidence](G1-SLICE-formulas.md), [numeric journal](G1-SLICE-journal.md) and
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
+
+### `G1-SLICE.5b.1b.1` — reference namespace and static headers
+
+- [x] **REPRODUCE / ISSUE** — actual predecessor accepts four reserved/shadow/assertion defects;
+  table-loaded statement baselines print ACCEPT, exit=0. Original D116/D117/D118/D120 retained.
+- [x] **ROOT CAUSE (WHY + WHERE)** — statement's recipe-only collision, all-reserved tolerance
+  and equal-kind-only assertion guards miss normative roles. static_namespace_contract.py
+  --mutations →1139 cases/13 actual body assertion reds, rc=0, with execution/metadata traps.
+- [x] **FIX** — checked declaration pairs; actual syntax/static/runtime phases; preserve source
+  identity fixtures and runtime tuple shapes. Canonical fixture origins replace computed_fixture.
+- [x] **ADDRESSED (verified)** — static_namespace_contract.py --mutations →1139 cases/13 reds,
+  rc=0; runtime adapter refuses four original defects before numerical callbacks. Source unchanged
+  during controls; D119/D121/D122 separately owned, no full static/evaluation approval claimed.
+- [x] **NO REGRESSION** — full reference suite/static signatures4032/12reds green; language16/
+  publication9 pass, rc=0; cargo test statement/recipe/canonical-recipe →30passed/three groups.
+- [x] **LOCKSTEP** — book/annex/index/live/task/ledgers agree, G1 stays5/18, defects13open/108sealed;
+  .1b.2 next. Old record bytes preserved; product namespace/type/graph remain .5b.2–.4.
+  promotion: declined (existing flat namespace, single-assignment and independent-evidence principles).
 
 ### `G1-SLICE.5b.1b.0` — third exact retained window
 
@@ -930,3 +948,5 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
   matrix verifies two reference repairs. Namespace/preflight .1b and full static closure .1c follow.
 
 - `2026-10-02`: .5b.1b.0v records both exact-head CI jobs/steps success and newest window3 refusal; STITCHCAD-G1-0075. Next P0 SPINE.23, then namespace.
+
+- `2026-10-02`: .5b.1b.1/STITCHCAD-G1-0076 repairs reference namespace/header phase; static1139/13 actual reds. D119 whole preflight next.

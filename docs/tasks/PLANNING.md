@@ -851,3 +851,36 @@ not claimed repaired. Failed/empty/incomplete evidence refuses; explicit no-pend
 admits only matching sandbox/child pairs without real repo handles.43 independent fixtures/13 actual
 compiled guard faults pass. Actual restricted invocation refuses2; OS-visible held-file PID78489
 blocks1, controlled child finishes0, restored census green0. No shared tool service is stopped.
+
+- **D119** — reference lacks whole-recipe static preflight before evaluating earlier statements.
+  - Reproduce: actual EV has no preflight method; book L2 loop calls statement/evaluate while
+    discovering each later row's static errors. Baseline method census prints False, exit0.
+  - Root: statement mixes inference and evaluation; no complete ordered static recipe stage.
+  - Impact: reference cannot prove contract5.1/9's no-statement-execution after a late static error.
+  - Owner: G1-SLICE.5b.1b.2, next after clean namespace/header repair; before product static graph.
+
+- **D121** — reference comparison loses irrational-call provenance required for T1 refusal.
+  - Reproduce: assert approx:eps_num=sin(90 deg)==1.0 ACCEPTs true, baseline exit0, contrary
+    contract4.2/9's T2-or-looser rule when an irrational result contributes.
+  - Root: Val carries only kind/value and assertion applies distance without irrational provenance.
+  - Impact: current numeric reference is not a general tolerance/provenance oracle.
+  - Owner: G1-SLICE.5e.3, high priority before using reference for product tolerance execution;
+    retain/prove through bindings/reads/operators. Does not block static name/kind checks, whose
+    controls trap all numerical execution. No current reference approval of T1 provenance claimed.
+
+- **D122** — reference missing-value reads use the wrong origin/context diagnostic.
+  - Reproduce: actual size_index without context raises formula_tolerance_unbound; geometry p with
+    no value raises formula_unknown; tolerance-origin missing_tol with no value also raises
+    formula_unknown. Direct statement baselines exit0 after catching actual refusals.
+  - Root: value_of_name uses one reserved unavailable branch and one generic absent-value branch;
+    contract3 assigns unbound-name to geometry/recipe/size and tolerance-unbound to tolerance.
+  - Impact: reference numeric reads cannot prove origin-specific context/error arguments.
+  - Owner: G1-SLICE.5e.1, high priority before using the reference for product input-adapter proof;
+    test every origin/available-context distinction. Static metadata-only proof is unaffected.
+
+D116/D117/D118/D120 close at G1-SLICE.5b.1b.1; original reports are sealed in
+[`stitchcad-defects-part44.md`](../history/stitchcad-defects-part44.md). Actual namespace/header
+controls1139/13 guard assertion reds and full reference/language checks pass. The reference now
+separates syntax, static statements and numerical execution; reserved/input/recipe collisions and
+assertion class/arithmetic kinds refuse before execution. Whole preflight D119 remains next .1b.2;
+D121/D122 stay owned runtime reference repairs. Product validation/typed payloads remain .5b.2–.4.

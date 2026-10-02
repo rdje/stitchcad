@@ -46,12 +46,8 @@ def verify_fixture(name, expected_rows):
             assert chunk_tokens[0][1] in ['let', 'assert'] and chunk_tokens[2][1] == ':' and chunk_tokens[4][1] == '='
             tokens.extend(chunk_tokens)
             parsed.clear()
-            try:
-                reference.statement(chunk, {})
-            except SyntaxReached:
-                pass
-            else:
-                raise AssertionError(('unexpected semantic execution', chunk))
+            checked = reference.syntax_statement(chunk)
+            assert checked[0] == chunk_tokens[0][1], ('actual syntax header', chunk)
             assert list(map(render, parsed)) == identity.split(' ~ '), chunk
             statement_count += 1
             expression_count += len(parsed)
@@ -77,7 +73,7 @@ refusals = [
     ('assert if: eps_num = a == b', 'formula_parse'), ('let b', 'formula_parse'),
     ('let b count = 1', 'formula_parse'), ('let b:', 'formula_parse'),
     ('let b: 1 = 1', 'formula_parse'), ('let b: point = p', 'formula_dimension'),
-    ('assert b: eps_chord = a == b', 'formula_tolerance_unbound'),
+    ('assert b: eps_chord = a == b', 'formula_parse'),
     ('let b: count', 'formula_parse'), ('let b: count == 1', 'formula_parse'),
     ('let Upper: count = 1', 'formula_parse'),
     ('let a: count = blet b: count = 2', 'formula_parse'),
@@ -87,7 +83,7 @@ refusals = [
 ]
 for source, code in refusals:
     try:
-        reference.statement(source, {})
+        reference.syntax_statement(source)
     except namespace['FErr'] as error:
         assert error.token == code, (source, error.token, code)
     else:

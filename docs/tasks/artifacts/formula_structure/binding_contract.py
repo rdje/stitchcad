@@ -54,7 +54,7 @@ def binds(source, kind, expected, env=None):
 
 def computed_env(kind, value):
     # These are exact computed fixtures, not declarations of stored measurement inputs.
-    return {'x': {'kind': kind, 'value': Fraction(value), 'origin': 'computed_fixture'}}
+    return {'x': {'kind': kind, 'value': Fraction(value), 'origin': 'parameter'}}
 
 
 def decimal_integer(value):

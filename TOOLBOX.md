@@ -251,3 +251,6 @@ docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal co
 
 Static signature oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations`
 checks closed kind/function matrices with value access trapped; the structural runner watches it.
+
+Static namespace/header oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations`
+checks1139 metadata-only cases/thirteen actual guard reds; the existing structural runner watches it.

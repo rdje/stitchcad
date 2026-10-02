@@ -297,10 +297,13 @@ class Val:
 
 # ── the evaluator: written from grammar §1–§7, driven by the chapter's own tables ──────────
 class Evaluator:
-    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage):
+    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage, origins=None):
         self.bindable, self.pairs, self.sigs = bindable, pairs, sigs
         self.reserved, self.envelope, self.limits, self.units = reserved, envelope, limits, units
         self.domains, self.storage = domains, storage
+        self.origins = frozenset(origins if origins is not None else
+                                ("measurement", "ease", "parameter", "profile", "material",
+                                 "geometry", "recipe", "size", "tolerance"))
         self.max_nodes = self.max_bits = self.max_if = 0
 
     TOK = re.compile(r"""(?P<cmp>==|!=|<=|>=|<|>)|(?P<op>[-+*/^=(),:])|(?P<num>\d+\.\d+|\d+)
@@ -779,8 +782,25 @@ class Evaluator:
     def _deg2(self, y, x):
         return d_atan2(dfraction(y), dfraction(x)) * 180 / PI * 1000000
 
-    # -- statements --
-    def statement(self, src, env):
+    # -- namespaces and the single-statement static phase --
+    def namespace(self, declarations):
+        """Consume pairs before duplicate declarations can disappear in a dict."""
+        env = {}
+        for name, entry in declarations:
+            self._identifier(name)
+            kind, origin = entry["kind"], entry["origin"]
+            if kind not in (*self.bindable, "point", "edge") or origin not in self.origins:
+                raise FErr("formula_parse", "invalid declaration kind/origin for `%s`" % name)
+            if name in self.reserved:
+                raise FErr("formula_rebinding", "reserved `%s` cannot be declared by %s" % (name, origin))
+            if name in env:
+                raise FErr("formula_ambiguous_name", "`%s` is declared by both %s and %s"
+                           % (name, env[name]["origin"], origin))
+            env[name] = entry
+        return env
+
+    def syntax_statement(self, src):
+        """Parse a header and all operands without inspecting declarations or values."""
         self.src = src
         toks, starts = self.tokenize(src)
         self.t, self.starts, self.i = toks, starts, 0
@@ -793,36 +813,63 @@ class Evaluator:
             if kind not in self.bindable:
                 raise FErr("formula_dimension", "`%s` is no kind a let may bind" % kind)
             self._want_op("=")
-            node = self.parse(self._rest())
-            got = self.infer(node, env)
-            if got != kind:
-                raise FErr("formula_dimension", "`%s` is declared %s and the expression is %s"
-                           % (name, kind, got))
-            if name in env and env[name].get("origin") == "recipe":
-                raise FErr("formula_rebinding", "`%s` is bound twice in one recipe" % name)
-            val = self.evaluate(node, env)
-            val = self.stored(val, "let %s binding" % name)
-            return ("let", name, kind, val, node)
+            return ("let", name, kind, self.parse(self._rest()))
         if head == "assert":
             self.take()
             name = self._want_identifier()
             self._want_op(":")
             tol_name = self._want("id")
-            if tol_name not in self.reserved:
-                raise FErr("formula_tolerance_unbound", "`%s` is no tolerance name" % tol_name)
+            if tol_name not in {"eps_num", "eps_geo", "eps_fmt", "eps_imp", "eps_phys"}:
+                raise FErr("formula_parse", "`%s` is not a TOLERANCE token" % tol_name)
             self._want_op("=")
             parts = self._split_top_level(self._rest())
             if len(parts) != 2:
                 raise FErr("formula_parse", "an assert compares exactly two expressions")
-            l = self.parse(parts[0]); r = self.parse(parts[1])
-            kl, kr = self.infer(l, env), self.infer(r, env)
-            if kl != kr:
-                raise FErr("formula_dimension", "an assert compares %s with %s" % (kl, kr))
-            a = self.evaluate(l, env); b = self.evaluate(r, env)
+            left, right = self.parse(parts[0]), self.parse(parts[1])
+            return ("assert", name, tol_name, left, right)
+        return ("expr", None, None, self.parse(src))
+
+    def static_statement(self, src, env):
+        """Inspect names, headers and kinds only; never observe state or compute a value."""
+        env = self.namespace(env.items())
+        checked = self.syntax_statement(src)
+        role, name = checked[:2]
+        if role == "let":
+            _, _, kind, node = checked
+            if name in self.reserved:
+                raise FErr("formula_rebinding", "reserved `%s` cannot be rebound" % name)
+            if name in env:
+                if env[name]["origin"] == "recipe":
+                    raise FErr("formula_rebinding", "`%s` is bound twice in one recipe" % name)
+                raise FErr("formula_ambiguous_name", "`%s` is declared by both %s and recipe"
+                           % (name, env[name]["origin"]))
+            got = self.infer(node, env)
+            if got != kind:
+                raise FErr("formula_dimension", "`%s` is declared %s and the expression is %s"
+                           % (name, kind, got))
+            return checked
+        if role == "assert":
+            _, _, tol_name, left, right = checked
+            self.infer(("cmp", "==", left, right), env)
+            return checked
+        _, _, _, node = checked
+        return ("expr", None, self.infer(node, env), node)
+
+    # -- runtime statement adapter; existing tuple forms remain stable --
+    def statement(self, src, env):
+        checked = self.static_statement(src, env)
+        role, name = checked[:2]
+        if role == "let":
+            _, _, kind, node = checked
+            val = self.evaluate(node, env)
+            val = self.stored(val, "let %s binding" % name)
+            return ("let", name, kind, val, node)
+        if role == "assert":
+            _, _, tol_name, left, right = checked
+            a = self.evaluate(left, env); b = self.evaluate(right, env)
             tol = self.evaluate(("name", tol_name), env)
             return ("assert", name, abs(a.v - b.v) <= tol.v, a, b)
-        node = self.parse(src)
-        self.infer(node, env)
+        _, _, kind, node = checked
         val = self.evaluate(node, env)
         return ("expr", None, val.kind, val, node)
 
@@ -935,7 +982,7 @@ print("=== formula-language census ===")
 
 # ── read the chapter's own tables ─────────────────────────────────────────────────────────
 CON, GRA, EXA, FIX = sections(CONTRACT), sections(GRAMMAR), sections(EXAMPLES), sections(FIXTURE)
-for name, sec, need in (("the contract", CON, ("2", "3.1", "4.3", "5.2", "5.3", "7")),
+for name, sec, need in (("the contract", CON, ("2", "3", "3.1", "4.3", "5.2", "5.3", "7")),
                         ("the grammar", GRA, ("1.1", "2", "2.1", "3", "5.1", "6", "6.1")),
                         ("the examples", EXA, ("1", "2", "3", "4")),
                         ("the fixture", FIX, ("2", "3", "4", "7"))):
@@ -962,6 +1009,9 @@ for r in table_in(GRA["2.1"], "Unit token")[1]:
     number = Fraction(int(m.group(2).replace(" ", "").replace("\u2009", "")))
     true_factor = number if m.group(1) == "×" else 1 / number
     units[token] = (ukind, true_factor * (RATIO_SCALE if ukind == "ratio" else 1))
+
+# contract §3: closed declaration origins
+origins = [debacktick(row[0]) for row in table_in(CON["3"], "Origin")[1] if row]
 
 # contract §3.1: reserved names, which of them are always bound, and their values
 reserved = {}
@@ -1025,7 +1075,7 @@ try:
 except (OSError, ValueError, KeyError) as error:
     print("formula-language census: REFUSED — numeric domain source: %s" % error)
     sys.exit(2)
-EV = Evaluator(bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage)
+EV = Evaluator(bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage, origins)
 print("-- tables read from the chapter")
 print("  kinds: %d (%d bindable) · unit tokens: %d · reserved: %d · signature rows: %d"
       % (len(kinds), len(bindable), len(units), len(reserved), sum(len(v) for v in sigs.values())))
@@ -1035,8 +1085,10 @@ print("  product/quotient pairs: %d · diagnostics: %d · envelope constructs: %
 # ── the symbol table: the fixture's declared constants, nothing derived ─────────────────────
 env = {}
 def bind(name, kind, value, origin, state="known", lazy=False, exprs=None):
-    env[name] = {"kind": kind, "value": value, "origin": origin, "state": state,
-                 "lazy": lazy, "exprs": exprs or {}}
+    entry = {"kind": kind, "value": value, "origin": origin, "state": state,
+             "lazy": lazy, "exprs": exprs or {}}
+    checked = EV.namespace([*env.items(), (name, entry)])
+    env.update(checked)
 
 fixture_units_ok = True
 for sec, header, col, origin in (("2", "Token", 3, "measurement"), ("2", "Ease token", 3, "ease"),

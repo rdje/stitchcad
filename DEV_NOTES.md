@@ -3,6 +3,27 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — namespace checking must precede value execution
+
+- Actual predecessor accepted reserved eps_num rebinding, measurement waist shadowing, size_index
+  as assertion tolerance and Boolean closure operands. D116/D117/D118/D120 logged before repair.
+  D119 lacks atomic whole preflight; D121 drops irrational provenance at T1 and D122 misroutes
+  absent origin/context values. These stay owned by .1b.2, .5e.3 and .5e.1 respectively.
+- Reference namespace consumes declaration pairs before dict overwrite, inspects only kind/origin,
+  and preserves both origins on collision. All reserved names have known kinds without a context
+  value. Assertion labels introduce no binding; tolerance header role is precisely five tokens.
+- syntax_statement/static_statement/statement separate accepted syntax from static names/kinds and
+  numerical execution. Existing syntax-only tests previously stopped at infer; valid earlier reserved
+  refusal exposed that coupling. They now call actual syntax phase and keep all authored bytes.
+  Fixture-only computed_fixture origins become canonical parameter without changing numeric values.
+- Independent1139 controls/13 compiled actual body assertion reds trap value/state/context/geometry
+  reads and numerical callbacks. Initial uppercase-kind expected dimension refusal was wrong;
+  corrected its independent expectation to lexical formula_parse, with producer guard unchanged.
+- Full existing reference/4032signature cases/twelve reds, language16, Rust30/three groups and book
+  publication9 pass; no Rust source/test bytes changed. Whole-recipe preflight and input adapters/
+  numeric-provenance/typed product payloads remain explicit later owners, not inferred from these tests.
+- promotion: declined (standing flat namespace, single assignment and independent-evidence principles).
+
 ## _(2026-10-02)_ — runner executes the handoff contract
 
 - Exact head10e19f2e7764619c5fd97a9eee9a2195f745c6b2: doctrines run37062714117/job111022944363
