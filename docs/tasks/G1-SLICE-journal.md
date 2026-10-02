@@ -455,3 +455,146 @@ lesson is the cause. This is outside measurement logic and reproduces in SPINE's
 SPINE.22 owns the project-slot adapter. Current metadata/token questions are explicitly added now.
 
 Current canonical verification remains in [G1-SLICE](G1-SLICE.md).
+
+## Canonical literal progress — preserved from 372033f
+
+### `G1-SLICE.5a.3b.3b.3b` — canonical literal width and operator identity
+
+- [x] **REPRODUCE / ISSUE** — actual canonical diagnostic parses signed MIN as neg(lit angle2^63),
+  while literal2^63 exceeds i64; canonical_literal_contract.py independently verifies this node and
+  later signed binding, rc=0. Director D95 ruling resolves the previously ambiguous representation.
+- [x] **ROOT CAUSE (WHY + WHERE)** — formula2 bound-form table had not distinguished grammar4
+  literal nodes from bound storage. Canonical146 independently authored controls reproduce the
+  positive wide child/unary identity; actual i64-literal restriction mutation→assertion red, rc=1,
+  source restored byte-identically, run_canonical_literal_mutations.sh runner0.
+- [x] **FIX** — adopt/verify received128-bit literal magnitude versus i64 bound-value distinction.
+  Existing reference behavior is correct under this ruling; no runtime change needed. Add watched
+  independent nodes/Decimal controls and real guard mutations. Preserve unary/kind identities,
+  exact pre-round width, input quantum and scalar domains; update normalization prerequisites.
+- [x] **ADDRESSED (verified)** — canonical_literal_contract.py→146 independent node/Decimal controls/
+  0 fail, rc=0; run_canonical_literal_mutations.sh→twelve compiled actual assertion reds, rc1 each,
+  byte-identical restoration/runner0. Covers63/64/127/128/129 bits, signs/Count refusal, aliases/long
+  reducible spellings, zero/operator shapes, half-quanta and canonical versus binding boundaries.
+- [x] **NO REGRESSION** — structural16+2/input130+3/expression12/literal60/361/arithmetic24/100/162/
+  angle42/72/math42/rational61/scalar57/binding80/canonical146 green, rc=0. Binding mutations still
+  require twelve compiled actual reds/byte restore, runner0. Focused recording checks pass below;
+  staged make gate→all doctrines green, rc=0.
+  No Rust/runtime changed or new native/WASM/remote CI claim; reference nodes certify no serializer.
+- [x] **LOCKSTEP** — D95 closes with received ruling, reference proof and retained original record;
+  grammar/decision/expert annex/live task pointers agree. Prior binding acceptance/journal and
+  existing siblings preserve exact bytes. G1 stays5/18, defects12 open/82 sealed; D83 review next.
+
+## Verification Log
+
+[Historical binding journals](G1-SLICE-journal.md#numeric-binding-progress--preserved-from-9b3b9b3)
+retain prior evidence and the completed pre-code plan.
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.3b.3b` | canonical146/twelve reds; reference controls/binding twelve reds | D95 closed; D83 complete review next |
+
+Recording checks: language16/publication9/ledger9 pass, rc=0;48 chapters/16 APIs/1001 source/
+1531 rendered links. Archive verify/retention→127 logical/64 working Markdown/7193 lines/573489
+decoded bytes/300099 resident bytes, rc=0. Tree10/13/eight/zero gaps; glossary310/nine/158/no index
+drift; feature105/29; uncertainty133/16/zero unowned; fixture20/four/five/zero mismatch, rc=0.
+Previous siblings/acceptance/journal/routing and sealed D95 description preserve exact committed
+bytes; reconstructed defect census12 open/82 sealed/zero overlap, rc=0. README unchanged; LIVE
+reviewed: G1 stays5/18. Staged make gate→all doctrines green, rc=0; production normalization/evaluation and D84 remain owned.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3b.3b` | `STITCHCAD-G1-0051 (leaf G1-SLICE.5a.3b.3b.3b): canonical literals retain wide exact identity` | canonical146/twelve compiled actual reds/exact restore |
+
+## Changelog
+
+- `2026-10-02`: D95 canonical-node width/identity verified, received ruling closed. D83 full
+  numeric boundary review .3c then D84 verification; production normalization remains .5a.3c.
+- promotion: declined (routine conformance verification of the already recorded D95 ruling).
+
+## Second-window pre-code protocol — completed in G1-0052
+
+- ID: `G1-SLICE.5a.3b.3b.3c.1`
+  Status: `in_progress`
+  Goal: capture the63 immutable raw records at372033f into window2 before review seals exceed64 files.
+  Pre-code protocol: published archive reader/decision and SPINE.19.2 define the unchanged contract.
+  Snapshot all eligible raw source files, retain exact full bytes/descriptors in a deterministic
+  content-addressed tar.gz payload plus closed-schema manifest and complete Markdown catalog.
+  Existing window1 remains byte-identical. Before deleting sources, installed reader must reconstruct
+  all63 new members and all127 logical records in isolated repository-volume fixtures without raw
+  copies or historical Git retrieval. Independently compare full counts/bytes/hashes to git-show
+  captured source. Prove-source must execute. Retarget maintained links to stable catalog anchors;
+  materialized logical links remain valid. Delete exactly verified source duplicates, census residue.
+  No source text changes, logical record loss, changed reader/generator or widened aggregate ceilings.
+  Actual second-window digest/member/catalog/collision mutations must refuse by the intended rule;
+  positive/control/source/materialization/navigation/resident pressure remain independently observed.
+  Keep generated scratch local; no other Git repository writes. Add watched proof using current
+  manifests to retain this guarantee after commit. Update book upkeep/live pointers and preserve
+  predecessor task/ledger bytes. Full local Rust/WASM/book/probes/gate before exceptional push;
+  archive controls are doctrine inputs, so COMMIT.md requires immediate push and job/step observation.
+  Commit verified local work first; .1v owns observed remote verdict and post-commit immutable window.
+  D96 blocking consumer repair: actual ledger diagnostic sees only POINTER false refusals for valid
+  short-label catalog links. Replace arbitrary filename-text recognition with actual raw/catalog link
+  target resolution against validated retained routes. Independently test valid short/incorrect labels,
+  raw links, label-only prose, nonexistent catalog/anchor and wrong targets; preserve other rule arms
+  and D30 exemption. No record-content editing or label-only workaround; archive controls unchanged.
+  Verification: `pending`
+  Commit: `pending`
+
+
+## Acceptance navigation — retained during G1-0052
+
+## Acceptance Checklist
+
+Future ontology implementation updates run `run_glossary_census.sh` as a focused check,
+including chapter-local API declarations (D59), in addition to feature coverage and book rendering.
+
+Completed identity and earlier object checklists are preserved in
+[`G1-SLICE-evidence.md`](G1-SLICE-evidence.md). Current/recent slice evidence stays below.
+
+Filled per leaf, in a `### <leaf-id>` subsection added by the same commit as the work, and
+mechanically required to be fresh in that commit by leaf `SPINE.8`. A tree file carries no
+unticked placeholder boxes: the spine's acceptance gate judges the FIRST matching box in the
+file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
+measured by the `SPINE.7` probe).
+
+
+
+
+
+Completed rounding checklist is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#rounding-contract-and-evidence--preserved-from-543dfa6).
+
+Completed literal identity checklist is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#literal-identity-contract-and-evidence--preserved-from-6f26ca3).
+
+Completed exact arithmetic checklist is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#exact-arithmetic-contract-and-evidence--preserved-from-f70edf7).
+
+Completed angular checklist is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#angular-contract-and-evidence--preserved-from-1c95ea4).
+
+Completed rational checklist is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#rational-contract-and-evidence--preserved-from-b8ed62d).
+
+[Completed operator acceptance](G1-SLICE-formulas.md#length-operator-contract-and-evidence--preserved-from-f432d68)
+retains exact predecessor evidence.
+
+
+[Completed domain-context acceptance](G1-SLICE-formulas.md#domain-context-contract-and-evidence--preserved-from-d91df0a)
+retains exact predecessor evidence.
+
+
+[Completed inline-context acceptance](G1-SLICE-formulas.md#inline-context-contract-and-evidence--preserved-from-0a6e9b0)
+retains exact predecessor evidence.
+
+
+[Completed scalar-domain acceptance](G1-SLICE-formulas.md#scalar-domain-acceptance--preserved-from-86b81a9)
+retains exact predecessor evidence.
+
+[Completed numeric binding acceptance](G1-SLICE-formulas.md#numeric-binding-acceptance--preserved-from-9b3b9b3)
+retains exact predecessor evidence.
+
+[Previous canonical proof and recording journal](G1-SLICE-journal.md#canonical-literal-progress--preserved-from-372033f)
+retain exact committed evidence.

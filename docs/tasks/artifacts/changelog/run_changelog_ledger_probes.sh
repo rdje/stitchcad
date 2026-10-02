@@ -184,12 +184,13 @@ ledger_verdicts() {
   # POINTER ----------------------------------------------------------------
   local on_disk pointed missing extra
   on_disk="$(ls "$hist"/stitchcad-changelog-part*.md 2>/dev/null | sed 's#.*/##' | LC_ALL=C sort)"
-  pointed="$(grep -oE 'stitchcad-changelog-part[0-9]+\.md' "$log" | LC_ALL=C sort -u)"
+  local target_rc=0
+  pointed="$(python3 -I -B "$ROOT/docs/tasks/artifacts/changelog/changelog_pointers.py" "$root" "$ROOT")" || target_rc=$?
   missing="$(comm -13 <(printf '%s\n' "$pointed") <(printf '%s\n' "$on_disk") | tr '\n' ' ')"
   extra="$(comm -23 <(printf '%s\n' "$pointed") <(printf '%s\n' "$on_disk") | tr '\n' ' ')"
-  if [ -z "${missing// /}" ] && [ -z "${extra// /}" ]; then
+  if [ "$target_rc" -eq 0 ] && [ -z "${missing// /}" ] && [ -z "${extra// /}" ]; then
     printf 'POINTER PASS the live pointer and %s sealed segment(s) name each other\n' "$(printf '%s\n' "$on_disk" | grep -c .)"
-  else printf 'POINTER FAIL unpointed segments:[%s] pointers to nothing:[%s]\n' "$missing" "$extra"; fi
+  else printf 'POINTER FAIL unpointed segments:[%s] pointers to nothing:[%s] invalid-target-status:%s\n' "$missing" "$extra" "$target_rc"; fi
 }
 
 mkroot() { # a synthetic root: the real ledger copied, to be broken in exactly one way
@@ -311,10 +312,11 @@ else bad COVERAGE-RED "the actual coverage mutation was not the sole refusal" "$
 
 # ---------------------------------------------------------------- POINTER has teeth
 D="$WORK/pointer"; mkroot "$D"
-sed 's/stitchcad-changelog-part1\.md/stitchcad-changelog-partX.md/g' "$ROOT/CHANGELOG.md" > "$D/CHANGELOG.md"
+sed 's/#stitchcad-changelog-part1md/#stitchcad-changelog-partXmd/g' "$ROOT/CHANGELOG.md" > "$D/CHANGELOG.md"
 arm POINTER-RED POINTER "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT"
 
 echo
 printf 'probes: %d pass / %d fail\n' "$pass" "$fail"
 [ "$fail" -eq 0 ] || exit 1
+python3 -I -B "$ROOT/docs/tasks/artifacts/changelog/ledger_pointer_contract.py" || exit 1
 exit 0

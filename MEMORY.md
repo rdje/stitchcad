@@ -5,14 +5,14 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3b.3c`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** D83 complete numeric boundary review .3c; binding80/twelve actual reds and
-  canonical146/twelve actual reds are committed. D95 closes under received ruling in
-  `docs/decisions/decision_literals.md`: exact128-bit literals, signed64 numeric bindings.
-  Archive has64 working Markdown: own capacity transition before another seal, preserve bytes.
-  D84 signed-angle binding/equality and inverse-trig verification follows under .5a.3b.3c;
-  `docs/decisions/decision_angles.md` owns raw-formula/normalized-direction semantics.
-  Product normalization .5a.3c follows prerequisites. D70 axes ruling remains pending under .4c.2.
+- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3b.3c.1v`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** immediately push verified G1-0052 archive-control commit under COMMIT.md exception;
+  observe exact pushed SHA doctrine/Rust jobs and steps, plus newest committed immutability control.
+  Window2 preserves63 raw files at372033f; published retrieval needs no historical Git objects.
+  D96 actual target coverage repaired; original record retained. Then .3c.2 complete D83 review.
+  Binding80/canonical146 are committed; D95 received128-bit literal/i64-binding ruling is closed.
+  D84 signed-angle binding/equality and inverse-trig verification follows under .5a.3b.3c.
+  Product normalization .5a.3c follows prerequisites; D70 axes ruling remains pending under .4c.2.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats
   require human acts; governance §8 and G3 `.16` own the details.

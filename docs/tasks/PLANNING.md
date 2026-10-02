@@ -171,9 +171,9 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 (D64; 8 lines, 801 bytes, `sha256:a33e5ff9…`) and
 [`stitchcad-defects-part11.md`](../history/window1.md#stitchcad-defects-part11md)
 (D66; 10 lines, 919 bytes, `sha256:4d46b154…`) and
-[`stitchcad-defects-part12.md`](../history/stitchcad-defects-part12.md)
+[`stitchcad-defects-part12.md`](../history/window2.md#stitchcad-defects-part12md)
 (D65/D68; 20 lines, 1830 bytes, `sha256:0693a241…`), under D46's remedy.
-D69 is sealed in [`stitchcad-defects-part13.md`](../history/stitchcad-defects-part13.md)
+D69 is sealed in [`stitchcad-defects-part13.md`](../history/window2.md#stitchcad-defects-part13md)
 (7 lines, 672 bytes, `sha256:6ed0c7dd…`). Every cited defect
 resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
@@ -437,32 +437,32 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Decision requested: explicit axes for every range (including one-dimensional; recommended) versus
     allowing one-dimensional ranges to omit axes, with explicit axes required for multidimensional sets.
 
-D71 and D72 are sealed in [`stitchcad-defects-part14.md`](../history/stitchcad-defects-part14.md).
+D71 and D72 are sealed in [`stitchcad-defects-part14.md`](../history/window2.md#stitchcad-defects-part14md).
 G1-SLICE.4d.1 fixes stale book status and the archive probe's production-sized fixture; source/rendered
 publication checks, paired archive predicates and the 24-suite milestone verify both closures.
 
-D73 and D74 are sealed in [`stitchcad-defects-part15.md`](../history/stitchcad-defects-part15.md).
+D73 and D74 are sealed in [`stitchcad-defects-part15.md`](../history/window2.md#stitchcad-defects-part15md).
 G1-SLICE.5a.1 corrects ADR clause links and ASCII vertical-tab handling; lexical contracts and
 actual guard mutations verify the fixes.
 
 
 
-D75 and D77 are sealed in [`stitchcad-defects-part16.md`](../history/stitchcad-defects-part16.md).
+D75 and D77 are sealed in [`stitchcad-defects-part16.md`](../history/window2.md#stitchcad-defects-part16md).
 G1-SLICE.5a.2a verifies complete reference child traversal/depth refusal and fragment sibling ownership.
-D76 is sealed in [`stitchcad-defects-part17.md`](../history/stitchcad-defects-part17.md).
+D76 is sealed in [`stitchcad-defects-part17.md`](../history/window2.md#stitchcad-defects-part17md).
 G1-SLICE.5a.2b.1 verifies machine spelling/keyword roles, unit separators and nonempty arguments;
 130 direct controls, three copied-book refusals and nine actual guard reds verify closure.
 
-D78 is sealed in [`stitchcad-defects-part18.md`](../history/stitchcad-defects-part18.md).
+D78 is sealed in [`stitchcad-defects-part18.md`](../history/window2.md#stitchcad-defects-part18md).
 G1-SLICE.5a.3a proves total extreme-magnitude rounding with four public contracts, an independent
 36-row Fraction oracle and five actual guard reds; strict native/release/WASM checks pass.
 
 
 D79, D80 and D81 are sealed in
-[`stitchcad-defects-part19.md`](../history/stitchcad-defects-part19.md). G1-SLICE.5a.3b.1 verifies
+[`stitchcad-defects-part19.md`](../history/window2.md#stitchcad-defects-part19md). G1-SLICE.5a.3b.1 verifies
 60 literal rows/360 controls/six actual reds and corrects the duplicate units heading/stale status route.
 
-D82 is sealed in [`stitchcad-defects-part20.md`](../history/stitchcad-defects-part20.md).
+D82 is sealed in [`stitchcad-defects-part20.md`](../history/window2.md#stitchcad-defects-part20md).
 G1-SLICE.5a.3b.2 verifies 24 exact rows/100 independent Fraction cases/162 controls/nine actual reds;
 implicit operator rounding is removed, explicit and irrational quantization remains.
 
@@ -496,7 +496,7 @@ implicit operator rounding is removed, explicit and irrational quantization rema
     Specifications align now; reference atan/atan2 still normalize outputs, owned repair pending.
     Scalar/rational domain repairs .3a/.3b proceed independently. D84 remains open until verified.
 
-D85/D86/D87 are sealed in [`stitchcad-defects-part21.md`](../history/stitchcad-defects-part21.md).
+D85/D86/D87 are sealed in [`stitchcad-defects-part21.md`](../history/window2.md#stitchcad-defects-part21md).
 G1-SLICE.5a.3b.3a.1 verifies correct microdegree conversion, nearest dir and exact tan pole refusal;
 42 rows/72 controls agree with an independent standard-library math oracle, seven actual reds restore.
 
@@ -734,30 +734,36 @@ placeholder box (defect D15).
   acceptance-evidence shadowing in the inherited gate) measured, logged and owned by
   `SPINE.7`/`SPINE.8`.
 
-D88 is sealed in [`stitchcad-defects-part22.md`](../history/stitchcad-defects-part22.md).
+D88 is sealed in [`stitchcad-defects-part22.md`](../history/window2.md#stitchcad-defects-part22md).
 G1-SLICE.5a.3b.3a.2 requires the exact tangent pole reason, so an unrelated rational refusal cannot
 mask a removed pole guard; seven actual angle mutation reds/restoration verify the repair.
 
-D89 is sealed in [`stitchcad-defects-part23.md`](../history/stitchcad-defects-part23.md).
+D89 is sealed in [`stitchcad-defects-part23.md`](../history/window2.md#stitchcad-defects-part23md).
 G1-SLICE.5a.3b.3b.1a makes public Length + / - fallible through checked methods; four public contracts
 and six actual compiled guard reds/exact restoration verify domain closure. D90 context stays owned.
 
-D90/D92 are sealed in [`stitchcad-defects-part24.md`](../history/stitchcad-defects-part24.md).
+D90/D92 are sealed in [`stitchcad-defects-part24.md`](../history/window2.md#stitchcad-defects-part24md).
 G1-SLICE.5a.3b.3b.1b adds actual-operation context and neutral domain wording; five public and three
 private guard contracts, fourteen compiled mutation reds and exact restoration verify the repair.
 
-D91/D93 are sealed in [`stitchcad-defects-part25.md`](../history/stitchcad-defects-part25.md).
+D91/D93 are sealed in [`stitchcad-defects-part25.md`](../history/window2.md#stitchcad-defects-part25md).
 G1-SLICE.5a.3b.3b.1c accepts only explicit single-span Rust context outside normative formula parts;
 thirteen independent book verdicts/five actual mutation reds verify isolation and refusals. D93’s
 annex count now matches twelve observed rational mutation reds; D34’s index label is corrected,
 while PLANNING.5 retains derived-frontier ownership.
 
-D94 is sealed in [`stitchcad-defects-part26.md`](../history/stitchcad-defects-part26.md).
+D94 is sealed in [`stitchcad-defects-part26.md`](../history/window2.md#stitchcad-defects-part26md).
 G1-SLICE.5a.3b.3b.2 supplies quiet table-only numeric setup; scalar/rational/angular families no
 longer execute arithmetic assertions on import. The quiet-loader mutation fails its own assertion;
 all family guard mutations and restored controls pass independently.
 
-D95 is sealed in [`stitchcad-defects-part27.md`](../history/stitchcad-defects-part27.md).
+D95 is sealed in [`stitchcad-defects-part27.md`](../history/window2.md#stitchcad-defects-part27md).
 G1-SLICE.5a.3b.3b.3b verifies the received wide-literal/i64-binding ruling with146 independent
 canonical node/Decimal controls and twelve compiled actual reds; unary identity is preserved.
 D83 complete boundary review remains .3c; production normalization remains .5a.3c.
+
+D96 is sealed in [`stitchcad-defects-part28.md`](../history/stitchcad-defects-part28.md).
+G1-SLICE.5a.3b.3b.3c.1 resolves actual raw/catalog index destinations, independent of labels.
+Thirteen independent actual verdicts and four syntax-checked assertion reds/exact restoration verify
+coverage and false-green prevention. Existing nine ledger arms and D30 exemption still pass;
+full make probes reports25 suites green, rc=0. No retained record or reader change.

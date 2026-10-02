@@ -317,3 +317,23 @@ For the first archive implementation head ebed2c5, the
 completed successfully with every step successful, including the Python prerequisite, archive
 enforcer and native/WASM checks. Post-commit refusal probes also reject an edit to a committed
 window. This is tooling/structural evidence; it grants no domain or physical production approval.
+
+
+The second transition captures63 immutable raw records from372033f into window2. Before removing
+working copies, the installed reader/source comparison reconstructed all63 full files exactly;
+an isolated fixture read/materialized all127 logical records, including the unchanged first window.
+Maintained links now land on catalog headings, while reader identities remain the original paths.
+`bash scripts/history_archive.sh prove-source window2` repeats its source comparison when that
+Git object is available. The bounded reader and aggregate ceilings are unchanged.
+
+The watched archive CLI controls verify every logical read and materialized file against full-file
+identity, plus newest-window digest/member/catalog and cross-window collision refusals. An unrelated
+fixture prose edit remains green for inventory; committed catalogs still refuse edits through the
+retention guard. Window2’s remote CI observation remains G1-SLICE.5a.3b.3b.3c.1v until actual
+job/step verdicts are recorded. These are retention/instrument proofs, not garment signoff.
+
+The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
+labels are display text: short or mistaken labels do not change the retained identity. Filename text
+in prose, code or comments cannot establish coverage, and a valid link cannot mask an extra broken
+index target. Thirteen independent verdicts and four actual checker fault controls verify this D96
+repair while preserving the earlier nine ledger arms and historical descriptor exemption.

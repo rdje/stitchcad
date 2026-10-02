@@ -203,3 +203,14 @@ checks146 independent node/Decimal controls; the structural suite watches them. 
 absolute reduced magnitude, not signed i128; unary identity and later binding storage remain distinct.
 `bash docs/tasks/artifacts/formula_structure/run_canonical_literal_mutations.sh` requires twelve
 compiled actual assertion reds/exact restore; run alone. D95 closes; D83 review and production proof remain.
+
+Retained-window CLI controls: `python3 -I -B docs/tasks/artifacts/history_archive/window_contract.py`
+checks every listed/read/materialized logical record and newest-window digest/member/catalog
+refusals plus cross-window collision. The archive probe runner watches it; no source Git is needed
+for retrieval. Newest committed catalog edits are refused after the recording commit. Capture tool
+`capture_window2.py` in that directory prepares/proves its fixed372033f snapshot in target/ only.
+
+Ledger target controls: `python3 -I -B docs/tasks/artifacts/changelog/ledger_pointer_contract.py`
+checks13 independently authored actual POINTER verdicts; the ledger runner watches them.
+`ledger_pointer_mutations.py` in that directory requires four actual assertion reds and exact source
+restoration. Run mutations exclusively: they temporarily edit the checker they test.

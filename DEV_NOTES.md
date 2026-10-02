@@ -3,6 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — a second retained window keeps exact history while freeing working slots
+
+- D83 review reached64 history Markdown; another seal would exceed the fixed limit.
+  Capture63 immutable raw files at372033f into deterministic window2 with full-file metadata/catalog.
+  Published reader/source proof reconstructs all63 exactly; isolated read/materialization verifies
+  all127 logical files including the prior window, before exact source retirement. Raw residue0.
+- Existing window1 bytes and all logical identities stay fixed. Only maintained ledger/census links
+  retarget to catalog headings. Newest-window digest/member/catalog/cross-window collision controls
+  discriminate; unrelated fixture prose stays green. Shared reader/generator and ceilings unchanged.
+- Ordinary retrieval uses checkout-local payloads; Git is needed only for optional source proof.
+  New watched CLI contracts inspect every record and newest-window refusals. Full native/WASM/book/
+  probes/gate precede the required exception push; observed remote job/steps remain .1v.
+- D96: filename text falsely rejected15 valid pointers and masked wrong destinations. Actual archive-
+  index link targets now resolve raw files or validated catalog routes; labels cannot prove coverage.
+  Thirteen independent verdicts and four syntax-checked actual assertion reds restore exact sources.
+  The existing nine ledger arms and D30 exemption remain discriminating.
+- Earlier task evidence and oldest ledger payloads retain exact bytes. G1 remains5/18, D83 review
+  and D84 still owned; this capacity prerequisite grants no domain/physical/production signoff.
+- promotion: declined (routine reuse of the existing self-contained history-window contract).
+
 ## _(2026-10-02)_ — bound numeric storage is distinct from literal identity
 
 - D83 predecessor accepts Count MAX+1 at let and returns fractional length bindings. Actual let now
@@ -57,45 +77,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   MCP or release claim.
 - promotion: declined (routine book-instrument context and evidence synchronization repair).
 
-## _(2026-10-02)_ — domain diagnostics need context without an invented cause
-
-- D90's public DomainExceeded variant lacked operation; forwarded Length construction reused the
-  base constructor, losing the caller. D92's generic display claimed every invalid value exceeds an
-  upper limit and proves a conversion bug, including a zero positive-range width and negative length.
-- Add a static operation field and one private checked-construction path per quantity; forward actual
-  caller labels without duplicating guards or changing numeric data. Core resolve/range bridges name
-  their public operation. Render neutral outside-domain wording; do not infer a cause from magnitude.
-- Actual predecessor public calls produce two assertion failures. Five public tests verify typed and
-  rendered direct/forwarded signed refusals, inclusive endpoints and unchanged non-domain behavior;
-  three private core tests verify unreachable-invalid totality guards without a geometry certificate.
-- Fourteen actual context/rendering mutations compile and fail assertions, restoring every source
-  byte. D89's six compiled operator reds still discriminate. Strict native488 including docs,
-  release5 and three-crate WASM pass. Division/area domain failures cannot occur for valid Length
-  operands; those caller labels are wired without a fabricated public error reproduction.
-- Book migration/examples match code. Earlier task evidence and oldest ledgers preserve exact bytes.
-  D91 context classifier remains next;
-  D83/D84 remain owned. No formula evaluator, command bus, MCP or production-release claim.
-- promotion: declined (routine completion of the existing typed-error and truthful-diagnostic contract).
-
-## _(2026-10-02)_ — public operators must close the constructor invariant
-
-- D89 review found Length’s Add/Sub directly construct Self from raw integer sums/differences. Valid
-  ±1 km operands produce ±2 km lengths without typed refusal; constructors and checked methods
-  reject those results. The private-field domain guarantee was therefore false for public operators.
-- Trait Output now returns Result<Length,UnitError>, delegating to checked_add/checked_sub. Ordinary
-  values, inclusive endpoints, cancellation and signed crossings preserve the same exact numeric
-  contract. Callers migrate to `(left + right)?` / `(left - right)?`; crate docs demonstrate handling.
-- Public predecessor tests fail three assertions, not compilation. Four current contracts include an
-  explicit Result type and a nine-by-nine i128 pair oracle; six actual production bypass/operation/
-  saturation mutations compile and fail assertions, then restore source bytes exactly.
-- D90 also surfaced: DomainExceeded lacks the failing operation. .3b.1b owns its public error/call-site
-  repair immediately next. This slice certifies operator domain closure, not complete diagnostic
-  context, formula normalization/evaluation, geometry, MCP or production release. D83/D84 retain owners.
-- D91: book L6b mistook valid inline Rust question-mark handling for formula syntax (13 pass/2 fail).
-  Explicit Rust fences unblock publication; .3b.1c owns context-aware census proof after D90.
-- Completed rational protocol/checklist/journal and oldest live payloads preserve predecessor bytes.
-- promotion: declined (routine enforcement of the existing numeric domain and typed-refusal contract).
-
 # Sealed archive — earlier lessons
 
 | Segment | Coverage | Sealed identity |
@@ -135,47 +116,51 @@ The live window below holds the most recent lessons. When it passes its health t
 
 | [`devnotes-part25.md`](docs/history/window1.md#stitchcad-devnotes-part25md) | Hem and served-layer lessons | 28 lines, 2416 bytes, `sha256:a95d8c77…` |
 
-| [`devnotes-part26.md`](docs/history/stitchcad-devnotes-part26.md) | closure and notion-placement lessons | 27 lines, 2385 bytes, `sha256:b4b58e1b…` |
+| [`devnotes-part26.md`](docs/history/window2.md#stitchcad-devnotes-part26md) | closure and notion-placement lessons | 27 lines, 2385 bytes, `sha256:b4b58e1b…` |
 
-| [`devnotes-part27.md`](docs/history/stitchcad-devnotes-part27.md) | canonical buttonhole derivation lesson | 13 lines, 1158 bytes, `sha256:319f11b3…` |
+| [`devnotes-part27.md`](docs/history/window2.md#stitchcad-devnotes-part27md) | canonical buttonhole derivation lesson | 13 lines, 1158 bytes, `sha256:319f11b3…` |
 
-| [`stitchcad-devnotes-part28.md`](docs/history/stitchcad-devnotes-part28.md) | Pocket composition lesson | 14 lines, 1301 bytes, `sha256:764116ee…` |
+| [`stitchcad-devnotes-part28.md`](docs/history/window2.md#stitchcad-devnotes-part28md) | Pocket composition lesson | 14 lines, 1301 bytes, `sha256:764116ee…` |
 
-| [`stitchcad-devnotes-part29.md`](docs/history/stitchcad-devnotes-part29.md) | coverage probe calibration lesson | 15 lines, 1383 bytes, `sha256:d6d266b6…` |
+| [`stitchcad-devnotes-part29.md`](docs/history/window2.md#stitchcad-devnotes-part29md) | coverage probe calibration lesson | 15 lines, 1383 bytes, `sha256:d6d266b6…` |
 
-| [`stitchcad-devnotes-part30.md`](docs/history/stitchcad-devnotes-part30.md) | numeric availability/source-truth lesson | 15 lines, 1356 bytes, `sha256:7fa4db87…` |
+| [`stitchcad-devnotes-part30.md`](docs/history/window2.md#stitchcad-devnotes-part30md) | numeric availability/source-truth lesson | 15 lines, 1356 bytes, `sha256:7fa4db87…` |
 
-| [`stitchcad-devnotes-part31.md`](docs/history/stitchcad-devnotes-part31.md) | identifier grammar/binding lesson | 14 lines, 1283 bytes, `sha256:317f385a…` |
+| [`stitchcad-devnotes-part31.md`](docs/history/window2.md#stitchcad-devnotes-part31md) | identifier grammar/binding lesson | 14 lines, 1283 bytes, `sha256:317f385a…` |
 
-| [`stitchcad-devnotes-part32.md`](docs/history/stitchcad-devnotes-part32.md) | canonical procedure metadata lesson | 20 lines, 1878 bytes, `sha256:d5d201dc…` |
+| [`stitchcad-devnotes-part32.md`](docs/history/window2.md#stitchcad-devnotes-part32md) | canonical procedure metadata lesson | 20 lines, 1878 bytes, `sha256:d5d201dc…` |
 
-| [`stitchcad-devnotes-part33.md`](docs/history/stitchcad-devnotes-part33.md) | archive capacity/retrieval lesson | 18 lines, 1591 bytes, `sha256:aad7494a…` |
+| [`stitchcad-devnotes-part33.md`](docs/history/window2.md#stitchcad-devnotes-part33md) | archive capacity/retrieval lesson | 18 lines, 1591 bytes, `sha256:aad7494a…` |
 
-| [`stitchcad-devnotes-part34.md`](docs/history/stitchcad-devnotes-part34.md) | measurement table binding lesson | 18 lines, 1699 bytes, `sha256:3dc0b619…` |
+| [`stitchcad-devnotes-part34.md`](docs/history/window2.md#stitchcad-devnotes-part34md) | measurement table binding lesson | 18 lines, 1699 bytes, `sha256:3dc0b619…` |
 
-| [`devnotes-part35.md`](docs/history/stitchcad-devnotes-part35.md) | individual Ease mapping lesson | 13 lines, 1190 bytes, `sha256:de68d50d…` |
+| [`devnotes-part35.md`](docs/history/window2.md#stitchcad-devnotes-part35md) | individual Ease mapping lesson | 13 lines, 1190 bytes, `sha256:de68d50d…` |
 
-| [`devnotes-part36.md`](docs/history/stitchcad-devnotes-part36.md) | per-POM Ease query lesson | 13 lines, 1196 bytes, `sha256:f0b78fd7…` |
+| [`devnotes-part36.md`](docs/history/window2.md#stitchcad-devnotes-part36md) | per-POM Ease query lesson | 13 lines, 1196 bytes, `sha256:f0b78fd7…` |
 
-| [`devnotes-part37.md`](docs/history/stitchcad-devnotes-part37.md) | membership/Ease review lessons | 21 lines, 1781 bytes, `sha256:6a76a906…` |
-| [`devnotes-part38.md`](docs/history/stitchcad-devnotes-part38.md) | chart correspondence lesson | 14 lines, 1281 bytes, `sha256:453f9677…` |
-| [`devnotes-part39.md`](docs/history/stitchcad-devnotes-part39.md) | MTM/coverage lessons | 31 lines, 2736 bytes, `sha256:c7d16877…` |
-| [`devnotes-part40.md`](docs/history/stitchcad-devnotes-part40.md) | progressive book lesson | 18 lines, 1677 bytes, `sha256:89bc77bc…` |
+| [`devnotes-part37.md`](docs/history/window2.md#stitchcad-devnotes-part37md) | membership/Ease review lessons | 21 lines, 1781 bytes, `sha256:6a76a906…` |
+| [`devnotes-part38.md`](docs/history/window2.md#stitchcad-devnotes-part38md) | chart correspondence lesson | 14 lines, 1281 bytes, `sha256:453f9677…` |
+| [`devnotes-part39.md`](docs/history/window2.md#stitchcad-devnotes-part39md) | MTM/coverage lessons | 31 lines, 2736 bytes, `sha256:c7d16877…` |
+| [`devnotes-part40.md`](docs/history/window2.md#stitchcad-devnotes-part40md) | progressive book lesson | 18 lines, 1677 bytes, `sha256:89bc77bc…` |
 
-| [`devnotes-part41.md`](docs/history/stitchcad-devnotes-part41.md) | borrowed lexical source lesson | 19 lines, 1811 bytes, `sha256:92361240…` |
+| [`devnotes-part41.md`](docs/history/window2.md#stitchcad-devnotes-part41md) | borrowed lexical source lesson | 19 lines, 1811 bytes, `sha256:92361240…` |
 
-| [`devnotes-part42.md`](docs/history/stitchcad-devnotes-part42.md) | complete argument traversal lesson | 19 lines, 1781 bytes, `sha256:f77b3cf9…` |
+| [`devnotes-part42.md`](docs/history/window2.md#stitchcad-devnotes-part42md) | complete argument traversal lesson | 19 lines, 1781 bytes, `sha256:f77b3cf9…` |
 
-| [`devnotes-part43.md`](docs/history/stitchcad-devnotes-part43.md) | source gaps and keyword roles | 15 lines, 1397 bytes, `sha256:3d7763a5…` |
+| [`devnotes-part43.md`](docs/history/window2.md#stitchcad-devnotes-part43md) | source gaps and keyword roles | 15 lines, 1397 bytes, `sha256:3d7763a5…` |
 
-| [`devnotes-part44.md`](docs/history/stitchcad-devnotes-part44.md) | exact arithmetic results | 17 lines, 1562 bytes, `sha256:a378e4ad…` |
+| [`devnotes-part44.md`](docs/history/window2.md#stitchcad-devnotes-part44md) | exact arithmetic results | 17 lines, 1562 bytes, `sha256:a378e4ad…` |
 
-| [`devnotes-part45.md`](docs/history/stitchcad-devnotes-part45.md) | semantic bounds and delimiter nesting | 19 lines, 1803 bytes, `sha256:c9686523…` |
+| [`devnotes-part45.md`](docs/history/window2.md#stitchcad-devnotes-part45md) | semantic bounds and delimiter nesting | 19 lines, 1803 bytes, `sha256:c9686523…` |
 
-| [`devnotes-part46.md`](docs/history/stitchcad-devnotes-part46.md) | signed reconstruction lesson | 17 lines, 1562 bytes, `sha256:d00c7340…` |
+| [`devnotes-part46.md`](docs/history/window2.md#stitchcad-devnotes-part46md) | signed reconstruction lesson | 17 lines, 1562 bytes, `sha256:d00c7340…` |
 
-| [`devnotes-part47.md`](docs/history/stitchcad-devnotes-part47.md) | literal identity lesson | 17 lines, 1561 bytes, `sha256:1b718cca…` |
+| [`devnotes-part47.md`](docs/history/window2.md#stitchcad-devnotes-part47md) | literal identity lesson | 17 lines, 1561 bytes, `sha256:1b718cca…` |
 
-| [`devnotes-part48.md`](docs/history/stitchcad-devnotes-part48.md) | angular conversion lesson | 18 lines, 1649 bytes, `sha256:376d37ac…` |
+| [`devnotes-part48.md`](docs/history/window2.md#stitchcad-devnotes-part48md) | angular conversion lesson | 18 lines, 1649 bytes, `sha256:376d37ac…` |
 
-| [`stitchcad-devnotes-part49.md`](docs/history/stitchcad-devnotes-part49.md) | reduced-width lesson | 18 lines, 1658 bytes, `sha256:0317bfcf…` |
+| [`stitchcad-devnotes-part49.md`](docs/history/window2.md#stitchcad-devnotes-part49md) | reduced-width lesson | 18 lines, 1658 bytes, `sha256:0317bfcf…` |
+
+| [`stitchcad-devnotes-part50.md`](docs/history/stitchcad-devnotes-part50.md) | public-operator lesson | 18 lines, 1673 bytes, `sha256:2f4b81de…` |
+
+| [`stitchcad-devnotes-part51.md`](docs/history/stitchcad-devnotes-part51.md) | domain-context lesson | 19 lines, 1705 bytes, `sha256:6c25796f…` |
