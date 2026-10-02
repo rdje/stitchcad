@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — chart correspondence retains authored and generated measurement roles
+
+- An authored observation pins the member/set revision, named tables and two garment bindings.
+  Tables validate current measurement metadata; observation bindings also refuse explicit table
+  retargeting from transferring old intent. Selected-role queries do not certify the other role;
+  declaration/numeric queries validate both. Same-label/member or same-content/table peers never substitute.
+- Design input POMs identify logical quantities, not regenerated geometry results. Base authored
+  inputs may serve both roles without duplicating scalar/state. G3 still creates distinct generated
+  measurements and proves physical equivalence; mapping provenance alone cannot establish that truth.
+- Sixteen contracts/privacy and eight actual assertion reds verify domains/currentness/identity;
+  restored strict 403 tests, WASM/book and focused censuses pass. Unknown/derived values remain readable
+  but refuse numeric defaults. Completed membership retains exact predecessor evidence; rolling seals
+  preserve historical bytes. D70 axes ruling remains independent and pending; .3b coverage follows.
+- promotion: promoted by `decision_size-set-ownership.md`'s chart observations section.
+
 ## _(2026-10-02)_ — size labels, member identity and sequence are separate data
 
 - Membership stores pinned set id/revision, explicit system, ordered stable members and one base id.
@@ -91,26 +106,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   and native/WASM. No source/physical/release truth is inferred from a digest.
 - promotion: promoted by `decision_history-windows-retain-self-contained-bytes.md`.
 
-## _(2026-10-01)_ — documented procedure content lives in one canonical record
-
-- Measurement metadata holds stable name/token/unit/kind and declaration/landmark/procedure ids.
-  sc-measure depends on core, never the reverse. Value/state/source borrow the canonical declaration;
-  documented procedure text lives once on its immutable referenced record. Nonblank text establishes
-  content presence, not physical repeatability or source truth. Caller records invent no standard data.
-- Borrowed current inventories reject within-/cross-kind identity collisions before lookup. Body and
-  garment references cannot interchange. Repeated girth-level landmarks preserve authored intent;
-  no distinct-endpoint or physical-domain rule is guessed. Separate target queries aid inspection,
-  while full current validation checks every reference; Design/G4 still owns global source/evidence.
-- Sixteen contracts plus three privacy docs pass. Six actual guard mutations fail; restored strict
-  Rust executes 325 tests, with three-crate WASM, book and full probes/gates green. CI integration
-  required the exceptional push; .4a.2c observed bf29b03 Rust/doctrine jobs and every step successful,
-  including the three-crate WASM build. Metadata parent closes; physical/source proof remains deferred.
-- D66 corrects README/workspace starter status. Older lessons and token task records move unchanged;
-  canonical retrieval pointers retain exact identity. Archive is 64/64 files; the next required seal
-  must take D65's owned SPINE.19.2 transition before further product growth.
-- Promotion gate initially refused missing fresh questions. D67 traces an earlier false pass to an
-  unrelated staged cleanup decline; SPINE.22 owns the scoped verifier, with fresh questions added now.
-- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s metadata section.
 
 # Sealed archive — earlier lessons
 
@@ -162,3 +157,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part30.md`](docs/history/stitchcad-devnotes-part30.md) | numeric availability/source-truth lesson | 15 lines, 1356 bytes, `sha256:7fa4db87…` |
 
 | [`stitchcad-devnotes-part31.md`](docs/history/stitchcad-devnotes-part31.md) | identifier grammar/binding lesson | 14 lines, 1283 bytes, `sha256:317f385a…` |
+
+| [`stitchcad-devnotes-part32.md`](docs/history/stitchcad-devnotes-part32.md) | canonical procedure metadata lesson | 20 lines, 1878 bytes, `sha256:d5d201dc…` |

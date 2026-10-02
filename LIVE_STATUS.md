@@ -16,7 +16,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
 | Defect census | In Progress | 10 open, 59 sealed. Open: D34 + D38 (`PLANNING.5`), D40 + D46 + D51 (`SPINE.19`), D49 (`SPINE.5`), D53 + D54 (`SPINE.4`), D67 (`SPINE.22`), D70 (`G1-SLICE.4c.2`). Counts derive from live census and reconstructed history |
 | G0 — product & semantic contract | Mostly Done | Every clause met and derived except evaluation-seat procurement, accepted open by ruling; closure **unapproved** (governance §6.1). `run_g0_exit_review.sh` → `18 met / 1 not met` |
-| G1 — executable architecture slice | In Progress | 5 of 18 top-level leaves done; all 4 structural object families complete. Geometry/recipe/profile/release proofs remain owned; next `.4c.2` axes; D70 ruling pending, membership implemented |
+| G1 — executable architecture slice | In Progress | 5 of 18 top-level leaves done; all 4 structural object families complete. Geometry/recipe/profile/release proofs remain owned; next `.4c.3b` chart coverage; observations implemented, axes D70 pending |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 leaves; CSP + oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |
@@ -25,4 +25,4 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | G7 — scoped production declaration | Not Started | 7 leaves: independent review, envelope statement, semver policy, upgrade/rollback, channels, governance |
 | V1 — assembly visualization | Not Started | parallel, never blocks a G-gate; 7 leaves: mesh, ease-aware stitching, net-line binding, arrangement, viewport, blinded validation |
 | V2 — physically validated simulation | Not Started | parallel, uncapped; 6 leaves: `sc-sim` out of the default build, XPBD research, labelled approximation, calibration + observables, evidence-gated exit |
-| Product code (`crates/`) | In Progress | `sc-units`: 27 tests; `sc-core`: structural ontology/canonical inputs; `sc-measure`: metadata/tables/Ease/size membership. Native/WASM green locally; older metadata CI observed; truth/physical/release proof deferred |
+| Product code (`crates/`) | In Progress | `sc-units`: 27 tests; `sc-core`: structural ontology/canonical inputs; `sc-measure`: metadata/tables/Ease/members/chart observations. Native/WASM green locally; older metadata CI observed; truth/physical/release proof deferred |

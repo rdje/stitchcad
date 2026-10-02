@@ -443,19 +443,8 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4c.1`
   Status: `done`
-  Goal: immutable membership foundation: SizeSetReference(id, Count revision), SizeSystem, validated
-  human SizeLabel, stable SizeMember ids, authored ordered members and exactly one base member.
-  Pre-code protocol: SizeMembershipDefinition has reference/system/member list/base id. It contains
-  no chart, breaks, quantities, axes or physical defaults; .4c.2/.3/.4 supply those distinct contracts.
-  Reject empty members, repeated member/set ids, exact duplicate labels and absent base; nonblank
-  labels preserve exact Unicode/spacing/case and carry no machine-token or numerical semantics.
-  Id/label queries are order-independent; inventory order is never sorted. Revision successor retains
-  identity and checks Count overflow, without pretending to enforce command-registry currentness.
-  Acceptance: custom single member/base supported, author order preserved, blank labels/duplicate ids/
-  labels/missing base refused, same labels in different sets carry distinct identity; immutable/private
-  content, structured diagnostics and overflow refusal. Canonical charts/axes/evidence remain deferred.
-  Verification: 12 contracts + three privacy/quantity docs, seven real assertion reds; restored
-  strict 386 tests/book/glossary; WASM and staged gate below. D70 ruling remains pending for axes.
+  Goal: stable authored size membership and checked revision successors.
+  Verification: [preserved full contract/checklist](G1-SLICE-measurements.md#size-membership-contract-and-evidence--preserved-from-0b77235).
   Commit: `STITCHCAD-G1-0032`
 
 - ID: `G1-SLICE.4c.2`
@@ -468,11 +457,69 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `pending`
 
 - ID: `G1-SLICE.4c.3`
-  Status: `pending`
+  Status: `in_progress`
+  Children: .4c.3a (garment chart observations), .3b (chart collection), .3c (MTM body inputs),
+  .3d (breaks/composite SizeSet), .3e (review). .3a can proceed independently of D70 axes cardinality.
   Goal: complete SizeSet chart/break object over membership/axes, canonical per-member POM scalars,
   landmarks/procedures/state/provenance and adjacent signed breaks; current references and path readiness.
   Acceptance: chart and generated POMs distinct; missing breaks name dimension/pair and refuse path 2;
   zero/uneven breaks legal; MTM of one uses body provenance and only path 1; no quantity/default values.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4c.3a`
+  Status: `done`
+  Goal: immutable garment-chart observation for one member and design POM, with current member/set
+  revision, logical POM and measured-input bindings, named table memberships and mapping provenance.
+  Pre-code protocol: SizeChartObservationDefinition holds id, pinned membership reference/member id,
+  design/chart table ids, saved POM/measurement four-field bindings and correspondence provenance id.
+  Context borrows membership/current tables/MeasurementTableContext, rejecting duplicate/cross-kind
+  identities (including member/set identities). Both measurements must be Garment; Body/MTM inputs
+  belong to .3c and are never silently interchanged. Current queries pin set id/revision, resolve member
+  id, table ids and measured ids, reject token/kind/scalar retargeting and validate required metadata.
+  Value/state/source/entered unit borrowed from the canonical measurement, no numeric/state cache.
+  Same input may also be a Design-table POM (base-size authored data); no duplicated scalar imposed.
+  This is an authored chart-to-POM correspondence, not a regenerated geometry measurement or proof
+  of physical quantity equivalence. G3/G4 validate that correspondence/source/evidence; later generated
+  results remain distinct measurements. No axis, default, inferred label, completeness or path-ready claim.
+  Acceptance: missing/revised member, tables, bindings and metadata refuse with scoped errors; current
+  scalar/metadata edits visible; unknown/derived numeric queries refuse; selected targets borrowed;
+  immutable replacement leaves originals unchanged. Own book/API/live docs, evidence retention/seals.
+  Verification: 16 contracts/privacy, eight actual assertion reds, restored strict 403 tests/WASM/book;
+  glossary/uncertainty/tree/ledger and staged doctrine gate green. Completed membership preserved exactly.
+  Commit: `STITCHCAD-G1-0033`
+
+- ID: `G1-SLICE.4c.3b`
+  Status: `pending`
+  Goal: canonical per-member/POM chart collection with unique observations and declared coverage,
+  current correspondence/table validation, explicit completeness errors and ordered-member lookup.
+  Acceptance: target POM set explicit; duplicate or missing member/POM cells typed, no interpolation or
+  label-derived quantity; shared canonical observations allowed only when explicitly bound/provenanced.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4c.3c`
+  Status: `pending`
+  Goal: typed MTM body-input chart correspondence for custom single-member ranges, current body/Ease
+  mappings and provenance; preserve body versus garment observation distinction and path-1 semantics.
+  Acceptance: body never compared to garment as an unconverted POM; missing Ease/current source
+  mappings refuse; custom/member-of-one and body metadata required, path 2 remains refused.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4c.3d`
+  Status: `pending`
+  Goal: signed canonical adjacent breaks and composite SizeSet over membership/axes/chart with source/
+  state/provenance; per-axis/dimension coverage and typed path readiness, after D70 axes ruling.
+  Acceptance: authored adjacency, zero/uneven breaks, current references, missing dimension/pair and
+  MTM path-2 refusal; no rounded values, generated equivalence or profile execution claimed.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4c.3e`
+  Status: `pending`
+  Goal: chart/body/break/currentness requirement review and milestone checks before closing .3;
+  remaining profile transformation .4 and full SizeSet .5/.4d stay owned.
   Verification: `pending`
   Commit: `pending`
 
@@ -671,7 +718,8 @@ metadata signoff unchanged; the named table slice follows.
 | --- | --- | --- | --- |
 | done | `G1-SLICE.4a.3` | `done` | Named table/unique current bindings complete .4a structurally |
 | done | `G1-SLICE.4c.1` | `done` | Size membership identity/order/base and revision foundation |
-| next | `G1-SLICE.4c.2` | `pending` | Axes model awaits D70 cardinality ruling; independent chart review remains possible |
+| done | `G1-SLICE.4c.3a` | `done` | Current authored garment chart observations |
+| next | `G1-SLICE.4c.3b` | `pending` | Chart coverage/collection independent of D70; axes .4c.2 awaits ruling |
 
 ## Routing Evidence — D67, lesson decision freshness
 
@@ -752,34 +800,36 @@ unticked placeholder boxes: the spine's acceptance gate judges the FIRST matchin
 file, so a placeholder both shadows real evidence and falsely rejects honest work (defect D15,
 measured by the `SPINE.7` probe).
 
-### `G1-SLICE.4c.1` — size membership without inferred order or measurements
 
-- [x] **REPRODUCE / ISSUE** — `git grep -n -E 'SizeMembership|SizeSetReference' b6bd985 --
-  crates/sc-measure/src` → 0 matches, expected rc=1: no executable membership; size-sets .2–.4/.11 requires identity/revision, human labels,
-  authored order and exactly one existing base, with no quantity or label-derived measurements.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `rg -n 'axes|single axis|two representations'
-  docs/book/src/spec/size-sets.md` → conflicting field row/one-axis rule, rc=0; sc-units ratio.rs
-  inspection → Count(u32), checked successor required. Membership separates identity/label/position.
-  D70 source census pins contradictory optional/multidimensional-only versus single-axis requirements;
-  axes representation is not needed by this independently owned membership foundation.
-- [x] **FIX** — private nonblank exact SizeLabel and immutable SizeMembership; stable member ids,
-  explicit system, pinned reference/revision and base identity. Refuse empty/duplicate members/labels,
-  missing base/lookups and overflow. Never sort, normalize, parse a measurement or invent quantities.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test size_membership_contract` →
-  12 passed, rc=0; three privacy/quantity docs pass. `bash docs/tasks/artifacts/size_membership/
-  run_size_membership_mutations.sh` → seven real assertion reds, rc=101 each; source restored exactly.
-  Authored sort mutation and wrapped revision fallback fail real regressions, not compilation.
-- [x] **NO REGRESSION** — `make check` → 386 tests, strict fmt/clippy, rc=0; three-crate `make wasm`
-  and warning-free book, rc=0. Glossary → 310 terms/9 parts/158 tokens/0 failures, rc=0;
-  tree census → 10 lanes/13 trees/6 siblings/0 gaps, rc=0; ledger → 9 pass/0 fail, rc=0.
-  Final staged `make gate` → all doctrines green, rc=0. Uncertainty census → 133 markers/16 files/
-  0 unowned/0 failures, rc=0. No implicit axis, chart measurement or default quantity.
-- [x] **LOCKSTEP** — API/book/partial SizeSet status, canonical ownership record, live pointers and
-  logs agree. Completed Ease review retains exact predecessor text; rolling records seal unchanged.
-  D70 logged/owned for .4c.2 with director question; .4c.3/.4/.5/.4d preserve all remaining scope.
-  Membership is not a complete SizeSet, MTM-ready chart, current-registry certificate or release proof.
+### `G1-SLICE.4c.3a` — current authored garment chart observations
+
+- [x] **REPRODUCE / ISSUE** — `git grep -n -E 'SizeChartObservation|SizeChartContext'
+  0b77235 -- crates/sc-measure/src` → 0 matches, expected rc=1; size-sets §5 needs canonical
+  per-member/POM chart inputs distinct from later regenerated geometry measurements.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `rg -n 'chart POM|regenerated POM|state|chart'
+  docs/book/src/spec/size-sets.md` → authored chart/source requirements at §5, rc=0; existing tables
+  validate metadata but carry no set/member/revision correspondence. Design inputs name a logical
+  quantity; they are not already measured regeneration results. Base input sharing needs no copy.
+- [x] **FIX** — immutable observation pins member/set reference, two named table identities and
+  saved garment bindings. Borrow current metadata/state/source; refuse aliases, missing/revised
+  membership, absent tables, invalid targets and retargeting. Mapping provenance is not physical proof.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test size_chart_contract` → 16 passed,
+  rc=0; privacy doctest passes. `bash docs/tasks/artifacts/size_chart/run_size_chart_mutations.sh`
+  → eight real assertion reds, each rc=101, exact source restore, rc=0. Same-label/member and
+  same-content/table substitutions, wrong domains and explicitly rebound tables cannot transfer intent.
+- [x] **NO REGRESSION** — `make check` → strict fmt/clippy and 403 tests, rc=0; `make wasm` →
+  three crates cross-build, rc=0; `make book` → no warnings, rc=0. Glossary → 310 terms/9 parts/
+  158 tokens/0 failures; uncertainty → 133 markers/16 files/0 unowned/0 failures, both rc=0.
+  Tree census → 10 lanes/13 trees/6 siblings/0 gaps; ledger → 9 pass/0 fail; staged `make gate`
+  → all doctrines green, rc=0. New product code has local integration proof, not observed remote CI.
+- [x] **LOCKSTEP** — book/API/README/package status, canonical ownership, live pointers and logs
+  updated together. Full .4c.1 contract/checklist retains exact HEAD bytes in linked sibling;
+  oldest changelog/lesson seals preserve predecessor bytes. Chart collection, MTM, breaks/composite,
+  profile resolution and later physical/evidence/release validation remain owned; D70 not defaulted.
 
 ## Verification Log
+
+| `2026-10-02` | `.4c.3a` | chart contracts/mutations; Rust/WASM/book; glossary/uncertainty/tree/ledger/staged gate | 16 contracts/privacy; eight assertion reds; strict 403 tests, all checks green, rc=0 |
 
 | `2026-10-02` | `.4c.1` | membership contracts/guard mutations, strict Rust/WASM/book, glossary/uncertainty/tree/ledger, staged gate | 12 contracts/three docs, seven real reds, 386 tests; 10 open/59 sealed; D70 ruling pending |
 
@@ -901,3 +951,11 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
 
 - .4c.1 staged containment refused a 329-byte product-status row; the measured row is shortened to
   260 bytes under the unchanged 320-byte ceiling. Final staged doctrines pass, rc=0.
+
+- `2026-10-02`: .4c.3 decomposed before code into observations, collection, MTM, breaks/composite
+  and review. .3a implements current authored garment correspondence; .3b coverage can proceed while
+  axes D70 awaits ruling. Sixteen contracts/privacy, eight real guard reds and strict 403 tests pass;
+  native/WASM/book/current-reference boundaries remain explicit. Completed membership is preserved
+  byte-identically against HEAD in the measurement sibling; no prior evidence is rewritten.
+
+| `.4c.3a` | `STITCHCAD-G1-0033 (leaf G1-SLICE.4c.3a): garment chart observations retain current member and POM references` | 16 contracts/privacy, eight real reds, 403 strict tests/WASM/book; collection coverage next |

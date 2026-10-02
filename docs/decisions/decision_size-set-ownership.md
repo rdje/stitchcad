@@ -6,7 +6,7 @@
 - **Owner / source:** leaf `G0-CONTRACT.6`, resolving the question roadmap §3.4 leaves open at G0 and
   ontology §2.3 refers here ("Ownership … is decided in the size-sets chapter")
 
-answers: "who owns a size set?" · "can a factory change my sizes?" · "where do size-run quantities live?" · "why is a size set referenced rather than embedded in a design?" · "what must a profile record to override sizes?" · "how does made-to-measure fit a size set?" · "can label order choose the base?" · "can a size revision wrap?"
+answers: "who owns a size set?" · "can a factory change my sizes?" · "where do size-run quantities live?" · "why is a size set referenced rather than embedded in a design?" · "what must a profile record to override sizes?" · "how does made-to-measure fit a size set?" · "can label order choose the base?" · "can a size revision wrap?" · "may chart and Design share an authored base input?"
 
 ## The fact / decision
 
@@ -97,3 +97,11 @@ membership, not MTM body-chart provenance. Pinned SizeSetReference uses Count re
 retains identity and refuses overflow. Currentness/authorized monotonic transitions remain registry/
 command obligations. Axes/chart/break/resolution contracts remain separate; D70's axes cardinality
 conflict requires a ruling before .4c.2, and no axis representation is selected by this foundation.
+
+## Chart observations — G1-SLICE.4c.3a
+
+An observation pins member/set revision, named tables and two garment measurement bindings. The
+Design role is a logical authored input, not a regenerated result: base inputs may serve both roles
+without duplicating their scalar. Current metadata/state/source is borrowed; retargeting requires
+explicit replacement. Correspondence provenance does not prove physical equivalence; G3/G4 own that
+proof. Chart completeness, MTM body/Ease inputs, breaks and resolution remain separate owned slices.

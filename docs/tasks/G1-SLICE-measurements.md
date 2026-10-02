@@ -357,3 +357,50 @@ promotion: declined (routine milestone review; canonical decisions unchanged, re
 Completed set contract/checklist is retained byte-identically against b4e0bc7 in the measurement sibling.
 
 Return to the [active frontier](G1-SLICE.md#current-frontier).
+
+
+## Size membership contract and evidence — preserved from 0b77235
+
+- ID: `G1-SLICE.4c.1`
+  Status: `done`
+  Goal: immutable membership foundation: SizeSetReference(id, Count revision), SizeSystem, validated
+  human SizeLabel, stable SizeMember ids, authored ordered members and exactly one base member.
+  Pre-code protocol: SizeMembershipDefinition has reference/system/member list/base id. It contains
+  no chart, breaks, quantities, axes or physical defaults; .4c.2/.3/.4 supply those distinct contracts.
+  Reject empty members, repeated member/set ids, exact duplicate labels and absent base; nonblank
+  labels preserve exact Unicode/spacing/case and carry no machine-token or numerical semantics.
+  Id/label queries are order-independent; inventory order is never sorted. Revision successor retains
+  identity and checks Count overflow, without pretending to enforce command-registry currentness.
+  Acceptance: custom single member/base supported, author order preserved, blank labels/duplicate ids/
+  labels/missing base refused, same labels in different sets carry distinct identity; immutable/private
+  content, structured diagnostics and overflow refusal. Canonical charts/axes/evidence remain deferred.
+  Verification: 12 contracts + three privacy/quantity docs, seven real assertion reds; restored
+  strict 386 tests/book/glossary; WASM and staged gate below. D70 ruling remains pending for axes.
+  Commit: `STITCHCAD-G1-0032`
+
+### `G1-SLICE.4c.1` — size membership without inferred order or measurements
+
+- [x] **REPRODUCE / ISSUE** — `git grep -n -E 'SizeMembership|SizeSetReference' b6bd985 --
+  crates/sc-measure/src` → 0 matches, expected rc=1: no executable membership; size-sets .2–.4/.11 requires identity/revision, human labels,
+  authored order and exactly one existing base, with no quantity or label-derived measurements.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `rg -n 'axes|single axis|two representations'
+  docs/book/src/spec/size-sets.md` → conflicting field row/one-axis rule, rc=0; sc-units ratio.rs
+  inspection → Count(u32), checked successor required. Membership separates identity/label/position.
+  D70 source census pins contradictory optional/multidimensional-only versus single-axis requirements;
+  axes representation is not needed by this independently owned membership foundation.
+- [x] **FIX** — private nonblank exact SizeLabel and immutable SizeMembership; stable member ids,
+  explicit system, pinned reference/revision and base identity. Refuse empty/duplicate members/labels,
+  missing base/lookups and overflow. Never sort, normalize, parse a measurement or invent quantities.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test size_membership_contract` →
+  12 passed, rc=0; three privacy/quantity docs pass. `bash docs/tasks/artifacts/size_membership/
+  run_size_membership_mutations.sh` → seven real assertion reds, rc=101 each; source restored exactly.
+  Authored sort mutation and wrapped revision fallback fail real regressions, not compilation.
+- [x] **NO REGRESSION** — `make check` → 386 tests, strict fmt/clippy, rc=0; three-crate `make wasm`
+  and warning-free book, rc=0. Glossary → 310 terms/9 parts/158 tokens/0 failures, rc=0;
+  tree census → 10 lanes/13 trees/6 siblings/0 gaps, rc=0; ledger → 9 pass/0 fail, rc=0.
+  Final staged `make gate` → all doctrines green, rc=0. Uncertainty census → 133 markers/16 files/
+  0 unowned/0 failures, rc=0. No implicit axis, chart measurement or default quantity.
+- [x] **LOCKSTEP** — API/book/partial SizeSet status, canonical ownership record, live pointers and
+  logs agree. Completed Ease review retains exact predecessor text; rolling records seal unchanged.
+  D70 logged/owned for .4c.2 with director question; .4c.3/.4/.5/.4d preserve all remaining scope.
+  Membership is not a complete SizeSet, MTM-ready chart, current-registry certificate or release proof.

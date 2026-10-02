@@ -5,7 +5,8 @@
 //! and documented procedures do not certify source truth, physical repeatability or release approval.
 //! MeasurementTable and individual Ease mappings pin stable bindings over borrowed current records.
 //! Ease sets validate current per-POM mappings/table membership. Size membership is implemented;
-//! complete SizeSet axes/chart/break/resolution contracts follow in their owned slices.
+//! garment chart observations borrow current member/POM inputs. Complete SizeSet axes/chart coverage/
+//! break/resolution contracts follow in their owned slices.
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
@@ -31,4 +32,10 @@ mod size_membership;
 pub use size_membership::{
     SizeLabel, SizeMember, SizeMembership, SizeMembershipDefinition, SizeMembershipError,
     SizeSetReference, SizeSystem,
+};
+
+mod size_chart;
+pub use size_chart::{
+    SizeChartContext, SizeChartError, SizeChartObservation, SizeChartObservationDefinition,
+    SizeChartRole,
 };

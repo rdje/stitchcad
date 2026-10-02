@@ -56,6 +56,22 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part28.md`](docs/history/stitchcad-changelog-part28.md) | STITCHCAD-G1-0011 | 20 lines, 1689 bytes, `sha256:6900e83e…` |
 
+| [`stitchcad-changelog-part29.md`](docs/history/stitchcad-changelog-part29.md) | STITCHCAD-G1-0012 | 15 lines, 1306 bytes, `sha256:88277bd5…` |
+
+## STITCHCAD-G1-0033 - current garment chart observations (leaf `G1-SLICE.4c.3a`)
+
+Immutable authored observations pin set revision/member, named Design/chart tables and two garment
+measurement bindings with correspondence provenance. Current queries refuse missing/revised members,
+substitute tables, aliases and retargeted metadata; state/source/unit/procedure remain canonical and
+borrowed. A logical Design base input may also serve as a chart observation without duplicated scalars;
+regenerated geometry measurements and physical equivalence remain separate G3/G4 obligations.
+
+Sixteen contracts/privacy and eight deliberate production mutations verify currentness and borrowing.
+Restored strict Rust runs 403 tests; three-crate WASM, warning-free book, glossary/uncertainty/tree,
+ledger and staged doctrine gates pass. Completed membership evidence retains exact predecessor bytes;
+oldest live changelog/lesson seals preserve their identity. G1 stays 5/18; next .4c.3b chart coverage,
+then MTM/body, breaks/composite and review. Axes D70 awaits the director; no representation defaulted.
+
 ## STITCHCAD-G1-0032 - authored size membership (leaf `G1-SLICE.4c.1`)
 
 Immutable size membership separates stable member identities, exact human labels, authored order,
@@ -357,19 +373,3 @@ feature/glossary censuses, ledger probes and staged gates pass. Earlier object c
 to the existing evidence sibling before the parent reaches 1000 lines; every staged checklist passes.
 The oldest dev-note lesson seals to part13. No fixture golden changes. Marks/allowances closes;
 G1 remains 4/18 top-level leaves and advances to 3/4 object families. Next `.3c.4` constructions.
-
-## STITCHCAD-G1-0012 - directed grainlines retain independent print references (leaf `G1-SLICE.3c.3b`)
-
-Immutable Grainline content holds a directed arrow, explicit parallel/angle intent and independent
-optional stripe/plaid ranges. All born references require complete owned intervals and unique endpoints.
-Directed queries preserve raw evidence, reverse fragment order for reverse traversal and compose journal
-direction; repairs stay visible in traversal order. Explicit 45°/180° and symbolic angle declarations
-supply intent without geometry proof or default values. G2/G4 retain physical/value validation.
-
-Nine grain contracts and privacy doctest pass. Disabling reverse fragment order makes the independent
-regression red; restored strict Rust, wasm, warning-free book and feature/glossary censuses pass.
-D61 closes with unchanged census predicates and ten green/red glossary probes. Existing sewing/notch
-suites pass after sharing whole-interval ownership. Ledger probes and staged doctrines pass.
-Ontology §10 becomes a bounded index; its 231-line executable body moves unchanged to the linked
-implementation chapter, which gains grain examples. Oldest live changelog/dev-note entries seal.
-Next `.3c.3c` implements allowance descriptors; G1 remains 4/18 top-level leaves, 2/4 object families.
