@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — unsigned canonical magnitudes need a full-width rounding result
+
+- D95 permits128-bit positive literal children before signed binding. Existing signed rounding
+  correctly returns i64; add a separate unsigned result sharing the same private magnitude rule.
+  Compare r >= d-r so full-u128 remainders cannot overflow; preserve caller operation and signed
+  MIN/overflow/sign reconstruction. No new dependency, scalar/domain rule or formula execution.
+- Five public contracts consume138 Decimal120-digit oracle rows and check wide/tie/zero/signed
+  boundaries. Nine actual compiled debug faults and one release wrapped-remainder fault fail
+  assertions, restore exact bytes; all five existing signed faults remain discriminating.
+- Strict native494 (units46), release signed/unsigned public tests and three real WASM builds pass.
+  Book adds a progressive unit API/example and indexed expert proof annex; language/publication pass.
+  Literal normalization/arena/serializer/binding/evaluation remain separate product leaves.
+- Prior protocol/checklist/oldest ledger bytes retain exact histories. Correct another existing D34
+  stale execution-order pointer; PLANNING.5 still owns derived synchronization.
+- promotion: declined (routine full-width rounding prerequisite under the received D95 contract).
+
 ## _(2026-10-02)_ — close scoped reference obligations without claiming production execution
 
 - D84 original sign/turn/binding/equality consequences map to signed90/15 actual reds and angular72/
@@ -63,19 +79,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   evaluator and arbitrary-input transcendental/cross-platform proofs are still future product work.
 - D98 corrects preserved push-status attribution: direct checker due1, diagnostic Make0.
 - promotion: declined (routine scoped conformance review of received numeric and literal contracts).
-
-## _(2026-10-02)_ — retained controls need an observed runner verdict
-
-- G1-0052 changes doctrine archive inputs, requiring immediate push despite the400 cadence.
-  Verified exact f876913 heads and observed both completed CI jobs, every step success; archive
-  prerequisite/enforcer plus Rust fmt/clippy/tests/WASM pass. Post-commit CLI140 controls also pass.
-- The newest catalog immutability arm now executes against committed bytes and refuses its actual
-  edit. Earlier capture and task/ledger payloads remain exact; no product behavior changed here.
-- Initial automatic approval rejected default-main export. Existing public origin/push permission and
-  task-owned outgoing payload were checked; the same required push then approved and succeeded.
-- Book/task/pointers now carry actual remote job/step evidence. D83 complete review .2 follows;
-  no numerical/geometry or production signoff is inferred from this maintenance CI result.
-- promotion: declined (routine observed verification of the existing CI exception and archive contract).
 
 # Sealed archive — earlier lessons
 
@@ -172,3 +175,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part54.md`](docs/history/stitchcad-devnotes-part54.md) | numeric binding/literal ruling lesson | 16 lines, 1445 bytes, `sha256:7fcc4170…` |
 
 | [`devnotes-part55.md`](docs/history/stitchcad-devnotes-part55.md) | archive capacity and D96 lesson | 19 lines, 1731 bytes, `sha256:12f0338c…` |
+
+| [`devnotes-part56.md`](docs/history/stitchcad-devnotes-part56.md) | observed CI lesson | 12 lines, 1047 bytes, `sha256:cb01f979…` |

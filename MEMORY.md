@@ -5,10 +5,11 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.5a.3c`** in `docs/tasks/G1-SLICE.md`.
+- **Active tree:** `G1-SLICE`, frontier **`.5a.3c.2`** in `docs/tasks/G1-SLICE.md`.
 - **Next action:** production numeric literal normalization in sc-core: finalize exact bounded
   conversion/representation protocol from formula2/4.2, grammar2/2.1/4, units and D95/D84 decisions.
-  Typed literal nodes retain128-bit magnitude/unary identity; bound numeric values later fit i64.
+  Shared full-u128 rounding is implemented/verified under .5a.3c.1. Planned typed literal nodes
+  retain128-bit magnitude/unary identity; bound numeric values later fit i64.
   Raw formula angles preserve sign/turns; normalized sc-units Angle is only a direction type.
   D83/D84/D95/D99/D100 scoped reference prerequisites are complete. No production numeric execution
   yet; serializer/recipe/binding/evaluation and transcendental proof have separate leaves.

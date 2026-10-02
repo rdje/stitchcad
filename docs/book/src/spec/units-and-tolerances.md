@@ -134,8 +134,25 @@ precondition, clamping or wrapping.
 
 D78's extreme negative i128 input previously panicked before the checked conversion. The repair
 narrows an unsigned magnitude safely before reconstructing its sign, with the negative i64 endpoint
-handled explicitly. Quotient/remainder arithmetic stays exact: absolute i128 values are at most
-2^127, and twice a remainder below that denominator fits u128. The half-away rule is unchanged.
+handled explicitly. Both public entry points now share one magnitude rule; the signed entry point
+then applies its sign and i64 storage boundary. The half-away rule is unchanged.
+
+The companion `sc_units::round::div_round_half_away_from_zero_unsigned` accepts u128 numerator and
+denominator and returns a full-width u128 magnitude. Zero refuses with that public operation name.
+It permits wide canonical literal children without imposing a binding's i64 width; it performs no
+literal parsing, quantity-domain validation or direction normalization.
+
+```rust
+use sc_units::round::div_round_half_away_from_zero_unsigned as round;
+assert_eq!(round(1, 2)?, 1);
+let positive_child = 1_u128 << 63;
+assert_eq!(round(positive_child, 1)?, positive_child);
+# Ok::<(), sc_units::UnitError>(())
+```
+
+The [wide-rounding annex](../annexes/numeric-rounding.md) gives the arithmetic/totality argument,
+independent fixtures and compiled fault checks. These remain primitive checks, separate from
+formula conversion/binding/evaluation and production release proof.
 
 ```bash
 cargo test -p sc-units --test round_contract

@@ -135,6 +135,12 @@ artifact directory independently verifies 36 exact Fraction rows; that directory
 runs it. `bash docs/tasks/artifacts/formula_structure/run_round_mutations.sh` requires five real
 production assertion reds/exact restoration; run alone. No complete literal/evaluation proof implied.
 
+Unsigned round primitive: `cargo test -p sc-units --test unsigned_round_contract` exercises five
+public full-u128/tie/zero/context/signed-bridge contracts and138 Decimal fixture rows. The structural
+suite watches `unsigned_round_reference.py`; --emit reproduces its authored boundary population.
+`run_unsigned_round_mutations.sh` requires nine compiled debug assertion reds and one release wrap
+red, with byte-identical restoration; run exclusively. Existing signed four/36/five remain required.
+
 Public round diagnostic: `bash docs/tasks/artifacts/formula_structure/run_round_diagnostic.sh`
 links the actual current Cargo artifact and prints caught unwinds/typed results for six fixed inputs.
 It is a diagnostic producer, not a passing verdict; round_contract judges the values.

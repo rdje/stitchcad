@@ -18,21 +18,11 @@ use crate::error::UnitError;
 /// Returns [`UnitError::DivisionByZero`] when `denominator` is zero, and [`UnitError::Overflow`]
 /// when the rounded quotient does not fit an `i64`.
 pub fn div_round_half_away_from_zero(numerator: i128, denominator: i128) -> Result<i64, UnitError> {
-    if denominator == 0 {
-        return Err(UnitError::DivisionByZero {
-            operation: "div_round_half_away_from_zero",
-        });
-    }
     // Work in magnitudes so the half-way rule cannot depend on the sign convention of `/` and `%`.
     let negative = (numerator < 0) != (denominator < 0);
     let n = numerator.unsigned_abs();
     let d = denominator.unsigned_abs();
-    let mut q = n / d;
-    let r = n % d;
-    // half away from zero: a remainder of exactly half, or more, moves the magnitude up by one.
-    if r * 2 >= d {
-        q += 1;
-    }
+    let q = round_magnitude(n, d, "div_round_half_away_from_zero")?;
     // The negative endpoint has one more unit of magnitude than i64::MAX. Handle it without
     // ever casting a wider unsigned quotient to a signed type: 2^127 is a valid i128 magnitude,
     // but casting it first would create i128::MIN and negating that value would panic.
@@ -44,6 +34,57 @@ pub fn div_round_half_away_from_zero(numerator: i128, denominator: i128) -> Resu
     })?;
     // Checked conversion proved magnitude <= i64::MAX, so its negation is representable.
     Ok(if negative { -magnitude } else { magnitude })
+}
+
+/// Rounds a nonnegative exact ratio to a full-width unsigned magnitude, half away from zero.
+///
+/// This retains all 128 magnitude bits, including values wider than signed i128 or i64. It does
+/// not impose a quantity's scalar domain or a binding's storage width. Formula literal conversion
+/// can therefore round a positive child beneath unary minus without folding the operator or
+/// prematurely narrowing the value. The signed API uses the same magnitude rule and checks its
+/// signed i64 result separately.
+///
+/// For a nonzero denominator every u128 input pair has a representable rounded u128 result:
+/// denominator one has no remainder; larger denominators leave room to increment the quotient.
+///
+/// # Errors
+///
+/// Returns [`UnitError::DivisionByZero`] when `denominator` is zero.
+///
+/// ```
+/// use sc_units::round::div_round_half_away_from_zero_unsigned as round;
+/// assert_eq!(round(1, 2)?, 1);
+/// assert_eq!(round(u128::MAX, 1)?, u128::MAX);
+/// assert_eq!(round(u128::MAX - 1, u128::MAX)?, 1);
+/// # Ok::<(), sc_units::UnitError>(())
+/// ```
+pub fn div_round_half_away_from_zero_unsigned(
+    numerator: u128,
+    denominator: u128,
+) -> Result<u128, UnitError> {
+    round_magnitude(
+        numerator,
+        denominator,
+        "div_round_half_away_from_zero_unsigned",
+    )
+}
+
+fn round_magnitude(
+    numerator: u128,
+    denominator: u128,
+    operation: &'static str,
+) -> Result<u128, UnitError> {
+    if denominator == 0 {
+        return Err(UnitError::DivisionByZero { operation });
+    }
+    let mut q = numerator / denominator;
+    let r = numerator % denominator;
+    // r < denominator, so subtraction is representable. Unlike 2*r, this comparison cannot
+    // overflow at a full-width unsigned denominator, and it treats exact halves identically.
+    if r >= denominator - r {
+        q = q.checked_add(1).ok_or(UnitError::Overflow { operation })?;
+    }
+    Ok(q)
 }
 
 #[cfg(test)]

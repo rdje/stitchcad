@@ -244,6 +244,10 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Recurrence at G1-SLICE.4b.2: the index command's example still says four siblings while the
     actual census derives six. This leaf corrects the example; PLANNING.5 retains derivation ownership.
 
+  - Recurrence at G1-SLICE.5a.3c.1: TASK_TREE execution-order prose still selected completed
+    .5a.3b.3b.3 while its frontier row selected .5a.3c. Correct both to .5a.3c.2 after the rounding
+    prerequisite; PLANNING.5 retains the mechanical derivation obligation and priority.
+
 - **D38** — the defect census records each defect's state in prose, so its open/closed counts cannot be
   derived: `LIVE_STATUS.md` carries "36 logged, 32 closed" by hand, and a naive derivation over the same
   file disagrees.

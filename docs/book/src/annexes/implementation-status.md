@@ -8,7 +8,7 @@ requires the named contracts and later proof owners.
 
 | Family | Roadmap | Public source and verification | Book contract |
 | --- | --- | --- | --- |
-| Units/tolerances | §4.2; G0/G1 | sc-units; G1-SLICE.2/.5a.3b.3b.1b | [Numerical contract](../spec/units-and-tolerances.md) |
+| Units/tolerances | §4.2; G0/G1 | sc-units; G1-SLICE.2/.5a.3c.1 | [Numerical contract](../spec/units-and-tolerances.md), [wide rounding](numeric-rounding.md) |
 | Identity/references | §4.1; G1 | sc-core ontology; G1-SLICE.3a/.3b | [Model and current repairs](../spec/ontology-implementation.md) |
 | Pieces/copies, sewing, marks/allowances | §3.1/§4.1; G1 | sc-core ontology; G1-SLICE.3c.1–.3 | [Executable ontology](../spec/ontology-implementation.md) |
 | Garment constructions/closures | §3.1; G1 | sc-core ontology; G1-SLICE.3c.4 | [Constructions](../spec/ontology-constructions.md), [closures](../spec/ontology-closures.md), [review](../spec/ontology-review.md) |

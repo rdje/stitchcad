@@ -12,6 +12,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Commands and agent authority](spec/glossary/commands-and-authority.md)
 - [Current-reference repairs](spec/ontology-implementation.md)
 - [Draft and complete chart coverage](spec/size-chart-collections.md)
+- [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
 - [Executable closure intent](spec/ontology-closures.md)
 - [Executable garment constructions](spec/ontology-constructions.md)
 - [Executable ontology at G1](spec/ontology-implementation.md)
