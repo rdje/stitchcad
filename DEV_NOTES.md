@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — third retained window unblocks namespace records
+
+- Working history reached64 raw/catalog Markdown files; another normal seal would fail the existing
+  count bound. Captured62 raw records at exact af98fff using the established finite data plane;
+  no schema, reader, checker, catalog/payload/manifest from prior windows or limit was changed.
+- Fresh same-volume capture/installed-input fixtures reconstruct all189 logical records exactly.
+  Full-file source proof precedes retirement of exactly62 working copies, residue0. Existing
+  read/materialization APIs consume original logical addresses;63 maintained Markdown link targets
+  in changelog/dev-notes/planning now land on window3 member catalog headings.
+- Capture data:1635 full-file lines/117560B,37055B compressed/174080B tar. Catalogs consume decoded
+  and resident bounds as well; reduced working count does not grant new aggregate capacity.
+  Whole oldest ledgers retain exact predecessor bytes. Full local checks/exception push and actual
+  job/step observation precede namespace continuation; .0v owns remote/post-commit receipts.
+- D114: restricted ps failure was suppressed while a controlled open-file process remained live;
+  OS-visible census detects it. D115: four idle CUA services expose only inherited repo cwd yet
+  their metadata triggers command-text blocking. SPINE.23 owns both P0 repairs after clean archive/CI.
+  The controlled process was stopped; real ps confirms absence. Never kill shared tool services.
+- promotion: declined (existing retained-window and independent-evidence contracts applied).
+
 ## _(2026-10-02)_ — static signature coverage is a closed kind matrix
 
 - Actual reference baseline refused min/max(length) and accepted three size reserved names as
@@ -17,24 +36,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   Namespace/rebinding/context/whole static preflight remain .5b.1b; full static closure .1c; product
   declaration/type/graph implementation .5b.2–.4. Existing syntax/identity bytes stay unchanged.
 - promotion: declined (existing independent-evidence policy applied; no new cross-cutting doctrine).
-
-## _(2026-10-02)_ — cleanup proves ownership and residue before regeneration
-
-- The daily record became due during the prior syntax milestone. Its clean commit allowed the
-  SPINE.21b cleanup pivot; G1-SLICE.5b.1 remains the product frontier.
-- The reusable census fingerprints selected contents, tracked input, HEAD and its own producer.
-  Local ignored paths only; links, special entries, nested repositories and foreign devices
-  refuse, with dependency/package stores, scaffold backups and audit manifests protected.
-  First exploratory plan preceded producer-identity refinement; only the final frozen plan
-  was applied. Python compiles guard variants in memory, never rewrites the tracked source.
-- Fifteen controls include eleven real removed-guard assertion reds. Device metadata is simulated
-  without mounting another volume. Selected six roots and 1281 strays disappear; independent
-  filesystem absence and Git deletion/content checks agree. File bytes 1112101558 are logical
-  data, separate from du's target 1955324→1071060KB and removed 7172KB book output.
-- Immediate release/deps/incremental bin/log scans return 0. Regeneration restores scratch,
-  caches and book; normal rebuild outputs therefore are not counted as cleanup residue.
-  Rust591/WASM3/book/probes26/gates pass; old live ledger payloads remain exact.
-- promotion: declined (routine application of canonical locality, safety and claim policies).
 
 # Sealed archive — earlier lessons
 
@@ -120,46 +121,48 @@ The live window below holds the most recent lessons. When it passes its health t
 
 | [`stitchcad-devnotes-part49.md`](docs/history/window2.md#stitchcad-devnotes-part49md) | reduced-width lesson | 18 lines, 1658 bytes, `sha256:0317bfcf…` |
 
-| [`stitchcad-devnotes-part50.md`](docs/history/stitchcad-devnotes-part50.md) | public-operator lesson | 18 lines, 1673 bytes, `sha256:2f4b81de…` |
+| [`stitchcad-devnotes-part50.md`](docs/history/window3.md#stitchcad-devnotes-part50md) | public-operator lesson | 18 lines, 1673 bytes, `sha256:2f4b81de…` |
 
-| [`stitchcad-devnotes-part51.md`](docs/history/stitchcad-devnotes-part51.md) | domain-context lesson | 19 lines, 1705 bytes, `sha256:6c25796f…` |
+| [`stitchcad-devnotes-part51.md`](docs/history/window3.md#stitchcad-devnotes-part51md) | domain-context lesson | 19 lines, 1705 bytes, `sha256:6c25796f…` |
 
-| [`stitchcad-devnotes-part52.md`](docs/history/stitchcad-devnotes-part52.md) | inline-language lesson | 18 lines, 1440 bytes, `sha256:f9fdf033…` |
+| [`stitchcad-devnotes-part52.md`](docs/history/window3.md#stitchcad-devnotes-part52md) | inline-language lesson | 18 lines, 1440 bytes, `sha256:f9fdf033…` |
 
-| [`devnotes-part53.md`](docs/history/stitchcad-devnotes-part53.md) | scalar-domain lesson | 17 lines, 1495 bytes, `sha256:c5c05294…` |
+| [`devnotes-part53.md`](docs/history/window3.md#stitchcad-devnotes-part53md) | scalar-domain lesson | 17 lines, 1495 bytes, `sha256:c5c05294…` |
 
-| [`devnotes-part54.md`](docs/history/stitchcad-devnotes-part54.md) | numeric binding/literal ruling lesson | 16 lines, 1445 bytes, `sha256:7fcc4170…` |
+| [`devnotes-part54.md`](docs/history/window3.md#stitchcad-devnotes-part54md) | numeric binding/literal ruling lesson | 16 lines, 1445 bytes, `sha256:7fcc4170…` |
 
-| [`devnotes-part55.md`](docs/history/stitchcad-devnotes-part55.md) | archive capacity and D96 lesson | 19 lines, 1731 bytes, `sha256:12f0338c…` |
+| [`devnotes-part55.md`](docs/history/window3.md#stitchcad-devnotes-part55md) | archive capacity and D96 lesson | 19 lines, 1731 bytes, `sha256:12f0338c…` |
 
-| [`devnotes-part56.md`](docs/history/stitchcad-devnotes-part56.md) | observed CI lesson | 12 lines, 1047 bytes, `sha256:cb01f979…` |
+| [`devnotes-part56.md`](docs/history/window3.md#stitchcad-devnotes-part56md) | observed CI lesson | 12 lines, 1047 bytes, `sha256:cb01f979…` |
 
-| [`stitchcad-devnotes-part57.md`](docs/history/stitchcad-devnotes-part57.md) | scoped numeric review lesson | 15 lines, 1350 bytes, `sha256:a196cecf…` |
+| [`stitchcad-devnotes-part57.md`](docs/history/window3.md#stitchcad-devnotes-part57md) | scoped numeric review lesson | 15 lines, 1350 bytes, `sha256:a196cecf…` |
 
-| [`stitchcad-devnotes-part58.md`](docs/history/stitchcad-devnotes-part58.md) | six-kind replay lesson | 15 lines, 1327 bytes, `sha256:f5820b9c…` |
+| [`stitchcad-devnotes-part58.md`](docs/history/window3.md#stitchcad-devnotes-part58md) | six-kind replay lesson | 15 lines, 1327 bytes, `sha256:f5820b9c…` |
 
-| [`stitchcad-devnotes-part59.md`](docs/history/stitchcad-devnotes-part59.md) | signed principal angle lesson | 15 lines, 1367 bytes, `sha256:19cb42c9…` |
+| [`stitchcad-devnotes-part59.md`](docs/history/window3.md#stitchcad-devnotes-part59md) | signed principal angle lesson | 15 lines, 1367 bytes, `sha256:19cb42c9…` |
 
-| [`stitchcad-devnotes-part60.md`](docs/history/stitchcad-devnotes-part60.md) | scoped reference review lesson | 12 lines, 1063 bytes, `sha256:29112bc9…` |
+| [`stitchcad-devnotes-part60.md`](docs/history/window3.md#stitchcad-devnotes-part60md) | scoped reference review lesson | 12 lines, 1063 bytes, `sha256:29112bc9…` |
 
-| [`stitchcad-devnotes-part61.md`](docs/history/stitchcad-devnotes-part61.md) | unsigned magnitude rounding lesson | 15 lines, 1322 bytes, `sha256:90999a24…` |
+| [`stitchcad-devnotes-part61.md`](docs/history/window3.md#stitchcad-devnotes-part61md) | unsigned magnitude rounding lesson | 15 lines, 1322 bytes, `sha256:90999a24…` |
 
-| [`stitchcad-devnotes-part62.md`](docs/history/stitchcad-devnotes-part62.md) | individual literal normalization lesson | 18 lines, 1637 bytes, `sha256:69a0a9b4…` |
+| [`stitchcad-devnotes-part62.md`](docs/history/window3.md#stitchcad-devnotes-part62md) | individual literal normalization lesson | 18 lines, 1637 bytes, `sha256:69a0a9b4…` |
 
-| [`stitchcad-devnotes-part63.md`](docs/history/stitchcad-devnotes-part63.md) | coupled normalization review lesson | 34 lines, 3069 bytes, `sha256:99a6f002…` |
+| [`stitchcad-devnotes-part63.md`](docs/history/window3.md#stitchcad-devnotes-part63md) | coupled normalization review lesson | 34 lines, 3069 bytes, `sha256:99a6f002…` |
 
-| [`stitchcad-devnotes-part64.md`](docs/history/stitchcad-devnotes-part64.md) | G1-0062 inspection tags | 15 lines, 1345 bytes, `sha256:5699b48e…` |
+| [`stitchcad-devnotes-part64.md`](docs/history/window3.md#stitchcad-devnotes-part64md) | G1-0062 inspection tags | 15 lines, 1345 bytes, `sha256:5699b48e…` |
 
-| [`stitchcad-devnotes-part65.md`](docs/history/stitchcad-devnotes-part65.md) | G1-0063 expression identity | 17 lines, 1602 bytes, `sha256:377fd96c…` |
+| [`stitchcad-devnotes-part65.md`](docs/history/window3.md#stitchcad-devnotes-part65md) | G1-0063 expression identity | 17 lines, 1602 bytes, `sha256:377fd96c…` |
 
-| [`stitchcad-devnotes-part66.md`](docs/history/stitchcad-devnotes-part66.md) | G1-0065/0064 syntax and identity lessons | 33 lines, 2960 bytes, `sha256:01527194…` |
+| [`stitchcad-devnotes-part66.md`](docs/history/window3.md#stitchcad-devnotes-part66md) | G1-0065/0064 syntax and identity lessons | 33 lines, 2960 bytes, `sha256:01527194…` |
 
-| [`stitchcad-devnotes-part67.md`](docs/history/stitchcad-devnotes-part67.md) | G1-0066 ordered recipe boundaries | 20 lines, 1850 bytes, `sha256:934aee26…` |
+| [`stitchcad-devnotes-part67.md`](docs/history/window3.md#stitchcad-devnotes-part67md) | G1-0066 ordered recipe boundaries | 20 lines, 1850 bytes, `sha256:934aee26…` |
 
-| [`stitchcad-devnotes-part68.md`](docs/history/stitchcad-devnotes-part68.md) | G1-0067 coupled recipe review | 18 lines, 1629 bytes, `sha256:6a16cabe…` |
-| [`stitchcad-devnotes-part69.md`](docs/history/stitchcad-devnotes-part69.md) | G1-0068 exact recipe bytes | 18 lines, 1651 bytes, `sha256:e352ef3b…` |
-| [`stitchcad-devnotes-part70.md`](docs/history/stitchcad-devnotes-part70.md) | G1-0069 whole input normalization | 20 lines, 1874 bytes, `sha256:ce41946c…` |
-| [`stitchcad-devnotes-part71.md`](docs/history/stitchcad-devnotes-part71.md) | G1-0070 identity lesson | 22 lines, 2039 bytes, `sha256:364f5f56…` |
-| [`stitchcad-devnotes-part72.md`](docs/history/stitchcad-devnotes-part72.md) | G1-0071 coupled review lesson | 20 lines, 1758 bytes, `sha256:0b6fd7f2…` |
+| [`stitchcad-devnotes-part68.md`](docs/history/window3.md#stitchcad-devnotes-part68md) | G1-0067 coupled recipe review | 18 lines, 1629 bytes, `sha256:6a16cabe…` |
+| [`stitchcad-devnotes-part69.md`](docs/history/window3.md#stitchcad-devnotes-part69md) | G1-0068 exact recipe bytes | 18 lines, 1651 bytes, `sha256:e352ef3b…` |
+| [`stitchcad-devnotes-part70.md`](docs/history/window3.md#stitchcad-devnotes-part70md) | G1-0069 whole input normalization | 20 lines, 1874 bytes, `sha256:ce41946c…` |
+| [`stitchcad-devnotes-part71.md`](docs/history/window3.md#stitchcad-devnotes-part71md) | G1-0070 identity lesson | 22 lines, 2039 bytes, `sha256:364f5f56…` |
+| [`stitchcad-devnotes-part72.md`](docs/history/window3.md#stitchcad-devnotes-part72md) | G1-0071 coupled review lesson | 20 lines, 1758 bytes, `sha256:0b6fd7f2…` |
 
-| [`devnotes-part73.md`](docs/history/stitchcad-devnotes-part73.md) | G1-0072 syntax closure | 18 lines, 1564 bytes, `sha256:e6407999…` |
+| [`devnotes-part73.md`](docs/history/window3.md#stitchcad-devnotes-part73md) | G1-0072 syntax closure | 18 lines, 1564 bytes, `sha256:e6407999…` |
+
+| [`stitchcad-devnotes-part74.md`](docs/history/stitchcad-devnotes-part74.md) | SPINE-0021b cleanup lesson | 17 lines, 1432 bytes, `sha256:13acd888…` |

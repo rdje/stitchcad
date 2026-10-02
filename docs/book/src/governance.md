@@ -344,6 +344,14 @@ fmt/clippy/tests/real WASM passed;140 post-commit local CLI controls also verify
 catalog refusal. G1-SLICE.5a.3b.3b.3c.1v records the exact head/job observations.
 These are retention/instrument proofs, not garment signoff.
 
+The third transition captures62 raw sealed records from af98fff before the next namespace review
+would exceed the64-file working limit. A fresh local fixture reconstructs all189 logical records
+exactly, including both previous windows. The installed reader proves each of the62 original full
+files before their working copies retire; maintained pointers land on window3's member headings.
+`bash scripts/history_archive.sh prove-source window3` repeats the capture/source comparison.
+No reader, checker, logical address, decoded record or limit changes. Remote CI and newest committed
+immutability evidence are owned by G1-SLICE.5b.1b.0v; they are not inferred from local checks.
+
 The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
 labels are display text: short or mistaken labels do not change the retained identity. Filename text
 in prose, code or comments cannot establish coverage, and a valid link cannot mask an extra broken

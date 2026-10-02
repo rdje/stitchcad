@@ -557,6 +557,18 @@ mechanically-enforced form:
   WASM3/book/full26 probes and publication9 pass, rc=0; staged gate recorded below.
   Commit: `STITCHCAD-SPINE-0021b`.
 
+- ID: `SPINE.23`
+  Status: `pending`
+  Goal: D114/D115 census refuses unavailable evidence and distinguishes idle harness metadata.
+  Acceptance: actual restricted denial and controlled live process baseline; refuse failed/empty
+  primary process or handle census with a named nonzero diagnostic, preserve legitimate no-jobs
+  and inherited-cwd behavior; known idle CUA metadata with no repo handles is not project work.
+  Independently authored ps/lsof/caller fixtures, real-handle controls and actual guard faults;
+  normal OS-visible handoff green after all children stop. No writes outside this repository.
+  Schedule: P0 immediately after G1-SLICE.5b.1b.0/.0v clean archive/observed-CI completion,
+  before .1b namespace work. COMMIT exception/full CI applies if check_* changes.
+  Verification: `pending`; Commit: `pending`.
+
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
@@ -589,6 +601,7 @@ mechanically-enforced form:
 | done | `SPINE.19.2v` | `done` | exact head/jobs/steps successful; resume G1 .4a.3 |
 | — | `SPINE.19.1` | `done` | taken at D49's trigger rather than waited for: `PLANNING.md` was at 95 % of its byte ceiling, so the 44 closed defects were sealed and the live census is now the open set |
 | — | `SPINE.19` | `pending` | the archive verifier is ledger-agnostic (D40, found by the first non-changelog rollover). Deferred behind product work: the digest leg already covers every segment, so silent content drift is caught and only the coverage and pointer claims are not |
+| next integrity | `SPINE.23` | `pending` | D114/D115 blind/idle census; after clean current archive/CI, before namespace |
 | done | `SPINE.21b` | `done` | due cleanup discharged; product G1 .5b.1 resumes |
 | — | `SPINE.21` | `done` | the cleanup cadence is recurring, and a recurring obligation with no leaf is one somebody rediscovers: taken between two product slices because the 24-hour mark falls inside this one |
 

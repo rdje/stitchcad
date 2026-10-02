@@ -690,12 +690,14 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Commit: `STITCHCAD-G1-0073`.
 
 - ID: `G1-SLICE.5b.1b`
-  Status: `pending`
+  Status: `in_progress`
   Goal: all nine origins/eight reserved names, spelling/context, collision/rebinding/forward names
   and static whole-recipe preflight in the reference, with independent declaration fixtures.
   Acceptance: both-origin collision evidence, whole-recipe no-value-access proof, ordered namespace
   and header checks; resolve discovered defects before trusting the reference for .5b.2/.4.
   Typed production diagnostic arguments retain their .5b.2/.4 owners; no runtime/MCP claim.
+  Prerequisite .1b.0/.0v:64-file history capacity, exact retained window and observed CI;
+  owned in G1-SLICE-evidence.md, no domain-scope pivot or limit increase.
   Verification: `pending`; Commit: `pending`.
 
 - ID: `G1-SLICE.5b.1c`

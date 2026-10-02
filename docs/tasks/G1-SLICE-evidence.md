@@ -6,6 +6,9 @@ Completed checklists are copied in landing order; D60 adds explicit revalidation
 the historical doc-only `.1`/`.2` ROOT CAUSE bullets. Their original evidence is retained; current-leaf evidence stays in the
 parent so its fresh boxes are the first ones the staged acceptance gate reads.
 
+The third-window retention prerequisite also has its scoped active nodes here; fresh acceptance
+boxes remain first in the primary tree, with detailed capture/remote receipts in this sibling.
+
 [Completed garment-construction checklists](G1-SLICE-constructions.md) have their own bounded sibling.
 
 ## Completed acceptance checklists
@@ -719,3 +722,60 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
 - [x] **LOCKSTEP** — `G0-CONTRACT.md`'s leaf `.11`, its frontier, decisions, three logs and checklist;
   `MEMORY.md`, `LIVE_STATUS.md`, `CHANGELOG.md`, `DEV_NOTES.md`, `docs/TASK_TREE.md`, `TOOLBOX.md`,
   `docs/decisions/INDEX.md` and the regenerated Knowledge Map, all in this commit.
+
+## Third history window before reference namespace records
+
+- ID: `G1-SLICE.5b.1b.0`
+  Status: `done`
+  Goal: discharge the measured64-file working-history bound before .1b's next normal seal.
+  Pre-code protocol: capture all current raw sealed records from exact af98fff into window3;
+  do not alter prior windows/manifests/payloads or any decoded bytes, limits, reader or checker.
+  Reuse the published manifest/catalog/payload contract; frozen-source capture tool generates
+  an isolated same-volume fixture and compares all original full files/read/materialization.
+  Install copies, verify/source-prove/use the installed reader before deleting exactly the captured
+  raw copies; redirect maintained Markdown pointers to member catalog anchors. Prove residue0,
+  previous windows exact and complete logical membership unchanged. No repository boundary crossed.
+  Own oldest live ledger rollover/current resume/book upkeep and completed-task evidence relocation
+  within existing siblings if needed; no new sibling or cap increase. Product .1b remains next.
+  Acceptance: all exact source/member evidence, independent newest refusal/previous-window controls,
+  full local Rust/WASM/book/probes/gates terminal, locked live/book/task pointers. Commit before
+  exceptional push required by COMMIT.md; remote/newest-committed proof is owned by .0v.
+  Handoff diagnostic owned here: recheck process-census visibility if restricted ps fails;
+  use a controlled local open-file process, observe real versus restricted verdicts, stop it
+  before recording completion; route any checker defect to a scheduled SPINE leaf after clean CI.
+  Verification: local capture/source/residue/full checks pass; detailed receipts below.
+  Commit: `STITCHCAD-G1-0074`; observed remote/newest-committed proof remains .0v.
+
+- ID: `G1-SLICE.5b.1b.0v`
+  Status: `pending`
+  Goal: observe both actual CI jobs/steps at the exact window3 pushed head and newest committed
+  catalog immutability refusal; record authoritative completed/success results before .1b work.
+  Acceptance: exact SHA/run/job/step receipts, no aggregate-only polling inference; fix failing jobs
+  if any, committed durable receipt, clean/no-jobs resume to namespace/preflight reference review.
+  Verification: `pending`; Commit: `pending`.
+
+### Third-window local receipts — `2026-10-02`
+
+- Frozen af98fff capture:62 exact full files/1635 lines/117560B;37055 compressedB/174080tarB,
+  SHA256 cf4b959af6083df735534c6798dc866232cff6e489b48cbf6c6adfe03a3be017. Fresh isolated
+  same-volume capture and installed-input fixtures prove all189 historical logical records exactly;
+  no missing/extra identities. Installed reader source proof precedes exact62-file retirement; residue0.
+- Prior two catalogs/manifests/payloads independently compare exact to Git HEAD; published reader,
+  checker, schema and all bounds unchanged. Two new complete oldest ledger seals retain951/1432B
+  original payloads exactly. Current history191 logical/5 workingMarkdown/9403 decodedlines/
+  714065 decodedB/302579 residentB; canonical defect census12open/102unique sealed/overlap0.
+- `make check` terminal exit0:591 tests/48groups, strictfmt/clippy green. `make wasm` and `make book`
+  separately repeated with terminal exit0 after wrapper exit visibility was clarified; three libraries
+  cross-compile, warning-free rendered HTML. No Rust source/test changed.
+- `make probes` terminal exit0:26 suites; publication53chapters/25scoped APIs/1102source/1705rendered
+  links,9 controls; ledger9 and pointer13 controls green. A manual archive CLI runner overlapped the
+  shared-fixture full suite; its receipts are discarded. Exclusive archive rerun terminal exit0:
+  28 probes and199 CLIcontrols/191 reads/3windows; newest committed window3 arm awaits .0v.
+- Tree census10lanes/13trees/10siblings/0unowned-orphan-deadlinks; diff check0. Gate receipt follows.
+- D114: controlled live PID46805 held a local file; restricted checker printed OK0 while ps denied.
+  OS-visible checker detected it and returned1. Stopped controlled session terminal1/KeyboardInterrupt;
+  real ps confirms PID absent. D115: four idle CUA kernel/worker services have repo cwd only, no repo
+  file handles, but root metadata triggers blocking. No CUA action/result is pending. Never stop shared
+  infrastructure. Both defects are owned P0 SPINE.23 after current clean archive/CI; restricted green
+  is invalid evidence meanwhile. No project verification process remains in flight at local commit.
+- Final staged `make gate` →13 doctrine checks/all doctrines green, terminal exit0.

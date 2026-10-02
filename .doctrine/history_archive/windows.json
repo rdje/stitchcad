@@ -2,6 +2,7 @@
   "version": 1,
   "windows": [
     ".doctrine/history_archive/window1.json",
-    ".doctrine/history_archive/window2.json"
+    ".doctrine/history_archive/window2.json",
+    ".doctrine/history_archive/window3.json"
   ]
 }

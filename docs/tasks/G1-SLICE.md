@@ -815,7 +815,7 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
 | done | `G1-SLICE.5a.3f.2` | `done` | Coupled whole input and identity review |
 | done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
-| next | `G1-SLICE.5b.1b` | `pending` | Namespace/context and whole static preflight reference review; .1a signatures complete |
+| next | `G1-SLICE.5b.1b.0v` | `pending` | Exact third retention window at measured capacity; .0v CI, then namespace/preflight review |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -847,6 +847,22 @@ also run glossary/API, feature and publication checks. Prior checklists and auth
 Completed lexical/expression/numeric/identity protocols, checklists and commit journals remain in
 [formula evidence](G1-SLICE-formulas.md), [numeric journal](G1-SLICE-journal.md) and
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
+
+### `G1-SLICE.5b.1b.0` — third exact retained window
+
+- [x] **REPRODUCE / ISSUE** — predecessor history has64 working Markdown files; capture_window3.py
+  freezes exact af98fff and derives62 raw records before another normal seal, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — unchanged64-file working bound includes two retained catalogs;
+  capture_window3.py proves189 logical full files against Git and repeated deterministic payloads, rc=0.
+- [x] **FIX** — retain window3 with existing reader/schema/caps; copy/prove/use before deleting
+  exactly62 raw copies, redirect63 maintained link destinations; prior windows remain exact.
+- [x] **ADDRESSED (verified)** — history_archive.py prove-source window3 →62 byte-identical full
+  files/0 missing-extra, rc=0; exclusive archive suite →28 pass/0 fail, CLI199 controls/191 reads.
+- [x] **NO REGRESSION** — make check →591 passed/48groups; make wasm/book terminal0;
+  make probes →26 suites green, rc=0; publication53/25 APIs/1102 source/1705 rendered links.
+- [x] **LOCKSTEP** — book/live/task/ledgers retained; G1 stays5/18, defects12open/102sealed;
+  .0v owns exceptional push/observed CI and newest committed refusal. D114/D115 scheduled SPINE.23.
+  promotion: declined (existing exact-window and independent-evidence policy applied).
 
 ### `G1-SLICE.5b.1a` — current static signature slice
 
@@ -893,6 +909,8 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 
 | `2026-10-02` | `G1-SLICE.5b.1a` | actual static matrix/faults; reference/language/publication |4032 cases/12 reds,16 language/9 publication green; namespace review .1b next |
 
+| `2026-10-02` | `G1-SLICE.5b.1b.0` | capture/install/source/residue; full local checks |62 exact originals,191 retained records with two new seals; exclusive archive28/CLI199; CI .0v pending |
+
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
@@ -900,6 +918,8 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 | `.5a.4` | `STITCHCAD-G1-0072 (leaf G1-SLICE.5a.4): close syntax milestone and own evaluator stages` | native591/WASM3/probes25/coupled7 actual reds |
 
 | `G1-SLICE.5b.1a` | `STITCHCAD-G1-0073` | D112/D113 static reference signatures fixed; product validator pending |
+
+| `G1-SLICE.5b.1b.0` | `STITCHCAD-G1-0074` | third exact retained window; observed CI .0v next |
 
 ## Changelog
 

@@ -470,7 +470,7 @@ D82 is sealed in [`stitchcad-defects-part20.md`](../history/window2.md#stitchcad
 G1-SLICE.5a.3b.2 verifies 24 exact rows/100 independent Fraction cases/162 controls/nine actual reds;
 implicit operator rounding is removed, explicit and irrational quantization remains.
 
-D83 is sealed in [`stitchcad-defects-part29.md`](../history/stitchcad-defects-part29.md).
+D83 is sealed in [`stitchcad-defects-part29.md`](../history/window3.md#stitchcad-defects-part29md).
 G1-SLICE.5a.3b.3b.3c.2 completes the scoped reference boundary review: rational61/scalar57/
 binding80/canonical146 controls and12/11/12/12 actual reds/exact restoration. Width, exact scalar,
 once-rounded signed storage and wide literal identity obey the received contracts. D84 signed-angle
@@ -748,45 +748,45 @@ G1-SLICE.5a.3b.3b.3b verifies the received wide-literal/i64-binding ruling with1
 canonical node/Decimal controls and twelve compiled actual reds; unary identity is preserved.
 D83 complete boundary review remains .3c; production normalization remains .5a.3c.
 
-D96 is sealed in [`stitchcad-defects-part28.md`](../history/stitchcad-defects-part28.md).
+D96 is sealed in [`stitchcad-defects-part28.md`](../history/window3.md#stitchcad-defects-part28md).
 G1-SLICE.5a.3b.3b.3c.1 resolves actual raw/catalog index destinations, independent of labels.
 Thirteen independent actual verdicts and four syntax-checked assertion reds/exact restoration verify
 coverage and false-green prevention. Existing nine ledger arms and D30 exemption still pass;
 full make probes reports25 suites green, rc=0. No retained record or reader change.
 
-D97 is sealed with D83 in [`stitchcad-defects-part29.md`](../history/stitchcad-defects-part29.md).
+D97 is sealed with D83 in [`stitchcad-defects-part29.md`](../history/window3.md#stitchcad-defects-part29md).
 Current scalar parent now explicitly distinguishes128-bit canonical literals and i64 numeric bindings;
 canonical146 proof and the reviewed parent/contract agree. Historical pre-ruling plans stay intact.
 
-D98 is sealed in [`stitchcad-defects-part30.md`](../history/stitchcad-defects-part30.md).
+D98 is sealed in [`stitchcad-defects-part30.md`](../history/window3.md#stitchcad-defects-part30md).
 Correction to preserved G1-0053 .1v evidence: checker due rc=1, diagnostic Make wrapper rc=0.
 Actual older-base due and HEAD no-due controls verify both commands; COMMIT.md/book now distinguish
 their statuses. Prior evidence bytes, push/CI success, authority/cadence and build behavior stay fixed.
 
-D99 is sealed in [`stitchcad-defects-part31.md`](../history/stitchcad-defects-part31.md).
+D99 is sealed in [`stitchcad-defects-part31.md`](../history/window3.md#stitchcad-defects-part31md).
 G1-SLICE.5a.3b.3c.1 repairs the actual six-kind replay consumer and cm²/Boolean display;
 nineteen independent verdicts and nine compiled actual assertion reds verify the repair,
 with exact source restoration. No source literal or production evaluator added.
 
-D84/D100 are sealed in [`stitchcad-defects-part32.md`](../history/stitchcad-defects-part32.md).
+D84/D100 are sealed in [`stitchcad-defects-part32.md`](../history/window3.md#stitchcad-defects-part32md).
 G1-SLICE.5a.3b.3c.3 completes received signed-angle/scoped reference obligations: signed90/fifteen
 actual reds, angular72/math42/seven reds and exact source restoration. Canonical literals128-bit
 versus numeric bindings-i64 also reaches the corrected adjacent parent label. Original descriptions
 and prior parent/evidence bytes remain unchanged; product integration/evaluation stay future work.
 
-D101/D102 are sealed in [`stitchcad-defects-part33.md`](../history/stitchcad-defects-part33.md).
+D101/D102 are sealed in [`stitchcad-defects-part33.md`](../history/window3.md#stitchcad-defects-part33md).
 G1-SLICE.5a.3c.4 restores the topic index from exact HEAD plus the intended review link; publication
 50 chapters/49 indexed chapter routes/1026 source/1580 rendered links and nine refusal controls pass,
 rc=0. D46's quoted historical command is byte-identical to HEAD again; actual Decisions heading and
 separate defect entries were verified before sealing, rc=0. Both editing mistakes are fixed.
 
-D103 is sealed in [`stitchcad-defects-part34.md`](../history/stitchcad-defects-part34.md).
+D103 is sealed in [`stitchcad-defects-part34.md`](../history/window3.md#stitchcad-defects-part34md).
 Director ruling received 2026-10-02: (- child) and (^2 child). G1-SLICE.5a.3d.1 publishes the complete
 expression byte contract; seven reference roles/ten symbols/two distinct named calls/six authored
 byte examples verify it, rc=0. The specification gap is fixed; production implementation .3d.2 and
 coupled review .3d.3 stay separately pending. Canonical decision records the received authority.
 
-D104 is sealed in [`stitchcad-defects-part35.md`](../history/stitchcad-defects-part35.md).
+D104 is sealed in [`stitchcad-defects-part35.md`](../history/window3.md#stitchcad-defects-part35md).
 G1-SLICE.5a.3d.2 corrects crates/sc-core/src/lib.rs, recipe module status and crate metadata.
 Entity directions use normalized i64 storage; formula literals retain u128/raw turns/unary structure;
 numeric bindings require i64 at their later boundary. Actual public wide-byte contracts, book reference
@@ -794,21 +794,21 @@ and strict native523 including Rust docs pass, rc=0. No runtime unit-storage beh
 The project schema comment/test label also explicitly scopes project-directory serialization; current
 expression bytes do not claim a versioned project envelope. Original D104 description stays exact.
 
-D105 is sealed in [`stitchcad-defects-part36.md`](../history/stitchcad-defects-part36.md).
+D105 is sealed in [`stitchcad-defects-part36.md`](../history/window3.md#stitchcad-defects-part36md).
 G1-SLICE.5a.3d.3 links the syntax annex and formula introduction to the implemented owned-expression
 API. The coupled review maps every expression obligation to public proof; all25 worked expressions,
 maximum255-argument call and nested aliases pass. Scoped language16/publication9 verify current
 source/rendered book status, rc=0. Ordered statements and evaluation remain explicitly pending.
 Original defect description is retained unchanged; no runtime identity behavior was changed.
 
-D106/D107 are sealed in [`stitchcad-defects-part37.md`](../history/stitchcad-defects-part37.md).
+D106/D107 are sealed in [`stitchcad-defects-part37.md`](../history/window3.md#stitchcad-defects-part37md).
 G1-SLICE.5a.3e.1 corrects the literal decision's current expression-versus-statement/evaluation status.
 The new statement fault runner now inspects failed-test bodies only; passing-name/expect-only/compiler
 noise controls refuse. Explicit fixture acceptance/refusal assertions and all15 actual compiled
 fault reds pass with exact source restoration, rc=0; original unearned14 classification is superseded.
 Current book/API/literal ruling agree. Original defect descriptions remain byte-identical.
 
-D108 is sealed in [`stitchcad-defects-part38.md`](../history/stitchcad-defects-part38.md).
+D108 is sealed in [`stitchcad-defects-part38.md`](../history/window3.md#stitchcad-defects-part38md).
 G1-SLICE.5a.3e.2 replaces the erroneous delimiter offset with exact delimiter splitting. New archive
 payload compares byte-identically with the full predecessor G1-0044/G1-0043 entries,2471 bytes/
 sha2565484241b…. The observed ledger red becomes nine passing arms/thirteen pointer controls, rc=0;
@@ -816,30 +816,59 @@ archive28/177 CLI controls and retention168 logical records pass before sealing 
 No committed history or product parser was corrupted. The report wording is retained; its heading
 uses the standard defect-entry marker. Final archive inventory is re-derived after this seal.
 
-D109 is sealed in [`stitchcad-defects-part40.md`](../history/stitchcad-defects-part40.md).
+D109 is sealed in [`stitchcad-defects-part40.md`](../history/window3.md#stitchcad-defects-part40md).
 G1-SLICE.5a.3f.1a specifies exact bind/assert/ordered/empty recipe bytes under standing engineering
 delegation, with same-party author/applier disclosed and independent evidence approval unclaimed.
 Sixteen authored statement rows/nine whole sources/twelve ordered chunks match actual reference
 syntax; nine renderer authored-byte assertion reds restore exact source. Product .1b/.1c remains
 separate. Original defect report is retained; director reversal/migration path is in the decision.
 
-D110 is sealed in [`stitchcad-defects-part39.md`](../history/stitchcad-defects-part39.md).
+D110 is sealed in [`stitchcad-defects-part39.md`](../history/window3.md#stitchcad-defects-part39md).
 G1-SLICE.5a.3e.3 qualifies formula contract5.2/ADR-0003: exact source span/typed rule remain mandatory;
 statement index/canonical expression are supplied where available, never fabricated for ASCII preflight
 or non-normalizable syntax. Later-statement index3/header/operand matrices and book publication pass0.
 Future localized semantic/command arguments remain owned by .5. Original report is retained unchanged.
 
-D111 is sealed in [`stitchcad-defects-part41.md`](../history/stitchcad-defects-part41.md).
+D111 is sealed in [`stitchcad-defects-part41.md`](../history/window3.md#stitchcad-defects-part41md).
 G1-SLICE.5a.4 corrects the formula contract's pending statement-identity sentence and ADR's current
 normalization/serializer status. Exact public serializer/input controls and rendered publication
 pass; evaluation, storage and approval remain pending. Original report is preserved unchanged.
 D34 recurred in TASK_TREE's six-sibling census example; .5a.4 corrects it to the actual ten siblings.
 PLANNING.5 retains mechanical frontier/count derivation ownership and its existing product priority.
 
-D112/D113 are sealed in [`stitchcad-defects-part42.md`](../history/stitchcad-defects-part42.md).
+D112/D113 are sealed in [`stitchcad-defects-part42.md`](../history/window3.md#stitchcad-defects-part42md).
 They close at G1-SLICE.5b.1a: reference within admits exactly five tolerance names; min/max accept
 one homogeneous arithmetic operand as the published variadic row specifies. Actual4032 parse/infer
 controls and twelve compiled in-memory guard faults pass, with value/geometry access trapped and
 producer bytes unchanged. Product validation/whole static preflight remain owned by .5b.2–.4;
 reference namespace/preflight review .5b.1b follows. Report bodies are retained; draft heading markers were normalized to the canonical defect entry
 marker before final sealing, so the standing defect census counts both new records.
+
+- **D114** — handoff census reports success when restricted process visibility fails.
+  - Reproduce: a controlled Python process PID46805 held target/window3-handoff-visibility.txt
+    open and remained live; restricted check_no_background_jobs.sh printed handoff: OK, exit0.
+    Direct /bin/ps raises PermissionError (Operation not permitted); CTRL-C afterwards terminated
+    that same still-running process with KeyboardInterrupt, exit1. Tool sessions prove its lifetime.
+  - Root: script suppresses primary ps/lsof stderr and does not refuse their nonzero statuses;
+    empty SNAP falls through to the clean verdict. An ancestry lookup can fail separately, but
+    the whole-process census must not turn unavailable evidence into absence.
+  - Impact: false safe-to-clear status can strand a writer or lose verification continuity.
+  - Owner/schedule: SPINE.23, P0; take immediately after current G1-SLICE.5b.1b.0/.0v commits/CI
+    leave a clean tree, before namespace code. Add real denial/empty/success/live controls and
+    fix the appropriate project-local seam; do not change any other Git repository.
+  - Interim: all handoff censuses in this run use authorized OS visibility plus terminal tool-handle
+    receipts. The controlled fixture process is stopped; restricted green alone is never evidence.
+
+- **D115** — OS-visible handoff census treats idle CUA runtime metadata as project work.
+  - Reproduce: the OS-visible D114 control snapshot blocks four persistent Codex CUA kernel/worker
+    services as well as the actual controlled process. After stopping the controlled process,
+    lsof -a -p13406,13407,14498,14499 reports only repo cwd entries and zero repo file handles.
+    No CUA operation/tool result is in flight. Controlled PID46805 is absent in real ps, exit1.
+  - Root: command lines carry the inherited workspace in harness configuration/working-dir metadata;
+    the command-text arm calls that project work despite the documented inherited-cwd discriminator.
+    Existing own-harness exclusions do not recognize these runtime invocation forms.
+  - Impact: an authorized census can prevent legitimate clean handoffs indefinitely, while restricted
+    execution masks the problem with D114's false green. Do not kill shared tool infrastructure.
+  - Owner/schedule: SPINE.23, P0 alongside D114 after current archive/CI becomes Git-clean.
+    Preserve detection of real project handles and active jobs; narrowly characterize idle runtime
+    forms, test actual-handle controls and caller ancestry without blanket process-name exclusions.
