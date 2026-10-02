@@ -138,7 +138,7 @@ operations on those canonical inputs; they do not retain hidden fractions in an 
 Arithmetic is **exact rational arithmetic** — `+` `-` `*` `/` never round, and an implementation uses
 arbitrary-precision integers for numerator and denominator. The contract is the value, not the
 representation: a numerator or denominator past `max_rational_bits` (§4.3) is `formula_domain`, not a
-hang. Exactly two operations round:
+hang. Implicit rounding has two boundaries:
 
 - **an irrational call** — `sqrt`, `hypot`, the trigonometric functions and `arc_length` return the
   nearest internal quantum to the true value, ties away from zero. They are specified by that
@@ -146,7 +146,10 @@ hang. Exactly two operations round:
   different answer;
 - **a binding** — a `let` stores the internal integer, by the one rounding rule (units §2).
 
-An expression with no irrational call therefore computes exactly and rounds once. A value produced
+The explicit `round_to` function is an authored quantization operation: its step is part of the
+recipe ([grammar §6](formula-language/grammar.md)). Ordinary rational operators do not add that
+operation implicitly. An expression with no irrational or explicit rounding call therefore computes
+exactly and rounds once at binding. A value produced
 by one is the nearest representable approximation and not a value identical by construction, which
 is why a comparison involving one names **T2 or looser** and never T1 (units §3).
 

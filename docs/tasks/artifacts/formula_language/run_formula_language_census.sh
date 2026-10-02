@@ -578,7 +578,7 @@ class Evaluator:
             res = self.infer(node, env)
             exact = to_true(v.kind, v.v) ** 2
             self.see(exact)
-            return Val(res, rnd(from_true(res, exact)))
+            return Val(res, from_true(res, exact))
         if tag == "cmp":
             a = self.evaluate(node[2], env); b = self.evaluate(node[3], env)
             ok = {"==": a.v == b.v, "!=": a.v != b.v, "<": a.v < b.v,
@@ -593,11 +593,11 @@ class Evaluator:
             ta, tb = to_true(a.kind, a.v), to_true(b.kind, b.v)
             if op == "*":
                 self.see(ta * tb)
-                return Val(res, rnd(from_true(res, ta * tb)))
+                return Val(res, from_true(res, ta * tb))
             if tb == 0:
                 raise FErr("formula_division", "the divisor is zero")
             self.see(ta / tb)
-            return Val(res, rnd(from_true(res, ta / tb)))
+            return Val(res, from_true(res, ta / tb))
         if tag == "if":
             c = self.evaluate(node[1], env)
             return self.evaluate(node[2] if c.v else node[3], env)
@@ -661,8 +661,8 @@ class Evaluator:
             e, l = vs
             if l.v > e.v:
                 raise FErr("formula_domain", "param_at: %d is past the edge's %d" % (l.v, e.v))
-            return Val("ratio", rnd(from_true("ratio", to_true("length", l.v)
-                                              / to_true("length", e.v))))
+            return Val("ratio", from_true("ratio", to_true("length", l.v)
+                                         / to_true("length", e.v)))
         if name == "point_at":
             t = to_true("ratio", vs[1].v)
             if t < 0 or t > 1:

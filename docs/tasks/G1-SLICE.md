@@ -629,29 +629,29 @@ Completed reference input contract .5a.2b.1 is preserved in
 
 - ID: `G1-SLICE.5a.3b.1`
   Status: `done`
-  Goal: exact once-rounded count/ratio/unit reference literal nodes, D79; repair D80/D81 doc drift.
-  Pre-code protocol: grammar 2/2.1/4 canonical kind:integer; units 2 direct conversion/half-away.
-  Diagnostic first: actual parser/evaluator at named sub-quantum/tie/precision/unit cases, including
-  bare ratio, compare independently authored quantum oracle and canonical respellings. Only literal
-  input is quantized here; operator evaluation remains separate .3b.2 and may not be used to sign off
-  exact-arithmetic identity. Counts stay counts, bare decimals/pct stay ratios, all seven units retain
-  exact chapter factors; no new float, implicit kind conversion, angle modulo or literal folding.
-  Finalize paired cases before source edit; L1 compares the actual integer node rather than rounding
-  its display to conceal a fraction. Keep curated reference scope, not arbitrary-input product safety.
-  Own tracked diagnostic/contracts/fixtures and real reference guard mutations with exact restoration;
-  run input/structural/language/publication checks and doctrine gate. Preserve predecessor evidence
-  byte-identically. Numerical canonical/binding domains and stored angles remain .3b.3 prerequisites.
-  D80: units heading 2.2 occurs twice after G1-0041; public rounding becomes 2.3, display stays 2.2.
-  D81: LIVE_STATUS G1 still names completed .5a.2b.1; update to actual current frontier in this slice.
-  Verification: 60 rows/360 controls, six actual reds/exact restore; reference/language/book green.
-  Commit: `STITCHCAD-G1-0042` (this recording commit).
+  Contract/checklist: [preserved literal evidence](G1-SLICE-formulas.md#literal-identity-contract-and-evidence--preserved-from-6f26ca3).
+  Verification: 60 rows/360 controls/six actual reds; focused reference/book/recording checks green.
+  Commit: `STITCHCAD-G1-0042`.
 
 - ID: `G1-SLICE.5a.3b.2`
-  Status: `pending`
-  Goal: repair reproduced D82 exact reference arithmetic against formula contract 4.2 before oracle use;
-  square/product/quotient and param_at must preserve rationals until explicit rounding boundaries.
-  Verification: `pending`
-  Commit: `pending`
+  Status: `done`
+  Goal: repair reproduced D82 exact reference arithmetic against formula contract 4.2 before oracle use.
+  Pre-code protocol: complete formula contract/grammar/ADR exact + - * /, square and rational selector;
+  canonical integer inputs (.3b.1) precede expression arithmetic. Current actual diagnostic returns
+  2 for 1 um / 2 + 1 um / 2, and zero for ratio 0.000001 squared. evaluate square/product/quotient
+  and param_at explicitly call rnd before binding. Remove only these premature rounding steps and
+  return exact reduced Fraction in result-kind internal units. Keep +/-, comparisons, lazy branches,
+  dimension signatures, direct ratio scaling, zero division, explicit round_to quantization and
+  irrational nearest-quantum results. Binding rounding remains census L2; no product evaluator/API.
+  Own explicit exact result fixtures, independent Fraction parameter controls/reassociation/binding
+  tie proof, read-only selector model controls, lazy/nonzero/irrational/round_to controls and actual
+  arithmetic guard mutation/restoration. Do not invent arbitrary curve geometry for reference edges.
+  Rational/domain/binding enforcement D83 stays next .3b.3. Clarify explicit round_to vs implicit
+  arithmetic rounding in the book without adding/removing any declared language operation.
+  Run restored structural/input/literal/language/publication/recording checks and stage doctrine gate;
+  preserve prior exact protocol/evidence and oldest live ledgers at health before growth.
+  Verification: 24 rows/100 independent Fraction cases/162 controls, nine actual reds/exact restore; focused checks green.
+  Commit: `STITCHCAD-G1-0043` (this recording commit).
 
 - ID: `G1-SLICE.5a.3b.3`
   Status: `pending`
@@ -862,7 +862,8 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.2b.2` | `done` | Immutable iterative expression syntax and structural bounds |
 | done | `G1-SLICE.5a.3a` | `done` | D78 extreme public rounding fixed with actual boundary proof |
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
-| next | `G1-SLICE.5a.3b.2` | `pending` | D82 exact reference arithmetic before product proof |
+| done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
+| next | `G1-SLICE.5a.3b.3` | `pending` | D83 numeric-domain and stored-angle audit before product proof |
 
 ## Routing Evidence — D72, milestone fixture calibration
 
@@ -959,33 +960,33 @@ measured by the `SPINE.7` probe).
 Completed rounding checklist is preserved in
 [G1-SLICE-formulas](G1-SLICE-formulas.md#rounding-contract-and-evidence--preserved-from-543dfa6).
 
-### `G1-SLICE.5a.3b.1` — reference literal quantum and canonical identity
+Completed literal identity checklist is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#literal-identity-contract-and-evidence--preserved-from-6f26ca3).
 
-- [x] **REPRODUCE / ISSUE** — literal_diagnostic.py actual parser/evaluator → two 0.00004 cm or
-  two bare 0.0000004 literals accumulate 4/5 quantum and bind 1, unlike canonical-zero respellings;
-  diagnostic rc=0 is observation only. New literal_contract.py fails on 0.49 um, assertion rc=1.
-- [x] **ROOT CAUSE (WHY + WHERE)** — p_atom retains fractional unit/bare-decimal values while L1
-  rounds display; canonical kind:integer identity loses hidden precision. git log --follow →
-  introduction 3704b8a G0-CONTRACT.9, input/structural repairs unchanged numeric paths, rc=0.
-  D80 rg headings → two 2.2 clauses; D81 LIVE_STATUS differs from committed task/MEMORY frontier.
-- [x] **FIX** — once-round converted literal nodes with exact factors/ratio scaling, retain kinds;
-  L1 compares actual node, no display rounding. Units public endpoint section 2.3 keeps display 2.2;
-  live G1 route names the actual next .3b.2. No modulo, arithmetic folding or production API change.
-- [x] **ADDRESSED (verified)** — literal_contract.py → 60 explicit rows/360 controls/0 fail, rc=0;
-  independent Decimal quantum oracle agrees with all rows. run_literal_mutations.sh → six actual
-  assertion reds/rc=1 and byte-identical restoration, runner rc=0. Restored structural suite runs
-  those controls plus structural 16+2/input 130+3/expression twelve/Fraction 36, rc=0. D79/D80/D81
-  descriptions seal unchanged; wider actual D82/D83 reproductions are owned next, not certified.
-- [x] **NO REGRESSION** — language 15/publication nine probes pass, rc=0; warning-free book →
-  48 chapters/16 API rows, 994 source/1515 rendered links, rc=0. Ledger nine pass, rc=0;
-  archive verify/retention → 103 records/256571 resident bytes, rc=0. Tree 10 lanes/13 trees/eight
-  siblings/zero gaps, glossary 310/nine/158, feature 105/29, uncertainty 133/16/zero unowned,
-  fixture 20/four/five/zero mismatch; recording census producers pass, rc=0. Exact predecessor
-  preservation and 12/70 defect census independently verified. Staged `make gate` → all doctrines green, rc=0.
-  No Rust changed: last strict 476/release four/WASM proof belongs to .3a, not a new native claim.
-- [x] **LOCKSTEP** — contract states existing canonical-input boundary, annex details conversions/
-  proof gaps; source/index/glossary/learner routes preserved. Completed .3a/journals and oldest live
-  payloads retain predecessor text. Live 12 open/70 sealed, G1 5/18; next .3b.2, D70 pending.
+### `G1-SLICE.5a.3b.2` — exact reference arithmetic
+
+- [x] **REPRODUCE / ISSUE** — actual literal_diagnostic.py at 6f26ca3 → division sum 2 instead of 1;
+  tiny ratio square zero instead of 1/1000000, rc=0 observations. Corrected arithmetic_contract.py
+  against committed predecessor → exact-result assertion failure on 1 um / 2, rc=1; candidate restored.
+- [x] **ROOT CAUSE (WHY + WHERE)** — git show 3704b8a reference source → square/product/quotient/
+  param_at explicitly rnd before binding; actual diagnostic/exact Fraction controls disagree with
+  formula 4.2/ADR-0003, rc=0 observation. Earlier input/walker/literal repairs retain those paths.
+- [x] **FIX** — preserve result-kind exact Fraction through square/product/quotient/selector; keep
+  canonical integer input, explicit round_to/irrational rounding and census L2 binding quantization.
+  No dimension/branch/zero-divisor/scale/geometry contract change; D83 remains owned next.
+- [x] **ADDRESSED (verified)** — arithmetic_contract.py → 24 rows/100 independent Fraction cases/
+  162 controls/0 fail, rc=0. run_arithmetic_mutations.sh → nine actual assertion reds/rc=1 each,
+  exact source restoration, runner rc=0. Predecessor/candidate round trip confirms real regression.
+- [x] **NO REGRESSION** — structural suite → structural 16+2/input 130+3/expression twelve/Fraction
+  36/literal 60+360/arithmetic 24+100+162 pass, rc=0; language 15/publication nine green, rc=0.
+  Warning-free book: 48 chapters/16 APIs, 995 source/1517 rendered links, rc=0. Ledger nine/archive verify/retention pass, rc=0;
+  106 records/261782 resident bytes. Tree 10/13/eight/zero gaps, glossary 310/nine/158, feature 105/29,
+  uncertainty 133/16/zero unowned, fixture 20/four/five/zero mismatch, rc=0. Predecessor payload/
+  checklist and 11/71 defect census verified. Staged `make gate` → all doctrines green, rc=0.
+  No Rust changed; strict native/release/WASM evidence remains .3a, no new runtime/remote-CI claim.
+- [x] **LOCKSTEP** — exact/operator vs explicit quantization boundaries described in contract and
+  annex; learner/glossary/index routes retained. Prior literal evidence/oldest ledgers preserve
+  committed bytes. Live 11 open/71 sealed, G1 5/18, next .3b.3; D70 pending.
 
 ## Verification Log
 
@@ -994,6 +995,7 @@ Current slice verification follows here; [formula journals](G1-SLICE-journal.md#
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.2` | exact 24/100/162; nine reds; restored reference/language/book; recording | D82 fixed; D83 domains/angles owned next |
 | `2026-10-02` | `.5a.3b.1` | literal 60/360; six actual reds; structural/input/language/book; recording | literal input now canonical; D79/D80/D81 fixed; D82/D83 owned next |
 ## Commit Log
 
@@ -1001,6 +1003,7 @@ Older journals remain linked above.
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
+| `.5a.3b.2` | `STITCHCAD-G1-0043 (leaf G1-SLICE.5a.3b.2): exact reference arithmetic retains sub-quantum results` | 24/100/162/nine reds; scoped recording checks |
 | `.5a.3b.1` | `STITCHCAD-G1-0042 (leaf G1-SLICE.5a.3b.1): reference literals preserve canonical integer identity` | literal 60/360/six reds; scoped publication/recording checks |
 ## Changelog
 
@@ -1022,3 +1025,6 @@ Older journals remain linked above.
 - `2026-10-02`: .3b has committed subleaves for literal identity, exact arithmetic and numeric/angle
   domains; D79/D80/D81 close in .3b.1, D82/D83 are owned next before production normalization.
 - promotion: declined (routine reference repair; literal conversion/canonical identity policy unchanged).
+
+- `2026-10-02`: D82 exact reference operators close in .3b.2; D83 domains/stored angles remain next.
+- promotion: declined (routine reference repair; exact arithmetic and rounding policy unchanged).

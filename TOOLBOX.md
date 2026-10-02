@@ -145,3 +145,9 @@ suite runs it. `bash docs/tasks/artifacts/formula_structure/run_literal_mutation
 actual guard assertion reds/exact restoration; run alone. `literal_diagnostic.py` in that directory
 prints actual literal/arithmetic/domain observations; diagnostic rc=0 is not a correctness verdict.
 D82/D83 own remaining exact arithmetic/numeric-domain proof before this is a production oracle.
+
+Reference exact arithmetic: `arithmetic_contract.py` in formula_structure checks 24 explicit rows,
+100 independent Fraction parameter cases and 162 precision/dimension/binding/selector controls;
+structural suite runs it. `bash docs/tasks/artifacts/formula_structure/run_arithmetic_mutations.sh`
+requires nine actual assertion reds/exact restoration; run alone. Numeric domains/stored angles
+remain D83's next owner .5a.3b.3; selector scope is the reference length-only model, not curve accuracy.

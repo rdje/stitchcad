@@ -302,3 +302,54 @@ Further syntax work remains owned by the parent frontier.
   11 open/67 sealed, G1 5/18, sc-units 31 tests including its doc; next .3b, D70 pending.
 
 Current work remains in the parent frontier.
+
+## Literal identity contract and evidence — preserved from 6f26ca3
+
+- ID: `G1-SLICE.5a.3b.1`
+  Status: `done`
+  Goal: exact once-rounded count/ratio/unit reference literal nodes, D79; repair D80/D81 doc drift.
+  Pre-code protocol: grammar 2/2.1/4 canonical kind:integer; units 2 direct conversion/half-away.
+  Diagnostic first: actual parser/evaluator at named sub-quantum/tie/precision/unit cases, including
+  bare ratio, compare independently authored quantum oracle and canonical respellings. Only literal
+  input is quantized here; operator evaluation remains separate .3b.2 and may not be used to sign off
+  exact-arithmetic identity. Counts stay counts, bare decimals/pct stay ratios, all seven units retain
+  exact chapter factors; no new float, implicit kind conversion, angle modulo or literal folding.
+  Finalize paired cases before source edit; L1 compares the actual integer node rather than rounding
+  its display to conceal a fraction. Keep curated reference scope, not arbitrary-input product safety.
+  Own tracked diagnostic/contracts/fixtures and real reference guard mutations with exact restoration;
+  run input/structural/language/publication checks and doctrine gate. Preserve predecessor evidence
+  byte-identically. Numerical canonical/binding domains and stored angles remain .3b.3 prerequisites.
+  D80: units heading 2.2 occurs twice after G1-0041; public rounding becomes 2.3, display stays 2.2.
+  D81: LIVE_STATUS G1 still names completed .5a.2b.1; update to actual current frontier in this slice.
+  Verification: 60 rows/360 controls, six actual reds/exact restore; reference/language/book green.
+  Commit: `STITCHCAD-G1-0042` (this recording commit).
+
+### `G1-SLICE.5a.3b.1` — reference literal quantum and canonical identity
+
+- [x] **REPRODUCE / ISSUE** — literal_diagnostic.py actual parser/evaluator → two 0.00004 cm or
+  two bare 0.0000004 literals accumulate 4/5 quantum and bind 1, unlike canonical-zero respellings;
+  diagnostic rc=0 is observation only. New literal_contract.py fails on 0.49 um, assertion rc=1.
+- [x] **ROOT CAUSE (WHY + WHERE)** — p_atom retains fractional unit/bare-decimal values while L1
+  rounds display; canonical kind:integer identity loses hidden precision. git log --follow →
+  introduction 3704b8a G0-CONTRACT.9, input/structural repairs unchanged numeric paths, rc=0.
+  D80 rg headings → two 2.2 clauses; D81 LIVE_STATUS differs from committed task/MEMORY frontier.
+- [x] **FIX** — once-round converted literal nodes with exact factors/ratio scaling, retain kinds;
+  L1 compares actual node, no display rounding. Units public endpoint section 2.3 keeps display 2.2;
+  live G1 route names the actual next .3b.2. No modulo, arithmetic folding or production API change.
+- [x] **ADDRESSED (verified)** — literal_contract.py → 60 explicit rows/360 controls/0 fail, rc=0;
+  independent Decimal quantum oracle agrees with all rows. run_literal_mutations.sh → six actual
+  assertion reds/rc=1 and byte-identical restoration, runner rc=0. Restored structural suite runs
+  those controls plus structural 16+2/input 130+3/expression twelve/Fraction 36, rc=0. D79/D80/D81
+  descriptions seal unchanged; wider actual D82/D83 reproductions are owned next, not certified.
+- [x] **NO REGRESSION** — language 15/publication nine probes pass, rc=0; warning-free book →
+  48 chapters/16 API rows, 994 source/1515 rendered links, rc=0. Ledger nine pass, rc=0;
+  archive verify/retention → 103 records/256571 resident bytes, rc=0. Tree 10 lanes/13 trees/eight
+  siblings/zero gaps, glossary 310/nine/158, feature 105/29, uncertainty 133/16/zero unowned,
+  fixture 20/four/five/zero mismatch; recording census producers pass, rc=0. Exact predecessor
+  preservation and 12/70 defect census independently verified. Staged `make gate` → all doctrines green, rc=0.
+  No Rust changed: last strict 476/release four/WASM proof belongs to .3a, not a new native claim.
+- [x] **LOCKSTEP** — contract states existing canonical-input boundary, annex details conversions/
+  proof gaps; source/index/glossary/learner routes preserved. Completed .3a/journals and oldest live
+  payloads retain predecessor text. Live 12 open/70 sealed, G1 5/18; next .3b.2, D70 pending.
+
+Current work remains in the parent.

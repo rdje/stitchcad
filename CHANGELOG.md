@@ -76,6 +76,22 @@ the digests afterwards.
 
 | [`changelog-part38.md`](docs/history/stitchcad-changelog-part38.md) | STITCHCAD-G1-0022 | 13 lines, 1098 bytes, `sha256:fbe202b2…` |
 
+| [`changelog-part39.md`](docs/history/stitchcad-changelog-part39.md) | STITCHCAD-G1-0023 | 15 lines, 1292 bytes, `sha256:b06df32f…` |
+
+## STITCHCAD-G1-0043 - exact reference arithmetic retains sub-quantum results (leaf `G1-SLICE.5a.3b.2`)
+
+D82 closes: square/product/quotient and the length-only rational selector return exact reduced
+Fractions in result-kind internal units, without rounding before binding. Explicit round_to and
+irrational-call rounding remain; dimension signatures, zero division and lazy branches are unchanged.
+Twenty-four explicit rows/100 independent Fraction parameter cases supply 162 controls, including
+re-association, binding ties and selector model scope. Nine actual precision/scale/refusal/branch/
+quantization mutations require assertion reds and exact source restoration. The corrected contracts
+also fail the committed predecessor on its rounded 1 um / 2 result, then restore the candidate.
+Restored reference/input/literal/structural and language 15/publication nine/recording checks pass.
+Expert annex and rounding contract state exact arithmetic and explicit quantization boundaries;
+previous literal evidence/oldest ledgers preserve predecessor text. D83 numeric-domain/stored-angle
+handling is owned next before product normalization. G1 stays 5/18; defects 11 open/71 sealed.
+
 ## STITCHCAD-G1-0042 - reference literals preserve canonical integer identity (leaf `G1-SLICE.5a.3b.1`)
 
 D79 closes: bare decimals and all seven unit forms convert once and round once into canonical
@@ -362,19 +378,3 @@ deletion; release/deps bin/log scans were zero. Shared stores, other repositorie
 outputs remain untouched. Strict Rust's 287 tests, WASM, book, all 22 probe suites and staged gates
 pass after regeneration. Prior cleanup checklist moves unchanged, and oldest changelog entry seals
 to part23. Latest-run record and bounded book upkeep align; G1 .4 remains the product frontier.
-
-## STITCHCAD-G1-0023 - all four structural ontology families pass milestone review (leaf `G1-SLICE.3c.4d.2`)
-
-Review accounts for sixteen ontology §4 objects with immutable content and current reference evidence.
-Four families close structurally; geometry, construction execution, profile values, Design registries
-and production-release review retain their later owners. Fourteen object/support suites execute 149
-contracts; full strict Rust executes 287 tests including 19 doc-tests, with WASM/book and all 22 probe
-suites green. G1 becomes 5/18 leaves; measurement/ease/size modelling is next.
-
-Two signoff defects close: D62 attributed the original workspace's 30 tests to sc-units, whose count
-is 26 regular + 1 doc. D63's negative feature probe matched obsolete prose and changed no fixture;
-it now targets the gate cell by feature identity and independently proves the mutation. Missing/
-duplicate targets refuse setup; a no-op writer mutation makes the suite red. Census predicates stay
-unchanged. Defects seal in part9; 8 open / 54 sealed. Pocket/button evidence relocates unchanged.
-Director reaffirmed SOTA/signoff/production-grade and comprehensive external-agent MCP/API control;
-book and .6/.9/G5 acceptance retain discoverability, recovery, parity and independent evaluation.

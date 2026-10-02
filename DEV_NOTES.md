@@ -3,6 +3,24 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — exact operators must retain the sub-quantum result
+
+- D82's actual reference diagnostic returned 2 for 1 um / 2 + 1 um / 2 and zero for a tiny ratio
+  square. evaluate square/product/quotient and param_at called rnd before the binding boundary,
+  violating formula 4.2/ADR-0003. The paths originated at 3704b8a G0-CONTRACT.9.
+- Return exact reduced Fraction through result-kind scale conversion; keep canonical integer input,
+  explicit round_to, irrational-call rounding and census L2 binding rounding. No new product API or
+  geometry is introduced. Selector proof is the instrument's length-only edge model, not a real curve.
+- Twenty-four explicit expressions/100 independently parameterized Fraction cases supply 162 controls.
+  Tiny rational results, reassociation, signed binding ties, kinds/scales, zero division, lazy branches
+  and preserved quantization are discriminated by nine actual source mutations with exact restoration.
+  Corrected contract context removes Markdown quoting before kind lookup; committed predecessor then
+  fails the exact-result assertion, separately from a setup/parse error. Candidate is restored exactly.
+- D83 owns rational/numeric domains and stored-angle audit next; book claims remain scoped. The
+  contract clarifies that round_to is explicit authored quantization, not an implicit arithmetic round.
+- Completed literal evidence and oldest live payloads preserve predecessor bytes; no cap changes.
+- promotion: declined (routine reference repair; exact arithmetic and rounding policy unchanged).
+
 ## _(2026-10-02)_ — canonical literal display must not conceal a different value
 
 - Actual reference diagnostic reproduces fractional unit and bare-decimal nodes: two canonical-zero
@@ -75,26 +93,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   seal at health without raising caps. Expert details stay in the annex; next .5a.2b.2 owns product ASTs.
 - promotion: declined (routine reference repair; normative grammar and canonical ADR-0003 unchanged).
 
-## _(2026-10-02)_ — structural measurement must visit call argument lists
-
-- D75's reference AST stores ordinary call arguments in lists. Tuple-only walkers skipped all of
-  them, so real copied-book 258-node/17-depth fixtures stayed green and reported seven/zero. Iterative
-  semantic-child traversal includes every argument and static if branch; containers are not nodes.
-- Exactly 256 nodes/16 if levels pass; over-bound forms raise measured formula_domain before inference
-  or evaluation. A 5001-node prebuilt AST proves walker stack safety, not product input acceptance.
-  Four actual guard removals produce assertion reds; source restores byte-identically. Fixture arithmetic
-  initially overcounted a nested call/if by one; independently enumerated children correct that fixture.
-- The milestone caught D77: .md#fragment sibling links were excluded by a bare-file regex. Optional
-  fragments and exact-target positive/negative controls correct ownership without weakening orphan refusal.
-- D76 input parity is scheduled next: reference names permit malformed spelling and unit parsing accepts
-  1cm. Product lexer spelling is already stricter. This debt is distinct from completed node/depth proof.
-- All 25 probe suites pass, including nine tree and 15 language probes; book/ledger/archive checks green.
-  Staged doctrine gate required journal preservation boxes and the exact promotion-decline token;
-  both now carry actual evidence, with final staged gate green.
-- Lexical contracts/checklist and prior full journal relocate with exact predecessor oracles, giving
-  the main tree space for current work without raising caps. Book details stay in the syntax annex.
-- promotion: declined (reference-tool repair; fixed language limits and ADR-0003 authority unchanged).
-
 
 # Sealed archive — earlier lessons
 
@@ -163,3 +161,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part40.md`](docs/history/stitchcad-devnotes-part40.md) | progressive book lesson | 18 lines, 1677 bytes, `sha256:89bc77bc…` |
 
 | [`devnotes-part41.md`](docs/history/stitchcad-devnotes-part41.md) | borrowed lexical source lesson | 19 lines, 1811 bytes, `sha256:92361240…` |
+
+| [`devnotes-part42.md`](docs/history/stitchcad-devnotes-part42.md) | complete argument traversal lesson | 19 lines, 1781 bytes, `sha256:f77b3cf9…` |

@@ -462,12 +462,9 @@ D79, D80 and D81 are sealed in
 [`stitchcad-defects-part19.md`](../history/stitchcad-defects-part19.md). G1-SLICE.5a.3b.1 verifies
 60 literal rows/360 controls/six actual reds and corrects the duplicate units heading/stale status route.
 
-- **D82** — reference arithmetic rounds exact intermediate operators.
-  - Reproduce: literal_diagnostic.py actual evaluator: 1 um / 2 + 1 um / 2 → 2 rather than 1;
-    0.000001 ^ 2 → ratio 0 rather than exact internal 1/1000000.
-  - Root: evaluate square/product/quotient and param_at call rnd before binding, contrary to 4.2.
-  - Impact: curated examples can miss accumulated quantization and this is not an exact oracle.
-  - Owner/schedule: G1-SLICE.5a.3b.2, immediately after D79 literal repair, before product proof.
+D82 is sealed in [`stitchcad-defects-part20.md`](../history/stitchcad-defects-part20.md).
+G1-SLICE.5a.3b.2 verifies 24 exact rows/100 independent Fraction cases/162 controls/nine actual reds;
+implicit operator rounding is removed, explicit and irrational quantization remains.
 
 - **D83** — reference numeric domains are measured without complete typed refusal enforcement.
   - Reproduce: literal_diagnostic.py accepts count 2^128 (129 numerator bits) and length

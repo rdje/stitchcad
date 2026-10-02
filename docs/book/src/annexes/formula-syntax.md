@@ -239,9 +239,36 @@ An independent standard-library Decimal oracle checks every explicit row. Six ac
 mutations require assertion failures and exact source restoration; run that command alone.
 The diagnostic prints observations, and its exit status alone is not a correctness verdict.
 
-The reference remains a curated book instrument. D82's premature intermediate arithmetic rounding
-and D83's incomplete numeric-domain/stored-angle enforcement remain owned by G1-SLICE.5a.3b.2/.3.
-For instance, the instrument currently computes `1 um / 2 + 1 um / 2` as 2 rather than exact 1.
-This literal proof does not certify exact operator evaluation, rational bounds, all numeric domains
-or stored angles. Current published example checks retain their row scope. Product canonicalization
-and evaluation remain pending; the syntax API above performs no numeric computation.
+The reference remains a curated book instrument. These literal controls do not certify rational
+bounds, all numeric domains or stored angles: D83 owns that audit under G1-SLICE.5a.3b.3. Operator
+precision has its separate proof below. Current published example checks retain their row scope.
+Product canonicalization and evaluation remain pending; the syntax API above performs no computation.
+
+## Reference exact-arithmetic controls
+
+D82 is repaired: square, multiplication, division and the reference's rational edge selector retain
+exact reduced Fractions in the result kind's internal units. The arithmetic operators do not round
+their output. `1 um / 2 + 1 um / 2` therefore computes exactly 1 um; `0.000001 ^ 2` retains internal
+ratio 1/1000000 until binding rounds it to zero. A later operation can use that fraction before it
+is bound, so it must not disappear at the square operator.
+
+Explicit `round_to` still quantizes to the authored step. Irrational calls still return the nearest
+internal quantum, half away from zero. A binding still rounds once; the reference census stores that
+integer at the statement boundary. These operations are distinct from canonical literal conversion.
+Kind signatures, ratio scaling, lazy conditional evaluation and typed zero division remain unchanged.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_arithmetic_mutations.sh
+```
+
+Twenty-four explicit expressions and 100 independent Fraction parameter cases supply 162 controls
+for precision, dimensional result, re-association, binding ties, signs, comparisons and preserved
+rounding/refusal boundaries. Nine actual arithmetic/scale/zero/branch/quantization mutations require
+assertion failures and byte-identical restoration; run alone. The selector checks use the reference's
+length-only edge model, and certify no real curve inversion or geometric accuracy.
+
+D83 remains open for numeric domains, rational limits and stored-angle handling. This is partial
+reference evidence, not a complete production evaluator, cross-platform numerical signoff, command
+API or release certificate. The next audit must close those gaps before product normalization uses
+this instrument as an oracle.
