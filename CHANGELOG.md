@@ -116,6 +116,22 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part58.md`](docs/history/stitchcad-changelog-part58.md) | STITCHCAD-G1-0040 | 15 lines, 1267 bytes, `sha256:5d9ffa4d…` |
 
+| [`stitchcad-changelog-part59.md`](docs/history/stitchcad-changelog-part59.md) | STITCHCAD-G1-0041 | 13 lines, 1098 bytes, `sha256:38e6cdf2…` |
+
+## STITCHCAD-G1-0064 - coupled canonical identity review (leaf `G1-SLICE.5a.3d.3`)
+
+Expression identity now has a complete scoped obligation map against grammar4/5 and D84/D95/D103.
+All25 worked expressions match independently checked authored bytes and exact book population;
+a distinct255-argument call preserves complete order on64KiB stack. Nested unit/whitespace aliases
+preserve identity while raw turns and kind remain distinct. Product serializer source stays exact.
+
+Nine public contracts/three additional actual compiled symbol/order/truncation assertion reds pass
+with byte-identical restoration. Strict native525, release9/WASM3 and structural/book controls pass.
+D105 stale syntax-annex/introduction status is corrected. Current grammar/decision/API status/index/
+live/task pointers agree; earlier serializer proof and oldest ledger payload retain exact text in
+bounded parts. .5a.3d closes for expressions only; next .3e ordered let/assert syntax. G1 stays5/18;
+defects10open/94sealed. Binding/evaluation, geometry, storage and command/API/MCP remain later work.
+
 ## STITCHCAD-G1-0063 - owned canonical expression bytes (leaf `G1-SLICE.5a.3d.2`)
 
 Normalized expressions now emit privately constructed owned ASCII identity bytes using a flat action
@@ -376,17 +392,3 @@ D80 duplicate units section numbering and D81 stale G1 status routing are correc
 and progressive learning stay intact. Completed rounding evidence/oldest ledgers preserve predecessor
 bytes. D82 premature arithmetic rounding and D83 numeric-domain/stored-angle enforcement are owned
 next under .5a.3b.2/.3. G1 remains 5/18, defects 12 open/70 sealed; no production numeric/evaluation claim.
-
-## STITCHCAD-G1-0041 - total extreme-magnitude rounding (leaf `G1-SLICE.5a.3a`)
-
-D78 closes: public i128 MIN/1 previously panicked before its checked i64 conversion. Checked unsigned
-quotient narrowing and an explicit negative i64 endpoint preserve half-away rounding and return typed
-Overflow for wider magnitudes. No clamp, wrap, new precondition or changed UnitError is introduced.
-
-Four public contracts/36 independent Fraction rows and five actual guard assertion reds pass with exact
-restoration. The public diagnostic now returns typed errors for all three wide magnitude cases;
-controls and both i64 endpoints pass. Restored strict 476 tests, release four contracts and three-library
-WASM pass; book/reference/ledger/archive/censuses/staged doctrines verify the recording commit.
-Completed AST evidence and oldest live payloads preserve b681a49 bytes. D79 reference literal identity
-was independently found/logged and is scheduled next before product canonicalization; its open scope
-is stated in the expert annex. G1 stays 5/18; defects 11 open/67 sealed; D70 axes ruling remains pending.

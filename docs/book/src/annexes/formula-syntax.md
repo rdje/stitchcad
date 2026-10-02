@@ -244,7 +244,8 @@ The reference remains a curated book instrument. These literal controls do not c
 bounds, all numeric domains or stored angles on their own: the scoped boundary review below joins
 those proofs; the signed-angle review below completes D84 reference semantics. Operator
 precision has its separate proof below. Current published example checks retain their row scope.
-Product canonicalization and evaluation remain pending; the syntax API above performs no computation.
+Product literal normalization and [owned canonical expression identity](formula-literals.md#serialize-canonical-expression-identity)
+are implemented. The syntax API above performs no computation; recipe evaluation remains pending.
 
 ## Reference exact-arithmetic controls
 

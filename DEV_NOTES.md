@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — coupled expression identity review closes its scoped contract
+
+- Review maps grammar4/5 and D84/D95/D103 to the exact unchanged production pipeline and public proof.
+  Authored25 byte fixtures match every actual worked expression plus recursive book-reference output;
+  source membership is checked, so a substituted/dropped row cannot silently weaken the population.
+- Maximum255 distinct call arguments preserve order on64KiB stack. Nested aliases/ASCII whitespace
+  preserve identity, while kind/raw turns remain distinct. Nine public tests pass; three actual
+  symbol/order/last-argument faults fail only the new coupled controls and restore exact source.
+- Strict native525/release9/WASM3 and structural/language/publication checks pass. D105 stale book
+  status is fixed, retaining explicit syntax/reference/evaluation boundaries. .3d expression identity
+  closes; .3e ordered statements follows. Previous serializer proof and oldest ledger payload stay exact.
+- promotion: declined (routine coupled contract review and documentation alignment, no new policy).
+
 ## _(2026-10-02)_ — canonical expression identity owns bytes rather than source lifetimes
 
 - A private owned result exposes canonical bytes explicitly, with byte Eq/Clone and opaque Debug.

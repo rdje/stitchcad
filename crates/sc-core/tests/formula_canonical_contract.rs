@@ -188,3 +188,70 @@ fn flat_serialization_handles_structural_bounds_and_large_sources_on_small_stack
         .join()
         .expect("assertion: stack-bound contracts");
 }
+
+#[test]
+#[allow(clippy::expect_used)]
+fn coupled_worked_book_population_matches_authored_canonical_bytes() {
+    let chapter = include_str!("../../../docs/book/src/spec/formula-language/examples.md");
+    let (mut section, mut sources) = ("", Vec::new());
+    for line in chapter.lines() {
+        if line.starts_with("## ") {
+            section = line;
+        }
+        if !line.starts_with("| `") {
+            continue;
+        }
+        let cells: Vec<_> = line.split('|').map(str::trim).collect();
+        if section.starts_with("## 2.") {
+            sources.push(cells.get(3).expect("binding expression").trim_matches('`'));
+        } else if section.starts_with("## 3.") {
+            let statement = cells.get(1).expect("assertion statement").trim_matches('`');
+            let expression = statement.split_once(" = ").expect("assignment").1;
+            let (left, right) = expression.split_once(" == ").expect("assertion separator");
+            sources.extend([left, right]);
+        }
+    }
+    let fixture =
+        include_str!("../../../docs/tasks/artifacts/formula_structure/canonical_worked_cases.tsv");
+    let rows: Vec<_> = fixture
+        .lines()
+        .filter(|line| !line.is_empty() && !line.starts_with('#'))
+        .map(|line| line.split_once('\t').expect("authored canonical row"))
+        .collect();
+    assert_eq!(sources.len(), 25);
+    assert_eq!(rows.len(), sources.len());
+    for (source, (authored_source, expected)) in sources.into_iter().zip(rows) {
+        assert_eq!(source, authored_source, "assertion: actual book population");
+        assert_eq!(canonical(source).as_str(), expected, "assertion: {source}");
+    }
+}
+
+#[test]
+#[allow(clippy::expect_used)]
+fn coupled_widest_call_and_nested_respelling_preserve_complete_identity() {
+    std::thread::Builder::new()
+        .stack_size(64 * 1024)
+        .spawn(|| {
+            let names: Vec<_> = (0..255).map(|index| format!("a{index}")).collect();
+            let source = format!("probe({})", names.join(", "));
+            let expected = format!("(probe {})", names.join(" "));
+            assert_eq!(canonical(&source).as_str(), expected);
+            let reverse = format!(
+                "probe({})",
+                names.into_iter().rev().collect::<Vec<_>>().join(", ")
+            );
+            assert_ne!(canonical(&source), canonical(&reverse));
+            let nested = canonical("if(a, probe(-360 deg, 2.5 cm ^ 2), 1.0)");
+            let alias = canonical(" \tif((a), probe(-360.000000 deg, ((25 mm)) ^ 2), 100 pct)\r\n");
+            assert_eq!(nested, alias);
+            assert_eq!(
+                nested.as_str(),
+                "(if a (probe (- angle:360000000) (^2 length:25000)) ratio:1000000)"
+            );
+            assert_ne!(nested, canonical("if(a, probe(-0 deg, 25 mm ^ 2), 1.0)"));
+            assert_ne!(nested, canonical("if(a, probe(-360 deg, 25 mm ^ 2), 1)"));
+        })
+        .expect("small-stack worker")
+        .join()
+        .expect("assertion: wide/nested identity controls");
+}

@@ -141,7 +141,9 @@ The [complete expression byte contract](../../annexes/formula-literals.md#canoni
 provides examples and explains why named neg/square tags would collide with ordinary calls.
 No sign folding, argument reordering, algebraic simplification or evaluation changes identity.
 Source spans, grouping and original unit spellings remain outside canonical bytes. A canonical
-expression has no terminal newline. Production expression serialization is .5a.3d.2; .3d.3 reviews identity proof before closure.
+expression has no terminal newline. Production expression serialization is .5a.3d.2; the
+[coupled identity review](../../annexes/formula-literals.md#coupled-canonical-identity-review) closes .3d.
+Ordered statement serialization and recipe execution remain separate requirements.
 
 **A formula's identity is its canonical form.** `2.5 cm` and `25 mm` canonicalize to one node
 (`length:25000`), so they are one formula: a diff, a hash and a golden compare canonical forms and

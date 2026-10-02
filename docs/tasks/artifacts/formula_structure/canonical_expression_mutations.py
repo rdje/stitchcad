@@ -1,6 +1,7 @@
 """Exclusive actual Rust faults: require compiled public assertion reds and exact restoration."""
 from pathlib import Path
 import os
+import sys
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -34,18 +35,31 @@ CASES = [
      'FormulaCanonicalExpression { text: text + "\\n" }'),
     ('debug privacy', '.field("byte_count", &self.text.len())', '.field("text", &self.text)'),
 ]
+coupled = sys.argv[1:] == ['--coupled']
+assert not sys.argv[1:] or coupled, 'only --coupled is accepted'
+if coupled:
+    CASES = [
+        ('worked addition', 'FormulaBinaryOperator::Add => "+",',
+         'FormulaBinaryOperator::Add => "-",'),
+        ('wide call order', 'arguments.iter().rev()', 'arguments.iter()'),
+        ('wide call final argument', 'arguments.iter().rev()',
+         'arguments.iter().rev().take(254)'),
+    ]
 original_text = ORIGINAL.decode()
 for name, before, _ in CASES:
     assert original_text.count(before) == 1, (name, 'actual anchor not unique')
 assert original_text.count('Action::Text(" ")') == 5
-CASES.append(('spacing', 'Action::Text(" ")', 'Action::Text("  ")'))
+if not coupled:
+    CASES.append(('spacing', 'Action::Text(" ")', 'Action::Text("  ")'))
 environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'),
                    TMPDIR=str(ROOT / 'target/scratch'))
 try:
     for index, (name, before, after) in enumerate(CASES, 1):
         SOURCE.write_text(original_text.replace(before, after))
-        result = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test',
-                                 'formula_canonical_contract'], cwd=ROOT,
+        command = ['cargo', 'test', '-p', 'sc-core', '--test', 'formula_canonical_contract']
+        if coupled:
+            command.append('coupled_')
+        result = subprocess.run(command, cwd=ROOT,
                                 env=environment, capture_output=True)
         output = result.stdout + result.stderr
         (WORK / ('fault-%d.log' % index)).write_bytes(output)
@@ -57,4 +71,4 @@ try:
 finally:
     SOURCE.write_bytes(ORIGINAL)
 assert SOURCE.read_bytes() == ORIGINAL
-print('canonical faults: 19 compiled actual assertion reds; exact source restored')
+print('canonical faults: %d compiled actual assertion reds; exact source restored' % len(CASES))

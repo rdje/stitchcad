@@ -218,7 +218,7 @@ These controls and the bounded arithmetic argument establish the stated normaliz
 They provide no correctly rounded arbitrary transcendental or cross-platform numerical certificate.
 
 Canonical serialization is [G1-SLICE.5a.3d.2](#serialize-canonical-expression-identity), with coupled
-identity review .3d.3 still pending. Ordered statements, names/types, numeric binding/evaluation,
+identity review .3d.3 complete below. Ordered statements, names/types, numeric binding/evaluation,
 entity direction integration, geometry, storage and command/API/MCP execution remain later work.
 A normalized graph contains literal inputs and unevaluated operators; it is not an executable recipe.
 
@@ -268,7 +268,7 @@ faults must fail those byte assertions; the exclusive runner restores the produc
 These are interpreter assertion controls, not compiled product serializer proof. The structural suite
 watches the inventory. The detailed repository
 decision is docs/decisions/decision_canonical-expression-spelling.md. D103 closes for the missing
-byte contract; the .3d.2 product serializer is implemented below and .3d.3 review remains pending.
+byte contract; the .3d.2 product serializer and .3d.3 identity review are complete below.
 Ordered statements,
 recipe envelopes, hashes, persistence and execution remain separate work.
 
@@ -327,7 +327,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_refere
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py
 ```
 
-Seven public contracts compare 55 authored byte fixtures with the independent recursive book-reference
+The initial .3d.2 seven public contracts compare 55 authored byte fixtures with the independent recursive book-reference
 renderer, cover all 100 Fraction literal inputs/refusals nested in calls, and verify the six canonical
 examples above. They check unit aliases/Eq versus unequal kind/sign/operator/order, owned lifetimes,
 clone/extraction/privacy and unevaluated branches. Private construction has a compile-fail doctest;
@@ -339,7 +339,43 @@ Nineteen actual compiled faults alter root, kind/magnitude/full width, name/sign
 ordered binary/call/conditional children, call coverage, whitespace/newline or Debug privacy. They
 must fail public assertions; the exclusive runner restores exact source. Run mutations alone.
 
-G1-SLICE.5a.3d.2 owns this product serializer; .3d.3 owns the coupled identity review. Ordered recipe
+G1-SLICE.5a.3d.2 owns this product serializer; .3d.3 completes the coupled identity review below. Ordered recipe
 statements, name/type/binding/evaluation, geometric construction, storage and command/API/MCP remain
 later work. Native/release checks and WASM cross-compilation retain their stated scope; compilation
 alone is not a browser runtime or cross-platform numerical certificate.
+
+
+## Coupled canonical identity review
+
+G1-SLICE.5a.3d.3 completes the expression identity review against grammar §4/§5 and D84/D95/D103.
+Every expression requirement maps to a public control; this closes expression serialization only.
+The source for the serializer, normalized arena, literals and rounding remains byte-identical to
+its verified implementation commit. The additional controls exercise the coupled public pipeline.
+
+| Obligation | Public proof |
+| --- | --- |
+| Seven expression roles, ten binary symbols and exact ASCII spacing | Authored55 bytes versus independent recursive book-reference rendering; public fixture assertions |
+| D103 unary/square identity, precedence, kind/sign/zero/order distinctions | Authored bytes and unequal identity contracts; operator/call names remain distinct |
+| D84 raw sign/turns and D95 full128 literal magnitudes | Wide byte fixtures and nested100 Fraction acceptance/refusal rows; no later binding claim |
+| Input respellings and source spans outside identity | Root aliases and nested conditional/call aliases including ASCII whitespace; signed turns/kinds still distinguish bytes |
+| Complete worked-example population | Authored25 byte rows: seventeen binding expressions and eight assertion sides; source population and independent reference both agree |
+| Every child at legal width/depth, no extra truncation | Distinct255-argument call,256-node chains,16 if levels,50000 groups and100000-byte name on64KiB stack |
+| Owned result, private construction, Eq/Clone/extraction/privacy | Public lifetime and Debug assertions plus compile-fail/runnable Rust docs |
+| Unevaluated identity | Unknown calls/branches, mismatched dimensions, negative count and zero division serialize without granting recipe acceptance |
+
+The canonical suite now has nine public tests. Three additional actual compiled faults (worked
+addition symbol, wide-call order and loss of the last legal argument) fail the two new coupled
+tests as assertions. The exclusive runner restores exact source. The initial nineteen fault
+controls remain retained proof of the unchanged serializer; the three new reds verify the additional
+controls, rather than claiming a fresh execution of the initial nineteen.
+
+```bash
+cargo test -p sc-core --test formula_canonical_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py --coupled
+```
+
+The reference producer watches exact worked-source membership as well as bytes. Native/release tests
+and three-crate WASM compilation pass within their existing scope. Statement bind/assert bytes,
+ordered recipe parsing, name/type checks, bound numeric values, evaluation, geometry, storage and
+command/API/MCP remain owned by later leaves. Expressions that serialize can still be refused there.

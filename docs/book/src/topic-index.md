@@ -14,6 +14,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Draft and complete chart coverage](spec/size-chart-collections.md)
 - [Canonical expression API](annexes/formula-literals.md#serialize-canonical-expression-identity)
 - [Canonical expression bytes](annexes/formula-literals.md#canonical-expression-bytes)
+- [Canonical identity proof review](annexes/formula-literals.md#coupled-canonical-identity-review)
 - [Coupled normalization review](annexes/formula-literals.md#coupled-normalization-review)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
 - [Executable closure intent](spec/ontology-closures.md)
