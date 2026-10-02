@@ -28,7 +28,7 @@ raw = namespace['rnd'](statement[3].v)
 normalized = namespace['norm_angle'](raw)
 for label, source, environment in [
     ('direct full-turn sweep', 'arc_length(360 deg, 1 um)', {}),
-    ('kind-table normalized angle binding', 'arc_length(turn, 1 um)',
+    ('superseded normalized-binding counterexample', 'arc_length(turn, 1 um)',
      {'turn': {'kind': 'angle', 'value': normalized, 'origin': 'recipe'}}),
 ]:
     node = reference.parse(source)

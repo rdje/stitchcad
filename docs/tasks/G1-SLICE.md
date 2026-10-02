@@ -648,34 +648,21 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `pending`
 
 - ID: `G1-SLICE.5a.3b.3a`
-  Status: `in_progress`
+  Status: `done`
   Goal: trustworthy reference angle conversions then rational-value bounds before scalar repair.
   Children: .3a.1 D85/D86/D87 angle conversion/rounding/pole guards; .3a.2 D83 rational bit limit.
   The diagnostic exposed wrong degree scaling, so fix that before trusting angle audit/width controls.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: angular42/72/math42/seven reds plus rational61/twelve reds; focused checks green.
+  Commit: `STITCHCAD-G1-0044` and `STITCHCAD-G1-0045`.
 
 - ID: `G1-SLICE.5a.3b.3a.1`
   Status: `done`
-  Goal: repair D85 direction truncation, D86 microdegree/radian scaling and D87 exact tan pole refusal.
-  Pre-code protocol: units 1.2/formula 4.2 and grammar 6/6.1 require microdegree inputs, nearest internal
-  quantum for irrational results, normalized dir, and typed refusal outside a mathematical domain.
-  Actual diagnostic: arc_length(360 deg,1 um) → 6283185, not rounded6; dir((0,0),(1,6)) → 80537677,
-  nearest80537678. Trig source treats to_true(angle) as degrees though it returns microdegrees; dir
-  normalizes int(Decimal) without rnd. tan odd-quarter turns are undefined, independent of rounding.
-  Shared exact microdegree-to-radian helper divides by 180*1000000 before applying pi; no change to
-  arithmetic internal units or modulo sweep. Round dir before normalization; refuse exact rational
-  tan poles using microdegree modulo180deg, with formula_domain quantity/operation context.
-  Own independently expected quarter/half/full/signed/multi-turn and fractional angle controls,
-  Decimal precision/model scope, dir/atan2 agreement, preserved arithmetic/literal contracts and actual
-  guard mutations/exact restoration. Clarify tan domain in grammar, details only in expert annex.
-  D84 director ruling preserves formula sign/turns; .3c owns verification. D83 width/domains stay pending.
-  Verify focused reference/language/book/recording/doctrines; commit before rational-bound repair.
-  Verification: 42 rows/72 controls, independent math42, seven actual reds/exact restore; focused gates green.
-  Commit: `STITCHCAD-G1-0044` (this recording commit).
+  Contract/checklist: [preserved angular evidence](G1-SLICE-formulas.md#angular-contract-and-evidence--preserved-from-1c95ea4).
+  Verification: 42 rows/72 controls/math42/seven actual reds; focused gates green, D84 ruling recorded.
+  Commit: `STITCHCAD-G1-0044`.
 
 - ID: `G1-SLICE.5a.3b.3a.2`
-  Status: `pending`
+  Status: `done`
   Goal: D83 exact rational limit refusal at actual literal/value boundaries, before product oracle use.
   Pre-code protocol: contract 4.2/4.3/5.2 max_rational_bits=128 on reduced exact numerator/denominator;
   see currently only measures and L8 only reddens book census after evaluation. Introduce measured
@@ -691,10 +678,13 @@ Completed reference input contract .5a.2b.1 is preserved in
   Own actual reference diagnostic/contracts/guard mutations/restoration, including angle contract
   observations under the recorded D84 ruling without changing angle semantics; fix the earlier 100-zero
   literal control to demand width refusal and keep a separate reducible long-zero positive control.
+  D88 is additionally owned here: the new width guard masks a removed tan pole guard because the
+  angle contract checks only formula_domain. Require the mathematical pole reason, distinct from
+  atan2 zero-vector refusal, and rerun existing mutation suites with exact restoration.
   No scalar-domain or complete angle implementation is claimed; .3b/.3c own those prerequisites next.
   Verify focused reference/language/book/ledger/archive/censuses and doctrine; preserve completed text.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: 61 Fraction controls/twelve actual reds; existing six/nine/seven reds and exact restoration.
+  Commit: `STITCHCAD-G1-0045` (this recording commit).
 
 - ID: `G1-SLICE.5a.3b.3b`
   Status: `pending`
@@ -916,7 +906,7 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
 | done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
-| next | `G1-SLICE.5a.3b.3a.2` | `pending` | D83 rational bounds; D84 implementation verification remains owned |
+| next | `G1-SLICE.5a.3b.3b` | `pending` | D83 scalar domains/i64; D84 verification remains owned |
 
 ## Routing Evidence — D72, milestone fixture calibration
 
@@ -979,48 +969,52 @@ Completed literal identity checklist is preserved in
 Completed exact arithmetic checklist is preserved in
 [G1-SLICE-formulas](G1-SLICE-formulas.md#exact-arithmetic-contract-and-evidence--preserved-from-f70edf7).
 
-### `G1-SLICE.5a.3b.3a.1` — reference angular conversion and domain guards
+Completed angular checklist is preserved in
+[G1-SLICE-formulas](G1-SLICE-formulas.md#angular-contract-and-evidence--preserved-from-1c95ea4).
 
-- [x] **REPRODUCE / ISSUE** — literal_diagnostic.py → full-turn radius1 arc6283185, sin90=0,
-  cos90=1000000, dir80537677 vs nearest80537678, tan90/-90/270=0, rc=0 observations. New angle
-  contract → sin30 result assertion failure, rc=1. D84 storage conflict is logged/asked, not inferred.
-- [x] **ROOT CAUSE (WHY + WHERE)** — git show 3704b8a → two pi/180 paths over internal microdegrees,
-  to_true only rescales ratio; dir passes Decimal to norm_angle's int truncation, no tangent pole guard;
-  source signatures verified, rc=0. Direct post-fix sweep vs normalized-binding model →6 vs0 proves D84.
-- [x] **FIX** — shared direct microdegree/radian conversion preserves sign/turn/fraction; round dir
-  before normalization; exact rational odd-quarter pole guard uses stable formula_domain. No binding
-  modulo choice, new product API, geometry solver or changed scalar/rational cap.
-- [x] **ADDRESSED (verified)** — angle_contract.py →42 rows/72 controls/0 fail, rc=0; independent
-  angle_math_oracle.py →42 defined curated rows agree, rc=0. run_angle_mutations.sh →seven actual
-  assertion reds/rc=1 each, exact restoration, runner rc=0. Diagnostic now returns6/1000000/0/
-  80537678 and typed poles, rc=0. D85/D86/D87 seal unchanged; D84 verification/D83 guards remain owned.
-- [x] **NO REGRESSION** — restored structural/input/literal/arithmetic/angle controls green, rc=0;
-  language15/publication9 pass, rc=0; warning-free book48 chapters/16 APIs,998 source/1521 rendered
-  links. Ledger9/archive verify/retention pass, rc=0;109 records/267226 resident
-  bytes. Tree10/13/eight/zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16/zero
-  unowned, fixture20/four/five/zero mismatch pass, rc=0. Exact predecessor preservation and12/74
-  defect census verified; independent math42 agrees. Staged make gate after bounded ruling records: all doctrines green, rc=0. No Rust changed; no new native/WASM/remote-CI verdict implied.
-- [x] **LOCKSTEP** — tan domain/annex/director angle ruling and live pointers match; learner,
-  glossary/index routes unchanged. Exact predecessor arithmetic/decisions/journals/oldest payloads
-  retained without cap growth. Live12 open/74 sealed, G1 5/18; next.3a.2, D84 verification/D70 ruling pending.
+### `G1-SLICE.5a.3b.3a.2` — reduced rational refusal and discriminating domain reasons
+
+- [x] **REPRODUCE / ISSUE** — new rational_contract.py against predecessor accepts 129-bit literal,
+  raising its oversized-value assertion, rc=1. Diagnostic previously accepted count2^128. D88 actual
+  angle mutation5 removed pole guard yet contract returned0; mutation runner refused, rc=1.
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual see only measured; L8 reddened the final census; p_atom
+  rounded without exact-width check. Old product/square/quotient see observed true-unit temporaries,
+  not result-kind values. git show 1c95ea4 source-signature assertion → measurement-only see/three
+  true-unit observations/no exact-input guard verified, rc=0. D88 checked only formula_domain;
+  run_angle_mutations.sh exposed mutation5 contract rc=0 instead of assertion red, runner rc=1.
+- [x] **FIX** — measured typed refusal in see, converted literal guards before rnd, one numeric result
+  wrapper around recursive evaluation. Check reduced internal values, not unscaled temporaries;
+  retain lazy branch computation. Angle refusals require exact pole/zero-vector reason. Caps unchanged.
+- [x] **ADDRESSED (verified)** — rational_contract.py →61 independent Fraction controls/0 fail, rc=0;
+  run_rational_mutations.sh →twelve actual assertion reds/rc1 each, exact restoration, runner0. Existing
+  literal/arithmetic/angle runners →six/nine/seven actual reds/exact restore, rc=0; D88 seal unchanged.
+- [x] **NO REGRESSION** — restored structural suite and language15 green, rc=0; literal60/361,
+  arithmetic24/100/162, angle42/72/math42 and rational61 agree. Publication9/ledger9/archive verify/
+  retention green, rc=0:48 chapters/16 APIs/998 source/1522 rendered links;112 records/272155 resident
+  bytes. Tree10/13/eight/zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16/zero unowned,
+  fixture20/four/five/zero mismatch green, rc=0. Exact preservation/live12/sealed75/no overlap verified.
+  Staged make gate → all doctrines green, rc=0; no Rust changed or new native/WASM/remote-CI claim.
+- [x] **LOCKSTEP** — reference input/result rational bounds and partial scalar/signed-angle status
+  match book/live/task records. Glossary/index/learner routes retained; predecessor angular contract/
+  checklist/journal and oldest history preserve exact bytes. G1 5/18; live12/75; next scalar .3b.
 
 ## Verification Log
 
-[Historical reference journals](G1-SLICE-journal.md#reference-progress-journals--preserved-from-f70edf7)
+[Historical angular journals](G1-SLICE-journal.md#angular-reference-progress--preserved-from-1c95ea4)
 preserve completed rows and technical chronology. Current slice follows here.
 
 | Date | Leaf | Checks | Result |
 | --- | --- | --- | --- |
-| `2026-10-02` | `.5a.3b.3a.1` | angular42/72; math42; seven reds; restored focused/recording checks | D85/D86/D87 fixed, D84 ruling received; rational/scalar guards next |
+| `2026-10-02` | `.5a.3b.3a.2` | rational61/twelve reds; existing six/nine/seven reds; restored focused checks | width refusal repaired, D88 discrimination fixed; scalar domains next |
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3b.3a.1` | `STITCHCAD-G1-0044 (leaf G1-SLICE.5a.3b.3a.1): reference angular conversion and domain guards agree` | 42/72/math42/seven actual reds; scoped focused checks |
+| `.5a.3b.3a.2` | `STITCHCAD-G1-0045 (leaf G1-SLICE.5a.3b.3a.2): reference rational widths refuse oversized values` | 61 Fraction controls/twelve actual reds; focused checks |
 
 ## Changelog
 
-- `2026-10-02`: angle diagnostic exposes D84 contract distinction and D85/D86/D87 numeric defects.
-  Numeric guards close in .3a.1 before rational limits .3a.2; D84 ruling received, verification owned.
-- promotion: promoted by `decision_angles.md` (director’s storage ruling).
+- `2026-10-02`: D83 rational widths refuse at exact input/result boundaries; D88 requires pole reason.
+  Scalar domains .3b and signed-angle verification .3c remain pending; no product evaluator claim.
+- promotion: declined (routine enforcement of the existing reduced-rational limit; no new policy).

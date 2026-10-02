@@ -189,9 +189,9 @@ locale, no float in canonical content.
 
 **Static — before any value is computed:** `formula_parse`, `formula_dimension`,
 `formula_unbound_name`, `formula_ambiguous_name`, `formula_rebinding`, `formula_unsupported`, and
-the structural limits of §4.3.
+the node, statement and conditional limits of §4.3.
 
-**Runtime — while evaluating:** `formula_division`, `formula_domain`, `formula_unknown`,
+**Runtime — while evaluating:** reduced numeric-value widths (§4.3), `formula_division`, `formula_domain`, `formula_unknown`,
 `formula_tolerance_unbound`, `formula_assertion`, and `formula_cycle` at load.
 
 A static refusal rejects the recipe whole: no statement is evaluated and no geometry is produced,

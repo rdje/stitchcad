@@ -214,3 +214,26 @@ Older journals remain linked above.
 - `2026-10-02`: D82 exact reference operators close in .3b.2; D83 domains/stored angles remain next.
 - promotion: declined (routine reference repair; exact arithmetic and rounding policy unchanged).
 Current progress remains in the parent.
+
+## Angular reference progress — preserved from 1c95ea4
+
+## Verification Log
+
+[Historical reference journals](G1-SLICE-journal.md#reference-progress-journals--preserved-from-f70edf7)
+preserve completed rows and technical chronology. Current slice follows here.
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.3a.1` | angular42/72; math42; seven reds; restored focused/recording checks | D85/D86/D87 fixed, D84 ruling received; rational/scalar guards next |
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3a.1` | `STITCHCAD-G1-0044 (leaf G1-SLICE.5a.3b.3a.1): reference angular conversion and domain guards agree` | 42/72/math42/seven actual reds; scoped focused checks |
+
+## Changelog
+
+- `2026-10-02`: angle diagnostic exposes D84 contract distinction and D85/D86/D87 numeric defects.
+  Numeric guards close in .3a.1 before rational limits .3a.2; D84 ruling received, verification owned.
+- promotion: promoted by `decision_angles.md` (director’s storage ruling).

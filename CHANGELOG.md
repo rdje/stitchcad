@@ -80,6 +80,20 @@ the digests afterwards.
 
 | [`changelog-part40.md`](docs/history/stitchcad-changelog-part40.md) | STITCHCAD-SPINE-0021a | 9 lines, 799 bytes, `sha256:156e9198…` |
 
+| [`changelog-part41.md`](docs/history/stitchcad-changelog-part41.md) | STITCHCAD-G1-0024 | 12 lines, 1073 bytes, `sha256:5f9373df…` |
+
+## STITCHCAD-G1-0045 - reference rational widths refuse oversized values (leaf `G1-SLICE.5a.3b.3a.2`)
+
+D83 rational width checks now raise typed formula_domain at converted exact input and completed
+numeric results, using reduced numerator/denominator widths in result-kind internal units. Input
+rounding cannot hide an oversized fraction; unscaled temporaries and untaken computed branches do
+not acquire false limits. Sixty-one independent Fraction controls and twelve actual mutations pass;
+restored structural/language and earlier six/nine/seven mutation suites are green. D88 fixes a
+masked pole-guard test by requiring its mathematical-domain reason, not just an error token.
+Exact predecessor angular evidence/journals and oldest live records are preserved. Scalar domains/
+i64 and D84 signed-angle verification remain owned; no new Rust/production evaluator claim.
+G1 remains 5/18; defects 12 open/75 sealed; next .5a.3b.3b scalar domains, D70 decision pending.
+
 ## STITCHCAD-G1-0044 - reference angular conversion and guards agree (leaf `G1-SLICE.5a.3b.3a.1`)
 
 D85/D86/D87 close: microdegrees convert directly to radians at the correct scale, dir rounds before
@@ -372,16 +386,3 @@ strict Rust executes 305 tests; WASM/book/focused censuses/ledger/staged gates p
 chapter and promoted decision agree. Completed .4a.1 contract/evidence moves unchanged to a bounded
 measurement sibling; oldest gather lesson seals in devnotes-part24. D66 owns stale README status in
 next .4a.2b metadata/runtime integration; .2c observes CI/signoff. G1 remains 5/18.
-
-## STITCHCAD-G1-0024 - canonical length inputs preserve authored state (leaf `G1-SLICE.4a.1`)
-
-Immutable core declarations retain source plus known/assumed/unknown/preference/derived state and
-required provenance references. Known inventory refuses empty/duplicates; unknown and derived inputs
-have no numeric field or fallback, naming the observation or formula they need. Signed values and
-explicit zero remain exact. Evidence existence/scope/truth and evaluated state remain Design/recipe/G4.
-Eight contracts and three compile-fail examples pass; four independent guard/fallback mutations fail
-with actual assertions. Strict Rust executes 298 tests; WASM/book/focused censuses/ledger/gates green.
-D64 corrects stale ontology coverage, sealed in defects-part10. Completed construction contracts/ten
-checklists partition unchanged; two oldest lessons seal unchanged in devnotes-part23. G1 remains
-5/18, next .4a.2 measurement metadata. D65 owns retention at 61/64 archive files before the limit blocks
-required seals; the product frontier stays active until that trigger.

@@ -63,6 +63,14 @@ assert reference.parse('1') != reference.parse('1.0')
 checks += 1
 # Context precision must not truncate a lexical decimal before its exact conversion.
 long_source = '0.' + '0' * 100 + '5 cm'
-assert reference.parse(long_source) == ('lit', 'length', Fraction(0))
+error = None
+try:
+    reference.parse(long_source)
+except namespace['FErr'] as refused:
+    error = refused
+assert error is not None and error.token == 'formula_domain', ('oversized exact input hidden by rounding', error)
+# Long spellings can reduce to small values; lexical digit count is not rational width.
+assert reference.parse('0.' + '0' * 100 + ' cm') == ('lit', 'length', Fraction(0))
+checks += 1
 checks += 1
 print('reference literal contracts: %d rows / %d controls / 0 fail; independent Decimal oracle' % (rows, checks))

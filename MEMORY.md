@@ -5,8 +5,9 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3a.2`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** repair D83 rational limits .5a.3b.3a.2, then scalar domains .3b.3b.
+- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3b`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** repair D83 scalar domains and i64 storage bounds .5a.3b.3b.
+  Rational widths are enforced by .3a.2; signed-angle contract verification .3c follows.
   D85/D86/D87 angle conversions/direction rounding/tan pole guards are fixed. D84 formula signed/
   multi-turn formula values are preserved by the director’s ruling; entity directions normalize.
   The decision record and .3b.3c own remaining binding/equality and inverse-trig verification. D70 axes ruling also pending under .4c.2;

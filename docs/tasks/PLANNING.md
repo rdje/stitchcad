@@ -467,12 +467,14 @@ G1-SLICE.5a.3b.2 verifies 24 exact rows/100 independent Fraction cases/162 contr
 implicit operator rounding is removed, explicit and irrational quantization remains.
 
 - **D83** — reference numeric domains are measured without complete typed refusal enforcement.
-  - Reproduce: literal_diagnostic.py accepts count 2^128 (129 numerator bits) and length
+  - Original reproduce: literal_diagnostic.py accepted count 2^128 (129 numerator bits) and length
     1000000001 um, with no formula_domain; source see only updates max_bits, L8 is a census verdict.
     L2 stores rnd(val.v), so 360 deg remains unnormalized at a stored angle binding. The director's
     D84 ruling confirms this raw sweep behavior is desired; it is not a missing modulo defect.
   - Impact: reference success is insufficient evidence for numeric/binding domains.
-  - Owner/schedule: G1-SLICE.5a.3b.3, after exact arithmetic and before product normalization.
+  - Width repair: .5a.3b.3a.2 now refuses reduced values above128 bits at input/result boundaries;
+    61 controls/twelve actual reds verify this portion. D83 remains open for scalar domains/i64.
+  - Owner/schedule: G1-SLICE.5a.3b.3b, after width enforcement and before product normalization.
     D84 records the director’s direction/sweep distinction; rational/scalar repairs implement no
     formula modulo. Remaining signed-angle verification stays owned by .3c.
 
@@ -728,3 +730,7 @@ placeholder box (defect D15).
   (58 leaves); three unowned G0 clauses closed as `.16`/`.17`/`.18`; D15 (multi-leaf
   acceptance-evidence shadowing in the inherited gate) measured, logged and owned by
   `SPINE.7`/`SPINE.8`.
+
+D88 is sealed in [`stitchcad-defects-part22.md`](../history/stitchcad-defects-part22.md).
+G1-SLICE.5a.3b.3a.2 requires the exact tangent pole reason, so an unrelated rational refusal cannot
+mask a removed pole guard; seven actual angle mutation reds/restoration verify the repair.

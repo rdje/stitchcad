@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — rational limits bound reduced values, not hidden temporaries
+
+- D83 see measured width but returned success; L8's final census verdict was not runtime refusal.
+  Canonical input rounded away oversized sub-quantum fractions before any width observation.
+- see now raises formula_domain with operation, published max_rational_bits and measured width.
+  Check converted exact input before rounding and every completed numeric node in result-kind
+  internal units. Remove true-unit temporary observations; their scale can inflate a valid fraction.
+  Fraction reduction precedes width checks; lexical digit count and raw cross-products are not values.
+- Sixty-one independently authored Fraction controls cover 127/128/129-bit edges, exact input,
+  signs, cancellation, scale, selectors and lazy branches; twelve actual guard mutations turn red.
+  Existing literal/arith/angle six/nine/seven mutations retain exact restoration. Literal controls
+  now number361: the oversized 100-zero fraction refuses; a reducible long-zero spelling stays valid.
+- D88 surfaced because token-only tan tests accepted an unrelated rational refusal after pole guard
+  removal. The mutation runner caught this masked failure. Require the exact mathematical-domain
+  reason, distinct from atan2-zero refusal; all seven actual reds then discriminate again.
+- D83 scalar domains/i64 and D84 signed-angle verification remain owned next; no new Rust evaluator,
+  arbitrary-input transcendental, release or MCP proof. Predecessor evidence/history retain exact bytes.
+- promotion: declined (routine enforcement of existing rational/domain and verification contracts).
+
 ## _(2026-10-02)_ — angle storage units must reach the irrational call unchanged
 
 - The angle audit found a foundational scale error, not merely a missing binding modulo: to_true
@@ -21,24 +40,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Expert annex/grammar and live task pointers match the repair; prior arithmetic and history payloads
   preserve exact text. Older task decisions/journals are retained rather than expanding live caps.
 - promotion: promoted by `decision_angles.md` (director’s storage ruling).
-
-## _(2026-10-02)_ — exact operators must retain the sub-quantum result
-
-- D82's actual reference diagnostic returned 2 for 1 um / 2 + 1 um / 2 and zero for a tiny ratio
-  square. evaluate square/product/quotient and param_at called rnd before the binding boundary,
-  violating formula 4.2/ADR-0003. The paths originated at 3704b8a G0-CONTRACT.9.
-- Return exact reduced Fraction through result-kind scale conversion; keep canonical integer input,
-  explicit round_to, irrational-call rounding and census L2 binding rounding. No new product API or
-  geometry is introduced. Selector proof is the instrument's length-only edge model, not a real curve.
-- Twenty-four explicit expressions/100 independently parameterized Fraction cases supply 162 controls.
-  Tiny rational results, reassociation, signed binding ties, kinds/scales, zero division, lazy branches
-  and preserved quantization are discriminated by nine actual source mutations with exact restoration.
-  Corrected contract context removes Markdown quoting before kind lookup; committed predecessor then
-  fails the exact-result assertion, separately from a setup/parse error. Candidate is restored exactly.
-- D83 owns rational/numeric domains and stored-angle audit next; book claims remain scoped. The
-  contract clarifies that round_to is explicit authored quantization, not an implicit arithmetic round.
-- Completed literal evidence and oldest live payloads preserve predecessor bytes; no cap changes.
-- promotion: declined (routine reference repair; exact arithmetic and rounding policy unchanged).
 
 ## _(2026-10-02)_ — canonical literal display must not conceal a different value
 
@@ -168,3 +169,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part42.md`](docs/history/stitchcad-devnotes-part42.md) | complete argument traversal lesson | 19 lines, 1781 bytes, `sha256:f77b3cf9…` |
 
 | [`devnotes-part43.md`](docs/history/stitchcad-devnotes-part43.md) | source gaps and keyword roles | 15 lines, 1397 bytes, `sha256:3d7763a5…` |
+
+| [`devnotes-part44.md`](docs/history/stitchcad-devnotes-part44.md) | exact arithmetic results | 17 lines, 1562 bytes, `sha256:a378e4ad…` |

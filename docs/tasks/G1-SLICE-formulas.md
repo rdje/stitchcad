@@ -402,3 +402,49 @@ Current work remains in the parent.
   committed bytes. Live 11 open/71 sealed, G1 5/18, next .3b.3; D70 pending.
 
 Current work remains in the parent.
+
+## Angular contract and evidence — preserved from 1c95ea4
+
+- ID: `G1-SLICE.5a.3b.3a.1`
+  Status: `done`
+  Goal: repair D85 direction truncation, D86 microdegree/radian scaling and D87 exact tan pole refusal.
+  Pre-code protocol: units 1.2/formula 4.2 and grammar 6/6.1 require microdegree inputs, nearest internal
+  quantum for irrational results, normalized dir, and typed refusal outside a mathematical domain.
+  Actual diagnostic: arc_length(360 deg,1 um) → 6283185, not rounded6; dir((0,0),(1,6)) → 80537677,
+  nearest80537678. Trig source treats to_true(angle) as degrees though it returns microdegrees; dir
+  normalizes int(Decimal) without rnd. tan odd-quarter turns are undefined, independent of rounding.
+  Shared exact microdegree-to-radian helper divides by 180*1000000 before applying pi; no change to
+  arithmetic internal units or modulo sweep. Round dir before normalization; refuse exact rational
+  tan poles using microdegree modulo180deg, with formula_domain quantity/operation context.
+  Own independently expected quarter/half/full/signed/multi-turn and fractional angle controls,
+  Decimal precision/model scope, dir/atan2 agreement, preserved arithmetic/literal contracts and actual
+  guard mutations/exact restoration. Clarify tan domain in grammar, details only in expert annex.
+  D84 director ruling preserves formula sign/turns; .3c owns verification. D83 width/domains stay pending.
+  Verify focused reference/language/book/recording/doctrines; commit before rational-bound repair.
+  Verification: 42 rows/72 controls, independent math42, seven actual reds/exact restore; focused gates green.
+  Commit: `STITCHCAD-G1-0044` (this recording commit).
+
+### `G1-SLICE.5a.3b.3a.1` — reference angular conversion and domain guards
+
+- [x] **REPRODUCE / ISSUE** — literal_diagnostic.py → full-turn radius1 arc6283185, sin90=0,
+  cos90=1000000, dir80537677 vs nearest80537678, tan90/-90/270=0, rc=0 observations. New angle
+  contract → sin30 result assertion failure, rc=1. D84 storage conflict is logged/asked, not inferred.
+- [x] **ROOT CAUSE (WHY + WHERE)** — git show 3704b8a → two pi/180 paths over internal microdegrees,
+  to_true only rescales ratio; dir passes Decimal to norm_angle's int truncation, no tangent pole guard;
+  source signatures verified, rc=0. Direct post-fix sweep vs normalized-binding model →6 vs0 proves D84.
+- [x] **FIX** — shared direct microdegree/radian conversion preserves sign/turn/fraction; round dir
+  before normalization; exact rational odd-quarter pole guard uses stable formula_domain. No binding
+  modulo choice, new product API, geometry solver or changed scalar/rational cap.
+- [x] **ADDRESSED (verified)** — angle_contract.py →42 rows/72 controls/0 fail, rc=0; independent
+  angle_math_oracle.py →42 defined curated rows agree, rc=0. run_angle_mutations.sh →seven actual
+  assertion reds/rc=1 each, exact restoration, runner rc=0. Diagnostic now returns6/1000000/0/
+  80537678 and typed poles, rc=0. D85/D86/D87 seal unchanged; D84 verification/D83 guards remain owned.
+- [x] **NO REGRESSION** — restored structural/input/literal/arithmetic/angle controls green, rc=0;
+  language15/publication9 pass, rc=0; warning-free book48 chapters/16 APIs,998 source/1521 rendered
+  links. Ledger9/archive verify/retention pass, rc=0;109 records/267226 resident
+  bytes. Tree10/13/eight/zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16/zero
+  unowned, fixture20/four/five/zero mismatch pass, rc=0. Exact predecessor preservation and12/74
+  defect census verified; independent math42 agrees. Staged make gate after bounded ruling records: all doctrines green, rc=0. No Rust changed; no new native/WASM/remote-CI verdict implied.
+- [x] **LOCKSTEP** — tan domain/annex/director angle ruling and live pointers match; learner,
+  glossary/index routes unchanged. Exact predecessor arithmetic/decisions/journals/oldest payloads
+  retained without cap growth. Live12 open/74 sealed, G1 5/18; next.3a.2, D84 verification/D70 ruling pending.

@@ -425,9 +425,12 @@ class Evaluator:
                 unit = self.take()[1]
             if unit is None:
                 if "." in text:
+                    self.see(from_true("ratio", value), "literal ratio conversion")
                     return ("lit", "ratio", Fraction(rnd(from_true("ratio", value))))
+                self.see(value, "literal count")
                 return ("lit", "count", value)
             ukind, factor = self.units[unit]
+            self.see(value * factor, "literal %s conversion" % ukind)
             return ("lit", ukind, Fraction(rnd(value * factor)))
         if kind == "id":
             self._identifier(text)
@@ -471,10 +474,15 @@ class Evaluator:
             raise FErr("formula_domain", "conditional depth is %d, the limit is %d"
                        % (depth, self.limits["max_if_depth"]))
 
-    def see(self, fr):
+    def see(self, fr, operation="value"):
+        """Measure and refuse reduced VALUE width, never an unreduced arithmetic temporary."""
         fr = Fraction(fr)
-        self.max_bits = max(self.max_bits, abs(fr.numerator).bit_length(),
-                            abs(fr.denominator).bit_length())
+        bits = max(abs(fr.numerator).bit_length(), fr.denominator.bit_length())
+        self.max_bits = max(self.max_bits, bits)
+        bound = self.limits["max_rational_bits"]
+        if bits > bound:
+            raise FErr("formula_domain", "%s: rational max_rational_bits=%d, measured=%d"
+                       % (operation, bound, bits))
 
     # -- static kind inference --
     def infer(self, node, env):
@@ -571,6 +579,12 @@ class Evaluator:
 
     # -- evaluation --
     def evaluate(self, node, env):
+        value = self._evaluate(node, env)
+        if value.kind in ARITH:
+            self.see(value.v, "%s %s result" % (node[0], value.kind))
+        return value
+
+    def _evaluate(self, node, env):
         tag = node[0]
         if tag == "lit": return Val(node[1], node[2])
         if tag == "name": return self.value_of_name(node[1], env)
@@ -581,7 +595,6 @@ class Evaluator:
             v = self.evaluate(node[1], env)
             res = self.infer(node, env)
             exact = to_true(v.kind, v.v) ** 2
-            self.see(exact)
             return Val(res, from_true(res, exact))
         if tag == "cmp":
             a = self.evaluate(node[2], env); b = self.evaluate(node[3], env)
@@ -596,11 +609,9 @@ class Evaluator:
             if op == "-": return Val(res, a.v - b.v)
             ta, tb = to_true(a.kind, a.v), to_true(b.kind, b.v)
             if op == "*":
-                self.see(ta * tb)
                 return Val(res, from_true(res, ta * tb))
             if tb == 0:
                 raise FErr("formula_division", "the divisor is zero")
-            self.see(ta / tb)
             return Val(res, from_true(res, ta / tb))
         if tag == "if":
             c = self.evaluate(node[1], env)
@@ -645,7 +656,7 @@ class Evaluator:
             return self.evaluate(("if", args[0], args[1], args[2]), env)
         if name == "within":
             a = self.evaluate(args[0], env); b = self.evaluate(args[1], env)
-            tol = self.value_of_name(args[2][1], env)
+            tol = self.evaluate(args[2], env)
             return Val("boolean", Fraction(1 if abs(a.v - b.v) <= tol.v else 0))
         if name in ("min", "max"):
             vs = [self.evaluate(a, env) for a in args]
@@ -738,7 +749,6 @@ class Evaluator:
             if name in env and env[name].get("origin") == "recipe":
                 raise FErr("formula_rebinding", "`%s` is bound twice in one recipe" % name)
             val = self.evaluate(node, env)
-            self.see(val.v if not isinstance(val.v, tuple) else val.v[0])
             return ("let", name, kind, val, node)
         if head == "assert":
             self.take()
@@ -756,13 +766,11 @@ class Evaluator:
             if kl != kr:
                 raise FErr("formula_dimension", "an assert compares %s with %s" % (kl, kr))
             a = self.evaluate(l, env); b = self.evaluate(r, env)
-            tol = self.value_of_name(tol_name, env)
-            self.see(a.v); self.see(b.v)
+            tol = self.evaluate(("name", tol_name), env)
             return ("assert", name, abs(a.v - b.v) <= tol.v, a, b)
         node = self.parse(src)
         self.infer(node, env)
         val = self.evaluate(node, env)
-        self.see(val.v if not isinstance(val.v, tuple) else val.v[0])
         return ("expr", None, val.kind, val, node)
 
     def _want(self, kind):

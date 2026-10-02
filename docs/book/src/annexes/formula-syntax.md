@@ -233,7 +233,7 @@ bash docs/tasks/artifacts/formula_structure/run_literal_mutations.sh
 python3 -I -B docs/tasks/artifacts/formula_structure/literal_diagnostic.py
 ```
 
-Sixty explicit rows and 360 controls check all unit factors, below/at/above ties, zeroes, leading
+Sixty explicit rows and 361 controls check all unit factors, below/at/above ties, zeroes, leading
 zeroes, decimal precision, kind-preserving respellings, sign symmetry and sums of converted inputs.
 An independent standard-library Decimal oracle checks every explicit row. Six actual reference
 mutations require assertion failures and exact source restoration; run that command alone.
@@ -307,3 +307,29 @@ D84 remains owned by G1-SLICE.5a.3b.3c for binding/equality controls and inverse
 the reference still normalizes atan/atan2 outputs, and the current 42-row evidence describes that
 behavior, not completed signed inverse-trig semantics. Product numeric binding/evaluation is pending.
 D83 rational/scalar guards continue independently under .3b.3a/.3b.
+
+## Reference rational-value boundaries
+
+The D83 width repair refuses reduced exact numerators or denominators wider than 128 bits with
+`formula_domain`, naming the operation, `max_rational_bits=128` and the measured width. Converted
+literal input is checked before quantum rounding: a tiny fraction must not disappear into zero and
+hide an oversized denominator. A long spelling that reduces exactly to zero or one remains legal.
+Each completed numeric expression result is checked in its kind's internal units. A later cancellation
+cannot rescue an oversized earlier sum. Raw cross-products and temporary true-unit scale conversions
+are not values under this bound; only the reduced result counts. Untaken branches are parsed and
+typed, but their arithmetic is not computed. Canonical literal conversion still checks their inputs.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_rational_mutations.sh
+```
+
+Sixty-one independent Fraction controls cover 127/128/129-bit boundaries, denominator width,
+converted input, signs, reduction, scale, selectors and lazy branches. Ten actual mutations require
+assertion failures and exact restoration; run alone. The earlier literal/arithmetic/angle six/nine/
+seven mutation controls also pass. Angle tests require the exact pole reason: an unrelated rational
+refusal cannot count as evidence for a missing mathematical-domain guard (D88).
+
+This closes only D83's width portion. Scalar domains and signed i64 storage bounds remain owned by
+G1-SLICE.5a.3b.3b; D84 signed-angle verification remains .3c. Product numeric normalization and
+full evaluation are still pending. The curated transcendental reference is not a production certificate.

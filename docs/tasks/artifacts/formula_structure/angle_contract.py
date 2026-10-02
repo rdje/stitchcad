@@ -53,6 +53,8 @@ for source in ['tan(90 deg)', 'tan(-90 deg)', 'tan(270 deg)', 'tan(450 deg)',
     except Exception as refused:
         error = refused
     assert isinstance(error, namespace['FErr']) and error.token == 'formula_domain', ('angular domain', source, error)
+    reason = 'atan2(0, 0) has no direction' if source.startswith('atan2') else 'tan: angle is an exact odd-quarter-turn pole'
+    assert error.msg == reason, ('angular domain reason', source, error)
     checks += 1
 # Poles are exact microdegree residues; a representable neighbor is a finite ratio, not a pole.
 for source in ['tan(89.999999 deg)', 'tan(90.000001 deg)']:
