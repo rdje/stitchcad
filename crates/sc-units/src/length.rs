@@ -8,10 +8,9 @@ use crate::unit::Unit;
 
 /// The declared domain limit for a coordinate or a length: 10⁹ µm = 1 km (spec §1.1).
 ///
-/// Garment geometry lives inside three metres. The limit is a thousand times larger than any real
-/// pattern and a thousand times smaller than what the integer type could hold, so that intermediate
-/// arithmetic (products, offsets, sums) cannot overflow *and* a value that reaches it means a
-/// unit-conversion bug rather than a garment.
+/// The limit deliberately exceeds the garment envelope and stays far below the integer boundary.
+/// Intermediate arithmetic is checked separately. An out-of-domain value requires diagnosis; its
+/// magnitude alone does not establish its cause.
 pub const MAX_LENGTH_UM: i64 = 1_000_000_000;
 
 /// The declared domain limit for an area: 10¹⁸ µm² = 1 km² (spec §1.1).
@@ -38,8 +37,17 @@ impl Length {
     ///
     /// Returns [`UnitError::DomainExceeded`] when the count is outside the declared domain.
     pub const fn from_micrometres(micrometres: i64) -> Result<Self, UnitError> {
+        Self::from_micrometres_for(micrometres, "Length::from_micrometres")
+    }
+
+    /// Checked internal construction with the calling operation's diagnostic context.
+    pub(crate) const fn from_micrometres_for(
+        micrometres: i64,
+        operation: &'static str,
+    ) -> Result<Self, UnitError> {
         if micrometres > MAX_LENGTH_UM || micrometres < -MAX_LENGTH_UM {
             return Err(UnitError::DomainExceeded {
+                operation,
                 kind: "length",
                 value: micrometres as i128,
                 limit: MAX_LENGTH_UM as i128,
@@ -61,7 +69,7 @@ impl Length {
     /// outside the declared domain.
     pub fn from_rational(numerator: i64, denominator: i64, unit: Unit) -> Result<Self, UnitError> {
         let um = unit.to_micrometres(numerator, denominator)?;
-        Self::from_micrometres(um)
+        Self::from_micrometres_for(um, "Length::from_rational")
     }
 
     /// The internal micrometre count.
@@ -116,7 +124,7 @@ impl Length {
         let scaled = value * per_unit;
         #[allow(clippy::cast_possible_truncation)] // rounded, then domain-checked below
         let um = scaled.round() as i64;
-        Self::from_micrometres(um)
+        Self::from_micrometres_for(um, "Length::from_f64_in")
     }
 
     /// The absolute value.
@@ -157,7 +165,7 @@ impl Length {
         let truncated = i64::try_from(sum).map_err(|_| UnitError::Overflow {
             operation: "Length::checked_add",
         })?;
-        Self::from_micrometres(truncated)
+        Self::from_micrometres_for(truncated, "Length::checked_add")
     }
 
     /// Subtracts `other` from `self`.
@@ -170,7 +178,7 @@ impl Length {
         let truncated = i64::try_from(diff).map_err(|_| UnitError::Overflow {
             operation: "Length::checked_sub",
         })?;
-        Self::from_micrometres(truncated)
+        Self::from_micrometres_for(truncated, "Length::checked_sub")
     }
 
     /// Scales a length by an integer factor, as grading and multiplicity do.
@@ -183,7 +191,7 @@ impl Length {
         let truncated = i64::try_from(product).map_err(|_| UnitError::Overflow {
             operation: "Length::checked_mul_i64",
         })?;
-        Self::from_micrometres(truncated)
+        Self::from_micrometres_for(truncated, "Length::checked_mul_i64")
     }
 
     /// Divides a length by an integer divisor, rounding half away from zero.
@@ -200,7 +208,7 @@ impl Length {
         }
         let um =
             crate::round::div_round_half_away_from_zero(i128::from(self.0), i128::from(divisor))?;
-        Self::from_micrometres(um)
+        Self::from_micrometres_for(um, "Length::checked_div_i64")
     }
 
     /// The area of a rectangle with these two sides.
@@ -209,7 +217,10 @@ impl Length {
     ///
     /// Returns [`UnitError::DomainExceeded`] when the product leaves the declared area domain.
     pub fn checked_area(self, other: Self) -> Result<Area, UnitError> {
-        Area::from_square_micrometres(i128::from(self.0) * i128::from(other.0))
+        Area::from_square_micrometres_for(
+            i128::from(self.0) * i128::from(other.0),
+            "Length::checked_area",
+        )
     }
 
     /// Whether two lengths that should be identical by construction differ by no more than
@@ -247,8 +258,16 @@ impl Area {
     ///
     /// Returns [`UnitError::DomainExceeded`] when the value is outside [`MAX_AREA_UM2`].
     pub fn from_square_micrometres(value: i128) -> Result<Self, UnitError> {
+        Self::from_square_micrometres_for(value, "Area::from_square_micrometres")
+    }
+
+    fn from_square_micrometres_for(
+        value: i128,
+        operation: &'static str,
+    ) -> Result<Self, UnitError> {
         if value > i128::from(MAX_AREA_UM2) || value < i128::from(-MAX_AREA_UM2) {
             return Err(UnitError::DomainExceeded {
+                operation,
                 kind: "area",
                 value,
                 limit: i128::from(MAX_AREA_UM2),

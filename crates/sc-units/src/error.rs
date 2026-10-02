@@ -11,12 +11,14 @@ use core::fmt;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum UnitError {
     /// A value lies outside the declared domain (§1.1 of the spec), which is deliberately far
-    /// tighter than the integer type: garment geometry lives inside three metres, so a kilometre
-    /// means a unit-conversion bug and is reported at the operation that produced it.
+    /// tighter than the integer type. The diagnostic retains the producing operation and the
+    /// declared boundary without inferring why the value is invalid.
     DomainExceeded {
+        /// The operation that produced the out-of-domain value.
+        operation: &'static str,
         /// What was being measured, for the diagnostic ("length", "area", "angle").
         kind: &'static str,
-        /// The offending magnitude, in the quantity's internal unit, widened so the report cannot
+        /// The offending signed value, in the quantity's internal unit, widened so the report cannot
         /// itself overflow.
         value: i128,
         /// The declared limit for that quantity.
@@ -46,11 +48,9 @@ pub enum UnitError {
 impl fmt::Display for UnitError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
-            Self::DomainExceeded { kind, value, limit } => write!(
+            Self::DomainExceeded { operation, kind, value, limit } => write!(
                 f,
-                "{kind} {value} exceeds the declared domain limit {limit} (see the units and \
-                 tolerances specification, §1.1); this is reported rather than clamped because a \
-                 value this large means a unit-conversion bug, not a garment"
+                "{operation}: {kind} {value} is outside the declared domain (limit {limit})"
             ),
             Self::DivisionByZero { operation } => {
                 write!(f, "{operation} divided by zero")

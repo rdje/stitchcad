@@ -501,3 +501,49 @@ Current work remains in the parent.
 - [x] **LOCKSTEP** — reference input/result rational bounds and partial scalar/signed-angle status
   match book/live/task records. Glossary/index/learner routes retained; predecessor angular contract/
   checklist/journal and oldest history preserve exact bytes. G1 5/18; live12/75; next scalar .3b.
+
+## Length operator contract and evidence — preserved from f432d68
+
+- ID: `G1-SLICE.5a.3b.3b.1a`
+  Status: `done`
+  Goal: close D89: every public Length + and - preserves the constructor’s ±MAX_LENGTH_UM invariant.
+  Pre-code protocol: units1.1/9 and private Length fields require checked, non-saturating results.
+  Trait Output becomes Result<Length,UnitError>; delegate to existing checked_add/checked_sub instead
+  of constructing Self. UnitError shape is unchanged here; .1b owns missing operation context D90.
+  Public tests first reproduce actual old-operator values, then verify inclusive endpoints, signed
+  crossings, zero/cancellation/ordinary values, refusal identity and no unwinding. Curated independent
+  i128 pair oracle decides expected sum/difference, never a second Length implementation. Real source
+  mutations must compile and fail assertions, restore bytes; no probe/build overlap during mutation.
+  Update crate docs with ? migration and the book’s exact public contract/proof boundary. Update
+  live/task records, preserve completed reference history/ledgers unchanged; strict Rust/release/WASM,
+  focused publication/censuses/recording gates before commit. No formula evaluator/MCP signoff.
+  Verification: four public contracts/six compiled reds/exact restore; strict native480/release4/WASM green.
+  Commit: `STITCHCAD-G1-0046` (this recording commit).
+
+### `G1-SLICE.5a.3b.3b.1a` — fallible public length operators
+
+- [x] **REPRODUCE / ISSUE** — cargo test --test length_operator_contract against predecessor →three
+  public assertion failures, rc=101: valid operands return1000000001 and±2000000000 instead of typed
+  domain refusal. Output names failed addition/subtraction/independent pair contracts, no compile error.
+- [x] **ROOT CAUSE (WHY + WHERE)** — length.rs Add/Sub directly construct Self from raw arithmetic,
+  while checked_add/sub call the bounded constructor. git show b8ed62d source assertions → unchecked
+  operator construction/bounded checked methods verified, rc=0. Private field did not close the
+  invariant. D90 error shape omits operation; D91 valid-Rust L6b false refusal →13 pass/2 fail, rc=1.
+  Both have scheduled owners; explicit Rust fences unblock publication without claiming classifier repair.
+- [x] **FIX** — public traits return Result<Length,UnitError> through checked_add/sub; migrate crate
+  doctest to ?, document breaking result handling. No clamp, panic or inferred caller precondition;
+  no UnitError shape change here. D90 is scheduled immediately next; scalar reference remains later.
+- [x] **ADDRESSED (verified)** — public length_operator_contract →four tests pass, rc=0; nine-by-nine
+  i128 oracle agrees on both operations/inclusive/signed/ordinary routes; explicit Result output.
+  run_length_operator_mutations.sh →six compiled actual assertion reds/rc101 each, runner rc=0,
+  production source restored byte-identically. Release four pass, rc=0; predecessor D89 seals unchanged.
+- [x] **NO REGRESSION** — restored make check →fmt/clippy strict/native480 incl docs pass, rc=0;
+  make wasm →sc-units/core/measure build browser target, rc=0. Restored structural and language15,
+  publication9/ledger9/archive verify/retention green, rc=0:48 chapters/16 APIs/998 source/1523 rendered
+  links;115 records/277423 resident bytes. Tree10/13/eight/zero gaps, glossary310/nine/158, feature105/29,
+  uncertainty133/16/zero unowned, fixture20/four/five/zero mismatch pass, rc=0. Exact predecessor
+  preservation/live14/sealed76/no overlap verified. Staged make gate: all doctrines green, rc=0; no remote-CI
+  or full release claim.
+- [x] **LOCKSTEP** — public Result migration and pending D90 context are explicit in expert units/
+  status; current/next tasks and live pointers match. Predecessor rational protocol/checklist/journal
+  and oldest ledgers retain exact bytes. G1 remains5/18; sc-units35, live14/76; next .3b.1b.

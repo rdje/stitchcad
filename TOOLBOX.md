@@ -168,5 +168,12 @@ removed guards. Scalar limits/i64 and signed-angle verification remain pending; 
 Public length operators: `cargo test -p sc-units --test length_operator_contract` checks four contracts
 with a nine-by-nine i128 oracle, inclusive endpoints, signed crossings and explicit Result typing.
 `bash docs/tasks/artifacts/formula_structure/run_length_operator_mutations.sh` requires six compiled
-production bypass/operation/saturation assertion reds and exact source restoration; run alone. D90
-operation context remains next; these primitive checks certify no formula evaluation or release.
+production bypass/operation/saturation assertion reds and exact source restoration; run alone.
+These primitive checks certify no formula evaluation or release.
+
+Domain context: `cargo test -p sc-units --test domain_context_contract` verifies five public typed/
+rendered direct/forwarded refusal contracts. `cargo test -p sc-core --lib domain_context_contracts`
+verifies three private totality guards; invalid arms are unreachable through validated journals.
+`bash docs/tasks/artifacts/formula_structure/run_domain_context_mutations.sh` requires fourteen
+compiled context/rendering assertion reds and exact multi-source restoration; run alone. Operation
+labels and neutral wording preserve numeric payloads; no external geometry or MCP proof is claimed.

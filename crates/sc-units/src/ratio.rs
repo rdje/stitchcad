@@ -92,7 +92,7 @@ impl Ratio {
         let n = i128::from(length.as_micrometres()) * i128::from(self.0);
         let d = i128::from(PPM_UNITY);
         let um = crate::round::div_round_half_away_from_zero(n, d)?;
-        Length::from_micrometres(um)
+        Length::from_micrometres_for(um, "Ratio::scale")
     }
 }
 

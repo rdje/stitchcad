@@ -37,9 +37,9 @@ arithmetic (products, sums, offsets) cannot overflow:
 | a piece bounding box | ≤ 10⁷ µm per side | 10 m |
 
 A value outside the declared domain is a **typed error** naming the quantity and the operation, never a
-silent clamp, wrap or saturation. Garment geometry lives inside three metres; a coordinate of one
-kilometre means a unit-conversion bug, and the domain limit exists so that bug is reported at the
-operation that produced it.
+silent clamp, wrap or saturation. The boundary deliberately exceeds the garment envelope. A
+unit-conversion error can produce an out-of-domain value, but magnitude alone cannot establish its
+cause; diagnostics report the actual operation, signed value and declared limit.
 
 ### 1.2 Angles: fixed-point microdegrees
 
@@ -156,7 +156,7 @@ geometry, physical acceptance and release proofs.
 | `checked_add` | Length method | Exact addition with domain refusal |
 | `checked_sub` | Length method | Exact subtraction with domain refusal |
 | `Result` | Rust return type | A valid Length or a typed UnitError; caller handles both |
-| `DomainExceeded` | UnitError variant | Kind, measured value and declared limit; operation context remains D90 |
+| `DomainExceeded` | UnitError variant | Operation, kind, signed value and declared limit |
 
 `Length + Length` and `Length - Length` return `Result<Length, UnitError>`, delegating to
 `checked_add` and `checked_sub`. Valid operands can still produce a sum or difference outside ±1 km;
@@ -195,9 +195,49 @@ bash docs/tasks/artifacts/formula_structure/run_length_operator_mutations.sh
 Four public contracts include a nine-by-nine independent i128 pair oracle and explicit Result typing.
 Six compiled production mutations prove domain, operation and saturation discrimination with assertion
 failures and exact restoration; run alone. Strict native/release and three-library WASM checks are
-separate from formula evaluation, geometry and release proof. D90 operation context in the typed/
-rendered domain error remains owned immediately next by G1-SLICE.5a.3b.3b.1b; this repair certifies
-domain closure, not that remaining diagnostic requirement.
+separate from formula evaluation, geometry and release proof. Operation context now follows §2.5.
+
+### 2.5 Domain diagnostics retain the producing operation
+
+A domain refusal carries the actual operation, quantity kind, signed offending value and declared
+limit. Direct constructors name themselves; rational/float input and checked arithmetic preserve the
+calling operation through private checked construction. Public addition/subtraction use the checked
+method's name. Ratio scaling identifies its own operation. Numeric limits and rounding are unchanged.
+
+```rust
+use sc_units::{Length, UnitError, MAX_LENGTH_UM};
+
+let maximum = Length::from_micrometres(MAX_LENGTH_UM)?;
+let error = maximum.checked_add(maximum).expect_err("two kilometres exceed the length domain");
+assert_eq!(error, UnitError::DomainExceeded {
+    operation: "Length::checked_add", kind: "length",
+    value: 2_000_000_000, limit: 1_000_000_000,
+});
+assert_eq!(error.to_string(),
+    "Length::checked_add: length 2000000000 is outside the declared domain (limit 1000000000)");
+# Ok::<(), UnitError>(())
+```
+
+For migration, exhaustive variant construction/matching must include the new operation field;
+readers that only need a subset can retain Rust's remaining-fields pattern. Display wording reports
+“outside the declared domain,” which also covers signed failures and a zero positive-range width.
+It does not infer a conversion bug or claim every invalid value exceeds an upper limit. Other error
+variants retain their existing labels and wording.
+
+```bash
+cargo test -p sc-units --test domain_context_contract
+cargo test --release -p sc-units --test domain_context_contract
+cargo test -p sc-core --lib domain_context_contracts
+bash docs/tasks/artifacts/formula_structure/run_domain_context_mutations.sh
+```
+
+Five public contracts verify direct/forwarded typed and rendered errors, signed endpoints and unchanged
+non-domain failures. Three private core guards verify parameter/range bridge context. Those invalid
+arms are unreachable through validated identity journals; direct guard tests certify totality, not
+external geometry behavior. Fourteen actual compiled mutations fail assertions and restore source
+bytes; run alone. Division and area-product domain failures cannot occur for valid bounded Length
+operands, so their caller labels are wired without claiming an impossible public failing example.
+This closes D90/D92, separate from a formula evaluator, command bus, MCP server or release signoff.
 
 ## 3. The five tolerance classes
 

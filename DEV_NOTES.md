@@ -3,6 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — domain diagnostics need context without an invented cause
+
+- D90's public DomainExceeded variant lacked operation; forwarded Length construction reused the
+  base constructor, losing the caller. D92's generic display claimed every invalid value exceeds an
+  upper limit and proves a conversion bug, including a zero positive-range width and negative length.
+- Add a static operation field and one private checked-construction path per quantity; forward actual
+  caller labels without duplicating guards or changing numeric data. Core resolve/range bridges name
+  their public operation. Render neutral outside-domain wording; do not infer a cause from magnitude.
+- Actual predecessor public calls produce two assertion failures. Five public tests verify typed and
+  rendered direct/forwarded signed refusals, inclusive endpoints and unchanged non-domain behavior;
+  three private core tests verify unreachable-invalid totality guards without a geometry certificate.
+- Fourteen actual context/rendering mutations compile and fail assertions, restoring every source
+  byte. D89's six compiled operator reds still discriminate. Strict native488 including docs,
+  release5 and three-crate WASM pass. Division/area domain failures cannot occur for valid Length
+  operands; those caller labels are wired without a fabricated public error reproduction.
+- Book migration/examples match code. Earlier task evidence and oldest ledgers preserve exact bytes.
+  D91 context classifier remains next;
+  D83/D84 remain owned. No formula evaluator, command bus, MCP or production-release claim.
+- promotion: declined (routine completion of the existing typed-error and truthful-diagnostic contract).
+
 ## _(2026-10-02)_ — public operators must close the constructor invariant
 
 - D89 review found Length’s Add/Sub directly construct Self from raw integer sums/differences. Valid
@@ -77,24 +97,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   still curated scope, not complete exact-arithmetic or arbitrary-input production verification.
 - Completed rounding evidence and oldest live payloads preserve committed predecessor text.
 - promotion: declined (routine reference repair; literal conversion/canonical identity policy unchanged).
-
-## _(2026-10-02)_ — signed reconstruction must follow checked magnitude narrowing
-
-- D78's sole introducing round.rs revision is eb83f01 (G0-CONTRACT.18). The public diagnostic
-  proves i128 MIN/1 unwinds while other wide sign cases return Overflow and controls pass.
-  An unsigned quotient 2^127 was cast to i128 MIN and then negated before checked i64 narrowing.
-- Preserve the quotient/remainder rounding rule. Allow the negative i64 endpoint explicitly, then
-  checked-convert every other unsigned magnitude to i64 before sign reconstruction. No negation can
-  overflow that proven nonnegative range; denominator zero retains its existing diagnostic.
-- Four public contracts, 36 arbitrary-precision Fraction oracle rows and five actual guard assertion
-  reds verify signs/endpoints/ties/zero; exact restoration, strict 476 tests, release four and WASM pass.
-  Debug/release public behavior now agrees; no customer scalar is added to error payloads.
-- D79 is separate reference debt: sub-quantum unit literals retain fractions while L1 canonical
-  display rounds them. A pair of 0.4 um literals binds 1, but their canonical-zero respelling binds 0.
-  Own .5a.3b next before using that oracle for normalization; retain the book instrument's honest scope.
-- Completed AST protocol/checklist and oldest ledger/lesson payloads preserve exact predecessor bytes.
-  Numeric details stay in the expert units annex; no evaluation/canonical product claim or cap change.
-- promotion: declined (routine totality repair; original fixed-point/rounding policy unchanged).
 
 # Sealed archive — earlier lessons
 
@@ -171,3 +173,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part44.md`](docs/history/stitchcad-devnotes-part44.md) | exact arithmetic results | 17 lines, 1562 bytes, `sha256:a378e4ad…` |
 
 | [`devnotes-part45.md`](docs/history/stitchcad-devnotes-part45.md) | semantic bounds and delimiter nesting | 19 lines, 1803 bytes, `sha256:c9686523…` |
+
+| [`devnotes-part46.md`](docs/history/stitchcad-devnotes-part46.md) | signed reconstruction lesson | 17 lines, 1562 bytes, `sha256:d00c7340…` |

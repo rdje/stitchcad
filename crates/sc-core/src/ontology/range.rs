@@ -298,6 +298,7 @@ fn repair(held: EdgeRange, affected: ResolvedRange, issue: RangeIssue) -> RangeP
 
 fn param(value: Rational) -> Result<Param, UnitError> {
     Param::new(value).map_err(|_| UnitError::DomainExceeded {
+        operation: "IdentityLedger::resolve_range",
         kind: "range parameter",
         value: i128::from(value.numerator()),
         limit: i128::from(value.denominator()),
@@ -313,6 +314,7 @@ fn mapped(
     let from = param(from)?;
     let to = param(to)?;
     let range = EdgeRange::new(edge, from, to).map_err(|_| UnitError::DomainExceeded {
+        operation: "IdentityLedger::resolve_range",
         kind: "positive range width",
         value: 0,
         limit: 1,
@@ -483,4 +485,37 @@ pub(crate) fn range_is_owned(
         }
         false
     })
+}
+
+#[cfg(test)]
+mod domain_context_contracts {
+    use super::*;
+    use crate::ontology::{EntityId, LocalTag};
+
+    #[test]
+    #[allow(clippy::expect_used)] // This exact rational is valid; only Param's narrower domain refuses it.
+    fn range_parameter_totality_guard_names_the_resolver() {
+        assert_eq!(
+            param(Rational::new(2, 1).expect("valid rational")).err(),
+            Some(UnitError::DomainExceeded {
+                operation: "IdentityLedger::resolve_range",
+                kind: "range parameter",
+                value: 2,
+                limit: 1,
+            })
+        );
+    }
+    #[test]
+    fn zero_range_width_totality_guard_names_the_resolver() {
+        let edge = EdgeRef::new(EntityId::from_bits(1), LocalTag::FIRST);
+        assert_eq!(
+            mapped(edge, Rational::ZERO, Rational::ZERO, Direction::Original).err(),
+            Some(UnitError::DomainExceeded {
+                operation: "IdentityLedger::resolve_range",
+                kind: "positive range width",
+                value: 0,
+                limit: 1,
+            })
+        );
+    }
 }

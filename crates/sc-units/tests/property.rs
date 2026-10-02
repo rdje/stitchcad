@@ -212,7 +212,13 @@ fn exact_conversions_have_no_drift() {
 fn out_of_domain_values_are_diagnostics() {
     let err = Length::from_micrometres(MAX_LENGTH_UM + 1).unwrap_err();
     match err {
-        UnitError::DomainExceeded { kind, value, limit } => {
+        UnitError::DomainExceeded {
+            operation,
+            kind,
+            value,
+            limit,
+        } => {
+            assert_eq!(operation, "Length::from_micrometres");
             assert_eq!(kind, "length");
             assert_eq!(value, i128::from(MAX_LENGTH_UM) + 1);
             assert_eq!(limit, i128::from(MAX_LENGTH_UM));
@@ -222,6 +228,7 @@ fn out_of_domain_values_are_diagnostics() {
     assert_eq!(
         Length::from_micrometres(-MAX_LENGTH_UM - 1).unwrap_err(),
         UnitError::DomainExceeded {
+            operation: "Length::from_micrometres",
             kind: "length",
             value: -i128::from(MAX_LENGTH_UM) - 1,
             limit: i128::from(MAX_LENGTH_UM),

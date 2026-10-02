@@ -84,6 +84,20 @@ the digests afterwards.
 
 | [`changelog-part42.md`](docs/history/stitchcad-changelog-part42.md) | STITCHCAD-G1-0025 | 10 lines, 880 bytes, `sha256:d8268d8b…` |
 
+| [`changelog-part43.md`](docs/history/stitchcad-changelog-part43.md) | STITCHCAD-G1-0026 | 13 lines, 1217 bytes, `sha256:30323afa…` |
+
+## STITCHCAD-G1-0047 - domain errors retain operation context (leaf `G1-SLICE.5a.3b.3b.1b`)
+
+D90 DomainExceeded now carries the actual producing operation across direct/forwarded constructors,
+checked arithmetic, Ratio scaling and core bridges. D92 display reports signed values and limits
+without inventing a conversion cause or false upper-bound relation; numeric limits are unchanged.
+Five public/three private guard contracts and fourteen actual compiled assertion reds verify context
+and truthful rendering; six D89 operator reds remain green as discriminators, with exact restoration.
+Strict native488 including docs, release5 and all three WASM libraries pass. Book API migration/proof
+boundaries and live/task records agree; earlier task evidence and oldest ledgers preserve exact bytes.
+G1 stays5/18; sc-units40; defects13 open/78 sealed. Next D91 .3b.1c, then D83 domains/i64 and D84;
+D70 axes decision remains pending. No evaluator, MCP, geometry or production-release certification.
+
 ## STITCHCAD-G1-0046 - public length operators preserve the domain (leaf `G1-SLICE.5a.3b.3b.1a`)
 
 D89 closes: Length + / - return Result using checked arithmetic, so valid operands cannot construct
@@ -375,17 +389,3 @@ Pushed bf29b03; Rust run 36921077740/job 110566989457 and doctrine run 369210777
 110566988221 completed success, every step successful. Metadata fields/current refusals match the
 ontology; source/physical/release proof stays deferred. Parent .4a.2 closes; G1 stays 5/18, next table
 .4a.3. Book/censuses/ledger/staged gates pass; .2b contract/checklist moves unchanged. No new seal.
-
-## STITCHCAD-G1-0026 - canonical measurement metadata and current records (leaf `G1-SLICE.4a.2b`)
-
-sc-measure adds immutable Measurement/Landmark/MeasurementProcedure with body/POM kind, entered unit,
-required named/documented records and stable references. Value/state/source borrow core declarations;
-current context refuses duplicate identity, missing targets, kind mismatch and reserved-input binding.
-Target queries prove their own reference; full validation covers all metadata. Source truth, physical
-repeatability, global Design registries and release proof retain later owners. Sixteen contracts plus
-three privacy docs pass; six real guard mutations fail. Strict Rust 325 tests, three-crate WASM/book,
-full 22 probes and staged gates pass. Runtime CI integration requires immediate push/observed .2c
-verdict. D66 fixes README/workspace status and seals in defects-part11; Hem/layer lessons seal unchanged
-in devnotes-part25. Completed token task records move unchanged. G1 stays 5/18, next .2c CI/signoff;
-archive reaches 64/64 files, so D65 must precede any further required seal. D67 owns the promotion
-verifier's unrelated historical-decline weakness; fresh token/metadata retrieval questions are added.

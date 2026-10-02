@@ -30,9 +30,10 @@ fn sub(a: Length, b: Length) -> Result<Length, UnitError> {
 fn length(value: i64) -> Length {
     Length::from_micrometres(value).expect("fixture length is inside the declared domain")
 }
-fn expected(value: i128) -> Result<i128, UnitError> {
+fn expected(value: i128, operation: &'static str) -> Result<i128, UnitError> {
     if value.abs() > i128::from(MAX_LENGTH_UM) {
         Err(UnitError::DomainExceeded {
+            operation,
             kind: "length",
             value,
             limit: i128::from(MAX_LENGTH_UM),
@@ -51,7 +52,7 @@ fn signed_addition_crossings_refuse_instead_of_constructing_invalid_lengths() {
     ] {
         assert_eq!(
             add(length(a), length(b)).map(|value| i128::from(value.as_micrometres())),
-            expected(i128::from(a) + i128::from(b)),
+            expected(i128::from(a) + i128::from(b), "Length::checked_add"),
             "add {a} {b}"
         );
     }
@@ -66,7 +67,7 @@ fn signed_subtraction_crossings_refuse_instead_of_constructing_invalid_lengths()
     ] {
         assert_eq!(
             sub(length(a), length(b)).map(|value| i128::from(value.as_micrometres())),
-            expected(i128::from(a) - i128::from(b)),
+            expected(i128::from(a) - i128::from(b), "Length::checked_sub"),
             "sub {a} {b}"
         );
     }
@@ -90,12 +91,12 @@ fn inclusive_endpoints_cancellation_zero_and_ordinary_values_match_wide_integer_
             let right = length(b);
             assert_eq!(
                 add(left, right).map(|value| i128::from(value.as_micrometres())),
-                expected(i128::from(a) + i128::from(b)),
+                expected(i128::from(a) + i128::from(b), "Length::checked_add"),
                 "add {a} {b}"
             );
             assert_eq!(
                 sub(left, right).map(|value| i128::from(value.as_micrometres())),
-                expected(i128::from(a) - i128::from(b)),
+                expected(i128::from(a) - i128::from(b), "Length::checked_sub"),
                 "sub {a} {b}"
             );
             assert_eq!(

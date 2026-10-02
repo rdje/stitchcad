@@ -1446,6 +1446,7 @@ impl IdentityLedger {
 /// total function needs a typed consequence, not a trust me.
 fn to_param(value: Rational) -> Result<Param, UnitError> {
     Param::new(value).map_err(|_| UnitError::DomainExceeded {
+        operation: "IdentityLedger::resolve",
         kind: "edge parameter",
         value: i128::from(value.numerator()),
         limit: i128::from(value.denominator()),
@@ -2309,5 +2310,24 @@ mod tests {
             .unwrap()
             .to_string()
             .contains("held by"));
+    }
+}
+
+#[cfg(test)]
+mod domain_context_contracts {
+    use super::*;
+
+    #[test]
+    #[allow(clippy::expect_used)] // This exact rational is valid; Param's domain is independently narrower.
+    fn edge_parameter_totality_guard_names_the_resolver() {
+        assert_eq!(
+            to_param(Rational::new(2, 1).expect("valid rational")).err(),
+            Some(UnitError::DomainExceeded {
+                operation: "IdentityLedger::resolve",
+                kind: "edge parameter",
+                value: 2,
+                limit: 1,
+            })
+        );
     }
 }

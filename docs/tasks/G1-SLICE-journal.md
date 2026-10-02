@@ -260,3 +260,26 @@ preserve completed rows and technical chronology. Current slice follows here.
 - `2026-10-02`: D83 rational widths refuse at exact input/result boundaries; D88 requires pole reason.
   Scalar domains .3b and signed-angle verification .3c remain pending; no product evaluator claim.
 - promotion: declined (routine enforcement of the existing reduced-rational limit; no new policy).
+
+## Length operator progress — preserved from f432d68
+
+## Verification Log
+
+[Historical rational journals](G1-SLICE-journal.md#rational-reference-progress--preserved-from-b8ed62d)
+preserve completed rows and technical chronology. Current slice follows here.
+
+| Date | Leaf | Checks | Result |
+| --- | --- | --- | --- |
+| `2026-10-02` | `.5a.3b.3b.1a` | public length4; six actual reds; restored strict/native/release/WASM; focused records | D89 operator domain repaired; D90 context next |
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3b.1a` | `STITCHCAD-G1-0046 (leaf G1-SLICE.5a.3b.3b.1a): public length operators preserve the domain` | public4/six actual reds; strict native/release/WASM and focused checks |
+
+## Changelog
+
+- `2026-10-02`: D89 public + / - return Result via checked methods; D90 operation context is owned next.
+  Reference scalar domains/i64 .3b.2/.3 and signed-angle .3c remain pending; no evaluator/release claim.
+- promotion: declined (routine closure of the existing numeric invariant; no new product policy).
