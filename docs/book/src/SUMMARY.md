@@ -26,6 +26,7 @@
     - [Size membership foundation](spec/size-membership.md)
     - [Garment chart observations](spec/size-chart-observations.md)
     - [Garment chart collections](spec/size-chart-collections.md)
+    - [Made-to-measure input charts](spec/mtm-input-charts.md)
     - [Executable closure intent](spec/ontology-closures.md)
   - [The formula language](spec/formula-language.md)
     - [Grammar, operators and functions](spec/formula-language/grammar.md)
@@ -43,3 +44,7 @@
 # Governance
 
 - [Governance model](governance.md)
+
+# Annexes
+
+- [Made-to-measure input contract](annexes/mtm-input-contract.md)

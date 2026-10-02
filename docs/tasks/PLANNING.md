@@ -437,6 +437,14 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
   - Decision requested: explicit axes for every range (including one-dimensional; recommended) versus
     allowing one-dimensional ranges to omit axes, with explicit axes required for multidimensional sets.
 
+- **D71** — the book landing page incorrectly reports G0-only status after G1 libraries landed.
+  - Reproduce: `rg -n 'project is in gate|G1 —|Product code' docs/book/src/introduction.md
+    LIVE_STATUS.md` shows the conflicting current-state statements; canonical sc-measure APIs exist.
+  - Impact: the reader mistakes implemented structural contracts for entirely future behavior.
+  - Owner: `G1-SLICE.4d.1`, next safe publication/alignment leaf after the MTM commit. Correct the
+    status with explicit implemented/deferred scope, verify against code/roadmap/live records, and
+    improve novice/expert navigation under the director's glossary/index/annex requirement.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

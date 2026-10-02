@@ -58,6 +58,22 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part29.md`](docs/history/stitchcad-changelog-part29.md) | STITCHCAD-G1-0012 | 15 lines, 1306 bytes, `sha256:88277bd5…` |
 
+| [`stitchcad-changelog-part30.md`](docs/history/stitchcad-changelog-part30.md) | STITCHCAD-G1-0013 | 14 lines, 1211 bytes, `sha256:7eb41b35…` |
+
+## STITCHCAD-G1-0035 - canonical MTM body/Ease inputs (leaf `G1-SLICE.4c.3c`)
+
+Immutable custom-member-of-one charts pin canonical Ease-set/table/mapping references. Current body
+and signed Ease declarations remain separate borrowed inputs with source/state; garment metadata is
+not a generated result. Unknown/derived values refuse numeric fallbacks. Complete validation requires
+all current Design garment POMs; selected queries do not certify other mappings, and grading refuses.
+
+Fifteen contracts/two privacy-role docs and twelve actual source mutation reds pass; strict Rust runs
+439 tests, with WASM/book and focused censuses/ledger/staged doctrines green. The main book chapter
+teaches a waist example and links detailed API/currentness/verification in an annex. Completed chart
+collection evidence and oldest history payloads retain exact predecessor bytes. D71 landing status is
+logged/owned; next .4d.1 applies the director's incremental book/glossary/index requirement. G1 remains
+5/18; D70 axes ruling pending; full SizeSet, geometry, app/MCP and release proofs remain later work.
+
 ## STITCHCAD-G1-0034 - exact current chart coverage (leaf `G1-SLICE.4c.3b`)
 
 Immutable garment charts bind explicit POM targets and canonical member observations. Draft validation
@@ -373,18 +389,3 @@ red; restored strict Rust, wasm, warning-free book, fixture/feature/glossary/tre
 staged doctrines pass. Construction objects now have safe owned child slices; a bounded construction
 book companion preserves examples and physical limits. No goldens change. G1 remains 4/18 top-level
 leaves, 3/4 object families; next `.3c.4a.2` implements tuck/pleat/gather intent.
-
-## STITCHCAD-G1-0013 - per-edge allowances retain width origin and symbolic target policy (leaf `G1-SLICE.3c.3c`)
-
-Immutable SeamAllowance descriptors retain whole owned source edges, authored width parameter/value
-or formula/profile declaration, explicit five-way corner intent and mandatory logical profile inclusion.
-Born references require full interval coverage and unique endpoints; symbolic widths/policies supply no
-values or defaults. Explicit zero is authored content; negative explicit width is a typed refusal.
-Offsets, error budgets and target policy resolution remain visibly G2/G4 obligations.
-
-Eight contracts + privacy doctest pass. Disabling ownership refusal makes the foreign-middle merge
-regression red despite live owned endpoints; restored strict Rust, wasm, warning-free book, fixture,
-feature/glossary censuses, ledger probes and staged gates pass. Earlier object checklists move unchanged
-to the existing evidence sibling before the parent reaches 1000 lines; every staged checklist passes.
-The oldest dev-note lesson seals to part13. No fixture golden changes. Marks/allowances closes;
-G1 remains 4/18 top-level leaves and advances to 3/4 object families. Next `.3c.4` constructions.

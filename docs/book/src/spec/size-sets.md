@@ -159,6 +159,9 @@ Both paths report against the **resolved** set, which is why the report names it
 
 ## 11. Made-to-measure is a size set of one
 
+[MTM input charts](mtm-input-charts.md) now implement current single-member body/Ease correspondence
+and explicit Design-POM coverage. Composite SizeSet and actual regeneration remain later work.
+
 An MTM instance is a `custom` size set with a single member, whose base is that member, whose chart comes
 from body measurements taken with landmarks and procedures (ontology §2.1), and whose breaks are empty — so
 path 2 is refused and path 1 is the only route. Nothing about this is a special case in the model, which is

@@ -3,6 +3,23 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — MTM charts preserve distinct body inputs and garment targets
+
+- A custom sole-member chart pins its canonical Ease-set reference snapshot, not numeric/fit/state
+  copies. Current sources, uncertainty and mapping intent are borrowed; retargeting requires explicit
+  chart replacement. Full coverage is measured against the current Design garment inventory.
+- Body, signed Ease amount and garment POM metadata remain different roles. Unknown/derived inputs
+  refuse numeric queries; a chart supplies no body-plus-Ease result and no grade-rule path. Structural
+  completeness does not establish numeric, physical, fit or release readiness.
+- Fifteen contracts/two privacy-role docs and twelve actual source guard/fallback mutations pass;
+  strict 439 tests/WASM/book and focused checks are green. A fixture initially expected an extra
+  terminal error source; exact typed wrappers correct it. Explicit fixture panic is replaced with a
+  typed assertion under the unchanged strict lint. Production diagnostics were already correct.
+- Main book prose introduces a waist example; API/currentness/verification moves to an annex. The
+  director's publication requirement is owned next by .4d.1, including D71's stale G0 landing status.
+  Completed .3b and oldest history payloads retain predecessor bytes; D70 axes remains pending.
+- promotion: declined (routine MTM contract; publication requirement stays owned for .4d.1 adoption).
+
 ## _(2026-10-02)_ — chart coverage is measured against the current Design inventory
 
 - A chart's explicit targets cannot certify their own completeness: full coverage requires every
@@ -102,24 +119,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   physical procedure repeatability remain separate proofs. Completed metadata review relocates unchanged.
 - promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s table section.
 
-## _(2026-10-01)_ — archive capacity and retrieval must be verified together
-
-- D65's 64-file limit blocks ordinary rollover despite a small decoded archive. One immutable
-  content-addressed window retains all 64 original full files; bounded manifests/catalog preserve
-  logical addresses. Copy/verify/use/source reconstruction precede exact working-copy retirement.
-- Python standard-library maintenance tool uses bounded decompression and safe in-memory record
-  reads, no tar extraction/network/old-Git dependency. Fresh same-volume target materialization
-  refuses symlinks, nested repositories and overwrite. Hook/CI checks committed window immutability.
-- Original per-part/aggregate bounds still govern decoded records; compressed resident history and
-  finite control/payload collections are counted independently. Compression cannot hide growth.
-- Existing ledger probes consume materialized logical records. D68: original coverage mutation
-  appended a declaration grep -m1 ignored and passed on unexempted D30. Replace the actual first
-  declaration in part2 and require exactly that refusal with D30's exemption retained.
-- Calibrated archive refusals, exact source reproof, strict Rust/WASM/book/full probes and staged
-  gates validate the transition. Post-commit probes 27/0 include committed-window mutation.
-  .19.2v observes ebed2c5 Rust/doctrine jobs and all steps successful, including Python prerequisite
-  and native/WASM. No source/physical/release truth is inferred from a digest.
-- promotion: promoted by `decision_history-windows-retain-self-contained-bytes.md`.
 
 
 # Sealed archive — earlier lessons
@@ -174,3 +173,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part31.md`](docs/history/stitchcad-devnotes-part31.md) | identifier grammar/binding lesson | 14 lines, 1283 bytes, `sha256:317f385a…` |
 
 | [`stitchcad-devnotes-part32.md`](docs/history/stitchcad-devnotes-part32.md) | canonical procedure metadata lesson | 20 lines, 1878 bytes, `sha256:d5d201dc…` |
+
+| [`stitchcad-devnotes-part33.md`](docs/history/stitchcad-devnotes-part33.md) | archive capacity/retrieval lesson | 18 lines, 1591 bytes, `sha256:aad7494a…` |

@@ -2,8 +2,8 @@
 
 G1-SLICE.4c.3b implements an immutable SizeChart over canonical [garment observations](size-chart-observations.md).
 The normative contract is [size sets §5](size-sets.md). Each authored cell names a stable member and
-logical Design POM. Axes, MTM body inputs, breaks, profile resolution and actual instantiation remain
-owned by later slices; a structurally complete garment chart is not yet a complete SizeSet.
+logical Design POM. [MTM body/Ease input charts](mtm-input-charts.md) are now executable. Axes, breaks, profile resolution
+and actual instantiation remain owned by later slices; a structurally complete garment chart is not yet a complete SizeSet.
 
 ## Targets and canonical observations
 

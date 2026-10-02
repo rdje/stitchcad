@@ -5,11 +5,11 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.4c.3c`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** implement typed MTM body/Ease chart correspondence for a custom member of one.
-  Garment observations/coverage .4c.3a/.3b are implemented; .3d breaks/composite and .3e review follow.
-  Axes .4c.2 awaits D70's director ruling; never infer an answer or default axes.
-  Profile resolution .4c.4 and full review .4c.5/.4d remain owned; physical/source/release proof later.
+- **Active tree:** `G1-SLICE`, frontier **`.4d.1`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** apply the director's book publication/alignment requirement: incremental newcomer
+  path, expert annexes, glossary/index; fix D71 stale G0-only landing status and verify current scope.
+  MTM body/Ease .4c.3c is implemented. Axes .4c.2 awaits D70; never infer or default a representation.
+  Breaks/composite .4c.3d and reviews/resolution .4c.3e/.4/.5/.4d.2 remain owned; later physical proof.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats
   require human acts; governance §8 and G3 `.16` own the details.

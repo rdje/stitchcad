@@ -98,10 +98,13 @@ impl<'a> EaseSetContext<'a> {
     pub const fn measurements(&self) -> &'a MeasurementTableContext<'a> {
         self.measurements
     }
-    fn contains(&self, id: EntityId) -> bool {
+    pub(crate) fn contains(&self, id: EntityId) -> bool {
         self.tables.contains_key(&id)
             || self.eases.contains_key(&id)
             || self.measurements.contains(id)
+    }
+    pub(crate) fn current_table(&self, id: EntityId) -> Option<&'a MeasurementTable> {
+        self.tables.get(&id).copied()
     }
 }
 /// Scoped ambiguity, current target or membership refusal; no missing mapping is defaulted.

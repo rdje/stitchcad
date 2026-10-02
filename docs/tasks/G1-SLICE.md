@@ -467,38 +467,39 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4c.3b`
   Status: `done`
-  Goal: canonical per-member/POM chart collection with unique observations and declared coverage,
-  current correspondence/table validation, explicit completeness errors and ordered-member lookup.
-  Pre-code protocol: SizeChartDefinition pins id, membership reference, Design table, ordered target
-  POM bindings and ordered SizeChartBinding entries. Bindings capture observation/reference/member/
-  table/measurement targets, never values/state/provenance copies. Context borrows canonical observations
-  and SizeChartContext; refuse duplicate/cross-kind ids. Current queries compare saved targets and
-  borrow the selected current observation, source/state and provenance; no peer or label substitution.
-  Construction/current validation permits incomplete drafts but checks every authored reference.
-  Completeness explicitly requires a nonempty target inventory equal to every current garment POM
-  in the Design table, plus exactly one observation for every member/POM cell. Validate the full named
-  Design table for this claim; omitted POMs cannot certify a deliberately narrowed chart as complete.
-  Refuse duplicate observation/POM/token/cell, undeclared POMs, wrong domains, stale refs or Design-table
-  mismatches. Selected member row returns observations in declared POM order; members retain membership
-  order. Selected queries do not certify unrelated rows. Unknown/derived values do not break structural
-  coverage but numeric queries refuse. Shared canonical measurement inputs need distinct member-pinned
-  observations/provenance; sharing one canonical observation across chart collections is explicit.
-  No interpolation, measurements inferred from labels, axis model, path readiness or physical proof.
-  Acceptance: draft/full coverage distinction, current targets/provenance, exact missing member/POM
-  errors, borrowed values, immutable replacement, shared inputs and identity/domain guards. Own book/
-  API/live docs, exact completed evidence relocation and normal history seals; real production mutations.
-  Verification: 18 contracts/privacy, 14 actual assertion reds; exact restore, strict 422 tests/WASM/
-  book, glossary/uncertainty/tree/feature/ledger and staged doctrines green. Draft/full boundaries explicit.
-  Commit: `STITCHCAD-G1-0034`
+  Goal: immutable current Design/member/POM garment-chart coverage; full contract/evidence preserved
+  in [measurement evidence](G1-SLICE-measurements.md#garment-chart-collection-evidence--preserved-from-e299771).
+  Verification: 18 contracts/privacy, fourteen real reds; 422 strict tests/WASM/book; staged doctrines.
+  Commit: `STITCHCAD-G1-0034` (`e299771`).
 
 - ID: `G1-SLICE.4c.3c`
-  Status: `pending`
+  Status: `done`
   Goal: typed MTM body-input chart correspondence for custom single-member ranges, current body/Ease
   mappings and provenance; preserve body versus garment observation distinction and path-1 semantics.
-  Acceptance: body never compared to garment as an unconverted POM; missing Ease/current source
-  mappings refuse; custom/member-of-one and body metadata required, path 2 remains refused.
-  Verification: `pending`
-  Commit: `pending`
+  Pre-code protocol: immutable MtmChartDefinition pins id, membership reference/member, expected
+  EaseSetDefinition (reference target snapshot: set/table ids and ordered mapping bindings only),
+  and chart correspondence provenance. MtmChartContext borrows membership/current Ease sets and
+  EaseSetContext; reject duplicate/cross-kind identities including set/member ids. Require Custom
+  membership of exactly one, with the authored member equal to its existing sole/base member.
+  Resolve the saved canonical set id and compare every expected set/table/ordered mapping target;
+  current fit/compression/provenance/source/state remain borrowed. Selected POM queries use current
+  EaseSet membership/target checks; body and signed amount declarations/values remain distinct from
+  garment metadata, with no body-as-POM result or automatic addition/evaluation. Unknown/derived
+  source drafts stay inspectable and numeric queries preserve their required observation/evaluation.
+  Constructor/current validation checks all authored mappings but permits empty/incomplete drafts.
+  Completeness requires nonempty mappings and coverage of every current Design-table garment POM,
+  with the full Design table validated; no narrowed mapping subset may certify itself complete.
+  Direct grade-rule input refuses explicitly for this authored MTM chart, independent of numeric
+  readiness. No breaks field/default or axis representation; composite/path execution belongs .3d/G3.
+  Acceptance: member/system/reference guards, missing/stale/current mapping and table failures,
+  canonical borrowing/state/provenance edits, body/Ease numeric refusal, explicit immutable replacement,
+  full POM coverage and grade refusal. Own book/API/live docs, exact evidence relocation and rolling
+  seals where health milestones require them; real production mutations and focused integration checks.
+  Book publication: apply the director's incremental teaching requirement to this chapter now;
+  put low-level API/reference/currentness/verification detail in a linked expert annex.
+  Verification: 15 contracts/two privacy-role docs, twelve real reds; 439 strict tests/WASM/book;
+  glossary/uncertainty/feature/tree/ledger and staged doctrines.
+  Commit: `STITCHCAD-G1-0035` (this recording commit).
 
 - ID: `G1-SLICE.4c.3d`
   Status: `pending`
@@ -534,8 +535,31 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4d`
   Status: `pending`
+  Children: `.4d.1` book publication/alignment, `.4d.2` combined structural exit review.
   Goal: re-derive measurement/ease/size structural requirements, current reference contracts and book
   evidence; full milestone verification, close .4 only after every child acceptance is verified.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4d.1`
+  Status: `pending`
+  Goal: apply the director's 2026-10-02 book requirement: roadmap, code and book in lockstep;
+  incremental learning path for students/newcomers, direct expert navigation, glossary and index,
+  detailed contracts/verification in annexes. Preserve canonical anchors and normative requirements.
+  Reproduce D71: introduction.md says "project is in gate G0" while LIVE_STATUS/sc-measure report G1
+  runtime libraries. Impact: readers cannot distinguish built capabilities from future contracts.
+  Priority: next safe leaf after MTM commit; correct landing/status and review the current chapter
+  inventory against roadmap/code/task owners. No app, MCP server, geometry or release claim before proof.
+  Acceptance: bounded newcomer progression, expert annex/reference links, complete topic index plus
+  existing verified glossary; source/rendered-link checks, status/requirement map and owned remaining
+  chapter migrations when too large for one safe leaf. D71 fixed and verified before closing.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.4d.2`
+  Status: `pending`
+  Goal: perform .4d's combined measurement/Ease/SizeSet structural exit review only after all .4
+  implementation children pass; publication improvements do not close this separate requirement.
   Verification: `pending`
   Commit: `pending`
 
@@ -713,7 +737,8 @@ metadata signoff unchanged; the named table slice follows.
 | done | `G1-SLICE.4c.1` | `done` | Size membership identity/order/base and revision foundation |
 | done | `G1-SLICE.4c.3a` | `done` | Current authored garment chart observations |
 | done | `G1-SLICE.4c.3b` | `done` | Explicit current Design/member/POM coverage |
-| next | `G1-SLICE.4c.3c` | `pending` | MTM body/Ease correspondence; axes .4c.2 awaits D70 |
+| done | `G1-SLICE.4c.3c` | `done` | Custom member-of-one body/Ease inputs |
+| next | `G1-SLICE.4d.1` | `pending` | Director's incremental book/alignment requirement; D71 status fix |
 
 ## Routing Evidence — D67, lesson decision freshness
 
@@ -796,33 +821,32 @@ measured by the `SPINE.7` probe).
 
 
 
-### `G1-SLICE.4c.3b` — exact current Design/member/POM chart coverage
 
-- [x] **REPRODUCE / ISSUE** — `git grep -n -E 'pub struct SizeChartDefinition|pub struct
-  SizeChartCollectionContext' 71aaf19 -- crates/sc-measure/src` → 0 matches, expected rc=1;
-  individual observations alone cannot establish size-sets §5's per-member Design-POM chart coverage.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `rg -n 'Per member|same POMs|chart POM'
-  docs/book/src/spec/size-sets.md` → §5 current quantity/measurement correspondence requirements,
-  rc=0; authored membership and observation targets supply identities, not collection completeness.
-  Completeness must use the current Design table, not a self-declared reduced target subset.
-- [x] **FIX** — immutable chart and saved canonical observation targets; unique identities/POMs/
-  tokens/cells, exact membership/table/binding checks, borrowed current source/state/provenance.
-  Draft validation remains distinct from nonempty exact Design-POM/member coverage. Ordered row
-  queries refuse missing cells, and shared measurement inputs require explicit member observations.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test size_chart_collection_contract`
-  → 18 passed, rc=0; privacy doctest passes. `bash docs/tasks/artifacts/size_chart_collection/run_size_chart_collection_mutations.sh` → fourteen actual assertion reds, rc=101 each, exact
-  source restore, rc=0. Reduced targets, valid duplicate cells, stale bindings and zero fallback fail.
-- [x] **NO REGRESSION** — `make check` → strict fmt/clippy and 422 tests, rc=0; three-crate `make
-  wasm`, warning-free `make book`, rc=0. Glossary → 310 terms/9 parts/158 tokens/0 failures;
-  uncertainty → 133 markers/16 files/0 unowned/0 failures; tree → 10 lanes/13 trees/6 siblings/
-  0 gaps; feature → 105 rows/29 diagnostics/0 failures; ledger → 9 pass/0 fail; staged `make gate`
-  → all doctrines green, rc=0. Local native/WASM integration does not assert new remote-CI verdicts.
-- [x] **LOCKSTEP** — book/API/package/README status, live pointers and task/log records agree.
-  Completed .3a contract/checklist retains exact HEAD bytes in the linked measurement sibling;
-  rolling windows remain below health targets, so no seal is due. MTM/body, axes, breaks/composite,
-  resolution and later physical/source/release proofs retain their owners; D70 is not defaulted.
+### `G1-SLICE.4c.3c` — canonical MTM body/Ease inputs
+
+- [x] **REPRODUCE / ISSUE** — `git grep -n 'pub struct MtmChart' e299771 -- crates/sc-measure/src`
+  → 0 matches, expected rc=1; size-sets §11 needs custom-member body/Ease input correspondence.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `rg -n 'Made-to-measure|Body|Ease' docs/book/src/spec/size-sets.md`
+  → MTM regeneration requires explicit body-to-POM mappings, rc=0; garment observations alone
+  cannot supply a body input or certify its evaluated garment result.
+- [x] **FIX** — private immutable MTM charts pin exact custom sole-member and Ease-set reference
+  targets; borrow current mappings, metadata, declarations, source/state/provenance. Unknown/derived
+  numeric inputs refuse; completeness checks every current Design garment POM; grading always refuses.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test mtm_chart_contract` → 15 passed,
+  rc=0; two privacy/role compile-fail docs pass. `bash docs/tasks/artifacts/mtm_chart/run_mtm_chart_mutations.sh`
+  → twelve actual assertion reds (rc=101 each), exact production-source restoration, runner rc=0.
+  Body and Ease zero fallbacks and enabled grading are independently rejected.
+- [x] **NO REGRESSION** — `make check` → strict fmt/clippy and 439 tests, rc=0; `make wasm` and
+  warning-free `make book`, rc=0. Glossary/tree/feature/uncertainty censuses, ledger and staged
+  doctrines green. Source and rendered main/annex links and table cells checked; no new remote-CI claim.
+- [x] **LOCKSTEP** — roadmap size-sets/regeneration contracts, package/API, book/main/annex and live
+  pointers agree. Completed .3b contract/checklist retains exact e299771 bytes in the linked sibling;
+  oldest changelog/lesson payloads seal unchanged. Director's publication requirement and landing
+  status defect D71 are owned by .4d.1 next; axes D70 remains unanswered, with no representation default.
 
 ## Verification Log
+
+| `2026-10-02` | `.4c.3c` | MTM contracts/mutations; strict Rust/WASM/book; current-reference censuses/ledger/staged gate | 15 contracts/two docs, twelve reds, 439 tests; focused checks green, rc=0 |
 
 | `2026-10-02` | `.4c.3b` | collection contracts/mutations; strict Rust/WASM/book; glossary/uncertainty/tree/feature/ledger/gate | 18 contracts/privacy, fourteen reds, 422 tests; all checks green, rc=0 |
 
@@ -858,111 +882,20 @@ unchanged in the evidence sibling; fresh current-slice checks remain here.
 
 ## Commit Log
 
-[Completed commits through physical placements](G1-SLICE-evidence.md#historical-commit-log) are
-preserved unchanged in the evidence sibling; fresh current-slice entries remain here.
-
-| Leaf | Commit subject or reference | Notes |
-| --- | --- | --- |
-| `.3c.4c.1b` | `STITCHCAD-G1-0020 (leaf G1-SLICE.3c.4c.1b)` | zipper/hook-bar instances, derived Count, current targets, env_fly |
-
-| `.3c.4c.2` | `STITCHCAD-G1-0021 (leaf G1-SLICE.3c.4c.2)` | canonical buttonhole source; Closure parent closed |
-
-| `.3c.4d.1` | `STITCHCAD-G1-0022 (leaf G1-SLICE.3c.4d.1)` | physical Pocket composition, placement, explicit opening deferral |
-
-| `.3c.4d.2` | `STITCHCAD-G1-0023 (leaf G1-SLICE.3c.4d.2)` | four structural families closed; D62/D63; API/MCP requirement retained |
-
-| `.4a.1` | `STITCHCAD-G1-0024 (leaf G1-SLICE.4a.1)` | canonical length/state/provenance; D64; bounded construction sibling |
-
-| `.4a.2a` | `STITCHCAD-G1-0025 (leaf G1-SLICE.4a.2a)` | shared exact machine-token grammar; measurement semantic sibling |
-
-| `.4a.2b` | `STITCHCAD-G1-0026 (leaf G1-SLICE.4a.2b)` | canonical metadata/records; native/WASM; CI observation pending .2c |
-
-| `.4a.2c` | `STITCHCAD-G1-0027 (leaf G1-SLICE.4a.2c)` | observed bf29b03 runtime/doctrine jobs; metadata parent closes |
+[Completed task journal through garment chart collections](G1-SLICE-measurements.md#completed-g1-task-journal--preserved-from-e299771)
+retains exact e299771 bytes; earlier journals remain linked there. Current entries follow below.
 
 ## Changelog
 
-[Completed task changelog through zipper/hook-bar](G1-SLICE-evidence.md#historical-task-changelog)
-is preserved unchanged in the evidence sibling; new changes are recorded here.
 
-- `2026-10-01`: `.3c.4c.2` preserves the completed closure checklist and task changelog unchanged;
-  independent committed-payload comparison passes. Active contracts retain their evidence pointers.
+- `2026-10-02`: .4c.3c implements canonical custom-member MTM/body/Ease inputs. The test fixture's
+  terminal compression error correctly has no further source; the test now checks the actual two
+  scoped wrappers. Strict lint refused explicit fixture panic; typed matches assertion fixes it without
+  suppression. All 439 strict tests pass; twelve source guard/fallback mutations fail assertions and
+  restore source exactly. Main chapter teaches the waist example; reference/verification is in an annex.
+  Director requires incremental book/glossary/index/annexes and continuing roadmap/code/book lockstep;
+  .4d.1 owns publication review next and D71 stale landing status. D70 axes ruling remains pending.
+- promotion: declined (routine MTM current-reference implementation; director's publication requirement
+  remains durably task-owned for .4d.1's adoption, not a new MTM semantic decision).
 
-- `2026-10-01`: `.3c.4c.2` lands button/hole pairs with one canonical size/operation source; Closure
-  parent closes structurally. Physical hole derivation remains G3; next `.3c.4d` pockets/signoff.
-
-- `2026-10-01`: `.3c.4d.1` implements Pocket physical composition/placement intent and visible opening
-  deferral; next `.3c.4d.2` re-derives structural family signoff against the director's quality bar.
-
-- `2026-10-01`: `.3c.4d.2` closes all four structural object families and fixes D62/D63. All sixteen
-  §4 objects have immutable content/reference contracts and book evidence; later physical/release
-  proofs retain their owners. Director's comprehensive external-agent MCP/API control requirement
-  reinforces existing .6/.9/G5 parity/discovery/recovery evaluation. Next .4 measurements/ease/sizes.
-
-- `2026-10-01`: `.4a.1` preserves canonical length inputs with explicit authored-state availability;
-  D64 closes, D65 is scheduled at the archive trigger. Next .4a.2 metadata consumes core declarations.
-
-- `2026-10-01`: .4a.2 splits into token, metadata/runtime and observed-CI signoff children before
-  code. .2a delivers shared token grammar; .4a.1 moves unchanged to the measurement sibling.
-
-- `2026-10-01`: .4a.2b adds sc-measure standalone metadata/current records and three-crate WASM
-  integration; D66 closes. .2c observes the required exceptional CI push before parent signoff.
-
-- `2026-10-01`: .4a.2c observes Rust/doctrine CI jobs and every step successful at bf29b03;
-  metadata parent closes structurally. .4a.3 table follows; physical/source/release proof stays deferred.
-
-- `2026-10-02`: .4a.3 supplies named-table current bindings; sixteen contracts/privacy and eight
-  real guards validate id/token/kind/scalar pinning and borrowed canonical state. Parent .4a closes
-  structurally; G1 stays 5/18. Ease .4b follows; full .4 needs Ease/SizeSet/.4d signoff.
-
-| `.4a.3` | `STITCHCAD-G1-0028 (leaf G1-SLICE.4a.3): named measurement tables retain stable current bindings` | 16 contracts + privacy; eight real guard reds; 342 tests; WASM/book; full 23 suites; .4a structurally closed |
-
-- `2026-10-02`: .4b.1 implements individual canonical Ease intent; .4b.2 set/membership follows.
-  Strict lint found large reassignment error payloads; boxed binding snapshots retain exact structured
-  evidence. Mutation diagnostic rejected an unwrap panic until an explicit error assertion preceded it.
-  All seven final real guard mutations fail assertions, restore exact source; 356 strict tests pass.
-
-| `.4b.1` | `STITCHCAD-G1-0029 (leaf G1-SLICE.4b.1): individual Ease mappings retain current signed intent` | 13 contracts + privacy, seven guard reds, 356 tests/WASM/book; set/membership next |
-
-- `2026-10-02`: .4b.2 supplies unique per-POM sets with current canonical mappings and selected
-  table membership. Same-id fit/provenance/state edits remain visible; retargeting requires explicit
-  set replacement. Fourteen contracts/privacy, ten real guard reds, strict 371 tests pass. D69 fixed.
-
-| `.4b.2` | `STITCHCAD-G1-0030 (leaf G1-SLICE.4b.2): per-POM Ease sets validate current table membership` | 14 contracts/privacy, ten guard reds, 371 strict tests/WASM/book; .4b.3 review next |
-
-- `2026-10-02`: .4b.3 maps every ontology .2.2 field to current API/contracts and distinct deferred
-  proofs. Current measure tests/docs 65, full 23-suite milestone and book green; strict 371/WASM code
-  at b4e0bc7 unchanged. Staged make gate → all doctrines green, rc=0; final ledger → 9 pass/0 fail,
-  rc=0. .4b closes structurally; next .4c SizeSet, then combined .4d review.
-
-| `.4b.3` | `STITCHCAD-G1-0031 (leaf G1-SLICE.4b.3): Ease structural review passes the milestone gate` | field/currentness review, 65 current tests, full 23 suites/book; .4b structural closure |
-
-- `2026-10-02`: .4c splits before code into membership, axes, charts/breaks, resolved intent and
-  review. .4c.1 verifies label/order/base/reference separation; D70 axes conflict reproduced and owned,
-  director cardinality question pending. Independent membership neither selects nor defaults axes.
-
-| `.4c.1` | `STITCHCAD-G1-0032 (leaf G1-SLICE.4c.1): size membership preserves authored order and base identity` | 12 contracts/three docs, seven real reds, strict 386 tests; axes D70 ruling pending |
-
-- .4c.1 verification caught the draft D70 entry at an inline quoted heading marker: live census was
-  nine instead of ten. A newline-anchored heading correction retains all prior PLANNING text exactly;
-  re-derived census is 10 open/59 sealed, disjoint identities. No old planning record changed.
-
-- .4c.1 staged containment refused a 329-byte product-status row; the measured row is shortened to
-  260 bytes under the unchanged 320-byte ceiling. Final staged doctrines pass, rc=0.
-
-- `2026-10-02`: .4c.3 decomposed before code into observations, collection, MTM, breaks/composite
-  and review. .3a implements current authored garment correspondence; .3b coverage can proceed while
-  axes D70 awaits ruling. Sixteen contracts/privacy, eight real guard reds and strict 403 tests pass;
-  native/WASM/book/current-reference boundaries remain explicit. Completed membership is preserved
-  byte-identically against HEAD in the measurement sibling; no prior evidence is rewritten.
-
-| `.4c.3a` | `STITCHCAD-G1-0033 (leaf G1-SLICE.4c.3a): garment chart observations retain current member and POM references` | 16 contracts/privacy, eight real reds, 403 strict tests/WASM/book; collection coverage next |
-
-- `2026-10-02`: .4c.3b implements explicit Design/member/POM chart coverage over current canonical
-  observations. Incomplete drafts remain inspectable; reduced targets cannot hide omitted Design POMs.
-  Full-table and cell coverage do not certify numeric, physical or release readiness. Eighteen contracts/
-  privacy, fourteen actual guard reds and strict 422 tests pass. Initial strict lint refused an unchecked
-  u128-to-i64 fixture cast; checked conversion fixes it and the full gate is rerun. .3a evidence retains
-  exact predecessor bytes in the linked sibling; next .3c MTM/body, with axes D70 still pending.
-- promotion: declined (routine current-reference/coverage implementation; book/task own the contract).
-
-| `.4c.3b` | `STITCHCAD-G1-0034 (leaf G1-SLICE.4c.3b): garment charts verify exact current Design and member coverage` | 18 contracts/privacy, fourteen reds, 422 strict tests/WASM/book; MTM/body next |
+| `.4c.3c` | `STITCHCAD-G1-0035 (leaf G1-SLICE.4c.3c): made-to-measure charts retain canonical body and Ease inputs` | 15 contracts/two docs, twelve reds, 439 tests/WASM/book; publication review next |
