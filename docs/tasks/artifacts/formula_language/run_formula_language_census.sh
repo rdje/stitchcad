@@ -762,12 +762,12 @@ class Evaluator:
                  "tan": lambda z: d_sin(z) / d_cos(z)}[name](rad)
             return Val("ratio", rnd(from_true("ratio", r)))
         if name == "atan":
-            return Val("angle", norm_angle(rnd(d_atan(dfraction(to_true("ratio", vs[0].v)))
-                                               * 180 / PI * 1000000)))
+            return Val("angle", rnd(d_atan(dfraction(to_true("ratio", vs[0].v)))
+                                     * 180 / PI * 1000000))
         if name == "atan2":
             ya = dfraction(to_true(vs[0].kind, vs[0].v))
             xb = dfraction(to_true(vs[1].kind, vs[1].v))
-            return Val("angle", norm_angle(rnd(d_atan2(ya, xb) * 180 / PI * 1000000)))
+            return Val("angle", rnd(d_atan2(ya, xb) * 180 / PI * 1000000))
         if name == "arc_length":
             rad = d_radians(vs[0].v)
             return Val("length", rnd(rad * dfraction(to_true("length", vs[1].v))))

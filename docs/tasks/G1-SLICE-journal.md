@@ -799,3 +799,71 @@ COMMIT/book clarify wrapper versus machine verdict; no authority/cadence/build r
   staged gate before commit. No new Rust/cross-platform/production evaluator or signed-angle claim.
   Verification: `pending`
   Commit: `pending`
+
+## Six-kind replay evidence — preserved from 57c94ad
+
+### `G1-SLICE.5a.3b.3c.1` — actual six-kind book replay
+
+- [x] **REPRODUCE / ISSUE** — copied Area2mm×2mm/Boolean1==1 rows return census1 with
+  “not bindable”; actual statement accepts area4000000/boolean1. Independently authored replay
+  contract fails its own AssertionError before repair (target/binding-replay-contract-before.log).
+- [x] **ROOT CAUSE (WHY + WHERE)** — L2 four-kind whitelist follows a valid statement binding;
+  render lacks Area/Boolean presentation. Tiny Area rows also produce1E-8 versus fixed0.00000001.
+  Actual consumer19 verdicts→0 fail, rc=0; nine compiled consumer/format/state/quantum mutations
+  each produce contract AssertionError, rc=1, runner rc=0. Sources restore byte-identically.
+- [x] **FIX** — consume EV.bindable; cm²/true/false fixed display, typed state/format refusals.
+  Stored quantum/kind remain; no new source literals.
+- [x] **ADDRESSED (verified)** — binding_replay_contract.py→19 independent actual consumer/
+  format/declaration verdicts, rc=0. Fifteen positive copied rows cover all six kinds, signed/tiny
+  Area ties and name reads, Boolean states and conditionals. Wrong values/units/text, Point/Edge
+  binding, removed Boolean declaration and invalid internal states refuse precisely.
+- [x] **NO REGRESSION** — structural suite→existing literal361/arithmetic162/angle72/math42/
+  rational61/scalar57/binding80/canonical146 controls green, rc=0; existing binding mutations→12
+  actual reds/exact restore, rc=0; language→probes:16 pass /0 fail, rc=0.
+  Publication9/ledger9+13/archive28+148 pass, rc=0.
+  Original17 worked rows and whole prior checklist/log tail compare exact; scoped checks below.
+- [x] **LOCKSTEP** — D99 seals unchanged; Value/annex/tools/live pointers agree.
+  G1 stays5/18, defects11open/87sealed; D84 .3c.2 and production proof remain.
+
+## Verification Log
+
+All focused runners rc=0; actual mutation assertions rc=1.
+Publication48 chapters/16 API rows/1002 source/1534 rendered links, nine controls, rc=0.
+Ledger9+13 pointer controls; archive28+148 CLI controls,139 logical records/14 working Markdown/
+7766 decoded lines/605249 decoded bytes/261571 resident bytes; all rc=0. Tree10lanes/13trees/eight
+siblings/zero gaps; glossary310/nine/158/zero index drift; feature105/29; uncertainty133/16/zero
+unowned; fixture20/four/five/zero mismatch, all rc=0. Exact old task/ledger/defect payloads retained.
+README unchanged; scoped book-instrument checks fit this repair. Staged gate below;
+no production numerical certificate.
+First staged gate rc=2: current boxes used rc0 rather than recognized rc=0 evidence.
+Corrected status spelling; signatures/enforcement unchanged. Final staged make gate→
+=== all doctrines green ===, rc=0.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3c.1` | `STITCHCAD-G1-0055 (leaf G1-SLICE.5a.3b.3c.1): complete six-kind binding replay` | 19 independent verdicts/nine actual reds/exact restore |
+
+## Changelog
+
+- `2026-10-02`: D99 actual consumer/display repair complete; D84 signed-angle proof follows.
+- promotion: declined (routine consumer repair against the existing six-kind contract).
+
+## Signed-angle protocol — completed in G1-0056
+
+  Pre-code protocol: inverse atan is true(-90,+90), rounded[-90,+90]; atan2(y,x) is true(-180,+180],
+  rounded[-180,+180]. Exact zero has no sign; zero y/negative x gives+180, both zero refuses.
+  Remove outer inverse modulo only; keep nearest microdegree, dir normalized and signed raw sweeps.
+  Independently authored controls cover quadrants/axes/negative zero/branch neighbors, both atan2
+  signatures/refusals, finite rounded endpoints, raw binding half ties/sign/full turns, exact raw
+  equality/order, full/multi-turn/negative arcs and fractional versus bound input. Curated math
+  oracle changes to signed results; existing42 rows/72 controls distinguish dir from inverse angle.
+  Actual copied-book replay includes raw angle/Boolean equality; wrong values refuse. Actual inverse,
+  binding/comparison/sweep/dir/branch/rounding faults require assertion reds and exact restoration.
+  Update function/principal-branch learner reference, units and expert annex; preserve old evidence.
+  Watch independent positive family in structural runner. Focused existing numeric/language/book/
+  ledger/archive/censuses and staged gate before commit. Review/close D84 separately in .3.
+  No arbitrary-input correct rounding/cross-platform/production evaluator certificate.
+  Verification: `pending`
+  Commit: `pending`

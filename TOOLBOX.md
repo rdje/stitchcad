@@ -158,6 +158,11 @@ Structural suite runs both. `bash docs/tasks/artifacts/formula_structure/run_ang
 requires seven actual conversion/direction/pole reds/exact restoration; run alone. Decimal60 proof
 scope is curated, not arbitrary transcendental correctness. D83 scalar guards/D84 signed-angle verification remain owned.
 
+Signed-angle reference: `signed_angle_contract.py` in formula_structure supplies90 independent
+principal/binding/equality/sweep/copied-book controls. Structural suite watches it;
+`run_signed_angle_mutations.sh` requires fifteen compiled actual assertion reds and exact restoration,
+run exclusively. Curated branches/endpoints do not certify arbitrary transcendental inputs.
+
 Reference rational refusal: `rational_contract.py` in formula_structure checks 61 independent Fraction
 boundaries, reduced internal results, converted input before rounding and taken-only computation.
 Structural suite runs it. `bash docs/tasks/artifacts/formula_structure/run_rational_mutations.sh`

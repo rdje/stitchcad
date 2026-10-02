@@ -188,6 +188,14 @@ why maximum-content-line bytes is a separate axis in the containment doctrine. B
 keep every axis visible, and they remove the ambiguity a raw `|` inside a code span creates (the GFM
 spec asks for `\|`; the inherited arity checker treats a code span as protective — defect D22).
 
+- **D100** — the current numeric parent’s children summary still calls canonical limits i64.
+  - Reproduce: inspect G1-SLICE.5a.3b.3b Children: “reference canonical/binding i64 limits”.
+    Its .3b child and decision_literals specify128-bit canonical literal width versus i64 bindings.
+  - Root/impact: D97 corrected the parent Goal, but the adjacent live children label escaped that
+    scoped repair; it can misdirect a reader even though the verified numeric implementation agrees.
+  - Owner/schedule: `G1-SLICE.5a.3b.3c.3`, P2 next in the final reference review; preserve the old
+    label/evidence, correct the live summary and verify current parent/child contract agreement.
+
 - **D67** — an unrelated historical decline in a staged task file satisfies lesson promotion for a
   new lesson, even when the promoted decision gains no retrieval question.
   - Reproduce: `git diff b3b9e3a^ b3b9e3a -- docs/decisions` adds no answers line, while

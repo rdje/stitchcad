@@ -35,9 +35,9 @@ arc_length(90 deg, 1 mm)	length	1571
 arc_length(1 deg / 2, 1 mm)	length	9
 arc_length(0.000001 deg / 2, 1000 m)	length	9
 atan(1.0)	angle	45000000
-atan(-1.0)	angle	315000000
+atan(-1.0)	angle	-45000000
 atan2(1 um, 6 um)	angle	9462322
 atan2(6 um, 1 um)	angle	80537678
-atan2(-1 um, 6 um)	angle	350537678
+atan2(-1 um, 6 um)	angle	-9462322
 atan2(1 um, -6 um)	angle	170537678
-atan2(-1 um, -6 um)	angle	189462322
+atan2(-1 um, -6 um)	angle	-170537678

@@ -5,12 +5,12 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3c.2`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** D84 signed principal atan/atan2, raw binding/equality and full/signed/multi-turn
-  sweep proof. Finalize branch/quantum controls before actual reference edits; keep dir normalized.
-  D99 six-kind actual book replay is repaired:19 independent verdicts/nine actual reds; no new
-  Area/Boolean source literals. D83 scoped boundary review and D95 wide-literal/i64-binding ruling
-  are complete. Production normalization .5a.3c follows reference review; D70 axes awaits .4c.2.
+- **Active tree:** `G1-SLICE`, frontier **`.5a.3b.3c.3`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** final D84/reference review and D100 adjacent parent-label correction, then .5a.3c.
+  Signed principal atan/atan2, raw binding/equality/full sweeps verified:90 independent controls/
+  fifteen compiled actual reds, existing angle72/math42/seven reds remain green. Dir stays normalized.
+  D99 six-kind actual book replay repaired; D83 numeric review and D95 wide-literal/i64-binding
+  ruling complete. Preserve reference/production proof boundary; D70 axes ruling awaits .4c.2.
   G1-0052 f876913 is pushed and both CI jobs/all steps succeeded; derive current push cadence.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats

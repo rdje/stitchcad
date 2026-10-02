@@ -41,8 +41,6 @@ for line in (ROOT / 'docs/tasks/artifacts/formula_structure/angle_cases.tsv').re
         value = math.degrees(getattr(math, name)(*values)) * 1000000
         result_kind = 'angle'
     actual = round_away(value)
-    if result_kind == 'angle':
-        actual %= 360000000
     assert (result_kind, actual) == (kind, int(expected)), ('independent math disagreement', source, value, actual, expected)
     checks += 1
 assert checks == 42

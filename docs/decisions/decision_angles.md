@@ -26,7 +26,10 @@ The formula/units specifications adopt this clarification in the recording commi
 locked product scope or gate exit. `dir` remains explicitly normalized by its function contract;
 this does not normalize other angle values. `G1-SLICE.5a.3b.3c` owns D84 implementation verification,
 including bindings/equality, signed inverse-trig result contracts and full/signed/multi-turn examples.
-Current reference conversion retains sweep inputs, but atan/atan2 still normalize their outputs;
-that remaining behavior is owned by .3c, not certified as the completed angle contract. Product
-numeric normalization, binding and evaluation remain future G1 work. D83 rational/scalar domains
-remain separately owned. No production or numerical signoff is granted by this ruling.
+G1-SLICE.5a.3b.3c.2 verifies90 independent principal/binding/equality/sweep/replay controls and
+fifteen compiled actual assertion reds, with byte-identical source restoration. The existing42-row
+math oracle/72 angular controls now retain signed inverse outputs while dir stays normalized;
+seven existing angular mutation reds retain conversion/pole proof. D84 final review remains .3c.3.
+Numeric normalization, entity integration, binding/evaluation in the product and arbitrary-input
+transcendental/cross-platform certification remain separate G1 obligations. D83 scoped reference
+boundaries are reviewed separately. This ruling grants no production or general numerical signoff.

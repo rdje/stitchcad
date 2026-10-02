@@ -100,6 +100,21 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part50.md`](docs/history/stitchcad-changelog-part50.md) | STITCHCAD-G1-0032 | 14 lines, 1176 bytes, `sha256:32b7947f…` |
 
+| [`stitchcad-changelog-part51.md`](docs/history/stitchcad-changelog-part51.md) | STITCHCAD-G1-0033 | 13 lines, 1094 bytes, `sha256:8f279ee4…` |
+
+## STITCHCAD-G1-0056 - signed principal formula angles (leaf `G1-SLICE.5a.3b.3c.2`)
+
+Reference atan/atan2 retain signed principal results at the nearest microdegree; dir stays normalized.
+Bindings preserve full/signed/multi-turn values and compare raw quantities, so360 degrees differs
+from zero and produces a full-turn arc. Principal branches/rounded endpoints now have explicit rules.
+
+Ninety independent controls/fifteen compiled actual reds verify principal/binding/equality/sweep/book
+replay. Existing42-row math oracle/72 angular controls/seven reds, binding80/twelve reds and replay19/
+nine reds remain green, with exact restoration. Book/units/decision/task/live records agree and prior
+payloads retain exact bytes. D84 final review follows; G1 stays5/18, defects12open/87sealed.
+D100’s stale adjacent parent label is logged/owned by the next review.
+No production evaluator or general transcendental/cross-platform certificate is claimed.
+
 ## STITCHCAD-G1-0055 - complete reference binding replay (leaf `G1-SLICE.5a.3b.3c.1`)
 
 D99's actual book consumer now accepts all six normative bindable kinds. Derived Area displays in
@@ -370,17 +385,3 @@ uncertainty/tree/feature/ledger/staged doctrine checks pass. Shared measurements
 correspondences; full structural coverage does not certify numeric/path/physical/release readiness.
 Completed observation evidence retains exact predecessor bytes; rolling windows stay below health targets.
 G1 remains 5/18. Next .4c.3c MTM/body; axes D70 ruling remains pending, no representation is defaulted.
-
-## STITCHCAD-G1-0033 - current garment chart observations (leaf `G1-SLICE.4c.3a`)
-
-Immutable authored observations pin set revision/member, named Design/chart tables and two garment
-measurement bindings with correspondence provenance. Current queries refuse missing/revised members,
-substitute tables, aliases and retargeted metadata; state/source/unit/procedure remain canonical and
-borrowed. A logical Design base input may also serve as a chart observation without duplicated scalars;
-regenerated geometry measurements and physical equivalence remain separate G3/G4 obligations.
-
-Sixteen contracts/privacy and eight deliberate production mutations verify currentness and borrowing.
-Restored strict Rust runs 403 tests; three-crate WASM, warning-free book, glossary/uncertainty/tree,
-ledger and staged doctrine gates pass. Completed membership evidence retains exact predecessor bytes;
-oldest live changelog/lesson seals preserve their identity. G1 stays 5/18; next .4c.3b chart coverage,
-then MTM/body, breaks/composite and review. Axes D70 awaits the director; no representation defaulted.

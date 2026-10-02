@@ -282,7 +282,7 @@ Reference D85/D86/D87 are repaired. Trigonometric input and arc_length convert i
 directly to radians by multiplying by pi/(180*1000000). A full-turn sweep remains a full turn and a
 signed or fractional sweep remains signed or fractional; this conversion does not normalize a sweep.
 The read-only dir selector rounds its microdegree result to the nearest quantum before direction
-normalization, matching atan2 on the same vector. Tangent at an exact odd quarter-turn refuses
+normalization, corresponding modulo360 degrees to signed atan2 on the same vector. Tangent at an exact odd quarter-turn refuses
 formula_domain, including negative and multi-turn poles; neighboring microdegree inputs remain finite.
 
 For example, `arc_length(360 deg, 1 um)` returns 6 um at the declared rounding, `sin(90 deg)` returns
@@ -296,7 +296,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/literal_diagnostic.py
 ```
 
 Forty-two explicit angular identities/results agree with an independent standard-library math
-oracle on defined curated arguments. They supply 72 controls, including quadrant/dir agreement,
+oracle on defined curated arguments. They supply 72 controls, including signed quadrant/normalized-dir correspondence,
 full/signed/multi-turn sweeps, fractional microdegrees, exact poles and finite neighbors. Seven actual
 conversion/sweep/precision/direction/pole mutations require assertion reds and exact restoration;
 run alone. This remains a curated 60-digit Decimal reference, not an arbitrary-input certificate of
@@ -306,10 +306,10 @@ The director's D84 ruling preserves signed/multi-turn formula angles and normali
 fields. A bound 360-degree sweep therefore retains its full turn; formula equality does not collapse
 it to zero. `dir` still normalizes by its explicit function contract. The durable record is `docs/decisions/decision_angles.md`.
 
-D84 remains owned by G1-SLICE.5a.3b.3c for binding/equality controls and inverse-trig contract repair:
-the reference still normalizes atan/atan2 outputs, and the current 42-row evidence describes that
-behavior, not completed signed inverse-trig semantics. Product numeric binding/evaluation is pending.
-D83’s scoped rational/scalar/binding review is complete below; it supplies no signed inverse-trig proof.
+G1-SLICE.5a.3b.3c.2 removes only outer inverse modulo and updates three negative inverse rows in the
+42-row oracle set to signed principal results. The signed binding/equality/sweep controls below
+verify D84 separately from D83's numeric boundaries; final D84/reference review remains .3c.3.
+Product numeric binding/evaluation is pending.
 
 ## Reference rational-value boundaries
 
@@ -525,4 +525,39 @@ formatting, changed stored integer and lost replay kind. Sources restore byte-id
 existing structural suite watches the positive/refusal family; run actual mutations exclusively.
 
 This repairs the book instrument without adding Area/Boolean source literals or a production
-formula evaluator. D84 signed inverse-trig/equality proof remains a separate prerequisite.
+formula evaluator. D84 signed-angle controls below retain a separate proof boundary.
+
+
+## Signed principal angles and raw formula sweeps
+
+The reference atan/atan2 result rounds to a signed microdegree without direction modulo. Their
+principal branches and rounded endpoint behavior are specified in grammar §6. Exact zero has one
+numeric value, so atan2(-0 um, -1 um) gives+180 degrees. A negative component close to the same axis
+may instead round to-180 degrees. The direction selector dir normalizes its rounded result.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/signed_angle_contract.py
+bash docs/tasks/artifacts/formula_structure/run_signed_angle_mutations.sh
+```
+
+Ninety independent controls cover axes/quadrants, both atan2 signatures and exact dimension/zero
+refusals, signed zero, finite rounded endpoint cases, raw bindings/ties/order/equality, signed/full/
+multi-turn arc lengths, fractional versus once-rounded bound input, normalized directions, and
+actual copied-book replay. Eight new copied rows join all seventeen original rows; a wrong unsigned
+Value cell refuses. Independent authored integers/Fraction and curated standard-library math
+expectations do not call the reference's inverse/modulo/rounding functions.
+
+For example, binding360 degrees keeps360000000 microdegrees; it differs from zero, and its radius
+1 µm arc rounds to6 µm. A720-degree arc rounds to13 µm, and a-720-degree arc to-13 µm. An exact
+half-microdegree angle with radius1000 m gives9 µm; binding that angle first rounds it to1 microdegree,
+so its later arc gives17 µm. Negative counterparts retain their sign.
+
+Fifteen compiled actual faults must fail these assertions: atan/atan2 modulo, lost inverse sign,
+binding/comparison/arc/literal modulo, unnormalized dir, argument order, zero branch/vector/vertical
+axis errors, inverse truncation and binding ties. Exact source restoration follows every fault.
+The structural suite watches the independent positive/refusal family; mutation runners run alone.
+Existing42-row/72-control/math42 angular controls and seven actual angular reds also remain required.
+
+This is curated reference proof, not arbitrary-input correctly rounded transcendental evaluation,
+a cross-platform certificate, entity direction integration or a production formula evaluator.
+G1-SLICE.5a.3b.3c.3 owns the final D84/reference review before production normalization .5a.3c.

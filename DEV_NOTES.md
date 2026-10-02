@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — principal angles retain their sign; directions normalize explicitly
+
+- D84 reference atan(-1.0) reproduces315 degrees instead of-45. Remove outer inverse modulo only;
+  the signed helpers, nearest-microdegree rounding and normalized dir selector retain their roles.
+- Grammar now states atan true(-90,+90)/rounded[-90,+90], atan2 true(-180,+180]/rounded[-180,+180],
+  y/x argument order and one exact zero: negative-x axis gives+180; both zero refuses.
+- Ninety independent signed principal/binding/equality/sweep/replay controls and fifteen compiled
+  actual faults distinguish raw formula values from normalized directions; sources restore exact.
+  Three negative rows in the42-row math oracle now carry signed expectations; all72 existing angular
+  controls/seven reds pass. Binding80/twelve reds and replay19/nine reds still pass independently.
+- Raw full/multi-turn bindings preserve equality/order and signed arcs. Fractional versus stored
+  input yields different later arcs; copied-book25 rows replay and a wrong unsigned Value refuses.
+- Function reference/units/annex/decision agree; final D84 review is .3c.3. Product normalization,
+  entity integration/evaluation and arbitrary-input transcendental/cross-platform proof remain pending.
+- promotion: declined (routine implementation/verification of the received signed-angle ruling).
+
 ## _(2026-10-02)_ — complete binding kinds must reach the example consumer
 
 - D99: actual statement/stored accepts Area/Boolean, but L2's four-kind whitelist refuses them.
@@ -67,23 +83,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Earlier task evidence and oldest ledger payloads retain exact bytes. G1 remains5/18, D83 review
   and D84 still owned; this capacity prerequisite grants no domain/physical/production signoff.
 - promotion: declined (routine reuse of the existing self-contained history-window contract).
-
-## _(2026-10-02)_ — bound numeric storage is distinct from literal identity
-
-- D83 predecessor accepts Count MAX+1 at let and returns fractional length bindings. Actual let now
-  rounds half away once, checks declared signed storage plus scalar domains, and returns an integer.
-  L2 consumes it without rounding again. Unbound expressions retain exact wider/fractional values.
-- Eighty independent Fraction/Decimal controls and twelve compiled actual assertion reds cover
-  endpoints/ties, typed context, Boolean, caller writes, changed declarations and copied-book replay.
-  Existing scalar57/rational61 and literal6/arith9/angle7/inline5 mutation controls retain proof.
-- Director D95 ruling allows128-bit canonical literal nodes and requires i64 only at numeric binding.
-  Unary minus preserves a positive2^63 child for signed MIN; no identity-changing sign fold.
-  Book/grammar/roadmap agree. G1-0051 .3b adds146 canonical node/Decimal controls/twelve compiled
-  width/identity/quantum/domain reds; D95 closes. D83 .3c still reviews complete boundaries.
-- Earlier task payloads and oldest ledger records retain exact committed bytes. Curated map entry
-  compaction makes room for the new decision without changing generator or ceilings.
-  No Rust changed; no production evaluator, arbitrary-input transcendental, geometry/MCP/release claim.
-- promotion: promoted by `decision_literals.md` (director's canonical-node/bound-storage ruling).
 
 # Sealed archive — earlier lessons
 
@@ -176,3 +175,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part52.md`](docs/history/stitchcad-devnotes-part52.md) | inline-language lesson | 18 lines, 1440 bytes, `sha256:f9fdf033…` |
 
 | [`devnotes-part53.md`](docs/history/stitchcad-devnotes-part53.md) | scalar-domain lesson | 17 lines, 1495 bytes, `sha256:c5c05294…` |
+
+| [`devnotes-part54.md`](docs/history/stitchcad-devnotes-part54.md) | numeric binding/literal ruling lesson | 16 lines, 1445 bytes, `sha256:7fcc4170…` |

@@ -211,12 +211,21 @@ construct the envelope owns is refused with the envelope's own token ([the contr
 | `clamp` | T, T, T | T | low above high is `formula_domain` |
 | `round_to` | T, T | T | the nearest multiple of the second argument, ties away from zero; the step is part of the recipe, so a coarser quantum is visible in a diff |
 | `sin` `cos` `tan` | angle | ratio | `tan` at an exact odd quarter-turn is `formula_domain` |
-| `atan` | ratio | angle | `atan2` is preferred: it resolves the quadrant |
-| `atan2` | length, length | angle | — |
-| `atan2` | ratio, ratio | angle | — |
+| `atan` | ratio | angle | signed principal angle, nearest microdegree; branch rules below |
+| `atan2` | length, length | angle | signed principal angle of (y, x), nearest microdegree |
+| `atan2` | ratio, ratio | angle | the same (y, x) convention |
 | `arc_length` | angle, length | length | the angle turned through π/180 and multiplied by the radius |
 | `if` | boolean, T, T | T | the one special form; the third part is mandatory (§7) |
 | `within` | T, T, tolerance | boolean | the tolerance comparison; the class is the name ([the contract §3.1](../formula-language.md)), so a comparison always names its class |
+
+Inverse trigonometric functions preserve their signed principal answer: `atan(-1.0)` returns
+−45 degrees and `atan2(-1 um, -1 um)` returns −135 degrees. The first argument to atan2 is the
+*y* component, the second is *x*; it resolves the quadrant that atan alone cannot determine.
+A finite atan input has a true answer in (−90, +90) degrees; nearest-microdegree rounding can
+reach either endpoint. Atan2's true branch is (−180, +180] degrees, and its rounded result is in
+[−180, +180]. Exact zero has no sign: zero *y* with negative *x* gives +180 degrees, while a
+negative *y* very near that axis may round to −180. Both components zero refuse with
+`formula_domain`. Neither function applies direction modulo. The dir selector below does.
 
 ### 6.1 Geometry selectors
 

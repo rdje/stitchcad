@@ -35,13 +35,13 @@ for line in (ROOT / 'docs/tasks/artifacts/formula_structure/angle_cases.tsv').re
     rows += 1
 assert rows == 42
 for x, y, expected in [(1, 6, 80537678), (6, 1, 9462322),
-                       (6, -1, 350537678), (-6, 1, 170537678),
-                       (-6, -1, 189462322), (0, 1, 90000000), (1, 0, 0)]:
+                       (6, -1, -9462322), (-6, 1, 170537678),
+                       (-6, -1, -170537678), (0, 1, 90000000), (1, 0, 0)]:
     env = {'p': {'kind': 'point', 'value': (0, 0), 'origin': 'geometry'},
            'q': {'kind': 'point', 'value': (x, y), 'origin': 'geometry'}}
-    direction = value('dir(p, q)', 'angle', expected, env)
+    direction = value('dir(p, q)', 'angle', expected % 360000000, env)
     same_vector = value('atan2(%d um, %d um)' % (y, x), 'angle', expected)
-    assert direction == same_vector, ('dir/atan2 agreement', x, y)
+    assert direction == same_vector % 360000000, ('normalized dir/signed atan2 correspondence', x, y)
     checks += 1
 for source in ['tan(90 deg)', 'tan(-90 deg)', 'tan(270 deg)', 'tan(450 deg)',
                'tan(-450 deg)', 'tan(180 deg / 2)', 'atan2(0 um, 0 um)']:
