@@ -474,32 +474,10 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4c.3c`
   Status: `done`
-  Goal: typed MTM body-input chart correspondence for custom single-member ranges, current body/Ease
-  mappings and provenance; preserve body versus garment observation distinction and path-1 semantics.
-  Pre-code protocol: immutable MtmChartDefinition pins id, membership reference/member, expected
-  EaseSetDefinition (reference target snapshot: set/table ids and ordered mapping bindings only),
-  and chart correspondence provenance. MtmChartContext borrows membership/current Ease sets and
-  EaseSetContext; reject duplicate/cross-kind identities including set/member ids. Require Custom
-  membership of exactly one, with the authored member equal to its existing sole/base member.
-  Resolve the saved canonical set id and compare every expected set/table/ordered mapping target;
-  current fit/compression/provenance/source/state remain borrowed. Selected POM queries use current
-  EaseSet membership/target checks; body and signed amount declarations/values remain distinct from
-  garment metadata, with no body-as-POM result or automatic addition/evaluation. Unknown/derived
-  source drafts stay inspectable and numeric queries preserve their required observation/evaluation.
-  Constructor/current validation checks all authored mappings but permits empty/incomplete drafts.
-  Completeness requires nonempty mappings and coverage of every current Design-table garment POM,
-  with the full Design table validated; no narrowed mapping subset may certify itself complete.
-  Direct grade-rule input refuses explicitly for this authored MTM chart, independent of numeric
-  readiness. No breaks field/default or axis representation; composite/path execution belongs .3d/G3.
-  Acceptance: member/system/reference guards, missing/stale/current mapping and table failures,
-  canonical borrowing/state/provenance edits, body/Ease numeric refusal, explicit immutable replacement,
-  full POM coverage and grade refusal. Own book/API/live docs, exact evidence relocation and rolling
-  seals where health milestones require them; real production mutations and focused integration checks.
-  Book publication: apply the director's incremental teaching requirement to this chapter now;
-  put low-level API/reference/currentness/verification detail in a linked expert annex.
-  Verification: 15 contracts/two privacy-role docs, twelve real reds; 439 strict tests/WASM/book;
-  glossary/uncertainty/feature/tree/ledger and staged doctrines.
-  Commit: `STITCHCAD-G1-0035` (this recording commit).
+  Goal: custom-member body/Ease inputs; full contract/evidence retained in
+  [measurement evidence](G1-SLICE-measurements.md#mtm-contract-and-evidence--preserved-from-285e238).
+  Verification: 15 contracts/two privacy-role docs, twelve real reds; 439 strict tests/WASM/book.
+  Commit: `STITCHCAD-G1-0035` (`285e238`).
 
 - ID: `G1-SLICE.4c.3d`
   Status: `pending`
@@ -542,7 +520,7 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `pending`
 
 - ID: `G1-SLICE.4d.1`
-  Status: `pending`
+  Status: `done`
   Goal: apply the director's 2026-10-02 book requirement: roadmap, code and book in lockstep;
   incremental learning path for students/newcomers, direct expert navigation, glossary and index,
   detailed contracts/verification in annexes. Preserve canonical anchors and normative requirements.
@@ -553,8 +531,26 @@ metadata signoff unchanged; the named table slice follows.
   Acceptance: bounded newcomer progression, expert annex/reference links, complete topic index plus
   existing verified glossary; source/rendered-link checks, status/requirement map and owned remaining
   chapter migrations when too large for one safe leaf. D71 fixed and verified before closing.
-  Verification: `pending`
-  Commit: `pending`
+  Pre-edit publication protocol: new learning chapters progressively introduce recipe, measurements,
+  pieces, sizes and agents using declared examples; plain availability page distinguishes existing
+  libraries from future application/geometry/MCP/release. Existing detailed contracts enter the Annexes
+  navigation section at their unchanged source URLs/anchors; glossary remains independently reachable.
+  Topic index covers the entire registered chapter population, with expert links for current APIs.
+  Add a scoped roadmap/code/book status map and standard-library publication checker with actual
+  copied-fixture refusal probes for orphaned/missing chapters, missing index coverage, invalid source/
+  rendered links and status/API mismatch. Fixtures and generated HTML remain on this repo volume.
+  Adopt directive in a decision and roadmap principle/disposition; compact map input at unchanged cap.
+  Correct D71 landing and measurement-input status; preserve earlier checklists/journals unchanged,
+  D72 milestone blocker: archive resident-limit RED uses the live archive plus 22 fixed records;
+  486538 + 3520000 decoded bytes exceeds 4000000, so decoded-limit refusal preempts its intended
+  resident predicate. Fix this small fixture defect here before closing publication verification:
+  use a fixed minimal valid archive, paired passing/overflow resident cases, no reader/bound changes.
+  Keep ROADMAP within its original baseline by moving its exact D32 explanation into the existing
+  canonical decision and leaving a concise disposition link; no registry/ceiling changes.
+  Roll live records by exact predecessor bytes if required. Focused checks plus full probe milestone.
+  Verification: 47 chapters/14 scoped public APIs, all source/rendered links; nine publication probes,
+  28 archive arms and full 24 suites green; glossary/ledger/censuses and staged doctrines.
+  Commit: `STITCHCAD-G1-0036` (this recording commit).
 
 - ID: `G1-SLICE.4d.2`
   Status: `pending`
@@ -565,6 +561,9 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.5`
   Status: `pending`
+  Syntax frontier: `.5a` may proceed while D70 blocks complete SizeSet. Membership/table/Ease
+  foundations are implemented; expression syntax consumes no axis or full SizeSet representation.
+  This dependency exception leaves .4's remaining children owned and unclosed.
   Goal: formula graph + construction-recipe evaluation — acyclic dependency graph, single
   deterministic pass, name binding (measurements, prior points/lengths/angles, profile
   parameters), conditionals, units inside expressions (implements the `G0-CONTRACT.9` language).
@@ -575,6 +574,17 @@ metadata signoff unchanged; the named table slice follows.
   G3 executes physical construction and determines supported opening scope without approximation.
   Buttonhole derivation: validate typed operation/dependency on the canonical button-size declaration;
   G3 executes it and validates positive physical length without a separately authored hole length.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a`
+  Status: `pending`
+  Goal: expression-language syntax from the full formula contract/grammar/examples. Read all three
+  before finalizing a pre-code protocol and safe parser subleaves; introduce immutable syntax and
+  precise source diagnostics without claiming evaluation, generated geometry or resolved SizeSet.
+  Acceptance: syntax, keywords, literals/units, precedence/conditionals, structural bounds and
+  rejected forms conform to the normative language; canonical/display forms and source spans are
+  explicit. Type/name binding, exact evaluation/DAG and operation recipes remain .5's later children.
   Verification: `pending`
   Commit: `pending`
 
@@ -738,7 +748,17 @@ metadata signoff unchanged; the named table slice follows.
 | done | `G1-SLICE.4c.3a` | `done` | Current authored garment chart observations |
 | done | `G1-SLICE.4c.3b` | `done` | Explicit current Design/member/POM coverage |
 | done | `G1-SLICE.4c.3c` | `done` | Custom member-of-one body/Ease inputs |
-| next | `G1-SLICE.4d.1` | `pending` | Director's incremental book/alignment requirement; D71 status fix |
+| done | `G1-SLICE.4d.1` | `done` | Incremental book, glossary/index/annexes; D71/D72 fixed |
+| next | `G1-SLICE.5a` | `pending` | Read expression contracts, then syntax slices; D70 axes remains pending |
+
+## Routing Evidence — D72, milestone fixture calibration
+
+Full `make probes` reaches history_archive_probes.py's resident-overflow arm and fails with
+`decoded history aggregate bound exceeded`, not its expected resident error. Inventory at 285e238
+is 486538 decoded bytes; 22 × 160000 makes 4006538, above the unchanged 4000000 limit. The reader's
+ordering/cap is correct. This reproduces outside garment logic in the archive test fixture. It is
+kept in .4d.1 as a small prerequisite of this publication milestone, not routed to an unowned report;
+production archive retention and SPINE.19's other obligations are unchanged.
 
 ## Routing Evidence — D67, lesson decision freshness
 
@@ -822,29 +842,42 @@ measured by the `SPINE.7` probe).
 
 
 
-### `G1-SLICE.4c.3c` — canonical MTM body/Ease inputs
 
-- [x] **REPRODUCE / ISSUE** — `git grep -n 'pub struct MtmChart' e299771 -- crates/sc-measure/src`
-  → 0 matches, expected rc=1; size-sets §11 needs custom-member body/Ease input correspondence.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `rg -n 'Made-to-measure|Body|Ease' docs/book/src/spec/size-sets.md`
-  → MTM regeneration requires explicit body-to-POM mappings, rc=0; garment observations alone
-  cannot supply a body input or certify its evaluated garment result.
-- [x] **FIX** — private immutable MTM charts pin exact custom sole-member and Ease-set reference
-  targets; borrow current mappings, metadata, declarations, source/state/provenance. Unknown/derived
-  numeric inputs refuse; completeness checks every current Design garment POM; grading always refuses.
-- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test mtm_chart_contract` → 15 passed,
-  rc=0; two privacy/role compile-fail docs pass. `bash docs/tasks/artifacts/mtm_chart/run_mtm_chart_mutations.sh`
-  → twelve actual assertion reds (rc=101 each), exact production-source restoration, runner rc=0.
-  Body and Ease zero fallbacks and enabled grading are independently rejected.
-- [x] **NO REGRESSION** — `make check` → strict fmt/clippy and 439 tests, rc=0; `make wasm` and
-  warning-free `make book`, rc=0. Glossary/tree/feature/uncertainty censuses, ledger and staged
-  doctrines green. Source and rendered main/annex links and table cells checked; no new remote-CI claim.
-- [x] **LOCKSTEP** — roadmap size-sets/regeneration contracts, package/API, book/main/annex and live
-  pointers agree. Completed .3b contract/checklist retains exact e299771 bytes in the linked sibling;
-  oldest changelog/lesson payloads seal unchanged. Director's publication requirement and landing
-  status defect D71 are owned by .4d.1 next; axes D70 remains unanswered, with no representation default.
+### `G1-SLICE.4d.1` — progressive publication and scoped lockstep
+
+- [x] **REPRODUCE / ISSUE** — `git show 285e238:docs/book/src/introduction.md` reports G0-only
+  status despite G1 libraries; measurement-inputs calls implemented Ease future work. Full milestone
+  initially fails archive resident fixture with decoded-limit error and roadmap baseline growth.
+- [x] **ROOT CAUSE (WHY + WHERE)** — first `make probes` → archive `AssertionError` naming
+  decoded versus resident predicate, rc=2; `wc -lc ROADMAP.md` → 964/54067, rc=0. D71 is stale
+  landing/status prose, not missing code. D72 is
+  history_archive_probes.py: 486538 + 22 × 160000 = 4006538 exceeds decoded 4000000 before resident
+  validation. The reader is correct; a production-sized baseline made the intended RED dependent on
+  unrelated growth. Roadmap 964/54067 exceeds unchanged 951/53153 baseline; trimming is the remedy.
+- [x] **FIX** — five progressive learning chapters, truthful availability, independent glossary/
+  topic index and detailed annex navigation with preserved URLs/anchors. Fourteen API/status rows
+  link roadmap/code/book/task owners; publication refusal probes own regression coverage. Fixed
+  independent resident fixture plus green/control arm; D32 disposition retained exactly in its
+  canonical decision while roadmap becomes concise, 951 lines/53129 B. No cap or reader changed.
+- [x] **ADDRESSED (verified)** — `bash docs/tasks/artifacts/book_publication/run_book_publication_probes.sh`
+  → 47 chapters/14 rows/983 source links/1489 rendered links; eight named refusal mutations and
+  one real-tree green, nine pass/0 fail, rc=0. Archive → 28 pass/0 fail, rc=0. Landing G1 and Ease
+  scope corrected; D71/D72 close with exact historical descriptions preserved in defects part14.
+- [x] **NO REGRESSION** — `TMPDIR="$PWD/target/scratch" make probes` → 24 suites green, rc=0;
+  glossary → 310 terms/9 parts/158 tokens/0 failures; tree/feature/uncertainty/ledger green, rc=0.
+  Warning-free book and source/rendered table cells pass; staged `make gate` → all doctrines green.
+  Rust/Cargo unchanged from strict 439-test native/WASM 285e238; no new runtime or remote-CI claim.
+  Browser screenshot review is unavailable under the environment's local-URL policy; rendered
+  artifact checks verify content/navigation instead, without asserting a visual browser inspection.
+- [x] **LOCKSTEP** — director directive adopted in roadmap §2/disposition and indexed retrievable
+  decision. Public source map and availability distinguish structural libraries from future geometry/
+  API/MCP/apps/approval. Original D32 disposition and completed MTM contract/checklist retain exact
+  HEAD bytes. Rolling seals preserve payloads; no baseline/ceiling raised. .4d.2 combined review stays
+  pending; .5a syntax can progress independently of D70's required unanswered axes ruling.
 
 ## Verification Log
+
+| `2026-10-02` | `.4d.1` | book/source/render/status/index; nine publication probes; archive/control; full milestone/censuses/ledger/staged gate | 47 chapters/14 APIs, 983/1489 links, 28 archive arms, 24 suites green; D71/D72 fixed |
 
 | `2026-10-02` | `.4c.3c` | MTM contracts/mutations; strict Rust/WASM/book; current-reference censuses/ledger/staged gate | 15 contracts/two docs, twelve reds, 439 tests; focused checks green, rc=0 |
 
@@ -899,3 +932,18 @@ retains exact e299771 bytes; earlier journals remain linked there. Current entri
   remains durably task-owned for .4d.1's adoption, not a new MTM semantic decision).
 
 | `.4c.3c` | `STITCHCAD-G1-0035 (leaf G1-SLICE.4c.3c): made-to-measure charts retain canonical body and Ease inputs` | 15 contracts/two docs, twelve reds, 439 tests/WASM/book; publication review next |
+
+- `2026-10-02`: .4d.1 applies the director's incremental book policy, glossary/index and expert
+  annexes. D71 status drift is fixed. D72 resident fixture is isolated from growing archive history
+  and gains a positive control; full 24-suite milestone now passes. Roadmap amendment stays inside
+  unchanged 951/53153 debt baseline by preserving its old D32 explanation exactly in that decision.
+  Existing chapter URLs and clause anchors remain; public/source links and 14 structural API records
+  are verified, not treated as complete semantic or production certification. Local file screenshot
+  access is blocked by browser policy; HTML link/table evidence is inspected without a bypass.
+- promotion: promoted by `decision_book-progression.md` (fresh answers/director requirement).
+
+| `.4d.1` | `STITCHCAD-G1-0036 (leaf G1-SLICE.4d.1): the book teaches progressively with indexed expert annexes` | 47 chapters/14 APIs; nine publication probes; 28 archive arms; full 24 suites; D71/D72 fixed |
+
+- Staged acceptance initially refused the ROOT CAUSE bullet's missing command-output signature;
+  the actual first milestone invocation/refusal and rc=2 are now cited inside that bullet. The
+  mechanical gate remains unchanged; final staged verification is rerun before committing.

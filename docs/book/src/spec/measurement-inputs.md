@@ -3,7 +3,8 @@
 [Ontology §2.1/§5](ontology.md) requires measurement state and provenance as content. Measurement,
 ease and chart metadata need one canonical source; `G1-SLICE.4a.1` supplies the shared length
 contract in sc-core, consumed by [sc-measure metadata](measurement-metadata.md). The measurement
-table is implemented in sc-measure; ease mapping and SizeSet are subsequent owned slices. No standard's measurement
+table and [Ease mappings/sets](ease-inputs.md) are implemented in sc-measure; SizeSet membership
+and garment/MTM chart foundations exist, while full composition remains owned work. No standard's measurement
 values or landmark vocabulary are invented here ([standards](standards.md)).
 
 ## Authored value and state

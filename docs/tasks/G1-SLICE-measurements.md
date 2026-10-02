@@ -642,3 +642,56 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
 - promotion: declined (routine current-reference/coverage implementation; book/task own the contract).
 
 | `.4c.3b` | `STITCHCAD-G1-0034 (leaf G1-SLICE.4c.3b): garment charts verify exact current Design and member coverage` | 18 contracts/privacy, fourteen reds, 422 strict tests/WASM/book; MTM/body next |
+
+## MTM contract and evidence — preserved from 285e238
+
+- ID: `G1-SLICE.4c.3c`
+  Status: `done`
+  Goal: typed MTM body-input chart correspondence for custom single-member ranges, current body/Ease
+  mappings and provenance; preserve body versus garment observation distinction and path-1 semantics.
+  Pre-code protocol: immutable MtmChartDefinition pins id, membership reference/member, expected
+  EaseSetDefinition (reference target snapshot: set/table ids and ordered mapping bindings only),
+  and chart correspondence provenance. MtmChartContext borrows membership/current Ease sets and
+  EaseSetContext; reject duplicate/cross-kind identities including set/member ids. Require Custom
+  membership of exactly one, with the authored member equal to its existing sole/base member.
+  Resolve the saved canonical set id and compare every expected set/table/ordered mapping target;
+  current fit/compression/provenance/source/state remain borrowed. Selected POM queries use current
+  EaseSet membership/target checks; body and signed amount declarations/values remain distinct from
+  garment metadata, with no body-as-POM result or automatic addition/evaluation. Unknown/derived
+  source drafts stay inspectable and numeric queries preserve their required observation/evaluation.
+  Constructor/current validation checks all authored mappings but permits empty/incomplete drafts.
+  Completeness requires nonempty mappings and coverage of every current Design-table garment POM,
+  with the full Design table validated; no narrowed mapping subset may certify itself complete.
+  Direct grade-rule input refuses explicitly for this authored MTM chart, independent of numeric
+  readiness. No breaks field/default or axis representation; composite/path execution belongs .3d/G3.
+  Acceptance: member/system/reference guards, missing/stale/current mapping and table failures,
+  canonical borrowing/state/provenance edits, body/Ease numeric refusal, explicit immutable replacement,
+  full POM coverage and grade refusal. Own book/API/live docs, exact evidence relocation and rolling
+  seals where health milestones require them; real production mutations and focused integration checks.
+  Book publication: apply the director's incremental teaching requirement to this chapter now;
+  put low-level API/reference/currentness/verification detail in a linked expert annex.
+  Verification: 15 contracts/two privacy-role docs, twelve real reds; 439 strict tests/WASM/book;
+  glossary/uncertainty/feature/tree/ledger and staged doctrines.
+  Commit: `STITCHCAD-G1-0035` (this recording commit).
+
+### `G1-SLICE.4c.3c` — canonical MTM body/Ease inputs
+
+- [x] **REPRODUCE / ISSUE** — `git grep -n 'pub struct MtmChart' e299771 -- crates/sc-measure/src`
+  → 0 matches, expected rc=1; size-sets §11 needs custom-member body/Ease input correspondence.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `rg -n 'Made-to-measure|Body|Ease' docs/book/src/spec/size-sets.md`
+  → MTM regeneration requires explicit body-to-POM mappings, rc=0; garment observations alone
+  cannot supply a body input or certify its evaluated garment result.
+- [x] **FIX** — private immutable MTM charts pin exact custom sole-member and Ease-set reference
+  targets; borrow current mappings, metadata, declarations, source/state/provenance. Unknown/derived
+  numeric inputs refuse; completeness checks every current Design garment POM; grading always refuses.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test mtm_chart_contract` → 15 passed,
+  rc=0; two privacy/role compile-fail docs pass. `bash docs/tasks/artifacts/mtm_chart/run_mtm_chart_mutations.sh`
+  → twelve actual assertion reds (rc=101 each), exact production-source restoration, runner rc=0.
+  Body and Ease zero fallbacks and enabled grading are independently rejected.
+- [x] **NO REGRESSION** — `make check` → strict fmt/clippy and 439 tests, rc=0; `make wasm` and
+  warning-free `make book`, rc=0. Glossary/tree/feature/uncertainty censuses, ledger and staged
+  doctrines green. Source and rendered main/annex links and table cells checked; no new remote-CI claim.
+- [x] **LOCKSTEP** — roadmap size-sets/regeneration contracts, package/API, book/main/annex and live
+  pointers agree. Completed .3b contract/checklist retains exact e299771 bytes in the linked sibling;
+  oldest changelog/lesson payloads seal unchanged. Director's publication requirement and landing
+  status defect D71 are owned by .4d.1 next; axes D70 remains unanswered, with no representation default.

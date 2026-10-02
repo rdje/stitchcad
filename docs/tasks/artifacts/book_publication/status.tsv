@@ -1,0 +1,15 @@
+# family	chapter	public source	public type	task owner	roadmap section
+units	spec/units-and-tolerances.md	crates/sc-units/src/length.rs	Length	G0-CONTRACT.2	4.2
+identity	spec/ontology-implementation.md	crates/sc-core/src/ontology/id.rs	EntityId	G1-SLICE.3a	4.1
+physical copies	spec/ontology-implementation.md	crates/sc-core/src/ontology/cut.rs	CutCopy	G1-SLICE.3c.1	3.1
+sewing	spec/ontology-implementation.md	crates/sc-core/src/ontology/sewing.rs	SewingGraph	G1-SLICE.3c.2b	3.1
+constructions	spec/ontology-constructions.md	crates/sc-core/src/ontology/pocket.rs	Pocket	G1-SLICE.3c.4d.1	3.1
+closures	spec/ontology-closures.md	crates/sc-core/src/ontology/closure.rs	Closure	G1-SLICE.3c.4c.2	3.1
+canonical inputs	spec/measurement-inputs.md	crates/sc-core/src/value.rs	LengthDeclaration	G1-SLICE.4a.1	8
+measurement metadata	spec/measurement-metadata.md	crates/sc-measure/src/measurement.rs	Measurement	G1-SLICE.4a.2b	3.1
+measurement tables	spec/measurement-metadata.md	crates/sc-measure/src/table.rs	MeasurementTable	G1-SLICE.4a.3	3.1
+Ease	spec/ease-inputs.md	crates/sc-measure/src/ease_set.rs	EaseSet	G1-SLICE.4b.2	3.3
+membership	spec/size-membership.md	crates/sc-measure/src/size_membership.rs	SizeMembership	G1-SLICE.4c.1	3.4
+garment observations	spec/size-chart-observations.md	crates/sc-measure/src/size_chart.rs	SizeChartObservation	G1-SLICE.4c.3a	3.3
+garment collections	spec/size-chart-collections.md	crates/sc-measure/src/size_chart_collection.rs	SizeChart	G1-SLICE.4c.3b	3.4
+MTM	spec/mtm-input-charts.md	crates/sc-measure/src/mtm_chart.rs	MtmChart	G1-SLICE.4c.3c	3.3

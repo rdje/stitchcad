@@ -60,6 +60,26 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part30.md`](docs/history/stitchcad-changelog-part30.md) | STITCHCAD-G1-0013 | 14 lines, 1211 bytes, `sha256:7eb41b35…` |
 
+| [`stitchcad-changelog-part31.md`](docs/history/stitchcad-changelog-part31.md) | STITCHCAD-G1-0014 | 13 lines, 1097 bytes, `sha256:28bbb8fb…` |
+
+| [`stitchcad-changelog-part32.md`](docs/history/stitchcad-changelog-part32.md) | STITCHCAD-G1-0015 | 13 lines, 1096 bytes, `sha256:9e00082b…` |
+
+## STITCHCAD-G1-0036 - progressive book and indexed expert annexes (leaf `G1-SLICE.4d.1`)
+
+Five learning chapters introduce recipes, measurements, physical copies, sizes and agent workflows.
+Truthful availability separates current libraries from future applications/execution. The glossary
+remains reachable, a topic index covers every other registered chapter, and detailed contracts move
+into Annexes navigation at preserved URLs/anchors. Roadmap §2 adopts the director's policy, with an
+indexed decision; D32's older disposition is preserved exactly while keeping the unchanged baseline.
+
+Publication checks verify 47 chapters, 14 scoped public API/requirement rows, 983 source and 1489
+rendered links; eight refusal fixtures plus real-tree green pass. D71 stale G0/Ease status is fixed.
+D72 isolates the archive resident probe from growing production history and adds a green control;
+28 archive arms and all 24 full suites pass, with glossary/ledger/staged doctrines green. Browser
+local-URL policy prevents screenshot inspection; rendered HTML content/navigation is checked.
+Completed MTM and oldest ledger/lesson/defect descriptions retain exact bytes. G1 stays 5/18;
+next .5a syntax is independent of D70 axes, which remains awaiting the required director ruling.
+
 ## STITCHCAD-G1-0035 - canonical MTM body/Ease inputs (leaf `G1-SLICE.4c.3c`)
 
 Immutable custom-member-of-one charts pin canonical Ease-set/table/mapping references. Current body
@@ -361,31 +381,3 @@ censuses, ledger and staged gates pass. Three recent mark/dart checklists move u
 sibling; every staged checklist is revalidated. Oldest dev-note lesson seals to part15. No goldens change.
 Intake parents close: all four kinds have structural APIs. G1 remains 4/18 top-level leaves, 3/4 object
 families. Next `.3c.4b` implements hem/layer descriptors.
-
-## STITCHCAD-G1-0015 - distinct tucks and pleats retain owned fold intent (leaf `G1-SLICE.3c.4a.2a`)
-
-Separate immutable Tuck/Pleat types share structural validation of intake provenance, nonempty
-directed fold ranges, explicit direction and closing-operation identity. Negative explicit intake,
-empty/duplicate held intervals and unresolved/foreign ranges are typed refusals. Symbols supply no
-values/defaults; physical fold shape, count rules and conserved intake remain G2/G3 obligations.
-
-Nine contracts exercise both types and two privacy doctests pass. Disabling ownership refusal makes
-the foreign-middle merge regression red; restored strict Rust, wasm, warning-free book, fixture,
-feature/glossary/tree censuses, ledger and staged doctrines pass. Directed queries retain reversals,
-fragment order and interior repairs without mutation. Construction book examples and live records
-stay aligned. Oldest CHANGELOG/DEV_NOTES entries seal to part18/part14 before their health targets.
-G1 stays 4/18 top-level leaves, 3/4 object families. Next `.3c.4a.2b` links gather intent to sewing spans.
-
-## STITCHCAD-G1-0014 - semantic darts retain intake and closing-operation intent (leaf `G1-SLICE.3c.4a.1`)
-
-Dart is immutable structural content: intake origin, apex on owned internal construction geometry,
-two directed legs, explicit direction reference and closing-operation identity. Born references need
-owned full intervals and unique endpoints; identical held legs, negative authored intake and invalid
-apices are typed refusals. Symbols provide no values/defaults. Physical coincidence and executed
-intake conservation remain explicit G2/G3 obligations; registries must validate parameters/operations.
-
-Nine contracts + privacy pass. Ownership refusal disabled makes the merged foreign-middle regression
-red; restored strict Rust, wasm, warning-free book, fixture/feature/glossary/tree censuses, ledger and
-staged doctrines pass. Construction objects now have safe owned child slices; a bounded construction
-book companion preserves examples and physical limits. No goldens change. G1 remains 4/18 top-level
-leaves, 3/4 object families; next `.3c.4a.2` implements tuck/pleat/gather intent.

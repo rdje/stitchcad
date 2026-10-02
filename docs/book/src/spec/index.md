@@ -1,18 +1,25 @@
-# The G0 contract
+# Specification and reference
 
 This part of the book holds StitchCAD's **specification**: the normative contract that implementation
-must satisfy. It is written during gate G0 (the product-and-semantic-contract gate) from
+must satisfy. Its foundation was written during gate G0 (the product-and-semantic-contract gate) from
 `ROADMAP.md`, and each chapter names the gate that implements it.
+
+The [learning path](../learn/design-to-pattern.md) introduces the concepts without requiring API or
+format knowledge. These annexes carry their exact contracts. The [topic index](../topic-index.md)
+gives experts direct entry points, and [availability](../availability.md) distinguishes implemented
+libraries from future workflows. Existing chapter URLs and numbered clause anchors are preserved.
 
 ## How to read these chapters
 
 - **Normative language.** "SHALL" and "MUST" state a requirement on the implementation; "SHOULD"
   states a default that a recorded decision may override; "MAY" states an option. A sentence in the
   indicative describes what the model *is*, not what a build does today.
-- **Status is elsewhere on purpose.** These chapters do not carry status flags or dates — a hand-kept
-  "last updated" is right the day it is typed and false the day after. What has actually been built is
-  in the repository's `LIVE_STATUS.md`; why a rule looks the way it does is in `docs/decisions/`;
-  which leaf owes which chapter is in `docs/tasks/G0-CONTRACT.md`.
+- **Requirements and implementation are distinct.** The normative chapters specify intended
+  behavior. Linked executable chapters describe built library contracts and their deferred proofs.
+  [Availability](../availability.md) and the [implementation-status annex](../annexes/implementation-status.md)
+  summarize that boundary. Detailed progress is in the repository's LIVE_STATUS.md; decisions and
+  task-trees retain their canonical ownership. Git records currency; no hand-kept "last updated" date
+  certifies a chapter.
 - **Claims carry their verification.** Where a chapter states a fact about an external standard or a
   third-party product, it also states how that fact was established — read in this repository, cited
   from the roadmap's own review, or still unverified with a named owner. An unverified claim is
@@ -36,5 +43,5 @@ must satisfy. It is written during gate G0 (the product-and-semantic-contract ga
 | [Measurement standards](standards.md) | Which external standards the model draws on, what is adopted from each, and the verification status of every claim |
 | [Reference skirt](reference-skirt.md) | The one garment specified with real numbers, which every conformance suite, golden file and agent gate is built around |
 
-Each chapter is added to this book by the task-tree leaf that writes it, so the list above grows into
-the table of contents rather than preceding it.
+Each change updates its task-owned implementation and affected book contracts in the same commit.
+The [topic index](../topic-index.md) also includes executable contracts and all other registered chapters.

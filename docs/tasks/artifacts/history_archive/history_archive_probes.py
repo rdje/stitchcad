@@ -134,12 +134,36 @@ try:
         selected = {r['path'] for r in MANIFEST['members'][:26]}
         pack(p, lambda row, content: (b'a' * 399 + b'\n') * 400 if row['path'] in selected else content)
     arm('RED decoded aggregate independent of compression', decoded_overflow, 'decoded history aggregate bound exceeded')
-    def resident_overflow(p):
-        raw = (p / MANIFEST['payload']).read_bytes()
-        replace_payload(p, raw + b'\0' * 700000)
+    def resident_fixture(p, padding):
+        # This predicate must not depend on accumulated production history. Use a minimal valid
+        # one-member window; the catalog, controls and 22 raw records are fixed in both arms.
+        shutil.rmtree(p / '.doctrine/history_archive')
+        shutil.rmtree(p / 'docs/history')
+        (p / '.doctrine/history_archive').mkdir(parents=True)
+        (p / 'docs/history/payloads').mkdir(parents=True)
+        (p / history.MASTER).write_text(json.dumps({
+            'version': 1, 'windows': ['.doctrine/history_archive/window1.json']}) + '\n')
+        content = b'x\n'
+        manifest = copy.deepcopy(MANIFEST)
+        member = copy.deepcopy(manifest['members'][0])
+        member.update(lines=1, bytes=len(content), sha256=history.digest(content))
+        manifest['members'] = [member]
+        data = io.BytesIO()
+        with tarfile.open(fileobj=data, mode='w', format=tarfile.PAX_FORMAT) as archive:
+            entry = tarfile.TarInfo(member['path'])
+            entry.size = len(content)
+            archive.addfile(entry, io.BytesIO(content))
+        raw = gzip.compress(data.getvalue(), mtime=0) + b'\0' * padding
+        manifest['payload_sha256'] = history.digest(raw)
+        manifest['payload'] = 'docs/history/payloads/' + manifest['payload_sha256'] + '.tar.gz'
+        (p / manifest['payload']).write_bytes(raw)
+        (p / manifest['catalog']).write_text('### ' + Path(member['path']).name + '\n')
+        save(p, manifest)
         for i in range(22):
             (p / ('docs/history/stitchcad-defects-part%d.md' % (1000 + i))).write_bytes((b'a' * 399 + b'\n') * 400)
-    arm('RED resident aggregate below decoded ceiling', resident_overflow, 'resident history aggregate bound exceeded')
+    arm('GREEN resident fixture below both aggregate ceilings', lambda p: resident_fixture(p, 0))
+    arm('RED resident aggregate below decoded ceiling', lambda p: resident_fixture(p, 700000),
+        'resident history aggregate bound exceeded')
     for command, argument, expected in [('read', 'docs/history/missing.md', 'unknown logical identity'), ('materialize', '../escape', 'destination must be under target/'), ('materialize', 'target/scratch/history_archive_probes/materialized', 'destination exists')]:
         result = subprocess.run(['bash', str(ROOT / 'scripts/history_archive.sh'), command, argument], cwd=ROOT, capture_output=True)
         assert result.returncode == 1 and expected.encode() in result.stderr, result.stderr

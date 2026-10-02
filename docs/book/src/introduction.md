@@ -1,63 +1,47 @@
-# Introduction
+# Welcome to StitchCAD
 
-**StitchCAD** is pattern-engineering software for garment makers. This book is its public
-documentation surface: the specification of what the tool means, the guides for using it, and the
-reference for the formats it writes.
+StitchCAD is being built for people who make garment patterns and need to explain how those patterns
+were constructed. A design records measurements, decisions and construction steps so that a change
+can be traced through the pattern. The long-term goal is a checked package for a named factory.
 
-## The idea in one paragraph
+**Today, the project provides Rust foundation libraries, not a finished drafting application.**
+The [availability page](availability.md) separates what exists from the planned workflows.
+This book explains both, with technical contracts kept in the annexes.
 
-A garment design in StitchCAD is not a drawing. It is a **construction recipe**: a measurement table,
-a formula graph over those measurements, and an ordered sequence of drafting operations that produce
-pieces, seams, darts and ease relationships. Geometry is *derived* from that recipe, so the same
-design can be re-evaluated for a different body or a different size without redrawing anything. To
-turn a design into files a factory can cut, StitchCAD uses a **Factory Profile** — a versioned bundle
-of typed parameters and constraints, each carrying its own evidence — and the artifact generator
-serializes the result to industry formats (DXF in AAMA and ASTM dialects, HPGL/PLT, PDF, tech pack) as
-an immutable release package with a manifest.
-
-Two commitments shape everything else:
-
-- **Unknown facts stay unknown.** A parameter is a known fact (with scoped evidence), an unknown fact
-  (requiring observation), a selectable design choice, an overridable preference, or a derived value.
-  Unknown facts are never silently defaulted into geometry, and a policy matrix decides which
-  artifacts they block. A plausible guess that produces an unusable pattern is worse than a question.
-- **Nothing is asserted without evidence.** Compatibility with a cutting room is a claim, and a claim
-  carries its scope: which target system, which version, which import settings, which artifact, who
-  checked, when, with what result. One factory's acceptance is evidence for that envelope, never a
-  general certificate.
-
-## Who this book is for
+## Choose your route
 
 | Reader | Start here |
 | --- | --- |
-| A patternmaker wanting to know what the tool will do | This page, then the specification part |
-| A sewing or factory expert asked to author a profile | The specification part, and the profile guide when it lands |
-| An AI agent driving the tool | The command-API and MCP chapters when they land — the API returns stable diagnostic codes, never prose to parse |
-| A contributor | The repository's `README.md`, `ROADMAP.md`, `docs/TASK_TREE.md` and `COMMIT.md` |
+| Student or newcomer | [From an idea to a pattern](learn/design-to-pattern.md), then follow the learning chapters |
+| Patternmaker or sewing expert | [Measurements and fit](learn/measurements-and-fit.md), then the [reference skirt](spec/reference-skirt.md) |
+| Experienced developer or agent integrator | [Availability](availability.md), then the [topic index](topic-index.md) for direct API and contract links |
+| Looking up a word | The [glossary and its A–Z term index](spec/glossary.md) |
 
-## What is true right now
+The learning chapters introduce one set of ideas at a time: a recipe, its measurements, the pieces
+it produces, sizes, and collaboration with agents. You do not need to learn API names or file-format
+rules to follow them. Experienced readers can go straight to the annex they need.
 
-The project is in gate **G0** — the product-and-semantic-contract gate. The chapters in the
-specification part are being written from `ROADMAP.md` and are **normative contracts for
-implementation**, not descriptions of shipped behavior. Where a chapter states a rule, the rule is
-what the code must do when the code exists; the repository's `LIVE_STATUS.md` is the authoritative
-record of what has actually been built, and each specification chapter names the gate that implements
-it.
+## Two principles to carry with you
 
-That distinction is deliberate and it is enforced by how the project works: nothing changes without a
-task-tree leaf owning it, every code change lands with tool-backed evidence, and this book is updated
-in the same commit as the change that affects it.
+**An unknown stays unknown.** If a measurement or factory requirement is missing, the model records
+what still needs observation. It does not silently use a plausible number. An assumption remains
+labelled as an assumption, even when it helps you explore a design.
 
-## How the book is organized
+**A successful check has a scope.** Valid input records do not prove a pattern fits. A file accepted
+by one factory does not prove compatibility everywhere. The evidence must say what was checked and
+what that result supports. This is how the project works toward production-grade behavior.
 
-- **Specification** — the normative contract: glossary, units and tolerances, the garment ontology,
-  the supported envelope, both instantiation paths, size sets, the command layer, release and
-  approval, interchange dialects, the formula language, internationalization, the measurement
-  standards the model draws on, and the reference garment that every conformance suite is built
-  around.
-- **Guides** — task-oriented: drafting a garment, grading it, authoring a factory profile, exporting
-  a release package, driving the tool from an agent. These appear as the features they describe exist.
-- **Reference** — formats, diagnostic codes, command list. Also appears with the implementation.
+## Where the detail lives
 
-Chapters are added as they are written; the plan they follow is owned by the `G0-CONTRACT` task-tree
-in the repository, which is the authority for what is due and in what order.
+- **Learning path:** short explanations and declared examples, in reading order.
+- **Availability:** implemented library behavior and future work, stated separately.
+- **Glossary:** shared meanings, synonyms and a term index.
+- **Annexes:** normative model, API contracts, numerical rules, formats, validation and governance.
+- **Topic index:** direct links across the whole book, including the expert references.
+
+The roadmap defines the required behavior; code and tests establish what exists; this book explains
+that same state. A feature change and its documentation belong to the same task-owned commit.
+The repository's LIVE_STATUS.md carries detailed gate progress. G0 contract review is mostly complete
+with human closure unapproved; G1 executable foundations are in progress.
+
+Continue with [From an idea to a pattern](learn/design-to-pattern.md).

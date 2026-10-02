@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — teach progressively while verifying public implementation scope
+
+- The director requires roadmap/code/book lockstep, incremental teaching and direct expert routes.
+  Five learning chapters precede detailed annexes; the existing glossary and new complete topic index
+  remain independent navigation surfaces. Original chapter URLs/anchors and normative rules stay intact.
+- Fourteen public-API rows bind book chapters, code, roadmap clauses and task owners. Source/rendered
+  navigation and chapter/index coverage are checked, with eight copied-fixture refusal mutations.
+  These are scoped structural/status proofs; prose semantics and later execution/approval still need
+  their canonical contracts and evidence. D71 corrects old G0-only/Ease-future statements.
+- The full milestone exposed D72: history growth made a fixed resident-limit fixture exceed the decoded
+  limit first. Production validation was correct. A minimal independent archive, matched positive
+  control and resident overflow arm fix the test; 28 archive arms and all 24 suites pass.
+- Roadmap growth is contained by retaining D32's exact older explanation in its canonical decision;
+  951 lines/53129 bytes remain within the original 951/53153 baseline. Map input is compacted rather
+  than raising its cap. Completed MTM and sealed payloads preserve exact predecessor bytes.
+- Browser local-file policy blocks screenshot review; source/rendered HTML links and table cells are
+  inspected without a policy bypass. No visual browser or new runtime/remote-CI verdict is claimed.
+- promotion: promoted by `decision_book-progression.md` (fresh answers/director publication requirement).
+
 ## _(2026-10-02)_ — MTM charts preserve distinct body inputs and garment targets
 
 - A custom sole-member chart pins its canonical Ease-set reference snapshot, not numeric/fit/state
@@ -100,24 +119,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   restore exact source, and strict checks/WASM/book pass. Ease sets/table membership follow separately.
 - promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s Ease section.
 
-## _(2026-10-02)_ — measurement tables pin bindings and borrow current scalar records
-
-- A table owns stable id/name and authored order of measurement/token/kind/declaration bindings.
-  It holds no copied values, source/state or procedure text. Context borrows unambiguous metadata
-  and existing canonical targets; tokens are unique per table, while unrelated tables may share
-  spelling. Empty named drafts and shared declarations are legal; names never establish identity.
-- Saved bindings resolve by measurement id before expected token/domain/declaration checks. Removed
-  measurements never transfer a token to peers. Same-id declaration state/source or procedure text
-  revisions stay canonical/current; scalar identity reassignment requires explicit validated rebinding.
-  Targeted queries check the selected metadata's required references; whole-table validation checks all.
-- Sixteen contracts and a privacy doc pass; eight real production guard mutations fail assertions,
-  not compilation, and restore source byte-identically. The initial mutation diagnostic rejected an
-  unwrap_err panic as lacking an assertion marker; direct err comparison makes the contract explicit.
-  Strict Rust executes 342 tests; WASM/book/censuses and milestone probes/gates verify the restore.
-- Named tables complete .4a's structural field/reference contract; Ease/SizeSet/family signoff remain
-  .4b/.4c/.4d, G1 stays 5/18. Caller Design revision, source/evidence truth, formula evaluation and
-  physical procedure repeatability remain separate proofs. Completed metadata review relocates unchanged.
-- promotion: promoted by `decision_length-declarations-retain-state-and-provenance.md`'s table section.
 
 
 
@@ -175,3 +176,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part32.md`](docs/history/stitchcad-devnotes-part32.md) | canonical procedure metadata lesson | 20 lines, 1878 bytes, `sha256:d5d201dc…` |
 
 | [`stitchcad-devnotes-part33.md`](docs/history/stitchcad-devnotes-part33.md) | archive capacity/retrieval lesson | 18 lines, 1591 bytes, `sha256:aad7494a…` |
+
+| [`stitchcad-devnotes-part34.md`](docs/history/stitchcad-devnotes-part34.md) | measurement table binding lesson | 18 lines, 1699 bytes, `sha256:3dc0b619…` |

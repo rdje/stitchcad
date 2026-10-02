@@ -130,3 +130,26 @@ the rejection path is still the right answer if a future revision withdraws the 
 Related: [[decision_director-ruling-2026-09-30-four-findings]] ·
 [[decision_product-work-takes-the-frontier]] · `docs/book/src/spec/feature-matrix.md` §1, §9, §12 ·
 `docs/tasks/PLANNING.md` (defect D32) · `ROADMAP.md` §3.2, §11 (G3, G5, G7).
+
+## Original roadmap disposition — preserved from 285e238
+
+**Amended after review (v0.3), with source:**
+- §11 G3 gains an **envelope coverage** exit criterion, and its "intermediate
+  complexity note" becomes a domain-complexity note that cannot substitute for
+  one. Source: the engineer's proposal under the director's delegation to decide
+  and act on the findings surfaced at G0, closing defect **D32** — roadmap §3.2
+  puts a classic collar and trousers inside the v1 envelope and the ontology
+  models button/buttonhole and pocket objects, yet no gate's exit criteria proved
+  any of them, so G7's supported-envelope statement would have had to declare
+  four of the envelope's own garments untested. The proposal was prepared with
+  its exact current-and-amended text in
+  `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md` and
+  the criterion is written over §3.2's whole garment list, so a future envelope
+  addition inherits a proof requirement instead of needing its own amendment.
+  No locked decision in §15 is reopened: the envelope was already declared, and
+  this names the gate that proves it. The feature matrix's four `(proposed)`
+  cells become committed gates on this revision. The proposal's author and the
+  party that applied it are the same one, which the governance model permits and
+  bounds: the criterion's evidence is derived by instruments rather than asserted,
+  and its author may not approve it (`docs/book/src/governance.md` §6.1,
+  `docs/decisions/decision_self-application-under-delegation.md`).

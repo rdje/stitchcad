@@ -5,11 +5,11 @@ Latest commit: derive with `git log --oneline -1`.
 
 ## Current state
 
-- **Active tree:** `G1-SLICE`, frontier **`.4d.1`** in `docs/tasks/G1-SLICE.md`.
-- **Next action:** apply the director's book publication/alignment requirement: incremental newcomer
-  path, expert annexes, glossary/index; fix D71 stale G0-only landing status and verify current scope.
-  MTM body/Ease .4c.3c is implemented. Axes .4c.2 awaits D70; never infer or default a representation.
-  Breaks/composite .4c.3d and reviews/resolution .4c.3e/.4/.5/.4d.2 remain owned; later physical proof.
+- **Active tree:** `G1-SLICE`, frontier **`.5a`** in `docs/tasks/G1-SLICE.md`.
+- **Next action:** read the complete formula contract/grammar/examples, then define safe syntax
+  subleaves before code. Parsing consumes no axes/complete SizeSet; .4 remains structurally partial.
+  Progressive learning, glossary/topic index and expert annexes are adopted/verified; D71/D72 fixed.
+  D70 axes ruling remains pending: never infer an answer. .4c.3d/.3e/.4/.5 and .4d.2 retain ownership.
 - **In-flight uncommitted work:** none after the recording commit; derive `git status --short`.
 - **Authority constraints:** G0 closure unapproved; roadmap DRAFT. Source procurement/expert seats
   require human acts; governance §8 and G3 `.16` own the details.

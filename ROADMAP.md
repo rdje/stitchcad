@@ -118,6 +118,11 @@ workflows are explicitly later personas.
    of knowledge content (descriptions, explanations) goes through the same
    governed pipeline as code strings (§7.6). RTL layouts never mirror
    geometry.
+10. **Documentation in lockstep.** Roadmap, code and mdBook share verified
+    scope in each task-owned commit. Teach students/newcomers incrementally;
+    give experts a glossary, topic index and direct annexes. API, numerical,
+    format and verification detail belongs in annexes. Distinguish specified
+    future workflows from available behavior.
 
 ---
 
@@ -924,25 +929,20 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
   names its scope now).
 
 **Amended after review (v0.3), with source:**
-- §11 G3 gains an **envelope coverage** exit criterion, and its "intermediate
-  complexity note" becomes a domain-complexity note that cannot substitute for
-  one. Source: the engineer's proposal under the director's delegation to decide
-  and act on the findings surfaced at G0, closing defect **D32** — roadmap §3.2
-  puts a classic collar and trousers inside the v1 envelope and the ontology
-  models button/buttonhole and pocket objects, yet no gate's exit criteria proved
-  any of them, so G7's supported-envelope statement would have had to declare
-  four of the envelope's own garments untested. The proposal was prepared with
-  its exact current-and-amended text in
-  `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md` and
-  the criterion is written over §3.2's whole garment list, so a future envelope
-  addition inherits a proof requirement instead of needing its own amendment.
-  No locked decision in §15 is reopened: the envelope was already declared, and
-  this names the gate that proves it. The feature matrix's four `(proposed)`
-  cells become committed gates on this revision. The proposal's author and the
-  party that applied it are the same one, which the governance model permits and
-  bounds: the criterion's evidence is derived by instruments rather than asserted,
-  and its author may not approve it (`docs/book/src/governance.md` §6.1,
-  `docs/decisions/decision_self-application-under-delegation.md`).
+- §11 G3 adds whole-§3.2 envelope coverage, replacing the domain-complexity
+  note as a substitute for proof. The engineer's proposal under the director's
+  delegation closes D32: collar, trousers, buttons and pockets lacked proving
+  exits. Four `(proposed)` matrix cells become gates; locked scope is unchanged.
+  Exact prior disposition, proposal and reasoning are preserved in
+  `docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md`.
+  The proposal author applied it under governance §6.1; its evidence is derived
+  by instruments and that author may not approve it (self-application decision).
+**Director clarification applied within v0.3, with source:**
+- §2 adds the director's explicit incremental-publication requirement: roadmap,
+  code and book in lockstep, glossary and topic index, detailed expert annexes.
+  G1-SLICE.4d.1 owns adoption and scoped status/navigation verification. This
+  changes documentation obligations, not locked product scope or gate exits;
+  `docs/decisions/decision_book-progression.md` records the source and application.
 
 ---
 

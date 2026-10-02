@@ -12,8 +12,8 @@ complete. This closes the object-type work; it does not close gate G1 or certify
 | Marks/allowances (`notch_contract`, `grain_contract`, `allowance_contract`) | Profile bindings, directed references, width/corner intent | G2 geometry/offsets; G4 bindings |
 | Garment construction contracts | Distinct kinds, operation origins, current composition and canonical sources | G2/G3 execution; Design/G4 bindings |
 
-The fourteen listed object/support suites contain 149 contract tests at this review. Additional
-identity/range properties and unit tests bring sc-core to 242 regular tests plus 18 doc-tests,
+At that review, the fourteen listed object/support suites contained 149 contract tests. Additional
+identity/range properties and unit tests brought sc-core to 242 regular tests plus 18 doc-tests,
 including privacy checks. Test populations are snapshots, derived by `cargo test -p sc-core -- --list`;
 `make check` executes them with strict formatting/lint. The WASM smoke build proves cross-compilation,
 while real browser/runtime workflow proof remains G1-SLICE.11/.12. Independent physical review and
