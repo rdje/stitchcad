@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — exact recipe bytes precede their product serializer
+
+- D109 lacked assertion and complete/empty envelope bytes despite exact binding/expression rules.
+  Flat assertion payload mirrors the existing two-operand API; explicit recipe parentheses preserve
+  order/empty identity without newline conventions. One ASCII space/no final newline closes spelling.
+- The decision is authored/applied by the engineer under existing delegation; independent evidence
+  approval remains unapproved. Principal reversal and future persisted schema/migration owners are
+  explicit. Typed expression/statement/recipe identities must be framed by .7 before hashes/storage;
+  ordinary bind/recipe call names remain valid expression syntax, not new reserved keywords.
+- Sixteen independently authored statement rows cover six kinds/five tolerances and aliases/raw
+  angles/unary/calls/grouped comparisons; nine sources/twelve complete ordered chunks cover empties,
+  adjacency, duplicate/forward declarations and nested operands. Actual reference syntax supplies
+  trees while inference/evaluation traps prevent numerical execution. This is not a whole-recipe parser.
+- Nine actual renderer faults fail authored-byte assertions/exact restore; tracked structural suite
+  watches producer/classifier/anchors. Focused syntax20 and book/language controls pass. Rust code,
+  complete previous syntax subtree/closure and oldest ledger bytes stay exact. Map orientation text
+  is shortened within its unchanged ceiling; no unique maintained fact is removed.
+- promotion: promoted to docs/decisions/decision_recipe-bytes.md; exact bytes and reversal contract.
+
 ## _(2026-10-02)_ — coupled recipe syntax review preserves explicit proof boundaries
 
 - Three new public controls add token-distinguishable zero-gap/ASCII whitespace boundaries and
@@ -21,27 +40,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   next .3f.1 before implementation; no further-decision-needed overclaim remains. G1 .3e closes
   for syntax only; normalization/identity/static binding/evaluation remain distinct obligations.
 - promotion: declined (routine coupled review; existing ADR clarified, no new policy adopted).
-
-## _(2026-10-02)_ — recipe boundaries preserve source order rather than line structure
-
-- Grammar statement* has no newline/semicolon delimiter. Shared header parsing consumes required
-  tokens before top-level let/assert boundary detection; nested keywords stay expression refusals.
-  Original complete-source lexer and operand slices preserve exact gaps/global spans without
-  token rejoining, source normalization or recursive arenas. Standalone mode stays whole-input.
-- Private ordered recipe/slice/Clone/opaque Debug preserves ownership; no partial result on failure.
-  Recipe errors add1-based indices; whole-source ASCII preflight has no knowable statement index.
-  MAX_STATEMENTS4096 measures only the recognized4097th keyword before its body, not an unparsed total.
-- Eight contracts/nine authored sources/14 original statements/18 independent reference identities
-  and all21 worked statements/25 bytes pass. Actual reference traps semantics per authored statement;
-  it is not a complete independent recipe parser. New15 compiled assertion reds and existing15
-  statement faults restore both sources exactly. Strict native550/release17/WASM3 pass.
-- Statement annex/progressive routes/API map/index and current docs distinguish syntax acceptance
-  from pending complete recipe normalization/identity, name/type/binding/evaluation. Prior closure
-  proof/oldest ledgers retain exact payloads. Coupled syntax/diagnostic review .3e.3 follows.
-- D108 archive one-shot delimiter index+7 retained an extra heading byte; actual ledger refused.
-  Exact delimiter splitting restores the full HEAD payload/digest; watched ledger/archive checks pass.
-  Original report wording retained with the standard defect-entry marker; no product code corruption.
-- promotion: declined (routine implementation of the existing ordered grammar, no new policy).
 
 # Sealed archive — earlier lessons
 
@@ -160,3 +158,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part65.md`](docs/history/stitchcad-devnotes-part65.md) | G1-0063 expression identity | 17 lines, 1602 bytes, `sha256:377fd96c…` |
 
 | [`stitchcad-devnotes-part66.md`](docs/history/stitchcad-devnotes-part66.md) | G1-0065/0064 syntax and identity lessons | 33 lines, 2960 bytes, `sha256:01527194…` |
+
+| [`stitchcad-devnotes-part67.md`](docs/history/stitchcad-devnotes-part67.md) | G1-0066 ordered recipe boundaries | 20 lines, 1850 bytes, `sha256:934aee26…` |

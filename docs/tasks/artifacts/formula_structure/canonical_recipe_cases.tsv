@@ -1,0 +1,11 @@
+# Whole source with ASCII escapes<TAB>authored statement chunks separated by |<TAB>exact bytes.
+# - denotes empty source/chunk list; expected bytes are literal ASCII.
+-	-	(recipe)
+\t\n\r\f\v 	-	(recipe)
+let n: count = 1	let n: count = 1	(recipe (bind n count count:1))
+assert closure: eps_num = a == b	assert closure: eps_num = a == b	(recipe (assert closure eps_num a b))
+let n: count = 1assert closure: eps_num = n == 1	let n: count = 1 | assert closure: eps_num = n == 1	(recipe (bind n count count:1) (assert closure eps_num n count:1))
+let b: count = a + 1\nlet a: count = 2	let b: count = a + 1 | let a: count = 2	(recipe (bind b count (+ a count:1)) (bind a count count:2))
+let same: count = 1\nlet same: count = 2	let same: count = 1 | let same: count = 2	(recipe (bind same count count:1) (bind same count count:2))
+let width: length = 25 mm\nassert closure: eps_num = width == target	let width: length = 25 mm | assert closure: eps_num = width == target	(recipe (bind width length length:25000) (assert closure eps_num width target))
+assert grouped: eps_geo = (a < b) == if(flag, (c >= d), (e != f))\nlet sweep: angle = -720 deg	assert grouped: eps_geo = (a < b) == if(flag, (c >= d), (e != f)) | let sweep: angle = -720 deg	(recipe (assert grouped eps_geo (< a b) (if flag (>= c d) (!= e f))) (bind sweep angle (- angle:720000000)))

@@ -17,6 +17,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Canonical identity proof review](annexes/formula-literals.md#coupled-canonical-identity-review)
 - [Coupled normalization review](annexes/formula-literals.md#coupled-normalization-review)
 - [Coupled statement and recipe review](annexes/formula-statements.md#coupled-syntax-and-diagnostic-review)
+- [Canonical statement and recipe bytes](annexes/formula-statements.md#canonical-statement-and-recipe-byte-contract)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
 - [Executable closure intent](spec/ontology-closures.md)
 - [Executable garment constructions](spec/ontology-constructions.md)

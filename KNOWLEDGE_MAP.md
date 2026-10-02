@@ -6,13 +6,13 @@
 
 ## Key subsystems
 
-- `crates/sc-units/src/lib.rs` — units/errors; tests
+- `crates/sc-units/src/lib.rs` — units/errors;
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs` — ontology/measurement inputs;
-  recipe expression/ordered syntax, literals/identity; tests.
+- `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs` — ontology/measurements;
+  recipe syntax/literals/identity.
   Owner `G1-SLICE.3` / `.4` / `.5`.
-- `docs/book/src/SUMMARY.md` — learning/index/annexes; owner `G0-CONTRACT` / `G1-SLICE.4d.1`; feature leaves.
+- `docs/book/src/SUMMARY.md` — learning/index/annexes; owner `G0-CONTRACT` / `G1-SLICE.4d.1`.
 - `docs/book/src/spec/formula-language.md` — formula contract.
   Oracle `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
   `G0-CONTRACT.9` / `G1-SLICE.5`.
@@ -22,7 +22,7 @@
   `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. Owner `G0-CONTRACT.4`.
 - `docs/book/src/spec/glossary/` — vocabulary; A–Z `glossary.md`;
   `docs/tasks/artifacts/glossary/run_glossary_census.sh`; owner `G0-CONTRACT.1` and later gates.
-- `.doctrine/live_document_size/` — containment (`surfaces.tsv`, `routes.tsv`), enforced by
+- `.doctrine/live_document_size/` — containment (`surfaces.tsv`, `routes.tsv`);
   `scripts/check_live_doc_size.sh`. Owner `SPINE.4`.
 - `docs/tasks/artifacts/` — probes; `make probes`.
   `g0_exit/run_g0_exit_review.sh` derives G0 from `ROADMAP.md` §11. Owner: instrument leaf.
@@ -87,6 +87,7 @@
 - [`decision_profile-bindings-stay-symbolic-at-g1.md`](docs/decisions/decision_profile-bindings-stay-symbolic-at-g1.md)
 - [`decision_property-tests-dependency-free-recorded-seed.md`](docs/decisions/decision_property-tests-dependency-free-recorded-seed.md)
 - [`decision_range-resolution-preserves-entire-interval.md`](docs/decisions/decision_range-resolution-preserves-entire-interval.md)
+- [`decision_recipe-bytes.md`](docs/decisions/decision_recipe-bytes.md)
 - [`decision_reference-fixture-waistband-straight-folded.md`](docs/decisions/decision_reference-fixture-waistband-straight-folded.md)
 - [`decision_reference-resolution-journal-fold.md`](docs/decisions/decision_reference-resolution-journal-fold.md)
 - [`decision_release-package-identity-and-scope.md`](docs/decisions/decision_release-package-identity-and-scope.md)

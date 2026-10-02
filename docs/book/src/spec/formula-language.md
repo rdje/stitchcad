@@ -11,9 +11,10 @@
 > every number's representation is the [units chapter](units-and-tolerances.md)'s.
 
 A construction recipe is a list of statements and every statement is one formula. This chapter
-defines the normative grammar, values, names, order, rounding and errors. The exact assertion and
-complete-recipe identity bytes still need the contract owned by G1-SLICE.5a.3f.1 before serialization
-([canonical grammar](formula-language/grammar.md#4-the-canonical-form)). Four properties are requirements, not taste:
+defines the normative grammar, values, names, order, rounding and errors, including exact expression,
+statement and ordered-recipe identity bytes ([canonical grammar](formula-language/grammar.md#4-the-canonical-form)).
+Product statement/recipe normalization and serialization follow G1-SLICE.5a.3f.1b/.1c.
+Four properties are requirements, not taste:
 
 - **Statically dimensioned.** Every name and literal has a kind and every operation declares the
   kinds it accepts, so a recipe that does not check is refused *before any value is computed*.

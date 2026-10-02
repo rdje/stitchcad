@@ -248,7 +248,7 @@ now has eleven tests. Exact numerical evaluation and the full command diagnostic
 | Separate256-node/4096-statement/16-if budgets | New simultaneous maximum on64KiB stack | Independent256-node/16-depth shape; normative4096 cap |
 | Immutability/source/view lifetimes/Clone/privacy | Private constructors, six compile-fail docs, two runnable docs, opaque Debug controls | Actual statement/recipe fault controls; explicit inspection remains customer-bearing |
 | All worked source statements and operand identity | Seventeen bindings/four assertions in order; twenty-five expression byte controls | Independently authored byte population and actual recursive reference |
-| Complete recipe normalization/identity | Syntax retains names/annotations/order/source without conversion | .3f.1/.3f.2; D109 exact assertion/recipe bytes must be settled first |
+| Complete recipe normalization/identity | Syntax retains names/annotations/order/source without conversion | .3f.1b/.1c/.3f.2; exact statement/recipe bytes specified below |
 | Static names/types, numeric binding, assertion execution and geometry | Syntax accepts unevaluated expressions; it grants no result | G1-SLICE.5; later tasks decomposed before implementation |
 | Semantic diagnostic arguments/localized command envelope | Typed syntax refusal/source/known index only | G1-SLICE.5/.6; no invented canonical context for malformed input |
 
@@ -288,7 +288,47 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_mutations.py --coupled
 ```
 
-D109 remains an owned prerequisite under .3f.1: grammar4 currently shows binding bytes and exact
-expression bytes, but does not settle assertion bytes or the complete/empty ordered recipe envelope.
-Those choices will be documented with concrete examples and verified before implementation. This
-syntax review grants no persistent statement identity, project hash, storage or production approval.
+D109 identified the exact assertion/whole-recipe byte gap before serializer implementation. The
+contract below now settles it; product statement/recipe normalization and serialization follow
+.3f.1b/.1c. This syntax review grants no persistent statement identity, project hash, storage or
+production approval.
+
+## Canonical statement and recipe byte contract
+
+Grammar §4.1 specifies the full byte envelope before product serialization. A binding retains
+(bind NAME KIND EXPR). An assertion is (assert NAME TOLERANCE LEFT RIGHT), with no extra equality
+wrapper: its role already means compare two operands at the named class. A complete ordered recipe
+is (recipe STATEMENT1 STATEMENT2 ...); empty or whitespace-only syntax is (recipe). Uppercase parts
+are placeholders. One ASCII space separates parts and there is no terminal newline.
+
+The specification preserves name, declared kind/symbolic tolerance and operand/statement order.
+Unit aliases, source gaps/spans and redundant grouping stay outside identity, as for expressions.
+A repeated declaration remains present in order; later static validation may refuse it, but input
+normalization or identity construction does not silently merge it. Unknown calls, raw signed/multi-turn
+angles, incompatible declared/expression kinds and unevaluated branches retain their existing scope.
+
+Sixteen independently authored statement-byte rows cover all six kinds and five tolerance names,
+length aliases, grouped comparisons, unknown ordered calls, raw-turn/sign identity and the positive
+2^63 child of the minimum signed angle. Nine authored whole sources cover empty/all-whitespace,
+single statements, adjacent/multiline order, duplicate/forward bindings and nested operands; their
+twelve statement chunks preserve complete original token coverage. The actual recursive book-reference
+syntax supplies operands; inference/evaluation are trapped. Authored chunks do not claim an independent
+whole-recipe parser or compiled product serializer.
+
+Nine actual interpreter faults must fail those exact-byte assertions: binding opcode, missing name,
+missing annotation, assertion operand reversal/extra equality wrapper, recipe opcode/order,
+terminal newline and lost empty envelope. The exclusive runner restores the tracked producer exactly;
+the structural suite watches its producer, actual anchors and classifier noise controls. These are
+specification/reference controls, not product implementation proof.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/recipe_byte_contract.py
+python3 -I -B docs/tasks/artifacts/formula_structure/recipe_byte_mutations.py
+```
+
+D109's technical decision is docs/decisions/decision_recipe-bytes.md. The engineer authored and
+applied it under standing delegation; independent evidence approval remains unapproved and the
+director may re-open the spelling. Product immutable normalization is .3f.1b, owned identity .1c,
+and coupled contract review .3f.2. Future .7 frames typed schema/digest domains: bind/recipe are valid
+ordinary expression call names, so canonical text is interpreted within its known identity type.
+No project format, hash, save/recovery, evaluator, MCP or production release is supplied by this record.

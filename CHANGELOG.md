@@ -124,6 +124,21 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part62.md`](docs/history/stitchcad-changelog-part62.md) | STITCHCAD-G1-0045 | 11 lines, 970 bytes, `sha256:a334432a…` |
 
+| [`stitchcad-changelog-part63.md`](docs/history/stitchcad-changelog-part63.md) | STITCHCAD-G1-0046 | 11 lines, 950 bytes, `sha256:939369e8…` |
+
+## STITCHCAD-G1-0068 - exact statement and recipe byte contract (leaf `G1-SLICE.5a.3f.1a`)
+
+D109 closes technically: retained bind bytes, flat named/tolerance assertion operands, explicit
+ordered recipe wrapper and empty(recipe), single spaces/no final newline. Engineering delegation,
+same-party author/applier, independent approval unclaimed and reversal/migration path are recorded.
+Sixteen authored statement rows cover six kinds/five tolerances; nine whole sources/twelve chunks
+match actual reference syntax. Nine actual renderer faults fail exact-byte assertions and restore
+source; watched structural controls retain explicit non-product scope. Focused syntax20/language16/
+publication9 pass. All Rust sources/tests and predecessor full syntax subtree/closure stay exact.
+Book/grammar/decision/current status stay aligned; G1 remains5/18, defects10open/99sealed.
+Next .5a.3f.1b complete statement/recipe input normalization, then .1c owned identity. No runtime,
+project format/hash, human approval or production signoff added.
+
 ## STITCHCAD-G1-0067 - coupled statement and recipe syntax review (leaf `G1-SLICE.5a.3e.3`)
 
 Three new public controls verify authored zero-gap/token-prefix boundaries, exact later-statement
@@ -376,15 +391,3 @@ Strict native488 including docs, release5 and all three WASM libraries pass. Boo
 boundaries and live/task records agree; earlier task evidence and oldest ledgers preserve exact bytes.
 G1 stays5/18; sc-units40; defects13 open/78 sealed. Next D91 .3b.1c, then D83 domains/i64 and D84;
 D70 axes decision remains pending. No evaluator, MCP, geometry or production-release certification.
-
-## STITCHCAD-G1-0046 - public length operators preserve the domain (leaf `G1-SLICE.5a.3b.3b.1a`)
-
-D89 closes: Length + / - return Result using checked arithmetic, so valid operands cannot construct
-an invalid length. Use `(left + right)?` / `(left - right)?`; no silent
-clamp or saturation. Four public contracts include signed boundaries, inclusive endpoints, ordinary
-values/cancellation, Result typing and i128 pair expectations. Six actual production
-bypass/operation/saturation mutations compile and fail assertions, with exact source restoration.
-Strict native/release/WASM and focused book/recording checks verify the restored candidate.
-D90 missing operation context is owned immediately next; D83 scalar/reference i64 and D84 signed-angle
-proof remain owned. D91 language context follows D90; prior evidence/history preserves exact bytes.
-G1 remains 5/18; defects14 open/76 sealed; next .5a.3b.3b.1b operation context, D70 decision pending.

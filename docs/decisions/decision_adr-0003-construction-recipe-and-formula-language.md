@@ -97,8 +97,9 @@ assume the answer is no.
   function the evaluator does not implement.
 - Refinement at G1-SLICE.5a.3e.3: diagnostic index/canonical expression are supplied where known;
   malformed syntax retains exact span/rule and never invented canonical context (D110). Complete
-  assertion/recipe identity bytes remain D109 under .3f.1 before serialization; expression bytes
-  are settled by D103. These qualifications do not change numeric or evaluation semantics.
+  assertion/recipe identity bytes are specified by D109/.3f.1a under engineering delegation; expression bytes
+  are settled by D103. Product recipe normalization/serialization follows .1b/.1c. These
+  qualifications do not change numeric or evaluation semantics.
 - Never widen a structural limit to land a recipe, and never add a rounding step: both are recorded
   decisions, not implementation conveniences.
 - Cite the system per step and reproduce nothing; a number with no citation is `assumed` and belongs

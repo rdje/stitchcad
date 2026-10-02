@@ -154,15 +154,54 @@ No sign folding, argument reordering, algebraic simplification or evaluation cha
 Source spans, grouping and original unit spellings remain outside canonical bytes. A canonical
 expression has no terminal newline. Production expression serialization is .5a.3d.2; the
 [coupled identity review](../../annexes/formula-literals.md#coupled-canonical-identity-review) closes .3d.
-Ordered statement serialization and recipe execution remain separate requirements. Binding examples
-above do not settle assertion opcode/payload order or the empty/ordered-recipe envelope, separators
-and terminal newline. D109 is owned by G1-SLICE.5a.3f.1 before implementation; expression bytes are
-complete, while those complete-recipe identity requirements remain open.
+D109's exact statement/recipe byte contract is now specified below under engineering delegation;
+product normalization and statement/recipe serialization follow .5a.3f.1b/.1c. Recipe execution and
+project storage remain separate requirements.
 
 **A formula's identity is its canonical form.** `2.5 cm` and `25 mm` canonicalize to one node
 (`length:25000`), so they are one formula: a diff, a hash and a golden compare canonical forms and
 never spellings. Documentation of a step lives on the drafting operation that consumes the value,
 not inside the expression — a comment that vanishes at canonicalization does not survive a save.
+
+### 4.1 Statement and whole-recipe bytes
+
+| Role | Exact byte template |
+| --- | --- |
+| Binding | (bind NAME KIND EXPR) |
+| Assertion | (assert NAME TOLERANCE LEFT RIGHT) |
+| Ordered recipe | (recipe STATEMENT1 STATEMENT2 ...) |
+| Empty recipe | (recipe) |
+
+Uppercase parts are placeholders. Names retain their original machine spelling; kinds retain the
+six declared annotations and tolerances retain their five symbolic class names. Each expression
+uses §4's exact canonical bytes. One ASCII space separates parts, with no outer padding and
+no terminal newline. Empty or whitespace-only syntax produces (recipe); even a one-statement
+recipe has its wrapper. The assertion role supplies equality, so no extra equality node wraps
+its operands. Grouped comparisons inside an operand remain ordinary expression nodes.
+
+```text
+let width: length = 2.5 cm
+  => (bind width length length:25000)
+assert closure: eps_geo = -1 mm == -0.1 cm
+  => (assert closure eps_geo (- length:1000) (- length:1000))
+let width: length = 25 mm
+assert closure: eps_num = width == target
+  => (recipe (bind width length length:25000) (assert closure eps_num width target))
+empty or whitespace-only source
+  => (recipe)
+```
+
+Preserve every name, annotation and ordered operand/statement. Do not sort, merge duplicate
+bindings, infer kinds, resolve tolerance values or evaluate expressions during serialization.
+These are typed identity domains: an expression call named bind or recipe is still an ordinary
+call. A future project schema/digest must frame its typed fields; these bytes alone do not define
+an untyped reader, a schema version, a hash namespace or save/recovery behavior.
+The engineering decision is docs/decisions/decision_recipe-bytes.md, authored and applied under
+the director's standing delegation. Its independent evidence approval stays unapproved under
+governance §6.1; the director can re-open the contract with compatibility consequences recorded.
+The [byte-contract controls](../../annexes/formula-statements.md#canonical-statement-and-recipe-byte-contract)
+verify this specification with authored fixtures and actual reference syntax. Product APIs follow
+.1b/.1c and their coupled review follows .3f.2; these controls grant no execution or release approval.
 
 ## 5. Operators
 

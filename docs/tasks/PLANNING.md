@@ -816,15 +816,12 @@ archive28/177 CLI controls and retention168 logical records pass before sealing 
 No committed history or product parser was corrupted. The report wording is retained; its heading
 uses the standard defect-entry marker. Final archive inventory is re-derived after this seal.
 
-- **D109** — canonical grammar does not specify assertion or whole-recipe identity bytes.
-  - Reproduce: grammar4 has binding examples and the complete expression mapping, but no assertion
-    opcode/payload order or empty/whole ordered recipe separator/envelope/terminal-newline contract.
-    Formula introduction says no further decision is needed despite .3f.1 owning this prerequisite.
-  - Impact: choosing serializer bytes now would invent a persistent identity contract; two compliant
-    implementations could emit different recipe identity. No product statement serializer exists yet.
-  - Owner/schedule: G1-SLICE.5a.3f.1, P2 next, before implementation; finalize concrete bind/assert/
-    empty/ordered examples, independent exact-byte controls and necessary authority ruling.
-    Current .3e.3 corrects the overbroad completeness claim and keeps syntax closure scoped.
+D109 is sealed in [`stitchcad-defects-part40.md`](../history/stitchcad-defects-part40.md).
+G1-SLICE.5a.3f.1a specifies exact bind/assert/ordered/empty recipe bytes under standing engineering
+delegation, with same-party author/applier disclosed and independent evidence approval unclaimed.
+Sixteen authored statement rows/nine whole sources/twelve ordered chunks match actual reference
+syntax; nine renderer authored-byte assertion reds restore exact source. Product .1b/.1c remains
+separate. Original defect report is retained; director reversal/migration path is in the decision.
 
 D110 is sealed in [`stitchcad-defects-part39.md`](../history/stitchcad-defects-part39.md).
 G1-SLICE.5a.3e.3 qualifies formula contract5.2/ADR-0003: exact source span/typed rule remain mandatory;
