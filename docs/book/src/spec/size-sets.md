@@ -73,7 +73,8 @@ the size whose instance a `.rul` table is relative to. Rules:
 ## 5. The chart
 
 [Garment chart observations](size-chart-observations.md) now implement individual current member/POM
-correspondences. Collection completeness and the remaining SizeSet contracts are still in progress.
+correspondences; [chart collections](size-chart-collections.md) now check exact current Design/member
+coverage. The remaining SizeSet contracts are still in progress.
 
 Per member, the chart carries the garment's points of measure — the same POMs the design's measurement
 table names, with landmarks and procedures (ontology §2.1). Two rules make it useful rather than decorative:

@@ -92,7 +92,7 @@ impl<'a> SizeChartContext<'a> {
             measurements,
         })
     }
-    fn contains(&self, id: EntityId) -> bool {
+    pub(crate) fn contains(&self, id: EntityId) -> bool {
         self.membership.reference().id == id
             || self
                 .membership
@@ -102,6 +102,15 @@ impl<'a> SizeChartContext<'a> {
                 .any(|member| member.id == id)
             || self.tables.contains_key(&id)
             || self.measurements.contains(id)
+    }
+    pub(crate) const fn membership(&self) -> &'a SizeMembership {
+        self.membership
+    }
+    pub(crate) fn table(&self, id: EntityId) -> Option<&'a MeasurementTable> {
+        self.tables.get(&id).copied()
+    }
+    pub(crate) const fn measurements(&self) -> &'a MeasurementTableContext<'a> {
+        self.measurements
     }
 }
 /// Scoped current-reference/domain/value refusal for an authored chart observation.

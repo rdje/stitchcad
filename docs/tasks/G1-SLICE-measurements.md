@@ -404,3 +404,74 @@ Return to the [active frontier](G1-SLICE.md#current-frontier).
   logs agree. Completed Ease review retains exact predecessor text; rolling records seal unchanged.
   D70 logged/owned for .4c.2 with director question; .4c.3/.4/.5/.4d preserve all remaining scope.
   Membership is not a complete SizeSet, MTM-ready chart, current-registry certificate or release proof.
+
+
+## Garment chart observation contract and evidence — preserved from 71aaf19
+
+- ID: `G1-SLICE.4c.3a`
+  Status: `done`
+  Goal: immutable garment-chart observation for one member and design POM, with current member/set
+  revision, logical POM and measured-input bindings, named table memberships and mapping provenance.
+  Pre-code protocol: SizeChartObservationDefinition holds id, pinned membership reference/member id,
+  design/chart table ids, saved POM/measurement four-field bindings and correspondence provenance id.
+  Context borrows membership/current tables/MeasurementTableContext, rejecting duplicate/cross-kind
+  identities (including member/set identities). Both measurements must be Garment; Body/MTM inputs
+  belong to .3c and are never silently interchanged. Current queries pin set id/revision, resolve member
+  id, table ids and measured ids, reject token/kind/scalar retargeting and validate required metadata.
+  Value/state/source/entered unit borrowed from the canonical measurement, no numeric/state cache.
+  Same input may also be a Design-table POM (base-size authored data); no duplicated scalar imposed.
+  This is an authored chart-to-POM correspondence, not a regenerated geometry measurement or proof
+  of physical quantity equivalence. G3/G4 validate that correspondence/source/evidence; later generated
+  results remain distinct measurements. No axis, default, inferred label, completeness or path-ready claim.
+  Acceptance: missing/revised member, tables, bindings and metadata refuse with scoped errors; current
+  scalar/metadata edits visible; unknown/derived numeric queries refuse; selected targets borrowed;
+  immutable replacement leaves originals unchanged. Own book/API/live docs, evidence retention/seals.
+  Verification: 16 contracts/privacy, eight actual assertion reds, restored strict 403 tests/WASM/book;
+  glossary/uncertainty/tree/ledger and staged doctrine gate green. Completed membership preserved exactly.
+  Commit: `STITCHCAD-G1-0033`
+
+### `G1-SLICE.4c.3a` — current authored garment chart observations
+
+- [x] **REPRODUCE / ISSUE** — `git grep -n -E 'SizeChartObservation|SizeChartContext'
+  0b77235 -- crates/sc-measure/src` → 0 matches, expected rc=1; size-sets §5 needs canonical
+  per-member/POM chart inputs distinct from later regenerated geometry measurements.
+- [x] **ROOT CAUSE (WHY + WHERE)** — `rg -n 'chart POM|regenerated POM|state|chart'
+  docs/book/src/spec/size-sets.md` → authored chart/source requirements at §5, rc=0; existing tables
+  validate metadata but carry no set/member/revision correspondence. Design inputs name a logical
+  quantity; they are not already measured regeneration results. Base input sharing needs no copy.
+- [x] **FIX** — immutable observation pins member/set reference, two named table identities and
+  saved garment bindings. Borrow current metadata/state/source; refuse aliases, missing/revised
+  membership, absent tables, invalid targets and retargeting. Mapping provenance is not physical proof.
+- [x] **ADDRESSED (verified)** — `cargo test -p sc-measure --test size_chart_contract` → 16 passed,
+  rc=0; privacy doctest passes. `bash docs/tasks/artifacts/size_chart/run_size_chart_mutations.sh`
+  → eight real assertion reds, each rc=101, exact source restore, rc=0. Same-label/member and
+  same-content/table substitutions, wrong domains and explicitly rebound tables cannot transfer intent.
+- [x] **NO REGRESSION** — `make check` → strict fmt/clippy and 403 tests, rc=0; `make wasm` →
+  three crates cross-build, rc=0; `make book` → no warnings, rc=0. Glossary → 310 terms/9 parts/
+  158 tokens/0 failures; uncertainty → 133 markers/16 files/0 unowned/0 failures, both rc=0.
+  Tree census → 10 lanes/13 trees/6 siblings/0 gaps; ledger → 9 pass/0 fail; staged `make gate`
+  → all doctrines green, rc=0. New product code has local integration proof, not observed remote CI.
+- [x] **LOCKSTEP** — book/API/README/package status, canonical ownership, live pointers and logs
+  updated together. Full .4c.1 contract/checklist retains exact HEAD bytes in linked sibling;
+  oldest changelog/lesson seals preserve predecessor bytes. Chart collection, MTM, breaks/composite,
+  profile resolution and later physical/evidence/release validation remain owned; D70 not defaulted.
+
+
+## Structural Ease review contract — preserved from 71aaf19
+
+- ID: `G1-SLICE.4b.3`
+  Status: `done`
+  Goal: re-derive ontology .2.2 field coverage, reference/currentness and compression boundaries;
+  review book and milestone checks before closing .4b structurally.
+  Review protocol: map each ontology .2.2 field to current immutable API and test; review per-POM
+  set/current tables, no numeric fallback and negative permission including evaluated-result boundary.
+  Run current sc-measure contracts/docs, full 23-suite milestone probes and warning-free book; staged
+  doctrines. Existing 371-test strict/WASM evidence is for unchanged b4e0bc7 code, no remote CI claim.
+  Own bounded review docs, preserve completed set contract/checklist unchanged, update pointers/logs
+  and normal byte-identical rolling seals. Close .4b structurally only after all owned checks pass.
+
+  Verification: 65 current sc-measure tests/docs, full 23-suite milestone, warning-free book,
+  current code unchanged from b4e0bc7 strict 371/WASM proof; staged gate below.
+  Commit: `STITCHCAD-G1-0031`
+
+Return to the [active frontier](G1-SLICE.md#current-frontier).

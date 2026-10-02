@@ -2,7 +2,7 @@
 
 G1-SLICE.4c.3a implements one authored garment-chart observation for one size member and one logical
 Design POM. It builds on [size membership](size-membership.md) and [measurement tables](measurement-metadata.md).
-The normative chart contract is [size sets §5](size-sets.md). Chart assembly and complete coverage,
+The normative chart contract is [size sets §5](size-sets.md). [Chart collection and complete coverage](size-chart-collections.md) are now executable;
 MTM body inputs, axes, breaks, profile resolution and instantiation remain separate owned slices.
 
 ## One member, one named quantity, current records
@@ -62,7 +62,7 @@ not promote them to factual certainty. Physical procedure domains are a separate
 
 Definitions are cloneable inputs; validated observations are private and immutable. An explicit
 replacement can update references and provenance without rewriting the old observation. Collection
-identity uniqueness, member/POM completeness and permitted sharing follow at .4c.3b; MTM .3c and
+identity uniqueness, member/POM completeness and explicit sharing are implemented at .4c.3b; MTM .3c and
 break/composite .3d remain owned. No axis model is chosen while D70 is pending.
 
 ## Public API vocabulary

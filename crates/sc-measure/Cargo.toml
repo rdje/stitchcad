@@ -4,7 +4,7 @@ version = "0.1.0"
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
-description = "StitchCAD measurement metadata/tables, per-POM Ease, size membership and garment chart observations. Canonical values borrow sc-core; full SizeSet follows at G1."
+description = "StitchCAD measurement metadata/tables, per-POM Ease, size membership and garment charts. Canonical values borrow sc-core; full SizeSet follows at G1."
 
 [lints]
 workspace = true

@@ -25,6 +25,7 @@
     - [Body-to-garment Ease intent](spec/ease-inputs.md)
     - [Size membership foundation](spec/size-membership.md)
     - [Garment chart observations](spec/size-chart-observations.md)
+    - [Garment chart collections](spec/size-chart-collections.md)
     - [Executable closure intent](spec/ontology-closures.md)
   - [The formula language](spec/formula-language.md)
     - [Grammar, operators and functions](spec/formula-language/grammar.md)

@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — chart coverage is measured against the current Design inventory
+
+- A chart's explicit targets cannot certify their own completeness: full coverage requires every
+  current Design garment POM and one valid canonical observation per authored member/POM cell.
+  Draft validation checks existing targets; row queries check their declared cells. Complete validation
+  also checks the full named Design table, including valid metadata for its non-chart body inputs.
+- Saved observation reference targets refuse retargeting; current correspondence provenance and
+  scalar source/state remain borrowed. Explicitly shared measurement inputs use separate member
+  observations. Structural completeness accepts unresolved values but numeric queries refuse defaults.
+- Eighteen contracts/privacy and fourteen real production mutation reds verify coverage/currentness,
+  including reduced targets, valid duplicate cells and a zero fallback. Strict lint rejected a fixture
+  integer truncation cast; checked conversion fixes it. Restored strict 422 tests/WASM/book and focused
+  checks pass. Completed observations preserve predecessor evidence; MTM/axes/breaks remain owned.
+- promotion: declined (routine current-reference/coverage implementation; book/task own the contract).
+
 ## _(2026-10-02)_ — chart correspondence retains authored and generated measurement roles
 
 - An authored observation pins the member/set revision, named tables and two garment bindings.
