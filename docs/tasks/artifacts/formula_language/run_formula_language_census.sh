@@ -213,12 +213,16 @@ def dfraction(fr):
     return Decimal(Fraction(fr).numerator) / Decimal(Fraction(fr).denominator)
 
 def render(kind, internal, dp):
-    """The internal integer as the chapter publishes it: cm for a length, deg for an angle."""
+    """Published Value cells: cm, deg, cm², dimensionless numbers or Boolean text."""
+    if kind == "boolean":
+        if internal not in (0, 1):
+            raise FErr("formula_domain", "Boolean display requires 0 or 1, measured=%s" % internal)
+        return "true" if internal == 1 else "false"
     if kind == "count":
         return str(internal)
-    den = 10000 if kind == "length" else RATIO_SCALE
+    den = {"length": 10000, "area": 100000000}.get(kind, RATIO_SCALE)
     value = Decimal(internal) / Decimal(den)
-    return str(value.quantize(Decimal(1).scaleb(-dp), rounding=ROUND_HALF_UP))
+    return format(value.quantize(Decimal(1).scaleb(-dp), rounding=ROUND_HALF_UP), "f")
 
 # ── irrational functions, with pi derived rather than typed ────────────────────────────────
 class FErr(Exception):
@@ -1130,7 +1134,7 @@ for r in bind_rows:
     except FErr as e:
         bad("examples §2 `%s`: %s — %s" % (token, e.token, e.msg)); l2 += 1; continue
     _, name, declared, val, _ = stmt
-    if val.kind not in ("length", "angle", "ratio", "count"):
+    if val.kind not in EV.bindable:
         bad("examples §2 `%s`: a let bound a %s, which §2 says is not bindable" % (token, val.kind))
         l2 += 1; continue
     if val.kind == "point" or isinstance(val.v, tuple):
@@ -1139,21 +1143,32 @@ for r in bind_rows:
         bad("examples §2 `%s`: a binding returned a noninteger" % token); l2 += 1; continue
     internal = val.v.numerator
     env[token] = {"kind": val.kind, "value": internal, "origin": "recipe", "state": "derived"}
-    m = re.match(r"^([-+]?\d+(?:\.\d+)?)(?:\s*(cm|deg))?$", debacktick(value_cell).strip())
-    if not m:
-        bad("examples §2 `%s`: value cell %r is not a number with an optional unit"
-            % (token, value_cell)); l2 += 1; continue
-    dp = len(m.group(1).split(".")[1]) if "." in m.group(1) else 0
-    unit = m.group(2)
-    want_kind = {"cm": "length", "deg": "angle", None: val.kind}[unit]
-    if want_kind != val.kind:
-        bad("examples §2 `%s`: publishes %s but the expression is %s" % (token, unit or val.kind, val.kind))
-        l2 += 1; continue
-    got = render(val.kind, internal, dp)
-    computed.append((token, val.kind, got, m.group(1)))
-    if got != m.group(1):
+    published = debacktick(value_cell).strip()
+    if val.kind == "boolean":
+        if published not in ("true", "false"):
+            bad("examples §2 `%s`: value cell %r is not true or false"
+                % (token, value_cell)); l2 += 1; continue
+        dp, expected = 0, published
+    else:
+        m = re.fullmatch(r"([-+]?\d+(?:\.\d+)?)(?:\s*(cm²|cm|deg))?", published)
+        if not m:
+            bad("examples §2 `%s`: value cell %r is not a number with an optional unit"
+                % (token, value_cell)); l2 += 1; continue
+        dp = len(m.group(1).split(".")[1]) if "." in m.group(1) else 0
+        unit = m.group(2)
+        want_kind = {"cm": "length", "deg": "angle", "cm²": "area", None: val.kind}[unit]
+        if want_kind != val.kind:
+            bad("examples §2 `%s`: publishes %s but the expression is %s" % (token, unit or val.kind, val.kind))
+            l2 += 1; continue
+        expected = m.group(1)
+    try:
+        got = render(val.kind, internal, dp)
+    except FErr as e:
+        bad("examples §2 `%s`: %s — %s" % (token, e.token, e.msg)); l2 += 1; continue
+    computed.append((token, val.kind, got, expected))
+    if got != expected:
         bad("examples §2 `%s`: %s computes to %s, the chapter publishes %s"
-            % (token, first_span(expr_cell), got, m.group(1))); l2 += 1
+            % (token, first_span(expr_cell), got, expected)); l2 += 1
     if token in fixture_derived:
         shared += 1
         fkind, fval = fixture_derived[token]

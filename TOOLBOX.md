@@ -198,6 +198,11 @@ apply. `bash docs/tasks/artifacts/formula_structure/run_binding_mutations.sh` re
 compiled actual assertion reds and byte restoration; run alone. Copied-book replay verifies the
 census consumes returned bound integers. Production evaluation and full canonical proof remain owned.
 
+Binding replay reference: `binding_replay_contract.py` in formula_structure exercises the published
+census with all six kinds, signed Area rounding/replay, Boolean state/reads and format/declaration
+refusals:19 independent verdicts. Structural suite watches it. `run_binding_replay_mutations.sh`
+requires nine compiled actual assertion reds and byte-identical restoration; run exclusively.
+
 Canonical literal reference: `canonical_literal_contract.py` under `docs/tasks/artifacts/formula_structure/`
 checks146 independent node/Decimal controls; the structural suite watches them. Width128 means
 absolute reduced magnitude, not signed i128; unary identity and later binding storage remain distinct.

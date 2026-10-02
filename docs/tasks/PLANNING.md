@@ -767,3 +767,8 @@ D98 is sealed in [`stitchcad-defects-part30.md`](../history/stitchcad-defects-pa
 Correction to preserved G1-0053 .1v evidence: checker due rc=1, diagnostic Make wrapper rc=0.
 Actual older-base due and HEAD no-due controls verify both commands; COMMIT.md/book now distinguish
 their statuses. Prior evidence bytes, push/CI success, authority/cadence and build behavior stay fixed.
+
+D99 is sealed in [`stitchcad-defects-part31.md`](../history/stitchcad-defects-part31.md).
+G1-SLICE.5a.3b.3c.1 repairs the actual six-kind replay consumer and cm²/Boolean display;
+nineteen independent verdicts and nine compiled actual assertion reds verify the repair,
+with exact source restoration. No source literal or production evaluator added.

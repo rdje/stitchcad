@@ -98,6 +98,19 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part49.md`](docs/history/stitchcad-changelog-part49.md) | G1-0031 | 8 lines, 682 bytes, `sha256:ed0742e6…` |
 
+| [`stitchcad-changelog-part50.md`](docs/history/stitchcad-changelog-part50.md) | STITCHCAD-G1-0032 | 14 lines, 1176 bytes, `sha256:32b7947f…` |
+
+## STITCHCAD-G1-0055 - complete reference binding replay (leaf `G1-SLICE.5a.3b.3c.1`)
+
+D99's actual book consumer now accepts all six normative bindable kinds. Derived Area displays in
+cm² with fixed decimals; Boolean displays true/false and replays its kind/value in subsequent
+statements. Invalid state/units/text refuse. Area/Boolean source literal syntax stays unchanged.
+
+Nineteen independent consumer verdicts and nine compiled actual assertion reds verify the repair;
+existing binding80/twelve reds, full reference/language and publication checks remain green. All
+seventeen original worked rows and prior task/oldest ledger payloads retain exact bytes. Book/live/
+task pointers agree; D99 closes, D84 signed-angle proof is next. G1 stays5/18, defects11open/87sealed.
+
 ## STITCHCAD-G1-0054 - complete scoped numeric boundary review (leaf `G1-SLICE.5a.3b.3b.3c.2`)
 
 D83 closes: reduced128-bit input/results, exact signed scalar/Count domains, once-rounded signed64
@@ -371,18 +384,3 @@ Restored strict Rust runs 403 tests; three-crate WASM, warning-free book, glossa
 ledger and staged doctrine gates pass. Completed membership evidence retains exact predecessor bytes;
 oldest live changelog/lesson seals preserve their identity. G1 stays 5/18; next .4c.3b chart coverage,
 then MTM/body, breaks/composite and review. Axes D70 awaits the director; no representation defaulted.
-
-## STITCHCAD-G1-0032 - authored size membership (leaf `G1-SLICE.4c.1`)
-
-Immutable size membership separates stable member identities, exact human labels, authored order,
-explicit system and base member from a pinned SizeSet id/Count revision. Empty/duplicate membership,
-blank labels, missing base/lookups and revision overflow refuse. No sorting, label arithmetic,
-quantities, chart values or axis defaults. Custom single-member ranges establish membership only.
-
-Twelve contracts plus three privacy/quantity docs pass. Seven real production mutations fail their
-regression assertions, including an introduced sort and wrapped revision fallback, then restore exact
-source. Strict Rust passes 386 tests; WASM/book/glossary and focused tracking/ledger/staged gates pass.
-The SizeSet family is split before implementation; D70 reproduces contradictory axes cardinality and
-is owned by .4c.2 with a director ruling requested. Independent membership proceeds; all chart/break/
-resolution/review scope remains tracked. G1 stays 5/18, defects 10 open/59 sealed. Completed Ease review
-and oldest live records are retained unchanged; full SizeSet and production proof remain pending.

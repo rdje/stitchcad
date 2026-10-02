@@ -757,10 +757,35 @@ Completed reference input contract .5a.2b.1 is preserved in
   Commit: `STITCHCAD-G1-0054`.
 
 - ID: `G1-SLICE.5a.3b.3c`
-  Status: `pending`
+  Status: `in_progress`
   Goal: apply D84 director ruling: preserve signed/multi-turn formula values, normalize entity directions.
   Verify binding/equality and signed inverse-trig contracts with full/signed/multi-turn examples;
   reference atan/atan2 still normalize outputs. Decision: `decision_angles.md`.
+  Children: .1 six-kind book replay prerequisite; .2 signed inverse-trig/binding/equality repair;
+  .3 complete angle/reference review. D84 closes only after the full contract is verified.
+  Verification: `pending`
+  Commit: children pending.
+
+- ID: `G1-SLICE.5a.3b.3c.1`
+  Status: `done`
+  Goal: actual book replay must accept every declared bindable kind before signed-angle replay proof.
+  Protocol: [original pre-code plan](G1-SLICE-journal.md#six-kind-replay-protocol--completed-in-g1-0055).
+  Verification:19 independent actual consumer/format/declaration verdicts; nine compiled actual
+  assertion reds/exact restoration; binding80/twelve existing reds. D99 closed, no new literals.
+  Commit: `STITCHCAD-G1-0055`.
+
+- ID: `G1-SLICE.5a.3b.3c.2`
+  Status: `pending`
+  Goal: D84 signed principal atan/atan2, raw once-rounded angle binding/equality and full signed/multi-turn
+  sweeps; keep dir explicitly normalized. Finalize principal branch/rounded range and independent
+  controls before changing actual reference; no arbitrary-input transcendental certificate.
+  Verification: `pending`
+  Commit: `pending`
+
+- ID: `G1-SLICE.5a.3b.3c.3`
+  Status: `pending`
+  Goal: complete D84/reference obligation review, align all current contract/status pointers and close
+  .5a.3b only after .1/.2 verified; product literal normalization stays separately owned by .5a.3c.
   Verification: `pending`
   Commit: `pending`
 
@@ -970,7 +995,7 @@ Completed reference input contract .5a.2b.1 is preserved in
 | done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
 | done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
 | done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
-| next | `G1-SLICE.5a.3b.3c` | `pending` | D84 signed-angle/inverse-trig/equality proof |
+| next | `G1-SLICE.5a.3b.3c.2` | `pending` | D99 replay fixed; signed-angle/binding/equality proof |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -1005,58 +1030,53 @@ retain exact committed evidence.
 [Previous observed-CI proof and commit journal](G1-SLICE-journal.md#second-window-ci-evidence--preserved-from-a5159ba)
 retain exact committed evidence.
 
-### `G1-SLICE.5a.3b.3b.3c.2` — complete scoped numeric boundary review
+[Completed numeric review and corrections](G1-SLICE-journal.md#numeric-review-evidence--preserved-from-a6fa253)
+retain exact committed checklist/journal bytes. Current D84 work is owned above.
 
-- [x] **REPRODUCE / ISSUE** — original D83 accepts count2^128 and1000000001 um. Current actual
-  rational61 and scalar57 controls require formula_domain at these exact cases, rc=0. D97 rg
-  matches the superseded canonical/binding i64 parent Goal while D95 permits128-bit literal nodes.
-- [x] **ROOT CAUSE (WHY + WHERE)** — former see measured width without refusal; binding consumer
-  rounded outside the statement method. Four actual guard families now isolate width, scalar,
-  stored values and literal identity. Runs→61/57/80/146 independent controls, rc=0; bypass/endpoint/
-  declaration/context/identity mutations→12/11/12/12 actual assertion reds, rc=1 each, runner0.
-- [x] **FIX** — complete obligation-to-proof review in the expert annex; close D83 only for the
-  curated reference boundaries and repaired prerequisites. Correct live D97 Goal, preserve earlier
-  evidence. D84 signed inverse-trig/equality and product canonical/evaluation scope remain open.
-- [x] **ADDRESSED (verified)** — restored run_formula_structure_probes.sh→rational61/scalar57/
-  binding80/canonical146 all0 fail, rc=0. Four existing mutation runners require47 actual reds;
-  evaluator/setup byte comparisons equal HEAD, rc=0. Independent Fraction/Decimal and authored
-  nodes verify exact conversion/result width, input quantum, scalar endpoints/intermediates,
-  inclusive i64 binding/ties, declaration changes, caller writes and replay. Eight prerequisite
-  Rust files remain byte-identical to G1-0047; latest G1-0052 native/WASM and observed CI retained.
-- [x] **NO REGRESSION** — complete reference structure/input/expression/literal/arithmetic/angle/
-  math families remain green, rc=0; language16 passes including explicit Rust context, rc=0.
-  Runtime source restored. Focused recording/gate checks below;
-  old task/defect/ledger bytes retained. No general numerical certificate.
-- [x] **LOCKSTEP** — D83/D97/D98 descriptions seal unchanged; annex/decision/live task ancestors agree
-  with128-bit literals versus signed64 bindings. Scalar/binding parents close; G1 stays5/18.
-  D84 remains next, production normalization/evaluation retain separate ownership.
+### `G1-SLICE.5a.3b.3c.1` — actual six-kind book replay
+
+- [x] **REPRODUCE / ISSUE** — copied Area2mm×2mm/Boolean1==1 rows return census1 with
+  “not bindable”; actual statement accepts area4000000/boolean1. Independently authored replay
+  contract fails its own AssertionError before repair (target/binding-replay-contract-before.log).
+- [x] **ROOT CAUSE (WHY + WHERE)** — L2 four-kind whitelist follows a valid statement binding;
+  render lacks Area/Boolean presentation. Tiny Area rows also produce1E-8 versus fixed0.00000001.
+  Actual consumer19 verdicts→0 fail, rc=0; nine compiled consumer/format/state/quantum mutations
+  each produce contract AssertionError, rc=1, runner rc=0. Sources restore byte-identically.
+- [x] **FIX** — consume EV.bindable; cm²/true/false fixed display, typed state/format refusals.
+  Stored quantum/kind remain; no new source literals.
+- [x] **ADDRESSED (verified)** — binding_replay_contract.py→19 independent actual consumer/
+  format/declaration verdicts, rc=0. Fifteen positive copied rows cover all six kinds, signed/tiny
+  Area ties and name reads, Boolean states and conditionals. Wrong values/units/text, Point/Edge
+  binding, removed Boolean declaration and invalid internal states refuse precisely.
+- [x] **NO REGRESSION** — structural suite→existing literal361/arithmetic162/angle72/math42/
+  rational61/scalar57/binding80/canonical146 controls green, rc=0; existing binding mutations→12
+  actual reds/exact restore, rc=0; language→probes:16 pass /0 fail, rc=0.
+  Publication9/ledger9+13/archive28+148 pass, rc=0.
+  Original17 worked rows and whole prior checklist/log tail compare exact; scoped checks below.
+- [x] **LOCKSTEP** — D99 seals unchanged; Value/annex/tools/live pointers agree.
+  G1 stays5/18, defects11open/87sealed; D84 .3c.2 and production proof remain.
 
 ## Verification Log
 
-Commands: run_formula_structure_probes.sh before and after the four mutation runners;
-run_rational_mutations.sh, run_scalar_mutations.sh, run_binding_mutations.sh,
-run_canonical_literal_mutations.sh. All runners rc=0;47 actual assertion reds rc=1 each;
-CASES counts equal observed reds12/11/12/12. Evaluator/setup equal HEAD; eight prerequisite Rust files equal G1-0047. Language16 rc=0.
-Recording: language16/publication9/ledger9+13 pointer controls/archive28+145 CLI controls, rc=0.
-Publication48 chapters/16 scoped APIs/1002 source/1533 rendered links; retention136 logical/
-11 working Markdown/7691 lines/600019 decoded bytes/256341 resident bytes, rc=0. Tree10/13/eight/
-zero gaps; glossary310/nine/158/zero index drift; feature105/29; uncertainty133/16/zero unowned;
-fixture20/four/five/zero mismatch, rc=0. Defects11 open/86 sealed/zero overlap; parent Goal matches literal/binding rules. Prior CI evidence, both windows and oldest payloads
-preserve exact bytes. README reviewed unchanged; LIVE G1 stays5/18. No runtime/Rust source changed;
-focused checks appropriate to this review. First staged gate rc=2: live_status324 B row exceeds320 B;
-notes tightened without changing the ceiling. Final staged make gate→all doctrines green, rc=0.
-D98 supersedes preserved G1-0053's make-push-due rc=1 attribution: actual due-base checker1/Make0
-and HEAD control0/0 pass, rc=0. Published PUSH_DUE_BASE supplies test cases without Git mutation.
-COMMIT/book clarify wrapper versus machine verdict; no authority/cadence/build rule changes.
+All focused runners rc=0; actual mutation assertions rc=1.
+Publication48 chapters/16 API rows/1002 source/1534 rendered links, nine controls, rc=0.
+Ledger9+13 pointer controls; archive28+148 CLI controls,139 logical records/14 working Markdown/
+7766 decoded lines/605249 decoded bytes/261571 resident bytes; all rc=0. Tree10lanes/13trees/eight
+siblings/zero gaps; glossary310/nine/158/zero index drift; feature105/29; uncertainty133/16/zero
+unowned; fixture20/four/five/zero mismatch, all rc=0. Exact old task/ledger/defect payloads retained.
+README unchanged; scoped book-instrument checks fit this repair. Staged gate below;
+no production numerical certificate.
+First staged gate rc=2: current boxes used rc0 rather than recognized rc=0 evidence.
+Corrected status spelling; signatures/enforcement unchanged. Final staged make gate→
+=== all doctrines green ===, rc=0.
 
 ## Commit Log
 
 | Leaf | Commit subject | Verification |
 | --- | --- | --- |
-| `.5a.3b.3b.3c.2` | `STITCHCAD-G1-0054 (leaf G1-SLICE.5a.3b.3b.3c.2): complete numeric boundary review` | four independent families/47 actual reds/exact restore |
+| `.5a.3b.3c.1` | `STITCHCAD-G1-0055 (leaf G1-SLICE.5a.3b.3c.1): complete six-kind binding replay` | 19 independent verdicts/nine actual reds/exact restore |
 
 ## Changelog
 
-- `2026-10-02`: D83 scoped reference boundary review and D97 live-goal correction complete.
-  D84 signed inverse-trig/equality is next; product normalization/evaluation remain pending.
-- promotion: declined (routine conformance review and planning alignment under existing contracts).
+- `2026-10-02`: D99 actual consumer/display repair complete; D84 signed-angle proof follows.
+- promotion: declined (routine consumer repair against the existing six-kind contract).

@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — complete binding kinds must reach the example consumer
+
+- D99: actual statement/stored accepts Area/Boolean, but L2's four-kind whitelist refuses them.
+  Independent copied-book rows reproduce rc1, while actual methods return area4000000/boolean1.
+  L2 now consumes declared bindable kinds and displays cm²/true/false without new source literals.
+- Tiny Area controls catch Decimal's scientific spelling; fixed-decimal output matches the Value
+  cell grammar. Internal Boolean values outside0/1 refuse instead of becoming arbitrary truth text.
+- Nineteen independent actual consumer/format/declaration verdicts include all six kinds, fifteen
+  added positive rows, signed/tiny Area rounding/replay, Boolean reads/conditionals and wrong formats.
+  Nine compiled actual mutations fail assertions and restore exact source; existing binding80 and
+  twelve actual binding reds retain storage/quantum/publication proof. The structural suite watches
+  this consumer family, without a new suite or a mirrored evaluator.
+- Book Value explanation/expert annex agree; prior task evidence and oldest ledger/defect payloads
+  remain exact. D84 signed-angle proof follows. No Rust or production evaluator behavior changed.
+- promotion: declined (routine repair of the consumer against the existing six-kind contract).
+
 ## _(2026-10-02)_ — review numeric boundaries separately from production evaluation
 
 - D83's original count129-bit/length-over-domain defects, conversion and completed-result width,
@@ -68,24 +84,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   compaction makes room for the new decision without changing generator or ceilings.
   No Rust changed; no production evaluator, arbitrary-input transcendental, geometry/MCP/release claim.
 - promotion: promoted by `decision_literals.md` (director's canonical-node/bound-storage ruling).
-
-## _(2026-10-02)_ — scalar domains guard exact values at the correct boundary
-
-- D83 predecessor accepts1000000001 um; its result wrapper checks width only. Scalar domains
-  now read normative declarations. Canonical inputs round once before validation; exact completed
-  nodes check before binding. Fractional excess and invalid children cannot be rescued by rounding.
-- Count stays nonnegative with exact fractions until binding; unary negation still refuses by kind.
-  Ratio/angle gain no magnitude bound here. Piece-box10m stays geometry context. Typed errors retain
-  operation/kind/bounds/fraction.
-- Scalar57/eleven actual reds verify boundaries, half-quanta, lazy branches and changed declarations.
-  Width fixtures replace invalid huge lengths with unrestricted kinds/tiny fractions:61 controls/
-  twelve actual reds retain discrimination. Literal6/arith9/angle7/inline5 reds restore exact bytes.
-- D94's mutation trace exposed unrelated arithmetic execution during context loading. Quiet shared
-  setup now separates each family's assertions; its output mutation proves isolation. The setup
-  is not an independent oracle. Each family retains its independently authored expected outcomes.
-- Book/live/task records and exact earlier payloads agree. D83 i64 .3 and D84 signed-angle .3c
-  remain next; no production evaluator, real geometry, MCP or arbitrary-input numerical certificate.
-- promotion: declined (routine enforcement of existing scalar domains and isolated verification).
 
 # Sealed archive — earlier lessons
 
@@ -176,3 +174,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part51.md`](docs/history/stitchcad-devnotes-part51.md) | domain-context lesson | 19 lines, 1705 bytes, `sha256:6c25796f…` |
 
 | [`stitchcad-devnotes-part52.md`](docs/history/stitchcad-devnotes-part52.md) | inline-language lesson | 18 lines, 1440 bytes, `sha256:f9fdf033…` |
+
+| [`devnotes-part53.md`](docs/history/stitchcad-devnotes-part53.md) | scalar-domain lesson | 17 lines, 1495 bytes, `sha256:c5c05294…` |

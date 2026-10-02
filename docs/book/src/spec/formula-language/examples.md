@@ -30,6 +30,13 @@ to a `let`.
 
 Each row is the statement `let <token>: <kind> = <expression>` of [grammar §1](grammar.md).
 
+The Value column displays the stored binding: lengths in cm, angles in degrees, areas in cm²,
+ratios and counts as numbers, and Booleans as true or false. For example, an area derived by
+`2 mm * 2 mm` displays as 0.04 cm²; the comparison `1 == 1` displays as true. These are display
+forms: the language has no Area or Boolean literal syntax. Derive an area from lengths and a
+Boolean from a comparison, or read an earlier binding of that kind. Binding rounds numeric
+values once; displayed decimal places do not change the stored value.
+
 | Token | Kind | Expression | Value | Shows |
 | --- | --- | --- | --- | --- |
 | `garment_waist` | length | `waist_girth + ease_waist` | 74.0 cm | a measurement plus its ease, both lengths |

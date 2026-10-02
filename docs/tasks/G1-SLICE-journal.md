@@ -724,3 +724,78 @@ LIVE G1 stays5/18, defects12/83. Staged make gate→all doctrines green, rc=0.
   Focused language/publication/ledger/archive/censuses and staged gate before per-slice commit.
   Verification: `pending`
   Commit: `pending`
+
+## Numeric review evidence — preserved from a6fa253
+
+### `G1-SLICE.5a.3b.3b.3c.2` — complete scoped numeric boundary review
+
+- [x] **REPRODUCE / ISSUE** — original D83 accepts count2^128 and1000000001 um. Current actual
+  rational61 and scalar57 controls require formula_domain at these exact cases, rc=0. D97 rg
+  matches the superseded canonical/binding i64 parent Goal while D95 permits128-bit literal nodes.
+- [x] **ROOT CAUSE (WHY + WHERE)** — former see measured width without refusal; binding consumer
+  rounded outside the statement method. Four actual guard families now isolate width, scalar,
+  stored values and literal identity. Runs→61/57/80/146 independent controls, rc=0; bypass/endpoint/
+  declaration/context/identity mutations→12/11/12/12 actual assertion reds, rc=1 each, runner0.
+- [x] **FIX** — complete obligation-to-proof review in the expert annex; close D83 only for the
+  curated reference boundaries and repaired prerequisites. Correct live D97 Goal, preserve earlier
+  evidence. D84 signed inverse-trig/equality and product canonical/evaluation scope remain open.
+- [x] **ADDRESSED (verified)** — restored run_formula_structure_probes.sh→rational61/scalar57/
+  binding80/canonical146 all0 fail, rc=0. Four existing mutation runners require47 actual reds;
+  evaluator/setup byte comparisons equal HEAD, rc=0. Independent Fraction/Decimal and authored
+  nodes verify exact conversion/result width, input quantum, scalar endpoints/intermediates,
+  inclusive i64 binding/ties, declaration changes, caller writes and replay. Eight prerequisite
+  Rust files remain byte-identical to G1-0047; latest G1-0052 native/WASM and observed CI retained.
+- [x] **NO REGRESSION** — complete reference structure/input/expression/literal/arithmetic/angle/
+  math families remain green, rc=0; language16 passes including explicit Rust context, rc=0.
+  Runtime source restored. Focused recording/gate checks below;
+  old task/defect/ledger bytes retained. No general numerical certificate.
+- [x] **LOCKSTEP** — D83/D97/D98 descriptions seal unchanged; annex/decision/live task ancestors agree
+  with128-bit literals versus signed64 bindings. Scalar/binding parents close; G1 stays5/18.
+  D84 remains next, production normalization/evaluation retain separate ownership.
+
+## Verification Log
+
+Commands: run_formula_structure_probes.sh before and after the four mutation runners;
+run_rational_mutations.sh, run_scalar_mutations.sh, run_binding_mutations.sh,
+run_canonical_literal_mutations.sh. All runners rc=0;47 actual assertion reds rc=1 each;
+CASES counts equal observed reds12/11/12/12. Evaluator/setup equal HEAD; eight prerequisite Rust files equal G1-0047. Language16 rc=0.
+Recording: language16/publication9/ledger9+13 pointer controls/archive28+145 CLI controls, rc=0.
+Publication48 chapters/16 scoped APIs/1002 source/1533 rendered links; retention136 logical/
+11 working Markdown/7691 lines/600019 decoded bytes/256341 resident bytes, rc=0. Tree10/13/eight/
+zero gaps; glossary310/nine/158/zero index drift; feature105/29; uncertainty133/16/zero unowned;
+fixture20/four/five/zero mismatch, rc=0. Defects11 open/86 sealed/zero overlap; parent Goal matches literal/binding rules. Prior CI evidence, both windows and oldest payloads
+preserve exact bytes. README reviewed unchanged; LIVE G1 stays5/18. No runtime/Rust source changed;
+focused checks appropriate to this review. First staged gate rc=2: live_status324 B row exceeds320 B;
+notes tightened without changing the ceiling. Final staged make gate→all doctrines green, rc=0.
+D98 supersedes preserved G1-0053's make-push-due rc=1 attribution: actual due-base checker1/Make0
+and HEAD control0/0 pass, rc=0. Published PUSH_DUE_BASE supplies test cases without Git mutation.
+COMMIT/book clarify wrapper versus machine verdict; no authority/cadence/build rule changes.
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.3b.3b.3c.2` | `STITCHCAD-G1-0054 (leaf G1-SLICE.5a.3b.3b.3c.2): complete numeric boundary review` | four independent families/47 actual reds/exact restore |
+
+## Changelog
+
+- `2026-10-02`: D83 scoped reference boundary review and D97 live-goal correction complete.
+  D84 signed inverse-trig/equality is next; product normalization/evaluation remain pending.
+- promotion: declined (routine conformance review and planning alignment under existing contracts).
+
+## Six-kind replay protocol — completed in G1-0055
+
+  Pre-code protocol: inspect formula2/4.2 and grammar6 against actual statement/stored/L2/render paths.
+  L2 hardcodes four accepted kinds although Area/Boolean are bindable. Reproduce on independently
+  authored copied-book rows; actual statement methods must already accept these kinds. Own D99 if
+  reproduced, repair consumer/display only. Consume normative bindable declarations, display derived
+  area in cm² and Boolean true/false without adding source literals. Keep current numeric formatting,
+  declared storage/scalar domains, caller publication and all original17 example rows unchanged.
+  Independent all-six-kind/tie/sign/replay/invalid-format and non-bindable controls must discriminate;
+  actual kind/display/state/quantum faults must yield assertion reds with byte-identical restoration.
+  Watch the real copied-book family; no mirrored evaluator or product semantics extension.
+  Update learner-facing Value-column explanation and expert annex/proof boundaries; preserve prior
+  task/defect/oldest ledger bytes. Focused reference/language/publication/ledger/archive/censuses and
+  staged gate before commit. No new Rust/cross-platform/production evaluator or signed-angle claim.
+  Verification: `pending`
+  Commit: `pending`

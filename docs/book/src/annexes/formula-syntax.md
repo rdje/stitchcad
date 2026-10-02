@@ -502,3 +502,27 @@ This completes the reference boundary repair. D84 signed inverse-trig/binding/eq
 remains owned by G1-SLICE.5a.3b.3c. Production canonical literals, serialization, full evaluation,
 real geometry and arbitrary-input transcendental/cross-platform correctness still require their
 own product proofs. The reference model is an instrument for this book, not a shipped evaluator.
+
+## Complete binding replay and display
+
+The actual example census consumes all six bindable kinds declared by formula §2. D99’s former
+four-kind whitelist rejected valid Area/Boolean statements after the reference binding method had
+accepted them. The Value column now handles derived Area in cm² (100000000 µm² per cm²) and Boolean
+as true/false (internal1/0). Fixed decimal formatting keeps a1 µm² area visible as0.00000001 cm²;
+Decimal’s scientific spelling1E-8 cannot silently fail the table’s decimal grammar.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/binding_replay_contract.py
+bash docs/tasks/artifacts/formula_structure/run_binding_replay_mutations.sh
+```
+
+Nineteen independent consumer/format/declaration verdicts exercise fifteen added positive rows
+alongside all seventeen original examples, signed Area ties, a sub-half zero, stored-value reads,
+Boolean true/false and conditional reads, wrong values/units/text, opaque-kind refusal, a copied
+Boolean bindability removal and invalid Boolean display state. Nine compiled actual source faults
+must fail these assertions: kind whitelist, Area scale/unit, Boolean truth/state/mismatch, scientific
+formatting, changed stored integer and lost replay kind. Sources restore byte-identically. The
+existing structural suite watches the positive/refusal family; run actual mutations exclusively.
+
+This repairs the book instrument without adding Area/Boolean source literals or a production
+formula evaluator. D84 signed inverse-trig/equality proof remains a separate prerequisite.
