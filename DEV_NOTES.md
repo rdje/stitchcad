@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — third retained window earns remote evidence
+
+- Full exact SHA b595a37bda29a8f019e06bdb09c79ef395decb4d, not the abbreviated filter:
+  rust run37060421597/job111015421472 and doctrines run37060421575/job111015421405 both
+  completed/success with every reported step successful. Rust aggregate initially lagged the job.
+- Exclusive post-commit archive runner proves newest window3 catalog edit is refused;28 probes,
+  200 CLIcontrols/191 reads. Existing immutable originals and finite bounds unchanged.
+- Next P0 SPINE.23 is owned from measured D114/D115; product namespace work follows its clean CI.
+- promotion: declined (existing job-level observation and independent refusal policy applied).
+
 ## _(2026-10-02)_ — third retained window unblocks namespace records
 
 - Working history reached64 raw/catalog Markdown files; another normal seal would fail the existing

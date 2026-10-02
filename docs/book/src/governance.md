@@ -349,8 +349,9 @@ would exceed the64-file working limit. A fresh local fixture reconstructs all189
 exactly, including both previous windows. The installed reader proves each of the62 original full
 files before their working copies retire; maintained pointers land on window3's member headings.
 `bash scripts/history_archive.sh prove-source window3` repeats the capture/source comparison.
-No reader, checker, logical address, decoded record or limit changes. Remote CI and newest committed
-immutability evidence are owned by G1-SLICE.5b.1b.0v; they are not inferred from local checks.
+No reader, checker, logical address, decoded record or limit changes. At exact pushed b595a37, both
+CI jobs and every reported step completed successfully. G1-SLICE.5b.1b.0v records their receipts
+and independent newest committed-catalog refusal.
 
 The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
 labels are display text: short or mistaken labels do not change the retained identity. Filename text

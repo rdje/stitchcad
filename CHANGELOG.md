@@ -140,6 +140,15 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part70.md`](docs/history/stitchcad-changelog-part70.md) | STITCHCAD-G1-0056 | 12 lines, 951 bytes, `sha256:30ca94ac…` |
 
+| [`changelog-part71.md`](docs/history/stitchcad-changelog-part71.md) | STITCHCAD-G1-0057 | 11 lines, 887 bytes, `sha256:e144c5ec…` |
+
+## STITCHCAD-G1-0075 - observed third-window CI and immutability (leaf `G1-SLICE.5b.1b.0v`)
+
+Exact pushed b595a37: both CI jobs/all steps completed success. Exclusive archive checks pass28
+probes/200 CLIcontrols/191 logical reads, including newest committed catalog refusal. Local receipts
+and book agree; archive/schema/caps unchanged. G1 stays5/18, defects12open/102sealed.
+Next P0 SPINE.23 repairs handoff evidence; namespace review resumes after its clean completion.
+
 ## STITCHCAD-G1-0074 - third exact retained history window (leaf `G1-SLICE.5b.1b.0`)
 
 Capacity64 blocks the next namespace-review seal. Capture62 raw full files from af98fff into window3;
@@ -376,15 +385,3 @@ red pass with exact source restoration. Existing signed contracts/36 Fraction ro
 required. Strict Rust494 (units46), release public tests, three WASM crates and focused book/reference
 checks pass. Indexed expert annex and unit API/example align with task/live records; prior evidence
 and oldest ledger payloads remain exact. G1 stays5/18; next .5a.3c.2 exact typed literal conversion.
-
-## STITCHCAD-G1-0057 - complete scoped reference review (leaf `G1-SLICE.5a.3b.3c.3`)
-
-D84 received contract/reference obligations are verified: signed principal angles, raw binding/
-equality/full turns, signed/fractional arcs and explicit normalized dir. The annex maps every
-obligation to independent controls and actual faults. D100's adjacent parent label now distinguishes
-128-bit canonical literals from i64 numeric bindings; original records/parent/evidence remain exact.
-
-Signed90/fifteen actual reds and angular72/math42/seven reds pass with exact restoration; all existing
-reference/language/publication/recording checks remain green. Reference parents close and product
-normalization .5a.3c is next. G1 stays5/18; defects10open/89sealed. Production evaluator, geometry,
-entity integration, arbitrary-input transcendental/cross-platform and API/MCP/release proof remain future.

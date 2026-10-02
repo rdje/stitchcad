@@ -815,7 +815,7 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
 | done | `G1-SLICE.5a.3f.2` | `done` | Coupled whole input and identity review |
 | done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
-| next | `G1-SLICE.5b.1b.0v` | `pending` | Exact third retention window at measured capacity; .0v CI, then namespace/preflight review |
+| next | `G1-SLICE.5b.1b` | `in_progress` | Retention CI complete; P0 SPINE.23 before namespace/preflight review |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -928,3 +928,5 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 
 - `2026-10-02`: .5b.1 signature child .1a closes; independent full kind/arity/tolerance/envelope
   matrix verifies two reference repairs. Namespace/preflight .1b and full static closure .1c follow.
+
+- `2026-10-02`: .5b.1b.0v records both exact-head CI jobs/steps success and newest window3 refusal; STITCHCAD-G1-0075. Next P0 SPINE.23, then namespace.

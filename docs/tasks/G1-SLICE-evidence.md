@@ -747,12 +747,13 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   Commit: `STITCHCAD-G1-0074`; observed remote/newest-committed proof remains .0v.
 
 - ID: `G1-SLICE.5b.1b.0v`
-  Status: `pending`
+  Status: `done`
   Goal: observe both actual CI jobs/steps at the exact window3 pushed head and newest committed
   catalog immutability refusal; record authoritative completed/success results before .1b work.
   Acceptance: exact SHA/run/job/step receipts, no aggregate-only polling inference; fix failing jobs
   if any, committed durable receipt, clean/no-jobs resume to namespace/preflight reference review.
-  Verification: `pending`; Commit: `pending`.
+  Verification: exact-head two jobs/all steps completed-success; exclusive archive28/CLI200 green.
+  Commit: `STITCHCAD-G1-0075`; P0 SPINE.23 precedes namespace review.
 
 ### Third-window local receipts — `2026-10-02`
 
@@ -779,3 +780,18 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   infrastructure. Both defects are owned P0 SPINE.23 after current clean archive/CI; restricted green
   is invalid evidence meanwhile. No project verification process remains in flight at local commit.
 - Final staged `make gate` →13 doctrine checks/all doctrines green, terminal exit0.
+
+### Third-window observed CI — `G1-SLICE.5b.1b.0v`, `2026-10-02`
+
+- `git push origin main` terminal exit0: f876913..b595a37, ahead0. No dirty tracked input at push.
+- Exact head b595a37bda29a8f019e06bdb09c79ef395decb4d. Abbreviated head filter returns0 runs;
+  corrected full SHA yields2. rust run37060421597/job111015421472 check; doctrines
+  run37060421575/job111015421405 enforce. Both completed/success, every reported step success;
+  APIs terminal0. Rust run aggregate initially in_progress; authoritative job completed/success.
+- Exclusive post-commit archive suite terminal exit0:28 pass/0fail;200 CLIcontrols/191 logical
+  reads/3windows. Newest committed catalog edit refuses rc1, as do payload/member/membership/collision
+  controls. No source/schema/caps changed. Full local native/WASM/book/probes/gate earned in .0.
+- Oldest live G1-0057 ledger sealed exact predecessor bytes; newest receipt is ordinary docs.
+  P0 SPINE.23 now takes clean frontier; D114/D115 remain12open/102sealed until verified repair.
+- promotion: declined (canonical observed-job and actual-refusal policy applied).
+- Receipt leaf focused publication9, ledger9/pointer13 and staged make gate all terminal0; no needed job remains.
