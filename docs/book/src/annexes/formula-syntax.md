@@ -81,3 +81,33 @@ bash docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh
 G1-SLICE.5a.2 owns expression trees; .5a.3 owns exact literals/canonical ordered recipes and .5a.4
 reviews syntax completion. Exact evaluation, geometry, command/API/MCP workflows and release proofs
 remain pending. A successful library WASM build is not a working browser application.
+
+## Reference structural-limit controls
+
+The chapter census is a reference evaluator, separate from the product lexer and future parser.
+G1-SLICE.5a.2a corrected D75: its walkers previously skipped ordinary calls' argument lists, letting
+258-node and 17-level conditional fixtures pass while reporting only seven nodes/zero depth. This
+was an instrument defect; no production evaluation API existed to certify those forms.
+
+The reference now traverses every semantic child, including every call argument and both conditional
+branches. Grouping and a square's exponent payload are not extra expression nodes. Traversal itself
+is iterative; a 5001-node prebuilt AST exercises walker stack safety without accepting that AST as a
+valid expression. The reference parser remains an instrument for the book, not a production parser
+with arbitrary-input safety guarantees.
+
+Controls accept exactly 256 semantic nodes and 16 nested conditional levels. Forms at 257/258 nodes
+or 17 levels raise formula_domain with the measured size and unchanged bound before inference or
+evaluation. Depth inside ordinary calls and untaken branches is static structure, so it must refuse
+even if evaluation would never visit that branch. Sibling depths are maximized, not added together.
+These controls establish node/depth coverage; they do not independently certify the statement or
+rational-bit limits, dimensional correctness, numerical values or complete recipe diagnostics.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_mutations.sh
+```
+
+The first command runs 16 structural controls/refusals and two copied-book refusal cases. The second
+runs alone: it disables four actual reference traversal/depth guards, requires assertion failures,
+and restores exact source bytes. Existing formula-language probes still verify chapter/fixture/value
+agreement. G1-SLICE.5a.2b owns product expression trees after this repaired prerequisite.

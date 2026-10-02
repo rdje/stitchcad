@@ -66,6 +66,23 @@ the digests afterwards.
 
 | [`changelog-part33.md`](docs/history/stitchcad-changelog-part33.md) | STITCHCAD-G1-0016 | 14 lines, 1199 bytes, `sha256:7fc5a9cb…` |
 
+| [`changelog-part34.md`](docs/history/stitchcad-changelog-part34.md) | STITCHCAD-G1-0017 | 13 lines, 1094 bytes, `sha256:a8c9973a…` |
+
+## STITCHCAD-G1-0038 - reference structural bounds include all function arguments (leaf `G1-SLICE.5a.2a`)
+
+D75's reference walkers omitted call argument lists, falsely accepting 258-node/17-level fixtures.
+Complete iterative semantic traversal and early conditional-depth refusal now preserve the unchanged
+256-node/16-level limits. Sixteen direct controls/refusals, two copied-book refusals and four actual
+guard mutations verify measured sizes and byte-identical restoration. This repairs a book oracle;
+product expression parsing/evaluation remain pending, and the lexer behavior is unchanged.
+
+D77's sibling-owner matcher now accepts section fragments while requiring the exact target; nine
+coverage probes retain unlinked/wrong-target refusals. Full 25 suites/book/ledger/archive checks pass.
+Completed lexical contracts/journal and older
+ledger payloads preserve predecessor bytes. Book annex/reference scope, toolbox and live/task records
+align. D76 malformed reference identifiers/missing unit separator is owned next by .5a.2b.1 before the
+product parser; D70 axes still requires a ruling. G1 remains 5/18; no production-readiness claim.
+
 ## STITCHCAD-G1-0037 - borrowed machine-form lexing retains exact source spans (leaf `G1-SLICE.5a.1`)
 
 The new core recipe front-end scans ASCII keywords, identifiers, numbers, operators and punctuation
@@ -370,17 +387,3 @@ restored strict Rust, wasm, warning-free book, fixture/feature/glossary/tree cen
 staged gates pass. Gather/layer checklists relocate unchanged with an independent committed-content
 oracle and staged revalidation. Book examples distinguish hem fold binding from allowance corners.
 Hem/layer parent closes; G1 stays 4/18 top-level leaves, 3/4 families. Next `.3c.4c` closures.
-
-## STITCHCAD-G1-0017 - served layers retain recipe and material intent with explicit lining scope (leaf `G1-SLICE.3c.4b.1`)
-
-Immutable Facing/Lining/Interfacing types retain served Piece, recipe offset operation and directed
-sources, plus material assignment. Complete owned sources and unique endpoints are required;
-blank unresolved-material reasons, wrong owners and duplicate sources are typed refusals. Recipe
-operations own dimensions; G1 generates no contour. Lining can be inspected but execution refuses
-`env_lining` with served Piece and proving gate G7; `.6` must enforce this boundary before execution.
-
-Nine contracts and three privacy checks pass. Disabling scope and ownership refusals independently
-makes their regressions red; restored strict Rust, wasm, warning-free book, fixture/feature/glossary/
-tree censuses, ledger and staged gates pass. Piece's extracted shared material invariant preserves
-its original contracts. The fold checklist moves unchanged to the evidence sibling; docs and
-frontier align. G1 remains 4/18 top-level leaves, 3/4 families; next `.3c.4b.2` Hem.

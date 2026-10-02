@@ -302,7 +302,9 @@ here, and the census §8 names refuses a part that is not:
 - An `unknown` in an untaken branch does not block; one in a taken branch does.
 - A tolerance comparison names its class, and comparing two values of which one came from an
   irrational call is refused at T1.
-- The structural limits refuse a pathological recipe rather than exhausting memory, and the largest
+- The structural limits refuse a pathological recipe rather than exhausting memory. Current
+  [reference node/depth controls](../annexes/formula-syntax.md#reference-structural-limit-controls)
+  have explicit instrument scope; product expression parsing remains G1 work. The largest
   expression in the book's examples stays inside `max_expression_nodes` by the margin §4.3 claims.
 - Every display operator this book uses has a machine form in [grammar
   §3](formula-language/grammar.md), every part of this chapter is listed in §7, and every operator,

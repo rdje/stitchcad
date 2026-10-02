@@ -112,3 +112,8 @@ capture against its named Git snapshot when available. Calibrated refusals:
 Formula lexer guard proof: `bash docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh`
 mutates actual production sources, expects nine assertion reds and restores exact bytes. Run alone;
 no overlapping build/gate/commit. The library contract tests cover borrowed spans and lexical scope.
+
+Formula structural controls: `bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh`
+loads the actual reference definitions and checks independently built node/depth boundary fixtures plus
+copied-book refusals. `run_formula_structure_mutations.sh` in that directory disables four actual
+reference guards and restores exact bytes; run alone. This is reference evidence, not a product parser.

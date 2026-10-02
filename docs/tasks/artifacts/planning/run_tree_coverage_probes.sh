@@ -12,6 +12,8 @@
 # property, and requires the census to name it. The real tree is never mutated.
 #
 #   REAL            the census passes on this repository as it stands, siblings counted as siblings
+#   FRAGMENT       a section link to the exact sibling target establishes ownership
+#   TARGET-RED     a similarly prefixed but different target cannot own the sibling
 #   SIBLING-RED     a tree that stops linking its evidence sibling turns that sibling into an orphan
 #   STRAY-RED       a file in docs/tasks/ that is neither a tree nor linked is an orphan
 #   UNOWNED-RED     a roadmap lane whose tree file is missing is UNOWNED
@@ -53,6 +55,30 @@ if [ "$rc" -eq 0 ] && grep -q '/ 0 orphan(s) / 0 dead link(s)' <<<"$out"; then
   ok REAL "$(summary "$out")"
 else
   bad REAL "the real tree does not satisfy its own coverage census (exit=$rc)" "$out"
+fi
+
+# ---------------------------------------------------------------- FRAGMENT and exact-target control (D77)
+D="$WORK/fragment"; mkroot "$D"
+printf '# Fragment fixture\n\n## Scope\n' > "$D/docs/tasks/FRAGMENT-EVIDENCE.md"
+printf '\n[Scoped evidence](FRAGMENT-EVIDENCE.md#scope)\n' >> "$D/docs/tasks/G1-SLICE.md"
+out="$(run "$D")"; rc=$?
+if [ "$rc" -eq 0 ] && grep -qE 'FRAGMENT-EVIDENCE +sibling' <<<"$out"; then
+  ok FRAGMENT "a fragment link to the exact target owns its sibling (exit=$rc)"
+else
+  bad FRAGMENT "a valid section link did not establish sibling ownership (exit=$rc)" "$out"
+fi
+python3 - "$D/docs/tasks/G1-SLICE.md" <<'PY'
+import pathlib, sys
+p = pathlib.Path(sys.argv[1]); text = p.read_text()
+old = '](FRAGMENT-EVIDENCE.md#scope)'
+assert text.count(old) == 1, 'exact-target mutation anchor changed'
+p.write_text(text.replace(old, '](FRAGMENT-EVIDENCE.md-other#scope)', 1))
+PY
+out="$(run "$D")"; rc=$?
+if [ "$rc" -eq 1 ] && grep -qE 'FRAGMENT-EVIDENCE +ORPHAN' <<<"$out"; then
+  ok TARGET-RED "a different target cannot establish sibling ownership (exit=$rc)"
+else
+  bad TARGET-RED "a similarly prefixed target owned the sibling (exit=$rc)" "$out"
 fi
 
 # ---------------------------------------------------------------- SIBLING-RED: an unlinked sibling is a stray

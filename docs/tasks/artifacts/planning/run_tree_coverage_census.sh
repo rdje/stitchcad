@@ -91,7 +91,7 @@ for f in "$TASKS"/*.md; do
     # containment registry prescribes. An unlinked non-tree file in docs/tasks/ is a stray: nothing owns it.
     siblings=$((siblings + 1))
     esc="$(printf '%s' "$b" | sed 's/\./\\./g')"
-    owner="$(grep -lE "\\]\\($esc\\)" "$TASKS"/*.md 2>/dev/null | grep -v "^$f$" | head -1)"
+    owner="$(grep -lE "\\]\\($esc(#[^)]*)?\\)" "$TASKS"/*.md 2>/dev/null | grep -v "^$f$" | head -1)"
     if [ -n "$owner" ]; then
       printf '  %-22s %-12s %s\n' "$base" "sibling" "evidence of $(basename "$owner" .md)"
     else

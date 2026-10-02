@@ -3,6 +3,26 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-02)_ — structural measurement must visit call argument lists
+
+- D75's reference AST stores ordinary call arguments in lists. Tuple-only walkers skipped all of
+  them, so real copied-book 258-node/17-depth fixtures stayed green and reported seven/zero. Iterative
+  semantic-child traversal includes every argument and static if branch; containers are not nodes.
+- Exactly 256 nodes/16 if levels pass; over-bound forms raise measured formula_domain before inference
+  or evaluation. A 5001-node prebuilt AST proves walker stack safety, not product input acceptance.
+  Four actual guard removals produce assertion reds; source restores byte-identically. Fixture arithmetic
+  initially overcounted a nested call/if by one; independently enumerated children correct that fixture.
+- The milestone caught D77: .md#fragment sibling links were excluded by a bare-file regex. Optional
+  fragments and exact-target positive/negative controls correct ownership without weakening orphan refusal.
+- D76 input parity is scheduled next: reference names permit malformed spelling and unit parsing accepts
+  1cm. Product lexer spelling is already stricter. This debt is distinct from completed node/depth proof.
+- All 25 probe suites pass, including nine tree and 15 language probes; book/ledger/archive checks green.
+  Staged doctrine gate required journal preservation boxes and the exact promotion-decline token;
+  both now carry actual evidence, with final staged gate green.
+- Lexical contracts/checklist and prior full journal relocate with exact predecessor oracles, giving
+  the main tree space for current work without raising caps. Book details stay in the syntax annex.
+- promotion: declined (reference-tool repair; fixed language limits and ADR-0003 authority unchanged).
+
 ## _(2026-10-02)_ — lexical source is borrowed and expression authority stays separate
 
 - FormulaLexer borrows exact machine source and produces immutable text/span/kind tokens. One shared
@@ -89,27 +109,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   preserve historical bytes. D70 axes ruling remains independent and pending; .3b coverage follows.
 - promotion: promoted by `decision_size-set-ownership.md`'s chart observations section.
 
-## _(2026-10-02)_ — size labels, member identity and sequence are separate data
-
-- Membership stores pinned set id/revision, explicit system, ordered stable members and one base id.
-  Human labels preserve exact Unicode/case/spacing; no token or numeric semantics are inferred. Missing
-  ids never transfer to a same-label replacement. Explicit validated reconstruction preserves originals.
-- Nonempty/unique membership and base existence are structural requirements. Count successor refuses
-  overflow but does not replace current-registry/command revision checks. Single custom membership is
-  not yet an MTM-ready body chart; quantities, chart and axes are separate owned contracts.
-- Twelve contracts/three privacy-quantity docs and seven real guard/order mutations pass; exact restore,
-  strict 386 tests/WASM/book verify the foundation. D70's source census pinpoints contradictory axes
-  cardinality in size-sets .2/.7; director ruling requested before .4c.2, no representation defaulted.
-- promotion: promoted by `decision_size-set-ownership.md`'s membership foundation section.
-
-## _(2026-10-02)_ — structural Ease review retains independent proof boundaries
-
-- Every ontology .2.2 field maps to current API/contracts; sets enforce per-POM identity and table
-  membership. Canonical uncertainty/provenance and explicit compression remain distinct from truth.
-- Current measure tests/docs pass 65; full 23-suite milestone/book pass with product code unchanged
-  from b4e0bc7 strict Rust/WASM. Completed set contract/evidence relocates unchanged. .4b closes
-  structurally; SizeSet and combined review remain. Physical/evaluation/release proofs are still owned.
-- promotion: declined (routine milestone review; results owned by book/task, canonical decisions unchanged).
 
 
 
@@ -176,3 +175,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part35.md`](docs/history/stitchcad-devnotes-part35.md) | individual Ease mapping lesson | 13 lines, 1190 bytes, `sha256:de68d50d…` |
 
 | [`devnotes-part36.md`](docs/history/stitchcad-devnotes-part36.md) | per-POM Ease query lesson | 13 lines, 1196 bytes, `sha256:f0b78fd7…` |
+
+| [`devnotes-part37.md`](docs/history/stitchcad-devnotes-part37.md) | membership/Ease review lessons | 21 lines, 1781 bytes, `sha256:6a76a906…` |

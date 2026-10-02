@@ -445,6 +445,19 @@ D73 and D74 are sealed in [`stitchcad-defects-part15.md`](../history/stitchcad-d
 G1-SLICE.5a.1 corrects ADR clause links and ASCII vertical-tab handling; lexical contracts and
 actual guard mutations verify the fixes.
 
+- **D76** — reference formula input parser accepts malformed machine identifiers and missing unit gap.
+  - Reproduce: load actual reference definitions through formula_structure.py; parse Upper, _a and
+    a__b returns name ASTs. With canonical cm unit context, parse 1cm returns a length literal,
+    although grammar §1 requires lower-snake names and §2 requires exactly one space before a unit.
+  - Impact: the reference grammar oracle cannot independently verify these product parser refusals.
+  - Owner: `G1-SLICE.5a.2b.1`, priority next safe input-parity prerequisite before expression trees;
+    fix spelling/keyword positions/unit separation and establish paired controls/actual guard reds.
+    Product MachineToken/FormulaLexer already refuse malformed names; this is reference-input debt.
+
+D75 and D77 are sealed in [`stitchcad-defects-part16.md`](../history/stitchcad-defects-part16.md).
+G1-SLICE.5a.2a verifies complete reference child traversal/depth refusal and fragment sibling ownership.
+D76 remains owned next by .5a.2b.1; input parity is separate from these repaired structural controls.
+
 ## Decisions
 
 - `2026-09-29`: tree ids are the roadmap's own lane names (`G0-CONTRACT` … `V2-SIM`) so a

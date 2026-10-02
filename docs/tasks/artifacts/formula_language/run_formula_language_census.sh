@@ -415,22 +415,41 @@ class Evaluator:
             return ("name", text)
         raise FErr("formula_parse", "unexpected %r" % text)
 
+    @staticmethod
+    def syntax_children(node):
+        """Semantic AST children; call argument lists are not themselves expression nodes."""
+        if node[0] == "call":
+            return node[2]
+        return [child for child in node if isinstance(child, tuple)]
+
     def count_nodes(self, node):
-        if not isinstance(node, tuple): return 1
-        return 1 + sum(self.count_nodes(c) for c in node if isinstance(c, tuple))
+        total, pending = 0, [node]
+        while pending:
+            current = pending.pop()
+            total += 1
+            pending.extend(self.syntax_children(current))
+        return total
 
     def if_depth(self, node):
-        if not isinstance(node, tuple): return 0
-        d = max([self.if_depth(c) for c in node if isinstance(c, tuple)] or [0])
-        return d + 1 if node[0] == "if" else d
+        deepest, pending = 0, [(node, 0)]
+        while pending:
+            current, depth = pending.pop()
+            depth += int(current[0] == "if")
+            deepest = max(deepest, depth)
+            pending.extend((child, depth) for child in self.syntax_children(current))
+        return deepest
 
     def check_limits(self, node):
         n = self.count_nodes(node)
         self.max_nodes = max(self.max_nodes, n)
-        self.max_if = max(self.max_if, self.if_depth(node))
+        depth = self.if_depth(node)
+        self.max_if = max(self.max_if, depth)
         if n > self.limits["max_expression_nodes"]:
             raise FErr("formula_domain", "expression has %d nodes, the limit is %d"
                        % (n, self.limits["max_expression_nodes"]))
+        if depth > self.limits["max_if_depth"]:
+            raise FErr("formula_domain", "conditional depth is %d, the limit is %d"
+                       % (depth, self.limits["max_if_depth"]))
 
     def see(self, fr):
         fr = Fraction(fr)
