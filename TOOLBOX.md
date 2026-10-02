@@ -254,3 +254,5 @@ checks closed kind/function matrices with value access trapped; the structural r
 
 Static namespace/header oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations`
 checks1139 metadata-only cases/thirteen actual guard reds; the existing structural runner watches it.
+Whole static recipe/consumer oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations`
+checks196 cases, replay/measurement controls and actual guard reds; watched by the structural runner.

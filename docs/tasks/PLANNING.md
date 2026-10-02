@@ -852,13 +852,6 @@ admits only matching sandbox/child pairs without real repo handles.43 independen
 compiled guard faults pass. Actual restricted invocation refuses2; OS-visible held-file PID78489
 blocks1, controlled child finishes0, restored census green0. No shared tool service is stopped.
 
-- **D119** — reference lacks whole-recipe static preflight before evaluating earlier statements.
-  - Reproduce: actual EV has no preflight method; book L2 loop calls statement/evaluate while
-    discovering each later row's static errors. Baseline method census prints False, exit0.
-  - Root: statement mixes inference and evaluation; no complete ordered static recipe stage.
-  - Impact: reference cannot prove contract5.1/9's no-statement-execution after a late static error.
-  - Owner: G1-SLICE.5b.1b.2, next after clean namespace/header repair; before product static graph.
-
 - **D121** — reference comparison loses irrational-call provenance required for T1 refusal.
   - Reproduce: assert approx:eps_num=sin(90 deg)==1.0 ACCEPTs true, baseline exit0, contrary
     contract4.2/9's T2-or-looser rule when an irrational result contributes.
@@ -882,5 +875,10 @@ D116/D117/D118/D120 close at G1-SLICE.5b.1b.1; original reports are sealed in
 [`stitchcad-defects-part44.md`](../history/stitchcad-defects-part44.md). Actual namespace/header
 controls1139/13 guard assertion reds and full reference/language checks pass. The reference now
 separates syntax, static statements and numerical execution; reserved/input/recipe collisions and
-assertion class/arithmetic kinds refuse before execution. Whole preflight D119 remains next .1b.2;
+assertion class/arithmetic kinds refuse before execution. Whole preflight D119 closes at .1b.2;
 D121/D122 stay owned runtime reference repairs. Product validation/typed payloads remain .5b.2–.4.
+
+D119/D123 close at G1-SLICE.5b.1b.2; original reports retained in
+[`stitchcad-defects-part45.md`](../history/stitchcad-defects-part45.md). Whole preflight196 cases/
+14 actual assertion reds and consumer/measurement controls pass. No statement executes after a
+late static refusal; recipe size excludes unrelated candidates. D121/D122 retain .5e.3/.5e.1 owners.

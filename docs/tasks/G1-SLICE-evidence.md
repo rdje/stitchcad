@@ -822,14 +822,32 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   Rust30/3groups/publication9 pass0. Commit: `STITCHCAD-G1-0076`; .1b.2 next.
 
 - ID: `G1-SLICE.5b.1b.2`
-  Status: `pending`
+  Status: `done`
   Goal: D119 whole ordered static preflight before any reference value computation.
+  Pre-code protocol: read contract3/4.1/4.3/5.1/9, grammar1/5/7, actual namespace/static_statement,
+  product ordered/statement public parsing contracts and book L2/L4 replay. Partition original
+  ASCII source at top-level let/assert tokens, preserving spacing; newlines remain whitespace.
+  Consume initial declaration pairs before dictionaries; build only local kind/origin metadata,
+  publishing each successful let for subsequent statements. Reject bare expressions in recipes.
+  Return a complete tuple only after every header/operand/branch and structural limit succeeds;
+  no caller namespace update, numeric/state/availability/geometry read or runtime callback.
+  Existing parser literal-input conversion remains permitted. Independently author ordered source,
+  last-error, reserved/context/collision, 4096/4097, node/depth and no-partial-result controls;
+  compile actual guard faults in memory and require named body assertion reds. Book's17 lets and
+  four assertions must preflight together before L2 starts; copied-book late static error plus
+  earlier division by zero proves consumer ordering. Preserve runtime-only refusal examples.
+  Watch through existing structural probes, document scope in existing annex/index, focused
+  signature/namespace/language/publication/ledger/gate checks and per-leaf commit.
   Acceptance: all statements/branches/headers and declaration order checked, no execution/value
   reads, no accepted partial plan after late static refusal; initial-origin collision and last
   statement/structural limits independently tested. Integrate book replay after full preflight,
   preserving valid values and runtime refusal examples' separate execution stage. All namespace/
   signature controls remain watched. Product graph/typed argument payloads remain .5b.2–.4.
-  Verification: `pending`; Commit: `pending`.
+  Related D123: old L8 adds13 independent refusal cases to the21-statement worked recipe;
+  reproduce a declared25-statement ceiling before repairing actual per-recipe measurement here.
+  Verification:196 whole-source cases/14 actual guard assertion reds; consumer3 and per-recipe
+  measurement control green, runtime/value/geometry trapped; full reference/language16/publication9
+  pass0. D119/D123 fixed, original reports retained. Commit: `STITCHCAD-G1-0077`.
 
 ### Namespace/header receipts — `G1-SLICE.5b.1b.1`, `2026-10-02`
 
@@ -861,3 +879,35 @@ made it, which is the remedy `G0-CONTRACT.4c` used for `G3-GRADING.md`.
   Whole oldest G1-0059 payload independently matches Git predecessor; four original report bodies
   retained in defects-part44. Ordinary focused gate/ledger receipts follow; no push exception touched.
 - Final ledger9/pointer13 and staged make gate13 doctrines green terminal0; toolbox route added.
+
+### Whole preflight receipts — `G1-SLICE.5b.1b.2`, `2026-10-02`
+
+- Reference previously has no preflight; L2 discovers errors during replay (D119). New196 independent
+  whole-source controls/14 compiled actual body assertion reds pass0. Metadata-only declarations,
+  reserved kind-only views and execution/storage/geometry traps; original slices/order/headers,
+  every origin/81 collisions/reserved names, no caller mutation or accepted prefix on late error.
+- Actual4095/4096 success, either header4097 domain refusal;255/256 nodes and15/16 if levels
+  success,257 nodes/depth17 refuse, including last-statement cases. Source unchanged during faults.
+- Full worked21-statement static preflight precedes L2. Two copied books' last assertion kind/name
+  errors precede first binding's zero divisor; every consumer execution callback trapped. Actual
+  shell control preserves17 bindings/four assertions/thirteen refusals, zero mismatches. Consumer
+  bypass/early numerical call fail body assertions. Product immutable graph remains .5b.2–.4.
+- D123 tools baseline copied25 ceiling: preflight21 succeeds, old L8 sums unrelated13 refusals
+  into34 and exits1. Actual accepted-plan measurement now21; copied25 control exits0, restoring
+  old aggregate in memory fails named body assertion. Limit remains4096 in canonical chapter.
+- Full reference suite terminal0, existing4032 signatures/12 reds and1139 namespaces/13 reds
+  retained; final whole-recipe producer terminal0 at14 reds. Language16/publication9 terminal0;
+  publication53chapters/25scoped APIs/1108source/1714rendered links, warning-free book.
+- First fault anchor matched both recipe-role refusals; it was rejected as setup evidence. Fixed
+  unique anchor, all claimed reds are actual body failures. L6 mutations now target non-executed
+  formula spans; L8 margin mutation100 avoids preempting its intended20x-margin proof. New producer
+  guards prove actual limits separately. No Rust source/test changed; no product validator claim.
+- Oldest G1-0060 ledger1090B and four old lesson records5136B match exact Git predecessor slices;
+  D119 original report retained, D123 added before repair. Existing archived windows/reader/caps
+  unchanged. Current ledger/retention/gate receipts follow; .1c takes next clean frontier.
+- Final ledger9/pointer13/publication9 and staged make gate13 doctrine checks pass, terminal0.
+  First gate refused missing explicit command-output/rc evidence in three new checklist boxes;
+  corrected the record using observed outputs, without weakening any checker. Tree census10lanes/
+  13trees/10siblings/0unowned-orphan-deadlinks. Defect census12open/110unique sealed/overlap0 from
+  materialized199 logical history records;13workingMarkdown/9669decodedlines/733308decodedB/
+  321822residentB. Rust source/test diff0; KnowledgeMap100lines/8181B; diff check0.

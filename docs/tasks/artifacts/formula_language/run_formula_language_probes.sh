@@ -175,8 +175,9 @@ fi
 
 # ---------------------------------------------------------------- UNDECLARED-CALL (L6a)
 B="$(book undeclared_call)"
-mutate "$B/spec/formula-language/examples.md" '`hypot(hip_to_hem_drop, a_line_flare)`' \
-  '`frobnicate(hip_to_hem_drop, a_line_flare)`' || bad UNDECLARED-CALL "the mutation did not apply" ""
+# Exercise L6's non-executed formula population; worked-source static ordering has its own controls.
+mutate "$B/spec/formula-language/examples.md" 'a profile-resolved allowance inside a formula' \
+  'a profile-resolved allowance inside a formula; `frobnicate(width)`' || bad UNDECLARED-CALL "the mutation did not apply" ""
 out="$(run "$B")"; rc=$?
 if [ "$rc" -eq 1 ] && grep -q '`frobnicate(` is no declared function' <<<"$out"; then
   ok UNDECLARED-CALL "a call to a function the grammar does not declare is refused by name (exit=$rc)"
@@ -186,8 +187,8 @@ fi
 
 # ---------------------------------------------------------------- OPERATOR (L6b)
 B="$(book operator)"
-mutate "$B/spec/formula-language/examples.md" '`waist_girth + ease_waist`' \
-  '`waist_girth ⊕ ease_waist`' || bad OPERATOR "the mutation did not apply" ""
+mutate "$B/spec/formula-language/examples.md" 'a measurement plus its ease, both lengths' \
+  'a measurement plus its ease, both lengths; `width ⊕ width`' || bad OPERATOR "the mutation did not apply" ""
 out="$(run "$B")"; rc=$?
 if [ "$rc" -eq 1 ] && grep -q "uses '⊕'" <<<"$out"; then
   ok OPERATOR "an operator no table declares is refused, anywhere in the book (exit=$rc)"
@@ -230,7 +231,7 @@ fi
 # ---------------------------------------------------------------- LIMIT (L8)
 B="$(book limit)"
 mutate "$B/spec/formula-language.md" '| `max_expression_nodes` | 256 |' \
-  '| `max_expression_nodes` | 4 |' || bad LIMIT "the mutation did not apply" ""
+  '| `max_expression_nodes` | 100 |' || bad LIMIT "the mutation did not apply" ""
 out="$(run "$B")"; rc=$?
 if [ "$rc" -eq 1 ] && grep -q 'under the 20x margin' <<<"$out"; then
   ok LIMIT "a structural limit below what the book measures is refused (exit=$rc)"

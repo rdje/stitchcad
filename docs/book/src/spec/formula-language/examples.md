@@ -12,6 +12,12 @@ refusals. Three refusal examples fail syntax parsing now; ten await static valid
 The [coupled input review](../../annexes/formula-recipe-inputs.md#coupled-input-and-identity-review)
 shows the complete proof and remaining owners.
 
+The reference census checks all21 statements' names and kinds before computing the first binding.
+A kind or name error in the last assertion stops the entire worked recipe before execution.
+Unknown measurements can still have known kinds; reading their missing values is a later execution
+check. The [static-validation annex](../../annexes/formula-static-validation.md#whole-recipe-before-execution)
+explains the two stages and their current implementation boundaries.
+
 ## 1. Names these examples bind that the fixture does not
 
 | Name | Kind | Origin | Binding | State |

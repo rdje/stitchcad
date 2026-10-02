@@ -815,7 +815,7 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
 | done | `G1-SLICE.5a.3f.2` | `done` | Coupled whole input and identity review |
 | done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
-| next | `G1-SLICE.5b.1b.2` | `pending` | Namespace/header reference repairs complete; whole preflight D119 next |
+| next | `G1-SLICE.5b.1c` | `pending` | Reference signatures/namespaces/whole preflight done; full static obligation review |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -847,6 +847,25 @@ also run glossary/API, feature and publication checks. Prior checklists and auth
 Completed lexical/expression/numeric/identity protocols, checklists and commit journals remain in
 [formula evidence](G1-SLICE-formulas.md), [numeric journal](G1-SLICE-journal.md) and
 [identity/statement evidence](G1-SLICE-canonical.md#prior-resume-routes--preserved-during-g1-0065).
+
+### `G1-SLICE.5b.1b.2` — whole reference static preflight
+
+- [x] **REPRODUCE / ISSUE** — D119 lacks whole preflight; D123 copied25 ceiling accepts21 in
+  preflight then old aggregate L8 refuses34, baseline rc1. Original reports retained in part45.
+- [x] **ROOT CAUSE (WHY + WHERE)** — book L2 evaluates as it discovers later errors; L8 adds
+  unrelated refusal rows. static_recipe_contract.py --mutations →196 cases/14 actual assertion
+  reds, rc=0; copied25-ceiling baseline reports34 and exits1 despite accepted21, rc=1.
+- [x] **FIX** — original-source top-level boundaries, local metadata-only ordered namespace,
+  complete plan after all statements pass; whole worked recipe preflight before L2, actual size21.
+- [x] **ADDRESSED (verified)** —196 cases/14 actual guard body assertion reds; consumer3 and
+  copied per-recipe ceiling control pass; static_recipe_contract.py --mutations →rc=0,
+  execution/value/geometry trapped, no accepted prefix. Actual source unchanged during controls.
+- [x] **NO REGRESSION** — full reference suite including4032 signature/1139 namespace matrices
+  run_formula_structure_probes.sh →rc=0; run_formula_language_probes.sh →16 pass/0 fail, rc=0;
+  run_book_publication_probes.sh →9 pass/0 fail, rc=0. No Rust source/test bytes changed.
+- [x] **LOCKSTEP** — progressive worked chapter/annex/index/live/task/ledger records agree,
+  G1 stays5/18, defects12open/110sealed; .1b done, .1c next. Exact old records retained.
+  promotion: declined (existing whole-refusal, declaration-order and independent-evidence principles).
 
 ### `G1-SLICE.5b.1b.1` — reference namespace and static headers
 
@@ -950,3 +969,4 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 - `2026-10-02`: .5b.1b.0v records both exact-head CI jobs/steps success and newest window3 refusal; STITCHCAD-G1-0075. Next P0 SPINE.23, then namespace.
 
 - `2026-10-02`: .5b.1b.1/STITCHCAD-G1-0076 repairs reference namespace/header phase; static1139/13 actual reds. D119 whole preflight next.
+- `2026-10-02`: .5b.1b.2/STITCHCAD-G1-0077 repairs whole preflight/measurement D119/D123;196 cases/14 actual reds. .1b done, .1c next.

@@ -855,6 +855,36 @@ class Evaluator:
         _, _, _, node = checked
         return ("expr", None, self.infer(node, env), node)
 
+    def preflight(self, src, declarations):
+        """Check the complete ordered source using metadata only; publish no partial plan."""
+        env = self.namespace(declarations)
+        toks, starts = self.tokenize(src)
+        if not toks:
+            return ()
+        if toks[0][1] not in {"let", "assert"}:
+            raise FErr("formula_parse", "a recipe contains only let/assert statements")
+        boundaries, depth = [], 0
+        for (_, text), start in zip(toks, starts):
+            if depth == 0 and text in {"let", "assert"}:
+                boundaries.append(start)
+            if text == "(":
+                depth += 1
+            elif text == ")":
+                depth = max(0, depth - 1)
+        ends = boundaries[1:] + [len(src)]
+        plan = []
+        for ordinal, (start, end) in enumerate(zip(boundaries, ends), 1):
+            if ordinal > self.limits["max_recipe_statements"]:
+                raise FErr("formula_domain", "recipe statement %d exceeds max_recipe_statements=%d"
+                           % (ordinal, self.limits["max_recipe_statements"]))
+            checked = self.static_statement(src[start:end], env)
+            if checked[0] != "let" and checked[0] != "assert":
+                raise FErr("formula_parse", "a recipe contains only let/assert statements")
+            if checked[0] == "let":
+                env[checked[1]] = {"kind": checked[2], "origin": "recipe"}
+            plan.append((start, end, checked))
+        return tuple(plan)
+
     # -- runtime statement adapter; existing tuple forms remain stable --
     def statement(self, src, env):
         checked = self.static_statement(src, env)
@@ -1172,10 +1202,34 @@ for r in table_in(GRA["2"], "Literal")[1]:
         l1 += 1
 print("  literal rows: %d · mismatches: %d" % (len(table_in(GRA["2"], "Literal")[1]), l1))
 
+# Check the ENTIRE worked recipe before its first statement can execute. Assertion labels
+# introduce no bindings; the namespace used by preflight contains only kinds and origins.
+bind_rows = table_in(EXA["2"], "Token")[1]
+asserts = table_in(EXA["3"], "Assertion")[1]
+worked_sources = []
+for r in bind_rows:
+    if len(r) < 4:
+        bad("examples §2: malformed worked binding row before preflight")
+        sys.exit(1)
+    worked_sources.append("let %s: %s = %s" % (debacktick(r[0]), r[1].strip(), first_span(r[2])))
+for r in asserts:
+    if len(r) < 3:
+        bad("examples §3: malformed worked assertion row before preflight")
+        sys.exit(1)
+    worked_sources.append(first_span(r[0]))
+worked_source = "\n".join(worked_sources)
+print("-- whole worked recipe static preflight (no statement execution)")
+try:
+    worked_plan = EV.preflight(worked_source, env.items())
+except FErr as e:
+    bad("worked recipe preflight: %s — %s" % (e.token, e.msg))
+    print("formula-language census: REFUSED — worked recipe static error; no statement executed")
+    sys.exit(1)
+print("  statically accepted statements: %d" % len(worked_plan))
+
 # ── L2 + L3: the bindings, in declaration order, against both chapters ────────────────────
 print("-- L2 bindings evaluate / L3 they agree with the fixture")
 computed, shared, l2, l3 = [], 0, 0, 0
-bind_rows = table_in(EXA["2"], "Token")[1]
 for r in bind_rows:
     if len(r) < 4:
         bad("examples §2: a row has %d cells, the table declares 5: %r" % (len(r), r)); l2 += 1; continue
@@ -1233,7 +1287,7 @@ print("  bindings: %d · mismatches: %d · names shared with the fixture: %d · 
 
 # ── L4: the assertions ────────────────────────────────────────────────────────────────────
 print("-- L4 assertions hold at the class they name")
-l4, asserts = 0, table_in(EXA["3"], "Assertion")[1]
+l4 = 0
 for r in asserts:
     if len(r) < 3:
         bad("examples §3: a row has %d cells, the table declares 3" % len(r)); l4 += 1; continue
@@ -1370,13 +1424,13 @@ print("  links checked in %d parts · listed parts %d · files in the directory 
 # ── L8: the structural limits are derived ─────────────────────────────────────────────────
 print("-- L8 the structural limits exceed what the book measures")
 l8 = 0
-statements = len(bind_rows) + len(asserts) + len(refusals)
+statements = len(worked_plan)
 if EV.max_nodes * NODE_MARGIN > limits["max_expression_nodes"]:
     bad("L8 the largest expression measured %d nodes and `max_expression_nodes` is %d — under the "
         "%dx margin the decision record states" % (EV.max_nodes, limits["max_expression_nodes"],
                                                    NODE_MARGIN)); l8 += 1
 if statements > limits["max_recipe_statements"]:
-    bad("L8 the examples carry %d statements and `max_recipe_statements` is %d"
+    bad("L8 the worked recipe carries %d statements and `max_recipe_statements` is %d"
         % (statements, limits["max_recipe_statements"])); l8 += 1
 if EV.max_if > limits["max_if_depth"]:
     bad("L8 a conditional nests %d deep and `max_if_depth` is %d"

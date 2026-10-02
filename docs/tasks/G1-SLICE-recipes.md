@@ -690,7 +690,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Commit: `STITCHCAD-G1-0073`.
 
 - ID: `G1-SLICE.5b.1b`
-  Status: `in_progress`
+  Status: `done`
   Goal: all nine origins/eight reserved names, spelling/context, collision/rebinding/forward names
   and static whole-recipe preflight in the reference, with independent declaration fixtures.
   Acceptance: both-origin collision evidence, whole-recipe no-value-access proof, ordered namespace
@@ -700,7 +700,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   detailed pre-code protocols/receipts in G1-SLICE-evidence.md.
   Prerequisite .1b.0/.0v:64-file history capacity, exact retained window and observed CI;
   owned in G1-SLICE-evidence.md, no domain-scope pivot or limit increase.
-  Verification: `pending`; Commit: `pending`.
+  Verification:1139 namespace/196 whole-source cases;13 namespace/14 whole-preflight actual
+  assertion reds, worked replay and per-recipe measurement; no execution/value/geometry reads.
+  Children .1b.1/.1b.2 done, full .1c review remains. Commit: `STITCHCAD-G1-0076`/`STITCHCAD-G1-0077`.
 
 - ID: `G1-SLICE.5b.1c`
   Status: `pending`

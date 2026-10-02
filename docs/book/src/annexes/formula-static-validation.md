@@ -1,6 +1,6 @@
 # Static formula validation evidence
 
-> **Status:** reference-instrument evidence at G1-SLICE.5b.1a/.1b.1. The product libraries still stop at
+> **Status:** reference-instrument evidence at G1-SLICE.5b.1a/.1b. The product libraries still stop at
 > [syntax, inputs and canonical identity](formula-recipe-inputs.md). A valid syntax tree is not yet
 > a statically accepted recipe, a computed garment or a production approval.
 
@@ -135,7 +135,65 @@ static validation refuses them. No Rust syntax or serializer behavior changed.
 
 This proves metadata namespace and single-statement checking in the reference. It does not validate
 canonical input adapters, physical geometry or typed product diagnostic payloads; those retain
-.5e.1, G2 and .5b.2–.4 owners. Whole-recipe no-execution proof remains .1b.2. D121 (irrational-result
+.5e.1, G2 and .5b.2–.4 owners. Whole-recipe checking is described below. D121 (irrational-result
 provenance at T1) and D122 (origin-specific missing-value diagnostic routing) are scheduled .5e.3
 and .5e.1 reference repairs before their product execution evidence. Neither reference behavior is
 claimed correct by these static controls.
+
+## Whole recipe before execution
+
+A recipe must pass static checking in its entirety before its first statement computes a value.
+For example, with width declared as length:
+
+```
+let first: length = width / 0
+let last: count = width
+```
+
+The last statement has a kind error. The reference refuses formula_dimension without executing
+the first statement; its zero divisor therefore never reaches numerical evaluation. With the last
+statement removed, the recipe is statically valid and its division refusal belongs to execution.
+Static validity says that names and kinds fit; it does not promise that values can be computed.
+
+The reference's preflight method accepts original recipe source and initial declaration pairs.
+It locates top-level let/assert boundaries without treating newlines as statement terminators,
+preserves the original source slices and literal spacing, and checks statements in authored order.
+Each accepted let contributes only kind/origin metadata to the next statement's local namespace.
+Forward/self references fail, both conditional branches are checked, and assertion labels introduce
+no binding. Bare expressions remain available to the instrument's individual-expression tests;
+the whole-recipe grammar admits only let/assert statements. Empty recipes are accepted.
+
+The plan is returned as one tuple after every statement passes; a late error returns no accepted
+prefix and never changes the caller's declarations. This reference plan is an instrument result,
+not the future immutable typed product graph. Parsing still performs canonical literal-input
+conversion. Preflight never reads input values, states, context availability or physical geometry,
+and never calls numerical evaluation, binding storage or geometry resolution.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations
+```
+
+The196 independently authored whole-source controls cover original slices and headers, all nine
+origins, all81 ordered origin collisions, reserved declarations, unknown context values, declaration
+order and late refusals. Actual recipe lengths4095/4096 succeed and statement4097 fails for either
+header. Expressions at255/256 nodes and conditionals at15/16 levels succeed; node257 and depth17
+fail before execution. Metadata-only inputs and trapped callbacks make forbidden reads observable.
+
+The book consumer now preflights all17 bindings and four assertions together before L2 numerical
+replay. Two copied books combine an early zero divisor with a last-assertion kind/name error;
+the actual consumer refuses before any statement callback. The unmodified shell entry point still
+computes all published values and raises all13 expected refusal diagnostics. Compiled in-memory
+guard faults also test whether boundary/order/limit guards or the consumer's preflight call can
+be bypassed; the actual producer on disk stays unchanged during those controls. Fourteen actual
+guard faults must fail body assertions, including early consumer evaluation and measurement faults.
+
+Recipe size is measured from the accepted worked plan:21 statements. The13 separate refusal
+candidates are not appended to that recipe. D123 formerly combined them into34, falsely refusing
+a copied book with a25-statement ceiling. That independent control now passes, while restoring
+the old aggregate formula in memory causes a named assertion failure. The normative ceiling
+remains4096; the smaller value is used only to falsify the measurement in a copied book.
+
+D119's reference ordering and D123's measurement defects are repaired at .5b.1b.2. Product static namespaces, immutable
+dependency graphs and complete typed diagnostics remain .5b.2–.4. Reference numeric provenance
+and origin/context value routing remain D121/D122 at .5e.3/.5e.1; static checking cannot settle
+those execution obligations.

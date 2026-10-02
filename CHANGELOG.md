@@ -146,6 +146,20 @@ the digests afterwards.
 
 | [`changelog-part73.md`](docs/history/stitchcad-changelog-part73.md) | STITCHCAD-G1-0059 | 13 lines, 1095 bytes, `sha256:eea1fea0…` |
 
+| [`changelog-part74.md`](docs/history/stitchcad-changelog-part74.md) | STITCHCAD-G1-0060 | 13 lines, 1090 bytes, `sha256:ab4422c6…` |
+
+## STITCHCAD-G1-0077 - whole reference static preflight (leaf `G1-SLICE.5b.1b.2`)
+
+Original recipe source is statically checked in order before any statement executes; names publish
+only kind/origin metadata, and late errors return no accepted prefix or caller mutation. The worked
+book's17 lets/four assertions preflight together before replay. D119 closes; product validator pending.
+D123's old34 count wrongly included13 unrelated refusals. Actual recipe size21 passes a copied25
+ceiling; the canonical4096 ceiling stays fixed.196 independent cases/14 actual body assertion reds,
+consumer3 and measurement control pass; full reference/signature/namespace/language16/publication9
+green. Progressive book/annex/index/live/task records agree; Rust source/tests unchanged.
+G1 stays5/18; defects12open/110sealed. Full static review .1c next; D121/D122 keep runtime owners.
+Exact oldest G1-0060 ledger/four lesson records and original defect reports retained in bounded history.
+
 ## STITCHCAD-G1-0076 - reference namespace and static headers (leaf `G1-SLICE.5b.1b.1`)
 
 Reference syntax/static/runtime phases separate. Declaration pairs retain nine-origin collisions;
@@ -372,17 +386,3 @@ D101 stale-variable topic index overwrite and D102 misplaced defect entry are di
 fixed; publication/exact historical-record checks verify repairs. Book/grammar/decisions/live/task
 pointers agree and old payloads remain exact. .5a.3c closes for input normalization; next .5a.3d canonical
 identity. G1 stays5/18; defects10open/91sealed. Ordered recipes/binding/evaluation remain future work.
-
-## STITCHCAD-G1-0060 - immutable normalized expression arenas (leaf `G1-SLICE.5a.3c.3`)
-
-Whole syntax arenas now explicitly normalize every literal into separate immutable source-borrowing
-storage. Nodes/operators/names/ordered children/spans/depth remain intact; unary minus and raw angle
-turns survive. All call arguments/both branches convert; an input refusal returns its original location
-and aborts atomically. Syntax stays reusable; normalized views/iterators retain private arena handles.
-No operator/name/type validation, execution or canonical serialization is inferred from this stage.
-
-Eight public contracts/24 independent reference shapes/nested100 literal rows/25 worked expressions,
-three privacy-lifetime docs and seventeen actual compiled assertion reds pass with exact restoration.
-Flat conversion/clone/drop passes on64KiB stack. Strict native513, release eight, WASM3, book/reference
-checks pass. README/book/API map/decisions/live/task docs align; prior histories remain exact. G1 stays
-5/18; next .5a.3c.4 coupled normalization review before canonical serialization.

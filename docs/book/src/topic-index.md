@@ -29,6 +29,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Formula syntax API](annexes/formula-syntax.md)
 - [Static formula signature evidence](annexes/formula-static-validation.md)
 - [Formula namespaces and static headers](annexes/formula-static-validation.md#names-and-single-statement-static-checking)
+- [Whole-recipe static checking before execution](annexes/formula-static-validation.md#whole-recipe-before-execution)
 - [Single formula statement API](annexes/formula-statements.md)
 - [From an idea to a pattern](learn/design-to-pattern.md)
 - [Garment chart collections](spec/size-chart-collections.md)
