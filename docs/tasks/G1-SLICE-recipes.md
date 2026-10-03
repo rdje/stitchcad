@@ -693,10 +693,10 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: observe repaired-head CI jobs/steps/store paths; [receipts](G1-SLICE-names.md#repaired-ci-observation--h1v).
   Verified d5dd11f doctrine8/Rust11 steps/native663/56/WASM3/local stores; `STITCHCAD-G1-0100`.
 - ID: `G1-SLICE.5b.3c.2b.h1.c`
-  Status: `pending`
+  Status: `done`
   Goal: required24-hour cleanup, guarded frozen plan/apply/residue; stores/history untouched.
   Acceptance: actual process visibility, no foreign Git/link/device/tracked deletion; rebuild checks.
-  Work unit `STITCHCAD-G1-0101`; cleanup record/live/book/task/resume/commit; then D140.
+  Verified6trees/991strays/1819917894B,residue0/tracked equality; check663/56,WASM3/probes28→0; `STITCHCAD-G1-0101`.
 - ID: `G1-SLICE.5b.3c.2b.2`
   Status: `pending`
   Goal: context-free bounded checker with typed source/canonical errors, dependencies/checked owner.

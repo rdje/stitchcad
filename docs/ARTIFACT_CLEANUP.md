@@ -34,6 +34,5 @@ Rebuild only after the immediate residue census, since regeneration recreates se
 
 ## Latest run
 
-- **Run:** `2026-10-02` 19:18 UTC by leaf `SPINE.21b`.
-- **Summary:** removed six ignored output trees and 1281 strays (1112101558 file bytes);
-  selected residue 0, tracked changes/deletions 0. Rust/WASM/book/probes/gates verified after regeneration.
+- **Run:** `2026-10-03` 22:17 UTC by leaf `G1-SLICE.5b.3c.2b.h1.c`.
+- **Summary:** removed6 ignored output trees/991 strays (1819917894B); selected residue0/tracked changes0.

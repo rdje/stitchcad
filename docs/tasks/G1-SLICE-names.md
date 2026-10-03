@@ -927,3 +927,27 @@ Census correction: row-only recipe129 omits exact heading-style D131 in immutabl
 Reader/body report identities→130 distinct sealed/12 open; D18 absent by design. Source report
 and repair identity were independently inspected; D38 owns both-form/uniqueness automated proof.
 PLANNING's live recipe corrected; no archived payload or unresolved diagnostic conflict changed.
+
+## Required artifact cleanup — .h1.c
+
+### G1-SLICE.5b.3c.2b.h1.c
+
+Work unit STITCHCAD-G1-0101; source5174e32 clean/brief0, no unfinished local/remote jobs.
+Due since2026-10-03 19:18UTC; user daily cleanup mandate, docs/ARTIFACT_CLEANUP.md and actual
+cleanup.py plan/apply/protected-store/process/residue contracts reviewed. Same-volume ignored
+regenerable output only; frozen producer/HEAD/tracked/candidate fingerprints before deletion.
+Inspect all candidates/skips, never cross Git/volume/link boundaries; independent immediate residue
+and tracked equality, then regenerate native/WASM/book/probes/gate. Package/toolchain stores retained.
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual latest cleanup was2026-10-02 19:18UTC; clock after
+  2026-10-03 19:18UTC. Frozen cleanup.py plan→997 candidates/0skipped, rc=0; actual ignored
+  path/content/Git/link/device/store checks agree with independent candidate catalog inspection0.
+- [x] **ADDRESSED (verified)** — cleanup.py apply→6trees/991strays/15647files/1819917894B,
+  residue0/tracked_change false/0skipped, rc=0. OS-visible census→handoff OK. Immediate independent
+  filesystem absence and tracked-content hash equals frozen plan,997 absent, rc=0, before rebuild.
+- [x] **NO REGRESSION** — exact1.99 make check→663passed/56groups; make wasm→3built;
+  make probes→28suites green, including publication10/ledger9+13; make gate→all green; each rc=0.
+  Release/debug deps direct .bin/.log census→0files; built dependency outputs remain protected.
+- [x] **LOCKSTEP / RETENTION** — latest cleanup overwritten, existing guarded tool reused; original
+  complete oldest ledger/lesson retained from5174e32. Book/live/task/resume agree; no package store,
+  archived window, reader schema or cap changed. Promotion declined (existing cleanup policy).

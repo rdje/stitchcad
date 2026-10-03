@@ -4,10 +4,10 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
-## _(2026-10-03 UTC)_ — observe repaired jobs
+## _(2026-10-03 UTC)_ — cleanup
 
-- Exact d5dd11f: doctrine8/Rust11 steps green, native663/56/WASM3; effective local stores verified.
-- Promotion: declined (existing observed-CI policy). No product approval inferred.
+- Frozen plan/residue/tracked equality verified; build stores protected.
+- Promotion declined (existing cleanup policy).
 
 # Sealed archive — earlier lessons
 
@@ -186,3 +186,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part97.md`](docs/history/stitchcad-devnotes-part97.md) | G1-0098 exact-compiler lesson | 6 lines, 417 bytes, `sha256:87269597…` |
 
 | [`devnotes-part99.md`](docs/history/stitchcad-devnotes-part99.md) | CI locality | 6 lines, 425 bytes, `sha256:bba39276…` |
+
+| [`devnotes-part100.md`](docs/history/stitchcad-devnotes-part100.md) | CI observation | 4 lines, 232 bytes, `sha256:ae0a5f60…` |

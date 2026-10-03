@@ -272,8 +272,10 @@ SPINE cleanup leaf verifies ignored ownership, absent residue and unchanged trac
 rebuilds/tests the affected workflows. `docs/ARTIFACT_CLEANUP.md` holds one dated latest-run entry;
 history remains in Git. Scratch, incremental caches and rendered book output stay on the repository
 volume. Built dependency outputs are retained; shared stores and other repositories are read-only.
-The 2026-10-02 run removed six output trees and 1281 target strays, with no tracked change or deletion.
-Rust, WASM, book and probe workflows regenerated successfully. Product frontier stays G1-SLICE.5b.1.
+The 2026-10-03 run under G1-SLICE.5b.3c.2b.h1.c removed six output trees and991 target strays:
+15647 files/1819917894 bytes. Independent immediate checks confirmed zero selected residue and
+unchanged tracked contents; stores and built dependencies were retained. Native Rust/WASM rebuilds
+passed; complete probe/book verification is recorded in the cleanup leaf before commit. P0 D140 follows.
 
 The tracked cleanup.py under docs/tasks/artifacts/artifact_cleanup/ plans before removal. Its frozen
 manifest names relative candidates and their content, tracked-input fingerprint, HEAD and producer

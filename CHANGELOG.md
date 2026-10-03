@@ -154,6 +154,13 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0101 - guarded daily cleanup (leaf `G1-SLICE.5b.3c.2b.h1.c`)
+
+Frozen plan removed6 output trees/991 strays,15647 files/1819917894B; independent residue0/tracked equality.
+Protected stores/other repositories untouched; native663/56/WASM3 rebuilt. Full probe/gate receipts
+in owner; latest cleanup/book/live/task/resume agree. Original ledger/lesson retained exactly.
+G1 stays5/18,12open/130sealed; P0 D140 resumes, no independent product approval inferred.
+
 ## STITCHCAD-G1-0100 - repaired CI observed (leaf `G1-SLICE.5b.3c.2b.h1.v`)
 
 Exact d5dd11f jobs/steps succeeded: doctrine8, Rust11 including strictClippy1.99/native663/56/WASM3.
@@ -336,16 +343,6 @@ Metadata annex/examples/navigation/API map and live/task/resume records align; D
 status fixed, exact task/ledger/lesson/report payloads retained. G1 stays5/18;10open/118sealed defects.
 Next .5b.2b sourced declarations; namespace/type/whole static acceptance and execution remain pending.
 
-## STITCHCAD-G1-0082 - approved current-grammar recognition (leaf `G1-SLICE.5b.1c.2`)
-
-Director's D124 ruling preserves v1 grammar and its three keywords. Exclusion diagnostics now
-follow actual recognition: unknown calls unbound-name, malformed definitions parse, recognized
-non-square exponents unsupported. Five ordinary identifiers remain valid scalar names/let headers.
-100 metadata-only cases/seven actual source guard reds/three loaded documentation reds and full
-reference/language16/publication9 pass. Complete static reference review .5b.1 closes; product
-namespace/type/graph remains .5b.2–.4. Book/ADR/live/task/frontier align, original task and oldest
-ledger/lesson/D124 report payloads retained. G1 stays5/18;10open/117sealed defects; .5b.2 next.
-
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 
@@ -396,3 +393,5 @@ relaxed, no verified defect classification added; G1 remains5/18 and defects12op
 | [`stitchcad-changelog-part96.md`](docs/history/stitchcad-changelog-part96.md) | STITCHCAD-G1-0080 | 11 lines, 976 bytes, `sha256:8d91c335…` |
 
 | [`stitchcad-changelog-part97.md`](docs/history/stitchcad-changelog-part97.md) | STITCHCAD-G1-0081 | 10 lines, 858 bytes, `sha256:14381657…` |
+
+| [`stitchcad-changelog-part98.md`](docs/history/stitchcad-changelog-part98.md) | STITCHCAD-G1-0082 | 9 lines, 763 bytes, `sha256:cd886e4d…` |
