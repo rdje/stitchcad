@@ -154,6 +154,17 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0085 - reserved-name diagnostic proposal (leaf `G1-SLICE.5b.2c.1a`)
+
+D131 reproduces120 reserved-name refusals and one ordinary rebinding against the actual reference.
+Three compiled assertion reds detect token changes/invented index; producer bytes remain exact.
+Canonical rebinding row requires two recipe indices that reserved metadata/initial inputs lack.
+ADR/book record a concrete source-aware reserved-case proposal; director ruling precedes repair
+and product namespace. Grammar and product Rust remain unchanged; D131 stays open and owned.
+Exact predecessor task/oldest ledger/lesson records retained within unchanged ceilings.
+Structural/language16/publication9/ledger9/13 pointer controls pass0; book55 chapters/33 APIs/
+1138 source/1767 rendered links. G1 remains5/18;11open/119sealed defects. Next .2c.1b ruling/repair.
+
 ## STITCHCAD-G1-0084 - immutable sourced formula declarations (leaf `G1-SLICE.5b.2b`)
 
 Declarations preserve distinct metadata/value IDs, canonical length borrows, point/edge refs and
@@ -363,18 +374,6 @@ Strict native569/46groups, release8/WASM3 and focused reference/book checks pass
 Book/API/status/progressive routes and live docs align; G1 stays5/18, defects10open/99sealed.
 Next .5a.3f.1c owned statement/recipe serializer; no binding/evaluation/storage/MCP/signoff claim.
 
-## STITCHCAD-G1-0068 - exact statement and recipe byte contract (leaf `G1-SLICE.5a.3f.1a`)
-
-D109 closes technically: retained bind bytes, flat named/tolerance assertion operands, explicit
-ordered recipe wrapper and empty(recipe), single spaces/no final newline. Engineering delegation,
-same-party author/applier, independent approval unclaimed and reversal/migration path are recorded.
-Sixteen authored statement rows cover six kinds/five tolerances; nine whole sources/twelve chunks
-match actual reference syntax. Nine actual renderer faults fail exact-byte assertions and restore
-source; watched structural controls retain explicit non-product scope. Focused syntax20/language16/
-publication9 pass. All Rust sources/tests and predecessor full syntax subtree/closure stay exact.
-Book/grammar/decision/current status stay aligned; G1 remains5/18, defects10open/99sealed.
-Next .5a.3f.1b complete statement/recipe input normalization, then .1c owned identity. No runtime,
-project format/hash, human approval or production signoff added.
 
 
 | [`stitchcad-changelog-part78.md`](docs/history/stitchcad-changelog-part78.md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
@@ -384,3 +383,5 @@ project format/hash, human approval or production signoff added.
 | [`stitchcad-changelog-part80.md`](docs/history/stitchcad-changelog-part80.md) | G1-0066 ordered recipe syntax | 15 lines, 1243 bytes, `sha256:ffd1e428…` |
 
 | [`stitchcad-changelog-part81.md`](docs/history/stitchcad-changelog-part81.md) | STITCHCAD-G1-0067 | 11 lines, 974 bytes, `sha256:aad9b836…` |
+
+| [`stitchcad-changelog-part82.md`](docs/history/stitchcad-changelog-part82.md) | STITCHCAD-G1-0068 | 12 lines, 1035 bytes, `sha256:451e0450…` |

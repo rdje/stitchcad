@@ -252,7 +252,7 @@ Static namespace/header oracle: `python3 -I -B docs/tasks/artifacts/formula_stru
 checks1139 metadata-only cases/thirteen actual guard reds; watched.
 Whole static recipe/consumer oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations`
 checks196 cases/replay/measurement and actual guard reds; watched.
-Static review: static_review_contract.py --mutations in formula_structure;21/13 rows and D124.
+Static review: static_review_contract.py and reserved_diagnostic_review.py --mutations there; D124/D131.
 Product metadata/source locators: semantic_mutations.py and declaration_mutations.py there; run alone.
 
 Assertion diagnostics: `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`; watched by structural suite.

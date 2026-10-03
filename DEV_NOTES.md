@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-03 UTC)_ — a reserved source has no recipe ordinal
+
+- D131 canonical rebinding row requires two statements; reserved/input metadata cannot supply
+  them. Actual120 reserved refusals/one ordinary case expose token and empty arguments. Those
+  dictionaries prove the mismatch, not complete diagnostics. Three actual compiled changes
+  fail independent assertions; producer unchanged. Watched structural runner retains this proof.
+- Concrete reserved-case proposal in ADR/book preserves token/current grammar and carries real
+  sources. Canonical ruling/repair .2c.1b blocks product namespace .2c.2; defect remains owned.
+- Exact prior task/oldest ledger/lesson bytes retained. Structural/language16/publication9/ledger9
+  pass0;55 chapters/33 APIs/1138 source/1767 rendered links. Product Rust unchanged.
+- promotion: declined (pending director ruling; existing context-truth requirement).
+
 ## _(2026-10-03 UTC)_ — a metadata source is not a copied value
 
 - Locators retain distinct metadata/value IDs and borrow canonical length records across five
@@ -18,19 +30,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Exact prior task/ledger/lesson/D130 payloads retained within bounds.
 - promotion: declined (existing typed metadata, single canonical owner and original-context rules).
 
-## _(2026-10-03 UTC)_ — declared kind does not require a value provider
-
-- Product semantic vocabulary separates eight operand kinds/six binding annotations, nine origins,
-  eight reserved names/four required contexts. Physical tolerance retains tolerance origin/profile
-  provider; size inputs have no tolerance role. Existing symbolic tolerance variants stay canonical.
-- Five independent public contracts compare actual normative rows in both directions, exact lookup
-  and ordinary D124 names; ten actual compiled mapping/population/role faults fail body assertions
-  and restore source exactly. Strict native596/WASM3 and reference/book controls pass0.
-- Initial tuple fixture failed strict type_complexity; replaced with named ReservedCase fields,
-  no lint exemption. D129 current review-status prose repaired; product namespace/evaluator pending.
-- Exact predecessor task blocks and oldest ledger/provenance lesson/new D129 original report sealed
-  within existing bounds. No new declaration values or proof authority invented.
-- promotion: declined (existing kind/origin/context isolation and independently falsified controls).
 
 # Sealed archive — earlier lessons
 
@@ -175,3 +174,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part81.md`](docs/history/stitchcad-devnotes-part81.md) | executed provenance lesson | 12 lines, 1049 bytes, `sha256:de02f486…` |
 
 | [`stitchcad-devnotes-part82.md`](docs/history/stitchcad-devnotes-part82.md) | D124 grammar recognition lesson | 11 lines, 932 bytes, `sha256:2d6e66b8…` |
+
+| [`stitchcad-devnotes-part83.md`](docs/history/stitchcad-devnotes-part83.md) | G1-0083 metadata lesson | 13 lines, 1139 bytes, `sha256:c79e3803…` |

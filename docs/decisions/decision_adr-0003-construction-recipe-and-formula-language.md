@@ -137,6 +137,34 @@ ordinary identifier preservation and precedence before closing the full static r
 Product namespace/type/graph implementation remains .5b.2–.4; no executable excluded capability
 or new reserved word is introduced.
 
+## D131 reserved-name diagnostic proposal — pending 2026-10-03 (UTC)
+
+Owner: G1-SLICE.5b.2c.1a/.1b. Contract3.1 forbids every origin from rebinding eight reserved
+names; the static annex and actual reference use formula_rebinding. Contract5.2 only assigns
+that token to a repeated recipe let and requires both statement indices. An initial authored
+declaration has no recipe statement, and a reserved declaration has no prior recipe statement.
+The common diagnostic-context rule explicitly forbids fabricated indices.
+
+Actual namespace([('eps_num', {'kind':'length', 'origin':'measurement'})]) refuses with
+formula_rebinding, message reserved `eps_num` cannot be declared by measurement, arguments={}.
+Actual static_statement('let eps_num:length=1', {}) uses the same token, also with arguments={}.
+reserved_diagnostic_review.py reproduces120 reserved refusals and one ordinary recipe rebinding;
+three actual compiled assertion controls detect token changes or a fabricated zero index. This
+documents the mismatch; it does not accept the empty argument dictionaries as complete diagnostics.
+
+Recommended: extend formula_rebinding's raised-when clause to reserved-name binding attempts.
+For this case require the name, reserved metadata source (fixed kind/origin/required context)
+and attempted binding source/origin. Retain actual ordinal and source spans when the attempt is
+a recipe let; carry no statement index for an initial authored input or the reserved source.
+Source arguments identify records/references; they do not copy numerical values or state.
+Ordinary repeated lets retain the name and both actual recipe statement indices. Tokens,
+identifier grammar, collision refusal and reserved-name population remain unchanged.
+
+Alternative: use formula_ambiguous_name for reserved collisions and revise the reference/static
+annex accordingly. That changes the established reserved-refusal token and treats a reserved
+binding as an origin collision. The director must resolve this literal contract conflict before
+.2c.1b repairs the schema/reference and .2c.2 implements product namespace errors.
+
 ## D121 tolerance-class diagnostic ruling — 2026-10-02 (UTC)
 
 The director selected formula_domain for a T1 comparison whose operands carry an approximation

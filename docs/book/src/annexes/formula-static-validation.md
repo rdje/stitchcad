@@ -140,6 +140,28 @@ canonical input adapters, physical geometry or typed product diagnostic payloads
 [separately verified](formula-runtime-validation.md#missing-values-by-origin); these static controls
 make no runtime correctness claim. Product input adapters remain .5e.1.
 
+### Reserved-name diagnostic conflict — decision pending
+
+The reserved-name refusal token is formula_rebinding in this reference. The canonical diagnostic
+row currently covers only a second recipe let and requires two statement indices. Reserved
+metadata has no recipe statement; an initial authored declaration has none either. Those indices
+cannot be supplied truthfully. Existing single-statement reference errors expose empty argument
+dictionaries; the token tests above do not certify complete diagnostic arguments.
+
+D131 is owned by G1-SLICE.5b.2c.1a/.1b, before product namespace implementation. The ADR-0003
+proposal retains formula_rebinding and adds a reserved-case schema: name, reserved metadata source and
+attempted binding source/origin, with actual recipe ordinal/spans only when the attempt has them.
+Ordinary repeated lets retain both actual indices. This remains a proposal; grammar and current
+refusal behavior are unchanged.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/reserved_diagnostic_review.py --mutations
+```
+
+The producer reproduces120 reserved refusals and one ordinary rebinding and detects three actual
+compiled changes to their observed token/empty-argument behavior. It establishes the conflict,
+not a repaired argument contract or product namespace acceptance.
+
 ## Whole recipe before execution
 
 A recipe must pass static checking in its entirety before its first statement computes a value.

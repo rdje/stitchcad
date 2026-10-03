@@ -905,3 +905,18 @@ D130 closes at G1-SLICE.5b.2b before the draft builder is committed. General sca
 uses only Parameter/Profile/Material; Measurement/Ease require canonical length borrowing through
 separate types. Original report retained in [`stitchcad-defects-part53.md`](../history/stitchcad-defects-part53.md).
 The negative construction contract and actual widened API counterfactual verify this boundary.
+
+### Defect D131 — reserved-name refusal cannot meet the rebinding argument row
+
+- Discovered2026-10-03 (UTC), before initial namespace implementation. Owner: G1-SLICE.5b.2c.1a
+  reproduction/proposal, then .1b diagnostic repair and .2 product namespace; priority blocking .2c.
+- Reproduce: python3 -I -B docs/tasks/artifacts/formula_structure/reserved_diagnostic_review.py
+  --mutations →120 reserved refusals/one ordinary rebinding/three actual assertion reds, rc=0.
+  namespace eps_num/measurement and let eps_num:length=1 both refuse formula_rebinding with {} args.
+- Contract3.1 forbids reserved rebinding; static annex uses formula_rebinding. Contract5.2 requires
+  two recipe statement indices for that token. Reserved metadata has no prior recipe statement;
+  an initial authored input has no attempt statement. Zero indices would violate context truth.
+- Impact: product namespace cannot satisfy that literal argument contract. Recommended reserved
+  variant retains token, name, reserved metadata and attempted source/origin, actual let ordinal/
+  spans only when present; ordinary repeated lets retain both real indices. ADR-0003 records the
+  concrete proposal. Director ruling required for the canonical conflict; repair scheduled at .1b.
