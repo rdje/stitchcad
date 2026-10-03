@@ -203,6 +203,20 @@ fn every_kind_and_class_tuple_at_zero_through_four_arguments_matches_closed_rows
                     expected(token, &operands),
                     "{token}{operands:?}"
                 );
+                let mut results = builtin
+                    .signatures()
+                    .iter()
+                    .filter_map(|row| row.result_kind(&operands));
+                assert_eq!(
+                    results.next(),
+                    expected(token, &operands),
+                    "wanted catalog {token}{operands:?}"
+                );
+                assert_eq!(
+                    results.next(),
+                    None,
+                    "overlapping wanted rows {token}{operands:?}"
+                );
                 checks += 1;
             }
         }
@@ -211,11 +225,56 @@ fn every_kind_and_class_tuple_at_zero_through_four_arguments_matches_closed_rows
 }
 
 #[test]
+fn wanted_catalog_descriptors_are_the_exact_normative_rows_and_result_positions() {
+    use sc_core::recipe::{FormulaOperandRequirement as R, FormulaResultRequirement as V};
+    let mut actual = Vec::new();
+    for (builtin, token, _, arity) in NAMES {
+        for row in builtin.signatures() {
+            assert_eq!(row.arity(), arity);
+            let mut arguments = row
+                .operand_requirements()
+                .iter()
+                .map(|requirement| match requirement {
+                    R::Exact(k) => k.token(),
+                    R::Arithmetic => "T",
+                    R::Negatable => "N",
+                    R::ToleranceName => "tolerance",
+                })
+                .collect::<Vec<_>>()
+                .join(", ");
+            if arity == A::OneOrMore {
+                arguments.push_str(", …");
+            }
+            let result = match row.result_requirement() {
+                V::Exact(k) => k.token(),
+                V::Operand(index) => {
+                    assert_eq!(index, usize::from(builtin == B::If));
+                    assert_eq!(row.operand_requirements().get(index), Some(&R::Arithmetic));
+                    "T"
+                }
+            };
+            actual.push((token, arguments, result));
+        }
+    }
+    let mut wanted = ROWS
+        .map(|(name, args, result)| (name, args.to_owned(), result))
+        .to_vec();
+    actual.sort_unstable();
+    wanted.sort_unstable();
+    assert_eq!(actual, wanted);
+}
+
+#[test]
 fn variadic_signatures_remain_metadata_and_symbolic_classes_are_not_computed_lengths() {
     for builtin in [B::Min, B::Max] {
         for k in ARITHMETIC {
             for count in [1, 2, 3, 255, 256, 4096] {
-                assert_eq!(builtin.result_kind(&vec![O::Value(k); count]), Some(k));
+                let operands = vec![O::Value(k); count];
+                assert_eq!(builtin.result_kind(&operands), Some(k));
+                assert_eq!(
+                    builtin.signatures().first().unwrap().result_kind(&operands),
+                    Some(k)
+                );
             }
         }
     }

@@ -574,14 +574,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.1`
   Status: `done`
-  Goal: enumerate every static obligation from contract2/3/5/6/9 and grammar5/6/7; exercise the
-  actual reference with independently authored namespace/kind/refusal cases before trusting it.
-  Acceptance: all nine origins/eight reserved names, single assignment/ambiguous collisions,
-  forward names, all signatures and dimensional/exclusion/envelope rules mapped both directions;
-  both branches inspected without value access. Log/repair discovered reference defects first.
-  No curated example-only or runtime oracle claim. D124 current-grammar ruling resolves recognition before .2/.3.
-  Verification: full signature4032/namespace1139/recipe196/review100 controls and actual reds verified.
-  Commit: `STITCHCAD-G1-0082`.
+  Goal: completed foundation; exact contract and verification retained.
+  [Exact protocol](G1-SLICE-names.md#completed-reference-review-parent--preserved-from-c98dc54) retained.
 
 - ID: `G1-SLICE.5b.1a`
   Status: `done`
@@ -603,14 +597,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.2`
   Status: `done`
-  Goal: immutable typed origin declarations and namespace/context resolution; numeric availability
-  remains separate from declared kind. Geometry names identify prior operation outputs only.
-  Acceptance: all origins/reserved contexts, spelling, collision/rebinding/forward refusal
-  arguments and searched origins preserved; no implicit shadow/default or value computation.
-  Core input boundary does not introduce sc-core→sc-measure dependency cycle; existing canonical
-  declarations remain the sole authored values. D70 axes remain outside this namespace foundation.
-  Verification: .2a/.2b/.2c/.2d verified below; metadata does not accept a whole recipe.
-  Commit: `STITCHCAD-G1-0083`/`0084`/`0085`/`0086`/`0087`/`0088`/`0089`.
+  Goal: completed foundation; exact contract and verification retained.
+  [Exact protocol](G1-SLICE-names.md#completed-namespace-foundation-parent--preserved-from-c98dc54) retained.
 
 - ID: `G1-SLICE.5b.2a`
   Status: `done`
@@ -626,14 +614,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.2c`
   Status: `done`
-  Goal: checked initial namespace from ordered declaration pairs plus reserved metadata contexts.
-  Acceptance: reject collisions before indexing, retain both origins/source identities, all reserved
-  rebinding refusals; absent context does not hide declared kind; no value or geometry resolution.
-  Verification: .1a/.1b decision/reference sources and .2 checked initial namespace verified below.
-  Commit: `STITCHCAD-G1-0085`/`0086`/`0087`.
-
-  Children: .2c.1a (reproduce/document D131 diagnostic conflict), .2c.1b (delegated decision,
-  canonical/reference diagnostic repair), .2c.2 (checked product initial namespace).
+  Goal: checked initial namespaces; exact contract/children/verification retained.
+  [Exact protocol](G1-SLICE-names.md#completed-initial-namespace-parent--preserved-from-c98dc54) retained.
 
 - ID: `G1-SLICE.5b.2c.1a`
   Status: `done`
@@ -655,12 +637,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.2d`
   Status: `done`
-  Goal: checked name reads/prior recipe bindings with typed searched origins and rebinding indices;
-  forward/self references never reorder. Whole-expression/recipe integration remains .5b.3/.4.
-  Acceptance: actual ordinal/span/source data only; no numeric/default/shadow behavior.
-  Children: .1 exact initial metadata reads, .2 actual ordered recipe binding scope.
-  Verification: .1/.2 source/query/order/refusal controls verified below.
-  Commit: `STITCHCAD-G1-0088`/`0089`.
+  Goal: exact/ordered metadata lookups; full contract and children retained.
+  [Exact protocol](G1-SLICE-names.md#completed-ordered-lookup-parent--preserved-from-c98dc54) retained.
 
 - ID: `G1-SLICE.5b.2d.1`
   Status: `done`
@@ -698,35 +676,71 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.3b`
   Status: `done`
-  Goal: closed built-in/selector signature vocabulary, ordered arities and symbolic tolerance role.
-  Work unit: `STITCHCAD-G1-0092`; predecessor c5d4579 clean/message empty/untracked/no jobs.
-  Pre-code roadmap ADR-0003/G1, full grammar6/6.1/7, contract2/3.1/4.1/5.2 and normalized call/if,
-  FormulaKind/ReservedName/ToleranceName APIs, reference closed22 names/signature matrix reviewed.
-  Add closed FormulaBuiltin ALL/token/from_token (exact spelling), category Function/Selector/
-  Conditional/ToleranceComparison and Fixed/OneOrMore arity metadata. If remains special syntax;
-  lookup metadata neither adds reservations nor overrides named envelope precedence.
-  FormulaBuiltinOperand is Value(kind) or Tolerance(existing symbolic class); either has its
-  ordinary kind, but only the latter fills within's third role. Ordinary length, arithmetic on a
-  class and size names cannot masquerade as class metadata. Role descriptors grant no syntax or
-  accepted-expression proof; .3c derives the symbolic role from actual resolved reserved-name nodes.
-  result_kind uses closed signatures with same arithmetic T, both conditional branch kinds,
-  one-or-more homogeneous min/max, ordered atan2/arc_length/selectors, exactly five tolerances.
-  Signature metadata has no structural255 bound or numeric/provider/geometry execution authority.
-  Independent eight-kind and five-class argument population at arities0–4, wide variadic samples,
-  normative rows both directions and canonical22 name/token agreement must verify closure.
-  Actual compiled vocabulary/arity/generic/branch/order/selector/tolerance-role faults must fail
-  body assertions and restore source exactly; no Cargo job or Rust edit overlaps them. Strict
-  native/WASM, focused reference/language/book/ledger/retention/coverage/gate, exact previous/oldest
-  record retention and per-leaf commit. Typed contextual mismatch/dependencies stay .3c/.4.
-  Verification: four public contracts/680702 kind-class cases/21 actual compiled reds, strict
-  native651/55 groups/WASM/reference/book/ledger pass, rc=0. Commit: `STITCHCAD-G1-0092`.
+  Goal: closed built-in/selector signatures; verified, commit `STITCHCAD-G1-0092`.
+  [Exact protocol](G1-SLICE-names.md#completed-built-in-signatures-protocol--preserved-from-c98dc54) retained.
 
 - ID: `G1-SLICE.5b.3c`
-  Status: `pending`
+  Status: `in_progress`
   Goal: bounded normalized expression checking with typed real source/operand/wanted-rule refusals;
   every branch/argument/name dependency checked before any whole acceptance or execution.
-  Finalize diagnostic/checked-owner interface before code; no forged canonical/statement context.
+  Children: .1 typed wanted-kind catalog; .2 context-free expression/error/checked-owner integration;
+  .3 actual statement operands/annotations/assertions and truthful available ordinal context.
+  No forged canonical/statement context; current grammar and named envelope precedence preserved.
   Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3c.1`
+  Status: `done`
+  Goal: closed typed operand/result requirements for dimension diagnostics before checking code.
+  Work unit: `STITCHCAD-G1-0093`; predecessor c98dc54 clean/message empty/untracked/no jobs.
+  Pre-code contract2/4.1/5.2, full grammar5–7, all public operator/built-in kind APIs and normalized
+  arenas/scopes reviewed. formula_dimension must retain actual operands AND wanted kind rules;
+  the wanted rule cannot be a prose-only guess or numeric/value query.
+  Add immutable FormulaKindSignature catalogs accessible from existing unary/binary/built-in enums.
+  Requirements are Exact(kind), shared Arithmetic T, Negatable N and symbolic ToleranceName.
+  Result is Exact(kind) or an actual operand-kind position; variadic repeats its last requirement.
+  Catalog construction stays private; public read-only views/result_kind are metadata only.
+  All known fixed/variadic rules preserve positional and generic consistency; within's exact class
+  role is retained. No type-error constructor/accepted expression or arbitrary source/ordinal API.
+  Catalog admission must independently equal existing tested result_kind APIs over all656 operator
+  cases and680702 built-in kind/class tuples, with actual normative rows in both directions and
+  independently authored wanted descriptors. Actual compiled requirement/result/arity/repetition/
+  generic/tolerance/product/order/population faults must fail body assertions and restore bytes.
+  Keep standing older producers/anchors unchanged, strict native/WASM, focused reference/book/
+  ledger/retention/coverage/gate; retain exact prior/oldest records before surface growth, commit.
+  Diagnostic/checked-owner source lifetimes and truthful lookup domains finalized at .2 before code;
+  statement indices derive only from actual scope-bound operands at .3, atomic whole graph at .4.
+  Verification: ten public contracts/681358 admission cases/exact descriptors,19 actual compiled
+  reds, strict656 native/55 groups/WASM and focused controls pass, rc=0. Commit: `STITCHCAD-G1-0093`.
+
+- ID: `G1-SLICE.5b.3c.2`
+  Status: `pending`
+  Goal: source-bearing typed errors, bounded context-free checker and immutable checked owner.
+  Children: .a D136 truthful call lookup/payloads, .b expression/dependency/owner integration.
+  Finalize lifetimes before code; no callback/value/state query or invented ordinal/canonical proof.
+  Verification/Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3c.2a`
+  Status: `pending`
+  Goal: D136 required unknown-call arguments and truthful typed call lookup sources before checker.
+  Acceptance: real query name and actually searched envelope/built-in catalog sources; no fictional
+  measurement/recipe origin search for calls. Preserve named envelope and unknown-call-before-arg
+  precedence, the closed token set and current grammar. Document source domains before code;
+  actual reference payload cases/faults, public product lookup/privacy/lifetime controls and commit.
+  Verification/Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3c.2b`
+  Status: `pending`
+  Goal: context-free bounded checker, complete actual/wanted operands, declarations and checked owner.
+  Acceptance: every branch/argument/name dependency with actual source/canonical expression;
+  closed call/envelope precedence, no execution or invented whole-recipe context. Interface first.
+  Verification/Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3c.3`
+  Status: `pending`
+  Goal: check actual current-statement operands/annotations/assertions without forged contexts.
+  Acceptance: use scope's own immutable statement and original operands; attach actual ordinal/
+  source/canonical identity only when present, check every operand before metadata advance.
+  Verification/Commit: `pending`.
 
 - ID: `G1-SLICE.5b.3d`
   Status: `pending`

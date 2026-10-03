@@ -133,7 +133,8 @@ Run cargo test -p sc-core --test formula_builtin_signature_contract for the publ
 The tracked producer docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py runs
 exclusive product faults; its classifier and exact anchors are watched by structural probes.
 
-Accepted normalized expressions, source-bearing dimension refusals and every name dependency
-remain G1-SLICE.5b.3c; coupled review is .3d, and atomic ordered recipe acceptance is .4.
+[Typed wanted-kind catalogs](formula-wanted-signatures.md) are available for dimension diagnostics.
+Accepted normalized expressions, source-bearing refusals and every name dependency
+remain G1-SLICE.5b.3c.2; coupled review is .3d, and atomic ordered recipe acceptance is .4.
 Numeric domains, rounding and execution are .5c–.5e; real geometry selectors are .5f/G2.
 No computed garment, API/MCP release or independent production approval follows from these signatures.

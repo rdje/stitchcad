@@ -154,6 +154,15 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0093 - typed wanted-kind catalogs (leaf `G1-SLICE.5b.3c.1`)
+
+Immutable static rows expose exact/generic/class operand requirements and positional results.
+Ten public contracts/681358 admission cases/exact descriptors and19 actual compiled body reds
+verify closed alternatives; a branch-position fault is caught despite unchanged kind acceptance.
+Strict656/55 groups/WASM3/reference/language16/book10/ledger9+13/coverage/retention pass0.
+Bounded book/API/live scope and exact prior/oldest records align; G1 stays5/18,11open/124sealed.
+D136 missing call arguments owned for .5b.3c.2a repair next; grammar/prior query code unchanged.
+
 ## STITCHCAD-G1-0092 - built-in and selector kind signatures (leaf `G1-SLICE.5b.3b`)
 
 Closed22-name metadata preserves ordered arities, arithmetic T, conditional branches and symbolic
@@ -352,14 +361,6 @@ Exact pushed10e19f2: both jobs/all steps completed success; runner log confirms4
 actual guard reds. OS-visible attested handoff green. Book/live/task receipts agree; G1 stays5/18,
 defects10open/104sealed. Product namespace/preflight G1 .5b.1b resumes.
 
-## STITCHCAD-SPINE-0023 - strict project handoff evidence (leaf `SPINE.23`)
-
-Project-owned check_handoff.sh refuses failed/empty/incomplete ps/lsof evidence. Explicit idle-CUA
-attestation applies only to paired kernel/worker launch metadata without repo file handles; real
-handles and ordinary checkout arguments still block. Neutral inherited checker remains unchanged.
-43 independent fixtures/13 actual guard reds and real restricted/live-file/restored controls pass.
-Book/bootstrap/tool/task/live records agree; G1 stays5/18, defects10open/104sealed. Full checks and
-exceptional push/observed CI are owned by .23v before namespace work resumes.
 
 
 
@@ -394,3 +395,5 @@ exceptional push/observed CI are owned by .23v before namespace work resumes.
 | [`stitchcad-changelog-part88.md`](docs/history/stitchcad-changelog-part88.md) | STITCHCAD-G1-0073 | 10 lines, 878 bytes, `sha256:32b87b67…` |
 
 | [`stitchcad-changelog-part89.md`](docs/history/stitchcad-changelog-part89.md) | STITCHCAD-G1-0075/0074 | 16 lines, 1250 bytes, `sha256:2d8487c5…` |
+
+| [`stitchcad-changelog-part90.md`](docs/history/stitchcad-changelog-part90.md) | STITCHCAD-SPINE-0023 | 8 lines, 648 bytes, `sha256:fa18d0d1…` |

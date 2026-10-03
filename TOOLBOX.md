@@ -237,9 +237,9 @@ for retrieval. Newest committed catalog edits are refused after the recording co
 `capture_window2.py` in that directory prepares/proves its fixed372033f snapshot in target/ only.
 
 Ledger target controls: `python3 -I -B docs/tasks/artifacts/changelog/ledger_pointer_contract.py`
-checks13 independently authored actual POINTER verdicts; the ledger runner watches them.
+checks13 actual POINTER verdicts; the ledger runner watches them.
 `ledger_pointer_mutations.py` in that directory requires four actual assertion reds and exact source
-restoration. Run mutations exclusively: they temporarily edit the checker they test.
+restoration. Run mutations exclusively: they temporarily edit the checker.
 
 Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan
  target/artifact_cleanup_audit/<run>; apply the same run with apply. Safety/exclusions:
@@ -254,7 +254,7 @@ Whole static recipe/consumer oracle: `python3 -I -B docs/tasks/artifacts/formula
 checks196 cases/replay/measurement and actual guard reds; watched.
 Static review: static_review_contract.py and reserved_diagnostic_review.py --mutations there; D124/D131.
 Product faults there (run alone): semantic_mutations.py, declaration_mutations.py,
-namespace_mutations.py, name_read_mutations.py, ordered_name_mutations.py, operator_signature_mutations.py, builtin_signature_mutations.py.
+namespace_mutations.py, name_read_mutations.py, ordered_name_mutations.py, operator_signature_mutations.py, builtin_signature_mutations.py, wanted_signature_mutations.py.
 
 Assertion diagnostics: `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`; watched by structural suite.
 Origin/context reads: `python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations`; watched.

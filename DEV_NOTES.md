@@ -12,15 +12,15 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
-## _(2026-10-03 UTC)_ — tolerance roles survive kind-only signature queries
 
-- Closed22-name/24-row metadata keeps within's class symbolic, while its ordinary kind is length.
-  Conditional branches and all generic T operands share an arithmetic kind; selectors read geometry.
-- Four public contracts cover680702 tuples, exact rows/tokens/arity and wide variadics;21 actual
-  compiled reds restore source. Final oracle uses the actual normalizer API and checked access.
-- Strict651/55 groups/WASM/reference/book10/ledger9+13 pass0; all14 operator faults still fail.
-  Prior/oldest evidence exact; grammar unchanged; accepted expressions/graph/value remain .3c/.4/.5c.
-- promotion: declined (existing closed signature and symbolic tolerance contracts).
+## _(2026-10-03 UTC)_ — wanted rules need more than acceptance tests
+
+- Private static catalogs preserve exact/generic/class requirements, arity and result positions.
+  A conditional-position fault keeps its kind but fails the descriptor oracle: acceptance alone
+  cannot prove the wanted rule. Explicit const storage avoids borrowed temporary catalog rows.
+- Ten contracts/681358 cases/19 body reds and strict656/55 groups/WASM/focused checks pass0.
+  Grammar/old query code unchanged; exact prior/oldest evidence retained. Source-aware errors next.
+- promotion: declined (existing closed signatures, wanted-kind and truthful context contracts).
 
 # Sealed archive — earlier lessons
 
@@ -183,3 +183,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part90.md`](docs/history/stitchcad-devnotes-part90.md) | G1-0090 operator signatures lesson | 13 lines, 1106 bytes, `sha256:b0a427bf…` |
 
 | [`stitchcad-devnotes-part91.md`](docs/history/stitchcad-devnotes-part91.md) | G1-0091 diagnostic guidance lesson | 10 lines, 838 bytes, `sha256:a83b9679…` |
+
+| [`stitchcad-devnotes-part92.md`](docs/history/stitchcad-devnotes-part92.md) | G1-0092 symbolic-role lesson | 9 lines, 753 bytes, `sha256:a62696a7…` |

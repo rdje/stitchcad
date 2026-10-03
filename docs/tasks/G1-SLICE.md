@@ -829,7 +829,9 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.3a` | `done` | Closed operator kind matrix |
 | done | `G1-SLICE.5b.3a.1` | `done` | D134/D135 guidance/review repair |
 | done | `G1-SLICE.5b.3b` | `done` | Closed built-in/selector signatures |
-| current | `G1-SLICE.5b.3c` | `pending` | Bounded expression checking |
+| done | `G1-SLICE.5b.3c.1` | `done` | Typed wanted-kind catalog |
+| current | `G1-SLICE.5b.3c.2a` | `pending` | D136 call lookup/payloads |
+| next | `G1-SLICE.5b.3c.2b` | `pending` | Bounded expression checking |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -854,6 +856,8 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
   arguments are documented before product namespace .2c.2. No diagnostic decision blocker.
 
 ## Acceptance Checklist
+
+[Completed wanted-kind checklist](G1-SLICE-names.md#wanted-kind-catalog-checklist--5b3c1) retained.
 
 [Completed built-in signature checklist](G1-SLICE-names.md#built-in-signatures-checklist--5b3b) retained.
 

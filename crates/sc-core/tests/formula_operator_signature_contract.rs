@@ -63,6 +63,19 @@ fn unary_population_and_canonical_tokens_are_exact() {
             .map(|(_, result)| *result);
         assert_eq!(U::Negate.result_kind(kind), negated, "negation {kind:?}");
         assert_eq!(U::Square.result_kind(kind), squared, "square {kind:?}");
+        use sc_core::recipe::FormulaBuiltinOperand as O;
+        for (unary, result) in [(U::Negate, negated), (U::Square, squared)] {
+            let mut results = unary
+                .signatures()
+                .iter()
+                .filter_map(|row| row.result_kind(&[O::Value(kind)]));
+            assert_eq!(results.next(), result, "wanted unary {unary:?}/{kind:?}");
+            assert_eq!(
+                results.next(),
+                None,
+                "overlapping wanted unary {unary:?}/{kind:?}"
+            );
+        }
     }
 }
 
@@ -98,6 +111,22 @@ fn every_ordered_binary_pair_matches_independent_closed_rows_and_hint_population
                 };
                 let actual = operator.result_kind(left, right);
                 assert_eq!(actual, expected, "{left:?} {token} {right:?}");
+                use sc_core::recipe::FormulaBuiltinOperand as O;
+                let operands = [O::Value(left), O::Value(right)];
+                let mut results = operator
+                    .signatures()
+                    .iter()
+                    .filter_map(|row| row.result_kind(&operands));
+                assert_eq!(
+                    results.next(),
+                    expected,
+                    "wanted binary {left:?} {token} {right:?}"
+                );
+                assert_eq!(
+                    results.next(),
+                    None,
+                    "overlapping wanted binary {left:?} {token} {right:?}"
+                );
                 let hint = operator == B::Multiply
                     && [(K::Angle, K::Length), (K::Length, K::Angle)].contains(&(left, right));
                 assert_eq!(
@@ -125,6 +154,69 @@ fn every_ordered_binary_pair_matches_independent_closed_rows_and_hint_population
     assert_eq!(products, 17);
     assert_eq!(quotients, 14);
     assert_eq!(hints, 2);
+}
+
+#[test]
+fn wanted_operator_descriptors_preserve_closed_arity_and_type_variables() {
+    use sc_core::recipe::{
+        FormulaBuiltinArity as A, FormulaOperandRequirement as R, FormulaResultRequirement as V,
+    };
+    assert_eq!(U::Negate.signatures().len(), 1);
+    let negate = U::Negate.signatures().first().unwrap();
+    assert_eq!(negate.operand_requirements(), [R::Negatable]);
+    assert_eq!(negate.result_requirement(), V::Operand(0));
+    assert_eq!(U::Square.signatures().len(), 3);
+    let squares = U::Square
+        .signatures()
+        .iter()
+        .map(|row| {
+            (
+                row.operand_requirements().to_vec(),
+                row.result_requirement(),
+            )
+        })
+        .collect::<Vec<_>>();
+    assert_eq!(
+        squares,
+        [
+            (vec![R::Exact(K::Length)], V::Exact(K::Area)),
+            (vec![R::Exact(K::Ratio)], V::Exact(K::Ratio)),
+            (vec![R::Exact(K::Count)], V::Exact(K::Count)),
+        ]
+    );
+    for unary in [U::Negate, U::Square] {
+        assert!(unary
+            .signatures()
+            .iter()
+            .all(|row| row.arity() == A::Fixed(1)));
+    }
+    for (operator, _) in OPERATORS {
+        let rows = operator.signatures();
+        assert!(rows.iter().all(|row| row.arity() == A::Fixed(2)));
+        match operator {
+            B::Multiply | B::Divide => {
+                assert_eq!(rows.len(), if operator == B::Multiply { 17 } else { 14 });
+                assert!(rows.iter().all(|row| row
+                    .operand_requirements()
+                    .iter()
+                    .all(|r| matches!(r, R::Exact(_)))
+                    && matches!(row.result_requirement(), V::Exact(_))));
+            }
+            _ => {
+                assert_eq!(rows.len(), 1);
+                let row = rows.first().unwrap();
+                assert_eq!(row.operand_requirements(), [R::Arithmetic, R::Arithmetic]);
+                assert_eq!(
+                    row.result_requirement(),
+                    if matches!(operator, B::Add | B::Subtract) {
+                        V::Operand(0)
+                    } else {
+                        V::Exact(K::Boolean)
+                    }
+                );
+            }
+        }
+    }
 }
 
 #[test]

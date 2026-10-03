@@ -423,3 +423,124 @@ Exact payload:16lines/1347B SHA2562f5f7d166c0e8720349d8b27bf6fe5fd2bb401cdb99f44
   rc=0; fresh three-form marker census proves all IDs1–135 except unassignedD18, no duplicates/
   overlap. Tree10lanes/13trees/11siblings/zero gaps; next .3c typed expression interface/checker.
   promotion: declined (existing closed function/selector signatures and symbolic tolerance roles).
+
+## Completed built-in signatures protocol — preserved from c98dc54
+
+Exact payload:25lines/2141B SHA256ad4577309c6ca0115b80877668da72767b217ba884864189925744b47738f38e.
+
+- ID: `G1-SLICE.5b.3b`
+  Status: `done`
+  Goal: closed built-in/selector signature vocabulary, ordered arities and symbolic tolerance role.
+  Work unit: `STITCHCAD-G1-0092`; predecessor c5d4579 clean/message empty/untracked/no jobs.
+  Pre-code roadmap ADR-0003/G1, full grammar6/6.1/7, contract2/3.1/4.1/5.2 and normalized call/if,
+  FormulaKind/ReservedName/ToleranceName APIs, reference closed22 names/signature matrix reviewed.
+  Add closed FormulaBuiltin ALL/token/from_token (exact spelling), category Function/Selector/
+  Conditional/ToleranceComparison and Fixed/OneOrMore arity metadata. If remains special syntax;
+  lookup metadata neither adds reservations nor overrides named envelope precedence.
+  FormulaBuiltinOperand is Value(kind) or Tolerance(existing symbolic class); either has its
+  ordinary kind, but only the latter fills within's third role. Ordinary length, arithmetic on a
+  class and size names cannot masquerade as class metadata. Role descriptors grant no syntax or
+  accepted-expression proof; .3c derives the symbolic role from actual resolved reserved-name nodes.
+  result_kind uses closed signatures with same arithmetic T, both conditional branch kinds,
+  one-or-more homogeneous min/max, ordered atan2/arc_length/selectors, exactly five tolerances.
+  Signature metadata has no structural255 bound or numeric/provider/geometry execution authority.
+  Independent eight-kind and five-class argument population at arities0–4, wide variadic samples,
+  normative rows both directions and canonical22 name/token agreement must verify closure.
+  Actual compiled vocabulary/arity/generic/branch/order/selector/tolerance-role faults must fail
+  body assertions and restore source exactly; no Cargo job or Rust edit overlaps them. Strict
+  native/WASM, focused reference/language/book/ledger/retention/coverage/gate, exact previous/oldest
+  record retention and per-leaf commit. Typed contextual mismatch/dependencies stay .3c/.4.
+  Verification: four public contracts/680702 kind-class cases/21 actual compiled reds, strict
+  native651/55 groups/WASM/reference/book/ledger pass, rc=0. Commit: `STITCHCAD-G1-0092`.
+
+
+## Completed reference review parent — preserved from c98dc54
+
+Exact payload:11lines/766B SHA256a3eb3ea30dd1d6d4bece14696e0749b6414271e33e02bd04949be64381527ce1.
+
+- ID: `G1-SLICE.5b.1`
+  Status: `done`
+  Goal: enumerate every static obligation from contract2/3/5/6/9 and grammar5/6/7; exercise the
+  actual reference with independently authored namespace/kind/refusal cases before trusting it.
+  Acceptance: all nine origins/eight reserved names, single assignment/ambiguous collisions,
+  forward names, all signatures and dimensional/exclusion/envelope rules mapped both directions;
+  both branches inspected without value access. Log/repair discovered reference defects first.
+  No curated example-only or runtime oracle claim. D124 current-grammar ruling resolves recognition before .2/.3.
+  Verification: full signature4032/namespace1139/recipe196/review100 controls and actual reds verified.
+  Commit: `STITCHCAD-G1-0082`.
+
+
+## Completed namespace foundation parent — preserved from c98dc54
+
+Exact payload:11lines/776B SHA256d7fcb0cb9ba829ea3ff7a87f1e3b654a383dc6ce40a36904d2ae517f763124b1.
+
+- ID: `G1-SLICE.5b.2`
+  Status: `done`
+  Goal: immutable typed origin declarations and namespace/context resolution; numeric availability
+  remains separate from declared kind. Geometry names identify prior operation outputs only.
+  Acceptance: all origins/reserved contexts, spelling, collision/rebinding/forward refusal
+  arguments and searched origins preserved; no implicit shadow/default or value computation.
+  Core input boundary does not introduce sc-core→sc-measure dependency cycle; existing canonical
+  declarations remain the sole authored values. D70 axes remain outside this namespace foundation.
+  Verification: .2a/.2b/.2c/.2d verified below; metadata does not accept a whole recipe.
+  Commit: `STITCHCAD-G1-0083`/`0084`/`0085`/`0086`/`0087`/`0088`/`0089`.
+
+## Wanted-kind catalog checklist — .5b.3c.1
+
+- [x] **REPRODUCE / ISSUE** — result-kind queries alone expose no typed wanted operands/results.
+  Existing operator/built-in public suites now ten tests/681358 admission cases, exact wanted
+  descriptors/result positions and nonoverlapping alternatives pass, rc=0. Actual normative rows
+  and prior independent matrices supply separate catalog oracles.
+- [x] **ROOT CAUSE (WHY + WHERE)** — prose-only or duplicated guessed requirements can drift from
+  actual accepted signatures. wanted_signature_mutations.py →19 compiled body reds/exact restore,
+  rc=0; exact/generic/negatable/tolerance/arity/population/direction/result/position faults prove
+  both acceptance and diagnostic descriptors. Conditional branch-position fault preserves the
+  accepted kind yet fails the independent descriptor assertion; admission alone is insufficient.
+- [x] **FIX** — private immutable catalog constructors, typed operand/result requirements, static
+  closed rows and pure matching; no arbitrary result index, source context or accepted expression.
+  Explicit const storage fixes the draft temporary-reference refusal; no lifetime or lint waiver.
+- [x] **ADDRESSED (verified)** —656 operator/680702 built-in tuples, complete24 actual built-in
+  rows,17 products/14 quotients, exact arities/variables/result indices and wide min/max samples;
+  two negative construction/mutation examples plus19 actual body reds pass, rc=0. Original product
+  query implementations/fault anchors and normative grammar remain unchanged.
+- [x] **NO REGRESSION** — make check:656 passed/55 groups, strict fmt/clippy; make wasm:three
+  libraries; complete reference/structural, language16, publication10, ledger9+13, coverage pass,
+  rc=0. Book59chapters/47API/1178source/1847render links. No execution/provider/state/geometry API.
+- [x] **LOCKSTEP** — bounded book/API/examples/live/task scopes align; G1 stays5/18,11open/124sealed; D136 owned for immediate .2a repair.
+  Prior .3b protocol25lines2141B SHAad457730…, review parent11lines766B SHAa3eb3ea3… and namespace
+  parent11lines776B SHAd7fcb0cb… retained exactly fromc98dc54. Oldest ledger8lines648B SHAfa18d0d1…/
+  lesson9lines753B SHAa62696a7… sealed. Retention243records/57workingMD/10714decodedlines/
+  806158decodedB/394672residentB, rc=0. Fresh three-form defect census/complete IDs exceptD18 and
+  tree10lanes/13trees/11siblings prove no duplicates/overlap/gaps; previous archives untouched.
+  D136 actual unknown-call empty arguments reproduce with three queries, rc=0; .3c.2a owns
+  truthful call lookup/payload repair next, then .2b checker; ordinal-context integration .3.
+  promotion: declined (existing diagnostic wanted-kind, closed signatures and no invented context).
+
+## Completed initial namespace parent — preserved from c98dc54
+
+Exact payload:11lines/664B SHA2565f2f865ea0a01a2bdecb715623f9c814a046e8bcca21363183d5c8d3b1f8e787.
+
+- ID: `G1-SLICE.5b.2c`
+  Status: `done`
+  Goal: checked initial namespace from ordered declaration pairs plus reserved metadata contexts.
+  Acceptance: reject collisions before indexing, retain both origins/source identities, all reserved
+  rebinding refusals; absent context does not hide declared kind; no value or geometry resolution.
+  Verification: .1a/.1b decision/reference sources and .2 checked initial namespace verified below.
+  Commit: `STITCHCAD-G1-0085`/`0086`/`0087`.
+
+  Children: .2c.1a (reproduce/document D131 diagnostic conflict), .2c.1b (delegated decision,
+  canonical/reference diagnostic repair), .2c.2 (checked product initial namespace).
+
+
+## Completed ordered lookup parent — preserved from c98dc54
+
+Exact payload:9lines/521B SHA256a80b45da26d2f3ea960379e6d1cff7eeee52510f5bc15089cdde7b90de11fff9.
+
+- ID: `G1-SLICE.5b.2d`
+  Status: `done`
+  Goal: checked name reads/prior recipe bindings with typed searched origins and rebinding indices;
+  forward/self references never reorder. Whole-expression/recipe integration remains .5b.3/.4.
+  Acceptance: actual ordinal/span/source data only; no numeric/default/shadow behavior.
+  Children: .1 exact initial metadata reads, .2 actual ordered recipe binding scope.
+  Verification: .1/.2 source/query/order/refusal controls verified below.
+  Commit: `STITCHCAD-G1-0088`/`0089`.
