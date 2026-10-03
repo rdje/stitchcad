@@ -115,3 +115,39 @@ must report the catalog or declaration domains actually searched; a standalone e
 no invented recipe ordinal. Those error/owner interfaces are .5b.3c.2, actual statement context
 is .3, and atomic whole-recipe graph acceptance is .4. Numerical execution and release approval
 remain separate work.
+
+## Reference expression dimension payloads
+
+D138's actual book reference now retains the operation, every resolved operand kind, each direct
+reserved tolerance-name role and the complete wanted-signature alternatives
+([contract §5.2.3](../spec/formula-language.md#523-expression-dimension-arguments-and-error-selection)).
+Rows retain ordered operands, a variadic flag and a result. The alias T is shared across all of
+its positions; N is the four negatable kinds. Product catalogs provide their corresponding typed
+requirements and result positions; source-bearing product expression errors remain .5b.3c.2b.2.
+
+For 1 mm + 1.0, operation is +, operand_kinds is length, ratio, and the wanted rule is T,T to T.
+For sqrt(1 mm), the actual kind is length and both area-to-length and ratio-to-ratio alternatives
+are retained. For within(1 mm,1 mm,size_count), the three actual kinds are length,length,count,
+the third symbolic tolerance role is absent and the wanted rule is T,T,tolerance to boolean.
+A computed length such as eps_num+eps_num retains no class role, while ((eps_num)) retains eps_num.
+These arguments carry no numeric values or guessed source/recipe indices.
+
+Known operations check children left-to-right before their complete signature. Both if branches
+are checked; a bad condition cannot justify inventing an unbound branch's kind. Therefore
+if(1,missing,1 mm) reports formula_unbound_name for missing, while if(1,1 mm,1 mm) reports
+formula_dimension with count,length,length and the wanted boolean,T,T to T row. An unknown or
+envelope callee still refuses before its arguments; syntax/input limits retain their earlier phase.
+
+The independent payload producer covers4023 actual cases:16 unary,640 binary,2264 ordinary-call,
+30 arity,512 conditional,512 reserved-role,15 additional symbolic-role,20 wide-boundary and14
+multiple-error priority controls. It inspects3814 complete dimension refusals with exact schema,
+operand order/roles and complete alternative populations, with state/value/execution trapped.
+Fifteen actual compiled faults prove retained fields, row direction/variadics/duplicates, symbolic
+roles, child order and absence of value reads. The older4032-case kind matrix and14 fault controls
+remain green after changed anchors were repaired; it alone certifies no payload schema.
+
+Header-only diagnostic arguments remain D139/.5b.3c.3a. Geometry operation formulas remain
+D140/.5f.3a, a priority repair before product expression checking: the current reference can discard
+point-coordinate kinds, and this expression payload proof does not certify that geometry adapter.
+Full expression/statement/recipe acceptance, numerical execution and generated geometry keep
+their separate owners. The grammar, token set and syntax identities are unchanged.

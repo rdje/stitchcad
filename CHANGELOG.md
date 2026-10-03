@@ -154,6 +154,16 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0095 - complete expression dimension arguments (leaf `G1-SLICE.5b.3c.2b.1`)
+
+D138 reference refusals retain all actual kinds/roles and complete wanted signatures. Known children
+resolve left-to-right before dimension checks; callee priority and grammar remain unchanged.
+4023 cases/3814 complete refusals/15 actual compiled reds pass; old4032/14 and call166/12 controls,
+full reference/language16/publication10/focused product15/ledger9+13/coverage/retention pass0.
+Older structural probes load real catalogs; no guessed fallback. Canonical/book/decision/live scope
+align; exact prior/oldest records retained. G1 stays5/18,12open/127sealed; Rust bytes unchanged.
+P0 D140 geometry reference kind loss is next; D139 header payloads have a separate owner.
+
 ## STITCHCAD-G1-0094 - source-bearing call refusals (leaf `G1-SLICE.5b.3c.2a`)
 
 Exact callee lookup distinguishes envelope/catalog sources from data origins and retains actual
@@ -356,15 +366,6 @@ green. Progressive book/annex/index/live/task records agree; Rust source/tests u
 G1 stays5/18; defects12open/110sealed. Full static review .1c next; D121/D122 keep runtime owners.
 Exact oldest G1-0060 ledger/four lesson records and original defect reports retained in bounded history.
 
-## STITCHCAD-G1-0076 - reference namespace and static headers (leaf `G1-SLICE.5b.1b.1`)
-
-Reference syntax/static/runtime phases separate. Declaration pairs retain nine-origin collisions;
-reserved/input/recipe rebinding and assertion tolerance/arithmetic roles refuse before execution.
-1139 independent metadata-only cases/13 compiled actual guard reds pass; existing syntax/identity,
-numeric and language16 controls remain green. Book explains scope; Rust behavior unchanged.
-D116/D117/D118/D120 close; D119 whole preflight next, D121/D122 owned runtime repairs.
-G1 stays5/18; defects13open/108sealed. Complete oldest ledger/report bytes retained.
-
 
 | [`stitchcad-changelog-part78.md`](docs/history/stitchcad-changelog-part78.md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
 
@@ -393,3 +394,5 @@ G1 stays5/18; defects13open/108sealed. Complete oldest ledger/report bytes retai
 | [`stitchcad-changelog-part90.md`](docs/history/stitchcad-changelog-part90.md) | STITCHCAD-SPINE-0023 | 8 lines, 648 bytes, `sha256:fa18d0d1…` |
 
 | [`stitchcad-changelog-part91.md`](docs/history/stitchcad-changelog-part91.md) | STITCHCAD-SPINE-0023v | 5 lines, 339 bytes, `sha256:fad82add…` |
+
+| [`stitchcad-changelog-part92.md`](docs/history/stitchcad-changelog-part92.md) | STITCHCAD-G1-0076 | 8 lines, 648 bytes, `sha256:9138f15a…` |

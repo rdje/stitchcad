@@ -932,10 +932,25 @@ payloads and callee-before-argument priority verified by166 reference cases/12 a
 product lookup/private source-bearing errors verified by five contracts/18 compiled faults, rc=0.
 D138 dimension payload repair remains the next product-blocking owner below.
 
-- **D138** — actual dimension refusals carry {}, omitting formula5.2's operation, every operand
-  kind and wanted rule. Actual infer/parse on 1 mm + 1.0, - 1, sqrt(1 mm), within(1 mm,1 mm,
-  size_count), if(1,1 mm,1 mm) yields formula_dimension with {} (five controls, rc=0). Root cause:
-  infer and infer_call provide only prose. Impact: no typed actual/wanted diagnostics for consumers;
-  earlier complete reference kind/recognition matrices certify tokens/acceptance, not these fields.
-  Owner G1-SLICE.5b.3c.2b.1; fix next before bounded product checker .2b.2, using verified closed
-  wanted catalogs and actual kinds, with deterministic multi-error selection documented first.
+D138 closes at G1-SLICE.5b.3c.2b.1; original report retained in
+[`stitchcad-defects-part58.md`](../history/stitchcad-defects-part58.md). Expression payloads verified
+by4023 actual cases/3814 complete refusals/15 compiled body reds, rc=0. Actual/wanted kinds, class
+roles and documented child-first selection retained; header/geometry scope remains D139/D140 below.
+
+- **D139** — reference header dimension refusals omit arguments: actual static_statement on
+  let saved:length=1.0, let saved:point=1 mm and let saved:unlisted=1 mm returns formula_dimension
+  with {} (three controls, rc=0). Product statement contracts confirm the existing UnbindableKind
+  rule/token for point/edge/invented; no token conflict or grammar change is needed. An invalid
+  raw annotation has no typed RHS kind, because parsing stops before that operand; a valid
+  annotation mismatch has actual declared/expression kinds. Owner G1-SLICE.5b.3c.3a, P1 before
+  scope-bound product statements .3b. Document truthful case-specific schema before repair/proof.
+
+- **D140** — reference resolve_geometry discards point-coordinate kinds: exprs x=1.0,y=2 deg
+  returns (Fraction(1000000),Fraction(2000000)) as coordinates, while valid x=1 mm,y=2 mm gives
+  (Fraction(1000),Fraction(2000)); direct actual loader/resolve calls reproduce, rc=0. Source takes
+  xs.v/ys.v without Length checks. Edge len=1 deg raises formula_dimension with {}, after evaluating
+  that expression. Impact: invalid coordinate kinds can silently become geometry; static rejection
+  before values is unproved for operation formulas. Owner G1-SLICE.5f.3a, P0 immediately after
+  D138's dimension constructor slice and before product expression checker .5b.3c.2b.2. Require all
+  coordinate/edge Length checks before numeric work, exact actual/wanted payloads and original
+  provenance, actual compiled counterfactuals and no accepted prefix/cache mutation on refusal.

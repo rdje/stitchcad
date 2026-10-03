@@ -309,6 +309,30 @@ searched envelope source; builtin_catalog was not searched after that refusal.
 These name-only queries carry no statement index, source span, canonical expression, numeric
 value or geometry. An enclosing checker may attach only context actually present (§5.2).
 
+#### 5.2.3 Expression dimension arguments and error selection
+
+An expression dimension refusal carries operation, operand_kinds, operand_tolerances and
+wanted_signatures. Operation is the actual operator token (unary/binary minus is -, square is ^2)
+or exact built-in/special-form name. Operand_kinds retains every resolved immediate operand in
+source order. Operand_tolerances retains the actual reserved tolerance name for a direct symbolic
+name operand, otherwise none; a computed length cannot impersonate a class. Grouping is transparent.
+Each wanted signature retains its ordered operands, variadic flag and result. Exact kind names,
+shared T/N and the tolerance requirement have the meanings of grammar §5–§7; every alternative
+is retained, including directed products/quotients. A variadic row repeats its shared T from one
+operand; the structural argument bound remains a separate syntax/input rule.
+
+Syntax and input validation run first. During static checking, an ordinary call resolves its callee
+before its arguments (§5.2.2). Known operations resolve child expressions left-to-right before
+checking their complete immediate signature. For if, the order is condition, then branch, else
+branch; for within it is all positional operands, followed by the symbolic-class requirement.
+Thus an unbound child in if(1,missing,1 mm) wins over the bad condition kind: there is no complete
+actual operand-kind list yet. If every child resolves, the complete dimension refusal retains
+all three kinds. No unavailable kind is guessed, and no branch is numerically evaluated here.
+
+The arc_length recommendation applies only to a refused angle/length multiplication, as grammar
+§5.1 specifies. A bare call lookup has no expression operands; header-only refusals and operation
+geometry adapters retain their separate checking scopes and are not accepted-expression proofs.
+
 ### 5.3 Precedence with the envelope's diagnostics
 
 Where the refused construct is a *feature* the [envelope](feature-matrix.md) dispositions, the

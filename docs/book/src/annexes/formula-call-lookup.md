@@ -105,8 +105,8 @@ must fail body assertions and restore every source byte.
 The independent reference producer runs 166 actual cases, with exact complete payloads and
 argument, namespace, value and execution traps. Twelve actual compiled counterfactuals prove
 name/source/scope/alternative retention and callee-before-argument precedence at static and runtime
-entry points. These controls address D136/D137; the separate dimension payload repair remains
-G1-SLICE.5b.3c.2b.1. None supplies accepted expression, whole-graph, value or geometry proof.
+entry points. These controls address D136/D137; the separate [reference expression dimension payloads](formula-wanted-signatures.md#reference-expression-dimension-payloads)
+are verified at G1-SLICE.5b.3c.2b.1. None supplies accepted expression, whole-graph, value or geometry proof.
 
 The durable engineering decision is `docs/decisions/decision_call-lookup.md`; its verification
 claims this metadata scope, with independent production approval unclaimed.

@@ -4,13 +4,11 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
-## _(2026-10-03 UTC)_ — call sources differ from data origins
+## _(2026-10-03 UTC)_ — unresolved children have no invented kind
 
-- D136/D137 had correct tokens but empty arguments. Callee checks retain query,
-  actual envelope/catalog searches and truthful alternatives; data origins never grant callability.
-- Reference and actual product faults verify payloads and argument priority.
-  Syntax/input validation precedes static checking; context is never fabricated.
-- Promotion: `docs/decisions/decision_call-lookup.md`; strict checks pass, D138 dimensions next.
+- D138 retains complete actual/wanted kinds; unresolved children win over parent dimensions.
+- Reference probes load real catalogs; no empty-table fallback. Independent4023/3814/15 controls pass.
+- Promotion: `docs/decisions/decision_dim.md`; P0 D140 geometry follows.
 
 # Sealed archive — earlier lessons
 
@@ -177,3 +175,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part92.md`](docs/history/stitchcad-devnotes-part92.md) | G1-0092 symbolic-role lesson | 9 lines, 753 bytes, `sha256:a62696a7…` |
 
 | [`stitchcad-devnotes-part93.md`](docs/history/stitchcad-devnotes-part93.md) | G1-0093 wanted-rule lesson | 8 lines, 649 bytes, `sha256:41df0629…` |
+
+| [`stitchcad-devnotes-part94.md`](docs/history/stitchcad-devnotes-part94.md) | G1-0094 call-source lesson | 7 lines, 500 bytes, `sha256:5d32cfcf…` |

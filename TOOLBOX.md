@@ -244,20 +244,20 @@ Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py
  target/artifact_cleanup_audit/<run>; apply the same run with apply. Safety/exclusions:
 docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
 
-Static signature oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations`
-checks closed matrices/hints;14 reds, value access trapped, watched.
+Reference static/runtime producers under docs/tasks/artifacts/formula_structure/:
+run python3 -I -B with the named .py file and --mutations; the structural suite watches them.
 
-Static namespace/header oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations`
-checks1139 metadata-only cases/13 guard reds; watched.
-Whole static recipe/consumer oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations`
-checks196 cases/replay/measurement/guard reds; watched.
-Static review: static_review_contract.py and reserved_diagnostic_review.py --mutations there; D124/D131.
-Call payloads: call_lookup_contract.py --mutations there;166 cases/12 actual reds, watched.
-Product faults there (run alone): semantic_mutations.py, declaration_mutations.py,
-namespace_mutations.py, name_read_mutations.py, ordered_name_mutations.py, operator_signature_mutations.py,
-builtin_signature_mutations.py, wanted_signature_mutations.py, call_lookup_mutations.py.
+- static_signature_contract.py:4032 kind/hint cases/14 actual reds; values trapped.
+- static_namespace_contract.py:1139 metadata cases/13 guard reds.
+- static_recipe_contract.py:196 whole cases/replay/measurement/actual guard reds.
+- static_review_contract.py, reserved_diagnostic_review.py: D124/D131 recognition/sources.
+- call_lookup_contract.py:166 payload cases/12 compiled and three loaded-set reds.
+- dimension_payload_contract.py:4023 cases/3814 complete refusals/15 compiled reds; D138.
+- assertion_contract.py: named assertion arguments and values.
+- origin_value_contract.py: scoped origin/context reads.
+- provenance_contract.py: contribution sources;26 actual body reds.
 
-Assertion diagnostics: `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`; watched by structural suite.
-Origin/context reads: `python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations`; watched.
-
-Contribution provenance: `python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mutations`; watched by structural suite.
+Product source faults in the same directory (run alone, exact restoration required):
+semantic_mutations.py, declaration_mutations.py, namespace_mutations.py, name_read_mutations.py,
+ordered_name_mutations.py, operator_signature_mutations.py, builtin_signature_mutations.py,
+wanted_signature_mutations.py, call_lookup_mutations.py. Each requires actual compiled body reds.

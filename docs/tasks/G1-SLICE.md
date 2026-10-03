@@ -829,8 +829,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.3a` | `done` | Closed operator kind matrix |
 | done | `G1-SLICE.5b.3a.1` | `done` | D134/D135 guidance/review repair |
 | done | `G1-SLICE.5b.3b` | `done` | Closed built-in/selector signatures |
-| done | `G1-SLICE.5b.3c.2a` | `done` | D136/D137 source-bearing call refusals |
-| current | `G1-SLICE.5b.3c.2b.1` | `pending` | D138 dimension payloads |
+| done | `G1-SLICE.5b.3c.2b.1` | `done` | D138 expression dimension payloads |
+| current | `G1-SLICE.5f.3a` | `pending` | P0 D140 coordinate-kind reference repair |
 | next | `G1-SLICE.5b.3c.2b.2` | `pending` | Bounded expression checker |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
@@ -856,6 +856,8 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
   arguments are documented before product namespace .2c.2. No diagnostic decision blocker.
 
 ## Acceptance Checklist
+
+[Dimension payload checklist](G1-SLICE-names.md#dimension-payload-checklist--5b3c2b1) records0095.
 
 [Call lookup checklist](G1-SLICE-names.md#call-lookup-checklist--5b3c2a) records0094.
 

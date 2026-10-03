@@ -306,7 +306,8 @@ class Val:
 
 # ── the evaluator: written from grammar §1–§7, driven by the chapter's own tables ──────────
 class Evaluator:
-    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage, origins=None, context=None):
+    def __init__(self, bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage, origins=None, context=None, *, operator_signatures):
+        self.operator_signatures = operator_signatures
         self.bindable, self.pairs, self.sigs = bindable, pairs, sigs
         self.reserved, self.envelope, self.limits, self.units = reserved, envelope, limits, units
         self.domains, self.storage = domains, storage
@@ -547,6 +548,22 @@ class Evaluator:
         self.scalar(kind, rounded, "literal %s input" % kind)
         return ("lit", kind, rounded)
 
+    @staticmethod
+    def _tolerance_name(node):
+        if node[0] == "name" and node[1] in {"eps_num", "eps_geo", "eps_fmt", "eps_imp", "eps_phys"}:
+            return node[1]
+        return None
+
+    def _dimension(self, operation, nodes, kinds, signatures, message):
+        # Operands have already resolved; no value/state or invented kind enters this payload.
+        roles = tuple(self._tolerance_name(node) for node in nodes)
+        assert len(roles) == len(kinds)
+        wanted = tuple({"operands": tuple(args), "variadic": variadic, "result": result}
+                       for args, variadic, result in signatures)
+        raise FErr("formula_dimension", message,
+                   {"operation": operation, "operand_kinds": tuple(kinds),
+                    "operand_tolerances": roles, "wanted_signatures": wanted})
+
     # -- static kind inference --
     def infer(self, node, env):
         tag = node[0]
@@ -555,24 +572,28 @@ class Evaluator:
         if tag == "neg":
             k = self.infer(node[1], env)
             if k not in NEGATABLE:
-                raise FErr("formula_dimension", "unary - has no rule for %s" % k)
+                self._dimension("-", (node[1],), (k,), self.operator_signatures["-", 1],
+                                "unary - has no rule for %s" % k)
             return k
         if tag == "sq":
             k = self.infer(node[1], env)
             if k not in ("length", "ratio", "count"):
-                raise FErr("formula_dimension", "^ 2 has no rule for %s" % k)
+                self._dimension("^2", (node[1],), (k,), self.operator_signatures["^2", 1],
+                                "^ 2 has no rule for %s" % k)
             return {"length": "area", "ratio": "ratio", "count": "count"}[k]
         if tag == "cmp":
             a, b = self.infer(node[2], env), self.infer(node[3], env)
             if a != b or a not in ARITH:
-                raise FErr("formula_dimension", "%s cannot compare %s with %s" % (node[1], a, b))
+                self._dimension(node[1], node[2:4], (a, b), self.operator_signatures[node[1], 2],
+                                "%s cannot compare %s with %s" % (node[1], a, b))
             return "boolean"
         if tag == "bin":
             op = node[1]
             a, b = self.infer(node[2], env), self.infer(node[3], env)
             if op in ("+", "-"):
                 if a != b or a not in ARITH:
-                    raise FErr("formula_dimension", "%s has no rule for %s and %s" % (op, a, b))
+                    self._dimension(op, node[2:4], (a, b), self.operator_signatures[op, 2],
+                                    "%s has no rule for %s and %s" % (op, a, b))
                 return a
             if op == "*":
                 pair = self.pairs.get((a, b)) or self.pairs.get((b, a))
@@ -582,15 +603,18 @@ class Evaluator:
             if res is None:
                 hint = " — an arc's length is arc_length(angle, radius)" \
                     if op == "*" and {a, b} == {"angle", "length"} else ""
-                raise FErr("formula_dimension", "%s has no rule for %s and %s%s" % (op, a, b, hint))
+                self._dimension(op, node[2:4], (a, b), self.operator_signatures[op, 2],
+                                "%s has no rule for %s and %s%s" % (op, a, b, hint))
             return res
         if tag == "if":
             c = self.infer(node[1], env)
-            if c != "boolean":
-                raise FErr("formula_dimension", "a conditional's test is %s, not boolean" % c)
             a, b = self.infer(node[2], env), self.infer(node[3], env)
+            if c != "boolean":
+                self._dimension("if", node[1:4], (c, a, b), self.sigs["if"],
+                                "a conditional's test is %s, not boolean" % c)
             if a != b or a not in ARITH:
-                raise FErr("formula_dimension", "a conditional's two branches are %s and %s" % (a, b))
+                self._dimension("if", node[1:4], (c, a, b), self.sigs["if"],
+                                "a conditional's two branches are %s and %s" % (a, b))
             return a
         if tag == "call":
             return self.infer_call(node[1], node[2], env)
@@ -619,15 +643,15 @@ class Evaluator:
 
     def infer_call(self, name, args, env):
         self._check_callee(name)
-        if name == "within" and not (len(args) == 3 and args[2][0] == "name"
-                                     and args[2][1] in {"eps_num", "eps_geo", "eps_fmt", "eps_imp", "eps_phys"}):
-            raise FErr("formula_dimension", "within's third argument is a tolerance name")
         kinds = [self.infer(a, env) for a in args]
+        if name == "within" and not (len(args) == 3 and self._tolerance_name(args[2]) is not None):
+            self._dimension(name, args, kinds, self.sigs[name], "within's third argument is a tolerance name")
         for arg_kinds, variadic, result in self.sigs[name]:
             bound = self._matches(arg_kinds, variadic, kinds)
             if bound is not False:
                 return bound if result in ("T", "N") else result
-        raise FErr("formula_dimension", "`%s` has no signature for (%s)" % (name, ", ".join(kinds)))
+        self._dimension(name, args, kinds, self.sigs[name],
+                        "`%s` has no signature for (%s)" % (name, ", ".join(kinds)))
 
     def _matches(self, want_list, variadic, kinds):
         """False when the signature does not fit; otherwise the kind `T` bound to (None if it has no T)."""
@@ -1203,6 +1227,21 @@ for r in table_in(GRA["5.1"], "Left")[1]:
     pairs[(left, right)] = {"*": prod, "/": quot}
     if prod: pairs.setdefault((right, left), {})["*"] = prod
 
+# grammar §5: diagnostic signatures, retaining the chapter's exact symbolic requirements.
+operator_sigs = {}
+for row in table_in(GRA["5"], "Operator")[1]:
+    if len(row) < 3: continue
+    for spelling in re.findall(r"`([^`]+)`", row[0]):
+        operation = spelling.replace(" ", "")
+        if operation in ("*", "/"):
+            rows = [(list(pair), False, rules[operation]) for pair, rules in pairs.items()
+                    if rules.get(operation) is not None]
+            operator_sigs[operation, 2] = rows
+        else:
+            args = [part.strip() for part in debacktick(row[1]).split(",")]
+            result = debacktick(row[2]).strip()
+            operator_sigs.setdefault((operation, len(args)), []).append((args, False, result))
+
 # grammar §6 and §6.1: the function and selector signatures
 sigs = {}
 def read_sigs(section, header):
@@ -1225,7 +1264,8 @@ try:
 except (OSError, ValueError, KeyError) as error:
     print("formula-language census: REFUSED — numeric domain source: %s" % error)
     sys.exit(2)
-EV = Evaluator(bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage, origins)
+EV = Evaluator(bindable, pairs, sigs, reserved, envelope, limits, units, domains, storage, origins,
+               operator_signatures=operator_sigs)
 print("-- tables read from the chapter")
 print("  kinds: %d (%d bindable) · unit tokens: %d · reserved: %d · signature rows: %d"
       % (len(kinds), len(bindable), len(units), len(reserved), sum(len(v) for v in sigs.values())))

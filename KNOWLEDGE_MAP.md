@@ -6,24 +6,24 @@
 
 ## Key subsystems
 
-- `crates/sc-units/src/lib.rs` — units;
+- `crates/sc-units/src/lib.rs`;
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs` — core;
+- `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs`;
   `G1-SLICE.3` / `.4` / `.5`.
 - `docs/book/src/SUMMARY.md`; `G0-CONTRACT` / `G1-SLICE.4d.1`.
-- `docs/book/src/spec/formula-language.md` — formula.
-  `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
+- `docs/book/src/spec/formula-language.md`.
+  `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`;
   `G0-CONTRACT.9` / `G1-SLICE.5`.
-- `docs/book/src/spec/interchange-dialects.md` — dialects.
+- `docs/book/src/spec/interchange-dialects.md`.
   `docs/tasks/artifacts/interchange/run_interchange_census.sh`. `G0-CONTRACT.10` / `G2-2D`.
-- `docs/book/src/spec/feature-matrix.md` — scope;
+- `docs/book/src/spec/feature-matrix.md`;
   `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. `G0-CONTRACT.4`.
 - `docs/book/src/spec/glossary/`;
   `docs/tasks/artifacts/glossary/run_glossary_census.sh`; `G0-CONTRACT.1`.
-- `.doctrine/live_document_size/` — containment;
+- `.doctrine/live_document_size/`;
   `scripts/check_live_doc_size.sh`. `SPINE.4`.
-- `docs/tasks/artifacts/` — probes; `make probes`.
+- `docs/tasks/artifacts/`; `make probes`.
   `g0_exit/run_g0_exit_review.sh` `ROADMAP.md` §11; leaf owns probe.
 
 ## Active task-trees
@@ -67,6 +67,7 @@
 - [`decision_canonical-expression-spelling.md`](docs/decisions/decision_canonical-expression-spelling.md)
 - [`decision_command-layer-contract-and-undo-granularity.md`](docs/decisions/decision_command-layer-contract-and-undo-granularity.md)
 - [`decision_d32-proving-gates-proposed-roadmap-amendment.md`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)
+- [`decision_dim.md`](docs/decisions/decision_dim.md)
 - [`decision_director-ruling-2026-09-30-four-findings.md`](docs/decisions/decision_director-ruling-2026-09-30-four-findings.md)
 - [`decision_director-ruling-2026-09-30-no-seats-proceed-unapproved.md`](docs/decisions/decision_director-ruling-2026-09-30-no-seats-proceed-unapproved.md)
 - [`decision_edge-parameter-bounded-exact-rational.md`](docs/decisions/decision_edge-parameter-bounded-exact-rational.md)

@@ -3,6 +3,7 @@ from pathlib import Path
 from fractions import Fraction
 import os
 import re
+import runpy
 import shutil
 import subprocess
 import sys
@@ -13,29 +14,15 @@ WORK = ROOT / 'target/formula_structure'
 
 
 def load_reference():
-    """Load actual definitions, before the census driver reads/runs book examples."""
-    shell = TOOL.read_text()
-    marker = "<<'PY'\n"
-    assert shell.count(marker) == 1, 'reference Python entrypoint changed'
-    program = shell.split(marker, 1)[1].rsplit('\nPY', 1)[0]
-    marker = 'print("=== formula-language census ===")'
-    assert program.count(marker) == 1, 'reference driver boundary changed'
-    prefix = program.split(marker, 1)[0]
-    namespace = {}
-    original_args = sys.argv
-    try:
-        sys.argv = ['reference', *(['unused'] * 6)]
-        exec(compile(prefix, 'reference_formula_language', 'exec'), namespace)
-    finally:
-        sys.argv = original_args
+    """Load actual definitions/catalogs; no fixture execution or copied wanted rules."""
+    helper = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'))
+    namespace, evaluator = helper['load_reference']()
     contract = (ROOT / 'docs/book/src/spec/formula-language.md').read_text()
     limits = {name: int(value) for name, value in re.findall(
         r'^\| `(max_[a-z_]+)` \| ([0-9]+) \|', contract, re.M)}
     assert limits == {'max_expression_nodes': 256, 'max_recipe_statements': 4096,
                       'max_if_depth': 16, 'max_rational_bits': 128}, 'normative limits changed'
-    domains = namespace['scalar_domains'](str(ROOT / 'docs/book/src'))
-    storage = namespace['storage_domains'](str(ROOT / 'docs/book/src'))
-    evaluator = namespace['Evaluator']([], {}, {}, {}, {}, limits, {}, domains, storage)
+    assert evaluator.limits == limits, 'actual catalog loader limits drift'
     return namespace, evaluator
 
 

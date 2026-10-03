@@ -162,8 +162,8 @@ def contracts(replacement=None, verbose=True):
 
 FAULTS = (
     ('envelope dispatch bypass', 'if name in self.envelope:\n            token = self.envelope[name]', 'if False:\n            token = self.envelope[name]'),
-    ('unknown calls accepted', 'self._check_callee(name)\n        if name == "within"',
-     'if name not in self.sigs: return "length"\n        self._check_callee(name)\n        if name == "within"'),
+    ('unknown calls accepted', 'self._check_callee(name)\n        kinds = [self.infer(a, env) for a in args]',
+     'if name not in self.sigs: return "length"\n        self._check_callee(name)\n        kinds = [self.infer(a, env) for a in args]'),
     ('book statement omitted', 'return tuple(plan)', 'return tuple(plan[:-1])'),
     ('static values observed', 'if name in env: return env[name]["kind"]', 'if name in env: return env[name]["value"]'),
     ('ordinary name reserved', 'if not allow_keyword and text in {"let", "assert", "if"}:',

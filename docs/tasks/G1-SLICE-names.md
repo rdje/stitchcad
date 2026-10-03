@@ -648,3 +648,113 @@ source anchors then proved all18 failures. Prior bytes independently compared, n
 Retention246 logical records/60 working Markdown/10779 decoded lines/810458 decoded bytes/
 398972 resident bytes. Fresh materialization proves11 unique open/126 unique sealed; no overlap.
 Production approval, whole-expression/recipe acceptance and execution remain unclaimed.
+
+## Completed call lookup protocol — preserved from 7edc635
+
+Exact payload:34lines/2966B SHA25607ec08f9a715df06de3a6c415130c9b08ad2572008b29c57086354d4a5cebf5f.
+
+- ID: `G1-SLICE.5b.3c.2a`
+  Status: `done`
+  Goal: D136/D137 complete call refusal payloads and truthful typed lookup before checker.
+  Work unit: `STITCHCAD-G1-0094`; predecessor74e8648 clean/message empty/untracked/no jobs.
+  Pre-code contract3/5.2/5.3, grammar6/6.1/7, envelope10, units4 and existing MachineToken,
+  namespace/catalog/normalized-call views and reference/probe APIs reviewed. Grammar unchanged.
+  Data lookup searches nine declared origins; call lookup first searches six envelope aliases,
+  then the closed built-in catalog. These are distinct typed lookup domains, not new data origins.
+  Document call-scoped names/searches and real requested constructs/declared alternatives before
+  code. Preserve unknown-call/envelope-before-argument precedence; no imagined constraint kind,
+  recipe index, geometry reference, canonical expression or value provider in a name-only query.
+  Product resolver takes a validated MachineToken; internal parser-validated str projection only.
+  Opaque immutable query-borrowing refusals retain exact name, typed reason, actual searched sources
+  and declared alternatives for envelope requests. Debug omits query; Display is token only.
+  Reference unknown/envelope calls must carry required arguments from actual call name and source
+  catalogs. Extend actual reference body-fault anchors when repair changes them; no inert faults.
+  Independently verify every21 ordinary built-in calls, six envelope aliases, unknown/scalar/reserved
+  names, exact schema/source order/alternative populations and no namespace/value/argument reads.
+  Actual compiled reference and product source/name/source-order/precedence/privacy faults must
+  fail body assertions and restore bytes. Strict native/WASM, focused reference/book/ledger/
+  retention/coverage/gate; exact completed/oldest records retained and per-leaf commit.
+  Interface finalized before code: FormulaBuiltin::resolve_call(&MachineToken) returns the existing
+  builtin or private-field FormulaCallRefusal borrowing the exact query; internal lookup_call_name
+  takes parser-validated str. RefusalKind is Unbound/Nurbs/SketchConstraints; LookupSource is
+  Envelope/BuiltinCatalog in real search order. Alternatives are typed LineSegment/CircularArc/
+  CubicBezier or OrderedConstructionRecipe; fixed tags documented in contract5.2.2/envelope10.
+  Call-scoped exact name is the requested kind, never fictional geometric parameters; If is still
+  the keyword special form. Private construction, token-only Display and payload-omitting Debug.
+  D138 missing dimension arguments owned at .2b.1 before checker .2b.2; does not block this lookup.
+  Verification: five public contracts/two negative examples/18 compiled body reds;166 reference
+  cases/12 compiled and three loaded-set reds; strict663/56 groups/WASM/focused gates pass, rc=0.
+  [Receipts/checklist](G1-SLICE-names.md#call-lookup-checklist--5b3c2a); decision_call-lookup.md.
+  Commit: `STITCHCAD-G1-0094`.
+
+
+## Completed syntax milestone protocol — preserved from 7edc635
+
+Exact payload:26lines/2216B SHA256eecb46c725de5738fd5433a01328f5628077061aae139f811cd7a2eb50253a7c.
+
+- ID: `G1-SLICE.5a.4`
+  Status: `done`
+  Work unit: `STITCHCAD-G1-0072`; clean predecessor ee42f5d, no initial jobs/user edits.
+  Scope: complete syntax/input/canonical review and safe remaining evaluator decomposition.
+  Read: bootstrap/README/memory/task doctrine, full formula contract/grammar/examples, units,
+  ontology3/5, ADR-0003/D84/D95/D103/D109, current immutable APIs and ten public test families.
+  No product source edit, new syntax, inference/evaluation, geometry or independent approval.
+  Obligations: ASCII/token spelling/keywords, all units/literals/input rounding/width/domains,
+  precedence and ordered calls/conditionals, let/assert/recipe boundaries and all four limits,
+  exact canonical roles/domains/order/empty/aliases, original spans/ordinal/context and privacy.
+  Display stays presentation; syntax parser admits only machine ASCII, no locale/display reader.
+  Deferred: all nine origins/reserved collisions, every kind signature/exclusion, static whole
+  acceptance, exact result arithmetic/storage, true irrational rounding, state/lazy execution,
+  tolerances/atomic replay/cycle loading and complete construction operation dependencies.
+  Each .5b–.5g child below owns a safe contract before code; refine further if a unit grows.
+  Full milestone: make check, make wasm, make probes, final staged make gate. Rerun existing
+  coupled seven actual assertion faults alone and verify exact restoration before other checks.
+  Existing earlier fault receipts stay historical; this review does not claim re-running them all.
+  D111: one current contract paragraph still calls completed statement identity pending; repair
+  current prose plus ADR implementation status, retaining evaluation/storage/approval boundaries.
+  D34 recurrence: TASK_TREE census example still says six siblings against actual ten; correct
+  example here, mechanical frontier/count derivation stays PLANNING.5, without pivoting to it.
+  Containment: preserve complete prior closure/node graph exactly in this bounded sibling; seal
+  oldest complete changelog/dev-note records before growth crosses their health targets.
+  Verification: completed receipts below; final commit hook repeats the staged doctrine gate.
+
+## Dimension payload checklist — .5b.3c.2b.1
+
+- [x] **REPRODUCE / ISSUE** — D138's five actual parse/infer examples returned dimension tokens
+  with empty required arguments, rc=0; original report retained in defects-part58. Header/geometry
+  census separately reproduces D139/D140, owned .3a/.5f.3a; P0 geometry repair follows this commit.
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual infer/infer_call emitted prose-only FErr and refused
+  if/within before resolving every kind. dimension_payload_contract.py verifies actual constructor/
+  call sites; source census and before/after examples pinpoint missing fields/early checks, rc=0.
+- [x] **FIX** — canonical5.2.3 documented first; one expression dimension constructor retains
+  operation/all actual kinds/tolerance roles/full wanted rows. Actual loaded operator/call tables
+  supply signatures; children resolve left-to-right before dimension checks, callee priority intact.
+- [x] **ADDRESSED** —4023 cases/3814 complete refusals across nine declared groups,15 actual
+  compiled body reds; fields/row population/direction/variadics/roles/error selection verified, rc=0.
+- [x] **NO REGRESSION** — old4032/14 signature, call166/12 plus normative3 controls and full
+  structural/reference suite pass, rc=0; language16/publication10 pass0. Focused product15 tests
+  (operator/builtin/call) pass0; Rust bytes unchanged. Shared older probes load actual catalogs,
+  retaining independent limit checks; no empty or guessed wanted-rule fallback was introduced.
+- [x] **LOCKSTEP / RETENTION** — canonical/annex/decision/index/live/task/tool records align;
+  ledger9/pointer13/tree coverage/retention/gate pass, rc=0. Exact prior protocols34lines2966B/
+  26lines2216B from7edc635 and oldest ledger8lines648B/lesson7lines500B/report7lines684B retained.
+  Census12open/127sealed, no duplicates/overlap; G1 remains5/18, independent approval unclaimed.
+  Promotion: decision_dim.md. D139 headers and P0 D140 geometry stay explicit remaining owners.
+  No expression/whole-graph/product evaluation proof or grammar/token/identity change claimed.
+  README objective/layout/commands reviewed unchanged. Staged make gate passes rc=0; hook repeats it.
+
+## Dimension payload final receipts — .5b.3c.2b.1
+
+All named verification commands returned terminal rc=0: dimension_payload_contract.py --mutations
+(4023/3814/15), old static_signature_contract.py --mutations (4032/14), static_review_contract.py
+--mutations, full run_formula_structure_probes.sh, language16, publication10, focused product15,
+ledger9/pointer13, tree coverage and retention. No Rust file changed; no full-CI/push claim.
+The constructor's new required catalogs exposed a TypeError in the old standalone probe loader;
+an initial empty-catalog update still failed negative-count inference with KeyError. That dependency
+now uses the actual fully loaded table prefix with independent limits still asserted. One attempted
+edit named a nonexistent boundary and refused before writing; its corrected patch passed. Changed
+within/conditional/unknown-call fault anchors were updated and proved actual body reds; no stale
+anchor, compiler failure or wrong exception was accepted as evidence. No background job remains.
+Retention249 logical records/63 working Markdown/10834 decoded lines/813906 decoded bytes/
+402420 resident bytes, rc=0. The next archived payload would consume the last working-file slot;
+before a multi-record next leaf, own a blocking history rollover under unchanged64-file bound.

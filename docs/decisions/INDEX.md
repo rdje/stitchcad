@@ -63,3 +63,4 @@ Records carry an `answers:` line so a question can find them — that is what ma
 | [`decision_recipe-bytes.md`](decision_recipe-bytes.md) | `decision` | exact bind/assert/ordered recipe bytes under engineering delegation; independent approval unclaimed |
 | [`decision_rebinding.md`](decision_rebinding.md) | `decision` | D131: reserved/recipe rebinding sources, actual locations; delegated engineering decision |
 | [`decision_call-lookup.md`](decision_call-lookup.md) | `decision` | exact call sources, callee-first refusal and truthful envelope alternatives; grammar unchanged |
+| [`decision_dim.md`](decision_dim.md) | `decision` | complete actual/wanted expression operands and truthful multiple-error selection; grammar unchanged |

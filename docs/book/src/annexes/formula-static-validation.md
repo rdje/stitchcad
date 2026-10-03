@@ -89,7 +89,12 @@ are available, as are [built-in and selector signatures](formula-builtin-signatu
 [source-bearing call lookup](formula-call-lookup.md) are available; accepted expressions and
 whole static graph remain .5b.3c.2b–.4. Exact call payloads are separately checked by166 cases/12
 actual compiled faults; the older recognition/kind matrix alone certifies no diagnostic payloads.
-Dimension payloads remain the tracked D138 repair at .5b.3c.2b.1.
+Reference expression dimension payloads are now verified by4023 cases/15 actual compiled faults,
+including complete kinds/wanted rules and multiple-error selection; see the
+[wanted-rule annex](formula-wanted-signatures.md#reference-expression-dimension-payloads).
+Header arguments remain D139/.3a; D140 coordinate-kind loss at .5f.3a is the next priority repair.
+The complete static review below covers its stated expression/header outcomes, without claiming
+geometry-provider coordinate validation or product accepted-expression proof.
 Numerical execution, operations, geometry and two-platform final acceptance retain their .5c–.5g
 owners. No product evaluation or API/MCP release claim follows.
 
