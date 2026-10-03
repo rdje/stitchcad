@@ -601,11 +601,24 @@ class Evaluator:
         if name in env: return env[name]["kind"]
         self._missing_name(name)
 
-    def infer_call(self, name, args, env):
+    def _check_callee(self, name):
+        # Call domains differ from data origins; refusal precedes any argument inspection.
         if name in self.envelope:
-            raise FErr(self.envelope[name], "the envelope owns this construct, not the language")
+            token = self.envelope[name]
+            payload = {"name": name, "lookup_scope": "formula_call", "origins_searched": ("envelope",)}
+            if token == "env_nurbs":
+                payload.update(curve_kind=name,
+                               supported_curve_set=("line_segment", "circular_arc", "cubic_bezier"))
+            else:
+                payload.update(constraint_kind=name, recipe_alternative="ordered_construction_recipe")
+            raise FErr(token, "the envelope owns this construct, not the language", payload)
         if name not in self.sigs:
-            raise FErr("formula_unbound_name", "`%s` is no declared function, selector or name" % name)
+            raise FErr("formula_unbound_name", "`%s` is no declared function or selector" % name,
+                       {"name": name, "lookup_scope": "formula_call",
+                        "origins_searched": ("envelope", "builtin_catalog")})
+
+    def infer_call(self, name, args, env):
+        self._check_callee(name)
         if name == "within" and not (len(args) == 3 and args[2][0] == "name"
                                      and args[2][1] in {"eps_num", "eps_geo", "eps_fmt", "eps_imp", "eps_phys"}):
             raise FErr("formula_dimension", "within's third argument is a tolerance name")
@@ -759,8 +772,7 @@ class Evaluator:
                         "contribution_sources": tuple(sorted(sources))})
 
     def call(self, name, args, env):
-        if name in self.envelope:
-            raise FErr(self.envelope[name], "the envelope owns this construct, not the language")
+        self._check_callee(name)
         if name == "if":
             return self.evaluate(("if", args[0], args[1], args[2]), env)
         if name == "within":

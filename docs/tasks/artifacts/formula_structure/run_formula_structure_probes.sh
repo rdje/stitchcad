@@ -31,6 +31,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/ordered_name_mutations.py -
 python3 -I -B docs/tasks/artifacts/formula_structure/operator_signature_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/literal_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/arithmetic_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/angle_contract.py
@@ -44,6 +45,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/canonical_literal_contract.
 python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/reserved_diagnostic_review.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations

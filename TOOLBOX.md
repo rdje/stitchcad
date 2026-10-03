@@ -1,8 +1,7 @@
 # TOOLBOX.md — the tools-first diagnostic doctrine
 
-⛔ **TOOLS-FIRST.** For ANY unknown — a failure, a crash, a hang, a surprising result, a
-"why isn't this working" — reach for a diagnostic tool FIRST. Never eyeball the code and
-guess a root cause.
+⛔ **TOOLS-FIRST.** For any failure, crash, hang or surprising result, run a diagnostic tool first.
+Never guess a root cause from code inspection.
 
 ## The rule
 
@@ -190,7 +189,7 @@ Public length operators: `cargo test -p sc-units --test length_operator_contract
 with a nine-by-nine i128 oracle, inclusive endpoints, signed crossings and explicit Result typing.
 `bash docs/tasks/artifacts/formula_structure/run_length_operator_mutations.sh` requires six compiled
 production bypass/operation/saturation assertion reds and exact source restoration; run alone.
-These primitive checks certify no formula evaluation or release.
+No formula evaluation/release proof.
 
 Domain context: `cargo test -p sc-units --test domain_context_contract` verifies five public typed/
 rendered direct/forwarded refusal contracts. `cargo test -p sc-core --lib domain_context_contracts`
@@ -246,15 +245,17 @@ Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py
 docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
 
 Static signature oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations`
-checks closed matrices/hints;14 actual reds, value access trapped, watched.
+checks closed matrices/hints;14 reds, value access trapped, watched.
 
 Static namespace/header oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations`
-checks1139 metadata-only cases/thirteen actual guard reds; watched.
+checks1139 metadata-only cases/13 guard reds; watched.
 Whole static recipe/consumer oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations`
-checks196 cases/replay/measurement and actual guard reds; watched.
+checks196 cases/replay/measurement/guard reds; watched.
 Static review: static_review_contract.py and reserved_diagnostic_review.py --mutations there; D124/D131.
+Call payloads: call_lookup_contract.py --mutations there;166 cases/12 actual reds, watched.
 Product faults there (run alone): semantic_mutations.py, declaration_mutations.py,
-namespace_mutations.py, name_read_mutations.py, ordered_name_mutations.py, operator_signature_mutations.py, builtin_signature_mutations.py, wanted_signature_mutations.py.
+namespace_mutations.py, name_read_mutations.py, ordered_name_mutations.py, operator_signature_mutations.py,
+builtin_signature_mutations.py, wanted_signature_mutations.py, call_lookup_mutations.py.
 
 Assertion diagnostics: `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`; watched by structural suite.
 Origin/context reads: `python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations`; watched.

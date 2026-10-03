@@ -244,35 +244,8 @@ Five private/cross-type compile-fail and two runnable docs pass; maximal4096×2�
 
 - ID: `G1-SLICE.5a.3f.2`
   Status: `done`
-  Clean7c81533; no jobs/user edits. Prior turn completed .1c; cleanup due18:56UTC, not yet due.
-  Read roadmap4/7.8/G1, formula contract4.1/4.2/4.3/5/9, grammar1/4/4.1 and actual examples;
-  prior normalization/identity/syntax APIs, fixtures, literal guards and all scoped proof maps.
-  Close .3f only for syntax/input/identity, never numeric execution, geometry, storage or approval.
-  Actual book population:17 bindings/four assertions (21 statements/25 operands),13 refusals.
-  Author exact complete statement bytes independently from existing authored expression fixtures;
-  independent recursive reference must check actual source/header/operand population and whole
-  ordered token coverage with infer/evaluate trapped. No independent whole-recipe parser claim.
-  Public tests exercise actual whole worked source/header/global spans and metadata, complete
-  normalized identity/source independence/Clone/privacy, aliases/order and all refusal examples:
-  distinguish three syntax refusals from ten deferred semantic checks, with explicit stage outcomes.
-  Later input refusals in either untaken branch/call arguments preserve original rule/span/known
-  ordinal; no partial normalized whole escapes. Coupled maximum4096/256/16 and first excess
-  preserve typed domain/unsupported rules and context. Preserve every product source byte.
-  Exclusive actual production faults for metadata, input coverage/ordinal, identity order/operand
-  and combined bound must compile and fail new public assertions; classifier refuses compiler/
-  expect-only noise and exact restoration precedes any build/probe. Watch anchors and authored
-  reference producer through standing structural suite. Strict native/release/WASM plus scoped
-  reference/language/publication and all alignment/ledger/archive/census records need actual results.
-  Add book obligation map with exact implemented proof and concrete remaining .5/.6/.7/G2 owners;
-  .5a.4 full milestone follows, evaluator/DAG/operations still need pre-code decomposition.
-  Before growth, move complete whole recipe evidence and last closure exactly to this bounded
-  sibling, retain old anchor routes, and shorten map orientation only as needed under unchanged cap.
-  Oldest ledger payloads stay exact; no policy ceiling or human approval changes.
-  Verification: final receipts below; all observed terminal0 after exact restoration.
-  Commit: `STITCHCAD-G1-0071`.
-Initial new public build refused E0716: the excess-source temporary was dropped while the parse
-Result could still borrow it. Bind the owned test source before parsing and keep it alive through
-refusal inspection. This is test development; no product implementation change or assertion red.
+  Goal: coupled whole syntax/input/identity review; commit `STITCHCAD-G1-0071`.
+  [Exact protocol](G1-SLICE-names.md#completed-coupled-input-protocol--preserved-from-74e8648) retained.
 
 ## Completed input and identity nodes — preserved during G1-0071
 
@@ -690,49 +663,69 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.3c.1`
   Status: `done`
-  Goal: closed typed operand/result requirements for dimension diagnostics before checking code.
-  Work unit: `STITCHCAD-G1-0093`; predecessor c98dc54 clean/message empty/untracked/no jobs.
-  Pre-code contract2/4.1/5.2, full grammar5–7, all public operator/built-in kind APIs and normalized
-  arenas/scopes reviewed. formula_dimension must retain actual operands AND wanted kind rules;
-  the wanted rule cannot be a prose-only guess or numeric/value query.
-  Add immutable FormulaKindSignature catalogs accessible from existing unary/binary/built-in enums.
-  Requirements are Exact(kind), shared Arithmetic T, Negatable N and symbolic ToleranceName.
-  Result is Exact(kind) or an actual operand-kind position; variadic repeats its last requirement.
-  Catalog construction stays private; public read-only views/result_kind are metadata only.
-  All known fixed/variadic rules preserve positional and generic consistency; within's exact class
-  role is retained. No type-error constructor/accepted expression or arbitrary source/ordinal API.
-  Catalog admission must independently equal existing tested result_kind APIs over all656 operator
-  cases and680702 built-in kind/class tuples, with actual normative rows in both directions and
-  independently authored wanted descriptors. Actual compiled requirement/result/arity/repetition/
-  generic/tolerance/product/order/population faults must fail body assertions and restore bytes.
-  Keep standing older producers/anchors unchanged, strict native/WASM, focused reference/book/
-  ledger/retention/coverage/gate; retain exact prior/oldest records before surface growth, commit.
-  Diagnostic/checked-owner source lifetimes and truthful lookup domains finalized at .2 before code;
-  statement indices derive only from actual scope-bound operands at .3, atomic whole graph at .4.
-  Verification: ten public contracts/681358 admission cases/exact descriptors,19 actual compiled
-  reds, strict656 native/55 groups/WASM and focused controls pass, rc=0. Commit: `STITCHCAD-G1-0093`.
+  Goal: typed wanted-kind catalogs; verified, commit `STITCHCAD-G1-0093`.
+  [Exact protocol](G1-SLICE-names.md#completed-wanted-kind-protocol--preserved-from-74e8648) retained.
 
 - ID: `G1-SLICE.5b.3c.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: source-bearing typed errors, bounded context-free checker and immutable checked owner.
   Children: .a D136 truthful call lookup/payloads, .b expression/dependency/owner integration.
   Finalize lifetimes before code; no callback/value/state query or invented ordinal/canonical proof.
   Verification/Commit: `pending`.
 
 - ID: `G1-SLICE.5b.3c.2a`
-  Status: `pending`
-  Goal: D136 required unknown-call arguments and truthful typed call lookup sources before checker.
-  Acceptance: real query name and actually searched envelope/built-in catalog sources; no fictional
-  measurement/recipe origin search for calls. Preserve named envelope and unknown-call-before-arg
-  precedence, the closed token set and current grammar. Document source domains before code;
-  actual reference payload cases/faults, public product lookup/privacy/lifetime controls and commit.
-  Verification/Commit: `pending`.
+  Status: `done`
+  Goal: D136/D137 complete call refusal payloads and truthful typed lookup before checker.
+  Work unit: `STITCHCAD-G1-0094`; predecessor74e8648 clean/message empty/untracked/no jobs.
+  Pre-code contract3/5.2/5.3, grammar6/6.1/7, envelope10, units4 and existing MachineToken,
+  namespace/catalog/normalized-call views and reference/probe APIs reviewed. Grammar unchanged.
+  Data lookup searches nine declared origins; call lookup first searches six envelope aliases,
+  then the closed built-in catalog. These are distinct typed lookup domains, not new data origins.
+  Document call-scoped names/searches and real requested constructs/declared alternatives before
+  code. Preserve unknown-call/envelope-before-argument precedence; no imagined constraint kind,
+  recipe index, geometry reference, canonical expression or value provider in a name-only query.
+  Product resolver takes a validated MachineToken; internal parser-validated str projection only.
+  Opaque immutable query-borrowing refusals retain exact name, typed reason, actual searched sources
+  and declared alternatives for envelope requests. Debug omits query; Display is token only.
+  Reference unknown/envelope calls must carry required arguments from actual call name and source
+  catalogs. Extend actual reference body-fault anchors when repair changes them; no inert faults.
+  Independently verify every21 ordinary built-in calls, six envelope aliases, unknown/scalar/reserved
+  names, exact schema/source order/alternative populations and no namespace/value/argument reads.
+  Actual compiled reference and product source/name/source-order/precedence/privacy faults must
+  fail body assertions and restore bytes. Strict native/WASM, focused reference/book/ledger/
+  retention/coverage/gate; exact completed/oldest records retained and per-leaf commit.
+  Interface finalized before code: FormulaBuiltin::resolve_call(&MachineToken) returns the existing
+  builtin or private-field FormulaCallRefusal borrowing the exact query; internal lookup_call_name
+  takes parser-validated str. RefusalKind is Unbound/Nurbs/SketchConstraints; LookupSource is
+  Envelope/BuiltinCatalog in real search order. Alternatives are typed LineSegment/CircularArc/
+  CubicBezier or OrderedConstructionRecipe; fixed tags documented in contract5.2.2/envelope10.
+  Call-scoped exact name is the requested kind, never fictional geometric parameters; If is still
+  the keyword special form. Private construction, token-only Display and payload-omitting Debug.
+  D138 missing dimension arguments owned at .2b.1 before checker .2b.2; does not block this lookup.
+  Verification: five public contracts/two negative examples/18 compiled body reds;166 reference
+  cases/12 compiled and three loaded-set reds; strict663/56 groups/WASM/focused gates pass, rc=0.
+  [Receipts/checklist](G1-SLICE-names.md#call-lookup-checklist--5b3c2a); decision_call-lookup.md.
+  Commit: `STITCHCAD-G1-0094`.
 
 - ID: `G1-SLICE.5b.3c.2b`
   Status: `pending`
-  Goal: context-free bounded checker, complete actual/wanted operands, declarations and checked owner.
-  Acceptance: every branch/argument/name dependency with actual source/canonical expression;
-  closed call/envelope precedence, no execution or invented whole-recipe context. Interface first.
+  Goal: complete dimension diagnostic contract and bounded accepted expression owners.
+  Children: .1 D138 reference actual/wanted payloads, .2 bounded product checker/error/owner.
+  No execution or invented whole context; finalize interfaces before code. Verification/Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3c.2b.1`
+  Status: `pending`
+  Goal: D138 required operation/all operand kinds/wanted rules in actual reference refusals.
+  Acceptance: typed closed wanted catalogs, complete actual kinds only when resolved; no fabricated
+  kinds for unbound operands. Preserve named call precedence and document deterministic selection
+  for multiply invalid expressions before changing it. Actual payload/fault controls and commit.
+  Verification/Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3c.2b.2`
+  Status: `pending`
+  Goal: context-free bounded checker with typed source/canonical errors, dependencies/checked owner.
+  Acceptance: every branch/argument/name dependency and complete actual/wanted kinds, call priority,
+  no callback/value/state query, no user-authored index or partial proof; interface first.
   Verification/Commit: `pending`.
 
 - ID: `G1-SLICE.5b.3c.3`

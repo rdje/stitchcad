@@ -8,23 +8,23 @@
 
 - `crates/sc-units/src/lib.rs` — units;
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
-  Owner `G0-CONTRACT.2` / `.18`.
+  `G0-CONTRACT.2` / `.18`.
 - `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs` — core;
-  Owner `G1-SLICE.3` / `.4` / `.5`.
-- `docs/book/src/SUMMARY.md`; owner `G0-CONTRACT` / `G1-SLICE.4d.1`.
+  `G1-SLICE.3` / `.4` / `.5`.
+- `docs/book/src/SUMMARY.md`; `G0-CONTRACT` / `G1-SLICE.4d.1`.
 - `docs/book/src/spec/formula-language.md` — formula.
   `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
   `G0-CONTRACT.9` / `G1-SLICE.5`.
 - `docs/book/src/spec/interchange-dialects.md` — dialects.
-  `docs/tasks/artifacts/interchange/run_interchange_census.sh`. Owner `G0-CONTRACT.10` / `G2-2D`.
+  `docs/tasks/artifacts/interchange/run_interchange_census.sh`. `G0-CONTRACT.10` / `G2-2D`.
 - `docs/book/src/spec/feature-matrix.md` — scope;
-  `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. Owner `G0-CONTRACT.4`.
+  `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. `G0-CONTRACT.4`.
 - `docs/book/src/spec/glossary/`;
-  `docs/tasks/artifacts/glossary/run_glossary_census.sh`; owner `G0-CONTRACT.1`.
+  `docs/tasks/artifacts/glossary/run_glossary_census.sh`; `G0-CONTRACT.1`.
 - `.doctrine/live_document_size/` — containment;
-  `scripts/check_live_doc_size.sh`. Owner `SPINE.4`.
+  `scripts/check_live_doc_size.sh`. `SPINE.4`.
 - `docs/tasks/artifacts/` — probes; `make probes`.
-  `g0_exit/run_g0_exit_review.sh` reads `ROADMAP.md` §11; instrument leaf owns it.
+  `g0_exit/run_g0_exit_review.sh` `ROADMAP.md` §11; leaf owns probe.
 
 ## Active task-trees
 
@@ -63,6 +63,7 @@
 - [`decision_adr-0004-interchange-dialects.md`](docs/decisions/decision_adr-0004-interchange-dialects.md)
 - [`decision_angles.md`](docs/decisions/decision_angles.md)
 - [`decision_book-progression.md`](docs/decisions/decision_book-progression.md)
+- [`decision_call-lookup.md`](docs/decisions/decision_call-lookup.md)
 - [`decision_canonical-expression-spelling.md`](docs/decisions/decision_canonical-expression-spelling.md)
 - [`decision_command-layer-contract-and-undo-granularity.md`](docs/decisions/decision_command-layer-contract-and-undo-granularity.md)
 - [`decision_d32-proving-gates-proposed-roadmap-amendment.md`](docs/decisions/decision_d32-proving-gates-proposed-roadmap-amendment.md)

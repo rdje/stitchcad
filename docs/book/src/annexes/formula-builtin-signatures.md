@@ -138,3 +138,6 @@ Accepted normalized expressions, source-bearing refusals and every name dependen
 remain G1-SLICE.5b.3c.2; coupled review is .3d, and atomic ordered recipe acceptance is .4.
 Numeric domains, rounding and execution are .5c–.5e; real geometry selectors are .5f/G2.
 No computed garment, API/MCP release or independent production approval follows from these signatures.
+
+[Source-bearing call lookup](formula-call-lookup.md) now checks exact ordinary callees and
+envelope precedence before arguments; complete accepted expression checking remains separate.

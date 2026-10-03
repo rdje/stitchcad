@@ -21,7 +21,7 @@ Three properties define it:
 The G0 semantic contract has been reviewed, with its human closure still unapproved. G1 implements
 ontology, canonical inputs, measurement metadata/tables, per-POM Ease, size membership, garment/MTM
 input charts and borrowed formula syntax, whole-recipe input normalization and owned expression/
-statement/recipe identity, plus formula metadata, sourced declarations, initial namespaces, exact name reads, ordered scopes and operator/built-in/selector kind signatures with typed wanted-kind catalogs. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks
+statement/recipe identity, plus formula metadata, sourced declarations, initial namespaces, exact name reads, ordered scopes and operator/built-in/selector kind signatures with typed wanted-kind catalogs and source-bearing call lookup. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks
 verified progress; the mdBook offers progressive learning, a glossary/index and detailed annexes
 with implemented behavior and remaining proof boundaries.
 

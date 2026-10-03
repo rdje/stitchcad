@@ -14,6 +14,7 @@
 > The [complete static review map](../annexes/formula-static-validation.md#complete-static-review-and-remaining-contracts)
 > records remaining product/runtime contracts; D124 recognition preserves the existing grammar.
 > Product [metadata and initial reads](../annexes/formula-declarations.md), plus [ordered name scopes](../annexes/formula-name-scopes.md), are available at .5b.2.
+> [Source-bearing call lookup](../annexes/formula-call-lookup.md) supplies exact callee refusals at .5b.3c.2a.
 > Product name/type/binding validation and evaluation remain G1-SLICE.5b–.5g work; final acceptance
 > makes every worked example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
@@ -287,6 +288,26 @@ the available source spans and declared metadata, without claiming complete whol
 The [reference diagnostic controls](../annexes/formula-static-validation.md#reserved-name-diagnostic-sources)
 distinguish that scope from whole-recipe checking and canonical product adapters. Two authored
 declarations colliding remain `formula_ambiguous_name`, including two from the same origin.
+
+#### 5.2.2 Call-lookup sources
+
+A call searches a different domain from a data-name read: first the envelope alias table (§5.3),
+then the closed built-in/selector catalog. A scalar, geometry or reserved-name declaration does
+not make its name callable. Formula_unbound_name retains the exact callee, lookup scope
+formula_call and the ordered origins_searched list: envelope, builtin_catalog. These are call
+lookup sources, not extra origins in §3. After syntax/input validation, static name/kind checking
+refuses an unknown or envelope callee before inspecting its arguments. The if special form retains its existing grammar and static branch checks.
+
+For a formula-call envelope refusal, the request scope is formula_call and the requested kind is
+the actual construct spelling, including its alias. It does not claim that geometric constraint
+parameters or an entity exist. Env_nurbs retains that curve_kind and the supported_curve_set
+line_segment, circular_arc, cubic_bezier (units §4). Env_sketch_constraints retains that
+constraint_kind and recipe_alternative ordered_construction_recipe. These alternative tags are
+diagnostic metadata, not new callables or keywords. Both refusals retain the exact name and the
+searched envelope source; builtin_catalog was not searched after that refusal.
+
+These name-only queries carry no statement index, source span, canonical expression, numeric
+value or geometry. An enclosing checker may attach only context actually present (§5.2).
 
 ### 5.3 Precedence with the envelope's diagnostics
 

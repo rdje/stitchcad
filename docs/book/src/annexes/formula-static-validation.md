@@ -85,8 +85,11 @@ atomic whole-recipe preflight and full static obligation review below are also v
 reference. Product [sourced declarations and namespaces](formula-declarations.md),
 [ordered metadata scopes](formula-name-scopes.md) and [operator signatures](formula-operator-signatures.md)
 are available, as are [built-in and selector signatures](formula-builtin-signatures.md).
-[Typed wanted-kind catalogs](formula-wanted-signatures.md) are available; accepted expressions
-and whole static graph remain .5b.3c.2–.4.
+[Typed wanted-kind catalogs](formula-wanted-signatures.md) and
+[source-bearing call lookup](formula-call-lookup.md) are available; accepted expressions and
+whole static graph remain .5b.3c.2b–.4. Exact call payloads are separately checked by166 cases/12
+actual compiled faults; the older recognition/kind matrix alone certifies no diagnostic payloads.
+Dimension payloads remain the tracked D138 repair at .5b.3c.2b.1.
 Numerical execution, operations, geometry and two-platform final acceptance retain their .5c–.5g
 owners. No product evaluation or API/MCP release claim follows.
 

@@ -161,8 +161,9 @@ def contracts(replacement=None, verbose=True):
 
 
 FAULTS = (
-    ('envelope dispatch bypass', 'if name in self.envelope:\n            raise FErr(self.envelope[name], "the envelope owns this construct, not the language")\n        if name not in self.sigs:', 'if name not in self.sigs:'),
-    ('unknown calls accepted', 'raise FErr("formula_unbound_name", "`%s` is no declared function, selector or name" % name)', 'return "length"'),
+    ('envelope dispatch bypass', 'if name in self.envelope:\n            token = self.envelope[name]', 'if False:\n            token = self.envelope[name]'),
+    ('unknown calls accepted', 'self._check_callee(name)\n        if name == "within"',
+     'if name not in self.sigs: return "length"\n        self._check_callee(name)\n        if name == "within"'),
     ('book statement omitted', 'return tuple(plan)', 'return tuple(plan[:-1])'),
     ('static values observed', 'if name in env: return env[name]["kind"]', 'if name in env: return env[name]["value"]'),
     ('ordinary name reserved', 'if not allow_keyword and text in {"let", "assert", "if"}:',

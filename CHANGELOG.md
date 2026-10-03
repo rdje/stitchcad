@@ -154,6 +154,16 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0094 - source-bearing call refusals (leaf `G1-SLICE.5b.3c.2a`)
+
+Exact callee lookup distinguishes envelope/catalog sources from data origins and retains actual
+requests/alternatives before argument access. D136/D137 reference payloads repaired; grammar unchanged.
+Five public contracts/two negative examples/18 compiled body reds and166 reference cases/12 compiled/
+three normative-set reds pass with exact restoration. Strict663/56 groups/WASM3/reference/language16/
+publication10/ledger9+13/coverage/retention pass0. Decision/book/API/live scope align; no expression or
+execution proof claimed. Exact prior/oldest records retained; G1 stays5/18,11open/126sealed.
+Next D138 dimension payloads .5b.3c.2b.1, then bounded accepted expression checking.
+
 ## STITCHCAD-G1-0093 - typed wanted-kind catalogs (leaf `G1-SLICE.5b.3c.1`)
 
 Immutable static rows expose exact/generic/class operand requirements and positional results.
@@ -355,22 +365,6 @@ numeric and language16 controls remain green. Book explains scope; Rust behavior
 D116/D117/D118/D120 close; D119 whole preflight next, D121/D122 owned runtime repairs.
 G1 stays5/18; defects13open/108sealed. Complete oldest ledger/report bytes retained.
 
-## STITCHCAD-SPINE-0023v - observed handoff CI guards (leaf `SPINE.23v`)
-
-Exact pushed10e19f2: both jobs/all steps completed success; runner log confirms43 fixtures/13
-actual guard reds. OS-visible attested handoff green. Book/live/task receipts agree; G1 stays5/18,
-defects10open/104sealed. Product namespace/preflight G1 .5b.1b resumes.
-
-
-
-
-
-
-
-
-
-
-
 
 | [`stitchcad-changelog-part78.md`](docs/history/stitchcad-changelog-part78.md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
 
@@ -397,3 +391,5 @@ defects10open/104sealed. Product namespace/preflight G1 .5b.1b resumes.
 | [`stitchcad-changelog-part89.md`](docs/history/stitchcad-changelog-part89.md) | STITCHCAD-G1-0075/0074 | 16 lines, 1250 bytes, `sha256:2d8487c5…` |
 
 | [`stitchcad-changelog-part90.md`](docs/history/stitchcad-changelog-part90.md) | STITCHCAD-SPINE-0023 | 8 lines, 648 bytes, `sha256:fa18d0d1…` |
+
+| [`stitchcad-changelog-part91.md`](docs/history/stitchcad-changelog-part91.md) | STITCHCAD-SPINE-0023v | 5 lines, 339 bytes, `sha256:fad82add…` |

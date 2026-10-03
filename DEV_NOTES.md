@@ -4,23 +4,13 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
+## _(2026-10-03 UTC)_ — call sources differ from data origins
 
-
-
-
-
-
-
-
-
-## _(2026-10-03 UTC)_ — wanted rules need more than acceptance tests
-
-- Private static catalogs preserve exact/generic/class requirements, arity and result positions.
-  A conditional-position fault keeps its kind but fails the descriptor oracle: acceptance alone
-  cannot prove the wanted rule. Explicit const storage avoids borrowed temporary catalog rows.
-- Ten contracts/681358 cases/19 body reds and strict656/55 groups/WASM/focused checks pass0.
-  Grammar/old query code unchanged; exact prior/oldest evidence retained. Source-aware errors next.
-- promotion: declined (existing closed signatures, wanted-kind and truthful context contracts).
+- D136/D137 had correct tokens but empty arguments. Callee checks retain query,
+  actual envelope/catalog searches and truthful alternatives; data origins never grant callability.
+- Reference and actual product faults verify payloads and argument priority.
+  Syntax/input validation precedes static checking; context is never fabricated.
+- Promotion: `docs/decisions/decision_call-lookup.md`; strict checks pass, D138 dimensions next.
 
 # Sealed archive — earlier lessons
 
@@ -185,3 +175,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part91.md`](docs/history/stitchcad-devnotes-part91.md) | G1-0091 diagnostic guidance lesson | 10 lines, 838 bytes, `sha256:a83b9679…` |
 
 | [`stitchcad-devnotes-part92.md`](docs/history/stitchcad-devnotes-part92.md) | G1-0092 symbolic-role lesson | 9 lines, 753 bytes, `sha256:a62696a7…` |
+
+| [`stitchcad-devnotes-part93.md`](docs/history/stitchcad-devnotes-part93.md) | G1-0093 wanted-rule lesson | 8 lines, 649 bytes, `sha256:41df0629…` |

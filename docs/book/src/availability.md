@@ -29,7 +29,10 @@ shows alias equality and preserved order. Binding, numerical execution and proje
 [Formula declaration metadata](annexes/formula-declarations.md) describes kinds, origins and the
 contexts that supply reserved names. Immutable declarations retain canonical input identities and
 actual recipe/geometry sources. These libraries can identify a declared kind without an export,
-profile or size value. Namespace/type acceptance and execution remain pending.
+profile or size value. Initial namespaces and ordered name reads are available, along with
+[operator/built-in signatures](annexes/formula-builtin-signatures.md), typed wanted rules and
+[source-bearing call lookup](annexes/formula-call-lookup.md). Complete expression/recipe acceptance
+and execution remain pending.
 
 ## Planned workflows
 

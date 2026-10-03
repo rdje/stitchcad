@@ -73,6 +73,11 @@ pub use builtins::{
 mod signatures;
 pub use signatures::{FormulaKindSignature, FormulaOperandRequirement, FormulaResultRequirement};
 
+mod calls;
+pub use calls::{
+    FormulaCallAlternative, FormulaCallLookupSource, FormulaCallRefusal, FormulaCallRefusalKind,
+};
+
 mod declaration;
 pub use declaration::{
     FormulaDeclaration, FormulaDeclarationSource, FormulaInputOrigin, FormulaScalarInputOrigin,

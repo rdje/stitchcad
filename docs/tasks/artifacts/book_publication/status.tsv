@@ -46,3 +46,7 @@ formula built-in categories	annexes/formula-builtin-signatures.md	crates/sc-core
 formula wanted-kind signature rows	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/signatures.rs	FormulaKindSignature	G1-SLICE.5b.3c.1	4.1
 formula wanted operand requirements	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/signatures.rs	FormulaOperandRequirement	G1-SLICE.5b.3c.1	4.1
 formula wanted result requirements	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/signatures.rs	FormulaResultRequirement	G1-SLICE.5b.3c.1	4.1
+formula call lookup sources	annexes/formula-call-lookup.md	crates/sc-core/src/recipe/calls.rs	FormulaCallLookupSource	G1-SLICE.5b.3c.2a	4.1
+formula call refusal reasons	annexes/formula-call-lookup.md	crates/sc-core/src/recipe/calls.rs	FormulaCallRefusalKind	G1-SLICE.5b.3c.2a	4.1
+formula call envelope alternatives	annexes/formula-call-lookup.md	crates/sc-core/src/recipe/calls.rs	FormulaCallAlternative	G1-SLICE.5b.3c.2a	4.1
+formula call source-bearing refusals	annexes/formula-call-lookup.md	crates/sc-core/src/recipe/calls.rs	FormulaCallRefusal	G1-SLICE.5b.3c.2a	4.1

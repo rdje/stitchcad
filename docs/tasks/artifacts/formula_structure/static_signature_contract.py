@@ -215,8 +215,8 @@ FAULTS = [
      'if a not in ARITH:\n                raise FErr("formula_dimension", "a conditional'),
     ('value read through get', 'if name in env: return env[name]["kind"]',
      'if name in env: return env[name].get("value") or env[name]["kind"]'),
-    ('envelope priority', 'if name in self.envelope:\n            raise FErr(self.envelope[name], "the envelope owns this construct, not the language")\n        if name not in self.sigs:',
-     'if name not in self.sigs:'),
+    ('envelope priority', 'if name in self.envelope:\n            token = self.envelope[name]',
+     'if False:\n            token = self.envelope[name]'),
 ]
 
 

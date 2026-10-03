@@ -78,6 +78,14 @@ chapter is inside that family or explicitly outside it.
 | multiplicity, cut quantity and label data | supported | ontology §4.1, ontology §10: labels derive from the plan; physical copies have explicit identities | G1 structure, G2 labels, G5 piece manager | — |
 | layer index for 3D ordering | deferred | ontology §4.1 stores it, but assembly is the V1 track's proof | V1 | `env_layer_index_3d` |
 
+For the six envelope aliases in a formula call, the requested curve/constraint kind is the exact
+callee spelling in scope formula_call. The supported curve tags are line_segment, circular_arc
+and cubic_bezier; the recipe alternative is ordered_construction_recipe. These are diagnostic
+alternatives, not formula syntax or evidence of constructed geometry. The [formula contract
+§5.2.2](formula-language.md#522-call-lookup-sources) defines the actual searched sources and
+callee-before-argument precedence. Requests from other interfaces retain their own actual kinds.
+
+
 ## 4. Seams, allowances and marks
 
 | Feature | Disposition | Why | Proven at | Diagnostic |

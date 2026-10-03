@@ -544,3 +544,107 @@ Exact payload:9lines/521B SHA256a80b45da26d2f3ea960379e6d1cff7eeee52510f5bc15089
   Children: .1 exact initial metadata reads, .2 actual ordered recipe binding scope.
   Verification: .1/.2 source/query/order/refusal controls verified below.
   Commit: `STITCHCAD-G1-0088`/`0089`.
+
+## Completed wanted-kind protocol — preserved from 74e8648
+
+Exact payload:24lines/2066B SHA256c0074a5c2e5aebc81f83224d1be49bc8367e610dd5c805a83a136bbfae204137.
+
+- ID: `G1-SLICE.5b.3c.1`
+  Status: `done`
+  Goal: closed typed operand/result requirements for dimension diagnostics before checking code.
+  Work unit: `STITCHCAD-G1-0093`; predecessor c98dc54 clean/message empty/untracked/no jobs.
+  Pre-code contract2/4.1/5.2, full grammar5–7, all public operator/built-in kind APIs and normalized
+  arenas/scopes reviewed. formula_dimension must retain actual operands AND wanted kind rules;
+  the wanted rule cannot be a prose-only guess or numeric/value query.
+  Add immutable FormulaKindSignature catalogs accessible from existing unary/binary/built-in enums.
+  Requirements are Exact(kind), shared Arithmetic T, Negatable N and symbolic ToleranceName.
+  Result is Exact(kind) or an actual operand-kind position; variadic repeats its last requirement.
+  Catalog construction stays private; public read-only views/result_kind are metadata only.
+  All known fixed/variadic rules preserve positional and generic consistency; within's exact class
+  role is retained. No type-error constructor/accepted expression or arbitrary source/ordinal API.
+  Catalog admission must independently equal existing tested result_kind APIs over all656 operator
+  cases and680702 built-in kind/class tuples, with actual normative rows in both directions and
+  independently authored wanted descriptors. Actual compiled requirement/result/arity/repetition/
+  generic/tolerance/product/order/population faults must fail body assertions and restore bytes.
+  Keep standing older producers/anchors unchanged, strict native/WASM, focused reference/book/
+  ledger/retention/coverage/gate; retain exact prior/oldest records before surface growth, commit.
+  Diagnostic/checked-owner source lifetimes and truthful lookup domains finalized at .2 before code;
+  statement indices derive only from actual scope-bound operands at .3, atomic whole graph at .4.
+  Verification: ten public contracts/681358 admission cases/exact descriptors,19 actual compiled
+  reds, strict656 native/55 groups/WASM and focused controls pass, rc=0. Commit: `STITCHCAD-G1-0093`.
+
+
+## Completed coupled input protocol — preserved from 74e8648
+
+Exact payload:32lines/2743B SHA2566437548e7bc37233457d2de023b119564240a61969666fb08fd8c6eaae459643.
+
+- ID: `G1-SLICE.5a.3f.2`
+  Status: `done`
+  Clean7c81533; no jobs/user edits. Prior turn completed .1c; cleanup due18:56UTC, not yet due.
+  Read roadmap4/7.8/G1, formula contract4.1/4.2/4.3/5/9, grammar1/4/4.1 and actual examples;
+  prior normalization/identity/syntax APIs, fixtures, literal guards and all scoped proof maps.
+  Close .3f only for syntax/input/identity, never numeric execution, geometry, storage or approval.
+  Actual book population:17 bindings/four assertions (21 statements/25 operands),13 refusals.
+  Author exact complete statement bytes independently from existing authored expression fixtures;
+  independent recursive reference must check actual source/header/operand population and whole
+  ordered token coverage with infer/evaluate trapped. No independent whole-recipe parser claim.
+  Public tests exercise actual whole worked source/header/global spans and metadata, complete
+  normalized identity/source independence/Clone/privacy, aliases/order and all refusal examples:
+  distinguish three syntax refusals from ten deferred semantic checks, with explicit stage outcomes.
+  Later input refusals in either untaken branch/call arguments preserve original rule/span/known
+  ordinal; no partial normalized whole escapes. Coupled maximum4096/256/16 and first excess
+  preserve typed domain/unsupported rules and context. Preserve every product source byte.
+  Exclusive actual production faults for metadata, input coverage/ordinal, identity order/operand
+  and combined bound must compile and fail new public assertions; classifier refuses compiler/
+  expect-only noise and exact restoration precedes any build/probe. Watch anchors and authored
+  reference producer through standing structural suite. Strict native/release/WASM plus scoped
+  reference/language/publication and all alignment/ledger/archive/census records need actual results.
+  Add book obligation map with exact implemented proof and concrete remaining .5/.6/.7/G2 owners;
+  .5a.4 full milestone follows, evaluator/DAG/operations still need pre-code decomposition.
+  Before growth, move complete whole recipe evidence and last closure exactly to this bounded
+  sibling, retain old anchor routes, and shorten map orientation only as needed under unchanged cap.
+  Oldest ledger payloads stay exact; no policy ceiling or human approval changes.
+  Verification: final receipts below; all observed terminal0 after exact restoration.
+  Commit: `STITCHCAD-G1-0071`.
+Initial new public build refused E0716: the excess-source temporary was dropped while the parse
+Result could still borrow it. Bind the owned test source before parsing and keep it alive through
+refusal inspection. This is test development; no product implementation change or assertion red.
+
+
+## Call lookup checklist — .5b.3c.2a
+
+- [x] **REPRODUCE / ISSUE** — D136's three unknown calls and D137's six envelope aliases
+  return correct tokens with empty required arguments; actual loader/infer reproductions, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual infer_call/call raised FErr without arguments;
+  earlier token/kind matrices certify no payload schema. call_lookup_contract.py executes the
+  repaired actual producer with exact independently authored fields/argument/value traps, rc=0.
+- [x] **FIX** — documented contract5.2.2/envelope10 before code; actual callee check retains
+  name/scope/real searched domains/request/alternatives. Product private query-borrowing error
+  and FormulaBuiltin::resolve_call provide metadata only; grammar/keywords/population unchanged.
+- [x] **ADDRESSED** — five public contracts/two negative privacy/lifetime examples pass;
+  166 reference cases/12 compiled body reds/three loaded normative-set reds, and18 actual compiled
+  product faults fail body assertions with exact byte restoration. Final focused test passes, rc=0.
+- [x] **NO REGRESSION** — strict make check663 tests/56 result groups, fmt/clippy -D warnings;
+  WASM three libraries; full reference/recognition matrices and language16 pass, rc=0. Native
+  verification completed before the final exclusive fault run; restored public five tests pass0.
+- [x] **LOCKSTEP / RETENTION** — publication10/60 chapters/51 API rows/1191 source/1870 rendered
+  links, ledger9/pointer13/tree coverage/retention pass, rc=0. Prior protocols24lines2066B and
+  32lines2743B retained exact from74e8648; oldest ledger5lines339B/lesson8lines649B/report19lines
+  1685B sealed without changing prior windows. Census11open/126sealed, no duplicates/overlap.
+  G1 stays5/18; D136/D137 fixed, D138 dimensions .2b.1 next; independent approval unclaimed.
+  Promotion: decision_call-lookup.md records actual call sources and truthful request scope.
+  Staged make gate returned terminal rc=0; commit hook repeats final checks. Unit STITCHCAD-G1-0094.
+
+## Call lookup final receipts — .5b.3c.2a
+
+All named commands returned terminal rc=0: make check, make wasm, the focused restored public
+contract, call_lookup_mutations.py (18 actual compiled assertion reds/exact restore),
+call_lookup_contract.py --mutations (166 actual cases/12 compiled/three normative reds), full
+run_formula_structure_probes.sh, run_formula_language_probes.sh (16), publication (10), ledger
+(9)/pointer (13), tree coverage and archive retention. Strict development initially caught
+expect_err in a non-test helper; an explicit assertion precedes error destructuring, no lint waiver.
+The first fault-anchor draft refused a rustfmt-wrapped match arm before mutation; exact formatted
+source anchors then proved all18 failures. Prior bytes independently compared, no history rewritten.
+Retention246 logical records/60 working Markdown/10779 decoded lines/810458 decoded bytes/
+398972 resident bytes. Fresh materialization proves11 unique open/126 unique sealed; no overlap.
+Production approval, whole-expression/recipe acceptance and execution remain unclaimed.

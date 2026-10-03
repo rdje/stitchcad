@@ -62,6 +62,7 @@
   - [Formula operator kind signatures](annexes/formula-operator-signatures.md)
   - [Built-in and selector signatures](annexes/formula-builtin-signatures.md)
   - [Typed wanted-kind signatures](annexes/formula-wanted-signatures.md)
+  - [Source-bearing call lookup](annexes/formula-call-lookup.md)
   - [Static formula validation evidence](annexes/formula-static-validation.md)
   - [Runtime formula validation evidence](annexes/formula-runtime-validation.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
