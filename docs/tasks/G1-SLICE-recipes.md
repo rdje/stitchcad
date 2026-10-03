@@ -660,38 +660,35 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5b.3c.2b`
   Status: `in_progress`
   Goal: complete dimension diagnostic contract and bounded accepted expression owners.
-  Children: .1 D138 reference actual/wanted payloads, .2 bounded product checker/error/owner.
+  Children: .1 D138 payloads, blocking .h0 retention/.h1 CI, .2 bounded product checker/error/owner.
   No execution or invented whole context; finalize interfaces before code. Verification/Commit: `pending`.
 
 - ID: `G1-SLICE.5b.3c.2b.1`
   Status: `done`
-  Goal: D138 required operation/all operand kinds/wanted rules in actual reference refusals.
-  Acceptance: typed closed wanted catalogs, complete actual kinds only when resolved; no fabricated
-  kinds for unbound operands. Preserve named call precedence and document deterministic selection
-  for multiply invalid expressions before changing it. Actual payload/fault controls and commit.
-  Work unit: `STITCHCAD-G1-0095`; predecessor7edc635 clean/0-byte untracked brief/no jobs.
-  Pre-code contract2/5.2, grammar5–7, wanted/operator/builtin catalogs, actual infer/if/within and
-  signature/namespace/review/call payload producers reviewed. Scoped repair: expression dimension
-  diagnostics; header refusals separately D139/.3a, geometry D140/.5f.3a P0 immediately after this.
-  Document diagnostic selection first: syntax/input phases first, call callee before operands;
-  resolve expression children left-to-right (if condition/then/else, all call operands) before a
-  dimension refusal. An unresolved child's named error wins because no actual kind can be invented.
-  Keep all resolved operands/kinds, symbolic third-role presence and full alternative wanted rules.
-  Schema documented first at contract5.2.3: operation/operand_kinds/operand_tolerances and
-  wanted_signatures with ordered operands/variadic/result. Exact alias T/N/role meanings retained.
-  Reference wanted rows come from actual loaded call/operator tables, preserving shared T/N,
-  exact kinds, variadic arity/result semantics. Use one dimension-error constructor for true
-  expression operators/special forms/calls; retain the multiplication-only arc_length advice.
-  Do not touch the grammar/closed token set or fabricate source spans, canonical/recipe indices.
-  Independent complete operator/call/kind/class/conditional/variadic payload matrices, late invalid
-  children and simultaneous error selection must use unreadable value/execution metadata. Every
-  actual changed fault anchor must still compile and fail body assertions, not token/name noise.
-  Focused product signature tests, full reference/language/book/ledger/coverage/retention/gate;
-  exact prior/oldest records retained before growth, no caps raised; per-leaf commit before P0 D140.
-  Verification:4023 cases/3814 full refusals/15 actual compiled reds; old4032/14 and call166/12
-  controls, focused15 product tests and full reference/language16/book10/ledger/gates pass, rc=0.
-  [Checklist/receipts](G1-SLICE-names.md#dimension-payload-checklist--5b3c2b1); decision_dim.md.
-  Commit: `STITCHCAD-G1-0095`.
+  Goal: D138 complete reference dimension arguments; verified `STITCHCAD-G1-0095`.
+  [Exact protocol](G1-SLICE-names.md#completed-dimension-protocol--preserved-from2bdcd31) retained.
+
+- ID: `G1-SLICE.5b.3c.2b.h0`
+  Status: `done`
+  Goal: blocking fourth retained window before D140/new expression records exceed capacity.
+  Work unit: `STITCHCAD-G1-0096`; clean source2bdcd31, unchanged64-file bound, actual63 working.
+  Acceptance: freeze complete source membership, deterministic capture, independent Git/read/
+  materialization proofs, exact copy/verify/use before removing only captured raw records;
+  prior windows immutable, maintained links redirected, no raised cap or semantic loss.
+  Own D141 window3 misleading immutable title: diagnose actual source/catalog; preserve its bytes
+  and supersede with a live upkeep correction, require truthful new catalog labels in probes.
+  Checks: exclusive archive CLI/probes, ledger/publication/coverage/size; full check/gate/probes
+  before exceptional push. Completed protocol retained before live surfaces grow.
+  Verification:60 exact sources/249 independent originals, archive28/CLI262 plus native663/56,
+  WASM3/book10/ledger9+13/tree0gaps/full27probe suites/gate pass0; remote .h1 pending.
+  [Checklist](G1-SLICE-names.md#fourth-retained-window-checklist). Commit: `STITCHCAD-G1-0096`.
+
+- ID: `G1-SLICE.5b.3c.2b.h1`
+  Status: `pending`
+  Goal: exceptional doctrine push after completed .h0 commit; observe exact-head CI jobs/steps.
+  Acceptance: clean Git/empty brief, full local gates, push current project branch; observe job-level
+  terminal verdicts without inferred success; newest committed catalog actual refusal and restore.
+  Verification/Commit: `pending`; P0 D140 .5f.3a follows without a product pivot.
 
 - ID: `G1-SLICE.5b.3c.2b.2`
   Status: `pending`

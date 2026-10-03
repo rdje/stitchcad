@@ -353,6 +353,27 @@ No reader, checker, logical address, decoded record or limit changes. At exact p
 CI jobs and every reported step completed successfully. G1-SLICE.5b.1b.0v records their receipts
 and independent newest committed-catalog refusal.
 
+**Correction — D141.** Window3's retained catalog has a historical heading saying “window 2”.
+Its filename, source revision, manifest, payload and member headings identify window3. The sealed
+catalog remains unchanged; use its manifest identity when reviewing that window. Watched controls
+check current catalog labels and require this correction for the immutable legacy heading.
+
+The fourth transition captures60 raw sealed records from2bdcd31 before geometry/static-checker
+records exceed the unchanged64-file working bound. A fresh isolated fixture reconstructs all249
+logical records exactly, including the previous three windows, using published read/materialize
+commands and independent Git source bytes. Repeated Git archive/gzip output is identical. The
+installed reader proves all60 originals before the exact working copies retire; all60 maintained
+links move to window4 member headings. Retained source bytes, logical identities, schemas and limits
+remain unchanged. Repeat its independent source comparison with:
+
+```bash
+bash scripts/history_archive.sh prove-source window4
+bash scripts/history_archive.sh read docs/history/stitchcad-defects-part58.md
+```
+
+G1-SLICE.5b.3c.2b.h1 owns exceptional CI observation and the newest committed-catalog refusal.
+Local capture/identity evidence does not substitute for that runner result or product approval.
+
 The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
 labels are display text: short or mistaken labels do not change the retained identity. Filename text
 in prose, code or comments cannot establish coverage, and a valid link cannot mask an extra broken

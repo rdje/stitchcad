@@ -233,7 +233,7 @@ Retained-window CLI controls: `python3 -I -B docs/tasks/artifacts/history_archiv
 checks every listed/read/materialized logical record and newest-window digest/member/catalog
 refusals plus cross-window collision. The archive probe runner watches it; no source Git is needed
 for retrieval. Newest committed catalog edits are refused after the recording commit. Capture tool
-`capture_window2.py` in that directory prepares/proves its fixed372033f snapshot in target/ only.
+`capture_window4.py` freezes2bdcd31 in target/ only; labels are independently checked, including D141.
 
 Ledger target controls: `python3 -I -B docs/tasks/artifacts/changelog/ledger_pointer_contract.py`
 checks13 actual POINTER verdicts; the ledger runner watches them.

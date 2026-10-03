@@ -830,7 +830,9 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.3a.1` | `done` | D134/D135 guidance/review repair |
 | done | `G1-SLICE.5b.3b` | `done` | Closed built-in/selector signatures |
 | done | `G1-SLICE.5b.3c.2b.1` | `done` | D138 expression dimension payloads |
-| current | `G1-SLICE.5f.3a` | `pending` | P0 D140 coordinate-kind reference repair |
+| done | `G1-SLICE.5b.3c.2b.h0` | `done` | Fourth exact retained window |
+| current | `G1-SLICE.5b.3c.2b.h1` | `pending` | Full-suite/exceptional CI observation |
+| next | `G1-SLICE.5f.3a` | `pending` | P0 D140 coordinate-kind reference repair |
 | next | `G1-SLICE.5b.3c.2b.2` | `pending` | Bounded expression checker |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
@@ -931,26 +933,10 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
 
 [Exact completed assertion checklist](G1-SLICE-measurements.md#completed-assertion-checklist--preserved-from-dab0ee4) retained.
 
-## Verification Log
+## Verification and commit logs
 
-[Full milestone protocol and receipts](G1-SLICE-recipes.md#full-syntax-milestone-protocol).
-D111 source-status contradiction fixed and verified; original report retained in defects-part41.
-D34's six-sibling example corrected to actual ten; mechanical derivation stays PLANNING.5.
-No product evaluator, geometry, storage, browser, MCP or independent production approval claimed.
-
-| `2026-10-02` | `G1-SLICE.5b.1a` | actual static matrix/faults; reference/language/publication |4032 cases/12 reds,16 language/9 publication green; namespace review .1b next |
-
-| `2026-10-02` | `G1-SLICE.5b.1b.0` | capture/install/source/residue; full local checks |62 exact originals,191 retained records with two new seals; exclusive archive28/CLI199; CI .0v pending |
-
-## Commit Log
-
-| Leaf | Commit subject | Verification |
-| --- | --- | --- |
-| `.5a.4` | `STITCHCAD-G1-0072 (leaf G1-SLICE.5a.4): close syntax milestone and own evaluator stages` | native591/WASM3/probes25/coupled7 actual reds |
-
-| `G1-SLICE.5b.1a` | `STITCHCAD-G1-0073` | D112/D113 static reference signatures fixed; product validator pending |
-
-| `G1-SLICE.5b.1b.0` | `STITCHCAD-G1-0074` | third exact retained window; observed CI .0v next |
+[Exact earlier receipts](G1-SLICE-names.md#earlier-root-receipts--preserved-from2bdcd31) retained.
+Current retention receipts live in the .h0 owning recipe node/names checklist.
 
 ## Changelog
 

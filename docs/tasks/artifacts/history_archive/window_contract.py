@@ -25,6 +25,17 @@ def success(result):
     return result.stdout
 
 
+def catalog_title(root, manifest):
+    title = (root / manifest['catalog']).read_text().splitlines()[0]
+    # Window3's historical typo is immutable; the live guide supersedes its label.
+    number = manifest['id'].removeprefix('window')
+    if manifest['id'] == 'window3':
+        assert "Window3's retained catalog has a historical heading" in (
+            ROOT / 'docs/book/src/governance.md').read_text(), 'legacy catalog correction missing'
+        number = '2'
+    assert title == '# Retained history — window ' + number, 'catalog title identity mismatch'
+
+
 def fixture():
     root = WORK / 'fixture'
     if root.exists():
@@ -53,6 +64,9 @@ WORK.mkdir(parents=True)
 try:
     manifest_paths = json.loads((ROOT / MASTER).read_text())['windows']
     manifests = [json.loads((ROOT / path).read_text()) for path in manifest_paths]
+    for manifest in manifests:
+        catalog_title(ROOT, manifest)
+        checks += 1
     declared = {row['path']: row for manifest in manifests for row in manifest['members']}
     catalog_paths = {manifest['catalog'] for manifest in manifests}
     raw = {path.relative_to(ROOT).as_posix(): path.read_bytes()
@@ -86,6 +100,22 @@ try:
     assert not any((root / row['path']).exists() for row in newest['members'])
     success(command(root, 'verify'))
     checks += 1
+
+    # Independently compare the actual human label; inventory intentionally ignores prose.
+    root = fixture()
+    catalog = root / newest['catalog']
+    lines = catalog.read_text().splitlines(keepends=True)
+    lines[0] = '# Retained history — window 0\n'
+    catalog.write_text(''.join(lines))
+    success(command(root, 'verify'))
+    try:
+        catalog_title(root, newest)
+    except AssertionError as error:
+        assert str(error) == 'catalog title identity mismatch', error
+    else:
+        raise AssertionError('misleading newest title passed the independent label control')
+    checks += 1
+    print('  window label control: misleading newest title refused; inventory unchanged')
 
     def corrupt_payload(root):
         payload = root / newest['payload']

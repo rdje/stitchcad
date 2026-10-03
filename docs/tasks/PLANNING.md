@@ -844,7 +844,7 @@ producer bytes unchanged. Product validation/whole static preflight remain owned
 reference namespace/preflight review .5b.1b follows. Report bodies are retained; draft heading markers were normalized to the canonical defect entry
 marker before final sealing, so the standing defect census counts both new records.
 
-D114/D115 are sealed in [`stitchcad-defects-part43.md`](../history/stitchcad-defects-part43.md).
+D114/D115 are sealed in [`stitchcad-defects-part43.md`](../history/window4.md#stitchcad-defects-part43md).
 SPINE.23 repairs the project's canonical handoff path with check_handoff.sh/handoff_census.py;
 neutral inherited checker bytes are preserved and its upstream deficiency is retained in the reports,
 not claimed repaired. Failed/empty/incomplete evidence refuses; explicit no-pending-CUA attestation
@@ -853,87 +853,87 @@ compiled guard faults pass. Actual restricted invocation refuses2; OS-visible he
 blocks1, controlled child finishes0, restored census green0. No shared tool service is stopped.
 
 D121 closes at G1-SLICE.5e.3b; original report retained in
-[`stitchcad-defects-part50.md`](../history/stitchcad-defects-part50.md). Director's formula_domain
+[`stitchcad-defects-part50.md`](../history/window4.md#stitchcad-defects-part50md). Director's formula_domain
 ruling, executed-call provenance through binding/reads/operators and precise lazy geometry/cache
 are verified by425 independent controls/26 actual body assertion reds and actual copied-book refusal.
 Product numerical/provenance/geometry execution remains .5c–.5g; reference scope is explicit.
 
 D116/D117/D118/D120 close at G1-SLICE.5b.1b.1; original reports are sealed in
-[`stitchcad-defects-part44.md`](../history/stitchcad-defects-part44.md). Actual namespace/header
+[`stitchcad-defects-part44.md`](../history/window4.md#stitchcad-defects-part44md). Actual namespace/header
 controls1139/13 guard assertion reds and full reference/language checks pass. The reference now
 separates syntax, static statements and numerical execution; reserved/input/recipe collisions and
 assertion class/arithmetic kinds refuse before execution. Whole preflight D119 closes at .1b.2;
 D121/D122 reference repairs are verified at .5e.3b/.5e.1a. Product validation/typed payloads remain .5b.2–.4.
 
 D119/D123 close at G1-SLICE.5b.1b.2; original reports retained in
-[`stitchcad-defects-part45.md`](../history/stitchcad-defects-part45.md). Whole preflight196 cases/
+[`stitchcad-defects-part45.md`](../history/window4.md#stitchcad-defects-part45md). Whole preflight196 cases/
 14 actual assertion reds and consumer/measurement controls pass. No statement executes after a
 late static refusal; recipe size excludes unrelated candidates. D121/D122 reference repairs are verified.
 
 D124 closes at G1-SLICE.5b.1c.2 under the director's2026-10-03 current-grammar ruling.
-Original report retained in [`stitchcad-defects-part51.md`](../history/stitchcad-defects-part51.md).
+Original report retained in [`stitchcad-defects-part51.md`](../history/window4.md#stitchcad-defects-part51md).
 Contract/exclusion/keyword clauses agree with actual100 metadata-only cases/seven actual guard reds/
 three loaded-doc reds; existing language/reference/book controls verified. Product validator pending.
 
 D125 closes at G1-SLICE.5e.3a; original report retained in
-[`stitchcad-defects-part47.md`](../history/stitchcad-defects-part47.md). False runtime assertions
+[`stitchcad-defects-part47.md`](../history/window4.md#stitchcad-defects-part47md). False runtime assertions
 raise formula_assertion with exact values/kinds, name and class;262 cases/eight actual assertion
 reds and copied-book refusal verify the repair. D121/D122 reference repairs are verified; product execution remains pending.
 
 D126 closes at G1-SLICE.5b.1c.1; original report retained in
-[`stitchcad-defects-part46.md`](../history/stitchcad-defects-part46.md). Geometry selector prose now
+[`stitchcad-defects-part46.md`](../history/window4.md#stitchcad-defects-part46md). Geometry selector prose now
 uses actual curve length for parameter error; independent exact chord bound defeats the old bbox
 claim. Product combined parameter/geometry budget remains explicitly owned at .5f.3/G2.
 
 D122/D127 close at G1-SLICE.5e.1a; original reports retained in
-[`stitchcad-defects-part48.md`](../history/stitchcad-defects-part48.md). Origin/context reads retain
+[`stitchcad-defects-part48.md`](../history/window4.md#stitchcad-defects-part48md). Origin/context reads retain
 correct tokens/arguments, optional values are readable, malformed metadata refuses by name.
 1466 independent controls/thirteen actual body assertion reds/two actual copied-book refusals pass0.
 D121 reference provenance closes at .5e.3b; product adapters/typed diagnostic context remain pending.
 
 D128 closes at G1-SLICE.5e.1a; original report retained in
-[`stitchcad-defects-part49.md`](../history/stitchcad-defects-part49.md). Explicit populated states
+[`stitchcad-defects-part49.md`](../history/window4.md#stitchcad-defects-part49md). Explicit populated states
 are checked; unknown-plus-value and invalid states refuse, unknown lazy geometry cannot resolve.
 Final1466 controls/thirteen actual body reds verify state guards and prior origin/context repairs.
 
 D129 closes at G1-SLICE.5b.2a: stale public orientation now reports completed reference review
 and the precise new product metadata boundary. Original scoped report retained in
-[`stitchcad-defects-part52.md`](../history/stitchcad-defects-part52.md); publication/loaded-table
+[`stitchcad-defects-part52.md`](../history/window4.md#stitchcad-defects-part52md); publication/loaded-table
 controls verify registered APIs and canonical metadata, with product namespace/evaluation pending.
 
 D130 closes at G1-SLICE.5b.2b before the draft builder is committed. General scalar metadata
 uses only Parameter/Profile/Material; Measurement/Ease require canonical length borrowing through
-separate types. Original report retained in [`stitchcad-defects-part53.md`](../history/stitchcad-defects-part53.md).
+separate types. Original report retained in [`stitchcad-defects-part53.md`](../history/window4.md#stitchcad-defects-part53md).
 The negative construction contract and actual widened API counterfactual verify this boundary.
 
 D131 closes at G1-SLICE.5b.2c.1b under the director's delegated engineering decision. Reserved
 rebinding retains the token with truthful metadata/attempted sources; whole repeated lets retain
 both actual indices and global whole/name spans. Original report retained in
-[`stitchcad-defects-part54.md`](../history/stitchcad-defects-part54.md). Independent3624 argument
+[`stitchcad-defects-part54.md`](../history/window4.md#stitchcad-defects-part54md). Independent3624 argument
 cases/19 actual compiled assertion reds and existing reference/book controls verify the repair.
 Canonical product namespace/localization/registry proof remain separately owned.
 
 D132/D133 close at G1-SLICE.5b.2c.2; original reports retained in
-[`stitchcad-defects-part55.md`](../history/stitchcad-defects-part55.md). Code markup preserves the
+[`stitchcad-defects-part55.md`](../history/window4.md#stitchcad-defects-part55md). Code markup preserves the
 complete generic in actual HTML; publication producer captures/refuses actual builder warnings.
 Ten publication controls include an actual copied-book unclosed generic and warning-free repair,
 with the exact rendered generic asserted, rc=0. Existing eight topology/status refusals remain.
 
 
 D134/D135 close at G1-SLICE.5b.3a.1; original reports retained in
-[`stitchcad-defects-part56.md`](../history/stitchcad-defects-part56.md). Multiplication alone gets
+[`stitchcad-defects-part56.md`](../history/window4.md#stitchcad-defects-part56md). Multiplication alone gets
 arc_length advice, independently checked for presence/absence over all operators/kinds with actual
 quotient-regression/missing-product assertion faults. Touched review status names completed product
 metadata accurately; full accepted expression/graph/evaluation remains separately owned.
 
 D136/D137 close at G1-SLICE.5b.3c.2a; original reports retained in
-[`stitchcad-defects-part57.md`](../history/stitchcad-defects-part57.md). Exact callee/source/alternative
+[`stitchcad-defects-part57.md`](../history/window4.md#stitchcad-defects-part57md). Exact callee/source/alternative
 payloads and callee-before-argument priority verified by166 reference cases/12 actual compiled reds;
 product lookup/private source-bearing errors verified by five contracts/18 compiled faults, rc=0.
 D138 dimension payload repair remains the next product-blocking owner below.
 
 D138 closes at G1-SLICE.5b.3c.2b.1; original report retained in
-[`stitchcad-defects-part58.md`](../history/stitchcad-defects-part58.md). Expression payloads verified
+[`stitchcad-defects-part58.md`](../history/window4.md#stitchcad-defects-part58md). Expression payloads verified
 by4023 actual cases/3814 complete refusals/15 compiled body reds, rc=0. Actual/wanted kinds, class
 roles and documented child-first selection retained; header/geometry scope remains D139/D140 below.
 
@@ -954,3 +954,7 @@ roles and documented child-first selection retained; header/geometry scope remai
   D138's dimension constructor slice and before product expression checker .5b.3c.2b.2. Require all
   coordinate/edge Length checks before numeric work, exact actual/wanted payloads and original
   provenance, actual compiled counterfactuals and no accepted prefix/cache mutation on refusal.
+
+D141 closes at G1-SLICE.5b.3c.2b.h0: immutable window3 heading superseded in the live upkeep
+book; current labels/correction independently watched. Original report retained in
+[`stitchcad-defects-part59.md`](../history/stitchcad-defects-part59.md); byte identities unaffected.

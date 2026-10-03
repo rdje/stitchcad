@@ -138,21 +138,31 @@ the digests afterwards.
 
 | [`changelog-part69.md`](docs/history/window3.md#stitchcad-changelog-part69md) | STITCHCAD-G1-0055 | 10 lines, 776 bytes, `sha256:e3db9c94…` |
 
-| [`stitchcad-changelog-part70.md`](docs/history/stitchcad-changelog-part70.md) | STITCHCAD-G1-0056 | 12 lines, 951 bytes, `sha256:30ca94ac…` |
+| [`stitchcad-changelog-part70.md`](docs/history/window4.md#stitchcad-changelog-part70md) | STITCHCAD-G1-0056 | 12 lines, 951 bytes, `sha256:30ca94ac…` |
 
-| [`changelog-part71.md`](docs/history/stitchcad-changelog-part71.md) | STITCHCAD-G1-0057 | 11 lines, 887 bytes, `sha256:e144c5ec…` |
+| [`changelog-part71.md`](docs/history/window4.md#stitchcad-changelog-part71md) | STITCHCAD-G1-0057 | 11 lines, 887 bytes, `sha256:e144c5ec…` |
 
-| [`changelog-part72.md`](docs/history/stitchcad-changelog-part72.md) | STITCHCAD-G1-0058 | 12 lines, 970 bytes, `sha256:ef59b0a1…` |
+| [`changelog-part72.md`](docs/history/window4.md#stitchcad-changelog-part72md) | STITCHCAD-G1-0058 | 12 lines, 970 bytes, `sha256:ef59b0a1…` |
 
-| [`changelog-part73.md`](docs/history/stitchcad-changelog-part73.md) | STITCHCAD-G1-0059 | 13 lines, 1095 bytes, `sha256:eea1fea0…` |
+| [`changelog-part73.md`](docs/history/window4.md#stitchcad-changelog-part73md) | STITCHCAD-G1-0059 | 13 lines, 1095 bytes, `sha256:eea1fea0…` |
 
-| [`changelog-part74.md`](docs/history/stitchcad-changelog-part74.md) | STITCHCAD-G1-0060 | 13 lines, 1090 bytes, `sha256:ab4422c6…` |
+| [`changelog-part74.md`](docs/history/window4.md#stitchcad-changelog-part74md) | STITCHCAD-G1-0060 | 13 lines, 1090 bytes, `sha256:ab4422c6…` |
 
-| [`changelog-part75.md`](docs/history/stitchcad-changelog-part75.md) | STITCHCAD-G1-0061 | 13 lines, 1091 bytes, `sha256:c4bbd66c…` |
+| [`changelog-part75.md`](docs/history/window4.md#stitchcad-changelog-part75md) | STITCHCAD-G1-0061 | 13 lines, 1091 bytes, `sha256:c4bbd66c…` |
 
-| [`changelog-part76.md`](docs/history/stitchcad-changelog-part76.md) | STITCHCAD-G1-0062 | 13 lines, 1068 bytes, `sha256:a0da7975…` |
+| [`changelog-part76.md`](docs/history/window4.md#stitchcad-changelog-part76md) | STITCHCAD-G1-0062 | 13 lines, 1068 bytes, `sha256:a0da7975…` |
 
-| [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
+| [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
+
+## STITCHCAD-G1-0096 - fourth exact retained window (leaf `G1-SLICE.5b.3c.2b.h0`)
+
+Window4 retains60 whole source files from2bdcd31;249 logical records independently reconstruct
+exactly through read/materialize/Git, with deterministic payload and60 redirected links. Working
+history drops63→4 before new seals; existing windows/reader/schemas/limits unchanged. D141 legacy
+window3 heading is superseded in the live book and independent label controls; no archive rewrite.
+Full local checks/27 probe suites/gate pass0; publication/ledger receipts are in the leaf.
+Exceptional push/observed CI .h1 follows; no remote verdict claimed.
+G1 stays5/18; exact oldest ledger/lesson/original D141 report retained, product D140 repair next.
 
 ## STITCHCAD-G1-0095 - complete expression dimension arguments (leaf `G1-SLICE.5b.3c.2b.1`)
 
@@ -354,45 +364,36 @@ D126 bbox-to-edge-length tolerance claim corrected: radius5m/270deg arc fits10m 
 11.78um half-quantum chord error; exact independent lower bound exceeds10um. Actual budgets .5f.3/G2.
 Book/grammar/index/live/task/ADR agree; G1 stays5/18, defects14open/111sealed, exact old records retained.
 
-## STITCHCAD-G1-0077 - whole reference static preflight (leaf `G1-SLICE.5b.1b.2`)
-
-Original recipe source is statically checked in order before any statement executes; names publish
-only kind/origin metadata, and late errors return no accepted prefix or caller mutation. The worked
-book's17 lets/four assertions preflight together before replay. D119 closes; product validator pending.
-D123's old34 count wrongly included13 unrelated refusals. Actual recipe size21 passes a copied25
-ceiling; the canonical4096 ceiling stays fixed.196 independent cases/14 actual body assertion reds,
-consumer3 and measurement control pass; full reference/signature/namespace/language16/publication9
-green. Progressive book/annex/index/live/task records agree; Rust source/tests unchanged.
-G1 stays5/18; defects12open/110sealed. Full static review .1c next; D121/D122 keep runtime owners.
-Exact oldest G1-0060 ledger/four lesson records and original defect reports retained in bounded history.
 
 
-| [`stitchcad-changelog-part78.md`](docs/history/stitchcad-changelog-part78.md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
+| [`stitchcad-changelog-part78.md`](docs/history/window4.md#stitchcad-changelog-part78md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
 
-| [`stitchcad-changelog-part79.md`](docs/history/stitchcad-changelog-part79.md) | STITCHCAD-G1-0065 | 14 lines, 1183 bytes, `sha256:aa1df64f…` |
+| [`stitchcad-changelog-part79.md`](docs/history/window4.md#stitchcad-changelog-part79md) | STITCHCAD-G1-0065 | 14 lines, 1183 bytes, `sha256:aa1df64f…` |
 
-| [`stitchcad-changelog-part80.md`](docs/history/stitchcad-changelog-part80.md) | G1-0066 ordered recipe syntax | 15 lines, 1243 bytes, `sha256:ffd1e428…` |
+| [`stitchcad-changelog-part80.md`](docs/history/window4.md#stitchcad-changelog-part80md) | G1-0066 ordered recipe syntax | 15 lines, 1243 bytes, `sha256:ffd1e428…` |
 
-| [`stitchcad-changelog-part81.md`](docs/history/stitchcad-changelog-part81.md) | STITCHCAD-G1-0067 | 11 lines, 974 bytes, `sha256:aad9b836…` |
+| [`stitchcad-changelog-part81.md`](docs/history/window4.md#stitchcad-changelog-part81md) | STITCHCAD-G1-0067 | 11 lines, 974 bytes, `sha256:aad9b836…` |
 
-| [`stitchcad-changelog-part82.md`](docs/history/stitchcad-changelog-part82.md) | STITCHCAD-G1-0068 | 12 lines, 1035 bytes, `sha256:451e0450…` |
+| [`stitchcad-changelog-part82.md`](docs/history/window4.md#stitchcad-changelog-part82md) | STITCHCAD-G1-0068 | 12 lines, 1035 bytes, `sha256:451e0450…` |
 
-| [`stitchcad-changelog-part83.md`](docs/history/stitchcad-changelog-part83.md) | STITCHCAD-G1-0069 | 12 lines, 1076 bytes, `sha256:61590cec…` |
+| [`stitchcad-changelog-part83.md`](docs/history/window4.md#stitchcad-changelog-part83md) | STITCHCAD-G1-0069 | 12 lines, 1076 bytes, `sha256:61590cec…` |
 
-| [`stitchcad-changelog-part84.md`](docs/history/stitchcad-changelog-part84.md) | STITCHCAD-G1-0070 | 13 lines, 1176 bytes, `sha256:ce5bfa8a…` |
+| [`stitchcad-changelog-part84.md`](docs/history/window4.md#stitchcad-changelog-part84md) | STITCHCAD-G1-0070 | 13 lines, 1176 bytes, `sha256:ce5bfa8a…` |
 
-| [`stitchcad-changelog-part85.md`](docs/history/stitchcad-changelog-part85.md) | STITCHCAD-G1-0071 | 14 lines, 1261 bytes, `sha256:a370b662…` |
+| [`stitchcad-changelog-part85.md`](docs/history/window4.md#stitchcad-changelog-part85md) | STITCHCAD-G1-0071 | 14 lines, 1261 bytes, `sha256:a370b662…` |
 
-| [`stitchcad-changelog-part86.md`](docs/history/stitchcad-changelog-part86.md) | STITCHCAD-G1-0072 | 9 lines, 795 bytes, `sha256:480c7c1b…` |
+| [`stitchcad-changelog-part86.md`](docs/history/window4.md#stitchcad-changelog-part86md) | STITCHCAD-G1-0072 | 9 lines, 795 bytes, `sha256:480c7c1b…` |
 
-| [`stitchcad-changelog-part87.md`](docs/history/stitchcad-changelog-part87.md) | STITCHCAD-SPINE-0021b | 9 lines, 773 bytes, `sha256:df9a2d7c…` |
+| [`stitchcad-changelog-part87.md`](docs/history/window4.md#stitchcad-changelog-part87md) | STITCHCAD-SPINE-0021b | 9 lines, 773 bytes, `sha256:df9a2d7c…` |
 
-| [`stitchcad-changelog-part88.md`](docs/history/stitchcad-changelog-part88.md) | STITCHCAD-G1-0073 | 10 lines, 878 bytes, `sha256:32b87b67…` |
+| [`stitchcad-changelog-part88.md`](docs/history/window4.md#stitchcad-changelog-part88md) | STITCHCAD-G1-0073 | 10 lines, 878 bytes, `sha256:32b87b67…` |
 
-| [`stitchcad-changelog-part89.md`](docs/history/stitchcad-changelog-part89.md) | STITCHCAD-G1-0075/0074 | 16 lines, 1250 bytes, `sha256:2d8487c5…` |
+| [`stitchcad-changelog-part89.md`](docs/history/window4.md#stitchcad-changelog-part89md) | STITCHCAD-G1-0075/0074 | 16 lines, 1250 bytes, `sha256:2d8487c5…` |
 
-| [`stitchcad-changelog-part90.md`](docs/history/stitchcad-changelog-part90.md) | STITCHCAD-SPINE-0023 | 8 lines, 648 bytes, `sha256:fa18d0d1…` |
+| [`stitchcad-changelog-part90.md`](docs/history/window4.md#stitchcad-changelog-part90md) | STITCHCAD-SPINE-0023 | 8 lines, 648 bytes, `sha256:fa18d0d1…` |
 
-| [`stitchcad-changelog-part91.md`](docs/history/stitchcad-changelog-part91.md) | STITCHCAD-SPINE-0023v | 5 lines, 339 bytes, `sha256:fad82add…` |
+| [`stitchcad-changelog-part91.md`](docs/history/window4.md#stitchcad-changelog-part91md) | STITCHCAD-SPINE-0023v | 5 lines, 339 bytes, `sha256:fad82add…` |
 
-| [`stitchcad-changelog-part92.md`](docs/history/stitchcad-changelog-part92.md) | STITCHCAD-G1-0076 | 8 lines, 648 bytes, `sha256:9138f15a…` |
+| [`stitchcad-changelog-part92.md`](docs/history/window4.md#stitchcad-changelog-part92md) | STITCHCAD-G1-0076 | 8 lines, 648 bytes, `sha256:9138f15a…` |
+
+| [`stitchcad-changelog-part93.md`](docs/history/stitchcad-changelog-part93.md) | STITCHCAD-G1-0077 | 11 lines, 976 bytes, `sha256:556627ca…` |

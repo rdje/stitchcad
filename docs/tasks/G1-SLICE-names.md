@@ -758,3 +758,97 @@ anchor, compiler failure or wrong exception was accepted as evidence. No backgro
 Retention249 logical records/63 working Markdown/10834 decoded lines/813906 decoded bytes/
 402420 resident bytes, rc=0. The next archived payload would consume the last working-file slot;
 before a multi-record next leaf, own a blocking history rollover under unchanged64-file bound.
+
+## Completed dimension protocol — preserved from2bdcd31
+
+Original recipe block: 30 lines/2595B/SHA256 79180e70888d5bb6139f13d840dadf619317328abf694d3ee80761ff70505d24.
+
+- ID: `G1-SLICE.5b.3c.2b.1`
+  Status: `done`
+  Goal: D138 required operation/all operand kinds/wanted rules in actual reference refusals.
+  Acceptance: typed closed wanted catalogs, complete actual kinds only when resolved; no fabricated
+  kinds for unbound operands. Preserve named call precedence and document deterministic selection
+  for multiply invalid expressions before changing it. Actual payload/fault controls and commit.
+  Work unit: `STITCHCAD-G1-0095`; predecessor7edc635 clean/0-byte untracked brief/no jobs.
+  Pre-code contract2/5.2, grammar5–7, wanted/operator/builtin catalogs, actual infer/if/within and
+  signature/namespace/review/call payload producers reviewed. Scoped repair: expression dimension
+  diagnostics; header refusals separately D139/.3a, geometry D140/.5f.3a P0 immediately after this.
+  Document diagnostic selection first: syntax/input phases first, call callee before operands;
+  resolve expression children left-to-right (if condition/then/else, all call operands) before a
+  dimension refusal. An unresolved child's named error wins because no actual kind can be invented.
+  Keep all resolved operands/kinds, symbolic third-role presence and full alternative wanted rules.
+  Schema documented first at contract5.2.3: operation/operand_kinds/operand_tolerances and
+  wanted_signatures with ordered operands/variadic/result. Exact alias T/N/role meanings retained.
+  Reference wanted rows come from actual loaded call/operator tables, preserving shared T/N,
+  exact kinds, variadic arity/result semantics. Use one dimension-error constructor for true
+  expression operators/special forms/calls; retain the multiplication-only arc_length advice.
+  Do not touch the grammar/closed token set or fabricate source spans, canonical/recipe indices.
+  Independent complete operator/call/kind/class/conditional/variadic payload matrices, late invalid
+  children and simultaneous error selection must use unreadable value/execution metadata. Every
+  actual changed fault anchor must still compile and fail body assertions, not token/name noise.
+  Focused product signature tests, full reference/language/book/ledger/coverage/retention/gate;
+  exact prior/oldest records retained before growth, no caps raised; per-leaf commit before P0 D140.
+  Verification:4023 cases/3814 full refusals/15 actual compiled reds; old4032/14 and call166/12
+  controls, focused15 product tests and full reference/language16/book10/ledger/gates pass, rc=0.
+  [Checklist/receipts](G1-SLICE-names.md#dimension-payload-checklist--5b3c2b1); decision_dim.md.
+  Commit: `STITCHCAD-G1-0095`.
+
+
+## Earlier root receipts — preserved from2bdcd31
+
+Original root block: 21 lines/1217B/SHA256 995c28441801e61d18281d53b5a53d33b7331a88ede9d23ec3d215fce5b8a72d.
+
+## Verification Log
+
+[Full milestone protocol and receipts](G1-SLICE-recipes.md#full-syntax-milestone-protocol).
+D111 source-status contradiction fixed and verified; original report retained in defects-part41.
+D34's six-sibling example corrected to actual ten; mechanical derivation stays PLANNING.5.
+No product evaluator, geometry, storage, browser, MCP or independent production approval claimed.
+
+| `2026-10-02` | `G1-SLICE.5b.1a` | actual static matrix/faults; reference/language/publication |4032 cases/12 reds,16 language/9 publication green; namespace review .1b next |
+
+| `2026-10-02` | `G1-SLICE.5b.1b.0` | capture/install/source/residue; full local checks |62 exact originals,191 retained records with two new seals; exclusive archive28/CLI199; CI .0v pending |
+
+## Commit Log
+
+| Leaf | Commit subject | Verification |
+| --- | --- | --- |
+| `.5a.4` | `STITCHCAD-G1-0072 (leaf G1-SLICE.5a.4): close syntax milestone and own evaluator stages` | native591/WASM3/probes25/coupled7 actual reds |
+
+| `G1-SLICE.5b.1a` | `STITCHCAD-G1-0073` | D112/D113 static reference signatures fixed; product validator pending |
+
+| `G1-SLICE.5b.1b.0` | `STITCHCAD-G1-0074` | third exact retained window; observed CI .0v next |
+
+
+## Fourth retained window checklist
+
+### G1-SLICE.5b.3c.2b.h0
+
+- [x] **REPRODUCE / ISSUE** — verify-retention on clean2bdcd31:249 logical records/63 working
+  Markdown/813906 decodedB/402420 residentB, rc=0; unchanged64-file cap blocks normal multi-seal
+  geometry/checker leaves. D141 actual window3 header says2 while its manifest/template identify3.
+- [x] **ROOT CAUSE (WHY + WHERE)** — capture_window4.py derives60 raw Git paths plus three
+  catalogs; fixture proves1482 full-file lines/103283B, deterministic32451B gzip/163840B tar,
+  SHA25625c5e052d4b499d227ccfbcc85dbb85bb4ce38ba449c2e6beac9a33d651e8fcc, rc=0.
+  D141 came from copied literal window2 title in capture_window3.py; hashes/membership are correct.
+- [x] **FIX** — own .h0 before capture; isolated copy/prove/read/materialize all249 logical files,
+  install verified window4, delete exactly60 manifest-listed raw copies, redirect60 link destinations.
+  Preserve older packed windows, reader, schema/caps; supersede legacy title in live governance
+  guide and independently check actual labels, including a wrong-title fixture that inventory admits.
+- [x] **ADDRESSED (verified)** — installed prove-source window4:60 byte-identical full files/0
+  missing-extra, rc=0. Fresh installed materialization independently matches all249 prior Git sources;
+  archive suite28 and pre-seal CLI262 controls/249 reads pass0. First run refused missing live
+  correction after an edit-anchor mismatch; corrected insertion and rerun pass. No guard relaxed.
+- [x] **NO REGRESSION** — make check→663 tests/56groups; make wasm→3 real libraries;
+  run_book_publication_probes.sh→10 green/60chapters/51API/1194source/1875rendered links;
+  run_changelog_ledger_probes.sh→9 green/pointer13; run_tree_coverage_census.sh→10lanes/13trees/
+  11siblings/0gaps; full make probes→27 suites green; make gate→13 doctrines green,
+  each terminal rc=0. .h1 owns exceptional push/observed CI; no remote success claimed.
+- [x] **LOCKSTEP / RETENTION** — prior complete .1 protocol and root logs retained exactly from2bdcd31 in this sibling (their actual receipts above are authoritative).
+  Oldest whole G1-0077 ledger11lines976B SHA556627caf4f6563c4fa9f3431873feb30dab29c622e972a9d40e95ccf72be9bd,
+  prior G1-0095 lesson5lines338B SHAa1cf2132381043a2b5fbb2ece1249f580d1b776ffc1b299a9853bc61915366f0,
+  original D141 report6lines561B SHA94481bc16d3c01c3e02918c65fe1e5a2fc11c8948328d9c5d6d9f6064cb841be
+  sealed. Actual fresh census12open/128sealed/no duplicate or overlap, rc=0; G1 stays5/18.
+  Staged retention/size checks pass0; final fresh-evidence gate/hook recorded at commit.
+  Commit .h0 before .h1 full-suite observation/exceptional push/observed CI; D140 next.
+  Promotion: declined (existing exact-retention/immutable-record principles).
