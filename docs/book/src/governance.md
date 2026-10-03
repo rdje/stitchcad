@@ -425,3 +425,32 @@ A fresh captured census was complete with no blocking process; the canonical ret
 The first failed record was not retained, so its exact cause remains unconfirmed. SPINE.23r owns
 bounded failed-record capture and reproduction on recurrence. A later complete observation proves
 its own snapshot; it does not explain or retroactively validate the earlier refused evidence.
+
+### Checkout-local CI stores
+
+The Rust workflow prepares local stores after checkout and before installation through the documented Rustup CLI.
+`scripts/ci_environment.py prepare` derives each absolute runtime value from the current repository
+root and exports it through GitHub's supplied environment command file. Installation uses the existing host launcher with --no-self-update and selects the stable channel.
+After toolchain setup, the verification command requires the effective values and every directory component to remain on the checkout
+volume, rejecting missing directories, symlinks, non-directory components or another Git boundary.
+The stable channel, strict fmt/Clippy/native tests and real WASM compilation remain the build gates.
+
+| Variable | Repository-relative destination |
+| --- | --- |
+| CARGO_HOME | target/cargo-home |
+| RUSTUP_HOME | target/cargo-home/rustup-ci |
+| CARGO_TARGET_DIR | target |
+| TMPDIR | target/scratch |
+
+[Cargo](https://doc.rust-lang.org/cargo/guide/cargo-home.html) and
+[Rustup](https://rust-lang.github.io/rustup/environment-variables.html) publish these store overrides;
+installation uses the public stable/profile/component/target options. The existing host Rustup
+launcher is a required read-only platform executable. The one external write is GitHub's existing regular
+GITHUB_ENV command file under the declared runner temporary root, the required environment
+transport between steps; foreign Git metadata/boundaries and symlink destinations are refused.
+No project output or cache uses that protocol directory, and no shared host cache is deleted.
+
+The standing CI-environment probes exercise19 independent runtime cases, six actual compiled guard
+faults and workflow step order. The device-refusal case uses explicitly simulated metadata; it writes
+no file to another volume. Local directory identity is measured, and .h1.v must observe the actual
+runner's effective paths and job/step verdicts before D143 closes.

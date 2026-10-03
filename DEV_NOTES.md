@@ -4,12 +4,12 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
-## _(2026-10-03 UTC)_ — reproduce the runner's actual compiler
+## _(2026-10-03 UTC)_ — verify effective CI stores after setup
 
-- Local1.95/1.98 green did not establish CI1.99. A root-local exact1.99 toolchain reproduces
-  redundant must_use101; remove redundancy and strict663/56 passes0 without a lint waiver.
-- D142's remote proof remains .h1.v; D143 local CI stores is next. Grammar/API behavior preserved.
-- Promotion: declined (existing exact-head CI and locality policy).
+- Export checkout-local Cargo/Rustup/target/scratch paths; verify after installation.
+- Public Rustup --no-self-update keeps host launcher read-only. GitHub's command file is required
+  platform transport; stores remain local.19 controls/six compiled guard faults pass0.
+- Promotion: declined (existing locality/CI policy); actual runner proof remains .h1.v.
 
 # Sealed archive — earlier lessons
 
@@ -182,3 +182,7 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part95.md`](docs/history/stitchcad-devnotes-part95.md) | G1-0095 unresolved-kind | 5 lines, 338 bytes, `sha256:a1cf2132…` |
 
 | [`stitchcad-devnotes-part96.md`](docs/history/stitchcad-devnotes-part96.md) | G1-0096 catalog-label lesson | 6 lines, 423 bytes, `sha256:d93fba17…` |
+
+| [`devnotes-part98.md`](docs/history/stitchcad-devnotes-part98.md) | Complete G1 retention/CI protocols fromd24f1a9 | 86 lines, 6837 bytes, `sha256:741f466e…` |
+
+| [`stitchcad-devnotes-part97.md`](docs/history/stitchcad-devnotes-part97.md) | G1-0098 exact-compiler lesson | 6 lines, 417 bytes, `sha256:87269597…` |

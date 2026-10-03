@@ -4,7 +4,7 @@
      are generated automatically. -->
 
 - `crates/sc-units/src/lib.rs`;
-  `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
+  `crates/sc-units/tests/property.rs`, `docs/book/src/spec/units-and-tolerances.md`.
   `G0-CONTRACT.2` / `.18`.
 - `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs`;
   `G1-SLICE.3` / `.4` / `.5`.
@@ -22,3 +22,5 @@
   `scripts/check_live_doc_size.sh`. `SPINE.4`.
 - `docs/tasks/artifacts/`; `make probes`.
   `g0_exit/run_g0_exit_review.sh` `ROADMAP.md` §11; leaf owns probe.
+
+- CI: `.github/workflows/rust.yml`; `scripts/ci_environment.py`.

@@ -833,7 +833,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.3c.2b.h0` | `done` | Fourth exact retained window |
 | done | `G1-SLICE.5b.3c.2b.h1` | `done` | Exact CI verdicts; Rust failure tracked |
 | done | `G1-SLICE.5b.3c.2b.h1.r1` | `done` | Exact1.99 annotation repair; CI .v pending |
-| current | `G1-SLICE.5b.3c.2b.h1.r2` | `pending` | D143 local CI stores, then .v |
+| done | `G1-SLICE.5b.3c.2b.h1.r2` | `done` | D143 local CI stores verified locally |
+| current | `G1-SLICE.5b.3c.2b.h1.v` | `pending` | Observe repaired CI jobs/steps/store paths |
 | next | `G1-SLICE.5f.3a` | `pending` | P0 D140 coordinate-kind reference repair |
 | next | `G1-SLICE.5b.3c.2b.2` | `pending` | Bounded expression checker |
 

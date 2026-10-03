@@ -10,12 +10,16 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      RUSTUP_TOOLCHAIN: stable
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          components: rustfmt, clippy
-          targets: wasm32-unknown-unknown
+      - name: Prepare project-local build stores
+        run: python3 -I -B scripts/ci_environment.py prepare
+      - name: Install stable Rust
+        run: rustup toolchain install stable --profile minimal --component rustfmt --component clippy --target wasm32-unknown-unknown --no-self-update
+      - name: Verify project-local build stores
+        run: python3 -I -B scripts/ci_environment.py verify
       - name: Format
         run: cargo fmt --all -- --check
       - name: Clippy (deny warnings)

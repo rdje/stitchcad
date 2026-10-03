@@ -672,7 +672,6 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal: fourth exact retained window; verified `STITCHCAD-G1-0096`.
   [Exact protocol](G1-SLICE-names.md#completed-fourth-window-protocol--preserved-from9fab7ec) retained.
-
 - ID: `G1-SLICE.5b.3c.2b.h1`
   Status: `done`
   Goal: observe exact-head CI/newest committed refusal; `STITCHCAD-G1-0097`.
@@ -686,11 +685,12 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Verification:exact1.99 beforeClippy101/aftermakecheck663/56→0, WASM3/book10/ledger9+13→0.
   [Checklist](G1-SLICE-names.md#d142-acceptance-checklist). Commit: `STITCHCAD-G1-0098`.
 - ID: `G1-SLICE.5b.3c.2b.h1.r2`
-  Status: `pending`
+  Status: `done`
   Goal: D143 CI package/temp stores derived from checkout root rather than runner home defaults.
   Acceptance: documented action integration, repo-derived paths in Rust workflow, actual locality
   controls and no off-repo writes; full local gates before exceptional push; repaired CI .v.
-  Verification/Commit: `pending`.
+  Work unit `STITCHCAD-G1-0099`; [scope](G1-SLICE-names.md#d143-pre-code-protocol).
+  Verified:1.99 check663/56,WASM3,probes28/book10/ledger9+13→0; commit `STITCHCAD-G1-0099`.
 - ID: `G1-SLICE.5b.3c.2b.h1.v`
   Status: `pending`
   Goal: observe exact repaired-head CI jobs/steps before treating the milestone as verified.

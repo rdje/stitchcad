@@ -154,6 +154,16 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0099 - checkout-local CI stores (leaf `G1-SLICE.5b.3c.2b.h1.r2`)
+
+Rust CI prepares Cargo/Rustup/target/scratch stores from checkout root before public stable Rustup
+installation with --no-self-update, then verifies effective paths/components/devices before builds.
+19 runtime controls/six actual compiled guard reds/workflow order pass0; required GitHub environment
+transport is documented, with foreign Git/symlink refusals and no shared cache deletion.
+Full checks/probe/publication/ledger receipts recorded in leaf before exceptional push; D142/D143
+remain open until repaired-head CI .v. Complete prior task/ledger/lesson payloads retained; book/
+live/map/tool/task/resume agree; product grammar unchanged, G1 stays5/18,14open/128sealed.
+
 ## STITCHCAD-G1-0098 - exact Rust1.99 lint repair (leaf `G1-SLICE.5b.3c.2b.h1.r1`)
 
 Project-local Rust1.99 reproduces the actual CI double_must_use failure101. Remove only the
@@ -348,18 +358,6 @@ cause remains unconfirmed and P1 capture/reproduction is owned by SPINE.23r on r
 Current product frontier stays D121 .5e.3b; book/live/task/resume records agree. No source guard
 relaxed, no verified defect classification added; G1 remains5/18 and defects12open/115sealed.
 
-## STITCHCAD-G1-0080 - reference origin/context diagnostics (leaf `G1-SLICE.5e.1a`)
-
-D122 closes: absent facts, geometry/recipe/size bindings and tolerances retain distinct tokens and
-actual name/origin/state/search vocabulary/explicit context arguments. Supplied optional values,
-including Boolean false size context, are readable. D127/D128 malformed metadata/states refuse by name.
-1466 independent cases/thirteen actual body assertion reds/two copied-book consumers and full reference/
-language16 pass. Prior1139 namespace cases/thirteen faults retain metadata-only static checking.
-Runtime annex, progressive links/index and live/task records align; exact old reports/ledger/lesson/
-completed task blocks retained without cap growth. Rust/source identity unchanged; product adapters,
-irrational provenance and execution remain pending. G1 stays5/18; defects12open/115sealed.
-Next independent D121 reference provenance repair; D124 director syntax ruling remains pending.
-
 
 
 | [`stitchcad-changelog-part78.md`](docs/history/window4.md#stitchcad-changelog-part78md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
@@ -397,3 +395,5 @@ Next independent D121 reference provenance repair; D124 director syntax ruling r
 | [`stitchcad-changelog-part94.md`](docs/history/stitchcad-changelog-part94.md) | STITCHCAD-G1-0078 | 10 lines, 887 bytes, `sha256:f70a9dba…` |
 
 | [`stitchcad-changelog-part95.md`](docs/history/stitchcad-changelog-part95.md) | STITCHCAD-G1-0079 | 10 lines, 859 bytes, `sha256:94ba0cb6…` |
+
+| [`stitchcad-changelog-part96.md`](docs/history/stitchcad-changelog-part96.md) | STITCHCAD-G1-0080 | 11 lines, 976 bytes, `sha256:8d91c335…` |

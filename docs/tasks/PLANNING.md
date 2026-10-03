@@ -973,3 +973,5 @@ book; current labels/correction independently watched. Original report retained 
   Owner G1-SLICE.5b.3c.2b.h1.r2, P1 immediately after D142, before required repaired CI .h1.v.
   Use documented toolchain integration and root-derived local stores/temp; require actual runner
   environment/path checks, full local gate/probes and observed exact-head CI before closure.
+  Implementation .h1.r2 sets four root-derived stores before public Rustup installation, guards
+  effective paths afterward and verifies19 controls/six compiled faults; keep open until .h1.v.

@@ -244,8 +244,7 @@ Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py
  target/artifact_cleanup_audit/<run>; apply the same run with apply. Safety/exclusions:
 docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
 
-Reference static/runtime producers under docs/tasks/artifacts/formula_structure/:
-run python3 -I -B with the named .py file and --mutations; the structural suite watches them.
+Formula reference producers: docs/tasks/artifacts/formula_structure/ (python3 -I -B; --mutations; structural suite watches).
 
 - static_signature_contract.py:4032 kind/hint cases/14 actual reds; values trapped.
 - static_namespace_contract.py:1139 metadata cases/13 guard reds.
@@ -257,7 +256,9 @@ run python3 -I -B with the named .py file and --mutations; the structural suite 
 - origin_value_contract.py: scoped origin/context reads.
 - provenance_contract.py: contribution sources;26 actual body reds.
 
-Product source faults in the same directory (run alone, exact restoration required):
+Product faults (same directory, run alone; compiled body reds/exact restore required):
 semantic_mutations.py, declaration_mutations.py, namespace_mutations.py, name_read_mutations.py,
 ordered_name_mutations.py, operator_signature_mutations.py, builtin_signature_mutations.py,
-wanted_signature_mutations.py, call_lookup_mutations.py. Each requires actual compiled body reds.
+wanted_signature_mutations.py, call_lookup_mutations.py.
+
+CI stores: scripts/ci_environment.py prepare/verify; docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh verifies effective paths/guards/step order.
