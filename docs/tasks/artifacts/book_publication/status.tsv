@@ -38,3 +38,4 @@ formula initial collision diagnostic	annexes/formula-declarations.md	crates/sc-c
 formula absent-name diagnostic	annexes/formula-declarations.md	crates/sc-core/src/recipe/namespace.rs	FormulaUnboundName	G1-SLICE.5b.2d.1	4.1
 formula ordered name cursor	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/namespace/ordered.rs	FormulaNameCursor	G1-SLICE.5b.2d.2	4.1
 formula actual statement name scope	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/namespace/ordered.rs	FormulaStatementNameScope	G1-SLICE.5b.2d.2	4.1
+formula unary operator signatures	annexes/formula-operator-signatures.md	crates/sc-core/src/recipe/operators.rs	FormulaUnaryOperator	G1-SLICE.5b.3a	4.1

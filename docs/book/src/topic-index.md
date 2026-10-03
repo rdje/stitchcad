@@ -30,6 +30,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Formula literal normalization](annexes/formula-literals.md)
 - [Formula declaration metadata](annexes/formula-declarations.md)
 - [Ordered formula name scopes](annexes/formula-name-scopes.md) — prior visibility, actual indices/spans and binding refusals.
+- [Formula operator kind signatures](annexes/formula-operator-signatures.md) — closed unary/binary matrices and directed quotients.
 - [Formula syntax API](annexes/formula-syntax.md)
 - [Static formula signature evidence](annexes/formula-static-validation.md)
 - [Formula namespaces and static headers](annexes/formula-static-validation.md#names-and-single-statement-static-checking)

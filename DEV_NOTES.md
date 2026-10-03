@@ -3,21 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-03 UTC)_ — ordered metadata carries actual recipe locations
+## _(2026-10-03 UTC)_ — operator signatures keep count and ratio distinct
 
-- Cursor consumes only a checked initial namespace and one actual normalized recipe owner;
-  current scope contains initial/prior let metadata, never current/future bindings or labels.
-  Header collision precedes scope/insertion; failed advance leaves the same position/prefix.
-- RecipeRebinding retains actual prior/current ordinals and global whole/name spans, including
-  assertion gaps. Reserved sources have no invented prior index; input collisions stay ambiguity.
-  Cursor exposes no final initial namespace or accepted expression/graph/value result.
-- Eight public contracts/five negative examples and18 actual compiled body reds verify order,
-  refs/locations, refusal sources/privacy and4096-let/assertion traversal/drop on64KiB stack.
-  First mutation draft was a compiler red; classifier refused it. Corrected fault obtains owned
-  refusal before deliberately changing position; all18 body reds required, classifier unchanged.
-- Strict native643/53 groups/WASM three libraries and reference/book10/ledger9+13 pass0. Prior
-  records remain exact; bounded book distinguishes metadata from whole acceptance.
-- promotion: declined (existing declaration-order, typed borrowed sources and no-partial-proof rules).
+- Unary metadata closes negation/square; binary metadata covers all ten existing operators.
+  Directional quotients preserve count/ratio→count, ratio/count→ratio and count/count→ratio;
+  multiplication is commutative. Boolean/geometry operands are outside arithmetic T.
+- Four public contracts cover16 unary/640 binary cases, complete actual normative rows and
+  independent existing canonical bytes. There are7 unary/71 binary acceptances,17 product/14
+  quotient pairs and2 angle×length hints. Fourteen actual compiled body reds restore exact source.
+- Draft binary getter assumption corrected after API census; explicit getter matches all12
+  unchanged canonical symbols. No syntax, identity, value or full expression acceptance changed.
+- Strict native647/54 groups/WASM/reference/book10/ledger9+13 pass0. Exact prior/oldest records
+  retained; bounded book distinguishes signatures from later contextual checking.
+- promotion: declined (existing closed signatures, kind separation, order and no-implicit-conversion).
+
 
 
 
@@ -180,3 +179,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part87.md`](docs/history/stitchcad-devnotes-part87.md) | G1-0087 initial namespace lesson | 17 lines, 1539 bytes, `sha256:06d7a8cd…` |
 
 | [`stitchcad-devnotes-part88.md`](docs/history/stitchcad-devnotes-part88.md) | G1-0088 exact name-read lesson | 14 lines, 1220 bytes, `sha256:11170a8b…` |
+
+| [`stitchcad-devnotes-part89.md`](docs/history/stitchcad-devnotes-part89.md) | G1-0089 ordered name-scope lesson | 15 lines, 1296 bytes, `sha256:ffe6d2c5…` |

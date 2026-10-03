@@ -154,6 +154,17 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0090 - closed formula operator kind signatures (leaf `G1-SLICE.5b.3a`)
+
+Pure unary/binary metadata preserves every arithmetic kind rule, directed quotient, commutative
+product and exact angle×length hint. Four contracts check656 kind cases and actual normative rows;
+7 unary/71 binary cases accepted,17 products/14 quotients/2 hints, all12 canonical symbols match
+unchanged serialization. Fourteen actual compiled body reds restore source exactly. Numeric values,
+contextual errors and whole expression/recipe acceptance remain later owners. Book/API/live/task
+scope align; exact prior/oldest records retained. Strict native647/54 groups/WASM three libraries,
+reference/language16/publication10/ledger9+13 pass0;57 chapters/40 APIs/1161 source/1811 render links.
+G1 stays5/18;10open/122sealed; built-in/selector signatures .5b.3b next.
+
 ## STITCHCAD-G1-0089 - ordered formula name scopes (leaf `G1-SLICE.5b.2d.2`)
 
 Actual recipe cursor exposes initial/prior metadata in authored order; current/future names and
@@ -360,15 +371,6 @@ New expert annex preserves progressive reading; product namespace/type/whole pre
 remain pending. Review .5b.1 splits into signature .1a, namespace/preflight .1b and full closure .1c.
 Oldest ledger reports retained whole; G1 stays5/18; defects10open/102sealed. Next .5b.1b.
 
-## STITCHCAD-SPINE-0021b - due safe artifact cleanup (leaf `SPINE.21b`)
-
-Tracked plan/apply producer verifies local ignored ownership, content/HEAD/input identity and protected
-stores before removal. Fifteen controls/eleven actual compiled guard assertion reds pass without source
-mutation; new standing suite makes26. Removed six output roots/1281 strays/1112101558 file bytes;
-independent residue0/tracked deletion0, target1955324→1071060KB plus7172KB book removed.
-Rust591/WASM3/book/full26 probes and staged gates regenerate/pass; exact ledger records preserved.
-Latest cleanup record and book/tool/live navigation aligned; G1 stays5/18, defects10open/100sealed.
-Return to G1-SLICE.5b.1 static review. No product scope, dependency stores or other repository changed.
 
 
 
@@ -393,3 +395,5 @@ Return to G1-SLICE.5b.1 static review. No product scope, dependency stores or ot
 | [`stitchcad-changelog-part85.md`](docs/history/stitchcad-changelog-part85.md) | STITCHCAD-G1-0071 | 14 lines, 1261 bytes, `sha256:a370b662…` |
 
 | [`stitchcad-changelog-part86.md`](docs/history/stitchcad-changelog-part86.md) | STITCHCAD-G1-0072 | 9 lines, 795 bytes, `sha256:480c7c1b…` |
+
+| [`stitchcad-changelog-part87.md`](docs/history/stitchcad-changelog-part87.md) | STITCHCAD-SPINE-0021b | 9 lines, 773 bytes, `sha256:df9a2d7c…` |

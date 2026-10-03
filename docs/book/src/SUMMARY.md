@@ -59,6 +59,7 @@
   - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)
   - [Formula declaration metadata](annexes/formula-declarations.md)
   - [Ordered formula name scopes](annexes/formula-name-scopes.md)
+  - [Formula operator kind signatures](annexes/formula-operator-signatures.md)
   - [Static formula validation evidence](annexes/formula-static-validation.md)
   - [Runtime formula validation evidence](annexes/formula-runtime-validation.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)

@@ -11,7 +11,8 @@
 //! contextual literal refusals. Owned expression/statement/recipe bytes preserve typed identity;
 //! Closed kind/origin/reserved-context metadata and immutable source locators are available;
 //! initial namespaces retain sources, reject collisions and resolve exact names; ordered metadata scopes
-//! retain actual prior let declarations. Expression/whole-recipe type validation and evaluation follow.
+//! retain actual prior let declarations; closed operator kind signatures are available.
+//! Function/expression/whole-recipe type validation and evaluation follow.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -60,6 +61,9 @@ pub use canonical_recipe::{FormulaCanonicalRecipe, FormulaCanonicalStatement};
 
 mod semantic;
 pub use semantic::{FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName};
+
+mod operators;
+pub use operators::FormulaUnaryOperator;
 
 mod declaration;
 pub use declaration::{

@@ -8,7 +8,7 @@
 //! default unknowns or cached derived results; registry/evidence proof remains Design/G4.
 //! Shared [`name::MachineToken`] validates stable ASCII identifiers without deriving display labels.
 //! Borrowed formula lexing/expression/ordered-statement syntax, literal normalization and canonical
-//! expression/statement/recipe identity, sourced metadata and initial namespaces, exact reads and ordered metadata scopes are
+//! expression/statement/recipe identity, sourced metadata and initial namespaces, exact reads, ordered scopes and operator signatures are
 //! implemented in [`recipe`]. Whole expression/name/type validation, evaluation and the command bus follow.
 //! The core cross-builds to `wasm32-unknown-unknown`.
 //!

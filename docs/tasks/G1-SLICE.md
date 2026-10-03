@@ -826,8 +826,9 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.2c.2` | `done` | Checked product initial namespace |
 | done | `G1-SLICE.5b.2d.1` | `done` | Exact checked initial name reads |
 | done | `G1-SLICE.5b.2d.2` | `done` | Actual prior recipe binding scope |
-| current | `G1-SLICE.5b.3` | `pending` | Whole expression static signatures |
-| next | `G1-SLICE.5b.4` | `pending` | Complete static recipe graphs |
+| done | `G1-SLICE.5b.3a` | `done` | Closed operator kind matrix |
+| current | `G1-SLICE.5b.3b` | `pending` | Built-in/selector signatures |
+| next | `G1-SLICE.5b.3c` | `pending` | Bounded expression checking |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -853,26 +854,27 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Acceptance Checklist
 
+### G1-SLICE.5b.3a — closed operator kind signatures
+
+- [x] **REPRODUCE / ISSUE** — normalized operator syntax lacks kind-signature metadata. Public
+  formula_operator_signature_contract →four contracts/656 kind cases pass, rc=0; canonical bytes
+  and complete actual normative rows independently verify the closed operator vocabulary.
+- [x] **ROOT CAUSE (WHY + WHERE)** — inferred promotion or symmetric division can erase declared
+  kinds/direction. operator_signature_mutations.py →14 compiled body assertion reds/exact restore,
+  rc=0; count/Boolean/result/order/hint faults demonstrate the needed explicit matrix.
+- [x] **FIX** — pure unary/binary result-kind metadata, exact tokens and angle×length hint;
+  no operand/source value or numeric-domain query. Contextual errors remain .3c.
+- [x] **ADDRESSED (verified)** —16 unary/640 binary cases/actual rows/12 canonical symbols and14
+  actual body reds pass, rc=0;7/71 accepted,17 products/14 quotients/2 hints, exact source restore.
+- [x] **NO REGRESSION** — make check →647 passed/54 groups, strict fmt/clippy green; make wasm
+  →three libraries; reference/language16/publication10/ledger9+13 controls pass, rc=0.
+- [x] **LOCKSTEP** — bounded book/API/live/task scope and exact prior/oldest records align;
+  full function/expression/whole proofs remain .3b–.4. promotion: declined (existing closed kind
+  signatures, operand order and no-implicit-conversion contracts).
+
 ### G1-SLICE.5b.2d.2 — actual ordered declaration metadata
 
-- [x] **REPRODUCE / ISSUE** — detached let metadata has no active ordered scope. Public
-  formula_ordered_names_contract →eight contracts pass, rc=0; actual owner/order/refusal sources
-  and both4096 traversal/drop boundaries verify metadata staging before expression acceptance.
-- [x] **ROOT CAUSE (WHY + WHERE)** — arbitrary declaration/ordinal injection could reveal future
-  bindings or lose prior refusal locations. ordered_name_mutations.py →18 actual compiled body
-  assertion reds/exact two-source restore, rc=0. Initial compiler-only fault correctly refused.
-- [x] **FIX** — opaque actual-recipe cursor and borrowed current scope; header refusal before
-  scope/insertion, assertion positions retained without value binding, failed advance unchanged.
-  RecipeRebinding retains both actual sources/indices/spans; no final initial namespace escapes.
-- [x] **ADDRESSED (verified)** — eight public contracts/five private/lifetime examples/18 body reds,
-  rc=0: self/forward/labels, all six annotations/48 reserved attempts, exact refs/ordinals/spans,
-  collision kinds, unchanged failure/owner views/privacy and64KiB max recipes. No values queried.
-- [x] **NO REGRESSION** — make check →643 passed/53 groups, strict fmt/clippy green; make wasm
-  →three libraries; prior17/9 actual faults/structural/reference/language16/publication10/ledger9+13
-  controls pass, rc=0. Source byte-exact; metadata grants no expression/whole/runtime acceptance.
-- [x] **LOCKSTEP** — bounded book annex/examples/API/live/frontier and original task/oldest records
-  align; type/signatures .3 and whole graph .4 retain owners. promotion: declined (existing order,
-  typed borrowed sources and no-partial-proof contracts).
+[Exact checklist](G1-SLICE-names.md#completed-ordered-scopes-checklist--preserved-from-63c0c7d) retained.
 
 ### G1-SLICE.5b.2d.1 — exact initial metadata reads
 

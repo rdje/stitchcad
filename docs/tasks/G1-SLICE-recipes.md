@@ -585,36 +585,15 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.1a`
   Status: `done`
-  Goal: independent complete operator/function/selector signature review of the actual reference;
-  enumerate all eight operand kinds, positional product/quotient rules, generic arithmetic kinds,
-  closed arities, conditional kind rules and all eight reserved candidates for tolerance roles.
-  Pre-code contract: grammar5/5.1/6/6.1/7 and contract2/3.1/5.3/6 govern. Author expected tables
-  independently, compare table populations in both directions, then exercise actual parse/infer
-  with numeric reads and geometry resolution trapped. Every arithmetic kind/generic signature,
-  commutative product versus directed quotient, wrong arity/kind and both static branches tested.
-  Prove controls fail on actual in-memory reference guard faults; preserve producer bytes.
-  Diagnose/repair observed signature defects here, with exact before/after refusals. No namespace,
-  typed diagnostic payload, runtime domain, whole-recipe atomic preflight or product validator claim.
-  Acceptance: full expected/actual population equality, exhaustive bounded matrix and named defects
-  fixed; focused current reference/syntax/book controls green, live/book/task lockstep and commit.
-  Verification:4032 actual parse/infer cases/22 closed names; twelve compiled body assertion
-  faults, no numeric/environmental/geometry reads; full reference and language16 green, rc=0.
+  Goal: complete independent reference signature/namespace review.
+  Verification: [exact protocol](G1-SLICE-names.md#completed-reference-signature-protocol--preserved-from-63c0c7d).
   Commit: `STITCHCAD-G1-0073`.
 
 - ID: `G1-SLICE.5b.1b`
   Status: `done`
-  Goal: all nine origins/eight reserved names, spelling/context, collision/rebinding/forward names
-  and static whole-recipe preflight in the reference, with independent declaration fixtures.
-  Acceptance: both-origin collision evidence, whole-recipe no-value-access proof, ordered namespace
-  and header checks; resolve discovered defects before trusting the reference for .5b.2/.4.
-  Typed production diagnostic arguments retain their .5b.2/.4 owners; no runtime/MCP claim.
-  Children .1b.1 (namespace/header static phase), .1b.2 (whole-recipe preflight);
-  detailed pre-code protocols/receipts in G1-SLICE-evidence.md.
-  Prerequisite .1b.0/.0v:64-file history capacity, exact retained window and observed CI;
-  owned in G1-SLICE-evidence.md, no domain-scope pivot or limit increase.
-  Verification:1139 namespace/196 whole-source cases;13 namespace/14 whole-preflight actual
-  assertion reds, worked replay and per-recipe measurement; no execution/value/geometry reads.
-  Children .1b.1/.1b.2 done; full .1c review closes at .1c.2. Commit: `STITCHCAD-G1-0076`/`STITCHCAD-G1-0077`.
+  Goal: complete independent reference signature/namespace review.
+  Verification: [exact protocol](G1-SLICE-names.md#completed-reference-namespace-protocol--preserved-from-63c0c7d).
+  Commit: `STITCHCAD-G1-0076`/`STITCHCAD-G1-0077`.
 
 - ID: `G1-SLICE.5b.1c`
   Status: `done`
@@ -691,40 +670,59 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.2d.2`
   Status: `done`
-  Goal: derive prior-binding scope from actual normalized recipe/order, truthful binding refusals.
-  Work unit: `STITCHCAD-G1-0089`; predecessor19900d0 clean/message empty/untracked/no jobs.
-  Pre-code contract3/3.1/4.1/5.2.1 and normalized recipe/declaration/namespace APIs reviewed.
-  Add opaque FormulaNameCursor consuming a checked initial namespace and borrowing one actual
-  normalized recipe. Public current scope exposes actual statement/index, initial plus earlier let
-  metadata; current/future names remain absent. No caller supplies a position/declaration/recipe
-  binding, no final namespace escapes, no mutation while a borrowed scope remains live.
-  current and advance_metadata check binding header collision before scope/insertion; assertion
-  labels never declare scalar values. Failed advance retains unchanged position/prefix and cannot
-  skip past a refusal. End is fused, including empty and4096-statement recipes. Initial namespace
-  remains a distinct construction boundary; cursor grants no expression/type/value acceptance.
-  Metadata advance records only actual current let annotation/location. Type/whole validators .3/.4
-  must check all operands before using it; missing/invalid RHS is still unvalidated syntax here.
-  Extend FormulaNamespaceError with RecipeRebinding carrying boxed actual prior/attempted sources;
-  reserved attempts retain fixed metadata and real current ordinal/spans, input collisions remain
-  ambiguity even with same kinds. Whole diagnostics carry actual sources; no invented initial index.
-  Verify all kinds/domains, assertion gaps, exact spans/owner refs, self/forward no-reordering,
-  repeated/reserved/input collisions/first refusal, no value/provider/geometry access, private
-  fields/query lifetimes/scopes, immutable failed advance, deterministic4096 on64KiB stack.
-  Actual compiled cursor/source/order/assertion/rebinding/privacy faults must fail body assertions;
-  classifier refuses compiler/unwrap noise and restores all source bytes. Strict native/WASM,
-  reference/language/book/ledger/retention/census/gate and exact prior evidence/oldest records.
-  Keep bounded book/task/live surfaces; no grammar/cap/diagnostic waiver. Per-leaf commit.
-  Verification: eight public contracts/five negative examples/18 actual faults plus prior17/9,
-  strict643 native tests/53 groups/WASM and focused controls pass, rc=0; receipts below.
+  Goal: actual ordered metadata scopes retaining truthful binding sources.
+  Verification: [exact protocol](G1-SLICE-names.md#completed-ordered-scopes-protocol--preserved-from-63c0c7d).
   Commit: `STITCHCAD-G1-0089`.
 
 - ID: `G1-SLICE.5b.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: every unary/square/binary/product/quotient/comparison, built-in and selector signature,
   all arities, conditional branch types and tolerance-name operand role.
   Acceptance: closed tables checked in both directions, Boolean condition/numeric branches,
   no implicit conversion/geometry creation, arc_length hint for angle×length, named envelope
   precedence and unsupported constructs. Unknown declared values still have checkable kinds.
+  Children: .a operator kind matrix, .b built-in/selector roles and arities, .c bounded normalized
+  expression checker/typed refusal/dependencies, .d coupled independent static review.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3a`
+  Status: `done`
+  Goal: closed pure operator kind signatures from normative grammar5/5.1 before expression checking.
+  Work unit: `STITCHCAD-G1-0090`; predecessor63c0c7d clean/message empty/untracked/no jobs.
+  Pre-code full grammar1/2/5/5.1/6/7, contract2/4.1/5.2, FormulaBinaryOperator/FormulaKind and
+  normalized unary/binary views reviewed. Preserve existing syntax/operator tokens and type worlds.
+  Add FormulaUnaryOperator Negate/Square with canonical node tokens and result_kind metadata.
+  Existing FormulaBinaryOperator gets result_kind for all ten variants plus arc_length_hint only
+  for refused angle×length in either order. Return Option<FormulaKind>; absence is a signature
+  refusal, not numeric division/domain or accepted expression. Typed contextual errors remain .3c.
+  Arithmetic T is length/angle/area/ratio/count; negation excludes count, square permits length/
+  ratio/count. Addition/subtraction/comparisons require equal arithmetic kinds. Multiplication
+  follows commutative table; quotient preserves authored direction, including count/ratio versus
+  ratio/count and integer count/count→ratio. No implicit promotion or value/geometry query.
+  Independently enumerate every8-kind unary and64 ordered binary pairs for every operator, compare
+  full closed normative rows in both directions and exact hint population. Named dimensions/data
+  and static error integration remain .3c; no numeric or graph acceptance claimed from metadata.
+  Actual compiled operator/result/commutativity/direction/count/Boolean/hint faults must fail body
+  assertions and restore source. Strict native/WASM, focused reference/book/ledger/retention/gate;
+  exact predecessor evidence/oldest records retained within bounded surfaces. Per-leaf commit.
+  Verification: four public contracts/656 kind cases/14 actual body reds, strict647 native tests/54
+  groups/WASM and focused controls pass, rc=0; receipts below. Commit: `STITCHCAD-G1-0090`.
+
+- ID: `G1-SLICE.5b.3b`
+  Status: `pending`
+  Goal: closed built-in/selector signature vocabulary, ordered arities and symbolic tolerance role.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3c`
+  Status: `pending`
+  Goal: bounded normalized expression checking with typed real source/operand/wanted-rule refusals;
+  every branch/argument/name dependency checked before any whole acceptance or execution.
+  Finalize diagnostic/checked-owner interface before code; no forged canonical/statement context.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3d`
+  Status: `pending`
+  Goal: coupled full expression static review, normative/reference/product agreement and counterexamples.
   Verification: `pending`; Commit: `pending`.
 
 - ID: `G1-SLICE.5b.4`
@@ -971,16 +969,22 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 
 ## Actual ordered name-scope receipts — .5b.2d.2,2026-10-03 (UTC)
 
-Public8/five negative examples/18 actual compiled body assertion reds pass, both sources exact,
-rc=0; first compiler-only fault refused, repaired owned-error fault yields actual body red.
-Prior namespace17/read9 actual faults rerun and restored; all classifier anchors/noise controls
-pass, rc=0. make check:643 passed/53 result groups and strict fmt/clippy green; make wasm:three
-libraries, rc=0. Full structural/reference/language16/publication10/ledger9+13 controls pass,
-rc=0;56 chapters/39 APIs/1156 source/1798 rendered links. Original predecessor protocol23lines/
-2008B SHAe601e894…, receipts15lines1315B SHA1d0897eb…, checklist19lines1695B SHAeb355b94…
-retained exactly from19900d0. Older complete review protocol also remains byte-exact in names
-sibling. Oldest ledger9lines795B SHA480c7c1b…/lesson14lines1220B SHA11170a8b… sealed exactly.
-Retention234 logical records/48 working Markdown/10510 decoded lines/792394 decoded bytes/
-380908 resident bytes, rc=0; fresh defects10open/122unique sealed/zero duplicates or overlap.
-Tree census10lanes/13trees/11siblings/zero unowned/orphans/dead links, rc=0. Namespace foundation
-.5b.2/.2d closes; G1 remains5/18. Product expression type/signature validation .5b.3 next.
+[Exact receipts](G1-SLICE-names.md#completed-ordered-scopes-receipts--preserved-from-63c0c7d) retained.
+
+
+## Operator signature receipts — .5b.3a,2026-10-03 (UTC)
+
+Public4 contracts cover16 unary/640 ordered binary cases and full actual normative rows;7 unary/
+71 binary acceptances,17 products/14 quotients/2 hints, all12 symbols match unchanged independent
+canonical serialization. Fourteen actual compiled body assertion reds restore source byte-exact,
+rc=0; watched anchors/classifier reject compiler/unwrap/name noise. make check:647 passed/54
+result groups, strict fmt/clippy green; make wasm:three libraries, rc=0. Full structural/reference/
+language16/publication10/ledger9+13 controls pass, rc=0;57 chapters/40 APIs/1161 source/1811 rendered
+links. Prior protocol28lines2466B SHA78912bdc…, receipts15lines1301B SHA69044ab9…, checklist
+20lines1786B SHA09862a29… retained byte-identically from63c0c7d. Older reference protocols17lines/
+1427B SHA8c644d12… and14lines1124B SHA8890c07e… retained exactly. Oldest ledger9lines773B
+SHAdf9a2d7c…/lesson15lines1296B SHAffe6d2c5… sealed exactly, no previous archive changes.
+Retention236 logical records/50 working Markdown/10556 decoded lines/795551 decoded bytes/
+384065 resident bytes, rc=0. Fresh defects10open/122unique sealed/zero duplicate/overlap;
+tree census10lanes/13trees/11siblings/zero unowned/orphans/dead links, rc=0. G1 remains5/18;
+built-in/selector signatures .5b.3b next, then bounded expression/whole graph .3c/.4.

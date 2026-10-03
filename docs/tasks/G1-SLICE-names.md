@@ -168,3 +168,112 @@ updated from actual census. G1 remains5/18; .2d.2 ordered actual binding scope n
   owned in G1-SLICE-evidence.md. D124 preserves current grammar/keywords and closes recognition.
   Verification: full signature4032/namespace1139/recipe196/review100 controls and actual reds verified.
   Commit: `STITCHCAD-G1-0082`.
+
+## Completed ordered scopes protocol — preserved from 63c0c7d
+
+- ID: `G1-SLICE.5b.2d.2`
+  Status: `done`
+  Goal: derive prior-binding scope from actual normalized recipe/order, truthful binding refusals.
+  Work unit: `STITCHCAD-G1-0089`; predecessor19900d0 clean/message empty/untracked/no jobs.
+  Pre-code contract3/3.1/4.1/5.2.1 and normalized recipe/declaration/namespace APIs reviewed.
+  Add opaque FormulaNameCursor consuming a checked initial namespace and borrowing one actual
+  normalized recipe. Public current scope exposes actual statement/index, initial plus earlier let
+  metadata; current/future names remain absent. No caller supplies a position/declaration/recipe
+  binding, no final namespace escapes, no mutation while a borrowed scope remains live.
+  current and advance_metadata check binding header collision before scope/insertion; assertion
+  labels never declare scalar values. Failed advance retains unchanged position/prefix and cannot
+  skip past a refusal. End is fused, including empty and4096-statement recipes. Initial namespace
+  remains a distinct construction boundary; cursor grants no expression/type/value acceptance.
+  Metadata advance records only actual current let annotation/location. Type/whole validators .3/.4
+  must check all operands before using it; missing/invalid RHS is still unvalidated syntax here.
+  Extend FormulaNamespaceError with RecipeRebinding carrying boxed actual prior/attempted sources;
+  reserved attempts retain fixed metadata and real current ordinal/spans, input collisions remain
+  ambiguity even with same kinds. Whole diagnostics carry actual sources; no invented initial index.
+  Verify all kinds/domains, assertion gaps, exact spans/owner refs, self/forward no-reordering,
+  repeated/reserved/input collisions/first refusal, no value/provider/geometry access, private
+  fields/query lifetimes/scopes, immutable failed advance, deterministic4096 on64KiB stack.
+  Actual compiled cursor/source/order/assertion/rebinding/privacy faults must fail body assertions;
+  classifier refuses compiler/unwrap noise and restores all source bytes. Strict native/WASM,
+  reference/language/book/ledger/retention/census/gate and exact prior evidence/oldest records.
+  Keep bounded book/task/live surfaces; no grammar/cap/diagnostic waiver. Per-leaf commit.
+  Verification: eight public contracts/five negative examples/18 actual faults plus prior17/9,
+  strict643 native tests/53 groups/WASM and focused controls pass, rc=0; receipts below.
+  Commit: `STITCHCAD-G1-0089`.
+
+## Completed ordered scopes receipts — preserved from 63c0c7d
+
+## Actual ordered name-scope receipts — .5b.2d.2,2026-10-03 (UTC)
+
+Public8/five negative examples/18 actual compiled body assertion reds pass, both sources exact,
+rc=0; first compiler-only fault refused, repaired owned-error fault yields actual body red.
+Prior namespace17/read9 actual faults rerun and restored; all classifier anchors/noise controls
+pass, rc=0. make check:643 passed/53 result groups and strict fmt/clippy green; make wasm:three
+libraries, rc=0. Full structural/reference/language16/publication10/ledger9+13 controls pass,
+rc=0;56 chapters/39 APIs/1156 source/1798 rendered links. Original predecessor protocol23lines/
+2008B SHAe601e894…, receipts15lines1315B SHA1d0897eb…, checklist19lines1695B SHAeb355b94…
+retained exactly from19900d0. Older complete review protocol also remains byte-exact in names
+sibling. Oldest ledger9lines795B SHA480c7c1b…/lesson14lines1220B SHA11170a8b… sealed exactly.
+Retention234 logical records/48 working Markdown/10510 decoded lines/792394 decoded bytes/
+380908 resident bytes, rc=0; fresh defects10open/122unique sealed/zero duplicates or overlap.
+Tree census10lanes/13trees/11siblings/zero unowned/orphans/dead links, rc=0. Namespace foundation
+.5b.2/.2d closes; G1 remains5/18. Product expression type/signature validation .5b.3 next.
+
+## Completed ordered scopes checklist — preserved from 63c0c7d
+
+### G1-SLICE.5b.2d.2 — actual ordered declaration metadata
+
+- [x] **REPRODUCE / ISSUE** — detached let metadata has no active ordered scope. Public
+  formula_ordered_names_contract →eight contracts pass, rc=0; actual owner/order/refusal sources
+  and both4096 traversal/drop boundaries verify metadata staging before expression acceptance.
+- [x] **ROOT CAUSE (WHY + WHERE)** — arbitrary declaration/ordinal injection could reveal future
+  bindings or lose prior refusal locations. ordered_name_mutations.py →18 actual compiled body
+  assertion reds/exact two-source restore, rc=0. Initial compiler-only fault correctly refused.
+- [x] **FIX** — opaque actual-recipe cursor and borrowed current scope; header refusal before
+  scope/insertion, assertion positions retained without value binding, failed advance unchanged.
+  RecipeRebinding retains both actual sources/indices/spans; no final initial namespace escapes.
+- [x] **ADDRESSED (verified)** — eight public contracts/five private/lifetime examples/18 body reds,
+  rc=0: self/forward/labels, all six annotations/48 reserved attempts, exact refs/ordinals/spans,
+  collision kinds, unchanged failure/owner views/privacy and64KiB max recipes. No values queried.
+- [x] **NO REGRESSION** — make check →643 passed/53 groups, strict fmt/clippy green; make wasm
+  →three libraries; prior17/9 actual faults/structural/reference/language16/publication10/ledger9+13
+  controls pass, rc=0. Source byte-exact; metadata grants no expression/whole/runtime acceptance.
+- [x] **LOCKSTEP** — bounded book annex/examples/API/live/frontier and original task/oldest records
+  align; type/signatures .3 and whole graph .4 retain owners. promotion: declined (existing order,
+  typed borrowed sources and no-partial-proof contracts).
+
+## Completed reference signature protocol — preserved from 63c0c7d
+
+- ID: `G1-SLICE.5b.1a`
+  Status: `done`
+  Goal: independent complete operator/function/selector signature review of the actual reference;
+  enumerate all eight operand kinds, positional product/quotient rules, generic arithmetic kinds,
+  closed arities, conditional kind rules and all eight reserved candidates for tolerance roles.
+  Pre-code contract: grammar5/5.1/6/6.1/7 and contract2/3.1/5.3/6 govern. Author expected tables
+  independently, compare table populations in both directions, then exercise actual parse/infer
+  with numeric reads and geometry resolution trapped. Every arithmetic kind/generic signature,
+  commutative product versus directed quotient, wrong arity/kind and both static branches tested.
+  Prove controls fail on actual in-memory reference guard faults; preserve producer bytes.
+  Diagnose/repair observed signature defects here, with exact before/after refusals. No namespace,
+  typed diagnostic payload, runtime domain, whole-recipe atomic preflight or product validator claim.
+  Acceptance: full expected/actual population equality, exhaustive bounded matrix and named defects
+  fixed; focused current reference/syntax/book controls green, live/book/task lockstep and commit.
+  Verification:4032 actual parse/infer cases/22 closed names; twelve compiled body assertion
+  faults, no numeric/environmental/geometry reads; full reference and language16 green, rc=0.
+  Commit: `STITCHCAD-G1-0073`.
+
+## Completed reference namespace protocol — preserved from 63c0c7d
+
+- ID: `G1-SLICE.5b.1b`
+  Status: `done`
+  Goal: all nine origins/eight reserved names, spelling/context, collision/rebinding/forward names
+  and static whole-recipe preflight in the reference, with independent declaration fixtures.
+  Acceptance: both-origin collision evidence, whole-recipe no-value-access proof, ordered namespace
+  and header checks; resolve discovered defects before trusting the reference for .5b.2/.4.
+  Typed production diagnostic arguments retain their .5b.2/.4 owners; no runtime/MCP claim.
+  Children .1b.1 (namespace/header static phase), .1b.2 (whole-recipe preflight);
+  detailed pre-code protocols/receipts in G1-SLICE-evidence.md.
+  Prerequisite .1b.0/.0v:64-file history capacity, exact retained window and observed CI;
+  owned in G1-SLICE-evidence.md, no domain-scope pivot or limit increase.
+  Verification:1139 namespace/196 whole-source cases;13 namespace/14 whole-preflight actual
+  assertion reds, worked replay and per-recipe measurement; no execution/value/geometry reads.
+  Children .1b.1/.1b.2 done; full .1c review closes at .1c.2. Commit: `STITCHCAD-G1-0076`/`STITCHCAD-G1-0077`.

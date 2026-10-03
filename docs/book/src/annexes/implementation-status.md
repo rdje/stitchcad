@@ -30,12 +30,13 @@ requires the named contracts and later proof owners.
 | Immutable formula source declarations | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2b | [Sourced declarations](formula-declarations.md#immutable-sourced-declarations) |
 | Initial formula namespace/read | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2c.2/.2d.1 | [Admission, collisions and reads](formula-declarations.md#exact-declared-name-reads) |
 | Ordered formula name scope | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2d.2 | [Actual prior bindings](formula-name-scopes.md) |
+| Formula operator kind signatures | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3a | [Closed operator matrix](formula-operator-signatures.md) |
 
 Reference [static signature evidence](formula-static-validation.md) covers the complete finite
 kind/function matrix without executing values; product static validation and whole-recipe preflight
 remain pending. Reference namespace/preflight/full static review is verified at G1-SLICE.5b.1;
 product metadata, sourced declarations, initial namespaces, exact reads and ordered metadata scopes are available;
-expression types and whole static graphs remain .5b.3/.4.
+operator kind signatures are available; function/expression/whole validation remain .5b.3b–.4.
 
 ## Remaining proofs
 
