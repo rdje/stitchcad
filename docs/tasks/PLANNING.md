@@ -912,3 +912,9 @@ both actual indices and global whole/name spans. Original report retained in
 [`stitchcad-defects-part54.md`](../history/stitchcad-defects-part54.md). Independent3624 argument
 cases/19 actual compiled assertion reds and existing reference/book controls verify the repair.
 Canonical product namespace/localization/registry proof remain separately owned.
+
+D132/D133 close at G1-SLICE.5b.2c.2; original reports retained in
+[`stitchcad-defects-part55.md`](../history/stitchcad-defects-part55.md). Code markup preserves the
+complete generic in actual HTML; publication producer captures/refuses actual builder warnings.
+Ten publication controls include an actual copied-book unclosed generic and warning-free repair,
+with the exact rendered generic asserted, rc=0. Existing eight topology/status refusals remain.

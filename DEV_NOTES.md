@@ -3,30 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-03 UTC)_ — binding causes carry real source locations
+## _(2026-10-03 UTC)_ — initial namespace authority requires source admission
 
-- D131 delegated decision keeps stable rebinding token with reserved_name/recipe_name cases.
-  Initial metadata pairs have actual declaration positions; detached statements keep local spans;
-  whole preflight carries actual prior/current indices and global whole/name spans, including
-  assertion gaps. Reserved metadata requires no numeric value/context-availability query.
-- 3624 argument cases/19 actual compiled assertion reds pass0 with exact source preservation.
-  Invalid draft cm2/true fixtures correctly refused; corrected to square/comparison grammar forms.
-  No product Rust change; typed namespace/canonical registry/localization remain later owners.
-- Same engineer authored/applied under director delegation; independent approval unclaimed,
-  reversal and executable evidence recorded. Exact prior blocks/oldest ledger/lesson retained.
-- promotion: ADR-0003 delegated binding-source decision; governance6.1 remains the approval rule.
+- Opaque initial projection excludes recipe/reserved injection. Ordered BTreeMap entry checks
+  refuse first collision before replacement; reserved metadata does not query provider availability.
+  Error sources preserve canonical borrows/ids/refs, equal origins and attempted metadata.
+- Ten public contracts/17 actual compiled assertion reds restore source exactly. Mutation classifier
+  refused unwrap-only admission failure; explicit refusal assertions fixed tests, classifier unchanged.
+  Draft as_bits getter spelling corrected. Strict lint rejected128B inline collision error;
+  one boxed source pair keeps failure compact while retaining borrowed canonical records.
+- Namespace/initial/error default formatting omits authored payloads; explicit views support typed
+  later diagnostics. Checked reads/prior bindings/types/whole graphs remain separately owned.
+- D132 raw generic rendered as an unclosed HTML tag; existing nine publication controls accepted
+  the warning (D133). Code markup restores the text; actual builder output is now captured/refused.
+  Copied-book malformed generic refuses; repaired exact HTML and all ten controls pass, rc=0.
+- Strict native621 tests/51 result groups, WASM three libraries and focused reference/language16/
+  publication10/ledger9+13 controls pass, rc=0. Exact completed task/oldest ledger/lessons retained.
+- promotion: declined (existing typed source admission, immutable ownership and ordered diagnostics).
 
-## _(2026-10-03 UTC)_ — a reserved source has no recipe ordinal
 
-- D131 canonical rebinding row requires two statements; reserved/input metadata cannot supply
-  them. Actual120 reserved refusals/one ordinary case expose token and empty arguments. Those
-  dictionaries prove the mismatch, not complete diagnostics. Three actual compiled changes
-  fail independent assertions; producer unchanged. Watched structural runner retains this proof.
-- Concrete reserved-case proposal in ADR/book preserves token/current grammar and carries real
-  sources. Canonical ruling/repair .2c.1b blocks product namespace .2c.2; defect remains owned.
-- Exact prior task/oldest ledger/lesson bytes retained. Structural/language16/publication9/ledger9
-  pass0;55 chapters/33 APIs/1138 source/1767 rendered links. Product Rust unchanged.
-- promotion: declined (pending director ruling; existing context-truth requirement).
 
 
 
@@ -177,3 +172,7 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part83.md`](docs/history/stitchcad-devnotes-part83.md) | G1-0083 metadata lesson | 13 lines, 1139 bytes, `sha256:c79e3803…` |
 
 | [`stitchcad-devnotes-part84.md`](docs/history/stitchcad-devnotes-part84.md) | G1-0084 source metadata lesson | 14 lines, 1110 bytes, `sha256:f1ad9ba4…` |
+
+| [`stitchcad-devnotes-part85.md`](docs/history/stitchcad-devnotes-part85.md) | G1-0085 reserved diagnostic proposal lesson | 11 lines, 903 bytes, `sha256:a1c4d338…` |
+
+| [`stitchcad-devnotes-part86.md`](docs/history/stitchcad-devnotes-part86.md) | G1-0086 delegated binding-source lesson | 12 lines, 1018 bytes, `sha256:92241e4a…` |

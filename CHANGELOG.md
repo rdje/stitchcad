@@ -154,6 +154,21 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0087 - checked initial formula namespace (leaf `G1-SLICE.5b.2c.2`)
+
+Typed initial sources exclude recipe/reserved injection; immutable namespace seeds eight reserved
+metadata entries without context values and refuses the first authored collision before insertion.
+Errors retain earlier/reserved and attempted sources, including equal origins, without invented
+recipe indices; opaque Debug/token-only Display preserve payload privacy. Collision pair boxed
+once on failure to keep error compact; canonical records stay borrowed, no cached values/state.
+Ten public contracts/17 actual compiled body assertion reds verify admission/context/source/order/
+privacy and exact restoration. Draft API-name/unwrap-only/large-error controls corrected, no waiver.
+Book examples/status/API/live scope and exact prior task/ledger/lesson retention align.
+Strict native621 tests/51 result groups, WASM three libraries, reference/language16/publication10/
+ledger9+13 controls pass0. D132/D133 fixed: actual unclosed-tag warnings now refuse publication,
+repaired generic renders exactly. Book55 chapters/36 APIs/1143 source/1775 rendered links.
+G1 stays5/18;10open/122sealed defects. Next .5b.2d checked reads/prior bindings, then type/graph.
+
 ## STITCHCAD-G1-0086 - source-aware binding refusal contract (leaf `G1-SLICE.5b.2c.1b`)
 
 Delegated D131 decision retains formula_rebinding, discriminating reserved attempts from repeated
@@ -358,19 +373,6 @@ map orientation shortened under unchanged cap. Oldest ledger payloads independen
 G1 stays5/18, defects10open/99sealed; tree13/10 siblings. .3f/.3 input-identity scope closes;
 next .5a.4 full syntax/canonical milestone and safe evaluator decomposition. No evaluation/signoff claim.
 
-## STITCHCAD-G1-0070 - owned statement and recipe identity bytes (leaf `G1-SLICE.5a.3f.1c`)
-
-Private typed canonical statement/recipe owners retain exact names/annotations and authored order,
-using existing normalized inputs/expression identity. One ASCII space/no newline; empty recipe
-retains its wrapper. Clone/Eq/explicit extraction outlive all source/arenas; Debug omits customer text.
-Ten public contracts compare16 authored statements/nine recipes,55 expressions×three roles and100
-independent numeric rows×three roles, actual four published examples and two typed text collisions.
-Full4096×2×256/16if serialization, long names/grouping/deep/wide calls pass on64KiB stack.
-Twenty-one actual compiled assertion reds/exact restoration; five negative/two runnable API docs.
-Strict native586/47groups, release10/WASM3 and scoped reference/language16/publication9 pass;
-book52 chapters/25 APIs/1083 source/1674 rendered links. Shared nine sources/prior records exact.
-Book/API/live/task records agree; G1 stays5/18, defects10open/99sealed; next .5a.3f.2 coupled review.
-No static validation, binding/evaluation, typed project hashes/storage, MCP or production approval.
 
 
 
@@ -386,3 +388,5 @@ No static validation, binding/evaluation, typed project hashes/storage, MCP or p
 | [`stitchcad-changelog-part82.md`](docs/history/stitchcad-changelog-part82.md) | STITCHCAD-G1-0068 | 12 lines, 1035 bytes, `sha256:451e0450…` |
 
 | [`stitchcad-changelog-part83.md`](docs/history/stitchcad-changelog-part83.md) | STITCHCAD-G1-0069 | 12 lines, 1076 bytes, `sha256:61590cec…` |
+
+| [`stitchcad-changelog-part84.md`](docs/history/stitchcad-changelog-part84.md) | STITCHCAD-G1-0070 | 13 lines, 1176 bytes, `sha256:ce5bfa8a…` |

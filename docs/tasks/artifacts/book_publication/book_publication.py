@@ -8,9 +8,11 @@ from __future__ import annotations
 
 import csv
 from html.parser import HTMLParser
+import os
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import tempfile
 from urllib.parse import unquote, urlsplit
 
@@ -46,6 +48,19 @@ class Page(HTMLParser):
 def require(condition, code, detail):
     if not condition:
         raise PublicationError(f"{code}: {detail}")
+
+
+def build(root):
+    """Capture the actual builder; source/link topology cannot certify warning-bearing output."""
+    environment = dict(os.environ, MDBOOK_LOG="warn", RUST_LOG="warn")
+    result = subprocess.run(["mdbook", "build", "docs/book"], cwd=root, env=environment,
+                            capture_output=True, text=True)
+    diagnostic = result.stdout + result.stderr
+    require(result.returncode == 0, "BOOK_BUILD", diagnostic.strip())
+    plain = re.sub(r"\x1b\[[0-9;]*m", "", diagnostic)
+    warnings = re.findall(r"(?m)^\s*WARN\b.*$", plain)
+    require(not warnings, "BOOK_BUILD_WARNING", "\n".join(warnings))
+    return diagnostic
 
 
 def markdown_links(text):
@@ -146,6 +161,8 @@ def check(root):
 
 
 def fixture(root, destination):
+    (destination / "docs/book").mkdir(parents=True)
+    shutil.copy2(root / "docs/book/book.toml", destination / "docs/book/book.toml")
     for directory in (SOURCE, Path("docs/tasks")):
         # Artifacts are copied separately; evidence/tree Markdown is sufficient for ownership lookup.
         if directory == Path("docs/tasks"):
@@ -198,6 +215,9 @@ def mutate(root, name):
 
 
 def main():
+    diagnostic = build(ROOT)
+    if diagnostic:
+        print(diagnostic, end="" if diagnostic.endswith("\n") else "\n")
     result = check(ROOT)
     print(f"publication: {result[0]} chapters / {result[1]} scoped API rows / "
           f"{result[2]} source links / {result[3]} rendered links; all checked")
@@ -225,7 +245,27 @@ def main():
             else:
                 raise PublicationError(f"MISSING_REFUSAL: {name}")
         print(f"  verified refusal: {name} ({expected})")
-    print(f"publication probes: {len(cases) + 1} pass / 0 fail")
+    with tempfile.TemporaryDirectory(prefix="book-warning-", dir=scratch) as directory:
+        root = Path(directory)
+        fixture(ROOT, root)
+        chapter = root / SOURCE / "introduction.md"
+        marker = "\nPublication control: Checked<UnclosedType>\n"
+        chapter.write_text(chapter.read_text() + marker)
+        try:
+            build(root)
+        except PublicationError as error:
+            require(str(error).startswith("BOOK_BUILD_WARNING:") and "unclosed" in str(error),
+                    "WRONG_REFUSAL", str(error))
+        else:
+            raise PublicationError("MISSING_REFUSAL: actual malformed generic builder warning")
+        replace(chapter, marker, "\nPublication control: `Checked<UnclosedType>`\n")
+        build(root)
+        require(check(root) == result, "WARNING_REPAIR", "quoted generic changed publication scope")
+        rendered = (root / HTML / "introduction.html").read_text()
+        require("<code>Checked&lt;UnclosedType&gt;</code>" in rendered,
+                "WARNING_REPAIR", "generic parameter missing from repaired rendering")
+    print("  verified refusal: actual malformed generic (BOOK_BUILD_WARNING); repaired rendering pass")
+    print(f"publication probes: {len(cases) + 2} pass / 0 fail")
 
 
 if __name__ == "__main__":

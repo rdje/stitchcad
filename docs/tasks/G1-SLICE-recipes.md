@@ -658,11 +658,12 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Commit: `STITCHCAD-G1-0084`.
 
 - ID: `G1-SLICE.5b.2c`
-  Status: `in_progress`
+  Status: `done`
   Goal: checked initial namespace from ordered declaration pairs plus reserved metadata contexts.
   Acceptance: reject collisions before indexing, retain both origins/source identities, all reserved
   rebinding refusals; absent context does not hide declared kind; no value or geometry resolution.
-  Verification: `pending`; Commit: `pending`.
+  Verification: .1a/.1b decision/reference sources and .2 checked initial namespace verified below.
+  Commit: `STITCHCAD-G1-0085`/`0086`/`0087`.
 
   Children: .2c.1a (reproduce/document D131 diagnostic conflict), .2c.1b (delegated decision,
   canonical/reference diagnostic repair), .2c.2 (checked product initial namespace).
@@ -675,34 +676,40 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.2c.1b`
   Status: `done`
-  Goal: apply the delegated D131 diagnostic decision to contract/reference and independent argument
-  controls before product namespace implementation. Acceptance: no fabricated indices, all eight
-  reserved names and every originating declaration domain covered; ordinary rebinding retains
-  both actual recipe ordinals. Director2026-10-03 delegates the choice and application to the
-  engineer; same-party author/applier disclosed, independent approval remains unclaimed.
-  Work unit: `STITCHCAD-G1-0086`; predecessor862c0d9 clean, no owned jobs or user edits.
-  Pre-code protocol: contract3.1/4.1/5.2, actual namespace/static_statement/preflight and all
-  existing static controls read. Keep formula_rebinding for reserved names; add a discriminated
-  reserved refusal carrying name/reserved kind-origin-context and attempted metadata locator.
-  Initial reference declarations carry their actual ordered-pair position, not a recipe index.
-  Detached recipe statements carry actual local spans but no invented ordinal. Whole preflight
-  supplies global attempted ordinal/spans and the real prior binding's ordinal/spans for repeated
-  lets. Reference metadata locators certify no canonical record/value identity; product sources
-  remain the immutable typed declarations and later registry validation. No state/value reads.
-  Independently authored all8 names×9 metadata origins and8×6 annotations, every real recipe
-  position/name span, actual repeated indices/assertion gaps; forbidden availability/execution
-  reads trapped. Actual argument/token/context faults must fail body assertions with source exact.
-  Repair canonical row/book/ADR, disclose reopening/reversal and approval scope; no grammar change.
-  Own exact completed .1a blocks/oldest ledgers/lesson/report retention within current bounds.
-  Verification:3624 exact argument cases/19 actual compiled assertion reds; full reference,
-  language16/publication9/ledger9/13 controls pass0. Commit: `STITCHCAD-G1-0086`.
+  Goal: delegated D131 diagnostic decision and source-aware reference repair.
+  Verification: [exact protocol](G1-SLICE-constructions.md#completed-binding-source-decision-protocol--preserved-from-1972f57).
+  Commit: `STITCHCAD-G1-0086`.
 
 - ID: `G1-SLICE.5b.2c.2`
-  Status: `pending`
+  Status: `done`
   Goal: implement checked initial namespace after .2c.1b, including ordered-pair collisions,
   immutable reserved metadata and source-preserving typed refusals. Acceptance: no value/state or
   geometry reads, no silently overwritten duplicate or recipe-order bypass. Finalize API protocol
-  after diagnostic ruling. Verification: `pending`; Commit: `pending`.
+  after diagnostic ruling. Work unit: `STITCHCAD-G1-0087`; predecessor1972f57 clean/no jobs.
+  Pre-code protocol: contract2/3/3.1/5.2.1/4.1 and metadata/declaration/normalized/name/ref APIs
+  reviewed. MachineToken already enforces the three keywords; borrow its exact validated names.
+  New opaque FormulaInitialDeclaration accepts only Input/LengthInput/Point/Edge via TryFrom;
+  rejected Recipe/Reserved returns the original declaration, preventing future-let/context seeding.
+  Build immutable FormulaNamespace from ordered initial declarations; seed all eight fixed reserved
+  metadata entries irrespective of provider availability. BTreeMap entry checks precede insertion;
+  first collision refuses without a partial namespace. Preserve input order in first-error sources.
+  Typed FormulaNamespaceError distinguishes reserved attempts (formula_rebinding) and authored
+  collisions (formula_ambiguous_name), including equal origins; explicit name/source views retain
+  original IDs/records/refs. Opaque Debug and token-only Display expose no authored payload/state.
+  Exact-size declaration iteration is lexical for metadata inspection; no recipe/evaluation order
+  authority. Checked name reads/prior recipe binding remain .2d; no state/value/geometry query.
+  Verify six initial source domains, all five LengthStates/three scalar domains/six kinds, exact
+  creator/tag/borrow identities, all8 reserved refusals, every ordered collision pair and privacy/
+  lifetimes. Actual compiled index/admission/context/collision/source/privacy faults must fail
+  public assertions and restore bytes. Strict native/WASM, focused reference/book/ledger/gate;
+  exact completed .1b/oldest ledger/lesson retention keeps existing bounds. Per-leaf commit.
+  D132/D133 product-publication defects owned here: raw generic was hidden as an HTML tag while
+  publication topology probes passed. Fix markup and reject actual mdBook warning output before
+  claiming publication; copied-book unclosed-generic failure and repaired baseline must prove the
+  guard. Keep all existing source/rendered-link/status controls; no scope/cap/diagnostic waiver.
+  Verification: ten public contracts/17 actual body reds, strict621 native tests/51 result groups,
+  WASM three libraries and reference/language16/publication10/ledger9+13 controls pass, rc=0.
+  D132/D133 fixed; complete receipts below. Commit: `STITCHCAD-G1-0087`.
 
 - ID: `G1-SLICE.5b.2d`
   Status: `pending`
@@ -950,29 +957,22 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 
 ## Delegated diagnostic source receipts — .5b.2c.1b,2026-10-03 (UTC)
 
-- reserved_diagnostic_review.py --mutations →3624 exact argument cases/19 actual compiled body
-  assertion reds, rc=0; actual producer unchanged. State/value/availability/execution read traps
-  cover direct namespace/detached/runtime-static/whole preflight. No canonical record IDs invented.
-- Invalid draft cm2/true fixtures refused by actual grammar; corrected to square/comparison forms
-  before acceptance. Two original guard fault anchors remain; whole execution fault anchor follows
-  the new private static composition, preserving actual assertion classification and scope.
-- Full structural/signature4032/namespace1139/whole196/review100 and all prior runtime controls
-  pass0; language16/publication9/ledger9/13 pointer controls terminal0. Book warning-free55
-  chapters/33 API rows/1140 source/1770 rendered links. Rust diff to HEAD empty, rc=0.
-- Exact .1a protocol14lines/1195B/3e442bf4, receipts19lines/1698B/2ebc780c and checklist19lines/
-  1667B/6b1d9137 retained in constructions. Older signature37lines/3281B/eb496c6e and whole
-  preflight20lines/1705B/98f57f67 retained with old anchor routes. No historical bytes rewritten.
-- Oldest ledger12lines/1076B/61590cec, lesson14lines/1110B/f1ad9ba4 and original D131 report
-  14lines/1255B/c94b9f9c sealed exactly to862c0d9 payloads; existing caps/windows unchanged.
-- Same author/applier under explicit delegation disclosed in ADR-0003; reopened by director or
-  independent reviewer on a concrete counterexample, approval unclaimed. Product namespace .2c.2
-  remains next; canonical source registry/localization/order/type integration retain their owners.
-  Final archive/census/staged doctrine receipts follow; no scoped verification job remains live.
-- Final archive226 logical/40 resident records and fresh defect10open/120unique sealed/no overlap,
-  tree10lanes/13trees/10siblings/zero gaps, rc=0. All sealed originals compare exactly to HEAD;
-  shell syntax/diff checks0. Staged doctrine receipt follows before commit.
-- Initial staged gate refuses ADR-0003 at17738B over16384B, rc=2. Split the complete D131
-  proposal/decision into decision_rebinding.md, retain ADR forwarder and index; shorten map
-  orientation inputs without dropping entry paths/owners. No cap or gate weakened; rerun follows.
-- Final staged gate →13 checks/all green, rc=0; bounded ADR14095B/new record4533B/map8163B.
-  New-record terminal blank removed after diff check; final staged diff check repeats before commit.
+[Exact receipts](G1-SLICE-constructions.md#completed-binding-source-decision-receipts--preserved-from-1972f57) retained.
+
+## Initial namespace receipts — .5b.2c.2,2026-10-03 (UTC)
+
+Focused public contract:10 tests plus three privacy/lifetime compile-fail examples pass, rc=0.
+namespace_mutations.py:17 actual compiled body assertion reds, exact original bytes restored,
+rc=0; classifier refuses compiler/unwrap-only noise. Strict make check:621 passed/51 result groups,
+fmt/clippy -D warnings pass, rc=0; final make wasm builds all three libraries, rc=0. Full reference
+structural, language16 and ledger9/13 pointer controls pass, rc=0. Publication10 controls pass,
+rc=0;55 chapters/36 scoped API rows/1143 source links/1775 rendered links. D132/D133 actual
+malformed generic warning refuses BOOK_BUILD_WARNING; quoted repair renders exact generic.
+Predecessor protocol23lines2027B SHA36198552…, receipts28lines2537B SHAbbe37e98…, checklist
+21lines1879B SHAf5736386… retained byte-identically from1972f57. Oldest ledger13lines1176B
+SHAce5bfa8a… and lessons11lines903B SHAa1c4d338…/12lines1018B SHA92241e4a… sealed exactly.
+Original D132/D133 report15lines1304B SHA2c4850a6… sealed; no prior archive changed.
+Retention:230 logical records/44 working Markdown/10412 decoded lines/785417 decoded bytes/
+373931 resident bytes, rc=0. Fresh materialization:10open/122unique sealed, zero duplicates/overlap;
+D18 intentionally unassigned per canonical PLANNING census. Tree census:10lanes/13trees/10siblings/
+zero unowned/orphans/dead links, rc=0. G1 remains5/18; ordered reads/bindings .2d next.

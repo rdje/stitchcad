@@ -823,7 +823,9 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.2b` | `done` | Immutable sourced declarations before checked namespace |
 | done | `G1-SLICE.5b.2c.1a` | `done` | D131 reproduction and concrete diagnostic proposal |
 | done | `G1-SLICE.5b.2c.1b` | `done` | Delegated source-aware diagnostic decision and repair |
-| next | `G1-SLICE.5b.2c.2` | `pending` | Checked product initial namespace |
+| done | `G1-SLICE.5b.2c.2` | `done` | Checked product initial namespace |
+| current | `G1-SLICE.5b.2d` | `pending` | Checked reads and prior recipe bindings |
+| next | `G1-SLICE.5b.3` | `pending` | Whole expression static signatures |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -849,27 +851,33 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Acceptance Checklist
 
+### G1-SLICE.5b.2c.2 — checked initial product namespace
+
+- [x] **REPRODUCE / ISSUE** — sourced declarations can describe recipe/reserved metadata but lack
+  initial admission/collision authority. Public namespace contract →10 tests pass, rc=0; actual
+  admission/order/source/privacy faults establish the missing boundary before acceptance.
+- [x] **ROOT CAUSE (WHY + WHERE)** — direct unfiltered declarations could bypass recipe order or
+  overwrite names. namespace_mutations.py →17 actual compiled body assertion reds/exact restore,
+  rc=0; recipe/reserved admission, context hiding, first-error order and source loss falsified.
+  Initial projection, ordered entry checks and fixed reserved population are the owned guards.
+- [x] **FIX** — opaque initial-source projection, immutable checked namespace and source-bearing
+  typed errors. Strict lint rejects the initial128B inline collision error; one boxed metadata pair
+  keeps failures compact without copying canonical records. No lint allowance or numeric query.
+- [x] **ADDRESSED (verified)** —10 public contracts/17 actual compiled body assertion reds,
+  rc=0: six initial domains, three scalar domains/six kinds, five states, exact refs/borrows,
+  36 ordered origin collisions/equal origins and200 reserved attempts. Byte-exact source restore.
+  Initial fault classifier refused unwrap-only red; explicit body refusal assertions repair tests.
+- [x] **NO REGRESSION** — make check →621 tests/51 result groups, strict lint/fmt green; make wasm
+  →three libraries build; structural/reference/language16/publication10/ledger9+13 pass, rc=0.
+  D132/D133 actual renderer warning exposed topology-only acceptance; repaired exact generic and
+  copied-book warning refusal/repaired baseline verify guard, rc=0. Grammar/values unchanged.
+- [x] **LOCKSTEP** — declaration chapter/examples/API/status/README/live scope aligned; checked
+  ordered reads/types/whole graphs remain .2d–.4. Exact prior task/ledger/lesson retained within
+  existing bounds. promotion: declined (existing source ownership/metadata/order/diagnostic rules).
+
 ### G1-SLICE.5b.2c.1b — delegated binding diagnostic sources
 
-- [x] **REPRODUCE / ISSUE** — prior .1a actual121 cases/three assertion controls establish D131:
-  reserved/input metadata have no recipe ordinal, while the old rebinding row requires two, rc=0.
-- [x] **ROOT CAUSE (WHY + WHERE)** — old contract5.2 only covers repeated lets; namespace and
-  detached static guards expose no structured source context. New diagnostic control →3624
-  exact argument cases/19 actual compiled field/token/location assertion reds, rc=0. Actual
-  ordinal/name spans come from whole preflight and parsed header, not state/value metadata.
-- [x] **FIX** — two formula_rebinding cases retain reserved/attempted or prior/attempted sources;
-  real initial pair position, detached local spans and whole prior/current indices distinguished.
-  Decision author/applier are the same engineer under explicit delegation; approval unclaimed.
-- [x] **ADDRESSED (verified)** — reserved_diagnostic_review.py --mutations →3624 cases/19 actual
-  assertion reds, producer unchanged, rc=0. Availability/value/execution traps reject illegal
-  reads; annotation/origin/context/position/span/index fields checked by independent fixtures.
-- [x] **NO REGRESSION** — full structural, language16/publication9 and ledger9/13 pointer controls
-  pass, rc=0; book55 chapters/33 APIs/1140 source/1770 rendered links. Product Rust diff empty,
-  rc=0. Final archive/census and staged doctrine receipts follow in recipes before commit.
-- [x] **LOCKSTEP** — canonical contract5.2.1/ADR/annexes and task pointers describe actual source
-  scope; grammar unchanged, source registry/typed product proof stays .2c.2/.2d. Exact prior
-  completed task/oldest ledger/lesson retention owned. promotion: recorded in ADR-0003 delegated
-  decision; existing governance limits independent approval and specifies reversal.
+[Exact checklist](G1-SLICE-measurements.md#completed-binding-source-decision-checklist--preserved-from-1972f57) retained.
 
 ### G1-SLICE.5b.2c.1a — reserved diagnostic conflict reproduction/proposal
 

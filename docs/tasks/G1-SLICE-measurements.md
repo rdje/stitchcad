@@ -924,3 +924,27 @@ Retention: complete predecessor payload preserved by .5b.2a.
   promotion: declined (existing whole-refusal, declaration-order and independent-evidence principles).
 
 [Exact completed namespace checklist](G1-SLICE-evidence.md#completed-namespace-checklist--preserved-from-b2c4d6e) retained.
+
+## Completed binding-source decision checklist — preserved from 1972f57
+
+### G1-SLICE.5b.2c.1b — delegated binding diagnostic sources
+
+- [x] **REPRODUCE / ISSUE** — prior .1a actual121 cases/three assertion controls establish D131:
+  reserved/input metadata have no recipe ordinal, while the old rebinding row requires two, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — old contract5.2 only covers repeated lets; namespace and
+  detached static guards expose no structured source context. New diagnostic control →3624
+  exact argument cases/19 actual compiled field/token/location assertion reds, rc=0. Actual
+  ordinal/name spans come from whole preflight and parsed header, not state/value metadata.
+- [x] **FIX** — two formula_rebinding cases retain reserved/attempted or prior/attempted sources;
+  real initial pair position, detached local spans and whole prior/current indices distinguished.
+  Decision author/applier are the same engineer under explicit delegation; approval unclaimed.
+- [x] **ADDRESSED (verified)** — reserved_diagnostic_review.py --mutations →3624 cases/19 actual
+  assertion reds, producer unchanged, rc=0. Availability/value/execution traps reject illegal
+  reads; annotation/origin/context/position/span/index fields checked by independent fixtures.
+- [x] **NO REGRESSION** — full structural, language16/publication9 and ledger9/13 pointer controls
+  pass, rc=0; book55 chapters/33 APIs/1140 source/1770 rendered links. Product Rust diff empty,
+  rc=0. Final archive/census and staged doctrine receipts follow in recipes before commit.
+- [x] **LOCKSTEP** — canonical contract5.2.1/ADR/annexes and task pointers describe actual source
+  scope; grammar unchanged, source registry/typed product proof stays .2c.2/.2d. Exact prior
+  completed task/oldest ledger/lesson retention owned. promotion: recorded in ADR-0003 delegated
+  decision; existing governance limits independent approval and specifies reversal.

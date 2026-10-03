@@ -921,3 +921,60 @@ added current owning .1a evidence before it, leaving historical bytes unchanged.
 replaced a kind-only dict with Mapping so get(value) cannot silently default; actual twelfth fault
 proves the read trap. Draft count replacement was corrected for D112/D113 and1102 link identities
 before final checks. No checker, cap, grammar or product Rust changed; no needed job remains live.
+
+## Completed binding-source decision protocol — preserved from 1972f57
+
+- ID: `G1-SLICE.5b.2c.1b`
+  Status: `done`
+  Goal: apply the delegated D131 diagnostic decision to contract/reference and independent argument
+  controls before product namespace implementation. Acceptance: no fabricated indices, all eight
+  reserved names and every originating declaration domain covered; ordinary rebinding retains
+  both actual recipe ordinals. Director2026-10-03 delegates the choice and application to the
+  engineer; same-party author/applier disclosed, independent approval remains unclaimed.
+  Work unit: `STITCHCAD-G1-0086`; predecessor862c0d9 clean, no owned jobs or user edits.
+  Pre-code protocol: contract3.1/4.1/5.2, actual namespace/static_statement/preflight and all
+  existing static controls read. Keep formula_rebinding for reserved names; add a discriminated
+  reserved refusal carrying name/reserved kind-origin-context and attempted metadata locator.
+  Initial reference declarations carry their actual ordered-pair position, not a recipe index.
+  Detached recipe statements carry actual local spans but no invented ordinal. Whole preflight
+  supplies global attempted ordinal/spans and the real prior binding's ordinal/spans for repeated
+  lets. Reference metadata locators certify no canonical record/value identity; product sources
+  remain the immutable typed declarations and later registry validation. No state/value reads.
+  Independently authored all8 names×9 metadata origins and8×6 annotations, every real recipe
+  position/name span, actual repeated indices/assertion gaps; forbidden availability/execution
+  reads trapped. Actual argument/token/context faults must fail body assertions with source exact.
+  Repair canonical row/book/ADR, disclose reopening/reversal and approval scope; no grammar change.
+  Own exact completed .1a blocks/oldest ledgers/lesson/report retention within current bounds.
+  Verification:3624 exact argument cases/19 actual compiled assertion reds; full reference,
+  language16/publication9/ledger9/13 controls pass0. Commit: `STITCHCAD-G1-0086`.
+
+## Completed binding-source decision receipts — preserved from 1972f57
+
+## Delegated diagnostic source receipts — .5b.2c.1b,2026-10-03 (UTC)
+
+- reserved_diagnostic_review.py --mutations →3624 exact argument cases/19 actual compiled body
+  assertion reds, rc=0; actual producer unchanged. State/value/availability/execution read traps
+  cover direct namespace/detached/runtime-static/whole preflight. No canonical record IDs invented.
+- Invalid draft cm2/true fixtures refused by actual grammar; corrected to square/comparison forms
+  before acceptance. Two original guard fault anchors remain; whole execution fault anchor follows
+  the new private static composition, preserving actual assertion classification and scope.
+- Full structural/signature4032/namespace1139/whole196/review100 and all prior runtime controls
+  pass0; language16/publication9/ledger9/13 pointer controls terminal0. Book warning-free55
+  chapters/33 API rows/1140 source/1770 rendered links. Rust diff to HEAD empty, rc=0.
+- Exact .1a protocol14lines/1195B/3e442bf4, receipts19lines/1698B/2ebc780c and checklist19lines/
+  1667B/6b1d9137 retained in constructions. Older signature37lines/3281B/eb496c6e and whole
+  preflight20lines/1705B/98f57f67 retained with old anchor routes. No historical bytes rewritten.
+- Oldest ledger12lines/1076B/61590cec, lesson14lines/1110B/f1ad9ba4 and original D131 report
+  14lines/1255B/c94b9f9c sealed exactly to862c0d9 payloads; existing caps/windows unchanged.
+- Same author/applier under explicit delegation disclosed in ADR-0003; reopened by director or
+  independent reviewer on a concrete counterexample, approval unclaimed. Product namespace .2c.2
+  remains next; canonical source registry/localization/order/type integration retain their owners.
+  Final archive/census/staged doctrine receipts follow; no scoped verification job remains live.
+- Final archive226 logical/40 resident records and fresh defect10open/120unique sealed/no overlap,
+  tree10lanes/13trees/10siblings/zero gaps, rc=0. All sealed originals compare exactly to HEAD;
+  shell syntax/diff checks0. Staged doctrine receipt follows before commit.
+- Initial staged gate refuses ADR-0003 at17738B over16384B, rc=2. Split the complete D131
+  proposal/decision into decision_rebinding.md, retain ADR forwarder and index; shorten map
+  orientation inputs without dropping entry paths/owners. No cap or gate weakened; rerun follows.
+- Final staged gate →13 checks/all green, rc=0; bounded ADR14095B/new record4533B/map8163B.
+  New-record terminal blank removed after diff check; final staged diff check repeats before commit.
