@@ -24,3 +24,7 @@ formula normalized statement	annexes/formula-recipe-inputs.md	crates/sc-core/src
 formula normalized recipe	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/normalized_recipe.rs	FormulaNormalizedRecipe	G1-SLICE.5a.3f.1b	4.1
 formula canonical statement identity	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/canonical_recipe.rs	FormulaCanonicalStatement	G1-SLICE.5a.3f.1c	4.1
 formula canonical recipe identity	annexes/formula-recipe-inputs.md	crates/sc-core/src/recipe/canonical_recipe.rs	FormulaCanonicalRecipe	G1-SLICE.5a.3f.1c	4.1
+formula operand kinds	annexes/formula-declarations.md	crates/sc-core/src/recipe/semantic.rs	FormulaKind	G1-SLICE.5b.2a	4.1
+formula origins	annexes/formula-declarations.md	crates/sc-core/src/recipe/semantic.rs	FormulaOrigin	G1-SLICE.5b.2a	4.1
+formula reserved contexts	annexes/formula-declarations.md	crates/sc-core/src/recipe/semantic.rs	FormulaReservedContext	G1-SLICE.5b.2a	4.1
+formula reserved names	annexes/formula-declarations.md	crates/sc-core/src/recipe/semantic.rs	FormulaReservedName	G1-SLICE.5b.2a	4.1

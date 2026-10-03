@@ -8,8 +8,9 @@
 //! default unknowns or cached derived results; registry/evidence proof remains Design/G4.
 //! Shared [`name::MachineToken`] validates stable ASCII identifiers without deriving display labels.
 //! Borrowed formula lexing/expression/ordered-statement syntax, literal normalization and canonical
-//! expression/statement/recipe identity are implemented in [`recipe`]; name/type/binding validation,
-//! evaluation and the command bus remain future work. The core cross-builds to `wasm32-unknown-unknown`.
+//! expression/statement/recipe identity and closed semantic metadata are implemented in [`recipe`].
+//! Name/type/binding validation, evaluation and the command bus remain future work.
+//! The core cross-builds to `wasm32-unknown-unknown`.
 //!
 //! What lands here, and when:
 //!
@@ -18,7 +19,7 @@
 //! | `ontology` | identity, exact parameters, point/range topology resolution and repairs; structural pieces/copy plans, semantic notches, grainlines, allowances, construction/closure/pocket intent and sewing graphs; all four structural families complete | `G1-SLICE.3a`/`.3b`/`.3c` |
 //! | `value` | canonical length declarations with authored state/source/provenance; no unknown fallback or cached derived result | `G1-SLICE.4a.1` |
 //! | `name` | immutable ASCII lower-snake tokens, refusing grammar keywords; binding authority stays with the namespace owner | `G1-SLICE.4a.2a` |
-//! | `recipe` | borrowed expression/ordered-recipe syntax/spans/limits, whole recipe literal inputs and canonical expression/statement/recipe identity; validation/evaluation follow | `G1-SLICE.5a.1/.2b.2`; remaining `G1-SLICE.5` |
+//! | `recipe` | borrowed expression/ordered-recipe syntax/spans/limits, whole recipe literal inputs and canonical identity; closed kind/origin/reserved-context metadata; validation/evaluation follow | `G1-SLICE.5a`, `.5b.2a`; remaining `G1-SLICE.5` |
 //! | `command` | the typed command bus: atomic groups, preview/commit, revision preconditions, idempotency, undo granularity | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |
 //!
@@ -35,7 +36,7 @@ pub mod ontology;
 /// Stable machine identifiers, distinct from localized display names and scalar text values.
 pub mod name;
 
-/// Formula syntax front-end; expression/recipe validation and evaluation remain separate work.
+/// Formula syntax, inputs, identity and semantic metadata; validation/evaluation follow.
 pub mod recipe;
 
 /// Canonical length declarations with authored state and required provenance references.

@@ -1,7 +1,7 @@
 # Static formula validation evidence
 
-> **Status:** reference-instrument evidence at G1-SLICE.5b.1a/.1b/.1c.1. The product libraries still stop at
-> [syntax, inputs and canonical identity](formula-recipe-inputs.md). A valid syntax tree is not yet
+> **Status:** complete reference-instrument static review at G1-SLICE.5b.1. Product libraries implement
+> [syntax, inputs and canonical identity](formula-recipe-inputs.md) and [closed declaration metadata](formula-declarations.md). A valid syntax tree is not yet
 > a statically accepted recipe, a computed garment or a production approval.
 
 Static checking asks whether names and kinds fit the language before computing any value. A
@@ -75,9 +75,9 @@ inputs. It now admits precisely the five tolerance names. D113 repaired min/max'
 minimum of two operands; their one-kind variadic rows require one. This clarifies existing rules
 and changes no authored grammar or canonical identity bytes.
 
-The signature matrix is complete for its stated finite populations. The namespace/header review
-below is separate; atomic whole-recipe preflight remains G1-SLICE.5b.1b.2. Full static obligation
-closure belongs .1c. Product declarations, signatures and whole static graph remain .5b.2–.4.
+The signature matrix is complete for its stated finite populations. The namespace/header review,
+atomic whole-recipe preflight and full static obligation review below are also verified in the
+reference. Product sourced declarations, namespace, signatures and static graph remain .5b.2–.4.
 Numerical execution, operations, geometry and two-platform final acceptance retain their .5c–.5g
 owners. No product evaluation or API/MCP release claim follows.
 

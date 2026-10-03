@@ -856,3 +856,48 @@ Publication continuation is owned by the current parent frontier.
 [Exact completed records](G1-SLICE-canonical.md#completed-static-checklists--preserved-from13f8c75) are retained in the canonical sibling.
 
 Retention: complete relocated dab0ee4 task payloads verified by G1-SLICE.5b.1c.2.
+
+## Completed recognition and provenance checklists — preserved from d7a421e
+
+### G1-SLICE.5b.1c.2 — approved current-grammar recognition
+
+- [x] **REPRODUCE / ISSUE** — predecessor contract6 promised formula_unsupported for forms whose
+  actual static reference prints unbound-name/parse; static_review_contract.py baseline67, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — contract6 diagnostic cells conflict with grammar1.1/6's
+  closed keywords/unknown-call rule. static_review_contract.py --mutations →100cases/seven
+  actual source guard reds/three loaded-doc reds, rc=0; metadata/execution callbacks trapped.
+- [x] **FIX** — director ruling preserves current grammar: unknown calls unbound-name, malformed
+  syntax parse, recognized non-square powers unsupported; ordinary scalar names remain valid.
+- [x] **ADDRESSED (verified)** — static_review_contract.py --mutations →100cases/seven body reds/
+  three documentation reds, rc=0. Both exclusion cells/three keywords, five ordinary scalar names/
+  headers, unknown-call/parse/envelope precedence independently verified; actual source unchanged.
+- [x] **NO REGRESSION** — full structural reference and language16/publication9 pass, rc=0.
+  Signatures4032/namespace1139/recipe196 and numerical families stay watched; Rust bytes unchanged.
+  Final ledger/retention/staged gate receipts recorded in the evidence sibling before commit.
+- [x] **LOCKSTEP** — contract/grammar/static annex/ADR/owned review/live/frontier agree. Exact
+  completed-task payloads and oldest ledger/lesson/D124 report retained in existing bounded parts.
+  G1 remains5/18; complete product namespace/type/graph/numerical/geometry proof stays pending.
+  promotion: declined (application of the director's recorded ruling and existing static boundaries).
+
+
+### G1-SLICE.5e.3b — D121 executed contribution provenance
+
+- [x] **REPRODUCE / ISSUE** — actual predecessor reference accepts sin90 at T1 in both
+  assertion and within; scoped loader reproduction prints ACCEPT True/boolean1, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual Val only carries kind/value; stored/read/operator/
+  lazy/book paths discard derivation. provenance_contract.py --mutations exercises425 cases and
+  26 actual compiled guard/source/cache/consumer body assertion reds, rc=0, locating those seams.
+- [x] **FIX** — immutable sources through executed dependencies, coordinate-specific cache evidence,
+  actual book binding publication and two named-class guards. Director selects formula_domain.
+- [x] **ADDRESSED (verified)** — provenance_contract.py --mutations →425 cases/26 body reds,
+  rc=0; actual copied-book equal bound operands preflight21 then refuse named eps_num/hypot.
+  Exact/untaken/coordinate-independent T1 stays admissible; no product execution claim.
+- [x] **NO REGRESSION** — full reference runner and language16 pass, rc=0; earlier numeric/static/
+  origin/assertion controls remain watched. Publication/ledger/tree/staged-gate receipts recorded
+  in the evidence sibling before commit; Rust/serializer bytes unchanged.
+- [x] **LOCKSTEP** — ADR/ruling, diagnostic/runtime/static book, task/live/resume/tool routes align;
+  oldest ledger/lesson/D121 report and completed task payloads retained exactly in bounded parts.
+  promotion: declined (existing provenance, lazy execution and independent-evidence principles).
+
+
+Retention: complete predecessor payload preserved by .5b.2a.

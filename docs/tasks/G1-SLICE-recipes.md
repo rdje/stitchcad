@@ -3,96 +3,7 @@
 Bounded semantic sibling of [G1-SLICE](G1-SLICE.md). Complete settled recipe contracts and
 verification records are preserved exactly; current frontier remains in the main task tree.
 
-## Complete recipe byte contract protocol
-
-- ID: `G1-SLICE.5a.3f.1a`
-  Status: `done`
-  Goal: repair D109 exact-byte specification before complete recipe identity implementation.
-  Clean predecessor eee15a8; no jobs/user edits. Read grammar4, contract, worked examples, existing
-  D84/D95/D103 expression rules, statement/ordered APIs and governance6.1 delegated authority.
-  Decide engineering bytes under the director's standing delegation; engineer authors/applies same
-  decision and cannot approve its evidence. No new human/release/gate closure claimed.
-  Retain existing (bind name kind expression); select flat (assert name tolerance left right),
-  explicit (recipe statement...) envelope, empty (recipe), one space/no final newline. Names,
-  declared kind/symbolic tolerance and authored operand/statement order remain identity-bearing.
-  No sorting, duplicate merging, annotation inference, tolerance resolution or algebraic rewrite.
-  Typed identity domains remain distinct; bytes do not claim project schema, hash namespace or
-  canonical-input reader. Later store .7 must frame its typed fields/digest domains explicitly.
-  Independently author statement and empty/whole ordered recipe byte fixtures; actual recursive
-  book-reference parsing supplies every operand without infer/evaluate. Author-chunk recipe
-  coverage remains distinct from an independent whole-recipe parser. Check all six bindable kinds/
-  five tolerances plus aliases/raw angles/signs/calls/branches/order/empty/whitespace examples.
-  Actual renderer opcode/name/annotation/operand/envelope/order/newline/empty faults must fail
-  authored exact-byte assertions; exclusive finally restore exact tracked producer source.
-  Standing structural suite watches producer/anchors/classifier; no product serializer proof claim.
-  Book grammar + statement annex/index and a one-record technical decision expose exact bytes,
-  implementation status, independent reviewer/unapproved evidence and principal's reversal path.
-  Preserve closed subtree/closure/oldest ledger payloads exactly; shorten orientation input only
-  as needed for new record within unchanged map ceiling. Scoped syntax/book/recording gates.
-  Verification: actual reference16 statements/six kinds/five tolerances; nine whole sources/
-  twelve ordered chunks/all four displayed examples; nine interpreter authored-byte assertion reds/
-  exact restore. Focused syntax20/structural/language16/publication9 pass0. Product Rust source/test
-  bytes stay exact eee15a8; original subtree/closure/oldest ledgers/report payloads preserved.
-  Book51 chapters/21 APIs/1060 source/1640 rendered links; technical evidence unapproved.
-  Commit: `STITCHCAD-G1-0068`.
-
-### Complete recipe contract recording receipts
-
-Ledger9/13 pointer controls, archive28/184 CLI controls/175 logical reads and retention175 records/
-50 working Markdown/8712 decoded lines/673893 decoded bytes/330215 resident bytes pass0. Fresh
-reconstruction yields10open/99unique sealed/zero overlap0. Tree10lanes/13trees/nine siblings/zero gaps;
-glossary310/nine/158; feature105/29; uncertainty133/16; fixture20/four/five/zero mismatch all0.
-Original D109 report and oldest G1-0046 changelog/G1-0066 lesson payloads compare exact eee15a8.
-All scoped jobs observed terminal; final staged doctrine gate is required before commit.
-Two actual reference witnesses serialize bind(width, length, 25 mm) identically to its binding
-statement and recipe(bind(n, count, 1)) identically to its one-statement recipe. Typed field/digest
-framing is therefore a concrete .7 acceptance obligation, not a new keyword or untyped hash claim.
-Producer and watched structural rerun observed terminal rc=0 after all nine actual renderer reds;
-source restoration remains exact. Product implementations are unchanged.
-Staged make gate → === all doctrines green ===, rc=0; every scoped verification job observed terminal.
-
-## Complete recipe byte closure — preserved during G1-0069
-
-### `G1-SLICE.5a.3f.1a` — exact complete recipe byte contract
-
-- [x] **REPRODUCE / ISSUE** — D109 exact assertion/empty/envelope bytes absent from grammar4;
-  original report preserved byte-identically in sealed part40. Existing binding bytes stay fixed.
-- [x] **ROOT CAUSE (WHY + WHERE)** — `git diff -- docs/book/src/spec/formula-language/grammar.md`
-  shows predecessor's explicit missing contract versus exact new4.1 templates/examples, rc=0.
-- [x] **FIX** — retained bind, flat assert payload, ordered/empty recipe wrapper/single spaces/no
-  final newline; decision discloses same-party author/applier, review/reversal and future typed .7 owner.
-- [x] **ADDRESSED (verified)** — `recipe_byte_contract.py` actual reference syntax matches16 authored
-  statements/nine whole sources/twelve chunks/all four published examples; `recipe_byte_mutations.py`
-  nine actual authored-byte assertion reds/exact restoration, rc=0. No compiled product claim.
-- [x] **NO REGRESSION** — focused `cargo test` recipe11/statement9:20 passed, rc=0; structural/
-  language16/publication9 all rc=0. Every Rust source/test byte equals eee15a8; no behavior changed.
-- [x] **LOCKSTEP** — normative grammar/annex/index and decision/ADR/current live records align;
-  old subtree/closure/three sealed payloads exact; D109 technical gap closed, .1b normalization next.
-
-## Verification Log
-
-Pre-change protocol precedes instruments/book edits. Actual recursive reference syntax independently
-renders16 authored statement rows (six kinds/five tolerances), nine complete sources/twelve chunks and
-all four actual book/decision examples. Inference/evaluation trapped; no whole-reference-recipe parser
-or compiled product serializer claim. Two actual ordinary-call byte collisions confirm the typed
-identity boundary assigned to .7. Nine actual interpreter authored-byte assertion reds/exact
-source restore and normal rerun observed terminal0; classifier anchors/noise controls watched.
-Focused syntax20 (recipe11/statement9), structural suite/language16 and publication9 pass0:
-51 chapters/21 APIs/1060 source/1640 rendered links. Rust source/test bytes compare exact eee15a8.
-Ledger9 arms/13 pointers, archive28 arms/184 CLI controls/175 logical reads and retention175 records/
-50 working Markdown/8712 decoded lines/673893 decoded bytes/330215 resident bytes pass0.
-Fresh reconstructed defects10open/99unique sealed/zero overlap; tree10 lanes/13trees/nine siblings/
-zero gaps, glossary310/nine/158, feature105/29, uncertainty133/16, fixture20/four/five pass0.
-Predecessor complete syntax subtree/closure and three sealed payloads compare byte-identically0.
-Map orientation shortened within unchanged ceiling; no unique maintained facts or ceilings removed.
-Staged make gate → === all doctrines green ===, rc=0; independent evidence approval unapproved.
-
-## Commit Log
-
-| Leaf | Commit subject | Verification |
-| --- | --- | --- |
-| `.5a.3f.1a` | `STITCHCAD-G1-0068 (leaf G1-SLICE.5a.3f.1a): specify exact statement and ordered recipe identity bytes` | 16 statements/nine sources/nine actual reds |
-
+[Exact completed records](G1-SLICE-constructions.md#completed-recipe-byte-records--preserved-from-d7a421e) retained.
 
 ## Whole statement/recipe normalization protocol
 
@@ -725,13 +636,57 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Commit: `STITCHCAD-G1-0082`.
 
 - ID: `G1-SLICE.5b.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: immutable typed origin declarations and namespace/context resolution; numeric availability
   remains separate from declared kind. Geometry names identify prior operation outputs only.
   Acceptance: all origins/reserved contexts, spelling, collision/rebinding/forward refusal
   arguments and searched origins preserved; no implicit shadow/default or value computation.
   Core input boundary does not introduce sc-core→sc-measure dependency cycle; existing canonical
   declarations remain the sole authored values. D70 axes remain outside this namespace foundation.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.2a`
+  Status: `done`
+  Work unit: `STITCHCAD-G1-0083`; clean predecessor d7a421e, handoff0/no jobs/user changes.
+  Goal: closed product kind/origin/reserved-name/context vocabulary before sourced declarations.
+  Read: roadmap ADR-0003/§11 G1, contract2/3/3.1/5/6, grammar1.1/5/6/7.1, ontology3/5,
+  static obligation map, MachineToken/statement annotations and public input/reference interfaces.
+  Protocol: eight kinds/six bindable kinds, nine origins/eight reserved names/four context classes;
+  explicit enum metadata only, no values, state, numeric availability or context resolution.
+  Reuse five symbolic FormulaToleranceName variants; preserve MachineToken's closed keywords.
+  Public exhaustive populations/token lookup and exact conversions must agree bidirectionally
+  with independently authored normative rows, including absent-context kind/origin information.
+  Negative lookup preserves exact spelling: no trim/case repair or excluded-form reservations.
+  Independent public Rust contracts and loaded-book population controls; actual compiled mapping/
+  population/role faults must fail assertions with exact source restoration. Focused syntax/name,
+  strict make check, WASM, reference/language/publication and staged doctrine checks before commit.
+  Own D129 stale public review-owner prose repair and completed-task/oldest ledger/lesson retention
+  within existing parts/ceilings. No sourced declaration, namespace, type checker or runtime claim.
+  Acceptance: complete closed metadata contract, honest public status/examples and falsified controls.
+  Verification:5 public contracts/10 actual compiled body reds/exact restoration; strict native596/
+  49groups, WASM3, reference/language16/publication9 terminal0. Commit: `STITCHCAD-G1-0083`.
+
+- ID: `G1-SLICE.5b.2b`
+  Status: `pending`
+  Goal: immutable named declarations carrying existing canonical source identities/borrowed records,
+  binding kinds and prior-operation PointRef/EdgeRef; preserve single authored-value ownership.
+  Acceptance: no sc-core to sc-measure cycle or value/state fetch; authored input/recipe/reserved
+  sources distinguished and impossible source-kind combinations refused by types or typed errors.
+  Finalize public construction/ordinal/identity protocol after .2a, before code.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.2c`
+  Status: `pending`
+  Goal: checked initial namespace from ordered declaration pairs plus reserved metadata contexts.
+  Acceptance: reject collisions before indexing, retain both origins/source identities, all reserved
+  rebinding refusals; absent context does not hide declared kind; no value or geometry resolution.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.2d`
+  Status: `pending`
+  Goal: checked name reads/prior recipe bindings with typed searched origins and rebinding indices;
+  forward/self references never reorder. Whole-expression/recipe integration remains .5b.3/.4.
+  Acceptance: actual ordinal/span/source data only; no numeric/default/shadow behavior.
   Verification: `pending`; Commit: `pending`.
 
 - ID: `G1-SLICE.5b.3`
@@ -992,3 +947,30 @@ added current owning .1a evidence before it, leaving historical bytes unchanged.
 replaced a kind-only dict with Mapping so get(value) cannot silently default; actual twelfth fault
 proves the read trap. Draft count replacement was corrected for D112/D113 and1102 link identities
 before final checks. No checker, cap, grammar or product Rust changed; no needed job remains live.
+
+## Product semantic vocabulary receipts — .5b.2a,2026-10-03 (UTC)
+
+- New explicit metadata-only FormulaKind/Origin/ReservedName/ReservedContext; all8/six/9/8/four
+  populations checked against independently authored rows and actual canonical tables. Tolerance
+  roles reuse existing syntax variants. No provider, value/state availability or numeric conversion API.
+- Five public contracts pass0; ten actual compiled mapping/population/context/role/lookup faults
+  fail in Rust assertion bodies, rc101, and restore exact source. Standing structural suite verifies
+  unique anchors and rejects compiler/expect-only/passing-name noise; normal restored tests pass0.
+- Strict fmt/clippy/native make check:596 passes/49 result groups/0 failed, terminal0; WASM all
+  three libraries compile0. Initial test-fixture tuple triggered type_complexity; owned/fixed here
+  with named ReservedCase fields rather than a lint suppression. Final strict rerun passes.
+- Full reference structural and language16/publication9 terminal0;55 chapters/29 scoped API rows/
+  1135 source links/1762 rendered links, warning-free. No grammar or runtime result changed.
+- D129 scoped current orientation repaired; former .1b/.1c frontier promises absent. Original
+  seven-line/630B report retained exact in part52, digest645bed69; no history audit claimed.
+- Exact predecessor task91lines/7051B/6cae1199 moved from recipes to constructions,41lines/3295B/
+  24e36f3e checklists to measurements. Oldest ledger15lines/1243B/ffd1e428 and lesson12lines/1049B/
+  de02f486 match d7a421e predecessor; existing archived content unchanged, no ceiling raised.
+- Publication/tree/archive/ledger and staged gate recording receipts follow before commit.
+  G1 stays5/18 In Progress. Next .5b.2b final sourced-declaration protocol before implementation.
+- Final tree10lanes/13trees/10siblings/zero gaps and archive218 logical/32 resident records pass0.
+  Fresh materialization yields10open/118sealed disjoint defect IDs; exact task/ledger predecessor
+  comparisons pass0. Ledger9/0fail terminal0; final diff/fmt checks0. Staged doctrine gate follows.
+- Final staged make gate:13 checks/all green, rc=0; the initial gate refused unformatted rc0
+  evidence signatures. Actual output now uses rc=0/rc=101 inside all three required fresh boxes;
+  no gate or signature policy changed. Diff check0; pre-commit hook repeats the staged gate.

@@ -28,6 +28,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Executable garment constructions](spec/ontology-constructions.md)
 - [Executable ontology at G1](spec/ontology-implementation.md)
 - [Formula literal normalization](annexes/formula-literals.md)
+- [Formula declaration metadata](annexes/formula-declarations.md)
 - [Formula syntax API](annexes/formula-syntax.md)
 - [Static formula signature evidence](annexes/formula-static-validation.md)
 - [Formula namespaces and static headers](annexes/formula-static-validation.md#names-and-single-statement-static-checking)

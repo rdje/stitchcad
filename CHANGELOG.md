@@ -154,6 +154,16 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0083 - closed product semantic metadata (leaf `G1-SLICE.5b.2a`)
+
+Product FormulaKind/Origin/ReservedName/ReservedContext enumerate8 kinds/six binding kinds/nine
+origins/eight names/four context classes independently of value/state/availability. Five public
+contracts compare canonical rows in both directions; ten actual compiled assertion reds restore
+exact source. Strict native596/49groups, WASM3, full reference/language16/publication9 pass0.
+Metadata annex/examples/navigation/API map and live/task/resume records align; D129 stale review
+status fixed, exact task/ledger/lesson/report payloads retained. G1 stays5/18;10open/118sealed defects.
+Next .5b.2b sourced declarations; namespace/type/whole static acceptance and execution remain pending.
+
 ## STITCHCAD-G1-0082 - approved current-grammar recognition (leaf `G1-SLICE.5b.1c.2`)
 
 Director's D124 ruling preserves v1 grammar and its three keywords. Exclusion diagnostics now
@@ -368,23 +378,9 @@ checks pass:51 chapters/21 API rows/1058 source/1636 rendered links, language16/
 Prior proof/oldest ledgers preserve exact bytes. G1 stays5/18, defects11 open/98 sealed;
 next .5a.3f.1 exact recipe byte contract and normalization. No numeric runtime/MCP/signoff claim.
 
-## STITCHCAD-G1-0066 - ordered original-source recipe syntax (leaf `G1-SLICE.5a.3e.2`)
-
-FormulaRecipe retains immutable authored let/assert order, empty/multiline/same-line lists and
-original whole-source statement/header/node/error spans. Shared statement parsing keeps strict
-standalone consumption; nested keywords remain invalid expressions. Errors identify1-based
-statement indices where known; global ASCII preflight supplies no guessed ordinal. The fixed4096
-bound refuses the recognized4097th keyword with exact span/bound/measured count before its body.
-
-Eight public contracts/nine authored whole sources/14 original statements/18 operand identities,
-all21 worked statements/25 existing bytes,15 new actual compiled assertion reds and the prior15
-statement faults pass with exact restoration. Strict native550/release17/WASM3 and scoped checks
-pass. Recipe annex/progressive links/API map/index/README/live/task pointers align; prior proof
-and oldest ledgers retain exact payloads. G1 stays5/18; next .3e.3 coupled syntax/diagnostic review.
-D108 archive-copy offset is fixed with exact predecessor comparison and watched ledger checks.
-Complete recipe normalization/identity, static names/types/bindings and evaluation remain owned.
-
 
 | [`stitchcad-changelog-part78.md`](docs/history/stitchcad-changelog-part78.md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
 
 | [`stitchcad-changelog-part79.md`](docs/history/stitchcad-changelog-part79.md) | STITCHCAD-G1-0065 | 14 lines, 1183 bytes, `sha256:aa1df64f…` |
+
+| [`stitchcad-changelog-part80.md`](docs/history/stitchcad-changelog-part80.md) | G1-0066 ordered recipe syntax | 15 lines, 1243 bytes, `sha256:ffd1e428…` |

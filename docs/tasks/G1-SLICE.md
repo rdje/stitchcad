@@ -819,7 +819,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5e.3a` | `done` | D125 named reference assertion diagnostics; product execution pending |
 | done | `G1-SLICE.5e.1a` | `done` | D122/D127/D128 reference origin/context and state/metadata refusals |
 | done | `G1-SLICE.5e.3b` | `done` | D121 reference contributions/class refusal verified |
-| next | `G1-SLICE.5b.2` | `pending` | Typed product origin declarations and namespace/context resolution |
+| done | `G1-SLICE.5b.2a` | `done` | Closed kind/origin/reserved-context product metadata |
+| next | `G1-SLICE.5b.2b` | `pending` | Immutable sourced declarations before checked namespace |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -843,46 +844,27 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Acceptance Checklist
 
-### G1-SLICE.5b.1c.2 — approved current-grammar recognition
+### G1-SLICE.5b.2a — closed product semantic metadata
 
-- [x] **REPRODUCE / ISSUE** — predecessor contract6 promised formula_unsupported for forms whose
-  actual static reference prints unbound-name/parse; static_review_contract.py baseline67, rc=0.
-- [x] **ROOT CAUSE (WHY + WHERE)** — contract6 diagnostic cells conflict with grammar1.1/6's
-  closed keywords/unknown-call rule. static_review_contract.py --mutations →100cases/seven
-  actual source guard reds/three loaded-doc reds, rc=0; metadata/execution callbacks trapped.
-- [x] **FIX** — director ruling preserves current grammar: unknown calls unbound-name, malformed
-  syntax parse, recognized non-square powers unsupported; ordinary scalar names remain valid.
-- [x] **ADDRESSED (verified)** — static_review_contract.py --mutations →100cases/seven body reds/
-  three documentation reds, rc=0. Both exclusion cells/three keywords, five ordinary scalar names/
-  headers, unknown-call/parse/envelope precedence independently verified; actual source unchanged.
-- [x] **NO REGRESSION** — full structural reference and language16/publication9 pass, rc=0.
-  Signatures4032/namespace1139/recipe196 and numerical families stay watched; Rust bytes unchanged.
-  Final ledger/retention/staged gate receipts recorded in the evidence sibling before commit.
-- [x] **LOCKSTEP** — contract/grammar/static annex/ADR/owned review/live/frontier agree. Exact
-  completed-task payloads and oldest ledger/lesson/D124 report retained in existing bounded parts.
-  G1 remains5/18; complete product namespace/type/graph/numerical/geometry proof stays pending.
-  promotion: declined (application of the director's recorded ruling and existing static boundaries).
+- [x] **REPRODUCE / ISSUE** — prior product API stops at syntax annotations; scoped declaration
+  metadata foundation is next .5b.2. D129 stale orientation reproduced by exact current prose.
+- [x] **ROOT CAUSE (WHY + WHERE)** — kind/binding, semantic origin/value provider and tolerance/
+  size roles need distinct closed metadata. formula_semantic_contract →5 tests/0 failed, rc=0,
+  compares independent8/six/9/8 populations with actual canonical table rows in both directions.
+- [x] **FIX** — four metadata types preserve all normative roles without provider/value access.
+  Reuse existing symbolic tolerances and preserve MachineToken/D124 current keyword set.
+- [x] **ADDRESSED (verified)** — semantic_mutations.py →10 actual compiled body assertion reds,
+  rc=101 per faulty build, producer restored exactly; script rc=0. Normal restored5 tests pass0.
+  Every context/role mapping, geometry non-bindability, exact lookup and closed population checked.
+- [x] **NO REGRESSION** — make check →596 native passes/49 groups, strict fmt/clippy rc=0; WASM3
+  compile0; full structural/reference/language16/publication9 terminal rc=0. No runtime or grammar claim.
+- [x] **LOCKSTEP** — metadata annex/examples/API map/status/navigation and README/live/task/
+  resume agree;55 chapters/29 APIs/1135 source/1762 rendered links verified0. D129 fixed;
+  exact predecessor task/ledger/lesson payloads retained in bounded parts, no caps raised.
+  promotion: declined (existing kinds, origins, context and no-value-access principles).
 
 
-### G1-SLICE.5e.3b — D121 executed contribution provenance
-
-- [x] **REPRODUCE / ISSUE** — actual predecessor reference accepts sin90 at T1 in both
-  assertion and within; scoped loader reproduction prints ACCEPT True/boolean1, rc=0.
-- [x] **ROOT CAUSE (WHY + WHERE)** — actual Val only carries kind/value; stored/read/operator/
-  lazy/book paths discard derivation. provenance_contract.py --mutations exercises425 cases and
-  26 actual compiled guard/source/cache/consumer body assertion reds, rc=0, locating those seams.
-- [x] **FIX** — immutable sources through executed dependencies, coordinate-specific cache evidence,
-  actual book binding publication and two named-class guards. Director selects formula_domain.
-- [x] **ADDRESSED (verified)** — provenance_contract.py --mutations →425 cases/26 body reds,
-  rc=0; actual copied-book equal bound operands preflight21 then refuse named eps_num/hypot.
-  Exact/untaken/coordinate-independent T1 stays admissible; no product execution claim.
-- [x] **NO REGRESSION** — full reference runner and language16 pass, rc=0; earlier numeric/static/
-  origin/assertion controls remain watched. Publication/ledger/tree/staged-gate receipts recorded
-  in the evidence sibling before commit; Rust/serializer bytes unchanged.
-- [x] **LOCKSTEP** — ADR/ruling, diagnostic/runtime/static book, task/live/resume/tool routes align;
-  oldest ledger/lesson/D121 report and completed task payloads retained exactly in bounded parts.
-  promotion: declined (existing provenance, lazy execution and independent-evidence principles).
-
+[Exact completed records](G1-SLICE-measurements.md#completed-recognition-and-provenance-checklists--preserved-from-d7a421e) retained.
 
 Current code evidence is fresh, ticked and tool-backed in its owning leaf. Future ontology changes
 also run glossary/API, feature and publication checks. Prior checklists and authoring rules remain in
@@ -990,3 +972,5 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 - `2026-10-02` (UTC): .5e.3b/STITCHCAD-G1-0081 repairs D121;425 cases/26 actual reds; director formula_domain ruling. Next D124 ruling/closure.
 
 - `2026-10-03` (UTC): .5b.1c.2/STITCHCAD-G1-0082 applies D124 current grammar;100 cases/seven source/three doc reds. Static reference .5b.1 done; .5b.2 next.
+
+- `2026-10-03` (UTC): .5b.2a/STITCHCAD-G1-0083 adds closed product metadata;5 contracts/10 actual reds, strict native596/WASM3. .2b next.

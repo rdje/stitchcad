@@ -3,7 +3,7 @@ name = "sc-core"
 version = "0.1.0"
 edition.workspace = true
 license.workspace = true
-description = "StitchCAD's garment ontology, construction recipe and command bus. Identity, structural ontology, authored inputs, formula expression/ordered-recipe syntax, whole recipe literal normalization and canonical expression/statement/recipe identity implemented at G1; validation, evaluation and command bus follow."
+description = "StitchCAD's garment ontology, construction recipe and command bus. Identity, structural ontology, authored inputs, formula expression/ordered-recipe syntax, whole recipe literal normalization and canonical expression/statement/recipe identity and closed semantic metadata implemented at G1; validation, evaluation and command bus follow."
 repository.workspace = true
 
 [lints]

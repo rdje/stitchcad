@@ -895,3 +895,8 @@ D128 closes at G1-SLICE.5e.1a; original report retained in
 [`stitchcad-defects-part49.md`](../history/stitchcad-defects-part49.md). Explicit populated states
 are checked; unknown-plus-value and invalid states refuse, unknown lazy geometry cannot resolve.
 Final1466 controls/thirteen actual body reds verify state guards and prior origin/context repairs.
+
+D129 closes at G1-SLICE.5b.2a: stale public orientation now reports completed reference review
+and the precise new product metadata boundary. Original scoped report retained in
+[`stitchcad-defects-part52.md`](../history/stitchcad-defects-part52.md); publication/loaded-table
+controls verify registered APIs and canonical metadata, with product namespace/evaluation pending.

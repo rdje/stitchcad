@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-03 UTC)_ — declared kind does not require a value provider
+
+- Product semantic vocabulary separates eight operand kinds/six binding annotations, nine origins,
+  eight reserved names/four required contexts. Physical tolerance retains tolerance origin/profile
+  provider; size inputs have no tolerance role. Existing symbolic tolerance variants stay canonical.
+- Five independent public contracts compare actual normative rows in both directions, exact lookup
+  and ordinary D124 names; ten actual compiled mapping/population/role faults fail body assertions
+  and restore source exactly. Strict native596/WASM3 and reference/book controls pass0.
+- Initial tuple fixture failed strict type_complexity; replaced with named ReservedCase fields,
+  no lint exemption. D129 current review-status prose repaired; product namespace/evaluator pending.
+- Exact predecessor task blocks and oldest ledger/provenance lesson/new D129 original report sealed
+  within existing bounds. No new declaration values or proof authority invented.
+- promotion: declined (existing kind/origin/context isolation and independently falsified controls).
+
 ## _(2026-10-03 UTC)_ — exclusions follow the grammar that recognizes them
 
 - D124 promised unsupported for constructs with no excluded-form source grammar. Director keeps
@@ -14,19 +28,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Complete reference static review closes .5b.1/.1c; typed product namespace .5b.2 is next.
   Original task blocks and oldest ledger/lesson/D124 report retain predecessor payloads.
 - promotion: declined (director ruling recorded in ADR-0003; existing static/no-execution doctrine).
-
-## _(2026-10-02 UTC)_ — a rounded answer does not erase its derivation
-
-- D121 accepted sin90 at T1 because Val/stored/read/operator/book paths kept only numeric values.
-  Immutable source sets retain executed dependencies, including zero cancellation and conditions.
-  Untaken branches contribute nothing; separate coordinate sets prevent unrelated x/y taint.
-- Actual book publication and lazy geometry/cache retain sources. Director selects formula_domain;
-  both class guards preserve earlier errors and symbolic classes independent of supplied magnitudes.
--425 independent cases/26 in-memory actual body reds and copied-book equal bound operands refusal
-  verify the repair; full reference/language16 green. No arbitrary transcendental/product proof.
-- Oldest complete ledger/lesson/D121 report and completed task blocks retain original payloads;
-  adopted external policy bodies independently match read-only sources; cleanup remains current.
-- promotion: declined (existing provenance, laziness and independently falsified evidence rules).
 
 # Sealed archive — earlier lessons
 
@@ -167,3 +168,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part79.md`](docs/history/stitchcad-devnotes-part79.md) | G1-0079 assertion lesson | 13 lines, 1135 bytes, `sha256:71b5fdbc…` |
 
 | [`stitchcad-devnotes-part80.md`](docs/history/stitchcad-devnotes-part80.md) | origin and context lesson | 16 lines, 1471 bytes, `sha256:8576788c…` |
+
+| [`stitchcad-devnotes-part81.md`](docs/history/stitchcad-devnotes-part81.md) | executed provenance lesson | 12 lines, 1049 bytes, `sha256:de02f486…` |

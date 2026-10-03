@@ -26,6 +26,10 @@ metadata and global refusal context. The same normalized owners produce owned st
 identity bytes for comparison; [the example](annexes/formula-recipe-inputs.md#own-canonical-statement-and-recipe-identity)
 shows alias equality and preserved order. Binding, numerical execution and project storage follow.
 
+[Formula declaration metadata](annexes/formula-declarations.md) describes kinds, origins and the
+contexts that supply reserved names. These libraries can identify a name's declared kind without
+an export, profile or size value. Namespace/type acceptance and execution remain pending.
+
 ## Planned workflows
 
 Recipe evaluation, geometric construction, grading, profiles, storage and crash recovery, the command

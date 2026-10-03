@@ -9,7 +9,8 @@
 //! refusals without binding or evaluating. Complete recipes retain authored order, global spans and
 //! the fixed statement bound. Whole statement/recipe input normalization preserves metadata and
 //! contextual literal refusals. Owned expression/statement/recipe bytes preserve typed identity;
-//! semantic validation, binding and evaluation follow.
+//! Closed kind/origin/reserved-context metadata is available independently of values;
+//! namespace/type validation, binding and evaluation follow.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -55,3 +56,6 @@ pub use normalized_recipe::{
 
 mod canonical_recipe;
 pub use canonical_recipe::{FormulaCanonicalRecipe, FormulaCanonicalStatement};
+
+mod semantic;
+pub use semantic::{FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName};
