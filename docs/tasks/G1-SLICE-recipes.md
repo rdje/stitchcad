@@ -687,26 +687,25 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.3a`
   Status: `done`
-  Goal: closed pure operator kind signatures from normative grammar5/5.1 before expression checking.
-  Work unit: `STITCHCAD-G1-0090`; predecessor63c0c7d clean/message empty/untracked/no jobs.
-  Pre-code full grammar1/2/5/5.1/6/7, contract2/4.1/5.2, FormulaBinaryOperator/FormulaKind and
-  normalized unary/binary views reviewed. Preserve existing syntax/operator tokens and type worlds.
-  Add FormulaUnaryOperator Negate/Square with canonical node tokens and result_kind metadata.
-  Existing FormulaBinaryOperator gets result_kind for all ten variants plus arc_length_hint only
-  for refused angle×length in either order. Return Option<FormulaKind>; absence is a signature
-  refusal, not numeric division/domain or accepted expression. Typed contextual errors remain .3c.
-  Arithmetic T is length/angle/area/ratio/count; negation excludes count, square permits length/
-  ratio/count. Addition/subtraction/comparisons require equal arithmetic kinds. Multiplication
-  follows commutative table; quotient preserves authored direction, including count/ratio versus
-  ratio/count and integer count/count→ratio. No implicit promotion or value/geometry query.
-  Independently enumerate every8-kind unary and64 ordered binary pairs for every operator, compare
-  full closed normative rows in both directions and exact hint population. Named dimensions/data
-  and static error integration remain .3c; no numeric or graph acceptance claimed from metadata.
-  Actual compiled operator/result/commutativity/direction/count/Boolean/hint faults must fail body
-  assertions and restore source. Strict native/WASM, focused reference/book/ledger/retention/gate;
-  exact predecessor evidence/oldest records retained within bounded surfaces. Per-leaf commit.
-  Verification: four public contracts/656 kind cases/14 actual body reds, strict647 native tests/54
-  groups/WASM and focused controls pass, rc=0; receipts below. Commit: `STITCHCAD-G1-0090`.
+  Goal: closed operator kind signatures; verification retained below.
+  Commit: `STITCHCAD-G1-0090`.
+  [Exact completed operator signatures protocol](G1-SLICE-names.md#completed-operator-signatures-protocol--preserved-from-dc346b4) retained.
+
+- ID: `G1-SLICE.5b.3a.1`
+  Status: `done`
+  Goal: D134 reference guidance and D135 review status match the implemented contract.
+  Work unit: `STITCHCAD-G1-0091`; predecessor dc346b4 clean/message empty/untracked.
+  Tools-first actual parse/infer reproduced arc_length guidance on both angle/length quotients,
+  although grammar5.1 names an angle-times-length product and product operator metadata restricts
+  the hint to Multiply. Existing static matrix incorrectly requires that same quotient guidance.
+  Own the small blocking repair before .3b: restrict reference hint to multiplication; verify its
+  presence AND absence independently over every binary pair/operator, actual compiled in-memory
+  regression and missing-hint faults, unchanged source on disk after controls. No grammar change,
+  accepted signatures, tokens or arithmetic behavior change. Retain exact .3a protocol/receipts/
+  checklist and oldest live records before bounded-document growth; focused structural/language/
+  publication/ledger/retention/coverage/gates and per-leaf commit. No Rust mutation. D135 touched-annex metadata status is corrected with precise public API links.
+  Verification: static4032 cases/14 actual reds, focused structure/language16/publication10/
+  ledger9+13/retention/coverage pass, rc=0; exact grammar unchanged. Commit: `STITCHCAD-G1-0091`.
 
 - ID: `G1-SLICE.5b.3b`
   Status: `pending`
@@ -972,19 +971,4 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 [Exact receipts](G1-SLICE-names.md#completed-ordered-scopes-receipts--preserved-from-63c0c7d) retained.
 
 
-## Operator signature receipts — .5b.3a,2026-10-03 (UTC)
-
-Public4 contracts cover16 unary/640 ordered binary cases and full actual normative rows;7 unary/
-71 binary acceptances,17 products/14 quotients/2 hints, all12 symbols match unchanged independent
-canonical serialization. Fourteen actual compiled body assertion reds restore source byte-exact,
-rc=0; watched anchors/classifier reject compiler/unwrap/name noise. make check:647 passed/54
-result groups, strict fmt/clippy green; make wasm:three libraries, rc=0. Full structural/reference/
-language16/publication10/ledger9+13 controls pass, rc=0;57 chapters/40 APIs/1161 source/1811 rendered
-links. Prior protocol28lines2466B SHA78912bdc…, receipts15lines1301B SHA69044ab9…, checklist
-20lines1786B SHA09862a29… retained byte-identically from63c0c7d. Older reference protocols17lines/
-1427B SHA8c644d12… and14lines1124B SHA8890c07e… retained exactly. Oldest ledger9lines773B
-SHAdf9a2d7c…/lesson15lines1296B SHAffe6d2c5… sealed exactly, no previous archive changes.
-Retention236 logical records/50 working Markdown/10556 decoded lines/795551 decoded bytes/
-384065 resident bytes, rc=0. Fresh defects10open/122unique sealed/zero duplicate/overlap;
-tree census10lanes/13trees/11siblings/zero unowned/orphans/dead links, rc=0. G1 remains5/18;
-built-in/selector signatures .5b.3b next, then bounded expression/whole graph .3c/.4.
+[Exact completed operator signatures receipts](G1-SLICE-names.md#completed-operator-signatures-receipts--preserved-from-dc346b4) retained.

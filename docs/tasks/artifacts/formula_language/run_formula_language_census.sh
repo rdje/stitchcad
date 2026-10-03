@@ -581,7 +581,7 @@ class Evaluator:
             res = pair.get(op) if pair else None
             if res is None:
                 hint = " — an arc's length is arc_length(angle, radius)" \
-                    if {a, b} == {"angle", "length"} else ""
+                    if op == "*" and {a, b} == {"angle", "length"} else ""
                 raise FErr("formula_dimension", "%s has no rule for %s and %s%s" % (op, a, b, hint))
             return res
         if tag == "if":

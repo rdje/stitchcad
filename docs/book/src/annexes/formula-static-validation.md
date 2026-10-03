@@ -21,6 +21,7 @@ while numerical execution must refuse a read of its missing value. The normative
 | within(width, height, size_index) | formula_dimension | a size ordinal is not a tolerance |
 | arc_length(sweep, radius) | length, for angle and length | explicit angle/radius function |
 | sweep * radius | formula_dimension, naming arc_length | the product has no stored kind |
+| sweep / radius | formula_dimension | the quotient has no signature; arc_length advice would change its meaning |
 | area_value / width | length | directed area/length quotient |
 | width / area_value | formula_dimension | reversing a quotient changes its dimension |
 | point_at(edge_value, edge_position) | point, for edge and ratio | reads existing geometry |
@@ -62,11 +63,12 @@ python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.p
 bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
 ```
 
-Twelve in-memory variants of the actual reference predicates must fail the matrix assertions:
-variadic base arity, tolerance role, count negation, square result, addition consistency, directed
-quotient, variadic homogeneity, generic arithmetic membership, Boolean condition, matching branches
-envelope precedence and an environmental value read through get. The producer on disk remains unchanged. These are actual failed body
-assertions, not merely nonzero script exits.
+Fourteen in-memory variants of the actual reference predicates must fail the matrix assertions:
+quotient product advice, missing product advice, variadic base arity, tolerance role, count negation,
+square result, addition consistency, directed quotient, variadic homogeneity, generic arithmetic
+membership, Boolean condition, matching branches, envelope precedence and an environmental value
+read through get. The producer on disk remains unchanged. These are actual failed body assertions,
+not merely nonzero script exits.
 
 ## Repairs and remaining obligations
 
@@ -74,11 +76,15 @@ D112 repaired within's reference guard, which admitted all reserved names, inclu
 inputs. It now admits precisely the five tolerance names. D113 repaired min/max's undocumented
 minimum of two operands; their one-kind variadic rows require one. This clarifies existing rules
 and changes no authored grammar or canonical identity bytes.
+D134 repairs product guidance incorrectly attached to refused angle/length quotients; the matrix
+now asserts both presence and absence of that advice for every operator/kind pair. The two actual
+faults restore the quotient mistake and suppress valid product advice, respectively.
 
 The signature matrix is complete for its stated finite populations. The namespace/header review,
 atomic whole-recipe preflight and full static obligation review below are also verified in the
-reference. Product [sourced declarations](formula-declarations.md#immutable-sourced-declarations) are
-available; namespace, signatures and static graph remain .5b.2c/.2d–.4.
+reference. Product [sourced declarations and namespaces](formula-declarations.md),
+[ordered metadata scopes](formula-name-scopes.md) and [operator signatures](formula-operator-signatures.md)
+are available. Built-in signatures, accepted expressions and whole static graph remain .5b.3b–.4.
 Numerical execution, operations, geometry and two-platform final acceptance retain their .5c–.5g
 owners. No product evaluation or API/MCP release claim follows.
 

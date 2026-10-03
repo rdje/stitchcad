@@ -918,3 +918,10 @@ D132/D133 close at G1-SLICE.5b.2c.2; original reports retained in
 complete generic in actual HTML; publication producer captures/refuses actual builder warnings.
 Ten publication controls include an actual copied-book unclosed generic and warning-free repair,
 with the exact rendered generic asserted, rc=0. Existing eight topology/status refusals remain.
+
+
+D134/D135 close at G1-SLICE.5b.3a.1; original reports retained in
+[`stitchcad-defects-part56.md`](../history/stitchcad-defects-part56.md). Multiplication alone gets
+arc_length advice, independently checked for presence/absence over all operators/kinds with actual
+quotient-regression/missing-product assertion faults. Touched review status names completed product
+metadata accurately; full accepted expression/graph/evaluation remains separately owned.

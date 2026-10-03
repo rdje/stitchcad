@@ -277,3 +277,100 @@ Tree census10lanes/13trees/11siblings/zero unowned/orphans/dead links, rc=0. Nam
   Verification:1139 namespace/196 whole-source cases;13 namespace/14 whole-preflight actual
   assertion reds, worked replay and per-recipe measurement; no execution/value/geometry reads.
   Children .1b.1/.1b.2 done; full .1c review closes at .1c.2. Commit: `STITCHCAD-G1-0076`/`STITCHCAD-G1-0077`.
+
+## Completed operator signatures protocol — preserved from dc346b4
+
+Exact payload: 23lines/1976B, SHA2567ea7b24e149ed358afc7cbfbd33157fb450bf7e978e5920a320baf3d4f820b54.
+
+- ID: `G1-SLICE.5b.3a`
+  Status: `done`
+  Goal: closed pure operator kind signatures from normative grammar5/5.1 before expression checking.
+  Work unit: `STITCHCAD-G1-0090`; predecessor63c0c7d clean/message empty/untracked/no jobs.
+  Pre-code full grammar1/2/5/5.1/6/7, contract2/4.1/5.2, FormulaBinaryOperator/FormulaKind and
+  normalized unary/binary views reviewed. Preserve existing syntax/operator tokens and type worlds.
+  Add FormulaUnaryOperator Negate/Square with canonical node tokens and result_kind metadata.
+  Existing FormulaBinaryOperator gets result_kind for all ten variants plus arc_length_hint only
+  for refused angle×length in either order. Return Option<FormulaKind>; absence is a signature
+  refusal, not numeric division/domain or accepted expression. Typed contextual errors remain .3c.
+  Arithmetic T is length/angle/area/ratio/count; negation excludes count, square permits length/
+  ratio/count. Addition/subtraction/comparisons require equal arithmetic kinds. Multiplication
+  follows commutative table; quotient preserves authored direction, including count/ratio versus
+  ratio/count and integer count/count→ratio. No implicit promotion or value/geometry query.
+  Independently enumerate every8-kind unary and64 ordered binary pairs for every operator, compare
+  full closed normative rows in both directions and exact hint population. Named dimensions/data
+  and static error integration remain .3c; no numeric or graph acceptance claimed from metadata.
+  Actual compiled operator/result/commutativity/direction/count/Boolean/hint faults must fail body
+  assertions and restore source. Strict native/WASM, focused reference/book/ledger/retention/gate;
+  exact predecessor evidence/oldest records retained within bounded surfaces. Per-leaf commit.
+  Verification: four public contracts/656 kind cases/14 actual body reds, strict647 native tests/54
+  groups/WASM and focused controls pass, rc=0; receipts below. Commit: `STITCHCAD-G1-0090`.
+
+
+## Completed operator signatures receipts — preserved from dc346b4
+
+Exact payload: 16lines/1393B, SHA25618db956df6381c807e0a5a078e28af685960d2069b071f017f9566a5f2e381d3.
+
+## Operator signature receipts — .5b.3a,2026-10-03 (UTC)
+
+Public4 contracts cover16 unary/640 ordered binary cases and full actual normative rows;7 unary/
+71 binary acceptances,17 products/14 quotients/2 hints, all12 symbols match unchanged independent
+canonical serialization. Fourteen actual compiled body assertion reds restore source byte-exact,
+rc=0; watched anchors/classifier reject compiler/unwrap/name noise. make check:647 passed/54
+result groups, strict fmt/clippy green; make wasm:three libraries, rc=0. Full structural/reference/
+language16/publication10/ledger9+13 controls pass, rc=0;57 chapters/40 APIs/1161 source/1811 rendered
+links. Prior protocol28lines2466B SHA78912bdc…, receipts15lines1301B SHA69044ab9…, checklist
+20lines1786B SHA09862a29… retained byte-identically from63c0c7d. Older reference protocols17lines/
+1427B SHA8c644d12… and14lines1124B SHA8890c07e… retained exactly. Oldest ledger9lines773B
+SHAdf9a2d7c…/lesson15lines1296B SHAffe6d2c5… sealed exactly, no previous archive changes.
+Retention236 logical records/50 working Markdown/10556 decoded lines/795551 decoded bytes/
+384065 resident bytes, rc=0. Fresh defects10open/122unique sealed/zero duplicate/overlap;
+tree census10lanes/13trees/11siblings/zero unowned/orphans/dead links, rc=0. G1 remains5/18;
+built-in/selector signatures .5b.3b next, then bounded expression/whole graph .3c/.4.
+
+## Completed operator signatures checklist — preserved from dc346b4
+
+Exact payload: 18lines/1453B, SHA25673cc1a1e3a0239ef31a6a0e5688b4084eab2ef5577733d6689e514b7ad4fdce7.
+
+### G1-SLICE.5b.3a — closed operator kind signatures
+
+- [x] **REPRODUCE / ISSUE** — normalized operator syntax lacks kind-signature metadata. Public
+  formula_operator_signature_contract →four contracts/656 kind cases pass, rc=0; canonical bytes
+  and complete actual normative rows independently verify the closed operator vocabulary.
+- [x] **ROOT CAUSE (WHY + WHERE)** — inferred promotion or symmetric division can erase declared
+  kinds/direction. operator_signature_mutations.py →14 compiled body assertion reds/exact restore,
+  rc=0; count/Boolean/result/order/hint faults demonstrate the needed explicit matrix.
+- [x] **FIX** — pure unary/binary result-kind metadata, exact tokens and angle×length hint;
+  no operand/source value or numeric-domain query. Contextual errors remain .3c.
+- [x] **ADDRESSED (verified)** —16 unary/640 binary cases/actual rows/12 canonical symbols and14
+  actual body reds pass, rc=0;7/71 accepted,17 products/14 quotients/2 hints, exact source restore.
+- [x] **NO REGRESSION** — make check →647 passed/54 groups, strict fmt/clippy green; make wasm
+  →three libraries; reference/language16/publication10/ledger9+13 controls pass, rc=0.
+- [x] **LOCKSTEP** — bounded book/API/live/task scope and exact prior/oldest records align;
+  full function/expression/whole proofs remain .3b–.4. promotion: declined (existing closed kind
+  signatures, operand order and no-implicit-conversion contracts).
+
+
+## D134/D135 guidance checklist — .5b.3a.1
+
+- [x] **REPRODUCE / ISSUE** — actual parse/infer on both angle/length quotients emitted arc_length
+  advice; multiplication did too. Read-only reproduction rc=0, before repair. Review chapter still
+  named namespaces pending after0087–0089 and operator signatures pending after0090.
+- [x] **ROOT CAUSE (WHY + WHERE)** — reference absent-pair guard ignored operator; independent
+  matrix required the same wrong quotient hint. static_signature_contract.py --mutations →4032
+  actual cases/14 compiled assertion reds/unchanged producer bytes, rc=0, including restored
+  quotient-regression and suppressed-product controls. Guidance predicate matches the actual advice
+  phrase, distinguishing an arc_length call's name from advice about a product.
+- [x] **FIX** — multiplication-only reference hint; all binary operator/pair cases assert advice
+  presence and absence. Review links exact implemented metadata scopes and remaining .3b–.4.
+- [x] **ADDRESSED (verified)** —4032 parse/infer cases/14 actual body reds pass, rc=0. Grammar bytes
+  equal dc346b4; signatures/tokens/numeric behavior unchanged. D134/D135 original reports retained
+  exactly:15lines1306B SHAe4113b96c8a5f3d29e8fe2cc7fe2de5dfe5a9ef0c80f73086f17d22ec8664ddb.
+- [x] **NO REGRESSION** — complete structural/reference, language16, publication10, ledger9+13,
+  coverage10lanes/13trees/11siblings/zero gaps and retention239records/53workingMD pass, rc=0.
+  Publication57chapters/40API/1163source/1813render links; no Rust changes or Cargo mutation.
+- [x] **LOCKSTEP** — frontier resumes .3b; live10open/124sealed, G1 remains5/18. First scratch
+  census omitted the heading-form D131; complete three-form marker census proves IDs1–135
+  except intentionally unassigned D18, zero duplicates/overlap. Prior protocol23lines1976B
+  SHA7ea7b24e…/receipts16lines1393B SHA18db956d…/checklist18lines1453B SHA73cc1a1e… retained
+  byte-exact. Oldest ledger10lines878B SHA32b87b67…/lesson13lines1106B SHAb0a427bf… sealed.
+  promotion: declined (existing dimensional signature and precise proof-boundary contracts).

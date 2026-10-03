@@ -109,13 +109,14 @@ def contracts(replacement=None, verbose=True):
         setattr(reference, method, trapped)
     checks = 0
 
-    def check(source, expected, token='formula_dimension', hint=None):
+    def check(source, expected, token='formula_dimension', hint=False):
         nonlocal checks
         try:
             result = reference.infer(reference.parse(source), env)
         except namespace['FErr'] as error:
             assert expected is None and error.token == token, ('signature refusal', source, expected, error)
-            assert hint is None or hint in error.msg, ('missing signature hint', source, error)
+            advice = "an arc's length is arc_length(angle, radius)" in error.msg
+            assert hint == advice, ('signature hint mismatch', source, error)
         else:
             assert result == expected, ('signature mismatch', source, expected, result)
         checks += 1
@@ -131,9 +132,9 @@ def contracts(replacement=None, verbose=True):
         for op in ['==', '!=', '<', '<=', '>', '>=']:
             check(operands % op, 'boolean' if same else None)
         check(operands % '*', MULTIPLICATION.get((left, right)),
-              hint='arc_length' if {left, right} == {'angle', 'length'} else None)
+              hint={left, right} == {'angle', 'length'})
         check(operands % '/', QUOTIENT.get((left, right)),
-              hint='arc_length' if {left, right} == {'angle', 'length'} else None)
+              hint=False)
 
     # Exhaustive positional kinds for every fixed signature at its arity; every variadic
     # kind combination at one/two/three args, plus widest accepted source argument boundary.
@@ -193,6 +194,10 @@ def contracts(replacement=None, verbose=True):
 
 
 FAULTS = [
+    ('quotient product guidance', 'if op == "*" and {a, b} == {"angle", "length"} else ""',
+     'if {a, b} == {"angle", "length"} else ""'),
+    ('missing product guidance', 'if op == "*" and {a, b} == {"angle", "length"} else ""',
+     'if False else ""'),
     ('one-argument variadic', 'if len(kinds) < len(want_list): return False',
      'if len(kinds) < max(2, len(want_list)): return False'),
     ('tolerance name role', 'and args[2][1] in {"eps_num", "eps_geo", "eps_fmt", "eps_imp", "eps_phys"}):',

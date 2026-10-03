@@ -827,6 +827,7 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.2d.1` | `done` | Exact checked initial name reads |
 | done | `G1-SLICE.5b.2d.2` | `done` | Actual prior recipe binding scope |
 | done | `G1-SLICE.5b.3a` | `done` | Closed operator kind matrix |
+| done | `G1-SLICE.5b.3a.1` | `done` | D134/D135 guidance/review repair |
 | current | `G1-SLICE.5b.3b` | `pending` | Built-in/selector signatures |
 | next | `G1-SLICE.5b.3c` | `pending` | Bounded expression checking |
 
@@ -854,23 +855,9 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Acceptance Checklist
 
-### G1-SLICE.5b.3a — closed operator kind signatures
+[Completed D134/D135 checklist](G1-SLICE-names.md#d134d135-guidance-checklist--5b3a1) retained.
 
-- [x] **REPRODUCE / ISSUE** — normalized operator syntax lacks kind-signature metadata. Public
-  formula_operator_signature_contract →four contracts/656 kind cases pass, rc=0; canonical bytes
-  and complete actual normative rows independently verify the closed operator vocabulary.
-- [x] **ROOT CAUSE (WHY + WHERE)** — inferred promotion or symmetric division can erase declared
-  kinds/direction. operator_signature_mutations.py →14 compiled body assertion reds/exact restore,
-  rc=0; count/Boolean/result/order/hint faults demonstrate the needed explicit matrix.
-- [x] **FIX** — pure unary/binary result-kind metadata, exact tokens and angle×length hint;
-  no operand/source value or numeric-domain query. Contextual errors remain .3c.
-- [x] **ADDRESSED (verified)** —16 unary/640 binary cases/actual rows/12 canonical symbols and14
-  actual body reds pass, rc=0;7/71 accepted,17 products/14 quotients/2 hints, exact source restore.
-- [x] **NO REGRESSION** — make check →647 passed/54 groups, strict fmt/clippy green; make wasm
-  →three libraries; reference/language16/publication10/ledger9+13 controls pass, rc=0.
-- [x] **LOCKSTEP** — bounded book/API/live/task scope and exact prior/oldest records align;
-  full function/expression/whole proofs remain .3b–.4. promotion: declined (existing closed kind
-  signatures, operand order and no-implicit-conversion contracts).
+[Exact completed operator signatures checklist](G1-SLICE-names.md#completed-operator-signatures-checklist--preserved-from-dc346b4) retained.
 
 ### G1-SLICE.5b.2d.2 — actual ordered declaration metadata
 

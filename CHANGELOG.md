@@ -154,6 +154,15 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0091 - reference product guidance and review status (leaf `G1-SLICE.5b.3a.1`)
+
+D134 confines arc_length advice to refused angle×length products; the independent matrix checks
+presence and absence, catching actual quotient-regression and missing-product faults. D135 fixes
+review status to reflect implemented metadata and precise pending expression/graph proof.
+Static4032 cases/14 actual reds, structure/language16/publication10/ledger9+13/coverage/retention
+pass0; grammar unchanged. Exact prior/oldest records retained; G1 stays5/18,10open/124sealed.
+Next .5b.3b built-in/selector signatures.
+
 ## STITCHCAD-G1-0090 - closed formula operator kind signatures (leaf `G1-SLICE.5b.3a`)
 
 Pure unary/binary metadata preserves every arithmetic kind rule, directed quotient, commutative
@@ -360,16 +369,6 @@ Full local checks and required exceptional push precede observed CI .0v, then na
 Oldest live ledger payloads remain complete/exact; G1 stays5/18, defects12open/102sealed.
 D114 blind census and D115 idle CUA metadata false blocking are reproduced; SPINE.23 owns P0 repair.
 
-## STITCHCAD-G1-0073 - independent complete static signature review (leaf `G1-SLICE.5b.1a`)
-
-D112/D113 close: within admits exactly five tolerance names; min/max accept their documented
-one-argument base case. Independently authored closed populations and4032 actual parse/infer cases
-cover all eight kinds/22 names/operators/arity boundaries/conditionals/tolerance candidates/envelope
-precedence, with numeric/state/geometry reads and execution trapped. Twelve compiled actual guard
-faults fail body assertions; producer remains byte-identical on disk. Existing reference controls green.
-New expert annex preserves progressive reading; product namespace/type/whole preflight/execution
-remain pending. Review .5b.1 splits into signature .1a, namespace/preflight .1b and full closure .1c.
-Oldest ledger reports retained whole; G1 stays5/18; defects10open/102sealed. Next .5b.1b.
 
 
 
@@ -397,3 +396,5 @@ Oldest ledger reports retained whole; G1 stays5/18; defects10open/102sealed. Nex
 | [`stitchcad-changelog-part86.md`](docs/history/stitchcad-changelog-part86.md) | STITCHCAD-G1-0072 | 9 lines, 795 bytes, `sha256:480c7c1b…` |
 
 | [`stitchcad-changelog-part87.md`](docs/history/stitchcad-changelog-part87.md) | STITCHCAD-SPINE-0021b | 9 lines, 773 bytes, `sha256:df9a2d7c…` |
+
+| [`stitchcad-changelog-part88.md`](docs/history/stitchcad-changelog-part88.md) | STITCHCAD-G1-0073 | 10 lines, 878 bytes, `sha256:32b87b67…` |

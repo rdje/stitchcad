@@ -246,7 +246,7 @@ Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py
 docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
 
 Static signature oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations`
-checks closed kind/function matrices; value access trapped, watched.
+checks closed matrices/hint presence and absence;14 actual reds, value access trapped, watched.
 
 Static namespace/header oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations`
 checks1139 metadata-only cases/thirteen actual guard reds; watched.
