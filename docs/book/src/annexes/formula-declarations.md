@@ -246,8 +246,8 @@ assert_eq!(error.binding_sources()[1].kind(), sc_core::recipe::FormulaKind::Coun
 
 Default error Display exposes only the internal stable token. Localized user messages belong to
 the command layer and use the explicit typed arguments. A successful initial namespace certifies
-source admission and initial-name uniqueness. Ordered checked reads/prior recipe bindings remain
-.5b.2d; expression kind/signature checking and complete static dependency graphs remain .3/.4.
+source admission and initial-name uniqueness. Exact initial reads are available below; prior recipe bindings remain
+.5b.2d.2; expression kind/signature checking and complete static dependency graphs remain .3/.4.
 Numeric state/context validation, evaluation and geometric/registry correctness retain their owners.
 
 Ten public contracts and three negative private/lifetime doctests cover closed reserved metadata, rejected recipe/reserved admission, three
@@ -257,3 +257,67 @@ and point/edge source, first-error ordering, deterministic inspection, lifetimes
 formatting. Seventeen actual compiled admission/context/collision/source/order/privacy faults
 fail public body assertions and restore the production source exactly; the watched structural
 runner also refuses invalid fault classification and stale anchors.
+
+
+## Exact declared-name reads
+
+FormulaNamespace::resolve accepts a validated MachineToken and returns the exact existing
+FormulaDeclaration. Lookup uses the authored spelling directly. The returned declaration retains
+its original name and canonical source borrows; it is independent of the query token and namespace
+allocation. Reading metadata neither copies canonical state nor fetches a numerical value.
+
+An unknown measurement still has a known declared kind. The unknown body_width namespace in the
+[initial namespace example](#checked-initial-namespace) resolves to the same borrowed record:
+
+```rust
+# use sc_core::{name::MachineToken, ontology::EntityId, recipe::{FormulaDeclaration,
+# FormulaInitialDeclaration, FormulaInputOrigin, FormulaKind, FormulaNamespace},
+# value::{LengthDeclaration, LengthDeclarationDefinition, LengthState}};
+# let name = MachineToken::new("body_width").unwrap();
+# let record = LengthDeclaration::new(LengthDeclarationDefinition { id: EntityId::from_bits(1),
+# source: EntityId::from_bits(2), state: LengthState::Unknown { observation: EntityId::from_bits(3) } }).unwrap();
+# let namespace = FormulaNamespace::new([FormulaInitialDeclaration::try_from(
+# FormulaDeclaration::length_input(&name, FormulaInputOrigin::Measurement, EntityId::from_bits(4), &record)).unwrap()]).unwrap();
+let query = MachineToken::new("body_width").unwrap();
+let declared = namespace.resolve(&query).unwrap();
+assert_eq!(declared.kind(), FormulaKind::Length);
+assert_eq!(declared.name(), "body_width");
+```
+
+Reserved names likewise retain their kinds when their runtime providers are absent: eps_fmt is a
+length with export context, eps_phys is a length with profile context, and is_base_size is Boolean
+with size context. Static resolution supplies no provider-availability or canonical registry proof.
+A runtime read of an unknown fact remains formula_unknown; a missing valid tolerance provider
+remains formula_tolerance_unbound. Those runtime adapters and execution checks remain separately
+owned. This API resolves the initial namespace before statement one; prior recipe visibility,
+forward/self-reference refusal and expression type checking remain .5b.2d.2–.4.
+
+An absent declaration returns opaque FormulaUnboundName. name() borrows the exact query and
+origins_searched() exposes all nine flat namespace domains in contract order: measurement, ease,
+parameter, profile, material, geometry, recipe, size and tolerance. Recipe has no entries in the
+initial namespace. No spelling is repaired, alias accepted, value substituted or recipe reordered.
+The error carries no guessed statement index or canonical expression; later whole-recipe composition
+adds only context it actually owns. Default Debug omits the name; Display is the stable internal
+token, which the command layer must localize with the explicit arguments.
+
+```rust
+use sc_core::{name::MachineToken, recipe::{FormulaNamespace, FormulaOrigin}};
+let namespace = FormulaNamespace::new([]).unwrap();
+let query = MachineToken::new("missing_width").unwrap();
+let error = namespace.resolve(&query).unwrap_err();
+assert_eq!(error.token(), "formula_unbound_name");
+assert_eq!(error.name(), "missing_width");
+assert_eq!(error.origins_searched(), &FormulaOrigin::ALL);
+```
+
+Seven public read contracts verify all scalar annotations/domains, five canonical length states/
+domains, exact point/edge references, all eight reserved sources, distinct names with equal kinds,
+missing/near spellings, immutable failures, independent borrow lifetimes and formatting privacy.
+Two compile-fail contracts protect the diagnostic's private construction and query lifetime.
+Nine actual compiled lookup/source/value-read/fallback/domain/token/name/privacy faults must fail
+public body assertions and restore exact source bytes. Run the mutation command alone:
+
+```bash
+cargo test -p sc-core --test formula_name_read_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/name_read_mutations.py
+```

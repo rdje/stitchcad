@@ -10,7 +10,7 @@
 //! the fixed statement bound. Whole statement/recipe input normalization preserves metadata and
 //! contextual literal refusals. Owned expression/statement/recipe bytes preserve typed identity;
 //! Closed kind/origin/reserved-context metadata and immutable source locators are available;
-//! checked initial namespaces retain sources and reject collisions; ordered name/type validation,
+//! checked initial namespaces retain sources, reject collisions and resolve exact names; ordered type validation,
 //! binding and evaluation follow.
 mod lexer;
 pub use lexer::{
@@ -67,4 +67,6 @@ pub use declaration::{
 };
 
 mod namespace;
-pub use namespace::{FormulaInitialDeclaration, FormulaNamespace, FormulaNamespaceError};
+pub use namespace::{
+    FormulaInitialDeclaration, FormulaNamespace, FormulaNamespaceError, FormulaUnboundName,
+};

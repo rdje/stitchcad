@@ -824,7 +824,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.2c.1a` | `done` | D131 reproduction and concrete diagnostic proposal |
 | done | `G1-SLICE.5b.2c.1b` | `done` | Delegated source-aware diagnostic decision and repair |
 | done | `G1-SLICE.5b.2c.2` | `done` | Checked product initial namespace |
-| current | `G1-SLICE.5b.2d` | `pending` | Checked reads and prior recipe bindings |
+| done | `G1-SLICE.5b.2d.1` | `done` | Exact checked initial name reads |
+| current | `G1-SLICE.5b.2d.2` | `pending` | Actual prior recipe binding scope |
 | next | `G1-SLICE.5b.3` | `pending` | Whole expression static signatures |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
@@ -851,29 +852,29 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Acceptance Checklist
 
+### G1-SLICE.5b.2d.1 — exact initial metadata reads
+
+- [x] **REPRODUCE / ISSUE** — the checked namespace has declarations but no exact typed read or
+  absent-name arguments. Public formula_name_read_contract →seven tests pass, rc=0; this boundary
+  returns borrowed original metadata or exact-query diagnostics without execution authority.
+- [x] **ROOT CAUSE (WHY + WHERE)** — ad hoc caller iteration could repair/default a missing name
+  or consult source values. name_read_mutations.py →nine actual compiled body assertion reds,
+  rc=0; wrong source/alias/fallback/value read/domain/token/name/privacy faults are detected.
+- [x] **FIX** — validated public resolve, internal exact parser-name lookup and opaque unbound
+  error with exact query/closed searched origins. Source/query lifetimes remain independent.
+- [x] **ADDRESSED (verified)** — seven public contracts/two negative doctests/nine actual faults,
+  rc=0: all scalar/length states/geometry/reserved sources, exact identities, near names, immutable
+  failures and private borrow/format contracts. Exact source restored; no value/context query.
+- [x] **NO REGRESSION** — make check →630 passed/52 groups, fmt/clippy strict green; make wasm
+  →three libraries; prior17 actual collision faults/structural/reference/language16/publication10/
+  ledger9+13 controls pass, rc=0. Flat namespace and grammar stay unchanged.
+- [x] **LOCKSTEP** — README/book/examples/API/live/frontier align; prior recipe binding scope .2d.2
+  and types/whole graphs .3/.4 remain owned. Exact prior evidence and oldest live records retained.
+  promotion: declined (existing exact spelling/canonical borrows/privacy/no-default contracts).
+
 ### G1-SLICE.5b.2c.2 — checked initial product namespace
 
-- [x] **REPRODUCE / ISSUE** — sourced declarations can describe recipe/reserved metadata but lack
-  initial admission/collision authority. Public namespace contract →10 tests pass, rc=0; actual
-  admission/order/source/privacy faults establish the missing boundary before acceptance.
-- [x] **ROOT CAUSE (WHY + WHERE)** — direct unfiltered declarations could bypass recipe order or
-  overwrite names. namespace_mutations.py →17 actual compiled body assertion reds/exact restore,
-  rc=0; recipe/reserved admission, context hiding, first-error order and source loss falsified.
-  Initial projection, ordered entry checks and fixed reserved population are the owned guards.
-- [x] **FIX** — opaque initial-source projection, immutable checked namespace and source-bearing
-  typed errors. Strict lint rejects the initial128B inline collision error; one boxed metadata pair
-  keeps failures compact without copying canonical records. No lint allowance or numeric query.
-- [x] **ADDRESSED (verified)** —10 public contracts/17 actual compiled body assertion reds,
-  rc=0: six initial domains, three scalar domains/six kinds, five states, exact refs/borrows,
-  36 ordered origin collisions/equal origins and200 reserved attempts. Byte-exact source restore.
-  Initial fault classifier refused unwrap-only red; explicit body refusal assertions repair tests.
-- [x] **NO REGRESSION** — make check →621 tests/51 result groups, strict lint/fmt green; make wasm
-  →three libraries build; structural/reference/language16/publication10/ledger9+13 pass, rc=0.
-  D132/D133 actual renderer warning exposed topology-only acceptance; repaired exact generic and
-  copied-book warning refusal/repaired baseline verify guard, rc=0. Grammar/values unchanged.
-- [x] **LOCKSTEP** — declaration chapter/examples/API/status/README/live scope aligned; checked
-  ordered reads/types/whole graphs remain .2d–.4. Exact prior task/ledger/lesson retained within
-  existing bounds. promotion: declined (existing source ownership/metadata/order/diagnostic rules).
+[Exact checklist](G1-SLICE-names.md#completed-initial-namespace-checklist--preserved-from-4e0d0bf) retained.
 
 ### G1-SLICE.5b.2c.1b — delegated binding diagnostic sources
 

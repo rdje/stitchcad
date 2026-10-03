@@ -682,40 +682,46 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.2c.2`
   Status: `done`
-  Goal: implement checked initial namespace after .2c.1b, including ordered-pair collisions,
-  immutable reserved metadata and source-preserving typed refusals. Acceptance: no value/state or
-  geometry reads, no silently overwritten duplicate or recipe-order bypass. Finalize API protocol
-  after diagnostic ruling. Work unit: `STITCHCAD-G1-0087`; predecessor1972f57 clean/no jobs.
-  Pre-code protocol: contract2/3/3.1/5.2.1/4.1 and metadata/declaration/normalized/name/ref APIs
-  reviewed. MachineToken already enforces the three keywords; borrow its exact validated names.
-  New opaque FormulaInitialDeclaration accepts only Input/LengthInput/Point/Edge via TryFrom;
-  rejected Recipe/Reserved returns the original declaration, preventing future-let/context seeding.
-  Build immutable FormulaNamespace from ordered initial declarations; seed all eight fixed reserved
-  metadata entries irrespective of provider availability. BTreeMap entry checks precede insertion;
-  first collision refuses without a partial namespace. Preserve input order in first-error sources.
-  Typed FormulaNamespaceError distinguishes reserved attempts (formula_rebinding) and authored
-  collisions (formula_ambiguous_name), including equal origins; explicit name/source views retain
-  original IDs/records/refs. Opaque Debug and token-only Display expose no authored payload/state.
-  Exact-size declaration iteration is lexical for metadata inspection; no recipe/evaluation order
-  authority. Checked name reads/prior recipe binding remain .2d; no state/value/geometry query.
-  Verify six initial source domains, all five LengthStates/three scalar domains/six kinds, exact
-  creator/tag/borrow identities, all8 reserved refusals, every ordered collision pair and privacy/
-  lifetimes. Actual compiled index/admission/context/collision/source/privacy faults must fail
-  public assertions and restore bytes. Strict native/WASM, focused reference/book/ledger/gate;
-  exact completed .1b/oldest ledger/lesson retention keeps existing bounds. Per-leaf commit.
-  D132/D133 product-publication defects owned here: raw generic was hidden as an HTML tag while
-  publication topology probes passed. Fix markup and reject actual mdBook warning output before
-  claiming publication; copied-book unclosed-generic failure and repaired baseline must prove the
-  guard. Keep all existing source/rendered-link/status controls; no scope/cap/diagnostic waiver.
-  Verification: ten public contracts/17 actual body reds, strict621 native tests/51 result groups,
-  WASM three libraries and reference/language16/publication10/ledger9+13 controls pass, rc=0.
-  D132/D133 fixed; complete receipts below. Commit: `STITCHCAD-G1-0087`.
+  Goal: immutable checked initial namespaces with truthful collision sources.
+  Verification: [exact protocol](G1-SLICE-names.md#completed-initial-namespace-protocol--preserved-from-4e0d0bf).
+  Commit: `STITCHCAD-G1-0087`.
 
 - ID: `G1-SLICE.5b.2d`
-  Status: `pending`
+  Status: `in_progress`
   Goal: checked name reads/prior recipe bindings with typed searched origins and rebinding indices;
   forward/self references never reorder. Whole-expression/recipe integration remains .5b.3/.4.
   Acceptance: actual ordinal/span/source data only; no numeric/default/shadow behavior.
+  Children: .1 exact initial metadata reads, .2 actual ordered recipe binding scope.
+  Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5b.2d.1`
+  Status: `done`
+  Goal: checked exact-name initial metadata reads without reading values or optional providers.
+  Work unit: `STITCHCAD-G1-0088`; predecessor4e0d0bf clean, message empty/untracked, no pending jobs.
+  Pre-code: contract3/3.1/4.1/5.2, declarations/reserved/namespace/MachineToken and normalized
+  name-node views reviewed; public declarations and canonical records stay sole metadata sources.
+  Public FormulaNamespace::resolve borrows a validated MachineToken and returns the existing
+  FormulaDeclaration, retaining its own source lifetime. Internal exact-str resolver accepts only
+  parser-validated names in later semantic composition; no trimming/alias/default/geometry query.
+  Opaque FormulaUnboundName borrows the exact query; private construction, token formula_unbound_name,
+  explicit name and complete nine closed searched origins (including empty recipe origin before
+  statement1). Unknown supplied records and absent optional contexts still have declared kinds.
+  Default Debug/Display omit authored payload; no fabricated statement/canonical-expression context.
+  Verify all scalar/length/geometry/reserved sources, exact records/identities, distinct names with
+  equal kinds, exact query versus declaration lifetimes, missing/near names and immutable failures.
+  Actual compiled lookup/fallback/source/origin/token/privacy faults must fail public assertions;
+  compiler/unwrap noise refuses and source restores. Strict native/WASM, focused book/reference/
+  language/ledger/retention/census/gate. Exact completed namespace evidence/oldest live records move
+  to bounded sibling/segments; Knowledge Map orientation trimmed with every route preserved.
+  No prior archive or ceiling changes. Per-leaf commit.
+  Verification: seven public contracts/two negative doctests/nine actual body reds and prior17 faults,
+  strict630 native tests/52 groups, WASM three libraries and focused controls pass, rc=0.
+  Full receipts below. Commit: `STITCHCAD-G1-0088`.
+
+- ID: `G1-SLICE.5b.2d.2`
+  Status: `pending`
+  Goal: derive prior-binding scope from actual normalized recipe/order, truthful binding refusals.
+  Before code, finalize private/public proof boundary so unchecked expressions grant no acceptance.
   Verification: `pending`; Commit: `pending`.
 
 - ID: `G1-SLICE.5b.3`
@@ -961,18 +967,21 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 
 ## Initial namespace receipts — .5b.2c.2,2026-10-03 (UTC)
 
-Focused public contract:10 tests plus three privacy/lifetime compile-fail examples pass, rc=0.
-namespace_mutations.py:17 actual compiled body assertion reds, exact original bytes restored,
-rc=0; classifier refuses compiler/unwrap-only noise. Strict make check:621 passed/51 result groups,
-fmt/clippy -D warnings pass, rc=0; final make wasm builds all three libraries, rc=0. Full reference
-structural, language16 and ledger9/13 pointer controls pass, rc=0. Publication10 controls pass,
-rc=0;55 chapters/36 scoped API rows/1143 source links/1775 rendered links. D132/D133 actual
-malformed generic warning refuses BOOK_BUILD_WARNING; quoted repair renders exact generic.
-Predecessor protocol23lines2027B SHA36198552…, receipts28lines2537B SHAbbe37e98…, checklist
-21lines1879B SHAf5736386… retained byte-identically from1972f57. Oldest ledger13lines1176B
-SHAce5bfa8a… and lessons11lines903B SHAa1c4d338…/12lines1018B SHA92241e4a… sealed exactly.
-Original D132/D133 report15lines1304B SHA2c4850a6… sealed; no prior archive changed.
-Retention:230 logical records/44 working Markdown/10412 decoded lines/785417 decoded bytes/
-373931 resident bytes, rc=0. Fresh materialization:10open/122unique sealed, zero duplicates/overlap;
-D18 intentionally unassigned per canonical PLANNING census. Tree census:10lanes/13trees/10siblings/
-zero unowned/orphans/dead links, rc=0. G1 remains5/18; ordered reads/bindings .2d next.
+[Exact receipts](G1-SLICE-names.md#completed-initial-namespace-receipts--preserved-from-4e0d0bf) retained.
+
+
+## Exact initial name-read receipts — .5b.2d.1,2026-10-03 (UTC)
+
+Public read contracts7/two private-lifetime doctests and nine actual compiled body assertion reds,
+exact source restore, rc=0. Prior17 namespace faults rerun against composed code: body reds, rc=0;
+Display anchor scopes its actual error impl; both classifiers refuse name/expect/compiler noise.
+make check:630 passed/52 result groups and strict fmt/clippy green, rc=0; make wasm:three libraries,
+rc=0. Full structural/reference, language16, publication10 and ledger9/13 pointer controls pass,
+rc=0. Book55 chapters/37 scoped APIs/1143 source/1777 rendered links; actual warning/refixed generic
+still checked. Prior protocol30lines2728B SHAa67c4b56…, receipts17lines1483B SHA426d31f4…,
+checklist23lines2105B SHAa30b863a… retained byte-exactly from4e0d0bf in bounded names sibling.
+Oldest ledger14lines1261B SHAa370b662…/lesson17lines1539B SHA06d7a8cd… sealed exactly.
+Retention232 logical records/46 working Markdown/10465 decoded lines/789301 decoded bytes/
+377815 resident bytes, rc=0; materialized defects10open/122unique sealed/zero duplicates or overlap.
+Tree census10lanes/13trees/11siblings/zero unowned/orphans/dead links, rc=0; current examples
+updated from actual census. G1 remains5/18; .2d.2 ordered actual binding scope next.

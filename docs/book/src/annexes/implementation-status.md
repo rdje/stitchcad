@@ -28,13 +28,13 @@ requires the named contracts and later proof owners.
 | Formula lexing/expression syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.1/.2b.2 | [Syntax API](formula-syntax.md) |
 | Formula kind/origin/reserved metadata | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2a | [Declaration metadata](formula-declarations.md) |
 | Immutable formula source declarations | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2b | [Sourced declarations](formula-declarations.md#immutable-sourced-declarations) |
-| Initial formula namespace | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2c.2 | [Admission and collisions](formula-declarations.md#checked-initial-namespace) |
+| Initial formula namespace/read | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2c.2/.2d.1 | [Admission, collisions and reads](formula-declarations.md#exact-declared-name-reads) |
 
 Reference [static signature evidence](formula-static-validation.md) covers the complete finite
 kind/function matrix without executing values; product static validation and whole-recipe preflight
 remain pending. Reference namespace/preflight/full static review is verified at G1-SLICE.5b.1;
-product metadata, sourced declarations and initial namespaces are available; ordered reads and
-bindings, expression types and whole static graphs remain .5b.2d–.4.
+product metadata, sourced declarations, initial namespaces and exact reads are available; prior bindings and
+expression types and whole static graphs remain .5b.2d.2–.4.
 
 ## Remaining proofs
 

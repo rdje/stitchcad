@@ -154,6 +154,17 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0088 - exact initial formula name reads (leaf `G1-SLICE.5b.2d.1`)
+
+Validated queries resolve exact existing declarations, preserving original source lifetimes and
+canonical record/geometry identities. Opaque absent-name errors retain exact query and nine searched
+origins; no alias, value read, fallback or fictional recipe context. Seven public read contracts/nine
+actual compiled body reds restore source exactly; all17 prior collision faults still fail assertions.
+Book examples/API/status/live scope align; exact prior namespace evidence moved to bounded sibling,
+oldest ledger/lesson sealed unchanged. Strict native630/52 groups, WASM three libraries and
+reference/language16/publication10/ledger9+13 pass0;55 chapters/37 APIs/1143 source/1777 render links.
+G1 stays5/18;10open/122sealed defects; ordered binding scope .5b.2d.2 next.
+
 ## STITCHCAD-G1-0087 - checked initial formula namespace (leaf `G1-SLICE.5b.2c.2`)
 
 Typed initial sources exclude recipe/reserved injection; immutable namespace seeds eight reserved
@@ -358,20 +369,6 @@ operation/final acceptance children. Book52/25 APIs/1093 source/1688 rendered li
 agree. Completed node graph/prior closure and oldest ledger payloads preserved exactly; G1 stays5/18,
 defects10open/100sealed. Next .5b.1 independent static review, checking cleanup due first.
 
-## STITCHCAD-G1-0071 - coupled whole input and identity review (leaf `G1-SLICE.5a.3f.2`)
-
-Actual17 worked bindings/four assertions produce21 exact statements/25 operands and a complete
-ordered identity. Independently authored whole statement bytes agree with actual reference syntax,
-with semantics trapped. All13 actual refusal examples distinguish3 syntax errors from10 deferred
-semantic checks. Later branch/call input errors and combined maximum/first excess retain context.
-Five new public contracts/seven actual compiled assertion reds/exact four-source restoration;
-strict native591/48groups, release5/WASM3, scoped reference/language16/publication9 pass.
-Book52 chapters/25 APIs/1089 source/1682 rendered links publishes the complete obligation map and
-remaining static/binding/evaluation/geometry/store/MCP owners. Every existing Rust source/test exact.
-Complete recipe evidence/closure moved byte-identically to bounded sibling with old anchor routes;
-map orientation shortened under unchanged cap. Oldest ledger payloads independently compare exact.
-G1 stays5/18, defects10open/99sealed; tree13/10 siblings. .3f/.3 input-identity scope closes;
-next .5a.4 full syntax/canonical milestone and safe evaluator decomposition. No evaluation/signoff claim.
 
 
 
@@ -390,3 +387,5 @@ next .5a.4 full syntax/canonical milestone and safe evaluator decomposition. No 
 | [`stitchcad-changelog-part83.md`](docs/history/stitchcad-changelog-part83.md) | STITCHCAD-G1-0069 | 12 lines, 1076 bytes, `sha256:61590cec…` |
 
 | [`stitchcad-changelog-part84.md`](docs/history/stitchcad-changelog-part84.md) | STITCHCAD-G1-0070 | 13 lines, 1176 bytes, `sha256:ce5bfa8a…` |
+
+| [`stitchcad-changelog-part85.md`](docs/history/stitchcad-changelog-part85.md) | STITCHCAD-G1-0071 | 14 lines, 1261 bytes, `sha256:a370b662…` |

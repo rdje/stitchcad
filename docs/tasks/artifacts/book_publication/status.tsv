@@ -35,3 +35,4 @@ formula general scalar domains	annexes/formula-declarations.md	crates/sc-core/sr
 formula initial source admission	annexes/formula-declarations.md	crates/sc-core/src/recipe/namespace.rs	FormulaInitialDeclaration	G1-SLICE.5b.2c.2	4.1
 formula initial namespace	annexes/formula-declarations.md	crates/sc-core/src/recipe/namespace.rs	FormulaNamespace	G1-SLICE.5b.2c.2	4.1
 formula initial collision diagnostic	annexes/formula-declarations.md	crates/sc-core/src/recipe/namespace.rs	FormulaNamespaceError	G1-SLICE.5b.2c.2	4.1
+formula absent-name diagnostic	annexes/formula-declarations.md	crates/sc-core/src/recipe/namespace.rs	FormulaUnboundName	G1-SLICE.5b.2d.1	4.1

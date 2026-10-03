@@ -1,5 +1,6 @@
 //! Checked immutable initial declarations; reserved kinds do not require runtime value providers.
-use super::{FormulaDeclaration, FormulaDeclarationSource, FormulaReservedName};
+use super::{FormulaDeclaration, FormulaDeclarationSource, FormulaOrigin, FormulaReservedName};
+use crate::name::MachineToken;
 use core::fmt;
 use std::collections::{btree_map::Entry, BTreeMap};
 
@@ -98,6 +99,55 @@ impl fmt::Display for FormulaNamespaceError<'_> {
 }
 impl std::error::Error for FormulaNamespaceError<'_> {}
 
+/// An exact machine name is absent from the current flat metadata namespace.
+/// This static refusal carries no state, value or guessed recipe/expression context.
+/// ```compile_fail
+/// fn forge() -> sc_core::recipe::FormulaUnboundName<'static> {
+///     sc_core::recipe::FormulaUnboundName { name: "missing" }
+/// }
+/// ```
+/// ```compile_fail
+/// fn escaped() -> sc_core::recipe::FormulaUnboundName<'static> {
+///     let name = sc_core::name::MachineToken::new("missing").unwrap();
+///     sc_core::recipe::FormulaNamespace::new([]).unwrap().resolve(&name).unwrap_err()
+/// }
+/// ```
+#[derive(Clone, Copy)]
+pub struct FormulaUnboundName<'a> {
+    name: &'a str,
+}
+impl<'a> FormulaUnboundName<'a> {
+    /// Exact borrowed query. Default formatting omits this authored payload.
+    #[must_use]
+    pub const fn name(self) -> &'a str {
+        self.name
+    }
+
+    /// Stable internal diagnostic token; a runtime unknown-value refusal is a separate condition.
+    #[must_use]
+    pub const fn token(self) -> &'static str {
+        "formula_unbound_name"
+    }
+
+    /// Complete flat namespace domains, including the empty recipe domain before statement one.
+    /// Their metadata is searched without consulting any runtime value provider.
+    #[must_use]
+    pub const fn origins_searched(self) -> &'static [FormulaOrigin; 9] {
+        &FormulaOrigin::ALL
+    }
+}
+impl fmt::Debug for FormulaUnboundName<'_> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("FormulaUnboundName").finish_non_exhaustive()
+    }
+}
+impl fmt::Display for FormulaUnboundName<'_> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.write_str(self.token())
+    }
+}
+impl std::error::Error for FormulaUnboundName<'_> {}
+
 /// Immutable checked initial namespace: authored pairs plus all eight fixed reserved sources.
 /// No partial namespace escapes a collision. Construction reads metadata only, without values,
 /// availability, expression checking or operation-order/registry validation.
@@ -160,6 +210,29 @@ impl<'a> FormulaNamespace<'a> {
     #[must_use]
     pub fn declarations(&self) -> impl ExactSizeIterator<Item = FormulaDeclaration<'a>> + '_ {
         self.entries.values().copied()
+    }
+
+    /// Resolve an exact validated machine name to its original declaration metadata.
+    /// Declared unknown values and absent optional contexts retain their known kinds.
+    /// # Errors
+    /// Returns [`FormulaUnboundName`] borrowing the query when no declaration has this spelling.
+    /// No value, state, context availability or geometry is read, and no name is repaired.
+    pub fn resolve<'n>(
+        &self,
+        name: &'n MachineToken,
+    ) -> Result<FormulaDeclaration<'a>, FormulaUnboundName<'n>> {
+        self.resolve_name(name.as_str())
+    }
+
+    /// Parser-validated name lookup for later semantic checking; external queries use MachineToken.
+    pub(super) fn resolve_name<'n>(
+        &self,
+        name: &'n str,
+    ) -> Result<FormulaDeclaration<'a>, FormulaUnboundName<'n>> {
+        self.entries
+            .get(name)
+            .copied()
+            .ok_or(FormulaUnboundName { name })
     }
 }
 impl fmt::Debug for FormulaNamespace<'_> {

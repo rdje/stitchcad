@@ -31,7 +31,7 @@ CASES = (
      '} => [FormulaDeclaration::reserved(*reserved), FormulaDeclaration::reserved(*reserved)],'),
     ('inspection order', 'self.entries.values().copied()', 'self.entries.values().rev().copied()'),
     ('namespace debug payload', 'f.debug_struct("FormulaNamespace")', 'f.debug_struct("FormulaNamespace").field("entries", &self.entries)'),
-    ('display payload', 'f.write_str(self.token())', 'write!(f, "{}: {}", self.token(), self.name())'),
+    ('display payload', "impl fmt::Display for FormulaNamespaceError<'_> {\n    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {\n        f.write_str(self.token())", 'impl fmt::Display for FormulaNamespaceError<\'_> {\n    fn fmt(&self, f: &mut fmt::Formatter<\'_>) -> fmt::Result {\n        write!(f, "{}: {}", self.token(), self.name())'),
 )
 for name,before,_ in CASES:
     assert original.decode().count(before)==1, (name,'actual fault anchor not unique')

@@ -6,17 +6,17 @@
 - `crates/sc-units/src/lib.rs` — units;
   `crates/sc-units/tests/property.rs`, spec `docs/book/src/spec/units-and-tolerances.md`.
   Owner `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs` — ontology/measurements;
+- `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs` — core;
   Owner `G1-SLICE.3` / `.4` / `.5`.
-- `docs/book/src/SUMMARY.md` — book; owner `G0-CONTRACT` / `G1-SLICE.4d.1`.
-- `docs/book/src/spec/formula-language.md` — formula contract.
-  Oracle `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
+- `docs/book/src/SUMMARY.md`; owner `G0-CONTRACT` / `G1-SLICE.4d.1`.
+- `docs/book/src/spec/formula-language.md` — formula.
+  `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`; owner
   `G0-CONTRACT.9` / `G1-SLICE.5`.
 - `docs/book/src/spec/interchange-dialects.md` — dialects.
-  Tool `docs/tasks/artifacts/interchange/run_interchange_census.sh`. Owner `G0-CONTRACT.10` / `G2-2D`.
-- `docs/book/src/spec/feature-matrix.md` — release scope;
+  `docs/tasks/artifacts/interchange/run_interchange_census.sh`. Owner `G0-CONTRACT.10` / `G2-2D`.
+- `docs/book/src/spec/feature-matrix.md` — scope;
   `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. Owner `G0-CONTRACT.4`.
-- `docs/book/src/spec/glossary/` — vocabulary;
+- `docs/book/src/spec/glossary/`;
   `docs/tasks/artifacts/glossary/run_glossary_census.sh`; owner `G0-CONTRACT.1`.
 - `.doctrine/live_document_size/` — containment;
   `scripts/check_live_doc_size.sh`. Owner `SPINE.4`.
