@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-03 UTC)_ — a metadata source is not a copied value
+
+- Locators retain distinct metadata/value IDs and borrow canonical length records across five
+  states. Geometry refs retain creator/tag; recipe lets retain
+  actual ordinals/spans/annotations; Debug omits private payloads.
+- D130 draft generic constructor admitted measurement/Ease non-length kinds. Canonical input
+  contracts require lengths, so a separate three-domain scalar type excludes those claims.
+- Seven public/five negative lifetime/construction contracts and19 actual compiled assertion reds/
+  one API-negative red discriminate source/kind/identity/ordinal/privacy and restore
+  exact bytes. Initial lint/message/obsolete fault replacements repaired; no classifier weakened.
+- Strict native608/50groups and focused reference/book checks pass; typed namespace acceptance,
+  source registry/evidence verification and numeric execution remain separate owners.
+- Exact prior task/ledger/lesson/D130 payloads retained within bounds.
+- promotion: declined (existing typed metadata, single canonical owner and original-context rules).
+
 ## _(2026-10-03 UTC)_ — declared kind does not require a value provider
 
 - Product semantic vocabulary separates eight operand kinds/six binding annotations, nine origins,
@@ -16,18 +31,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Exact predecessor task blocks and oldest ledger/provenance lesson/new D129 original report sealed
   within existing bounds. No new declaration values or proof authority invented.
 - promotion: declined (existing kind/origin/context isolation and independently falsified controls).
-
-## _(2026-10-03 UTC)_ — exclusions follow the grammar that recognizes them
-
-- D124 promised unsupported for constructs with no excluded-form source grammar. Director keeps
-  current grammar: unknown calls unbound-name, malformed definitions parse; ordinary names valid.
-  Recognized non-square exponents/envelope precedence keep their established tokens.
-- Actual100 static cases/seven compiled guard reds/three loaded documentation reds watch both
-  exclusion cells/three keywords, five ordinary names/headers and precedence with execution trapped.
-  Full reference/language16/publication9 terminal0. No parser behavior or production proof added.
-- Complete reference static review closes .5b.1/.1c; typed product namespace .5b.2 is next.
-  Original task blocks and oldest ledger/lesson/D124 report retain predecessor payloads.
-- promotion: declined (director ruling recorded in ADR-0003; existing static/no-execution doctrine).
 
 # Sealed archive — earlier lessons
 
@@ -170,3 +173,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part80.md`](docs/history/stitchcad-devnotes-part80.md) | origin and context lesson | 16 lines, 1471 bytes, `sha256:8576788c…` |
 
 | [`stitchcad-devnotes-part81.md`](docs/history/stitchcad-devnotes-part81.md) | executed provenance lesson | 12 lines, 1049 bytes, `sha256:de02f486…` |
+
+| [`stitchcad-devnotes-part82.md`](docs/history/stitchcad-devnotes-part82.md) | D124 grammar recognition lesson | 11 lines, 932 bytes, `sha256:2d6e66b8…` |

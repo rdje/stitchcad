@@ -1,13 +1,15 @@
 # Formula declaration metadata
 
-> **Status:** implemented product vocabulary at G1-SLICE.5b.2a in sc-core::recipe. Immutable sourced
-> declarations and namespace resolution are the next .5b.2 children; a recipe still has no product
+> **Status:** implemented vocabulary and immutable sourced declarations at G1-SLICE.5b.2a/.2b in sc-core::recipe.
+> Namespace resolution is next at .2c/.2d; a recipe still has no product
 > static acceptance or execution. [Reference static review](formula-static-validation.md) is complete
 > for its stated instrument populations and has a separate proof scope.
 
 The checker needs to know what a name means before fetching its value. An unknown measurement
 can still be length. A size context can be absent while size_index still has the kind count.
-These types describe that metadata; they contain no numbers, input states or value providers.
+The vocabulary describes metadata without numbers, input states or value providers. Sourced
+declarations carry identities or borrow existing canonical records; their metadata queries read
+no state or numerical value.
 The normative populations are [contract §§2–3](../spec/formula-language.md#2-values-and-kinds).
 
 ## Kinds and origins
@@ -63,10 +65,63 @@ assert_eq!(name.required_context(), FormulaReservedContext::Profile);
 assert_eq!(FormulaReservedName::SizeIndex.tolerance_name(), None);
 ```
 
-A reserved spelling is a valid reference token and may not be rebound. This metadata slice does
-not yet create or validate a namespace, inspect declaration pairs, reject collisions or resolve
-forward references. It also supplies no context values, geometry, policy decisions or evaluator.
-Those obligations remain .5b.2b–.2d, .5b.3/.4 and .5c–.5g.
+A reserved spelling is a valid reference token and may not be rebound. Namespace collision,
+forward-reference and whole-recipe checks remain .5b.2c/.2d and .5b.3/.4. Context values,
+numerical execution, geometry and policy decisions remain later obligations.
+
+## Immutable sourced declarations
+
+FormulaDeclaration borrows a validated MachineToken's exact name or the actual normalized recipe
+source. Its private construction and Copy/Clone views retain those lifetimes. Default Debug for
+both the declaration and its source shows only kind/origin, omitting customer names, identities,
+canonical states and numeric values. Explicit source inspection remains available.
+
+FormulaInputOrigin closes the five external domains: Measurement, Ease, Parameter, Profile and
+Material. The input constructor carries both the metadata record identity and its separate
+canonical declaration identity, plus the declared scalar annotation. FormulaScalarInputOrigin
+restricts this generic path to Parameter, Profile and Material. Measurement and Ease must use the
+canonical length adapter; they cannot claim angle/area/ratio/count/Boolean input kinds. Other scalar
+metadata remains a claim:
+canonical registry adapters must validate target identity, kind and provenance. It does not store
+an authored or computed number, certify a source record, or fetch a value.
+
+The length_input adapter borrows an actual immutable LengthDeclaration and forces the kind length.
+Known, assumed, unknown, preference and derived records all declare that same kind. The canonical
+record retains its sole value/state/source ownership; the declaration does not clone or cache it.
+
+```rust
+use sc_core::{name::MachineToken, ontology::EntityId, recipe::{
+    FormulaBindingKind, FormulaDeclaration, FormulaScalarInputOrigin, FormulaKind,
+}};
+let name = MachineToken::new("desired_sweep").unwrap();
+let declared = FormulaDeclaration::input(&name, FormulaScalarInputOrigin::Parameter,
+    EntityId::from_bits(11), EntityId::from_bits(12), FormulaBindingKind::Angle);
+assert_eq!(declared.kind(), FormulaKind::Angle);
+assert_eq!(declared.name(), "desired_sweep");
+```
+
+Point and edge constructors retain the exact PointRef/EdgeRef creator and local tag, forcing their
+geometry kind and origin. They neither resolve coordinates/curves nor certify prior-operation order.
+The reserved constructor takes a FormulaReservedName and derives its fixed name/kind/origin without
+requiring its optional context. Source locators are exposed through FormulaDeclarationSource.
+
+The recipe constructor inspects an actual one-based position in a FormulaNormalizedRecipe.
+Only a let contributes a declaration. Zero, absent positions and assertion labels return None;
+an assertion label cannot become a scalar input. Returned metadata preserves the actual ordinal,
+name, authored kind annotation and original whole-statement/name spans. The RHS is not inferred,
+executed or bound, and namespace rules still have to refuse reserved-name let bindings.
+
+```rust
+use sc_core::recipe::{FormulaDeclaration, FormulaKind, FormulaRecipe};
+let syntax = FormulaRecipe::parse("let width:length=missing assert check:eps_num=width==width").unwrap();
+let recipe = syntax.normalize_literals().unwrap();
+let declared = FormulaDeclaration::recipe(&recipe, 1).unwrap();
+assert_eq!(declared.kind(), FormulaKind::Length);
+assert!(FormulaDeclaration::recipe(&recipe, 2).is_none());
+```
+
+Here missing remains unvalidated syntax. A sourced declaration is metadata for the future checker,
+so this example grants no static acceptance or authority to compute a missing value.
 
 ## Verification boundary
 
@@ -85,3 +140,20 @@ Run the mutation command alone: it compiles ten temporary changes to the actual 
 and requires assertion failures in test bodies, then restores the exact source bytes in finally.
 The standing structural runner checks every fault anchor and refuses compiler/expect/name noise.
 These controls verify metadata behavior; they do not establish full static or runtime acceptance.
+
+The seven public formula_declaration_contract tests cover five canonical length origins/three general scalar domains/six
+annotations, every canonical LengthState, exact geometry refs, all eight reserved names and actual
+recipe ordinals/spans. Boundary4096 and absent4097 are checked; assertion labels and zero ordinals
+declare nothing. Five compile-fail contracts enforce private fields and name/record/recipe lifetimes.
+
+```bash
+cargo test -p sc-core --test formula_declaration_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/declaration_mutations.py
+```
+
+Run declaration mutations alone. Nineteen actual compiled source/kind/origin/identity/ordinal/span/
+privacy faults must fail test-body assertions; widening the scalar-domain boundary must also fail
+the negative construction contract because the forbidden measurement call now compiles. Source
+bytes are restored exactly. The structural runner
+watches anchors and failure classification. Metadata tests and code inspection establish the stated
+locator contract; numeric reads, adapters, namespace acceptance and physical geometry remain separate.

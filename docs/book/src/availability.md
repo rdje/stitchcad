@@ -27,8 +27,9 @@ identity bytes for comparison; [the example](annexes/formula-recipe-inputs.md#ow
 shows alias equality and preserved order. Binding, numerical execution and project storage follow.
 
 [Formula declaration metadata](annexes/formula-declarations.md) describes kinds, origins and the
-contexts that supply reserved names. These libraries can identify a name's declared kind without
-an export, profile or size value. Namespace/type acceptance and execution remain pending.
+contexts that supply reserved names. Immutable declarations retain canonical input identities and
+actual recipe/geometry sources. These libraries can identify a declared kind without an export,
+profile or size value. Namespace/type acceptance and execution remain pending.
 
 ## Planned workflows
 

@@ -77,7 +77,8 @@ and changes no authored grammar or canonical identity bytes.
 
 The signature matrix is complete for its stated finite populations. The namespace/header review,
 atomic whole-recipe preflight and full static obligation review below are also verified in the
-reference. Product sourced declarations, namespace, signatures and static graph remain .5b.2–.4.
+reference. Product [sourced declarations](formula-declarations.md#immutable-sourced-declarations) are
+available; namespace, signatures and static graph remain .5b.2c/.2d–.4.
 Numerical execution, operations, geometry and two-platform final acceptance retain their .5c–.5g
 owners. No product evaluation or API/MCP release claim follows.
 

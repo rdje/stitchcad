@@ -820,7 +820,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5e.1a` | `done` | D122/D127/D128 reference origin/context and state/metadata refusals |
 | done | `G1-SLICE.5e.3b` | `done` | D121 reference contributions/class refusal verified |
 | done | `G1-SLICE.5b.2a` | `done` | Closed kind/origin/reserved-context product metadata |
-| next | `G1-SLICE.5b.2b` | `pending` | Immutable sourced declarations before checked namespace |
+| done | `G1-SLICE.5b.2b` | `done` | Immutable sourced declarations before checked namespace |
+| next | `G1-SLICE.5b.2c` | `pending` | Initial namespace/collisions/reserved-name diagnostics |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -844,25 +845,28 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Acceptance Checklist
 
-### G1-SLICE.5b.2a — closed product semantic metadata
+### G1-SLICE.5b.2b — immutable sourced declarations
 
-- [x] **REPRODUCE / ISSUE** — prior product API stops at syntax annotations; scoped declaration
-  metadata foundation is next .5b.2. D129 stale orientation reproduced by exact current prose.
-- [x] **ROOT CAUSE (WHY + WHERE)** — kind/binding, semantic origin/value provider and tolerance/
-  size roles need distinct closed metadata. formula_semantic_contract →5 tests/0 failed, rc=0,
-  compares independent8/six/9/8 populations with actual canonical table rows in both directions.
-- [x] **FIX** — four metadata types preserve all normative roles without provider/value access.
-  Reuse existing symbolic tolerances and preserve MachineToken/D124 current keyword set.
-- [x] **ADDRESSED (verified)** — semantic_mutations.py →10 actual compiled body assertion reds,
-  rc=101 per faulty build, producer restored exactly; script rc=0. Normal restored5 tests pass0.
-  Every context/role mapping, geometry non-bindability, exact lookup and closed population checked.
-- [x] **NO REGRESSION** — make check →596 native passes/49 groups, strict fmt/clippy rc=0; WASM3
-  compile0; full structural/reference/language16/publication9 terminal rc=0. No runtime or grammar claim.
-- [x] **LOCKSTEP** — metadata annex/examples/API map/status/navigation and README/live/task/
-  resume agree;55 chapters/29 APIs/1135 source/1762 rendered links verified0. D129 fixed;
-  exact predecessor task/ledger/lesson payloads retained in bounded parts, no caps raised.
-  promotion: declined (existing kinds, origins, context and no-value-access principles).
+- [x] **REPRODUCE / ISSUE** — initial seven public draft contracts accept generic non-length
+  measurement/Ease metadata (D130), contradicting canonical length-target contracts; rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — generic origin/kind matrix overgeneralizes reference metadata
+  into canonical adapters. Current formula_declaration_contract →7 tests/0 failed, rc=0; five
+  negative construction/lifetime/private doctests pass in make check. Widening the actual scalar
+  API makes the forbidden measurement call compile and its negative contract fail, rc=101.
+- [x] **FIX** — distinct five length/three general scalar source domains, borrowed canonical
+  length records and typed refs; recipe metadata comes only from actual normalized let positions.
+- [x] **ADDRESSED (verified)** — declaration_mutations.py →19 actual compiled body assertion
+  reds plus one actual widened negative construction contract red; exact source restored, rc=0.
+  Seven normal public contracts preserve all identities/origins/kinds/refs/ordinals/spans/privacy.
+- [x] **NO REGRESSION** — strict make check →608 passes/50 groups, rc=0; full reference/structural,
+  language16/publication9 pass, rc=0. WASM and final recording-gate receipts follow in recipes.
+- [x] **LOCKSTEP** — declaration annex/source limits/examples/33 API rows, README and live/task/
+  resume records align;55 chapters/1137 source/1765 rendered links verified, rc=0. D130 fixed
+  before commit; exact prior task/ledger/lesson/report payloads retained, no ceilings raised.
+  promotion: declined (canonical single-source ownership, typed metadata and original-context rules).
 
+
+[Exact completed metadata checklist](G1-SLICE-constructions.md#completed-product-metadata-checklist--preserved-from-cfd0748) retained.
 
 [Exact completed records](G1-SLICE-measurements.md#completed-recognition-and-provenance-checklists--preserved-from-d7a421e) retained.
 
@@ -974,3 +978,5 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 - `2026-10-03` (UTC): .5b.1c.2/STITCHCAD-G1-0082 applies D124 current grammar;100 cases/seven source/three doc reds. Static reference .5b.1 done; .5b.2 next.
 
 - `2026-10-03` (UTC): .5b.2a/STITCHCAD-G1-0083 adds closed product metadata;5 contracts/10 actual reds, strict native596/WASM3. .2b next.
+
+- `2026-10-03` (UTC): .5b.2b/STITCHCAD-G1-0084 adds sourced metadata;7 contracts/19 body reds/one API-negative red, strict608. D130 fixed; .2c next.

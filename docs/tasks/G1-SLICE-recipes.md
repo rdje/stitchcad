@@ -647,33 +647,39 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.2a`
   Status: `done`
-  Work unit: `STITCHCAD-G1-0083`; clean predecessor d7a421e, handoff0/no jobs/user changes.
-  Goal: closed product kind/origin/reserved-name/context vocabulary before sourced declarations.
-  Read: roadmap ADR-0003/§11 G1, contract2/3/3.1/5/6, grammar1.1/5/6/7.1, ontology3/5,
-  static obligation map, MachineToken/statement annotations and public input/reference interfaces.
-  Protocol: eight kinds/six bindable kinds, nine origins/eight reserved names/four context classes;
-  explicit enum metadata only, no values, state, numeric availability or context resolution.
-  Reuse five symbolic FormulaToleranceName variants; preserve MachineToken's closed keywords.
-  Public exhaustive populations/token lookup and exact conversions must agree bidirectionally
-  with independently authored normative rows, including absent-context kind/origin information.
-  Negative lookup preserves exact spelling: no trim/case repair or excluded-form reservations.
-  Independent public Rust contracts and loaded-book population controls; actual compiled mapping/
-  population/role faults must fail assertions with exact source restoration. Focused syntax/name,
-  strict make check, WASM, reference/language/publication and staged doctrine checks before commit.
-  Own D129 stale public review-owner prose repair and completed-task/oldest ledger/lesson retention
-  within existing parts/ceilings. No sourced declaration, namespace, type checker or runtime claim.
-  Acceptance: complete closed metadata contract, honest public status/examples and falsified controls.
-  Verification:5 public contracts/10 actual compiled body reds/exact restoration; strict native596/
-  49groups, WASM3, reference/language16/publication9 terminal0. Commit: `STITCHCAD-G1-0083`.
+  Goal: closed product kind/origin/reserved-name/context vocabulary.
+  Verification: [exact protocol and receipts](G1-SLICE-constructions.md#completed-product-metadata-protocol--preserved-from-cfd0748).
+  Commit: `STITCHCAD-G1-0083`.
 
 - ID: `G1-SLICE.5b.2b`
-  Status: `pending`
+  Status: `done`
   Goal: immutable named declarations carrying existing canonical source identities/borrowed records,
   binding kinds and prior-operation PointRef/EdgeRef; preserve single authored-value ownership.
   Acceptance: no sc-core to sc-measure cycle or value/state fetch; authored input/recipe/reserved
   sources distinguished and impossible source-kind combinations refused by types or typed errors.
   Finalize public construction/ordinal/identity protocol after .2a, before code.
-  Verification: `pending`; Commit: `pending`.
+  Work unit: `STITCHCAD-G1-0084`; clean predecessor cfd0748, handoff0/no jobs/user edits.
+  Pre-code protocol: same contract2/3/3.1/4.1/5.2/grammar1/7.1; complete normalized statement/
+  recipe, MachineToken, LengthDeclaration and stable PointRef/EdgeRef interfaces read.
+  Input origins closed to measurement/ease/parameter/profile/material. Carry input metadata and
+  canonical declaration identities; generic input kind is a caller-authored metadata claim, not
+  record/state/value proof. Canonical length adapter borrows the actual immutable record and forces
+  length without reading state or authored_value. Geometry refs force point/edge and retain creator/tag.
+  Recipe source comes only from an actual normalized recipe ordinal's let; absent/zero/assertion
+  positions return None, no guessed ordinal, declaration or annotation. Preserve original name/
+  whole-statement/name spans and authored annotation without inference; reserved binding still
+  awaits namespace checks. Reserved constructors derive their fixed names/kinds/origins/contexts.
+  Names borrow validated MachineToken or existing normalized source; private immutable construction,
+  Copy/Clone and opaque Debug retain lifetimes/privacy, no copied canonical value/state.
+  D130 draft adapter overgeneralization repaired before commit: generic kinds use only three
+  scalar domains; measurement/Ease require canonical length borrowing, enforced by distinct types.
+  Independently authored five length origins/three scalar domains/six kinds, every LengthState, every
+  reserved name, exact refs, actual recipe positions and borrow/private compile-fail controls.
+  Actual compiled source/kind/origin/name/ordinal/span/privacy faults must fail public body assertions
+  and restore exact bytes. Strict native/WASM and focused reference/book checks; per-leaf docs/commit.
+  Own exact completed-record/oldest ledger/lesson retention under unchanged parts/ceilings.
+  Verification:7 public contracts/19 compiled body reds/one widened API-negative contract red,
+  exact restore; strict native608/50groups and focused book/reference pass0. Commit: `STITCHCAD-G1-0084`.
 
 - ID: `G1-SLICE.5b.2c`
   Status: `pending`
@@ -950,27 +956,36 @@ before final checks. No checker, cap, grammar or product Rust changed; no needed
 
 ## Product semantic vocabulary receipts — .5b.2a,2026-10-03 (UTC)
 
-- New explicit metadata-only FormulaKind/Origin/ReservedName/ReservedContext; all8/six/9/8/four
-  populations checked against independently authored rows and actual canonical tables. Tolerance
-  roles reuse existing syntax variants. No provider, value/state availability or numeric conversion API.
-- Five public contracts pass0; ten actual compiled mapping/population/context/role/lookup faults
-  fail in Rust assertion bodies, rc101, and restore exact source. Standing structural suite verifies
-  unique anchors and rejects compiler/expect-only/passing-name noise; normal restored tests pass0.
-- Strict fmt/clippy/native make check:596 passes/49 result groups/0 failed, terminal0; WASM all
-  three libraries compile0. Initial test-fixture tuple triggered type_complexity; owned/fixed here
-  with named ReservedCase fields rather than a lint suppression. Final strict rerun passes.
-- Full reference structural and language16/publication9 terminal0;55 chapters/29 scoped API rows/
-  1135 source links/1762 rendered links, warning-free. No grammar or runtime result changed.
-- D129 scoped current orientation repaired; former .1b/.1c frontier promises absent. Original
-  seven-line/630B report retained exact in part52, digest645bed69; no history audit claimed.
-- Exact predecessor task91lines/7051B/6cae1199 moved from recipes to constructions,41lines/3295B/
-  24e36f3e checklists to measurements. Oldest ledger15lines/1243B/ffd1e428 and lesson12lines/1049B/
-  de02f486 match d7a421e predecessor; existing archived content unchanged, no ceiling raised.
-- Publication/tree/archive/ledger and staged gate recording receipts follow before commit.
-  G1 stays5/18 In Progress. Next .5b.2b final sourced-declaration protocol before implementation.
-- Final tree10lanes/13trees/10siblings/zero gaps and archive218 logical/32 resident records pass0.
-  Fresh materialization yields10open/118sealed disjoint defect IDs; exact task/ledger predecessor
-  comparisons pass0. Ledger9/0fail terminal0; final diff/fmt checks0. Staged doctrine gate follows.
-- Final staged make gate:13 checks/all green, rc=0; the initial gate refused unformatted rc0
-  evidence signatures. Actual output now uses rc=0/rc=101 inside all three required fresh boxes;
-  no gate or signature policy changed. Diff check0; pre-commit hook repeats the staged gate.
+[Exact completed receipts](G1-SLICE-constructions.md#completed-product-metadata-receipts--preserved-from-cfd0748) retained.
+
+## Sourced declaration receipts — .5b.2b,2026-10-03 (UTC)
+
+- Closed named immutable source views: input metadata and canonical declaration IDs kept distinct;
+  existing length records borrowed by pointer; geometry creator/tag preserved, no resolution.
+  Recipe annotations/name/whole-name spans/ordinal come from actual normalized let positions only.
+  No state/value query in kind/origin inspection; generic metadata does not certify target records.
+- Seven public contracts and five actual negative construction/private/lifetime doctests verify
+  five canonical length domains, three general scalar domains/six kinds, all five LengthStates,
+  point/edge refs/eight reserved names, zero/absent/assertion recipe positions and boundary4096.
+-19 actual compiled source/kind/origin/identity/context/privacy body assertion reds plus one
+  actual widened library API that compiles forbidden measurement input and fails its negative
+  construction contract; producer restored exactly, script rc=0. Normal strict608/50groups pass0.
+- Owned draft faults: assert(false) placeholders refused by strict lint, replaced by actual variant
+  assertions; custom messages then hid standard assertion signatures. Classifier correctly refused
+  those reds; default body messages restored, classifier unchanged. D130 five-domain generic input
+  was overbroad; distinct scalar type prevents measurement/Ease non-length metadata before commit.
+  Borrow-discard fault retargeted to actual cloned-record cache after the new type boundary made
+  its old replacement ill-typed; pointer identity catches the compiled clone, not compiler failure.
+- Reference structural/language16/publication9 terminal0:55 chapters/33 APIs/1137 source links/
+  1765 rendered links, warning-free. Reference evidence remains separate from product acceptance.
+- Exact cfd0748 task26lines/2390B/29b1b16a receipts,21lines/1781B/288041bd protocol and20lines/
+  1601B/04dd4b10 checklist retained in constructions. Oldest ledger11lines/974B/aad9b836 and
+  lesson11lines/932B/2d6e66b8 match HEAD; D130 eight-line/772B report5f6b8b11 retained in part53.
+- Archive221 logical/35 resident records and fresh reconstruction10open/119sealed/disjoint pass0;
+  tree10lanes/13trees/10siblings/zero gaps. Ledger/WASM/staged-gate final receipts follow.
+- WASM all three libraries compile, rc=0; native608/50groups includes all five construction/
+  privacy/lifetime negative contracts. Source/state/availability methods were not used for kind.
+  Final tree/archive/defect predecessor checks pass0; ledger9/13 pointer controls terminal0.
+  Staged doctrine gate follows; all current verification jobs observed terminal.
+- Staged make gate:13 checks/all green, rc=0; final diff check0. Metadata/source predicates and
+  closed API type boundary remain restored; pre-commit hook repeats the staged gate.

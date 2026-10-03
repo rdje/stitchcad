@@ -154,6 +154,16 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0084 - immutable sourced formula declarations (leaf `G1-SLICE.5b.2b`)
+
+Declarations preserve distinct metadata/value IDs, canonical length borrows, point/edge refs and
+actual normalized let ordinals/names/spans/annotations without value reads or binding authority.
+Generic scalar domains are three; measurement/Ease stay forced-length canonical adapters (D130).
+Seven public/five negative construction/private/lifetime contracts,19 actual compiled body reds/
+one widened API-negative red and strict native608/50groups pass. Reference/language16/publication9
+verify55 chapters/33 APIs; source remains exact after faults. Book/live/task/README align; exact
+prior payloads retained. G1 stays5/18;10open/119sealed; checked namespace .2c next.
+
 ## STITCHCAD-G1-0083 - closed product semantic metadata (leaf `G1-SLICE.5b.2a`)
 
 Product FormulaKind/Origin/ReservedName/ReservedContext enumerate8 kinds/six binding kinds/nine
@@ -366,21 +376,11 @@ Book/grammar/decision/current status stay aligned; G1 remains5/18, defects10open
 Next .5a.3f.1b complete statement/recipe input normalization, then .1c owned identity. No runtime,
 project format/hash, human approval or production signoff added.
 
-## STITCHCAD-G1-0067 - coupled statement and recipe syntax review (leaf `G1-SLICE.5a.3e.3`)
-
-Three new public controls verify authored zero-gap/token-prefix boundaries, exact later-statement
-header/operand diagnostics and simultaneous4096×2×256-node/16-if maxima on64KiB stack. Five actual
-compiled assertion reds target only those controls and restore source exactly; all product Rust sources
-remain byte-identical to415d577. Independent fixtures/reference and syntax-only proof map agree.
-D110 diagnostic context wording is fixed; D109 exact assertion/recipe identity contract remains owned
-next before serializer implementation. Strict native553/45groups, release20/WASM3 and scoped book
-checks pass:51 chapters/21 API rows/1058 source/1636 rendered links, language16/publication9.
-Prior proof/oldest ledgers preserve exact bytes. G1 stays5/18, defects11 open/98 sealed;
-next .5a.3f.1 exact recipe byte contract and normalization. No numeric runtime/MCP/signoff claim.
-
 
 | [`stitchcad-changelog-part78.md`](docs/history/stitchcad-changelog-part78.md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
 
 | [`stitchcad-changelog-part79.md`](docs/history/stitchcad-changelog-part79.md) | STITCHCAD-G1-0065 | 14 lines, 1183 bytes, `sha256:aa1df64f…` |
 
 | [`stitchcad-changelog-part80.md`](docs/history/stitchcad-changelog-part80.md) | G1-0066 ordered recipe syntax | 15 lines, 1243 bytes, `sha256:ffd1e428…` |
+
+| [`stitchcad-changelog-part81.md`](docs/history/stitchcad-changelog-part81.md) | STITCHCAD-G1-0067 | 11 lines, 974 bytes, `sha256:aad9b836…` |

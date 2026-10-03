@@ -652,3 +652,83 @@ Staged make gate → === all doctrines green ===, rc=0; independent evidence app
 
 
 Retention: complete predecessor payload preserved by .5b.2a.
+
+## Completed product metadata receipts — preserved from cfd0748
+
+## Product semantic vocabulary receipts — .5b.2a,2026-10-03 (UTC)
+
+- New explicit metadata-only FormulaKind/Origin/ReservedName/ReservedContext; all8/six/9/8/four
+  populations checked against independently authored rows and actual canonical tables. Tolerance
+  roles reuse existing syntax variants. No provider, value/state availability or numeric conversion API.
+- Five public contracts pass0; ten actual compiled mapping/population/context/role/lookup faults
+  fail in Rust assertion bodies, rc101, and restore exact source. Standing structural suite verifies
+  unique anchors and rejects compiler/expect-only/passing-name noise; normal restored tests pass0.
+- Strict fmt/clippy/native make check:596 passes/49 result groups/0 failed, terminal0; WASM all
+  three libraries compile0. Initial test-fixture tuple triggered type_complexity; owned/fixed here
+  with named ReservedCase fields rather than a lint suppression. Final strict rerun passes.
+- Full reference structural and language16/publication9 terminal0;55 chapters/29 scoped API rows/
+  1135 source links/1762 rendered links, warning-free. No grammar or runtime result changed.
+- D129 scoped current orientation repaired; former .1b/.1c frontier promises absent. Original
+  seven-line/630B report retained exact in part52, digest645bed69; no history audit claimed.
+- Exact predecessor task91lines/7051B/6cae1199 moved from recipes to constructions,41lines/3295B/
+  24e36f3e checklists to measurements. Oldest ledger15lines/1243B/ffd1e428 and lesson12lines/1049B/
+  de02f486 match d7a421e predecessor; existing archived content unchanged, no ceiling raised.
+- Publication/tree/archive/ledger and staged gate recording receipts follow before commit.
+  G1 stays5/18 In Progress. Next .5b.2b final sourced-declaration protocol before implementation.
+- Final tree10lanes/13trees/10siblings/zero gaps and archive218 logical/32 resident records pass0.
+  Fresh materialization yields10open/118sealed disjoint defect IDs; exact task/ledger predecessor
+  comparisons pass0. Ledger9/0fail terminal0; final diff/fmt checks0. Staged doctrine gate follows.
+- Final staged make gate:13 checks/all green, rc=0; the initial gate refused unformatted rc0
+  evidence signatures. Actual output now uses rc=0/rc=101 inside all three required fresh boxes;
+  no gate or signature policy changed. Diff check0; pre-commit hook repeats the staged gate.
+
+Retention: complete predecessor payload preserved by .5b.2b.
+
+## Completed product metadata checklist — preserved from cfd0748
+
+### G1-SLICE.5b.2a — closed product semantic metadata
+
+- [x] **REPRODUCE / ISSUE** — prior product API stops at syntax annotations; scoped declaration
+  metadata foundation is next .5b.2. D129 stale orientation reproduced by exact current prose.
+- [x] **ROOT CAUSE (WHY + WHERE)** — kind/binding, semantic origin/value provider and tolerance/
+  size roles need distinct closed metadata. formula_semantic_contract →5 tests/0 failed, rc=0,
+  compares independent8/six/9/8 populations with actual canonical table rows in both directions.
+- [x] **FIX** — four metadata types preserve all normative roles without provider/value access.
+  Reuse existing symbolic tolerances and preserve MachineToken/D124 current keyword set.
+- [x] **ADDRESSED (verified)** — semantic_mutations.py →10 actual compiled body assertion reds,
+  rc=101 per faulty build, producer restored exactly; script rc=0. Normal restored5 tests pass0.
+  Every context/role mapping, geometry non-bindability, exact lookup and closed population checked.
+- [x] **NO REGRESSION** — make check →596 native passes/49 groups, strict fmt/clippy rc=0; WASM3
+  compile0; full structural/reference/language16/publication9 terminal rc=0. No runtime or grammar claim.
+- [x] **LOCKSTEP** — metadata annex/examples/API map/status/navigation and README/live/task/
+  resume agree;55 chapters/29 APIs/1135 source/1762 rendered links verified0. D129 fixed;
+  exact predecessor task/ledger/lesson payloads retained in bounded parts, no caps raised.
+  promotion: declined (existing kinds, origins, context and no-value-access principles).
+
+
+Retention: complete predecessor payload preserved by .5b.2b.
+
+## Completed product metadata protocol — preserved from cfd0748
+
+- ID: `G1-SLICE.5b.2a`
+  Status: `done`
+  Work unit: `STITCHCAD-G1-0083`; clean predecessor d7a421e, handoff0/no jobs/user changes.
+  Goal: closed product kind/origin/reserved-name/context vocabulary before sourced declarations.
+  Read: roadmap ADR-0003/§11 G1, contract2/3/3.1/5/6, grammar1.1/5/6/7.1, ontology3/5,
+  static obligation map, MachineToken/statement annotations and public input/reference interfaces.
+  Protocol: eight kinds/six bindable kinds, nine origins/eight reserved names/four context classes;
+  explicit enum metadata only, no values, state, numeric availability or context resolution.
+  Reuse five symbolic FormulaToleranceName variants; preserve MachineToken's closed keywords.
+  Public exhaustive populations/token lookup and exact conversions must agree bidirectionally
+  with independently authored normative rows, including absent-context kind/origin information.
+  Negative lookup preserves exact spelling: no trim/case repair or excluded-form reservations.
+  Independent public Rust contracts and loaded-book population controls; actual compiled mapping/
+  population/role faults must fail assertions with exact source restoration. Focused syntax/name,
+  strict make check, WASM, reference/language/publication and staged doctrine checks before commit.
+  Own D129 stale public review-owner prose repair and completed-task/oldest ledger/lesson retention
+  within existing parts/ceilings. No sourced declaration, namespace, type checker or runtime claim.
+  Acceptance: complete closed metadata contract, honest public status/examples and falsified controls.
+  Verification:5 public contracts/10 actual compiled body reds/exact restoration; strict native596/
+  49groups, WASM3, reference/language16/publication9 terminal0. Commit: `STITCHCAD-G1-0083`.
+
+Retention: complete predecessor payload preserved by .5b.2b.

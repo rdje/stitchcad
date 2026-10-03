@@ -28,3 +28,7 @@ formula operand kinds	annexes/formula-declarations.md	crates/sc-core/src/recipe/
 formula origins	annexes/formula-declarations.md	crates/sc-core/src/recipe/semantic.rs	FormulaOrigin	G1-SLICE.5b.2a	4.1
 formula reserved contexts	annexes/formula-declarations.md	crates/sc-core/src/recipe/semantic.rs	FormulaReservedContext	G1-SLICE.5b.2a	4.1
 formula reserved names	annexes/formula-declarations.md	crates/sc-core/src/recipe/semantic.rs	FormulaReservedName	G1-SLICE.5b.2a	4.1
+formula sourced declarations	annexes/formula-declarations.md	crates/sc-core/src/recipe/declaration.rs	FormulaDeclaration	G1-SLICE.5b.2b	4.1
+formula source locators	annexes/formula-declarations.md	crates/sc-core/src/recipe/declaration.rs	FormulaDeclarationSource	G1-SLICE.5b.2b	4.1
+formula authored input domains	annexes/formula-declarations.md	crates/sc-core/src/recipe/declaration.rs	FormulaInputOrigin	G1-SLICE.5b.2b	4.1
+formula general scalar domains	annexes/formula-declarations.md	crates/sc-core/src/recipe/declaration.rs	FormulaScalarInputOrigin	G1-SLICE.5b.2b	4.1

@@ -253,7 +253,7 @@ checks1139 metadata-only cases/thirteen actual guard reds; watched.
 Whole static recipe/consumer oracle: `python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations`
 checks196 cases/replay/measurement and actual guard reds; watched.
 Static review: static_review_contract.py --mutations in formula_structure;21/13 rows and D124.
-Product metadata: semantic_mutations.py there; ten compiled assertion reds/exact restoration. Run alone.
+Product metadata/source locators: semantic_mutations.py and declaration_mutations.py there; run alone.
 
 Assertion diagnostics: `python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations`; watched by structural suite.
 Origin/context reads: `python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations`; watched.

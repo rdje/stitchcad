@@ -900,3 +900,8 @@ D129 closes at G1-SLICE.5b.2a: stale public orientation now reports completed re
 and the precise new product metadata boundary. Original scoped report retained in
 [`stitchcad-defects-part52.md`](../history/stitchcad-defects-part52.md); publication/loaded-table
 controls verify registered APIs and canonical metadata, with product namespace/evaluation pending.
+
+D130 closes at G1-SLICE.5b.2b before the draft builder is committed. General scalar metadata
+uses only Parameter/Profile/Material; Measurement/Ease require canonical length borrowing through
+separate types. Original report retained in [`stitchcad-defects-part53.md`](../history/stitchcad-defects-part53.md).
+The negative construction contract and actual widened API counterfactual verify this boundary.

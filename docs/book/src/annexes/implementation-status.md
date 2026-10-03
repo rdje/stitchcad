@@ -27,11 +27,12 @@ requires the named contracts and later proof owners.
 | Owned statement/recipe identity | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3f.1c | [Exact owned bytes](formula-recipe-inputs.md#own-canonical-statement-and-recipe-identity) |
 | Formula lexing/expression syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.1/.2b.2 | [Syntax API](formula-syntax.md) |
 | Formula kind/origin/reserved metadata | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2a | [Declaration metadata](formula-declarations.md) |
+| Immutable formula source declarations | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2b | [Sourced declarations](formula-declarations.md#immutable-sourced-declarations) |
 
 Reference [static signature evidence](formula-static-validation.md) covers the complete finite
 kind/function matrix without executing values; product static validation and whole-recipe preflight
 remain pending. Reference namespace/preflight/full static review is verified at G1-SLICE.5b.1;
-product closed metadata is available, with sourced declarations and namespace resolution next.
+product metadata and sourced declarations are available, with namespace resolution next.
 
 ## Remaining proofs
 
