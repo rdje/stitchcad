@@ -670,25 +670,32 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.3c.2b.h0`
   Status: `done`
-  Goal: blocking fourth retained window before D140/new expression records exceed capacity.
-  Work unit: `STITCHCAD-G1-0096`; clean source2bdcd31, unchanged64-file bound, actual63 working.
-  Acceptance: freeze complete source membership, deterministic capture, independent Git/read/
-  materialization proofs, exact copy/verify/use before removing only captured raw records;
-  prior windows immutable, maintained links redirected, no raised cap or semantic loss.
-  Own D141 window3 misleading immutable title: diagnose actual source/catalog; preserve its bytes
-  and supersede with a live upkeep correction, require truthful new catalog labels in probes.
-  Checks: exclusive archive CLI/probes, ledger/publication/coverage/size; full check/gate/probes
-  before exceptional push. Completed protocol retained before live surfaces grow.
-  Verification:60 exact sources/249 independent originals, archive28/CLI262 plus native663/56,
-  WASM3/book10/ledger9+13/tree0gaps/full27probe suites/gate pass0; remote .h1 pending.
-  [Checklist](G1-SLICE-names.md#fourth-retained-window-checklist). Commit: `STITCHCAD-G1-0096`.
+  Goal: fourth exact retained window; verified `STITCHCAD-G1-0096`.
+  [Exact protocol](G1-SLICE-names.md#completed-fourth-window-protocol--preserved-from9fab7ec) retained.
 
 - ID: `G1-SLICE.5b.3c.2b.h1`
+  Status: `done`
+  Goal: observe exact-head CI/newest committed refusal; `STITCHCAD-G1-0097`.
+  [Protocol/verdicts](G1-SLICE-names.md#ci-observation-protocol--5b3c2bh1) retained.
+  Doctrine succeeded; Rust Clippy failed. Repairs D142/.r1 and D143/.r2 are next, then .v.
+- ID: `G1-SLICE.5b.3c.2b.h1.r1`
   Status: `pending`
-  Goal: exceptional doctrine push after completed .h0 commit; observe exact-head CI jobs/steps.
-  Acceptance: clean Git/empty brief, full local gates, push current project branch; observe job-level
-  terminal verdicts without inferred success; newest committed catalog actual refusal and restore.
-  Verification/Commit: `pending`; P0 D140 .5f.3a follows without a product pivot.
+  Goal: D142 repair redundant must_use on declarations iterator without weakening lint/API behavior.
+  Acceptance: actual1.99 runner failure/local toolchain evidence, remove redundancy, strict make
+  check and existing namespace/read/order contracts; preserve immutable sorted iterator contract.
+  Verification/Commit: `pending`.
+- ID: `G1-SLICE.5b.3c.2b.h1.r2`
+  Status: `pending`
+  Goal: D143 CI package/temp stores derived from checkout root rather than runner home defaults.
+  Acceptance: documented action integration, repo-derived paths in Rust workflow, actual locality
+  controls and no off-repo writes; full local gates before exceptional push; repaired CI .v.
+  Verification/Commit: `pending`.
+
+- ID: `G1-SLICE.5b.3c.2b.h1.v`
+  Status: `pending`
+  Goal: observe exact repaired-head CI jobs/steps before treating the milestone as verified.
+  Acceptance: full checks/clean required push, actual jobs/steps logs and store-path evidence.
+  Verification/Commit: `pending`; D140 follows.
 
 - ID: `G1-SLICE.5b.3c.2b.2`
   Status: `pending`

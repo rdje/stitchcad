@@ -154,6 +154,15 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0097 - observed archive CI verdicts (leaf `G1-SLICE.5b.3c.2b.h1`)
+
+Clean9fab7ec pushed after read-only remote/authority proof resolved automatic review. Exact-head
+jobs/steps observed: doctrine succeeded; Rust1.99 Clippy failed redundant iterator must_use and
+skipped tests/WASM. Local1.95/1.98 success is not a runner verdict. D142 lint/D143 CI locality
+repairs logged and scheduled immediately, then .v observes repaired CI before D140.
+Post-commit CLI266/252 includes newest immutable catalog refusal; oldest complete G1-0078 payload
+retained. Book/live/task/resume scope agrees; G1 stays5/18,14open/128sealed, no Rust CI success claimed.
+
 ## STITCHCAD-G1-0096 - fourth exact retained window (leaf `G1-SLICE.5b.3c.2b.h0`)
 
 Window4 retains60 whole source files from2bdcd31;249 logical records independently reconstruct
@@ -353,17 +362,6 @@ product evaluation remain owned, with no Rust source change or runtime/physical/
 Exact completed task blocks and oldest ledger/lesson/report payloads retained in bounded records.
 G1 stays5/18; defects13open/112sealed. Next D124 answer when received; D122 independent repair.
 
-## STITCHCAD-G1-0078 - static review and diagnostic proposal (leaf `G1-SLICE.5b.1c.1`)
-
-Independent21 worked/13 refusal static populations, envelope6,67 cases/four actual guard assertion
-reds pass; prior reference matrices/language16/publication9 green. Complete static owner map and
-product namespace/type/graph protocols recorded in annex. No Rust/product execution change.
-D124 excluded-form diagnostic recognition lacks source syntax; concrete ADR proposal awaits director
-ruling at .1c.2, parent review not closed. D125 false assertion lacks named runtime error, owned .5e.3.
-D126 bbox-to-edge-length tolerance claim corrected: radius5m/270deg arc fits10m square yet gives
-11.78um half-quantum chord error; exact independent lower bound exceeds10um. Actual budgets .5f.3/G2.
-Book/grammar/index/live/task/ADR agree; G1 stays5/18, defects14open/111sealed, exact old records retained.
-
 
 
 | [`stitchcad-changelog-part78.md`](docs/history/window4.md#stitchcad-changelog-part78md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
@@ -397,3 +395,5 @@ Book/grammar/index/live/task/ADR agree; G1 stays5/18, defects14open/111sealed, e
 | [`stitchcad-changelog-part92.md`](docs/history/window4.md#stitchcad-changelog-part92md) | STITCHCAD-G1-0076 | 8 lines, 648 bytes, `sha256:9138f15a…` |
 
 | [`stitchcad-changelog-part93.md`](docs/history/stitchcad-changelog-part93.md) | STITCHCAD-G1-0077 | 11 lines, 976 bytes, `sha256:556627ca…` |
+
+| [`stitchcad-changelog-part94.md`](docs/history/stitchcad-changelog-part94.md) | STITCHCAD-G1-0078 | 10 lines, 887 bytes, `sha256:f70a9dba…` |

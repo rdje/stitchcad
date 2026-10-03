@@ -831,7 +831,9 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.3b` | `done` | Closed built-in/selector signatures |
 | done | `G1-SLICE.5b.3c.2b.1` | `done` | D138 expression dimension payloads |
 | done | `G1-SLICE.5b.3c.2b.h0` | `done` | Fourth exact retained window |
-| current | `G1-SLICE.5b.3c.2b.h1` | `pending` | Full-suite/exceptional CI observation |
+| done | `G1-SLICE.5b.3c.2b.h1` | `done` | Exact CI verdicts; Rust failure tracked |
+| current | `G1-SLICE.5b.3c.2b.h1.r1` | `pending` | D142 strict Clippy repair |
+| next | `G1-SLICE.5b.3c.2b.h1.r2` | `pending` | D143 local CI stores, then .v |
 | next | `G1-SLICE.5f.3a` | `pending` | P0 D140 coordinate-kind reference repair |
 | next | `G1-SLICE.5b.3c.2b.2` | `pending` | Bounded expression checker |
 

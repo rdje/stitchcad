@@ -958,3 +958,16 @@ roles and documented child-first selection retained; header/geometry scope remai
 D141 closes at G1-SLICE.5b.3c.2b.h0: immutable window3 heading superseded in the live upkeep
 book; current labels/correction independently watched. Original report retained in
 [`stitchcad-defects-part59.md`](../history/stitchcad-defects-part59.md); byte identities unaffected.
+
+- **D142** — exact-head9fab7ec Rust CI job111242008842 fails strict Clippy1.99 at namespace.rs:221:
+  declarations() has redundant bare must_use though returned Iterator already has that obligation.
+  Actual job/log shows double_must_use; tests/WASM skipped; local1.95 strict gate was green.
+  Owner G1-SLICE.5b.3c.2b.h1.r1, P0 immediately before any further product work; remove redundant
+  annotation without lint waiver, preserve existing iterator behavior, full strict/public contracts.
+
+- **D143** — same runner log shows CARGO_HOME points to the runner-home .cargo store during Clippy;
+  Rust workflow supplies no checkout-derived store/temp environment. Project dependency store
+  defaults to user home, contrary to locality policy even when volumes happen to coincide.
+  Owner G1-SLICE.5b.3c.2b.h1.r2, P1 immediately after D142, before required repaired CI .h1.v.
+  Use documented toolchain integration and root-derived local stores/temp; require actual runner
+  environment/path checks, full local gate/probes and observed exact-head CI before closure.

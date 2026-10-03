@@ -852,3 +852,57 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
   Staged retention/size checks pass0; final fresh-evidence gate/hook recorded at commit.
   Commit .h0 before .h1 full-suite observation/exceptional push/observed CI; D140 next.
   Promotion: declined (existing exact-retention/immutable-record principles).
+
+## Completed fourth-window protocol — preserved from9fab7ec
+
+Original recipe block: 15 lines/1158B/SHA256 e518fba41fef8126bf0dfd7baf88a494b4a0d3a6a25bbb40ebcafa92582c9927.
+
+- ID: `G1-SLICE.5b.3c.2b.h0`
+  Status: `done`
+  Goal: blocking fourth retained window before D140/new expression records exceed capacity.
+  Work unit: `STITCHCAD-G1-0096`; clean source2bdcd31, unchanged64-file bound, actual63 working.
+  Acceptance: freeze complete source membership, deterministic capture, independent Git/read/
+  materialization proofs, exact copy/verify/use before removing only captured raw records;
+  prior windows immutable, maintained links redirected, no raised cap or semantic loss.
+  Own D141 window3 misleading immutable title: diagnose actual source/catalog; preserve its bytes
+  and supersede with a live upkeep correction, require truthful new catalog labels in probes.
+  Checks: exclusive archive CLI/probes, ledger/publication/coverage/size; full check/gate/probes
+  before exceptional push. Completed protocol retained before live surfaces grow.
+  Verification:60 exact sources/249 independent originals, archive28/CLI262 plus native663/56,
+  WASM3/book10/ledger9+13/tree0gaps/full27probe suites/gate pass0; remote .h1 pending.
+  [Checklist](G1-SLICE-names.md#fourth-retained-window-checklist). Commit: `STITCHCAD-G1-0096`.
+
+## CI observation protocol — .5b.3c.2b.h1
+
+- ID: `G1-SLICE.5b.3c.2b.h1`
+  Status: `done`
+  Goal: exceptional doctrine push after completed .h0 commit; observe exact-head CI jobs/steps.
+  Acceptance: clean Git/empty brief, full local gates, push current project branch; observe job-level
+  terminal verdicts without inferred success; newest committed catalog actual refusal and restore.
+  Work unit `STITCHCAD-G1-0097`; source9fab7ec clean, empty brief, no local jobs at leaf entry.
+  Full make check663/56, WASM3/gate13/probes27 terminal0 before clean fast-forward push.
+  First automatic review refused destination/timing; read-only GitHub API verified public
+  rdje/stitchcad, authenticated owner rdje/admin/push and remote10e19f2 matching upstream.
+  Same push re-review approved with user §4/COMMIT113–118 evidence; main→9fab7ec succeeded.
+  Published post-commit CLI266 controls/252 reads includes newest committed catalog refusal0.
+  CLI credential access is necessary read-only host authentication; project responses/cache/TMP
+  stay under root-derived target/, no external repository writes or secret copying.
+  Verification: exact-head doctrine job111242008836 and all8steps completed/success; Rust
+  job111242008842 completed/failure at Clippy, tests/WASM skipped. Both observed via run/jobs APIs,
+  rc=0; no Rust CI success claimed. 1.99 runner double_must_use at namespace.rs:221, local1.95.
+  D142 P0 lint repair .h1.r1 then D143 P1 local CI stores .h1.r2; .h1.v observes repaired head.
+  Commit: `STITCHCAD-G1-0097`; pending repairs precede P0 geometry .5f.3a.
+
+### G1-SLICE.5b.3c.2b.h1 — observed receipts
+
+- [x] **OBSERVE** — exact-head APIs/runs/jobs: doctrine37136504411/job111242008836 completed/
+  success, all8steps success; Rust37136504426/job111242008842 completed/failure, Clippy failure,
+  tests/WASM skipped, each API terminal0. Full logs identify1.99 versus local1.95; local existing
+ 1.98 strict Clippy also passes0, so neither local version reproduces the runner's exact failure.
+- [x] **RETENTION** — post-commit window_contract.py→266 independent controls/252 reads/0fail,
+  newest committed catalog edit refused1; producer returns0. Original .h0 protocol retained exactly
+  from9fab7ec above. Immutable catalog/reader/source/schema/caps remain unchanged.
+- [x] **OWNERSHIP / LOCKSTEP** — D142/D143 are real observed defects, logged with repro/impact/
+  priority and scheduled .h1.r1/.r2 immediately, then .v requires repaired exact-head CI before
+  D140. Product behavior/grammar unchanged, G1 stays5/18,14open/128sealed (derive again at commit).
+  Promotion: declined (existing exact-head CI and locality policies); docs/gates recorded at commit.

@@ -5,14 +5,14 @@ Latest commit: derive with git log --oneline -1.
 
 ## Current state
 
-- Active tree G1-SLICE, frontier .5b.3c.2b.h1 (recipes sibling); .h0/0096 verified/committed.
-- Window4 retains60 raw originals from2bdcd31;252 logical records/7 working MD after three new
-  seals; reader/schema/caps unchanged. D141 immutable heading correction recorded/verified.
-- Full make probes→27 green terminal0 (target/history-window4-all-probes.log); full gate also0.
-  Strict663/56, WASM3/book10/ledger9+13 pass0; required exceptional push/observed CI still owed.
-- Then clean-tree push and exact-head CI jobs/steps; newest committed catalog refusal. Commit .h1.
-- P0 D140 .5f.3a follows: static geometry Length checks before values, preserve contributions.
-- Then .5b.3c.2b.2 product expression/owner, .3a D139 headers/.3b statements, .4 whole graph.
-- Keep grammar. G1 stays5/18; D70 axes .4c.2 awaits director; product execution/geometry pending.
-- Handoff requires clean Git/empty brief and OS-visible check_handoff.sh --idle-cua.
-  Cleanup/push derive from docs/ARTIFACT_CLEANUP.md and COMMIT.md.
+- Active G1-SLICE, frontier .5b.3c.2b.h1.r1 (recipes); exact-head observation .h1/0097 complete.
+- Pushed9fab7ec: doctrine job111242008836/all8steps success; Rust111242008842 Clippy1.99 failed
+  redundant must_use on namespace.declarations(); tests/WASM skipped. D142 P0 immediate repair.
+- Local1.95 native663/56 and1.98 Clippy green. Need exact1.99 proof with root-local toolchain
+  store (never update host stores), remove redundant attribute, strict checks/public contracts.
+- D143 .h1.r2: runner CARGO_HOME defaulted to home; set checkout-local stores/temp via documented
+  action integration. Full gates then exceptional push, .h1.v observe repaired-head jobs/paths.
+- Window4 verified/committed, postcommitCLI266/252 includes newest catalog refusal; limits unchanged.
+- Then P0 D140 .5f.3a geometry Length-before-values; product .2b.2, D139 .3a, .3b/.4 follow.
+- Keep grammar. G1 stays5/18; D70 axes .4c.2 awaits director; execution/geometry pending.
+- Handoff: clean Git/empty brief/OS-visible check_handoff.sh --idle-cua; cleanup/push from policy.

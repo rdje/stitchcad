@@ -371,8 +371,12 @@ bash scripts/history_archive.sh prove-source window4
 bash scripts/history_archive.sh read docs/history/stitchcad-defects-part58.md
 ```
 
-G1-SLICE.5b.3c.2b.h1 owns exceptional CI observation and the newest committed-catalog refusal.
-Local capture/identity evidence does not substitute for that runner result or product approval.
+At exact pushed9fab7ec, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/37136504411/job/111242008836)
+and all eight steps completed successfully. The [Rust job](https://github.com/rdje/stitchcad/actions/runs/37136504426/job/111242008842)
+failed Clippy1.99 for redundant must_use on the declarations iterator; tests/WASM were skipped.
+G1-SLICE.5b.3c.2b.h1 records both actual verdicts and266 local post-commit CLI controls, including
+newest immutable-catalog refusal. D142 owns the lint repair; D143 owns checkout-local CI stores;
+.h1.v must observe their repaired head. Local success supplies no missing runner/product approval.
 
 The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
 labels are display text: short or mistaken labels do not change the retained identity. Filename text
