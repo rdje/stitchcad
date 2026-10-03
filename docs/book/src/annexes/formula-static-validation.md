@@ -289,8 +289,10 @@ No static review result approves numerical determinism, a physical garment or a 
 
 ### Implementation sequence after the review
 
-The product namespace slice .5b.2 will accept immutable typed declarations from canonical inputs,
-validate machine names and consume declaration pairs before an index can discard collisions.
+The product namespace foundation .5b.2 accepts immutable typed declarations from canonical inputs,
+validates machine names and consumes declaration pairs before an index can discard collisions.
+[Ordered metadata scopes](formula-name-scopes.md) retain actual prior let annotations and locations;
+complete expression/recipe acceptance remains the next two stages.
 Kinds and origins are separate from numeric availability. Reserved names have known kinds even
 without an instance/export context. Geometry declarations refer to prior operation outputs;
 they do not authorize construction. Input adapters must preserve existing source identities and

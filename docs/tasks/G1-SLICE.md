@@ -825,8 +825,9 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.2c.1b` | `done` | Delegated source-aware diagnostic decision and repair |
 | done | `G1-SLICE.5b.2c.2` | `done` | Checked product initial namespace |
 | done | `G1-SLICE.5b.2d.1` | `done` | Exact checked initial name reads |
-| current | `G1-SLICE.5b.2d.2` | `pending` | Actual prior recipe binding scope |
-| next | `G1-SLICE.5b.3` | `pending` | Whole expression static signatures |
+| done | `G1-SLICE.5b.2d.2` | `done` | Actual prior recipe binding scope |
+| current | `G1-SLICE.5b.3` | `pending` | Whole expression static signatures |
+| next | `G1-SLICE.5b.4` | `pending` | Complete static recipe graphs |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -852,25 +853,30 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Acceptance Checklist
 
+### G1-SLICE.5b.2d.2 — actual ordered declaration metadata
+
+- [x] **REPRODUCE / ISSUE** — detached let metadata has no active ordered scope. Public
+  formula_ordered_names_contract →eight contracts pass, rc=0; actual owner/order/refusal sources
+  and both4096 traversal/drop boundaries verify metadata staging before expression acceptance.
+- [x] **ROOT CAUSE (WHY + WHERE)** — arbitrary declaration/ordinal injection could reveal future
+  bindings or lose prior refusal locations. ordered_name_mutations.py →18 actual compiled body
+  assertion reds/exact two-source restore, rc=0. Initial compiler-only fault correctly refused.
+- [x] **FIX** — opaque actual-recipe cursor and borrowed current scope; header refusal before
+  scope/insertion, assertion positions retained without value binding, failed advance unchanged.
+  RecipeRebinding retains both actual sources/indices/spans; no final initial namespace escapes.
+- [x] **ADDRESSED (verified)** — eight public contracts/five private/lifetime examples/18 body reds,
+  rc=0: self/forward/labels, all six annotations/48 reserved attempts, exact refs/ordinals/spans,
+  collision kinds, unchanged failure/owner views/privacy and64KiB max recipes. No values queried.
+- [x] **NO REGRESSION** — make check →643 passed/53 groups, strict fmt/clippy green; make wasm
+  →three libraries; prior17/9 actual faults/structural/reference/language16/publication10/ledger9+13
+  controls pass, rc=0. Source byte-exact; metadata grants no expression/whole/runtime acceptance.
+- [x] **LOCKSTEP** — bounded book annex/examples/API/live/frontier and original task/oldest records
+  align; type/signatures .3 and whole graph .4 retain owners. promotion: declined (existing order,
+  typed borrowed sources and no-partial-proof contracts).
+
 ### G1-SLICE.5b.2d.1 — exact initial metadata reads
 
-- [x] **REPRODUCE / ISSUE** — the checked namespace has declarations but no exact typed read or
-  absent-name arguments. Public formula_name_read_contract →seven tests pass, rc=0; this boundary
-  returns borrowed original metadata or exact-query diagnostics without execution authority.
-- [x] **ROOT CAUSE (WHY + WHERE)** — ad hoc caller iteration could repair/default a missing name
-  or consult source values. name_read_mutations.py →nine actual compiled body assertion reds,
-  rc=0; wrong source/alias/fallback/value read/domain/token/name/privacy faults are detected.
-- [x] **FIX** — validated public resolve, internal exact parser-name lookup and opaque unbound
-  error with exact query/closed searched origins. Source/query lifetimes remain independent.
-- [x] **ADDRESSED (verified)** — seven public contracts/two negative doctests/nine actual faults,
-  rc=0: all scalar/length states/geometry/reserved sources, exact identities, near names, immutable
-  failures and private borrow/format contracts. Exact source restored; no value/context query.
-- [x] **NO REGRESSION** — make check →630 passed/52 groups, fmt/clippy strict green; make wasm
-  →three libraries; prior17 actual collision faults/structural/reference/language16/publication10/
-  ledger9+13 controls pass, rc=0. Flat namespace and grammar stay unchanged.
-- [x] **LOCKSTEP** — README/book/examples/API/live/frontier align; prior recipe binding scope .2d.2
-  and types/whole graphs .3/.4 remain owned. Exact prior evidence and oldest live records retained.
-  promotion: declined (existing exact spelling/canonical borrows/privacy/no-default contracts).
+[Exact checklist](G1-SLICE-names.md#completed-exact-initial-reads-checklist--preserved-from-19900d0) retained.
 
 ### G1-SLICE.5b.2c.2 — checked initial product namespace
 

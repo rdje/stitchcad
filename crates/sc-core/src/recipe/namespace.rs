@@ -4,6 +4,9 @@ use crate::name::MachineToken;
 use core::fmt;
 use std::collections::{btree_map::Entry, BTreeMap};
 
+mod ordered;
+pub use ordered::{FormulaNameCursor, FormulaStatementNameScope};
+
 /// Authored input or prior-operation metadata admitted to an initial namespace.
 /// Recipe bindings and language-owned reserved sources cannot seed a recipe's inputs.
 /// The retained declaration remains borrowed and grants no canonical registry/geometry proof.
@@ -39,7 +42,7 @@ impl<'a> TryFrom<FormulaDeclaration<'a>> for FormulaInitialDeclaration<'a> {
     }
 }
 
-/// First initial-name collision, retaining both real binding sources without copied values.
+/// Binding-name collision, retaining both real sources without copied values.
 /// Debug omits authored names/identities through the declaration's opaque formatter.
 #[derive(Clone, Debug)]
 pub enum FormulaNamespaceError<'a> {
@@ -56,6 +59,11 @@ pub enum FormulaNamespaceError<'a> {
         /// Only metadata handles are copied; canonical records remain borrowed.
         sources: Box<[FormulaDeclaration<'a>; 2]>,
     },
+    /// A recipe let repeats a name bound by an earlier let in this same recipe.
+    RecipeRebinding {
+        /// Earlier and attempted actual recipe declarations, including both ordinals and spans.
+        sources: Box<[FormulaDeclaration<'a>; 2]>,
+    },
 }
 impl<'a> FormulaNamespaceError<'a> {
     /// Stable internal diagnostic token; localized user presentation belongs to the command layer.
@@ -64,6 +72,7 @@ impl<'a> FormulaNamespaceError<'a> {
         match self {
             Self::ReservedBinding { .. } => "formula_rebinding",
             Self::AmbiguousName { .. } => "formula_ambiguous_name",
+            Self::RecipeRebinding { .. } => "formula_rebinding",
         }
     }
 
@@ -72,7 +81,7 @@ impl<'a> FormulaNamespaceError<'a> {
     pub fn name(&self) -> &'a str {
         match self {
             Self::ReservedBinding { attempted, .. } => attempted.name(),
-            Self::AmbiguousName { sources } => {
+            Self::AmbiguousName { sources } | Self::RecipeRebinding { sources } => {
                 let [_, attempted] = **sources;
                 attempted.name()
             }
@@ -89,6 +98,7 @@ impl<'a> FormulaNamespaceError<'a> {
                 attempted,
             } => [FormulaDeclaration::reserved(*reserved), *attempted],
             Self::AmbiguousName { sources } => **sources,
+            Self::RecipeRebinding { sources } => **sources,
         }
     }
 }

@@ -68,7 +68,7 @@ assert_eq!(FormulaReservedName::SizeIndex.tolerance_name(), None);
 ```
 
 A reserved spelling is a valid reference token and may not be rebound. Initial namespace collisions
-are checked below; ordered reads/forward-reference and whole-recipe checks remain .5b.2d and .3/.4. Context values,
+are checked below; [ordered metadata scopes](formula-name-scopes.md) are available; expression/whole checks remain .3/.4. Context values,
 numerical execution, geometry and policy decisions remain later obligations.
 
 ## Immutable sourced declarations
@@ -209,7 +209,7 @@ shows only the declaration count; declaration/initial/error Debug omits authored
 
 ## Source-preserving collision errors
 
-FormulaNamespaceError has two cases. ReservedBinding carries the fixed FormulaReservedName and
+The initial FormulaNamespaceError has two cases. ReservedBinding carries the fixed FormulaReservedName and
 actual attempted declaration; its token is formula_rebinding. AmbiguousName carries the first and
 second authored declarations; its token is formula_ambiguous_name. name() explicitly exposes the
 colliding spelling, and binding_sources() returns the earlier/reserved and attempted declarations
@@ -246,8 +246,8 @@ assert_eq!(error.binding_sources()[1].kind(), sc_core::recipe::FormulaKind::Coun
 
 Default error Display exposes only the internal stable token. Localized user messages belong to
 the command layer and use the explicit typed arguments. A successful initial namespace certifies
-source admission and initial-name uniqueness. Exact initial reads are available below; prior recipe bindings remain
-.5b.2d.2; expression kind/signature checking and complete static dependency graphs remain .3/.4.
+source admission and initial-name uniqueness. Exact initial reads are available below and [ordered name scopes](formula-name-scopes.md) retain prior
+recipe annotations; expression kind/signature checking and complete static dependency graphs remain .3/.4.
 Numeric state/context validation, evaluation and geometric/registry correctness retain their owners.
 
 Ten public contracts and three negative private/lifetime doctests cover closed reserved metadata, rejected recipe/reserved admission, three
@@ -289,8 +289,8 @@ length with export context, eps_phys is a length with profile context, and is_ba
 with size context. Static resolution supplies no provider-availability or canonical registry proof.
 A runtime read of an unknown fact remains formula_unknown; a missing valid tolerance provider
 remains formula_tolerance_unbound. Those runtime adapters and execution checks remain separately
-owned. This API resolves the initial namespace before statement one; prior recipe visibility,
-forward/self-reference refusal and expression type checking remain .5b.2d.2–.4.
+owned. This API resolves the initial namespace before statement one; [ordered metadata scopes](formula-name-scopes.md) retain prior
+recipe visibility. Expression type checking and whole acceptance remain .5b.3/.4.
 
 An absent declaration returns opaque FormulaUnboundName. name() borrows the exact query and
 origins_searched() exposes all nine flat namespace domains in contract order: measurement, ease,

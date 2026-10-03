@@ -13,7 +13,7 @@
 > and [whole-recipe preflight](../annexes/formula-static-validation.md#whole-recipe-before-execution).
 > The [complete static review map](../annexes/formula-static-validation.md#complete-static-review-and-remaining-contracts)
 > records remaining product/runtime contracts; D124 recognition preserves the existing grammar.
-> Product [metadata, sourced declarations and initial name reads](../annexes/formula-declarations.md) are available at .5b.2a–.2d.1.
+> Product [metadata and initial reads](../annexes/formula-declarations.md), plus [ordered name scopes](../annexes/formula-name-scopes.md), are available at .5b.2.
 > Product name/type/binding validation and evaluation remain G1-SLICE.5b–.5g work; final acceptance
 > makes every worked example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and

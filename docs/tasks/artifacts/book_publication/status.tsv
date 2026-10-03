@@ -36,3 +36,5 @@ formula initial source admission	annexes/formula-declarations.md	crates/sc-core/
 formula initial namespace	annexes/formula-declarations.md	crates/sc-core/src/recipe/namespace.rs	FormulaNamespace	G1-SLICE.5b.2c.2	4.1
 formula initial collision diagnostic	annexes/formula-declarations.md	crates/sc-core/src/recipe/namespace.rs	FormulaNamespaceError	G1-SLICE.5b.2c.2	4.1
 formula absent-name diagnostic	annexes/formula-declarations.md	crates/sc-core/src/recipe/namespace.rs	FormulaUnboundName	G1-SLICE.5b.2d.1	4.1
+formula ordered name cursor	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/namespace/ordered.rs	FormulaNameCursor	G1-SLICE.5b.2d.2	4.1
+formula actual statement name scope	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/namespace/ordered.rs	FormulaStatementNameScope	G1-SLICE.5b.2d.2	4.1

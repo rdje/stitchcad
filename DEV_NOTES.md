@@ -3,20 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-03 UTC)_ — exact name reads retain independent borrows
+## _(2026-10-03 UTC)_ — ordered metadata carries actual recipe locations
 
-- Public resolve accepts validated MachineToken; internal parser composition uses exact borrowed
-  spelling. A successful result retains the declaration's original source lifetime; an absent-name
-  error retains the query lifetime. Neither is tied to the temporary namespace allocation.
-- FormulaUnboundName is opaque and carries the closed nine searched domains, including an empty
-  recipe domain before statement1. Missing declarations never default/alias; unknown canonical
-  records and reserved optional contexts retain kind metadata independently of runtime values.
-- Seven public contracts/nine actual compiled body assertion reds pass0, source byte-exact;
-  predecessor17 collision faults remain reds. Existing Display fault anchor now scopes its exact
-  error impl because two typed errors legitimately share the same token-only formatter body.
-- Strict native630/52 groups, WASM three libraries/reference/book10/ledger9+13 pass0. Prior records
-  preserved exactly in linked bounded names sibling; oldest ledger/lesson sealed unchanged.
-- promotion: declined (existing exact spelling, canonical borrows, privacy and no-default contracts).
+- Cursor consumes only a checked initial namespace and one actual normalized recipe owner;
+  current scope contains initial/prior let metadata, never current/future bindings or labels.
+  Header collision precedes scope/insertion; failed advance leaves the same position/prefix.
+- RecipeRebinding retains actual prior/current ordinals and global whole/name spans, including
+  assertion gaps. Reserved sources have no invented prior index; input collisions stay ambiguity.
+  Cursor exposes no final initial namespace or accepted expression/graph/value result.
+- Eight public contracts/five negative examples and18 actual compiled body reds verify order,
+  refs/locations, refusal sources/privacy and4096-let/assertion traversal/drop on64KiB stack.
+  First mutation draft was a compiler red; classifier refused it. Corrected fault obtains owned
+  refusal before deliberately changing position; all18 body reds required, classifier unchanged.
+- Strict native643/53 groups/WASM three libraries and reference/book10/ledger9+13 pass0. Prior
+  records remain exact; bounded book distinguishes metadata from whole acceptance.
+- promotion: declined (existing declaration-order, typed borrowed sources and no-partial-proof rules).
+
 
 
 
@@ -176,3 +178,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part86.md`](docs/history/stitchcad-devnotes-part86.md) | G1-0086 delegated binding-source lesson | 12 lines, 1018 bytes, `sha256:92241e4a…` |
 
 | [`stitchcad-devnotes-part87.md`](docs/history/stitchcad-devnotes-part87.md) | G1-0087 initial namespace lesson | 17 lines, 1539 bytes, `sha256:06d7a8cd…` |
+
+| [`stitchcad-devnotes-part88.md`](docs/history/stitchcad-devnotes-part88.md) | G1-0088 exact name-read lesson | 14 lines, 1220 bytes, `sha256:11170a8b…` |

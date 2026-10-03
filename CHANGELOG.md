@@ -154,6 +154,17 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0089 - ordered formula name scopes (leaf `G1-SLICE.5b.2d.2`)
+
+Actual recipe cursor exposes initial/prior metadata in authored order; current/future names and
+assertion labels never bind early. Header refusal leaves position/prefix unchanged; both actual
+let indices/spans and initial/reserved source identities remain available without invented context.
+Eight public contracts/five negative examples/18 actual body reds verify ordering/source/privacy
+and4096-let/assertion boundaries on64KiB stack. Metadata staging grants no expression/graph/value
+acceptance. Book annex/API/live scope align; exact prior evidence/oldest records retained.
+Strict native643/53 groups/WASM three libraries/reference/language16/publication10/ledger9+13
+pass0;56 chapters/39 APIs/1156 source/1798 rendered links. G1 stays5/18,10open/122sealed; .5b.3 next.
+
 ## STITCHCAD-G1-0088 - exact initial formula name reads (leaf `G1-SLICE.5b.2d.1`)
 
 Validated queries resolve exact existing declarations, preserving original source lifetimes and
@@ -359,15 +370,6 @@ Rust591/WASM3/book/full26 probes and staged gates regenerate/pass; exact ledger 
 Latest cleanup record and book/tool/live navigation aligned; G1 stays5/18, defects10open/100sealed.
 Return to G1-SLICE.5b.1 static review. No product scope, dependency stores or other repository changed.
 
-## STITCHCAD-G1-0072 - syntax milestone and evaluator ownership (leaf `G1-SLICE.5a.4`)
-
-Complete syntax/input/identity proof map closes .5a without evaluator or geometry claims. Full native
-591 tests/48groups, WASM3 and all25 probe suites pass; seven coupled actual compiled assertion reds
-restore all four product sources exactly, then public review5 passes. All existing Rust bytes stay exact.
-D111 fixes current statement-identity status; .5b–.5g own23 pending static/numeric/irrational/replay/
-operation/final acceptance children. Book52/25 APIs/1093 source/1688 rendered links and task pointers
-agree. Completed node graph/prior closure and oldest ledger payloads preserved exactly; G1 stays5/18,
-defects10open/100sealed. Next .5b.1 independent static review, checking cleanup due first.
 
 
 
@@ -389,3 +391,5 @@ defects10open/100sealed. Next .5b.1 independent static review, checking cleanup 
 | [`stitchcad-changelog-part84.md`](docs/history/stitchcad-changelog-part84.md) | STITCHCAD-G1-0070 | 13 lines, 1176 bytes, `sha256:ce5bfa8a…` |
 
 | [`stitchcad-changelog-part85.md`](docs/history/stitchcad-changelog-part85.md) | STITCHCAD-G1-0071 | 14 lines, 1261 bytes, `sha256:a370b662…` |
+
+| [`stitchcad-changelog-part86.md`](docs/history/stitchcad-changelog-part86.md) | STITCHCAD-G1-0072 | 9 lines, 795 bytes, `sha256:480c7c1b…` |
