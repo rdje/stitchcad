@@ -887,12 +887,11 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal: D140 point/edge Length preflight; [exact protocol](G1-SLICE-names.md#d140-geometry-argument-protocol).
   Verified97cases/75payloads/12body reds, reference/language16/book10/ledger9+13→0; `STITCHCAD-G1-0102`.
-
 - ID: `G1-SLICE.5f.3a.t1`
-  Status: `pending`
+  Status: `done`
   Goal: D144 honest reference source locations; preserve stripped header offset, mark fault variants.
   Acceptance: independent original def/code positions and actual traceback lines; reference regressions.
-  Work unit `STITCHCAD-G1-0103`; do after0102 clean, then product .5b.3c.2b.2.
+  Verified86locations/2body reds, full reference/language16/book10/ledger9+13→0; `STITCHCAD-G1-0103`.
 
 - ID: `G1-SLICE.5f.3b`
   Status: `pending`

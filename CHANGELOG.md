@@ -154,6 +154,14 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0103 - truthful reference source locations (leaf `G1-SLICE.5f.3a.t1`)
+
+Preserve the shell-header offset for original compiled reference code; mark changed in-memory
+fault sources as virtual.86 independent original positions/real traceback text/variant frames and
+2 actual compiled helper faults pass0, with unchanged source bytes and formula behavior/grammar.
+Full reference/language/publication/ledger/gate receipts in owner; original D144/ledger/lesson and
+complete prior CI/cleanup protocols retained exactly. G1 stays5/18,11open/132sealed; checker next.
+
 ## STITCHCAD-G1-0102 - geometry arguments before values (leaf `G1-SLICE.5f.3a`)
 
 Reference point x/y and edge len parse/infer completely before numerical work; every kind must be
@@ -332,16 +340,6 @@ Exact predecessor task/oldest ledger/lesson records retained within unchanged ce
 Structural/language16/publication9/ledger9/13 pointer controls pass0; book55 chapters/33 APIs/
 1138 source/1767 rendered links. G1 remains5/18;11open/119sealed defects. Next .2c.1b ruling/repair.
 
-## STITCHCAD-G1-0084 - immutable sourced formula declarations (leaf `G1-SLICE.5b.2b`)
-
-Declarations preserve distinct metadata/value IDs, canonical length borrows, point/edge refs and
-actual normalized let ordinals/names/spans/annotations without value reads or binding authority.
-Generic scalar domains are three; measurement/Ease stay forced-length canonical adapters (D130).
-Seven public/five negative construction/private/lifetime contracts,19 actual compiled body reds/
-one widened API-negative red and strict native608/50groups pass. Reference/language16/publication9
-verify55 chapters/33 APIs; source remains exact after faults. Book/live/task/README align; exact
-prior payloads retained. G1 stays5/18;10open/119sealed; checked namespace .2c next.
-
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 
@@ -396,3 +394,5 @@ relaxed, no verified defect classification added; G1 remains5/18 and defects12op
 | [`stitchcad-changelog-part98.md`](docs/history/stitchcad-changelog-part98.md) | STITCHCAD-G1-0082 | 9 lines, 763 bytes, `sha256:cd886e4d…` |
 
 | [`stitchcad-changelog-part99.md`](docs/history/stitchcad-changelog-part99.md) | STITCHCAD-G1-0083 | 9 lines, 767 bytes, `sha256:ce745517…` |
+
+| [`stitchcad-changelog-part100.md`](docs/history/stitchcad-changelog-part100.md) | STITCHCAD-G1-0084 | 9 lines, 755 bytes, `sha256:ffb7e24e…` |

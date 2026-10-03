@@ -837,8 +837,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.3c.2b.h1.v` | `done` | Actual repaired CI/local stores verified |
 | done | `G1-SLICE.5b.3c.2b.h1.c` | `done` | Required cleanup/residue/regeneration verified |
 | done | `G1-SLICE.5f.3a` | `done` | Reference geometry argument checks verified |
-| current | `G1-SLICE.5f.3a.t1` | `pending` | D144 truthful reference source locations |
-| next | `G1-SLICE.5b.3c.2b.2` | `pending` | Bounded expression checker |
+| done | `G1-SLICE.5f.3a.t1` | `done` | Truthful reference source locations verified |
+| current | `G1-SLICE.5b.3c.2b.2` | `pending` | Bounded expression checker |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.

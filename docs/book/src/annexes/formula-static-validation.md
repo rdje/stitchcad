@@ -70,6 +70,24 @@ membership, Boolean condition, matching branches, envelope precedence and an env
 read through get. The producer on disk remains unchanged. These are actual failed body assertions,
 not merely nonzero script exits.
 
+### Reference source locations
+
+The table-loaded reference is extracted from a Python heredoc inside the shell census. Its loader
+preserves the original header line offset when compiling the normal reference, so tracebacks name
+the real source line and show the matching source text. In-memory fault variants use an explicitly
+virtual filename instead of claiming that their changed code is the unchanged source file.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/reference_locator_contract.py --mutations
+```
+
+D144's controls independently parse the original definitions/decorators and compare all86 compiled
+code locations, check the actual geometry dimension traceback text and inspect a virtual fault
+frame. Two actual compiled loader faults must fail body assertions: losing the header offset and
+letting a fault impersonate the original file. Source bytes remain unchanged. This fixes diagnostic
+locations in the test instrument; formula grammar, diagnostic arguments and execution results are
+unaffected. Structural probes watch these controls alongside the existing signature evidence.
+
 ## Repairs and remaining obligations
 
 D112 repaired within's reference guard, which admitted all reserved names, including the three size

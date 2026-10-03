@@ -968,12 +968,9 @@ Original reports/implementation receipts retained exactly in
 663tests/56groups and WASM3 succeeded; all11 Rust/eight doctrine steps succeeded. The actual
 runner verification confirmed all four effective checkout-local stores on the checkout volume.
 
-- **D144** — reference loader strips85 shell-header lines before compiling with the original shell
-  filename. Tool comparison finds resolve_geometry.__code__.co_firstlineno=690 while its real source
-  begins at775 (offset85); actual D140 failure traceback displayed unrelated source text at that line.
-  Reproduce load_reference/code-object line versus original def line; rc=0. Impact: misleading
-  source-location diagnostics during reference failures, not changed numerical or static semantics.
-  Root: static_signature_contract.py compiles the extracted prefix without preserving source offset.
-  Owner G1-SLICE.5f.3a.t1, P1 immediately after D140 before the product expression checker. Preserve
-  original line positions for the normal reference and identify in-memory fault sources honestly;
-  independent source-location assertions, original byte integrity and full reference regressions.
+D144 closes at G1-SLICE.5f.3a.t1: normal reference compilation preserves the original shell header
+line offset; in-memory fault variants use an explicitly virtual filename. Independent AST/code
+comparison verifies86 original locations, real dimension traceback text and a virtual fault frame;
+two actual compiled loader body reds detect offset loss and source impersonation. Original report
+retained exactly in [`stitchcad-defects-part62.md`](../history/stitchcad-defects-part62.md); numerical/
+static results and grammar unchanged. Full reference regressions stay required before commit.

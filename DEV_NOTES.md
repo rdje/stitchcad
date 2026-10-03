@@ -4,11 +4,11 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
-## _(2026-10-03 UTC)_ — geometry kinds before values
+## _(2026-10-03 UTC)_ — retain source positions when extracting code
 
-- Infer all point/edge arguments before execution; invalid kinds publish no cache/source prefix.
-- Existing provenance fault now targets the new edge statement;26 actual body reds remain effective.
-- Promotion declined (existing static order/diagnostic truth policy); product operation graph pending.
+- Original reference keeps its header offset; changed fault variants use a virtual filename.
+- AST/code and real traceback assertions verify locations; formula results stay unchanged.
+- Promotion declined (existing truthful-source policy).
 
 # Sealed archive — earlier lessons
 
@@ -191,3 +191,7 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`part100`](docs/history/stitchcad-devnotes-part100.md) | CI observation | 4 lines, 232 bytes, `sha256:ae0a5f60…` |
 
 | [`part101`](docs/history/stitchcad-devnotes-part101.md) | cleanup | 4 lines, 156 bytes, `sha256:cea7ce81…` |
+
+| [`part102`](docs/history/stitchcad-devnotes-part102.md) | geometry preflight | 5 lines, 357 bytes, `sha256:7addd9c0…` |
+
+| [`part103`](docs/history/stitchcad-devnotes-part103.md) | CI/cleanup protocols | 118 lines, 8944 bytes, `sha256:532de5ae…` |

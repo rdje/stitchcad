@@ -53,7 +53,9 @@ SIGNATURES = {
 def load_reference(replacement=None):
     source = SOURCE.read_text()
     assert source.count("<<'PY'\n") == 1
-    program = source.split("<<'PY'\n", 1)[1].rsplit('\nPY', 1)[0]
+    header, program = source.split("<<'PY'\n", 1)
+    line_offset = (header + "<<'PY'\n").count('\n')
+    program = program.rsplit('\nPY', 1)[0]
     boundary = 'print("-- tables read from the chapter")'
     assert program.count(boundary) == 1
     prefix = program.split(boundary, 1)[0]
@@ -68,8 +70,9 @@ def load_reference(replacement=None):
             'spec/formula-language.md', 'spec/formula-language/grammar.md',
             'spec/formula-language/examples.md', 'spec/reference-skirt.md', '.',
             'spec/formula-language'])]
+        filename = '<formula reference fault>' if replacement else str(SOURCE)
         with redirect_stdout(io.StringIO()):
-            exec(compile(prefix, str(SOURCE), 'exec'), namespace)
+            exec(compile('\n' * line_offset + prefix, filename, 'exec'), namespace)
     finally:
         sys.argv = args
     assert namespace['fails'] == 0, 'actual table loading failed'
