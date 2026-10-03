@@ -154,6 +154,15 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0102 - geometry arguments before values (leaf `G1-SLICE.5f.3a`)
+
+Reference point x/y and edge len parse/infer completely before numerical work; every kind must be
+Length. Truthful scoped payloads and no static-failure cache/result/source mutation are verified by
+97 cases/75 complete refusals/12 actual compiled reds; exact values/per-coordinate sources replay.
+All26 existing provenance reds retained; reference/language/publication/ledger/gate receipts in owner.
+Original D140/ledger/lesson retained, book/live/task/resume agree; G1 stays5/18,12open/131sealed, including owned D144 source-location repair.
+Product operation/geometry/full graph proof remains owned; grammar unchanged; expression checker next.
+
 ## STITCHCAD-G1-0101 - guarded daily cleanup (leaf `G1-SLICE.5b.3c.2b.h1.c`)
 
 Frozen plan removed6 output trees/991 strays,15647 files/1819917894B; independent residue0/tracked equality.
@@ -333,16 +342,6 @@ one widened API-negative red and strict native608/50groups pass. Reference/langu
 verify55 chapters/33 APIs; source remains exact after faults. Book/live/task/README align; exact
 prior payloads retained. G1 stays5/18;10open/119sealed; checked namespace .2c next.
 
-## STITCHCAD-G1-0083 - closed product semantic metadata (leaf `G1-SLICE.5b.2a`)
-
-Product FormulaKind/Origin/ReservedName/ReservedContext enumerate8 kinds/six binding kinds/nine
-origins/eight names/four context classes independently of value/state/availability. Five public
-contracts compare canonical rows in both directions; ten actual compiled assertion reds restore
-exact source. Strict native596/49groups, WASM3, full reference/language16/publication9 pass0.
-Metadata annex/examples/navigation/API map and live/task/resume records align; D129 stale review
-status fixed, exact task/ledger/lesson/report payloads retained. G1 stays5/18;10open/118sealed defects.
-Next .5b.2b sourced declarations; namespace/type/whole static acceptance and execution remain pending.
-
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 
@@ -395,3 +394,5 @@ relaxed, no verified defect classification added; G1 remains5/18 and defects12op
 | [`stitchcad-changelog-part97.md`](docs/history/stitchcad-changelog-part97.md) | STITCHCAD-G1-0081 | 10 lines, 858 bytes, `sha256:14381657…` |
 
 | [`stitchcad-changelog-part98.md`](docs/history/stitchcad-changelog-part98.md) | STITCHCAD-G1-0082 | 9 lines, 763 bytes, `sha256:cd886e4d…` |
+
+| [`stitchcad-changelog-part99.md`](docs/history/stitchcad-changelog-part99.md) | STITCHCAD-G1-0083 | 9 lines, 767 bytes, `sha256:ce745517…` |

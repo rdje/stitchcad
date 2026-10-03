@@ -92,11 +92,52 @@ actual compiled faults; the older recognition/kind matrix alone certifies no dia
 Reference expression dimension payloads are now verified by4023 cases/15 actual compiled faults,
 including complete kinds/wanted rules and multiple-error selection; see the
 [wanted-rule annex](formula-wanted-signatures.md#reference-expression-dimension-payloads).
-Header arguments remain D139/.3a; D140 coordinate-kind loss at .5f.3a is the next priority repair.
-The complete static review below covers its stated expression/header outcomes, without claiming
-geometry-provider coordinate validation or product accepted-expression proof.
+Header arguments remain D139/.3a. Reference geometry argument checks are verified below at .5f.3a.
+The complete static review covers its stated expression/header outcomes; local provider checking
+adds no product accepted-expression, complete operation graph or physical geometry proof.
 Numerical execution, operations, geometry and two-platform final acceptance retain their .5c–.5g
 owners. No product evaluation or API/MCP release claim follows.
+
+## Geometry provider argument checking
+
+The reference point provider takes x and y formula sources; its edge provider takes a len source.
+These are operation arguments, not formula constructors. All sources parse before any kind is
+resolved, then all kinds resolve in that order. Each argument must be length before the first value
+is computed. The scoped payload is defined in [contract5.2.4](../spec/formula-language.md#524-geometry-argument-refusals).
+
+| Provider | Argument formulas | Result |
+| --- | --- | --- |
+| point | x:1 mm; y:2 mm | exact coordinates1000/2000µm |
+| point | x:1.0; y:2 deg | formula_dimension; actual ratio/angle, wanted length/length |
+| point | x:1 um / 0; y:1 deg | formula_dimension before the division executes |
+| point | x:1.0; y:missing | formula_unbound_name; all kinds are unavailable |
+| edge | len:1 deg | formula_dimension; actual angle, wanted length |
+| point | x:hypot(3 um,4 um); y:7 um | x contribution hypot; y has no approximation source |
+
+No failed static check changes the provider's result, lazy-cache flag or contribution metadata.
+An invalid or unbound child preserves its own error; a provider mismatch reports every resolved
+argument kind, its real x/y/len position, and required length. An untaken conditional branch still
+has its names checked. Parsing retains literal-input normalization; execution traps cover expression
+evaluation, value reads and geometry callbacks.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/geometry_argument_contract.py --mutations
+```
+
+The97 independent cases cover all64 ordered point kind pairs and all eight edge kinds;70 invalid
+named combinations expose only kind and trap execution. Literal/computed refusals and child-error
+priority include an early zero divisor, approximation calls, syntax errors and an untaken branch.
+Seventy-five complete provider dimension payloads are checked. Successful point/edge cache replay
+verifies exact values, source unions, asymmetric per-coordinate sources and contributions inherited
+from named values. Twelve compiled actual source faults must fail body assertions: guard bypass,
+omitted y, execution during kind checking, reversed kinds/order, fabricated kinds, missing argument,
+wrong wanted kinds/scope, premature cache publication, lost coordinate/edge sources and swapped
+coordinate sources. The reference on disk remains unchanged by these faults.
+
+D140 is repaired in this local reference adapter. These controls do not validate arbitrary provider
+metadata, persisted graphs, whole-recipe runtime rollback, product operation identity or physical
+geometry. Product selectors/operation-argument integration remain .5f.3b/G2, and complete product
+static recipe acceptance remains .5b.4. The grammar and stable diagnostic token set are unchanged.
 
 ## Names and single-statement static checking
 
@@ -277,7 +318,7 @@ body assertions. Source remains unchanged.
 | All worked and refusal static outcomes | independently authored21/13 populations | .5b.4; runtime rows .5e |
 | Envelope dispatch before operand semantics | six calls/either branch; actual guard fault | .5b.3 |
 | Exact source and canonical identity | earlier product syntax/input/identity controls | .5b.4 semantic error context |
-| Complete typed diagnostic arguments | reference tokens/messages only | .5b.2–.4 and command .6 |
+| Complete typed diagnostic arguments | reference call/expression/provider payloads verified; header D139 remains | .5b.2–.4 and command .6 |
 | Persisted cycles and atomic runtime/replay behavior | outside these static instrument controls | .5e/.5f and storage .7 |
 | Physical geometry and cross-platform computed values | outside these static instrument controls | G2 and .5g |
 

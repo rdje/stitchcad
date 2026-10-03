@@ -774,14 +774,21 @@ class Evaluator:
 
     def resolve_geometry(self, entry, env):
         """An operation's argument formulas are evaluated at the operation's position (§4.1)."""
-        if entry["kind"] == "edge":
-            v = self.evaluate(self.parse(entry["exprs"]["len"]), env)
-            if v.kind != "length":
-                raise FErr("formula_dimension", "an edge's length is %s" % v.kind)
-            entry["sources"] = v.sources
-            return Fraction(v.v)
-        xs = self.evaluate(self.parse(entry["exprs"]["x"]), env)
-        ys = self.evaluate(self.parse(entry["exprs"]["y"]), env)
+        operation = entry["kind"]
+        names = ("len",) if operation == "edge" else ("x", "y")
+        nodes = tuple(self.parse(entry["exprs"][name]) for name in names)
+        kinds = tuple(self.infer(node, env) for node in nodes)
+        if any(kind != "length" for kind in kinds):
+            raise FErr("formula_dimension", "%s arguments require length, received %s" % (operation, kinds),
+                       {"diagnostic_scope": "geometry_arguments", "operation": operation,
+                        "operand_names": names, "operand_kinds": kinds,
+                        "wanted_kinds": ("length",) * len(names)})
+        # All arguments are statically accepted before the first value or cache contribution.
+        values = tuple(self.evaluate(node, env) for node in nodes)
+        if operation == "edge":
+            entry["sources"] = values[0].sources
+            return Fraction(values[0].v)
+        xs, ys = values
         entry["sources"] = xs.sources | ys.sources
         entry["components"] = (xs.sources, ys.sources)
         return (Fraction(xs.v), Fraction(ys.v))

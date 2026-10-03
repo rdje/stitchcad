@@ -951,15 +951,12 @@ roles and documented child-first selection retained; header/geometry scope remai
   annotation mismatch has actual declared/expression kinds. Owner G1-SLICE.5b.3c.3a, P1 before
   scope-bound product statements .3b. Document truthful case-specific schema before repair/proof.
 
-- **D140** — reference resolve_geometry discards point-coordinate kinds: exprs x=1.0,y=2 deg
-  returns (Fraction(1000000),Fraction(2000000)) as coordinates, while valid x=1 mm,y=2 mm gives
-  (Fraction(1000),Fraction(2000)); direct actual loader/resolve calls reproduce, rc=0. Source takes
-  xs.v/ys.v without Length checks. Edge len=1 deg raises formula_dimension with {}, after evaluating
-  that expression. Impact: invalid coordinate kinds can silently become geometry; static rejection
-  before values is unproved for operation formulas. Owner G1-SLICE.5f.3a, P0 immediately after
-  D138's dimension constructor slice and before product expression checker .5b.3c.2b.2. Require all
-  coordinate/edge Length checks before numeric work, exact actual/wanted payloads and original
-  provenance, actual compiled counterfactuals and no accepted prefix/cache mutation on refusal.
+D140 closes at G1-SLICE.5f.3a after complete static Length checking of local provider arguments.
+Original report retained exactly in [`stitchcad-defects-part61.md`](../history/stitchcad-defects-part61.md).
+97 independent cases/75 complete dimension refusals/12 actual compiled body reds verify argument
+kind/child order, untouched static-failure caches and original contribution replay. Existing26
+provenance body reds stay effective after their actual edge anchor is updated; grammar unchanged.
+Product operation identity/full graph/physical geometry remain separately owned.
 
 D141 closes at G1-SLICE.5b.3c.2b.h0: immutable window3 heading superseded in the live upkeep
 book; current labels/correction independently watched. Original report retained in
@@ -970,3 +967,13 @@ Original reports/implementation receipts retained exactly in
 [`stitchcad-defects-part60.md`](../history/stitchcad-defects-part60.md). Rust1.99 strict Clippy,
 663tests/56groups and WASM3 succeeded; all11 Rust/eight doctrine steps succeeded. The actual
 runner verification confirmed all four effective checkout-local stores on the checkout volume.
+
+- **D144** — reference loader strips85 shell-header lines before compiling with the original shell
+  filename. Tool comparison finds resolve_geometry.__code__.co_firstlineno=690 while its real source
+  begins at775 (offset85); actual D140 failure traceback displayed unrelated source text at that line.
+  Reproduce load_reference/code-object line versus original def line; rc=0. Impact: misleading
+  source-location diagnostics during reference failures, not changed numerical or static semantics.
+  Root: static_signature_contract.py compiles the extracted prefix without preserving source offset.
+  Owner G1-SLICE.5f.3a.t1, P1 immediately after D140 before the product expression checker. Preserve
+  original line positions for the normal reference and identify in-memory fault sources honestly;
+  independent source-location assertions, original byte integrity and full reference regressions.

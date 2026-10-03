@@ -47,6 +47,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.p
 python3 -I -B docs/tasks/artifacts/formula_structure/reserved_diagnostic_review.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/dimension_payload_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/geometry_argument_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations

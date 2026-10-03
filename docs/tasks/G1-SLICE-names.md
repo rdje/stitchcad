@@ -951,3 +951,38 @@ and tracked equality, then regenerate native/WASM/book/probes/gate. Package/tool
 - [x] **LOCKSTEP / RETENTION** — latest cleanup overwritten, existing guarded tool reused; original
   complete oldest ledger/lesson retained from5174e32. Book/live/task/resume agree; no package store,
   archived window, reader schema or cap changed. Promotion declined (existing cleanup policy).
+
+## D140 geometry argument protocol
+
+### G1-SLICE.5f.3a
+
+Work unit STITCHCAD-G1-0102; source481b47f clean/brief0/no jobs; roadmap4.2/G1, contract2–5.2,
+static/runtime annexes, actual resolver/infer/value/cache/provenance and loader/fault producers read.
+Point x/y and edge len require Length. Parse all arguments, then infer all kinds in source order
+before any evaluation, preserving child error priority and original outputs/cache/contributions.
+Document scoped formula_dimension fields before implementation; no new grammar/callables/tokens,
+no provider identity/statement index/span/canonical source invented. Parsing retains existing literal
+input conversion; product operations/full geometry validation remains .5f.3b/G2.
+Independent8-kind point/edge matrices, actual execution/read traps and actual compiled body faults
+will prove rejection order/complete fields/unchanged cache plus exact successful contribution replay.
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual resolver before→point(1.0,2deg) returns1000000/2000000;
+  valid mm coordinates1000/2000; edge1deg evaluates once then dimension{}, reproduce rc=0.
+  Independent geometry_argument_contract.py before→body assertion premature numerical execution,
+  rc=1. Actual source discarded point kinds and checked edge only after value evaluation.
+- [x] **ADDRESSED (verified)** — actual parse/all-kind preflight before evaluation; complete real
+  provider/argument/actual/wanted fields documented first. Producer→97cases/75complete refusals/
+  12 actual compiled body assertion reds, rc=0; kind-only entries/execution traps/static cache equality
+  and exact source/component/cache replay. Existing provenance→26actual body reds, rc=0; source exact.
+- [x] **NO REGRESSION** — full run_formula_structure_probes.sh→all producers/actual body reds0;
+  language→16 pass/0fail, publication→10 pass/0fail, ledger→9/pointer13 pass; each rc=0.
+  Archive266records/21working Markdown/11491lines/850900decodedB/380891residentB, verify rc=0;
+  census12open/131sealed incl new owned D144; make gate→all green, rc=0; hook follows.
+- [x] **LOCKSTEP / RETENTION** — original D140/complete oldest ledger/lesson retained from481b47f;
+  DEV index display labels shortened with all targets/coverage/identities unchanged, caps fixed.
+  Book/live/task/resume reflect reference scope; G1 stays5/18,12open/131sealed incl D144.
+  Product operation/full graph/geometry boundaries remain owned; promotion declined (existing rules).
+
+D144: actual unmodified reference code reports resolve_geometry at690, original source at775;
+stripped shell header is85lines. Loader uses original filename without offset, causing misleading
+traceback text. PLANNING report/.5f.3a.t1 owns immediate repair after0102 clean; code not yet changed.

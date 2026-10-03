@@ -884,14 +884,15 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Children: .a P0 D140 reference coordinate-kind validation, .b product selectors/budget proof.
 
 - ID: `G1-SLICE.5f.3a`
+  Status: `done`
+  Goal: D140 point/edge Length preflight; [exact protocol](G1-SLICE-names.md#d140-geometry-argument-protocol).
+  Verified97cases/75payloads/12body reds, reference/language16/book10/ledger9+13→0; `STITCHCAD-G1-0102`.
+
+- ID: `G1-SLICE.5f.3a.t1`
   Status: `pending`
-  Goal: D140 prevent geometry reference from discarding coordinate kinds or evaluating before kinds.
-  Priority: P0; follows current D138 constructor slice, before product expression checker .2b.2.
-  Acceptance: actual point x/y and edge length formulas must resolve to Length before any numeric
-  execution; retain actual/wanted diagnostics and all original contribution sources. Prove invalid
-  coordinate/edge expressions and untouched outputs/caches, value traps and actual body faults.
-  No generated geometry or product selector proof; reference repair only, grammar unchanged.
-  Verification/Commit: `pending`.
+  Goal: D144 honest reference source locations; preserve stripped header offset, mark fault variants.
+  Acceptance: independent original def/code positions and actual traceback lines; reference regressions.
+  Work unit `STITCHCAD-G1-0103`; do after0102 clean, then product .5b.3c.2b.2.
 
 - ID: `G1-SLICE.5f.3b`
   Status: `pending`

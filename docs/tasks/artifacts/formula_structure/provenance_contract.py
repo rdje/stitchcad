@@ -208,7 +208,7 @@ FAULTS = (
     ('conditional contribution', 'node[3], env).influenced(c)', 'node[3], env)'),
     ('untaken contribution', 'node[3], env).influenced(c)',
      'node[3], env).influenced(c, self.evaluate(node[3] if c.v else node[2], env))'),
-    ('edge cache provenance', 'entry["sources"] = v.sources', 'entry["sources"] = frozenset()'),
+    ('edge cache provenance', 'entry["sources"] = values[0].sources', 'entry["sources"] = frozenset()'),
     ('coordinate separation', 'vs[0].components[index] if vs[0].components is not None else vs[0].sources', 'vs[0].sources'),
     ('coordinate cache provenance', 'entry["components"] = (xs.sources, ys.sources)', 'entry["components"] = (frozenset(), frozenset())'),
 )

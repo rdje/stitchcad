@@ -252,6 +252,7 @@ Formula reference producers: docs/tasks/artifacts/formula_structure/ (python3 -I
 - static_review_contract.py, reserved_diagnostic_review.py: D124/D131 recognition/sources.
 - call_lookup_contract.py:166 payload cases/12 compiled and three loaded-set reds.
 - dimension_payload_contract.py:4023 cases/3814 complete refusals/15 compiled reds; D138.
+- geometry_argument_contract.py:97 cases/75 complete refusals/12 compiled reds; D140.
 - assertion_contract.py: named assertion arguments and values.
 - origin_value_contract.py: scoped origin/context reads.
 - provenance_contract.py: contribution sources;26 actual body reds.

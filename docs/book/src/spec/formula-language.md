@@ -333,6 +333,26 @@ The arc_length recommendation applies only to a refused angle/length multiplicat
 §5.1 specifies. A bare call lookup has no expression operands; header-only refusals and operation
 geometry adapters retain their separate checking scopes and are not accepted-expression proofs.
 
+#### 5.2.4 Geometry argument refusals
+
+An operation provider's point coordinates x/y and edge length len must each have kind length.
+Their argument sources are parsed first, then all child kinds resolve in that order before any
+argument evaluates. An unresolved or otherwise invalid child keeps its own diagnostic; the provider
+cannot report a complete kind tuple until every child resolves. These checks preserve the grammar.
+
+For a provider-kind mismatch, formula_dimension carries diagnostic_scope geometry_arguments,
+operation (the actual provider kind point or edge), operand_names (x/y or len in order),
+operand_kinds (all actual resolved kinds) and wanted_kinds (length at every argument position).
+Point and edge here identify operation providers; they are not additional formula callables.
+This boundary has no recipe ordinal, entity identity or canonical expression unless an enclosing
+operation supplies it. No absent context is fabricated. Static refusal computes no value and
+publishes no provider result, cache flag or contribution metadata. Parsing retains its existing
+literal-input conversion. Successful evaluation preserves each coordinate's contribution sources.
+
+The [reference geometry controls](../annexes/formula-static-validation.md#geometry-provider-argument-checking)
+exercise this local adapter boundary. They do not certify the product operation graph, physical
+geometry or atomic execution of a complete recipe; those retain their implementation owners.
+
 ### 5.3 Precedence with the envelope's diagnostics
 
 Where the refused construct is a *feature* the [envelope](feature-matrix.md) dispositions, the
