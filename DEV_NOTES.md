@@ -4,12 +4,10 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
-## _(2026-10-03 UTC)_ — verify effective CI stores after setup
+## _(2026-10-03 UTC)_ — observe repaired jobs
 
-- Export checkout-local Cargo/Rustup/target/scratch paths; verify after installation.
-- Public Rustup --no-self-update keeps host launcher read-only. GitHub's command file is required
-  platform transport; stores remain local.19 controls/six compiled guard faults pass0.
-- Promotion: declined (existing locality/CI policy); actual runner proof remains .h1.v.
+- Exact d5dd11f: doctrine8/Rust11 steps green, native663/56/WASM3; effective local stores verified.
+- Promotion: declined (existing observed-CI policy). No product approval inferred.
 
 # Sealed archive — earlier lessons
 
@@ -186,3 +184,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part98.md`](docs/history/stitchcad-devnotes-part98.md) | Complete G1 retention/CI protocols fromd24f1a9 | 86 lines, 6837 bytes, `sha256:741f466e…` |
 
 | [`stitchcad-devnotes-part97.md`](docs/history/stitchcad-devnotes-part97.md) | G1-0098 exact-compiler lesson | 6 lines, 417 bytes, `sha256:87269597…` |
+
+| [`devnotes-part99.md`](docs/history/stitchcad-devnotes-part99.md) | CI locality | 6 lines, 425 bytes, `sha256:bba39276…` |

@@ -154,6 +154,13 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0100 - repaired CI observed (leaf `G1-SLICE.5b.3c.2b.h1.v`)
+
+Exact d5dd11f jobs/steps succeeded: doctrine8, Rust11 including strictClippy1.99/native663/56/WASM3.
+Actual effective stores/locality checks passed; D142/D143 close with original reports retained.
+Full prior ledger/lesson retained exactly; book/live/task/resume agree, G1 stays5/18,12open/130sealed.
+Focused publication/ledger/gate receipts in owner; cleanup then D140, no product approval inferred.
+
 ## STITCHCAD-G1-0099 - checkout-local CI stores (leaf `G1-SLICE.5b.3c.2b.h1.r2`)
 
 Rust CI prepares Cargo/Rustup/target/scratch stores from checkout root before public stable Rustup
@@ -339,16 +346,6 @@ reference/language16/publication9 pass. Complete static reference review .5b.1 c
 namespace/type/graph remains .5b.2–.4. Book/ADR/live/task/frontier align, original task and oldest
 ledger/lesson/D124 report payloads retained. G1 stays5/18;10open/117sealed defects; .5b.2 next.
 
-## STITCHCAD-G1-0081 - reference contribution provenance (leaf `G1-SLICE.5e.3b`)
-
-The reference retains approximation-call sources through executed operators/conditions, numeric
-and Boolean bindings/reads, actual book publication and precise lazy geometry/cache coordinates.
-Named T1 assertion/within comparisons now raise formula_domain under the director's ruling;
-T2-or-looser keeps its threshold and exact/untaken/independent-coordinate T1 controls still pass.
-425 independent controls/26 actual compiled body assertion reds and actual copied-book bound-value
-refusal pass; full reference/language16/publication/ledger/gate checks recorded in the leaf.
-Runtime/diagnostic/ADR/live/task records agree; oldest complete ledger/lesson/D121 report and task
-receipts retain predecessor payloads. G1 stays5/18; product evaluation/real geometry/release pending.
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 
@@ -397,3 +394,5 @@ relaxed, no verified defect classification added; G1 remains5/18 and defects12op
 | [`stitchcad-changelog-part95.md`](docs/history/stitchcad-changelog-part95.md) | STITCHCAD-G1-0079 | 10 lines, 859 bytes, `sha256:94ba0cb6…` |
 
 | [`stitchcad-changelog-part96.md`](docs/history/stitchcad-changelog-part96.md) | STITCHCAD-G1-0080 | 11 lines, 976 bytes, `sha256:8d91c335…` |
+
+| [`stitchcad-changelog-part97.md`](docs/history/stitchcad-changelog-part97.md) | STITCHCAD-G1-0081 | 10 lines, 858 bytes, `sha256:14381657…` |

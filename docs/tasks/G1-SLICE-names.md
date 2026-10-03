@@ -899,3 +899,31 @@ record98 holds the complete committed span fromd24f1a9; retrieve with history_ar
   no archived window/reader/schema/cap change. Book/live/map/toolbox/task/resume reflect scoped CI
   changes; G1 stays5/18,14open/128sealed until .v observes repaired jobs/steps/effective paths.
   Promotion: declined (existing locality, exact retention and observed-CI policy).
+
+## Repaired CI observation — .h1.v
+
+### G1-SLICE.5b.3c.2b.h1.v
+
+Work unit STITCHCAD-G1-0100; d5dd11f clean, brief0, full local gates/probes green before push.
+Clean exceptional push→0; exact repaired-head runs queried by full SHA/event push, API→0.
+Observe actual job/step verdicts, locality verification output and compiler/build paths; refuse
+aggregate inference. D142/D143 close only after observed success. Cleanup due after this unit.
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — gh API exact-head jobs shows both completed/success;
+  eight doctrine/eleven Rust steps completed/success, API0. Rust log→compiler1.99, strict lint,
+  663passed/56groups/WASM3 and four effective root-derived stores, log retrieval/extraction rc=0.
+- [x] **ADDRESSED (verified)** — actual remote verification confirms directory/device and
+  environment identity after installation before all builds, rc=0; old redundant lint is absent.
+  Doctrine run37157386833/job111303492309, Rust37157386892/job111303492427 at full
+  d5dd11f3a5483b4d28f40feb58c86a8b3c148724. Each actual step succeeded; no aggregate inference.
+- [x] **NO REGRESSION** — publication→10 pass/0fail; ledger→9 pass/pointer13 verdicts0fail;
+  archive verify-retention→261 records/16working Markdown/11401lines/845172decodedB/375163residentB;
+  all invocations rc=0; make gate→all doctrines green, rc=0. Exact source reports retained; hook follows.
+- [x] **LOCKSTEP / RETENTION** — D142/D143 original reports and previous complete ledger/lesson
+  sealed fromd5dd11f; book/live/task/resume agree with exact runner scope. G1 stays5/18;
+  census12open/130sealed to be independently rederived. Promotion declined (existing CI policy).
+
+Census correction: row-only recipe129 omits exact heading-style D131 in immutable record54.
+Reader/body report identities→130 distinct sealed/12 open; D18 absent by design. Source report
+and repair identity were independently inspected; D38 owns both-form/uniqueness automated proof.
+PLANNING's live recipe corrected; no archived payload or unresolved diagnostic conflict changed.

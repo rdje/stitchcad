@@ -454,3 +454,10 @@ The standing CI-environment probes exercise19 independent runtime cases, six act
 faults and workflow step order. The device-refusal case uses explicitly simulated metadata; it writes
 no file to another volume. Local directory identity is measured, and .h1.v must observe the actual
 runner's effective paths and job/step verdicts before D143 closes.
+
+At repaired d5dd11f, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/37157386833/job/111303492309)
+succeeded on all eight steps and the [Rust job](https://github.com/rdje/stitchcad/actions/runs/37157386892/job/111303492427)
+succeeded on all eleven, including strict Clippy1.99,663 tests/56 result groups and the three-library
+WASM build. The runner's effective environment and locality command confirmed all four checkout-local
+stores on the checkout volume. D142/D143 are closed by observed evidence under .h1.v; these build
+results do not establish independent product or physical approval. Original failed-run verdicts remain.

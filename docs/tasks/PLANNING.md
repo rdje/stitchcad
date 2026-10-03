@@ -178,7 +178,7 @@ D69 is sealed in [`stitchcad-defects-part13.md`](../history/window2.md#stitchcad
 resolves there or in git history. Derive the counts
 rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
 `bash scripts/history_archive.sh materialize target/defect-census` then
-`grep -h '^- \*\*D[0-9]' target/defect-census/docs/history/stitchcad-defects-part*.md | wc -l` for the sealed set. A defect closes by
+`grep -hE '^(- \*\*D[0-9]+|### Defect D[0-9]+)' target/defect-census/docs/history/stitchcad-defects-part*.md | wc -l` for sealed reports. A defect closes by
 moving to a new sealed segment in the commit that fixes it, which is the per-defect status token D38 asks
 for, arrived at by structure instead of by a new field.
 
@@ -278,6 +278,12 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     parse and not a reading of its owner line. Classifying the `51` entries for the seal needed exactly that
     reading, and three of them (`D7`, `D9`, `D15`) use wording no marker list anticipated — the measurement
     that a derived status would have made unnecessary.
+
+  - Additional reproduced case2026-10-03 (.h1.v): row-only archive recipe returns129 after D142/D143
+    closure, omitting D131's exact heading-style report in defects-part54. Reader/body identity
+    extraction returns130 distinct sealed IDs; D18 intentionally absent. Recipe now covers both
+    retained report forms. PLANNING.5 must test both forms/identity uniqueness, priority unchanged;
+    the broader automated frontier/defect census remains open, with no immutable report rewrite.
 
 - **D40** — a sealed segment's **digest** is verified for every file in `docs/history/`, but its
   **Coverage** and **pointer** claims are verified only for changelog segments: the ledger probe's COVERAGE
@@ -959,19 +965,8 @@ D141 closes at G1-SLICE.5b.3c.2b.h0: immutable window3 heading superseded in the
 book; current labels/correction independently watched. Original report retained in
 [`stitchcad-defects-part59.md`](../history/stitchcad-defects-part59.md); byte identities unaffected.
 
-- **D142** — exact-head9fab7ec Rust CI job111242008842 fails strict Clippy1.99 at namespace.rs:221:
-  declarations() has redundant bare must_use though returned Iterator already has that obligation.
-  Actual job/log shows double_must_use; tests/WASM skipped; local1.95 strict gate was green.
-  Owner G1-SLICE.5b.3c.2b.h1.r1, P0 immediately before any further product work; remove redundant
-  annotation without lint waiver, preserve existing iterator behavior, full strict/public contracts.
-  Implementation .h1.r1 verified on exact local1.99 (before101/after strict663/56→0); keep open
-  until repaired-head runner .h1.v verifies it after D143, with no inferred remote success.
-
-- **D143** — same runner log shows CARGO_HOME points to the runner-home .cargo store during Clippy;
-  Rust workflow supplies no checkout-derived store/temp environment. Project dependency store
-  defaults to user home, contrary to locality policy even when volumes happen to coincide.
-  Owner G1-SLICE.5b.3c.2b.h1.r2, P1 immediately after D142, before required repaired CI .h1.v.
-  Use documented toolchain integration and root-derived local stores/temp; require actual runner
-  environment/path checks, full local gate/probes and observed exact-head CI before closure.
-  Implementation .h1.r2 sets four root-derived stores before public Rustup installation, guards
-  effective paths afterward and verifies19 controls/six compiled faults; keep open until .h1.v.
+D142/D143 close at G1-SLICE.5b.3c.2b.h1.v after observed d5dd11f runner success.
+Original reports/implementation receipts retained exactly in
+[`stitchcad-defects-part60.md`](../history/stitchcad-defects-part60.md). Rust1.99 strict Clippy,
+663tests/56groups and WASM3 succeeded; all11 Rust/eight doctrine steps succeeded. The actual
+runner verification confirmed all four effective checkout-local stores on the checkout volume.
