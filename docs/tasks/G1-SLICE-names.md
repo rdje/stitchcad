@@ -906,3 +906,34 @@ Original recipe block: 15 lines/1158B/SHA256 e518fba41fef8126bf0dfd7baf88a494b4a
   priority and scheduled .h1.r1/.r2 immediately, then .v requires repaired exact-head CI before
   D140. Product behavior/grammar unchanged, G1 stays5/18,14open/128sealed (derive again at commit).
   Promotion: declined (existing exact-head CI and locality policies); docs/gates recorded at commit.
+
+## D142 pre-code protocol
+
+  Work unit `STITCHCAD-G1-0098`; aaaf0fd clean, 0-byte untracked brief/no pending jobs.
+  Relevant native/WASM roadmap/CI and exact namespace iterator/source/errors/public contracts,
+  declaration annex/governance reviewed. Exact runner1.99 before/fix proof with root-derived
+  target/cargo-home/rustup-ci, target/cargo-home and target/scratch; host toolchains read-only.
+  No lint waiver, toolchain pin or grammar/API change; remote proof stays .h1.v.
+
+## D142 acceptance checklist
+
+### G1-SLICE.5b.3c.2b.h1.r1
+
+- [x] **REPRODUCE / ISSUE** — exact1.99 root-local cargo clippy --all-targets --all-features --
+  -D warnings→101 at namespace.rs:221 double_must_use; identical actual runner diagnostic. Local
+  1.95/1.98 before-controls green; toolchain1.99 install/caches/TMP under protected target/, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual1.99 compiler identifies a bare function must_use on
+  an Iterator result already carrying that obligation; official [Clippy double_must_use documentation](https://rust-lang.github.io/rust-clippy/rust-1.99.0/index.html#double_must_use)
+  agrees. Native source/scope diff proves one redundant attribute; exact compiler before probe101.
+- [x] **FIX** — remove only that attribute. No lint allow, severity/channel change, new test or
+  signature/body/kind/source/order/namespace behavior change. Existing public controls are the oracle.
+- [x] **ADDRESSED (verified)** — exact1.99 make check:fmt and strict Clippy green,663 tests/
+  56result groups passed, rc=0. Host rustc still1.95; isolated rustc1.99 matches the runner revision.
+- [x] **NO REGRESSION** — exact1.99 make check→663 passed/56groups includes namespace/
+  name-read/ordered scopes; cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core
+  -p sc-measure→3 libraries built; publication→10 pass/0fail, ledger→9/pointer13 pass, each rc=0.
+  Final staged gate/hook checks follow; remote repair proof remains .h1.v.
+- [x] **LOCKSTEP / RETENTION** — product annotation-only repair/current CI scope documented in
+  governance/live/task/resume; D142 stays owned/open until actual repaired runner. Prior whole
+  ledger/lesson retained exact and immutable windows unchanged. G1 stays5/18,14open/128sealed.
+  Promotion: declined (existing exact-head CI and locality policy).

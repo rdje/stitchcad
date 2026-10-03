@@ -154,6 +154,15 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0098 - exact Rust1.99 lint repair (leaf `G1-SLICE.5b.3c.2b.h1.r1`)
+
+Project-local Rust1.99 reproduces the actual CI double_must_use failure101. Remove only the
+redundant declarations() annotation; iterator signature/body, lexical order and immutable sources
+stay exact, with no lint waiver/toolchain pin/grammar change. Exact1.99 strict663tests/56groups
+pass0; public namespace/read/order contracts included. Runner proof remains .h1.v after D143
+local-store workflow; D142 stays open pending that verdict. Oldest complete ledger/lesson retained,
+book/live/task/resume align; G1 stays5/18 and14open/128sealed, no repaired remote verdict claimed.
+
 ## STITCHCAD-G1-0097 - observed archive CI verdicts (leaf `G1-SLICE.5b.3c.2b.h1`)
 
 Clean9fab7ec pushed after read-only remote/authority proof resolved automatic review. Exact-head
@@ -351,17 +360,6 @@ completed task blocks retained without cap growth. Rust/source identity unchange
 irrational provenance and execution remain pending. G1 stays5/18; defects12open/115sealed.
 Next independent D121 reference provenance repair; D124 director syntax ruling remains pending.
 
-## STITCHCAD-G1-0079 - named reference assertion failures (leaf `G1-SLICE.5e.3a`)
-
-D125 closes: a false runtime assertion raises formula_assertion with label, exact ordered values/
-kinds and symbolic tolerance class/value. Successful tuples, inclusive boundaries and earlier error
-precedence are preserved.262 independent cases/five kinds/five classes/eight actual body assertion
-reds and actual copied-book consumer refusal pass; full reference suite remains green.
-Book/annex/index/tool/task/live records align. D124 ruling pending; D121/D122 reference repairs and
-product evaluation remain owned, with no Rust source change or runtime/physical/release approval.
-Exact completed task blocks and oldest ledger/lesson/report payloads retained in bounded records.
-G1 stays5/18; defects13open/112sealed. Next D124 answer when received; D122 independent repair.
-
 
 
 | [`stitchcad-changelog-part78.md`](docs/history/window4.md#stitchcad-changelog-part78md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
@@ -397,3 +395,5 @@ G1 stays5/18; defects13open/112sealed. Next D124 answer when received; D122 inde
 | [`stitchcad-changelog-part93.md`](docs/history/stitchcad-changelog-part93.md) | STITCHCAD-G1-0077 | 11 lines, 976 bytes, `sha256:556627ca…` |
 
 | [`stitchcad-changelog-part94.md`](docs/history/stitchcad-changelog-part94.md) | STITCHCAD-G1-0078 | 10 lines, 887 bytes, `sha256:f70a9dba…` |
+
+| [`stitchcad-changelog-part95.md`](docs/history/stitchcad-changelog-part95.md) | STITCHCAD-G1-0079 | 10 lines, 859 bytes, `sha256:94ba0cb6…` |

@@ -964,6 +964,8 @@ book; current labels/correction independently watched. Original report retained 
   Actual job/log shows double_must_use; tests/WASM skipped; local1.95 strict gate was green.
   Owner G1-SLICE.5b.3c.2b.h1.r1, P0 immediately before any further product work; remove redundant
   annotation without lint waiver, preserve existing iterator behavior, full strict/public contracts.
+  Implementation .h1.r1 verified on exact local1.99 (before101/after strict663/56→0); keep open
+  until repaired-head runner .h1.v verifies it after D143, with no inferred remote success.
 
 - **D143** — same runner log shows CARGO_HOME points to the runner-home .cargo store during Clippy;
   Rust workflow supplies no checkout-derived store/temp environment. Project dependency store

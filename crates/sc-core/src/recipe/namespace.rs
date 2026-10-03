@@ -217,7 +217,6 @@ impl<'a> FormulaNamespace<'a> {
     }
 
     /// Inspect exact immutable declarations in lexical name order, independently of recipe order.
-    #[must_use]
     pub fn declarations(&self) -> impl ExactSizeIterator<Item = FormulaDeclaration<'a>> + '_ {
         self.entries.values().copied()
     }

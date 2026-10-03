@@ -25,4 +25,4 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | G7 — scoped production declaration | Not Started | 7 leaves: independent review, envelope statement, semver policy, upgrade/rollback, channels, governance |
 | V1 — assembly visualization | Not Started | parallel, never blocks a G-gate; 7 leaves: mesh, ease-aware stitching, net-line binding, arrangement, viewport, blinded validation |
 | V2 — physically validated simulation | Not Started | parallel, uncapped; 6 leaves: `sc-sim` out of the default build, XPBD research, labelled approximation, calibration + observables, evidence-gated exit |
-| Product code (`crates/`) | In Progress | Units, ontology, measurement inputs and formula syntax/normalization/typed identity and namespace/signature/wanted-rule/call metadata. Native/WASM local green; latest CI Clippy failed D142; app/physical/release proof pending |
+| Product code (`crates/`) | In Progress | Units, ontology, measurement inputs and formula syntax/normalization/typed identity and namespace/signature/wanted-rule/call metadata. Native/WASM local1.99 green; repaired CI .h1.v pending; app/physical/release proof pending |

@@ -377,6 +377,9 @@ failed Clippy1.99 for redundant must_use on the declarations iterator; tests/WAS
 G1-SLICE.5b.3c.2b.h1 records both actual verdicts and266 local post-commit CLI controls, including
 newest immutable-catalog refusal. D142 owns the lint repair; D143 owns checkout-local CI stores;
 .h1.v must observe their repaired head. Local success supplies no missing runner/product approval.
+The D142 repair reproduces that failure with an isolated repository-local1.99 toolchain, removes
+only the redundant annotation and passes the same strict native663-test suite. Iterator behavior,
+lint severity and the stable channel stay unchanged; repaired remote evidence still belongs to .h1.v.
 
 The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
 labels are display text: short or mistaken labels do not change the retained identity. Filename text
