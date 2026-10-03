@@ -154,6 +154,16 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0082 - approved current-grammar recognition (leaf `G1-SLICE.5b.1c.2`)
+
+Director's D124 ruling preserves v1 grammar and its three keywords. Exclusion diagnostics now
+follow actual recognition: unknown calls unbound-name, malformed definitions parse, recognized
+non-square exponents unsupported. Five ordinary identifiers remain valid scalar names/let headers.
+100 metadata-only cases/seven actual source guard reds/three loaded documentation reds and full
+reference/language16/publication9 pass. Complete static reference review .5b.1 closes; product
+namespace/type/graph remains .5b.2–.4. Book/ADR/live/task/frontier align, original task and oldest
+ledger/lesson/D124 report payloads retained. G1 stays5/18;10open/117sealed defects; .5b.2 next.
+
 ## STITCHCAD-G1-0081 - reference contribution provenance (leaf `G1-SLICE.5e.3b`)
 
 The reference retains approximation-call sources through executed operators/conditions, numeric
@@ -374,20 +384,7 @@ and oldest ledgers retain exact payloads. G1 stays5/18; next .3e.3 coupled synta
 D108 archive-copy offset is fixed with exact predecessor comparison and watched ledger checks.
 Complete recipe normalization/identity, static names/types/bindings and evaluation remain owned.
 
-## STITCHCAD-G1-0065 - single immutable formula statements (leaf `G1-SLICE.5a.3e.1`)
-
-FormulaStatement parses one complete let/assert form with six kind/five tolerance annotations,
-full-source statement/name/annotation/node spans and typed operand refusals. Assertions preserve
-exactly one top-level separator and both independently bounded expression arenas. Private borrowed
-construction/Clone/opaque Debug retain source lifetimes without conversion, binding or execution.
-
-Nine public contracts/fifteen independent reference header/operand rows/six refusal families and
-all21 worked statements/25 expression identities pass. Fifteen actual compiled faults fail assertions
-in failed-test bodies and restore exact source; D107 false assertion classification is repaired.
-Strict native538/release9/WASM3 and structural/language/publication checks pass. New statement annex,
-progressive links/API map/index/README/live/task records align; D106 literal decision status is fixed.
-Completed subtree/proof and oldest ledgers remain exact in bounded parts. G1 stays5/18; defects10open/
-96sealed. Next .3e.2 ordered recipe/4096/context; statement identity and evaluation remain later work.
-
 
 | [`stitchcad-changelog-part78.md`](docs/history/stitchcad-changelog-part78.md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
+
+| [`stitchcad-changelog-part79.md`](docs/history/stitchcad-changelog-part79.md) | STITCHCAD-G1-0065 | 14 lines, 1183 bytes, `sha256:aa1df64f…` |

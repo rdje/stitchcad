@@ -1,9 +1,10 @@
-"""Independent book-static outcomes and D124 source observations; not runtime signoff."""
+"""Independent book-static outcomes and approved D124 recognition; not runtime signoff."""
 from contextlib import redirect_stdout
 from fractions import Fraction
 from pathlib import Path
 import io
 import math
+import re
 import runpy
 import sys
 
@@ -38,12 +39,29 @@ REFUSALS = (
     ('spline(cb_seam, 3)', 'env_nurbs', None))
 ENVELOPE = {'nurbs': 'env_nurbs', 'spline': 'env_nurbs', 'bspline': 'env_nurbs',
             'solve': 'env_sketch_constraints', 'constraint': 'env_sketch_constraints', 'fixpoint': 'env_sketch_constraints'}
-# D124 observations, not a ruling that these are the normative excluded source forms.
+# Director ruling2026-10-03: existing grammar recognition, with no excluded-form grammar added.
 OBSERVED = (
     ('loop(width)', 'formula_unbound_name'), ('repeat(2,width)', 'formula_unbound_name'),
     ('while(width > 0 um)', 'formula_unbound_name'), ('fn helper(width) = width', 'formula_parse'),
     ('macro helper(width) = width', 'formula_parse'), ('width ^ 3', 'formula_unsupported'),
     ('translate(width, 1 mm)', 'formula_unbound_name'))
+ORDINARY_NAMES = ('loop', 'repeat', 'while', 'fn', 'macro')
+
+
+def recognition_documentation(ns, replacement=None):
+    contract = '\n'.join(ns['CON']['6'])
+    grammar = '\n'.join(ns['GRA']['1.1'])
+    if replacement:
+        before, after = replacement
+        assert (contract + grammar).count(before) == 1, 'recognition documentation fault anchor changed'
+        contract, grammar = contract.replace(before, after), grammar.replace(before, after)
+    rows = {row[0]: tuple(re.findall(r'formula_[a-z_]+', row[2]))
+            for row in ns['table_in'](contract.splitlines(), 'Excluded')[1]}
+    for capability in ('loops, iteration, recursion', 'user-defined functions and macros'):
+        assert rows[capability] == ('formula_unbound_name', 'formula_parse'), (
+            'static review exclusion documentation', capability, rows[capability])
+    keywords = tuple(ns['debacktick'](row[0]) for row in ns['table_in'](grammar.splitlines(), 'Keyword')[1])
+    assert keywords == ('let', 'assert', 'if'), ('static review keyword documentation', keywords)
 
 
 def load(replacement=None):
@@ -77,6 +95,7 @@ def load(replacement=None):
 
 def contracts(replacement=None, verbose=True):
     ns, reference, env = load(replacement)
+    recognition_documentation(ns)
     table, span, plain = ns['table_in'], ns['first_span'], ns['debacktick']
     rows = table(ns['EXA']['2'], 'Token')[1]
     assert tuple((plain(row[0]), row[1]) for row in rows) == WORKED, 'worked population/order/kind drift'
@@ -118,10 +137,26 @@ def contracts(replacement=None, verbose=True):
     for source, token in OBSERVED:
         check(source, token)
     check('loop', None, 'length')
+    for name in ORDINARY_NAMES:
+        env[name] = Declaration('length', 'parameter')
+        check(name, None, 'length')
+        checked = reference.static_statement('let %s:length=1 cm' % name,
+                                             {key: val for key, val in env.items() if key != name})
+        assert checked[:3] == ('let', name, 'length'), ('static review name/header', name, checked[:3])
+        count += 1
+        # A scalar declaration does not authorize a callable; unknown call wins over its argument.
+        for source in (name + '(missing)', 'if(is_base_size,1 cm,' + name + '(missing))',
+                       'if(is_base_size,' + name + '(missing),1 cm)'):
+            check(source, 'formula_unbound_name')
+    for keyword in ('let', 'assert', 'if'):
+        check('let %s:length=1 cm' % keyword, 'formula_parse')
+    for source in ('fn helper(width)=missing', 'macro helper(width)=missing',
+                   'loop(', 'repeat(2,width', 'while(width>0 um'):
+        check(source, 'formula_parse')
     check('assert deliberately_false: eps_num = 1 cm == 2 cm', None, 'eps_num')
     if verbose:
         print('static review: %d actual cases;21 worked /13 refusal rows / envelope6; values and execution trapped' % count)
-        print('D124 diagnostic recognition: pending director ruling; observed spellings do not define excluded v1 syntax')
+        print('D124 recognition: approved current grammar / five ordinary identifiers / three keywords / unknown-call and parse precedence; capability grammar unchanged')
     return count
 
 
@@ -130,6 +165,11 @@ FAULTS = (
     ('unknown calls accepted', 'raise FErr("formula_unbound_name", "`%s` is no declared function, selector or name" % name)', 'return "length"'),
     ('book statement omitted', 'return tuple(plan)', 'return tuple(plan[:-1])'),
     ('static values observed', 'if name in env: return env[name]["kind"]', 'if name in env: return env[name]["value"]'),
+    ('ordinary name reserved', 'if not allow_keyword and text in {"let", "assert", "if"}:',
+     'if not allow_keyword and text in {"let", "assert", "if", "macro"}:'),
+    ('keyword reservation removed', 'if not allow_keyword and text in {"let", "assert", "if"}:', 'if False:'),
+    ('recognized power token changed', 'raise FErr("formula_unsupported", "only the square',
+     'raise FErr("formula_parse", "only the square'),
 )
 
 
@@ -169,9 +209,25 @@ if __name__ == '__main__':
             except AssertionError as error:
                 assert any(marker in str(error) for marker in (
                     'static review token', 'static review accepted refusal', 'worked static headers drift',
-                    'static namespace read value/state/geometry')), (name, 'not a body assertion red', error)
+                    'static review name/header', 'static namespace read value/state/geometry')), (name, 'not a body assertion red', error)
                 print('  actual compiled static review assertion red:', name)
             else:
                 raise AssertionError(('static review fault escaped', name))
         assert SOURCE.read_bytes() == original
         print('static review faults: %d actual assertion reds; producer unchanged' % len(FAULTS))
+        namespace, _, _ = load()
+        for before, after in (
+            ('| loops, iteration, recursion | a recipe is a bounded ordered list; repetition is an operation list | unknown call: `formula_unbound_name`; malformed syntax: `formula_parse` |',
+             '| loops, iteration, recursion | a recipe is a bounded ordered list; repetition is an operation list | `formula_unsupported` |'),
+            ('| user-defined functions and macros | v1 has no function-definition or macro scope | unknown call: `formula_unbound_name`; malformed syntax: `formula_parse` |',
+             '| user-defined functions and macros | v1 has no function-definition or macro scope | `formula_unsupported` |'),
+            ('| `if` | the one special form', '| `macro` | the one special form'),
+        ):
+            try:
+                recognition_documentation(namespace, (before, after))
+            except AssertionError as error:
+                assert 'documentation' in str(error) and 'fault anchor' not in str(error), ('not a documentation body red', error)
+                print('  actual loaded documentation assertion red:', before.split('|')[1].strip())
+            else:
+                raise AssertionError('static recognition documentation fault escaped')
+        print('recognition documentation: three actual loaded-row assertion reds; tracked documents unchanged')

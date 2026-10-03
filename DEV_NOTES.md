@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-03 UTC)_ — exclusions follow the grammar that recognizes them
+
+- D124 promised unsupported for constructs with no excluded-form source grammar. Director keeps
+  current grammar: unknown calls unbound-name, malformed definitions parse; ordinary names valid.
+  Recognized non-square exponents/envelope precedence keep their established tokens.
+- Actual100 static cases/seven compiled guard reds/three loaded documentation reds watch both
+  exclusion cells/three keywords, five ordinary names/headers and precedence with execution trapped.
+  Full reference/language16/publication9 terminal0. No parser behavior or production proof added.
+- Complete reference static review closes .5b.1/.1c; typed product namespace .5b.2 is next.
+  Original task blocks and oldest ledger/lesson/D124 report retain predecessor payloads.
+- promotion: declined (director ruling recorded in ADR-0003; existing static/no-execution doctrine).
+
 ## _(2026-10-02 UTC)_ — a rounded answer does not erase its derivation
 
 - D121 accepted sin90 at T1 because Val/stored/read/operator/book paths kept only numeric values.
@@ -15,23 +27,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Oldest complete ledger/lesson/D121 report and completed task blocks retain original payloads;
   adopted external policy bodies independently match read-only sources; cleanup remains current.
 - promotion: declined (existing provenance, laziness and independently falsified evidence rules).
-
-## _(2026-10-02 UTC)_ — absent values need origin and context
-
-- D122 actual size context was reported as tolerance-unbound, missing geometry/tolerance as unknown,
-  and supplied optional eps_fmt25 was rejected by always=False. Runtime now checks value presence
-  and routes nine origins, retaining actual name/origin/state/search vocabulary/explicit context.
-- D127 metadata leaks KeyError/TypeError; D128 populated unknown/invalid states expose17. Named
-  guards refuse both before reading/resolving; valid/no-state fixtures and static isolation retained.
-- Independent1466 cases/thirteen actual predicate/payload body reds/two actual copied-book consumers
-  verify defaults/context supply/false size flag/taken-only reads/lazy geometry/cache failure safety.
-  No artifact policy or typed production context invented; product adapters and D121 remain pending.
-- Full runner first refused stale namespace mutation anchors after try guard insertion. Retargeted
-  the same spelling/origin/value-read predicates with valid indentation;1139/13 actual reds retained.
-  Full reference/language16 green. Runtime details move to their own annex before static health growth.
-- Exact completed27/35line blocks retained in canonical sibling; oldest ledger/lesson and original
-  D122 plus new D127 reports sealed without altering payloads. No cap raised or Rust source changed.
-- promotion: declined (existing origin, uncertainty and independently falsified evidence principles).
 
 # Sealed archive — earlier lessons
 
@@ -170,3 +165,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`devnotes-part78.md`](docs/history/stitchcad-devnotes-part78.md) | static recognition review lesson | 17 lines, 1566 bytes, `sha256:94655e7b…` |
 
 | [`stitchcad-devnotes-part79.md`](docs/history/stitchcad-devnotes-part79.md) | G1-0079 assertion lesson | 13 lines, 1135 bytes, `sha256:71b5fdbc…` |
+
+| [`stitchcad-devnotes-part80.md`](docs/history/stitchcad-devnotes-part80.md) | origin and context lesson | 16 lines, 1471 bytes, `sha256:8576788c…` |

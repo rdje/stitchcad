@@ -764,3 +764,95 @@ is preserved unchanged in the evidence sibling; new changes are recorded here.
   pending; .5a syntax can progress independently of D70's required unanswered axes ruling.
 
 Publication continuation is owned by the current parent frontier.
+
+## Completed origin and context records — preserved from dab0ee4
+
+## Missing-value routing
+
+- ID: `G1-SLICE.5e.1a`
+  Status: `done`
+  Goal: independently repair D122 reference missing-value diagnostic routing across nine origins
+  and reserved size/tolerance contexts before product .5e.1 adapter proof.
+  Acceptance: canonical origin-specific tokens/arguments, populated values unchanged, malformed
+  metadata refused, actual fault controls and book/runtime replay remain honest; D124 untouched.
+  Pre-code contract: formula3/3.1/5.1/5.2, grammar7/7.1, namespace metadata-only interfaces and
+  existing geometry/lazy/replay boundaries reviewed. Actual baseline size_index -> tolerance-unbound,
+  missing geometry/tolerance -> unknown, and supplied eps_fmt25 still refused because always=False.
+  Related D127: missing kind/origin/state and unhashable origin leak KeyError/TypeError; own/fix here.
+  Scope: origin-specific missing-value routing, explicit reserved context values independent of
+  always-available metadata, named malformed declaration/absent-fact-state refusals. Preserve populated
+  values, kind/value units, static metadata isolation, optional lazy geometry and earlier error order.
+  Reference diagnostic arguments include name/origin, actual state for unknown facts, searched
+  origin vocabulary for unbound names and explicitly supplied context label for tolerances. No
+  invented artifact policy, statement ordinal/canonical bytes or production typed diagnostic claim.
+  Independently author closed nine-origin/eight-kind/five-state missing population, four populated
+  states, reserved no-context/provided contexts, taken-only reads, lazy geometry and malformed inputs.
+  Actual in-memory predicate/payload faults must fail body assertions; full reference/language/book/
+  ledger/gate and exact task/ledger/report containment before commit. D124/D121 stay separate.
+  Verification:1466 actual cases/thirteen actual body reds/two actual copied-book consumer refusals,
+  final full reference/language/book checks rerun for D128 before commit. Commit: `STITCHCAD-G1-0080`.
+  Containment exact completed block: 27lines/2348B/SHA256 4ae12e55e188117d0bb18e9bb54ca18f363b66e08106616433d4359ad4eb529c; existing sibling, no cap/path change.
+  Containment exact completed block: 35lines/3250B/SHA256 10fcfb9c08fe35156ff789ded8c71d4952169e91d4ee68217a9ddf71ff76e061; existing sibling, no cap/path change.
+  Initial full runner correctly refused obsolete namespace fault anchors after the declaration
+  guard moved into try. Retarget spelling/origin/value-read faults at the same actual predicates
+  with valid indentation; retain all1139 expected cases and thirteen body assertion reds.
+  Documentation prerequisite: static annex338lines/23868B is near its400line/24576B health target.
+  Move runtime assertion details into a dedicated runtime annex before adding origin/context detail;
+  update SUMMARY/index/contract/cross-links, preserve current scope and verify source/rendered links.
+
+### Origin/context receipts — `G1-SLICE.5e.1a`, `2026-10-02` (UTC)
+
+- Actual origin_value_contract.py --mutations terminal0:1466 cases/thirteen actual body assertion reds,
+  actual loaded table/definitions; two copied books preflight21 then report distinct missing
+  size_index/eps_fmt runtime tokens, consumer1/producer0. Named metadata refusals replace host errors.
+- Full structural reference runner terminal0 retains signature4032/namespace1139/thirteen faults,
+  whole recipe196/review67/assertion262 and all numerical/canonical/binding families. Source stays
+  unchanged during in-memory faults. Initial full runner's stale anchor refusal was corrected;
+  an anchor or syntax error never counted as a body red. No Rust source/test/serializer diff.
+- Language16 terminal0 after book split. Origin/context arguments remain scoped: no artifact policy,
+  typed production diagnostic, guessed statement ordinal or object/entity geometry certificate.
+- Completed node27lines/2348B/SHA4ae12e55e188117d0bb18e9bb54ca18f363b66e08106616433d4359ad4eb529c
+  and receipts35lines/3250B/SHA10fcfb9c08fe35156ff789ded8c71d4952169e91d4ee68217a9ddf71ff76e061
+  match Gitac7f0bf byte-exact in canonical sibling; no new task path/map growth or cap change.
+
+- Publication9 terminal0:54chapters/25APIrows/1122source/1740rendered links, no build warnings.
+  Ledger9/pointer13/tree10lanes/13trees/10siblings/0unowned-orphan-deadlinks terminal0.
+  Materialized independent defects12open/115unique sealed/overlap0/duplicate0; old D122 report,
+  G1-0063 ledger and recognition lesson independently match Git predecessor payloads, rc=0.
+
+- D128 tools-first final state audit: actual measurement/length/value17 returns17 with unknown
+  and invalid states, baseline0. Owned here before commit: explicit invalid state and unknown+
+  populated value refuse parse before lazy work; unknown lazy geometry refuses by its origin before
+  constructing/caching data. Independently expand nine-origin/eight-kind populated-state controls,
+  valid no-state computed fixtures and trapped unknown geometry, then rerun reference/book checks.
+
+- Final D128-expanded source: full reference runner1466 cases/thirteen actual origin/state faults
+  terminal0; current language16/publication9/ledger9 and embedded pointer13 terminal0. Publication
+  remains54chapters/25APIrows/1122source/1740rendered links. Final independent defects12open/
+  115unique sealed/overlap0/duplicates0, rc=0. Unknown payload/state/lazy guards fail actual body
+  assertions when removed; valid/no-state fixtures and static metadata-only controls stay green.
+
+- Final staged doctrine registry13 checks terminal0; hook repeats final committed records.
+
+
+## Completed assertion checklist — preserved from dab0ee4
+
+### G1-SLICE.5e.3a — D125 reference assertion repair
+
+- [x] **TOOLS-FIRST / ROOT CAUSE** — actual statement returnedFalse instead of formula_assertion;
+  equal control True, actual contract5/9 requires named failure; tracked producer262 controls, rc=0.
+- [x] **ADDRESSED** — false raises owned name/values/kinds/class arguments, true tuple/boundary
+  preserved; actual copied-book consumer raises formula_assertion and refuses1, producer rc=0.
+- [x] **NO REGRESSION** — full structural reference suite and eight actual guard/payload assertion
+  reds pass, rc=0; original serializer/Rust bytes unchanged. D121/D122/D124 remain separate owners.
+- [x] **RETENTION** — completed52line/4156B and63line/5643B blocks retained byte-exact in canonical
+  sibling. SHA c701597a4f5cbd2435cd336f62253fc0ff3d32c951fb9077969f7d89b4e27634 and
+  6e7c34b99aabe774e372162cf60219bd28d61a8715f0d1185a5ec59ca013da29 match Git13f8c75, rc=0.
+- [x] **LOCKSTEP** — language16/publication9/ledger9/pointer13/tree census green, rc=0;
+  book/live/task records agree, G1 stays5/18,13open/112sealed; D125 original report preserved.
+  Staged doctrine registry13 checks pass, rc=0; hook repeats final records. No product runtime claim.
+  promotion: declined (existing independent-diagnostic/dimensional-algebra/retention principles).
+
+[Exact completed records](G1-SLICE-canonical.md#completed-static-checklists--preserved-from13f8c75) are retained in the canonical sibling.
+
+Retention: complete relocated dab0ee4 task payloads verified by G1-SLICE.5b.1c.2.

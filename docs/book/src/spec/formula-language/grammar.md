@@ -47,6 +47,10 @@ Three words are reserved and may not be names:
 | `assert` | a closure check at a named tolerance class ([examples §3](examples.md)) |
 | `if` | the one special form (§7) |
 
+Loop, iteration, function and macro capabilities remain excluded by contract §6. They add no
+keywords or recognizable definition grammar: loop, repeat, while, fn and macro remain valid scalar
+names. Unknown calls use formula_unbound_name, and malformed definition syntax uses formula_parse.
+
 An `assert` that does not hold refuses the whole recipe: it is the language-level form of the rule
 that a fixture must derive its own finished dimensions.
 

@@ -209,10 +209,11 @@ refusals fail syntax or static checking. No numerical or geometry callback runs 
 python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations
 ```
 
-The67 cases also check all six envelope call spellings before operand name/kind resolution,
+The100 cases also check all six envelope call spellings before operand name/kind resolution,
 including either conditional branch. Envelope dispatch begins after valid syntax: malformed calls
 still fail parsing. Expected envelope populations and book statement/refusal populations are compared
-in both directions; four actual compiled faults must fail body assertions. Source remains unchanged.
+in both directions; seven actual compiled faults and three loaded documentation faults must fail
+body assertions. Source remains unchanged.
 
 | Requirement | Reference evidence | Remaining product owner |
 | --- | --- | --- |
@@ -229,18 +230,19 @@ in both directions; four actual compiled faults must fail body assertions. Sourc
 | Persisted cycles and atomic runtime/replay behavior | outside these static instrument controls | .5e/.5f and storage .7 |
 | Physical geometry and cross-platform computed values | outside these static instrument controls | G2 and .5g |
 
-**D124 remains a diagnostic decision.** Contract6 excludes loops and function/macro definitions
-and assigns formula_unsupported, but v1 specifies no source forms for recognizing them. The actual
-reference treats loop(width), repeat(2,width) and while(width>0 um) as unknown calls, and fn/macro
-definition shapes as malformed syntax. A declared scalar named loop remains valid. These are
-observations, not a new grammar or an approved classification of excluded source forms.
+**D124 is resolved by the director's ruling2026-10-03: keep the current grammar.** Excluded
+loop/function/macro capabilities introduce no additional source forms or keywords. Unknown calls
+such as loop(width), repeat(2,width) and while(width>0 um) raise formula_unbound_name, before
+argument semantics, including in an untaken conditional branch. Malformed fn/macro definition
+shapes raise formula_parse. Declared scalar names loop, repeat, while, fn and macro remain valid.
+Recognized non-square exponents retain formula_unsupported; envelope calls retain their tokens.
 
-The recommended clarification preserves the three grammar keywords: unknown calls raise
-formula_unbound_name, malformed definitions raise formula_parse, and recognized non-square
-exponents keep formula_unsupported. The alternative needs an explicit closed set of excluded
-forms and a decision about their effect on valid names. The concrete proposal is in
-docs/decisions/decision_adr-0003-construction-recipe-and-formula-language.md under D124;
-.5b.1c.2 owns the director ruling before complete review closure and product dispatch implementation.
+The recognition controls compare actual contract6 cells and grammar1.1 keyword populations with
+independently authored expectations; ordinary names/let headers, all three reserved words and
+unknown-call/parse precedence are exercised with execution and values trapped. The concrete ruling
+is retained in ADR-0003. .5b.1c.2 closes the static reference review; production namespace/type/graph
+implementation remains .5b.2–.4. This clarification changes diagnostic promises to match v1's
+closed grammar and enables no excluded capability.
 
 The reference runtime assertion repair closes D125 at G1-SLICE.5e.3a. A false assertion now raises
 formula_assertion; its name, exact left/right values and kinds, and symbolic tolerance class/value
@@ -257,8 +259,7 @@ validate machine names and consume declaration pairs before an index can discard
 Kinds and origins are separate from numeric availability. Reserved names have known kinds even
 without an instance/export context. Geometry declarations refer to prior operation outputs;
 they do not authorize construction. Input adapters must preserve existing source identities and
-avoid a sc-core to sc-measure dependency cycle. D124's ruling must settle diagnostic recognition
-without silently reserving additional valid names.
+avoid a sc-core to sc-measure dependency cycle. D124 preserves the existing reserved-word set.
 
 The product type-checking slice .5b.3 will consume bounded normalized syntax and the checked
 namespace, preserving all ordered operands and checking both conditional branches. Each refusal

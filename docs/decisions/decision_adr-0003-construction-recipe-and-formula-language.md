@@ -114,7 +114,7 @@ performance budget the product needs, in which case the fix is a representation 
 same value semantics and never a change of the rounding points; (3) a real recipe needs a construct
 [formula exclusions §6](../book/src/spec/formula-language.md#6-exclusions) excludes, which arrives as a v2 candidate with a worked example over a garment, or not at all.
 
-## D124 diagnostic recognition proposal — pending director ruling
+## D124 diagnostic recognition proposal — resolved 2026-10-03 (UTC)
 
 Reviewed2026-10-02 at G1-SLICE.5b.1c.1. Contract6 assigns formula_unsupported to loops and
 function/macro definitions, but v1 defines no source forms for them. Actual reference returns
@@ -131,8 +131,11 @@ Alternative: define an explicit closed set of recognizable excluded forms that r
 formula_unsupported. That requires exact source spellings and keyword/call-role rules, including
 whether a previously valid parameter named loop, repeat, fn or macro remains valid. No such list
 is inferred from these illustrative examples. Neither choice enables any excluded capability.
-G1-SLICE.5b.1c.2 owns the ruling, implementation and closure; until then the reference is not an
-oracle for the table's unspecified excluded-form diagnostics. Other static evidence retains scope.
+Director ruling2026-10-03: keep the current grammar, adopting the recommendation above.
+G1-SLICE.5b.1c.2 implements the clarification and independently verifies diagnostic recognition,
+ordinary identifier preservation and precedence before closing the full static reference review.
+Product namespace/type/graph implementation remains .5b.2–.4; no executable excluded capability
+or new reserved word is introduced.
 
 ## D121 tolerance-class diagnostic ruling — 2026-10-02 (UTC)
 
@@ -141,4 +144,4 @@ contribution. Contract4.2 already requires T2 or looser; the diagnostic table no
 an inadmissible tolerance class. The reference records comparison (within or the actual assertion
 name), requested tolerance_class and sorted contribution_sources. An equal numeric answer does not
 erase its derivation. Product typed context and arbitrary-input transcendental accuracy remain
-separate .5b–.5g obligations. This ruling does not settle the pending D124 exclusion proposal.
+separate .5b–.5g obligations. D124 was pending when this ruling was made; its subsequent ruling is recorded above.

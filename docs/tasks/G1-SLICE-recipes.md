@@ -662,14 +662,15 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 ### Namespace and static validation
 
 - ID: `G1-SLICE.5b.1`
-  Status: `in_progress`
+  Status: `done`
   Goal: enumerate every static obligation from contract2/3/5/6/9 and grammar5/6/7; exercise the
   actual reference with independently authored namespace/kind/refusal cases before trusting it.
   Acceptance: all nine origins/eight reserved names, single assignment/ambiguous collisions,
   forward names, all signatures and dimensional/exclusion/envelope rules mapped both directions;
   both branches inspected without value access. Log/repair discovered reference defects first.
-  No curated example-only or runtime oracle claim. Resolve any contract ambiguity before .2/.3.
-  Verification: `pending`; Commit: `pending`.
+  No curated example-only or runtime oracle claim. D124 current-grammar ruling resolves recognition before .2/.3.
+  Verification: full signature4032/namespace1139/recipe196/review100 controls and actual reds verified.
+  Commit: `STITCHCAD-G1-0082`.
 
 - ID: `G1-SLICE.5b.1a`
   Status: `done`
@@ -702,10 +703,10 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   owned in G1-SLICE-evidence.md, no domain-scope pivot or limit increase.
   Verification:1139 namespace/196 whole-source cases;13 namespace/14 whole-preflight actual
   assertion reds, worked replay and per-recipe measurement; no execution/value/geometry reads.
-  Children .1b.1/.1b.2 done, full .1c review remains. Commit: `STITCHCAD-G1-0076`/`STITCHCAD-G1-0077`.
+  Children .1b.1/.1b.2 done; full .1c review closes at .1c.2. Commit: `STITCHCAD-G1-0076`/`STITCHCAD-G1-0077`.
 
 - ID: `G1-SLICE.5b.1c`
-  Status: `in_progress`
+  Status: `done`
   Goal: close full static obligation map against contract2/3/5/6/9 and grammar5/6/7 after .1a/.1b;
   named exclusions/envelope precedence and prior syntax limits in both directions. Independently
   review all actual worked/refusal examples; any remaining contract ambiguity settled before code.
@@ -719,8 +720,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   claim typed product errors, persistence, numerical execution or physical geometry from reference
   token checks. Detailed review evidence/proposals live in G1-SLICE-evidence.md.
   Children .1c.1 (complete map and D124 diagnostic proposal), .1c.2 (ruling and review closure),
-  owned in G1-SLICE-evidence.md. Excluded loop/function syntax has no recognition contract yet.
-  Verification: `pending`; Commit: `pending`.
+  owned in G1-SLICE-evidence.md. D124 preserves current grammar/keywords and closes recognition.
+  Verification: full signature4032/namespace1139/recipe196/review100 controls and actual reds verified.
+  Commit: `STITCHCAD-G1-0082`.
 
 - ID: `G1-SLICE.5b.2`
   Status: `pending`
@@ -846,7 +848,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `pending`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.
   D121 reference provenance .5e.3b verified; D125 reference assertions .3a verified.
-  Independent reference D125 repair .5e.3a is verified in G1-SLICE-evidence.md while D124 awaits ruling.
+  Independent reference D125 repair .5e.3a is verified; D124 recognition closes at .5b.1c.2.
   Acceptance: all five named classes, context-supplied missing values, T2-or-looser when an
   irrational result contributes (including subsequent binding/reads), exact bare comparisons,
   assertion failure values/class/name and no substituted value/geometry after failure.

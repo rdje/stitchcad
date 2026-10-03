@@ -815,11 +815,11 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
 | done | `G1-SLICE.5a.3f.2` | `done` | Coupled whole input and identity review |
 | done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
-| pending | `G1-SLICE.5b.1c.2` | `pending` | Static obligation map reviewed; D124 excluded-form diagnostic ruling required |
+| done | `G1-SLICE.5b.1c.2` | `done` | D124 current-grammar ruling; complete static reference review |
 | done | `G1-SLICE.5e.3a` | `done` | D125 named reference assertion diagnostics; product execution pending |
 | done | `G1-SLICE.5e.1a` | `done` | D122/D127/D128 reference origin/context and state/metadata refusals |
 | done | `G1-SLICE.5e.3b` | `done` | D121 reference contributions/class refusal verified |
-| next | `G1-SLICE.5b.1c.2` | `blocked` | Director D124 excluded-form ruling and full static review closure |
+| next | `G1-SLICE.5b.2` | `pending` | Typed product origin declarations and namespace/context resolution |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -842,6 +842,27 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
   is complete; production literal/binding/evaluation proof remains separate.
 
 ## Acceptance Checklist
+
+### G1-SLICE.5b.1c.2 — approved current-grammar recognition
+
+- [x] **REPRODUCE / ISSUE** — predecessor contract6 promised formula_unsupported for forms whose
+  actual static reference prints unbound-name/parse; static_review_contract.py baseline67, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — contract6 diagnostic cells conflict with grammar1.1/6's
+  closed keywords/unknown-call rule. static_review_contract.py --mutations →100cases/seven
+  actual source guard reds/three loaded-doc reds, rc=0; metadata/execution callbacks trapped.
+- [x] **FIX** — director ruling preserves current grammar: unknown calls unbound-name, malformed
+  syntax parse, recognized non-square powers unsupported; ordinary scalar names remain valid.
+- [x] **ADDRESSED (verified)** — static_review_contract.py --mutations →100cases/seven body reds/
+  three documentation reds, rc=0. Both exclusion cells/three keywords, five ordinary scalar names/
+  headers, unknown-call/parse/envelope precedence independently verified; actual source unchanged.
+- [x] **NO REGRESSION** — full structural reference and language16/publication9 pass, rc=0.
+  Signatures4032/namespace1139/recipe196 and numerical families stay watched; Rust bytes unchanged.
+  Final ledger/retention/staged gate receipts recorded in the evidence sibling before commit.
+- [x] **LOCKSTEP** — contract/grammar/static annex/ADR/owned review/live/frontier agree. Exact
+  completed-task payloads and oldest ledger/lesson/D124 report retained in existing bounded parts.
+  G1 remains5/18; complete product namespace/type/graph/numerical/geometry proof stays pending.
+  promotion: declined (application of the director's recorded ruling and existing static boundaries).
+
 
 ### G1-SLICE.5e.3b — D121 executed contribution provenance
 
@@ -911,23 +932,7 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
   Staged doctrine/hook receipts recorded before commit; no product runtime or policy claim.
   promotion: declined (standing origin, uncertainty and independent-evidence principles).
 
-### G1-SLICE.5e.3a — D125 reference assertion repair
-
-- [x] **TOOLS-FIRST / ROOT CAUSE** — actual statement returnedFalse instead of formula_assertion;
-  equal control True, actual contract5/9 requires named failure; tracked producer262 controls, rc=0.
-- [x] **ADDRESSED** — false raises owned name/values/kinds/class arguments, true tuple/boundary
-  preserved; actual copied-book consumer raises formula_assertion and refuses1, producer rc=0.
-- [x] **NO REGRESSION** — full structural reference suite and eight actual guard/payload assertion
-  reds pass, rc=0; original serializer/Rust bytes unchanged. D121/D122/D124 remain separate owners.
-- [x] **RETENTION** — completed52line/4156B and63line/5643B blocks retained byte-exact in canonical
-  sibling. SHA c701597a4f5cbd2435cd336f62253fc0ff3d32c951fb9077969f7d89b4e27634 and
-  6e7c34b99aabe774e372162cf60219bd28d61a8715f0d1185a5ec59ca013da29 match Git13f8c75, rc=0.
-- [x] **LOCKSTEP** — language16/publication9/ledger9/pointer13/tree census green, rc=0;
-  book/live/task records agree, G1 stays5/18,13open/112sealed; D125 original report preserved.
-  Staged doctrine registry13 checks pass, rc=0; hook repeats final records. No product runtime claim.
-  promotion: declined (existing independent-diagnostic/dimensional-algebra/retention principles).
-
-[Exact completed records](G1-SLICE-canonical.md#completed-static-checklists--preserved-from13f8c75) are retained in the canonical sibling.
+[Exact completed assertion checklist](G1-SLICE-measurements.md#completed-assertion-checklist--preserved-from-dab0ee4) retained.
 
 ## Verification Log
 
@@ -983,3 +988,5 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
   and hook repeat final records before commit. Source/guard bytes unchanged, product frontier .3b.
 
 - `2026-10-02` (UTC): .5e.3b/STITCHCAD-G1-0081 repairs D121;425 cases/26 actual reds; director formula_domain ruling. Next D124 ruling/closure.
+
+- `2026-10-03` (UTC): .5b.1c.2/STITCHCAD-G1-0082 applies D124 current grammar;100 cases/seven source/three doc reds. Static reference .5b.1 done; .5b.2 next.

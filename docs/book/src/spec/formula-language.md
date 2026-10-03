@@ -12,7 +12,7 @@
 > now review the book reference, including [namespaces and static headers](../annexes/formula-static-validation.md#names-and-single-statement-static-checking)
 > and [whole-recipe preflight](../annexes/formula-static-validation.md#whole-recipe-before-execution).
 > The [complete static review map](../annexes/formula-static-validation.md#complete-static-review-and-remaining-contracts)
-> records remaining diagnostic/runtime contracts; D124 excluded-form recognition awaits a ruling.
+> records remaining product/runtime contracts; D124 recognition preserves the existing grammar.
 > Product name/type/binding validation and evaluation remain G1-SLICE.5b–.5g work; final acceptance
 > makes every worked example a product evaluation test. Terms are defined in the
 > [glossary](glossary.md); every garment number is the [reference skirt](reference-skirt.md)'s, and
@@ -259,7 +259,7 @@ specifies, and is never rendered raw to a user.
 | --- | --- | --- |
 | `formula_parse` | the surface form is not in [grammar §1](formula-language/grammar.md) | the offending span, its position, the rule |
 | `formula_dimension` | an operation has no rule for the kinds it was given | the operator or function, every operand's kind, the kind wanted |
-| `formula_unbound_name` | a name nothing visible declares | the name, the origins searched |
+| `formula_unbound_name` | a name is undeclared, or a call names no built-in function or selector | the name, the origins searched |
 | `formula_ambiguous_name` | two origins bind one name | the name, both origins |
 | `formula_rebinding` | a `let` re-binds a name this recipe already bound | the name, both statement indices |
 | `formula_division` | a divisor is zero | the expression, the divisor's name or literal |
@@ -283,24 +283,30 @@ and two token sets must not compete for one refusal.
 
 ## 6. Exclusions
 
-**Diagnostic recognition under review (D124).** The capabilities below remain excluded. V1 has no
-specified source forms for recognizing loop/function definitions; its actual unknown-call and
-malformed-syntax diagnostics are mapped in the [static review annex](../annexes/formula-static-validation.md#complete-static-review-and-remaining-contracts).
-The director's ruling at G1-SLICE.5b.1c.2 will settle that boundary; the reference is not currently
-an oracle for those unspecified source forms. This note does not add executable capabilities.
+The capabilities below remain excluded under the existing v1 grammar. The director's D124 ruling
+preserves its source forms and keywords; diagnostic recognition is verified in the
+[static review annex](../annexes/formula-static-validation.md#complete-static-review-and-remaining-contracts).
 
 | Excluded | Why | Diagnostic |
 | --- | --- | --- |
 | NURBS-class curves and expressions | the curve set is three primitives (units §4) | `env_nurbs` |
 | implicit solving inside an expression | the CSP is a separate engine (roadmap §6.2, ADR-0001) | `env_sketch_constraints` |
-| loops, iteration, recursion | a recipe is a bounded ordered list; repetition is an operation list | `formula_unsupported` |
-| user-defined functions and macros | a `let` chain covers the need; a definition needs a scope rule and an answer on recursion that v1 does not have | `formula_unsupported` |
+| loops, iteration, recursion | a recipe is a bounded ordered list; repetition is an operation list | unknown call: `formula_unbound_name`; malformed syntax: `formula_parse` |
+| user-defined functions and macros | v1 has no function-definition or macro scope | unknown call: `formula_unbound_name`; malformed syntax: `formula_parse` |
 | text values, a size label in a formula | a label is prose ([size sets](size-sets.md) §3) | `formula_parse` |
 | a formula that creates a point or an edge | geometry is an operation's, with its identity (§2) | `formula_dimension` |
 | an exponent other than 2 | an area is the only product the model stores (units §1.3) | `formula_unsupported` |
 | an area literal, a radian literal | an area is derived; π is irrational ([grammar §2](formula-language/grammar.md)) | `formula_parse` |
 | exponent notation, a float literal | no float enters canonical content (units §7) | `formula_parse` |
 | a comment inside an expression | it would not survive canonicalization ([grammar §4](formula-language/grammar.md)) | `formula_parse` |
+
+The excluded capabilities above introduce no extra source forms or keywords. Only let, assert and
+if are reserved (grammar §1.1). Unknown calls, including loop(width) or repeat(2,width), raise
+formula_unbound_name before argument semantics. Malformed definitions such as fn helper(width)=width
+raise formula_parse. Scalar names loop, repeat, while, fn and macro remain ordinary identifiers.
+A recognized non-square exponent retains formula_unsupported; envelope calls retain §5.3 precedence.
+The [static recognition controls](../annexes/formula-static-validation.md#complete-static-review-and-remaining-contracts)
+watch these boundaries without executing values.
 
 ### 6.1 Named v2 candidates
 
