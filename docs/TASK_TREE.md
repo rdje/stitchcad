@@ -55,7 +55,7 @@ the owning leaf (`PLANNING.1`, then `PLANNING.3`'s coverage map).
 | [`PLANNING`](tasks/PLANNING.md) | roadmap → tree mapping (all lanes) | `active` | `.5` — derive the index↔tree frontier agreement (D34, which recurred on `2026-09-30`) | repo-local |
 | [`SPINE`](tasks/SPINE.md) | repository identity, hygiene, adopted policy | `active` | `.5`/`.13`/`.19`/`.22` guarded; .23/.23v verified; .23r capture scheduled; product .5b.2c; D124 resolved | repo-local |
 | [`G0-CONTRACT`](tasks/G0-CONTRACT.md) | §11 gate **G0** — product & semantic contract | `done` | no further leaf — `18 met / 1 not met` by `run_g0_exit_review.sh`, closure unapproved (§6.1) | repo-local |
-| [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `active` | `.5b.2c.1b` — D131 reserved-refusal ruling/repair before namespace; axes D70 pending | repo-local |
+| [`G1-SLICE`](tasks/G1-SLICE.md) | §11 gate **G1** — executable architecture slice | `active` | `.5b.2c.2` — checked initial namespace; D131 delegated decision verified; axes D70 pending | repo-local |
 | [`G2-2D`](tasks/G2-2D.md) | §11 gate **G2** — correct 2D slice (vertical proof) | `proposed` | `.1` — `sc-geometry` 2D kernel | repo-local |
 | [`G3-GRADING`](tasks/G3-GRADING.md) | §11 gate **G3** — construction & grading | `proposed` | `.1` — dart/tuck/pleat/gather closure semantics | repo-local |
 | [`G4-PROFILES`](tasks/G4-PROFILES.md) | §11 gate **G4** — profiles & uncertainty workflow | `proposed` | `.1` — `sc-profiles` schema v2 | repo-local |
@@ -79,7 +79,7 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-Execution order right now: **`G1-SLICE.5b.2c.1b`** (D131 director diagnostic ruling/repair, then namespace .2c.2; axes .4c.2 awaits D70) and the lane that follows it. Gate G0 has no further leaf:
+Execution order right now: **`G1-SLICE.5b.2c.2`** (checked initial namespace; D131 decision/repair verified under delegation; axes .4c.2 awaits D70) and the lane that follows it. Gate G0 has no further leaf:
 its review is derived (`bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` → `18 met / 1 not met /
 19 clauses`), the one open clause travels with the director's ruling of `2026-09-30` that accepts it, and the
 gate's closure stays unapproved under governance §6.1 because its reviewer authored most of what it reviews.

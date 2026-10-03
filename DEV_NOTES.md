@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-03 UTC)_ — binding causes carry real source locations
+
+- D131 delegated decision keeps stable rebinding token with reserved_name/recipe_name cases.
+  Initial metadata pairs have actual declaration positions; detached statements keep local spans;
+  whole preflight carries actual prior/current indices and global whole/name spans, including
+  assertion gaps. Reserved metadata requires no numeric value/context-availability query.
+- 3624 argument cases/19 actual compiled assertion reds pass0 with exact source preservation.
+  Invalid draft cm2/true fixtures correctly refused; corrected to square/comparison grammar forms.
+  No product Rust change; typed namespace/canonical registry/localization remain later owners.
+- Same engineer authored/applied under director delegation; independent approval unclaimed,
+  reversal and executable evidence recorded. Exact prior blocks/oldest ledger/lesson retained.
+- promotion: ADR-0003 delegated binding-source decision; governance6.1 remains the approval rule.
+
 ## _(2026-10-03 UTC)_ — a reserved source has no recipe ordinal
 
 - D131 canonical rebinding row requires two statements; reserved/input metadata cannot supply
@@ -15,20 +28,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
   pass0;55 chapters/33 APIs/1138 source/1767 rendered links. Product Rust unchanged.
 - promotion: declined (pending director ruling; existing context-truth requirement).
 
-## _(2026-10-03 UTC)_ — a metadata source is not a copied value
-
-- Locators retain distinct metadata/value IDs and borrow canonical length records across five
-  states. Geometry refs retain creator/tag; recipe lets retain
-  actual ordinals/spans/annotations; Debug omits private payloads.
-- D130 draft generic constructor admitted measurement/Ease non-length kinds. Canonical input
-  contracts require lengths, so a separate three-domain scalar type excludes those claims.
-- Seven public/five negative lifetime/construction contracts and19 actual compiled assertion reds/
-  one API-negative red discriminate source/kind/identity/ordinal/privacy and restore
-  exact bytes. Initial lint/message/obsolete fault replacements repaired; no classifier weakened.
-- Strict native608/50groups and focused reference/book checks pass; typed namespace acceptance,
-  source registry/evidence verification and numeric execution remain separate owners.
-- Exact prior task/ledger/lesson/D130 payloads retained within bounds.
-- promotion: declined (existing typed metadata, single canonical owner and original-context rules).
 
 
 # Sealed archive — earlier lessons
@@ -176,3 +175,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part82.md`](docs/history/stitchcad-devnotes-part82.md) | D124 grammar recognition lesson | 11 lines, 932 bytes, `sha256:2d6e66b8…` |
 
 | [`stitchcad-devnotes-part83.md`](docs/history/stitchcad-devnotes-part83.md) | G1-0083 metadata lesson | 13 lines, 1139 bytes, `sha256:c79e3803…` |
+
+| [`stitchcad-devnotes-part84.md`](docs/history/stitchcad-devnotes-part84.md) | G1-0084 source metadata lesson | 14 lines, 1110 bytes, `sha256:f1ad9ba4…` |

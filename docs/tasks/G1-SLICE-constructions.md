@@ -820,3 +820,104 @@ Retention: complete predecessor payload preserved by .5b.2b.
   resume records align;55 chapters/1137 source/1765 rendered links verified, rc=0. D130 fixed
   before commit; exact prior task/ledger/lesson/report payloads retained, no ceilings raised.
   promotion: declined (canonical single-source ownership, typed metadata and original-context rules).
+
+## Completed reserved diagnostic proposal protocol — preserved from 862c0d9
+
+- ID: `G1-SLICE.5b.2c.1a`
+  Status: `done`
+  Goal: reproduce the reserved-name diagnostic mismatch before choosing product error arguments.
+  Work unit: `STITCHCAD-G1-0085`; clean predecessor db19b90, no pending jobs or user edits.
+  Protocol: compare contract3.1/5.2, static annex and actual reference namespace/static_statement
+  entry points. Record real name/origin/message/arguments; no invented statement index. Propose a
+  source-aware formula_rebinding schema, retain the closed tokens and current grammar. Obtain the
+  director's decision before changing canonical semantics or implementing the blocked namespace.
+  Own focused reproducibility tool/negative controls, book/live/task alignment and exact completed
+  task/oldest ledger/lesson retention within existing ceilings. Product Rust remains unchanged.
+  Acceptance: durable reproduction, explicit proposed required arguments and the precise decision
+  blocker; complete documentation/reproduction leaf committed before handing off the ruling.
+  Verification:121 actual cases/three compiled body assertion reds; source unchanged; focused
+  structural/language/publication/ledger/archive checks pass0. Commit: `STITCHCAD-G1-0085`.
+
+## Completed reserved diagnostic proposal receipts — preserved from 862c0d9
+
+## Reserved diagnostic proposal receipts — .5b.2c.1a,2026-10-03 (UTC)
+
+- reserved_diagnostic_review.py --mutations →120 reserved refusals/one ordinary rebinding/three
+  actual compiled token/fabricated-index assertion reds, rc=0. Prefix source unchanged; no product
+  diagnostic or repaired-argument acceptance. Canonical row/actual empty dictionaries reproduce D131.
+- Full structural runner including new watched producer passes0; language16/publication9/ledger9
+  and13 actual pointer controls pass0. Warning-free book55 chapters/33 APIs/1138 source/1767
+  rendered links. git diff HEAD -- crates Cargo.toml Cargo.lock →empty, rc=0; no Rust change.
+- Exact db19b90 declaration protocol29lines/2647B/7ea9f42a, receipts31lines/2836B/c1fc8b5c,
+  checklist19lines/1700B/91e75ce2 retained in constructions; original routes remain live.
+  Oldest ledger12lines/1035B/451e0450 and lesson13lines/1139B/c79e3803 sealed byte-exact to HEAD.
+- Archive verify-retention/materialize →223 logical/37 resident records, rc=0; fresh canonical
+  defect census11open/119unique sealed/no overlap, rc=0. Tree10lanes/13trees/10siblings/zero gaps.
+  No existing sealed payload, registry cap, token, grammar or product implementation changed.
+- D131 owned at .2c.1b for director's concrete schema ruling/repair, then .2c.2 namespace code.
+  Proposal/reproduction .1a complete; neither unresolved defect nor product namespace marked done.
+  Final staged doctrine receipt follows; all focused jobs observed terminal0.
+- Staged make gate →13 checks/all green, rc=0. Final publication after heading placement still
+  55/33/1138/1767 and9 pass/0 fail, rc=0; diff check0. Pre-commit repeats the staged doctrine gate.
+
+## Completed reserved diagnostic proposal checklist — preserved from 862c0d9
+
+### G1-SLICE.5b.2c.1a — reserved diagnostic conflict reproduction/proposal
+
+- [x] **REPRODUCE / ISSUE** — reserved_diagnostic_review.py --mutations →120 reserved refusals/
+  one ordinary rebinding/three actual assertion reds, rc=0. Canonical row requires two indices;
+  actual eps_num initial/let refusals expose formula_rebinding and empty arguments.
+- [x] **ROOT CAUSE (WHY + WHERE)** — contract3.1 reserved prohibition and static reference guards
+  use rebinding, but contract5.2 raised-when/required-arguments row only describes repeated lets.
+  Actual reproduction120/one and three compiled token/fabricated-index body reds, rc=0. Reserved
+  sources have no prior statement; initial declarations have no attempt statement to index.
+- [x] **ADDRESSED (verified)** — reproduction/proposal leaf only: actual121 cases/three assertion
+  reds and unchanged producer bytes, rc=0. D131 remains open, owned and scheduled at .1b after
+  director ruling; no schema change, invented context, namespace implementation or defect closure.
+- [x] **NO REGRESSION** — full structural runner including121/three new controls, language16,
+  publication9 and ledger9/13 pointer controls pass, rc=0. Book55 chapters/33 APIs/1138 source/
+  1767 rendered links; archive223 logical/37 resident records and Rust diff unchanged, rc=0.
+  Final staged doctrine receipt follows in recipes before commit.
+- [x] **LOCKSTEP** — book marks argument-proof boundary and pending proposal; task/ADR/live/resume
+  route .1b next. Prior task/ledger/lesson payloads retained exactly, no ceiling raised.
+  promotion: declined (pending director decision; existing truthful-context doctrine).
+
+## Completed static signature checklist — preserved from 862c0d9
+
+### `G1-SLICE.5b.1a` — complete finite static signature evidence
+
+- [x] **REPRODUCE / ISSUE** — direct actual reference baseline →min/max(length) refuse
+  formula_dimension; within(..., size_index/size_count/is_base_size) accepts boolean, rc=0.
+  New static_signature_contract.py first run →actual min(v_length) body assertion red, rc=1.
+- [x] **ROOT CAUSE (WHY + WHERE)** — infer_call admits all reserved names while _matches skips
+  tolerance kind; variadic _matches imposes max(2, listed arity). Actual prefix/call-path review
+  and direct baseline rc=0 pinpoint those guards against grammar5/6 and ADR five-class rule.
+  static_signature_contract.py --mutations →12 actual predicate faults fail body assertions, rc=0.
+- [x] **FIX** — within guard admits exactly five tolerance names; min/max use the documented
+  one-kind minimum. Independent hardcoded dimensional tables compare actual loaded populations
+  in both directions; signature matrix traps environmental reads and execution callbacks.
+- [x] **ADDRESSED (verified)** — static_signature_contract.py --mutations →4032 actual
+  parse/infer cases,22 closed names,12 compiled actual predicate/body assertion reds, rc=0.
+  Each faulty guard fails the assertion; producer on disk unchanged. D112/D113 close; no new
+  grammar/identity/storage or product type/evaluation implementation claim.
+- [x] **NO REGRESSION** — run_formula_structure_probes.sh →all existing structural/input/
+  canonical/numeric/replay controls plus4032/12 green; language probes →16 pass/0 fail, rc=0.
+  Publication →53 chapters/25 APIs/1102 source/1705 rendered links,9 pass/0 fail; bash -n
+  on both shell producers →rc=0. Focused cargo test -p sc-core expression/canonical/recipe
+  contracts →34 pass/3 groups; staged make gate →all doctrines green, rc=0.
+- [x] **LOCKSTEP** — expert annex/grammar/type contract/index/status, complete .1a–.1c ownership,
+  defect closure/history/live/resume agree; Rust sources/tests unchanged. G1 stays5/18;
+  canonical defect marker census →10 open/102 unique sealed/0 intersection, rc=0. First scratch
+  census incorrectly counted task headings; canonical markers corrected the query and draft
+  defect markers before final sealing. Original report bodies/oldest ledger payloads retained.
+  promotion: declined (already canonical independent-evidence doctrine; no new durable policy).
+
+Final staged gate:all doctrines green, rc=0. Ledger:nine arms/thirteen pointer controls pass, rc=0.
+Archive CLI:198 controls/189 full logical reads, rc=0; retention189 logical records/64 working
+Markdown/9092 decoded lines/700909 decodedB/357231 residentB, rc=0. Prior main milestone checklist
+1474B and recipe completed prefix47500B retained exactly; oldest live ledger payloads exact HEAD.
+The first gate selected the primary tree's historical checklist lacking a recognized result shape;
+added current owning .1a evidence before it, leaving historical bytes unchanged. Matrix guard review
+replaced a kind-only dict with Mapping so get(value) cannot silently default; actual twelfth fault
+proves the read trap. Draft count replacement was corrected for D112/D113 and1102 link identities
+before final checks. No checker, cap, grammar or product Rust changed; no needed job remains live.

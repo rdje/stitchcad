@@ -901,3 +901,26 @@ Retention: complete relocated dab0ee4 task payloads verified by G1-SLICE.5b.1c.2
 
 
 Retention: complete predecessor payload preserved by .5b.2a.
+
+## Completed whole-preflight checklist — preserved from 862c0d9
+
+### `G1-SLICE.5b.1b.2` — whole reference static preflight
+
+- [x] **REPRODUCE / ISSUE** — D119 lacks whole preflight; D123 copied25 ceiling accepts21 in
+  preflight then old aggregate L8 refuses34, baseline rc1. Original reports retained in part45.
+- [x] **ROOT CAUSE (WHY + WHERE)** — book L2 evaluates as it discovers later errors; L8 adds
+  unrelated refusal rows. static_recipe_contract.py --mutations →196 cases/14 actual assertion
+  reds, rc=0; copied25-ceiling baseline reports34 and exits1 despite accepted21, rc=1.
+- [x] **FIX** — original-source top-level boundaries, local metadata-only ordered namespace,
+  complete plan after all statements pass; whole worked recipe preflight before L2, actual size21.
+- [x] **ADDRESSED (verified)** —196 cases/14 actual guard body assertion reds; consumer3 and
+  copied per-recipe ceiling control pass; static_recipe_contract.py --mutations →rc=0,
+  execution/value/geometry trapped, no accepted prefix. Actual source unchanged during controls.
+- [x] **NO REGRESSION** — full reference suite including4032 signature/1139 namespace matrices
+  run_formula_structure_probes.sh →rc=0; run_formula_language_probes.sh →16 pass/0 fail, rc=0;
+  run_book_publication_probes.sh →9 pass/0 fail, rc=0. No Rust source/test bytes changed.
+- [x] **LOCKSTEP** — progressive worked chapter/annex/index/live/task/ledger records agree,
+  G1 stays5/18, defects12open/110sealed; .1b done, .1c next. Exact old records retained.
+  promotion: declined (existing whole-refusal, declaration-order and independent-evidence principles).
+
+[Exact completed namespace checklist](G1-SLICE-evidence.md#completed-namespace-checklist--preserved-from-b2c4d6e) retained.

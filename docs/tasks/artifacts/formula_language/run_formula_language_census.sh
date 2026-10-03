@@ -840,10 +840,29 @@ class Evaluator:
         return d_atan2(dfraction(y), dfraction(x)) * 180 / PI * 1000000
 
     # -- namespaces and the single-statement static phase --
+    def _reserved_source(self, name):
+        """Static metadata only: never inspect a value or context availability."""
+        size = name in ("size_index", "size_count", "is_base_size")
+        context = ("size" if size else "always" if name in ("eps_num", "eps_geo")
+                   else "profile" if name == "eps_phys" else "export")
+        return {"role": "reserved", "kind": self.reserved[name][0],
+                "origin": "size" if size else "tolerance", "required_context": context}
+
+    def _recipe_source(self, src, name, kind, ordinal=None, offset=0):
+        """Location from an actual parsed let; detached syntax has no recipe ordinal."""
+        _, starts = self.tokenize(src)
+        name_start = offset + starts[1]
+        source = {"role": "recipe", "kind": kind, "origin": "recipe",
+                  "span": (offset, offset + len(src)),
+                  "name_span": (name_start, name_start + len(name))}
+        if ordinal is not None:
+            source["statement_index"] = ordinal
+        return source
+
     def namespace(self, declarations):
         """Consume pairs before duplicate declarations can disappear in a dict."""
         env = {}
-        for name, entry in declarations:
+        for declaration_index, (name, entry) in enumerate(declarations, 1):
             self._identifier(name)
             try:
                 kind, origin = entry["kind"], entry["origin"]
@@ -853,7 +872,11 @@ class Evaluator:
                     or kind not in (*self.bindable, "point", "edge") or origin not in self.origins):
                 raise FErr("formula_parse", "invalid declaration kind/origin for `%s`" % name)
             if name in self.reserved:
-                raise FErr("formula_rebinding", "reserved `%s` cannot be declared by %s" % (name, origin))
+                raise FErr("formula_rebinding", "reserved `%s` cannot be declared by %s" % (name, origin),
+                           {"name": name, "reason": "reserved_name",
+                            "reserved_source": self._reserved_source(name),
+                            "attempted_source": {"role": "initial_declaration", "kind": kind,
+                                                 "origin": origin, "declaration_index": declaration_index}})
             if name in env:
                 raise FErr("formula_ambiguous_name", "`%s` is declared by both %s and %s"
                            % (name, env[name]["origin"], origin))
@@ -892,16 +915,32 @@ class Evaluator:
 
     def static_statement(self, src, env):
         """Inspect names, headers and kinds only; never observe state or compute a value."""
+        return self._static_statement(src, env)
+
+    def _static_statement(self, src, env, ordinal=None, offset=0, prior_sources=None):
+        """Whole preflight supplies locations; the public detached entry invents none."""
         env = self.namespace(env.items())
         checked = self.syntax_statement(src)
         role, name = checked[:2]
         if role == "let":
             _, _, kind, node = checked
             if name in self.reserved:
-                raise FErr("formula_rebinding", "reserved `%s` cannot be rebound" % name)
+                raise FErr("formula_rebinding", "reserved `%s` cannot be rebound" % name,
+                           {"name": name, "reason": "reserved_name",
+                            "reserved_source": self._reserved_source(name),
+                            "attempted_source": self._recipe_source(src, name, kind, ordinal, offset)})
             if name in env:
                 if env[name]["origin"] == "recipe":
-                    raise FErr("formula_rebinding", "`%s` is bound twice in one recipe" % name)
+                    prior = (prior_sources or {}).get(name)
+                    arguments = {"name": name, "reason": "recipe_name",
+                                 "prior_source": dict(prior) if prior is not None else
+                                 {"role": "recipe", "kind": env[name]["kind"], "origin": "recipe"},
+                                 "attempted_source": self._recipe_source(src, name, kind, ordinal, offset)}
+                    if prior is not None:
+                        arguments["prior_statement_index"] = prior["statement_index"]
+                    if ordinal is not None:
+                        arguments["statement_index"] = ordinal
+                    raise FErr("formula_rebinding", "`%s` is bound twice in one recipe" % name, arguments)
                 raise FErr("formula_ambiguous_name", "`%s` is declared by both %s and recipe"
                            % (name, env[name]["origin"]))
             got = self.infer(node, env)
@@ -933,16 +972,17 @@ class Evaluator:
             elif text == ")":
                 depth = max(0, depth - 1)
         ends = boundaries[1:] + [len(src)]
-        plan = []
+        plan, prior_sources = [], {}
         for ordinal, (start, end) in enumerate(zip(boundaries, ends), 1):
             if ordinal > self.limits["max_recipe_statements"]:
                 raise FErr("formula_domain", "recipe statement %d exceeds max_recipe_statements=%d"
                            % (ordinal, self.limits["max_recipe_statements"]))
-            checked = self.static_statement(src[start:end], env)
+            checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources)
             if checked[0] != "let" and checked[0] != "assert":
                 raise FErr("formula_parse", "a recipe contains only let/assert statements")
             if checked[0] == "let":
                 env[checked[1]] = {"kind": checked[2], "origin": "recipe"}
+                prior_sources[checked[1]] = self._recipe_source(src[start:end], checked[1], checked[2], ordinal, start)
             plan.append((start, end, checked))
         return tuple(plan)
 

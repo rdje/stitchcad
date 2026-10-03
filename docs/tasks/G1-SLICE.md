@@ -822,7 +822,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.2a` | `done` | Closed kind/origin/reserved-context product metadata |
 | done | `G1-SLICE.5b.2b` | `done` | Immutable sourced declarations before checked namespace |
 | done | `G1-SLICE.5b.2c.1a` | `done` | D131 reproduction and concrete diagnostic proposal |
-| next | `G1-SLICE.5b.2c.1b` | `blocked` | Director diagnostic ruling before namespace implementation |
+| done | `G1-SLICE.5b.2c.1b` | `done` | Delegated source-aware diagnostic decision and repair |
+| next | `G1-SLICE.5b.2c.2` | `pending` | Checked product initial namespace |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -843,30 +844,36 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 - D70 awaits director decision for complete SizeSet under .4c.2. D83/D84 scoped reference review
   is complete; production literal/binding/evaluation proof remains separate.
-- D131 requires a director ruling on reserved-name formula_rebinding arguments. Concrete proposal
-  and120 reserved refusals are recorded in ADR-0003 and .5b.2c.1a; repair .1b precedes namespace .2.
+- D131 decision/repair .5b.2c.1b verified under engineering delegation2026-10-03; actual source
+  arguments are documented before product namespace .2c.2. No diagnostic decision blocker.
 
 ## Acceptance Checklist
 
+### G1-SLICE.5b.2c.1b — delegated binding diagnostic sources
+
+- [x] **REPRODUCE / ISSUE** — prior .1a actual121 cases/three assertion controls establish D131:
+  reserved/input metadata have no recipe ordinal, while the old rebinding row requires two, rc=0.
+- [x] **ROOT CAUSE (WHY + WHERE)** — old contract5.2 only covers repeated lets; namespace and
+  detached static guards expose no structured source context. New diagnostic control →3624
+  exact argument cases/19 actual compiled field/token/location assertion reds, rc=0. Actual
+  ordinal/name spans come from whole preflight and parsed header, not state/value metadata.
+- [x] **FIX** — two formula_rebinding cases retain reserved/attempted or prior/attempted sources;
+  real initial pair position, detached local spans and whole prior/current indices distinguished.
+  Decision author/applier are the same engineer under explicit delegation; approval unclaimed.
+- [x] **ADDRESSED (verified)** — reserved_diagnostic_review.py --mutations →3624 cases/19 actual
+  assertion reds, producer unchanged, rc=0. Availability/value/execution traps reject illegal
+  reads; annotation/origin/context/position/span/index fields checked by independent fixtures.
+- [x] **NO REGRESSION** — full structural, language16/publication9 and ledger9/13 pointer controls
+  pass, rc=0; book55 chapters/33 APIs/1140 source/1770 rendered links. Product Rust diff empty,
+  rc=0. Final archive/census and staged doctrine receipts follow in recipes before commit.
+- [x] **LOCKSTEP** — canonical contract5.2.1/ADR/annexes and task pointers describe actual source
+  scope; grammar unchanged, source registry/typed product proof stays .2c.2/.2d. Exact prior
+  completed task/oldest ledger/lesson retention owned. promotion: recorded in ADR-0003 delegated
+  decision; existing governance limits independent approval and specifies reversal.
+
 ### G1-SLICE.5b.2c.1a — reserved diagnostic conflict reproduction/proposal
 
-- [x] **REPRODUCE / ISSUE** — reserved_diagnostic_review.py --mutations →120 reserved refusals/
-  one ordinary rebinding/three actual assertion reds, rc=0. Canonical row requires two indices;
-  actual eps_num initial/let refusals expose formula_rebinding and empty arguments.
-- [x] **ROOT CAUSE (WHY + WHERE)** — contract3.1 reserved prohibition and static reference guards
-  use rebinding, but contract5.2 raised-when/required-arguments row only describes repeated lets.
-  Actual reproduction120/one and three compiled token/fabricated-index body reds, rc=0. Reserved
-  sources have no prior statement; initial declarations have no attempt statement to index.
-- [x] **ADDRESSED (verified)** — reproduction/proposal leaf only: actual121 cases/three assertion
-  reds and unchanged producer bytes, rc=0. D131 remains open, owned and scheduled at .1b after
-  director ruling; no schema change, invented context, namespace implementation or defect closure.
-- [x] **NO REGRESSION** — full structural runner including121/three new controls, language16,
-  publication9 and ledger9/13 pointer controls pass, rc=0. Book55 chapters/33 APIs/1138 source/
-  1767 rendered links; archive223 logical/37 resident records and Rust diff unchanged, rc=0.
-  Final staged doctrine receipt follows in recipes before commit.
-- [x] **LOCKSTEP** — book marks argument-proof boundary and pending proposal; task/ADR/live/resume
-  route .1b next. Prior task/ledger/lesson payloads retained exactly, no ceiling raised.
-  promotion: declined (pending director decision; existing truthful-context doctrine).
+[Exact checklist](G1-SLICE-constructions.md#completed-reserved-diagnostic-proposal-checklist--preserved-from-862c0d9) retained.
 
 ### G1-SLICE.5b.2b — immutable sourced declarations
 
@@ -890,24 +897,7 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
 
 ### `G1-SLICE.5b.1b.2` — whole reference static preflight
 
-- [x] **REPRODUCE / ISSUE** — D119 lacks whole preflight; D123 copied25 ceiling accepts21 in
-  preflight then old aggregate L8 refuses34, baseline rc1. Original reports retained in part45.
-- [x] **ROOT CAUSE (WHY + WHERE)** — book L2 evaluates as it discovers later errors; L8 adds
-  unrelated refusal rows. static_recipe_contract.py --mutations →196 cases/14 actual assertion
-  reds, rc=0; copied25-ceiling baseline reports34 and exits1 despite accepted21, rc=1.
-- [x] **FIX** — original-source top-level boundaries, local metadata-only ordered namespace,
-  complete plan after all statements pass; whole worked recipe preflight before L2, actual size21.
-- [x] **ADDRESSED (verified)** —196 cases/14 actual guard body assertion reds; consumer3 and
-  copied per-recipe ceiling control pass; static_recipe_contract.py --mutations →rc=0,
-  execution/value/geometry trapped, no accepted prefix. Actual source unchanged during controls.
-- [x] **NO REGRESSION** — full reference suite including4032 signature/1139 namespace matrices
-  run_formula_structure_probes.sh →rc=0; run_formula_language_probes.sh →16 pass/0 fail, rc=0;
-  run_book_publication_probes.sh →9 pass/0 fail, rc=0. No Rust source/test bytes changed.
-- [x] **LOCKSTEP** — progressive worked chapter/annex/index/live/task/ledger records agree,
-  G1 stays5/18, defects12open/110sealed; .1b done, .1c next. Exact old records retained.
-  promotion: declined (existing whole-refusal, declaration-order and independent-evidence principles).
-
-[Exact completed namespace checklist](G1-SLICE-evidence.md#completed-namespace-checklist--preserved-from-b2c4d6e) retained.
+[Exact checklist](G1-SLICE-measurements.md#completed-whole-preflight-checklist--preserved-from-862c0d9) retained.
 
 ### G1-SLICE.5e.1a — D122/D127/D128 origin/context reads
 
@@ -988,3 +978,4 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 
 - `2026-10-03` (UTC): .5b.2b/STITCHCAD-G1-0084 adds sourced metadata;7 contracts/19 body reds/one API-negative red, strict608. D130 fixed; .2c next.
 - `2026-10-03` (UTC): .5b.2c.1a/STITCHCAD-G1-0085 records D131 reserved argument conflict;121 cases/three actual reds. .1b ruling blocks namespace .2.
+- `2026-10-03` (UTC): .5b.2c.1b/STITCHCAD-G1-0086 applies delegated D131 sources;3624 argument cases/19 actual reds. Namespace .2c.2 next.

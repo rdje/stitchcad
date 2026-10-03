@@ -154,6 +154,17 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0086 - source-aware binding refusal contract (leaf `G1-SLICE.5b.2c.1b`)
+
+Delegated D131 decision retains formula_rebinding, discriminating reserved attempts from repeated
+recipe lets. Sources carry fixed reserved metadata and actual initial pair/recipe locations;
+detached checks invent no ordinal, whole preflight preserves both real indices/global spans.
+3624 independently authored argument cases/19 actual compiled assertion reds pass0, source exact;
+state/value/availability/execution trapped. Canonical contract/ADR/book disclose source/approval
+scope and reversal; grammar and product Rust unchanged. Prior task/oldest ledger/lesson retained.
+Structural/language16/publication9/ledger9/13 pointer controls pass0;55 chapters/33 APIs/
+1140 source/1770 rendered links. G1 stays5/18;10open/120sealed defects; namespace .2c.2 next.
+
 ## STITCHCAD-G1-0085 - reserved-name diagnostic proposal (leaf `G1-SLICE.5b.2c.1a`)
 
 D131 reproduces120 reserved-name refusals and one ordinary rebinding against the actual reference.
@@ -361,18 +372,6 @@ book52 chapters/25 APIs/1083 source/1674 rendered links. Shared nine sources/pri
 Book/API/live/task records agree; G1 stays5/18, defects10open/99sealed; next .5a.3f.2 coupled review.
 No static validation, binding/evaluation, typed project hashes/storage, MCP or production approval.
 
-## STITCHCAD-G1-0069 - complete recipe literal input normalization (leaf `G1-SLICE.5a.3f.1b`)
-
-Private normalized statement/recipe owners retain names, closed annotations, all original global
-spans/order and source borrowing after syntax drop. Shared expression conversion normalizes every
-input; contextual literal errors retain operand/known1-based index/rule/span and Error source chain.
-Eight contracts compare authored16 statements/nine recipes and100 independent numeric rows in
-all three roles; simultaneous4096×2×256 nodes/16if conversion/Clone/drop passes on64KiB stack.
-Seventeen actual compiled assertion reds/exact source restoration verify production composition.
-Strict native569/46groups, release8/WASM3 and focused reference/book checks pass:52 chapters/23 APIs/
-1073 source/1663 rendered links, language16/publication9. Prior sources/closure/oldest records exact.
-Book/API/status/progressive routes and live docs align; G1 stays5/18, defects10open/99sealed.
-Next .5a.3f.1c owned statement/recipe serializer; no binding/evaluation/storage/MCP/signoff claim.
 
 
 
@@ -385,3 +384,5 @@ Next .5a.3f.1c owned statement/recipe serializer; no binding/evaluation/storage/
 | [`stitchcad-changelog-part81.md`](docs/history/stitchcad-changelog-part81.md) | STITCHCAD-G1-0067 | 11 lines, 974 bytes, `sha256:aad9b836…` |
 
 | [`stitchcad-changelog-part82.md`](docs/history/stitchcad-changelog-part82.md) | STITCHCAD-G1-0068 | 12 lines, 1035 bytes, `sha256:451e0450…` |
+
+| [`stitchcad-changelog-part83.md`](docs/history/stitchcad-changelog-part83.md) | STITCHCAD-G1-0069 | 12 lines, 1076 bytes, `sha256:61590cec…` |

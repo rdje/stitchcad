@@ -5,11 +5,11 @@ Latest commit: derive with git log --oneline -1.
 
 ## Current state
 
-- Active tree: G1-SLICE; frontier .5b.2c.1b in G1-SLICE-recipes.md.
-- Next action: obtain director's D131 reserved-name diagnostic ruling (ADR-0003 concrete proposal),
-  then repair canonical/reference arguments at .1b and implement initial namespace .2c.2.
-- D131 reproduction/proposal .1a complete; diagnostic conflict blocks namespace code. No fabricated
-  indices: reserved metadata and initial authored declarations have no recipe statement ordinal.
+- Active tree: G1-SLICE; frontier .5b.2c.2 in G1-SLICE-recipes.md.
+- Next action: finalize and implement checked initial product namespace; source-aware D131
+  diagnostic decision/repair .1b verified under explicit engineering delegation (ADR-0003).
+- Reserved sources/initial metadata have no recipe ordinal; detached sources retain local spans,
+  whole preflight retains actual prior/current indices. Product typed proof and localization remain.
 - Closed metadata .2a and sourced declarations .2b verified; complete reference static review done.
 - In-flight uncommitted: none after the recording commit.
 - SizeSet D70 remains .4c.2; numeric execution remains .5c–.5g.

@@ -61,3 +61,4 @@ Records carry an `answers:` line so a question can find them — that is what ma
 | [`decision_canonical-expression-spelling.md`](decision_canonical-expression-spelling.md) | `decision` | D103: unary (- child), square (^2 child); exact canonical expression byte contract |
 
 | [`decision_recipe-bytes.md`](decision_recipe-bytes.md) | `decision` | exact bind/assert/ordered recipe bytes under engineering delegation; independent approval unclaimed |
+| [`decision_rebinding.md`](decision_rebinding.md) | `decision` | D131: reserved/recipe rebinding sources, actual locations; delegated engineering decision |

@@ -4,8 +4,8 @@
 > Namespace resolution is next at .2c/.2d; a recipe still has no product
 > static acceptance or execution. [Reference static review](formula-static-validation.md) is complete
 > for its stated instrument populations and has a separate proof scope.
-> [D131 reserved-name diagnostic arguments](formula-static-validation.md#reserved-name-diagnostic-conflict--decision-pending)
-> require a director ruling before namespace implementation.
+> [Reserved-name diagnostic sources](formula-static-validation.md#reserved-name-diagnostic-sources)
+> are specified and independently exercised in the reference before product namespace implementation.
 
 The checker needs to know what a name means before fetching its value. An unknown measurement
 can still be length. A size context can be absent while size_index still has the kind count.

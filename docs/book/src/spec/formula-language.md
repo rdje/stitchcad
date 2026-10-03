@@ -148,7 +148,8 @@ name cannot hold a label, a note or a material's name — prose is presentation
 | `size_count` | count | how many sizes the set holds | a size context |
 | `is_base_size` | boolean | whether this instance is the base size | a size context |
 
-No origin may re-bind a reserved name. T2's chordal sibling (100 µm for polyline-only targets) is a
+No origin may re-bind a reserved name; the refusal is `formula_rebinding` with the reserved-case
+source arguments (§5.2.1). T2's chordal sibling (100 µm for polyline-only targets) is a
 property of the export target, resolved at serialization, and is not a formula name. `eps_fmt`,
 `eps_imp` and `eps_phys` are `unknown` inside a recipe: the class exists, the number does not yet.
 
@@ -262,7 +263,7 @@ specifies, and is never rendered raw to a user.
 | `formula_dimension` | an operation has no rule for the kinds it was given | the operator or function, every operand's kind, the kind wanted |
 | `formula_unbound_name` | a name is undeclared, or a call names no built-in function or selector | the name, the origins searched |
 | `formula_ambiguous_name` | two origins bind one name | the name, both origins |
-| `formula_rebinding` | a `let` re-binds a name this recipe already bound | the name, both statement indices |
+| `formula_rebinding` | a recipe binding repeats a name, or any origin attempts a reserved name | the name and case-specific binding sources (§5.2.1) |
 | `formula_division` | a divisor is zero | the expression, the divisor's name or literal |
 | `formula_domain` | a value/domain or §4.3 limit is exceeded, or a comparison uses inadmissible T1 (§4.2) | quantity/operation/bound/measured size; for T1: comparison, requested class, contribution sources |
 | `formula_unknown` | an operand's state is `unknown`, so it has no value | the name, its state, its origin, the artifact the policy matrix blocks |
@@ -270,6 +271,22 @@ specifies, and is never rendered raw to a user.
 | `formula_assertion` | an `assert` does not hold at its class | the assertion's name, both values, the tolerance class |
 | `formula_cycle` | a persisted recipe's graph is cyclic | the names in the cycle |
 | `formula_unsupported` | a construct §6 excludes and the envelope does not own | the construct, the exclusion clause |
+
+#### 5.2.1 Binding-refusal sources
+
+`formula_rebinding` has two cases. A repeated recipe binding carries the name, the prior and
+attempted binding sources, and both actual one-based statement indices. A reserved-name attempt
+carries the name, the reserved metadata source (fixed kind, origin and required context), and
+the attempted binding source/origin. If the attempt is a recipe let, retain its actual ordinal,
+whole-statement span and name span. Initial authored inputs and reserved metadata have no recipe
+statement index; none is invented. Source arguments retain canonical identities/references and
+source locations where available, without copying numerical values or input state.
+
+Detached statement checking has no whole-recipe ordinal or prior statement location; it retains
+the available source spans and declared metadata, without claiming complete whole-recipe context.
+The [reference diagnostic controls](../annexes/formula-static-validation.md#reserved-name-diagnostic-sources)
+distinguish that scope from whole-recipe checking and canonical product adapters. Two authored
+declarations colliding remain `formula_ambiguous_name`, including two from the same origin.
 
 ### 5.3 Precedence with the envelope's diagnostics
 
