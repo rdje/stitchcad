@@ -32,7 +32,7 @@ impl FormulaUnaryOperator {
     }
 }
 
-fn arithmetic(kind: K) -> bool {
+pub(super) fn arithmetic(kind: K) -> bool {
     matches!(kind, K::Length | K::Angle | K::Area | K::Ratio | K::Count)
 }
 impl B {

@@ -11,16 +11,16 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
-## _(2026-10-03 UTC)_ — diagnostic advice has its own dimensional contract
 
-- Actual reference inference advised arc_length on both angle/length quotients. The old matrix
-  required that same mistake. Restrict advice to multiplication and test absence as well as presence
-  over all operator/pair cases; a function name alone does not establish that advice was emitted.
-- Both restoring quotient advice and suppressing valid product advice fail actual body assertions;
-  static4032 cases/14 reds and focused reference/language16/book10/ledger9+13 pass0.
-- Touched review status now names completed namespace/operator metadata and exact remaining proof.
-  Grammar unchanged;10open/124sealed, G1 stays5/18. Prior evidence and oldest live records exact.
-- promotion: declined (existing dimensional signatures and honest proof boundaries).
+## _(2026-10-03 UTC)_ — tolerance roles survive kind-only signature queries
+
+- Closed22-name/24-row metadata keeps within's class symbolic, while its ordinary kind is length.
+  Conditional branches and all generic T operands share an arithmetic kind; selectors read geometry.
+- Four public contracts cover680702 tuples, exact rows/tokens/arity and wide variadics;21 actual
+  compiled reds restore source. Final oracle uses the actual normalizer API and checked access.
+- Strict651/55 groups/WASM/reference/book10/ledger9+13 pass0; all14 operator faults still fail.
+  Prior/oldest evidence exact; grammar unchanged; accepted expressions/graph/value remain .3c/.4/.5c.
+- promotion: declined (existing closed signature and symbolic tolerance contracts).
 
 # Sealed archive — earlier lessons
 
@@ -181,3 +181,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`stitchcad-devnotes-part89.md`](docs/history/stitchcad-devnotes-part89.md) | G1-0089 ordered name-scope lesson | 15 lines, 1296 bytes, `sha256:ffe6d2c5…` |
 
 | [`stitchcad-devnotes-part90.md`](docs/history/stitchcad-devnotes-part90.md) | G1-0090 operator signatures lesson | 13 lines, 1106 bytes, `sha256:b0a427bf…` |
+
+| [`stitchcad-devnotes-part91.md`](docs/history/stitchcad-devnotes-part91.md) | G1-0091 diagnostic guidance lesson | 10 lines, 838 bytes, `sha256:a83b9679…` |

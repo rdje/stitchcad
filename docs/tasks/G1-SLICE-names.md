@@ -1,4 +1,4 @@
-# G1-SLICE — formula name resolution evidence
+# G1-SLICE — formula namespace and signature evidence
 
 Evidence sibling of [G1-SLICE](G1-SLICE.md), owned by [recipe lanes](G1-SLICE-recipes.md).
 Completed protocols and receipts retain original bytes; current implementation work stays there.
@@ -374,3 +374,52 @@ Exact payload: 18lines/1453B, SHA25673cc1a1e3a0239ef31a6a0e5688b4084eab2ef557773
   SHA7ea7b24e…/receipts16lines1393B SHA18db956d…/checklist18lines1453B SHA73cc1a1e… retained
   byte-exact. Oldest ledger10lines878B SHA32b87b67…/lesson13lines1106B SHAb0a427bf… sealed.
   promotion: declined (existing dimensional signature and precise proof-boundary contracts).
+
+## Completed guidance repair protocol — preserved from c5d4579
+
+Exact payload:16lines/1347B SHA2562f5f7d166c0e8720349d8b27bf6fe5fd2bb401cdb99f4440cffa832324e34de2.
+
+- ID: `G1-SLICE.5b.3a.1`
+  Status: `done`
+  Goal: D134 reference guidance and D135 review status match the implemented contract.
+  Work unit: `STITCHCAD-G1-0091`; predecessor dc346b4 clean/message empty/untracked.
+  Tools-first actual parse/infer reproduced arc_length guidance on both angle/length quotients,
+  although grammar5.1 names an angle-times-length product and product operator metadata restricts
+  the hint to Multiply. Existing static matrix incorrectly requires that same quotient guidance.
+  Own the small blocking repair before .3b: restrict reference hint to multiplication; verify its
+  presence AND absence independently over every binary pair/operator, actual compiled in-memory
+  regression and missing-hint faults, unchanged source on disk after controls. No grammar change,
+  accepted signatures, tokens or arithmetic behavior change. Retain exact .3a protocol/receipts/
+  checklist and oldest live records before bounded-document growth; focused structural/language/
+  publication/ledger/retention/coverage/gates and per-leaf commit. No Rust mutation. D135 touched-annex metadata status is corrected with precise public API links.
+  Verification: static4032 cases/14 actual reds, focused structure/language16/publication10/
+  ledger9+13/retention/coverage pass, rc=0; exact grammar unchanged. Commit: `STITCHCAD-G1-0091`.
+
+## Built-in signatures checklist — .5b.3b
+
+- [x] **REPRODUCE / ISSUE** — normalized call/if syntax lacked product signature metadata.
+  formula_builtin_signature_contract →four tests/680702 cases pass, rc=0; all actual24 normative
+  rows and22 unchanged canonical names independently match the closed vocabulary.
+- [x] **ROOT CAUSE (WHY + WHERE)** — ordinary length cannot retain within's symbolic class role,
+  and generic T must remain homogeneous arithmetic. builtin_signature_mutations.py →21 actual
+  compiled body assertion reds/exact restore, rc=0; value/class/kind/arity/branch/order/selector
+  faults prove both role and kind boundaries. Provider/value/geometry reads are absent by API type.
+- [x] **FIX** — closed22-name registry/category/arity metadata and explicit Value/Tolerance
+  descriptors, pure result_kind with shared arithmetic predicate. No new keyword/grammar/envelope
+  classification or accepted-expression proof; contextual diagnostic and dependencies remain .3c.
+- [x] **ADDRESSED (verified)** —every13-member kind/class tuple at arities0–4, all24 actual rows,
+  exact tokens/categories/arity samples and wide variadics pass;21 actual body reds/exact source
+  restore plus eight restored public operator/built-in tests pass, rc=0. All14 existing actual
+  operator faults rerun successfully after sharing the predicate; restored bytes confirmed.
+- [x] **NO REGRESSION** — make check:651 passed/55 groups, strict fmt/clippy; make wasm:three
+  libraries; structural/reference/language16/publication10/ledger9+13/coverage pass, rc=0.
+  Book58chapters/44API/1169source/1829render links; complete normative grammar byte-identical.
+  Draft normalizer getter corrected by actual API census; oracle indexing/panic lint corrected
+  with checked access, no lint waiver. Faults rerun against that final oracle before restoration.
+- [x] **LOCKSTEP** — new bounded book/examples/API/live scope align; G1 stays5/18,10open/124sealed.
+  Exact predecessor protocol16lines1347B SHA2f5f7d16… retained. Two oldest ledger payloads combined
+  without edits:16lines1250B SHA2d8487c5…; lesson10lines838B SHAa83b9679… sealed. No previous archive
+  changed. Retention241records/55workingMD/10675decodedlines/803679decodedB/392193residentB,
+  rc=0; fresh three-form marker census proves all IDs1–135 except unassignedD18, no duplicates/
+  overlap. Tree10lanes/13trees/11siblings/zero gaps; next .3c typed expression interface/checker.
+  promotion: declined (existing closed function/selector signatures and symbolic tolerance roles).

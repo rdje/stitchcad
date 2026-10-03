@@ -31,12 +31,13 @@ requires the named contracts and later proof owners.
 | Initial formula namespace/read | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2c.2/.2d.1 | [Admission, collisions and reads](formula-declarations.md#exact-declared-name-reads) |
 | Ordered formula name scope | §4.1; G1 | sc-core recipe; G1-SLICE.5b.2d.2 | [Actual prior bindings](formula-name-scopes.md) |
 | Formula operator kind signatures | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3a | [Closed operator matrix](formula-operator-signatures.md) |
+| Formula built-in/selector signatures | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3b | [Closed calls and roles](formula-builtin-signatures.md) |
 
 Reference [static signature evidence](formula-static-validation.md) covers the complete finite
 kind/function matrix without executing values; product static validation and whole-recipe preflight
 remain pending. Reference namespace/preflight/full static review is verified at G1-SLICE.5b.1;
 product metadata, sourced declarations, initial namespaces, exact reads and ordered metadata scopes are available;
-operator kind signatures are available; function/expression/whole validation remain .5b.3b–.4.
+operator/built-in/selector kind signatures are available; expression/whole validation remain .5b.3c–.4.
 
 ## Remaining proofs
 

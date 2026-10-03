@@ -693,24 +693,33 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5b.3a.1`
   Status: `done`
-  Goal: D134 reference guidance and D135 review status match the implemented contract.
-  Work unit: `STITCHCAD-G1-0091`; predecessor dc346b4 clean/message empty/untracked.
-  Tools-first actual parse/infer reproduced arc_length guidance on both angle/length quotients,
-  although grammar5.1 names an angle-times-length product and product operator metadata restricts
-  the hint to Multiply. Existing static matrix incorrectly requires that same quotient guidance.
-  Own the small blocking repair before .3b: restrict reference hint to multiplication; verify its
-  presence AND absence independently over every binary pair/operator, actual compiled in-memory
-  regression and missing-hint faults, unchanged source on disk after controls. No grammar change,
-  accepted signatures, tokens or arithmetic behavior change. Retain exact .3a protocol/receipts/
-  checklist and oldest live records before bounded-document growth; focused structural/language/
-  publication/ledger/retention/coverage/gates and per-leaf commit. No Rust mutation. D135 touched-annex metadata status is corrected with precise public API links.
-  Verification: static4032 cases/14 actual reds, focused structure/language16/publication10/
-  ledger9+13/retention/coverage pass, rc=0; exact grammar unchanged. Commit: `STITCHCAD-G1-0091`.
+  Goal: D134/D135 reference guidance/status repair; verified, commit `STITCHCAD-G1-0091`.
+  [Exact protocol](G1-SLICE-names.md#completed-guidance-repair-protocol--preserved-from-c5d4579) retained.
 
 - ID: `G1-SLICE.5b.3b`
-  Status: `pending`
+  Status: `done`
   Goal: closed built-in/selector signature vocabulary, ordered arities and symbolic tolerance role.
-  Verification: `pending`; Commit: `pending`.
+  Work unit: `STITCHCAD-G1-0092`; predecessor c5d4579 clean/message empty/untracked/no jobs.
+  Pre-code roadmap ADR-0003/G1, full grammar6/6.1/7, contract2/3.1/4.1/5.2 and normalized call/if,
+  FormulaKind/ReservedName/ToleranceName APIs, reference closed22 names/signature matrix reviewed.
+  Add closed FormulaBuiltin ALL/token/from_token (exact spelling), category Function/Selector/
+  Conditional/ToleranceComparison and Fixed/OneOrMore arity metadata. If remains special syntax;
+  lookup metadata neither adds reservations nor overrides named envelope precedence.
+  FormulaBuiltinOperand is Value(kind) or Tolerance(existing symbolic class); either has its
+  ordinary kind, but only the latter fills within's third role. Ordinary length, arithmetic on a
+  class and size names cannot masquerade as class metadata. Role descriptors grant no syntax or
+  accepted-expression proof; .3c derives the symbolic role from actual resolved reserved-name nodes.
+  result_kind uses closed signatures with same arithmetic T, both conditional branch kinds,
+  one-or-more homogeneous min/max, ordered atan2/arc_length/selectors, exactly five tolerances.
+  Signature metadata has no structural255 bound or numeric/provider/geometry execution authority.
+  Independent eight-kind and five-class argument population at arities0–4, wide variadic samples,
+  normative rows both directions and canonical22 name/token agreement must verify closure.
+  Actual compiled vocabulary/arity/generic/branch/order/selector/tolerance-role faults must fail
+  body assertions and restore source exactly; no Cargo job or Rust edit overlaps them. Strict
+  native/WASM, focused reference/language/book/ledger/retention/coverage/gate, exact previous/oldest
+  record retention and per-leaf commit. Typed contextual mismatch/dependencies stay .3c/.4.
+  Verification: four public contracts/680702 kind-class cases/21 actual compiled reds, strict
+  native651/55 groups/WASM/reference/book/ledger pass, rc=0. Commit: `STITCHCAD-G1-0092`.
 
 - ID: `G1-SLICE.5b.3c`
   Status: `pending`

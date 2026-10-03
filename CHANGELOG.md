@@ -154,6 +154,15 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/stitchcad-changelog-part77.md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0092 - built-in and selector kind signatures (leaf `G1-SLICE.5b.3b`)
+
+Closed22-name metadata preserves ordered arities, arithmetic T, conditional branches and symbolic
+within classes; selectors create no geometry. Four public contracts/680702 tuples/24 actual rows/
+22 unchanged canonical names and21 actual compiled body reds verify closure and restore source.
+Strict651 tests/55 groups/WASM3/reference/language16/book10/ledger9+13 pass0;14 operator faults
+rerun green. Bounded book/API/live scope and exact prior/oldest retention align; G1 stays5/18,
+10open/124sealed. Next .5b.3c typed contextual checking, then .4 atomic graph acceptance.
+
 ## STITCHCAD-G1-0091 - reference product guidance and review status (leaf `G1-SLICE.5b.3a.1`)
 
 D134 confines arc_length advice to refused angle×length products; the independent matrix checks
@@ -352,22 +361,7 @@ handles and ordinary checkout arguments still block. Neutral inherited checker r
 Book/bootstrap/tool/task/live records agree; G1 stays5/18, defects10open/104sealed. Full checks and
 exceptional push/observed CI are owned by .23v before namespace work resumes.
 
-## STITCHCAD-G1-0075 - observed third-window CI and immutability (leaf `G1-SLICE.5b.1b.0v`)
 
-Exact pushed b595a37: both CI jobs/all steps completed success. Exclusive archive checks pass28
-probes/200 CLIcontrols/191 logical reads, including newest committed catalog refusal. Local receipts
-and book agree; archive/schema/caps unchanged. G1 stays5/18, defects12open/102sealed.
-Next P0 SPINE.23 repairs handoff evidence; namespace review resumes after its clean completion.
-
-## STITCHCAD-G1-0074 - third exact retained history window (leaf `G1-SLICE.5b.1b.0`)
-
-Capacity64 blocks the next namespace-review seal. Capture62 raw full files from af98fff into window3;
-all189 logical records reconstruct exactly in fresh capture/installed-input fixtures before retirement.
-Prior windows and original bytes/addresses remain unchanged. Selected residue0;63 maintained links
-across three live files now land on catalog headings. No reader/checker/schema/limit changed.
-Full local checks and required exceptional push precede observed CI .0v, then namespace .1b resumes.
-Oldest live ledger payloads remain complete/exact; G1 stays5/18, defects12open/102sealed.
-D114 blind census and D115 idle CUA metadata false blocking are reproduced; SPINE.23 owns P0 repair.
 
 
 
@@ -398,3 +392,5 @@ D114 blind census and D115 idle CUA metadata false blocking are reproduced; SPIN
 | [`stitchcad-changelog-part87.md`](docs/history/stitchcad-changelog-part87.md) | STITCHCAD-SPINE-0021b | 9 lines, 773 bytes, `sha256:df9a2d7c…` |
 
 | [`stitchcad-changelog-part88.md`](docs/history/stitchcad-changelog-part88.md) | STITCHCAD-G1-0073 | 10 lines, 878 bytes, `sha256:32b87b67…` |
+
+| [`stitchcad-changelog-part89.md`](docs/history/stitchcad-changelog-part89.md) | STITCHCAD-G1-0075/0074 | 16 lines, 1250 bytes, `sha256:2d8487c5…` |
