@@ -154,6 +154,13 @@ the digests afterwards.
 
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0104 - current prerequisite documentation (leaf `G1-SLICE.5b.3c.2b.2.0`)
+
+Wanted-rule annex now reflects verified D140 reference geometry argument checking, linking its
+proof and retaining product operation/graph/geometry boundaries. Source census/geometry97/75/12,
+publication10 and ledger/gate receipts verify D145 closure; grammar/API unchanged.
+Original report/whole ledger/lesson retained; G1 stays5/18,11open/133sealed; checker follows.
+
 ## STITCHCAD-G1-0103 - truthful reference source locations (leaf `G1-SLICE.5f.3a.t1`)
 
 Preserve the shell-header offset for original compiled reference code; mark changed in-memory
@@ -329,17 +336,6 @@ scope and reversal; grammar and product Rust unchanged. Prior task/oldest ledger
 Structural/language16/publication9/ledger9/13 pointer controls pass0;55 chapters/33 APIs/
 1140 source/1770 rendered links. G1 stays5/18;10open/120sealed defects; namespace .2c.2 next.
 
-## STITCHCAD-G1-0085 - reserved-name diagnostic proposal (leaf `G1-SLICE.5b.2c.1a`)
-
-D131 reproduces120 reserved-name refusals and one ordinary rebinding against the actual reference.
-Three compiled assertion reds detect token changes/invented index; producer bytes remain exact.
-Canonical rebinding row requires two recipe indices that reserved metadata/initial inputs lack.
-ADR/book record a concrete source-aware reserved-case proposal; director ruling precedes repair
-and product namespace. Grammar and product Rust remain unchanged; D131 stays open and owned.
-Exact predecessor task/oldest ledger/lesson records retained within unchanged ceilings.
-Structural/language16/publication9/ledger9/13 pointer controls pass0; book55 chapters/33 APIs/
-1138 source/1767 rendered links. G1 remains5/18;11open/119sealed defects. Next .2c.1b ruling/repair.
-
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 
@@ -396,3 +392,5 @@ relaxed, no verified defect classification added; G1 remains5/18 and defects12op
 | [`stitchcad-changelog-part99.md`](docs/history/stitchcad-changelog-part99.md) | STITCHCAD-G1-0083 | 9 lines, 767 bytes, `sha256:ce745517…` |
 
 | [`stitchcad-changelog-part100.md`](docs/history/stitchcad-changelog-part100.md) | STITCHCAD-G1-0084 | 9 lines, 755 bytes, `sha256:ffb7e24e…` |
+
+| [`stitchcad-changelog-part101.md`](docs/history/stitchcad-changelog-part101.md) | STITCHCAD-G1-0085 | 10 lines, 849 bytes, `sha256:838b6b56…` |

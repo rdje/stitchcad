@@ -146,8 +146,10 @@ Fifteen actual compiled faults prove retained fields, row direction/variadics/du
 roles, child order and absence of value reads. The older4032-case kind matrix and14 fault controls
 remain green after changed anchors were repaired; it alone certifies no payload schema.
 
-Header-only diagnostic arguments remain D139/.5b.3c.3a. Geometry operation formulas remain
-D140/.5f.3a, a priority repair before product expression checking: the current reference can discard
-point-coordinate kinds, and this expression payload proof does not certify that geometry adapter.
+Header-only diagnostic arguments remain D139/.5b.3c.3a. D140's reference geometry argument repair
+is [verified separately](formula-static-validation.md#geometry-provider-argument-checking): point x/y
+and edge len require Length before value evaluation, with scoped actual/wanted payloads and retained
+contributions. This expression payload proof and that local reference adapter do not certify product
+operation identity, whole operation graphs or physical geometry; those remain .5f.3b/G2.
 Full expression/statement/recipe acceptance, numerical execution and generated geometry keep
 their separate owners. The grammar, token set and syntax identities are unchanged.

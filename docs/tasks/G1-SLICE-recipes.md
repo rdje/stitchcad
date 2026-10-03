@@ -667,7 +667,6 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal: D138 complete reference dimension arguments; verified `STITCHCAD-G1-0095`.
   [Exact protocol](G1-SLICE-names.md#completed-dimension-protocol--preserved-from2bdcd31) retained.
-
 - ID: `G1-SLICE.5b.3c.2b.h0`
   Status: `done`
   Goal: fourth exact retained window; verified `STITCHCAD-G1-0096`.
@@ -678,31 +677,33 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   [Exact verdicts](G1-SLICE-names.md#ci-observation-protocol--5b3c2bh1) retained; repairs/.v below.
 - ID: `G1-SLICE.5b.3c.2b.h1.r1`
   Status: `done`
-  Goal: D142 remove redundant must_use; strict lint/public namespace/read/order/iterator preserved.
-  [Exact protocol](G1-SLICE-names.md#d142-pre-code-protocol) retains actual1.99 before/fix proof.
-  Verification:exact1.99 beforeClippy101/aftermakecheck663/56→0, WASM3/book10/ledger9+13→0.
-  [Checklist](G1-SLICE-names.md#d142-acceptance-checklist). Commit: `STITCHCAD-G1-0098`.
+  Goal: D142 strict lint repair; `STITCHCAD-G1-0098`.
+  [Exact protocol](G1-SLICE-names.md#d142-pre-code-protocol) and
+  [checklist](G1-SLICE-names.md#d142-acceptance-checklist) retain interface/1.99/check/WASM receipts.
 - ID: `G1-SLICE.5b.3c.2b.h1.r2`
   Status: `done`
-  Goal: D143 CI package/temp stores derived from checkout root rather than runner home defaults.
-  [Exact protocol/checklist](G1-SLICE-names.md#d143-pre-code-protocol): public CLI/local stores,
-  full gate/probes before exceptional push/.v; `STITCHCAD-G1-0099`.
-  Verified:1.99 check663/56,WASM3,probes28/book10/ledger9+13→0; commit `STITCHCAD-G1-0099`.
+  Goal: D143 checkout-local CI stores; `STITCHCAD-G1-0099`.
+  [Exact protocol/checklist](G1-SLICE-names.md#d143-pre-code-protocol) retains public CLI/local-store,
+  strict1.99/check/WASM/gate/probes and exceptional push receipts; .v observed actual jobs.
 - ID: `G1-SLICE.5b.3c.2b.h1.v`
   Status: `done`
   Goal: observe repaired-head CI jobs/steps/store paths; [receipts](G1-SLICE-names.md#repaired-ci-observation--h1v).
   Verified d5dd11f doctrine8/Rust11 steps/native663/56/WASM3/local stores; `STITCHCAD-G1-0100`.
 - ID: `G1-SLICE.5b.3c.2b.h1.c`
   Status: `done`
-  Goal: required24-hour cleanup, guarded frozen plan/apply/residue; stores/history untouched.
-  Acceptance: actual process visibility, no foreign Git/link/device/tracked deletion; rebuild checks.
-  Verified6trees/991strays/1819917894B,residue0/tracked equality; check663/56,WASM3/probes28→0; `STITCHCAD-G1-0101`.
+  Goal: safe required cleanup; `STITCHCAD-G1-0101`.
+  [Exact frozen plan/apply/residue/rebuild receipts](G1-SLICE-names.md#required-artifact-cleanup--h1c) retained.
 - ID: `G1-SLICE.5b.3c.2b.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: context-free bounded checker with typed source/canonical errors, dependencies/checked owner.
   Acceptance: every branch/argument/name dependency and complete actual/wanted kinds, call priority,
   no callback/value/state query, no user-authored index or partial proof; interface first.
+  Children: .0 D145 stale prerequisite prose; product checker follows after scoped interface review.
   Verification/Commit: `pending`.
+- ID: `G1-SLICE.5b.3c.2b.2.0`
+  Status: `done`
+  Goal: D145 prerequisite documentation; `STITCHCAD-G1-0104`.
+  [Source/status/reference/publication receipts](G1-SLICE-names.md#d145-prerequisite-documentation-protocol) retained.
 
 - ID: `G1-SLICE.5b.3c.3`
   Status: `pending`

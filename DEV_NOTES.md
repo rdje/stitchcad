@@ -4,11 +4,11 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
-## _(2026-10-03 UTC)_ — retain source positions when extracting code
+## _(2026-10-03 UTC)_ — check prerequisite prose across chapters
 
-- Original reference keeps its header offset; changed fault variants use a virtual filename.
-- AST/code and real traceback assertions verify locations; formula results stay unchanged.
-- Promotion declined (existing truthful-source policy).
+- Wanted-rule annex still called verified D140 current; cross-book census exposed the missed link.
+- Corrected local-reference scope preserves the pending product boundary; source/publication agree.
+- Promotion declined (existing book lockstep policy).
 
 # Sealed archive — earlier lessons
 
@@ -195,3 +195,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`part102`](docs/history/stitchcad-devnotes-part102.md) | geometry preflight | 5 lines, 357 bytes, `sha256:7addd9c0…` |
 
 | [`part103`](docs/history/stitchcad-devnotes-part103.md) | CI/cleanup protocols | 118 lines, 8944 bytes, `sha256:532de5ae…` |
+
+| [`part104`](docs/history/stitchcad-devnotes-part104.md) | source positions | 5 lines, 312 bytes, `sha256:3990c390…` |

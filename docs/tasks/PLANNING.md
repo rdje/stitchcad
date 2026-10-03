@@ -974,3 +974,8 @@ comparison verifies86 original locations, real dimension traceback text and a vi
 two actual compiled loader body reds detect offset loss and source impersonation. Original report
 retained exactly in [`stitchcad-defects-part62.md`](../history/stitchcad-defects-part62.md); numerical/
 static results and grammar unchanged. Full reference regressions stay required before commit.
+
+D145 closes at G1-SLICE.5b.3c.2b.2.0: wanted-rule annex now links the verified local D140
+adapter and retains product operation/graph/geometry boundaries. Cross-book source census and
+actual97case/75payload/12fault geometry producer agree; publication10 passes, rc=0. Original report
+retained in [`stitchcad-defects-part63.md`](../history/stitchcad-defects-part63.md); grammar/API unchanged.
