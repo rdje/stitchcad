@@ -5,13 +5,11 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
-## _(2026-10-04 UTC)_ — distinguish raw annotations from actual kinds
+## _(2026-10-04 UTC)_ — reject class spelling before runtime
 
-- Invalid annotation has no typed RHS; preserve spelling, complete alternatives and original span.
-- Valid mismatch carries both genuine kinds. Child/lexical priority and no-prefix refusal survive.
-- Whole context rebases raw errors only; detached checks invent no ordinal/canonical expression.
-- Authored payload/phase controls and actual compiled body faults pass; grammar unchanged.
-- Promotion declined (existing truthful context policy); D146 token repair follows.
+- UnknownTolerance is syntax; five valid classes retain later context checks.
+- Old mapping body red and real span/ordinal controls verify repair.
+- Promotion declined (existing grammar/context policy).
 
 # Sealed archive — earlier lessons
 
@@ -129,3 +127,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`part105`](docs/history/stitchcad-devnotes-part105.md) | G1-0104 prerequisite lesson | 5 lines, 321 bytes, `sha256:28672a01…` |
 | [`part106`](docs/history/stitchcad-devnotes-part106.md) | G1-0105 checker protocol | 39 lines, 3461 bytes, `sha256:6cfe304a…` |
 | [`part107`](docs/history/stitchcad-devnotes-part107.md) | G1-0105 checker lesson | 9 lines, 746 bytes, `sha256:551f5302…` |
+| [`part108`](docs/history/stitchcad-devnotes-part108.md) | D139 header protocol | 34 lines, 2868 bytes, `sha256:d0ca98ee…` |
+| [`part109`](docs/history/stitchcad-devnotes-part109.md) | D139 header lesson | 7 lines, 543 bytes, `sha256:7cd43f55…` |

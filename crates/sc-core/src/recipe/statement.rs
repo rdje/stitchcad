@@ -112,7 +112,7 @@ pub enum FormulaStatementRule {
     ExpectedAnnotation,
     /// Annotation is not one of the six bindable kinds.
     UnbindableKind,
-    /// Annotation is not one of the five assertion tolerance names.
+    /// Annotation is outside the five-name grammar; this is a syntax refusal, not missing context.
     UnknownTolerance,
     /// Requires a single assignment sign.
     ExpectedAssignment,
@@ -139,7 +139,7 @@ impl FormulaStatementError {
     pub const fn diagnostic_code(self) -> &'static str {
         match self.rule {
             FormulaStatementRule::UnbindableKind => "formula_dimension",
-            FormulaStatementRule::UnknownTolerance => "formula_tolerance_unbound",
+            FormulaStatementRule::UnknownTolerance => "formula_parse",
             FormulaStatementRule::Expression { error, .. } => error.diagnostic_code(),
             _ => "formula_parse",
         }

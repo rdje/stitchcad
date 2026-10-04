@@ -83,11 +83,27 @@ A missing operand ends at the relevant separator or source end, rather than a gu
 
 Malformed keywords/names/punctuation and assertion separators use formula_parse. An annotation
 outside the six bindable kinds uses formula_dimension; an annotation outside the five tolerance
-names uses formula_tolerance_unbound. These annotation families match the curated reference.
+names uses formula_parse with UnknownTolerance and the original annotation span. These families
+match the curated reference. A valid class with unavailable context retains the separate runtime
+formula_tolerance_unbound rule; parsing supplies no context value.
 Expression structural excess retains formula_domain with the measured bound; unsupported powers
 retain formula_unsupported. Customer text is available only through explicit source/span inspection.
 No canonical context is invented for malformed syntax; explicit successful literal normalization
 provides expression identity separately.
+
+For assert closure:eps_chord=1 mm==1 mm, UnknownTolerance identifies the eps_chord span and
+formula_parse identifies the grammar refusal. Missing assignment or a malformed RHS after that
+annotation does not replace the earlier header error. In a complete recipe, the same nested rule
+keeps the containing statement's genuine ordinal and whole-source span.
+By comparison, assert closure:eps_phys=missing_left==missing_right is accepted syntax; later
+name/static and runtime context checks have their own boundaries. Parsing cannot claim that the
+names exist or the physical tolerance is available.
+
+The public contract exercises144 invalid-class refusals across nine independent spellings,
+four RHS/assignment forms and standalone/three ordered placements, plus10 valid-class acceptances.
+All15 actual compiled statement fault controls remain required, including restoring the old
+runtime-token mapping as a body assertion fault. Source restoration and noise refusal are enforced
+by the tracked statement_mutations.py producer.
 
 A standalone parse consumes the whole input. A second statement, a bare expression, comments or
 semicolons do not become an implicitly accepted recipe. Empty/multiple statement lists use the

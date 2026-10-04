@@ -667,9 +667,10 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Current formula_dimension grammar/token behavior preserved; document case distinction first.
   Verification/Commit: `STITCHCAD-G1-0106`; [exact proof](G1-SLICE-names.md#d139-binding-header-argument-protocol).
 - ID: `G1-SLICE.5b.3c.3a.t1`
-  Status: `pending`
+  Status: `done`
   Goal: D146 invalid assertion-class spelling is formula_parse; valid missing context stays runtime.
   Acceptance: public parser/reference token/span/priority agreement; meaningful actual guard faults.
+  Verification/Commit: `STITCHCAD-G1-0107`; [exact proof](G1-SLICE-names.md#d146-assertion-class-token-protocol).
   P1 immediately after D139, before .3b; no grammar change; original report in PLANNING.
 - ID: `G1-SLICE.5b.3c.3b`
   Status: `pending`

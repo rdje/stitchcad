@@ -99,6 +99,17 @@ the digests afterwards.
 | [`changelog-part76.md`](docs/history/window4.md#stitchcad-changelog-part76md) | STITCHCAD-G1-0062 | 13 lines, 1068 bytes, `sha256:a0da7975…` |
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0107 - invalid assertion class is syntax (leaf `G1-SLICE.5b.3c.3a.t1`)
+
+D146 UnknownTolerance now uses formula_parse with its original rule/span and genuine recipe
+ordinal; the five accepted classes and grammar are unchanged. Missing valid runtime context keeps
+formula_tolerance_unbound. Actual prior mapping reproduces body red101;144invalid/10valid public
+syntax cases and15actual compiled statement body faults pass0, source exact. Strict1.99 native677/
+57groups/WASM3/full reference/publication10/ledger9+13 pass0. Book examples and live/task/resume
+align; three original records retained byte-exact, archive282 verified. Scoped history confirms the
+reference repair missed product mapping/fixtures. G1 stays5/18;10open/135sealed exceptD18.
+Next .5b.3c.3b actual scope-bound statement checking, then full .4 graph.
+
 ## STITCHCAD-G1-0106 - truthful binding-header diagnostics (leaf `G1-SLICE.5b.3c.3a`)
 
 D139 raw annotations carry original spelling/span and six wanted kinds; valid mismatch carries

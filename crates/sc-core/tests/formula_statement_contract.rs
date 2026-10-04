@@ -217,13 +217,13 @@ fn header_refusals_have_exact_rules_spans_and_reference_families() {
         (
             "assert a: eps_chord = a == b",
             R::UnknownTolerance,
-            "formula_tolerance_unbound",
+            "formula_parse",
             "eps_chord",
         ),
         (
             "assert a: length = a == b",
             R::UnknownTolerance,
-            "formula_tolerance_unbound",
+            "formula_parse",
             "length",
         ),
         (
@@ -472,4 +472,69 @@ fn every_worked_statement_retains_header_and_expression_identity() {
     assert_eq!(statements, 21);
     assert_eq!(cursor, expected.len());
     assert_eq!(cursor, 25);
+}
+
+#[test]
+#[allow(clippy::expect_used)]
+fn invalid_assertion_class_is_syntax_without_runtime_context() {
+    let mut refusals = 0;
+    for annotation in [
+        "eps_chord",
+        "size_index",
+        "size_count",
+        "is_base_size",
+        "length",
+        "point",
+        "edge",
+        "unlisted",
+        "eps_num_extra",
+    ] {
+        for tail in [" = 1 mm == 1 mm", " = (", "", " == 1 mm"] {
+            let source = format!(" \tassert closure: {annotation}{tail}");
+            let error = refuse(&source);
+            assert_eq!(error.rule(), R::UnknownTolerance);
+            assert_eq!(error.diagnostic_code(), "formula_parse");
+            assert_eq!(
+                source.get(error.span().start()..error.span().end()),
+                Some(annotation)
+            );
+            refusals += 1;
+            for (prefix, ordinal) in [
+                ("", 1),
+                ("let first:count=1\n", 2),
+                ("let first:count=1\nassert prior:eps_num=1==1\n", 3),
+            ] {
+                let whole = prefix.to_owned() + &source;
+                let result = sc_core::recipe::FormulaRecipe::parse(&whole);
+                assert!(result.is_err());
+                let recipe_error = result.expect_err("asserted syntax refusal");
+                assert_eq!(recipe_error.diagnostic_code(), "formula_parse");
+                assert_eq!(recipe_error.statement_index(), Some(ordinal));
+                assert_eq!(
+                    recipe_error.span().start(),
+                    prefix.len() + error.span().start()
+                );
+                assert_eq!(recipe_error.span().end(), prefix.len() + error.span().end());
+                assert!(
+                    matches!(recipe_error.rule(), sc_core::recipe::FormulaRecipeRule::Statement(nested)
+                    if nested.rule() == R::UnknownTolerance && nested.span() == recipe_error.span())
+                );
+                refusals += 1;
+            }
+        }
+    }
+    let mut accepted = 0;
+    for annotation in ["eps_num", "eps_geo", "eps_fmt", "eps_imp", "eps_phys"] {
+        let source = format!("assert closure:{annotation}=missing_left==missing_right");
+        let statement = parse(&source);
+        let K::Assert { tolerance, .. } = statement.kind() else {
+            panic_kind(false);
+            continue;
+        };
+        assert_eq!(tolerance.token(), annotation);
+        let recipe = sc_core::recipe::FormulaRecipe::parse(&source);
+        assert!(recipe.is_ok());
+        accepted += 2;
+    }
+    println!("D146 public syntax: {refusals} invalid-class refusals / {accepted} valid-class acceptances; exact rules/spans/ordinals");
 }

@@ -188,7 +188,7 @@ fn recipe_errors_retain_one_based_statement_and_nested_rule() {
         (
             "let a: count = 1\nassert b: eps_chord = a == b",
             2,
-            "formula_tolerance_unbound",
+            "formula_parse",
             "eps_chord",
         ),
         (

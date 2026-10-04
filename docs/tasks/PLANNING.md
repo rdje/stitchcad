@@ -977,12 +977,10 @@ adapter and retains product operation/graph/geometry boundaries. Cross-book sour
 actual97case/75payload/12fault geometry producer agree; publication10 passes, rc=0. Original report
 retained in [`stitchcad-defects-part63.md`](../history/stitchcad-defects-part63.md); grammar/API unchanged.
 
-- **D146** — public FormulaStatement::parse on assert closure:eps_chord=1 mm==1 mm
-  returns UnknownTolerance/formula_tolerance_unbound; actual reference returns formula_parse.
-  Canonical contract5.2/grammar TOLERANCE require syntax refusal for an invalid class spelling;
-  formula_tolerance_unbound is a valid reserved class whose runtime context is unavailable.
-  Reproduce compiled public/reference probe target/d139-header-before, rc=0; native statement/recipe
-  fixtures and mutation anchor enforce the wrong family; formula-statements annex86 falsely claims
-  reference agreement. Root: product syntax diagnostic mapping retained an obsolete family while
-  reference grammar repair was not synchronized. Owner G1-SLICE.5b.3c.3a.t1, P1 immediately after
-  D139 before statement integration .3b; repair mapping/fixtures/controls/book, grammar unchanged.
+D146 closes at G1-SLICE.5b.3c.3a.t1: UnknownTolerance now uses formula_parse, retaining typed
+rule/source spans/genuine recipe ordinal. Original report retained exactly in
+[`stitchcad-defects-part65.md`](../history/stitchcad-defects-part65.md). Scoped history audit:
+1ac495b introduced runtime token; ba24599 changed reference to closed TOLERANCE/formula_parse
+without updating product mapping/fixtures/book. Actual public before-repair body assertion red101,
+144 invalid-class/10 valid-class syntax controls and15 compiled body fault reds verify repair, rc=0.
+Grammar, accepted class names and missing-valid-context runtime family remain unchanged.

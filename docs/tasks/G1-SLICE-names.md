@@ -954,33 +954,36 @@ with corrected static annex. Own/fix this prerequisite doc before checker code; 
 
 ### G1-SLICE.5b.3c.3a
 
-Work unit STITCHCAD-G1-0106; c13b7d8 source, only owned task/status reporting dirty. Contract2/3/5.2,
-grammar headers, static annex, actual syntax/static/preflight guards and namespace/payload producers
-reviewed. Actual public/reference probe target/d139-header-before returns three empty dimension
-payloads, rc=0; raw invalid annotation has no typed operand. Document5.2.5 before implementation.
-Private reference builder retains original annotation span; raw case binding_annotation carries
-raw_annotation and six ordered wanted_kinds, valid mismatch binding_kind carries declared_kind/
-expression_kind and singleton wanted_kinds. Both include operation let and actual name. Whole
-preflight supplies only its genuine offset/ordinal; detached syntax/static/runtime adapters invent
-neither ordinal nor canonical identity. Preserve whole lexical preflight priority, then invalid
-annotation before RHS grammar/inference; valid RHS child defects retain their diagnostics.
-Independent kind matrix, exact schemas/local/whole spans/late refusal/no prefix, trapped parsing
-and execution/state/value/provider callbacks; actual compiled in-memory body faults, exact disk
-source. Full affected reference/language/book/ledger/gate. D146 separately owned immediately next;
-no grammar/token-set change or unsupplied product statement proof.
+[Exact completed protocol/checklist](../history/stitchcad-devnotes-part108.md) retained frome3f6b33.
 
-- [x] **ROOT CAUSE (WHY + WHERE)** — actual public/reference header-before probe shows three
-  formula_dimension refusals with empty arguments, rc=0; raw annotation precedes typed RHS.
-  syntax_statement/_static_statement raised bare FErr, losing annotation and resolved kinds.
-  Header264case producer confirms case distinction and existing lexical/child priority, rc=0.
-- [x] **ADDRESSED (verified)** — header_dimension_contract.py --mutations→232 exact payloads/
-  13 actual compiled body assertion reds, source unchanged, rc=0. Both schemas/real spans/available
-  ordinals complete; raw parse/value/state/provider execution trapped; no prefix or invented context.
-- [x] **NO REGRESSION** — full structural/reference runner and language16→0, rc=0;
-  locator87 original positions/two loader reds→0. Publication10/60chapters/57APIs/1204source/
-  1894rendered links, rc=0; ledger9/pointer13, rc=0. Archive279records/34working Markdown/
-  11882lines/878500decodedB/408491residentB verified, rc=0. Four HEAD payloads byte-exact,
-  independent11open/134sealed unique/disjoint/complete exceptD18, rc=0; make gate→all doctrines green, rc=0; hook follows.
-- [x] **LOCKSTEP / RETENTION** — contract5.2.5 preceded code; book examples/source/task/live/resume
-  agree. Complete checker protocol/lesson, oldest ledger and D139 report retained; caps/windows fixed.
-  G1 stays5/18; D146 public class-token defect owned next. Promotion declined (existing context policy).
+## D146 assertion-class token protocol
+
+### G1-SLICE.5b.3c.3a.t1
+
+Work unit STITCHCAD-G1-0107; sourcee3f6b33 clean/brief0 before ownership. Original tracked D146,
+contract5.2, unchanged closed TOLERANCE grammar, actual standalone/recipe parser, public contracts,
+reference statement/recipe cases and15-fault producer reviewed. Root public UnknownTolerance
+mapping/expected fixtures use runtime formula_tolerance_unbound for syntactically invalid spelling;
+reference returns formula_parse. Correct only mapping, preserve rule/spans/priority/closed grammar.
+Independent invalid annotation population across malformed RHS/assignment and standalone/whole
+placements; genuine ordinals and source spans, all five valid class names remain accepted syntax.
+Actual compiled mapping-oldbug fault must fail body assertions; all15 statement faults exclusive,
+restore exact source, refuse compiler/expect/test-name noise. Strict native/WASM, affected full
+reference/publication/ledger/gates; runtime missing valid context remains separately verified.
+Existing grammar/token policy, no approval pending. Product statement .3b immediately follows.
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — public new class contract on original mapping gives
+  actual assertion red101, producer rc=0; public/reference before probe confirms wrong token, rc=0.
+  Scoped git -S/show1ac495b→ba24599 proves reference grammar/token repair missed product mapping.
+- [x] **ADDRESSED (verified)** — public144invalid/10valid controls print exact rules/spans/ordinals,
+  rc=0; statement_mutations.py→15actual compiled body assertion reds101/source exact, rc=0,
+  including old tolerance mapping. Compiler/expect/test-name noise refused; grammar unchanged.
+- [x] **NO REGRESSION** — make check strict1.99 fmt/Clippy/tests/docs→677passed/57groups, rc=0;
+  make wasm→all3libraries, rc=0; full structural/reference runner and publication10/60chapters/
+  57APIs/1204source/1894rendered links, rc=0. Ledger9/pointer13, rc=0; archive282/37working/
+  11965lines/884411decodedB/414402residentB verified, rc=0. Independent10open/135sealed complete
+  exceptD18 and three original HEAD records byte-exact, rc=0; make gate→all doctrines green,
+  rc=0; hook follows.
+- [x] **LOCKSTEP / RETENTION** — book syntax/runtime examples, source/task/live/resume agree;
+  three HEAD record comparisons→byte-exact, rc=0; caps/windows unchanged. G1 stays5/18;
+  .3b actual statement owner next. Promotion declined (existing grammar/context policy).
