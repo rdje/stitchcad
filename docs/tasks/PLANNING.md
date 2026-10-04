@@ -982,19 +982,12 @@ D160–D161 complete closed receipts retained in [part81](../history/window6.md#
 
 D162–D163 complete closure receipts retained in [part84](../history/stitchcad-defects-part84.md).
 
-D164 closes at .n.f9: guard implementation/test/output;14 strict classifiers/99 body controls,35 native macro reds/four sources exact/full5/5 restored, rc=0.
-Original report retained exactly in [part88](../history/stitchcad-defects-part88.md).
-
-D165 closes at .n.f3.r: guarded current assertion sites/three explicit refusal assertions; strict controls83 and30 native reds/full6/8 restored, rc=0.
-Original report retained exactly in [part86](../history/stitchcad-defects-part86.md).
-
-D166 closes at .h3.v.c: Git count failures/malformed counts refuse2; 19 controls/four actual body reds pass0.
-Original report retained in [part85](../history/stitchcad-defects-part85.md); no source/Git mutation in controls.
-
-D167 closes at .n.f4.r: guarded current test assertion sites/strict89 controls;38 macro-site reds/six sources exact/full8/10 restored, rc=0.
-Original report retained exactly in [part87](../history/stitchcad-defects-part87.md).
+D164–D167 complete closure receipts retained in [part91](../history/stitchcad-defects-part91.md).
 
 D168 closes at .n.f9: remove stale totals/describe catalogs; Git/native5/5 and publication43, rc=0. Original pre-repair report in [part89](../history/stitchcad-defects-part89.md).
 
 D169 closes at .n.f10: all guarded test/implementation paths, strict111 body controls and37 native macro reds/five sources exact/full5+5/5 restored, rc=0.
 Original report retained exactly in [part90](../history/stitchcad-defects-part90.md).
+
+D170 closes at .n.f11:125 body controls/15 actual macro reds/four current sources exact/full15/6 restored, rc=0.
+Original pre-repair report retained exactly in [part92](../history/stitchcad-defects-part92.md).

@@ -369,6 +369,8 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/operator_signature_mutations.py', 'operator_signature_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py', 'wanted_signature_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/call_lookup_mutations.py', 'call_lookup_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/formula_expression_mutations.py', 'formula_expression_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py', 'formula_reduction_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
@@ -383,6 +385,7 @@ def main():
             'canonical_recipe_mutations.py',
             'builtin_signature_mutations.py', 'operator_signature_mutations.py',
             'wanted_signature_mutations.py', 'call_lookup_mutations.py',
+            'formula_expression_mutations.py', 'reduction_boundary_mutations.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -441,6 +444,10 @@ def main():
             raise AssertionError('D156 Python actual child-store reset survived')
     classifier_count = 0
     for filename, work_name, rust, target, test in (
+            ('formula_expression_mutations.py', 'formula_expression_mutations', 'parser.rs',
+             'formula_expression_contract', 'semantic_node_bounds_count_calls_and_square_payload_correctly'),
+            ('reduction_boundary_mutations.py', 'formula_reduction_mutations', 'literal.rs',
+             'formula_literal_contract', 'coupled_reduction_frontier_preserves_valid_inputs_and_located_width_refusals'),
             ('wanted_signature_mutations.py', 'wanted_signature_mutations', 'signatures.rs',
              ('formula_operator_signature_contract', 'formula_builtin_signature_contract'), None),
             ('call_lookup_mutations.py', 'call_lookup_mutations', 'calls.rs', 'formula_call_lookup_contract', None),
@@ -477,6 +484,21 @@ def main():
         doc_suffix = 'recipe::declaration::FormulaDeclaration' if filename == 'declaration_mutations.py' else None
         capture_child(text, path, work_name, sources, target, first_suffix=selected, doc_suffix=doc_suffix)
         child_count += 1
+        if filename in ('formula_expression_mutations.py', 'reduction_boundary_mutations.py'):
+            node = next(n for n in ast.walk(ast.parse(text)) if isinstance(n, ast.Assign)
+                        and any(isinstance(t, ast.Name) and t.id == 'result' for t in n.targets))
+            actual_call = ast.get_source_segment(text, node.value)
+            assert actual_call.count("test, '--', '--exact'") == 1
+            for changed in ("'', '--', '--exact'", "test, '--'"):
+                altered = actual_call.replace("test, '--', '--exact'", changed, 1)
+                try:
+                    capture_child(text.replace(actual_call, altered, 1), path, work_name, sources,
+                                  target, first_suffix=selected)
+                except AssertionError as error:
+                    assert str(error) == 'D156 Python child test selection changed'
+                    red += 1
+                else:
+                    raise AssertionError('D170 actual selected-test/exact-flag fault survived')
         if filename == 'wanted_signature_mutations.py':
             for variable in ('result', 'restored'):
                 node = next(n for n in ast.walk(ast.parse(text)) if isinstance(n, ast.Assign)

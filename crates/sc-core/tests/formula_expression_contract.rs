@@ -37,7 +37,9 @@ fn shape(node: N<'_>) -> String {
 }
 #[allow(clippy::expect_used)] // Contract helper: accepting invalid syntax is a test failure.
 fn refusal(source: &str, rule: R, span: (usize, usize), code: &str) {
-    let error = E::parse(source).expect_err("assertion: invalid grammar must refuse");
+    let parsed = E::parse(source);
+    assert!(parsed.is_err(), "invalid grammar must refuse: {source}");
+    let error = parsed.expect_err("asserted grammar refusal");
     assert_eq!(error.rule(), rule, "{source}");
     assert_eq!((error.span().start(), error.span().end()), span, "{source}");
     assert_eq!(error.diagnostic_code(), code);
@@ -234,7 +236,9 @@ fn square_payload_is_exact_and_other_exponents_are_unsupported() {
     for source in [
         "x ^ 3", "x ^ 02", "x ^ 2.0", "x ^ -2", "x ^ y", "x ^ (2)", "x ^",
     ] {
-        let error = E::parse(source).expect_err("assertion: only exact 2 is supported");
+        let parsed = E::parse(source);
+        assert!(parsed.is_err(), "only exact 2 is supported: {source}");
+        let error = parsed.expect_err("asserted exponent refusal");
         assert_eq!(error.rule(), R::UnsupportedExponent, "{source}");
         assert_eq!(error.diagnostic_code(), "formula_unsupported");
     }
@@ -285,7 +289,9 @@ fn semantic_node_bounds_count_calls_and_square_payload_correctly() {
         assert_eq!(parse(&source).node_count(), nodes);
     }
     let source = format!("{}x", "-".repeat(256));
-    let error = E::parse(&source).expect_err("assertion: node bound");
+    let parsed = E::parse(&source);
+    assert!(parsed.is_err(), "node bound must refuse");
+    let error = parsed.expect_err("asserted node bound refusal");
     assert_eq!(
         error.rule(),
         R::StructuralLimit {
@@ -317,7 +323,9 @@ fn conditional_depth_visits_calls_and_untaken_branches_but_not_siblings() {
         assert_eq!(tree.node_count(), depth * 6 + 1);
     }
     let source = nested_if(17);
-    let error = E::parse(&source).expect_err("assertion: depth bound inside call/else");
+    let parsed = E::parse(&source);
+    assert!(parsed.is_err(), "depth bound inside call/else must refuse");
+    let error = parsed.expect_err("asserted depth bound refusal");
     assert_eq!(
         error.rule(),
         R::StructuralLimit {

@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0144 - expression/reduction assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f11`)
+
+- Guard both current tests/implementations/output and preserve prepared stores/native selection.
+- D170 actual noise/native expect baseline; four explicit refusal assertions repair provenance.
+- Controls125 body/33 entry+late/25 child/18 classifiers;15 native macro reds/four current sources
+  exact/full15/6 restored; full Rust703/59/strict Clippy pass0. Four whole records/prior391 exact.
+- Grammar/API/400 cadence unchanged; remaining D156 native entries then D154 stay owned.
+
 ## STITCHCAD-G1-0143 - guarded wanted and call assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f10`)
 
 Guard all implementation/test/output paths; preserve prepared stores and complete native target argv.
@@ -255,11 +263,7 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
 - Exact sources/current artifacts restored16/16/18/15pass; focused profiles/book/glossary green.
 - Grammar/Rust API unchanged; D156 stays open. Bounded continuity precedes unit native entries.
 
-## STITCHCAD-G1-0124 - retain native repair continuity (leaf `G1-SLICE.5b.4c.h2.b.p.n.h`)
-
-- Six whole sourcea392d31 intervals preserve oldest ledger entries, lessons and acceptance records.
-- Source/read/materialize327/hash/line/byte/LF proof0; all28 prior retained/control files unchanged.
-- Task headings/IDs and active requirements stay live; no code/grammar/cap change. Chart guards next.
+| [`part126`](docs/history/stitchcad-changelog-part126.md) | G1-0124 continuity | 5 lines, 394 bytes, `sha256:d1cbcbfa…` |
 
 | [`part125`](docs/history/stitchcad-changelog-part125.md) | G1-0123 Ease guards | 6 lines, 479 bytes, `sha256:a51ba574…` |
 

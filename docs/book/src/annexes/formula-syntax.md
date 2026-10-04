@@ -209,14 +209,15 @@ cargo test -p sc-core --test formula_expression_contract
 bash docs/tasks/artifacts/formula_structure/run_formula_expression_mutations.sh
 ```
 
-Fifteen contracts include all 17 published binding expressions, eight assertion sides, three syntax
-refusals and ten forms retained for later semantic refusal owners. A 20736-input short-token corpus
-checks internal construction and root reachability. Three privacy/lifetime doctests cover the arena
-and source borrows. Twelve explicit shape/count/depth fixtures are independently checked by the
-product and the existing reference; the structural probe suite runs their reference half. Eleven
-actual production guard/order mutations require assertion reds and byte-identical restoration; run
-that command alone, without builds, probes or gates overlapping it. Strict native and three-library
-WASM checks pass locally; no browser application or new remote-CI result is implied.
+Fifteen contracts cover 17 binding expressions, eight assertion sides, three syntax refusals and
+ten forms deferred to semantic owners. The 20,736-input token corpus checks internal construction
+and root reachability. Three privacy/lifetime doctests cover arena/source borrows; twelve authored
+shape/count/depth fixtures agree independently with product/reference (the structural suite).
+Eleven actual parser faults require current test macro locations, exact source bytes and full
+fifteen-test restoration. Implementation/test/output plans precede reads/writes and retain prepared
+stores. D170 replaces four labelled expect refusal preconditions with explicit assertions. Run
+alone, without concurrent builds/probes/gates. Strict native and three-library WASM pass locally;
+no browser application or new remote-CI result is implied.
 
 G1-SLICE.5a.2 is complete for expression syntax. Canonical literals/recipes and statement/rational
 bounds belong to .5a.3/.4 and later numeric checking; name/type checks, exact evaluation/DAG,

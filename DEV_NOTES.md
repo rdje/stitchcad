@@ -187,3 +187,12 @@ restoration calls; actual omission of either second-target pair refuses. Control
 31 entry+late refusals/23 derived child cases/16 classifiers pass0. Exclusive37 native macro reds/
 five Rust sources exact/full5+5/5 restored0. Three whole committed records retained/prior388 exact;
 no Rust implementation/test/API/grammar change. Remaining six native entries stay under D156.
+
+Expression/reduction guards — STITCHCAD-G1-0144 (.n.f11): D170 inline predicates accepted
+passed-name/labelled-expect noise. Native stricter baseline1 located a node-bound expect_err panic;
+excluded, parser bytes/full15 restored0. Four refusal preconditions now assert explicitly.
+Both source/test/output plans precede reads/writes, current macro sites certify reds and prepared
+stores/native selection survive. Controls125 body/33 entry+late/25 child/18 classifiers pass0;
+exclusive11+4 macro reds/four current Rust snapshots exact/full15/6 restored0. Retention initial1
+was a final display variable-shadowing error; corrected full prior391/three interval proof0.
+Full make check fmt/strict Clippy/Rust703/59 groups and focused profiles/book/archive/ledger/coverage all terminal0 consumed; prior391/public395 exact,12open/157sealed0.

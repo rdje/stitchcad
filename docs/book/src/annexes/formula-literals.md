@@ -219,8 +219,10 @@ original error spans and repeated refusal. The angle cases accept scale 133 and 
 The producer also verifies the actual published unit factors, maximum prime valuations of six,
 39 digits for u128 MAX, and the conservative scale/workspace witnesses 134/173. Four compiled
 actual faults prematurely restrict scale/raw digits or remove mantissa/unit cancellation; each must
-fail this new public assertion oracle. The runner restores exact production source. Existing
-rounding, individual-conversion and arena mutation families retain their separate proof scopes.
+fail at a current guarded test assertion macro. The runner plans implementation, test source and
+output before reads/writes, preserves prepared stores, restores exact production source and rebuilds
+the full six-test literal target. D170 removes acceptance based on unrelated assertion text or
+labelled expect panics. Rounding, individual-conversion and arena families retain separate scopes.
 
 ```bash
 cargo test -p sc-core --test formula_literal_contract coupled_reduction_frontier_preserves_valid_inputs_and_located_width_refusals -- --exact
