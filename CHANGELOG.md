@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0146 - coupled recipe-input assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f12`)
+
+- Guard four implementations/current test/output; preserve prepared stores and original filters.
+- D171 noise refused by current test macro sites;131 body controls/34 entry+late/26 child/19 classifiers0.
+- Seven actual macro reds/eight current sites/five HEAD-exact Rust sources/full five-test restoration0.
+- Four whole records/prior398 retained; no Rust/API/grammar/cadence change; three native entries remain.
+
 ## STITCHCAD-G1-0145 - safe daily artifact cleanup (leaf `G1-SLICE.5b.4c.h2.b.p.n.f11.c`)
 
 - Frozen plan removes six ignored trees/1618 strays/1579382373B; no package/tracked/link/Git/device loss.
@@ -257,12 +264,7 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
   including release overflow. Exact sources/current artifacts restored4/5debug+5release/4/5+3pass.
 - Native faults run exclusively; grammar/Rust API unchanged. D156 open; lexer/semantic entries next.
 
-## STITCHCAD-G1-0126 - retain unit repair continuity (leaf `G1-SLICE.5b.4c.h2.b.p.n.h2`)
-
-- Preserve three complete source76eaaff intervals: prior navigation, lessons and primary narrative.
-- Public read/materialize330/source/hash/line/byte/LF and complete list membership proof0;
-  all34 earlier retained/control paths unchanged. Current task nodes and fixed bounds remain.
-- Query-first continuity front door bounds the live working set; no code/grammar change. Unit guards next.
+| [`part128`](docs/history/stitchcad-changelog-part128.md) | G1-0126 continuity | 6 lines, 482 bytes, `sha256:a25c438d…` |
 
 | [`part127`](docs/history/stitchcad-changelog-part127.md) | G1-0125 chart guards | 6 lines, 488 bytes, `sha256:d7e282a6…` |
 

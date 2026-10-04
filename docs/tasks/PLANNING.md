@@ -991,3 +991,6 @@ Original report retained exactly in [part90](../history/stitchcad-defects-part90
 
 D170 closes at .n.f11:125 body controls/15 actual macro reds/four current sources exact/full15/6 restored, rc=0.
 Original pre-repair report retained exactly in [part92](../history/stitchcad-defects-part92.md).
+
+D171 closes at .n.f12:131 body controls/seven native macro reds/five sources HEAD-exact/full five-test target restored, rc=0.
+Original pre-repair report retained exactly in [part93](../history/stitchcad-defects-part93.md).

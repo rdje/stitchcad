@@ -274,9 +274,11 @@ with first excesses. The bounded maximum serializes on a 64 KiB stack. Existing 
 exercise all 4096 assertions with both 256-node operands; neither case is a performance/browser proof.
 Seven actual production faults target metadata, missing later inputs, flattened refusal index,
 recipe order, assertion operand identity, combined bound and normalized Debug privacy. Each compiles
-and fails a new public assertion; the exclusive runner restores all four sources exactly. The
-structural suite watches the independent authored/reference population and classifier/actual anchors.
-Every production Rust source remains byte-identical to the predecessor implementing owned identity.
+and fails at a current guarded test assertion macro. The entry validates all four implementations,
+current test source and output before reads/writes, preserving prepared stores and original test
+filters. It restores exact sources and rebuilds the full five-test target. D171 rejects labelled
+expect noise. The structural suite watches authored/reference populations and actual anchors;
+all four production sources retain their pre-fault bytes.
 
 ```bash
 cargo test -p sc-core --test formula_recipe_input_review

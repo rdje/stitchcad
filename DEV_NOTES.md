@@ -12,12 +12,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 Window6 retention lesson retained in [part174](docs/history/stitchcad-devnotes-part174.md).
 
-## _(2026-10-04 UTC)_ — D163 declaration and exact-name producers
-
-- Restore every mutated profile: declarations require both native and negative doctest rebuilds.
-- Retain the first captured dispatch error when a later restoration exception can mask it.
-- Simulated fault output exercises dispatch only; actual retained native logs prove assertions.
-- Promotion declined: existing all-source/actual-body/exclusive-restoration rules.
+D163 declaration guard lesson retained in [part176](docs/history/stitchcad-devnotes-part176.md).
 
 ## _(2026-10-04 UTC)_ — D162 namespace producer proofs
 
@@ -198,3 +193,8 @@ strays/1579382373B with no live jobs. Immediate verification through an activati
 recreated only empty scratch; bare census diagnoses main(create=not inspect), removes exact new
 empty root and proves all1624 absent/frozen tracked bytes and HEAD unchanged0. Initial extractor
 guessed absent run function1; corrected actual main AST. Both failed attempts excluded; native/WASM3/book/Rust15+6/safety15+11 and standing checks pass0; prior395/public398 exact.
+
+Coupled recipe-input guards — STITCHCAD-G1-0146 (.n.f12): D171 actual prefix classifier admits
+labelled expect noise. Guard four implementations/current test/output before reads/writes, preserve
+prepared stores/original filters and rebuild full target; controls131 body/34 entry+late/26 child/
+19 classifiers0. Seven native macro reds/eight current sites/five HEAD-exact sources/full5 restored0. Focused profiles/book/archive402/ledger/coverage0; prior398/four whole records exact. No Rust changes.

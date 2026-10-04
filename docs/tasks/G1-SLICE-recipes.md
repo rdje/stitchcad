@@ -758,11 +758,9 @@ is required before completeness claims. No direct producer is executed with ambi
   Acceptance: current maintained source coverage and meaningful runtime refusal/positive receipts;
   no unverified Python scope claimed complete. D156 stays open through shell/final integration.
 
-
 ### G1-SLICE.5b.4c.h2.b.p.h
 
 [Exact complete record](../history/window6.md#stitchcad-devnotes-part134md); 24L/1899B/sha256:a6be13d2a8b009a028cca49d7df32ba3051e79f4d6673e4abd38661fae51912c.
-
 
 ### G1-SLICE.5b.4c.h2.b.p.a
 
@@ -787,7 +785,6 @@ final gate must pass before commit. No ceiling or schema change.
 
 Final staged gate13green, rc=0, target/d156-python-entry-staged-gate-final.log; cached diff0.
 Explicit14 owned paths; Rust diff empty. Hook/brief0/clean precede Ease conversion.
-
 
 ### G1-SLICE.5b.4c.h2.b.p.n.m1
 
@@ -983,17 +980,21 @@ Native baseline log replay1 excluded: old signature fault logs absent (actual di
   Goal: D170 expression/reduction native proof; complete requirements/acceptance/receipts in [part173](../history/stitchcad-devnotes-part173.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f12`
-  Status: `todo`
-  Goal: coupled recipe-input native guards/current assertion-source proof; four native entries remain.
+  Status: `done`
+  Goal: coupled recipe-input guards; STITCHCAD-G1-0146 owns four implementations/current test/output/strict controls/book/native proof, any reproduced classifier defect and blocking whole cleanup/old lesson/ledger retention.
   Acceptance: all four implementation sources/current test/output plans, original native selection/fixtures/prepared stores, strict actual controls/exclusive seven reds, exact sources/full target restoration; own blocking whole retention.
+
+- [x] REPRODUCE / ISSUE: actual assertion_failure AST admits labelled expect-only failed body; target/d171-classifier-baseline.log, rc=0; no native/source writes.
+- [x] ROOT CAUSE (WHY + WHERE): message prefix lacks guarded current test locations; actual classifier/site faults refuse in python_producer_contract.py131 body reds/19 strict classifiers, rc=0.
+- [x] FIX: all four implementation/current test/output plans precede reads/writes, prepared stores/original test filter retained, full target rebuilt; actual34 entry/late refusals/26 child captures and selected-test omission red, rc=0.
+- [x] ADDRESSED (verified): absent-export classifier/native driver7 macro reds; independent d171-native-proof.log7 cases AST-exact/eight current assertion sites/five HEAD+snapshot exact sources/full five-test restoration, rc=0; no Rust changes.
+- [x] NO REGRESSION: local profile CI19/local56/Python17/131/34/34/26/19, publication43/archive28+CLI418/402reads/ledger9+pointer13/coverage9 terminal0 consumed, rc=0; no Rust changes or remote verdict inferred.
+- [x] LOCKSTEP: d171-retention-proof.log prior398 bytes/six controls/three whole committed intervals/one honest original report/public402 exact, rc=0;12open/158sealed/no missing/overlap, rc=0; book/live .n.f13 synced, grammar/API/400 cadence fixed; final staged gate all13green, rc=0, d171-staged-gate.log; hook/brief clearing follows.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f11.c`
   Status: `done`
-  Goal: due daily artifact cleanup before .n.f12 native work; STITCHCAD-G1-0145 owns frozen plan/apply/residue, cleanup record, live/book sync and blocking whole .n.f11/old lesson/oldest ledger retention.
-  Acceptance: inspect ignored/tracked/same-device/link/Git/protected-store census; prove no live jobs before exact safe deletion; independently verify residue/tracked bytes, regenerate native/WASM/book, run focused cleanup/standing gates, then commit clean with .n.f12 preserved.
-- [x] REPRODUCE / ISSUE: cleanup was due2026-10-04 22:17UTC; frozen plan1624 candidates/six generated roots/1618 strays/1579382373B, plan/apply inspected; no skipped or package/tracked/link/device/overlap candidate, rc=0.
-- [x] ROOT CAUSE (WHY + WHERE): regenerable outputs after native/probe runs; actual cleanup main/census/inspect freeze HEAD/producer/tracked bytes. Activating residue invocation1 recreated only empty scratch; actual main(create=not inspect) AST explains it, corrected direct census rc=0.
-- [x] FIX: apply rechecks frozen census/no project jobs/per-path ownership before exact deletion; result.json6trees/1618strays/13183files/1579382373B/residue0/tracked_change=false, rc=0; scratch recreated by verifier removed only after proving new/empty/local.
-- [x] ADDRESSED (verified): independent-residue.json all1624 named paths absent/HEAD and tracked bytes unchanged before regeneration, rc=0; safety15/11 actual guard reds/source unchanged, rc=0. Both failed verifier attempts excluded and diagnosed; no code/grammar change.
-- [x] NO REGRESSION: native build/book/WASM3/focused Rust15+6 pass, rc=0; profile CI19/local56/Python17/125/33/33/25/18, publication43/archive28+CLI414/398reads/ledger9+pointer13/coverage9 terminal0 consumed, rc=0.
-- [x] LOCKSTEP: latest cleanup entry/book/live/frontier .n.f12 synced; retention-proof.log prior395/public398/three whole committed intervals/12open157sealed, rc=0; final staged gate all13green, rc=0, audit/staged-gate.log; hook/brief clearing follows. Promotion declined: existing cleanup/profile/retention rules.
+  Goal: daily cleanup complete; exact requirements/acceptance in [part175](../history/stitchcad-devnotes-part175.md); audit target/artifact_cleanup_audit/2026-10-04-2219/.
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f13`
+  Status: `todo`
+  Goal: recipe/statement owner compiler-entry guards; then static coupled native proof.
+  Acceptance: source/book/output plans before reads/writes/children, preserved public Cargo artifact/diagnostic/fixture/example argv and prepared stores, actual controls/real native proofs; own blocking whole retention.

@@ -204,15 +204,19 @@ Expression and reduction entries also guard current tests and require failed-bod
 All fifteen compiled faults pass that proof; four current Rust sources restore exactly and the
 full fifteen/six-test targets pass. Four expression refusal preconditions now assert explicitly.
 
-Standing controls cover17 runtime cases and125 actual body faults, including thirty-three real
+The coupled recipe-input entry guards four implementations and its current test source, preserves
+its original test filters, proves seven current macro-site reds and rebuilds the full five-test target.
+Its five Rust sources restore byte-identically; labelled expect messages cannot certify a fault.
+
+Standing controls cover17 runtime cases and131 actual body faults, including thirty-four real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All thirty-three entry captures also refuse a late missing source before
+12 membership tests passing. All thirty-four entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
-Twenty-five native-child capture cases execute actual entries with custom local stores,
+Twenty-six native-child capture cases execute actual entries with custom local stores,
 intercepting every source/output write and initial/restoration child calls. The declaration entry
 also captures negative-construction and native/doc restoration calls. The captures check actual
 arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing

@@ -371,6 +371,7 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/call_lookup_mutations.py', 'call_lookup_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/formula_expression_mutations.py', 'formula_expression_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py', 'formula_reduction_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py', 'recipe_input_review_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
@@ -386,6 +387,7 @@ def main():
             'builtin_signature_mutations.py', 'operator_signature_mutations.py',
             'wanted_signature_mutations.py', 'call_lookup_mutations.py',
             'formula_expression_mutations.py', 'reduction_boundary_mutations.py',
+            'recipe_input_review_mutations.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -444,6 +446,10 @@ def main():
             raise AssertionError('D156 Python actual child-store reset survived')
     classifier_count = 0
     for filename, work_name, rust, target, test in (
+            ('recipe_input_review_mutations.py', 'recipe_input_review_mutations',
+             ('statement.rs', 'ordered.rs', 'canonical_recipe.rs', 'normalized_recipe.rs'),
+             'formula_recipe_input_review',
+             ('actual_worked_population_retains_all_headers_global_locations_and_complete_identity',)),
             ('formula_expression_mutations.py', 'formula_expression_mutations', 'parser.rs',
              'formula_expression_contract', 'semantic_node_bounds_count_calls_and_square_payload_correctly'),
             ('reduction_boundary_mutations.py', 'formula_reduction_mutations', 'literal.rs',
@@ -480,10 +486,24 @@ def main():
         rust_files = rust if isinstance(rust, tuple) else (rust,)
         sources = tuple(ROOT / 'crates/sc-core/src/recipe' / file for file in rust_files)
         text = path.read_text()
-        selected = (test, '--', '--exact') if test is not None else ()
+        selected = (test, '--', '--exact') if isinstance(test, str) else test or ()
         doc_suffix = 'recipe::declaration::FormulaDeclaration' if filename == 'declaration_mutations.py' else None
         capture_child(text, path, work_name, sources, target, first_suffix=selected, doc_suffix=doc_suffix)
         child_count += 1
+        if filename == 'recipe_input_review_mutations.py':
+            node = next(n for n in ast.walk(ast.parse(text)) if isinstance(n, ast.Assign)
+                        and any(isinstance(t, ast.Name) and t.id == 'result' for t in n.targets))
+            actual_call = ast.get_source_segment(text, node.value)
+            assert actual_call.count("'formula_recipe_input_review', test]") == 1
+            omitted = actual_call.replace("'formula_recipe_input_review', test]", "'formula_recipe_input_review', '']", 1)
+            try:
+                capture_child(text.replace(actual_call, omitted, 1), path, work_name, sources,
+                              target, first_suffix=selected)
+            except AssertionError as error:
+                assert str(error) == 'D156 Python child test selection changed'
+                red += 1
+            else:
+                raise AssertionError('D171 actual coupled recipe-input selection fault survived')
         if filename in ('formula_expression_mutations.py', 'reduction_boundary_mutations.py'):
             node = next(n for n in ast.walk(ast.parse(text)) if isinstance(n, ast.Assign)
                         and any(isinstance(t, ast.Name) and t.id == 'result' for t in n.targets))
