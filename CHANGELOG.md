@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0147 - guarded owner compiler entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.f13`)
+
+- Guard source/book/output plans before reads/writes; preserve prepared stores and public compiler argv.
+- Controls152 body faults/36 entry and late-input refusals/two complete compiler captures pass0.
+- Direct absent-export native proof: ten actual privacy/borrow refusals, four compiled/executed
+  chapter examples, current Cargo artifacts/fixture bytes/two HEAD-exact sources; no Rust changes.
+- Four whole committed records/prior402 retained exactly; D156 remains open, static entry next.
+
 ## STITCHCAD-G1-0146 - coupled recipe-input assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f12`)
 
 - Guard four implementations/current test/output; preserve prepared stores and original filters.
@@ -250,19 +258,9 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
 - Four complete e19f992 source intervals retained exactly; public334/hash/L/B/LF/prior37 bytes0.
   Grammar/Rust API unchanged; D156 guards/D154 continue. G1 5/18,12open/144sealed.
 
-## STITCHCAD-G1-0128 - guarded lexer/semantic entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.f1`)
+| [`part130`](docs/history/stitchcad-changelog-part130.md) | G1-0128 lexer guards | 6 lines, 463 bytes, `sha256:21deb59d…` |
 
-- Guard both lexer sources and semantic source before reads/writes; preserve prepared child stores.
-- Controls17runtime/20body/13prefixes/13late refusals/two actual child captures0; classifier0;
-  direct19 native assertion reds, exact sources/current artifacts restored13/5pass.
-- Grammar/Rust API unchanged. D157 stale annex scope verified/owned next; D156 remains open.
-
-## STITCHCAD-G1-0127 - guarded unit/domain-context entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.u1`)
-
-- Four entries plan every source/output/store; mixed diagnostics validate five source files first.
-- Controls17runtime/17body/11prefixes/11late refusals0; absent-export35 native assertion reds,
-  including release overflow. Exact sources/current artifacts restored4/5debug+5release/4/5+3pass.
-- Native faults run exclusively; grammar/Rust API unchanged. D156 open; lexer/semantic entries next.
+| [`part129`](docs/history/stitchcad-changelog-part129.md) | G1-0127 unit guards | 6 lines, 490 bytes, `sha256:ae6bb38b…` |
 
 | [`part128`](docs/history/stitchcad-changelog-part128.md) | G1-0126 continuity | 6 lines, 482 bytes, `sha256:a25c438d…` |
 

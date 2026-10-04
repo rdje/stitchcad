@@ -3,10 +3,15 @@ from pathlib import Path
 import json
 import os
 import re
+import runpy
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/checked_statement.rs'
+SOURCES = (SOURCE,)
+WORK = ROOT / 'target/statement_owner_contract'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=SOURCES)
 EXPECTED = ('E0451', 'E0515', 'E0451', 'E0515', 'E0515')
 
 
@@ -20,10 +25,8 @@ for diagnostics in ([], ['E0432'], ['E0451', 'E0514'], ['E0451', 'E0560']):
     assert not codes_match(diagnostics, 'E0451'), ('compiler guard accepted noise', diagnostics)
 blocks = re.findall(r'(?m)^/// ```compile_fail\n((?:^///.*\n)+?)^/// ```$', SOURCE.read_text())
 assert len(blocks) == len(EXPECTED), 'actual statement-owner guard population'
-WORK = ROOT / 'target/statement_owner_contract'
 WORK.mkdir(parents=True, exist_ok=True)
-environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'),
-                   CARGO_TARGET_DIR=str(ROOT / 'target'), TMPDIR=str(ROOT / 'target/scratch'))
+environment = dict(os.environ)
 built = subprocess.run(['cargo', 'build', '-p', 'sc-core', '--message-format=json'],
                        cwd=ROOT, env=environment, capture_output=True, text=True)
 (WORK / 'artifacts.json').write_text(built.stdout)

@@ -3,6 +3,7 @@ from pathlib import Path
 import ast
 import contextlib
 import io
+import json
 import os
 import re
 import runpy
@@ -144,7 +145,8 @@ def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
                     ast.unparse(node.value.func) == 'WORK.mkdir')
     prefix = '\n'.join(text.splitlines()[:boundary]) + '\n'
     saved, mkdir, run = dict(os.environ), Path.mkdir, subprocess.run
-    observations = []
+    read_text, read_bytes = Path.read_text, Path.read_bytes
+    observations, reads = [], []
     diagnostic = io.StringIO()
 
     class Stopped(Exception):
@@ -161,11 +163,18 @@ def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
     def no_child(*args, **kwargs):
         raise AssertionError('D156 Python unexpected prefix child')
 
+    def observe_read(method, path, *args, **kwargs):
+        assert all(os.environ.get(name) == str(ROOT / value) for name, value in EXPECTED.items()), 'D156 Python standalone activation omitted'
+        reads.append(path)
+        return method(path, *args, **kwargs)
+
     try:
         for name in EXPECTED:
             os.environ.pop(name, None)
         os.environ['RUSTUP_TOOLCHAIN'] = '1.99.0'
         Path.mkdir, subprocess.run = observe, no_child
+        Path.read_text = lambda path, *a, **k: observe_read(read_text, path, *a, **k)
+        Path.read_bytes = lambda path, *a, **k: observe_read(read_bytes, path, *a, **k)
         try:
             with contextlib.redirect_stderr(diagnostic):
                 exec(compile(prefix, str(entry_path), 'exec'), {'__file__': str(entry_path), '__name__': 'entry_capture'})
@@ -177,9 +186,150 @@ def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
             assert diagnostic.getvalue() == 'local-environment: REFUSED — producer source is not a local regular file\n', 'D156 Python actual entry refusal message'
     finally:
         Path.mkdir, subprocess.run = mkdir, run
+        Path.read_text, Path.read_bytes = read_text, read_bytes
         os.environ.clear()
         os.environ.update(saved)
     assert len(observations) == (0 if refusal else 1), 'D156 Python standalone capture absent'
+    assert not refusal or not reads, 'D156 Python late-source refusal read an input'
+
+
+def fenced_blocks(text, language):
+    """Independent line census for the public documentation fixture bytes."""
+    blocks, current = [], None
+    for line in text.splitlines():
+        if line == '```' and current is not None:
+            blocks.append('\n'.join(current) + '\n')
+            current = None
+        elif current is not None:
+            current.append(line)
+        elif line == '```' + language:
+            current = []
+    assert current is None, 'D156 compiler fixture fence unclosed'
+    return blocks
+
+
+def capture_compiler_entry(text, entry_path, owner):
+    """Execute every actual compiler/example call; simulated output proves dispatch only."""
+    source = ROOT / f'crates/sc-core/src/recipe/checked_{owner}.rs'
+    sources = [source]
+    book = ROOT / 'docs/book/src/annexes/formula-checked-recipes.md'
+    if owner == 'recipe':
+        sources.append(book)
+    original_sources = {path: path.read_bytes() for path in sources}
+    docs = '\n'.join(line[4:] if line.startswith('/// ') else line[3:]
+                     for line in source.read_text().splitlines() if line.startswith('///'))
+    guards = fenced_blocks(docs, 'compile_fail')
+    examples = fenced_blocks(book.read_text(), 'rust') if owner == 'recipe' else []
+    assert len(guards) == 5 and len(examples) == (4 if owner == 'recipe' else 0), 'D156 compiler fixture population'
+    work = ROOT / f'target/{owner}_owner_contract'
+    GOOD['directory'](ROOT, work.relative_to(ROOT).as_posix(), create=True)
+    base = 'target/scratch/python_producer_contract/compiler-stores'
+    custom = dict(zip(('CARGO_HOME', 'RUSTUP_HOME', 'CARGO_TARGET_DIR', 'TMPDIR'),
+                      (base + '/cargo', base + '/rustup', base + '/build', base + '/scratch')))
+    for value in custom.values():
+        GOOD['directory'](ROOT, value, create=True)
+    custom['MAKE_TMPDIR'] = custom['TMPDIR']
+    directories = [ROOT / custom['CARGO_TARGET_DIR'] / name for name in ('a-deps', 'z-deps')]
+    for path in directories:
+        GOOD['directory'](ROOT, path.relative_to(ROOT).as_posix(), create=True)
+    artifact = directories[1] / 'libsc_core_dispatch_fixture.rlib'
+    artifact.write_bytes(b'authored public-metadata dispatch fixture; never compiled')
+    metadata = '\n'.join(json.dumps(message) for message in (
+        {'reason': 'compiler-artifact', 'target': {'name': 'fixture', 'kind': ['lib']},
+         'filenames': [str(directories[0] / 'libfixture.rmeta')]},
+        {'reason': 'compiler-artifact', 'target': {'name': 'sc_core', 'kind': ['lib']},
+         'filenames': [str(artifact)]},
+        {'reason': 'build-finished', 'success': True})) + '\n'
+    search_paths = [arg for path in directories for arg in ('-L', 'dependency=' + str(path))]
+    expected_calls = [(['cargo', 'build', '-p', 'sc-core', '--message-format=json'], 0, metadata, '')]
+    expected_writes = {work / 'artifacts.json': metadata, work / 'build.log': ''}
+    for index, (code, diagnostic) in enumerate(zip(guards, ('E0451', 'E0515', 'E0451', 'E0515', 'E0515')), 1):
+        fixture = work / f'guard_{index}.rs'
+        stderr = json.dumps({'level': 'error', 'code': {'code': diagnostic}}) + '\n'
+        expected_calls.append((['rustc', '--edition=2021', '--error-format=json', '--crate-name',
+                               f'{owner}_guard_{index}', '--extern', 'sc_core=' + str(artifact),
+                               *search_paths, str(fixture), '-o', str(work / f'guard_{index}')], 1, '', stderr))
+        expected_writes[fixture] = code + 'fn main() {}\n'
+        expected_writes[work / f'guard_{index}.log'] = stderr
+    for index, code in enumerate(examples, 1):
+        fixture, binary = work / f'example_{index}.rs', work / f'example_{index}'
+        expected_calls.append((['rustc', '--edition=2021', '--crate-name', f'recipe_example_{index}',
+                               '--extern', 'sc_core=' + str(artifact), *search_paths,
+                               str(fixture), '-o', str(binary)], 0, '', ''))
+        expected_calls.append(([str(binary)], 0, '', ''))
+        # The extraction regex leaves the terminal source LF inside the fenced block.
+        expected_writes[fixture] = 'fn main() {\n' + code + '\n}\n'
+        expected_writes[work / f'example_{index}.log'] = ''
+    saved, argv = dict(os.environ), sys.argv
+    mkdir, read_text, write_text, write_bytes, run = Path.mkdir, Path.read_text, Path.write_text, Path.write_bytes, subprocess.run
+    run_path = runpy.run_path
+    observed, written, read, planned = [], {}, [], []
+
+    def observe_profile(path, *args, **kwargs):
+        assert path == str(ROOT / 'scripts/local_environment.py') and not args and not kwargs, 'D156 compiler profile entry changed'
+
+        def enter(root, *, directories=(), sources=()):
+            assert root == ROOT and directories == (work,), 'D156 compiler planned output changed'
+            assert sources == tuple(original_sources), 'D156 compiler planned inputs changed'
+            assert not planned and not read and not written and not observed, 'D156 compiler profile was late'
+            planned.append(True)
+            return GOOD['enter_producer'](root, directories=directories, sources=sources)
+
+        return dict(GOOD, enter_producer=enter)
+
+    def validate_environment(environment):
+        assert all(environment.get(name) == str(ROOT / value) for name, value in custom.items()), 'D156 compiler child stores lost'
+        assert environment.get('RUSTUP_TOOLCHAIN') == '1.99.0', 'D156 compiler child channel lost'
+        assert environment.get('RUSTUP_AUTO_INSTALL') == '0', 'D156 compiler child install policy lost'
+        assert environment.get('D156_PYTHON_UNRELATED') == 'preserved', 'D156 compiler child unrelated environment lost'
+
+    def observe_read(path, *args, **kwargs):
+        assert path in original_sources, 'D156 compiler unexpected input read'
+        assert planned, 'D156 compiler input read before profile'
+        validate_environment(os.environ)
+        read.append(path)
+        return read_text(path, *args, **kwargs)
+
+    def observe_mkdir(path, *args, **kwargs):
+        assert path == work, 'D156 compiler unexpected directory write'
+        validate_environment(os.environ)
+
+    def observe_write(path, content, *args, **kwargs):
+        assert path in expected_writes and path not in written, 'D156 compiler unexpected output write'
+        assert content == expected_writes[path], 'D156 compiler fixture/output bytes changed'
+        written[path] = content
+        return len(content)
+
+    def observe_child(args, *positional, **kwargs):
+        validate_environment(kwargs.get('env', os.environ))
+        assert kwargs.get('cwd') == ROOT and not positional, 'D156 compiler child cwd changed'
+        assert kwargs.get('capture_output') is True and kwargs.get('text') is True, 'D156 compiler diagnostic capture changed'
+        assert len(observed) < len(expected_calls), 'D156 compiler unexpected child'
+        wanted, status, stdout, stderr = expected_calls[len(observed)]
+        assert args == wanted, 'D156 compiler child argv changed'
+        observed.append(args)
+        return subprocess.CompletedProcess(args, status, stdout=stdout, stderr=stderr)
+
+    try:
+        os.environ.update({name: str(ROOT / value) for name, value in custom.items()})
+        os.environ.update(RUSTUP_TOOLCHAIN='1.99.0', RUSTUP_AUTO_INSTALL='0', D156_PYTHON_UNRELATED='preserved')
+        sys.argv = [str(entry_path)]
+        Path.mkdir, Path.read_text = observe_mkdir, observe_read
+        Path.write_text, Path.write_bytes, subprocess.run = observe_write, observe_write, observe_child
+        runpy.run_path = observe_profile
+        with contextlib.redirect_stdout(io.StringIO()):
+            exec(compile(text, str(entry_path), 'exec'), {'__file__': str(entry_path), '__name__': 'compiler_capture'})
+    finally:
+        Path.mkdir, Path.read_text, Path.write_text, Path.write_bytes, subprocess.run = mkdir, read_text, write_text, write_bytes, run
+        runpy.run_path = run_path
+        sys.argv = argv
+        os.environ.clear()
+        os.environ.update(saved)
+        assert all(path.read_bytes() == data for path, data in original_sources.items()), 'D156 compiler capture changed input'
+    assert len(observed) == len(expected_calls), 'D156 compiler child omitted'
+    assert written == expected_writes, 'D156 compiler output omitted'
+    assert read == sources, 'D156 compiler source/book reads changed'
+    assert planned == [True], 'D156 compiler complete plan omitted'
 
 
 def capture_child(text, entry_path, work_name, sources, test_target, *, arguments=(), first_suffix=None,
@@ -372,6 +522,8 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/formula_expression_mutations.py', 'formula_expression_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py', 'formula_reduction_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py', 'recipe_input_review_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/recipe_owner_contract.py', 'recipe_owner_contract'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/statement_owner_contract.py', 'statement_owner_contract'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
@@ -388,6 +540,7 @@ def main():
             'wanted_signature_mutations.py', 'call_lookup_mutations.py',
             'formula_expression_mutations.py', 'reduction_boundary_mutations.py',
             'recipe_input_review_mutations.py',
+            'recipe_owner_contract.py', 'statement_owner_contract.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -407,6 +560,41 @@ def main():
             red += 1
         else:
             raise AssertionError('D156 Python standalone body fault survived')
+    compiler_count = 0
+    for owner in ('recipe', 'statement'):
+        path = ROOT / f'docs/tasks/artifacts/formula_structure/{owner}_owner_contract.py'
+        text = path.read_text()
+        capture_compiler_entry(text, path, owner)
+        compiler_count += 1
+        faults = [
+            ('complete inputs', 'sources=SOURCES', 'sources=()', 'D156 compiler planned inputs changed'),
+            ('complete output', 'directories=(WORK,)', 'directories=()', 'D156 compiler planned output changed'),
+            ('prepared stores', 'environment = dict(os.environ)',
+             "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", 'D156 compiler child stores lost'),
+            ('Cargo public metadata', ", '--message-format=json'", '', 'D156 compiler child argv changed'),
+            ('Rustc public diagnostics', ", '--error-format=json'", '', 'D156 compiler child argv changed'),
+            ('dependency search', "('-L', 'dependency='", "('-I', 'dependency='", 'D156 compiler child argv changed'),
+            ('actual documentation fixture', "str(source), '-o'", "str(SOURCE), '-o'", 'D156 compiler child argv changed'),
+            ('fixture bytes', "+ '\\nfn main() {}\\n'", "+ '\\nfn main() {panic!();}\\n'", 'D156 compiler fixture/output bytes changed'),
+        ]
+        if owner == 'recipe':
+            faults.append(('chapter input plan', 'SOURCES = (SOURCE, BOOK)', 'SOURCES = (SOURCE,)', 'D156 compiler planned inputs changed'))
+            faults.append(('book compilation', "'recipe_example_%d'", "'wrong_example_%d'", 'D156 compiler child argv changed'))
+            execute = next(node for node in ast.walk(ast.parse(text)) if isinstance(node, ast.Call)
+                           and ast.unparse(node.func) == 'subprocess.run'
+                           and ast.unparse(node.args[0]) == '[str(binary)]')
+            actual = ast.get_source_segment(text, execute)
+            faults.append(('book execution', actual, "subprocess.CompletedProcess([], 0, stdout='', stderr='')",
+                           'D156 compiler child argv changed'))
+        for name, before, after, message in faults:
+            assert text.count(before) >= 1, (name, 'actual compiler anchor')
+            try:
+                capture_compiler_entry(text.replace(before, after, 1), path, owner)
+            except AssertionError as error:
+                assert str(error) == message, (name, 'unrelated compiler-control failure', str(error))
+                red += 1
+            else:
+                raise AssertionError((name, 'actual compiler body fault survived'))
     lexer = ROOT / 'docs/tasks/artifacts/formula_lex/formula_lex_mutations.py'
     semantic = ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py'
     lexer_sources = (ROOT / 'crates/sc-core/src/recipe/lexer.rs', ROOT / 'crates/sc-core/src/name.rs')
@@ -655,6 +843,7 @@ def main():
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
           str(len(adopters)) + ' actual late-source refusals / ' + str(child_count) + ' actual native-child capture cases / ' +
+          str(compiler_count) + ' complete compiler/example captures / ' +
           str(classifier_count) + ' calibrated failed-body classifiers / source unchanged')
 
 

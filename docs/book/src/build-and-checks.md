@@ -208,11 +208,16 @@ The coupled recipe-input entry guards four implementations and its current test 
 its original test filters, proves seven current macro-site reds and rebuilds the full five-test target.
 Its five Rust sources restore byte-identically; labelled expect messages cannot certify a fault.
 
-Standing controls cover17 runtime cases and131 actual body faults, including thirty-four real
+Recipe/statement owner compiler entries guard their source/output plans before reads or writes;
+the recipe entry also plans this book's example source. Both preserve prepared Cargo/Rustc stores
+and consume public current-artifact metadata. Ten real documentation guards require only the
+expected E0451/E0515 codes; four recipe chapter examples compile and execute against that artifact.
+
+Standing controls cover17 runtime cases and152 actual body faults, including thirty-six real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All thirty-four entry captures also refuse a late missing source before
-output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
+12 membership tests passing. All thirty-six entry captures also refuse a late missing source before
+input reads, output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
@@ -223,6 +228,9 @@ arguments, working directory, stores, channel and unrelated environment before d
 the prior per-child store reset earns a body assertion failure, as does discarding coupled selection.
 These captures compile no native fault;
 the exclusive native mutation runs establish that separate proof.
+Two complete compiler-entry captures additionally check every Cargo/Rustc/example call and all
+generated fixture/log bytes under custom stores. Authored public metadata and compiler results
+simulate dispatch only; native owner runs provide the separate diagnostic and example proof.
 
 ## Formula documentation currency
 

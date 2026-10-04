@@ -3,10 +3,16 @@ from pathlib import Path
 import json
 import os
 import re
+import runpy
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/checked_recipe.rs'
+BOOK = ROOT / 'docs/book/src/annexes/formula-checked-recipes.md'
+SOURCES = (SOURCE, BOOK)
+WORK = ROOT / 'target/recipe_owner_contract'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=SOURCES)
 EXPECTED = ('E0451', 'E0515', 'E0451', 'E0515', 'E0515')
 
 
@@ -20,10 +26,8 @@ for diagnostics in ([], ['E0432'], ['E0451', 'E0514'], ['E0451', 'E0560']):
     assert not codes_match(diagnostics, 'E0451'), ('compiler guard accepted noise', diagnostics)
 blocks = re.findall(r'(?m)^/// ```compile_fail\n((?:^///.*\n)+?)^/// ```$', SOURCE.read_text())
 assert len(blocks) == len(EXPECTED), 'actual recipe-owner guard population'
-WORK = ROOT / 'target/recipe_owner_contract'
 WORK.mkdir(parents=True, exist_ok=True)
-environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'),
-                   CARGO_TARGET_DIR=str(ROOT / 'target'), TMPDIR=str(ROOT / 'target/scratch'))
+environment = dict(os.environ)
 built = subprocess.run(['cargo', 'build', '-p', 'sc-core', '--message-format=json'],
                        cwd=ROOT, env=environment, capture_output=True, text=True)
 (WORK / 'artifacts.json').write_text(built.stdout)
@@ -63,8 +67,7 @@ for index, (block, expected) in enumerate(zip(blocks, EXPECTED), 1):
     print('actual recipe-owner compiler guard %d: rc=1, only %s' % (index, expected))
 print('recipe-owner contracts: five actual privacy/recipe/record compiler guards; unrelated errors refused; rc=0')
 
-book = ROOT / 'docs/book/src/annexes/formula-checked-recipes.md'
-examples = re.findall(r'(?m)^```rust\n(.*?)^```$', book.read_text(), re.S)
+examples = re.findall(r'(?m)^```rust\n(.*?)^```$', BOOK.read_text(), re.S)
 assert len(examples) == 4, 'whole recipe book example population'
 for index, code in enumerate(examples, 1):
     source = WORK / ('example_%d.rs' % index)

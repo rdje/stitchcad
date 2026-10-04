@@ -355,7 +355,6 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Work unit STITCHCAD-G1-0114; predecessor e379473 clean/brief0/untracked/no jobs.
   Protocol: [coupled whole review](G1-SLICE-checked-recipes.md#coupled-whole-factory-protocol).
   Verification/Commit: `STITCHCAD-G1-0114`; [whole coupling proof](G1-SLICE-checked-recipes.md#coupled-whole-acceptance-checklist).
-
 - ID: `G1-SLICE.5b.4c`
   Status: `in_progress`
   Goal: D154 retain actual known ordinal on whole reference refusals without inventing local context.
@@ -624,7 +623,6 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 [Exact complete record](../history/window6.md#stitchcad-devnotes-part127md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
 
 ## D156 producer profile protocol
-
 - ID: `G1-SLICE.5b.4c.h2.a`
   Status: `done`
   Goal: guarded local profile and Make/G0/doctrine entry-point defaults before native producer audit.
@@ -681,7 +679,6 @@ Predecessor40a3c0c clean/brief0, no required job,1unpushed/no push due. Scope .b
 one safe implementation unit: initial rg lists direct Python native-command literals, shell
 native/temporary commands and platform dispatch before guards. Finite syntax/call inventory
 is required before completeness claims. No direct producer is executed with ambient stores.
-
 - ID: `G1-SLICE.5b.4c.h2.b.h`
   Status: `done`
   Goal: exact committed whole ledger/lesson/completed-runner receipt retention before audit growth.
@@ -727,7 +724,6 @@ is required before completeness claims. No direct producer is executed with ambi
 [Exact complete record](../history/window6.md#stitchcad-devnotes-part131md); 37L/2807B/sha256:5c5f7c600a2fdd3f06d245b34cd3541fb3dccba7e5eb9c2312c30fde74aa1fb7.
 
 ## Python producer repair slices
-
 - ID: `G1-SLICE.5b.4c.h2.b.p.h`
   Status: `done`
   Goal: retain complete committed lessons and the completed census before guard receipt growth.
@@ -981,20 +977,24 @@ Native baseline log replay1 excluded: old signature fault logs absent (actual di
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f12`
   Status: `done`
-  Goal: coupled recipe-input guards; STITCHCAD-G1-0146 owns four implementations/current test/output/strict controls/book/native proof, any reproduced classifier defect and blocking whole cleanup/old lesson/ledger retention.
-  Acceptance: all four implementation sources/current test/output plans, original native selection/fixtures/prepared stores, strict actual controls/exclusive seven reds, exact sources/full target restoration; own blocking whole retention.
-
-- [x] REPRODUCE / ISSUE: actual assertion_failure AST admits labelled expect-only failed body; target/d171-classifier-baseline.log, rc=0; no native/source writes.
-- [x] ROOT CAUSE (WHY + WHERE): message prefix lacks guarded current test locations; actual classifier/site faults refuse in python_producer_contract.py131 body reds/19 strict classifiers, rc=0.
-- [x] FIX: all four implementation/current test/output plans precede reads/writes, prepared stores/original test filter retained, full target rebuilt; actual34 entry/late refusals/26 child captures and selected-test omission red, rc=0.
-- [x] ADDRESSED (verified): absent-export classifier/native driver7 macro reds; independent d171-native-proof.log7 cases AST-exact/eight current assertion sites/five HEAD+snapshot exact sources/full five-test restoration, rc=0; no Rust changes.
-- [x] NO REGRESSION: local profile CI19/local56/Python17/131/34/34/26/19, publication43/archive28+CLI418/402reads/ledger9+pointer13/coverage9 terminal0 consumed, rc=0; no Rust changes or remote verdict inferred.
-- [x] LOCKSTEP: d171-retention-proof.log prior398 bytes/six controls/three whole committed intervals/one honest original report/public402 exact, rc=0;12open/158sealed/no missing/overlap, rc=0; book/live .n.f13 synced, grammar/API/400 cadence fixed; final staged gate all13green, rc=0, d171-staged-gate.log; hook/brief clearing follows.
+  Goal: D171 coupled input guards; complete requirements/acceptance/receipts in [part177](../history/stitchcad-devnotes-part177.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f11.c`
   Status: `done`
   Goal: daily cleanup complete; exact requirements/acceptance in [part175](../history/stitchcad-devnotes-part175.md); audit target/artifact_cleanup_audit/2026-10-04-2219/.
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f13`
-  Status: `todo`
-  Goal: recipe/statement owner compiler-entry guards; then static coupled native proof.
+  Status: `done`
+  Goal: STITCHCAD-G1-0147 owns both owner entry guards, actual Cargo/Rustc/example dispatch controls, native diagnostics/book proof, live/book sync and blocking whole .n.f12/old lesson/oldest ledger retention; D156 remains open.
   Acceptance: source/book/output plans before reads/writes/children, preserved public Cargo artifact/diagnostic/fixture/example argv and prepared stores, actual controls/real native proofs; own blocking whole retention.
+
+- [x] REPRODUCE / ISSUE: D156 compiler entries read unplanned sources/book and reset prepared stores; actual previous reset faults refused in owner-python-controls-final.log152 body reds, rc=0.
+- [x] ROOT CAUSE (WHY + WHERE): source extraction precedes profile; per-child overlays overwrite valid stores. Actual entry/read/late-source captures and Cargo/Rustc/example faults discriminate; sources unchanged, rc=0.
+- [x] FIX: both complete source/output plans and recipe chapter precede reads/writes/native dispatch; all original public compiler argv/fixtures/diagnostics/examples/prepared stores preserved, two complete captures, rc=0.
+- [x] ADDRESSED (verified): owner-native-driver.log seven caller exports absent/ten actual E0451/E0515 refusals/four actual compiled+executed examples, rc=0; owner-native-proof.log current public Cargo JSON/fresh fixture/diagnostic locations/unchanged argv/two HEAD+snapshot exact sources, rc=0.
+- [x] NO REGRESSION: run_ci_environment_probes.sh CI19/local56/Python17/152/36/36/26/2 compiler/19 classifiers; publication43/archive28+CLI422/406 reads/ledger9+pointer13/coverage9 all terminal0 consumed, rc=0; no Rust changes/unobserved CI claim.
+- [x] LOCKSTEP: owner-retention-proof.log four whole4d61b4c intervals/prior402/six windows/public406/37native36adopted/12open158sealed/no gaps, rc=0; initial helper/gate1 excluded (bytes literal/missing receipt rc); book/live .n.f14 synced; promotion declined: existing rules. Final staged gate13green, rc=0, owner-staged-gate-final.log; hook/brief clearing follows.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f14`
+  Status: `todo`
+  Goal: final static coupled native entry guards under D156; then output/delegation and shell/integration audits before D154.
+  Acceptance: complete public reference/Rust/test/book/output plans before reads/writes/children; preserve original shared populations, selections, fixtures and prepared stores; actual controls/direct native faults and exact sources/full artifact restoration.

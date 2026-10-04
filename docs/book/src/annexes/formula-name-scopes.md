@@ -127,6 +127,7 @@ statement successfully before staging it and returns only a complete immutable p
 
 ```bash
 cargo test -p sc-core --test formula_checked_statement_contract -- --nocapture
+python3 -I -B docs/tasks/artifacts/formula_structure/statement_owner_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/checked_statement_mutations.py
 ```
 
@@ -135,6 +136,9 @@ canonical/unknown-record ownership, direct/computed class roles, runtime-invalid
 privacy. Maximum4,096 statements,256-node operands,16 nested conditionals and4,000 grouping pairs
 pass on a64KiB stack. Five precise compiler guards in statement_owner_contract.py compile the actual documentation
 against Cargo's reported current artifact and require only E0451/E0515 for privacy/recipe/record borrows.
+That compiler entry guards its implementation source and output directory before fixture reads or
+Cargo dispatch. Cargo and Rustc preserve prepared stores; public Cargo JSON selects the current
+library and dependency search directories.
 Twenty-two actual compiled body faults must fail, with all three implementation sources restored
 exactly and the complete focused target rebuilt. The direct entry validates those sources, its test
 source and output before reads/writes; children retain prepared stores. Failed-body panic locations

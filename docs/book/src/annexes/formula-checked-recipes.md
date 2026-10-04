@@ -164,6 +164,9 @@ position cases, late/untaken errors, real collisions, repeated dependencies and 
 Limits4096 statements,256-node operands,16 conditionals and4000 grouping pairs pass on a64KiB stack.
 Five actual documentation compiler guards require only E0451/E0515 for privacy and recipe/record
 borrows. The four Rust examples in this chapter compile and execute against Cargo's current library.
+The compiler entry validates its implementation source, this chapter and output directory before
+reading fixtures or invoking Cargo. Cargo, Rustc and example executions retain prepared stores;
+public Cargo JSON supplies the current library and dependency search directories.
 Actual compiled whole-proof faults require running public assertion failures, with source and
 complete focused artifact restored. The direct entry validates implementation/test source and output
 before reads/writes and preserves prepared child stores. Failed-body panic locations must match

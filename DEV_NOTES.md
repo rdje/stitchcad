@@ -4,22 +4,19 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
+## _(2026-10-04 UTC)_ — D156 owner compiler entries
 
-
-
-
-
+- Plan the recipe chapter as an input at entry, even though examples are read after compiler guards.
+- Controls152 body faults/36 entry+late refusals/two complete compiler captures0 include omitted input/output/book plans and every actual Cargo/Rustc/example call under custom stores.
+- Authored output proves dispatch only; direct seven-export-absent native run ten E0451/E0515 guards/four executed examples0, independent fresh fixture/current-artifact/unchanged argv/two HEAD sources proof0. Focused profiles/book/archive406/ledger/coverage0.
+- Retention helper1 rejected a non-ASCII bytes literal before execution; corrected helper0; four whole Git intervals/prior402 bytes/six controls exact0. Failed attempt excluded.
+- Promotion declined: existing all-source/actual-child/native-proof/exact-retention rules.
 
 Window6 retention lesson retained in [part174](docs/history/stitchcad-devnotes-part174.md).
 
 D163 declaration guard lesson retained in [part176](docs/history/stitchcad-devnotes-part176.md).
 
-## _(2026-10-04 UTC)_ — D162 namespace producer proofs
-
-- Rebuild the full target after exact restoration; a source-only finally leaves a faulty artifact.
-- Preserve current task IDs/status/goal proxies when retaining complete closed-node requirements.
-- Keep implementation and assertion-site test sources in the same pre-activation plan.
-- Promotion declined: existing all-source/exact-retention/actual-body/exclusive-restoration rules.
+D162 namespace guard lesson retained in [part178](docs/history/stitchcad-devnotes-part178.md).
 
 ## _(2026-10-04 UTC)_ — D161 statement and whole proof producers
 
