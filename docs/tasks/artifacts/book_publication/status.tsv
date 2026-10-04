@@ -56,3 +56,8 @@ formula sourced name dependency	annexes/formula-wanted-signatures.md	crates/sc-c
 formula complete dimension refusal	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaDimensionRefusal	G1-SLICE.5b.3c.2b.2	4.1
 formula typed checked operation	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaCheckedOperation	G1-SLICE.5b.3c.2b.2	4.1
 formula expression refusal reasons	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaExpressionCheckRefusal	G1-SLICE.5b.3c.2b.2	4.1
+formula current-statement proof	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/checked_statement.rs	FormulaCheckedStatement	G1-SLICE.5b.3c.3b	4.1
+formula checked statement components	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/checked_statement.rs	FormulaCheckedStatementKind	G1-SLICE.5b.3c.3b	4.1
+formula statement refusal context	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/checked_statement.rs	FormulaStatementCheckError	G1-SLICE.5b.3c.3b	4.1
+formula statement refusal reasons	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/checked_statement.rs	FormulaStatementCheckRefusal	G1-SLICE.5b.3c.3b	4.1
+formula actual binding kinds	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/checked_statement.rs	FormulaBindingDimensionRefusal	G1-SLICE.5b.3c.3b	4.1

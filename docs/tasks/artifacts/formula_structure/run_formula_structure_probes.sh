@@ -33,6 +33,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/builtin_signature_mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/checked_statement_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/statement_owner_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/literal_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/arithmetic_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/angle_contract.py

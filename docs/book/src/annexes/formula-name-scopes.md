@@ -2,8 +2,8 @@
 
 > **Status:** implemented metadata foundation, G1-SLICE.5b.2d.2. FormulaNameCursor and
 > FormulaStatementNameScope enforce authored declaration order and retain actual binding sources.
-> Initial-scope expression checking is available; current-statement integration and complete
-> static recipe acceptance remain .5b.3c.3/.4; execution
+> Initial and current-statement kind checking are available. Complete
+> static recipe acceptance remains .5b.4; execution
 > remains .5c–.5g. This chapter builds on [initial declarations and exact reads](formula-declarations.md).
 
 A formula statement sees the initial namespace and declarations above it. A current or future let
@@ -55,9 +55,90 @@ of 4,096 statements have the same end behavior.
 
 This is metadata staging. A normalized RHS such as missing or a dimensionally invalid operator is
 still unchecked here. Recording its annotation supplies no proof that the expression has that kind
-or can execute. The product type checker and whole-recipe validator must check every operand before
-using metadata advance; they remain the next owners. No accepted expression, recipe graph, numeric
+or can execute. The current-statement checker below checks every operand before a validator uses
+metadata advance; whole-recipe acceptance remains separate. No accepted expression, recipe graph, numeric
 binding or partial geometry is returned by this API.
+
+## Check the actual current statement
+
+FormulaStatementNameScope::check_kinds takes no replacement statement, namespace or ordinal.
+It checks the scope's actual normalized statement against the initial and earlier-let metadata.
+The returned FormulaCheckedStatement privately owns component proofs, borrows the same statement
+and records its genuine one-based statement_index. It certifies local kinds and dependencies;
+it reads no values, canonical states, tolerance availability or physical geometry.
+
+```rust
+use sc_core::recipe::{FormulaCheckedStatementKind, FormulaNameCursor,
+    FormulaNamespace, FormulaRecipe};
+let recipe = FormulaRecipe::parse(
+    "let width:length=25 cm assert closure:eps_fmt=width==width"
+).unwrap().normalize_literals().unwrap();
+let mut cursor = FormulaNameCursor::new(FormulaNamespace::new([]).unwrap(), &recipe);
+let first = cursor.current().unwrap().unwrap().check_kinds().unwrap();
+cursor.advance_metadata().unwrap();
+let second = cursor.current().unwrap().unwrap().check_kinds().unwrap();
+drop(cursor);
+assert_eq!(first.statement_index(), 1);
+assert_eq!(second.statement_index(), 2);
+if let FormulaCheckedStatementKind::Assert { left, right } = second.kind() {
+    assert_eq!(left.dependencies()[0].declaration().name(), "width");
+    assert_eq!(right.dependencies()[0].declaration().name(), "width");
+}
+```
+
+A let checks its complete RHS and then compares its kind with the declared annotation. An assert
+checks the left operand, the right operand and then the closed equality signature. Both must share
+one of length, angle, area, ratio or count; Boolean/PointRef/EdgeRef comparisons are refused.
+All branches and arguments retain static dependencies, including untaken conditional branches.
+Every valid tolerance class remains symbolic metadata. An absent eps_fmt or eps_phys value does
+not prevent static acceptance; later runtime context and contribution rules remain required.
+
+FormulaCheckedStatementKind exposes immutable Let or Assert component proofs. Their original
+normalized expressions, kinds and ordered sourced dependencies cannot be substituted in the private
+enclosing owner. They retain repeated names, canonical record borrows and actual prior let ordinals.
+Proofs/errors can survive cursor advancement or its destruction because their declaration locators
+are copied and their statement borrow belongs to the recipe. They cannot outlive the normalized
+recipe or any borrowed canonical record. A scope itself still borrows cursor metadata.
+
+FormulaStatementCheckError retains statement(), statement_index(), refusal(), token() and span().
+FormulaStatementCheckRefusal distinguishes Expression, BindingDimension and AssertionDimension:
+
+| Case | Available arguments and span |
+| --- | --- |
+| Expression | Binding/AssertionLeft/AssertionRight, original normalized operand and nested node/name/call/dimension refusal; nested node span |
+| BindingDimension | FormulaBindingDimensionRefusal with genuine declared_kind, expression_kind and singleton wanted_kind; annotation span |
+| AssertionDimension | FormulaDimensionRefusal with actual == operation, both immediate kinds/direct class roles and all wanted signatures; complete original statement span |
+
+The assertion separator has no independently retained span, so the error uses the actual statement
+span. No combined normalized comparison expression is invented. Direct grouped tolerance-name
+operands retain their class role; computed lengths such as min(eps_num) remain ordinary lengths.
+canonical_statement() invokes the exact normalized owner's factory; nested expression errors retain
+their own actual expression identity. Debug omits customer text and Display contains only the token.
+
+For let width:boolean=missing, the missing RHS keeps its expression error before the header kind
+comparison. For assert gap:eps_num=point_input==missing, the unresolved right child wins before
+the complete comparison tuple is available. A known child's own earlier dimension error keeps
+precedence over a later unresolved child. Header collisions are refused by current() before any
+scope is exposed. A check does not advance metadata, publish a binding or return a checked prefix.
+
+Earlier annotations remain metadata. A caller may stage an unchecked let first:length=missing,
+then locally check second:length=first against that annotation. This certifies the second statement's
+scope and kinds, and supplies no whole-recipe acceptance. The complete validator must check each
+statement successfully before staging it; atomic whole-recipe graph acceptance remains .5b.4.
+
+```bash
+cargo test -p sc-core --test formula_checked_statement_contract -- --nocapture
+python3 -I -B docs/tasks/artifacts/formula_structure/checked_statement_mutations.py
+```
+
+Seven public contracts exercise48 let pairs,320 class/comparison pairs, source/child priority,
+canonical/unknown-record ownership, direct/computed class roles, runtime-invalid static cases and
+privacy. Maximum4,096 statements,256-node operands,16 nested conditionals and4,000 grouping pairs
+pass on a64KiB stack. Five precise compiler guards in statement_owner_contract.py compile the actual documentation
+against Cargo's reported current artifact and require only E0451/E0515 for privacy/recipe/record borrows.
+Twenty-two actual compiled body faults must fail, with all three sources restored exactly and
+compiler/expect/test-name noise refused. Run mutations exclusively. Existing18 scope and16
+expression fault controls remain required when their implementation changes.
 
 ## Binding refusals retain real sources
 

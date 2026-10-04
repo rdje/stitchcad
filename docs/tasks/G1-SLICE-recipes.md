@@ -585,7 +585,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: closed built-in/selector signatures; verified, commit `STITCHCAD-G1-0092`.
   [Exact protocol](G1-SLICE-names.md#completed-built-in-signatures-protocol--preserved-from-c98dc54) retained.
 - ID: `G1-SLICE.5b.3c`
-  Status: `in_progress`
+  Status: `done`
   Goal: bounded normalized expression checking with typed real source/operand/wanted-rule refusals;
   every branch/argument/name dependency checked before any whole acceptance or execution.
   Children: .1 typed wanted-kind catalog; .2 context-free expression/error/checked-owner integration;
@@ -653,7 +653,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: D145 prerequisite documentation; `STITCHCAD-G1-0104`.
   [Source/status/reference/publication receipts](G1-SLICE-names.md#d145-prerequisite-documentation-protocol) retained.
 - ID: `G1-SLICE.5b.3c.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: check actual current-statement operands/annotations/assertions without forged contexts.
   Acceptance: use scope's own immutable statement and original operands; attach actual ordinal/
   source/canonical identity only when present, check every operand before metadata advance.
@@ -673,10 +673,10 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Verification/Commit: `STITCHCAD-G1-0107`; [exact proof](G1-SLICE-names.md#d146-assertion-class-token-protocol).
   P1 immediately after D139, before .3b; no grammar change; original report in PLANNING.
 - ID: `G1-SLICE.5b.3c.3b`
-  Status: `pending`
+  Status: `done`
   Goal: scope-bound product operands/annotations/assertions with truthful available source/ordinal.
   Acceptance: use actual statement operands; all checks precede cursor advance/whole proof.
-  Verification/Commit: `pending`.
+  Verification/Commit: `STITCHCAD-G1-0108`; [exact proof](G1-SLICE-names.md#current-statement-kind-proof-protocol).
 - ID: `G1-SLICE.5b.3d`
   Status: `pending`
   Goal: coupled full expression static review, normative/reference/product agreement and counterexamples.

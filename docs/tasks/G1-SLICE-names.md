@@ -924,25 +924,7 @@ language/publication/ledger/gates; grammar/results/contracts unchanged. Existing
 
 ### G1-SLICE.5b.3c.2b.2.0
 
-Work unit STITCHCAD-G1-0104; source58bbb6b clean/brief0/no jobs. Product namespace/signature/call
-annex review found wanted-rule annex still describes closed D140 as current defect; cross-book
-rg isolates the contradiction at150–151. Actual geometry provider guard and97case producer agree
-with corrected static annex. Own/fix this prerequisite doc before checker code; no grammar/API change.
-
-- [x] **ROOT CAUSE (WHY + WHERE)** — cross-book rg reports wanted-rule annex150–151 describes
-  D140 as current; actual geometry_argument_contract.py→97cases/75payloads/12actual body reds,
-  rc=0; static annex/source already verified. Prior D140 sync missed this prerequisite paragraph.
-- [x] **ADDRESSED (verified)** — wanted-rule paragraph now links verified local geometry checks
-  with separate product operation/graph/physical boundaries; publication→10 pass/0fail, rc=0.
-- [x] **NO REGRESSION** — geometry97cases/75payloads/12body reds and publication10 pass, rc=0;
-  ledger9/pointer13 independent controls pass, rc=0. Archive verify273records/28working Markdown/
-  11732decoded lines/867911decodedB/397902residentB, rc=0; whole prior HEAD ledger/lesson exact.
-  Independent census11open/133sealed unique/disjoint/complete except intentionalD18, rc=0;
-  make gate→all doctrines green, rc=0; hook repeats. Completed task summaries tightened with
-  exact receipt links/caps fixed. Initial325B status row refused; tightened below unchanged320B ceiling.
-- [x] **LOCKSTEP / RETENTION** — original report/whole oldest ledger/lesson retained; root-relative
-  book links resolve; live/task/resume agree. G1 stays5/18,11open/133sealed; grammar/API unchanged.
-  Promotion declined (existing book lockstep policy); product checker follows.
+[Exact completed protocol/checklist](../history/stitchcad-devnotes-part112.md) retained from475f2ed.
 
 ## Bounded product expression checker protocol
 
@@ -960,30 +942,46 @@ with corrected static annex. Own/fix this prerequisite doc before checker code; 
 
 ### G1-SLICE.5b.3c.3a.t1
 
-Work unit STITCHCAD-G1-0107; sourcee3f6b33 clean/brief0 before ownership. Original tracked D146,
-contract5.2, unchanged closed TOLERANCE grammar, actual standalone/recipe parser, public contracts,
-reference statement/recipe cases and15-fault producer reviewed. Root public UnknownTolerance
-mapping/expected fixtures use runtime formula_tolerance_unbound for syntactically invalid spelling;
-reference returns formula_parse. Correct only mapping, preserve rule/spans/priority/closed grammar.
-Independent invalid annotation population across malformed RHS/assignment and standalone/whole
-placements; genuine ordinals and source spans, all five valid class names remain accepted syntax.
-Actual compiled mapping-oldbug fault must fail body assertions; all15 statement faults exclusive,
-restore exact source, refuse compiler/expect/test-name noise. Strict native/WASM, affected full
-reference/publication/ledger/gates; runtime missing valid context remains separately verified.
-Existing grammar/token policy, no approval pending. Product statement .3b immediately follows.
+[Exact completed protocol/checklist](../history/stitchcad-devnotes-part110.md) retained from475f2ed.
 
-- [x] **ROOT CAUSE (WHY + WHERE)** — public new class contract on original mapping gives
-  actual assertion red101, producer rc=0; public/reference before probe confirms wrong token, rc=0.
-  Scoped git -S/show1ac495b→ba24599 proves reference grammar/token repair missed product mapping.
-- [x] **ADDRESSED (verified)** — public144invalid/10valid controls print exact rules/spans/ordinals,
-  rc=0; statement_mutations.py→15actual compiled body assertion reds101/source exact, rc=0,
-  including old tolerance mapping. Compiler/expect/test-name noise refused; grammar unchanged.
-- [x] **NO REGRESSION** — make check strict1.99 fmt/Clippy/tests/docs→677passed/57groups, rc=0;
-  make wasm→all3libraries, rc=0; full structural/reference runner and publication10/60chapters/
-  57APIs/1204source/1894rendered links, rc=0. Ledger9/pointer13, rc=0; archive282/37working/
-  11965lines/884411decodedB/414402residentB verified, rc=0. Independent10open/135sealed complete
-  exceptD18 and three original HEAD records byte-exact, rc=0; make gate→all doctrines green,
-  rc=0; hook follows.
-- [x] **LOCKSTEP / RETENTION** — book syntax/runtime examples, source/task/live/resume agree;
-  three HEAD record comparisons→byte-exact, rc=0; caps/windows unchanged. G1 stays5/18;
-  .3b actual statement owner next. Promotion declined (existing grammar/context policy).
+## Current-statement kind proof protocol
+
+### G1-SLICE.5b.3c.3b
+
+Work unit STITCHCAD-G1-0108; source475f2ed clean/brief0, no jobs. Roadmap4.1/4.2, canonical2–5.2,
+grammar/comparisons/classes, name-scope/statement/wanted/static annexes, normalized private statement
+arenas, immutable declarations, current collision guards, bounded expression proof/signatures and
+public contracts reviewed. Interface first: only scope.check_kinds(), no caller-authored statement,
+namespace or ordinal. Scope keeps actual statement borrow at recipe lifetime; proof/errors borrow
+that owner and copied sourced declarations, independent of cursor allocation. The scope itself
+still borrows cursor metadata and cannot survive its mutation. Private helper uses original operands.
+Let checks full RHS then exact declared kind; assert checks left then right then the closed == row.
+All five valid tolerance names remain metadata, with no provider/value/state/domain query. Header
+errors retain real annotation kind/span; assertion errors retain both complete kinds/direct roles,
+all == wanted rows and actual statement span (no invented separator/combined normalized expression).
+Nested errors retain actual operand part, normalized owner/node and existing token. Explicit canonical
+statement/expression factories use those exact owners. Private immutable accepted/error owners retain
+actual ordinal, complete ordered dependencies and no accepted prefix on error. Metadata advance is
+unchanged and separate; unvalidated earlier annotations never grant complete-recipe acceptance.
+Independent6×8 let and5×8×8 assert matrices, child/call/header priority, self/forward/untaken reads,
+ordered real prior sources, source/privacy/lifetime bounds and runtime-invalid static controls.
+Actual compiled body mutations exclusive/exact restoration plus affected18ordered/16expression
+regressions; strict native/WASM/book/reference/ledger/gates. No grammar/token change; .3d/.4 follow.
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — git grep check_kinds in original475f2ed ordered scope→no
+  match, rc=1; metadata/call catalogs alone supplied no current-statement proof. Public seven contracts
+  verify48let/320assert pairs plus actual owners/priority/phase limits, rc=0; interface recorded first.
+- [x] **ADDRESSED (verified)** — checked_statement_mutations.py→22actual compiled body reds101,
+  rc=0; three sources exact. Existing ordered18/expression16 actual body reds/source exact, rc=0.
+  Both children, complete roles/kinds/wanted rules, actual ordinal/spans/canonical owners and privacy
+  discriminate; default assertion helper replaces draft panic fixtures without a lint waiver.
+- [x] **NO REGRESSION** — make check strict1.99 fmt/Clippy/tests/docs→690passed/58groups, rc=0;
+  WASM3/full structural reference/publication10/60chapters/62APIs/1211source/1902rendered links, rc=0.
+  statement_owner_contract.py→only E0451 twice/E0515 three times, rc=0; initial E0463 refused and
+  actual Cargo library/dependency metadata inspected before repair. Ledger9/pointer13, rc=0;
+  archive286/41working/12089lines/892892decodedB/422883residentB, rc=0; make gate→all
+  doctrines green, rc=0; hook follows.
+- [x] **LOCKSTEP / RETENTION** — four HEAD payloads byte-exact and independent10open/135sealed
+  unique/disjoint/complete exceptD18, rc=0; book/source/status/API/task/live/resume align, grammar
+  and caps/windows fixed. G1 stays5/18; local proof grants no prior-RHS, whole graph or runtime
+  acceptance. Promotion declined (existing source/phase policy); coupled .3d then full .4 next.

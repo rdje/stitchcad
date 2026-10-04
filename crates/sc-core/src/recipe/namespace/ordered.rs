@@ -129,7 +129,7 @@ impl fmt::Debug for FormulaNameCursor<'_> {
 #[derive(Clone, Copy)]
 pub struct FormulaStatementNameScope<'s, 'a> {
     namespace: &'s FormulaNamespace<'a>,
-    statement: &'s FormulaNormalizedStatement<'a>,
+    statement: &'a FormulaNormalizedStatement<'a>,
     statement_index: usize,
 }
 impl<'s, 'a> FormulaStatementNameScope<'s, 'a> {
@@ -141,8 +141,37 @@ impl<'s, 'a> FormulaStatementNameScope<'s, 'a> {
 
     /// Original normalized statement, with its global source/name/annotation spans and operands.
     #[must_use]
-    pub const fn statement(self) -> &'s FormulaNormalizedStatement<'a> {
+    pub const fn statement(self) -> &'a FormulaNormalizedStatement<'a> {
         self.statement
+    }
+
+    /// Check this actual statement against its initial and prior-let declaration metadata.
+    /// Checks every operand before its annotation/comparison, without advancing the cursor.
+    /// The result borrows the recipe and declaration owners, not the cursor allocation.
+    /// Earlier annotations are metadata; this alone grants no whole-recipe or runtime acceptance.
+    /// ```
+    /// use sc_core::recipe::{FormulaNameCursor, FormulaNamespace, FormulaRecipe};
+    /// let recipe = FormulaRecipe::parse("let width:length=1 mm").unwrap().normalize_literals().unwrap();
+    /// let mut cursor = FormulaNameCursor::new(FormulaNamespace::new([]).unwrap(), &recipe);
+    /// let proof = cursor.current().unwrap().unwrap().check_kinds().unwrap();
+    /// cursor.advance_metadata().unwrap();
+    /// drop(cursor);
+    /// assert_eq!(proof.statement_index(), 1);
+    /// assert_eq!(proof.canonical_statement().as_str(), "(bind width length length:1000)");
+    /// ```
+    /// # Errors
+    /// Retains the actual statement, ordinal, operand part and complete available refusal arguments.
+    pub fn check_kinds(
+        self,
+    ) -> Result<
+        crate::recipe::FormulaCheckedStatement<'a>,
+        crate::recipe::FormulaStatementCheckError<'a>,
+    > {
+        crate::recipe::checked_statement::check_statement(
+            self.statement,
+            self.statement_index,
+            self.namespace,
+        )
     }
 
     /// Exact initial or earlier-let declaration metadata, independent of source value availability.

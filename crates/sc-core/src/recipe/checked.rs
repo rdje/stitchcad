@@ -47,6 +47,13 @@ pub struct FormulaDimensionRefusal {
     operands: Vec<FormulaBuiltinOperand>,
 }
 impl FormulaDimensionRefusal {
+    /// Both actual assertion operands have already resolved; no synthetic expression is built.
+    pub(super) fn comparison(operands: [FormulaBuiltinOperand; 2]) -> Self {
+        Self {
+            operation: FormulaCheckedOperation::Binary(FormulaBinaryOperator::Equal),
+            operands: Vec::from(operands),
+        }
+    }
     /// Actual typed operator or known callee.
     #[must_use]
     pub const fn operation(&self) -> FormulaCheckedOperation {
@@ -234,6 +241,23 @@ pub struct FormulaCheckedExpression<'e, 's, 'd> {
     dependencies: Vec<FormulaNameDependency<'d>>,
 }
 impl<'e, 's, 'd> FormulaCheckedExpression<'e, 's, 'd> {
+    /// Only a direct normalized name root can retain a reserved class role through grouping.
+    /// Its sole dependency was resolved during checking; computed roots remain ordinary values.
+    pub(super) fn root_operand(&self) -> FormulaBuiltinOperand {
+        if matches!(
+            self.expression.root().kind(),
+            super::FormulaNormalizedNodeKind::Name(_)
+        ) {
+            if let Some(dependency) = self.dependencies.first() {
+                if let FormulaDeclarationSource::Reserved(FormulaReservedName::Tolerance(name)) =
+                    dependency.declaration.source()
+                {
+                    return FormulaBuiltinOperand::Tolerance(name);
+                }
+            }
+        }
+        FormulaBuiltinOperand::Value(self.kind)
+    }
     /// Exact expression owner certified by this proof; no replacement syntax can be attached.
     #[must_use]
     pub const fn expression(&self) -> &'e FormulaNormalizedExpression<'s> {

@@ -3,7 +3,8 @@
 > **Status:** single statements (.3e.1) and ordered recipe syntax (.3e.2) are implemented in sc-core.
 > The complete recipe API retains authored order, the4096-statement limit and diagnostic indices.
 > Whole input normalization is [implemented](formula-recipe-inputs.md) at .3f.1b;
-> statement/recipe identity is owned by .3f.1c; name/type/binding validation and evaluation remain G1-SLICE.5 work.
+> statement/recipe identity is owned by .3f.1c. [Current scoped kind checks](formula-name-scopes.md#check-the-actual-current-statement)
+> are implemented; complete recipe validation and evaluation remain G1-SLICE.5 work.
 
 The [formula grammar](../spec/formula-language/grammar.md#1-the-grammar) gives two statement forms:
 let declares a name and kind; assert names a closure check and its tolerance class. The public

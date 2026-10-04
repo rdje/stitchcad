@@ -106,7 +106,8 @@ are available, as are [built-in and selector signatures](formula-builtin-signatu
 [Typed wanted-kind catalogs](formula-wanted-signatures.md) and
 [source-bearing call lookup](formula-call-lookup.md) and
 [initial-scope expression proofs](formula-wanted-signatures.md#bounded-product-expression-checking)
-are available; current-statement/whole static graph remain .5b.3c.3–.4. Exact call payloads are separately checked by166 cases/12
+and [current-statement checks](formula-name-scopes.md#check-the-actual-current-statement)
+are available; complete static graph remains .5b.4. Exact call payloads are separately checked by166 cases/12
 actual compiled faults; the older recognition/kind matrix alone certifies no diagnostic payloads.
 Reference expression dimension payloads are now verified by4023 cases/15 actual compiled faults,
 including complete kinds/wanted rules and multiple-error selection; see the
@@ -171,7 +172,8 @@ expression_kind ratio, annotation_span (10,16), and wanted_kinds (length,). No v
 An unresolved RHS or invalid child operation keeps its own error before header comparison.
 Detached syntax/static/runtime-adapter refusals omit statement_index. Ordered whole preflight
 rebases spans and includes its actual one-based ordinal; a late error publishes no partial plan.
-The reference supplies no canonical expression. Product statement proof remains .5b.3c.3b.
+The reference supplies no canonical expression. [Product current-statement proof](formula-name-scopes.md#check-the-actual-current-statement)
+is available; raw invalid annotations stay at syntax admission.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/header_dimension_contract.py --mutations
@@ -375,8 +377,8 @@ Recognized non-square exponents retain formula_unsupported; envelope calls retai
 The recognition controls compare actual contract6 cells and grammar1.1 keyword populations with
 independently authored expectations; ordinary names/let headers, all three reserved words and
 unknown-call/parse precedence are exercised with execution and values trapped. The concrete ruling
-is retained in ADR-0003. .5b.1c.2 closes the static reference review; production namespace/type/graph
-implementation remains .5b.2–.4. This clarification changes diagnostic promises to match v1's
+is retained in ADR-0003. .5b.1c.2 closes the reference review; product namespace and local kind proofs are available,
+while atomic graph acceptance remains .5b.4. This clarification changes diagnostic promises to match v1's
 closed grammar and enables no excluded capability.
 
 The reference runtime assertion repair closes D125 at G1-SLICE.5e.3a. A false assertion now raises
@@ -404,7 +406,8 @@ Each refusal carries its actual operation, complete resolved kinds and wanted ru
 existing angle-times-length hint. Call/tolerance-role populations match the chapter in both
 directions. Envelope dispatch applies before operand semantics after syntax/input succeeds.
 No numerical, tolerance-value, storage, geometry or solver callback belongs in this stage.
-Current-statement/annotation integration remains .5b.3c.3; whole acceptance remains .4.
+[Current-statement/annotation integration](formula-name-scopes.md#check-the-actual-current-statement)
+is implemented at .5b.3c.3b; whole acceptance remains .4.
 
 The whole-validator slice .5b.4 will inspect every statement in declaration order and return an
 immutable typed dependency graph only after complete success. Dependency edges include untaken

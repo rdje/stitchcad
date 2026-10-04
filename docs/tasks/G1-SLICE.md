@@ -842,7 +842,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.3c.2b.2` | `done` | Bounded initial-scope expression proof and sourced dependencies |
 | done | `G1-SLICE.5b.3c.3a` | `done` | D139 truthful reference header arguments verified |
 | done | `G1-SLICE.5b.3c.3a.t1` | `done` | D146 invalid-class syntax diagnostic verified |
-| current | `G1-SLICE.5b.3c.3b` | `pending` | Actual scope-bound statement operands and annotation/assertion checking |
+| done | `G1-SLICE.5b.3c.3b` | `done` | Actual scoped statement kinds/sources verified |
+| current | `G1-SLICE.5b.3d` | `pending` | Coupled static source/reference/product review before full graph |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.

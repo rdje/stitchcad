@@ -33,8 +33,9 @@ profile or size value. Initial namespaces and ordered name reads are available, 
 [operator/built-in signatures](annexes/formula-builtin-signatures.md), typed wanted rules and
 [source-bearing call lookup](annexes/formula-call-lookup.md).
 [Initial-scope expression checking](annexes/formula-wanted-signatures.md#bounded-product-expression-checking)
-retains complete kinds, refusals and sourced dependencies. Statement/whole-recipe acceptance and
-execution remain pending.
+retains complete kinds, refusals and sourced dependencies.
+[Current-statement checking](annexes/formula-name-scopes.md#check-the-actual-current-statement)
+checks actual scoped operands and annotations. Whole-recipe acceptance and execution remain pending.
 
 ## Planned workflows
 

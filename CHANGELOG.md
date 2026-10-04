@@ -99,6 +99,19 @@ the digests afterwards.
 | [`changelog-part76.md`](docs/history/window4.md#stitchcad-changelog-part76md) | STITCHCAD-G1-0062 | 13 lines, 1068 bytes, `sha256:a0da7975…` |
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0108 - actual scoped statement kind proofs (leaf `G1-SLICE.5b.3c.3b`)
+
+Only current scope checks its original let/assert operands and genuine ordinal. Let RHS must match
+its annotation; both assertion operands precede complete equality checking. Immutable proofs/errors
+retain exact normalized owners and ordered sourced dependencies, surviving cursor advancement while
+recipe/record borrows remain pinned. Typed header/comparison/nested refusals expose actual context;
+no combined AST, separator span, runtime value or whole-recipe acceptance is invented.
+Seven public contracts verify48let/320assert pairs, sources/priority/privacy/limits;22new/18scope/
+16expression actual compiled body faults restore sources exactly. Strict1.99 native690/58groups,
+WASM3, five precise Cargo-current privacy/borrow guards, full reference/publication10/60chapters/
+62APIs/1211source/1902rendered links and ledger9+13 pass0. Four original HEAD records retained
+byte-exact; archive286 verified. G1 stays5/18;10open/135sealed exceptD18. Coupled .3d then .4 next.
+
 ## STITCHCAD-G1-0107 - invalid assertion class is syntax (leaf `G1-SLICE.5b.3c.3a.t1`)
 
 D146 UnknownTolerance now uses formula_parse with its original rule/span and genuine recipe
@@ -264,28 +277,6 @@ scope align; exact prior/oldest records retained. Strict native647/54 groups/WAS
 reference/language16/publication10/ledger9+13 pass0;57 chapters/40 APIs/1161 source/1811 render links.
 G1 stays5/18;10open/122sealed; built-in/selector signatures .5b.3b next.
 
-## STITCHCAD-G1-0089 - ordered formula name scopes (leaf `G1-SLICE.5b.2d.2`)
-
-Actual recipe cursor exposes initial/prior metadata in authored order; current/future names and
-assertion labels never bind early. Header refusal leaves position/prefix unchanged; both actual
-let indices/spans and initial/reserved source identities remain available without invented context.
-Eight public contracts/five negative examples/18 actual body reds verify ordering/source/privacy
-and4096-let/assertion boundaries on64KiB stack. Metadata staging grants no expression/graph/value
-acceptance. Book annex/API/live scope align; exact prior evidence/oldest records retained.
-Strict native643/53 groups/WASM three libraries/reference/language16/publication10/ledger9+13
-pass0;56 chapters/39 APIs/1156 source/1798 rendered links. G1 stays5/18,10open/122sealed; .5b.3 next.
-
-## STITCHCAD-G1-0088 - exact initial formula name reads (leaf `G1-SLICE.5b.2d.1`)
-
-Validated queries resolve exact existing declarations, preserving original source lifetimes and
-canonical record/geometry identities. Opaque absent-name errors retain exact query and nine searched
-origins; no alias, value read, fallback or fictional recipe context. Seven public read contracts/nine
-actual compiled body reds restore source exactly; all17 prior collision faults still fail assertions.
-Book examples/API/status/live scope align; exact prior namespace evidence moved to bounded sibling,
-oldest ledger/lesson sealed unchanged. Strict native630/52 groups, WASM three libraries and
-reference/language16/publication10/ledger9+13 pass0;55 chapters/37 APIs/1143 source/1777 render links.
-G1 stays5/18;10open/122sealed defects; ordered binding scope .5b.2d.2 next.
-
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 
 Post-commit handoff first refuses malformed lsof name evidence2. Captured fresh actual census
@@ -322,3 +313,4 @@ relaxed, no verified defect classification added; G1 remains5/18 and defects12op
 | [`stitchcad-changelog-part101.md`](docs/history/stitchcad-changelog-part101.md) | STITCHCAD-G1-0085 | 10 lines, 849 bytes, `sha256:838b6b56…` |
 | [`stitchcad-changelog-part102.md`](docs/history/stitchcad-changelog-part102.md) | STITCHCAD-G1-0086 | 10 lines, 850 bytes, `sha256:ab8d7ec9…` |
 | [`stitchcad-changelog-part103.md`](docs/history/stitchcad-changelog-part103.md) | STITCHCAD-G1-0087 | 14 lines, 1241 bytes, `sha256:af59826f…` |
+| [`stitchcad-changelog-part104.md`](docs/history/stitchcad-changelog-part104.md) | STITCHCAD-G1-0089/0088 | 21 lines, 1708 bytes, `sha256:84e03c0f…` |
