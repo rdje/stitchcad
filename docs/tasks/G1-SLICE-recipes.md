@@ -617,15 +617,15 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 
 ## Exact window5 runner protocol — .4c.h1
 
-[Exact complete record](../history/stitchcad-devnotes-part127.md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part127md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
 
 ## Exact window5 runner receipts
 
-[Exact complete record](../history/stitchcad-devnotes-part127.md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part127md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
 
 ### G1-SLICE.5b.4c.h1
 
-[Exact complete record](../history/stitchcad-devnotes-part127.md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part127md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
 
 
 ## D156 producer profile protocol
@@ -666,19 +666,19 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 
 ### D156 completed primary-profile narrative
 
-[Exact complete record](../history/stitchcad-devnotes-part139.md); 75L/6116B/sha256:6333c858fa01563d69d7a474426b4297fbd31bab7fe370ee60eef2c4d722667e.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part139md); 75L/6116B/sha256:6333c858fa01563d69d7a474426b4297fbd31bab7fe370ee60eef2c4d722667e.
 
 ### G1-SLICE.5b.4c.h2.a
 
-[Exact complete record](../history/stitchcad-devnotes-part128.md); 32L/2528B/sha256:74fd1e0b79c027670c81f28735c31bc335cdfeab58cddd7a141f97eccff13822.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part128md); 32L/2528B/sha256:74fd1e0b79c027670c81f28735c31bc335cdfeab58cddd7a141f97eccff13822.
 
 ## D156 required runner observation
 
-[Exact complete record](../history/stitchcad-devnotes-part129.md); 49L/3668B/sha256:e672a026081f00e89749724b4008f0aa5ef045d9e24a4071a82d39231f8779be.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part129md); 49L/3668B/sha256:e672a026081f00e89749724b4008f0aa5ef045d9e24a4071a82d39231f8779be.
 
 ### G1-SLICE.5b.4c.h2.v
 
-[Exact complete record](../history/stitchcad-devnotes-part129.md); 49L/3668B/sha256:e672a026081f00e89749724b4008f0aa5ef045d9e24a4071a82d39231f8779be.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part129md); 49L/3668B/sha256:e672a026081f00e89749724b4008f0aa5ef045d9e24a4071a82d39231f8779be.
 
 ## D156 standalone producer audit slices
 
@@ -725,12 +725,12 @@ is required before completeness claims. No direct producer is executed with ambi
 
 ### G1-SLICE.5b.4c.h2.b.h
 
-[Exact complete record](../history/stitchcad-devnotes-part133.md); 51L/3952B/sha256:24747ad2686cfb98369fbafc9b43a0011e411f42b5275452ca8797770334a051.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part133md); 51L/3952B/sha256:24747ad2686cfb98369fbafc9b43a0011e411f42b5275452ca8797770334a051.
 
 
 ### G1-SLICE.5b.4c.h2.b.i
 
-[Exact complete record](../history/stitchcad-devnotes-part131.md); 37L/2807B/sha256:5c5f7c600a2fdd3f06d245b34cd3541fb3dccba7e5eb9c2312c30fde74aa1fb7.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part131md); 37L/2807B/sha256:5c5f7c600a2fdd3f06d245b34cd3541fb3dccba7e5eb9c2312c30fde74aa1fb7.
 
 ## Python producer repair slices
 
@@ -767,12 +767,12 @@ is required before completeness claims. No direct producer is executed with ambi
 
 ### G1-SLICE.5b.4c.h2.b.p.h
 
-[Exact complete record](../history/stitchcad-devnotes-part134.md); 24L/1899B/sha256:a6be13d2a8b009a028cca49d7df32ba3051e79f4d6673e4abd38661fae51912c.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part134md); 24L/1899B/sha256:a6be13d2a8b009a028cca49d7df32ba3051e79f4d6673e4abd38661fae51912c.
 
 
 ### G1-SLICE.5b.4c.h2.b.p.a
 
-[Exact complete record](../history/stitchcad-devnotes-part135.md); 26L/2233B/sha256:4c7187e86f54ab23bdebe75c5ec0c75a5c22b83125f27b6f7dc4a77a1fe3c542.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part135md); 26L/2233B/sha256:4c7187e86f54ab23bdebe75c5ec0c75a5c22b83125f27b6f7dc4a77a1fe3c542.
 
 ### Remaining native group ownership
 
@@ -797,7 +797,7 @@ Explicit14 owned paths; Rust diff empty. Hook/brief0/clean precede Ease conversi
 
 ### G1-SLICE.5b.4c.h2.b.p.n.m1
 
-[Exact complete record](../history/stitchcad-devnotes-part136.md); 16L/1326B/sha256:759fad703ee99ec3c62fd3ff137b95033fbc948617d6239094b81a918cb5cbfe.
+[Exact complete record](../history/window6.md#stitchcad-devnotes-part136md); 16L/1326B/sha256:759fad703ee99ec3c62fd3ff137b95033fbc948617d6239094b81a918cb5cbfe.
 
 Session health: focus drift noticed after verified native runs. Finish this bounded unit and
 handoff check before fresh context; no source/native job is left running. Next retention is owned
@@ -838,12 +838,12 @@ verify all six intervals/retrieval again0. The failed attempt is not counted as 
   Work unit STITCHCAD-G1-0125; read each entry's arguments, source/work paths and measurement book.
 
 
-Complete .p.n.h acceptance retained in [part147](../history/stitchcad-devnotes-part147.md).
+Complete .p.n.h acceptance retained in [part147](../history/window6.md#stitchcad-devnotes-part147md).
 
 
 ### G1-SLICE.5b.4c.h2.b.p.n.m2
 
-Complete acceptance retained in [part142](../history/stitchcad-devnotes-part142.md).
+Complete acceptance retained in [part142](../history/window6.md#stitchcad-devnotes-part142md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h2`
   Status: `done`
@@ -858,17 +858,17 @@ Complete acceptance retained in [part142](../history/stitchcad-devnotes-part142.
   native faults and exact source/current debug+release artifacts restored. Owned after .n.h2.
   Work unit STITCHCAD-G1-0127; all five mixed-context sources declared before entry activation.
 
-Complete chart final verification retained in [part149](../history/stitchcad-devnotes-part149.md).
+Complete chart final verification retained in [part149](../history/window6.md#stitchcad-devnotes-part149md).
 
 
 ### G1-SLICE.5b.4c.h2.b.p.n.h2
 
-Complete acceptance retained in [part143](../history/stitchcad-devnotes-part143.md).
+Complete acceptance retained in [part143](../history/window6.md#stitchcad-devnotes-part143md).
 
 
 ### G1-SLICE.5b.4c.h2.b.p.n.u1
 
-Complete acceptance retained in [part140](../history/stitchcad-devnotes-part140.md).
+Complete acceptance retained in [part140](../history/window6.md#stitchcad-devnotes-part140md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f1`
   Status: `done`
@@ -877,28 +877,28 @@ Complete acceptance retained in [part140](../history/stitchcad-devnotes-part140.
   child environment capture; classifier-only behavior retained; exclusive native faults/restoration.
   Work unit STITCHCAD-G1-0128; lexer declares two sources; semantic child env must retain prepared stores.
 
-Complete unit final verification retained in [part150](../history/stitchcad-devnotes-part150.md).
+Complete unit final verification retained in [part150](../history/window6.md#stitchcad-devnotes-part150md).
 
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.d1`
   Status: `done`
-  Goal: fix D157 scope; complete requirements retained in [part158](../history/stitchcad-devnotes-part158.md).
+  Goal: fix D157 scope; complete requirements retained in [part158](../history/window6.md#stitchcad-devnotes-part158md).
 
 
 ### G1-SLICE.5b.4c.h2.b.p.n.f1
 
-Complete acceptance retained in [part141](../history/stitchcad-devnotes-part141.md).
+Complete acceptance retained in [part141](../history/window6.md#stitchcad-devnotes-part141md).
 
 
 ### G1-SLICE.5b.4c.h2.b.p.n.d1
 
-Complete acceptance retained in [part144](../history/stitchcad-devnotes-part144.md).
+Complete acceptance retained in [part144](../history/window6.md#stitchcad-devnotes-part144md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f2`
   Status: `done`
-  Goal: guard recipe/statement producers; complete requirements retained in [part159](../history/stitchcad-devnotes-part159.md).
+  Goal: guard recipe/statement producers; complete requirements retained in [part159](../history/window6.md#stitchcad-devnotes-part159md).
 
-Complete D157 final verification retained in [part151](../history/stitchcad-devnotes-part151.md).
+Complete D157 final verification retained in [part151](../history/window6.md#stitchcad-devnotes-part151md).
 
 Work unit STITCHCAD-G1-0130; .n.f2 owns planned whole-receipt retention and two native entries.
 D158 scope extends .n.f2: repair two stale statement serialization clauses against the actual
@@ -909,7 +909,7 @@ public test markers10; watch the declared count before verified closure.
 
 ### G1-SLICE.5b.4c.h2.b.p.n.f2
 
-Complete acceptance retained in [part145](../history/stitchcad-devnotes-part145.md).
+Complete acceptance retained in [part145](../history/window6.md#stitchcad-devnotes-part145md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f3`
   Status: `done`
@@ -918,7 +918,7 @@ Complete acceptance retained in [part145](../history/stitchcad-devnotes-part145.
   exclusive native faults, exact source and current artifact restored; classifier noise refuses.
   Retain whole completed receipts/reports under fixed caps before growth. P1 next after .n.f2.
 
-Complete recipe/statement final verification retained in [part152](../history/stitchcad-devnotes-part152.md).
+Complete recipe/statement final verification retained in [part152](../history/window6.md#stitchcad-devnotes-part152md).
 
 Work unit STITCHCAD-G1-0131 owns .n.f3, blocking whole-receipt/original-report retention and
 clarifying the prior final census receipt separator (13open/145sealed, rc=0).
@@ -928,31 +928,15 @@ invocation and focused/coupled consumers must stay green. Shell-wide profile aud
 
 ### G1-SLICE.5b.4c.h2.b.p.n.f3
 
-Complete acceptance retained in [part146](../history/stitchcad-devnotes-part146.md).
+Complete acceptance retained in [part146](../history/window6.md#stitchcad-devnotes-part146md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f4`
   Status: `done`
   Goal: normalized-recipe/canonical-recipe native entries with all-source planning and child stores.
-  Acceptance: three normalized sources/one canonical source before reads/output; actual captures,
-  late-source refusals/body faults, classifier behavior and exclusive native/restored full artifacts.
-  Own blocking whole-receipt/report retention under fixed caps before growth; next after .n.f3.
-
-Complete prior verification/ownership retained in [part154](../history/stitchcad-devnotes-part154.md).
-
-### G1-SLICE.5b.4c.h2.b.p.n.f4
-
-Complete acceptance retained in [part148](../history/stitchcad-devnotes-part148.md).
-
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f5`
   Status: `done`
   Goal: canonical/checked-expression native guards, preserved child stores and D160 assertion proof.
-  Acceptance: source/output plans, actual captures/refusals/body faults, canonical coupled selection;
-  failed-body classifiers/noise faults, exclusive natives and exact source/full artifacts restored.
-  Own blocking complete receipt/report retention under fixed caps before growth; P1 after .n.f4.
-
-### G1-SLICE.5b.4c.h2.b.p.n.f5
-
-Complete acceptance/continuity retained in [part153](../history/stitchcad-devnotes-part153.md).
+Complete requirements/acceptance pointers retained in [part162](../history/stitchcad-devnotes-part162.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f6`
   Status: `done`
@@ -960,30 +944,12 @@ Complete acceptance/continuity retained in [part153](../history/stitchcad-devnot
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f7`
   Status: `done`
   Goal: namespace/ordered-name producer guards and D162 source-location assertion proof.
-Complete requirements/acceptance retained in [part160](../history/stitchcad-devnotes-part160.md).
-
+Complete requirements/acceptance retained in [part160](../history/window6.md#stitchcad-devnotes-part160md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f8`
   Status: `done`
   Goal: declaration/exact-name producer guards and D163 current assertion-source proof.
-  Acceptance: all implementation/test sources before reads/output, actual entry/child/classifier
-  controls; exclusive19+9 native reds plus scalar-domain negative red; full native/doc restoration.
-  Work unit STITCHCAD-G1-0136; own complete closed .n.f6/.n.f7 nodes, oldest changelog and original D163 retention under fixed caps.
-  Capture initial/native/doc restoration and negative-construction dispatch with all writes intercepted.
-Final0135 staged doctrine gate:all13 green, rc=0, seventh-staged-gate.log; fixed caps held.
-
-### G1-SLICE.5b.4c.h2.b.p.n.f8
-
-- [x] **ROOT CAUSE** — original actual child-store losses and D163 labelled-expect noise, rc=0;
-  eighth-child-baseline.log/d163-classifier-baseline.log; all source writes/native calls intercepted.
-- [x] **ADDRESSED** — implementation/test/output guards, prepared children/current macro sites;
-  CI17/79body/27prefix/27late/19child/ten classifiers, rc=0, eighth-ci-final.log.
-- [x] **NO REGRESSION** — exclusive19+9 assertion/one negative-construction reds; both modes0,
-  four sources exact/full7/7 native/five doctests restored, rc=0, eighth-native-proof.log;
-  publication43 pass0; source/grammar/API fixed. No fault-output simulator is native evidence.
-- [x] **LOCKSTEP** — D163 fixed; source/live/book agree; D156 open, D164 next.
-- [x] **PROMOTION** — declined: existing guarded-source/actual-body/exclusive-restoration rules.
-- [x] **COMMIT** — complete0136; final ledger/staged gate/hook/brief0/clean before .n.f9.
+Complete requirements/acceptance retained in [part161](../history/stitchcad-devnotes-part161.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f9`
   Status: `todo`
@@ -996,3 +962,28 @@ Initial retention probes1 excluded: corrected full CLI document versus sealed pa
 Final glossary17/coverage9, rc=0; archive367/63working MD/14773L/1079761B, rc=0. Fixed caps held.
 Final0136 ledger9/pointer13, rc=0; selector calibration raises actual body reds79; final CI/publication43 terminal0 consumed.
 Final0136 staged gate all13green, rc=0, eighth-staged-gate-final.log; cached diff0; hook/brief0/clean before next leaf.
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.h3`
+  Status: `done`
+  Goal: STITCHCAD-G1-0137; whole closed .n.f4/.n.f5/.n.f8 nodes and closed book transition retention/window6 before .n.f9, fixed schemas/caps.
+
+### G1-SLICE.5b.4c.h2.b.p.n.h3
+
+- [x] **ROOT CAUSE** — HEAD80f pressure63/64 MD, recipes/PLANNING998L/book40147B;
+  measured rc=0, d156-window6-pressure-baseline.log; blocking next tracked guard records.
+- [x] **ADDRESSED** — deterministic58 full files/133191B, installed source proof58 exact;
+  full367 prior logical bytes +three whole seals/public370 read/materialize, rc=0,
+  d156-window6-final-identity-proof.log; prior controls/caps fixed, raw58 exact retirement/70 routes.
+- [x] **NO REGRESSION** — strict703tests/59groups, WASM three libraries, full28 probe suites;
+  CLI385/370 reads/publication43/CI227paths/286boundaries and79 body reds, rc=0,
+  d156-window6-{full-check,wasm,full-probes}.log; Rust diff empty.
+- [x] **LOCKSTEP** — live/book/task/closed IDs agree; source370/working9 separate; D156/D154/D164 open.
+- [x] **PROMOTION** — declined: existing archive identity/atomic retention/current graph rules.
+- [x] **COMMIT** — complete0137; final gate/hook/brief0/clean, immediate push; exact CI .h3.v next.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.h3.v`
+  Status: `todo`
+  Goal: exact window6 commit job/step CI and post-commit CLI retention controls before .n.f9.
+  Acceptance: full local gates before immediate clean push; observed exact-head doctrine/Rust
+  jobs and every step; retained receipts and post-commit newest catalog refusal.
+Final0137 staged gate all13green/cached diff0, rc=0, d156-window6-final-gate.log.
+Initial capture1 refused the absent fresh fixture before writes; corrected explicit missing_ok=True; excluded from green evidence.

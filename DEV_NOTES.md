@@ -10,6 +10,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — window6 blocking retention
+
+- Validate every archive input path before fixture creation; read-only Git metadata discovers the plan.
+- Verify installed payload and each duplicate against source/reconstruction before exact retirement.
+- Retain full closed nodes and book records; preserve live IDs/status/goal and public query routes.
+- Promotion declined: existing archive identity/atomic retention/current task graph rules.
+
 ## _(2026-10-04 UTC)_ — D163 declaration and exact-name producers
 
 - Restore every mutated profile: declarations require both native and negative doctest rebuilds.
@@ -94,33 +101,36 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 Complete retrieval is query-first: `bash scripts/history_archive.sh list` enumerates every
 logical record; `read <repository-relative-identity>` returns its complete verified bytes.
-[Exact prior navigation](docs/history/stitchcad-devnotes-part137.md) preserves the entire
+[Exact prior navigation](docs/history/window6.md#stitchcad-devnotes-part137md) preserves the entire
 committed table, including earlier window aliases. Current sealed records are listed below.
 The live lesson window remains bounded by200 lines/16384 bytes; all older bytes stay immutable.
 
 | Segment | Coverage | Sealed identity |
 | --- | --- | --- |
-| [`part137`](docs/history/stitchcad-devnotes-part137.md) | prior navigation | 118 lines, 15488 bytes, `sha256:e6bda831…` |
-| [`part138`](docs/history/stitchcad-devnotes-part138.md) | complete D156 continuity | 13 lines, 676 bytes, `sha256:7a73076b…` |
-| [`part139`](docs/history/stitchcad-devnotes-part139.md) | complete D156 continuity | 75 lines, 6116 bytes, `sha256:6333c858…` |
-| [`part140`](docs/history/stitchcad-devnotes-part140.md) | complete native acceptance | 22 lines, 1806 bytes, `sha256:62d32615…` |
-| [`part141`](docs/history/stitchcad-devnotes-part141.md) | complete native acceptance | 23 lines, 1823 bytes, `sha256:567dba9b…` |
-| [`part142`](docs/history/stitchcad-devnotes-part142.md) | complete native continuity | 17 lines, 1438 bytes, `sha256:350a473d…` |
-| [`part143`](docs/history/stitchcad-devnotes-part143.md) | complete native continuity | 25 lines, 1810 bytes, `sha256:998c9c31…` |
-| [`part144`](docs/history/stitchcad-devnotes-part144.md) | complete formula acceptance | 19 lines, 1556 bytes, `sha256:258f0351…` |
-| [`part145`](docs/history/stitchcad-devnotes-part145.md) | complete formula acceptance | 17 lines, 1483 bytes, `sha256:b81b50d5…` |
-| [`part146`](docs/history/stitchcad-devnotes-part146.md) | complete native acceptance | 21 lines, 1722 bytes, `sha256:d8a38048…` |
-| [`part147`](docs/history/stitchcad-devnotes-part147.md) | complete native acceptance | 16 lines, 1336 bytes, `sha256:adc51db8…` |
-| [`part148`](docs/history/stitchcad-devnotes-part148.md) | complete final verification | 18 lines, 1523 bytes, `sha256:4c194fd9…` |
-| [`part149`](docs/history/stitchcad-devnotes-part149.md) | complete final verification | 6 lines, 437 bytes, `sha256:15c91c00…` |
-| [`part150`](docs/history/stitchcad-devnotes-part150.md) | complete final verification | 5 lines, 325 bytes, `sha256:c87058cf…` |
-| [`part151`](docs/history/stitchcad-devnotes-part151.md) | complete final verification | 3 lines, 247 bytes, `sha256:c0456d42…` |
-| [`part152`](docs/history/stitchcad-devnotes-part152.md) | complete final verification | 4 lines, 385 bytes, `sha256:1dd99ec8…` |
-| [`part153`](docs/history/stitchcad-devnotes-part153.md) | complete verification continuity | 20 lines, 1490 bytes, `sha256:bcfac0dc…` |
-| [`part154`](docs/history/stitchcad-devnotes-part154.md) | complete verification continuity | 6 lines, 453 bytes, `sha256:8212f19d…` |
-| [`part155`](docs/history/stitchcad-devnotes-part155.md) | complete verification continuity | 2 lines, 194 bytes, `sha256:d157c24b…` |
-| [`part156`](docs/history/stitchcad-devnotes-part156.md) | complete verification continuity | 14 lines, 1097 bytes, `sha256:514674d9…` |
-| [`part157`](docs/history/stitchcad-devnotes-part157.md) | complete verification continuity | 3 lines, 292 bytes, `sha256:06de0aba…` |
-| [`part158`](docs/history/stitchcad-devnotes-part158.md) | complete closed node | 9 lines, 703 bytes, `sha256:c83978de…` |
-| [`part159`](docs/history/stitchcad-devnotes-part159.md) | complete closed node | 6 lines, 430 bytes, `sha256:cb7a4260…` |
-| [`part160`](docs/history/stitchcad-devnotes-part160.md) | complete closed verification | 33 lines, 2119 bytes, `sha256:677d9f17…` |
+| [`part137`](docs/history/window6.md#stitchcad-devnotes-part137md) | prior navigation | 118 lines, 15488 bytes, `sha256:e6bda831…` |
+| [`part138`](docs/history/window6.md#stitchcad-devnotes-part138md) | complete D156 continuity | 13 lines, 676 bytes, `sha256:7a73076b…` |
+| [`part139`](docs/history/window6.md#stitchcad-devnotes-part139md) | complete D156 continuity | 75 lines, 6116 bytes, `sha256:6333c858…` |
+| [`part140`](docs/history/window6.md#stitchcad-devnotes-part140md) | complete native acceptance | 22 lines, 1806 bytes, `sha256:62d32615…` |
+| [`part141`](docs/history/window6.md#stitchcad-devnotes-part141md) | complete native acceptance | 23 lines, 1823 bytes, `sha256:567dba9b…` |
+| [`part142`](docs/history/window6.md#stitchcad-devnotes-part142md) | complete native continuity | 17 lines, 1438 bytes, `sha256:350a473d…` |
+| [`part143`](docs/history/window6.md#stitchcad-devnotes-part143md) | complete native continuity | 25 lines, 1810 bytes, `sha256:998c9c31…` |
+| [`part144`](docs/history/window6.md#stitchcad-devnotes-part144md) | complete formula acceptance | 19 lines, 1556 bytes, `sha256:258f0351…` |
+| [`part145`](docs/history/window6.md#stitchcad-devnotes-part145md) | complete formula acceptance | 17 lines, 1483 bytes, `sha256:b81b50d5…` |
+| [`part146`](docs/history/window6.md#stitchcad-devnotes-part146md) | complete native acceptance | 21 lines, 1722 bytes, `sha256:d8a38048…` |
+| [`part147`](docs/history/window6.md#stitchcad-devnotes-part147md) | complete native acceptance | 16 lines, 1336 bytes, `sha256:adc51db8…` |
+| [`part148`](docs/history/window6.md#stitchcad-devnotes-part148md) | complete final verification | 18 lines, 1523 bytes, `sha256:4c194fd9…` |
+| [`part149`](docs/history/window6.md#stitchcad-devnotes-part149md) | complete final verification | 6 lines, 437 bytes, `sha256:15c91c00…` |
+| [`part150`](docs/history/window6.md#stitchcad-devnotes-part150md) | complete final verification | 5 lines, 325 bytes, `sha256:c87058cf…` |
+| [`part151`](docs/history/window6.md#stitchcad-devnotes-part151md) | complete final verification | 3 lines, 247 bytes, `sha256:c0456d42…` |
+| [`part152`](docs/history/window6.md#stitchcad-devnotes-part152md) | complete final verification | 4 lines, 385 bytes, `sha256:1dd99ec8…` |
+| [`part153`](docs/history/window6.md#stitchcad-devnotes-part153md) | complete verification continuity | 20 lines, 1490 bytes, `sha256:bcfac0dc…` |
+| [`part154`](docs/history/window6.md#stitchcad-devnotes-part154md) | complete verification continuity | 6 lines, 453 bytes, `sha256:8212f19d…` |
+| [`part155`](docs/history/window6.md#stitchcad-devnotes-part155md) | complete verification continuity | 2 lines, 194 bytes, `sha256:d157c24b…` |
+| [`part156`](docs/history/window6.md#stitchcad-devnotes-part156md) | complete verification continuity | 14 lines, 1097 bytes, `sha256:514674d9…` |
+| [`part157`](docs/history/window6.md#stitchcad-devnotes-part157md) | complete verification continuity | 3 lines, 292 bytes, `sha256:06de0aba…` |
+| [`part158`](docs/history/window6.md#stitchcad-devnotes-part158md) | complete closed node | 9 lines, 703 bytes, `sha256:c83978de…` |
+| [`part159`](docs/history/window6.md#stitchcad-devnotes-part159md) | complete closed node | 6 lines, 430 bytes, `sha256:cb7a4260…` |
+| [`part160`](docs/history/window6.md#stitchcad-devnotes-part160md) | complete closed verification | 33 lines, 2119 bytes, `sha256:677d9f17…` |
+| [`part161`](docs/history/stitchcad-devnotes-part161.md) | complete closed node | 21 lines, 1635 bytes, `sha256:842ed47a…` |
+| [`part162`](docs/history/stitchcad-devnotes-part162.md) | complete closed nodes | 23 lines, 1253 bytes, `sha256:4bc477d4…` |
+| [`part163`](docs/history/stitchcad-devnotes-part163.md) | complete closed book record | 22 lines, 1733 bytes, `sha256:9ecab39c…` |

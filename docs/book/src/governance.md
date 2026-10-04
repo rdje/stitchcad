@@ -360,28 +360,14 @@ Its filename, source revision, manifest, payload and member headings identify wi
 catalog remains unchanged; use its manifest identity when reviewing that window. Watched controls
 check current catalog labels and require this correction for the immutable legacy heading.
 
-The fourth transition captures60 raw sealed records from2bdcd31 before geometry/static-checker
-records exceed the unchanged64-file working bound. A fresh isolated fixture reconstructs all249
-logical records exactly, including the previous three windows, using published read/materialize
-commands and independent Git source bytes. Repeated Git archive/gzip output is identical. The
-installed reader proves all60 originals before the exact working copies retire; all60 maintained
-links move to window4 member headings. Retained source bytes, logical identities, schemas and limits
-remain unchanged. Repeat its independent source comparison with:
+The fourth-window transition and its failed/repaired runner evidence are retained exactly. Read
+that complete historical record with the published archive CLI; the current reader still supports
+source reconstruction for window4:
 
 ```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part163.md
 bash scripts/history_archive.sh prove-source window4
-bash scripts/history_archive.sh read docs/history/stitchcad-defects-part58.md
 ```
-
-At exact pushed9fab7ec, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/37136504411/job/111242008836)
-and all eight steps completed successfully. The [Rust job](https://github.com/rdje/stitchcad/actions/runs/37136504426/job/111242008842)
-failed Clippy1.99 for redundant must_use on the declarations iterator; tests/WASM were skipped.
-G1-SLICE.5b.3c.2b.h1 records both actual verdicts and266 local post-commit CLI controls, including
-newest immutable-catalog refusal. D142 owns the lint repair; D143 owns checkout-local CI stores;
-.h1.v must observe their repaired head. Local success supplies no missing runner/product approval.
-The D142 repair reproduces that failure with an isolated repository-local1.99 toolchain, removes
-only the redundant annotation and passes the same strict native663-test suite. Iterator behavior,
-lint severity and the stable channel stay unchanged; repaired remote evidence still belongs to .h1.v.
 
 The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
 labels are display text: short or mistaken labels do not change the retained identity. Filename text
@@ -486,6 +472,25 @@ across59 result groups, three WASM outputs and all four stores on the checkout v
 published archive controls pass328 actual verdicts, including refusal of a changed committed window5
 catalog. G1-SLICE.5b.4c.h1 records the evidence; D156 defaults then D154 repair remain open.
 
+
+The sixth transition captures58 complete raw files from80f3a299 before the D156 signature repairs.
+An isolated fixture reconstructs368 exact logical records, including the new closed-task seal,
+without captured raw copies or a Git repository. Deterministic archive/gzip bytes and the installed
+source comparison prove all58 originals before only those matching copies retire. Seventy current
+Markdown destinations use window6 member headings. Closed task IDs/status/goal proxies remain live;
+additional whole-node/book seals retain their exact committed bytes. Previous windows and fixed
+schemas/limits remain unchanged. The guarded capture validates every input path and its local fixture
+before archive content reads or output creation; its initial Git metadata discovery is read-only.
+At installation, three new complete seals leave370 logical records and nine working Markdown files.
+
+```bash
+bash scripts/history_archive.sh prove-source window6
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part160.md
+```
+
+The local transition requires full checks/probes/gate before its immediate clean push. Exact-head
+CI job and step observations belong to G1-SLICE.5b.4c.h2.b.p.n.h3.v; local success supplies no
+unobserved runner verdict. D156 and D154 remain open, and grammar/API stay unchanged.
 
 ### Local producer profile
 

@@ -160,6 +160,7 @@ docs/tasks/artifacts/history_archive/capture_window2.py	output	G1-SLICE.5b.4c.h2
 docs/tasks/artifacts/history_archive/capture_window3.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/history_archive/capture_window4.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/history_archive/capture_window5.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/history_archive/capture_window6.py	output	G1-SLICE.5b.4c.h2.b.p.n.h3	Guarded full current-file/fixture plan; readonly Git metadata discovery; immutable capture and public source/read/materialize proof, no install/delete.
 docs/tasks/artifacts/history_archive/history_archive_probes.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/history_archive/run_history_archive_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/history_archive/window_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.

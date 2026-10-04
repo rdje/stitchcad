@@ -108,7 +108,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part108.md`](docs/history/window5.md#stitchcad-changelog-part108md) | G1-0093 wanted signature ledger | 8 lines, 647 bytes, `sha256:88395c24…` |
 | [`stitchcad-changelog-part109.md`](docs/history/window5.md#stitchcad-changelog-part109md) | G1-0094 call lookup ledger | 9 lines, 766 bytes, `sha256:801531e8…` |
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
-| [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
+| [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
+
+## STITCHCAD-G1-0137 - bounded window6 before signature work (leaf `G1-SLICE.5b.4c.h2.b.p.n.h3`)
+
+58 exact80f3a299 files packed;370 logical identities/nine working MD/three whole seals;70 current
+links routed. Prior windows/schemas/caps fixed; source/read/materialization proofs0. Guarded
+capture/closed task proxies/book synchronized. Full checks/gate/probes before immediate push;
+exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; G1 stays5/18.
 
 ## STITCHCAD-G1-0136 - guarded declarations and exact-name proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f8`)
 
@@ -311,12 +318,12 @@ G1 stays5/18,12siblings,12open/143sealed. D156 producer defaults then D154 known
 | [`stitchcad-changelog-part102.md`](docs/history/window5.md#stitchcad-changelog-part102md) | STITCHCAD-G1-0086 | 10 lines, 850 bytes, `sha256:ab8d7ec9…` |
 | [`stitchcad-changelog-part103.md`](docs/history/window5.md#stitchcad-changelog-part103md) | STITCHCAD-G1-0087 | 14 lines, 1241 bytes, `sha256:af59826f…` |
 | [`stitchcad-changelog-part104.md`](docs/history/window5.md#stitchcad-changelog-part104md) | STITCHCAD-G1-0089/0088 | 21 lines, 1708 bytes, `sha256:84e03c0f…` |
-| [`part112`](docs/history/stitchcad-changelog-part112.md) | G1-0104 through G1-0100 | 37 lines, 2713 bytes, `sha256:b9ab801e…` |
+| [`part112`](docs/history/window6.md#stitchcad-changelog-part112md) | G1-0104 through G1-0100 | 37 lines, 2713 bytes, `sha256:b9ab801e…` |
 
-| [`part113`](docs/history/stitchcad-changelog-part113.md) | G1-0109 through G1-0105 | 53 lines, 4156 bytes, `sha256:feeb6e30…` |
-| [`part114`](docs/history/stitchcad-changelog-part114.md) | G1-0110 whole-source preflight | 9 lines, 761 bytes, `sha256:dd7f339a…` |
-| [`part115`](docs/history/stitchcad-changelog-part115.md) | G1-0111 static contract | 11 lines, 955 bytes, `sha256:fde1010c…` |
-| [`part116`](docs/history/stitchcad-changelog-part116.md) | G1-0112 syntax and literal phases | 9 lines, 774 bytes, `sha256:3c01839a…` |
-| [`part117`](docs/history/stitchcad-changelog-part117.md) | complete verification continuity | 12 lines, 1064 bytes, `sha256:86e927ea…` |
-| [`part118`](docs/history/stitchcad-changelog-part118.md) | complete verification continuity | 6 lines, 573 bytes, `sha256:c225854a…` |
-| [`part119`](docs/history/stitchcad-changelog-part119.md) | complete closed verification | 9 lines, 745 bytes, `sha256:833b325f…` |
+| [`part113`](docs/history/window6.md#stitchcad-changelog-part113md) | G1-0109 through G1-0105 | 53 lines, 4156 bytes, `sha256:feeb6e30…` |
+| [`part114`](docs/history/window6.md#stitchcad-changelog-part114md) | G1-0110 whole-source preflight | 9 lines, 761 bytes, `sha256:dd7f339a…` |
+| [`part115`](docs/history/window6.md#stitchcad-changelog-part115md) | G1-0111 static contract | 11 lines, 955 bytes, `sha256:fde1010c…` |
+| [`part116`](docs/history/window6.md#stitchcad-changelog-part116md) | G1-0112 syntax and literal phases | 9 lines, 774 bytes, `sha256:3c01839a…` |
+| [`part117`](docs/history/window6.md#stitchcad-changelog-part117md) | complete verification continuity | 12 lines, 1064 bytes, `sha256:86e927ea…` |
+| [`part118`](docs/history/window6.md#stitchcad-changelog-part118md) | complete verification continuity | 6 lines, 573 bytes, `sha256:c225854a…` |
+| [`part119`](docs/history/window6.md#stitchcad-changelog-part119md) | complete closed verification | 9 lines, 745 bytes, `sha256:833b325f…` |

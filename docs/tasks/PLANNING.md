@@ -956,7 +956,7 @@ provenance body reds stay effective after their actual edge anchor is updated; g
 Product operation identity/full graph/physical geometry remain separately owned.
 
 D141–D153 closure receipts retained exactly in
-[`stitchcad-defects-part72.md`](../history/stitchcad-defects-part72.md). All remain closed.
+[`stitchcad-defects-part72.md`](../history/window6.md#stitchcad-defects-part72md). All remain closed.
 
 - **D154** — whole reference preflight drops known refusal ordinals: actual third-statement missing
   name yields formula_unbound_name with name/origins only, despite genuine static invocation3.
@@ -965,7 +965,7 @@ D141–D153 closure receipts retained exactly in
   P1 immediate before .5b closure/arithmetic; cover syntax/literal/static and no fabricated context.
 
 
-D155 complete closure receipt retained in [part75](../history/stitchcad-defects-part75.md).
+D155 complete closure receipt retained in [part75](../history/window6.md#stitchcad-defects-part75md).
 
 
 - **D156** — ordinary Make producers inherit off-volume package/toolchain/scratch defaults when
@@ -976,19 +976,19 @@ D155 complete closure receipt retained in [part75](../history/stitchcad-defects-
   .h0 commit/.h1 runner observation, before D154 native verification; establish actual durable
   producer fault controls, fix published entry-point defaults and verify native/WASM/G0 locality.
 
-D157–D159 complete closed receipts retained in [part78](../history/stitchcad-defects-part78.md).
+D157–D159 complete closed receipts retained in [part78](../history/window6.md#stitchcad-defects-part78md).
 
-D160–D161 complete closed receipts retained in [part81](../history/stitchcad-defects-part81.md).
+D160–D161 complete closed receipts retained in [part81](../history/window6.md#stitchcad-defects-part81md).
 
 D162 closes at .n.f7: both failed-body panic sites match guarded current test assertion macros;
 custom assertions pass/expect locations refuse. Actual broad/permissive/site faults red;
 exclusive35 native reds/four sources exact/full10/8 targets restored, rc=0. Original committed
-report retained exactly in [part82](../history/stitchcad-defects-part82.md).
+report retained exactly in [part82](../history/window6.md#stitchcad-defects-part82md).
 
 D163 closes at .n.f8: guarded current test macro sites/custom assertions/noise refusals; actual
 classifier/site faults red; exclusive28 assertion/one negative-construction reds, four sources
 exact/full7/7 native and five doctests restored, rc=0. Original committed report retained
-in [part83](../history/stitchcad-defects-part83.md).
+in [part83](../history/window6.md#stitchcad-defects-part83md).
 
 - **D164** — built-in/operator signature classifiers accept assertion-labelled expect noise.
   Actual predicates compiled against independent failed-body location/message, rc=0,
