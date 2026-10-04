@@ -1,7 +1,8 @@
 # Static formula validation evidence
 
-> **Status:** complete reference-instrument static review at G1-SLICE.5b.1. Product libraries implement
-> [syntax, inputs and canonical identity](formula-recipe-inputs.md) and [closed declaration metadata](formula-declarations.md). A valid syntax tree is not yet
+> **Status:** reference static checks and coupled public expression/current-statement review are verified.
+> Product libraries implement [syntax, inputs and canonical identity](formula-recipe-inputs.md),
+> [sourced names](formula-name-scopes.md) and bounded expression/current-statement kind proofs. A valid syntax tree is not yet
 > a statically accepted recipe, a computed garment or a production approval.
 
 Static checking asks whether names and kinds fit the language before computing any value. A
@@ -439,7 +440,7 @@ No static review result approves numerical determinism, a physical garment or a 
 The product namespace foundation .5b.2 accepts immutable typed declarations from canonical inputs,
 validates machine names and consumes declaration pairs before an index can discard collisions.
 [Ordered metadata scopes](formula-name-scopes.md) retain actual prior let annotations and locations;
-complete expression/recipe acceptance remains the next two stages.
+bounded expression and current-statement proofs are implemented; whole-recipe acceptance remains .4.
 Kinds and origins are separate from numeric availability. Reserved names have known kinds even
 without an instance/export context. Geometry declarations refer to prior operation outputs;
 they do not authorize construction. Input adapters must preserve existing source identities and
@@ -461,6 +462,43 @@ no accepted graph prefix. Diagnostics retain actual source spans, known statemen
 canonical identity where available; invalid syntax/input must not acquire invented context.
 Syntax and identity APIs keep their existing scopes. Persisted corrupt-cycle diagnostics remain
 the loader/replay obligation at .5e.4/.7; ordinary forward/self names remain unbound-name refusals.
+
+### Coupled public static review
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/static_coupled_contract.py --mutations
+```
+
+The producer checks13149 shared source cases against independently authored rules, the actual
+book reference and a compiled public Rust adapter. Cargo supplies the current library and dependency
+paths; compiler/link failures never count as failed contract-body assertions. The matrix covers all
+ordered operator kinds, fixed and variadic function signatures (through four arguments), if/within
+roles and kinds, every binding annotation and all five assertion classes, call/child priority,
+ordinary excluded-form names under the unchanged grammar, and runtime-invalid static expressions.
+Both variadic functions retain the255-argument boundary and first excess.
+
+It also checks the complete published17-binding/four-assertion recipe, its13 refusal examples,
+ordered prior/self/forward/colliding names and D148's later-input priority. Reference name-read
+traces and public dependency sources agree with independently authored occurrence order, including
+repetition and untaken branches. Public proofs retain their actual normalized owner and canonical
+identity; each statement is checked before the adapter advances metadata. Unknown measurement/Ease
+records remain borrowed; no missing value is defaulted into a result. Numerical/reference provider
+queries are trapped. Different source capabilities retain their own scopes: reference tuples have
+no canonical product record identity, and initial authored declarations have no recipe ordinal.
+
+Six faults compiled into the real reference and nine compiled into the actual Rust implementation
+must trigger oracle or running-driver body assertions. All four source files are restored byte-exact,
+and the restored Rust artifact must pass again. Two actual copied-annex status faults also refuse,
+preventing D149's obsolete implementation claims from returning.
+
+This shared-case contract verifies the exercised expression and current-statement interfaces.
+Final coupled closure still owns D150: an earlier over-width literal can hide a later syntax error
+in the reference, whereas the public recipe parser completes syntax before literal conversion.
+The immediate repair .5b.3d.d will separate those first phases; the unchanged raw-annotation
+priority remains a syntax obligation. The13149 passing cases do not claim that competing-boundary
+counterexample is repaired. The adapter's
+ordered loop is a diagnostic consumer; the library-owned immutable whole graph remains .5b.4.
+Static proofs still grant no numerical result, physical geometry, export readiness or human approval.
 
 ### Parameter quantization and curve length
 

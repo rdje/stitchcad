@@ -103,6 +103,20 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part106.md`](docs/history/stitchcad-changelog-part106.md) | `STITCHCAD-G1-0091` | 8 lines, 613 bytes, `sha256:407ab4aa…` |
 
+| [`stitchcad-changelog-part107.md`](docs/history/stitchcad-changelog-part107.md) | `STITCHCAD-G1-0092` | 8 lines, 659 bytes, `sha256:63eeecdf…` |
+
+## STITCHCAD-G1-0111 - shared static contract and phase counterexamples (leaf `G1-SLICE.5b.3d.c`)
+
+Independent13149 shared cases compare actual public Rust and reference kinds, complete dimension
+arguments, call/child priority, ordered dependency sources, borrowed owners and worked21/refusal13
+populations. Six reference/nine Rust actual compiled body faults restore all sources/artifact.
+D149's two stale prerequisite clauses are fixed with actual copied-text assertion controls.
+Strict native690/58,WASM3,full reference/publication10 pass, rc=0. Original protocol/lesson/old
+navigation/ledger/closure/report retained exactly; bounds/caps/grammar unchanged.
+Competing early over-width literal versus later syntax exposes D150: reference domain vs public
+syntax refusal. Reproducer is deliberately failing and not yet in the standing runner; owned .3d.d
+immediately before final coupled closure and .4. G1 stays5/18;11open/138sealed; final signoff open.
+
 ## STITCHCAD-G1-0110 - whole-source input before static checking (leaf `G1-SLICE.5b.3d.b`)
 
 Reference preflight completes syntax/input for every identified statement before ordered static
@@ -271,15 +285,6 @@ verify closed alternatives; a branch-position fault is caught despite unchanged 
 Strict656/55 groups/WASM3/reference/language16/book10/ledger9+13/coverage/retention pass0.
 Bounded book/API/live scope and exact prior/oldest records align; G1 stays5/18,11open/124sealed.
 D136 missing call arguments owned for .5b.3c.2a repair next; grammar/prior query code unchanged.
-
-## STITCHCAD-G1-0092 - built-in and selector kind signatures (leaf `G1-SLICE.5b.3b`)
-
-Closed22-name metadata preserves ordered arities, arithmetic T, conditional branches and symbolic
-within classes; selectors create no geometry. Four public contracts/680702 tuples/24 actual rows/
-22 unchanged canonical names and21 actual compiled body reds verify closure and restore source.
-Strict651 tests/55 groups/WASM3/reference/language16/book10/ledger9+13 pass0;14 operator faults
-rerun green. Bounded book/API/live scope and exact prior/oldest retention align; G1 stays5/18,
-10open/124sealed. Next .5b.3c typed contextual checking, then .4 atomic graph acceptance.
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 

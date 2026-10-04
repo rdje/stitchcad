@@ -111,8 +111,9 @@ anchors and reject compiler, expect-only or test-name noise as substitute eviden
 
 The [bounded product checker](#bounded-product-expression-checking) pairs these wanted rows with
 every actual operand kind and its normalized owner. Named envelope refusal precedes ordinary
-unknown calls; errors report the domains actually searched and invent no recipe ordinal. Current
-statement context remains .5b.3c.3, atomic whole-recipe acceptance .4. Numerical execution and
+unknown calls; errors report the domains actually searched and invent no recipe ordinal.
+[Current-statement context](formula-name-scopes.md#check-the-actual-current-statement) is implemented
+at .5b.3c.3b; atomic whole-recipe acceptance remains .4. Numerical execution and
 release approval remain separate work.
 
 ## Reference expression dimension payloads

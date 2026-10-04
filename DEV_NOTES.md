@@ -5,45 +5,21 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
-## _(2026-10-04 UTC)_ — finish input before static checking
+## _(2026-10-04 UTC)_ — couple actual public interfaces
 
-- Retain each parsed operand owner; complete input before publishing prior bindings.
-- Promotion declined (existing phase/source policy).
+- Independently authored shared cases compare real reference and Cargo-current public Rust results.
+- A driver loop checks before metadata advance; it does not grant a library-owned whole graph.
+- Deep prerequisite paragraphs need the same implementation sync as top-level status (D149).
+- Promotion declined (existing source/phase and book lockstep policy).
 
 # Sealed archive — earlier lessons
 
+[Parts1–25: window1 catalog](docs/history/window1.md), with all original identities and retrieval
+aliases. [Exact prior navigation](docs/history/stitchcad-devnotes-part119.md) is retained unchanged.
+The live lesson window is bounded by200 lines/16384 bytes; the archive verifier checks every record.
+
 | Segment | Coverage | Sealed identity |
 | --- | --- | --- |
-| [`part1`](docs/history/window1.md#stitchcad-devnotes-part1md) | 2026-09/bootstrap | 66 lines, 5589 bytes, `sha256:d3b94e9a…` |
-| [`part2`](docs/history/window1.md#stitchcad-devnotes-part2md) | vocabulary | 62 lines, 5915 bytes, `sha256:edcd0808…` |
-| [`part3`](docs/history/window1.md#stitchcad-devnotes-part3md) | two-table/garment fixture | 50 lines, 4723 bytes, `sha256:fcca661d…` |
-| [`part4`](docs/history/window1.md#stitchcad-devnotes-part4md) | leaf split/authority | 42 lines, 3706 bytes, `sha256:c2ac5791…` |
-| [`part5`](docs/history/window1.md#stitchcad-devnotes-part5md) | path refusal/digest | 43 lines, 3977 bytes, `sha256:859ce981…` |
-| [`part6`](docs/history/window1.md#stitchcad-devnotes-part6md) | specification-table oracle | 55 lines, 5359 bytes, `sha256:129d50d8…` |
-| [`part7`](docs/history/window1.md#stitchcad-devnotes-part7md) | 2026-09-30 rule/fixture/refusal | 57 lines, 5120 bytes, `sha256:13fd6c73…` |
-| [`part8`](docs/history/window1.md#stitchcad-devnotes-part8md) | source/i18n census | 35 lines, 3196 bytes, `sha256:04ab285c…` |
-| [`part9`](docs/history/window1.md#stitchcad-devnotes-part9md) | certifying-artifact | 15 lines, 1343 bytes, `sha256:bc7fae65…` |
-| [`part10`](docs/history/window1.md#stitchcad-devnotes-part10md) | shipped reconciliation | 15 lines, 1380 bytes, `sha256:701d33f2…` |
-| [`part11`](docs/history/window1.md#stitchcad-devnotes-part11md) | property-test framework | 15 lines, 1384 bytes, `sha256:ae04eadf…` |
-| [`part12`](docs/history/window1.md#stitchcad-devnotes-part12md) | ontology slice decomposition | 16 lines, 1570 bytes, `sha256:a2f04e3d…` |
-| [`part13`](docs/history/window1.md#stitchcad-devnotes-part13md) | injected identity | 18 lines, 1612 bytes, `sha256:38e83349…` |
-| [`part14`](docs/history/window1.md#stitchcad-devnotes-part14md) | persistent-identity | 24 lines, 2230 bytes, `sha256:2b6aebd3…` |
-| [`part15`](docs/history/window1.md#stitchcad-devnotes-part15md) | structural-piece | 15 lines, 1334 bytes, `sha256:1b362d26…` |
-| [`part16`](docs/history/window1.md#stitchcad-devnotes-part16md) | interval-coverage | 13 lines, 1183 bytes, `sha256:fcf7c475…` |
-| [`part17`](docs/history/window1.md#stitchcad-devnotes-part17md) | separate-pair-member | 12 lines, 1049 bytes, `sha256:140c4c41…` |
-| [`part18`](docs/history/window1.md#stitchcad-devnotes-part18md) | semantic-anchor/profile-binding | 12 lines, 1102 bytes, `sha256:61a13500…` |
-| [`part19`](docs/history/window1.md#stitchcad-devnotes-part19md) | physical-copy identity | 18 lines, 1663 bytes, `sha256:c0e3c442…` |
-| [`part20`](docs/history/window1.md#stitchcad-devnotes-part20md) | physical sewing-interval | 15 lines, 1375 bytes, `sha256:34867dc9…` |
-| [`part21`](docs/history/window1.md#stitchcad-devnotes-part21md) | directed-grainline | 13 lines, 1212 bytes, `sha256:c31c3298…` |
-| [`part22`](docs/history/window1.md#stitchcad-devnotes-part22md) | edge allowance | 13 lines, 1192 bytes, `sha256:1807ae98…` |
-
-The live window below holds the most recent lessons. When it passes its health target (200 lines /
-16 384 bytes) again, the oldest entries are sealed the same way, and the `DESCRIPTOR` rule of
-`run_changelog_ledger_probes.sh` proves the digest afterwards.
-
-| [`part23`](docs/history/window1.md#stitchcad-devnotes-part23md) | tuck/pleat/dart | 25 lines, 2172 bytes, `sha256:ba5ee2a7…` |
-| [`part24`](docs/history/window1.md#stitchcad-devnotes-part24md) | gather | 13 lines, 1160 bytes, `sha256:2a10a04e…` |
-| [`part25`](docs/history/window1.md#stitchcad-devnotes-part25md) | Hem and served-layer lessons | 28 lines, 2416 bytes, `sha256:a95d8c77…` |
 | [`part26`](docs/history/window2.md#stitchcad-devnotes-part26md) | closure/notion lessons | 27 lines, 2385 bytes, `sha256:b4b58e1b…` |
 | [`part27`](docs/history/window2.md#stitchcad-devnotes-part27md) | buttonhole derivation | 13 lines, 1158 bytes, `sha256:319f11b3…` |
 | [`part28`](docs/history/window2.md#stitchcad-devnotes-part28md) | Pocket composition | 14 lines, 1301 bytes, `sha256:764116ee…` |
@@ -135,3 +111,6 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`part114`](docs/history/stitchcad-devnotes-part114.md) | G1-0108 owner | 5 lines, 258 bytes, `sha256:dbc1f357…` |
 | [`part115`](docs/history/stitchcad-devnotes-part115.md) | D147 protocol | 23 lines, 1733 bytes, `sha256:03dec8d6…` |
 | [`part116`](docs/history/stitchcad-devnotes-part116.md) | D147 lesson | 5 lines, 344 bytes, `sha256:07666662…` |
+| [`part117`](docs/history/stitchcad-devnotes-part117.md) | D148 phase protocol | 26 lines, 2028 bytes, `sha256:5871087e…` |
+| [`part118`](docs/history/stitchcad-devnotes-part118.md) | D148 phase lesson | 4 lines, 201 bytes, `sha256:1391aa9d…` |
+| [`part119`](docs/history/stitchcad-devnotes-part119.md) | part1–25 navigation | 32 lines, 3706 bytes, `sha256:9b745a27…` |

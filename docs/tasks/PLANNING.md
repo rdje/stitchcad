@@ -985,11 +985,16 @@ without updating product mapping/fixtures/book. Actual public before-repair body
 144 invalid-class/10 valid-class syntax controls and15 compiled body fault reds verify repair, rc=0.
 Grammar, accepted class names and missing-valid-context runtime family remain unchanged.
 
-D147 closes at G1-SLICE.5b.3d.a: real ordered ambiguity sources/4192 exact payloads,
-16 actual compiled assertion reds, source exact, rc=0. Original pre-repair working report retained
-in [`stitchcad-defects-part66.md`](../history/stitchcad-defects-part66.md); grammar/token unchanged.
+D147/D148 closed: [complete closure receipts](../history/stitchcad-devnotes-part120.md).
 
-D148 closes at G1-SLICE.5b.3d.b: complete syntax/input before any ordered static inference,
-584 controls/11 actual compiled body reds and original parsed owners/spans/ordinals, rc=0.
-Scoped blame/show:62be6f9d introduced the interleaved loop;1972f57 added true locations without
-separating phases. Original report retained in [`stitchcad-defects-part67.md`](../history/stitchcad-defects-part67.md).
+D149 closed in G1-SLICE.5b.3d.c: both deep prerequisite clauses now match available public
+expression/current-statement checks; two actual copied-text assertion reds verify refusal, rc=0.
+Original pre-repair report retained in [`stitchcad-defects-part68.md`](../history/stitchcad-defects-part68.md).
+
+- **D150** — reference syntax_statement converts literals while parsing, so an earlier count
+  340282366920938463463374607431768211456 hides later malformed assertion class/parenthesis:
+  formula_domain versus actual public whole-parser formula_parse. Both compiled product probes
+  and actual reference reproduce; diagnostic rc=0. Raw unbindable annotations still agree (dimension).
+  Root: parse.p_atom performs Fraction/literal conversion before later whole syntax completes.
+  Owner G1-SLICE.5b.3d.d, P1 immediately after .c before coupled closure/.4; split complete
+  syntax/structure, literal input and static phases; document order first, grammar unchanged.

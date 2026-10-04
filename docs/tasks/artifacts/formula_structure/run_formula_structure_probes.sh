@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Reference structural-limit controls and copied-book refusals; no production mutation.
+# Structural/public API controls; compiled faults restore sources byte-exact.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../../.." && pwd)"
 cd "$ROOT"
@@ -57,6 +57,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/geometry_argument_contract.
 python3 -I -B docs/tasks/artifacts/formula_structure/whole_phase_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations
+rustfmt --edition 2021 --check docs/tasks/artifacts/formula_structure/static_coupled_driver.rs
+python3 -I -B docs/tasks/artifacts/formula_structure/static_coupled_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mutations

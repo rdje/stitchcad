@@ -40,7 +40,8 @@ Reference [static signature evidence](formula-static-validation.md) covers the c
 kind/function matrix without executing values; whole-recipe preflight remains pending. Reference namespace/preflight/full static review is verified at G1-SLICE.5b.1;
 product metadata, sourced declarations, initial namespaces, exact reads and ordered metadata scopes are available;
 Operator/built-in/selector signatures, typed wanted catalogs and initial-scope expression proofs
-and current-statement checks are available; whole-recipe acceptance remains .5b.4.
+and current-statement checks are available. The [coupled review](formula-static-validation.md#coupled-public-static-review)
+verifies their public behavior and the actual reference; whole-recipe acceptance remains .5b.4.
 
 ## Remaining proofs
 

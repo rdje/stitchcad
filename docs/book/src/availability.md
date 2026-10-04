@@ -35,7 +35,9 @@ profile or size value. Initial namespaces and ordered name reads are available, 
 [Initial-scope expression checking](annexes/formula-wanted-signatures.md#bounded-product-expression-checking)
 retains complete kinds, refusals and sourced dependencies.
 [Current-statement checking](annexes/formula-name-scopes.md#check-the-actual-current-statement)
-checks actual scoped operands and annotations. Whole-recipe acceptance and execution remain pending.
+checks actual scoped operands and annotations. [Coupled static review](annexes/formula-static-validation.md#coupled-public-static-review)
+verifies those interfaces against independent rules and the actual reference; whole-recipe
+acceptance and execution remain pending.
 
 ## Planned workflows
 

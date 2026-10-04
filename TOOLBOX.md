@@ -255,6 +255,8 @@ Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B --mutations; w
 - statement_owner_contract.py: five Cargo-current compiler guards.
 - static_recipe_contract.py:196 whole/replay/measurement cases/reds.
 - static_review_contract.py, reserved_diagnostic_review.py: D124/D131 recognition/sources.
+- static_coupled_contract.py:13149 cases;6reference/9Rust/2text reds; run alone;
+  source/artifact exact; Cargo-current driver.
 - call_lookup_contract.py:166cases/12 compiled/three loaded-set reds.
 - dimension_payload_contract.py:4023cases/3814payloads/15 reds; D138.
 - geometry_argument_contract.py:97cases/75payloads/12 reds; D140.

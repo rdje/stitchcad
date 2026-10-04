@@ -845,7 +845,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.3c.3b` | `done` | Actual scoped statement kinds/sources verified |
 | done | `G1-SLICE.5b.3d.a` | `done` | D147 actual ambiguity sources verified |
 | done | `G1-SLICE.5b.3d.b` | `done` | D148 complete input before static verified |
-| current | `G1-SLICE.5b.3d` | `in_progress` | Coupled static source/reference/product review |
+| done | `G1-SLICE.5b.3d.c` | `done` | Shared contract verified; D149 fixed, D150 owned |
+| current | `G1-SLICE.5b.3d.d` | `pending` | D150 syntax before literal input |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.

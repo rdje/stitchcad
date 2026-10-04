@@ -680,8 +680,13 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5b.3d`
   Status: `in_progress`
   Goal: coupled full expression static review, normative/reference/product agreement and counterexamples.
-  Prerequisites: .a D147 ambiguity arguments; .b D148 whole-source phase priority.
-  P1 repairs before coupled closure and .4; grammar/token set unchanged.
+  Prerequisites .a/.b D147/D148 done. Shared review .c/0111; D150 .d required before final coupled closure.
+  Review actual public expression/statement/ordered-scope APIs against independently authored
+  rules and actual reference: kinds/tokens/complete dimension roles, sources/priority/recognition,
+  worked recipe, runtime-invalid static cases and bounds. Cargo reports current compiler artifacts.
+  Driver checks before metadata advance; it grants no library-owned whole graph proof (.4).
+  D149 prerequisite-paragraph drift fixed in .c; D150 competing syntax/literal order owned .d.
+  Actual compiled faults must fail oracle body assertions; grammar/token set unchanged.
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5b.3d.a`
   Status: `done`
@@ -694,6 +699,19 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: later syntax/input defects precede earlier static defects; original spans/ordinals,
   bounds and no partial plan; detached statement contract unchanged.
   Verification/Commit: `STITCHCAD-G1-0110`; [exact proof](G1-SLICE-names.md#d148-whole-source-phase-protocol).
+- ID: `G1-SLICE.5b.3d.c`
+  Status: `done`
+  Goal: shared public/reference static case contract and D149 prerequisite status controls.
+  Acceptance: independent kinds/arguments/source order/owners, actual compiled body faults;
+  preserve scoped coverage and explicitly own D150 competing syntax/literal phase discrepancy.
+  Verification/Commit: `STITCHCAD-G1-0111`; [exact proof](G1-SLICE-names.md#shared-static-contract-protocol).
+- ID: `G1-SLICE.5b.3d.d`
+  Status: `pending`
+  Goal: D150 complete whole syntax/structure before literal-input conversion, then static inference.
+  Acceptance: competing earlier bad literal/later syntax agrees with actual public parser; raw
+  header priorities/lexical preflight and detached scopes retained; original owners/locations.
+  P1 immediately after .c, before coupled final closure/.4; grammar/token/bounds unchanged.
+  Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5b.4`
   Status: `pending`
   Goal: validate the whole ordered recipe and construct its immutable typed dependency graph.

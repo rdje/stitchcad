@@ -960,25 +960,34 @@ language/publication/ledger/gates; grammar/results/contracts unchanged. Existing
 
 ### G1-SLICE.5b.3d.b
 
-Work unit STITCHCAD-G1-0110; sourcee6743a9 clean/brief0, no jobs. Canonical5.2.3 requires
-syntax/input before static checks. Actual public recipe parser returns later syntax/formula_parse
-while reference returns earlier unbound/dimension. Scoped blame/show62be6f9d introduced the
-interleaved loop;1972f57 added true locations without phase separation. Documented whole boundary
-before repair. Complete original input first, then reuse parsed tuples for ordered metadata checks.
-Detached validation unchanged; no fabricated owner/context, value query or accepted prefix.
+[Exact protocol/checklist](../history/stitchcad-devnotes-part117.md) retained from3801191.
 
-- [x] **ROOT CAUSE (WHY + WHERE)** — independent whole_phase_contract.py before repair→phase
-  token body assertion (formula_parse wanted, formula_unbound_name actual), rc=1; public actual
-  target/static-coupled-before/probe→formula_parse/statement2, rc=0. Original loop traced/audited.
-- [x] **ADDRESSED (verified)** — whole_phase_contract.py --mutations→584 controls/11 actual
-  compiled body assertion reds, source unchanged, rc=0. Real parse traces prove all input before
-  static/prior binding, one parse per statement, original operand tuple identity/spans/ordinals.
-  Reversed-order fault initially yielded FErr; positive oracle now asserts valid source acceptance.
-- [x] **NO REGRESSION** — affected D139264/13 and D1313624/19 field/body fault suites, rc=0;
-  full structural/reference including90 real source locations→all controls pass, rc=0; publication
-  10/60chapters/62APIs/1211source/1903rendered links, rc=0; ledger9/pointer13→0, rc=0;
+## Shared static contract protocol
+
+### G1-SLICE.5b.3d.c
+
+Work unit STITCHCAD-G1-0111; source3801191 clean/brief0/no jobs. Canonical2–5.2/grammar5–7,
+roadmap4.1/4.2, scoped owners/namespace/signature/refusal/public interfaces and prior probes read.
+Independent shared cases through real reference and Cargo-current public adapter: kinds/tokens,
+complete dimension rows/roles/hints, call-child priority, ordered sources/owners, worked21/refusal13.
+Driver checks each actual statement before metadata advance; it grants no whole-library graph.
+D149 deep prerequisite paragraphs reproduced/owned/corrected; scoped blame e3f6b33/63c0c7db shows
+old status clauses survived2fa9d5d's synchronization. New competing first-phase probe proves D150;
+parent review remains open, immediate .d scheduled before .4. Grammar unchanged.
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — static_coupled_contract.py→13149 independently expected
+  public/reference cases, rc=0; actual copied-annex D149 predicate before repair→body assertion,
+  rc=1; scoped rg/blame identifies both stale clauses. first_phase_contract.py→genuine body
+  assertion reference domain/literal/1 vs public parse/syntax/2, rc=1; D150 .d owns root parse.p_atom.
+- [x] **ADDRESSED (verified)** — coupled producer→6reference/9public Rust actual compiled body
+  reds and2 actual copied-annex body reds, rc=0; all four sources and built artifact restored.
+  E0624/E0061 and draft schema-key mistakes refused as producer failures; inspected public
+  constructors/actual lookup_scope before correction, never counted as fault proof.
+- [x] **NO REGRESSION** — strict make check→690passed/58groups, rc=0; WASM3, rc=0; full
+  structural/reference (including restored coupled faults), rc=0; publication10/60chapters/
+  62APIs/1214source/1907rendered links, rc=0; ledger9/pointer13→0, rc=0;
   make gate→all doctrines green, rc=0; hook repeats at commit.
-- [x] **LOCKSTEP / RETENTION** — four complete HEAD payloads retained exactly; archive294/
-  49working/12281lines/905805decodedB/435796residentB, rc=0; independent10open/137sealed
-  unique/disjoint/complete exceptD18, rc=0; G1 stays5/18, grammar/token/limits unchanged.
-  Canonical/book/live/task/resume align; coupled .3d then full .4 next. Promotion declined.
+- [x] **LOCKSTEP / RETENTION** — five complete HEAD payloads and original D149 working report
+  exact; archive300/55working/12431lines/916956decodedB/446947residentB, rc=0. Independent
+  11open/138sealed unique/disjoint/complete exceptD18, rc=0; book/status/task/resume keep scoped
+  results and D150 gap explicit. G1 stays5/18; caps/windows/grammar fixed; promotion declined.
