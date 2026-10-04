@@ -678,8 +678,22 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: use actual statement operands; all checks precede cursor advance/whole proof.
   Verification/Commit: `STITCHCAD-G1-0108`; [exact proof](G1-SLICE-names.md#current-statement-kind-proof-protocol).
 - ID: `G1-SLICE.5b.3d`
-  Status: `pending`
+  Status: `in_progress`
   Goal: coupled full expression static review, normative/reference/product agreement and counterexamples.
+  Prerequisites: .a D147 ambiguity arguments; .b D148 whole-source phase priority.
+  P1 repairs before coupled closure and .4; grammar/token set unchanged.
+  Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5b.3d.a`
+  Status: `done`
+  Goal: D147 truthful ambiguity arguments for ordered authored pairs and input/let collisions.
+  Acceptance: name/both ordered origins and real available sources; no values or forged indices.
+  Verification/Commit: `STITCHCAD-G1-0109`; [exact proof](G1-SLICE-names.md#d147-ambiguity-argument-protocol).
+- ID: `G1-SLICE.5b.3d.b`
+  Status: `pending`
+  Goal: D148 complete whole-source syntax/input phase before any ordered static inference.
+  Acceptance: later syntax/input defects precede earlier static defects; original spans/ordinals,
+  bounds and no partial plan; detached statement contract unchanged.
+  P1 immediately after .a, before coupled closure and .4.
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5b.4`
   Status: `pending`

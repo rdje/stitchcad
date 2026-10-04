@@ -948,40 +948,28 @@ language/publication/ledger/gates; grammar/results/contracts unchanged. Existing
 
 ### G1-SLICE.5b.3c.3b
 
-Work unit STITCHCAD-G1-0108; source475f2ed clean/brief0, no jobs. Roadmap4.1/4.2, canonical2–5.2,
-grammar/comparisons/classes, name-scope/statement/wanted/static annexes, normalized private statement
-arenas, immutable declarations, current collision guards, bounded expression proof/signatures and
-public contracts reviewed. Interface first: only scope.check_kinds(), no caller-authored statement,
-namespace or ordinal. Scope keeps actual statement borrow at recipe lifetime; proof/errors borrow
-that owner and copied sourced declarations, independent of cursor allocation. The scope itself
-still borrows cursor metadata and cannot survive its mutation. Private helper uses original operands.
-Let checks full RHS then exact declared kind; assert checks left then right then the closed == row.
-All five valid tolerance names remain metadata, with no provider/value/state/domain query. Header
-errors retain real annotation kind/span; assertion errors retain both complete kinds/direct roles,
-all == wanted rows and actual statement span (no invented separator/combined normalized expression).
-Nested errors retain actual operand part, normalized owner/node and existing token. Explicit canonical
-statement/expression factories use those exact owners. Private immutable accepted/error owners retain
-actual ordinal, complete ordered dependencies and no accepted prefix on error. Metadata advance is
-unchanged and separate; unvalidated earlier annotations never grant complete-recipe acceptance.
-Independent6×8 let and5×8×8 assert matrices, child/call/header priority, self/forward/untaken reads,
-ordered real prior sources, source/privacy/lifetime bounds and runtime-invalid static controls.
-Actual compiled body mutations exclusive/exact restoration plus affected18ordered/16expression
-regressions; strict native/WASM/book/reference/ledger/gates. No grammar/token change; .3d/.4 follow.
+[Exact protocol/checklist](../history/stitchcad-devnotes-part113.md) retained from2fa9d5d.
 
-- [x] **ROOT CAUSE (WHY + WHERE)** — git grep check_kinds in original475f2ed ordered scope→no
-  match, rc=1; metadata/call catalogs alone supplied no current-statement proof. Public seven contracts
-  verify48let/320assert pairs plus actual owners/priority/phase limits, rc=0; interface recorded first.
-- [x] **ADDRESSED (verified)** — checked_statement_mutations.py→22actual compiled body reds101,
-  rc=0; three sources exact. Existing ordered18/expression16 actual body reds/source exact, rc=0.
-  Both children, complete roles/kinds/wanted rules, actual ordinal/spans/canonical owners and privacy
-  discriminate; default assertion helper replaces draft panic fixtures without a lint waiver.
-- [x] **NO REGRESSION** — make check strict1.99 fmt/Clippy/tests/docs→690passed/58groups, rc=0;
-  WASM3/full structural reference/publication10/60chapters/62APIs/1211source/1902rendered links, rc=0.
-  statement_owner_contract.py→only E0451 twice/E0515 three times, rc=0; initial E0463 refused and
-  actual Cargo library/dependency metadata inspected before repair. Ledger9/pointer13, rc=0;
-  archive286/41working/12089lines/892892decodedB/422883residentB, rc=0; make gate→all
-  doctrines green, rc=0; hook follows.
-- [x] **LOCKSTEP / RETENTION** — four HEAD payloads byte-exact and independent10open/135sealed
-  unique/disjoint/complete exceptD18, rc=0; book/source/status/API/task/live/resume align, grammar
-  and caps/windows fixed. G1 stays5/18; local proof grants no prior-RHS, whole graph or runtime
-  acceptance. Promotion declined (existing source/phase policy); coupled .3d then full .4 next.
+## D147 ambiguity argument protocol
+
+### G1-SLICE.5b.3d.a
+
+Work unit STITCHCAD-G1-0109; coupled review found reference-only missing arguments. Actual public
+probe uses Cargo-reported library/dependency paths; canonical5.2 requires name/both origins.
+Scoped git blame/show proves ba245998 introduced both argument-less raises; subsequent D131
+repair changed reserved/repeated-binding sources, leaving ambiguity unchanged.
+Case-specific sources documented before repair; pair declaration positions differ from recipe
+ordinals. Detached metadata carries only genuine kind/origin, and recipe spans come from source.
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — actual public probe→ordered origins/name, rc=0; reference
+  new independent producer before repair→exact arguments assertion with empty dictionary, rc=1.
+  Both namespace/static_statement raises omitted FErr arguments; no grammar ambiguity.
+- [x] **ADDRESSED (verified)** — ambiguity_payload_contract.py --mutations→4192 exact payloads/
+  16 actual compiled body assertion reds, source unchanged, rc=0; metadata/runtime traps included.
+- [x] **NO REGRESSION** — full structural reference→all controls pass, rc=0; publication→10pass,
+  60chapters/62APIs/1211source/1903rendered links, rc=0; ledger9/pointer13→0, rc=0;
+  make gate→all doctrines green, rc=0; hook repeats at commit.
+- [x] **LOCKSTEP / RETENTION** — three complete HEAD payloads and original pre-repair working
+  D147 report retained exactly; archive290/45working/12195lines/900350decodedB/430341residentB,
+  rc=0. Independent11open/136sealed unique/disjoint/complete exceptD18, rc=0; G1 stays5/18.
+  Canonical/book/live/task/resume aligned; grammar/token unchanged. D148 next; promotion declined.

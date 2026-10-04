@@ -276,9 +276,36 @@ execution reads are trapped. Nineteen compiled actual field/token/location fault
 assertions; source on disk stays unchanged. D131's delegated decision repairs its argument contract
 without changing grammar or the stable refusal token; independent approval remains unclaimed.
 
+## Ambiguous-name diagnostic sources
+
+Two declarations named `collision`, first a measurement of kind length and then a parameter
+of kind angle, refuse `formula_ambiguous_name`. Arguments retain `name=collision`,
+`origins=(measurement, parameter)`, and both actual kind/origin sources. The ordered pair adapter
+retains declaration positions1 and2; neither becomes a recipe ordinal. Two measurement declarations
+also refuse and retain both equal origins and both distinct positions.
+
+For an input named width followed by `let width:length=missing`, the collision precedes RHS
+name lookup. The prior source retains its input metadata; the attempted source retains the actual
+let name/statement spans and its whole-recipe ordinal when available. A detached dictionary has
+no original declaration position or whole-recipe ordinal to invent. This is diagnostic metadata,
+with no value/state/geometry query. Canonical product sources retain their actual record identities.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/ambiguity_payload_contract.py --mutations
+```
+
+The producer checks4192 exact argument payloads across all nine origins, eight input kinds and
+six bindable annotations, including equal origins and interrupted positions. Sixteen actual faults
+compiled in memory trigger body assertions; tracked source remains unchanged. Numerical execution
+is trapped. The token and accepted grammar remain unchanged.
+
 ## Whole recipe before execution
 
 A recipe must pass static checking in its entirety before its first statement computes a value.
+Whole-source syntax/input validation must precede ordered static inference. The coupled review
+tracks D148: the reference currently interleaves those phases and can report an earlier static
+error before a later syntax error; the public recipe parser already completes syntax first.
+The immediate owned repair is G1-SLICE.5b.3d.b, before whole-graph acceptance.
 For example, with width declared as length:
 
 ```

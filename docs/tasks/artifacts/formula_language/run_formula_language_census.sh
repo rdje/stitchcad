@@ -902,9 +902,21 @@ class Evaluator:
             source["statement_index"] = ordinal
         return source
 
+    def _initial_source(self, kind, origin, declaration_index=None):
+        """Only ordered pair consumption supplies an actual declaration position."""
+        source = {"role": "initial_declaration", "kind": kind, "origin": origin}
+        if declaration_index is not None:
+            source["declaration_index"] = declaration_index
+        return source
+
+    def _ambiguity_arguments(self, name, prior, attempted):
+        """Retain both actual sources in binding order, including equal origins."""
+        return {"name": name, "origins": (prior["origin"], attempted["origin"]),
+                "prior_source": dict(prior), "attempted_source": dict(attempted)}
+
     def namespace(self, declarations):
         """Consume pairs before duplicate declarations can disappear in a dict."""
-        env = {}
+        env, sources = {}, {}
         for declaration_index, (name, entry) in enumerate(declarations, 1):
             self._identifier(name)
             try:
@@ -922,8 +934,11 @@ class Evaluator:
                                                  "origin": origin, "declaration_index": declaration_index}})
             if name in env:
                 raise FErr("formula_ambiguous_name", "`%s` is declared by both %s and %s"
-                           % (name, env[name]["origin"], origin))
+                           % (name, env[name]["origin"], origin),
+                           self._ambiguity_arguments(name, sources[name],
+                                                     self._initial_source(kind, origin, declaration_index)))
             env[name] = entry
+            sources[name] = self._initial_source(kind, origin, declaration_index)
         return env
 
     def _binding_dimension(self, src, name, annotation, expression_kind=None, ordinal=None, offset=0):
@@ -1012,7 +1027,10 @@ class Evaluator:
                         arguments["statement_index"] = ordinal
                     raise FErr("formula_rebinding", "`%s` is bound twice in one recipe" % name, arguments)
                 raise FErr("formula_ambiguous_name", "`%s` is declared by both %s and recipe"
-                           % (name, env[name]["origin"]))
+                           % (name, env[name]["origin"]),
+                           self._ambiguity_arguments(name,
+                               self._initial_source(env[name]["kind"], env[name]["origin"]),
+                               self._recipe_source(src, name, kind, ordinal, offset)))
             got = self.infer(node, env)
             if got != kind:
                 raise self._binding_dimension(src, name, kind, got, ordinal, offset)

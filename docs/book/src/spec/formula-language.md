@@ -289,6 +289,15 @@ The [reference diagnostic controls](../annexes/formula-static-validation.md#rese
 distinguish that scope from whole-recipe checking and canonical product adapters. Two authored
 declarations colliding remain `formula_ambiguous_name`, including two from the same origin.
 
+Ambiguity retains `name` and both `origins` in binding order, including two equal origins.
+Its `prior_source` and `attempted_source` carry the actual kind/origin and source role.
+An initial pair collision can retain each actual one-based `declaration_index` in the supplied
+ordered declarations; that index is not a recipe statement index. A recipe attempt retains its
+actual name/statement spans and, during whole checking, its real statement ordinal. A detached
+metadata dictionary supplies no original declaration position, so none is fabricated. Canonical
+product declarations retain their actual entity/record identities instead of pretending to be
+reference source positions. These arguments inspect metadata only, never numerical values/state.
+
 #### 5.2.2 Call-lookup sources
 
 A call searches a different domain from a data-name read: first the envelope alias table (§5.3),

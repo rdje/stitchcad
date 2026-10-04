@@ -99,6 +99,18 @@ the digests afterwards.
 | [`changelog-part76.md`](docs/history/window4.md#stitchcad-changelog-part76md) | STITCHCAD-G1-0062 | 13 lines, 1068 bytes, `sha256:a0da7975…` |
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+| [`stitchcad-changelog-part105.md`](docs/history/stitchcad-changelog-part105.md) | `STITCHCAD-G1-0090` | 10 lines, 853 bytes, `sha256:723f9852…` |
+
+## STITCHCAD-G1-0109 - truthful ambiguity arguments (leaf `G1-SLICE.5b.3d.a`)
+
+Reference formula_ambiguous_name now retains the name, both origins in binding order and actual
+prior/attempted metadata sources. Ordered initial pairs retain genuine declaration positions;
+recipe attempts retain genuine spans/whole ordinals. Detached dictionaries invent no positions.
+Grammar, stable token, metadata identity and numerical/runtime behavior unchanged.
+Independent4192 exact payloads and16 actual compiled body fault assertions verify the repair;
+full reference regression and publication10 pass, rc=0. Three original HEAD records and D147's
+pre-repair report retained exactly. G1 stays5/18;11open/136sealed; D148 phase repair next.
+
 ## STITCHCAD-G1-0108 - actual scoped statement kind proofs (leaf `G1-SLICE.5b.3c.3b`)
 
 Only current scope checks its original let/assert operands and genuine ordinal. Let RHS must match
@@ -265,17 +277,6 @@ review status to reflect implemented metadata and precise pending expression/gra
 Static4032 cases/14 actual reds, structure/language16/publication10/ledger9+13/coverage/retention
 pass0; grammar unchanged. Exact prior/oldest records retained; G1 stays5/18,10open/124sealed.
 Next .5b.3b built-in/selector signatures.
-
-## STITCHCAD-G1-0090 - closed formula operator kind signatures (leaf `G1-SLICE.5b.3a`)
-
-Pure unary/binary metadata preserves every arithmetic kind rule, directed quotient, commutative
-product and exact angle×length hint. Four contracts check656 kind cases and actual normative rows;
-7 unary/71 binary cases accepted,17 products/14 quotients/2 hints, all12 canonical symbols match
-unchanged serialization. Fourteen actual compiled body reds restore source exactly. Numeric values,
-contextual errors and whole expression/recipe acceptance remain later owners. Book/API/live/task
-scope align; exact prior/oldest records retained. Strict native647/54 groups/WASM three libraries,
-reference/language16/publication10/ledger9+13 pass0;57 chapters/40 APIs/1161 source/1811 render links.
-G1 stays5/18;10open/122sealed; built-in/selector signatures .5b.3b next.
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 

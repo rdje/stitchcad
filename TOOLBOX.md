@@ -58,7 +58,7 @@ because predicate P is false" before writing a single line of fix.
 | feature-matrix probe suite | does that census still NOTICE a dropped non-goal, an uncited ontology clause, an undeclared diagnostic, a prose gate? | `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_probes.sh` → `probes: N pass / M fail` |
 | standards census | is any external standard cited anywhere in the book without a registered role, a status from the closed vocabulary and a named owner? | `bash docs/tasks/artifacts/standards/run_standards_census.sh` → `standards census: N registered / M designations used / 0 failure(s)`, plus a per-designation list of where it is used |
 | standards probe suite | does that census still NOTICE a smuggled citation, an invented status, an ownerless claim, a bare `read-in-repo`? | `bash docs/tasks/artifacts/standards/run_standards_probes.sh` → `probes: N pass / M fail` |
-| changelog-ledger probes | is the changelog a ledger — live window in commit order, nothing both live and sealed, every sealed segment's sha256 and line count true, coverage and pointer claims closed? The digest rule runs over **every** logical history segment (raw and packed), so a non-changelog rollover (the dev-notes archive) is watched too; coverage and pointer stay changelog-scoped, which is defect D40 and `SPINE.19`'s | `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` → `probes: N pass / M fail`; the pending entry is derived from `git diff HEAD`, and `LEDGER_PENDING=<id>` declares it explicitly if the tree cannot |
+| changelog-ledger probes | is the changelog a ledger — live window in commit order, nothing both live and sealed, every sealed segment's sha256 and line count true, coverage and pointer claims closed? The digest rule runs over **every** logical history segment (raw and packed), so a non-changelog rollover (the dev-notes archive) is watched too; coverage and pointer stay changelog-scoped, which is defect D40 and `SPINE.19`'s | `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` → `probes: N pass / M fail`; pending entries derive from `git diff HEAD`; `LEDGER_PENDING=<id>` declares an otherwise unidentifiable entry |
 | fixture derivation | does the reference skirt still agree with itself — every §4 formula evaluating to its published number, all four closure checks closing, every piece accounted for by a span or a declared non-sewn attachment, §12's count matching §6's list, and §4's band width describing the same construction as §6's band pieces? (defects D27, D33) | `bash docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh` → `fixture derivation: N derived rows / M closure checks / K pieces / 0 mismatch(es)`; `FIXTURE_CHAPTER=<path>` points it at another copy |
 | fixture derivation probe suite | does that instrument still NOTICE a faced two-piece band, an unaccounted piece, a wrong piece count, an edited formula, an undeclared token, a falsified closure, a changed constant? | `bash docs/tasks/artifacts/reference_fixture/run_fixture_probes.sh` → `probes: N pass / M fail` |
 | glossary probe suite | does the census still NOTICE a duplicate token, an invented clause, a lost ⚠, an undeclared token, a drifted index? | `bash docs/tasks/artifacts/glossary/run_glossary_probes.sh` → `probes: N pass / M fail` |
@@ -103,7 +103,7 @@ coreutils ahead of BSD userland, so `stat -f %m` (BSD mtime) means "filesystem s
 History: `bash scripts/history_archive.sh verify` checks full-file identities and
 resident/decoded bounds; `list`, `read docs/history/<basename>` and `materialize target/<fresh-dir>`
 recover exact records without Git. `prove-source window1` separately compares the
-capture against its named Git snapshot when available. Calibrated refusals:
+capture against its named Git snapshot when available. Refusal controls:
 `bash scripts/check_archive_retention.sh --self-test` (Python 3.9+ standard library; no packages).
 
 Lexer guards: `bash docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh`
@@ -231,12 +231,12 @@ compiled actual assertion reds/exact restore; run alone. D95 closes; D83 review 
 
 Retained-window CLI controls: `python3 -I -B docs/tasks/artifacts/history_archive/window_contract.py`
 checks every listed/read/materialized logical record and newest-window digest/member/catalog
-refusals plus cross-window collision. The archive probe runner watches it; no source Git is needed
+refusals plus cross-window collision. Watched by the archive runner; no source Git needed
 for retrieval. Newest committed catalog edits are refused after the recording commit. Capture tool
 `capture_window4.py` freezes2bdcd31 in target/ only; labels are independently checked, including D141.
 
 Ledger target controls: `python3 -I -B docs/tasks/artifacts/changelog/ledger_pointer_contract.py`
-checks13 actual POINTER verdicts; the ledger runner watches them.
+checks13 POINTER verdicts (watched).
 `ledger_pointer_mutations.py` in that directory requires four actual assertion reds and exact source
 restoration. Run mutations exclusively: they temporarily edit the checker.
 
@@ -244,11 +244,12 @@ Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py
  target/artifact_cleanup_audit/<run>; apply the same run with apply. Safety/exclusions:
 docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
 
-Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B, --mutations; watched.
+Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B --mutations; watched.
 
 - static_signature_contract.py:4032 kind/hint cases/14 reds; values trapped.
-- reference_locator_contract.py:87positions/2 reds; D144.
+- reference_locator_contract.py:89positions/2 reds; D144.
 - static_namespace_contract.py:1139cases/13 reds.
+- ambiguity_payload_contract.py:4192payloads/16 reds; D147.
 - header_dimension_contract.py:264cases/232payloads/13 reds; D139.
 - statement_owner_contract.py: five Cargo-current compiler guards.
 - static_recipe_contract.py:196 whole/replay/measurement cases/reds.
@@ -260,10 +261,10 @@ Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B, --mutations; 
 - origin_value_contract.py: origin/context reads.
 - provenance_contract.py: contribution sources;26 body reds.
 
-Product faults: same directory; run alone; compiled body reds/exact restore.
+Product faults: same directory; exclusive; compiled body reds/exact restore.
 semantic_mutations.py, declaration_mutations.py, namespace_mutations.py, name_read_mutations.py,
 ordered_name_mutations.py, operator_signature_mutations.py, builtin_signature_mutations.py,
 wanted_signature_mutations.py, call_lookup_mutations.py, checked_expression_mutations.py,
 checked_statement_mutations.py.
 
-CI stores: scripts/ci_environment.py prepare/verify; docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh verifies effective paths/guards/step order.
+CI stores: scripts/ci_environment.py prepare/verify; docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh checks paths/guards/step order.

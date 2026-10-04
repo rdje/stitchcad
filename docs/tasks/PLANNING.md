@@ -984,3 +984,14 @@ rule/source spans/genuine recipe ordinal. Original report retained exactly in
 without updating product mapping/fixtures/book. Actual public before-repair body assertion red101,
 144 invalid-class/10 valid-class syntax controls and15 compiled body fault reds verify repair, rc=0.
 Grammar, accepted class names and missing-valid-context runtime family remain unchanged.
+
+D147 closes at G1-SLICE.5b.3d.a: real ordered ambiguity sources/4192 exact payloads,
+16 actual compiled assertion reds, source exact, rc=0. Original pre-repair working report retained
+in [`stitchcad-defects-part66.md`](../history/stitchcad-defects-part66.md); grammar/token unchanged.
+
+- **D148** — reference preflight interleaves statement syntax/input and static inference;
+  let saved:length=missing followed by assert late:eps_chord=1 mm==1 mm returns unbound_name,
+  and earlier length=1.0 returns dimension. Canonical5.2.3 says syntax/input first; actual public
+  whole parser refuses later statement2 with formula_parse (target/static-coupled-before, rc=0).
+  Root: preflight calls _static_statement inside its boundary loop instead of completing parsing.
+  Owner G1-SLICE.5b.3d.b, P1 after .a before coupled closure/full graph; fix phase/priority controls.
