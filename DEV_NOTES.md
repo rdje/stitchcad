@@ -143,3 +143,12 @@ D165 reproduces in actual literal/normalized-expression predicates: labelled exp
 message-prefix classifiers; strict controls/current guarded test assertion sites belong to .n.f3.r.
 Director ruling2026-10-04:400 commits between pushes with earlier pushes only explicitly requested;
 .h3.v.c aligns the former automatic exception and checker before continuing product proof repairs.
+
+Director cadence — STITCHCAD-G1-0139 (.h3.v.c):400 unpushed commits for all ordinary pushes;
+explicit request alone permits an earlier push. Remove derived exceptional-path triggers;
+retain read-only historical comparison and full pre-push/job-level CI workflow. D166 actual count
+failure27 previously became zero/no-push; now count failures/malformed counts refuse2. The guarded
+new cadence control runs actual Bash checker bodies:19 boundary/refusal/real-Git verdicts/four
+body faults. Counts are simulated only in boundary/failure arms; integration metadata is real,
+read-only, with no fixture repository/source writes. Closed complete .h3.v node/receipt intervals
+are retained under fixed caps; policy code has local evidence until the next authorized push.

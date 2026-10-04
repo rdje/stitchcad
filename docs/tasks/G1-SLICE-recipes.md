@@ -968,29 +968,29 @@ Final0136 staged gate all13green, rc=0, eighth-staged-gate-final.log; cached dif
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3.v`
   Status: `done`
-  Goal: exact window6 commit job/step CI and post-commit CLI retention controls before cadence/D165 repairs.
-  Own blocking whole closed .n.h3/D162–D163/oldest ledger retention and any reproduced classifier follow-up records.
-  Work unit STITCHCAD-G1-0138; keep complete committed intervals/IDs and fixed limits.
-  Acceptance: full local gates before immediate clean push; observed exact-head doctrine/Rust
-  jobs and every step; retained receipts and post-commit newest catalog refusal.
-Final0137 staged gate all13green/cached diff0, rc=0, d156-window6-final-gate.log.
-Initial capture1 refused the absent fresh fixture before writes; corrected explicit missing_ok=True; excluded from green evidence.
+  Goal: exact window6 job/step evidence; full requirements in [part165](../history/stitchcad-devnotes-part165.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f3.r`
   Status: `todo`
-  Goal: D165 literal/normalized-expression assertion-source repair, P1 immediately after .n.h3.v.
+  Goal: D165 literal/normalized-expression assertion-source repair, P1 immediately after .n.h3.v.c.
   Acceptance: guarded test sources/current macro sites/custom assertions/noise refusals; actual
   classifier/site body reds, exclusive13+17 native reds, exact source/full6/8 targets restored.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3.v.c`
-  Status: `todo`
+  Status: `done`
   Goal: director2026-10-04 supersedes immediate push exceptions:400 commits unless explicitly requested.
   Acceptance: align COMMIT/check_push_due/public docs and boundary/refusal controls before .n.f3.r.
-Final0138 exact c455b93 doctrine37230288647/job111518342851 all8steps and Rust37230288711/job111518343151 all11steps success, rc=0.
-GET actions/runs/<id>/jobs and actions/jobs/<id>/logs; actual Rust1.99/703tests/59groups/WASM3/four checkout-local stores; no aggregate inference.
-Post-commit window_contract.py:386 controls/370 reads/newest committed-catalog refusal, rc=0, d156-window6-postcommit-cli.log.
-Four whole c455b93 intervals retained; source/public byte identity and fixed caps verified before commit.
-Director2026-10-04:400-commit cadence applies to all future pushes unless explicitly requested; .h3.v.c updates the former exception next, then .n.f3.r/D165.
-Final0138 four intervals/public374/prior370 byte identity, rc=0, d156-window6-ci-retention-proof.log; initial tar directory-membership probe1 excluded.
-Final0138 archive CLI390/publication43/coverage9 and defect14open/150sealed, rc=0; corresponding ci-{archive-probes,publication,coverage,census}.log.
-Final0138 ledger9/pointer13/staged gate all13green/cached diff0, rc=0; ci-{ledger,staged-gate}.log; no pending jobs.
+  STITCHCAD-G1-0139 also owns guarded cadence controls/CI-suite registration and census/book sync.
+  Own blocking whole closed .h3.v node/receipt retention under fixed caps before growing acceptance.
+Complete0138 final receipts in [part166](../history/stitchcad-devnotes-part166.md).
+
+### G1-SLICE.5b.4c.h2.b.p.n.h3.v.c
+
+- [x] **ROOT CAUSE** — former CI/doctrine exception conflicts with director400 ruling; D166 actual failed-count27 becomes0/no-push, rc=0, push-cadence-count-failure-baseline.log.
+- [x] **ADDRESSED** — exception removed; Git/count refusals2; 19 boundary/refusal/real-Git controls and four actual body reds pass, rc=0, push-cadence-controls.log; D166 sealed85.
+- [x] **NO REGRESSION** — full environment suite/Python17/79 body reds/census228 and publication43/archiveCLI393/377/coverage9, rc=0, push-cadence-{environment-probes,publication,archive-probes,coverage}.log.
+- [x] **LOCKSTEP** — COMMIT/checker/Make/help/toolbox/book/live/task agree; historical SPINE policy superseded.
+- [x] **PROMOTION** — declined: director ruling lives in COMMIT and this leaf; no inferred policy.
+- [x] **COMMIT** — complete0139; clear brief/clean; no early push under new400 rule.
+Final0139 two exact90766 intervals/full original D166 report/public377/prior374 and14open/151sealed, rc=0, push-cadence-retention-proof.log; fixed caps unchanged.
+Final0139 ledger9/pointer13/staged gate all13green/cached diff0, rc=0, push-cadence-{ledger,staged-gate}.log; hook/brief/clean follow; no push below400.

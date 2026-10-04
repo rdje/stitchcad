@@ -16,7 +16,7 @@ help:
 	@echo "make bootstrap       - first-time project bootstrap"
 	@echo "make update-scaffold - pull the latest bedrock spine (set URL=<bedrock-repo>)"
 	@echo "make wasm            - the wasm-viewer smoketest: build sc-units + sc-core + sc-measure for wasm32-unknown-unknown"
-	@echo "make push-due        - is an exceptional push owed? (CI/doctrine paths changed since origin)"
+	@echo "make push-due        - has the 400-commit push cadence been reached?"
 	@echo "make probes          - run every probe suite under docs/tasks/artifacts/ (scratch on this volume)"
 
 gate:
@@ -46,8 +46,7 @@ wasm:
 	$(LOCAL_RUN) cargo build --target wasm32-unknown-unknown -p sc-units -p sc-core -p sc-measure
 	@echo "wasm-viewer smoketest: sc-units + sc-core + sc-measure build for wasm32-unknown-unknown"
 
-# Is an exceptional push owed? CI and doctrine changes are unverified until a runner executes them,
-# so they push immediately regardless of the 400-commit cadence (COMMIT.md -> Push cadence).
+# Derive the 400-commit cadence; earlier pushes require an explicit director request.
 # Reports and never fails the build: exit 1 means "a push is due", not "an error occurred".
 push-due:
 	-scripts/check_push_due.sh

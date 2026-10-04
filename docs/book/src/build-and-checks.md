@@ -75,8 +75,18 @@ read-only host executables; toolchains/packages and project outputs use the guar
 | `hooks` | Activate this repository's Git hooks |
 | `bootstrap` | Run the repository bootstrap |
 | `update-scaffold` | Run the scaffold updater with the supplied URL |
-| `push-due` | Report the exceptional-push/cadence verdict |
+| `push-due` | Report whether 400 unpushed commits are reached |
 | `help` | Print the target list |
+
+Pushes follow the director2026-10-04 ruling:400 unpushed commits, with an earlier push only
+by explicit request. CI/doctrine/hook changes have no automatic exception. The read-only
+checker exits0 below cadence,1 when due,2 if Git metadata/count cannot be verified. It never pushes;
+Make prints the verdict while deliberately ignoring that diagnostic exit status. Use
+`PUSH_DUE_BASE=<revision>` for a historical comparison. Run full checks/gate/probes before a push,
+then inspect the exact commit's CI jobs and every step; local checks supply no runner verdict.
+Cadence controls run in the existing environment probe suite:19 verdicts and four actual checker-body
+faults. Boundary/failure counts are simulated; two integrations use real Git counts, including a
+historical comparison containing formerly exceptional paths. No source or Git metadata is mutated.
 
 A refusal exits2 without executing a child; a running child retains its exit status.
 For example, CARGO_HOME=crates/cache refuses as a source-tree store, while an ambient external

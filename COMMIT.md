@@ -110,19 +110,18 @@ apply to code changes.
   last slice committed. The remote never receives a partial unit of work.
 - Before pushing, run the full gate, not the focused checks: `make check`, `make gate`,
   `make probes` (session directive §16 — focused checks per commit, full CI before a push).
-- **Exception — CI and doctrine changes push immediately, cadence notwithstanding.** A commit that
-  touches `.github/workflows/`, a `scripts/check_*.sh` doctrine check, the `.doctrine/` seams those
-  checks read, or `.githooks/`, is *unverified until a runner executes it*: layer E4 is the
-  un-bypassable backstop, and a gate that has only ever run on one developer machine has not been
-  verified at all. Push as soon as the slice is committed, then record the **observed** CI verdict in
-  the owning leaf — never before observing it. Derive whether one is owed instead of remembering it:
+- **No automatic exceptions.** Director ruling 2026-10-04 supersedes the former immediate-push
+  exception for CI, doctrine and hook changes. Every ordinary push waits for **400 unpushed commits**;
+  an earlier push requires an explicit director request. Such changes carry local verification until
+  the next authorized push; never claim an unobserved runner verdict.
+- Derive whether the cadence is reached:
 
   ```bash
-  make push-due      # diagnostic report; Make intentionally ignores the checker's nonzero status
-  bash scripts/check_push_due.sh  # machine verdict: 0 = none due, 1 = due, 2 = refused
+  make push-due      # report only; Make intentionally ignores the checker's nonzero status
+  bash scripts/check_push_due.sh  # 0 = below cadence, 1 = due, 2 = comparison refused
   ```
 
-  **Observe the verdict at job level, not run level.** A run's aggregate status can lag its own jobs: measured
+- **Observe the verdict at job level, not run level.** A run's aggregate status can lag its own jobs: measured
   on `head_sha=3d9f2be`, the `rust` run reported `in_progress` for about eleven minutes while its only job
   `check` had already `completed / success` on every step. A session that polls only
   `/actions/runs?head_sha=<sha>` concludes "still running" and either waits or, worse, records nothing. Query

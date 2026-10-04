@@ -300,6 +300,9 @@ mechanically-enforced form:
   Verification: recorded below — three arms re-run against the derived set.
   Commit: `STITCHCAD-SPINE-0018`
 
+SPINE.17–.18 immediate-push policy is superseded by director2026-10-04:400 commits unless explicitly requested.
+G1-SLICE.5b.4c.h2.b.p.n.h3.v.c records the replacement checker and controls. Earlier receipts remain historical.
+
 - ID: `SPINE.19`
   Status: `pending` (created by `G0-CONTRACT.4b`, which performed the first non-changelog rollover and
   found the archive verifier hardcoded to one ledger — defect **D40**; extended by **D46**, the defect census

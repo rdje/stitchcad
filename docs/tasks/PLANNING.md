@@ -993,5 +993,8 @@ D162–D163 complete closure receipts retained in [part84](../history/stitchcad-
   Both actual predicates compiled against independent failed-body expect location/message return
   true, rc=0, target/d165-classifier-baseline.log; no native/source writes. Root: message-prefix
   heuristic and non-strict controls; impact false assertion proof. Own .n.f3.r in G1-SLICE,
-  P1 immediately after .n.h3.v before new signatures; guarded current test macro sites, strict
+  P1 immediately after .n.h3.v.c before new signatures; guarded current test macro sites, strict
   classifier/site faults, exclusive13+17 native reds and exact source/full target restoration.
+
+D166 closes at .h3.v.c: Git count failures/malformed counts refuse2; 19 controls/four actual body reds pass0.
+Original report retained in [part85](../history/stitchcad-defects-part85.md); no source/Git mutation in controls.

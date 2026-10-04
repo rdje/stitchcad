@@ -110,6 +110,12 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0139 - honor400 push cadence (leaf `G1-SLICE.5b.4c.h2.b.p.n.h3.v.c`)
+
+Remove automatic early-push exceptions by director ruling; align checker/Make/help/book/workflow.
+D166 failed count now refuses2; 19 controls/four actual body reds pass0; no Git/source mutation.
+Whole closed runner records retained; local verification precedes D165 normalization proof repair.
+
 ## STITCHCAD-G1-0138 - observed window6 CI (leaf `G1-SLICE.5b.4c.h2.b.p.n.h3.v`)
 
 Exact c455b93 doctrine8/Rust11 steps success; actual703tests/59groups/WASM3/local stores.
