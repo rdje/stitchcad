@@ -996,5 +996,5 @@ Original report retained exactly in [part87](../history/stitchcad-defects-part87
 
 D168 closes at .n.f9: remove stale totals/describe catalogs; Git/native5/5 and publication43, rc=0. Original pre-repair report in [part89](../history/stitchcad-defects-part89.md).
 
-- **D169** — wanted-signature/call-lookup predicates accept labelled-expect body noise; actual AST baseline target/d169-classifier-baseline.log, rc=0; no native/writes.
-  Root prefix heuristic; impact false assertion proof. Own G1-SLICE.5b.4c.h2.b.p.n.f10, P1 next; all source/test/output plans, strict classifier/actual child controls, exclusive19+18 reds/full restored targets.
+D169 closes at .n.f10: all guarded test/implementation paths, strict111 body controls and37 native macro reds/five sources exact/full5+5/5 restored, rc=0.
+Original report retained exactly in [part90](../history/stitchcad-defects-part90.md).

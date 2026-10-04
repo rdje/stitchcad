@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0143 - guarded wanted and call assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f10`)
+
+Guard all implementation/test/output paths; preserve prepared stores and complete native target argv.
+Strict controls17/111 body reds/31 prefixes/late refusals/23 child cases/16 classifiers pass0.
+Native19+18 macro reds/five sources exact/full5+5/5 restored0; D169 fixed, six native entries remain.
+Retain three whole committed records/prior388 exact/public391; grammar/API and400 cadence unchanged.
+
 ## STITCHCAD-G1-0142 - guarded signature assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f9`)
 
 Guard implementation/test/output and preserve child stores; current assertion sites refuse expect labels.
@@ -254,12 +261,7 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
 - Source/read/materialize327/hash/line/byte/LF proof0; all28 prior retained/control files unchanged.
 - Task headings/IDs and active requirements stay live; no code/grammar/cap change. Chart guards next.
 
-## STITCHCAD-G1-0123 - guarded Ease native entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.m1`)
-
-- Both Ease diagnostics adopt shared source/output/store planning before writes or children.
-- Runtime17/body reds9/three actual captures/three late-source refusals; direct absent-export
-  Ease7/set10 assertion reds, source/current artifacts restored13/14pass; existing profiles/book green.
-- No Rust API/grammar change; D156 remains open. Bounded continuity precedes the next native group.
+| [`part125`](docs/history/stitchcad-changelog-part125.md) | G1-0123 Ease guards | 6 lines, 479 bytes, `sha256:a51ba574…` |
 
 | [`part124`](docs/history/stitchcad-changelog-part124.md) | G1-0122/0121 | 21 lines, 1470 bytes, `sha256:8fa452b9…` |
 

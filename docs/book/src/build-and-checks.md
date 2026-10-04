@@ -188,15 +188,21 @@ prepared child stores and rebuild complete restored targets. Their35 compiled fa
 reds, with four Rust sources exact and both full five-test targets restored. Classifier-only modes
 check anchors/noise without native dispatch; custom messages pass and labelled expects refuse.
 
-Standing controls cover17 runtime cases and ninety-nine actual body faults, including twenty-nine real
+Wanted-signature and call-lookup entries use the same implementation/test/output guards and current
+assertion-site proof. Wanted declares both test sources and preserves its joint target order in fault
+and restoration calls; actual child controls refuse either target's omission. Their37 compiled faults
+are macro-site reds, five Rust sources remain exact, and full wanted five-plus-five/call five-test
+targets pass after restoration. Prepared stores and classifier-only behavior are retained.
+
+Standing controls cover17 runtime cases and111 actual body faults, including thirty-one real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All twenty-nine entry captures also refuse a late missing source before
+12 membership tests passing. All thirty-one entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
-Twenty-one native-child capture cases execute actual entries with custom local stores,
+Twenty-three native-child capture cases execute actual entries with custom local stores,
 intercepting every source/output write and initial/restoration child calls. The declaration entry
 also captures negative-construction and native/doc restoration calls. The captures check actual
 arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing

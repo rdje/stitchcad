@@ -178,3 +178,12 @@ Old native-log replay1 was excluded: actual directories had zero logs; fresh nat
 current evidence. D168 stale four-contract totals came from74e8648 adding fifth wanted tests to
 both targets; remove totals and describe verified catalogs. D169 future sibling baseline admits
 labelled expects too; .n.f10 owns joint wanted-target argv and source guards, P1 next.
+
+Wanted/call guards — STITCHCAD-G1-0143 (.n.f10): D169 actual prefix classifiers accepted
+labelled expects. Guard both wanted test sources and the call test source alongside implementations
+before reads/writes; retain prepared stores and current assertion-site evidence. Actual child capture
+compares the complete dynamic native argv, including both wanted targets in order, for fault and
+restoration calls; actual omission of either second-target pair refuses. Controls111 body reds/
+31 entry+late refusals/23 derived child cases/16 classifiers pass0. Exclusive37 native macro reds/
+five Rust sources exact/full5+5/5 restored0. Three whole committed records retained/prior388 exact;
+no Rust implementation/test/API/grammar change. Remaining six native entries stay under D156.

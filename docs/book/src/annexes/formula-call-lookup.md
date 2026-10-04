@@ -103,6 +103,10 @@ Five public contracts independently enumerate the ordinary calls, envelope alias
 reserved names, source order, alternatives, tags, privacy and borrowed query identity. Two negative
 Rustdoc examples verify private construction and refusal lifetimes. Actual compiled source faults
 must fail body assertions and restore every source byte.
+Its direct mutation entry guards implementation/test/output paths before reads or writes, preserves
+prepared child stores and rebuilds the full focused target after restoration. Eighteen native faults
+fail at assertion sites in the guarded current test source; custom messages pass while labelled
+expect/compiler/test-name noise refuses. Standing controls exercise actual classifier/site faults.
 
 The independent reference producer runs 166 actual cases, with exact complete payloads and
 argument, namespace, value and execution traps. Twelve actual compiled counterfactuals prove

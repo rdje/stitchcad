@@ -953,19 +953,7 @@ Complete requirements/acceptance retained in [part161](../history/stitchcad-devn
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f9`
   Status: `done`
-  STITCHCAD-G1-0142 owns both signature producers/test plans/strict controls/book, blocking whole .n.f4.r/ledger/D164 report retention and newly found book-count drift diagnosis/repair.
-  Goal: built-in/operator signature native guards and D164 current assertion-source proof.
-  Acceptance: all implementation/test/output plans, actual entry/child/classifier controls;
-  exclusive21+14 native assertion reds, exact sources/full native targets restored.
-  Own blocking complete receipt/report retention under fixed caps; P1 after .n.f4.r.
-- [x] REPRODUCE / ISSUE: D164 actual prefix predicates accept labelled expect bodies; target/d164-classifier-baseline.log two true results, rc=0. D168 source/Git baseline74e8648 shows four-to-five tests/book four unchanged, rc=0.
-- [x] ROOT CAUSE (WHY + WHERE): actual assertion_failure uses text prefix; guarded test macro sites were absent; shared strict controls reproduce old-prefix noise, python_producer_contract.py99 actual body reds, rc=0.
-- [x] FIX: both producers guard implementation/test/output, match current assertion sites, preserve child stores and rebuild full targets; strict controls29 entry/late captures/14 classifiers/21 derived child cases, rc=0.
-- [x] ADDRESSED (verified): direct absent-export classifier/native driver35 macro-site reds; independent target/d164-native-proof.log current log locations/four Rust sources exact/full5/5 restores, rc=0; stale book totals removed, publication43 pass, rc=0.
-- [x] NO REGRESSION: local profile bash run_ci_environment_probes.sh CI19/local56/Python17/99/29/29/21/14, rc=0; publication43/archive28+CLI404/388reads/ledger9+pointer13/coverage9 all rc=0; no Rust changes.
-- [x] LOCKSTEP: book/live docs/frontier .n.f10; d164-retention-proof.log prior384 bytes/six controls/three whole committed intervals/one honest pre-repair report/public388 exact;13open/155sealed/no gaps/overlap, rc=0. D169 reproduced/owned next;400 cadence holds.
-STITCHCAD-G1-0142: D164/D168 fixed;29of37 native entries guarded/eight remain by actual TSV census; current curated macro-site proof is not arbitrary Rust syntax.
-Final0142 staged gate all13green, rc=0, d164-staged-gate.log; cached/current diff checks0; hook/brief clearing follows.
+  Goal: D164/D168 signature guards; complete requirements/acceptance/receipts in [part171](../history/stitchcad-devnotes-part171.md).
 Final retention: three whole7a7c5b8 intervals/public367/prior71 bytes exact;13open/150sealed, rc=0, eighth-retention-final-proof2.log.
 Initial retention probes1 excluded: corrected full CLI document versus sealed payload comparison, then closed live headings versus open report bullets; no retained bytes changed.
 Final glossary17/coverage9, rc=0; archive367/63working MD/14773L/1079761B, rc=0. Fixed caps held.
@@ -993,6 +981,20 @@ Final0136 staged gate all13green, rc=0, eighth-staged-gate-final.log; cached dif
 Native baseline log replay1 excluded: old signature fault logs absent (actual directories/zero files); fresh exclusive35-case run supplies current evidence.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f10`
-  Status: `todo`
+  Status: `done`
+  STITCHCAD-G1-0143 owns both producers/all current test plans/joint-target child controls, book/profile rows and blocking whole .n.f9/oldest ledger/D169 report retention.
   Goal: D169 wanted-signature/call-lookup native guards and current assertion-source proof, P1 next.
   Acceptance: all source/test/output plans, joint wanted target argv and strict actual child/classifier controls; exclusive19+18 native reds, exact sources/full target restoration; own blocking complete retention.
+- [x] REPRODUCE / ISSUE: actual wanted/call prefix predicates accept labelled-expect failed bodies; target/d169-classifier-baseline.log two true results, rc=0; no native/source writes.
+- [x] ROOT CAUSE (WHY + WHERE): assertion_failure trusts text prefixes without guarded current test sites; actual permissive-prefix faults refuse in python_producer_contract.py111 body reds/16 classifiers, rc=0.
+- [x] FIX: plan implementation/test/output before reads/writes, use current macro sites, preserve prepared stores, rebuild full targets; actual31 entry/late refusals/23 child cases with full joint argv pass, rc=0.
+- [x] ADDRESSED (verified): direct absent-export classifier/native driver37 macro reds; independent d169-native-proof.log all current sites/five Rust sources exact HEAD/full wanted5+5/call5 restored, rc=0; actual fault/restoration second-target omission reds caught.
+- [x] NO REGRESSION: local profile bash run_ci_environment_probes.sh CI19/local56/Python17/111/31/31/23/16, rc=0; publication43/archive28+CLI407/391reads/ledger9+pointer13/coverage9 all rc=0; no Rust changes.
+- [x] LOCKSTEP: live docs/book/frontier .n.f11; d169-retention-proof.log prior388 bytes/six controls/three complete committed seals/public391 exact, rc=0;12open/156sealed/no missing/overlap, rc=0; grammar/API and400 cadence fixed.
+STITCHCAD-G1-0143:31of37 native entries guarded/six remain by actual TSV census; curated assertion-site proof, not arbitrary Rust parsing. Final gate/commit workflow follows.
+Final0143 staged gate all13green, rc=0, d169-staged-gate.log; cached/current diff checks0; hook/brief clearing follows.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f11`
+  Status: `todo`
+  Goal: formula-expression/reduction-boundary native guards and current assertion-source proof.
+  Acceptance: complete source/test/output plans, preserved native argv/fixtures/child stores, strict actual controls and exclusive native reds/exact sources/full target restoration; own blocking whole retention.

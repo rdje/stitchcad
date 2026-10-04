@@ -198,7 +198,10 @@ def capture_child(text, entry_path, work_name, sources, test_target, *, argument
     mkdir, write_text, write_bytes, run = Path.mkdir, Path.write_text, Path.write_bytes, subprocess.run
     observed = []
     child_errors = []
-    native_argv = ['cargo', 'test', '-p', 'sc-core', '--test', test_target]
+    test_targets = (test_target,) if isinstance(test_target, str) else test_target
+    native_argv = ['cargo', 'test', '-p', 'sc-core']
+    for target in test_targets:
+        native_argv.extend(['--test', target])
     doc_argv = ['cargo', 'test', '-p', 'sc-core', '--doc', doc_suffix]
     expected = [native_argv, native_argv]
     fixture_output = b''
@@ -233,12 +236,14 @@ def capture_child(text, entry_path, work_name, sources, test_target, *, argument
         assert environment.get('RUSTUP_TOOLCHAIN') == '1.99.0', 'D156 Python child channel lost'
         assert environment.get('RUSTUP_AUTO_INSTALL') == '0', 'D156 Python child install policy lost'
         assert environment.get('D156_PYTHON_UNRELATED') == 'preserved', 'D156 Python child unrelated environment lost'
-        assert len(observed) < len(expected) and args[:6] == expected[len(observed)], 'D156 Python child native argv changed'
+        assert len(observed) < len(expected), 'D156 Python child native argv changed'
+        current_argv = expected[len(observed)]
+        assert args[:len(current_argv)] == current_argv, 'D156 Python child native argv changed'
         if doc_suffix is not None:
             assert len(args) == 6, 'D156 Python child profile selection changed'
         if first_suffix is not None:
             wanted = list(first_suffix) if not observed else []
-            assert args[6:] == wanted, 'D156 Python child test selection changed'
+            assert args[len(current_argv):] == wanted, 'D156 Python child test selection changed'
         assert kwargs.get('cwd') == ROOT and not positional, 'D156 Python child cwd changed'
 
     def observe(args, *positional, **kwargs):
@@ -362,6 +367,8 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/name_read_mutations.py', 'name_read_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py', 'builtin_signature_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/operator_signature_mutations.py', 'operator_signature_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py', 'wanted_signature_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/call_lookup_mutations.py', 'call_lookup_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
@@ -375,6 +382,7 @@ def main():
             'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
             'canonical_recipe_mutations.py',
             'builtin_signature_mutations.py', 'operator_signature_mutations.py',
+            'wanted_signature_mutations.py', 'call_lookup_mutations.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -433,6 +441,9 @@ def main():
             raise AssertionError('D156 Python actual child-store reset survived')
     classifier_count = 0
     for filename, work_name, rust, target, test in (
+            ('wanted_signature_mutations.py', 'wanted_signature_mutations', 'signatures.rs',
+             ('formula_operator_signature_contract', 'formula_builtin_signature_contract'), None),
+            ('call_lookup_mutations.py', 'call_lookup_mutations', 'calls.rs', 'formula_call_lookup_contract', None),
             ('builtin_signature_mutations.py', 'builtin_signature_mutations', 'builtins.rs', 'formula_builtin_signature_contract', None),
             ('operator_signature_mutations.py', 'operator_signature_mutations', 'operators.rs', 'formula_operator_signature_contract', None),
             ('normalized_recipe_mutations.py', 'normalized_recipe_mutations', ('statement.rs', 'ordered.rs', 'normalized_recipe.rs'), 'formula_normalized_recipe_contract', None),
@@ -466,6 +477,21 @@ def main():
         doc_suffix = 'recipe::declaration::FormulaDeclaration' if filename == 'declaration_mutations.py' else None
         capture_child(text, path, work_name, sources, target, first_suffix=selected, doc_suffix=doc_suffix)
         child_count += 1
+        if filename == 'wanted_signature_mutations.py':
+            for variable in ('result', 'restored'):
+                node = next(n for n in ast.walk(ast.parse(text)) if isinstance(n, ast.Assign)
+                            and any(isinstance(t, ast.Name) and t.id == variable for t in n.targets))
+                actual_call = ast.get_source_segment(text, node.value)
+                assert actual_call.count("'--test', 'formula_builtin_signature_contract'") == 1
+                omitted_call = actual_call.replace(", '--test', 'formula_builtin_signature_contract'", '', 1)
+                try:
+                    capture_child(text.replace(actual_call, omitted_call, 1), path, work_name, sources,
+                                  target, first_suffix=selected)
+                except AssertionError as error:
+                    assert str(error) == 'D156 Python child native argv changed'
+                    red += 1
+                else:
+                    raise AssertionError('D169 actual joint-target omission survived')
         if doc_suffix is not None:
             capture_child(text, path, work_name, sources, target, doc_suffix=doc_suffix, capture_doc_fault=True)
             child_count += 1
