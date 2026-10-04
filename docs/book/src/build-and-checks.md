@@ -118,9 +118,14 @@ volumes refuse. Invalid path types or control bytes also refuse. An invalid entr
 local-environment refusal and exits2 before invoking a child. Named toolchains and unrelated
 environment values are preserved; paths still derive from the current repository root.
 
-Standing controls cover17 runtime cases and seven actual body faults, including the real standalone
+The individual-Ease and Ease-set mutation entries use the same declared-path and profile guard.
+Their native runs with caller overrides absent observe seven and ten real assertion failures,
+then restore exact source and rebuild each current artifact. Mutation diagnostics run sequentially.
+
+Standing controls cover17 runtime cases and nine actual body faults, including three real standalone
 entry at its first write. The native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. Other Python native, fixture and delegated entries remain under the
+12 membership tests passing. All three entry captures also refuse a late missing source before
+output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.

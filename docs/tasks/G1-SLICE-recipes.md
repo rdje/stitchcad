@@ -867,7 +867,7 @@ clean postconditions precede the next .b.i census slice.
   Work unit STITCHCAD-G1-0122; plan every output/source/store before mkdir or environment
   activation; fail-closed clean CLI refusal. Size-membership is the first bounded adopter.
 - ID: `G1-SLICE.5b.4c.h2.b.p.n`
-  Status: `pending`
+  Status: `in_progress`
   Goal: apply the verified entry/owned-path contract to remaining direct native producers.
   Acceptance: divide finite entry ledger into bounded groups before edits; actual standalone
   captures/refusals and exclusive focused native assertions/restoration per group.
@@ -939,11 +939,11 @@ Source restores in finally and the new final focused build restores the actual c
 ### Remaining native group ownership
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.m1`
-  Status: `pending`
+  Status: `done`
   Goal: two Ease native mutation entries adopt the shared declared-path/profile contract.
   Acceptance: both actual standalone prefixes/late refusals/activation omission reds, unchanged
   native argv; exclusive real mutation assertions and exact source/current artifact restoration.
-  Work unit follows0122; finite ledger ownership transfers before edits. Then membership-chart
+  Work unit STITCHCAD-G1-0123; finite ledger ownership transfers before edits. Then membership-chart
   native groups and formula/unit native groups, split before implementation.
 
 Final live ledger9/pointer13 and coverage10/13/12/zero gaps, rc=0,
@@ -955,3 +955,38 @@ final gate must pass before commit. No ceiling or schema change.
 
 Final staged gate13green, rc=0, target/d156-python-entry-staged-gate-final.log; cached diff0.
 Explicit14 owned paths; Rust diff empty. Hook/brief0/clean precede Ease conversion.
+
+
+### G1-SLICE.5b.4c.h2.b.p.n.m1
+
+- [x] **ROOT CAUSE** — actual native entries delegated directly without preparing all stores;
+  removal of each new real activation call fails its pre-write assertion, rc=0 controls.
+- [x] **ADDRESSED** — both Ease entries guard declared source/output/profile; guarded
+  run_ci_environment_probes.sh:17 runtime/9 actual body reds/3 real prefix captures/3 late-source
+  refusals, rc=0, target/d156-ease-ci.log. Existing native argv retained; final build restores artifact.
+- [x] **NO REGRESSION** — actual direct sequential native runs with seven overrides absent:
+  Ease7/set10 compiled assertion reds, exact sources/current artifacts restored13/14 tests pass,
+  rc=0, target/d156-ease{-set,}-native.log and target/{ease,ease_set}_mutations/restored.log.
+  Existing CI19/6/local56/13/2/1/census9/9/4/Git226/285 pass; publication10, rc=0;
+  Rust diff empty. Current syntax226/6786AST/68heredocs/2649embedded is inspection only.
+- [x] **LOCKSTEP** — entry ledger/controls/live/task/index/developer and Ease book sync;
+  D156 remains open; G1 5/18,12open/143sealed unchanged. No grammar/Rust API change.
+- [x] **PROMOTION** — declined: existing entry/source/actual-body/exclusive-restore rules.
+- [x] **COMMIT** — complete0123; staged gate/hook/brief0/clean precede next native group.
+
+Session health: focus drift noticed after verified native runs. Finish this bounded unit and
+handoff check before fresh context; no source/native job is left running. Next retention is owned
+below because recipes957L approaches its fixed1000L split trigger before another repair receipt.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.h`
+  Status: `pending`
+  Goal: retain complete committed repair records/lessons before remaining native group growth.
+  Acceptance: exact whole committed source intervals, IDs/proxies/public read/materialize/hash,
+  earlier immutable bytes/fixed caps preserved; ledger/coverage/book/gate then next chart group.
+  Work unit follows0123; no code/native change in this blocking continuity leaf.
+
+Final ledger9/pointer13, coverage10/13/12/zero gaps and glossary17, rc=0,
+target/d156-ease-{ledger,coverage,glossary}.log. No push due; status counts unchanged.
+
+Final staged gate13green, rc=0, target/d156-ease-staged-gate.log; cached diff0.
+Explicit12 owned paths; hook/brief0/clean precede bounded continuity retention.

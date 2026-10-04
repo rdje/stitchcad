@@ -8,6 +8,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 Ease entries
+
+- Apply the same declared-path guard to every direct entry.
+- Watch each real prefix and late refusal; omission earns a body red.
+- Run faults sequentially; rebuild restored current artifacts.
+- Promotion declined: existing locality/body/restore rules.
+
 ## _(2026-10-04 UTC)_ — D156 Python entry planning
 
 - Validate all stores, outputs and existing source paths before creating or activating.

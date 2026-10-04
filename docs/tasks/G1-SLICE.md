@@ -787,7 +787,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.n.m1` | `pending` | D156 Ease entry guards; first adopter verified; D154 follows |
+| current | `G1-SLICE.5b.4c.h2.b.p.n.h` | `pending` | Bounded continuity before remaining D156 native guards; D154 follows |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
@@ -924,13 +924,13 @@ Current retention receipts live in the .h0 owning recipe node/names checklist.
 - `2026-10-03` (UTC): .5b.2c.1a/STITCHCAD-G1-0085 records D131 reserved argument conflict;121 cases/three actual reds. .1b ruling blocks namespace .2.
 - `2026-10-03` (UTC): .5b.2c.1b/STITCHCAD-G1-0086 applies delegated D131 sources;3624 argument cases/19 actual reds. Namespace .2c.2 next.
 
-### G1-SLICE.5b.4c.h2.b.p.a — current producer acceptance
+### G1-SLICE.5b.4c.h2.b.p.n.m1 — current producer acceptance
 
-- [x] **ROOT CAUSE** — original standalone capture refused first unprepared mkdir, rc=0,
-  retained census131. Separate Python entry needs declared-path/profile planning.
-- [x] **ADDRESSED** — guarded run_ci_environment_probes.sh:17 runtime/7 actual body reds/
-  actual standalone capture, rc=0, target/d156-python-entry-ci-final.log.
-- [x] **NO REGRESSION** — actual absent-export native entry:7 assertion reds, source/current
-  artifact restored12pass, rc=0, target/d156-python-first-native.log. CI/local/census profiles,
-  publication10/glossary17, rc=0; Rust diff empty. D156 remains open.
-  [Full receipts](G1-SLICE-recipes.md#g1-slice5b4ch2bpa).
+- [x] **ROOT CAUSE** — real entry activation omissions fail pre-write assertions;
+  guarded runtime controls, rc=0, target/d156-ease-ci.log.
+- [x] **ADDRESSED** — both Ease entries adopt shared source/output/profile guards;
+ 17 runtime/9 actual body reds/3 captures/3 late-source refusals, rc=0, target/d156-ease-ci.log.
+- [x] **NO REGRESSION** — actual absent-export sequential Ease7/set10 assertion reds,
+  source/current artifacts restored13/14pass, rc=0, target/d156-ease{-set,}-native.log;
+  existing CI/local/census and publication10 pass, rc=0; Rust diff empty. D156 open.
+  [Full receipts](G1-SLICE-recipes.md#g1-slice5b4ch2bpnm1).

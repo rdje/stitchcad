@@ -165,6 +165,11 @@ source. Their regression tests run in the standard Rust gate; the destructive mu
 must run sequentially before a restored build. The milestone probe suite additionally verifies the
 repository/spec instruments, including formula, glossary, uncertainty, feature and release contracts.
 
+The direct Python diagnostics now prepare the shared local producer profile and validate their
+declared output/source paths before the first write or native child. Their final restoration builds
+also restore the current compiled artifacts; exact source restoration alone is insufficient.
+The [developer checks](../build-and-checks.md#direct-python-producers) describe this bounded contract.
+
 This closes .4b's structural scope, not G1-SLICE.4: SizeSet and combined family review remain. Actual
 body-plus-ease evaluation/current Design registry belongs to G1 .5/.6; chart reconciliation and
 physical fit to G2/G3; scoped evidence and envelope/export policy to G3/G4; independent conformance

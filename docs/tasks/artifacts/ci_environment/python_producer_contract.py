@@ -134,7 +134,7 @@ def controls(scope):
     return count
 
 
-def capture(text):
+def capture(text, entry_path=ENTRY, *, refusal=False):
     """Execute the actual prefix through its first mkdir, intercepting every dispatch/write."""
     tree = ast.parse(text)
     boundary = next(node.end_lineno for node in tree.body if isinstance(node, ast.Expr) and
@@ -143,12 +143,13 @@ def capture(text):
     prefix = '\n'.join(text.splitlines()[:boundary]) + '\n'
     saved, mkdir, run = dict(os.environ), Path.mkdir, subprocess.run
     observations = []
+    diagnostic = io.StringIO()
 
     class Stopped(Exception):
         pass
 
     def observe(path, *args, **kwargs):
-        assert path == ROOT / 'target/size_membership_mutations', 'D156 Python unexpected prefix write'
+        assert path == ROOT / 'target' / entry_path.stem, 'D156 Python unexpected prefix write'
         assert all(os.environ.get(name) == str(ROOT / value) for name, value in EXPECTED.items()), 'D156 Python standalone activation omitted'
         assert os.environ.get('RUSTUP_TOOLCHAIN') == '1.99.0', 'D156 Python standalone channel lost'
         observations.append(path)
@@ -163,14 +164,19 @@ def capture(text):
         os.environ['RUSTUP_TOOLCHAIN'] = '1.99.0'
         Path.mkdir, subprocess.run = observe, no_child
         try:
-            exec(compile(prefix, str(ENTRY), 'exec'), {'__file__': str(ENTRY), '__name__': 'entry_capture'})
+            with contextlib.redirect_stderr(diagnostic):
+                exec(compile(prefix, str(entry_path), 'exec'), {'__file__': str(entry_path), '__name__': 'entry_capture'})
         except Stopped:
+            assert not refusal, 'D156 Python late-source refusal reached a write'
             pass
+        except SystemExit as error:
+            assert refusal and error.code == 2, 'D156 Python actual entry refusal status'
+            assert diagnostic.getvalue() == 'local-environment: REFUSED — producer source is not a local regular file\n', 'D156 Python actual entry refusal message'
     finally:
         Path.mkdir, subprocess.run = mkdir, run
         os.environ.clear()
         os.environ.update(saved)
-    assert len(observations) == 1, 'D156 Python standalone capture absent'
+    assert len(observations) == (0 if refusal else 1), 'D156 Python standalone capture absent'
 
 
 def main():
@@ -196,19 +202,29 @@ def main():
             red += 1
         else:
             raise AssertionError((name, 'body fault survived'))
-    capture(entry.decode())
     call = "runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](\n    ROOT, directories=(WORK,), sources=(SOURCE,))\n"
-    assert entry.decode().count(call) == 1
-    try:
-        capture(entry.decode().replace(call, '', 1))
-    except AssertionError as error:
-        assert str(error) == 'D156 Python standalone activation omitted'
-        red += 1
-    else:
-        raise AssertionError('D156 Python standalone body fault survived')
+    adopters = (ENTRY, ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py',
+                ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py')
+    for path in adopters:
+        text = path.read_text()
+        capture(text, path)
+        assert not (ROOT / 'target/scratch/python_producer_contract/absent-source').exists()
+        assert text.count('sources=(SOURCE,)') == 1
+        capture(text.replace('sources=(SOURCE,)',
+                             "sources=(SOURCE, ROOT / 'target/scratch/python_producer_contract/absent-source')", 1),
+                path, refusal=True)
+        assert text.count(call) == 1
+        try:
+            capture(text.replace(call, '', 1), path)
+        except AssertionError as error:
+            assert str(error) == 'D156 Python standalone activation omitted'
+            red += 1
+        else:
+            raise AssertionError('D156 Python standalone body fault survived')
     assert SOURCE.read_bytes() == original and ENTRY.read_bytes() == entry, 'D156 Python source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
-          ' actual body reds / actual standalone pre-write capture / source unchanged')
+          ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
+          str(len(adopters)) + ' actual late-source refusals / source unchanged')
 
 
 if __name__ == '__main__':

@@ -28,8 +28,8 @@ docs/tasks/artifacts/ci_environment/python_producer_contract.py	profile	G1-SLICE
 docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/command_layer/run_command_layer_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/command_layer/run_command_layer_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
-docs/tasks/artifacts/ease/ease_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
-docs/tasks/artifacts/ease/ease_set_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/ease/ease_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.n.m1	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/ease/ease_set_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.n.m1	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
 docs/tasks/artifacts/ease/run_ease_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/ease/run_ease_set_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/evidence_signatures/run_signature_portability_probe.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
