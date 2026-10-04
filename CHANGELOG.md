@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0145 - safe daily artifact cleanup (leaf `G1-SLICE.5b.4c.h2.b.p.n.f11.c`)
+
+- Frozen plan removes six ignored trees/1618 strays/1579382373B; no package/tracked/link/Git/device loss.
+- Independent1624-path absence/frozen tracked bytes proof0 before regeneration; activating-verifier
+  error diagnosed/corrected, failed attempts excluded. Native/WASM3/book/Rust15+6/safety15+11 pass0.
+- Profile/publication/archive398/ledger/pointer/coverage pass0; three whole records/prior395 exact.
+- Latest cleanup entry/book synchronized; no code/grammar/cadence change; .n.f12 resumes.
+
 ## STITCHCAD-G1-0144 - expression/reduction assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f11`)
 
 - Guard both current tests/implementations/output and preserve prepared stores/native selection.
@@ -256,12 +264,7 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
   all34 earlier retained/control paths unchanged. Current task nodes and fixed bounds remain.
 - Query-first continuity front door bounds the live working set; no code/grammar change. Unit guards next.
 
-## STITCHCAD-G1-0125 - guarded measurement-chart entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.m2`)
-
-- Four table/observation/collection/MTM entries plan source/output/stores before writes or children.
-- Standing17runtime/13body/7captures/7late refusals0; direct absent-export42 native assertion reds.
-- Exact sources/current artifacts restored16/16/18/15pass; focused profiles/book/glossary green.
-- Grammar/Rust API unchanged; D156 stays open. Bounded continuity precedes unit native entries.
+| [`part127`](docs/history/stitchcad-changelog-part127.md) | G1-0125 chart guards | 6 lines, 488 bytes, `sha256:d7e282a6…` |
 
 | [`part126`](docs/history/stitchcad-changelog-part126.md) | G1-0124 continuity | 5 lines, 394 bytes, `sha256:d1cbcbfa…` |
 

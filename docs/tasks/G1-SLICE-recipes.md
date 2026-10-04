@@ -595,11 +595,9 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 
 [Exact receipts](G1-SLICE-names.md#completed-exact-initial-reads-receipts--preserved-from-19900d0) retained.
 
-
 ## Actual ordered name-scope receipts — .5b.2d.2,2026-10-03 (UTC)
 
 [Exact receipts](G1-SLICE-names.md#completed-ordered-scopes-receipts--preserved-from-63c0c7d) retained.
-
 
 [Exact completed operator signatures receipts](G1-SLICE-names.md#completed-operator-signatures-receipts--preserved-from-dc346b4) retained.
 
@@ -613,7 +611,6 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
   actual G0 review18met/1human-act-unmet, publication10 and ledger9/pointer13 pass, rc=0.
   [Full owning receipts](G1-SLICE-checked-recipes.md#containment-receipts--4ch0).
 
-
 ## Exact window5 runner protocol — .4c.h1
 
 [Exact complete record](../history/window6.md#stitchcad-devnotes-part127md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
@@ -625,7 +622,6 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 ### G1-SLICE.5b.4c.h1
 
 [Exact complete record](../history/window6.md#stitchcad-devnotes-part127md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
-
 
 ## D156 producer profile protocol
 
@@ -725,7 +721,6 @@ is required before completeness claims. No direct producer is executed with ambi
 ### G1-SLICE.5b.4c.h2.b.h
 
 [Exact complete record](../history/window6.md#stitchcad-devnotes-part133md); 51L/3952B/sha256:24747ad2686cfb98369fbafc9b43a0011e411f42b5275452ca8797770334a051.
-
 
 ### G1-SLICE.5b.4c.h2.b.i
 
@@ -985,16 +980,20 @@ Native baseline log replay1 excluded: old signature fault logs absent (actual di
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f11`
   Status: `done`
-  Goal: formula-expression/reduction-boundary native guards and current assertion-source proof.
-  STITCHCAD-G1-0144 owns complete source/test/output plans, native argv/fixtures/child stores, actual controls/exclusive native reds/exact sources/full target restoration, blocking whole retention and any reproduced classifier defect.
-- [x] REPRODUCE / ISSUE: actual inline AST predicates admit passed-name/labelled-expect noise, d170-classifier-baseline.log, rc=0; stricter native baseline1 excluded after verified expect_err location/parser bytes/full15 restoration, d170-native-baseline-proof.log, rc=0.
-- [x] ROOT CAUSE (WHY + WHERE): inline assertion substring admits unrelated failures; guarded current macro sites were absent. Actual classifier/site/native-selection faults refuse in python_producer_contract.py125 body reds/18 classifiers, rc=0.
-- [x] FIX: source/test/output plans precede reads/writes, current failed-body sites certify reds, prepared stores/native selections retained and full targets rebuilt; four explicit refusal assertions; actual33 entry/late refusals/25 child cases, rc=0.
-- [x] ADDRESSED (verified): absent-export classifier/native driver15 macro reds; independent d170-native-proof.log11+4 current sites/four Rust snapshots exact/three unchanged sources HEAD-exact/full15/6 restored, rc=0; selected-test/exact-flag faults caught.
-- [x] NO REGRESSION: full make check fmt/strict Clippy/Rust703tests59groups, rc=0; profile CI19/local56/Python17/125/33/33/25/18, publication43/archive28+CLI411/395reads/ledger9+pointer13/coverage9 all rc=0; no remote verdict inferred.
-- [x] LOCKSTEP: d170-retention-proof.log prior391 bytes/six controls/three committed whole intervals/one honest original report/public395 exact, rc=0;12open/157sealed/no gaps/overlap, rc=0; book/live frontier .n.f12 synced, grammar/API/400 cadence fixed; final staged gate all13green, rc=0, d170-staged-gate.log; hook/brief clearing follows.
+  Goal: D170 expression/reduction native proof; complete requirements/acceptance/receipts in [part173](../history/stitchcad-devnotes-part173.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f12`
   Status: `todo`
   Goal: coupled recipe-input native guards/current assertion-source proof; four native entries remain.
   Acceptance: all four implementation sources/current test/output plans, original native selection/fixtures/prepared stores, strict actual controls/exclusive seven reds, exact sources/full target restoration; own blocking whole retention.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f11.c`
+  Status: `done`
+  Goal: due daily artifact cleanup before .n.f12 native work; STITCHCAD-G1-0145 owns frozen plan/apply/residue, cleanup record, live/book sync and blocking whole .n.f11/old lesson/oldest ledger retention.
+  Acceptance: inspect ignored/tracked/same-device/link/Git/protected-store census; prove no live jobs before exact safe deletion; independently verify residue/tracked bytes, regenerate native/WASM/book, run focused cleanup/standing gates, then commit clean with .n.f12 preserved.
+- [x] REPRODUCE / ISSUE: cleanup was due2026-10-04 22:17UTC; frozen plan1624 candidates/six generated roots/1618 strays/1579382373B, plan/apply inspected; no skipped or package/tracked/link/device/overlap candidate, rc=0.
+- [x] ROOT CAUSE (WHY + WHERE): regenerable outputs after native/probe runs; actual cleanup main/census/inspect freeze HEAD/producer/tracked bytes. Activating residue invocation1 recreated only empty scratch; actual main(create=not inspect) AST explains it, corrected direct census rc=0.
+- [x] FIX: apply rechecks frozen census/no project jobs/per-path ownership before exact deletion; result.json6trees/1618strays/13183files/1579382373B/residue0/tracked_change=false, rc=0; scratch recreated by verifier removed only after proving new/empty/local.
+- [x] ADDRESSED (verified): independent-residue.json all1624 named paths absent/HEAD and tracked bytes unchanged before regeneration, rc=0; safety15/11 actual guard reds/source unchanged, rc=0. Both failed verifier attempts excluded and diagnosed; no code/grammar change.
+- [x] NO REGRESSION: native build/book/WASM3/focused Rust15+6 pass, rc=0; profile CI19/local56/Python17/125/33/33/25/18, publication43/archive28+CLI414/398reads/ledger9+pointer13/coverage9 terminal0 consumed, rc=0.
+- [x] LOCKSTEP: latest cleanup entry/book/live/frontier .n.f12 synced; retention-proof.log prior395/public398/three whole committed intervals/12open157sealed, rc=0; final staged gate all13green, rc=0, audit/staged-gate.log; hook/brief clearing follows. Promotion declined: existing cleanup/profile/retention rules.

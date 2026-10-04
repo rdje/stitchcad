@@ -30,9 +30,11 @@ The frozen plan covers candidate content, tracked inputs, HEAD and producer iden
 refuses. No tracked input, protected store, link, special file, Git boundary or other volume is deleted.
 Apply rechecks each path, verifies no live project job, checks residue and tracked content, then
 records result.json. Probe controls run through make probes; generated audit data stays ignored.
-Rebuild only after the immediate residue census, since regeneration recreates selected roots.
+Run the immediate read-only residue census without activating the local-environment launcher:
+activation recreates target/scratch. Rebuild only after that census, since regeneration recreates
+selected roots.
 
 ## Latest run
 
-- **Run:** `2026-10-03` 22:17 UTC by leaf `G1-SLICE.5b.3c.2b.h1.c`.
-- **Summary:** removed6 ignored output trees/991 strays (1819917894B); selected residue0/tracked changes0.
+- **Run:** `2026-10-04` 22:25 UTC by leaf `G1-SLICE.5b.4c.h2.b.p.n.f11.c`.
+- **Summary:** removed6 ignored trees/1618 strays (1579382373B);1624 selected paths absent/tracked bytes unchanged before regeneration.

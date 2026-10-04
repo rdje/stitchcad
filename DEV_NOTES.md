@@ -10,12 +10,7 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
-## _(2026-10-04 UTC)_ — window6 blocking retention
-
-- Validate every archive input path before fixture creation; read-only Git metadata discovers the plan.
-- Verify installed payload and each duplicate against source/reconstruction before exact retirement.
-- Retain full closed nodes and book records; preserve live IDs/status/goal and public query routes.
-- Promotion declined: existing archive identity/atomic retention/current task graph rules.
+Window6 retention lesson retained in [part174](docs/history/stitchcad-devnotes-part174.md).
 
 ## _(2026-10-04 UTC)_ — D163 declaration and exact-name producers
 
@@ -196,3 +191,10 @@ stores/native selection survive. Controls125 body/33 entry+late/25 child/18 clas
 exclusive11+4 macro reds/four current Rust snapshots exact/full15/6 restored0. Retention initial1
 was a final display variable-shadowing error; corrected full prior391/three interval proof0.
 Full make check fmt/strict Clippy/Rust703/59 groups and focused profiles/book/archive/ledger/coverage all terminal0 consumed; prior391/public395 exact,12open/157sealed0.
+
+Daily cleanup — STITCHCAD-G1-0145 (.n.f11.c): frozen1624-candidate plan independently excludes
+tracked/package/dependency/link/foreign-volume/overlap paths; actual apply removes six trees/1618
+strays/1579382373B with no live jobs. Immediate verification through an activating launcher1
+recreated only empty scratch; bare census diagnoses main(create=not inspect), removes exact new
+empty root and proves all1624 absent/frozen tracked bytes and HEAD unchanged0. Initial extractor
+guessed absent run function1; corrected actual main AST. Both failed attempts excluded; native/WASM3/book/Rust15+6/safety15+11 and standing checks pass0; prior395/public398 exact.

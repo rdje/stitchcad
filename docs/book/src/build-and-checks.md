@@ -47,6 +47,12 @@ mismatch is simulated without off-volume writes. Actual stable setup/native/WASM
 caller exports absent. D156's direct standalone native/temp producer audit under .h2.b remains
 required before closure; CI's separate prepare/verify evidence above remains valid.
 
+Daily artifact cleanup uses a frozen ignored-file plan, checks active jobs, preserves tracked
+inputs and package/dependency stores, and verifies every selected path absent before regeneration.
+The immediate read-only residue census must not activate this launcher: activation recreates
+`target/scratch`. Use nonactivating verification, then rebuild native/WASM/book outputs and run
+focused safety checks. The latest run is recorded in `docs/ARTIFACT_CLEANUP.md`.
+
 ## Destinations
 
 | Variable | Repository-relative default |
