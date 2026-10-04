@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0128 - guarded lexer/semantic entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.f1`)
+
+- Guard both lexer sources and semantic source before reads/writes; preserve prepared child stores.
+- Controls17runtime/20body/13prefixes/13late refusals/two actual child captures0; classifier0;
+  direct19 native assertion reds, exact sources/current artifacts restored13/5pass.
+- Grammar/Rust API unchanged. D157 stale annex scope verified/owned next; D156 remains open.
+
 ## STITCHCAD-G1-0127 - guarded unit/domain-context entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.u1`)
 
 - Four entries plan every source/output/store; mixed diagnostics validate five source files first.

@@ -6,6 +6,7 @@ import io
 import os
 import runpy
 import subprocess
+import sys
 import tempfile
 import types
 
@@ -180,6 +181,62 @@ def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
     assert len(observations) == (0 if refusal else 1), 'D156 Python standalone capture absent'
 
 
+def capture_child(text, entry_path, work_name, sources, test_target):
+    """Observe actual native calls with custom stores; every source write is intercepted."""
+    original_sources = {path: path.read_bytes() for path in sources}
+    work = ROOT / 'target' / work_name
+    GOOD['directory'](ROOT, work.relative_to(ROOT).as_posix(), create=True)
+    base = 'target/scratch/python_producer_contract/child-stores'
+    custom = dict(zip(('CARGO_HOME', 'RUSTUP_HOME', 'CARGO_TARGET_DIR', 'TMPDIR'),
+                      (base + '/cargo', base + '/rustup', base + '/build', base + '/scratch')))
+    for value in custom.values():
+        GOOD['directory'](ROOT, value, create=True)
+    custom['MAKE_TMPDIR'] = custom['TMPDIR']
+    saved, argv = dict(os.environ), sys.argv
+    mkdir, write_text, write_bytes, run = Path.mkdir, Path.write_text, Path.write_bytes, subprocess.run
+    observed = []
+
+    class Stopped(Exception):
+        pass
+
+    def no_mkdir(path, *args, **kwargs):
+        assert path == work, 'D156 Python unexpected child-capture directory'
+
+    def no_write(path, *args, **kwargs):
+        assert path in original_sources, 'D156 Python unexpected child-capture write'
+        return 0
+
+    def observe(args, *positional, **kwargs):
+        environment = kwargs.get('env', os.environ)
+        assert all(environment.get(name) == str(ROOT / value) for name, value in custom.items()), 'D156 Python child stores lost'
+        assert environment.get('RUSTUP_TOOLCHAIN') == '1.99.0', 'D156 Python child channel lost'
+        assert environment.get('RUSTUP_AUTO_INSTALL') == '0', 'D156 Python child install policy lost'
+        assert environment.get('D156_PYTHON_UNRELATED') == 'preserved', 'D156 Python child unrelated environment lost'
+        assert args[:6] == ['cargo', 'test', '-p', 'sc-core', '--test', test_target], 'D156 Python child native argv changed'
+        assert kwargs.get('cwd') == ROOT and not positional, 'D156 Python child cwd changed'
+        observed.append(args)
+        raise Stopped
+
+    try:
+        os.environ.update({name: str(ROOT / value) for name, value in custom.items()})
+        os.environ.update(RUSTUP_TOOLCHAIN='1.99.0', RUSTUP_AUTO_INSTALL='0',
+                          D156_PYTHON_UNRELATED='preserved')
+        sys.argv = [str(entry_path)]
+        Path.mkdir, Path.write_text, Path.write_bytes, subprocess.run = no_mkdir, no_write, no_write, observe
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                exec(compile(text, str(entry_path), 'exec'), {'__file__': str(entry_path), '__name__': 'child_capture'})
+        except Stopped:
+            pass
+    finally:
+        Path.mkdir, Path.write_text, Path.write_bytes, subprocess.run = mkdir, write_text, write_bytes, run
+        sys.argv = argv
+        os.environ.clear()
+        os.environ.update(saved)
+        assert all(path.read_bytes() == data for path, data in original_sources.items()), 'D156 Python child capture changed source'
+    assert len(observed) == 2, 'D156 Python child capture/restoration absent'
+
+
 def main():
     original, entry = SOURCE.read_bytes(), ENTRY.read_bytes()
     count = controls(GOOD)
@@ -215,11 +272,14 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py', 'formula_unsigned_round_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/length_operator_mutations.py', 'length_operator_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py', 'domain_context_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_lex/formula_lex_mutations.py', 'formula_lex_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py', 'semantic_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
         text = path.read_text()
-        source_argument = 'SOURCES' if path.name == 'domain_context_mutations.py' else '(SOURCE,)'
+        source_argument = ('SOURCES' if path.name in ('domain_context_mutations.py', 'formula_lex_mutations.py')
+                           else '(SOURCE,)')
         source_anchor = 'sources=' + source_argument
         call = ("runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](\n"
                 "    ROOT, directories=(WORK,), " + source_anchor + ")\n")
@@ -237,11 +297,28 @@ def main():
             red += 1
         else:
             raise AssertionError('D156 Python standalone body fault survived')
+    lexer = ROOT / 'docs/tasks/artifacts/formula_lex/formula_lex_mutations.py'
+    semantic = ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py'
+    lexer_sources = (ROOT / 'crates/sc-core/src/recipe/lexer.rs', ROOT / 'crates/sc-core/src/name.rs')
+    semantic_sources = (ROOT / 'crates/sc-core/src/recipe/semantic.rs',)
+    capture_child(lexer.read_text(), lexer, 'formula_lex_mutations', lexer_sources, 'formula_lex_contract')
+    capture_child(semantic.read_text(), semantic, 'semantic_mutations', semantic_sources, 'formula_semantic_contract')
+    text = semantic.read_text()
+    before = 'environment = dict(os.environ)'
+    assert text.count(before) == 1
+    try:
+        capture_child(text.replace(before, "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", 1),
+                      semantic, 'semantic_mutations', semantic_sources, 'formula_semantic_contract')
+    except AssertionError as error:
+        assert str(error) == 'D156 Python child stores lost'
+        red += 1
+    else:
+        raise AssertionError('D156 Python actual child-store reset survived')
     assert SOURCE.read_bytes() == original and ENTRY.read_bytes() == entry, 'D156 Python source changed'
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / source unchanged')
+          str(len(adopters)) + ' actual late-source refusals / 2 actual native-child capture cases / source unchanged')
 
 
 if __name__ == '__main__':

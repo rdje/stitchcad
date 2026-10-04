@@ -140,6 +140,10 @@ python3 -I -B docs/tasks/artifacts/formula_structure/semantic_mutations.py
 
 Run the mutation command alone: it compiles ten temporary changes to the actual implementation
 and requires assertion failures in test bodies, then restores the exact source bytes in finally.
+Its [local producer profile](../build-and-checks.md#direct-python-producers) validates source/output
+before reading or writing; native children retain valid prepared store overrides and the selected
+channel. Finally it rebuilds the restored focused target. Classifier-only mode still checks anchors
+and the assertion classifier without compiling a fault.
 The standing structural runner checks every fault anchor and refuses compiler/expect/name noise.
 These controls verify metadata behavior; they do not establish full static or runtime acceptance.
 

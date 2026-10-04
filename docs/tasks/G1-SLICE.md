@@ -787,7 +787,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.n.f1` | `pending` | Lexer/semantic native entry guards; D154 follows D156 closure |
+| current | `G1-SLICE.5b.4c.h2.b.p.n.d1` | `pending` | D157 annex scope before remaining D156 guards/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

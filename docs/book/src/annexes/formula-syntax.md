@@ -81,6 +81,10 @@ cargo test -p sc-core --test formula_lex_contract
 bash docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh
 ```
 
+The entry validates both source files and output under the
+[local producer profile](../build-and-checks.md#direct-python-producers) before reading or writing.
+After exact source restoration it rebuilds the complete focused lexer target before returning.
+
 G1-SLICE.5a.2b.2 implements expression trees below; .5a.3 owns exact literals/canonical ordered recipes and .5a.4
 reviews syntax completion. Exact evaluation, geometry, command/API/MCP workflows and release proofs
 remain pending. A successful library WASM build is not a working browser application.

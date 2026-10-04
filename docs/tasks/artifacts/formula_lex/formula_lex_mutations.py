@@ -1,11 +1,15 @@
 """Actual scanner/name guard mutations; assertion reds and byte-identical restoration."""
 from pathlib import Path
+import runpy
 import subprocess
 ROOT = Path(__file__).resolve().parents[4]
 WORK = ROOT / 'target/formula_lex_mutations'
-WORK.mkdir(exist_ok=True)
 LEXER = ROOT / 'crates/sc-core/src/recipe/lexer.rs'
 NAME = ROOT / 'crates/sc-core/src/name.rs'
+SOURCES = (LEXER, NAME)
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=SOURCES)
+WORK.mkdir(exist_ok=True)
 ORIGINALS = {path: path.read_bytes() for path in (LEXER, NAME)}
 CASES = [
     ('ASCII preflight', LEXER, '!c.is_ascii()', 'false && !c.is_ascii()', 'unicode_preflight_refuses_before_any_valid_prefix_token'),
@@ -32,5 +36,9 @@ try:
 finally:
     for path, original in ORIGINALS.items():
         path.write_bytes(original)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_lex_contract'],
+                              cwd=ROOT, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored lexer artifact failed', restored.stderr.decode())
 assert all(path.read_bytes() == original for path, original in ORIGINALS.items())
-print('Formula lexer mutations: 9 actual reds; both production sources restored byte-identically')
+print('Formula lexer mutations: 9 actual reds; both sources and actual compiled artifact restored')

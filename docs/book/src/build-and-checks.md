@@ -131,10 +131,21 @@ paths. The mixed domain entry validates all five source files before writing. Un
 rebuilds both debug and release profiles after restoration; domain diagnostics rebuild both
 unit and core targets. Run native mutation diagnostics exclusively.
 
-Standing controls cover17 runtime cases and seventeen actual body faults, including eleven real
+Lexer and semantic-metadata mutation entries also guard declared paths before source reads or
+output. The lexer validates both source files. Semantic children inherit the prepared stores,
+including valid local overrides; they preserve the selected channel and unrelated environment.
+Both entries rebuild their restored focused targets. The semantic classifier-only mode remains available.
+
+Standing controls cover17 runtime cases and twenty actual body faults, including thirteen real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All eleven entry captures also refuse a late missing source before
+12 membership tests passing. All thirteen entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
+
+Two native-child capture cases execute the real lexer/semantic bodies with custom local stores,
+intercepting every source write and both initial/restoration child calls. The captures check actual
+arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing
+the semantic child's prior store reset earns a body assertion failure. These captures compile no fault;
+the exclusive native mutation runs establish that separate proof.

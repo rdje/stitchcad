@@ -2,14 +2,17 @@
 from pathlib import Path
 import os
 import re
+import runpy
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/semantic.rs'
-original = SOURCE.read_bytes()
 WORK = ROOT / 'target/semantic_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=(SOURCE,))
 WORK.mkdir(parents=True, exist_ok=True)
+original = SOURCE.read_bytes()
 CASES = (
     ('kind population', '        Self::Point,', '        Self::Length,'),
     ('kind token', 'Self::Boolean => "boolean",', 'Self::Boolean => "count",'),
@@ -38,8 +41,7 @@ assert sys.argv[1:] in [[], ['--classifier-only']]
 if sys.argv[1:] == ['--classifier-only']:
     print('semantic fault controls:10 unique actual anchors; failed-name/expect-only/compiler noise refused')
     sys.exit(0)
-environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'),
-                   CARGO_TARGET_DIR=str(ROOT / 'target'), TMPDIR=str(ROOT / 'target/scratch'))
+environment = dict(os.environ)
 try:
     for index, (name, before, after) in enumerate(CASES, 1):
         SOURCE.write_text(original.decode().replace(before, after))
@@ -53,5 +55,9 @@ try:
         SOURCE.write_bytes(original)
 finally:
     SOURCE.write_bytes(original)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_semantic_contract'],
+                              cwd=ROOT, env=environment, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored semantic artifact failed', restored.stderr.decode())
 assert SOURCE.read_bytes() == original
-print('semantic faults:10 actual compiled assertion reds; exact source restored')
+print('semantic faults:10 actual compiled assertion reds; source and actual compiled artifact restored')

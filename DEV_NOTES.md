@@ -10,6 +10,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 lexer/semantic entries
+
+- Preserve prepared child stores; capture actual dispatch with writes intercepted.
+- A prior per-child overlay can defeat a valid entry profile.
+- Verify source restoration and rebuilt focused artifacts separately from captures.
+- Promotion declined: existing locality/actual-child/restore rules.
+
 ## _(2026-10-04 UTC)_ — D156 unit entries
 
 - Declare every mixed producer source before activation or output.
