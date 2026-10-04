@@ -170,7 +170,7 @@ FAULTS = (
     ('value observed', 'kind, origin = entry["kind"], entry["origin"]',
      'kind, origin = entry["kind"], entry["origin"]\n                entry.get("value")'),
     ('availability observed', '"kind": self.reserved[name][0]', '"kind": self.reserved[name][1]'),
-    ('whole context bypass', 'checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources)',
+    ('whole context bypass', 'checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources, checked=checked)',
      'checked = self.static_statement(src[start:end], env)'),
 )
 

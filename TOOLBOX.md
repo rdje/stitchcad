@@ -58,7 +58,7 @@ because predicate P is false" before writing a single line of fix.
 | feature-matrix probe suite | does that census still NOTICE a dropped non-goal, an uncited ontology clause, an undeclared diagnostic, a prose gate? | `bash docs/tasks/artifacts/feature_matrix/run_feature_matrix_probes.sh` → `probes: N pass / M fail` |
 | standards census | is any external standard cited anywhere in the book without a registered role, a status from the closed vocabulary and a named owner? | `bash docs/tasks/artifacts/standards/run_standards_census.sh` → `standards census: N registered / M designations used / 0 failure(s)`, plus a per-designation list of where it is used |
 | standards probe suite | does that census still NOTICE a smuggled citation, an invented status, an ownerless claim, a bare `read-in-repo`? | `bash docs/tasks/artifacts/standards/run_standards_probes.sh` → `probes: N pass / M fail` |
-| changelog-ledger probes | is the changelog a ledger — live window in commit order, nothing both live and sealed, every sealed segment's sha256 and line count true, coverage and pointer claims closed? The digest rule runs over **every** logical history segment (raw and packed), so a non-changelog rollover (the dev-notes archive) is watched too; coverage and pointer stay changelog-scoped, which is defect D40 and `SPINE.19`'s | `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` → `probes: N pass / M fail`; pending entries derive from `git diff HEAD`; `LEDGER_PENDING=<id>` declares an otherwise unidentifiable entry |
+| changelog-ledger probes | verifies live commit order, live/sealed uniqueness, all raw/packed history digests and line counts (including dev-notes), plus changelog coverage/pointers; broader coverage remains D40 / `SPINE.19` | `bash docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh` → `probes: N pass / M fail`; pending entries derive from `git diff HEAD`; `LEDGER_PENDING=<id>` declares an otherwise unidentifiable entry |
 | fixture derivation | does the reference skirt still agree with itself — every §4 formula evaluating to its published number, all four closure checks closing, every piece accounted for by a span or a declared non-sewn attachment, §12's count matching §6's list, and §4's band width describing the same construction as §6's band pieces? (defects D27, D33) | `bash docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh` → `fixture derivation: N derived rows / M closure checks / K pieces / 0 mismatch(es)`; `FIXTURE_CHAPTER=<path>` points it at another copy |
 | fixture derivation probe suite | does that instrument still NOTICE a faced two-piece band, an unaccounted piece, a wrong piece count, an edited formula, an undeclared token, a falsified closure, a changed constant? | `bash docs/tasks/artifacts/reference_fixture/run_fixture_probes.sh` → `probes: N pass / M fail` |
 | glossary probe suite | does the census still NOTICE a duplicate token, an invented clause, a lost ⚠, an undeclared token, a drifted index? | `bash docs/tasks/artifacts/glossary/run_glossary_probes.sh` → `probes: N pass / M fail` |
@@ -247,9 +247,10 @@ docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal co
 Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B --mutations; watched.
 
 - static_signature_contract.py:4032 kind/hint cases/14 reds; values trapped.
-- reference_locator_contract.py:89positions/2 reds; D144.
+- reference_locator_contract.py:90positions/2 reds; D144.
 - static_namespace_contract.py:1139cases/13 reds.
 - ambiguity_payload_contract.py:4192payloads/16 reds; D147.
+- whole_phase_contract.py:584cases/11 reds; D148.
 - header_dimension_contract.py:264cases/232payloads/13 reds; D139.
 - statement_owner_contract.py: five Cargo-current compiler guards.
 - static_recipe_contract.py:196 whole/replay/measurement cases/reds.

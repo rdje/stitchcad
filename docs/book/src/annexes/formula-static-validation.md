@@ -302,10 +302,28 @@ is trapped. The token and accepted grammar remain unchanged.
 ## Whole recipe before execution
 
 A recipe must pass static checking in its entirety before its first statement computes a value.
-Whole-source syntax/input validation must precede ordered static inference. The coupled review
-tracks D148: the reference currently interleaves those phases and can report an earlier static
-error before a later syntax error; the public recipe parser already completes syntax first.
-The immediate owned repair is G1-SLICE.5b.3d.b, before whole-graph acceptance.
+Whole-source syntax/input validation precedes ordered static inference. For example,
+`let bad:length=missing` followed by `assert late:eps_chord=1 mm==1 mm` refuses the later
+syntax error, without looking up missing. A late invalid annotation, input literal or structural
+limit likewise prevents earlier static checking. Within the input phase, original statement order
+and local validation priorities remain intact; whole-source lexical validation comes first.
+
+The reference parses each identified statement once, retaining its actual tuple AST and original
+spans. Only after every input succeeds does it check names/kinds in source order and publish prior
+let metadata. It returns a complete tuple plan after all checks; no accepted prefix escapes.
+Detached static_statement still validates only its own statement. This reference tuple plan has
+no canonical product identity and grants no numerical/geometry execution authority.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/whole_phase_contract.py --mutations
+```
+
+D148's584 independent controls combine earlier missing-name, kind, callee, input-collision and
+reserved-name errors with later malformed syntax, invalid annotations, literal width and node/
+conditional/4096-statement bounds. Traces verify all input finishes before static inference or
+prior-binding publication, original operand tuple identity, one parse per statement and real
+spans/ordinals. Eleven actual compiled faults trigger body assertions; source stays unchanged.
+Numerical/provider/state access is trapped. Grammar and accepted limits remain unchanged.
 For example, with width declared as length:
 
 ```

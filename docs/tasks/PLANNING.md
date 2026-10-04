@@ -989,9 +989,7 @@ D147 closes at G1-SLICE.5b.3d.a: real ordered ambiguity sources/4192 exact paylo
 16 actual compiled assertion reds, source exact, rc=0. Original pre-repair working report retained
 in [`stitchcad-defects-part66.md`](../history/stitchcad-defects-part66.md); grammar/token unchanged.
 
-- **D148** — reference preflight interleaves statement syntax/input and static inference;
-  let saved:length=missing followed by assert late:eps_chord=1 mm==1 mm returns unbound_name,
-  and earlier length=1.0 returns dimension. Canonical5.2.3 says syntax/input first; actual public
-  whole parser refuses later statement2 with formula_parse (target/static-coupled-before, rc=0).
-  Root: preflight calls _static_statement inside its boundary loop instead of completing parsing.
-  Owner G1-SLICE.5b.3d.b, P1 after .a before coupled closure/full graph; fix phase/priority controls.
+D148 closes at G1-SLICE.5b.3d.b: complete syntax/input before any ordered static inference,
+584 controls/11 actual compiled body reds and original parsed owners/spans/ordinals, rc=0.
+Scoped blame/show:62be6f9d introduced the interleaved loop;1972f57 added true locations without
+separating phases. Original report retained in [`stitchcad-defects-part67.md`](../history/stitchcad-defects-part67.md).

@@ -993,9 +993,8 @@ class Evaluator:
         """Inspect names, headers and kinds only; never observe state or compute a value."""
         return self._static_statement(src, env)
 
-    def _static_statement(self, src, env, ordinal=None, offset=0, prior_sources=None):
-        """Whole preflight supplies locations; the public detached entry invents none."""
-        env = self.namespace(env.items())
+    def _syntax_statement_at(self, src, ordinal=None, offset=0):
+        """Validate original input and retain only actual enclosing source context."""
         try:
             checked = self.syntax_statement(src)
         except FErr as error:
@@ -1006,6 +1005,13 @@ class Evaluator:
             if ordinal is not None:
                 arguments["statement_index"] = ordinal
             raise FErr(error.token, error.msg, arguments) from error
+        return checked
+
+    def _static_statement(self, src, env, ordinal=None, offset=0, prior_sources=None, checked=None):
+        """Whole preflight supplies completed input; detached checking validates its own."""
+        env = self.namespace(env.items())
+        if checked is None:
+            checked = self._syntax_statement_at(src, ordinal, offset)
         role, name = checked[:2]
         if role == "let":
             _, _, kind, node = checked
@@ -1059,14 +1065,18 @@ class Evaluator:
             elif text == ")":
                 depth = max(0, depth - 1)
         ends = boundaries[1:] + [len(src)]
-        plan, prior_sources = [], {}
+        parsed = []
         for ordinal, (start, end) in enumerate(zip(boundaries, ends), 1):
             if ordinal > self.limits["max_recipe_statements"]:
                 raise FErr("formula_domain", "recipe statement %d exceeds max_recipe_statements=%d"
                            % (ordinal, self.limits["max_recipe_statements"]))
-            checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources)
+            checked = self._syntax_statement_at(src[start:end], ordinal, start)
             if checked[0] != "let" and checked[0] != "assert":
                 raise FErr("formula_parse", "a recipe contains only let/assert statements")
+            parsed.append((start, end, checked))
+        plan, prior_sources = [], {}
+        for ordinal, (start, end, checked) in enumerate(parsed, 1):
+            checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources, checked=checked)
             if checked[0] == "let":
                 env[checked[1]] = {"kind": checked[2], "origin": "recipe"}
                 prior_sources[checked[1]] = self._recipe_source(src[start:end], checked[1], checked[2], ordinal, start)

@@ -330,7 +330,14 @@ shared T/N and the tolerance requirement have the meanings of grammar §5–§7;
 is retained, including directed products/quotients. A variadic row repeats its shared T from one
 operand; the structural argument bound remains a separate syntax/input rule.
 
-Syntax and input validation run first. During static checking, an ordinary call resolves its callee
+Syntax and input validation run first. For a complete recipe, every identified statement must
+finish that phase before any statement undergoes static name/kind inference or publishes a prior
+recipe binding. A later syntax, annotation-admissibility, literal-input or structural-limit refusal
+therefore precedes an earlier missing-name or kind mismatch. Within that first phase, statements
+retain source order and their existing local validation priorities; whole-source lexical validation
+still precedes statement boundaries. Successful checking reuses the actual parsed operands and
+original locations; it neither reparses with changed context nor returns an accepted prefix.
+During static checking, an ordinary call resolves its callee
 before its arguments (§5.2.2). Known operations resolve child expressions left-to-right before
 checking their complete immediate signature. For if, the order is condition, then branch, else
 branch; for within it is all positional operands, followed by the symbolic-class requirement.

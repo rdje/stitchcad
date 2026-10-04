@@ -689,12 +689,11 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: name/both ordered origins and real available sources; no values or forged indices.
   Verification/Commit: `STITCHCAD-G1-0109`; [exact proof](G1-SLICE-names.md#d147-ambiguity-argument-protocol).
 - ID: `G1-SLICE.5b.3d.b`
-  Status: `pending`
+  Status: `done`
   Goal: D148 complete whole-source syntax/input phase before any ordered static inference.
   Acceptance: later syntax/input defects precede earlier static defects; original spans/ordinals,
   bounds and no partial plan; detached statement contract unchanged.
-  P1 immediately after .a, before coupled closure and .4.
-  Verification: `pending`; Commit: `pending`.
+  Verification/Commit: `STITCHCAD-G1-0110`; [exact proof](G1-SLICE-names.md#d148-whole-source-phase-protocol).
 - ID: `G1-SLICE.5b.4`
   Status: `pending`
   Goal: validate the whole ordered recipe and construct its immutable typed dependency graph.

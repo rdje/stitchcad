@@ -101,6 +101,18 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part105.md`](docs/history/stitchcad-changelog-part105.md) | `STITCHCAD-G1-0090` | 10 lines, 853 bytes, `sha256:723f9852…` |
 
+| [`stitchcad-changelog-part106.md`](docs/history/stitchcad-changelog-part106.md) | `STITCHCAD-G1-0091` | 8 lines, 613 bytes, `sha256:407ab4aa…` |
+
+## STITCHCAD-G1-0110 - whole-source input before static checking (leaf `G1-SLICE.5b.3d.b`)
+
+Reference preflight completes syntax/input for every identified statement before ordered static
+inference or prior-binding publication. It reuses the actual parsed operand tuples with original
+locations; detached statement behavior, grammar and limits remain unchanged. No prefix escapes.
+Independent584 controls/11 compiled body fault assertions verify later input versus earlier static
+errors, phase traces, parsed identity, one parse per statement and source order. Full reference and
+publication10 pass, rc=0; original HEAD protocol/lesson/ledger/report retained byte-exact.
+G1 remains5/18;10open/137sealed. Coupled review .5b.3d precedes whole immutable graph .4.
+
 ## STITCHCAD-G1-0109 - truthful ambiguity arguments (leaf `G1-SLICE.5b.3d.a`)
 
 Reference formula_ambiguous_name now retains the name, both origins in binding order and actual
@@ -268,15 +280,6 @@ within classes; selectors create no geometry. Four public contracts/680702 tuple
 Strict651 tests/55 groups/WASM3/reference/language16/book10/ledger9+13 pass0;14 operator faults
 rerun green. Bounded book/API/live scope and exact prior/oldest retention align; G1 stays5/18,
 10open/124sealed. Next .5b.3c typed contextual checking, then .4 atomic graph acceptance.
-
-## STITCHCAD-G1-0091 - reference product guidance and review status (leaf `G1-SLICE.5b.3a.1`)
-
-D134 confines arc_length advice to refused angle×length products; the independent matrix checks
-presence and absence, catching actual quotient-regression and missing-product faults. D135 fixes
-review status to reflect implemented metadata and precise pending expression/graph proof.
-Static4032 cases/14 actual reds, structure/language16/publication10/ledger9+13/coverage/retention
-pass0; grammar unchanged. Exact prior/oldest records retained; G1 stays5/18,10open/124sealed.
-Next .5b.3b built-in/selector signatures.
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 

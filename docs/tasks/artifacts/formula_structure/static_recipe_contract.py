@@ -267,8 +267,8 @@ FAULTS = [
     ('statement ceiling bypassed', 'if ordinal > self.limits["max_recipe_statements"]:', 'if False:'),
     ('expression node ceiling bypassed', 'if n > self.limits["max_expression_nodes"]:', 'if False:'),
     ('conditional ceiling bypassed', 'if depth > self.limits["max_if_depth"]:', 'if False:'),
-    ('numeric execution added', '            checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources)',
-     '            self.evaluate(self.parse("1"), env)\n            checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources)'),
+    ('numeric execution added', '            checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources, checked=checked)',
+     '            self.evaluate(self.parse("1"), env)\n            checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources, checked=checked)'),
     ('input availability observed', '        boundaries, depth = [], 0', '        [entry.get("state") for entry in env.values()]\n        boundaries, depth = [], 0'),
 ]
 if __name__ == '__main__':
