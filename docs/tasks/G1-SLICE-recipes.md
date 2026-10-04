@@ -972,28 +972,25 @@ Final0136 staged gate all13green, rc=0, eighth-staged-gate-final.log; cached dif
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f3.r`
   Status: `done`
-  Goal: D165 literal/normalized-expression assertion-source repair, P1 immediately after .n.h3.v.c.
-  STITCHCAD-G1-0140 owns both producer/test sources, strict actual controls and blocking whole .h3.v.c/ledger/report retention.
-  Actual prior logs:27 macro reds/three expect-label panics; repair those test preconditions before native proof.
-  Acceptance: guarded test sources/current macro sites/custom assertions/noise refusals; actual
-  classifier/site body reds, exclusive13+17 native reds, exact source/full6/8 targets restored.
+  Goal: D165 normalization source-site proof; complete requirements in [part168](../history/stitchcad-devnotes-part168.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3.v.c`
   Status: `done`
   Goal: director400 cadence/D166 fixed; complete requirements/acceptance in [part167](../history/stitchcad-devnotes-part167.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f4.r`
-  Status: `todo`
+  Status: `done`
   Goal: D167 normalized/canonical-recipe assertion-site proof and strict controls; P1 next after .n.f3.r.
+  STITCHCAD-G1-0141 owns both producers/current test plans/strict shared controls and blocking whole closed .n.f3.r/ledger/original-report retention.
   Acceptance: guarded test/implementation paths, real body controls/exclusive17+21 native reds, exact source/full8/10 restores; own blocking whole records before growth.
 
-### G1-SLICE.5b.4c.h2.b.p.n.f3.r
-
-- [x] **ROOT CAUSE** — both actual predicates accept labelled-expect noise; prior30 logs show27 macro/three expect panics, rc=0, d165-{classifier-baseline,prior-native-provenance}.log.
-- [x] **ADDRESSED** — guard current test sources/sites, explicit three refusal assertions; Python17/83 actual body reds/ten strict classifiers and exclusive30 macro reds/four sources exact/full6/8 restores, rc=0, d165-{python-controls,native-driver,native-proof}.log.
-- [x] **NO REGRESSION** — strict703/59groups, environment/census228/Python83, publication43/archiveCLI396/380/glossary17/coverage9/ledger9/pointer13, rc=0, d165-{full-check,environment-probes,publication,archive-probes,glossary,coverage,ledger}.log.
-- [x] **LOCKSTEP** — live/book/task/current source proof agree; D165 sealed/D167 owned next; grammar/API/caps fixed.
-- [x] **PROMOTION** — declined: existing current assertion-site/profile/retention rules; scoped proof, no new policy.
-- [x] **COMMIT** — complete0140 then .n.f4.r; brief0/clean/no push below400.
-Final0140 three whole00826 intervals/public380/prior377/14open152sealed, rc=0, d165-retention-proof.log; strict classifier count is derived; next targets8/10 re-derived from sources.
-Final0140 staged gate all13green/cached diff0, rc=0, d165-staged-gate.log; all verification terminals consumed; hook/brief/clean follow.
+Complete0140 acceptance and final receipts in [part169](../history/stitchcad-devnotes-part169.md).
+- [x] REPRODUCE / ISSUE: actual old predicates accept labelled expect bodies; target/d167-classifier-baseline.log, two true results/rc=0.
+- [x] ROOT CAUSE (WHY + WHERE): AST-loaded actual assertion_failure used a message prefix, not current macro sites; target/d167-classifier-baseline.log two true results, rc=0; prior-native-provenance38 macro reds, rc=0.
+- [x] FIX: both guarded current test plans/source-site classifiers and strict shared controls; python_producer_contract.py,17runtime/89 actual body reds/12 classifiers, rc=0.
+- [x] ADDRESSED (verified): direct classifier/native entries with seven exports absent, target/d167-native-driver.log,38 actual macro reds/six sources exact/full8/10 restored, rc=0; independently reclassified actual logs/current sources.
+- [x] NO REGRESSION: local profile bash run_ci_environment_probes.sh CI19/56/Python17/89/27/27/19/12; publication43/archive28+CLI400/384reads/ledger9/pointer13/coverage9 all rc=0; no Rust changes.
+- [x] LOCKSTEP: book/live docs/frontier .n.f9; target/d167-retention-proof.log prior380 bytes/window controls/four whole committed seals/public384 exact, rc=0; defect census13open/153sealed/no missing or overlap, rc=0.
+STITCHCAD-G1-0141: grammar/API and400 cadence unchanged; curated line-start macro proof, not arbitrary Rust syntax; final staged gate/commit workflow follows.
+Initial gates1 refused bare shorthand/stale index after sandbox staging refusal; corrected explicit result/rc evidence restaged; no checker change.
+Final0141 staged gate13green, rc=0, d167-staged-gate-corrected.log; both cached/current diff checks0. Commit hook and brief clearing follow.

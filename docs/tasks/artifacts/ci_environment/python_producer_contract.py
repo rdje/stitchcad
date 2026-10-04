@@ -371,6 +371,7 @@ def main():
             'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py',
             'declaration_mutations.py', 'name_read_mutations.py',
             'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
+            'canonical_recipe_mutations.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -409,9 +410,7 @@ def main():
         raise AssertionError('D156 Python actual child-store reset survived')
     for name, files, target in (
             ('recipe', ('ordered.rs', 'statement.rs'), 'formula_recipe_contract'),
-            ('statement', ('statement.rs',), 'formula_statement_contract'),
-            ('normalized_recipe', ('statement.rs', 'ordered.rs', 'normalized_recipe.rs'), 'formula_normalized_recipe_contract'),
-            ('canonical_recipe', ('canonical_recipe.rs',), 'formula_canonical_recipe_contract')):
+            ('statement', ('statement.rs',), 'formula_statement_contract')):
         path = ROOT / f'docs/tasks/artifacts/formula_structure/{name}_mutations.py'
         sources = tuple(ROOT / 'crates/sc-core/src/recipe' / file for file in files)
         text = path.read_text()
@@ -427,6 +426,8 @@ def main():
             raise AssertionError('D156 Python actual child-store reset survived')
     classifier_count = 0
     for filename, work_name, rust, target, test in (
+            ('normalized_recipe_mutations.py', 'normalized_recipe_mutations', ('statement.rs', 'ordered.rs', 'normalized_recipe.rs'), 'formula_normalized_recipe_contract', None),
+            ('canonical_recipe_mutations.py', 'canonical_recipe_mutations', 'canonical_recipe.rs', 'formula_canonical_recipe_contract', None),
             ('literal_normalization_mutations.py', 'formula_literal_mutations', 'literal.rs',
              'formula_literal_contract', 'independent_fraction_fixtures_cover_conversion_width_and_domain'),
             ('normalized_expression_mutations.py', 'formula_normalized_mutations', 'normalized.rs',

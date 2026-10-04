@@ -10,10 +10,12 @@ STATEMENT = ROOT / 'crates/sc-core/src/recipe/statement.rs'
 ORDERED = ROOT / 'crates/sc-core/src/recipe/ordered.rs'
 NORMALIZED = ROOT / 'crates/sc-core/src/recipe/normalized_recipe.rs'
 WORK = ROOT / 'target/normalized_recipe_mutations'
-SOURCES = (STATEMENT, ORDERED, NORMALIZED)
+CONTRACT = ROOT / 'crates/sc-core/tests/formula_normalized_recipe_contract.rs'
+MUTATED = (STATEMENT, ORDERED, NORMALIZED)
+SOURCES = (*MUTATED, CONTRACT)
 runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
     ROOT, directories=(WORK,), sources=SOURCES)
-originals = {p: p.read_bytes() for p in SOURCES}
+originals = {p: p.read_bytes() for p in MUTATED}
 WORK.mkdir(parents=True, exist_ok=True)
 cases = [
  ('name retained', STATEMENT, 'name: self.name,', 'name: "scrubbed",'),
@@ -41,15 +43,31 @@ cases = [
 ]
 for name, path, before, _ in cases:
     assert originals[path].decode().count(before) == 1, (name, 'actual anchor not unique')
+def assertion_sites(source, path):
+    sites = set()
+    for line_number, line in enumerate(source.splitlines(), 1):
+        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
+        if match is not None:
+            sites.add((path, line_number, len(match.group(1).encode()) + 1))
+    return sites
+
+
 def assertion_failure(output):
     parts = output.split(b'\nfailures:\n', 2)
-    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None
-assert not assertion_failure(b'test assertion_ok ... ok\n\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_ok\n')
+    if len(parts) != 3:
+        return False
+    locations = re.finditer(rb'panicked at ([^:\n]+):([0-9]+):([0-9]+):\n', parts[1])
+    return any((match.group(1).decode('utf-8', 'replace'), int(match.group(2)), int(match.group(3)))
+               in ASSERTION_SITES for match in locations)
+
+
+ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
+assert ASSERTION_SITES, 'focused contract has no assertion sites'
+assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
 assert not assertion_failure(b'assertion: compiler output\n')
-assert assertion_failure(b'\nfailures:\nthread panicked:\nassertion `left == right` failed\n\nfailures:\ncontract\n')
 assert sys.argv[1:] in [[], ['--classifier-only']]
 if sys.argv[1:] == ['--classifier-only']:
-    print('normalized recipe fault controls:17 unique actual anchors; passing/expect/compiler noise refused')
+    print('normalized recipe fault controls:17 unique actual anchors; current test assertion sites; passing/expect/compiler noise refused')
     sys.exit(0)
 environment = dict(os.environ)
 try:

@@ -157,12 +157,13 @@ panics refuse. Three refusal preconditions now assert explicitly. Thirty compile
 are actual macro-site reds; standing controls calibrate broad/prefix/site faults with independent
 fixtures. Classifier-only mode checks anchors/noise without native fault dispatch.
 
-Normalized-recipe and canonical-recipe entries likewise validate their declared paths before
+Normalized-recipe and canonical-recipe entries likewise validate implementation/test paths before
 reads/writes, preserve prepared child stores and rebuild their full focused target after restoration.
-The normalized entry declares all three mutated sources before activating any output. Existing
-classifier-only behavior and failed-body/noise rules remain available in both entries.
-D167 owns their stronger source-site proof: the current message-prefix classifiers still accept
-assertion-labelled expect noise. This boundary is separate from the repaired expression entries.
+The normalized entry declares all three mutated sources and its read-only test source before output.
+Both match failed-body panic locations to current assertion macro sites; custom messages pass and
+assertion-labelled expect noise refuses. Their38 compiled faults are actual macro-site reds; six
+source files remain exact and full eight/ten-test targets pass after restoration. Classifier-only
+mode checks anchors/noise without native dispatch. Standing controls exercise actual site faults.
 
 Canonical-expression and checked-expression entries also guard source/output before reads/writes,
 inherit prepared child stores and rebuild complete focused targets after exact source restoration.
@@ -182,7 +183,7 @@ Declaration and exact-name entries use these same guards, current test assertion
 child stores. Declaration restoration rebuilds both the complete native target and its five doctests.
 The captures also exercise its negative-construction dispatch; simulated output checks dispatch only.
 
-Standing controls cover17 runtime cases and seventy-nine actual body faults, including twenty-seven real
+Standing controls cover17 runtime cases and eighty-nine actual body faults, including twenty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
 12 membership tests passing. All twenty-seven entry captures also refuse a late missing source before

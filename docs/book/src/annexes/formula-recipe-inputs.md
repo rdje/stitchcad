@@ -199,8 +199,10 @@ two runnable API docs check source-independent usage. Twenty-one actual producti
 must compile and fail public assertions, covering headers, operands, envelope/order/count/spacing,
 empty identity, terminal newline, opaque Debug and exact extraction. The exclusive runner restores
 its source exactly and rebuilds the full focused canonical-recipe target. The direct entry validates
-source/output through the [producer profile](../build-and-checks.md#direct-python-producers) before
-reads/writes and preserves prepared child stores. Its classifier refuses compiler/expect-only/passing-name noise. Existing authored
+implementation/test/output through the [producer profile](../build-and-checks.md#direct-python-producers) before
+reads/writes and preserves prepared child stores. Failed-body panic locations must match assertion
+macro sites in the guarded current test source. Custom messages pass; labelled expects and compiler/
+passing-name noise refuse. All21 native faults meet that rule; the full ten-test target is restored. Existing authored
 fixtures remain checked by the actual independent recursive reference; no independent whole-recipe
 parser or numerical evaluation proof is claimed. [Coupled review .3f.2](#coupled-input-and-identity-review) is complete below.
 
@@ -225,10 +227,11 @@ Six compile-fail docs check private fields/source/view lifetimes, and two runnab
 
 Seventeen actual production faults compile and fail public assertions: name/header metadata,
 declared kind/tolerance, operand coverage/error role, order/count/ordinal, spans, privacy and both
-error causes. The direct entry validates all three sources/output before reads/writes and preserves
+error causes. The direct entry validates all three implementation sources, its test source and output before reads/writes and preserves
 prepared child stores. The exclusive runner restores every source exactly and rebuilds the full
-focused normalized-recipe target. Its failed-body classifier
-refuses passing-name, compiler and expect-only noise; the structural suite watches actual anchors.
+focused eight-test normalized-recipe target. Failed-body panic locations must match current guarded
+test assertion sites; custom messages pass and labelled expects/passing-name/compiler noise refuse.
+All17 native faults meet that rule; standing controls exercise actual classifier/site faults.
 Authored fixtures are checked by the independent recursive reference, with semantic execution trapped.
 Test-side header/operand byte composition is inspection, not a product statement/recipe serializer.
 

@@ -160,3 +160,11 @@ require failed-body macro locations. Actual Python controls83 body reds include 
 faults; classifier count derives the visited loop. Exclusive13+17 native reds/four current Rust
 sources exact/full6/8 artifacts restored0. Initial proof mixed text/bytes1 excluded; corrected proof0.
 D167 same prefix weakness reproduces in normalized/canonical recipes; .n.f4.r owns P1 next.
+
+Recipe provenance — STITCHCAD-G1-0141 (.n.f4.r): actual message-prefix predicates accepted
+labelled-expect body noise. All38 prior native logs already matched current macro sites; no Rust
+test preconditions needed repair. Guard current test paths alongside mutable sources, match real
+failed-body paths/lines/columns, and move both entries into strict actual classifier/site controls.
+Twelve classifiers/89 actual body reds pass; exclusive17+21 native macro reds/six Rust sources
+exact/full8/10 restored0. Four whole committed records retained/prior380 identities exact/public384.
+The predicate recognizes the curated current line-start macro sites, not arbitrary Rust syntax.
