@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0122 - shared Python producer entry guards (leaf `G1-SLICE.5b.4c.h2.b.p.a`)
+
+- Plan stores/declared outputs/source files before creation or activation; clean refusal2,
+  selected channel/unrelated environment retained. First size-membership entry adopts the guard.
+- Runtime17/actual body reds7/actual pre-write capture, absent-export native7 assertion reds,
+  exact source/current artifact restored12pass; existing CI/local/census/book/glossary green.
+- Retired pre-repair capture points to its exact record. Other native/output/delegated entries
+  remain owned; D156 stays open. No Rust API or grammar change; Ease group follows.
+
 ## STITCHCAD-G1-0121 - retain Python repair continuity (leaf `G1-SLICE.5b.4c.h2.b.p.h`)
 
 - Seal two complete source3e400c1 intervals: four whole lessons and census acceptance/refusal

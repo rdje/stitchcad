@@ -98,6 +98,48 @@ def verify(root, environment):
         directory(root, Path(wanted[name]).relative_to(root).as_posix())
 
 
+def producer_path(root, value):
+    """Resolve a declared owned path without inspecting any external destination."""
+    require(isinstance(value, (str, Path)), 'invalid producer path type')
+    path = Path(value)
+    require(not any(char in str(path) for char in '\x00\r\n'), 'invalid producer path bytes')
+    require('..' not in path.parts and '.git' not in path.parts, 'invalid producer path components')
+    if not path.is_absolute():
+        path = root / path
+    require(path.is_relative_to(root), 'producer path outside workspace')
+    return path.relative_to(root).as_posix()
+
+
+def prepare_producer(root, *, directories=(), sources=()):
+    """Plan all stores and owned paths before any creation, then activate the child environment."""
+    environment_for(root, os.environ, create=False)
+    outputs = [producer_path(root, path) for path in directories]
+    inputs = [producer_path(root, path) for path in sources]
+    for relative in outputs:
+        require(Path(relative).parts[:1] == ('target',), 'producer output must be under target')
+        directory(root, relative, missing_ok=True)
+    for relative in inputs:
+        path = root / relative
+        directory(root, Path(relative).parent.as_posix())
+        require(not path.is_symlink(), 'symlink producer source')
+        require(path.is_file() and path.stat().st_dev == root.stat().st_dev,
+                'producer source is not a local regular file')
+    environment = environment_for(root, os.environ)
+    os.environ.update(environment)
+    for relative in outputs:
+        directory(root, relative, create=True)
+    return environment
+
+
+def enter_producer(root, *, directories=(), sources=()):
+    """Standalone Python entry: refuse cleanly before its first owned write or child dispatch."""
+    try:
+        return prepare_producer(root, directories=directories, sources=sources)
+    except (Refusal, OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--verify', action='store_true')

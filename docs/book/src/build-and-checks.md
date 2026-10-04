@@ -105,5 +105,22 @@ source symlinks and nested Git boundaries. Its existing diagnostic suite watches
 
 A pre-repair capture of the actual size-membership mutation body stops at its first directory write
 with all five store exports absent, before any source mutation or compiler invocation. This confirms
-the standalone gap owned by D156 .h2.b.p. Use the guarded Make launcher for current workflows while
+the original standalone gap owned by D156 .h2.b.p. Use the guarded Make launcher for current workflows while
 the remaining direct entries and output destinations are repaired and verified. D156 stays open.
+
+## Direct Python producers
+
+The size-membership mutation entry now prepares the shared profile before its first owned output
+or native child. It validates every declared output directory and source file before creating any
+stores or changing the environment. Outputs must remain under target/; sources must already be
+regular files within the current workspace. Parent escapes, links, Git boundaries and foreign
+volumes refuse. Invalid path types or control bytes also refuse. An invalid entry prints the
+local-environment refusal and exits2 before invoking a child. Named toolchains and unrelated
+environment values are preserved; paths still derive from the current repository root.
+
+Standing controls cover17 runtime cases and seven actual body faults, including the real standalone
+entry at its first write. The native run with caller exports absent observes seven compiled
+assertion failures, then restores exact source bytes and rebuilds the current artifact with all
+12 membership tests passing. Other Python native, fixture and delegated entries remain under the
+bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
+captures check the repaired entry. This scoped repair does not close D156.

@@ -860,10 +860,12 @@ clean postconditions precede the next .b.i census slice.
   No older sealed file/window/reader/cap changes; focused ledger/coverage/publication/gate.
   Work unit STITCHCAD-G1-0121; blocking continuity retention before .p.a implementation.
 - ID: `G1-SLICE.5b.4c.h2.b.p.a`
-  Status: `pending`
+  Status: `done`
   Goal: shared Python activation/output/source-path guards; first actual standalone native producer.
   Acceptance: plan stores and owned paths before writes, preserve argv/channel/environment;
   independent runtime/capture/body faults and real exclusive native faults/source+artifact restoration.
+  Work unit STITCHCAD-G1-0122; plan every output/source/store before mkdir or environment
+  activation; fail-closed clean CLI refusal. Size-membership is the first bounded adopter.
 - ID: `G1-SLICE.5b.4c.h2.b.p.n`
   Status: `pending`
   Goal: apply the verified entry/owned-path contract to remaining direct native producers.
@@ -905,3 +907,51 @@ No failed read was counted as proof, no reader or destination content was altere
 
 Final staged retention gate13green, rc=0, target/d156-python-retention-gate.log; cached diff0.
 Explicit9 paths; hook/brief0/clean postconditions precede shared Python guard implementation.
+
+
+### G1-SLICE.5b.4c.h2.b.p.a
+
+- [x] **ROOT CAUSE** — original actual standalone first mkdir lacked five exports, rc=0
+  captured refusal before write/child, retained complete census131. Per-process inherited Make
+  guards do not prepare a separately invoked Python entry; owned output/source plans are needed.
+- [x] **ADDRESSED** — shared Python path planning/activation/clean refusal and first native
+  adopter; guarded run_ci_environment_probes.sh,17 runtime cases/7 actual compiled-body reds/
+  actual standalone pre-write capture, rc=0, target/d156-python-entry-ci-final.log. Source/device
+  metadata is simulated only in the negative control; no off-volume write. Late bad sources
+  refuse before earlier output/store creation or activation; named/unrelated environment preserved.
+- [x] **NO REGRESSION** — actual direct native entry with all seven caller overrides absent,
+  seven compiled assertion reds then exact Rust source/current artifact restored:12 tests pass,
+  rc=0, target/d156-python-first-native.log and target/size_membership_mutations/restored.log.
+  Existing CI19/6, local56/13compiled/2Make/1shell and census9/9/4/Git226/285 boundaries pass0;
+  publication10/62chapters/67API, glossary17 pass, rc=0, target/d156-python-entry-*.log.
+- [x] **LOCKSTEP** — native adopter/entry ledger, live resume/task/index/book agree; other
+  producers stay .p.n/.p.o. D156 open; G1 5/18,12open/143sealed unchanged; grammar untouched.
+- [x] **PROMOTION** — declined: existing plan-before-write/locality/actual-body/restore contracts.
+- [x] **COMMIT** — complete0122; staged gate/hook/brief0/clean precede remaining native group.
+
+Current syntax inventory:226 entries/6765 Python AST calls/68 literal heredocs/2649 embedded calls;
+these remain inspection counts. Retired pre-repair baseline CLI now refuses cleanly2 and points to
+exact census131; it never runs the changed adopter against a stale unguarded expectation. Current
+capture exercises the actual new entry; removal of its real activation call earns an assertion red.
+Native stdout is consumed only after terminal0; no premature/missing artifact read is proof.
+Source restores in finally and the new final focused build restores the actual current artifact.
+
+### Remaining native group ownership
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.m1`
+  Status: `pending`
+  Goal: two Ease native mutation entries adopt the shared declared-path/profile contract.
+  Acceptance: both actual standalone prefixes/late refusals/activation omission reds, unchanged
+  native argv; exclusive real mutation assertions and exact source/current artifact restoration.
+  Work unit follows0122; finite ledger ownership transfers before edits. Then membership-chart
+  native groups and formula/unit native groups, split before implementation.
+
+Final live ledger9/pointer13 and coverage10/13/12/zero gaps, rc=0,
+target/d156-python-entry-{ledger,coverage}.log; Rust diff empty. Full CI not due.
+
+First staged gate refuses1: G1 status row331B exceeds fixed320B ceiling. Tighten the
+summary cell; full scope remains in owner. Preserve target/d156-python-entry-staged-gate.log;
+final gate must pass before commit. No ceiling or schema change.
+
+Final staged gate13green, rc=0, target/d156-python-entry-staged-gate-final.log; cached diff0.
+Explicit14 owned paths; Rust diff empty. Hook/brief0/clean precede Ease conversion.

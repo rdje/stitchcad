@@ -202,54 +202,10 @@ def coverage():
           str(checked) + ' AST/source/bash boundary checks; pass')
 
 
-def baseline():
-    """Stop the actual standalone body at its first mkdir, before mutation or compiler dispatch."""
-    source = ROOT / 'docs/tasks/artifacts/size_membership/size_membership_mutations.py'
-    original = source.read_bytes()
-    wanted = ROOT / 'target/size_membership_mutations'
-    # This source requests WORK.mkdir before reading its Rust source or entering the mutation
-    # loop. Every mkdir and child dispatch is intercepted fail-closed.
-    saved = dict(os.environ)
-    mkdir, run, execute = Path.mkdir, subprocess.run, os.execvpe
-    stores = ('CARGO_HOME', 'RUSTUP_HOME', 'CARGO_TARGET_DIR', 'TMPDIR', 'MAKE_TMPDIR')
-    captured = []
-
-    class Stopped(Exception):
-        """No producer write or child invocation is permitted in this baseline."""
-
-    def stop_mkdir(path, *args, **kwargs):
-        assert path == wanted, ('D156 unexpected first directory', str(path))
-        captured.append({name: os.environ.get(name) for name in stores})
-        raise Stopped
-
-    def stop_child(*args, **kwargs):
-        raise AssertionError('D156 unexpected child before captured first write')
-
-    try:
-        for name in stores:
-            os.environ.pop(name, None)
-        Path.mkdir, subprocess.run, os.execvpe = stop_mkdir, stop_child, stop_child
-        try:
-            exec(compile(original, str(source), 'exec'),
-                 {'__file__': str(source), '__name__': 'captured_standalone'})
-        except Stopped:
-            pass
-        else:
-            raise AssertionError('D156 standalone body never reached first write')
-    finally:
-        Path.mkdir, subprocess.run, os.execvpe = mkdir, run, execute
-        os.environ.clear()
-        os.environ.update(saved)
-    assert captured == [{name: None for name in stores}], 'D156 standalone profile baseline changed'
-    assert source.read_bytes() == original, 'D156 standalone baseline changed source'
-    print('producer baseline: actual size-membership body reaches first mkdir with five exports absent; '
-          'write refused by capture, no mutation/compiler/child, source unchanged')
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--baseline', action='store_true', help='capture the pre-repair standalone prefix')
+    parser.add_argument('--baseline', action='store_true', help='retired pre-repair snapshot; see the committed census record')
     args = parser.parse_args()
-    main()
     if args.baseline:
-        baseline()
+        parser.error('pre-repair baseline is retained in docs/history/stitchcad-devnotes-part131.md; current entry capture is in python_producer_contract.py')
+    main()

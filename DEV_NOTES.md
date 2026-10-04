@@ -8,6 +8,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 Python entry planning
+
+- Validate all stores, outputs and existing source paths before creating or activating.
+- Capture the real entry before its first write; omission must fail an assertion.
+- Restore source and the current compiled artifact after exclusive native faults.
+- Promotion declined: existing locality/actual-body/restore rules.
+
 ## _(2026-10-04 UTC)_ — D156 Python continuity
 
 - Seal complete committed lessons and census receipts before guard growth.
