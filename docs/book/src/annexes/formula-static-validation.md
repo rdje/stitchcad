@@ -303,14 +303,20 @@ is trapped. The token and accepted grammar remain unchanged.
 ## Whole recipe before execution
 
 A recipe must pass static checking in its entirety before its first statement computes a value.
-Whole-source syntax/input validation precedes ordered static inference. For example,
+Whole-source syntax/structure, literal inputs and ordered static inference are separate phases.
+Each completes for the entire source before the next starts. For example,
 `let bad:length=missing` followed by `assert late:eps_chord=1 mm==1 mm` refuses the later
 syntax error, without looking up missing. A late invalid annotation, input literal or structural
-limit likewise prevents earlier static checking. Within the input phase, original statement order
-and local validation priorities remain intact; whole-source lexical validation comes first.
+limit likewise prevents earlier static checking. Syntax/structure also precedes literal conversion:
+an earlier `let first:count=340282366920938463463374607431768211456` cannot hide a later
+invalid assertion class, open parenthesis or structural bound. Both literal magnitude and structure
+can raise formula_domain, so the token alone does not prove phase agreement. Source order remains
+within each phase; whole-source lexical validation and raw annotation priority remain intact.
 
-The reference parses each identified statement once, retaining its actual tuple AST and original
-spans. Only after every input succeeds does it check names/kinds in source order and publish prior
+The reference parses each identified statement once into raw number/unit leaves, preserving original
+spans. A separate iterative traversal normalizes every literal, including untaken branches, into
+checked operand tuples. Static checks reuse those normalized owners. After every input succeeds,
+it checks names/kinds in source order and publishes prior
 let metadata. It returns a complete tuple plan after all checks; no accepted prefix escapes.
 Detached static_statement still validates only its own statement. This reference tuple plan has
 no canonical product identity and grants no numerical/geometry execution authority.
@@ -488,16 +494,23 @@ no canonical product record identity, and initial authored declarations have no 
 
 Six faults compiled into the real reference and nine compiled into the actual Rust implementation
 must trigger oracle or running-driver body assertions. All four source files are restored byte-exact,
-and the restored Rust artifact must pass again. Two actual copied-annex status faults also refuse,
-preventing D149's obsolete implementation claims from returning.
+and the restored Rust artifact must pass again. Three actual copied-annex status faults also refuse,
+preventing D149's obsolete claims and D151's ambiguous reference/product proof wording.
 
 This shared-case contract verifies the exercised expression and current-statement interfaces.
-Final coupled closure still owns D150: an earlier over-width literal can hide a later syntax error
-in the reference, whereas the public recipe parser completes syntax before literal conversion.
-The immediate repair .5b.3d.d will separate those first phases; the unchanged raw-annotation
-priority remains a syntax obligation. The13149 passing cases do not claim that competing-boundary
-counterexample is repaired. The adapter's
-ordered loop is a diagnostic consumer; the library-owned immutable whole graph remains .5b.4.
+D150's competing-phase controls additionally compare263 independently authored token/phase/ordinal
+cases with the actual public API and reference, across four bad literal domains, eight later syntax/
+structure failures, four separators and genuine prefix ordinals. Eight detached controls preserve
+local defaults. Real phase/conversion traces verify untaken operands, exact spelling/units,
+normalized owners and original spans; ten actual compiled body faults must refuse.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/first_phase_contract.py --mutations
+```
+
+The adapter's ordered loop is a diagnostic consumer; the library-owned immutable whole graph
+remains .5b.4. Coupled expression/current-statement review is complete with these phase controls
+and full reference regressions.
 Static proofs still grant no numerical result, physical geometry, export readiness or human approval.
 
 ### Parameter quantization and curve length

@@ -354,11 +354,11 @@ class Evaluator:
                     raise FErr("formula_parse", "a literal's unit follows it with exactly one space")
         return [(k, t) for k, t, _ in kept], [s for _, _, s in kept]
 
-    def parse(self, src):
+    def parse(self, src, *, literal_inputs=True):
         self.src = src
         self.t, self.starts = self.tokenize(src)
         self.i = 0
-        node = self.p_expr()
+        node = self.p_expr(literal_inputs)
         if self.i != len(self.t):
             raise FErr("formula_parse", "trailing %r after a complete expression"
                        % " ".join(t[1] for t in self.t[self.i:]))
@@ -373,38 +373,38 @@ class Evaluator:
         self.i += 1
         return self.t[self.i - 1]
 
-    def p_expr(self):
-        left = self.p_add()
+    def p_expr(self, literal_inputs):
+        left = self.p_add(literal_inputs)
         if self.peek()[0] == "cmp":
             op = self.take()[1]
-            right = self.p_add()
+            right = self.p_add(literal_inputs)
             if self.peek()[0] == "cmp":
                 raise FErr("formula_parse", "a comparison does not chain")
             return ("cmp", op, left, right)
         return left
 
-    def p_add(self):
-        node = self.p_mul()
+    def p_add(self, literal_inputs):
+        node = self.p_mul(literal_inputs)
         while self.peek()[0] == "op" and self.peek()[1] in ("+", "-"):
             op = self.take()[1]
-            node = ("bin", op, node, self.p_mul())
+            node = ("bin", op, node, self.p_mul(literal_inputs))
         return node
 
-    def p_mul(self):
-        node = self.p_unary()
+    def p_mul(self, literal_inputs):
+        node = self.p_unary(literal_inputs)
         while self.peek()[0] == "op" and self.peek()[1] in ("*", "/"):
             op = self.take()[1]
-            node = ("bin", op, node, self.p_unary())
+            node = ("bin", op, node, self.p_unary(literal_inputs))
         return node
 
-    def p_unary(self):
+    def p_unary(self, literal_inputs):
         if self.peek()[0] == "op" and self.peek()[1] == "-":
             self.take()
-            return ("neg", self.p_unary())
-        return self.p_power()
+            return ("neg", self.p_unary(literal_inputs))
+        return self.p_power(literal_inputs)
 
-    def p_power(self):
-        node = self.p_postfix()
+    def p_power(self, literal_inputs):
+        node = self.p_postfix(literal_inputs)
         if self.peek()[0] == "op" and self.peek()[1] == "^":
             self.take()
             kind, text = self.peek()
@@ -414,65 +414,102 @@ class Evaluator:
             node = ("sq", node)
         return node
 
-    def p_postfix(self):
+    def p_postfix(self, literal_inputs):
         kind, text = self.peek()
         if kind == "id" and self.peek(1)[1] == "(":
             name = self.take()[1]
             if name != "if":
                 self._identifier(name)
             self.take()
-            args = self.p_args()
+            args = self.p_args(literal_inputs)
             if name == "if":
                 if len(args) != 3:
                     raise FErr("formula_parse", "a conditional takes three parts, got %d" % len(args))
                 return ("if", args[0], args[1], args[2])
             return ("call", name, args)
-        return self.p_atom()
+        return self.p_atom(literal_inputs)
 
-    def p_args(self):
+    def p_args(self, literal_inputs):
         args = []
         if self.peek()[1] == ")":
             raise FErr("formula_parse", "call arguments require at least one expression")
         while True:
-            args.append(self.p_expr())
+            args.append(self.p_expr(literal_inputs))
             if self.peek()[1] == ",":
                 self.take(); continue
             if self.peek()[1] == ")":
                 self.take(); return args
             raise FErr("formula_parse", "expected , or ) and found %r" % (self.peek()[1],))
 
-    def p_atom(self):
+    def p_atom(self, literal_inputs):
         kind, text = self.peek()
         if kind is None:
             raise FErr("formula_parse", "the expression ended mid-form")
         if text == "(":
             self.take()
-            node = self.p_expr()
+            node = self.p_expr(literal_inputs)
             if self.peek()[1] != ")":
                 raise FErr("formula_parse", "unbalanced parenthesis")
             self.take()
             return node
         if kind == "num":
             self.take()
-            value = Fraction(Decimal(text))
             unit = None
             if self.peek()[0] == "id" and self.peek()[1] in self.units:
                 unit = self.take()[1]
-            if unit is None:
-                if "." in text:
-                    self.see(from_true("ratio", value), "literal ratio conversion")
-                    return self.literal("ratio", from_true("ratio", value))
-                self.see(value, "literal count")
-                self.scalar("count", value, "literal count input")
-                return ("lit", "count", value)
-            ukind, factor = self.units[unit]
-            self.see(value * factor, "literal %s conversion" % ukind)
-            return self.literal(ukind, value * factor)
+            if not literal_inputs:
+                return ("raw_lit", text, unit)
+            return self._literal_input(text, unit)
         if kind == "id":
             self._identifier(text)
             self.take()
             return ("name", text)
         raise FErr("formula_parse", "unexpected %r" % text)
+
+    def _parse_syntax(self, src):
+        """Whole-source syntax does not construct or normalize numeric literal values."""
+        return self.parse(src, literal_inputs=False)
+
+    def _literal_input(self, text, unit):
+        """Normalize one original number/unit pair using the existing input rules."""
+        value = Fraction(Decimal(text))
+        if unit is None:
+            if "." in text:
+                self.see(from_true("ratio", value), "literal ratio conversion")
+                return self.literal("ratio", from_true("ratio", value))
+            self.see(value, "literal count")
+            self.scalar("count", value, "literal count input")
+            return ("lit", "count", value)
+        ukind, factor = self.units[unit]
+        self.see(value * factor, "literal %s conversion" % ukind)
+        return self.literal(ukind, value * factor)
+
+    def _normalize_input(self, node):
+        """Iterative postorder conversion; no operators, names or values are evaluated."""
+        pending, normalized = [(node, False)], []
+        while pending:
+            current, ready = pending.pop()
+            if current[0] == "raw_lit":
+                normalized.append(self._literal_input(current[1], current[2]))
+                continue
+            children = self.syntax_children(current)
+            if not children:
+                normalized.append(current)
+                continue
+            if not ready:
+                pending.append((current, True))
+                pending.extend((child, False) for child in reversed(children))
+                continue
+            converted = normalized[-len(children):]
+            del normalized[-len(children):]
+            if current[0] == "call":
+                normalized.append(("call", current[1], converted))
+            else:
+                operands = iter(converted)
+                normalized.append(tuple(next(operands) if isinstance(part, tuple) else part
+                                        for part in current))
+        assert len(normalized) == 1, "literal input traversal must yield exactly one root"
+        return normalized[0]
 
     @staticmethod
     def syntax_children(node):
@@ -959,8 +996,9 @@ class Evaluator:
             arguments["statement_index"] = ordinal
         return FErr("formula_dimension", message, arguments)
 
-    def syntax_statement(self, src):
+    def syntax_statement(self, src, *, literal_inputs=True):
         """Parse a header and all operands without inspecting declarations or values."""
+        parse = self.parse if literal_inputs else self._parse_syntax
         self.src = src
         toks, starts = self.tokenize(src)
         self.t, self.starts, self.i = toks, starts, 0
@@ -973,7 +1011,7 @@ class Evaluator:
             if kind not in self.bindable:
                 raise self._binding_dimension(src, name, kind)
             self._want_op("=")
-            return ("let", name, kind, self.parse(self._rest()))
+            return ("let", name, kind, parse(self._rest()))
         if head == "assert":
             self.take()
             name = self._want_identifier()
@@ -985,18 +1023,18 @@ class Evaluator:
             parts = self._split_top_level(self._rest())
             if len(parts) != 2:
                 raise FErr("formula_parse", "an assert compares exactly two expressions")
-            left, right = self.parse(parts[0]), self.parse(parts[1])
+            left, right = parse(parts[0]), parse(parts[1])
             return ("assert", name, tol_name, left, right)
-        return ("expr", None, None, self.parse(src))
+        return ("expr", None, None, parse(src))
 
     def static_statement(self, src, env):
         """Inspect names, headers and kinds only; never observe state or compute a value."""
         return self._static_statement(src, env)
 
-    def _syntax_statement_at(self, src, ordinal=None, offset=0):
+    def _syntax_statement_at(self, src, ordinal=None, offset=0, *, literal_inputs=True):
         """Validate original input and retain only actual enclosing source context."""
         try:
-            checked = self.syntax_statement(src)
+            checked = self.syntax_statement(src) if literal_inputs else self.syntax_statement(src, literal_inputs=False)
         except FErr as error:
             if error.arguments.get("diagnostic_scope") != "binding_annotation":
                 raise
@@ -1006,6 +1044,10 @@ class Evaluator:
                 arguments["statement_index"] = ordinal
             raise FErr(error.token, error.msg, arguments) from error
         return checked
+
+    def _literal_statement_at(self, src, checked, ordinal=None, offset=0):
+        """Convert checked raw syntax once; preserve original header and enclosing context."""
+        return checked[:3] + tuple(self._normalize_input(node) for node in checked[3:])
 
     def _static_statement(self, src, env, ordinal=None, offset=0, prior_sources=None, checked=None):
         """Whole preflight supplies completed input; detached checking validates its own."""
@@ -1070,12 +1112,16 @@ class Evaluator:
             if ordinal > self.limits["max_recipe_statements"]:
                 raise FErr("formula_domain", "recipe statement %d exceeds max_recipe_statements=%d"
                            % (ordinal, self.limits["max_recipe_statements"]))
-            checked = self._syntax_statement_at(src[start:end], ordinal, start)
+            checked = self._syntax_statement_at(src[start:end], ordinal, start, literal_inputs=False)
             if checked[0] != "let" and checked[0] != "assert":
                 raise FErr("formula_parse", "a recipe contains only let/assert statements")
             parsed.append((start, end, checked))
-        plan, prior_sources = [], {}
+        inputs = []
         for ordinal, (start, end, checked) in enumerate(parsed, 1):
+            checked = self._literal_statement_at(src[start:end], checked, ordinal, start)
+            inputs.append((start, end, checked))
+        plan, prior_sources = [], {}
+        for ordinal, (start, end, checked) in enumerate(inputs, 1):
             checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources, checked=checked)
             if checked[0] == "let":
                 env[checked[1]] = {"kind": checked[2], "origin": "recipe"}

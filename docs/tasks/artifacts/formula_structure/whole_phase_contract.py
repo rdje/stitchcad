@@ -85,28 +85,36 @@ def contracts(replacement=None, verbose=True):
     middle = '\n'.join('assert c%d:eps_num=1==1' % i for i in range(4095))
     refused('let bad:length=missing\n' + middle + '\nlet excess:count=1', 'formula_domain')
 
-    # Trace the real phase calls: parse every statement exactly once, then check in order.
-    # Retain the actual parsed tuple object, rather than reconstructing a replacement AST.
-    syntax, static, infer, recipe_source = (reference.syntax_statement, reference._static_statement,
-                                          reference.infer, reference._recipe_source)
-    parsed, static_ordinals = [], []
+    # Raw syntax and normalized operands are separate owners; each phase completes once.
+    syntax, literal, static, infer, recipe_source = (
+        reference.syntax_statement, reference._literal_statement_at, reference._static_statement,
+        reference.infer, reference._recipe_source)
+    parsed, normalized, static_ordinals = [], [], []
     chunks = ['let first:length=width/0\n', 'assert check:eps_phys=first==width\n',
               'let second:length=if(flag,first,first)\n', 'let last:length=second']
-    def syntax_trace(source):
-        result = syntax(source)
+    def syntax_trace(source, **kwargs):
+        result = syntax(source, **kwargs)
         parsed.append((source, result))
         return result
+    def literal_trace(source, checked, ordinal=None, offset=0):
+        assert len(parsed) == len(chunks), 'D148 literal began before complete syntax'
+        assert checked is parsed[ordinal - 1][1], 'D148 raw syntax owner replaced'
+        result = literal(source, checked, ordinal, offset)
+        normalized.append((source, result))
+        return result
     def static_trace(source, metadata, ordinal=None, offset=0, prior_sources=None, **kwargs):
-        assert len(parsed) == len(chunks), 'D148 static began before complete input phase'
+        assert len(normalized) == len(chunks), 'D148 static began before complete input phase'
+        assert kwargs.get('checked') is normalized[ordinal - 1][1], 'D148 normalized input owner replaced'
         static_ordinals.append(ordinal)
         return static(source, metadata, ordinal, offset, prior_sources, **kwargs)
     def infer_trace(*args, **kwargs):
-        assert len(parsed) == len(chunks), 'D148 inference before complete input phase'
+        assert len(normalized) == len(chunks), 'D148 inference before complete input phase'
         return infer(*args, **kwargs)
     def source_trace(*args, **kwargs):
-        assert len(parsed) == len(chunks), 'D148 prior binding before complete input phase'
+        assert len(normalized) == len(chunks), 'D148 prior binding before complete input phase'
         return recipe_source(*args, **kwargs)
-    reference.syntax_statement, reference._static_statement = syntax_trace, static_trace
+    reference.syntax_statement, reference._literal_statement_at = syntax_trace, literal_trace
+    reference._static_statement = static_trace
     reference.infer, reference._recipe_source = infer_trace, source_trace
     try:
         try:
@@ -114,17 +122,19 @@ def contracts(replacement=None, verbose=True):
         except ns['FErr'] as error:
             raise AssertionError(('D148 valid ordered source refused', error.token, error.msg)) from error
         assert [source for source, _ in parsed] == chunks, 'D148 source parsed twice/changed'
+        assert [source for source, _ in normalized] == chunks, 'D148 source normalized twice/changed'
         assert static_ordinals == [1, 2, 3, 4], 'D148 ordered static ordinals'
         assert len(plan) == len(chunks), 'D148 incomplete accepted plan'
         cursor = 2
-        for entry, chunk, (_, original) in zip(plan, chunks, parsed):
+        for entry, chunk, (_, original) in zip(plan, chunks, normalized):
             assert entry[:2] == (cursor, cursor + len(chunk)), 'D148 actual original spans'
-            assert entry[2] is original, 'D148 parsed operand owner replaced'
+            assert entry[2] is original, 'D148 normalized operand owner replaced'
             cursor += len(chunk)
         assert env == before, 'D148 accepted caller namespace changed'
         cases += 1
     finally:
-        reference.syntax_statement, reference._static_statement = syntax, static
+        reference.syntax_statement, reference._literal_statement_at = syntax, literal
+        reference._static_statement = static
         reference.infer, reference._recipe_source = infer, recipe_source
     # With complete input, existing static priority and real binding mismatch arguments survive.
     source = 'assert prior:eps_fmt=1==1\nlet late:length=1.0'
@@ -146,14 +156,14 @@ def contracts(replacement=None, verbose=True):
 
 
 FAULTS = (
-    ('interleaved static check', 'checked = self._syntax_statement_at(src[start:end], ordinal, start)',
+    ('interleaved static check', 'checked = self._syntax_statement_at(src[start:end], ordinal, start, literal_inputs=False)',
      'checked = self._static_statement(src[start:end], env, ordinal, start)'),
     ('early inference', 'parsed.append((start, end, checked))', 'self.infer(checked[3], env)\n            parsed.append((start, end, checked))'),
-    ('raw offset lost', 'self._syntax_statement_at(src[start:end], ordinal, start)', 'self._syntax_statement_at(src[start:end], ordinal, 0)'),
-    ('raw ordinal lost', 'self._syntax_statement_at(src[start:end], ordinal, start)', 'self._syntax_statement_at(src[start:end], 1, start)'),
+    ('raw offset lost', 'self._syntax_statement_at(src[start:end], ordinal, start, literal_inputs=False)', 'self._syntax_statement_at(src[start:end], ordinal, 0, literal_inputs=False)'),
+    ('raw ordinal lost', 'self._syntax_statement_at(src[start:end], ordinal, start, literal_inputs=False)', 'self._syntax_statement_at(src[start:end], 1, start, literal_inputs=False)'),
     ('prepared syntax discarded', 'prior_sources, checked=checked)', 'prior_sources)'),
     ('last syntax omitted', 'zip(boundaries, ends), 1', 'zip(boundaries[:-1], ends), 1'),
-    ('static order reversed', 'enumerate(parsed, 1)', 'enumerate(reversed(parsed), 1)'),
+    ('static order reversed', 'enumerate(inputs, 1)', 'enumerate(reversed(inputs), 1)'),
     ('static ordinal changed', 'self._static_statement(src[start:end], env, ordinal, start, prior_sources, checked=checked)',
      'self._static_statement(src[start:end], env, 1, start, prior_sources, checked=checked)'),
     ('partial plan returned', 'plan.append((start, end, checked))', 'plan.append((start, end, checked))\n            return tuple(plan)'),

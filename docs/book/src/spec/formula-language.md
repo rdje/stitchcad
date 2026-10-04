@@ -330,13 +330,17 @@ shared T/N and the tolerance requirement have the meanings of grammar §5–§7;
 is retained, including directed products/quotients. A variadic row repeats its shared T from one
 operand; the structural argument bound remains a separate syntax/input rule.
 
-Syntax and input validation run first. For a complete recipe, every identified statement must
-finish that phase before any statement undergoes static name/kind inference or publishes a prior
-recipe binding. A later syntax, annotation-admissibility, literal-input or structural-limit refusal
-therefore precedes an earlier missing-name or kind mismatch. Within that first phase, statements
-retain source order and their existing local validation priorities; whole-source lexical validation
-still precedes statement boundaries. Successful checking reuses the actual parsed operands and
-original locations; it neither reparses with changed context nor returns an accepted prefix.
+Complete recipe checking has three ordered phases. First, after whole-source lexical validation,
+every identified statement passes header/operand syntax and structural bounds. Raw annotation
+admissibility retains its header priority before RHS grammar (§5.2.5). Second, every literal input
+is normalized and checked in statement/operand source order, including untaken branches. Third,
+static name/kind checking runs in source order and publishes only validated prior let metadata.
+Each phase completes for the whole source before the next starts. A later malformed assertion
+class or structural bound therefore precedes an earlier over-width literal, and either precedes
+an earlier missing name or kind mismatch. The closed token alone does not identify the phase:
+both a structural bound and a literal magnitude can raise formula_domain. Successful static
+checking reuses the actual normalized operands and original locations, without reparsing or
+returning an accepted prefix. Detached expression/statement adapters retain their local scopes.
 During static checking, an ordinary call resolves its callee
 before its arguments (§5.2.2). Known operations resolve child expressions left-to-right before
 checking their complete immediate signature. For if, the order is condition, then branch, else

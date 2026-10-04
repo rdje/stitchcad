@@ -991,10 +991,9 @@ D149 closed in G1-SLICE.5b.3d.c: both deep prerequisite clauses now match availa
 expression/current-statement checks; two actual copied-text assertion reds verify refusal, rc=0.
 Original pre-repair report retained in [`stitchcad-defects-part68.md`](../history/stitchcad-defects-part68.md).
 
-- **D150** — reference syntax_statement converts literals while parsing, so an earlier count
-  340282366920938463463374607431768211456 hides later malformed assertion class/parenthesis:
-  formula_domain versus actual public whole-parser formula_parse. Both compiled product probes
-  and actual reference reproduce; diagnostic rc=0. Raw unbindable annotations still agree (dimension).
-  Root: parse.p_atom performs Fraction/literal conversion before later whole syntax completes.
-  Owner G1-SLICE.5b.3d.d, P1 immediately after .c before coupled closure/.4; split complete
-  syntax/structure, literal input and static phases; document order first, grammar unchanged.
+D150 closes at G1-SLICE.5b.3d.d: whole syntax/structure precedes all literal inputs, then static.
+263 actual public/reference phase/ordinal cases, eight detached controls and10 compiled body reds
+verify the boundary; full reference passes, rc=0. Original report retained in [`stitchcad-defects-part69.md`](../history/stitchcad-defects-part69.md).
+
+D151 closes at G1-SLICE.5b.3d.d: status now names pending library-owned whole acceptance.
+Actual copied-text body refusal and13149 shared/full reference controls pass, rc=0. Original report: [`stitchcad-defects-part70.md`](../history/stitchcad-defects-part70.md).

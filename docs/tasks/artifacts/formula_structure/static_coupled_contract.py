@@ -172,6 +172,7 @@ def documentation(replacement=None):
     obsolete = {
         'formula-static-validation.md': 'complete expression/recipe acceptance remains the next two stages.',
         'formula-wanted-signatures.md': 'Current statement context remains .5b.3c.3',
+        'implementation-status.md': 'whole-recipe preflight remains pending.',
     }
     for name, phrase in obsolete.items():
         text = (ROOT / 'docs/book/src/annexes' / name).read_text()
@@ -179,9 +180,10 @@ def documentation(replacement=None):
             before, after = replacement[1:]
             assert text.count(before) == 1, ('D149 copied-text actual anchor', name)
             text = text.replace(before, after)
-        assert phrase not in ' '.join(text.split()), ('D149 obsolete implemented status', name)
-        assert 'check-the-actual-current-statement' in text, ('D149 missing implemented source route', name)
-    return 2
+        assert phrase not in ' '.join(text.split()), ('D151 ambiguous proof status' if name == 'implementation-status.md' else 'D149 obsolete implemented status', name)
+        if name != 'implementation-status.md':
+            assert 'check-the-actual-current-statement' in text, ('D149 missing implemented source route', name)
+    return len(obsolete)
 
 
 def ref_dimension(arguments, hint):
@@ -328,7 +330,7 @@ REFERENCE_FAULTS = (
     ('variadic consistency', 'if not all(k == first for k in kinds): return False', 'if False: return False'),
     ('complete operand kinds', '"operand_kinds": tuple(kinds),', '"operand_kinds": tuple(kinds[:-1]),'),
     ('metadata value queried', 'if name in env: return env[name]["kind"]', 'if name in env: return env[name].get("value") or env[name]["kind"]'),
-    ('whole phase interleaved', 'checked = self._syntax_statement_at(src[start:end], ordinal, start)',
+    ('whole phase interleaved', 'checked = self._syntax_statement_at(src[start:end], ordinal, start, literal_inputs=False)',
      'checked = self._static_statement(src[start:end], env, ordinal, start)'),
 )
 
@@ -341,15 +343,17 @@ def mutations():
          'complete expression/recipe acceptance remains the next two stages.'),
         ('formula-wanted-signatures.md', 'at .5b.3c.3b; atomic whole-recipe acceptance remains .4.',
          'Current statement context remains .5b.3c.3'),
+        ('implementation-status.md', 'library-owned whole-recipe acceptance remains .5b.4.',
+         'whole-recipe preflight remains pending.'),
     )
     for fault in doc_faults:
         try:
             documentation(fault)
         except AssertionError as error:
-            assert str(error).startswith("('D149 obsolete implemented status'"), ('not a copied-annex body refusal', error)
-            print('  actual copied-annex D149 body red:', fault[0], flush=True)
+            assert str(error).startswith(("('D149 obsolete implemented status'", "('D151 ambiguous proof status'")), ('not a copied-annex body refusal', error)
+            print('  actual copied-annex status body red:', fault[0], flush=True)
         else:
-            raise AssertionError(('D149 copied-annex fault escaped', fault[0]))
+            raise AssertionError(('copied-annex status fault escaped', fault[0]))
     original_reference = SOURCE.read_bytes()
     paths = {ROOT / path for _, path, _, _, _ in RUST_FAULTS}
     originals = {path: path.read_bytes() for path in paths}

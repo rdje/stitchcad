@@ -105,6 +105,19 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part107.md`](docs/history/stitchcad-changelog-part107.md) | `STITCHCAD-G1-0092` | 8 lines, 659 bytes, `sha256:63eeecdf…` |
 
+| [`stitchcad-changelog-part108.md`](docs/history/stitchcad-changelog-part108.md) | G1-0093 wanted signature ledger | 8 lines, 647 bytes, `sha256:88395c24…` |
+| [`stitchcad-changelog-part109.md`](docs/history/stitchcad-changelog-part109.md) | G1-0094 call lookup ledger | 9 lines, 766 bytes, `sha256:801531e8…` |
+
+## STITCHCAD-G1-0112 - complete syntax before literal inputs (leaf `G1-SLICE.5b.3d.d`)
+
+D150 whole reference syntax/structure now completes before all literal conversions, then static
+checking; raw spelling/units, original spans and normalized owners survive. Detached defaults,
+grammar, bounds and closed tokens stay fixed. D151 status distinguishes reference/product proofs.
+263 actual public/reference phase/ordinal cases, eight detached controls and10 compiled body reds;
+prior584/11, canonical12 and13149 shared/6reference/9Rust/3text controls pass, rc=0. Full reference,
+language16/publication10/ledger9+13 pass0; exact archive307/62working records. Coupled .3 closes;
+whole immutable graph .4 next. G1 stays5/18; independent10open/140sealed; no native source change.
+
 ## STITCHCAD-G1-0111 - shared static contract and phase counterexamples (leaf `G1-SLICE.5b.3d.c`)
 
 Independent13149 shared cases compare actual public Rust and reference kinds, complete dimension
@@ -267,24 +280,6 @@ Older structural probes load real catalogs; no guessed fallback. Canonical/book/
 align; exact prior/oldest records retained. G1 stays5/18,12open/127sealed; Rust bytes unchanged.
 P0 D140 geometry reference kind loss is next; D139 header payloads have a separate owner.
 
-## STITCHCAD-G1-0094 - source-bearing call refusals (leaf `G1-SLICE.5b.3c.2a`)
-
-Exact callee lookup distinguishes envelope/catalog sources from data origins and retains actual
-requests/alternatives before argument access. D136/D137 reference payloads repaired; grammar unchanged.
-Five public contracts/two negative examples/18 compiled body reds and166 reference cases/12 compiled/
-three normative-set reds pass with exact restoration. Strict663/56 groups/WASM3/reference/language16/
-publication10/ledger9+13/coverage/retention pass0. Decision/book/API/live scope align; no expression or
-execution proof claimed. Exact prior/oldest records retained; G1 stays5/18,11open/126sealed.
-Next D138 dimension payloads .5b.3c.2b.1, then bounded accepted expression checking.
-
-## STITCHCAD-G1-0093 - typed wanted-kind catalogs (leaf `G1-SLICE.5b.3c.1`)
-
-Immutable static rows expose exact/generic/class operand requirements and positional results.
-Ten public contracts/681358 admission cases/exact descriptors and19 actual compiled body reds
-verify closed alternatives; a branch-position fault is caught despite unchanged kind acceptance.
-Strict656/55 groups/WASM3/reference/language16/book10/ledger9+13/coverage/retention pass0.
-Bounded book/API/live scope and exact prior/oldest records align; G1 stays5/18,11open/124sealed.
-D136 missing call arguments owned for .5b.3c.2a repair next; grammar/prior query code unchanged.
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 

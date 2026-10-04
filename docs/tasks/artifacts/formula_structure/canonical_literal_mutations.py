@@ -11,9 +11,9 @@ ORIGINAL = SOURCE.read_bytes()
 CASES = [
     ('literal width restricted to i64', 'bound = self.limits["max_rational_bits"]',
      'bound = 63 if operation.startswith("literal") else self.limits["max_rational_bits"]'),
-    ('unary sign folded into literal', 'return ("neg", self.p_unary())',
-     'child = self.p_unary()\n            return ("lit", child[1], -child[2]) if child[0] == "lit" else ("neg", child)'),
-    ('unary operator discarded', 'return ("neg", self.p_unary())', 'return self.p_unary()'),
+    ('unary sign folded into literal', 'return ("neg", self.p_unary(literal_inputs))',
+     'child = self.p_unary(literal_inputs)\n            return ("lit", child[1], -child[2]) if child[0] == "lit" else ("neg", child)'),
+    ('unary operator discarded', 'return ("neg", self.p_unary(literal_inputs))', 'return self.p_unary(literal_inputs)'),
     ('converted node clipped to i64', 'return ("lit", kind, rounded)',
      'return ("lit", kind, rounded % (2**63))'),
     ('bare decimal kind erased', 'return self.literal("ratio", from_true("ratio", value))',

@@ -55,6 +55,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_contract.py --m
 python3 -I -B docs/tasks/artifacts/formula_structure/dimension_payload_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/geometry_argument_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/whole_phase_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/first_phase_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations
 rustfmt --edition 2021 --check docs/tasks/artifacts/formula_structure/static_coupled_driver.rs

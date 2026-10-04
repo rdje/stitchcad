@@ -5,12 +5,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
-## _(2026-10-04 UTC)_ — couple actual public interfaces
+## _(2026-10-04 UTC)_ — complete syntax before literal inputs
 
-- Independently authored shared cases compare real reference and Cargo-current public Rust results.
-- A driver loop checks before metadata advance; it does not grant a library-owned whole graph.
-- Deep prerequisite paragraphs need the same implementation sync as top-level status (D149).
-- Promotion declined (existing source/phase and book lockstep policy).
+- Whole syntax/structure, literal normalization and static inference are distinct complete phases.
+- Preserve raw number/unit spelling; convert each literal once, then reuse normalized operands.
+- A closed token can cover different phases: compare genuine phase/ordinal, not token alone.
+- D151 status must distinguish verified reference preflight from pending library-owned acceptance.
+- Promotion declined (existing phase/source/truth and book lockstep contracts).
 
 # Sealed archive — earlier lessons
 
@@ -114,3 +115,6 @@ The live lesson window is bounded by200 lines/16384 bytes; the archive verifier 
 | [`part117`](docs/history/stitchcad-devnotes-part117.md) | D148 phase protocol | 26 lines, 2028 bytes, `sha256:5871087e…` |
 | [`part118`](docs/history/stitchcad-devnotes-part118.md) | D148 phase lesson | 4 lines, 201 bytes, `sha256:1391aa9d…` |
 | [`part119`](docs/history/stitchcad-devnotes-part119.md) | part1–25 navigation | 32 lines, 3706 bytes, `sha256:9b745a27…` |
+| [`stitchcad-devnotes-part121.md`](docs/history/stitchcad-devnotes-part121.md) | shared static contract protocol | 29 lines, 2290 bytes, `sha256:9682c881…` |
+| [`stitchcad-devnotes-part122.md`](docs/history/stitchcad-devnotes-part122.md) | shared public interface lesson | 6 lines, 418 bytes, `sha256:d90d2e91…` |
+| [`stitchcad-devnotes-part123.md`](docs/history/stitchcad-devnotes-part123.md) | initial namespace complete records | 78 lines, 6523 bytes, `sha256:919cc8c1…` |

@@ -562,7 +562,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Verification: [exact protocol](G1-SLICE-names.md#completed-ordered-scopes-protocol--preserved-from-63c0c7d).
   Commit: `STITCHCAD-G1-0089`.
 - ID: `G1-SLICE.5b.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: every unary/square/binary/product/quotient/comparison, built-in and selector signature,
   all arities, conditional branch types and tolerance-name operand role.
   Acceptance: closed tables checked in both directions, Boolean condition/numeric branches,
@@ -570,7 +570,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   precedence and unsupported constructs. Unknown declared values still have checkable kinds.
   Children: .a operator kind matrix, .b built-in/selector roles and arities, .c bounded normalized
   expression checker/typed refusal/dependencies, .d coupled independent static review.
-  Verification: `pending`; Commit: `pending`.
+  Verification/Commit: `STITCHCAD-G1-0112`; [final proof](G1-SLICE-names.md#d150-separated-input-phases-protocol).
 - ID: `G1-SLICE.5b.3a`
   Status: `done`
   Goal: closed operator kind signatures; verification retained below.
@@ -591,7 +591,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Children: .1 typed wanted-kind catalog; .2 context-free expression/error/checked-owner integration;
   .3 actual statement operands/annotations/assertions and truthful available ordinal context.
   No forged canonical/statement context; current grammar and named envelope precedence preserved.
-  Verification: `pending`; Commit: `pending`.
+  Verification: all expression/current-statement children verified; coupled .3d complete.
+  Commit: `STITCHCAD-G1-0105`, `STITCHCAD-G1-0108`, `STITCHCAD-G1-0112`.
 - ID: `G1-SLICE.5b.3c.1`
   Status: `done`
   Goal: typed wanted-kind catalogs; verified, commit `STITCHCAD-G1-0093`.
@@ -678,16 +679,16 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: use actual statement operands; all checks precede cursor advance/whole proof.
   Verification/Commit: `STITCHCAD-G1-0108`; [exact proof](G1-SLICE-names.md#current-statement-kind-proof-protocol).
 - ID: `G1-SLICE.5b.3d`
-  Status: `in_progress`
+  Status: `done`
   Goal: coupled full expression static review, normative/reference/product agreement and counterexamples.
-  Prerequisites .a/.b D147/D148 done. Shared review .c/0111; D150 .d required before final coupled closure.
+  Prerequisites .a/.b D147/D148 done; .c/0111 shared review and .d/0112 phase closure verified.
   Review actual public expression/statement/ordered-scope APIs against independently authored
   rules and actual reference: kinds/tokens/complete dimension roles, sources/priority/recognition,
   worked recipe, runtime-invalid static cases and bounds. Cargo reports current compiler artifacts.
   Driver checks before metadata advance; it grants no library-owned whole graph proof (.4).
-  D149 prerequisite-paragraph drift fixed in .c; D150 competing syntax/literal order owned .d.
+  D149 prerequisite drift fixed in .c; D150 syntax/literal priority and D151 status clarity fixed in .d.
   Actual compiled faults must fail oracle body assertions; grammar/token set unchanged.
-  Verification: `pending`; Commit: `pending`.
+  Verification/Commit: `STITCHCAD-G1-0112`; [final proof](G1-SLICE-names.md#d150-separated-input-phases-protocol).
 - ID: `G1-SLICE.5b.3d.a`
   Status: `done`
   Goal: D147 truthful ambiguity arguments for ordered authored pairs and input/let collisions.
@@ -706,12 +707,14 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   preserve scoped coverage and explicitly own D150 competing syntax/literal phase discrepancy.
   Verification/Commit: `STITCHCAD-G1-0111`; [exact proof](G1-SLICE-names.md#shared-static-contract-protocol).
 - ID: `G1-SLICE.5b.3d.d`
-  Status: `pending`
+  Status: `done`
   Goal: D150 complete whole syntax/structure before literal-input conversion, then static inference.
   Acceptance: competing earlier bad literal/later syntax agrees with actual public parser; raw
   header priorities/lexical preflight and detached scopes retained; original owners/locations.
   P1 immediately after .c, before coupled final closure/.4; grammar/token/bounds unchanged.
-  Verification: `pending`; Commit: `pending`.
+  Work unit STITCHCAD-G1-0112; predecessor3079630 clean, brief0/untracked, no pending jobs.
+  Protocol: [D150 phase plan](G1-SLICE-names.md#d150-separated-input-phases-protocol).
+  Verification/Commit: `STITCHCAD-G1-0112`; [final proof](G1-SLICE-names.md#d150-separated-input-phases-protocol).
 - ID: `G1-SLICE.5b.4`
   Status: `pending`
   Goal: validate the whole ordered recipe and construct its immutable typed dependency graph.

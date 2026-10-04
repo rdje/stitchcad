@@ -223,14 +223,14 @@ census with all six kinds, signed Area rounding/replay, Boolean state/reads and 
 refusals:19 independent verdicts. Structural suite watches it. `run_binding_replay_mutations.sh`
 requires nine compiled actual assertion reds and byte-identical restoration; run exclusively.
 
-Canonical literal reference: `canonical_literal_contract.py` under `docs/tasks/artifacts/formula_structure/`
-checks146 independent node/Decimal controls; the structural suite watches them. Width128 means
+Literal reference: `canonical_literal_contract.py` under `docs/tasks/artifacts/formula_structure/`
+checks146 node/Decimal controls; watched. Width128 means
 absolute reduced magnitude, not signed i128; unary identity and later binding storage remain distinct.
 `bash docs/tasks/artifacts/formula_structure/run_canonical_literal_mutations.sh` requires twelve
 compiled actual assertion reds/exact restore; run alone. D95 closes; D83 review and production proof remain.
 
 Retained-window CLI controls: `python3 -I -B docs/tasks/artifacts/history_archive/window_contract.py`
-checks every listed/read/materialized logical record and newest-window digest/member/catalog
+checks all listed/read/materialized records and newest-window digest/member/catalog
 refusals plus cross-window collision. Watched by the archive runner; no source Git needed
 for retrieval. Newest committed catalog edits are refused after the recording commit. Capture tool
 `capture_window4.py` freezes2bdcd31 in target/ only; labels are independently checked, including D141.
@@ -245,9 +245,10 @@ Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py
 docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
 
 Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B --mutations; watched.
+- first_phase_contract.py:263 public/reference cases/10 body reds; D150.
 
 - static_signature_contract.py:4032 kind/hint cases/14 reds; values trapped.
-- reference_locator_contract.py:90positions/2 reds; D144.
+- reference_locator_contract.py:94positions/2 reds; D144.
 - static_namespace_contract.py:1139cases/13 reds.
 - ambiguity_payload_contract.py:4192payloads/16 reds; D147.
 - whole_phase_contract.py:584cases/11 reds; D148.
@@ -255,7 +256,7 @@ Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B --mutations; w
 - statement_owner_contract.py: five Cargo-current compiler guards.
 - static_recipe_contract.py:196 whole/replay/measurement cases/reds.
 - static_review_contract.py, reserved_diagnostic_review.py: D124/D131 recognition/sources.
-- static_coupled_contract.py:13149 cases;6reference/9Rust/2text reds; run alone;
+- static_coupled_contract.py:13149 cases;6reference/9Rust/3text reds; run alone;
   source/artifact exact; Cargo-current driver.
 - call_lookup_contract.py:166cases/12 compiled/three loaded-set reds.
 - dimension_payload_contract.py:4023cases/3814payloads/15 reds; D138.

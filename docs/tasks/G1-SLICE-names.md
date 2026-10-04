@@ -5,82 +5,19 @@ Completed protocols and receipts retain original bytes; current implementation w
 
 ## Completed initial namespace protocol — preserved from 4e0d0bf
 
-- ID: `G1-SLICE.5b.2c.2`
-  Status: `done`
-  Goal: implement checked initial namespace after .2c.1b, including ordered-pair collisions,
-  immutable reserved metadata and source-preserving typed refusals. Acceptance: no value/state or
-  geometry reads, no silently overwritten duplicate or recipe-order bypass. Finalize API protocol
-  after diagnostic ruling. Work unit: `STITCHCAD-G1-0087`; predecessor1972f57 clean/no jobs.
-  Pre-code protocol: contract2/3/3.1/5.2.1/4.1 and metadata/declaration/normalized/name/ref APIs
-  reviewed. MachineToken already enforces the three keywords; borrow its exact validated names.
-  New opaque FormulaInitialDeclaration accepts only Input/LengthInput/Point/Edge via TryFrom;
-  rejected Recipe/Reserved returns the original declaration, preventing future-let/context seeding.
-  Build immutable FormulaNamespace from ordered initial declarations; seed all eight fixed reserved
-  metadata entries irrespective of provider availability. BTreeMap entry checks precede insertion;
-  first collision refuses without a partial namespace. Preserve input order in first-error sources.
-  Typed FormulaNamespaceError distinguishes reserved attempts (formula_rebinding) and authored
-  collisions (formula_ambiguous_name), including equal origins; explicit name/source views retain
-  original IDs/records/refs. Opaque Debug and token-only Display expose no authored payload/state.
-  Exact-size declaration iteration is lexical for metadata inspection; no recipe/evaluation order
-  authority. Checked name reads/prior recipe binding remain .2d; no state/value/geometry query.
-  Verify six initial source domains, all five LengthStates/three scalar domains/six kinds, exact
-  creator/tag/borrow identities, all8 reserved refusals, every ordered collision pair and privacy/
-  lifetimes. Actual compiled index/admission/context/collision/source/privacy faults must fail
-  public assertions and restore bytes. Strict native/WASM, focused reference/book/ledger/gate;
-  exact completed .1b/oldest ledger/lesson retention keeps existing bounds. Per-leaf commit.
-  D132/D133 product-publication defects owned here: raw generic was hidden as an HTML tag while
-  publication topology probes passed. Fix markup and reject actual mdBook warning output before
-  claiming publication; copied-book unclosed-generic failure and repaired baseline must prove the
-  guard. Keep all existing source/rendered-link/status controls; no scope/cap/diagnostic waiver.
-  Verification: ten public contracts/17 actual body reds, strict621 native tests/51 result groups,
-  WASM three libraries and reference/language16/publication10/ledger9+13 controls pass, rc=0.
-  D132/D133 fixed; complete receipts below. Commit: `STITCHCAD-G1-0087`.
+[Exact completed records](../history/stitchcad-devnotes-part123.md) retained from3079630.
 
 ## Completed initial namespace receipts — preserved from 4e0d0bf
 
 ## Initial namespace receipts — .5b.2c.2,2026-10-03 (UTC)
 
-Focused public contract:10 tests plus three privacy/lifetime compile-fail examples pass, rc=0.
-namespace_mutations.py:17 actual compiled body assertion reds, exact original bytes restored,
-rc=0; classifier refuses compiler/unwrap-only noise. Strict make check:621 passed/51 result groups,
-fmt/clippy -D warnings pass, rc=0; final make wasm builds all three libraries, rc=0. Full reference
-structural, language16 and ledger9/13 pointer controls pass, rc=0. Publication10 controls pass,
-rc=0;55 chapters/36 scoped API rows/1143 source links/1775 rendered links. D132/D133 actual
-malformed generic warning refuses BOOK_BUILD_WARNING; quoted repair renders exact generic.
-Predecessor protocol23lines2027B SHA36198552…, receipts28lines2537B SHAbbe37e98…, checklist
-21lines1879B SHAf5736386… retained byte-identically from1972f57. Oldest ledger13lines1176B
-SHAce5bfa8a… and lessons11lines903B SHAa1c4d338…/12lines1018B SHA92241e4a… sealed exactly.
-Original D132/D133 report15lines1304B SHA2c4850a6… sealed; no prior archive changed.
-Retention:230 logical records/44 working Markdown/10412 decoded lines/785417 decoded bytes/
-373931 resident bytes, rc=0. Fresh materialization:10open/122unique sealed, zero duplicates/overlap;
-D18 intentionally unassigned per canonical PLANNING census. Tree census:10lanes/13trees/10siblings/
-zero unowned/orphans/dead links, rc=0. G1 remains5/18; ordered reads/bindings .2d next.
+[Exact receipt](../history/stitchcad-devnotes-part123.md).
 
 ## Completed initial namespace checklist — preserved from 4e0d0bf
 
 ### G1-SLICE.5b.2c.2 — checked initial product namespace
 
-- [x] **REPRODUCE / ISSUE** — sourced declarations can describe recipe/reserved metadata but lack
-  initial admission/collision authority. Public namespace contract →10 tests pass, rc=0; actual
-  admission/order/source/privacy faults establish the missing boundary before acceptance.
-- [x] **ROOT CAUSE (WHY + WHERE)** — direct unfiltered declarations could bypass recipe order or
-  overwrite names. namespace_mutations.py →17 actual compiled body assertion reds/exact restore,
-  rc=0; recipe/reserved admission, context hiding, first-error order and source loss falsified.
-  Initial projection, ordered entry checks and fixed reserved population are the owned guards.
-- [x] **FIX** — opaque initial-source projection, immutable checked namespace and source-bearing
-  typed errors. Strict lint rejects the initial128B inline collision error; one boxed metadata pair
-  keeps failures compact without copying canonical records. No lint allowance or numeric query.
-- [x] **ADDRESSED (verified)** —10 public contracts/17 actual compiled body assertion reds,
-  rc=0: six initial domains, three scalar domains/six kinds, five states, exact refs/borrows,
-  36 ordered origin collisions/equal origins and200 reserved attempts. Byte-exact source restore.
-  Initial fault classifier refused unwrap-only red; explicit body refusal assertions repair tests.
-- [x] **NO REGRESSION** — make check →621 tests/51 result groups, strict lint/fmt green; make wasm
-  →three libraries build; structural/reference/language16/publication10/ledger9+13 pass, rc=0.
-  D132/D133 actual renderer warning exposed topology-only acceptance; repaired exact generic and
-  copied-book warning refusal/repaired baseline verify guard, rc=0. Grammar/values unchanged.
-- [x] **LOCKSTEP** — declaration chapter/examples/API/status/README/live scope aligned; checked
-  ordered reads/types/whole graphs remain .2d–.4. Exact prior task/ledger/lesson retained within
-  existing bounds. promotion: declined (existing source ownership/metadata/order/diagnostic rules).
+[Exact checklist](../history/stitchcad-devnotes-part123.md).
 
 ## Completed exact initial reads protocol — preserved from 19900d0
 
@@ -966,28 +903,42 @@ language/publication/ledger/gates; grammar/results/contracts unchanged. Existing
 
 ### G1-SLICE.5b.3d.c
 
-Work unit STITCHCAD-G1-0111; source3801191 clean/brief0/no jobs. Canonical2–5.2/grammar5–7,
-roadmap4.1/4.2, scoped owners/namespace/signature/refusal/public interfaces and prior probes read.
-Independent shared cases through real reference and Cargo-current public adapter: kinds/tokens,
-complete dimension rows/roles/hints, call-child priority, ordered sources/owners, worked21/refusal13.
-Driver checks each actual statement before metadata advance; it grants no whole-library graph.
-D149 deep prerequisite paragraphs reproduced/owned/corrected; scoped blame e3f6b33/63c0c7db shows
-old status clauses survived2fa9d5d's synchronization. New competing first-phase probe proves D150;
-parent review remains open, immediate .d scheduled before .4. Grammar unchanged.
+[Exact protocol/checklist](../history/stitchcad-devnotes-part121.md) retained from3079630.
 
-- [x] **ROOT CAUSE (WHY + WHERE)** — static_coupled_contract.py→13149 independently expected
-  public/reference cases, rc=0; actual copied-annex D149 predicate before repair→body assertion,
-  rc=1; scoped rg/blame identifies both stale clauses. first_phase_contract.py→genuine body
-  assertion reference domain/literal/1 vs public parse/syntax/2, rc=1; D150 .d owns root parse.p_atom.
-- [x] **ADDRESSED (verified)** — coupled producer→6reference/9public Rust actual compiled body
-  reds and2 actual copied-annex body reds, rc=0; all four sources and built artifact restored.
-  E0624/E0061 and draft schema-key mistakes refused as producer failures; inspected public
-  constructors/actual lookup_scope before correction, never counted as fault proof.
-- [x] **NO REGRESSION** — strict make check→690passed/58groups, rc=0; WASM3, rc=0; full
-  structural/reference (including restored coupled faults), rc=0; publication10/60chapters/
-  62APIs/1214source/1907rendered links, rc=0; ledger9/pointer13→0, rc=0;
+## D150 separated input phases protocol
+
+### G1-SLICE.5b.3d.d
+
+Work unit STITCHCAD-G1-0112; source3079630 clean/brief0/untracked/no jobs. Read canonical5.2.3/5.2.5,
+grammar, actual public whole parse/normalization, reference parser/helper and prior phase mutants.
+Document complete syntax/structure, then literal-input normalization, then ordered static checking
+before implementation. Retain whole lexical precedence, raw annotation before RHS grammar, source
+order within each phase and detached parse/statement defaults. Pure syntax leaves retain original
+number/unit spelling; separate normalization builds one checked operand owner reused by static.
+No runtime/provider/state reads, literal folding, extra grammar or partial accepted plan. Independent
+public/reference token/phase/ordinal cases, real phase traces, exact normalized owners, detached
+controls and actual compiled body faults required. Existing reference/book/ledger/archive/gates;
+contain exact completed records before growth, keep bounds/windows fixed. D150 P1 owned here.
+D151 P2 same-slice book lockstep: implementation-status calls preflight pending immediately
+before verified reference preflight. Scoped blame c13b7d8 owns introduction; clarify product-only
+whole acceptance and prove actual copied-text refusal before closure.
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — target/d150-before.log→domain/literal1 versus actual public
+  parse/syntax2 body assertion, rc=1. Scoped blame3704b8af/b8ed62df/86b81a9e confirms parsing,
+  width and input conversion combined; D148 separated static only. D151 guard before→body red1,
+  c13b7d8 status clause conflicts with available reference preflight. Canonical order documented first.
+- [x] **ADDRESSED (verified)** — first_phase_contract.py --mutations→263 real public/reference
+  token/phase/ordinal cases, eight detached controls, ordered raw/conversion/normalized owners and
+  ten actual compiled body reds, rc=0; source exact. D151 actual copied-annex body red/baseline0.
+  Draft nonunique mutation anchor refused; corrected unique source anchor, never counted as proof.
+- [x] **NO REGRESSION** — full structural/reference→13149 shared/6reference/9Rust/3text reds,
+  D148584/11, D139264/13, D1313624/19 and94 real code positions, rc=0. Exclusive canonical literal
+  faults→12 body reds/exact restore0. Overlapping language receipt discarded; after restoration
+  language16/publication10 (60chapters/62APIs/1214source/1907rendered links)/ledger9+13→rc=0.
+  Actual crates/driver compare byte-exact3079630, rc=0; no new Rust-source claim.
   make gate→all doctrines green, rc=0; hook repeats at commit.
-- [x] **LOCKSTEP / RETENTION** — five complete HEAD payloads and original D149 working report
-  exact; archive300/55working/12431lines/916956decodedB/446947residentB, rc=0. Independent
-  11open/138sealed unique/disjoint/complete exceptD18, rc=0; book/status/task/resume keep scoped
-  results and D150 gap explicit. G1 stays5/18; caps/windows/grammar fixed; promotion declined.
+- [x] **LOCKSTEP / RETENTION** — six complete HEAD payloads/one original working report exact;
+  archive307/62working/12650lines/932619decodedB/462610residentB, verify rc=0.
+  Independent10open/140sealed unique/disjoint/complete exceptD18, rc=0.
+  Fixed caps/windows, original headings and grammar retained. .3/.3d coupled review closes;
+  immutable whole proof .4 next, G1 stays5/18. promotion: declined (existing phase/source/truth rules).
