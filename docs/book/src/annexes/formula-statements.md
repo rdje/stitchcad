@@ -3,8 +3,8 @@
 > **Status:** single statements (.3e.1) and ordered recipe syntax (.3e.2) are implemented in sc-core.
 > The complete recipe API retains authored order, the4096-statement limit and diagnostic indices.
 > Whole input normalization is [implemented](formula-recipe-inputs.md) at .3f.1b;
-> statement/recipe identity is owned by .3f.1c. [Current scoped kind checks](formula-name-scopes.md#check-the-actual-current-statement)
-> are implemented; complete recipe validation and evaluation remain G1-SLICE.5 work.
+> statement/recipe identity is implemented at .3f.1c. [Current scoped kind checks](formula-name-scopes.md#check-the-actual-current-statement)
+> and [whole recipe kind proofs](formula-checked-recipes.md) are implemented separately; numerical evaluation remains later work.
 
 The [formula grammar](../spec/formula-language/grammar.md#1-the-grammar) gives two statement forms:
 let declares a name and kind; assert names a closure check and its tolerance class. The public
@@ -245,8 +245,8 @@ indices/spans/whole-input/privacy compile and fail assertions. The existing fift
 also pass against the shared parser. Both exclusive runners restore exact production bytes; run them
 alone. The structural suite watches the independent producer and failure-classifier controls.
 Native/release and WASM cross-compilation retain their stated scope. Coupled syntax review .3e.3
-is complete below; recipe normalization/identity .3f, numerical execution and production approval
-remain owned future work.
+is complete below; recipe normalization/identity .3f is implemented separately. Numerical execution
+and production approval remain owned future work.
 
 ## Coupled syntax and diagnostic review
 

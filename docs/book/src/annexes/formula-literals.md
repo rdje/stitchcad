@@ -5,7 +5,9 @@ integer. Parsing and input conversion remain separate operations: parsing checks
 conversion checks exact rational width, rounds once and checks the input scalar domain.
 The [whole-expression API](#normalize-every-literal-in-an-expression) converts every literal while
 retaining the syntax graph. The [canonical serializer](#serialize-canonical-expression-identity) emits
-owned expression identity bytes; complete recipe normalization/identity, binding and evaluation remain later work.
+owned expression identity bytes. [Complete recipe normalization/identity](formula-recipe-inputs.md) and
+[whole recipe kind proofs](formula-checked-recipes.md) are implemented separately; numerical binding
+and evaluation remain later work.
 See the [language](../spec/formula-language.md) and [grammar](../spec/formula-language/grammar.md).
 
 ## Inspect one literal
@@ -171,7 +173,8 @@ public assertions; the exclusive runner restores exact source. The structural su
 independent shape verifier. G1-SLICE.5a.3c.3 owns this whole-arena stage; .4 completes its coupled review below.
 Canonical S-expression serialization is implemented separately below;
 [ordered statement/recipe identity](formula-recipe-inputs.md) is also available.
-Name/type/binding/evaluation, geometry and command/API/MCP integration remain later work. Native/release/WASM checks retain their stated scope.
+Name/kind checks are implemented separately. Numerical binding/evaluation, geometry and command/API/MCP
+integration remain later work. Native/release/WASM checks retain their stated scope.
 
 ## Coupled normalization review
 
@@ -343,7 +346,9 @@ must fail public assertions; the exclusive runner restores exact source. Run mut
 
 G1-SLICE.5a.3d.2 owns this product serializer; .3d.3 completes the coupled identity review below.
 [Ordered recipe normalization/statement identity](formula-recipe-inputs.md) is now available.
-Name/type/binding/evaluation, geometry, storage and command/API/MCP remain later work. [Ordered statements](formula-statements.md#parse-an-ordered-recipe) now have a separate syntax API. Native/release checks and WASM cross-compilation retain their stated scope; compilation
+Name/kind checks are implemented separately. Numerical binding/evaluation, geometry, storage and
+command/API/MCP remain later work. [Ordered statements](formula-statements.md#parse-an-ordered-recipe)
+have a separate syntax API. Native/release checks and WASM cross-compilation retain their stated scope; compilation
 alone is not a browser runtime or cross-platform numerical certificate.
 
 

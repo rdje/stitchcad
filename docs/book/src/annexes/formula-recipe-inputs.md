@@ -2,7 +2,8 @@
 
 > **Status:** G1-SLICE.5a.3f.1b implements immutable normalized statements and complete recipes in
 > sc-core. It converts input literals and preserves syntax metadata. Statement/recipe canonical
-> serialization is implemented at .1c; name/type checking, binding and evaluation remain G1-SLICE.5 work.
+> serialization is implemented at .1c. [Ordered name scopes](formula-name-scopes.md) and
+> [whole recipe kind proofs](formula-checked-recipes.md) are available; numerical binding and evaluation remain later work.
 
 The [statement parser](formula-statements.md) records what you wrote. Input normalization then
 converts every literal to the [canonical internal units](formula-literals.md), without calculating
@@ -277,7 +278,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_input_review_mutatio
 ```
 
 This closes the scoped normalization/identity review. The full syntax milestone .5a.4 is complete;
-remaining implementation is owned by .5b–.5g, as mapped below. The formula contract §9's product numeric/cross-platform and
+static kind proofs are implemented; numerical implementation remains .5c–.5g, as mapped below.
+The formula contract §9's product numeric/cross-platform and
 refusal requirements remain open; this review grants no execution, geometry or release approval.
 
 Numerical binding/evaluation, typed project hashes,

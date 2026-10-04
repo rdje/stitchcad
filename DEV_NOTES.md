@@ -10,6 +10,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D157 current formula scope
+
+- Old metadata introductions must be revisited when later proof APIs arrive.
+- Distinguish a low-level API's limited proof from absence of a separate implemented validator.
+- Watch real retired clauses and public methods; accept harmless label changes and retained runtime limits.
+- Promotion declined: existing current-doc/scoped-proof/exact-retention rules.
+
 ## _(2026-10-04 UTC)_ — D156 lexer/semantic entries
 
 - Preserve prepared child stores; capture actual dispatch with writes intercepted.
@@ -44,3 +51,5 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part137`](docs/history/stitchcad-devnotes-part137.md) | prior navigation | 118 lines, 15488 bytes, `sha256:e6bda831…` |
 | [`part138`](docs/history/stitchcad-devnotes-part138.md) | complete D156 continuity | 13 lines, 676 bytes, `sha256:7a73076b…` |
 | [`part139`](docs/history/stitchcad-devnotes-part139.md) | complete D156 continuity | 75 lines, 6116 bytes, `sha256:6333c858…` |
+| [`part140`](docs/history/stitchcad-devnotes-part140.md) | complete native acceptance | 22 lines, 1806 bytes, `sha256:62d32615…` |
+| [`part141`](docs/history/stitchcad-devnotes-part141.md) | complete native acceptance | 23 lines, 1823 bytes, `sha256:567dba9b…` |

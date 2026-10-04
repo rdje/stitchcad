@@ -2,7 +2,7 @@
 
 This checks references/status markers, not correctness of all prose or sewing semantics. The public
 API map is deliberately scoped; contract tests and later gates retain execution/certification proof.
-Eight copied-fixture mutations prove the named refusals. No tracked source or other Git repo is edited.
+Copied-fixture mutations prove the named refusals. No tracked source or other Git repo is edited.
 """
 from __future__ import annotations
 
@@ -25,6 +25,39 @@ LEARNING = [
     "learn/pieces-and-assembly.md", "learn/sizes-and-grading.md",
     "learn/agents-and-workflows.md", "spec/mtm-input-charts.md", "availability.md",
 ]
+# Finite current-scope contracts, not a general natural-language correctness oracle.
+# These retired claims contradicted already published public APIs (D157).
+FORMULA_SCOPE = {
+    "syntax": ("type/name validation and evaluation remain G1-SLICE.5 work",
+               "Product normalization/evaluation",
+               "Production normalization/serialization/evaluation",
+               "namespace/whole static preflight remain .5b.1b/.1c"),
+    "declarations": ("ordered name reads/bindings remain .2d",
+                     "A recipe has no product static acceptance",
+                     "expression/whole checks remain .3/.4",
+                     "metadata for the future checker",
+                     "independently exercised in the reference before product namespace implementation",
+                     "expression kind/signature checking and complete static dependency graphs remain .3/.4",
+                     "Expression type checking and whole acceptance remain .5b.3/.4"),
+    "operator-signatures": ("complete expression checking and whole recipe acceptance remain .5b.3b/.3c/.4",
+                            "the contextual expression checker remains the next owner",
+                            "The contextual checker will use this metadata",
+                            "conditional checking, contextual dimensional errors and complete static graphs remain later work"),
+    "call-lookup": ("statement integration, whole-recipe validation and execution remain separate work",),
+    "literals": ("complete recipe normalization/identity, binding and evaluation remain later work",
+                 "Name/type/binding/evaluation"),
+    "recipe-inputs": ("name/type checking, binding and evaluation remain G1-SLICE.5 work",
+                      "remaining implementation is owned by .5b–.5g"),
+    "runtime-validation": (),
+    "statements": ("complete recipe validation and evaluation remain G1-SLICE.5 work",
+                   "recipe normalization/identity .3f, numerical execution and production approval remain owned future work"),
+    "static-validation": (),
+}
+FORMULA_METHODS = {
+    "checked.rs": ("check_kinds",),
+    "checked_recipe.rs": ("check_kinds",),
+    "namespace/ordered.rs": ("check_kinds", "advance_metadata"),
+}
 
 
 class PublicationError(Exception):
@@ -76,6 +109,28 @@ def chapters(text):
 def rows(root):
     with (root / MAP).open(newline="") as stream:
         return list(csv.reader((line for line in stream if not line.startswith("#")), delimiter="\t"))
+
+
+def method_pattern(method):
+    return r"^    pub fn " + re.escape(method) + r"(?:<[^>\n]*>)?\("
+
+
+def formula_scope(root):
+    """Watch known current availability clauses without rejecting scoped runtime limits."""
+    for name, retired in FORMULA_SCOPE.items():
+        chapter = f"annexes/formula-{name}.md"
+        text = (root / SOURCE / chapter).read_text()
+        prose = " ".join(re.sub(r"(?m)^>\s*", "", text).split())
+        for claim in retired:
+            require(claim not in prose, "FORMULA_SCOPE", f"{chapter}: retired claim {claim}")
+        introduction = text.split("\n## ", 1)[0]
+        require("formula-checked-recipes.md" in markdown_links(introduction),
+                "FORMULA_SCOPE", f"{chapter}: missing complete kind-proof boundary")
+    for file, methods in FORMULA_METHODS.items():
+        source = root / "crates/sc-core/src/recipe" / file
+        for method in methods:
+            require(re.search(method_pattern(method), source.read_text(), re.M),
+                    "FORMULA_API", f"{file}: missing public {method}")
 
 
 def check(root):
@@ -157,6 +212,7 @@ def check(root):
     require("G1 executable foundations are in progress." in intro, "TEXT_STATUS", "intro G1 scope")
     require("not a finished drafting application" in intro and "not a claim that a feature ships today" in availability,
             "TEXT_STATUS", "existing libraries versus future specification")
+    formula_scope(root)
     return len(registered), len(current_rows), source_links, rendered_links
 
 
@@ -189,9 +245,36 @@ def replace(file, old, new):
     file.write_text(text.replace(old, new, 1))
 
 
+def currency_refusal(checker, root):
+    """Independent assertion on the actual stale fixture, shared by green and body-fault arms."""
+    try:
+        checker(root)
+    except PublicationError as error:
+        require(str(error).startswith("FORMULA_SCOPE:"), "WRONG_REFUSAL", str(error))
+    else:
+        raise PublicationError("FORMULA_BODY_RED: actual stale current claim was accepted")
+
+
 def mutate(root, name):
     source = root / SOURCE
-    if name == "unregistered chapter":
+    if name.startswith("retired formula claim:"):
+        chapter, ordinal = name.removeprefix("retired formula claim:").split(":")
+        path = source / "annexes" / f"formula-{chapter}.md"
+        text = path.read_text()
+        intro, rest = text.split("\n## ", 1)
+        path.write_text(intro + "\n\n" + FORMULA_SCOPE[chapter][int(ordinal)] + ".\n\n## " + rest)
+    elif name.startswith("missing formula method:"):
+        file, method = name.removeprefix("missing formula method:").split(":")
+        path = root / "crates/sc-core/src/recipe" / file
+        matches = re.findall(method_pattern(method), path.read_text(), re.M)
+        require(len(matches) == 1, "FIXTURE_ANCHOR", name)
+        replace(path, matches[0], matches[0].replace("pub fn", "fn", 1))
+    elif name == "missing formula proof boundary":
+        path = source / "annexes/formula-runtime-validation.md"
+        text = path.read_text()
+        intro, rest = text.split("\n## ", 1)
+        path.write_text(intro.replace("formula-checked-recipes.md", "formula-recipe-inputs.md") + "\n## " + rest)
+    elif name == "unregistered chapter":
         (source / "unregistered.md").write_text("# Stranded reader chapter\n")
     elif name == "missing indexed chapter":
         replace(source / "topic-index.md", "- [From an idea to a pattern](learn/design-to-pattern.md)\n", "")
@@ -231,6 +314,13 @@ def main():
         "stale G0 status": "TEXT_STATUS",
         "missing public MTM API": "API_STATUS",
     }
+    for chapter, claims in FORMULA_SCOPE.items():
+        for ordinal in range(len(claims)):
+            cases[f"retired formula claim:{chapter}:{ordinal}"] = "FORMULA_SCOPE"
+    for file, methods in FORMULA_METHODS.items():
+        for method in methods:
+            cases[f"missing formula method:{file}:{method}"] = "FORMULA_API"
+    cases["missing formula proof boundary"] = "FORMULA_SCOPE"
     scratch = ROOT / "target/scratch"
     scratch.mkdir(parents=True, exist_ok=True)
     for name, expected in cases.items():
@@ -245,6 +335,27 @@ def main():
             else:
                 raise PublicationError(f"MISSING_REFUSAL: {name}")
         print(f"  verified refusal: {name} ({expected})")
+    with tempfile.TemporaryDirectory(prefix="formula-currency-", dir=scratch) as directory:
+        root = Path(directory)
+        fixture(ROOT, root)
+        chapter = root / SOURCE / "annexes/formula-declarations.md"
+        replace(chapter, "[whole recipe kind proofs]", "[complete ordered kind validation]")
+        require(check(root) == result, "FORMULA_REWORDING", "link-label edit changed proof scope")
+        mutate(root, "retired formula claim:declarations:0")
+        currency_refusal(check, root)
+        # Compile an actual instrument-body fault: omission must let the stale claim through.
+        body = Path(__file__).read_text()
+        anchor = "    formula_scope(root)\n"
+        require(body.count(anchor) == 1, "BODY_ANCHOR", anchor)
+        namespace = {"__file__": __file__, "__name__": "publication_currency_fault"}
+        exec(compile(body.replace(anchor, "", 1), __file__, "exec"), namespace)
+        try:
+            currency_refusal(namespace["check"], root)
+        except PublicationError as error:
+            require(str(error).startswith("FORMULA_BODY_RED:"), "BODY_CONTROL", str(error))
+        else:
+            raise PublicationError("BODY_CONTROL: actual guard omission escaped no assertion")
+    print("  formula currency: reworded positive / actual compiled guard-omission assertion red")
     with tempfile.TemporaryDirectory(prefix="book-warning-", dir=scratch) as directory:
         root = Path(directory)
         fixture(ROOT, root)
@@ -265,7 +376,7 @@ def main():
         require("<code>Checked&lt;UnclosedType&gt;</code>" in rendered,
                 "WARNING_REPAIR", "generic parameter missing from repaired rendering")
     print("  verified refusal: actual malformed generic (BOOK_BUILD_WARNING); repaired rendering pass")
-    print(f"publication probes: {len(cases) + 2} pass / 0 fail")
+    print(f"publication probes: {len(cases) + 4} pass / 0 fail")
 
 
 if __name__ == "__main__":

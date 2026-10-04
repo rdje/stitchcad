@@ -2,13 +2,13 @@
 
 > **Status:** implemented metadata, G1-SLICE.5b.3a. Unary and binary kind signatures match
 > [grammar5/5.1](../spec/formula-language/grammar.md#5-operators). Built-in/selector signatures,
-> complete expression checking and whole recipe acceptance remain .5b.3b/.3c/.4; numerical
-> execution remains .5c–.5g.
+> complete expression checking and [whole recipe kind proofs](formula-checked-recipes.md) are
+> implemented separately; numerical execution remains .5c–.5g.
 
 A declared kind can be checked before its value is known. These APIs accept only FormulaKind
 metadata and return a result kind or None when the operator has no signature for those operands.
 They consult no source value, state, provider or geometry. They produce no accepted expression,
-recipe graph or numeric binding; the contextual expression checker remains the next owner.
+recipe graph or numeric binding; the separate contextual expression checker owns expression proofs.
 
 ## Unary operators
 
@@ -60,7 +60,7 @@ assert_eq!(B::Equal.result_kind(K::Boolean, K::Boolean), None);
 
 arc_length_hint(left, right) is true exactly for an angle-times-length multiplication in either
 order. It identifies the normative guidance to use arc_length, which explicitly includes π and
-rounding. It is false for division and every other kind pair. The contextual checker will use this
+rounding. It is false for division and every other kind pair. The contextual checker uses this
 metadata when it constructs the typed formula_dimension refusal; this method itself renders no
 user diagnostic and fetches no operands.
 
@@ -91,7 +91,8 @@ mismatched arithmetic, product commutativity, quotient direction/count rules and
 The standing structural runner watches actual anchors and refuses compiler/unwrap/test-name noise.
 
 The pure signature metadata establishes operand-kind rules. Name lookup, source locations and
-[ordered metadata scopes](formula-name-scopes.md) keep their own contracts; function/selector roles,
-conditional checking, contextual dimensional errors and complete static graphs remain later work.
+[ordered metadata scopes](formula-name-scopes.md) keep their own contracts. Function/selector roles,
+conditional checking, contextual dimensional errors and whole-recipe dependency proofs are implemented
+by their separate signature and kind-checking APIs.
 Numeric division/domain checks, quantization, geometry, execution and physical/release proof retain
 their separate owners.

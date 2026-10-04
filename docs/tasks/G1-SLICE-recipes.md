@@ -924,26 +924,7 @@ Explicit10 owned paths; hook/brief0/clean precede .p.n.u1.
 
 ### G1-SLICE.5b.4c.h2.b.p.n.u1
 
-- [x] **ROOT CAUSE** — standalone entries lack their own activation; each actual omission
-  fails the first-write assertion. Mixed entry reads five sources; release faults leave compiled
-  output unless restored. Actual prefixes/body controls, rc=0, target/d156-units-ci-reviewed.log.
-- [x] **ADDRESSED** — four entry guards/all-source planning; standing17runtime/17actual body
-  reds/11actual captures/11late-source refusals, rc=0, guarded CI environment probes.
-  Existing native argv retained; unsigned final rebuilds both profiles, mixed final both crates.
-- [x] **NO REGRESSION** — direct exclusive seven-export-absent round5/unsigned9debug+1release/
-  length6/domain14 assertion reds; exact source/current artifacts restored4/5debug+5release/
-  4/5units+3core tests, rc=0, target/d156-units-*-native.log and actual restored*.log files.
-  Existing CI19/6/local56/13/2/1/census9/9/4/Git226/285 pass; Rust diff empty.
-  Publication10/62chapters/67API and glossary17, rc=0, target/d156-units-{publication,glossary}.log.
-- [x] **LOCKSTEP** — entry ledger/controls/live/task/index/three book pages agree;
-  D156 open; G1 5/18,12open/143sealed unchanged. Grammar/Rust API unchanged.
-- [x] **PROMOTION** — declined: existing all-source/exclusive/debug+release restoration rules.
-- [x] **COMMIT** — complete0127; focused publication/ledger and staged gate/hook precede next leaf.
-
-Initial edit script refuses IndentationError1 before changing adapter files; new controls then
-correctly fail missing activation1. Correct the script edits, rerun after readability review:
-final actual controls pass0; earlier attempts are not accepted receipts. Syntax inventory226/
-6844AST/68heredocs/2649embedded remains inspection only. Native terminal0 consumed before log reads.
+Complete acceptance retained in [part140](../history/stitchcad-devnotes-part140.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f1`
   Status: `done`
@@ -960,33 +941,48 @@ Explicit15 owned paths; hook/brief0/clean precede .p.n.f1.
 
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.d1`
-  Status: `pending`
-  Goal: fix D157 stale lexer/declaration annex scope against implemented ordered/static kind APIs.
+  Status: `done`
+  Goal: fix D157 current formula annex scope against implemented ordered/static kind APIs.
   Acceptance: scoped code/book/blame evidence; original report retained; precise availability/limits
   and relevant links; calibrated positive/refusal controls and publication/glossary/ledger/gate.
   Priority P1 immediately after .n.f1 completes cleanly; no grammar/runtime/API change.
+  Scoped introduction census includes nine formula chapters; correct related current clauses.
+  Work unit STITCHCAD-G1-0129 owns blocking whole-receipt/report retention before growth;
+  preserve committed bytes, public retrieval and active nodes under unchanged fixed caps.
 
 
 ### G1-SLICE.5b.4c.h2.b.p.n.f1
 
-- [x] **ROOT CAUSE** — actual original semantic child loses valid stores before dispatch/write;
-  captured source exact, rc=0, target/d156-formula-first-child-baseline.log. Lexer needs both sources.
-- [x] **ADDRESSED** — entry guards/prepared child env; CI probes17runtime/20body/13prefixes/
-  13late refusals/two actual native-child capture cases, rc=0, target/d156-formula-first-ci.log.
-  Actual body reset fault fails; every child/source write intercepted; captures compile nothing.
-- [x] **NO REGRESSION** — direct exclusive seven-export-absent lexer9/semantic10 assertion reds,
-  sources/current artifacts restored13/5tests; classifier10anchors/noise controls0, rc=0,
-  target/d156-formula-first-{lexer-native,semantic-native,classifier}.log. Existing CI19/6/local56/
-  13/2/1/census9/9/4/Git226/285, publication10/62chapters/67API/glossary17, rc=0.
-- [x] **LOCKSTEP** — ledger/control/live/task/book agree on this guarded scope. D156 open;
-  D157 stale introductions verified against checked_recipe289/namespace229/book/blame and owned .n.d1 next.
-  Actual public-reader bodies13open/143sealed/zero overlap, rc=0; D131 heading/D18 intentional absence.
-- [x] **PROMOTION** — declined: existing all-source/child profile/body/restoration principles.
-- [x] **COMMIT** — complete0128; ledger/staged gate/hook/brief0/clean before immediate D157 repair.
+Complete acceptance retained in [part141](../history/stitchcad-devnotes-part141.md).
 
-Final ledger9/pointer13/coverage9arms/10lanes/13trees/12siblings/zero gaps, rc=0,
-target/d156-formula-first-{ledger,coverage}.log; defect body census13/143/zero overlap0.
-Syntax226/6899AST/68heredocs/2649embedded is inspection only; Rust diff empty. D157 next.
 
-Final staged gate13green, rc=0, target/d156-formula-first-staged-gate.log; cached diff0.
-Explicit15 owned paths; hook/brief0/clean precede immediate D157 .p.n.d1.
+### G1-SLICE.5b.4c.h2.b.p.n.d1
+
+- [x] **ROOT CAUSE** — actual current book clauses contradict public ordered/expression/whole
+  APIs; scoped blame and all nine original-introduction refusals, rc=0,
+  target/d157-{currency-baseline,original-intro-controls}.log. Earlier metadata scopes went stale.
+- [x] **ADDRESSED** — nine annex scopes/current clauses and finite publication guard. Publication39:
+  22 retired claims/four method visibility/boundary refusals, reworded positive and actual compiled
+  guard-omission assertion red, rc=0, target/d157-publication-complete.log. Runtime limits retained.
+- [x] **NO REGRESSION** — glossary17/ledger9+pointer13/coverage9arms and producer census9assertions/
+  9refusals/4body reds, independent Git226/285 checks, rc=0, target/d157-*.log. No Rust/grammar change.
+  Four whole e19f992 intervals/public read/materialize334/hash/L/B/LF/list/prior37 immutable bytes,
+  rc=0, target/d157-retention-proof.log; fixed caps unchanged.
+- [x] **LOCKSTEP** — book/live/task/index agree; D157 verified closed, D156/D154 still owned.
+- [x] **PROMOTION** — declined: existing scoped availability/current-proof/exact-retention rules.
+- [x] **COMMIT** — complete0129; final ledger/staged gate/hook/brief0/clean before next native group.
+
+Initial checker assumed nongeneric expression method/wrong current-statement source; actual
+FORMULA_API refusal1 corrected from public code, then all controls rerun. Earlier failed receipt
+is excluded. Initial guessed coverage entry127 discarded; discovered planning entry passes0.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f2`
+  Status: `pending`
+  Goal: recipe/statement direct native guards; preserve child stores and classifier/coupled argv.
+  Acceptance: all declared sources before reads/writes; actual prefixes/late refusals/child faults;
+  exclusive native faults and exact source/current artifact restoration. Retain whole completed
+  receipts before growth under fixed caps. Own immediately after D157 .n.d1 commit.
+
+Final staged gate13green, rc=0, target/d157-staged-gate.log; cached diff0.
+Final ledger9/pointer13, rc=0, target/d157-ledger-final.log. Explicit23 owned paths;
+hook/brief0/clean precede .p.n.f2. Public334 and actual12open/144sealed/zero overlap0.

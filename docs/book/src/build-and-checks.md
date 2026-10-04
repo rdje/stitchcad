@@ -149,3 +149,12 @@ intercepting every source write and both initial/restoration child calls. The ca
 arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing
 the semantic child's prior store reset earns a body assertion failure. These captures compile no fault;
 the exclusive native mutation runs establish that separate proof.
+
+## Formula documentation currency
+
+The publication probes watch current scope in nine formula annexes against public expression,
+ordered-statement and whole-recipe check methods. Known retired availability claims refuse;
+each introduction links the complete kind-proof boundary. Copied-body omissions must fail the
+same stale-fixture assertion as the intact checker. A changed link label remains valid.
+These finite controls complement chapter/API/link checks; they do not certify all book prose.
+Static proofs still grant no numerical execution, physical correctness or product approval.

@@ -1,9 +1,10 @@
 # Static formula validation evidence
 
-> **Status:** reference static checks and coupled public expression/current-statement review are verified.
+> **Status:** reference static checks and coupled public expression/current-statement/whole-recipe review are verified.
 > Product libraries implement [syntax, inputs and canonical identity](formula-recipe-inputs.md),
-> [sourced names](formula-name-scopes.md) and bounded expression/current-statement kind proofs. A valid syntax tree is not yet
-> a statically accepted recipe, a computed garment or a production approval.
+> [sourced names](formula-name-scopes.md), bounded expression/current-statement checks and
+> [whole recipe kind proofs](formula-checked-recipes.md). Syntax success alone grants no static proof;
+> a complete kind proof grants no numerical result, computed garment or production approval.
 
 Static checking asks whether names and kinds fit the language before computing any value. A
 measurement can be unknown and still have the kind length: the checker may inspect that kind,

@@ -2,7 +2,8 @@
 
 This annex describes the book reference evaluator's runtime controls, separate from the
 [static checks](formula-static-validation.md). Product libraries currently expose syntax, input
-normalization and canonical identity; production execution remains G1-SLICE.5c–.5g work.
+normalization, canonical identity and [whole recipe kind proofs](formula-checked-recipes.md);
+production execution remains G1-SLICE.5c–.5g work.
 The [formula chapter](../spec/formula-language.md) supplies the normative rules. This instrument
 verifies scoped numerical examples and diagnostics; it does not certify a physical garment.
 

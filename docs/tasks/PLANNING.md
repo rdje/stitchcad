@@ -965,10 +965,7 @@ D141–D153 closure receipts retained exactly in
   P1 immediate before .5b closure/arithmetic; cover syntax/literal/static and no fabricated context.
 
 
-D155 closes at G1-SLICE.5b.4c.h0: five actual binding payload fields and two explicit test-name
-roles are declared without extending grammar or exemptions. Actual glossary17 controls/7 named
-copy-removal reds pass0; local1.99 G0 review again18met/1human-act-unmet. Original pre-repair
-working report retained exactly in [`stitchcad-defects-part73.md`](../history/stitchcad-defects-part73.md).
+D155 complete closure receipt retained in [part75](../history/stitchcad-defects-part75.md).
 
 
 - **D156** — ordinary Make producers inherit off-volume package/toolchain/scratch defaults when
@@ -979,12 +976,8 @@ working report retained exactly in [`stitchcad-defects-part73.md`](../history/st
   .h0 commit/.h1 runner observation, before D154 native verification; establish actual durable
   producer fault controls, fix published entry-point defaults and verify native/WASM/G0 locality.
 
-- **D157** — current formula annex introductions deny implemented ordered/static kind proofs.
-  Reproduce: docs/book/src/annexes/formula-declarations.md:4–5 denies ordered/static proofs;
-  docs/book/src/annexes/formula-syntax.md:8 calls type/name validation pending. Public
-  crates/sc-core/src/recipe/checked_recipe.rs:289–292 exposes check_kinds→FormulaCheckedRecipe;
-  docs/book/src/annexes/formula-checked-recipes.md documents the implemented proof.
-  Blame4e0d0bf9/cfd07481 leaves early scope text after later proof additions e379473/c91cdf5.
-  Impact: the director's sole product view misstates available APIs. Own G1-SLICE.5b.4c.h2.b.p.n.d1,
-  P1 immediately after current .n.f1 commit, before remaining native groups; retain original report,
-  correct scoped claims/links and watch calibrated regression controls. Grammar/runtime remain unchanged.
+D157 closes at G1-SLICE.5b.4c.h2.b.p.n.d1: nine current formula annex scopes agree with
+implemented ordered/expression/whole kind proofs; numerical/runtime/physical limits stay explicit.
+Actual original introductions9 and final publication39/22 retired-clause refusals/four method
+visibility refusals/reworded positive/compiled omission red pass0. Original committed report is
+retained exactly in [part74](../history/stitchcad-defects-part74.md); no grammar or Rust API change.

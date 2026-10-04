@@ -4,8 +4,10 @@ The formula contract is normative. The current `sc_core::recipe` implementation 
 lexical stream and an immutable expression syntax tree with exact source spans and structural bounds.
 Syntax parsing does not perform numeric conversion. Parsed literals and whole expression arenas now have explicit
 [normalization APIs](formula-literals.md). [Canonical expression identity](formula-literals.md#serialize-canonical-expression-identity) is now
-implemented separately, as is [whole statement/recipe identity](formula-recipe-inputs.md). Binding,
-type/name validation and evaluation remain G1-SLICE.5 work. See [availability](../availability.md) and
+implemented separately, as is [whole statement/recipe identity](formula-recipe-inputs.md).
+[Ordered names and statement checks](formula-name-scopes.md), bounded expression checks and
+[whole recipe kind proofs](formula-checked-recipes.md) are available. Numerical binding and
+evaluation remain G1-SLICE.5c–.5g work. See [availability](../availability.md) and
 [the complete grammar](../spec/formula-language/grammar.md).
 Single forms and ordered recipes have a separate [statement syntax API](formula-statements.md).
 
@@ -407,7 +409,7 @@ expected values/refusals remain independently authored.
 
 D83 binding/literal controls and completed scoped review follow; D84 signed-angle
 verification is reviewed below. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
-normalization/evaluation, real geometry, command/API/MCP and production release remain separate work.
+evaluation, real geometry, command/API/MCP and production release remain separate work.
 
 
 ## Reference numeric binding storage controls
@@ -442,7 +444,7 @@ This reference statement method returns a binding without publishing it into the
 environment. The curated replay caller stores that result explicitly; this is not a production
 transaction guarantee or a general environment implementation. Existing scalar/rational controls
 remain separate. D95 canonical-node controls and the completed D83 scoped review follow.
-D84 inverse-trig/equality verification is reviewed below. Production normalization/serialization/evaluation,
+D84 inverse-trig/equality verification is reviewed below. Production numerical evaluation,
 real geometry, API/MCP control and release signoff remain future work.
 
 
@@ -595,9 +597,9 @@ numeric binding storage is i64. The previous parent and defect text remain intac
 records. Current goals, function/type contracts, independent controls and the roadmap agree.
 
 The numerical reference prerequisites above are complete. [Static signature review](formula-static-validation.md)
-repairs tolerance roles and variadic arity; namespace/whole static preflight remain .5b.1b/.1c.
-Product literal normalization/canonical expression bytes
-have [separate scoped proof](formula-literals.md). Ordered recipe/binding/evaluation, entity direction
+repairs tolerance roles and variadic arity; reference namespace/whole static preflight is implemented.
+Product literal normalization/canonical expression bytes have [separate scoped proof](formula-literals.md),
+as do complete ordered recipe kind checks. Numerical binding/evaluation, entity direction
 integration, real geometry and production
 API/MCP/release remain future work. Curated inverse results certify neither arbitrary-input
 correct rounding nor cross-platform transcendental behavior.
