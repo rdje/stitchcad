@@ -10,6 +10,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D163 declaration and exact-name producers
+
+- Restore every mutated profile: declarations require both native and negative doctest rebuilds.
+- Retain the first captured dispatch error when a later restoration exception can mask it.
+- Simulated fault output exercises dispatch only; actual retained native logs prove assertions.
+- Promotion declined: existing all-source/actual-body/exclusive-restoration rules.
+
 ## _(2026-10-04 UTC)_ — D162 namespace producer proofs
 
 - Rebuild the full target after exact restoration; a source-only finally leaves a faulty artifact.
@@ -116,3 +123,4 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part157`](docs/history/stitchcad-devnotes-part157.md) | complete verification continuity | 3 lines, 292 bytes, `sha256:06de0aba…` |
 | [`part158`](docs/history/stitchcad-devnotes-part158.md) | complete closed node | 9 lines, 703 bytes, `sha256:c83978de…` |
 | [`part159`](docs/history/stitchcad-devnotes-part159.md) | complete closed node | 6 lines, 430 bytes, `sha256:cb7a4260…` |
+| [`part160`](docs/history/stitchcad-devnotes-part160.md) | complete closed verification | 33 lines, 2119 bytes, `sha256:677d9f17…` |

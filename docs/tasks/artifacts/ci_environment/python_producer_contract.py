@@ -182,7 +182,8 @@ def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
     assert len(observations) == (0 if refusal else 1), 'D156 Python standalone capture absent'
 
 
-def capture_child(text, entry_path, work_name, sources, test_target, *, arguments=(), first_suffix=None):
+def capture_child(text, entry_path, work_name, sources, test_target, *, arguments=(), first_suffix=None,
+                  doc_suffix=None, capture_doc_fault=False):
     """Observe actual native calls with custom stores; every source write is intercepted."""
     original_sources = {path: path.read_bytes() for path in sources}
     work = ROOT / 'target' / work_name
@@ -196,6 +197,25 @@ def capture_child(text, entry_path, work_name, sources, test_target, *, argument
     saved, argv = dict(os.environ), sys.argv
     mkdir, write_text, write_bytes, run = Path.mkdir, Path.write_text, Path.write_bytes, subprocess.run
     observed = []
+    child_errors = []
+    native_argv = ['cargo', 'test', '-p', 'sc-core', '--test', test_target]
+    doc_argv = ['cargo', 'test', '-p', 'sc-core', '--doc', doc_suffix]
+    expected = [native_argv, native_argv]
+    fixture_output = b''
+    if doc_suffix is not None:
+        expected.append(doc_argv)
+    if capture_doc_fault:
+        assert doc_suffix is not None, 'D156 Python missing doc profile'
+        expected = [native_argv] * 19 + [doc_argv, native_argv, doc_argv]
+        # Only dispatch is simulated here; genuine assertion evidence is verified natively.
+        contract = ROOT / 'crates/sc-core/tests' / (test_target + '.rs')
+        sites = [(index, len(match.group(1).encode()) + 1)
+                 for index, line in enumerate(contract.read_text().splitlines(), 1)
+                 if (match := re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line))]
+        assert sites, 'D156 Python doc capture has no assertion fixture site'
+        line, column = sites[0]
+        fixture_output = (f'\nfailures:\nthread panicked at {contract.relative_to(ROOT).as_posix()}:{line}:{column}:\n'
+                          'custom assertion fixture\n\nfailures:\nfixture\ntest result: FAILED.\n').encode()
 
     class Stopped(Exception):
         pass
@@ -204,21 +224,32 @@ def capture_child(text, entry_path, work_name, sources, test_target, *, argument
         assert path == work, 'D156 Python unexpected child-capture directory'
 
     def no_write(path, *args, **kwargs):
-        assert path in original_sources, 'D156 Python unexpected child-capture write'
+        assert path in original_sources or path.parent == work, 'D156 Python unexpected child-capture write'
         return 0
 
-    def observe(args, *positional, **kwargs):
+    def validate_child(args, positional, kwargs):
         environment = kwargs.get('env', os.environ)
         assert all(environment.get(name) == str(ROOT / value) for name, value in custom.items()), 'D156 Python child stores lost'
         assert environment.get('RUSTUP_TOOLCHAIN') == '1.99.0', 'D156 Python child channel lost'
         assert environment.get('RUSTUP_AUTO_INSTALL') == '0', 'D156 Python child install policy lost'
         assert environment.get('D156_PYTHON_UNRELATED') == 'preserved', 'D156 Python child unrelated environment lost'
-        assert args[:6] == ['cargo', 'test', '-p', 'sc-core', '--test', test_target], 'D156 Python child native argv changed'
+        assert len(observed) < len(expected) and args[:6] == expected[len(observed)], 'D156 Python child native argv changed'
+        if doc_suffix is not None:
+            assert len(args) == 6, 'D156 Python child profile selection changed'
         if first_suffix is not None:
             wanted = list(first_suffix) if not observed else []
             assert args[6:] == wanted, 'D156 Python child test selection changed'
         assert kwargs.get('cwd') == ROOT and not positional, 'D156 Python child cwd changed'
+
+    def observe(args, *positional, **kwargs):
+        try:
+            validate_child(args, positional, kwargs)
+        except AssertionError as error:
+            child_errors.append(error)
+            raise
         observed.append(args)
+        if capture_doc_fault and len(observed) <= 19:
+            return subprocess.CompletedProcess(args, 101, stdout=fixture_output, stderr=b'')
         raise Stopped
 
     try:
@@ -238,7 +269,9 @@ def capture_child(text, entry_path, work_name, sources, test_target, *, argument
         os.environ.clear()
         os.environ.update(saved)
         assert all(path.read_bytes() == data for path, data in original_sources.items()), 'D156 Python child capture changed source'
-    assert len(observed) == 2, 'D156 Python child capture/restoration absent'
+    if child_errors:
+        raise child_errors[0]
+    assert len(observed) == len(expected), 'D156 Python child capture/restoration absent'
 
 
 def classifier_controls(text, entry_path, *, strict=False):
@@ -325,6 +358,8 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py', 'checked_recipe_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/namespace_mutations.py', 'namespace_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/ordered_name_mutations.py', 'ordered_name_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/declaration_mutations.py', 'declaration_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/name_read_mutations.py', 'name_read_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
@@ -334,6 +369,7 @@ def main():
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',
             'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py',
+            'declaration_mutations.py', 'name_read_mutations.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -405,13 +441,54 @@ def main():
             ('namespace_mutations.py', 'namespace_mutations', 'namespace.rs',
              'formula_namespace_contract', None),
             ('ordered_name_mutations.py', 'ordered_name_mutations', ('namespace.rs', 'namespace/ordered.rs'),
-             'formula_ordered_names_contract', None)):
+             'formula_ordered_names_contract', None),
+            ('declaration_mutations.py', 'declaration_mutations', 'declaration.rs',
+             'formula_declaration_contract', None),
+            ('name_read_mutations.py', 'name_read_mutations', 'namespace.rs',
+             'formula_name_read_contract', None)):
         path = ROOT / 'docs/tasks/artifacts/formula_structure' / filename
         rust_files = rust if isinstance(rust, tuple) else (rust,)
         sources = tuple(ROOT / 'crates/sc-core/src/recipe' / file for file in rust_files)
         text = path.read_text()
         selected = (test, '--', '--exact') if test is not None else ()
-        capture_child(text, path, work_name, sources, target, first_suffix=selected)
+        doc_suffix = 'recipe::declaration::FormulaDeclaration' if filename == 'declaration_mutations.py' else None
+        capture_child(text, path, work_name, sources, target, first_suffix=selected, doc_suffix=doc_suffix)
+        if doc_suffix is not None:
+            capture_child(text, path, work_name, sources, target, doc_suffix=doc_suffix, capture_doc_fault=True)
+            wrong_doc = text.replace("result = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--doc',",
+                                     "result = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test',", 1)
+            assert wrong_doc != text
+            try:
+                capture_child(wrong_doc, path, work_name, sources, target,
+                              doc_suffix=doc_suffix, capture_doc_fault=True)
+            except AssertionError as error:
+                assert str(error) == 'D156 Python child native argv changed'
+                red += 1
+            else:
+                raise AssertionError('D156 Python negative-construction dispatch fault survived')
+            filtered_doc = text.replace("'recipe::declaration::FormulaDeclaration'],",
+                                        "'recipe::declaration::FormulaDeclaration', '--ignored'],", 1)
+            assert filtered_doc != text
+            try:
+                capture_child(filtered_doc, path, work_name, sources, target,
+                              doc_suffix=doc_suffix, capture_doc_fault=True)
+            except AssertionError as error:
+                assert str(error) == 'D156 Python child profile selection changed'
+                red += 1
+            else:
+                raise AssertionError('D156 Python doc selection fault survived')
+            restore = next(node for node in ast.walk(ast.parse(text))
+                           if isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == 'restored_docs' for t in node.targets))
+            actual_restore = ast.get_source_segment(text, restore)
+            omitted = text.replace(actual_restore,
+                                   "restored_docs = subprocess.CompletedProcess([], 0, stdout=b'', stderr=b'')", 1)
+            try:
+                capture_child(omitted, path, work_name, sources, target, doc_suffix=doc_suffix)
+            except AssertionError as error:
+                assert str(error) == 'D156 Python child capture/restoration absent'
+                red += 1
+            else:
+                raise AssertionError('D156 Python doc restoration omission survived')
         classifier_controls(text, path, strict=test is None)
         tree = ast.parse(text)
         function = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure')
@@ -448,7 +525,7 @@ def main():
         assert text.count(before) == 1
         try:
             capture_child(text.replace(before, "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", 1),
-                          path, work_name, sources, target)
+                          path, work_name, sources, target, doc_suffix=doc_suffix)
         except AssertionError as error:
             assert str(error) == 'D156 Python child stores lost'
             red += 1
@@ -493,7 +570,7 @@ def main():
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / 16 actual native-child capture cases / 8 calibrated failed-body classifiers / source unchanged')
+          str(len(adopters)) + ' actual late-source refusals / 19 actual native-child capture cases / 10 calibrated failed-body classifiers / source unchanged')
 
 
 if __name__ == '__main__':

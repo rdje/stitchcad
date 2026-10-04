@@ -161,8 +161,12 @@ python3 -I -B docs/tasks/artifacts/formula_structure/declaration_mutations.py
 Run declaration mutations alone. Nineteen actual compiled source/kind/origin/identity/ordinal/span/
 privacy faults must fail test-body assertions; widening the scalar-domain boundary must also fail
 the negative construction contract because the forbidden measurement call now compiles. Source
-bytes are restored exactly. The structural runner
-watches anchors and failure classification. Metadata tests and code inspection establish the stated
+bytes are restored exactly; both the full native target and all five declaration doctests are
+rebuilt from the restored source, including when a fault check fails. The direct entry validates
+implementation/test source and output before reads/writes and preserves prepared child stores.
+Failed-body panic locations must match current test assertion macro sites; custom messages pass
+and assertion-labelled expect messages refuse. Classifier-only mode compiles no native fault.
+The structural runner watches anchors and failure classification. Metadata tests and code inspection establish the stated
 locator contract; namespace admission is checked below. Numeric reads, registry adapters and physical
 geometry retain separate proof obligations.
 
@@ -329,7 +333,11 @@ domains, exact point/edge references, all eight reserved sources, distinct names
 missing/near spellings, immutable failures, independent borrow lifetimes and formatting privacy.
 Two compile-fail contracts protect the diagnostic's private construction and query lifetime.
 Nine actual compiled lookup/source/value-read/fallback/domain/token/name/privacy faults must fail
-public body assertions and restore exact source bytes. Run the mutation command alone:
+public body assertions, restore exact source bytes and rebuild the complete focused target.
+The direct entry guards implementation/test source and output before reads/writes, retains prepared
+child stores and supports classifier-only mode. Failed-body panic locations must match current
+test assertion macro sites; custom assertion messages pass and expect/compiler/name noise refuses.
+Run the mutation command alone:
 
 ```bash
 cargo test -p sc-core --test formula_name_read_contract

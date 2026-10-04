@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0136 - guarded declarations and exact-name proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f8`)
+
+- Guard implementation/test/output before reads/writes; preserve prepared child stores and modes.
+- D163 fixed using current test assertion sites; custom messages pass and labelled expects refuse.
+- CI17runtime/79body/27prefix/27late/19child/ten classifiers and publication43 pass0.
+- Exclusive28 assertion/one negative-construction reds; four sources exact/full7/7 native/five
+  doctests restored0. Three complete7a7c5b8 intervals/public367/prior71 bytes exact0.
+- D164 reproduced/owned next; G1 stays5/18,13open/150sealed; D156 open, grammar/API fixed.
+
 ## STITCHCAD-G1-0135 - guarded namespace assertion provenance (leaf `G1-SLICE.5b.4c.h2.b.p.n.f7`)
 
 - Guard implementation/test sources/output before reads/writes; preserve prepared child stores/modes.
@@ -266,15 +275,6 @@ CLI328 controls/313 reads includes newest committed-catalog refusal. Book/task/l
 G1 stays5/18,12siblings,12open/143sealed. D156 producer defaults then D154 known ordinals next.
 
 
-## STITCHCAD-G1-0115 - D154 blocking retention (leaf `G1-SLICE.5b.4c.h0`)
-
-Window5 retains60 exact c91cdf5 files; isolated source/read/materialization proof reconstructs309
-prior logical records. Only verified raw copies retire;69 maintained destinations now use catalog
-headings. Complete task evidence moves into the existing sibling, and whole oldest ledger/closed
-receipts are sealed. D155 seven undeclared fields/example names repaired with17 glossary controls/
-seven actual named reds; G0 again18met/1human-act-unmet. Fixed limits/four earlier windows stay
-immutable; D154 stays open. Full28 suites/strict703/WASM3/final gates pass0; runner observation
-follows. G1 remains5/18,12open/143sealed,12siblings; D156 defaults owned before D154.
 
 
 
@@ -319,3 +319,4 @@ follows. G1 remains5/18,12open/143sealed,12siblings; D156 defaults owned before 
 | [`part116`](docs/history/stitchcad-changelog-part116.md) | G1-0112 syntax and literal phases | 9 lines, 774 bytes, `sha256:3c01839a…` |
 | [`part117`](docs/history/stitchcad-changelog-part117.md) | complete verification continuity | 12 lines, 1064 bytes, `sha256:86e927ea…` |
 | [`part118`](docs/history/stitchcad-changelog-part118.md) | complete verification continuity | 6 lines, 573 bytes, `sha256:c225854a…` |
+| [`part119`](docs/history/stitchcad-changelog-part119.md) | complete closed verification | 9 lines, 745 bytes, `sha256:833b325f…` |

@@ -165,16 +165,21 @@ Initial-namespace and ordered-name entries also guard implementation/test source
 retain prepared child stores/classifier-only modes, and rebuild full targets after exact restoration.
 The ordered-name entry plans both mutated sources first. Both use current test assertion locations.
 
-Standing controls cover17 runtime cases and sixty-six actual body faults, including twenty-five real
+Declaration and exact-name entries use these same guards, current test assertion sites and prepared
+child stores. Declaration restoration rebuilds both the complete native target and its five doctests.
+The captures also exercise its negative-construction dispatch; simulated output checks dispatch only.
+
+Standing controls cover17 runtime cases and seventy-nine actual body faults, including twenty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All twenty-five entry captures also refuse a late missing source before
+12 membership tests passing. All twenty-seven entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
-Sixteen native-child capture cases execute actual entries with custom local stores,
-intercepting every source write and both initial/restoration child calls. The captures check actual
+Nineteen native-child capture cases execute actual entries with custom local stores,
+intercepting every source/output write and initial/restoration child calls. The declaration entry
+also captures negative-construction and native/doc restoration calls. The captures check actual
 arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing
 the prior per-child store reset earns a body assertion failure, as does discarding coupled selection.
 These captures compile no native fault;

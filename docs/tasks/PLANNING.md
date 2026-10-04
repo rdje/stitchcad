@@ -985,9 +985,14 @@ custom assertions pass/expect locations refuse. Actual broad/permissive/site fau
 exclusive35 native reds/four sources exact/full10/8 targets restored, rc=0. Original committed
 report retained exactly in [part82](../history/stitchcad-defects-part82.md).
 
-- **D163** — declaration/exact-name classifiers accept a failed-body assertion-labelled expect
-  message. Actual assertion_failure functions compiled against independent noise, rc=0,
-  target/d163-classifier-baseline.log; no native/source writes. Root: message-prefix heuristic
-  (blamedb19b90e/19900d01); impact false assertion proof. Own G1-SLICE.5b.4c.h2.b.p.n.f8, P1 next;
-  guarded test macro sites/custom positives/noise and actual classifier/site faults; exclusive
-  native/negative-construction reds plus exact source/full native/doc artifact restoration.
+D163 closes at .n.f8: guarded current test macro sites/custom assertions/noise refusals; actual
+classifier/site faults red; exclusive28 assertion/one negative-construction reds, four sources
+exact/full7/7 native and five doctests restored, rc=0. Original committed report retained
+in [part83](../history/stitchcad-defects-part83.md).
+
+- **D164** — built-in/operator signature classifiers accept assertion-labelled expect noise.
+  Actual predicates compiled against independent failed-body location/message, rc=0,
+  target/d164-classifier-baseline.log; no native/writes. Root: failed-body prefix heuristic;
+  impact false assertion proof. Own G1-SLICE.5b.4c.h2.b.p.n.f9, P1 after .n.f8;
+  current guarded test macro sites/custom positives, actual classifier/site faults and exclusive
+  native assertion reds plus exact source/full target restoration.

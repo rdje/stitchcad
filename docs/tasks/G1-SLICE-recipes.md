@@ -957,41 +957,42 @@ Complete acceptance/continuity retained in [part153](../history/stitchcad-devnot
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f6`
   Status: `done`
   Goal: checked-statement/whole-recipe guards and D161 source-location assertion proof.
-  Acceptance: all mutated/test sources before reads/output; actual captures/refusals/body faults,
-  preserved child stores/classifier modes; exclusive22/19 native reds and full restored targets.
-  Own blocking complete receipt/report retention before growth under fixed caps; P1 after .n.f5.
-
-Complete expression final verification retained in [part155](../history/stitchcad-devnotes-part155.md).
-
-### G1-SLICE.5b.4c.h2.b.p.n.f6
-
-Complete acceptance retained in [part156](../history/stitchcad-devnotes-part156.md).
-
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f7`
   Status: `done`
   Goal: namespace/ordered-name producer guards and D162 source-location assertion proof.
-  Acceptance: all implementation/test sources before reads/output; actual captures/refusals/body
-  faults, prepared children/modes; exclusive17/18 native faults and exact/full target restoration.
-  Work unit STITCHCAD-G1-0135; own blocking whole receipt/report/closed-node retention under fixed caps.
+Complete requirements/acceptance retained in [part160](../history/stitchcad-devnotes-part160.md).
 
-Complete final verification/correction retained in [part157](../history/stitchcad-devnotes-part157.md).
-
-### G1-SLICE.5b.4c.h2.b.p.n.f7
-
-- [x] **ROOT CAUSE** — actual noise/custom-store counterexamples, rc=0; d162-classifier-baseline.log.
-- [x] **ADDRESSED** — implementation/test/output guards, prepared children/current macro sites;
-  CI17/66body/25prefix/25late/16child/eight classifiers, rc=0, seventh-ci.log.
-- [x] **NO REGRESSION** — exclusive17+18 native reds, both modes0; four sources exact/full10/8
-  restored, rc=0; retained logs reclassified0, seventh-native-proof.log. Publication43 pass0.
-- [x] **LOCKSTEP** — D162 fixed; source/live/book agree; grammar/API fixed; D156 open, D163 next.
-- [x] **PROMOTION** — declined: existing actual-body/guarded-source/exclusive-restoration rules.
-- [x] **COMMIT** — complete0135; ledger/staged gate/hook/brief0/clean before next group.
-Final retention: public364 exact intervals/prior64 bytes,13open/149sealed; glossary17/coverage9/ledger9/pointer13, rc=0.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f8`
-  Status: `todo`
+  Status: `done`
   Goal: declaration/exact-name producer guards and D163 current assertion-source proof.
   Acceptance: all implementation/test sources before reads/output, actual entry/child/classifier
   controls; exclusive19+9 native reds plus scalar-domain negative red; full native/doc restoration.
-  Own blocking complete receipt/report retention under fixed caps; P1 after .n.f7.
+  Work unit STITCHCAD-G1-0136; own complete closed .n.f6/.n.f7 nodes, oldest changelog and original D163 retention under fixed caps.
+  Capture initial/native/doc restoration and negative-construction dispatch with all writes intercepted.
 Final0135 staged doctrine gate:all13 green, rc=0, seventh-staged-gate.log; fixed caps held.
+
+### G1-SLICE.5b.4c.h2.b.p.n.f8
+
+- [x] **ROOT CAUSE** — original actual child-store losses and D163 labelled-expect noise, rc=0;
+  eighth-child-baseline.log/d163-classifier-baseline.log; all source writes/native calls intercepted.
+- [x] **ADDRESSED** — implementation/test/output guards, prepared children/current macro sites;
+  CI17/79body/27prefix/27late/19child/ten classifiers, rc=0, eighth-ci-final.log.
+- [x] **NO REGRESSION** — exclusive19+9 assertion/one negative-construction reds; both modes0,
+  four sources exact/full7/7 native/five doctests restored, rc=0, eighth-native-proof.log;
+  publication43 pass0; source/grammar/API fixed. No fault-output simulator is native evidence.
+- [x] **LOCKSTEP** — D163 fixed; source/live/book agree; D156 open, D164 next.
+- [x] **PROMOTION** — declined: existing guarded-source/actual-body/exclusive-restoration rules.
+- [x] **COMMIT** — complete0136; final ledger/staged gate/hook/brief0/clean before .n.f9.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f9`
+  Status: `todo`
+  Goal: built-in/operator signature native guards and D164 current assertion-source proof.
+  Acceptance: all implementation/test/output plans, actual entry/child/classifier controls;
+  exclusive21+14 native assertion reds, exact sources/full native targets restored.
+  Own blocking complete receipt/report retention under fixed caps; P1 after .n.f8.
+Final retention: three whole7a7c5b8 intervals/public367/prior71 bytes exact;13open/150sealed, rc=0, eighth-retention-final-proof2.log.
+Initial retention probes1 excluded: corrected full CLI document versus sealed payload comparison, then closed live headings versus open report bullets; no retained bytes changed.
+Final glossary17/coverage9, rc=0; archive367/63working MD/14773L/1079761B, rc=0. Fixed caps held.
+Final0136 ledger9/pointer13, rc=0; selector calibration raises actual body reds79; final CI/publication43 terminal0 consumed.
+Final0136 staged gate all13green, rc=0, eighth-staged-gate-final.log; cached diff0; hook/brief0/clean before next leaf.
