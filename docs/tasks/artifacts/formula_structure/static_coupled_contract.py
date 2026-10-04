@@ -339,11 +339,11 @@ def mutations():
     import traceback
     documentation()
     doc_faults = (
-        ('formula-static-validation.md', 'bounded expression and current-statement proofs are implemented; whole-recipe acceptance remains .4.',
+        ('formula-static-validation.md', 'bounded expression, current-statement and whole recipe proofs are implemented; coupled whole review remains .4b.',
          'complete expression/recipe acceptance remains the next two stages.'),
-        ('formula-wanted-signatures.md', 'at .5b.3c.3b; atomic whole-recipe acceptance remains .4.',
+        ('formula-wanted-signatures.md', 'at .5b.3c.3b; atomic [whole recipe acceptance](formula-checked-recipes.md) is available.',
          'Current statement context remains .5b.3c.3'),
-        ('implementation-status.md', 'library-owned whole-recipe acceptance remains .5b.4.',
+        ('implementation-status.md', 'library-owned whole-recipe acceptance is implemented at .5b.4a.',
          'whole-recipe preflight remains pending.'),
     )
     for fault in doc_faults:

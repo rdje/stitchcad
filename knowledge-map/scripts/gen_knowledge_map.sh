@@ -22,7 +22,7 @@ cat <<'HDR'
 HDR
 if [ -f knowledge-map/subsystems.md ]; then
   # embed the curated section, stripping its leading HTML comment block
-  sed '/^<!--/,/-->/d' knowledge-map/subsystems.md
+  sed '/^<!--/ {/-->/d;}; /^<!--/,/-->/d' knowledge-map/subsystems.md
 fi
 
 echo

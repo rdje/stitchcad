@@ -716,12 +716,28 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Protocol: [D150 phase plan](G1-SLICE-names.md#d150-separated-input-phases-protocol).
   Verification/Commit: `STITCHCAD-G1-0112`; [final proof](G1-SLICE-names.md#d150-separated-input-phases-protocol).
 - ID: `G1-SLICE.5b.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: validate the whole ordered recipe and construct its immutable typed dependency graph.
   Acceptance: every statement/header/operand including untaken branches checked before any
   evaluation callback; prior declaration ordering/collision context, original spans and known
   ordinal/canonical identity where available. A late static defect accepts no partial graph.
   Syntax/input APIs retain their existing scopes and bytes; no evaluator authority from parsing.
+  Children: .a immutable public whole proof/error/dependency interface and D152 book status;
+  .b coupled independent whole graph review before .5b closure.
+  Protocol: [whole proof plan](G1-SLICE-checked-recipes.md#immutable-whole-recipe-protocol).
+  Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5b.4a`
+  Status: `done`
+  Goal: private complete recipe proof/error, ordered typed dependencies and exact available context.
+  Acceptance: actual normalized owners and checked initial namespace; all scopes pass before return,
+  check before advance, no accepted prefix/unchecked annotation, values, geometry or caller-made proof.
+  Work unit STITCHCAD-G1-0113; predecessor d9dbe15 clean/brief0/untracked/no jobs. D152 P2 status/D153 P1 generator repair.
+  Verification/Commit: `STITCHCAD-G1-0113`; [whole proof receipts](G1-SLICE-checked-recipes.md#acceptance-checklist).
+- ID: `G1-SLICE.5b.4b`
+  Status: `pending`
+  Goal: coupled independent whole graph public/reference/worked/refusal review and .5b closure.
+  Acceptance: complete graph/dependency order/real sources, early/late/untaken errors and limits;
+  current signature matrices/actual compiled faults remain effective, syntax/input priorities retained.
   Verification: `pending`; Commit: `pending`.
 
 ### Exact arithmetic and bindings

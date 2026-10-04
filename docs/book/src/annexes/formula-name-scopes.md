@@ -2,8 +2,7 @@
 
 > **Status:** implemented metadata foundation, G1-SLICE.5b.2d.2. FormulaNameCursor and
 > FormulaStatementNameScope enforce authored declaration order and retain actual binding sources.
-> Initial and current-statement kind checking are available. Complete
-> static recipe acceptance remains .5b.4; execution
+> Initial, current-statement and [whole recipe proofs](formula-checked-recipes.md) are available; execution
 > remains .5c–.5g. This chapter builds on [initial declarations and exact reads](formula-declarations.md).
 
 A formula statement sees the initial namespace and declarations above it. A current or future let
@@ -123,8 +122,8 @@ scope is exposed. A check does not advance metadata, publish a binding or return
 
 Earlier annotations remain metadata. A caller may stage an unchecked let first:length=missing,
 then locally check second:length=first against that annotation. This certifies the second statement's
-scope and kinds, and supplies no whole-recipe acceptance. The complete validator must check each
-statement successfully before staging it; atomic whole-recipe graph acceptance remains .5b.4.
+scope and kinds, and supplies no whole-recipe acceptance. The [whole recipe validator](formula-checked-recipes.md) checks each
+statement successfully before staging it and returns only a complete immutable proof.
 
 ```bash
 cargo test -p sc-core --test formula_checked_statement_contract -- --nocapture

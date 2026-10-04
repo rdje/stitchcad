@@ -5,6 +5,15 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — complete value-free recipe proof
+
+- A scoped proof alone cannot certify earlier annotations; check each statement before advancing.
+- Preserve consumer ordinals and real supplier sources; assertion class headers are dependencies.
+- Stream occurrence edges from complete private proofs; repeated/untaken uses stay distinct.
+- Canonical authored bytes exclude initial supplier identities; inspect sources separately.
+- D152 current status and D153 single-line comment range need actual copied-body refusal controls.
+- Promotion declined: existing owner/source/truth/lockstep contracts cover these requirements.
+
 ## _(2026-10-04 UTC)_ — complete syntax before literal inputs
 
 - Whole syntax/structure, literal normalization and static inference are distinct complete phases.

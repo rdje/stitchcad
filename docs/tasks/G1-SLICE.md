@@ -567,6 +567,7 @@ metadata signoff unchanged; the named table slice follows.
 
 Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 [G1-SLICE-recipes](G1-SLICE-recipes.md#completed-syntax-node-graph--preserved-during-g1-0072).
+Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 - ID: `G1-SLICE.5a.4`
   Status: `done`
@@ -847,7 +848,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5b.3d.b` | `done` | D148 complete input before static verified |
 | done | `G1-SLICE.5b.3d.c` | `done` | Shared contract verified; D149 fixed, D150 owned |
 | done | `G1-SLICE.5b.3d.d` | `done` | D150/D151 fixed; coupled static review complete |
-| current | `G1-SLICE.5b.4` | `pending` | Immutable library-owned whole recipe proof |
+| done | `G1-SLICE.5b.4a` | `done` | Immutable whole proof; D152/D153 fixed |
+| current | `G1-SLICE.5b.4b` | `pending` | Coupled whole factory review before .5b closure |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.

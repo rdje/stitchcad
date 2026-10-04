@@ -4,6 +4,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../../.." && pwd)"
 cd "$ROOT"
 python3 -I -B docs/tasks/artifacts/formula_structure/formula_structure.py
+python3 -I -B docs/tasks/artifacts/formula_structure/knowledge_map_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/static_status_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/formula_input.py
 python3 -I -B docs/tasks/artifacts/formula_structure/formula_expression_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/round_reference.py
@@ -34,6 +36,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/wanted_signature_mutations.
 python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/checked_statement_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/recipe_owner_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/statement_owner_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/literal_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/arithmetic_contract.py

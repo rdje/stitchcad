@@ -13,8 +13,8 @@
 //! initial namespaces retain sources, reject collisions and resolve exact names; ordered metadata scopes
 //! retain actual prior let declarations; closed operator/built-in/selector kind signatures and typed wanted-kind catalogs are available.
 //! Bounded initial-scope expression proofs retain kinds, typed refusals and sourced dependencies.
-//! Current scopes certify actual statements and both assertion operands; whole-recipe validation
-//! and numerical evaluation follow.
+//! Current scopes certify actual statements and both assertion operands. Whole-recipe proofs
+//! check every statement before exposing complete sourced dependencies; numerical evaluation follows.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -101,4 +101,10 @@ mod checked_statement;
 pub use checked_statement::{
     FormulaBindingDimensionRefusal, FormulaCheckedStatement, FormulaCheckedStatementKind,
     FormulaStatementCheckError, FormulaStatementCheckRefusal,
+};
+
+mod checked_recipe;
+pub use checked_recipe::{
+    FormulaCheckedRecipe, FormulaRecipeCheckError, FormulaRecipeCheckRefusal,
+    FormulaRecipeDependencyRole, FormulaRecipeNameDependency,
 };

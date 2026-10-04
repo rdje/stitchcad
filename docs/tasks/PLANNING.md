@@ -987,13 +987,8 @@ Grammar, accepted class names and missing-valid-context runtime family remain un
 
 D147/D148 closed: [complete closure receipts](../history/stitchcad-devnotes-part120.md).
 
-D149 closed in G1-SLICE.5b.3d.c: both deep prerequisite clauses now match available public
-expression/current-statement checks; two actual copied-text assertion reds verify refusal, rc=0.
-Original pre-repair report retained in [`stitchcad-defects-part68.md`](../history/stitchcad-defects-part68.md).
-
-D150 closes at G1-SLICE.5b.3d.d: whole syntax/structure precedes all literal inputs, then static.
-263 actual public/reference phase/ordinal cases, eight detached controls and10 compiled body reds
-verify the boundary; full reference passes, rc=0. Original report retained in [`stitchcad-defects-part69.md`](../history/stitchcad-defects-part69.md).
-
-D151 closes at G1-SLICE.5b.3d.d: status now names pending library-owned whole acceptance.
-Actual copied-text body refusal and13149 shared/full reference controls pass, rc=0. Original report: [`stitchcad-defects-part70.md`](../history/stitchcad-defects-part70.md).
+D149–D151 closure receipts and original D152/D153 reports are retained exactly in
+[`stitchcad-defects-part71.md`](../history/stitchcad-defects-part71.md). D152/D153 remain owned by
+G1-SLICE.5b.4a. D152 status repair:12 current cells/14 copied body reds; D153 generator repair:
+five header forms/21 preserved routes/two compiled body reds, rc=0. Independent census:
+10open/142sealed, unique/disjoint/complete D1..D153 except D18; full reference/language/publication regressions pass, rc=0. D152/D153 closed.

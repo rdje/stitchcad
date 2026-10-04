@@ -107,6 +107,20 @@ the digests afterwards.
 
 | [`stitchcad-changelog-part108.md`](docs/history/stitchcad-changelog-part108.md) | G1-0093 wanted signature ledger | 8 lines, 647 bytes, `sha256:88395c24…` |
 | [`stitchcad-changelog-part109.md`](docs/history/stitchcad-changelog-part109.md) | G1-0094 call lookup ledger | 9 lines, 766 bytes, `sha256:801531e8…` |
+| [`stitchcad-changelog-part110.md`](docs/history/stitchcad-changelog-part110.md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
+
+## STITCHCAD-G1-0113 - immutable whole recipe proofs (leaf `G1-SLICE.5b.4a`)
+
+The actual normalized owner and checked initial namespace now produce a complete immutable static
+proof only after every statement passes before metadata advance. Typed first refusals retain actual
+owner/ordinal/spans; dependencies stream original class/operand roles, repetitions and real sources.
+D152 stale book status and D153 single-line map-comment data loss repaired; grammar unchanged.
+Seven public contracts (96binding/640assertion cases/max64KiB stack), five precise compiler guards,
+four executable book examples and19 whole/22statement/18scope/16expression compiled body reds pass.
+Strict703tests/59groups/WASM3/full reference and13149-case coupled review/language16/publication10
+(61chapters/67API/1230source/1932rendered links), ledger9+13/coverage/archive/gates pass0.
+Two complete records retained byte-exact;309logical/64working MD under fixed limits. G1 stays5/18,
+12 evidence siblings,10open/142sealed. Coupled whole factory review .5b.4b follows before .5b closure.
 
 ## STITCHCAD-G1-0112 - complete syntax before literal inputs (leaf `G1-SLICE.5b.3d.d`)
 
@@ -259,27 +273,6 @@ skipped tests/WASM. Local1.95/1.98 success is not a runner verdict. D142 lint/D1
 repairs logged and scheduled immediately, then .v observes repaired CI before D140.
 Post-commit CLI266/252 includes newest immutable catalog refusal; oldest complete G1-0078 payload
 retained. Book/live/task/resume scope agrees; G1 stays5/18,14open/128sealed, no Rust CI success claimed.
-
-## STITCHCAD-G1-0096 - fourth exact retained window (leaf `G1-SLICE.5b.3c.2b.h0`)
-
-Window4 retains60 whole source files from2bdcd31;249 logical records independently reconstruct
-exactly through read/materialize/Git, with deterministic payload and60 redirected links. Working
-history drops63→4 before new seals; existing windows/reader/schemas/limits unchanged. D141 legacy
-window3 heading is superseded in the live book and independent label controls; no archive rewrite.
-Full local checks/27 probe suites/gate pass0; publication/ledger receipts are in the leaf.
-Exceptional push/observed CI .h1 follows; no remote verdict claimed.
-G1 stays5/18; exact oldest ledger/lesson/original D141 report retained, product D140 repair next.
-
-## STITCHCAD-G1-0095 - complete expression dimension arguments (leaf `G1-SLICE.5b.3c.2b.1`)
-
-D138 reference refusals retain all actual kinds/roles and complete wanted signatures. Known children
-resolve left-to-right before dimension checks; callee priority and grammar remain unchanged.
-4023 cases/3814 complete refusals/15 actual compiled reds pass; old4032/14 and call166/12 controls,
-full reference/language16/publication10/focused product15/ledger9+13/coverage/retention pass0.
-Older structural probes load real catalogs; no guessed fallback. Canonical/book/decision/live scope
-align; exact prior/oldest records retained. G1 stays5/18,12open/127sealed; Rust bytes unchanged.
-P0 D140 geometry reference kind loss is next; D139 header payloads have a separate owner.
-
 
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 

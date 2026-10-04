@@ -36,8 +36,9 @@ profile or size value. Initial namespaces and ordered name reads are available, 
 retains complete kinds, refusals and sourced dependencies.
 [Current-statement checking](annexes/formula-name-scopes.md#check-the-actual-current-statement)
 checks actual scoped operands and annotations. [Coupled static review](annexes/formula-static-validation.md#coupled-public-static-review)
-verifies those interfaces against independent rules and the actual reference; whole-recipe
-acceptance and execution remain pending.
+verifies those interfaces against independent rules and the actual reference.
+[Whole recipe acceptance](annexes/formula-checked-recipes.md) returns a complete immutable static
+proof with ordered source dependencies; coupled whole review and execution remain pending.
 
 ## Planned workflows
 

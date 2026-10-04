@@ -6,27 +6,17 @@
 
 ## Key subsystems
 
-- `crates/sc-units/src/lib.rs`;
-  `crates/sc-units/tests/property.rs`, `docs/book/src/spec/units-and-tolerances.md`.
-  `G0-CONTRACT.2` / `.18`.
-- `crates/sc-core/src/lib.rs`, `crates/sc-measure/src/lib.rs`;
-  `G1-SLICE.3` / `.4` / `.5`.
-- `docs/book/src/SUMMARY.md`; `G0-CONTRACT` / `G1-SLICE.4d.1`.
-- `docs/book/src/spec/formula-language.md`.
-  `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`;
-  `G0-CONTRACT.9` / `G1-SLICE.5`.
-- `docs/book/src/spec/interchange-dialects.md`.
-  `docs/tasks/artifacts/interchange/run_interchange_census.sh`. `G0-CONTRACT.10` / `G2-2D`.
-- `docs/book/src/spec/feature-matrix.md`;
-  `docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. `G0-CONTRACT.4`.
-- `docs/book/src/spec/glossary/`;
-  `docs/tasks/artifacts/glossary/run_glossary_census.sh`; `G0-CONTRACT.1`.
-- `.doctrine/live_document_size/`;
-  `scripts/check_live_doc_size.sh`. `SPINE.4`.
-- `docs/tasks/artifacts/`; `make probes`.
-  `g0_exit/run_g0_exit_review.sh` `ROADMAP.md` §11; leaf owns probe.
+- `crates/sc-units/src/lib.rs`;`crates/sc-units/tests/property.rs`,`docs/book/src/spec/units-and-tolerances.md`. G0-CONTRACT.2/.18.
+- `crates/sc-core/src/lib.rs`,`crates/sc-measure/src/lib.rs`;G1-SLICE.3/.4/.5.
+- `docs/book/src/SUMMARY.md`;G0-CONTRACT/G1-SLICE.4d.1.
+- `docs/book/src/spec/formula-language.md`. `docs/tasks/artifacts/formula_language/run_formula_language_census.sh`;G0-CONTRACT.9/G1-SLICE.5.
+- `docs/book/src/spec/interchange-dialects.md`. `docs/tasks/artifacts/interchange/run_interchange_census.sh`. G0-CONTRACT.10/G2-2D.
+- `docs/book/src/spec/feature-matrix.md`;`docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh`. G0-CONTRACT.4.
+- `docs/book/src/spec/glossary/`;`docs/tasks/artifacts/glossary/run_glossary_census.sh`;G0-CONTRACT.1.
+- `.doctrine/live_document_size/`;`scripts/check_live_doc_size.sh`. SPINE.4.
+- `docs/tasks/artifacts/`;`make probes`. `g0_exit/run_g0_exit_review.sh`;`ROADMAP.md` §11;leaf owns probe.
 
-- CI: `.github/workflows/rust.yml`; `scripts/ci_environment.py`.
+- CI: `.github/workflows/rust.yml`;`scripts/ci_environment.py`.
 
 ## Active task-trees
 
@@ -34,6 +24,7 @@
 - [`G0-CONTRACT-evidence.md`](docs/tasks/G0-CONTRACT-evidence.md)
 - [`G0-CONTRACT.md`](docs/tasks/G0-CONTRACT.md)
 - [`G1-SLICE-canonical.md`](docs/tasks/G1-SLICE-canonical.md)
+- [`G1-SLICE-checked-recipes.md`](docs/tasks/G1-SLICE-checked-recipes.md)
 - [`G1-SLICE-constructions.md`](docs/tasks/G1-SLICE-constructions.md)
 - [`G1-SLICE-evidence.md`](docs/tasks/G1-SLICE-evidence.md)
 - [`G1-SLICE-formulas.md`](docs/tasks/G1-SLICE-formulas.md)

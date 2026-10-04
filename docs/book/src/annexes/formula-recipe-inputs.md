@@ -331,8 +331,9 @@ probe suite and the doctrine gate. WASM compilation is not a real-browser execut
 | Construction operations | G1-SLICE.5f | Complete typed v1 operation list, prior geometry dependencies and selectors through G2/G3 contracts |
 | Full formula acceptance | G1-SLICE.5g | Product examples/refusals/fixture agreement and observed two-platform byte reproducibility |
 
-Each stage has separately owned pending children in docs/tasks/G1-SLICE-recipes.md, refined before
-its code begins. The first is .5b.1: complete static obligation and independent oracle review.
+Each stage has owned children in docs/tasks/G1-SLICE-recipes.md. Static obligation review,
+scoped checks and [whole recipe proofs](formula-checked-recipes.md) are implemented; coupled whole
+review .5b.4b precedes arithmetic .5c.
 Unknown inputs retain declared kinds but no invented numeric value. Factory artifact blocking
 remains G4's policy; size-axis integration still waits for D70. Command atomicity/localization (.6),
 typed project fields/digests and cycle loading (.7), API/MCP (.9), browser execution (.12), geometry

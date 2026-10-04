@@ -20,6 +20,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Coupled normalization review](annexes/formula-literals.md#coupled-normalization-review)
 - [Coupled statement and recipe review](annexes/formula-statements.md#coupled-syntax-and-diagnostic-review)
 - [Canonical statement and recipe bytes](annexes/formula-statements.md#canonical-statement-and-recipe-byte-contract)
+- [Complete formula recipe proofs](annexes/formula-checked-recipes.md)
 - [Complete recipe inputs and identity](annexes/formula-recipe-inputs.md)
 - [Syntax milestone and the route to execution](annexes/formula-recipe-inputs.md#syntax-milestone-and-the-route-to-execution)
 - [Recipe input/identity proof and remaining owners](annexes/formula-recipe-inputs.md#coupled-input-and-identity-review)

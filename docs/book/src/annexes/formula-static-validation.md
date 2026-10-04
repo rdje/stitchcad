@@ -381,8 +381,7 @@ a copied book with a25-statement ceiling. That independent control now passes, w
 the old aggregate formula in memory causes a named assertion failure. The normative ceiling
 remains4096; the smaller value is used only to falsify the measurement in a copied book.
 
-D119's reference ordering and D123's measurement defects are repaired at .5b.1b.2. Product static namespaces, immutable
-dependency graphs and complete typed diagnostics remain .5b.2–.4. Reference numeric provenance
+D119's reference ordering and D123's measurement defects are repaired at .5b.1b.2. Product sourced namespaces, kind signatures, scoped checks and immutable whole recipe proofs are implemented. Reference numeric provenance
 is [verified separately](formula-runtime-validation.md#approximation-contributions-and-admissible-classes); reference origin/context routing is verified at .5e.1a. Static checking cannot settle
 those execution obligations.
 
@@ -404,20 +403,20 @@ still fail parsing. Expected envelope populations and book statement/refusal pop
 in both directions; seven actual compiled faults and three loaded documentation faults must fail
 body assertions. Source remains unchanged.
 
-| Requirement | Reference evidence | Remaining product owner |
+| Requirement | Reference evidence | Current product status / remaining owner |
 | --- | --- | --- |
-| Eight kinds, six let kinds; no implicit conversion | signature4032 and namespace1139 controls | .5b.2/.3 |
-| Nine origins, eight reserved names, collisions and spelling | namespace1139, recipe196 controls | .5b.2 |
-| Every operator/function/selector signature and arity | closed signature matrix;22 names | .5b.3 |
-| Tolerance-name roles; Boolean test; both branches | signature/namespace matrices, recipe preflight | .5b.3/.4 |
-| Declaration order, headers, no accepted prefix on late error | whole-source196, actual consumer ordering | .5b.4 |
-| Statement4096, expression256, conditional16 boundaries | recipe boundaries; earlier syntax/input controls | product syntax implemented; .5b.4 integration |
-| All worked and refusal static outcomes | independently authored21/13 populations | .5b.4; runtime rows .5e |
-| Envelope dispatch before operand semantics | six calls/either branch; actual guard fault | .5b.3 |
-| Exact source and canonical identity | earlier product syntax/input/identity controls | .5b.4 semantic error context |
-| Complete typed diagnostic arguments | reference call/expression/provider/header payloads verified | .5b.2–.4 and command .6 |
-| Persisted cycles and atomic runtime/replay behavior | outside these static instrument controls | .5e/.5f and storage .7 |
-| Physical geometry and cross-platform computed values | outside these static instrument controls | G2 and .5g |
+| Eight kinds, six let kinds; no implicit conversion | signature4032 and namespace1139 controls | Implemented declarations and scoped checks |
+| Nine origins, eight reserved names, collisions and spelling | namespace1139, recipe196 controls | Implemented sourced namespaces and ordered scopes |
+| Every operator/function/selector signature and arity | closed signature matrix;22 names | Implemented closed catalogs and expression checks |
+| Tolerance-name roles; Boolean test; both branches | signature/namespace matrices, recipe preflight | Implemented operand roles and both-branch checks |
+| Declaration order, headers, no accepted prefix on late error | whole-source196, actual consumer ordering | Implemented whole recipe proof; coupled review .5b.4b |
+| Statement4096, expression256, conditional16 boundaries | recipe boundaries; earlier syntax/input controls | Implemented syntax/input/proof limits; coupled review .5b.4b |
+| All worked and refusal static outcomes | independently authored21/13 populations | Scoped review complete; whole review .5b.4b; runtime .5e |
+| Envelope dispatch before operand semantics | six calls/either branch; actual guard fault | Implemented call lookup and child priority |
+| Exact source and canonical identity | earlier product syntax/input/identity controls | Implemented expression/statement/whole owner context |
+| Complete typed diagnostic arguments | reference call/expression/provider/header payloads verified | Implemented static payloads; command integration .6 |
+| Persisted cycles and atomic runtime/replay behavior | outside these static instrument controls | Pending .5e/.5f and storage .7 |
+| Physical geometry and cross-platform computed values | outside these static instrument controls | Pending G2 and .5g |
 
 **D124 is resolved by the director's ruling2026-10-03: keep the current grammar.** Excluded
 loop/function/macro capabilities introduce no additional source forms or keywords. Unknown calls
@@ -430,7 +429,7 @@ The recognition controls compare actual contract6 cells and grammar1.1 keyword p
 independently authored expectations; ordinary names/let headers, all three reserved words and
 unknown-call/parse precedence are exercised with execution and values trapped. The concrete ruling
 is retained in ADR-0003. .5b.1c.2 closes the reference review; product namespace and local kind proofs are available,
-while atomic graph acceptance remains .5b.4. This clarification changes diagnostic promises to match v1's
+and [whole recipe proofs](formula-checked-recipes.md) are available; coupled whole review remains .5b.4b. This clarification changes diagnostic promises to match v1's
 closed grammar and enables no excluded capability.
 
 The reference runtime assertion repair closes D125 at G1-SLICE.5e.3a. A false assertion now raises
@@ -446,7 +445,7 @@ No static review result approves numerical determinism, a physical garment or a 
 The product namespace foundation .5b.2 accepts immutable typed declarations from canonical inputs,
 validates machine names and consumes declaration pairs before an index can discard collisions.
 [Ordered metadata scopes](formula-name-scopes.md) retain actual prior let annotations and locations;
-bounded expression and current-statement proofs are implemented; whole-recipe acceptance remains .4.
+bounded expression, current-statement and whole recipe proofs are implemented; coupled whole review remains .4b.
 Kinds and origins are separate from numeric availability. Reserved names have known kinds even
 without an instance/export context. Geometry declarations refer to prior operation outputs;
 they do not authorize construction. Input adapters must preserve existing source identities and
@@ -459,10 +458,10 @@ existing angle-times-length hint. Call/tolerance-role populations match the chap
 directions. Envelope dispatch applies before operand semantics after syntax/input succeeds.
 No numerical, tolerance-value, storage, geometry or solver callback belongs in this stage.
 [Current-statement/annotation integration](formula-name-scopes.md#check-the-actual-current-statement)
-is implemented at .5b.3c.3b; whole acceptance remains .4.
+is implemented at .5b.3c.3b; whole acceptance is implemented at .4a.
 
-The whole-validator slice .5b.4 will inspect every statement in declaration order and return an
-immutable typed dependency graph only after complete success. Dependency edges include untaken
+The whole-validator .5b.4a inspects every statement in declaration order and returns an
+immutable typed dependency proof only after complete success. Dependency edges include untaken
 branches; each name resolves to an initial declaration or a prior statement. A late error returns
 no accepted graph prefix. Diagnostics retain actual source spans, known statement indices and
 canonical identity where available; invalid syntax/input must not acquire invented context.
@@ -508,8 +507,8 @@ normalized owners and original spans; ten actual compiled body faults must refus
 python3 -I -B docs/tasks/artifacts/formula_structure/first_phase_contract.py --mutations
 ```
 
-The adapter's ordered loop is a diagnostic consumer; the library-owned immutable whole graph
-remains .5b.4. Coupled expression/current-statement review is complete with these phase controls
+The adapter's ordered loop is a diagnostic consumer; the [library-owned whole proof](formula-checked-recipes.md)
+is implemented at .5b.4a. Coupled review of that factory remains .5b.4b. Coupled expression/current-statement review is complete with these phase controls
 and full reference regressions.
 Static proofs still grant no numerical result, physical geometry, export readiness or human approval.
 

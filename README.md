@@ -23,7 +23,8 @@ ontology, canonical inputs, measurement metadata/tables, per-POM Ease, size memb
 input charts and borrowed formula syntax, whole-recipe input normalization and owned expression/
 statement/recipe identity. Formula metadata, sourced declarations, initial namespaces, exact reads,
 ordered scopes and operator/built-in/selector signatures include typed wanted catalogs, sourced call
-lookup, bounded initial-scope expression checks and actual scope-bound statement checks. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks
+lookup, bounded initial-scope expression checks, actual scope-bound statement checks and complete immutable
+recipe proofs with ordered source dependencies. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks
 verified progress; the mdBook offers progressive learning, a glossary/index and detailed annexes
 with implemented behavior and remaining proof boundaries.
 

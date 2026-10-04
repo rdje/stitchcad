@@ -9,8 +9,7 @@ Never guess a root cause from code inspection.
   before→after** recorded in its task-tree leaf (see the acceptance checklist in
   `DOCTRINE_ENFORCEMENT.md`).
 - If no existing tool shows WHY+WHERE, **build one** — a probe, a tracer, a counter, a
-  minimal reproduction harness. The diagnostic tool is a first-class deliverable, kept in
-  the repo, not a throwaway.
+  minimal reproduction harness. Keep the diagnostic tool as a tracked deliverable.
 - **ANTI-SPIN TRIPWIRE:** if you have analyzed for ~2 turns without producing NEW tool
   output that pinpoints WHY+WHERE, STOP — run a tool, build one, or escalate. Never loop
   on analysis.
@@ -235,14 +234,11 @@ refusals plus cross-window collision. Watched by the archive runner; no source G
 for retrieval. Newest committed catalog edits are refused after the recording commit. Capture tool
 `capture_window4.py` freezes2bdcd31 in target/ only; labels are independently checked, including D141.
 
-Ledger target controls: `python3 -I -B docs/tasks/artifacts/changelog/ledger_pointer_contract.py`
-checks13 POINTER verdicts (watched).
-`ledger_pointer_mutations.py` in that directory requires four actual assertion reds and exact source
-restoration. Run mutations exclusively: they temporarily edit the checker.
+Ledger: python3 -I -B docs/tasks/artifacts/changelog/ledger_pointer_contract.py checks13 POINTER
+verdicts. Exclusive ledger_pointer_mutations.py requires four body reds/exact restoration.
 
-Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan
- target/artifact_cleanup_audit/<run>; apply the same run with apply. Safety/exclusions:
-docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
+Cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan
+target/artifact_cleanup_audit/<run>; apply same run. Safety: docs/ARTIFACT_CLEANUP.md; probes watch refusals.
 
 Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B --mutations; watched.
 - first_phase_contract.py:263 public/reference cases/10 body reds; D150.
@@ -254,7 +250,10 @@ Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B --mutations; w
 - whole_phase_contract.py:584cases/11 reds; D148.
 - header_dimension_contract.py:264cases/232payloads/13 reds; D139.
 - statement_owner_contract.py: five Cargo-current compiler guards.
-- static_recipe_contract.py:196 whole/replay/measurement cases/reds.
+- recipe_owner_contract.py:five precise compiler guards/four executable book examples.
+- static_status_contract.py:12cells/14text reds; D152.
+- knowledge_map_contract.py:five headers/two generator body reds; D153.
+- static_recipe_contract.py:196 whole/replay/measurement controls.
 - static_review_contract.py, reserved_diagnostic_review.py: D124/D131 recognition/sources.
 - static_coupled_contract.py:13149 cases;6reference/9Rust/3text reds; run alone;
   source/artifact exact; Cargo-current driver.
@@ -265,10 +264,10 @@ Reference: docs/tasks/artifacts/formula_structure/; python3 -I -B --mutations; w
 - origin_value_contract.py: origin/context reads.
 - provenance_contract.py: contribution sources;26 body reds.
 
-Product faults: same directory; exclusive; compiled body reds/exact restore.
+Product faults (exclusive): compiled body reds/exact restore.
 semantic_mutations.py, declaration_mutations.py, namespace_mutations.py, name_read_mutations.py,
 ordered_name_mutations.py, operator_signature_mutations.py, builtin_signature_mutations.py,
 wanted_signature_mutations.py, call_lookup_mutations.py, checked_expression_mutations.py,
-checked_statement_mutations.py.
+checked_statement_mutations.py, checked_recipe_mutations.py (19 whole-proof body reds).
 
-CI stores: scripts/ci_environment.py prepare/verify; docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh checks paths/guards/step order.
+CI stores: scripts/ci_environment.py prepare/verify; docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh watches paths/guards/order.

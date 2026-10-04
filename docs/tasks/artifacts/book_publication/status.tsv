@@ -61,3 +61,8 @@ formula checked statement components	annexes/formula-name-scopes.md	crates/sc-co
 formula statement refusal context	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/checked_statement.rs	FormulaStatementCheckError	G1-SLICE.5b.3c.3b	4.1
 formula statement refusal reasons	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/checked_statement.rs	FormulaStatementCheckRefusal	G1-SLICE.5b.3c.3b	4.1
 formula actual binding kinds	annexes/formula-name-scopes.md	crates/sc-core/src/recipe/checked_statement.rs	FormulaBindingDimensionRefusal	G1-SLICE.5b.3c.3b	4.1
+formula whole recipe proof	annexes/formula-checked-recipes.md	crates/sc-core/src/recipe/checked_recipe.rs	FormulaCheckedRecipe	G1-SLICE.5b.4a	4.1
+formula whole recipe refusal owner	annexes/formula-checked-recipes.md	crates/sc-core/src/recipe/checked_recipe.rs	FormulaRecipeCheckError	G1-SLICE.5b.4a	4.1
+formula whole recipe refusal variants	annexes/formula-checked-recipes.md	crates/sc-core/src/recipe/checked_recipe.rs	FormulaRecipeCheckRefusal	G1-SLICE.5b.4a	4.1
+formula whole dependency roles	annexes/formula-checked-recipes.md	crates/sc-core/src/recipe/checked_recipe.rs	FormulaRecipeDependencyRole	G1-SLICE.5b.4a	4.1
+formula whole sourced dependency	annexes/formula-checked-recipes.md	crates/sc-core/src/recipe/checked_recipe.rs	FormulaRecipeNameDependency	G1-SLICE.5b.4a	4.1

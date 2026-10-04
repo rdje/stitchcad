@@ -2,7 +2,7 @@
 
 > **Implemented:** immutable diagnostic metadata in sc-core recipe, G1-SLICE.5b.3c.1.
 > The catalogs describe admissible operand kinds and symbolic roles. Source-bearing expression
-> errors and initial-scope expression proofs are implemented below; whole-recipe acceptance remains .4.
+> errors and initial-scope expression proofs are implemented below; [whole recipe acceptance](formula-checked-recipes.md) is available.
 
 A dimension diagnostic needs both the actual operand kinds and the kinds the operation accepts
 ([contract §5.2](../spec/formula-language.md)). Saying only that a call failed cannot explain which
@@ -113,7 +113,7 @@ The [bounded product checker](#bounded-product-expression-checking) pairs these 
 every actual operand kind and its normalized owner. Named envelope refusal precedes ordinary
 unknown calls; errors report the domains actually searched and invent no recipe ordinal.
 [Current-statement context](formula-name-scopes.md#check-the-actual-current-statement) is implemented
-at .5b.3c.3b; atomic whole-recipe acceptance remains .4. Numerical execution and
+at .5b.3c.3b; atomic [whole recipe acceptance](formula-checked-recipes.md) is available. Numerical execution and
 release approval remain separate work.
 
 ## Reference expression dimension payloads
@@ -247,6 +247,6 @@ python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutation
 Run mutations alone, without overlapping builds/probes/gates. The standing structural suite watches
 fault anchors and refuses compiler/expect/test-name noise. These proofs cover expression checking
 against an initial namespace. [Current-statement checking](formula-name-scopes.md#check-the-actual-current-statement)
-also applies these rows to the actual prior-binding scope and both assertion operands. Whole-recipe
-acceptance, canonical registry/operation-order validation, numerical execution and physical geometry
-retain .5b.4, .5e/.5f and G2 owners. The grammar and token set are unchanged.
+also applies these rows to the actual prior-binding scope and both assertion operands. [Whole recipe proofs](formula-checked-recipes.md) compose these checks. Coupled whole review,
+canonical registry/operation-order validation, numerical execution and physical geometry
+retain .5b.4b, .5e/.5f and G2 owners. The grammar and token set are unchanged.

@@ -34,15 +34,16 @@ requires the named contracts and later proof owners.
 | Formula built-in/selector signatures | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3b | [Closed calls and roles](formula-builtin-signatures.md) |
 | Initial-scope expression proof | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3c.2b.2 | [Bounded kind checking](formula-wanted-signatures.md#bounded-product-expression-checking) |
 | Current-statement kind proof | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3c.3b | [Actual scope checking](formula-name-scopes.md#check-the-actual-current-statement) |
+| Complete recipe kind proof | §4.1; G1 | sc-core recipe; G1-SLICE.5b.4a | [Atomic static acceptance](formula-checked-recipes.md) |
 | Formula wanted-kind catalogs | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3c.1 | [Typed expected rules](formula-wanted-signatures.md) |
 
 Reference [static signature evidence](formula-static-validation.md) covers the complete finite
 kind/function matrix without executing values. Reference namespace/preflight/full static review
-is verified at G1-SLICE.5b.1; library-owned whole-recipe acceptance remains .5b.4.
+is verified at G1-SLICE.5b.1; library-owned whole-recipe acceptance is implemented at .5b.4a.
 product metadata, sourced declarations, initial namespaces, exact reads and ordered metadata scopes are available;
 Operator/built-in/selector signatures, typed wanted catalogs and initial-scope expression proofs
 and current-statement checks are available. The [coupled review](formula-static-validation.md#coupled-public-static-review)
-verifies their public behavior and the actual reference; whole-recipe acceptance remains .5b.4.
+verifies their public behavior and the actual reference; [whole recipe proofs](formula-checked-recipes.md) are available; coupled whole review remains .5b.4b.
 
 ## Remaining proofs
 
