@@ -5,15 +5,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
-## _(2026-10-03 UTC)_ — certify the owner and every static child
+## _(2026-10-04 UTC)_ — distinguish raw annotations from actual kinds
 
-- Initial-scope checker uses explicit enter/apply stacks: callee first, then ordered children,
-  then complete signatures. Both conditional branches and direct tolerance roles stay distinct.
-- Proofs/errors borrow the exact normalized owner; copied source locators outlive the namespace,
-  while canonical records remain borrowed. Runtime-domain failures remain statically valid.
-- Independent syntax-driven rows and actual compiled faults verify integration. Privacy fixtures
-  remove the allowed stable token before searching authored aliases; standard assertions prove reds.
-- Promotion declined (existing phase/source/claim policies); statement/whole graph remain separate.
+- Invalid annotation has no typed RHS; preserve spelling, complete alternatives and original span.
+- Valid mismatch carries both genuine kinds. Child/lexical priority and no-prefix refusal survive.
+- Whole context rebases raw errors only; detached checks invent no ordinal/canonical expression.
+- Authored payload/phase controls and actual compiled body faults pass; grammar unchanged.
+- Promotion declined (existing truthful context policy); D146 token repair follows.
 
 # Sealed archive — earlier lessons
 
@@ -129,3 +127,5 @@ The live window below holds the most recent lessons. When it passes its health t
 | [`part103`](docs/history/stitchcad-devnotes-part103.md) | CI/cleanup protocols | 118 lines, 8944 bytes, `sha256:532de5ae…` |
 | [`part104`](docs/history/stitchcad-devnotes-part104.md) | source positions | 5 lines, 312 bytes, `sha256:3990c390…` |
 | [`part105`](docs/history/stitchcad-devnotes-part105.md) | G1-0104 prerequisite lesson | 5 lines, 321 bytes, `sha256:28672a01…` |
+| [`part106`](docs/history/stitchcad-devnotes-part106.md) | G1-0105 checker protocol | 39 lines, 3461 bytes, `sha256:6cfe304a…` |
+| [`part107`](docs/history/stitchcad-devnotes-part107.md) | G1-0105 checker lesson | 9 lines, 746 bytes, `sha256:551f5302…` |

@@ -99,6 +99,16 @@ the digests afterwards.
 | [`changelog-part76.md`](docs/history/window4.md#stitchcad-changelog-part76md) | STITCHCAD-G1-0062 | 13 lines, 1068 bytes, `sha256:a0da7975…` |
 | [`changelog-part77.md`](docs/history/window4.md#stitchcad-changelog-part77md) | STITCHCAD-G1-0063 | 14 lines, 1197 bytes, `sha256:3349f7a6…` |
 
+## STITCHCAD-G1-0106 - truthful binding-header diagnostics (leaf `G1-SLICE.5b.3c.3a`)
+
+D139 raw annotations carry original spelling/span and six wanted kinds; valid mismatch carries
+actual declared/expression kinds. Genuine whole offsets/ordinals retained, no absent RHS/canonical
+identity invented. Contract documented before reference repair; grammar/tokens unchanged.
+Header264cases/232exact payloads/13actual compiled body reds, full structural/reference/language16,
+publication10/60chapters/57APIs/1204source/1894rendered links and ledger9+13 pass0. Original report/
+oldest ledger/lesson/completed checker protocol retained byte-exact; archive279 verified.
+G1 stays5/18; independent11open/134sealed exceptD18. D146 public unknown-class token owned next.
+
 ## STITCHCAD-G1-0105 - bounded expression kinds and dependencies (leaf `G1-SLICE.5b.3c.2b.2`)
 
 Initial-scope check_kinds certifies the exact normalized expression, complete child kinds and
@@ -265,23 +275,6 @@ oldest ledger/lesson sealed unchanged. Strict native630/52 groups, WASM three li
 reference/language16/publication10/ledger9+13 pass0;55 chapters/37 APIs/1143 source/1777 render links.
 G1 stays5/18;10open/122sealed defects; ordered binding scope .5b.2d.2 next.
 
-## STITCHCAD-G1-0087 - checked initial formula namespace (leaf `G1-SLICE.5b.2c.2`)
-
-Typed initial sources exclude recipe/reserved injection; immutable namespace seeds eight reserved
-metadata entries without context values and refuses the first authored collision before insertion.
-Errors retain earlier/reserved and attempted sources, including equal origins, without invented
-recipe indices; opaque Debug/token-only Display preserve payload privacy. Collision pair boxed
-once on failure to keep error compact; canonical records stay borrowed, no cached values/state.
-Ten public contracts/17 actual compiled body assertion reds verify admission/context/source/order/
-privacy and exact restoration. Draft API-name/unwrap-only/large-error controls corrected, no waiver.
-Book examples/status/API/live scope and exact prior task/ledger/lesson retention align.
-Strict native621 tests/51 result groups, WASM three libraries, reference/language16/publication10/
-ledger9+13 controls pass0. D132/D133 fixed: actual unclosed-tag warnings now refuse publication,
-repaired generic renders exactly. Book55 chapters/36 APIs/1143 source/1775 rendered links.
-G1 stays5/18;10open/122sealed defects. Next .5b.2d checked reads/prior bindings, then type/graph.
-
-
-
 ## STITCHCAD-G1-0080h - handoff observation and ownership (leaf `G1-SLICE.5e.1a.h`)
 
 Post-commit handoff first refuses malformed lsof name evidence2. Captured fresh actual census
@@ -317,3 +310,4 @@ relaxed, no verified defect classification added; G1 remains5/18 and defects12op
 | [`stitchcad-changelog-part100.md`](docs/history/stitchcad-changelog-part100.md) | STITCHCAD-G1-0084 | 9 lines, 755 bytes, `sha256:ffb7e24e…` |
 | [`stitchcad-changelog-part101.md`](docs/history/stitchcad-changelog-part101.md) | STITCHCAD-G1-0085 | 10 lines, 849 bytes, `sha256:838b6b56…` |
 | [`stitchcad-changelog-part102.md`](docs/history/stitchcad-changelog-part102.md) | STITCHCAD-G1-0086 | 10 lines, 850 bytes, `sha256:ab8d7ec9…` |
+| [`stitchcad-changelog-part103.md`](docs/history/stitchcad-changelog-part103.md) | STITCHCAD-G1-0087 | 14 lines, 1241 bytes, `sha256:af59826f…` |

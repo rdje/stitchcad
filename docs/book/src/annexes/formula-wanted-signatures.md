@@ -109,12 +109,11 @@ assertion failures and restore source exactly. The tracked wanted_signature_muta
 under docs/tasks/artifacts/formula_structure is exclusive; standing structural probes watch its
 anchors and reject compiler, expect-only or test-name noise as substitute evidence.
 
-The next checker must pair these wanted rows with every actual operand kind and real node/source
-context. Named envelope refusal still takes precedence over ordinary unknown calls. Lookup errors
-must report the catalog or declaration domains actually searched; a standalone expression has
-no invented recipe ordinal. Those error/owner interfaces are .5b.3c.2, actual statement context
-is .3, and atomic whole-recipe graph acceptance is .4. Numerical execution and release approval
-remain separate work.
+The [bounded product checker](#bounded-product-expression-checking) pairs these wanted rows with
+every actual operand kind and its normalized owner. Named envelope refusal precedes ordinary
+unknown calls; errors report the domains actually searched and invent no recipe ordinal. Current
+statement context remains .5b.3c.3, atomic whole-recipe acceptance .4. Numerical execution and
+release approval remain separate work.
 
 ## Reference expression dimension payloads
 
@@ -123,7 +122,7 @@ reserved tolerance-name role and the complete wanted-signature alternatives
 ([contract §5.2.3](../spec/formula-language.md#523-expression-dimension-arguments-and-error-selection)).
 Rows retain ordered operands, a variadic flag and a result. The alias T is shared across all of
 its positions; N is the four negatable kinds. Product catalogs provide their corresponding typed
-requirements and result positions; source-bearing product expression errors remain .5b.3c.2b.2.
+requirements and result positions; source-bearing product expression errors are verified below.
 
 For 1 mm + 1.0, operation is +, operand_kinds is length, ratio, and the wanted rule is T,T to T.
 For sqrt(1 mm), the actual kind is length and both area-to-length and ratio-to-ratio alternatives
@@ -146,7 +145,8 @@ Fifteen actual compiled faults prove retained fields, row direction/variadics/du
 roles, child order and absence of value reads. The older4032-case kind matrix and14 fault controls
 remain green after changed anchors were repaired; it alone certifies no payload schema.
 
-Header-only diagnostic arguments remain D139/.5b.3c.3a. D140's reference geometry argument repair
+[Header arguments](formula-static-validation.md#binding-header-diagnostic-arguments) now preserve
+raw annotations or both actual kinds without invented context. D140's reference geometry argument repair
 is [verified separately](formula-static-validation.md#geometry-provider-argument-checking): point x/y
 and edge len require Length before value evaluation, with scoped actual/wanted payloads and retained
 contributions. This expression payload proof and that local reference adapter do not certify product

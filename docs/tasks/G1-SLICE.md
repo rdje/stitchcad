@@ -840,7 +840,7 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 | done | `G1-SLICE.5f.3a.t1` | `done` | Truthful reference source locations verified |
 | done | `G1-SLICE.5b.3c.2b.2.0` | `done` | D145 prerequisite prose agrees with repaired source |
 | done | `G1-SLICE.5b.3c.2b.2` | `done` | Bounded initial-scope expression proof and sourced dependencies |
-| current | `G1-SLICE.5b.3c.3a` | `pending` | D139 truthful header payloads before statement integration |
+| current | `G1-SLICE.5b.3c.3a.t1` | `pending` | D146 invalid-class syntax token before statement integration |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.

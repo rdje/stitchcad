@@ -943,13 +943,10 @@ D138 closes at G1-SLICE.5b.3c.2b.1; original report retained in
 by4023 actual cases/3814 complete refusals/15 compiled body reds, rc=0. Actual/wanted kinds, class
 roles and documented child-first selection retained; header/geometry scope remains D139/D140 below.
 
-- **D139** — reference header dimension refusals omit arguments: actual static_statement on
-  let saved:length=1.0, let saved:point=1 mm and let saved:unlisted=1 mm returns formula_dimension
-  with {} (three controls, rc=0). Product statement contracts confirm the existing UnbindableKind
-  rule/token for point/edge/invented; no token conflict or grammar change is needed. An invalid
-  raw annotation has no typed RHS kind, because parsing stops before that operand; a valid
-  annotation mismatch has actual declared/expression kinds. Owner G1-SLICE.5b.3c.3a, P1 before
-  scope-bound product statements .3b. Document truthful case-specific schema before repair/proof.
+D139 closes at G1-SLICE.5b.3c.3a: case-specific raw annotation/actual kind mismatch payloads
+retain genuine spans/available ordinals without RHS/canonical invention. Header264cases/232exact
+payloads/13actual compiled body reds and full reference pass, rc=0. Original report retained in
+[`stitchcad-defects-part64.md`](../history/stitchcad-defects-part64.md); grammar/token behavior unchanged.
 
 D140 closes at G1-SLICE.5f.3a after complete static Length checking of local provider arguments.
 Original report retained exactly in [`stitchcad-defects-part61.md`](../history/stitchcad-defects-part61.md).
@@ -979,3 +976,13 @@ D145 closes at G1-SLICE.5b.3c.2b.2.0: wanted-rule annex now links the verified l
 adapter and retains product operation/graph/geometry boundaries. Cross-book source census and
 actual97case/75payload/12fault geometry producer agree; publication10 passes, rc=0. Original report
 retained in [`stitchcad-defects-part63.md`](../history/stitchcad-defects-part63.md); grammar/API unchanged.
+
+- **D146** — public FormulaStatement::parse on assert closure:eps_chord=1 mm==1 mm
+  returns UnknownTolerance/formula_tolerance_unbound; actual reference returns formula_parse.
+  Canonical contract5.2/grammar TOLERANCE require syntax refusal for an invalid class spelling;
+  formula_tolerance_unbound is a valid reserved class whose runtime context is unavailable.
+  Reproduce compiled public/reference probe target/d139-header-before, rc=0; native statement/recipe
+  fixtures and mutation anchor enforce the wrong family; formula-statements annex86 falsely claims
+  reference agreement. Root: product syntax diagnostic mapping retained an obsolete family while
+  reference grammar repair was not synchronized. Owner G1-SLICE.5b.3c.3a.t1, P1 immediately after
+  D139 before statement integration .3b; repair mapping/fixtures/controls/book, grammar unchanged.

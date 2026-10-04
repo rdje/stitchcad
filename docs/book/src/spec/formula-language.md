@@ -261,7 +261,7 @@ specifies, and is never rendered raw to a user.
 | Token | Raised when | Required arguments |
 | --- | --- | --- |
 | `formula_parse` | the surface form is not in [grammar §1](formula-language/grammar.md) | the offending span, its position, the rule |
-| `formula_dimension` | an operation has no rule for the kinds it was given | the operator or function, every operand's kind, the kind wanted |
+| `formula_dimension` | an operation has no rule for the kinds it was given, or a let annotation is unbindable | actual/wanted kinds for operations; case-specific header arguments (§5.2.5) |
 | `formula_unbound_name` | a name is undeclared, or a call names no built-in function or selector | the name, the origins searched |
 | `formula_ambiguous_name` | two origins bind one name | the name, both origins |
 | `formula_rebinding` | a recipe binding repeats a name, or any origin attempts a reserved name | the name and case-specific binding sources (§5.2.1) |
@@ -352,6 +352,25 @@ literal-input conversion. Successful evaluation preserves each coordinate's cont
 The [reference geometry controls](../annexes/formula-static-validation.md#geometry-provider-argument-checking)
 exercise this local adapter boundary. They do not certify the product operation graph, physical
 geometry or atomic execution of a complete recipe; those retain their implementation owners.
+
+#### 5.2.5 Binding-header dimension arguments
+
+A let annotation can fail before its RHS has a typed kind. That refusal keeps formula_dimension,
+with diagnostic_scope binding_annotation, operation let, name, raw_annotation, annotation_span
+and wanted_kinds: length, angle, area, ratio, count, boolean in that order. The raw spelling is
+not a declared kind. No expression kind or canonical expression is claimed. Whole-source lexical
+preflight keeps precedence; after it, an unbindable annotation precedes RHS grammar/inference.
+
+A bindable annotation whose fully checked RHS has another kind uses diagnostic_scope binding_kind,
+operation let, name, declared_kind, expression_kind, annotation_span and wanted_kinds containing
+only the declared kind. An invalid RHS child keeps its own diagnostic before this mismatch.
+These case-specific fields distinguish annotation admissibility from an actual kind comparison.
+
+annotation_span is the half-open byte span of the original annotation token. A detached statement
+uses statement-local offsets and omits statement_index. Complete ordered recipe preflight uses
+whole-source offsets and its genuine one-based statement_index. The tuple-AST reference has no
+canonical expression factory and supplies none; product integration may attach only its actual
+normalized owner. Static refusal publishes no binding or partial plan and invokes no evaluation.
 
 ### 5.3 Precedence with the envelope's diagnostics
 

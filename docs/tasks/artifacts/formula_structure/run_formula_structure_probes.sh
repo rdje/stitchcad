@@ -46,6 +46,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/canonical_literal_contract.
 python3 -I -B docs/tasks/artifacts/formula_structure/static_signature_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/reference_locator_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/header_dimension_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/reserved_diagnostic_review.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_contract.py --mutations
 python3 -I -B docs/tasks/artifacts/formula_structure/dimension_payload_contract.py --mutations

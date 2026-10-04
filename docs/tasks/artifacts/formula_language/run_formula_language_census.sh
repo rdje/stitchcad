@@ -926,6 +926,24 @@ class Evaluator:
             env[name] = entry
         return env
 
+    def _binding_dimension(self, src, name, annotation, expression_kind=None, ordinal=None, offset=0):
+        """Header arguments retain original source; no absent operand kind is invented."""
+        _, starts = self.tokenize(src)
+        start = starts[3]  # Validated let/name/colon/id header; original ASCII byte position.
+        arguments = {"diagnostic_scope": "binding_annotation" if expression_kind is None else "binding_kind",
+                     "operation": "let", "name": name,
+                     "annotation_span": (offset + start, offset + start + len(annotation))}
+        if expression_kind is None:
+            arguments.update(raw_annotation=annotation, wanted_kinds=tuple(self.bindable))
+            message = "`%s` is no kind a let may bind" % annotation
+        else:
+            arguments.update(declared_kind=annotation, expression_kind=expression_kind,
+                             wanted_kinds=(annotation,))
+            message = "`%s` is declared %s and the expression is %s" % (name, annotation, expression_kind)
+        if ordinal is not None:
+            arguments["statement_index"] = ordinal
+        return FErr("formula_dimension", message, arguments)
+
     def syntax_statement(self, src):
         """Parse a header and all operands without inspecting declarations or values."""
         self.src = src
@@ -938,7 +956,7 @@ class Evaluator:
             self._want_op(":")
             kind = self._want("id")
             if kind not in self.bindable:
-                raise FErr("formula_dimension", "`%s` is no kind a let may bind" % kind)
+                raise self._binding_dimension(src, name, kind)
             self._want_op("=")
             return ("let", name, kind, self.parse(self._rest()))
         if head == "assert":
@@ -963,7 +981,16 @@ class Evaluator:
     def _static_statement(self, src, env, ordinal=None, offset=0, prior_sources=None):
         """Whole preflight supplies locations; the public detached entry invents none."""
         env = self.namespace(env.items())
-        checked = self.syntax_statement(src)
+        try:
+            checked = self.syntax_statement(src)
+        except FErr as error:
+            if error.arguments.get("diagnostic_scope") != "binding_annotation":
+                raise
+            arguments = dict(error.arguments)
+            arguments["annotation_span"] = tuple(offset + index for index in arguments["annotation_span"])
+            if ordinal is not None:
+                arguments["statement_index"] = ordinal
+            raise FErr(error.token, error.msg, arguments) from error
         role, name = checked[:2]
         if role == "let":
             _, _, kind, node = checked
@@ -988,8 +1015,7 @@ class Evaluator:
                            % (name, env[name]["origin"]))
             got = self.infer(node, env)
             if got != kind:
-                raise FErr("formula_dimension", "`%s` is declared %s and the expression is %s"
-                           % (name, kind, got))
+                raise self._binding_dimension(src, name, kind, got, ordinal, offset)
             return checked
         if role == "assert":
             _, _, tol_name, left, right = checked

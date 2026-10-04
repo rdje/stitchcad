@@ -111,7 +111,7 @@ actual compiled faults; the older recognition/kind matrix alone certifies no dia
 Reference expression dimension payloads are now verified by4023 cases/15 actual compiled faults,
 including complete kinds/wanted rules and multiple-error selection; see the
 [wanted-rule annex](formula-wanted-signatures.md#reference-expression-dimension-payloads).
-Header arguments remain D139/.3a. Reference geometry argument checks are verified below at .5f.3a.
+[Header arguments](#binding-header-diagnostic-arguments) now retain their actual case context. Reference geometry argument checks are verified below at .5f.3a.
 The complete static review covers its stated expression/header outcomes; local provider checking
 adds no product accepted-expression, complete operation graph or physical geometry proof.
 Numerical execution, operations, geometry and two-platform final acceptance retain their .5c–.5g
@@ -157,6 +157,30 @@ D140 is repaired in this local reference adapter. These controls do not validate
 metadata, persisted graphs, whole-recipe runtime rollback, product operation identity or physical
 geometry. Product selectors/operation-argument integration remain .5f.3b/G2, and complete product
 static recipe acceptance remains .5b.4. The grammar and stable diagnostic token set are unchanged.
+
+## Binding-header diagnostic arguments
+
+The reference distinguishes the two header cases in
+[contract5.2.5](../spec/formula-language.md#525-binding-header-dimension-arguments).
+For let saved:point=missing, formula_dimension has scope binding_annotation, raw_annotation point,
+operation let, name saved, annotation_span (10,15), and all six wanted_kinds. The RHS is not parsed;
+point is not presented as a bindable declared kind. Whole lexical errors still take precedence.
+
+For let saved:length=1.0, the same token has scope binding_kind, declared_kind length,
+expression_kind ratio, annotation_span (10,16), and wanted_kinds (length,). No value is evaluated.
+An unresolved RHS or invalid child operation keeps its own error before header comparison.
+Detached syntax/static/runtime-adapter refusals omit statement_index. Ordered whole preflight
+rebases spans and includes its actual one-based ordinal; a late error publishes no partial plan.
+The reference supplies no canonical expression. Product statement proof remains .5b.3c.3b.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/header_dimension_contract.py --mutations
+```
+
+The 264 cases check232 exact payloads, all six declared/eight expression kinds, raw spelling,
+whitespace/local/global spans, late whole-recipe errors, lexical/child priority and runtime-domain
+separation. Metadata permits no state/value read; parse and execution traps enforce phase boundaries.
+Thirteen actual compiled body assertion faults must fail, with on-disk source unchanged.
 
 ## Names and single-statement static checking
 
@@ -337,7 +361,7 @@ body assertions. Source remains unchanged.
 | All worked and refusal static outcomes | independently authored21/13 populations | .5b.4; runtime rows .5e |
 | Envelope dispatch before operand semantics | six calls/either branch; actual guard fault | .5b.3 |
 | Exact source and canonical identity | earlier product syntax/input/identity controls | .5b.4 semantic error context |
-| Complete typed diagnostic arguments | reference call/expression/provider payloads verified; header D139 remains | .5b.2–.4 and command .6 |
+| Complete typed diagnostic arguments | reference call/expression/provider/header payloads verified | .5b.2–.4 and command .6 |
 | Persisted cycles and atomic runtime/replay behavior | outside these static instrument controls | .5e/.5f and storage .7 |
 | Physical geometry and cross-platform computed values | outside these static instrument controls | G2 and .5g |
 

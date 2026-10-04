@@ -244,15 +244,16 @@ Artifact cleanup: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py
  target/artifact_cleanup_audit/<run>; apply the same run with apply. Safety/exclusions:
 docs/ARTIFACT_CLEANUP.md. The standing make probes runner watches its refusal controls.
 
-Reference producers: docs/tasks/artifacts/formula_structure/; python3 -I -B, --mutations; structural suite watches.
+Reference producers: docs/tasks/artifacts/formula_structure/; python3 -I -B, --mutations; watched.
 
-- static_signature_contract.py:4032 kind/hint cases/14 actual reds; values trapped.
-- reference_locator_contract.py:86 source positions/2 actual reds; D144.
+- static_signature_contract.py:4032 kind/hint cases/14 reds; values trapped.
+- reference_locator_contract.py:87 source positions/2 actual reds; D144.
 - static_namespace_contract.py:1139 metadata cases/13 reds.
-- static_recipe_contract.py:196 whole cases/replay/measurement/actual guard reds.
+- header_dimension_contract.py:264cases/232payloads/13 reds; D139.
+- static_recipe_contract.py:196 whole/replay/measurement cases/guard reds.
 - static_review_contract.py, reserved_diagnostic_review.py: D124/D131 recognition/sources.
-- call_lookup_contract.py:166 payload cases/12 compiled and three loaded-set reds.
-- dimension_payload_contract.py:4023 cases/3814 complete refusals/15 compiled reds; D138.
+- call_lookup_contract.py:166cases/12 compiled/three loaded-set reds.
+- dimension_payload_contract.py:4023cases/3814payloads/15 compiled reds; D138.
 - geometry_argument_contract.py:97 cases/75 complete refusals/12 compiled reds; D140.
 - assertion_contract.py: named assertion arguments and values.
 - origin_value_contract.py: scoped origin/context reads.
