@@ -131,6 +131,54 @@ fn expression(source: &str, namespace: &FormulaNamespace<'_>) -> String {
         ),
     }
 }
+fn source_locator(source: FormulaDeclarationSource<'_>) -> String {
+    match source {
+        FormulaDeclarationSource::Input {
+            input,
+            declaration,
+            kind,
+            ..
+        } => format!(
+            "input/{}/{}/{}",
+            input.as_bits(),
+            declaration.as_bits(),
+            kind.token()
+        ),
+        FormulaDeclarationSource::LengthInput {
+            input, declaration, ..
+        } => format!(
+            "length/{}/{}/{}",
+            input.as_bits(),
+            declaration.id().as_bits(),
+            declaration.source().as_bits()
+        ),
+        FormulaDeclarationSource::Point(reference) => format!(
+            "point/{}/{}",
+            reference.creator().as_bits(),
+            reference.tag().get()
+        ),
+        FormulaDeclarationSource::Edge(reference) => format!(
+            "edge/{}/{}",
+            reference.creator().as_bits(),
+            reference.tag().get()
+        ),
+        FormulaDeclarationSource::Recipe {
+            statement_index,
+            kind,
+            span,
+            name_span,
+        } => format!(
+            "recipe/{}/{}/{}-{}/{}-{}",
+            statement_index,
+            kind.token(),
+            span.start(),
+            span.end(),
+            name_span.start(),
+            name_span.end()
+        ),
+        FormulaDeclarationSource::Reserved(name) => format!("reserved/{}", name.token()),
+    }
+}
 fn recipe(source: &str, namespace: FormulaNamespace<'_>) -> String {
     let parsed = match FormulaRecipe::parse(source) {
         Ok(parsed) => parsed,
@@ -154,47 +202,73 @@ fn recipe(source: &str, namespace: FormulaNamespace<'_>) -> String {
             )
         }
     };
-    let mut cursor = FormulaNameCursor::new(namespace, &normalized);
-    let mut summaries = Vec::new();
-    loop {
-        let scope = match cursor.current() {
-            Ok(Some(scope)) => scope,
-            Ok(None) => break,
-            Err(error) => {
-                let sources = error.binding_sources();
-                return format!(
-                    "ERR\t{}\tCOLLISION:{}:{}",
-                    error.token(),
-                    error.name(),
-                    joined(sources.iter().map(|source| source.origin().token()))
-                );
-            }
-        };
-        let ordinal = scope.statement_index();
-        let statement = scope.statement();
-        let proof = match scope.check_kinds() {
-            Ok(proof) => proof,
-            Err(error) => {
-                let payload = match error.refusal() {
-                    FormulaStatementCheckRefusal::Expression { error, .. } => {
-                        expression_refusal(error.refusal())
+    let proof = match normalized.check_kinds(namespace) {
+        Ok(proof) => proof,
+        Err(error) => {
+            assert!(std::ptr::eq(error.recipe(), &normalized));
+            assert!(
+                error.statement_index() > 0
+                    && error.statement_index() <= normalized.statements().len()
+            );
+            assert!(std::ptr::eq(
+                error.statement(),
+                &normalized.statements()[error.statement_index() - 1]
+            ));
+            assert_eq!(
+                error.canonical_statement(),
+                error.statement().canonical_form()
+            );
+            assert_eq!(error.canonical_recipe(), normalized.canonical_form());
+            let payload = match error.refusal() {
+                FormulaRecipeCheckRefusal::Namespace(collision) => {
+                    assert_eq!(error.span(), error.statement().name_span());
+                    let sources = collision.binding_sources();
+                    format!(
+                        "COLLISION:{}:{}",
+                        collision.name(),
+                        joined(sources.iter().map(|s| s.origin().token()))
+                    )
+                }
+                FormulaRecipeCheckRefusal::Statement(nested) => {
+                    assert!(std::ptr::eq(nested.statement(), error.statement()));
+                    assert_eq!(nested.statement_index(), error.statement_index());
+                    assert_eq!(nested.span(), error.span());
+                    match nested.refusal() {
+                        FormulaStatementCheckRefusal::Expression { error, .. } => {
+                            expression_refusal(error.refusal())
+                        }
+                        FormulaStatementCheckRefusal::BindingDimension(error) => format!(
+                            "BIND:{}:{}:{}",
+                            error.declared_kind().token(),
+                            error.expression_kind().token(),
+                            error.wanted_kind().token()
+                        ),
+                        FormulaStatementCheckRefusal::AssertionDimension(error) => dimension(error),
                     }
-                    FormulaStatementCheckRefusal::BindingDimension(error) => format!(
-                        "BIND:{}:{}:{}",
-                        error.declared_kind().token(),
-                        error.expression_kind().token(),
-                        error.wanted_kind().token()
-                    ),
-                    FormulaStatementCheckRefusal::AssertionDimension(error) => dimension(error),
-                };
-                return format!("ERR\t{}\t{}", error.token(), payload);
-            }
-        };
+                }
+            };
+            return format!(
+                "ERR\t{}\t{}^CTX:{}:{}:{}",
+                error.token(),
+                payload,
+                error.statement_index(),
+                error.span().start(),
+                error.span().end()
+            );
+        }
+    };
+    assert!(std::ptr::eq(proof.recipe(), &normalized));
+    assert_eq!(proof.canonical_recipe(), normalized.canonical_form());
+    assert_eq!(proof.statements().len(), normalized.statements().len());
+    if let Some(statement) = normalized.statements().first() {
+        assert!(!format!("{proof:?}").contains(&format!("\"{}\"", statement.name())));
+    }
+    let mut summaries = Vec::new();
+    for (position, proof) in proof.statements().iter().enumerate() {
+        let ordinal = position + 1;
+        let statement = &normalized.statements()[position];
         assert_eq!(proof.statement_index(), ordinal);
-        assert!(std::ptr::eq(
-            proof.statement(),
-            &normalized.statements()[ordinal - 1]
-        ));
+        assert!(std::ptr::eq(proof.statement(), statement));
         assert_eq!(proof.canonical_statement(), statement.canonical_form());
         let summary = match (proof.kind(), statement.kind()) {
             (
@@ -234,10 +308,41 @@ fn recipe(source: &str, namespace: FormulaNamespace<'_>) -> String {
             _ => unreachable!("proof and actual statement must share their role"),
         };
         summaries.push(summary);
-        assert!(cursor.advance_metadata().unwrap());
     }
-    format!("OK\t{}\t{}", summaries.len(), summaries.join(";"))
+    let graph = joined(proof.dependencies().map(|dependency| {
+        let declaration = dependency.declaration();
+        let role = match dependency.role() {
+            FormulaRecipeDependencyRole::Binding => "binding",
+            FormulaRecipeDependencyRole::AssertionTolerance => "tolerance",
+            FormulaRecipeDependencyRole::AssertionLeft => "left",
+            FormulaRecipeDependencyRole::AssertionRight => "right",
+        };
+        if let FormulaDeclarationSource::Recipe {
+            statement_index, ..
+        } = declaration.source()
+        {
+            assert!(statement_index < dependency.statement_index());
+        }
+        format!(
+            "{}:{}:{}:{}:{}:{}:{}:{}",
+            dependency.statement_index(),
+            role,
+            declaration.name(),
+            declaration.kind().token(),
+            declaration.origin().token(),
+            source_locator(declaration.source()),
+            dependency.span().start(),
+            dependency.span().end()
+        )
+    }));
+    format!(
+        "OK\t{}\t{}^GRAPH:{}",
+        summaries.len(),
+        summaries.join(";"),
+        graph
+    )
 }
+
 fn namespace<'a>(
     names: &'a [MachineToken],
     kinds: &[(&str, &str)],

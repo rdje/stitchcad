@@ -38,7 +38,8 @@ retains complete kinds, refusals and sourced dependencies.
 checks actual scoped operands and annotations. [Coupled static review](annexes/formula-static-validation.md#coupled-public-static-review)
 verifies those interfaces against independent rules and the actual reference.
 [Whole recipe acceptance](annexes/formula-checked-recipes.md) returns a complete immutable static
-proof with ordered source dependencies; coupled whole review and execution remain pending.
+proof with ordered source dependencies. Independent whole-factory review is complete;
+exact arithmetic, binding and execution remain pending.
 
 ## Planned workflows
 

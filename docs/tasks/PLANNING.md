@@ -992,3 +992,9 @@ D149–D151 closure receipts and original D152/D153 reports are retained exactly
 G1-SLICE.5b.4a. D152 status repair:12 current cells/14 copied body reds; D153 generator repair:
 five header forms/21 preserved routes/two compiled body reds, rc=0. Independent census:
 10open/142sealed, unique/disjoint/complete D1..D153 except D18; full reference/language/publication regressions pass, rc=0. D152/D153 closed.
+
+- **D154** — whole reference preflight drops known refusal ordinals: actual third-statement missing
+  name yields formula_unbound_name with name/origins only, despite genuine static invocation3.
+  Root: propagated infer refusals and phase calls have no enclosing context wrapper (blame
+  ba245998/62be6f9d/38011914); contract5.2 requires available indices. Own G1-SLICE.5b.4c,
+  P1 immediate before .5b closure/arithmetic; cover syntax/literal/static and no fabricated context.

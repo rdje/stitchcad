@@ -723,7 +723,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   ordinal/canonical identity where available. A late static defect accepts no partial graph.
   Syntax/input APIs retain their existing scopes and bytes; no evaluator authority from parsing.
   Children: .a immutable public whole proof/error/dependency interface and D152 book status;
-  .b coupled independent whole graph review before .5b closure.
+  .b coupled independent whole graph review; .c D154 available reference ordinal repair.
   Protocol: [whole proof plan](G1-SLICE-checked-recipes.md#immutable-whole-recipe-protocol).
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5b.4a`
@@ -734,11 +734,20 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Work unit STITCHCAD-G1-0113; predecessor d9dbe15 clean/brief0/untracked/no jobs. D152 P2 status/D153 P1 generator repair.
   Verification/Commit: `STITCHCAD-G1-0113`; [whole proof receipts](G1-SLICE-checked-recipes.md#acceptance-checklist).
 - ID: `G1-SLICE.5b.4b`
-  Status: `pending`
-  Goal: coupled independent whole graph public/reference/worked/refusal review and .5b closure.
+  Status: `done`
+  Goal: coupled independent whole graph public/reference/worked/refusal review; D154 before closure.
   Acceptance: complete graph/dependency order/real sources, early/late/untaken errors and limits;
   current signature matrices/actual compiled faults remain effective, syntax/input priorities retained.
-  Verification: `pending`; Commit: `pending`.
+  Work unit STITCHCAD-G1-0114; predecessor e379473 clean/brief0/untracked/no jobs.
+  Protocol: [coupled whole review](G1-SLICE-checked-recipes.md#coupled-whole-factory-protocol).
+  Verification/Commit: `STITCHCAD-G1-0114`; [whole coupling proof](G1-SLICE-checked-recipes.md#coupled-whole-acceptance-checklist).
+
+- ID: `G1-SLICE.5b.4c`
+  Status: `pending`
+  Goal: D154 retain actual known ordinal on whole reference refusals without inventing local context.
+  Acceptance: actual whole syntax/input/static failures carry available context; ASCII/initial and
+  detached scopes retain absent ordinal, all existing source/payload/phase guarantees and faults.
+  P1 next after .b; .4/.5b remain in_progress until repair verified. Verification/Commit: `pending`.
 
 ### Exact arithmetic and bindings
 - ID: `G1-SLICE.5c.1`

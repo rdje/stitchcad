@@ -333,7 +333,7 @@ probe suite and the doctrine gate. WASM compilation is not a real-browser execut
 
 Each stage has owned children in docs/tasks/G1-SLICE-recipes.md. Static obligation review,
 scoped checks and [whole recipe proofs](formula-checked-recipes.md) are implemented; coupled whole
-review .5b.4b precedes arithmetic .5c.
+review .5b.4b is complete; arithmetic .5c follows.
 Unknown inputs retain declared kinds but no invented numeric value. Factory artifact blocking
 remains G4's policy; size-axis integration still waits for D70. Command atomicity/localization (.6),
 typed project fields/digests and cycle loading (.7), API/MCP (.9), browser execution (.12), geometry

@@ -2,6 +2,7 @@
 from itertools import product
 from pathlib import Path
 import json
+import ast
 import os
 import re
 import runpy
@@ -51,8 +52,78 @@ def add_expr(source, kind=None, token='formula_dimension', payload=None):
     CASES.append(('E', source, expected))
 
 
-def add_recipe(source, kinds=None, token='formula_dimension', payload=None):
+def occurrence_span(text, start, end):
+    # Transparent groups extend the semantic name span. Call parentheses do not.
+    while True:
+        left, right = start, end
+        while left and text[left - 1].isspace():
+            left -= 1
+        while right < len(text) and text[right].isspace():
+            right += 1
+        if not left or right == len(text) or text[left - 1] != '(' or text[right] != ')':
+            break
+        opening = left - 1
+        before = text[:opening].rstrip()
+        if before and (before[-1].isalnum() or before[-1] == '_'):
+            break
+        start, end = opening, right + 1
+    return start, end
+
+
+def graph_recipe(source, statements):
+    # Initial identities are authored by the adapter protocol, not read back from product output.
+    metadata = {}
+    for index, (name, kind, origin) in enumerate(CATALOG):
+        locator = ('point' if kind == 'point' else 'edge') + '/%d/0' % (index + 100) if kind in ('point', 'edge') else (
+            'length/%d/1/2' % (index + 100) if kind == 'length' and origin in ('measurement', 'ease') else
+            'input/%d/%d/%s' % (index + 100, index + 200, kind))
+        metadata[name] = (kind, origin, locator)
+    for name, kind in RULES['RESERVED'].items():
+        metadata[name] = (kind, 'tolerance' if name in RULES['TOLERANCES'] else 'size', 'reserved/' + name)
+    graph, offset = [], 0
+    byte = lambda position: len(source[:position].encode())
+    def occurrence(ordinal, role, name, start, end):
+        kind, origin, locator = metadata[name]
+        graph.append('%d:%s:%s:%s:%s:%s:%d:%d' %
+                     (ordinal, role, name, kind, origin, locator, byte(start), byte(end)))
+    def operand(ordinal, role, text, offset):
+        for match in re.finditer(r'[a-z][a-z0-9_]*', text):
+            name = match.group()
+            if name in metadata:
+                start, end = occurrence_span(text, match.start(), match.end())
+                occurrence(ordinal, role, name, offset + start, offset + end)
+    for ordinal, (chunk, kind) in enumerate(statements, 1):
+        start = source.find(chunk, offset)
+        assert start >= offset, ('coupled authored source chunk not present', chunk)
+        offset = start + len(chunk)
+        header, rhs = chunk.split('=', 1)
+        name_match = re.match(r'\s*(let|assert)\s+([a-z][a-z0-9_]*)\s*:', header)
+        annotation = re.search(r':\s*([a-z][a-z0-9_]*)\s*$', header)
+        assert name_match and annotation, 'coupled authored header shape'
+        name, role = name_match.group(2), name_match.group(1)
+        rhs_start = start + len(header) + 1
+        if role == 'let':
+            operand(ordinal, 'binding', rhs, rhs_start)
+            actual_start = start + len(chunk) - len(chunk.lstrip())
+            actual_end = start + len(chunk.rstrip())
+            locator = 'recipe/%d/%s/%d-%d/%d-%d' % (ordinal, kind, byte(actual_start), byte(actual_end),
+                byte(start + name_match.start(2)), byte(start + name_match.end(2)))
+            metadata[name] = (kind, 'recipe', locator)
+        else:
+            tolerance = annotation.group(1)
+            occurrence(ordinal, 'tolerance', tolerance, start + annotation.start(1), start + annotation.end(1))
+            left, right = rhs.split('==')
+            operand(ordinal, 'left', left, rhs_start)
+            operand(ordinal, 'right', right, rhs_start + len(left) + 2)
+    return ','.join(graph)
+
+
+def add_recipe(source, kinds=None, token='formula_dimension', payload=None, context=None):
     if kinds is None:
+        if context is not None:
+            ordinal, fragment = context
+            start = source.rindex(fragment)
+            payload = (payload or '-') + '^CTX:%d:%d:%d' % (ordinal, len(source[:start].encode()), len(source[:start + len(fragment)].encode()))
         CASES.append(('R', source, ('ERR', token, payload or '-')))
         return
     # Authored statement chunks are supplied with their independently expected root kind(s).
@@ -67,7 +138,7 @@ def add_recipe(source, kinds=None, token='formula_dimension', payload=None):
         else:
             left, right = rhs.split('==')
             summaries.append('%d:assert:%s:%s~%s' % (ordinal, ','.join(kind), deps(left, names), deps(right, names)))
-    CASES.append(('R', source, ('OK', str(len(kinds)), ';'.join(summaries))))
+    CASES.append(('R', source, ('OK', str(len(kinds)), ';'.join(summaries) + '^GRAPH:' + graph_recipe(source, kinds))))
 
 
 for kind in KINDS:
@@ -167,6 +238,99 @@ add_recipe('let saved:length=later\nlet later:length=v_length', token='formula_u
 add_recipe('let v_length:length=missing', token='formula_ambiguous_name', payload='COLLISION:v_length:parameter,recipe')
 add_recipe('let first:length=v_length\nassert check:eps_num=first==first\nlet first:length=missing', token='formula_rebinding', payload='COLLISION:first:recipe,recipe')
 
+# Every existing expression oracle case also runs inside a later actual whole recipe scope.
+# A valid point/edge result is admitted through the public coordinate/length selector; these
+# kinds cannot be let annotations. No product output supplies the expected kind or refusal.
+for mode, expression_source, expected in tuple(CASES):
+    if mode != 'E':
+        continue
+    prefix = [('let fixture_count:count=1', 'count'), ('assert before:eps_num=1==1', ('count', 'count'))]
+    suffix = ('assert after:eps_geo=1 mm==1 mm', ('length', 'length'))
+    if expected[0] == 'OK':
+        kind = expected[1]
+        rhs = ('x(' + expression_source + ')' if kind == 'point' else
+               'len(' + expression_source + ')' if kind == 'edge' else expression_source)
+        binding_kind = 'length' if kind in ('point', 'edge') else kind
+        statement = 'let candidate:%s=%s' % (binding_kind, rhs)
+        statements = prefix + [(statement, binding_kind), suffix]
+        add_recipe('\n'.join(row[0] for row in statements), statements)
+    else:
+        source = '\n'.join(row[0] for row in prefix) + '\nlet candidate:length=' + expression_source + '\n' + suffix[0]
+        add_recipe(source, token=expected[1], payload=expected[2])
+
+# Full owner composition at genuinely later scopes, with a valid suffix that must never hide a refusal.
+for prefix in (
+    [('let earlier:length=v_length', 'length')],
+    [('assert prior:eps_geo=v_length==v_length', ('length', 'length')), ('let earlier:count=1', 'count')],
+):
+    suffix = ('assert after:eps_num=1==1', ('count', 'count'))
+    for declared, actual in product(KINDS[:6], KINDS):
+        chunk = 'let saved:%s=v_%s' % (declared, actual)
+        statements = prefix + [(chunk, actual), suffix]
+        add_recipe(' \t' + '\r\n'.join(row[0] for row in statements), statements if declared == actual else None,
+                   payload='BIND:%s:%s:%s' % (declared, actual, declared))
+    for tolerance in RULES['TOLERANCES']:
+        for left, right in product(KINDS, repeat=2):
+            chunk = 'assert check:%s=v_%s==v_%s' % (tolerance, left, right)
+            statements = prefix + [(chunk, (left, right)), suffix]
+            add_recipe(' \t' + '\r\n'.join(row[0] for row in statements),
+                       statements if left == right and left in ARITH else None,
+                       payload=dim('==', (left, right), RULES['BINARY']['==']))
+# Authored global-span/role/source controls include transparent groups and call delimiters.
+for rhs in ('((v_length))', 'abs(( v_length ))', '-(v_length)',
+            'if(v_boolean,((v_length))+v_length,((v_length)))',
+            'dist(v_point,v_point)', 'len(v_edge)',
+            'dist(point_at(v_edge,v_ratio),v_point)'):
+    statements = [('let first:length=' + rhs, 'length'),
+                  ('assert check:eps_phys=((first))==abs((v_length))', ('length', 'length')),
+                  ('let later:length=first+first', 'length')]
+    add_recipe(' \n' + '\r\n'.join(row[0] for row in statements) + ' \t', statements)
+for name in RULES['RESERVED']:
+    for annotation in KINDS[:6]:
+        add_recipe('let prior:count=1\nassert label:eps_num=1==1\nlet %s:%s=missing' % (name, annotation),
+                   token='formula_rebinding', payload='COLLISION:%s:%s,recipe' % (name, INITIAL[name][1]),
+                   context=(3, name))
+for kind in KINDS:
+    name = 'v_' + kind
+    add_recipe('let prior:count=1\nlet %s:length=missing' % name, token='formula_ambiguous_name',
+               payload='COLLISION:%s:%s,recipe' % (name, INITIAL[name][1]), context=(2, name))
+# Actual nested/header/comparison refusal context is derived from original authored fragments.
+prefix = ' \tlet prior:length=v_length\nassert label:eps_geo=prior==v_length\n'
+for tail, token, payload, fragment in (
+    ('let bad:length=v_ratio', 'formula_dimension', 'BIND:length:ratio:length', 'length'),
+    ('assert bad:eps_geo=v_point==v_point', 'formula_dimension',
+     dim('==', ('point', 'point'), RULES['BINARY']['==']), 'assert bad:eps_geo=v_point==v_point'),
+    ('let bad:length=((missing))', 'formula_unbound_name',
+     'NAME:missing:' + ','.join(sorted(STATIC['BASE']['ORIGINS'])), '((missing))'),
+    ('let bad:length=if(v_boolean,v_length,missing)', 'formula_unbound_name',
+     'NAME:missing:' + ','.join(sorted(STATIC['BASE']['ORIGINS'])), 'missing'),
+    ('let bad:length=if(v_boolean,v_length,nurbs(missing))', 'env_nurbs',
+     'CALL:nurbs:envelope:line_segment,circular_arc,cubic_bezier', 'nurbs(missing)'),
+    ('assert bad:eps_geo=v_length+v_ratio==missing', 'formula_dimension',
+     dim('+', ('length', 'ratio'), RULES['BINARY']['+']), 'v_length+v_ratio'),
+):
+    add_recipe(prefix + tail + '\nlet suffix:count=1', token=token, payload=payload, context=(3, fragment))
+for statements in ([], [('assert false_check:eps_num=1==2', ('count', 'count'))],
+                   [('let runtime:length=v_length/0', 'length')],
+                   [('let runtime:length=sqrt(-v_area)', 'length')]):
+    add_recipe('\n'.join(row[0] for row in statements), statements)
+# Integration boundaries: complete actual owner plus existing combined small-stack public controls.
+for count in (4095, 4096):
+    statements = [('let n%d:count=%s' % (index, '1' if index == 0 else 'n%d' % (index - 1)), 'count')
+                  for index in range(count)]
+    add_recipe('\n'.join(row[0] for row in statements), statements)
+add_recipe('\n'.join('let n%d:count=1' % index for index in range(4097)), token='formula_domain')
+for count in (255, 256, 257):
+    rhs = '-' * (count - 1) + 'v_length'
+    chunk = 'let bound:length=' + rhs
+    add_recipe(chunk, [(chunk, 'length')] if count <= 256 else None, token='formula_domain')
+for depth in (15, 16, 17):
+    rhs = 'v_length'
+    for _ in range(depth):
+        rhs = 'if(v_boolean,v_length,' + rhs + ')'
+    chunk = 'let bound:length=' + rhs
+    add_recipe(chunk, [(chunk, 'length')] if depth <= 16 else None, token='formula_domain')
+
 
 def documentation(replacement=None):
     obsolete = {
@@ -210,8 +374,16 @@ def check_reference(replacement=None):
         read_names.append(name)
         return result
     reference.kind_of_name = read
+    original_static = reference._static_statement
+    static_ordinal = None
+    def static_trace(text, metadata, ordinal=None, *args, **kwargs):
+        nonlocal static_ordinal
+        static_ordinal = ordinal  # Genuine argument of the actual reference call, never an oracle index.
+        return original_static(text, metadata, ordinal, *args, **kwargs)
+    reference._static_statement = static_trace
     for index, (mode, source, expected) in enumerate(CASES):
         read_names.clear()
+        static_ordinal = None
         try:
             if mode == 'E':
                 kind = reference.infer(reference.parse(source), env)
@@ -223,21 +395,27 @@ def check_reference(replacement=None):
                 assert expected[0] == 'OK', ('coupled reference accepted recipe refusal', index, source, expected)
                 actual = ('OK', str(len(plan)), expected[2])
                 # Independently authored root/header kinds, not merely a copied expected string.
-                records = expected[2].split(';') if plan else []
+                records = expected[2].split('^GRAPH:', 1)[0].split(';') if plan else []
                 assert len(records) == len(plan), ('coupled reference complete plan', index)
                 wanted_reads = [entry.split(':', 1)[0] for record in records
                                 for entry in record.split(':', 3)[3].replace('~', ',').split(',') if entry]
                 assert read_names == wanted_reads, ('coupled reference ordered recipe reads', index, source, read_names, wanted_reads)
                 local = dict(env)
-                for (_, _, checked), record in zip(plan, records):
+                for (start, end, checked), record in zip(plan, records):
                     if checked[0] == 'let':
                         assert checked[2] == record.split(':')[2], ('coupled reference binding kind', index)
                         local[checked[1]] = declaration(checked[2], 'recipe')
                     else:
                         got = (reference.infer(checked[3], local), reference.infer(checked[4], local))
                         assert ','.join(got) == record.split(':')[2], ('coupled reference assertion kinds', index)
+                        header = source[start:end].split('=', 1)[0]
+                        authored_class = re.search(r':\s*([a-z][a-z0-9_]*)\s*$', header).group(1)
+                        assert checked[2] == authored_class and authored_class in RULES['TOLERANCES'], ('coupled reference real assertion class', index)
         except ns['FErr'] as error:
             args = error.arguments
+            error_ordinal = args.get('statement_index', args.get('attempted_source', {}).get('statement_index'))
+            if error_ordinal is not None and static_ordinal is not None:
+                assert error_ordinal == static_ordinal, ('coupled reference typed/traced ordinal', index, error_ordinal, static_ordinal)
             payload = '-'
             if 'operand_kinds' in args:
                 payload = ref_dimension(args, "an arc's length is arc_length(angle, radius)" in error.msg)
@@ -253,7 +431,10 @@ def check_reference(replacement=None):
                 else:
                     payload = 'NAME:%s:%s' % (args['name'], ','.join(sorted(args['origins_searched'])))
             actual = ('ERR', error.token, payload)
-        assert actual[:2] == expected[:2] and (expected[2] == '-' or actual[2] == expected[2]), ('coupled reference oracle', index, source, expected, actual)
+        wanted_payload = expected[2].split('^CTX:', 1)[0]
+        if '^CTX:' in expected[2]:
+            assert static_ordinal == int(expected[2].split('^CTX:', 1)[1].split(':')[0]), ('coupled reference actual error ordinal', index, static_ordinal)
+        assert actual[:2] == expected[:2] and (wanted_payload == '-' or actual[2] == wanted_payload), ('coupled reference oracle', index, source, expected, actual)
         assert env == before, 'coupled reference caller namespace changed'
     return len(CASES)
 
@@ -291,10 +472,12 @@ def build_and_check(label="baseline"):
     assert actual.returncode == 0, ('coupled public driver body failed', actual.stderr)
     lines = actual.stdout.splitlines()
     assert len(lines) == len(CASES), ('coupled product complete output', len(lines), len(CASES))
-    for index, (line, (_, source, expected)) in enumerate(zip(lines, CASES)):
+    for index, (line, (mode, source, expected)) in enumerate(zip(lines, CASES)):
         fields = line.split('\t')
         assert len(fields) == 4 and fields[0] == str(index), ('coupled product identity/order', index, line)
         result = tuple(fields[1:])
+        if mode == 'R' and result[0] == 'ERR' and '^CTX:' in result[2] and '^CTX:' not in expected[2]:
+            result = (result[0], result[1], result[2].split('^CTX:', 1)[0])
         assert result[:2] == expected[:2] and (expected[2] == '-' or result[2] == expected[2]), ('coupled product oracle', index, source, expected, result)
     return len(CASES)
 
@@ -324,6 +507,16 @@ RUST_FAULTS = (
      'self.statement.canonical_form()',
      'super::FormulaStatement::parse("let fabricated:count=1").unwrap().normalize_literals().unwrap().canonical_form()', 2),
 )
+# Reuse the standing whole-factory fault population as literal data; never execute the
+# mutating CLI while importing it. The oracle above remains independently authored.
+whole_fault_module = ast.parse((HERE / 'checked_recipe_mutations.py').read_text())
+whole_assignment = [node for node in whole_fault_module.body if isinstance(node, ast.Assign)
+                    and any(isinstance(target, ast.Name) and target.id == 'CASES' for target in node.targets)]
+assert len(whole_assignment) == 1, 'coupled actual whole fault population'
+WHOLE_FAULTS = ast.literal_eval(whole_assignment[0].value)
+assert len(WHOLE_FAULTS) == 19, 'coupled whole fault coverage'
+RUST_FAULTS += tuple((name, 'crates/sc-core/src/recipe/checked_recipe.rs', before, after, count)
+                    for name, before, after, count in WHOLE_FAULTS)
 REFERENCE_FAULTS = (
     ('operation arguments', '"operation": operation, "operand_kinds"', '"operation": "unknown", "operand_kinds"'),
     ('conditional condition', 'if c != "boolean":', 'if False:'),
@@ -339,7 +532,7 @@ def mutations():
     import traceback
     documentation()
     doc_faults = (
-        ('formula-static-validation.md', 'bounded expression, current-statement and whole recipe proofs are implemented; coupled whole review remains .4b.',
+        ('formula-static-validation.md', 'bounded expression, current-statement and whole recipe proofs are implemented; coupled whole review is complete at .4b.',
          'complete expression/recipe acceptance remains the next two stages.'),
         ('formula-wanted-signatures.md', 'at .5b.3c.3b; atomic [whole recipe acceptance](formula-checked-recipes.md) is available.',
          'Current statement context remains .5b.3c.3'),
@@ -395,7 +588,7 @@ def mutations():
     assert SOURCE.read_bytes() == original_reference and all(path.read_bytes() == data for path, data in originals.items()), 'coupled sources not exact'
     check_reference()
     build_and_check('restored')  # Restore the compiled artifact as well as all source bytes.
-    print('coupled faults: six reference/nine public Rust actual compiled body reds; sources/artifact restored; rc=0')
+    print('coupled faults:%d reference/%d public Rust actual compiled body reds (%d whole factory); sources/artifact restored; rc=0' % (len(REFERENCE_FAULTS), len(RUST_FAULTS), len(WHOLE_FAULTS)))
 
 
 if __name__ == '__main__':

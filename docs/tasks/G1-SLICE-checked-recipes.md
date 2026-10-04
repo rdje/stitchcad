@@ -144,3 +144,118 @@ current condensed one-line comment exposed the old failure. Root/repair owned he
 Staged make gate→all13 checks green, rc=0. git diff --cached --check passes. All35 intended
 paths reviewed; no mutation source residue or pending verification jobs. Post-commit brief/clean
 checks are required before next leaf. Promotion declined: existing owner/source/lockstep contracts.
+
+## Coupled whole factory protocol
+
+Work unit STITCHCAD-G1-0114, leaf G1-SLICE.5b.4b; predecessor e379473 clean, brief0/untracked,
+no pending jobs. Read contract3/4.1/5.2.3/5.2.5, bounded syntax/input phases, actual whole proof/
+errors/dependency roles, scoped proofs, actual coupled driver/oracle/reference and book status.
+Existing13,149 shared cases exercise expression and caller-loop scopes; whole factory coupling
+is the explicit remaining proof. Library sources must remain byte-exact to e379473 unless a real
+owned defect is reproduced. Grammar stays unchanged; no arithmetic/geometry/provider authority.
+
+Replace the recipe-mode diagnostic cursor loop with the actual FormulaNormalizedRecipe::check_kinds
+factory. Inspect complete proof statements and typed refusal owners/ordinals/spans/canonical identity.
+Retain existing signature/operand/source payload comparisons. Extend the independent authored recipe
+occurrence oracle to include actual tolerance headers/roles/consumer ordinals and supplier source
+locators; expected source offsets come from authored text, not product-derived normalized spans.
+No synthetic initial ordinal or canonical record identity for the reference. Reference name reads
+cover operands; header metadata is separately checked against independently authored grammar/class
+and actual normalized header source, not invented as a reference evaluation callback.
+
+Extend all binding/assertion pairs across earlier scopes and valid suffixes, all initial kinds and
+reserved/repeated header refusals, self/forward/untaken/callee priorities, original grouping/global
+spans and repeated occurrences. Complete published21 statements/13 refusal candidates, maximum
+4096/256/16 and first-excess syntax/input priorities remain required. Earliest actual failures
+expose no accepted graph. Validate equal authored bytes with distinct real initial supplier records
+through existing public contracts; graph bytes are not a resolved-computation fingerprint.
+
+Add compiled real whole-factory faults to the current coupled producer, retaining six reference/
+nine expression/statement/scope faults and copied-status refusal controls. Actual oracle or running
+Rust body assertions required; compile/link/expect/name noise refused. Finally restore all actual
+sources and the real current library artifact, then full reference/language/book/native/ledger/
+coverage/retention/gates. Close .4/.5b only with actual coupled proof; next arithmetic .5c.1.
+
+Containment: current changelog32072B, health32768B; keep this entry within remaining696B by linking
+full evidence here. No history growth is necessary for this leaf (64working MD fixed ceiling).
+Next leaf must recheck actual pressure before growth; never raise a ceiling or edit retained bytes.
+
+Coupled draft baseline13,967 cases passes. Full expression population is additionally wrapped in
+later recipe scopes (point/edge results use normative x/len selectors); final population26,723.
+Draft geometry names distance/edge_length/point_on_edge refused normally; primary grammar318–323
+supplies dist/len/point_at, corrected before earning receipts. Reference reserved refusals carry
+actual attempted_source.statement_index rather than a top-level index. Trace the actual static
+method's genuine ordinal and compare any typed ordinal only in that phase; syntax typed positions
+have no static invocation. No inferred zero or reference product span/canonical identity.
+An earlier26,723 draft receipt is superseded because the adapter was edited before terminal
+consumption; only the exclusive current-source rerun below can establish the final adapter state.
+
+Exclusive current-source static_coupled_contract.py --mutations→26723 shared cases (12756 expression,
+13967 whole factory) and62 selected actual refusal contexts; six reference/28 real Rust body reds,
+including all19 whole faults, three actual copied-status body reds; source/artifact exact, rc=0.
+Actual graph oracle retains typed complete supplier locators, consumer roles and original grouped
+byte spans; reference independently checks reads/kinds/authored assertion classes and genuine
+static invocation ordinals, without inventing product identity/spans. All tracked crate bytes
+compare exact to e379473 via git show/byte comparison, rc=0. Strict rustfmt and actual rustc
+-Dwarnings adapter build pass. Required full current standing/native/book/ledger/gate checks follow.
+
+Current full standing run_formula_structure_probes.sh→all reference controls, actual26723-case
+whole coupling,6reference/28Rust/3text body reds, D150263cases/10phase faults and D15212cells/14text
+reds pass with source/artifact exact, rc=0. Language16/publication10 pass (61chapters/67API/
+1231source/1933rendered links), rc=0. Native/ledger/staged gates follow before closure/commit.
+
+## Coupled whole acceptance checklist
+
+### G1-SLICE.5b.4b
+
+- [x] **ROOT CAUSE (WHY + WHERE)** — `git show e379473:docs/tasks/artifacts/formula_structure/
+  static_coupled_driver.rs` uses a caller cursor loop; the declared library-owned whole factory
+  existed but was outside that shared oracle. Actual predecessor source confirms this scope, rc=0.
+  Reviewed contract3/4.1/5.2.3/5.2.5 and proof/namespace/signature interfaces before changes.
+- [x] **ADDRESSED (verified)** — `python3 -I -B docs/tasks/artifacts/formula_structure/
+  static_coupled_contract.py --mutations`→26723 independently authored shared cases:12756 expression/
+  13967 actual whole factory,62 selected refusals;6reference/28Rust/3text actual body reds, rc=0.
+  Whole proof/context/identity/role/order/span/disclosure faults discriminate; all sources and the
+  actual artifact restore. Every expression case also runs inside a complete later recipe scope.
+- [x] **NO REGRESSION** — `bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh`
+  →full reference and actual26723-case whole adapter/28Rust/six reference faults, D150263 phase
+  cases/10faults, D15212cells/14text controls, rc=0. run_formula_language_probes.sh→16pass/0fail;
+  run_book_publication_probes.sh→10pass/0fail,61chapters/67API/1231source/1933rendered links, rc=0.
+  make check→strict703tests/59groups; ledger9+13 pass, rc=0; staged gate follows. All crate bytes compare exact to e379473, rc=0;
+  prior three-library WASM receipt remains applicable to unchanged sources.
+- [x] **FIX** — diagnostic recipe adapter consumes the actual factory, inspecting complete immutable
+  proof and true refusal owner/ordinal/spans. Independently source-derived dependency occurrences
+  retain class/operand roles and complete real supplier metadata; reference contexts stay truthful.
+- [x] **LOCKSTEP** — implemented .5b proof/review scope, remaining arithmetic/runtime/operations/
+  storage/geometry authority and unchanged grammar agree across README/book/live/task/tooling docs.
+  No new raw archive file; bounded current entry links full evidence here without crossing health.
+- [x] **CLAIM VERIFICATION** — independently authored source/kind/graph oracle, actual reference
+  reads/header classes/real static-call context, and Cargo-current public factory agree, rc=0.
+  Real compiled faults plus copied-status refusals falsify; tracked standing producer watches them.
+  No reference product identity/span invention or compiler/link/expect noise counted as proof.
+
+## D154 root and ownership
+
+Actual public reference preflight("let first:count=1\nassert prior:eps_num=first==first\nlet
+bad:length=missing", []) raises formula_unbound_name with name/origins only; no statement_index.
+Actual _static_statement invocation has ordinal3, verified by the coupled trace. Contract5.2
+requires available context. Scoped blame ba245998 introduces unwrapped infer propagation,
+62be6f9d ordered preflight and38011914 retains unwrapped call at the normalized phase boundary.
+Current Rust whole error correctly retains3. Reference syntax/literal phase calls likewise need
+truthful enclosing context review; whole-ASCII/initial admission and detached scopes cannot invent
+an index. D154 P1 is owned by .5b.4c immediately after .b; .4/.5b remain open until verified repair.
+No user decision is required and no grammar change is authorized. Record11open/142sealed after
+independent census; immutable original report will be retained before repair after needed capacity.
+
+Native make check→strict703tests/59groups, ledger9+13, tree census10lanes/13trees/12siblings/
+0unowned/orphans/dead links and archive309logical/64working MD/12711decoded lines/937119decodedB/
+467110residentB pass, rc=0. New D154 is still an open report; existing142 originals remain sealed.
+Promotion declined under existing independent-source/context/phase/lockstep contracts.
+
+First staged gate refuses the draft live-status G1 row345B above unchanged320B width; compact
+its notes with all current proof/remaining-owner facts retained. Re-run staged gate before commit.
+
+Corrected staged make gate→13checks/all doctrines green, rc=0; git diff --cached --check passes.
+Fresh independent report census11open/142sealed is unique/disjoint/complete1..154 except18.
+Final ledger9/pointer13 and current publication10 pass; no verification jobs remain. D154 is
+owned next, not treated as closed. This review commits independently before its reference repair.

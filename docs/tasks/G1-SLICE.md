@@ -849,7 +849,8 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 | done | `G1-SLICE.5b.3d.c` | `done` | Shared contract verified; D149 fixed, D150 owned |
 | done | `G1-SLICE.5b.3d.d` | `done` | D150/D151 fixed; coupled static review complete |
 | done | `G1-SLICE.5b.4a` | `done` | Immutable whole proof; D152/D153 fixed |
-| current | `G1-SLICE.5b.4b` | `pending` | Coupled whole factory review before .5b closure |
+| done | `G1-SLICE.5b.4b` | `done` | Actual whole factory coupled; D154 owned |
+| current | `G1-SLICE.5b.4c` | `pending` | D154 reference known-ordinal repair before closure |
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.

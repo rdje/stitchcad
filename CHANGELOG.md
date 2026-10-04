@@ -109,6 +109,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part109.md`](docs/history/stitchcad-changelog-part109.md) | G1-0094 call lookup ledger | 9 lines, 766 bytes, `sha256:801531e8…` |
 | [`stitchcad-changelog-part110.md`](docs/history/stitchcad-changelog-part110.md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 
+## STITCHCAD-G1-0114 - coupled whole static review (leaf `G1-SLICE.5b.4b`)
+
+26723 shared cases exercise13967 actual whole factories, complete source-derived graphs and62
+refusal contexts;6reference/28Rust/3text body reds restore sources/artifact. D154 reference ordinals follow
+before .5b closure/arithmetic. Crates unchanged; strict703/59groups, reference/language16/publication10
+(61chapters/67API/1231source/1933rendered links), ledger9+13/census/retention and13 staged gates pass. Full evidence: docs/tasks/G1-SLICE-checked-recipes.md. Grammar unchanged; G1 stays5/18.
+
 ## STITCHCAD-G1-0113 - immutable whole recipe proofs (leaf `G1-SLICE.5b.4a`)
 
 The actual normalized owner and checked initial namespace now produce a complete immutable static

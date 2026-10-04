@@ -409,12 +409,12 @@ body assertions. Source remains unchanged.
 | Nine origins, eight reserved names, collisions and spelling | namespace1139, recipe196 controls | Implemented sourced namespaces and ordered scopes |
 | Every operator/function/selector signature and arity | closed signature matrix;22 names | Implemented closed catalogs and expression checks |
 | Tolerance-name roles; Boolean test; both branches | signature/namespace matrices, recipe preflight | Implemented operand roles and both-branch checks |
-| Declaration order, headers, no accepted prefix on late error | whole-source196, actual consumer ordering | Implemented whole recipe proof; coupled review .5b.4b |
-| Statement4096, expression256, conditional16 boundaries | recipe boundaries; earlier syntax/input controls | Implemented syntax/input/proof limits; coupled review .5b.4b |
-| All worked and refusal static outcomes | independently authored21/13 populations | Scoped review complete; whole review .5b.4b; runtime .5e |
+| Declaration order, headers, no accepted prefix on late error | whole-source196, actual consumer ordering | Complete whole recipe proof and coupled static review |
+| Statement4096, expression256, conditional16 boundaries | recipe boundaries; earlier syntax/input controls | Implemented and coupled syntax/input/proof limits |
+| All worked and refusal static outcomes | independently authored21/13 populations | Whole static review complete; runtime .5e |
 | Envelope dispatch before operand semantics | six calls/either branch; actual guard fault | Implemented call lookup and child priority |
 | Exact source and canonical identity | earlier product syntax/input/identity controls | Implemented expression/statement/whole owner context |
-| Complete typed diagnostic arguments | reference call/expression/provider/header payloads verified | Implemented static payloads; command integration .6 |
+| Complete typed diagnostic arguments | reference call/expression/provider/header payloads verified | Implemented static payloads; D154 reference context; command .6 |
 | Persisted cycles and atomic runtime/replay behavior | outside these static instrument controls | Pending .5e/.5f and storage .7 |
 | Physical geometry and cross-platform computed values | outside these static instrument controls | Pending G2 and .5g |
 
@@ -429,7 +429,7 @@ The recognition controls compare actual contract6 cells and grammar1.1 keyword p
 independently authored expectations; ordinary names/let headers, all three reserved words and
 unknown-call/parse precedence are exercised with execution and values trapped. The concrete ruling
 is retained in ADR-0003. .5b.1c.2 closes the reference review; product namespace and local kind proofs are available,
-and [whole recipe proofs](formula-checked-recipes.md) are available; coupled whole review remains .5b.4b. This clarification changes diagnostic promises to match v1's
+and [whole recipe proofs](formula-checked-recipes.md) are available; coupled whole review is complete at .5b.4b. This clarification changes diagnostic promises to match v1's
 closed grammar and enables no excluded capability.
 
 The reference runtime assertion repair closes D125 at G1-SLICE.5e.3a. A false assertion now raises
@@ -445,7 +445,7 @@ No static review result approves numerical determinism, a physical garment or a 
 The product namespace foundation .5b.2 accepts immutable typed declarations from canonical inputs,
 validates machine names and consumes declaration pairs before an index can discard collisions.
 [Ordered metadata scopes](formula-name-scopes.md) retain actual prior let annotations and locations;
-bounded expression, current-statement and whole recipe proofs are implemented; coupled whole review remains .4b.
+bounded expression, current-statement and whole recipe proofs are implemented; coupled whole review is complete at .4b.
 Kinds and origins are separate from numeric availability. Reserved names have known kinds even
 without an instance/export context. Geometry declarations refer to prior operation outputs;
 they do not authorize construction. Input adapters must preserve existing source identities and
@@ -474,7 +474,7 @@ the loader/replay obligation at .5e.4/.7; ordinary forward/self names remain unb
 python3 -I -B docs/tasks/artifacts/formula_structure/static_coupled_contract.py --mutations
 ```
 
-The producer checks13149 shared source cases against independently authored rules, the actual
+The producer checks26723 shared source cases against independently authored rules, the actual
 book reference and a compiled public Rust adapter. Cargo supplies the current library and dependency
 paths; compiler/link failures never count as failed contract-body assertions. The matrix covers all
 ordered operator kinds, fixed and variadic function signatures (through four arguments), if/within
@@ -486,17 +486,17 @@ It also checks the complete published17-binding/four-assertion recipe, its13 ref
 ordered prior/self/forward/colliding names and D148's later-input priority. Reference name-read
 traces and public dependency sources agree with independently authored occurrence order, including
 repetition and untaken branches. Public proofs retain their actual normalized owner and canonical
-identity; each statement is checked before the adapter advances metadata. Unknown measurement/Ease
+identity; the recipe adapter calls the actual whole factory, which checks before advancing metadata. Unknown measurement/Ease
 records remain borrowed; no missing value is defaulted into a result. Numerical/reference provider
 queries are trapped. Different source capabilities retain their own scopes: reference tuples have
 no canonical product record identity, and initial authored declarations have no recipe ordinal.
 
-Six faults compiled into the real reference and nine compiled into the actual Rust implementation
-must trigger oracle or running-driver body assertions. All four source files are restored byte-exact,
+Six faults compiled into the real reference and28 compiled into the actual Rust implementation
+must trigger oracle or running-driver body assertions. All five source files are restored byte-exact,
 and the restored Rust artifact must pass again. Three actual copied-annex status faults also refuse,
 preventing D149's obsolete claims and D151's ambiguous reference/product proof wording.
 
-This shared-case contract verifies the exercised expression and current-statement interfaces.
+This shared-case contract verifies the exercised expression, statement and complete recipe interfaces.
 D150's competing-phase controls additionally compare263 independently authored token/phase/ordinal
 cases with the actual public API and reference, across four bad literal domains, eight later syntax/
 structure failures, four separators and genuine prefix ordinals. Eight detached controls preserve
@@ -507,9 +507,20 @@ normalized owners and original spans; ten actual compiled body faults must refus
 python3 -I -B docs/tasks/artifacts/formula_structure/first_phase_contract.py --mutations
 ```
 
-The adapter's ordered loop is a diagnostic consumer; the [library-owned whole proof](formula-checked-recipes.md)
-is implemented at .5b.4a. Coupled review of that factory remains .5b.4b. Coupled expression/current-statement review is complete with these phase controls
-and full reference regressions.
+The [library-owned whole proof](formula-checked-recipes.md) is implemented at .5b.4a and independently
+reviewed at .5b.4b. All12756 expression cases additionally run in later whole-recipe scopes; valid
+point/edge results use the normative x/len selectors because they cannot be let annotations.
+The13967 recipe cases retain complete graph occurrences: genuine consumer ordinals, class/operand
+roles, original grouped spans and actual reserved/input/geometry/prior-let locators. The source
+oracle derives these from authored text and initial identities, without reading product output.
+The reference independently verifies operand reads/kinds and original assertion classes; it has no
+canonical product record identities or proof-owner pointers to invent. The public factory supplies
+those actual owners, checked against source-derived expectations. Sixty-two selected first refusals
+also compare genuine ordinals/spans; reference static-call tracing preserves its available context.
+Whole4095/4096 and first4097, node255/256/257 and conditional15/16/17 cases agree. The19 whole-factory
+faults join nine expression/statement/scope faults; each must fail an actual oracle or running Rust
+body assertion. Full source and compiled artifact restoration precedes other checks. Product static review
+is complete; D154 reference ordinal repair .5b.4c precedes .5b closure and arithmetic .5c.
 Static proofs still grant no numerical result, physical geometry, export readiness or human approval.
 
 ### Parameter quantization and curve length

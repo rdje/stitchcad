@@ -5,6 +5,14 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — independently coupled whole acceptance
+
+- Route every expression case through a later complete recipe, using x/len for point/edge results.
+- Derive occurrence roles, grouped byte spans and supplier locators from authored source/identities.
+- Trace actual reference static ordinals; do not invent product spans or canonical records for it.
+- Compiled source faults must reach oracle/body assertions; restore bytes and the actual artifact.
+- Promotion declined: existing independent-oracle/source/phase/lockstep contracts cover this work.
+
 ## _(2026-10-04 UTC)_ — complete value-free recipe proof
 
 - A scoped proof alone cannot certify earlier annotations; check each statement before advancing.

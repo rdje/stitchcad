@@ -2,7 +2,7 @@
 
 > **Implemented:** sc-core recipe, G1-SLICE.5b.4a. A normalized recipe can return an immutable
 > proof that every statement passes names and kinds in its actual prior-binding scope.
-> Coupled whole-factory review remains .5b.4b. Numerical execution, construction operations,
+> Coupled whole-factory review is verified at .5b.4b. Numerical execution, construction operations,
 > persistence and physical approval retain their later owners.
 
 Use this interface after complete [syntax and literal input checks](formula-recipe-inputs.md).
@@ -169,6 +169,18 @@ compiled artifact restored; compile/link/expect-only noise never counts. Run mut
 
 A statically valid false assertion, zero divisor, negative square root, absent size/export context
 or too-wide stored result still has no execution verdict. The proof reads no values, providers or
-geometry and cannot approve those cases. Coupled whole-factory review is .5b.4b; exact arithmetic
+geometry and cannot approve those cases. Coupled whole-factory review closes .5b.4b; exact arithmetic
 and binding are .5c, irrational algorithms .5d, execution/replay .5e and operations .5f. Persistence,
 physical geometry, export readiness and human approval retain their separate roadmap owners.
+
+The [coupled static review](formula-static-validation.md#coupled-public-static-review) checks26723
+shared cases, including13967 actual whole-recipe invocations, all published statements/refusals,
+source-derived complete dependency occurrences and62 selected refusal contexts. Six real reference
+and28 real Rust faults (19 whole factory) discriminate; sources and the current artifact restore
+before later checks. All expression cases also run in complete recipes; their independent expected
+outcomes never come from product output. Numerical and physical authority remains deferred.
+
+D154 tracks the reference's missing available whole-refusal ordinal. The Rust error retains its
+actual ordinal; the reference's static-call trace observes it but its propagated FErr arguments
+omit it. Repair .5b.4c is required before static-lane closure. No missing reference context is
+fabricated in this comparison, and this gap grants no numerical or physical authority.

@@ -247,6 +247,6 @@ python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutation
 Run mutations alone, without overlapping builds/probes/gates. The standing structural suite watches
 fault anchors and refuses compiler/expect/test-name noise. These proofs cover expression checking
 against an initial namespace. [Current-statement checking](formula-name-scopes.md#check-the-actual-current-statement)
-also applies these rows to the actual prior-binding scope and both assertion operands. [Whole recipe proofs](formula-checked-recipes.md) compose these checks. Coupled whole review,
-canonical registry/operation-order validation, numerical execution and physical geometry
-retain .5b.4b, .5e/.5f and G2 owners. The grammar and token set are unchanged.
+also applies these rows to the actual prior-binding scope and both assertion operands. [Whole recipe proofs](formula-checked-recipes.md) compose these checks. Coupled whole review is verified at .5b.4b.
+Canonical registry/operation-order validation, numerical execution and physical geometry
+retain .5e/.5f and G2 owners. The grammar and token set are unchanged.

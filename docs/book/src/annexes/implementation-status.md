@@ -43,7 +43,7 @@ is verified at G1-SLICE.5b.1; library-owned whole-recipe acceptance is implement
 product metadata, sourced declarations, initial namespaces, exact reads and ordered metadata scopes are available;
 Operator/built-in/selector signatures, typed wanted catalogs and initial-scope expression proofs
 and current-statement checks are available. The [coupled review](formula-static-validation.md#coupled-public-static-review)
-verifies their public behavior and the actual reference; [whole recipe proofs](formula-checked-recipes.md) are available; coupled whole review remains .5b.4b.
+verifies their public behavior and the actual reference; [whole recipe proofs](formula-checked-recipes.md) are available; coupled whole review is verified at .5b.4b.
 
 ## Remaining proofs
 
