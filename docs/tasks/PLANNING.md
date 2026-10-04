@@ -978,19 +978,16 @@ D155 complete closure receipt retained in [part75](../history/stitchcad-defects-
 
 D157–D159 complete closed receipts retained in [part78](../history/stitchcad-defects-part78.md).
 
-D160 closes at .n.f5: actual failed-body panic locations match guarded current test macro sites;
-custom assertions pass, labelled expect/wrong file/column/invalid bytes refuse. Actual broad/
-permissive/site-omission faults red; exclusive38 native reds/full9/9/7 targets restored, rc=0.
-Original committed report retained exactly in [part79](../history/stitchcad-defects-part79.md).
+D160–D161 complete closed receipts retained in [part81](../history/stitchcad-defects-part81.md).
 
-D161 closes at .n.f6: both failed-body panic sites match guarded current test assertion macros;
-custom assertions pass and expect/wrong source/column/bytes refuse. Actual broad/permissive/site
-faults red; exclusive41 native reds/six sources exact/full7/7 targets restored, rc=0.
-Original committed report retained exactly in [part80](../history/stitchcad-defects-part80.md).
+D162 closes at .n.f7: both failed-body panic sites match guarded current test assertion macros;
+custom assertions pass/expect locations refuse. Actual broad/permissive/site faults red;
+exclusive35 native reds/four sources exact/full10/8 targets restored, rc=0. Original committed
+report retained exactly in [part82](../history/stitchcad-defects-part82.md).
 
-- **D162** — namespace/ordered-name classifiers accept a failed-body assertion-labelled expect
+- **D163** — declaration/exact-name classifiers accept a failed-body assertion-labelled expect
   message. Actual assertion_failure functions compiled against independent noise, rc=0,
-  target/d162-classifier-baseline.log; no native/source writes. Root: message-prefix heuristic
-  (blame4e0d0bf9/63c0c7db); impact false assertion proof. Own G1-SLICE.5b.4c.h2.b.p.n.f7, P1 next;
-  current guarded test macro sites/custom positives/noise and actual classifier/site faults;
-  exclusive native/source/full-artifact restoration before closure.
+  target/d163-classifier-baseline.log; no native/source writes. Root: message-prefix heuristic
+  (blamedb19b90e/19900d01); impact false assertion proof. Own G1-SLICE.5b.4c.h2.b.p.n.f8, P1 next;
+  guarded test macro sites/custom positives/noise and actual classifier/site faults; exclusive
+  native/negative-construction reds plus exact source/full native/doc artifact restoration.

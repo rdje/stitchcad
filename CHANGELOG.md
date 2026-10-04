@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0135 - guarded namespace assertion provenance (leaf `G1-SLICE.5b.4c.h2.b.p.n.f7`)
+
+- Guard implementation/test sources/output before reads/writes; preserve prepared child stores/modes.
+- D162 fixed with current test assertion locations; custom assertions pass and expect sites refuse.
+- CI17runtime/66body/25prefixes/25late/16children/eight classifiers and publication43 pass0.
+- Exclusive35 actual assertion reds; both modes0; four sources exact/full10/8 targets restored0.
+- Seven complete6deb45e intervals/public364/prior64 bytes exact0; closed node IDs/proxies stay live.
+- D163 reproduced/owned next; G1 stays5/18,13open/149sealed; D156 open, grammar/API fixed.
+
 ## STITCHCAD-G1-0134 - guarded statement and whole assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f6`)
 
 - Guard all implementation/test sources/output before reads/writes; preserve prepared child stores.
@@ -268,12 +277,6 @@ immutable; D154 stays open. Full28 suites/strict703/WASM3/final gates pass0; run
 follows. G1 remains5/18,12open/143sealed,12siblings; D156 defaults owned before D154.
 
 
-## STITCHCAD-G1-0114 - coupled whole static review (leaf `G1-SLICE.5b.4b`)
-
-26723 shared cases exercise13967 actual whole factories, complete source-derived graphs and62
-refusal contexts;6reference/28Rust/3text body reds restore sources/artifact. D154 reference ordinals follow
-before .5b closure/arithmetic. Crates unchanged; strict703/59groups, reference/language16/publication10
-(61chapters/67API/1231source/1933rendered links), ledger9+13/census/retention and13 staged gates pass. Full evidence: docs/tasks/G1-SLICE-checked-recipes.md. Grammar unchanged; G1 stays5/18.
 
 
 
@@ -315,3 +318,4 @@ before .5b closure/arithmetic. Crates unchanged; strict703/59groups, reference/l
 | [`part115`](docs/history/stitchcad-changelog-part115.md) | G1-0111 static contract | 11 lines, 955 bytes, `sha256:fde1010c…` |
 | [`part116`](docs/history/stitchcad-changelog-part116.md) | G1-0112 syntax and literal phases | 9 lines, 774 bytes, `sha256:3c01839a…` |
 | [`part117`](docs/history/stitchcad-changelog-part117.md) | complete verification continuity | 12 lines, 1064 bytes, `sha256:86e927ea…` |
+| [`part118`](docs/history/stitchcad-changelog-part118.md) | complete verification continuity | 6 lines, 573 bytes, `sha256:c225854a…` |

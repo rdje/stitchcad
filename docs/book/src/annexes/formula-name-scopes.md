@@ -211,7 +211,10 @@ python3 -I -B docs/tasks/artifacts/formula_structure/ordered_name_mutations.py
 ```
 
 Run mutations alone: eighteen temporary compiled faults in the actual cursor/diagnostic code must
-fail public body assertions, then restore both original source files exactly. Controls cover
+fail public body assertions, then restore both original source files exactly and rebuild the full
+focused target. The direct entry validates both implementations, its test source and output before
+reads/writes, preserves prepared child stores and retains classifier-only mode. Failed-body panic
+locations must match current test assertion macro sites; custom messages pass and expect sites refuse. Controls cover
 predeclared future names, skipped/incorrect positions, ignored/misclassified headers, lost or
 reversed sources, changed tokens, failed-advance state, assertion advancement, wrong owner views
 and formatting leaks. The standing structural suite watches fault anchors and refuses compiler,

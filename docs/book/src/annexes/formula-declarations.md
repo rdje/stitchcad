@@ -265,6 +265,12 @@ formatting. Seventeen actual compiled admission/context/collision/source/order/p
 fail public body assertions and restore the production source exactly; the watched structural
 runner also refuses invalid fault classification and stale anchors.
 
+The direct namespace mutation entry validates implementation/test source and output before
+reads/writes, preserves prepared child stores and rebuilds the complete focused target after exact
+source restoration. Failed-body panic locations must match current test assertion macro sites:
+custom assertion messages pass; expect messages and compiler/test-name noise refuse.
+Classifier-only mode compiles no native fault.
+
 
 ## Exact declared-name reads
 

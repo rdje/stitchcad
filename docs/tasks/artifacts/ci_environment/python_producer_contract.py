@@ -323,6 +323,8 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/checked_expression_mutations.py', 'checked_expression_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/checked_statement_mutations.py', 'checked_statement_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py', 'checked_recipe_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/namespace_mutations.py', 'namespace_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/ordered_name_mutations.py', 'ordered_name_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
@@ -331,7 +333,7 @@ def main():
             'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',
-            'checked_recipe_mutations.py',
+            'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -399,7 +401,11 @@ def main():
              ('checked_statement.rs', 'checked.rs', 'namespace/ordered.rs'),
              'formula_checked_statement_contract', None),
             ('checked_recipe_mutations.py', 'checked_recipe_mutations', 'checked_recipe.rs',
-             'formula_checked_recipe_contract', None)):
+             'formula_checked_recipe_contract', None),
+            ('namespace_mutations.py', 'namespace_mutations', 'namespace.rs',
+             'formula_namespace_contract', None),
+            ('ordered_name_mutations.py', 'ordered_name_mutations', ('namespace.rs', 'namespace/ordered.rs'),
+             'formula_ordered_names_contract', None)):
         path = ROOT / 'docs/tasks/artifacts/formula_structure' / filename
         rust_files = rust if isinstance(rust, tuple) else (rust,)
         sources = tuple(ROOT / 'crates/sc-core/src/recipe' / file for file in rust_files)
@@ -487,7 +493,7 @@ def main():
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / 14 actual native-child capture cases / 6 calibrated failed-body classifiers / source unchanged')
+          str(len(adopters)) + ' actual late-source refusals / 16 actual native-child capture cases / 8 calibrated failed-body classifiers / source unchanged')
 
 
 if __name__ == '__main__':

@@ -161,15 +161,19 @@ Checked-statement and whole-recipe entries use the same guard and source-locatio
 The statement entry plans all three mutated sources and its focused test source before activation.
 Both preserve prepared child stores/classifier-only modes and rebuild complete restored targets.
 
-Standing controls cover17 runtime cases and fifty-six actual body faults, including twenty-three real
+Initial-namespace and ordered-name entries also guard implementation/test sources and output,
+retain prepared child stores/classifier-only modes, and rebuild full targets after exact restoration.
+The ordered-name entry plans both mutated sources first. Both use current test assertion locations.
+
+Standing controls cover17 runtime cases and sixty-six actual body faults, including twenty-five real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All twenty-three entry captures also refuse a late missing source before
+12 membership tests passing. All twenty-five entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
-Fourteen native-child capture cases execute actual entries with custom local stores,
+Sixteen native-child capture cases execute actual entries with custom local stores,
 intercepting every source write and both initial/restoration child calls. The captures check actual
 arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing
 the prior per-child store reset earns a body assertion failure, as does discarding coupled selection.

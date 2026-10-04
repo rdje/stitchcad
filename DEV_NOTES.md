@@ -10,6 +10,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D162 namespace producer proofs
+
+- Rebuild the full target after exact restoration; a source-only finally leaves a faulty artifact.
+- Preserve current task IDs/status/goal proxies when retaining complete closed-node requirements.
+- Keep implementation and assertion-site test sources in the same pre-activation plan.
+- Promotion declined: existing all-source/exact-retention/actual-body/exclusive-restoration rules.
+
 ## _(2026-10-04 UTC)_ — D161 statement and whole proof producers
 
 - Inspect a staged gate's terminal verdict before committing; receipt exits belong inside each bullet.
@@ -105,3 +112,7 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part153`](docs/history/stitchcad-devnotes-part153.md) | complete verification continuity | 20 lines, 1490 bytes, `sha256:bcfac0dc…` |
 | [`part154`](docs/history/stitchcad-devnotes-part154.md) | complete verification continuity | 6 lines, 453 bytes, `sha256:8212f19d…` |
 | [`part155`](docs/history/stitchcad-devnotes-part155.md) | complete verification continuity | 2 lines, 194 bytes, `sha256:d157c24b…` |
+| [`part156`](docs/history/stitchcad-devnotes-part156.md) | complete verification continuity | 14 lines, 1097 bytes, `sha256:514674d9…` |
+| [`part157`](docs/history/stitchcad-devnotes-part157.md) | complete verification continuity | 3 lines, 292 bytes, `sha256:06de0aba…` |
+| [`part158`](docs/history/stitchcad-devnotes-part158.md) | complete closed node | 9 lines, 703 bytes, `sha256:c83978de…` |
+| [`part159`](docs/history/stitchcad-devnotes-part159.md) | complete closed node | 6 lines, 430 bytes, `sha256:cb7a4260…` |
