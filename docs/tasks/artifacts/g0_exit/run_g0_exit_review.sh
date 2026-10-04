@@ -44,8 +44,9 @@
 #         successful review of an open gate.
 set -uo pipefail
 export LC_ALL=C
+TOOL_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../../.." && pwd -P)"
 
-ROOT="${G0_EXIT_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || pwd)}"
+ROOT="${G0_EXIT_ROOT:-$TOOL_ROOT}"
 CLAUSES="${G0_EXIT_CLAUSES:-$ROOT/docs/tasks/artifacts/g0_exit/g0_exit_clauses.tsv}"
 ROADMAP="${G0_EXIT_ROADMAP:-$ROOT/ROADMAP.md}"
 SKIP="${G0_EXIT_SKIP_CHECKS:-0}"
@@ -56,6 +57,11 @@ done
 command -v python3 >/dev/null 2>&1 || { echo "g0 exit review: REFUSED — python3 not found" >&2; exit 2; }
 
 cd "$ROOT" || { echo "g0 exit review: REFUSED — cannot enter $ROOT" >&2; exit 2; }
+
+# Prepare every effective store before child checks; verification is fresh, without a trusted marker.
+if ! python3 -I -B "$TOOL_ROOT/scripts/local_environment.py" --verify >/dev/null 2>&1; then
+  exec python3 -I -B "$TOOL_ROOT/scripts/local_environment.py" -- bash "$TOOL_ROOT/docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh" "$@"
+fi
 
 python3 - "$CLAUSES" "$ROADMAP" "$SKIP" <<'PY'
 import pathlib, re, subprocess, sys

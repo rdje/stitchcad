@@ -3,3 +3,4 @@
 set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/ci_environment_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/local_environment_contract.py"

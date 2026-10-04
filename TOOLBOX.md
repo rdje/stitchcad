@@ -270,4 +270,4 @@ ordered_name_mutations.py, operator_signature_mutations.py, builtin_signature_mu
 wanted_signature_mutations.py, call_lookup_mutations.py, checked_expression_mutations.py,
 checked_statement_mutations.py, checked_recipe_mutations.py (19 whole-proof body reds).
 
-CI stores: scripts/ci_environment.py prepare/verify; docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh watches paths/guards/order.
+Build stores: scripts/local_environment.py, scripts/ci_environment.py; probe: docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh.

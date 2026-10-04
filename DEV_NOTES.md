@@ -5,6 +5,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 guarded producer defaults
+
+- Plan all local stores before creating paths; fresh verification never trusts a marker.
+- Preserve selected channels; explicit installation disables host launcher self-update.
+- Actual Make/exec/review children and compiled faults watch storage and argument contracts.
+- Promotion declined: existing locality/source/observed-proof policies cover this repair.
+
 ## _(2026-10-04 UTC)_ — window5 runner observation
 
 - Exact pushed head/jobs/every step establish CI; an aggregate may lag completed jobs.
@@ -21,22 +28,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Actual runner verification follows the doctrine commit/push before D154 repair.
 - Promotion declined: no new principle beyond existing exact-retention/observed-verdict policy.
 
-## _(2026-10-04 UTC)_ — independently coupled whole acceptance
-
-- Route every expression case through a later complete recipe, using x/len for point/edge results.
-- Derive occurrence roles, grouped byte spans and supplier locators from authored source/identities.
-- Trace actual reference static ordinals; do not invent product spans or canonical records for it.
-- Compiled source faults must reach oracle/body assertions; restore bytes and the actual artifact.
-- Promotion declined: existing independent-oracle/source/phase/lockstep contracts cover this work.
-
-## _(2026-10-04 UTC)_ — complete value-free recipe proof
-
-- A scoped proof alone cannot certify earlier annotations; check each statement before advancing.
-- Preserve consumer ordinals and real supplier sources; assertion class headers are dependencies.
-- Stream occurrence edges from complete private proofs; repeated/untaken uses stay distinct.
-- Canonical authored bytes exclude initial supplier identities; inspect sources separately.
-- D152 current status and D153 single-line comment range need actual copied-body refusal controls.
-- Promotion declined: existing owner/source/truth/lockstep contracts cover these requirements.
 
 # Sealed archive — earlier lessons
 
@@ -144,3 +135,4 @@ The live lesson window is bounded by200 lines/16384 bytes; the archive verifier 
 | [`stitchcad-devnotes-part122.md`](docs/history/window5.md#stitchcad-devnotes-part122md) | shared public interface lesson | 6 lines, 418 bytes, `sha256:d90d2e91…` |
 | [`stitchcad-devnotes-part123.md`](docs/history/window5.md#stitchcad-devnotes-part123md) | initial namespace complete records | 78 lines, 6523 bytes, `sha256:919cc8c1…` |
 | [`part124`](docs/history/stitchcad-devnotes-part124.md) | separated-phase lesson | 7 lines, 532 bytes, `sha256:df3473ff…` |
+| [`part125`](docs/history/stitchcad-devnotes-part125.md) | whole-recipe acceptance lessons | 16 lines, 1199 bytes, `sha256:538022dc…` |

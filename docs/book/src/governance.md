@@ -487,7 +487,8 @@ published archive controls pass328 actual verdicts, including refusal of a chang
 catalog. G1-SLICE.5b.4c.h1 records the evidence; D156 defaults then D154 repair remain open.
 
 
-Published Make targets still inherit Cargo/Rustup stores and scratch defaults when caller exports
-are absent. D156 is owned by G1-SLICE.5b.4c.h2 immediately after this transition's runner
-observation, before D154 verification. The verified native/WASM/G0 receipts here supplied explicit
-project-local variables; CI's separate prepare/verify proof remains valid. Default locality is pending.
+### Local producer profile
+
+The [build and command reference](build-and-checks.md) documents guarded defaults, overrides,
+explicit toolchain setup and the launcher that prepares storage before Make starts. Primary
+entry points are verified under G1-SLICE.5b.4c.h2.a; the standalone producer audit remains open.

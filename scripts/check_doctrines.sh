@@ -15,8 +15,13 @@
 # (the pluggable slot) — never edit this driver's universal registry.
 set -uo pipefail   # deliberately NOT -e: run ALL checks, collect every result, then report.
 
-ROOT="$(git rev-parse --show-toplevel)"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
 cd "$ROOT"
+
+# Prepare every effective store before child checks; verification is fresh, without a trusted marker.
+if ! python3 -I -B "$ROOT/scripts/local_environment.py" --verify >/dev/null 2>&1; then
+  exec python3 -I -B "$ROOT/scripts/local_environment.py" -- bash "$ROOT/scripts/check_doctrines.sh" "$@"
+fi
 
 # Universal registry. Each entry: "ID|what it proves|relative/path/to/check.sh"
 DOCTRINES=(

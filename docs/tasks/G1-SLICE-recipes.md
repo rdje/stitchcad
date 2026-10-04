@@ -669,3 +669,149 @@ target/window5-observed-{publication,ledger,coverage,retention}.log. No producti
 no native/probe job remains; CI jobs terminal/success. Final staged doctrine/hook follows.
 
 Final staged make gate13 green, rc=0, target/window5-observed-gate.log; cached diff check0.
+
+
+## D156 producer profile protocol
+
+- ID: `G1-SLICE.5b.4c.h2.a`
+  Status: `done`
+  Goal: guarded local profile and Make/G0/doctrine entry-point defaults before native producer audit.
+  Acceptance: four stores derive from root/target catalog; ambient outside-root values replaced,
+  eligible local overrides guarded component-by-component before mkdir/exec. Reject parent escapes,
+  symlinks, files, foreign-device/Git boundaries and source-tree stores; no shared cache deletion.
+  Preserve named toolchain override and rust-toolchain.toml stable contract. Disable implicit
+  toolchain installation; explicit make toolchain uses published active-channel install with
+  rustfmt/Clippy/WASM/minimal/--no-self-update, never self-update or mutate global stores.
+  A single exec wrapper retains argument bytes/status and environment; guarded shell re-entry
+  verifies freshly, never trusts a marker. Make native/book/probe/gate and G0/hook-doctrine paths
+  inherit profile; no grammar/crate change, no storage claims for unaudited standalone tools.
+  Independent actual environment capture before implementation must redact absolute inherited paths
+  while proving baseline off-volume defaults; provider/exec stubs perform no external store writes.
+  Real profile controls and compiled body faults cover defaults, overrides, guard order, no effects
+  on refusal, command arguments/status/toolchain setup; Windows not claimed by POSIX wrappers.
+  Required root registry containment before Toolbox/lesson growth, exact full old records retained.
+  Read README/ROADMAP G1 CI, COMMIT/data-locality policy, Make/G0/doctrine/hooks/CI helper+probes,
+  Rustup public env/basic docs and installed1.29.1 help; primitive/locality interfaces scoped.
+  Work unit STITCHCAD-G1-0117; predecessor a1b021f clean/brief0/no jobs, no exceptional push due.
+  Verification: focused/native/full28 pass0; commit STITCHCAD-G1-0117 below.
+- ID: `G1-SLICE.5b.4c.h2.v`
+  Status: `pending`
+  Goal: exact-head job/every-step observations after required doctrine-entry push.
+  Acceptance: full local push gates, actual job proof and no inferred runner success; repair/own
+  failures before .b. Verification/Commit: `pending`.
+- ID: `G1-SLICE.5b.4c.h2.b`
+  Status: `pending`
+  Goal: audit direct standalone Cargo/Rustc and temporary producers; apply shared profile before
+  actual native actions, verify effective defaults through actual public producer boundaries.
+  Acceptance: finite independent source/call census, actual standalone controls/body faults/source
+  restoration and standing suites; close D156 only after no owned producing path remains unguarded.
+  Verification/Commit: `pending`; D154 follows parent .h2 verified closure.
+
+Root data-locality diagnostic uses Make's actual inherited environment and independent Path.stat
+volume comparisons. CI17controls/6 actual compiled guard reds cover its separate explicit profile,
+not ordinary defaults. Initial source census finds direct native commands across probe scripts;
+complete AST/shell invocation census belongs to .b before any completeness claim.
+Public reference sources: https://rust-lang.github.io/rustup/environment-variables.html and
+https://rust-lang.github.io/rustup/basics.html; installed rustup1.29.1 help confirms active-channel
+install without a channel argument, --no-self-update, components/target/profile. No Rustup
+implementation assumptions or external repository writes. Root named1.99 is installed; stable is
+not yet installed locally, so actual absent-export validation needs explicit local stable setup.
+
+D156 .h2.a scoped changes: remove pre-validation WASM fingerprint deletion and let public Cargo
+own its cache; Make probes also creates scratch only through the guarded profile and preserves a
+verified local TMPDIR override. G0 re-entry derives its published script path before changing cwd;
+fixture input selectors remain inputs, separate from the project producer profile. Invalid command
+shape refuses before mkdir. The readonly inspection contract is verified before signoff.
+
+Initial actual Make capture (no compiler/shared-store write), python3 -I -B
+local_environment_contract.py, rc=1: `D156 actual Make effective stores` reports all four identity
+comparisons False (target/d156-make-baseline.log). Implemented producer returns0 with54 runtime
+controls/11 actual compiled assertion reds/two actual Make assertion reds; real exec exit7 and
+18 actual copied-review child environments (target/d156-local-contract.log). A redundant-guard
+fault draft escaped no runtime guard: discarded as a control, then independent direct select and
+component controls reach the actual guard-accepted assertions. Source bytes unchanged by faults.
+
+Explicit actual local stable setup with all four store exports, toolchain and auto-install unset:
+`env -u CARGO_HOME -u RUSTUP_HOME -u CARGO_TARGET_DIR -u RUSTUP_TOOLCHAIN
+-u RUSTUP_AUTO_INSTALL -u TMPDIR make toolchain`, rc=0, stable-aarch64-apple-darwin1.99.0/
+b940084d7/2026-09-28, six declared components; target/d156-toolchain-install.log. Host launcher
+self-update disabled by actual CLI arguments; no shared cache migration/deletion.
+
+Containment: exact a1b021f HEAD byte interval seals two complete oldest whole-recipe lessons to
+stitchcad-devnotes-part125.md:16L/1199B/sha256538022dcc33d699df521426fc18ef96667cb8bbabe62aaf19e7ebf699b29298f.
+The internal separator is retained, final LF exact; no older sealed bytes change. DEV_NOTES15611B,
+Toolbox33993B, README7099B: fixed targets/caps unchanged; detailed storage contract in book.
+
+Startup-runtime finding, owned by D156 .h2.a before signoff: raw /usr/bin/make emits
+confstr/DARWIN_USER_TEMP_DIR fallback warning with TMPDIR absent, even for --version. Guarded
+make --version and the discovered CommandLineTools make --version do not. xcrun --find make
+under local scratch identifies the platform dispatcher/real tool distinction. Guarding only Make
+recipes starts too late for the platform dispatcher or Make's own temporary files. Add a public
+outer launcher and observe the actual pre-Make profile; keep inner recipe guards for direct calls.
+No external cache deletion: read-only platform/inherited temp census finds one xcrun_db entry each,
+repository-parent census0. Shared ownership is ambiguous; presence alone is not a project receipt.
+Initial absent-export703/native/WASM3 receipts prove producer behavior, not launcher-data locality;
+outer-launcher validation must precede signoff. Original warning retained in d156-{check,wasm}.log.
+
+### D156.a documentation refusal (owned, fix now)
+
+Reproduce: absent-export outer launcher's full probes, rc=2, target/d156-probes.log. Real G0
+review17met/2unmet, glossary REAL7fail; D155's seven declaration-removal controls inherit those
+unrelated seven failures and cannot satisfy their exactly-one-refusal oracle. Root cause: new
+inline standalone Make command names in the governance paragraph have no declaration tables.
+Impact: G0 clause02 fails; publication's focused links check alone cannot establish vocabulary.
+Repair .a before commit: a bounded developer command/profile chapter with explicit command rows,
+proper book/README navigation; retain all profile documentation and fixed chapter ceiling.
+No census exemptions/enforcer changes. Verify actual glossary17 and G010 standing arms plus full
+28 suites again after final code/doc corrections. No unrelated defect is closed or forgotten.
+
+Primary root discovery also precedes profile: derive driver/G0 roots from their own published
+script locations before any Git/platform dispatcher invocation; direct entries cannot depend on
+Git running first. Tests watch actual subdirectory entry and absence of pre-profile Git invocation.
+
+Final primary contract: local-environment controls56/compiled reds13/Make reds2/launcher red1,
+real exec status7/readonly inspect/18 actual review children/no premature Git pass0,
+target/d156-local-contract-final.log. Actual copied/relocated launcher body/source restored.
+Inner Make counterfactuals supply local TMPDIR/MAKE_TMPDIR before the platform dispatcher;
+independent outer-launcher captures exercise all exports absent before Make starts. No compiler
+or shared store is written by capture stubs. .a adds MAKE_TMPDIR coupled to verified TMPDIR;
+no separate arbitrary Make temp override survives. Root named and stable1.99 now both local.
+
+Declared command/profile chapter repairs the new vocabulary: glossary17pass0, publication10pass0
+(62chapters/67public API), real book build0, target/d156-{glossary,publication,book}-final.log.
+Original seven vocabulary failures remain in d156-probes.log; no bypass/exemption/schema change.
+Current full native703/59groups/WASM3 through pre-Make launcher, all seven overrides absent,
+rc=0, target/d156-launcher-{check,wasm}.log; no dispatcher warning. Full28 suite rerun required.
+
+### G1-SLICE.5b.4c.h2.a
+
+- [x] **ROOT CAUSE** — actual initial Make capture rc=1/all four default identities False;
+  startup --version comparison isolates platform dispatcher before recipes. Original logs above.
+- [x] **ADDRESSED** — local_environment_contract.py returns0:56 runtime controls/13 compiled
+  body reds/2 actual Make reds/1 shell-launcher red/real exec7/readonly inspect/18 review children.
+  Actual local stable1.99 setup/native703/59groups/WASM3 with seven caller exports absent, rc=0.
+- [x] **NO REGRESSION** — final outer-launcher make probes28 suites green, rc=0,
+  target/d156-probes-final.log; original glossary/G0 refusal repaired by command declarations,
+  actual glossary17/publication10/book pass0 (62chapters/67API/1234source/1945rendered links).
+  Crates/reference source unchanged; all actual fault sources/artifacts restored before gate.
+- [x] **LOCKSTEP** — README/Toolbox/book62/lesson/ledger/resume/index updated. D156 remains open
+  for direct producer audit .b; .v required exact-head CI next. G1 stays5/18,12open/143sealed.
+- [x] **PROMOTION** — declined: standing locality, argument identity, refusal and proof contracts.
+- [x] **COMMIT** — one completed primary unit STITCHCAD-G1-0117; final staged gate/brief0/clean
+  recorded by COMMIT workflow. Required push/runner observation belongs to .h2.v.
+
+Final full28 run also executes actual G0 review controls10pass0 (18met/1human-act-unmet),
+CI19controls/6compiled reds, archive329controls/314logical reads/newestwindow5 committed-catalog
+refusal, rc=0. No production Rust/reference delta. Final focused ledger/coverage/map/retention and
+staged13-gate/hook output follows; no source-producing job remains.
+
+Final focused current-doc checks: ledger9/pointer13, coverage10lanes/13trees/12siblings/zero gaps,
+retention314logical/10workingMD/13120decodedL/957567decodedB/420799residentB, rc=0,
+target/d156-{ledger,coverage,retention}-final.log. Generated map byte-identical8190B (cmp0).
+Direct doctrine invocation from docs/book with all seven overrides absent returns0/13 green,
+target/d156-direct-gate.log; ordinary outer gate13green0, target/d156-unstaged-gate.log.
+Current Rust/reference git diff empty after all mutation jobs, no job remains. Final staged gate
+and cached diff check follow before commit; .a closure makes no CI/audit completion claim.
+
+Final staged outer gate13green, rc=0, target/d156-staged-gate.log; cached diff check0.
+Explicit22-path stage owns all primary changes; COMMIT workflow/hook verifies before .v.

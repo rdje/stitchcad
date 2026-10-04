@@ -947,22 +947,22 @@ rc=0. Final census/ledger/publication/full probes/staged gate still follow befor
 
 
 - ID: `G1-SLICE.5b.4c.h2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: D156 ordinary producer defaults keep package/scratch/build data on the repository volume.
   Acceptance: real published make/G0 entry points derive local stores when caller exports are
   absent; respect only verified local overrides, reject links/foreign-device/Git boundaries,
   documented read-only external toolchain bootstrap only when necessary. Actual effective-variable
   controls and native/WASM/G0 workflows prove locality. P1 after .h1, before D154 verification.
-  Verification/Commit: `pending`; no producer implementation change until .h0/.h1 handoff-ready.
+  Children .a shared profile/primary entries, .v exact required CI, .b standalone producer audit.
+  [Owned implementation protocol](G1-SLICE-recipes.md#d156-producer-profile-protocol).
+  Verification: .a primary profile/entries pass; .v exact CI and .b audit pending. Commit:0117.
 
 
-D156 read-only Make environment audit0 independently measures effective Cargo/Rustup/scratch
-paths outside the root and on another device; default build target is local. Makefile source pins
-only probes scratch; CI prepare explicitly owns its separate stores. Audit calls only Python env/
-stat, no compiler/store mutation. Dedicated durable producer/fault controls and repair are pending
-.h2 before D154 native verification, after current clean commit/observed runner proof. This finding
-changes no producer now and does not excuse a required check; current full checks use all five
-explicit local variables. D156 original live report adds one owned open defect.
+Initial .h1 read-only Make audit0 measured Cargo/Rustup/scratch defaults outside the root/on another
+device; only build target was local. It called Python env/stat without compiler/store mutation.
+CI prepare owns its separate stores. .a now verifies primary defaults/guards with actual absent-
+export native/WASM workflows; .v required CI and .b standalone audit remain before D154.
+D156's original live report remains open until all owned producing paths are verified.
 
 
 Final full required local rerun: make check703/59groups, WASM3, G0 review18met/1human-act-unmet
@@ -983,3 +983,10 @@ target/window5-{publication,glossary,ledger,retention}-final.log. No verificatio
 Final staged make gate →13 green, rc=0, target/window5-gate-final-retry.log. Cached whitespace
 check then noticed only two new terminal blank lines; normalize those new summaries to one LF,
 restage and verify cached diff. No earlier retained payload changed; commit hook reruns all gates.
+
+### G1-SLICE.5b.4c.h2.a
+
+- [x] **ROOT CAUSE** — actual Make capture all four identities False, rc=1; startup dispatcher
+  needs pre-Make profile. Full original/repair receipts in recipe sibling.
+- [x] **ADDRESSED** — actual56 runtime/13 compiled/2 Make/1 shell reds pass0; native703/WASM3.
+- [x] **NO REGRESSION** — full make probes28 green, rc=0; glossary17/publication10 pass0.

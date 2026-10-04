@@ -18,15 +18,10 @@ Three properties define it:
   stays human.
 
 **Status:** executable Rust foundations are available; no user-facing application exists yet.
-The G0 semantic contract has been reviewed, with its human closure still unapproved. G1 implements
-ontology, canonical inputs, measurement metadata/tables, per-POM Ease, size membership, garment/MTM
-input charts and borrowed formula syntax, whole-recipe input normalization and owned expression/
-statement/recipe identity. Formula metadata, sourced declarations, initial namespaces, exact reads,
-ordered scopes and operator/built-in/selector signatures include typed wanted catalogs, sourced call
-lookup, bounded initial-scope expression checks, actual scope-bound statement checks and complete immutable
-recipe proofs with ordered source dependencies, independently reviewed through the whole factory. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks
-verified progress; the mdBook offers progressive learning, a glossary/index and detailed annexes
-with implemented behavior and remaining proof boundaries.
+The G0 semantic contract has been reviewed; human closure remains unapproved. G1 implements
+ontology, measurement inputs and borrowed/normalized formula syntax with owned identities,
+sourced namespaces and complete immutable recipe kind proofs. Whole-factory review checks source dependencies. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks verified progress;
+the mdBook explains implemented behavior and remaining proof boundaries.
 
 ## Audience and scope
 
@@ -51,17 +46,23 @@ Crates appear as their stage starts; nothing below exists before its gate.
 
 ## Quick start
 
-Requires a stable Rust toolchain (`rust-toolchain.toml`), `mdbook` for the book, and Python 3.9+
-(standard library only) for repository history verification/retrieval.
+Requires the Rustup launcher, `mdbook` for the book, and Python 3.9+ (standard library only).
+The stable channel is declared in `rust-toolchain.toml`.
 
 ```bash
-git config core.hooksPath .githooks   # activate the discipline gates (once per clone)
-make check                            # cargo fmt --check + clippy -D warnings + cargo test
-make wasm                             # compile sc-units, sc-core, sc-measure for the browser profile
-make gate                             # the doctrine enforcer
-make probes                           # every diagnostic probe suite
-make book                             # build the mdBook (output: docs/book/book/, untracked)
+python3 -I -B scripts/local_environment.py -- git config core.hooksPath .githooks
+scripts/run_make.sh toolchain  # local channel/components, once per clone
+scripts/run_make.sh check      # fmt --check + strict Clippy + native tests
+scripts/run_make.sh wasm       # compile the three browser foundation crates
+scripts/run_make.sh gate       # doctrine enforcer
+scripts/run_make.sh probes     # every diagnostic probe suite
+scripts/run_make.sh book       # mdBook output: docs/book/book/, untracked
 ```
+
+Build commands prepare Cargo/Rustup stores, build output and scratch under `target/` before
+Make and its producers start. External ambient store values become local defaults; guarded overrides stay
+under `target/`. Toolchain installation is explicit, without updating the host launcher. See the
+[producer profile](docs/book/src/build-and-checks.md#local-producer-profile) for examples and refusal rules.
 
 These commands are verified by the leaf that last touched this page; if one fails, that is a
 defect — log it in a task-tree and fix it (`TOOLBOX.md` explains how to diagnose).

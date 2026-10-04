@@ -787,7 +787,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2` | `pending` | D156 ordinary producer defaults before D154 repair |
+| current | `G1-SLICE.5b.4c.h2.v` | `pending` | D156 required exact CI; direct audit then D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
@@ -924,12 +924,12 @@ Current retention receipts live in the .h0 owning recipe node/names checklist.
 - `2026-10-03` (UTC): .5b.2c.1a/STITCHCAD-G1-0085 records D131 reserved argument conflict;121 cases/three actual reds. .1b ruling blocks namespace .2.
 - `2026-10-03` (UTC): .5b.2c.1b/STITCHCAD-G1-0086 applies delegated D131 sources;3624 argument cases/19 actual reds. Namespace .2c.2 next.
 
-### G1-SLICE.5b.4c.h0 — current containment acceptance
+### G1-SLICE.5b.4c.h2.a — current producer acceptance
 
-- [x] **ROOT CAUSE** — registry/census:64 working history MD, PLANNING1000L,
-  CHANGELOG32646B/32768target; glossary census7 unaccounted fields/examples, rc=1.
-- [x] **ADDRESSED** — capture_window5.py/source proof60 byte-identical originals/309 exact
-  prior records, rc=0; glossary probes17pass0 with seven named actual copy-removal reds, rc=0.
-- [x] **NO REGRESSION** — make check703/59groups/WASM3 and make probes28 suites pass0;
-  actual G0 review18met/1human-act-unmet, publication10 and ledger9/pointer13 pass, rc=0.
-  [Full owning receipts](G1-SLICE-checked-recipes.md#containment-receipts--4ch0).
+- [x] **ROOT CAUSE** — initial actual Make capture defaults all four False, rc=1;
+  platform dispatcher starts before recipe wrappers. Original receipts in sibling.
+- [x] **ADDRESSED** — profile probes56/13 compiled/2 Make/1 shell reds pass0;
+  actual local stable1.99/native703/59groups/WASM3 with caller exports absent, rc=0.
+- [x] **NO REGRESSION** — final full probes28 suites green, rc=0; actual G010/glossary17/
+  publication10/book pass0; Rust/reference source restored/unchanged.
+  [Full receipts](G1-SLICE-recipes.md#d156-producer-profile-protocol).

@@ -8,6 +8,7 @@ Every other registered chapter is linked below. Learning chapters introduce the 
 and verification material are in the annexes, at their preserved chapter URLs.
 
 - [Body measurements and POMs](spec/measurement-metadata.md)
+- [Build and check the project](build-and-checks.md)
 - [Body-to-garment Ease intent](spec/ease-inputs.md)
 - [Commands and agent authority](spec/glossary/commands-and-authority.md)
 - [Current-reference repairs](spec/ontology-implementation.md)
