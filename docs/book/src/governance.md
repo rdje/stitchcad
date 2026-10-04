@@ -488,9 +488,13 @@ bash scripts/history_archive.sh prove-source window6
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part160.md
 ```
 
-The local transition requires full checks/probes/gate before its immediate clean push. Exact-head
-CI job and step observations belong to G1-SLICE.5b.4c.h2.b.p.n.h3.v; local success supplies no
-unobserved runner verdict. D156 and D154 remain open, and grammar/API stay unchanged.
+At exact pushed c455b93, [doctrine enforce](https://github.com/rdje/stitchcad/actions/runs/37230288647/job/111518342851)
+and all eight steps, plus [Rust check](https://github.com/rdje/stitchcad/actions/runs/37230288711/job/111518343151)
+and all eleven steps completed successfully. Actual logs show Rust1.99,703 tests/59 groups,
+three WASM libraries and four checkout-local stores. Post-commit CLI386 controls/370 reads refuse
+changed committed catalogs. G1-SLICE.5b.4c.h2.b.p.n.h3.v records the observed scope.
+The director2026-10-04 supersedes immediate-push exceptions:400 commits unless explicitly requested.
+D165 owns stronger normalization assertion provenance; D156/D154 remain open; grammar/API fixed.
 
 ### Local producer profile
 

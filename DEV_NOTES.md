@@ -134,3 +134,12 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part161`](docs/history/stitchcad-devnotes-part161.md) | complete closed node | 21 lines, 1635 bytes, `sha256:842ed47a…` |
 | [`part162`](docs/history/stitchcad-devnotes-part162.md) | complete closed nodes | 23 lines, 1253 bytes, `sha256:4bc477d4…` |
 | [`part163`](docs/history/stitchcad-devnotes-part163.md) | complete closed book record | 22 lines, 1733 bytes, `sha256:9ecab39c…` |
+
+Window6 runner receipt — STITCHCAD-G1-0138 (.n.h3.v): exact c455b93 doctrine8/Rust11 steps
+completed/success; actual logs show Rust1.99/703 tests/59 groups/WASM3/four checkout-local stores.
+Post-commit window_contract.py386 controls/370 reads/newest committed-catalog refusal, rc=0.
+Four complete c455b93 intervals retain closed task/defect/oldest ledger records with live proxies.
+D165 reproduces in actual literal/normalized-expression predicates: labelled expect noise passes
+message-prefix classifiers; strict controls/current guarded test assertion sites belong to .n.f3.r.
+Director ruling2026-10-04:400 commits between pushes with earlier pushes only explicitly requested;
+.h3.v.c aligns the former automatic exception and checker before continuing product proof repairs.

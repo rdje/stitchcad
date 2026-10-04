@@ -787,7 +787,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.n.h3.v` | `todo` | D156 window6 exact-head CI then signature guards, then guards/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.n.h3.v.c` | `todo` | director400 cadence, then D165/signature guards/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

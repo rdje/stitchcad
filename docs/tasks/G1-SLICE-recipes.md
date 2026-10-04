@@ -964,26 +964,33 @@ Final0136 ledger9/pointer13, rc=0; selector calibration raises actual body reds7
 Final0136 staged gate all13green, rc=0, eighth-staged-gate-final.log; cached diff0; hook/brief0/clean before next leaf.
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3`
   Status: `done`
-  Goal: STITCHCAD-G1-0137; whole closed .n.f4/.n.f5/.n.f8 nodes and closed book transition retention/window6 before .n.f9, fixed schemas/caps.
-
-### G1-SLICE.5b.4c.h2.b.p.n.h3
-
-- [x] **ROOT CAUSE** — HEAD80f pressure63/64 MD, recipes/PLANNING998L/book40147B;
-  measured rc=0, d156-window6-pressure-baseline.log; blocking next tracked guard records.
-- [x] **ADDRESSED** — deterministic58 full files/133191B, installed source proof58 exact;
-  full367 prior logical bytes +three whole seals/public370 read/materialize, rc=0,
-  d156-window6-final-identity-proof.log; prior controls/caps fixed, raw58 exact retirement/70 routes.
-- [x] **NO REGRESSION** — strict703tests/59groups, WASM three libraries, full28 probe suites;
-  CLI385/370 reads/publication43/CI227paths/286boundaries and79 body reds, rc=0,
-  d156-window6-{full-check,wasm,full-probes}.log; Rust diff empty.
-- [x] **LOCKSTEP** — live/book/task/closed IDs agree; source370/working9 separate; D156/D154/D164 open.
-- [x] **PROMOTION** — declined: existing archive identity/atomic retention/current graph rules.
-- [x] **COMMIT** — complete0137; final gate/hook/brief0/clean, immediate push; exact CI .h3.v next.
+  Goal: bounded window6 retained before signature work; full acceptance in [part164](../history/stitchcad-devnotes-part164.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3.v`
-  Status: `todo`
-  Goal: exact window6 commit job/step CI and post-commit CLI retention controls before .n.f9.
+  Status: `done`
+  Goal: exact window6 commit job/step CI and post-commit CLI retention controls before cadence/D165 repairs.
+  Own blocking whole closed .n.h3/D162–D163/oldest ledger retention and any reproduced classifier follow-up records.
+  Work unit STITCHCAD-G1-0138; keep complete committed intervals/IDs and fixed limits.
   Acceptance: full local gates before immediate clean push; observed exact-head doctrine/Rust
   jobs and every step; retained receipts and post-commit newest catalog refusal.
 Final0137 staged gate all13green/cached diff0, rc=0, d156-window6-final-gate.log.
 Initial capture1 refused the absent fresh fixture before writes; corrected explicit missing_ok=True; excluded from green evidence.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f3.r`
+  Status: `todo`
+  Goal: D165 literal/normalized-expression assertion-source repair, P1 immediately after .n.h3.v.
+  Acceptance: guarded test sources/current macro sites/custom assertions/noise refusals; actual
+  classifier/site body reds, exclusive13+17 native reds, exact source/full6/8 targets restored.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.h3.v.c`
+  Status: `todo`
+  Goal: director2026-10-04 supersedes immediate push exceptions:400 commits unless explicitly requested.
+  Acceptance: align COMMIT/check_push_due/public docs and boundary/refusal controls before .n.f3.r.
+Final0138 exact c455b93 doctrine37230288647/job111518342851 all8steps and Rust37230288711/job111518343151 all11steps success, rc=0.
+GET actions/runs/<id>/jobs and actions/jobs/<id>/logs; actual Rust1.99/703tests/59groups/WASM3/four checkout-local stores; no aggregate inference.
+Post-commit window_contract.py:386 controls/370 reads/newest committed-catalog refusal, rc=0, d156-window6-postcommit-cli.log.
+Four whole c455b93 intervals retained; source/public byte identity and fixed caps verified before commit.
+Director2026-10-04:400-commit cadence applies to all future pushes unless explicitly requested; .h3.v.c updates the former exception next, then .n.f3.r/D165.
+Final0138 four intervals/public374/prior370 byte identity, rc=0, d156-window6-ci-retention-proof.log; initial tar directory-membership probe1 excluded.
+Final0138 archive CLI390/publication43/coverage9 and defect14open/150sealed, rc=0; corresponding ci-{archive-probes,publication,coverage,census}.log.
+Final0138 ledger9/pointer13/staged gate all13green/cached diff0, rc=0; ci-{ledger,staged-gate}.log; no pending jobs.

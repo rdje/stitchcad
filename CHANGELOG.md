@@ -110,6 +110,12 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0138 - observed window6 CI (leaf `G1-SLICE.5b.4c.h2.b.p.n.h3.v`)
+
+Exact c455b93 doctrine8/Rust11 steps success; actual703tests/59groups/WASM3/local stores.
+CLI386/370/newest-catalog refusal0; four complete records retained. D165 owned next.
+Director400 cadence supersedes automatic exceptions; implementation .h3.v.c precedes guards.
+
 ## STITCHCAD-G1-0137 - bounded window6 before signature work (leaf `G1-SLICE.5b.4c.h2.b.p.n.h3`)
 
 58 exact80f3a299 files packed;370 logical identities/nine working MD/three whole seals;70 current
@@ -265,21 +271,9 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
   59groups/WASM3/four prepared+verified checkout-volume stores. Terminal log fetch/assertions0.
 - No code/grammar change; standalone producer audit .h2.b then D154 remain. G1 stays5/18.
 
-## STITCHCAD-G1-0117 - guarded primary producer stores (leaf `G1-SLICE.5b.4c.h2.a`)
+| [`part121`](docs/history/stitchcad-changelog-part121.md) | G1-0117 producer profile | 8 lines, 683 bytes, `sha256:03c915a1…` |
 
-- Shared local profile/defaults/overrides/refusals; outer Make launcher prepares before platform
-  dispatch, fresh driver/G0 entry guards, coupled Make temp, explicit local channel setup/no self-update.
-- Actual56 runtime/13 compiled/2 Make/1 launcher reds, exec7/readonly inspect/18 review children;
-  absent-export stable1.99/native703/59groups/WASM3/full28 suites pass0. Command declarations repair
-  measured glossary refusal; book62/publication10/glossary17 pass0. Exact complete lessons sealed125.
-- D156 direct-producer audit remains open; required exact-head CI .h2.v then .b precede D154.
-
-## STITCHCAD-G1-0116 - observed window5 CI (leaf `G1-SLICE.5b.4c.h1`)
-
-Exact pushed d1198ab doctrine8/Rust11 steps all completed/success. Actual Rust1.99 strict703tests/
-59groups/WASM3/four checkout-local stores verified; no aggregate inference. Post-commit archive
-CLI328 controls/313 reads includes newest committed-catalog refusal. Book/task/live scope agrees;
-G1 stays5/18,12siblings,12open/143sealed. D156 producer defaults then D154 known ordinals next.
+| [`part120`](docs/history/stitchcad-changelog-part120.md) | G1-0116 exact CI | 6 lines, 460 bytes, `sha256:31a25724…` |
 
 
 

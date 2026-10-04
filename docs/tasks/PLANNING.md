@@ -980,15 +980,7 @@ D157–D159 complete closed receipts retained in [part78](../history/window6.md#
 
 D160–D161 complete closed receipts retained in [part81](../history/window6.md#stitchcad-defects-part81md).
 
-D162 closes at .n.f7: both failed-body panic sites match guarded current test assertion macros;
-custom assertions pass/expect locations refuse. Actual broad/permissive/site faults red;
-exclusive35 native reds/four sources exact/full10/8 targets restored, rc=0. Original committed
-report retained exactly in [part82](../history/window6.md#stitchcad-defects-part82md).
-
-D163 closes at .n.f8: guarded current test macro sites/custom assertions/noise refusals; actual
-classifier/site faults red; exclusive28 assertion/one negative-construction reds, four sources
-exact/full7/7 native and five doctests restored, rc=0. Original committed report retained
-in [part83](../history/window6.md#stitchcad-defects-part83md).
+D162–D163 complete closure receipts retained in [part84](../history/stitchcad-defects-part84.md).
 
 - **D164** — built-in/operator signature classifiers accept assertion-labelled expect noise.
   Actual predicates compiled against independent failed-body location/message, rc=0,
@@ -996,3 +988,10 @@ in [part83](../history/window6.md#stitchcad-defects-part83md).
   impact false assertion proof. Own G1-SLICE.5b.4c.h2.b.p.n.f9, P1 after .n.f8;
   current guarded test macro sites/custom positives, actual classifier/site faults and exclusive
   native assertion reds plus exact source/full target restoration.
+
+- **D165** — literal/normalized-expression classifiers accept assertion-labelled expect noise.
+  Both actual predicates compiled against independent failed-body expect location/message return
+  true, rc=0, target/d165-classifier-baseline.log; no native/source writes. Root: message-prefix
+  heuristic and non-strict controls; impact false assertion proof. Own .n.f3.r in G1-SLICE,
+  P1 immediately after .n.h3.v before new signatures; guarded current test macro sites, strict
+  classifier/site faults, exclusive13+17 native reds and exact source/full target restoration.
