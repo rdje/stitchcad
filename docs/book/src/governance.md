@@ -505,3 +505,9 @@ Before Python guard repairs, .h2.b.p.h retains the four complete committed D156 
 the complete census acceptance/refusal record from3e400c1. The live task heading links to its
 exact record; pending repair requirements remain live. Source and public-reader/materialization
 comparisons preserve original separators and one terminal LF, with earlier sealed bytes unchanged.
+
+Before the remaining native groups, .h2.b.p.n.h retains six complete committed a392d31
+intervals: five oldest ledger entries, three whole lessons and four acceptance records.
+Original task headings link to exact records; current nodes and further final receipts stay live.
+Public reads and materialization reproduce the sealed files, and each decoded interval matches
+its committed source. Earlier retained files and the reader's fixed bounds remain unchanged.

@@ -793,57 +793,9 @@ is required before completeness claims. No direct producer is executed with ambi
   Acceptance: actual counts/fixtures/source restoration/native/WASM/full suites/jobs, then D156
   closure with original report retained; D154 next. No success inferred from documentation.
 
-Retention source: exact40a3c0c HEAD. Five complete intervals are sealed, with original separators
-and a single terminal LF: changelog112 (five complete0104..0100 entries), devnotes126 (two oldest
-whole lessons), task-recipes1 (entire .h1 protocol/receipts),2 (complete .h2.a acceptance/final
-receipts),3 (entire completed .h2.v observation). All original task heading/IDs remain as linked
-proxies; active .b protocol/future nodes stay live. Earlier sealed files/windows/caps unchanged.
-Source/read/materialization/ledger/publication/coverage/gate verification remains pending.
-
-Exact seals (lines/bytes/sha256):
-- changelog112:37/2713/b9ab801e49e064243e1ccff5d091a12810afd480ce425a84f356b0778cddc181
-- devnotes126:15/992/3d32a7e7623a4d8abdf8b435dfa81c641e4a2f586d8a62ef8e20a5b0ab54790c
-- devnotes127:54/3975/2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0
-- devnotes128:32/2528/74fd1e0b79c027670c81f28735c31bc335cdfeab58cddd7a141f97eccff13822
-- devnotes129:49/3668/e672a026081f00e89749724b4008f0aa5ef045d9e24a4071a82d39231f8779be
-
-First public materialize refuses1: unclassified resident task-recipes archive name. Fixed raw
-record classification permits existing changelog/devnotes/defects families; do not widen schema
-for this transition. Full technical task protocols/receipts belong to engineering continuity,
-already used by prior devnotes protocol segments. Rename new uncommitted task seals to devnotes
-127/128/129, preserving every payload byte/identity/proxy heading; verify public CLI again.
-No prior retained path changes. The failed materialize created no destination.
-
-Public CLI materialize returns0/319 complete logical files; each new public read and materialized
-file equals its sealed file, and every decoded payload is an exact unique source40a3c0c interval,
-with identity/line/byte/terminal-LF assertions0. All earlier retained/control files compare byte-
-identical to source. No reader or data-plane schema/cap changes; no raw original is lost.
-
 ### G1-SLICE.5b.4c.h2.b.h
 
-- [x] **ROOT CAUSE** — registry/OS counts at source40a3c0c: CHANGELOG32587B/32768target,
-  DEV_NOTES16014B/16384target, recipes866L/checked992L. New audit receipts need bounded space.
-- [x] **ADDRESSED** — five exact unique committed intervals/source SHA/line/byte/LF assertions,
-  actual public read/materialization319 records, rc=0. All21 prior retained/control files identical.
-  Initial unsupported archive-name refusal1 corrected within existing devnotes families; no schema change.
-- [x] **NO REGRESSION** — ledger9/pointer13, publication10, coverage10/13/12/zero gaps,
-  retention319logical/15workingMD/13362decodedL/974488decodedB/437720residentB pass0;
-  byte-identical8190B map. No source-producing/native job or code/grammar change.
-- [x] **LOCKSTEP** — root ledger/lesson/resume/task/index/book/proxies sync; counts G1 5/18,
-  12open/143sealed unchanged. .b.i finite census next, then guarded producer repairs before D154.
-- [x] **PROMOTION** — declined: existing exact whole-record/immutability/navigation rules.
-- [x] **COMMIT** — complete retention slice0119; staged/hook gates/brief0/clean follow.
-
-Final focused receipts target/d156-audit-{ledger,publication,coverage,retention}.log; current
-publication62chapters/67API (actual source/rendered links derived in log). Earlier full .a gates/
-CI stay separately scoped; no full native rerun is required by a pure record-retention transition.
-Session health: focus drift noted before further implementation; keep the next census slice bounded,
-recover its scoped contracts from committed records. No incomplete read or failed name gets counted
-as successful evidence. Final staged documentation gate output follows.
-
-Final staged retention gate13green, rc=0, target/d156-audit-gate.log; cached diff0. Explicit12
-owned paths staged; prior windows/reader/config/crates/reference unchanged. COMMIT hook/brief0/
-clean postconditions precede the next .b.i census slice.
+[Exact complete record](../history/stitchcad-devnotes-part133.md); 51L/3952B/sha256:24747ad2686cfb98369fbafc9b43a0011e411f42b5275452ca8797770334a051.
 
 
 ### G1-SLICE.5b.4c.h2.b.i
@@ -885,56 +837,12 @@ clean postconditions precede the next .b.i census slice.
 
 ### G1-SLICE.5b.4c.h2.b.p.h
 
-- [x] **ROOT CAUSE** — source3e400c1 OS counts: DEV_NOTES16309B/16384target and
-  recipes883L/1000 split trigger; guard receipts need bounded continuity space, rc=0.
-- [x] **ADDRESSED** — two complete unique committed intervals: devnotes130 four whole lessons,
-  27L/1546B/sha256240a92f182aee412d8e981bbe0db71660f126168ca698dfb98091e02d13fa099;
-  devnotes131 complete census37L/2807B/sha2565c5f7c600a2fdd3f06d245b34cd3541fb3dccba7e5eb9c2312c30fde74aa1fb7.
-  Public read/materialize321/source/hash/line/byte/LF assertions rc=0; all26 earlier retained paths unchanged.
-- [x] **NO REGRESSION** — guarded ledger9/pointer13, publication10 (62chapters/67API),
-  coverage10/13/12/zero gaps and retention321logical/17workingMD/13448decodedL/980111decodedB/
-  443343residentB, rc=0, target/d156-python-{ledger,publication,coverage,retention}.log.
-  No code/native/grammar/pin/window/cap changes; staged gate and hook before commit.
-- [x] **LOCKSTEP** — exact record/proxy/entry IDs, root lesson/resume/task/index/book sync;
-  Python .p.a next, D156 open. G1 5/18,12open/143sealed unchanged.
-- [x] **PROMOTION** — declined: existing complete-original/immutable-byte/bounded-navigation rules.
-- [x] **COMMIT** — complete0121 retention; staged gate/hook/brief0/clean precede .p.a.
-
-Initial materialization comparison assumed a flattened filename and refuses with FileNotFound1.
-Read public materialize contract/actual path census: it preserves docs/history below destination.
-Correct only the verifier path; repeated actual source/read/materialized/hash/line/byte/LF assertions0.
-No failed read was counted as proof, no reader or destination content was altered to fit the check.
-
-Final staged retention gate13green, rc=0, target/d156-python-retention-gate.log; cached diff0.
-Explicit9 paths; hook/brief0/clean postconditions precede shared Python guard implementation.
+[Exact complete record](../history/stitchcad-devnotes-part134.md); 24L/1899B/sha256:a6be13d2a8b009a028cca49d7df32ba3051e79f4d6673e4abd38661fae51912c.
 
 
 ### G1-SLICE.5b.4c.h2.b.p.a
 
-- [x] **ROOT CAUSE** — original actual standalone first mkdir lacked five exports, rc=0
-  captured refusal before write/child, retained complete census131. Per-process inherited Make
-  guards do not prepare a separately invoked Python entry; owned output/source plans are needed.
-- [x] **ADDRESSED** — shared Python path planning/activation/clean refusal and first native
-  adopter; guarded run_ci_environment_probes.sh,17 runtime cases/7 actual compiled-body reds/
-  actual standalone pre-write capture, rc=0, target/d156-python-entry-ci-final.log. Source/device
-  metadata is simulated only in the negative control; no off-volume write. Late bad sources
-  refuse before earlier output/store creation or activation; named/unrelated environment preserved.
-- [x] **NO REGRESSION** — actual direct native entry with all seven caller overrides absent,
-  seven compiled assertion reds then exact Rust source/current artifact restored:12 tests pass,
-  rc=0, target/d156-python-first-native.log and target/size_membership_mutations/restored.log.
-  Existing CI19/6, local56/13compiled/2Make/1shell and census9/9/4/Git226/285 boundaries pass0;
-  publication10/62chapters/67API, glossary17 pass, rc=0, target/d156-python-entry-*.log.
-- [x] **LOCKSTEP** — native adopter/entry ledger, live resume/task/index/book agree; other
-  producers stay .p.n/.p.o. D156 open; G1 5/18,12open/143sealed unchanged; grammar untouched.
-- [x] **PROMOTION** — declined: existing plan-before-write/locality/actual-body/restore contracts.
-- [x] **COMMIT** — complete0122; staged gate/hook/brief0/clean precede remaining native group.
-
-Current syntax inventory:226 entries/6765 Python AST calls/68 literal heredocs/2649 embedded calls;
-these remain inspection counts. Retired pre-repair baseline CLI now refuses cleanly2 and points to
-exact census131; it never runs the changed adopter against a stale unguarded expectation. Current
-capture exercises the actual new entry; removal of its real activation call earns an assertion red.
-Native stdout is consumed only after terminal0; no premature/missing artifact read is proof.
-Source restores in finally and the new final focused build restores the actual current artifact.
+[Exact complete record](../history/stitchcad-devnotes-part135.md); 26L/2233B/sha256:4c7187e86f54ab23bdebe75c5ec0c75a5c22b83125f27b6f7dc4a77a1fe3c542.
 
 ### Remaining native group ownership
 
@@ -959,34 +867,60 @@ Explicit14 owned paths; Rust diff empty. Hook/brief0/clean precede Ease conversi
 
 ### G1-SLICE.5b.4c.h2.b.p.n.m1
 
-- [x] **ROOT CAUSE** — actual native entries delegated directly without preparing all stores;
-  removal of each new real activation call fails its pre-write assertion, rc=0 controls.
-- [x] **ADDRESSED** — both Ease entries guard declared source/output/profile; guarded
-  run_ci_environment_probes.sh:17 runtime/9 actual body reds/3 real prefix captures/3 late-source
-  refusals, rc=0, target/d156-ease-ci.log. Existing native argv retained; final build restores artifact.
-- [x] **NO REGRESSION** — actual direct sequential native runs with seven overrides absent:
-  Ease7/set10 compiled assertion reds, exact sources/current artifacts restored13/14 tests pass,
-  rc=0, target/d156-ease{-set,}-native.log and target/{ease,ease_set}_mutations/restored.log.
-  Existing CI19/6/local56/13/2/1/census9/9/4/Git226/285 pass; publication10, rc=0;
-  Rust diff empty. Current syntax226/6786AST/68heredocs/2649embedded is inspection only.
-- [x] **LOCKSTEP** — entry ledger/controls/live/task/index/developer and Ease book sync;
-  D156 remains open; G1 5/18,12open/143sealed unchanged. No grammar/Rust API change.
-- [x] **PROMOTION** — declined: existing entry/source/actual-body/exclusive-restore rules.
-- [x] **COMMIT** — complete0123; staged gate/hook/brief0/clean precede next native group.
+[Exact complete record](../history/stitchcad-devnotes-part136.md); 16L/1326B/sha256:759fad703ee99ec3c62fd3ff137b95033fbc948617d6239094b81a918cb5cbfe.
 
 Session health: focus drift noticed after verified native runs. Finish this bounded unit and
 handoff check before fresh context; no source/native job is left running. Next retention is owned
 below because recipes957L approaches its fixed1000L split trigger before another repair receipt.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h`
-  Status: `pending`
+  Status: `done`
   Goal: retain complete committed repair records/lessons before remaining native group growth.
   Acceptance: exact whole committed source intervals, IDs/proxies/public read/materialize/hash,
   earlier immutable bytes/fixed caps preserved; ledger/coverage/book/gate then next chart group.
-  Work unit follows0123; no code/native change in this blocking continuity leaf.
+  Work unit STITCHCAD-G1-0124; exact committed a392d31 records; no code/native change.
 
 Final ledger9/pointer13, coverage10/13/12/zero gaps and glossary17, rc=0,
 target/d156-ease-{ledger,coverage,glossary}.log. No push due; status counts unchanged.
 
 Final staged gate13green, rc=0, target/d156-ease-staged-gate.log; cached diff0.
 Explicit12 owned paths; hook/brief0/clean precede bounded continuity retention.
+
+
+### G1-SLICE.5b.4c.h2.b.p.n.h
+
+Sourcea392d31: recipes992L/1000 split trigger, DEV_NOTES16025B/16384 and CHANGELOG32531B/32768.
+Six exact whole byte intervals: changelog113 five oldest0109..0105 entries; devnotes132 three
+lessons; devnotes133 completed audit retention;134 Python continuity;135 shared entry acceptance;
+136 Ease acceptance. Original separators/single terminal LF and linked task headings retained.
+Further final receipts/current nodes remain live. No earlier file, reader, schema or bound changes.
+Public read/materialize327/source/sha/line/byte/LF proof rc=0; all28 earlier paths exact,
+target/d156-native-retention-proof.log. Metadata target/d156-native-retention.json.
+Initial proxy placement assertion refuses1 after sealing; its next anchor was also sealed.
+Rebuild the live view from exact committed source with each replacement at its original position;
+verify all six intervals/retrieval again0. The failed attempt is not counted as proof.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.m2`
+  Status: `pending`
+  Goal: four table, size-chart, chart-collection and MTM direct native entries adopt declared-path guards.
+  Acceptance: transfer finite entry ownership before edits; actual prefixes/late refusals/body
+  omission reds and exclusive native assertions; restore exact source/current focused artifacts.
+  Work unit STITCHCAD-G1-0125; read each entry's arguments, source/work paths and measurement book.
+
+
+- [x] **ROOT CAUSE** — guarded OS/source counts: committed recipes992L/1000 trigger,
+  DEV_NOTES16025B/16384 and ledger32531B/32768 targets; next native receipts need space, rc=0.
+- [x] **ADDRESSED** — six complete exact committeda392d31 intervals/proxies: public read/
+  materialize327/source/sha/line/byte/single-LF assertions, rc=0, target/d156-native-retention-proof.log.
+  All28 prior retained/control paths byte-identical; corrected initial proxy assertion is not proof.
+- [x] **NO REGRESSION** — guarded ledger9/pointer13, publication10/62chapters/67API,
+  coverage9arms/10lanes/13trees/12siblings/zero gaps, retention327logical/23workingMD/
+  13704decodedL/998589decodedB/461821residentB, rc=0, target/d156-native-*.log.
+  No code/native/grammar/window/reader/schema/cap change; full CI not due.
+- [x] **LOCKSTEP** — root/live/task/index/book/navigation agree; .p.n.m2 chart group next,
+  D156 open; G1 5/18,12open/143sealed unchanged. IDs/current nodes/final receipts retained.
+- [x] **PROMOTION** — declined: existing whole-source/exact-retention/navigation principles.
+- [x] **COMMIT** — complete0124; staged gate/hook/brief0/clean precede chart entry implementation.
+
+Final staged gate13green, rc=0, target/d156-native-retention-gate.log; cached diff0.
+Explicit13 owned paths; hook/brief0/clean precede .p.n.m2.

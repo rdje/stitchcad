@@ -8,25 +8,12 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
-## _(2026-10-04 UTC)_ — D156 Ease entries
 
-- Apply the same declared-path guard to every direct entry.
-- Watch each real prefix and late refusal; omission earns a body red.
-- Run faults sequentially; rebuild restored current artifacts.
-- Promotion declined: existing locality/body/restore rules.
+## _(2026-10-04 UTC)_ — D156 native continuity
 
-## _(2026-10-04 UTC)_ — D156 Python entry planning
-
-- Validate all stores, outputs and existing source paths before creating or activating.
-- Capture the real entry before its first write; omission must fail an assertion.
-- Restore source and the current compiled artifact after exclusive native faults.
-- Promotion declined: existing locality/actual-body/restore rules.
-
-## _(2026-10-04 UTC)_ — D156 Python continuity
-
-- Seal complete committed lessons and census receipts before guard growth.
-- Preserve source intervals, task IDs and public materialization hierarchy.
-- Earlier sealed records and fixed bounds stay unchanged.
+- Seal whole committed intervals before the next repair grows the live tracker.
+- Place linked proxies at the original positions; retain active nodes and final receipts.
+- Prove public retrieval and prior immutable bytes against committed source.
 - Promotion declined: existing exact-retention/navigation rules.
 
 # Sealed archive — earlier lessons
@@ -142,3 +129,8 @@ The live lesson window is bounded by200 lines/16384 bytes; the archive verifier 
 | [`part129`](docs/history/stitchcad-devnotes-part129.md) | completed task protocol/receipts | 49 lines, 3668 bytes, `sha256:e672a026…` |
 | [`part130`](docs/history/stitchcad-devnotes-part130.md) | complete D156 continuity | 27 lines, 1546 bytes, `sha256:240a92f1…` |
 | [`part131`](docs/history/stitchcad-devnotes-part131.md) | complete D156 continuity | 37 lines, 2807 bytes, `sha256:5c5f7c60…` |
+| [`part132`](docs/history/stitchcad-devnotes-part132.md) | complete D156 continuity | 20 lines, 997 bytes, `sha256:a0369742…` |
+| [`part133`](docs/history/stitchcad-devnotes-part133.md) | complete D156 continuity | 51 lines, 3952 bytes, `sha256:24747ad2…` |
+| [`part134`](docs/history/stitchcad-devnotes-part134.md) | complete D156 continuity | 24 lines, 1899 bytes, `sha256:a6be13d2…` |
+| [`part135`](docs/history/stitchcad-devnotes-part135.md) | complete D156 continuity | 26 lines, 2233 bytes, `sha256:4c7187e8…` |
+| [`part136`](docs/history/stitchcad-devnotes-part136.md) | complete D156 continuity | 16 lines, 1326 bytes, `sha256:759fad70…` |
