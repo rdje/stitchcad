@@ -1,10 +1,13 @@
 """Wide public rounding: compiled production faults must fail independent assertions."""
 from pathlib import Path
+import runpy
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-units/src/round.rs'
 WORK = ROOT / 'target/formula_unsigned_round_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=(SOURCE,))
 WORK.mkdir(exist_ok=True)
 ORIGINAL = SOURCE.read_bytes()
 CALL = '''    round_magnitude(
@@ -56,5 +59,13 @@ try:
         SOURCE.write_bytes(ORIGINAL)
 finally:
     SOURCE.write_bytes(ORIGINAL)
+    restored_results = []
+    for profile, extra in (('debug', []), ('release', ['--release'])):
+        restored = subprocess.run(
+            ['cargo', 'test', '-p', 'sc-units', *extra, '--test', 'unsigned_round_contract'],
+            cwd=ROOT, capture_output=True)
+        (WORK / ('restored-' + profile + '.log')).write_bytes(restored.stdout + restored.stderr)
+        restored_results.append((profile, restored.returncode, restored.stderr.decode()))
+    assert all(status == 0 for _, status, _ in restored_results), ('restored round artifacts failed', restored_results)
 assert SOURCE.read_bytes() == ORIGINAL
-print('unsigned round mutations: nine compiled debug reds/one release red; production source restored byte-identically')
+print('unsigned round mutations: nine debug reds/one release red; source and both compiled profiles restored')

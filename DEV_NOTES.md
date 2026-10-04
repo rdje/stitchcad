@@ -10,6 +10,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 unit entries
+
+- Declare every mixed producer source before activation or output.
+- Restore both compiled profiles when a native fault touches release output.
+- Finish native faults exclusively before running publication or other probes.
+- Promotion declined: existing locality/actual-body/exclusive-restoration rules.
+
 ## _(2026-10-04 UTC)_ — D156 unit continuity
 
 - Preserve the whole prior navigation, not an incomplete selection of old pointers.

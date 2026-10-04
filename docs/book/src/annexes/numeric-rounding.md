@@ -53,6 +53,10 @@ wrapped arithmetic rather than relying only on debug overflow panic. Five existi
 mutations still discriminate. Every runner restores production source byte-identically; run them
 exclusively without other builds, probes or gates.
 
+Both mutation entries prepare the [local producer profile](../build-and-checks.md#direct-python-producers)
+and validate their source/output paths before writing or compiling. Signed rounding rebuilds its
+restored focused target; unsigned rounding rebuilds both debug and release focused targets.
+
 The structural suite watches the independent Decimal fixture verifier. Strict native tests and real
 WASM cross-compilation verify their stated scope; WASM compilation is not a runtime numerical
 certificate. G1-SLICE.5a.3c.1 owns this primitive. [Individual literal conversion](formula-literals.md) is implemented under .5a.3c.2. Whole-expression literal

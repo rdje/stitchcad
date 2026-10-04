@@ -252,6 +252,12 @@ bytes; run alone. Division and area-product domain failures cannot occur for val
 operands, so their caller labels are wired without claiming an impossible public failing example.
 This closes D90/D92, separate from a formula evaluator, command bus, MCP server or release signoff.
 
+The rounding, length-operator and domain-diagnostic mutation entries use the
+[local producer profile](../build-and-checks.md#direct-python-producers) before output or native
+dispatch. The mixed domain entry validates all five source files first, restores every source and
+rebuilds both focused unit/core targets. Unsigned rounding also rebuilds its release target after
+the release fault. Mutation diagnostics run exclusively; their restoration includes compiled artifacts.
+
 ## 3. The five tolerance classes
 
 There is no global epsilon. **Every comparison names its class**, and each class's value is *derived

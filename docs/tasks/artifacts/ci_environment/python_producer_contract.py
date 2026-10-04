@@ -203,7 +203,6 @@ def main():
             red += 1
         else:
             raise AssertionError((name, 'body fault survived'))
-    call = "runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](\n    ROOT, directories=(WORK,), sources=(SOURCE,))\n"
     adopters = (
         (ENTRY, 'size_membership_mutations'),
         (ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py', 'ease_mutations'),
@@ -212,15 +211,23 @@ def main():
         (ROOT / 'docs/tasks/artifacts/size_chart/size_chart_mutations.py', 'size_chart_mutations'),
         (ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py', 'size_chart_collection_mutations'),
         (ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py', 'mtm_chart_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/round_mutations.py', 'formula_round_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py', 'formula_unsigned_round_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/length_operator_mutations.py', 'length_operator_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py', 'domain_context_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
         text = path.read_text()
+        source_argument = 'SOURCES' if path.name == 'domain_context_mutations.py' else '(SOURCE,)'
+        source_anchor = 'sources=' + source_argument
+        call = ("runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](\n"
+                "    ROOT, directories=(WORK,), " + source_anchor + ")\n")
         capture(text, path, work_name=work_name)
         assert not (ROOT / 'target/scratch/python_producer_contract/absent-source').exists()
-        assert text.count('sources=(SOURCE,)') == 1
-        capture(text.replace('sources=(SOURCE,)',
-                             "sources=(SOURCE, ROOT / 'target/scratch/python_producer_contract/absent-source')", 1),
+        assert text.count(source_anchor) == 1
+        capture(text.replace(source_anchor,
+                             'sources=(*' + source_argument + ", ROOT / 'target/scratch/python_producer_contract/absent-source')", 1),
                 path, work_name=work_name, refusal=True)
         assert text.count(call) == 1
         try:

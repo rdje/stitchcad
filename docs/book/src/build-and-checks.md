@@ -126,10 +126,15 @@ Measurement-table, garment-observation, chart-collection and MTM mutation entrie
 the declared-path guard before output or child dispatch. Each restores its exact source and
 runs its complete focused test target again to rebuild the current artifact before returning.
 
-Standing controls cover17 runtime cases and thirteen actual body faults, including seven real
+Rounding, length-operator and domain-context mutation entries prepare the same profile and declared
+paths. The mixed domain entry validates all five source files before writing. Unsigned rounding
+rebuilds both debug and release profiles after restoration; domain diagnostics rebuild both
+unit and core targets. Run native mutation diagnostics exclusively.
+
+Standing controls cover17 runtime cases and seventeen actual body faults, including eleven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All seven entry captures also refuse a late missing source before
+12 membership tests passing. All eleven entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.

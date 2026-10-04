@@ -881,7 +881,7 @@ Explicit13 owned paths; hook/brief0/clean precede .p.n.m2.
   fixed caps and complete book/task navigation preserved; focused gate then unit group.
   Work unit STITCHCAD-G1-0126; source76eaaff: DEV_NOTES16364B/16384, recipes963L/1000.
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.u1`
-  Status: `pending`
+  Status: `done`
   Goal: round, unsigned-round, length-operator and mixed domain-context native entry guards.
   Acceptance: all declared sources before writes; actual prefixes/refusals/body reds; exclusive
   native faults and exact source/current debug+release artifacts restored. Owned after .n.h2.
@@ -920,3 +920,40 @@ and final primary acceptance proxies stay live; no earlier bytes/reader/schema/b
 
 Final staged gate13green, rc=0, target/d156-unit-retention-gate.log; cached diff0.
 Explicit10 owned paths; hook/brief0/clean precede .p.n.u1.
+
+
+### G1-SLICE.5b.4c.h2.b.p.n.u1
+
+- [x] **ROOT CAUSE** — standalone entries lack their own activation; each actual omission
+  fails the first-write assertion. Mixed entry reads five sources; release faults leave compiled
+  output unless restored. Actual prefixes/body controls, rc=0, target/d156-units-ci-reviewed.log.
+- [x] **ADDRESSED** — four entry guards/all-source planning; standing17runtime/17actual body
+  reds/11actual captures/11late-source refusals, rc=0, guarded CI environment probes.
+  Existing native argv retained; unsigned final rebuilds both profiles, mixed final both crates.
+- [x] **NO REGRESSION** — direct exclusive seven-export-absent round5/unsigned9debug+1release/
+  length6/domain14 assertion reds; exact source/current artifacts restored4/5debug+5release/
+  4/5units+3core tests, rc=0, target/d156-units-*-native.log and actual restored*.log files.
+  Existing CI19/6/local56/13/2/1/census9/9/4/Git226/285 pass; Rust diff empty.
+  Publication10/62chapters/67API and glossary17, rc=0, target/d156-units-{publication,glossary}.log.
+- [x] **LOCKSTEP** — entry ledger/controls/live/task/index/three book pages agree;
+  D156 open; G1 5/18,12open/143sealed unchanged. Grammar/Rust API unchanged.
+- [x] **PROMOTION** — declined: existing all-source/exclusive/debug+release restoration rules.
+- [x] **COMMIT** — complete0127; focused publication/ledger and staged gate/hook precede next leaf.
+
+Initial edit script refuses IndentationError1 before changing adapter files; new controls then
+correctly fail missing activation1. Correct the script edits, rerun after readability review:
+final actual controls pass0; earlier attempts are not accepted receipts. Syntax inventory226/
+6844AST/68heredocs/2649embedded remains inspection only. Native terminal0 consumed before log reads.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f1`
+  Status: `pending`
+  Goal: lexer and semantic direct native entry guards with validated local override preservation.
+  Acceptance: source plans before reads/writes, actual prefixes/late refusals/body faults and
+  child environment capture; classifier-only behavior retained; exclusive native faults/restoration.
+  Work unit STITCHCAD-G1-0128; lexer declares two sources; semantic child env must retain prepared stores.
+
+Final ledger9/pointer13/coverage9arms/10lanes/13trees/12siblings/zero gaps, rc=0,
+target/d156-units-{ledger,coverage}.log. Native/compiler jobs terminal and consumed; Rust diff empty.
+
+Final staged gate13green, rc=0, target/d156-units-staged-gate.log; cached diff0.
+Explicit15 owned paths; hook/brief0/clean precede .p.n.f1.

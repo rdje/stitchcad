@@ -1,9 +1,12 @@
 """D89: mutate actual public length operators; require compiled assertion reds and restore bytes."""
 from pathlib import Path
+import runpy
 import subprocess
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-units/src/length.rs'
 WORK = ROOT / 'target/length_operator_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=(SOURCE,))
 WORK.mkdir(exist_ok=True)
 ORIGINAL = SOURCE.read_bytes()
 TEXT = ORIGINAL.decode()
@@ -28,5 +31,9 @@ try:
         SOURCE.write_bytes(ORIGINAL)
 finally:
     SOURCE.write_bytes(ORIGINAL)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-units', '--test', 'length_operator_contract'],
+                              cwd=ROOT, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored length artifact failed', restored.stderr.decode())
 assert SOURCE.read_bytes() == ORIGINAL
-print('Length operator mutations: six actual reds; production source restored byte-identically')
+print('Length operator mutations: six actual reds; source and actual compiled artifact restored')
