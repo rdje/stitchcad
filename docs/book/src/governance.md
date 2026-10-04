@@ -500,3 +500,8 @@ from committed40a3c0c: five oldest ledger entries, two oldest lessons and comple
 acceptance records. Original task headings and identities stay linked; active audit requirements
 remain live. Exact source/read/materialization and descriptor/navigation checks establish retention;
 older windows and fixed bounds remain unchanged. This transition adds no product behavior.
+
+Before Python guard repairs, .h2.b.p.h retains the four complete committed D156 lessons and
+the complete census acceptance/refusal record from3e400c1. The live task heading links to its
+exact record; pending repair requirements remain live. Source and public-reader/materialization
+comparisons preserve original separators and one terminal LF, with earlier sealed bytes unchanged.

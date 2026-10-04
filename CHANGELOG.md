@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0121 - retain Python repair continuity (leaf `G1-SLICE.5b.4c.h2.b.p.h`)
+
+- Seal two complete source3e400c1 intervals: four whole lessons and census acceptance/refusal
+  record. Task IDs/headings and active repair requirements remain live; bounds/reader unchanged.
+- Exact source/read/materialization321/hash/line/byte/LF assertions0; all26 prior retained paths
+  unchanged. No code/grammar change; shared Python guards .p.a next.
+
 ## STITCHCAD-G1-0120 - finite standalone producer inventory (leaf `G1-SLICE.5b.4c.h2.b.i`)
 
 - Retain225 maintained entry points/all Python calls/whole shell and embedded bodies; assign

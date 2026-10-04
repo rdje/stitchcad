@@ -776,10 +776,12 @@ is required before completeness claims. No direct producer is executed with ambi
   published contracts, never implementation/submodule pins. Keep actual inspected path inventory.
   Work unit STITCHCAD-G1-0120; readonly census/control producer owned here before creation.
 - ID: `G1-SLICE.5b.4c.h2.b.p`
-  Status: `pending`
+  Status: `in_progress`
   Goal: shared profile for direct Python native/temp producers; actual standalone captures/faults.
   Acceptance: plan-before-exec, arguments/channel/effective stores, no lost module/fixture contracts;
   real native focused checks/source+artifact restoration after exclusive faults. Split further if needed.
+  Children .p.h bounded continuity, .p.a shared Python entry/output/source guards and first native
+  producer, .p.n remaining native groups, .p.o output/delegation groups, .p.v focused closure.
 - ID: `G1-SLICE.5b.4c.h2.b.s`
   Status: `pending`
   Goal: shell/temporary/platform/book entry guards and safe public integration defaults.
@@ -846,38 +848,60 @@ clean postconditions precede the next .b.i census slice.
 
 ### G1-SLICE.5b.4c.h2.b.i
 
-- [x] **ROOT CAUSE** — guarded capture of the actual size-membership standalone body reaches
-  WORK.mkdir with all five store exports absent; capture refuses before write/child/mutation,
-  rc=0, target/d156-census-baseline.log. D156 remains open; direct .b.p repair is scheduled next.
-- [x] **ADDRESSED** — readonly producer_census.py and225 classified entry rows retain every
-  Python AST call and whole shell/Make/workflow/hook/manifest/book source. Independent Git225/
-  284 AST/source/bash boundary checks,9 assertions/9 actual refusals/4 compiled-body reds pass0,
-  guarded run_ci_environment_probes.sh, rc=0, target/d156-census-ci-final.log.
-  Candidate labels do not prove execution or locality.
-- [x] **NO REGRESSION** — existing CI19/6 and local56/13compiled/2Make/1shell profiles pass0;
-  ledger9/pointer13, publication10 (62chapters/67API), coverage10/13/12/zero gaps pass0,
-  guarded ledger/publication/coverage probes, rc=0, target/d156-census-{ledger,publication,coverage}.log.
-  No Rust/reference/grammar change.
-- [x] **LOCKSTEP** — entry ledger owns Python .b.p, shells/selectors .b.s and final .b.v;
-  root/task/index/live resume/book agree. Counts G1 5/18,12open/143sealed unchanged.
-- [x] **PROMOTION** — declined: existing finite-coverage/locality/actual-body proof principles.
-- [x] **COMMIT** — complete0120 census; staged gate/hook/brief0/clean precede .b.p.
+[Exact complete record](../history/stitchcad-devnotes-part131.md); 37L/2807B/sha256:5c5f7c600a2fdd3f06d245b34cd3541fb3dccba7e5eb9c2312c30fde74aa1fb7.
 
-Census actual current source:225 entries/6637 Python AST calls/68 literal heredocs/2649 embedded
-Python calls. These are syntax inventory counts, never native-command or all-producer signoff.
-Direct cargo/rustc calls and variable argv are assigned native; fixture writers/dynamic loaders
-retain separate rows and their complete source. Comments and fault strings are not executable AST
-calls; data heredocs stay data. The locator is explicitly not a general shell command parser.
-Make/bootstrap/hooks, generator/platform early Git, mktemp/ambient TMPDIR, book destinations,
-cleanup/history/scaffold public integration and input selectors remain owned review boundaries.
-No external repository implementation/pin/cache was changed or read for assumptions.
+## Python producer repair slices
 
-Final live ledger/pointer9+13 and coverage9 probe arms pass0 after frontier updates,
-target/d156-census-{ledger,coverage}-final.log. Primary/library/retained bytes unchanged.
+- ID: `G1-SLICE.5b.4c.h2.b.p.h`
+  Status: `done`
+  Goal: retain complete committed lessons and the completed census before guard receipt growth.
+  Acceptance: DEV_NOTES16309B/16384target, committed recipes883L/1000 split trigger; exact source3e400c1
+  whole intervals, IDs/proxies and public reader/materialization/hashes/navigation retained.
+  No older sealed file/window/reader/cap changes; focused ledger/coverage/publication/gate.
+  Work unit STITCHCAD-G1-0121; blocking continuity retention before .p.a implementation.
+- ID: `G1-SLICE.5b.4c.h2.b.p.a`
+  Status: `pending`
+  Goal: shared Python activation/output/source-path guards; first actual standalone native producer.
+  Acceptance: plan stores and owned paths before writes, preserve argv/channel/environment;
+  independent runtime/capture/body faults and real exclusive native faults/source+artifact restoration.
+- ID: `G1-SLICE.5b.4c.h2.b.p.n`
+  Status: `pending`
+  Goal: apply the verified entry/owned-path contract to remaining direct native producers.
+  Acceptance: divide finite entry ledger into bounded groups before edits; actual standalone
+  captures/refusals and exclusive focused native assertions/restoration per group.
+- ID: `G1-SLICE.5b.4c.h2.b.p.o`
+  Status: `pending`
+  Goal: Python fixture/materialization/temp producers and dynamic delegated entry paths.
+  Acceptance: divide the finite entry ledger before edits; keep borrowed module/fixture/root
+  contracts, fail before escaped write/delegation, actual captures/body faults/focused checks.
+- ID: `G1-SLICE.5b.4c.h2.b.p.v`
+  Status: `pending`
+  Goal: verify the complete Python entry/delegation/output inventory before shell repairs.
+  Acceptance: current maintained source coverage and meaningful runtime refusal/positive receipts;
+  no unverified Python scope claimed complete. D156 stays open through shell/final integration.
 
-First staged gate refuses1/two doctrine breaches: new ADDRESSED/NO REGRESSION receipts used
-pass0 without explicit exit-status tokens inside the bullets. Correct their invocation/rc=0
-receipts, preserving original failed target/d156-census-staged-gate.log; final gate below.
 
-Final staged gate13green, rc=0, target/d156-census-staged-gate-final.log; cached diff0.
-Explicit12 owned paths; hook/brief0/clean postconditions complete before Python repair.
+### G1-SLICE.5b.4c.h2.b.p.h
+
+- [x] **ROOT CAUSE** — source3e400c1 OS counts: DEV_NOTES16309B/16384target and
+  recipes883L/1000 split trigger; guard receipts need bounded continuity space, rc=0.
+- [x] **ADDRESSED** — two complete unique committed intervals: devnotes130 four whole lessons,
+  27L/1546B/sha256240a92f182aee412d8e981bbe0db71660f126168ca698dfb98091e02d13fa099;
+  devnotes131 complete census37L/2807B/sha2565c5f7c600a2fdd3f06d245b34cd3541fb3dccba7e5eb9c2312c30fde74aa1fb7.
+  Public read/materialize321/source/hash/line/byte/LF assertions rc=0; all26 earlier retained paths unchanged.
+- [x] **NO REGRESSION** — guarded ledger9/pointer13, publication10 (62chapters/67API),
+  coverage10/13/12/zero gaps and retention321logical/17workingMD/13448decodedL/980111decodedB/
+  443343residentB, rc=0, target/d156-python-{ledger,publication,coverage,retention}.log.
+  No code/native/grammar/pin/window/cap changes; staged gate and hook before commit.
+- [x] **LOCKSTEP** — exact record/proxy/entry IDs, root lesson/resume/task/index/book sync;
+  Python .p.a next, D156 open. G1 5/18,12open/143sealed unchanged.
+- [x] **PROMOTION** — declined: existing complete-original/immutable-byte/bounded-navigation rules.
+- [x] **COMMIT** — complete0121 retention; staged gate/hook/brief0/clean precede .p.a.
+
+Initial materialization comparison assumed a flattened filename and refuses with FileNotFound1.
+Read public materialize contract/actual path census: it preserves docs/history below destination.
+Correct only the verifier path; repeated actual source/read/materialized/hash/line/byte/LF assertions0.
+No failed read was counted as proof, no reader or destination content was altered to fit the check.
+
+Final staged retention gate13green, rc=0, target/d156-python-retention-gate.log; cached diff0.
+Explicit9 paths; hook/brief0/clean postconditions precede shared Python guard implementation.

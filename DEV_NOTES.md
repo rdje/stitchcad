@@ -5,35 +5,15 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
-## _(2026-10-04 UTC)_ — D156 producer census
-
-- Retain every AST call and whole shell body; matches are candidates.
-- Watch paths against Git, including sources outside scan roots.
-- Intercept the first actual write before testing ambient defaults.
-- Promotion declined: existing coverage/locality rules.
-
-## _(2026-10-04 UTC)_ — D156 audit record retention
-
-- Seal whole committed records before producer-audit growth; keep IDs/headings as linked proxies.
-- Compare decoded/materialized bytes to source, preserving separators and one terminal LF.
-- Active/future audit contracts stay live; immutable prior records and limits stay fixed.
-- Promotion declined: existing exact-retention and bounded-navigation principles.
-
-## _(2026-10-04 UTC)_ — D156 runner observation
-
-- Exact jobs/every step establish observed CI; terminal logs establish actual counts and stores.
-- Wait for the download's terminal result before parsing; an incomplete read is discarded.
-- Rust CI uses its explicit profile; local default/fault proof is separately scoped.
-- Promotion declined: existing terminal-output and exact-head evidence rules.
-
-## _(2026-10-04 UTC)_ — D156 guarded producer defaults
-
-- Plan all local stores before creating paths; fresh verification never trusts a marker.
-- Preserve selected channels; explicit installation disables host launcher self-update.
-- Actual Make/exec/review children and compiled faults watch storage and argument contracts.
-- Promotion declined: existing locality/source/observed-proof policies cover this repair.
 
 
+
+## _(2026-10-04 UTC)_ — D156 Python continuity
+
+- Seal complete committed lessons and census receipts before guard growth.
+- Preserve source intervals, task IDs and public materialization hierarchy.
+- Earlier sealed records and fixed bounds stay unchanged.
+- Promotion declined: existing exact-retention/navigation rules.
 
 # Sealed archive — earlier lessons
 
@@ -146,3 +126,5 @@ The live lesson window is bounded by200 lines/16384 bytes; the archive verifier 
 | [`part127`](docs/history/stitchcad-devnotes-part127.md) | completed task protocol/receipts | 54 lines, 3975 bytes, `sha256:2a74689f…` |
 | [`part128`](docs/history/stitchcad-devnotes-part128.md) | completed task protocol/receipts | 32 lines, 2528 bytes, `sha256:74fd1e0b…` |
 | [`part129`](docs/history/stitchcad-devnotes-part129.md) | completed task protocol/receipts | 49 lines, 3668 bytes, `sha256:e672a026…` |
+| [`part130`](docs/history/stitchcad-devnotes-part130.md) | complete D156 continuity | 27 lines, 1546 bytes, `sha256:240a92f1…` |
+| [`part131`](docs/history/stitchcad-devnotes-part131.md) | complete D156 continuity | 37 lines, 2807 bytes, `sha256:5c5f7c60…` |
