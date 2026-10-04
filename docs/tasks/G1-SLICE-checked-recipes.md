@@ -279,10 +279,11 @@ owned next, not treated as closed. This review commits independently before its 
   Work unit STITCHCAD-G1-0115. Predecessor c91cdf5 clean/brief0/no jobs; changes owned before writes.
   Verification/Commit: `STITCHCAD-G1-0115`; final receipts below. Runner proof belongs to .h1.
 - ID: `G1-SLICE.5b.4c.h1`
-  Status: `in_progress`
+  Status: `done`
   Goal: observe exact-head jobs and every step after the required immediate .h0 doctrine push.
   Acceptance: actual terminal doctrine/Rust verdicts; own/fix failures before D154, no aggregate
-  polling inference or unobserved verification claim. Verification/Commit: `pending`.
+  polling inference or unobserved verification claim. Verification/Commit: `STITCHCAD-G1-0116`;
+  [exact observed receipts](G1-SLICE-recipes.md#exact-window5-runner-receipts).
 - ID: `G1-SLICE.5b.4c.r`
   Status: `pending`
   Goal: D154 whole reference known-ordinal repair after containment/runner verification.

@@ -787,7 +787,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h1` | `in_progress` | Exact runner observation; D156 defaults then D154 repair |
+| current | `G1-SLICE.5b.4c.h2` | `pending` | D156 ordinary producer defaults before D154 repair |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

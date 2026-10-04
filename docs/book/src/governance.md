@@ -479,8 +479,12 @@ bash scripts/history_archive.sh prove-source window5
 bash scripts/history_archive.sh read docs/history/stitchcad-changelog-part110.md
 ```
 
-Required runner verification belongs to G1-SLICE.5b.4c.h1 after the containment commit/push;
-no runner verdict for this transition has been observed yet. D154 remains open until .4c.r.
+At exact pushed d1198ab, both actual jobs completed successfully: [doctrine enforce](https://github.com/rdje/stitchcad/actions/runs/37180745357/job/111372644621)
+and all eight steps; [Rust check](https://github.com/rdje/stitchcad/actions/runs/37180745375/job/111372644773)
+and all eleven steps. The actual Rust log reports1.99.0, strict formatting/Clippy,703 passing tests
+across59 result groups, three WASM outputs and all four stores on the checkout volume. Post-commit
+published archive controls pass328 actual verdicts, including refusal of a changed committed window5
+catalog. G1-SLICE.5b.4c.h1 records the evidence; D156 defaults then D154 repair remain open.
 
 
 Published Make targets still inherit Cargo/Rustup stores and scratch defaults when caller exports

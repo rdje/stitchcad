@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0116 - observed window5 CI (leaf `G1-SLICE.5b.4c.h1`)
+
+Exact pushed d1198ab doctrine8/Rust11 steps all completed/success. Actual Rust1.99 strict703tests/
+59groups/WASM3/four checkout-local stores verified; no aggregate inference. Post-commit archive
+CLI328 controls/313 reads includes newest committed-catalog refusal. Book/task/live scope agrees;
+G1 stays5/18,12siblings,12open/143sealed. D156 producer defaults then D154 known ordinals next.
+
+
 ## STITCHCAD-G1-0115 - D154 blocking retention (leaf `G1-SLICE.5b.4c.h0`)
 
 Window5 retains60 exact c91cdf5 files; isolated source/read/materialization proof reconstructs309

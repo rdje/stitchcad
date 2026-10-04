@@ -5,6 +5,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — window5 runner observation
+
+- Exact pushed head/jobs/every step establish CI; an aggregate may lag completed jobs.
+- Parse actual toolchain/tests/WASM/store evidence from the completed job log.
+- Committed newest-catalog refusal is earned after commit, with real copied CLI input.
+- Promotion declined: standing exact-head/actual-output/immutable-byte principles.
+
 ## _(2026-10-04 UTC)_ — D154 prerequisite retention
 
 - Window5 captures60 exact full files; prior windows/schemas/caps stay immutable.
