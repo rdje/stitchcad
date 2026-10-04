@@ -989,12 +989,11 @@ D162–D163 complete closure receipts retained in [part84](../history/stitchcad-
   current guarded test macro sites/custom positives, actual classifier/site faults and exclusive
   native assertion reds plus exact source/full target restoration.
 
-- **D165** — literal/normalized-expression classifiers accept assertion-labelled expect noise.
-  Both actual predicates compiled against independent failed-body expect location/message return
-  true, rc=0, target/d165-classifier-baseline.log; no native/source writes. Root: message-prefix
-  heuristic and non-strict controls; impact false assertion proof. Own .n.f3.r in G1-SLICE,
-  P1 immediately after .n.h3.v.c before new signatures; guarded current test macro sites, strict
-  classifier/site faults, exclusive13+17 native reds and exact source/full target restoration.
+D165 closes at .n.f3.r: guarded current assertion sites/three explicit refusal assertions; strict controls83 and30 native reds/full6/8 restored, rc=0.
+Original report retained exactly in [part86](../history/stitchcad-defects-part86.md).
 
 D166 closes at .h3.v.c: Git count failures/malformed counts refuse2; 19 controls/four actual body reds pass0.
 Original report retained in [part85](../history/stitchcad-defects-part85.md); no source/Git mutation in controls.
+
+- **D167** — normalized/canonical-recipe predicates also accept labelled-expect failed-body noise, rc=0, target/d167-classifier-baseline.log; no native/source writes.
+  Root: prefix heuristic and missing strict classifier controls. Own G1-SLICE.5b.4c.h2.b.p.n.f4.r, P1 after .n.f3.r before .n.f9; guard current test sites, calibrate actual faults, verify exclusive17+21 reds/full8/10 restores.

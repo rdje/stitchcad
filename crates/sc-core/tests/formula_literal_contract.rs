@@ -101,8 +101,12 @@ fn kinds_quanta_and_angle_turns_are_preserved() {
 #[test]
 #[allow(clippy::expect_used)]
 fn width_checks_precede_rounding_and_length_checks_follow_it() {
-    let error = value("0.0000000000000000000000000000000000000001 um")
-        .expect_err("assertion: rounding to zero cannot rescue denominator width");
+    let result = value("0.0000000000000000000000000000000000000001 um");
+    assert!(
+        result.is_err(),
+        "rounding to zero cannot rescue denominator width"
+    );
+    let error = result.expect_err("asserted denominator-width refusal");
     assert_eq!(
         error.rule(),
         R::RationalWidth {
@@ -111,7 +115,9 @@ fn width_checks_precede_rounding_and_length_checks_follow_it() {
         }
     );
     assert_eq!(value("1000000000.4 um"), Ok((K::Length, 1000000000)));
-    let error = value("1000000000.5 um").expect_err("assertion: rounded length must refuse");
+    let result = value("1000000000.5 um");
+    assert!(result.is_err(), "rounded length must refuse");
+    let error = result.expect_err("asserted length refusal");
     assert_eq!(
         error.rule(),
         R::LengthDomain {

@@ -370,6 +370,7 @@ def main():
             'checked_expression_mutations.py', 'checked_statement_mutations.py',
             'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py',
             'declaration_mutations.py', 'name_read_mutations.py',
+            'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -424,6 +425,7 @@ def main():
             red += 1
         else:
             raise AssertionError('D156 Python actual child-store reset survived')
+    classifier_count = 0
     for filename, work_name, rust, target, test in (
             ('literal_normalization_mutations.py', 'formula_literal_mutations', 'literal.rs',
              'formula_literal_contract', 'independent_fraction_fixtures_cover_conversion_width_and_domain'),
@@ -489,39 +491,39 @@ def main():
                 red += 1
             else:
                 raise AssertionError('D156 Python doc restoration omission survived')
-        classifier_controls(text, path, strict=test is None)
+        classifier_controls(text, path, strict=True)
+        classifier_count += 1
         tree = ast.parse(text)
         function = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure')
         actual = ast.get_source_segment(text, function)
         broad = "def assertion_failure(output):\n    return b'assertion' in output"
         assert text.count(actual) == 1
         try:
-            classifier_controls(text.replace(actual, broad, 1), path, strict=test is None)
+            classifier_controls(text.replace(actual, broad, 1), path, strict=True)
         except AssertionError as error:
             assert str(error) == 'D159 assertion evidence accepted noise'
             red += 1
         else:
             raise AssertionError('D159 actual broad classifier survived')
-        if test is None:
-            permissive = "def assertion_failure(output):\n    parts = output.split(b'\\nfailures:\\n', 2)\n    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None"
-            try:
-                classifier_controls(text.replace(actual, permissive, 1), path, strict=True)
-            except AssertionError as error:
-                assert str(error) == 'D159 assertion evidence accepted noise'
-                red += 1
-            else:
-                raise AssertionError('D160 actual expect-label classifier fault survived')
-            helper = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites')
-            helper_text = ast.get_source_segment(text, helper)
-            assert helper_text.count('if match is not None:') == 1
-            omitted = helper_text.replace('if match is not None:', 'if False:', 1)
-            try:
-                classifier_controls(text.replace(helper_text, omitted, 1), path, strict=True)
-            except AssertionError as error:
-                assert str(error) == 'D160 assertion sites changed'
-                red += 1
-            else:
-                raise AssertionError('D160 actual assertion-site omission survived')
+        permissive = "def assertion_failure(output):\n    parts = output.split(b'\\nfailures:\\n', 2)\n    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None"
+        try:
+            classifier_controls(text.replace(actual, permissive, 1), path, strict=True)
+        except AssertionError as error:
+            assert str(error) == 'D159 assertion evidence accepted noise'
+            red += 1
+        else:
+            raise AssertionError('D160 actual expect-label classifier fault survived')
+        helper = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites')
+        helper_text = ast.get_source_segment(text, helper)
+        assert helper_text.count('if match is not None:') == 1
+        omitted = helper_text.replace('if match is not None:', 'if False:', 1)
+        try:
+            classifier_controls(text.replace(helper_text, omitted, 1), path, strict=True)
+        except AssertionError as error:
+            assert str(error) == 'D160 assertion sites changed'
+            red += 1
+        else:
+            raise AssertionError('D160 actual assertion-site omission survived')
         assert text.count(before) == 1
         try:
             capture_child(text.replace(before, "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", 1),
@@ -570,7 +572,8 @@ def main():
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / 19 actual native-child capture cases / 10 calibrated failed-body classifiers / source unchanged')
+          str(len(adopters)) + ' actual late-source refusals / 19 actual native-child capture cases / ' +
+          str(classifier_count) + ' calibrated failed-body classifiers / source unchanged')
 
 
 if __name__ == '__main__':

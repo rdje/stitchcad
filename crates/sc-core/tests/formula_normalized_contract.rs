@@ -157,9 +157,9 @@ fn every_literal_position_refuses_atomically_with_original_span() {
             syntax.root().span(),
         );
         #[allow(clippy::expect_used)]
-        let error = syntax
-            .normalize_literals()
-            .expect_err("assertion: every literal must be checked");
+        let result = syntax.normalize_literals();
+        assert!(result.is_err(), "every literal must be checked");
+        let error = result.expect_err("asserted literal refusal");
         assert!(matches!(
             error.rule(),
             R::RationalWidth {

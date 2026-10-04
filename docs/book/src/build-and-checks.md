@@ -150,16 +150,19 @@ Recipe and statement mutation entries likewise validate all declared sources/out
 or writes, retain prepared child stores and rebuild their restored full focused target. Recipe mode
 also retains its coupled test selection; classifier-only mode invokes no native fault.
 
-Literal and normalized-expression mutation entries use the same guard and full restored-target
-rebuild. Their assertion classifiers accept evidence only from failed-test bodies. Passing names,
-failure summaries, expect-only panics, compiler messages and incomplete output cannot supply it.
-Classifier-only mode checks anchors/noise without compiling a native fault; standing controls
-compile actual broad-classifier faults against independent noise fixtures.
+Literal and normalized-expression entries guard implementation/test sources and output before
+reads/writes, retain child stores and rebuild their full restored targets. Failed-body panic paths,
+lines and columns must match current test assertion sites; custom messages pass and labelled expect
+panics refuse. Three refusal preconditions now assert explicitly. Thirty compiled mutation cases
+are actual macro-site reds; standing controls calibrate broad/prefix/site faults with independent
+fixtures. Classifier-only mode checks anchors/noise without native fault dispatch.
 
 Normalized-recipe and canonical-recipe entries likewise validate their declared paths before
 reads/writes, preserve prepared child stores and rebuild their full focused target after restoration.
 The normalized entry declares all three mutated sources before activating any output. Existing
 classifier-only behavior and failed-body/noise rules remain available in both entries.
+D167 owns their stronger source-site proof: the current message-prefix classifiers still accept
+assertion-labelled expect noise. This boundary is separate from the repaired expression entries.
 
 Canonical-expression and checked-expression entries also guard source/output before reads/writes,
 inherit prepared child stores and rebuild complete focused targets after exact source restoration.

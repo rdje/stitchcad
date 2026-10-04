@@ -152,3 +152,11 @@ new cadence control runs actual Bash checker bodies:19 boundary/refusal/real-Git
 body faults. Counts are simulated only in boundary/failure arms; integration metadata is real,
 read-only, with no fixture repository/source writes. Closed complete .h3.v node/receipt intervals
 are retained under fixed caps; policy code has local evidence until the next authorized push.
+
+Normalization provenance — STITCHCAD-G1-0140 (.n.f3.r): D165 original predicates accepted
+assertion-labelled expect noise. Prior30 actual logs reclassify as27 macro reds/three expect panics;
+preserve them, strengthen those three refusal assertions, guard both current test sources and
+require failed-body macro locations. Actual Python controls83 body reds include permissive/site
+faults; classifier count derives the visited loop. Exclusive13+17 native reds/four current Rust
+sources exact/full6/8 artifacts restored0. Initial proof mixed text/bytes1 excluded; corrected proof0.
+D167 same prefix weakness reproduces in normalized/canonical recipes; .n.f4.r owns P1 next.

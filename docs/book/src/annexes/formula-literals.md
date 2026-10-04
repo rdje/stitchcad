@@ -100,7 +100,10 @@ faults must fail assertions in failed-test bodies. The direct entry uses the
 [producer profile](../build-and-checks.md#direct-python-producers) before source reads/output writes,
 retains prepared child stores and rebuilds the complete focused target after exact restoration.
 Classifier-only mode checks anchors and refuses passing-name/expect/compiler noise without compiling
-a fault. Standing structural controls and calibrated actual classifier faults watch this boundary.
+a fault. Panic paths, lines and columns must match assertion sites in the guarded current test
+source; custom messages remain valid and assertion-labelled expect panics refuse. Width and length
+refusal preconditions assert explicitly before extracting errors. All thirteen compiled faults are
+current macro-site assertion reds. Standing controls calibrate broad/prefix/site faults.
 
 G1-SLICE.5a.3c.2 owns this API. This API converts one literal; the separate whole-arena API below converts all literal inputs.
 Neither checks operators/names, folds sign, binds values, evaluates or constructs geometry.
@@ -175,6 +178,9 @@ Seventeen actual compiled faults alter root/name/unary/square/operator identity,
 call coverage, depth/span, literal unit/refusal, iterator behavior or Debug privacy. They must fail
 assertions in failed-test bodies; the direct entry validates source/output before reads/writes,
 preserves prepared child stores and rebuilds the full focused target after exact restoration.
+Panic paths, lines and columns must match guarded current test assertion sites; custom messages pass,
+assertion-labelled expect panics refuse. Atomic literal refusal asserts explicitly before extracting
+its error. All seventeen compiled faults are macro-site reds; full eight-test restoration passes.
 Classifier-only mode checks anchors and failed-body/noise classification without compiling a fault.
 The structural suite watches the
 independent shape verifier. G1-SLICE.5a.3c.3 owns this whole-arena stage; .4 completes its coupled review below.

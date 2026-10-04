@@ -956,7 +956,7 @@ Complete requirements/acceptance retained in [part161](../history/stitchcad-devn
   Goal: built-in/operator signature native guards and D164 current assertion-source proof.
   Acceptance: all implementation/test/output plans, actual entry/child/classifier controls;
   exclusive21+14 native assertion reds, exact sources/full native targets restored.
-  Own blocking complete receipt/report retention under fixed caps; P1 after .n.f8.
+  Own blocking complete receipt/report retention under fixed caps; P1 after .n.f4.r.
 Final retention: three whole7a7c5b8 intervals/public367/prior71 bytes exact;13open/150sealed, rc=0, eighth-retention-final-proof2.log.
 Initial retention probes1 excluded: corrected full CLI document versus sealed payload comparison, then closed live headings versus open report bullets; no retained bytes changed.
 Final glossary17/coverage9, rc=0; archive367/63working MD/14773L/1079761B, rc=0. Fixed caps held.
@@ -971,26 +971,29 @@ Final0136 staged gate all13green, rc=0, eighth-staged-gate-final.log; cached dif
   Goal: exact window6 job/step evidence; full requirements in [part165](../history/stitchcad-devnotes-part165.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f3.r`
-  Status: `todo`
+  Status: `done`
   Goal: D165 literal/normalized-expression assertion-source repair, P1 immediately after .n.h3.v.c.
+  STITCHCAD-G1-0140 owns both producer/test sources, strict actual controls and blocking whole .h3.v.c/ledger/report retention.
+  Actual prior logs:27 macro reds/three expect-label panics; repair those test preconditions before native proof.
   Acceptance: guarded test sources/current macro sites/custom assertions/noise refusals; actual
   classifier/site body reds, exclusive13+17 native reds, exact source/full6/8 targets restored.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3.v.c`
   Status: `done`
-  Goal: director2026-10-04 supersedes immediate push exceptions:400 commits unless explicitly requested.
-  Acceptance: align COMMIT/check_push_due/public docs and boundary/refusal controls before .n.f3.r.
-  STITCHCAD-G1-0139 also owns guarded cadence controls/CI-suite registration and census/book sync.
-  Own blocking whole closed .h3.v node/receipt retention under fixed caps before growing acceptance.
-Complete0138 final receipts in [part166](../history/stitchcad-devnotes-part166.md).
+  Goal: director400 cadence/D166 fixed; complete requirements/acceptance in [part167](../history/stitchcad-devnotes-part167.md).
 
-### G1-SLICE.5b.4c.h2.b.p.n.h3.v.c
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f4.r`
+  Status: `todo`
+  Goal: D167 normalized/canonical-recipe assertion-site proof and strict controls; P1 next after .n.f3.r.
+  Acceptance: guarded test/implementation paths, real body controls/exclusive17+21 native reds, exact source/full8/10 restores; own blocking whole records before growth.
 
-- [x] **ROOT CAUSE** — former CI/doctrine exception conflicts with director400 ruling; D166 actual failed-count27 becomes0/no-push, rc=0, push-cadence-count-failure-baseline.log.
-- [x] **ADDRESSED** — exception removed; Git/count refusals2; 19 boundary/refusal/real-Git controls and four actual body reds pass, rc=0, push-cadence-controls.log; D166 sealed85.
-- [x] **NO REGRESSION** — full environment suite/Python17/79 body reds/census228 and publication43/archiveCLI393/377/coverage9, rc=0, push-cadence-{environment-probes,publication,archive-probes,coverage}.log.
-- [x] **LOCKSTEP** — COMMIT/checker/Make/help/toolbox/book/live/task agree; historical SPINE policy superseded.
-- [x] **PROMOTION** — declined: director ruling lives in COMMIT and this leaf; no inferred policy.
-- [x] **COMMIT** — complete0139; clear brief/clean; no early push under new400 rule.
-Final0139 two exact90766 intervals/full original D166 report/public377/prior374 and14open/151sealed, rc=0, push-cadence-retention-proof.log; fixed caps unchanged.
-Final0139 ledger9/pointer13/staged gate all13green/cached diff0, rc=0, push-cadence-{ledger,staged-gate}.log; hook/brief/clean follow; no push below400.
+### G1-SLICE.5b.4c.h2.b.p.n.f3.r
+
+- [x] **ROOT CAUSE** — both actual predicates accept labelled-expect noise; prior30 logs show27 macro/three expect panics, rc=0, d165-{classifier-baseline,prior-native-provenance}.log.
+- [x] **ADDRESSED** — guard current test sources/sites, explicit three refusal assertions; Python17/83 actual body reds/ten strict classifiers and exclusive30 macro reds/four sources exact/full6/8 restores, rc=0, d165-{python-controls,native-driver,native-proof}.log.
+- [x] **NO REGRESSION** — strict703/59groups, environment/census228/Python83, publication43/archiveCLI396/380/glossary17/coverage9/ledger9/pointer13, rc=0, d165-{full-check,environment-probes,publication,archive-probes,glossary,coverage,ledger}.log.
+- [x] **LOCKSTEP** — live/book/task/current source proof agree; D165 sealed/D167 owned next; grammar/API/caps fixed.
+- [x] **PROMOTION** — declined: existing current assertion-site/profile/retention rules; scoped proof, no new policy.
+- [x] **COMMIT** — complete0140 then .n.f4.r; brief0/clean/no push below400.
+Final0140 three whole00826 intervals/public380/prior377/14open152sealed, rc=0, d165-retention-proof.log; strict classifier count is derived; next targets8/10 re-derived from sources.
+Final0140 staged gate all13green/cached diff0, rc=0, d165-staged-gate.log; all verification terminals consumed; hook/brief/clean follow.
