@@ -511,3 +511,9 @@ intervals: five oldest ledger entries, three whole lessons and four acceptance r
 Original task headings link to exact records; current nodes and further final receipts stay live.
 Public reads and materialization reproduce the sealed files, and each decoded interval matches
 its committed source. Earlier retained files and the reader's fixed bounds remain unchanged.
+
+Before unit-entry repairs, .h2.b.p.n.h2 retains the complete engineering-continuity navigation,
+two whole lessons and the complete primary-profile narrative from committed76eaaff. The live
+front door uses the public archive list as its complete query contract, with an exact predecessor
+navigation link and recent-record table. Active task nodes stay live; public source/read/materialization
+and file-inventory comparisons verify retrieval without raising the fixed bounds.
