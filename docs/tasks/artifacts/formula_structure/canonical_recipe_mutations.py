@@ -2,12 +2,17 @@
 from pathlib import Path
 import os
 import re
+import runpy
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/canonical_recipe.rs'
+WORK = ROOT / 'target/canonical_recipe_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=(SOURCE,))
 original = SOURCE.read_bytes()
+WORK.mkdir(parents=True, exist_ok=True)
 cases = [
  ('binding opcode', 'text.push_str("(bind ");', 'text.push_str("(let ");'),
  ('assertion opcode', 'text.push_str("(assert ");', 'text.push_str("(check ");'),
@@ -54,21 +59,23 @@ if sys.argv[1:] == ['--classifier-only']:
     print('canonical recipe fault controls:21 unique actual anchors; passing/expect/compiler noise refused')
     sys.exit(0)
 
-work = ROOT / 'target/canonical_recipe_mutations'
-work.mkdir(parents=True, exist_ok=True)
-env = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'), TMPDIR=str(ROOT / 'target/scratch'))
+environment = dict(os.environ)
 try:
     for index, (name, before, after) in enumerate(cases, 1):
         SOURCE.write_text(original.decode().replace(before, after, 1))
         result = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_canonical_recipe_contract'],
-                                cwd=ROOT, env=env, capture_output=True)
+                                cwd=ROOT, env=environment, capture_output=True)
         output = result.stdout + result.stderr
-        (work / ('fault-%d.log' % index)).write_bytes(output)
+        (WORK / ('fault-%d.log' % index)).write_bytes(output)
         assert result.returncode == 101 and b'test result: FAILED.' in output and assertion_failure(output), (name, output.decode())
         assert b'could not compile' not in output, (name, 'compiler refusal is not assertion proof')
         print('canonical recipe fault %d %s:rc=101 actual compiled assertion red' % (index, name), flush=True)
         SOURCE.write_bytes(original)
 finally:
     SOURCE.write_bytes(original)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_canonical_recipe_contract'],
+                              cwd=ROOT, env=environment, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored canonical recipe artifact failed', restored.stderr.decode())
 assert SOURCE.read_bytes() == original
-print('canonical recipe faults:21 actual compiled assertion reds; source restored exactly')
+print('canonical recipe faults:21 actual compiled assertion reds; source/current artifact restored')

@@ -2,13 +2,19 @@
 from pathlib import Path
 import os
 import re
+import runpy
 import subprocess
 import sys
 ROOT = Path(__file__).resolve().parents[4]
 STATEMENT = ROOT / 'crates/sc-core/src/recipe/statement.rs'
 ORDERED = ROOT / 'crates/sc-core/src/recipe/ordered.rs'
 NORMALIZED = ROOT / 'crates/sc-core/src/recipe/normalized_recipe.rs'
-originals = {p: p.read_bytes() for p in [STATEMENT, ORDERED, NORMALIZED]}
+WORK = ROOT / 'target/normalized_recipe_mutations'
+SOURCES = (STATEMENT, ORDERED, NORMALIZED)
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=SOURCES)
+originals = {p: p.read_bytes() for p in SOURCES}
+WORK.mkdir(parents=True, exist_ok=True)
 cases = [
  ('name retained', STATEMENT, 'name: self.name,', 'name: "scrubbed",'),
  ('name span retained', STATEMENT, 'name_span: self.name_span,', 'name_span: self.annotation_span,'),
@@ -34,32 +40,35 @@ cases = [
  ('statement cause', NORMALIZED, 'Some(self.error.as_ref())', 'None'),
 ]
 for name, path, before, _ in cases:
- assert originals[path].decode().count(before) == 1, (name, 'actual anchor not unique')
+    assert originals[path].decode().count(before) == 1, (name, 'actual anchor not unique')
 def assertion_failure(output):
- parts = output.split(b'\nfailures:\n', 2)
- return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None
+    parts = output.split(b'\nfailures:\n', 2)
+    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None
 assert not assertion_failure(b'test assertion_ok ... ok\n\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_ok\n')
 assert not assertion_failure(b'assertion: compiler output\n')
 assert assertion_failure(b'\nfailures:\nthread panicked:\nassertion `left == right` failed\n\nfailures:\ncontract\n')
 assert sys.argv[1:] in [[], ['--classifier-only']]
 if sys.argv[1:] == ['--classifier-only']:
- print('normalized recipe fault controls:17 unique actual anchors; passing/expect/compiler noise refused')
- sys.exit(0)
-work = ROOT / 'target/normalized_recipe_mutations'
-work.mkdir(parents=True, exist_ok=True)
-env = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'), TMPDIR=str(ROOT / 'target/scratch'))
+    print('normalized recipe fault controls:17 unique actual anchors; passing/expect/compiler noise refused')
+    sys.exit(0)
+environment = dict(os.environ)
 try:
- for index, (name, path, before, after) in enumerate(cases, 1):
-  path.write_text(originals[path].decode().replace(before, after, 1))
-  result = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_normalized_recipe_contract'],
-                          cwd=ROOT, env=env, capture_output=True)
-  output = result.stdout + result.stderr
-  (work / ('fault-%d.log' % index)).write_bytes(output)
-  assert result.returncode == 101 and b'test result: FAILED.' in output and assertion_failure(output), (name, output.decode())
-  assert b'could not compile' not in output, (name, 'compiler refusal is not assertion proof')
-  print('normalized recipe fault %d %s:rc=101 actual compiled assertion red' % (index, name), flush=True)
-  path.write_bytes(originals[path])
+    for index, (name, path, before, after) in enumerate(cases, 1):
+        path.write_text(originals[path].decode().replace(before, after, 1))
+        result = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_normalized_recipe_contract'],
+                                cwd=ROOT, env=environment, capture_output=True)
+        output = result.stdout + result.stderr
+        (WORK / ('fault-%d.log' % index)).write_bytes(output)
+        assert result.returncode == 101 and b'test result: FAILED.' in output and assertion_failure(output), (name, output.decode())
+        assert b'could not compile' not in output, (name, 'compiler refusal is not assertion proof')
+        print('normalized recipe fault %d %s:rc=101 actual compiled assertion red' % (index, name), flush=True)
+        path.write_bytes(originals[path])
 finally:
- for path, content in originals.items(): path.write_bytes(content)
+    for path, content in originals.items():
+        path.write_bytes(content)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_normalized_recipe_contract'],
+                              cwd=ROOT, env=environment, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored normalized recipe artifact failed', restored.stderr.decode())
 assert all(p.read_bytes() == content for p, content in originals.items())
-print('normalized recipe faults:17 actual compiled assertion reds; all three sources restored exactly')
+print('normalized recipe faults:17 actual compiled assertion reds; all three sources/current artifact restored')

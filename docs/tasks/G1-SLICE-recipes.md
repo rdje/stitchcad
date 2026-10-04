@@ -838,22 +838,7 @@ verify all six intervals/retrieval again0. The failed attempt is not counted as 
   Work unit STITCHCAD-G1-0125; read each entry's arguments, source/work paths and measurement book.
 
 
-- [x] **ROOT CAUSE** — guarded OS/source counts: committed recipes992L/1000 trigger,
-  DEV_NOTES16025B/16384 and ledger32531B/32768 targets; next native receipts need space, rc=0.
-- [x] **ADDRESSED** — six complete exact committeda392d31 intervals/proxies: public read/
-  materialize327/source/sha/line/byte/single-LF assertions, rc=0, target/d156-native-retention-proof.log.
-  All28 prior retained/control paths byte-identical; corrected initial proxy assertion is not proof.
-- [x] **NO REGRESSION** — guarded ledger9/pointer13, publication10/62chapters/67API,
-  coverage9arms/10lanes/13trees/12siblings/zero gaps, retention327logical/23workingMD/
-  13704decodedL/998589decodedB/461821residentB, rc=0, target/d156-native-*.log.
-  No code/native/grammar/window/reader/schema/cap change; full CI not due.
-- [x] **LOCKSTEP** — root/live/task/index/book/navigation agree; .p.n.m2 chart group next,
-  D156 open; G1 5/18,12open/143sealed unchanged. IDs/current nodes/final receipts retained.
-- [x] **PROMOTION** — declined: existing whole-source/exact-retention/navigation principles.
-- [x] **COMMIT** — complete0124; staged gate/hook/brief0/clean precede chart entry implementation.
-
-Final staged gate13green, rc=0, target/d156-native-retention-gate.log; cached diff0.
-Explicit13 owned paths; hook/brief0/clean precede .p.n.m2.
+Complete .p.n.h acceptance retained in [part147](../history/stitchcad-devnotes-part147.md).
 
 
 ### G1-SLICE.5b.4c.h2.b.p.n.m2
@@ -966,28 +951,10 @@ invocation and focused/coupled consumers must stay green. Shell-wide profile aud
 
 ### G1-SLICE.5b.4c.h2.b.p.n.f3
 
-- [x] **ROOT CAUSE** — two actual predicates accept101/FAILED expect-only noise with passing
-  assertion_name; source untouched, rc=0, target/d159-classifier-baseline.log; original report77.
-- [x] **ADDRESSED** — source/output guards, inherited children, full rebuild and failed-body
-  classifiers; CI17runtime/31body reds/17prefixes/17late/seven child cases/two calibrated classifiers,
-  rc=0, target/d156-formula-third-ci-complete.log. Actual broad-classifier body faults fail.
-- [x] **NO REGRESSION** — exclusive seven-export-absent13+17 compiled body assertion reds,
-  exact source/current artifacts restored6/8 tests; classifier-only anchors/noise0, rc=0,
-  target/d156-formula-third-*-native.log. Guarded full structural/coupled runner and publication43,
-  existing CI19/6/local56/13/2/1/census9/9/4/Git226/285, rc=0. Rust diff empty.
-  Four complete ecc67e5 source intervals/read/materialize341/hash/L/B/LF/list/prior44 bytes,
-  rc=0, target/d156-formula-third-retention-complete.log; fixed caps unchanged.
-- [x] **LOCKSTEP** — entry/control/standing runner/live/task/book agree; D159 verified closed;
-  D156 open; grammar/Rust API unchanged. Shell wrapper profiles remain .b.s, not claimed repaired.
-- [x] **PROMOTION** — declined: existing source/child/failed-body/exclusive-restoration principles.
-- [x] **COMMIT** — complete0131; final focused ledger/staged gate/hook/brief0/clean before next group.
-
-Post-format CI refused exact tuple anchor1; native ran before that refusal was acted on. Finish
-native exclusively, correct spacing and rerun CI0; executable AST identical, format-proof.log0.
-Failed run is excluded; no later source mutation overlaps the native job.
+Complete acceptance retained in [part146](../history/stitchcad-devnotes-part146.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f4`
-  Status: `pending`
+  Status: `done`
   Goal: normalized-recipe/canonical-recipe native entries with all-source planning and child stores.
   Acceptance: three normalized sources/one canonical source before reads/output; actual captures,
   late-source refusals/body faults, classifier behavior and exclusive native/restored full artifacts.
@@ -996,3 +963,35 @@ Failed run is excluded; no later source mutation overlaps the native job.
 Final glossary17/ledger9+pointer13/coverage9arms/10lanes/13trees/12siblings/zero gaps, rc=0.
 Final staged gate13green, rc=0, target/d156-formula-third-staged-gate.log; cached diff0.
 Explicit19 owned paths; hook/brief0/clean precede .p.n.f4; actual12open/146sealed/zero overlap0.
+
+Work unit STITCHCAD-G1-0132 owns .n.f4 and blocking complete receipt/closure/ledger retention
+before growth: recipes998L/PLANNING995L/CHANGELOG32177B; unchanged fixed caps.
+
+### G1-SLICE.5b.4c.h2.b.p.n.f4
+
+- [x] **ROOT CAUSE** — both entries read sources/create output before profile; child overlays lose
+  custom stores. Actual child captures/body faults prove the defect, rc=0, fourth-child-baseline.log.
+- [x] **ADDRESSED** — all-source/output guards, preserved children and full restored targets; actual
+  CI17runtime/35body/19prefixes/19late/nine children/two classifiers, rc=0,
+  target/d156-formula-fourth-ci-final.log. Actual omitted-guard/store-reset faults fail.
+- [x] **NO REGRESSION** — exclusive absent-export17+21 genuine assertion reds; both classifier
+  modes/driver rc=0; exact four-source bytes restored. Full restored targets8/10 tests pass0,
+  target/{normalized_recipe_mutations,canonical_recipe_mutations}/restored.log; Rust diff empty.
+  Publication43/glossary17/coverage9/retention345, rc=0, target/d156-formula-fourth-*.log.
+  Four whole22af192 intervals devnotes146/147, defects78, changelog115: public345/read/materialize/
+  SHA/L/B/LF/list/all48 prior immutable/control bytes, rc=0, fourth-retention-proof.log.
+- [x] **LOCKSTEP** — entry/control/live/task/book agree; grammar/API unchanged; D156 stays open.
+  D160 actual canonical predicate accepts expect/passing-name noise, rc=0,
+  target/d160-classifier-baseline.log; logged/owned next .n.f5 before repair.
+- [x] **PROMOTION** — declined: existing all-source/child/failed-body/exclusive-restoration rules.
+- [x] **COMMIT** — complete0132; focused ledger/staged gate/hook/brief0/clean before next group.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f5`
+  Status: `todo`
+  Goal: canonical/checked-expression native guards, preserved child stores and D160 assertion proof.
+  Acceptance: source/output plans, actual captures/refusals/body faults, canonical coupled selection;
+  failed-body classifiers/noise faults, exclusive natives and exact source/full artifacts restored.
+  Own blocking complete receipt/report retention under fixed caps before growth; P1 after .n.f4.
+
+Final ledger9/pointer13/coverage9, rc=0; census13open/146sealed/zero overlap, rc=0.
+Staged gate13green/cached diff0, rc=0, fourth-staged-gate.log; hook/brief0/clean precede .n.f5.

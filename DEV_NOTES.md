@@ -10,6 +10,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 recipe normalization entries
+
+- Plan all source files before activation; a later invalid source must leave earlier stores untouched.
+- Preserve prepared stores through mutation and full restoration children.
+- Compile a suspicious classifier predicate before trusting its proof; D160 is owned next.
+- Promotion declined: existing all-source/actual-child/failed-body/exclusive-restoration rules.
+
 ## _(2026-10-04 UTC)_ — D159 normalization assertion evidence
 
 - Match failed-test bodies; a passing name or failure summary cannot certify an assertion red.
@@ -72,3 +79,5 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part143`](docs/history/stitchcad-devnotes-part143.md) | complete native continuity | 25 lines, 1810 bytes, `sha256:998c9c31…` |
 | [`part144`](docs/history/stitchcad-devnotes-part144.md) | complete formula acceptance | 19 lines, 1556 bytes, `sha256:258f0351…` |
 | [`part145`](docs/history/stitchcad-devnotes-part145.md) | complete formula acceptance | 17 lines, 1483 bytes, `sha256:b81b50d5…` |
+| [`part146`](docs/history/stitchcad-devnotes-part146.md) | complete native acceptance | 21 lines, 1722 bytes, `sha256:d8a38048…` |
+| [`part147`](docs/history/stitchcad-devnotes-part147.md) | complete native acceptance | 16 lines, 1336 bytes, `sha256:adc51db8…` |

@@ -787,7 +787,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.n.f4` | `pending` | D156 normalized/canonical recipe entries, then remaining guards/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.n.f5` | `todo` | D156 canonical/checked-expression guards and D160, then guards/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

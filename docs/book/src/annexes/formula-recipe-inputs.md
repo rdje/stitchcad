@@ -198,7 +198,9 @@ Five compile-fail docs check private construction and all three cross-domain equ
 two runnable API docs check source-independent usage. Twenty-one actual production serializer faults
 must compile and fail public assertions, covering headers, operands, envelope/order/count/spacing,
 empty identity, terminal newline, opaque Debug and exact extraction. The exclusive runner restores
-its source exactly; its classifier refuses compiler/expect-only/passing-name noise. Existing authored
+its source exactly and rebuilds the full focused canonical-recipe target. The direct entry validates
+source/output through the [producer profile](../build-and-checks.md#direct-python-producers) before
+reads/writes and preserves prepared child stores. Its classifier refuses compiler/expect-only/passing-name noise. Existing authored
 fixtures remain checked by the actual independent recursive reference; no independent whole-recipe
 parser or numerical evaluation proof is claimed. [Coupled review .3f.2](#coupled-input-and-identity-review) is complete below.
 
@@ -223,7 +225,9 @@ Six compile-fail docs check private fields/source/view lifetimes, and two runnab
 
 Seventeen actual production faults compile and fail public assertions: name/header metadata,
 declared kind/tolerance, operand coverage/error role, order/count/ordinal, spans, privacy and both
-error causes. The exclusive runner restores all three sources exactly. Its failed-body classifier
+error causes. The direct entry validates all three sources/output before reads/writes and preserves
+prepared child stores. The exclusive runner restores every source exactly and rebuilds the full
+focused normalized-recipe target. Its failed-body classifier
 refuses passing-name, compiler and expect-only noise; the structural suite watches actual anchors.
 Authored fixtures are checked by the independent recursive reference, with semantic execution trapped.
 Test-side header/operand byte composition is inspection, not a product statement/recipe serializer.

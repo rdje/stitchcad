@@ -302,11 +302,13 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/statement_mutations.py', 'statement_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py', 'formula_literal_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py', 'formula_normalized_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py', 'normalized_recipe_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py', 'canonical_recipe_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
         text = path.read_text()
-        source_argument = ('SOURCES' if path.name in ('domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py')
+        source_argument = ('SOURCES' if path.name in ('domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py', 'normalized_recipe_mutations.py')
                            else '(SOURCE,)')
         source_anchor = 'sources=' + source_argument
         call = ("runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](\n"
@@ -344,7 +346,9 @@ def main():
         raise AssertionError('D156 Python actual child-store reset survived')
     for name, files, target in (
             ('recipe', ('ordered.rs', 'statement.rs'), 'formula_recipe_contract'),
-            ('statement', ('statement.rs',), 'formula_statement_contract')):
+            ('statement', ('statement.rs',), 'formula_statement_contract'),
+            ('normalized_recipe', ('statement.rs', 'ordered.rs', 'normalized_recipe.rs'), 'formula_normalized_recipe_contract'),
+            ('canonical_recipe', ('canonical_recipe.rs',), 'formula_canonical_recipe_contract')):
         path = ROOT / f'docs/tasks/artifacts/formula_structure/{name}_mutations.py'
         sources = tuple(ROOT / 'crates/sc-core/src/recipe' / file for file in files)
         text = path.read_text()
@@ -412,7 +416,7 @@ def main():
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / 7 actual native-child capture cases / 2 calibrated normalization classifiers / source unchanged')
+          str(len(adopters)) + ' actual late-source refusals / 9 actual native-child capture cases / 2 calibrated normalization classifiers / source unchanged')
 
 
 if __name__ == '__main__':

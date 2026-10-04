@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0132 - normalized/canonical recipe entry guards (leaf `G1-SLICE.5b.4c.h2.b.p.n.f4`)
+
+- Both entries plan all sources/output before reads/writes and preserve prepared child stores.
+- CI17runtime/35body/19prefixes/19late/nine children/two classifiers and publication43 pass0.
+- Exclusive absent-export38 genuine assertion reds; classifier modes0; exact sources restored and
+  complete normalized8/canonical10 tests pass0. Four whole22af192 intervals/public345/prior48 bytes0.
+- D160 broad canonical assertion predicate independently reproduced/owned next. Grammar/API fixed;
+  D156 remains open. G1 5/18,13open/146sealed; canonical/checked-expression guards follow.
+
 ## STITCHCAD-G1-0131 - guarded normalization entries and D159 (leaf `G1-SLICE.5b.4c.h2.b.p.n.f3`)
 
 - Guard both entries before reads/writes, preserve prepared children and rebuild full restored targets.
@@ -271,17 +280,6 @@ prior584/11, canonical12 and13149 shared/6reference/9Rust/3text controls pass, r
 language16/publication10/ledger9+13 pass0; exact archive307/62working records. Coupled .3 closes;
 whole immutable graph .4 next. G1 stays5/18; independent10open/140sealed; no native source change.
 
-## STITCHCAD-G1-0111 - shared static contract and phase counterexamples (leaf `G1-SLICE.5b.3d.c`)
-
-Independent13149 shared cases compare actual public Rust and reference kinds, complete dimension
-arguments, call/child priority, ordered dependency sources, borrowed owners and worked21/refusal13
-populations. Six reference/nine Rust actual compiled body faults restore all sources/artifact.
-D149's two stale prerequisite clauses are fixed with actual copied-text assertion controls.
-Strict native690/58,WASM3,full reference/publication10 pass, rc=0. Original protocol/lesson/old
-navigation/ledger/closure/report retained exactly; bounds/caps/grammar unchanged.
-Competing early over-width literal versus later syntax exposes D150: reference domain vs public
-syntax refusal. Reproducer is deliberately failing and not yet in the standing runner; owned .3d.d
-immediately before final coupled closure and .4. G1 stays5/18;11open/138sealed; final signoff open.
 
 
 
@@ -317,3 +315,4 @@ immediately before final coupled closure and .4. G1 stays5/18;11open/138sealed; 
 
 | [`part113`](docs/history/stitchcad-changelog-part113.md) | G1-0109 through G1-0105 | 53 lines, 4156 bytes, `sha256:feeb6e30…` |
 | [`part114`](docs/history/stitchcad-changelog-part114.md) | G1-0110 whole-source preflight | 9 lines, 761 bytes, `sha256:dd7f339a…` |
+| [`part115`](docs/history/stitchcad-changelog-part115.md) | G1-0111 static contract | 11 lines, 955 bytes, `sha256:fde1010c…` |

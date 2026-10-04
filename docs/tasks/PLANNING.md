@@ -976,20 +976,11 @@ D155 complete closure receipt retained in [part75](../history/stitchcad-defects-
   .h0 commit/.h1 runner observation, before D154 native verification; establish actual durable
   producer fault controls, fix published entry-point defaults and verify native/WASM/G0 locality.
 
-D157 closes at G1-SLICE.5b.4c.h2.b.p.n.d1: nine current formula annex scopes agree with
-implemented ordered/expression/whole kind proofs; numerical/runtime/physical limits stay explicit.
-Actual original introductions9 and final publication39/22 retired-clause refusals/four method
-visibility refusals/reworded positive/compiled omission red pass0. Original committed report is
-retained exactly in [part74](../history/stitchcad-defects-part74.md); no grammar or Rust API change.
+D157–D159 complete closed receipts retained in [part78](../history/stitchcad-defects-part78.md).
 
-
-D158 closes at G1-SLICE.5b.4c.h2.b.p.n.f2: statement serialization/normalized factory limits
-and current10-contract count agree with public APIs/actual restored native target10. Publication43
-includes both stale scope clauses and declaration/source-marker count faults; original working
-report retained exactly in [part76](../history/stitchcad-defects-part76.md). No grammar/Rust API change.
-
-
-D159 closes at G1-SLICE.5b.4c.h2.b.p.n.f3: both classifiers read failed-test bodies, refusing
-passing-name/expect/compiler/summary noise. Two actual broad-body faults fail independent controls;
-exclusive13+17 native assertion reds and restored full6/8 targets pass0. Original committed
-report retained exactly in [part77](../history/stitchcad-defects-part77.md). Grammar/Rust API unchanged.
+- **D160** — canonical-expression native classifier accepts expect-only failure when a passing
+  assertion_name occurs elsewhere. Compile its actual Assert predicate against independent noise:
+  target/d160-classifier-baseline.log, rc=0; no compiler or source writes. Root: whole-output
+  substring at canonical_expression_mutations.py:67 (blame8ed28930). Impact: false assertion proof.
+  Own G1-SLICE.5b.4c.h2.b.p.n.f5, P1 immediately after .n.f4; failed-body classifier, actual broad
+  fault/noise controls and exclusive default/coupled native restoration before closure.

@@ -4,20 +4,18 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- G1-SLICE.5b.4c.h2.b.p.n.f3/0131 guards literal/normalized-expression entries, preserves child
-  stores and rebuilds full restored targets. D159 classifiers now read failed-test bodies; two actual
-  broad faults fail noise controls. CI17runtime/31body/17prefixes/17late/seven child cases/two
-  classifiers0; exclusive30 native assertion reds, source/current artifacts restored6/8tests;
-  both modes0; guarded full structural/coupled runner/publication43 pass0. Grammar unchanged.
-- Post-format CI1 exact tuple anchor; native started before acting on refusal. Native completed
-  exclusively; spacing corrected, executable AST identical and final CI0. Failed receipt excluded.
-- Next .p.n.f4 normalized_recipe_mutations.py/canonical_recipe_mutations.py: three normalized
-  sources/one canonical source before reads/output, preserve child stores/classifier; actual prefixes,
-  late refusals/body faults, exclusive natives/full restored artifacts. Blocking retention owned.
-- D156 open: 17 of37 native entries guarded; rest then .p.o fixture/delegation/.p.v; .b.s shell/
-  platform/book (raw numeric Cargo fences), .b.v full gates/exact CI. Shell wrappers remain pending.
-- Four complete ecc67e5 intervals devnotes144/145, defects77, changelog114 exact; public341/prior44
-  bytes0. D157/D158 fixed; D159 closed. G1 5/18,12siblings,12open/146sealed; D18 absent by design.
+- G1-SLICE.5b.4c.h2.b.p.n.f4/0132 guards normalized/canonical recipe entries before reads/output;
+  all three normalized sources planned first. Prepared stores retained through both children.
+  CI17runtime/35body/19prefixes/19late/nine children/two classifiers0; exclusive38 native assertion
+  reds; exact sources/current artifacts restored8/10tests; both modes0; publication43 green.
+- Next .p.n.f5 canonical_expression_mutations.py/checked_expression_mutations.py: guard source/
+  output before reads/writes, preserve custom stores/default+coupled argv, rebuild full targets.
+  D160 broad canonical predicate actually accepts expect-only/passing-name noise; baseline0,
+  no compiler/writes. Failed-body classifier and calibrated actual broad fault required.
+- D156 open:19 of37 native entries guarded; rest then .p.o fixture/delegation/.p.v; .b.s shell/
+  platform/book (raw numeric Cargo fences), .b.v full gates/exact CI. Wrappers remain pending.
+- Four whole22af192 intervals devnotes146/147, defects78, changelog115 exact; public345/prior48
+  bytes0. D157–D159 fixed; D160 P1 owned next. G1 5/18,12siblings,13open/146sealed.
 - Census226/Git226/285/9assertions/9refusals/4body reds0; syntax inspection only. Primary.a/0117
   native703/WASM3/full28; .v/0118 exact8f87a10 doctrine8/Rust11 steps success. Local1.99/stable.
 - Then D154 .4c.r real whole ordinals, detached/global invent none; .4/.5b open, arithmetic .5c.1
