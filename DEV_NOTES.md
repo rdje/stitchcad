@@ -10,6 +10,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 recipe/statement entries
+
+- Observe both selected mutation calls and full restored-target calls with custom stores.
+- Keep a low-level syntax view's limits distinct from a separate normalized serialization API.
+- Compare documented contract counts with test markers and the actual complete native target.
+- Promotion declined: existing child-profile/scoped-proof/actual-body/restoration rules.
+
 ## _(2026-10-04 UTC)_ — D157 current formula scope
 
 - Old metadata introductions must be revisited when later proof APIs arrive.
@@ -53,3 +60,5 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part139`](docs/history/stitchcad-devnotes-part139.md) | complete D156 continuity | 75 lines, 6116 bytes, `sha256:6333c858…` |
 | [`part140`](docs/history/stitchcad-devnotes-part140.md) | complete native acceptance | 22 lines, 1806 bytes, `sha256:62d32615…` |
 | [`part141`](docs/history/stitchcad-devnotes-part141.md) | complete native acceptance | 23 lines, 1823 bytes, `sha256:567dba9b…` |
+| [`part142`](docs/history/stitchcad-devnotes-part142.md) | complete native continuity | 17 lines, 1438 bytes, `sha256:350a473d…` |
+| [`part143`](docs/history/stitchcad-devnotes-part143.md) | complete native continuity | 25 lines, 1810 bytes, `sha256:998c9c31…` |

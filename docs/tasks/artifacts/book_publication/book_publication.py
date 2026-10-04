@@ -50,7 +50,9 @@ FORMULA_SCOPE = {
                       "remaining implementation is owned by .5b–.5g"),
     "runtime-validation": (),
     "statements": ("complete recipe validation and evaluation remain G1-SLICE.5 work",
-                   "recipe normalization/identity .3f, numerical execution and production approval remain owned future work"),
+                   "recipe normalization/identity .3f, numerical execution and production approval remain owned future work",
+                   "statement serialization, numerical evaluation and production approval remain later",
+                   "The recipe has no persistent statement serialization or recipe hash yet; .3f.1 owns that byte contract"),
     "static-validation": (),
 }
 FORMULA_METHODS = {
@@ -131,6 +133,12 @@ def formula_scope(root):
         for method in methods:
             require(re.search(method_pattern(method), source.read_text(), re.M),
                     "FORMULA_API", f"{file}: missing public {method}")
+    chapter = (root / SOURCE / "annexes/formula-statements.md").read_text()
+    declared = re.search(r"(?m)^(\d+) public contracts verify fifteen independently authored", chapter)
+    tests = (root / "crates/sc-core/tests/formula_statement_contract.rs").read_text()
+    population = len(re.findall(r"(?m)^#\[test\]$", tests))
+    require(declared is not None and int(declared[1]) == population,
+            "FORMULA_COUNT", f"statement contracts: declared {declared[1] if declared else 'absent'}, source {population}")
 
 
 def check(root):
@@ -233,7 +241,7 @@ def fixture(root, destination):
         target = destination / HTML / file.relative_to(root / HTML)
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(file, target)
-    for file in [Path("ROADMAP.md"), MAP] + [Path(row[2]) for row in rows(root)]:
+    for file in [Path("ROADMAP.md"), MAP, Path("crates/sc-core/tests/formula_statement_contract.rs")] + [Path(row[2]) for row in rows(root)]:
         target = destination / file
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(root / file, target)
@@ -274,6 +282,13 @@ def mutate(root, name):
         text = path.read_text()
         intro, rest = text.split("\n## ", 1)
         path.write_text(intro.replace("formula-checked-recipes.md", "formula-recipe-inputs.md") + "\n## " + rest)
+    elif name == "stale statement contract count":
+        replace(source / "annexes/formula-statements.md", "10 public contracts verify", "9 public contracts verify")
+    elif name == "missing statement contract marker":
+        path = root / "crates/sc-core/tests/formula_statement_contract.rs"
+        text = path.read_text()
+        require("#[test]\n" in text, "FIXTURE_ANCHOR", name)
+        path.write_text(text.replace("#[test]\n", "// removed test marker\n", 1))
     elif name == "unregistered chapter":
         (source / "unregistered.md").write_text("# Stranded reader chapter\n")
     elif name == "missing indexed chapter":
@@ -321,6 +336,8 @@ def main():
         for method in methods:
             cases[f"missing formula method:{file}:{method}"] = "FORMULA_API"
     cases["missing formula proof boundary"] = "FORMULA_SCOPE"
+    cases["stale statement contract count"] = "FORMULA_COUNT"
+    cases["missing statement contract marker"] = "FORMULA_COUNT"
     scratch = ROOT / "target/scratch"
     scratch.mkdir(parents=True, exist_ok=True)
     for name, expected in cases.items():

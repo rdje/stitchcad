@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0130 - guarded recipe/statement entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.f2`)
+
+- Guard declared sources/output before reads/writes; preserve prepared child stores/coupled selection.
+- Controls17runtime/25body/15prefixes/15late/five child cases0; direct exclusive35 native assertion
+  reds; exact sources/current artifacts restored10/11tests; both classifiers0. Grammar unchanged.
+- D158 serialization/count scope fixed: publication43 includes actual stale/count refusals.
+  Exact whole receipts142/143 and original working report76 retained; public337/prior41bytes0.
+- D159 broad classifier acceptance verified/owned next. D156 remains open; G1 5/18,13open/145sealed.
+
 ## STITCHCAD-G1-0129 - current formula proof scope (leaf `G1-SLICE.5b.4c.h2.b.p.n.d1`)
 
 - D157 closed: nine formula annex scopes agree with existing ordered/expression/whole kind proofs.

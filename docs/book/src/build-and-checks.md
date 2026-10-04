@@ -136,18 +136,23 @@ output. The lexer validates both source files. Semantic children inherit the pre
 including valid local overrides; they preserve the selected channel and unrelated environment.
 Both entries rebuild their restored focused targets. The semantic classifier-only mode remains available.
 
-Standing controls cover17 runtime cases and twenty actual body faults, including thirteen real
+Recipe and statement mutation entries likewise validate all declared sources/output before reads
+or writes, retain prepared child stores and rebuild their restored full focused target. Recipe mode
+also retains its coupled test selection; classifier-only mode invokes no native fault.
+
+Standing controls cover17 runtime cases and twenty-five actual body faults, including fifteen real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All thirteen entry captures also refuse a late missing source before
+12 membership tests passing. All fifteen entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
-Two native-child capture cases execute the real lexer/semantic bodies with custom local stores,
+Five native-child capture cases execute the real lexer/semantic/recipe/statement bodies with custom local stores,
 intercepting every source write and both initial/restoration child calls. The captures check actual
 arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing
-the semantic child's prior store reset earns a body assertion failure. These captures compile no fault;
+the prior per-child store reset earns a body assertion failure, as does discarding coupled selection.
+These captures compile no native fault;
 the exclusive native mutation runs establish that separate proof.
 
 ## Formula documentation currency
@@ -156,5 +161,7 @@ The publication probes watch current scope in nine formula annexes against publi
 ordered-statement and whole-recipe check methods. Known retired availability claims refuse;
 each introduction links the complete kind-proof boundary. Copied-body omissions must fail the
 same stale-fixture assertion as the intact checker. A changed link label remains valid.
+The statement contract count is checked against its public test markers, with both declaration
+and source-marker faults watched. Actual native tests retain the execution proof.
 These finite controls complement chapter/API/link checks; they do not certify all book prose.
 Static proofs still grant no numerical execution, physical correctness or product approval.

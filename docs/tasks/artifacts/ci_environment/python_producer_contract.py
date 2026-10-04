@@ -181,7 +181,7 @@ def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
     assert len(observations) == (0 if refusal else 1), 'D156 Python standalone capture absent'
 
 
-def capture_child(text, entry_path, work_name, sources, test_target):
+def capture_child(text, entry_path, work_name, sources, test_target, *, arguments=(), first_suffix=None):
     """Observe actual native calls with custom stores; every source write is intercepted."""
     original_sources = {path: path.read_bytes() for path in sources}
     work = ROOT / 'target' / work_name
@@ -213,6 +213,9 @@ def capture_child(text, entry_path, work_name, sources, test_target):
         assert environment.get('RUSTUP_AUTO_INSTALL') == '0', 'D156 Python child install policy lost'
         assert environment.get('D156_PYTHON_UNRELATED') == 'preserved', 'D156 Python child unrelated environment lost'
         assert args[:6] == ['cargo', 'test', '-p', 'sc-core', '--test', test_target], 'D156 Python child native argv changed'
+        if first_suffix is not None:
+            wanted = list(first_suffix) if not observed else []
+            assert args[6:] == wanted, 'D156 Python child test selection changed'
         assert kwargs.get('cwd') == ROOT and not positional, 'D156 Python child cwd changed'
         observed.append(args)
         raise Stopped
@@ -221,7 +224,7 @@ def capture_child(text, entry_path, work_name, sources, test_target):
         os.environ.update({name: str(ROOT / value) for name, value in custom.items()})
         os.environ.update(RUSTUP_TOOLCHAIN='1.99.0', RUSTUP_AUTO_INSTALL='0',
                           D156_PYTHON_UNRELATED='preserved')
-        sys.argv = [str(entry_path)]
+        sys.argv = [str(entry_path), *arguments]
         Path.mkdir, Path.write_text, Path.write_bytes, subprocess.run = no_mkdir, no_write, no_write, observe
         try:
             with contextlib.redirect_stdout(io.StringIO()):
@@ -274,11 +277,13 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py', 'domain_context_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_lex/formula_lex_mutations.py', 'formula_lex_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py', 'semantic_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/recipe_mutations.py', 'recipe_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/statement_mutations.py', 'statement_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
         text = path.read_text()
-        source_argument = ('SOURCES' if path.name in ('domain_context_mutations.py', 'formula_lex_mutations.py')
+        source_argument = ('SOURCES' if path.name in ('domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py')
                            else '(SOURCE,)')
         source_anchor = 'sources=' + source_argument
         call = ("runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](\n"
@@ -314,11 +319,46 @@ def main():
         red += 1
     else:
         raise AssertionError('D156 Python actual child-store reset survived')
+    for name, files, target in (
+            ('recipe', ('ordered.rs', 'statement.rs'), 'formula_recipe_contract'),
+            ('statement', ('statement.rs',), 'formula_statement_contract')):
+        path = ROOT / f'docs/tasks/artifacts/formula_structure/{name}_mutations.py'
+        sources = tuple(ROOT / 'crates/sc-core/src/recipe' / file for file in files)
+        text = path.read_text()
+        capture_child(text, path, name + '_mutations', sources, target, first_suffix=())
+        assert text.count(before) == 1
+        try:
+            capture_child(text.replace(before, "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", 1),
+                          path, name + '_mutations', sources, target)
+        except AssertionError as error:
+            assert str(error) == 'D156 Python child stores lost'
+            red += 1
+        else:
+            raise AssertionError('D156 Python actual child-store reset survived')
+    recipe = ROOT / 'docs/tasks/artifacts/formula_structure/recipe_mutations.py'
+    capture_child(recipe.read_text(), recipe, 'recipe_mutations',
+                  (ROOT / 'crates/sc-core/src/recipe/ordered.rs', ROOT / 'crates/sc-core/src/recipe/statement.rs'),
+                  'formula_recipe_contract', arguments=('--coupled',),
+                  first_suffix=('coupled_token_boundaries_preserve_zero_gap_and_all_whitespace',))
+    text = recipe.read_text()
+    selector = "selected = coupled_cases if sys.argv[1:] == ['--coupled'] else [(*case, '') for case in cases]"
+    assert text.count(selector) == 1
+    try:
+        capture_child(text.replace(selector, "selected = [(*case, '') for case in cases]", 1),
+                      recipe, 'recipe_mutations',
+                      (ROOT / 'crates/sc-core/src/recipe/ordered.rs', ROOT / 'crates/sc-core/src/recipe/statement.rs'),
+                      'formula_recipe_contract', arguments=('--coupled',),
+                      first_suffix=('coupled_token_boundaries_preserve_zero_gap_and_all_whitespace',))
+    except AssertionError as error:
+        assert str(error) == 'D156 Python child test selection changed'
+        red += 1
+    else:
+        raise AssertionError('D156 Python actual coupled-selection fault survived')
     assert SOURCE.read_bytes() == original and ENTRY.read_bytes() == entry, 'D156 Python source changed'
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / 2 actual native-child capture cases / source unchanged')
+          str(len(adopters)) + ' actual late-source refusals / 5 actual native-child capture cases / source unchanged')
 
 
 if __name__ == '__main__':

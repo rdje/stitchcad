@@ -2,14 +2,18 @@
 from pathlib import Path
 import os
 import re
+import runpy
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 ORDERED = ROOT / 'crates/sc-core/src/recipe/ordered.rs'
 STATEMENT = ROOT / 'crates/sc-core/src/recipe/statement.rs'
-originals = {path: path.read_bytes() for path in [ORDERED, STATEMENT]}
 WORK = ROOT / 'target/recipe_mutations'
+SOURCES = (ORDERED, STATEMENT)
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=SOURCES)
+originals = {path: path.read_bytes() for path in SOURCES}
 WORK.mkdir(parents=True, exist_ok=True)
 cases = [
     ('fixed bound', ORDERED, 'pub const MAX_STATEMENTS: usize = 4096;', 'pub const MAX_STATEMENTS: usize = 4097;'),
@@ -69,7 +73,7 @@ if sys.argv[1:] == ['--classifier-only']:
     sys.exit(0)
 selected = coupled_cases if sys.argv[1:] == ['--coupled'] else [(*case, '') for case in cases]
 label = 'coupled' if sys.argv[1:] == ['--coupled'] else 'recipe'
-environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'), TMPDIR=str(ROOT / 'target/scratch'))
+environment = dict(os.environ)
 try:
     for index, (name, path, before, after, test) in enumerate(selected, 1):
         path.write_text(originals[path].decode().replace(before, after))
@@ -84,5 +88,9 @@ try:
 finally:
     for path, content in originals.items():
         path.write_bytes(content)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_recipe_contract'],
+                              cwd=ROOT, env=environment, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored recipe artifact failed', restored.stderr.decode())
 assert all(path.read_bytes() == content for path, content in originals.items())
-print('%s faults:%d actual compiled assertion reds; both sources restored exactly' % (label, len(selected)))
+print('%s faults:%d actual compiled assertion reds; both sources and current artifact restored' % (label, len(selected)))

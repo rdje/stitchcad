@@ -858,21 +858,7 @@ Explicit13 owned paths; hook/brief0/clean precede .p.n.m2.
 
 ### G1-SLICE.5b.4c.h2.b.p.n.m2
 
-- [x] **ROOT CAUSE** — four original entries write/delegate without their own profile and
-  restore source alone. Each actual activation-omission prefix fails its assertion, rc=0 controls.
-- [x] **ADDRESSED** — four declared-source/output guards and final focused rebuilds; guarded
-  CI probes17runtime/13actual body reds/7actual prefixes/7late-source refusals, rc=0,
-  target/d156-chart-ci.log. Native argv retained; table output name independently specified.
-- [x] **NO REGRESSION** — direct exclusive runs with seven exports absent: table8/observation8/
-  collection14/MTM12 assertion reds, exact source/current artifact restored16/16/18/15 tests;
-  rc=0, target/d156-chart-*-native.log and target/{measurement_table,size_chart,size_chart_collection,
-  mtm_chart}_mutations/restored.log. Existing CI19/6/local56/13/2/1/census9/9/4/Git226/285 pass;
-  publication10/62chapters/67API and glossary17, rc=0, target/d156-chart-{publication,glossary-final}.log.
-  Rust diff empty. Syntax226/6814AST/68heredocs/2649embedded is inspection only.
-- [x] **LOCKSTEP** — finite entry ledger/controls/live/task/index/five book pages agree;
-  D156 open; G1 5/18,12open/143sealed unchanged. Grammar/Rust API unchanged.
-- [x] **PROMOTION** — declined: existing entry/locality/actual-body/exclusive restoration rules.
-- [x] **COMMIT** — complete0125; staged gate/hook/brief0/clean before next continuity leaf.
+Complete acceptance retained in [part142](../history/stitchcad-devnotes-part142.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h2`
   Status: `done`
@@ -897,29 +883,7 @@ Explicit17 owned paths; hook/brief0/clean precede bounded continuity .p.n.h2.
 
 ### G1-SLICE.5b.4c.h2.b.p.n.h2
 
-Source76eaaff: DEV_NOTES16364B/16384target, recipes963L/1000 trigger. Exact complete navigation137
-(118L/15488B), lessons138 (13L/676B), primary narrative139 (75L/6116B); descriptor SHA identities.
-Public source/read/materialize330/hash/L/B/single-LF and list/materialized membership assertions0;
-all34 prior retained/control paths identical, target/d156-unit-retention-proof.log. Current nodes
-and final primary acceptance proxies stay live; no earlier bytes/reader/schema/bounds changed.
-
-
-- [x] **ROOT CAUSE** — source/OS counts: DEV_NOTES16364B/16384, recipes963L/1000;
-  navigation is the dominant live working set before unit repair, rc=0.
-- [x] **ADDRESSED** — three complete unique76eaaff intervals; public read/materialize330/
-  source/sha/L/B/LF/list membership assertions, rc=0, target/d156-unit-retention-proof.log.
-  All34 earlier paths unchanged; complete prior navigation remains retrievable through137.
-- [x] **NO REGRESSION** — guarded ledger9/pointer13/publication10/62chapters/67API,
-  coverage9arms/10lanes/13trees/12siblings/zero gaps; retention330logical/26workingMD/
-  13943decodedL/1022753decodedB/485985residentB, rc=0, target/d156-unit-*.log.
-  No code/native/grammar/reader/window/schema/cap change; DEV_NOTES1513B before final receipts.
-- [x] **LOCKSTEP** — bounded continuity/query contract/root/task/index/book agree;
-  .p.n.u1 next, D156 open; G1 5/18,12open/143sealed unchanged. Active nodes/IDs stay live.
-- [x] **PROMOTION** — declined: existing whole-source/bounded-navigation/public-reader rules.
-- [x] **COMMIT** — complete0126; staged gate/hook/brief0/clean precede unit entry guards.
-
-Final staged gate13green, rc=0, target/d156-unit-retention-gate.log; cached diff0.
-Explicit10 owned paths; hook/brief0/clean precede .p.n.u1.
+Complete acceptance retained in [part143](../history/stitchcad-devnotes-part143.md).
 
 
 ### G1-SLICE.5b.4c.h2.b.p.n.u1
@@ -977,7 +941,7 @@ FORMULA_API refusal1 corrected from public code, then all controls rerun. Earlie
 is excluded. Initial guessed coverage entry127 discarded; discovered planning entry passes0.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f2`
-  Status: `pending`
+  Status: `done`
   Goal: recipe/statement direct native guards; preserve child stores and classifier/coupled argv.
   Acceptance: all declared sources before reads/writes; actual prefixes/late refusals/child faults;
   exclusive native faults and exact source/current artifact restoration. Retain whole completed
@@ -986,3 +950,40 @@ is excluded. Initial guessed coverage entry127 discarded; discovered planning en
 Final staged gate13green, rc=0, target/d157-staged-gate.log; cached diff0.
 Final ledger9/pointer13, rc=0, target/d157-ledger-final.log. Explicit23 owned paths;
 hook/brief0/clean precede .p.n.f2. Public334 and actual12open/144sealed/zero overlap0.
+
+Work unit STITCHCAD-G1-0130; .n.f2 owns planned whole-receipt retention and two native entries.
+D158 scope extends .n.f2: repair two stale statement serialization clauses against the actual
+normalized factories; retain original report and calibrated publication controls before closure.
+D158 includes the same statement section's nine-vs-ten test label; actual restored target10/
+public test markers10; watch the declared count before verified closure.
+
+
+### G1-SLICE.5b.4c.h2.b.p.n.f2
+
+- [x] **ROOT CAUSE** — both actual native children lose prepared custom stores before dispatch;
+  intercepted writes/source exact, rc=0, target/d156-formula-second-child-baseline.log.
+- [x] **ADDRESSED** — two source/output guards, inherited child profile and full focused rebuilds;
+  CI17runtime/25actual body reds/15prefixes/15late refusals/five child cases, rc=0,
+  target/d156-formula-second-ci-complete.log. Coupled-selection fault fails the actual argv assertion.
+- [x] **NO REGRESSION** — exclusive seven-export-absent statement15/recipe15/coupled5 native
+  assertion reds; exact sources/current artifacts restored10/11 tests; both classifiers0, rc=0,
+  target/d156-formula-second-*-native.log and target/{statement,recipe}_mutations/restored.log.
+  Existing CI19/6/local56/13/2/1/census9/9/4/Git226/285 and publication43 pass, rc=0.
+  Whole fe4a3ff intervals142/143 plus working D158 report76/read/materialize337/hash/L/B/LF/
+  list/prior41 bytes, rc=0, target/d156-formula-second-retention-proof.log/target/d158-retention-proof.log.
+- [x] **LOCKSTEP** — entry/control/live/task/book agree; D158 current serialization/count fixed.
+  D156 open; D159 actual broad-classifier acceptance owned .n.f3 next. Grammar/Rust API unchanged.
+- [x] **PROMOTION** — declined: existing all-source/child/classifier/exclusive-restoration rules.
+- [x] **COMMIT** — complete0130; final focused ledger/gate/hook/brief0/clean before next native group.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f3`
+  Status: `pending`
+  Goal: literal/normalized-expression guards and D159 real failed-body assertion classifiers.
+  Acceptance: source/output plans before reads/writes, actual captures/refusals/body faults;
+  exclusive native faults, exact source and current artifact restored; classifier noise refuses.
+  Retain whole completed receipts/reports under fixed caps before growth. P1 next after .n.f2.
+
+Final glossary17/ledger9+pointer13/coverage9arms/10lanes/13trees/12siblings/zero gaps, rc=0,
+target/d156-formula-second-{glossary-final,ledger,coverage-final}.log; defect census13/1450.
+Final staged gate13green, rc=0, target/d156-formula-second-staged-gate.log; cached diff0.
+Explicit18 owned paths; hook/brief0/clean precede .p.n.f3; all native jobs terminal/consumed.

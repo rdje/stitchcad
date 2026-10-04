@@ -120,7 +120,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/statement_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/statement_mutations.py
 ```
 
-Nine public contracts verify fifteen independently authored header/operand rows, all six kinds/five
+10 public contracts verify fifteen independently authored header/operand rows, all six kinds/five
 tolerances, exact source/error spans, keyword/header/separator/unit refusals, privacy/clone behavior
 and all21 worked statements with their25 independently authored expression identities. Three
 compile-fail Rust docs enforce private construction/source borrowing/view lifetime; a runnable doc
@@ -134,10 +134,13 @@ not evidence that the product resolves or computes those statements.
 On64KiB stacks the product handles256-node operands on both sides,16 if levels,50000 grouping pairs
 and100000-byte names. Existing257-node/17-level refusals remain measured in each operand. Fifteen
 actual production keyword/name/annotation/assignment/separator/operand/span/privacy faults must
-compile and fail assertions; the exclusive runner restores exact source. Run it alone.
+compile and fail assertions; the exclusive runner restores exact source and rebuilds the complete
+focused statement target before returning. Its [producer profile](../build-and-checks.md#direct-python-producers)
+validates declared source/output before reads/writes and preserves prepared child stores. Run it alone.
 The failure classifier rejects passing-test-name and expect-only noise, checking failed-test bodies.
 Native/release checks and WASM cross-compilation retain their existing scope; browser execution,
-statement serialization, numerical evaluation and production approval remain later.
+numerical evaluation and production approval remain later. Normalized statement/recipe
+serialization is [implemented separately](formula-recipe-inputs.md).
 
 ## Parse an ordered recipe
 
@@ -164,7 +167,9 @@ if let FormulaStatementKind::Assert { tolerance, .. } = recipe.statements()[1].k
 A view borrows its owning recipe; Clone copies its flat arenas while borrowing the same original
 source. Private construction prevents replacing the statement list. Debug prints the statement count
 without customer names or literals. Explicit statement/name/source inspection exposes those values.
-The recipe has no persistent statement serialization or recipe hash yet; .3f.1 owns that byte contract.
+This syntax view has no canonical-byte factory. [Normalize the recipe](formula-recipe-inputs.md)
+to obtain the separate immutable statement/recipe serialization APIs. Persistence and recipe hashing
+retain their later owners.
 
 ### Boundaries preserve original whitespace
 
@@ -225,7 +230,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_mutations.py
 ```
 
-Eight public contracts check nine independently authored whole sources with fourteen original
+The initial eight public contracts check nine independently authored whole sources with fourteen original
 ordered statements and eighteen operand identities. The independent producer verifies complete
 non-whitespace source coverage and token order, then uses the actual curated reference header and
 recursive expression parser on each authored statement, deliberately trapping semantics. It does
@@ -243,7 +248,10 @@ On64KiB stacks the API parses/clones/drops4096 statements, preserves50000 groupi
 17-depth refusals remain contextual. Fifteen new actual production faults in bounds/order/boundaries/
 indices/spans/whole-input/privacy compile and fail assertions. The existing fifteen statement faults
 also pass against the shared parser. Both exclusive runners restore exact production bytes; run them
-alone. The structural suite watches the independent producer and failure-classifier controls.
+alone. The entry validates both sources/output before reads/writes and preserves prepared child stores.
+After exact restoration it rebuilds the full focused recipe target, including after coupled mode.
+Classifier-only and coupled selection remain available. The structural suite watches the independent
+producer and failure-classifier controls.
 Native/release and WASM cross-compilation retain their stated scope. Coupled syntax review .3e.3
 is complete below; recipe normalization/identity .3f is implemented separately. Numerical execution
 and production approval remain owned future work.

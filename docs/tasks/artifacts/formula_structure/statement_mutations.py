@@ -2,14 +2,17 @@
 from pathlib import Path
 import os
 import re
+import runpy
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/statement.rs'
+WORK = ROOT / 'target/statement_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=(SOURCE,))
 ORIGINAL = SOURCE.read_bytes()
 text = ORIGINAL.decode()
-WORK = ROOT / 'target/statement_mutations'
 WORK.mkdir(parents=True, exist_ok=True)
 cases = [
     ('lexical operand role', 'if binding_kind.is_some()', 'if binding_kind.is_none()'),
@@ -50,7 +53,7 @@ print('statement assertion classifier: passing-name/expect-only and compiler noi
 assert not sys.argv[1:] or sys.argv[1:] == ['--classifier-only']
 if sys.argv[1:] == ['--classifier-only']:
     sys.exit(0)
-environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'), TMPDIR=str(ROOT / 'target/scratch'))
+environment = dict(os.environ)
 try:
     for index, (name, before, after) in enumerate(cases, 1):
         SOURCE.write_text(text.replace(before, after))
@@ -64,5 +67,9 @@ try:
         SOURCE.write_bytes(ORIGINAL)
 finally:
     SOURCE.write_bytes(ORIGINAL)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_statement_contract'],
+                              cwd=ROOT, env=environment, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored statement artifact failed', restored.stderr.decode())
 assert SOURCE.read_bytes() == ORIGINAL
-print('statement faults:15 actual compiled assertion reds; exact source restored')
+print('statement faults:15 actual compiled assertion reds; source and current artifact restored')

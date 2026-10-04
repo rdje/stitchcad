@@ -101,7 +101,7 @@ docs/tasks/artifacts/formula_structure/recipe_byte_contract.py	delegate	G1-SLICE
 docs/tasks/artifacts/formula_structure/recipe_byte_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
 docs/tasks/artifacts/formula_structure/recipe_input_review_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
-docs/tasks/artifacts/formula_structure/recipe_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/recipe_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.n.f2	Declared sources/output guarded before reads/writes; custom child stores/classifier/coupled argv and restored focused artifact verified by owned controls.
 docs/tasks/artifacts/formula_structure/recipe_owner_contract.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
 docs/tasks/artifacts/formula_structure/recipe_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
 docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
@@ -136,7 +136,7 @@ docs/tasks/artifacts/formula_structure/scalar_mutations.py	output	G1-SLICE.5b.4c
 docs/tasks/artifacts/formula_structure/semantic_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.n.f1	All-source entry guards and preserved prepared child stores; actual captures/faults/exclusive restoration owned here.
 docs/tasks/artifacts/formula_structure/signed_angle_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/formula_structure/signed_angle_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
-docs/tasks/artifacts/formula_structure/statement_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/statement_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.n.f2	Declared sources/output guarded before reads/writes; custom child stores/classifier/coupled argv and restored focused artifact verified by owned controls.
 docs/tasks/artifacts/formula_structure/statement_owner_contract.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
 docs/tasks/artifacts/formula_structure/statement_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
 docs/tasks/artifacts/formula_structure/static_coupled_contract.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
