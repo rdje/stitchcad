@@ -168,3 +168,13 @@ failed-body paths/lines/columns, and move both entries into strict actual classi
 Twelve classifiers/89 actual body reds pass; exclusive17+21 native macro reds/six Rust sources
 exact/full8/10 restored0. Four whole committed records retained/prior380 identities exact/public384.
 The predicate recognizes the curated current line-start macro sites, not arbitrary Rust syntax.
+
+Signature guards — STITCHCAD-G1-0142 (.n.f9): D164 prefix heuristics admit labelled expects;
+implementation/test/output guards precede any reads/writes, prepared child stores survive, and
+failed-body path/line/column must match current curated assertion sites. Actual controls99 body
+reds/14 classifiers/29 entry/late-source refusals/21 child cases pass; child count now derives each
+successful capture. Exclusive35 native macro reds/four Rust sources exact/full5/5 restored0.
+Old native-log replay1 was excluded: actual directories had zero logs; fresh native proof supplies
+current evidence. D168 stale four-contract totals came from74e8648 adding fifth wanted tests to
+both targets; remove totals and describe verified catalogs. D169 future sibling baseline admits
+labelled expects too; .n.f10 owns joint wanted-target argv and source guards, P1 next.

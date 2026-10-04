@@ -122,16 +122,20 @@ metadata query on an empty slice returns None.
 
 ## Verification and remaining proof
 
-Four public contracts independently enumerate all eight kinds and all five symbolic classes:
+Public contracts independently enumerate all eight kinds and all five symbolic classes:
 every 13-member tuple at arities zero through four, for every registry name, gives 680702 cases.
 Wider min/max samples cover 255, 256 and 4096 operands. The complete actual normative rows are
 compared in both directions, and all 22 tokens match the unchanged canonical serializer.
-Twenty-one actual compiled faults must fail test-body assertions and restore product source exactly;
-compiler errors, expect-only panics and test-name noise cannot count as proof.
+Exact wanted-catalog descriptors and result positions are checked alongside those matrices.
+Twenty-one actual compiled faults must fail at current test assertion macro sites and restore
+product source exactly; compiler errors, labelled expect panics and test-name noise refuse.
 
 Run cargo test -p sc-core --test formula_builtin_signature_contract for the public contracts.
 The tracked producer docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py runs
 exclusive product faults; its classifier and exact anchors are watched by structural probes.
+The direct entry validates implementation/test/output paths before reads or writes, preserves
+prepared child stores, and rebuilds the full focused target after source restoration. Strict
+standing controls exercise actual classifier/site faults; custom assertion messages remain valid.
 
 [Typed wanted-kind catalogs](formula-wanted-signatures.md) are available for dimension diagnostics.
 Accepted normalized expressions, source-bearing refusals and every name dependency

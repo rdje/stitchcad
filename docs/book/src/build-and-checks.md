@@ -183,15 +183,20 @@ Declaration and exact-name entries use these same guards, current test assertion
 child stores. Declaration restoration rebuilds both the complete native target and its five doctests.
 The captures also exercise its negative-construction dispatch; simulated output checks dispatch only.
 
-Standing controls cover17 runtime cases and eighty-nine actual body faults, including twenty-seven real
+Built-in and operator-signature entries now use these guards/current test assertion sites, retain
+prepared child stores and rebuild complete restored targets. Their35 compiled faults are macro-site
+reds, with four Rust sources exact and both full five-test targets restored. Classifier-only modes
+check anchors/noise without native dispatch; custom messages pass and labelled expects refuse.
+
+Standing controls cover17 runtime cases and ninety-nine actual body faults, including twenty-nine real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All twenty-seven entry captures also refuse a late missing source before
+12 membership tests passing. All twenty-nine entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
-Nineteen native-child capture cases execute actual entries with custom local stores,
+Twenty-one native-child capture cases execute actual entries with custom local stores,
 intercepting every source/output write and initial/restoration child calls. The declaration entry
 also captures negative-construction and native/doc restoration calls. The captures check actual
 arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing

@@ -360,6 +360,8 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/ordered_name_mutations.py', 'ordered_name_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/declaration_mutations.py', 'declaration_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/name_read_mutations.py', 'name_read_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py', 'builtin_signature_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/operator_signature_mutations.py', 'operator_signature_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
@@ -372,6 +374,7 @@ def main():
             'declaration_mutations.py', 'name_read_mutations.py',
             'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
             'canonical_recipe_mutations.py',
+            'builtin_signature_mutations.py', 'operator_signature_mutations.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -395,8 +398,11 @@ def main():
     semantic = ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py'
     lexer_sources = (ROOT / 'crates/sc-core/src/recipe/lexer.rs', ROOT / 'crates/sc-core/src/name.rs')
     semantic_sources = (ROOT / 'crates/sc-core/src/recipe/semantic.rs',)
+    child_count = 0
     capture_child(lexer.read_text(), lexer, 'formula_lex_mutations', lexer_sources, 'formula_lex_contract')
+    child_count += 1
     capture_child(semantic.read_text(), semantic, 'semantic_mutations', semantic_sources, 'formula_semantic_contract')
+    child_count += 1
     text = semantic.read_text()
     before = 'environment = dict(os.environ)'
     assert text.count(before) == 1
@@ -415,6 +421,7 @@ def main():
         sources = tuple(ROOT / 'crates/sc-core/src/recipe' / file for file in files)
         text = path.read_text()
         capture_child(text, path, name + '_mutations', sources, target, first_suffix=())
+        child_count += 1
         assert text.count(before) == 1
         try:
             capture_child(text.replace(before, "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", 1),
@@ -426,6 +433,8 @@ def main():
             raise AssertionError('D156 Python actual child-store reset survived')
     classifier_count = 0
     for filename, work_name, rust, target, test in (
+            ('builtin_signature_mutations.py', 'builtin_signature_mutations', 'builtins.rs', 'formula_builtin_signature_contract', None),
+            ('operator_signature_mutations.py', 'operator_signature_mutations', 'operators.rs', 'formula_operator_signature_contract', None),
             ('normalized_recipe_mutations.py', 'normalized_recipe_mutations', ('statement.rs', 'ordered.rs', 'normalized_recipe.rs'), 'formula_normalized_recipe_contract', None),
             ('canonical_recipe_mutations.py', 'canonical_recipe_mutations', 'canonical_recipe.rs', 'formula_canonical_recipe_contract', None),
             ('literal_normalization_mutations.py', 'formula_literal_mutations', 'literal.rs',
@@ -456,8 +465,10 @@ def main():
         selected = (test, '--', '--exact') if test is not None else ()
         doc_suffix = 'recipe::declaration::FormulaDeclaration' if filename == 'declaration_mutations.py' else None
         capture_child(text, path, work_name, sources, target, first_suffix=selected, doc_suffix=doc_suffix)
+        child_count += 1
         if doc_suffix is not None:
             capture_child(text, path, work_name, sources, target, doc_suffix=doc_suffix, capture_doc_fault=True)
+            child_count += 1
             wrong_doc = text.replace("result = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--doc',",
                                      "result = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test',", 1)
             assert wrong_doc != text
@@ -539,6 +550,7 @@ def main():
                   (ROOT / 'crates/sc-core/src/recipe/ordered.rs', ROOT / 'crates/sc-core/src/recipe/statement.rs'),
                   'formula_recipe_contract', arguments=('--coupled',),
                   first_suffix=('coupled_token_boundaries_preserve_zero_gap_and_all_whitespace',))
+    child_count += 1
     text = recipe.read_text()
     selector = "selected = coupled_cases if sys.argv[1:] == ['--coupled'] else [(*case, '') for case in cases]"
     assert text.count(selector) == 1
@@ -558,6 +570,7 @@ def main():
     canonical_sources = (ROOT / 'crates/sc-core/src/recipe/canonical.rs',)
     capture_child(text, canonical, 'canonical_expression_mutations', canonical_sources,
                   'formula_canonical_contract', arguments=('--coupled',), first_suffix=('coupled_',))
+    child_count += 1
     selector = "command.append('coupled_')"
     assert text.count(selector) == 1
     try:
@@ -573,7 +586,7 @@ def main():
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / 19 actual native-child capture cases / ' +
+          str(len(adopters)) + ' actual late-source refusals / ' + str(child_count) + ' actual native-child capture cases / ' +
           str(classifier_count) + ' calibrated failed-body classifiers / source unchanged')
 
 

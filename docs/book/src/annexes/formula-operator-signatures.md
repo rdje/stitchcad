@@ -74,7 +74,7 @@ assert!(!B::Divide.arc_length_hint(K::Angle, K::Length));
 
 ## Verification boundary
 
-Four public contracts enumerate all16 unary and640 ordered binary kind cases over the eight-kind
+Public contracts enumerate all16 unary and640 ordered binary kind cases over the eight-kind
 population. There are seven permitted unary cases and71 permitted binary cases, including17 ordered
 multiplication pairs and14 directed quotient pairs. Exactly two cases carry the arc_length hint.
 The tests compare the complete actual normative product/operator rows in both directions, and all
@@ -85,10 +85,14 @@ cargo test -p sc-core --test formula_operator_signature_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/operator_signature_mutations.py
 ```
 
-Run mutations alone: fourteen compiled faults must fail public body assertions, then restore the
+Exact wanted-catalog descriptors, arities and shared type variables are also verified.
+Run mutations alone: fourteen compiled faults must fail at current test assertion sites, then restore the
 exact source. They change tokens, count negation, square/product/comparison results, Boolean or
 mismatched arithmetic, product commutativity, quotient direction/count rules and hint population.
-The standing structural runner watches actual anchors and refuses compiler/unwrap/test-name noise.
+The direct entry validates implementation/test/output paths before reads or writes, preserves
+prepared child stores, and rebuilds the complete focused target after restoration. Strict standing
+controls exercise actual classifier/site faults; custom messages pass and labelled expects refuse.
+The standing structural runner watches actual anchors; compiler/unwrap/test-name noise refuses.
 
 The pure signature metadata establishes operand-kind rules. Name lookup, source locations and
 [ordered metadata scopes](formula-name-scopes.md) keep their own contracts. Function/selector roles,

@@ -982,12 +982,8 @@ D160–D161 complete closed receipts retained in [part81](../history/window6.md#
 
 D162–D163 complete closure receipts retained in [part84](../history/stitchcad-defects-part84.md).
 
-- **D164** — built-in/operator signature classifiers accept assertion-labelled expect noise.
-  Actual predicates compiled against independent failed-body location/message, rc=0,
-  target/d164-classifier-baseline.log; no native/writes. Root: failed-body prefix heuristic;
-  impact false assertion proof. Own G1-SLICE.5b.4c.h2.b.p.n.f9, P1 after .n.f8;
-  current guarded test macro sites/custom positives, actual classifier/site faults and exclusive
-  native assertion reds plus exact source/full target restoration.
+D164 closes at .n.f9: guard implementation/test/output;14 strict classifiers/99 body controls,35 native macro reds/four sources exact/full5/5 restored, rc=0.
+Original report retained exactly in [part88](../history/stitchcad-defects-part88.md).
 
 D165 closes at .n.f3.r: guarded current assertion sites/three explicit refusal assertions; strict controls83 and30 native reds/full6/8 restored, rc=0.
 Original report retained exactly in [part86](../history/stitchcad-defects-part86.md).
@@ -997,3 +993,8 @@ Original report retained in [part85](../history/stitchcad-defects-part85.md); no
 
 D167 closes at .n.f4.r: guarded current test assertion sites/strict89 controls;38 macro-site reds/six sources exact/full8/10 restored, rc=0.
 Original report retained exactly in [part87](../history/stitchcad-defects-part87.md).
+
+D168 closes at .n.f9: remove stale totals/describe catalogs; Git/native5/5 and publication43, rc=0. Original pre-repair report in [part89](../history/stitchcad-defects-part89.md).
+
+- **D169** — wanted-signature/call-lookup predicates accept labelled-expect body noise; actual AST baseline target/d169-classifier-baseline.log, rc=0; no native/writes.
+  Root prefix heuristic; impact false assertion proof. Own G1-SLICE.5b.4c.h2.b.p.n.f10, P1 next; all source/test/output plans, strict classifier/actual child controls, exclusive19+18 reds/full restored targets.

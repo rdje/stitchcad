@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0142 - guarded signature assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f9`)
+
+Guard implementation/test/output and preserve child stores; current assertion sites refuse expect labels.
+Strict controls17/99 body reds/29 prefixes/29 late refusals/21 derived child cases/14 classifiers pass0.
+Native21+14 macro reds/four sources exact/full5/5 restored0; D164/D168 fixed, D169 owned next.
+Whole records retained under fixed caps; grammar/API and400 cadence unchanged.
+
 ## STITCHCAD-G1-0141 - recipe assertion provenance (leaf `G1-SLICE.5b.4c.h2.b.p.n.f4.r`)
 
 Guard current test sources and require failed-body assertion locations; labelled expect noise refuses.
@@ -254,21 +261,7 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
   Ease7/set10 assertion reds, source/current artifacts restored13/14pass; existing profiles/book green.
 - No Rust API/grammar change; D156 remains open. Bounded continuity precedes the next native group.
 
-## STITCHCAD-G1-0122 - shared Python producer entry guards (leaf `G1-SLICE.5b.4c.h2.b.p.a`)
-
-- Plan stores/declared outputs/source files before creation or activation; clean refusal2,
-  selected channel/unrelated environment retained. First size-membership entry adopts the guard.
-- Runtime17/actual body reds7/actual pre-write capture, absent-export native7 assertion reds,
-  exact source/current artifact restored12pass; existing CI/local/census/book/glossary green.
-- Retired pre-repair capture points to its exact record. Other native/output/delegated entries
-  remain owned; D156 stays open. No Rust API or grammar change; Ease group follows.
-
-## STITCHCAD-G1-0121 - retain Python repair continuity (leaf `G1-SLICE.5b.4c.h2.b.p.h`)
-
-- Seal two complete source3e400c1 intervals: four whole lessons and census acceptance/refusal
-  record. Task IDs/headings and active repair requirements remain live; bounds/reader unchanged.
-- Exact source/read/materialization321/hash/line/byte/LF assertions0; all26 prior retained paths
-  unchanged. No code/grammar change; shared Python guards .p.a next.
+| [`part124`](docs/history/stitchcad-changelog-part124.md) | G1-0122/0121 | 21 lines, 1470 bytes, `sha256:8fa452b9…` |
 
 | [`part123`](docs/history/stitchcad-changelog-part123.md) | G1-0120 census | 6 lines, 473 bytes, `sha256:897e1536…` |
 

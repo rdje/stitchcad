@@ -787,7 +787,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.n.f9` | `todo` | D164 signature assertion proof, then remaining D156/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.n.f10` | `todo` | D169 wanted/call assertion proof, then remaining D156/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
