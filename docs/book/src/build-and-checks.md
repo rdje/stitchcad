@@ -83,3 +83,12 @@ For example, CARGO_HOME=crates/cache refuses as a source-tree store, while an am
 Cargo home selects target/cargo-home. TMPDIR=target/../scratch refuses before creating stores.
 A named toolchain must already be installed through the explicit setup command; implicit downloads
 stay disabled. Existing shared caches are retained, and no project workflow depends on their contents.
+
+## Observed runner scope
+
+At exact pushed8f87a10, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/37185684578/job/111386981964)
+completed all eight steps successfully, including the new driver/profile. The [Rust job](https://github.com/rdje/stitchcad/actions/runs/37185684564/job/111386981852)
+completed all eleven: actual stable1.99.0,703 native tests/59 groups, three WASM libraries and four
+prepared/verified checkout-volume stores. Rust CI uses its separate explicit CI helper; local
+profile/default/fault evidence above remains separately scoped. G1-SLICE.5b.4c.h2.v records the
+observation; standalone producer audit .h2.b is still required. Product approval is unclaimed.

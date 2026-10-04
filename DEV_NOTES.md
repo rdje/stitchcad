@@ -5,6 +5,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 runner observation
+
+- Exact jobs/every step establish observed CI; terminal logs establish actual counts and stores.
+- Wait for the download's terminal result before parsing; an incomplete read is discarded.
+- Rust CI uses its explicit profile; local default/fault proof is separately scoped.
+- Promotion declined: existing terminal-output and exact-head evidence rules.
+
 ## _(2026-10-04 UTC)_ — D156 guarded producer defaults
 
 - Plan all local stores before creating paths; fresh verification never trusts a marker.

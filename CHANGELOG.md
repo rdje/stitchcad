@@ -110,6 +110,12 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0118 - observed primary-profile CI (leaf `G1-SLICE.5b.4c.h2.v`)
+
+- Exact pushed8f87a10 doctrine8/Rust11 steps completed/success; actual stable1.99/703tests/
+  59groups/WASM3/four prepared+verified checkout-volume stores. Terminal log fetch/assertions0.
+- No code/grammar change; standalone producer audit .h2.b then D154 remain. G1 stays5/18.
+
 ## STITCHCAD-G1-0117 - guarded primary producer stores (leaf `G1-SLICE.5b.4c.h2.a`)
 
 - Shared local profile/defaults/overrides/refusals; outer Make launcher prepares before platform

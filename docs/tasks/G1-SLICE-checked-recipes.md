@@ -955,7 +955,7 @@ rc=0. Final census/ledger/publication/full probes/staged gate still follow befor
   controls and native/WASM/G0 workflows prove locality. P1 after .h1, before D154 verification.
   Children .a shared profile/primary entries, .v exact required CI, .b standalone producer audit.
   [Owned implementation protocol](G1-SLICE-recipes.md#d156-producer-profile-protocol).
-  Verification: .a primary profile/entries pass; .v exact CI and .b audit pending. Commit:0117.
+  Verification: .a primary profile/entries pass; .v exact jobs verified; .b audit pending. Commits:0117/0118.
 
 
 Initial .h1 read-only Make audit0 measured Cargo/Rustup/scratch defaults outside the root/on another
