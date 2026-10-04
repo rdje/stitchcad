@@ -151,15 +151,21 @@ reads/writes, preserve prepared child stores and rebuild their full focused targ
 The normalized entry declares all three mutated sources before activating any output. Existing
 classifier-only behavior and failed-body/noise rules remain available in both entries.
 
-Standing controls cover17 runtime cases and thirty-five actual body faults, including nineteen real
+Canonical-expression and checked-expression entries also guard source/output before reads/writes,
+inherit prepared child stores and rebuild complete focused targets after exact source restoration.
+Canonical coupled selection remains intact; checked-expression classifier-only mode stays available.
+Both require failed-body panic locations at assertion macro sites in their guarded current test
+source. Custom assertion messages remain valid; assertion-labelled expect messages refuse.
+
+Standing controls cover17 runtime cases and forty-six actual body faults, including twenty-one real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All nineteen entry captures also refuse a late missing source before
+12 membership tests passing. All twenty-one entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
-Nine native-child capture cases execute actual entries with custom local stores,
+Twelve native-child capture cases execute actual entries with custom local stores,
 intercepting every source write and both initial/restoration child calls. The captures check actual
 arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing
 the prior per-child store reset earns a body assertion failure, as does discarding coupled selection.

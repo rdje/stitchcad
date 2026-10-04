@@ -978,9 +978,14 @@ D155 complete closure receipt retained in [part75](../history/stitchcad-defects-
 
 D157–D159 complete closed receipts retained in [part78](../history/stitchcad-defects-part78.md).
 
-- **D160** — canonical-expression native classifier accepts expect-only failure when a passing
-  assertion_name occurs elsewhere. Compile its actual Assert predicate against independent noise:
-  target/d160-classifier-baseline.log, rc=0; no compiler or source writes. Root: whole-output
-  substring at canonical_expression_mutations.py:67 (blame8ed28930). Impact: false assertion proof.
-  Own G1-SLICE.5b.4c.h2.b.p.n.f5, P1 immediately after .n.f4; failed-body classifier, actual broad
-  fault/noise controls and exclusive default/coupled native restoration before closure.
+D160 closes at .n.f5: actual failed-body panic locations match guarded current test macro sites;
+custom assertions pass, labelled expect/wrong file/column/invalid bytes refuse. Actual broad/
+permissive/site-omission faults red; exclusive38 native reds/full9/9/7 targets restored, rc=0.
+Original committed report retained exactly in [part79](../history/stitchcad-defects-part79.md).
+
+- **D161** — checked-statement/whole-recipe classifiers accept a failed-body assertion-labelled
+  expect message. Compile both actual assertion_failure functions against independent noise:
+  target/d161-classifier-baseline.log, rc=0; no native/source writes. Root: message-prefix heuristic
+  (blame2fa9d5d7/e3794738); impact false assertion proof. Own G1-SLICE.5b.4c.h2.b.p.n.f6, P1 next;
+  guarded current test macro sites, custom assertion positives/expect location refusals and actual
+  classifier/site body faults; exclusive native/source/full-artifact restoration before closure.

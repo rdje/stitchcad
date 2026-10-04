@@ -349,7 +349,12 @@ On a 64 KiB stack, parsing/normalization/serialization handles 256-node unary an
 levels, 50,000 grouping pairs and a 100,000-byte identifier. Existing node257/if17 refusals stay intact.
 Nineteen actual compiled faults alter root, kind/magnitude/full width, name/sign/square/symbols,
 ordered binary/call/conditional children, call coverage, whitespace/newline or Debug privacy. They
-must fail public assertions; the exclusive runner restores exact source. Run mutations alone.
+must fail public assertions in failed-test bodies. Reported panic paths, lines and columns must
+match assertion macro sites in the current focused test source; custom assert messages are valid.
+Passing names, summaries and assertion-labelled expect messages cannot supply proof. The entry
+validates both implementation and test-source paths/output before reads/writes and
+preserves prepared child stores. Its exclusive runner restores exact source and rebuilds the full
+focused target, including after coupled selection. Run mutations alone.
 
 G1-SLICE.5a.3d.2 owns this product serializer; .3d.3 completes the coupled identity review below.
 [Ordered recipe normalization/statement identity](formula-recipe-inputs.md) is now available.
@@ -379,7 +384,7 @@ its verified implementation commit. The additional controls exercise the coupled
 
 The canonical suite now has nine public tests. Three additional actual compiled faults (worked
 addition symbol, wide-call order and loss of the last legal argument) fail the two new coupled
-tests as assertions. The exclusive runner restores exact source. The initial nineteen fault
+tests as assertions. The exclusive runner restores exact source and rebuilds all nine tests. The initial nineteen fault
 controls remain retained proof of the unchanged serializer; the three new reds verify the additional
 controls, rather than claiming a fresh execution of the initial nineteen.
 

@@ -10,6 +10,14 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D160 assertion provenance
+
+- Rust assert! with a custom message need not print the standard assertion prefix.
+- Classify failed-body panic sites against guarded current test macro locations, not message labels.
+- Keep custom assertion positives and expect-location/wrong-source/column/byte refusals independent.
+- A false classifier refusal is failed verification; exclude it, restore fully and rerun every native mode.
+- Promotion declined: existing actual-body/guarded-source/exclusive-restoration rules.
+
 ## _(2026-10-04 UTC)_ — D156 recipe normalization entries
 
 - Plan all source files before activation; a later invalid source must leave earlier stores untouched.
@@ -81,3 +89,8 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part145`](docs/history/stitchcad-devnotes-part145.md) | complete formula acceptance | 17 lines, 1483 bytes, `sha256:b81b50d5…` |
 | [`part146`](docs/history/stitchcad-devnotes-part146.md) | complete native acceptance | 21 lines, 1722 bytes, `sha256:d8a38048…` |
 | [`part147`](docs/history/stitchcad-devnotes-part147.md) | complete native acceptance | 16 lines, 1336 bytes, `sha256:adc51db8…` |
+| [`part148`](docs/history/stitchcad-devnotes-part148.md) | complete final verification | 18 lines, 1523 bytes, `sha256:4c194fd9…` |
+| [`part149`](docs/history/stitchcad-devnotes-part149.md) | complete final verification | 6 lines, 437 bytes, `sha256:15c91c00…` |
+| [`part150`](docs/history/stitchcad-devnotes-part150.md) | complete final verification | 5 lines, 325 bytes, `sha256:c87058cf…` |
+| [`part151`](docs/history/stitchcad-devnotes-part151.md) | complete final verification | 3 lines, 247 bytes, `sha256:c0456d42…` |
+| [`part152`](docs/history/stitchcad-devnotes-part152.md) | complete final verification | 4 lines, 385 bytes, `sha256:1dd99ec8…` |

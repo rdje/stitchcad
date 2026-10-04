@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0133 - guarded expression assertion provenance (leaf `G1-SLICE.5b.4c.h2.b.p.n.f5`)
+
+- Guard implementation/test source and output before reads/writes; preserve child stores/coupled argv.
+- D160 fixed with current test macro panic locations; custom asserts pass and expect locations refuse.
+- CI17runtime/46body/21prefixes/21late/12children/four classifiers and publication43 pass0.
+- Exclusive38 genuine native assertion reds; sources/full9/9/7 targets restored0; failed text-only
+  attempt excluded. Seven complete cf1f1e0 intervals/public352/prior52 bytes exact0.
+- D161 actual predicates reproduced/owned next; D156 open. G1 5/18,13open/147sealed; grammar fixed.
+
 ## STITCHCAD-G1-0132 - normalized/canonical recipe entry guards (leaf `G1-SLICE.5b.4c.h2.b.p.n.f4`)
 
 - Both entries plan all sources/output before reads/writes and preserve prepared child stores.
@@ -270,15 +279,6 @@ Strict703tests/59groups/WASM3/full reference and13149-case coupled review/langua
 Two complete records retained byte-exact;309logical/64working MD under fixed limits. G1 stays5/18,
 12 evidence siblings,10open/142sealed. Coupled whole factory review .5b.4b follows before .5b closure.
 
-## STITCHCAD-G1-0112 - complete syntax before literal inputs (leaf `G1-SLICE.5b.3d.d`)
-
-D150 whole reference syntax/structure now completes before all literal conversions, then static
-checking; raw spelling/units, original spans and normalized owners survive. Detached defaults,
-grammar, bounds and closed tokens stay fixed. D151 status distinguishes reference/product proofs.
-263 actual public/reference phase/ordinal cases, eight detached controls and10 compiled body reds;
-prior584/11, canonical12 and13149 shared/6reference/9Rust/3text controls pass, rc=0. Full reference,
-language16/publication10/ledger9+13 pass0; exact archive307/62working records. Coupled .3 closes;
-whole immutable graph .4 next. G1 stays5/18; independent10open/140sealed; no native source change.
 
 
 
@@ -316,3 +316,4 @@ whole immutable graph .4 next. G1 stays5/18; independent10open/140sealed; no nat
 | [`part113`](docs/history/stitchcad-changelog-part113.md) | G1-0109 through G1-0105 | 53 lines, 4156 bytes, `sha256:feeb6e30…` |
 | [`part114`](docs/history/stitchcad-changelog-part114.md) | G1-0110 whole-source preflight | 9 lines, 761 bytes, `sha256:dd7f339a…` |
 | [`part115`](docs/history/stitchcad-changelog-part115.md) | G1-0111 static contract | 11 lines, 955 bytes, `sha256:fde1010c…` |
+| [`part116`](docs/history/stitchcad-changelog-part116.md) | G1-0112 syntax and literal phases | 9 lines, 774 bytes, `sha256:3c01839a…` |

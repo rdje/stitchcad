@@ -241,7 +241,7 @@ def capture_child(text, entry_path, work_name, sources, test_target, *, argument
     assert len(observed) == 2, 'D156 Python child capture/restoration absent'
 
 
-def classifier_controls(text, entry_path):
+def classifier_controls(text, entry_path, *, strict=False):
     """Compile only the actual classifier; no profile, native dispatch or source write."""
     tree = ast.parse(text)
     functions = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure']
@@ -256,6 +256,21 @@ def classifier_controls(text, entry_path):
         b'assertion failed: compiler diagnostic\n',
         b'\nfailures:\nthread panicked:\nexpect-only\n',
     )
+    if strict:
+        helpers = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites']
+        assert len(helpers) == 1, 'D160 assertion-site producer absent'
+        exec(compile(ast.Module(body=helpers, type_ignores=[]), str(entry_path), 'exec'), scope)
+        contract = 'fn fixture() {\n    assert!(false, "custom");\n    let _ = None::<()>.expect("assertion: expect-only");\n}\n'
+        path = 'crates/sc-core/tests/authored_assertion_fixture.rs'
+        sites = scope['assertion_sites'](contract, path)
+        assert sites == {(path, 2, 5)}, 'D160 assertion sites changed'
+        scope['ASSERTION_SITES'] = sites
+        location = b"\nfailures:\nthread 'fixture' panicked at " + path.encode()
+        accepted = location + b':2:5:\nassertion: custom message\n\nfailures:\nfixture\n'
+        noises += (location + b':3:13:\nassertion: expect-only\n\nfailures:\nfixture\n',
+                   location + b':2:6:\nassertion: wrong column\n\nfailures:\nfixture\n',
+                   location.replace(path.encode(), b'crates/sc-core/tests/other.rs') + b':2:5:\nassertion failed: wrong source\n\nfailures:\nfixture\n',
+                   location.replace(path.encode(), b'\xff') + b':2:5:\nassertion failed: invalid path bytes\n\nfailures:\nfixture\n')
     assert classify(accepted), 'D159 actual failed-body assertion refused'
     for noise in noises:
         assert not classify(noise), 'D159 assertion evidence accepted noise'
@@ -304,11 +319,13 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py', 'formula_normalized_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py', 'normalized_recipe_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py', 'canonical_recipe_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py', 'canonical_expression_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/checked_expression_mutations.py', 'checked_expression_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
         text = path.read_text()
-        source_argument = ('SOURCES' if path.name in ('domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py', 'normalized_recipe_mutations.py')
+        source_argument = ('SOURCES' if path.name in ('domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py', 'normalized_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py')
                            else '(SOURCE,)')
         source_anchor = 'sources=' + source_argument
         call = ("runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](\n"
@@ -366,24 +383,48 @@ def main():
             ('literal_normalization_mutations.py', 'formula_literal_mutations', 'literal.rs',
              'formula_literal_contract', 'independent_fraction_fixtures_cover_conversion_width_and_domain'),
             ('normalized_expression_mutations.py', 'formula_normalized_mutations', 'normalized.rs',
-             'formula_normalized_contract', 'authored_shapes_match_reference_kind_order_nodes_and_depth')):
+             'formula_normalized_contract', 'authored_shapes_match_reference_kind_order_nodes_and_depth'),
+            ('canonical_expression_mutations.py', 'canonical_expression_mutations', 'canonical.rs',
+             'formula_canonical_contract', None),
+            ('checked_expression_mutations.py', 'checked_expression_mutations', 'checked.rs',
+             'formula_checked_expression_contract', None)):
         path = ROOT / 'docs/tasks/artifacts/formula_structure' / filename
         sources = (ROOT / 'crates/sc-core/src/recipe' / rust,)
         text = path.read_text()
-        capture_child(text, path, work_name, sources, target, first_suffix=(test, '--', '--exact'))
-        classifier_controls(text, path)
+        capture_child(text, path, work_name, sources, target, first_suffix=(test, '--', '--exact') if test is not None else ())
+        classifier_controls(text, path, strict=test is None)
         tree = ast.parse(text)
         function = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure')
         actual = ast.get_source_segment(text, function)
         broad = "def assertion_failure(output):\n    return b'assertion' in output"
         assert text.count(actual) == 1
         try:
-            classifier_controls(text.replace(actual, broad, 1), path)
+            classifier_controls(text.replace(actual, broad, 1), path, strict=test is None)
         except AssertionError as error:
             assert str(error) == 'D159 assertion evidence accepted noise'
             red += 1
         else:
             raise AssertionError('D159 actual broad classifier survived')
+        if test is None:
+            permissive = "def assertion_failure(output):\n    parts = output.split(b'\\nfailures:\\n', 2)\n    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None"
+            try:
+                classifier_controls(text.replace(actual, permissive, 1), path, strict=True)
+            except AssertionError as error:
+                assert str(error) == 'D159 assertion evidence accepted noise'
+                red += 1
+            else:
+                raise AssertionError('D160 actual expect-label classifier fault survived')
+            helper = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites')
+            helper_text = ast.get_source_segment(text, helper)
+            assert helper_text.count('if match is not None:') == 1
+            omitted = helper_text.replace('if match is not None:', 'if False:', 1)
+            try:
+                classifier_controls(text.replace(helper_text, omitted, 1), path, strict=True)
+            except AssertionError as error:
+                assert str(error) == 'D160 assertion sites changed'
+                red += 1
+            else:
+                raise AssertionError('D160 actual assertion-site omission survived')
         assert text.count(before) == 1
         try:
             capture_child(text.replace(before, "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", 1),
@@ -412,11 +453,27 @@ def main():
         red += 1
     else:
         raise AssertionError('D156 Python actual coupled-selection fault survived')
+    canonical = ROOT / 'docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py'
+    text = canonical.read_text()
+    canonical_sources = (ROOT / 'crates/sc-core/src/recipe/canonical.rs',)
+    capture_child(text, canonical, 'canonical_expression_mutations', canonical_sources,
+                  'formula_canonical_contract', arguments=('--coupled',), first_suffix=('coupled_',))
+    selector = "command.append('coupled_')"
+    assert text.count(selector) == 1
+    try:
+        capture_child(text.replace(selector, "command.append('')", 1), canonical,
+                      'canonical_expression_mutations', canonical_sources, 'formula_canonical_contract',
+                      arguments=('--coupled',), first_suffix=('coupled_',))
+    except AssertionError as error:
+        assert str(error) == 'D156 Python child test selection changed'
+        red += 1
+    else:
+        raise AssertionError('D156 Python actual canonical coupled-selection fault survived')
     assert SOURCE.read_bytes() == original and ENTRY.read_bytes() == entry, 'D156 Python source changed'
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / 9 actual native-child capture cases / 2 calibrated normalization classifiers / source unchanged')
+          str(len(adopters)) + ' actual late-source refusals / 12 actual native-child capture cases / 4 calibrated failed-body classifiers / source unchanged')
 
 
 if __name__ == '__main__':

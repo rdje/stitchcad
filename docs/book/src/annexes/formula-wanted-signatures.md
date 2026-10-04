@@ -245,7 +245,11 @@ python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutation
 ```
 
 Run mutations alone, without overlapping builds/probes/gates. The standing structural suite watches
-fault anchors and refuses compiler/expect/test-name noise. These proofs cover expression checking
+fault anchors and refuses compiler/expect/test-name noise. The direct entry plans source/output
+before reads/writes, preserves prepared child stores and rebuilds the complete focused target
+after exact source restoration. Classifier-only mode checks anchors/noise without native faults.
+The failed-body panic location must match an assertion macro site in the current test source,
+including its column. Custom assert messages remain valid; assertion-labelled expect messages refuse. These proofs cover expression checking
 against an initial namespace. [Current-statement checking](formula-name-scopes.md#check-the-actual-current-statement)
 also applies these rows to the actual prior-binding scope and both assertion operands. [Whole recipe proofs](formula-checked-recipes.md) compose these checks. Coupled whole review is verified at .5b.4b.
 Canonical registry/operation-order validation, numerical execution and physical geometry

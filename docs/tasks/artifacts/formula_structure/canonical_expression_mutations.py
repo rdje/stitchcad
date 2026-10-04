@@ -1,13 +1,19 @@
 """Exclusive actual Rust faults: require compiled public assertion reds and exact restoration."""
 from pathlib import Path
 import os
+import re
+import runpy
 import sys
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/canonical.rs'
-ORIGINAL = SOURCE.read_bytes()
+CONTRACT = ROOT / 'crates/sc-core/tests/formula_canonical_contract.rs'
+SOURCES = (SOURCE, CONTRACT)
 WORK = ROOT / 'target/canonical_expression_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=SOURCES)
+ORIGINAL = SOURCE.read_bytes()
 WORK.mkdir(parents=True, exist_ok=True)
 CASES = [
     ('root', 'vec![Action::Node(self.root)]', 'vec![Action::Node(0)]'),
@@ -35,6 +41,28 @@ CASES = [
      'FormulaCanonicalExpression { text: text + "\\n" }'),
     ('debug privacy', '.field("byte_count", &self.text.len())', '.field("text", &self.text)'),
 ]
+def assertion_sites(source, path):
+    sites = set()
+    for line_number, line in enumerate(source.splitlines(), 1):
+        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
+        if match is not None:
+            sites.add((path, line_number, len(match.group(1).encode()) + 1))
+    return sites
+
+
+def assertion_failure(output):
+    parts = output.split(b'\nfailures:\n', 2)
+    if len(parts) != 3:
+        return False
+    locations = re.finditer(rb'panicked at ([^:\n]+):([0-9]+):([0-9]+):\n', parts[1])
+    return any((match.group(1).decode('utf-8', 'replace'), int(match.group(2)), int(match.group(3)))
+               in ASSERTION_SITES for match in locations)
+
+ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
+assert ASSERTION_SITES, 'focused contract has no assertion sites'
+assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
+assert not assertion_failure(b'assertion: compiler output\n')
+
 coupled = sys.argv[1:] == ['--coupled']
 assert not sys.argv[1:] or coupled, 'only --coupled is accepted'
 if coupled:
@@ -51,8 +79,7 @@ for name, before, _ in CASES:
 assert original_text.count('Action::Text(" ")') == 5
 if not coupled:
     CASES.append(('spacing', 'Action::Text(" ")', 'Action::Text("  ")'))
-environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'),
-                   TMPDIR=str(ROOT / 'target/scratch'))
+environment = dict(os.environ)
 try:
     for index, (name, before, after) in enumerate(CASES, 1):
         SOURCE.write_text(original_text.replace(before, after))
@@ -64,11 +91,16 @@ try:
         output = result.stdout + result.stderr
         (WORK / ('fault-%d.log' % index)).write_bytes(output)
         assert result.returncode == 101 and b'test result: FAILED.' in output, (name, output.decode())
-        assert b'assertion' in output and b'could not compile' not in output, (name, output.decode())
+        assert assertion_failure(output) and b'could not compile' not in output, (name, output.decode())
         print('canonical fault %d %s: rc=101, actual compiled public assertion red'
               % (index, name))
         SOURCE.write_bytes(ORIGINAL)
 finally:
     SOURCE.write_bytes(ORIGINAL)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test',
+                               'formula_canonical_contract'],
+                              cwd=ROOT, env=environment, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored canonical_expression artifact failed', restored.stderr.decode())
 assert SOURCE.read_bytes() == ORIGINAL
-print('canonical faults: %d compiled actual assertion reds; exact source restored' % len(CASES))
+print('canonical faults: %d compiled actual assertion reds; source/current artifact restored' % len(CASES))
