@@ -157,15 +157,19 @@ Canonical coupled selection remains intact; checked-expression classifier-only m
 Both require failed-body panic locations at assertion macro sites in their guarded current test
 source. Custom assertion messages remain valid; assertion-labelled expect messages refuse.
 
-Standing controls cover17 runtime cases and forty-six actual body faults, including twenty-one real
+Checked-statement and whole-recipe entries use the same guard and source-location classifier.
+The statement entry plans all three mutated sources and its focused test source before activation.
+Both preserve prepared child stores/classifier-only modes and rebuild complete restored targets.
+
+Standing controls cover17 runtime cases and fifty-six actual body faults, including twenty-three real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All twenty-one entry captures also refuse a late missing source before
+12 membership tests passing. All twenty-three entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
-Twelve native-child capture cases execute actual entries with custom local stores,
+Fourteen native-child capture cases execute actual entries with custom local stores,
 intercepting every source write and both initial/restoration child calls. The captures check actual
 arguments, working directory, stores, channel and unrelated environment before dispatch. Reintroducing
 the prior per-child store reset earns a body assertion failure, as does discarding coupled selection.

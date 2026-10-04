@@ -946,12 +946,7 @@ Complete acceptance retained in [part146](../history/stitchcad-devnotes-part146.
   late-source refusals/body faults, classifier behavior and exclusive native/restored full artifacts.
   Own blocking whole-receipt/report retention under fixed caps before growth; next after .n.f3.
 
-Final glossary17/ledger9+pointer13/coverage9arms/10lanes/13trees/12siblings/zero gaps, rc=0.
-Final staged gate13green, rc=0, target/d156-formula-third-staged-gate.log; cached diff0.
-Explicit19 owned paths; hook/brief0/clean precede .p.n.f4; actual12open/146sealed/zero overlap0.
-
-Work unit STITCHCAD-G1-0132 owns .n.f4 and blocking complete receipt/closure/ledger retention
-before growth: recipes998L/PLANNING995L/CHANGELOG32177B; unchanged fixed caps.
+Complete prior verification/ownership retained in [part154](../history/stitchcad-devnotes-part154.md).
 
 ### G1-SLICE.5b.4c.h2.b.p.n.f4
 
@@ -964,33 +959,41 @@ Complete acceptance retained in [part148](../history/stitchcad-devnotes-part148.
   failed-body classifiers/noise faults, exclusive natives and exact source/full artifacts restored.
   Own blocking complete receipt/report retention under fixed caps before growth; P1 after .n.f4.
 
-Final ledger9/pointer13/coverage9, rc=0; census13open/146sealed/zero overlap, rc=0.
-Staged gate13green/cached diff0, rc=0, fourth-staged-gate.log; hook/brief0/clean precede .n.f5.
-
-Work unit STITCHCAD-G1-0133 owns .n.f5; complete committed receipt/report retention precedes
-code/live growth (recipes997L, PLANNING986L, CHANGELOG32034B); fixed caps unchanged.
-
-Text-only native1 falsely refused custom assert! at test122:9; exact sources/full9 tests restored0.
-Exclude that run; current classifier derives guarded test-source macro sites, not message labels.
-
 ### G1-SLICE.5b.4c.h2.b.p.n.f5
 
-- [x] **ROOT CAUSE** — actual broad predicate accepts noise; child overlays lose stores, rc=0.
-- [x] **ADDRESSED** — source/test/output guards, preserved stores/coupled argv; guarded current
-  macro-site classifiers. CI17/46body/21prefix/21late/12child/four classifiers, rc=0, fifth-ci-final.log.
-- [x] **NO REGRESSION** — exclusive absent-export19+3+16 native reds at actual test macro sites,
-  sources/full9/9/7 targets restored, rc=0; retained native-evidence logs independently reclassified0.
-  Publication43/glossary17/coverage9 and352 exact records/prior52 paths pass0, fifth-retention-proof.log.
-- [x] **LOCKSTEP** — D160 fixed; source/live/book agree; grammar/API fixed. D156 open; D161 next.
-- [x] **PROMOTION** — declined: existing actual-body/guarded-source/exclusive-restoration rules.
-- [x] **COMMIT** — complete0133; ledger/staged gate/hook/brief0/clean before next group.
+Complete acceptance/continuity retained in [part153](../history/stitchcad-devnotes-part153.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f6`
-  Status: `todo`
+  Status: `done`
   Goal: checked-statement/whole-recipe guards and D161 source-location assertion proof.
   Acceptance: all mutated/test sources before reads/output; actual captures/refusals/body faults,
   preserved child stores/classifier modes; exclusive22/19 native reds and full restored targets.
   Own blocking complete receipt/report retention before growth under fixed caps; P1 after .n.f5.
 
-Final ledger9/pointer13/glossary17/coverage9/13open147sealed census, rc=0; seven exact records352.
-Staged gate13green/cached diff0, rc=0, fifth-staged-gate.log; hook/brief0/clean precede .n.f6.
+Complete expression final verification retained in [part155](../history/stitchcad-devnotes-part155.md).
+
+Work unit STITCHCAD-G1-0134 owns .n.f6; complete committed receipt/report/ledger retention
+precedes growth (recipes996L/PLANNING991L/CHANGELOG32083B); fixed caps unchanged.
+
+### G1-SLICE.5b.4c.h2.b.p.n.f6
+
+- [x] **ROOT CAUSE** — both actual predicates accept labelled expect noise; child overlays lose stores, rc=0.
+- [x] **ADDRESSED** — all-source/test/output guards, prepared children and current macro-site proof;
+  CI17/56body/23prefix/23late/14child/six classifiers, rc=0, sixth-ci-final.log.
+- [x] **NO REGRESSION** — exclusive22+19 native assertion reds, both modes0; six sources exact/full7/7
+  targets restored, rc=0; retained logs reclassified0, sixth-native-proof.log. Publication43/five exact
+  records357/prior59 immutable paths pass0, sixth-retention-final-proof.log; original report80.
+- [x] **LOCKSTEP** — D161 fixed; source/live/book agree; grammar/API fixed; D156 open, D162 next.
+- [x] **PROMOTION** — declined: existing actual-body/guarded-source/exclusive-restoration rules.
+- [x] **COMMIT** — complete0134; ledger/staged gate/hook/brief0/clean before next group.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f7`
+  Status: `todo`
+  Goal: namespace/ordered-name producer guards and D162 source-location assertion proof.
+  Acceptance: all implementation/test sources before reads/output; actual captures/refusals/body
+  faults, prepared children/modes; exclusive17/18 native faults and exact/full target restoration.
+  Own blocking complete receipt/report retention under fixed caps; P1 after .n.f6.
+
+Final ledger9/pointer13/glossary17/coverage9/13open148sealed census, rc=0; archive357 exact.
+Initial gate/hook1: root/no-regression exit syntax absent; receipts fixed before final gate/commit.
+Final staged gate13green, rc=0, sixth-staged-gate-final.log; cached diff0; hook/brief0/clean next.

@@ -10,6 +10,14 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D161 statement and whole proof producers
+
+- Inspect a staged gate's terminal verdict before committing; receipt exits belong inside each bullet.
+- Plan every mutated file and the classifier's test source before reads or output activation.
+- Capture both the whole baseline/restoration calls and mutation/restoration calls under custom stores.
+- Classify real assertion macro locations; text labels cannot distinguish assert! from expect.
+- Promotion declined: existing all-source/actual-child/failed-body/exclusive-restoration rules.
+
 ## _(2026-10-04 UTC)_ — D160 assertion provenance
 
 - Rust assert! with a custom message need not print the standard assertion prefix.
@@ -94,3 +102,6 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part150`](docs/history/stitchcad-devnotes-part150.md) | complete final verification | 5 lines, 325 bytes, `sha256:c87058cf…` |
 | [`part151`](docs/history/stitchcad-devnotes-part151.md) | complete final verification | 3 lines, 247 bytes, `sha256:c0456d42…` |
 | [`part152`](docs/history/stitchcad-devnotes-part152.md) | complete final verification | 4 lines, 385 bytes, `sha256:1dd99ec8…` |
+| [`part153`](docs/history/stitchcad-devnotes-part153.md) | complete verification continuity | 20 lines, 1490 bytes, `sha256:bcfac0dc…` |
+| [`part154`](docs/history/stitchcad-devnotes-part154.md) | complete verification continuity | 6 lines, 453 bytes, `sha256:8212f19d…` |
+| [`part155`](docs/history/stitchcad-devnotes-part155.md) | complete verification continuity | 2 lines, 194 bytes, `sha256:d157c24b…` |

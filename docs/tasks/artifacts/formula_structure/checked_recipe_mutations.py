@@ -2,11 +2,17 @@
 from pathlib import Path
 import os
 import re
+import runpy
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/checked_recipe.rs'
+CONTRACT = ROOT / 'crates/sc-core/tests/formula_checked_recipe_contract.rs'
+SOURCES = (SOURCE, CONTRACT)
+WORK = ROOT / 'target/checked_recipe_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=SOURCES)
 CASES = (
     ('accepted prefix', 'self.statements().iter().enumerate()', 'self.statements().iter().take(1).enumerate()', 1),
     ('initial metadata ignored', 'FormulaNameCursor::new(namespace, self)', 'FormulaNameCursor::new({ let _ = namespace; FormulaNamespace::new([]).unwrap() }, self)', 1),
@@ -45,26 +51,38 @@ CASES = (
     ('consumer position fabricated', 'statement_index: proof.statement_index(),', 'statement_index: proof.statement_index() + 1,', 2),
 )
 ORIGINAL = SOURCE.read_bytes()
+WORK.mkdir(parents=True, exist_ok=True)
 for name, before, _, count in CASES:
     assert ORIGINAL.decode().count(before) == count, (name, 'actual source anchor count')
 
 
+def assertion_sites(source, path):
+    sites = set()
+    for line_number, line in enumerate(source.splitlines(), 1):
+        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
+        if match is not None:
+            sites.add((path, line_number, len(match.group(1).encode()) + 1))
+    return sites
+
+
 def assertion_failure(output):
     parts = output.split(b'\nfailures:\n', 2)
-    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None
+    if len(parts) != 3:
+        return False
+    locations = re.finditer(rb'panicked at ([^:\n]+):([0-9]+):([0-9]+):\n', parts[1])
+    return any((match.group(1).decode('utf-8', 'replace'), int(match.group(2)), int(match.group(3)))
+               in ASSERTION_SITES for match in locations)
 
+ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
+assert ASSERTION_SITES, 'focused contract has no assertion sites'
+assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
+assert not assertion_failure(b'assertion: compiler output\n')
 
-assert assertion_failure(b'\nfailures:\nthread panicked:\nassertion `left == right` failed\n\nfailures:\nfixture\n')
-for noise in (b'assertion: compiler output', b'\nfailures:\nexpect failed\n\nfailures:\nassertion_name\n'):
-    assert not assertion_failure(noise), 'whole fault classifier accepted noise'
 assert sys.argv[1:] in ([], ['--classifier-only'])
-print('whole-proof classifier: actual failed-body assertion required; compile/link/expect/name noise refused', flush=True)
+print('whole-proof classifier: actual test macro location required; compile/link/expect/name noise refused', flush=True)
 if sys.argv[1:] == ['--classifier-only']:
     sys.exit(0)
-WORK = ROOT / 'target/checked_recipe_mutations'
-WORK.mkdir(parents=True, exist_ok=True)
-environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'),
-                   CARGO_TARGET_DIR=str(ROOT / 'target'), TMPDIR=str(ROOT / 'target/scratch'))
+environment = dict(os.environ)
 command = ['cargo', 'test', '-p', 'sc-core', '--test', 'formula_checked_recipe_contract']
 try:
     baseline = subprocess.run(command, cwd=ROOT, env=environment, capture_output=True)

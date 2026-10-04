@@ -2,6 +2,7 @@
 from pathlib import Path
 import os
 import re
+import runpy
 import subprocess
 import sys
 
@@ -41,27 +42,44 @@ CASES = [
     ('actual scope namespace ignored', SCOPE, '            self.namespace,\n        )', '            &FormulaNamespace::new([]).unwrap(),\n        )', 1),
 ]
 PATHS = sorted({path for _, path, _, _, _ in CASES})
+CONTRACT = ROOT / 'crates/sc-core/tests/formula_checked_statement_contract.rs'
+SOURCES = (*(ROOT / path for path in PATHS), CONTRACT)
+WORK = ROOT / 'target/checked_statement_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=SOURCES)
 ORIGINAL = {path: (ROOT / path).read_bytes() for path in PATHS}
+WORK.mkdir(parents=True, exist_ok=True)
 for name, path, before, _, count in CASES:
     assert ORIGINAL[path].decode().count(before) == count, (name, 'actual anchor count')
 
 
+def assertion_sites(source, path):
+    sites = set()
+    for line_number, line in enumerate(source.splitlines(), 1):
+        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
+        if match is not None:
+            sites.add((path, line_number, len(match.group(1).encode()) + 1))
+    return sites
+
+
 def assertion_failure(output):
     parts = output.split(b'\nfailures:\n', 2)
-    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None
+    if len(parts) != 3:
+        return False
+    locations = re.finditer(rb'panicked at ([^:\n]+):([0-9]+):([0-9]+):\n', parts[1])
+    return any((match.group(1).decode('utf-8', 'replace'), int(match.group(2)), int(match.group(3)))
+               in ASSERTION_SITES for match in locations)
 
-
-assert assertion_failure(b'\nfailures:\nthread panicked:\nassertion `left == right` failed\n\nfailures:\nfixture\n')
-assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only refusal\n\nfailures:\nassertion_fixture\n')
+ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
+assert ASSERTION_SITES, 'focused contract has no assertion sites'
+assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
 assert not assertion_failure(b'assertion: compiler output\n')
-print('checked statement classifier: actual failed-body assertions required; compiler/expect/test-name noise refused', flush=True)
+
+print('checked statement classifier: current test macro locations required; compiler/expect/test-name noise refused', flush=True)
 assert not sys.argv[1:] or sys.argv[1:] == ['--classifier-only']
 if sys.argv[1:] == ['--classifier-only']:
     sys.exit(0)
-WORK = ROOT / 'target/checked_statement_mutations'
-WORK.mkdir(parents=True, exist_ok=True)
-environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'),
-                   CARGO_TARGET_DIR=str(ROOT / 'target'), TMPDIR=str(ROOT / 'target/scratch'))
+environment = dict(os.environ)
 try:
     for index, (name, path, before, after, count) in enumerate(CASES, 1):
         (ROOT / path).write_text(ORIGINAL[path].decode().replace(before, after, count))
@@ -78,4 +96,9 @@ finally:
     for path, data in ORIGINAL.items():
         (ROOT / path).write_bytes(data)
     assert all((ROOT / p).read_bytes() == data for p, data in ORIGINAL.items())
-print('checked statement faults:%d actual compiled assertion reds; all three sources restored exactly' % len(CASES))
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test',
+                               'formula_checked_statement_contract'],
+                              cwd=ROOT, env=environment, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored statement artifact failed', restored.stderr.decode())
+print('checked statement faults:%d actual compiled assertion reds; all three sources/current artifact restored' % len(CASES))

@@ -135,8 +135,11 @@ canonical/unknown-record ownership, direct/computed class roles, runtime-invalid
 privacy. Maximum4,096 statements,256-node operands,16 nested conditionals and4,000 grouping pairs
 pass on a64KiB stack. Five precise compiler guards in statement_owner_contract.py compile the actual documentation
 against Cargo's reported current artifact and require only E0451/E0515 for privacy/recipe/record borrows.
-Twenty-two actual compiled body faults must fail, with all three sources restored exactly and
-compiler/expect/test-name noise refused. Run mutations exclusively. Existing18 scope and16
+Twenty-two actual compiled body faults must fail, with all three implementation sources restored
+exactly and the complete focused target rebuilt. The direct entry validates those sources, its test
+source and output before reads/writes; children retain prepared stores. Failed-body panic locations
+must match current test assertion macro sites. Custom assert messages pass; compiler/expect/test-name
+noise refuses. Classifier-only mode compiles no native fault. Run mutations exclusively. Existing18 scope and16
 expression fault controls remain required when their implementation changes.
 
 ## Binding refusals retain real sources

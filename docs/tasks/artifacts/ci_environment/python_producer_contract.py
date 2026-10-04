@@ -321,12 +321,19 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py', 'canonical_recipe_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py', 'canonical_expression_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/checked_expression_mutations.py', 'checked_expression_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/checked_statement_mutations.py', 'checked_statement_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py', 'checked_recipe_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
         text = path.read_text()
-        source_argument = ('SOURCES' if path.name in ('domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py', 'normalized_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py')
-                           else '(SOURCE,)')
+        multiple_sources = {
+            'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
+            'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
+            'checked_expression_mutations.py', 'checked_statement_mutations.py',
+            'checked_recipe_mutations.py',
+        }
+        source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
         call = ("runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](\n"
                 "    ROOT, directories=(WORK,), " + source_anchor + ")\n")
@@ -387,11 +394,18 @@ def main():
             ('canonical_expression_mutations.py', 'canonical_expression_mutations', 'canonical.rs',
              'formula_canonical_contract', None),
             ('checked_expression_mutations.py', 'checked_expression_mutations', 'checked.rs',
-             'formula_checked_expression_contract', None)):
+             'formula_checked_expression_contract', None),
+            ('checked_statement_mutations.py', 'checked_statement_mutations',
+             ('checked_statement.rs', 'checked.rs', 'namespace/ordered.rs'),
+             'formula_checked_statement_contract', None),
+            ('checked_recipe_mutations.py', 'checked_recipe_mutations', 'checked_recipe.rs',
+             'formula_checked_recipe_contract', None)):
         path = ROOT / 'docs/tasks/artifacts/formula_structure' / filename
-        sources = (ROOT / 'crates/sc-core/src/recipe' / rust,)
+        rust_files = rust if isinstance(rust, tuple) else (rust,)
+        sources = tuple(ROOT / 'crates/sc-core/src/recipe' / file for file in rust_files)
         text = path.read_text()
-        capture_child(text, path, work_name, sources, target, first_suffix=(test, '--', '--exact') if test is not None else ())
+        selected = (test, '--', '--exact') if test is not None else ()
+        capture_child(text, path, work_name, sources, target, first_suffix=selected)
         classifier_controls(text, path, strict=test is None)
         tree = ast.parse(text)
         function = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure')
@@ -473,7 +487,7 @@ def main():
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / 12 actual native-child capture cases / 4 calibrated failed-body classifiers / source unchanged')
+          str(len(adopters)) + ' actual late-source refusals / 14 actual native-child capture cases / 6 calibrated failed-body classifiers / source unchanged')
 
 
 if __name__ == '__main__':

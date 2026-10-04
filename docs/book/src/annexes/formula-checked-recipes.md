@@ -165,7 +165,10 @@ Limits4096 statements,256-node operands,16 conditionals and4000 grouping pairs p
 Five actual documentation compiler guards require only E0451/E0515 for privacy and recipe/record
 borrows. The four Rust examples in this chapter compile and execute against Cargo's current library.
 Actual compiled whole-proof faults require running public assertion failures, with source and
-compiled artifact restored; compile/link/expect-only noise never counts. Run mutations exclusively.
+complete focused artifact restored. The direct entry validates implementation/test source and output
+before reads/writes and preserves prepared child stores. Failed-body panic locations must match
+current test assertion macro sites; custom assert messages pass, while compile/link/expect-only noise
+refuses. Classifier-only mode compiles no native fault. Run mutations exclusively.
 
 A statically valid false assertion, zero divisor, negative square root, absent size/export context
 or too-wide stored result still has no execution verdict. The proof reads no values, providers or
