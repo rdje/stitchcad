@@ -126,6 +126,38 @@ else
   bad UNDECLARED "an undeclared machine token was not refused (exit=$rc)" "$out"
 fi
 
+# ---------------------------------------------------------------- D155 actual diagnostic/example declarations (C1)
+# Remove each real declaration from a fresh book copy; the standing census must name it.
+while IFS=$'\t' read -r token chapter; do
+  D="$WORK/d155-$token"; mkroot "$D"
+  python3 -I -B - "$D/$chapter" "$token" <<'PY_DECLARATION'
+from pathlib import Path
+import sys
+p, token = Path(sys.argv[1]), sys.argv[2]
+rows = p.read_text().splitlines(keepends=True)
+removed = [row for row in rows if row.startswith('| `' + token + '` |')]
+assert len(removed) == 1, ('D155 declaration fault anchor', token, len(removed))
+p.write_text(''.join(row for row in rows if row not in removed))
+PY_DECLARATION
+  mutation_rc=$?
+  out="$(run "$D")"; rc=$?
+  needle=$(printf '`%s` is used by' "$token")
+  if [ "$mutation_rc" -eq 0 ] && [ "$rc" -eq 1 ] && grep -Fq "$needle" <<<"$out" \
+     && grep -q 'unaccounted: 1' <<<"$out"; then
+    ok "D155-$token" "actual copied declaration removal is refused by name; exactly one unaccounted token"
+  else
+    bad "D155-$token" "actual declaration fault failed its named census assertion (mutation=$mutation_rc, exit=$rc)" "$out"
+  fi
+done <<'D155_DECLARATIONS'
+name	docs/book/src/spec/formula-language.md
+origins	docs/book/src/spec/formula-language.md
+prior_source	docs/book/src/spec/formula-language.md
+attempted_source	docs/book/src/spec/formula-language.md
+declaration_index	docs/book/src/spec/formula-language.md
+collision	docs/book/src/annexes/formula-static-validation.md
+eps_chord	docs/book/src/annexes/formula-static-validation.md
+D155_DECLARATIONS
+
 # ---------------------------------------------------------------- ARITY (S1)
 D="$WORK/arity"; mkroot "$D"
 printf '| extra term | meaning | object | also called | token | a sixth cell |\n' \

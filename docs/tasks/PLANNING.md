@@ -946,55 +946,35 @@ roles and documented child-first selection retained; header/geometry scope remai
 D139 closes at G1-SLICE.5b.3c.3a: case-specific raw annotation/actual kind mismatch payloads
 retain genuine spans/available ordinals without RHS/canonical invention. Header264cases/232exact
 payloads/13actual compiled body reds and full reference pass, rc=0. Original report retained in
-[`stitchcad-defects-part64.md`](../history/stitchcad-defects-part64.md); grammar/token behavior unchanged.
+[`stitchcad-defects-part64.md`](../history/window5.md#stitchcad-defects-part64md); grammar/token behavior unchanged.
 
 D140 closes at G1-SLICE.5f.3a after complete static Length checking of local provider arguments.
-Original report retained exactly in [`stitchcad-defects-part61.md`](../history/stitchcad-defects-part61.md).
+Original report retained exactly in [`stitchcad-defects-part61.md`](../history/window5.md#stitchcad-defects-part61md).
 97 independent cases/75 complete dimension refusals/12 actual compiled body reds verify argument
 kind/child order, untouched static-failure caches and original contribution replay. Existing26
 provenance body reds stay effective after their actual edge anchor is updated; grammar unchanged.
 Product operation identity/full graph/physical geometry remain separately owned.
 
-D141 closes at G1-SLICE.5b.3c.2b.h0: immutable window3 heading superseded in the live upkeep
-book; current labels/correction independently watched. Original report retained in
-[`stitchcad-defects-part59.md`](../history/stitchcad-defects-part59.md); byte identities unaffected.
-
-D142/D143 close at G1-SLICE.5b.3c.2b.h1.v after observed d5dd11f runner success.
-Original reports/implementation receipts retained exactly in
-[`stitchcad-defects-part60.md`](../history/stitchcad-defects-part60.md). Rust1.99 strict Clippy,
-663tests/56groups and WASM3 succeeded; all11 Rust/eight doctrine steps succeeded. The actual
-runner verification confirmed all four effective checkout-local stores on the checkout volume.
-
-D144 closes at G1-SLICE.5f.3a.t1: normal reference compilation preserves the original shell header
-line offset; in-memory fault variants use an explicitly virtual filename. Independent AST/code
-comparison verifies86 original locations, real dimension traceback text and a virtual fault frame;
-two actual compiled loader body reds detect offset loss and source impersonation. Original report
-retained exactly in [`stitchcad-defects-part62.md`](../history/stitchcad-defects-part62.md); numerical/
-static results and grammar unchanged. Full reference regressions stay required before commit.
-
-D145 closes at G1-SLICE.5b.3c.2b.2.0: wanted-rule annex now links the verified local D140
-adapter and retains product operation/graph/geometry boundaries. Cross-book source census and
-actual97case/75payload/12fault geometry producer agree; publication10 passes, rc=0. Original report
-retained in [`stitchcad-defects-part63.md`](../history/stitchcad-defects-part63.md); grammar/API unchanged.
-
-D146 closes at G1-SLICE.5b.3c.3a.t1: UnknownTolerance now uses formula_parse, retaining typed
-rule/source spans/genuine recipe ordinal. Original report retained exactly in
-[`stitchcad-defects-part65.md`](../history/stitchcad-defects-part65.md). Scoped history audit:
-1ac495b introduced runtime token; ba24599 changed reference to closed TOLERANCE/formula_parse
-without updating product mapping/fixtures/book. Actual public before-repair body assertion red101,
-144 invalid-class/10 valid-class syntax controls and15 compiled body fault reds verify repair, rc=0.
-Grammar, accepted class names and missing-valid-context runtime family remain unchanged.
-
-D147/D148 closed: [complete closure receipts](../history/stitchcad-devnotes-part120.md).
-
-D149–D151 closure receipts and original D152/D153 reports are retained exactly in
-[`stitchcad-defects-part71.md`](../history/stitchcad-defects-part71.md). D152/D153 remain owned by
-G1-SLICE.5b.4a. D152 status repair:12 current cells/14 copied body reds; D153 generator repair:
-five header forms/21 preserved routes/two compiled body reds, rc=0. Independent census:
-10open/142sealed, unique/disjoint/complete D1..D153 except D18; full reference/language/publication regressions pass, rc=0. D152/D153 closed.
+D141–D153 closure receipts retained exactly in
+[`stitchcad-defects-part72.md`](../history/stitchcad-defects-part72.md). All remain closed.
 
 - **D154** — whole reference preflight drops known refusal ordinals: actual third-statement missing
   name yields formula_unbound_name with name/origins only, despite genuine static invocation3.
   Root: propagated infer refusals and phase calls have no enclosing context wrapper (blame
   ba245998/62be6f9d/38011914); contract5.2 requires available indices. Own G1-SLICE.5b.4c,
   P1 immediate before .5b closure/arithmetic; cover syntax/literal/static and no fabricated context.
+
+
+D155 closes at G1-SLICE.5b.4c.h0: five actual binding payload fields and two explicit test-name
+roles are declared without extending grammar or exemptions. Actual glossary17 controls/7 named
+copy-removal reds pass0; local1.99 G0 review again18met/1human-act-unmet. Original pre-repair
+working report retained exactly in [`stitchcad-defects-part73.md`](../history/stitchcad-defects-part73.md).
+
+
+- **D156** — ordinary Make producers inherit off-volume package/toolchain/scratch defaults when
+  caller exports are absent; Makefile pins only probes scratch. Read-only `make -f
+  target/producer-default-audit.mk audit` prints Cargo/Rustup repo_local=false/same_volume=false,
+  inherited scratch likewise false; default build target is local. No compiler/store write in audit.
+  CI's explicit prepare/verify is separate and remains valid. Own G1-SLICE.5b.4c.h2, P1 after
+  .h0 commit/.h1 runner observation, before D154 native verification; establish actual durable
+  producer fault controls, fix published entry-point defaults and verify native/WASM/G0 locality.

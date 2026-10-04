@@ -5,6 +5,15 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D154 prerequisite retention
+
+- Window5 captures60 exact full files; prior windows/schemas/caps stay immutable.
+- Source/read/materialization comparisons retain originals without raw copies or fixture Git.
+- Existing sibling holds complete moved task records; whole ledger/closed receipts are sealed.
+- D155 field/example vocabulary must be declared and watched; full pre-push checks caught drift.
+- Actual runner verification follows the doctrine commit/push before D154 repair.
+- Promotion declined: no new principle beyond existing exact-retention/observed-verdict policy.
+
 ## _(2026-10-04 UTC)_ — independently coupled whole acceptance
 
 - Route every expression case through a later complete recipe, using x/len for point/edge results.
@@ -22,18 +31,10 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - D152 current status and D153 single-line comment range need actual copied-body refusal controls.
 - Promotion declined: existing owner/source/truth/lockstep contracts cover these requirements.
 
-## _(2026-10-04 UTC)_ — complete syntax before literal inputs
-
-- Whole syntax/structure, literal normalization and static inference are distinct complete phases.
-- Preserve raw number/unit spelling; convert each literal once, then reuse normalized operands.
-- A closed token can cover different phases: compare genuine phase/ordinal, not token alone.
-- D151 status must distinguish verified reference preflight from pending library-owned acceptance.
-- Promotion declined (existing phase/source/truth and book lockstep contracts).
-
 # Sealed archive — earlier lessons
 
 [Parts1–25: window1 catalog](docs/history/window1.md), with all original identities and retrieval
-aliases. [Exact prior navigation](docs/history/stitchcad-devnotes-part119.md) is retained unchanged.
+aliases. [Exact prior navigation](docs/history/window5.md#stitchcad-devnotes-part119md) is retained unchanged.
 The live lesson window is bounded by200 lines/16384 bytes; the archive verifier checks every record.
 
 | Segment | Coverage | Sealed identity |
@@ -107,31 +108,32 @@ The live lesson window is bounded by200 lines/16384 bytes; the archive verifier 
 | [`part92`](docs/history/window4.md#stitchcad-devnotes-part92md) | G1-0092 symbolic-role | 9 lines, 753 bytes, `sha256:a62696a7…` |
 | [`part93`](docs/history/window4.md#stitchcad-devnotes-part93md) | G1-0093 wanted | 8 lines, 649 bytes, `sha256:41df0629…` |
 | [`part94`](docs/history/window4.md#stitchcad-devnotes-part94md) | G1-0094 call | 7 lines, 500 bytes, `sha256:5d32cfcf…` |
-| [`part95`](docs/history/stitchcad-devnotes-part95.md) | G1-0095 missing-kind | 5 lines, 338 bytes, `sha256:a1cf2132…` |
-| [`part96`](docs/history/stitchcad-devnotes-part96.md) | G1-0096 catalog-label lesson | 6 lines, 423 bytes, `sha256:d93fba17…` |
-| [`part98`](docs/history/stitchcad-devnotes-part98.md) | G1 retention/CI protocols | 86 lines, 6837 bytes, `sha256:741f466e…` |
-| [`part97`](docs/history/stitchcad-devnotes-part97.md) | G1-0098 compiler lesson | 6 lines, 417 bytes, `sha256:87269597…` |
-| [`part99`](docs/history/stitchcad-devnotes-part99.md) | CI locality | 6 lines, 425 bytes, `sha256:bba39276…` |
-| [`part100`](docs/history/stitchcad-devnotes-part100.md) | CI observation | 4 lines, 232 bytes, `sha256:ae0a5f60…` |
-| [`part101`](docs/history/stitchcad-devnotes-part101.md) | cleanup | 4 lines, 156 bytes, `sha256:cea7ce81…` |
-| [`part102`](docs/history/stitchcad-devnotes-part102.md) | geometry preflight | 5 lines, 357 bytes, `sha256:7addd9c0…` |
-| [`part103`](docs/history/stitchcad-devnotes-part103.md) | CI/cleanup protocols | 118 lines, 8944 bytes, `sha256:532de5ae…` |
-| [`part104`](docs/history/stitchcad-devnotes-part104.md) | source positions | 5 lines, 312 bytes, `sha256:3990c390…` |
-| [`part105`](docs/history/stitchcad-devnotes-part105.md) | G1-0104 prerequisite | 5 lines, 321 bytes, `sha256:28672a01…` |
-| [`part106`](docs/history/stitchcad-devnotes-part106.md) | G1-0105 checker | 39 lines, 3461 bytes, `sha256:6cfe304a…` |
-| [`part107`](docs/history/stitchcad-devnotes-part107.md) | G1-0105 lesson | 9 lines, 746 bytes, `sha256:551f5302…` |
-| [`part108`](docs/history/stitchcad-devnotes-part108.md) | D139 header protocol | 34 lines, 2868 bytes, `sha256:d0ca98ee…` |
-| [`part109`](docs/history/stitchcad-devnotes-part109.md) | D139 header lesson | 7 lines, 543 bytes, `sha256:7cd43f55…` |
-| [`part110`](docs/history/stitchcad-devnotes-part110.md) | D146 class protocol | 31 lines, 2497 bytes, `sha256:2fb7225e…` |
-| [`part111`](docs/history/stitchcad-devnotes-part111.md) | D146 class lesson | 5 lines, 267 bytes, `sha256:839ac404…` |
-| [`part112`](docs/history/stitchcad-devnotes-part112.md) | D145 prerequisite protocol | 23 lines, 1819 bytes, `sha256:4014eac8…` |
-| [`part113`](docs/history/stitchcad-devnotes-part113.md) | G1-0108 statement | 41 lines, 3566 bytes, `sha256:98c31994…` |
-| [`part114`](docs/history/stitchcad-devnotes-part114.md) | G1-0108 owner | 5 lines, 258 bytes, `sha256:dbc1f357…` |
-| [`part115`](docs/history/stitchcad-devnotes-part115.md) | D147 protocol | 23 lines, 1733 bytes, `sha256:03dec8d6…` |
-| [`part116`](docs/history/stitchcad-devnotes-part116.md) | D147 lesson | 5 lines, 344 bytes, `sha256:07666662…` |
-| [`part117`](docs/history/stitchcad-devnotes-part117.md) | D148 phase protocol | 26 lines, 2028 bytes, `sha256:5871087e…` |
-| [`part118`](docs/history/stitchcad-devnotes-part118.md) | D148 phase lesson | 4 lines, 201 bytes, `sha256:1391aa9d…` |
-| [`part119`](docs/history/stitchcad-devnotes-part119.md) | part1–25 navigation | 32 lines, 3706 bytes, `sha256:9b745a27…` |
-| [`stitchcad-devnotes-part121.md`](docs/history/stitchcad-devnotes-part121.md) | shared static contract protocol | 29 lines, 2290 bytes, `sha256:9682c881…` |
-| [`stitchcad-devnotes-part122.md`](docs/history/stitchcad-devnotes-part122.md) | shared public interface lesson | 6 lines, 418 bytes, `sha256:d90d2e91…` |
-| [`stitchcad-devnotes-part123.md`](docs/history/stitchcad-devnotes-part123.md) | initial namespace complete records | 78 lines, 6523 bytes, `sha256:919cc8c1…` |
+| [`part95`](docs/history/window5.md#stitchcad-devnotes-part95md) | G1-0095 missing-kind | 5 lines, 338 bytes, `sha256:a1cf2132…` |
+| [`part96`](docs/history/window5.md#stitchcad-devnotes-part96md) | G1-0096 catalog-label lesson | 6 lines, 423 bytes, `sha256:d93fba17…` |
+| [`part98`](docs/history/window5.md#stitchcad-devnotes-part98md) | G1 retention/CI protocols | 86 lines, 6837 bytes, `sha256:741f466e…` |
+| [`part97`](docs/history/window5.md#stitchcad-devnotes-part97md) | G1-0098 compiler lesson | 6 lines, 417 bytes, `sha256:87269597…` |
+| [`part99`](docs/history/window5.md#stitchcad-devnotes-part99md) | CI locality | 6 lines, 425 bytes, `sha256:bba39276…` |
+| [`part100`](docs/history/window5.md#stitchcad-devnotes-part100md) | CI observation | 4 lines, 232 bytes, `sha256:ae0a5f60…` |
+| [`part101`](docs/history/window5.md#stitchcad-devnotes-part101md) | cleanup | 4 lines, 156 bytes, `sha256:cea7ce81…` |
+| [`part102`](docs/history/window5.md#stitchcad-devnotes-part102md) | geometry preflight | 5 lines, 357 bytes, `sha256:7addd9c0…` |
+| [`part103`](docs/history/window5.md#stitchcad-devnotes-part103md) | CI/cleanup protocols | 118 lines, 8944 bytes, `sha256:532de5ae…` |
+| [`part104`](docs/history/window5.md#stitchcad-devnotes-part104md) | source positions | 5 lines, 312 bytes, `sha256:3990c390…` |
+| [`part105`](docs/history/window5.md#stitchcad-devnotes-part105md) | G1-0104 prerequisite | 5 lines, 321 bytes, `sha256:28672a01…` |
+| [`part106`](docs/history/window5.md#stitchcad-devnotes-part106md) | G1-0105 checker | 39 lines, 3461 bytes, `sha256:6cfe304a…` |
+| [`part107`](docs/history/window5.md#stitchcad-devnotes-part107md) | G1-0105 lesson | 9 lines, 746 bytes, `sha256:551f5302…` |
+| [`part108`](docs/history/window5.md#stitchcad-devnotes-part108md) | D139 header protocol | 34 lines, 2868 bytes, `sha256:d0ca98ee…` |
+| [`part109`](docs/history/window5.md#stitchcad-devnotes-part109md) | D139 header lesson | 7 lines, 543 bytes, `sha256:7cd43f55…` |
+| [`part110`](docs/history/window5.md#stitchcad-devnotes-part110md) | D146 class protocol | 31 lines, 2497 bytes, `sha256:2fb7225e…` |
+| [`part111`](docs/history/window5.md#stitchcad-devnotes-part111md) | D146 class lesson | 5 lines, 267 bytes, `sha256:839ac404…` |
+| [`part112`](docs/history/window5.md#stitchcad-devnotes-part112md) | D145 prerequisite protocol | 23 lines, 1819 bytes, `sha256:4014eac8…` |
+| [`part113`](docs/history/window5.md#stitchcad-devnotes-part113md) | G1-0108 statement | 41 lines, 3566 bytes, `sha256:98c31994…` |
+| [`part114`](docs/history/window5.md#stitchcad-devnotes-part114md) | G1-0108 owner | 5 lines, 258 bytes, `sha256:dbc1f357…` |
+| [`part115`](docs/history/window5.md#stitchcad-devnotes-part115md) | D147 protocol | 23 lines, 1733 bytes, `sha256:03dec8d6…` |
+| [`part116`](docs/history/window5.md#stitchcad-devnotes-part116md) | D147 lesson | 5 lines, 344 bytes, `sha256:07666662…` |
+| [`part117`](docs/history/window5.md#stitchcad-devnotes-part117md) | D148 phase protocol | 26 lines, 2028 bytes, `sha256:5871087e…` |
+| [`part118`](docs/history/window5.md#stitchcad-devnotes-part118md) | D148 phase lesson | 4 lines, 201 bytes, `sha256:1391aa9d…` |
+| [`part119`](docs/history/window5.md#stitchcad-devnotes-part119md) | part1–25 navigation | 32 lines, 3706 bytes, `sha256:9b745a27…` |
+| [`stitchcad-devnotes-part121.md`](docs/history/window5.md#stitchcad-devnotes-part121md) | shared static contract protocol | 29 lines, 2290 bytes, `sha256:9682c881…` |
+| [`stitchcad-devnotes-part122.md`](docs/history/window5.md#stitchcad-devnotes-part122md) | shared public interface lesson | 6 lines, 418 bytes, `sha256:d90d2e91…` |
+| [`stitchcad-devnotes-part123.md`](docs/history/window5.md#stitchcad-devnotes-part123md) | initial namespace complete records | 78 lines, 6523 bytes, `sha256:919cc8c1…` |
+| [`part124`](docs/history/stitchcad-devnotes-part124.md) | separated-phase lesson | 7 lines, 532 bytes, `sha256:df3473ff…` |

@@ -5,19 +5,19 @@ Completed protocols and receipts retain original bytes; current implementation w
 
 ## Completed initial namespace protocol — preserved from 4e0d0bf
 
-[Exact completed records](../history/stitchcad-devnotes-part123.md) retained from3079630.
+[Exact completed records](../history/window5.md#stitchcad-devnotes-part123md) retained from3079630.
 
 ## Completed initial namespace receipts — preserved from 4e0d0bf
 
 ## Initial namespace receipts — .5b.2c.2,2026-10-03 (UTC)
 
-[Exact receipt](../history/stitchcad-devnotes-part123.md).
+[Exact receipt](../history/window5.md#stitchcad-devnotes-part123md).
 
 ## Completed initial namespace checklist — preserved from 4e0d0bf
 
 ### G1-SLICE.5b.2c.2 — checked initial product namespace
 
-[Exact checklist](../history/stitchcad-devnotes-part123.md).
+[Exact checklist](../history/window5.md#stitchcad-devnotes-part123md).
 
 ## Completed exact initial reads protocol — preserved from 19900d0
 
@@ -759,40 +759,40 @@ No product evaluator, geometry, storage, browser, MCP or independent production 
 
 ## Fourth retained window checklist
 
-[Exact completed checklist](../history/stitchcad-devnotes-part98.md) retained.
+[Exact completed checklist](../history/window5.md#stitchcad-devnotes-part98md) retained.
 
 ## Completed fourth-window protocol — preserved from9fab7ec
 
-[Exact original protocol and its source identity](../history/stitchcad-devnotes-part98.md) retained.
+[Exact original protocol and its source identity](../history/window5.md#stitchcad-devnotes-part98md) retained.
 
 ## CI observation protocol — .5b.3c.2b.h1
 
-[Exact protocol/verdicts](../history/stitchcad-devnotes-part98.md) retained. Engineering-continuity
+[Exact protocol/verdicts](../history/window5.md#stitchcad-devnotes-part98md) retained. Engineering-continuity
 record98 holds the complete committed span fromd24f1a9; retrieve with history_archive.sh read.
 
 ## D142 pre-code protocol
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part103.md) retained.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part103md) retained.
 
 ## D142 acceptance checklist
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part103.md) retained.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part103md) retained.
 
 ## D143 pre-code protocol
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part103.md) retained.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part103md) retained.
 
 ## D143 acceptance checklist
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part103.md) retained.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part103md) retained.
 
 ## Repaired CI observation — .h1.v
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part103.md) retained.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part103md) retained.
 
 ## Required artifact cleanup — .h1.c
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part103.md) retained.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part103md) retained.
 
 ## D140 geometry argument protocol
 
@@ -861,49 +861,49 @@ language/publication/ledger/gates; grammar/results/contracts unchanged. Existing
 
 ### G1-SLICE.5b.3c.2b.2.0
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part112.md) retained from475f2ed.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part112md) retained from475f2ed.
 
 ## Bounded product expression checker protocol
 
 ### G1-SLICE.5b.3c.2b.2
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part106.md) retained fromc13b7d8.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part106md) retained fromc13b7d8.
 
 ## D139 binding-header argument protocol
 
 ### G1-SLICE.5b.3c.3a
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part108.md) retained frome3f6b33.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part108md) retained frome3f6b33.
 
 ## D146 assertion-class token protocol
 
 ### G1-SLICE.5b.3c.3a.t1
 
-[Exact completed protocol/checklist](../history/stitchcad-devnotes-part110.md) retained from475f2ed.
+[Exact completed protocol/checklist](../history/window5.md#stitchcad-devnotes-part110md) retained from475f2ed.
 
 ## Current-statement kind proof protocol
 
 ### G1-SLICE.5b.3c.3b
 
-[Exact protocol/checklist](../history/stitchcad-devnotes-part113.md) retained from2fa9d5d.
+[Exact protocol/checklist](../history/window5.md#stitchcad-devnotes-part113md) retained from2fa9d5d.
 
 ## D147 ambiguity argument protocol
 
 ### G1-SLICE.5b.3d.a
 
-[Exact protocol/checklist](../history/stitchcad-devnotes-part115.md) retained frome6743a9.
+[Exact protocol/checklist](../history/window5.md#stitchcad-devnotes-part115md) retained frome6743a9.
 
 ## D148 whole-source phase protocol
 
 ### G1-SLICE.5b.3d.b
 
-[Exact protocol/checklist](../history/stitchcad-devnotes-part117.md) retained from3801191.
+[Exact protocol/checklist](../history/window5.md#stitchcad-devnotes-part117md) retained from3801191.
 
 ## Shared static contract protocol
 
 ### G1-SLICE.5b.3d.c
 
-[Exact protocol/checklist](../history/stitchcad-devnotes-part121.md) retained from3079630.
+[Exact protocol/checklist](../history/window5.md#stitchcad-devnotes-part121md) retained from3079630.
 
 ## D150 separated input phases protocol
 

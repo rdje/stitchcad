@@ -463,3 +463,27 @@ succeeded on all eleven, including strict Clippy1.99,663 tests/56 result groups 
 WASM build. The runner's effective environment and locality command confirmed all four checkout-local
 stores on the checkout volume. D142/D143 are closed by observed evidence under .h1.v; these build
 results do not establish independent product or physical approval. Original failed-run verdicts remain.
+
+
+The fifth transition captures60 complete raw sealed files from c91cdf5 for the D154 repair.
+Its isolated fixture reconstructs all309 original logical records, including all four earlier
+windows, without a Git repository or raw member copies. Repeated Git archive/gzip output is
+identical; the installed source comparison proves all60 originals before continued work.
+The verified payload replaces only its60 raw copies;69 maintained Markdown destinations use
+window5 member headings. Four new whole ledger/lesson/defect-receipt seals leave313 logical records
+and nine working Markdown files. Completed task evidence moves byte-for-byte into the existing
+recipe-proof sibling. Earlier windows, fixed schemas and containment limits remain unchanged.
+
+```bash
+bash scripts/history_archive.sh prove-source window5
+bash scripts/history_archive.sh read docs/history/stitchcad-changelog-part110.md
+```
+
+Required runner verification belongs to G1-SLICE.5b.4c.h1 after the containment commit/push;
+no runner verdict for this transition has been observed yet. D154 remains open until .4c.r.
+
+
+Published Make targets still inherit Cargo/Rustup stores and scratch defaults when caller exports
+are absent. D156 is owned by G1-SLICE.5b.4c.h2 immediately after this transition's runner
+observation, before D154 verification. The verified native/WASM/G0 receipts here supplied explicit
+project-local variables; CI's separate prepare/verify proof remains valid. Default locality is pending.

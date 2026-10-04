@@ -298,6 +298,16 @@ metadata dictionary supplies no original declaration position, so none is fabric
 product declarations retain their actual entity/record identities instead of pretending to be
 reference source positions. These arguments inspect metadata only, never numerical values/state.
 
+The following payload fields describe binding refusals; they add no formula-language spelling.
+
+| Field | Meaning and availability |
+| --- | --- |
+| `name` | Exact attempted binding name; retained in both ambiguity and rebinding cases. |
+| `origins` | Prior and attempted origins in binding order for ambiguity; equal origins remain distinct entries. |
+| `prior_source` | Actual prior binding metadata/location for ambiguity or a repeated recipe binding; reserved-name refusal uses reserved metadata instead. |
+| `attempted_source` | Actual attempted binding kind, origin, role and available source identity/location; never its numerical value or state. |
+| `declaration_index` | One-based position in consumed initial declaration pairs; absent for a detached metadata dictionary and never a recipe ordinal. |
+
 #### 5.2.2 Call-lookup sources
 
 A call searches a different domain from a data-name read: first the envelope alias table (§5.3),

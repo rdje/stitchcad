@@ -787,70 +787,9 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| done | `G1-SLICE.4a.3` | `done` | Named table/unique current bindings complete .4a structurally |
-| done | `G1-SLICE.4c.1` | `done` | Size membership identity/order/base and revision foundation |
-| done | `G1-SLICE.4c.3a` | `done` | Current authored garment chart observations |
-| done | `G1-SLICE.4c.3b` | `done` | Explicit current Design/member/POM coverage |
-| done | `G1-SLICE.4c.3c` | `done` | Custom member-of-one body/Ease inputs |
-| done | `G1-SLICE.4d.1` | `done` | Incremental book, glossary/index/annexes; D71/D72 fixed |
-| done | `G1-SLICE.5a.1` | `done` | Borrowed source tokens/spans; no expression-validation/execution claim |
-| done | `G1-SLICE.5a.2a` | `done` | Complete reference node/depth traversal and fragment ownership, D75/D77 fixed |
-| done | `G1-SLICE.5a.2b.1` | `done` | D76 input parity fixed; 130+3 controls/nine actual reds |
-| done | `G1-SLICE.5a.2b.2` | `done` | Immutable iterative expression syntax and structural bounds |
-| done | `G1-SLICE.5a.3a` | `done` | D78 extreme public rounding fixed with actual boundary proof |
-| done | `G1-SLICE.5a.3b.1` | `done` | D79 literal identity, D80/D81 publication drift fixed |
-| done | `G1-SLICE.5a.3b.2` | `done` | D82 exact operators/selector model preserve sub-quantum results |
-| done | `G1-SLICE.5a.3b.3a.1` | `done` | D85/D86/D87 angular guards and scoped reference proof |
-| done | `G1-SLICE.5a.3c.1` | `done` | Shared unsigned128 rounding prerequisite |
-| done | `G1-SLICE.5a.3c.2` | `done` | Exact typed individual literal inputs |
-| done | `G1-SLICE.5a.3c.3` | `done` | Immutable normalized syntax arena/all literal inputs |
-| done | `G1-SLICE.5a.3c.4` | `done` | Complete coupled normalization input review |
-| done | `G1-SLICE.5a.3d.1` | `done` | Exact byte contract settled by D103 director ruling |
-| done | `G1-SLICE.5a.3d.2` | `done` | Owned iterative canonical expression serializer |
-| done | `G1-SLICE.5a.3d.3` | `done` | Complete expression identity proof map |
-| done | `G1-SLICE.5a.3e.1` | `done` | Single immutable let/assert syntax |
-| done | `G1-SLICE.5a.3e.2` | `done` | Ordered recipe/4096/context |
-| done | `G1-SLICE.5a.3e.3` | `done` | Coupled syntax/diagnostic review |
-| done | `G1-SLICE.5a.3f.1a` | `done` | Exact complete recipe byte contract |
-| done | `G1-SLICE.5a.3f.1b` | `done` | Complete immutable recipe input normalization |
-| done | `G1-SLICE.5a.3f.1c` | `done` | Owned exact statement/recipe identity bytes |
-| done | `G1-SLICE.5a.3f.2` | `done` | Coupled whole input and identity review |
-| done | `G1-SLICE.5a.4` | `done` | Full syntax milestone and complete pending evaluator decomposition |
-| done | `G1-SLICE.5b.1c.2` | `done` | D124 current-grammar ruling; complete static reference review |
-| done | `G1-SLICE.5e.3a` | `done` | D125 named reference assertion diagnostics; product execution pending |
-| done | `G1-SLICE.5e.1a` | `done` | D122/D127/D128 reference origin/context and state/metadata refusals |
-| done | `G1-SLICE.5e.3b` | `done` | D121 reference contributions/class refusal verified |
-| done | `G1-SLICE.5b.2a` | `done` | Closed kind/origin/reserved-context product metadata |
-| done | `G1-SLICE.5b.2b` | `done` | Immutable sourced declarations before checked namespace |
-| done | `G1-SLICE.5b.2c.1a` | `done` | D131 reproduction and concrete diagnostic proposal |
-| done | `G1-SLICE.5b.2c.1b` | `done` | Delegated source-aware diagnostic decision and repair |
-| done | `G1-SLICE.5b.2c.2` | `done` | Checked product initial namespace |
-| done | `G1-SLICE.5b.2d.1` | `done` | Exact checked initial name reads |
-| done | `G1-SLICE.5b.2d.2` | `done` | Actual prior recipe binding scope |
-| done | `G1-SLICE.5b.3a` | `done` | Closed operator kind matrix |
-| done | `G1-SLICE.5b.3a.1` | `done` | D134/D135 guidance/review repair |
-| done | `G1-SLICE.5b.3b` | `done` | Closed built-in/selector signatures |
-| done | `G1-SLICE.5b.3c.2b.1` | `done` | D138 expression dimension payloads |
-| done | `G1-SLICE.5b.3c.2b.h0` | `done` | Fourth exact retained window |
-| done | `G1-SLICE.5b.3c.2b.h1` | `done` | Exact CI verdicts; Rust failure tracked |
-| done | `G1-SLICE.5b.3c.2b.h1.r1` | `done` | Exact1.99 annotation repair; CI .v pending |
-| done | `G1-SLICE.5b.3c.2b.h1.r2` | `done` | D143 local CI stores verified locally |
-| done | `G1-SLICE.5b.3c.2b.h1.v` | `done` | Actual repaired CI/local stores verified |
-| done | `G1-SLICE.5b.3c.2b.h1.c` | `done` | Required cleanup/residue/regeneration verified |
-| done | `G1-SLICE.5f.3a` | `done` | Reference geometry argument checks verified |
-| done | `G1-SLICE.5f.3a.t1` | `done` | Truthful reference source locations verified |
-| done | `G1-SLICE.5b.3c.2b.2.0` | `done` | D145 prerequisite prose agrees with repaired source |
-| done | `G1-SLICE.5b.3c.2b.2` | `done` | Bounded initial-scope expression proof and sourced dependencies |
-| done | `G1-SLICE.5b.3c.3a` | `done` | D139 truthful reference header arguments verified |
-| done | `G1-SLICE.5b.3c.3a.t1` | `done` | D146 invalid-class syntax diagnostic verified |
-| done | `G1-SLICE.5b.3c.3b` | `done` | Actual scoped statement kinds/sources verified |
-| done | `G1-SLICE.5b.3d.a` | `done` | D147 actual ambiguity sources verified |
-| done | `G1-SLICE.5b.3d.b` | `done` | D148 complete input before static verified |
-| done | `G1-SLICE.5b.3d.c` | `done` | Shared contract verified; D149 fixed, D150 owned |
-| done | `G1-SLICE.5b.3d.d` | `done` | D150/D151 fixed; coupled static review complete |
-| done | `G1-SLICE.5b.4a` | `done` | Immutable whole proof; D152/D153 fixed |
-| done | `G1-SLICE.5b.4b` | `done` | Actual whole factory coupled; D154 owned |
-| current | `G1-SLICE.5b.4c` | `pending` | D154 reference known-ordinal repair before closure |
+| current | `G1-SLICE.5b.4c.h1` | `in_progress` | Exact runner observation; D156 defaults then D154 repair |
+
+[Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
 [Completed milestone routing evidence](G1-SLICE-journal.md#milestone-routing-evidence--preserved-from-9b3b9b3)
 retains exact D72/D67 diagnostics and ownership.
@@ -934,19 +873,7 @@ Completed lexical/expression/numeric/identity protocols, checklists and commit j
 
 ### G1-SLICE.5e.1a — D122/D127/D128 origin/context reads
 
-- [x] **TOOLS-FIRST / ROOT CAUSE** — actual missing size/geometry/tolerance baselines and supplied
-  optional eps_fmt misroute; malformed declarations leak host exceptions. Independent1466 controls
-  against actual reference diagnose origin/presence/metadata guards, producer rc=0.
-- [x] **ADDRESSED** — actual token/argument routing, supplied optional values and metadata refusals
-  verified across nine origins/eight kinds/five absent states; thirteen actual body assertion reds, rc=0.
-- [x] **NO REGRESSION** — full reference suite and namespace1139/thirteen faults/language16 pass,
-  rc=0; two actual copied-book consumers distinguish missing size/tolerance after static preflight21.
-  Lazy geometry cache/upstream failure and taken-only branch reads preserved; Rust bytes unchanged.
-- [x] **LOCKSTEP / RETENTION** — publication9/ledger9/pointer13/tree census/independent defects
-  12open/115sealed pass, rc=0;54chapters/25APIrows/1122source/1740rendered links checked.
-  Completed27/35line and ledger/lesson/report payloads retained exact; G1 remains5/18.
-  Staged doctrine/hook receipts recorded before commit; no product runtime or policy claim.
-  promotion: declined (standing origin, uncertainty and independent-evidence principles).
+[Exact completed checklist](G1-SLICE-checked-recipes.md#completed-origin-checklist--retained-from-c91cdf5).
 
 [Exact completed assertion checklist](G1-SLICE-measurements.md#completed-assertion-checklist--preserved-from-dab0ee4) retained.
 
@@ -996,3 +923,13 @@ Current retention receipts live in the .h0 owning recipe node/names checklist.
 - `2026-10-03` (UTC): .5b.2b/STITCHCAD-G1-0084 adds sourced metadata;7 contracts/19 body reds/one API-negative red, strict608. D130 fixed; .2c next.
 - `2026-10-03` (UTC): .5b.2c.1a/STITCHCAD-G1-0085 records D131 reserved argument conflict;121 cases/three actual reds. .1b ruling blocks namespace .2.
 - `2026-10-03` (UTC): .5b.2c.1b/STITCHCAD-G1-0086 applies delegated D131 sources;3624 argument cases/19 actual reds. Namespace .2c.2 next.
+
+### G1-SLICE.5b.4c.h0 — current containment acceptance
+
+- [x] **ROOT CAUSE** — registry/census:64 working history MD, PLANNING1000L,
+  CHANGELOG32646B/32768target; glossary census7 unaccounted fields/examples, rc=1.
+- [x] **ADDRESSED** — capture_window5.py/source proof60 byte-identical originals/309 exact
+  prior records, rc=0; glossary probes17pass0 with seven named actual copy-removal reds, rc=0.
+- [x] **NO REGRESSION** — make check703/59groups/WASM3 and make probes28 suites pass0;
+  actual G0 review18met/1human-act-unmet, publication10 and ledger9/pointer13 pass, rc=0.
+  [Full owning receipts](G1-SLICE-checked-recipes.md#containment-receipts--4ch0).

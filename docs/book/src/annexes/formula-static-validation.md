@@ -300,6 +300,13 @@ six bindable annotations, including equal origins and interrupted positions. Six
 compiled in memory trigger body assertions; tracked source remains unchanged. Numerical execution
 is trapped. The token and accepted grammar remain unchanged.
 
+These authored names identify test examples; neither adds a reserved grammar token.
+
+| Example name | Role |
+| --- | --- |
+| `collision` | Arbitrary measurement/parameter name used to demonstrate an ordered binding collision. |
+| `eps_chord` | Intentionally invalid assertion-class spelling; syntax refuses it as formula_parse. |
+
 ## Whole recipe before execution
 
 A recipe must pass static checking in its entirety before its first statement computes a value.
