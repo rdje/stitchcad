@@ -12,6 +12,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/round_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/unsigned_round_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/literal_normalization_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/normalized_expression_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/reduction_boundary_reference.py
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_contract_inventory.py
 python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_reference.py

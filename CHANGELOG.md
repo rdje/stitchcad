@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0131 - guarded normalization entries and D159 (leaf `G1-SLICE.5b.4c.h2.b.p.n.f3`)
+
+- Guard both entries before reads/writes, preserve prepared children and rebuild full restored targets.
+- D159 fixed: failed-body classifiers reject passing/expect/compiler/summary noise; actual broad faults red.
+  CI17runtime/31body/17prefixes/17late/seven child cases/two classifiers0; exclusive30 native reds,
+  exact sources/current artifacts restored6/8tests; both classifier modes0. Grammar unchanged.
+- Guarded full structural/coupled runner/publication43 pass0; four complete ecc67e5 intervals
+  retained exactly, public341/hash/L/B/LF/prior44bytes0. G1 5/18,12open/146sealed; D156 continues.
+
 ## STITCHCAD-G1-0130 - guarded recipe/statement entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.f2`)
 
 - Guard declared sources/output before reads/writes; preserve prepared child stores/coupled selection.
@@ -274,15 +283,6 @@ Competing early over-width literal versus later syntax exposes D150: reference d
 syntax refusal. Reproducer is deliberately failing and not yet in the standing runner; owned .3d.d
 immediately before final coupled closure and .4. G1 stays5/18;11open/138sealed; final signoff open.
 
-## STITCHCAD-G1-0110 - whole-source input before static checking (leaf `G1-SLICE.5b.3d.b`)
-
-Reference preflight completes syntax/input for every identified statement before ordered static
-inference or prior-binding publication. It reuses the actual parsed operand tuples with original
-locations; detached statement behavior, grammar and limits remain unchanged. No prefix escapes.
-Independent584 controls/11 compiled body fault assertions verify later input versus earlier static
-errors, phase traces, parsed identity, one parse per statement and source order. Full reference and
-publication10 pass, rc=0; original HEAD protocol/lesson/ledger/report retained byte-exact.
-G1 remains5/18;10open/137sealed. Coupled review .5b.3d precedes whole immutable graph .4.
 
 
 
@@ -316,3 +316,4 @@ G1 remains5/18;10open/137sealed. Coupled review .5b.3d precedes whole immutable 
 | [`part112`](docs/history/stitchcad-changelog-part112.md) | G1-0104 through G1-0100 | 37 lines, 2713 bytes, `sha256:b9ab801e…` |
 
 | [`part113`](docs/history/stitchcad-changelog-part113.md) | G1-0109 through G1-0105 | 53 lines, 4156 bytes, `sha256:feeb6e30…` |
+| [`part114`](docs/history/stitchcad-changelog-part114.md) | G1-0110 whole-source preflight | 9 lines, 761 bytes, `sha256:dd7f339a…` |

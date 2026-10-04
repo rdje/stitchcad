@@ -10,6 +10,14 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D159 normalization assertion evidence
+
+- Match failed-test bodies; a passing name or failure summary cannot certify an assertion red.
+- Compile an actual broad-classifier fault against independent noise fixtures.
+- Inspect every verification exit before advancing; exact source anchors can reject harmless formatting.
+- Finish active native restoration before correcting its producer; rerun the failed controls.
+- Promotion declined: existing actual-body/verification-order/exclusive-restoration rules.
+
 ## _(2026-10-04 UTC)_ — D156 recipe/statement entries
 
 - Observe both selected mutation calls and full restored-target calls with custom stores.
@@ -62,3 +70,5 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part141`](docs/history/stitchcad-devnotes-part141.md) | complete native acceptance | 23 lines, 1823 bytes, `sha256:567dba9b…` |
 | [`part142`](docs/history/stitchcad-devnotes-part142.md) | complete native continuity | 17 lines, 1438 bytes, `sha256:350a473d…` |
 | [`part143`](docs/history/stitchcad-devnotes-part143.md) | complete native continuity | 25 lines, 1810 bytes, `sha256:998c9c31…` |
+| [`part144`](docs/history/stitchcad-devnotes-part144.md) | complete formula acceptance | 19 lines, 1556 bytes, `sha256:258f0351…` |
+| [`part145`](docs/history/stitchcad-devnotes-part145.md) | complete formula acceptance | 17 lines, 1483 bytes, `sha256:b81b50d5…` |

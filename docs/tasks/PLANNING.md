@@ -989,10 +989,7 @@ includes both stale scope clauses and declaration/source-marker count faults; or
 report retained exactly in [part76](../history/stitchcad-defects-part76.md). No grammar/Rust API change.
 
 
-- **D159** — literal/arena native assertion predicates accept failing expect-only noise.
-  Reproduce: evaluate each actual result assertion AST with101/FAILED and a passing assertion_name
-  plus an expect-only failed body; both accept, target/d159-classifier-baseline.log, no dispatch.
-  Root: b'assertion' searches all output rather than the failed-test body; scoped introducing blame
-  retained in baseline. Impact: mutation evidence can claim an assertion red without one.
-  Own G1-SLICE.5b.4c.h2.b.p.n.f3, P1 immediately next with these entries' D156 guards;
-  calibrated actual classifier body faults and exclusive native source/current artifact restoration.
+D159 closes at G1-SLICE.5b.4c.h2.b.p.n.f3: both classifiers read failed-test bodies, refusing
+passing-name/expect/compiler/summary noise. Two actual broad-body faults fail independent controls;
+exclusive13+17 native assertion reds and restored full6/8 targets pass0. Original committed
+report retained exactly in [part77](../history/stitchcad-defects-part77.md). Grammar/Rust API unchanged.

@@ -4,6 +4,7 @@ import ast
 import contextlib
 import io
 import os
+import re
 import runpy
 import subprocess
 import sys
@@ -240,6 +241,26 @@ def capture_child(text, entry_path, work_name, sources, test_target, *, argument
     assert len(observed) == 2, 'D156 Python child capture/restoration absent'
 
 
+def classifier_controls(text, entry_path):
+    """Compile only the actual classifier; no profile, native dispatch or source write."""
+    tree = ast.parse(text)
+    functions = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure']
+    assert len(functions) == 1, 'D159 normalization classifier missing'
+    scope = {'re': re}
+    exec(compile(ast.Module(body=functions, type_ignores=[]), str(entry_path), 'exec'), scope)
+    classify = scope['assertion_failure']
+    accepted = b'\nfailures:\nthread panicked:\nassertion failed: operands differ\n\nfailures:\nreal_test\n'
+    noises = (
+        b'test assertion_name ... ok\n\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nreal_test\n',
+        b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n',
+        b'assertion failed: compiler diagnostic\n',
+        b'\nfailures:\nthread panicked:\nexpect-only\n',
+    )
+    assert classify(accepted), 'D159 actual failed-body assertion refused'
+    for noise in noises:
+        assert not classify(noise), 'D159 assertion evidence accepted noise'
+
+
 def main():
     original, entry = SOURCE.read_bytes(), ENTRY.read_bytes()
     count = controls(GOOD)
@@ -279,6 +300,8 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py', 'semantic_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/recipe_mutations.py', 'recipe_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/statement_mutations.py', 'statement_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py', 'formula_literal_mutations'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py', 'formula_normalized_mutations'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
@@ -335,6 +358,37 @@ def main():
             red += 1
         else:
             raise AssertionError('D156 Python actual child-store reset survived')
+    for filename, work_name, rust, target, test in (
+            ('literal_normalization_mutations.py', 'formula_literal_mutations', 'literal.rs',
+             'formula_literal_contract', 'independent_fraction_fixtures_cover_conversion_width_and_domain'),
+            ('normalized_expression_mutations.py', 'formula_normalized_mutations', 'normalized.rs',
+             'formula_normalized_contract', 'authored_shapes_match_reference_kind_order_nodes_and_depth')):
+        path = ROOT / 'docs/tasks/artifacts/formula_structure' / filename
+        sources = (ROOT / 'crates/sc-core/src/recipe' / rust,)
+        text = path.read_text()
+        capture_child(text, path, work_name, sources, target, first_suffix=(test, '--', '--exact'))
+        classifier_controls(text, path)
+        tree = ast.parse(text)
+        function = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure')
+        actual = ast.get_source_segment(text, function)
+        broad = "def assertion_failure(output):\n    return b'assertion' in output"
+        assert text.count(actual) == 1
+        try:
+            classifier_controls(text.replace(actual, broad, 1), path)
+        except AssertionError as error:
+            assert str(error) == 'D159 assertion evidence accepted noise'
+            red += 1
+        else:
+            raise AssertionError('D159 actual broad classifier survived')
+        assert text.count(before) == 1
+        try:
+            capture_child(text.replace(before, "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", 1),
+                          path, work_name, sources, target)
+        except AssertionError as error:
+            assert str(error) == 'D156 Python child stores lost'
+            red += 1
+        else:
+            raise AssertionError('D156 Python normalization child-store reset survived')
     recipe = ROOT / 'docs/tasks/artifacts/formula_structure/recipe_mutations.py'
     capture_child(recipe.read_text(), recipe, 'recipe_mutations',
                   (ROOT / 'crates/sc-core/src/recipe/ordered.rs', ROOT / 'crates/sc-core/src/recipe/statement.rs'),
@@ -358,7 +412,7 @@ def main():
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
-          str(len(adopters)) + ' actual late-source refusals / 5 actual native-child capture cases / source unchanged')
+          str(len(adopters)) + ' actual late-source refusals / 7 actual native-child capture cases / 2 calibrated normalization classifiers / source unchanged')
 
 
 if __name__ == '__main__':

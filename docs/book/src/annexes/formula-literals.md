@@ -88,15 +88,19 @@ From the repository root:
 ```bash
 cargo test -p sc-core --test formula_literal_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/literal_normalization_reference.py
-bash docs/tasks/artifacts/formula_structure/run_literal_normalization_mutations.sh
+python3 -I -B docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py
 ```
 
-Five public contracts consume 100 independently authored Fraction fixture rows covering unit/kind/
+The initial five public contracts consume 100 independently authored Fraction fixture rows covering unit/kind/
 quantum/width/scalar boundaries and wide cancellable mantissas. Additional source/privacy/unary and
 100,000-digit zero/padding/refusal cases exercise the public node API. Two compile-fail doctests retain
 private construction and source lifetime. The structural suite watches the independent fixture oracle.
 Actual compiled conversion, reduction, width, kind, direction, narrowing, domain, diagnostic and source
-faults must fail public assertions; the exclusive runner restores source byte-identically.
+faults must fail assertions in failed-test bodies. The direct entry uses the
+[producer profile](../build-and-checks.md#direct-python-producers) before source reads/output writes,
+retains prepared child stores and rebuilds the complete focused target after exact restoration.
+Classifier-only mode checks anchors and refuses passing-name/expect/compiler noise without compiling
+a fault. Standing structural controls and calibrated actual classifier faults watch this boundary.
 
 G1-SLICE.5a.3c.2 owns this API. This API converts one literal; the separate whole-arena API below converts all literal inputs.
 Neither checks operators/names, folds sign, binds values, evaluates or constructs geometry.
@@ -153,7 +157,7 @@ retained without executing that addition. Successful normalization is not permis
 ```bash
 cargo test -p sc-core --test formula_normalized_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/normalized_expression_reference.py
-bash docs/tasks/artifacts/formula_structure/run_normalized_expression_mutations.sh
+python3 -I -B docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py
 ```
 
 Eight public contracts cover 24 authored shape/count/depth rows checked by the independent book
@@ -169,7 +173,10 @@ validated syntax graph, and per-literal decimal workspace retains the bound desc
 
 Seventeen actual compiled faults alter root/name/unary/square/operator identity, child/branch order,
 call coverage, depth/span, literal unit/refusal, iterator behavior or Debug privacy. They must fail
-public assertions; the exclusive runner restores exact source. The structural suite watches the
+assertions in failed-test bodies; the direct entry validates source/output before reads/writes,
+preserves prepared child stores and rebuilds the full focused target after exact restoration.
+Classifier-only mode checks anchors and failed-body/noise classification without compiling a fault.
+The structural suite watches the
 independent shape verifier. G1-SLICE.5a.3c.3 owns this whole-arena stage; .4 completes its coupled review below.
 Canonical S-expression serialization is implemented separately below;
 [ordered statement/recipe identity](formula-recipe-inputs.md) is also available.

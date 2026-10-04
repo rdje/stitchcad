@@ -922,23 +922,7 @@ Complete acceptance retained in [part141](../history/stitchcad-devnotes-part141.
 
 ### G1-SLICE.5b.4c.h2.b.p.n.d1
 
-- [x] **ROOT CAUSE** — actual current book clauses contradict public ordered/expression/whole
-  APIs; scoped blame and all nine original-introduction refusals, rc=0,
-  target/d157-{currency-baseline,original-intro-controls}.log. Earlier metadata scopes went stale.
-- [x] **ADDRESSED** — nine annex scopes/current clauses and finite publication guard. Publication39:
-  22 retired claims/four method visibility/boundary refusals, reworded positive and actual compiled
-  guard-omission assertion red, rc=0, target/d157-publication-complete.log. Runtime limits retained.
-- [x] **NO REGRESSION** — glossary17/ledger9+pointer13/coverage9arms and producer census9assertions/
-  9refusals/4body reds, independent Git226/285 checks, rc=0, target/d157-*.log. No Rust/grammar change.
-  Four whole e19f992 intervals/public read/materialize334/hash/L/B/LF/list/prior37 immutable bytes,
-  rc=0, target/d157-retention-proof.log; fixed caps unchanged.
-- [x] **LOCKSTEP** — book/live/task/index agree; D157 verified closed, D156/D154 still owned.
-- [x] **PROMOTION** — declined: existing scoped availability/current-proof/exact-retention rules.
-- [x] **COMMIT** — complete0129; final ledger/staged gate/hook/brief0/clean before next native group.
-
-Initial checker assumed nongeneric expression method/wrong current-statement source; actual
-FORMULA_API refusal1 corrected from public code, then all controls rerun. Earlier failed receipt
-is excluded. Initial guessed coverage entry127 discarded; discovered planning entry passes0.
+Complete acceptance retained in [part144](../history/stitchcad-devnotes-part144.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f2`
   Status: `done`
@@ -960,30 +944,55 @@ public test markers10; watch the declared count before verified closure.
 
 ### G1-SLICE.5b.4c.h2.b.p.n.f2
 
-- [x] **ROOT CAUSE** — both actual native children lose prepared custom stores before dispatch;
-  intercepted writes/source exact, rc=0, target/d156-formula-second-child-baseline.log.
-- [x] **ADDRESSED** — two source/output guards, inherited child profile and full focused rebuilds;
-  CI17runtime/25actual body reds/15prefixes/15late refusals/five child cases, rc=0,
-  target/d156-formula-second-ci-complete.log. Coupled-selection fault fails the actual argv assertion.
-- [x] **NO REGRESSION** — exclusive seven-export-absent statement15/recipe15/coupled5 native
-  assertion reds; exact sources/current artifacts restored10/11 tests; both classifiers0, rc=0,
-  target/d156-formula-second-*-native.log and target/{statement,recipe}_mutations/restored.log.
-  Existing CI19/6/local56/13/2/1/census9/9/4/Git226/285 and publication43 pass, rc=0.
-  Whole fe4a3ff intervals142/143 plus working D158 report76/read/materialize337/hash/L/B/LF/
-  list/prior41 bytes, rc=0, target/d156-formula-second-retention-proof.log/target/d158-retention-proof.log.
-- [x] **LOCKSTEP** — entry/control/live/task/book agree; D158 current serialization/count fixed.
-  D156 open; D159 actual broad-classifier acceptance owned .n.f3 next. Grammar/Rust API unchanged.
-- [x] **PROMOTION** — declined: existing all-source/child/classifier/exclusive-restoration rules.
-- [x] **COMMIT** — complete0130; final focused ledger/gate/hook/brief0/clean before next native group.
+Complete acceptance retained in [part145](../history/stitchcad-devnotes-part145.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f3`
-  Status: `pending`
+  Status: `done`
   Goal: literal/normalized-expression guards and D159 real failed-body assertion classifiers.
   Acceptance: source/output plans before reads/writes, actual captures/refusals/body faults;
   exclusive native faults, exact source and current artifact restored; classifier noise refuses.
   Retain whole completed receipts/reports under fixed caps before growth. P1 next after .n.f2.
 
 Final glossary17/ledger9+pointer13/coverage9arms/10lanes/13trees/12siblings/zero gaps, rc=0,
-target/d156-formula-second-{glossary-final,ledger,coverage-final}.log; defect census13/1450.
+target/d156-formula-second-{glossary-final,ledger,coverage-final}.log; defect census13open/145sealed, rc=0.
 Final staged gate13green, rc=0, target/d156-formula-second-staged-gate.log; cached diff0.
 Explicit18 owned paths; hook/brief0/clean precede .p.n.f3; all native jobs terminal/consumed.
+
+Work unit STITCHCAD-G1-0131 owns .n.f3, blocking whole-receipt/original-report retention and
+clarifying the prior final census receipt separator (13open/145sealed, rc=0).
+.n.f3 also wires the two classifier-only arms into the existing structural runner; guarded
+invocation and focused/coupled consumers must stay green. Shell-wide profile audit remains .b.s.
+
+
+### G1-SLICE.5b.4c.h2.b.p.n.f3
+
+- [x] **ROOT CAUSE** — two actual predicates accept101/FAILED expect-only noise with passing
+  assertion_name; source untouched, rc=0, target/d159-classifier-baseline.log; original report77.
+- [x] **ADDRESSED** — source/output guards, inherited children, full rebuild and failed-body
+  classifiers; CI17runtime/31body reds/17prefixes/17late/seven child cases/two calibrated classifiers,
+  rc=0, target/d156-formula-third-ci-complete.log. Actual broad-classifier body faults fail.
+- [x] **NO REGRESSION** — exclusive seven-export-absent13+17 compiled body assertion reds,
+  exact source/current artifacts restored6/8 tests; classifier-only anchors/noise0, rc=0,
+  target/d156-formula-third-*-native.log. Guarded full structural/coupled runner and publication43,
+  existing CI19/6/local56/13/2/1/census9/9/4/Git226/285, rc=0. Rust diff empty.
+  Four complete ecc67e5 source intervals/read/materialize341/hash/L/B/LF/list/prior44 bytes,
+  rc=0, target/d156-formula-third-retention-complete.log; fixed caps unchanged.
+- [x] **LOCKSTEP** — entry/control/standing runner/live/task/book agree; D159 verified closed;
+  D156 open; grammar/Rust API unchanged. Shell wrapper profiles remain .b.s, not claimed repaired.
+- [x] **PROMOTION** — declined: existing source/child/failed-body/exclusive-restoration principles.
+- [x] **COMMIT** — complete0131; final focused ledger/staged gate/hook/brief0/clean before next group.
+
+Post-format CI refused exact tuple anchor1; native ran before that refusal was acted on. Finish
+native exclusively, correct spacing and rerun CI0; executable AST identical, format-proof.log0.
+Failed run is excluded; no later source mutation overlaps the native job.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.f4`
+  Status: `pending`
+  Goal: normalized-recipe/canonical-recipe native entries with all-source planning and child stores.
+  Acceptance: three normalized sources/one canonical source before reads/output; actual captures,
+  late-source refusals/body faults, classifier behavior and exclusive native/restored full artifacts.
+  Own blocking whole-receipt/report retention under fixed caps before growth; next after .n.f3.
+
+Final glossary17/ledger9+pointer13/coverage9arms/10lanes/13trees/12siblings/zero gaps, rc=0.
+Final staged gate13green, rc=0, target/d156-formula-third-staged-gate.log; cached diff0.
+Explicit19 owned paths; hook/brief0/clean precede .p.n.f4; actual12open/146sealed/zero overlap0.
