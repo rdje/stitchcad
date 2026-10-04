@@ -1,0 +1,226 @@
+path	kind	owner	review
+.githooks/commit-msg	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+.githooks/pre-commit	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+.github/workflows/doctrines.yml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+.github/workflows/rust.yml	profile	G1-SLICE.5b.4c.h2.b.v	Explicit CI prepare/install/verify contract already observed at 8f87a10; local standalone audit separate.
+Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+Makefile	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+crates/sc-core/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+crates/sc-measure/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+crates/sc-units/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+docs/book/book.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+docs/tasks/artifacts/artifact_cleanup/cleanup.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/artifact_cleanup/run_artifact_cleanup_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/book_publication/book_publication.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/book_publication/run_book_publication_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/canvas_spike/run_spike_verdict_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/changelog/changelog_pointers.py	reference	G1-SLICE.5b.4c.h2.b.v	AST inventory has no direct candidate output/native dispatcher; delegated runtime behavior still reviewed separately.
+docs/tasks/artifacts/changelog/ledger_pointer_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/changelog/ledger_pointer_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/ci_environment/ci_environment_contract.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
+docs/tasks/artifacts/ci_environment/local_environment_contract.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
+docs/tasks/artifacts/ci_environment/producer_census.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
+docs/tasks/artifacts/ci_environment/producer_census_contract.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
+docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/command_layer/run_command_layer_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/command_layer/run_command_layer_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/ease/ease_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/ease/ease_set_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/ease/run_ease_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/ease/run_ease_set_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/evidence_signatures/run_signature_portability_probe.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/feature_matrix/run_feature_matrix_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/feature_matrix/run_feature_matrix_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_language/inline_context_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_language/inline_context_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_language/run_formula_language_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_language/run_formula_language_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_language/run_inline_context_contract.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_language/run_inline_context_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_lex/formula_lex_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/ambiguity_payload_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/angle_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/angle_math_oracle.py	reference	G1-SLICE.5b.4c.h2.b.v	AST inventory has no direct candidate output/native dispatcher; delegated runtime behavior still reviewed separately.
+docs/tasks/artifacts/formula_structure/angle_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/arithmetic_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/arithmetic_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/assertion_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/binding_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/binding_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/binding_replay_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/binding_replay_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/call_lookup_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/call_lookup_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/canonical_contract_inventory.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/canonical_contract_inventory_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/canonical_expression_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/canonical_literal_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/canonical_literal_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/checked_expression_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/checked_statement_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/declaration_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/dimension_payload_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/domain_context_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/first_phase_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/formula_expression_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/formula_expression_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/formula_input.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/formula_input_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/formula_structure.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/formula_structure_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/geometry_argument_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/header_dimension_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/knowledge_map_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/length_operator_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/literal_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/literal_diagnostic.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/literal_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/literal_normalization_reference.py	reference	G1-SLICE.5b.4c.h2.b.v	AST inventory has no direct candidate output/native dispatcher; delegated runtime behavior still reviewed separately.
+docs/tasks/artifacts/formula_structure/name_read_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/namespace_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/normalized_expression_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/operator_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/ordered_name_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/origin_value_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/provenance_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/rational_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/rational_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/recipe_byte_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/recipe_byte_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/recipe_input_review_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/recipe_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/recipe_owner_contract.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/recipe_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/reduction_boundary_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/reference_locator_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/reserved_diagnostic_review.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/round_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/round_reference.py	reference	G1-SLICE.5b.4c.h2.b.v	AST inventory has no direct candidate output/native dispatcher; delegated runtime behavior still reviewed separately.
+docs/tasks/artifacts/formula_structure/run_angle_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_arithmetic_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_binding_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_binding_replay_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_canonical_literal_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_domain_context_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_formula_expression_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_formula_input_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_formula_structure_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_length_operator_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_literal_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_literal_normalization_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_normalized_expression_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_rational_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_reduction_boundary_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_round_diagnostic.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_round_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_scalar_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_signed_angle_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/run_unsigned_round_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/formula_structure/scalar_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/scalar_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/semantic_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/signed_angle_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/signed_angle_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/statement_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/statement_owner_contract.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/statement_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/static_coupled_contract.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/static_namespace_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/static_recipe_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/static_review_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/static_signature_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/formula_structure/static_status_contract.py	reference	G1-SLICE.5b.4c.h2.b.v	AST inventory has no direct candidate output/native dispatcher; delegated runtime behavior still reviewed separately.
+docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/unsigned_round_reference.py	reference	G1-SLICE.5b.4c.h2.b.v	AST inventory has no direct candidate output/native dispatcher; delegated runtime behavior still reviewed separately.
+docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/formula_structure/whole_phase_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
+docs/tasks/artifacts/fresh_evidence/run_fresh_evidence_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/glossary/run_glossary_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/glossary/run_glossary_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/handoff/contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/handoff/run_handoff_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/history_archive/capture_window2.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/history_archive/capture_window3.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/history_archive/capture_window4.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/history_archive/capture_window5.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/history_archive/history_archive_probes.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/history_archive/run_history_archive_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/history_archive/window_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/i18n/run_i18n_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/i18n/run_i18n_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/interchange/run_interchange_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/interchange/run_interchange_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/live_doc_size/run_cell_budget_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/live_doc_size/run_live_doc_size_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/measurement_table/run_table_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/measurement_table/table_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/mtm_chart/run_mtm_chart_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/planning/run_tree_coverage_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/planning/run_tree_coverage_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/reference_fixture/run_fixture_derivation.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/reference_fixture/run_fixture_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/release_contract/run_release_contract_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/release_contract/run_release_contract_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/scaffold_sync/run_update_scaffold_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/size_chart/run_size_chart_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/size_chart/size_chart_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/size_chart_collection/run_size_chart_collection_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/size_membership/run_size_membership_mutations.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/size_membership/size_membership_mutations.py	native	G1-SLICE.5b.4c.h2.b.p	Actual native argv/variable call sites; exclusive mutation or compiled fixture; direct profile/output audit pending.
+docs/tasks/artifacts/standards/run_standards_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/standards/run_standards_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/table_render/run_table_render_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/task_acceptance/run_multileaf_shadowing_probe.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/task_acceptance/run_task_acceptance_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/uncertainty/run_uncertainty_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/uncertainty/run_uncertainty_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/waiver_routing/run_waiver_routing_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+knowledge-map/scripts/check_knowledge_map.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+knowledge-map/scripts/gen_knowledge_map.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+rust-toolchain.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
+scripts/bootstrap.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_archive_retention.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_docpaths.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_doctrines.project.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_doctrines.sh	profile	G1-SLICE.5b.4c.h2.b.v	Primary pre-dispatch profile verified in .h2.a; final standalone/source coverage pending.
+scripts/check_fresh_acceptance_evidence.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_gap_claims.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_handoff.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_lesson_promotion.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_live_doc_currency.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_live_doc_size.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_memory_architecture.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_no_background_jobs.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_push_due.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_readme_stability.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_routing_evidence.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_table_arity.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_table_code_pipes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_task_acceptance.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_task_tree_ownership.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/check_waiver_routing.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/ci_environment.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
+scripts/handoff_census.py	reference	G1-SLICE.5b.4c.h2.b.v	AST inventory has no direct candidate output/native dispatcher; delegated runtime behavior still reviewed separately.
+scripts/history_archive.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+scripts/history_archive.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+scripts/local_environment.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
+scripts/run_make.sh	profile	G1-SLICE.5b.4c.h2.b.v	Primary pre-dispatch profile verified in .h2.a; final standalone/source coverage pending.
+scripts/update_scaffold.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.

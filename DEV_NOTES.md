@@ -5,6 +5,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 producer census
+
+- Retain every AST call and whole shell body; matches are candidates.
+- Watch paths against Git, including sources outside scan roots.
+- Intercept the first actual write before testing ambient defaults.
+- Promotion declined: existing coverage/locality rules.
+
 ## _(2026-10-04 UTC)_ — D156 audit record retention
 
 - Seal whole committed records before producer-audit growth; keep IDs/headings as linked proxies.

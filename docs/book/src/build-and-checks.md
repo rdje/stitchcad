@@ -2,7 +2,7 @@
 
 ## Local producer profile
 
-`scripts/local_environment.py` prepares the four destinations in the destination table below for ordinary
+`scripts/local_environment.py` prepares the four destinations in the destination table below for
 the Make targets listed below. The doctrine driver
 (including its hook invocation) and G0 exit review also prepare their children before running checks.
 Use `scripts/run_make.sh <target>` to prepare the profile before Make and platform tool dispatch
@@ -92,3 +92,18 @@ completed all eleven: actual stable1.99.0,703 native tests/59 groups, three WASM
 prepared/verified checkout-volume stores. Rust CI uses its separate explicit CI helper; local
 profile/default/fault evidence above remains separately scoped. G1-SLICE.5b.4c.h2.v records the
 observation; standalone producer audit .h2.b is still required. Product approval is unclaimed.
+
+## Standalone audit boundary
+
+The maintained producer inventory includes Python scripts, shell bodies and their embedded Python,
+Make, workflows, Git hooks, public crate manifests and book configuration. Its tracked entry ledger
+assigns each path to the Python, shell/destination or final integration audit. It retains every Python
+call and complete non-Python source for inspection, including dynamic delegation and fixture code.
+An inventory match establishes coverage of these sources; it does not establish runtime locality.
+The census refuses missing or duplicate entries, malformed Python and literal heredoc boundaries,
+source symlinks and nested Git boundaries. Its existing diagnostic suite watches those refusals.
+
+A pre-repair capture of the actual size-membership mutation body stops at its first directory write
+with all five store exports absent, before any source mutation or compiler invocation. This confirms
+the standalone gap owned by D156 .h2.b.p. Use the guarded Make launcher for current workflows while
+the remaining direct entries and output destinations are repaired and verified. D156 stays open.
