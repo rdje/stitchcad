@@ -306,7 +306,8 @@ negative *y* very near that axis may round to −180. Both components zero refus
 The tolerance operand of within is one of eps_num, eps_geo, eps_fmt, eps_imp or eps_phys,
 not any reserved name: size_index, size_count and is_base_size are size inputs, not tolerance classes.
 The [static signature controls](../../annexes/formula-static-validation.md) check every kind/role
-without reading numeric values; product static validation remains pending.
+without reading numeric values; [initial-scope product expression checking](../../annexes/formula-wanted-signatures.md#bounded-product-expression-checking)
+is available. Statement and whole-recipe validation remain pending.
 
 ### 6.1 Geometry selectors
 

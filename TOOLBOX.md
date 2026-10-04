@@ -100,13 +100,13 @@ coreutils ahead of BSD userland, so `stat -f %m` (BSD mtime) means "filesystem s
 `%m`" and fails; `awk` is BSD awk 20200816, which lacks the GNU regex extensions `\b` and `{n}` that
 `grep -E` here supports. A probe that measures with whatever is first in `PATH` measures the `PATH`.
 
-History retrieval/pressure: `bash scripts/history_archive.sh verify` checks full-file identities and
+History: `bash scripts/history_archive.sh verify` checks full-file identities and
 resident/decoded bounds; `list`, `read docs/history/<basename>` and `materialize target/<fresh-dir>`
-recover exact original records without Git history. `prove-source window1` separately compares the
+recover exact records without Git. `prove-source window1` separately compares the
 capture against its named Git snapshot when available. Calibrated refusals:
 `bash scripts/check_archive_retention.sh --self-test` (Python 3.9+ standard library; no packages).
 
-Formula lexer guard proof: `bash docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh`
+Lexer guards: `bash docs/tasks/artifacts/formula_lex/run_formula_lex_mutations.sh`
 mutates actual production sources, expects nine assertion reds and restores exact bytes. Run alone;
 no overlapping build/gate/commit. The library contract tests cover borrowed spans and lexical scope.
 
@@ -261,6 +261,6 @@ Reference producers: docs/tasks/artifacts/formula_structure/; python3 -I -B, --m
 Product faults: same directory; run alone; compiled body reds/exact restore.
 semantic_mutations.py, declaration_mutations.py, namespace_mutations.py, name_read_mutations.py,
 ordered_name_mutations.py, operator_signature_mutations.py, builtin_signature_mutations.py,
-wanted_signature_mutations.py, call_lookup_mutations.py.
+wanted_signature_mutations.py, call_lookup_mutations.py, checked_expression_mutations.py.
 
 CI stores: scripts/ci_environment.py prepare/verify; docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh verifies effective paths/guards/step order.

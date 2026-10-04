@@ -104,8 +104,9 @@ reference. Product [sourced declarations and namespaces](formula-declarations.md
 [ordered metadata scopes](formula-name-scopes.md) and [operator signatures](formula-operator-signatures.md)
 are available, as are [built-in and selector signatures](formula-builtin-signatures.md).
 [Typed wanted-kind catalogs](formula-wanted-signatures.md) and
-[source-bearing call lookup](formula-call-lookup.md) are available; accepted expressions and
-whole static graph remain .5b.3c.2b–.4. Exact call payloads are separately checked by166 cases/12
+[source-bearing call lookup](formula-call-lookup.md) and
+[initial-scope expression proofs](formula-wanted-signatures.md#bounded-product-expression-checking)
+are available; current-statement/whole static graph remain .5b.3c.3–.4. Exact call payloads are separately checked by166 cases/12
 actual compiled faults; the older recognition/kind matrix alone certifies no diagnostic payloads.
 Reference expression dimension payloads are now verified by4023 cases/15 actual compiled faults,
 including complete kinds/wanted rules and multiple-error selection; see the
@@ -373,12 +374,13 @@ without an instance/export context. Geometry declarations refer to prior operati
 they do not authorize construction. Input adapters must preserve existing source identities and
 avoid a sc-core to sc-measure dependency cycle. D124 preserves the existing reserved-word set.
 
-The product type-checking slice .5b.3 will consume bounded normalized syntax and the checked
-namespace, preserving all ordered operands and checking both conditional branches. Each refusal
-must carry its actual operator/function, operand kinds and expected rule, with the existing
-angle-times-length hint. Function/selector and tolerance-role populations must match the chapter
-in both directions. Envelope dispatch applies before operand semantics after syntax succeeds.
+The product expression checker .5b.3c.2b.2 consumes bounded normalized syntax and the checked
+initial namespace, preserving all ordered dependencies and checking both conditional branches.
+Each refusal carries its actual operation, complete resolved kinds and wanted rules, with the
+existing angle-times-length hint. Call/tolerance-role populations match the chapter in both
+directions. Envelope dispatch applies before operand semantics after syntax/input succeeds.
 No numerical, tolerance-value, storage, geometry or solver callback belongs in this stage.
+Current-statement/annotation integration remains .5b.3c.3; whole acceptance remains .4.
 
 The whole-validator slice .5b.4 will inspect every statement in declaration order and return an
 immutable typed dependency graph only after complete success. Dependency edges include untaken

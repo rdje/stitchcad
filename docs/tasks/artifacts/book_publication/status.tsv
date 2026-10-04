@@ -50,3 +50,9 @@ formula call lookup sources	annexes/formula-call-lookup.md	crates/sc-core/src/re
 formula call refusal reasons	annexes/formula-call-lookup.md	crates/sc-core/src/recipe/calls.rs	FormulaCallRefusalKind	G1-SLICE.5b.3c.2a	4.1
 formula call envelope alternatives	annexes/formula-call-lookup.md	crates/sc-core/src/recipe/calls.rs	FormulaCallAlternative	G1-SLICE.5b.3c.2a	4.1
 formula call source-bearing refusals	annexes/formula-call-lookup.md	crates/sc-core/src/recipe/calls.rs	FormulaCallRefusal	G1-SLICE.5b.3c.2a	4.1
+formula initial-scope expression proof	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaCheckedExpression	G1-SLICE.5b.3c.2b.2	4.1
+formula expression refusal context	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaExpressionCheckError	G1-SLICE.5b.3c.2b.2	4.1
+formula sourced name dependency	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaNameDependency	G1-SLICE.5b.3c.2b.2	4.1
+formula complete dimension refusal	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaDimensionRefusal	G1-SLICE.5b.3c.2b.2	4.1
+formula typed checked operation	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaCheckedOperation	G1-SLICE.5b.3c.2b.2	4.1
+formula expression refusal reasons	annexes/formula-wanted-signatures.md	crates/sc-core/src/recipe/checked.rs	FormulaExpressionCheckRefusal	G1-SLICE.5b.3c.2b.2	4.1

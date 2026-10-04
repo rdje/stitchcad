@@ -2,7 +2,7 @@
 
 > **Implemented:** immutable diagnostic metadata in sc-core recipe, G1-SLICE.5b.3c.1.
 > The catalogs describe admissible operand kinds and symbolic roles. Source-bearing expression
-> errors and accepted expression owners are the next slice; whole-recipe acceptance remains .4.
+> errors and initial-scope expression proofs are implemented below; whole-recipe acceptance remains .4.
 
 A dimension diagnostic needs both the actual operand kinds and the kinds the operation accepts
 ([contract §5.2](../spec/formula-language.md)). Saying only that a call failed cannot explain which
@@ -151,5 +151,100 @@ is [verified separately](formula-static-validation.md#geometry-provider-argument
 and edge len require Length before value evaluation, with scoped actual/wanted payloads and retained
 contributions. This expression payload proof and that local reference adapter do not certify product
 operation identity, whole operation graphs or physical geometry; those remain .5f.3b/G2.
-Full expression/statement/recipe acceptance, numerical execution and generated geometry keep
+Statement/recipe acceptance, numerical execution and generated geometry keep
 their separate owners. The grammar, token set and syntax identities are unchanged.
+
+## Bounded product expression checking
+
+**Implemented at G1-SLICE.5b.3c.2b.2:** FormulaNormalizedExpression::check_kinds consumes the
+actual normalized owner and a checked initial FormulaNamespace. It certifies every expression name
+and kind without reading a value, input state, tolerance provider or geometry. Syntax and literal
+normalization retain their earlier phase. FormulaCheckedExpression borrows that exact expression
+and actual declaration sources, retaining the root kind and every ordered name occurrence,
+including untaken branches. Repeated names remain separate uses with their original node spans.
+The namespace allocation can be dropped; borrowed canonical records and authored names stay alive.
+
+```rust
+use sc_core::recipe::{FormulaExpression, FormulaNamespace, FormulaKind};
+let expression = FormulaExpression::parse("if(is_base_size,1 mm,2 mm)").unwrap()
+    .normalize_literals().unwrap();
+let namespace = FormulaNamespace::new([]).unwrap();
+let proof = expression.check_kinds(&namespace).unwrap();
+assert_eq!(proof.kind(), FormulaKind::Length);
+assert_eq!(proof.dependencies()[0].declaration().name(), "is_base_size");
+assert_eq!(proof.canonical_expression().as_str(),
+    "(if is_base_size length:1000 length:2000)");
+```
+
+Known kinds do not require available values. Is_base_size is statically Boolean even without an
+Instance. Unknown measurement records remain checkable through their canonical length locators;
+geometry declarations retain the actual PointRef/EdgeRef without resolving coordinates or curves.
+A statically valid expression such as 1 mm / 0, sqrt(-1.0) or tan(90 deg) can still fail at runtime.
+No check computes a branch condition or a numeric-domain verdict.
+
+FormulaExpressionCheckError borrows the actual failing normalized-node span and the same
+expression owner. Grouping remains part of that span; the checker invents no narrower callee
+span or recipe ordinal. Canonical_expression uses the existing whole-expression canonical factory
+only on explicit inspection. UnboundName and Call variants preserve their existing distinct
+search/source payloads. Dimension carries FormulaDimensionRefusal with a typed operation,
+every resolved immediate kind and direct tolerance role, all wanted rows and arc_length_hint.
+
+```rust
+use sc_core::recipe::{FormulaExpression, FormulaNamespace,
+                     FormulaExpressionCheckRefusal, FormulaKind};
+let expression = FormulaExpression::parse("if(1,1 mm,2 deg)").unwrap()
+    .normalize_literals().unwrap();
+let error = expression.check_kinds(&FormulaNamespace::new([]).unwrap()).unwrap_err();
+assert_eq!(error.token(), "formula_dimension");
+if let FormulaExpressionCheckRefusal::Dimension(args) = error.refusal() {
+    assert_eq!(args.operation().token(), "if");
+    assert_eq!(args.operands().iter().map(|arg| arg.kind()).collect::<Vec<_>>(),
+        [FormulaKind::Count, FormulaKind::Length, FormulaKind::Angle]);
+    assert_eq!(args.wanted_signatures().len(), 1);
+}
+```
+
+Callees resolve before arguments. Known children check left-to-right before their complete
+immediate signature; if checks condition, then branch and else branch. Thus if(1,missing,1 mm)
+reports the missing name before a bad-condition dimension tuple can be completed. A nested child's
+own refusal wins over its parent's later children. Spline(missing) retains env_nurbs; an undeclared
+callee such as loop(missing) retains formula_unbound_name for loop. Syntax/input errors retain their
+earlier phase. Within checks all operands before enforcing its class role. Grouping keeps a direct
+tolerance name symbolic; arithmetic and calls returning Length do not acquire that role.
+
+```rust
+use sc_core::recipe::{FormulaExpression, FormulaNamespace, FormulaKind};
+let namespace = FormulaNamespace::new([]).unwrap();
+for source in ["within(1 mm,2 mm,(eps_geo))", "within(1 mm,2 mm,eps_phys)"] {
+    let expression = FormulaExpression::parse(source).unwrap().normalize_literals().unwrap();
+    assert_eq!(expression.check_kinds(&namespace).unwrap().kind(), FormulaKind::Boolean);
+}
+let expression = FormulaExpression::parse("within(1 mm,2 mm,eps_geo + 0 mm)").unwrap()
+    .normalize_literals().unwrap();
+assert_eq!(expression.check_kinds(&namespace).unwrap_err().token(), "formula_dimension");
+```
+
+Errors abort construction; no accepted dependency prefix escapes. Explicit heap work stacks stay
+within the existing256-node/16-conditional bounds, independent of grouping or unary source depth.
+Private fields and lifetime contracts prevent forged proofs and detached expression/error/source
+owners. Debug omits customer source/names/magnitudes; Display emits only the internal token, which
+the command layer must localize. Explicit payload/identity access is available for diagnostics.
+Inspect the borrowed error while its normalized owner is alive. Returning it as a generic
+`Box<dyn Error>` with a static lifetime would detach that owner and is refused by Rust; a later
+command adapter must explicitly copy the available structured arguments into its owned diagnostic.
+
+Seven public contracts exercise656 operator tuples and52156 call kind/direct-class tuples at
+arities1–3, plus fourth-argument, syntax, priority, dependency, runtime-domain and structural-bound
+controls. The independently authored rows match the closed call population in both directions.
+Sixteen actual compiled checker faults must fail body assertions and restore exact source:
+
+```bash
+cargo test -p sc-core --test formula_checked_expression_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutations.py
+```
+
+Run mutations alone, without overlapping builds/probes/gates. The standing structural suite watches
+fault anchors and refuses compiler/expect/test-name noise. These proofs cover expression checking
+against an initial namespace. Current-statement annotations, ordered prior-binding integration,
+whole-recipe acceptance, canonical registry/operation-order validation, numerical execution and
+physical geometry retain .5b.3c.3/.4, .5e/.5f and G2 owners. The grammar and token set are unchanged.

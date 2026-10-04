@@ -646,11 +646,11 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   [Exact protocol](G1-SLICE-names.md#completed-wanted-kind-protocol--preserved-from-74e8648) retained.
 
 - ID: `G1-SLICE.5b.3c.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: source-bearing typed errors, bounded context-free checker and immutable checked owner.
   Children: .a D136 truthful call lookup/payloads, .b expression/dependency/owner integration.
   Finalize lifetimes before code; no callback/value/state query or invented ordinal/canonical proof.
-  Verification/Commit: `pending`.
+  Verification/Commit: `STITCHCAD-G1-0105`; [exact proof](G1-SLICE-names.md#bounded-product-expression-checker-protocol).
 
 - ID: `G1-SLICE.5b.3c.2a`
   Status: `done`
@@ -658,10 +658,10 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   [Exact protocol](G1-SLICE-names.md#completed-call-lookup-protocol--preserved-from-7edc635) retained.
 
 - ID: `G1-SLICE.5b.3c.2b`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete dimension diagnostic contract and bounded accepted expression owners.
   Children: .1 D138 payloads, blocking .h0 retention/.h1 CI, .2 bounded product checker/error/owner.
-  No execution or invented whole context; finalize interfaces before code. Verification/Commit: `pending`.
+  No execution or invented whole context; finalize interfaces before code. Verification/Commit: `STITCHCAD-G1-0105`; [exact proof](G1-SLICE-names.md#bounded-product-expression-checker-protocol).
 
 - ID: `G1-SLICE.5b.3c.2b.1`
   Status: `done`
@@ -694,17 +694,16 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: safe required cleanup; `STITCHCAD-G1-0101`.
   [Exact frozen plan/apply/residue/rebuild receipts](G1-SLICE-names.md#required-artifact-cleanup--h1c) retained.
 - ID: `G1-SLICE.5b.3c.2b.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: context-free bounded checker with typed source/canonical errors, dependencies/checked owner.
   Acceptance: every branch/argument/name dependency and complete actual/wanted kinds, call priority,
   no callback/value/state query, no user-authored index or partial proof; interface first.
-  Children: .0 D145 stale prerequisite prose; product checker follows after scoped interface review.
-  Verification/Commit: `pending`.
+  Children: .0 D145 prerequisite prose complete; initial-scope expression checking verified.
+  Verification/Commit: `STITCHCAD-G1-0105`; [exact proof](G1-SLICE-names.md#bounded-product-expression-checker-protocol).
 - ID: `G1-SLICE.5b.3c.2b.2.0`
   Status: `done`
   Goal: D145 prerequisite documentation; `STITCHCAD-G1-0104`.
   [Source/status/reference/publication receipts](G1-SLICE-names.md#d145-prerequisite-documentation-protocol) retained.
-
 - ID: `G1-SLICE.5b.3c.3`
   Status: `pending`
   Goal: check actual current-statement operands/annotations/assertions without forged contexts.

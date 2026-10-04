@@ -12,7 +12,8 @@
 //! Closed kind/origin/reserved-context metadata and immutable source locators are available;
 //! initial namespaces retain sources, reject collisions and resolve exact names; ordered metadata scopes
 //! retain actual prior let declarations; closed operator/built-in/selector kind signatures and typed wanted-kind catalogs are available.
-//! Expression/whole-recipe type validation and evaluation follow.
+//! Bounded initial-scope expression proofs retain kinds, typed refusals and sourced dependencies.
+//! Current-statement/whole-recipe validation and numerical evaluation follow.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -87,4 +88,10 @@ mod namespace;
 pub use namespace::{
     FormulaInitialDeclaration, FormulaNameCursor, FormulaNamespace, FormulaNamespaceError,
     FormulaStatementNameScope, FormulaUnboundName,
+};
+
+mod checked;
+pub use checked::{
+    FormulaCheckedExpression, FormulaCheckedOperation, FormulaDimensionRefusal,
+    FormulaExpressionCheckError, FormulaExpressionCheckRefusal, FormulaNameDependency,
 };

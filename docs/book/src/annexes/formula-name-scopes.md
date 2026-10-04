@@ -2,7 +2,8 @@
 
 > **Status:** implemented metadata foundation, G1-SLICE.5b.2d.2. FormulaNameCursor and
 > FormulaStatementNameScope enforce authored declaration order and retain actual binding sources.
-> Expression signatures/types and complete static recipe acceptance remain .5b.3/.4; execution
+> Initial-scope expression checking is available; current-statement integration and complete
+> static recipe acceptance remain .5b.3c.3/.4; execution
 > remains .5c–.5g. This chapter builds on [initial declarations and exact reads](formula-declarations.md).
 
 A formula statement sees the initial namespace and declarations above it. A current or future let

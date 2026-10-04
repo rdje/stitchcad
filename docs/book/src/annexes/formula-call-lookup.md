@@ -1,7 +1,8 @@
 # Source-bearing call lookup
 
 > **Implemented:** exact call lookup and immutable refusals in sc-core recipe,
-> G1-SLICE.5b.3c.2a. This supplies callee metadata before argument checking. Accepted expressions,
+> G1-SLICE.5b.3c.2a. This supplies callee metadata before argument checking. The enclosing
+> [expression checker](formula-wanted-signatures.md#bounded-product-expression-checking) is available;
 > statement integration, whole-recipe validation and execution remain separate work.
 
 A data name and a callee have different lookup domains. A measurement named waist can be read

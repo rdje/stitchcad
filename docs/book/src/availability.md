@@ -31,8 +31,10 @@ contexts that supply reserved names. Immutable declarations retain canonical inp
 actual recipe/geometry sources. These libraries can identify a declared kind without an export,
 profile or size value. Initial namespaces and ordered name reads are available, along with
 [operator/built-in signatures](annexes/formula-builtin-signatures.md), typed wanted rules and
-[source-bearing call lookup](annexes/formula-call-lookup.md). Complete expression/recipe acceptance
-and execution remain pending.
+[source-bearing call lookup](annexes/formula-call-lookup.md).
+[Initial-scope expression checking](annexes/formula-wanted-signatures.md#bounded-product-expression-checking)
+retains complete kinds, refusals and sourced dependencies. Statement/whole-recipe acceptance and
+execution remain pending.
 
 ## Planned workflows
 
