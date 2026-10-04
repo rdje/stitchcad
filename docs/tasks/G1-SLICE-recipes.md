@@ -617,58 +617,15 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 
 ## Exact window5 runner protocol — .4c.h1
 
-Work unit STITCHCAD-G1-0116; clean d1198ab8e3539df085f89406cf6831ae0302f3e4, brief0/untracked,
-no local jobs before .h1; required exceptional push completed0 (d5dd11f..d1198ab). Remote rdje/
-stitchcad main/push permission independently read0; no force or other-repository write.
-Read exact push-run head_sha, then each job/every step; no aggregate inference. Preserve actual
-failures and own any repair before proceeding. Post-commit published window CLI must earn the
-newest committed-catalog refusal in a real copied fixture. D156 .h2 follows this verified unit,
-then D154 .r before .4/.5b closure. Production/grammar are unchanged; 12open/143sealed.
-Read COMMIT/Git/toolchain/CI workflows, .h0 actual gates/public archive contract before changes.
-Record actual terminal verdict links and relevant effective-local-store/toolchain outputs, current
-book/live/task/pointer/ledger scope, focused checks and13 staged gates before per-leaf commit.
-
+[Exact complete record](../history/stitchcad-devnotes-part127.md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
 
 ## Exact window5 runner receipts
 
-`git push origin main` →d5dd11f..d1198ab, rc=0. Exact push-run metadata head_sha equals
- d1198ab8e3539df085f89406cf6831ae0302f3e4 for both runs; `gh api .../actions/runs/<id>/jobs`
-independently shows each job completed/success, rc=0:
-[doctrine enforce](https://github.com/rdje/stitchcad/actions/runs/37180745357/job/111372644621),
-all8steps completed/success; [Rust check](https://github.com/rdje/stitchcad/actions/runs/37180745375/job/111372644773),
-all11steps completed/success. Run aggregate Rust initially in_progress while actual job complete;
-job-level verdict avoids a false wait. No success was inferred from that aggregate.
-
-Completed Rust job log read0: stable rustc1.99.0 b940084d7 (2026-09-28); strict fmt/Clippy;
-703 passing tests/59 actual result groups; all three WASM foundation rlibs. Actual prepare and
-verify report all four stores on checkout volume: CARGO_HOME target/cargo-home, RUSTUP_HOME
- target/cargo-home/rustup-ci, CARGO_TARGET_DIR target, TMPDIR target/scratch. These receipts verify
-CI only; D156 ordinary producer defaults remain open. Initial CLI log fetch refused ANSI escapes;
-its empty file earns no count. Explicit raw-to-local-file fetch then sanitized actual evidence succeeds0.
-`python3 -I -B .../history_archive/window_contract.py` →328controls/0fail,5windows/313logical
-reads/newestwindow5, rc=0, target/window5-postcommit-cli.log. Real copied newest committed-catalog
-edit refused1; actual payload/member/catalog/cross-window/label controls pass. No source change.
+[Exact complete record](../history/stitchcad-devnotes-part127.md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
 
 ### G1-SLICE.5b.4c.h1
 
-- [x] **ROOT CAUSE / REQUIRED PROOF** — check_push_due.sh names two changed doctrine seams;
-  .h0 pushes clean d1198ab0 after703/WASM3/full28 suites/13gates. Aggregate initially in_progress.
-- [x] **ADDRESSED** — exact head_sha metadata plus actual jobs show doctrine8/Rust11 steps
-  completed/success, gh api rc=0; actual1.99/703/59/WASM3/four checkout-local stores derived above.
-- [x] **NO REGRESSION** — actual post-commit published archive CLI328controls0, including newest
-  committed-catalog refusal1, rc=0; final book/ledger/coverage/map/13staged gates recorded below.
-- [x] **LOCKSTEP / OWNERSHIP** — book/task/index/resume/ledger record exact observed CI scope;
-  G1 stays5/18,12siblings,12open/143sealed. D156 .h2 then D154 .r; G0 human closure unapproved.
-- [x] **PROMOTION** — declined: standing exact-head/job-step/retained-byte truth principles.
-- [x] **COMMIT** — completed observed unit records as0116; COMMIT workflow/brief0/clean checked.
-
-
-Final focused publication10, ledger9/pointer13, coverage10lanes/13trees/12siblings/zero gaps,
-map8190B identical and retention313logical/9workingMD pass, rc=0,
-target/window5-observed-{publication,ledger,coverage,retention}.log. No production source change,
-no native/probe job remains; CI jobs terminal/success. Final staged doctrine/hook follows.
-
-Final staged make gate13 green, rc=0, target/window5-observed-gate.log; cached diff check0.
+[Exact complete record](../history/stitchcad-devnotes-part127.md); 54L/3975B/sha256:2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0.
 
 
 ## D156 producer profile protocol
@@ -700,7 +657,7 @@ Final staged make gate13 green, rc=0, target/window5-observed-gate.log; cached d
   Acceptance: full local push gates, actual job proof and no inferred runner success; repair/own
   failures before .b. Verification: actual jobs/logs pass0; commit STITCHCAD-G1-0118 below.
 - ID: `G1-SLICE.5b.4c.h2.b`
-  Status: `pending`
+  Status: `in_progress`
   Goal: audit direct standalone Cargo/Rustc and temporary producers; apply shared profile before
   actual native actions, verify effective defaults through actual public producer boundaries.
   Acceptance: finite independent source/call census, actual standalone controls/body faults/source
@@ -785,83 +742,102 @@ rc=0, target/d156-launcher-{check,wasm}.log; no dispatcher warning. Full28 suite
 
 ### G1-SLICE.5b.4c.h2.a
 
-- [x] **ROOT CAUSE** — actual initial Make capture rc=1/all four default identities False;
-  startup --version comparison isolates platform dispatcher before recipes. Original logs above.
-- [x] **ADDRESSED** — local_environment_contract.py returns0:56 runtime controls/13 compiled
-  body reds/2 actual Make reds/1 shell-launcher red/real exec7/readonly inspect/18 review children.
-  Actual local stable1.99 setup/native703/59groups/WASM3 with seven caller exports absent, rc=0.
-- [x] **NO REGRESSION** — final outer-launcher make probes28 suites green, rc=0,
-  target/d156-probes-final.log; original glossary/G0 refusal repaired by command declarations,
-  actual glossary17/publication10/book pass0 (62chapters/67API/1234source/1945rendered links).
-  Crates/reference source unchanged; all actual fault sources/artifacts restored before gate.
-- [x] **LOCKSTEP** — README/Toolbox/book62/lesson/ledger/resume/index updated. D156 remains open
-  for direct producer audit .b; .v required exact-head CI next. G1 stays5/18,12open/143sealed.
-- [x] **PROMOTION** — declined: standing locality, argument identity, refusal and proof contracts.
-- [x] **COMMIT** — one completed primary unit STITCHCAD-G1-0117; final staged gate/brief0/clean
-  recorded by COMMIT workflow. Required push/runner observation belongs to .h2.v.
-
-Final full28 run also executes actual G0 review controls10pass0 (18met/1human-act-unmet),
-CI19controls/6compiled reds, archive329controls/314logical reads/newestwindow5 committed-catalog
-refusal, rc=0. No production Rust/reference delta. Final focused ledger/coverage/map/retention and
-staged13-gate/hook output follows; no source-producing job remains.
-
-Final focused current-doc checks: ledger9/pointer13, coverage10lanes/13trees/12siblings/zero gaps,
-retention314logical/10workingMD/13120decodedL/957567decodedB/420799residentB, rc=0,
-target/d156-{ledger,coverage,retention}-final.log. Generated map byte-identical8190B (cmp0).
-Direct doctrine invocation from docs/book with all seven overrides absent returns0/13 green,
-target/d156-direct-gate.log; ordinary outer gate13green0, target/d156-unstaged-gate.log.
-Current Rust/reference git diff empty after all mutation jobs, no job remains. Final staged gate
-and cached diff check follow before commit; .a closure makes no CI/audit completion claim.
-
-Final staged outer gate13green, rc=0, target/d156-staged-gate.log; cached diff check0.
-Explicit22-path stage owns all primary changes; COMMIT workflow/hook verifies before .v.
+[Exact complete record](../history/stitchcad-devnotes-part128.md); 32L/2528B/sha256:74fd1e0b79c027670c81f28735c31bc335cdfeab58cddd7a141f97eccff13822.
 
 ## D156 required runner observation
 
-Work unit STITCHCAD-G1-0118, leaf G1-SLICE.5b.4c.h2.v. Predecessor8f87a10 clean/brief0,
-primary.a completed, ordinary400 cadence2unpushed; actual check_push_due names doctrine driver.
-All required local native703/59groups/WASM3/full28/staged+hook13 pass0 before clean push.
-Actual repository metadata confirms rdje/stitchcad/main and push permission; push d1198ab..8f87a10
-returns0. Own exact-head job/log reading and book/ledger/resume proof before .b; no code changes.
-
-Required observation: gh api jobs for each exact-head run, every job and every step, completed
-log evidence. No aggregate-only inference. First log parse was issued before its download session
-terminated and refused with assertion1; discard that incomplete read. Terminal download0 followed
-by fresh actual log assertions is the evidence below. No other native/log job remains.
-
-Exact pushed head:8f87a10ff9a17fc682653063b0667aebb05454e8; actual metadata queries rc=0:
-- doctrines run37185684578, job111386981964 enforce:8 steps completed/success;
-  https://github.com/rdje/stitchcad/actions/runs/37185684578/job/111386981964
-- rust run37185684564, job111386981852 check:11 steps completed/success;
-  https://github.com/rdje/stitchcad/actions/runs/37185684564/job/111386981852
-Actual --allow-escape-sequences job-log fetch0 then sanitized assertions0 derive stable1.99.0/
-b940084d7/2026-09-28,703tests/59groups, three actual WASM rlibs and four prepared+verified
-checkout-volume stores. No local-profile guard-fault claim is inferred from Rust CI: that job uses
-its explicit CI environment helper. The doctrine job executes the new driver/profile on Ubuntu.
-Target receipts: d156-{ci-runs,doctrine-jobs,rust-jobs}.json and d156-rust-job.log.
+[Exact complete record](../history/stitchcad-devnotes-part129.md); 49L/3668B/sha256:e672a026081f00e89749724b4008f0aa5ef045d9e24a4071a82d39231f8779be.
 
 ### G1-SLICE.5b.4c.h2.v
 
-- [x] **ROOT CAUSE / REQUIRED PROOF** — actual check_push_due exceptional driver path/2unpushed;
-  clean push returns0 only after703/WASM3/full28/hook13. Root scoped verification owned above.
-- [x] **ADDRESSED** — exact head metadata plus actual jobs/every step completed/success,
-  doctrine8/Rust11, gh api rc=0; terminal raw-log703/59/WASM3/four-store assertions rc=0.
-- [x] **NO REGRESSION** — prior actual full28/current publication10/glossary17/ledger9+pointer13
-  pass0; code unchanged in this observation leaf. Final current-doc checks recorded below.
-- [x] **LOCKSTEP** — book/task/index/resume/ledger reflect observed scope; D156 remains open
-  for .b audit before D154. G1 stays5/18,12open/143sealed; G0 human closure unapproved.
-- [x] **PROMOTION** — declined: existing exact-head/terminal-output/job-step evidence rules.
-- [x] **COMMIT** — completed observation unit STITCHCAD-G1-0118; COMMIT/brief0/clean follows.
+[Exact complete record](../history/stitchcad-devnotes-part129.md); 49L/3668B/sha256:e672a026081f00e89749724b4008f0aa5ef045d9e24a4071a82d39231f8779be.
 
-Final observation-doc checks: publication10 (62chapters/67API/1234source/1946rendered links),
-ledger9/pointer13, coverage10lanes/13trees/12siblings/zero gaps, unchanged retention314logical/
-10workingMD and byte-identical8190B map, rc=0, target/d156-observed-*.log. Native/Make/helper/
-driver/review source diff against pushed8f87a10 is empty. No verification/log job remains;
-final staged doctrine/hook and cached diff follow. G1 states/counts unchanged, notes updated.
+## D156 standalone producer audit slices
 
-First observation staged gate refuses LIVE_STATUS's G1 note at326B/320B maxline, rc=2,
-target/d156-observed-gate.log. Tighten the status cell without changing meaning/counts or cap;
-full details remain in the owning leaf/book. Final gate output follows; failed receipt retained.
+Predecessor40a3c0c clean/brief0, no required job,1unpushed/no push due. Scope .b is broader than
+one safe implementation unit: initial rg lists direct Python native-command literals, shell
+native/temporary commands and platform dispatch before guards. Finite syntax/call inventory
+is required before completeness claims. No direct producer is executed with ambient stores.
 
-Final staged observation gate13green, rc=0, target/d156-observed-gate-final.log; cached diff0.
-Final9-path docs-only stage owns all observation edits. Hook/brief0/clean are the commit postconditions.
+- ID: `G1-SLICE.5b.4c.h2.b.h`
+  Status: `done`
+  Goal: exact committed whole ledger/lesson/completed-runner receipt retention before audit growth.
+  Acceptance: root registry reviewed; CHANGELOG32587B/32768target, DEV_NOTES16014B/16384target,
+  recipes866L and checked992L/1000 split trigger. Seal complete original40a3c0c byte intervals,
+  preserve task heading/IDs/navigation and all earlier immutable bytes; fixed caps/schemas unchanged.
+  Verify source/hash/read/materialization/descriptor/pointer/coverage/book/gate, no code/native change.
+  Work unit STITCHCAD-G1-0119; exact retention/ledger/publication pass0; commit below.
+- ID: `G1-SLICE.5b.4c.h2.b.i`
+  Status: `pending`
+  Goal: durable finite independent producer/entry-point census and safe actual refusal baseline.
+  Acceptance: enumerate Python AST command/temp/file-producing calls and shell command/heredoc
+  boundaries, classify dynamic calls/delegation without treating comments/fault text as producers.
+  Include Make/book/CI/hooks/generators/cleanup/scaffold integration; read other repos only via
+  published contracts, never implementation/submodule pins. Keep actual inspected path inventory.
+- ID: `G1-SLICE.5b.4c.h2.b.p`
+  Status: `pending`
+  Goal: shared profile for direct Python native/temp producers; actual standalone captures/faults.
+  Acceptance: plan-before-exec, arguments/channel/effective stores, no lost module/fixture contracts;
+  real native focused checks/source+artifact restoration after exclusive faults. Split further if needed.
+- ID: `G1-SLICE.5b.4c.h2.b.s`
+  Status: `pending`
+  Goal: shell/temporary/platform/book entry guards and safe public integration defaults.
+  Acceptance: locality before first dispatcher/write, bounded destinations/overrides, actual
+  standalone executions/refusals/counterfactuals, no external repository/cache mutation.
+- ID: `G1-SLICE.5b.4c.h2.b.v`
+  Status: `pending`
+  Goal: complete finite census/no remaining unguarded owned producer; final full gates/exact CI.
+  Acceptance: actual counts/fixtures/source restoration/native/WASM/full suites/jobs, then D156
+  closure with original report retained; D154 next. No success inferred from documentation.
+
+Retention source: exact40a3c0c HEAD. Five complete intervals are sealed, with original separators
+and a single terminal LF: changelog112 (five complete0104..0100 entries), devnotes126 (two oldest
+whole lessons), task-recipes1 (entire .h1 protocol/receipts),2 (complete .h2.a acceptance/final
+receipts),3 (entire completed .h2.v observation). All original task heading/IDs remain as linked
+proxies; active .b protocol/future nodes stay live. Earlier sealed files/windows/caps unchanged.
+Source/read/materialization/ledger/publication/coverage/gate verification remains pending.
+
+Exact seals (lines/bytes/sha256):
+- changelog112:37/2713/b9ab801e49e064243e1ccff5d091a12810afd480ce425a84f356b0778cddc181
+- devnotes126:15/992/3d32a7e7623a4d8abdf8b435dfa81c641e4a2f586d8a62ef8e20a5b0ab54790c
+- devnotes127:54/3975/2a74689fe8c41139cb68b3a52209b6e7a0079a46df3d19a9e640fc5490f880a0
+- devnotes128:32/2528/74fd1e0b79c027670c81f28735c31bc335cdfeab58cddd7a141f97eccff13822
+- devnotes129:49/3668/e672a026081f00e89749724b4008f0aa5ef045d9e24a4071a82d39231f8779be
+
+First public materialize refuses1: unclassified resident task-recipes archive name. Fixed raw
+record classification permits existing changelog/devnotes/defects families; do not widen schema
+for this transition. Full technical task protocols/receipts belong to engineering continuity,
+already used by prior devnotes protocol segments. Rename new uncommitted task seals to devnotes
+127/128/129, preserving every payload byte/identity/proxy heading; verify public CLI again.
+No prior retained path changes. The failed materialize created no destination.
+
+Public CLI materialize returns0/319 complete logical files; each new public read and materialized
+file equals its sealed file, and every decoded payload is an exact unique source40a3c0c interval,
+with identity/line/byte/terminal-LF assertions0. All earlier retained/control files compare byte-
+identical to source. No reader or data-plane schema/cap changes; no raw original is lost.
+
+### G1-SLICE.5b.4c.h2.b.h
+
+- [x] **ROOT CAUSE** — registry/OS counts at source40a3c0c: CHANGELOG32587B/32768target,
+  DEV_NOTES16014B/16384target, recipes866L/checked992L. New audit receipts need bounded space.
+- [x] **ADDRESSED** — five exact unique committed intervals/source SHA/line/byte/LF assertions,
+  actual public read/materialization319 records, rc=0. All21 prior retained/control files identical.
+  Initial unsupported archive-name refusal1 corrected within existing devnotes families; no schema change.
+- [x] **NO REGRESSION** — ledger9/pointer13, publication10, coverage10/13/12/zero gaps,
+  retention319logical/15workingMD/13362decodedL/974488decodedB/437720residentB pass0;
+  byte-identical8190B map. No source-producing/native job or code/grammar change.
+- [x] **LOCKSTEP** — root ledger/lesson/resume/task/index/book/proxies sync; counts G1 5/18,
+  12open/143sealed unchanged. .b.i finite census next, then guarded producer repairs before D154.
+- [x] **PROMOTION** — declined: existing exact whole-record/immutability/navigation rules.
+- [x] **COMMIT** — complete retention slice0119; staged/hook gates/brief0/clean follow.
+
+Final focused receipts target/d156-audit-{ledger,publication,coverage,retention}.log; current
+publication62chapters/67API (actual source/rendered links derived in log). Earlier full .a gates/
+CI stay separately scoped; no full native rerun is required by a pure record-retention transition.
+Session health: focus drift noted before further implementation; keep the next census slice bounded,
+recover its scoped contracts from committed records. No incomplete read or failed name gets counted
+as successful evidence. Final staged documentation gate output follows.
+
+Final staged retention gate13green, rc=0, target/d156-audit-gate.log; cached diff0. Explicit12
+owned paths staged; prior windows/reader/config/crates/reference unchanged. COMMIT hook/brief0/
+clean postconditions precede the next .b.i census slice.

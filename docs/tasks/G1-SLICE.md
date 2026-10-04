@@ -787,7 +787,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b` | `pending` | D156 standalone audit; exact CI verified; D154 follows |
+| current | `G1-SLICE.5b.4c.h2.b.i` | `pending` | D156 finite producer census; retention done; D154 follows |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

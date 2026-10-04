@@ -5,6 +5,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 audit record retention
+
+- Seal whole committed records before producer-audit growth; keep IDs/headings as linked proxies.
+- Compare decoded/materialized bytes to source, preserving separators and one terminal LF.
+- Active/future audit contracts stay live; immutable prior records and limits stay fixed.
+- Promotion declined: existing exact-retention and bounded-navigation principles.
+
 ## _(2026-10-04 UTC)_ — D156 runner observation
 
 - Exact jobs/every step establish observed CI; terminal logs establish actual counts and stores.
@@ -19,21 +26,6 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 - Actual Make/exec/review children and compiled faults watch storage and argument contracts.
 - Promotion declined: existing locality/source/observed-proof policies cover this repair.
 
-## _(2026-10-04 UTC)_ — window5 runner observation
-
-- Exact pushed head/jobs/every step establish CI; an aggregate may lag completed jobs.
-- Parse actual toolchain/tests/WASM/store evidence from the completed job log.
-- Committed newest-catalog refusal is earned after commit, with real copied CLI input.
-- Promotion declined: standing exact-head/actual-output/immutable-byte principles.
-
-## _(2026-10-04 UTC)_ — D154 prerequisite retention
-
-- Window5 captures60 exact full files; prior windows/schemas/caps stay immutable.
-- Source/read/materialization comparisons retain originals without raw copies or fixture Git.
-- Existing sibling holds complete moved task records; whole ledger/closed receipts are sealed.
-- D155 field/example vocabulary must be declared and watched; full pre-push checks caught drift.
-- Actual runner verification follows the doctrine commit/push before D154 repair.
-- Promotion declined: no new principle beyond existing exact-retention/observed-verdict policy.
 
 
 # Sealed archive — earlier lessons
@@ -143,3 +135,7 @@ The live lesson window is bounded by200 lines/16384 bytes; the archive verifier 
 | [`stitchcad-devnotes-part123.md`](docs/history/window5.md#stitchcad-devnotes-part123md) | initial namespace complete records | 78 lines, 6523 bytes, `sha256:919cc8c1…` |
 | [`part124`](docs/history/stitchcad-devnotes-part124.md) | separated-phase lesson | 7 lines, 532 bytes, `sha256:df3473ff…` |
 | [`part125`](docs/history/stitchcad-devnotes-part125.md) | whole-recipe acceptance lessons | 16 lines, 1199 bytes, `sha256:538022dc…` |
+| [`part126`](docs/history/stitchcad-devnotes-part126.md) | window5 runner/prerequisite lessons | 15 lines, 992 bytes, `sha256:3d32a7e7…` |
+| [`part127`](docs/history/stitchcad-devnotes-part127.md) | completed task protocol/receipts | 54 lines, 3975 bytes, `sha256:2a74689f…` |
+| [`part128`](docs/history/stitchcad-devnotes-part128.md) | completed task protocol/receipts | 32 lines, 2528 bytes, `sha256:74fd1e0b…` |
+| [`part129`](docs/history/stitchcad-devnotes-part129.md) | completed task protocol/receipts | 49 lines, 3668 bytes, `sha256:e672a026…` |

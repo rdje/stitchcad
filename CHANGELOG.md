@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0119 - retain complete producer-audit predecessors (leaf `G1-SLICE.5b.4c.h2.b.h`)
+
+- Seal five complete committed byte intervals from40a3c0c: oldest whole ledger/lessons and
+  completed runner/primary acceptance records. Original task headings/IDs and active audit stay live.
+- Fixed caps/schemas/prior windows unchanged; source/read/materialization/descriptor/navigation
+  receipts in owner. No code/grammar change; standalone producer census .b.i follows.
+
 ## STITCHCAD-G1-0118 - observed primary-profile CI (leaf `G1-SLICE.5b.4c.h2.v`)
 
 - Exact pushed8f87a10 doctrine8/Rust11 steps completed/success; actual stable1.99/703tests/
@@ -250,43 +257,6 @@ No numeric/state/provider query or invented ordinal; grammar unchanged. Public c
 body fault controls. Strict native/WASM, structural/book/ledger/gate receipts retained in task.
 Whole prior ledger/lesson retained; G1 stays5/18,11open/133sealed; D139 headers/statement checks next.
 
-## STITCHCAD-G1-0104 - current prerequisite documentation (leaf `G1-SLICE.5b.3c.2b.2.0`)
-
-Wanted-rule annex now reflects verified D140 reference geometry argument checking, linking its
-proof and retaining product operation/graph/geometry boundaries. Source census/geometry97/75/12,
-publication10 and ledger/gate receipts verify D145 closure; grammar/API unchanged.
-Original report/whole ledger/lesson retained; G1 stays5/18,11open/133sealed; checker follows.
-
-## STITCHCAD-G1-0103 - truthful reference source locations (leaf `G1-SLICE.5f.3a.t1`)
-
-Preserve the shell-header offset for original compiled reference code; mark changed in-memory
-fault sources as virtual.86 independent original positions/real traceback text/variant frames and
-2 actual compiled helper faults pass0, with unchanged source bytes and formula behavior/grammar.
-Full reference/language/publication/ledger/gate receipts in owner; original D144/ledger/lesson and
-complete prior CI/cleanup protocols retained exactly. G1 stays5/18,11open/132sealed; checker next.
-
-## STITCHCAD-G1-0102 - geometry arguments before values (leaf `G1-SLICE.5f.3a`)
-
-Reference point x/y and edge len parse/infer completely before numerical work; every kind must be
-Length. Truthful scoped payloads and no static-failure cache/result/source mutation are verified by
-97 cases/75 complete refusals/12 actual compiled reds; exact values/per-coordinate sources replay.
-All26 existing provenance reds retained; reference/language/publication/ledger/gate receipts in owner.
-Original D140/ledger/lesson retained, book/live/task/resume agree; G1 stays5/18,12open/131sealed, including owned D144 source-location repair.
-Product operation/geometry/full graph proof remains owned; grammar unchanged; expression checker next.
-
-## STITCHCAD-G1-0101 - guarded daily cleanup (leaf `G1-SLICE.5b.3c.2b.h1.c`)
-
-Frozen plan removed6 output trees/991 strays,15647 files/1819917894B; independent residue0/tracked equality.
-Protected stores/other repositories untouched; native663/56/WASM3 rebuilt. Full probe/gate receipts
-in owner; latest cleanup/book/live/task/resume agree. Original ledger/lesson retained exactly.
-G1 stays5/18,12open/130sealed; P0 D140 resumes, no independent product approval inferred.
-
-## STITCHCAD-G1-0100 - repaired CI observed (leaf `G1-SLICE.5b.3c.2b.h1.v`)
-
-Exact d5dd11f jobs/steps succeeded: doctrine8, Rust11 including strictClippy1.99/native663/56/WASM3.
-Actual effective stores/locality checks passed; D142/D143 close with original reports retained.
-Full prior ledger/lesson retained exactly; book/live/task/resume agree, G1 stays5/18,12open/130sealed.
-Focused publication/ledger/gate receipts in owner; cleanup then D140, no product approval inferred.
 
 | [`stitchcad-changelog-part78.md`](docs/history/window4.md#stitchcad-changelog-part78md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
 | [`stitchcad-changelog-part79.md`](docs/history/window4.md#stitchcad-changelog-part79md) | STITCHCAD-G1-0065 | 14 lines, 1183 bytes, `sha256:aa1df64f…` |
@@ -315,3 +285,4 @@ Focused publication/ledger/gate receipts in owner; cleanup then D140, no product
 | [`stitchcad-changelog-part102.md`](docs/history/window5.md#stitchcad-changelog-part102md) | STITCHCAD-G1-0086 | 10 lines, 850 bytes, `sha256:ab8d7ec9…` |
 | [`stitchcad-changelog-part103.md`](docs/history/window5.md#stitchcad-changelog-part103md) | STITCHCAD-G1-0087 | 14 lines, 1241 bytes, `sha256:af59826f…` |
 | [`stitchcad-changelog-part104.md`](docs/history/window5.md#stitchcad-changelog-part104md) | STITCHCAD-G1-0089/0088 | 21 lines, 1708 bytes, `sha256:84e03c0f…` |
+| [`part112`](docs/history/stitchcad-changelog-part112.md) | G1-0104 through G1-0100 | 37 lines, 2713 bytes, `sha256:b9ab801e…` |

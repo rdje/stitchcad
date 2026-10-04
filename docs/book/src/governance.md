@@ -492,3 +492,11 @@ catalog. G1-SLICE.5b.4c.h1 records the evidence; D156 defaults then D154 repair 
 The [build and command reference](build-and-checks.md) documents guarded defaults, overrides,
 explicit toolchain setup and the launcher that prepares storage before Make starts. Primary
 entry points are verified under G1-SLICE.5b.4c.h2.a; the standalone producer audit remains open.
+
+### Producer-audit record retention
+
+Before the direct-producer audit, G1-SLICE.5b.4c.h2.b.h retains five complete byte intervals
+from committed40a3c0c: five oldest ledger entries, two oldest lessons and completed runner/primary
+acceptance records. Original task headings and identities stay linked; active audit requirements
+remain live. Exact source/read/materialization and descriptor/navigation checks establish retention;
+older windows and fixed bounds remain unchanged. This transition adds no product behavior.
