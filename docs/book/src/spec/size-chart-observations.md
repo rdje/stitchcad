@@ -79,4 +79,6 @@ body/Ease inputs at .3c. Break/composite .3d remains owned. No axis model is cho
 Sixteen contracts and a privacy compile-fail test cover borrowing, missing/replaced identities,
 revision/domain checks, explicit table/observation retargeting, current metadata and unresolved values.
 Eight deliberate production mutations must fail actual regression assertions and restore exact source.
+The diagnostic prepares the [local producer profile](../build-and-checks.md#direct-python-producers)
+before its first output or native child and rebuilds the restored focused target before returning.
 The strict native/WASM gates and warning-free book check the integration; the API is not an app or MCP server.

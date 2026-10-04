@@ -1,9 +1,12 @@
 """Twelve real MTM guard/value/path mutations must fail assertions and restore exact production source."""
 from pathlib import Path
+import runpy
 import subprocess
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-measure/src/mtm_chart.rs'
 WORK = ROOT / 'target/mtm_chart_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=(SOURCE,))
 WORK.mkdir(exist_ok=True)
 ORIGINAL = SOURCE.read_bytes()
 TEXT = ORIGINAL.decode()
@@ -33,5 +36,9 @@ try:
         SOURCE.write_bytes(ORIGINAL)
 finally:
     SOURCE.write_bytes(ORIGINAL)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-measure', '--test', 'mtm_chart_contract'],
+                              cwd=ROOT, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored MTM chart artifact failed', restored.stderr.decode())
 assert SOURCE.read_bytes() == ORIGINAL
-print('MTM chart mutations: 12 real reds; original source restored byte-identically')
+print('MTM chart mutations: 12 real reds; source and actual compiled artifact restored')

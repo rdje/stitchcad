@@ -9,6 +9,13 @@ engineering-continuity surface (not the public docs; that's `docs/book/`). Newes
 
 
 
+## _(2026-10-04 UTC)_ — D156 chart entries
+
+- Validate every direct entry's source and output before native dispatch.
+- Capture actual paths, including names differing from the entry filename.
+- Rebuild focused targets after exact source restoration.
+- Promotion declined: existing locality/body/restore rules.
+
 ## _(2026-10-04 UTC)_ — D156 native continuity
 
 - Seal whole committed intervals before the next repair grows the live tracker.

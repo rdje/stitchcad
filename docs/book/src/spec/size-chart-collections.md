@@ -90,3 +90,5 @@ Eighteen contracts/privacy and fourteen deliberate production mutations check co
 including a deliberately reduced target inventory, valid duplicate cells, table expansion and an
 introduced numeric zero fallback. Exact source restoration, strict native/WASM checks, a warning-free
 book and focused doctrine checks verify this integration. No app, command bus or MCP server is claimed.
+The mutation diagnostic prepares the [local producer profile](../build-and-checks.md#direct-python-producers)
+before output or child dispatch, then rebuilds the restored focused target before returning.

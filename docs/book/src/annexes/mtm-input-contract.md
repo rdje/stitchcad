@@ -91,3 +91,5 @@ current targets/provenance/state, complete POM coverage, unresolved inputs, comp
 refusal. Twelve real production mutations must fail regression assertions, including separate Body
 and Ease zero fallbacks and an enabled grade-rule path, then restore exact source. Strict native/WASM,
 book and focused doctrine checks verify integration; actual instantiation and release remain later work.
+The mutation diagnostic uses the [local producer profile](../build-and-checks.md#direct-python-producers)
+before its first output or native child, then rebuilds the restored complete MTM test target.

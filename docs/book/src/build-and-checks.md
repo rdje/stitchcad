@@ -122,10 +122,14 @@ The individual-Ease and Ease-set mutation entries use the same declared-path and
 Their native runs with caller overrides absent observe seven and ten real assertion failures,
 then restore exact source and rebuild each current artifact. Mutation diagnostics run sequentially.
 
-Standing controls cover17 runtime cases and nine actual body faults, including three real standalone
-entry at its first write. The native run with caller exports absent observes seven compiled
+Measurement-table, garment-observation, chart-collection and MTM mutation entries also use
+the declared-path guard before output or child dispatch. Each restores its exact source and
+runs its complete focused test target again to rebuild the current artifact before returning.
+
+Standing controls cover17 runtime cases and thirteen actual body faults, including seven real
+entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All three entry captures also refuse a late missing source before
+12 membership tests passing. All seven entry captures also refuse a late missing source before
 output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.

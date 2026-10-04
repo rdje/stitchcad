@@ -1,10 +1,13 @@
 """Real guard mutations must produce test assertions, not compilation failures."""
 from pathlib import Path
+import runpy
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-measure/src/table.rs'
 WORK = ROOT / 'target/measurement_table_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=(SOURCE,))
 WORK.mkdir(exist_ok=True)
 ORIGINAL = SOURCE.read_bytes()
 TEXT = ORIGINAL.decode()
@@ -36,5 +39,9 @@ try:
         SOURCE.write_bytes(ORIGINAL)
 finally:
     SOURCE.write_bytes(ORIGINAL)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-measure', '--test', 'table_contract'],
+                              cwd=ROOT, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored table artifact failed', restored.stderr.decode())
 assert SOURCE.read_bytes() == ORIGINAL
-print('table mutations: 8 real reds; original source restored byte-identically')
+print('table mutations: 8 real reds; source and actual compiled artifact restored')

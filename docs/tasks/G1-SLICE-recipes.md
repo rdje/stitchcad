@@ -901,7 +901,7 @@ Rebuild the live view from exact committed source with each replacement at its o
 verify all six intervals/retrieval again0. The failed attempt is not counted as proof.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.m2`
-  Status: `pending`
+  Status: `done`
   Goal: four table, size-chart, chart-collection and MTM direct native entries adopt declared-path guards.
   Acceptance: transfer finite entry ownership before edits; actual prefixes/late refusals/body
   omission reds and exclusive native assertions; restore exact source/current focused artifacts.
@@ -924,3 +924,40 @@ verify all six intervals/retrieval again0. The failed attempt is not counted as 
 
 Final staged gate13green, rc=0, target/d156-native-retention-gate.log; cached diff0.
 Explicit13 owned paths; hook/brief0/clean precede .p.n.m2.
+
+
+### G1-SLICE.5b.4c.h2.b.p.n.m2
+
+- [x] **ROOT CAUSE** — four original entries write/delegate without their own profile and
+  restore source alone. Each actual activation-omission prefix fails its assertion, rc=0 controls.
+- [x] **ADDRESSED** — four declared-source/output guards and final focused rebuilds; guarded
+  CI probes17runtime/13actual body reds/7actual prefixes/7late-source refusals, rc=0,
+  target/d156-chart-ci.log. Native argv retained; table output name independently specified.
+- [x] **NO REGRESSION** — direct exclusive runs with seven exports absent: table8/observation8/
+  collection14/MTM12 assertion reds, exact source/current artifact restored16/16/18/15 tests;
+  rc=0, target/d156-chart-*-native.log and target/{measurement_table,size_chart,size_chart_collection,
+  mtm_chart}_mutations/restored.log. Existing CI19/6/local56/13/2/1/census9/9/4/Git226/285 pass;
+  publication10/62chapters/67API and glossary17, rc=0, target/d156-chart-{publication,glossary-final}.log.
+  Rust diff empty. Syntax226/6814AST/68heredocs/2649embedded is inspection only.
+- [x] **LOCKSTEP** — finite entry ledger/controls/live/task/index/five book pages agree;
+  D156 open; G1 5/18,12open/143sealed unchanged. Grammar/Rust API unchanged.
+- [x] **PROMOTION** — declined: existing entry/locality/actual-body/exclusive restoration rules.
+- [x] **COMMIT** — complete0125; staged gate/hook/brief0/clean before next continuity leaf.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.h2`
+  Status: `pending`
+  Goal: retain complete older committed protocols/lessons before unit native receipt growth.
+  Acceptance: whole source intervals/proxies/active nodes/public retrieval/prior immutable bytes;
+  fixed caps and complete book/task navigation preserved; focused gate then unit group.
+- ID: `G1-SLICE.5b.4c.h2.b.p.n.u1`
+  Status: `pending`
+  Goal: round, unsigned-round, length-operator and mixed domain-context native entry guards.
+  Acceptance: all declared sources before writes; actual prefixes/refusals/body reds; exclusive
+  native faults and exact source/current debug+release artifacts restored. Owned after .n.h2.
+
+Final ledger9/pointer13 and coverage9arms/10lanes/13trees/12siblings/zero gaps, rc=0,
+target/d156-chart-{ledger,coverage}.log. Initial nonexistent glossary route127 is discarded;
+exact rg-discovered public entry gives17pass0 in glossary-final. No producer/job remains pending.
+
+Final staged gate13green, rc=0, target/d156-chart-staged-gate.log; cached diff0.
+Explicit17 owned paths; hook/brief0/clean precede bounded continuity .p.n.h2.

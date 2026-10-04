@@ -102,6 +102,10 @@ MeasurementBinding, then call MeasurementTable.new against the current context. 
 replacement leaves the prior table unchanged; a missing or incompatible target returns a typed error.
 Birth success is not cached current approval. Private representation prevents unchecked edits.
 
+The table mutation diagnostic uses the [local producer profile](../build-and-checks.md#direct-python-producers)
+before writing output or compiling a fault. It restores the exact source and rebuilds the complete
+focused table test target before returning; native mutation diagnostics run sequentially.
+
 A valid unknown input can be saved and inspected. An API or future MCP client can query its core state,
 source and required observation without inventing zero or copying a peer's preference. A derived input
 retains its formula and requires the evaluator. Full table structural success does not authorize

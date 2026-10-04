@@ -134,7 +134,7 @@ def controls(scope):
     return count
 
 
-def capture(text, entry_path=ENTRY, *, refusal=False):
+def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
     """Execute the actual prefix through its first mkdir, intercepting every dispatch/write."""
     tree = ast.parse(text)
     boundary = next(node.end_lineno for node in tree.body if isinstance(node, ast.Expr) and
@@ -149,7 +149,8 @@ def capture(text, entry_path=ENTRY, *, refusal=False):
         pass
 
     def observe(path, *args, **kwargs):
-        assert path == ROOT / 'target' / entry_path.stem, 'D156 Python unexpected prefix write'
+        expected_work = ROOT / 'target' / (work_name or entry_path.stem)
+        assert path == expected_work, 'D156 Python unexpected prefix write'
         assert all(os.environ.get(name) == str(ROOT / value) for name, value in EXPECTED.items()), 'D156 Python standalone activation omitted'
         assert os.environ.get('RUSTUP_TOOLCHAIN') == '1.99.0', 'D156 Python standalone channel lost'
         observations.append(path)
@@ -203,25 +204,34 @@ def main():
         else:
             raise AssertionError((name, 'body fault survived'))
     call = "runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](\n    ROOT, directories=(WORK,), sources=(SOURCE,))\n"
-    adopters = (ENTRY, ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py',
-                ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py')
-    for path in adopters:
+    adopters = (
+        (ENTRY, 'size_membership_mutations'),
+        (ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py', 'ease_mutations'),
+        (ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py', 'ease_set_mutations'),
+        (ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py', 'measurement_table_mutations'),
+        (ROOT / 'docs/tasks/artifacts/size_chart/size_chart_mutations.py', 'size_chart_mutations'),
+        (ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py', 'size_chart_collection_mutations'),
+        (ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py', 'mtm_chart_mutations'),
+    )
+    originals = {path: path.read_bytes() for path, _ in adopters}
+    for path, work_name in adopters:
         text = path.read_text()
-        capture(text, path)
+        capture(text, path, work_name=work_name)
         assert not (ROOT / 'target/scratch/python_producer_contract/absent-source').exists()
         assert text.count('sources=(SOURCE,)') == 1
         capture(text.replace('sources=(SOURCE,)',
                              "sources=(SOURCE, ROOT / 'target/scratch/python_producer_contract/absent-source')", 1),
-                path, refusal=True)
+                path, work_name=work_name, refusal=True)
         assert text.count(call) == 1
         try:
-            capture(text.replace(call, '', 1), path)
+            capture(text.replace(call, '', 1), path, work_name=work_name)
         except AssertionError as error:
             assert str(error) == 'D156 Python standalone activation omitted'
             red += 1
         else:
             raise AssertionError('D156 Python standalone body fault survived')
     assert SOURCE.read_bytes() == original and ENTRY.read_bytes() == entry, 'D156 Python source changed'
+    assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
           str(len(adopters)) + ' actual late-source refusals / source unchanged')

@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/stitchcad-changelog-part111.md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0125 - guarded measurement-chart entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.m2`)
+
+- Four table/observation/collection/MTM entries plan source/output/stores before writes or children.
+- Standing17runtime/13body/7captures/7late refusals0; direct absent-export42 native assertion reds.
+- Exact sources/current artifacts restored16/16/18/15pass; focused profiles/book/glossary green.
+- Grammar/Rust API unchanged; D156 stays open. Bounded continuity precedes unit native entries.
+
 ## STITCHCAD-G1-0124 - retain native repair continuity (leaf `G1-SLICE.5b.4c.h2.b.p.n.h`)
 
 - Six whole sourcea392d31 intervals preserve oldest ledger entries, lessons and acceptance records.

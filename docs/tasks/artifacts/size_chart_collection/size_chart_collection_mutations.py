@@ -1,9 +1,12 @@
 """Fourteen production mutations must fail actual regression assertions, then restore exact source."""
 from pathlib import Path
+import runpy
 import subprocess
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-measure/src/size_chart_collection.rs'
 WORK = ROOT / 'target/size_chart_collection_mutations'
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=(SOURCE,))
 WORK.mkdir(exist_ok=True)
 ORIGINAL = SOURCE.read_bytes()
 TEXT = ORIGINAL.decode()
@@ -38,5 +41,9 @@ try:
         SOURCE.write_bytes(ORIGINAL)
 finally:
     SOURCE.write_bytes(ORIGINAL)
+    restored = subprocess.run(['cargo', 'test', '-p', 'sc-measure', '--test', 'size_chart_collection_contract'],
+                              cwd=ROOT, capture_output=True)
+    (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)
+    assert restored.returncode == 0, ('restored size chart collection artifact failed', restored.stderr.decode())
 assert SOURCE.read_bytes() == ORIGINAL
-print('size chart collection mutations: 14 real reds; original source restored byte-identically')
+print('size chart collection mutations: 14 real reds; source and actual compiled artifact restored')

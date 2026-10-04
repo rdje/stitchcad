@@ -787,7 +787,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.n.m2` | `pending` | Four measurement-chart native guards; D154 follows D156 closure |
+| current | `G1-SLICE.5b.4c.h2.b.p.n.h2` | `pending` | Bounded continuity before unit native guards; D154 follows D156 closure |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
