@@ -19,6 +19,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Pack57 full6d93d3d records after exact isolated424 reads/materialization; six old windows unchanged. Verify copied bytes before retiring matching raw files, route root/document-relative links, and retain two whole lessons/three oldest ledgers.
 - Physical fixture source/output/victim share one regular inode (link count3); shared plan accepts without effects. Type/device/no-symlink checks do not prove mutable ownership. .f.l owns output/writable-source contracts next; pure reads stay pure.
 - Archive writes/removals measured single-link57 raw/four live files/master1 first. Existing reader/standing window controls watch data; no new producer/Rust/grammar code. Promotion declined: existing immutable-source, scoped-proof and explicit ownership rules;400 cadence retains local verification.
+- After recording abc2f91e, actual copied catalog prose passes inventory0/refuses committed guard1; all24 root archive files/HEAD exact. P1 .f.l follows; runner verdict remains unobserved.
 
 ## _(2026-10-05 UTC)_ — bridge source and file plans
 

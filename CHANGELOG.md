@@ -110,13 +110,19 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0155 - committed catalog refusal (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.h.v`)
+
+- Actual copied window7 prose edit passes inventory0 and refuses committed retention1.
+- All24 root archive files/HEAD exact; only copied catalog changed; no sealed source write.
+- Book/live/frontier route P1 .f.l hard links; local proof,400 cadence unchanged.
+
 ## STITCHCAD-G1-0154 - bounded window7 continuity (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.h`)
 
 - Capture57 whole6d93d3d files; isolated424 reads/materialization exact; preserve six old windows.
 - Verify copied bytes before retiring57 raw copies; route maintained root/document-relative links.
 - Retain two whole lessons/three oldest ledgers; original intervals/prior424 remain exact.
 - Physical hard-link gap reproduced without writes; .f.l owns output/writable-source contracts next.
-- Book/live/frontier and focused retention checks follow; fixed caps/400 cadence remain.
+- Archive28/CLI442/public426, publication45/coverage9/ledger9+13/census/map and staged gate0; fixed caps/400 cadence remain.
 
 ## STITCHCAD-G1-0153 - own producer files (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.i`)
 

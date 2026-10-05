@@ -500,6 +500,7 @@ Window7 captures57 full files from6d93d3d. Its isolated fixture reads/materializ
 records exactly; previous six windows and logical addresses stay unchanged. Use
 `bash scripts/history_archive.sh prove-source window7` for the optional Git comparison.
 Normal retrieval remains offline. Fixed bounds stay; runner evidence awaits the400-commit cadence.
+Committed catalog prose edits are refused.
 
 ### Local producer profile
 

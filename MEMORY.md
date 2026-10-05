@@ -4,9 +4,9 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Resume .p.o.f.h/0154: window7 captures57 full6d93d3d files; prior424/six controls exact;
-  two whole lessons/three ledgers retained; source/read/materialization proof in owning leaf.
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.h.v: committed catalog refusal, then .f.l hard-link gap;
+- Resume .p.o.f.h.v/0155: actual copied window7 catalog prose passes inventory0/refuses
+  committed guard1; all24 root archive files/HEAD exact; no tracked sealed write.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.l: P1 hard-link gap before native file repair;
   source/output/victim share one inode; plan accepts3 links, no alias write. Guard mutable files while preserving pure
   source reads, then adopt complete output/mutable-source plans in .f.n01–14/.a01.2/.a/.p.v.
   Native37 source/directory guards verified/files pending; current120 Python paths/44 owners,

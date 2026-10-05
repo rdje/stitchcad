@@ -168,9 +168,25 @@ without changing the chosen file or named refusal; no fixture bytes/native sourc
   Acceptance: physical isolated output/source hard-link reproduction without alias writes; exact regular-file/inode/link-count root cause; bounded explicit mutable-path contract and output refusal, actual omission controls and focused integration without weakening existing source/type/device/parent checks. Schedule native source-writing adoption in each .f.n repair before effects.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h.v`
-  Status: `pending`
+  Status: `done`
   Goal: after the .f.h recording commit, prove the newest committed window7 rejects a copied catalog prose edit through the actual public retention guard; record the terminal result before .f.l.
   Acceptance: isolated same-volume copy only, normal inventory remains green, immutable guard refuses exactly the changed committed catalog; actual HEAD/fixture/control bytes exact, no tracked sealed write, no background result left unconsumed, local scope distinct from unobserved runner verdict.
+
+STITCHCAD-G1-0155 owns this post-recording proof and its bounded book/live/task receipts.
+Use a fresh target/window7_committed_control copy with complete input/output plans before
+activation; every source is pinned to current abc2f91e bytes and copied destinations are fresh.
+Invoke the actual public reader on root and fixture; append prose only to the singleton fixture
+catalog and require ordinary inventory0/committed guard1 with the named catalog diagnostic.
+Compare every root input and fixture byte before/after; no source, sealed record or foreign repo write.
+
+- [x] REPRODUCE / ISSUE: newest7 immutability arm awaited its recording commit; actual abc2f91e now contains the window. Root and fresh copied fixture verify-retention0, rc=0, target/window7-committed-control.log. Full public reader/standing copied-catalog control reviewed; no tracked sealed mutation.
+- [x] ROOT CAUSE: inventory validates membership/bytes but intentionally ignores catalog prose; committed comparison must independently reject drift. Actual isolated copied prose edit leaves inventory0, rc=0, window7-committed-control.log; source/output plan precedes activation, copied regular destinations have one link.
+- [x] FIX: run the actual post-recording public guard against the changed copy; source/HEAD pins and complete input/output fixture paths retained, rc=0, window7-committed-control.log. Data/implementation stay unchanged; this closes the deferred newest-window proof only.
+- [x] ADDRESSED: copied catalog edit yields exact ARCHIVE-RETENTION committed retained file changed/exit1 while ordinary inventory0; intact root/fixture guard0, rc=0, window7-committed-control.log. Both actual outcomes consumed; fixture has no Git marker and inherits the project's committed baseline.
+- [x] NO REGRESSION: every24 root archive file/current HEAD exact; fixture bytes differ only by the deliberate copied catalog prose, rc=0, window7-committed-control.log. No reader/Rust/grammar/archive data change; previous focused suite receipt belongs to .f.h, not a rerun here.
+- [x] LOCKSTEP: bounded book/live/MEMORY/G1/index route P1 .f.l before native files;400 cadence/local proof scope unchanged, rc=0, window7-committed-control.log. promotion: declined (existing immutable-input, scoped proof and consumed-terminal rules). No runner verdict claimed.
+  Fresh publication45/coverage9 and staged gate13 green, rc=0, window7-post-publication/coverage/staged-gate.log.
+  Confirmatory ledger verification pending in window7-post-ledger.log; consume before mutable-path work.
 
 ### .a01.1 verification and continuation
 
