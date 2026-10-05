@@ -402,7 +402,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
 Complete committed verification retained in [producer proof](G1-SLICE-producer-proof.md#size-chart-collections); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n03`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete file-destination plans for Ease families; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/ease/ease_mutations.py;docs/tasks/artifacts/ease/ease_set_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
@@ -423,10 +423,29 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
   Final staged gate13 green, rc=0, target/ease-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n03.2`
-  Status: `pending`
-  Goal: Ease-set complete files/mutable/current test-site guards after individual Ease.
+  Status: `done`
+  Goal: STITCHCAD-G1-0163 owns Ease-set files/mutable/current test-site guards, independent controls and book/live receipts.
   Paths: docs/tasks/artifacts/ease/ease_set_mutations.py
   Acceptance: preserve eight pure cases and both dependent spans yielding ten faults; complete captures/refusals/body controls and exclusive exact native/current artifact proof.
+
+0163 owns the complete entry/wrapper/current431-line implementation/599-line fourteen-test
+contract/public exports/.4b.2 canonical contract and normative/runtime Ease book reviewed before
+changes; reviewed inline macros/current membership and mapping validation spans. Preserve pure8
+cases/six dependent statements/ten selected filters/stores/full restoration; derive11 output files
+before reads with two inputs/one explicit mutable source/current inline byte sites. Own shared
+python_producer_contract.py/Target helpers, full dispatch/physical/omission/noise/inline controls,
+exclusive real replay and eight frozen inputs/two HEAD Rust/full current public artifact proof.
+Retain the whole oldest chart lesson and two oldest ledgers from1b74946 into fresh seals before
+live growth; prove exact Git spans/SHA/prior archive bytes/readers/fixed caps before completion.
+
+- [x] REPRODUCE / ISSUE: actual full committed Ease-set predicate/return101 accepts passed assertion_name plus expect-only failure without writes/native effects, rc=0, target/ease-set-predicate-diagnostic.log. Original entry omits11 filenames/mutable intent/current test source; D156/D177 owned here. Complete entry/wrapper/public/implementation/fourteen-test/canonical/normative/runtime contract reviewed before changes.
+- [x] ROOT CAUSE: CASES follows activation/reads; directory identity omits file leaves and mutable intent; broad assertion bytes omit current macro provenance. Independent complete eleven-child/file capture/four physical copied-entry first/last output symlink/mutable hard-link/missing-test refusals pass, rc=0, ease-set-producer-controls.log. Source/alias bytes and prepared stores unchanged; no unsafe native dispatch.
+- [x] FIX: pure8 cases before11-file/two-input/one-mutable-source guard; six dependent statements/order and10 faults AST-exact; require current failed-body macro byte sites including inline closures. Shared230 body reds/27 classifiers/seven complete captures/28 physical refusals/all prior31/24/26/37/26/two compiler/three static controls0, rc=0, ease-set-producer-controls.log. ASCII/UTF-8 positives/wrong-byte refusals/actual leading-only helper red pass; simulation proves dispatch only.
+- [x] ADDRESSED: exclusive caller-store-absent ten real macro reds/full14 restored, rc=0, ease-set-native-final.log. Independent selected-test/current-byte sites/eight frozen inputs/two HEAD Rust files/pure8 cases/six statements/eleven local single-link logs exact, rc=0, ease-set-native-proof.log. Public Cargo-selected artifact SHAc283cb01b400748d620aac70ec22df4e8ddc95eeb8587db6a826e9123b833adf executes14 tests0, rc=0, ease-set-native-artifact-proof.log; Rust/API/grammar unchanged.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths48owners18groups/15refusals12reds/map freshness/ledger9+13 pass, rc=0, target/ease-set-*-final logs; terminal jobs consumed. Two whole1b74946 spans/DEV6488–8232/8L1744B and CH23232–24329/14L1097B exact; prior440/all38/public442/13open163sealed/no gaps or overlap/seven windows exact, rc=0, ease-set-retention-final.log. Known P3 ls/head stderr again observed; .b.s owns scheduled repair, named DIGEST-RED still passes.
+- [x] LOCKSTEP: parent .n03 done; book/spec/live/MEMORY/G1/index route numeric .n04; D177 seven fixed/8 P1 remain. Archive25raw/16923L/1228395decodedB/551480residentB fits fixed caps; full source/provenance/seals/readers exact, rc=0, ease-set-retention-final.log. DEV15444B/CH32255B/map8102B measured within unchanged health; promotion: declined (existing current-source/effect/whole-record rules).400 cadence/local verification retained; runner verdict unobserved.
+
+  Final staged gate13 green, rc=0, target/ease-set-staged-gate.log.
 
 0162 owns the split terminal TSV rows and blocking whole completed producer-record relocation
 into docs/tasks/G1-SLICE-producer-proof.md before fresh receipts; retain exact ade5165 body bytes,

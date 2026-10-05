@@ -148,8 +148,13 @@ physical fit and production signoff remain G2/G3/G4/G6 and independent G7 obliga
 
 Set contracts add per-POM/id/token lookup, three uniqueness rules, shared body/amount sources, mixed
 tables, empty drafts, current context collisions, missing/reassigned mappings/tables, current intent/
-state edits and selected versus full validation. Ten production guard removals must fail real test
-assertions and restore exact source. These local checks do not claim observed remote CI for this slice.
+state edits and selected versus full validation. The set diagnostic plans ten numbered logs and
+restored.log, two inputs and one mutable implementation before reads. Its eight pure cases and
+six ordered source-dependent statements preserve all ten faults. Current inline assertion macros
+use UTF-8 byte columns; independent ASCII/multibyte controls and a real leading-only helper fault
+verify that boundary. Complete dispatch/physical refusals are separate from ten real current macro
+failures. Exact frozen inputs and both Rust files are restored; the current public Cargo artifact
+passes all fourteen tests. These local checks do not claim observed remote CI for this slice.
 
 ## Structural Ease review at G1
 

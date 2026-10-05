@@ -436,8 +436,7 @@ def measure_fixture(entry_path):
                     'undeclared_pom_and_observation_from_another_design_table_are_refused',
                     'unknown_and_derived_cells_can_be_structurally_complete_but_never_numeric_defaults',
                     'empty_inventory_is_inspectable_but_not_complete_and_keeps_table_revision_checks')
-    else:
-        assert entry_path == ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py', 'D156 unknown measurement entry'
+    elif entry_path == ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py':
         stem = 'ease'
         selected = ('authored_sides_must_be_body_then_garment',
                     'amount_must_not_alias_either_measurement_scalar',
@@ -446,6 +445,19 @@ def measure_fixture(entry_path):
                     'all_authored_value_states_enforce_negative_permission_and_preserve_sign',
                     'current_amount_edits_are_visible_and_missing_amount_refuses',
                     'missing_current_metadata_preserves_side_and_underlying_error')
+    else:
+        assert entry_path == ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py', 'D156 unknown measurement entry'
+        stem = 'ease_set'
+        selected = ('contexts_refuse_duplicate_and_cross_kind_identities_before_lookup',
+                    'contexts_refuse_duplicate_and_cross_kind_identities_before_lookup',
+                    'duplicate_mapping_tokens_and_poms_refuse_without_coalescing',
+                    'duplicate_mapping_tokens_and_poms_refuse_without_coalescing',
+                    'duplicate_mapping_tokens_and_poms_refuse_without_coalescing',
+                    'set_identity_collisions_refuse_at_creation_and_in_current_context',
+                    'current_retargeted_mapping_needs_explicit_new_set_binding',
+                    'empty_drafts_require_existing_tables_and_queries_never_default',
+                    'selected_current_table_membership_is_required_even_when_metadata_exists',
+                    'current_invalid_amount_and_table_targets_preserve_underlying_errors')
     work_name = 'measurement_table_mutations' if stem == 'table' else stem + '_mutations'
     return (ROOT / ('crates/sc-measure/src/' + stem + '.rs'),
             ROOT / ('crates/sc-measure/tests/' + stem + '_contract.rs'),
@@ -931,7 +943,7 @@ def classifier_controls(text, entry_path, *, strict=False):
 
 
 
-def collection_inline_controls(text, entry_path):
+def measure_inline_controls(text, entry_path):
     tree = ast.parse(text)
     functions = [node for node in tree.body if isinstance(node, ast.FunctionDef)
                  and node.name in {'assertion_sites', 'assertion_failure'}]
@@ -940,14 +952,14 @@ def collection_inline_controls(text, entry_path):
     path = 'crates/sc-measure/tests/inline_fixture.rs'
     fixture = 'fn fixture() {\n    apply(|c| assert_eq!(1, 2));\n    let é = (); apply(|| assert_ne!(1, 2));\n}\n'
     sites = scope['assertion_sites'](fixture, path)
-    assert sites == {(path, 2, 15), (path, 3, 27)}, 'D177 collection inline macro sites changed'
+    assert sites == {(path, 2, 15), (path, 3, 27)}, 'D177 measure inline macro sites changed'
     scope['ASSERTION_SITES'] = sites
     for line, column in ((2, 15), (3, 27)):
         output = (f"\nfailures:\nthread 'fixture' panicked at {path}:{line}:{column}:\n"
                   'custom message\n\nfailures:\nfixture\n').encode()
-        assert scope['assertion_failure'](output), 'D177 collection inline macro evidence refused'
+        assert scope['assertion_failure'](output), 'D177 measure inline macro evidence refused'
         assert not scope['assertion_failure'](output.replace(f':{column}:'.encode(), f':{column - 1}:'.encode())), \
-            'D177 collection inline wrong byte column accepted'
+            'D177 measure inline wrong byte column accepted'
 
 
 def driver_classifier_controls(text, path):
@@ -1151,7 +1163,8 @@ def main():
                      ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py',
                      ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py',
                      ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py',
-                     ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py')
+                     ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py',
+                     ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py')
     measure_physical, measure_classifiers = 0, 0
     for measure_path in measure_paths:
         measure_text = measure_path.read_text()
@@ -1159,10 +1172,10 @@ def main():
         measure_physical += measure_refusals(measure_text, measure_path)
         classifier_controls(measure_text, measure_path, strict=True)
         measure_classifiers += 1
-        numbered = 'range(1, len(CASES) + 2)' if measure_path == ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py' \
-            else 'range(1, len(CASES) + 1)'
-        omitted = 'range(1, len(CASES) + 1)' if measure_path == ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py' \
-            else 'range(1, len(CASES))'
+        appended = {ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py': 1,
+                    ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py': 2}.get(measure_path, 0)
+        numbered = 'range(1, len(CASES) + %d)' % (appended + 1)
+        omitted = 'range(1, len(CASES) + %d)' % appended if appended else 'range(1, len(CASES))'
         for name, before, after, message in (
             ('files omitted', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 measure file plan changed'),
             ('last numbered file omitted', numbered, omitted, 'D156 measure file plan changed'),
@@ -1198,7 +1211,7 @@ def main():
     collection_path = ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py'
     assert collection_path in measure_paths
     collection_text = collection_path.read_text()
-    collection_inline_controls(collection_text, collection_path)
+    measure_inline_controls(collection_text, collection_path)
     assert collection_text.count('for before, after in mutations:') == 1
     try:
         capture_measure_entry(collection_text.replace('for before, after in mutations:',
@@ -1214,12 +1227,25 @@ def main():
                    for node in ast.parse(measure_paths[0].read_text()).body
                    if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites')
     try:
-        collection_inline_controls(collection_text.replace(actual, leading, 1), collection_path)
+        measure_inline_controls(collection_text.replace(actual, leading, 1), collection_path)
     except AssertionError as error:
-        assert str(error) == 'D177 collection inline macro sites changed', ('collection inline fault', str(error))
+        assert str(error) == 'D177 measure inline macro sites changed', ('collection inline fault', str(error))
         red += 1
     else:
-        raise AssertionError('D177 collection inline site omission survived')
+        raise AssertionError('D177 measure inline site omission survived')
+    set_path = ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py'
+    assert set_path in measure_paths
+    set_text = set_path.read_text()
+    measure_inline_controls(set_text, set_path)
+    actual = next(ast.get_source_segment(set_text, node) for node in ast.parse(set_text).body
+                  if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites')
+    try:
+        measure_inline_controls(set_text.replace(actual, leading, 1), set_path)
+    except AssertionError as error:
+        assert str(error) == 'D177 measure inline macro sites changed', ('Ease-set inline fault', str(error))
+        red += 1
+    else:
+        raise AssertionError('D177 Ease-set inline site omission survived')
     profile_functions = {node.name: ast.get_source_segment(original.decode(), node)
                          for node in ast.parse(original).body if isinstance(node, ast.FunctionDef)}
     mutable_faults = [
@@ -1315,7 +1341,7 @@ def main():
     for path, work_name in adopters:
         text = path.read_text()
         multiple_sources = {
-            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py', 'size_chart_collection_mutations.py', 'ease_mutations.py',
+            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py', 'size_chart_collection_mutations.py', 'ease_mutations.py', 'ease_set_mutations.py',
             'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',

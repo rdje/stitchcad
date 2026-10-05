@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0163 - guarded Ease-set files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n03.2`)
+
+- Plan11 logs/two inputs/one mutable source; pure8 cases/six dependent statements unchanged.
+- Shared230 body reds/27 classifiers/seven captures/28 physical refusals/inline controls0.
+- Ten real current macro reds/eight frozen inputs/Rust exact/full14 public artifact0.
+- Retain whole chart lesson/two oldest ledgers; prior440/all38/public442 exact; final checks in leaf.
+- Ease family done; D177 seven fixed/8 P1 remain. Grammar/400 cadence unchanged.
+
 ## STITCHCAD-G1-0162 - guarded individual Ease files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n03.1`)
 
 - Plan8 logs/two inputs/one mutable source; six pure cases/five dependent statements exact.
@@ -225,20 +233,6 @@ the digests afterwards.
 - Seven whole committed intervals/prior406 exact and original reports retained; no Rust/API/grammar change.
 - D156 native37 guards complete; fixture/delegation/shell audits remain.400 cadence unchanged.
 
-## STITCHCAD-G1-0147 - guarded owner compiler entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.f13`)
-
-- Guard source/book/output plans before reads/writes; preserve prepared stores and public compiler argv.
-- Controls152 body faults/36 entry and late-input refusals/two complete compiler captures pass0.
-- Direct absent-export native proof: ten actual privacy/borrow refusals, four compiled/executed
-  chapter examples, current Cargo artifacts/fixture bytes/two HEAD-exact sources; no Rust changes.
-- Four whole committed records/prior402 retained exactly; D156 remains open, static entry next.
-
-## STITCHCAD-G1-0146 - coupled recipe-input assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f12`)
-
-- Guard four implementations/current test/output; preserve prepared stores and original filters.
-- D171 noise refused by current test macro sites;131 body controls/34 entry+late/26 child/19 classifiers0.
-- Seven actual macro reds/eight current sites/five HEAD-exact Rust sources/full five-test restoration0.
-- Four whole records/prior398 retained; no Rust/API/grammar/cadence change; three native entries remain.
 
 
 
@@ -336,3 +330,5 @@ the digests afterwards.
 | [`part139`](docs/history/stitchcad-changelog-part139.md) | whole G1-0144 ledger | 7 lines, 578 bytes, `sha256:0661ecd7…` |
 
 | [`part140`](docs/history/stitchcad-changelog-part140.md) | whole G1-0145 cleanup ledger | 7 lines, 588 bytes, `sha256:8a23c596…` |
+
+| [`part141`](docs/history/stitchcad-changelog-part141.md) | whole G1-0147 and G1-0146 ledgers | 14 lines, 1097 bytes, `sha256:8fa23459…` |
