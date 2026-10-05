@@ -39,8 +39,8 @@ The categories describe the existing syntax and semantics:
 
 If remains special syntax rather than an ordinary extensible call. Loop, repeat, while, fn and
 macro are ordinary scalar spellings with no new capability. The lookup returns None for them,
-reserved input names and envelope-owned constructs such as nurbs or solve. The later expression
-checker must apply the envelope's named refusal before generic unknown-call handling; this
+reserved input names and envelope-owned constructs such as nurbs or solve. The implemented [call lookup](formula-call-lookup.md)
+applies the envelope's named refusal before generic unknown-call handling; this
 metadata lookup alone emits no diagnostic or origin-search claim.
 
 ## Query a signature
@@ -108,8 +108,10 @@ assert_eq!(F::Abs.result_kind(&[eps_geo]), Some(K::Length));
 An ordinary length literal, a length-valued variable or an expression such as eps_geo + eps_geo
 does not name a class. Size_index, size_count and is_base_size are size inputs, not classes.
 The descriptor can be constructed for metadata queries; constructing one grants no proof about
-an authored expression. The future checker must derive Tolerance from the actual resolved
-reserved-name node, including transparent grouping, and keep derived lengths as Value.
+an authored expression. The implemented [expression checker](formula-wanted-signatures.md#bounded-product-expression-checking)
+derives Tolerance from the resolved reserved-name node through transparent grouping and keeps
+computed lengths as Value. Its focused grouping contract accepts grouped classes and refuses
+computed expressions such as abs(eps_geo) as within's tolerance operand.
 No provider, tolerance value, rounding operation or contribution source is read here.
 
 ## Arity and structural bounds are different checks
@@ -127,19 +129,35 @@ every 13-member tuple at arities zero through four, for every registry name, giv
 Wider min/max samples cover 255, 256 and 4096 operands. The complete actual normative rows are
 compared in both directions, and all 22 tokens match the unchanged canonical serializer.
 Exact wanted-catalog descriptors and result positions are checked alongside those matrices.
-Twenty-one actual compiled faults must fail at current test assertion macro sites and restore
-product source exactly; compiler errors, labelled expect panics and test-name noise refuse.
+The tracked producer docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py
+plans three inputs before reading them: implementation, public contract and its compile-time
+grammar chapter. Ordinary mode resolves 21 fault logs plus one restored log and one mutable
+source; classifier-only mode declares no files or mutable sources and runs no child. It still
+validates the inputs, anchors, stores and output directory. Read-only inputs may have multiple
+hard links, and unused fault-log aliases do not acquire write authority in classifier mode.
 
-Run cargo test -p sc-core --test formula_builtin_signature_contract for the public contracts.
-The tracked producer docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py runs
-exclusive product faults; its classifier and exact anchors are watched by structural probes.
-The direct entry validates implementation/test/output paths before reads or writes, preserves
-prepared child stores, and rebuilds the full focused target after source restoration. Strict
-standing controls exercise actual classifier/site faults; custom assertion messages remain valid.
+Run cargo test -p sc-core --test formula_builtin_signature_contract for the five public contracts.
+The exclusive producer preserves all 21 original faults and Cargo arguments. Each fault must
+compile and fail at a current public assertion's exact path, line and UTF-8 byte column inside
+a failed-body thread panic. Custom macro messages qualify; nonthread notes, compiler errors,
+labelled expect panics, changed coordinates and test-name noise refuse. Source bytes are restored
+before rebuilding the complete five-test target, after failures during mutation replay.
+
+Standing controls cover independent omissions of all three inputs in every producing mode,
+a real red for the former nonthread predicate, two complete mode captures and eight physical
+refusals before reads, writes or dispatch. A copied classifier accepts three read-only source
+links and two unused log aliases while every child and source/output write is intercepted.
+Actual native replay separately verifies every failed body's current macro, all failed-test
+sets, 73 frozen inputs including 63 unchanged production Rust files, 22 local logs and the
+current Cargo-selected executable passing all five restored tests. The fixed-arity fault fails
+the registry, exhaustive tuple and symbolic-class tests through Within's arity gate; catalog
+descriptors remain unchanged. The task record retains the initial prediction and its diagnosed correction.
 
 [Typed wanted-kind catalogs](formula-wanted-signatures.md) are available for dimension diagnostics.
-Accepted normalized expressions, source-bearing refusals and every name dependency
-remain G1-SLICE.5b.3c.2; coupled review is .3d, and atomic ordered recipe acceptance is .4.
+Accepted normalized expressions and source-bearing name dependencies are available through
+[expression checking](formula-wanted-signatures.md#bounded-product-expression-checking),
+[current statements](formula-name-scopes.md#check-the-actual-current-statement) and
+[whole-recipe kind proofs](formula-checked-recipes.md). These are separate from signature queries.
 Numeric domains, rounding and execution are .5c–.5e; real geometry selectors are .5f/G2.
 No computed garment, API/MCP release or independent production approval follows from these signatures.
 

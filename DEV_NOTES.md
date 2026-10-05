@@ -14,6 +14,15 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — builtin plans and diagnostic evidence
+
+- Three inputs/22 logs/one mutable/class0;21 faults/full5/73 inputs/current5 exact0. Shared625/35/46/238, omissions15/readonly0.
+- Original case5 ABC retained; Within arity proves ABD, catalog unchanged; other20 exact. Prior703 scoped185a; Rust unchanged.
+- Whole ac005/task/DEV223/CH166/D193115 retained; book current. D192 children2–4 next; D156/D34 open; grammar/400 stay.
+- Promotion declined: existing evidence/whole retention rules.
+
+Whole authored builtin proof: [part224](docs/history/stitchcad-devnotes-part224.md).
+
 ## _(2026-10-05 UTC)_ — daily cleanup and concurrent activation
 
 - Frozen1254 selections/11819 files/1058866659B; OS-visible idle/apply/nonactivating residue/tracked exact0. Protected stores/deps/audits retained; native7/WASM/book regenerated.
@@ -27,12 +36,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Whole7e197 declaration3381B21L/27233B prefix, DEV221845B/CH164490B/defects112113/current500/12open177sealed retained0.
 - D190: three rejected candidates retained exact; fresh bounds/terminators/public reads precede retirement. Promotion declined: existing rules. Book/live/.n10 done/.n11 next; D156/D34 open/grammar/400 stay.
 
-## _(2026-10-05 UTC)_ — declaration plans and negative construction
-
-- Two inputs/22 logs/one mutable; class0. Original19/count2/full7-native/full5-docs exact. Shared595/35/42/224;16 omissions/D188 legacy red/readonly3 links/four aliases0.
-- All19 authored sets/every body macro/72 inputs/63 Rust/22 logs/current7 6671dcbc/full5 docs0. Widened negative137 fails alone; other4 pass. No Rust changed; prior703 scoped185a.
-- Whole185a ordered3178B19L/20498B prefix and authored2955B33L retained/current27233B. DEV2191006B/CH16212187B; live11675B nav restored;496 reads/prior493/all37/12open175sealed0.
-- Promotion declined: existing plans/macros/whole retention. Book/live/.n10.2 next; D156/D34 open/grammar/400 stay.
+Whole declaration plans and negative construction lesson retained in [part223](docs/history/stitchcad-devnotes-part223.md).
 
 Whole ordered-name plans and guarded advances lesson retained in [part221](docs/history/stitchcad-devnotes-part221.md).
 
@@ -206,3 +210,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/window8.md#
 | [`part221`](docs/history/stitchcad-devnotes-part221.md) | whole ordered-name plans and guarded advances lesson | 6 lines, 845 bytes, `sha256:7776d33c…` |
 
 | [`part222`](docs/history/stitchcad-devnotes-part222.md) | whole window8 continuity and protected history lesson | 7 lines, 1117 bytes, `sha256:047dbc9c…` |
+
+| [`part223`](docs/history/stitchcad-devnotes-part223.md) | whole declaration plans and negative construction lesson | 6 lines, 717 bytes, `sha256:581e057e…` |

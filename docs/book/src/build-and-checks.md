@@ -439,9 +439,9 @@ Classifier-only plans no files/mutables and invokes no native child. Original 17
 [namespace](annexes/formula-declarations.md#checked-initial-namespace) and
 [ordered plans](annexes/formula-name-scopes.md#ownership-and-verification); D185–187 repaired.
 
-Declaration and exact-name entries plan two inputs, 22/10 logs and one mutable source.
-Classifier-only has no files/mutables. Both restore seven native tests; declarations also restore five doctests.
-[Details](annexes/formula-declarations.md#verification-boundary); D188/189 repaired.
+Declaration/exact-name preserve native/doctest targets: [details](annexes/formula-declarations.md#verification-boundary).
+Builtin plans3 inputs/22 logs/1 mutable, classifier0, original21/full5;
+[mode and evidence controls](annexes/formula-builtin-signatures.md#verification-and-remaining-proof).
 
 Built-in and operator-signature entries now use these guards/current test assertion sites, retain
 prepared child stores and rebuild complete restored targets. Their35 compiled faults are macro-site
@@ -487,7 +487,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and609 actual body faults, with35 calibrated failed-body classifiers,
+controls and625 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

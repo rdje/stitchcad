@@ -28,9 +28,9 @@ docs/tasks/artifacts/formula_structure/binding_contract.py	output	G1-SLICE.5b.4c
 docs/tasks/artifacts/formula_structure/binding_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a11
 docs/tasks/artifacts/formula_structure/binding_replay_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a12
 docs/tasks/artifacts/formula_structure/binding_replay_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a12
-docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11
+docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11.1
 docs/tasks/artifacts/formula_structure/call_lookup_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a04
-docs/tasks/artifacts/formula_structure/call_lookup_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11
+docs/tasks/artifacts/formula_structure/call_lookup_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11.4
 docs/tasks/artifacts/formula_structure/canonical_contract_inventory.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a08
 docs/tasks/artifacts/formula_structure/canonical_contract_inventory_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a08
 docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n08.1
@@ -65,7 +65,7 @@ docs/tasks/artifacts/formula_structure/namespace_mutations.py	native	G1-SLICE.5b
 docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n07.2
 docs/tasks/artifacts/formula_structure/normalized_expression_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a20
 docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n07.3
-docs/tasks/artifacts/formula_structure/operator_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11
+docs/tasks/artifacts/formula_structure/operator_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11.2
 docs/tasks/artifacts/formula_structure/ordered_name_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n09.2
 docs/tasks/artifacts/formula_structure/origin_value_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a13
 docs/tasks/artifacts/formula_structure/provenance_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a13
@@ -100,7 +100,7 @@ docs/tasks/artifacts/formula_structure/static_signature_contract.py	delegate	G1-
 docs/tasks/artifacts/formula_structure/static_status_contract.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n04.2
 docs/tasks/artifacts/formula_structure/unsigned_round_reference.py	reference	G1-SLICE.5b.4c.h2.b.p.v
-docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11
+docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11.3
 docs/tasks/artifacts/formula_structure/whole_phase_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a21
 docs/tasks/artifacts/handoff/contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a24
 docs/tasks/artifacts/history_archive/capture_window2.py	output	G1-SLICE.5b.4c.h2.b.p.o.a26

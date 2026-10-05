@@ -478,3 +478,44 @@ idempotent creation plus post-create link validation fixes both, preserving all
 boundary contracts. Cold native preflight failed before dispatch and is excluded.
 New local test briefly printed3 compiled reds through reused variable; separate
 directory_faults and fresh rerun correctly print13. No unearned scope claim.
+
+## Daily cleanup and concurrent-store verification
+
+Whole committed ac005a546fd9aac943cee8966136ad334fd0d1d4:docs/tasks/G1-SLICE-producers.md bytes 62923–65322; 2399B/9L/SHA256 8f8243eb9d406f7d19a22f1091024eef32309ae8451331ee72f65be84b626c55.
+All scoped jobs/gate/hooks terminal and consumed before .n11 activation; original bytes stay exact.
+
+Whole authored cleanup/D191 reproduction retained in [retention proof](G1-SLICE-retention-proof.md#cleanup-activation-reproduction); canonical ownership stays above.
+
+- [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan target/artifact_cleanup_audit/cleanup2-20261005:1254 selections/11819 files/1058866659B/0 skipped; rc=0. Daily24h due/full207L reviewed. Cold preflight and both barrier creators reproduce D191 FileExistsError; diagnostic rc=0.
+- [x] ROOT CAUSE: python3 -I -B target/daily-cleanup2-run-focus.py local-profile:8 races/4 body reds; rc=0. Both absence-then-mkdir helpers fail competing creators; missing post-create link validation permits descendant writes. Original diagnostic is independent of repaired source.
+- [x] FIX: python3 -I -B target/daily-cleanup2-run-focus.py local-profile:56runtime/13helper plus8races/4reds; rc=0. Idempotent mkdir/pre-post link/type/device/Git guards precede descent. CI19/6/shared31/609/44/230 pass; rc=0. Cleanup rechecks frozen census and each selected hash.
+- [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py apply target/artifact_cleanup_audit/cleanup2-20261005:6trees/1248logs/11819files/1058866659B/residue0/tracked_changefalse; rc=0. Independent1254 absence/HEAD/producer/tracked/result exact before activation; rc=0. OS-visible check_handoff.sh --idle-cua:handoff OK; rc=0. D191114 closed.
+- [x] NO REGRESSION: python3 -I -B target/daily-cleanup2-run-focus.py native:7pass; wasm:3 actual crates compile; cleanup:15pass/11reds; publication:45pass/62chapters67API1272source1989rendered; coverage:9pass; ledger:670real/9arms/13pointers; rc=0 each. Rust/grammar unchanged; priorfull703 scoped185a; new runner unobserved. All focused jobs terminal/consumed.
+- [x] LOCKSTEP: python3 -I -B target/daily-cleanup2-run-focus.py retention:503 reads/prior500/all44 identities/eight windows/12open178sealed/IDs1–191except18/whole7172 exact-name2828B17L/40908B prefix/DEV2221117B/CH165969B/live11675B nav/map/fixed caps/63 Rust exact; rc=0. Authored reproduction retained; first growth preflight refused before writes. Book/live/record/MEM aligned; .n11 after commit/all jobs;400 stay; promotion: declined (existing locality/boundary/whole-record rules).
+Final staged23850:13 doctrines green, rc=0, target/daily-cleanup2-gate.log; terminal consumed. Hooks repeat final staged state.
+
+## Shared hard-link and mutable-source verification
+
+Whole committed ac005a546fd9aac943cee8966136ad334fd0d1d4:docs/tasks/G1-SLICE-producers.md bytes 15628–18558/2930B/11L/SHA256 8ac6cefc55f2cb43cc5cb65297f36837d2f7ed220a45ea04ed9ad8a6a369f585.
+Historical frontier/count claims remain exact; current .n11 leaf supplies current evidence.
+
+Whole preimplementation record retained in [part194](../history/window8.md#stitchcad-devnotes-part194md); completed acceptance boxes and canonical ownership remain below.
+
+- [x] REPRODUCE / ISSUE: physical source/output/victim inode3 passes original plan without alias writes, rc=0, window7-hardlink-diagnostic.log; regular/device checks omit exclusive mutable ownership. Actual current physical26 controls require output/mutable-source refusal and preserve readonly aliases, rc=0, hardlink-producer-controls.log. Full profile/shared1202L/bridge255L/book reviewed before edits.
+- [x] ROOT CAUSE: plan_producer checks regular type/device/symlinks but original body lacks link counts or explicit writing intent. Current independent three-name inode identity/all unchanged bytes/environment/stores and exact diagnostic checks pass, rc=0, hardlink-producer-controls.log. The plan inspects declared paths before effects; undeclared native destinations remain owned, D156 open.
+- [x] FIX: existing outputs and explicit mutable_sources subset require one link; readonly source validation stays pure, prepare/enter forward the declaration.31 runtime/24 file/26 physical controls pass, rc=0, hardlink-producer-controls.log. Device stub omitted st_nlink in initial fault run1; preserve actual count and exclude failed receipt. Initial runpy dict attribute retention attempt1 failed before writes; corrected mapping access0.
+- [x] ADDRESSED: six actual output-link/mutable-link/subset/readonly/prepare-forward/enter-forward omissions fail independent controls; total171 actual body reds, rc=0, hardlink-producer-controls.log. Physical late mutable alias and invalid mutable path/type/bytes refuse all three APIs before effects, CLI status2/diagnostic exact; no alias bytes modified.
+- [x] NO REGRESSION: existing37 prefix/37 late-source/26 child/two compiler/three static captures/20 classifiers remain green, rc=0, hardlink-producer-controls.log; bridge both modes/nine reds and profile56/13 helper/two Make/one launcher reds pass0. Native37 HEAD bytes/Rust unchanged, rc=0, hardlink-native-exact.log; first extractor used nonexistent python-native kind, excluded and corrected from actual TSV. Simulations certify dispatch only; no new native compilation.
+- [x] LOCKSTEP: retain two whole ecdb67b DEV records17L/1545B/source9158–10703/SHA36106586 exact; prior426/all24 controls/public427 exact/pressure10working16544L1196444B519529residentB, rc=0, hardlink-retention-proof.log. Book/live/MEMORY/G1/index route .f.n01; publication45/coverage9/census229paths288checks/map pass0 in hardlink-*-final logs. promotion: declined (existing explicit mutable ownership, guard-before-effects and scoped proof). Fixed caps/400 cadence preserved; runner unobserved.
+  Ledger9 arms/pointer13 pass0, terminal consumed, target/hardlink-ledger-final.log; no background result remains.
+  Final staged gate13 green, rc=0, target/hardlink-staged-gate.log.
+
+End of exact committed shared hard-link receipt; current .n11 supplies later verification.
+
+## Builtin plans — authored verification and prediction correction
+
+Whole new-overac005 authored progress, 2009B/27L, sha256:5405c19bf16311e806bfd30181ff9291cbf2448438a4f61f48b182b584f9bb98.
+Prior sibling 51113B/SHA9d0bbfd7a8aa2b9084e476e9da6335170e74e7366039a1ee6e9279add711ec69 preserved.
+Historical pending statements below precede the actual consumed native proof and artifact.
+
+Whole authored verification/prediction/correction retained in [part224](../history/stitchcad-devnotes-part224.md).

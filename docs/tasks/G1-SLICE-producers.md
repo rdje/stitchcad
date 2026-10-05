@@ -140,16 +140,7 @@ without changing the chosen file or named refusal; no fixture bytes/native sourc
   Goal: P1 after .f.h and before .f.n01: resolve the confirmed hard-link ownership gap in shared output and source-writing contracts; preserve pure/read-only source calls and every existing producer interface.
   Acceptance: physical isolated output/source hard-link reproduction without alias writes; exact regular-file/inode/link-count root cause; bounded explicit mutable-path contract and output refusal, actual omission controls and focused integration without weakening existing source/type/device/parent checks. Schedule native source-writing adoption in each .f.n repair before effects.
 
-Whole preimplementation record retained in [part194](../history/window8.md#stitchcad-devnotes-part194md); completed acceptance boxes and canonical ownership remain below.
-
-- [x] REPRODUCE / ISSUE: physical source/output/victim inode3 passes original plan without alias writes, rc=0, window7-hardlink-diagnostic.log; regular/device checks omit exclusive mutable ownership. Actual current physical26 controls require output/mutable-source refusal and preserve readonly aliases, rc=0, hardlink-producer-controls.log. Full profile/shared1202L/bridge255L/book reviewed before edits.
-- [x] ROOT CAUSE: plan_producer checks regular type/device/symlinks but original body lacks link counts or explicit writing intent. Current independent three-name inode identity/all unchanged bytes/environment/stores and exact diagnostic checks pass, rc=0, hardlink-producer-controls.log. The plan inspects declared paths before effects; undeclared native destinations remain owned, D156 open.
-- [x] FIX: existing outputs and explicit mutable_sources subset require one link; readonly source validation stays pure, prepare/enter forward the declaration.31 runtime/24 file/26 physical controls pass, rc=0, hardlink-producer-controls.log. Device stub omitted st_nlink in initial fault run1; preserve actual count and exclude failed receipt. Initial runpy dict attribute retention attempt1 failed before writes; corrected mapping access0.
-- [x] ADDRESSED: six actual output-link/mutable-link/subset/readonly/prepare-forward/enter-forward omissions fail independent controls; total171 actual body reds, rc=0, hardlink-producer-controls.log. Physical late mutable alias and invalid mutable path/type/bytes refuse all three APIs before effects, CLI status2/diagnostic exact; no alias bytes modified.
-- [x] NO REGRESSION: existing37 prefix/37 late-source/26 child/two compiler/three static captures/20 classifiers remain green, rc=0, hardlink-producer-controls.log; bridge both modes/nine reds and profile56/13 helper/two Make/one launcher reds pass0. Native37 HEAD bytes/Rust unchanged, rc=0, hardlink-native-exact.log; first extractor used nonexistent python-native kind, excluded and corrected from actual TSV. Simulations certify dispatch only; no new native compilation.
-- [x] LOCKSTEP: retain two whole ecdb67b DEV records17L/1545B/source9158–10703/SHA36106586 exact; prior426/all24 controls/public427 exact/pressure10working16544L1196444B519529residentB, rc=0, hardlink-retention-proof.log. Book/live/MEMORY/G1/index route .f.n01; publication45/coverage9/census229paths288checks/map pass0 in hardlink-*-final logs. promotion: declined (existing explicit mutable ownership, guard-before-effects and scoped proof). Fixed caps/400 cadence preserved; runner unobserved.
-  Ledger9 arms/pointer13 pass0, terminal consumed, target/hardlink-ledger-final.log; no background result remains.
-  Final staged gate13 green, rc=0, target/hardlink-staged-gate.log.
+Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#shared-hard-link-and-mutable-source-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h.v`
   Status: `done`
@@ -659,10 +650,36 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
 Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-complete-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11`
-  Status: `pending`
+  Status: `in_progress`
+  Own STITCHCAD-G1-0187: .n11 split/whole ac005 cleanup/.f.l receipts retained;target/builtin-plan-*;live/book/shared controls;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-builtin-signatures.md;docs/tasks/PLANNING.md.
   Goal: complete file-destination plans for signature/call metadata; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py;docs/tasks/artifacts/formula_structure/operator_signature_mutations.py;docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py;docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.1`
+  Status: `done`
+  Goal: builtin complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
+  Paths: docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py
+  Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
+  Own D192 builtin repair/D193 book currency;3 inputs incl native compile-time grammar/22 logs/1 mutable/classifier0;original21/full5 unchanged.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.2`
+  Status: `pending`
+  Goal: operator complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
+  Paths: docs/tasks/artifacts/formula_structure/operator_signature_mutations.py
+  Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.3`
+  Status: `pending`
+  Goal: wanted complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
+  Paths: docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py
+  Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.4`
+  Status: `pending`
+  Goal: call lookup complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
+  Paths: docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
+  Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12`
   Status: `pending`
@@ -688,12 +705,23 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Own: docs/ARTIFACT_CLEANUP.md;live/book/whole retention;target/daily-cleanup2-* and audit.
   Own: scripts/local_environment.py;scripts/ci_environment.py;docs/tasks/artifacts/ci_environment/local_environment_contract.py;docs/tasks/artifacts/ci_environment/ci_environment_contract.py;D191 repair/controls.
 
-Whole authored cleanup/D191 reproduction retained in [retention proof](G1-SLICE-retention-proof.md#cleanup-activation-reproduction); canonical ownership stays above.
+Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#daily-cleanup-and-concurrent-store-verification); canonical ownership remains above.
 
-- [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan target/artifact_cleanup_audit/cleanup2-20261005:1254 selections/11819 files/1058866659B/0 skipped; rc=0. Daily24h due/full207L reviewed. Cold preflight and both barrier creators reproduce D191 FileExistsError; diagnostic rc=0.
-- [x] ROOT CAUSE: python3 -I -B target/daily-cleanup2-run-focus.py local-profile:8 races/4 body reds; rc=0. Both absence-then-mkdir helpers fail competing creators; missing post-create link validation permits descendant writes. Original diagnostic is independent of repaired source.
-- [x] FIX: python3 -I -B target/daily-cleanup2-run-focus.py local-profile:56runtime/13helper plus8races/4reds; rc=0. Idempotent mkdir/pre-post link/type/device/Git guards precede descent. CI19/6/shared31/609/44/230 pass; rc=0. Cleanup rechecks frozen census and each selected hash.
-- [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py apply target/artifact_cleanup_audit/cleanup2-20261005:6trees/1248logs/11819files/1058866659B/residue0/tracked_changefalse; rc=0. Independent1254 absence/HEAD/producer/tracked/result exact before activation; rc=0. OS-visible check_handoff.sh --idle-cua:handoff OK; rc=0. D191114 closed.
-- [x] NO REGRESSION: python3 -I -B target/daily-cleanup2-run-focus.py native:7pass; wasm:3 actual crates compile; cleanup:15pass/11reds; publication:45pass/62chapters67API1272source1989rendered; coverage:9pass; ledger:670real/9arms/13pointers; rc=0 each. Rust/grammar unchanged; priorfull703 scoped185a; new runner unobserved. All focused jobs terminal/consumed.
-- [x] LOCKSTEP: python3 -I -B target/daily-cleanup2-run-focus.py retention:503 reads/prior500/all44 identities/eight windows/12open178sealed/IDs1–191except18/whole7172 exact-name2828B17L/40908B prefix/DEV2221117B/CH165969B/live11675B nav/map/fixed caps/63 Rust exact; rc=0. Authored reproduction retained; first growth preflight refused before writes. Book/live/record/MEM aligned; .n11 after commit/all jobs;400 stay; promotion: declined (existing locality/boundary/whole-record rules).
-Final staged23850:13 doctrines green, rc=0, target/daily-cleanup2-gate.log; terminal consumed. Hooks repeat final staged state.
+
+Whole authored builtin progress/original prediction/correction retained in [retention proof](G1-SLICE-retention-proof.md#builtin-plans--authored-verification-and-prediction-correction).
+
+## STITCHCAD-G1-0187 — builtin acceptance (.n11.1)
+
+- [x] REPRODUCE / ISSUE: original four predicates accept nonthread current-coordinate notes; independent original diagnostic0, target/builtin-plan-original-diagnostics.log. Current builtin legacy-predicate control in python_producer_contract.py fails D159 assertion evidence accepted noise; family children2–4 remain owned.
+- [x] ROOT CAUSE: complete builtins/public bodies and builtin-plan-native-proof.py verify originally refuse case5 ABC vs ABD, rc=1. Independent all21 diagnostic0 finds one mismatch: Within result_kind arity gate fails public283; catalog rows stay fixed3. Original prediction retained whole, other20 exact; D192 unanchored predicate/D193 stale future-role prose located.
+- [x] FIX: builtin_signature_mutations.py resolves3 inputs/22 files/1 mutable before activation, class0, exact original21/Cargo/full5 restoration. python_producer_contract.py complete modes0; current-thread exact path/line/byte-column evidence/custom messages and legacy red. Whole ac005 cleanup2399B9L/hardlink2930B11L/45006B prefix and authored2009B27L retained before retirement.
+- [x] ADDRESSED: python_producer_contract.py rc=0:31runtime/625bodyreds/35classifiers/46captures/238physical refusals;15 independent mode omissions. builtin-plan-readonly-mode.py rc=0:3 links/two unused aliases/zero source-output-child writes; copied victim/input/environment exact. D192 builtin fixed; operator/wanted/call scheduled, family stays open.
+- [x] NO REGRESSION: builtin-plan-native-proof.py verify/artifact rc=0:21 compiled faults/every failed body current macro/22 logs/73 inputs/63 Rust/full5 current artifact4d3e76d7 exact. Grouping1/publication45/retention507 reads/prior503/all47 physical identities/13open179sealed/map/caps/unchanged examples rc=0. No Rust edits; prior703 scoped185a. Corrected case5 ABD is diagnosed, not preauthored.
+- [x] LOCKSTEP: run_book_publication_probes.sh45 pass/0 fail; run_tree_coverage_probes.sh9 pass/0 fail, rc=0,10lanes13trees16siblings/0unowned-orphan-dead. DEV223717B6L/CH166498B6L/D193115 bounds/public reads before retirement; LIVE3/1/4/8 labels unchanged, operator frontier. promotion: declined (existing evidence/whole retention rules). Grammar/400 unchanged; D156/broader D34 remain open.
+
+Staged gate10000 rc=1: task aggregate1500534B,534B above fixed1500000.
+Whole authored2009B27L moved byte-exact to DEV224 before retirement, net1894B
+reduction;51113B prefix preserved. Fresh inventory507/public read0. Rerun gates;
+old ledger22496 terminal0/674real9arms13pointers predates DEV224, scope retained.
+
+Staged69238 all13 doctrines green, rc=0. Ledger40159 confirmation pending.
