@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0172 - literal modes and thread evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n07.1`)
+
+- Four inputs/14 native logs/one mutable; classifier-only zero native effects;13 original cases exact.
+- Shared389 reds/35 classifiers/21 captures/111 refusals0; real13/frozen22/current full6 artifact0.
+- Whole task/lesson/two ledgers retained;460 public reads/prior458/all56/seven windows exact.
+- D178 literal fixed/3 P1 remain; D156 continues. Rust/grammar/400 cadence unchanged.
+
 ## STITCHCAD-G1-0171 - statement modes close D177 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n06.2`)
 
 - Five inputs/16 native logs/one mutable; classifier-only zero effects; original15/full10 exact.
@@ -202,21 +209,6 @@ the digests afterwards.
 - Retain five whole9d840bc source records; prior433/all31/public438 exact; focused checks0.
 - D177 five measurement families fixed;10 repairs P1 remain. Grammar/400 cadence unchanged.
 
-## STITCHCAD-G1-0160 - guarded MTM files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.3`)
-
-- Plan13 logs/two inputs/one mutable source before reads; preserve all12 cases/filters/restoration.
-- Shared203 body reds/24 classifiers/full four-entry captures/sixteen physical refusals pass0.
-- Twelve real current macro reds/eight frozen inputs/original cases/Rust exact/full15 artifact0.
-- Retain two whole lessons/follow-up from5b37891; prior432/public433 exact; focused checks0.
-- D177 membership/chart/table/MTM fixed;11 repairs P1 remain. Grammar/400 cadence unchanged.
-
-## STITCHCAD-G1-0159 - complete table file and panic proof (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.2`)
-
-- Plan nine logs/two inputs/one mutable source before reads; preserve eight cases/four span statements.
-- Complete captures/four physical refusals/shared195 body reds/23 classifiers pass0.
-- Eight real current macro reds/eight frozen inputs/full16 public artifact exact; Rust unchanged.
-- Whole committed input lesson retained; source/public/archive and focused docs proof in owning leaf.
-- D177 membership/chart/table fixed;12 entries remain. Grammar/API/400 cadence unchanged.
 
 
 
@@ -341,3 +333,5 @@ the digests afterwards.
 | [`part148`](docs/history/stitchcad-changelog-part148.md) | whole G1-0157 continuity ledger | 6 lines, 474 bytes, `sha256:934bd04d…` |
 
 | [`part149`](docs/history/stitchcad-changelog-part149.md) | whole G1-0158 chart continuity ledger | 8 lines, 638 bytes, `sha256:d18ad1d9…` |
+
+| [`part150`](docs/history/stitchcad-changelog-part150.md) | whole G1-0160 and G1-0159 continuity ledgers | 15 lines, 1158 bytes, `sha256:16a21ab1…` |

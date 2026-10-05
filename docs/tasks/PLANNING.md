@@ -989,3 +989,14 @@ D168-D171 complete closure receipts/original-report routes retained in [part94](
 D172–D176 closures retained in [part98](../history/stitchcad-defects-part98.md).
 
 D177 whole report/verified closure retained in [part99](../history/stitchcad-defects-part99.md).
+
+- **D178** — nonthread failed-body location mentions qualify as assertion evidence in four
+  normalization/canonical producers. Reproduce by executing each actual assertion_failure with
+  failures delimiters and `compiler note: panicked at` a real current macro path/line/column;
+  all four return true, rc=0, target/literal-nonthread-diagnostic.json. No source/native effects.
+  Unanchored panic-location regex trusts diagnostic text without a thread panic. Impact: false
+  mutation-proof acceptance. P1, owned immediately by G1-SLICE.5b.4c.h2.b.p.o.f.n07.1–4;
+  require current thread macro panic, independent nonthread noise/body controls and real replay.
+  Remaining native groups inspect this boundary before their signoff; no broader count claimed.
+  Literal .n07.1 fixed: independent nonthread noise/legacy-regex body refusal and13 real selected
+  macro faults/current full6 artifact pass0. Three other confirmed entries remain P1 .n07.2–4.

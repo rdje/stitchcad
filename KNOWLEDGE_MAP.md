@@ -34,6 +34,7 @@
 - [`G1-SLICE-producer-proof`](docs/tasks/G1-SLICE-producer-proof.md)
 - [`G1-SLICE-producers`](docs/tasks/G1-SLICE-producers.md)
 - [`G1-SLICE-recipes`](docs/tasks/G1-SLICE-recipes.md)
+- [`G1-SLICE-runtime-proof`](docs/tasks/G1-SLICE-runtime-proof.md)
 - [`G1-SLICE`](docs/tasks/G1-SLICE.md)
 - [`G2-2D`](docs/tasks/G2-2D.md)
 - [`G3-GRADING`](docs/tasks/G3-GRADING.md)

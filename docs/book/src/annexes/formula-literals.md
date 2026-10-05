@@ -97,13 +97,26 @@ quantum/width/scalar boundaries and wide cancellable mantissas. Additional sourc
 private construction and source lifetime. The structural suite watches the independent fixture oracle.
 Actual compiled conversion, reduction, width, kind, direction, narrowing, domain, diagnostic and source
 faults must fail assertions in failed-test bodies. The direct entry uses the
-[producer profile](../build-and-checks.md#direct-python-producers) before source reads/output writes,
-retains prepared child stores and rebuilds the complete focused target after exact restoration.
-Classifier-only mode checks anchors and refuses passing-name/expect/compiler noise without compiling
-a fault. Panic paths, lines and columns must match assertion sites in the guarded current test
-source; custom messages remain valid and assertion-labelled expect panics refuse. Width and length
-refusal preconditions assert explicitly before extracting errors. All thirteen compiled faults are
-current macro-site assertion reds. Standing controls calibrate broad/prefix/site faults.
+[producer profile](../build-and-checks.md#direct-python-producers) to plan four inputs before reads:
+implementation, current public test and its two compile-time TSVs. Ordinary mode declares fourteen
+logs and one mutable source; classifier-only mode declares zero files or mutable sources and invokes
+no native child. Both modes retain local store/directory preparation. Classifier-only checks all
+thirteen original anchors and current macro sites:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py --classifier-only
+```
+
+A qualifying failed-body thread panic must name a current assertion macro path/line/byte column.
+Custom messages pass; passing test names, labelled extraction panics and nonthread location mentions
+refuse. Independent complete captures of both modes, ten physical refusals and actual input/file/
+mutable/mode/stores/restoration/classifier faults calibrate these plans. A copied classifier-only
+entry accepts linked read-only input and ignores unused log aliases without source/output writes.
+Thirteen real selected faults reach current macros, with original cases/arguments/restoration exact.
+Twenty-two frozen inputs/thirteen unchanged Rust files/two compile-time TSVs remain exact; the current
+Cargo-selected restored executable passes all six public literal contracts. Dispatch capture and
+real native behavior are verified separately. Dedicated width/length tests assert refusal before
+extracting their errors; grammar and numeric contracts stay unchanged.
 
 G1-SLICE.5a.3c.2 owns this API. This API converts one literal; the separate whole-arena API below converts all literal inputs.
 Neither checks operators/names, folds sign, binds values, evaluates or constructs geometry.

@@ -37,4 +37,5 @@ verified by eight public contracts/24 independent shape rows/seventeen actual co
 G1-SLICE.5a.3c.4 completes the coupled normalization review, adding176 independent Fraction frontier
 rows/four actual compiled assertion reds while production implementations retain exact prior bytes.
 Expression canonical serialization and its coupled review are complete under G1-SLICE.5a.3d.
-Ordered statement identity, binding and evaluation remain future G1 work; this decision grants no production signoff.
+Ordered statement/recipe identity is implemented under .5a.3f.1c; numerical binding and evaluation
+remain future G1 work. This decision grants no production signoff.

@@ -245,6 +245,16 @@ reach current macros in every failed-test body, including anonymous worker asser
 frozen inputs/twelve unchanged Rust files/three compile-time fixtures remain exact; the current
 Cargo-selected executable passes all ten public statement contracts after restoration.
 
+Literal conversion plans four inputs: implementation/current public test/two compile-time TSVs.
+Ordinary mode declares fourteen diagnostic files/one mutable source; classifier-only mode declares
+zero files/mutable sources/native effects. Two complete captures, ten physical refusals and actual
+input/file/mutable/mode/stores/restoration omissions preserve thirteen cases, selected exact tests
+and the full six-test restoration. Thread panic locations must match current assertion macros; a
+nonthread location mention refuses, with an independent legacy-regex body fault. Copied readonly
+classifier mode accepts linked input/unused aliases without source/output writes. Thirteen real
+faults reach current macros; twenty-two frozen inputs/thirteen unchanged Rust files/two compile-time
+fixtures remain exact and the current full six-test executable passes after restoration.
+
 D177's fifteen entries/sixteen predicates are now repaired and independently replayed. Current
 macro locations and calibrated failed-body controls replace message substrings and labelled
 extraction/join panics. This closes that diagnostic defect; the remaining D156 producer plans
@@ -395,7 +405,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and372 actual body faults, with35 calibrated failed-body classifiers,
+controls and389 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

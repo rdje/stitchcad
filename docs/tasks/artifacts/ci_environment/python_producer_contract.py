@@ -391,7 +391,7 @@ def domain_fixture():
 
 def mixed_fixture(entry_path, *, classifier_only=False, coupled=False):
     """Authored source/input/consumer order, including read-only classifier modes."""
-    assert not classifier_only or entry_path.name in {'semantic_mutations.py', 'recipe_mutations.py', 'statement_mutations.py'}, 'D156 unexpected classifier mode'
+    assert not classifier_only or entry_path.name in {'semantic_mutations.py', 'recipe_mutations.py', 'statement_mutations.py', 'literal_normalization_mutations.py'}, 'D156 unexpected classifier mode'
     assert not coupled or entry_path.name == 'recipe_mutations.py', 'D156 unexpected coupled mode'
     if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py':
         mutable, contract, work, bindings, files = domain_fixture()
@@ -436,6 +436,25 @@ def mixed_fixture(entry_path, *, classifier_only=False, coupled=False):
         extras = tuple(ROOT / ('docs/tasks/artifacts/formula_structure/' + name) for name in (
             'recipe_cases.tsv', 'recipe_coupled_cases.tsv', 'canonical_worked_cases.tsv')) + \
             (ROOT / 'docs/book/src/spec/formula-language/examples.md',)
+        macro_sources = (contract,)
+        initial_reads = (*mutable, contract)
+    elif entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py':
+        mutable = (ROOT / 'crates/sc-core/src/recipe/literal.rs',)
+        contract = ROOT / 'crates/sc-core/tests/formula_literal_contract.rs'
+        work = ROOT / 'target/formula_literal_mutations'
+        bindings = (0,) * 13
+        fractions = 'independent_fraction_fixtures_cover_conversion_width_and_domain'
+        kinds = 'kinds_quanta_and_angle_turns_are_preserved'
+        widths = 'width_checks_precede_rounding_and_length_checks_follow_it'
+        contexts = (fractions, kinds, kinds, kinds, kinds, fractions,
+                    'huge_spelling_refuses_or_reduces_without_new_language_caps',
+                    fractions, fractions, widths, widths, fractions,
+                    'source_location_privacy_and_unary_identity_survive_conversion')
+        base = ['cargo', 'test', '-p', 'sc-core', '--test', 'formula_literal_contract']
+        calls = tuple(base + [test, '--', '--exact'] for test in contexts) + (base,)
+        files = tuple(work / ('mutation-%d.log' % i) for i in range(1, 14)) + (work / 'restored.log',)
+        extras = tuple(ROOT / ('docs/tasks/artifacts/formula_structure/' + name) for name in (
+            'literal_normalization_cases.tsv', 'reduction_boundary_cases.tsv'))
         macro_sources = (contract,)
         initial_reads = (*mutable, contract)
     elif entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/statement_mutations.py':
@@ -545,6 +564,9 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=Fals
                 elif entry_path.name == 'statement_mutations.py':
                     _, before, after = scope['cases'][index]
                     relative, family = mutable[0], fixture['contexts'][index]
+                elif entry_path.name == 'literal_normalization_mutations.py':
+                    _, before, after, family = scope['CASES'][index]
+                    relative = mutable[0]
                 elif entry_path.name == 'semantic_mutations.py':
                     _, before, after = scope['CASES'][index]
                     relative, family = mutable[0], fixture['contexts'][index]
@@ -606,7 +628,7 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=Fals
 
     try:
         os.environ.update(stores, RUSTUP_TOOLCHAIN='1.99.0', D156_DOMAIN_UNRELATED='preserved')
-        if entry_path.name in {'semantic_mutations.py', 'recipe_mutations.py', 'statement_mutations.py'}:
+        if entry_path.name in {'semantic_mutations.py', 'recipe_mutations.py', 'statement_mutations.py', 'literal_normalization_mutations.py'}:
             sys.argv = [str(entry_path), *(['--classifier-only'] if classifier_only else ['--coupled'] if coupled else [])]
         Path.mkdir, Path.write_text, Path.write_bytes = directory, write, write
         Path.read_text = lambda p, *a, **k: read(p, False, *a, **k)
@@ -687,7 +709,7 @@ def domain_refusals(text, entry_path, *, classifier_only=False, coupled=False):
                 Path.write_text, Path.write_bytes, subprocess.run = no_effect, no_effect, no_effect
                 with contextlib.redirect_stderr(diagnostic):
                     try:
-                        if entry_path.name in {'semantic_mutations.py', 'recipe_mutations.py', 'statement_mutations.py'}:
+                        if entry_path.name in {'semantic_mutations.py', 'recipe_mutations.py', 'statement_mutations.py', 'literal_normalization_mutations.py'}:
                             sys.argv = [str(entry), *(['--classifier-only'] if classifier_only else ['--coupled'] if coupled else [])]
                         exec(compile(text, str(entry), 'exec'), {'__file__': str(entry), '__name__': 'physical_entry'})
                     except SystemExit as error:
@@ -1312,7 +1334,7 @@ def capture_child(text, entry_path, work_name, sources, test_target, *, argument
     assert len(observed) == len(expected), 'D156 Python child capture/restoration absent'
 
 
-def classifier_controls(text, entry_path, *, strict=False):
+def classifier_controls(text, entry_path, *, strict=False, thread_only=False):
     """Compile only the actual classifier; no profile, native dispatch or source write."""
     tree = ast.parse(text)
     functions = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure']
@@ -1342,6 +1364,9 @@ def classifier_controls(text, entry_path, *, strict=False):
                    location + b':2:6:\nassertion: wrong column\n\nfailures:\nfixture\n',
                    location.replace(path.encode(), b'crates/sc-core/tests/other.rs') + b':2:5:\nassertion failed: wrong source\n\nfailures:\nfixture\n',
                    location.replace(path.encode(), b'\xff') + b':2:5:\nassertion failed: invalid path bytes\n\nfailures:\nfixture\n')
+        if thread_only:
+            noises += (location.replace(b"thread 'fixture'", b'compiler note:') +
+                       b':2:5:\nnonthread location mention\n\nfailures:\nfixture\n',)
     assert classify(accepted), 'D159 actual failed-body assertion refused'
     for noise in noises:
         assert not classify(noise), 'D159 assertion evidence accepted noise'
@@ -1790,6 +1815,55 @@ def main():
             red += 1
         else:
             raise AssertionError((name, 'statement classifier fault survived'))
+    literal_path = ROOT / 'docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py'
+    literal_text = literal_path.read_text()
+    literal_captures = 0
+    for classifier_only in (False, True):
+        capture_mixed_entry(literal_text, literal_path, classifier_only=classifier_only)
+        literal_captures += 1
+        measure_physical += domain_refusals(literal_text, literal_path, classifier_only=classifier_only)
+        literal_faults = [('current input omitted %d' % index, 'sources=SOURCES',
+                          'sources=SOURCES[:%d] + SOURCES[%d:]' % (index, index + 1),
+                          'D156 measure source plan changed') for index in range(4)]
+        if classifier_only:
+            literal_faults += [
+                ('classifier files', 'OUTPUT_FILES = (() if CLASSIFIER_ONLY else',
+                 'OUTPUT_FILES = (() if False else', 'D156 measure file plan changed'),
+                ('classifier mutable', 'MUTABLE_SOURCES = () if CLASSIFIER_ONLY else (SOURCE,)',
+                 'MUTABLE_SOURCES = () if False else (SOURCE,)', 'D156 measure mutable plan changed'),
+                ('classifier effects', 'if CLASSIFIER_ONLY:', 'if False:',
+                 'D156 classifier mode performed native effects')]
+        else:
+            literal_faults += [
+                ('files absent', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 measure file plan changed'),
+                ('last file absent', 'len(CASES) + 1', 'len(CASES)', 'D156 measure file plan changed'),
+                ('mutable absent', 'mutable_sources=MUTABLE_SOURCES', 'mutable_sources=()',
+                 'D156 measure mutable plan changed'),
+                ('stores reset', 'environment = dict(os.environ)',
+                 "environment = dict(os.environ, CARGO_HOME='broken')", 'D156 measure child stores lost'),
+                ('final restoration absent', 'finally:\n    SOURCE.write_bytes(ORIGINAL)\n',
+                 'finally:\n', 'D156 domain restoration sequence changed')]
+        for name, before, after, message in literal_faults:
+            assert literal_text.count(before) == 1, (name, 'actual literal anchor')
+            try:
+                capture_mixed_entry(literal_text.replace(before, after, 1), literal_path,
+                                    classifier_only=classifier_only)
+            except AssertionError as error:
+                assert str(error) == message, (name, classifier_only, 'unrelated literal refusal', str(error))
+                red += 1
+            else:
+                raise AssertionError((name, classifier_only, 'literal omission survived'))
+    literal_function = next(ast.get_source_segment(literal_text, n) for n in ast.parse(literal_text).body
+                            if isinstance(n, ast.FunctionDef) and n.name == 'assertion_failure')
+    unanchored = "def assertion_failure(output):\n    parts = output.split(b'\\nfailures:\\n', 2)\n    if len(parts) != 3:\n        return False\n    locations = re.finditer(rb'panicked at ([^:\\n]+):([0-9]+):([0-9]+):\\n', parts[1])\n    return any((m.group(1).decode('utf-8', 'replace'), int(m.group(2)), int(m.group(3))) in ASSERTION_SITES for m in locations)"
+    try:
+        classifier_controls(literal_text.replace(literal_function, unanchored, 1), literal_path,
+                            strict=True, thread_only=True)
+    except AssertionError as error:
+        assert str(error) == 'D159 assertion evidence accepted noise', ('D178 unrelated refusal', str(error))
+        red += 1
+    else:
+        raise AssertionError('D178 actual nonthread-location classifier fault survived')
     semantic_path = ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py'
     semantic_text = semantic_path.read_text()
     capture_mixed_entry(semantic_text, semantic_path, classifier_only=True)
@@ -2348,7 +2422,7 @@ def main():
                 red += 1
             else:
                 raise AssertionError('D156 Python doc restoration omission survived')
-        classifier_controls(text, path, strict=True)
+        classifier_controls(text, path, strict=True, thread_only=path.name == 'literal_normalization_mutations.py')
         classifier_count += 1
         tree = ast.parse(text)
         function = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure')
@@ -2356,7 +2430,8 @@ def main():
         broad = "def assertion_failure(output):\n    return b'assertion' in output"
         assert text.count(actual) == 1
         try:
-            classifier_controls(text.replace(actual, broad, 1), path, strict=True)
+            classifier_controls(text.replace(actual, broad, 1), path, strict=True,
+                                thread_only=path.name == 'literal_normalization_mutations.py')
         except AssertionError as error:
             assert str(error) == 'D159 assertion evidence accepted noise'
             red += 1
@@ -2364,7 +2439,8 @@ def main():
             raise AssertionError('D159 actual broad classifier survived')
         permissive = "def assertion_failure(output):\n    parts = output.split(b'\\nfailures:\\n', 2)\n    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None"
         try:
-            classifier_controls(text.replace(actual, permissive, 1), path, strict=True)
+            classifier_controls(text.replace(actual, permissive, 1), path, strict=True,
+                                thread_only=path.name == 'literal_normalization_mutations.py')
         except AssertionError as error:
             assert str(error) == 'D159 assertion evidence accepted noise'
             red += 1
@@ -2375,7 +2451,8 @@ def main():
         assert helper_text.count('if match is not None:') == 1
         omitted = helper_text.replace('if match is not None:', 'if False:', 1)
         try:
-            classifier_controls(text.replace(helper_text, omitted, 1), path, strict=True)
+            classifier_controls(text.replace(helper_text, omitted, 1), path, strict=True,
+                                thread_only=path.name == 'literal_normalization_mutations.py')
         except AssertionError as error:
             assert str(error) == 'D160 assertion sites changed'
             red += 1
@@ -2437,7 +2514,7 @@ def main():
           str(compiler_count) + ' complete compiler/example captures / ' +
           str(static_count) + ' complete static-entry captures / ' +
           str(classifier_count) + ' calibrated failed-body classifiers / source unchanged')
-    print('guarded native entries: ' + str(len(measure_paths) + 1 + recipe_captures + statement_captures) + ' complete child/file captures / ' + str(measure_physical) +
+    print('guarded native entries: ' + str(len(measure_paths) + 1 + recipe_captures + statement_captures + literal_captures) + ' complete child/file captures / ' + str(measure_physical) +
           ' actual copied-entry physical refusals / five entry and three classifier body reds per entry; '
           'dispatch simulation separate from real native proof')
 

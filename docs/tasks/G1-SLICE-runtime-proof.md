@@ -1,0 +1,94 @@
+# G1-SLICE — completed native mode verification
+
+Bounded evidence sibling of [G1-SLICE](G1-SLICE.md). Whole completed records are copied
+byte-exact from the committed producer tree. Canonical IDs/status/Paths and current checklists
+remain in [the producer tree](G1-SLICE-producers.md); current work follows MEMORY.md.
+
+Source: `c3cc51dbda6365abd52d85082a808cbc70d243d4`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Statement modes](#statement-modes) | 52802–58350 | 5548 / 42 | `ef8e5bca38c732b75ab4540430c69acc24103c395df1252659f0d60e7d5524b7` |
+
+### Statement modes
+
+Clean9f4101276dd8ddbc978481ae575b774f49aeb90e/main33 ahead/brief0/no pending jobs before
+selection. Complete entry/public508L statement implementation/all540L ten tests/imported15-row
+statement TSV/25 worked-byte TSV/unchanged worked examples/public exports/canonical .5a.3e.1/
+D146 public record110/current contract/grammar/statement and build books reviewed. No dedicated
+shell wrapper; public structural suite directly invokes classifier mode. D146 supersedes the old
+immutable .3e.1 runtime-token mapping: UnknownTolerance remains syntax/formula_parse with exact
+spans/genuine recipe ordinals; valid unavailable context is a separate runtime rule.
+
+Own D156 all five direct inputs: mutable implementation/current test/two compile-time TSVs/book;
+ordinary16 files/one mutable, classifier zero files/mutables. Own D177 original full prefix/no-effect
+labelled join diagnostic at a genuine current nonmacro site, current guarded test macros, independent
+complete authored captures and real copied-entry aliases/missing inputs before effects. Preserve
+exact original15 case AST/source anchors/child stores/full10 restoration and read-only classifier
+mode with linked inputs/unused log aliases. If actual known faults reveal unchecked canonical or
+worker helpers, reproduce/own/repair minimally before repeating native proof and Rust gates.
+
+Own Target helper/log plans with stable helper_path and all-content preflight. Own whole prior
+receipt/older lessons/ledgers/whole D177 report+closure retention before live growth; exact full
+source commit/spans/SHA/prior sibling/public readers/seven windows/fixed caps/canonical ownership.
+Close D177 and parent .n06 only after all15 entries/16 predicates current proof; D156 remains open.
+Book pending paragraph grammatical correction is included in its verified closure update.
+Two preparatory shared-edit assertions refused before any write. Substring absence was invalid:
+checked_statement_mutations.py contains the statement basename; use exact AST set membership.
+Guarded scoped patch succeeded; failed preparations are excluded from verification. Correct the
+resume pointer’s stale0165 gate reference to the actually verified0170 gate during lockstep. Next
+native group .n07 after this fully committed slice; keep director400/local-versus-runner boundary.
+
+
+Two helper-construction quote syntax refusals and subsequent missing-helper exit2 occurred before
+tracked writes; direct guarded helper source/all-content preflight corrected the preparation.
+Failed attempts excluded; no premature proof, Rust helper repair, ceiling increase or runner claim.
+
+- [x] REPRODUCE / ISSUE: committed full prefix accepts labelled worker join384:44, rc=0, statement-predicate-diagnostic.log. D156 five-input/file/mutable/mode omissions and D177 current macro evidence owned before edits; full508L implementation/540L tests/15+25 TSV rows/canonical D146/book read. Source grammar stays exact.
+- [x] ROOT CAUSE: implicit source-only plan omits current test/compile-time inputs/files/mutable intention; labelled prefix panic qualifies without a macro. Two independently authored complete modes/12 physical refusals bind inputs,16 ordinary children/logs,15 mutations/16 restorations; classifier-only zero native writes. Shared372 body reds discriminate these omissions, rc=0, statement-producer-controls.log.
+- [x] FIX: five unique inputs/ordinary16 files/one mutable source/classifier zero files-mutable-native effects; current guarded macro sites replace prefix evidence. Original15 case AST/argv/read order/stores/restoration exact. Shared372 body reds/35 classifiers/19 captures/101 physical refusals plus prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls0, rc=0, statement-producer-controls.log; actual input/file/mutable/mode/stores/final-restoration and three classifier faults refuse.
+- [x] ADDRESSED: exclusive15 actual compiled macro faults/every failed body current macro/nonmacro-only blocks empty/full10 restored0, rc=0, statement-native.log/native-proof.log.21 frozen inputs/12 Rust HEAD files/three compile-time inputs/original15 cases/16 local single-link logs exact. Cargo current full10 artifact a6c554be9c53941f6e565768e07670b9ebd37de2f459b6dda59202f488e13e57 passes0, native-artifact-proof.log; frozen bytes/artifact reconfirmed after focused checks. No Rust test-helper repair required.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths53owners23groups/15refusals12reds/map/ledger9+13 pass0, rc=0, statement-*-final.log. Actual copied readonly mode accepts3-linked input/unused aliases with zero source/output writes/children; inputs/victim/root/environment exact, readonly-mode.log. Rust unchanged; latest full fmt/strict Clippy/703 native gate0170 applies. All required terminals consumed; no new WASM/evaluation/runner proof.
+- [x] LOCKSTEP: whole9f41012 recipe51713–57178/41L5465B/SHAd43db446 copied/verified before retirement; prior56980B sibling/canonical headers/map exact, rc=0, statement-recipe-retention-proof.log. WholeDEV205/CH149/D177 report+closure99/prior455/all53/public458/12open164sealed/seven windows/41raw retained, retention-final.log. Sixteen predicates/fifteen entries close D177; parent .n06 done/next .n07/D156 open. Book/live/resume/grammar/400 align; fixed caps/promotions unchanged.
+
+Final staged doctrine gate13 green, rc=0, target/statement-staged-gate.log; terminal consumed.
+All completed checks consumed before commit; no background native or verification job remains.
+
+
+Source: `c3cc51dbda6365abd52d85082a808cbc70d243d4`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Complete Python file plan](#complete-python-file-plan) | 9152–13620 | 4468 / 29 | `445a7bd8a357ceb97c7160e98ac76ccb62f5265b7d0b971345088f07199fab4e` |
+
+### Complete Python file plan
+
+The full maintained-source/all-call census is the inspection boundary; a direct-call name or ledger
+kind cannot establish all destination effects. Resolve every expression, dynamic label population,
+delegated public call and borrowed fixture/root contract in its owning repair before claiming locality.
+Keep source writes covered by their declared regular-file source guards, and inspect all generated
+files, compiler -o paths, baseline/fault/restoration logs, fixture/materialization trees and indirect
+helpers. Guard the complete producing call's plan before activation or the first write/child, and
+recheck late hazards. Unique fixture generation and directory declarations alone confer no file proof.
+
+.f.i owns the tracked all-Python file ownership ledger and its independent actual-function
+refusal/body controls. Native group membership below is canonical; output/delegation owners remain
+the existing effect ledger, profile/reference entries route to .p.v. Pure/reference interfaces stay
+pure. No closure can be inferred from these inspection assignments; runtime proofs remain owned.
+The first repair is .f.n01, then .f.n02–.f.n14, then .a01.2 and existing .a/.p.v groups.
+This slice adds no producer effect, Rust change or native mutation. Existing fixed live-document
+caps still apply; the receipt must fit or retain whole committed records before growth.
+
+Self-review fixture: uncommitted native parser collapses two identical native task IDs into one
+dictionary entry; actual isolated call reproduces acceptance, rc=0, file-plan-duplicate-before.log.
+This hides a malformed canonical group identity. .f.i owns refusing duplicates before dictionary
+construction and actual omission/refusal controls before signoff; no maintained group is duplicated.
+
+- [x] REPRODUCE / ISSUE: current full producer_census.py --json retains229 sources/all calls; file map covers120 Python entries, including37 native entries whose source/directory proof does not certify filenames, rc=0, file-plan-current-census.json. Native direct write/child call sites reviewed; all expressions/labels/delegated outputs require owner resolution before runtime signoff. No native producer is invoked.
+- [x] ROOT CAUSE: directory-only guards omit leaf destinations; the earlier physical calibration remains in .a01.1. Finite maintained-path/kind/owner coverage must precede complete per-entry destination resolution. Current120 Python paths/44 owners/native37 in14 bounded groups derived, rc=0, file-plan-create.log and file-plan-census-final.log. Initial guessed table path failed before writes; use actual ledger basename identities instead.
+- [x] FIX: python_file_entries.tsv preserves67 effect-owner assignments, canonical native Paths membership and .p.v profile/reference ownership; missing/duplicate/schema/kind/owner drift refuses, rc=0, file-plan-census-final.log. Native groups bound1–4 and terminal splits retain parents. Every repair owns full source/public/borrowed-root/dynamic-label/child filename resolution before effects; all runtime file proof stays pending, D156 open.
+- [x] ADDRESSED:15 actual data refusals/12 actual guard-body reds/native split positive pass, rc=0, file-plan-census-final.log. Self-review duplicate-ID acceptance reproduced0 in file-plan-duplicate-before.log; fixed unique-identity guard now refuses the real malformed fixture and its actual omission earns an assertion red. No maintained duplicate exists. Exact path/kind/native/effect/profile owners, group bound and terminal filters are falsified independently.
+- [x] NO REGRESSION: existing census9 assertions/9 refusals/4 body reds and67-path29-owner8-refusal7-red plan remain green, rc=0, file-plan-census-final.log; current229 sources/288 boundaries and all37 native producer HEAD bytes/Rust unchanged, rc=0, file-plan-native-exact.log. Publication45/coverage9/ledger9+pointer13 pass, rc=0, file-plan-publication/coverage/ledger-final logs; no native/Rust/grammar change or mutation job.
+- [x] LOCKSTEP: book/live/MEMORY/G1/index reflect pending resolution and .f.h blocking retention before .f.n01; map fresh, rc=0, file-plan-map-final.log. DEV16305B/CH32663B fit unchanged health targets but leave79B/105B; archive63/64 forces a new window before whole-record retention. promotion: declined (existing finite ownership, scoped proof and bounded continuity rules);400 push cadence retained, remote verdict unobserved.
+  Final staged gate13 green, rc=0, target/file-plan-staged-gate.log.
+

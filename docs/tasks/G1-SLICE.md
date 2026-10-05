@@ -797,12 +797,13 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 [Output/delegation division and owned repair groups](G1-SLICE-producers.md).
 [Completed producer verification](G1-SLICE-producer-proof.md).
+[Completed native mode verification](G1-SLICE-runtime-proof.md).
 
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n07` | `todo` | literal/normalized/canonical recipe files, then native groups/D156/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n07.2` | `todo` | normalized-expression mode plans/D178, then native groups/D156/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
