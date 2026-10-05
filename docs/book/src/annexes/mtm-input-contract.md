@@ -93,3 +93,8 @@ and Ease zero fallbacks and an enabled grade-rule path, then restore exact sourc
 book and focused doctrine checks verify integration; actual instantiation and release remain later work.
 The mutation diagnostic uses the [local producer profile](../build-and-checks.md#direct-python-producers)
 before its first output or native child, then rebuilds the restored complete MTM test target.
+It plans all twelve numbered logs and restored.log, the mutable implementation and the read-only
+current contract test before reading inputs. Failed-body evidence must identify a current assertion
+macro's source, line and byte column. Complete thirteen-child/file captures and four physical
+alias/missing-input refusals verify dispatch guards separately. Real replay verifies all twelve
+macro failures, exact input restoration and the public current artifact's fifteen passing tests.

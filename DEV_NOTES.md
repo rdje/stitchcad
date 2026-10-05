@@ -14,6 +14,14 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — complete MTM effect and panic plans
+
+- Pure twelve-case population precedes activation; thirteen logs/two inputs/one mutable source are guarded before reads. Original cases/filters/stores/restoration stay exact, including separate unresolved Body/Ease zero and grade-rule refusals.
+- Actual old predicate accepts passed assertion_name plus expect-only panic without effects. Current macro locations replace substring evidence. Four independent measurement captures/sixteen physical refusals/five entry and three classifier faults per entry pass; shared203 body reds/24 classifiers0.
+- Exclusive twelve real macro reds0; independent byte-position replay verifies every log/eight frozen inputs/original cases/two HEAD Rust inputs/thirteen regular-local-singlelink logs/full15 restored. Public current artifact5614214a… executes all15 tests0; Rust unchanged.
+- Whole5b37891 bridge/effect lessons and complete follow-up retained before receipt growth: source7594–9941/16L2347B/SHA9f77b65f copied and verified before retirement. Prior432/all30 archive files and public433 reads verified separately in the leaf.
+- Promotion declined: existing current-source evidence, explicit mutable/file ownership and whole-record retention rules. D177 stays open with11 entries P1; collection .n02.4 next. Grammar/API/400 cadence unchanged; runner verdict unobserved.
+
 ## _(2026-10-05 UTC)_ — complete table effect and panic plans
 
 - Pure eight-case data now precedes activation; nine logs/two inputs/one mutable source are guarded before reads. Four original source-dependent span statements remain AST-exact and execute after the guard; all case/filter/restoration behavior stays.
@@ -55,22 +63,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Archive writes/removals measured single-link57 raw/four live files/master1 first. Existing reader/standing window controls watch data; no new producer/Rust/grammar code. Promotion declined: existing immutable-source, scoped-proof and explicit ownership rules;400 cadence retains local verification.
 - After recording abc2f91e, actual copied catalog prose passes inventory0/refuses committed guard1; all24 root archive files/HEAD exact. P1 .f.l follows; runner verdict remains unobserved.
 
-## _(2026-10-05 UTC)_ — bridge source and file plans
-
-- Coupled import activates stores before the bridge's own plan. Inspect bridge paths without effects first; producing entry rechecks22 sources/nine destinations and retains child stores. Original body fails the independent pre-plan capture.
-- Directory-only plans accept a leaf symlink. Shared explicit output_files checks reject aliases/type/device/parent hazards before activation; physical fixtures leave all input/output/victim bytes unchanged. Remaining filenames are P1 .p.o.f.i within open D156.
-- Actual bridge captures check four children/eight text outputs in both modes and nine body reds0. First attempt1 expected native dispatch but observed the earlier directory guard; corrected expected effect, excluded that receipt. Simulation proves dispatch only.
-- Real26723 shared/263 phase cases/ten reference reds0;23 input hashes/five Rust HEAD bytes/nine outputs/current public artifact exact. Shared31 runtime/24 file/165 body controls0. Retain three whole2358d4e lessons; prior423/public424 exact.
-  Promotion declined: existing guard-before-effects, public-boundary and whole-retention rules.
-
-- File inspection follow-up (.f.i/0153):120 Python paths/44 owners/native37 in14 bounded groups;15 refusals/12 body reds0. Filename/public-call resolution and runtime proofs stay pending; first .f.n01.
-
-## _(2026-10-05 UTC)_ — bounded producer effect ownership
-
-- Divide67 Python output/delegation candidates into28 watched terminal owners; complete-source/public-entry/borrowed-root inspection precedes repairs. This is ownership coverage, not runtime locality proof.
-- Actual source guards refuse malformed, missing, duplicate, kind or owner drift; eight data refusals/seven guard-body reds and split-owner positive0. First two attempts1 had overlapping faults; isolate shape and path fixtures, exclude both failures.
-- Preserve four whole older lessons/two oldest ledgers from ab3f720; prior420/six windows+master exact. No producer/Rust/grammar behavior changed. Promotion declined: existing finite ownership, actual-body and bounded continuity rules.
-- D176 task-index examples froze11 siblings/seven probes after later additions. Current census13 trees/13 siblings/probes9 pass0; remove fixed totals from current commands and retain original/history/closure in defects-part97.
+Whole bridge/effect ownership lessons retained in [part192](docs/history/stitchcad-devnotes-part192.md).
 
 Navigation/continuity lessons retained in [part188](docs/history/stitchcad-devnotes-part188.md).
 
@@ -140,3 +133,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part190`](docs/history/stitchcad-devnotes-part190.md) | six whole native provenance/cleanup records | 50 lines, 4492 bytes, `sha256:2a7cc4c9…` |
 
 | [`part191`](docs/history/stitchcad-devnotes-part191.md) | whole coupled input lesson | 4 lines, 501 bytes, `sha256:dbb2c10d…` |
+
+| [`part192`](docs/history/stitchcad-devnotes-part192.md) | two whole bridge/effect ownership lessons | 16 lines, 2347 bytes, `sha256:9f77b65f…` |

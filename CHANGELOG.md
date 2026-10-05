@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0160 - guarded MTM files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.3`)
+
+- Plan13 logs/two inputs/one mutable source before reads; preserve all12 cases/filters/restoration.
+- Shared203 body reds/24 classifiers/full four-entry captures/sixteen physical refusals pass0.
+- Twelve real current macro reds/eight frozen inputs/original cases/Rust exact/full15 artifact0.
+- Retain two whole lessons/follow-up from5b37891; prior432/public433 exact; focused checks0.
+- D177 membership/chart/table/MTM fixed;11 repairs P1 remain. Grammar/400 cadence unchanged.
+
 ## STITCHCAD-G1-0159 - complete table file and panic proof (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.2`)
 
 - Plan nine logs/two inputs/one mutable source before reads; preserve eight cases/four span statements.

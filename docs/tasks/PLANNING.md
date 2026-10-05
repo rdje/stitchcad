@@ -994,4 +994,4 @@ D172–D176 closures retained in [part98](../history/stitchcad-defects-part98.md
   target/membership-predicate-census.log and membership-prefix-diagnostic.log; original membership
   predicate introduced0b77235. Own G1-SLICE.5b.4c.h2.b.p.o.f.n01–06, P1 in each current repair:
   guarded current test/macro locations, independent noise/body faults and exclusive real native reds;
-  never upgrade prior raw logs without independent replay. Membership/chart/table verified;12 remain.
+  never upgrade prior raw logs without independent replay. Membership/chart/table/MTM verified;11 remain.

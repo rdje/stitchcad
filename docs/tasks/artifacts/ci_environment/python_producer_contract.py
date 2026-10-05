@@ -396,8 +396,7 @@ def measure_fixture(entry_path):
                     'values_members_and_both_roles_are_borrowed_without_recomputing',
                     'same_content_table_peer_does_not_replace_named_table',
                     'explicit_table_rebinding_does_not_silently_rebind_an_observation')
-    else:
-        assert entry_path == ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py', 'D156 unknown measurement entry'
+    elif entry_path == ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py':
         stem = 'table'
         selected = ('duplicate_entry_id_and_token_refuse_without_coalescing_or_first_peer_selection',
                     'duplicate_entry_id_and_token_refuse_without_coalescing_or_first_peer_selection',
@@ -407,6 +406,21 @@ def measure_fixture(entry_path):
                     'current_scalar_reassignment_requires_explicit_binding_replacement',
                     'required_current_target_failures_keep_table_measurement_and_underlying_identity_evidence',
                     'current_context_collision_of_table_identity_is_not_cached_birth_approval')
+    else:
+        assert entry_path == ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py', 'D156 unknown measurement entry'
+        stem = 'mtm_chart'
+        selected = ('chart_and_context_identities_cannot_alias_members_sets_or_canonical_records',
+                    'chart_and_context_identities_cannot_alias_members_sets_or_canonical_records',
+                    'chart_and_context_identities_cannot_alias_members_sets_or_canonical_records',
+                    'exact_set_revision_and_member_identity_are_required_not_matching_labels',
+                    'mtm_requires_custom_system_and_exactly_one_member',
+                    'mtm_requires_custom_system_and_exactly_one_member',
+                    'every_set_target_and_authored_order_requires_explicit_chart_replacement',
+                    'new_current_design_pom_invalidates_prior_complete_coverage',
+                    'unknown_and_derived_body_inputs_remain_inspectable_and_refuse_numeric_defaults',
+                    'unknown_and_derived_ease_amounts_remain_distinct_unresolved_inputs',
+                    'incomplete_and_empty_drafts_cannot_certify_design_pom_coverage',
+                    'grade_rule_input_always_refuses_for_complete_and_empty_authored_mtm_charts')
     work_name = 'measurement_table_mutations' if stem == 'table' else stem + '_mutations'
     return (ROOT / ('crates/sc-measure/src/' + stem + '.rs'),
             ROOT / ('crates/sc-measure/tests/' + stem + '_contract.rs'),
@@ -1075,7 +1089,8 @@ def main():
     )
     red = 0
     measure_paths = (ENTRY, ROOT / 'docs/tasks/artifacts/size_chart/size_chart_mutations.py',
-                     ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py')
+                     ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py',
+                     ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py')
     measure_physical, measure_classifiers = 0, 0
     for measure_path in measure_paths:
         measure_text = measure_path.read_text()
@@ -1210,7 +1225,7 @@ def main():
     for path, work_name in adopters:
         text = path.read_text()
         multiple_sources = {
-            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py',
+            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py',
             'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',

@@ -459,10 +459,26 @@ retention before growing live lessons, preserving exact committed bytes and fixe
   Final staged gate13 green, rc=0, target/table-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.3`
-  Status: `pending`
-  Goal: MTM-chart complete files/mutable sources/current test-site repair.
+  Status: `done`
+  Goal: STITCHCAD-G1-0160 owns MTM-chart file/mutable/current test-site guards, independent controls and book/live receipts.
   Paths: docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py
   Acceptance: preserve twelve faults; complete captures/refusals/body controls and exclusive real proof with exact source/current artifact.
+
+Full entry/wrapper/implementation/fifteen-test source/public exports, .4c.3c canonical record and
+normative/main/annex books reviewed. Resolve pure twelve-case population before profile effects;
+guard thirteen logs/two inputs/one mutable implementation/current test macros. Preserve all cases,
+filters/stores/full restoration, especially body/Ease zero refusals and grade-rule refusal. Own
+actual predicate/capture/physical/omission/noise controls before exclusive native replay and exact
+source/current artifact proof. Own whole committed older lesson retention before live growth,
+with immutable prior records/public readers and fixed caps verified before commit.
+
+- [x] REPRODUCE / ISSUE: actual committed MTM predicate accepts passed assertion_name plus expect-only panic, AST/eval without source/native effects, rc=0, target/mtm-predicate-diagnostic.log. Entry omits thirteen filenames, mutable intent and current test source; existing D156/D177 own these defects. Full implementation/fifteen-test/public/normative/runtime contract reviewed before changes.
+- [x] ROOT CAUSE: CASES follows activation/source reads; directory identity omits leaves/writing intent, and whole-log assertion bytes do not prove macro sites. Independent authored complete thirteen-child/file capture/four physical first/last log symlink/mutable hard-link/missing-test refusals pass, rc=0, target/mtm-producer-controls.log. Alias bytes/environment/stores remain unchanged; no unsafe native dispatch.
+- [x] FIX: move unchanged pure twelve-case population before thirteen-file/two-input/one-mutable-source guard; require current failed-body macro byte locations. Four independent measurement captures/sixteen physical refusals/five entry and three classifier faults per entry pass. Shared203 body reds/24 classifiers/31 runtime/24 file/26 mutable/37 entry+late/26 child/two compiler/three static captures0, rc=0, mtm-producer-controls.log; simulation proves dispatch only.
+- [x] ADDRESSED: exclusive caller-store-absent run passes twelve real current macro reds, rc=0, mtm-native-final.log. Independent selected-log/byte-site replay verifies eight frozen inputs/original12 cases/two HEAD Rust inputs/thirteen regular-local-singlelink logs/full15 restored, rc=0, native-restoration.log. Public Cargo artifact5614214a… executes all15 tests0, rc=0, native-artifact.log; Rust/API/grammar unchanged.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29owners8refusals7reds/file120paths47owners17groups15refusals12reds/map freshness pass, rc=0, mtm-*-final logs. Whole5b37891 DEV span7594–9941/16L2347B/SHA9f77b65f exact; prior432/all30 archive files/public433 exact/13open163sealed/no gaps or overlap, rc=0, mtm-retention-final.log. Seven windows/all prior sealed records remain exact.
+- [x] LOCKSTEP: book/annex/live/MEMORY/G1/index route .f.n02.4; D177 membership/chart/table/MTM fixed/11 entries P1 remain. Pressure16working/16726L/1211112decodedB/534197residentB fits fixed caps; DEV15442B/CH32410B within health, rc=0, retention-final.log and measured byte census. promotion: declined (existing current-source evidence, explicit mutable/file ownership and whole-record retention rules).400 cadence/local verification preserved; runner unobserved. Ledger9/pointer13 terminal0 consumed, mtm-ledger-final.log.
+  Final staged gate13 green, rc=0, target/mtm-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.4`
   Status: `pending`
