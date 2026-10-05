@@ -1,6 +1,6 @@
 path	kind	leaf
-docs/tasks/artifacts/formula_structure/first_phase_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a01
-docs/tasks/artifacts/formula_structure/static_recipe_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a01
+docs/tasks/artifacts/formula_structure/first_phase_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a01.1
+docs/tasks/artifacts/formula_structure/static_recipe_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a01.2
 docs/tasks/artifacts/formula_structure/static_signature_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a02
 docs/tasks/artifacts/formula_structure/static_namespace_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a02
 docs/tasks/artifacts/formula_structure/static_review_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a02

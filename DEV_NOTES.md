@@ -14,6 +14,14 @@ D162 namespace guard lesson retained in [part178](docs/history/stitchcad-devnote
 
 D161 statement and whole proof lesson retained in [part180](docs/history/stitchcad-devnotes-part180.md).
 
+## _(2026-10-05 UTC)_ — bridge source and file plans
+
+- Coupled import activates stores before the bridge's own plan. Inspect bridge paths without effects first; producing entry rechecks22 sources/nine destinations and retains child stores. Original body fails the independent pre-plan capture.
+- Directory-only plans accept a leaf symlink. Shared explicit output_files checks reject aliases/type/device/parent hazards before activation; physical fixtures leave all input/output/victim bytes unchanged. Remaining filenames are P1 .p.o.f.i within open D156.
+- Actual bridge captures check four children/eight text outputs in both modes and nine body reds0. First attempt1 expected native dispatch but observed the earlier directory guard; corrected expected effect, excluded that receipt. Simulation proves dispatch only.
+- Real26723 shared/263 phase cases/ten reference reds0;23 input hashes/five Rust HEAD bytes/nine outputs/current public artifact exact. Shared31 runtime/24 file/165 body controls0. Retain three whole2358d4e lessons; prior423/public424 exact.
+  Promotion declined: existing guard-before-effects, public-boundary and whole-retention rules.
+
 ## _(2026-10-05 UTC)_ — bounded producer effect ownership
 
 - Divide67 Python output/delegation candidates into28 watched terminal owners; complete-source/public-entry/borrowed-root inspection precedes repairs. This is ownership coverage, not runtime locality proof.
@@ -39,27 +47,7 @@ Static guard/D172–D175 lesson retained in [part184](docs/history/stitchcad-dev
 
 D160 lesson retained in [part182](docs/history/stitchcad-devnotes-part182.md); UTC seal date correction:2026-10-05 (immutable header says Oct4).
 
-## _(2026-10-04 UTC)_ — D156 recipe normalization entries
-
-- Plan all source files before activation; a later invalid source must leave earlier stores untouched.
-- Preserve prepared stores through mutation and full restoration children.
-- Compile a suspicious classifier predicate before trusting its proof; D160 is owned next.
-- Promotion declined: existing all-source/actual-child/failed-body/exclusive-restoration rules.
-
-## _(2026-10-04 UTC)_ — D159 normalization assertion evidence
-
-- Match failed-test bodies; a passing name or failure summary cannot certify an assertion red.
-- Compile an actual broad-classifier fault against independent noise fixtures.
-- Inspect every verification exit before advancing; exact source anchors can reject harmless formatting.
-- Finish active native restoration before correcting its producer; rerun the failed controls.
-- Promotion declined: existing actual-body/verification-order/exclusive-restoration rules.
-
-## _(2026-10-04 UTC)_ — D156 recipe/statement entries
-
-- Observe both selected mutation calls and full restored-target calls with custom stores.
-- Keep a low-level syntax view's limits distinct from a separate normalized serialization API.
-- Compare documented contract counts with test markers and the actual complete native target.
-- Promotion declined: existing child-profile/scoped-proof/actual-body/restoration rules.
+Normalization/assertion/recipe lessons retained in [part187](docs/history/stitchcad-devnotes-part187.md).
 
 Older formula and producer lessons retained in [part186](docs/history/stitchcad-devnotes-part186.md).
 
@@ -177,3 +165,5 @@ prepared stores/original filters and rebuild full target; controls131 body/34 en
 19 classifiers0. Seven native macro reds/eight current sites/five HEAD-exact sources/full5 restored0. Focused profiles/book/archive402/ledger/coverage0; prior398/four whole records exact. No Rust changes.
 
 | [`part186`](docs/history/stitchcad-devnotes-part186.md) | D157 and lexer/unit/continuity lessons | 27 lines, 1483 bytes, `sha256:54d12f5b…` |
+
+| [`part187`](docs/history/stitchcad-devnotes-part187.md) | three whole producer/assertion lessons | 21 lines, 1382 bytes, `sha256:923de269…` |

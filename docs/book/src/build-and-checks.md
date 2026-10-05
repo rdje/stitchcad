@@ -137,6 +137,31 @@ volumes refuse. Invalid path types or control bytes also refuse. An invalid entr
 local-environment refusal and exits2 before invoking a child. Named toolchains and unrelated
 environment values are preserved; paths still derive from the current repository root.
 
+The shared Python API separates inspection from activation. `plan_producer` validates stores,
+declared source files, output directories and explicit `output_files` without creating paths or
+changing the environment. It returns the output directory names relative to the supplied root.
+`prepare_producer` rechecks that plan, creates the stores/directories and returns the prepared
+environment; `enter_producer` adds the standalone refusal diagnostic and exit2 behavior.
+For example, from the repository root:
+
+```python
+from pathlib import Path
+import runpy
+
+profile = runpy.run_path('scripts/local_environment.py')
+outputs = profile['plan_producer'](
+    Path.cwd(), directories=('target/check',),
+    output_files=('target/check/report.log',), sources=('Cargo.toml',))
+assert outputs == ('target/check',)
+```
+
+Missing output files are allowed. Existing destinations must be regular files on the repository
+volume; symlinks, including dangling links, refuse. Their parent components also undergo the
+directory, volume and Git-boundary checks. A directory declaration alone does not inspect filenames
+inside it: each planned file must be declared before producing effects. The remaining producer
+filename audit is a priority task within open D156; source/directory guard evidence does not certify
+those undeclared destinations.
+
 The individual-Ease and Ease-set mutation entries use the same declared-path and profile guard.
 Their native runs with caller overrides absent observe seven and ten real assertion failures,
 then restore exact source and rebuild each current artifact. Mutation diagnostics run sequentially.
@@ -225,11 +250,24 @@ Captured compiler output proves dispatch separately from native faults; no numer
 authority is added. Publication controls also reject D175's retired whole-static-graph claim, with
 an independent later-section fixture and actual compiled catalog-omission assertion failure.
 
-Standing controls cover17 runtime cases and161 actual body faults, including thirty-seven real
+The first-phase bridge plans its own two source paths, output directory and nine file destinations
+before loading the coupled module. That module retains its existing20-input import guard and
+activation behavior. The producing call rechecks the complete22-source union and all nine outputs
+before building, and every native child retains the prepared stores. Import-time bridge inspection
+creates no additional outputs. Separate complete captures exercise both modes, all four child calls
+and eight text outputs, early output/file-alias and late delegated-source refusals, and nine actual
+bridge guard/environment faults. These captures simulate compiler/driver results to check dispatch.
+The real consumer separately passes26,723 shared cases,263 public/reference phase cases and ten
+reference faults; exact input bytes and the current public compiled artifact are verified afterward.
+
+Standing shared controls cover31 runtime cases,24 output-file controls and165 actual body faults,
+including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
 12 membership tests passing. All thirty-seven entry captures also refuse a late missing source before
-input reads, output writes or child dispatch. Python fixture/output and delegated entries remain under the
+input reads, output writes or child dispatch. Those thirty-seven captures establish their declared
+source/directory guards; remaining file destinations still require the priority audit. Python
+fixture/output and delegated entries remain under the
 bounded .h2.b.p audit. Its finite output/delegation plan assigns each current Python candidate to a
 bounded repair group in docs/tasks/G1-SLICE-producers.md. The watched TSV must cover each current
 path/kind and terminal group owner exactly; missing, duplicate, malformed or unowned rows refuse.

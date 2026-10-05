@@ -33,6 +33,12 @@ def controls(scope):
             wanted = {name: str(root / relative) for name, relative in EXPECTED.items()}
             os.environ['RUSTUP_TOOLCHAIN'] = '1.99.0'
             os.environ['D156_RETAINED'] = 'opaque value'
+            before = dict(os.environ)
+            assert scope['plan_producer'](root, directories=('target/output',), sources=('input',)) == \
+                ('target/output',), 'D156 Python planned output identity'
+            assert dict(os.environ) == before and not (root / 'target').exists(), \
+                'D156 Python inspection created stores or activated environment'
+            count += 2
             original_mkdir, observations = Path.mkdir, []
 
             def observe(path, *args, **kwargs):
@@ -108,6 +114,14 @@ def controls(scope):
                 try:
                     Path.stat = changed_device
                     try:
+                        scope['plan_producer'](root, directories=outputs, sources=inputs)
+                    except scope['Refusal'] as error:
+                        assert str(error) == message, ('D156 Python plan refusal identity', kind, str(error))
+                    else:
+                        raise AssertionError('D156 Python plan accepted ' + kind)
+                    assert dict(os.environ) == before and not (root / 'target').exists(), \
+                        'D156 Python plan refusal created stores or activated environment'
+                    try:
                         scope['prepare_producer'](root, directories=outputs, sources=inputs)
                     except scope['Refusal'] as error:
                         assert str(error) == message, ('D156 Python refusal identity', kind, str(error))
@@ -116,7 +130,7 @@ def controls(scope):
                 finally:
                     Path.stat = original_stat
                 assert dict(os.environ) == before and not (root / 'target').exists(), 'D156 Python refusal created stores or activated environment'
-                count += 1
+                count += 2
                 marker = root / 'data/.git'
                 if marker.exists():
                     marker.unlink()
@@ -135,6 +149,98 @@ def controls(scope):
         os.environ.clear()
         os.environ.update(saved)
     return count
+
+
+def output_controls(scope):
+    """Real isolated leaf aliases and regular-file cases; no destination is written."""
+    work = GOOD['directory'](ROOT, 'target/scratch/python_producer_output_contract', create=True)
+    passed = 0
+    for case in ('missing', 'regular', 'alias', 'dangling', 'directory', 'device', 'parent-link',
+                 'parent-git', 'outside', 'outside-target', 'escape', 'type', 'bytes'):
+        with tempfile.TemporaryDirectory(dir=work) as name:
+            root = Path(name)
+            (root / 'input').write_text('owned input')
+            parent = root / 'target/output'
+            parent.mkdir(parents=True)
+            victim = root / 'victim'
+            victim.write_text('unchanged victim')
+            destination = parent / 'result.log'
+            wanted, marker = None, None
+            if case == 'regular':
+                destination.write_text('unchanged output')
+            elif case in ('alias', 'dangling'):
+                destination.symlink_to(victim if case == 'alias' else root / 'absent')
+                wanted = 'symlink producer output'
+            elif case == 'directory':
+                destination.mkdir()
+                wanted = 'producer output is not a local regular file'
+            elif case == 'device':
+                destination.write_text('unchanged output')
+                wanted = 'producer output is not a local regular file'
+            elif case == 'parent-link':
+                alias = root / 'target/alias'
+                alias.symlink_to(parent, target_is_directory=True)
+                destination = alias / 'result.log'
+                wanted = 'symlink store component'
+            elif case == 'parent-git':
+                nested = parent / 'nested'
+                nested.mkdir()
+                marker = nested / '.git'
+                marker.write_text('boundary fixture; never a Git database')
+                destination = nested / 'result.log'
+                wanted = 'store crosses another Git repository'
+            elif case == 'outside':
+                destination = ROOT.parent / 'unowned-output.log'
+                wanted = 'producer path outside workspace'
+            elif case == 'outside-target':
+                destination = root / 'unowned-output.log'
+                wanted = 'producer output must be under target'
+            elif case == 'escape':
+                destination = 'target/../unowned-output.log'
+                wanted = 'invalid producer path components'
+            elif case == 'type':
+                destination = None
+                wanted = 'invalid producer path type'
+            elif case == 'bytes':
+                destination = 'target/output/bad\nname.log'
+                wanted = 'invalid producer path bytes'
+            before, stat = dict(os.environ), Path.stat
+
+            def metadata(path, *args, **kwargs):
+                value = stat(path, *args, **kwargs)
+                if case == 'device' and path == destination:
+                    return types.SimpleNamespace(st_mode=value.st_mode, st_dev=value.st_dev + 1)
+                return value
+
+            # The directory-only plan's historical limitation is retained as calibration:
+            # a leaf alias is refused only once that file destination is declared.
+            if case in ('alias', 'dangling'):
+                assert scope['plan_producer'](root, directories=('target/output',), sources=('input',)) == \
+                    ('target/output',), 'D156 Python directory-only scope changed'
+            try:
+                Path.stat = metadata
+                for action in ('plan_producer', 'prepare_producer') if wanted else ('plan_producer',):
+                    try:
+                        result = scope[action](root, directories=('target/output',),
+                                               output_files=('target/output/first.log', destination),
+                                               sources=('input',))
+                    except scope['Refusal'] as error:
+                        assert wanted and str(error) == wanted, ('D156 Python output refusal identity', case, str(error))
+                    else:
+                        assert wanted is None and result == ('target/output',), 'D156 Python output accepted ' + case
+                    assert dict(os.environ) == before and not (root / 'target/cargo-home').exists(), \
+                        'D156 Python output plan produced effects'
+                    assert not (parent / 'first.log').exists() and victim.read_text() == 'unchanged victim', \
+                        'D156 Python output plan wrote a destination'
+                    assert (root / 'input').read_text() == 'owned input', 'D156 Python output plan changed source'
+                    if case in ('regular', 'device'):
+                        assert destination.read_text() == 'unchanged output', 'D156 Python output plan changed existing file'
+                    passed += 1
+            finally:
+                Path.stat = stat
+                if marker is not None and marker.exists():
+                    marker.unlink()
+    return passed
 
 
 def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
@@ -650,11 +756,12 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
 def main():
     original, entry = SOURCE.read_bytes(), ENTRY.read_bytes()
     count = controls(GOOD)
+    output_count = output_controls(GOOD)
     faults = (
         ('output area', "require(Path(relative).parts[:1] == ('target',), 'producer output must be under target')", 'pass'),
         ('source link', "require(not path.is_symlink(), 'symlink producer source')", 'pass'),
         ('source parent', 'directory(root, Path(relative).parent.as_posix())', 'pass'),
-        ('source device', 'path.is_file() and path.stat().st_dev == root.stat().st_dev', 'path.is_file()'),
+        ('source device', "require(path.is_file() and path.stat().st_dev == root.stat().st_dev,\n                'producer source is not a local regular file')", "require(path.is_file(), 'producer source is not a local regular file')"),
         ('early stores', 'environment_for(root, os.environ, create=False)', 'environment_for(root, os.environ)'),
         ('activation', 'os.environ.update(environment)', 'pass'),
     )
@@ -670,6 +777,23 @@ def main():
             red += 1
         else:
             raise AssertionError((name, 'body fault survived'))
+    for name, before, after in (
+        ('file alias', "require(not path.is_symlink(), 'symlink producer output')", 'pass'),
+        ('file device', "path.is_file() and path.stat().st_dev == root.stat().st_dev,\n                    'producer output is not a local regular file'", "path.is_file(),\n                    'producer output is not a local regular file'"),
+        ('file parent', 'directory(root, Path(relative).parent.as_posix(), missing_ok=True)', 'pass'),
+        ('file output area', 'files = [producer_output_path(root, path) for path in output_files]',
+         'files = [producer_path(root, path) for path in output_files]'),
+    ):
+        assert original.decode().count(before) == 1, (name, 'actual file guard anchor')
+        scope = {'__file__': str(SOURCE), '__name__': 'producer_output_fault'}
+        exec(compile(original.decode().replace(before, after, 1), str(SOURCE), 'exec'), scope)
+        try:
+            output_controls(scope)
+        except AssertionError as error:
+            assert str(error).startswith('D156 Python output'), (name, 'unrelated file guard fault', str(error))
+            red += 1
+        else:
+            raise AssertionError((name, 'file guard fault survived'))
     adopters = (
         (ENTRY, 'size_membership_mutations'),
         (ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py', 'ease_mutations'),
@@ -1066,7 +1190,8 @@ def main():
     assert SOURCE.read_bytes() == original and ENTRY.read_bytes() == entry, 'D156 Python source changed'
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
-          ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
+          ' actual body reds / ' + str(output_count) + ' actual output-file controls / ' +
+          str(len(adopters)) + ' actual standalone pre-write captures / ' +
           str(len(adopters)) + ' actual late-source refusals / ' + str(child_count) + ' actual native-child capture cases / ' +
           str(compiler_count) + ' complete compiler/example captures / ' +
           str(static_count) + ' complete static-entry captures / ' +

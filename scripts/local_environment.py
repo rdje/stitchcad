@@ -110,20 +110,40 @@ def producer_path(root, value):
     return path.relative_to(root).as_posix()
 
 
-def prepare_producer(root, *, directories=(), sources=()):
-    """Plan all stores and owned paths before any creation, then activate the child environment."""
+def producer_output_path(root, value):
+    """An owned output must be below target, whether it is a directory or a file."""
+    relative = producer_path(root, value)
+    require(Path(relative).parts[:1] == ('target',), 'producer output must be under target')
+    return relative
+
+
+def plan_producer(root, *, directories=(), output_files=(), sources=()):
+    """Validate the complete store/source/output plan without creating or activating anything."""
     environment_for(root, os.environ, create=False)
-    outputs = [producer_path(root, path) for path in directories]
+    outputs = [producer_output_path(root, path) for path in directories]
+    files = [producer_output_path(root, path) for path in output_files]
     inputs = [producer_path(root, path) for path in sources]
     for relative in outputs:
-        require(Path(relative).parts[:1] == ('target',), 'producer output must be under target')
         directory(root, relative, missing_ok=True)
+    for relative in files:
+        path = root / relative
+        directory(root, Path(relative).parent.as_posix(), missing_ok=True)
+        require(not path.is_symlink(), 'symlink producer output')
+        if path.exists():
+            require(path.is_file() and path.stat().st_dev == root.stat().st_dev,
+                    'producer output is not a local regular file')
     for relative in inputs:
         path = root / relative
         directory(root, Path(relative).parent.as_posix())
         require(not path.is_symlink(), 'symlink producer source')
         require(path.is_file() and path.stat().st_dev == root.stat().st_dev,
                 'producer source is not a local regular file')
+    return tuple(outputs)
+
+
+def prepare_producer(root, *, directories=(), output_files=(), sources=()):
+    """Plan all stores and owned paths before any creation, then activate the child environment."""
+    outputs = plan_producer(root, directories=directories, output_files=output_files, sources=sources)
     environment = environment_for(root, os.environ)
     os.environ.update(environment)
     for relative in outputs:
@@ -131,10 +151,10 @@ def prepare_producer(root, *, directories=(), sources=()):
     return environment
 
 
-def enter_producer(root, *, directories=(), sources=()):
+def enter_producer(root, *, directories=(), output_files=(), sources=()):
     """Standalone Python entry: refuse cleanly before its first owned write or child dispatch."""
     try:
-        return prepare_producer(root, directories=directories, sources=sources)
+        return prepare_producer(root, directories=directories, output_files=output_files, sources=sources)
     except (Refusal, OSError) as error:
         print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
         raise SystemExit(2) from None

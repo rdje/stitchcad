@@ -1,12 +1,29 @@
 """D150: independent competing-phase cases through real public/reference whole inputs."""
 from fractions import Fraction
 from pathlib import Path
+import os
 import runpy
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-COUPLED = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_coupled_contract.py'))
+COUPLED_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/static_coupled_contract.py'
+WORK = ROOT / 'target/static_coupled_contract/first-phase'
+OUTPUT_FILES = tuple(WORK / name for name in (
+    'cargo-artifacts.json', 'cargo.log', 'rustc.log', 'cases.hex.tsv', 'driver.tsv',
+    'driver.log', 'competing.tsv', 'competing.log', 'driver'))
+PROFILE = runpy.run_path(str(ROOT / 'scripts/local_environment.py'))
+# The delegated module already checks its complete inputs before activation. Validate
+# this bridge's paths first, without introducing effects for a library-only caller.
+try:
+    PROFILE['plan_producer'](ROOT, directories=(WORK,), output_files=OUTPUT_FILES,
+                             sources=(Path(__file__), COUPLED_SOURCE))
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+COUPLED = runpy.run_path(str(COUPLED_SOURCE))
+assert WORK == COUPLED['WORK'] / 'first-phase', 'D150 delegated output changed'
+SOURCES = (Path(__file__), COUPLED_SOURCE, *COUPLED['SOURCES'])
 LOADER = COUPLED['STATIC']['BASE']['LOADER']
 SOURCE = LOADER['SOURCE']
 HUGE = '340282366920938463463374607431768211456'
@@ -159,12 +176,13 @@ def reference_contract(replacement=None, verbose=True):
 
 
 def product_contract():
+    PROFILE['enter_producer'](ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES)
     COUPLED['build_and_check']('first-phase')
     catalog = ';'.join(':'.join(entry) for entry in COUPLED['CATALOG']) + '\n'
     payload = catalog + ''.join('%d\tR\t%s\n' % (index, source.encode().hex())
                                 for index, (source, _, _, _) in enumerate(CASES))
     product = subprocess.run([str(COUPLED['WORK'] / 'first-phase/driver')], input=payload,
-                             cwd=ROOT, text=True, capture_output=True)
+                             cwd=ROOT, env=dict(os.environ), text=True, capture_output=True)
     (COUPLED['WORK'] / 'first-phase/competing.tsv').write_text(product.stdout)
     (COUPLED['WORK'] / 'first-phase/competing.log').write_text(product.stderr)
     assert product.returncode == 0, ('D150 public producer refused', product.stderr)

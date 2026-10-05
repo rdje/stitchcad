@@ -227,13 +227,20 @@ def validate_effect_plan(entries, text, tasks):
     return len(rows), len(owners)
 
 
-def effect_plan_cases(validate, entries, text, tasks):
+def effect_plan_cases(validate):
+    # Independent authored data keeps guard faults orthogonal even as real groups split.
+    parent = 'G1-SLICE.5b.4c.h2.b.p.o.a01'
+    other = 'G1-SLICE.5b.4c.h2.b.p.o.a02'
+    entries = {'fixture/a.py': {'kind': 'output'}, 'fixture/b.py': {'kind': 'output'},
+               'fixture/c.py': {'kind': 'delegate'}, 'fixture/ignored.py': {'kind': 'profile'}}
+    text = ('path\tkind\tleaf\nfixture/a.py\toutput\t' + parent +
+            '\nfixture/b.py\toutput\t' + parent + '\nfixture/c.py\tdelegate\t' + other + '\n')
+    tasks = '- ID: `' + parent + '`\n- ID: `' + other + '`\n'
     result = validate(entries, text, tasks)
     lines = text.splitlines(keepends=True)
     swapped = ''.join('\t'.join((parts[1], parts[0], parts[2]))
                       for parts in (line.split('\t') for line in lines))
     # A split replaces row owners, while the original group remains a tracked parent.
-    parent = 'G1-SLICE.5b.4c.h2.b.p.o.a01'
     child = parent + '.1'
     assert validate(entries, text.replace(parent + '\n', child + '\n'),
                     tasks + '\n- ID: `' + child + '`\n') == result, 'D156 split owner coverage'
@@ -247,7 +254,7 @@ def effect_plan_cases(validate, entries, text, tasks):
         (text + lines[-1], tasks, 'D156 duplicate effect path'),
         (text.replace('\toutput\t', '\treference\t', 1), tasks, 'D156 effect kind changed'),
         (text.replace('\tG1-SLICE.', '\tUNKNOWN.', 1), tasks, 'D156 effect owner coverage'),
-        (text, tasks.replace('- ID: `G1-SLICE.5b.4c.h2.b.p.o.a01`', '- ID: `REMOVED`', 1),
+        (text, tasks.replace('- ID: `' + parent + '`', '- ID: `REMOVED`', 1),
          'D156 effect owner coverage'),
     ):
         try:
@@ -264,7 +271,8 @@ def effect_plan_controls():
     entries = GOOD['entries'](HERE / 'producer_entries.tsv')
     text = (HERE / 'python_effect_entries.tsv').read_text()
     tasks = (ROOT / 'docs/tasks/G1-SLICE-producers.md').read_text()
-    result, failures = effect_plan_cases(validate_effect_plan, entries, text, tasks)
+    result = validate_effect_plan(entries, text, tasks)
+    _, failures = effect_plan_cases(validate_effect_plan)
     original = Path(__file__).read_bytes()
     function = next(node for node in ast.parse(original).body
                     if isinstance(node, ast.FunctionDef) and node.name == 'validate_effect_plan')
@@ -281,7 +289,7 @@ def effect_plan_controls():
         scope = {'csv': csv, 'io': io}
         exec(compile(ast.fix_missing_locations(module), __file__, 'exec'), scope)
         try:
-            effect_plan_cases(scope['validate_effect_plan'], entries, text, tasks)
+            effect_plan_cases(scope['validate_effect_plan'])
         except AssertionError as error:
             assert error.args == (('D156 missed effect-plan refusal', diagnostic),), \
                 ('D156 unrelated effect guard fault', diagnostic, error.args)
@@ -297,7 +305,7 @@ def effect_plan_controls():
     scope = {'csv': csv, 'io': io}
     exec(compile(ast.fix_missing_locations(module), __file__, 'exec'), scope)
     try:
-        effect_plan_cases(scope['validate_effect_plan'], entries, text, tasks)
+        effect_plan_cases(scope['validate_effect_plan'])
     except AssertionError as error:
         assert error.args == ('D156 effect owner coverage',), \
             ('D156 unrelated split-owner fault', error.args)
