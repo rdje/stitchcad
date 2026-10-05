@@ -744,8 +744,8 @@ is required before completeness claims. No direct producer is executed with ambi
   Acceptance: divide finite entry ledger into bounded groups before edits; actual standalone
   captures/refusals and exclusive focused native assertions/restoration per group.
 - ID: `G1-SLICE.5b.4c.h2.b.p.o`
-  Status: `pending`
-  Goal: Python fixture/materialization/temp producers and dynamic delegated entry paths.
+  Status: `in_progress`
+  Goal: Python fixture/materialization/temp and delegated entries; own blocking bounded continuity before ledger division.
   Acceptance: divide the finite entry ledger before edits; keep borrowed module/fixture/root
   contracts, fail before escaped write/delegation, actual captures/body faults/focused checks.
 - ID: `G1-SLICE.5b.4c.h2.b.p.v`
@@ -900,22 +900,7 @@ Complete acceptance retained in [part145](../history/window6.md#stitchcad-devnot
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f3`
   Status: `done`
-  Goal: literal/normalized-expression guards and D159 real failed-body assertion classifiers.
-  Acceptance: source/output plans before reads/writes, actual captures/refusals/body faults;
-  exclusive native faults, exact source and current artifact restored; classifier noise refuses.
-  Retain whole completed receipts/reports under fixed caps before growth. P1 next after .n.f2.
-
-Complete recipe/statement final verification retained in [part152](../history/window6.md#stitchcad-devnotes-part152md).
-
-Work unit STITCHCAD-G1-0131 owns .n.f3, blocking whole-receipt/original-report retention and
-clarifying the prior final census receipt separator (13open/145sealed, rc=0).
-.n.f3 also wires the two classifier-only arms into the existing structural runner; guarded
-invocation and focused/coupled consumers must stay green. Shell-wide profile audit remains .b.s.
-
-
-### G1-SLICE.5b.4c.h2.b.p.n.f3
-
-Complete acceptance retained in [part146](../history/window6.md#stitchcad-devnotes-part146md).
+  Goal: literal/normalization guards; complete requirements/routing in [part183](../history/stitchcad-devnotes-part183.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f4`
   Status: `done`
@@ -940,12 +925,7 @@ Complete requirements/acceptance retained in [part161](../history/stitchcad-devn
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f9`
   Status: `done`
-  Goal: D164/D168 signature guards; complete requirements/acceptance/receipts in [part171](../history/stitchcad-devnotes-part171.md).
-Final retention: three whole7a7c5b8 intervals/public367/prior71 bytes exact;13open/150sealed, rc=0, eighth-retention-final-proof2.log.
-Initial retention probes1 excluded: corrected full CLI document versus sealed payload comparison, then closed live headings versus open report bullets; no retained bytes changed.
-Final glossary17/coverage9, rc=0; archive367/63working MD/14773L/1079761B, rc=0. Fixed caps held.
-Final0136 ledger9/pointer13, rc=0; selector calibration raises actual body reds79; final CI/publication43 terminal0 consumed.
-Final0136 staged gate all13green, rc=0, eighth-staged-gate-final.log; cached diff0; hook/brief0/clean before next leaf.
+  Goal: signature guards; complete final receipts in [part185](../history/stitchcad-devnotes-part185.md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3`
   Status: `done`
   Goal: bounded window6 retained before signature work; full acceptance in [part164](../history/stitchcad-devnotes-part164.md).
@@ -997,3 +977,20 @@ Native baseline log replay1 excluded: old signature fault logs absent (actual di
 - [x] ADDRESSED (verified): static-native-driver.log direct seven-export-absent26723 cases/28 Rust+6 reference+3 annex actual reds, rc=0; static-native-proof.log six HEAD snapshots/full baseline+restored outcomes/current Cargo artifact, rc=0; post-location native same hash, rc=0. Review100/7+3, loader94/95/four faults and publication45/D175 independent actual catalog omission, rc=0.
 - [x] NO REGRESSION: run_ci_environment_probes.sh CI19/local56/Python17/161/37/37/26/2/3/20; publication probes:45 pass/0 fail; archive28+CLI431/415 reads/ledger9+pointer13/coverage9 all terminal0 consumed, rc=0; no Rust/API/grammar change or unobserved CI claim.
 - [x] LOCKSTEP: static-retention-repair-final-proof.log seven wholea875617 intervals/prior406/six windows+master/public415/12open162sealed/no gaps/overlap/D175 decoded original exact, rc=0; size check0. Initial gate/link/archive1 excluded; cap/observed heading/invalid417B report repaired. static-archive-date-proof.log96/182 crossed UTC midnight; live routes correct Oct5/immutable bytes held, rc=0. Book/live .p.o synced; promotion: declined (existing full-plan/actual-fault/restoration/claim rules). Final staged gate13green, rc=0, static-staged-gate-complete.log.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.h`
+  Status: `done`
+  Goal: STITCHCAD-G1-0149 owns parent-planned blocking whole committed record retention before output/delegation audit growth.
+  Acceptance: exact source intervals/proxies/prior415 bytes/six windows/public readers/fixed caps; live/book/frontier sync and focused checks before .p.o.i.
+
+- [x] REPRODUCE / ISSUE: frozen HEAD49007a3 recipes999L/DEV_NOTES16382B block the next acceptance/audit records; actual source/registry measured before growth, rc=0.
+- [x] ROOT CAUSE (WHY + WHERE): completed live protocols/lessons/oldest ledgers occupy bounded working sets; output-retention-proof.log five whole committed intervals/prior415 hashes/six windows+master exact, rc=0; initial absent final heading1 diagnosed at observed table boundary.
+- [x] FIX: retain complete normalization requirements/routing, signature final receipts, static lesson/promotion/failed checks and two complete ledger entries; every node/proxy/date correction retained, exact Git source/hash/L/B/LF proof, rc=0.
+- [x] ADDRESSED (verified): output-retention-proof.log420 actual public reader results/exact source intervals/prior415 identities/59working MD/16093 decodedL/1172478B/550854 residentB/12open162sealed/no gaps/overlap, rc=0; fixed ceilings unchanged.
+- [x] NO REGRESSION: run_book_publication_probes.sh probes:45 pass/0 fail; archive28+CLI436/420 reads/ledger9+pointer13/coverage9 all terminal0 consumed, rc=0, output-publication/archive/ledger/coverage logs; no producer/Rust/grammar changes.
+- [x] LOCKSTEP: book describes pending module/borrowed-root audit; MEMORY/index/G1 frontier .p.o.i synced. Initial helper1 excluded; corrected interval boundaries proven, rc=0. promotion: declined (existing whole-retention/public-entry/borrowed-root rules). Final staged gate13green, rc=0, output-staged-gate.log.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.i`
+  Status: `pending`
+  Goal: independently divide finite Python output/delegation ledger into bounded owned groups before producer changes.
+  Acceptance: source/hash/call and public entry/module/fixture/root contracts; watched coverage, actual effects and safe refusal baselines, no unguarded native actions.

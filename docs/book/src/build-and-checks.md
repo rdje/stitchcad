@@ -227,7 +227,8 @@ entry captures at their first write. The membership native run with caller expor
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
 12 membership tests passing. All thirty-seven entry captures also refuse a late missing source before
 input reads, output writes or child dispatch. Python fixture/output and delegated entries remain under the
-bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
+bounded .h2.b.p audit. The next division reviews each module’s public entry and borrowed fixture/root
+contracts before applying output or delegation guards. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
 Twenty-six native-child capture cases execute actual entries with custom local stores,

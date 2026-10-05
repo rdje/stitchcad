@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0149 - bounded output/delegation continuity (leaf `G1-SLICE.5b.4c.h2.b.p.o.h`)
+
+- Retain five whole committed source records before task/note growth; preserve IDs and live date corrections.
+- Prior415 logical records/six windows/master and original source intervals stay exact; fixed caps unchanged.
+- Initial helper boundary1 diagnosed at the actual archive index; corrected complete retention proof follows.
+- No producer/Rust/grammar change. Output/delegation ledger division .p.o.i is next; D156 remains open.
+
 ## STITCHCAD-G1-0148 - complete static native guards (leaf `G1-SLICE.5b.4c.h2.b.p.n.f14`)
 
 - Guard20 inputs before helpers/outputs/children; preserve shared populations, public argv and stores.
@@ -234,23 +241,7 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
   attempt excluded. Seven complete cf1f1e0 intervals/public352/prior52 bytes exact0.
 - D161 actual predicates reproduced/owned next; D156 open. G1 5/18,13open/147sealed; grammar fixed.
 
-## STITCHCAD-G1-0132 - normalized/canonical recipe entry guards (leaf `G1-SLICE.5b.4c.h2.b.p.n.f4`)
 
-- Both entries plan all sources/output before reads/writes and preserve prepared child stores.
-- CI17runtime/35body/19prefixes/19late/nine children/two classifiers and publication43 pass0.
-- Exclusive absent-export38 genuine assertion reds; classifier modes0; exact sources restored and
-  complete normalized8/canonical10 tests pass0. Four whole22af192 intervals/public345/prior48 bytes0.
-- D160 broad canonical assertion predicate independently reproduced/owned next. Grammar/API fixed;
-  D156 remains open. G1 5/18,13open/146sealed; canonical/checked-expression guards follow.
-
-## STITCHCAD-G1-0131 - guarded normalization entries and D159 (leaf `G1-SLICE.5b.4c.h2.b.p.n.f3`)
-
-- Guard both entries before reads/writes, preserve prepared children and rebuild full restored targets.
-- D159 fixed: failed-body classifiers reject passing/expect/compiler/summary noise; actual broad faults red.
-  CI17runtime/31body/17prefixes/17late/seven child cases/two classifiers0; exclusive30 native reds,
-  exact sources/current artifacts restored6/8tests; both classifier modes0. Grammar unchanged.
-- Guarded full structural/coupled runner/publication43 pass0; four complete ecc67e5 intervals
-  retained exactly, public341/hash/L/B/LF/prior44bytes0. G1 5/18,12open/146sealed; D156 continues.
 
 | [`part132`](docs/history/stitchcad-changelog-part132.md) | whole G1-0130 ledger | 8 lines, 682 bytes, `sha256:6e3506f0…` |
 
@@ -324,3 +315,7 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
 | [`part117`](docs/history/window6.md#stitchcad-changelog-part117md) | complete verification continuity | 12 lines, 1064 bytes, `sha256:86e927ea…` |
 | [`part118`](docs/history/window6.md#stitchcad-changelog-part118md) | complete verification continuity | 6 lines, 573 bytes, `sha256:c225854a…` |
 | [`part119`](docs/history/window6.md#stitchcad-changelog-part119md) | complete closed verification | 9 lines, 745 bytes, `sha256:833b325f…` |
+
+| [`part133`](docs/history/stitchcad-changelog-part133.md) | G1-0131 ledger | 8 lines, 700 bytes, `sha256:534079f9…` |
+
+| [`part134`](docs/history/stitchcad-changelog-part134.md) | G1-0132 ledger | 8 lines, 680 bytes, `sha256:6617db21…` |

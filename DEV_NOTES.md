@@ -14,16 +14,14 @@ D162 namespace guard lesson retained in [part178](docs/history/stitchcad-devnote
 
 D161 statement and whole proof lesson retained in [part180](docs/history/stitchcad-devnotes-part180.md).
 
-## _(2026-10-04 UTC)_ — D156 static entry and D172–D175 repairs
+## _(2026-10-05 UTC)_ — bounded output/delegation audit continuity
 
-- Guard20 complete inputs before helper loading and output/native dispatch; preserve prepared stores and original populations/argv.
-- D172 actual labelled nonmacro panic accepted, early compiler refusal restored bytes without artifact. Current driver macro sites and outer finally rebuild fix both;161 body controls/37 early+late refusals/three complete mode captures0.
-- Direct absent-export run26723 cases/28 Rust/6 reference/3 annex actual reds0; six HEAD snapshots and full baseline/restored outcomes/current Cargo artifact proof0. Post-D173 native baseline same hash0; dispatch simulations remain separate.
-- D173 fixture loader omitted85 shell lines/impersonated original variant. Both current catalogs94/95, real refusal text and virtual frames/four actual loader faults0; worked review100/7+3 reds0. D174 book86 stale after eight later methods; draft87 caught before commit. Remove fixed totals; original AST/history proof0.
-- D175 actual scope body accepted a retired whole-graph claim (2fa9d5d7). Correct availability; independent later-section fixture and compiled catalog-omission control now refuse0. Publication45/current census0.
-- Initial staged gate1 exceeded book cap627B; consolidate duplicate prose. First rebuilt link1 used absent anchor; observed heading corrected. Both failures excluded.
-- Two initial archive/ledger runs1 rejected the uncommitted D175 report417B line. Reformat its invalid pre-seal output with readable wrapping and exact original bytes encoded; failed attempts excluded.
-- Seven whole Git intervals/prior406/public415/12open162sealed0; original reports exact. Promotion declined: existing plan/fault/restoration/claim rules.
+- Parent .p.o owned containment before adding child .p.o.h; recipes999L/notes16382B leave no safe receipt room.
+- Retain complete committed normalization requirements/routing, signature final receipts, static lesson/promotion/failed checks and two oldest ledgers. Preserve every ID, live date correction and immutable source byte; fixed caps stay.
+- Initial helper1 assumed a heading after the oldest ledger; observed archive-index boundary supplies its exact end. Partial source seals remain exact; failed attempt excluded.
+- Exact prior415/five intervals/public420/12open162sealed proof0; publication45/archive28+CLI436/ledger9+pointer13/coverage9 terminal0 consumed. Promotion declined: existing whole-record/guard-before-effects/borrowed-root principles. This slice changes no producer behavior; .p.o.i divides the ledger before repairs.
+
+Static guard/D172–D175 lesson retained in [part184](docs/history/stitchcad-devnotes-part184.md).
 
 
 D160 lesson retained in [part182](docs/history/stitchcad-devnotes-part182.md); UTC seal date correction:2026-10-05 (immutable header says Oct4).
