@@ -384,7 +384,9 @@ fn immutable_proofs_survive_advance_with_real_prior_sources_and_all_branch_depen
         let mut cursor = Cursor::new(FormulaNamespace::new([]).unwrap(), &recipe);
         let mut proofs = Vec::new();
         for (position, actual) in recipe.statements().iter().enumerate() {
-            let proof = cursor.current().unwrap().unwrap().check_kinds().unwrap();
+            let result = cursor.current().unwrap().unwrap().check_kinds();
+            assert!(result.is_ok());
+            let proof = result.unwrap();
             assert_eq!(proof.statement_index(), position + 1);
             assert!(std::ptr::eq(proof.statement(), actual));
             assert!(cursor.advance_metadata().unwrap());
@@ -432,7 +434,9 @@ fn immutable_proofs_survive_advance_with_real_prior_sources_and_all_branch_depen
     let mut cursor = Cursor::new(FormulaNamespace::new([]).unwrap(), &recipe);
     assert!(cursor.current().unwrap().unwrap().check_kinds().is_err());
     assert!(cursor.advance_metadata().unwrap());
-    let proof = cursor.current().unwrap().unwrap().check_kinds().unwrap();
+    let result = cursor.current().unwrap().unwrap().check_kinds();
+    assert!(result.is_ok());
+    let proof = result.unwrap();
     assert_eq!(proof.statement_index(), 2);
     let Checked::Let { expression } = proof.kind() else {
         {
@@ -471,12 +475,9 @@ fn assertion_payload_preserves_only_direct_symbolic_class_roles() {
         let source = format!("assert closure:eps_fmt={left}==1.0");
         let recipe = normalized(&source);
         let cursor = Cursor::new(FormulaNamespace::new([]).unwrap(), &recipe);
-        let error = cursor
-            .current()
-            .unwrap()
-            .unwrap()
-            .check_kinds()
-            .unwrap_err();
+        let result = cursor.current().unwrap().unwrap().check_kinds();
+        assert!(result.is_err());
+        let error = result.unwrap_err();
         let Refusal::AssertionDimension(args) = error.refusal() else {
             {
                 assert_role(false);
@@ -536,12 +537,9 @@ fn canonical_unknown_records_runtime_domains_and_customer_privacy_stay_separate(
     }
     let recipe = normalized("let customer_result:ratio=123456789 um");
     let cursor = Cursor::new(FormulaNamespace::new([]).unwrap(), &recipe);
-    let error = cursor
-        .current()
-        .unwrap()
-        .unwrap()
-        .check_kinds()
-        .unwrap_err();
+    let result = cursor.current().unwrap().unwrap().check_kinds();
+    assert!(result.is_err());
+    let error = result.unwrap_err();
     for text in [
         format!("{proof:?}"),
         format!("{:?}", proof.kind()),

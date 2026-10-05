@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0178 - checked statement modes and guarded extraction (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.3`)
+
+- Four inputs/23 files/3 mutables; class0 effects;22 original source/count cases.
+- Shared529 reds/35 classifiers/34 captures/198 refusals0; real22/every failed body macro/full7 exact.
+- Four D183 preconditions; full fmt/strict Clippy/59groups703pass0; defect closed.
+- Retain whole checked-expression/canonical-recipe/length ledger/D183;477 exact reads/prior474/all72.
+- D179 three fixed/recipe P1 next/D156 open; fixed caps/grammar/engine/400 stay.
+
 ## STITCHCAD-G1-0177 - checked expression modes and individual panic evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.2`)
 
 - Two inputs/17 logs/one mutable; classifier zero effects;16 exact ordered cases.
@@ -193,15 +201,6 @@ the digests afterwards.
 - Numeric family complete; D177 eleven fixed/4 P1 remain; .n05 next; focused/staged receipts in leaf.
 - Rust/API/grammar/400 cadence unchanged; private guards certify totality, not geometry.
 
-## STITCHCAD-G1-0166 - guarded length-operator files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.3`)
-
-- Plan7 logs/two inputs/one mutable source; preserve six faults/two selected/full4 public tests.
-- Shared264 body reds/30 classifiers/ten captures/42 physical refusals pass0.
-- Six real current macro reds; nine frozen inputs/three Rust HEAD files/full4 public artifact exact0.
-- Retain whole signed-round receipt/two lessons/two ledgers; prior446/all44/public448 exact.
-- Fix owned PDF-point prose: exact25400/72 ≈352.78µm, independently checked; production unchanged.
-- Focused/staged receipts in owning leaf; D177 ten fixed/5 P1 remain; domain .n04.4 next.
-- Rust/API/grammar/400 cadence unchanged; no early push or unobserved runner claim.
 
 
 
@@ -344,3 +343,5 @@ the digests afterwards.
 | [`part154`](docs/history/stitchcad-changelog-part154.md) | whole G1-0164 signed-round continuity ledger | 8 lines, 665 bytes, `sha256:a3aa5776…` |
 
 | [`part155`](docs/history/stitchcad-changelog-part155.md) | whole G1-0165 unsigned-round continuity ledger | 8 lines, 622 bytes, `sha256:33ca42fe…` |
+
+| [`part156`](docs/history/stitchcad-changelog-part156.md) | whole G1-0166 length-operator continuity ledger | 9 lines, 757 bytes, `sha256:1f5c635b…` |

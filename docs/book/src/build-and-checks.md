@@ -288,6 +288,18 @@ compile-time inputs and the current full ten-test executable restore exactly. D1
 four original classifiers and their native cases are independently repaired and replayed; remaining
 native groups inspect the boundary before signoff, with no broader affected-population claim.
 
+Checked statement plans four current inputs, twenty-three diagnostic files and three mutable
+implementation sources; classifier-only plans zero files/mutables/native effects. Two complete
+captures/ten physical refusals/twenty mode faults preserve all twenty-two source bindings and
+count-limited replacements, including both canonical-owner sites. Current thread macro evidence
+refuses nonthread notes, with a legacy-regex fault. All three read-only sources admit three links
+each and unused log aliases without native/source/output effects. Exclusive twenty-two real
+faults match authored failed sets; every failed body reaches a current macro. Four D183 public
+preconditions guard acceptance/refusal before extraction. Seventy-two inputs, sixty-three
+unchanged production Rust files, twenty-three local logs and the current full seven-test artifact
+remain exact. Full formatting/strict Clippy/fifty-nine native groups/seven-hundred-three tests pass.
+D179 checked statement fixed; checked recipe remains immediate P1 .n08.4.
+
 Checked expression plans two current inputs, seventeen diagnostic files and one mutable source.
 Classifier-only declares zero files/mutables/native effects. Two complete captures/six physical
 refusals/thirteen mode faults preserve all sixteen ordered cases, including both callee-priority
@@ -299,7 +311,7 @@ extraction paths now assert acceptance first. Seventy-two inputs/sixty-three unc
 Rust files/seventeen local logs/current full seven-test executable remain exact. Full formatting,
 strict Clippy and fifty-nine native groups/seven-hundred-three tests pass. D181 grammar availability
 now names implemented statement/whole proofs; formal grammar stays. D179 checked expression fixed;
-statement/recipe remain immediate P1 and run next.
+checked statement is also repaired; checked recipe remains immediate P1 and runs next.
 
 Canonical expression plans seven inputs: implementation/current test/three imported TSVs/literal
 annex/worked examples. Ordinary mode declares twenty diagnostic files; coupled mode declares four;
@@ -314,7 +326,7 @@ is copied before coupled mode reuses diagnostic filenames. Twenty-six frozen inp
 Rust files/five compile-time inputs remain exact through both runs. A final availability correction
 changes only imported annex prose, retaining its six normative rows and the other twenty-five inputs;
 the final current full nine-test executable is rebuilt and verified against that exact documentation.
-D179 canonical fixed; checked expression/statement/recipe repairs remain immediate P1 .n08.2–4.
+D179 canonical/expression/statement fixed; checked recipe remains immediate P1 .n08.4.
 D180 active decision/annex availability drift is fixed; identity bytes/grammar remain unchanged.
 
 D177's fifteen entries/sixteen predicates are now repaired and independently replayed. Current
@@ -467,7 +479,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and508 actual body faults, with35 calibrated failed-body classifiers,
+controls and529 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

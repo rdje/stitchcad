@@ -139,12 +139,26 @@ against Cargo's reported current artifact and require only E0451/E0515 for priva
 That compiler entry guards its implementation source and output directory before fixture reads or
 Cargo dispatch. Cargo and Rustc preserve prepared stores; public Cargo JSON selects the current
 library and dependency search directories.
-Twenty-two actual compiled body faults must fail, with all three implementation sources restored
-exactly and the complete focused target rebuilt. The direct entry validates those sources, its test
-source and output before reads/writes; children retain prepared stores. Failed-body panic locations
-must match current test assertion macro sites. Custom assert messages pass; compiler/expect/test-name
-noise refuses. Classifier-only mode compiles no native fault. Run mutations exclusively. Existing18 scope and16
-expression fault controls remain required when their implementation changes.
+The direct entry declares all four inputs, twenty-three ordinary diagnostic files and all three
+mutable sources before reads or effects. It preserves twenty-two source bindings and count-limited
+replacements, including both canonical-owner sites. Children retain prepared stores and the full
+seven-test argv. Every source restores exactly before the current full target is consumed.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/checked_statement_mutations.py --classifier-only
+```
+
+Classifier-only declares zero files/mutables/native effects. All three input sources may be read-only
+hard-linked files; unused fault/restoration aliases are outside that mode's declared file plan.
+Current thread panic path/line/byte-column must identify an assertion macro. Custom messages pass;
+nonthread/compiler/expect/test-name noise refuses. Two complete captures, ten physical refusals,
+twenty mode faults and an independent legacy-regex fault discriminate omissions, partial mutable
+plans, wrong replacement counts and restoration loss. Exclusive real replay matches authored failed
+sets and a current macro in every failed body. Four acceptance/refusal preconditions in three public
+tests prevent extraction panics from hiding rejection. Seventy-two frozen inputs/sixty-three unchanged
+production Rust files/twenty-three local logs/current full seven-test artifact remain exact; full
+formatting/strict Clippy/seven-hundred-three native tests pass. Run mutations exclusively. Existing
+18 scope and16 expression fault controls remain required when their implementation changes.
 
 ## Binding refusals retain real sources
 

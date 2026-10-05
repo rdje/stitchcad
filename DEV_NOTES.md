@@ -14,6 +14,15 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — checked statement modes and guarded extraction
+
+- Four inputs/23 files/3 mutables; class0 effects. Original22 source/count cases/argv/stores/restoration exact. Shared529 reds/35 classifiers/34 captures/198 refusals0;20 mode faults/legacy red. All3 readonly sources/3 links each/unused aliases exact0.
+- D183 faults1/F544:10,9/E479:14,22/D387:74 extract before assertion; each source/all inputs/full7 restored0 before edits. Four guards across3 existing tests. Exclusive22 authored failed sets/every failed body macro/72 inputs/63 Rust HEAD/23 logs/full7 1bff4ea5 exact0.
+- Full fmt/strict Clippy/59groups703pass0 consumed; inputs/artifact unchanged. D183 closed/D179 three fixed/recipe P1 next/D156 open; grammar/engine/400 stay. New WASM/runner unobserved.
+- Whole9d18303 checked-expression6692B67L retained51910–58602/SHAb59aadc5;41304B prefix/first62828B/map8169B exact. WholeDEV2121694B10L/CH156757B9L/D183104/prior474/all72/public477/seven windows/13open169sealed exact0.
+- Prediction12 corrected from source; first verifier15 expectation corrected/source-derived repeat0. Initial literal_eval refused before effects; four allowed assignment ASTs corrected. Publication45/coverage9/census229paths288checks/ledger9+13 pass0. Promotion declined (existing
+  complete plans/macros/whole records). Archive60 includes7 catalogs.
+
 ## _(2026-10-05 UTC)_ — checked expression modes and individual panic evidence
 
 - Two inputs/17 files/one mutable; class-only zero effects. Original16 case ASTs/ordered two-step replacement/full7 argv exact. Two captures/six physical refusals/13 mode faults/legacy fault0; shared508 reds/35 classifiers/32 captures/188 refusals0. Readonly3-linked input/aliases
@@ -38,16 +47,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Publication45/coverage9/census229paths288checks/effect67/29/file120/59/29/map/ledger controls0. Rust unchanged/full fmt-strict Clippy/703 gate0170 applies; new WASM/evaluation/runner unobserved. Promotion declined (existing complete plans/current macros/whole records); D179
   three P1 next/D156 open/grammar/400 stay.
 
-## _(2026-10-05 UTC)_ — canonical recipe modes close D178
-
-- Eight inputs/ordinary22 files/one mutable; classifier-only zero files/mutables/native writes. Original21 CASE AST/full10 argv/stores/restoration exact. Two complete captures/eighteen physical refusals/twenty-four mode omissions and legacy-regex fault discriminate.
-- Shared458 body reds/35 classifiers/27 captures/157 physical refusals0; All earlier controls retained. Copied readonly class accepts3-linked input/unused aliases with zero source/output writes/children; bytes/victim/environment exact.
-- Exclusive21 native faults match independently authored failed sets; every failed body reaches current macros, including small-stack workers.31 frozen inputs/18 Rust HEAD files/six compile-time inputs/22 single-link logs exact; current full10 artifact 1af368d6 passes0. No helper
-  repair.
-- Whole6618640 normalized-recipe4111B/25L retained52706–56817/SHA8e360fc1; first62828B/second21625B prefix/map8169B exact. Whole literal1881B/12L/Ease-set557B/7L/D178 report+closure sealed in DEV209/CH153/defects100; prior464/all62/public467/seven windows/12open165sealed exact.
-- Target retention boundary/quoting/target-only archive-output preflights refused before writes; corrected/excluded. Promotion declined (existing preflight/current-thread/whole-record rules). D178 four classifiers/native13/17/17/21/full6/8/8/10 closed; D156 continues .n08.
-- Publication45/coverage9/census229paths288checks/effect67/29/file120/56/26/map/ledger controls0. Rust unchanged/full fmt-strict Clippy/703 gate0170 applies; new WASM/evaluation/runner unobserved. Native terminal/source/artifact consumed before checks; fixed caps/grammar/400
-  stay.
+Whole canonical recipe modes and thread lesson retained in [part212](docs/history/stitchcad-devnotes-part212.md).
 
 Whole normalized recipe modes and thread lesson retained in [part211](docs/history/stitchcad-devnotes-part211.md).
 
@@ -185,3 +185,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part210`](docs/history/stitchcad-devnotes-part210.md) | whole normalized expression modes and thread lesson | 15 lines, 2174 bytes, `sha256:65a78cdb…` |
 
 | [`part211`](docs/history/stitchcad-devnotes-part211.md) | whole normalized recipe modes and thread lesson | 11 lines, 1852 bytes, `sha256:1e85ead9…` |
+
+| [`part212`](docs/history/stitchcad-devnotes-part212.md) | whole canonical recipe modes and thread lesson | 10 lines, 1694 bytes, `sha256:30fc4963…` |
