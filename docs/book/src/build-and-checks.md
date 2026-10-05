@@ -137,6 +137,19 @@ volumes refuse. Invalid path types or control bytes also refuse. An invalid entr
 local-environment refusal and exits2 before invoking a child. Named toolchains and unrelated
 environment values are preserved; paths still derive from the current repository root.
 
+Size membership additionally declares all seven numbered mutation logs and restored.log before
+reading inputs. Its implementation is an explicit mutable source; its current contract test is a
+guarded read-only source. Panic evidence must identify an assertion macro's current source, line
+and byte column in the failed-test body. Passed assertion names and labelled expect messages cannot
+supply that evidence. Complete intercepted captures check eight children/eight files; four physical
+copied-entry controls refuse the first/last log alias, a mutable-source hard link and a missing test
+source before any input read, write, activation or child. Native proof remains separate: all seven
+real faults match current macro sites, source bytes restore exactly, and the public current Cargo
+artifact executes all12 tests successfully.
+
+D177 records the same panic-evidence weakness in fourteen remaining entries. Their existing
+.f.n02–06 repairs own guarded current test locations and independent controls before native signoff.
+
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
 declared source files, output directories and explicit `output_files` without creating paths or
 changing the environment. It returns the output directory names relative to the supplied root.
@@ -278,7 +291,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and171 actual body faults,
+controls and179 actual body faults,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

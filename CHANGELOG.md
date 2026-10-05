@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0157 - complete membership file and panic proof (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n01`)
+
+- Plan all8 logs/two sources/one mutable input before effects; preserve all seven cases.
+- Complete eight-child/file capture/four physical refusals/179 body reds/21 classifiers0.
+- Real seven current macro reds/eight input hashes/full12 public artifact exact; Rust unchanged.
+- D17715-entry scope owned, membership fixed/14 pending .n02–06; grammar/400 cadence stays.
+
 ## STITCHCAD-G1-0156 - explicit mutable source plans (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.l`)
 
 - Refuse hard-linked outputs/mutable source subsets before effects; preserve readonly inputs.
@@ -228,24 +235,6 @@ Guard current test sources and require failed-body assertion locations; labelled
 Strict controls17/89 body reds/12 classifiers;38 native macro reds/six sources exact/full8/10 restored0.
 D167 fixed; four complete records retained/prior380 exact/public384. Grammar and400 cadence unchanged.
 
-## STITCHCAD-G1-0140 - normalization assertion provenance (leaf `G1-SLICE.5b.4c.h2.b.p.n.f3.r`)
-
-Guard current test sources and require failed-body assertion macro sites; labelled expect noise refuses.
-Three refusal preconditions assert explicitly; 13+17 native reds/four sources exact/full6/8 restored0.
-Strict Python controls17/83 body reds/ten classifiers; D165 fixed and D167 recipe sibling repair owned.
-Retain complete records under fixed caps; grammar/API unchanged,400-commit push cadence holds.
-
-## STITCHCAD-G1-0139 - honor400 push cadence (leaf `G1-SLICE.5b.4c.h2.b.p.n.h3.v.c`)
-
-Remove automatic early-push exceptions by director ruling; align checker/Make/help/book/workflow.
-D166 failed count now refuses2; 19 controls/four actual body reds pass0; no Git/source mutation.
-Whole closed runner records retained; local verification precedes D165 normalization proof repair.
-
-## STITCHCAD-G1-0138 - observed window6 CI (leaf `G1-SLICE.5b.4c.h2.b.p.n.h3.v`)
-
-Exact c455b93 doctrine8/Rust11 steps success; actual703tests/59groups/WASM3/local stores.
-CLI386/370/newest-catalog refusal0; four complete records retained. D165 owned next.
-Director400 cadence supersedes automatic exceptions; implementation .h3.v.c precedes guards.
 
 
 
@@ -331,3 +320,5 @@ Director400 cadence supersedes automatic exceptions; implementation .h3.v.c prec
 | [`part135`](docs/history/window7.md#stitchcad-changelog-part135md) | whole G1-0134/0133 ledgers | 17 lines, 1365 bytes, `sha256:b27ceffd…` |
 
 | [`part136`](docs/history/stitchcad-changelog-part136.md) | whole G1-0137/0136/0135 ledgers | 24 lines, 1819 bytes, `sha256:9b764edc…` |
+
+| [`part137`](docs/history/stitchcad-changelog-part137.md) | three whole G1-0140/0139/0138 ledgers | 18 lines, 1236 bytes, `sha256:38ef85ae…` |

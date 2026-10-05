@@ -66,6 +66,10 @@ unique identities/labels, missing lookups, distinct sets, all system choices, a 
 and checked revision overflow. Compile-fail tests cover private label/membership mutation and an
 attempt to add quantity data. Seven real production mutations must fail regression assertions,
 including an introduced lexical sort and a wrapped revision fallback, then restore exact source.
+The verifier guards its mutable implementation and current read-only test source before effects,
+and plans all eight log files. Each real failure must identify a current test assertion macro by
+source, line and byte column; a panic message containing "assertion" supplies no proof by itself.
+The restored public Cargo artifact runs the complete12-test target successfully.
 The standard strict Rust gate runs these contracts; native/WASM integration is checked locally.
 
 D70 records a conflict in the normative axes requirements: the field table says optional and only

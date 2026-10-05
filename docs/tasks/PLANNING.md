@@ -986,12 +986,12 @@ D164–D167 complete closure receipts retained in [part91](../history/window7.md
 
 D168-D171 complete closure receipts/original-report routes retained in [part94](../history/window7.md#stitchcad-defects-part94md).
 
-D172 closes at .n.f14: current driver macro locations/always restored artifact;161 body controls/three complete mode captures/28 native Rust reds/six exact sources, rc=0.
-D173 closes at .n.f14: both original-location catalogs/real tracebacks/virtual variants/four actual loader faults, rc=0.
-D174 closes at .n.f14: independent Git/AST identifies eight later methods; fixed book totals removed, dynamic catalogs verified, rc=0.
-Original D172–D174 reports retained exactly in [part95](../history/window7.md#stitchcad-defects-part95md).
+D172–D176 closures retained in [part98](../history/stitchcad-defects-part98.md).
 
-D175 closes at .n.f14: public whole dependency graph availability corrected; publication45 checks include independent later-section stale sentence and actual compiled catalog-omission refusal, rc=0.
-Original report retained exactly in [part96](../history/window7.md#stitchcad-defects-part96md); UTC seal date correction:2026-10-05 (immutable header says Oct4).
-
-D176 task-index command totals close at .p.o.i; original examples/history/current coverage proof retained in [part97](../history/window7.md#stitchcad-defects-part97md).
+- **D177** —15 remaining native entries/16 fault predicates accept nonmacro failure evidence:
+  actual12 byte-substring entries/13 conditions accept passed assertion_name plus expect-only panic;
+  three actual prefix helpers accept labelled-expect panic. AST/eval diagnostics pass0 without writes,
+  target/membership-predicate-census.log and membership-prefix-diagnostic.log; original membership
+  predicate introduced0b77235. Own G1-SLICE.5b.4c.h2.b.p.o.f.n01–06, P1 in each current repair:
+  guarded current test/macro locations, independent noise/body faults and exclusive real native reds;
+  never upgrade prior raw logs without independent replay. Membership first; remaining14 owned next.
