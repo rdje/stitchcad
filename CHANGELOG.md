@@ -110,6 +110,16 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0166 - guarded length-operator files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.3`)
+
+- Plan7 logs/two inputs/one mutable source; preserve six faults/two selected/full4 public tests.
+- Shared264 body reds/30 classifiers/ten captures/42 physical refusals pass0.
+- Six real current macro reds; nine frozen inputs/three Rust HEAD files/full4 public artifact exact0.
+- Retain whole signed-round receipt/two lessons/two ledgers; prior446/all44/public448 exact.
+- Fix owned PDF-point prose: exact25400/72 ≈352.78µm, independently checked; production unchanged.
+- Focused/staged receipts in owning leaf; D177 ten fixed/5 P1 remain; domain .n04.4 next.
+- Rust/API/grammar/400 cadence unchanged; no early push or unobserved runner claim.
+
 ## STITCHCAD-G1-0165 - guarded unsigned-round files and both profiles (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.2`)
 
 - Plan12 logs/three inputs/one mutable source; preserve original CALL-derived9 faults.
@@ -219,19 +229,6 @@ the digests afterwards.
 - Retain three whole2358d4e lessons; prior423/public424 exact. Book/live/focused checks pass0.
 - D156 stays open: P1 remaining filename audit next;400 push cadence, no early push.
 
-## STITCHCAD-G1-0151 - finite producer effect ownership (leaf `G1-SLICE.5b.4c.h2.b.p.o.i`)
-
-- Assign67 output/delegation candidates to28 bounded owners; runtime inspection/repairs remain pending.
-- Watch exact path/kind/terminal-owner coverage with eight data refusals/seven actual body reds0.
-- Retain four whole lessons/two oldest ledgers from ab3f720; prior420/six windows+master exact.
-- D176 stale task-index command totals removed; original examples/history/closure retained exactly.
-- Source/book/live sync and focused census/publication/archive/ledger/coverage checks follow;400 cadence stays.
-
-## STITCHCAD-G1-0150 - bounded generated navigation (leaf `G1-SLICE.5b.4c.h2.b.p.o.i.k`)
-
-- Shorten redundant .md task/decision labels; preserve all72 generated destinations/order and path CLI.
-- Actual map7974B admits planned output/delegation sibling under unchanged8192B ceiling.
-- No producer/Rust/grammar behavior change; source/freshness/publication/coverage checks follow.
 
 
 
@@ -338,3 +335,5 @@ the digests afterwards.
 | [`part142`](docs/history/stitchcad-changelog-part142.md) | whole G1-0148 static guard ledger | 10 lines, 861 bytes, `sha256:790a719b…` |
 
 | [`part143`](docs/history/stitchcad-changelog-part143.md) | whole G1-0149 continuity ledger | 6 lines, 530 bytes, `sha256:d5b8a94e…` |
+
+| [`part144`](docs/history/stitchcad-changelog-part144.md) | whole G1-0151 and G1-0150 continuity ledgers | 13 lines, 983 bytes, `sha256:4c0a2f29…` |

@@ -103,7 +103,7 @@ inches → micrometres.
 ### 2.1 Formats whose quantum is not an integer number of micrometres
 
 Some target formats cannot represent our internal unit exactly. The PDF point is the case in point:
-1 pt = 1/72 in = 352.7 µm. For these formats:
+1 pt = 1/72 in ≈ 352.78 µm. For these formats:
 
 1. Geometry is computed **entirely** in internal units.
 2. The conversion to the format's coordinate space happens once, at serialization, with the declared
@@ -217,9 +217,13 @@ bash docs/tasks/artifacts/formula_structure/run_length_operator_mutations.sh
 ```
 
 Four public contracts include a nine-by-nine independent i128 pair oracle and explicit Result typing.
-Six compiled production mutations prove domain, operation and saturation discrimination with assertion
-failures and exact restoration; run alone. Strict native/release and three-library WASM checks are
-separate from formula evaluation, geometry and release proof. Operation context now follows §2.5.
+Six compiled production mutations prove domain, operation and saturation discrimination. Each
+failure must name a current assertion macro in the guarded test source; passed assertion-like names
+and labelled expect panics refuse. The diagnostic guards all seven log files, the current read-only
+test and mutable implementation before reads. Complete dispatch and physical-path controls are
+separate from six real failures, exact nine-input restoration and the current four-test executable.
+Run mutation checks alone. Strict native/release and three-library WASM checks remain separate
+from formula evaluation, geometry and release proof. Operation context follows §2.5.
 
 ### 2.5 Domain diagnostics retain the producing operation
 

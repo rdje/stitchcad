@@ -14,6 +14,16 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — complete length-operator files and current macro sites
+
+- Guard seven logs/two inputs/one mutable source before reads. Six pure cases/two selected fault tests/full four-test public contract remain exact; bounded valid operands need no Rust helper repair.
+- Actual committed predicate accepts passed assertion_name with expect-only failed body101, without effects. Current failed-body path/line/UTF-8 byte-column macro evidence replaces broad substring matching.
+- Shared264 actual body reds/30 classifiers/ten complete native captures/42 physical refusals pass0. All prior runtime/file/mutable/entry/late-source/child/compiler/static controls remain0; dispatch simulation proves dispatch only.
+- Exclusive six real macro reds reach current selected sites53:9/68:9; seven logs/full4 restored0. Nine frozen inputs/three Rust HEAD files/original cases/selected tests exact. Public Cargo artifact752d49c5… executes all4 tests0; Rust unchanged.
+- Whole signed-round body3171eac44763–49287/27L4524B/SHAb4d29d3d retained before retirement; prior27153B sibling prefix/canonical headers/status/Paths/map exact. Whole two Ease lessons/two ledgers retained; prior446/all44/public448/13open163sealed/seven windows exact.
+- Owned PDF-point prose defect closed: exact25400/72=3175/9 differs from352.7 by7/90; independent Decimal50 gives352.78. Corrected exact-equality prose to ≈352.78, consistent with table/ADR/public ratio docs; production unaffected.
+- Promotion declined: existing source/effect/whole-record rules. D177 ten fixed/5 P1 remain; domain .n04.4 next. Grammar/API/400 cadence unchanged; local scope, runner unobserved. Final focused/staged receipts belong in the owning leaf.
+
 ## _(2026-10-05 UTC)_ — unsigned rounding preserves both profiles and totality evidence
 
 - Actual guarded original zero fault reaches production80:17 then labelled expect16:10; old complete predicate accepts101. Ten original inputs/two HEAD Rust files/full5 restored/current artifact5 exact. D177 owns explicit totality assertion; typed inner UnitError/five tests/138 rows remain.
@@ -33,24 +43,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Full Rust fmt/strict Clippy/703 tests in59 groups pass0. Whole b0bc33c DEV6939–8254/7L1315B/SHA45d032ae and CH22928–23789/10L861B/SHA790a719b retained; prior442/all40/public444 exact/13open163sealed/no gaps/seven windows unchanged.
 - Promotion declined: existing current-source/effect/whole-record rules. D177 eight fixed/7 P1 remain; unsigned .n04.2 next. Production rounding/grammar/400 cadence unchanged; local scope, runner unobserved. Final focused and staged receipts in the owning leaf.
 
-## _(2026-10-05 UTC)_ — complete Ease-set effect and panic plans
-
-- Eight pure cases precede eleven-file/two-input/one-mutable-source activation; six source-dependent AST statements stay exact and ordered. Preserve ten filters/stores/full restoration, selected membership/current mapping spans and empty-table refusal.
-- Actual old predicate accepts passed assertion_name plus expect-only failure without effects. Seven authored complete dispatch fixtures/28 physical refusals/shared230 body reds/27 classifiers pass0. Simulation proves dispatch only; original Source bytes unchanged.
-- Inline closure macros require UTF-8 byte columns. Generalized the existing inline control for collection and Ease-set; independent ASCII/multibyte positives/wrong-byte refusals and actual leading-only helper faults pass0. Known appended cases calibrate each last-file omission.
-- Exclusive ten current macro reds/full14 restored0. Independent selected-test/sites/eight frozen inputs/two HEAD Rust files/pure8 cases/six statements/eleven local single-link logs exact. Public Cargo artifactc283cb01… executes14 tests0; Rust unchanged.
-- Whole1b74946 chart lesson/two oldest ledgers copied and verified before retirement: DEV6488–8232/8L1744B/SHA56585fbc and CH23232–24329/14L1097B/SHA8fa23459. Prior440/all38 archive files/public442 exact;13open/163sealed/no gaps/seven windows unchanged.
-- Ledger9+13 terminal0; known ls/head broken-pipe stderr observed again, scheduled P3 .b.s repair remains owned.
-- Promotion declined: existing current-source/effect/whole-record rules. Parent Ease family done; D177 seven entries fixed/8 P1 remain, numeric .n04 next. Fixed caps/grammar/API/400 cadence/local scope retained; final focused receipts in leaf, runner verdict unobserved.
-
-## _(2026-10-05 UTC)_ — complete individual Ease effect and panic plans
-
-- Six pure cases precede eight-file/two-input/one-mutable-source activation. All five source-dependent AST statements remain exact and ordered, including the complete two-alternative alias predicate; seven filters/stores/restoration unchanged.
-- Actual old predicate accepts passed assertion_name with expect-only failure. Six independent measurement captures/24 physical refusals/shared221 body reds/26 classifiers pass0; dispatch simulation stays separate from real native proof.
-- Exclusive seven current macro reds/full13 restored0; independent selected-test/byte-site replay verifies eight frozen inputs/two Rust HEAD files/original cases/statements/eight single-link local logs. Public Cargo artifacta8cd5d21… executes13 tests0; Rust unchanged.
-- Five whole ade5165 completed producer bodies copied byte-exact into a bounded owned sibling before retirement; canonical headers/IDs/status/Paths stay live. Map8102B retains all prior ordered targets. Two whole DEV/CH records retained; prior438/all36/public440 exact,13open/163sealed.
-- Pre-copy parse1/title fixture1/numeric thread-id replay1/checklist608B preflight1 excluded; tools located and corrected each helper error. No native/source results changed. Promotion declined: existing current-source, explicit ownership and whole-record rules.
-- D177 six entries fixed;9 P1 remain. Ease-set .n03.2 next. Fixed caps/grammar/API/400 cadence unchanged; runner verdict unobserved. Focused final receipts live in the owning leaf.
+Whole Ease-set/individual lessons retained in [part201](docs/history/stitchcad-devnotes-part201.md).
 
 Whole collection/MTM lessons retained in [part200](docs/history/stitchcad-devnotes-part200.md).
 
@@ -144,3 +137,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part199`](docs/history/stitchcad-devnotes-part199.md) | whole table effect and panic lesson | 7 lines, 1315 bytes, `sha256:45d032ae…` |
 
 | [`part200`](docs/history/stitchcad-devnotes-part200.md) | whole collection and MTM effect/panic lessons | 15 lines, 2884 bytes, `sha256:d816aca2…` |
+
+| [`part201`](docs/history/stitchcad-devnotes-part201.md) | whole Ease-set and individual Ease lessons | 18 lines, 3326 bytes, `sha256:4de193fd…` |

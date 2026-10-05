@@ -464,16 +464,20 @@ def measure_fixture(entry_path):
                     'both_i64_endpoints_are_representable_with_either_denominator_sign',
                     'extreme_denominators_zero_and_signs_preserve_half_away_rounding',
                     'extreme_denominators_zero_and_signs_preserve_half_away_rounding')
-    else:
-        assert entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py', 'D156 unknown native entry'
+    elif entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py':
         stem = 'unsigned_round'
         selected = ('full_width_inputs_and_high_remainders_round_without_narrowing',) * 4 + \
                    ('even_and_odd_denominator_half_neighborhoods_are_distinct',) * 2 + \
                    ('zero_denominator_retains_public_operation_without_panicking',) * 3
+    else:
+        assert entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/length_operator_mutations.py', 'D156 unknown native entry'
+        stem = 'length_operator'
+        selected = ('signed_addition_crossings_refuse_instead_of_constructing_invalid_lengths',
+                    'signed_subtraction_crossings_refuse_instead_of_constructing_invalid_lengths') * 3
     work_name = {'table': 'measurement_table_mutations', 'round': 'formula_round_mutations',
                  'unsigned_round': 'formula_unsigned_round_mutations'}.get(stem, stem + '_mutations')
-    package = 'sc-units' if stem in {'round', 'unsigned_round'} else 'sc-measure'
-    source_stem = 'round' if stem == 'unsigned_round' else stem
+    package = 'sc-units' if stem in {'round', 'unsigned_round', 'length_operator'} else 'sc-measure'
+    source_stem = {'unsigned_round': 'round', 'length_operator': 'length'}.get(stem, stem)
     return (ROOT / ('crates/' + package + '/src/' + source_stem + '.rs'),
             ROOT / ('crates/' + package + '/tests/' + stem + '_contract.rs'),
             ROOT / ('target/' + work_name), selected)
@@ -1258,7 +1262,8 @@ def main():
                      ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py',
                      ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py',
                      ROOT / 'docs/tasks/artifacts/formula_structure/round_mutations.py',
-                     ROOT / 'docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py')
+                     ROOT / 'docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py',
+                     ROOT / 'docs/tasks/artifacts/formula_structure/length_operator_mutations.py')
     measure_physical, measure_classifiers = 0, 0
     for measure_path in measure_paths:
         measure_text = measure_path.read_text()
@@ -1479,7 +1484,7 @@ def main():
     for path, work_name in adopters:
         text = path.read_text()
         multiple_sources = {
-            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py', 'size_chart_collection_mutations.py', 'ease_mutations.py', 'ease_set_mutations.py', 'round_mutations.py', 'unsigned_round_mutations.py',
+            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py', 'size_chart_collection_mutations.py', 'ease_mutations.py', 'ease_set_mutations.py', 'round_mutations.py', 'unsigned_round_mutations.py', 'length_operator_mutations.py',
             'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',

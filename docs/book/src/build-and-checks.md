@@ -189,7 +189,13 @@ Nine real debug macro failures and one release failure preserve the original CAL
 ten selected inputs restore exactly and both public five-test artifacts pass. Its totality helper
 also uses an explicit assertion; production arithmetic remains unchanged.
 
-D177's fifteen-entry scope has nine entries verified; six remain. Their .f.n04.3–06 repairs
+Length operators declare seven logs/two inputs/one mutable source before reads. Six original cases
+select two crossing contracts; complete dispatch/four physical refusals discriminate missing guards.
+Six real failures reach current assertion macros and restore nine frozen inputs/three Rust files
+exactly. The current public executable passes all four contracts, including the independent pair
+oracle and Result typing. No Rust code or tests changed.
+
+D177's fifteen-entry scope has ten entries verified; five remain. Their .f.n04.4–06 repairs
 own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
@@ -333,7 +339,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and256 actual body faults, with29 calibrated failed-body classifiers,
+controls and264 actual body faults, with30 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

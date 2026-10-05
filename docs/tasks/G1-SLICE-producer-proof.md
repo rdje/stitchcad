@@ -155,3 +155,39 @@ physical aliases/late-test/omission/noise controls. Shared python_producer_contr
 helpers/logs are owned here. Also retain whole older DEV/CH records from ade5165 before live growth;
 verify original Git intervals, prior archive bytes/readers and fixed caps before committing.
 
+
+Source: `3171eac95adb84cd6f54dd97cf659aa773371938`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Signed rounding](#signed-rounding) | 44763–49287 | 4524 / 27 | `b4d29d3de1508b00fd871c91e89e665b5cb88bd9423da8fe7be849fcf579acbe` |
+
+### Signed rounding
+
+Full4 entries, signed wrapper/round.rs/round_contract.rs/public unit exports/36-row fixture,
+.5a.3a canonical contract, units §2/§2.3/formula §4.2 and numeric-rounding annex reviewed.
+The total helper catches public unwinds then uses labelled expect; own a guarded exclusive actual
+zero-guard fault to determine its panic site before deciding the current-test repair. All Target
+helpers/logs/native source restoration are owned here. Extend independent fixture/source/argv
+captures to sc-units, keep old measurement captures and prepare stores. Own split TSV rows and
+whole older DEV/CH retention from b0bc33c before receipt growth; verify source intervals/prior
+archive/readers/fixed caps. Production rounding/grammar stay unchanged; Rust test changes require
+full fmt/strict Clippy/tests after exclusive real reds and exact restoration.
+
+Actual guarded exclusive original zero fault reproduces production divide panic at round.rs80:17
+and labelled expect at round_contract.rs11:46; original complete predicate accepts rc101. Ten frozen
+inputs/two HEAD Rust files exact/full4 restored/public current artifact4 pass, rc=0,
+target/round-expect-repro.log. D177 owns explicit macro totality assertion in the current test helper,
+preserving four tests/36 rows/production rounding. New classifier must independently verify both
+selected-test macros and the guarded total helper macro; no labelled-expect exception. Full Rust
+fmt/strict Clippy/tests required for this test-source change. No native job remains from reproduction.
+
+- [x] REPRODUCE / ISSUE: guarded exclusive original zero fault divides at round.rs80:17 then labelled expect at test11:46; original full predicate accepts101. Ten original inputs/two HEAD Rust files/full4 restored/current artifact4 exact, rc=0, target/round-expect-repro.log. D156 missing6 files/mutable intent/imported fixture and D177 current macro evidence owned here; full public/source/tests/fixture/canonical/book reviewed before edits.
+- [x] ROOT CAUSE: directories omit leaf identity/mutable intent; broad assertion bytes accept labelled expect without a macro. Independent complete six-child/file/three-source capture and five physical first/last symlink/mutable hard-link/missing-test/missing-fixture refusals pass, rc=0, target/round-producer-controls.log. No unsafe child/write; source/alias bytes unchanged.
+- [x] FIX: five original cases precede six-file/three-input/one-mutable-source guard; current failed-body macro byte sites required. Total helper explicitly asserts outer catch_unwind result before extraction, preserving typed inner UnitError/four tests/36 rows. Shared240 body reds/28 classifiers/eight complete captures/33 physical refusals/all prior31/24/26/37/26/two compiler/three static controls0, rc=0, round-producer-controls.log; selective helper/fixture omission and source-panic/expect/wrong-site controls discriminate. Simulation proves dispatch only.
+- [x] ADDRESSED: exclusive five real macro reds/full4 restored, rc=0, target/round-native-final.log. Ten frozen inputs/production-module-fixture HEAD exact/helper-only test patch/five cases/six local single-link logs/current sites40:9,23:9,40:9,72:9,12:5 exact, rc=0, round-native-proof.log. Cargo-current artifact SHAe032081de15d5b20713dfa64980a79f8c5b195c4ebeb2974e1546527a5257473 executes4 tests0, rc=0, round-native-artifact-proof.log. Replay review corrected obsolete all-tests-HEAD assumption before execution; production unchanged.
+- [x] NO REGRESSION: full Rust fmt/strict Clippy/703 tests across59 groups/0 failed/0 ignored pass, rc=0, target/round-rust-check.log. Publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths51owners21groups/15refusals12reds/map/ledger9+13 pass, rc=0, round-*-final logs; terminal jobs consumed. Whole b0bc33c DEV6939–8254/7L1315B and CH22928–23789/10L861B retained; prior442/all40/public444/13open163sealed/no gaps or overlap/seven windows exact, rc=0, round-retention-final.log.
+- [x] LOCKSTEP: signed child done; parent retains four paths with three pending children; book/live/MEMORY/G1/index route unsigned .n04.2. D177 eight fixed/7 P1 remain; production rounding/grammar/400 cadence unchanged. Archive27raw/16962L/1231839decodedB/554924residentB fits fixed caps, rc=0, round-retention-final.log. DEV line324B pre-stage census tightened to318B; promotion: declined (existing current-source/effect/whole-record rules). Local verification only; runner verdict unobserved.
+
+  Final staged gate13 green, rc=0, target/round-staged-gate.log.
+

@@ -441,32 +441,7 @@ macro plans, independent capture/physical/body controls and exclusive source/art
   Additional paths: crates/sc-units/tests/round_contract.rs;docs/tasks/artifacts/ci_environment/python_producer_contract.py
   Acceptance: preserve5 faults/6 logs/public4 contracts/36 Fraction rows; guard implementation/test/imported fixture before reads; reproduce labelled-expect failure, explicit macro assertion if confirmed; exact sources/artifact and full Rust check for test changes.
 
-Full4 entries, signed wrapper/round.rs/round_contract.rs/public unit exports/36-row fixture,
-.5a.3a canonical contract, units §2/§2.3/formula §4.2 and numeric-rounding annex reviewed.
-The total helper catches public unwinds then uses labelled expect; own a guarded exclusive actual
-zero-guard fault to determine its panic site before deciding the current-test repair. All Target
-helpers/logs/native source restoration are owned here. Extend independent fixture/source/argv
-captures to sc-units, keep old measurement captures and prepare stores. Own split TSV rows and
-whole older DEV/CH retention from b0bc33c before receipt growth; verify source intervals/prior
-archive/readers/fixed caps. Production rounding/grammar stay unchanged; Rust test changes require
-full fmt/strict Clippy/tests after exclusive real reds and exact restoration.
-
-Actual guarded exclusive original zero fault reproduces production divide panic at round.rs80:17
-and labelled expect at round_contract.rs11:46; original complete predicate accepts rc101. Ten frozen
-inputs/two HEAD Rust files exact/full4 restored/public current artifact4 pass, rc=0,
-target/round-expect-repro.log. D177 owns explicit macro totality assertion in the current test helper,
-preserving four tests/36 rows/production rounding. New classifier must independently verify both
-selected-test macros and the guarded total helper macro; no labelled-expect exception. Full Rust
-fmt/strict Clippy/tests required for this test-source change. No native job remains from reproduction.
-
-- [x] REPRODUCE / ISSUE: guarded exclusive original zero fault divides at round.rs80:17 then labelled expect at test11:46; original full predicate accepts101. Ten original inputs/two HEAD Rust files/full4 restored/current artifact4 exact, rc=0, target/round-expect-repro.log. D156 missing6 files/mutable intent/imported fixture and D177 current macro evidence owned here; full public/source/tests/fixture/canonical/book reviewed before edits.
-- [x] ROOT CAUSE: directories omit leaf identity/mutable intent; broad assertion bytes accept labelled expect without a macro. Independent complete six-child/file/three-source capture and five physical first/last symlink/mutable hard-link/missing-test/missing-fixture refusals pass, rc=0, target/round-producer-controls.log. No unsafe child/write; source/alias bytes unchanged.
-- [x] FIX: five original cases precede six-file/three-input/one-mutable-source guard; current failed-body macro byte sites required. Total helper explicitly asserts outer catch_unwind result before extraction, preserving typed inner UnitError/four tests/36 rows. Shared240 body reds/28 classifiers/eight complete captures/33 physical refusals/all prior31/24/26/37/26/two compiler/three static controls0, rc=0, round-producer-controls.log; selective helper/fixture omission and source-panic/expect/wrong-site controls discriminate. Simulation proves dispatch only.
-- [x] ADDRESSED: exclusive five real macro reds/full4 restored, rc=0, target/round-native-final.log. Ten frozen inputs/production-module-fixture HEAD exact/helper-only test patch/five cases/six local single-link logs/current sites40:9,23:9,40:9,72:9,12:5 exact, rc=0, round-native-proof.log. Cargo-current artifact SHAe032081de15d5b20713dfa64980a79f8c5b195c4ebeb2974e1546527a5257473 executes4 tests0, rc=0, round-native-artifact-proof.log. Replay review corrected obsolete all-tests-HEAD assumption before execution; production unchanged.
-- [x] NO REGRESSION: full Rust fmt/strict Clippy/703 tests across59 groups/0 failed/0 ignored pass, rc=0, target/round-rust-check.log. Publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths51owners21groups/15refusals12reds/map/ledger9+13 pass, rc=0, round-*-final logs; terminal jobs consumed. Whole b0bc33c DEV6939–8254/7L1315B and CH22928–23789/10L861B retained; prior442/all40/public444/13open163sealed/no gaps or overlap/seven windows exact, rc=0, round-retention-final.log.
-- [x] LOCKSTEP: signed child done; parent retains four paths with three pending children; book/live/MEMORY/G1/index route unsigned .n04.2. D177 eight fixed/7 P1 remain; production rounding/grammar/400 cadence unchanged. Archive27raw/16962L/1231839decodedB/554924residentB fits fixed caps, rc=0, round-retention-final.log. DEV line324B pre-stage census tightened to318B; promotion: declined (existing current-source/effect/whole-record rules). Local verification only; runner verdict unobserved.
-
-  Final staged gate13 green, rc=0, target/round-staged-gate.log.
+Complete committed verification retained in [producer proof](G1-SLICE-producer-proof.md#signed-rounding); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04.2`
   Status: `done`
@@ -501,10 +476,45 @@ that helper with an explicit outer-unwind assertion; preserve five tests/138 row
   Final staged gate13 green, rc=0, target/unsigned-round-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04.3`
-  Status: `pending`
-  Goal: length-operator full file/mutable/current test-site repair after unsigned rounding.
+  Status: `done`
+  Goal: STITCHCAD-G1-0166 owns length-operator full file/mutable/current test-site repair after unsigned rounding.
   Paths: docs/tasks/artifacts/formula_structure/length_operator_mutations.py
+  Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/G1-SLICE-producer-proof.md
   Acceptance: preserve6 cases/7 logs/two selected fault tests/full4 public contracts; independent capture/refusals/body faults and exclusive exact source/current artifact evidence.
+
+Full entry/wrapper/length.rs/public unit exports/four-test contract, .5a.3b.3b.1a canonical record,
+roadmap numerical/G1 and units §1/§2.4/build book reviewed. Original six pure cases select two
+crossing tests; full restored target has four. Own actual old predicate/no-effect reproduction,
+seven-file/two-input/one-mutable-source/current macro plans, independent complete dispatch/physical/
+body/classifier controls and exclusive native proof with nine frozen inputs/current full artifact.
+Known mutations use bounded valid operands; preserve all Rust bytes unless real evidence requires
+a separately owned helper repair. Own Target helpers/logs and whole completed signed-round body
+relocation into existing producer-proof before fresh live receipts; retain full3171eac spans/SHA/
+prior sibling/canonical headers/map. Own whole older DEV/CH retention before growth, prior archive/
+reader identities/fixed caps. Production/API/grammar/400 cadence unchanged; no early push.
+
+Owned small book defect found in relevant units §2.1: line106 writes exact equality to352.7µm
+for a PDF point. Fraction25400/72=3175/9 differs by7/90µm; independent Decimal50 half-up gives
+352.78. The same chapter table/footnote, numerical ADR and public Unit documentation already
+give exact ratio/≈352.78; production conversion is unaffected. Correct the prose to ≈352.78 here,
+verify both arithmetic and exact replacement and close before this commit. Reproduction rc=0;
+inline Python Fraction/Decimal diagnostic with current source text and maintained ratio sources.
+
+Verified PDF-point correction closed here; current replacement and independent arithmetic agree,
+rc=0, target/length-book-point-proof.log; no production conversion change.
+
+- [x] REPRODUCE / ISSUE: committed complete predicate accepts passed assertion_name with expect-only failed body101; no native effects/Rust writes, rc=0, target/length-predicate-diagnostic.log. D156 seven missing file/mutable/test-input plans and D177 current macro evidence owned before edits; full implementation/public exports/four tests/canonical/book reviewed. Owned PDF-point exact-equality prose defect independently reproduced.
+- [x] ROOT CAUSE: pure CASES follows activation/source read; directory identity omits log leaves/mutable intent, and broad assertion bytes omit current macro provenance. Complete seven-child/file capture and four physical first/last symlink/mutable hard-link/missing-test refusals pass, rc=0, target/length-producer-controls-final.log. Alias/source bytes unchanged; captured child dispatch proves simulation only.
+- [x] FIX: original six CASES before seven-file/two-input/one-mutable-source guard/current failed-body macro byte sites. Shared264 actual body reds/30 classifiers/ten complete native captures/42 physical refusals and all prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls pass, rc=0, target/length-producer-controls-final.log. Five entry/three classifier faults discriminate each native entry; no Rust helper repair needed.
+- [x] ADDRESSED: exclusive six real current selected macro reds at53:9/68:9/full4 restored, rc=0, length-native-final.log and native-proof.log. Nine frozen inputs/three Rust HEAD files/original CASES/two filters/seven local single-link logs exact. Cargo-selected target/debug/deps/length_operator_contract-5487b37b0899a683 SHA752d49c5f7be2650fbd266e0cb1ec326a7053275c657acdc715035d1302521dd executes all4 tests0, rc=0, native-artifact-proof.log; production/tests unchanged.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths51owners21groups/15refusals12reds/map/ledger9+13 pass, rc=0, length-*-final logs; terminal jobs consumed. Whole3171eac DEV4524–7850/18L3326B/SHA4de193fd and CH22702–23685/13L983B/SHA4c0a2f29/prior446/all44/public448/13open163sealed/no gaps/seven windows exact, rc=0, length-retention-final.log. Rust unchanged; latest full703-test gate is0165, not rerun here.
+- [x] LOCKSTEP: whole3171eac signed body44763–49287/27L4524B/SHAb4d29d3d/prior27153B sibling/canonical headers/status/Paths/map8102B exact, rc=0, length-producer-retention-proof.log. PDF-point prose corrected to ≈352.78; Fraction3175/9/error7/90/Decimal50/current book/ADR/public ratio consistent, rc=0, length-book-point-proof.log. Book/live route .n04.4; D177 ten fixed/5 P1. Archive31raw/17058L/1242151decodedB/565236residentB fits. promotion: declined (existing source/effect/whole-record rules). Grammar/400/local scope retained.
+
+Brief-planning helper1 refused the root message file as a Target-only producer output after task
+receipts were saved. No brief write occurred; excluded. Declare the existing COMMIT.md brief as a
+guarded mutable source and verify untracked/empty before writing; public producer policy unchanged.
+
+  Final staged gate13 green, rc=0, target/length-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04.4`
   Status: `pending`
