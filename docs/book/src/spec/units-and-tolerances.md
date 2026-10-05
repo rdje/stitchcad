@@ -162,8 +162,12 @@ bash docs/tasks/artifacts/formula_structure/run_round_mutations.sh
 
 Four public contracts cover wide inputs, signed endpoints, denominators, ties and zero. Thirty-six
 explicit rows agree with an independent arbitrary-precision Fraction oracle; five actual production
-guard mutations require assertion failures and exact restoration. Run mutation checks alone, without
-other builds/probes/gates. These are primitive numeric checks, separate from formula evaluation,
+guard mutations require failures at current guarded assertion macro byte locations and exact
+restoration. The totality helper explicitly asserts on a caught unwind; the following checked
+extraction supplies no numeric fallback. The diagnostic guards all six logs, its mutable
+implementation and read-only current test/imported fixture before reads. Independent captures/
+refusals are separate from five real native faults and the restored public four-test artifact.
+Run mutation checks alone, without other builds/probes/gates. These are primitive numeric checks, separate from formula evaluation,
 geometry, physical acceptance and release proofs.
 
 ### 2.4 Public length arithmetic

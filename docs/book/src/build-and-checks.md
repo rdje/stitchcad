@@ -177,7 +177,12 @@ cases and six dependent statements. Complete dispatch/four physical refusals and
 inline UTF-8 byte-location controls pass. Ten real current macro failures restore exact inputs
 and the public fourteen-test artifact.
 
-D177's fifteen-entry scope has seven entries verified; eight remain. Their .f.n04–06 repairs
+Signed rounding declares six logs/three inputs/one mutable source. Its imported Fraction fixture
+is guarded with the current test; full dispatch/five physical refusals and actual fixture/totality
+site omissions pass. The test's totality helper now uses an explicit assertion. Five real current
+macro failures preserve all original cases and restore the public four-test artifact.
+
+D177's fifteen-entry scope has eight entries verified; seven remain. Their .f.n04.2–06 repairs
 own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
@@ -321,7 +326,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and230 actual body faults, with27 calibrated failed-body classifiers,
+controls and240 actual body faults, with28 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

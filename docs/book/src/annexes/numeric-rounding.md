@@ -54,8 +54,17 @@ mutations still discriminate. Every runner restores production source byte-ident
 exclusively without other builds, probes or gates.
 
 Both mutation entries prepare the [local producer profile](../build-and-checks.md#direct-python-producers)
-and validate their source/output paths before writing or compiling. Signed rounding rebuilds its
-restored focused target; unsigned rounding rebuilds both debug and release focused targets.
+and validate their declared source/output paths before writing or compiling. Signed rounding now
+plans all five numbered logs and restored.log, its mutable implementation and read-only current
+test/Fraction fixture before reads. Complete dispatch captures, five physical refusals and actual
+file/fixture/site omissions are verified separately from native outcomes.
+
+Its totality helper explicitly asserts that the public call did not unwind before extracting the
+result. A labelled expect message alone is insufficient mutation evidence. Five real faults must
+fail at current guarded assertion macro byte locations, including that helper. Ten selected build/
+source inputs stay frozen; all four public tests and 36 fixture rows remain intact apart from the
+helper repair. Public Cargo output selects the restored four-test artifact. Unsigned rounding
+rebuilds both debug and release focused targets; its complete file/current-site audit follows next.
 
 The structural suite watches the independent Decimal fixture verifier. Strict native tests and real
 WASM cross-compilation verify their stated scope; WASM compilation is not a runtime numerical

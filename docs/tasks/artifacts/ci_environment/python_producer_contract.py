@@ -445,8 +445,7 @@ def measure_fixture(entry_path):
                     'all_authored_value_states_enforce_negative_permission_and_preserve_sign',
                     'current_amount_edits_are_visible_and_missing_amount_refuses',
                     'missing_current_metadata_preserves_side_and_underlying_error')
-    else:
-        assert entry_path == ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py', 'D156 unknown measurement entry'
+    elif entry_path == ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py':
         stem = 'ease_set'
         selected = ('contexts_refuse_duplicate_and_cross_kind_identities_before_lookup',
                     'contexts_refuse_duplicate_and_cross_kind_identities_before_lookup',
@@ -458,16 +457,32 @@ def measure_fixture(entry_path):
                     'empty_drafts_require_existing_tables_and_queries_never_default',
                     'selected_current_table_membership_is_required_even_when_metadata_exists',
                     'current_invalid_amount_and_table_targets_preserve_underlying_errors')
-    work_name = 'measurement_table_mutations' if stem == 'table' else stem + '_mutations'
-    return (ROOT / ('crates/sc-measure/src/' + stem + '.rs'),
-            ROOT / ('crates/sc-measure/tests/' + stem + '_contract.rs'),
+    else:
+        assert entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/round_mutations.py', 'D156 unknown native entry'
+        stem = 'round'
+        selected = ('both_i64_endpoints_are_representable_with_either_denominator_sign',
+                    'extreme_i128_magnitudes_refuse_with_typed_overflow_without_panicking',
+                    'both_i64_endpoints_are_representable_with_either_denominator_sign',
+                    'extreme_denominators_zero_and_signs_preserve_half_away_rounding',
+                    'extreme_denominators_zero_and_signs_preserve_half_away_rounding')
+    work_name = {'table': 'measurement_table_mutations', 'round': 'formula_round_mutations'}.get(stem, stem + '_mutations')
+    package = 'sc-units' if stem == 'round' else 'sc-measure'
+    return (ROOT / ('crates/' + package + '/src/' + stem + '.rs'),
+            ROOT / ('crates/' + package + '/tests/' + stem + '_contract.rs'),
             ROOT / ('target/' + work_name), selected)
+
+
+def measure_extra_sources(entry_path):
+    if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/round_mutations.py':
+        return (ROOT / 'docs/tasks/artifacts/formula_structure/round_cases.tsv',)
+    return ()
 
 
 def capture_measure_entry(text, entry_path=ENTRY):
     """Complete actual body; intercepted native calls prove dispatch, not outcomes."""
     source, contract, work, selected = measure_fixture(entry_path)
-    sources = (source, contract)
+    extras = measure_extra_sources(entry_path)
+    sources = (source, contract, *extras)
     originals = {p: p.read_bytes() for p in (*sources, entry_path, SOURCE)}
     files = tuple(work / ('mutation-%d.log' % i) for i in range(1, len(selected) + 1)) + (work / 'restored.log',)
     GOOD['directory'](ROOT, work.relative_to(ROOT).as_posix(), create=True)
@@ -497,7 +512,7 @@ def capture_measure_entry(text, entry_path=ENTRY):
         def enter(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
             assert root == ROOT and directories == (work,), 'D156 measure directory plan changed'
             assert output_files == files, 'D156 measure file plan changed'
-            assert sources == (source, contract), 'D156 measure source plan changed'
+            assert sources == (source, contract, *extras), 'D156 measure source plan changed'
             assert mutable_sources == (source,), 'D156 measure mutable plan changed'
             assert not planned and not reads and not calls and not written, 'D156 measure plan was late'
             planned.append(True)
@@ -554,7 +569,8 @@ def capture_measure_entry(text, entry_path=ENTRY):
             assert kwargs.get('capture_output') is True, 'D156 measure native capture changed'
             index = len(calls)
             assert index <= len(selected), 'D156 measure extra native child'
-            wanted = ['cargo', 'test', '-p', 'sc-measure', '--test', contract.stem]
+            package = 'sc-units' if source.is_relative_to(ROOT / 'crates/sc-units') else 'sc-measure'
+            wanted = ['cargo', 'test', '-p', package, '--test', contract.stem]
             if index < len(selected):
                 wanted += [selected[index], '--', '--exact']
             assert args == wanted, 'D156 measure native argv changed'
@@ -608,17 +624,20 @@ def measure_refusals(text, entry_path=ENTRY):
     """Actual copied entry and profile refuse physical aliases before reads/writes/children."""
     work = GOOD['directory'](ROOT, 'target/scratch/membership_entry_refusals', create=True)
     source, contract, output, _ = measure_fixture(entry_path)
+    extras = measure_extra_sources(entry_path)
     source, contract = (p.relative_to(ROOT).as_posix() for p in (source, contract))
     output_relative = output.relative_to(ROOT)
     saved, count = dict(os.environ), 0
-    for case in ('first-file', 'last-file', 'mutable-source', 'late-source'):
+    cases = ('first-file', 'last-file', 'mutable-source', 'late-source') + (('fixture-source',) if extras else ())
+    for case in cases:
         with tempfile.TemporaryDirectory(dir=work) as name:
             root = Path(name)
             entry = root / entry_path.relative_to(ROOT)
-            for relative, data in ((source, (ROOT / source).read_bytes()),
-                                   (contract, (ROOT / contract).read_bytes()),
-                                   ('scripts/local_environment.py', SOURCE.read_bytes()),
-                                   (entry_path.relative_to(ROOT).as_posix(), text.encode())):
+            files = ((source, (ROOT / source).read_bytes()), (contract, (ROOT / contract).read_bytes()),
+                     ('scripts/local_environment.py', SOURCE.read_bytes()),
+                     (entry_path.relative_to(ROOT).as_posix(), text.encode())) + \
+                    tuple((path.relative_to(ROOT).as_posix(), path.read_bytes()) for path in extras)
+            for relative, data in files:
                 destination = root / relative
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 destination.write_bytes(data)
@@ -634,7 +653,8 @@ def measure_refusals(text, entry_path=ENTRY):
                 os.link(root / source, victim)
                 wanted = 'hard-linked mutable producer source'
             else:
-                (root / contract).unlink()
+                missing = contract if case == 'late-source' else extras[-1].relative_to(ROOT).as_posix()
+                (root / missing).unlink()
                 wanted = 'producer source is not a local regular file'
             before = {p: p.read_bytes() for p in root.rglob('*') if p.is_file() and not p.is_symlink()}
             environment = dict(os.environ)
@@ -962,6 +982,37 @@ def measure_inline_controls(text, entry_path):
             'D177 measure inline wrong byte column accepted'
 
 
+def round_totality_controls(text, entry_path):
+    functions = [node for node in ast.parse(text).body if isinstance(node, ast.FunctionDef)
+                 and node.name in {'assertion_sites', 'assertion_failure'}]
+    scope = {'re': re}
+    exec(compile(ast.Module(body=functions, type_ignores=[]), str(entry_path), 'exec'), scope)
+    _, contract, _, _ = measure_fixture(entry_path)
+    GOOD['plan_producer'](ROOT, sources=(contract,))
+    current = contract.read_text()
+    authored = '    assert!(result.is_ok(), "public rounding must never unwind");'
+    lines = current.splitlines()
+    assert lines.count(authored) == 1, 'D177 round totality assertion changed'
+    number = lines.index(authored) + 1
+    path = contract.relative_to(ROOT).as_posix()
+    site = (path, number, 5)
+    sites = scope['assertion_sites'](current, path)
+    assert site in sites, 'D177 round totality macro site absent'
+    scope['ASSERTION_SITES'] = sites
+    prefix = "\nfailures:\nthread 'fixture' panicked at "
+    actual = (prefix + f'{path}:{number}:5:\ncustom totality message\n\nfailures:\nfixture\n').encode()
+    assert scope['assertion_failure'](actual), 'D177 round totality assertion refused'
+    expect_line = next(n for n, line in enumerate(lines, 1) if 'result.expect(' in line)
+    noises = (actual.replace(f':{number}:5:'.encode(), f':{expect_line}:12:'.encode()),
+              actual.replace(f':{number}:5:'.encode(), f':{number}:6:'.encode()),
+              actual.replace(path.encode(), b'crates/sc-units/src/round.rs'))
+    for noise in noises:
+        assert not scope['assertion_failure'](noise), 'D177 round totality evidence accepted noise'
+    panic = b"thread 'fixture' panicked at crates/sc-units/src/round.rs:80:17:\nattempt to divide by zero\n"
+    assert scope['assertion_failure'](actual.replace(b'\nfailures:\n', b'\nfailures:\n' + panic, 1)), \
+        'D177 round source panic masked valid totality assertion'
+
+
 def driver_classifier_controls(text, path):
     names = {'driver_assertion_sites', 'driver_assertion_failure'}
     functions = [n for n in ast.parse(text).body if isinstance(n, ast.FunctionDef) and n.name in names]
@@ -1164,7 +1215,8 @@ def main():
                      ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py',
                      ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py',
                      ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py',
-                     ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py')
+                     ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py',
+                     ROOT / 'docs/tasks/artifacts/formula_structure/round_mutations.py')
     measure_physical, measure_classifiers = 0, 0
     for measure_path in measure_paths:
         measure_text = measure_path.read_text()
@@ -1246,6 +1298,29 @@ def main():
         red += 1
     else:
         raise AssertionError('D177 Ease-set inline site omission survived')
+    round_path = ROOT / 'docs/tasks/artifacts/formula_structure/round_mutations.py'
+    assert round_path in measure_paths
+    round_text = round_path.read_text()
+    round_totality_controls(round_text, round_path)
+    actual = next(ast.get_source_segment(round_text, node) for node in ast.parse(round_text).body
+                  if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites')
+    changed = actual.replace('if match is not None:', "if match is not None and 'result.is_ok()' not in line:", 1)
+    assert changed != actual
+    try:
+        round_totality_controls(round_text.replace(actual, changed, 1), round_path)
+    except AssertionError as error:
+        assert str(error) == 'D177 round totality macro site absent', ('round totality site fault', str(error))
+        red += 1
+    else:
+        raise AssertionError('D177 round totality site omission survived')
+    assert round_text.count('sources=SOURCES') == 1
+    try:
+        capture_measure_entry(round_text.replace('sources=SOURCES', 'sources=SOURCES[:2]', 1), round_path)
+    except AssertionError as error:
+        assert str(error) == 'D156 measure source plan changed', ('round imported fixture omission', str(error))
+        red += 1
+    else:
+        raise AssertionError('D177 round imported fixture omission survived')
     profile_functions = {node.name: ast.get_source_segment(original.decode(), node)
                          for node in ast.parse(original).body if isinstance(node, ast.FunctionDef)}
     mutable_faults = [
@@ -1341,7 +1416,7 @@ def main():
     for path, work_name in adopters:
         text = path.read_text()
         multiple_sources = {
-            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py', 'size_chart_collection_mutations.py', 'ease_mutations.py', 'ease_set_mutations.py',
+            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py', 'size_chart_collection_mutations.py', 'ease_mutations.py', 'ease_set_mutations.py', 'round_mutations.py',
             'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',
@@ -1709,7 +1784,7 @@ def main():
           str(compiler_count) + ' complete compiler/example captures / ' +
           str(static_count) + ' complete static-entry captures / ' +
           str(classifier_count) + ' calibrated failed-body classifiers / source unchanged')
-    print('measurement entries: ' + str(len(measure_paths)) + ' complete child/file captures / ' + str(measure_physical) +
+    print('guarded native entries: ' + str(len(measure_paths)) + ' complete child/file captures / ' + str(measure_physical) +
           ' actual copied-entry physical refusals / five entry and three classifier body reds per entry; '
           'dispatch simulation separate from real native proof')
 

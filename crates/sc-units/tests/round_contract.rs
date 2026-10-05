@@ -6,9 +6,11 @@ const OVERFLOW: UnitError = UnitError::Overflow {
 const ZERO: UnitError = UnitError::DivisionByZero {
     operation: "div_round_half_away_from_zero",
 };
-#[allow(clippy::expect_used)] // Contract helper: an unwind is an assertion failure, never a fallback value.
+#[allow(clippy::expect_used)] // Checked extraction follows the explicit totality assertion.
 fn total(n: i128, d: i128) -> Result<i64, UnitError> {
-    std::panic::catch_unwind(|| round(n, d)).expect("assertion: public rounding must never unwind")
+    let result = std::panic::catch_unwind(|| round(n, d));
+    assert!(result.is_ok(), "public rounding must never unwind");
+    result.expect("totality assertion checked that public rounding did not unwind")
 }
 #[test]
 fn extreme_i128_magnitudes_refuse_with_typed_overflow_without_panicking() {

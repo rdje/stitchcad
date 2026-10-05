@@ -14,6 +14,16 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — signed rounding needs an explicit totality assertion
+
+- Split numeric5/9+release/6/14 populations before repairs; preserve four parent paths and assign terminal TSV owners. Signed entry plans6 logs/three inputs/one mutable source before reads; the imported36-row Fraction fixture is a guarded read-only input.
+- Actual original zero fault divides at round.rs80:17 then panics in labelled expect at test11:46. Old complete predicate accepts it; ten original inputs/production/test HEAD exact/full4 public artifact restored0. D177 owns this current-test evidence defect.
+- Total helper now asserts on the outer catch_unwind result before checked extraction; typed UnitError remains the inner result. Four test bodies/36 rows and five production cases are unchanged. Independent current helper/source-panic/expect/wrong-site controls catch selective macro/fixture omissions.
+- Shared240 body reds/28 classifiers/eight complete captures/33 physical refusals pass0; existing31/24/26/37/26/two compiler/three static controls remain0. Dispatch simulation stays separate from real native results; current-source controls reject labelled expect.
+- Exclusive five real macro reds/full4 restored0; helper fault reaches12:5. Ten frozen inputs/production/module/fixture HEAD exact and helper-only test patch verified. Public artifacte032081d… executes4 tests0. Replay review caught obsolete no-test-diff assumption before execution; exact intended patch is enforced.
+- Full Rust fmt/strict Clippy/703 tests in59 groups pass0. Whole b0bc33c DEV6939–8254/7L1315B/SHA45d032ae and CH22928–23789/10L861B/SHA790a719b retained; prior442/all40/public444 exact/13open163sealed/no gaps/seven windows unchanged.
+- Promotion declined: existing current-source/effect/whole-record rules. D177 eight fixed/7 P1 remain; unsigned .n04.2 next. Production rounding/grammar/400 cadence unchanged; local scope, runner unobserved. Final focused and staged receipts in the owning leaf.
+
 ## _(2026-10-05 UTC)_ — complete Ease-set effect and panic plans
 
 - Eight pure cases precede eleven-file/two-input/one-mutable-source activation; six source-dependent AST statements stay exact and ordered. Preserve ten filters/stores/full restoration, selected membership/current mapping spans and empty-table refusal.
@@ -49,13 +59,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Whole5b37891 bridge/effect lessons and complete follow-up retained before receipt growth: source7594–9941/16L2347B/SHA9f77b65f copied and verified before retirement. Prior432/all30 archive files and public433 reads verified separately in the leaf.
 - Promotion declined: existing current-source evidence, explicit mutable/file ownership and whole-record retention rules. D177 stays open with11 entries P1; collection .n02.4 next. Grammar/API/400 cadence unchanged; runner verdict unobserved.
 
-## _(2026-10-05 UTC)_ — complete table effect and panic plans
-
-- Pure eight-case data now precedes activation; nine logs/two inputs/one mutable source are guarded before reads. Four original source-dependent span statements remain AST-exact and execute after the guard; all case/filter/restoration behavior stays.
-- Actual old predicate accepts passed assertion_name plus expect-only panic without effects. Current macro locations replace substring evidence. Independent full nine-child/file capture/four physical refusals/five entry and three classifier faults join shared195 body reds/23 classifiers0.
-- Exclusive eight real macro reds pass0; independent byte-position replay verifies every selected log/eight frozen inputs/original cases/four span statements/two HEAD Rust inputs/nine regular-local-singlelink logs. Public current artifactaccf600a… executes all16 tests0; Rust unchanged.
-- Whole8e2b486 input lesson retained before receipt growth; exact501B/four lines/source13854–14355/SHAdbb2c10d copied before retirement. Prior431/public432 proof in leaf. D177 stays open with12 entries P1; MTM .n02.3 is next.
-- Promotion declined: existing current-source evidence, explicit mutable/file ownership and whole-record retention rules. Grammar/API/400 cadence remain unchanged; no runner verdict inferred.
+Whole table effect/panic lesson retained in [part199](docs/history/stitchcad-devnotes-part199.md).
 
 Whole chart effect/panic lesson retained in [part198](docs/history/stitchcad-devnotes-part198.md).
 
@@ -141,3 +145,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part197`](docs/history/stitchcad-devnotes-part197.md) | whole membership effect and panic lesson | 9 lines, 1639 bytes, `sha256:d1bbd951…` |
 
 | [`part198`](docs/history/stitchcad-devnotes-part198.md) | whole chart effect and panic lesson | 8 lines, 1744 bytes, `sha256:56585fbc…` |
+
+| [`part199`](docs/history/stitchcad-devnotes-part199.md) | whole table effect and panic lesson | 7 lines, 1315 bytes, `sha256:45d032ae…` |

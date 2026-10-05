@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0164 - guarded signed-round files and totality sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.1`)
+
+- Split four numeric owners; plan6 logs/three inputs/one mutable source before reads.
+- Replace labelled expect evidence with an explicit totality assertion; five cases/four tests intact.
+- Shared240 body reds/28 classifiers/eight captures/33 physical refusals0; five real macro reds.
+- Ten frozen inputs/production exact/full4 public artifact0; full fmt/Clippy/703 Rust tests pass.
+- Retain two whole records/prior442/all40/public444 exact; final checks in owning leaf.
+- D177 eight fixed/7 P1 remain; production rounding/grammar/400 cadence unchanged.
+
 ## STITCHCAD-G1-0163 - guarded Ease-set files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n03.2`)
 
 - Plan11 logs/two inputs/one mutable source; pure8 cases/six dependent statements unchanged.
@@ -222,16 +231,6 @@ the digests afterwards.
 - Initial helper boundary1 diagnosed at the actual archive index; corrected complete retention proof follows.
 - No producer/Rust/grammar change. Output/delegation ledger division .p.o.i is next; D156 remains open.
 
-## STITCHCAD-G1-0148 - complete static native guards (leaf `G1-SLICE.5b.4c.h2.b.p.n.f14`)
-
-- Guard20 inputs before helpers/outputs/children; preserve shared populations, public argv and stores.
-- D172 strict current driver macro locations/always restored build;161 body controls/37 entry+late
-  refusals/three complete static captures/20 classifiers pass0.
-- Native26723 cases/28 Rust/6 reference/3 annex actual reds/six exact sources/artifact restored0.
-- D173 both loader locations/virtual identities/four actual faults0; D174 stale book totals removed.
-- D175 retired graph claim repaired; publication45 includes independent actual catalog-omission red0.
-- Seven whole committed intervals/prior406 exact and original reports retained; no Rust/API/grammar change.
-- D156 native37 guards complete; fixture/delegation/shell audits remain.400 cadence unchanged.
 
 
 
@@ -332,3 +331,5 @@ the digests afterwards.
 | [`part140`](docs/history/stitchcad-changelog-part140.md) | whole G1-0145 cleanup ledger | 7 lines, 588 bytes, `sha256:8a23c596…` |
 
 | [`part141`](docs/history/stitchcad-changelog-part141.md) | whole G1-0147 and G1-0146 ledgers | 14 lines, 1097 bytes, `sha256:8fa23459…` |
+
+| [`part142`](docs/history/stitchcad-changelog-part142.md) | whole G1-0148 static guard ledger | 10 lines, 861 bytes, `sha256:790a719b…` |
