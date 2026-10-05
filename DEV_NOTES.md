@@ -14,6 +14,13 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — ordered-name plans and guarded advances
+
+- Three inputs/19 files/two mutables; class0. Original18/two bindings/full8 exact; shared578 reds/35 classifiers/40 captures/218 refusals0. D186 thread-only/legacy regex red; readonly both sources3 links/unused aliases0.
+- Original18 sets exact, seven extraction panics/D187; restore/copy19 logs before one helper14 calls. Fresh18/every body macro/72 inputs/63 Rust/full8 b43b5e27 exact0; full fmt/strict Clippy/59groups703passed0.
+- Whole19c7 namespace5421B46L/old10221B prefix/DEV218950B6L/CH161463B6L/new defects108109 retained; prior489/all33/current493 reads/12open174sealed0. Book/live/.n10 aligned; D156/broader D34 open.
+- Promotion declined: complete plans/current macros/guarded extraction/whole retention already bind. Engine/grammar/400 stay; new runner unobserved.
+
 ## _(2026-10-05 UTC)_ — namespace plans and thread evidence
 
 - Two inputs/18 files/one mutable; classifier0 writes/children. Original17 CASES/argv exact;560 body reds/35 classifiers/38 captures/210 physical refusals0. D185 legacy regex red/current thread macro guard; readonly3 links/unused aliases0.
@@ -21,12 +28,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Whole335b64d task3891B30L retained/SHA b77af56c/6062B prefix/10221B sibling exact0. DEV2171409B8L/CH160580B4L/D185107/prior486/all30/current489 reads/12open172sealed exact0. Book/live/focused checks aligned; D156/broader D34 stay; ordered next.
 - Promotion declined: existing complete plans/current macro/whole-source retention/consumed-results rules. Rust/engine/grammar/400 unchanged; no new runner claim.
 
-## _(2026-10-05 UTC)_ — newest committed window8 refusal
-
-- Actual d565 root/copied baseline guard0; copied catalog prose inventory0/exact committed-retained-file refusal1. All28 root archive files/HEAD exact; no tracked sealed write. Initial full CLI502/current484 pass0, after two whole retained records CLI504/current486 pass0.
-- Whole d565 window8 record5306B46L/54799–60105/SHA412ace45 retained into new6062B sibling; parent route/old proof bytes exact. DEV2161356B8L/CH159648B8L/prior484/all28/current486 reads exact0;13working.
-- Old equality check refused generated8240B map; orientation source trimmed/current8145B/16siblings/fixed8192 cap0. Archive28/pub45/coverage9/census229paths288/ledger9+13 pass0.
-- Promotion declined: existing consumed-terminal/immutable-source/whole-retention/orientation rules. D156 nextnamespace .n09.1; no Rust/reader/grammar/cadence changes. Broader D34 remains open; unobserved runner verdict not claimed.
+Whole window8 post-recording guard lesson retained in [part218](docs/history/stitchcad-devnotes-part218.md).
 
 ## _(2026-10-05 UTC)_ — window8 continuity and protected historical links
 
@@ -192,3 +194,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/window8.md#
 | [`part216`](docs/history/stitchcad-devnotes-part216.md) | whole checked statement modes and guarded extraction lesson | 8 lines, 1356 bytes, `sha256:58b80c3e…` |
 
 | [`part217`](docs/history/stitchcad-devnotes-part217.md) | whole checked recipe baseline modes and guarded extraction lesson | 8 lines, 1409 bytes, `sha256:79ab4f32…` |
+
+| [`part218`](docs/history/stitchcad-devnotes-part218.md) | whole committed window8 post-recording guard lesson | 6 lines, 950 bytes, `sha256:aa35800d…` |

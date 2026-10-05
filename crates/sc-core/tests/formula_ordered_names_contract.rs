@@ -25,6 +25,11 @@ fn id(bits: u128) -> EntityId {
 fn initial(d: D<'_>) -> I<'_> {
     I::try_from(d).unwrap()
 }
+fn advanced(cursor: &mut Cursor<'_>) {
+    let result = cursor.advance_metadata();
+    assert!(result.is_ok());
+    assert!(result.unwrap());
+}
 fn current<'s, 'a>(cursor: &'s Cursor<'a>) -> Scope<'s, 'a> {
     let result = cursor.current();
     assert!(result.is_ok());
@@ -145,7 +150,7 @@ fn scopes_keep_exact_owner_and_only_initial_or_prior_names_with_assertion_gaps()
                 "let second:angle=90 deg",
             );
         }
-        assert!(cursor.advance_metadata().unwrap());
+        advanced(&mut cursor);
     }
     assert!(cursor.current().unwrap().is_none());
     assert!(!cursor.advance_metadata().unwrap());
@@ -170,7 +175,7 @@ fn six_let_kinds_remain_actual_annotations_and_all_reserved_contexts_visible() {
         let mut cursor = Cursor::new(N::new([]).unwrap(), &recipe);
         let result = MachineToken::new("result").unwrap();
         missing(current(&cursor), &result);
-        assert!(cursor.advance_metadata().unwrap());
+        advanced(&mut cursor);
         let scope = current(&cursor);
         assert_recipe(resolved(scope, &result), 1, "result", kind, &source, &whole);
         for reserved in [
@@ -188,7 +193,7 @@ fn six_let_kinds_remain_actual_annotations_and_all_reserved_contexts_visible() {
                 matches!(resolved(scope,&query).source(),S::Reserved(actual) if actual == reserved)
             );
         }
-        assert!(cursor.advance_metadata().unwrap());
+        advanced(&mut cursor);
         assert!(cursor.current().unwrap().is_none());
     }
 }
@@ -218,8 +223,8 @@ fn every_reserved_binding_keeps_fixed_metadata_and_actual_attempt_after_assertio
                 format!("assert first:eps_num=1 cm==1 cm assert second:eps_geo=2 cm==2 cm {whole}");
             let recipe = normalized(&source);
             let mut cursor = Cursor::new(N::new([]).unwrap(), &recipe);
-            assert!(cursor.advance_metadata().unwrap());
-            assert!(cursor.advance_metadata().unwrap());
+            advanced(&mut cursor);
+            advanced(&mut cursor);
             let error = blocked(&cursor);
             assert_eq!(error.token(), "formula_rebinding");
             assert_eq!(error.name(), name);
@@ -251,8 +256,8 @@ fn repeated_let_keeps_both_real_ordinals_and_never_advances_or_shadows_after_ref
     let source = " \nlet seam:length=1 cm\nassert gap:eps_geo=seam==seam\nlet seam:angle=90 deg\nlet later:ratio=1\t";
     let recipe = normalized(source);
     let mut cursor = Cursor::new(N::new([]).unwrap(), &recipe);
-    assert!(cursor.advance_metadata().unwrap());
-    assert!(cursor.advance_metadata().unwrap());
+    advanced(&mut cursor);
+    advanced(&mut cursor);
     for _ in 0..3 {
         let error = blocked(&cursor);
         assert_eq!(error.token(), "formula_rebinding");
@@ -309,7 +314,7 @@ fn input_and_geometry_collisions_keep_actual_input_before_recipe_attempt() {
         let source = "assert gap:eps_geo=1 cm==1 cm let occupied:angle=missing";
         let recipe = normalized(source);
         let mut cursor = Cursor::new(N::new([initial(original)]).unwrap(), &recipe);
-        assert!(cursor.advance_metadata().unwrap());
+        advanced(&mut cursor);
         let error = blocked(&cursor);
         assert_eq!(error.token(), "formula_ambiguous_name");
         assert_eq!(error.name(), "occupied");
@@ -362,13 +367,13 @@ fn self_forward_and_labels_never_bind_or_reorder_and_header_error_wins() {
     let second = MachineToken::new("second").unwrap();
     missing(current(&cursor), &first);
     missing(current(&cursor), &second);
-    assert!(cursor.advance_metadata().unwrap());
+    advanced(&mut cursor);
     assert_eq!(resolved(current(&cursor), &first).origin(), O::Recipe);
-    assert!(cursor.advance_metadata().unwrap());
+    advanced(&mut cursor);
     missing(current(&cursor), &second);
-    assert!(cursor.advance_metadata().unwrap());
+    advanced(&mut cursor);
     assert_eq!(resolved(current(&cursor), &second).origin(), O::Recipe);
-    assert!(cursor.advance_metadata().unwrap());
+    advanced(&mut cursor);
     assert!(cursor.current().unwrap().is_none());
     let invalid = normalized("let eps_fmt:length=undeclared");
     let cursor = Cursor::new(N::new([]).unwrap(), &invalid);
@@ -394,7 +399,7 @@ fn empty_end_and_maximum_recipe_are_fused_on_small_stack() {
                 let scope = current(&cursor);
                 assert_eq!(scope.statement_index(), i);
                 assert_eq!(scope.statement().name(), format!("check_{}", i - 1));
-                assert!(cursor.advance_metadata().unwrap());
+                advanced(&mut cursor);
             }
             for _ in 0..3 {
                 assert!(cursor.current().unwrap().is_none());
@@ -408,7 +413,7 @@ fn empty_end_and_maximum_recipe_are_fused_on_small_stack() {
             let mut cursor = Cursor::new(N::new([]).unwrap(), &recipe);
             for i in 1..=4096 {
                 assert_eq!(current(&cursor).statement_index(), i);
-                assert!(cursor.advance_metadata().unwrap());
+                advanced(&mut cursor);
             }
             assert!(cursor.current().unwrap().is_none());
         })

@@ -228,13 +228,37 @@ cargo test -p sc-core --test formula_ordered_names_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/ordered_name_mutations.py
 ```
 
-Run mutations alone: eighteen temporary compiled faults in the actual cursor/diagnostic code must
-fail public body assertions, then restore both original source files exactly and rebuild the full
-focused target. The direct entry validates both implementations, its test source and output before
-reads/writes, preserves prepared child stores and retains classifier-only mode. Failed-body panic
-locations must match current test assertion macro sites; custom messages pass and expect sites refuse. Controls cover
-predeclared future names, skipped/incorrect positions, ignored/misclassified headers, lost or
-reversed sources, changed tokens, failed-advance state, assertion advancement, wrong owner views
-and formatting leaks. The standing structural suite watches fault anchors and refuses compiler,
-unwrap/expect or test-name noise. Complete expression/static graph and runtime acceptance retain
-their separate proof owners.
+The direct entry plans both implementations and the current public test before reads or effects.
+Ordinary mode declares all nineteen fault/restoration diagnostic files and both mutable sources.
+It preserves the eighteen original ordered cases, their two source bindings, the complete eight-test
+Cargo argv, prepared child stores and exact two-source restoration before rebuilding the full target.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/ordered_name_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/ordered_name_mutations.py
+```
+
+Classifier-only validates all three read-only inputs, prepares the local stores/output directory
+and checks original anchors/current macros. It declares zero files or mutable sources and invokes
+no native child or source/output write. A copied entry accepts both source inputs with three hard
+links each and leaves unused fault/restoration aliases untouched. Two complete captures, eight
+physical refusals and seventeen independent source/file/mutable/mode/store/restoration omissions
+watch these plans. Captures certify dispatch; real native replay supplies separate behavior evidence.
+
+A failed body's thread panic path, line and byte-column must identify a current assertion macro.
+Custom messages qualify. Nonthread macro mentions, compiler/linker noise, unwrap/expect-only panics
+and passed test names refuse. D186's measured nonthread weakness is repaired and independently
+watched by the actual legacy-regex body fault. Controls retain predeclared future names, skipped or
+incorrect positions, ignored/misclassified headers, lost/reversed sources, changed tokens, failed
+advance state, assertion advancement, wrong owner views and formatting leaks.
+
+The original eighteen real cases matched every independently authored failing-test set, but seven
+failed bodies extracted an advance error before an assertion could guard it. D187's shared helper
+now checks Result acceptance before extraction at all fourteen existing true-advance calls. The
+eight public test identities and eighteen original cases remain unchanged. Fresh replay preserves every
+expected failing-test set and proves a current macro in every failed body. Seventy-two frozen inputs,
+sixty-three unchanged production Rust files, nineteen local logs and Cargo's restored full eight-test
+executable remain exact. Full formatting, strict Clippy and fifty-nine native groups containing
+703 tests pass. Run native mutations alone and consume restoration before another
+build or probe. Complete expression/static graph and runtime acceptance keep their separate owners;
+these diagnostic repairs change no metadata API, grammar, numeric execution or geometry authority.

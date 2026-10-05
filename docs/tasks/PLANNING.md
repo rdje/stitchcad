@@ -1010,3 +1010,7 @@ D183 whole report/verified closure retained in [part104](../history/window8.md#s
 D184 whole report/verified closure retained in [part106](../history/window8.md#stitchcad-defects-part106md).
 
 D185 whole report/verified closure retained in [part107](../history/stitchcad-defects-part107.md).
+
+D186 whole report/verified closure retained in [part108](../history/stitchcad-defects-part108.md).
+
+D187 whole report/verified closure retained in [part109](../history/stitchcad-defects-part109.md).

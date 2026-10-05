@@ -94,3 +94,114 @@ Final post-doc publication1426/coverage51820/census28190/ledger35299 terminal0 c
 45/9/229paths288/648 real verdicts/9 arms13 pointers pass; all required jobs complete.
 Staged9164 all13 doctrine checks green rc=0, target/window8-post-staged-gate.log.
 
+
+### Namespace plan verification
+
+Source: `19c7c93d433bd640bfa679382c64e5c8f4f34cf4`, docs/tasks/G1-SLICE-producers.md. Whole zero-based interval 56532–61953, 5421 bytes / 46 lines, `sha256:a16229fb485d04244c50c432c5a1e1880b43632ff268f58f09286b47491f6e4e`.
+
+D185 owned here: actual original namespace classifier accepts a compiler-note location inside
+a failures block when it names a current macro. Independent classifier_controls(strict=True,
+thread_only=True) raises exact D159 assertion evidence accepted noise; diagnostic harness0
+confirms this failure before production writes. Cause: unanchored panicked-at regex, not an
+actual thread. Fix now under .n09.1; independently mutate legacy regex and replay17 original
+faults/every failed body before closure. Earlier D179 closure was bounded to four other entries.
+
+Shared72842 failed1 after new namespace controls: local `faults` assignment overwrote an
+earlier three-field population reused later; actual traceback2658 tuple arity4 vs3. Renamed
+only namespace population before fresh shared replay; failed setup excluded, no Native run.
+
+
+Clean335b64d/44/brief0/all prior jobs consumed. Full namespace91L/production253L/public408L,
+relevant roadmap G1/API/book metadata/diagnostic5.2.1 and shared capture/refusal/classifier
+contracts reviewed. Original17 CASES AST/nativeargv exact; two inputs/18 files/one mutable
+ordinary, zero files/mutables/children classifier. Authored prior to Native/failure blocks:
+B,CDEFGHIJ,DFG,ACGI,ACGI,CDEFHIJ,FGHJ,FH,GHJ,FHJ,FH,FH,G,GH,AI,J,J.
+Frozen72 inputs/63 unchanged production Rust/public10. No new Rust/engine/grammar change.
+Whole335b64d .h.v3891B30L/55313–59204/SHAb77af56c retained into10221B sibling;
+original6062B prefix/canonical .h.v header verified before retirement. DEV2171409B8L/
+2796–4205/SHA79ab4f32 andCH160580B4L/20748–21328/SHAe2113b03 whole Source records
+copied/verified before live retirement; prior486/all30/current488/15working frozen.
+
+Prediction5 falsified: independent all17-set diagnostic found only extra J. Actual fault5
+privacy body47:5 assert result.is_err(); sourceJ also attempts eps_phys, hidden by the
+optional-context mutation, so construction succeeds and the refusal helper correctly fails.
+Expected5 corrected ACGI→ACGIJ with source cause; other16 sets exact. Native27587 terminal0
+consumed/source restoration/frozen72/full10 restored; failed verifier excluded. Repeat current
+per-body proof/artifact next; no engine/test/source mutation or extra Native replay warranted.
+
+Own whole new D185 report/earned closure into docs/history/stitchcad-defects-part107.md,
+explicit Source_baseline335b64d provenance (report absent HEAD), independent defect census
+and all489 public reads before closure; preserve prior486/all30 original archive files.
+
+- [x] REPRODUCE / ISSUE: Original missing file/mutable mode plan and D185 compiler-note/current macro acceptance; independent classifier_controls(strict=True,thread_only=True) exact D159 noise failure, diagnostic harness0. Full91L entry/253L implementation/408L public tests/book contract5.2.1/G1 reviewed. python3 -I -B target/namespace-plan-run-focus.py producer-controls:560 reds/35 classifiers/38 captures/210 refusals; rc=0.
+- [x] ROOT CAUSE: Unanchored panicked-at regex accepts nonthread notes. Complete plans distinguish two read-only inputs and all18 diagnostic destinations/one ordinary mutable; class0. python3 -I -B target/namespace-plan-run-focus.py producer-controls:13 independent mode omissions/current legacy-regex fault refused;560/35/38/210; rc=0. First shadowed three-field fault population failed/excluded; namespace list renamed.
+- [x] FIX: Plans before reads/effects, current thread path/line/byte-column required; original17 CASES AST/full10 argv/stores/restoration unchanged. python3 -I -B target/namespace-plan-run-focus.py producer-controls:two full captures/six physical refusals/current omissions0; rc=0. readonly-mode:three linked input/unused aliases/zero native-source-output writes; rc=0.
+- [x] ADDRESSED: python3 -I -B target/namespace-plan-proof-run.py:all17 real faults/corrected source-derived sets/every failed body current macro/nonmacro[]/72 inputs/63 Rust HEAD/unchanged public tests/18 logs/current full10 429f1099 exact; rc=0. Prediction5 corrected ACGI→ACGIJ after actual privacy47:5/eps_phys source cause; other16 exact. Native27587/proof33154 terminal0 consumed; D185107 verified closure.
+- [x] NO REGRESSION: python3 -I -B target/namespace-plan-run-focus.py retention-proof:prior486/all30/current489 public reads/whole D185 report/closure/12open172sealed/IDs1–185except18 exact; rc=0. Publication45/coverage9/census229paths288checks/ledger9+13 pass; rc=0. No Rust changed; previous full703 remains scoped, new Native/full10 current. Runner unobserved.
+- [x] LOCKSTEP: python3 -I -B target/namespace-plan-run-focus.py retention-proof:whole335b64d task3891B30L/55313–59204/SHAb77af56c/original6062B prefix/current10221B sibling/canonical .h.v header/map8145B/16siblings/fixed caps exact; rc=0. WholeDEV2171409B8L/CH160580B4L copied and verified before retirement; D185 report truthfully new over335 baseline. Book/live/MEMORY/G1/index ordered .n09.2 next; promotion declined; D156/broader D34 open/400 stays.
+
+Final post-doc publication42275/coverage75097/census43161 terminal0 consumed;45/9/229paths288 pass. Frozen72/current full10 artifact unchanged afterward. Confirmatory ledger57722 in flight: target/namespace-plan-ledger-final.log; consume before next activation.
+
+Staged94450 all13 doctrine checks green rc=0, target/namespace-plan-staged-gate.log.
+Required results complete; ledger57722 confirmatory must be consumed before activation.
+
+
+## Ordered-name replay history
+
+Whole authored0183 progress text, captured before final acceptance boxes. Authored over
+19c7c93; this text did not exist at that committed baseline. Historical in-flight statements
+are superseded by the current leaf receipts. Identity: 4247B/53L/SHAfd765b8802df75c8680a16b9d3b2545117c2ac613da4ee9bf4926df78a053be8.
+
+STITCHCAD-G1-0183 owns shared/book/live receipts and whole .n09.1 retention in existing sibling; guarded target/ordered-name-plan-*.
+
+Paths also: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-name-scopes.md;docs/book/src/build-and-checks.md;docs/tasks/PLANNING.md;whole live lesson/ledger retention if needed before growth.
+Clean19c7c93/45/brief0/all prior jobs consumed; final0182 ledger57722 terminal0,
+652 real verdicts/9 arms13 pointers. Full ordered entry/201L implementation/253L shared
+namespace/434L public tests/240L book/G1 requirements read. Original18 CASES/two source
+bindings/full8 argv must remain exact; three inputs/19 ordinary files/two mutables/class0.
+Whole19c7 namespace receipt5421B46L/56532–61953/SHAa16229fb copied/verified before
+retirement; original10221B sibling prefix preserved/current15902B/Root60207B.
+D186 actual ordered classifier accepts compiler-note/current macro mention; existing independent
+classifier_controls(strict=True,thread_only=True) raises exact D159 noise failure, diagnostic
+harness0 before edits. Same unanchored regex cause as bounded D185 in another entry; own
+P1 fix now here, legacy body control and full18/current per-body macros required before closure.
+
+Authored before any real replay/failure-block read: A–H are the eight public tests in source
+order. Expected18 sets: ABCDEFGH,ABCDEFGH,ABCDEFG,CDEF,D,D,C,ABCDEFG,ABDF,
+ABCDEFG,CD,ABCDEFG,AG,AG,H,H,D,D. Frozen72 inputs/63 production Rust/unchanged public8.
+Both readonly inputs3 links each/unused aliases/zero child-source-output writes passed0.
+Source/mode plans/current macros shared69521 terminal0 consumed:578reds/35 classifiers/
+40 captures/218 physical refusals. Native75355 exclusive; no overlapping build/probe.
+
+Whole19c7 live DEV218950B6L/1734–2684/SHAaa35800d and CH161463B6L/20682–21145/
+SHA5da8b958 copied/verified before live retirement; prior489/all33/current491 exact.
+Retention38011 terminal0 consumed:491 public reads/13open172sealed/IDs1–186except18/
+whole5421B46L namespace record/current15902B sibling/old10221B prefix/map8145 exact.
+Native75355 still exclusive in flight; original18/current8/source restoration required.
+
+Native75355 terminal0 consumed/all18 authored failed sets exact; independent per-body proof
+refused seven nonmacro events across four real faults and three public tests. D187 owned P1
+now: advance_metadata().unwrap() evaluates inside assert before the macro can guard Err.
+Actual original1/C222:47/E312:43,2/D254:39,3/C222:47/E312:43,10/D255:39/C222:47.
+Before edits, both sources/all72 inputs restored; public Cargo-selected full8 artifact
+ca5b93b2b9615717f031ce56a4828b544b46726f5676b8dddaf9a969509d85d3 executed0 and exact.
+Own crates/sc-core/tests/formula_ordered_names_contract.rs: shared checked advance helper
+asserts acceptance before extraction at every existing true-advance call; preserve eight tests,
+all18 CASES/source bindings/nativeargv/failure sets. Copy whole original19 logs before repeat;
+full fmt/strict Clippy/native gate after owned test guard edits. D186/D187 stay open until proof.
+Own whole D186/D187 reports and earned closures in fresh defects108/109 after verification;
+record new-over19c7 provenance. Retain whole authored0183 replay history in existing retention
+sibling before fresh acceptance-box growth; preserve canonical header and exact body bytes.
+
+Fresh shared22125 terminal0 consumed:578 reds/35 classifiers/40 captures/218 refusals;
+current readonly mode0. Original19 whole logs and metadata copied/byte-verified before reuse.
+New frozen72/63 production Rust/one helper14 public call guards exact0. Native43111 exclusive
+in flight at target/ordered-name-plan-native.log; consume terminal/restoration/per-body proof
+and current full8 before full Rust gate.
+
+Native43111/proof34316 terminal0 consumed:all18 unchanged authored sets/every failed body
+current macro/nonmacro[]/both sources/72 inputs/63 production Rust HEAD/19 logs/current full8
+b43b5e27e01b7599c6232a9abdf152a04710db55443c1c2e4c4a75036b262e62 exact0.
+Full Rust51484 in flight at target/ordered-name-plan-rust-check.log; consume terminal/independent
+703 sum/current inputs-artifact before D186/D187 closures or focused publication.
+
