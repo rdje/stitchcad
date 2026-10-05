@@ -569,6 +569,8 @@ Completed syntax subtree .5a.1–.5a.3f.2 is preserved verbatim in
 [G1-SLICE-recipes](G1-SLICE-recipes.md#completed-syntax-node-graph--preserved-during-g1-0072).
 Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
+Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
+
 - ID: `G1-SLICE.5a.4`
   Status: `done`
   Goal: review all syntax/canonical-form requirements and deferred name/type/evaluation owners,
@@ -803,7 +805,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h.v` | `todo` | newest committed window8 refusal, then namespace/ordered plans/D156, then native groups/D156/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n09.1` | `todo` | namespace complete plans/D156, then ordered-name and remaining producers, then native groups/D156/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

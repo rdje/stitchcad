@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0181 - newest committed window8 refusal (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h.v`)
+
+- Real copied prose inventory0/exact committed refusal1; root28 files/HEAD exact.
+- Whole window8 task/DEV216/CH159 retained;486 reads/prior484/all28 exact.
+- Archive28/CLI504/pub45/coverage9/census229paths288/ledger9+13 pass0.
+- New sibling/16 evidence siblings; orientation map8145B/fixed ceiling; source bytes preserved.
+- Namespace .n09.1/D156 next; Rust/reader/grammar/400 unchanged.
+
 ## STITCHCAD-G1-0180 - window8 continuity and protected history (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h`)
 
 - Pack57 complete0f records; fixture481 source/read/materialized exact; seven windows preserved.
@@ -189,14 +197,6 @@ the digests afterwards.
 - Seven inputs/16 ordinary or6 coupled files/two mutables/classifier zero writes; original15+5 cases exact.351 body reds/34 classifiers/17 captures/89 refusals0. Two test count guards fix reproduced extraction-only failures.
 - Twenty real macro faults/22 frozen inputs/full11 artifact/full fmt-Clippy-native703 gate0. Whole receipts/lesson/ledger retained; prior453/all51/public455 exact. Book/live route .n06.2/parent active/D17714 fixed1. Grammar/400 cadence unchanged.
 
-## STITCHCAD-G1-0169 - semantic mode-specific files and current macros (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n05.2`)
-
-- Guard three inputs; ordinary11 logs/one mutable, classifier-only zero files/mutable/native.
-- Shared312 body reds/33 classifiers/fourteen captures/64 physical refusals; final receipts in leaf.
-- Ten real macro faults/exact failed-test sets;13 inputs/six Rust files/full5 artifact exact0.
-- Retain whole domain receipt/length lesson/two ledgers; prior451/all49/public453 exact.
-- Parent lexer/semantic completes; D17713 fixed2 remain, .n06 next after checks.
-- Book/live/focused proof in leaf; grammar/metadata/400 cadence unchanged.
 
 
 
@@ -348,3 +348,5 @@ the digests afterwards.
 | [`part157`](docs/history/window8.md#stitchcad-changelog-part157md) | whole G1-0167 mixed-domain continuity ledger | 9 lines, 756 bytes, `sha256:d8f4288f…` |
 
 | [`part158`](docs/history/stitchcad-changelog-part158.md) | whole G1-0168 lexer file and macro ledger | 8 lines, 581 bytes, `sha256:a253490b…` |
+
+| [`part159`](docs/history/stitchcad-changelog-part159.md) | whole G1-0169 semantic mode and macro ledger | 8 lines, 648 bytes, `sha256:686a8b4f…` |

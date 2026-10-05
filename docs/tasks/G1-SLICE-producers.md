@@ -600,56 +600,42 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
   Paths: .doctrine/history_archive/;docs/history/;docs/book/src/governance.md;DEV_NOTES.md;CHANGELOG.md;live/frontier/link records;docs/tasks/G1-SLICE-runtime-proof.md;guarded target/window8-* helpers/fixtures/logs.
   Acceptance: complete public reader/schema/capture/CLI/book contracts; guard all inputs/destinations before effects; deterministic fixture proves481 source/read/materialized records. Single-link census/copy-verify before retiring only57 exact raw copies; prior7 windows/master prefix/source intervals/public reads/fixed caps exact; focused gates before commit. No Rust/grammar/cadence change.
 
-Clean0f223cb/42/brief0 and all jobs consumed before activation.0179 ledger57575 terminal0:
-641 real verdicts/9 arms/13 pointers. Archive481/64 working includes7 catalogs;57 raw/79
-resident files. DEV16028B/CH32367B/book40944B/root62729B/runtime56379B/map8169B measured.
-Full reader301L/public materialization/source, prior capture/install/retention/committed-control,
-generic CLI/runner/capture6/book contracts reviewed. Initial activation-size preflight refused
-before writes; minimal ownership precedes whole6498B current-record retention and full growth.
-
-Additional owned retention boundary: first proof part193 link is inside exact ade51652
-37808–41028/3220B/SHAf6e866e5; runtime part195 link inside exacta041a68
-19097–24277/5180B/SHAed796bed. Actual source bytes/current bodies match before installation.
-Do not rewrite either historical prefix: guard and append explicit current retrieval routes
-for these two logical identities after installing8; source interval bodies remain byte-exact.
-Route only live links outside protected evidence siblings. Own first/runtime suffixes and
-verify original62828B/56379B prefixes plus new complete0179 body independently. This latent
-rewrite risk is owned here; no broader history-link exemption or source-identity claim.
-Capture31543 terminal0 consumed:57 original source files/all481 reads/materialized exact;
-fixture8 working/18049L/1319846logicalB/567860residentB; SHA02664f77; seven prior controls exact.
-
-D34 bounded status recurrence: source0f223cb parent.n08 still in progress while all four
-children are done. Own correction here; source-derived child statuses verified before
-parent done update. Broader PLANNING.5/D34 agreement obligation stays open. Parent.n09
-now in_progress for this owned continuity prerequisite; no native feature closure claimed.
-
-- [x] REPRODUCE / ISSUE: clean0f223cb archive481/64 working includes7 catalogs; book40944B/DEV16028B/CH32367B limit growth. python3 -I -B target/window8-run-focus.py capture:57 source originals/all481 reads/materialized/no fixture Git or raw copies; rc=0. Full reader/capture/CLI/book contracts read before writes.
-- [x] ROOT CAUSE: physical raw copies exhaust working count; book chronology consumes live view. Actual part193/195 links occur inside exact source intervals SHA f6e866e5/ed796bed, so rewriting loses original bytes. python3 -I -B target/window8-run-focus.py task-retention-proof: protected62828/prior56379/current63302 prefixes/current aliases/whole6498B61L/map8169 exact; rc=0.
-- [x] FIX: guard82 source inputs/508 fixture outputs before activation; deterministic SHA02664f771c3341ce0c57507b6616b13972dd2781154298c3ac5eaa38c1dae262. python3 -I -B target/window8-install.py:57 raw/6 live/master1 single-link; all installed copied bytes verified before retirement; seven immutable windows/master prefix exact; rc=0. Append routes outside protected prefixes, route live destinations only.
-- [x] ADDRESSED: python3 -I -B target/window8-run-focus.py retention-proof: prior481/57 committed source files/raw absent/three whole0f intervals/all484 public reads/12open171sealed/IDs1–184 except18 exact;11working/18143L/1327284logicalB/575298residentB; rc=0. DEV2141512B9L/CH158581B8L/book2153309B44L copied and verified before live retirement.
-- [x] NO REGRESSION: python3 -I -B target/window8-run-focus.py archive:28 actual probes/501 CLI controls/eight windows/484 reads pass; rc=0. Publication45/coverage9/census229paths288checks/ledger9+13 pass; rc=0. Rust/reader/profile/Cargo unchanged; previous703/native19/full7 frozen72 inputs/current artifact remain exact. Newest8 committed refusal intentionally next .h.v; runner unobserved.
-- [x] LOCKSTEP: python3 -I -B target/window8-run-focus.py task-retention-proof: whole0f recipe6498B61L/53211–59709/SHA50db8770/canonical header/prior prefixes/current map exact; rc=0. Book/live/MEMORY/G1/index route .n09.h.v then namespace/ordered children. Promotion declined (existing whole records/immutable source/scoped proof). D34 bounded parent correction independently derived; broader PLANNING.5 stays. Initial activation/LIVE-line preflights refused before writes/excluded; tightened text/fixed caps/400 preserved.
-
-Post-doc census51621 refused D156 native file owner changed: new .n09.1/.2 canonical
-groups replace parent.n09, but two file-entry rows still name the parent. Own binding-table
-repair in docs/tasks/artifacts/ci_environment/python_file_entries.tsv before writes; retain
-closed schema/exact current membership/split-owner controls/guard implementation unchanged.
-Failed census excluded; fresh current census/60 owners/30 native groups before closure.
-Reader line-count note corrected to actual301; original full read covered all301 lines.
-
-Fresh census93728 terminal0:120 current paths/60 owners/30 native groups/15 refusals/12
-guard-body reds, plus229paths288 checks; binding rows/schema/guard exact and parent status
-aligned. Final pub90588/coverage12338/census93728/ledger96847 terminal0 consumed;45/9/
-229paths288/9 arms13 pointers pass. All prior required jobs consumed; no pending verification.
-
-Final staged8765 all13 doctrine checks green rc=0, target/window8-staged-gate.log.
-All required/confirmatory jobs terminal0 consumed before recording commit; newest committed
-window8 refusal is the next separate unit.
+Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#window8-retention); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h.v`
-  Status: `pending`
+  Status: `done`
   Goal: after .h commit, actual newest committed window8 catalog prose refusal in a guarded same-volume copy; full public CLI/current reads before namespace.
   Acceptance: baseline and copied inventory green/exact retention refusal/root-HEAD-controls unchanged/no tracked sealed writes; consume all results.
+
+Own blocking whole d56505a .n09.h record partition into new bounded
+docs/tasks/G1-SLICE-retention-proof.md before receipt growth; keep canonical header and
+exact source intervals/hashes/public navigation/collection ceilings. Own parent sibling link
+and derived map freshness before later verification; no submodule changes.
+
+Own knowledge-map/subsystems.md orientation containment/current generated KNOWLEDGE_MAP.md
+and LIVE_STATUS16 siblings: public generator after new sibling gives8240B, over8192 ceiling.
+This source is project-tracked100644, no submodule/boundary; keep directory/contract navigation,
+trim redundant leaf inventory per orientation policy, regenerate without ceiling changes.
+Earlier old-map equality check refused/excluded; new source-provenance proof stays exact.
+
+STITCHCAD-G1-0181 owns this post-recording unit; clean d56505a/43/brief0/all jobs
+consumed before activation. Full actual public CLI and guarded copied-catalog control
+against committed8/all28 current archive files; no tracked sealed changes. Own
+target/window8-post-* helpers/fixtures/logs, book/live/frontier receipts, whole old
+checked-statement lesson DEV216 and semantic ledger CH159 if needed before live growth.
+Existing complete CLI/public retention contract read at .h; repeat actual Source proof
+before claiming newest8 refusal. Rust/reader/schema/grammar/cadence unchanged.
+
+- [x] REPRODUCE / ISSUE: newest8 prose refusal awaited recording commit. python3 -I -B target/window8-post-run-focus.py committed-control: d565 root/copied baseline verify-retention0; copied prose inventory0/exact ARCHIVE-RETENTION committed retained file changed/exit1; rc=0. Public CLI/reader contract reviewed; no tracked sealed write.
+- [x] ROOT CAUSE: inventory checks bytes/membership and intentionally ignores prose; committed comparison independently refuses changed retained catalog. python3 -I -B target/window8-post-run-focus.py committed-control: all28 root archive files/current HEAD unchanged and copied bytes differ only by deliberate prose; rc=0. Producer tree64972B/runtime63645B requires new bounded sibling before receipts.
+- [x] FIX: actual public guard against current committed8, prepared inherited stores and guarded complete source/output fixture; two whole live records retained before growth. python3 -I -B target/window8-post-run-focus.py retention-proof: d565 DEV2161356B8L/CH159648B8L exact source intervals/hash; prior484/all28/current486 reads exact; rc=0.
+- [x] ADDRESSED: python3 -I -B target/window8-post-run-focus.py archive:28 actual probes/CLI504/all486 reads/materialization/newest8 committed-catalog refusal pass; rc=0. Initial484/CLI502 consumed before retention. Exact newest baseline green/mutated refusal consumed; fixed schema/reader/root windows unchanged.
+- [x] NO REGRESSION: python3 -I -B target/window8-post-run-focus.py retention-proof: whole5306B46L/54799–60105/SHA412ace45/canonical .h header/old first-runtime files/current parent route/prior484/all28/current486 exact; rc=0. Publication45/coverage9/census229paths288checks/file120paths60owners30groups/ledger9+13 pass; rc=0. Rust/reader/grammar unchanged; no new native or runner claim.
+- [x] LOCKSTEP: python3 -I -B target/window8-post-run-focus.py retention-proof: new6062B bounded sibling/16siblings/current public-generator map8145B/fixed caps exact; rc=0. Old map equality refused after new path; source orientation trimmed per policy/no generator or submodule change. Book/live/MEMORY/G1/index namespace .n09.1 next/D156 and broader D34 open. Promotion declined (existing immutable source/whole records/consumed results/orientation);400 remains.
+
+Final post-doc publication1426/coverage51820/census28190/ledger35299 terminal0 consumed.
+45/9/229paths288/648 real verdicts/9 arms13 pointers pass; all required jobs complete.
+Staged9164 all13 doctrine checks green rc=0, target/window8-post-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.1`
   Status: `pending`
