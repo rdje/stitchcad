@@ -630,7 +630,7 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
 Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#ordered-name-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n10`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete file-destination plans for declaration/exact name; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/declaration_mutations.py;docs/tasks/artifacts/formula_structure/name_read_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
@@ -647,32 +647,31 @@ canonical header/prefix retained. Own live/book/shared controls, guarded target/
   Own live/whole lesson-ledger/report retention and existing retention sibling; guarded target/declaration-plan-* helpers/logs/fixtures.
   Acceptance: preserve original19 CASES/count2 widening/full7 native/full5 doctest argv/restoration; two inputs/22 ordinary logs/one mutable/class0; independent omissions and physical refusals; every actual failed body/current macro/frozen inputs/current artifacts.
 
-Complete replay history retained in [retention proof](G1-SLICE-retention-proof.md#declaration-replay-history).
-
-Native83197/proof22072 terminal0 consumed:all19 original authored sets/every failed body
-current macro/nonmacro[]/sole negative construction fence137 red/exact source/72 inputs/
-63 production Rust HEAD/unchanged public tests/22 local logs/current full7 executable
-6671dcbcd78922d28537689212f6e0416794556bbfde9017b7f1b8e53698d4f0/full5 docs exact0.
-No Rust changed; current real replay/artifact required, prior full703 remains scoped185a.
-
-- [x] REPRODUCE / ISSUE: Original declaration lacks complete file/mutable mode plans and accepts nonthread current-macro notes. python3 -I -B target/declaration-plan-run-focus.py producer-controls:595 body reds/35 classifiers/42 captures/224 physical refusals; rc=0. Full295L implementation/290L public tests/five negative examples/G1/book reviewed; original19 predictions authored before replay.
-- [x] ROOT CAUSE: Unanchored panicked-at regex accepts compiler notes; ordinary/class-only plans must distinguish two inputs/22 files/one mutable/class0 and both restoration phases. python3 -I -B target/declaration-plan-run-focus.py producer-controls:16 actual mode omissions/legacy regex red/count2/negative selection/restored-doc dispatch watched;595/35/42/224; rc=0.
-- [x] FIX: Plans precede reads/effects; current thread macro evidence; original19 CASES/count2 widening/full7 native/full5 docs argv/stores/restoration preserved. python3 -I -B target/declaration-plan-run-focus.py producer-controls:two full captures/six physical refusals;595/35/42/224; rc=0. readonly-mode:3 links/four unused aliases/zero child-source-output writes; rc=0.
-- [x] ADDRESSED: python3 -I -B target/declaration-plan-proof-run.py:all19 authored failed sets/every failed body current macro/nonmacro[]/sole negative construction137 red/other4 docs pass/72 inputs/63 production Rust HEAD/unchanged public tests/22 logs/current full7 6671dcbc/full5 docs exact; rc=0. Native83197/proof22072 terminal0 consumed; D188110 closure earned.
-- [x] NO REGRESSION: python3 -I -B target/declaration-plan-run-focus.py publication:45 pass/0fail; coverage9/census229paths288checks/file120paths61owners31groups/ledger660 real9arms13pointers; rc=0. No Rust edited; previous full fmt/strict Clippy/703 remains scoped185a, current real19/full7/full5 separately consumed. New WASM/runner unobserved.
-- [x] LOCKSTEP: python3 -I -B target/declaration-plan-run-focus.py retention-proof:prior493/all37/current496 public reads/eight windows/12open175sealed/IDs1–188except18/whole185a ordered3178B19L SHA4a3115fe/20498B prefix/authored2955B33L SHAb29a1b2b/current27233B sibling/DEV2191006B/CH16212187B with live11675B nav exact; rc=0. First split cap refused before writes; native membership field fixed after measured refusal. Book/live/frontier/caps/16siblings/map8145 aligned; D156/D34 open/400 stay; promotion declined.
-
-Staged gate91848 terminal0 consumed:13 doctrines green, rc=0; target/declaration-plan-staged-gate.log.
-Post-doc publication89656/coverage84114/census48124/retention47877 terminal0 consumed:
-45 probes/62 chapters/67 API/1272 source1989 rendered links/9 coverage/496 exact reads.
-Confirmatory ledger51958 pending: target/declaration-plan-ledger-final.log; consume before
-.n10.2 activation. Initial ledger19850 had660 real verdicts/9arms/13pointers rc=0.
+Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#declaration-complete-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n10.2`
-  Status: `pending`
+  Status: `done`
+  Own: shared/live/book/retention;target/name-read-plan-*.
   Goal: exact-name complete mode/input/file/mutable plans/current assertions and original9 real faults/full7 restoration.
   Paths: docs/tasks/artifacts/formula_structure/name_read_mutations.py
   Acceptance: review full source/public tests/book before code; retain original cases/argv/source restoration/current artifact; independent omissions/physical refusals/every failed body; D156 remains outside this entry.
+
+Complete authored replay history retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-replay-history).
+
+Whole authored sealing correction retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-sealing-correction).
+
+- [x] REPRODUCE / ISSUE: Original exact-name lacks full file/mutable mode plans and accepts nonthread macro notes. python3 -I -B target/name-read-plan-run-focus.py producer-controls:609 body reds/35 classifiers/44 captures/230 refusals; rc=0. Full entry/namespace253L/public304L/G1/book reviewed; original9 sets authored before replay.
+- [x] ROOT CAUSE: Unanchored panicked-at regex accepts compiler notes; two inputs/10 files/one mutable/class0 need distinct complete plans. python3 -I -B target/name-read-plan-run-focus.py producer-controls:13 actual omissions and actual D189 legacy-predicate red;609/35/44/230; rc=0.
+- [x] FIX: Plans precede reads/effects; current-thread path/line/byte-column macros; original9/full7/stores/exact restoration retained. python3 -I -B target/name-read-plan-run-focus.py producer-controls:two full captures/six physical refusals;609/35/44/230; rc=0. readonly-mode:3 links/two aliases/zero child-source-output writes; rc=0.
+- [x] ADDRESSED: python3 -I -B target/name-read-plan-proof-run.py:all9 preauthored failed sets/every failed body current macro/nonmacro[]/72 inputs/63 production Rust HEAD/unchanged public7/10 local logs/current full7 c127dc5f exact; rc=0. Native47396/proof2780 terminal0 consumed; D189112/D190113 closures earned; archive28/CLI518/fresh preflights0.
+- [x] NO REGRESSION: python3 -I -B target/name-read-plan-run-focus.py publication:45 pass; coverage9/census229Git288checks/120files61owners31groups/ledger9arms13pointers; rc=0. No Rust change; prior fmt/strict Clippy/full703 scoped185a, real9/currentfull7 separately consumed; new WASM/runner unobserved.
+- [x] LOCKSTEP: python3 -I -B target/name-read-plan-run-focus.py retention-proof:prior496/all40/current500/eight windows/12open177sealed/IDs1–190except18/whole7e197 declaration3381B21L SHA763305b6/27233B prefix/DEV221845B/CH164490B/live11675B nav/map8145/canonical first-runtime/fixed caps exact; rc=0. Authored progress retained before growth; book/live/frontier/.n10 aligned; D156/D34 open/400 stay; promotion: declined (existing plans/macros/whole retention).
+
+Initial corrected checks consumed:retention23545/all500/40908B sibling/12open177sealed0;
+archive15502:28 probes/518 CLI controls0; ledger98104:666 real/9arms/13pointers0; publication80007:45/62chapters67API0.
+Post-doc29508 coverage/55921 census/4473 retention terminal0 consumed:9/229Git288/500 exact.
+43367/34382 publication45 terminal0 consumed; staged66360:13 doctrines green0; ledger74180 pending:
+target/name-read-plan-publication.log/ledger-final.log; consume before .n11. Native/proof consumed.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11`
   Status: `pending`

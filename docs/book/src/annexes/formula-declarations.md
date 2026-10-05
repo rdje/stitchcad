@@ -389,14 +389,31 @@ Seven public read contracts verify all scalar annotations/domains, five canonica
 domains, exact point/edge references, all eight reserved sources, distinct names with equal kinds,
 missing/near spellings, immutable failures, independent borrow lifetimes and formatting privacy.
 Two compile-fail contracts protect the diagnostic's private construction and query lifetime.
-Nine actual compiled lookup/source/value-read/fallback/domain/token/name/privacy faults must fail
-public body assertions, restore exact source bytes and rebuild the complete focused target.
-The direct entry guards implementation/test source and output before reads/writes, retains prepared
-child stores and supports classifier-only mode. Failed-body panic locations must match current
-test assertion macro sites; custom assertion messages pass and expect/compiler/name noise refuses.
-Run the mutation command alone:
+The direct exact-name entry declares both implementation and current public test before reads
+or effects. Ordinary mode plans nine fault logs plus full-target restoration and one mutable
+implementation source. The original nine cases, complete seven-test Cargo argv, prepared
+child stores and exact source restoration remain unchanged. Classifier-only validates both
+inputs and anchors, prepares local stores/output directory, declares zero files or mutable
+sources and performs no native child or source/output write. The actual copied mode accepts
+a source with three hard links and leaves unused fault/restoration aliases untouched.
+
+Two complete captures, six physical refusals and thirteen independent input/file/mutable/
+mode/store/restoration/mutation omissions watch these plans. A failed-body thread panic must
+identify a current public assertion macro by exact path, line and byte-column. Custom
+messages qualify; nonthread compiler notes, wrong locations, unwrap/expect-only panics,
+compiler/linker noise and passed test names refuse. D189's measured nonthread weakness is
+repaired and watched by an independent actual legacy-predicate fault. Dispatch captures
+certify effects separately from the real native proof.
+
+Exclusive replay compiles all nine lookup/source/value-read/fallback/domain/token/query/
+privacy faults and checks every preauthored failing-test set and every failed body
+against current macros. Seventy-two frozen inputs, sixty-three unchanged production Rust
+files, unchanged public tests, ten local logs and Cargo's current full seven-test executable
+remain exact after restoration. No metadata API or grammar changes. Run native mutations
+alone and consume restoration before another build or probe:
 
 ```bash
 cargo test -p sc-core --test formula_name_read_contract
+python3 -I -B docs/tasks/artifacts/formula_structure/name_read_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/name_read_mutations.py
 ```

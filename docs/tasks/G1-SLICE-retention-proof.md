@@ -269,3 +269,175 @@ navigation. Diagnostic found the first table at tail511 and no next heading. Res
 complete11675B navigation bytes to live ledger after verifying retained copy; keep sealed
 whole interval immutable and clarify live coverage. Prior493/all37/current495 preserved.
 
+
+## Declaration complete verification
+
+Whole committed receipt from 7e197a7e933f8effefb333f951fcf356d3c51a5e:docs/tasks/G1-SLICE-producers.md
+bytes 59263–62644; 3381B/21L; SHA256 763305b68176ad5a3573dbfe82370172cac87af2cb760ee055063682a782e806.
+Historical pending statements remain byte-exact; the current exact-name leaf records the consumed result.
+
+Complete replay history retained in [retention proof](G1-SLICE-retention-proof.md#declaration-replay-history).
+
+Native83197/proof22072 terminal0 consumed:all19 original authored sets/every failed body
+current macro/nonmacro[]/sole negative construction fence137 red/exact source/72 inputs/
+63 production Rust HEAD/unchanged public tests/22 local logs/current full7 executable
+6671dcbcd78922d28537689212f6e0416794556bbfde9017b7f1b8e53698d4f0/full5 docs exact0.
+No Rust changed; current real replay/artifact required, prior full703 remains scoped185a.
+
+- [x] REPRODUCE / ISSUE: Original declaration lacks complete file/mutable mode plans and accepts nonthread current-macro notes. python3 -I -B target/declaration-plan-run-focus.py producer-controls:595 body reds/35 classifiers/42 captures/224 physical refusals; rc=0. Full295L implementation/290L public tests/five negative examples/G1/book reviewed; original19 predictions authored before replay.
+- [x] ROOT CAUSE: Unanchored panicked-at regex accepts compiler notes; ordinary/class-only plans must distinguish two inputs/22 files/one mutable/class0 and both restoration phases. python3 -I -B target/declaration-plan-run-focus.py producer-controls:16 actual mode omissions/legacy regex red/count2/negative selection/restored-doc dispatch watched;595/35/42/224; rc=0.
+- [x] FIX: Plans precede reads/effects; current thread macro evidence; original19 CASES/count2 widening/full7 native/full5 docs argv/stores/restoration preserved. python3 -I -B target/declaration-plan-run-focus.py producer-controls:two full captures/six physical refusals;595/35/42/224; rc=0. readonly-mode:3 links/four unused aliases/zero child-source-output writes; rc=0.
+- [x] ADDRESSED: python3 -I -B target/declaration-plan-proof-run.py:all19 authored failed sets/every failed body current macro/nonmacro[]/sole negative construction137 red/other4 docs pass/72 inputs/63 production Rust HEAD/unchanged public tests/22 logs/current full7 6671dcbc/full5 docs exact; rc=0. Native83197/proof22072 terminal0 consumed; D188110 closure earned.
+- [x] NO REGRESSION: python3 -I -B target/declaration-plan-run-focus.py publication:45 pass/0fail; coverage9/census229paths288checks/file120paths61owners31groups/ledger660 real9arms13pointers; rc=0. No Rust edited; previous full fmt/strict Clippy/703 remains scoped185a, current real19/full7/full5 separately consumed. New WASM/runner unobserved.
+- [x] LOCKSTEP: python3 -I -B target/declaration-plan-run-focus.py retention-proof:prior493/all37/current496 public reads/eight windows/12open175sealed/IDs1–188except18/whole185a ordered3178B19L SHA4a3115fe/20498B prefix/authored2955B33L SHAb29a1b2b/current27233B sibling/DEV2191006B/CH16212187B with live11675B nav exact; rc=0. First split cap refused before writes; native membership field fixed after measured refusal. Book/live/frontier/caps/16siblings/map8145 aligned; D156/D34 open/400 stay; promotion declined.
+
+Staged gate91848 terminal0 consumed:13 doctrines green, rc=0; target/declaration-plan-staged-gate.log.
+Post-doc publication89656/coverage84114/census48124/retention47877 terminal0 consumed:
+45 probes/62 chapters/67 API/1272 source1989 rendered links/9 coverage/496 exact reads.
+Confirmatory ledger51958 pending: target/declaration-plan-ledger-final.log; consume before
+.n10.2 activation. Initial ledger19850 had660 real verdicts/9arms/13pointers rc=0.
+
+
+## Exact-name replay history
+
+New authored progress over baseline 7e197a7e933f8effefb333f951fcf356d3c51a5e; absent from that committed task body.
+Whole current .n10.2 progress 2551B/29L; SHA256 8f394192e5627025c36d589a2086ce301c160a70392ea90e3394fe65947884b0.
+Historical in-flight statements are retained exactly; current acceptance receipts supersede them.
+
+STITCHCAD-G1-0185 owns exact-name entry/shared/book/live/whole retention and guarded
+target/name-read-plan-* helpers/logs/fixtures. Full entry/original9/namespace253L/
+public304L/exact-read book/G1 exit/Knowledge Map/mixed capture/physical/classifier
+contracts reviewed. Public A–G source order; authored failed sets BEFORE replay:
+1 C;2 ABCDEFG;3 E;4 EFG;5 E;6 EG;7 EF;8 G;9 G.
+Plan2 inputs/10 logs/1 mutable ordinary; classifier-only0 files/mutables.
+Declaration7e197a7/47/brief0/clean/all jobs consumed before activation; final
+ledger51958:661 real/9arms/13pointers0. Whole committed declaration3381B21L/
+SHA763305b6/source59263–62644/old27233B prefix/current30968B sibling retained0.
+Initial broader activation cap refused before writes; minimal ownership preceded retention.
+
+D189 measured before code: original strict/thread-only classifier accepts nonthread
+current-macro location; diagnostic raises D159 assertion evidence accepted noise, rc=0.
+P1 owned now by .n10.2; actual legacy-predicate red/current-thread fix and real9 proof owed.
+
+Shared75753 terminal0 consumed:31runtime/609bodyreds/35classifiers/44captures/230physical
+refusals/source unchanged. Two exact-name modes/13 omissions/D189 legacy red/six physical.
+readonly0:source3 hard links/two unused aliases/zero child-source-output writes; census13315
+terminal0:229Git288checks/120files61owners31groups; 72inputs/63 production Rust HEAD/
+unchanged public7/original9 frozen before native. Entry/shared preflight initially refused
+wrong expected set-anchor count7 (actual8 incl mutation branch), no writes; corrected measured count.
+Whole DEV220846B7L/CH163492B8L copied/verified from7e197a7 before retirement; prior496/all40 frozen.
+Native47396 terminal0 consumed:9 compiled body reds/exact source/restored full7; independent proof2780 terminal0 consumed:all9 authored sets/every body current macro/nonmacro[]/72inputs/63 production Rust HEAD/public tests/10 logs/current full7 c127dc5ffa902db17d42606dbc311fe77b20f31378916b4d0974f6b4c99e899f exact. Coverage11511 terminal0 consumed:9 pass/10lanes13trees16siblings/no unowned-orphan-dead links.
+Retention34097 terminal0 consumed:all498/prior496/all40/eight windows/13open175sealed/IDs1–189except18/current30968B sibling/map8145/fixed caps exact.
+
+D189111 whole new-over7e report/earned closure copied/verified before retirement;12open176sealed.
+Book preflight measured41017B (>40960) and corrected authored anchor from source;
+bounded combined orientation measures40827B before any live write; complete detail stays in annex.
+
+
+## Rejected exact-name seal candidates
+
+### Retained original candidate stitchcad-devnotes-part220.md
+
+Rejected before admission/commit; complete original 1473B/SHA256 f979576d86a1164770e1143b0fc9b9a96d84ec481b70fb54cf17d6b094ea0aee.
+Superseding records correct the preflight refusal; these original bytes never change.
+
+~~~~text
+# Sealed archive — whole ordered-name plans and guarded advances lesson
+
+Immutable historical segment, sealed by leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n10.2` on `2026-10-05` (UTC).
+
+- **Sealed identity:** 7 lines, 846 bytes, `sha256:5f404e964e2f4cb7725d1feb781919abd04c830ebafbccd1ea799792e2eeeb1e`
+- **Coverage:** whole ordered-name plans and guarded advances lesson; whole 7e197a7e933f8effefb333f951fcf356d3c51a5e:DEV_NOTES.md bytes 1445–2291.
+- **Retrieval:** content below the first `---` rule and following blank line.
+- **Write policy:** none; corrections belong in the live pointer, never in this immutable segment.
+
+---
+
+## _(2026-10-05 UTC)_ — ordered-name plans and guarded advances
+
+- Three inputs/19 files/two mutables; class0. Original18/two bindings/full8 exact; shared578 reds/35 classifiers/40 captures/218 refusals0. D186 thread-only/legacy regex red; readonly both sources3 links/unused aliases0.
+- Original18 sets exact, seven extraction panics/D187; restore/copy19 logs before one helper14 calls. Fresh18/every body macro/72 inputs/63 Rust/full8 b43b5e27 exact0; full fmt/strict Clippy/59groups703passed0.
+- Whole19c7 namespace5421B46L/old10221B prefix/DEV218950B6L/CH161463B6L/new defects108109 retained; prior489/all33/current493 reads/12open174sealed0. Book/live/.n10 aligned; D156/broader D34 open.
+- Promotion declined: complete plans/current macros/guarded extraction/whole retention already bind. Engine/grammar/400 stay; new runner unobserved.
+
+~~~~
+
+### Retained original candidate stitchcad-changelog-part163.md
+
+Rejected before admission/commit; complete original 1101B/SHA256 99b981d88effb2e0e4ebb4d4489a983d0205c69776862ac129fab21454d6d3a6.
+Superseding records correct the preflight refusal; these original bytes never change.
+
+~~~~text
+# Sealed archive — whole G1-0173 normalized expression ledger
+
+Immutable historical segment, sealed by leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n10.2` on `2026-10-05` (UTC).
+
+- **Sealed identity:** 8 lines, 492 bytes, `sha256:ad39b0efbbada23f38116745d6a81b81f078b664344bf2824b905790bca857a2`
+- **Coverage:** whole G1-0173 normalized expression ledger; whole 7e197a7e933f8effefb333f951fcf356d3c51a5e:CHANGELOG.md bytes 20401–20893.
+- **Retrieval:** content below the first `---` rule and following blank line.
+- **Write policy:** none; corrections belong in the live pointer, never in this immutable segment.
+
+---
+
+## STITCHCAD-G1-0173 - normalized expression modes and thread evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n07.2`)
+
+- Five inputs/18 native logs/one mutable; classifier-only zero native effects;17 cases exact.
+- Shared408 reds/35 classifiers/23 captures/123 refusals0; real17/frozen23/current full8 artifact0.
+- Whole task/lesson/ledger retained;462 public reads/prior460/all58/seven windows exact.
+- D178 literal/expression fixed/2 recipe P1 remain; D156 open. Rust/grammar/400 cadence stay.
+
+
+~~~~
+
+### Retained original candidate stitchcad-defects-part111.md
+
+Rejected before admission/commit; complete original 2269B/SHA256 a819010a92bb83db1a3d4ef81d32f9b4b864056ea8a0edbcedd863540c1fd3cc.
+Superseding records correct the preflight refusal; these original bytes never change.
+
+~~~~text
+# Sealed archive — whole D189 report and verified closure
+
+Immutable historical segment, sealed by leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n10.2` on `2026-10-05` (UTC).
+
+- **Sealed identity:** 13 lines, 1495 bytes, `sha256:5c9dfebe7714d43a38a802ccfef87aef2d958efdb2eef9d6c5a82843722332ae`
+- **Coverage:** whole report/closure; docs/tasks/PLANNING.md interval 79246–79842, SHA-256 82490e98850dc0bd9c413e8295b95129d8df35eaf83a9c4f65a256b7824f6840.
+  Report authored over baseline 7e197a7e933f8effefb333f951fcf356d3c51a5e and absent from that commit; closure follows.
+- **Retrieval:** content below the first `---` rule and following blank line; exactly one terminal newline.
+- **Write policy:** none; corrections belong in the live pointer, never in this immutable segment.
+
+---
+
+- **D189** (owned P1, active fix G1-SLICE.5b.4c.h2.b.p.o.f.n10.2): exact-name assertion classifier accepts a nonthread compiler-note location at a current public macro. Reproduce: classifier_controls(name_read_mutations.py, strict=True, thread_only=True) raises D159 assertion evidence accepted noise; target/name-read-plan-classifier-diagnostic.log, diagnostic rc=0. Unanchored panicked-at regex can misclassify nonbody evidence as native fault proof. Repair current-thread path/line/byte-column matching now; watch actual legacy predicate red and all9 real faults/every body/full7 restoration.
+
+D189 closes at .n10.2: current-thread path/line/byte-column macro evidence replaces
+the unanchored classifier; independent actual legacy-predicate fault refuses notes.
+Two complete modes/13 omissions/six physical refusals preserve all original9 CASES,
+two inputs/10 logs/one mutable/classifier0 files and mutables, full7 native argv,
+prepared child stores and exact source restoration before the restored child.
+Shared609 body reds/35 classifiers/44 captures/230 physical refusals0. Copied actual
+classifier accepts a source with3 hard links and2 unused log aliases, no child or
+source/output write. All9 real faults retain every preauthored failed-test set;
+every failed body reaches a current macro. Frozen72 inputs/63 production Rust HEAD/
+unchanged public7/10 local logs/Cargo-current full7 executable exact0. No Rust,
+metadata API, engine or grammar changed; prior full703 remains scoped185a.
+~~~~
+
+
+## Exact-name sealing correction
+
+Whole authored correction progress, absent baseline 7e197a7e933f8effefb333f951fcf356d3c51a5e; 949B/13L/SHA256 e27f7ae468879c396a4df41728020c0b544998f98561c0e4fa942b3446255b08.
+Historical instructions are retained exactly; fresh current acceptance receipts supersede them.
+
+D190 owned now: authored D189 candidate111 was retired before record_stats admission;
+logical reader refused line595B >400 at inventory, no public read completed. Candidate
+was never committed/admitted. Preserve its complete original bytes in retention sibling
+before exact physical retirement; supersede at fresh112/113 with bounded reports.
+No committed archive/logical address/reader/bound changes. Re-run whole public retrieval.
+
+D190 correction: all three rejected/unadmitted/uncommitted candidates retained as whole
+original files in sibling#rejected-exact-name-seal-candidates before exact retirement.
+Fresh221845B6L/164490B6L/112D189/113D190: record_stats/one terminal newline before
+writes, inventory500 and four real public reads before live report retirement, rc=0.
+Earlier retention maxline red and ledger67366 two failures excluded; no committed
+record/logical address/reader/ceiling altered. All500/current12open177sealed proof next.
+

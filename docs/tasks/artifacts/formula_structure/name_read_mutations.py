@@ -11,10 +11,6 @@ SOURCE = ROOT / 'crates/sc-core/src/recipe/namespace.rs'
 CONTRACT = ROOT / 'crates/sc-core/tests/formula_name_read_contract.rs'
 SOURCES = (SOURCE, CONTRACT)
 WORK = ROOT / 'target/name_read_mutations'
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=SOURCES)
-original = SOURCE.read_bytes()
-WORK.mkdir(parents=True, exist_ok=True)
 CASES = (('value availability read',
   '        self.entries\n'
   '            .get(name)\n'
@@ -51,6 +47,16 @@ CASES = (('value availability read',
   "impl fmt::Display for FormulaUnboundName<'_> {\n"
   "    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {\n"
   '        write!(f, "{}: {}", self.token(), self.name())'))
+assert sys.argv[1:] in [[], ['--classifier-only']]
+CLASSIFIER_ONLY = sys.argv[1:] == ['--classifier-only']
+OUTPUT_FILES = (() if CLASSIFIER_ONLY else
+                tuple(WORK / ('fault-%d.log' % index) for index in range(1, len(CASES) + 1)) +
+                (WORK / 'restored.log',))
+MUTABLE_SOURCES = () if CLASSIFIER_ONLY else (SOURCE,)
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=MUTABLE_SOURCES)
+original = SOURCE.read_bytes()
+WORK.mkdir(parents=True, exist_ok=True)
 for name, before, _ in CASES:
     assert original.decode().count(before) == 1, (name, 'actual fault anchor not unique')
 
@@ -64,20 +70,31 @@ def assertion_sites(source, path):
 
 
 def assertion_failure(output):
+    """A failed-body thread panic must name a current guarded assertion macro."""
     parts = output.split(b'\nfailures:\n', 2)
     if len(parts) != 3:
         return False
-    locations = re.finditer(rb'panicked at ([^:\n]+):([0-9]+):([0-9]+):\n', parts[1])
-    return any((match.group(1).decode('utf-8', 'replace'), int(match.group(2)), int(match.group(3)))
-               in ASSERTION_SITES for match in locations)
+    for match in re.finditer(
+            rb'(?m)^thread\b[^\r\n]*? panicked at ([^:\r\n]+):([0-9]+):([0-9]+):\r?$', parts[1]):
+        try:
+            path = match.group(1).decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if (path, int(match.group(2)), int(match.group(3))) in ASSERTION_SITES:
+            return True
+    return False
 
 ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
 assert ASSERTION_SITES, 'focused contract has no assertion sites'
+site = min(ASSERTION_SITES)
+location = ("\nfailures:\nthread 'fixture' panicked at %s:%d:%d:\n" % site).encode()
+assert assertion_failure(location + b'custom macro message\n\nfailures:\nfixture\n')
+assert not assertion_failure(location.replace(b"thread 'fixture'", b'compiler note:') +
+                             b'nonthread location mention\n\nfailures:\nfixture\n')
 assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
 assert not assertion_failure(b'assertion: compiler output\n')
 
-assert sys.argv[1:] in [[], ['--classifier-only']]
-if sys.argv[1:] == ['--classifier-only']:
+if CLASSIFIER_ONLY:
     print('name read fault controls:9 unique actual anchors; name/expect/compiler noise refused')
     sys.exit(0)
 environment = dict(os.environ)
@@ -95,6 +112,7 @@ try:
         SOURCE.write_bytes(original)
 finally:
     SOURCE.write_bytes(original)
+    assert SOURCE.read_bytes() == original, 'name read source not restored'
     restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test',
                                'formula_name_read_contract'],
                               cwd=ROOT, env=environment, capture_output=True)
