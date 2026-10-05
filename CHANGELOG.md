@@ -110,6 +110,12 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0150 - bounded generated navigation (leaf `G1-SLICE.5b.4c.h2.b.p.o.i.k`)
+
+- Shorten redundant .md task/decision labels; preserve all72 generated destinations/order and path CLI.
+- Actual map7974B admits planned output/delegation sibling under unchanged8192B ceiling.
+- No producer/Rust/grammar behavior change; source/freshness/publication/coverage checks follow.
+
 ## STITCHCAD-G1-0149 - bounded output/delegation continuity (leaf `G1-SLICE.5b.4c.h2.b.p.o.h`)
 
 - Retain five whole committed source records before task/note growth; preserve IDs and live date corrections.

@@ -991,6 +991,6 @@ Native baseline log replay1 excluded: old signature fault logs absent (actual di
 - [x] LOCKSTEP: book describes pending module/borrowed-root audit; MEMORY/index/G1 frontier .p.o.i synced. Initial helper1 excluded; corrected interval boundaries proven, rc=0. promotion: declined (existing whole-retention/public-entry/borrowed-root rules). Final staged gate13green, rc=0, output-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.i`
-  Status: `pending`
+  Status: `in_progress`
   Goal: independently divide finite Python output/delegation ledger into bounded owned groups before producer changes.
   Acceptance: source/hash/call and public entry/module/fixture/root contracts; watched coverage, actual effects and safe refusal baselines, no unguarded native actions.

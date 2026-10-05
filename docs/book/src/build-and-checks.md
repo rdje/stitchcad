@@ -53,6 +53,9 @@ The immediate read-only residue census must not activate this launcher: activati
 `target/scratch`. Use nonactivating verification, then rebuild native/WASM/book outputs and run
 focused safety checks. The latest run is recorded in `docs/ARTIFACT_CLEANUP.md`.
 
+The generated Knowledge Map lists task and decision links with concise labels. Their complete
+repository-relative filenames remain in each link destination; freshness checks verify regeneration.
+
 ## Destinations
 
 | Variable | Repository-relative default |

@@ -31,7 +31,7 @@ echo
 found=0
 for f in $(ls docs/tasks/*.md 2>/dev/null | LC_ALL=C sort); do
   b="$(basename "$f")"; [ "$b" = "TEMPLATE.md" ] && continue
-  echo "- [\`$b\`](docs/tasks/$b)"; found=1
+  echo "- [\`${b%.md}\`](docs/tasks/$b)"; found=1
 done
 if [ "$found" = 0 ]; then echo "- _none yet_"; fi
 
@@ -41,6 +41,6 @@ echo
 found=0
 for f in $(ls docs/decisions/*.md 2>/dev/null | LC_ALL=C sort); do
   b="$(basename "$f")"; case "$b" in INDEX.md|TEMPLATE.md) continue;; esac
-  echo "- [\`$b\`](docs/decisions/$b)"; found=1
+  echo "- [\`${b%.md}\`](docs/decisions/$b)"; found=1
 done
 if [ "$found" = 0 ]; then echo "- _none yet_"; fi

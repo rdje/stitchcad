@@ -14,6 +14,12 @@ D162 namespace guard lesson retained in [part178](docs/history/stitchcad-devnote
 
 D161 statement and whole proof lesson retained in [part180](docs/history/stitchcad-devnotes-part180.md).
 
+## _(2026-10-05 UTC)_ — generated navigation label containment
+
+- Current map8190B plus planned62B sibling exceeds8192B. Redundant .md suffixes in task/decision link labels consume216B; destination filenames and ordering are unchanged.
+- Actual regeneration yields7974B/all72 ordered targets exact/full source coverage/path CLI unchanged0; prospective sibling fits fixed cap. Keep the deterministic generator and freshness checker as authority.
+- Publication45/census9/coverage9/ledger9+pointer13 terminal0 consumed. Promotion declined: existing bounded generated projections and full navigation preservation; no producer storage or formula behavior changes.
+
 ## _(2026-10-05 UTC)_ — bounded output/delegation audit continuity
 
 - Parent .p.o owned containment before adding child .p.o.h; recipes999L/notes16382B leave no safe receipt room.

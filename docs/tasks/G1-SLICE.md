@@ -783,6 +783,18 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
   Verification: `pending`
   Commit: `pending`
 
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.i.k`
+  Status: `done`
+  Goal: STITCHCAD-G1-0150 owns blocking map-label containment before the new output/delegation evidence sibling.
+  Acceptance: preserve every generated task/decision target, order, source coverage and path CLI; remove only redundant label extensions, fixed caps and hooks/checker behavior retained; actual regeneration/publication/census/coverage proof before .p.o.i.
+
+- [x] REPRODUCE / ISSUE: map-navigation-baseline.log current8190B+planned62B sibling exceeds fixed8192B ceiling;72 original target/CLI identities frozen, rc=0.
+- [x] ROOT CAUSE (WHY + WHERE): gen_knowledge_map.sh repeats .md suffixes in72 labels; map-navigation-proof.log actual output7974B and identical ordered targets, rc=0; only label expansion changes.
+- [x] FIX: shorten both task/decision labels while retaining complete destination filenames, sorting, exclusions, --print-map-path behavior and source coverage; actual regeneration/source catalogs match, rc=0.
+- [x] ADDRESSED (verified): map-navigation-proof.log independent filesystem catalogs/all72 destinations/order exact/current7974B/prospective sibling fits8192B, rc=0; check_knowledge_map.sh fresh render identical, rc=0.
+- [x] NO REGRESSION: publication probes:45 pass/0 fail; producer-census9/9/4 and228 Git paths/287 checks; coverage9/ledger9+pointer13 all terminal0 consumed, rc=0, map-publication/census/coverage/ledger logs; no Rust/producer storage/grammar change.
+- [x] LOCKSTEP: book/notes/changelog/map/MEMORY/frontier synced to .p.o.i; fixed caps preserved; source render and published path CLI exact, rc=0. promotion: declined (existing bounded projections/full navigation preservation). Final staged gate13green, rc=0, map-staged-gate.log.
+
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
