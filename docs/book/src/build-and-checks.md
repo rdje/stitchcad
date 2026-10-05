@@ -255,6 +255,16 @@ classifier mode accepts linked input/unused aliases without source/output writes
 faults reach current macros; twenty-two frozen inputs/thirteen unchanged Rust files/two compile-time
 fixtures remain exact and the current full six-test executable passes after restoration.
 
+Normalized expression plans five inputs: implementation/current public test/two imported TSVs/
+worked examples. Ordinary mode declares eighteen diagnostic files/one mutable source; classifier-only
+declares zero files/mutable sources/native effects. Two complete captures, twelve physical refusals
+and eighteen mode omissions preserve seventeen cases, exact selected tests and full eight-test
+restoration. Current thread macro locations qualify; nonthread mentions refuse, calibrated by an
+independent legacy-regex fault. Copied readonly classifier mode accepts linked input/unused aliases
+without source/output writes. Seventeen real faults reach current macros; twenty-three frozen inputs/
+thirteen unchanged Rust files/three compile-time inputs and the current full eight-test executable
+restore exactly. D178 literal/normalized expression fixed; two recipe entries remain immediate P1.
+
 D177's fifteen entries/sixteen predicates are now repaired and independently replayed. Current
 macro locations and calibrated failed-body controls replace message substrings and labelled
 extraction/join panics. This closes that diagnostic defect; the remaining D156 producer plans
@@ -405,7 +415,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and389 actual body faults, with35 calibrated failed-body classifiers,
+controls and408 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

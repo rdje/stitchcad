@@ -999,4 +999,5 @@ D177 whole report/verified closure retained in [part99](../history/stitchcad-def
   require current thread macro panic, independent nonthread noise/body controls and real replay.
   Remaining native groups inspect this boundary before their signoff; no broader count claimed.
   Literal .n07.1 fixed: independent nonthread noise/legacy-regex body refusal and13 real selected
-  macro faults/current full6 artifact pass0. Three other confirmed entries remain P1 .n07.2–4.
+  macro faults/current full6 artifact pass0. Normalized expression .n07.2 fixed: independent nonthread noise/legacy-regex body refusal and17
+  real selected macros/frozen23 inputs/current full8 artifact pass0. Two recipe entries P1 .n07.3–4.

@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0173 - normalized expression modes and thread evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n07.2`)
+
+- Five inputs/18 native logs/one mutable; classifier-only zero native effects;17 cases exact.
+- Shared408 reds/35 classifiers/23 captures/123 refusals0; real17/frozen23/current full8 artifact0.
+- Whole task/lesson/ledger retained;462 public reads/prior460/all58/seven windows exact.
+- D178 literal/expression fixed/2 recipe P1 remain; D156 open. Rust/grammar/400 cadence stay.
+
 ## STITCHCAD-G1-0172 - literal modes and thread evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n07.1`)
 
 - Four inputs/14 native logs/one mutable; classifier-only zero native effects;13 original cases exact.
@@ -201,13 +208,6 @@ the digests afterwards.
 - Retain two whole ade5165 records; prior438/all36/public440 exact; final checks in owning leaf.
 - D177 six fixed/9 P1 remain. Ease-set next; grammar/400 cadence unchanged.
 
-## STITCHCAD-G1-0161 - guarded collection files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.4`)
-
-- Plan15 logs/two inputs/one mutable source before reads; preserve14 cases/15 ordered anchors.
-- Shared213 body reds/25 classifiers/five captures/twenty physical refusals/inline controls0.
-- Fourteen real current macro reds/eight frozen inputs/Rust exact/full18 public artifact0.
-- Retain five whole9d840bc source records; prior433/all31/public438 exact; focused checks0.
-- D177 five measurement families fixed;10 repairs P1 remain. Grammar/400 cadence unchanged.
 
 
 
@@ -335,3 +335,5 @@ the digests afterwards.
 | [`part149`](docs/history/stitchcad-changelog-part149.md) | whole G1-0158 chart continuity ledger | 8 lines, 638 bytes, `sha256:d18ad1d9…` |
 
 | [`part150`](docs/history/stitchcad-changelog-part150.md) | whole G1-0160 and G1-0159 continuity ledgers | 15 lines, 1158 bytes, `sha256:16a21ab1…` |
+
+| [`part151`](docs/history/stitchcad-changelog-part151.md) | whole G1-0161 collection continuity ledgers | 7 lines, 570 bytes, `sha256:44242cdb…` |

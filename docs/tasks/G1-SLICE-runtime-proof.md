@@ -92,3 +92,52 @@ construction and actual omission/refusal controls before signoff; no maintained 
 - [x] LOCKSTEP: book/live/MEMORY/G1/index reflect pending resolution and .f.h blocking retention before .f.n01; map fresh, rc=0, file-plan-map-final.log. DEV16305B/CH32663B fit unchanged health targets but leave79B/105B; archive63/64 forces a new window before whole-record retention. promotion: declined (existing finite ownership, scoped proof and bounded continuity rules);400 push cadence retained, remote verdict unobserved.
   Final staged gate13 green, rc=0, target/file-plan-staged-gate.log.
 
+
+Source: `78b5afd745e927caf61a4d712d7c7f441d59f84c`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Literal mode verification](#literal-mode-verification) | 51197–56846 | 5649 / 40 | `2bb405a71491b64235aa68dcc052b2d2fedd179b01a2310bd4ccbe5c80083a3c` |
+
+### Literal mode verification
+
+Complete literal entry/all298L implementation/all276L six public tests/100 literal rows/176
+reduction rows/canonical .5a.3c.2 protocol/prior D165 public record168/grammar2+4/contract4.1–4.3/
+expert literal annex/build/profile/public exports reviewed before edits. Native target imports
+both TSVs; four direct inputs needed. Preserve13 pure CASES/test filters/exact argv/full6 target;
+ordinary14 logs/one mutable source; classifier-only zero files/mutables/native writes. Current
+thread macros and independent nonthread-location noise control close this entry’s D178 contribution.
+Own Target helpers/readonly linked-input positive/native freeze/proof and complete mode captures.
+Own whole committed .f.i file-plan receipt retention into the same new bounded sibling before
+six fresh boxes grow the live tree; preserve current statement append/canonical ownership.
+Own whole oldest semantic lesson and two oldest table/MTM ledgers before live-doc growth;
+prior458 logical/all56 history files/seven windows/IDs1–178 except18 must stay exact.
+Own test-only helper repair/full Rust checks only if actual native failed-body evidence requires it.
+Additional paths: crates/sc-core/tests/formula_literal_contract.rs;docs/decisions/decision_literals.md.
+Small P2 active literal decision still calls ordered statement identity future work, contradicting
+current grammar4/whole recipe annex/public FormulaCanonicalStatement/Recipe methods. Own direct
+status wording correction now; preserve director D84/D95/width/input/binding contract unchanged.
+
+Preparatory literal AST edit refused before writes because replacing the first function shifted
+cached node offsets; snapshot every old function segment before replacements. Shared first replay1
+exposed the deliberately unanchored fault’s unsafe decoder before the intended nonthread refusal;
+restore actual legacy UTF-8 replacement behavior. Both attempts excluded; repeat complete controls
+before exclusive native proof. Small stale literal-decision status corrected within this leaf.
+Scope the book’s precondition wording to the actual dedicated width/length tests; retain the
+independent fixture helpers and thirteen replayed macro faults without a broader helper claim.
+Retention helper exact-anchor preflight1 refused a redundant title substitution before writes;
+remove the consumed duplicate transformation. Excluded; final whole-record proof must pass.
+Doc-sync line-cap preflight1 refused before any tracked write; wrap complete lesson bullets
+before replay. Fixed limits retained; excluded preparation, no native or source-proof change.
+
+
+- [x] REPRODUCE / ISSUE: four actual normalization/canonical functions accept nonthread compiler-note location mentions at current macro sites, rc=0, literal-nonthread-diagnostic.json; no native/source effects. D178 P1 four children/D156 plans owned before edits; full literal entry/298L implementation/276L six tests/100+176 TSV rows/canonical/D165/grammar/book reviewed. Cases/grammar preserved.
+- [x] ROOT CAUSE: ordinary/classifier-only share an implicit directory/source-only plan; current test’s two compile-time TSVs/files/mutable intention omitted. Unanchored panicked-at regex trusts a nonthread note. Four current inputs/two independent complete modes/ten physical refusals bind14 native children/files/13 mutations/14 restorations; class zero source/output writes, rc=0, literal-producer-controls-final.log.
+- [x] FIX: guard four inputs/14 ordinary logs/one mutable source/classifier zero files-mutable-native effects; original13 CASES/selectors/argv/read order/stores/restoration exact. Current thread macro sites/nonthread noise plus actual legacy-regex body fault refuse. Shared389 body reds/35 classifiers/21 captures/111 physical refusals and prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls0, rc=0, literal-producer-controls-final.log; all16 mode omissions discriminate.
+- [x] ADDRESSED: exclusive13 actual selected current macro faults/authored failed sets/nonmacro-only bodies empty/full6 restored0, rc=0, literal-native.log/native-proof.log.22 frozen inputs/13 Rust HEAD files/two compile-time TSVs/original CASES+selectors/14 local single-link logs exact. Cargo current full6 artifact403df69382809de5c718672595a87ba6dd4ae053a0b77187be1de3e095b57bc4 passes0, native-artifact-proof.log; after focused checks all frozen bytes/artifact exact. No test-helper repair needed.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67/29/file120paths56owners26groups/15refusals12reds/map/ledger9+13 pass0, rc=0, literal-*-final.log. Actual readonly class accepts3-linked input/unused aliases with zero source/output writes/children; fixture/victim/root/environment exact, readonly-mode.log. Rust unchanged/latest full fmt-strict Clippy/native703 gate0170 applies; new WASM/evaluation/runner unobserved. Required terminals consumed.
+- [x] LOCKSTEP: wholec3cc51d statement52802–58350/5548B42L/SHAef8e5bca and file-plan9152–13620/4468B29L/SHA445a7bd8 copied/verified before retirement; canonical headers/first62828B sibling/second6242B prefix/map8169B/fixed caps exact, rc=0, literal-task-retention-proof.log. WholeDEV206/CH150/prior458/all56/public460/13open164sealed/seven windows/43raw exact, retention-final.log. D178 literal fixed/3 P1 remain; parent active/next .n07.2/D156 open. Active decision/book status corrected; failed preparations excluded; promotion declined/grammar/400 stay.
+
+Final staged doctrine gate13 green, rc=0, target/literal-staged-gate.log; terminal consumed.
+All completed native/reader/focused jobs consumed before commit; no required job remains.
+

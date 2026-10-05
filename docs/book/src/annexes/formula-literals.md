@@ -189,12 +189,25 @@ validated syntax graph, and per-literal decimal workspace retains the bound desc
 
 Seventeen actual compiled faults alter root/name/unary/square/operator identity, child/branch order,
 call coverage, depth/span, literal unit/refusal, iterator behavior or Debug privacy. They must fail
-assertions in failed-test bodies; the direct entry validates source/output before reads/writes,
-preserves prepared child stores and rebuilds the full focused target after exact restoration.
-Panic paths, lines and columns must match guarded current test assertion sites; custom messages pass,
-assertion-labelled expect panics refuse. Atomic literal refusal asserts explicitly before extracting
-its error. All seventeen compiled faults are macro-site reds; full eight-test restoration passes.
-Classifier-only mode checks anchors and failed-body/noise classification without compiling a fault.
+assertions in failed-test bodies. The direct entry plans five inputs before effects: implementation,
+current public test, two imported TSVs and the worked-example book page. Ordinary mode declares
+eighteen logs and one mutable source; classifier-only declares zero files or mutable sources and
+invokes no native child. Both modes retain local store/directory preparation.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py --classifier-only
+```
+
+A qualifying failed-body thread panic must name a current assertion macro path/line/byte column.
+Custom messages pass; passing names, labelled extraction panics and nonthread location mentions
+refuse. Independent complete captures of both modes, twelve physical refusals and actual input/file/
+mutable/mode/stores/restoration/classifier faults calibrate the plans. A copied classifier-only
+entry accepts linked read-only input and ignores unused log aliases without source/output writes.
+All seventeen original selected faults reach current macros, with cases/arguments/restoration exact.
+Twenty-three frozen inputs/thirteen unchanged Rust files/three compile-time inputs remain exact;
+the current Cargo-selected restored executable passes all eight public contracts. Dispatch capture
+and real native behavior are verified separately. Atomic literal refusal asserts explicitly before
+extracting its error; grammar, arena semantics and numeric contracts stay unchanged.
 The structural suite watches the
 independent shape verifier. G1-SLICE.5a.3c.3 owns this whole-arena stage; .4 completes its coupled review below.
 Canonical S-expression serialization is implemented separately below;
