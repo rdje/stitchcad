@@ -170,6 +170,13 @@ refusals are separate from five real native faults and the restored public four-
 Run mutation checks alone, without other builds/probes/gates. These are primitive numeric checks, separate from formula evaluation,
 geometry, physical acceptance and release proofs.
 
+Unsigned-rounding verification preserves nine debug faults and one release remainder fault.
+The imported Decimal fixture/current test/mutable implementation and all twelve logs are guarded
+before reads. Its totality helper also asserts before extracting the caught result. Complete
+dispatch/profile/refusal controls are separate from native proof: all ten faults reach current
+assertion macros, source bytes restore exactly and both debug/release five-test artifacts pass.
+The arithmetic, diagnostic operation names and public numeric boundaries are unchanged.
+
 ### 2.4 Public length arithmetic
 
 | Public name | Context | Contract |

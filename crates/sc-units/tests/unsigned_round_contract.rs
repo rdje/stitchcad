@@ -10,10 +10,11 @@ const ZERO: UnitError = UnitError::DivisionByZero {
     operation: "div_round_half_away_from_zero_unsigned",
 };
 
-#[allow(clippy::expect_used)] // Contract: any unwind is a failed totality assertion.
+#[allow(clippy::expect_used)] // Checked extraction follows the explicit totality assertion.
 fn total(n: u128, d: u128) -> Result<u128, UnitError> {
-    std::panic::catch_unwind(|| round(n, d))
-        .expect("assertion: unsigned rounding must never unwind")
+    let result = std::panic::catch_unwind(|| round(n, d));
+    assert!(result.is_ok(), "unsigned rounding must never unwind");
+    result.expect("totality assertion checked that unsigned rounding did not unwind")
 }
 
 #[test]

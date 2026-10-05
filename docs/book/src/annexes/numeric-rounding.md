@@ -63,8 +63,17 @@ Its totality helper explicitly asserts that the public call did not unwind befor
 result. A labelled expect message alone is insufficient mutation evidence. Five real faults must
 fail at current guarded assertion macro byte locations, including that helper. Ten selected build/
 source inputs stay frozen; all four public tests and 36 fixture rows remain intact apart from the
-helper repair. Public Cargo output selects the restored four-test artifact. Unsigned rounding
-rebuilds both debug and release focused targets; its complete file/current-site audit follows next.
+helper repair. Public Cargo output selects the restored four-test artifact.
+
+Unsigned rounding also plans its nine numbered logs, release-remainder.log, restored-debug.log
+and restored-release.log before reads. Its mutable implementation, current test and imported
+138-row Decimal fixture are guarded inputs. The totality helper uses an explicit assertion.
+Independent captures verify all twelve children/files, including the extra release call while the
+doubled-remainder fault is still applied and both restorations afterward. Physical aliases, missing
+inputs and actual file/profile/helper omissions are refused independently of native outcomes.
+Nine debug faults and the extra release fault fail at current assertion macro byte locations.
+Ten selected inputs remain frozen, the original CALL-derived cases stay exact and both public
+Cargo-selected restored artifacts execute all five contracts. Production arithmetic is unchanged.
 
 The structural suite watches the independent Decimal fixture verifier. Strict native tests and real
 WASM cross-compilation verify their stated scope; WASM compilation is not a runtime numerical

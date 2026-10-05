@@ -182,7 +182,14 @@ is guarded with the current test; full dispatch/five physical refusals and actua
 site omissions pass. The test's totality helper now uses an explicit assertion. Five real current
 macro failures preserve all original cases and restore the public four-test artifact.
 
-D177's fifteen-entry scope has eight entries verified; seven remain. Their .f.n04.2–06 repairs
+Unsigned rounding declares twelve logs/three inputs/one mutable source. Independent complete
+captures preserve the nine debug calls, additional release call before source restoration and both
+restored builds. File/profile/helper/fixture omissions and five physical refusals discriminate.
+Nine real debug macro failures and one release failure preserve the original CALL-derived cases;
+ten selected inputs restore exactly and both public five-test artifacts pass. Its totality helper
+also uses an explicit assertion; production arithmetic remains unchanged.
+
+D177's fifteen-entry scope has nine entries verified; six remain. Their .f.n04.3–06 repairs
 own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
@@ -326,7 +333,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and240 actual body faults, with28 calibrated failed-body classifiers,
+controls and256 actual body faults, with29 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0165 - guarded unsigned-round files and both profiles (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.2`)
+
+- Plan12 logs/three inputs/one mutable source; preserve original CALL-derived9 faults.
+- Explicit totality assertion; shared256 body reds/29 classifiers/nine captures/38 refusals0.
+- Nine real debug/one release macro reds; ten frozen inputs/both full5 public artifacts exact0.
+- Retain whole Ease receipts/two lessons/oldest ledger; prior444/all42/public446 exact.
+- Full Rust/focused/staged receipts in owning leaf; production/grammar/400 cadence unchanged.
+- D177 nine fixed/6 P1 remain; length .n04.3 next.
+
 ## STITCHCAD-G1-0164 - guarded signed-round files and totality sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.1`)
 
 - Split four numeric owners; plan6 logs/three inputs/one mutable source before reads.
@@ -224,12 +233,6 @@ the digests afterwards.
 - Actual map7974B admits planned output/delegation sibling under unchanged8192B ceiling.
 - No producer/Rust/grammar behavior change; source/freshness/publication/coverage checks follow.
 
-## STITCHCAD-G1-0149 - bounded output/delegation continuity (leaf `G1-SLICE.5b.4c.h2.b.p.o.h`)
-
-- Retain five whole committed source records before task/note growth; preserve IDs and live date corrections.
-- Prior415 logical records/six windows/master and original source intervals stay exact; fixed caps unchanged.
-- Initial helper boundary1 diagnosed at the actual archive index; corrected complete retention proof follows.
-- No producer/Rust/grammar change. Output/delegation ledger division .p.o.i is next; D156 remains open.
 
 
 
@@ -333,3 +336,5 @@ the digests afterwards.
 | [`part141`](docs/history/stitchcad-changelog-part141.md) | whole G1-0147 and G1-0146 ledgers | 14 lines, 1097 bytes, `sha256:8fa23459…` |
 
 | [`part142`](docs/history/stitchcad-changelog-part142.md) | whole G1-0148 static guard ledger | 10 lines, 861 bytes, `sha256:790a719b…` |
+
+| [`part143`](docs/history/stitchcad-changelog-part143.md) | whole G1-0149 continuity ledger | 6 lines, 530 bytes, `sha256:d5b8a94e…` |
