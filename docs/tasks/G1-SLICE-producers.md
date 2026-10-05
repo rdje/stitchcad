@@ -167,14 +167,7 @@ without changing the chosen file or named refusal; no fixture bytes/native sourc
   Goal: P1 after .f.h and before .f.n01: resolve the confirmed hard-link ownership gap in shared output and source-writing contracts; preserve pure/read-only source calls and every existing producer interface.
   Acceptance: physical isolated output/source hard-link reproduction without alias writes; exact regular-file/inode/link-count root cause; bounded explicit mutable-path contract and output refusal, actual omission controls and focused integration without weakening existing source/type/device/parent checks. Schedule native source-writing adoption in each .f.n repair before effects.
 
-STITCHCAD-G1-0156 owns scripts/local_environment.py, the standing python_producer_contract.py
-controls, relevant book/live/task receipts and any blocking whole-lesson retention. Full profile,
-all1202 lines of the standing shared/entry controls and complete255-line bridge capture reviewed.
-Add backward-compatible mutable_sources=() as an explicit subset of sources; readonly inputs keep
-existing type/device/parent checks and pure planning. Existing output files and declared mutable
-sources require exactly one hard link before activation; prepare/enter forward declarations.
-Real isolated aliases must refuse without writes/stores/environment effects, and actual omission/
-forwarding/subset faults must fail independent controls. Native37 adoption stays with .f.n groups.
+Whole preimplementation record retained in [part194](../history/stitchcad-devnotes-part194.md); completed acceptance boxes and canonical ownership remain below.
 
 - [x] REPRODUCE / ISSUE: physical source/output/victim inode3 passes original plan without alias writes, rc=0, window7-hardlink-diagnostic.log; regular/device checks omit exclusive mutable ownership. Actual current physical26 controls require output/mutable-source refusal and preserve readonly aliases, rc=0, hardlink-producer-controls.log. Full profile/shared1202L/bridge255L/book reviewed before edits.
 - [x] ROOT CAUSE: plan_producer checks regular type/device/symlinks but original body lacks link counts or explicit writing intent. Current independent three-name inode identity/all unchanged bytes/environment/stores and exact diagnostic checks pass, rc=0, hardlink-producer-controls.log. The plan inspects declared paths before effects; undeclared native destinations remain owned, D156 open.
@@ -190,12 +183,7 @@ forwarding/subset faults must fail independent controls. Native37 adoption stays
   Goal: after the .f.h recording commit, prove the newest committed window7 rejects a copied catalog prose edit through the actual public retention guard; record the terminal result before .f.l.
   Acceptance: isolated same-volume copy only, normal inventory remains green, immutable guard refuses exactly the changed committed catalog; actual HEAD/fixture/control bytes exact, no tracked sealed write, no background result left unconsumed, local scope distinct from unobserved runner verdict.
 
-STITCHCAD-G1-0155 owns this post-recording proof and its bounded book/live/task receipts.
-Use a fresh target/window7_committed_control copy with complete input/output plans before
-activation; every source is pinned to current abc2f91e bytes and copied destinations are fresh.
-Invoke the actual public reader on root and fixture; append prose only to the singleton fixture
-catalog and require ordinary inventory0/committed guard1 with the named catalog diagnostic.
-Compare every root input and fixture byte before/after; no source, sealed record or foreign repo write.
+Whole preimplementation record retained in [part195](../history/stitchcad-devnotes-part195.md); completed acceptance boxes and canonical ownership remain below.
 
 - [x] REPRODUCE / ISSUE: newest7 immutability arm awaited its recording commit; actual abc2f91e now contains the window. Root and fresh copied fixture verify-retention0, rc=0, target/window7-committed-control.log. Full public reader/standing copied-catalog control reviewed; no tracked sealed mutation.
 - [x] ROOT CAUSE: inventory validates membership/bytes but intentionally ignores catalog prose; committed comparison must independently reject drift. Actual isolated copied prose edit leaves inventory0, rc=0, window7-committed-control.log; source/output plan precedes activation, copied regular destinations have one link.
@@ -368,32 +356,7 @@ consume terminal results and prove exact source/full restored artifact before an
   Paths: docs/tasks/artifacts/size_membership/size_membership_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
-STITCHCAD-G1-0157 owns size_membership_mutations.py, its complete eight-file/mutable-source
-plan, actual shared captures/fault controls, book/live/continuity receipts and blocking whole-record
-retention. Full entry/wrapper/library/test/specification and original ownership contract read.
-Move the pure seven-case population before the guard so all seven numbered logs/restored.log can
-be planned before source reads or native effects; preserve every original case/test/order/result.
-Use explicit source-writing declaration, complete captures and late-file/source alias refusals.
-Adapt prefix-call calibration by actual AST keyword identity so sources and mutable_sources cannot
-collide. Also own a nonwriting actual-predicate diagnostic before trusting native fault evidence;
-any confirmed broader weakness receives a bounded P1 repair owner before implementation continues.
-
-D177 confirmed: actual12 native byte-substring entries/13 conditions and three prefix helpers
-accept authored nonmacro panic evidence. Initial broad census13 included one statement calibration;
-refined actual fault predicates exclude it, rc=0, membership-predicate-census.log and prefix-diagnostic.log.
-Membership predicate dates to0b77235. .n01 additionally owns its guarded current test-source/macro
-classifier and independent body/noise controls before real verification. Remaining14 entries stay
-P1 with existing .n02–06 (four chart/table, two Ease, four numeric, two lexer/semantic, two recipe/
-statement); extend each repair with current test source guards/locations/native exact restoration.
-Do not classify old logs by a message prefix or claim their macro provenance without actual replay.
-
-Pre-native: shared179 body controls/21 classifiers and full eight-child/eight-file membership
-capture/four physical copied-entry refusals pass0, target/membership-producer-controls.log.
-All caller stores are removed for the standalone native launch; target/membership-native-inputs.json
-freezes implementation/test/entry/profile/public build inputs and proves the mutable source's one
-link. Run exclusively; consume terminal/native logs, exact source snapshots and full restored
-artifact before any further source edit, probe, gate or commit. Retention already copied whole
-five closure/six lesson/three ledger records fromfc46ad8; final source/public receipts follow below.
+Whole preimplementation record retained in [part193](../history/stitchcad-devnotes-part193.md); completed acceptance boxes and canonical ownership remain below.
 
 - [x] REPRODUCE / ISSUE: directory-only membership entry omits eight file destinations/mutable writing intent; original actual predicate accepts passed assertion_name with nonmacro failure, rc=0, membership-predicate-diagnostic.log. Refined12 byte entries/13 conditions and three actual prefix helpers reproduce D17715-entry scope, rc=0, predicate-census/prefix-diagnostic logs; original membership introduced0b77235. Remaining14 owned P1 .n02–06.
 - [x] ROOT CAUSE: CASES follows activation/source reads, preventing derived file planning; output directories omit leaf identity, source guard omits writing intent, and broad panic messages do not prove macro sites. Actual complete eight-child/eight-file capture/four physical copied-entry first/last output alias/mutable source hard link/late test refusal pass, rc=0, membership-producer-controls.log. No alias/source bytes changed by those controls.
@@ -405,7 +368,7 @@ five closure/six lesson/three ledger records fromfc46ad8; final source/public re
   Final staged gate13 green, rc=0, target/membership-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete file-destination plans for size/chart/table families; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/size_chart/size_chart_mutations.py;docs/tasks/artifacts/measurement_table/table_mutations.py;docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py;docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
@@ -481,10 +444,30 @@ with immutable prior records/public readers and fixed caps verified before commi
   Final staged gate13 green, rc=0, target/mtm-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.4`
-  Status: `pending`
-  Goal: size-chart collection complete files/mutable sources/current test-site repair.
+  Status: `done`
+  Goal: STITCHCAD-G1-0161 owns collection complete files/mutable sources/current test-site repair.
   Paths: docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py
   Acceptance: preserve fourteen multi-anchor faults; complete captures/refusals/body controls and exclusive real proof with exact source/current artifact.
+
+Full entry/wrapper/587-line implementation/752-line eighteen-test source, public exports,
+.4c.3b canonical record, roadmap measurement objects and normative/runtime books reviewed.
+Preserve pure fourteen-case data and each ordered replacement, including the two-anchor uniqueness
+case; guard fifteen logs/current test/implementation with explicit mutable ownership before reads.
+Own actual old-predicate reproduction, independent complete selected argv/multi-anchor writes,
+physical aliases/late-input refusals and classifier/body controls before exclusive native proof.
+Current tests have inline closure macros: recognize their exact UTF-8 byte columns and calibrate
+actual leading-only site omission plus second-anchor omission before any native source mutation.
+Before receipt growth, retain whole .n01/.f.l/.f.h.v preimplementation records, older mutable/window
+lessons and oldest ledger from current HEAD; keep completed boxes/canonical ID/status/Paths live
+and preserve all prior seals/readers; prove exact source spans and unchanged fixed caps. Own Target helpers/logs for these proofs.
+
+- [x] REPRODUCE / ISSUE: actual committed collection predicate accepts passed assertion_name plus expect-only panic, AST/eval without source/native effects, rc=0, collection-predicate-diagnostic.log. Entry omits15 files/mutable intent/current test source; existing D156/D177 own the repair. Full implementation/eighteen-test/public/normative/runtime contracts read before changes.
+- [x] ROOT CAUSE: CASES follows activation/source reads; directories omit leaves/writing intent, and substring evidence omits current macro sites. Independent authored complete15-child/file capture/four physical first/last symlink/mutable hard-link/missing-test refusals pass, rc=0, collection-producer-controls.log. All alias bytes/environment/stores unchanged; no unsafe native dispatch.
+- [x] FIX: preserve14 cases/15 ordered anchors; plan15 logs/two inputs/one mutable source before reads and match current failed-body macro byte sites, including inline closures. Shared213 body reds/25 classifiers/31 runtime/24 file/26 mutable/37 entry+late/26 child/two compiler/three static captures0, rc=0, producer-controls.log. Five measurement captures/twenty physical refusals/eight faults per entry plus second-anchor/leading-only omissions pass; UTF-8 columns calibrated.
+- [x] ADDRESSED: exclusive caller-store-absent run passes14 real current macro reds, rc=0, collection-native-final.log. Independent selected-test/byte-site replay verifies eight frozen inputs/original14 cases/15 ordered anchors/two HEAD Rust inputs/15 regular-local-singlelink logs/full18 restored, rc=0, native-restoration.log. Public Cargo artifactb356e6f1… executes18 tests0, rc=0, native-artifact.log; Rust/API/grammar unchanged.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29owners8refusals7reds/file120paths47owners17groups15refusals12reds/map freshness pass, rc=0, collection-*-final logs. Five whole9d840bc source intervals/three preimplementation records/two lessons/one ledger exact; prior433/all31 archive files/public438 exact/13open163sealed/no gaps or overlap, rc=0, collection-retention-final.log. Completed boxes/canonical ID/status/Paths stay live; all prior seals/seven windows exact.
+- [x] LOCKSTEP: parent .f.n02 done; book/spec/live/MEMORY/G1/index route Ease .f.n03. D177 five measurement families fixed/10 entries P1 remain;21working/16841L/1220791decodedB/543876residentB fits caps, rc=0, retention-final.log. Live DEV/CH/task health targets unchanged and measured. promotion: declined (existing current-source evidence, explicit mutable/file ownership and whole-record retention rules).400 cadence/local verification retained; runner unobserved. Ledger9/pointer13 terminal0 consumed, collection-ledger-final.log.
+  Final staged gate13 green, rc=0, target/collection-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n03`
   Status: `pending`

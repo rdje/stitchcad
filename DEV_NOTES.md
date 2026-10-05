@@ -14,6 +14,14 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — complete collection effect and panic plans
+
+- Pure fourteen-case population precedes activation; fifteen logs/two inputs/one mutable source are guarded before reads. All15 ordered replacement anchors remain AST-exact, including the paired POM/token uniqueness mutation; selected filters and full restoration stay unchanged.
+- Current inline closure macros require byte columns beyond indentation. Literal-token dispatch lookup remains independent of the actual site's helper; authored ASCII/UTF-8 inline sites, wrong-byte refusal and actual leading-only helper omission pass0. Actual second-anchor omission fails Source write capture.
+- Five independent measurement captures/twenty physical refusals/five entry and three classifier faults per entry pass; shared213 body reds/25 classifiers0. Simulation proves dispatch only. Exclusive fourteen real macro reds/eight frozen inputs/15 regular-local-singlelink logs/full18 restored0.
+- Independent selected-test/current-byte-site replay verifies every log/original cases/two HEAD Rust inputs/Rust diff empty. Public current artifactb356e6f1… executes18 tests0. Whole9d840bc three preimplementation records/two lessons/one ledger retained; prior433/all31 controls/public438 exact.
+- Promotion declined: existing current-source evidence, explicit mutable/file ownership and whole-record retention rules. D177 ten entries P1 .n03–06 remain; Ease .n03 next. Fixed caps/grammar/API/400 cadence unchanged; runner verdict unobserved.
+
 ## _(2026-10-05 UTC)_ — complete MTM effect and panic plans
 
 - Pure twelve-case population precedes activation; thirteen logs/two inputs/one mutable source are guarded before reads. Original cases/filters/stores/restoration stay exact, including separate unresolved Body/Ease zero and grade-rule refusals.
@@ -49,19 +57,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
   Two mistargeted book patches made no changes; reread section before actual patch.
   Promotion declined: existing current-source proof, explicit effect ownership and whole-record retention rules.
 
-## _(2026-10-05 UTC)_ — explicit mutable source ownership
-
-- Existing output files require one hard link; mutable_sources explicitly names a subset of sources with the same single-link requirement. Read-only hard-linked inputs remain valid; plan has no effects and both activation helpers forward the declaration.
-- Physical26 controls leave all alias bytes/environment/stores unchanged; six actual link/subset/forwarding/readonly faults join171 shared body reds0. Existing31 runtime/24 file/37 entry+late/26 child/two compiler/three static captures remain0; simulation proves dispatch only.
-- First shared attempt1 used a device stub without st_nlink; preserve actual link count in the simulated metadata, exclude failure, rerun0. Initial retention helper1 used attribute access on runpy's dict before writes; corrected mapping access0.
-- Two complete ecdb67b continuity records retained byte-exact; prior426/all24 controls/public427 reads exact. No Rust/grammar change; native37 mutable/file adoption stays next .f.n01–14. Promotion declined: existing mutable ownership, guard-before-effects and scoped proof rules.
-
-## _(2026-10-05 UTC)_ — window7 and mutable ownership
-
-- Pack57 full6d93d3d records after exact isolated424 reads/materialization; six old windows unchanged. Verify copied bytes before retiring matching raw files, route root/document-relative links, and retain two whole lessons/three oldest ledgers.
-- Physical fixture source/output/victim share one regular inode (link count3); shared plan accepts without effects. Type/device/no-symlink checks do not prove mutable ownership. .f.l owns output/writable-source contracts next; pure reads stay pure.
-- Archive writes/removals measured single-link57 raw/four live files/master1 first. Existing reader/standing window controls watch data; no new producer/Rust/grammar code. Promotion declined: existing immutable-source, scoped-proof and explicit ownership rules;400 cadence retains local verification.
-- After recording abc2f91e, actual copied catalog prose passes inventory0/refuses committed guard1; all24 root archive files/HEAD exact. P1 .f.l follows; runner verdict remains unobserved.
+Whole mutable/window lessons retained in [part196](docs/history/stitchcad-devnotes-part196.md).
 
 Whole bridge/effect ownership lessons retained in [part192](docs/history/stitchcad-devnotes-part192.md).
 
@@ -135,3 +131,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part191`](docs/history/stitchcad-devnotes-part191.md) | whole coupled input lesson | 4 lines, 501 bytes, `sha256:dbb2c10d…` |
 
 | [`part192`](docs/history/stitchcad-devnotes-part192.md) | two whole bridge/effect ownership lessons | 16 lines, 2347 bytes, `sha256:9f77b65f…` |
+
+| [`part196`](docs/history/stitchcad-devnotes-part196.md) | two whole mutable/window lessons | 13 lines, 2165 bytes, `sha256:6b688342…` |

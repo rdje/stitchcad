@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0161 - guarded collection files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.4`)
+
+- Plan15 logs/two inputs/one mutable source before reads; preserve14 cases/15 ordered anchors.
+- Shared213 body reds/25 classifiers/five captures/twenty physical refusals/inline controls0.
+- Fourteen real current macro reds/eight frozen inputs/Rust exact/full18 public artifact0.
+- Retain five whole9d840bc source records; prior433/all31/public438 exact; focused checks0.
+- D177 five measurement families fixed;10 repairs P1 remain. Grammar/400 cadence unchanged.
+
 ## STITCHCAD-G1-0160 - guarded MTM files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.3`)
 
 - Plan13 logs/two inputs/one mutable source before reads; preserve all12 cases/filters/restoration.
@@ -232,13 +240,6 @@ the digests afterwards.
 - Profile/publication/archive398/ledger/pointer/coverage pass0; three whole records/prior395 exact.
 - Latest cleanup entry/book synchronized; no code/grammar/cadence change; .n.f12 resumes.
 
-## STITCHCAD-G1-0144 - expression/reduction assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f11`)
-
-- Guard both current tests/implementations/output and preserve prepared stores/native selection.
-- D170 actual noise/native expect baseline; four explicit refusal assertions repair provenance.
-- Controls125 body/33 entry+late/25 child/18 classifiers;15 native macro reds/four current sources
-  exact/full15/6 restored; full Rust703/59/strict Clippy pass0. Four whole records/prior391 exact.
-- Grammar/API/400 cadence unchanged; remaining D156 native entries then D154 stay owned.
 
 
 
@@ -330,3 +331,5 @@ the digests afterwards.
 | [`part137`](docs/history/stitchcad-changelog-part137.md) | three whole G1-0140/0139/0138 ledgers | 18 lines, 1236 bytes, `sha256:38ef85ae…` |
 
 | [`part138`](docs/history/stitchcad-changelog-part138.md) | whole G1-0143/0142/0141 ledgers | 19 lines, 1383 bytes, `sha256:6e08f574…` |
+
+| [`part139`](docs/history/stitchcad-changelog-part139.md) | whole G1-0144 ledger | 7 lines, 578 bytes, `sha256:0661ecd7…` |

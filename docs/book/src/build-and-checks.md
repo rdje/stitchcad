@@ -160,10 +160,15 @@ sixteen-test artifact.
 
 MTM declares thirteen logs/two inputs/one mutable source before reads. Complete thirteen-child/file
 captures and four physical refusals pass; twelve real current macro failures restore exact inputs
-and the public fifteen-test artifact. Collection remains a separate repair.
+and the public fifteen-test artifact.
 
-D177's fifteen-entry scope has membership, size chart, table and MTM verified; eleven entries remain.
-Their .f.n02.4/.n03–06 repairs own current test locations and independent controls before signoff.
+Collections declare fifteen logs/two inputs/one mutable source, preserving all fourteen cases and
+ordered replacement anchors. Complete fifteen-child/file captures and four physical refusals pass;
+independent second-anchor omission and inline UTF-8 byte-column controls catch actual body faults.
+Fourteen real current macro failures restore exact inputs and the public eighteen-test artifact.
+
+D177's fifteen-entry scope has all five measurement families verified; ten entries remain.
+Their .f.n03–06 repairs own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
 declared source files, output directories and explicit `output_files` without creating paths or
@@ -306,7 +311,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and203 actual body faults, with24 calibrated failed-body classifiers,
+controls and213 actual body faults, with25 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

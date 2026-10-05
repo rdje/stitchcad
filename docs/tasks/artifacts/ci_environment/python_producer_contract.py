@@ -406,8 +406,7 @@ def measure_fixture(entry_path):
                     'current_scalar_reassignment_requires_explicit_binding_replacement',
                     'required_current_target_failures_keep_table_measurement_and_underlying_identity_evidence',
                     'current_context_collision_of_table_identity_is_not_cached_birth_approval')
-    else:
-        assert entry_path == ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py', 'D156 unknown measurement entry'
+    elif entry_path == ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py':
         stem = 'mtm_chart'
         selected = ('chart_and_context_identities_cannot_alias_members_sets_or_canonical_records',
                     'chart_and_context_identities_cannot_alias_members_sets_or_canonical_records',
@@ -421,6 +420,23 @@ def measure_fixture(entry_path):
                     'unknown_and_derived_ease_amounts_remain_distinct_unresolved_inputs',
                     'incomplete_and_empty_drafts_cannot_certify_design_pom_coverage',
                     'grade_rule_input_always_refuses_for_complete_and_empty_authored_mtm_charts')
+    else:
+        assert entry_path == ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py', 'D156 unknown measurement entry'
+        stem = 'size_chart_collection'
+        selected = ('collection_and_context_identities_cannot_alias_supplied_records',
+                    'collection_and_context_identities_cannot_alias_supplied_records',
+                    'exact_membership_reference_and_stable_member_are_required',
+                    'authored_target_body_domain_is_refused_even_when_current_table_is_valid',
+                    'duplicate_pom_token_observation_and_valid_same_cell_are_refused',
+                    'duplicate_pom_token_observation_and_valid_same_cell_are_refused',
+                    'duplicate_pom_token_observation_and_valid_same_cell_are_refused',
+                    'changed_pom_binding_needs_explicit_chart_and_observation_replacement',
+                    'reduced_target_list_cannot_certify_omitted_design_pom',
+                    'incomplete_draft_refuses_exact_missing_cell_without_interpolation',
+                    'all_saved_observation_targets_require_explicit_collection_replacement',
+                    'undeclared_pom_and_observation_from_another_design_table_are_refused',
+                    'unknown_and_derived_cells_can_be_structurally_complete_but_never_numeric_defaults',
+                    'empty_inventory_is_inspectable_but_not_complete_and_keeps_table_revision_checks')
     work_name = 'measurement_table_mutations' if stem == 'table' else stem + '_mutations'
     return (ROOT / ('crates/sc-measure/src/' + stem + '.rs'),
             ROOT / ('crates/sc-measure/tests/' + stem + '_contract.rs'),
@@ -488,9 +504,19 @@ def capture_measure_entry(text, entry_path=ENTRY):
             else:
                 index = len(calls)
                 assert index < len(selected) and not pending, 'D156 measure source mutation order'
-                _, before, after, _ = scope['CASES'][index]
-                assert content == originals[source].decode().replace(before, after, 1), \
-                    'D156 measure source mutation bytes changed'
+                if entry_path == ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py':
+                    _, replacements, _ = scope['CASES'][index]
+                else:
+                    _, before, after, _ = scope['CASES'][index]
+                    replacements = ((before, after),)
+                expected = originals[source].decode()
+                for before, after in replacements:
+                    assert expected.count(before) == 1, 'D156 measure nonunique source anchor'
+                    expected = expected.replace(before, after, 1)
+                if content != expected:
+                    error = AssertionError('D156 measure source mutation bytes changed')
+                    errors.append(error)
+                    raise error
                 pending[path] = content
         else:
             assert path in files and path not in written, 'D156 measure unplanned output write'
@@ -517,12 +543,16 @@ def capture_measure_entry(text, entry_path=ENTRY):
             raise
         calls.append(args)
         if index < len(selected):
-            body = contract.read_text().split('fn ' + selected[index] + '()', 1)[1]
-            macro = next(line for line in body.splitlines() if re.match(r'^\s*assert(?:_eq|_ne)?!\s*\(', line))
-            # Independent current source line lookup, separate from the production site's helper.
-            position = contract.read_text().index(macro, contract.read_text().index('fn ' + selected[index] + '()'))
-            number = contract.read_text()[:position].count('\n') + 1
-            column = len(macro) - len(macro.lstrip()) + 1
+            current = contract.read_text()
+            function_start = current.index('fn ' + selected[index] + '()')
+            body = current[function_start:].split('\n#[test]', 1)[0]
+            # Independent literal-token lookup; no production site helper is called.
+            offsets = [body.index(token) for token in ('assert!(', 'assert_eq!(', 'assert_ne!(') if token in body]
+            assert offsets, 'D156 measure selected test has no macro'
+            position = function_start + min(offsets)
+            number = current[:position].count('\n') + 1
+            prefix = current[current.rfind('\n', 0, position) + 1:position]
+            column = len(prefix.encode('utf-8')) + 1
             output = (f"\nfailures:\nthread 'fixture' panicked at {contract.relative_to(ROOT).as_posix()}:{number}:{column}:\n"
                       'authored dispatch fixture\n\nfailures:\nfixture\ntest result: FAILED.\n').encode()
             scope['LAST_OUTPUT'] = output
@@ -891,6 +921,26 @@ def classifier_controls(text, entry_path, *, strict=False):
         assert not classify(noise), 'D159 assertion evidence accepted noise'
 
 
+
+def collection_inline_controls(text, entry_path):
+    tree = ast.parse(text)
+    functions = [node for node in tree.body if isinstance(node, ast.FunctionDef)
+                 and node.name in {'assertion_sites', 'assertion_failure'}]
+    scope = {'re': re}
+    exec(compile(ast.Module(body=functions, type_ignores=[]), str(entry_path), 'exec'), scope)
+    path = 'crates/sc-measure/tests/inline_fixture.rs'
+    fixture = 'fn fixture() {\n    apply(|c| assert_eq!(1, 2));\n    let é = (); apply(|| assert_ne!(1, 2));\n}\n'
+    sites = scope['assertion_sites'](fixture, path)
+    assert sites == {(path, 2, 15), (path, 3, 27)}, 'D177 collection inline macro sites changed'
+    scope['ASSERTION_SITES'] = sites
+    for line, column in ((2, 15), (3, 27)):
+        output = (f"\nfailures:\nthread 'fixture' panicked at {path}:{line}:{column}:\n"
+                  'custom message\n\nfailures:\nfixture\n').encode()
+        assert scope['assertion_failure'](output), 'D177 collection inline macro evidence refused'
+        assert not scope['assertion_failure'](output.replace(f':{column}:'.encode(), f':{column - 1}:'.encode())), \
+            'D177 collection inline wrong byte column accepted'
+
+
 def driver_classifier_controls(text, path):
     names = {'driver_assertion_sites', 'driver_assertion_failure'}
     functions = [n for n in ast.parse(text).body if isinstance(n, ast.FunctionDef) and n.name in names]
@@ -1090,7 +1140,8 @@ def main():
     red = 0
     measure_paths = (ENTRY, ROOT / 'docs/tasks/artifacts/size_chart/size_chart_mutations.py',
                      ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py',
-                     ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py')
+                     ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py',
+                     ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py')
     measure_physical, measure_classifiers = 0, 0
     for measure_path in measure_paths:
         measure_text = measure_path.read_text()
@@ -1130,6 +1181,30 @@ def main():
                 red += 1
             else:
                 raise AssertionError((name, 'measurement classifier fault survived'))
+    collection_path = measure_paths[-1]
+    collection_text = collection_path.read_text()
+    collection_inline_controls(collection_text, collection_path)
+    assert collection_text.count('for before, after in mutations:') == 1
+    try:
+        capture_measure_entry(collection_text.replace('for before, after in mutations:',
+                                                     'for before, after in mutations[:1]:', 1), collection_path)
+    except AssertionError as error:
+        assert str(error) == 'D156 measure source mutation bytes changed', ('collection multi-anchor fault', str(error))
+        red += 1
+    else:
+        raise AssertionError('D177 collection second-anchor omission survived')
+    actual = next(ast.get_source_segment(collection_text, node) for node in ast.parse(collection_text).body
+                  if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites')
+    leading = next(ast.get_source_segment(measure_paths[0].read_text(), node)
+                   for node in ast.parse(measure_paths[0].read_text()).body
+                   if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites')
+    try:
+        collection_inline_controls(collection_text.replace(actual, leading, 1), collection_path)
+    except AssertionError as error:
+        assert str(error) == 'D177 collection inline macro sites changed', ('collection inline fault', str(error))
+        red += 1
+    else:
+        raise AssertionError('D177 collection inline site omission survived')
     profile_functions = {node.name: ast.get_source_segment(original.decode(), node)
                          for node in ast.parse(original).body if isinstance(node, ast.FunctionDef)}
     mutable_faults = [
@@ -1225,7 +1300,7 @@ def main():
     for path, work_name in adopters:
         text = path.read_text()
         multiple_sources = {
-            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py',
+            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py', 'size_chart_collection_mutations.py',
             'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',
