@@ -103,8 +103,12 @@ replacement leaves the prior table unchanged; a missing or incompatible target r
 Birth success is not cached current approval. Private representation prevents unchecked edits.
 
 The table mutation diagnostic uses the [local producer profile](../build-and-checks.md#direct-python-producers)
-before writing output or compiling a fault. It restores the exact source and rebuilds the complete
-focused table test target before returning; native mutation diagnostics run sequentially.
+before any input read, output or compiler child. It plans eight numbered logs/restored.log, the
+mutable implementation and read-only current test source; aliases or missing inputs refuse before
+activation. Its source-dependent current-check span is derived after guarded reads. Failed-body
+panic locations must name current assertion macro byte positions. Complete captures and physical
+refusals watch the entry; separate real replay verifies eight macro failures, exact inputs and
+the public restored artifact's sixteen tests. Native mutation diagnostics run sequentially.
 
 A valid unknown input can be saved and inspected. An API or future MCP client can query its core state,
 source and required observation without inventing zero or copying a peer's preference. A derived input

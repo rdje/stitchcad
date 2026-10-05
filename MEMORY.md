@@ -4,10 +4,10 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Resume .p.o.f.n02.1/0158: complete9 chart logs/two inputs/one mutable source;
-  shared187/22 classifiers0, real eight macro reds/full16 current artifact exact; Rust unchanged.
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.n02.2: table files/mutable/current test-site repair;
-  then .n02.3 MTM/.n02.4 collection. D177 membership/chart fixed;13 entries P1 .n02.2–4/.n03–06.
+- Resume .p.o.f.n02.2/0159: complete9 table logs/two inputs/one mutable source;
+  shared195/23 classifiers0, real eight macro reds/full16 current artifact exact; Rust unchanged.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.n02.3: MTM files/mutable/current test-site repair;
+  then .n02.4 collection. D177 membership/chart/table fixed;12 entries P1 .n02.3–4/.n03–06.
   Native jobs exclusive; consume terminal/source/full artifact before any other mutation/probe.
   Read complete sources/public/book/tests in docs/tasks/G1-SLICE-producers.md; preserve cases,
   pure/borrowed calls and prepared stores. File ledger120 paths/47 owners/17 native groups.
@@ -16,7 +16,7 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - Grammar unchanged; D131 settled. D70/G0 closure pending; UI G5/V1/V2 remains planned.
 - Derive Git/push state; director400 cadence has no automatic exceptions. Earlier push only
   explicitly requested; local verification stays separate from unobserved runner verdicts.
-- Archive431 logical/14 working Markdown; seven windows immutable once committed.
+- Archive432 logical/15 working Markdown; seven windows immutable once committed.
   D156 stays open; remaining native/delegated file and mutable-path repairs are owned.
   Thirteen open/163sealed; D177 current-site evidence owned P1. G1 5/18/13siblings.
   Cleanup next due2026-10-05 22:25UTC.

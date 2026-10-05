@@ -438,10 +438,25 @@ consumed before any other mutation/probe; public current artifact follows exact 
   Final staged gate13 green, rc=0, target/chart-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.2`
-  Status: `pending`
-  Goal: measurement-table complete files/mutable sources/current test-site repair.
+  Status: `done`
+  Goal: STITCHCAD-G1-0159 owns measurement-table files/mutable/current test-site guards, independent controls and book/live receipts.
   Paths: docs/tasks/artifacts/measurement_table/table_mutations.py
   Acceptance: resolve source-dependent anchor after guarded reads, preserve eight faults; complete captures/refusals/body controls and exclusive real proof with exact source/current artifact.
+
+Full entry/wrapper/table implementation/current sixteen-test source, public exports, original
+.4a.3 contract and normative/runtime book reviewed. Move pure eight-case data before the profile;
+derive the existing whole current-check span only after guarded input reads. Preserve its removal,
+every case/filter and full restoration; extend independent measurement fixtures to this entry's
+nine files/two inputs/mutable source/current test macros. This child also owns bounded whole-record
+retention before growing live lessons, preserving exact committed bytes and fixed ceilings.
+
+- [x] REPRODUCE / ISSUE: actual committed table predicate accepts passed assertion_name plus expect-only panic, AST/eval without source/native effects, rc=0, target/table-predicate-diagnostic.log. Original entry omits nine destinations, mutable intent and current test source; D156/D177 owned here. Full implementation/test/public/normative/runtime contract review above; no Rust change.
+- [x] ROOT CAUSE: original docs/tasks/artifacts/measurement_table/table_mutations.py puts CASES after activation/source reads and uses whole-log assertion bytes; directories do not identify log files or mutable sources. Independent authored complete nine-child/file capture/four physical first/last log symlink/mutable hard-link/missing-test refusals pass, rc=0, target/table-producer-controls.log; all alias bytes unchanged/no unsafe native dispatch.
+- [x] FIX: move pure eight-case data before nine-file/two-input/one-mutable-source profile; derive unchanged whole current-check span after guarded reads and require current failed-body macro byte sites. All eight cases/four dependent statements AST-exact; independent three-entry captures/five entry and three classifier faults each pass. Shared195 body reds/23 classifiers/31 runtime/24 file/26 mutable/37 entry+late/26 child/two compiler/three static captures0, rc=0, table-producer-controls.log; simulation proves dispatch only.
+- [x] ADDRESSED: exclusive caller-store-absent run passes eight real current macro reds, rc=0, table-native-final.log. Independent selected-log/byte-site replay verifies eight frozen inputs/original cases/four span statements/two HEAD Rust inputs/nine regular-local-singlelink logs/full16 restored, rc=0, native-restoration.log. Public Cargo artifactaccf600a… executes16 tests0, native-artifact.log; Rust/API/grammar unchanged.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29owners8refusals7reds/file120paths47owners17groups15refusals12reds/map freshness pass, rc=0, table-*-final logs. Whole8e2b486 DEV span13854–14355/4L501B/SHAdbb2c10d exact; prior431/all29 files/public432 exact/13open163sealed/no gaps or overlap, rc=0, table-retention-final.log. Seven committed windows and all prior sealed records remain exact.
+- [x] LOCKSTEP: book/spec/live/MEMORY/G1/index route .f.n02.3; D177 membership/chart/table fixed/12 entries P1 remain. Pressure15working/16699L/1208098decodedB/531183residentB fits fixed caps; DEV16154B/CH31832B within unchanged health, rc=0, table-retention-final.log. promotion: declined (existing current-source evidence, explicit mutable/file ownership and whole-record retention rules).400 cadence/local verification preserved; runner unobserved. Ledger9/pointer13 terminal0 consumed, table-ledger-final.log.
+  Final staged gate13 green, rc=0, target/table-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.3`
   Status: `pending`

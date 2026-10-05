@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0159 - complete table file and panic proof (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.2`)
+
+- Plan nine logs/two inputs/one mutable source before reads; preserve eight cases/four span statements.
+- Complete captures/four physical refusals/shared195 body reds/23 classifiers pass0.
+- Eight real current macro reds/eight frozen inputs/full16 public artifact exact; Rust unchanged.
+- Whole committed input lesson retained; source/public/archive and focused docs proof in owning leaf.
+- D177 membership/chart/table fixed;12 entries remain. Grammar/API/400 cadence unchanged.
+
 ## STITCHCAD-G1-0158 - complete chart file and panic proof (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.1`)
 
 - Split four chart/table repairs; watched120 paths/47 owners/17 native groups remain exact.

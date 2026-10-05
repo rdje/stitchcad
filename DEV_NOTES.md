@@ -14,6 +14,14 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — complete table effect and panic plans
+
+- Pure eight-case data now precedes activation; nine logs/two inputs/one mutable source are guarded before reads. Four original source-dependent span statements remain AST-exact and execute after the guard; all case/filter/restoration behavior stays.
+- Actual old predicate accepts passed assertion_name plus expect-only panic without effects. Current macro locations replace substring evidence. Independent full nine-child/file capture/four physical refusals/five entry and three classifier faults join shared195 body reds/23 classifiers0.
+- Exclusive eight real macro reds pass0; independent byte-position replay verifies every selected log/eight frozen inputs/original cases/four span statements/two HEAD Rust inputs/nine regular-local-singlelink logs. Public current artifactaccf600a… executes all16 tests0; Rust unchanged.
+- Whole8e2b486 input lesson retained before receipt growth; exact501B/four lines/source13854–14355/SHAdbb2c10d copied before retirement. Prior431/public432 proof in leaf. D177 stays open with12 entries P1; MTM .n02.3 is next.
+- Promotion declined: existing current-source evidence, explicit mutable/file ownership and whole-record retention rules. Grammar/API/400 cadence remain unchanged; no runner verdict inferred.
+
 ## _(2026-10-05 UTC)_ — complete size-chart effect and panic plans
 
 - Divide the four-family group before implementation; terminal children preserve all watched paths/parent ownership. Size chart's pure eight-case population moves before activation; declare nine logs/current test/mutable implementation, preserving original cases/argv.
@@ -119,10 +127,7 @@ Runner/cadence continuity retained in [part189](docs/history/stitchcad-devnotes-
 
 Native provenance/cleanup retained in [part190](docs/history/stitchcad-devnotes-part190.md).
 
-Coupled recipe-input guards — STITCHCAD-G1-0146 (.n.f12): D171 actual prefix classifier admits
-labelled expect noise. Guard four implementations/current test/output before reads/writes, preserve
-prepared stores/original filters and rebuild full target; controls131 body/34 entry+late/26 child/
-19 classifiers0. Seven native macro reds/eight current sites/five HEAD-exact sources/full5 restored0. Focused profiles/book/archive402/ledger/coverage0; prior398/four whole records exact. No Rust changes.
+Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-devnotes-part191.md).
 
 | [`part186`](docs/history/window7.md#stitchcad-devnotes-part186md) | D157 and lexer/unit/continuity lessons | 27 lines, 1483 bytes, `sha256:54d12f5b…` |
 
@@ -133,3 +138,5 @@ prepared stores/original filters and rebuild full target; controls131 body/34 en
 | [`part189`](docs/history/stitchcad-devnotes-part189.md) | whole runner/cadence continuity | 17 lines, 1545 bytes, `sha256:36106586…` |
 
 | [`part190`](docs/history/stitchcad-devnotes-part190.md) | six whole native provenance/cleanup records | 50 lines, 4492 bytes, `sha256:2a7cc4c9…` |
+
+| [`part191`](docs/history/stitchcad-devnotes-part191.md) | whole coupled input lesson | 4 lines, 501 bytes, `sha256:dbb2c10d…` |

@@ -386,8 +386,7 @@ def measure_fixture(entry_path):
                     'exactly_one_base_requires_nonempty_members_and_existing_identity',
                     'revision_successors_retain_identity_and_refuse_overflow_without_wrapping',
                     'authored_order_and_base_do_not_follow_lexical_or_numeric_sort')
-    else:
-        assert entry_path == ROOT / 'docs/tasks/artifacts/size_chart/size_chart_mutations.py', 'D156 unknown measurement entry'
+    elif entry_path == ROOT / 'docs/tasks/artifacts/size_chart/size_chart_mutations.py':
         stem = 'size_chart'
         selected = ('context_refuses_duplicate_tables_and_cross_kind_set_member_identities',
                     'context_refuses_duplicate_tables_and_cross_kind_set_member_identities',
@@ -397,9 +396,21 @@ def measure_fixture(entry_path):
                     'values_members_and_both_roles_are_borrowed_without_recomputing',
                     'same_content_table_peer_does_not_replace_named_table',
                     'explicit_table_rebinding_does_not_silently_rebind_an_observation')
+    else:
+        assert entry_path == ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py', 'D156 unknown measurement entry'
+        stem = 'table'
+        selected = ('duplicate_entry_id_and_token_refuse_without_coalescing_or_first_peer_selection',
+                    'duplicate_entry_id_and_token_refuse_without_coalescing_or_first_peer_selection',
+                    'current_inventory_id_collisions_refuse_before_any_table_lookup',
+                    'current_token_reassignment_is_not_an_implicit_table_rename',
+                    'current_domain_reassignment_is_refused_even_when_new_metadata_is_valid_in_its_new_domain',
+                    'current_scalar_reassignment_requires_explicit_binding_replacement',
+                    'required_current_target_failures_keep_table_measurement_and_underlying_identity_evidence',
+                    'current_context_collision_of_table_identity_is_not_cached_birth_approval')
+    work_name = 'measurement_table_mutations' if stem == 'table' else stem + '_mutations'
     return (ROOT / ('crates/sc-measure/src/' + stem + '.rs'),
             ROOT / ('crates/sc-measure/tests/' + stem + '_contract.rs'),
-            ROOT / ('target/' + stem + '_mutations'), selected)
+            ROOT / ('target/' + work_name), selected)
 
 
 def capture_measure_entry(text, entry_path=ENTRY):
@@ -1063,7 +1074,8 @@ def main():
         ('activation', 'os.environ.update(environment)', 'pass'),
     )
     red = 0
-    measure_paths = (ENTRY, ROOT / "docs/tasks/artifacts/size_chart/size_chart_mutations.py")
+    measure_paths = (ENTRY, ROOT / 'docs/tasks/artifacts/size_chart/size_chart_mutations.py',
+                     ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py')
     measure_physical, measure_classifiers = 0, 0
     for measure_path in measure_paths:
         measure_text = measure_path.read_text()
@@ -1198,7 +1210,7 @@ def main():
     for path, work_name in adopters:
         text = path.read_text()
         multiple_sources = {
-            'size_membership_mutations.py', 'size_chart_mutations.py',
+            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py',
             'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',
