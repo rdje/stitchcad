@@ -4,13 +4,7 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
-## _(2026-10-04 UTC)_ — D156 owner compiler entries
-
-- Plan the recipe chapter as an input at entry, even though examples are read after compiler guards.
-- Controls152 body faults/36 entry+late refusals/two complete compiler captures0 include omitted input/output/book plans and every actual Cargo/Rustc/example call under custom stores.
-- Authored output proves dispatch only; direct seven-export-absent native run ten E0451/E0515 guards/four executed examples0, independent fresh fixture/current-artifact/unchanged argv/two HEAD sources proof0. Focused profiles/book/archive406/ledger/coverage0.
-- Retention helper1 rejected a non-ASCII bytes literal before execution; corrected helper0; four whole Git intervals/prior402 bytes/six controls exact0. Failed attempt excluded.
-- Promotion declined: existing all-source/actual-child/native-proof/exact-retention rules.
+Owner compiler lesson retained in [part181](docs/history/stitchcad-devnotes-part181.md).
 
 Window6 retention lesson retained in [part174](docs/history/stitchcad-devnotes-part174.md).
 
@@ -18,21 +12,21 @@ D163 declaration guard lesson retained in [part176](docs/history/stitchcad-devno
 
 D162 namespace guard lesson retained in [part178](docs/history/stitchcad-devnotes-part178.md).
 
-## _(2026-10-04 UTC)_ — D161 statement and whole proof producers
+D161 statement and whole proof lesson retained in [part180](docs/history/stitchcad-devnotes-part180.md).
 
-- Inspect a staged gate's terminal verdict before committing; receipt exits belong inside each bullet.
-- Plan every mutated file and the classifier's test source before reads or output activation.
-- Capture both the whole baseline/restoration calls and mutation/restoration calls under custom stores.
-- Classify real assertion macro locations; text labels cannot distinguish assert! from expect.
-- Promotion declined: existing all-source/actual-child/failed-body/exclusive-restoration rules.
+## _(2026-10-04 UTC)_ — D156 static entry and D172–D175 repairs
 
-## _(2026-10-04 UTC)_ — D160 assertion provenance
+- Guard20 complete inputs before helper loading and output/native dispatch; preserve prepared stores and original populations/argv.
+- D172 actual labelled nonmacro panic accepted, early compiler refusal restored bytes without artifact. Current driver macro sites and outer finally rebuild fix both;161 body controls/37 early+late refusals/three complete mode captures0.
+- Direct absent-export run26723 cases/28 Rust/6 reference/3 annex actual reds0; six HEAD snapshots and full baseline/restored outcomes/current Cargo artifact proof0. Post-D173 native baseline same hash0; dispatch simulations remain separate.
+- D173 fixture loader omitted85 shell lines/impersonated original variant. Both current catalogs94/95, real refusal text and virtual frames/four actual loader faults0; worked review100/7+3 reds0. D174 book86 stale after eight later methods; draft87 caught before commit. Remove fixed totals; original AST/history proof0.
+- D175 actual scope body accepted a retired whole-graph claim (2fa9d5d7). Correct availability; independent later-section fixture and compiled catalog-omission control now refuse0. Publication45/current census0.
+- Initial staged gate1 exceeded book cap627B; consolidate duplicate prose. First rebuilt link1 used absent anchor; observed heading corrected. Both failures excluded.
+- Two initial archive/ledger runs1 rejected the uncommitted D175 report417B line. Reformat its invalid pre-seal output with readable wrapping and exact original bytes encoded; failed attempts excluded.
+- Seven whole Git intervals/prior406/public415/12open162sealed0; original reports exact. Promotion declined: existing plan/fault/restoration/claim rules.
 
-- Rust assert! with a custom message need not print the standard assertion prefix.
-- Classify failed-body panic sites against guarded current test macro locations, not message labels.
-- Keep custom assertion positives and expect-location/wrong-source/column/byte refusals independent.
-- A false classifier refusal is failed verification; exclude it, restore fully and rerun every native mode.
-- Promotion declined: existing actual-body/guarded-source/exclusive-restoration rules.
+
+D160 lesson retained in [part182](docs/history/stitchcad-devnotes-part182.md); UTC seal date correction:2026-10-05 (immutable header says Oct4).
 
 ## _(2026-10-04 UTC)_ — D156 recipe normalization entries
 

@@ -65,7 +65,9 @@ def recognition_documentation(ns, replacement=None):
 
 
 def load(replacement=None):
-    program = SOURCE.read_text().split("<<'PY'\n", 1)[1].rsplit('\nPY', 1)[0]
+    header, program = SOURCE.read_text().split("<<'PY'\n", 1)
+    line_offset = (header + "<<'PY'\n").count('\n')
+    program = program.rsplit('\nPY', 1)[0]
     boundary = '# ── L1:'
     assert program.count(boundary) == 1, 'actual fixture-loading boundary changed'
     prefix = program.split(boundary, 1)[0]
@@ -78,8 +80,9 @@ def load(replacement=None):
         sys.argv = ['reference', *[str(BOOK / p) for p in (
             'spec/formula-language.md', 'spec/formula-language/grammar.md',
             'spec/formula-language/examples.md', 'spec/reference-skirt.md', '.', 'spec/formula-language')]]
+        filename = '<static review reference fault>' if replacement else str(SOURCE)
         with redirect_stdout(io.StringIO()):
-            exec(compile(prefix, str(SOURCE), 'exec'), namespace)
+            exec(compile('\n' * line_offset + prefix, filename, 'exec'), namespace)
     finally:
         sys.argv = argv
     assert namespace['fails'] == 0, 'actual table/fixture loading failed'

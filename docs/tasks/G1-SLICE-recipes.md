@@ -739,7 +739,7 @@ is required before completeness claims. No direct producer is executed with ambi
   Work unit STITCHCAD-G1-0122; plan every output/source/store before mkdir or environment
   activation; fail-closed clean CLI refusal. Size-membership is the first bounded adopter.
 - ID: `G1-SLICE.5b.4c.h2.b.p.n`
-  Status: `in_progress`
+  Status: `done`
   Goal: apply the verified entry/owned-path contract to remaining direct native producers.
   Acceptance: divide finite entry ledger into bounded groups before edits; actual standalone
   captures/refusals and exclusive focused native assertions/restoration per group.
@@ -984,17 +984,16 @@ Native baseline log replay1 excluded: old signature fault logs absent (actual di
   Goal: daily cleanup complete; exact requirements/acceptance in [part175](../history/stitchcad-devnotes-part175.md); audit target/artifact_cleanup_audit/2026-10-04-2219/.
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f13`
   Status: `done`
-  Goal: STITCHCAD-G1-0147 owns both owner entry guards, actual Cargo/Rustc/example dispatch controls, native diagnostics/book proof, live/book sync and blocking whole .n.f12/old lesson/oldest ledger retention; D156 remains open.
-  Acceptance: source/book/output plans before reads/writes/children, preserved public Cargo artifact/diagnostic/fixture/example argv and prepared stores, actual controls/real native proofs; own blocking whole retention.
-
-- [x] REPRODUCE / ISSUE: D156 compiler entries read unplanned sources/book and reset prepared stores; actual previous reset faults refused in owner-python-controls-final.log152 body reds, rc=0.
-- [x] ROOT CAUSE (WHY + WHERE): source extraction precedes profile; per-child overlays overwrite valid stores. Actual entry/read/late-source captures and Cargo/Rustc/example faults discriminate; sources unchanged, rc=0.
-- [x] FIX: both complete source/output plans and recipe chapter precede reads/writes/native dispatch; all original public compiler argv/fixtures/diagnostics/examples/prepared stores preserved, two complete captures, rc=0.
-- [x] ADDRESSED (verified): owner-native-driver.log seven caller exports absent/ten actual E0451/E0515 refusals/four actual compiled+executed examples, rc=0; owner-native-proof.log current public Cargo JSON/fresh fixture/diagnostic locations/unchanged argv/two HEAD+snapshot exact sources, rc=0.
-- [x] NO REGRESSION: run_ci_environment_probes.sh CI19/local56/Python17/152/36/36/26/2 compiler/19 classifiers; publication43/archive28+CLI422/406 reads/ledger9+pointer13/coverage9 all terminal0 consumed, rc=0; no Rust changes/unobserved CI claim.
-- [x] LOCKSTEP: owner-retention-proof.log four whole4d61b4c intervals/prior402/six windows/public406/37native36adopted/12open158sealed/no gaps, rc=0; initial helper/gate1 excluded (bytes literal/missing receipt rc); book/live .n.f14 synced; promotion declined: existing rules. Final staged gate13green, rc=0, owner-staged-gate-final.log; hook/brief clearing follows.
+  Goal: owner compiler guards; complete requirements/acceptance/receipts in [part179](../history/stitchcad-devnotes-part179.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f14`
-  Status: `todo`
-  Goal: final static coupled native entry guards under D156; then output/delegation and shell/integration audits before D154.
+  Status: `done`
+  Goal: STITCHCAD-G1-0148 owns final static entry guards, complete public loader/source/book/output plans, actual mode/child/driver-classifier/restoration controls, native proof/live/book sync, any reproduced verification defect and blocking whole retention under D156.
   Acceptance: complete public reference/Rust/test/book/output plans before reads/writes/children; preserve original shared populations, selections, fixtures and prepared stores; actual controls/direct native faults and exact sources/full artifact restoration.
+
+- [x] REPRODUCE / ISSUE: static-entry-baseline.log actual labelled nonmacro panic accepted/early compiler refusal omitted restored build; static-loader-location-baseline.log infer520 versus605/variant impersonation; static-location-catalog-proof.log stale86 and static-stale-scope-baseline.log accepted retired graph claim, rc=0; original reports retained.
+- [x] ROOT CAUSE (WHY + WHERE): missing early complete input plans/per-child reset/panic prefix/outside-finally rebuild and fixture loader shell offset omission. run_ci_environment_probes.sh161 actual body reds/37 early+late refusals/three complete mode captures, rc=0, static-environment-final.log; actual loader/catalog omission faults discriminate, rc=0.
+- [x] FIX: guard20 source/helper/book/output inputs before reads/writes/children, preserve prepared stores/public argv/current catalogs; current driver macro locations and unconditional restored build. Both loader offsets/virtual variants verified, rc=0, static-loader-location-final.log.
+- [x] ADDRESSED (verified): static-native-driver.log direct seven-export-absent26723 cases/28 Rust+6 reference+3 annex actual reds, rc=0; static-native-proof.log six HEAD snapshots/full baseline+restored outcomes/current Cargo artifact, rc=0; post-location native same hash, rc=0. Review100/7+3, loader94/95/four faults and publication45/D175 independent actual catalog omission, rc=0.
+- [x] NO REGRESSION: run_ci_environment_probes.sh CI19/local56/Python17/161/37/37/26/2/3/20; publication probes:45 pass/0 fail; archive28+CLI431/415 reads/ledger9+pointer13/coverage9 all terminal0 consumed, rc=0; no Rust/API/grammar change or unobserved CI claim.
+- [x] LOCKSTEP: static-retention-repair-final-proof.log seven wholea875617 intervals/prior406/six windows+master/public415/12open162sealed/no gaps/overlap/D175 decoded original exact, rc=0; size check0. Initial gate/link/archive1 excluded; cap/observed heading/invalid417B report repaired. static-archive-date-proof.log96/182 crossed UTC midnight; live routes correct Oct5/immutable bytes held, rc=0. Book/live .p.o synced; promotion: declined (existing full-plan/actual-fault/restoration/claim rules). Final staged gate13green, rc=0, static-staged-gate-complete.log.

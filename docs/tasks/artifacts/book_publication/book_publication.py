@@ -53,7 +53,7 @@ FORMULA_SCOPE = {
                    "recipe normalization/identity .3f, numerical execution and production approval remain owned future work",
                    "statement serialization, numerical evaluation and production approval remain later",
                    "The recipe has no persistent statement serialization or recipe hash yet; .3f.1 owns that byte contract"),
-    "static-validation": (),
+    "static-validation": ("complete static graph remains .5b.4",),
 }
 FORMULA_METHODS = {
     "checked.rs": ("check_kinds",),
@@ -373,6 +373,26 @@ def main():
         else:
             raise PublicationError("BODY_CONTROL: actual guard omission escaped no assertion")
     print("  formula currency: reworded positive / actual compiled guard-omission assertion red")
+    # D175's independent stale sentence is deliberately outside the map-driven case population.
+    # Removing its catalog entry must still fail this control, including when placed after the intro.
+    with tempfile.TemporaryDirectory(prefix="static-currency-", dir=scratch) as directory:
+        root = Path(directory)
+        fixture(ROOT, root)
+        chapter = root / SOURCE / "annexes/formula-static-validation.md"
+        chapter.write_text(chapter.read_text() + "\nComplete checking: complete static graph remains .5b.4.\n")
+        currency_refusal(check, root)
+        body = Path(__file__).read_text()
+        anchor = '"static-validation": (' + '"complete static graph remains .5b.4",),'
+        require(body.count(anchor) == 1, "BODY_ANCHOR", "static scope catalog")
+        namespace = {"__file__": __file__, "__name__": "publication_static_currency_fault"}
+        exec(compile(body.replace(anchor, '"static-validation": (),', 1), __file__, "exec"), namespace)
+        try:
+            currency_refusal(namespace["check"], root)
+        except PublicationError as error:
+            require(str(error).startswith("FORMULA_BODY_RED:"), "BODY_CONTROL", str(error))
+        else:
+            raise PublicationError("BODY_CONTROL: actual static-scope omission escaped no assertion")
+    print("  static currency: independent later-section claim / actual compiled catalog-omission assertion red")
     with tempfile.TemporaryDirectory(prefix="book-warning-", dir=scratch) as directory:
         root = Path(directory)
         fixture(ROOT, root)
@@ -393,7 +413,7 @@ def main():
         require("<code>Checked&lt;UnclosedType&gt;</code>" in rendered,
                 "WARNING_REPAIR", "generic parameter missing from repaired rendering")
     print("  verified refusal: actual malformed generic (BOOK_BUILD_WARNING); repaired rendering pass")
-    print(f"publication probes: {len(cases) + 4} pass / 0 fail")
+    print(f"publication probes: {len(cases) + 5} pass / 0 fail")
 
 
 if __name__ == "__main__":

@@ -83,12 +83,12 @@ virtual filename instead of claiming that their changed code is the unchanged so
 python3 -I -B docs/tasks/artifacts/formula_structure/reference_locator_contract.py --mutations
 ```
 
-D144's controls independently parse the original definitions/decorators and compare all86 compiled
-code locations, check the actual geometry dimension traceback text and inspect a virtual fault
-frame. Two actual compiled loader faults must fail body assertions: losing the header offset and
-letting a fault impersonate the original file. Source bytes remain unchanged. This fixes diagnostic
-locations in the test instrument; formula grammar, diagnostic arguments and execution results are
-unaffected. Structural probes watch these controls alongside the existing signature evidence.
+D144 and D173 controls independently parse each prefix's top-level functions and direct class
+methods/decorators, then compare original code positions and geometry-dimension traceback text.
+Both loaders retain the85-line shell header; in-memory variants use virtual filenames. Losing
+the offset or impersonating the original causes body assertion failures in each loader (four faults).
+Sources, grammar, diagnostic arguments and results stay unchanged; structural probes watch both
+catalogs. D174 removes stale fixed totals: definitions and locations derive from current source.
 
 ## Repairs and remaining obligations
 
@@ -109,7 +109,7 @@ are available, as are [built-in and selector signatures](formula-builtin-signatu
 [source-bearing call lookup](formula-call-lookup.md) and
 [initial-scope expression proofs](formula-wanted-signatures.md#bounded-product-expression-checking)
 and [current-statement checks](formula-name-scopes.md#check-the-actual-current-statement)
-are available; complete static graph remains .5b.4. Exact call payloads are separately checked by166 cases/12
+and [complete static graph proofs](formula-checked-recipes.md) are available. Exact call payloads are checked by166 cases/12
 actual compiled faults; the older recognition/kind matrix alone certifies no diagnostic payloads.
 Reference expression dimension payloads are now verified by4023 cases/15 actual compiled faults,
 including complete kinds/wanted rules and multiple-error selection; see the
@@ -503,6 +503,8 @@ Six faults compiled into the real reference and28 compiled into the actual Rust 
 must trigger oracle or running-driver body assertions. All five source files are restored byte-exact,
 and the restored Rust artifact must pass again. Three actual copied-annex status faults also refuse,
 preventing D149's obsolete claims and D151's ambiguous reference/product proof wording.
+The [standalone guard contract](../build-and-checks.md#direct-python-producers) covers all20
+inputs, prepared child stores, current driver assertion sites and unconditional artifact restoration.
 
 This shared-case contract verifies the exercised expression, statement and complete recipe interfaces.
 D150's competing-phase controls additionally compare263 independently authored token/phase/ordinal

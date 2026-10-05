@@ -464,6 +464,189 @@ def classifier_controls(text, entry_path, *, strict=False):
         assert not classify(noise), 'D159 assertion evidence accepted noise'
 
 
+def driver_classifier_controls(text, path):
+    names = {'driver_assertion_sites', 'driver_assertion_failure'}
+    functions = [n for n in ast.parse(text).body if isinstance(n, ast.FunctionDef) and n.name in names]
+    assert {n.name for n in functions} == names, 'D172 driver classifier helpers missing'
+    scope = {'re': re, 'Path': Path, 'ROOT': ROOT}
+    exec(compile(ast.Module(body=functions, type_ignores=[]), str(path), 'exec'), scope)
+    fixture = 'docs/tasks/artifacts/formula_structure/authored_driver_fixture.rs'
+    sites = scope['driver_assertion_sites']('fn main() {\n    assert!(false, "custom");\n    None::<()>.expect("assertion: noise");\n}\n', fixture)
+    assert sites == {(fixture, 2, 5)}, 'D172 driver assertion sites changed'
+    scope['DRIVER_ASSERTION_SITES'] = sites
+    classify = scope['driver_assertion_failure']
+    prefix = b"thread 'main' panicked at " + fixture.encode()
+    assert classify(prefix + b':2:5:\nassertion failed: actual driver fixture\n'), 'D172 valid driver macro refused'
+    for noise in (
+        prefix + b':3:5:\nassertion: expect-only noise\n',
+        prefix + b':2:6:\nassertion: wrong column\n',
+        prefix.replace(fixture.encode(), b'other.rs') + b':2:5:\nassertion: wrong source\n',
+        prefix.replace(fixture.encode(), b'\xff') + b':2:5:\nassertion: invalid path bytes\n',
+        b'error: assertion failed at compiler/link stage\n',
+        b'test assertion_name ... ok\nthread panicked\nassertion: no location\n',
+        b'',
+    ):
+        assert not classify(noise), 'D172 driver classifier accepted noise'
+    assert classify(prefix + b':2:5:\ncustom message without a prefix\n'), 'D172 valid driver macro refused'
+    absolute = b"thread 'main' panicked at " + str(ROOT / fixture).encode()
+    assert classify(absolute + b':2:5:\ncustom\n'), 'D172 current absolute driver macro refused'
+
+
+def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
+    """Actual standalone modes; all writes/children intercepted, native proof stays separate."""
+    here = ROOT / 'docs/tasks/artifacts/formula_structure'
+    driver = here / 'static_coupled_driver.rs'
+    mutable = tuple(ROOT / 'crates/sc-core/src/recipe' / name for name in (
+        'checked.rs', 'checked_statement.rs', 'namespace/ordered.rs', 'checked_recipe.rs'))
+    helpers = tuple(here / name for name in (
+        'dimension_payload_contract.py', 'static_review_contract.py', 'static_namespace_contract.py',
+        'static_signature_contract.py', 'checked_recipe_mutations.py'))
+    books = tuple(ROOT / 'docs/book/src' / name for name in (
+        'spec/formula-language.md', 'spec/formula-language/grammar.md',
+        'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md',
+        'annexes/formula-static-validation.md', 'annexes/formula-wanted-signatures.md',
+        'annexes/implementation-status.md'))
+    sources = (ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh',
+               driver, here / 'canonical_worked_recipe_cases.tsv', *helpers, *mutable, *books)
+    originals = {source: source.read_bytes() for source in sources}
+    work = ROOT / 'target/static_coupled_contract'
+    GOOD['directory'](ROOT, work.relative_to(ROOT).as_posix(), create=True)
+    base = 'target/scratch/python_producer_contract/static-stores'
+    custom = dict(zip(('CARGO_HOME', 'RUSTUP_HOME', 'CARGO_TARGET_DIR', 'TMPDIR'),
+                      (base + '/cargo', base + '/rustup', base + '/build', base + '/scratch')))
+    for value in custom.values():
+        GOOD['directory'](ROOT, value, create=True)
+    custom['MAKE_TMPDIR'] = custom['TMPDIR']
+    deps = ROOT / custom['CARGO_TARGET_DIR'] / 'deps'
+    GOOD['directory'](ROOT, deps.relative_to(ROOT).as_posix(), create=True)
+    library = deps / 'libsc_core_dispatch_fixture.rlib'
+    library.write_bytes(b'authored metadata fixture; never compiled')
+    metadata = json.dumps({'reason': 'compiler-artifact', 'target': {'name': 'sc_core', 'kind': ['lib']},
+                           'filenames': [str(library)]}) + '\n'
+    labels = ['baseline']
+    if mutations:
+        labels += ['fault-1', 'restored'] if early_refusal else [f'fault-{i}' for i in range(1, 29)] + ['restored']
+    scope = {'__file__': str(path), '__name__': '__main__'}
+    saved, argv = dict(os.environ), sys.argv
+    mkdir, read_text, read_bytes = Path.mkdir, Path.read_text, Path.read_bytes
+    write_text, write_bytes, run, run_path = Path.write_text, Path.write_bytes, subprocess.run, runpy.run_path
+    observed, written, pending, plans, loads = [], {}, {}, [], []
+    batch, stage, outcome = 0, 0, None
+
+    def environment(values):
+        assert all(values.get(name) == str(ROOT / value) for name, value in custom.items()), 'D156 static child stores lost'
+        assert values.get('RUSTUP_TOOLCHAIN') == '1.99.0' and values.get('RUSTUP_AUTO_INSTALL') == '0', 'D156 static child toolchain changed'
+        assert values.get('D156_PYTHON_UNRELATED') == 'preserved', 'D156 static unrelated environment lost'
+
+    def profile(file, *args, **kwargs):
+        if file != str(ROOT / 'scripts/local_environment.py'):
+            assert plans and Path(file) in helpers, 'D156 static unplanned loader'
+            loads.append(Path(file))
+            return run_path(file, *args, **kwargs)
+
+        def enter(root, *, directories=(), sources=()):
+            assert root == ROOT and directories == (work,), 'D156 static output plan changed'
+            assert sources == tuple(originals), 'D156 static input plan changed'
+            assert not plans and not loads and not observed and not written, 'D156 static late profile'
+            plans.append(True)
+            return GOOD['enter_producer'](root, directories=directories, sources=sources)
+
+        return dict(GOOD, enter_producer=enter)
+
+    def read(path_, binary, *args, **kwargs):
+        assert plans, 'D156 static read before profile'
+        environment(os.environ)
+        if path_ in written:
+            return written[path_].encode() if binary else written[path_]
+        assert path_ in originals, 'D156 static unplanned input read'
+        return (read_bytes if binary else read_text)(path_, *args, **kwargs)
+
+    def directory(path_, *args, **kwargs):
+        assert path_ == work or path_ in {work / label for label in labels}, 'D156 static unplanned directory'
+        environment(os.environ)
+
+    def write(path_, data, *args, **kwargs):
+        if path_ in mutable:
+            if isinstance(data, bytes):
+                assert data == originals[path_], 'D172 static wrong source restoration bytes'
+                pending.pop(path_, None)
+            else:
+                assert batch < len(labels) and labels[batch].startswith('fault-'), 'D172 static source write outside fault'
+                index = int(labels[batch].split('-')[1]) - 1
+                _, relative, before, after, count = scope['RUST_FAULTS'][index]
+                assert path_ == ROOT / relative and data == originals[path_].decode().replace(before, after, count), 'D172 static actual source fault changed'
+                pending[path_] = data
+        else:
+            assert path_.parent in {work, *(work / label for label in labels)}, 'D156 static unplanned output write'
+            assert isinstance(data, str), 'D156 static output encoding changed'
+            written[path_] = data
+        return len(data)
+
+    def child(args, *positional, **kwargs):
+        nonlocal batch, stage, outcome
+        environment(kwargs.get('env', os.environ))
+        assert kwargs.get('cwd') == ROOT and not positional, 'D156 static child cwd changed'
+        assert kwargs.get('capture_output') is True and kwargs.get('text') is True, 'D156 static child capture changed'
+        assert batch < len(labels), 'D156 static extra child'
+        label = labels[batch];output = work / label
+        wanted = (
+            ['cargo', 'build', '-p', 'sc-core', '--message-format=json'],
+            ['rustc', '--edition=2021', '-Dwarnings', '--extern', 'sc_core=' + str(library),
+             '-L', 'dependency=' + str(deps), str(driver), '-o', str(output / 'driver')],
+            [str(output / 'driver')],
+        )[stage]
+        assert args == wanted, 'D156 static child argv changed'
+        assert bool(pending) == label.startswith('fault-'), 'D172 static child source state changed'
+        observed.append((label, stage))
+        stdout, stderr, status = '', '', 0
+        if stage == 0:
+            stdout = metadata
+        elif stage == 1 and early_refusal and label == 'fault-1':
+            stderr, status = 'authored compiler refusal; never body proof', 1
+        elif stage == 2:
+            lines = kwargs['input'].splitlines()
+            assert lines[0] == ';'.join(':'.join(row) for row in scope['CATALOG']), 'D156 static catalog input changed'
+            assert len(lines) == len(scope['CASES']) + 1, 'D156 static shared input population changed'
+            for i, (line, (mode, source, _)) in enumerate(zip(lines[1:], scope['CASES'])):
+                fields = line.split('\t')
+                assert fields == [str(i), mode, source.encode().hex()], 'D156 static actual driver input changed'
+            if outcome is None:
+                outcome = ''.join(str(i) + '\t' + '\t'.join(expected) + '\n'
+                                  for i, (_, _, expected) in enumerate(scope['CASES']))
+            stdout = '0\tERR\tformula_dimension\t-\n' + outcome.split('\n', 1)[1] if pending else outcome
+        if stage == 2 or status:
+            batch += 1
+            stage = 0
+        else:
+            stage += 1
+        return subprocess.CompletedProcess(args, status, stdout=stdout, stderr=stderr)
+
+    try:
+        os.environ.update({name: str(ROOT / value) for name, value in custom.items()})
+        os.environ.update(RUSTUP_TOOLCHAIN='1.99.0', RUSTUP_AUTO_INSTALL='0', D156_PYTHON_UNRELATED='preserved')
+        sys.argv = [str(path), *(['--mutations'] if mutations else [])]
+        Path.mkdir = directory
+        Path.read_text = lambda p, *a, **k: read(p, False, *a, **k)
+        Path.read_bytes = lambda p, *a, **k: read(p, True, *a, **k)
+        Path.write_text, Path.write_bytes, subprocess.run, runpy.run_path = write, write, child, profile
+        with contextlib.redirect_stdout(io.StringIO()):
+            try:
+                exec(compile(text, str(path), 'exec'), scope)
+            except AssertionError as error:
+                assert early_refusal and 'compiler/link/expect/noise refused' in str(error), error
+    finally:
+        Path.mkdir, Path.read_text, Path.read_bytes = mkdir, read_text, read_bytes
+        Path.write_text, Path.write_bytes, subprocess.run, runpy.run_path = write_text, write_bytes, run, run_path
+        sys.argv = argv
+        os.environ.clear()
+        os.environ.update(saved)
+        assert all(source.read_bytes() == data for source, data in originals.items()), 'D156 static capture changed source'
+    assert plans == [True] and set(loads) == set(helpers[:-1]), 'D156 static loader/profile coverage changed'
+    assert not pending, 'D172 static source restoration absent'
+    assert batch == len(labels) and stage == 0, 'D172 static restored compiler dispatch absent'
+    assert len(observed) == (8 if early_refusal else 90 if mutations else 3), 'D156 static native mode dispatch changed'
+
+
 def main():
     original, entry = SOURCE.read_bytes(), ENTRY.read_bytes()
     count = controls(GOOD)
@@ -524,6 +707,7 @@ def main():
         (ROOT / 'docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py', 'recipe_input_review_mutations'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/recipe_owner_contract.py', 'recipe_owner_contract'),
         (ROOT / 'docs/tasks/artifacts/formula_structure/statement_owner_contract.py', 'statement_owner_contract'),
+        (ROOT / 'docs/tasks/artifacts/formula_structure/static_coupled_contract.py', 'static_coupled_contract'),
     )
     originals = {path: path.read_bytes() for path, _ in adopters}
     for path, work_name in adopters:
@@ -541,6 +725,7 @@ def main():
             'formula_expression_mutations.py', 'reduction_boundary_mutations.py',
             'recipe_input_review_mutations.py',
             'recipe_owner_contract.py', 'statement_owner_contract.py',
+            'static_coupled_contract.py',
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         source_anchor = 'sources=' + source_argument
@@ -560,6 +745,46 @@ def main():
             red += 1
         else:
             raise AssertionError('D156 Python standalone body fault survived')
+    static = ROOT / 'docs/tasks/artifacts/formula_structure/static_coupled_contract.py'
+    text = static.read_text()
+    static_count = 0
+    for mode, early in ((False, False), (True, False), (True, True)):
+        capture_static_entry(text, static, mutations=mode, early_refusal=early)
+        static_count += 1
+    for name, before, after, mode, early, message in (
+        ('complete book plan', '*BOOK_INPUTS)', '*BOOK_INPUTS[:-1])', False, False, 'D156 static input plan changed'),
+        ('prepared stores', 'environment = dict(os.environ)', "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", False, False, 'D156 static child stores lost'),
+        ('public Cargo metadata', ", '--message-format=json'", '', False, False, 'D156 static child argv changed'),
+        ('public driver source', "str(DRIVER), '-o'", "str(SOURCE), '-o'", False, False, 'D156 static child argv changed'),
+        ('mutation mode', 'if sys.argv[1:]:\n        mutations()', 'if False:\n        mutations()', True, False, 'D172 static restored compiler dispatch absent'),
+        ('early-refusal artifact restoration', "build_and_check('restored')", 'None', True, True, 'D172 static restored compiler dispatch absent'),
+    ):
+        assert text.count(before) == 1, (name, 'actual static anchor')
+        try:
+            capture_static_entry(text.replace(before, after, 1), static, mutations=mode, early_refusal=early)
+        except AssertionError as error:
+            assert str(error) == message, (name, 'unrelated static capture refusal', str(error))
+            red += 1
+        else:
+            raise AssertionError((name, 'actual static body fault survived'))
+    driver_count = 0
+    driver_classifier_controls(text, static)
+    driver_count += 1
+    functions = {n.name: ast.get_source_segment(text, n) for n in ast.parse(text).body if isinstance(n, ast.FunctionDef)}
+    old = "def driver_assertion_failure(output):\n    log = output.decode('utf-8', errors='replace')\n    return 'panicked at' in log and re.search(r'(?m)^assertion(?:[ :`]|$)', log) is not None"
+    for function, changed, message in (
+        ('driver_assertion_failure', old, 'D172 driver classifier accepted noise'),
+        ('driver_assertion_sites', 'def driver_assertion_sites(source, path):\n    return set()', 'D172 driver assertion sites changed'),
+    ):
+        actual = functions[function]
+        assert text.count(actual) == 1
+        try:
+            driver_classifier_controls(text.replace(actual, changed, 1), static)
+        except AssertionError as error:
+            assert str(error) == message, (function, 'unrelated driver classifier refusal', str(error))
+            red += 1
+        else:
+            raise AssertionError((function, 'actual driver classifier fault survived'))
     compiler_count = 0
     for owner in ('recipe', 'statement'):
         path = ROOT / f'docs/tasks/artifacts/formula_structure/{owner}_owner_contract.py'
@@ -632,7 +857,7 @@ def main():
             red += 1
         else:
             raise AssertionError('D156 Python actual child-store reset survived')
-    classifier_count = 0
+    classifier_count = driver_count
     for filename, work_name, rust, target, test in (
             ('recipe_input_review_mutations.py', 'recipe_input_review_mutations',
              ('statement.rs', 'ordered.rs', 'canonical_recipe.rs', 'normalized_recipe.rs'),
@@ -844,6 +1069,7 @@ def main():
           ' actual body reds / ' + str(len(adopters)) + ' actual standalone pre-write captures / ' +
           str(len(adopters)) + ' actual late-source refusals / ' + str(child_count) + ' actual native-child capture cases / ' +
           str(compiler_count) + ' complete compiler/example captures / ' +
+          str(static_count) + ' complete static-entry captures / ' +
           str(classifier_count) + ' calibrated failed-body classifiers / source unchanged')
 
 

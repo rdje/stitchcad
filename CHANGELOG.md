@@ -110,6 +110,17 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0148 - complete static native guards (leaf `G1-SLICE.5b.4c.h2.b.p.n.f14`)
+
+- Guard20 inputs before helpers/outputs/children; preserve shared populations, public argv and stores.
+- D172 strict current driver macro locations/always restored build;161 body controls/37 entry+late
+  refusals/three complete static captures/20 classifiers pass0.
+- Native26723 cases/28 Rust/6 reference/3 annex actual reds/six exact sources/artifact restored0.
+- D173 both loader locations/virtual identities/four actual faults0; D174 stale book totals removed.
+- D175 retired graph claim repaired; publication45 includes independent actual catalog-omission red0.
+- Seven whole committed intervals/prior406 exact and original reports retained; no Rust/API/grammar change.
+- D156 native37 guards complete; fixture/delegation/shell audits remain.400 cadence unchanged.
+
 ## STITCHCAD-G1-0147 - guarded owner compiler entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.f13`)
 
 - Guard source/book/output plans before reads/writes; preserve prepared stores and public compiler argv.
@@ -241,22 +252,9 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
 - Guarded full structural/coupled runner/publication43 pass0; four complete ecc67e5 intervals
   retained exactly, public341/hash/L/B/LF/prior44bytes0. G1 5/18,12open/146sealed; D156 continues.
 
-## STITCHCAD-G1-0130 - guarded recipe/statement entries (leaf `G1-SLICE.5b.4c.h2.b.p.n.f2`)
+| [`part132`](docs/history/stitchcad-changelog-part132.md) | whole G1-0130 ledger | 8 lines, 682 bytes, `sha256:6e3506f0…` |
 
-- Guard declared sources/output before reads/writes; preserve prepared child stores/coupled selection.
-- Controls17runtime/25body/15prefixes/15late/five child cases0; direct exclusive35 native assertion
-  reds; exact sources/current artifacts restored10/11tests; both classifiers0. Grammar unchanged.
-- D158 serialization/count scope fixed: publication43 includes actual stale/count refusals.
-  Exact whole receipts142/143 and original working report76 retained; public337/prior41bytes0.
-- D159 broad classifier acceptance verified/owned next. D156 remains open; G1 5/18,13open/145sealed.
-
-## STITCHCAD-G1-0129 - current formula proof scope (leaf `G1-SLICE.5b.4c.h2.b.p.n.d1`)
-
-- D157 closed: nine formula annex scopes agree with existing ordered/expression/whole kind proofs.
-- Publication39:22 retired claims/four public method refusals, reworded positive and actual compiled omission red;
-  nine actual original-introduction refusals, glossary17/ledger9+pointer13/coverage9/census9/9/4 pass0.
-- Four complete e19f992 source intervals retained exactly; public334/hash/L/B/LF/prior37 bytes0.
-  Grammar/Rust API unchanged; D156 guards/D154 continue. G1 5/18,12open/144sealed.
+| [`part131`](docs/history/stitchcad-changelog-part131.md) | whole G1-0129 ledger | 7 lines, 586 bytes, `sha256:016b79cb…` |
 
 | [`part130`](docs/history/stitchcad-changelog-part130.md) | G1-0128 lexer guards | 6 lines, 463 bytes, `sha256:21deb59d…` |
 

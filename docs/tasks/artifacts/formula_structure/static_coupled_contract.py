@@ -11,12 +11,27 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
+SOURCE = ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh'
+DRIVER = HERE / 'static_coupled_driver.rs'
+WORKED_SOURCE = HERE / 'canonical_worked_recipe_cases.tsv'
+WORK = ROOT / 'target/static_coupled_contract'
+MUTATED = tuple(ROOT / ('crates/sc-core/src/recipe/' + name) for name in (
+    'checked.rs', 'checked_statement.rs', 'namespace/ordered.rs', 'checked_recipe.rs'))
+HELPERS = tuple(HERE / name for name in (
+    'dimension_payload_contract.py', 'static_review_contract.py', 'static_namespace_contract.py',
+    'static_signature_contract.py', 'checked_recipe_mutations.py'))
+BOOK_INPUTS = tuple(ROOT / ('docs/book/src/' + name) for name in (
+    'spec/formula-language.md', 'spec/formula-language/grammar.md',
+    'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md',
+    'annexes/formula-static-validation.md', 'annexes/formula-wanted-signatures.md',
+    'annexes/implementation-status.md'))
+SOURCES = (SOURCE, DRIVER, WORKED_SOURCE, *HELPERS, *MUTATED, *BOOK_INPUTS)
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), sources=SOURCES)
 RULES = runpy.run_path(str(HERE / 'dimension_payload_contract.py'))
 STATIC = runpy.run_path(str(HERE / 'static_review_contract.py'))
 KINDS, ARITH, CALLS = RULES['KINDS'], RULES['ARITH'], RULES['CALL_ROWS']
-SOURCE = RULES['SOURCE']
-DRIVER = HERE / 'static_coupled_driver.rs'
-WORK = ROOT / 'target/static_coupled_contract'
+assert RULES['SOURCE'] == SOURCE and STATIC['SOURCE'] == SOURCE, 'coupled planned reference source changed'
 WORK.mkdir(parents=True, exist_ok=True)
 _, _, worked_env = STATIC['load']()
 CATALOG = [('v_' + kind, kind, 'geometry' if kind in ('point', 'edge') else 'parameter') for kind in KINDS]
@@ -27,6 +42,31 @@ assert len(INITIAL) == len(CATALOG), 'coupled authored initial name collision'
 for name, kind in RULES['RESERVED'].items():
     INITIAL[name] = (kind, 'tolerance' if name.startswith('eps_') else 'size', None)
 CASES = []
+
+
+def driver_assertion_sites(source, path):
+    return {(path, line, len(match.group(1).encode()) + 1)
+            for line, text in enumerate(source.splitlines(), 1)
+            if (match := re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', text)) is not None}
+
+
+def driver_assertion_failure(output):
+    for filename, line, column in re.findall(rb'(?m)^thread .* panicked at (.+):(\d+):(\d+):$', output):
+        try:
+            path = Path(filename.decode('utf-8'))
+        except UnicodeDecodeError:
+            continue
+        if path.is_absolute():
+            if not path.is_relative_to(ROOT):
+                continue
+            path = path.relative_to(ROOT)
+        if (path.as_posix(), int(line), int(column)) in DRIVER_ASSERTION_SITES:
+            return True
+    return False
+
+
+DRIVER_ASSERTION_SITES = driver_assertion_sites(DRIVER.read_text(), DRIVER.relative_to(ROOT).as_posix())
+assert DRIVER_ASSERTION_SITES, 'coupled driver assertion sites absent'
 
 
 def deps(source, names):
@@ -219,7 +259,7 @@ for prefix in ('let bad:length=missing\n', 'let bad:length=1.0\n', 'let eps_num:
 for raw in ('point', 'edge', 'unknown'):
     add_recipe('let invalid:%s=missing' % raw, token='formula_dimension')
 # Complete actual book population is compared with independently retained source rows and kinds.
-rows = [line.split('\t') for line in (HERE / 'canonical_worked_recipe_cases.tsv').read_text().splitlines()
+rows = [line.split('\t') for line in WORKED_SOURCE.read_text().splitlines()
         if line and not line.startswith('#')]
 assert len(rows) == 21 and len(STATIC['WORKED']) == 17, 'coupled authored worked coverage'
 worked = [(row[0], kind) for row, (_, kind) in zip(rows[:17], STATIC['WORKED'])]
@@ -442,7 +482,7 @@ def check_reference(replacement=None):
 def build_and_check(label="baseline"):
     output_dir = WORK / label
     output_dir.mkdir(parents=True, exist_ok=True)
-    environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'), CARGO_TARGET_DIR=str(ROOT / 'target'), TMPDIR=str(ROOT / 'target/scratch'))
+    environment = dict(os.environ)
     built = subprocess.run(['cargo', 'build', '-p', 'sc-core', '--message-format=json'], cwd=ROOT, env=environment, capture_output=True, text=True)
     (output_dir / 'cargo-artifacts.json').write_text(built.stdout)
     (output_dir / 'cargo.log').write_text(built.stderr)
@@ -526,6 +566,9 @@ REFERENCE_FAULTS = (
     ('whole phase interleaved', 'checked = self._syntax_statement_at(src[start:end], ordinal, start, literal_inputs=False)',
      'checked = self._static_statement(src[start:end], env, ordinal, start)'),
 )
+assert {ROOT / path for _, path, _, _, _ in RUST_FAULTS} == set(MUTATED), 'coupled mutable source plan changed'
+for name, path, before, _, count in RUST_FAULTS:
+    assert (ROOT / path).read_text().count(before) == count, ('coupled real fault anchor', name)
 
 
 def mutations():
@@ -548,8 +591,7 @@ def mutations():
         else:
             raise AssertionError(('copied-annex status fault escaped', fault[0]))
     original_reference = SOURCE.read_bytes()
-    paths = {ROOT / path for _, path, _, _, _ in RUST_FAULTS}
-    originals = {path: path.read_bytes() for path in paths}
+    originals = {path: path.read_bytes() for path in MUTATED}
     for name, before, after in REFERENCE_FAULTS:
         try:
             check_reference((before, after))
@@ -573,8 +615,8 @@ def mutations():
                 mismatch = str(error).startswith("('coupled product oracle'")
                 body = str(error).startswith("('coupled public driver body failed'")
                 if body:
-                    log = (WORK / ('fault-%d' % index) / 'driver.log').read_text()
-                    body = 'panicked at' in log and re.search(r'(?m)^assertion(?:[ :`]|$)', log) is not None
+                    log = (WORK / ('fault-%d' % index) / 'driver.log').read_bytes()
+                    body = driver_assertion_failure(log)
                 assert mismatch or body, (name, 'compiler/link/expect/noise refused', error)
                 (WORK / ('fault-%d' % index) / 'oracle.log').write_text(traceback.format_exc())
                 print('  actual compiled public Rust oracle body red:', name, flush=True)
@@ -585,9 +627,10 @@ def mutations():
     finally:
         for path, data in originals.items():
             path.write_bytes(data)
+        assert SOURCE.read_bytes() == original_reference and all(path.read_bytes() == data for path, data in originals.items()), 'coupled sources not exact'
+        build_and_check('restored')  # Also runs after a refused compiler/link/noise fault.
     assert SOURCE.read_bytes() == original_reference and all(path.read_bytes() == data for path, data in originals.items()), 'coupled sources not exact'
     check_reference()
-    build_and_check('restored')  # Restore the compiled artifact as well as all source bytes.
     print('coupled faults:%d reference/%d public Rust actual compiled body reds (%d whole factory); sources/artifact restored; rc=0' % (len(REFERENCE_FAULTS), len(RUST_FAULTS), len(WHOLE_FAULTS)))
 
 

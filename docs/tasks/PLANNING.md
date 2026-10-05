@@ -984,13 +984,12 @@ D162–D163 complete closure receipts retained in [part84](../history/stitchcad-
 
 D164–D167 complete closure receipts retained in [part91](../history/stitchcad-defects-part91.md).
 
-D168 closes at .n.f9: remove stale totals/describe catalogs; Git/native5/5 and publication43, rc=0. Original pre-repair report in [part89](../history/stitchcad-defects-part89.md).
+D168-D171 complete closure receipts/original-report routes retained in [part94](../history/stitchcad-defects-part94.md).
 
-D169 closes at .n.f10: all guarded test/implementation paths, strict111 body controls and37 native macro reds/five sources exact/full5+5/5 restored, rc=0.
-Original report retained exactly in [part90](../history/stitchcad-defects-part90.md).
+D172 closes at .n.f14: current driver macro locations/always restored artifact;161 body controls/three complete mode captures/28 native Rust reds/six exact sources, rc=0.
+D173 closes at .n.f14: both original-location catalogs/real tracebacks/virtual variants/four actual loader faults, rc=0.
+D174 closes at .n.f14: independent Git/AST identifies eight later methods; fixed book totals removed, dynamic catalogs verified, rc=0.
+Original D172–D174 reports retained exactly in [part95](../history/stitchcad-defects-part95.md).
 
-D170 closes at .n.f11:125 body controls/15 actual macro reds/four current sources exact/full15/6 restored, rc=0.
-Original pre-repair report retained exactly in [part92](../history/stitchcad-defects-part92.md).
-
-D171 closes at .n.f12:131 body controls/seven native macro reds/five sources HEAD-exact/full five-test target restored, rc=0.
-Original pre-repair report retained exactly in [part93](../history/stitchcad-defects-part93.md).
+D175 closes at .n.f14: public whole dependency graph availability corrected; publication45 checks include independent later-section stale sentence and actual compiled catalog-omission refusal, rc=0.
+Original report retained exactly in [part96](../history/stitchcad-defects-part96.md); UTC seal date correction:2026-10-05 (immutable header says Oct4).

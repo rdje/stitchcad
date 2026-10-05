@@ -213,11 +213,20 @@ the recipe entry also plans this book's example source. Both preserve prepared C
 and consume public current-artifact metadata. Ten real documentation guards require only the
 expected E0451/E0515 codes; four recipe chapter examples compile and execute against that artifact.
 
-Standing controls cover17 runtime cases and152 actual body faults, including thirty-six real
+The coupled static entry validates20 helper/reference/Rust/fixture/chapter inputs and its output
+before helper loading or fixture reads. Both modes preserve shared populations, prepared stores
+and public compiler/driver arguments. Driver panics must match a current assertion macro's source,
+line and byte column; custom messages pass, assertion-labelled expect noise refuses. Exact Rust
+source restoration and the complete restored driver rebuild run even after compiler/link refusal.
+Captured compiler output proves dispatch separately from native faults; no numerical or physical
+authority is added. Publication controls also reject D175's retired whole-static-graph claim, with
+an independent later-section fixture and actual compiled catalog-omission assertion failure.
+
+Standing controls cover17 runtime cases and161 actual body faults, including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
-12 membership tests passing. All thirty-six entry captures also refuse a late missing source before
-input reads, output writes or child dispatch. Other Python native, fixture and delegated entries remain under the
+12 membership tests passing. All thirty-seven entry captures also refuse a late missing source before
+input reads, output writes or child dispatch. Python fixture/output and delegated entries remain under the
 bounded .h2.b.p audit. The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
@@ -231,6 +240,10 @@ the exclusive native mutation runs establish that separate proof.
 Two complete compiler-entry captures additionally check every Cargo/Rustc/example call and all
 generated fixture/log bytes under custom stores. Authored public metadata and compiler results
 simulate dispatch only; native owner runs provide the separate diagnostic and example proof.
+Three complete static-entry captures check baseline/mutation modes and an early compiler refusal,
+with every write and child intercepted. Actual omission faults refuse a book input, mode selection
+or restored compiler dispatch. Simulated driver output proves dispatch; native coupled runs supply
+the separate shared-case and actual fault proof.
 
 ## Formula documentation currency
 

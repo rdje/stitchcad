@@ -1,4 +1,4 @@
-"""D144: compiled reference locations match original source; fault variants stay virtual."""
+"""D144/D173: both reference loaders retain original locations and virtual fault identities."""
 import ast
 from pathlib import Path
 import runpy
@@ -9,13 +9,16 @@ ROOT = Path(__file__).resolve().parents[4]
 HELPER_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'
 HELPER = runpy.run_path(str(HELPER_SOURCE))
 SOURCE = HELPER['SOURCE']
+REVIEW_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/static_review_contract.py'
+REVIEW = runpy.run_path(str(REVIEW_SOURCE))
 
 
-def contracts(loader=None, verbose=True):
+def contracts(loader=None, verbose=True, *, boundary='print("-- tables read from the chapter")',
+              fault_filename='<formula reference fault>'):
     loader = loader or HELPER['load_reference']
     original = SOURCE.read_bytes()
     header, program = original.decode().split("<<'PY'\n", 1)
-    program = program.rsplit('\nPY', 1)[0].split('print("-- tables read from the chapter")', 1)[0]
+    program = program.rsplit('\nPY', 1)[0].split(boundary, 1)[0]
     # Original-source AST positions are authored independently of the loader's offset variable.
     offset = len(header.splitlines())
     tree = ast.parse(program)
@@ -48,42 +51,58 @@ def contracts(loader=None, verbose=True):
             return traceback.extract_tb(error.__traceback__)[-1]
         raise AssertionError('D144 expected dimension refusal')
 
+    # The fixture loader traps execution on its instance; bind the original provider method
+    # solely to inspect its genuine pre-execution dimension-refusal traceback.
+    ref.resolve_geometry = ns['Evaluator'].resolve_geometry.__get__(ref, type(ref))
     actual = frame(ref, ns)
     assert actual.filename == str(SOURCE) and actual.lineno == expected_raise, ('D144 traceback location', actual, expected_raise)
     assert actual.line == original.decode().splitlines()[expected_raise - 1].strip(), ('D144 traceback source text', actual)
     # A real in-memory docstring alteration exercises the existing variant loading interface.
     ns, ref = loader(('"""An operation\'s argument formulas are evaluated at the operation\'s position (§4.1)."""',
                       '"""In-memory reference fault for source-location controls."""'))
+    ref.resolve_geometry = ns['Evaluator'].resolve_geometry.__get__(ref, type(ref))
     actual = frame(ref, ns)
-    assert actual.filename == '<formula reference fault>' and actual.line in (None, ''), ('D144 virtual fault source', actual)
+    assert actual.filename == fault_filename and actual.line in (None, ''), ('D144 virtual fault source', actual)
     assert SOURCE.read_bytes() == original, 'D144 actual source changed'
     if verbose:
         print('reference locator contracts:', len(expected), 'original code positions / real traceback text / virtual fault frame / source exact / 0 fail')
     return len(expected)
 
 
-def mutations():
-    original = HELPER_SOURCE.read_bytes()
+def review_contracts(loader=None, verbose=True):
+    loader = loader or REVIEW['load']
+    return contracts(lambda replacement=None: loader(replacement)[:2], verbose,
+                     boundary='# ── L1:', fault_filename='<static review reference fault>')
+
+
+def mutations(source=HELPER_SOURCE, *, review=False):
+    original = source.read_bytes()
     for label, before, after in (
         ('omit original offset', "compile('\\n' * line_offset + prefix, filename, 'exec')", "compile(prefix, filename, 'exec')"),
-        ('fault impersonates original', "filename = '<formula reference fault>' if replacement else str(SOURCE)", 'filename = str(SOURCE)'),
+        ('fault impersonates original', "filename = '%s' if replacement else str(SOURCE)" %
+         ('<static review reference fault>' if review else '<formula reference fault>'), 'filename = str(SOURCE)'),
     ):
         script = original.decode()
         assert script.count(before) == 1, ('D144 actual loader anchor', label)
-        scope = {'__file__': str(HELPER_SOURCE), '__name__': 'reference_locator_fault'}
-        exec(compile(script.replace(before, after), str(HELPER_SOURCE), 'exec'), scope)
+        scope = {'__file__': str(source), '__name__': 'reference_locator_fault'}
+        exec(compile(script.replace(before, after), str(source), 'exec'), scope)
         try:
-            contracts(scope['load_reference'], verbose=False)
+            if review:
+                review_contracts(scope['load'], verbose=False)
+            else:
+                contracts(scope['load_reference'], verbose=False)
         except AssertionError as error:
             assert str(error).startswith("('D144 "), (label, 'not a body assertion red', error)
             print('  actual compiled reference loader assertion red:', label)
         else:
             raise AssertionError(('D144 missed actual loader fault', label))
-    assert HELPER_SOURCE.read_bytes() == original, 'D144 helper changed on disk'
+    assert source.read_bytes() == original, 'D144 helper changed on disk'
     print('reference locator faults:2 actual compiled loader body reds; source exact')
 
 
 if __name__ == '__main__':
     contracts()
+    review_contracts()
     if '--mutations' in sys.argv:
         mutations()
+        mutations(REVIEW_SOURCE, review=True)
