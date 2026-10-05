@@ -262,15 +262,19 @@ bash docs/tasks/artifacts/formula_structure/run_domain_context_mutations.sh
 Five public contracts verify direct/forwarded typed and rendered errors, signed endpoints and unchanged
 non-domain failures. Three private core guards verify parameter/range bridge context. Those invalid
 arms are unreachable through validated identity journals; direct guard tests certify totality, not
-external geometry behavior. Fourteen actual compiled mutations fail assertions and restore source
-bytes; run alone. Division and area-product domain failures cannot occur for valid bounded Length
+external geometry behavior. Fourteen actual compiled mutations must fail at current guarded assertion
+macros; passed assertion-like names and labelled expect noise refuse. Each fault retains its expected
+failed-test set. All sixteen logs, five mutable sources and the read-only unit test are guarded before
+reads. Current unit/range/topology sources supply the macro locations. Complete dispatch and physical
+refusals are separate from real native failures, exact seventeen-input restoration and current
+five-public/three-private focused executables. Run alone. Division and area-product domain failures cannot occur for valid bounded Length
 operands, so their caller labels are wired without claiming an impossible public failing example.
 This closes D90/D92, separate from a formula evaluator, command bus, MCP server or release signoff.
 
 The rounding, length-operator and domain-diagnostic mutation entries use the
 [local producer profile](../build-and-checks.md#direct-python-producers) before output or native
-dispatch. The mixed domain entry validates all five source files first, restores every source and
-rebuilds both focused unit/core targets. Unsigned rounding also rebuilds its release target after
+dispatch. The mixed domain entry validates all six unique input files and sixteen log destinations
+first, restores every mutable source and rebuilds both focused unit/core targets. Unsigned rounding also rebuilds its release target after
 the release fault. Mutation diagnostics run exclusively; their restoration includes compiled artifacts.
 
 ## 3. The five tolerance classes

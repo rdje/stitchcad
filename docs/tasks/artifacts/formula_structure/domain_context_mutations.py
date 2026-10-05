@@ -1,5 +1,6 @@
 """D90/D92: actual context/rendering mutations compile, fail assertions and restore all sources."""
 from pathlib import Path
+import re
 import runpy
 import subprocess
 ROOT = Path(__file__).resolve().parents[4]
@@ -20,11 +21,47 @@ CASES = [
  ('range width context', 'crates/sc-core/src/ontology/range.rs', 'operation: "IdentityLedger::resolve_range",\n        kind: "positive range width",', 'operation: "wrong",\n        kind: "positive range width",', 'core'),
  ('edge parameter context', 'crates/sc-core/src/ontology/topology.rs', 'operation: "IdentityLedger::resolve",\n        kind: "edge parameter",', 'operation: "wrong",\n        kind: "edge parameter",', 'core'),
 ]
-SOURCES = tuple(dict.fromkeys(ROOT / path for _, path, _, _, _ in CASES))
+MUTABLE_SOURCES = tuple(dict.fromkeys(ROOT / path for _, path, _, _, _ in CASES))
+TEST_SOURCES = (ROOT / 'crates/sc-units/tests/domain_context_contract.rs',
+                ROOT / 'crates/sc-core/src/ontology/range.rs',
+                ROOT / 'crates/sc-core/src/ontology/topology.rs')
+SOURCES = tuple(dict.fromkeys((*MUTABLE_SOURCES, *TEST_SOURCES)))
+OUTPUT_FILES = tuple(WORK / ('mutation-%d.log' % index) for index in range(1, len(CASES) + 1)) + \
+    (WORK / 'restored-units.log', WORK / 'restored-core.log')
+
+
+def assertion_sites(source, path):
+    """Current curated test macros, with Rust panic byte columns."""
+    sites = set()
+    for number, line in enumerate(source.splitlines(), 1):
+        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
+        if match is not None:
+            sites.add((path, number, len(match.group(1).encode()) + 1))
+    return sites
+
+def assertion_failure(output):
+    """A failed-body panic must name a guarded current assertion macro location."""
+    parts = output.split(b'\nfailures:\n', 2)
+    if len(parts) != 3:
+        return False
+    for match in re.finditer(
+            rb'(?m)^thread\b[^\r\n]*? panicked at ([^:\r\n]+):([0-9]+):([0-9]+):\r?$', parts[1]):
+        try:
+            path = match.group(1).decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if (path, int(match.group(2)), int(match.group(3))) in ASSERTION_SITES:
+            return True
+    return False
+
+
 runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=SOURCES)
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=MUTABLE_SOURCES)
 WORK.mkdir(exist_ok=True)
 ORIGINAL = {path: (ROOT / path).read_bytes() for _, path, _, _, _ in CASES}
+ASSERTION_SITES = set().union(*(assertion_sites(source.read_text(), source.relative_to(ROOT).as_posix())
+                                for source in TEST_SOURCES))
+assert ASSERTION_SITES, 'current unit/core domain contracts have no assertion macros'
 try:
     for number, (name, path, before, after, family) in enumerate(CASES, 1):
         text = ORIGINAL[path].decode()
@@ -36,7 +73,7 @@ try:
         result = subprocess.run(args, cwd=ROOT, capture_output=True)
         output = result.stdout + result.stderr
         (WORK / ('mutation-%d.log' % number)).write_bytes(output)
-        assert result.returncode == 101 and b'test result: FAILED.' in output and b'assertion' in output and b'could not compile' not in output, (name, output.decode())
+        assert result.returncode == 101 and b'test result: FAILED.' in output and assertion_failure(output) and b'could not compile' not in output, (name, output.decode())
         print('domain context mutation %d %s: rc=101, actual contract assertion failed' % (number, name))
         (ROOT / path).write_bytes(ORIGINAL[path])
 finally:

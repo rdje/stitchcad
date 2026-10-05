@@ -191,3 +191,37 @@ fmt/strict Clippy/tests required for this test-source change. No native job rema
 
   Final staged gate13 green, rc=0, target/round-staged-gate.log.
 
+
+Source: `9075e1cc6f6aa773446de374748d7b6ba9f99bbd`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Unsigned rounding](#unsigned-rounding) | 45532–50134 | 4602 / 25 | `0a22c8ca3959616d2e52f5484b2ee38d7eb7252a6c0ba92e45020f135c59f264` |
+
+### Unsigned rounding
+
+Full entry/wrapper/round.rs/public exports/five-test contract/138-row imported fixture/Decimal
+verifier, .5a.3c.1 canonical record, roadmap numeric/G1 and units/rounding/build book reviewed.
+Own guarded actual old zero fault before any helper repair; require current macro evidence and
+full Rust gate if tests change. Preserve CALL/CASES AST and debug/release order, prepare stores,
+all12 files/three inputs/one mutable source. Own shared dispatch/physical/classifier/body controls,
+exclusive native proof and ten frozen inputs/both current artifacts. Target helpers/logs owned.
+Before fresh receipts exceed live health, copy whole committed Ease bodies into the existing
+producer-proof sibling and verify before retirement; canonical headers/status/paths stay live.
+Own whole older DEV/CH seals from045d40c before growth; prove source intervals/bytes/prior readers
+and fixed caps. Production/grammar/400 cadence unchanged; no early push or runner verdict.
+
+Actual guarded original zero fault reaches production80:17 then unsigned test16:10 labelled
+expect; original complete predicate accepts101. Ten inputs/two HEAD Rust files/full5 restored/
+Cargo-current artifact5 exact, rc=0, target/unsigned-round-expect-repro.log. D177 owns replacing
+that helper with an explicit outer-unwind assertion; preserve five tests/138 rows/typed results.
+
+- [x] REPRODUCE / ISSUE: guarded original zero fault panics at production80:17 then labelled expect at unsigned test16:10; original complete predicate accepts101. Ten original inputs/two HEAD Rust files/full5 restored/Cargo-current artifact5 exact, rc=0, target/unsigned-round-expect-repro.log. D156 missing12 files/mutable intent/test-fixture inputs and D177 current macro evidence owned before edits; full source/public/five tests/138 rows/canonical/book reviewed.
+- [x] ROOT CAUSE: CALL/CASES follows activation/source read; directory identity omits leaves/mutable intent, and broad assertion bytes omit macro provenance. Independent complete twelve-child/file capture and five physical first/last log symlink/mutable hard-link/missing-test/missing-fixture refusals pass, rc=0, target/unsigned-round-producer-controls-final.log. Alias/source bytes unchanged; no unsafe native effects. Authored case/profile/test/log order checks the release fault before restoration.
+- [x] FIX: unchanged CALL/CASES before12-file/three-input/one-mutable-source guard/current failed-body macro byte sites. Total helper asserts outer unwind result then extracts typed inner result; five tests/138 rows intact. Shared256 body reds/29 classifiers/nine complete captures/38 physical refusals/all prior31/24/26/37/26/two compiler/three static controls0, rc=0, unsigned-round-producer-controls-final.log. Actual release-file/profile/premature-restoration/restore-profile/restore-omission/helper/fixture faults discriminate; simulation proves dispatch only.
+- [x] ADDRESSED: exclusive nine debug/one release macro reds/full5 restored each, rc=0, unsigned-round-native-final.log. Ten frozen inputs/original CALL/CASES/production-module-fixture HEAD/helper-only patch/twelve local single-link logs/current selected sites exact, rc=0, native-proof.log. Cargo-current debug SHA74e4802f68c9bffe76e390e7be71b51ed9fbc2d5c89eadc13068a49b32fe2af2/releaseSHAa6080e46c5866eeb9f64e87f1d19e8bf95c767945628deb8cebd2cab53751d50 each executes5 tests0, rc=0, native-artifact-proof.log; production unchanged.
+- [x] NO REGRESSION: full Rust fmt/strict Clippy/703 tests across59 groups/0 failed/0 ignored pass, rc=0, target/unsigned-round-rust-check.log. Publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths51owners21groups/15refusals12reds/map/ledger9+13 pass, rc=0, unsigned-round-*-final logs; all terminal jobs consumed. Whole045d40c DEV6037–8921/15L2884B and CH23063–23593/6L530B/prior444/all42/public446/13open163sealed/no gaps/seven windows exact, rc=0, unsigned-round-retention-final.log.
+- [x] LOCKSTEP: whole045d40c Ease bodies/provenance/prior18917B sibling prefix/canonical headers/status/Paths/map8102B exact, rc=0, unsigned-producer-retention-proof.log. Book/live pointers route .n04.3; length6 faults/two selected/full4 public tests clarified. D177 nine fixed/6 P1; archive29raw/17005L/1236537decodedB/559622residentB fits caps, rc=0. Generic254 preflight1 hit historical8254 before writes; scoped anchors corrected. Pre-stage632B box tightened; failed attempts excluded. promotion: declined (existing source/effect/profile/whole-record rules). Grammar/400/local scope retained.
+
+  Final staged gate13 green, rc=0, target/unsigned-round-staged-gate.log.
+

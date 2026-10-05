@@ -424,7 +424,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
 Complete committed verification retained in [producer proof](G1-SLICE-producer-proof.md#ease-sets); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete file-destination plans for rounding/length/domain; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/round_mutations.py;docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py;docs/tasks/artifacts/formula_structure/length_operator_mutations.py;docs/tasks/artifacts/formula_structure/domain_context_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
@@ -450,30 +450,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
   Additional paths: crates/sc-units/tests/unsigned_round_contract.rs;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/G1-SLICE-producer-proof.md
   Acceptance: preserve CALL-derived9 cases/one release remainder fault/two restorations; complete file/mutable/input plans and independent native/artifact evidence in both profiles.
 
-Full entry/wrapper/round.rs/public exports/five-test contract/138-row imported fixture/Decimal
-verifier, .5a.3c.1 canonical record, roadmap numeric/G1 and units/rounding/build book reviewed.
-Own guarded actual old zero fault before any helper repair; require current macro evidence and
-full Rust gate if tests change. Preserve CALL/CASES AST and debug/release order, prepare stores,
-all12 files/three inputs/one mutable source. Own shared dispatch/physical/classifier/body controls,
-exclusive native proof and ten frozen inputs/both current artifacts. Target helpers/logs owned.
-Before fresh receipts exceed live health, copy whole committed Ease bodies into the existing
-producer-proof sibling and verify before retirement; canonical headers/status/paths stay live.
-Own whole older DEV/CH seals from045d40c before growth; prove source intervals/bytes/prior readers
-and fixed caps. Production/grammar/400 cadence unchanged; no early push or runner verdict.
-
-Actual guarded original zero fault reaches production80:17 then unsigned test16:10 labelled
-expect; original complete predicate accepts101. Ten inputs/two HEAD Rust files/full5 restored/
-Cargo-current artifact5 exact, rc=0, target/unsigned-round-expect-repro.log. D177 owns replacing
-that helper with an explicit outer-unwind assertion; preserve five tests/138 rows/typed results.
-
-- [x] REPRODUCE / ISSUE: guarded original zero fault panics at production80:17 then labelled expect at unsigned test16:10; original complete predicate accepts101. Ten original inputs/two HEAD Rust files/full5 restored/Cargo-current artifact5 exact, rc=0, target/unsigned-round-expect-repro.log. D156 missing12 files/mutable intent/test-fixture inputs and D177 current macro evidence owned before edits; full source/public/five tests/138 rows/canonical/book reviewed.
-- [x] ROOT CAUSE: CALL/CASES follows activation/source read; directory identity omits leaves/mutable intent, and broad assertion bytes omit macro provenance. Independent complete twelve-child/file capture and five physical first/last log symlink/mutable hard-link/missing-test/missing-fixture refusals pass, rc=0, target/unsigned-round-producer-controls-final.log. Alias/source bytes unchanged; no unsafe native effects. Authored case/profile/test/log order checks the release fault before restoration.
-- [x] FIX: unchanged CALL/CASES before12-file/three-input/one-mutable-source guard/current failed-body macro byte sites. Total helper asserts outer unwind result then extracts typed inner result; five tests/138 rows intact. Shared256 body reds/29 classifiers/nine complete captures/38 physical refusals/all prior31/24/26/37/26/two compiler/three static controls0, rc=0, unsigned-round-producer-controls-final.log. Actual release-file/profile/premature-restoration/restore-profile/restore-omission/helper/fixture faults discriminate; simulation proves dispatch only.
-- [x] ADDRESSED: exclusive nine debug/one release macro reds/full5 restored each, rc=0, unsigned-round-native-final.log. Ten frozen inputs/original CALL/CASES/production-module-fixture HEAD/helper-only patch/twelve local single-link logs/current selected sites exact, rc=0, native-proof.log. Cargo-current debug SHA74e4802f68c9bffe76e390e7be71b51ed9fbc2d5c89eadc13068a49b32fe2af2/releaseSHAa6080e46c5866eeb9f64e87f1d19e8bf95c767945628deb8cebd2cab53751d50 each executes5 tests0, rc=0, native-artifact-proof.log; production unchanged.
-- [x] NO REGRESSION: full Rust fmt/strict Clippy/703 tests across59 groups/0 failed/0 ignored pass, rc=0, target/unsigned-round-rust-check.log. Publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths51owners21groups/15refusals12reds/map/ledger9+13 pass, rc=0, unsigned-round-*-final logs; all terminal jobs consumed. Whole045d40c DEV6037–8921/15L2884B and CH23063–23593/6L530B/prior444/all42/public446/13open163sealed/no gaps/seven windows exact, rc=0, unsigned-round-retention-final.log.
-- [x] LOCKSTEP: whole045d40c Ease bodies/provenance/prior18917B sibling prefix/canonical headers/status/Paths/map8102B exact, rc=0, unsigned-producer-retention-proof.log. Book/live pointers route .n04.3; length6 faults/two selected/full4 public tests clarified. D177 nine fixed/6 P1; archive29raw/17005L/1236537decodedB/559622residentB fits caps, rc=0. Generic254 preflight1 hit historical8254 before writes; scoped anchors corrected. Pre-stage632B box tightened; failed attempts excluded. promotion: declined (existing source/effect/profile/whole-record rules). Grammar/400/local scope retained.
-
-  Final staged gate13 green, rc=0, target/unsigned-round-staged-gate.log.
+Complete committed verification retained in [producer proof](G1-SLICE-producer-proof.md#unsigned-rounding); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04.3`
   Status: `done`
@@ -517,10 +494,35 @@ guarded mutable source and verify untracked/empty before writing; public produce
   Final staged gate13 green, rc=0, target/length-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04.4`
-  Status: `pending`
-  Goal: domain-context full file/mutable/current unit/core test-site repair after length operators.
+  Status: `done`
+  Goal: STITCHCAD-G1-0167 owns domain-context full file/mutable/current unit/core test-site repair.
   Paths: docs/tasks/artifacts/formula_structure/domain_context_mutations.py
+  Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/G1-SLICE-producer-proof.md
   Acceptance: preserve14 cases/five mutable sources/two consumers/restorations; guard current unit/core test inputs/all16 logs; complete captures and native exact source/current artifacts.
+
+Full producer/wrapper, unit error/length/ratio implementation/public exports/five public tests,
+complete range source and three private guards, topology parameter conversion/fold/public contract,
+Param boundary API, canonical .5a.3b.3b.1b and units §2.5/build/roadmap context reviewed. Own six unique
+inputs/five mutable sources/all sixteen logs before reads, unchanged fourteen cases/two consumer
+argv/restorations/current unit/range/topology macro evidence. Original full predicate/no-effect
+reproduction; independent complete multi-source dispatch/capture/physical/body/classifier controls;
+exclusive native/frozen inputs/both full focused artifacts. Preserve all Rust bytes unless actual
+evidence requires a separately owned helper repair. Own Target helpers/logs; whole completed unsigned
+body retention with full9075e1c intervals/SHA/prior sibling/canonical headers/map before fresh receipts.
+Own whole older DEV/CH record retention before growth/prior448 identities/all public readers/fixed
+caps. Private invalid core arms certify totality, not geometry. Production/API/grammar/400 cadence
+unchanged. Shared captured simulation remains distinct from real native proof; no early push.
+
+- [x] REPRODUCE / ISSUE: actual committed complete domain predicate accepts passed assertion_name plus labelled expect-only failed body101, with no native effects/Rust writes, rc=0, target/domain-predicate-diagnostic.log. D156 sixteen missing file plans/five mutable intentions/read-only unit input and D177 current macro provenance owned before edits. Complete entry/wrapper/affected unit code/public5/private3 guards/canonical/book reviewed; topology conversion/fold scoped honestly.
+- [x] ROOT CAUSE: directory/source plan omits file leaves/mutable ownership/current unit test; broad assertion bytes omit macro provenance. Authored five-source/two-consumer fixture checks all sixteen calls/files and nineteen restoration writes. Eight actual copied-entry first/last log/five mutable hard-link/missing-unit-test refusals preserve bytes/environment before effects, rc=0, target/domain-producer-controls-final.log. Simulation proves dispatch only.
+- [x] FIX: guard16 logs/six unique inputs/five mutable sources before reads; current unit/range/topology macro union replaces substring evidence. Original14 CASES/argv/restorations remain exact. Shared283 body reds/31 classifiers/eleven captures/50 physical refusals plus prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls0, rc=0, domain-producer-controls-final.log. Each mutable/site omission and final-source/core-restoration/profile fault discriminates; Rust unchanged.
+- [x] ADDRESSED: exclusive fourteen actual current macro reds/exact authored failed-test sets/full5 public+3 private restorations0, rc=0, domain-native-final.log/native-proof.log. Seventeen frozen inputs/ten Rust HEAD files/original cases/sixteen local single-link logs exact. Cargo selects unit041042e7 artifactSHAe49686e57d240fda5a7b8330d4fe2b1d6e0909aaad3245a62ce548a16ac8992c and core80f15a33 artifactSHA88fd162d11d9e306ee7cd1727a123e86781a2762e0edb1f930877ff7501ab406; execute all5/all3 focused tests0, rc=0, native-artifact-proof.log.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths51owners21groups/15refusals12reds/map/ledger9+13 pass, rc=0, domain-*-final logs; terminal jobs consumed. Whole9075e1c DEV2438–6234/18L3796B/SHA3704c2e6 and CH22423–23459/14L1036B/SHA07a2dcad/prior448/all46/public450/13open163sealed/no gaps/seven windows exact, rc=0, domain-retention-final.log. Unchanged Rust; latest broad703-test gate0165, not rerun here.
+- [x] LOCKSTEP: whole9075e1c unsigned body45532–50134/25L4602B/SHA0a22c8ca/prior32051B sibling/canonical headers/status/Paths/map8102B exact, rc=0, domain-producer-retention-proof.log. Numeric parent done/book/live route .n05; D177 eleven fixed/4 P1. Archive33raw/17112L/1248289decodedB/571374residentB fits caps. Pre-execution prefix448→468 helper caught/corrected before replay; excluded. promotion: declined (existing source/effect/whole-record rules). Private guards certify totality; grammar/400/local scope retained.
+
+Pre-execution retention-helper review caught prefix replacement changing448 to468 while updating44 to46. No retention execution/writes or false count published. Exact scalar anchor corrected to prior448/all46 before replay; excluded provisional helper.
+
+  Final staged gate13 green, rc=0, target/domain-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n05`
   Status: `pending`

@@ -110,6 +110,16 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0167 - guarded mixed domain-context files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.4`)
+
+- Plan16 logs/six inputs/five mutable sources; preserve14 cases/two consumer restorations.
+- Shared283 body reds/31 classifiers/eleven captures/50 physical refusals pass0.
+- Fourteen real current macro reds;17 frozen inputs/ten Rust HEAD files/exact failed-test sets0.
+- Current Cargo-selected artifacts pass all5 public unit/all3 focused private core tests0.
+- Retain whole unsigned receipt/two lessons/two ledgers; prior448/all46/public450 exact.
+- Numeric family complete; D177 eleven fixed/4 P1 remain; .n05 next; focused/staged receipts in leaf.
+- Rust/API/grammar/400 cadence unchanged; private guards certify totality, not geometry.
+
 ## STITCHCAD-G1-0166 - guarded length-operator files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.3`)
 
 - Plan7 logs/two inputs/one mutable source; preserve six faults/two selected/full4 public tests.
@@ -214,20 +224,6 @@ the digests afterwards.
 - Physical hard-link gap reproduced without writes; .f.l owns output/writable-source contracts next.
 - Archive28/CLI442/public426, publication45/coverage9/ledger9+13/census/map and staged gate0; fixed caps/400 cadence remain.
 
-## STITCHCAD-G1-0153 - own producer files (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.i`)
-
-- Watch120 Python paths/44 owners; native37 in14 bounded groups;67 effect owners preserved.
-- Actual15 data refusals/12 guard-body reds/split positive0; full source/call inventory current.
-- Book/live/index sync; filename resolution/runtime proof pending; first .f.n01;400 cadence stays.
-
-## STITCHCAD-G1-0152 - complete native bridge plan (leaf `G1-SLICE.5b.4c.h2.b.p.o.a01.1`)
-
-- Add nonmutating shared source/directory/file plans; guard bridge22 inputs/nine destinations.
-- Preserve delegated import/populations/argv/prepared stores; captures and nine bridge body reds0.
-- Real26723 shared/263 phase cases/ten reference reds0; exact sources/current artifact verified.
-- Shared31 runtime/24 file/165 body controls0; calibrate ownership faults independently of group splits.
-- Retain three whole2358d4e lessons; prior423/public424 exact. Book/live/focused checks pass0.
-- D156 stays open: P1 remaining filename audit next;400 push cadence, no early push.
 
 
 
@@ -337,3 +333,5 @@ the digests afterwards.
 | [`part143`](docs/history/stitchcad-changelog-part143.md) | whole G1-0149 continuity ledger | 6 lines, 530 bytes, `sha256:d5b8a94e…` |
 
 | [`part144`](docs/history/stitchcad-changelog-part144.md) | whole G1-0151 and G1-0150 continuity ledgers | 13 lines, 983 bytes, `sha256:4c0a2f29…` |
+
+| [`part145`](docs/history/stitchcad-changelog-part145.md) | whole G1-0153 and G1-0152 continuity ledgers | 14 lines, 1036 bytes, `sha256:07a2dcad…` |

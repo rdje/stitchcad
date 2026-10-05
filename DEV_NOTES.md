@@ -14,6 +14,16 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — complete mixed domain-context file and macro plans
+
+- Plan16 logs/six unique inputs/five mutable sources before reads. All fourteen cases/two consumer argv/restorations remain exact; current unit/range/topology test macro sets replace broad assertion-byte evidence. Rust unchanged.
+- Committed complete predicate accepts passed assertion_name and labelled expect-only failed body101 without effects. Authored fixture independently binds each mutation to its source/family, all16 children/logs and all19 restoration writes.
+- Shared283 body reds/31 classifiers/eleven complete captures/50 physical refusals pass0. Eight domain refusals cover both endpoint logs/all five mutable aliases/missing unit test. Actual individual mutable/macro-source/final-source/core-child/profile omissions discriminate; simulation proves dispatch only.
+- Exclusive fourteen real faults reach current macros and exact authored failed-test sets. Seventeen frozen inputs/ten Rust HEAD files/original cases/sixteen local single-link logs exact. All5 public unit/all3 focused private core restorations0; these core guards certify totality, not geometry.
+- Public Cargo selects current unit e49686e5… and core88fd162d… executables; five unit tests and three filtered private tests pass0. No full core-library/release/WASM/runner verdict claimed; latest broad Rust gate remains0165.
+- Whole9075e1c unsigned body45532–50134/25L4602B/SHA0a22c8ca retained; prior32051B sibling/canonical headers/status/Paths/map exact. Whole rounding lessons/two oldest ledgers retained; prior448/all46/public450/13open163sealed/seven windows exact.
+- Pre-execution retention-helper review caught numeric-prefix448→468 replacement; exact anchor corrected before any replay/write and excluded. Promotion declined: existing current-source/effect/whole-record rules. Numeric family complete; D177 eleven fixed/4 P1 remain, .n05 next. Grammar/API/400 cadence stays.
+
 ## _(2026-10-05 UTC)_ — complete length-operator files and current macro sites
 
 - Guard seven logs/two inputs/one mutable source before reads. Six pure cases/two selected fault tests/full four-test public contract remain exact; bounded valid operands need no Rust helper repair.
@@ -24,24 +34,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Owned PDF-point prose defect closed: exact25400/72=3175/9 differs from352.7 by7/90; independent Decimal50 gives352.78. Corrected exact-equality prose to ≈352.78, consistent with table/ADR/public ratio docs; production unaffected.
 - Promotion declined: existing source/effect/whole-record rules. D177 ten fixed/5 P1 remain; domain .n04.4 next. Grammar/API/400 cadence unchanged; local scope, runner unobserved. Final focused/staged receipts belong in the owning leaf.
 
-## _(2026-10-05 UTC)_ — unsigned rounding preserves both profiles and totality evidence
-
-- Actual guarded original zero fault reaches production80:17 then labelled expect16:10; old complete predicate accepts101. Ten original inputs/two HEAD Rust files/full5 restored/current artifact5 exact. D177 owns explicit totality assertion; typed inner UnitError/five tests/138 rows remain.
-- Move unchanged CALL/CASES before12-file/three-input/one-mutable-source activation. Preserve nine debug faults, extra release remainder call before source restoration and both restored profiles. Current failed-body macro byte sites replace substring evidence.
-- Independent authored dispatch fixtures now carry case/profile/test/log order. All prior single-profile captures remain required. Shared256 actual body reds/29 classifiers/nine complete captures/38 physical refusals pass0; actual release-file/profile/restoration/helper/fixture omissions discriminate.
-- Native nine debug/one release macro reds and both full5 restorations pass0. Ten frozen inputs/original CALL/CASES/production-module-fixture HEAD/helper-only test patch/twelve local single-link logs exact. Current public debug74e4802f…/releasea6080e46… artifacts execute all5 tests0.
-- Whole committed Ease bodies retained in the existing sibling before live retirement; prior18917B prefix/canonical headers/status/Paths/map8102B exact. Full045d40c intervals/SHA are durable there. Whole collection/MTM lessons and oldest0149 ledger retained; prior444/all42/public446 exact.
-- Promotion declined: existing current-source/effect/profile/whole-record rules. D177 nine fixed/6 P1 remain, length .n04.3 next. Production arithmetic/grammar/400 cadence unchanged; local scope, runner unobserved. Full Rust and final focused/staged receipts belong in the owning leaf.
-
-## _(2026-10-05 UTC)_ — signed rounding needs an explicit totality assertion
-
-- Split numeric5/9+release/6/14 populations before repairs; preserve four parent paths and assign terminal TSV owners. Signed entry plans6 logs/three inputs/one mutable source before reads; the imported36-row Fraction fixture is a guarded read-only input.
-- Actual original zero fault divides at round.rs80:17 then panics in labelled expect at test11:46. Old complete predicate accepts it; ten original inputs/production/test HEAD exact/full4 public artifact restored0. D177 owns this current-test evidence defect.
-- Total helper now asserts on the outer catch_unwind result before checked extraction; typed UnitError remains the inner result. Four test bodies/36 rows and five production cases are unchanged. Independent current helper/source-panic/expect/wrong-site controls catch selective macro/fixture omissions.
-- Shared240 body reds/28 classifiers/eight complete captures/33 physical refusals pass0; existing31/24/26/37/26/two compiler/three static controls remain0. Dispatch simulation stays separate from real native results; current-source controls reject labelled expect.
-- Exclusive five real macro reds/full4 restored0; helper fault reaches12:5. Ten frozen inputs/production/module/fixture HEAD exact and helper-only test patch verified. Public artifacte032081d… executes4 tests0. Replay review caught obsolete no-test-diff assumption before execution; exact intended patch is enforced.
-- Full Rust fmt/strict Clippy/703 tests in59 groups pass0. Whole b0bc33c DEV6939–8254/7L1315B/SHA45d032ae and CH22928–23789/10L861B/SHA790a719b retained; prior442/all40/public444 exact/13open163sealed/no gaps/seven windows unchanged.
-- Promotion declined: existing current-source/effect/whole-record rules. D177 eight fixed/7 P1 remain; unsigned .n04.2 next. Production rounding/grammar/400 cadence unchanged; local scope, runner unobserved. Final focused and staged receipts in the owning leaf.
+Whole unsigned/signed rounding lessons retained in [part202](docs/history/stitchcad-devnotes-part202.md).
 
 Whole Ease-set/individual lessons retained in [part201](docs/history/stitchcad-devnotes-part201.md).
 
@@ -139,3 +132,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part200`](docs/history/stitchcad-devnotes-part200.md) | whole collection and MTM effect/panic lessons | 15 lines, 2884 bytes, `sha256:d816aca2…` |
 
 | [`part201`](docs/history/stitchcad-devnotes-part201.md) | whole Ease-set and individual Ease lessons | 18 lines, 3326 bytes, `sha256:4de193fd…` |
+
+| [`part202`](docs/history/stitchcad-devnotes-part202.md) | whole unsigned and signed rounding lessons | 18 lines, 3796 bytes, `sha256:3704c2e6…` |

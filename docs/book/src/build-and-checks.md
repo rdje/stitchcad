@@ -195,7 +195,15 @@ Six real failures reach current assertion macros and restore nine frozen inputs/
 exactly. The current public executable passes all four contracts, including the independent pair
 oracle and Result typing. No Rust code or tests changed.
 
-D177's fifteen-entry scope has ten entries verified; five remain. Their .f.n04.4–06 repairs
+Domain diagnostics declare sixteen logs/six unique inputs/five mutable sources before reads. The
+read-only public unit test and both private core test modules supply current macro sites; the core
+modules also belong to the mutable production set. Complete fourteen-fault/two-restoration dispatch,
+eight physical refusals and per-source/site/consumer omission controls pass. Fourteen real failures
+match their expected failed-test sets; seventeen inputs restore exactly and current Cargo-selected
+executables pass all five public unit tests and all three focused private guards. Rust is unchanged;
+the private guards certify totality, separately from geometry.
+
+D177's fifteen-entry scope has eleven entries verified; four remain. Their .f.n05–06 repairs
 own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
@@ -339,7 +347,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and264 actual body faults, with30 calibrated failed-body classifiers,
+controls and283 actual body faults, with31 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

@@ -375,6 +375,220 @@ def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
     assert not refusal or not reads, 'D156 Python late-source refusal read an input'
 
 
+def domain_fixture():
+    """Authored five-source/two-consumer fixture, independent of native CASES."""
+    mutable = tuple(ROOT / name for name in (
+        'crates/sc-units/src/error.rs', 'crates/sc-units/src/length.rs',
+        'crates/sc-units/src/ratio.rs', 'crates/sc-core/src/ontology/range.rs',
+        'crates/sc-core/src/ontology/topology.rs'))
+    unit = ROOT / 'crates/sc-units/tests/domain_context_contract.rs'
+    work = ROOT / 'target/domain_context_mutations'
+    bindings = (0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 4)
+    files = tuple(work / ('mutation-%d.log' % i) for i in range(1, 15)) + \
+        (work / 'restored-units.log', work / 'restored-core.log')
+    return mutable, unit, work, bindings, files
+
+
+def capture_domain_entry(text, entry_path):
+    """Complete actual mixed-source body; intercepted children certify dispatch only."""
+    mutable, unit, work, bindings, files = domain_fixture()
+    sources = (*mutable, unit)
+    originals = {p: p.read_bytes() for p in (*sources, entry_path, SOURCE)}
+    GOOD['directory'](ROOT, work.relative_to(ROOT).as_posix(), create=True)
+    base = 'target/scratch/python_producer_contract/domain-stores'
+    stores = {name: str(ROOT / base / suffix) for name, suffix in
+              (('CARGO_HOME', 'cargo'), ('RUSTUP_HOME', 'rustup'),
+               ('CARGO_TARGET_DIR', 'build'), ('TMPDIR', 'scratch'))}
+    for value in stores.values():
+        GOOD['directory'](ROOT, Path(value).relative_to(ROOT).as_posix(), create=True)
+    scope = {'__file__': str(entry_path), '__name__': 'domain_capture'}
+    saved = dict(os.environ)
+    mkdir, read_text, read_bytes, write_text, write_bytes, run, load = (
+        Path.mkdir, Path.read_text, Path.read_bytes, Path.write_text, Path.write_bytes,
+        subprocess.run, runpy.run_path)
+    planned, reads, calls, written, pending, errors, mutations, restorations = [], [], [], {}, {}, [], [], []
+
+    def environment(values):
+        assert all(values.get(k) == v for k, v in stores.items()), 'D156 measure child stores lost'
+        assert values.get('MAKE_TMPDIR') == stores['TMPDIR'], 'D156 measure scratch alias lost'
+        assert values.get('RUSTUP_TOOLCHAIN') == '1.99.0' and values.get('RUSTUP_AUTO_INSTALL') == '0', \
+            'D156 measure toolchain changed'
+        assert values.get('D156_DOMAIN_UNRELATED') == 'preserved', 'D156 measure unrelated value lost'
+
+    def profile(path, *args, **kwargs):
+        assert path == str(SOURCE) and not args and not kwargs, 'D156 measure profile entry changed'
+
+        def enter(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
+            assert root == ROOT and directories == (work,), 'D156 measure directory plan changed'
+            assert output_files == files, 'D156 measure file plan changed'
+            assert sources == (*mutable, unit), 'D156 measure source plan changed'
+            assert mutable_sources == mutable, 'D156 measure mutable plan changed'
+            assert not planned and not reads and not calls and not written, 'D156 measure plan was late'
+            planned.append(True)
+            return GOOD['enter_producer'](root, directories=directories, output_files=output_files,
+                                          sources=sources, mutable_sources=mutable_sources)
+        return dict(GOOD, enter_producer=enter)
+
+    def read(path, binary, *args, **kwargs):
+        assert planned == [True] and path in sources, 'D156 measure unplanned input read'
+        environment(os.environ)
+        reads.append(path)
+        return (read_bytes if binary else read_text)(path, *args, **kwargs)
+
+    def directory(path, *args, **kwargs):
+        assert path == work and planned == [True], 'D156 measure unplanned directory write'
+        environment(os.environ)
+
+    def write(path, content, *args, **kwargs):
+        assert planned == [True], 'D156 measure write before plan'
+        environment(os.environ)
+        if path in mutable:
+            if isinstance(content, bytes):
+                assert content == originals[path], 'D156 measure wrong source restoration'
+                restorations.append(path)
+                pending.pop(path, None)
+            else:
+                index = len(mutations)
+                assert index < len(bindings) and not pending, 'D156 measure source mutation order'
+                assert path == mutable[bindings[index]], 'D156 domain mutable source order changed'
+                _, relative, before, after, family = scope['CASES'][index]
+                assert ROOT / relative == path and family == ('units' if index < 11 else 'core'), \
+                    'D156 domain authored family/source changed'
+                expected = originals[path].decode()
+                assert expected.count(before) == 1, 'D156 measure nonunique source anchor'
+                assert content == expected.replace(before, after, 1), 'D156 measure source mutation bytes changed'
+                mutations.append(index)
+                pending[path] = content
+        else:
+            assert path in files and path not in written, 'D156 measure unplanned output write'
+            assert calls and path == files[len(calls) - 1], 'D156 measure diagnostic order changed'
+            assert content == (b'restored dispatch\n' if len(calls) > 14 else scope['LAST_OUTPUT']), \
+                'D156 measure diagnostic bytes changed'
+            written[path] = content
+        return len(content)
+
+    def child(args, *positional, **kwargs):
+        try:
+            environment(kwargs.get('env', os.environ))
+            assert planned == [True] and not positional and kwargs.get('cwd') == ROOT, \
+                'D156 measure native cwd changed'
+            assert kwargs.get('capture_output') is True, 'D156 measure native capture changed'
+            index = len(calls)
+            assert index < 16, 'D156 measure extra native child'
+            family = 'units' if index < 11 or index == 14 else 'core'
+            wanted = (['cargo', 'test', '-p', 'sc-units', '--test', 'domain_context_contract']
+                      if family == 'units' else ['cargo', 'test', '-p', 'sc-core', '--lib', 'domain_context_contracts'])
+            assert args == wanted, 'D156 measure native argv changed'
+            expected_pending = {mutable[bindings[index]]} if index < 14 else set()
+            assert set(pending) == expected_pending, 'D156 measure native source state changed'
+            assert mutations == list(range(min(index + 1, 14))), 'D156 measure native mutation order changed'
+            if index < 14:
+                contract = unit if family == 'units' else mutable[bindings[index]]
+                current = read_text(contract)
+                start = 0 if family == 'units' else current.index('mod domain_context_contracts {')
+                body = current[start:]
+                offsets = [body.index(token) for token in ('assert!(', 'assert_eq!(', 'assert_ne!(') if token in body]
+                position = start + min(offsets)
+                number = current[:position].count('\n') + 1
+                column = len(current[current.rfind('\n', 0, position) + 1:position].encode()) + 1
+                path = contract.relative_to(ROOT).as_posix()
+                assert (path, number, column) in scope['ASSERTION_SITES'], 'D177 domain contract macro absent'
+        except AssertionError as error:
+            errors.append(error)
+            raise
+        calls.append(args)
+        if index < 14:
+            output = (f"\nfailures:\nthread 'fixture' panicked at {path}:{number}:{column}:\n"
+                      'authored dispatch fixture\n\nfailures:\nfixture\ntest result: FAILED.\n').encode()
+            scope['LAST_OUTPUT'] = output
+            return subprocess.CompletedProcess(args, 101, stdout=output, stderr=b'')
+        return subprocess.CompletedProcess(args, 0, stdout=b'restored dispatch\n', stderr=b'')
+
+    try:
+        os.environ.update(stores, RUSTUP_TOOLCHAIN='1.99.0', D156_DOMAIN_UNRELATED='preserved')
+        Path.mkdir, Path.write_text, Path.write_bytes = directory, write, write
+        Path.read_text = lambda p, *a, **k: read(p, False, *a, **k)
+        Path.read_bytes = lambda p, *a, **k: read(p, True, *a, **k)
+        subprocess.run, runpy.run_path = child, profile
+        with contextlib.redirect_stdout(io.StringIO()):
+            try:
+                exec(compile(text, str(entry_path), 'exec'), scope)
+            except AssertionError:
+                if errors:
+                    raise errors[0]
+                raise
+    finally:
+        Path.mkdir, Path.read_text, Path.read_bytes = mkdir, read_text, read_bytes
+        Path.write_text, Path.write_bytes, subprocess.run, runpy.run_path = write_text, write_bytes, run, load
+        os.environ.clear()
+        os.environ.update(saved)
+        assert all(p.read_bytes() == data for p, data in originals.items()), 'D156 measure capture changed source'
+    assert planned == [True] and len(calls) == 16 and mutations == list(range(14)) and \
+        set(written) == set(files) and not pending, 'D156 measure full capture incomplete'
+    assert restorations == [mutable[i] for i in bindings] + list(mutable), 'D156 domain restoration sequence changed'
+    assert reads[:17] == [mutable[i] for i in bindings] + [unit, mutable[3], mutable[4]], \
+        'D156 domain initial input order changed'
+
+
+def domain_refusals(text, entry_path):
+    """Actual copied mixed entry: every mutable source alias and endpoint log refuses."""
+    work = GOOD['directory'](ROOT, 'target/scratch/domain_entry_refusals', create=True)
+    mutable, unit, output, _, files = domain_fixture()
+    sources = (*mutable, unit)
+    cases = [('first-file', files[0]), ('last-file', files[-1])] + \
+        [('mutable-source', path) for path in mutable] + [('late-source', unit)]
+    saved, count = dict(os.environ), 0
+    for case, path in cases:
+        with tempfile.TemporaryDirectory(dir=work) as name:
+            root = Path(name)
+            entry = root / entry_path.relative_to(ROOT)
+            for source, data in tuple((p, p.read_bytes()) for p in sources) + \
+                    ((SOURCE, SOURCE.read_bytes()), (entry_path, text.encode())):
+                destination = root / source.relative_to(ROOT)
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes(data)
+            (root / output.relative_to(ROOT)).mkdir(parents=True)
+            victim = root / 'victim'; victim.write_bytes(b'unchanged isolated alias victim')
+            if case in ('first-file', 'last-file'):
+                (root / path.relative_to(ROOT)).symlink_to(victim)
+                wanted = 'symlink producer output'
+            elif case == 'mutable-source':
+                victim.unlink(); os.link(root / path.relative_to(ROOT), victim)
+                wanted = 'hard-linked mutable producer source'
+            else:
+                (root / path.relative_to(ROOT)).unlink()
+                wanted = 'producer source is not a local regular file'
+            before = {p: p.read_bytes() for p in root.rglob('*') if p.is_file() and not p.is_symlink()}
+            environment = dict(os.environ)
+            mkdir, read_text, read_bytes, write_text, write_bytes, run = (
+                Path.mkdir, Path.read_text, Path.read_bytes, Path.write_text, Path.write_bytes, subprocess.run)
+            def no_effect(*args, **kwargs):
+                raise AssertionError('D156 measure physical refusal reached a read/write/child')
+            diagnostic = io.StringIO()
+            try:
+                Path.mkdir, Path.read_text, Path.read_bytes = no_effect, no_effect, no_effect
+                Path.write_text, Path.write_bytes, subprocess.run = no_effect, no_effect, no_effect
+                with contextlib.redirect_stderr(diagnostic):
+                    try:
+                        exec(compile(text, str(entry), 'exec'), {'__file__': str(entry), '__name__': 'physical_entry'})
+                    except SystemExit as error:
+                        assert error.code == 2, 'D156 measure physical refusal status'
+                    else:
+                        raise AssertionError('D156 measure physical invalid entry accepted')
+            finally:
+                after_environment = dict(os.environ)
+                Path.mkdir, Path.read_text, Path.read_bytes = mkdir, read_text, read_bytes
+                Path.write_text, Path.write_bytes, subprocess.run = write_text, write_bytes, run
+                os.environ.clear(); os.environ.update(saved)
+            assert diagnostic.getvalue() == 'local-environment: REFUSED — ' + wanted + '\n', \
+                ('D156 measure physical refusal diagnostic', case, diagnostic.getvalue())
+            assert after_environment == environment and not (root / 'target/cargo-home').exists(), \
+                'D156 measure physical refusal activated stores'
+            assert all(p.read_bytes() == data for p, data in before.items()), 'D156 measure physical refusal changed bytes'
+            count += 1
+    return count
+
+
 def measure_fixture(entry_path):
     """Independent authored dispatch populations; never derive expectations from CASES."""
     if entry_path == ENTRY:
@@ -514,6 +728,8 @@ def measure_files_fixture(entry_path, work, selected):
 
 def capture_measure_entry(text, entry_path=ENTRY):
     """Complete actual body; intercepted native calls prove dispatch, not outcomes."""
+    if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py':
+        return capture_domain_entry(text, entry_path)
     source, contract, work, selected = measure_fixture(entry_path)
     extras = measure_extra_sources(entry_path)
     sources = (source, contract, *extras)
@@ -664,6 +880,8 @@ def capture_measure_entry(text, entry_path=ENTRY):
 
 def measure_refusals(text, entry_path=ENTRY):
     """Actual copied entry and profile refuse physical aliases before reads/writes/children."""
+    if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py':
+        return domain_refusals(text, entry_path)
     work = GOOD['directory'](ROOT, 'target/scratch/membership_entry_refusals', create=True)
     source, contract, output, selected = measure_fixture(entry_path)
     output_files = measure_files_fixture(entry_path, output, selected)
@@ -1263,7 +1481,8 @@ def main():
                      ROOT / 'docs/tasks/artifacts/ease/ease_set_mutations.py',
                      ROOT / 'docs/tasks/artifacts/formula_structure/round_mutations.py',
                      ROOT / 'docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py',
-                     ROOT / 'docs/tasks/artifacts/formula_structure/length_operator_mutations.py')
+                     ROOT / 'docs/tasks/artifacts/formula_structure/length_operator_mutations.py',
+                     ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py')
     measure_physical, measure_classifiers = 0, 0
     for measure_path in measure_paths:
         measure_text = measure_path.read_text()
@@ -1278,7 +1497,7 @@ def main():
         for name, before, after, message in (
             ('files omitted', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 measure file plan changed'),
             ('last numbered file omitted', numbered, omitted, 'D156 measure file plan changed'),
-            ('mutable source omitted', 'mutable_sources=(SOURCE,)', 'mutable_sources=()', 'D156 measure mutable plan changed'),
+            ('mutable source omitted', 'mutable_sources=MUTABLE_SOURCES' if measure_path.name == 'domain_context_mutations.py' else 'mutable_sources=(SOURCE,)', 'mutable_sources=()', 'D156 measure mutable plan changed'),
             ('test source omitted', 'sources=SOURCES', 'sources=SOURCES[:1]', 'D156 measure source plan changed'),
             ('child stores reset', 'capture_output=True',
              "capture_output=True, env={'CARGO_HOME':'broken'}", 'D156 measure child stores lost'),
@@ -1308,6 +1527,42 @@ def main():
                 red += 1
             else:
                 raise AssertionError((name, 'measurement classifier fault survived'))
+    domain_path = ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py'
+    domain_text = domain_path.read_text()
+    for index in range(5):
+        before = 'mutable_sources=MUTABLE_SOURCES'
+        after = f'mutable_sources=MUTABLE_SOURCES[:{index}] + MUTABLE_SOURCES[{index + 1}:]'
+        try:
+            capture_domain_entry(domain_text.replace(before, after, 1), domain_path)
+        except AssertionError as error:
+            assert str(error) == 'D156 measure mutable plan changed', ('domain mutable omission', index, str(error))
+            red += 1
+        else:
+            raise AssertionError(('domain mutable omission survived', index))
+    for index in range(3):
+        before = 'for source in TEST_SOURCES))'
+        after = f'for source in TEST_SOURCES[:{index}] + TEST_SOURCES[{index + 1}:]))'
+        assert domain_text.count(before) == 1
+        try:
+            capture_domain_entry(domain_text.replace(before, after, 1), domain_path)
+        except AssertionError as error:
+            assert str(error) == 'D177 domain contract macro absent', ('domain macro-source omission', index, str(error))
+            red += 1
+        else:
+            raise AssertionError(('domain macro-source omission survived', index))
+    for name, before, after, message in (
+        ('final source restorations omitted', '    for path, data in ORIGINAL.items():\n        (ROOT / path).write_bytes(data)\n', '', 'D156 domain restoration sequence changed'),
+        ('core restore profile changed', "('core', ['cargo', 'test', '-p', 'sc-core', '--lib', 'domain_context_contracts'])", "('core', ['cargo', 'test', '-p', 'sc-units', '--lib', 'domain_context_contracts'])", 'D156 measure native argv changed'),
+        ('core restoration child omitted', "        ('core', ['cargo', 'test', '-p', 'sc-core', '--lib', 'domain_context_contracts']),\n", '', 'D156 measure full capture incomplete'),
+    ):
+        assert domain_text.count(before) == 1, (name, 'actual domain anchor')
+        try:
+            capture_domain_entry(domain_text.replace(before, after, 1), domain_path)
+        except AssertionError as error:
+            assert str(error) == message, (name, 'unrelated domain capture refusal', str(error))
+            red += 1
+        else:
+            raise AssertionError((name, 'domain restoration fault survived'))
     collection_path = ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py'
     assert collection_path in measure_paths
     collection_text = collection_path.read_text()
