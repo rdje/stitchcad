@@ -980,18 +980,18 @@ D157–D159 complete closed receipts retained in [part78](../history/window6.md#
 
 D160–D161 complete closed receipts retained in [part81](../history/window6.md#stitchcad-defects-part81md).
 
-D162–D163 complete closure receipts retained in [part84](../history/stitchcad-defects-part84.md).
+D162–D163 complete closure receipts retained in [part84](../history/window7.md#stitchcad-defects-part84md).
 
-D164–D167 complete closure receipts retained in [part91](../history/stitchcad-defects-part91.md).
+D164–D167 complete closure receipts retained in [part91](../history/window7.md#stitchcad-defects-part91md).
 
-D168-D171 complete closure receipts/original-report routes retained in [part94](../history/stitchcad-defects-part94.md).
+D168-D171 complete closure receipts/original-report routes retained in [part94](../history/window7.md#stitchcad-defects-part94md).
 
 D172 closes at .n.f14: current driver macro locations/always restored artifact;161 body controls/three complete mode captures/28 native Rust reds/six exact sources, rc=0.
 D173 closes at .n.f14: both original-location catalogs/real tracebacks/virtual variants/four actual loader faults, rc=0.
 D174 closes at .n.f14: independent Git/AST identifies eight later methods; fixed book totals removed, dynamic catalogs verified, rc=0.
-Original D172–D174 reports retained exactly in [part95](../history/stitchcad-defects-part95.md).
+Original D172–D174 reports retained exactly in [part95](../history/window7.md#stitchcad-defects-part95md).
 
 D175 closes at .n.f14: public whole dependency graph availability corrected; publication45 checks include independent later-section stale sentence and actual compiled catalog-omission refusal, rc=0.
-Original report retained exactly in [part96](../history/stitchcad-defects-part96.md); UTC seal date correction:2026-10-05 (immutable header says Oct4).
+Original report retained exactly in [part96](../history/window7.md#stitchcad-defects-part96md); UTC seal date correction:2026-10-05 (immutable header says Oct4).
 
-D176 task-index command totals close at .p.o.i; original examples/history/current coverage proof retained in [part97](../history/stitchcad-defects-part97.md).
+D176 task-index command totals close at .p.o.i; original examples/history/current coverage proof retained in [part97](../history/window7.md#stitchcad-defects-part97md).

@@ -118,9 +118,59 @@ construction and actual omission/refusal controls before signoff; no maintained 
   Final staged gate13 green, rc=0, target/file-plan-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h`
-  Status: `pending`
+  Status: `done`
   Goal: blocking continuity before .f.n01: pack a new immutable history window and retain whole committed older lessons/ledgers before receipt growth; current DEV16305B/CH32663B leave79B/105B under health targets, archive63 working Markdown files leaves one slot under64.
   Acceptance: own complete public archive/source/capture contracts before writes; exact current committed source intervals, every prior logical/control byte and actual public read/materialization verified under unchanged resident/decoded/file-count/line ceilings; regenerate map/book/live pointers and commit before native file repair.
+
+STITCHCAD-G1-0154 owns .f.h. Full public reader/schema/source/materialization contract and the
+existing sixth-window capture recipe reviewed; no persistent new capture entry is required.
+Use a guarded task-local builder in target/, pinned to6d93d3d, then published prove-source/read/
+materialize operations and the existing tracked generic window controls. Nonmutating validation
+of every current input precedes raw reads; complete fixture copy/generated/recovered file paths
+are validated before activation/output. Preserve the capture source bytes and all six old controls;
+append only the new master entry. Install only after exact independent fixture source/read proof;
+retire only matching raw copies after copied payload/control bytes are verified. Route maintained
+links to new catalog headings without editing any sealed record. Whole lesson/ledger intervals
+from6d93d3d follow after space is available; prove prior424 logical bytes and all public reads exact.
+
+Before installation, .f.h owns a physical isolated inode-alias diagnostic and exclusive-link census
+of every existing tracked destination it will rewrite. Regular-file/volume checks alone may accept
+hard links; reproduce without any alias write, record exact impact and schedule the source/output
+ownership fix as .f.l if confirmed. Keep the archive transition safe with measured single-link inputs.
+
+Confirmed D156 inode-alias gap: physical isolated source/output/victim names share one regular
+inode (link count3), and the current plan accepts both destinations, rc=0,
+target/window7-hardlink-diagnostic.log. No alias byte or child was written; all fixture bytes remain
+exact. Regular type, same device and no symlink do not establish exclusive mutable ownership;
+writing through such a name changes the other names too and can cross a repository boundary.
+.f.l owns the fix next; keep read-only sources pure and adopt explicit mutable-source protection
+in each native repair. Current archive installer measured57 raw copies/four live files/master1
+single-link before their respective rewrites/removals; no other repository was touched.
+
+P3 ledger diagnostic noise is separately owned by .b.s: actual selector at shell line271 uses
+ls/head; full426-file fixture emits Broken pipe despite9-arm/13-pointer success0. Exact selector
+with harmless dot-path expansion gives20 SIGPIPE141 results and the independently sorted first
+file; short paths40 calls give0. Stderr/timing vary. Final window7-ledger-pipe-diagnostic.log0;
+failed literal-stderr/repeated-short-path expectations excluded. Repair early-closing selection
+without changing the chosen file or named refusal; no fixture bytes/native source were written.
+
+- [x] REPRODUCE / ISSUE: DEV16305B/CH32663B and63 working archive Markdown files block receipt growth under unchanged health targets. Guarded capture pinned to6d93d3d retains57 whole records; actual fixture424 reads/materialization/source proof pass, rc=0, target/window7-capture.log. Relevant public reader/capture/schema/book contracts read before writes.
+- [x] ROOT CAUSE: raw physical records exhaust the bounded working set; immutable versioned payload/catalog separation preserves logical identity. Physical source/output/victim inode3 acceptance confirmed without alias writes, rc=0, window7-hardlink-diagnostic.log; P1 .f.l owns mutable-path repair. Every actual archive rewrite/removal destination measured single-link first.
+- [x] FIX: append only window7; verify copied payload/control bytes before retiring57 matching raw records; route four live files and retain two whole lessons/three oldest ledgers. Complete6d93d3d byte intervals/hash/line proofs and prior424/six immutable controls exact, rc=0, window7-retention-proof.log. Guarded fixture source79/output448 plan precedes activation; no new persistent producer entry.
+- [x] ADDRESSED: actual public426 reads exact,57 original Git records exact/raw absent, two retained intervals exact,12open163sealed/no gaps or overlap, rc=0, window7-retention-proof.log. Standing archive28/CLI442 controls pass0; newest7 immutable refusal awaits recording commit and is owned next .f.h.v. Master old six-entry prefix preserved;9 physical/16516 decodedL/1194315 logicalB/517400 residentB.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/file120paths44owners15refusals12bodyreds/ledger9+pointer13/map freshness pass, rc=0, window7-*-final logs; archive28+CLI442 pass0 in window7-archive-precommit.log. Source/window/public proofs exact; no Rust/grammar changes. P3 ls/head SIGPIPE root cause confirmed0; both failed diagnostic expectations excluded.
+- [x] LOCKSTEP: book/live/MEMORY/G1/index and maintained links route .f.h.v then .f.l; all fixed record/aggregate/document ceilings unchanged, rc=0, window7-retention-proof.log and map-final.log. promotion: declined (existing immutable-source, scoped-proof and mutable-ownership rules).400 push cadence remains; remote verdict unobserved.
+  Final staged gate13 green, rc=0, target/window7-staged-gate.log.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.l`
+  Status: `pending`
+  Goal: P1 after .f.h and before .f.n01: resolve the confirmed hard-link ownership gap in shared output and source-writing contracts; preserve pure/read-only source calls and every existing producer interface.
+  Acceptance: physical isolated output/source hard-link reproduction without alias writes; exact regular-file/inode/link-count root cause; bounded explicit mutable-path contract and output refusal, actual omission controls and focused integration without weakening existing source/type/device/parent checks. Schedule native source-writing adoption in each .f.n repair before effects.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h.v`
+  Status: `pending`
+  Goal: after the .f.h recording commit, prove the newest committed window7 rejects a copied catalog prose edit through the actual public retention guard; record the terminal result before .f.l.
+  Acceptance: isolated same-volume copy only, normal inventory remains green, immutable guard refuses exactly the changed committed catalog; actual HEAD/fixture/control bytes exact, no tracked sealed write, no background result left unconsumed, local scope distinct from unobserved runner verdict.
 
 ### .a01.1 verification and continuation
 

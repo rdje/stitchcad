@@ -132,7 +132,7 @@ the remaining direct entries and output destinations are repaired and verified. 
 The size-membership mutation entry now prepares the shared profile before its first owned output
 or native child. It validates every declared output directory and source file before creating any
 stores or changing the environment. Outputs must remain under target/; sources must already be
-regular files within the current workspace. Parent escapes, links, Git boundaries and foreign
+regular files within the current workspace. Parent escapes, symlinks, Git boundaries and foreign
 volumes refuse. Invalid path types or control bytes also refuse. An invalid entry prints the
 local-environment refusal and exits2 before invoking a child. Named toolchains and unrelated
 environment values are preserved; paths still derive from the current repository root.
@@ -161,6 +161,13 @@ directory, volume and Git-boundary checks. A directory declaration alone does no
 inside it: each planned file must be declared before producing effects. The remaining producer
 filename audit is a priority task within open D156; source/directory guard evidence does not certify
 those undeclared destinations.
+
+A physical fixture also confirms that regular-file and volume checks accept hard links: source,
+output and victim names can share one inode. No alias was written in that diagnostic. The priority
+.f.l repair owns output refusal and an explicit contract for writable sources before native file
+repairs; read-only sources must retain their pure behavior. Current source/directory guards do not
+establish exclusive mutable ownership. The archive transition separately checks single-link status
+before rewriting any existing destination.
 
 The individual-Ease and Ease-set mutation entries use the same declared-path and profile guard.
 Their native runs with caller overrides absent observe seven and ten real assertion failures,

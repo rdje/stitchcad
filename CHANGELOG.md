@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0154 - bounded window7 continuity (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.h`)
+
+- Capture57 whole6d93d3d files; isolated424 reads/materialization exact; preserve six old windows.
+- Verify copied bytes before retiring57 raw copies; route maintained root/document-relative links.
+- Retain two whole lessons/three oldest ledgers; original intervals/prior424 remain exact.
+- Physical hard-link gap reproduced without writes; .f.l owns output/writable-source contracts next.
+- Book/live/frontier and focused retention checks follow; fixed caps/400 cadence remain.
+
 ## STITCHCAD-G1-0153 - own producer files (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.i`)
 
 - Watch120 Python paths/44 owners; native37 in14 bounded groups;67 effect owners preserved.
@@ -227,59 +235,35 @@ Exact c455b93 doctrine8/Rust11 steps success; actual703tests/59groups/WASM3/loca
 CLI386/370/newest-catalog refusal0; four complete records retained. D165 owned next.
 Director400 cadence supersedes automatic exceptions; implementation .h3.v.c precedes guards.
 
-## STITCHCAD-G1-0137 - bounded window6 before signature work (leaf `G1-SLICE.5b.4c.h2.b.p.n.h3`)
-
-58 exact80f3a299 files packed;370 logical identities/nine working MD/three whole seals;70 current
-links routed. Prior windows/schemas/caps fixed; source/read/materialization proofs0. Guarded
-capture/closed task proxies/book synchronized. Full checks/gate/probes before immediate push;
-exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; G1 stays5/18.
-
-## STITCHCAD-G1-0136 - guarded declarations and exact-name proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f8`)
-
-- Guard implementation/test/output before reads/writes; preserve prepared child stores and modes.
-- D163 fixed using current test assertion sites; custom messages pass and labelled expects refuse.
-- CI17runtime/79body/27prefix/27late/19child/ten classifiers and publication43 pass0.
-- Exclusive28 assertion/one negative-construction reds; four sources exact/full7/7 native/five
-  doctests restored0. Three complete7a7c5b8 intervals/public367/prior71 bytes exact0.
-- D164 reproduced/owned next; G1 stays5/18,13open/150sealed; D156 open, grammar/API fixed.
-
-## STITCHCAD-G1-0135 - guarded namespace assertion provenance (leaf `G1-SLICE.5b.4c.h2.b.p.n.f7`)
-
-- Guard implementation/test sources/output before reads/writes; preserve prepared child stores/modes.
-- D162 fixed with current test assertion locations; custom assertions pass and expect sites refuse.
-- CI17runtime/66body/25prefixes/25late/16children/eight classifiers and publication43 pass0.
-- Exclusive35 actual assertion reds; both modes0; four sources exact/full10/8 targets restored0.
-- Seven complete6deb45e intervals/public364/prior64 bytes exact0; closed node IDs/proxies stay live.
-- D163 reproduced/owned next; G1 stays5/18,13open/149sealed; D156 open, grammar/API fixed.
 
 
 
 
-| [`part132`](docs/history/stitchcad-changelog-part132.md) | whole G1-0130 ledger | 8 lines, 682 bytes, `sha256:6e3506f0…` |
+| [`part132`](docs/history/window7.md#stitchcad-changelog-part132md) | whole G1-0130 ledger | 8 lines, 682 bytes, `sha256:6e3506f0…` |
 
-| [`part131`](docs/history/stitchcad-changelog-part131.md) | whole G1-0129 ledger | 7 lines, 586 bytes, `sha256:016b79cb…` |
+| [`part131`](docs/history/window7.md#stitchcad-changelog-part131md) | whole G1-0129 ledger | 7 lines, 586 bytes, `sha256:016b79cb…` |
 
-| [`part130`](docs/history/stitchcad-changelog-part130.md) | G1-0128 lexer guards | 6 lines, 463 bytes, `sha256:21deb59d…` |
+| [`part130`](docs/history/window7.md#stitchcad-changelog-part130md) | G1-0128 lexer guards | 6 lines, 463 bytes, `sha256:21deb59d…` |
 
-| [`part129`](docs/history/stitchcad-changelog-part129.md) | G1-0127 unit guards | 6 lines, 490 bytes, `sha256:ae6bb38b…` |
+| [`part129`](docs/history/window7.md#stitchcad-changelog-part129md) | G1-0127 unit guards | 6 lines, 490 bytes, `sha256:ae6bb38b…` |
 
-| [`part128`](docs/history/stitchcad-changelog-part128.md) | G1-0126 continuity | 6 lines, 482 bytes, `sha256:a25c438d…` |
+| [`part128`](docs/history/window7.md#stitchcad-changelog-part128md) | G1-0126 continuity | 6 lines, 482 bytes, `sha256:a25c438d…` |
 
-| [`part127`](docs/history/stitchcad-changelog-part127.md) | G1-0125 chart guards | 6 lines, 488 bytes, `sha256:d7e282a6…` |
+| [`part127`](docs/history/window7.md#stitchcad-changelog-part127md) | G1-0125 chart guards | 6 lines, 488 bytes, `sha256:d7e282a6…` |
 
-| [`part126`](docs/history/stitchcad-changelog-part126.md) | G1-0124 continuity | 5 lines, 394 bytes, `sha256:d1cbcbfa…` |
+| [`part126`](docs/history/window7.md#stitchcad-changelog-part126md) | G1-0124 continuity | 5 lines, 394 bytes, `sha256:d1cbcbfa…` |
 
-| [`part125`](docs/history/stitchcad-changelog-part125.md) | G1-0123 Ease guards | 6 lines, 479 bytes, `sha256:a51ba574…` |
+| [`part125`](docs/history/window7.md#stitchcad-changelog-part125md) | G1-0123 Ease guards | 6 lines, 479 bytes, `sha256:a51ba574…` |
 
-| [`part124`](docs/history/stitchcad-changelog-part124.md) | G1-0122/0121 | 21 lines, 1470 bytes, `sha256:8fa452b9…` |
+| [`part124`](docs/history/window7.md#stitchcad-changelog-part124md) | G1-0122/0121 | 21 lines, 1470 bytes, `sha256:8fa452b9…` |
 
-| [`part123`](docs/history/stitchcad-changelog-part123.md) | G1-0120 census | 6 lines, 473 bytes, `sha256:897e1536…` |
+| [`part123`](docs/history/window7.md#stitchcad-changelog-part123md) | G1-0120 census | 6 lines, 473 bytes, `sha256:897e1536…` |
 
-| [`part122`](docs/history/stitchcad-changelog-part122.md) | G1-0119/0118 | 12 lines, 834 bytes, `sha256:ad285cfc…` |
+| [`part122`](docs/history/window7.md#stitchcad-changelog-part122md) | G1-0119/0118 | 12 lines, 834 bytes, `sha256:ad285cfc…` |
 
-| [`part121`](docs/history/stitchcad-changelog-part121.md) | G1-0117 producer profile | 8 lines, 683 bytes, `sha256:03c915a1…` |
+| [`part121`](docs/history/window7.md#stitchcad-changelog-part121md) | G1-0117 producer profile | 8 lines, 683 bytes, `sha256:03c915a1…` |
 
-| [`part120`](docs/history/stitchcad-changelog-part120.md) | G1-0116 exact CI | 6 lines, 460 bytes, `sha256:31a25724…` |
+| [`part120`](docs/history/window7.md#stitchcad-changelog-part120md) | G1-0116 exact CI | 6 lines, 460 bytes, `sha256:31a25724…` |
 
 
 
@@ -328,8 +312,10 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
 | [`part118`](docs/history/window6.md#stitchcad-changelog-part118md) | complete verification continuity | 6 lines, 573 bytes, `sha256:c225854a…` |
 | [`part119`](docs/history/window6.md#stitchcad-changelog-part119md) | complete closed verification | 9 lines, 745 bytes, `sha256:833b325f…` |
 
-| [`part133`](docs/history/stitchcad-changelog-part133.md) | G1-0131 ledger | 8 lines, 700 bytes, `sha256:534079f9…` |
+| [`part133`](docs/history/window7.md#stitchcad-changelog-part133md) | G1-0131 ledger | 8 lines, 700 bytes, `sha256:534079f9…` |
 
-| [`part134`](docs/history/stitchcad-changelog-part134.md) | G1-0132 ledger | 8 lines, 680 bytes, `sha256:6617db21…` |
+| [`part134`](docs/history/window7.md#stitchcad-changelog-part134md) | G1-0132 ledger | 8 lines, 680 bytes, `sha256:6617db21…` |
 
-| [`part135`](docs/history/stitchcad-changelog-part135.md) | whole G1-0134/0133 ledgers | 17 lines, 1365 bytes, `sha256:b27ceffd…` |
+| [`part135`](docs/history/window7.md#stitchcad-changelog-part135md) | whole G1-0134/0133 ledgers | 17 lines, 1365 bytes, `sha256:b27ceffd…` |
+
+| [`part136`](docs/history/stitchcad-changelog-part136.md) | whole G1-0137/0136/0135 ledgers | 24 lines, 1819 bytes, `sha256:9b764edc…` |

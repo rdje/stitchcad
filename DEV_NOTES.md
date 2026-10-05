@@ -4,15 +4,21 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
-Owner compiler lesson retained in [part181](docs/history/stitchcad-devnotes-part181.md).
+Owner compiler lesson retained in [part181](docs/history/window7.md#stitchcad-devnotes-part181md).
 
-Window6 retention lesson retained in [part174](docs/history/stitchcad-devnotes-part174.md).
+Window6 retention lesson retained in [part174](docs/history/window7.md#stitchcad-devnotes-part174md).
 
-D163 declaration guard lesson retained in [part176](docs/history/stitchcad-devnotes-part176.md).
+D163 declaration guard lesson retained in [part176](docs/history/window7.md#stitchcad-devnotes-part176md).
 
-D162 namespace guard lesson retained in [part178](docs/history/stitchcad-devnotes-part178.md).
+D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitchcad-devnotes-part178md).
 
-D161 statement and whole proof lesson retained in [part180](docs/history/stitchcad-devnotes-part180.md).
+D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
+
+## _(2026-10-05 UTC)_ — window7 and mutable ownership
+
+- Pack57 full6d93d3d records after exact isolated424 reads/materialization; six old windows unchanged. Verify copied bytes before retiring matching raw files, route root/document-relative links, and retain two whole lessons/three oldest ledgers.
+- Physical fixture source/output/victim share one regular inode (link count3); shared plan accepts without effects. Type/device/no-symlink checks do not prove mutable ownership. .f.l owns output/writable-source contracts next; pure reads stay pure.
+- Archive writes/removals measured single-link57 raw/four live files/master1 first. Existing reader/standing window controls watch data; no new producer/Rust/grammar code. Promotion declined: existing immutable-source, scoped-proof and explicit ownership rules;400 cadence retains local verification.
 
 ## _(2026-10-05 UTC)_ — bridge source and file plans
 
@@ -31,27 +37,17 @@ D161 statement and whole proof lesson retained in [part180](docs/history/stitchc
 - Preserve four whole older lessons/two oldest ledgers from ab3f720; prior420/six windows+master exact. No producer/Rust/grammar behavior changed. Promotion declined: existing finite ownership, actual-body and bounded continuity rules.
 - D176 task-index examples froze11 siblings/seven probes after later additions. Current census13 trees/13 siblings/probes9 pass0; remove fixed totals from current commands and retain original/history/closure in defects-part97.
 
-## _(2026-10-05 UTC)_ — generated navigation label containment
-
-- Current map8190B plus planned62B sibling exceeds8192B. Redundant .md suffixes in task/decision link labels consume216B; destination filenames and ordering are unchanged.
-- Actual regeneration yields7974B/all72 ordered targets exact/full source coverage/path CLI unchanged0; prospective sibling fits fixed cap. Keep the deterministic generator and freshness checker as authority.
-- Publication45/census9/coverage9/ledger9+pointer13 terminal0 consumed. Promotion declined: existing bounded generated projections and full navigation preservation; no producer storage or formula behavior changes.
-
-## _(2026-10-05 UTC)_ — bounded output/delegation audit continuity
-
-- Parent .p.o owned containment before adding child .p.o.h; recipes999L/notes16382B leave no safe receipt room.
-- Retain complete committed normalization requirements/routing, signature final receipts, static lesson/promotion/failed checks and two oldest ledgers. Preserve every ID, live date correction and immutable source byte; fixed caps stay.
-- Initial helper1 assumed a heading after the oldest ledger; observed archive-index boundary supplies its exact end. Partial source seals remain exact; failed attempt excluded.
-- Exact prior415/five intervals/public420/12open162sealed proof0; publication45/archive28+CLI436/ledger9+pointer13/coverage9 terminal0 consumed. Promotion declined: existing whole-record/guard-before-effects/borrowed-root principles. This slice changes no producer behavior; .p.o.i divides the ledger before repairs.
-
-Static guard/D172–D175 lesson retained in [part184](docs/history/stitchcad-devnotes-part184.md).
+Navigation/continuity lessons retained in [part188](docs/history/stitchcad-devnotes-part188.md).
 
 
-D160 lesson retained in [part182](docs/history/stitchcad-devnotes-part182.md); UTC seal date correction:2026-10-05 (immutable header says Oct4).
+Static guard/D172–D175 lesson retained in [part184](docs/history/window7.md#stitchcad-devnotes-part184md).
 
-Normalization/assertion/recipe lessons retained in [part187](docs/history/stitchcad-devnotes-part187.md).
 
-Older formula and producer lessons retained in [part186](docs/history/stitchcad-devnotes-part186.md).
+D160 lesson retained in [part182](docs/history/window7.md#stitchcad-devnotes-part182md); UTC seal date correction:2026-10-05 (immutable header says Oct4).
+
+Normalization/assertion/recipe lessons retained in [part187](docs/history/window7.md#stitchcad-devnotes-part187md).
+
+Older formula and producer lessons retained in [part186](docs/history/window7.md#stitchcad-devnotes-part186md).
 
 
 ## Retained engineering continuity
@@ -88,9 +84,9 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part158`](docs/history/window6.md#stitchcad-devnotes-part158md) | complete closed node | 9 lines, 703 bytes, `sha256:c83978de…` |
 | [`part159`](docs/history/window6.md#stitchcad-devnotes-part159md) | complete closed node | 6 lines, 430 bytes, `sha256:cb7a4260…` |
 | [`part160`](docs/history/window6.md#stitchcad-devnotes-part160md) | complete closed verification | 33 lines, 2119 bytes, `sha256:677d9f17…` |
-| [`part161`](docs/history/stitchcad-devnotes-part161.md) | complete closed node | 21 lines, 1635 bytes, `sha256:842ed47a…` |
-| [`part162`](docs/history/stitchcad-devnotes-part162.md) | complete closed nodes | 23 lines, 1253 bytes, `sha256:4bc477d4…` |
-| [`part163`](docs/history/stitchcad-devnotes-part163.md) | complete closed book record | 22 lines, 1733 bytes, `sha256:9ecab39c…` |
+| [`part161`](docs/history/window7.md#stitchcad-devnotes-part161md) | complete closed node | 21 lines, 1635 bytes, `sha256:842ed47a…` |
+| [`part162`](docs/history/window7.md#stitchcad-devnotes-part162md) | complete closed nodes | 23 lines, 1253 bytes, `sha256:4bc477d4…` |
+| [`part163`](docs/history/window7.md#stitchcad-devnotes-part163md) | complete closed book record | 22 lines, 1733 bytes, `sha256:9ecab39c…` |
 
 Window6 runner receipt — STITCHCAD-G1-0138 (.n.h3.v): exact c455b93 doctrine8/Rust11 steps
 completed/success; actual logs show Rust1.99/703 tests/59 groups/WASM3/four checkout-local stores.
@@ -166,6 +162,8 @@ labelled expect noise. Guard four implementations/current test/output before rea
 prepared stores/original filters and rebuild full target; controls131 body/34 entry+late/26 child/
 19 classifiers0. Seven native macro reds/eight current sites/five HEAD-exact sources/full5 restored0. Focused profiles/book/archive402/ledger/coverage0; prior398/four whole records exact. No Rust changes.
 
-| [`part186`](docs/history/stitchcad-devnotes-part186.md) | D157 and lexer/unit/continuity lessons | 27 lines, 1483 bytes, `sha256:54d12f5b…` |
+| [`part186`](docs/history/window7.md#stitchcad-devnotes-part186md) | D157 and lexer/unit/continuity lessons | 27 lines, 1483 bytes, `sha256:54d12f5b…` |
 
-| [`part187`](docs/history/stitchcad-devnotes-part187.md) | three whole producer/assertion lessons | 21 lines, 1382 bytes, `sha256:923de269…` |
+| [`part187`](docs/history/window7.md#stitchcad-devnotes-part187md) | three whole producer/assertion lessons | 21 lines, 1382 bytes, `sha256:923de269…` |
+
+| [`part188`](docs/history/stitchcad-devnotes-part188.md) | whole navigation/continuity lessons | 12 lines, 1574 bytes, `sha256:8bedb964…` |

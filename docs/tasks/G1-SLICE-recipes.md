@@ -709,6 +709,9 @@ is required before completeness claims. No direct producer is executed with ambi
   verify actual child defaults and enumerate book producer examples before claiming closure.
   Acceptance: locality before first dispatcher/write, bounded destinations/overrides, actual
   standalone executions/refusals/counterfactuals, no external repository/cache mutation.
+  P3 owned: ledger DIGEST-RED selector's ls/head pipeline emits Broken pipe under the426-file
+  fixture; full9 arms/13 pointers pass0. Replace early-closing selection while preserving the
+  chosen file and named refusal; reproduce source line271, window7-ledger-pipe-diagnostic.log.
 - ID: `G1-SLICE.5b.4c.h2.b.v`
   Status: `pending`
   Goal: complete finite census/no remaining unguarded owned producer; final full gates/exact CI.
@@ -900,7 +903,7 @@ Complete acceptance retained in [part145](../history/window6.md#stitchcad-devnot
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f3`
   Status: `done`
-  Goal: literal/normalization guards; complete requirements/routing in [part183](../history/stitchcad-devnotes-part183.md).
+  Goal: literal/normalization guards; complete requirements/routing in [part183](../history/window7.md#stitchcad-devnotes-part183md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f4`
   Status: `done`
@@ -908,7 +911,7 @@ Complete acceptance retained in [part145](../history/window6.md#stitchcad-devnot
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f5`
   Status: `done`
   Goal: canonical/checked-expression native guards, preserved child stores and D160 assertion proof.
-Complete requirements/acceptance pointers retained in [part162](../history/stitchcad-devnotes-part162.md).
+Complete requirements/acceptance pointers retained in [part162](../history/window7.md#stitchcad-devnotes-part162md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f6`
   Status: `done`
@@ -921,50 +924,50 @@ Complete requirements/acceptance retained in [part160](../history/window6.md#sti
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f8`
   Status: `done`
   Goal: declaration/exact-name producer guards and D163 current assertion-source proof.
-Complete requirements/acceptance retained in [part161](../history/stitchcad-devnotes-part161.md).
+Complete requirements/acceptance retained in [part161](../history/window7.md#stitchcad-devnotes-part161md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f9`
   Status: `done`
-  Goal: signature guards; complete final receipts in [part185](../history/stitchcad-devnotes-part185.md).
+  Goal: signature guards; complete final receipts in [part185](../history/window7.md#stitchcad-devnotes-part185md).
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3`
   Status: `done`
-  Goal: bounded window6 retained before signature work; full acceptance in [part164](../history/stitchcad-devnotes-part164.md).
+  Goal: bounded window6 retained before signature work; full acceptance in [part164](../history/window7.md#stitchcad-devnotes-part164md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3.v`
   Status: `done`
-  Goal: exact window6 job/step evidence; full requirements in [part165](../history/stitchcad-devnotes-part165.md).
+  Goal: exact window6 job/step evidence; full requirements in [part165](../history/window7.md#stitchcad-devnotes-part165md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f3.r`
   Status: `done`
-  Goal: D165 normalization source-site proof; complete requirements in [part168](../history/stitchcad-devnotes-part168.md).
+  Goal: D165 normalization source-site proof; complete requirements in [part168](../history/window7.md#stitchcad-devnotes-part168md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h3.v.c`
   Status: `done`
-  Goal: director400 cadence/D166 fixed; complete requirements/acceptance in [part167](../history/stitchcad-devnotes-part167.md).
+  Goal: director400 cadence/D166 fixed; complete requirements/acceptance in [part167](../history/window7.md#stitchcad-devnotes-part167md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f4.r`
   Status: `done`
-  Goal: D167 recipe provenance; complete requirements/acceptance/receipts in [part170](../history/stitchcad-devnotes-part170.md).
+  Goal: D167 recipe provenance; complete requirements/acceptance/receipts in [part170](../history/window7.md#stitchcad-devnotes-part170md).
 Native baseline log replay1 excluded: old signature fault logs absent (actual directories/zero files); fresh exclusive35-case run supplies current evidence.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f10`
   Status: `done`
-  Goal: D169 wanted/call guard proof; complete requirements/acceptance/receipts in [part172](../history/stitchcad-devnotes-part172.md).
+  Goal: D169 wanted/call guard proof; complete requirements/acceptance/receipts in [part172](../history/window7.md#stitchcad-devnotes-part172md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f11`
   Status: `done`
-  Goal: D170 expression/reduction native proof; complete requirements/acceptance/receipts in [part173](../history/stitchcad-devnotes-part173.md).
+  Goal: D170 expression/reduction native proof; complete requirements/acceptance/receipts in [part173](../history/window7.md#stitchcad-devnotes-part173md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f12`
   Status: `done`
-  Goal: D171 coupled input guards; complete requirements/acceptance/receipts in [part177](../history/stitchcad-devnotes-part177.md).
+  Goal: D171 coupled input guards; complete requirements/acceptance/receipts in [part177](../history/window7.md#stitchcad-devnotes-part177md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f11.c`
   Status: `done`
-  Goal: daily cleanup complete; exact requirements/acceptance in [part175](../history/stitchcad-devnotes-part175.md); audit target/artifact_cleanup_audit/2026-10-04-2219/.
+  Goal: daily cleanup complete; exact requirements/acceptance in [part175](../history/window7.md#stitchcad-devnotes-part175md); audit target/artifact_cleanup_audit/2026-10-04-2219/.
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f13`
   Status: `done`
-  Goal: owner compiler guards; complete requirements/acceptance/receipts in [part179](../history/stitchcad-devnotes-part179.md).
+  Goal: owner compiler guards; complete requirements/acceptance/receipts in [part179](../history/window7.md#stitchcad-devnotes-part179md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.f14`
   Status: `done`

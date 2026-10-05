@@ -496,6 +496,11 @@ changed committed catalogs. G1-SLICE.5b.4c.h2.b.p.n.h3.v records the observed sc
 The director2026-10-04 supersedes immediate-push exceptions:400 commits unless explicitly requested.
 D165 owns stronger normalization assertion provenance; D156/D154 remain open; grammar/API fixed.
 
+Window7 captures57 full files from6d93d3d. Its isolated fixture reads/materializes all424 logical
+records exactly; previous six windows and logical addresses stay unchanged. Use
+`bash scripts/history_archive.sh prove-source window7` for the optional Git comparison.
+Normal retrieval remains offline. Fixed bounds stay; runner evidence awaits the400-commit cadence.
+
 ### Local producer profile
 
 The [build and command reference](build-and-checks.md) documents guarded defaults, overrides,
