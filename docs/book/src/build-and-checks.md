@@ -224,7 +224,17 @@ log aliases, with no source/output writes. Ten real ordinary faults match their 
 sets; thirteen frozen inputs/six Rust files restore exactly and the current Cargo-selected executable
 passes all five public metadata contracts. No Rust or metadata API change is needed.
 
-D177's fifteen-entry scope has thirteen entries verified; two remain. Their .f.n06 repairs
+Recipe mutations plan seven inputs: both implementations, current public test, three imported
+TSVs and the worked-example book page. Ordinary mode declares sixteen logs; coupled mode declares
+six, with both production sources explicitly mutable. Classifier-only mode declares zero files or
+mutable sources and invokes no native child. Three complete captures preserve the original15+5
+faults, exact source binding/child selection/restoration and prepared stores. Twenty-five physical
+refusals and actual input/file/mutable/mode/environment/restoration omissions calibrate these plans.
+Twenty real faults reach current assertion macros, including small-stack workers; twenty-two frozen
+inputs/twelve Rust files/four compile-time inputs and the current full eleven-test artifact restore
+exactly. Custom macro messages pass; a labelled join panic alone supplies no assertion evidence.
+
+D177's fifteen-entry scope has fourteen entries verified; one remains. The .f.n06.2 repair
 own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
@@ -289,9 +299,10 @@ including valid local overrides; they preserve the selected channel and unrelate
 Both ordinary entries rebuild their restored focused targets. Semantic classifier-only mode plans
 no files or mutable sources; its complete mode-specific proof is described above.
 
-Recipe and statement mutation entries likewise validate all declared sources/output before reads
-or writes, retain prepared child stores and rebuild their restored full focused target. Recipe mode
-also retains its coupled test selection; classifier-only mode invokes no native fault.
+Recipe mode plans its complete files and seven inputs before reads; ordinary/coupled modes declare
+both mutable sources and preserve prepared child stores. Classifier-only mode checks all anchors
+and current macro evidence with no files/mutable sources/native child. Statement repair remains
+owned by .f.n06.2. Native modes rebuild the restored full focused target before returning.
 
 Literal and normalized-expression entries guard implementation/test sources and output before
 reads/writes, retain child stores and rebuild their full restored targets. Failed-body panic paths,
@@ -370,7 +381,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and312 actual body faults, with33 calibrated failed-body classifiers,
+controls and351 actual body faults, with34 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

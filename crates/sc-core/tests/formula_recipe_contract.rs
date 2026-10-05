@@ -127,6 +127,7 @@ fn authored_original_boundaries_preserve_order_headers_and_operand_bytes() {
 fn later_statement_nodes_retain_whole_source_locations() {
     let source = "let first: count = 1\n\nlet second: length = (1 cm + 25 mm)\nassert check: eps_num = second == 35 mm";
     let recipe = parse(source);
+    assert_eq!(recipe.statements().len(), 3);
     let statement = recipe.statements().get(1).expect("second statement");
     let K::Let { expression, .. } = statement.kind() else {
         role(false);
@@ -320,6 +321,7 @@ fn small_stack_recipe_keeps_independent_expression_limits_and_flat_clone_drop() 
         let recipe = parse(&source);
         let clone = recipe.clone();
         drop(recipe);
+        assert_eq!(clone.statements().len(), 2);
         assert_eq!(clone.statements().first().expect("first").name(), name);
         let K::Assert { left, right, .. } = clone.statements().get(1).expect("second").kind() else { role(false); return; };
         assert_eq!(left.node_count(), 256);

@@ -389,9 +389,10 @@ def domain_fixture():
     return mutable, unit, work, bindings, files
 
 
-def mixed_fixture(entry_path, *, classifier_only=False):
+def mixed_fixture(entry_path, *, classifier_only=False, coupled=False):
     """Authored source/input/consumer order, including semantic classifier-only mode."""
-    assert not classifier_only or entry_path.name == 'semantic_mutations.py', 'D156 unexpected classifier mode'
+    assert not classifier_only or entry_path.name in {'semantic_mutations.py', 'recipe_mutations.py'}, 'D156 unexpected classifier mode'
+    assert not coupled or entry_path.name == 'recipe_mutations.py', 'D156 unexpected coupled mode'
     if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py':
         mutable, contract, work, bindings, files = domain_fixture()
         units = ['cargo', 'test', '-p', 'sc-units', '--test', 'domain_context_contract']
@@ -419,6 +420,24 @@ def mixed_fixture(entry_path, *, classifier_only=False):
         extras = (ROOT / 'docs/book/src/spec/formula-language/examples.md',)
         macro_sources = (contract,)
         initial_reads = (*mutable, contract)
+    elif entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/recipe_mutations.py':
+        mutable = (ROOT / 'crates/sc-core/src/recipe/ordered.rs', ROOT / 'crates/sc-core/src/recipe/statement.rs')
+        contract = ROOT / 'crates/sc-core/tests/formula_recipe_contract.rs'
+        work = ROOT / 'target/recipe_mutations'
+        bindings = (1, 0, 0, 1, 0) if coupled else (0,) * 11 + (1,) * 4
+        boundary = 'coupled_token_boundaries_preserve_zero_gap_and_all_whitespace'
+        provenance = 'coupled_later_header_and_operand_rules_keep_exact_global_provenance'
+        maximum = 'coupled_all_statement_and_expression_limits_reach_their_maximum_together'
+        contexts = (boundary, provenance, provenance, provenance, maximum) if coupled else ('',) * 15
+        base = ['cargo', 'test', '-p', 'sc-core', '--test', 'formula_recipe_contract']
+        calls = tuple(base + ([test] if test else []) for test in contexts) + (base,)
+        label = 'coupled' if coupled else 'recipe'
+        files = tuple(work / ('%s-fault-%d.log' % (label, i)) for i in range(1, len(bindings) + 1)) + (work / 'restored.log',)
+        extras = tuple(ROOT / ('docs/tasks/artifacts/formula_structure/' + name) for name in (
+            'recipe_cases.tsv', 'recipe_coupled_cases.tsv', 'canonical_worked_cases.tsv')) + \
+            (ROOT / 'docs/book/src/spec/formula-language/examples.md',)
+        macro_sources = (contract,)
+        initial_reads = (*mutable, contract)
     else:
         assert entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py', 'D156 unknown mixed entry'
         mutable = (ROOT / 'crates/sc-core/src/recipe/semantic.rs',)
@@ -442,9 +461,9 @@ def mixed_fixture(entry_path, *, classifier_only=False):
                 initial_reads=initial_reads)
 
 
-def capture_mixed_entry(text, entry_path, *, classifier_only=False):
+def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=False):
     """Complete actual mixed-source body; intercepted children certify dispatch only."""
-    fixture = mixed_fixture(entry_path, classifier_only=classifier_only)
+    fixture = mixed_fixture(entry_path, classifier_only=classifier_only, coupled=coupled)
     mutable, contract, work, bindings, files = (fixture[key] for key in ('mutable', 'contract', 'work', 'bindings', 'files'))
     sources = (*mutable, contract, *fixture['extras'])
     originals = {p: p.read_bytes() for p in (*sources, entry_path, SOURCE)}
@@ -506,7 +525,10 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False):
                 index = len(mutations)
                 assert index < len(bindings) and not pending, 'D156 measure source mutation order'
                 assert path == mutable[bindings[index]], 'D156 domain mutable source order changed'
-                if entry_path.name == 'semantic_mutations.py':
+                if entry_path.name == 'recipe_mutations.py':
+                    selected = scope['coupled_cases'] if coupled else [(*case, '') for case in scope['cases']]
+                    _, relative, before, after, family = selected[index]
+                elif entry_path.name == 'semantic_mutations.py':
                     _, before, after = scope['CASES'][index]
                     relative, family = mutable[0], fixture['contexts'][index]
                 else:
@@ -543,7 +565,8 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False):
                 site_source = contract if len(fixture['macro_sources']) == 1 or fixture['contexts'][index] == 'units' else mutable[bindings[index]]
                 current = read_text(site_source)
                 if site_source == contract:
-                    start = 0 if len(fixture['macro_sources']) > 1 else current.index('fn ' + fixture['contexts'][index] + '(')
+                    start = (current.index('fn ' + fixture['contexts'][index] + '(')
+                             if fixture['contexts'][index] and len(fixture['macro_sources']) == 1 else 0)
                 else:
                     start = current.index('mod domain_context_contracts {')
                 body = current[start:]
@@ -566,8 +589,8 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False):
 
     try:
         os.environ.update(stores, RUSTUP_TOOLCHAIN='1.99.0', D156_DOMAIN_UNRELATED='preserved')
-        if entry_path.name == 'semantic_mutations.py':
-            sys.argv = [str(entry_path), *(['--classifier-only'] if classifier_only else [])]
+        if entry_path.name in {'semantic_mutations.py', 'recipe_mutations.py'}:
+            sys.argv = [str(entry_path), *(['--classifier-only'] if classifier_only else ['--coupled'] if coupled else [])]
         Path.mkdir, Path.write_text, Path.write_bytes = directory, write, write
         Path.read_text = lambda p, *a, **k: read(p, False, *a, **k)
         Path.read_bytes = lambda p, *a, **k: read(p, True, *a, **k)
@@ -604,10 +627,10 @@ def capture_domain_entry(text, entry_path):
     return capture_mixed_entry(text, entry_path)
 
 
-def domain_refusals(text, entry_path, *, classifier_only=False):
+def domain_refusals(text, entry_path, *, classifier_only=False, coupled=False):
     """Actual copied mixed entry: every mutable source alias and endpoint log refuses."""
     work = GOOD['directory'](ROOT, 'target/scratch/domain_entry_refusals', create=True)
-    fixture = mixed_fixture(entry_path, classifier_only=classifier_only)
+    fixture = mixed_fixture(entry_path, classifier_only=classifier_only, coupled=coupled)
     mutable, contract, output, files = (fixture[key] for key in ('mutable', 'contract', 'work', 'files'))
     sources = (*mutable, contract, *fixture['extras'])
     cases = ([('late-source', path) for path in sources] if classifier_only else
@@ -647,8 +670,8 @@ def domain_refusals(text, entry_path, *, classifier_only=False):
                 Path.write_text, Path.write_bytes, subprocess.run = no_effect, no_effect, no_effect
                 with contextlib.redirect_stderr(diagnostic):
                     try:
-                        if entry_path.name == 'semantic_mutations.py':
-                            sys.argv = [str(entry), *(['--classifier-only'] if classifier_only else [])]
+                        if entry_path.name in {'semantic_mutations.py', 'recipe_mutations.py'}:
+                            sys.argv = [str(entry), *(['--classifier-only'] if classifier_only else ['--coupled'] if coupled else [])]
                         exec(compile(text, str(entry), 'exec'), {'__file__': str(entry), '__name__': 'physical_entry'})
                     except SystemExit as error:
                         assert error.code == 2, 'D156 measure physical refusal status'
@@ -1641,6 +1664,62 @@ def main():
                 red += 1
             else:
                 raise AssertionError((name, 'measurement classifier fault survived'))
+    recipe_path = ROOT / 'docs/tasks/artifacts/formula_structure/recipe_mutations.py'
+    recipe_text = recipe_path.read_text()
+    classifier_controls(recipe_text, recipe_path, strict=True)
+    measure_classifiers += 1
+    recipe_captures = 0
+    for classifier_only, coupled in ((False, False), (False, True), (True, False)):
+        capture_mixed_entry(recipe_text, recipe_path, classifier_only=classifier_only, coupled=coupled)
+        recipe_captures += 1
+        measure_physical += domain_refusals(recipe_text, recipe_path, classifier_only=classifier_only, coupled=coupled)
+        recipe_faults = [('current input omitted %d' % index, 'sources=SOURCES',
+                   'sources=SOURCES[:%d] + SOURCES[%d:]' % (index, index + 1),
+                   'D156 measure source plan changed') for index in range(7)]
+        if classifier_only:
+            recipe_faults += [
+                ('classifier files', 'OUTPUT_FILES = (() if CLASSIFIER_ONLY else',
+                 'OUTPUT_FILES = (() if False else', 'D156 measure file plan changed'),
+                ('classifier mutable', 'MUTABLE_SOURCES = () if CLASSIFIER_ONLY else MUTABLE_INPUTS',
+                 'MUTABLE_SOURCES = () if False else MUTABLE_INPUTS', 'D156 measure mutable plan changed'),
+                ('classifier effects', 'if CLASSIFIER_ONLY:', 'if False:',
+                 'D156 semantic classifier mode performed native effects')]
+        else:
+            recipe_faults += [
+                ('files absent', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 measure file plan changed'),
+                ('last file absent', 'len(coupled_cases if COUPLED else cases) + 1',
+                 'len(coupled_cases if COUPLED else cases)', 'D156 measure file plan changed'),
+                ('mutable first absent', 'mutable_sources=MUTABLE_SOURCES',
+                 'mutable_sources=MUTABLE_SOURCES[1:]', 'D156 measure mutable plan changed'),
+                ('mutable last absent', 'mutable_sources=MUTABLE_SOURCES',
+                 'mutable_sources=MUTABLE_SOURCES[:-1]', 'D156 measure mutable plan changed'),
+                ('stores reset', 'environment = dict(os.environ)',
+                 "environment = dict(os.environ, CARGO_HOME='broken')", 'D156 measure child stores lost'),
+                ('final restoration absent', '    for path, content in originals.items():\n        path.write_bytes(content)\n',
+                 '', 'D156 domain restoration sequence changed')]
+        for name, before, after, message in recipe_faults:
+            assert recipe_text.count(before) == 1, (name, 'actual recipe anchor')
+            try:
+                capture_mixed_entry(recipe_text.replace(before, after, 1), recipe_path,
+                                    classifier_only=classifier_only, coupled=coupled)
+            except AssertionError as error:
+                assert str(error) == message, (name, classifier_only, coupled, 'unrelated recipe refusal', str(error))
+                red += 1
+            else:
+                raise AssertionError((name, classifier_only, coupled, 'recipe omission survived'))
+    recipe_functions = {n.name: ast.get_source_segment(recipe_text, n) for n in ast.parse(recipe_text).body
+                        if isinstance(n, ast.FunctionDef)}
+    for name, replacement, message in (
+        ('assertion_failure', "def assertion_failure(output):\n    return b'assertion' in output", 'D159 assertion evidence accepted noise'),
+        ('assertion_failure', "def assertion_failure(output):\n    parts = output.split(b'\\nfailures:\\n', 2)\n    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None", 'D159 assertion evidence accepted noise'),
+        ('assertion_sites', 'def assertion_sites(source, path):\n    return set()', 'D160 assertion sites changed')):
+        try:
+            classifier_controls(recipe_text.replace(recipe_functions[name], replacement, 1), recipe_path, strict=True)
+        except AssertionError as error:
+            assert str(error) == message, (name, 'unrelated recipe classifier refusal', str(error))
+            red += 1
+        else:
+            raise AssertionError((name, 'recipe classifier fault survived'))
     semantic_path = ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py'
     semantic_text = semantic_path.read_text()
     capture_mixed_entry(semantic_text, semantic_path, classifier_only=True)
@@ -2288,7 +2367,7 @@ def main():
           str(compiler_count) + ' complete compiler/example captures / ' +
           str(static_count) + ' complete static-entry captures / ' +
           str(classifier_count) + ' calibrated failed-body classifiers / source unchanged')
-    print('guarded native entries: ' + str(len(measure_paths) + 1) + ' complete child/file captures / ' + str(measure_physical) +
+    print('guarded native entries: ' + str(len(measure_paths) + 1 + recipe_captures) + ' complete child/file captures / ' + str(measure_physical) +
           ' actual copied-entry physical refusals / five entry and three classifier body reds per entry; '
           'dispatch simulation separate from real native proof')
 

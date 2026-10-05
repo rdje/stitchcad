@@ -10,11 +10,15 @@ ROOT = Path(__file__).resolve().parents[4]
 ORDERED = ROOT / 'crates/sc-core/src/recipe/ordered.rs'
 STATEMENT = ROOT / 'crates/sc-core/src/recipe/statement.rs'
 WORK = ROOT / 'target/recipe_mutations'
-SOURCES = (ORDERED, STATEMENT)
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=SOURCES)
-originals = {path: path.read_bytes() for path in SOURCES}
-WORK.mkdir(parents=True, exist_ok=True)
+TEST_SOURCE = ROOT / 'crates/sc-core/tests/formula_recipe_contract.rs'
+FIXTURE_SOURCES = tuple(ROOT / ('docs/tasks/artifacts/formula_structure/' + name) for name in (
+    'recipe_cases.tsv', 'recipe_coupled_cases.tsv', 'canonical_worked_cases.tsv'))
+BOOK_SOURCE = ROOT / 'docs/book/src/spec/formula-language/examples.md'
+MUTABLE_INPUTS = (ORDERED, STATEMENT)
+SOURCES = (*MUTABLE_INPUTS, TEST_SOURCE, *FIXTURE_SOURCES, BOOK_SOURCE)
+assert sys.argv[1:] in [[], ['--classifier-only'], ['--coupled']]
+CLASSIFIER_ONLY = sys.argv[1:] == ['--classifier-only']
+COUPLED = sys.argv[1:] == ['--coupled']
 cases = [
     ('fixed bound', ORDERED, 'pub const MAX_STATEMENTS: usize = 4096;', 'pub const MAX_STATEMENTS: usize = 4097;'),
     ('early bound', ORDERED, 'statements.len() == Self::MAX_STATEMENTS', 'statements.len() == Self::MAX_STATEMENTS - 1'),
@@ -57,19 +61,52 @@ coupled_cases = [
      'statements.len() == Self::MAX_STATEMENTS', 'statements.len() == Self::MAX_STATEMENTS - 1',
      'coupled_all_statement_and_expression_limits_reach_their_maximum_together'),
 ]
+OUTPUT_FILES = (() if CLASSIFIER_ONLY else
+                tuple(WORK / ('%s-fault-%d.log' % ('coupled' if COUPLED else 'recipe', index))
+                      for index in range(1, len(coupled_cases if COUPLED else cases) + 1)) +
+                (WORK / 'restored.log',))
+MUTABLE_SOURCES = () if CLASSIFIER_ONLY else MUTABLE_INPUTS
+
+def assertion_sites(source, path):
+    """Current curated test macros, with Rust panic byte columns."""
+    sites = set()
+    for number, line in enumerate(source.splitlines(), 1):
+        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
+        if match is not None:
+            sites.add((path, number, len(match.group(1).encode()) + 1))
+    return sites
+
+def assertion_failure(output):
+    """A failed-body panic must name a guarded current assertion macro location."""
+    parts = output.split(b'\nfailures:\n', 2)
+    if len(parts) != 3:
+        return False
+    for match in re.finditer(
+            rb'(?m)^thread\b[^\r\n]*? panicked at ([^:\r\n]+):([0-9]+):([0-9]+):\r?$', parts[1]):
+        try:
+            path = match.group(1).decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if (path, int(match.group(2)), int(match.group(3))) in ASSERTION_SITES:
+            return True
+    return False
+
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=MUTABLE_SOURCES)
+originals = {path: path.read_bytes() for path in MUTABLE_INPUTS}
+WORK.mkdir(parents=True, exist_ok=True)
+ASSERTION_SITES = assertion_sites(TEST_SOURCE.read_text(), TEST_SOURCE.relative_to(ROOT).as_posix())
+assert ASSERTION_SITES, 'current recipe contract has no assertion macros'
 for name, path, before, _ in cases + [case[:4] for case in coupled_cases]:
     assert originals[path].decode().count(before) == 1, (name, 'actual source anchor not unique')
 
-def assertion_failure(output):
-    parts = output.split(b'\nfailures:\n', 2)
-    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None
-
-assert not assertion_failure(b'test assertion_contract ... ok\n\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_contract\n')
-assert assertion_failure(b'\nfailures:\nthread panicked:\nassertion `left == right` failed\n\nfailures:\nfixture\n')
+site = min(ASSERTION_SITES)
+location = ("\nfailures:\nthread 'fixture' panicked at %s:%d:%d:\n" % site).encode()
+assert assertion_failure(location + b'custom macro message\n\nfailures:\nfixture\n')
+assert not assertion_failure(b'test assertion_name ... ok\n\nfailures:\nthread panicked:\nassertion: expect-only\n\nfailures:\nassertion_name\n')
 assert not assertion_failure(b'assertion: compiler output\n')
-assert sys.argv[1:] in [[], ['--classifier-only'], ['--coupled']]
-if sys.argv[1:] == ['--classifier-only']:
-    print('recipe fault controls:20 uniquely matched actual fault anchors; passing-name/expect-only/compiler noise refused')
+if CLASSIFIER_ONLY:
+    print('recipe fault controls:20 uniquely matched actual fault anchors; current macro sites accepted; passing-name/labelled-expect/compiler noise refused')
     sys.exit(0)
 selected = coupled_cases if sys.argv[1:] == ['--coupled'] else [(*case, '') for case in cases]
 label = 'coupled' if sys.argv[1:] == ['--coupled'] else 'recipe'

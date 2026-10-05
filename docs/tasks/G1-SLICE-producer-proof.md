@@ -301,3 +301,68 @@ Pre-execution retention-helper review caught prefix replacement changing448 to46
 
   Final staged gate13 green, rc=0, target/domain-staged-gate.log.
 
+
+Source: `6bf5a554cccf4c99c34daff732f1e753930ab4d3`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Lexer mutation evidence](#lexer-mutations) | 48622–53125 | 4503 / 23 | `0efde56d17cc483c160e298e2affa156b251acca02c670e1cdbe0a6616ff7c45` |
+
+### Lexer mutation evidence
+
+Complete producer/wrapper/lexer.rs/name.rs/public exports/all13 tests/canonical .5a.1/grammar1–1.1/
+syntax-annex lexical sections/build book read. Test include_str compiles the worked examples; own
+its explicit input guard/frozen bytes. Own original full predicate/no-effect reproduction, four-input/
+two-mutable/ten-file/current macro plans, independent mixed-source complete capture/refusals/body
+faults and exclusive native/current full artifact proof. Preserve all Rust bytes unless actual
+fault evidence requires a separately owned test-helper repair. Own Target helpers/logs, whole
+completed length-body retention with full dcf8296 spans/SHA/canonical headers/prior sibling/map;
+whole older DEV/CH retention before growth/all prior450 records/readers/fixed caps. Also own the
+remaining build-book domain paragraph's old five-source wording: current captured plan includes
+six unique inputs/five mutable sources. Clarify that paragraph here and verify current prose and
+publication; no domain production change. Current lexer syntax/grammar/API/400 cadence unchanged.
+
+- [x] REPRODUCE / ISSUE: actual committed full lexer predicate accepts passed assertion_name plus expect-only failed body101 without native effects/two Rust writes, rc=0, target/lexer-predicate-diagnostic.log. D156 ten missing file plans/two mutable intentions/test+imported example inputs and D177 current macro provenance owned before edits. Complete producer/wrapper/lexer/name/public13 tests/canonical .5a.1/grammar/lexical book reviewed.
+- [x] ROOT CAUSE: directory/source plans omit file leaves/mutable ownership/test+compile-time examples; assertion bytes omit current macro provenance. Independently authored nine source/test bindings check all ten children/files and eleven source restorations. Six actual copied-entry first/last log/two mutable hard-link/missing test+examples refusals preserve bytes/environment before effects, rc=0, target/lexer-producer-controls-final.log. Simulation proves dispatch only.
+- [x] FIX: plan10 logs/four inputs/two mutable sources before reads; current public-test/scan-helper macro sites replace assertion bytes. Original9 CASES/two mutable/eight selected/full13 target exact. Shared296 body reds/32 classifiers/twelve captures/56 physical refusals plus prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls0, rc=0, lexer-producer-controls-final.log. Each mutable/example/final-restore/helper omission discriminates; Rust unchanged.
+- [x] ADDRESSED: exclusive nine real current macro reds/sites147:9,91:9,69:9,43:5,163:9,8:13,226:9,249:5,8:13/full13 restored0, rc=0, lexer-native-final.log/native-proof.log. Twelve frozen inputs/five Rust HEAD files/imported examples/original cases/ten local single-link logs exact. Public Cargo selects formula_lex_contract-34bf8258a6e0365b SHA c3f9ac80f4a6d2b6344155b8097259f42ff2d841d4f011939f0295671656364b; all13 tests0, rc=0, lexer-native-artifact-proof.log.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths52owners22groups/15refusals12reds/map/ledger9+13 pass, rc=0, lexer-*-final logs; terminals consumed. Whole dcf8296 CH22576–23179/7L603B/SHA136114b1/prior450/all48/public451/13open163sealed/no gaps/seven windows exact0, lexer-retention-final.log. Rust unchanged; latest broad703-test gate0165, not rerun. Build-book domain paragraph six unique inputs/five mutable sources verified0, lexer-domain-book-proof.log.
+- [x] LOCKSTEP: whole dcf8296 length body46222–51106/34L4884B/SHA17bc80e9/prior37033B sibling/canonical headers/status/Paths/map8102B exact, rc=0, lexer-producer-retention-proof.log. Book/live route .n05.2; parent stays active/D17712 fixed3 P1. Archive34raw/pressure in retention proof/fixed caps retained. Doc-sync syntax/first size gate1/relocated link1 excluded; bounded annex/full build proof repaired, size19surfaces0. promotion: declined (existing source/effect/whole-record rules). Grammar/400/local scope unchanged; runner unobserved.
+
+Staged gate first attempt1: PROJECT LIVE-DOC-SIZE names syntax annex41586B above40960B. Own reproducer target/lexer-staged-gate.log, public-doc signoff impact, bounded annex/build detail repair and fresh publication/gate before commit. Original Source stays exact; failed gate excluded. First relocated publication1 named its old relative profile link; rerouted to the current chapter fragment before fresh proof.
+
+  Final staged gate13 green, rc=0, target/lexer-staged-gate-final.log.
+
+
+Source: `6bf5a554cccf4c99c34daff732f1e753930ab4d3`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Semantic mutation modes](#semantic-modes) | 53804–58306 | 4502 / 24 | `5d705e966ae95f5ba8b8fb05858e68384ddc4e4ccdef2f80840d78f78d5a5293` |
+
+### Semantic mutation modes
+
+Complete entry/semantic.rs241L/public test260L/syntax annotations/public exports/canonical .5b.2a/
+contract2–3.1/metadata annex/build sections reviewed. No wrapper exists; direct script owns both
+modes. Test include_str reads formula-language.md tables; own that read-only third input along with
+current test and mutable source. Own original full prefix-classifier labelled-expect diagnostic,
+mode-specific files/mutables before activation, current assertion macros and unchanged10 cases/
+all5 restored public tests. Own independent complete ordinary/classifier-only captures, actual
+copied-entry physical refusals/body faults/environment retention and exclusive native/exact current
+artifact. Preserve Rust/book contract bytes unless actual fault evidence requires owned helper repair.
+Own Target helpers/logs and bounded docs; whole completed domain body retention from51f0dc5 with
+full spans/SHA/prior sibling/canonical headers/map, whole older lesson/ledger retention before growth/
+prior451 records/all public readers/seven windows/fixed caps. Parent .n05 closes after this child;
+D177 scope13 fixed2 pending only after actual proof. Grammar/metadata APIs/400 cadence unchanged.
+
+- [x] REPRODUCE / ISSUE: actual committed full semantic prefix classifier accepts labelled extraction fixture at current nonmacro147:42 without native effects/Rust writes, rc=0, semantic-predicate-diagnostic.log. D156 eleven missing filenames/test+canonical book input/ordinary mutable intention and D177 macro provenance owned before edits. Full entry/241L implementation/260L five-test contract/syntax annotations/public exports/canonical .5b.2a/contract2–3.1/metadata/build books reviewed.
+- [x] ROOT CAUSE: source/directory plan omits file leaves/current test/compile-time tables and mode-specific mutable intention; prefix bytes accept labelled extraction. Authored complete capture checks11 ordinary children/restorations and classifier-only zero children/source/output writes. Eight actual copied-entry physical refusals preserve inputs/environment before effects, rc=0, semantic-producer-controls-final.log. Simulation proves dispatch separately from native behavior.
+- [x] FIX: guard three inputs/current macro sites before reads; ordinary11 logs/one mutable, classifier-only zero files/mutables. Original10 CASES/full5 target exact. Shared312 body reds/33 classifiers/fourteen captures/64 physical refusals and prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls pass, rc=0, semantic-producer-controls-final.log. Each test/book/mode/native-effect/final-restoration omission discriminates. Rust/metadata/grammar unchanged.
+- [x] ADDRESSED: exclusive ten real macro faults/exact authored failed-test sets/full5 restored0, rc=0, semantic-native-final.log/native-proof.log. Thirteen frozen inputs/six Rust HEAD files/canonical table book/original cases/eleven local single-link logs exact. Cargo selects formula_semantic_contract-8d62a7b76b39ce43 SHA ac800f5d1eb44a34de41dca8d32d4b7f5d1060111389a987826a15497f625db9; all5 tests0, rc=0, native-artifact-proof.log. Actual readonly three-link source/unused aliases/classifier-only no-write/no-child0, readonly-mode.log.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths52owners22groups/15refusals12reds/map/ledger9+13 pass, rc=0, semantic-*-final logs; terminals consumed. Whole51f0dc5 DEV4939–6649/9L1710B/SHA9bdb2a3e and CH22438–23157/11L719B/SHA45304271/prior451/all49/public453/13open163sealed/no gaps/seven windows exact, rc=0, semantic-retention-final.log. Rust unchanged; latest broad703-test gate0165, not rerun; local scope/runner unobserved.
+- [x] LOCKSTEP: whole51f0dc5 domain body46910–51417/24L4507B/SHA90bc27ab/prior42294B sibling/canonical headers/map8102B exact, rc=0, semantic-producer-retention-proof.log. Book/live route .n06; lexer/semantic parent done/D17713 fixed2 P1. Archive36raw/17172L/1253225decodedB/576310residentB within fixed caps. Ambiguous two-match helper/source-end replacement caught before writes/replay; excluded, function/exact-scalar correction. promotion: declined (existing source/effect/whole-record rules).400 cadence stays.
+
+First shared-helper adaptation refused a two-match anchor before writes; function-scoped retry passed. Source-end retention anchor was corrected before replay; neither provisional helper was executed against tracked sources.
+
+  Final staged gate13 green, rc=0, target/semantic-staged-gate.log.
+

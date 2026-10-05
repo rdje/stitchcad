@@ -248,10 +248,17 @@ On64KiB stacks the API parses/clones/drops4096 statements, preserves50000 groupi
 17-depth refusals remain contextual. Fifteen new actual production faults in bounds/order/boundaries/
 indices/spans/whole-input/privacy compile and fail assertions. The existing fifteen statement faults
 also pass against the shared parser. Both exclusive runners restore exact production bytes; run them
-alone. The entry validates both sources/output before reads/writes and preserves prepared child stores.
-After exact restoration it rebuilds the full focused recipe target, including after coupled mode.
-Classifier-only and coupled selection remain available. The structural suite watches the independent
-producer and failure-classifier controls.
+alone. The entry plans seven inputs before reads: both implementations, the current public test,
+its three imported TSVs and the worked-example book page. Ordinary mode declares sixteen diagnostic
+files; coupled mode declares six. Both Rust implementations are explicitly mutable in those modes.
+Classifier-only mode prepares local stores/output directory and validates all twenty anchors/current
+macro sites with no declared files or mutable sources, no native child and no source/output write.
+Complete captures of all three modes, twenty-five physical refusals and actual omission controls
+preserve the fault lists, child selection and restoration order. Twenty real faults reach current
+assertion macros; small-stack child assertions qualify, whereas a labelled parent join alone does
+not. Twenty-two frozen inputs/twelve Rust files/four compile-time fixtures remain exact. After
+restoration the current Cargo-selected executable passes all eleven public contracts. The shared
+controls certify dispatch separately from native behavior; the grammar is unchanged. Two explicit test cardinality assertions guard indexed fixture reads.
 Native/release and WASM cross-compilation retain their stated scope. Coupled syntax review .3e.3
 is complete below; recipe normalization/identity .3f is implemented separately. Numerical execution
 and production approval remain owned future work.
