@@ -9,12 +9,15 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/canonical.rs'
 CONTRACT = ROOT / 'crates/sc-core/tests/formula_canonical_contract.rs'
-SOURCES = (SOURCE, CONTRACT)
+FIXTURE_SOURCES = tuple(ROOT / ('docs/tasks/artifacts/formula_structure/' + name) for name in (
+    'canonical_expression_cases.tsv', 'literal_normalization_cases.tsv', 'canonical_worked_cases.tsv')) + (
+    ROOT / 'docs/book/src/annexes/formula-literals.md',
+    ROOT / 'docs/book/src/spec/formula-language/examples.md')
+SOURCES = (SOURCE, CONTRACT, *FIXTURE_SOURCES)
 WORK = ROOT / 'target/canonical_expression_mutations'
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=SOURCES)
-ORIGINAL = SOURCE.read_bytes()
-WORK.mkdir(parents=True, exist_ok=True)
+assert sys.argv[1:] in [[], ['--coupled'], ['--classifier-only']]
+CLASSIFIER_ONLY = sys.argv[1:] == ['--classifier-only']
+coupled = sys.argv[1:] == ['--coupled']
 CASES = [
     ('root', 'vec![Action::Node(self.root)]', 'vec![Action::Node(0)]'),
     ('literal kind', 'text.push_str(literal.kind().token());', 'text.push_str("count");'),
@@ -41,30 +44,6 @@ CASES = [
      'FormulaCanonicalExpression { text: text + "\\n" }'),
     ('debug privacy', '.field("byte_count", &self.text.len())', '.field("text", &self.text)'),
 ]
-def assertion_sites(source, path):
-    sites = set()
-    for line_number, line in enumerate(source.splitlines(), 1):
-        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
-        if match is not None:
-            sites.add((path, line_number, len(match.group(1).encode()) + 1))
-    return sites
-
-
-def assertion_failure(output):
-    parts = output.split(b'\nfailures:\n', 2)
-    if len(parts) != 3:
-        return False
-    locations = re.finditer(rb'panicked at ([^:\n]+):([0-9]+):([0-9]+):\n', parts[1])
-    return any((match.group(1).decode('utf-8', 'replace'), int(match.group(2)), int(match.group(3)))
-               in ASSERTION_SITES for match in locations)
-
-ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
-assert ASSERTION_SITES, 'focused contract has no assertion sites'
-assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
-assert not assertion_failure(b'assertion: compiler output\n')
-
-coupled = sys.argv[1:] == ['--coupled']
-assert not sys.argv[1:] or coupled, 'only --coupled is accepted'
 if coupled:
     CASES = [
         ('worked addition', 'FormulaBinaryOperator::Add => "+",',
@@ -73,12 +52,60 @@ if coupled:
         ('wide call final argument', 'arguments.iter().rev()',
          'arguments.iter().rev().take(254)'),
     ]
-original_text = ORIGINAL.decode()
-for name, before, _ in CASES:
-    assert original_text.count(before) == 1, (name, 'actual anchor not unique')
-assert original_text.count('Action::Text(" ")') == 5
+ANCHOR_CASES = tuple(CASES)
 if not coupled:
     CASES.append(('spacing', 'Action::Text(" ")', 'Action::Text("  ")'))
+OUTPUT_FILES = (() if CLASSIFIER_ONLY else
+                tuple(WORK / ('fault-%d.log' % index) for index in range(1, len(CASES) + 1)) +
+                (WORK / 'restored.log',))
+MUTABLE_SOURCES = () if CLASSIFIER_ONLY else (SOURCE,)
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=MUTABLE_SOURCES)
+ORIGINAL = SOURCE.read_bytes()
+WORK.mkdir(parents=True, exist_ok=True)
+
+def assertion_sites(source, path):
+    """Current curated test macros, with Rust panic byte columns."""
+    sites = set()
+    for number, line in enumerate(source.splitlines(), 1):
+        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
+        if match is not None:
+            sites.add((path, number, len(match.group(1).encode()) + 1))
+    return sites
+
+
+def assertion_failure(output):
+    """A failed-body panic must name a guarded current assertion macro location."""
+    parts = output.split(b'\nfailures:\n', 2)
+    if len(parts) != 3:
+        return False
+    for match in re.finditer(
+            rb'(?m)^thread\b[^\r\n]*? panicked at ([^:\r\n]+):([0-9]+):([0-9]+):\r?$', parts[1]):
+        try:
+            path = match.group(1).decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if (path, int(match.group(2)), int(match.group(3))) in ASSERTION_SITES:
+            return True
+    return False
+
+ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
+assert ASSERTION_SITES, 'focused contract has no assertion sites'
+site = min(ASSERTION_SITES)
+location = ("\nfailures:\nthread 'fixture' panicked at %s:%d:%d:\n" % site).encode()
+assert assertion_failure(location + b'custom macro message\n\nfailures:\nfixture\n')
+assert not assertion_failure(location.replace(b"thread 'fixture'", b'compiler note:') +
+                             b'nonthread location mention\n\nfailures:\nfixture\n')
+assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
+assert not assertion_failure(b'assertion: compiler output\n')
+
+original_text = ORIGINAL.decode()
+for name, before, _ in ANCHOR_CASES:
+    assert original_text.count(before) == 1, (name, 'actual anchor not unique')
+assert original_text.count('Action::Text(" ")') == 5
+if CLASSIFIER_ONLY:
+    print('canonical expression classifier:19 unique/count-bound anchors; current thread macros; nonthread/expect/compiler noise refused')
+    sys.exit(0)
 environment = dict(os.environ)
 try:
     for index, (name, before, after) in enumerate(CASES, 1):

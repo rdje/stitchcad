@@ -53,13 +53,15 @@ if(a, 360 deg, -720 deg) => (if a angle:360000000 (- angle:720000000))
 probe(-1 um, 1 um ^ 2)  => (probe (- length:1) (^2 length:1))
 ```
 
-These are specified wire bytes, not executable recipe claims. Statement bind/assert serialization,
-recipe envelopes, hashing/project persistence and numerical evaluation remain separate work.
+These are specified identity bytes, without execution authority. Owned statement bind/assert and
+complete recipe identities are implemented by .3f.1c. Hashing/project persistence and numerical
+evaluation retain separate obligations.
 The received ruling settles both operator spellings; .3d.2 implements and verifies these exact bytes.
 
 G1-SLICE.5a.3d.2 implements owned expression bytes, preserving full128 literal magnitude and all
 ordered unevaluated structure; independent55 fixtures/seven public contracts/nineteen actual
-compiled assertion reds verify the scoped API. Ordered statements, storage and execution remain later work.
+compiled assertion reds verify the scoped API. Ordered statement/recipe normalization and identity
+are implemented by .3f.1b–c; storage and numerical execution remain later work.
 
 G1-SLICE.5a.3d.3 closes expression identity review: all25 worked expressions match independently
 verified authored bytes, the maximum255-argument call preserves complete order and nested aliases

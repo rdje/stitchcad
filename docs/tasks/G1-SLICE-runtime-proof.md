@@ -211,3 +211,42 @@ source intervals/SHA/prior462/all60/public reads/seven windows/IDs verified befo
 Final staged doctrine gate13 green, rc=0, target/recipe-input-staged-gate.log; terminal consumed.
 Final ledger9/pointer13/all focused jobs consumed; current full8 artifact/frozen27 inputs exact.
 
+
+Source: `0871a0c14c6e36088fd255902883788424cd4c6c`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Canonical recipe mode verification](#canonical-recipe-mode-verification) | 53449–57774 | 4325 / 30 | `150218d952eb01c108539889f38ef2916909000ccbb8cec8ad68ea33b1fb00b3` |
+
+### Canonical recipe mode verification
+
+Own eight direct inputs (implementation/current public test/four TSVs/book grammar/byte decision),
+both complete modes and physical/input/file/mutable/stores/restoration/current-thread controls.
+Preserve original21 pure cases/full10 argv; exclusive actual replay with independently authored
+failed-test sets, frozen31 inputs/current Cargo-selected full10 artifact. Rust helper changes only
+if actual failed bodies require them, with full required checks then. Own Target helpers/receipts,
+copied readonly mode and exact restoration; no native children during dispatch capture.
+Own whole committed .n07.3 body retention into runtime-proof, preserving prior21625B prefix,
+first62828B sibling/map8169B/canonical headers. Own whole literal lesson/Ease-set ledger rollover
+and D178 whole-report closure after all four actual repairs verify; prior464/all62/public reader
+records/seven windows/IDs exact before retirement. Book/live/frontier and fixed ceilings stay aligned.
+
+Four unchanged actual classifiers accept a nonthread compiler-note location mention inside a
+failed body: literal37:17/normalized13:5/normalized-recipe14:5/canonical-recipe10:5, rc=0,
+target/literal-nonthread-diagnostic.json. Root cause is an unanchored panicked-at regex; current
+location alone does not establish a thread panic. Own D178 P1 immediately in .n07.1–4, strict
+independent nonthread body controls/current thread macro matching and exclusive genuine replay.
+Later native groups inspect the same boundary before signoff; no broader population claim yet.
+
+- [x] REPRODUCE / ISSUE: actual canonical classifier accepts nonthread compiler note at current10:5 macro, rc=0, literal-nonthread-diagnostic.json. Complete serializer/public10 contracts/four TSVs/grammar4.1/byte decision/canonical protocol/book/roadmap reviewed. Eight inputs/implicit ordinary/classifier plans reproduce; original21 cases and grammar retained.
+- [x] ROOT CAUSE: unanchored panic regex accepts note without thread; source/directory-only plan omits six compile-time inputs,22 files/one mutable intention. Independent two-mode captures bind source/read order/full10 argv/restoration;18 physical refusals cover endpoints/mutable alias/all late inputs, rc=0, identity-producer-controls.log.
+- [x] FIX: guard eight inputs/22 ordinary files/one mutable/classifier zero files-mutables-native writes before effects. Original21 CASE AST/full10 argv/stores/restoration exact. Current thread macros/nonthread noise/independent legacy-regex fault discriminate;458 reds/35 classifiers/27 captures/157 refusals0, rc=0, identity-producer-controls.log;24 mode omissions.
+- [x] ADDRESSED: exclusive21 full-target faults match independently authored failed-test sets; every failed body has current macro including small-stack workers.31 frozen inputs/18 Rust HEAD files/six compile-time inputs/22 single-link logs/original cases/full10 restore exact, rc=0, identity-native.log/native-proof.log. Current full10 artifact 1af368d604514cd96a43c31bed7f123afb2f5d76dee992c1e138665d292d635f passes0, native-artifact-proof.log; no helper repair.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67/29/file120paths56owners26groups/15refusals12reds/map/ledger9+13 pass0, rc=0, identity-*.log. Copied readonly class accepts3-linked input/unused aliases/zero child-source-output writes/all inputs-victim-environment exact. Rust unchanged/full fmt-strict Clippy/native703 gate0170 applies; new WASM/evaluation/runner unobserved.
+- [x] LOCKSTEP: whole6618640 normalized recipe52706–56817/4111B25L/SHA8e360fc1 copied/verified before retirement; first62828B sibling/second21625B prefix/map8169B/canonical headers/caps exact, rc=0, identity-task-retention-proof.log. WholeDEV209/CH153/D178100/prior464/all62/public467/12open165sealed/seven windows exact, retention-proof.log. D178 four repaired/replayed/closed; parent done/.n08 next/D156 open; promotion declined/grammar/400 stay.
+
+Final staged doctrine gate13 green, rc=0, target/identity-staged-gate.log; terminal consumed.
+Final publication45/coverage9/census and frozen31/current full10 artifact bytes exact; Rust unchanged.
+Confirmatory post-doc ledger replay pending; prior nine probes/thirteen pointer controls pass0.
+Consume its terminal (or replay after recovery) before starting .n08; verified slice committed now.
+

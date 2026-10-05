@@ -991,3 +991,17 @@ D172–D176 closures retained in [part98](../history/stitchcad-defects-part98.md
 D177 whole report/verified closure retained in [part99](../history/stitchcad-defects-part99.md).
 
 D178 whole report/progressive evidence/verified closure retained in [part100](../history/stitchcad-defects-part100.md).
+
+- **D179** — four further canonical/checked failed-body classifiers accept nonthread macro
+  mentions. Actual AST-extracted functions accept compiler-note panicked-at fixtures at current
+  canonical27:9/checked-expression194:5/checked-statement71:5/checked-recipe69:5 macro locations,
+  rc=0, target/canonical-thread-diagnostic.json; no entry imports/source effects/native children.
+  Root cause: unanchored panic regex, same boundary as the bounded four-entry D178 closure.
+  Impact: false acceptance of mutation evidence. P1, owned immediately by
+  G1-SLICE.5b.4c.h2.b.p.o.f.n08.1–4; require current thread macro locations, independent nonthread
+  controls/legacy-regex faults and exclusive original real cases/full current artifact before closure.
+  Canonical .n08.1 fixed: independent nonthread/legacy-regex controls and19+3 actual macro faults/
+  authored failed sets/26 frozen inputs/final full9 artifact0. Checked .n08.2–4 remain immediate P1.
+  No broader count claimed.
+
+D180 whole report/verified closure retained in [part101](../history/stitchcad-defects-part101.md).

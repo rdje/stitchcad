@@ -383,12 +383,25 @@ On a 64 KiB stack, parsing/normalization/serialization handles 256-node unary an
 levels, 50,000 grouping pairs and a 100,000-byte identifier. Existing node257/if17 refusals stay intact.
 Nineteen actual compiled faults alter root, kind/magnitude/full width, name/sign/square/symbols,
 ordered binary/call/conditional children, call coverage, whitespace/newline or Debug privacy. They
-must fail public assertions in failed-test bodies. Reported panic paths, lines and columns must
-match assertion macro sites in the current focused test source; custom assert messages are valid.
-Passing names, summaries and assertion-labelled expect messages cannot supply proof. The entry
-validates both implementation and test-source paths/output before reads/writes and
-preserves prepared child stores. Its exclusive runner restores exact source and rebuilds the full
-focused target, including after coupled selection. Run mutations alone.
+must fail public assertions in failed-test bodies. A thread panic path/line/byte column must match
+a current guarded assertion macro; custom messages pass. Nonthread location mentions, passing names
+and labelled extraction messages refuse. The entry plans seven inputs before effects: implementation/
+current test/three TSVs/this chapter/worked examples. Ordinary mode declares twenty diagnostic files;
+coupled mode declares four. Both declare one mutable source and retain prepared local child stores.
+Classifier-only mode declares zero files/mutable sources/native effects:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py --classifier-only
+```
+
+All three complete captures, twenty-five physical refusals and actual input/file/mutable/stores/
+restoration/mode/coupled-selector faults calibrate the plans. The five spacing replacements stay
+coupled; ordinary19/coupled3 cases and native arguments remain unchanged. Copied classifier-only
+mode accepts linked readonly input/unused log aliases without source/output writes. Dispatch proof
+and real native behavior are separate. Each native mode restores exact source and rebuilds all nine
+public tests before returning. Run mutations alone; consume the terminal/current artifact before
+starting another mode, probe or build. [Current replay receipts](../build-and-checks.md#direct-python-producers)
+record the real behavior separately from the historical .3d.2/.3d.3 receipts.
 
 G1-SLICE.5a.3d.2 owns this product serializer; .3d.3 completes the coupled identity review below.
 [Ordered recipe normalization/statement identity](formula-recipe-inputs.md) is now available.
@@ -419,8 +432,9 @@ its verified implementation commit. The additional controls exercise the coupled
 The canonical suite now has nine public tests. Three additional actual compiled faults (worked
 addition symbol, wide-call order and loss of the last legal argument) fail the two new coupled
 tests as assertions. The exclusive runner restores exact source and rebuilds all nine tests. The initial nineteen fault
-controls remain retained proof of the unchanged serializer; the three new reds verify the additional
-controls, rather than claiming a fresh execution of the initial nineteen.
+controls are historical proof of the unchanged serializer; those three .3d.3 reds verified the
+additional controls without claiming a fresh initial nineteen-case execution. The current ordinary
+and coupled modes retain all nineteen and three cases respectively, with full nine-test restoration.
 
 ```bash
 cargo test -p sc-core --test formula_canonical_contract
@@ -429,6 +443,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_mutati
 ```
 
 The reference producer watches exact worked-source membership as well as bytes. Native/release tests
-and three-crate WASM compilation pass within their existing scope. Statement bind/assert bytes,
-complete recipe input normalization, name/type checks, bound numeric values, evaluation, geometry, storage and
-command/API/MCP remain owned by later leaves. Expressions that serialize can still be refused there.
+and three-crate WASM compilation retain their scoped historical receipts. Ordered statement/recipe
+normalization and identity are [implemented](formula-recipe-inputs.md), with separate complete
+[name/kind proofs](formula-checked-recipes.md). Bound numeric values, evaluation, geometry, storage and
+command/API/MCP remain later work. Expressions that serialize can still be refused there.

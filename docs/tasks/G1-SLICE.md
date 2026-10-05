@@ -803,7 +803,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n08` | `todo` | checked/canonical mode plans/D156, then native groups/D156/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n08.2` | `todo` | checked-expression modes/D179, then remaining plans/D156, then native groups/D156/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

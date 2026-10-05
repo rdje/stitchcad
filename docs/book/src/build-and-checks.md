@@ -288,6 +288,22 @@ compile-time inputs and the current full ten-test executable restore exactly. D1
 four original classifiers and their native cases are independently repaired and replayed; remaining
 native groups inspect the boundary before signoff, with no broader affected-population claim.
 
+Canonical expression plans seven inputs: implementation/current test/three imported TSVs/literal
+annex/worked examples. Ordinary mode declares twenty diagnostic files; coupled mode declares four;
+both declare one mutable source. Classifier-only declares zero files/mutable sources/native effects.
+Three complete captures/twenty-five physical refusals and thirty-five mode faults preserve original
+nineteen ordinary/three coupled cases, all five spacing replacements and the coupled_ selector.
+Current thread macros qualify; nonthread mentions refuse with an independent legacy-regex fault.
+Copied readonly mode accepts linked input/unused aliases without source/output writes. Original19
+and3 real faults match authored failed-test sets; every failed body has current macros, including
+small-stack workers. Consume each restored full9 executable before the next mode; ordinary evidence
+is copied before coupled mode reuses diagnostic filenames. Twenty-six frozen inputs/fourteen unchanged
+Rust files/five compile-time inputs remain exact through both runs. A final availability correction
+changes only imported annex prose, retaining its six normative rows and the other twenty-five inputs;
+the final current full nine-test executable is rebuilt and verified against that exact documentation.
+D179 canonical fixed; checked expression/statement/recipe repairs remain immediate P1 .n08.2–4.
+D180 active decision/annex availability drift is fixed; identity bytes/grammar remain unchanged.
+
 D177's fifteen entries/sixteen predicates are now repaired and independently replayed. Current
 macro locations and calibrated failed-body controls replace message substrings and labelled
 extraction/join panics. This closes that diagnostic defect; the remaining D156 producer plans
@@ -438,7 +454,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and458 actual body faults, with35 calibrated failed-body classifiers,
+controls and494 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

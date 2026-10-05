@@ -553,41 +553,90 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
   Paths: docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py
   Acceptance: complete plans before effects; preserve public behavior/grammar, prepared stores and exact current source/artifact. D178 P1 nonthread evidence repair before signoff.
 
-Own eight direct inputs (implementation/current public test/four TSVs/book grammar/byte decision),
-both complete modes and physical/input/file/mutable/stores/restoration/current-thread controls.
-Preserve original21 pure cases/full10 argv; exclusive actual replay with independently authored
-failed-test sets, frozen31 inputs/current Cargo-selected full10 artifact. Rust helper changes only
-if actual failed bodies require them, with full required checks then. Own Target helpers/receipts,
-copied readonly mode and exact restoration; no native children during dispatch capture.
-Own whole committed .n07.3 body retention into runtime-proof, preserving prior21625B prefix,
-first62828B sibling/map8169B/canonical headers. Own whole literal lesson/Ease-set ledger rollover
-and D178 whole-report closure after all four actual repairs verify; prior464/all62/public reader
-records/seven windows/IDs exact before retirement. Book/live/frontier and fixed ceilings stay aligned.
-
-Four unchanged actual classifiers accept a nonthread compiler-note location mention inside a
-failed body: literal37:17/normalized13:5/normalized-recipe14:5/canonical-recipe10:5, rc=0,
-target/literal-nonthread-diagnostic.json. Root cause is an unanchored panicked-at regex; current
-location alone does not establish a thread panic. Own D178 P1 immediately in .n07.1–4, strict
-independent nonthread body controls/current thread macro matching and exclusive genuine replay.
-Later native groups inspect the same boundary before signoff; no broader population claim yet.
-
-- [x] REPRODUCE / ISSUE: actual canonical classifier accepts nonthread compiler note at current10:5 macro, rc=0, literal-nonthread-diagnostic.json. Complete serializer/public10 contracts/four TSVs/grammar4.1/byte decision/canonical protocol/book/roadmap reviewed. Eight inputs/implicit ordinary/classifier plans reproduce; original21 cases and grammar retained.
-- [x] ROOT CAUSE: unanchored panic regex accepts note without thread; source/directory-only plan omits six compile-time inputs,22 files/one mutable intention. Independent two-mode captures bind source/read order/full10 argv/restoration;18 physical refusals cover endpoints/mutable alias/all late inputs, rc=0, identity-producer-controls.log.
-- [x] FIX: guard eight inputs/22 ordinary files/one mutable/classifier zero files-mutables-native writes before effects. Original21 CASE AST/full10 argv/stores/restoration exact. Current thread macros/nonthread noise/independent legacy-regex fault discriminate;458 reds/35 classifiers/27 captures/157 refusals0, rc=0, identity-producer-controls.log;24 mode omissions.
-- [x] ADDRESSED: exclusive21 full-target faults match independently authored failed-test sets; every failed body has current macro including small-stack workers.31 frozen inputs/18 Rust HEAD files/six compile-time inputs/22 single-link logs/original cases/full10 restore exact, rc=0, identity-native.log/native-proof.log. Current full10 artifact 1af368d604514cd96a43c31bed7f123afb2f5d76dee992c1e138665d292d635f passes0, native-artifact-proof.log; no helper repair.
-- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67/29/file120paths56owners26groups/15refusals12reds/map/ledger9+13 pass0, rc=0, identity-*.log. Copied readonly class accepts3-linked input/unused aliases/zero child-source-output writes/all inputs-victim-environment exact. Rust unchanged/full fmt-strict Clippy/native703 gate0170 applies; new WASM/evaluation/runner unobserved.
-- [x] LOCKSTEP: whole6618640 normalized recipe52706–56817/4111B25L/SHA8e360fc1 copied/verified before retirement; first62828B sibling/second21625B prefix/map8169B/canonical headers/caps exact, rc=0, identity-task-retention-proof.log. WholeDEV209/CH153/D178100/prior464/all62/public467/12open165sealed/seven windows exact, retention-proof.log. D178 four repaired/replayed/closed; parent done/.n08 next/D156 open; promotion declined/grammar/400 stay.
-
-Final staged doctrine gate13 green, rc=0, target/identity-staged-gate.log; terminal consumed.
-Final publication45/coverage9/census and frozen31/current full10 artifact bytes exact; Rust unchanged.
-Confirmatory post-doc ledger replay pending; prior nine probes/thirteen pointer controls pass0.
-Consume its terminal (or replay after recovery) before starting .n08; verified slice committed now.
+Complete committed verification retained in [producer proof](G1-SLICE-runtime-proof.md#canonical-recipe-mode-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08`
-  Status: `pending`
+  Status: `in progress`
   Goal: complete file-destination plans for expression/statement/whole checks; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_statement_mutations.py;docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+Own STITCHCAD-G1-0176 clean0871a0c split after final post-doc ledger9/pointer13 terminal0,
+target/identity-ledger.log. Four entries read completely443L; canonical implementation144L/public
+nine tests257L/compile-time inputs/canonical/book protocol reviewed before its repair.
+Own pure current-classifier/thread-boundary diagnostics for all four children before Target outputs;
+actual source functions/current Rust macro paths only, no source effects or native dispatch.
+Log/schedule measured defects under these children before repair, preserving D178's bounded closure.
+Own mode captures/physical refusals/omission controls/exclusive native/current artifact/whole record
+retention/book/live/frontier; canonical ordinary19/coupled3 cases and full9 restoration preserved.
+Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;
+docs/tasks/PLANNING.md;docs/tasks/G1-SLICE-runtime-proof.md;docs/tasks/G1-SLICE.md;
+docs/TASK_TREE.md;MEMORY.md;DEV_NOTES.md;CHANGELOG.md;LIVE_STATUS.md;docs/book/src/annexes/formula-literals.md;
+docs/book/src/build-and-checks.md;Target diagnostic/native/retention helpers and receipts.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0176: canonical-expression ordinary/coupled/classifier-only complete modes; seven direct inputs/20 ordinary or4 coupled files/one mutable source/classifier zero effects. Preserve original19+3 cases/all spacing occurrences/argv/current full9 artifact; independent controls and exclusive real macro replay.
+  Paths: docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py
+  Acceptance: complete plans before effects; current thread macro diagnostics and owned measured defects resolved before signoff. Grammar/400 cadence unchanged.
+
+Initial shared canonical capture used lowercase cases for the uppercase CASES container: actual
+producer replay KeyError/refusal, rc=1, canonical-mode-producer-controls.log first attempt26979.
+No real source write/native child; scoped case-container dispatch corrected. Fresh terminal54176
+passes494 body reds/35 classifiers/30 captures/182 physical refusals0; failed setup excluded.
+Imported annex mode prose aligned before native freeze; all six normative arrow rows byte-exact.
+
+Own census refusal after the four-child split: actual terminal-owner parser finds four stale
+parent-owned TSV rows. Repair python_file_entries.tsv to .n08.1–4 before signoff; independent
+membership diagnostic derives120 paths/59 owners/29 native groups. Existing split-owner/data
+refusal/body-omission controls must pass unchanged; original failed census is excluded.
+Additional path: docs/tasks/artifacts/ci_environment/python_file_entries.tsv.
+
+Own whole oldest normalized-expression lesson/signed-round ledger rollover into DEV210/CH154
+before live growth; prior467/all65/public readers/seven windows/source intervals/SHA exact.
+Own whole current authored D180 report plus verified closure into defects101 after scoped evidence;
+report is new in this slice, never attribute its original bytes to an earlier commit.
+
+D180 also owns coupled-annex footer availability drift found on final scope review. Native19+3
+terminal/macro sets/full9 artifacts/frozen26 exact before this correction; snapshots retained.
+Only imported annex prose changes afterward; six normative rows/other25 inputs/Rust14 stay exact.
+Re-freeze that one declared documentation input and rebuild/run current full9 before commit; no
+new native-mutation proof is inferred from the final publication build.
+
+Own P2 D180 active canonical-spelling decision's stale statement/recipe-future claims; inspect
+8ed2893 introduction/7c81533 serializer/public typed APIs and repair current availability prose,
+preserving director's exact byte ruling. Additional path: docs/decisions/decision_canonical-expression-spelling.md.
+Align imported literal-annex mode prose before native freeze; retain its six normative arrow rows
+exactly. Keep later earned replay receipts in non-imported build/task/live records so compile-time
+inputs remain byte-exact through original19+3 replay and current full9 artifact verification.
+
+- [x] REPRODUCE / ISSUE: four actual extracted classifiers accept nonthread macro notes, rc=0, canonical-thread-diagnostic.json; D179 P1 owned. Four entries443L/canonical144L/public9 tests257L/five imported inputs/byte decision/protocol/grammar/book reviewed; canonical27:9 note accepted.
+- [x] ROOT CAUSE: unanchored panic regex accepts nonthread locations; source/directory guard omits complete mode intentions. Three independent captures bind reads/19+3 cases/five spacing replacements/coupled_ argv/stores/restoration;25 physical refusals0, producer-controls.log.
+- [x] FIX: seven inputs/ordinary20 files/coupled4/one mutable/classifier zero effects before reads. Original case ASTs/argv exact; thread/noise/legacy fault discriminate. Shared494 reds/35 classifiers/30 captures/182 refusals0, producer-controls.log;35 mode faults. Initial container setup1 corrected/excluded.
+- [x] ADDRESSED: exclusive19+3 real faults match authored failed sets/every failed body current macro;26 replay inputs/14 Rust HEAD/five imported inputs/20+4 single-link copied logs exact; each full9 consumed before next mode. Later annex prose alone changes/six rows/other25 exact; current full9 b5d3900b passes0, native-final-artifact.log.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67/29/file120paths59owners29groups/15refusals12reds/map/ledger9+13 pass0, canonical-mode-*.log. Readonly3-linked input/unused log aliases/zero child-source-output writes exact. Four stale TSV owners corrected; failed census excluded. Rust unchanged/703 gate0170 applies; new WASM/runtime/runner unobserved.
+- [x] LOCKSTEP: whole0871a0c recipe4325B30L/53449–57774/SHA150218d9 copied/verified before retirement; first62828B/second26170B prefix/map8169B/headers/caps exact0, task-retention-proof.log. WholeDEV210/CH154/new D180101/prior467/all65/public470/seven windows/13open166sealed exact0, retention-proof.log. D180 fixed/D179 canonical fixed/3 P1 next/parent active/D156 open; promotion declined/grammar/400 stay.
+
+Staged gate13/0.
+Post-doc ledger pending: target/canonical-mode-ledger-final.log; consume before .n08.2.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.2`
+  Status: `pending`
+  Goal: checked expression sixteen multistep faults/17 ordinary files/classifier zero effects; complete current implementation/contracts/inputs/modes and real macro replay before signoff.
+  Paths: docs/tasks/artifacts/formula_structure/checked_expression_mutations.py
+  Acceptance: preserve every ordered replacement/argv/restoration/current artifact; independent complete captures/physical refusals/body faults and actual replay. Grammar/400 cadence unchanged.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.3`
+  Status: `pending`
+  Goal: checked statement twenty-two faults/23 ordinary files/three mutable sources/classifier zero effects; complete input/mode plans/current thread macros and real replay.
+  Paths: docs/tasks/artifacts/formula_structure/checked_statement_mutations.py
+  Acceptance: preserve all source bindings/count-limited replacements/full target/stores/restoration; independent complete controls/current artifact. Grammar/400 cadence unchanged.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.4`
+  Status: `pending`
+  Goal: checked recipe nineteen faults/baseline+fault+restored21 ordinary files/classifier zero effects; complete input/mode plans/current thread macros and real replay.
+  Paths: docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py
+  Acceptance: preserve initial baseline/all count-limited replacements/full target/stores/restoration; independent complete controls/current artifact. Grammar/400 cadence unchanged.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09`
   Status: `pending`
