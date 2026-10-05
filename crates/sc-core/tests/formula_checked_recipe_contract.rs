@@ -446,7 +446,9 @@ fn complete_dependencies_preserve_unknown_records_repetitions_and_strictly_prior
     .unwrap();
     let source = " \tlet first:length=width/0\nassert test:eps_fmt=first==width\nlet second:length=if(is_base_size,first+first,width)\nlet third:length=second+first";
     let recipe = normalized(source);
-    let proof = recipe.check_kinds(namespace.clone()).unwrap();
+    let result = recipe.check_kinds(namespace.clone());
+    assert!(result.is_ok());
+    let proof = result.unwrap();
     exact_owner(&proof, &recipe);
     let dependencies: Vec<_> = proof.dependencies().collect();
     assert_eq!(
@@ -539,7 +541,9 @@ fn complete_dependencies_preserve_unknown_records_repetitions_and_strictly_prior
     ))
     .unwrap()])
     .unwrap();
-    let other_proof = recipe.check_kinds(other_namespace).unwrap();
+    let result = recipe.check_kinds(other_namespace);
+    assert!(result.is_ok());
+    let other_proof = result.unwrap();
     assert_eq!(proof.canonical_recipe(), other_proof.canonical_recipe());
     assert!(
         matches!(other_proof.dependencies().next().unwrap().declaration().source(),

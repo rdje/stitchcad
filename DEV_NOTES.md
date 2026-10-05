@@ -14,6 +14,15 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — checked recipe baseline, modes and guarded extraction
+
+- Two inputs/21 baseline-fault-restored files/one mutable; class0 effects. Original19/count2 sites/full7 argv/stores/restoration exact. Shared546 reds/35 classifiers/36 captures/204 refusals0;16 mode faults/legacy red. Readonly3 links/unused aliases/zero children or writes0.
+- D184 original2/E449:55 extraction101/nonmacro1 restored source/all inputs/full7 before two acceptance guards in one existing unknown/alternate-record test; first measured, alternate same cause. Real19 authored sets/every failed body macro/72 inputs/63 Rust HEAD/21 logs/full7
+  ed0c34ff exact0.
+- Full fmt/strict Clippy/59groups703passed/0failed/0ignored0; frozen inputs/artifact exact. D179 bounded four-family and D184 closed; D156 open/next .n09. Grammar/engine/400 stay; new WASM/runner unobserved.
+- Wholecde statement7512B78L retained52564–60076/SHA9d309ecc;48433B prefix/first62828B/map8169B exact0. DEV2131877B13L/CH157756B9L/D179105/D184106/prior477/all75/public481/seven windows/12open171sealed exact0. Archive64 includes7 catalogs; derive window8 before growth.
+- First shared baseline-order setup refused/excluded; explicit classifier no-child capture guard corrected. Publication45/coverage9/census229paths288checks/ledger9+13 rc=0. Promotion declined: existing complete-plan/current-macro/whole-retention doctrine covers this lesson.
+
 ## _(2026-10-05 UTC)_ — checked statement modes and guarded extraction
 
 - Four inputs/23 files/3 mutables; class0 effects. Original22 source/count cases/argv/stores/restoration exact. Shared529 reds/35 classifiers/34 captures/198 refusals0;20 mode faults/legacy red. All3 readonly sources/3 links each/unused aliases exact0.
@@ -33,19 +42,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Shared catalog-name collision and Target boundary/proof-edit preparations failed/excluded; valid partial DEV211 copy preserved/verified before completion. Publication45/coverage9/census229paths288checks/ledger9+13 pass0. Promotion declined (existing preflight/current
   macro/whole retention). Archive57 includes seven catalogs; two checked P1 next; D156 open/400 stay.
 
-## _(2026-10-05 UTC)_ — canonical expression modes and current thread evidence
-
-- Seven inputs/ordinary20 files/coupled4/one mutable; class-only zero files/mutables/native effects. Original19+3 case ASTs/global five-space replacements/coupled_ argv/full9 restoration exact. Three mode captures/25 physical refusals/35 mode faults/legacy-regex discrimination
-  pass0.
-- Shared494 body reds/35 classifiers/30 captures/182 physical refusals0. Initial lowercase cases lookup refused before real source/native writes; uppercase dispatch corrected, failed setup excluded. Copied readonly class accepts3-linked input/unused aliases with zero
-  child/source/output writes.
-- Actual19 ordinary and3 coupled faults match authored failed sets; every failed body has current macros, including workers.26 replay inputs/14 Rust HEAD files/five compile-time inputs exact; full9 artifact consumed before next mode. Ordinary single-link evidence copied before
-  coupled log reuse; all copies exact.
-- D180 decision/coupled-annex footer availability corrected. Imported prose changes after replay; old26 snapshot/six normative rows/other25 inputs exact. Final full9 Cargo artifact b5d3900b passes0 with updated26 inputs. Four stale TSV owners refused census; child owners
-  corrected, failed run excluded.
-- Whole0871a0c recipe4325B/30L retained53449–57774/SHA150218d9; first62828B/second26170B prefix/map8169B exact. Whole expression2174B/15L/signed-round665B/8L/new D180 report in DEV210/CH154/defects101; prior467/all65/public470/seven windows/13open166sealed exact.
-- Publication45/coverage9/census229paths288checks/effect67/29/file120/59/29/map/ledger controls0. Rust unchanged/full fmt-strict Clippy/703 gate0170 applies; new WASM/evaluation/runner unobserved. Promotion declined (existing complete plans/current macros/whole records); D179
-  three P1 next/D156 open/grammar/400 stay.
+Whole canonical expression modes and thread lesson retained in [part213](docs/history/stitchcad-devnotes-part213.md).
 
 Whole canonical recipe modes and thread lesson retained in [part212](docs/history/stitchcad-devnotes-part212.md).
 
@@ -187,3 +184,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part211`](docs/history/stitchcad-devnotes-part211.md) | whole normalized recipe modes and thread lesson | 11 lines, 1852 bytes, `sha256:1e85ead9…` |
 
 | [`part212`](docs/history/stitchcad-devnotes-part212.md) | whole canonical recipe modes and thread lesson | 10 lines, 1694 bytes, `sha256:30fc4963…` |
+
+| [`part213`](docs/history/stitchcad-devnotes-part213.md) | whole canonical expression modes and thread lesson | 13 lines, 1877 bytes, `sha256:a67f7f9c…` |

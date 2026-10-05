@@ -167,11 +167,34 @@ borrows. The four Rust examples in this chapter compile and execute against Carg
 The compiler entry validates its implementation source, this chapter and output directory before
 reading fixtures or invoking Cargo. Cargo, Rustc and example executions retain prepared stores;
 public Cargo JSON supplies the current library and dependency search directories.
-Actual compiled whole-proof faults require running public assertion failures, with source and
-complete focused artifact restored. The direct entry validates implementation/test source and output
-before reads/writes and preserves prepared child stores. Failed-body panic locations must match
-current test assertion macro sites; custom assert messages pass, while compile/link/expect-only noise
-refuses. Classifier-only mode compiles no native fault. Run mutations exclusively.
+The direct native entry plans the implementation and current public test inputs before reads or
+effects. Ordinary mode declares all twenty-one baseline/fault/restored diagnostic files and one
+mutable implementation source. It preserves the initial full-target baseline, nineteen ordered case
+bindings, both count-two replacements, full seven-test argv, prepared child stores and exact source
+restoration before consuming the current complete artifact.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py --classifier-only
+```
+
+Classifier-only plans zero files, mutable sources or native effects. A read-only input with three
+hard links and unused baseline/fault/restoration aliases is accepted without child dispatch or
+source/output writes. A failed body's current thread panic path, line and byte-column must identify
+an assertion macro; custom assertion messages pass. Nonthread macro mentions, compiler/linker noise,
+expect-only panics and test names refuse. Two complete captures, six physical refusals, sixteen mode
+faults and an independent legacy-regex fault distinguish missing baseline dispatch, incomplete plans,
+lost count-two replacements and missing restoration. Complete captures bind the baseline before any
+source mutation, each original fault and the final restored call.
+
+Exclusive replay of all nineteen real faults matches independently source-derived failing-test sets;
+every failed body reaches a current macro. D184's first observed unknown-record extraction failure
+restored exact inputs/source/full target before edits. Two acceptance checks now precede extraction
+in that existing unknown/alternate-record test; the alternate block shares the same cause, rather
+than a separately observed panic. Seventy-two frozen inputs, sixty-three unchanged production Rust
+files, twenty-one local diagnostic files and Cargo's current full seven-test executable remain exact.
+Full formatting, strict Clippy and fifty-nine native groups/seven-hundred-three tests pass. D184 and
+the bounded four-family D179 diagnostic repair are closed; no broader classifier claim follows.
+Run native mutations exclusively and consume restoration before another build or probe.
 
 A statically valid false assertion, zero divisor, negative square root, absent size/export context
 or too-wide stored result still has no execution verdict. The proof reads no values, providers or

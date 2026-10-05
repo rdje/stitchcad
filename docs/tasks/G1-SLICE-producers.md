@@ -578,89 +578,74 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
   Paths: docs/tasks/artifacts/formula_structure/checked_statement_mutations.py
   Acceptance: preserve all source bindings/count-limited replacements/full target/stores/restoration; independent complete controls/current artifact. Grammar/400 cadence unchanged.
 
-Start clean9d18303/40 unpushed/brief0/no outstanding jobs. Own STITCHCAD-G1-0178;
-read current entry/public7/three implementations/current-statement book/G1 exit before code.
-Own shared producer complete-mode captures/physical refusals/current thread-only classifier,
-Target source-only diagnostic/readonly/exclusive22/native artifact/focused logs and whole
-committed .n08.2 retention into runtime proof before growth. Own live/history/book/frontier
-sync within fixed caps; grammar and400 cadence unchanged. No new runtime/runner proof.
-Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;
-docs/book/src/annexes/formula-name-scopes.md;docs/book/src/build-and-checks.md;
-docs/tasks/G1-SLICE-runtime-proof.md;live/history records.
-
-Shared actual529 body reds/35 classifiers/34 complete captures/198 physical refusals0,
-checked-stmt-producer-controls.log. AST functions current71:5: thread true/nonthread true
-before, thread true/nonthread false after0; no entry import/native/source effects.
-Own exclusive original faults1/header privacy,9/direct class refusal,22/prior scope proof
-selected public diagnostics before any test repair. All project source inputs/source hashes and
-full7 restoration must finish before each next mutation. If extraction panics are measured,
-own immediate acceptance/refusal preconditions in formula_checked_statement_contract.rs,
-with every failed body current-macro proof and required full Rust gate before closure.
-Additional path: crates/sc-core/tests/formula_checked_statement_contract.rs.
-
-First diagnostic preparation refused before native/source/log effects: CASES uses three named
-source constants, so literal_eval cannot convert Name nodes. Validate/evaluate only the four
-constant/list assignment ASTs without builtins/importing the entry; failed setup excluded.
-
-Own whole oldest canonical-recipe lesson DEV212 and G1-0166 ledger CH156 retention before
-live growth; preserve committed source intervals/hashes/all474 logical/all72 control files.
-New D183 report/closure retention, public retrieval/IDs/window census and caps before signoff.
-
-D183 measured fault1/F544:10, fault9/E479:14, fault22/D387:74 extraction panics.
-Own four public preconditions: privacy/direct-class refusal and two prior-source acceptance
-blocks, the second sharing the proven extraction-before-check cause. Native diagnostics each
-require all frozen inputs/exact source/full7 restored0 before test edits; full703 gate required.
-
-Source-only prediction correction before reading any full replay failure block: direct-class
-test E checks args.operands but not args.operation/wanted rows. Case12 operation-only mutation
-therefore predicts B, not BE; actual public function census/hash saved in operation-prediction.json,
-rc=0. Other authored failed sets remain; no product defect or native rerun claim from this setup.
-
-First full failed-set verifier refused case15: predicted ABC, actual AC. Source/log diagnostic
-checks all22 sets and isolates only this mismatch; public B asserts proof ordinal, never error
-ordinal. Actual source census/hash in failed-set-diagnostic.json0. Own corrected AC prediction
-and exclusive original15 full-target repeat/frozen72/source/full7 restoration before signoff;
-failed setup excluded, no product defect inferred from the prediction error.
-
-Original22 native57656 terminal0/source/all3/full7 restored consumed. First verifier15
-prediction refused; source-only census proves B lacks error ordinal. Original15 repeat49485
-terminal0/AC/every failed body macro/frozen72/source/full7 restored. Final verification and
-Cargo-selected full7 artifact61713 terminal0 consumed:72 inputs/63 Rust HEAD/23 single-link
-logs/nonmacro[]/full7 SHA1bff4ea5 exact; native-proof.log. Primary full Rust37421 in flight.
-
-Primary Rust37421 terminal0 consumed:fmt/strict Clippy/full59groups703passed/0failed/0ignored;
-count-rust.py independently sums current output and verifies frozen72/full7 artifact SHA
-unchanged0. Current public-guard shared recheck97635 in flight; no native jobs remain.
-
-- [x] REPRODUCE / ISSUE: AST-only current71:5 accepts nonthread before/refuses after0, thread-diagnostic.json. Entry/public619L/statement275L/scope201L/checked448L/current-statement book/G1 exit read. D183 original1/F544:10,9/E479:14,22/D387:74 extraction101; each exact source/all inputs/full7 restored0, before/restored diagnostic logs.
-- [x] ROOT CAUSE: directory/source-only plan lacks complete files/mutable intentions; unanchored panic regex. Three public tests extract before acceptance/refusal check. Independent captures bind4 inputs/23-or0 files/3-or0 mutables/all22 source bindings/counts/full7 argv/stores/restoration0, producer-controls.log.
-  Invocation: python3 -I -B target/checked-stmt-run-focus.py producer-controls → rc=0; current consumed output detailed above.
-- [x] FIX: two complete plans/current thread classifier/four public preconditions. Shared529 body reds/35 classifiers/34 captures/198 physical refusals0;20 mode faults/legacy red include3 partial mutable omissions/count2/restoration. Named-constant literal_eval setup refused before effects/corrected/excluded; producer-controls.log.
-- [x] ADDRESSED: exclusive22 real faults match authored failed sets/every failed body current macro/nonmacro[];72 inputs/63 production Rust HEAD/23 single-link logs/current full7 1bff4ea5 exact0, native-proof.log. Sets AF,A,A,A,BCDE,C,C,C,BE,BE,BE,B,E,E,AC,ABDG,A,B,ABF,ABD,F,ABCDFG. Case15 source-derived ordinal prediction repeated0; four owned public guards exact.
-  Invocation: python3 -I -B target/checked-stmt-proof-run.py → rc=0; current consumed output detailed above.
-- [x] NO REGRESSION: full fmt/strict Clippy/native59groups703pass0/zero ignored, rust-check.log/count.json;72 inputs/artifact unchanged. Actual readonly all3/3 links each/aliases/zero children-source-output writes exact0. Publication45/coverage9/census229paths288checks/effect67/29/file120/59/29/map/ledger9+13 pass0, checked-stmt logs; new WASM/runner unobserved.
-  Invocation: python3 -I -B target/checked-stmt-run-focus.py rust-check → rc=0; current consumed output detailed above.
-- [x] LOCKSTEP: whole9d18303 expression6692B67L/51910–58602/SHAb59aadc5 copied/verified before retirement; canonical header/41304B prefix/first62828B/map8169B/caps exact0, task-retention-proof.log. WholeDEV212/CH156/new D183104/prior474/all72/public477/seven windows/13open169sealed exact0, retention-proof.log. D183 closed; D179 recipe P1 next; promotion declined/grammar/400 stay.
-
-Shared current-public-guard recheck97635 terminal0/529/35/34/198 consumed. Final post-doc
-publication85017 terminal0/62 chapters/67 APIs/1268 source/1985 rendered links/45 probes;
-coverage6576 terminal0/10 lanes/13 trees/15 siblings/9 probes; census63080 terminal0/229
-paths288 checks/67 effects29 groups/120 files59 owners29 native groups consumed. Initial
-ledger87106 terminal0/635 real verdicts/9+13 consumed. Confirmatory final ledger73450 pending,
-checked-stmt-ledger-final.log; commit verified work before waiting, consume before any pivot.
-
-First staged gate14860 refused two fresh boxes lacking explicit recognized exit-status text.
-Actual proofs passed; add exact commands/rc=0 inside current boxes, enforcer unchanged.
-Final ledger73450 terminal0 consumed:636 real verdicts/9 probes/13 pointer controls, zero
-failures, checked-stmt-ledger-final.log. No outstanding native/background jobs.
-
-Fresh staged doctrine44121 terminal0/all13 green consumed, staged-gate.log; intended17 files.
+Complete committed verification retained in [producer proof](G1-SLICE-runtime-proof.md#checked-statement-mode-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.4`
-  Status: `pending`
+  Status: `done`
   Goal: checked recipe nineteen faults/baseline+fault+restored21 ordinary files/classifier zero effects; complete input/mode plans/current thread macros and real replay.
   Paths: docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py
   Acceptance: preserve initial baseline/all count-limited replacements/full target/stores/restoration; independent complete controls/current artifact. Grammar/400 cadence unchanged.
+
+STITCHCAD-G1-0179 starts clean cde147a/41 unpushed/brief0/all jobs consumed.
+Read complete native entry/public7 tests628L/whole implementation322L/whole-proof book,
+current statement/expression/scope contracts from .n08.3 and G1 exit before code. Own
+shared complete modes/baseline/source/count/child captures/physical refusals/current thread
+classifier; Target AST diagnostic/readonly/exclusive19/artifact/focused/retention logs.
+Own whole committed .n08.3 record retention into runtime proof before live growth; own
+oldest canonical-expression lesson/oldest domain ledger/new measured defect retention,
+live/frontier/book sync within fixed caps. Grammar/400 unchanged; no new runtime/runner claim.
+Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;
+docs/book/src/annexes/formula-checked-recipes.md;docs/book/src/build-and-checks.md;
+docs/tasks/G1-SLICE-runtime-proof.md;live/history records. Own exclusive original fault2
+unknown-record proof diagnostic with all inputs/source/full7 restoration before edits;
+if extraction is observed, own measured public preconditions and full required Rust gate.
+Additional path: crates/sc-core/tests/formula_checked_recipe_contract.rs.
+
+First shared46611 refuses classifier bypass through extra-native-child: baseline precedes
+source writes, so expected source-effect message was wrong. Actual traceback establishes
+first-child ordering; add explicit classifier-only no-child assertion in complete capture
+before environment/argv checks. No real native/source effects; failed setup excluded.
+
+Fresh shared9364 terminal0 consumed:546 body reds/35 classifiers/36 complete captures/204
+physical refusals;16 mode faults/legacy red/baseline-first/count2 including lastconsumer
+preserved. Current69:5 thread true/nonthread true before, false nonthread after0; AST only.
+Nineteen independently source-derived failed sets saved before any native replay/failure blocks.
+Original fault2 E diagnostic next; full7/exact all inputs/source restoration required.
+
+D184 P1 actual original2/E449:55 unwrap rejection, Native101/currentmacro false, before
+log/json. Own two acceptance preconditions in existing unknown/alternate-record test: first
+measured; second shares the extraction-before-acceptance cause. Exact all inputs/source/full7
+restoration68515 must finish before edits; full fmt/strict Clippy/703 required before closure.
+
+Diagnostic68515 terminal0 consumed: original2/E449:55 extraction101; exact source/all
+inputs/full7 restored before two acceptance guards in existing public test. Actual readonly
+class accepts3-linked source/baseline-fault-restored aliases/no native-source-output writes0.
+Whole cde statement7512B78L/52564–60076/SHA9d309ecc retained before growth; runtime48433B
+prefix/first62828B/map8169B/canonical header exact0, task-retention-proof.log. Freeze72
+inputs/63 production Rust HEAD/19 source-count AST/original baseline/two public guards0.
+Exclusive real19 native36120 in flight, checked-recipe-mode-native.log; consume exact
+source/full7 restoration and current artifact before any next native/probe/build/gate.
+
+Own whole oldest canonical-expression lesson DEV213 and G1-0167 mixed-domain ledger CH157
+retention before live growth; prior477/all75/seven windows byte-exact. Own whole committed
+D179 report/earned four-family closure in defects105 and new D184 report/closure defects106
+only after real19/full7/full703/pub45; public481/IDs1–184 except18/caps before signoff.
+Archive working60 includes7 catalogs; derive final inventory including four owned seals.
+
+Native36120/proof32681/fullRust26144 terminal0 consumed with exact restoration/current artifact; all required checks below were consumed before closure.
+
+- [x] REPRODUCE / ISSUE: python3 -I -B target/checked-recipe-mode-thread-diagnostic.py: current69:5 thread true/nonthread true before and nonthread false after; rc=0. Original2/E449:55 extraction101/nonmacro1; dependency diagnostic source/all inputs/full7 restoration68515 consumed rc=0 before edits. Complete public628L/implementation322L/book/G1 exit read.
+- [x] ROOT CAUSE: missing complete baseline-fault-restored files/mutable mode plan and unanchored panic regex; public unknown/alternate-record blocks extract before acceptance. python3 -I -B target/checked-recipe-mode-run-focus.py producer-controls: independent captures bind baseline first/all19 cases/count2 sites/stores/full7/final restoration;546 reds/35 classifiers/36 captures/204 refusals; rc=0.
+- [x] FIX: two complete plans/current thread macro classifier/two acceptance guards in same existing test. python3 -I -B target/checked-recipe-mode-run-focus.py producer-controls:16 mode faults/legacy red/baseline omissions/final count2 loss discriminated;546/35/36/204; rc=0. First baseline-order setup refused/excluded, classifier no-child capture guard corrected.
+- [x] ADDRESSED: python3 -I -B target/checked-recipe-mode-proof-run.py: real19/authored failed sets/every failed body current macro/nonmacro[]/72 inputs/63 production Rust HEAD/21 local logs/current full7 ed0c34ff exact; rc=0. Sets ABCDEG,ABDE,ABCG,ABCDEG,ABEFG,ABEG,ABCDG,ACD,D,ABC,ABCEFG,E,BEFG,BE,BE,BE,BE,EG,ABE. Two owned public guards exact; D179/D184 closures earned.
+- [x] NO REGRESSION: python3 -I -B target/checked-recipe-mode-run-focus.py rust-check and count-rust.py: fmt/strict Clippy/59groups703passed/0failed/0ignored/frozen inputs/current artifact exact; rc=0. readonly-mode:3 linked source/unused aliases/zero native-source-output effects; rc=0. publication45/coverage9/census229paths288checks/ledger9+13 pass; rc=0. New WASM/runner unobserved.
+- [x] LOCKSTEP: python3 -I -B target/checked-recipe-mode-run-focus.py retention-proof: wholecde DEV213/CH157/D179105/D184106/prior477/all75/public481/seven windows/12open171sealed exact; rc=0. task-retention-proof: wholecde statement7512B78L/52564–60076/SHA9d309ecc/prior48433B prefix/first62828B/map8169B exact; rc=0. Book/live/frontier/caps aligned; promotion declined. Archive64 includes7 catalogs; derive .n09 window8 prerequisite before growth/400 unchanged.
+
+Final publication45/coverage9/census229paths288checks consumed rc=0. Primary ledger9+13
+passed; confirmatory ledger57575 pending, target/checked-recipe-mode-ledger-final.log.
+Staged doctrine61402 all13 green rc=0. Commit verified work first; consume repeat before
+next activation. Brief preparation target-only output guard refused before writes; corrected
+with explicit root mutable-source guard, failed preparation excluded.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09`
   Status: `pending`

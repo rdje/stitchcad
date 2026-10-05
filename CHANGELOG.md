@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0179 - checked recipe baseline, modes and extraction (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.4`)
+
+- Two inputs/21 files/one mutable; class0 effects;19 original cases/count2/baseline exact.
+- Shared546 reds/35 classifiers/36 captures/204 refusals0; real19/current macros/full7 exact.
+- Two public acceptance guards; full fmt/strict Clippy/59groups703passed0; D179/D184 closed.
+- Whole statement/DEV213/CH157/D179105/D184106 retained;481 public reads/prior477/all75 exact.
+- D156/.n09 next; archive64/window8 prerequisite before growth; grammar/engine/400 stay.
+
 ## STITCHCAD-G1-0178 - checked statement modes and guarded extraction (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.3`)
 
 - Four inputs/23 files/3 mutables; class0 effects;22 original source/count cases.
@@ -191,15 +199,6 @@ the digests afterwards.
 - Book/domain prose/live/focused proof in leaf; D17712 fixed3 remain, .n05.2 next.
 - Rust/grammar/400 cadence unchanged; no early push.
 
-## STITCHCAD-G1-0167 - guarded mixed domain-context files and panic sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.4`)
-
-- Plan16 logs/six inputs/five mutable sources; preserve14 cases/two consumer restorations.
-- Shared283 body reds/31 classifiers/eleven captures/50 physical refusals pass0.
-- Fourteen real current macro reds;17 frozen inputs/ten Rust HEAD files/exact failed-test sets0.
-- Current Cargo-selected artifacts pass all5 public unit/all3 focused private core tests0.
-- Retain whole unsigned receipt/two lessons/two ledgers; prior448/all46/public450 exact.
-- Numeric family complete; D177 eleven fixed/4 P1 remain; .n05 next; focused/staged receipts in leaf.
-- Rust/API/grammar/400 cadence unchanged; private guards certify totality, not geometry.
 
 
 
@@ -345,3 +344,5 @@ the digests afterwards.
 | [`part155`](docs/history/stitchcad-changelog-part155.md) | whole G1-0165 unsigned-round continuity ledger | 8 lines, 622 bytes, `sha256:33ca42fe…` |
 
 | [`part156`](docs/history/stitchcad-changelog-part156.md) | whole G1-0166 length-operator continuity ledger | 9 lines, 757 bytes, `sha256:1f5c635b…` |
+
+| [`part157`](docs/history/stitchcad-changelog-part157.md) | whole G1-0167 mixed-domain continuity ledger | 9 lines, 756 bytes, `sha256:d8f4288f…` |
