@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0184 - declaration plans and D188 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n10.1`)
+
+- Two inputs/22 logs/one mutable/class0;19 faults/count2 negative/full7/full5 exact.
+- Shared595/35/42/224; every real body current macro; D188 closed.
+- Whole receipts/DEV219/CH162/defect110 retained;496 reads/live nav exact.
+- Book/live/exact-name next; Rust/grammar/400 stay, D156/D34 open.
+
 ## STITCHCAD-G1-0183 - ordered-name plans and guards (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.2`)
 
 - Three inputs/19 files/two mutables;18 faults/full8/per-body guards/full7030.
@@ -190,41 +197,6 @@ the digests afterwards.
 - Shared408 reds/35 classifiers/23 captures/123 refusals0; real17/frozen23/current full8 artifact0.
 - Whole task/lesson/ledger retained;462 public reads/prior460/all58/seven windows exact.
 - D178 literal/expression fixed/2 recipe P1 remain; D156 open. Rust/grammar/400 cadence stay.
-
-## STITCHCAD-G1-0172 - literal modes and thread evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n07.1`)
-
-- Four inputs/14 native logs/one mutable; classifier-only zero native effects;13 original cases exact.
-- Shared389 reds/35 classifiers/21 captures/111 refusals0; real13/frozen22/current full6 artifact0.
-- Whole task/lesson/two ledgers retained;460 public reads/prior458/all56/seven windows exact.
-- D178 literal fixed/3 P1 remain; D156 continues. Rust/grammar/400 cadence unchanged.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 | [`part132`](docs/history/window7.md#stitchcad-changelog-part132md) | whole G1-0130 ledger | 8 lines, 682 bytes, `sha256:6e3506f0…` |
@@ -357,3 +329,5 @@ the digests afterwards.
 | [`part160`](docs/history/stitchcad-changelog-part160.md) | whole G1-0170 guarded recipe mode and worker ledger | 4 lines, 580 bytes, `sha256:e2113b03…` |
 
 | [`part161`](docs/history/stitchcad-changelog-part161.md) | whole G1-0171 statement modes and D177 ledger | 6 lines, 463 bytes, `sha256:5da8b958…` |
+
+| [`part162`](docs/history/stitchcad-changelog-part162.md) | whole G1-0172 ledger and navigation tail | 166 lines, 12187 bytes, `sha256:286ab32c…` |

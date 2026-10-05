@@ -169,17 +169,41 @@ cargo test -p sc-core --test formula_declaration_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/declaration_mutations.py
 ```
 
-Run declaration mutations alone. Nineteen actual compiled source/kind/origin/identity/ordinal/span/
-privacy faults must fail test-body assertions; widening the scalar-domain boundary must also fail
-the negative construction contract because the forbidden measurement call now compiles. Source
-bytes are restored exactly; both the full native target and all five declaration doctests are
-rebuilt from the restored source, including when a fault check fails. The direct entry validates
-implementation/test source and output before reads/writes and preserves prepared child stores.
-Failed-body panic locations must match current test assertion macro sites; custom messages pass
-and assertion-labelled expect messages refuse. Classifier-only mode compiles no native fault.
-The structural runner watches anchors and failure classification. Metadata tests and code inspection establish the stated
-locator contract; namespace admission is checked below. Numeric reads, registry adapters and physical
-geometry retain separate proof obligations.
+The direct declaration entry plans its implementation and current public test before any read
+or effect. Ordinary mode declares all twenty-two diagnostics: nineteen fault logs, the scalar-domain
+negative construction log, full native restoration and full declaration-doctest restoration. One
+implementation source is mutable. The nineteen original cases, both scalar-domain replacements,
+complete seven-test Cargo argv, five declaration doctests and prepared child stores remain exact.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/declaration_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/declaration_mutations.py
+```
+
+Classifier-only validates both read-only inputs and prepares the local stores/output directory.
+It checks all original anchors, both scalar-domain boundaries and current macro sites, declares
+zero diagnostic files or mutable sources and invokes no native child or source/output write.
+A copied entry accepts an implementation with three hard links and leaves unused fault, negative,
+native-restoration and doc-restoration aliases untouched. Two complete captures, six physical
+refusals and sixteen independent input/file/mutable/mode/store/restoration/count-two/negative
+selection/restored-doc dispatch omissions watch these plans. Captures certify dispatch separately
+from real native behavior.
+
+A failed body's actual thread panic path, line and byte-column must identify a current assertion
+macro. Custom messages qualify. Nonthread location mentions, compiler/linker noise, unwrap/expect-only
+panics and passed test names refuse. D188's measured nonthread weakness is repaired and watched by
+the independent actual legacy-regex fault. Exclusive replay of all nineteen real faults keeps every
+source-derived failing-test set; every failed body reaches a current macro.
+
+The scalar-domain widening intentionally compiles the actual library and then makes exactly the
+forbidden measurement-construction example compile, so its compile-fail contract fails. The other
+four negative examples remain passing. Exact source restoration rebuilds all seven native contracts
+and all five declaration doctests, including when a fault check fails. Seventy-two frozen inputs,
+sixty-three unchanged production Rust files, unchanged public tests, twenty-two local logs and
+Cargo's current full seven-test executable remain exact. Run native mutations alone and consume
+both restoration phases before another build or probe. Metadata admission, registry validation,
+numeric reads and physical geometry keep their separate owners; these diagnostic repairs change
+no metadata API, grammar or execution authority.
 
 ## Checked initial namespace
 

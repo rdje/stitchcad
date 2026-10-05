@@ -805,7 +805,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n10` | `todo` | declaration/exact-name complete plans/D156, then remaining producers, then native groups/D156/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n10.2` | `todo` | exact-name complete plans/D156, then remaining producers, then native groups/D156/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

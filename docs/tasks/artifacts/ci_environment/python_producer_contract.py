@@ -395,7 +395,7 @@ def mixed_fixture(entry_path, *, classifier_only=False, coupled=False):
         'semantic_mutations.py', 'recipe_mutations.py', 'statement_mutations.py',
         'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
         'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py',
-        'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py'
+        'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py', 'declaration_mutations.py'
     }, 'D156 unexpected classifier mode'
     assert not coupled or entry_path.name in {'recipe_mutations.py', 'canonical_expression_mutations.py'}, 'D156 unexpected coupled mode'
     if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py':
@@ -544,6 +544,17 @@ def mixed_fixture(entry_path, *, classifier_only=False, coupled=False):
         calls = (base,) * 19
         files = tuple(work / ('fault-%d.log' % i) for i in range(1, 19)) + (work / 'restored.log',)
         extras, macro_sources, initial_reads = (), (contract,), (*mutable, contract)
+    elif entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/declaration_mutations.py':
+        mutable = (ROOT / 'crates/sc-core/src/recipe/declaration.rs',)
+        contract = ROOT / 'crates/sc-core/tests/formula_declaration_contract.rs'
+        work = ROOT / 'target/declaration_mutations'
+        bindings, contexts = (0,) * 20, ('',) * 20
+        base = ['cargo', 'test', '-p', 'sc-core', '--test', 'formula_declaration_contract']
+        docs = ['cargo', 'test', '-p', 'sc-core', '--doc', 'recipe::declaration::FormulaDeclaration']
+        calls = (base,) * 19 + (docs, base, docs)
+        files = tuple(work / ('fault-%d.log' % i) for i in range(1, 20)) + (
+            work / 'scalar-domain-compile-fail.log', work / 'restored.log', work / 'restored-docs.log')
+        extras, macro_sources, initial_reads = (), (contract,), (*mutable, contract)
     elif entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/namespace_mutations.py':
         mutable = (ROOT / 'crates/sc-core/src/recipe/namespace.rs',)
         contract = ROOT / 'crates/sc-core/tests/formula_namespace_contract.rs'
@@ -609,7 +620,10 @@ def mixed_fixture(entry_path, *, classifier_only=False, coupled=False):
     return dict(mutable=mutable, contract=contract, work=work, bindings=bindings, files=files,
                 contexts=contexts, calls=calls, extras=extras, macro_sources=macro_sources,
                 initial_reads=initial_reads,
-                baseline=entry_path.name == 'checked_recipe_mutations.py' and not classifier_only)
+                baseline=entry_path.name == 'checked_recipe_mutations.py' and not classifier_only,
+                restoration_order=[mutable[i] for i in
+                                   (bindings[:-1] if entry_path.name == 'declaration_mutations.py' else bindings)] +
+                                  list(mutable))
 
 
 def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=False):
@@ -693,6 +707,12 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=Fals
                 elif entry_path.name in {'semantic_mutations.py', 'namespace_mutations.py'}:
                     _, before, after = scope['CASES'][index]
                     relative, family = mutable[0], fixture['contexts'][index]
+                elif entry_path.name == 'declaration_mutations.py':
+                    if index < 19:
+                        _, before, after = scope['CASES'][index]
+                    else:
+                        before, after = 'origin: FormulaScalarInputOrigin,', 'origin: FormulaInputOrigin,'
+                    relative, family = mutable[0], fixture['contexts'][index]
                 elif entry_path.name == 'ordered_name_mutations.py':
                     _, relative, before, after = scope['CASES'][index]
                     family = fixture['contexts'][index]
@@ -718,10 +738,11 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=Fals
                     except AssertionError as error:
                         errors.append(error)
                         raise
-                elif entry_path.name in {'namespace_mutations.py', 'ordered_name_mutations.py'}:
+                elif entry_path.name in {'namespace_mutations.py', 'ordered_name_mutations.py', 'declaration_mutations.py'}:
                     try:
-                        assert expected.count(before) == 1, 'D156 measure nonunique source anchor'
-                        expected = expected.replace(before, after, 1)
+                        occurrences = 2 if entry_path.name == 'declaration_mutations.py' and index == 19 else 1
+                        assert expected.count(before) == occurrences, 'D156 measure nonunique source anchor'
+                        expected = expected.replace(before, after, occurrences)
                         assert content == expected, 'D156 measure source mutation bytes changed'
                     except AssertionError as error:
                         errors.append(error)
@@ -767,7 +788,8 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=Fals
             expected_pending = {mutable[bindings[fault_index]]} if 0 <= fault_index < len(bindings) else set()
             assert set(pending) == expected_pending, 'D156 measure native source state changed'
             assert mutations == list(range(min(max(fault_index + 1, 0), len(bindings)))), 'D156 measure native mutation order changed'
-            if 0 <= fault_index < len(bindings):
+            if 0 <= fault_index < len(bindings) and not (
+                    entry_path.name == 'declaration_mutations.py' and fault_index == 19):
                 site_source = contract if len(fixture['macro_sources']) == 1 or fixture['contexts'][fault_index] == 'units' else mutable[bindings[fault_index]]
                 current = read_text(site_source)
                 if site_source == contract:
@@ -789,8 +811,11 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=Fals
             raise
         calls.append(args)
         if 0 <= fault_index < len(bindings):
-            output = (f"\nfailures:\nthread 'fixture' panicked at {path}:{number}:{column}:\n"
-                      'authored dispatch fixture\n\nfailures:\nfixture\ntest result: FAILED.\n').encode()
+            if entry_path.name == 'declaration_mutations.py' and fault_index == 19:
+                output = b'Test compiled successfully\ncompile_fail\ntest result: FAILED.\n'
+            else:
+                output = (f"\nfailures:\nthread 'fixture' panicked at {path}:{number}:{column}:\n"
+                          'authored dispatch fixture\n\nfailures:\nfixture\ntest result: FAILED.\n').encode()
             scope['LAST_OUTPUT'] = output
             return subprocess.CompletedProcess(args, 101, stdout=output, stderr=b'')
         return subprocess.CompletedProcess(args, 0,
@@ -802,7 +827,7 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=Fals
         if entry_path.name in {
             'semantic_mutations.py', 'recipe_mutations.py', 'statement_mutations.py',
             'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
-            'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py'
+            'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py', 'declaration_mutations.py'
         }:
             sys.argv = [str(entry_path), *(['--classifier-only'] if classifier_only else ['--coupled'] if coupled else [])]
         Path.mkdir, Path.write_text, Path.write_bytes = directory, write, write
@@ -832,7 +857,7 @@ def capture_mixed_entry(text, entry_path, *, classifier_only=False, coupled=Fals
         return
     assert planned == [True] and len(calls) == len(fixture['calls']) and mutations == list(range(len(bindings))) and \
         set(written) == set(files) and not pending, 'D156 measure full capture incomplete'
-    assert restorations == [mutable[i] for i in bindings] + list(mutable), 'D156 domain restoration sequence changed'
+    assert restorations == fixture['restoration_order'], 'D156 domain restoration sequence changed'
     assert reads[:len(fixture['initial_reads'])] == list(fixture['initial_reads']), \
         'D156 domain initial input order changed'
 
@@ -887,7 +912,7 @@ def domain_refusals(text, entry_path, *, classifier_only=False, coupled=False):
                         if entry_path.name in {
                             'semantic_mutations.py', 'recipe_mutations.py', 'statement_mutations.py',
                             'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
-                            'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py'
+                            'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py', 'declaration_mutations.py'
                         }:
                             sys.argv = [str(entry), *(['--classifier-only'] if classifier_only else ['--coupled'] if coupled else [])]
                         exec(compile(text, str(entry), 'exec'), {'__file__': str(entry), '__name__': 'physical_entry'})
@@ -2515,6 +2540,79 @@ def main():
         red += 1
     else:
         raise AssertionError('D186 actual ordered-name nonthread-location classifier fault survived')
+    declaration_mode_path = ROOT / 'docs/tasks/artifacts/formula_structure/declaration_mutations.py'
+    declaration_mode_text = declaration_mode_path.read_text()
+    declaration_mode_captures = 0
+    for classifier_only in (False, True):
+        capture_mixed_entry(declaration_mode_text, declaration_mode_path, classifier_only=classifier_only)
+        declaration_mode_captures += 1
+        measure_physical += domain_refusals(declaration_mode_text, declaration_mode_path, classifier_only=classifier_only)
+        declaration_mode_faults = [('current input omitted %d' % index, 'sources=SOURCES',
+                   'sources=SOURCES[:%d] + SOURCES[%d:]' % (index, index + 1),
+                   'D156 measure source plan changed') for index in range(2)]
+        if classifier_only:
+            declaration_mode_faults += [
+                ('classifier files', 'OUTPUT_FILES = (() if CLASSIFIER_ONLY else',
+                 'OUTPUT_FILES = (() if False else', 'D156 measure file plan changed'),
+                ('classifier mutable', 'MUTABLE_SOURCES = () if CLASSIFIER_ONLY else (SOURCE,)',
+                 'MUTABLE_SOURCES = () if False else (SOURCE,)', 'D156 measure mutable plan changed'),
+                ('classifier effects', 'if CLASSIFIER_ONLY:', 'if False:',
+                 'D156 classifier mode performed native effects')]
+        else:
+            declaration_mode_faults += [
+                ('files absent', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 measure file plan changed'),
+                ('last file absent', 'len(CASES) + 1', 'len(CASES)', 'D156 measure file plan changed'),
+                ('mutable absent', 'mutable_sources=MUTABLE_SOURCES', 'mutable_sources=()',
+                 'D156 measure mutable plan changed'),
+                ('stores reset', 'environment = dict(os.environ)',
+                 "environment = dict(os.environ, CARGO_HOME='broken')", 'D156 measure child stores lost'),
+                ('final restoration absent', 'finally:\n    SOURCE.write_bytes(original)\n',
+                 'finally:\n', 'D156 measure native source state changed'),
+                ('mutation bytes changed', '.replace(before, after, 1)',
+                 '.replace(before, before, 1)', 'D156 measure source mutation bytes changed'),
+                ('domain count2 lost',
+                 ".replace('origin: FormulaScalarInputOrigin,', 'origin: FormulaInputOrigin,')",
+                 ".replace('origin: FormulaScalarInputOrigin,', 'origin: FormulaInputOrigin,', 1)",
+                 'D156 measure source mutation bytes changed')]
+            tree = ast.parse(declaration_mode_text)
+            doc_calls = [node for node in ast.walk(tree) if isinstance(node, ast.Assign)
+                         and isinstance(node.value, ast.Call)
+                         and ast.unparse(node.value.func) == 'subprocess.run'
+                         and any(isinstance(value, ast.Constant) and value.value == '--doc'
+                                 for value in ast.walk(node.value))]
+            assert len(doc_calls) == 2, 'D188 declaration negative/restored doc calls changed'
+            negative = next(ast.get_source_segment(declaration_mode_text, node.value)
+                            for node in doc_calls if any(isinstance(t, ast.Name) and t.id == 'result' for t in node.targets))
+            restored_docs = next(ast.get_source_segment(declaration_mode_text, node.value)
+                                 for node in doc_calls if any(isinstance(t, ast.Name) and t.id == 'restored_docs' for t in node.targets))
+            declaration_mode_faults += [
+                ('negative construction selection changed', negative,
+                 negative.replace('recipe::declaration::FormulaDeclaration', 'recipe::declaration::Wrong'),
+                 'D156 measure native argv changed'),
+                ('restored doc child omitted', restored_docs,
+                 "subprocess.CompletedProcess([], 0, stdout=b'restored dispatch\\n', stderr=b'')",
+                 'D156 measure diagnostic order changed')]
+        for name, before, after, message in declaration_mode_faults:
+            assert declaration_mode_text.count(before) == 1, (name, 'actual declaration anchor')
+            try:
+                capture_mixed_entry(declaration_mode_text.replace(before, after, 1), declaration_mode_path,
+                                    classifier_only=classifier_only)
+            except AssertionError as error:
+                assert str(error) == message, (name, classifier_only, 'unrelated declaration refusal', str(error))
+                red += 1
+            else:
+                raise AssertionError((name, classifier_only, 'declaration omission survived'))
+    declaration_mode_function = next(ast.get_source_segment(declaration_mode_text, node)
+                                  for node in ast.parse(declaration_mode_text).body
+                                  if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure')
+    try:
+        classifier_controls(declaration_mode_text.replace(declaration_mode_function, unanchored, 1), declaration_mode_path,
+                            strict=True, thread_only=True)
+    except AssertionError as error:
+        assert str(error) == 'D159 assertion evidence accepted noise', ('D188 unrelated refusal', str(error))
+        red += 1
+    else:
+        raise AssertionError('D188 actual declaration nonthread-location classifier fault survived')
     semantic_path = ROOT / 'docs/tasks/artifacts/formula_structure/semantic_mutations.py'
     semantic_text = semantic_path.read_text()
     capture_mixed_entry(semantic_text, semantic_path, classifier_only=True)
@@ -3075,7 +3173,7 @@ def main():
                 raise AssertionError('D156 Python doc restoration omission survived')
         classifier_controls(text, path, strict=True, thread_only=path.name in {
                                     'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
-                                    'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py'})
+                                    'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py', 'declaration_mutations.py'})
         classifier_count += 1
         tree = ast.parse(text)
         function = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'assertion_failure')
@@ -3086,7 +3184,7 @@ def main():
             classifier_controls(text.replace(actual, broad, 1), path, strict=True,
                                 thread_only=path.name in {
                                     'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
-                                    'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py'})
+                                    'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py', 'declaration_mutations.py'})
         except AssertionError as error:
             assert str(error) == 'D159 assertion evidence accepted noise'
             red += 1
@@ -3097,7 +3195,7 @@ def main():
             classifier_controls(text.replace(actual, permissive, 1), path, strict=True,
                                 thread_only=path.name in {
                                     'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
-                                    'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py'})
+                                    'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py', 'declaration_mutations.py'})
         except AssertionError as error:
             assert str(error) == 'D159 assertion evidence accepted noise'
             red += 1
@@ -3111,7 +3209,7 @@ def main():
             classifier_controls(text.replace(helper_text, omitted, 1), path, strict=True,
                                 thread_only=path.name in {
                                     'literal_normalization_mutations.py', 'normalized_expression_mutations.py',
-                                    'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py'})
+                                    'normalized_recipe_mutations.py', 'canonical_recipe_mutations.py', 'canonical_expression_mutations.py', 'checked_expression_mutations.py', 'checked_statement_mutations.py', 'checked_recipe_mutations.py', 'namespace_mutations.py', 'ordered_name_mutations.py', 'declaration_mutations.py'})
         except AssertionError as error:
             assert str(error) == 'D160 assertion sites changed'
             red += 1
@@ -3173,7 +3271,7 @@ def main():
           str(compiler_count) + ' complete compiler/example captures / ' +
           str(static_count) + ' complete static-entry captures / ' +
           str(classifier_count) + ' calibrated failed-body classifiers / source unchanged')
-    print('guarded native entries: ' + str(len(measure_paths) + 1 + recipe_captures + statement_captures + literal_captures + normalized_captures + recipe_input_captures + identity_captures + canonical_mode_captures + checked_mode_captures + checked_stmt_mode_captures + checked_recipe_mode_captures + namespace_mode_captures + ordered_mode_captures) + ' complete child/file captures / ' + str(measure_physical) +
+    print('guarded native entries: ' + str(len(measure_paths) + 1 + recipe_captures + statement_captures + literal_captures + normalized_captures + recipe_input_captures + identity_captures + canonical_mode_captures + checked_mode_captures + checked_stmt_mode_captures + checked_recipe_mode_captures + namespace_mode_captures + ordered_mode_captures + declaration_mode_captures) + ' complete child/file captures / ' + str(measure_physical) +
           ' actual copied-entry physical refusals / five entry and three classifier body reds per entry; '
           'dispatch simulation separate from real native proof')
 

@@ -205,3 +205,67 @@ b43b5e27e01b7599c6232a9abdf152a04710db55443c1c2e4c4a75036b262e62 exact0.
 Full Rust51484 in flight at target/ordered-name-plan-rust-check.log; consume terminal/independent
 703 sum/current inputs-artifact before D186/D187 closures or focused publication.
 
+
+## Ordered-name verification
+
+Whole committed 185a5aa3e80b74d08201b24ccd601b5043a3fa15 receipt; docs/tasks/G1-SLICE-producers.md byte interval 57405–60583; 3178B/19L/SHA4a3115fe3e731686aa94d720ba43199347a80e0bb738e3cbdbd5b13b13a26d43. Canonical ownership remains in the root.
+
+Complete replay history retained in [retention proof](G1-SLICE-retention-proof.md#ordered-name-replay-history).
+
+- [x] REPRODUCE / ISSUE: D186 original nonthread current-macro acceptance raised exact D159 noise failure. Original18 replay75355 kept sets but per-body proof refused seven advance extraction panics (faults1/2/3/10); both sources/full8 ca5b93b2 restored0 before edits. python3 -I -B target/ordered-name-plan-run-focus.py producer-controls:578 reds/35 classifiers/40 captures/218 refusals; rc=0.
+- [x] ROOT CAUSE: Unanchored panic regex accepts nonthread notes; assert arguments extract Err before macro guards. Missing complete mode plans require three inputs/19 files/two mutables/class0. python3 -I -B target/ordered-name-plan-run-focus.py producer-controls:seventeen actual mode omissions/legacy-regex red/two full captures/eight physical refusals;578/35/40/218; rc=0.
+- [x] FIX: Plans precede reads/effects; current thread macro guard and one advanced helper/fourteen existing calls. Original18 CASES/two bindings/full8/test names exact. python3 -I -B target/ordered-name-plan-run-focus.py producer-controls:578/35/40/218; rc=0. readonly-mode:both sources three links/unused aliases/zero native-source-output writes; rc=0.
+- [x] ADDRESSED: python3 -I -B target/ordered-name-plan-proof-run.py:all18 original authored failure sets/every failed body current macro/nonmacro[]/72 inputs/63 production Rust HEAD/19 logs/current full8 b43b5e27 exact; rc=0. Native43111 terminal0 consumed; original19 logs/metadata copied/verified before replay. D186108/D187109 earned closures; original failure sets retained in replay history.
+- [x] NO REGRESSION: python3 -I -B target/ordered-name-plan-run-focus.py rust-check and count-rust.py:fmt/strict Clippy/59groups703passed/0failed/0ignored/frozen72/current artifact exact; rc=0. publication45/coverage9/census229paths288checks/ledger9+13 pass; rc=0. Production Rust/grammar unchanged; new runner unobserved.
+- [x] LOCKSTEP: python3 -I -B target/ordered-name-plan-run-focus.py retention-proof:prior489/all33/current493 public reads/eight windows/two new-over19c7 whole reports-closures/12open174sealed/IDs1–187except18 exact; rc=0. Whole19c7 namespace5421B46L/SHAa16229fb/old10221B/namespace15902B prefixes/current20498B sibling/authored4247B53L SHAfd765b88/DEV218950B6L/CH161463B6L retained before retirement; map8145/16siblings/fixed caps exact; rc=0. Book/live/MEMORY/G1/index .n10 next; promotion declined/D156/broader D34 open/400 stay.
+
+Post-doc publication87991/coverage34080/census36478/retention70841 terminal0 consumed:
+publication45/current1271 source1988 rendered links/62 chapters67 scoped APIs; coverage9/
+census229paths288checks/retention493/whole authored4247B53L/current20498B sibling exact0.
+Clarified book publication54818 terminal0/current45/1271/1988 exact; final ledger1693
+terminal0 consumed:657 real verdicts/9 arms/13 pointers; all verification jobs consumed.
+
+Staged gate19964 terminal0/all13 consumed. git diff --cached --check independently
+refused2: two receipt-line trailing spaces; targeted removal before final staging. Final
+commit hook must verify all13 against the final staged receipts.
+
+
+## Declaration replay history
+
+Whole authored0184 progress text, captured before final acceptance boxes; authored over
+185a5aa and absent from that baseline. Historical in-flight statements are superseded by
+current leaf receipts. Identity: 2955B/33L/SHAb29a1b2b726185401091aefe5a29798bacfd9181c12fcbca2985f8023343513a.
+
+  Before activation clean185a5aa/46/brief0/all jobs consumed, commit80569/all13/final ledger1693/657 real/9 arms13 pointers. Full entry/295L implementation/290L public tests/five negative examples/G1/book reviewed. Numeric/registry/geometry authority unchanged; D156/broader D34 stay.
+  Whole185a ordered receipt3178B19L/57405–60583/SHA4a3115fe copied before retirement; original20498B prefix/current23956B sibling exact. First activation split cap preflight refused before writes; retained whole receipt within fixed caps.
+  Authored before any real replay/failure-block read: A–G are seven public tests in source order; expected19 sets A,B,ADE,B,C,A,B,C,ABCDEF,DE,D,D,D,F,G,G,D,F,DE. Scalar-domain negative run must compile library and fail exactly forbidden-measurement construction; final full5 docs restore.
+
+Split census70762 refused D156 native file group bound: supporting files were included
+in the primary Paths membership. Keep one declaration native member; supporting paths
+use Paths also. Refused setup excluded; re-run current census before source repairs.
+
+D188 actual declaration nonthread weakness reproduced through shared strict/thread-only
+classifier control: exact D159 noise failure, diagnostic rc=0. Own P1 now/current thread
+macro guard/legacy-regex red/all19 per-body/full7/full5 proof. Paths also PLANNING.md.
+
+Census10510 terminal0 consumed:229 Git paths288 checks/120 file paths61 owners31 groups;
+split bindings exact. Declaration two-input/22-file/one-mutable/class0 plans and D188 current
+thread macro guard implemented; original19 AST/count2/doc/native vectors retained. Copied
+readonly source3 links/four unused output aliases/zero child-source-output writes0. Shared95384
+in flight at target/declaration-plan-producer-controls.log; consume before real Native19 plus
+negative construction/full7 native/full5 docs and frozen-input/current-artifact proof.
+
+Shared95384 terminal0 consumed:595 body reds/35 classifiers/42 complete captures/224
+physical refusals; two declaration modes/16 omissions/legacy-regex red/count2/negative-doc
+selection/restored-doc dispatch watched. Frozen72/63 production Rust HEAD/unchanged public7/
+original19/five doc fences137,145,148,156,163 exact0 before actual replay. Native83197 exclusive
+in flight at target/declaration-plan-native.log; consume terminal/all19 authored sets/every
+failed body/sole negative137 construction red/full7-native/full5-docs/current artifact before
+any next native build/probe that reads the temporary implementation.
+
+Whole185a DEV2191006B6L/1573–2579/SHA4cf3e7a4 copied/verified before retirement.
+CH162 retained12187B166L/20505–32692/SHA286ab32c: fallback EOF also captured appended
+navigation. Diagnostic found the first table at tail511 and no next heading. Restore the
+complete11675B navigation bytes to live ledger after verifying retained copy; keep sealed
+whole interval immutable and clarify live coverage. Prior493/all37/current495 preserved.
+

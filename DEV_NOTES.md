@@ -14,6 +14,13 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — declaration plans and negative construction
+
+- Two inputs/22 logs/one mutable; class0. Original19/count2/full7-native/full5-docs exact. Shared595/35/42/224;16 omissions/D188 legacy red/readonly3 links/four aliases0.
+- All19 authored sets/every body macro/72 inputs/63 Rust/22 logs/current7 6671dcbc/full5 docs0. Widened negative137 fails alone; other4 pass. No Rust changed; prior703 scoped185a.
+- Whole185a ordered3178B19L/20498B prefix and authored2955B33L retained/current27233B. DEV2191006B/CH16212187B; live11675B nav restored;496 reads/prior493/all37/12open175sealed0.
+- Promotion declined: existing plans/macros/whole retention. Book/live/.n10.2 next; D156/D34 open/grammar/400 stay.
+
 ## _(2026-10-05 UTC)_ — ordered-name plans and guarded advances
 
 - Three inputs/19 files/two mutables; class0. Original18/two bindings/full8 exact; shared578 reds/35 classifiers/40 captures/218 refusals0. D186 thread-only/legacy regex red; readonly both sources3 links/unused aliases0.
@@ -21,12 +28,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Whole19c7 namespace5421B46L/old10221B prefix/DEV218950B6L/CH161463B6L/new defects108109 retained; prior489/all33/current493 reads/12open174sealed0. Book/live/.n10 aligned; D156/broader D34 open.
 - Promotion declined: complete plans/current macros/guarded extraction/whole retention already bind. Engine/grammar/400 stay; new runner unobserved.
 
-## _(2026-10-05 UTC)_ — namespace plans and thread evidence
-
-- Two inputs/18 files/one mutable; classifier0 writes/children. Original17 CASES/argv exact;560 body reds/35 classifiers/38 captures/210 physical refusals0. D185 legacy regex red/current thread macro guard; readonly3 links/unused aliases0.
-- All17 real faults/every failed body current macro/72 inputs/63 production Rust/public tests/18 local logs/current full10 429f1099 exact0. Prediction5 ACGI→ACGIJ: privacy eps_phys also hidden; other16 predictions exact. First shared tuple shadowing failed/excluded; namespace list renamed.
-- Whole335b64d task3891B30L retained/SHA b77af56c/6062B prefix/10221B sibling exact0. DEV2171409B8L/CH160580B4L/D185107/prior486/all30/current489 reads/12open172sealed exact0. Book/live/focused checks aligned; D156/broader D34 stay; ordered next.
-- Promotion declined: existing complete plans/current macro/whole-source retention/consumed-results rules. Rust/engine/grammar/400 unchanged; no new runner claim.
+Whole namespace plans and thread lesson retained in [part219](docs/history/stitchcad-devnotes-part219.md).
 
 Whole window8 post-recording guard lesson retained in [part218](docs/history/stitchcad-devnotes-part218.md).
 
@@ -196,3 +198,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/window8.md#
 | [`part217`](docs/history/stitchcad-devnotes-part217.md) | whole checked recipe baseline modes and guarded extraction lesson | 8 lines, 1409 bytes, `sha256:79ab4f32…` |
 
 | [`part218`](docs/history/stitchcad-devnotes-part218.md) | whole committed window8 post-recording guard lesson | 6 lines, 950 bytes, `sha256:aa35800d…` |
+
+| [`part219`](docs/history/stitchcad-devnotes-part219.md) | whole namespace modes and thread evidence lesson | 6 lines, 1006 bytes, `sha256:4cf3e7a4…` |
