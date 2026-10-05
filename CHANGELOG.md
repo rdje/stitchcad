@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0180 - window8 continuity and protected history (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h`)
+
+- Pack57 complete0f records; fixture481 source/read/materialized exact; seven windows preserved.
+- Copy/verify before57 raw retirements; six live routes/master1 single-link;11 working files.
+- Retain whole recipe/DEV214/CH158/book215; protected proof prefixes/current aliases exact.
+- Prior481/all484 reads/12open171sealed; archive28/CLI501/pub45/coverage9/ledger9+13 pass0.
+- D34/owner rows corrected; newest8 committed refusal next; caps/Rust/grammar/400 stay.
+
 ## STITCHCAD-G1-0179 - checked recipe baseline, modes and extraction (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.4`)
 
 - Two inputs/21 files/one mutable; class0 effects;19 original cases/count2/baseline exact.
@@ -190,14 +198,6 @@ the digests afterwards.
 - Parent lexer/semantic completes; D17713 fixed2 remain, .n06 next after checks.
 - Book/live/focused proof in leaf; grammar/metadata/400 cadence unchanged.
 
-## STITCHCAD-G1-0168 - guarded lexer files and current macro sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n05.1`)
-
-- Plan10 logs/four inputs/two mutable sources; preserve9 cases and imported examples.
-- Shared296 body reds/32 classifiers/twelve captures/56 physical refusals pass0.
-- Nine real macro reds;12 frozen inputs/five Rust HEAD files/full13 public artifact exact0.
-- Retain whole length receipt/oldest ledger; prior450/all48/public451 exact.
-- Book/domain prose/live/focused proof in leaf; D17712 fixed3 remain, .n05.2 next.
-- Rust/grammar/400 cadence unchanged; no early push.
 
 
 
@@ -303,46 +303,48 @@ the digests afterwards.
 
 | [`part135`](docs/history/window7.md#stitchcad-changelog-part135md) | whole G1-0134/0133 ledgers | 17 lines, 1365 bytes, `sha256:b27ceffd…` |
 
-| [`part136`](docs/history/stitchcad-changelog-part136.md) | whole G1-0137/0136/0135 ledgers | 24 lines, 1819 bytes, `sha256:9b764edc…` |
+| [`part136`](docs/history/window8.md#stitchcad-changelog-part136md) | whole G1-0137/0136/0135 ledgers | 24 lines, 1819 bytes, `sha256:9b764edc…` |
 
-| [`part137`](docs/history/stitchcad-changelog-part137.md) | three whole G1-0140/0139/0138 ledgers | 18 lines, 1236 bytes, `sha256:38ef85ae…` |
+| [`part137`](docs/history/window8.md#stitchcad-changelog-part137md) | three whole G1-0140/0139/0138 ledgers | 18 lines, 1236 bytes, `sha256:38ef85ae…` |
 
-| [`part138`](docs/history/stitchcad-changelog-part138.md) | whole G1-0143/0142/0141 ledgers | 19 lines, 1383 bytes, `sha256:6e08f574…` |
+| [`part138`](docs/history/window8.md#stitchcad-changelog-part138md) | whole G1-0143/0142/0141 ledgers | 19 lines, 1383 bytes, `sha256:6e08f574…` |
 
-| [`part139`](docs/history/stitchcad-changelog-part139.md) | whole G1-0144 ledger | 7 lines, 578 bytes, `sha256:0661ecd7…` |
+| [`part139`](docs/history/window8.md#stitchcad-changelog-part139md) | whole G1-0144 ledger | 7 lines, 578 bytes, `sha256:0661ecd7…` |
 
-| [`part140`](docs/history/stitchcad-changelog-part140.md) | whole G1-0145 cleanup ledger | 7 lines, 588 bytes, `sha256:8a23c596…` |
+| [`part140`](docs/history/window8.md#stitchcad-changelog-part140md) | whole G1-0145 cleanup ledger | 7 lines, 588 bytes, `sha256:8a23c596…` |
 
-| [`part141`](docs/history/stitchcad-changelog-part141.md) | whole G1-0147 and G1-0146 ledgers | 14 lines, 1097 bytes, `sha256:8fa23459…` |
+| [`part141`](docs/history/window8.md#stitchcad-changelog-part141md) | whole G1-0147 and G1-0146 ledgers | 14 lines, 1097 bytes, `sha256:8fa23459…` |
 
-| [`part142`](docs/history/stitchcad-changelog-part142.md) | whole G1-0148 static guard ledger | 10 lines, 861 bytes, `sha256:790a719b…` |
+| [`part142`](docs/history/window8.md#stitchcad-changelog-part142md) | whole G1-0148 static guard ledger | 10 lines, 861 bytes, `sha256:790a719b…` |
 
-| [`part143`](docs/history/stitchcad-changelog-part143.md) | whole G1-0149 continuity ledger | 6 lines, 530 bytes, `sha256:d5b8a94e…` |
+| [`part143`](docs/history/window8.md#stitchcad-changelog-part143md) | whole G1-0149 continuity ledger | 6 lines, 530 bytes, `sha256:d5b8a94e…` |
 
-| [`part144`](docs/history/stitchcad-changelog-part144.md) | whole G1-0151 and G1-0150 continuity ledgers | 13 lines, 983 bytes, `sha256:4c0a2f29…` |
+| [`part144`](docs/history/window8.md#stitchcad-changelog-part144md) | whole G1-0151 and G1-0150 continuity ledgers | 13 lines, 983 bytes, `sha256:4c0a2f29…` |
 
-| [`part145`](docs/history/stitchcad-changelog-part145.md) | whole G1-0153 and G1-0152 continuity ledgers | 14 lines, 1036 bytes, `sha256:07a2dcad…` |
+| [`part145`](docs/history/window8.md#stitchcad-changelog-part145md) | whole G1-0153 and G1-0152 continuity ledgers | 14 lines, 1036 bytes, `sha256:07a2dcad…` |
 
-| [`part146`](docs/history/stitchcad-changelog-part146.md) | whole G1-0154 continuity ledger | 7 lines, 603 bytes, `sha256:136114b1…` |
+| [`part146`](docs/history/window8.md#stitchcad-changelog-part146md) | whole G1-0154 continuity ledger | 7 lines, 603 bytes, `sha256:136114b1…` |
 
-| [`part147`](docs/history/stitchcad-changelog-part147.md) | whole G1-0156 and G1-0155 continuity ledgers | 11 lines, 719 bytes, `sha256:45304271…` |
+| [`part147`](docs/history/window8.md#stitchcad-changelog-part147md) | whole G1-0156 and G1-0155 continuity ledgers | 11 lines, 719 bytes, `sha256:45304271…` |
 
-| [`part148`](docs/history/stitchcad-changelog-part148.md) | whole G1-0157 continuity ledger | 6 lines, 474 bytes, `sha256:934bd04d…` |
+| [`part148`](docs/history/window8.md#stitchcad-changelog-part148md) | whole G1-0157 continuity ledger | 6 lines, 474 bytes, `sha256:934bd04d…` |
 
-| [`part149`](docs/history/stitchcad-changelog-part149.md) | whole G1-0158 chart continuity ledger | 8 lines, 638 bytes, `sha256:d18ad1d9…` |
+| [`part149`](docs/history/window8.md#stitchcad-changelog-part149md) | whole G1-0158 chart continuity ledger | 8 lines, 638 bytes, `sha256:d18ad1d9…` |
 
-| [`part150`](docs/history/stitchcad-changelog-part150.md) | whole G1-0160 and G1-0159 continuity ledgers | 15 lines, 1158 bytes, `sha256:16a21ab1…` |
+| [`part150`](docs/history/window8.md#stitchcad-changelog-part150md) | whole G1-0160 and G1-0159 continuity ledgers | 15 lines, 1158 bytes, `sha256:16a21ab1…` |
 
-| [`part151`](docs/history/stitchcad-changelog-part151.md) | whole G1-0161 collection continuity ledgers | 7 lines, 570 bytes, `sha256:44242cdb…` |
+| [`part151`](docs/history/window8.md#stitchcad-changelog-part151md) | whole G1-0161 collection continuity ledgers | 7 lines, 570 bytes, `sha256:44242cdb…` |
 
-| [`part152`](docs/history/stitchcad-changelog-part152.md) | whole G1-0162 individual Ease continuity ledgers | 7 lines, 571 bytes, `sha256:2d4ad014…` |
+| [`part152`](docs/history/window8.md#stitchcad-changelog-part152md) | whole G1-0162 individual Ease continuity ledgers | 7 lines, 571 bytes, `sha256:2d4ad014…` |
 
-| [`part153`](docs/history/stitchcad-changelog-part153.md) | whole G1-0163 Ease-set continuity ledger | 7 lines, 557 bytes, `sha256:f9db2b5b…` |
+| [`part153`](docs/history/window8.md#stitchcad-changelog-part153md) | whole G1-0163 Ease-set continuity ledger | 7 lines, 557 bytes, `sha256:f9db2b5b…` |
 
-| [`part154`](docs/history/stitchcad-changelog-part154.md) | whole G1-0164 signed-round continuity ledger | 8 lines, 665 bytes, `sha256:a3aa5776…` |
+| [`part154`](docs/history/window8.md#stitchcad-changelog-part154md) | whole G1-0164 signed-round continuity ledger | 8 lines, 665 bytes, `sha256:a3aa5776…` |
 
-| [`part155`](docs/history/stitchcad-changelog-part155.md) | whole G1-0165 unsigned-round continuity ledger | 8 lines, 622 bytes, `sha256:33ca42fe…` |
+| [`part155`](docs/history/window8.md#stitchcad-changelog-part155md) | whole G1-0165 unsigned-round continuity ledger | 8 lines, 622 bytes, `sha256:33ca42fe…` |
 
-| [`part156`](docs/history/stitchcad-changelog-part156.md) | whole G1-0166 length-operator continuity ledger | 9 lines, 757 bytes, `sha256:1f5c635b…` |
+| [`part156`](docs/history/window8.md#stitchcad-changelog-part156md) | whole G1-0166 length-operator continuity ledger | 9 lines, 757 bytes, `sha256:1f5c635b…` |
 
-| [`part157`](docs/history/stitchcad-changelog-part157.md) | whole G1-0167 mixed-domain continuity ledger | 9 lines, 756 bytes, `sha256:d8f4288f…` |
+| [`part157`](docs/history/window8.md#stitchcad-changelog-part157md) | whole G1-0167 mixed-domain continuity ledger | 9 lines, 756 bytes, `sha256:d8f4288f…` |
+
+| [`part158`](docs/history/stitchcad-changelog-part158.md) | whole G1-0168 lexer file and macro ledger | 8 lines, 581 bytes, `sha256:a253490b…` |

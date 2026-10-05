@@ -451,56 +451,50 @@ stores on the checkout volume. D142/D143 are closed by observed evidence under .
 results do not establish independent product or physical approval. Original failed-run verdicts remain.
 
 
-The fifth transition captures60 complete raw sealed files from c91cdf5 for the D154 repair.
-Its isolated fixture reconstructs all309 original logical records, including all four earlier
-windows, without a Git repository or raw member copies. Repeated Git archive/gzip output is
-identical; the installed source comparison proves all60 originals before continued work.
-The verified payload replaces only its60 raw copies;69 maintained Markdown destinations use
-window5 member headings. Four new whole ledger/lesson/defect-receipt seals leave313 logical records
-and nine working Markdown files. Completed task evidence moves byte-for-byte into the existing
-recipe-proof sibling. Earlier windows, fixed schemas and containment limits remain unchanged.
+Window5 and window6 captured60 and58 complete raw files from c91cdf5 and80f3a299.
+Their exact original transitions, optional source-comparison examples and observed runner receipts
+are retained together in the complete historical record below. Ordinary retrieval needs no Git.
 
 ```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part215.md
 bash scripts/history_archive.sh prove-source window5
-bash scripts/history_archive.sh read docs/history/stitchcad-changelog-part110.md
-```
-
-At exact pushed d1198ab, both actual jobs completed successfully: [doctrine enforce](https://github.com/rdje/stitchcad/actions/runs/37180745357/job/111372644621)
-and all eight steps; [Rust check](https://github.com/rdje/stitchcad/actions/runs/37180745375/job/111372644773)
-and all eleven steps. The actual Rust log reports1.99.0, strict formatting/Clippy,703 passing tests
-across59 result groups, three WASM outputs and all four stores on the checkout volume. Post-commit
-published archive controls pass328 actual verdicts, including refusal of a changed committed window5
-catalog. G1-SLICE.5b.4c.h1 records the evidence; D156 defaults then D154 repair remain open.
-
-
-The sixth transition captures58 complete raw files from80f3a299 before the D156 signature repairs.
-An isolated fixture reconstructs368 exact logical records, including the new closed-task seal,
-without captured raw copies or a Git repository. Deterministic archive/gzip bytes and the installed
-source comparison prove all58 originals before only those matching copies retire. Seventy current
-Markdown destinations use window6 member headings. Closed task IDs/status/goal proxies remain live;
-additional whole-node/book seals retain their exact committed bytes. Previous windows and fixed
-schemas/limits remain unchanged. The guarded capture validates every input path and its local fixture
-before archive content reads or output creation; its initial Git metadata discovery is read-only.
-At installation, three new complete seals leave370 logical records and nine working Markdown files.
-
-```bash
 bash scripts/history_archive.sh prove-source window6
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part160.md
 ```
 
-At exact pushed c455b93, [doctrine enforce](https://github.com/rdje/stitchcad/actions/runs/37230288647/job/111518342851)
-and all eight steps, plus [Rust check](https://github.com/rdje/stitchcad/actions/runs/37230288711/job/111518343151)
-and all eleven steps completed successfully. Actual logs show Rust1.99,703 tests/59 groups,
-three WASM libraries and four checkout-local stores. Post-commit CLI386 controls/370 reads refuse
-changed committed catalogs. G1-SLICE.5b.4c.h2.b.p.n.h3.v records the observed scope.
-The director2026-10-04 supersedes immediate-push exceptions:400 commits unless explicitly requested.
-D165 owns stronger normalization assertion provenance; D156/D154 remain open; grammar/API fixed.
+Those runner receipts remain historical build evidence. They establish neither domain signoff
+nor physical approval; the director's400-commit cadence governs current unpublished changes.
 
 Window7 captures57 full files from6d93d3d. Its isolated fixture reads/materializes all424 logical
 records exactly; previous six windows and logical addresses stay unchanged. Use
 `bash scripts/history_archive.sh prove-source window7` for the optional Git comparison.
 Normal retrieval remains offline. Fixed bounds stay; runner evidence awaits the400-commit cadence.
 Committed catalog prose edits are refused.
+
+Window8 captures57 complete raw records from0f223cb before more producer-audit records would
+exceed the unchanged64-file working limit. The guarded isolated capture reconstructs all481
+prior logical records, including every earlier window, without Git or captured raw copies in the
+fixture. Repeated Git archive/gzip bytes agree; public source comparison proves all57 full originals.
+Installation verifies the copied payload/control bytes before retiring only those57 matching raw
+copies. All rewrite/removal paths were regular, local and single-linked before effects.
+
+Three whole committed intervals retain the checked-expression lesson, lexer ledger and original
+window5/6 book transitions. All484 public reads match their independent identities; eleven working
+Markdown files include eight catalogs. Prior seven windows, original logical addresses, exact
+source descriptors and fixed resident/decoded/schema limits remain unchanged.
+
+```bash
+bash scripts/history_archive.sh prove-source window8
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part214.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part215.md
+```
+
+Two links inside byte-exact historical task records keep their original logical addresses; current
+retrieval routes are appended outside those retained source intervals. Both protected prefixes and
+the complete checked-recipe record remain exact. Live links use window8 member headings.
+Archive28/CLI501 controls and source/read/materialization checks passed locally. The newest
+committed-catalog prose refusal requires the recording commit and is owned next .n09.h.v.
+These are structural retention proofs. New runner evidence awaits the400-commit cadence; no
+new engine or physical production approval follows.
 
 ### Local producer profile
 

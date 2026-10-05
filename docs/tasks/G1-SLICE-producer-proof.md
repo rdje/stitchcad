@@ -416,3 +416,9 @@ root residue absent, rc=0, target/recipe-helper-leak.json. Stable helper_path/al
 corrected before final Source writes. Final staged gate13 green, rc=0, target/recipe-staged-gate.log;
 final ledger9+13 green, rc=0, target/recipe-ledger-final2.log. All required terminals consumed.
 
+
+### Current retrieval for historical source links
+
+The byte-exact source records above keep their original logical addresses. For their
+retained preimplementation record, use [the current window8 member](../history/window8.md#stitchcad-devnotes-part193md)
+or `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part193.md`.

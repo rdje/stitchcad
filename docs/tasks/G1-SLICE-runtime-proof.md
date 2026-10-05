@@ -492,3 +492,79 @@ failures, checked-stmt-ledger-final.log. No outstanding native/background jobs.
 
 Fresh staged doctrine44121 terminal0/all13 green consumed, staged-gate.log; intended17 files.
 
+
+Source: `0f223cba96dd61db0c4ea77855b64fb63e12bab2`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Checked recipe mode verification](#checked-recipe-mode-verification) | 53211–59709 | 6498 / 61 | `50db8770818d3c400c80740a72b288d71373009c02e63f8210352bd4ca28de35` |
+
+### Checked recipe mode verification
+
+STITCHCAD-G1-0179 starts clean cde147a/41 unpushed/brief0/all jobs consumed.
+Read complete native entry/public7 tests628L/whole implementation322L/whole-proof book,
+current statement/expression/scope contracts from .n08.3 and G1 exit before code. Own
+shared complete modes/baseline/source/count/child captures/physical refusals/current thread
+classifier; Target AST diagnostic/readonly/exclusive19/artifact/focused/retention logs.
+Own whole committed .n08.3 record retention into runtime proof before live growth; own
+oldest canonical-expression lesson/oldest domain ledger/new measured defect retention,
+live/frontier/book sync within fixed caps. Grammar/400 unchanged; no new runtime/runner claim.
+Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;
+docs/book/src/annexes/formula-checked-recipes.md;docs/book/src/build-and-checks.md;
+docs/tasks/G1-SLICE-runtime-proof.md;live/history records. Own exclusive original fault2
+unknown-record proof diagnostic with all inputs/source/full7 restoration before edits;
+if extraction is observed, own measured public preconditions and full required Rust gate.
+Additional path: crates/sc-core/tests/formula_checked_recipe_contract.rs.
+
+First shared46611 refuses classifier bypass through extra-native-child: baseline precedes
+source writes, so expected source-effect message was wrong. Actual traceback establishes
+first-child ordering; add explicit classifier-only no-child assertion in complete capture
+before environment/argv checks. No real native/source effects; failed setup excluded.
+
+Fresh shared9364 terminal0 consumed:546 body reds/35 classifiers/36 complete captures/204
+physical refusals;16 mode faults/legacy red/baseline-first/count2 including lastconsumer
+preserved. Current69:5 thread true/nonthread true before, false nonthread after0; AST only.
+Nineteen independently source-derived failed sets saved before any native replay/failure blocks.
+Original fault2 E diagnostic next; full7/exact all inputs/source restoration required.
+
+D184 P1 actual original2/E449:55 unwrap rejection, Native101/currentmacro false, before
+log/json. Own two acceptance preconditions in existing unknown/alternate-record test: first
+measured; second shares the extraction-before-acceptance cause. Exact all inputs/source/full7
+restoration68515 must finish before edits; full fmt/strict Clippy/703 required before closure.
+
+Diagnostic68515 terminal0 consumed: original2/E449:55 extraction101; exact source/all
+inputs/full7 restored before two acceptance guards in existing public test. Actual readonly
+class accepts3-linked source/baseline-fault-restored aliases/no native-source-output writes0.
+Whole cde statement7512B78L/52564–60076/SHA9d309ecc retained before growth; runtime48433B
+prefix/first62828B/map8169B/canonical header exact0, task-retention-proof.log. Freeze72
+inputs/63 production Rust HEAD/19 source-count AST/original baseline/two public guards0.
+Exclusive real19 native36120 in flight, checked-recipe-mode-native.log; consume exact
+source/full7 restoration and current artifact before any next native/probe/build/gate.
+
+Own whole oldest canonical-expression lesson DEV213 and G1-0167 mixed-domain ledger CH157
+retention before live growth; prior477/all75/seven windows byte-exact. Own whole committed
+D179 report/earned four-family closure in defects105 and new D184 report/closure defects106
+only after real19/full7/full703/pub45; public481/IDs1–184 except18/caps before signoff.
+Archive working60 includes7 catalogs; derive final inventory including four owned seals.
+
+Native36120/proof32681/fullRust26144 terminal0 consumed with exact restoration/current artifact; all required checks below were consumed before closure.
+
+- [x] REPRODUCE / ISSUE: python3 -I -B target/checked-recipe-mode-thread-diagnostic.py: current69:5 thread true/nonthread true before and nonthread false after; rc=0. Original2/E449:55 extraction101/nonmacro1; dependency diagnostic source/all inputs/full7 restoration68515 consumed rc=0 before edits. Complete public628L/implementation322L/book/G1 exit read.
+- [x] ROOT CAUSE: missing complete baseline-fault-restored files/mutable mode plan and unanchored panic regex; public unknown/alternate-record blocks extract before acceptance. python3 -I -B target/checked-recipe-mode-run-focus.py producer-controls: independent captures bind baseline first/all19 cases/count2 sites/stores/full7/final restoration;546 reds/35 classifiers/36 captures/204 refusals; rc=0.
+- [x] FIX: two complete plans/current thread macro classifier/two acceptance guards in same existing test. python3 -I -B target/checked-recipe-mode-run-focus.py producer-controls:16 mode faults/legacy red/baseline omissions/final count2 loss discriminated;546/35/36/204; rc=0. First baseline-order setup refused/excluded, classifier no-child capture guard corrected.
+- [x] ADDRESSED: python3 -I -B target/checked-recipe-mode-proof-run.py: real19/authored failed sets/every failed body current macro/nonmacro[]/72 inputs/63 production Rust HEAD/21 local logs/current full7 ed0c34ff exact; rc=0. Sets ABCDEG,ABDE,ABCG,ABCDEG,ABEFG,ABEG,ABCDG,ACD,D,ABC,ABCEFG,E,BEFG,BE,BE,BE,BE,EG,ABE. Two owned public guards exact; D179/D184 closures earned.
+- [x] NO REGRESSION: python3 -I -B target/checked-recipe-mode-run-focus.py rust-check and count-rust.py: fmt/strict Clippy/59groups703passed/0failed/0ignored/frozen inputs/current artifact exact; rc=0. readonly-mode:3 linked source/unused aliases/zero native-source-output effects; rc=0. publication45/coverage9/census229paths288checks/ledger9+13 pass; rc=0. New WASM/runner unobserved.
+- [x] LOCKSTEP: python3 -I -B target/checked-recipe-mode-run-focus.py retention-proof: wholecde DEV213/CH157/D179105/D184106/prior477/all75/public481/seven windows/12open171sealed exact; rc=0. task-retention-proof: wholecde statement7512B78L/52564–60076/SHA9d309ecc/prior48433B prefix/first62828B/map8169B exact; rc=0. Book/live/frontier/caps aligned; promotion declined. Archive64 includes7 catalogs; derive .n09 window8 prerequisite before growth/400 unchanged.
+
+Final publication45/coverage9/census229paths288checks consumed rc=0. Primary ledger9+13
+passed; confirmatory ledger57575 pending, target/checked-recipe-mode-ledger-final.log.
+Staged doctrine61402 all13 green rc=0. Commit verified work first; consume repeat before
+next activation. Brief preparation target-only output guard refused before writes; corrected
+with explicit root mutable-source guard, failed preparation excluded.
+
+
+### Current retrieval for historical source links
+
+The byte-exact source records above keep their original logical addresses. For their
+retained preimplementation record, use [the current window8 member](../history/window8.md#stitchcad-devnotes-part195md)
+or `bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part195.md`.

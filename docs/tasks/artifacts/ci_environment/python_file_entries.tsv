@@ -61,12 +61,12 @@ docs/tasks/artifacts/formula_structure/literal_mutations.py	output	G1-SLICE.5b.4
 docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n07.1
 docs/tasks/artifacts/formula_structure/literal_normalization_reference.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/formula_structure/name_read_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n10
-docs/tasks/artifacts/formula_structure/namespace_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n09
+docs/tasks/artifacts/formula_structure/namespace_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n09.1
 docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n07.2
 docs/tasks/artifacts/formula_structure/normalized_expression_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a20
 docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n07.3
 docs/tasks/artifacts/formula_structure/operator_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11
-docs/tasks/artifacts/formula_structure/ordered_name_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n09
+docs/tasks/artifacts/formula_structure/ordered_name_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n09.2
 docs/tasks/artifacts/formula_structure/origin_value_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a13
 docs/tasks/artifacts/formula_structure/provenance_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a13
 docs/tasks/artifacts/formula_structure/rational_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a15

@@ -803,7 +803,7 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n09` | `todo` | namespace/ordered plans/D156; derive window8 prerequisite before growth, then native groups/D156/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h.v` | `todo` | newest committed window8 refusal, then namespace/ordered plans/D156, then native groups/D156/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

@@ -248,6 +248,11 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     .5a.3b.3b.3 while its frontier row selected .5a.3c. Correct both to .5a.3c.2 after the rounding
     prerequisite; PLANNING.5 retains the mechanical derivation obligation and priority.
 
+  - Recurrence at G1-SLICE.5b.4c.h2.b.p.o.f.n09.h: source0f223cb parent .f.n08 still
+    reported in progress after all four children were done. Committed child states were
+    independently checked before correcting the parent to done; this small instance is fixed.
+    PLANNING.5 retains the broader mechanical agreement obligation and existing priority.
+
 - **D38** — the defect census records each defect's state in prose, so its open/closed counts cannot be
   derived: `LIVE_STATUS.md` carries "36 logged, 32 closed" by hand, and a naive derivation over the same
   file disagrees.
@@ -986,20 +991,20 @@ D164–D167 complete closure receipts retained in [part91](../history/window7.md
 
 D168-D171 complete closure receipts/original-report routes retained in [part94](../history/window7.md#stitchcad-defects-part94md).
 
-D172–D176 closures retained in [part98](../history/stitchcad-defects-part98.md).
+D172–D176 closures retained in [part98](../history/window8.md#stitchcad-defects-part98md).
 
-D177 whole report/verified closure retained in [part99](../history/stitchcad-defects-part99.md).
+D177 whole report/verified closure retained in [part99](../history/window8.md#stitchcad-defects-part99md).
 
-D178 whole report/progressive evidence/verified closure retained in [part100](../history/stitchcad-defects-part100.md).
+D178 whole report/progressive evidence/verified closure retained in [part100](../history/window8.md#stitchcad-defects-part100md).
 
-D179 whole report/verified closure retained in [part105](../history/stitchcad-defects-part105.md).
+D179 whole report/verified closure retained in [part105](../history/window8.md#stitchcad-defects-part105md).
 
-D180 whole report/verified closure retained in [part101](../history/stitchcad-defects-part101.md).
+D180 whole report/verified closure retained in [part101](../history/window8.md#stitchcad-defects-part101md).
 
-D181 whole report/verified closure retained in [part102](../history/stitchcad-defects-part102.md).
+D181 whole report/verified closure retained in [part102](../history/window8.md#stitchcad-defects-part102md).
 
-D182 whole report/verified closure retained in [part103](../history/stitchcad-defects-part103.md).
+D182 whole report/verified closure retained in [part103](../history/window8.md#stitchcad-defects-part103md).
 
-D183 whole report/verified closure retained in [part104](../history/stitchcad-defects-part104.md).
+D183 whole report/verified closure retained in [part104](../history/window8.md#stitchcad-defects-part104md).
 
-D184 whole report/verified closure retained in [part106](../history/stitchcad-defects-part106.md).
+D184 whole report/verified closure retained in [part106](../history/window8.md#stitchcad-defects-part106md).
