@@ -214,7 +214,17 @@ captures certify dispatch separately from native behavior. Nine real mutations p
 cases, twelve frozen inputs and five Rust files. After exact restoration, the current Cargo-selected
 executable passes all thirteen public lexer contracts. No grammar or Rust change is needed.
 
-D177's fifteen-entry scope has twelve entries verified; three remain. Their .f.n05.2–06 repairs
+Semantic metadata plans three inputs: implementation, current public test and its compile-time
+canonical table page. Ordinary mode declares eleven logs/one mutable source; classifier-only mode
+declares neither files nor mutable sources and invokes no native child. It still prepares the local
+stores/output directory and checks ten original anchors/current macro locations. Complete captures
+of both modes, eight physical refusals and actual source/mode/restoration omission controls pass.
+A copied classifier-only run accepts a read-only source with three hard links and ignores unused
+log aliases, with no source/output writes. Ten real ordinary faults match their authored failed-test
+sets; thirteen frozen inputs/six Rust files restore exactly and the current Cargo-selected executable
+passes all five public metadata contracts. No Rust or metadata API change is needed.
+
+D177's fifteen-entry scope has thirteen entries verified; two remain. Their .f.n06 repairs
 own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
@@ -276,7 +286,8 @@ Lexer and semantic-metadata mutation entries also guard declared paths before so
 output. The lexer validates four inputs, including its test and imported examples, and both mutable sources.
 Semantic children inherit the prepared stores,
 including valid local overrides; they preserve the selected channel and unrelated environment.
-Both entries rebuild their restored focused targets. The semantic classifier-only mode remains available.
+Both ordinary entries rebuild their restored focused targets. Semantic classifier-only mode plans
+no files or mutable sources; its complete mode-specific proof is described above.
 
 Recipe and statement mutation entries likewise validate all declared sources/output before reads
 or writes, retain prepared child stores and rebuild their restored full focused target. Recipe mode
@@ -359,7 +370,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and296 actual body faults, with32 calibrated failed-body classifiers,
+controls and312 actual body faults, with33 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

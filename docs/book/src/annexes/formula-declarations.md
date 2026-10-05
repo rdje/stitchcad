@@ -139,14 +139,25 @@ cargo test -p sc-core --test formula_semantic_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/semantic_mutations.py
 ```
 
-Run the mutation command alone: it compiles ten temporary changes to the actual implementation
-and requires assertion failures in test bodies, then restores the exact source bytes in finally.
-Its [local producer profile](../build-and-checks.md#direct-python-producers) validates source/output
-before reading or writing; native children retain valid prepared store overrides and the selected
-channel. Finally it rebuilds the restored focused target. Classifier-only mode still checks anchors
-and the assertion classifier without compiling a fault.
-The standing structural runner checks every fault anchor and refuses compiler/expect/name noise.
-These controls verify metadata behavior; they do not establish full static or runtime acceptance.
+Run the mutation command alone: it compiles ten original temporary changes and requires failed-body
+panics at current test assertion macros. Its
+[local producer profile](../build-and-checks.md#direct-python-producers) plans eleven logs, one mutable
+implementation and three inputs before reads: implementation, public test and canonical table page.
+Children retain prepared stores and the selected channel. Exact restoration rebuilds all five
+public contracts. Ten real faults match their authored failed-test sets; thirteen frozen inputs and
+six Rust files remain exact. No metadata API or Rust change is needed for this producer repair.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/semantic_mutations.py --classifier-only
+```
+
+Classifier-only mode prepares the stores/output directory, validates the same three inputs and checks
+all ten anchors/current assertion sites. It declares zero diagnostic files or mutable sources and
+invokes no native child or source/output write. A copied entry accepts a read-only implementation
+with three hard links and leaves unused log aliases untouched. Independent complete captures,
+eight physical refusals and actual source/mode/restoration omissions watch both modes; captures
+certify dispatch separately from the real native proof. Compiler noise, passed names and labelled
+extraction panics provide no assertion evidence. These metadata proofs grant no runtime acceptance.
 
 The seven public formula_declaration_contract tests cover five canonical length origins/three general scalar domains/six
 annotations, every canonical LengthState, exact geometry refs, all eight reserved names and actual

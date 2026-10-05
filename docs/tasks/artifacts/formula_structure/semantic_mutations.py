@@ -9,10 +9,11 @@ import sys
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/semantic.rs'
 WORK = ROOT / 'target/semantic_mutations'
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=(SOURCE,))
-WORK.mkdir(parents=True, exist_ok=True)
-original = SOURCE.read_bytes()
+TEST_SOURCE = ROOT / 'crates/sc-core/tests/formula_semantic_contract.rs'
+BOOK_SOURCE = ROOT / 'docs/book/src/spec/formula-language.md'
+SOURCES = (SOURCE, TEST_SOURCE, BOOK_SOURCE)
+assert sys.argv[1:] in [[], ['--classifier-only']]
+CLASSIFIER_ONLY = sys.argv[1:] == ['--classifier-only']
 CASES = (
     ('kind population', '        Self::Point,', '        Self::Length,'),
     ('kind token', 'Self::Boolean => "boolean",', 'Self::Boolean => "count",'),
@@ -27,19 +28,55 @@ CASES = (
      'Self::SizeIndex | Self::SizeCount | Self::IsBaseSize => Some(FormulaToleranceName::Numerical),'),
     ('name lookup normalization', '.find(|name| name.token() == token)', '.find(|name| name.token() == token.trim())'),
 )
+OUTPUT_FILES = (() if CLASSIFIER_ONLY else
+                tuple(WORK / ('fault-%d.log' % index) for index in range(1, len(CASES) + 1)) +
+                (WORK / 'restored.log',))
+MUTABLE_SOURCES = () if CLASSIFIER_ONLY else (SOURCE,)
+
+
+def assertion_sites(source, path):
+    """Current curated test macros, with Rust panic byte columns."""
+    sites = set()
+    for number, line in enumerate(source.splitlines(), 1):
+        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
+        if match is not None:
+            sites.add((path, number, len(match.group(1).encode()) + 1))
+    return sites
+
+
+def assertion_failure(output):
+    """A failed-body panic must name a guarded current assertion macro location."""
+    parts = output.split(b'\nfailures:\n', 2)
+    if len(parts) != 3:
+        return False
+    for match in re.finditer(
+            rb'(?m)^thread\b[^\r\n]*? panicked at ([^:\r\n]+):([0-9]+):([0-9]+):\r?$', parts[1]):
+        try:
+            path = match.group(1).decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if (path, int(match.group(2)), int(match.group(3))) in ASSERTION_SITES:
+            return True
+    return False
+
+
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=MUTABLE_SOURCES)
+WORK.mkdir(parents=True, exist_ok=True)
+original = SOURCE.read_bytes()
+ASSERTION_SITES = assertion_sites(TEST_SOURCE.read_text(), TEST_SOURCE.relative_to(ROOT).as_posix())
+assert ASSERTION_SITES, 'current semantic test has no assertion macros'
+
 for name, before, _ in CASES:
     assert original.decode().count(before) == 1, (name, 'actual fault anchor not unique')
 
-def assertion_failure(output):
-    parts = output.split(b'\nfailures:\n', 2)
-    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None
-
-assert assertion_failure(b'\nfailures:\nthread panicked:\nassertion `left == right` failed\n\nfailures:\nfixture\n')
-assert not assertion_failure(b'test assertion_name ... ok\n\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
+site = min(ASSERTION_SITES)
+location = ("\nfailures:\nthread 'fixture' panicked at %s:%d:%d:\n" % site).encode()
+assert assertion_failure(location + b'custom macro message\n\nfailures:\nfixture\n')
+assert not assertion_failure(b'test assertion_name ... ok\n\nfailures:\nthread panicked:\nassertion: expect-only\n\nfailures:\nassertion_name\n')
 assert not assertion_failure(b'assertion: compiler output\n')
-assert sys.argv[1:] in [[], ['--classifier-only']]
-if sys.argv[1:] == ['--classifier-only']:
-    print('semantic fault controls:10 unique actual anchors; failed-name/expect-only/compiler noise refused')
+if CLASSIFIER_ONLY:
+    print('semantic fault controls:10 unique actual anchors; current macro sites accepted; failed-name/labelled-expect/compiler noise refused')
     sys.exit(0)
 environment = dict(os.environ)
 try:

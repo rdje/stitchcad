@@ -268,3 +268,36 @@ guarded mutable source and verify untracked/empty before writing; public produce
 
   Final staged gate13 green, rc=0, target/length-staged-gate.log.
 
+
+Source: `51f0dc56f5ba8ce2e8c4f7cff83648ce46e09acd`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Mixed domain diagnostics](#domain-diagnostics) | 46910–51417 | 4507 / 24 | `90bc27ab3ebad56dd13f17a1b27ae6b741e1756d047636409911bd8a8b43d602` |
+
+### Mixed domain diagnostics
+
+Full producer/wrapper, unit error/length/ratio implementation/public exports/five public tests,
+complete range source and three private guards, topology parameter conversion/fold/public contract,
+Param boundary API, canonical .5a.3b.3b.1b and units §2.5/build/roadmap context reviewed. Own six unique
+inputs/five mutable sources/all sixteen logs before reads, unchanged fourteen cases/two consumer
+argv/restorations/current unit/range/topology macro evidence. Original full predicate/no-effect
+reproduction; independent complete multi-source dispatch/capture/physical/body/classifier controls;
+exclusive native/frozen inputs/both full focused artifacts. Preserve all Rust bytes unless actual
+evidence requires a separately owned helper repair. Own Target helpers/logs; whole completed unsigned
+body retention with full9075e1c intervals/SHA/prior sibling/canonical headers/map before fresh receipts.
+Own whole older DEV/CH record retention before growth/prior448 identities/all public readers/fixed
+caps. Private invalid core arms certify totality, not geometry. Production/API/grammar/400 cadence
+unchanged. Shared captured simulation remains distinct from real native proof; no early push.
+
+- [x] REPRODUCE / ISSUE: actual committed complete domain predicate accepts passed assertion_name plus labelled expect-only failed body101, with no native effects/Rust writes, rc=0, target/domain-predicate-diagnostic.log. D156 sixteen missing file plans/five mutable intentions/read-only unit input and D177 current macro provenance owned before edits. Complete entry/wrapper/affected unit code/public5/private3 guards/canonical/book reviewed; topology conversion/fold scoped honestly.
+- [x] ROOT CAUSE: directory/source plan omits file leaves/mutable ownership/current unit test; broad assertion bytes omit macro provenance. Authored five-source/two-consumer fixture checks all sixteen calls/files and nineteen restoration writes. Eight actual copied-entry first/last log/five mutable hard-link/missing-unit-test refusals preserve bytes/environment before effects, rc=0, target/domain-producer-controls-final.log. Simulation proves dispatch only.
+- [x] FIX: guard16 logs/six unique inputs/five mutable sources before reads; current unit/range/topology macro union replaces substring evidence. Original14 CASES/argv/restorations remain exact. Shared283 body reds/31 classifiers/eleven captures/50 physical refusals plus prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls0, rc=0, domain-producer-controls-final.log. Each mutable/site omission and final-source/core-restoration/profile fault discriminates; Rust unchanged.
+- [x] ADDRESSED: exclusive fourteen actual current macro reds/exact authored failed-test sets/full5 public+3 private restorations0, rc=0, domain-native-final.log/native-proof.log. Seventeen frozen inputs/ten Rust HEAD files/original cases/sixteen local single-link logs exact. Cargo selects unit041042e7 artifactSHAe49686e57d240fda5a7b8330d4fe2b1d6e0909aaad3245a62ce548a16ac8992c and core80f15a33 artifactSHA88fd162d11d9e306ee7cd1727a123e86781a2762e0edb1f930877ff7501ab406; execute all5/all3 focused tests0, rc=0, native-artifact-proof.log.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths51owners21groups/15refusals12reds/map/ledger9+13 pass, rc=0, domain-*-final logs; terminal jobs consumed. Whole9075e1c DEV2438–6234/18L3796B/SHA3704c2e6 and CH22423–23459/14L1036B/SHA07a2dcad/prior448/all46/public450/13open163sealed/no gaps/seven windows exact, rc=0, domain-retention-final.log. Unchanged Rust; latest broad703-test gate0165, not rerun here.
+- [x] LOCKSTEP: whole9075e1c unsigned body45532–50134/25L4602B/SHA0a22c8ca/prior32051B sibling/canonical headers/status/Paths/map8102B exact, rc=0, domain-producer-retention-proof.log. Numeric parent done/book/live route .n05; D177 eleven fixed/4 P1. Archive33raw/17112L/1248289decodedB/571374residentB fits caps. Pre-execution prefix448→468 helper caught/corrected before replay; excluded. promotion: declined (existing source/effect/whole-record rules). Private guards certify totality; grammar/400/local scope retained.
+
+Pre-execution retention-helper review caught prefix replacement changing448 to468 while updating44 to46. No retention execution/writes or false count published. Exact scalar anchor corrected to prior448/all46 before replay; excluded provisional helper.
+
+  Final staged gate13 green, rc=0, target/domain-staged-gate.log.
+

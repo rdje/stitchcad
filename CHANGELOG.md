@@ -110,6 +110,15 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0169 - semantic mode-specific files and current macros (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n05.2`)
+
+- Guard three inputs; ordinary11 logs/one mutable, classifier-only zero files/mutable/native.
+- Shared312 body reds/33 classifiers/fourteen captures/64 physical refusals; final receipts in leaf.
+- Ten real macro faults/exact failed-test sets;13 inputs/six Rust files/full5 artifact exact0.
+- Retain whole domain receipt/length lesson/two ledgers; prior451/all49/public453 exact.
+- Parent lexer/semantic completes; D17713 fixed2 remain, .n06 next after checks.
+- Book/live/focused proof in leaf; grammar/metadata/400 cadence unchanged.
+
 ## STITCHCAD-G1-0168 - guarded lexer files and current macro sites (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n05.1`)
 
 - Plan10 logs/four inputs/two mutable sources; preserve9 cases and imported examples.
@@ -213,17 +222,6 @@ the digests afterwards.
 - Real seven current macro reds/eight input hashes/full12 public artifact exact; Rust unchanged.
 - D17715-entry scope owned, membership fixed/14 pending .n02–06; grammar/400 cadence stays.
 
-## STITCHCAD-G1-0156 - explicit mutable source plans (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.l`)
-
-- Refuse hard-linked outputs/mutable source subsets before effects; preserve readonly inputs.
-- Physical26/171 actual body reds and existing shared/bridge/profile controls pass0.
-- Two whole ecdb67b records/prior426/public427 exact; native37 adoption next; D156/400 unchanged.
-
-## STITCHCAD-G1-0155 - committed catalog refusal (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.h.v`)
-
-- Actual copied window7 prose edit passes inventory0 and refuses committed retention1.
-- All24 root archive files/HEAD exact; only copied catalog changed; no sealed source write.
-- Book/live/frontier route P1 .f.l hard links; local proof,400 cadence unchanged.
 
 
 
@@ -339,3 +337,5 @@ the digests afterwards.
 | [`part145`](docs/history/stitchcad-changelog-part145.md) | whole G1-0153 and G1-0152 continuity ledgers | 14 lines, 1036 bytes, `sha256:07a2dcad…` |
 
 | [`part146`](docs/history/stitchcad-changelog-part146.md) | whole G1-0154 continuity ledger | 7 lines, 603 bytes, `sha256:136114b1…` |
+
+| [`part147`](docs/history/stitchcad-changelog-part147.md) | whole G1-0156 and G1-0155 continuity ledgers | 11 lines, 719 bytes, `sha256:45304271…` |
