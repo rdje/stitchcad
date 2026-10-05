@@ -225,3 +225,46 @@ that helper with an explicit outer-unwind assertion; preserve five tests/138 row
 
   Final staged gate13 green, rc=0, target/unsigned-round-staged-gate.log.
 
+
+Source: `dcf82963c39ca84628d8dee0f6ee270a4feb92ef`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Length operators](#length-operators) | 46222–51106 | 4884 / 34 | `17bc80e94ac21224ef95db02a8a8acee3ab59de70600b79acfaf9b058afe64fe` |
+
+### Length operators
+
+Full entry/wrapper/length.rs/public unit exports/four-test contract, .5a.3b.3b.1a canonical record,
+roadmap numerical/G1 and units §1/§2.4/build book reviewed. Original six pure cases select two
+crossing tests; full restored target has four. Own actual old predicate/no-effect reproduction,
+seven-file/two-input/one-mutable-source/current macro plans, independent complete dispatch/physical/
+body/classifier controls and exclusive native proof with nine frozen inputs/current full artifact.
+Known mutations use bounded valid operands; preserve all Rust bytes unless real evidence requires
+a separately owned helper repair. Own Target helpers/logs and whole completed signed-round body
+relocation into existing producer-proof before fresh live receipts; retain full3171eac spans/SHA/
+prior sibling/canonical headers/map. Own whole older DEV/CH retention before growth, prior archive/
+reader identities/fixed caps. Production/API/grammar/400 cadence unchanged; no early push.
+
+Owned small book defect found in relevant units §2.1: line106 writes exact equality to352.7µm
+for a PDF point. Fraction25400/72=3175/9 differs by7/90µm; independent Decimal50 half-up gives
+352.78. The same chapter table/footnote, numerical ADR and public Unit documentation already
+give exact ratio/≈352.78; production conversion is unaffected. Correct the prose to ≈352.78 here,
+verify both arithmetic and exact replacement and close before this commit. Reproduction rc=0;
+inline Python Fraction/Decimal diagnostic with current source text and maintained ratio sources.
+
+Verified PDF-point correction closed here; current replacement and independent arithmetic agree,
+rc=0, target/length-book-point-proof.log; no production conversion change.
+
+- [x] REPRODUCE / ISSUE: committed complete predicate accepts passed assertion_name with expect-only failed body101; no native effects/Rust writes, rc=0, target/length-predicate-diagnostic.log. D156 seven missing file/mutable/test-input plans and D177 current macro evidence owned before edits; full implementation/public exports/four tests/canonical/book reviewed. Owned PDF-point exact-equality prose defect independently reproduced.
+- [x] ROOT CAUSE: pure CASES follows activation/source read; directory identity omits log leaves/mutable intent, and broad assertion bytes omit current macro provenance. Complete seven-child/file capture and four physical first/last symlink/mutable hard-link/missing-test refusals pass, rc=0, target/length-producer-controls-final.log. Alias/source bytes unchanged; captured child dispatch proves simulation only.
+- [x] FIX: original six CASES before seven-file/two-input/one-mutable-source guard/current failed-body macro byte sites. Shared264 actual body reds/30 classifiers/ten complete native captures/42 physical refusals and all prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls pass, rc=0, target/length-producer-controls-final.log. Five entry/three classifier faults discriminate each native entry; no Rust helper repair needed.
+- [x] ADDRESSED: exclusive six real current selected macro reds at53:9/68:9/full4 restored, rc=0, length-native-final.log and native-proof.log. Nine frozen inputs/three Rust HEAD files/original CASES/two filters/seven local single-link logs exact. Cargo-selected target/debug/deps/length_operator_contract-5487b37b0899a683 SHA752d49c5f7be2650fbd266e0cb1ec326a7053275c657acdc715035d1302521dd executes all4 tests0, rc=0, native-artifact-proof.log; production/tests unchanged.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths51owners21groups/15refusals12reds/map/ledger9+13 pass, rc=0, length-*-final logs; terminal jobs consumed. Whole3171eac DEV4524–7850/18L3326B/SHA4de193fd and CH22702–23685/13L983B/SHA4c0a2f29/prior446/all44/public448/13open163sealed/no gaps/seven windows exact, rc=0, length-retention-final.log. Rust unchanged; latest full703-test gate is0165, not rerun here.
+- [x] LOCKSTEP: whole3171eac signed body44763–49287/27L4524B/SHAb4d29d3d/prior27153B sibling/canonical headers/status/Paths/map8102B exact, rc=0, length-producer-retention-proof.log. PDF-point prose corrected to ≈352.78; Fraction3175/9/error7/90/Decimal50/current book/ADR/public ratio consistent, rc=0, length-book-point-proof.log. Book/live route .n04.4; D177 ten fixed/5 P1. Archive31raw/17058L/1242151decodedB/565236residentB fits. promotion: declined (existing source/effect/whole-record rules). Grammar/400/local scope retained.
+
+Brief-planning helper1 refused the root message file as a Target-only producer output after task
+receipts were saved. No brief write occurred; excluded. Declare the existing COMMIT.md brief as a
+guarded mutable source and verify untracked/empty before writing; public producer policy unchanged.
+
+  Final staged gate13 green, rc=0, target/length-staged-gate.log.
+

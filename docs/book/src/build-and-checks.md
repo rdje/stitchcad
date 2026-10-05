@@ -203,7 +203,18 @@ match their expected failed-test sets; seventeen inputs restore exactly and curr
 executables pass all five public unit tests and all three focused private guards. Rust is unchanged;
 the private guards certify totality, separately from geometry.
 
-D177's fifteen-entry scope has eleven entries verified; four remain. Their .f.n05–06 repairs
+The lexer entry plans ten diagnostic logs and four inputs under the
+[local producer profile](#direct-python-producers) before reading or writing.
+Both production files are explicitly mutable. The current public test and its compile-time imported
+worked examples are read-only inputs. Failed-body panics must name an assertion macro in that current
+test, including the scan helper; a passed test name or assertion-labelled extraction panic supplies
+no evidence. Independent complete captures check all ten children, exact source binding and eleven
+restoration writes. Six physical refusals and actual guard/helper omissions watch the plans; these
+captures certify dispatch separately from native behavior. Nine real mutations preserve the original
+cases, twelve frozen inputs and five Rust files. After exact restoration, the current Cargo-selected
+executable passes all thirteen public lexer contracts. No grammar or Rust change is needed.
+
+D177's fifteen-entry scope has twelve entries verified; three remain. Their .f.n05.2–06 repairs
 own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
@@ -257,12 +268,13 @@ the declared-path guard before output or child dispatch. Each restores its exact
 runs its complete focused test target again to rebuild the current artifact before returning.
 
 Rounding, length-operator and domain-context mutation entries prepare the same profile and declared
-paths. The mixed domain entry validates all five source files before writing. Unsigned rounding
-rebuilds both debug and release profiles after restoration; domain diagnostics rebuild both
+paths. The mixed domain entry validates six unique inputs and five mutable sources before writing.
+Unsigned rounding rebuilds both debug and release profiles after restoration; domain diagnostics rebuild both
 unit and core targets. Run native mutation diagnostics exclusively.
 
 Lexer and semantic-metadata mutation entries also guard declared paths before source reads or
-output. The lexer validates both source files. Semantic children inherit the prepared stores,
+output. The lexer validates four inputs, including its test and imported examples, and both mutable sources.
+Semantic children inherit the prepared stores,
 including valid local overrides; they preserve the selected channel and unrelated environment.
 Both entries rebuild their restored focused targets. The semantic classifier-only mode remains available.
 
@@ -347,7 +359,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and283 actual body faults, with31 calibrated failed-body classifiers,
+controls and296 actual body faults, with32 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

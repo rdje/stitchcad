@@ -459,39 +459,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
   Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/G1-SLICE-producer-proof.md
   Acceptance: preserve6 cases/7 logs/two selected fault tests/full4 public contracts; independent capture/refusals/body faults and exclusive exact source/current artifact evidence.
 
-Full entry/wrapper/length.rs/public unit exports/four-test contract, .5a.3b.3b.1a canonical record,
-roadmap numerical/G1 and units §1/§2.4/build book reviewed. Original six pure cases select two
-crossing tests; full restored target has four. Own actual old predicate/no-effect reproduction,
-seven-file/two-input/one-mutable-source/current macro plans, independent complete dispatch/physical/
-body/classifier controls and exclusive native proof with nine frozen inputs/current full artifact.
-Known mutations use bounded valid operands; preserve all Rust bytes unless real evidence requires
-a separately owned helper repair. Own Target helpers/logs and whole completed signed-round body
-relocation into existing producer-proof before fresh live receipts; retain full3171eac spans/SHA/
-prior sibling/canonical headers/map. Own whole older DEV/CH retention before growth, prior archive/
-reader identities/fixed caps. Production/API/grammar/400 cadence unchanged; no early push.
-
-Owned small book defect found in relevant units §2.1: line106 writes exact equality to352.7µm
-for a PDF point. Fraction25400/72=3175/9 differs by7/90µm; independent Decimal50 half-up gives
-352.78. The same chapter table/footnote, numerical ADR and public Unit documentation already
-give exact ratio/≈352.78; production conversion is unaffected. Correct the prose to ≈352.78 here,
-verify both arithmetic and exact replacement and close before this commit. Reproduction rc=0;
-inline Python Fraction/Decimal diagnostic with current source text and maintained ratio sources.
-
-Verified PDF-point correction closed here; current replacement and independent arithmetic agree,
-rc=0, target/length-book-point-proof.log; no production conversion change.
-
-- [x] REPRODUCE / ISSUE: committed complete predicate accepts passed assertion_name with expect-only failed body101; no native effects/Rust writes, rc=0, target/length-predicate-diagnostic.log. D156 seven missing file/mutable/test-input plans and D177 current macro evidence owned before edits; full implementation/public exports/four tests/canonical/book reviewed. Owned PDF-point exact-equality prose defect independently reproduced.
-- [x] ROOT CAUSE: pure CASES follows activation/source read; directory identity omits log leaves/mutable intent, and broad assertion bytes omit current macro provenance. Complete seven-child/file capture and four physical first/last symlink/mutable hard-link/missing-test refusals pass, rc=0, target/length-producer-controls-final.log. Alias/source bytes unchanged; captured child dispatch proves simulation only.
-- [x] FIX: original six CASES before seven-file/two-input/one-mutable-source guard/current failed-body macro byte sites. Shared264 actual body reds/30 classifiers/ten complete native captures/42 physical refusals and all prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls pass, rc=0, target/length-producer-controls-final.log. Five entry/three classifier faults discriminate each native entry; no Rust helper repair needed.
-- [x] ADDRESSED: exclusive six real current selected macro reds at53:9/68:9/full4 restored, rc=0, length-native-final.log and native-proof.log. Nine frozen inputs/three Rust HEAD files/original CASES/two filters/seven local single-link logs exact. Cargo-selected target/debug/deps/length_operator_contract-5487b37b0899a683 SHA752d49c5f7be2650fbd266e0cb1ec326a7053275c657acdc715035d1302521dd executes all4 tests0, rc=0, native-artifact-proof.log; production/tests unchanged.
-- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths51owners21groups/15refusals12reds/map/ledger9+13 pass, rc=0, length-*-final logs; terminal jobs consumed. Whole3171eac DEV4524–7850/18L3326B/SHA4de193fd and CH22702–23685/13L983B/SHA4c0a2f29/prior446/all44/public448/13open163sealed/no gaps/seven windows exact, rc=0, length-retention-final.log. Rust unchanged; latest full703-test gate is0165, not rerun here.
-- [x] LOCKSTEP: whole3171eac signed body44763–49287/27L4524B/SHAb4d29d3d/prior27153B sibling/canonical headers/status/Paths/map8102B exact, rc=0, length-producer-retention-proof.log. PDF-point prose corrected to ≈352.78; Fraction3175/9/error7/90/Decimal50/current book/ADR/public ratio consistent, rc=0, length-book-point-proof.log. Book/live route .n04.4; D177 ten fixed/5 P1. Archive31raw/17058L/1242151decodedB/565236residentB fits. promotion: declined (existing source/effect/whole-record rules). Grammar/400/local scope retained.
-
-Brief-planning helper1 refused the root message file as a Target-only producer output after task
-receipts were saved. No brief write occurred; excluded. Declare the existing COMMIT.md brief as a
-guarded mutable source and verify untracked/empty before writing; public producer policy unchanged.
-
-  Final staged gate13 green, rc=0, target/length-staged-gate.log.
+Complete committed verification retained in [producer proof](G1-SLICE-producer-proof.md#length-operators); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04.4`
   Status: `done`
@@ -525,10 +493,51 @@ Pre-execution retention-helper review caught prefix replacement changing448 to46
   Final staged gate13 green, rc=0, target/domain-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n05`
-  Status: `pending`
+  Status: `in_progress`
   Goal: complete file-destination plans for lexer/semantic; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_lex/formula_lex_mutations.py;docs/tasks/artifacts/formula_structure/semantic_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+Two entries read before splitting: lexer9 faults/two mutable sources/ten logs/full13 public
+contracts with the compile-time worked-example book input; semantic10 faults/one mutable source/
+classifier-only mode/full focused target. Preserve parent paths; each child owns exact full input/
+output/current macro plans and real restoration. Grammar and machine-token rules stay unchanged.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n05.1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0168 owns complete lexer files/current macro sites after numeric-family closure.
+  Paths: docs/tasks/artifacts/formula_lex/formula_lex_mutations.py
+  Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/tasks/G1-SLICE-producer-proof.md
+  Acceptance: preserve9 pure cases/two mutable sources/ten logs/eight selected tests/full13 public target; guard current test/imported examples before reads; complete captures/physical/body controls and exclusive exact source/current artifact.
+
+Complete producer/wrapper/lexer.rs/name.rs/public exports/all13 tests/canonical .5a.1/grammar1–1.1/
+syntax-annex lexical sections/build book read. Test include_str compiles the worked examples; own
+its explicit input guard/frozen bytes. Own original full predicate/no-effect reproduction, four-input/
+two-mutable/ten-file/current macro plans, independent mixed-source complete capture/refusals/body
+faults and exclusive native/current full artifact proof. Preserve all Rust bytes unless actual
+fault evidence requires a separately owned test-helper repair. Own Target helpers/logs, whole
+completed length-body retention with full dcf8296 spans/SHA/canonical headers/prior sibling/map;
+whole older DEV/CH retention before growth/all prior450 records/readers/fixed caps. Also own the
+remaining build-book domain paragraph's old five-source wording: current captured plan includes
+six unique inputs/five mutable sources. Clarify that paragraph here and verify current prose and
+publication; no domain production change. Current lexer syntax/grammar/API/400 cadence unchanged.
+
+- [x] REPRODUCE / ISSUE: actual committed full lexer predicate accepts passed assertion_name plus expect-only failed body101 without native effects/two Rust writes, rc=0, target/lexer-predicate-diagnostic.log. D156 ten missing file plans/two mutable intentions/test+imported example inputs and D177 current macro provenance owned before edits. Complete producer/wrapper/lexer/name/public13 tests/canonical .5a.1/grammar/lexical book reviewed.
+- [x] ROOT CAUSE: directory/source plans omit file leaves/mutable ownership/test+compile-time examples; assertion bytes omit current macro provenance. Independently authored nine source/test bindings check all ten children/files and eleven source restorations. Six actual copied-entry first/last log/two mutable hard-link/missing test+examples refusals preserve bytes/environment before effects, rc=0, target/lexer-producer-controls-final.log. Simulation proves dispatch only.
+- [x] FIX: plan10 logs/four inputs/two mutable sources before reads; current public-test/scan-helper macro sites replace assertion bytes. Original9 CASES/two mutable/eight selected/full13 target exact. Shared296 body reds/32 classifiers/twelve captures/56 physical refusals plus prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls0, rc=0, lexer-producer-controls-final.log. Each mutable/example/final-restore/helper omission discriminates; Rust unchanged.
+- [x] ADDRESSED: exclusive nine real current macro reds/sites147:9,91:9,69:9,43:5,163:9,8:13,226:9,249:5,8:13/full13 restored0, rc=0, lexer-native-final.log/native-proof.log. Twelve frozen inputs/five Rust HEAD files/imported examples/original cases/ten local single-link logs exact. Public Cargo selects formula_lex_contract-34bf8258a6e0365b SHA c3f9ac80f4a6d2b6344155b8097259f42ff2d841d4f011939f0295671656364b; all13 tests0, rc=0, lexer-native-artifact-proof.log.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29groups/file120paths52owners22groups/15refusals12reds/map/ledger9+13 pass, rc=0, lexer-*-final logs; terminals consumed. Whole dcf8296 CH22576–23179/7L603B/SHA136114b1/prior450/all48/public451/13open163sealed/no gaps/seven windows exact0, lexer-retention-final.log. Rust unchanged; latest broad703-test gate0165, not rerun. Build-book domain paragraph six unique inputs/five mutable sources verified0, lexer-domain-book-proof.log.
+- [x] LOCKSTEP: whole dcf8296 length body46222–51106/34L4884B/SHA17bc80e9/prior37033B sibling/canonical headers/status/Paths/map8102B exact, rc=0, lexer-producer-retention-proof.log. Book/live route .n05.2; parent stays active/D17712 fixed3 P1. Archive34raw/pressure in retention proof/fixed caps retained. Doc-sync syntax/first size gate1/relocated link1 excluded; bounded annex/full build proof repaired, size19surfaces0. promotion: declined (existing source/effect/whole-record rules). Grammar/400/local scope unchanged; runner unobserved.
+
+Staged gate first attempt1: PROJECT LIVE-DOC-SIZE names syntax annex41586B above40960B. Own reproducer target/lexer-staged-gate.log, public-doc signoff impact, bounded annex/build detail repair and fresh publication/gate before commit. Original Source stays exact; failed gate excluded. First relocated publication1 named its old relative profile link; rerouted to the current chapter fragment before fresh proof.
+
+  Final staged gate13 green, rc=0, target/lexer-staged-gate-final.log.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n05.2`
+  Status: `pending`
+  Goal: complete semantic-metadata files/current test sites and both ordinary/classifier-only modes after lexer.
+  Paths: docs/tasks/artifacts/formula_structure/semantic_mutations.py
+  Acceptance: preserve10 cases/eleven logs/one mutable source/full public target; guard current test/actual-mode outputs before reads; complete captures/refusals/body controls and exclusive exact source/current artifact.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n06`
   Status: `pending`

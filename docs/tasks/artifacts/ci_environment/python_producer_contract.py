@@ -389,10 +389,46 @@ def domain_fixture():
     return mutable, unit, work, bindings, files
 
 
-def capture_domain_entry(text, entry_path):
+def mixed_fixture(entry_path):
+    """Authored source/input/consumer order for the two mixed-source entries."""
+    if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py':
+        mutable, contract, work, bindings, files = domain_fixture()
+        units = ['cargo', 'test', '-p', 'sc-units', '--test', 'domain_context_contract']
+        core = ['cargo', 'test', '-p', 'sc-core', '--lib', 'domain_context_contracts']
+        contexts = ('units',) * 11 + ('core',) * 3
+        calls = tuple(units if context == 'units' else core for context in contexts) + (units, core)
+        extras = ()
+        macro_sources = (contract, mutable[3], mutable[4])
+        initial_reads = tuple(mutable[i] for i in bindings) + macro_sources
+    else:
+        assert entry_path == ROOT / 'docs/tasks/artifacts/formula_lex/formula_lex_mutations.py', 'D156 unknown mixed entry'
+        mutable = (ROOT / 'crates/sc-core/src/recipe/lexer.rs', ROOT / 'crates/sc-core/src/name.rs')
+        contract = ROOT / 'crates/sc-core/tests/formula_lex_contract.rs'
+        work = ROOT / 'target/formula_lex_mutations'
+        bindings = (0, 0, 1, 0, 0, 0, 0, 0, 0)
+        contexts = ('unicode_preflight_refuses_before_any_valid_prefix_token',
+                    'only_three_keywords_are_reserved_and_spelling_matches_machine_tokens',
+                    'only_three_keywords_are_reserved_and_spelling_matches_machine_tokens',
+                    'paired_comparisons_use_longest_match', 'decimals_require_nonempty_fraction',
+                    'binding_keeps_exact_roles_text_and_byte_positions',
+                    'end_and_first_error_are_permanently_fused', 'debug_and_errors_do_not_dump_customer_source',
+                    'whitespace_gaps_preserve_later_unit_separator_authority')
+        base = ['cargo', 'test', '-p', 'sc-core', '--test', 'formula_lex_contract']
+        calls = tuple(base + [test, '--', '--exact'] for test in contexts) + (base,)
+        files = tuple(work / ('mutation-%d.log' % i) for i in range(1, 10)) + (work / 'restored.log',)
+        extras = (ROOT / 'docs/book/src/spec/formula-language/examples.md',)
+        macro_sources = (contract,)
+        initial_reads = (*mutable, contract)
+    return dict(mutable=mutable, contract=contract, work=work, bindings=bindings, files=files,
+                contexts=contexts, calls=calls, extras=extras, macro_sources=macro_sources,
+                initial_reads=initial_reads)
+
+
+def capture_mixed_entry(text, entry_path):
     """Complete actual mixed-source body; intercepted children certify dispatch only."""
-    mutable, unit, work, bindings, files = domain_fixture()
-    sources = (*mutable, unit)
+    fixture = mixed_fixture(entry_path)
+    mutable, contract, work, bindings, files = (fixture[key] for key in ('mutable', 'contract', 'work', 'bindings', 'files'))
+    sources = (*mutable, contract, *fixture['extras'])
     originals = {p: p.read_bytes() for p in (*sources, entry_path, SOURCE)}
     GOOD['directory'](ROOT, work.relative_to(ROOT).as_posix(), create=True)
     base = 'target/scratch/python_producer_contract/domain-stores'
@@ -421,7 +457,7 @@ def capture_domain_entry(text, entry_path):
         def enter(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
             assert root == ROOT and directories == (work,), 'D156 measure directory plan changed'
             assert output_files == files, 'D156 measure file plan changed'
-            assert sources == (*mutable, unit), 'D156 measure source plan changed'
+            assert sources == (*mutable, contract, *fixture['extras']), 'D156 measure source plan changed'
             assert mutable_sources == mutable, 'D156 measure mutable plan changed'
             assert not planned and not reads and not calls and not written, 'D156 measure plan was late'
             planned.append(True)
@@ -452,7 +488,7 @@ def capture_domain_entry(text, entry_path):
                 assert index < len(bindings) and not pending, 'D156 measure source mutation order'
                 assert path == mutable[bindings[index]], 'D156 domain mutable source order changed'
                 _, relative, before, after, family = scope['CASES'][index]
-                assert ROOT / relative == path and family == ('units' if index < 11 else 'core'), \
+                assert ROOT / relative == path and family == fixture['contexts'][index], \
                     'D156 domain authored family/source changed'
                 expected = originals[path].decode()
                 assert expected.count(before) == 1, 'D156 measure nonunique source anchor'
@@ -462,7 +498,7 @@ def capture_domain_entry(text, entry_path):
         else:
             assert path in files and path not in written, 'D156 measure unplanned output write'
             assert calls and path == files[len(calls) - 1], 'D156 measure diagnostic order changed'
-            assert content == (b'restored dispatch\n' if len(calls) > 14 else scope['LAST_OUTPUT']), \
+            assert content == (b'restored dispatch\n' if len(calls) > len(bindings) else scope['LAST_OUTPUT']), \
                 'D156 measure diagnostic bytes changed'
             written[path] = content
         return len(content)
@@ -474,30 +510,31 @@ def capture_domain_entry(text, entry_path):
                 'D156 measure native cwd changed'
             assert kwargs.get('capture_output') is True, 'D156 measure native capture changed'
             index = len(calls)
-            assert index < 16, 'D156 measure extra native child'
-            family = 'units' if index < 11 or index == 14 else 'core'
-            wanted = (['cargo', 'test', '-p', 'sc-units', '--test', 'domain_context_contract']
-                      if family == 'units' else ['cargo', 'test', '-p', 'sc-core', '--lib', 'domain_context_contracts'])
+            assert index < len(fixture['calls']), 'D156 measure extra native child'
+            wanted = fixture['calls'][index]
             assert args == wanted, 'D156 measure native argv changed'
-            expected_pending = {mutable[bindings[index]]} if index < 14 else set()
+            expected_pending = {mutable[bindings[index]]} if index < len(bindings) else set()
             assert set(pending) == expected_pending, 'D156 measure native source state changed'
-            assert mutations == list(range(min(index + 1, 14))), 'D156 measure native mutation order changed'
-            if index < 14:
-                contract = unit if family == 'units' else mutable[bindings[index]]
-                current = read_text(contract)
-                start = 0 if family == 'units' else current.index('mod domain_context_contracts {')
+            assert mutations == list(range(min(index + 1, len(bindings)))), 'D156 measure native mutation order changed'
+            if index < len(bindings):
+                site_source = contract if len(fixture['macro_sources']) == 1 or fixture['contexts'][index] == 'units' else mutable[bindings[index]]
+                current = read_text(site_source)
+                if site_source == contract:
+                    start = 0 if len(fixture['macro_sources']) > 1 else current.index('fn ' + fixture['contexts'][index] + '(')
+                else:
+                    start = current.index('mod domain_context_contracts {')
                 body = current[start:]
                 offsets = [body.index(token) for token in ('assert!(', 'assert_eq!(', 'assert_ne!(') if token in body]
                 position = start + min(offsets)
                 number = current[:position].count('\n') + 1
                 column = len(current[current.rfind('\n', 0, position) + 1:position].encode()) + 1
-                path = contract.relative_to(ROOT).as_posix()
+                path = site_source.relative_to(ROOT).as_posix()
                 assert (path, number, column) in scope['ASSERTION_SITES'], 'D177 domain contract macro absent'
         except AssertionError as error:
             errors.append(error)
             raise
         calls.append(args)
-        if index < 14:
+        if index < len(bindings):
             output = (f"\nfailures:\nthread 'fixture' panicked at {path}:{number}:{column}:\n"
                       'authored dispatch fixture\n\nfailures:\nfixture\ntest result: FAILED.\n').encode()
             scope['LAST_OUTPUT'] = output
@@ -523,20 +560,25 @@ def capture_domain_entry(text, entry_path):
         os.environ.clear()
         os.environ.update(saved)
         assert all(p.read_bytes() == data for p, data in originals.items()), 'D156 measure capture changed source'
-    assert planned == [True] and len(calls) == 16 and mutations == list(range(14)) and \
+    assert planned == [True] and len(calls) == len(fixture['calls']) and mutations == list(range(len(bindings))) and \
         set(written) == set(files) and not pending, 'D156 measure full capture incomplete'
     assert restorations == [mutable[i] for i in bindings] + list(mutable), 'D156 domain restoration sequence changed'
-    assert reads[:17] == [mutable[i] for i in bindings] + [unit, mutable[3], mutable[4]], \
+    assert reads[:len(fixture['initial_reads'])] == list(fixture['initial_reads']), \
         'D156 domain initial input order changed'
+
+
+def capture_domain_entry(text, entry_path):
+    return capture_mixed_entry(text, entry_path)
 
 
 def domain_refusals(text, entry_path):
     """Actual copied mixed entry: every mutable source alias and endpoint log refuses."""
     work = GOOD['directory'](ROOT, 'target/scratch/domain_entry_refusals', create=True)
-    mutable, unit, output, _, files = domain_fixture()
-    sources = (*mutable, unit)
+    fixture = mixed_fixture(entry_path)
+    mutable, contract, output, files = (fixture[key] for key in ('mutable', 'contract', 'work', 'files'))
+    sources = (*mutable, contract, *fixture['extras'])
     cases = [('first-file', files[0]), ('last-file', files[-1])] + \
-        [('mutable-source', path) for path in mutable] + [('late-source', unit)]
+        [('mutable-source', path) for path in mutable] + [('late-source', path) for path in (contract, *fixture['extras'])]
     saved, count = dict(os.environ), 0
     for case, path in cases:
         with tempfile.TemporaryDirectory(dir=work) as name:
@@ -728,8 +770,9 @@ def measure_files_fixture(entry_path, work, selected):
 
 def capture_measure_entry(text, entry_path=ENTRY):
     """Complete actual body; intercepted native calls prove dispatch, not outcomes."""
-    if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py':
-        return capture_domain_entry(text, entry_path)
+    if entry_path in {ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py',
+                      ROOT / 'docs/tasks/artifacts/formula_lex/formula_lex_mutations.py'}:
+        return capture_mixed_entry(text, entry_path)
     source, contract, work, selected = measure_fixture(entry_path)
     extras = measure_extra_sources(entry_path)
     sources = (source, contract, *extras)
@@ -880,7 +923,8 @@ def capture_measure_entry(text, entry_path=ENTRY):
 
 def measure_refusals(text, entry_path=ENTRY):
     """Actual copied entry and profile refuse physical aliases before reads/writes/children."""
-    if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py':
+    if entry_path in {ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py',
+                      ROOT / 'docs/tasks/artifacts/formula_lex/formula_lex_mutations.py'}:
         return domain_refusals(text, entry_path)
     work = GOOD['directory'](ROOT, 'target/scratch/membership_entry_refusals', create=True)
     source, contract, output, selected = measure_fixture(entry_path)
@@ -1243,6 +1287,33 @@ def measure_inline_controls(text, entry_path):
             'D177 measure inline wrong byte column accepted'
 
 
+def lexer_scan_controls(text, entry_path):
+    """The current scan helper contributes a real macro; labelled extraction supplies no evidence."""
+    functions = [node for node in ast.parse(text).body if isinstance(node, ast.FunctionDef)
+                 and node.name in {'assertion_sites', 'assertion_failure'}]
+    scope = {'re': re}
+    exec(compile(ast.Module(body=functions, type_ignores=[]), str(entry_path), 'exec'), scope)
+    contract = mixed_fixture(entry_path)['contract']
+    GOOD['plan_producer'](ROOT, sources=(contract,))
+    current = contract.read_text()
+    authored = '            assert!(item.is_ok(), "assertion: machine lexical form: {item:?}");'
+    lines = current.splitlines()
+    assert lines.count(authored) == 1, 'D177 lexer scan assertion changed'
+    number = lines.index(authored) + 1
+    path = contract.relative_to(ROOT).as_posix()
+    sites = scope['assertion_sites'](current, path)
+    assert (path, number, 13) in sites, 'D177 lexer scan macro absent'
+    scope['ASSERTION_SITES'] = sites
+    output = (f"\nfailures:\nthread 'fixture' panicked at {path}:{number}:13:\n"
+              'scan helper without message-prefix authority\n\nfailures:\nfixture\n').encode()
+    assert scope['assertion_failure'](output), 'D177 lexer scan macro refused'
+    expect_line = next(n for n, line in enumerate(lines, 1) if 'result.expect_err("machine ASCII required")' in line)
+    for noise in (output.replace(f':{number}:13:'.encode(), f':{expect_line}:28:'.encode()),
+                  output.replace(f':{number}:13:'.encode(), f':{number}:14:'.encode()),
+                  output.replace(path.encode(), b'crates/sc-core/src/recipe/lexer.rs')):
+        assert not scope['assertion_failure'](noise), 'D177 lexer scan accepted noise'
+
+
 def round_totality_controls(text, entry_path):
     functions = [node for node in ast.parse(text).body if isinstance(node, ast.FunctionDef)
                  and node.name in {'assertion_sites', 'assertion_failure'}]
@@ -1482,7 +1553,8 @@ def main():
                      ROOT / 'docs/tasks/artifacts/formula_structure/round_mutations.py',
                      ROOT / 'docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py',
                      ROOT / 'docs/tasks/artifacts/formula_structure/length_operator_mutations.py',
-                     ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py')
+                     ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py',
+                     ROOT / 'docs/tasks/artifacts/formula_lex/formula_lex_mutations.py')
     measure_physical, measure_classifiers = 0, 0
     for measure_path in measure_paths:
         measure_text = measure_path.read_text()
@@ -1497,7 +1569,7 @@ def main():
         for name, before, after, message in (
             ('files omitted', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 measure file plan changed'),
             ('last numbered file omitted', numbered, omitted, 'D156 measure file plan changed'),
-            ('mutable source omitted', 'mutable_sources=MUTABLE_SOURCES' if measure_path.name == 'domain_context_mutations.py' else 'mutable_sources=(SOURCE,)', 'mutable_sources=()', 'D156 measure mutable plan changed'),
+            ('mutable source omitted', 'mutable_sources=MUTABLE_SOURCES' if measure_path.name in {'domain_context_mutations.py', 'formula_lex_mutations.py'} else 'mutable_sources=(SOURCE,)', 'mutable_sources=()', 'D156 measure mutable plan changed'),
             ('test source omitted', 'sources=SOURCES', 'sources=SOURCES[:1]', 'D156 measure source plan changed'),
             ('child stores reset', 'capture_output=True',
              "capture_output=True, env={'CARGO_HOME':'broken'}", 'D156 measure child stores lost'),
@@ -1527,6 +1599,42 @@ def main():
                 red += 1
             else:
                 raise AssertionError((name, 'measurement classifier fault survived'))
+    lexer_path = ROOT / 'docs/tasks/artifacts/formula_lex/formula_lex_mutations.py'
+    lexer_text = lexer_path.read_text()
+    lexer_scan_controls(lexer_text, lexer_path)
+    for index in range(2):
+        before = 'mutable_sources=MUTABLE_SOURCES'
+        after = f'mutable_sources=MUTABLE_SOURCES[:{index}] + MUTABLE_SOURCES[{index + 1}:]'
+        try:
+            capture_mixed_entry(lexer_text.replace(before, after, 1), lexer_path)
+        except AssertionError as error:
+            assert str(error) == 'D156 measure mutable plan changed', ('lexer mutable omission', index, str(error))
+            red += 1
+        else:
+            raise AssertionError(('lexer mutable omission survived', index))
+    for name, before, after, message in (
+        ('imported examples omitted', 'sources=SOURCES', 'sources=SOURCES[:-1]', 'D156 measure source plan changed'),
+        ('final lexer restorations omitted', '    for path, original in ORIGINALS.items():\n        path.write_bytes(original)\n', '', 'D156 domain restoration sequence changed'),
+    ):
+        assert lexer_text.count(before) == 1, (name, 'actual lexer anchor')
+        try:
+            capture_mixed_entry(lexer_text.replace(before, after, 1), lexer_path)
+        except AssertionError as error:
+            assert str(error) == message, (name, 'unrelated lexer capture refusal', str(error))
+            red += 1
+        else:
+            raise AssertionError((name, 'lexer omission survived'))
+    actual = next(ast.get_source_segment(lexer_text, node) for node in ast.parse(lexer_text).body
+                  if isinstance(node, ast.FunctionDef) and node.name == 'assertion_sites')
+    changed = actual.replace('if match is not None:', "if match is not None and 'item.is_ok()' not in line:", 1)
+    assert changed != actual
+    try:
+        lexer_scan_controls(lexer_text.replace(actual, changed, 1), lexer_path)
+    except AssertionError as error:
+        assert str(error) == 'D177 lexer scan macro absent', ('lexer scan-site omission', str(error))
+        red += 1
+    else:
+        raise AssertionError('D177 lexer scan-site omission survived')
     domain_path = ROOT / 'docs/tasks/artifacts/formula_structure/domain_context_mutations.py'
     domain_text = domain_path.read_text()
     for index in range(5):
