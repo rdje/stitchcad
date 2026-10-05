@@ -14,6 +14,15 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — complete statement modes close D177
+
+- Five inputs/ordinary16 logs/one mutable source; classifier-only zero files/mutables/native writes. Original15 cases/full10 argv/read order/stores/restoration exact. Current macros replace prefix evidence; actual committed join-only fixture384:44 was accepted without native effects.
+- Shared372 body reds/35 classifiers/19 captures/101 physical refusals0; prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls0. Two statement modes/twelve physical refusals and input/file/mutable/mode/stores/restoration/classifier omissions discriminate.
+- Copied classifier-only entry accepts three-linked read-only input/unused log aliases; zero source/output writes or children; all inputs/victim/root/environment exact. Exclusive15 native faults qualify every failed body, including anonymous workers; no test-helper repair needed.
+- 21 frozen inputs/12 Rust HEAD files/three compile-time fixtures/original cases/16 single-link logs exact. Current Cargo artifact a6c554be… passes full10; Rust unchanged. Latest broad fmt/strict Clippy/703 native gate0170 applies; WASM/runner/evaluation unobserved.
+- Whole9f41012 recipe receipt51713–57178/41L5465B/SHAd43db446 retained; prior56980B sibling/canonical headers/map exact. Whole lexer lesson/chart ledger/D177 report+closure in DEV205/CH149/defects99; prior455/all53/public458/12open164sealed/seven windows exact.
+- Shared-edit assertions/helper quote syntax refused before writes; exact set membership/scoped patch/direct helper source corrected. Excluded attempts; promotion declined (existing preflight/current-source/whole-record rules). D177 closes after15 entries/16 predicates replay; D156 continues. Grammar/400 stays.
+
 ## _(2026-10-05 UTC)_ — guarded recipe modes and genuine worker assertions
 
 - Seven inputs cover both implementations/current test/three TSVs/worked examples. Ordinary16 files/coupled6/two mutable sources; classifier-only zero files/mutables/native writes. Original15+5 cases/argv/stores/restoration stay exact.
@@ -39,16 +48,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Broad helper replacement refused ambiguous two-match anchor before writes; corrected within each function. Retention source-end replacement caught before replay and corrected with exact scalar; excluded. Promotion declined: existing current-source/effect/whole-record rules.
 - Parent lexer/semantic completes after focused/staged proof; D177 thirteen fixed/two recipe+statement entries remain. Grammar/metadata APIs/400 cadence/local scope retained, runner unobserved. Final confirmatory/shared/focused receipts in leaf.
 
-## _(2026-10-05 UTC)_ — complete lexer files, imported examples and current macro sites
-
-- Plan ten logs/four inputs/two mutable sources before reads. Nine original cases/eight selected tests/full13 contract stay exact. Guard the read-only public test and its compile-time imported examples; no Rust or grammar change.
-- Original full predicate accepts passed assertion_name with expect-only failed body101, without effects. Authored two-source fixture checks all ten children/files, source binding and eleven restoration writes; capture simulation proves dispatch separately from native behavior.
-- Shared296 body reds/32 classifiers/twelve captures/56 physical refusals pass0. Six lexer refusals cover endpoint logs/both mutable aliases/missing test or examples. Each mutable/example/final-restoration/scan-helper omission discriminates; all earlier domain controls remain0.
-- Exclusive nine real failures reach current test macros, including scan helper8:13. Twelve frozen inputs/five Rust HEAD files/imported examples/original cases/ten local single-link logs remain exact. Current Cargo selects c3f9ac80… executable and all thirteen public tests pass0; latest broad Rust gate stays0165.
-- Whole dcf8296 length body46222–51106/34L4884B/SHA17bc80e9 retained before retirement; prior37033B sibling/canonical headers/status/Paths/map exact. Whole oldest603B ledger retained; prior450 logical/all48 files/public451/13open163sealed/seven windows unchanged.
-- Lower domain book paragraph now matches six unique inputs/five mutable sources; independent current AST/prose proof0. Doc-sync helper construction failed syntax before execution/writes; corrected delimiters, excluded attempt. No production diagnostic or grammar change.
-- First staged gate1 caught annex41586B above40960B. Moved full verification detail to build chapter with a bounded annex pointer; relocated profile-link refusal1 corrected to current chapter fragment. Fresh publication45/size19 surfaces0; fixed caps retained, both attempts excluded.
-- Promotion declined: existing current-source/effect/whole-record rules. D177 twelve fixed/3 P1 remain; semantic .n05.2 next, parent active. Full focused/staged receipts in leaf; fixed caps/400 cadence/local scope retained, runner unobserved.
+Whole lexer file and macro lesson retained in [part205](docs/history/stitchcad-devnotes-part205.md).
 
 Whole mixed domain-context lesson retained in [part204](docs/history/stitchcad-devnotes-part204.md).
 
@@ -158,3 +158,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part203`](docs/history/stitchcad-devnotes-part203.md) | whole length-operator lesson | 9 lines, 1710 bytes, `sha256:9bdb2a3e…` |
 
 | [`part204`](docs/history/stitchcad-devnotes-part204.md) | whole mixed domain-context lesson | 9 lines, 1948 bytes, `sha256:2353d626…` |
+
+| [`part205`](docs/history/stitchcad-devnotes-part205.md) | whole lexer file and macro lesson | 10 lines, 2262 bytes, `sha256:022c7659…` |

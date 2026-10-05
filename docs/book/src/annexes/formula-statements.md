@@ -136,7 +136,21 @@ and100000-byte names. Existing257-node/17-level refusals remain measured in each
 actual production keyword/name/annotation/assignment/separator/operand/span/privacy faults must
 compile and fail assertions; the exclusive runner restores exact source and rebuilds the complete
 focused statement target before returning. Its [producer profile](../build-and-checks.md#direct-python-producers)
-validates declared source/output before reads/writes and preserves prepared child stores. Run it alone.
+plans five inputs before reads: implementation, current public test, its two imported TSVs and
+the worked-example book page. Ordinary mode declares sixteen logs and one mutable source, retaining
+prepared child stores. Classifier-only mode checks the original fifteen anchors/current macro sites
+with zero declared files or mutable sources, no native child and no source/output write:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/statement_mutations.py --classifier-only
+```
+
+Both complete mode captures, twelve physical refusals and actual omission controls preserve native
+arguments, input order and restoration. Every real failed-test body contributes a current assertion
+macro; a labelled worker join alone does not qualify. Twenty-one frozen inputs/twelve unchanged Rust
+files/three compile-time fixtures remain exact. The current Cargo-selected executable passes all ten
+contracts after restoration. Dispatch captures and real native behavior are verified separately. Run
+the native mutation mode alone; the grammar and diagnostic mapping above stay unchanged.
 The failure classifier rejects passing-test-name and expect-only noise, checking failed-test bodies.
 Native/release checks and WASM cross-compilation retain their existing scope; browser execution,
 numerical evaluation and production approval remain later. Normalized statement/recipe

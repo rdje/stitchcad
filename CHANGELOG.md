@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0171 - statement modes close D177 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n06.2`)
+
+- Five inputs/16 native logs/one mutable; classifier-only zero effects; original15/full10 exact.
+- Shared372 reds/35 classifiers/19 captures/101 refusals0; actual15/frozen21/full10 artifact0.
+- Whole recipe/lexer/chart/D177 records retained;458 public reads/prior455/all53 exact.
+- D17715 entries/16 predicates closed; D156 continues. Rust/grammar/400 cadence unchanged.
+
 ## STITCHCAD-G1-0170 - guarded recipe modes and worker assertions (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n06.1`)
 
 - Seven inputs/16 ordinary or6 coupled files/two mutables/classifier zero writes; original15+5 cases exact.351 body reds/34 classifiers/17 captures/89 refusals0. Two test count guards fix reproduced extraction-only failures.
@@ -211,14 +218,6 @@ the digests afterwards.
 - Whole committed input lesson retained; source/public/archive and focused docs proof in owning leaf.
 - D177 membership/chart/table fixed;12 entries remain. Grammar/API/400 cadence unchanged.
 
-## STITCHCAD-G1-0158 - complete chart file and panic proof (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n02.1`)
-
-- Split four chart/table repairs; watched120 paths/47 owners/17 native groups remain exact.
-- Plan nine logs/two inputs/one mutable source; eight original cases/argv unchanged.
-- Complete captures/four physical refusals/shared187 body reds/22 classifiers pass0.
-- Eight real current macro reds/eight frozen inputs/full16 public artifact exact; Rust unchanged.
-- Three whole committed ledgers retained; book/live/focused checks recorded in owning leaf.
-- D177 membership/chart fixed;13 entries pending. Grammar/API/400 cadence unchanged.
 
 
 
@@ -340,3 +339,5 @@ the digests afterwards.
 | [`part147`](docs/history/stitchcad-changelog-part147.md) | whole G1-0156 and G1-0155 continuity ledgers | 11 lines, 719 bytes, `sha256:45304271…` |
 
 | [`part148`](docs/history/stitchcad-changelog-part148.md) | whole G1-0157 continuity ledger | 6 lines, 474 bytes, `sha256:934bd04d…` |
+
+| [`part149`](docs/history/stitchcad-changelog-part149.md) | whole G1-0158 chart continuity ledger | 8 lines, 638 bytes, `sha256:d18ad1d9…` |

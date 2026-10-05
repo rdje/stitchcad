@@ -366,3 +366,53 @@ First shared-helper adaptation refused a two-match anchor before writes; functio
 
   Final staged gate13 green, rc=0, target/semantic-staged-gate.log.
 
+
+Source: `9f4101276dd8ddbc978481ae575b774f49aeb90e`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Recipe mutation modes](#recipe-modes) | 51713–57178 | 5465 / 41 | `d43db44628d44e0cbeecb7881c57ff633c40515765046a042e613316c66837be` |
+
+### Recipe mutation modes
+
+Complete recipe entry/two Rust implementations/all11 public tests/three imported TSVs/worked
+examples/canonical .5a.3e.2–3/grammar1/contract4.1/4.3/5.1–5.2 and statement annex reviewed.
+Own D156 missing file/mutable/test/compile-time-input plans and D177 prefix false positive using
+actual current nonmacro extraction site. Anonymous small-stack child assertion and parent join
+panics must be interpreted from actual failed bodies; no invented macro or passing-name evidence.
+If known native faults reveal helper fragility, own and verify a minimal public-test repair.
+Whole-record source intervals/SHA/prior sibling/public readers/seven windows/map stay exact.
+
+Own whole committed semantic receipt retention as well before six acceptance boxes exceed
+the fixed live byte ceiling; preserve the earlier verified lexer append and all canonical headers.
+
+Actual first ordinary15/full11 artifact0/22 frozen inputs/12 Rust HEAD files verified before
+repair, native-proof.log/native-artifact-proof.log; 21 exact pre-helper evidence files copied
+under target/recipe-before-helper/. Fault8/9 reproduce four nonmacro-only failed blocks:
+later nodes130:48, small-stack324:71 or323:47 plus349:44 join. Root cause: indexed extraction
+before fixture cardinality assertion. Own two explicit count preconditions/test-only repair,
+repeat15+5 faults/all failed-body macro checks/full fmt-Clippy-native gate before signoff.
+
+Own cleanup of accidental untracked ledger8832B/SHA9cee7e1fc26cca3721b00c762d086fb59b10c3b5cdb2981721fb46e360742742.
+Tools diagnose Target destination variable reused by lesson/ledger loop; file is exactly our
+unexecuted generated helper, not user data. Copy/verify target/recipe-helper-leak.py before
+unlink; restore stable helper_path output and all-content preflight. Root residue census required.
+
+Shared first replay1 exposed fixture-variable shadowing of the original three-field faults;
+recipe_faults isolation passed351 controls0. Target retention byte-literal Unicode AST refusal1
+occurred before root writes; encoded footer/source-end scalar correction. Early doc projections
+were removed before signoff; the current pointer records all pending proof. Provisional attempts
+are excluded; final native/readers/controls/Rust results must be earned before final docs/commit.
+
+- [x] REPRODUCE / ISSUE: actual committed full prefix classifier accepts labelled join-only fixture349:44, rc=0, recipe-predicate-diagnostic.log. First real15/source/full11 artifact0/22 frozen inputs expose four extraction-only blocks on faults8/9;21 exact pre-helper receipts retained. D156 mode/input/file/mutable guards and D177/test preconditions owned before edits; complete entry/code/all11 tests/canonical/book reviewed.
+- [x] ROOT CAUSE: plans omit files/current test/compile-time inputs and mode-specific mutable intention; prefix bytes accept labelled join. Indexed fixture reads precede cardinality assertions. Three independent complete recipe modes bind every source/child/log/restoration;25 physical refusals precede effects. Frozen first15/actual panic blocks establish helper defect, rc=0, recipe-before-helper receipts; no fabricated macro.
+- [x] FIX: seven inputs/ordinary16 files/coupled6/two mutable sources/classifier zero files-mutable-native writes; current macro sites replace bytes. Two explicit public-test count guards; original15+5 cases/argv/production Rust exact. Shared351 body reds/34 classifiers/17 captures/89 physical refusals plus prior31/24/26/37+late/26child/two compiler/three static controls0, rc=0, recipe-producer-controls-final2.log. Actual all7 input/both mutable/file/mode/stores/restoration/classifier omissions discriminate.
+- [x] ADDRESSED: exclusive repeated15 ordinary/five coupled faults/every failed body genuine current macro/unchanged ordinary sets/exact coupled sets/full11 restored0, rc=0, recipe-native-final.log/native-coupled.log/native-proof.log.22 frozen inputs/11 Rust HEAD files/two owned test guards/four compile-time inputs/original cases/21 local single-link logs exact. Cargo full11 artifact 494f76a8881f3df1bd4002c8a2af8129b8b5f19b74bcdd2dec151d5bba06611e passes0; reconfirmed after broad gate, native-artifact-proof.log.
+- [x] NO REGRESSION: full fmt/strict Clippy/native703 tests/59 groups0 after two test guards, rc=0, recipe-rust-check.log. Publication45/coverage9/census229paths288checks/effect67/29/file120paths53owners23groups/15refusals12reds/map/ledger9+13 pass0, rc=0, recipe-*-final.log; terminals consumed. Prior453/all51/public455/13open163sealed/seven windows exact, recipe-retention-final.log. New WASM/runner/evaluation unobserved.
+- [x] LOCKSTEP: whole6bf5a55 lexer48622–53125/23L4503B/SHA0efde56d +semantic53804–58306/24L4502B/SHA5d705e96 copied/verified before retirement; prior47196B sibling prefix/canonical headers/map8102B exact, rc=0, recipe-*-retention-proof.log. WholeDEV204/CH148/prior453/all51/public455/38raw retention0. Failed preparatory attempts excluded/corrected; promotion declined (existing rules). Book/live route .n06.2/parent active/D17714 fixed1; grammar/400 stay.
+
+Owned stray ledger cleanup closed:8832B exact Target copy/SHA9cee7e1f verified before unlink;
+root residue absent, rc=0, target/recipe-helper-leak.json. Stable helper_path/all-content preflight
+corrected before final Source writes. Final staged gate13 green, rc=0, target/recipe-staged-gate.log;
+final ledger9+13 green, rc=0, target/recipe-ledger-final2.log. All required terminals consumed.
+
