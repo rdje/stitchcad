@@ -280,11 +280,33 @@ formatting. Seventeen actual compiled admission/context/collision/source/order/p
 fail public body assertions and restore the production source exactly; the watched structural
 runner also refuses invalid fault classification and stale anchors.
 
-The direct namespace mutation entry validates implementation/test source and output before
-reads/writes, preserves prepared child stores and rebuilds the complete focused target after exact
-source restoration. Failed-body panic locations must match current test assertion macro sites:
-custom assertion messages pass; expect messages and compiler/test-name noise refuse.
-Classifier-only mode compiles no native fault.
+The direct namespace entry plans the implementation and current public test before any read or
+effect. Ordinary mode declares all eighteen fault/restoration diagnostic files and one mutable
+implementation source. It preserves the seventeen original ordered cases, the complete ten-test
+Cargo argument vector, prepared child stores and exact source restoration.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/namespace_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/namespace_mutations.py
+```
+
+Classifier-only validates both read-only inputs, prepares the local stores/output directory and
+checks all original anchors/current macros. It declares zero files or mutable sources and invokes
+no native child or source/output write. A copied entry accepts an input with three hard links and
+leaves unused fault/restoration aliases untouched. Two complete captures, six physical refusals and
+thirteen independent source/file/mutable/mode/store/restoration omissions watch these plans.
+Captures certify dispatch; the real native replay supplies separate behavior evidence.
+
+A failed body's thread panic path, line and byte-column must identify a current assertion macro.
+Custom messages qualify. Nonthread macro mentions, compiler/linker noise, expect-only panics and
+passed test names refuse. D185's measured nonthread weakness is repaired and independently watched
+by the actual legacy-regex body fault. All seventeen real cases match the corrected source-derived
+failing-test sets; every failed body reaches a current macro. One prior prediction omitted the
+privacy test's optional eps_phys collision; its actual failure and source cause are recorded.
+Seventy-two inputs, sixty-three unchanged production Rust files, the unchanged public tests,
+eighteen local logs and Cargo's restored full ten-test executable remain exact. Run the native
+command alone and consume restoration before another build or probe. These probes change no
+metadata API, grammar, numeric execution or geometry authority.
 
 
 ## Exact declared-name reads

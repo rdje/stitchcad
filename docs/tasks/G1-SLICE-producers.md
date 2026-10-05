@@ -607,41 +607,62 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Goal: after .h commit, actual newest committed window8 catalog prose refusal in a guarded same-volume copy; full public CLI/current reads before namespace.
   Acceptance: baseline and copied inventory green/exact retention refusal/root-HEAD-controls unchanged/no tracked sealed writes; consume all results.
 
-Own blocking whole d56505a .n09.h record partition into new bounded
-docs/tasks/G1-SLICE-retention-proof.md before receipt growth; keep canonical header and
-exact source intervals/hashes/public navigation/collection ceilings. Own parent sibling link
-and derived map freshness before later verification; no submodule changes.
-
-Own knowledge-map/subsystems.md orientation containment/current generated KNOWLEDGE_MAP.md
-and LIVE_STATUS16 siblings: public generator after new sibling gives8240B, over8192 ceiling.
-This source is project-tracked100644, no submodule/boundary; keep directory/contract navigation,
-trim redundant leaf inventory per orientation policy, regenerate without ceiling changes.
-Earlier old-map equality check refused/excluded; new source-provenance proof stays exact.
-
-STITCHCAD-G1-0181 owns this post-recording unit; clean d56505a/43/brief0/all jobs
-consumed before activation. Full actual public CLI and guarded copied-catalog control
-against committed8/all28 current archive files; no tracked sealed changes. Own
-target/window8-post-* helpers/fixtures/logs, book/live/frontier receipts, whole old
-checked-statement lesson DEV216 and semantic ledger CH159 if needed before live growth.
-Existing complete CLI/public retention contract read at .h; repeat actual Source proof
-before claiming newest8 refusal. Rust/reader/schema/grammar/cadence unchanged.
-
-- [x] REPRODUCE / ISSUE: newest8 prose refusal awaited recording commit. python3 -I -B target/window8-post-run-focus.py committed-control: d565 root/copied baseline verify-retention0; copied prose inventory0/exact ARCHIVE-RETENTION committed retained file changed/exit1; rc=0. Public CLI/reader contract reviewed; no tracked sealed write.
-- [x] ROOT CAUSE: inventory checks bytes/membership and intentionally ignores prose; committed comparison independently refuses changed retained catalog. python3 -I -B target/window8-post-run-focus.py committed-control: all28 root archive files/current HEAD unchanged and copied bytes differ only by deliberate prose; rc=0. Producer tree64972B/runtime63645B requires new bounded sibling before receipts.
-- [x] FIX: actual public guard against current committed8, prepared inherited stores and guarded complete source/output fixture; two whole live records retained before growth. python3 -I -B target/window8-post-run-focus.py retention-proof: d565 DEV2161356B8L/CH159648B8L exact source intervals/hash; prior484/all28/current486 reads exact; rc=0.
-- [x] ADDRESSED: python3 -I -B target/window8-post-run-focus.py archive:28 actual probes/CLI504/all486 reads/materialization/newest8 committed-catalog refusal pass; rc=0. Initial484/CLI502 consumed before retention. Exact newest baseline green/mutated refusal consumed; fixed schema/reader/root windows unchanged.
-- [x] NO REGRESSION: python3 -I -B target/window8-post-run-focus.py retention-proof: whole5306B46L/54799–60105/SHA412ace45/canonical .h header/old first-runtime files/current parent route/prior484/all28/current486 exact; rc=0. Publication45/coverage9/census229paths288checks/file120paths60owners30groups/ledger9+13 pass; rc=0. Rust/reader/grammar unchanged; no new native or runner claim.
-- [x] LOCKSTEP: python3 -I -B target/window8-post-run-focus.py retention-proof: new6062B bounded sibling/16siblings/current public-generator map8145B/fixed caps exact; rc=0. Old map equality refused after new path; source orientation trimmed per policy/no generator or submodule change. Book/live/MEMORY/G1/index namespace .n09.1 next/D156 and broader D34 open. Promotion declined (existing immutable source/whole records/consumed results/orientation);400 remains.
-
-Final post-doc publication1426/coverage51820/census28190/ledger35299 terminal0 consumed.
-45/9/229paths288/648 real verdicts/9 arms13 pointers pass; all required jobs complete.
-Staged9164 all13 doctrine checks green rc=0, target/window8-post-staged-gate.log.
+Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#window8-post-recording-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.1`
-  Status: `pending`
+  Status: `done`
   Goal: namespace complete mode/input/file/mutable plans/current assertion evidence and real original consumer replay, after relevant contract/book review and derived task-record containment prerequisite.
   Paths: docs/tasks/artifacts/formula_structure/namespace_mutations.py
+  Own STITCHCAD-G1-0182: shared Python controls/book/live receipts; guarded target/namespace-plan-* helpers/logs/fixtures. Before receipt growth, retain whole committed .n09.h.v record in G1-SLICE-retention-proof.md; preserve Source interval/hash/canonical header/current map.
+  Paths also: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-declarations.md;docs/book/src/build-and-checks.md;docs/tasks/PLANNING.md;whole committed live lesson/ledger retention if needed before cap growth.
   Acceptance: retain original cases/full argv/source restoration/current artifact; independent omissions/physical refusals/current failed-body proof; D156 remains open outside this entry.
+
+
+D185 owned here: actual original namespace classifier accepts a compiler-note location inside
+a failures block when it names a current macro. Independent classifier_controls(strict=True,
+thread_only=True) raises exact D159 assertion evidence accepted noise; diagnostic harness0
+confirms this failure before production writes. Cause: unanchored panicked-at regex, not an
+actual thread. Fix now under .n09.1; independently mutate legacy regex and replay17 original
+faults/every failed body before closure. Earlier D179 closure was bounded to four other entries.
+
+Shared72842 failed1 after new namespace controls: local `faults` assignment overwrote an
+earlier three-field population reused later; actual traceback2658 tuple arity4 vs3. Renamed
+only namespace population before fresh shared replay; failed setup excluded, no Native run.
+
+
+Clean335b64d/44/brief0/all prior jobs consumed. Full namespace91L/production253L/public408L,
+relevant roadmap G1/API/book metadata/diagnostic5.2.1 and shared capture/refusal/classifier
+contracts reviewed. Original17 CASES AST/nativeargv exact; two inputs/18 files/one mutable
+ordinary, zero files/mutables/children classifier. Authored prior to Native/failure blocks:
+B,CDEFGHIJ,DFG,ACGI,ACGI,CDEFHIJ,FGHJ,FH,GHJ,FHJ,FH,FH,G,GH,AI,J,J.
+Frozen72 inputs/63 unchanged production Rust/public10. No new Rust/engine/grammar change.
+Whole335b64d .h.v3891B30L/55313–59204/SHAb77af56c retained into10221B sibling;
+original6062B prefix/canonical .h.v header verified before retirement. DEV2171409B8L/
+2796–4205/SHA79ab4f32 andCH160580B4L/20748–21328/SHAe2113b03 whole Source records
+copied/verified before live retirement; prior486/all30/current488/15working frozen.
+
+Prediction5 falsified: independent all17-set diagnostic found only extra J. Actual fault5
+privacy body47:5 assert result.is_err(); sourceJ also attempts eps_phys, hidden by the
+optional-context mutation, so construction succeeds and the refusal helper correctly fails.
+Expected5 corrected ACGI→ACGIJ with source cause; other16 sets exact. Native27587 terminal0
+consumed/source restoration/frozen72/full10 restored; failed verifier excluded. Repeat current
+per-body proof/artifact next; no engine/test/source mutation or extra Native replay warranted.
+
+Own whole new D185 report/earned closure into docs/history/stitchcad-defects-part107.md,
+explicit Source_baseline335b64d provenance (report absent HEAD), independent defect census
+and all489 public reads before closure; preserve prior486/all30 original archive files.
+
+- [x] REPRODUCE / ISSUE: Original missing file/mutable mode plan and D185 compiler-note/current macro acceptance; independent classifier_controls(strict=True,thread_only=True) exact D159 noise failure, diagnostic harness0. Full91L entry/253L implementation/408L public tests/book contract5.2.1/G1 reviewed. python3 -I -B target/namespace-plan-run-focus.py producer-controls:560 reds/35 classifiers/38 captures/210 refusals; rc=0.
+- [x] ROOT CAUSE: Unanchored panicked-at regex accepts nonthread notes. Complete plans distinguish two read-only inputs and all18 diagnostic destinations/one ordinary mutable; class0. python3 -I -B target/namespace-plan-run-focus.py producer-controls:13 independent mode omissions/current legacy-regex fault refused;560/35/38/210; rc=0. First shadowed three-field fault population failed/excluded; namespace list renamed.
+- [x] FIX: Plans before reads/effects, current thread path/line/byte-column required; original17 CASES AST/full10 argv/stores/restoration unchanged. python3 -I -B target/namespace-plan-run-focus.py producer-controls:two full captures/six physical refusals/current omissions0; rc=0. readonly-mode:three linked input/unused aliases/zero native-source-output writes; rc=0.
+- [x] ADDRESSED: python3 -I -B target/namespace-plan-proof-run.py:all17 real faults/corrected source-derived sets/every failed body current macro/nonmacro[]/72 inputs/63 Rust HEAD/unchanged public tests/18 logs/current full10 429f1099 exact; rc=0. Prediction5 corrected ACGI→ACGIJ after actual privacy47:5/eps_phys source cause; other16 exact. Native27587/proof33154 terminal0 consumed; D185107 verified closure.
+- [x] NO REGRESSION: python3 -I -B target/namespace-plan-run-focus.py retention-proof:prior486/all30/current489 public reads/whole D185 report/closure/12open172sealed/IDs1–185except18 exact; rc=0. Publication45/coverage9/census229paths288checks/ledger9+13 pass; rc=0. No Rust changed; previous full703 remains scoped, new Native/full10 current. Runner unobserved.
+- [x] LOCKSTEP: python3 -I -B target/namespace-plan-run-focus.py retention-proof:whole335b64d task3891B30L/55313–59204/SHAb77af56c/original6062B prefix/current10221B sibling/canonical .h.v header/map8145B/16siblings/fixed caps exact; rc=0. WholeDEV2171409B8L/CH160580B4L copied and verified before retirement; D185 report truthfully new over335 baseline. Book/live/MEMORY/G1/index ordered .n09.2 next; promotion declined; D156/broader D34 open/400 stays.
+
+Final post-doc publication42275/coverage75097/census43161 terminal0 consumed;45/9/229paths288 pass. Frozen72/current full10 artifact unchanged afterward. Confirmatory ledger57722 in flight: target/namespace-plan-ledger-final.log; consume before next activation.
+
+Staged94450 all13 doctrine checks green rc=0, target/namespace-plan-staged-gate.log.
+Required results complete; ledger57722 confirmatory must be consumed before activation.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.2`
   Status: `pending`

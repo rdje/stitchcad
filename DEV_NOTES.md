@@ -14,6 +14,13 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — namespace plans and thread evidence
+
+- Two inputs/18 files/one mutable; classifier0 writes/children. Original17 CASES/argv exact;560 body reds/35 classifiers/38 captures/210 physical refusals0. D185 legacy regex red/current thread macro guard; readonly3 links/unused aliases0.
+- All17 real faults/every failed body current macro/72 inputs/63 production Rust/public tests/18 local logs/current full10 429f1099 exact0. Prediction5 ACGI→ACGIJ: privacy eps_phys also hidden; other16 predictions exact. First shared tuple shadowing failed/excluded; namespace list renamed.
+- Whole335b64d task3891B30L retained/SHA b77af56c/6062B prefix/10221B sibling exact0. DEV2171409B8L/CH160580B4L/D185107/prior486/all30/current489 reads/12open172sealed exact0. Book/live/focused checks aligned; D156/broader D34 stay; ordered next.
+- Promotion declined: existing complete plans/current macro/whole-source retention/consumed-results rules. Rust/engine/grammar/400 unchanged; no new runner claim.
+
 ## _(2026-10-05 UTC)_ — newest committed window8 refusal
 
 - Actual d565 root/copied baseline guard0; copied catalog prose inventory0/exact committed-retained-file refusal1. All28 root archive files/HEAD exact; no tracked sealed write. Initial full CLI502/current484 pass0, after two whole retained records CLI504/current486 pass0.
@@ -29,14 +36,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Activation/LIVE preflights refused before writes; tightened. Native child split initially refused stale parent rows; two bindings fixed/120paths60owners30groups0. D34 bounded status fixed/broader PLANNING.5 open. Newest8 committed refusal next; promotion declined (whole
   records/scoped proofs). Rust/reader/grammar/400 stay.
 
-## _(2026-10-05 UTC)_ — checked recipe baseline, modes and guarded extraction
-
-- Two inputs/21 baseline-fault-restored files/one mutable; class0 effects. Original19/count2 sites/full7 argv/stores/restoration exact. Shared546 reds/35 classifiers/36 captures/204 refusals0;16 mode faults/legacy red. Readonly3 links/unused aliases/zero children or writes0.
-- D184 original2/E449:55 extraction101/nonmacro1 restored source/all inputs/full7 before two acceptance guards in one existing unknown/alternate-record test; first measured, alternate same cause. Real19 authored sets/every failed body macro/72 inputs/63 Rust HEAD/21 logs/full7
-  ed0c34ff exact0.
-- Full fmt/strict Clippy/59groups703passed/0failed/0ignored0; frozen inputs/artifact exact. D179 bounded four-family and D184 closed; D156 open/next .n09. Grammar/engine/400 stay; new WASM/runner unobserved.
-- Wholecde statement7512B78L retained52564–60076/SHA9d309ecc;48433B prefix/first62828B/map8169B exact0. DEV2131877B13L/CH157756B9L/D179105/D184106/prior477/all75/public481/seven windows/12open171sealed exact0. Archive64 includes7 catalogs; derive window8 before growth.
-- First shared baseline-order setup refused/excluded; explicit classifier no-child capture guard corrected. Publication45/coverage9/census229paths288checks/ledger9+13 rc=0. Promotion declined: existing complete-plan/current-macro/whole-retention doctrine covers this lesson.
+Whole checked-recipe baseline and extraction lesson retained in [part217](docs/history/stitchcad-devnotes-part217.md).
 
 Whole checked-statement modes and extraction lesson retained in [part216](docs/history/stitchcad-devnotes-part216.md).
 
@@ -190,3 +190,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/window8.md#
 | [`part214`](docs/history/stitchcad-devnotes-part214.md) | whole checked expression modes and individual panic lesson | 9 lines, 1512 bytes, `sha256:b83e6791…` |
 
 | [`part216`](docs/history/stitchcad-devnotes-part216.md) | whole checked statement modes and guarded extraction lesson | 8 lines, 1356 bytes, `sha256:58b80c3e…` |
+
+| [`part217`](docs/history/stitchcad-devnotes-part217.md) | whole checked recipe baseline modes and guarded extraction lesson | 8 lines, 1409 bytes, `sha256:79ab4f32…` |

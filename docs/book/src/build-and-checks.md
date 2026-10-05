@@ -433,9 +433,10 @@ Checked-statement and whole-recipe entries use the same guard and source-locatio
 The statement entry plans all three mutated sources and its focused test source before activation.
 Both preserve prepared child stores/classifier-only modes and rebuild complete restored targets.
 
-Initial-namespace and ordered-name entries also guard implementation/test sources and output,
-retain prepared child stores/classifier-only modes, and rebuild full targets after exact restoration.
-The ordered-name entry plans both mutated sources first. Both use current test assertion locations.
+Namespace plans two inputs/18 logs/one mutable; classifier-only zero native/write effects.
+All17 real faults/current macros/full10 restore exactly; D185 nonthread evidence refuses.
+See [namespace proof](annexes/formula-declarations.md#checked-initial-namespace). Ordered-name
+still guards both sources/current macros, preserves child stores and restores its full target.
 
 Declaration and exact-name entries use these same guards, current test assertion sites and prepared
 child stores. Declaration restoration rebuilds both the complete native target and its five doctests.
@@ -485,7 +486,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and546 actual body faults, with35 calibrated failed-body classifiers,
+controls and560 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

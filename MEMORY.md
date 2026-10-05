@@ -4,13 +4,13 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.n09.1: namespace complete file/mutable/mode plans.
-  Read entire entry/public contracts/book and derive safe receipt growth before code.
-  Existing new G1-SLICE-retention-proof.md has6062B; preserve byte-exact Source records.
-- Actual committed8 copied-catalog guard refuses prose; all source root28 files/HEAD exact.
-  Whole d565 window8 record/DEV216/CH159 retained; current486 reads/13working/8windows.
-  Archive28/CLI504/coverage9/16siblings/current orientation map8145B passed; fixed caps.
-- Then ordered .n09.2/.n10–14/.a01.2/.a/.p.v, .b.s/.b.v and D154 .4c.r genuine ordinals.
-- D179/D184 closed; D156/broader D34 open. Last fullRust703/native19/current full7 pass.
-  Rust/reader/grammar unchanged; native jobs exclusive. Consume pending results first.
-- Derive Git;400 cadence has no exceptions. Cleanup due2026-10-05 22:25UTC.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.n09.2: ordered-name complete file/mutable/mode plans.
+  Read entire entry/public contracts/book and retain whole current .n09.1 record before
+  receipt growth; new retention sibling10221B has room. Preserve Source bytes/hashes.
+- Namespace original17/per-body macros/frozen72/63 Rust/full10 consumed; D185 closed.
+  Shared560/35/38/210; Source/public tests/grammar unchanged. Native jobs exclusive.
+- Whole335 task/DEV217/CH160/D185107 retained;489 reads/16working/8windows/16siblings.
+  Then .n10–14/.a01.2/.a/.p.v/.b.s/.b.v/D154 genuine ordinals; D156/broader D34 open.
+- Confirmatory ledger57722 running target/namespace-plan-ledger-final.log; consume before
+  next activation. Required post-doc checks/source/artifact exact0. Derive Git;400 cadence no exceptions.
+  Cleanup due2026-10-05 22:25UTC. New runner evidence unobserved.

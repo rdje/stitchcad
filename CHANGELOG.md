@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0182 - namespace plans and D185 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.1`)
+
+- Two inputs/18 files/one mutable; class0;17 original cases/full10 exact.
+- Shared560 reds/35 classifiers/38 captures/210 refusals; every real body current macro.
+- D185 closed; whole task/DEV217/CH160/defect107 retained;489 reads exact.
+- Book/live/ordered next; D156/D34 open; Rust/grammar/400 unchanged.
+
 ## STITCHCAD-G1-0181 - newest committed window8 refusal (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h.v`)
 
 - Real copied prose inventory0/exact committed refusal1; root28 files/HEAD exact.
@@ -192,10 +199,6 @@ the digests afterwards.
 - Whole recipe/lexer/chart/D177 records retained;458 public reads/prior455/all53 exact.
 - D17715 entries/16 predicates closed; D156 continues. Rust/grammar/400 cadence unchanged.
 
-## STITCHCAD-G1-0170 - guarded recipe modes and worker assertions (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n06.1`)
-
-- Seven inputs/16 ordinary or6 coupled files/two mutables/classifier zero writes; original15+5 cases exact.351 body reds/34 classifiers/17 captures/89 refusals0. Two test count guards fix reproduced extraction-only failures.
-- Twenty real macro faults/22 frozen inputs/full11 artifact/full fmt-Clippy-native703 gate0. Whole receipts/lesson/ledger retained; prior453/all51/public455 exact. Book/live route .n06.2/parent active/D17714 fixed1. Grammar/400 cadence unchanged.
 
 
 
@@ -350,3 +353,5 @@ the digests afterwards.
 | [`part158`](docs/history/stitchcad-changelog-part158.md) | whole G1-0168 lexer file and macro ledger | 8 lines, 581 bytes, `sha256:a253490b…` |
 
 | [`part159`](docs/history/stitchcad-changelog-part159.md) | whole G1-0169 semantic mode and macro ledger | 8 lines, 648 bytes, `sha256:686a8b4f…` |
+
+| [`part160`](docs/history/stitchcad-changelog-part160.md) | whole G1-0170 guarded recipe mode and worker ledger | 4 lines, 580 bytes, `sha256:e2113b03…` |

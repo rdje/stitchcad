@@ -59,3 +59,38 @@ Final staged8765 all13 doctrine checks green rc=0, target/window8-staged-gate.lo
 All required/confirmatory jobs terminal0 consumed before recording commit; newest committed
 window8 refusal is the next separate unit.
 
+
+### Window8 post-recording verification
+
+Source: `335b64d91fc1c8d54c67f7599bb25fca7a71a5f7`, docs/tasks/G1-SLICE-producers.md. Whole zero-based interval 55313–59204, 3891 bytes / 30 lines, `sha256:b77af56c74ba5b4deddf16e25c8b64026b088ce1d1e13bbd4eb8d8c2378f3d1d`.
+
+Own blocking whole d56505a .n09.h record partition into new bounded
+docs/tasks/G1-SLICE-retention-proof.md before receipt growth; keep canonical header and
+exact source intervals/hashes/public navigation/collection ceilings. Own parent sibling link
+and derived map freshness before later verification; no submodule changes.
+
+Own knowledge-map/subsystems.md orientation containment/current generated KNOWLEDGE_MAP.md
+and LIVE_STATUS16 siblings: public generator after new sibling gives8240B, over8192 ceiling.
+This source is project-tracked100644, no submodule/boundary; keep directory/contract navigation,
+trim redundant leaf inventory per orientation policy, regenerate without ceiling changes.
+Earlier old-map equality check refused/excluded; new source-provenance proof stays exact.
+
+STITCHCAD-G1-0181 owns this post-recording unit; clean d56505a/43/brief0/all jobs
+consumed before activation. Full actual public CLI and guarded copied-catalog control
+against committed8/all28 current archive files; no tracked sealed changes. Own
+target/window8-post-* helpers/fixtures/logs, book/live/frontier receipts, whole old
+checked-statement lesson DEV216 and semantic ledger CH159 if needed before live growth.
+Existing complete CLI/public retention contract read at .h; repeat actual Source proof
+before claiming newest8 refusal. Rust/reader/schema/grammar/cadence unchanged.
+
+- [x] REPRODUCE / ISSUE: newest8 prose refusal awaited recording commit. python3 -I -B target/window8-post-run-focus.py committed-control: d565 root/copied baseline verify-retention0; copied prose inventory0/exact ARCHIVE-RETENTION committed retained file changed/exit1; rc=0. Public CLI/reader contract reviewed; no tracked sealed write.
+- [x] ROOT CAUSE: inventory checks bytes/membership and intentionally ignores prose; committed comparison independently refuses changed retained catalog. python3 -I -B target/window8-post-run-focus.py committed-control: all28 root archive files/current HEAD unchanged and copied bytes differ only by deliberate prose; rc=0. Producer tree64972B/runtime63645B requires new bounded sibling before receipts.
+- [x] FIX: actual public guard against current committed8, prepared inherited stores and guarded complete source/output fixture; two whole live records retained before growth. python3 -I -B target/window8-post-run-focus.py retention-proof: d565 DEV2161356B8L/CH159648B8L exact source intervals/hash; prior484/all28/current486 reads exact; rc=0.
+- [x] ADDRESSED: python3 -I -B target/window8-post-run-focus.py archive:28 actual probes/CLI504/all486 reads/materialization/newest8 committed-catalog refusal pass; rc=0. Initial484/CLI502 consumed before retention. Exact newest baseline green/mutated refusal consumed; fixed schema/reader/root windows unchanged.
+- [x] NO REGRESSION: python3 -I -B target/window8-post-run-focus.py retention-proof: whole5306B46L/54799–60105/SHA412ace45/canonical .h header/old first-runtime files/current parent route/prior484/all28/current486 exact; rc=0. Publication45/coverage9/census229paths288checks/file120paths60owners30groups/ledger9+13 pass; rc=0. Rust/reader/grammar unchanged; no new native or runner claim.
+- [x] LOCKSTEP: python3 -I -B target/window8-post-run-focus.py retention-proof: new6062B bounded sibling/16siblings/current public-generator map8145B/fixed caps exact; rc=0. Old map equality refused after new path; source orientation trimmed per policy/no generator or submodule change. Book/live/MEMORY/G1/index namespace .n09.1 next/D156 and broader D34 open. Promotion declined (existing immutable source/whole records/consumed results/orientation);400 remains.
+
+Final post-doc publication1426/coverage51820/census28190/ledger35299 terminal0 consumed.
+45/9/229paths288/648 real verdicts/9 arms13 pointers pass; all required jobs complete.
+Staged9164 all13 doctrine checks green rc=0, target/window8-post-staged-gate.log.
+
