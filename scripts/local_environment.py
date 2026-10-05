@@ -117,12 +117,14 @@ def producer_output_path(root, value):
     return relative
 
 
-def plan_producer(root, *, directories=(), output_files=(), sources=()):
+def plan_producer(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
     """Validate the complete store/source/output plan without creating or activating anything."""
     environment_for(root, os.environ, create=False)
     outputs = [producer_output_path(root, path) for path in directories]
     files = [producer_output_path(root, path) for path in output_files]
     inputs = [producer_path(root, path) for path in sources]
+    mutable = {producer_path(root, path) for path in mutable_sources}
+    require(mutable <= set(inputs), 'mutable producer source is not declared')
     for relative in outputs:
         directory(root, relative, missing_ok=True)
     for relative in files:
@@ -132,18 +134,22 @@ def plan_producer(root, *, directories=(), output_files=(), sources=()):
         if path.exists():
             require(path.is_file() and path.stat().st_dev == root.stat().st_dev,
                     'producer output is not a local regular file')
+            require(path.stat().st_nlink == 1, 'hard-linked producer output')
     for relative in inputs:
         path = root / relative
         directory(root, Path(relative).parent.as_posix())
         require(not path.is_symlink(), 'symlink producer source')
         require(path.is_file() and path.stat().st_dev == root.stat().st_dev,
                 'producer source is not a local regular file')
+        if relative in mutable:
+            require(path.stat().st_nlink == 1, 'hard-linked mutable producer source')
     return tuple(outputs)
 
 
-def prepare_producer(root, *, directories=(), output_files=(), sources=()):
+def prepare_producer(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
     """Plan all stores and owned paths before any creation, then activate the child environment."""
-    outputs = plan_producer(root, directories=directories, output_files=output_files, sources=sources)
+    outputs = plan_producer(root, directories=directories, output_files=output_files,
+                            sources=sources, mutable_sources=mutable_sources)
     environment = environment_for(root, os.environ)
     os.environ.update(environment)
     for relative in outputs:
@@ -151,10 +157,11 @@ def prepare_producer(root, *, directories=(), output_files=(), sources=()):
     return environment
 
 
-def enter_producer(root, *, directories=(), output_files=(), sources=()):
+def enter_producer(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
     """Standalone Python entry: refuse cleanly before its first owned write or child dispatch."""
     try:
-        return prepare_producer(root, directories=directories, output_files=output_files, sources=sources)
+        return prepare_producer(root, directories=directories, output_files=output_files,
+                                sources=sources, mutable_sources=mutable_sources)
     except (Refusal, OSError) as error:
         print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
         raise SystemExit(2) from None

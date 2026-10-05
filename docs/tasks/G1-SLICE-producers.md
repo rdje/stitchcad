@@ -163,9 +163,27 @@ without changing the chosen file or named refusal; no fixture bytes/native sourc
   Final staged gate13 green, rc=0, target/window7-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.l`
-  Status: `pending`
+  Status: `done`
   Goal: P1 after .f.h and before .f.n01: resolve the confirmed hard-link ownership gap in shared output and source-writing contracts; preserve pure/read-only source calls and every existing producer interface.
   Acceptance: physical isolated output/source hard-link reproduction without alias writes; exact regular-file/inode/link-count root cause; bounded explicit mutable-path contract and output refusal, actual omission controls and focused integration without weakening existing source/type/device/parent checks. Schedule native source-writing adoption in each .f.n repair before effects.
+
+STITCHCAD-G1-0156 owns scripts/local_environment.py, the standing python_producer_contract.py
+controls, relevant book/live/task receipts and any blocking whole-lesson retention. Full profile,
+all1202 lines of the standing shared/entry controls and complete255-line bridge capture reviewed.
+Add backward-compatible mutable_sources=() as an explicit subset of sources; readonly inputs keep
+existing type/device/parent checks and pure planning. Existing output files and declared mutable
+sources require exactly one hard link before activation; prepare/enter forward declarations.
+Real isolated aliases must refuse without writes/stores/environment effects, and actual omission/
+forwarding/subset faults must fail independent controls. Native37 adoption stays with .f.n groups.
+
+- [x] REPRODUCE / ISSUE: physical source/output/victim inode3 passes original plan without alias writes, rc=0, window7-hardlink-diagnostic.log; regular/device checks omit exclusive mutable ownership. Actual current physical26 controls require output/mutable-source refusal and preserve readonly aliases, rc=0, hardlink-producer-controls.log. Full profile/shared1202L/bridge255L/book reviewed before edits.
+- [x] ROOT CAUSE: plan_producer checks regular type/device/symlinks but original body lacks link counts or explicit writing intent. Current independent three-name inode identity/all unchanged bytes/environment/stores and exact diagnostic checks pass, rc=0, hardlink-producer-controls.log. The plan inspects declared paths before effects; undeclared native destinations remain owned, D156 open.
+- [x] FIX: existing outputs and explicit mutable_sources subset require one link; readonly source validation stays pure, prepare/enter forward the declaration.31 runtime/24 file/26 physical controls pass, rc=0, hardlink-producer-controls.log. Device stub omitted st_nlink in initial fault run1; preserve actual count and exclude failed receipt. Initial runpy dict attribute retention attempt1 failed before writes; corrected mapping access0.
+- [x] ADDRESSED: six actual output-link/mutable-link/subset/readonly/prepare-forward/enter-forward omissions fail independent controls; total171 actual body reds, rc=0, hardlink-producer-controls.log. Physical late mutable alias and invalid mutable path/type/bytes refuse all three APIs before effects, CLI status2/diagnostic exact; no alias bytes modified.
+- [x] NO REGRESSION: existing37 prefix/37 late-source/26 child/two compiler/three static captures/20 classifiers remain green, rc=0, hardlink-producer-controls.log; bridge both modes/nine reds and profile56/13 helper/two Make/one launcher reds pass0. Native37 HEAD bytes/Rust unchanged, rc=0, hardlink-native-exact.log; first extractor used nonexistent python-native kind, excluded and corrected from actual TSV. Simulations certify dispatch only; no new native compilation.
+- [x] LOCKSTEP: retain two whole ecdb67b DEV records17L/1545B/source9158–10703/SHA36106586 exact; prior426/all24 controls/public427 exact/pressure10working16544L1196444B519529residentB, rc=0, hardlink-retention-proof.log. Book/live/MEMORY/G1/index route .f.n01; publication45/coverage9/census229paths288checks/map pass0 in hardlink-*-final logs. promotion: declined (existing explicit mutable ownership, guard-before-effects and scoped proof). Fixed caps/400 cadence preserved; runner unobserved.
+  Ledger9 arms/pointer13 pass0, terminal consumed, target/hardlink-ledger-final.log; no background result remains.
+  Final staged gate13 green, rc=0, target/hardlink-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h.v`
   Status: `done`
@@ -186,7 +204,7 @@ Compare every root input and fixture byte before/after; no source, sealed record
 - [x] NO REGRESSION: every24 root archive file/current HEAD exact; fixture bytes differ only by the deliberate copied catalog prose, rc=0, window7-committed-control.log. No reader/Rust/grammar/archive data change; previous focused suite receipt belongs to .f.h, not a rerun here.
 - [x] LOCKSTEP: bounded book/live/MEMORY/G1/index route P1 .f.l before native files;400 cadence/local proof scope unchanged, rc=0, window7-committed-control.log. promotion: declined (existing immutable-input, scoped proof and consumed-terminal rules). No runner verdict claimed.
   Fresh publication45/coverage9 and staged gate13 green, rc=0, window7-post-publication/coverage/staged-gate.log.
-  Confirmatory ledger verification pending in window7-post-ledger.log; consume before mutable-path work.
+  Confirmatory ledger9 arms/pointer13 pass0, terminal consumed before .f.l, target/window7-post-ledger.log.
 
 ### .a01.1 verification and continuation
 

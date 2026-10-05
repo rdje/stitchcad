@@ -108,7 +108,8 @@ def controls(scope):
                 def changed_device(path, *args, **kwargs):
                     metadata = original_stat(path, *args, **kwargs)
                     if kind == 'source-device' and path == root / 'input':
-                        return types.SimpleNamespace(st_mode=metadata.st_mode, st_dev=metadata.st_dev + 1)
+                        return types.SimpleNamespace(st_mode=metadata.st_mode, st_dev=metadata.st_dev + 1,
+                                                     st_nlink=metadata.st_nlink)
                     return metadata
 
                 try:
@@ -209,7 +210,8 @@ def output_controls(scope):
             def metadata(path, *args, **kwargs):
                 value = stat(path, *args, **kwargs)
                 if case == 'device' and path == destination:
-                    return types.SimpleNamespace(st_mode=value.st_mode, st_dev=value.st_dev + 1)
+                    return types.SimpleNamespace(st_mode=value.st_mode, st_dev=value.st_dev + 1,
+                                                 st_nlink=value.st_nlink)
                 return value
 
             # The directory-only plan's historical limitation is retained as calibration:
@@ -240,6 +242,80 @@ def output_controls(scope):
                 Path.stat = stat
                 if marker is not None and marker.exists():
                     marker.unlink()
+    return passed
+
+
+def mutable_controls(scope):
+    """Physical inode aliases; no input/output alias is written by the producer API."""
+    work = GOOD['directory'](ROOT, 'target/scratch/python_mutable_path_contract', create=True)
+    saved, passed = dict(os.environ), 0
+    cases = ('readonly-link', 'regular-mutable', 'output-link', 'mutable-link', 'late-mutable-link',
+             'undeclared', 'outside', 'escape', 'bytes', 'type')
+    try:
+        for case in cases:
+            with tempfile.TemporaryDirectory(dir=work) as name:
+                root = Path(name)
+                source, victim = root / 'input', root / 'victim'
+                source.write_bytes(b'unchanged singleton source')
+                victim.write_bytes(b'unchanged shared inode')
+                output = root / 'target/output/result.log'
+                output.parent.mkdir(parents=True)
+                alias = root / 'alias'
+                os.link(victim, alias)
+                os.link(victim, output)
+                assert victim.stat().st_nlink == 3 and \
+                    {(p.stat().st_dev, p.stat().st_ino) for p in (victim, alias, output)} == \
+                    {(victim.stat().st_dev, victim.stat().st_ino)}, 'D156 mutable fixture inode identity'
+                sources, mutable, files, wanted = (source, alias), (), (), None
+                if case == 'regular-mutable':
+                    mutable = (source,)
+                elif case == 'output-link':
+                    files = (root / 'target/output/first.log', output)
+                    wanted = 'hard-linked producer output'
+                elif case in ('mutable-link', 'late-mutable-link'):
+                    mutable = (alias,) if case == 'mutable-link' else (source, alias)
+                    wanted = 'hard-linked mutable producer source'
+                elif case == 'undeclared':
+                    mutable = (victim,)
+                    wanted = 'mutable producer source is not declared'
+                elif case == 'outside':
+                    mutable = (ROOT.parent / 'unowned-source',)
+                    wanted = 'producer path outside workspace'
+                elif case == 'escape':
+                    mutable = ('target/../input',)
+                    wanted = 'invalid producer path components'
+                elif case == 'bytes':
+                    mutable = ('bad\nsource',)
+                    wanted = 'invalid producer path bytes'
+                elif case == 'type':
+                    mutable = (None,)
+                    wanted = 'invalid producer path type'
+                before = {p: p.read_bytes() for p in (source, victim, alias, output)}
+                environment = dict(os.environ)
+                for action in ('plan_producer', 'prepare_producer', 'enter_producer') if wanted else ('plan_producer',):
+                    diagnostic = io.StringIO()
+                    with contextlib.redirect_stderr(diagnostic):
+                        try:
+                            result = scope[action](root, directories=('target/planned',), sources=sources,
+                                                   output_files=files, mutable_sources=mutable)
+                        except scope['Refusal'] as error:
+                            assert wanted and str(error) == wanted, ('D156 mutable refusal identity', case, action, str(error))
+                        except SystemExit as error:
+                            assert action == 'enter_producer' and wanted and error.code == 2, \
+                                ('D156 mutable standalone refusal', case, error.code)
+                            assert diagnostic.getvalue() == 'local-environment: REFUSED — ' + wanted + '\n', \
+                                ('D156 mutable standalone diagnostic', case, diagnostic.getvalue())
+                        else:
+                            assert wanted is None and result == ('target/planned',), \
+                                'D156 mutable plan accepted ' + case
+                    assert dict(os.environ) == environment and not (root / 'target/cargo-home').exists() \
+                        and not (root / 'target/planned').exists(), 'D156 mutable plan produced effects'
+                    assert all(p.read_bytes() == data for p, data in before.items()) and \
+                        not (output.parent / 'first.log').exists(), 'D156 mutable plan changed an alias byte'
+                    passed += 1
+    finally:
+        os.environ.clear()
+        os.environ.update(saved)
     return passed
 
 
@@ -757,6 +833,7 @@ def main():
     original, entry = SOURCE.read_bytes(), ENTRY.read_bytes()
     count = controls(GOOD)
     output_count = output_controls(GOOD)
+    mutable_count = mutable_controls(GOOD)
     faults = (
         ('output area', "require(Path(relative).parts[:1] == ('target',), 'producer output must be under target')", 'pass'),
         ('source link', "require(not path.is_symlink(), 'symlink producer source')", 'pass'),
@@ -766,6 +843,30 @@ def main():
         ('activation', 'os.environ.update(environment)', 'pass'),
     )
     red = 0
+    profile_functions = {node.name: ast.get_source_segment(original.decode(), node)
+                         for node in ast.parse(original).body if isinstance(node, ast.FunctionDef)}
+    mutable_faults = [
+        ('output hard link', "require(path.stat().st_nlink == 1, 'hard-linked producer output')", 'pass'),
+        ('mutable hard link', "require(path.stat().st_nlink == 1, 'hard-linked mutable producer source')", 'pass'),
+        ('declared mutable subset', "require(mutable <= set(inputs), 'mutable producer source is not declared')", 'pass'),
+        ('readonly input preserved', 'if relative in mutable:', 'if True:'),
+    ]
+    for function in ('prepare_producer', 'enter_producer'):
+        actual = profile_functions[function]
+        assert actual.count('mutable_sources=mutable_sources') == 1
+        mutable_faults.append((function + ' mutable forwarding', actual,
+                               actual.replace('mutable_sources=mutable_sources', 'mutable_sources=()')))
+    for name, before, after in mutable_faults:
+        assert original.decode().count(before) == 1, (name, 'actual mutable guard anchor')
+        scope = {'__file__': str(SOURCE), '__name__': 'mutable_path_fault'}
+        exec(compile(original.decode().replace(before, after, 1), str(SOURCE), 'exec'), scope)
+        try:
+            mutable_controls(scope)
+        except AssertionError as error:
+            assert 'D156 mutable' in str(error), (name, 'unrelated mutable guard fault', str(error))
+            red += 1
+        else:
+            raise AssertionError((name, 'mutable guard fault survived'))
     for name, before, after in faults:
         assert original.decode().count(before) == 1, (name, 'actual anchor')
         scope = {'__file__': str(SOURCE), '__name__': 'producer_fault'}
@@ -1191,6 +1292,7 @@ def main():
     assert all(path.read_bytes() == data for path, data in originals.items()), 'D156 Python adopter source changed'
     print('Python producer controls: ' + str(count) + ' runtime cases / ' + str(red) +
           ' actual body reds / ' + str(output_count) + ' actual output-file controls / ' +
+          str(mutable_count) + ' physical mutable-path controls / ' +
           str(len(adopters)) + ' actual standalone pre-write captures / ' +
           str(len(adopters)) + ' actual late-source refusals / ' + str(child_count) + ' actual native-child capture cases / ' +
           str(compiler_count) + ' complete compiler/example captures / ' +

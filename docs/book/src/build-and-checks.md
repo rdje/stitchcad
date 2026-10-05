@@ -153,6 +153,10 @@ outputs = profile['plan_producer'](
     Path.cwd(), directories=('target/check',),
     output_files=('target/check/report.log',), sources=('Cargo.toml',))
 assert outputs == ('target/check',)
+
+# Declare any source that the producer may rewrite, including restoration.
+profile['plan_producer'](
+    Path.cwd(), sources=('Cargo.toml',), mutable_sources=('Cargo.toml',))
 ```
 
 Missing output files are allowed. Existing destinations must be regular files on the repository
@@ -162,12 +166,18 @@ inside it: each planned file must be declared before producing effects. The rema
 filename audit is a priority task within open D156; source/directory guard evidence does not certify
 those undeclared destinations.
 
-A physical fixture also confirms that regular-file and volume checks accept hard links: source,
-output and victim names can share one inode. No alias was written in that diagnostic. The priority
-.f.l repair owns output refusal and an explicit contract for writable sources before native file
-repairs; read-only sources must retain their pure behavior. Current source/directory guards do not
-establish exclusive mutable ownership. The archive transition separately checks single-link status
-before rewriting any existing destination.
+Existing output files must have exactly one hard link. Source-writing producers also declare
+`mutable_sources`, a subset of `sources`; those files must have exactly one hard link before
+activation. A missing declaration in `sources` refuses as `mutable producer source is not declared`.
+Physical aliases refuse as `hard-linked producer output` or `hard-linked mutable producer source`.
+Both activation helpers forward the declaration. Read-only sources retain their existing validation
+and may have hard links; inspection still creates no paths or environment changes. The example above
+validates Cargo.toml for a possible rewrite without performing one.
+
+Physical fixture controls use three names for one inode and verify all bytes unchanged after
+refusal. Native mutation entries still need to adopt complete filenames and explicit mutable sources
+in their owned repair groups. Declared source/directory guards alone do not certify source-writing
+ownership or undeclared outputs; D156 remains open.
 
 The individual-Ease and Ease-set mutation entries use the same declared-path and profile guard.
 Their native runs with caller overrides absent observe seven and ten real assertion failures,
@@ -267,7 +277,8 @@ bridge guard/environment faults. These captures simulate compiler/driver results
 The real consumer separately passes26,723 shared cases,263 public/reference phase cases and ten
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
-Standing shared controls cover31 runtime cases,24 output-file controls and165 actual body faults,
+Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
+controls and171 actual body faults,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

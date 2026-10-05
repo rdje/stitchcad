@@ -14,6 +14,13 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — explicit mutable source ownership
+
+- Existing output files require one hard link; mutable_sources explicitly names a subset of sources with the same single-link requirement. Read-only hard-linked inputs remain valid; plan has no effects and both activation helpers forward the declaration.
+- Physical26 controls leave all alias bytes/environment/stores unchanged; six actual link/subset/forwarding/readonly faults join171 shared body reds0. Existing31 runtime/24 file/37 entry+late/26 child/two compiler/three static captures remain0; simulation proves dispatch only.
+- First shared attempt1 used a device stub without st_nlink; preserve actual link count in the simulated metadata, exclude failure, rerun0. Initial retention helper1 used attribute access on runpy's dict before writes; corrected mapping access0.
+- Two complete ecdb67b continuity records retained byte-exact; prior426/all24 controls/public427 reads exact. No Rust/grammar change; native37 mutable/file adoption stays next .f.n01–14. Promotion declined: existing mutable ownership, guard-before-effects and scoped proof rules.
+
 ## _(2026-10-05 UTC)_ — window7 and mutable ownership
 
 - Pack57 full6d93d3d records after exact isolated424 reads/materialization; six old windows unchanged. Verify copied bytes before retiring matching raw files, route root/document-relative links, and retain two whole lessons/three oldest ledgers.
@@ -89,23 +96,7 @@ The live lesson window remains bounded by200 lines/16384 bytes; all older bytes 
 | [`part162`](docs/history/window7.md#stitchcad-devnotes-part162md) | complete closed nodes | 23 lines, 1253 bytes, `sha256:4bc477d4…` |
 | [`part163`](docs/history/window7.md#stitchcad-devnotes-part163md) | complete closed book record | 22 lines, 1733 bytes, `sha256:9ecab39c…` |
 
-Window6 runner receipt — STITCHCAD-G1-0138 (.n.h3.v): exact c455b93 doctrine8/Rust11 steps
-completed/success; actual logs show Rust1.99/703 tests/59 groups/WASM3/four checkout-local stores.
-Post-commit window_contract.py386 controls/370 reads/newest committed-catalog refusal, rc=0.
-Four complete c455b93 intervals retain closed task/defect/oldest ledger records with live proxies.
-D165 reproduces in actual literal/normalized-expression predicates: labelled expect noise passes
-message-prefix classifiers; strict controls/current guarded test assertion sites belong to .n.f3.r.
-Director ruling2026-10-04:400 commits between pushes with earlier pushes only explicitly requested;
-.h3.v.c aligns the former automatic exception and checker before continuing product proof repairs.
-
-Director cadence — STITCHCAD-G1-0139 (.h3.v.c):400 unpushed commits for all ordinary pushes;
-explicit request alone permits an earlier push. Remove derived exceptional-path triggers;
-retain read-only historical comparison and full pre-push/job-level CI workflow. D166 actual count
-failure27 previously became zero/no-push; now count failures/malformed counts refuse2. The guarded
-new cadence control runs actual Bash checker bodies:19 boundary/refusal/real-Git verdicts/four
-body faults. Counts are simulated only in boundary/failure arms; integration metadata is real,
-read-only, with no fixture repository/source writes. Closed complete .h3.v node/receipt intervals
-are retained under fixed caps; policy code has local evidence until the next authorized push.
+Runner/cadence continuity retained in [part189](docs/history/stitchcad-devnotes-part189.md).
 
 Normalization provenance — STITCHCAD-G1-0140 (.n.f3.r): D165 original predicates accepted
 assertion-labelled expect noise. Prior30 actual logs reclassify as27 macro reds/three expect panics;
@@ -168,3 +159,5 @@ prepared stores/original filters and rebuild full target; controls131 body/34 en
 | [`part187`](docs/history/window7.md#stitchcad-devnotes-part187md) | three whole producer/assertion lessons | 21 lines, 1382 bytes, `sha256:923de269…` |
 
 | [`part188`](docs/history/stitchcad-devnotes-part188.md) | whole navigation/continuity lessons | 12 lines, 1574 bytes, `sha256:8bedb964…` |
+
+| [`part189`](docs/history/stitchcad-devnotes-part189.md) | whole runner/cadence continuity | 17 lines, 1545 bytes, `sha256:36106586…` |

@@ -110,6 +110,12 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0156 - explicit mutable source plans (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.l`)
+
+- Refuse hard-linked outputs/mutable source subsets before effects; preserve readonly inputs.
+- Physical26/171 actual body reds and existing shared/bridge/profile controls pass0.
+- Two whole ecdb67b records/prior426/public427 exact; native37 adoption next; D156/400 unchanged.
+
 ## STITCHCAD-G1-0155 - committed catalog refusal (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.h.v`)
 
 - Actual copied window7 prose edit passes inventory0 and refuses committed retention1.
@@ -136,7 +142,7 @@ the digests afterwards.
 - Preserve delegated import/populations/argv/prepared stores; captures and nine bridge body reds0.
 - Real26723 shared/263 phase cases/ten reference reds0; exact sources/current artifact verified.
 - Shared31 runtime/24 file/165 body controls0; calibrate ownership faults independently of group splits.
-- Retain three whole2358d4e lessons; prior423/public424 exact. Book/live/focused checks follow.
+- Retain three whole2358d4e lessons; prior423/public424 exact. Book/live/focused checks pass0.
 - D156 stays open: P1 remaining filename audit next;400 push cadence, no early push.
 
 ## STITCHCAD-G1-0151 - finite producer effect ownership (leaf `G1-SLICE.5b.4c.h2.b.p.o.i`)
