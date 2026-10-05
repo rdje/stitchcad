@@ -11,10 +11,8 @@ SOURCE = ROOT / 'crates/sc-core/src/recipe/checked.rs'
 CONTRACT = ROOT / 'crates/sc-core/tests/formula_checked_expression_contract.rs'
 SOURCES = (SOURCE, CONTRACT)
 WORK = ROOT / 'target/checked_expression_mutations'
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=SOURCES)
-original = SOURCE.read_bytes()
-WORK.mkdir(parents=True, exist_ok=True)
+assert sys.argv[1:] in [[], ['--classifier-only']]
+CLASSIFIER_ONLY = sys.argv[1:] == ['--classifier-only']
 CASES = (
     ('literal kind changed', (('FormulaLiteralKind::Angle => FormulaKind::Angle,',
                               'FormulaLiteralKind::Angle => FormulaKind::Length,'),)),
@@ -70,6 +68,14 @@ CASES = (
     ('dimension token changed', (('Self::Dimension(_) => "formula_dimension",',
                                  'Self::Dimension(_) => "formula_domain",'),)),
 )
+OUTPUT_FILES = (() if CLASSIFIER_ONLY else
+                tuple(WORK / ('fault-%d.log' % index) for index in range(1, len(CASES) + 1)) +
+                (WORK / 'restored.log',))
+MUTABLE_SOURCES = () if CLASSIFIER_ONLY else (SOURCE,)
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=MUTABLE_SOURCES)
+original = SOURCE.read_bytes()
+WORK.mkdir(parents=True, exist_ok=True)
 for name, steps in CASES:
     for before, _ in steps:
         assert original.decode().count(before) == 1, (name, 'fault anchor not unique')
@@ -84,21 +90,32 @@ def assertion_sites(source, path):
 
 
 def assertion_failure(output):
+    """A failed-body thread panic must name a current guarded assertion macro."""
     parts = output.split(b'\nfailures:\n', 2)
     if len(parts) != 3:
         return False
-    locations = re.finditer(rb'panicked at ([^:\n]+):([0-9]+):([0-9]+):\n', parts[1])
-    return any((match.group(1).decode('utf-8', 'replace'), int(match.group(2)), int(match.group(3)))
-               in ASSERTION_SITES for match in locations)
+    for match in re.finditer(
+            rb'(?m)^thread\b[^\r\n]*? panicked at ([^:\r\n]+):([0-9]+):([0-9]+):\r?$', parts[1]):
+        try:
+            path = match.group(1).decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if (path, int(match.group(2)), int(match.group(3))) in ASSERTION_SITES:
+            return True
+    return False
 
 ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
 assert ASSERTION_SITES, 'focused contract has no assertion sites'
+site = min(ASSERTION_SITES)
+location = ("\nfailures:\nthread 'fixture' panicked at %s:%d:%d:\n" % site).encode()
+assert assertion_failure(location + b'custom macro message\n\nfailures:\nfixture\n')
+assert not assertion_failure(location.replace(b"thread 'fixture'", b'compiler note:') +
+                             b'nonthread location mention\n\nfailures:\nfixture\n')
 assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
 assert not assertion_failure(b'assertion: compiler output\n')
 
-assert sys.argv[1:] in [[], ['--classifier-only']]
-if sys.argv[1:]:
-    print('checked expression faults:16 unique real body transformations; compiler/expect/name noise refused')
+if CLASSIFIER_ONLY:
+    print('checked expression faults:16 unique real body transformations; current thread macros; nonthread/expect/compiler/name noise refused')
     sys.exit(0)
 environment = dict(os.environ)
 try:

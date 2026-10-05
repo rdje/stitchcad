@@ -248,12 +248,25 @@ cargo test -p sc-core --test formula_checked_expression_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutations.py
 ```
 
-Run mutations alone, without overlapping builds/probes/gates. The standing structural suite watches
-fault anchors and refuses compiler/expect/test-name noise. The direct entry plans source/output
-before reads/writes, preserves prepared child stores and rebuilds the complete focused target
-after exact source restoration. Classifier-only mode checks anchors/noise without native faults.
-The failed-body panic location must match an assertion macro site in the current test source,
-including its column. Custom assert messages remain valid; assertion-labelled expect messages refuse. These proofs cover expression checking
+Run mutations alone, without overlapping builds/probes/gates. The direct entry plans both current
+implementation/test inputs, seventeen diagnostic files and one mutable source before effects.
+Classifier-only mode declares zero files/mutable sources/native effects:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/checked_expression_mutations.py --classifier-only
+```
+
+Two complete mode captures and six physical refusals preserve all sixteen ordered case tuples,
+including the two-step callee-priority fault, native arguments, prepared stores and exact restoration.
+Thirteen actual mode faults include a missing second replacement; a legacy-regex fault checks
+nonthread rejection. A thread panic must name a current assertion macro path/line/byte column.
+Custom messages pass; nonthread notes and labelled extraction/compiler/name noise refuse.
+Copied readonly mode accepts linked input/unused log aliases without native or file-write effects.
+The exclusive sixteen-case replay matches authored failed-test sets and current macros in every
+failed body. Two formerly unguarded dependency/conditional proof extractions now assert acceptance
+first. All seventy-two frozen inputs, unchanged production Rust, seventeen local logs and the
+restored full seven-test executable are verified. Dispatch controls and real native proof remain
+separate. These proofs cover expression checking
 against an initial namespace. [Current-statement checking](formula-name-scopes.md#check-the-actual-current-statement)
 also applies these rows to the actual prior-binding scope and both assertion operands. [Whole recipe proofs](formula-checked-recipes.md) compose these checks. Coupled whole review is verified at .5b.4b.
 Canonical registry/operation-order validation, numerical execution and physical geometry

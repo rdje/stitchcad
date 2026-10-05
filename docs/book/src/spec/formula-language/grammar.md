@@ -307,7 +307,9 @@ The tolerance operand of within is one of eps_num, eps_geo, eps_fmt, eps_imp or 
 not any reserved name: size_index, size_count and is_base_size are size inputs, not tolerance classes.
 The [static signature controls](../../annexes/formula-static-validation.md) check every kind/role
 without reading numeric values; [initial-scope product expression checking](../../annexes/formula-wanted-signatures.md#bounded-product-expression-checking)
-is available. Statement and whole-recipe validation remain pending.
+is available. [Current-statement checking](../../annexes/formula-name-scopes.md#check-the-actual-current-statement)
+and [whole-recipe kind proofs](../../annexes/formula-checked-recipes.md) are also available;
+numerical execution and operation-graph validation retain separate later obligations.
 
 ### 6.1 Geometry selectors
 

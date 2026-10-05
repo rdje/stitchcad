@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0177 - checked expression modes and individual panic evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.2`)
+
+- Two inputs/17 logs/one mutable; classifier zero effects;16 exact ordered cases.
+- Shared508 reds/35 classifiers/32 captures/188 refusals0; native16/every failed body macro/full7 exact.
+- Repair two D182 public preconditions; full fmt/strict Clippy/59groups703pass0.
+- Retain whole canonical/window7-bridge/recipe/rounding/D181-D182;474 exact reads/prior470/all68.
+- D181/D182 closed; D179 two fixed/two P1 next. Grammar/engine/400 unchanged.
+
 ## STITCHCAD-G1-0176 - canonical expression modes and thread evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.1`)
 
 - Seven inputs/20 ordinary or4 coupled logs/one mutable; classifier-only zero effects;19+3 exact.
@@ -195,14 +203,6 @@ the digests afterwards.
 - Focused/staged receipts in owning leaf; D177 ten fixed/5 P1 remain; domain .n04.4 next.
 - Rust/API/grammar/400 cadence unchanged; no early push or unobserved runner claim.
 
-## STITCHCAD-G1-0165 - guarded unsigned-round files and both profiles (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n04.2`)
-
-- Plan12 logs/three inputs/one mutable source; preserve original CALL-derived9 faults.
-- Explicit totality assertion; shared256 body reds/29 classifiers/nine captures/38 refusals0.
-- Nine real debug/one release macro reds; ten frozen inputs/both full5 public artifacts exact0.
-- Retain whole Ease receipts/two lessons/oldest ledger; prior444/all42/public446 exact.
-- Full Rust/focused/staged receipts in owning leaf; production/grammar/400 cadence unchanged.
-- D177 nine fixed/6 P1 remain; length .n04.3 next.
 
 
 
@@ -342,3 +342,5 @@ the digests afterwards.
 | [`part153`](docs/history/stitchcad-changelog-part153.md) | whole G1-0163 Ease-set continuity ledger | 7 lines, 557 bytes, `sha256:f9db2b5b…` |
 
 | [`part154`](docs/history/stitchcad-changelog-part154.md) | whole G1-0164 signed-round continuity ledger | 8 lines, 665 bytes, `sha256:a3aa5776…` |
+
+| [`part155`](docs/history/stitchcad-changelog-part155.md) | whole G1-0165 unsigned-round continuity ledger | 8 lines, 622 bytes, `sha256:33ca42fe…` |

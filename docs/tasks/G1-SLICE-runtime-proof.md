@@ -250,3 +250,82 @@ Final publication45/coverage9/census and frozen31/current full10 artifact bytes 
 Confirmatory post-doc ledger replay pending; prior nine probes/thirteen pointer controls pass0.
 Consume its terminal (or replay after recovery) before starting .n08; verified slice committed now.
 
+
+Source: `a041a682acc50c08913000db10c7682e6c07f500`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Canonical expression mode verification](#canonical-expression-mode-verification) | 56094–60575 | 4481 / 40 | `4078659511ccc1a688a29bfc80db45e0dc456fb9257728385d44d28230644e9a` |
+
+### Canonical expression mode verification
+
+Initial shared canonical capture used lowercase cases for the uppercase CASES container: actual
+producer replay KeyError/refusal, rc=1, canonical-mode-producer-controls.log first attempt26979.
+No real source write/native child; scoped case-container dispatch corrected. Fresh terminal54176
+passes494 body reds/35 classifiers/30 captures/182 physical refusals0; failed setup excluded.
+Imported annex mode prose aligned before native freeze; all six normative arrow rows byte-exact.
+
+Own census refusal after the four-child split: actual terminal-owner parser finds four stale
+parent-owned TSV rows. Repair python_file_entries.tsv to .n08.1–4 before signoff; independent
+membership diagnostic derives120 paths/59 owners/29 native groups. Existing split-owner/data
+refusal/body-omission controls must pass unchanged; original failed census is excluded.
+Additional path: docs/tasks/artifacts/ci_environment/python_file_entries.tsv.
+
+Own whole oldest normalized-expression lesson/signed-round ledger rollover into DEV210/CH154
+before live growth; prior467/all65/public readers/seven windows/source intervals/SHA exact.
+Own whole current authored D180 report plus verified closure into defects101 after scoped evidence;
+report is new in this slice, never attribute its original bytes to an earlier commit.
+
+D180 also owns coupled-annex footer availability drift found on final scope review. Native19+3
+terminal/macro sets/full9 artifacts/frozen26 exact before this correction; snapshots retained.
+Only imported annex prose changes afterward; six normative rows/other25 inputs/Rust14 stay exact.
+Re-freeze that one declared documentation input and rebuild/run current full9 before commit; no
+new native-mutation proof is inferred from the final publication build.
+
+Own P2 D180 active canonical-spelling decision's stale statement/recipe-future claims; inspect
+8ed2893 introduction/7c81533 serializer/public typed APIs and repair current availability prose,
+preserving director's exact byte ruling. Additional path: docs/decisions/decision_canonical-expression-spelling.md.
+Align imported literal-annex mode prose before native freeze; retain its six normative arrow rows
+exactly. Keep later earned replay receipts in non-imported build/task/live records so compile-time
+inputs remain byte-exact through original19+3 replay and current full9 artifact verification.
+
+- [x] REPRODUCE / ISSUE: four actual extracted classifiers accept nonthread macro notes, rc=0, canonical-thread-diagnostic.json; D179 P1 owned. Four entries443L/canonical144L/public9 tests257L/five imported inputs/byte decision/protocol/grammar/book reviewed; canonical27:9 note accepted.
+- [x] ROOT CAUSE: unanchored panic regex accepts nonthread locations; source/directory guard omits complete mode intentions. Three independent captures bind reads/19+3 cases/five spacing replacements/coupled_ argv/stores/restoration;25 physical refusals0, producer-controls.log.
+- [x] FIX: seven inputs/ordinary20 files/coupled4/one mutable/classifier zero effects before reads. Original case ASTs/argv exact; thread/noise/legacy fault discriminate. Shared494 reds/35 classifiers/30 captures/182 refusals0, producer-controls.log;35 mode faults. Initial container setup1 corrected/excluded.
+- [x] ADDRESSED: exclusive19+3 real faults match authored failed sets/every failed body current macro;26 replay inputs/14 Rust HEAD/five imported inputs/20+4 single-link copied logs exact; each full9 consumed before next mode. Later annex prose alone changes/six rows/other25 exact; current full9 b5d3900b passes0, native-final-artifact.log.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67/29/file120paths59owners29groups/15refusals12reds/map/ledger9+13 pass0, canonical-mode-*.log. Readonly3-linked input/unused log aliases/zero child-source-output writes exact. Four stale TSV owners corrected; failed census excluded. Rust unchanged/703 gate0170 applies; new WASM/runtime/runner unobserved.
+- [x] LOCKSTEP: whole0871a0c recipe4325B30L/53449–57774/SHA150218d9 copied/verified before retirement; first62828B/second26170B prefix/map8169B/headers/caps exact0, task-retention-proof.log. WholeDEV210/CH154/new D180101/prior467/all65/public470/seven windows/13open166sealed exact0, retention-proof.log. D180 fixed/D179 canonical fixed/3 P1 next/parent active/D156 open; promotion declined/grammar/400 stay.
+
+Staged gate13/0.
+Post-doc ledger pending: target/canonical-mode-ledger-final.log; consume before .n08.2.
+
+
+### Window7 public verification
+
+Source: `a041a682acc50c08913000db10c7682e6c07f500`, docs/tasks/G1-SLICE-producers.md.
+Complete committed body; byte interval 19097–24277, 5180 bytes / 24 lines; SHA-256 `ed796bed9f41831b7fc8739c1db88e7f5a62b90fa12e1a5cdd3a693959a764f6`.
+
+Whole preimplementation record retained in [part195](../history/stitchcad-devnotes-part195.md); completed acceptance boxes and canonical ownership remain below.
+
+- [x] REPRODUCE / ISSUE: newest7 immutability arm awaited its recording commit; actual abc2f91e now contains the window. Root and fresh copied fixture verify-retention0, rc=0, target/window7-committed-control.log. Full public reader/standing copied-catalog control reviewed; no tracked sealed mutation.
+- [x] ROOT CAUSE: inventory validates membership/bytes but intentionally ignores catalog prose; committed comparison must independently reject drift. Actual isolated copied prose edit leaves inventory0, rc=0, window7-committed-control.log; source/output plan precedes activation, copied regular destinations have one link.
+- [x] FIX: run the actual post-recording public guard against the changed copy; source/HEAD pins and complete input/output fixture paths retained, rc=0, window7-committed-control.log. Data/implementation stay unchanged; this closes the deferred newest-window proof only.
+- [x] ADDRESSED: copied catalog edit yields exact ARCHIVE-RETENTION committed retained file changed/exit1 while ordinary inventory0; intact root/fixture guard0, rc=0, window7-committed-control.log. Both actual outcomes consumed; fixture has no Git marker and inherits the project's committed baseline.
+- [x] NO REGRESSION: every24 root archive file/current HEAD exact; fixture bytes differ only by the deliberate copied catalog prose, rc=0, window7-committed-control.log. No reader/Rust/grammar/archive data change; previous focused suite receipt belongs to .f.h, not a rerun here.
+- [x] LOCKSTEP: bounded book/live/MEMORY/G1/index route P1 .f.l before native files;400 cadence/local proof scope unchanged, rc=0, window7-committed-control.log. promotion: declined (existing immutable-input, scoped proof and consumed-terminal rules). No runner verdict claimed.
+  Fresh publication45/coverage9 and staged gate13 green, rc=0, window7-post-publication/coverage/staged-gate.log.
+  Confirmatory ledger9 arms/pointer13 pass0, terminal consumed before .f.l, target/window7-post-ledger.log.
+
+### .a01.1 verification and continuation
+
+First staged gate1 refused new DEV335B/LIVE321B lines above320B ceilings. Wrap the lesson and
+tighten the live cell; keep caps unchanged and exclude bridge-staged-gate-attempt1.log from signoff.
+
+- [x] REPRODUCE / ISSUE: local launcher python_bridge_contract.py executes the pinned2358d4e bridge body and observes its missing pre-plan before delegated loading; current directory-only plan accepts a physical leaf alias without writes. Both original-scope controls pass, rc=0, target/bridge-entry-controls.log and bridge-producer-controls.log. No Rust source or external destination is written.
+- [x] ROOT CAUSE: actual bridge/coupled public path and guard order inspected; coupled's20-input module guard activates before bridge-owned validation, and directory checks omit leaf files. Independent authored nine-output/20-input capture identifies the first effect, rc=0, bridge-entry-controls.log. First attempt1 expected a later child but observed the earlier directory guard; corrected that expectation and excluded its failed receipt.
+- [x] FIX: plan_producer checks declared sources/directories/files without activation; bridge preplans two inputs/nine files and producing entry rechecks22-source union. Shared31 runtime/24 physical file controls and165 actual body reds pass, rc=0, bridge-producer-controls.log; alias/type/device/parent refusals preserve source/output/victim bytes. Remaining file destinations are P1 .p.o.f.i; D156 stays open.
+- [x] ADDRESSED: python_bridge_contract.py captures both modes/four actual child dispatches/eight text writes and nine actual guard/store fault reds, rc=0, bridge-entry-controls.log. Exact early output/file-alias and late delegated-source diagnostics precede effects. Simulated compiler/driver responses prove dispatch only; real consumer is separate. Current ownership calibration8 refusals/7 body reds/split positive, rc=0, bridge-census-final.log.
+- [x] NO REGRESSION: real first_phase_contract.py --mutations with caller store exports absent passes26723 shared/263 phase cases/ten reference fault controls, rc=0, bridge-native-final.log. Terminal native consumed before any mutation;23 input hashes/five Rust HEAD bytes/nine regular local outputs/current public Cargo artifact exact, rc=0, bridge-native-proof.log. Focused launcher56/publication45/coverage9/census229paths288checks/archive28+CLI440/public424/ledger9+pointer13, rc=0, bridge-*-final logs. Grammar/Rust unchanged.
+- [x] LOCKSTEP: book/live/MEMORY/G1/index route .p.o.f.i before .a01.2; shared plan example preserves environment/path existence, rc=0. Three whole2358d4e lessons retained byte-exact; prior423/six windows/master/public424 actual reads,12open163sealed/no gaps or overlap, rc=0, bridge-retention-proof.log; all fixed caps unchanged. promotion: declined (existing guard-before-effects, borrowed/public contracts, scoped proof and whole retention).400 push cadence remains; remote verdict unobserved.
+  Final staged gate13 green, rc=0, target/bridge-staged-gate.log.
+

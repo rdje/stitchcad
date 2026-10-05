@@ -1001,7 +1001,13 @@ D178 whole report/progressive evidence/verified closure retained in [part100](..
   G1-SLICE.5b.4c.h2.b.p.o.f.n08.1–4; require current thread macro locations, independent nonthread
   controls/legacy-regex faults and exclusive original real cases/full current artifact before closure.
   Canonical .n08.1 fixed: independent nonthread/legacy-regex controls and19+3 actual macro faults/
-  authored failed sets/26 frozen inputs/final full9 artifact0. Checked .n08.2–4 remain immediate P1.
+  authored failed sets/26 frozen inputs/final full9 artifact0. Checked .n08.3–4 remain immediate P1.
+  Checked expression .n08.2 fixed:16 real faults/every failed body macro/72 frozen inputs/
+  full7 artifact/full Rust703 exact0. Two checked P1 remain .n08.3–4 next.
   No broader count claimed.
 
 D180 whole report/verified closure retained in [part101](../history/stitchcad-defects-part101.md).
+
+D181 whole report/verified closure retained in [part102](../history/stitchcad-defects-part102.md).
+
+D182 whole report/verified closure retained in [part103](../history/stitchcad-defects-part103.md).

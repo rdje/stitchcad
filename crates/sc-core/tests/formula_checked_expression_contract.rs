@@ -530,7 +530,9 @@ fn dependencies_keep_repeated_and_untaken_uses_exact_sources_and_canonical_borro
         .try_into()
         .unwrap()])
         .unwrap();
-        expression.check_kinds(&namespace).unwrap()
+        let result = expression.check_kinds(&namespace);
+        assert!(result.is_ok());
+        result.unwrap()
     };
     assert_eq!(proof.kind(), K::Length);
     assert_eq!(
@@ -656,7 +658,9 @@ fn bounded_flat_traversal_handles_deep_unary_grouping_variadics_and_conditional_
     }
     let expression = normalized(&source);
     assert_eq!(expression.conditional_depth(), 16);
-    let proof = expression.check_kinds(&namespace).unwrap();
+    let result = expression.check_kinds(&namespace);
+    assert!(result.is_ok());
+    let proof = result.unwrap();
     assert_eq!(proof.kind(), K::Length);
     assert_eq!(proof.dependencies().len(), 16);
     assert!(FormulaExpression::parse(&format!("if(is_base_size,{source},2 mm)")).is_err());

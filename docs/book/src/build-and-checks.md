@@ -288,6 +288,19 @@ compile-time inputs and the current full ten-test executable restore exactly. D1
 four original classifiers and their native cases are independently repaired and replayed; remaining
 native groups inspect the boundary before signoff, with no broader affected-population claim.
 
+Checked expression plans two current inputs, seventeen diagnostic files and one mutable source.
+Classifier-only declares zero files/mutables/native effects. Two complete captures/six physical
+refusals/thirteen mode faults preserve all sixteen ordered cases, including both callee-priority
+replacements; omitted second-step bytes refuse before dispatch. Thread-only current macro evidence
+and an independent legacy-regex fault reject nonthread notes. Copied readonly input/unused aliases
+cause no native or file-write effects. Sixteen exclusive real faults match authored failed-test
+sets; every failed body reaches a current macro. D182's two measured dependency/conditional
+extraction paths now assert acceptance first. Seventy-two inputs/sixty-three unchanged production
+Rust files/seventeen local logs/current full seven-test executable remain exact. Full formatting,
+strict Clippy and fifty-nine native groups/seven-hundred-three tests pass. D181 grammar availability
+now names implemented statement/whole proofs; formal grammar stays. D179 checked expression fixed;
+statement/recipe remain immediate P1 and run next.
+
 Canonical expression plans seven inputs: implementation/current test/three imported TSVs/literal
 annex/worked examples. Ordinary mode declares twenty diagnostic files; coupled mode declares four;
 both declare one mutable source. Classifier-only declares zero files/mutable sources/native effects.
@@ -454,7 +467,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and494 actual body faults, with35 calibrated failed-body classifiers,
+controls and508 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

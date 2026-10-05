@@ -156,29 +156,11 @@ Whole preimplementation record retained in [part194](../history/stitchcad-devnot
   Goal: after the .f.h recording commit, prove the newest committed window7 rejects a copied catalog prose edit through the actual public retention guard; record the terminal result before .f.l.
   Acceptance: isolated same-volume copy only, normal inventory remains green, immutable guard refuses exactly the changed committed catalog; actual HEAD/fixture/control bytes exact, no tracked sealed write, no background result left unconsumed, local scope distinct from unobserved runner verdict.
 
-Whole preimplementation record retained in [part195](../history/stitchcad-devnotes-part195.md); completed acceptance boxes and canonical ownership remain below.
-
-- [x] REPRODUCE / ISSUE: newest7 immutability arm awaited its recording commit; actual abc2f91e now contains the window. Root and fresh copied fixture verify-retention0, rc=0, target/window7-committed-control.log. Full public reader/standing copied-catalog control reviewed; no tracked sealed mutation.
-- [x] ROOT CAUSE: inventory validates membership/bytes but intentionally ignores catalog prose; committed comparison must independently reject drift. Actual isolated copied prose edit leaves inventory0, rc=0, window7-committed-control.log; source/output plan precedes activation, copied regular destinations have one link.
-- [x] FIX: run the actual post-recording public guard against the changed copy; source/HEAD pins and complete input/output fixture paths retained, rc=0, window7-committed-control.log. Data/implementation stay unchanged; this closes the deferred newest-window proof only.
-- [x] ADDRESSED: copied catalog edit yields exact ARCHIVE-RETENTION committed retained file changed/exit1 while ordinary inventory0; intact root/fixture guard0, rc=0, window7-committed-control.log. Both actual outcomes consumed; fixture has no Git marker and inherits the project's committed baseline.
-- [x] NO REGRESSION: every24 root archive file/current HEAD exact; fixture bytes differ only by the deliberate copied catalog prose, rc=0, window7-committed-control.log. No reader/Rust/grammar/archive data change; previous focused suite receipt belongs to .f.h, not a rerun here.
-- [x] LOCKSTEP: bounded book/live/MEMORY/G1/index route P1 .f.l before native files;400 cadence/local proof scope unchanged, rc=0, window7-committed-control.log. promotion: declined (existing immutable-input, scoped proof and consumed-terminal rules). No runner verdict claimed.
-  Fresh publication45/coverage9 and staged gate13 green, rc=0, window7-post-publication/coverage/staged-gate.log.
-  Confirmatory ledger9 arms/pointer13 pass0, terminal consumed before .f.l, target/window7-post-ledger.log.
+Complete committed verification retained in [runtime proof](G1-SLICE-runtime-proof.md#window7-public-verification); canonical ownership remains above.
 
 ### .a01.1 verification and continuation
 
-First staged gate1 refused new DEV335B/LIVE321B lines above320B ceilings. Wrap the lesson and
-tighten the live cell; keep caps unchanged and exclude bridge-staged-gate-attempt1.log from signoff.
-
-- [x] REPRODUCE / ISSUE: local launcher python_bridge_contract.py executes the pinned2358d4e bridge body and observes its missing pre-plan before delegated loading; current directory-only plan accepts a physical leaf alias without writes. Both original-scope controls pass, rc=0, target/bridge-entry-controls.log and bridge-producer-controls.log. No Rust source or external destination is written.
-- [x] ROOT CAUSE: actual bridge/coupled public path and guard order inspected; coupled's20-input module guard activates before bridge-owned validation, and directory checks omit leaf files. Independent authored nine-output/20-input capture identifies the first effect, rc=0, bridge-entry-controls.log. First attempt1 expected a later child but observed the earlier directory guard; corrected that expectation and excluded its failed receipt.
-- [x] FIX: plan_producer checks declared sources/directories/files without activation; bridge preplans two inputs/nine files and producing entry rechecks22-source union. Shared31 runtime/24 physical file controls and165 actual body reds pass, rc=0, bridge-producer-controls.log; alias/type/device/parent refusals preserve source/output/victim bytes. Remaining file destinations are P1 .p.o.f.i; D156 stays open.
-- [x] ADDRESSED: python_bridge_contract.py captures both modes/four actual child dispatches/eight text writes and nine actual guard/store fault reds, rc=0, bridge-entry-controls.log. Exact early output/file-alias and late delegated-source diagnostics precede effects. Simulated compiler/driver responses prove dispatch only; real consumer is separate. Current ownership calibration8 refusals/7 body reds/split positive, rc=0, bridge-census-final.log.
-- [x] NO REGRESSION: real first_phase_contract.py --mutations with caller store exports absent passes26723 shared/263 phase cases/ten reference fault controls, rc=0, bridge-native-final.log. Terminal native consumed before any mutation;23 input hashes/five Rust HEAD bytes/nine regular local outputs/current public Cargo artifact exact, rc=0, bridge-native-proof.log. Focused launcher56/publication45/coverage9/census229paths288checks/archive28+CLI440/public424/ledger9+pointer13, rc=0, bridge-*-final logs. Grammar/Rust unchanged.
-- [x] LOCKSTEP: book/live/MEMORY/G1/index route .p.o.f.i before .a01.2; shared plan example preserves environment/path existence, rc=0. Three whole2358d4e lessons retained byte-exact; prior423/six windows/master/public424 actual reads,12open163sealed/no gaps or overlap, rc=0, bridge-retention-proof.log; all fixed caps unchanged. promotion: declined (existing guard-before-effects, borrowed/public contracts, scoped proof and whole retention).400 push cadence remains; remote verdict unobserved.
-  Final staged gate13 green, rc=0, target/bridge-staged-gate.log.
+Whole original verification is retained with the [window7/bridge record](G1-SLICE-runtime-proof.md#window7-public-verification).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a02`
   Status: `pending`
@@ -580,51 +562,80 @@ docs/book/src/build-and-checks.md;Target diagnostic/native/retention helpers and
   Paths: docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py
   Acceptance: complete plans before effects; current thread macro diagnostics and owned measured defects resolved before signoff. Grammar/400 cadence unchanged.
 
-Initial shared canonical capture used lowercase cases for the uppercase CASES container: actual
-producer replay KeyError/refusal, rc=1, canonical-mode-producer-controls.log first attempt26979.
-No real source write/native child; scoped case-container dispatch corrected. Fresh terminal54176
-passes494 body reds/35 classifiers/30 captures/182 physical refusals0; failed setup excluded.
-Imported annex mode prose aligned before native freeze; all six normative arrow rows byte-exact.
-
-Own census refusal after the four-child split: actual terminal-owner parser finds four stale
-parent-owned TSV rows. Repair python_file_entries.tsv to .n08.1–4 before signoff; independent
-membership diagnostic derives120 paths/59 owners/29 native groups. Existing split-owner/data
-refusal/body-omission controls must pass unchanged; original failed census is excluded.
-Additional path: docs/tasks/artifacts/ci_environment/python_file_entries.tsv.
-
-Own whole oldest normalized-expression lesson/signed-round ledger rollover into DEV210/CH154
-before live growth; prior467/all65/public readers/seven windows/source intervals/SHA exact.
-Own whole current authored D180 report plus verified closure into defects101 after scoped evidence;
-report is new in this slice, never attribute its original bytes to an earlier commit.
-
-D180 also owns coupled-annex footer availability drift found on final scope review. Native19+3
-terminal/macro sets/full9 artifacts/frozen26 exact before this correction; snapshots retained.
-Only imported annex prose changes afterward; six normative rows/other25 inputs/Rust14 stay exact.
-Re-freeze that one declared documentation input and rebuild/run current full9 before commit; no
-new native-mutation proof is inferred from the final publication build.
-
-Own P2 D180 active canonical-spelling decision's stale statement/recipe-future claims; inspect
-8ed2893 introduction/7c81533 serializer/public typed APIs and repair current availability prose,
-preserving director's exact byte ruling. Additional path: docs/decisions/decision_canonical-expression-spelling.md.
-Align imported literal-annex mode prose before native freeze; retain its six normative arrow rows
-exactly. Keep later earned replay receipts in non-imported build/task/live records so compile-time
-inputs remain byte-exact through original19+3 replay and current full9 artifact verification.
-
-- [x] REPRODUCE / ISSUE: four actual extracted classifiers accept nonthread macro notes, rc=0, canonical-thread-diagnostic.json; D179 P1 owned. Four entries443L/canonical144L/public9 tests257L/five imported inputs/byte decision/protocol/grammar/book reviewed; canonical27:9 note accepted.
-- [x] ROOT CAUSE: unanchored panic regex accepts nonthread locations; source/directory guard omits complete mode intentions. Three independent captures bind reads/19+3 cases/five spacing replacements/coupled_ argv/stores/restoration;25 physical refusals0, producer-controls.log.
-- [x] FIX: seven inputs/ordinary20 files/coupled4/one mutable/classifier zero effects before reads. Original case ASTs/argv exact; thread/noise/legacy fault discriminate. Shared494 reds/35 classifiers/30 captures/182 refusals0, producer-controls.log;35 mode faults. Initial container setup1 corrected/excluded.
-- [x] ADDRESSED: exclusive19+3 real faults match authored failed sets/every failed body current macro;26 replay inputs/14 Rust HEAD/five imported inputs/20+4 single-link copied logs exact; each full9 consumed before next mode. Later annex prose alone changes/six rows/other25 exact; current full9 b5d3900b passes0, native-final-artifact.log.
-- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67/29/file120paths59owners29groups/15refusals12reds/map/ledger9+13 pass0, canonical-mode-*.log. Readonly3-linked input/unused log aliases/zero child-source-output writes exact. Four stale TSV owners corrected; failed census excluded. Rust unchanged/703 gate0170 applies; new WASM/runtime/runner unobserved.
-- [x] LOCKSTEP: whole0871a0c recipe4325B30L/53449–57774/SHA150218d9 copied/verified before retirement; first62828B/second26170B prefix/map8169B/headers/caps exact0, task-retention-proof.log. WholeDEV210/CH154/new D180101/prior467/all65/public470/seven windows/13open166sealed exact0, retention-proof.log. D180 fixed/D179 canonical fixed/3 P1 next/parent active/D156 open; promotion declined/grammar/400 stay.
-
-Staged gate13/0.
-Post-doc ledger pending: target/canonical-mode-ledger-final.log; consume before .n08.2.
+Complete committed verification retained in [producer proof](G1-SLICE-runtime-proof.md#canonical-expression-mode-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.2`
-  Status: `pending`
-  Goal: checked expression sixteen multistep faults/17 ordinary files/classifier zero effects; complete current implementation/contracts/inputs/modes and real macro replay before signoff.
+  Status: `done`
+  Goal: STITCHCAD-G1-0177: checked expression16 faults/17 files/class-only zero effects; own whole prior canonical receipt retention before growth, current modes/native proof.
   Paths: docs/tasks/artifacts/formula_structure/checked_expression_mutations.py
   Acceptance: preserve every ordered replacement/argv/restoration/current artifact; independent complete captures/physical refusals/body faults and actual replay. Grammar/400 cadence unchanged.
+
+Prior a041a68 post-doc ledger9/pointer13 terminal0 consumed before this leaf; no jobs/39 unpushed/
+brief0/clean state established. Whole committed canonical-expression body4481B/40L/56094–60575/
+SHA40786595 retained in runtime proof before growth; prior30926B/first62828B/map8169B exact.
+Own Target checked diagnostics/capture/readonly/native/current-artifact/retention and focused logs;
+all destinations planned before writes. Own shared producer, wanted-signatures/build book/live/frontier.
+Checked entry/public7 tests663L/implementation448L read;16 ordered multi-step cases retained.
+Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;
+docs/book/src/annexes/formula-wanted-signatures.md;docs/book/src/build-and-checks.md;live/history records.
+Own P2 D181 grammar6 availability sentence: wrongly calls implemented statement/whole kind proofs
+pending. Inspect exact introduction/public checked APIs and correct only availability prose;
+formal grammar/token/operator tables unchanged. Additional path: docs/book/src/spec/formula-language/grammar.md.
+
+Own exclusive real case2/dependency-test diagnostic before any helper repair: source/test/all
+consumer inputs/logs planned; restore exact checked source and full7 target before another job.
+If observed extraction hides its rejection, own immediate public macro precondition repair and
+required full Rust gate. Additional path: crates/sc-core/tests/formula_checked_expression_contract.rs.
+
+D182 P1 owned here: actual case2 selects dependency test extraction panic533:44, not macro;
+all frozen inputs/exact source/full7 restored0 before following diagnostic. Own actual case6
+bounded conditional proof diagnostic and any confirmed public preconditions before all16 replay.
+
+Actual exclusive case6/bounded conditional confirms extraction659:52, macro false; exact all
+inputs/source/full7 restored0 before edits. D182 owns two measured public assertion preconditions
+(dependency and final bounded conditional); record before/after current locations/all16 per-body
+macro proof, full7 artifact and required fmt/strict Clippy/full native gate before closure.
+
+First shared replay25174 refused at main2437: new generic faults variable overwrote standing
+triple catalog with four-field mode cases. Scope renamed checked_mode_faults; no real native/source
+effects, failed setup excluded before fresh complete replay.
+
+Own whole committed window7 public-verification body .f.h.v retention into the existing runtime
+proof before live acceptance growth; original interval/hash/canonical header/prefix/map exact.
+Own whole oldest normalized-recipe lesson and unsigned-round ledger into DEV211/CH155, and whole
+new D181/D182 reports plus earned closures into defects102/103. Prior470/all68/public474/seven
+windows/IDs1–182 except18 require independent exact retrieval before live retirement/signoff.
+
+First extra-retention boundary assumed .f.l follows .f.h.v; actual next .p.o.a02. Pre-write
+ValueError refused before tracked writes; derive next canonical ID boundary, failed setup excluded.
+
+Whole .f.h.v payload includes original bridge continuation; preserve its exact heading as a
+retrieval proxy too. First Target proof-edit anchor refused after intended proxy save; actual
+semicolon-shaped proof line located and corrected; failed preparation excluded.
+
+First live-retention helper replacement changed its end proxy too: ValueError before any archive/
+live writes; correct actual next proxy and derive complete ledger boundary, failed setup excluded.
+
+Following ledger boundary attempt had no later heading: DEV211 whole copy already valid, live
+originals still exact HEAD. Preserve/verify that partial new seal; derive actual final bullet,
+exclude only this owned new file from baseline inventory, then finish copy/verify/retirement.
+
+Pure final-doc preflight refused a draft archive64 count before any write. Actual inventory
+working57 already includes seven catalogs (50 raw); double addition caused false prerequisite.
+Correct draft/preserve checked-statement frontier; no window8 need claimed or activated.
+
+- [x] REPRODUCE / ISSUE: actual AST functions/current194:5 accept nonthread before/refuse after, rc=0, checked-mode-thread-diagnostic.json. Entry/public663L/checked448L/grammar5–7/wanted/roadmap/protocol read. Exclusive case2/E533:44 and case6/G659:52 expose extraction panics; each exact source/full7 restored0, dependency/bounded-before logs.
+- [x] ROOT CAUSE: source/directory-only plans omit files/mutable intentions; panic regex lacks thread boundary. Two public tests unwrap rejection before asserting acceptance. Independent mode captures bind2 inputs/17-or0 files/1-or0 mutable/full7 argv/all16 ordered cases/two-step bytes/stores/restoration, rc=0, producer-controls.log.
+- [x] FIX: complete two modes before effects/current thread macro classifier; two measured public acceptance guards. Shared508 body reds/35 classifiers/32 captures/188 physical refusals0;13 mode faults include dropped second replacement/legacy regex discriminates, rc=0, producer-controls.log. Initial catalog-variable collision setup1 excluded/corrected before real replay.
+- [x] ADDRESSED: exclusive16 real faults match authored failed sets/every failed body current macro/nonmacro[];72 frozen inputs/63 production Rust HEAD/two public guards/17 single-link logs/current full7 c74cc7e7 exact0, native-proof.log. Failed sets CF,ABDEFG,BDF,D,BCEG,BCDEFG,BCDF,C,ABCDEFG,ABEG,E,C,ABD,A,C,ABC. Each before diagnostic/full target consumed before edits.
+- [x] NO REGRESSION: full fmt/strict Clippy/native59groups703pass0/zero ignored, rust-check.log/count.json; all72/artifact unchanged. Readonly3-linked input/unused aliases/zero native-source-output effects exact0. Publication45/coverage9/census229paths288checks/effect67/29/file120/59/29/map/ledger9+13 pass0, checked-mode-*.log; new WASM/runner unobserved.
+- [x] LOCKSTEP: whole a041 canonical4481B40L/56094–60575/SHA40786595 and window7-bridge5180B24L/19097–24277/SHAed796bed copied/verified before retirement; headings/30926B prefix/first62828B/map8169B/caps exact0, task-retention-proof.log. WholeDEV211/CH155/new D181102/D182103/prior470/all68/public474/seven windows/13open168sealed exact0, retention-proof.log. D181/D182 closed; D179 two fixed/2 P1 next; promotion declined/grammar/400 stay.
+
+Final post-doc publication62 chapters/67 APIs/1268 source/1985 rendered links/45 probes,
+coverage10 lanes/13 trees/15 siblings/9 probes, census229 paths/288 checks, and ledger9+13
+(632 real verdicts) terminal0 consumed; checked-mode final logs. No outstanding native/job.
+
+Staged doctrine gate13 terminal0 consumed, checked-mode-staged-gate.log; intended19 files.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.3`
   Status: `pending`
