@@ -420,8 +420,7 @@ def measure_fixture(entry_path):
                     'unknown_and_derived_ease_amounts_remain_distinct_unresolved_inputs',
                     'incomplete_and_empty_drafts_cannot_certify_design_pom_coverage',
                     'grade_rule_input_always_refuses_for_complete_and_empty_authored_mtm_charts')
-    else:
-        assert entry_path == ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py', 'D156 unknown measurement entry'
+    elif entry_path == ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py':
         stem = 'size_chart_collection'
         selected = ('collection_and_context_identities_cannot_alias_supplied_records',
                     'collection_and_context_identities_cannot_alias_supplied_records',
@@ -437,6 +436,16 @@ def measure_fixture(entry_path):
                     'undeclared_pom_and_observation_from_another_design_table_are_refused',
                     'unknown_and_derived_cells_can_be_structurally_complete_but_never_numeric_defaults',
                     'empty_inventory_is_inspectable_but_not_complete_and_keeps_table_revision_checks')
+    else:
+        assert entry_path == ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py', 'D156 unknown measurement entry'
+        stem = 'ease'
+        selected = ('authored_sides_must_be_body_then_garment',
+                    'amount_must_not_alias_either_measurement_scalar',
+                    'current_mapping_identity_collisions_refuse',
+                    'same_id_binding_reassignments_require_explicit_replacement',
+                    'all_authored_value_states_enforce_negative_permission_and_preserve_sign',
+                    'current_amount_edits_are_visible_and_missing_amount_refuses',
+                    'missing_current_metadata_preserves_side_and_underlying_error')
     work_name = 'measurement_table_mutations' if stem == 'table' else stem + '_mutations'
     return (ROOT / ('crates/sc-measure/src/' + stem + '.rs'),
             ROOT / ('crates/sc-measure/tests/' + stem + '_contract.rs'),
@@ -1141,7 +1150,8 @@ def main():
     measure_paths = (ENTRY, ROOT / 'docs/tasks/artifacts/size_chart/size_chart_mutations.py',
                      ROOT / 'docs/tasks/artifacts/measurement_table/table_mutations.py',
                      ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py',
-                     ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py')
+                     ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py',
+                     ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py')
     measure_physical, measure_classifiers = 0, 0
     for measure_path in measure_paths:
         measure_text = measure_path.read_text()
@@ -1149,9 +1159,13 @@ def main():
         measure_physical += measure_refusals(measure_text, measure_path)
         classifier_controls(measure_text, measure_path, strict=True)
         measure_classifiers += 1
+        numbered = 'range(1, len(CASES) + 2)' if measure_path == ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py' \
+            else 'range(1, len(CASES) + 1)'
+        omitted = 'range(1, len(CASES) + 1)' if measure_path == ROOT / 'docs/tasks/artifacts/ease/ease_mutations.py' \
+            else 'range(1, len(CASES))'
         for name, before, after, message in (
             ('files omitted', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 measure file plan changed'),
-            ('last numbered file omitted', 'range(1, len(CASES) + 1)', 'range(1, len(CASES))', 'D156 measure file plan changed'),
+            ('last numbered file omitted', numbered, omitted, 'D156 measure file plan changed'),
             ('mutable source omitted', 'mutable_sources=(SOURCE,)', 'mutable_sources=()', 'D156 measure mutable plan changed'),
             ('test source omitted', 'sources=SOURCES', 'sources=SOURCES[:1]', 'D156 measure source plan changed'),
             ('child stores reset', 'capture_output=True',
@@ -1181,7 +1195,8 @@ def main():
                 red += 1
             else:
                 raise AssertionError((name, 'measurement classifier fault survived'))
-    collection_path = measure_paths[-1]
+    collection_path = ROOT / 'docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py'
+    assert collection_path in measure_paths
     collection_text = collection_path.read_text()
     collection_inline_controls(collection_text, collection_path)
     assert collection_text.count('for before, after in mutations:') == 1
@@ -1300,7 +1315,7 @@ def main():
     for path, work_name in adopters:
         text = path.read_text()
         multiple_sources = {
-            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py', 'size_chart_collection_mutations.py',
+            'size_membership_mutations.py', 'size_chart_mutations.py', 'table_mutations.py', 'mtm_chart_mutations.py', 'size_chart_collection_mutations.py', 'ease_mutations.py',
             'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',

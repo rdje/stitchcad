@@ -31,6 +31,7 @@
 - [`G1-SLICE-journal`](docs/tasks/G1-SLICE-journal.md)
 - [`G1-SLICE-measurements`](docs/tasks/G1-SLICE-measurements.md)
 - [`G1-SLICE-names`](docs/tasks/G1-SLICE-names.md)
+- [`G1-SLICE-producer-proof`](docs/tasks/G1-SLICE-producer-proof.md)
 - [`G1-SLICE-producers`](docs/tasks/G1-SLICE-producers.md)
 - [`G1-SLICE-recipes`](docs/tasks/G1-SLICE-recipes.md)
 - [`G1-SLICE`](docs/tasks/G1-SLICE.md)

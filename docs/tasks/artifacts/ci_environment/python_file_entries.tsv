@@ -12,8 +12,8 @@ docs/tasks/artifacts/ci_environment/producer_census_contract.py	profile	G1-SLICE
 docs/tasks/artifacts/ci_environment/python_producer_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_bridge_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/push_cadence_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
-docs/tasks/artifacts/ease/ease_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n03
-docs/tasks/artifacts/ease/ease_set_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n03
+docs/tasks/artifacts/ease/ease_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n03.1
+docs/tasks/artifacts/ease/ease_set_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n03.2
 docs/tasks/artifacts/formula_language/inline_context_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a09
 docs/tasks/artifacts/formula_language/inline_context_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a09
 docs/tasks/artifacts/formula_lex/formula_lex_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n05

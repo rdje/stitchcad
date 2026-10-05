@@ -135,10 +135,16 @@ server or user-facing application is claimed by this library slice.
 The tracked individual-Ease tests exercise ordered fit classes, canonical borrowing, required side
 kinds, distinct amount identity, current identity/binding/metadata changes, signed permission in all
 value-bearing states, unknown/derived refusal, same-token namespaces and reordered current inputs.
-The tracked mutation diagnostic removes production guards and requires real assertion failures,
-then restores source byte-identically. Rust strict checks and the browser-target build verify the
-library integration. These are local structural checks; physical fit and production signoff remain
-G2/G3/G4/G6 and independent G7 obligations.
+The individual mutation diagnostic declares all seven numbered logs and restored.log, its mutable
+implementation and read-only current test source before input reads or native dispatch. Six pure
+cases plus the unchanged source-dependent span and complete alias predicate yield seven faults.
+Independent complete dispatch captures, output symlinks, mutable-source hard links, missing-test
+refusals and actual guard/classifier omissions are verified separately from native results.
+Each real removal must fail at a current guarded test assertion macro's UTF-8 byte location.
+All eight frozen build/source inputs and both Rust files remain exact after restoration; the
+current artifact selected through public Cargo output passes all thirteen tests. Rust strict checks
+and the browser-target build verify the library integration. These are local structural checks;
+physical fit and production signoff remain G2/G3/G4/G6 and independent G7 obligations.
 
 Set contracts add per-POM/id/token lookup, three uniqueness rules, shared body/amount sources, mixed
 tables, empty drafts, current context collisions, missing/reassigned mappings/tables, current intent/

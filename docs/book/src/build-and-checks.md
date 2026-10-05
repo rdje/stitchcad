@@ -167,8 +167,13 @@ ordered replacement anchors. Complete fifteen-child/file captures and four physi
 independent second-anchor omission and inline UTF-8 byte-column controls catch actual body faults.
 Fourteen real current macro failures restore exact inputs and the public eighteen-test artifact.
 
-D177's fifteen-entry scope has all five measurement families verified; ten entries remain.
-Their .f.n03–06 repairs own current test locations and independent controls before signoff.
+Individual Ease declares eight logs/two inputs/one mutable source before reads. Its six pure
+cases and five source-dependent statements still yield the original seven faults. Complete
+eight-child/file capture and four physical refusals pass; seven real current macro failures
+restore exact inputs and the public thirteen-test artifact.
+
+D177's fifteen-entry scope has six entries verified; nine remain. Their .f.n03.2–06 repairs
+own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
 declared source files, output directories and explicit `output_files` without creating paths or
@@ -311,7 +316,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and213 actual body faults, with25 calibrated failed-body classifiers,
+controls and221 actual body faults, with26 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

@@ -14,6 +14,15 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — complete individual Ease effect and panic plans
+
+- Six pure cases precede eight-file/two-input/one-mutable-source activation. All five source-dependent AST statements remain exact and ordered, including the complete two-alternative alias predicate; seven filters/stores/restoration unchanged.
+- Actual old predicate accepts passed assertion_name with expect-only failure. Six independent measurement captures/24 physical refusals/shared221 body reds/26 classifiers pass0; dispatch simulation stays separate from real native proof.
+- Exclusive seven current macro reds/full13 restored0; independent selected-test/byte-site replay verifies eight frozen inputs/two Rust HEAD files/original cases/statements/eight single-link local logs. Public Cargo artifacta8cd5d21… executes13 tests0; Rust unchanged.
+- Five whole ade5165 completed producer bodies copied byte-exact into a bounded owned sibling before retirement; canonical headers/IDs/status/Paths stay live. Map8102B retains all prior ordered targets. Two whole DEV/CH records retained; prior438/all36/public440 exact,13open/163sealed.
+- Pre-copy parse1/title fixture1/numeric thread-id replay1/checklist608B preflight1 excluded; tools located and corrected each helper error. No native/source results changed. Promotion declined: existing current-source, explicit ownership and whole-record rules.
+- D177 six entries fixed;9 P1 remain. Ease-set .n03.2 next. Fixed caps/grammar/API/400 cadence unchanged; runner verdict unobserved. Focused final receipts live in the owning leaf.
+
 ## _(2026-10-05 UTC)_ — complete collection effect and panic plans
 
 - Pure fourteen-case population precedes activation; fifteen logs/two inputs/one mutable source are guarded before reads. All15 ordered replacement anchors remain AST-exact, including the paired POM/token uniqueness mutation; selected filters and full restoration stay unchanged.
@@ -47,15 +56,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - Retain three whole467191f ledgers before live receipt growth. Initial preflight1 correctly refused tracked archive output under the Target-only producer API before writes; validate the tracked archive directory and use fresh exclusive creation instead. Prior430/public431 proof follows in the leaf.
 - Promotion declined: existing current-source evidence, explicit mutable/file ownership, finite task splits and whole-record retention rules. D177 stays open with13 entries P1 .n02.2–4/.n03–06;400 cadence/local verification remains.
 
-## _(2026-10-05 UTC)_ — complete membership effect and panic plans
-
-- Resolve the pure seven-case population before activation; declare mutation logs1–7/restored.log, implementation/test inputs and explicit mutable implementation. Actual AST keyword identity keeps sources distinct from mutable_sources in all37 late-source controls.
-- D177 actual12 substring entries/13 predicates accept passed assertion names plus nonmacro failure; three prefix helpers accept labelled-expect bodies. First broad census included one calibration, refined before publishing15 affected entries. Membership origin0b77235; remaining14 P1 .f.n02–06.
-- Guard current membership tests; require failed-body thread panic at current source/line/byte-column macro. Complete eight-child/eight-file capture/four physical copied-entry refusals and five entry/three classifier body reds pass0; shared179/21 classifiers0. Simulation proves dispatch only.
-- Exclusive native seven macro reds0; independent byte-site replay verifies every real log, original cases/eight frozen inputs/Rust exact/full12 restored. Public Cargo artifact e61d4f6a… executes all12 tests0; no tracked Rust/API/grammar change.
-- Retain five complete closure receipts/six lessons/three ledgers fromfc46ad8; prior427/all25 controls/public430 exact. Initial retention syntax1 failed before writes; first census missed D131/D176 alternate headings, excluded and corrected using canonical union.
-  Two mistargeted book patches made no changes; reread section before actual patch.
-  Promotion declined: existing current-source proof, explicit effect ownership and whole-record retention rules.
+Whole membership lesson retained in [part197](docs/history/stitchcad-devnotes-part197.md).
 
 Whole mutable/window lessons retained in [part196](docs/history/stitchcad-devnotes-part196.md).
 
@@ -133,3 +134,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part192`](docs/history/stitchcad-devnotes-part192.md) | two whole bridge/effect ownership lessons | 16 lines, 2347 bytes, `sha256:9f77b65f…` |
 
 | [`part196`](docs/history/stitchcad-devnotes-part196.md) | two whole mutable/window lessons | 13 lines, 2165 bytes, `sha256:6b688342…` |
+
+| [`part197`](docs/history/stitchcad-devnotes-part197.md) | whole membership effect and panic lesson | 9 lines, 1639 bytes, `sha256:d1bbd951…` |

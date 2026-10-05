@@ -1,15 +1,13 @@
 """Observe assertion failures from real production guard removals, restoring exact source."""
 from pathlib import Path
+import re
 import runpy
 import subprocess
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-measure/src/ease.rs'
+TEST_SOURCE = ROOT / 'crates/sc-measure/tests/ease_contract.rs'
+SOURCES = (SOURCE, TEST_SOURCE)
 WORK = ROOT / 'target/ease_mutations'
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=(SOURCE,))
-WORK.mkdir(exist_ok=True)
-ORIGINAL = SOURCE.read_bytes()
-TEXT = ORIGINAL.decode()
 CASES = [
     ('authored domains', 'if binding.kind != side.kind() {', 'if false && binding.kind != side.kind() {', 'authored_sides_must_be_body_then_garment'),
     ('distinct scalar', 'if definition.declaration == definition.body.declaration', 'if false && definition.declaration == definition.body.declaration', 'amount_must_not_alias_either_measurement_scalar'),
@@ -18,6 +16,44 @@ CASES = [
     ('compression permission', 'if amount < Length::ZERO &&', 'if false && amount < Length::ZERO &&', 'all_authored_value_states_enforce_negative_permission_and_preserve_sign'),
     ('current amount permission', 'self.validate_amount(amount)?;', 'let _ = amount;', 'current_amount_edits_are_visible_and_missing_amount_refuses'),
 ]
+OUTPUT_FILES = tuple(WORK / ('mutation-%d.log' % index) for index in range(1, len(CASES) + 2)) + \
+    (WORK / 'restored.log',)
+
+
+def assertion_sites(source, path):
+    """Current curated test macros, with Rust panic byte columns."""
+    sites = set()
+    for number, line in enumerate(source.splitlines(), 1):
+        match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
+        if match is not None:
+            sites.add((path, number, len(match.group(1).encode()) + 1))
+    return sites
+
+
+def assertion_failure(output):
+    """A failed-body panic must name a guarded current assertion macro location."""
+    parts = output.split(b'\nfailures:\n', 2)
+    if len(parts) != 3:
+        return False
+    for match in re.finditer(
+            rb'(?m)^thread\b[^\r\n]*? panicked at ([^:\r\n]+):([0-9]+):([0-9]+):\r?$', parts[1]):
+        try:
+            path = match.group(1).decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if (path, int(match.group(2)), int(match.group(3))) in ASSERTION_SITES:
+            return True
+    return False
+
+
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=(SOURCE,))
+WORK.mkdir(exist_ok=True)
+ORIGINAL = SOURCE.read_bytes()
+TEXT = ORIGINAL.decode()
+ASSERTION_SITES = assertion_sites(TEST_SOURCE.read_text(), TEST_SOURCE.relative_to(ROOT).as_posix())
+assert ASSERTION_SITES, 'current Ease test has no assertion macros'
+
 # Both sides must undergo current metadata validation. Remove the complete check,
 # not a different failing check; compiling mutants must fail a real assertion.
 start = TEXT.index('        measurement\n            .validate_current(context.records())')
@@ -33,7 +69,7 @@ try:
         result = subprocess.run(['cargo', 'test', '-p', 'sc-measure', '--test', 'ease_contract', test, '--', '--exact'], cwd=ROOT, capture_output=True)
         output = result.stdout + result.stderr
         (WORK / ('mutation-%d.log' % number)).write_bytes(output)
-        assert result.returncode == 101 and b'test result: FAILED.' in output and b'assertion' in output and b'could not compile' not in output, (name, output.decode())
+        assert result.returncode == 101 and b'test result: FAILED.' in output and assertion_failure(output) and b'could not compile' not in output, (name, output.decode())
         print('mutation %d %s: rc=101, actual regression assertion failed' % (number, name))
         SOURCE.write_bytes(ORIGINAL)
 finally:
