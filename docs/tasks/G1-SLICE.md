@@ -795,11 +795,13 @@ Whole proof evidence: [G1-SLICE-checked-recipes](G1-SLICE-checked-recipes.md).
 - [x] NO REGRESSION: publication probes:45 pass/0 fail; producer-census9/9/4 and228 Git paths/287 checks; coverage9/ledger9+pointer13 all terminal0 consumed, rc=0, map-publication/census/coverage/ledger logs; no Rust/producer storage/grammar change.
 - [x] LOCKSTEP: book/notes/changelog/map/MEMORY/frontier synced to .p.o.i; fixed caps preserved; source render and published path CLI exact, rc=0. promotion: declined (existing bounded projections/full navigation preservation). Final staged gate13green, rc=0, map-staged-gate.log.
 
+[Output/delegation division and owned repair groups](G1-SLICE-producers.md).
+
 ## Current Frontier
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.o.i` | `todo` | Divide output/delegation ledger before repairs, then D156/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.o.a01` | `todo` | Audit static bridge/copied recipe, then remaining D156 groups/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

@@ -2,6 +2,9 @@
 from pathlib import Path
 import argparse
 import ast
+import copy
+import csv
+import io
 import os
 import runpy
 import subprocess
@@ -150,6 +153,7 @@ def main():
             raise AssertionError((name, 'counterfactual survived'))
     assert SOURCE.read_bytes() == original, 'D156 census source changed'
     coverage()
+    effect_plan_controls()
     print('producer-census controls: ' + str(passed + extra) + ' assertions, ' +
           str(refused + boundaries) + ' actual refusals, ' + str(red) + ' compiled-body reds; source unchanged')
 
@@ -200,6 +204,110 @@ def coverage():
             checked += 1
     print('producer-census watched coverage: ' + str(len(expected)) + ' independent Git paths / ' +
           str(checked) + ' AST/source/bash boundary checks; pass')
+
+
+def validate_effect_plan(entries, text, tasks):
+    """Exact planned path/kind/owner coverage; no runtime locality authority."""
+    reader = csv.DictReader(io.StringIO(text), delimiter='\t')
+    assert reader.fieldnames == ['path', 'kind', 'leaf'], 'D156 effect plan schema'
+    rows = list(reader)
+    assert all(set(row) == {'path', 'kind', 'leaf'} and
+               all(isinstance(value, str) and value for value in row.values())
+               for row in rows), 'D156 effect row shape'
+    expected = {p: row['kind'] for p, row in entries.items()
+                if p.endswith('.py') and row['kind'] in {'output', 'delegate'}}
+    assert len(rows) == len({row['path'] for row in rows}), 'D156 duplicate effect path'
+    assert {row['path'] for row in rows} == set(expected), 'D156 effect path coverage'
+    assert all(row['kind'] == expected[row['path']] for row in rows), 'D156 effect kind changed'
+    owners = {line.removeprefix('- ID: `').removesuffix('`') for line in tasks.splitlines()
+              if line.startswith('- ID: `G1-SLICE.5b.4c.h2.b.p.o.a')}
+    owners = {owner for owner in owners if not any(
+        other.startswith(owner + '.') for other in owners)}
+    assert owners and {row['leaf'] for row in rows} == owners, 'D156 effect owner coverage'
+    return len(rows), len(owners)
+
+
+def effect_plan_cases(validate, entries, text, tasks):
+    result = validate(entries, text, tasks)
+    lines = text.splitlines(keepends=True)
+    swapped = ''.join('\t'.join((parts[1], parts[0], parts[2]))
+                      for parts in (line.split('\t') for line in lines))
+    # A split replaces row owners, while the original group remains a tracked parent.
+    parent = 'G1-SLICE.5b.4c.h2.b.p.o.a01'
+    child = parent + '.1'
+    assert validate(entries, text.replace(parent + '\n', child + '\n'),
+                    tasks + '\n- ID: `' + child + '`\n') == result, 'D156 split owner coverage'
+    failures = 0
+    for changed, task_text, message in (
+        (swapped, tasks, 'D156 effect plan schema'),
+        (''.join(lines[:-1]) + lines[-1].rstrip('\n') + '\textra\n', tasks,
+         'D156 effect row shape'),
+        (text.replace('\toutput\t', '\t\t', 1), tasks, 'D156 effect row shape'),
+        (''.join(lines[:1] + lines[2:]), tasks, 'D156 effect path coverage'),
+        (text + lines[-1], tasks, 'D156 duplicate effect path'),
+        (text.replace('\toutput\t', '\treference\t', 1), tasks, 'D156 effect kind changed'),
+        (text.replace('\tG1-SLICE.', '\tUNKNOWN.', 1), tasks, 'D156 effect owner coverage'),
+        (text, tasks.replace('- ID: `G1-SLICE.5b.4c.h2.b.p.o.a01`', '- ID: `REMOVED`', 1),
+         'D156 effect owner coverage'),
+    ):
+        try:
+            validate(entries, changed, task_text)
+        except AssertionError as error:
+            assert str(error) == message, ('D156 unrelated effect-plan refusal', str(error))
+            failures += 1
+        else:
+            raise AssertionError(('D156 missed effect-plan refusal', message))
+    return result, failures
+
+
+def effect_plan_controls():
+    entries = GOOD['entries'](HERE / 'producer_entries.tsv')
+    text = (HERE / 'python_effect_entries.tsv').read_text()
+    tasks = (ROOT / 'docs/tasks/G1-SLICE-producers.md').read_text()
+    result, failures = effect_plan_cases(validate_effect_plan, entries, text, tasks)
+    original = Path(__file__).read_bytes()
+    function = next(node for node in ast.parse(original).body
+                    if isinstance(node, ast.FunctionDef) and node.name == 'validate_effect_plan')
+    reds = 0
+    for diagnostic in ('D156 effect plan schema', 'D156 effect row shape',
+                       'D156 duplicate effect path', 'D156 effect path coverage',
+                       'D156 effect kind changed', 'D156 effect owner coverage'):
+        module = ast.Module(body=[copy.deepcopy(function)], type_ignores=[])
+        matches = [node for node in ast.walk(module) if isinstance(node, ast.Assert) and
+                   isinstance(node.msg, ast.Constant) and node.msg.value == diagnostic]
+        assert len(matches) == 1, ('D156 actual effect guard anchor', diagnostic)
+        # Remove the actual guard in memory; tracked source and all producers stay untouched.
+        matches[0].test = ast.copy_location(ast.Constant(value=True), matches[0].test)
+        scope = {'csv': csv, 'io': io}
+        exec(compile(ast.fix_missing_locations(module), __file__, 'exec'), scope)
+        try:
+            effect_plan_cases(scope['validate_effect_plan'], entries, text, tasks)
+        except AssertionError as error:
+            assert error.args == (('D156 missed effect-plan refusal', diagnostic),), \
+                ('D156 unrelated effect guard fault', diagnostic, error.args)
+            reds += 1
+        else:
+            raise AssertionError(('D156 effect guard omission survived', diagnostic))
+    module = ast.Module(body=[copy.deepcopy(function)], type_ignores=[])
+    filters = [node for node in ast.walk(module) if isinstance(node, ast.Assign) and
+               isinstance(node.value, ast.SetComp) and
+               isinstance(node.value.elt, ast.Name) and node.value.elt.id == 'owner']
+    assert len(filters) == 1, 'D156 actual terminal-owner anchor'
+    filters[0].value = ast.copy_location(ast.Name(id='owners', ctx=ast.Load()), filters[0].value)
+    scope = {'csv': csv, 'io': io}
+    exec(compile(ast.fix_missing_locations(module), __file__, 'exec'), scope)
+    try:
+        effect_plan_cases(scope['validate_effect_plan'], entries, text, tasks)
+    except AssertionError as error:
+        assert error.args == ('D156 effect owner coverage',), \
+            ('D156 unrelated split-owner fault', error.args)
+        reds += 1
+    else:
+        raise AssertionError('D156 terminal-owner omission survived')
+    assert Path(__file__).read_bytes() == original, 'D156 effect guard source changed'
+    print('effect plan coverage:', result[0], 'current Python paths /', result[1],
+          'owned groups /', failures, 'actual data/owner refusals /', reds,
+          'actual guard-omission reds; split owner positive; inspection only, runtime pending')
 
 
 if __name__ == '__main__':

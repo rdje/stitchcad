@@ -110,6 +110,14 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0151 - finite producer effect ownership (leaf `G1-SLICE.5b.4c.h2.b.p.o.i`)
+
+- Assign67 output/delegation candidates to28 bounded owners; runtime inspection/repairs remain pending.
+- Watch exact path/kind/terminal-owner coverage with eight data refusals/seven actual body reds0.
+- Retain four whole lessons/two oldest ledgers from ab3f720; prior420/six windows+master exact.
+- D176 stale task-index command totals removed; original examples/history/closure retained exactly.
+- Source/book/live sync and focused census/publication/archive/ledger/coverage checks follow;400 cadence stays.
+
 ## STITCHCAD-G1-0150 - bounded generated navigation (leaf `G1-SLICE.5b.4c.h2.b.p.o.i.k`)
 
 - Shorten redundant .md task/decision labels; preserve all72 generated destinations/order and path CLI.
@@ -229,23 +237,6 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
 - Seven complete6deb45e intervals/public364/prior64 bytes exact0; closed node IDs/proxies stay live.
 - D163 reproduced/owned next; G1 stays5/18,13open/149sealed; D156 open, grammar/API fixed.
 
-## STITCHCAD-G1-0134 - guarded statement and whole assertion proof (leaf `G1-SLICE.5b.4c.h2.b.p.n.f6`)
-
-- Guard all implementation/test sources/output before reads/writes; preserve prepared child stores.
-- D161 fixed with current test assertion locations; custom assertions pass and expect sites refuse.
-- CI17runtime/56body/23prefixes/23late/14children/six classifiers and publication43 pass0.
-- Exclusive41 actual assertion reds; both modes0; six sources exact/full7/7 targets restored0.
-- Five complete5a7be6c intervals/public357/prior59 bytes exact0; D162 reproduced/owned next.
-- G1 stays5/18,13open/148sealed; D156 open, grammar/API fixed. Namespace/ordered-name guards next.
-
-## STITCHCAD-G1-0133 - guarded expression assertion provenance (leaf `G1-SLICE.5b.4c.h2.b.p.n.f5`)
-
-- Guard implementation/test source and output before reads/writes; preserve child stores/coupled argv.
-- D160 fixed with current test macro panic locations; custom asserts pass and expect locations refuse.
-- CI17runtime/46body/21prefixes/21late/12children/four classifiers and publication43 pass0.
-- Exclusive38 genuine native assertion reds; sources/full9/9/7 targets restored0; failed text-only
-  attempt excluded. Seven complete cf1f1e0 intervals/public352/prior52 bytes exact0.
-- D161 actual predicates reproduced/owned next; D156 open. G1 5/18,13open/147sealed; grammar fixed.
 
 
 
@@ -325,3 +316,5 @@ exact-head job/step observation .n.h3.v then .n.f9. D156/D154/D164 remain open; 
 | [`part133`](docs/history/stitchcad-changelog-part133.md) | G1-0131 ledger | 8 lines, 700 bytes, `sha256:534079f9…` |
 
 | [`part134`](docs/history/stitchcad-changelog-part134.md) | G1-0132 ledger | 8 lines, 680 bytes, `sha256:6617db21…` |
+
+| [`part135`](docs/history/stitchcad-changelog-part135.md) | whole G1-0134/0133 ledgers | 17 lines, 1365 bytes, `sha256:b27ceffd…` |

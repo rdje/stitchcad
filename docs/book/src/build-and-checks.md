@@ -230,8 +230,14 @@ entry captures at their first write. The membership native run with caller expor
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
 12 membership tests passing. All thirty-seven entry captures also refuse a late missing source before
 input reads, output writes or child dispatch. Python fixture/output and delegated entries remain under the
-bounded .h2.b.p audit. The next division reviews each module’s public entry and borrowed fixture/root
-contracts before applying output or delegation guards. The original pre-repair capture is retained in the census record; current
+bounded .h2.b.p audit. Its finite output/delegation plan assigns each current Python candidate to a
+bounded repair group in docs/tasks/G1-SLICE-producers.md. The watched TSV must cover each current
+path/kind and terminal group owner exactly; missing, duplicate, malformed or unowned rows refuse.
+Actual guard-omission faults and a split-owner positive check watch this planning boundary.
+Each group reviews complete sources, transitive public entries and borrowed fixture/root contracts
+before repairs. Pure library calls stay pure; historical captures retain fixed source revisions and
+fresh-fixture contracts. This plan establishes ownership; runtime locality remains pending.
+The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
 Twenty-six native-child capture cases execute actual entries with custom local stores,

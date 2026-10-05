@@ -993,3 +993,5 @@ Original D172–D174 reports retained exactly in [part95](../history/stitchcad-d
 
 D175 closes at .n.f14: public whole dependency graph availability corrected; publication45 checks include independent later-section stale sentence and actual compiled catalog-omission refusal, rc=0.
 Original report retained exactly in [part96](../history/stitchcad-defects-part96.md); UTC seal date correction:2026-10-05 (immutable header says Oct4).
+
+D176 task-index command totals close at .p.o.i; original examples/history/current coverage proof retained in [part97](../history/stitchcad-defects-part97.md).
