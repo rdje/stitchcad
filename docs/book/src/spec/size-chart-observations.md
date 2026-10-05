@@ -80,5 +80,9 @@ Sixteen contracts and a privacy compile-fail test cover borrowing, missing/repla
 revision/domain checks, explicit table/observation retargeting, current metadata and unresolved values.
 Eight deliberate production mutations must fail actual regression assertions and restore exact source.
 The diagnostic prepares the [local producer profile](../build-and-checks.md#direct-python-producers)
-before its first output or native child and rebuilds the restored focused target before returning.
+before any input read, output or native child. It declares all eight numbered logs and restored.log,
+the current test input and its mutable implementation. Physical file aliases and missing inputs refuse
+before activation. Failed-body panic locations must match current assertion macro byte positions;
+passed assertion names or expect messages provide no evidence. Independent controls capture all nine
+children/files; real replay verifies eight macro failures and the restored current sixteen-test artifact.
 The strict native/WASM gates and warning-free book check the integration; the API is not an app or MCP server.

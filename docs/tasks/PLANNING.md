@@ -988,10 +988,10 @@ D168-D171 complete closure receipts/original-report routes retained in [part94](
 
 D172–D176 closures retained in [part98](../history/stitchcad-defects-part98.md).
 
-- **D177** —15 remaining native entries/16 fault predicates accept nonmacro failure evidence:
+- **D177** —15-entry native scope/16 fault predicates accept nonmacro failure evidence:
   actual12 byte-substring entries/13 conditions accept passed assertion_name plus expect-only panic;
   three actual prefix helpers accept labelled-expect panic. AST/eval diagnostics pass0 without writes,
   target/membership-predicate-census.log and membership-prefix-diagnostic.log; original membership
   predicate introduced0b77235. Own G1-SLICE.5b.4c.h2.b.p.o.f.n01–06, P1 in each current repair:
   guarded current test/macro locations, independent noise/body faults and exclusive real native reds;
-  never upgrade prior raw logs without independent replay. Membership first; remaining14 owned next.
+  never upgrade prior raw logs without independent replay. Membership/size chart verified;13 remain.

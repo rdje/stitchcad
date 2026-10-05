@@ -405,10 +405,55 @@ five closure/six lesson/three ledger records fromfc46ad8; final source/public re
   Final staged gate13 green, rc=0, target/membership-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02`
-  Status: `pending`
+  Status: `in_progress`
   Goal: complete file-destination plans for size/chart/table families; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/size_chart/size_chart_mutations.py;docs/tasks/artifacts/measurement_table/table_mutations.py;docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py;docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+Split before implementation: the four complete entries have distinct eight/eight/twelve/fourteen
+fault populations, table derives one source-dependent anchor, and collection has multi-anchor
+mutations. Each child owns its complete guards, D177 current panic sites, independent captures,
+physical refusals, exclusive native replay and exact source/full artifact restoration.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0158 owns size-chart file/mutable/test-site guards, controls and book/live receipts.
+  Paths: docs/tasks/artifacts/size_chart/size_chart_mutations.py
+  Acceptance: preserve eight cases/argv; plan nine logs/two inputs/one mutable source before effects; independent complete capture, alias/missing-input and actual body/classifier faults; eight real current macro reds and exact inputs/current sixteen-test artifact. Own split-ledger verification and whole-record retention before live receipt growth; keep fixed caps and400 cadence.
+
+Full chart entry/wrapper/implementation/current sixteen-test contract, public exports, original cases,
+roadmap §3.1/G1 and current/normative chart book contracts read before edits. Source-dependent table
+and multi-anchor collection populations justify four children; watched terminal ownership replaces
+four ledger rows before implementation. All native activity was exclusive and terminal results
+consumed before any other mutation/probe; public current artifact follows exact source restoration.
+
+- [x] REPRODUCE / ISSUE: actual committed chart fault predicate accepts passed assertion_name with expect-only panic, AST/eval without source/native effects, rc=0, target/chart-predicate-diagnostic.log. Directory-only entry omits nine leaf destinations/mutable intent/current test source; D156/D177 owned here. Split four families before implementation; full original source/public/test/book inspection above.
+- [x] ROOT CAUSE: original docs/tasks/artifacts/size_chart/size_chart_mutations.py places CASES after activation; directory/source guards omit filenames/writing intent, and substring messages do not prove macro provenance. Independent full captures/four physical copied-entry first/last log symlink/mutable hard-link/missing-test refusals pass, rc=0, target/chart-producer-controls-final.log; no alias bytes or unsafe native effects.
+- [x] FIX: guard nine derived logs/two inputs/one mutable implementation/current failed-body macro byte sites before reads/effects; preserve eight original cases/argv/stores. Generic measurement controls use independent authored dispatch fixtures for membership/chart. Shared187 body reds/22 classifiers/31 runtime/24 files/26 mutable/37 prefixes+late/26 child/two compiler/three static captures0, chart-producer-controls.log; five entry/three classifier faults per entry.
+- [x] ADDRESSED: exclusive standalone caller stores absent observes eight real current macro reds, rc=0, chart-native-final.log. Independent byte-position replay verifies all eight selected logs/sites/eight frozen inputs/original cases/two HEAD Rust inputs/nine regular-local-singlelink files/full16 restored, rc=0, native-restoration.log. Public Cargo artifact6235f6e8… executes16 tests0, native-artifact.log; Rust/API/grammar unchanged.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67paths29owners8refusals7reds/file120paths47owners17groups15refusals12reds/split positive/map freshness pass0, chart-*-final logs. Whole467191f ledger interval22557–23940/19L1383B/SHA6e08f574 exact; prior430/all28 files/public431 exact/13open163sealed/no gaps or overlap, rc=0, chart-retention-proof.log. Initial Target-only archive preflight1 refused before writes; corrected tracked-directory/fresh-file validation0.
+- [x] LOCKSTEP: book/spec/live/MEMORY/G1/index route .f.n02.2; D177 membership/chart fixed/13 entries P1 remain. Pressure14working/16684L/1207010decodedB/530095residentB fits unchanged caps, rc=0, chart-retention-proof.log. promotion: declined (existing current-source proof, finite ownership splits, mutable/file declarations and whole-record retention).400 cadence/local verification preserved; runner verdict unobserved. Ledger9/pointer13 terminal0 consumed, chart-ledger-final.log. Final187 body reds/22 classifiers terminal0 consumed, chart-producer-controls-final.log.
+  First staged gate1 refused ROOT CAUSE pass0 without an rc signature; corrected the located cause and actual rc=0 receipt, then rerun.
+
+  Final staged gate13 green, rc=0, target/chart-staged-gate.log.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.2`
+  Status: `pending`
+  Goal: measurement-table complete files/mutable sources/current test-site repair.
+  Paths: docs/tasks/artifacts/measurement_table/table_mutations.py
+  Acceptance: resolve source-dependent anchor after guarded reads, preserve eight faults; complete captures/refusals/body controls and exclusive real proof with exact source/current artifact.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.3`
+  Status: `pending`
+  Goal: MTM-chart complete files/mutable sources/current test-site repair.
+  Paths: docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py
+  Acceptance: preserve twelve faults; complete captures/refusals/body controls and exclusive real proof with exact source/current artifact.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.4`
+  Status: `pending`
+  Goal: size-chart collection complete files/mutable sources/current test-site repair.
+  Paths: docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py
+  Acceptance: preserve fourteen multi-anchor faults; complete captures/refusals/body controls and exclusive real proof with exact source/current artifact.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n03`
   Status: `pending`

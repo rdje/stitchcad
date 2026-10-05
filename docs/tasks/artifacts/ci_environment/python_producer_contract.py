@@ -375,21 +375,39 @@ def capture(text, entry_path=ENTRY, *, work_name=None, refusal=False):
     assert not refusal or not reads, 'D156 Python late-source refusal read an input'
 
 
-def capture_membership_entry(text):
+def measure_fixture(entry_path):
+    """Independent authored dispatch populations; never derive expectations from CASES."""
+    if entry_path == ENTRY:
+        stem = 'size_membership'
+        selected = ('blank_labels_refuse_including_unicode_whitespace',
+                    'exactly_one_base_requires_nonempty_members_and_existing_identity',
+                    'member_ids_and_exact_labels_must_be_unique_and_distinct_from_set',
+                    'member_ids_and_exact_labels_must_be_unique_and_distinct_from_set',
+                    'exactly_one_base_requires_nonempty_members_and_existing_identity',
+                    'revision_successors_retain_identity_and_refuse_overflow_without_wrapping',
+                    'authored_order_and_base_do_not_follow_lexical_or_numeric_sort')
+    else:
+        assert entry_path == ROOT / 'docs/tasks/artifacts/size_chart/size_chart_mutations.py', 'D156 unknown measurement entry'
+        stem = 'size_chart'
+        selected = ('context_refuses_duplicate_tables_and_cross_kind_set_member_identities',
+                    'context_refuses_duplicate_tables_and_cross_kind_set_member_identities',
+                    'both_authored_roles_require_garment_domain',
+                    'observation_identity_cannot_alias_any_supplied_semantic_record',
+                    'exact_set_identity_and_revision_are_required',
+                    'values_members_and_both_roles_are_borrowed_without_recomputing',
+                    'same_content_table_peer_does_not_replace_named_table',
+                    'explicit_table_rebinding_does_not_silently_rebind_an_observation')
+    return (ROOT / ('crates/sc-measure/src/' + stem + '.rs'),
+            ROOT / ('crates/sc-measure/tests/' + stem + '_contract.rs'),
+            ROOT / ('target/' + stem + '_mutations'), selected)
+
+
+def capture_measure_entry(text, entry_path=ENTRY):
     """Complete actual body; intercepted native calls prove dispatch, not outcomes."""
-    source = ROOT / 'crates/sc-measure/src/size_membership.rs'
-    contract = ROOT / 'crates/sc-measure/tests/size_membership_contract.rs'
+    source, contract, work, selected = measure_fixture(entry_path)
     sources = (source, contract)
-    originals = {p: p.read_bytes() for p in (*sources, ENTRY, SOURCE)}
-    work = ROOT / 'target/size_membership_mutations'
-    files = tuple(work / ('mutation-%d.log' % i) for i in range(1, 8)) + (work / 'restored.log',)
-    selected = ('blank_labels_refuse_including_unicode_whitespace',
-                'exactly_one_base_requires_nonempty_members_and_existing_identity',
-                'member_ids_and_exact_labels_must_be_unique_and_distinct_from_set',
-                'member_ids_and_exact_labels_must_be_unique_and_distinct_from_set',
-                'exactly_one_base_requires_nonempty_members_and_existing_identity',
-                'revision_successors_retain_identity_and_refuse_overflow_without_wrapping',
-                'authored_order_and_base_do_not_follow_lexical_or_numeric_sort')
+    originals = {p: p.read_bytes() for p in (*sources, entry_path, SOURCE)}
+    files = tuple(work / ('mutation-%d.log' % i) for i in range(1, len(selected) + 1)) + (work / 'restored.log',)
     GOOD['directory'](ROOT, work.relative_to(ROOT).as_posix(), create=True)
     base = 'target/scratch/python_producer_contract/membership-stores'
     stores = {name: str(ROOT / base / suffix) for name, suffix in
@@ -397,7 +415,7 @@ def capture_membership_entry(text):
                ('CARGO_TARGET_DIR', 'build'), ('TMPDIR', 'scratch'))}
     for value in stores.values():
         GOOD['directory'](ROOT, Path(value).relative_to(ROOT).as_posix(), create=True)
-    scope = {'__file__': str(ENTRY), '__name__': 'membership_capture'}
+    scope = {'__file__': str(entry_path), '__name__': 'membership_capture'}
     saved = dict(os.environ)
     mkdir, read_text, read_bytes, write_text, write_bytes, run, load = (
         Path.mkdir, Path.read_text, Path.read_bytes, Path.write_text, Path.write_bytes,
@@ -405,54 +423,54 @@ def capture_membership_entry(text):
     planned, reads, calls, written, pending, errors = [], [], [], {}, {}, []
 
     def environment(values):
-        assert all(values.get(k) == v for k, v in stores.items()), 'D156 membership child stores lost'
-        assert values.get('MAKE_TMPDIR') == stores['TMPDIR'], 'D156 membership scratch alias lost'
+        assert all(values.get(k) == v for k, v in stores.items()), 'D156 measure child stores lost'
+        assert values.get('MAKE_TMPDIR') == stores['TMPDIR'], 'D156 measure scratch alias lost'
         assert values.get('RUSTUP_TOOLCHAIN') == '1.99.0' and values.get('RUSTUP_AUTO_INSTALL') == '0', \
-            'D156 membership toolchain changed'
-        assert values.get('D156_MEMBERSHIP_UNRELATED') == 'preserved', 'D156 membership unrelated value lost'
+            'D156 measure toolchain changed'
+        assert values.get('D156_MEMBERSHIP_UNRELATED') == 'preserved', 'D156 measure unrelated value lost'
 
     def profile(path, *args, **kwargs):
-        assert path == str(SOURCE) and not args and not kwargs, 'D156 membership profile entry changed'
+        assert path == str(SOURCE) and not args and not kwargs, 'D156 measure profile entry changed'
 
         def enter(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
-            assert root == ROOT and directories == (work,), 'D156 membership directory plan changed'
-            assert output_files == files, 'D156 membership file plan changed'
-            assert sources == (source, contract), 'D156 membership source plan changed'
-            assert mutable_sources == (source,), 'D156 membership mutable plan changed'
-            assert not planned and not reads and not calls and not written, 'D156 membership plan was late'
+            assert root == ROOT and directories == (work,), 'D156 measure directory plan changed'
+            assert output_files == files, 'D156 measure file plan changed'
+            assert sources == (source, contract), 'D156 measure source plan changed'
+            assert mutable_sources == (source,), 'D156 measure mutable plan changed'
+            assert not planned and not reads and not calls and not written, 'D156 measure plan was late'
             planned.append(True)
             return GOOD['enter_producer'](root, directories=directories, output_files=output_files,
                                           sources=sources, mutable_sources=mutable_sources)
         return dict(GOOD, enter_producer=enter)
 
     def read(path, binary, *args, **kwargs):
-        assert planned == [True] and path in sources, 'D156 membership unplanned input read'
+        assert planned == [True] and path in sources, 'D156 measure unplanned input read'
         environment(os.environ)
         reads.append(path)
         return (read_bytes if binary else read_text)(path, *args, **kwargs)
 
     def directory(path, *args, **kwargs):
-        assert path == work and planned == [True], 'D156 membership unplanned directory write'
+        assert path == work and planned == [True], 'D156 measure unplanned directory write'
         environment(os.environ)
 
     def write(path, content, *args, **kwargs):
-        assert planned == [True], 'D156 membership write before plan'
+        assert planned == [True], 'D156 measure write before plan'
         environment(os.environ)
         if path == source:
             if isinstance(content, bytes):
-                assert content == originals[source], 'D156 membership wrong source restoration'
+                assert content == originals[source], 'D156 measure wrong source restoration'
                 pending.clear()
             else:
                 index = len(calls)
-                assert index < 7 and not pending, 'D156 membership source mutation order'
+                assert index < len(selected) and not pending, 'D156 measure source mutation order'
                 _, before, after, _ = scope['CASES'][index]
                 assert content == originals[source].decode().replace(before, after, 1), \
-                    'D156 membership source mutation bytes changed'
+                    'D156 measure source mutation bytes changed'
                 pending[path] = content
         else:
-            assert path in files and path not in written, 'D156 membership unplanned output write'
+            assert path in files and path not in written, 'D156 measure unplanned output write'
             assert content == (b'restored dispatch\n' if path == files[-1] else scope['LAST_OUTPUT']), \
-                'D156 membership diagnostic bytes changed'
+                'D156 measure diagnostic bytes changed'
             written[path] = content
         return len(content)
 
@@ -460,20 +478,20 @@ def capture_membership_entry(text):
         try:
             environment(kwargs.get('env', os.environ))
             assert planned == [True] and not positional and kwargs.get('cwd') == ROOT, \
-                'D156 membership native cwd changed'
-            assert kwargs.get('capture_output') is True, 'D156 membership native capture changed'
+                'D156 measure native cwd changed'
+            assert kwargs.get('capture_output') is True, 'D156 measure native capture changed'
             index = len(calls)
-            assert index < 8, 'D156 membership extra native child'
-            wanted = ['cargo', 'test', '-p', 'sc-measure', '--test', 'size_membership_contract']
-            if index < 7:
+            assert index <= len(selected), 'D156 measure extra native child'
+            wanted = ['cargo', 'test', '-p', 'sc-measure', '--test', contract.stem]
+            if index < len(selected):
                 wanted += [selected[index], '--', '--exact']
-            assert args == wanted, 'D156 membership native argv changed'
-            assert bool(pending) == (index < 7), 'D156 membership native source state changed'
+            assert args == wanted, 'D156 measure native argv changed'
+            assert bool(pending) == (index < len(selected)), 'D156 measure native source state changed'
         except AssertionError as error:
             errors.append(error)
             raise
         calls.append(args)
-        if index < 7:
+        if index < len(selected):
             body = contract.read_text().split('fn ' + selected[index] + '()', 1)[1]
             macro = next(line for line in body.splitlines() if re.match(r'^\s*assert(?:_eq|_ne)?!\s*\(', line))
             # Independent current source line lookup, separate from the production site's helper.
@@ -494,7 +512,7 @@ def capture_membership_entry(text):
         subprocess.run, runpy.run_path = child, profile
         with contextlib.redirect_stdout(io.StringIO()):
             try:
-                exec(compile(text, str(ENTRY), 'exec'), scope)
+                exec(compile(text, str(entry_path), 'exec'), scope)
             except AssertionError:
                 if errors:
                     raise errors[0]
@@ -504,30 +522,31 @@ def capture_membership_entry(text):
         Path.write_text, Path.write_bytes, subprocess.run, runpy.run_path = write_text, write_bytes, run, load
         os.environ.clear()
         os.environ.update(saved)
-        assert all(p.read_bytes() == data for p, data in originals.items()), 'D156 membership capture changed source'
-    assert planned == [True] and len(calls) == 8 and set(written) == set(files) and not pending, \
-        'D156 membership full capture incomplete'
-    assert reads[:2] == [source, contract], 'D156 membership initial input order changed'
+        assert all(p.read_bytes() == data for p, data in originals.items()), 'D156 measure capture changed source'
+    assert planned == [True] and len(calls) == len(selected) + 1 and set(written) == set(files) and not pending, \
+        'D156 measure full capture incomplete'
+    assert reads[:2] == [source, contract], 'D156 measure initial input order changed'
 
 
-def membership_refusals(text):
+def measure_refusals(text, entry_path=ENTRY):
     """Actual copied entry and profile refuse physical aliases before reads/writes/children."""
     work = GOOD['directory'](ROOT, 'target/scratch/membership_entry_refusals', create=True)
-    source = 'crates/sc-measure/src/size_membership.rs'
-    contract = 'crates/sc-measure/tests/size_membership_contract.rs'
+    source, contract, output, _ = measure_fixture(entry_path)
+    source, contract = (p.relative_to(ROOT).as_posix() for p in (source, contract))
+    output_relative = output.relative_to(ROOT)
     saved, count = dict(os.environ), 0
     for case in ('first-file', 'last-file', 'mutable-source', 'late-source'):
         with tempfile.TemporaryDirectory(dir=work) as name:
             root = Path(name)
-            entry = root / ENTRY.relative_to(ROOT)
+            entry = root / entry_path.relative_to(ROOT)
             for relative, data in ((source, (ROOT / source).read_bytes()),
                                    (contract, (ROOT / contract).read_bytes()),
                                    ('scripts/local_environment.py', SOURCE.read_bytes()),
-                                   (ENTRY.relative_to(ROOT).as_posix(), text.encode())):
+                                   (entry_path.relative_to(ROOT).as_posix(), text.encode())):
                 destination = root / relative
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 destination.write_bytes(data)
-            output = root / 'target/size_membership_mutations'
+            output = root / output_relative
             output.mkdir(parents=True)
             victim = root / 'victim'
             victim.write_bytes(b'unchanged isolated alias victim')
@@ -547,7 +566,7 @@ def membership_refusals(text):
                 Path.mkdir, Path.read_text, Path.read_bytes, Path.write_text, Path.write_bytes, subprocess.run)
 
             def no_effect(*args, **kwargs):
-                raise AssertionError('D156 membership physical refusal reached a read/write/child')
+                raise AssertionError('D156 measure physical refusal reached a read/write/child')
 
             diagnostic = io.StringIO()
             try:
@@ -557,9 +576,9 @@ def membership_refusals(text):
                     try:
                         exec(compile(text, str(entry), 'exec'), {'__file__': str(entry), '__name__': 'physical_entry'})
                     except SystemExit as error:
-                        assert error.code == 2, 'D156 membership physical refusal status'
+                        assert error.code == 2, 'D156 measure physical refusal status'
                     else:
-                        raise AssertionError('D156 membership physical invalid entry accepted')
+                        raise AssertionError('D156 measure physical invalid entry accepted')
             finally:
                 after_environment = dict(os.environ)
                 Path.mkdir, Path.read_text, Path.read_bytes = mkdir, read_text, read_bytes
@@ -567,11 +586,11 @@ def membership_refusals(text):
                 os.environ.clear()
                 os.environ.update(saved)
             assert diagnostic.getvalue() == 'local-environment: REFUSED — ' + wanted + '\n', \
-                ('D156 membership physical refusal diagnostic', case, diagnostic.getvalue())
+                ('D156 measure physical refusal diagnostic', case, diagnostic.getvalue())
             assert after_environment == environment and not (root / 'target/cargo-home').exists(), \
-                'D156 membership physical refusal activated stores'
+                'D156 measure physical refusal activated stores'
             assert all(p.read_bytes() == data for p, data in before.items()), \
-                'D156 membership physical refusal changed bytes'
+                'D156 measure physical refusal changed bytes'
             count += 1
     return count
 
@@ -1044,43 +1063,46 @@ def main():
         ('activation', 'os.environ.update(environment)', 'pass'),
     )
     red = 0
-    membership_text = entry.decode()
-    capture_membership_entry(membership_text)
-    membership_physical = membership_refusals(membership_text)
-    classifier_controls(membership_text, ENTRY, strict=True)
-    membership_classifiers = 1
-    for name, before, after, message in (
-        ('files omitted', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 membership file plan changed'),
-        ('last numbered file omitted', 'range(1, len(CASES) + 1)', 'range(1, len(CASES))', 'D156 membership file plan changed'),
-        ('mutable source omitted', 'mutable_sources=(SOURCE,)', 'mutable_sources=()', 'D156 membership mutable plan changed'),
-        ('test source omitted', 'sources=SOURCES', 'sources=SOURCES[:1]', 'D156 membership source plan changed'),
-        ('child stores reset', 'cwd=ROOT,capture_output=True',
-         "cwd=ROOT,capture_output=True,env={'CARGO_HOME':'broken'}", 'D156 membership child stores lost'),
-    ):
-        assert membership_text.count(before) == 1, (name, 'actual membership anchor')
-        try:
-            capture_membership_entry(membership_text.replace(before, after, 1))
-        except AssertionError as error:
-            assert str(error) == message, (name, 'unrelated membership capture refusal', str(error))
-            red += 1
-        else:
-            raise AssertionError((name, 'membership body fault survived'))
-    functions = {n.name: ast.get_source_segment(membership_text, n)
-                 for n in ast.parse(membership_text).body if isinstance(n, ast.FunctionDef)}
-    for name, replacement, message in (
-        ('assertion_failure', "def assertion_failure(output):\n    return b'assertion' in output", 'D159 assertion evidence accepted noise'),
-        ('assertion_failure', "def assertion_failure(output):\n    parts = output.split(b'\\nfailures:\\n', 2)\n    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None", 'D159 assertion evidence accepted noise'),
-        ('assertion_sites', 'def assertion_sites(source, path):\n    return set()', 'D160 assertion sites changed'),
-    ):
-        actual = functions[name]
-        assert membership_text.count(actual) == 1
-        try:
-            classifier_controls(membership_text.replace(actual, replacement, 1), ENTRY, strict=True)
-        except AssertionError as error:
-            assert str(error) == message, (name, 'unrelated membership classifier refusal', str(error))
-            red += 1
-        else:
-            raise AssertionError((name, 'membership classifier fault survived'))
+    measure_paths = (ENTRY, ROOT / "docs/tasks/artifacts/size_chart/size_chart_mutations.py")
+    measure_physical, measure_classifiers = 0, 0
+    for measure_path in measure_paths:
+        measure_text = measure_path.read_text()
+        capture_measure_entry(measure_text, measure_path)
+        measure_physical += measure_refusals(measure_text, measure_path)
+        classifier_controls(measure_text, measure_path, strict=True)
+        measure_classifiers += 1
+        for name, before, after, message in (
+            ('files omitted', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 measure file plan changed'),
+            ('last numbered file omitted', 'range(1, len(CASES) + 1)', 'range(1, len(CASES))', 'D156 measure file plan changed'),
+            ('mutable source omitted', 'mutable_sources=(SOURCE,)', 'mutable_sources=()', 'D156 measure mutable plan changed'),
+            ('test source omitted', 'sources=SOURCES', 'sources=SOURCES[:1]', 'D156 measure source plan changed'),
+            ('child stores reset', 'capture_output=True',
+             "capture_output=True, env={'CARGO_HOME':'broken'}", 'D156 measure child stores lost'),
+        ):
+            assert measure_text.count(before) == (2 if name == 'child stores reset' else 1), (name, 'actual measure anchor')
+            try:
+                capture_measure_entry(measure_text.replace(before, after, 1), measure_path)
+            except AssertionError as error:
+                assert str(error) == message, (name, 'unrelated measurement capture refusal', str(error))
+                red += 1
+            else:
+                raise AssertionError((name, 'measurement body fault survived'))
+        functions = {n.name: ast.get_source_segment(measure_text, n)
+                     for n in ast.parse(measure_text).body if isinstance(n, ast.FunctionDef)}
+        for name, replacement, message in (
+            ('assertion_failure', "def assertion_failure(output):\n    return b'assertion' in output", 'D159 assertion evidence accepted noise'),
+            ('assertion_failure', "def assertion_failure(output):\n    parts = output.split(b'\\nfailures:\\n', 2)\n    return len(parts) == 3 and re.search(rb'(?m)^assertion(?:[ :`]|$)', parts[1]) is not None", 'D159 assertion evidence accepted noise'),
+            ('assertion_sites', 'def assertion_sites(source, path):\n    return set()', 'D160 assertion sites changed'),
+        ):
+            actual = functions[name]
+            assert measure_text.count(actual) == 1
+            try:
+                classifier_controls(measure_text.replace(actual, replacement, 1), measure_path, strict=True)
+            except AssertionError as error:
+                assert str(error) == message, (name, 'unrelated measurement classifier refusal', str(error))
+                red += 1
+            else:
+                raise AssertionError((name, 'measurement classifier fault survived'))
     profile_functions = {node.name: ast.get_source_segment(original.decode(), node)
                          for node in ast.parse(original).body if isinstance(node, ast.FunctionDef)}
     mutable_faults = [
@@ -1176,7 +1198,7 @@ def main():
     for path, work_name in adopters:
         text = path.read_text()
         multiple_sources = {
-            'size_membership_mutations.py',
+            'size_membership_mutations.py', 'size_chart_mutations.py',
             'domain_context_mutations.py', 'formula_lex_mutations.py', 'recipe_mutations.py',
             'normalized_recipe_mutations.py', 'canonical_expression_mutations.py',
             'checked_expression_mutations.py', 'checked_statement_mutations.py',
@@ -1328,7 +1350,7 @@ def main():
             red += 1
         else:
             raise AssertionError('D156 Python actual child-store reset survived')
-    classifier_count = driver_count + membership_classifiers
+    classifier_count = driver_count + measure_classifiers
     for filename, work_name, rust, target, test in (
             ('recipe_input_review_mutations.py', 'recipe_input_review_mutations',
              ('statement.rs', 'ordered.rs', 'canonical_recipe.rs', 'normalized_recipe.rs'),
@@ -1544,8 +1566,8 @@ def main():
           str(compiler_count) + ' complete compiler/example captures / ' +
           str(static_count) + ' complete static-entry captures / ' +
           str(classifier_count) + ' calibrated failed-body classifiers / source unchanged')
-    print('membership entry: complete eight-child/eight-file capture / ' + str(membership_physical) +
-          ' actual copied-entry physical refusals / five entry and three classifier body reds; '
+    print('measurement entries: ' + str(len(measure_paths)) + ' complete child/file captures / ' + str(measure_physical) +
+          ' actual copied-entry physical refusals / five entry and three classifier body reds per entry; '
           'dispatch simulation separate from real native proof')
 
 

@@ -147,8 +147,14 @@ source before any input read, write, activation or child. Native proof remains s
 real faults match current macro sites, source bytes restore exactly, and the public current Cargo
 artifact executes all12 tests successfully.
 
-D177 records the same panic-evidence weakness in fourteen remaining entries. Their existing
-.f.n02–06 repairs own guarded current test locations and independent controls before native signoff.
+Size-chart observations now use the same complete plan: eight numbered logs/restored.log, the
+mutable implementation and read-only current test input. Complete captures check all nine
+children/files; four copied-entry alias/missing-input refusals and eight actual body faults pass.
+Separate native replay verifies all eight current macro failures, exact inputs and the public
+restored artifact's sixteen tests. The table, MTM and collection entries remain separate repairs.
+
+D177's fifteen-entry scope now has membership and size chart verified; thirteen entries remain.
+Their .f.n02.2–4/.n03–06 repairs own current test locations and independent controls before signoff.
 
 The shared Python API separates inspection from activation. `plan_producer` validates stores,
 declared source files, output directories and explicit `output_files` without creating paths or
@@ -291,7 +297,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and179 actual body faults,
+controls and187 actual body faults, with22 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
