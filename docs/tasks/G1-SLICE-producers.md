@@ -84,9 +84,43 @@ All other producer destinations remain unverified; prioritize their explicit fin
 continuing copied-book repairs. This is additional concrete scope within open D156, never locality closure.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.i`
+  Status: `done`
+  Goal: STITCHCAD-G1-0153 owns P1 finite all-Python file-destination inspection/repair ownership, including native entries with verified source/directory guards, before .a01.2.
+  Acceptance: current full source/hash/all-call census and native write/child call-site review; watched exact path/kind/owner coverage, native canonical group membership and bounded groups, existing effect-owner agreement; dynamic filename/public-call/borrowed-root resolution owned before each repair, runtime file signoff stays pending; no unsafe writes or native jobs.
+
+The full maintained-source/all-call census is the inspection boundary; a direct-call name or ledger
+kind cannot establish all destination effects. Resolve every expression, dynamic label population,
+delegated public call and borrowed fixture/root contract in its owning repair before claiming locality.
+Keep source writes covered by their declared regular-file source guards, and inspect all generated
+files, compiler -o paths, baseline/fault/restoration logs, fixture/materialization trees and indirect
+helpers. Guard the complete producing call's plan before activation or the first write/child, and
+recheck late hazards. Unique fixture generation and directory declarations alone confer no file proof.
+
+.f.i owns the tracked all-Python file ownership ledger and its independent actual-function
+refusal/body controls. Native group membership below is canonical; output/delegation owners remain
+the existing effect ledger, profile/reference entries route to .p.v. Pure/reference interfaces stay
+pure. No closure can be inferred from these inspection assignments; runtime proofs remain owned.
+The first repair is .f.n01, then .f.n02–.f.n14, then .a01.2 and existing .a/.p.v groups.
+This slice adds no producer effect, Rust change or native mutation. Existing fixed live-document
+caps still apply; the receipt must fit or retain whole committed records before growth.
+
+Self-review fixture: uncommitted native parser collapses two identical native task IDs into one
+dictionary entry; actual isolated call reproduces acceptance, rc=0, file-plan-duplicate-before.log.
+This hides a malformed canonical group identity. .f.i owns refusing duplicates before dictionary
+construction and actual omission/refusal controls before signoff; no maintained group is duplicated.
+
+- [x] REPRODUCE / ISSUE: current full producer_census.py --json retains229 sources/all calls; file map covers120 Python entries, including37 native entries whose source/directory proof does not certify filenames, rc=0, file-plan-current-census.json. Native direct write/child call sites reviewed; all expressions/labels/delegated outputs require owner resolution before runtime signoff. No native producer is invoked.
+- [x] ROOT CAUSE: directory-only guards omit leaf destinations; the earlier physical calibration remains in .a01.1. Finite maintained-path/kind/owner coverage must precede complete per-entry destination resolution. Current120 Python paths/44 owners/native37 in14 bounded groups derived, rc=0, file-plan-create.log and file-plan-census-final.log. Initial guessed table path failed before writes; use actual ledger basename identities instead.
+- [x] FIX: python_file_entries.tsv preserves67 effect-owner assignments, canonical native Paths membership and .p.v profile/reference ownership; missing/duplicate/schema/kind/owner drift refuses, rc=0, file-plan-census-final.log. Native groups bound1–4 and terminal splits retain parents. Every repair owns full source/public/borrowed-root/dynamic-label/child filename resolution before effects; all runtime file proof stays pending, D156 open.
+- [x] ADDRESSED:15 actual data refusals/12 actual guard-body reds/native split positive pass, rc=0, file-plan-census-final.log. Self-review duplicate-ID acceptance reproduced0 in file-plan-duplicate-before.log; fixed unique-identity guard now refuses the real malformed fixture and its actual omission earns an assertion red. No maintained duplicate exists. Exact path/kind/native/effect/profile owners, group bound and terminal filters are falsified independently.
+- [x] NO REGRESSION: existing census9 assertions/9 refusals/4 body reds and67-path29-owner8-refusal7-red plan remain green, rc=0, file-plan-census-final.log; current229 sources/288 boundaries and all37 native producer HEAD bytes/Rust unchanged, rc=0, file-plan-native-exact.log. Publication45/coverage9/ledger9+pointer13 pass, rc=0, file-plan-publication/coverage/ledger-final logs; no native/Rust/grammar change or mutation job.
+- [x] LOCKSTEP: book/live/MEMORY/G1/index reflect pending resolution and .f.h blocking retention before .f.n01; map fresh, rc=0, file-plan-map-final.log. DEV16305B/CH32663B fit unchanged health targets but leave79B/105B; archive63/64 forces a new window before whole-record retention. promotion: declined (existing finite ownership, scoped proof and bounded continuity rules);400 push cadence retained, remote verdict unobserved.
+  Final staged gate13 green, rc=0, target/file-plan-staged-gate.log.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h`
   Status: `pending`
-  Goal: P1 immediately after .a01.1: census every remaining Python producer's file destinations, including native entries with verified source/directory guards, and assign bounded complete-output guard repairs before .a01.2.
-  Acceptance: actual source/call/public-entry plans and dynamic label populations; source/directory guard evidence distinguished from file-destination evidence; every destination owned, early alias/type/device/parent guards planned before effects, no unsafe writes or native jobs.
+  Goal: blocking continuity before .f.n01: pack a new immutable history window and retain whole committed older lessons/ledgers before receipt growth; current DEV16305B/CH32663B leave79B/105B under health targets, archive63 working Markdown files leaves one slot under64.
+  Acceptance: own complete public archive/source/capture contracts before writes; exact current committed source intervals, every prior logical/control byte and actual public read/materialization verified under unchanged resident/decoded/file-count/line ceilings; regenerate map/book/live pointers and commit before native file repair.
 
 ### .a01.1 verification and continuation
 
@@ -235,3 +269,95 @@ tighten the live cell; keep caps unchanged and exclude bridge-staged-gate-attemp
   Status: `pending`
   Goal: Historical archive capture6; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+
+## Ordered native file-destination repairs
+
+These P1 leaves extend the verified source/directory guards with complete file plans.
+Before edits read the entire current producer/public interfaces/tests/book, resolve all filename
+populations, capture every effect without native faults, and calibrate real alias/type/device/parent
+refusals and actual omission/reset body reds. Run native verification exclusively only when warranted;
+consume terminal results and prove exact source/full restored artifact before another job or commit.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n01`
+  Status: `pending`
+  Goal: complete file-destination plans for size membership; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/size_membership/size_membership_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02`
+  Status: `pending`
+  Goal: complete file-destination plans for size/chart/table families; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/size_chart/size_chart_mutations.py;docs/tasks/artifacts/measurement_table/table_mutations.py;docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py;docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n03`
+  Status: `pending`
+  Goal: complete file-destination plans for Ease families; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/ease/ease_mutations.py;docs/tasks/artifacts/ease/ease_set_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04`
+  Status: `pending`
+  Goal: complete file-destination plans for rounding/length/domain; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/round_mutations.py;docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py;docs/tasks/artifacts/formula_structure/length_operator_mutations.py;docs/tasks/artifacts/formula_structure/domain_context_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n05`
+  Status: `pending`
+  Goal: complete file-destination plans for lexer/semantic; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_lex/formula_lex_mutations.py;docs/tasks/artifacts/formula_structure/semantic_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n06`
+  Status: `pending`
+  Goal: complete file-destination plans for recipe/statement; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/recipe_mutations.py;docs/tasks/artifacts/formula_structure/statement_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n07`
+  Status: `pending`
+  Goal: complete file-destination plans for literal/normalized/canonical recipes; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py;docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py;docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py;docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08`
+  Status: `pending`
+  Goal: complete file-destination plans for expression/statement/whole checks; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_statement_mutations.py;docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09`
+  Status: `pending`
+  Goal: complete file-destination plans for namespace/ordered names; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/namespace_mutations.py;docs/tasks/artifacts/formula_structure/ordered_name_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n10`
+  Status: `pending`
+  Goal: complete file-destination plans for declaration/exact name; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/declaration_mutations.py;docs/tasks/artifacts/formula_structure/name_read_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11`
+  Status: `pending`
+  Goal: complete file-destination plans for signature/call metadata; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py;docs/tasks/artifacts/formula_structure/operator_signature_mutations.py;docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py;docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12`
+  Status: `pending`
+  Goal: complete file-destination plans for expression/reduction/input; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/formula_expression_mutations.py;docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py;docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13`
+  Status: `pending`
+  Goal: complete file-destination plans for owner compilers; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/recipe_owner_contract.py;docs/tasks/artifacts/formula_structure/statement_owner_contract.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n14`
+  Status: `pending`
+  Goal: complete file-destination plans for coupled static; retain existing source guards, prepared stores and public consumer behavior.
+  Paths: docs/tasks/artifacts/formula_structure/static_coupled_contract.py
+  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.

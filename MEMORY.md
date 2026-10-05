@@ -4,19 +4,20 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Resume .p.o.a01.1/0152: bridge22 sources/nine file outputs; nonmutating shared plan;
-  actual capture/refusal/body controls0; real26723 shared/263 phase/ten reference reds0,
-  source/current artifact exact. Shared31 runtime/24 file/165 body controls0.
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.i: P1 finite file-destination audit/repair ownership,
-  including native37 source/directory guards; undeclared filenames remain unverified.
-  Then .a01.2 copied-book recipe and remaining groups in docs/tasks/G1-SLICE-producers.md.
-  Preserve pure calls/borrowed roots/prepared stores; real native proof remains separate.
+- Resume .p.o.f.i/0153:120 Python paths/44 owners/native37 in14 bounded groups;
+ 15 data refusals/12 actual guard-body reds/split positive0; full source/call census current.
+  Exact filename/public-call resolution and runtime file signoff remain pending in each owner.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.h: blocking whole-record retention/window7 under fixed caps;
+  DEV/CH leave79B/105B health room, archive63/64 physical Markdown files. Then .f.n01 size
+  membership complete file plan; read full source/public consumer/book/controls before changes.
+  Native37 source/directory guards verified/files pending; then .f.n02–14/.a01.2/.a/.p.v
+  in docs/tasks/G1-SLICE-producers.md. Preserve pure/borrowed calls and prepared stores.
 - Then .p.v, .b.s shell/platform/raw book commands, .b.v integration;
   then D154 .4c.r genuine known ordinals before .5b/arithmetic.
 - Grammar unchanged; D131 settled. D70/G0 closure pending; UI G5/V1/V2 remains planned.
 - Derive Git/push state; director400 cadence has no automatic exceptions. Earlier push only
   explicitly requested; local verification stays separate from unobserved runner verdicts.
-- Retain three whole2358d4e lessons; prior423/six windows+master exact; public424 reads0.
+- Archive:0152 retained three whole2358d4e lessons; prior423/six windows+master/public424 exact.
   D156 stays open; directory-only plans accept leaf aliases. Guard explicit output_files first.
   Twelve open/163sealed; G1 5/18/13siblings. Cleanup next due2026-10-05 22:25UTC.
   Daily audit: target/artifact_cleanup_audit/2026-10-04-2219/; pure residue must not activate scratch.

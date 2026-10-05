@@ -110,6 +110,12 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0153 - own producer files (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.i`)
+
+- Watch120 Python paths/44 owners; native37 in14 bounded groups;67 effect owners preserved.
+- Actual15 data refusals/12 guard-body reds/split positive0; full source/call inventory current.
+- Book/live/index sync; filename resolution/runtime proof pending; first .f.n01;400 cadence stays.
+
 ## STITCHCAD-G1-0152 - complete native bridge plan (leaf `G1-SLICE.5b.4c.h2.b.p.o.a01.1`)
 
 - Add nonmutating shared source/directory/file plans; guard bridge22 inputs/nine destinations.

@@ -22,6 +22,8 @@ D161 statement and whole proof lesson retained in [part180](docs/history/stitchc
 - Real26723 shared/263 phase cases/ten reference reds0;23 input hashes/five Rust HEAD bytes/nine outputs/current public artifact exact. Shared31 runtime/24 file/165 body controls0. Retain three whole2358d4e lessons; prior423/public424 exact.
   Promotion declined: existing guard-before-effects, public-boundary and whole-retention rules.
 
+- File inspection follow-up (.f.i/0153):120 Python paths/44 owners/native37 in14 bounded groups;15 refusals/12 body reds0. Filename/public-call resolution and runtime proofs stay pending; first .f.n01.
+
 ## _(2026-10-05 UTC)_ — bounded producer effect ownership
 
 - Divide67 Python output/delegation candidates into28 watched terminal owners; complete-source/public-entry/borrowed-root inspection precedes repairs. This is ownership coverage, not runtime locality proof.

@@ -6,6 +6,7 @@ import copy
 import csv
 import io
 import os
+import re
 import runpy
 import subprocess
 import tempfile
@@ -154,6 +155,7 @@ def main():
     assert SOURCE.read_bytes() == original, 'D156 census source changed'
     coverage()
     effect_plan_controls()
+    file_plan_controls()
     print('producer-census controls: ' + str(passed + extra) + ' assertions, ' +
           str(refused + boundaries) + ' actual refusals, ' + str(red) + ' compiled-body reds; source unchanged')
 
@@ -316,6 +318,186 @@ def effect_plan_controls():
     print('effect plan coverage:', result[0], 'current Python paths /', result[1],
           'owned groups /', failures, 'actual data/owner refusals /', reds,
           'actual guard-omission reds; split owner positive; inspection only, runtime pending')
+
+
+def native_file_owners(tasks, entries):
+    """Canonical native groups retain exact current membership, including split leaves."""
+    matches = re.findall(
+        r'^- ID: `(G1-SLICE\.5b\.4c\.h2\.b\.p\.o\.f\.n\d+(?:\.\d+)*)`\n(.*?)(?=^- ID: |\Z)',
+        tasks, re.M | re.S)
+    assert len(matches) == len({owner for owner, _ in matches}), 'D156 duplicate native file owner'
+    groups = dict(matches)
+    groups = {owner: body for owner, body in groups.items()
+              if not any(other.startswith(owner + '.') for other in groups)}
+    fields = {owner: re.findall(r'^  Paths: (.+)$', body, re.M) for owner, body in groups.items()}
+    assert fields and all(len(value) == 1 for value in fields.values()), 'D156 native file group shape'
+    paths = [(path, owner) for owner, value in fields.items() for path in value[0].split(';')]
+    assert all(1 <= len(value[0].split(';')) <= 4 for value in fields.values()), 'D156 native file group bound'
+    assert len(paths) == len({path for path, _ in paths}), 'D156 duplicate native file path'
+    assert {path for path, _ in paths} == {path for path, row in entries.items()
+                                          if path.endswith('.py') and row['kind'] == 'native'}, \
+        'D156 native file path coverage'
+    return dict(paths)
+
+
+def validate_file_plan(entries, text, tasks, effects):
+    """Every maintained Python path is owned; destination resolution remains inspection work."""
+    reader = csv.DictReader(io.StringIO(text), delimiter='\t')
+    assert reader.fieldnames == ['path', 'kind', 'leaf'], 'D156 file plan schema'
+    rows = list(reader)
+    assert all(set(row) == {'path', 'kind', 'leaf'} and
+               all(isinstance(value, str) and value for value in row.values()) for row in rows), \
+        'D156 file row shape'
+    expected = {path: row['kind'] for path, row in entries.items() if path.endswith('.py')}
+    assert len(rows) == len({row['path'] for row in rows}), 'D156 duplicate file path'
+    assert {row['path'] for row in rows} == set(expected), 'D156 file path coverage'
+    assert all(row['kind'] == expected[row['path']] for row in rows), 'D156 file kind changed'
+    native = native_file_owners(tasks, entries)
+    assert all(row['leaf'] == native[row['path']] for row in rows if row['kind'] == 'native'), \
+        'D156 native file owner changed'
+    assert all(row['leaf'] == effects.get(row['path']) for row in rows
+               if row['kind'] in {'output', 'delegate'}), 'D156 effect file owner changed'
+    assert all(row['leaf'] == 'G1-SLICE.5b.4c.h2.b.p.v' for row in rows
+               if row['kind'] in {'profile', 'reference'}), 'D156 remaining file owner changed'
+    owners = set(re.findall(r'^- ID: `(G1-SLICE(?:\.[^`]+)?)`$', tasks, re.M))
+    assert all(row['leaf'] in owners for row in rows), 'D156 file owner missing'
+    return len(rows), len({row['leaf'] for row in rows}), len(set(native.values()))
+
+
+def file_plan_cases(validate):
+    """Authored orthogonal fixtures do not depend on current group sizes or ordering."""
+    native = 'G1-SLICE.5b.4c.h2.b.p.o.f.n01'
+    effect = 'G1-SLICE.5b.4c.h2.b.p.o.a02'
+    other = 'G1-SLICE.5b.4c.h2.b.p.o.a03'
+    remaining = 'G1-SLICE.5b.4c.h2.b.p.v'
+    entries = {'fixture/native.py': {'kind': 'native'}, 'fixture/a.py': {'kind': 'output'},
+               'fixture/b.py': {'kind': 'delegate'}, 'fixture/c.py': {'kind': 'profile'},
+               'fixture/d.py': {'kind': 'reference'}, 'fixture/ignored.sh': {'kind': 'output'}}
+    effects = {'fixture/a.py': effect, 'fixture/b.py': other}
+    text = ('path\tkind\tleaf\nfixture/native.py\tnative\t' + native +
+            '\nfixture/a.py\toutput\t' + effect + '\nfixture/b.py\tdelegate\t' + other +
+            '\nfixture/c.py\tprofile\t' + remaining + '\nfixture/d.py\treference\t' + remaining + '\n')
+    tasks = ('- ID: `' + native + '`\n  Paths: fixture/native.py\n- ID: `' + effect +
+             '`\n- ID: `' + other + '`\n- ID: `' + remaining + '`\n')
+    assert validate(entries, text, tasks, effects) == (5, 4, 1), 'D156 file fixture population'
+    child = native + '.1'
+    split = tasks + '- ID: `' + child + '`\n  Paths: fixture/native.py\n'
+    assert validate(entries, text.replace(native + '\n', child + '\n'), split, effects) == (5, 4, 1), \
+        'D156 native file split owner'
+    lines = text.splitlines(keepends=True)
+    swapped = ''.join('\t'.join((parts[1], parts[0], parts[2]))
+                      for parts in (line.split('\t') for line in lines))
+    cases = (
+        (swapped, tasks, 'D156 file plan schema'),
+        (''.join(lines[:-1]) + lines[-1].rstrip('\n') + '\textra\n', tasks, 'D156 file row shape'),
+        (text.replace('\tprofile\t', '\t\t', 1), tasks, 'D156 file row shape'),
+        (text + lines[-1], tasks, 'D156 duplicate file path'),
+        (''.join(lines[:-1]), tasks, 'D156 file path coverage'),
+        (text.replace('\tprofile\t', '\treference\t', 1), tasks, 'D156 file kind changed'),
+        (text.replace('native\t' + native, 'native\t' + effect, 1), tasks, 'D156 native file owner changed'),
+        (text.replace('output\t' + effect, 'output\t' + other, 1), tasks, 'D156 effect file owner changed'),
+        (text.replace('profile\t' + remaining, 'profile\t' + effect, 1), tasks, 'D156 remaining file owner changed'),
+        (text, tasks.replace('- ID: `' + remaining + '`', '- ID: `REMOVED`'), 'D156 file owner missing'),
+    )
+    for changed, task_text, message in cases:
+        try:
+            validate(entries, changed, task_text, effects)
+        except AssertionError as error:
+            assert str(error) == message, ('D156 unrelated file-plan refusal', str(error))
+        else:
+            raise AssertionError(('D156 missed file-plan refusal', message))
+    return len(cases)
+
+
+def native_file_cases(parse):
+    first, second = ('G1-SLICE.5b.4c.h2.b.p.o.f.n01', 'G1-SLICE.5b.4c.h2.b.p.o.f.n02')
+    paths = ['fixture/n%d.py' % i for i in range(5)]
+    entries = {path: {'kind': 'native'} for path in paths}
+    head = '- ID: `' + first + '`\n  Paths: ' + ';'.join(paths[:4]) + '\n'
+    tail = '- ID: `' + second + '`\n  Paths: ' + paths[4] + '\n'
+    assert parse(head + tail, entries) == {path: first if i < 4 else second
+                                          for i, path in enumerate(paths)}, 'D156 native membership fixture'
+    cases = (
+        (head + head + tail, 'D156 duplicate native file owner'),
+        (head + tail.replace('  Paths:', '  Lost:'), 'D156 native file group shape'),
+        (head + tail.replace(paths[4], paths[0]), 'D156 duplicate native file path'),
+        (head, 'D156 native file path coverage'),
+        ('- ID: `' + first + '`\n  Paths: ' + ';'.join(paths) + '\n', 'D156 native file group bound'),
+    )
+    for tasks, message in cases:
+        try:
+            parse(tasks, entries)
+        except AssertionError as error:
+            assert str(error) == message, ('D156 unrelated native-group refusal', str(error))
+        else:
+            raise AssertionError(('D156 missed native-group refusal', message))
+    return len(cases)
+
+
+def file_plan_controls():
+    entries = GOOD['entries'](HERE / 'producer_entries.tsv')
+    tasks = '\n'.join(path.read_text() for path in sorted((ROOT / 'docs/tasks').glob('G1-SLICE*.md')))
+    effects = {row['path']: row['leaf'] for row in csv.DictReader(
+        io.StringIO((HERE / 'python_effect_entries.tsv').read_text()), delimiter='\t')}
+    result = validate_file_plan(entries, (HERE / 'python_file_entries.tsv').read_text(), tasks, effects)
+    failures = file_plan_cases(validate_file_plan) + native_file_cases(native_file_owners)
+    original = Path(__file__).read_bytes()
+    function = next(node for node in ast.parse(original).body
+                    if isinstance(node, ast.FunctionDef) and node.name == 'validate_file_plan')
+    reds = 0
+    for guard in [node for node in ast.walk(function) if isinstance(node, ast.Assert)]:
+        diagnostic = guard.msg.value
+        module = ast.Module(body=[copy.deepcopy(function)], type_ignores=[])
+        match = next(node for node in ast.walk(module) if isinstance(node, ast.Assert) and
+                     node.msg.value == diagnostic)
+        match.test = ast.copy_location(ast.Constant(value=True), match.test)
+        scope = {'csv': csv, 'io': io, 're': re, 'native_file_owners': native_file_owners}
+        exec(compile(ast.fix_missing_locations(module), __file__, 'exec'), scope)
+        try:
+            file_plan_cases(scope['validate_file_plan'])
+        except AssertionError as error:
+            assert error.args == (('D156 missed file-plan refusal', diagnostic),), \
+                ('D156 unrelated file guard fault', diagnostic, error.args)
+            reds += 1
+        else:
+            raise AssertionError(('D156 file guard omission survived', diagnostic))
+    parser = next(node for node in ast.parse(original).body
+                  if isinstance(node, ast.FunctionDef) and node.name == 'native_file_owners')
+    for diagnostic in ('D156 native file group bound', 'D156 duplicate native file owner'):
+        module = ast.Module(body=[copy.deepcopy(parser)], type_ignores=[])
+        guard = next(node for node in ast.walk(module) if isinstance(node, ast.Assert) and
+                     node.msg.value == diagnostic)
+        guard.test = ast.copy_location(ast.Constant(value=True), guard.test)
+        scope = {'re': re}
+        exec(compile(ast.fix_missing_locations(module), __file__, 'exec'), scope)
+        try:
+            native_file_cases(scope['native_file_owners'])
+        except AssertionError as error:
+            assert error.args == (('D156 missed native-group refusal', diagnostic),), \
+                ('D156 unrelated native-group fault', diagnostic, error.args)
+            reds += 1
+        else:
+            raise AssertionError(('D156 native group guard omission survived', diagnostic))
+    module = ast.Module(body=[copy.deepcopy(parser), copy.deepcopy(function)], type_ignores=[])
+    filters = [node for node in ast.walk(module) if isinstance(node, ast.Assign) and
+               any(isinstance(target, ast.Name) and target.id == 'groups' for target in node.targets) and
+               isinstance(node.value, ast.DictComp)]
+    assert len(filters) == 1, 'D156 actual native terminal-owner anchor'
+    filters[0].value = ast.copy_location(ast.Name(id='groups', ctx=ast.Load()), filters[0].value)
+    scope = {'csv': csv, 'io': io, 're': re}
+    exec(compile(ast.fix_missing_locations(module), __file__, 'exec'), scope)
+    try:
+        file_plan_cases(scope['validate_file_plan'])
+    except AssertionError as error:
+        assert error.args == ('D156 duplicate native file path',), \
+            ('D156 unrelated native split-owner fault', error.args)
+        reds += 1
+    else:
+        raise AssertionError('D156 native terminal-owner omission survived')
+    assert Path(__file__).read_bytes() == original, 'D156 file plan source changed'
+    print('file plan coverage:', result[0], 'current Python paths /', result[1],
+          'owners /', result[2], 'bounded native groups /', failures, 'actual data refusals /', reds,
+          'actual guard-body reds; native split positive; destination resolution/runtime pending')
 
 
 if __name__ == '__main__':

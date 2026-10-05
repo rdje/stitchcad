@@ -275,6 +275,15 @@ Actual guard-omission faults and a split-owner positive check watch this plannin
 Each group reviews complete sources, transitive public entries and borrowed fixture/root contracts
 before repairs. Pure library calls stay pure; historical captures retain fixed source revisions and
 fresh-fixture contracts. This plan establishes ownership; runtime locality remains pending.
+The additional `python_file_entries.tsv` covers every maintained Python path, including native,
+profile and reference entries. Native file repairs have bounded canonical groups in the producer
+task tree; the watcher rejects duplicate group identities, oversized groups, membership/owner drift,
+and disagreement with the existing output/delegation owners. Split groups retain the parent record
+and move membership to terminal children. Independent data refusals and actual guard-body faults
+watch these rules. The first native repair is size membership, followed by the other native groups
+and the existing fixture/delegation audits. Each repair must resolve its actual filenames, dynamic
+label population and delegated public-call outputs before guarding the complete producing entry.
+Assigning a source to an owner does not establish destination resolution or runtime signoff.
 The original pre-repair capture is retained in the census record; current
 captures check the repaired entry. This scoped repair does not close D156.
 
