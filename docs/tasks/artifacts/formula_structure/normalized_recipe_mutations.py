@@ -12,11 +12,11 @@ NORMALIZED = ROOT / 'crates/sc-core/src/recipe/normalized_recipe.rs'
 WORK = ROOT / 'target/normalized_recipe_mutations'
 CONTRACT = ROOT / 'crates/sc-core/tests/formula_normalized_recipe_contract.rs'
 MUTATED = (STATEMENT, ORDERED, NORMALIZED)
-SOURCES = (*MUTATED, CONTRACT)
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=SOURCES)
-originals = {p: p.read_bytes() for p in MUTATED}
-WORK.mkdir(parents=True, exist_ok=True)
+FIXTURE_SOURCES = tuple(ROOT / ('docs/tasks/artifacts/formula_structure/' + name) for name in (
+    'canonical_statement_cases.tsv', 'canonical_recipe_cases.tsv', 'literal_normalization_cases.tsv'))
+SOURCES = (*MUTATED, CONTRACT, *FIXTURE_SOURCES)
+assert sys.argv[1:] in [[], ['--classifier-only']]
+CLASSIFIER_ONLY = sys.argv[1:] == ['--classifier-only']
 cases = [
  ('name retained', STATEMENT, 'name: self.name,', 'name: "scrubbed",'),
  ('name span retained', STATEMENT, 'name_span: self.name_span,', 'name_span: self.annotation_span,'),
@@ -41,32 +41,52 @@ cases = [
  ('literal cause', NORMALIZED, 'Some(&self.error)', 'None'),
  ('statement cause', NORMALIZED, 'Some(self.error.as_ref())', 'None'),
 ]
+OUTPUT_FILES = (() if CLASSIFIER_ONLY else
+                tuple(WORK / ('fault-%d.log' % index) for index in range(1, len(cases) + 1)) +
+                (WORK / 'restored.log',))
+MUTABLE_SOURCES = () if CLASSIFIER_ONLY else MUTATED
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=MUTABLE_SOURCES)
+originals = {p: p.read_bytes() for p in MUTATED}
+WORK.mkdir(parents=True, exist_ok=True)
 for name, path, before, _ in cases:
     assert originals[path].decode().count(before) == 1, (name, 'actual anchor not unique')
 def assertion_sites(source, path):
+    """Current curated test macros, with Rust panic byte columns."""
     sites = set()
-    for line_number, line in enumerate(source.splitlines(), 1):
+    for number, line in enumerate(source.splitlines(), 1):
         match = re.match(r'^(\s*)assert(?:_eq|_ne)?!\s*\(', line)
         if match is not None:
-            sites.add((path, line_number, len(match.group(1).encode()) + 1))
+            sites.add((path, number, len(match.group(1).encode()) + 1))
     return sites
 
 
 def assertion_failure(output):
+    """A failed-body panic must name a guarded current assertion macro location."""
     parts = output.split(b'\nfailures:\n', 2)
     if len(parts) != 3:
         return False
-    locations = re.finditer(rb'panicked at ([^:\n]+):([0-9]+):([0-9]+):\n', parts[1])
-    return any((match.group(1).decode('utf-8', 'replace'), int(match.group(2)), int(match.group(3)))
-               in ASSERTION_SITES for match in locations)
+    for match in re.finditer(
+            rb'(?m)^thread\b[^\r\n]*? panicked at ([^:\r\n]+):([0-9]+):([0-9]+):\r?$', parts[1]):
+        try:
+            path = match.group(1).decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if (path, int(match.group(2)), int(match.group(3))) in ASSERTION_SITES:
+            return True
+    return False
 
 
 ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
 assert ASSERTION_SITES, 'focused contract has no assertion sites'
+site = min(ASSERTION_SITES)
+location = ("\nfailures:\nthread 'fixture' panicked at %s:%d:%d:\n" % site).encode()
+assert assertion_failure(location + b'custom macro message\n\nfailures:\nfixture\n')
+assert not assertion_failure(location.replace(b"thread 'fixture'", b'compiler note:') +
+                             b'nonthread location mention\n\nfailures:\nfixture\n')
 assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
 assert not assertion_failure(b'assertion: compiler output\n')
-assert sys.argv[1:] in [[], ['--classifier-only']]
-if sys.argv[1:] == ['--classifier-only']:
+if CLASSIFIER_ONLY:
     print('normalized recipe fault controls:17 unique actual anchors; current test assertion sites; passing/expect/compiler noise refused')
     sys.exit(0)
 environment = dict(os.environ)

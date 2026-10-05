@@ -227,11 +227,25 @@ Six compile-fail docs check private fields/source/view lifetimes, and two runnab
 
 Seventeen actual production faults compile and fail public assertions: name/header metadata,
 declared kind/tolerance, operand coverage/error role, order/count/ordinal, spans, privacy and both
-error causes. The direct entry validates all three implementation sources, its test source and output before reads/writes and preserves
-prepared child stores. The exclusive runner restores every source exactly and rebuilds the full
-focused eight-test normalized-recipe target. Failed-body panic locations must match current guarded
-test assertion sites; custom messages pass and labelled expects/passing-name/compiler noise refuse.
-All17 native faults meet that rule; standing controls exercise actual classifier/site faults.
+error causes. The direct entry plans seven inputs before effects: three implementations, current
+public test and its three imported TSVs. Ordinary mode declares eighteen logs and three mutable
+sources; classifier-only declares zero files or mutable sources and invokes no native child. Both
+modes retain local store/directory preparation.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py --classifier-only
+```
+
+A qualifying failed-body thread panic must name a current assertion macro path/line/byte column.
+Custom messages pass; passing names, labelled extraction panics and nonthread location mentions
+refuse. Two independent complete captures, sixteen physical refusals and actual input/file/mutable/
+mode/stores/restoration/classifier faults calibrate the plans, including each of the three mutable
+declarations. A copied classifier-only entry accepts linked read-only input and ignores unused log
+aliases without source/output writes. Seventeen original full-target faults reach current macros
+in every failed body, including the small-stack worker; independently authored failed-test sets and
+source bindings remain exact. Twenty-seven frozen inputs/seventeen unchanged Rust files/three
+compile-time TSVs/eighteen local single-link logs and the current full eight-test executable restore
+exactly. Dispatch capture and real native behavior are verified separately.
 Authored fixtures are checked by the independent recursive reference, with semantic execution trapped.
 Test-side header/operand byte composition is inspection, not a product statement/recipe serializer.
 

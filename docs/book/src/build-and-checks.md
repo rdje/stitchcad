@@ -265,6 +265,17 @@ without source/output writes. Seventeen real faults reach current macros; twenty
 thirteen unchanged Rust files/three compile-time inputs and the current full eight-test executable
 restore exactly. D178 literal/normalized expression fixed; two recipe entries remain immediate P1.
 
+Normalized recipe plans seven inputs: three implementations/current public test/three imported
+TSVs. Ordinary mode declares eighteen diagnostic files/three mutable sources; classifier-only
+declares zero files/mutable sources/native effects. Two complete captures, sixteen physical refusals
+and twenty-four mode omissions preserve seventeen full-target faults and every source binding.
+Current thread macro locations qualify; nonthread mentions refuse, calibrated by an independent
+legacy-regex fault. Copied readonly classifier mode accepts linked input/unused aliases without
+source/output writes. Seventeen real faults reach current macros in every failed body, including
+the small-stack worker; independently authored failed-test sets stay exact. Twenty-seven frozen
+inputs/seventeen unchanged Rust files/three compile-time TSVs and the current full eight-test
+executable restore exactly. D178 three fixed; canonical-recipe repair remains immediate P1.
+
 D177's fifteen entries/sixteen predicates are now repaired and independently replayed. Current
 macro locations and calibrated failed-body controls replace message substrings and labelled
 extraction/join panics. This closes that diagnostic defect; the remaining D156 producer plans
@@ -415,7 +426,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and408 actual body faults, with35 calibrated failed-body classifiers,
+controls and433 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

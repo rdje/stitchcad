@@ -14,6 +14,18 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — normalized recipe modes and current thread evidence
+
+- Seven inputs/ordinary18 files/three mutable sources; classifier-only zero files/mutables/native writes. Original17 cases/source bindings/full8 argv/stores/restoration unchanged; three imported TSVs guarded. Two complete modes/sixteen physical refusals/twenty-four mode omissions
+  plus legacy-regex fault discriminate.
+- Shared433 body reds/35 classifiers/25 captures/139 physical refusals0; previous31runtime/24file/26mutable/37pre-write+late/26child/two compiler/three static controls retained. Each mutable declaration is independently omitted and each physical source alias refused. Nonthread
+  current-location mentions refuse.
+- Copied readonly class accepts3-linked input/unused aliases with zero child/source/output writes; inputs/victim/root/environment exact. Original17 full-target native faults reach current macros in every failed body, including small-stack worker; independently authored failed
+  sets/27 frozen inputs/17 Rust HEAD files/three TSVs/18 single-link logs exact.
+- Current full8 Cargo artifact 3627e679… passes0. Rust unchanged; full fmt/strict Clippy/703 gate0170 applies. Names/annotations/borrowing/order/atomic role+ordinal errors/privacy and grammar unchanged; new WASM/evaluation/runner unobserved.
+- Wholecc816b2 expression4013B/27L retained, exact51946–55959/SHA/canonical header; first62828B sibling/second17166B prefix/map8169B exact. Whole statement lesson1765B/8L and individual-Ease ledger571B/7L in DEV208/CH152; prior462/all60/public464/seven windows exact.
+- Promotion declined (existing complete preflight/current macro/whole-record rules). D178 three fixed/canonical recipe immediate P1 .n07.4; D156 open/parent active. Native terminal/source/artifact consumed before focused checks; fixed caps/director400 cadence stay.
+
 ## _(2026-10-05 UTC)_ — normalized expression modes and genuine thread evidence
 
 - Five inputs/ordinary18 files/one mutable source; classifier-only zero files/mutables/native writes. Original17 CASES/three selectors/exact test argv/stores/restoration unchanged. Two complete modes/twelve physical refusals/eighteen omissions plus actual legacy-regex fault
@@ -43,14 +55,7 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 - AST-offset preparation/shared faulty decoder/redundant retention title preflights corrected before signoff; excluded attempts. Promotion declined (existing preflight/current-source/whole-record rules). D178 literal fixed/3 immediate repairs remain; next normalized-expression
   .n07.2. Grammar/400 cadence unchanged.
 
-## _(2026-10-05 UTC)_ — complete statement modes close D177
-
-- Five inputs/ordinary16 logs/one mutable source; classifier-only zero files/mutables/native writes. Original15 cases/full10 argv/read order/stores/restoration exact. Current macros replace prefix evidence; actual committed join-only fixture384:44 was accepted without native effects.
-- Shared372 body reds/35 classifiers/19 captures/101 physical refusals0; prior31runtime/24file/26mutable/37entry+late/26child/two compiler/three static controls0. Two statement modes/twelve physical refusals and input/file/mutable/mode/stores/restoration/classifier omissions discriminate.
-- Copied classifier-only entry accepts three-linked read-only input/unused log aliases; zero source/output writes or children; all inputs/victim/root/environment exact. Exclusive15 native faults qualify every failed body, including anonymous workers; no test-helper repair needed.
-- 21 frozen inputs/12 Rust HEAD files/three compile-time fixtures/original cases/16 single-link logs exact. Current Cargo artifact a6c554be… passes full10; Rust unchanged. Latest broad fmt/strict Clippy/703 native gate0170 applies; WASM/runner/evaluation unobserved.
-- Whole9f41012 recipe receipt51713–57178/41L5465B/SHAd43db446 retained; prior56980B sibling/canonical headers/map exact. Whole lexer lesson/chart ledger/D177 report+closure in DEV205/CH149/defects99; prior455/all53/public458/12open164sealed/seven windows exact.
-- Shared-edit assertions/helper quote syntax refused before writes; exact set membership/scoped patch/direct helper source corrected. Excluded attempts; promotion declined (existing preflight/current-source/whole-record rules). D177 closes after15 entries/16 predicates replay; D156 continues. Grammar/400 stays.
+Whole statement modes and thread lesson retained in [part208](docs/history/stitchcad-devnotes-part208.md).
 
 Whole recipe modes and worker lesson retained in [part207](docs/history/stitchcad-devnotes-part207.md).
 
@@ -172,3 +177,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/stitchcad-d
 | [`part206`](docs/history/stitchcad-devnotes-part206.md) | whole semantic mode and macro lesson | 10 lines, 2315 bytes, `sha256:95e5f366…` |
 
 | [`part207`](docs/history/stitchcad-devnotes-part207.md) | whole recipe modes and worker lesson | 13 lines, 1940 bytes, `sha256:3834c251…` |
+
+| [`part208`](docs/history/stitchcad-devnotes-part208.md) | whole statement modes and thread lesson | 8 lines, 1765 bytes, `sha256:b8eafe0a…` |

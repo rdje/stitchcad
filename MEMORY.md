@@ -4,10 +4,10 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.f.n07.3: normalized-recipe modes/current thread macros.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.n07.4: canonical-recipe modes/current thread macros.
   Read complete implementation/public contracts/compile-time inputs/canonical/book before edits.
-  D178 literal/expression fixed; two P1 .n07.3–4 remain. Parent .n07 active; D156 open.
-- Then .n07.4/.n08–14/.a01.2/.a/.p.v, shell/platform/raw book .b.s/.b.v integration;
+  D178 three fixed; canonical recipe P1 remains. Parent .n07 active; D156 open.
+- Then .n08–14/.a01.2/.a/.p.v, shell/platform/raw book .b.s/.b.v integration;
   then D154 .4c.r genuine known ordinals before .5b/arithmetic.
 - Native jobs exclusive; consume terminal/restored bytes/full focused artifacts before
   another mutation/probe/build. Derive Git state; director400 cadence has no exceptions.

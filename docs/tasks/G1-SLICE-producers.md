@@ -537,38 +537,38 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
   Paths: docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py
   Acceptance: complete plans before effects; preserve public behavior/grammar, prepared stores and exact current source/artifact. D178 P1 nonthread evidence repair before signoff.
 
-Own five direct inputs (implementation/test/two TSVs/book), complete ordinary/classifier captures,
-physical refusals/actual omission and nonthread controls, exclusive17 original native faults and
-current full8 executable. Complete281L implementation/371L eight tests/24 shape rows/100 literal
-rows/25 worked expressions/canonical .5a.3c.3/book reviewed; public borrowing/atomic refusal/
-ordered arguments/limits/privacy remain unchanged. Own test-only guards/full Rust checks only
-if actual failed-body evidence requires them. Additional paths: crates/sc-core/tests/formula_normalized_contract.rs;
-docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md.
-Own Target preparation/freeze/readonly/proof helpers and whole committed .n07.1 receipt retention
-into runtime-proof sibling before live growth; preserve canonical headers/prior siblings/map8169B.
-Own whole oldest recipe lesson and collection ledger rollover before live growth; verify Git
-intervals/SHA/prior460/all58 files/public reads/seven windows/defect IDs under fixed caps.
-
-Earned doc-sync preflights refused expanded LIVE_STATUS census/G1 rows before any tracked write.
-Exact preview identifies G1 row322B against320B; keep compact current-state pointers and canonical
-scope in PLANNING rather than repeated prose.
-Excluded preparation; no native source/artifact/proof changed and no ceiling increases.
-
-- [x] REPRODUCE / ISSUE: actual normalized classifier accepts a nonthread compiler note at current13:5 macro, rc=0, literal-nonthread-diagnostic.json. Five direct inputs and ordinary/classifier implicit plans reproduce from complete implementation281L/eight tests371L/two TSVs/book/canonical review. Seventeen cases/grammar unchanged.
-- [x] ROOT CAUSE: unanchored panicked-at regex trusts a note; source/directory-only plan omits three compile-time inputs, file destinations and mutation ownership. Independent complete two-mode captures bind five inputs/18 native files/one mutable/class zero effects; twelve physical refusals, rc=0, normalized-producer-controls.log.
-- [x] FIX: plan five inputs/ordinary18 files/one mutable/class zero files-mutables-native writes before effects; preserve original17 CASES/three selectors/read order/stores/argv/restoration. Current thread macro path/line/byte-column matching and nonthread noise/actual legacy-regex fault discriminate. Shared408 reds/35 classifiers/23 captures/123 refusals0, rc=0, normalized-producer-controls.log; eighteen mode omissions refuse.
-- [x] ADDRESSED: exclusive17 genuine selected faults reach current assertion macros in every failed body; original failed sets/full8 restoration/23 frozen inputs/13 Rust HEAD files/three compile-time inputs/18 local single-link logs exact, rc=0, normalized-native.log/native-proof.log. Cargo current full8 executable b72da21ae39384f9132c708de68078f9e6d37354f55aae7422cb535db72dc820 passes0, native-artifact-proof.log; no helper repair.
-- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67/29/file120paths56owners26groups/15refusals12reds/map/ledger9+13 pass0, rc=0, normalized-*.log. Actual copied readonly class accepts3-linked input/unused aliases with zero child/source/output writes/all inputs/victim/root/environment exact, readonly-mode.log. Rust unchanged/full fmt-strict Clippy/native703 gate0170 applies; new WASM/evaluation/runner unobserved.
-- [x] LOCKSTEP: whole78b5afd literal51197–56846/5649B40L/SHA2bb405a7 retained before live growth; canonical header/first62828B sibling/second11113B prefix/map8169B/fixed caps exact, rc=0, normalized-task-retention-proof.log. WholeDEV207/CH151/prior460/all58/public462/13open164sealed/seven windows exact, retention-proof.log. D178 two fixed/two immediate P1 remain; parent active/next .n07.3/D156 open; promotion declined/grammar/400 stay.
-
-Final staged doctrine gate13 green, rc=0, target/normalized-staged-gate.log; terminal consumed.
-Final focused ledger9/pointer13 and all other required jobs consumed; no required job remains.
+Complete committed verification retained in [producer proof](G1-SLICE-runtime-proof.md#normalized-expression-mode-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n07.3`
-  Status: `pending`
-  Goal: Normalized recipe seventeen-case modes/18 ordinary files/three mutable sources/classifier zero effects; current test/compile-time inputs, exact cases/source binding/full target/stores/restoration, independent controls and exclusive real macro faults.
+  Status: `done`
+  Goal: STITCHCAD-G1-0174: normalized recipe seventeen-case modes/18 ordinary files/three mutable sources/classifier zero effects; current test/compile-time inputs, exact cases/source binding/full target/stores/restoration, independent controls and exclusive real macro faults.
   Paths: docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py
   Acceptance: complete plans before effects; preserve public behavior/grammar, prepared stores and exact current source/artifact. D178 P1 nonthread evidence repair before signoff.
+
+Own seven direct inputs (three implementations/public test/three imported TSVs), both complete
+modes/physical refusals/actual omissions/current thread controls, original17 full-target faults and
+restored full8 executable. Read complete statement508L/ordered186L/normalized-recipe224L/canonical
+expression implementation/eight tests458L/16 statement+9 recipe+100 literal rows/canonical protocol/
+book/API/roadmap before edits. Preserve all metadata/borrowing/atomic error roles/order/limits/privacy.
+Own actual failed-set enumeration and every failed body including small-stack workers; test-only
+preconditions/full Rust gate only if measured extraction-only failures require repair.
+Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;
+crates/sc-core/tests/formula_normalized_recipe_contract.rs;docs/tasks/PLANNING.md.
+Own Target capture/refusal/readonly/freeze/proof helpers and outputs; no actual child during dispatch
+simulation. Own whole committed expression .n07.2 receipt retention into runtime-proof before growth,
+preserving first62828B sibling/second17166B prefix/map8169B/canonical headers/fixed ceilings.
+Own whole oldest statement lesson and individual-Ease ledger rollover before live growth; exact
+source intervals/SHA/prior462/all60/public reads/seven windows/IDs verified before retirement.
+
+- [x] REPRODUCE / ISSUE: actual normalized-recipe classifier accepts nonthread compiler note at current14:5 macro, rc=0, literal-nonthread-diagnostic.json. Complete three implementations508/186/224L/canonical expression/eight tests458L/three TSVs/canonical protocol/book/roadmap reviewed. Seven direct inputs/implicit ordinary-classifier plans reproduce; original17 cases and grammar retained.
+- [x] ROOT CAUSE: unanchored panic regex accepts a note; source/directory-only guard omits three compile-time inputs, eighteen files and three mutation intentions. Independent two-mode captures bind original source order/full8 argv/restoration; sixteen physical refusals cover every mutable alias/endpoint/late input, rc=0, recipe-input-producer-controls.log.
+- [x] FIX: guard seven inputs/18 ordinary files/three mutable sources/classifier zero files-mutables-native writes before effects. Original17 cases/source bindings/argv/stores/restoration exact; current thread macros/nonthread noise/actual legacy-regex fault discriminate. Shared433 body reds/35 classifiers/25 captures/139 physical refusals0, rc=0, recipe-input-producer-controls.log; twenty-four mode omissions include all three mutable positions.
+- [x] ADDRESSED: exclusive17 full-target faults match independently authored failed-test sets; every failed body contains a current macro, including small-stack worker.27 frozen inputs/17 Rust HEAD files/three TSVs/18 single-link logs/original cases/source bindings/full8 restoration exact, rc=0, recipe-input-native.log/native-proof.log. Cargo current full8 artifact 3627e67978cb40b25b57f6168a8a0ce9acb879758a845f28b244c1bc0c9e9640 passes0, native-artifact-proof.log; no helper repair.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67/29/file120paths56owners26groups/15refusals12reds/map/ledger9+13 pass0, rc=0, recipe-input-*.log. Copied readonly class accepts3-linked input/unused aliases with zero child/source/output writes/inputs/victim/root/environment exact, readonly-mode.log. Rust unchanged/full fmt-strict Clippy/native703 gate0170 applies; new WASM/evaluation/runner unobserved.
+- [x] LOCKSTEP: wholecc816b2 expression51946–55959/4013B27L/SHA cbb7a49a copied/verified before retirement; canonical header/first62828B sibling/second17166B prefix/map8169B/fixed caps exact, rc=0, recipe-input-task-retention-proof.log. WholeDEV208/CH152/prior462/all60/public464/13open164sealed/seven windows/47raw exact, retention-proof.log. D178 three fixed/canonical P1 .n07.4 next; D156 open/parent active; promotion declined/grammar/400 stay.
+
+Final staged doctrine gate13 green, rc=0, target/recipe-input-staged-gate.log; terminal consumed.
+Final ledger9/pointer13/all focused jobs consumed; current full8 artifact/frozen27 inputs exact.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n07.4`
   Status: `pending`

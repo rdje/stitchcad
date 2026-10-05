@@ -1000,4 +1000,5 @@ D177 whole report/verified closure retained in [part99](../history/stitchcad-def
   Remaining native groups inspect this boundary before their signoff; no broader count claimed.
   Literal .n07.1 fixed: independent nonthread noise/legacy-regex body refusal and13 real selected
   macro faults/current full6 artifact pass0. Normalized expression .n07.2 fixed: independent nonthread noise/legacy-regex body refusal and17
-  real selected macros/frozen23 inputs/current full8 artifact pass0. Two recipe entries P1 .n07.3–4.
+  real selected macros/frozen23 inputs/current full8 artifact pass0. Normalized recipe .n07.3 fixed: independent nonthread noise/legacy-regex body refusal and17
+  full-target macros/authored failed sets/frozen27 inputs/current full8 artifact0; canonical .n07.4 P1.

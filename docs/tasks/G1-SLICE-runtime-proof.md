@@ -141,3 +141,39 @@ before replay. Fixed limits retained; excluded preparation, no native or source-
 Final staged doctrine gate13 green, rc=0, target/literal-staged-gate.log; terminal consumed.
 All completed native/reader/focused jobs consumed before commit; no required job remains.
 
+
+Source: `cc816b26225d438776c06b246f4237b5855dd857`, docs/tasks/G1-SLICE-producers.md. Byte intervals are zero-based, end-exclusive.
+
+| Record | Source interval | Bytes / lines | SHA-256 |
+| --- | --- | --- | --- |
+| [Normalized expression mode verification](#normalized-expression-mode-verification) | 51946–55959 | 4013 / 27 | `cbb7a49abea84852f90c4dd96b78f6fc5f1ff56f88e8b8581e1ccd80a58b3eea` |
+
+### Normalized expression mode verification
+
+Own five direct inputs (implementation/test/two TSVs/book), complete ordinary/classifier captures,
+physical refusals/actual omission and nonthread controls, exclusive17 original native faults and
+current full8 executable. Complete281L implementation/371L eight tests/24 shape rows/100 literal
+rows/25 worked expressions/canonical .5a.3c.3/book reviewed; public borrowing/atomic refusal/
+ordered arguments/limits/privacy remain unchanged. Own test-only guards/full Rust checks only
+if actual failed-body evidence requires them. Additional paths: crates/sc-core/tests/formula_normalized_contract.rs;
+docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md.
+Own Target preparation/freeze/readonly/proof helpers and whole committed .n07.1 receipt retention
+into runtime-proof sibling before live growth; preserve canonical headers/prior siblings/map8169B.
+Own whole oldest recipe lesson and collection ledger rollover before live growth; verify Git
+intervals/SHA/prior460/all58 files/public reads/seven windows/defect IDs under fixed caps.
+
+Earned doc-sync preflights refused expanded LIVE_STATUS census/G1 rows before any tracked write.
+Exact preview identifies G1 row322B against320B; keep compact current-state pointers and canonical
+scope in PLANNING rather than repeated prose.
+Excluded preparation; no native source/artifact/proof changed and no ceiling increases.
+
+- [x] REPRODUCE / ISSUE: actual normalized classifier accepts a nonthread compiler note at current13:5 macro, rc=0, literal-nonthread-diagnostic.json. Five direct inputs and ordinary/classifier implicit plans reproduce from complete implementation281L/eight tests371L/two TSVs/book/canonical review. Seventeen cases/grammar unchanged.
+- [x] ROOT CAUSE: unanchored panicked-at regex trusts a note; source/directory-only plan omits three compile-time inputs, file destinations and mutation ownership. Independent complete two-mode captures bind five inputs/18 native files/one mutable/class zero effects; twelve physical refusals, rc=0, normalized-producer-controls.log.
+- [x] FIX: plan five inputs/ordinary18 files/one mutable/class zero files-mutables-native writes before effects; preserve original17 CASES/three selectors/read order/stores/argv/restoration. Current thread macro path/line/byte-column matching and nonthread noise/actual legacy-regex fault discriminate. Shared408 reds/35 classifiers/23 captures/123 refusals0, rc=0, normalized-producer-controls.log; eighteen mode omissions refuse.
+- [x] ADDRESSED: exclusive17 genuine selected faults reach current assertion macros in every failed body; original failed sets/full8 restoration/23 frozen inputs/13 Rust HEAD files/three compile-time inputs/18 local single-link logs exact, rc=0, normalized-native.log/native-proof.log. Cargo current full8 executable b72da21ae39384f9132c708de68078f9e6d37354f55aae7422cb535db72dc820 passes0, native-artifact-proof.log; no helper repair.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/effect67/29/file120paths56owners26groups/15refusals12reds/map/ledger9+13 pass0, rc=0, normalized-*.log. Actual copied readonly class accepts3-linked input/unused aliases with zero child/source/output writes/all inputs/victim/root/environment exact, readonly-mode.log. Rust unchanged/full fmt-strict Clippy/native703 gate0170 applies; new WASM/evaluation/runner unobserved.
+- [x] LOCKSTEP: whole78b5afd literal51197–56846/5649B40L/SHA2bb405a7 retained before live growth; canonical header/first62828B sibling/second11113B prefix/map8169B/fixed caps exact, rc=0, normalized-task-retention-proof.log. WholeDEV207/CH151/prior460/all58/public462/13open164sealed/seven windows exact, retention-proof.log. D178 two fixed/two immediate P1 remain; parent active/next .n07.3/D156 open; promotion declined/grammar/400 stay.
+
+Final staged doctrine gate13 green, rc=0, target/normalized-staged-gate.log; terminal consumed.
+Final focused ledger9/pointer13 and all other required jobs consumed; no required job remains.
+
