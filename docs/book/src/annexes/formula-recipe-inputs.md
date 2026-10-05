@@ -195,16 +195,29 @@ two256-node/16-if-level operands per assertion serialize to exact independently 
 These are flat-shape/byte contracts, not a browser, performance or production certification.
 
 Five compile-fail docs check private construction and all three cross-domain equality pairings;
-two runnable API docs check source-independent usage. Twenty-one actual production serializer faults
-must compile and fail public assertions, covering headers, operands, envelope/order/count/spacing,
-empty identity, terminal newline, opaque Debug and exact extraction. The exclusive runner restores
-its source exactly and rebuilds the full focused canonical-recipe target. The direct entry validates
-implementation/test/output through the [producer profile](../build-and-checks.md#direct-python-producers) before
-reads/writes and preserves prepared child stores. Failed-body panic locations must match assertion
-macro sites in the guarded current test source. Custom messages pass; labelled expects and compiler/
-passing-name noise refuse. All21 native faults meet that rule; the full ten-test target is restored. Existing authored
-fixtures remain checked by the actual independent recursive reference; no independent whole-recipe
-parser or numerical evaluation proof is claimed. [Coupled review .3f.2](#coupled-input-and-identity-review) is complete below.
+two runnable API docs check source-independent usage. Twenty-one actual serializer faults compile
+and fail public assertions, covering headers, operands, envelope/order/count/spacing, empty identity,
+terminal newline, opaque Debug and exact extraction. The direct entry plans eight inputs before
+effects: implementation/current test/four imported TSVs/book grammar/byte decision. Ordinary mode
+declares twenty-two diagnostic files and one mutable source; classifier-only declares zero files
+or mutable sources and invokes no native child. Both modes preserve prepared local stores.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py --classifier-only
+```
+
+A failed-body thread panic must name a current assertion macro path/line/byte column. Custom messages
+pass; nonthread mentions, passing names and labelled extraction panics refuse. Two independent
+complete captures/eighteen physical refusals and twenty-four mode omissions preserve all21 original
+cases/full-target arguments/restoration; an independent legacy-regex fault distinguishes nonthread
+noise. Copied classifier-only mode accepts linked readonly input/unused log aliases without source/
+output writes. Every actual failed body reaches a current macro, including small-stack workers;
+independently authored failed-test sets remain exact. Thirty-one frozen inputs/eighteen unchanged
+Rust files/six compile-time inputs/twenty-two local single-link logs and the current full ten-test
+executable restore exactly. Dispatch captures and real native behavior are verified separately.
+Existing fixtures retain their independent recursive-reference checks; no independent whole-recipe
+parser or numerical evaluation proof is claimed. [Coupled review .3f.2](#coupled-input-and-identity-review)
+is complete below.
 
 ```bash
 cargo test -p sc-core --test formula_canonical_recipe_contract

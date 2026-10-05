@@ -263,7 +263,7 @@ restoration. Current thread macro locations qualify; nonthread mentions refuse, 
 independent legacy-regex fault. Copied readonly classifier mode accepts linked input/unused aliases
 without source/output writes. Seventeen real faults reach current macros; twenty-three frozen inputs/
 thirteen unchanged Rust files/three compile-time inputs and the current full eight-test executable
-restore exactly. D178 literal/normalized expression fixed; two recipe entries remain immediate P1.
+restore exactly. The four repaired D178 classifiers are summarized below.
 
 Normalized recipe plans seven inputs: three implementations/current public test/three imported
 TSVs. Ordinary mode declares eighteen diagnostic files/three mutable sources; classifier-only
@@ -274,7 +274,19 @@ legacy-regex fault. Copied readonly classifier mode accepts linked input/unused 
 source/output writes. Seventeen real faults reach current macros in every failed body, including
 the small-stack worker; independently authored failed-test sets stay exact. Twenty-seven frozen
 inputs/seventeen unchanged Rust files/three compile-time TSVs and the current full eight-test
-executable restore exactly. D178 three fixed; canonical-recipe repair remains immediate P1.
+executable restore exactly.
+
+Canonical recipe plans eight inputs: implementation/current test/four imported TSVs/book grammar/
+byte decision. Ordinary mode declares twenty-two diagnostic files/one mutable source; classifier-only
+declares zero files/mutable sources/native effects. Two complete captures/eighteen physical refusals
+and twenty-four mode omissions preserve twenty-one original cases/full ten-test arguments/restoration.
+Current thread macro locations qualify; nonthread mentions refuse with an independent legacy-regex
+fault. Copied readonly mode accepts linked input/unused aliases without source/output writes. All21
+real faults reach current macros in every failed body, including small-stack workers; independently
+authored failed-test sets stay exact. Thirty-one frozen inputs/eighteen unchanged Rust files/six
+compile-time inputs and the current full ten-test executable restore exactly. D178 closes after all
+four original classifiers and their native cases are independently repaired and replayed; remaining
+native groups inspect the boundary before signoff, with no broader affected-population claim.
 
 D177's fifteen entries/sixteen predicates are now repaired and independently replayed. Current
 macro locations and calibrated failed-body controls replace message substrings and labelled
@@ -426,7 +438,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and433 actual body faults, with35 calibrated failed-body classifiers,
+controls and458 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
