@@ -40,18 +40,18 @@ variables and existing directories without creating paths. No marker can bypass 
 | RUSTUP_TOOLCHAIN | A named override is preserved; path overrides refuse |
 | MAKE_TMPDIR | Coupled to the verified TMPDIR destination for Make temporary files |
 
-Standing probes cover56 runtime cases,13 compiled helper faults, two actual Make faults, one
-actual launcher fault, real
-exec arguments/status and18 review-child environments. Make captures use compiler stubs; device
+Standing probes cover56 runtime cases/13 helper faults,8 concurrent-directory cases/four
+body faults across local/CI helpers, two Make faults, one launcher fault, real exec
+arguments/status and18 review-child environments. Make captures use compiler stubs; device
 mismatch is simulated without off-volume writes. Actual stable setup/native/WASM checks run with
 caller exports absent. D156's direct standalone native/temp producer audit under .h2.b remains
 required before closure; CI's separate prepare/verify evidence above remains valid.
 
-Daily artifact cleanup uses a frozen ignored-file plan, checks active jobs, preserves tracked
-inputs and package/dependency stores, and verifies every selected path absent before regeneration.
-The immediate read-only residue census must not activate this launcher: activation recreates
-`target/scratch`. Use nonactivating verification, then rebuild native/WASM/book outputs and run
-focused safety checks. The latest run is recorded in `docs/ARTIFACT_CLEANUP.md`.
+Daily cleanup freezes ignored outputs, verifies idle processes and preserves tracked data/stores.
+Check all selected paths absent without activating the launcher, which recreates `target/scratch`;
+only then rebuild native/WASM/book outputs and run safety controls. Concurrent creators are accepted
+only as local directories; symlink/type/volume/Git checks precede descendant creation. Latest run
+and plan/apply examples: `docs/ARTIFACT_CLEANUP.md`.
 
 The generated Knowledge Map lists task and decision links with concise labels. Their complete
 repository-relative filenames remain in each link destination; freshness checks verify regeneration.

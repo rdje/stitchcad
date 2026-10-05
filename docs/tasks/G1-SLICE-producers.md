@@ -656,22 +656,7 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Paths: docs/tasks/artifacts/formula_structure/name_read_mutations.py
   Acceptance: review full source/public tests/book before code; retain original cases/argv/source restoration/current artifact; independent omissions/physical refusals/every failed body; D156 remains outside this entry.
 
-Complete authored replay history retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-replay-history).
-
-Whole authored sealing correction retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-sealing-correction).
-
-- [x] REPRODUCE / ISSUE: Original exact-name lacks full file/mutable mode plans and accepts nonthread macro notes. python3 -I -B target/name-read-plan-run-focus.py producer-controls:609 body reds/35 classifiers/44 captures/230 refusals; rc=0. Full entry/namespace253L/public304L/G1/book reviewed; original9 sets authored before replay.
-- [x] ROOT CAUSE: Unanchored panicked-at regex accepts compiler notes; two inputs/10 files/one mutable/class0 need distinct complete plans. python3 -I -B target/name-read-plan-run-focus.py producer-controls:13 actual omissions and actual D189 legacy-predicate red;609/35/44/230; rc=0.
-- [x] FIX: Plans precede reads/effects; current-thread path/line/byte-column macros; original9/full7/stores/exact restoration retained. python3 -I -B target/name-read-plan-run-focus.py producer-controls:two full captures/six physical refusals;609/35/44/230; rc=0. readonly-mode:3 links/two aliases/zero child-source-output writes; rc=0.
-- [x] ADDRESSED: python3 -I -B target/name-read-plan-proof-run.py:all9 preauthored failed sets/every failed body current macro/nonmacro[]/72 inputs/63 production Rust HEAD/unchanged public7/10 local logs/current full7 c127dc5f exact; rc=0. Native47396/proof2780 terminal0 consumed; D189112/D190113 closures earned; archive28/CLI518/fresh preflights0.
-- [x] NO REGRESSION: python3 -I -B target/name-read-plan-run-focus.py publication:45 pass; coverage9/census229Git288checks/120files61owners31groups/ledger9arms13pointers; rc=0. No Rust change; prior fmt/strict Clippy/full703 scoped185a, real9/currentfull7 separately consumed; new WASM/runner unobserved.
-- [x] LOCKSTEP: python3 -I -B target/name-read-plan-run-focus.py retention-proof:prior496/all40/current500/eight windows/12open177sealed/IDs1–190except18/whole7e197 declaration3381B21L SHA763305b6/27233B prefix/DEV221845B/CH164490B/live11675B nav/map8145/canonical first-runtime/fixed caps exact; rc=0. Authored progress retained before growth; book/live/frontier/.n10 aligned; D156/D34 open/400 stay; promotion: declined (existing plans/macros/whole retention).
-
-Initial corrected checks consumed:retention23545/all500/40908B sibling/12open177sealed0;
-archive15502:28 probes/518 CLI controls0; ledger98104:666 real/9arms/13pointers0; publication80007:45/62chapters67API0.
-Post-doc29508 coverage/55921 census/4473 retention terminal0 consumed:9/229Git288/500 exact.
-43367/34382 publication45 terminal0 consumed; staged66360:13 doctrines green0; ledger74180 pending:
-target/name-read-plan-publication.log/ledger-final.log; consume before .n11. Native/proof consumed.
+Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-complete-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11`
   Status: `pending`
@@ -696,3 +681,19 @@ target/name-read-plan-publication.log/ledger-final.log; consume before .n11. Nat
   Goal: complete file-destination plans for coupled static; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/static_coupled_contract.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup2`
+  Status: `done`
+  Goal: STITCHCAD-G1-0186 due daily artifact cleanup; frozen plan/safe apply/exact residue.
+  Own: docs/ARTIFACT_CLEANUP.md;live/book/whole retention;target/daily-cleanup2-* and audit.
+  Own: scripts/local_environment.py;scripts/ci_environment.py;docs/tasks/artifacts/ci_environment/local_environment_contract.py;docs/tasks/artifacts/ci_environment/ci_environment_contract.py;D191 repair/controls.
+
+Whole authored cleanup/D191 reproduction retained in [retention proof](G1-SLICE-retention-proof.md#cleanup-activation-reproduction); canonical ownership stays above.
+
+- [x] REPRODUCE / ISSUE: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan target/artifact_cleanup_audit/cleanup2-20261005:1254 selections/11819 files/1058866659B/0 skipped; rc=0. Daily24h due/full207L reviewed. Cold preflight and both barrier creators reproduce D191 FileExistsError; diagnostic rc=0.
+- [x] ROOT CAUSE: python3 -I -B target/daily-cleanup2-run-focus.py local-profile:8 races/4 body reds; rc=0. Both absence-then-mkdir helpers fail competing creators; missing post-create link validation permits descendant writes. Original diagnostic is independent of repaired source.
+- [x] FIX: python3 -I -B target/daily-cleanup2-run-focus.py local-profile:56runtime/13helper plus8races/4reds; rc=0. Idempotent mkdir/pre-post link/type/device/Git guards precede descent. CI19/6/shared31/609/44/230 pass; rc=0. Cleanup rechecks frozen census and each selected hash.
+- [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py apply target/artifact_cleanup_audit/cleanup2-20261005:6trees/1248logs/11819files/1058866659B/residue0/tracked_changefalse; rc=0. Independent1254 absence/HEAD/producer/tracked/result exact before activation; rc=0. OS-visible check_handoff.sh --idle-cua:handoff OK; rc=0. D191114 closed.
+- [x] NO REGRESSION: python3 -I -B target/daily-cleanup2-run-focus.py native:7pass; wasm:3 actual crates compile; cleanup:15pass/11reds; publication:45pass/62chapters67API1272source1989rendered; coverage:9pass; ledger:670real/9arms/13pointers; rc=0 each. Rust/grammar unchanged; priorfull703 scoped185a; new runner unobserved. All focused jobs terminal/consumed.
+- [x] LOCKSTEP: python3 -I -B target/daily-cleanup2-run-focus.py retention:503 reads/prior500/all44 identities/eight windows/12open178sealed/IDs1–191except18/whole7172 exact-name2828B17L/40908B prefix/DEV2221117B/CH165969B/live11675B nav/map/fixed caps/63 Rust exact; rc=0. Authored reproduction retained; first growth preflight refused before writes. Book/live/record/MEM aligned; .n11 after commit/all jobs;400 stay; promotion: declined (existing locality/boundary/whole-record rules).
+Final staged23850:13 doctrines green, rc=0, target/daily-cleanup2-gate.log; terminal consumed. Hooks repeat final staged state.

@@ -441,3 +441,40 @@ writes, inventory500 and four real public reads before live report retirement, r
 Earlier retention maxline red and ledger67366 two failures excluded; no committed
 record/logical address/reader/ceiling altered. All500/current12open177sealed proof next.
 
+
+## Exact-name complete verification
+
+Whole committed 7172b5329a802457ee924a99a47006a10f4f5d0f:docs/tasks/G1-SLICE-producers.md bytes 59948–62776; 2828B/17L/SHA256 7dab3693a7b73993de03952ee2c687a2e9fabf8b54b1f24710c546aaed37708d.
+Historical pending statements remain exact; current cleanup leaf records final consumption.
+
+Complete authored replay history retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-replay-history).
+
+Whole authored sealing correction retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-sealing-correction).
+
+- [x] REPRODUCE / ISSUE: Original exact-name lacks full file/mutable mode plans and accepts nonthread macro notes. python3 -I -B target/name-read-plan-run-focus.py producer-controls:609 body reds/35 classifiers/44 captures/230 refusals; rc=0. Full entry/namespace253L/public304L/G1/book reviewed; original9 sets authored before replay.
+- [x] ROOT CAUSE: Unanchored panicked-at regex accepts compiler notes; two inputs/10 files/one mutable/class0 need distinct complete plans. python3 -I -B target/name-read-plan-run-focus.py producer-controls:13 actual omissions and actual D189 legacy-predicate red;609/35/44/230; rc=0.
+- [x] FIX: Plans precede reads/effects; current-thread path/line/byte-column macros; original9/full7/stores/exact restoration retained. python3 -I -B target/name-read-plan-run-focus.py producer-controls:two full captures/six physical refusals;609/35/44/230; rc=0. readonly-mode:3 links/two aliases/zero child-source-output writes; rc=0.
+- [x] ADDRESSED: python3 -I -B target/name-read-plan-proof-run.py:all9 preauthored failed sets/every failed body current macro/nonmacro[]/72 inputs/63 production Rust HEAD/unchanged public7/10 local logs/current full7 c127dc5f exact; rc=0. Native47396/proof2780 terminal0 consumed; D189112/D190113 closures earned; archive28/CLI518/fresh preflights0.
+- [x] NO REGRESSION: python3 -I -B target/name-read-plan-run-focus.py publication:45 pass; coverage9/census229Git288checks/120files61owners31groups/ledger9arms13pointers; rc=0. No Rust change; prior fmt/strict Clippy/full703 scoped185a, real9/currentfull7 separately consumed; new WASM/runner unobserved.
+- [x] LOCKSTEP: python3 -I -B target/name-read-plan-run-focus.py retention-proof:prior496/all40/current500/eight windows/12open177sealed/IDs1–190except18/whole7e197 declaration3381B21L SHA763305b6/27233B prefix/DEV221845B/CH164490B/live11675B nav/map8145/canonical first-runtime/fixed caps exact; rc=0. Authored progress retained before growth; book/live/frontier/.n10 aligned; D156/D34 open/400 stay; promotion: declined (existing plans/macros/whole retention).
+
+Initial corrected checks consumed:retention23545/all500/40908B sibling/12open177sealed0;
+archive15502:28 probes/518 CLI controls0; ledger98104:666 real/9arms/13pointers0; publication80007:45/62chapters67API0.
+Post-doc29508 coverage/55921 census/4473 retention terminal0 consumed:9/229Git288/500 exact.
+43367/34382 publication45 terminal0 consumed; staged66360:13 doctrines green0; ledger74180 pending:
+target/name-read-plan-publication.log/ledger-final.log; consume before .n11. Native/proof consumed.
+
+
+## Cleanup activation reproduction
+
+Whole newly authored cleanup acceptance/reproduction; absent from committed 7172b5329a802457ee924a99a47006a10f4f5d0f.
+New-over-source bytes 62930–63496/566B/7L/SHA256 0d13aa664a9fabda36e5d1925644ca0596a96a5b810f998d4a5e423c56cf0fe3.
+Prior44061B prefix SHA256 3f1c56253e9bb8e2983e780bd6ab3e838996fea644e912f0504c15f41a82a337 remains exact.
+
+Acceptance: reviewed generated classes/protected boundaries; freeze/no tracked edits
+between plan/apply; OS-visible idle and independent nonactivating residue before
+regeneration. D191 original local/CI barrier controls fail with FileExistsError;
+idempotent creation plus post-create link validation fixes both, preserving all
+boundary contracts. Cold native preflight failed before dispatch and is excluded.
+New local test briefly printed3 compiled reds through reused variable; separate
+directory_faults and fresh rerun correctly print13. No unearned scope claim.

@@ -8,6 +8,10 @@ import shutil
 import subprocess
 import sys
 import types
+import tempfile
+from concurrent.futures import ThreadPoolExecutor
+from threading import Barrier
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[4]
 WORK = ROOT / 'target/scratch/local_environment_contract'
@@ -16,8 +20,8 @@ EXPECTED = {'CARGO_HOME': 'target/cargo-home', 'RUSTUP_HOME': 'target/cargo-home
 SOURCE = ROOT / 'scripts/local_environment.py'
 
 
-def load(text):
-    scope = {'__file__': str(SOURCE), '__name__': 'local_environment_probe'}
+def load(text, path=SOURCE):
+    scope = {'__file__': str(path), '__name__': 'local_environment_probe'}
     exec(compile(text, str(SOURCE), 'exec'), scope)
     return scope
 
@@ -128,6 +132,70 @@ def cleanup():
         assert not WORK.is_symlink() and WORK.stat().st_dev == ROOT.stat().st_dev
         assert not list(WORK.rglob('.git')), 'fixture cleanup crosses a Git boundary'
         shutil.rmtree(WORK)
+
+
+def concurrent_directory_controls(scope):
+    """Force real competing creates, then inject boundaries at the same mkdir point."""
+    with tempfile.TemporaryDirectory(dir=WORK) as name:
+        fixture = Path(name)
+        (fixture / 'target').mkdir()
+        selected = fixture / 'target/store'
+        original_mkdir = Path.mkdir
+        barrier = Barrier(2)
+
+        def competing_mkdir(path, *args, **kwargs):
+            if path == selected:
+                barrier.wait(timeout=5)
+            return original_mkdir(path, *args, **kwargs)
+
+        with patch.object(Path, 'mkdir', competing_mkdir), ThreadPoolExecutor(max_workers=2) as pool:
+            futures = [pool.submit(scope['directory'], fixture, 'target/store/child', create=True)
+                       for _ in range(2)]
+            try:
+                results = [future.result(timeout=10) for future in futures]
+            except OSError as error:
+                raise AssertionError('D191 concurrent directory creation failed') from error
+        assert results == [selected / 'child'] * 2, 'D191 concurrent directory identity'
+        assert (selected / 'child').is_dir(), 'D191 concurrent directory missing'
+
+    for kind in ('symlink', 'file', 'git'):
+        with tempfile.TemporaryDirectory(dir=WORK) as name:
+            fixture = Path(name)
+            (fixture / 'target').mkdir()
+            victim = fixture / 'victim'
+            victim.mkdir()
+            selected = fixture / 'target/store'
+            attempted = []
+
+            def inserted_mkdir(path, *args, **kwargs):
+                if path == selected:
+                    attempted.append(kind)
+                    if kind == 'symlink':
+                        path.symlink_to(victim, target_is_directory=True)
+                    elif kind == 'file':
+                        path.write_text('competing ordinary file')
+                    else:
+                        original_mkdir(path)
+                        (path / '.git').write_text('fixture marker; no Git repository')
+                return original_mkdir(path, *args, **kwargs)
+
+            try:
+                with patch.object(Path, 'mkdir', inserted_mkdir):
+                    scope['directory'](fixture, 'target/store/child', create=True)
+            except scope['Refusal'] as error:
+                wanted = ('symlink store component' if kind == 'symlink'
+                          else 'store crosses another Git repository')
+                assert str(error) == wanted, ('D191 raced boundary identity', kind, error)
+            except FileExistsError:
+                assert kind == 'file', 'D191 valid raced directory rejected'
+            else:
+                raise AssertionError('D191 raced boundary accepted: ' + kind)
+            assert attempted == [kind], 'D191 raced boundary not injected'
+            assert not (selected / 'child').exists() and not list(victim.iterdir()), \
+                'D191 raced boundary wrote a descendant'
+            if kind == 'git':
+                (selected / '.git').unlink()
+    return 4
 
 
 def make_controls(make_text=None):
@@ -355,7 +423,7 @@ def run():
         'whole-plan validation': ('directory(root, path.relative_to(root).as_posix(), missing_ok=True)', 'pass'),
     }
     for label, (needle, replacement) in faults.items():
-        assert text.count(needle) == 1, ('D156 changed fault anchor', label)
+        assert text.count(needle) == (2 if label == 'symlink' else 1), ('D156 changed fault anchor', label)
         try:
             scope = load(text.replace(needle, replacement))
             controls(scope)
@@ -367,6 +435,31 @@ def run():
         print('  actual compiled local assertion red:', label)
     cleanup()
     WORK.mkdir(parents=True)
+    for path in (SOURCE, ROOT / 'scripts/ci_environment.py'):
+        source = path.read_bytes()
+        actual = source.decode()
+        assert concurrent_directory_controls(load(actual, path)) == 4
+        guard = next(line for line in actual.splitlines(keepends=True)
+                     if 'require(not current.is_symlink(),' in line)
+        after_creation = guard + next(line for line in actual.splitlines(keepends=True)
+                                      if 'require(current.is_dir(),' in line)
+        assert actual.count(after_creation) == 1, 'D191 post-create guard anchor'
+        directory_faults = (
+            (actual.replace('current.mkdir(exist_ok=True)', 'current.mkdir()'),
+             'D191 concurrent directory creation failed'),
+            (actual.replace(after_creation, after_creation[len(guard):], 1),
+             'D191 raced boundary accepted: symlink'),
+        )
+        for changed, wanted in directory_faults:
+            assert changed != actual, 'D191 unchanged counterfactual'
+            try:
+                concurrent_directory_controls(load(changed, path))
+            except AssertionError as error:
+                assert str(error) == wanted, ('D191 unrelated counterfactual failure', error)
+            else:
+                raise AssertionError('D191 directory counterfactual survived')
+        assert path.read_bytes() == source, 'D191 source changed'
+    print('D191 directory controls: 8 real filesystem cases / 4 actual body reds / both helpers unchanged')
     early = "    else:\n        require(bool(command), 'a producer command is required')\n"
     assert text.count(early) == 1
     delayed = text.replace(early, '').replace('    if args.inspect:\n', "    require(bool(command) or args.inspect, 'a producer command is required')\n    if args.inspect:\n")

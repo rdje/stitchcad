@@ -117,7 +117,7 @@ try:
         "export identity": ('name + "=" + str(path) + "\\n"', 'name + "=" + "unowned" + "\\n"'),
     }
     for label, (needle, replacement) in faults.items():
-        assert text.count(needle) == 1, (label, "changed fault anchor")
+        assert text.count(needle) == (2 if label == "symlink" else 1), (label, "changed fault anchor")
         try:
             controls(load(text.replace(needle, replacement)))
         except AssertionError as error:

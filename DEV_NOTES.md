@@ -14,6 +14,12 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — daily cleanup and concurrent activation
+
+- Frozen1254 selections/11819 files/1058866659B; OS-visible idle/apply/nonactivating residue/tracked exact0. Protected stores/deps/audits retained; native7/WASM/book regenerated.
+- D191 both helpers race on cold mkdir; idempotent creation/post-create link validation fixed. Local56/13 plus8 races/4 reds; CI19/6/shared609/44/230 pass0. Failed preflight and temporary3-red report excluded.
+- Whole7172 exact-name2828B17L/40908B prefix; DEV2221117B/CH165969B/D191114 retained before retirement. Grammar/400 stay; .n11 next; promotion declined: existing locality, boundary and whole-record rules.
+
 ## _(2026-10-05 UTC)_ — exact-name plans and thread evidence
 
 - Two inputs/10 logs/one mutable/class0; original9/full7 exact. Shared609/35/44/230;13 omissions/D189 legacy red/readonly3 links/two aliases0.
@@ -34,13 +40,7 @@ Whole namespace plans and thread lesson retained in [part219](docs/history/stitc
 
 Whole window8 post-recording guard lesson retained in [part218](docs/history/stitchcad-devnotes-part218.md).
 
-## _(2026-10-05 UTC)_ — window8 continuity and protected historical links
-
-- Archive64 includes7 catalogs; pack57 whole0f files. Guard82 inputs/508 fixture outputs before effects; repeated Git/gzip SHA02664f77/481 read-materialized-source files exact0. Install57 raw/6 live/master1 single-link; copy/verify before exact retirement.
-- Whole recipe6498B61L/53211–59709/SHA50db8770 retained; first62828/runtime56379 prefixes exact. Two historical links inside exact source bodies stay; appended current aliases resolve. Map8169B/current generator/caps exact0.
-- WholeDEV2141512B9L/CH158581B8L/bookDEV2153309B44L retained before live retirement; prior481/seven windows/484 reads/12open171sealed/11working exact0. Archive28/CLI501/pub45/coverage9/census229paths288checks/ledger9+13 pass0.
-- Activation/LIVE preflights refused before writes; tightened. Native child split initially refused stale parent rows; two bindings fixed/120paths60owners30groups0. D34 bounded status fixed/broader PLANNING.5 open. Newest8 committed refusal next; promotion declined (whole
-  records/scoped proofs). Rust/reader/grammar/400 stay.
+Whole window8 continuity and protected history lesson retained in [part222](docs/history/stitchcad-devnotes-part222.md).
 
 Whole checked-recipe baseline and extraction lesson retained in [part217](docs/history/stitchcad-devnotes-part217.md).
 
@@ -204,3 +204,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/window8.md#
 | [`part219`](docs/history/stitchcad-devnotes-part219.md) | whole namespace modes and thread evidence lesson | 6 lines, 1006 bytes, `sha256:4cf3e7a4…` |
 
 | [`part221`](docs/history/stitchcad-devnotes-part221.md) | whole ordered-name plans and guarded advances lesson | 6 lines, 845 bytes, `sha256:7776d33c…` |
+
+| [`part222`](docs/history/stitchcad-devnotes-part222.md) | whole window8 continuity and protected history lesson | 7 lines, 1117 bytes, `sha256:047dbc9c…` |

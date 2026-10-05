@@ -36,5 +36,5 @@ selected roots.
 
 ## Latest run
 
-- **Run:** `2026-10-04` 22:25 UTC by leaf `G1-SLICE.5b.4c.h2.b.p.n.f11.c`.
-- **Summary:** removed6 ignored trees/1618 strays (1579382373B);1624 selected paths absent/tracked bytes unchanged before regeneration.
+- **Run:** `2026-10-05` 22:28 UTC by leaf `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup2`.
+- **Summary:** removed6 ignored trees/1248 logs (1058866659B);1254 selected paths absent/tracked bytes unchanged before regeneration.

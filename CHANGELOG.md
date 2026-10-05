@@ -110,6 +110,12 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0186 - daily cleanup and concurrent stores (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup2`)
+
+- Removed6 trees/1248 logs/1058866659B;1254 selected paths absent/tracked exact before regeneration.
+- D191 both directory helpers repaired; local56/13+8/4, CI19/6/shared609/44/230, native7/WASM/book green.
+- Whole task/DEV222/CH165/defects114 retained; book/live/.n11 next. Rust/grammar/400 stay; D156/D34 open.
+
 ## STITCHCAD-G1-0185 - exact-name plans and D189 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n10.2`)
 
 - Two inputs/10 logs/one mutable/class0; original9/full7/every failed body macro exact.
@@ -183,19 +189,6 @@ the digests afterwards.
 - Whole recipe/expression/rounding/D180 retained;470 reads/prior467/all65/seven windows exact.
 - D179 canonical fixed/3 checked P1 next; D180 closed. Rust/grammar/400 cadence unchanged.
 
-## STITCHCAD-G1-0175 - canonical recipe modes close D178 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n07.4`)
-
-- Eight inputs/22 native logs/one mutable; classifier-only zero effects;21 cases/full10 exact.
-- Shared458 reds/35 classifiers/27 captures/157 refusals0; real21/frozen31/current full10 artifact0.
-- Whole task/lesson/ledger/D178 retained;467 public reads/prior464/all62/seven windows exact.
-- D178 all four repaired/replayed/closed; D156 .n08 next. Rust/grammar/400 cadence unchanged.
-
-## STITCHCAD-G1-0174 - normalized recipe modes and thread evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n07.3`)
-
-- Seven inputs/18 native logs/three mutable; classifier-only zero effects;17 cases/bindings exact.
-- Shared433 reds/35 classifiers/25 captures/139 refusals0; real17/frozen27/current full8 artifact0.
-- Whole task/lesson/ledger retained;464 public reads/prior462/all60/seven windows exact.
-- D178 three fixed/canonical P1 next; D156 open. Rust/grammar/director400 cadence stay.
 
 | [`part132`](docs/history/window7.md#stitchcad-changelog-part132md) | whole G1-0130 ledger | 8 lines, 682 bytes, `sha256:6e3506f0…` |
 
@@ -331,3 +324,5 @@ the digests afterwards.
 | [`part162`](docs/history/stitchcad-changelog-part162.md) | whole G1-0172 ledger and navigation tail | 166 lines, 12187 bytes, `sha256:286ab32c…` |
 
 | [`part164`](docs/history/stitchcad-changelog-part164.md) | whole G1-0173 normalized expression ledger | 6 lines, 490 bytes, `sha256:f55b6f6f…` |
+
+| [`part165`](docs/history/stitchcad-changelog-part165.md) | whole G1-0175 and G1-0174 ledgers | 13 lines, 969 bytes, `sha256:37dd6f4b…` |

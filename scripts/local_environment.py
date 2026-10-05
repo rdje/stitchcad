@@ -34,10 +34,11 @@ def directory(root, relative, *, create=False, missing_ok=False):
         require(not current.is_symlink(), 'symlink store component')
         if not current.exists():
             if create:
-                current.mkdir()
+                current.mkdir(exist_ok=True)
             else:
                 require(missing_ok, 'missing store directory')
                 continue
+        require(not current.is_symlink(), 'symlink store component')
         require(current.is_dir(), 'store component is not a directory')
         require(current.stat().st_dev == device, 'store is on another volume')
         marker = current / '.git'
