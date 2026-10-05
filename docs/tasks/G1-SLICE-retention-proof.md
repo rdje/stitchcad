@@ -148,63 +148,7 @@ Required results complete; ledger57722 confirmatory must be consumed before acti
 
 ## Ordered-name replay history
 
-Whole authored0183 progress text, captured before final acceptance boxes. Authored over
-19c7c93; this text did not exist at that committed baseline. Historical in-flight statements
-are superseded by the current leaf receipts. Identity: 4247B/53L/SHAfd765b8802df75c8680a16b9d3b2545117c2ac613da4ee9bf4926df78a053be8.
-
-STITCHCAD-G1-0183 owns shared/book/live receipts and whole .n09.1 retention in existing sibling; guarded target/ordered-name-plan-*.
-
-Paths also: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-name-scopes.md;docs/book/src/build-and-checks.md;docs/tasks/PLANNING.md;whole live lesson/ledger retention if needed before growth.
-Clean19c7c93/45/brief0/all prior jobs consumed; final0182 ledger57722 terminal0,
-652 real verdicts/9 arms13 pointers. Full ordered entry/201L implementation/253L shared
-namespace/434L public tests/240L book/G1 requirements read. Original18 CASES/two source
-bindings/full8 argv must remain exact; three inputs/19 ordinary files/two mutables/class0.
-Whole19c7 namespace receipt5421B46L/56532–61953/SHAa16229fb copied/verified before
-retirement; original10221B sibling prefix preserved/current15902B/Root60207B.
-D186 actual ordered classifier accepts compiler-note/current macro mention; existing independent
-classifier_controls(strict=True,thread_only=True) raises exact D159 noise failure, diagnostic
-harness0 before edits. Same unanchored regex cause as bounded D185 in another entry; own
-P1 fix now here, legacy body control and full18/current per-body macros required before closure.
-
-Authored before any real replay/failure-block read: A–H are the eight public tests in source
-order. Expected18 sets: ABCDEFGH,ABCDEFGH,ABCDEFG,CDEF,D,D,C,ABCDEFG,ABDF,
-ABCDEFG,CD,ABCDEFG,AG,AG,H,H,D,D. Frozen72 inputs/63 production Rust/unchanged public8.
-Both readonly inputs3 links each/unused aliases/zero child-source-output writes passed0.
-Source/mode plans/current macros shared69521 terminal0 consumed:578reds/35 classifiers/
-40 captures/218 physical refusals. Native75355 exclusive; no overlapping build/probe.
-
-Whole19c7 live DEV218950B6L/1734–2684/SHAaa35800d and CH161463B6L/20682–21145/
-SHA5da8b958 copied/verified before live retirement; prior489/all33/current491 exact.
-Retention38011 terminal0 consumed:491 public reads/13open172sealed/IDs1–186except18/
-whole5421B46L namespace record/current15902B sibling/old10221B prefix/map8145 exact.
-Native75355 still exclusive in flight; original18/current8/source restoration required.
-
-Native75355 terminal0 consumed/all18 authored failed sets exact; independent per-body proof
-refused seven nonmacro events across four real faults and three public tests. D187 owned P1
-now: advance_metadata().unwrap() evaluates inside assert before the macro can guard Err.
-Actual original1/C222:47/E312:43,2/D254:39,3/C222:47/E312:43,10/D255:39/C222:47.
-Before edits, both sources/all72 inputs restored; public Cargo-selected full8 artifact
-ca5b93b2b9615717f031ce56a4828b544b46726f5676b8dddaf9a969509d85d3 executed0 and exact.
-Own crates/sc-core/tests/formula_ordered_names_contract.rs: shared checked advance helper
-asserts acceptance before extraction at every existing true-advance call; preserve eight tests,
-all18 CASES/source bindings/nativeargv/failure sets. Copy whole original19 logs before repeat;
-full fmt/strict Clippy/native gate after owned test guard edits. D186/D187 stay open until proof.
-Own whole D186/D187 reports and earned closures in fresh defects108/109 after verification;
-record new-over19c7 provenance. Retain whole authored0183 replay history in existing retention
-sibling before fresh acceptance-box growth; preserve canonical header and exact body bytes.
-
-Fresh shared22125 terminal0 consumed:578 reds/35 classifiers/40 captures/218 refusals;
-current readonly mode0. Original19 whole logs and metadata copied/byte-verified before reuse.
-New frozen72/63 production Rust/one helper14 public call guards exact0. Native43111 exclusive
-in flight at target/ordered-name-plan-native.log; consume terminal/restoration/per-body proof
-and current full8 before full Rust gate.
-
-Native43111/proof34316 terminal0 consumed:all18 unchanged authored sets/every failed body
-current macro/nonmacro[]/both sources/72 inputs/63 production Rust HEAD/19 logs/current full8
-b43b5e27e01b7599c6232a9abdf152a04710db55443c1c2e4c4a75036b262e62 exact0.
-Full Rust51484 in flight at target/ordered-name-plan-rust-check.log; consume terminal/independent
-703 sum/current inputs-artifact before D186/D187 closures or focused publication.
-
+Whole committed continuity retained in [part225](../history/stitchcad-devnotes-part225.md), including every original separator byte.
 
 ## Ordered-name verification
 
@@ -519,3 +463,25 @@ Prior sibling 51113B/SHA9d0bbfd7a8aa2b9084e476e9da6335170e74e7366039a1ee6e9279ad
 Historical pending statements below precede the actual consumed native proof and artifact.
 
 Whole authored verification/prediction/correction retained in [part224](../history/stitchcad-devnotes-part224.md).
+
+## Builtin completed verification
+
+Whole 12fbfd5b3d8b2b6724265b3b491df52bacb42cda:docs/tasks/G1-SLICE-producers.md bytes 62793–65463, 2670B/15L/SHA1abd0ebf6aeb9ffd878d2f07738487f6e297aa87f60d1d10188bb0fdf07e84ba.
+Prior sibling 51614B/SHAb43c8abfe1d37e81c8166b46a2e41a42792cb0370e3b8a8890398666d8faa50a exact.
+Historical pending ledger below was consumed terminal0/675real/9arms/13pointers before .n11.2 activation.
+
+## STITCHCAD-G1-0187 — builtin acceptance (.n11.1)
+
+- [x] REPRODUCE / ISSUE: original four predicates accept nonthread current-coordinate notes; independent original diagnostic0, target/builtin-plan-original-diagnostics.log. Current builtin legacy-predicate control in python_producer_contract.py fails D159 assertion evidence accepted noise; family children2–4 remain owned.
+- [x] ROOT CAUSE: complete builtins/public bodies and builtin-plan-native-proof.py verify originally refuse case5 ABC vs ABD, rc=1. Independent all21 diagnostic0 finds one mismatch: Within result_kind arity gate fails public283; catalog rows stay fixed3. Original prediction retained whole, other20 exact; D192 unanchored predicate/D193 stale future-role prose located.
+- [x] FIX: builtin_signature_mutations.py resolves3 inputs/22 files/1 mutable before activation, class0, exact original21/Cargo/full5 restoration. python_producer_contract.py complete modes0; current-thread exact path/line/byte-column evidence/custom messages and legacy red. Whole ac005 cleanup2399B9L/hardlink2930B11L/45006B prefix and authored2009B27L retained before retirement.
+- [x] ADDRESSED: python_producer_contract.py rc=0:31runtime/625bodyreds/35classifiers/46captures/238physical refusals;15 independent mode omissions. builtin-plan-readonly-mode.py rc=0:3 links/two unused aliases/zero source-output-child writes; copied victim/input/environment exact. D192 builtin fixed; operator/wanted/call scheduled, family stays open.
+- [x] NO REGRESSION: builtin-plan-native-proof.py verify/artifact rc=0:21 compiled faults/every failed body current macro/22 logs/73 inputs/63 Rust/full5 current artifact4d3e76d7 exact. Grouping1/publication45/retention507 reads/prior503/all47 physical identities/13open179sealed/map/caps/unchanged examples rc=0. No Rust edits; prior703 scoped185a. Corrected case5 ABD is diagnosed, not preauthored.
+- [x] LOCKSTEP: run_book_publication_probes.sh45 pass/0 fail; run_tree_coverage_probes.sh9 pass/0 fail, rc=0,10lanes13trees16siblings/0unowned-orphan-dead. DEV223717B6L/CH166498B6L/D193115 bounds/public reads before retirement; LIVE3/1/4/8 labels unchanged, operator frontier. promotion: declined (existing evidence/whole retention rules). Grammar/400 unchanged; D156/broader D34 remain open.
+
+Staged gate10000 rc=1: task aggregate1500534B,534B above fixed1500000.
+Whole authored2009B27L moved byte-exact to DEV224 before retirement, net1894B
+reduction;51113B prefix preserved. Fresh inventory507/public read0. Rerun gates;
+old ledger22496 terminal0/674real9arms13pointers predates DEV224, scope retained.
+
+Staged69238 all13 doctrines green, rc=0. Ledger40159 confirmation pending.

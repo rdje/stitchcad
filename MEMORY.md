@@ -4,12 +4,12 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Confirm pending ledger40159 via target/builtin-plan-ledger.log; consume terminal
-  result before operator activation. Re-run the public ledger probes if continuity is lost.
-- Then G1-SLICE.5b.4c.h2.b.p.o.f.n11.2: fully read affected operator sources,
-  interfaces/public tests/spec/book, then own complete mode/input/file/mutable plans,
-  D192 strict-thread evidence and exclusive original14/full5 restoration.
-- Resume detail: docs/tasks/G1-SLICE-producers.md .n11.1 acceptance/retention sibling.
-  Complete STITCHCAD-G1-0187 commit workflow before activating the next child.
-- D192 children2–4 remain scheduled; D156/broader D34 remain open. Grammar unchanged.
-  No push:400 cadence. No blockers.
+- Complete STITCHCAD-G1-0188 commit workflow before next activation. All focused
+  jobs consumed: native14/full5/73 inputs, shared641/35/48/246, retention512,
+  publication45/coverage9 and ledger681real/9arms/13pointers pass0.
+- Next G1-SLICE.5b.4c.h2.b.p.o.f.n11.3: fully read wanted implementation/transitive
+  interfaces/public targets/grammar/book, then complete all mode/input/file/mutable
+  plans and D192 thread evidence; preserve original19/joint target order/restoration.
+- Evidence: docs/tasks/G1-SLICE-producers.md .n11.2 and retention sibling.
+  No mutation remains. Finish staged gate/commit/brief0/clean before activation.
+- D192 wanted/call/D156/broader D34 remain open; grammar/400 stay. No push; no blockers.

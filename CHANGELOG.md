@@ -110,6 +110,13 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+## STITCHCAD-G1-0188 - operator plans and D192 evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.2`)
+
+- Three inputs/15 logs/one mutable/class0;14 original faults/every body current macro/full5 exact.
+- Shared641/35/48/246; D192 operator verified, wanted/call owned; D194 UTC correction verified.
+- Whole0187/ordered4596B/DEV226/CH167/authored227/defects116 retained;512 reads exact.
+- Book/live/wanted next; Rust/grammar/400 stay; D156/D34 open.
+
 ## STITCHCAD-G1-0187 - builtin plans and current-thread evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.1`)
 
 - Three inputs/22 logs/one mutable/class0;21 faults/every failed body macro/full5 exact.
@@ -181,13 +188,6 @@ the digests afterwards.
 - Retain whole checked-expression/canonical-recipe/length ledger/D183;477 exact reads/prior474/all72.
 - D179 three fixed/recipe P1 next/D156 open; fixed caps/grammar/engine/400 stay.
 
-## STITCHCAD-G1-0177 - checked expression modes and individual panic evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.2`)
-
-- Two inputs/17 logs/one mutable; classifier zero effects;16 exact ordered cases.
-- Shared508 reds/35 classifiers/32 captures/188 refusals0; native16/every failed body macro/full7 exact.
-- Repair two D182 public preconditions; full fmt/strict Clippy/59groups703pass0.
-- Retain whole canonical/window7-bridge/recipe/rounding/D181-D182;474 exact reads/prior470/all68.
-- D181/D182 closed; D179 two fixed/two P1 next. Grammar/engine/400 unchanged.
 
 
 
@@ -329,3 +329,5 @@ the digests afterwards.
 | [`part165`](docs/history/stitchcad-changelog-part165.md) | whole G1-0175 and G1-0174 ledgers | 13 lines, 969 bytes, `sha256:37dd6f4b…` |
 
 | [`part166`](docs/history/stitchcad-changelog-part166.md) | whole G1-0176 ledger | 6 lines, 498 bytes, `sha256:b78badf1…` |
+
+| [`part167`](docs/history/stitchcad-changelog-part167.md) | whole G1-0177 ledger | 7 lines, 564 bytes, `sha256:0840c5ba…` |

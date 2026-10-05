@@ -443,10 +443,11 @@ Declaration/exact-name preserve native/doctest targets: [details](annexes/formul
 Builtin plans3 inputs/22 logs/1 mutable, classifier0, original21/full5;
 [mode and evidence controls](annexes/formula-builtin-signatures.md#verification-and-remaining-proof).
 
-Built-in and operator-signature entries now use these guards/current test assertion sites, retain
-prepared child stores and rebuild complete restored targets. Their35 compiled faults are macro-site
-reds, with four Rust sources exact and both full five-test targets restored. Classifier-only modes
-check anchors/noise without native dispatch; custom messages pass and labelled expects refuse.
+Builtin/operator guard3 inputs each with compile-time grammar;22/15 logs/1 mutable, classifier0.
+Original21/14 faults/full5/current macros verified. Read-only3 links/unused aliases and
+independent modes are checked:
+[builtin](annexes/formula-builtin-signatures.md#verification-and-remaining-proof),
+[operator](annexes/formula-operator-signatures.md#verification-boundary).
 
 Wanted-signature and call-lookup entries use the same implementation/test/output guards and current
 assertion-site proof. Wanted declares both test sources and preserves its joint target order in fault
@@ -487,7 +488,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and625 actual body faults, with35 calibrated failed-body classifiers,
+controls and641 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

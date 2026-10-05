@@ -664,10 +664,11 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Own D192 builtin repair/D193 book currency;3 inputs incl native compile-time grammar/22 logs/1 mutable/classifier0;original21/full5 unchanged.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.2`
-  Status: `pending`
+  Status: `done`
   Goal: operator complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
   Paths: docs/tasks/artifacts/formula_structure/operator_signature_mutations.py
   Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
+  Own: shared/live/book/whole retention;target/operator-plan-*.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.3`
   Status: `pending`
@@ -710,18 +711,39 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
 
 Whole authored builtin progress/original prediction/correction retained in [retention proof](G1-SLICE-retention-proof.md#builtin-plans--authored-verification-and-prediction-correction).
 
-## STITCHCAD-G1-0187 — builtin acceptance (.n11.1)
+Complete committed builtin verification retained in [retention proof](G1-SLICE-retention-proof.md#builtin-completed-verification); canonical .n11.1 ownership remains above.
 
-- [x] REPRODUCE / ISSUE: original four predicates accept nonthread current-coordinate notes; independent original diagnostic0, target/builtin-plan-original-diagnostics.log. Current builtin legacy-predicate control in python_producer_contract.py fails D159 assertion evidence accepted noise; family children2–4 remain owned.
-- [x] ROOT CAUSE: complete builtins/public bodies and builtin-plan-native-proof.py verify originally refuse case5 ABC vs ABD, rc=1. Independent all21 diagnostic0 finds one mismatch: Within result_kind arity gate fails public283; catalog rows stay fixed3. Original prediction retained whole, other20 exact; D192 unanchored predicate/D193 stale future-role prose located.
-- [x] FIX: builtin_signature_mutations.py resolves3 inputs/22 files/1 mutable before activation, class0, exact original21/Cargo/full5 restoration. python_producer_contract.py complete modes0; current-thread exact path/line/byte-column evidence/custom messages and legacy red. Whole ac005 cleanup2399B9L/hardlink2930B11L/45006B prefix and authored2009B27L retained before retirement.
-- [x] ADDRESSED: python_producer_contract.py rc=0:31runtime/625bodyreds/35classifiers/46captures/238physical refusals;15 independent mode omissions. builtin-plan-readonly-mode.py rc=0:3 links/two unused aliases/zero source-output-child writes; copied victim/input/environment exact. D192 builtin fixed; operator/wanted/call scheduled, family stays open.
-- [x] NO REGRESSION: builtin-plan-native-proof.py verify/artifact rc=0:21 compiled faults/every failed body current macro/22 logs/73 inputs/63 Rust/full5 current artifact4d3e76d7 exact. Grouping1/publication45/retention507 reads/prior503/all47 physical identities/13open179sealed/map/caps/unchanged examples rc=0. No Rust edits; prior703 scoped185a. Corrected case5 ABD is diagnosed, not preauthored.
-- [x] LOCKSTEP: run_book_publication_probes.sh45 pass/0 fail; run_tree_coverage_probes.sh9 pass/0 fail, rc=0,10lanes13trees16siblings/0unowned-orphan-dead. DEV223717B6L/CH166498B6L/D193115 bounds/public reads before retirement; LIVE3/1/4/8 labels unchanged, operator frontier. promotion: declined (existing evidence/whole retention rules). Grammar/400 unchanged; D156/broader D34 remain open.
+Whole authored operator preparation/predictions/verification retained in [part227](../history/stitchcad-devnotes-part227.md).
 
-Staged gate10000 rc=1: task aggregate1500534B,534B above fixed1500000.
-Whole authored2009B27L moved byte-exact to DEV224 before retirement, net1894B
-reduction;51113B prefix preserved. Fresh inventory507/public read0. Rerun gates;
-old ledger22496 terminal0/674real9arms13pointers predates DEV224, scope retained.
+## STITCHCAD-G1-0188 — operator acceptance (.n11.2)
 
-Staged69238 all13 doctrines green, rc=0. Ledger40159 confirmation pending.
+- [x] REPRODUCE / ISSUE: original predicate accepts nonthread current-coordinate notes.
+  Original diagnostic/operator-plan-shared controls reproduce D192; legacy predicate
+  earns D159 assertion evidence accepted noise in python_producer_contract.py, rc=0.
+- [x] ROOT CAUSE: failure-body coordinate matching lacked a thread anchor.
+  Current assertion macro sites/path/line/byte-column reject note/name/expect noise;
+  native-proof.py verify all14 authored failed sets/every body macro, rc=0.
+  Shared edit's four identical sets refused unique-text preflight before writes;
+  AST-offset diagnostic0 and nine disjoint edits resolve that control ambiguity.
+- [x] FIX: operator_signature_mutations.py guards3 inputs/15 files/1 mutable/class0.
+  Original14 CASES/two Cargo argv AST exact, rc=0; finally restores bytes before full5.
+  Whole committed2670B15L receipt and ordered4596B60L retained before retirement;
+  date D194 corrected explicitly without rewriting admitted DEV225, public read0.
+- [x] ADDRESSED: python_producer_contract.py rc=0:31runtime/641bodyreds/35classifiers/
+  48captures/246physical refusals;15 operator mode omissions and D192 legacy red.
+  operator-plan-readonly-mode.py rc=0:3 links/two unused aliases/zero child-source-output
+  writes; victim/inputs/environment exact. D192 wanted/call scheduled; family stays open.
+- [x] NO REGRESSION: native85014/verify/artifact rc=0:all14 authored sets/every failed
+  body macro/15 logs/73 inputs/63 unchanged Rust/current full5 8a3621d4 exact.
+  Retention proof rc=0:512 public reads/prior507/live prior508/all51 physical identities/
+  whole Source reconstruction/nav/map/examples/fixed caps/13open180sealed exact.
+  No Rust edits; prior703 scoped185a; D156/broader D34 remain open.
+- [x] LOCKSTEP: publication45/coverage9 pass0;10lanes13trees16siblings/0unowned-orphan-dead.
+  Whole DEV2254596B/DEV2261315B/CH167564B/authored2272008B/defects116 preflight and
+  public reads precede retirement. LIVE3/1/4/8 labels unchanged; wanted frontier.
+  promotion: declined (existing evidence/whole-record/UTC rules). Grammar/400 stay.
+
+Staged86808 rc=1: LIVE row321B exceeded320 by1; concise311B note preserves scope.
+Ledger20124 terminal0 consumed:681real/9arms/13pointers. All focused jobs consumed.
+
+Staged62745 all13 doctrines green, rc=0; all focused jobs consumed.

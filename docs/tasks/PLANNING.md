@@ -1024,6 +1024,8 @@ D190 whole report/verified closure retained in [part113](../history/stitchcad-de
 D191 whole report/verified closure retained in [part114](../history/stitchcad-defects-part114.md).
 
 - **D192** (P1, active family G1-SLICE.5b.4c.h2.b.p.o.f.n11): all four signature/call predicates accept a nonthread compiler-note panic-location mention at a current assertion coordinate. Repro target/builtin-plan-original-diagnostics.log: independent strict/thread-only control fails D159 assertion evidence accepted noise for builtin/operator/wanted/call.
-Impact: native fault evidence can qualify unrelated notes. Repair each in bounded children1–4 with exact thread/path/line/byte-column evidence, legacy-predicate reds and exclusive actual replay; close only after all four verified. Current child1 now, children2–4 next.
+Impact: native fault evidence can qualify unrelated notes. Repair each in bounded children1–4 with exact thread/path/line/byte-column evidence, legacy-predicate reds and exclusive actual replay; close only after all four verified. Builtin/operator verified; wanted now, call next.
 
 D193 whole report/verified closure retained in [part115](../history/stitchcad-defects-part115.md).
+
+D194 whole report/verified correction retained in [part116](../history/stitchcad-defects-part116.md).

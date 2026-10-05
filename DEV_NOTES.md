@@ -14,6 +14,15 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
+## _(2026-10-05 UTC)_ — operator plans and directed signatures
+
+- Three inputs/15 logs/one mutable/class0; original14/full5 exact. Shared641/35/48/246; omissions15/readonly3 links/two aliases0.
+- All14 preauthored sets/every failed body macro/73 inputs/63 Rust/current5 8a3621d4 exact0. Rust unchanged; prior703 scoped185a.
+- Whole0187/ordered replay/DEV226/CH167/authored227 retained. D194 corrected UTC date explicitly; admitted225 stays immutable. D192 wanted/call next; D156/D34 open.
+- Promotion declined: existing exact evidence/whole-record/UTC verification rules. Book/live aligned; grammar/400 stay.
+
+Whole authored operator continuity: [part227](docs/history/stitchcad-devnotes-part227.md).
+
 ## _(2026-10-05 UTC)_ — builtin plans and diagnostic evidence
 
 - Three inputs/22 logs/one mutable/class0;21 faults/full5/73 inputs/current5 exact0. Shared625/35/46/238, omissions15/readonly0.
@@ -23,18 +32,9 @@ D161 statement and whole proof lesson retained in [part180](docs/history/window7
 
 Whole authored builtin proof: [part224](docs/history/stitchcad-devnotes-part224.md).
 
-## _(2026-10-05 UTC)_ — daily cleanup and concurrent activation
+Whole ordered-name replay: [part225](docs/history/stitchcad-devnotes-part225.md). Seal date correction: UTC2026-10-05; immutable header says October6.
 
-- Frozen1254 selections/11819 files/1058866659B; OS-visible idle/apply/nonactivating residue/tracked exact0. Protected stores/deps/audits retained; native7/WASM/book regenerated.
-- D191 both helpers race on cold mkdir; idempotent creation/post-create link validation fixed. Local56/13 plus8 races/4 reds; CI19/6/shared609/44/230 pass0. Failed preflight and temporary3-red report excluded.
-- Whole7172 exact-name2828B17L/40908B prefix; DEV2221117B/CH165969B/D191114 retained before retirement. Grammar/400 stay; .n11 next; promotion declined: existing locality, boundary and whole-record rules.
-
-## _(2026-10-05 UTC)_ — exact-name plans and thread evidence
-
-- Two inputs/10 logs/one mutable/class0; original9/full7 exact. Shared609/35/44/230;13 omissions/D189 legacy red/readonly3 links/two aliases0.
-- All9 authored sets/every body macro/72 inputs/63 Rust/current7 c127dc5f exact0. No Rust edits; prior703 scoped185a.
-- Whole7e197 declaration3381B21L/27233B prefix, DEV221845B/CH164490B/defects112113/current500/12open177sealed retained0.
-- D190: three rejected candidates retained exact; fresh bounds/terminators/public reads precede retirement. Promotion declined: existing rules. Book/live/.n10 done/.n11 next; D156/D34 open/grammar/400 stay.
+Whole daily-cleanup and exact-name lessons retained in [part226](docs/history/stitchcad-devnotes-part226.md).
 
 Whole declaration plans and negative construction lesson retained in [part223](docs/history/stitchcad-devnotes-part223.md).
 
@@ -212,3 +212,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/window8.md#
 | [`part222`](docs/history/stitchcad-devnotes-part222.md) | whole window8 continuity and protected history lesson | 7 lines, 1117 bytes, `sha256:047dbc9c…` |
 
 | [`part223`](docs/history/stitchcad-devnotes-part223.md) | whole declaration plans and negative construction lesson | 6 lines, 717 bytes, `sha256:581e057e…` |
+
+| [`part226`](docs/history/stitchcad-devnotes-part226.md) | whole daily-cleanup and exact-name lessons | 12 lines, 1315 bytes, `sha256:3b7079ff…` |

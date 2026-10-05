@@ -89,10 +89,20 @@ Exact wanted-catalog descriptors, arities and shared type variables are also ver
 Run mutations alone: fourteen compiled faults must fail at current test assertion sites, then restore the
 exact source. They change tokens, count negation, square/product/comparison results, Boolean or
 mismatched arithmetic, product commutativity, quotient direction/count rules and hint population.
-The direct entry validates implementation/test/output paths before reads or writes, preserves
-prepared child stores, and rebuilds the complete focused target after restoration. Strict standing
-controls exercise actual classifier/site faults; custom messages pass and labelled expects refuse.
-The standing structural runner watches actual anchors; compiler/unwrap/test-name noise refuses.
+The direct entry resolves implementation, public contract and its compile-time grammar chapter
+before reading inputs or activating stores. Ordinary mode plans fourteen fault logs plus the
+restored log and one mutable source. Classifier-only mode plans no files or mutable sources,
+validates all inputs, anchors, stores and directory, and invokes no native child. Read-only
+inputs may have several hard links; unused fault-log aliases do not acquire write authority.
+
+Child calls preserve prepared stores and the original complete five-test target. Replay restores
+source bytes before rebuilding that target, including after failures during mutation replay.
+Qualifying failures must name a current assertion's exact path, line and UTF-8 byte column in a
+failed-body thread panic. Custom macro messages qualify; nonthread notes, compiler errors,
+labelled expect panics, changed coordinates and test-name noise refuse. The structural runner
+watches actual anchors; independent mode controls check each input omission, complete captures,
+physical refusals before reads/writes/dispatch and a real red for the former nonthread predicate.
+Dispatch captures remain separate from exclusive compiled fault replay and restored-artifact proof.
 
 The pure signature metadata establishes operand-kind rules. Name lookup, source locations and
 [ordered metadata scopes](formula-name-scopes.md) keep their own contracts. Function/selector roles,
