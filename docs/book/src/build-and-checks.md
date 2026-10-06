@@ -440,20 +440,22 @@ Classifier-only plans no files/mutables and invokes no native child. Original 17
 [ordered plans](annexes/formula-name-scopes.md#ownership-and-verification); D185–187 repaired.
 
 Declaration/exact-name preserve native/doctest targets: [details](annexes/formula-declarations.md#verification-boundary).
-Builtin plans3 inputs/22 logs/1 mutable, classifier0, original21/full5;
-[mode and evidence controls](annexes/formula-builtin-signatures.md#verification-and-remaining-proof).
-
 Builtin/operator guard3 inputs each with compile-time grammar;22/15 logs/1 mutable, classifier0.
 Original21/14 faults/full5/current macros verified. Read-only3 links/unused aliases and
 independent modes are checked:
 [builtin](annexes/formula-builtin-signatures.md#verification-and-remaining-proof),
 [operator](annexes/formula-operator-signatures.md#verification-boundary).
 
-Wanted-signature and call-lookup entries use the same implementation/test/output guards and current
-assertion-site proof. Wanted declares both test sources and preserves its joint target order in fault
-and restoration calls; actual child controls refuse either target's omission. Their37 compiled faults
-are macro-site reds, five Rust sources remain exact, and full wanted five-plus-five/call five-test
-targets pass after restoration. Prepared stores and classifier-only behavior are retained.
+Wanted plans4 inputs/20 logs/1 mutable, classifier0; original19/joint target order/full5+5
+restore. Both current test sources and compile-time grammar are guarded:
+[wanted plans and proof](annexes/formula-wanted-signatures.md#verification-and-remaining-proof).
+
+Call lookup guards current implementation/tests/output and assertion sites. Its original18/full5
+restore with prepared stores and classifier-only behavior; complete mode plans remain next.
+
+Changelog uniqueness checks changelog archives only; retained task/defect receipts may share
+work-unit headings. Role and duplicate controls watch that boundary;
+all archive descriptors still receive digest and line-count checks.
 
 Expression and reduction entries also guard current tests and require failed-body macro locations.
 All fifteen compiled faults pass that proof; four current Rust sources restore exactly and the
@@ -488,7 +490,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and641 actual body faults, with35 calibrated failed-body classifiers,
+controls and659 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all

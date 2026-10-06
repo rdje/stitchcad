@@ -14,23 +14,19 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-## _(2026-10-05 UTC)_ — operator plans and directed signatures
+## _(2026-10-06 UTC)_ — wanted plans and public consumer attribution
 
-- Three inputs/15 logs/one mutable/class0; original14/full5 exact. Shared641/35/48/246; omissions15/readonly3 links/two aliases0.
-- All14 preauthored sets/every failed body macro/73 inputs/63 Rust/current5 8a3621d4 exact0. Rust unchanged; prior703 scoped185a.
-- Whole0187/ordered replay/DEV226/CH167/authored227 retained. D194 corrected UTC date explicitly; admitted225 stays immutable. D192 wanted/call next; D156/D34 open.
-- Promotion declined: existing exact evidence/whole-record/UTC verification rules. Book/live aligned; grammar/400 stay.
+- Four inputs/20 logs/one mutable/class0; original19/joint Cargo order preserved. Shared659/35/50/256;17 omissions/legacy D192 red/readonly3 links pass0.
+- Native19/full5+5/every executed failed body/current macros/74 inputs/63 Rust exact0; current operator585ab408/builtin4034e067 both pass5.
+- D195: original predictions retained; precisely3 false I attributions corrected after full19 diagnostic. Other16 exact;14 Cargo-skipped targets not credited.
+- Whole0188/DEV229/CH168/authored230/defects117 retained before retirement. D192 call next; D156/D34 open; grammar/400 unchanged.
+- D196 ledger-role repair: actual prior/current/true-duplicate0; real689/11arms/13pointers pass0. Retention519/publication45/coverage9 pass0; sealed bytes exact.
+- Promotion declined: existing evidence granularity and whole-record rules.
 
-Whole authored operator continuity: [part227](docs/history/stitchcad-devnotes-part227.md).
+Whole operator acceptance: [part228](docs/history/stitchcad-devnotes-part228.md).
+Whole authored wanted proof/correction: [part230](docs/history/stitchcad-devnotes-part230.md).
 
-## _(2026-10-05 UTC)_ — builtin plans and diagnostic evidence
-
-- Three inputs/22 logs/one mutable/class0;21 faults/full5/73 inputs/current5 exact0. Shared625/35/46/238, omissions15/readonly0.
-- Original case5 ABC retained; Within arity proves ABD, catalog unchanged; other20 exact. Prior703 scoped185a; Rust unchanged.
-- Whole ac005/task/DEV223/CH166/D193115 retained; book current. D192 children2–4 next; D156/D34 open; grammar/400 stay.
-- Promotion declined: existing evidence/whole retention rules.
-
-Whole authored builtin proof: [part224](docs/history/stitchcad-devnotes-part224.md).
+Whole operator and builtin dated lessons retained in [part229](docs/history/stitchcad-devnotes-part229.md).
 
 Whole ordered-name replay: [part225](docs/history/stitchcad-devnotes-part225.md). Seal date correction: UTC2026-10-05; immutable header says October6.
 

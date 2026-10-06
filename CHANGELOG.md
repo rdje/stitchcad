@@ -110,6 +110,16 @@ the digests afterwards.
 | [`stitchcad-changelog-part110.md`](docs/history/window5.md#stitchcad-changelog-part110md) | G1-0096/G1-0095 ledger | 19 lines, 1502 bytes, `sha256:8a882c4f…` |
 | [`stitchcad-changelog-part111.md`](docs/history/window6.md#stitchcad-changelog-part111md) | G1-0099/0098/0097/0080h | 35 lines, 2644 bytes, `sha256:8cc099ce…` |
 
+| [part168](docs/history/stitchcad-changelog-part168.md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
+
+## STITCHCAD-G1-0189 - wanted plans and D192 evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.3`)
+
+- Four inputs/20 logs/one mutable/class0; original19/joint targets/full5+5 restore0.
+- Shared659/35/50/256;17 omissions/legacy red/readonly3 links/two aliases pass0.
+- Every executed failure/current macro/74 inputs/63 Rust/current both5 exact; D195 corrected3 predictions, other16 exact;14 skipped targets scoped.
+- Whole0188/DEV229/CH168/authored230/D195117 preflight/public read before retirement.
+- D196 role repair/real689/11arms/13pointers pass0; retention519/publication45/coverage9 pass0; call next; grammar/400 stay.
+
 ## STITCHCAD-G1-0188 - operator plans and D192 evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.2`)
 
 - Three inputs/15 logs/one mutable/class0;14 original faults/every body current macro/full5 exact.
@@ -180,13 +190,6 @@ the digests afterwards.
 - Whole statement/DEV213/CH157/D179105/D184106 retained;481 public reads/prior477/all75 exact.
 - D156/.n09 next; archive64/window8 prerequisite before growth; grammar/engine/400 stay.
 
-## STITCHCAD-G1-0178 - checked statement modes and guarded extraction (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.3`)
-
-- Four inputs/23 files/3 mutables; class0 effects;22 original source/count cases.
-- Shared529 reds/35 classifiers/34 captures/198 refusals0; real22/every failed body macro/full7 exact.
-- Four D183 preconditions; full fmt/strict Clippy/59groups703pass0; defect closed.
-- Retain whole checked-expression/canonical-recipe/length ledger/D183;477 exact reads/prior474/all72.
-- D179 three fixed/recipe P1 next/D156 open; fixed caps/grammar/engine/400 stay.
 
 
 

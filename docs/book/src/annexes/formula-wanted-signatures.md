@@ -107,11 +107,31 @@ The two public integration suites are formula_operator_signature_contract and
 formula_builtin_signature_contract. Nineteen actual compiled catalog faults must produce test-body
 assertion failures and restore source exactly. The tracked wanted_signature_mutations.py producer
 under docs/tasks/artifacts/formula_structure is exclusive; standing structural probes watch its
-anchors. The direct entry guards implementation and both current test sources/output before reads
-or writes, preserves prepared child stores, and rebuilds both full focused targets after restoration.
-Both target arguments remain in their declared order for fault and restoration calls. Failed-body
-locations must match current assertion sites; custom messages pass and labelled expect/compiler/
-test-name noise refuses. Strict standing controls catch either target's omission and site faults.
+anchors. Its direct entry plans four inputs: the implementation, both current test sources and
+their compile-time grammar chapter. Ordinary mode declares twenty diagnostic files and one mutable
+implementation; classifier-only mode declares no files or mutable sources and invokes no native child.
+Both modes validate directory/store/input plans before reads or activation:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py
+```
+
+Run native mutations alone, without overlapping builds or probes. Fault and restoration calls
+preserve both target arguments in their original order. Prepared child stores remain intact;
+finally restores exact bytes before rebuilding both full five-test targets. A qualifying failed-body
+thread panic must name a current assertion macro's guarded path, line and UTF-8 byte column.
+Custom messages pass; nonthread notes, extraction, compiler and test-name noise refuse.
+
+Two complete mode captures, seventeen independent omissions, a legacy-predicate red and ten
+physical refusals check the plans and both test-source dispatch paths. Copied read-only mode accepts
+three source hard links and unused log aliases without child, source or output writes.
+The exclusive replay verifies all nineteen compiled failures, every executed target's failed-test
+set and every failed body's current macro. Cargo stops after its first failed target in fourteen
+cases; skipped targets receive no execution credit. Both restored five-test executables are selected
+through current Cargo artifacts and run directly. All seventy-four frozen inputs, sixty-three
+unchanged production Rust sources and twenty local diagnostic files remain exact. Dispatch controls
+and native proof retain their separate scopes.
 
 The [bounded product checker](#bounded-product-expression-checking) pairs these wanted rows with
 every actual operand kind and its normalized owner. Named envelope refusal precedes ordinary

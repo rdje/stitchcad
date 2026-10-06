@@ -671,7 +671,10 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Own: shared/live/book/whole retention;target/operator-plan-*.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.3`
-  Status: `pending`
+  Status: `done`
+  Own STITCHCAD-G1-0189: shared/live/book/whole retention;target/wanted-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-wanted-signatures.md.
+  Own full4-input/20-file/1-mutable/class0 plans and D192 wanted repair; original19/joint target order stays.
+  Own D195/D196: docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh; target/wanted-plan-ledger*; archive-role proof.
   Goal: wanted complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
   Paths: docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py
   Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
@@ -715,35 +718,31 @@ Complete committed builtin verification retained in [retention proof](G1-SLICE-r
 
 Whole authored operator preparation/predictions/verification retained in [part227](../history/stitchcad-devnotes-part227.md).
 
-## STITCHCAD-G1-0188 — operator acceptance (.n11.2)
+Complete committed operator acceptance retained in [part228](../history/stitchcad-devnotes-part228.md); canonical .n11.2 ownership remains above.
 
-- [x] REPRODUCE / ISSUE: original predicate accepts nonthread current-coordinate notes.
-  Original diagnostic/operator-plan-shared controls reproduce D192; legacy predicate
-  earns D159 assertion evidence accepted noise in python_producer_contract.py, rc=0.
-- [x] ROOT CAUSE: failure-body coordinate matching lacked a thread anchor.
-  Current assertion macro sites/path/line/byte-column reject note/name/expect noise;
-  native-proof.py verify all14 authored failed sets/every body macro, rc=0.
-  Shared edit's four identical sets refused unique-text preflight before writes;
-  AST-offset diagnostic0 and nine disjoint edits resolve that control ambiguity.
-- [x] FIX: operator_signature_mutations.py guards3 inputs/15 files/1 mutable/class0.
-  Original14 CASES/two Cargo argv AST exact, rc=0; finally restores bytes before full5.
-  Whole committed2670B15L receipt and ordered4596B60L retained before retirement;
-  date D194 corrected explicitly without rewriting admitted DEV225, public read0.
-- [x] ADDRESSED: python_producer_contract.py rc=0:31runtime/641bodyreds/35classifiers/
-  48captures/246physical refusals;15 operator mode omissions and D192 legacy red.
-  operator-plan-readonly-mode.py rc=0:3 links/two unused aliases/zero child-source-output
-  writes; victim/inputs/environment exact. D192 wanted/call scheduled; family stays open.
-- [x] NO REGRESSION: native85014/verify/artifact rc=0:all14 authored sets/every failed
-  body macro/15 logs/73 inputs/63 unchanged Rust/current full5 8a3621d4 exact.
-  Retention proof rc=0:512 public reads/prior507/live prior508/all51 physical identities/
-  whole Source reconstruction/nav/map/examples/fixed caps/13open180sealed exact.
-  No Rust edits; prior703 scoped185a; D156/broader D34 remain open.
-- [x] LOCKSTEP: publication45/coverage9 pass0;10lanes13trees16siblings/0unowned-orphan-dead.
-  Whole DEV2254596B/DEV2261315B/CH167564B/authored2272008B/defects116 preflight and
-  public reads precede retirement. LIVE3/1/4/8 labels unchanged; wanted frontier.
-  promotion: declined (existing evidence/whole-record/UTC rules). Grammar/400 stay.
 
-Staged86808 rc=1: LIVE row321B exceeded320 by1; concise311B note preserves scope.
-Ledger20124 terminal0 consumed:681real/9arms/13pointers. All focused jobs consumed.
+Whole authored wanted preparation/predictions/correction/verification retained in [part230](../history/stitchcad-devnotes-part230.md).
 
-Staged62745 all13 doctrines green, rc=0; all focused jobs consumed.
+Whole authored D196 ledger-role repair retained in [part231](../history/stitchcad-devnotes-part231.md).
+
+## STITCHCAD-G1-0189 — wanted acceptance (.n11.3)
+
+- [x] REPRODUCE / ISSUE: shared controls reproduce D192; old66525 ledger7pass2fail;
+  all19 diagnostic identifies3 false D195 predictions/74 inputs exact, rc=0.
+- [x] ROOT CAUSE: native-proof.py verify attributes public consumer paths;
+  ledger-role.py prior/current/true-duplicate pinpoints D196 role selection, rc=0.
+  Thread/path/line/UTF8 column match current macros.
+- [x] FIX: wanted4 inputs/20 files/1 mutable/class0; original19/two Cargo argv AST
+  exact0. Ledger NO-DUP selects changelog roles; all-history descriptors remain.
+- [x] ADDRESSED: shared rc=0:659reds/35classifiers/50captures/256refusals;17 omissions/
+  legacy red/readonly3 links/two aliases0. Native4265/verify/artifact19889 rc=0:
+  19 faults/every body/current full5+5/74 inputs/63 Rust exact;14 skipped scoped.
+- [x] NO REGRESSION: python3 -I -B target/wanted-plan-retention-proof.py:519/prior512/
+  all56/eight windows/nav/map/examples/13open182sealed, rc=0. Publication45/coverage9 pass0; zero unowned-orphan-dead.
+  Ledger11718 terminal0:689real/11arms/13pointers; all consumed.
+- [x] LOCKSTEP: live/book/call frontier aligned; whole0188/DEV228–231/CH168/
+  D195117/D196118 preserve prior bytes/headers. Original3 predictions corrected
+  explicitly/other16 exact. Grammar/400 stay; D192 call/D156/D34 open; prior703
+  scoped185a. promotion: declined (existing evidence/whole-record/role rules).
+
+Staged37994 missed invocation; corrected60531 all13 green0.

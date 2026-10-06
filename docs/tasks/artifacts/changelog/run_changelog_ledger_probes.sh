@@ -13,7 +13,7 @@
 #
 # THE FIVE RULES, each an arm on the real tree and an arm on a copy broken in exactly one way:
 #   ORDER      the live window's entry ids appear in commit order, newest first
-#   NO-DUP     no id in the live window is also an entry of a sealed segment (uniqueness)
+#   NO-DUP     no live entry is also in a sealed changelog segment (ledger-local uniqueness)
 #   DESCRIPTOR every sealed segment's recorded sha256 equals the digest of its sealed content, and its
 #              declared line count equals the content's. It runs over EVERY `docs/history/*.md` segment,
 #              not only the changelog's, because the rule is content-agnostic — which is what makes a
@@ -86,7 +86,7 @@ ledger_verdicts() {
   [ -f "$log" ] || { printf 'POINTER FAIL no CHANGELOG.md at %s\n' "$root"; return; }
 
   live="$(grep -oE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$log" | sed 's/^## //')"
-  sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$hist"/*.md 2>/dev/null \
+  sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$hist"/stitchcad-changelog-part*.md 2>/dev/null \
             | sed 's/^## //' | LC_ALL=C sort -u)"
 
   # ORDER ------------------------------------------------------------------
@@ -235,7 +235,7 @@ arm ORDER-RED ORDER "$D" "$D/order.txt" "$DEFAULT_EXEMPT"
 
 # ---------------------------------------------------------------- NO-DUP has teeth
 D="$WORK/dup"; mkroot "$D"
-first_sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$D"/docs/history/*.md | head -1 | sed 's/^## //')"
+first_sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$D"/docs/history/stitchcad-changelog-part*.md | head -1 | sed 's/^## //')"
 printf '\n## %s — sealed, then duplicated back into the live window\n\nbody\n' "$first_sealed" >> "$D/CHANGELOG.md"
 arm DUP-RED NO-DUP "$D" "$REAL_ORDER" "$DEFAULT_EXEMPT"
 
@@ -265,6 +265,32 @@ nl="$(printf '%s\n' "$content" | grep -c '')"
 } > "$D/CHANGELOG.md"
 printf 'STITCHCAD-G9-0001d\n' > "$D/order.txt"
 arm SUFFIX "-" "$D" "$D/order.txt" "$WORK/no_exempt.tsv"
+
+# ---------------------------------------------------------------- retained task headings are not changelog entries
+# D196: the live work-unit may also identify a whole acceptance receipt or defect report.
+# DESCRIPTOR still verifies their complete bytes; NO-DUP judges changelog membership only.
+for role in devnotes defects; do
+  seg="$D/docs/history/stitchcad-$role-part1.md"
+  content="$(printf '## STITCHCAD-G9-0001d — retained %s receipt\n\nbody' "$role")"
+  sha="$(printf '%s\n' "$content" | shasum -a 256 | cut -d' ' -f1)"
+  nl="$(printf '%s\n' "$content" | grep -c '')"
+  {
+    printf '# Sealed archive — independent non-changelog receipt\n\n'
+    printf -- '- **Sealed identity:** %s lines, sha256:%s\n' "$nl" "$sha"
+    printf -- '---\n\n'
+    printf '%s\n' "$content"
+  } > "$seg"
+done
+arm NONLEDGER "-" "$D" "$D/order.txt" "$WORK/no_exempt.tsv"
+# Execute the exact former broad census on that same independent fixture: it must
+# falsely select the live receipt, so the positive control is known to detect D196.
+legacy_sealed="$(grep -hoE '^## STITCHCAD-[A-Za-z0-9]+-[0-9]+[a-z]?' "$D"/docs/history/*.md \
+                 | sed 's/^## //' | LC_ALL=C sort -u)"
+if printf '%s\n' "$legacy_sealed" | grep -qx 'STITCHCAD-G9-0001d'; then
+  ok NONLEDGER-LEGACY-RED "former broad census falsely selects the live task/defect receipt"
+else
+  bad NONLEDGER-LEGACY-RED "the original broad census did not reproduce D196" ""
+fi
 
 # ---------------------------------------------------------------- DESCRIPTOR has teeth
 D="$WORK/digest"; mkroot "$D"
