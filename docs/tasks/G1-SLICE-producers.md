@@ -188,18 +188,21 @@ Whole scope retained in [part276](../history/stitchcad-devnotes-part276.md).
   Goal: Binding fixtures; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
-- [x] REPRODUCE / ISSUE: python_binding_fixture_contract.py captures actual c65831b0 reader/writer bodies without unsafe children; unguarded loader/mkdir gaps fail independently, rc=0, target/bind-plan-control.log. Original functions/numerical/assertion bodies and12 CASES exact.
-- [x] ROOT CAUSE: actual load/effect captures show missing complete replacement/log/nested-child plans; independent real provider loads discriminate class drift, rc=0, bind-plan-control/control39.log. Public pair/loaders/shell/contracts/book reviewed; D156 remains outside this pair.
-- [x] FIX: pure binding_fixture.py provides complete source/copy/selector plans; fresh effect checks/shared provider/source-only restores. python_binding_fixture_contract.py passes21 guard reds/33 physical CLI refusals/16 borrowed refusals, rc=0, bind-plan-control/control39.log; no tracked source mutation.
-- [x] ADDRESSED: real binding_contract.py/binding_mutations.py on Python3.14/3.9 retain80 Fraction/Decimal controls/replay19 zero mismatches/twelve actual assertion reds; all192 inputs/118Rust63 production exact after each, rc=0, bind-plan-real/real39.log. Actual D202/planner omission and D207 mirrored late-log restore red/green pass0.
-- [x] NO REGRESSION: publication45/census238 paths/coverage9/archive28+620/ledger791+11+13/language16 pass, rc=0, bind-plan-{publication,census,coverage,archive,ledger,language}.log. bind-plan-continuity.py proves600 reads/prior597/all36 Source controls/whole278/279/CH189/proof siblings/73 headers/nav/current library/caps, rc=0.
-- [x] LOCKSTEP: book/live/frontier/MEMORY/DEV/CH/ledgers route .a12; python_binding_fixture_contract.py watched in CI environment runner; census/continuity commands pass0, bind-plan-census/continuity.log. Grammar/400 unchanged; promotion: declined (existing provider/restore/retention rules).
-  Final staged gate13 green, rc=0, target/bind-plan-staged-gate.log.
+Whole retained whole0211 task and lesson: [part280](../history/stitchcad-devnotes-part280.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a12`
-  Status: `pending`
+  Status: `done`
+  Own0212: replay pair/new pure provider/control/docs; whole0211 retention280/CH190; target/replay-plan-*.
   Goal: Binding replay fixtures; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+
+- [x] REPRODUCE / ISSUE: python_binding_replay_contract.py uses actual78ebaa7 producing bodies; original delete/mkdir gaps fail independently, rc=0, replay-plan-control.log. All authored assertion bodies/positive/refusal/formatter rows and9 CASES remain exact.
+- [x] ROOT CAUSE: actual captures show effects without complete replacement/selectors/log/nested-child plans; independently loaded provider classes expose drift, rc=0, replay-plan-control/control39.log. Complete pair/public loaders/consumer/book reviewed; D156 outside this pair remains owned.
+- [x] FIX: pure binding_replay_fixture.py reuses public input APIs, plans every replay and refreshes copied/source/selector/log checks; writer preflights child and restores source-only. python_binding_replay_contract.py passes21 guard reds/33 physical CLI/16 borrowed refusals, rc=0, replay-plan-control/control39.log.
+- [x] ADDRESSED: real binding_replay_contract.py/binding_replay_mutations.py on Python3.14/3.9 retain19 verdicts/nine intended assertion reds; all192 inputs/118Rust63 exact after each, rc=0, replay-plan-real/real39.log. Actual D202/planner/provider/nested omissions and D207 mirrored late-log restoration discriminate, rc=0.
+- [x] NO REGRESSION: publication45/census240/coverage9/archive28+622/ledger794+11+13/language16 pass0, replay-plan-{publication,census,coverage,archive,ledger,language}.log. replay-plan-continuity.py proves602 reads/prior600/39 Source identities/whole280/CH190/74 headers/proof siblings/nav/library/fixed caps, rc=0.
+- [x] LOCKSTEP: book/live/MEMORY/DEV/CH/ledgers/frontier route .a13; CI environment runner watches new control. Census and continuity commands pass0, replay-plan-census/continuity.log. Grammar/400 unchanged; promotion: declined (established provider/public delegation/restore/retention rules).
+  Final staged gate13 green, rc=0, target/replay-plan-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a13`
   Status: `pending`

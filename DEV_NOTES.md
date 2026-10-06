@@ -134,23 +134,25 @@ Older formula and producer lessons retained in [part186](docs/history/window7.md
 
 Whole0206 task/lesson retained in [part271](docs/history/window10.md#stitchcad-devnotes-part271md).
 
-## _(2026-10-06 UTC)_ — binding fixture boundaries
+Whole retained whole0211 task and lesson: [part280](docs/history/stitchcad-devnotes-part280.md).
 
-Leaf G1-SLICE.5b.4c.h2.b.p.o.a11 preserves producing-on-load entries while factoring a pure
-binding_fixture.py provider. Complete source/copy/selector/log plans precede effects; the writer
-plans the child before shell changes and restores using source-only authority. Actual provider
-identity matters: independently loaded Refusal classes must be adopted, not mocked into agreement.
+## _(2026-10-06 UTC)_ — replay fixture boundaries
 
-Watched python_binding_fixture_contract.py retains original numerical/function/assertion bodies and
-all12 CASES. Python3.14/3.9 controls show21 guard reds,33 physical CLI refusals,16 repeated producing
-borrowed refusals, D202 actual directory/planner omissions and D207 mirrored late-log restore red/green.
-Real binding_contract.py and binding_mutations.py on both versions pass80 Fraction/Decimal controls,
-replay19/zero mismatches and12 intended assertion reds; all192 inputs/118Rust63 production remain exact.
-Logs target/bind-plan-control/control39/real/real39.log; all rc=0. Grammar/400 cadence unchanged.
+Leaf G1-SLICE.5b.4c.h2.b.p.o.a12 preserves producing reader/writer loads and factors a pure
+binding_replay_fixture.py provider. It reuses public input tree/selector APIs; complete source,
+replacement and log plans precede every replay. The writer preflights its child before shell edits,
+refreshes edit/child/log plans and restores with source-only authority.
 
-Whole0210 task/lesson278, complete window7 investigation279 and oldest0198/0197 ledgers189 are
-exact c65831b0 intervals, admitted and publicly read before live retirement; fixed bounds remain.
-Promotion declined: existing shared-provider, pure-plan, source-only restore and whole-retention rules.
+Watched python_binding_replay_contract.py retains original assertions/authored rows/all9 CASES.
+Python3.14/3.9 capture17 census calls/1140 writes, nine writer calls/28 modeled writes and child-failure
+restore;21 guard reds/33 physical CLI refusals/16 borrowed refusals and actual provider/D202/planner/
+D207/nested old-entry omissions discriminate. Real runs retain19 consumer/formatter/declaration
+verdicts and nine intended compiled assertion reds; all192 inputs/118Rust63 production exact.
+Logs target/replay-plan-control/control39/real/real39.log; all rc=0. Grammar/400 cadence unchanged.
+
+Whole0211 task/lesson/footer280 and oldest0209 ledger190 are exact78ebaa7 intervals; FILE/copy/
+public read precede retirement. Original canonical task header remains live; fixed limits unchanged.
+Promotion declined: established pure provider/public delegation/source-only restore/whole-retention rules.
 
 ## Retained engineering continuity
 
@@ -229,8 +231,11 @@ Whole0209 final evidence retained in [part277](docs/history/stitchcad-devnotes-p
 Whole0210 final evidence retained in [part278](docs/history/stitchcad-devnotes-part278.md).
 
 | [part278](docs/history/stitchcad-devnotes-part278.md) | whole0210 task/lesson | 26 lines, 2430 bytes, sha256:6e9b3223… |
+Whole retained whole0211 task and lesson: [part280](docs/history/stitchcad-devnotes-part280.md).
 
-Final0211: publication45/census238/coverage9/archive28+620/ledger791+11+13/language16 all rc=0,
-target/bind-plan-*.log. Continuity600/prior597/all36 Source identities/whole278/279/CH189/
-73 closed headers/188 pointers/proof siblings/all192 inputs/118Rust63/normative/build/library/nav/caps
-exact, rc=0, bind-plan-continuity.log. Full CI remains due at400; no push or runner claim.
+| [part280](docs/history/stitchcad-devnotes-part280.md) | whole0211 task and lesson | 35 lines, 4015 bytes, sha256:915738b0… |
+
+Final0212: publication45/census240/coverage9/archive28+622/ledger794+11+13/language16 all rc=0,
+target/replay-plan-*.log. Continuity602/prior600/all39 Source identities/whole280/CH190/74 closed
+headers/189 pointers/proof siblings/all192 inputs/118Rust63/normative/build/library/nav/caps exact,
+rc=0, replay-plan-continuity.log. Full CI remains due at400; no push or unobserved runner claim.

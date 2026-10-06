@@ -137,3 +137,45 @@ Invalid standalone or producing borrowed plans print `local-environment: REFUSED
 Borrowed pure provider calls raise that provider's Refusal. Unrelated assertions retain their original
 type. This protects reference-verification producers; production evaluation, geometry, API/MCP and
 release signoff remain separate roadmap work.
+
+## Binding replay plans
+
+The replay reader and its nine-fault writer retain producing-on-load behavior. Their separate
+binding_replay_fixture.py provider is inert on import; fixture_plan() validates the complete plan
+without activation. It reuses the public input loader's tree walker and effective shell selectors,
+with the actual shared provider and Refusal class. Every loader source is checked before delegation.
+
+Each replay() call prepares all book sources, replacement files/directories and replay.log inside
+target/formula_binding_replay. It rechecks the replacement before deleting/copying, copied sources
+before editing the examples or Boolean declaration, sources/selectors before the census child and
+the complete output plan before its log. The formatter's public context is separately rechecked
+before loading. A selected file or FORMULA_PARTS_DIR inside the replacement tree refuses before
+replacement. Unexpected old entries, symlinks, foreign repositories/volumes and nonregular files
+refuse; writable outputs and the writer's shell source must have a single inode link.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/binding_replay_contract.py
+python3 -I -B docs/tasks/artifacts/formula_structure/binding_replay_mutations.py
+python3 -I -B docs/tasks/artifacts/ci_environment/python_binding_replay_contract.py
+```
+
+The reader supplies nineteen real consumer/formatter/declaration verdicts: seventeen copied-book
+census calls plus two invalid Boolean display states. The first call adds fifteen independently
+authored valid rows to the seventeen ordinary examples. The following calls check exact refusal
+reasons for wrong values, unit/kind mismatches, opaque bindings and removed Boolean bindability.
+For example, half a square micrometre binds to1 µm² and displays0.00000001 cm²; reading that stored
+binding twice displays0.00000002 cm². A Boolean name retains Boolean kind and controls if().
+
+The writer plans that entire child fixture and all nine logs before activation or a shell change.
+Source edits, children and logs receive fresh plans. Ordinary and final restoration validate only
+the writable shell, preserving exact restoration when a late unrelated log becomes invalid.
+Run the writer alone, without overlapping readers, builds or gates. Prepared stores, unrelated
+environment values, relative caller selectors and argv remain intact; selector overrides may change
+the authored fixture verdicts. Standalone and producing borrowed refusals print the named
+local-environment diagnostic and exit2; borrowed pure plans raise the actual provider's Refusal.
+
+The watched last command executes actual module bodies, guard removals, isolated filesystem faults,
+independent provider loads and mirrored late-log restoration. Its intercepted children establish
+dispatch; the first two commands supply the separate nineteen numerical/display verdicts and nine
+intended compiled assertion failures. No source literals, grammar, display quantum, diagnostic token
+or production engine rule changes; evaluator/geometry/API/MCP/release proof remains separately owned.

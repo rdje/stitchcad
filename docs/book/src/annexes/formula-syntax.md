@@ -533,8 +533,8 @@ alongside all seventeen original examples, signed Area ties, a sub-half zero, st
 Boolean true/false and conditional reads, wrong values/units/text, opaque-kind refusal, a copied
 Boolean bindability removal and invalid Boolean display state. Nine compiled actual source faults
 must fail these assertions: kind whitelist, Area scale/unit, Boolean truth/state/mismatch, scientific
-formatting, changed stored integer and lost replay kind. Sources restore byte-identically. The
-existing structural suite watches the positive/refusal family; run actual mutations exclusively.
+formatting, changed stored integer and lost replay kind. Sources restore byte-identically. See [plans](formula-documentation-controls.md#binding-replay-plans);
+run mutations alone.
 
 This repairs the book instrument without adding Area/Boolean source literals or a production
 formula evaluator. D84 signed-angle controls below retain a separate proof boundary.

@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0212 — binding replay plans
+
+Leaf G1-SLICE.5b.4c.h2.b.p.o.a12 guards complete replacement/selectors/logs, nested child preflight
+and source-only restoration. Python3.9/3.14 retain19 real verdicts/nine actual assertion reds; watched
+guard/physical/late-log controls pass. Whole0211/oldest0209 retained; origin/provenance libraries next.
+
 ## STITCHCAD-G1-0211 — binding fixture plans
 
 Leaf G1-SLICE.5b.4c.h2.b.p.o.a11 guards pure provider, complete copied-book/selector/log effects and
@@ -125,12 +131,7 @@ Leaf G1-SLICE.5b.4c.h2.b.p.o.f.h10.v observes copied inventory0/actual immutable
 all35 archive files and37dbfcf HEAD exact. Whole0209 receipt/lesson277 retained before live growth.
 Focused publication/retrieval/continuity checks preserve fixed limits; binding fixtures next.
 
-## STITCHCAD-G1-0209 — assertion fixture plans and window10
-
-Leaf G1-SLICE.5b.4c.h2.b.p.o.a10 guards pure loader/reference calls and complete copied-book,
-selector and log effects. Python3.9/3.14 retain262 cases/eight actual body reds and real closure refusal;
-actual captures/guard omissions/physical refusals pass. Window10 keeps55 whole Source files and all
-prior592 logical records; D208 candidate title fixed before recording. Whole receipts/scopes retained.
+Whole retained whole0209 ledger: [part190](docs/history/stitchcad-changelog-part190.md).
 
 Whole whole0208 through0206 ledgers retained in [stitchcad-changelog-part188](docs/history/stitchcad-changelog-part188.md).
 
@@ -342,3 +343,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part188](docs/history/stitchcad-changelog-part188.md) | whole0208 through0206 ledgers | 20 lines, 1283 bytes, sha256:50381f4f… |
 
 | [part189](docs/history/stitchcad-changelog-part189.md) | whole0198 and0197 ledgers | 10 lines, 605 bytes, sha256:032aed1a… |
+
+| [part190](docs/history/stitchcad-changelog-part190.md) | whole0209 ledger | 6 lines, 466 bytes, sha256:794856d3… |
