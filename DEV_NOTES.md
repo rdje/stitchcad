@@ -4,36 +4,37 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
-## _(2026-10-06 UTC)_ — coupled static complete plans
+## _(2026-10-06 UTC)_ — D200 delegated bridge controls
 
-Ordinary execution declares7 files and20 read-only inputs; mutation CLI declares244 files
-and only its4 Rust sources writable. Each build label independently plans7 outputs/current
-inputs before mkdir/Cargo, including the borrowed first-phase label. Cargo-reported libraries,
-metadata and dependency directories receive pure checks before Rustc. Prepared stores remain.
-The original26723 cases,28 Rust/six reference/three annex faults and all child arguments stay.
-Actual captures retain ordinary3/mutation90/early-refusal8/borrowed3 dispatch and restoration.
+Current published bridge control failed1 importing0198 coupled: adapter enter lacked
+mutable_sources and expected empty files/one pure plan. Native entry was green; watched control
+stale. Child .p.v.b1 (original .a01.2.b) repairs it before copied-book implementation. Actual imports check
+readonly baseline7/20, borrowed build7, current library+metadata and pure directory inspection.
+Both CLI modes retain4 children/8 writes; original9 fault definitions/argv exact;40 actual
+coupled faults have named assertion reds, rc=0, fixture-bridge-controls.log (98153).
+Independent committed-original TypeError/current omitted baseline red/actual guard-disable
+admitting the same bad plan prove coverage, rc=0, fixture-adapter-proof.log.
+Fresh native263/10 and26723 current replay, rc=0 (29303), fixture-native-proof.log;
+independent95 frozen/63Rust/producer bytes/9 fault AST/results/current library hash exact0,
+fixture-native-verify.log. Pre-build helper draft confused prior-input source d96 with current
+producer source864; corrected and excluded, as are two consumed diagnostic-order drafts.
+Whole Source864 task1882+lesson2397→253,0189ledger621→178/fulln14scope1069→254 had complete
+FILE/copy/inventory/public reads before live retirement. D200641B authored report absentHEAD
+and earned closure (total1233B) retained whole in122 before closure; no admitted seal edited.
+Shared/profile/Rust unchanged from0198; no full CI rerun or unseen remote verdict claimed.
+Copied-book source untouched. Fixed caps/grammar/engine/400 stay. Promotion: declined; existing
+public-interface/current-source/named-body rules govern. Final focused/gate receipts in task.
+First staged gate refused three draft evidence signatures abbreviated as log0/pass0. Add the
+explicit rc=0 in each earned box and owning leaf heading; keep the gate unchanged. Red draft
+consumed and uncredited; final staged/hook verdicts recorded in the task after passing.
+D201 census red1 arose from our auxiliary .a01.2.b placement under the exact output-owner
+terminal filter; Source864/current/profile-ID-only pass/red/pass67/29 establishes the cause.
+Move it to .p.v.b1 after full authored node700B→255/report662B/complete report+closure1107B→123 retention.
+Census guard/both owner TSVs stay exact; runtime profile audit remains pending. Draft guessed
+owner count excluded; current29 derived. D200 prior header owner remains historical, current
+node explicitly links its old authored scope. All552 prior identities/43 physical bytes stay.
 
-The main static block supplies334 exact source-body omissions, including every initial file,
-source and writable input, each per-build output and current library plans. Physical15 CLI
-refusals precede reads/store activation/effects. Ordinary accepts all4 Rust inputs with3 links
-and ignores an unused mutation-tail alias. Profile4 binding reds/two guard-disable controls pass.
-Fresh python_producer_contract.py:1125 body reds/35 classifiers/58 captures/329 refusals, rc=0.
-
-static_coupled_contract.py --mutations passes baseline/restored26723 and28 Rust/6 reference/3
-annex reds. first_phase_contract.py --mutations passes263 public/reference cases and10 body
-reds. Independent verifier checks93 frozen inputs/63Rust, original case/fault functions/data,
-argv and bridge bytes, both26723 driver oracles,263 phase outputs and current library SHA.
-Both current driver binaries rerun exactly. Native and verifier terminal0; no compiler noise counts.
-Draft diagnostic precedence and helper-counter failures were consumed/fixed and uncredited.
-
-Before growth, whole d96 task1436B+lesson1384B→251,0188ledger443B→177 and completed n13
-scopes2573B→252 were copied/verified/read before live retirement. Prior549 identities/all40
-committed archive bytes stay. Book growth preflight refused before write: Source bytes2400–6034,
-3634B57L sha256:838ab2585ef2a6dfcfb9a82c9c4b548cd67f8003a54157ae67a73ac6b53f1023,
-are copied whole into formula-static-signatures.md before relocation, with both navigation routes.
-Final all552 reads/prior549/all40 bytes/59 Source headers55live4retained/176 pointers/three
-protected proofs/93 frozen/map/caps pass0. Ledger731 real/11 arms/13 pointers pass0.
-Current .n14 closes; .a01.2 copied-book fixtures next. D156, engine/grammar and400 cadence stay.
+Whole0198 task and coupled static lesson retained in [part253](docs/history/stitchcad-devnotes-part253.md).
 
 Owner compiler lesson retained in [part181](docs/history/window7.md#stitchcad-devnotes-part181md).
 
@@ -157,3 +158,9 @@ committed table and original links. Recent records follow; older identities rema
 | [part251](docs/history/stitchcad-devnotes-part251.md) | whole0197 task and statement compiler lesson | 37 lines, 2820 bytes, sha256:2cba3977… |
 
 | [part252](docs/history/stitchcad-devnotes-part252.md) | whole completed n13 scopes | 32 lines, 2573 bytes, sha256:ba323f3c… |
+
+| [part253](docs/history/stitchcad-devnotes-part253.md) | whole0198 task and coupled static lesson | 38 lines, 4279 bytes, sha256:ce1b9a12… |
+
+| [part254](docs/history/stitchcad-devnotes-part254.md) | whole completed n14 scope | 8 lines, 1069 bytes, sha256:03b0a1ef… |
+
+| [part255](docs/history/stitchcad-devnotes-part255.md) | whole authored old control node | 7 lines, 700 bytes, sha256:1c20d098… |

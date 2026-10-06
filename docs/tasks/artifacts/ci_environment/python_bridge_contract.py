@@ -1,5 +1,6 @@
 """Actual first-phase entry captures; intercepted dispatch is separate from native proof."""
 from pathlib import Path
+import ast
 import contextlib
 import io
 import json
@@ -37,7 +38,7 @@ PUBLIC_INPUTS = (
 )
 
 
-def capture(text, *, mutations=False, late_source=False, output_alias=False, early_refusal=None):
+def capture(text, *, mutations=False, late_source=False, output_alias=False, early_refusal=None, coupled_text=None):
     """Compile actual bodies; all entry writes/children intercepted after guarded local setup."""
     sources = (ENTRY, COUPLED, *PUBLIC_INPUTS)
     original = {path: path.read_bytes() for path in (*sources, PROFILE)}
@@ -52,9 +53,20 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
         GOOD['directory'](ROOT, Path(value).relative_to(ROOT).as_posix(), create=True)
     GOOD['directory'](ROOT, OUTPUT.relative_to(ROOT).as_posix(), create=True)
     library = Path(custom['CARGO_TARGET_DIR']) / 'deps/libsc_core_dispatch_fixture.rlib'
-    metadata = json.dumps({'reason': 'compiler-artifact',
-                           'target': {'name': 'sc_core', 'kind': ['lib']},
-                           'filenames': [str(library)]}) + '\n'
+    dependency = library.parent / 'libdependency_dispatch_fixture.rmeta'
+    GOOD['directory'](ROOT, library.parent.relative_to(ROOT).as_posix(), create=True)
+    GOOD['plan_producer'](ROOT, output_files=(library, dependency))
+    library.write_bytes(b'authored bridge library fixture; never compiled')
+    dependency.write_bytes(b'authored bridge metadata fixture; never compiled')
+    metadata = '\n'.join(json.dumps(message) for message in (
+        {'reason': 'compiler-artifact', 'target': {'name': 'dependency', 'kind': ['lib']},
+         'filenames': [str(dependency)]},
+        {'reason': 'compiler-artifact', 'target': {'name': 'sc_core', 'kind': ['lib']},
+         'filenames': [str(library)]})) + '\n'
+    build_filenames = ('cargo-artifacts.json', 'cargo.log', 'rustc.log', 'cases.hex.tsv',
+                       'driver.tsv', 'driver.log', 'driver')
+    baseline_files = tuple(WORK / 'baseline' / name for name in build_filenames)
+    build_plans, library_plans, library_directories = [], [], []
     scope = {'__file__': str(ENTRY), '__name__': '__main__'}
     loaded, planned, entered, calls, writes, directories = [], [], [], [], {}, []
     coupled = {}
@@ -70,22 +82,45 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
             'D156 bridge toolchain changed'
         assert values.get('D156_BRIDGE_UNRELATED') == 'preserved', 'D156 bridge unrelated value lost'
 
-    def plan(root, *, directories=(), output_files=(), sources=()):
+    def plan(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
+        assert root == ROOT and not mutable_sources, 'D200 bridge pure plan has mutable authority'
         before = dict(os.environ)
         result = GOOD['plan_producer'](root, directories=directories, output_files=output_files, sources=sources)
-        assert dict(os.environ) == before and not loaded and not entered and not calls and not writes, \
-            'D156 bridge planning produced effects'
-        assert root == ROOT and directories == (OUTPUT,), 'D156 bridge pre-output plan changed'
-        assert sources == (ENTRY, COUPLED), 'D156 bridge pre-source plan changed'
-        assert output_files == OUTPUT_FILES, 'D156 bridge pre-file plan changed'
-        planned.append(True)
+        if not entered:
+            assert not loaded and not calls and not writes, 'D156 bridge planning produced effects'
+            assert directories == (OUTPUT,), 'D156 bridge pre-output plan changed'
+            assert sources == (ENTRY, COUPLED), 'D156 bridge pre-source plan changed'
+            assert output_files == OUTPUT_FILES, 'D156 bridge pre-file plan changed'
+            assert not planned, 'D200 bridge duplicate module plan'
+            planned.append(True)
+        elif directories:
+            assert entered == ['coupled', 'bridge'], 'D156 bridge directory before guard'
+            assert not calls and not writes and not build_plans, 'D200 bridge build plan was late'
+            assert directories == (OUTPUT,), 'D200 bridge build directory plan changed'
+            assert output_files == tuple(OUTPUT / name for name in build_filenames), 'D200 bridge build file plan changed'
+            assert sources == PUBLIC_INPUTS, 'D200 bridge build source plan changed'
+            build_plans.append(True)
+        else:
+            assert entered == ['coupled', 'bridge'] and len(calls) == 1 and not library_plans, 'D200 bridge library plan was late'
+            assert not output_files and sources == (library, dependency), 'D200 bridge library input plan changed'
+            library_plans.append(True)
+        assert dict(os.environ) == before, 'D200 bridge pure plan changed stores'
         return result
 
-    def enter(root, *, directories=(), output_files=(), sources=()):
+    def library_directory(root, relative, *, create=False, missing_ok=False):
+        assert root == ROOT and not create and not missing_ok, 'D200 bridge library directory plan has effects'
+        assert library_plans == [True], 'D200 bridge library plan omitted'
+        assert len(calls) == 1 and not library_directories, 'D200 bridge library directory plan was late'
+        assert ROOT / relative == library.parent, 'D200 bridge library directory changed'
+        library_directories.append(True)
+        return GOOD['directory'](root, relative)
+
+    def enter(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
+        assert root == ROOT and not mutable_sources, 'D200 bridge borrowed entry has mutable authority'
         if directories == (WORK,):
             assert planned == [True] and not entered and not calls and not writes, 'D156 bridge delegated guard order'
             assert sources == PUBLIC_INPUTS, 'D156 bridge delegated input plan changed'
-            assert not output_files, 'D156 bridge delegated file contract changed'
+            assert output_files == baseline_files, 'D200 bridge delegated file contract changed'
             role = 'coupled'
         else:
             assert root == ROOT and directories == (OUTPUT,), 'D156 bridge producing output plan changed'
@@ -93,7 +128,8 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
             assert output_files == OUTPUT_FILES, 'D156 bridge producing file plan changed'
             assert entered == ['coupled'] and not calls and not writes, 'D156 bridge producing guard order'
             role = 'bridge'
-        result = GOOD['enter_producer'](root, directories=directories, output_files=output_files, sources=sources)
+        result = GOOD['enter_producer'](root, directories=directories, output_files=output_files, sources=sources,
+                                         mutable_sources=mutable_sources)
         entered.append(role)
         environment(result)
         return result
@@ -101,13 +137,17 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
     def load(file, *args, **kwargs):
         path = Path(file)
         if path == PROFILE:
-            return dict(GOOD, plan_producer=plan, enter_producer=enter)
+            return dict(GOOD, plan_producer=plan, enter_producer=enter, directory=library_directory)
         if path == COUPLED:
             assert planned == [True], 'D156 bridge pre-plan omitted'
         else:
             assert entered == ['coupled'] and path in PUBLIC_INPUTS, 'D156 bridge unplanned helper load'
         loaded.append(path)
-        result = original_run_path(file, *args, **kwargs)
+        if path == COUPLED and coupled_text is not None:
+            result = {'__file__': str(COUPLED), '__name__': '<run_path>'}
+            exec(compile(coupled_text, str(COUPLED), 'exec'), result)
+        else:
+            result = original_run_path(file, *args, **kwargs)
         if path == COUPLED:
             coupled.update(result)
         return result
@@ -117,6 +157,8 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
         environment(os.environ)
         assert entered == (['coupled'] if path == WORK else ['coupled', 'bridge']), \
             'D156 bridge directory before guard'
+        if path == OUTPUT:
+            assert build_plans == [True], 'D200 bridge build plan omitted'
         directories.append(path)
 
     def write(path, content, *args, **kwargs):
@@ -137,6 +179,10 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
         environment(kwargs.get('env', {}))
         assert kwargs.get('text') is True and kwargs.get('capture_output') is True, 'D156 bridge native capture changed'
         stage = len(calls)
+        assert build_plans == [True], 'D200 bridge build plan omitted'
+        if stage:
+            assert library_plans == [True], 'D200 bridge library plan omitted'
+            assert library_directories == [True], 'D200 bridge library directory plan omitted'
         calls.append(arguments)
         if stage == 0:
             assert arguments == ['cargo', 'build', '-p', 'sc-core', '--message-format=json'], \
@@ -203,6 +249,7 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
         assert not calls and not writes and not directories and not entered, 'D156 bridge refused after effects'
     else:
         assert planned == [True] and entered == ['coupled', 'bridge'] and len(calls) == 4, 'D156 bridge guard/dispatch coverage'
+        assert build_plans == library_plans == library_directories == [True], 'D200 bridge complete plan coverage'
         assert set(path.name for path in writes) == {
             'cargo-artifacts.json', 'cargo.log', 'rustc.log', 'cases.hex.tsv',
             'driver.tsv', 'driver.log', 'competing.tsv', 'competing.log'}, 'D156 bridge output coverage'
@@ -246,6 +293,44 @@ def main():
             assert str(error) == message, (label, 'D156 unrelated bridge body fault', str(error))
         else:
             raise AssertionError(('D156 bridge body fault survived', label))
+    coupled_text = COUPLED.read_text()
+    tree = ast.parse(coupled_text)
+    build = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'build_and_check')
+    call = next(node for node in ast.walk(build) if isinstance(node, ast.Call)
+                and ast.unparse(node.func) == "PROFILE['plan_producer']"
+                and any(keyword.arg == 'directories' for keyword in node.keywords))
+    build_plan = ast.get_source_segment(coupled_text, call)
+    delegated_faults = [
+        ('borrowed mutable authority', 'mutable_sources=MUTABLE_SOURCES', 'mutable_sources=MUTATED',
+         'D200 bridge borrowed entry has mutable authority'),
+        ('borrowed build plan', build_plan, 'None', 'D200 bridge build plan omitted'),
+        ('borrowed build sources', 'sources=SOURCES)', 'sources=())', 'D200 bridge build source plan changed'),
+        ('current library plan', "PROFILE['plan_producer'](ROOT, sources=(library, *sorted(library_files - {library})))",
+         'None', 'D200 bridge library plan omitted'),
+        ('complete current libraries', 'sources=(library, *sorted(library_files - {library}))',
+         'sources=(library,)', 'D200 bridge library input plan changed'),
+        ('current library directory', "PROFILE['directory'](ROOT, path.relative_to(ROOT).as_posix())",
+         'None', 'D200 bridge library directory plan omitted'),
+    ]
+    delegated_faults.extend(('baseline file omitted %d' % index, 'output_files=OUTPUT_FILES',
+                             'output_files=OUTPUT_FILES[:%d] + OUTPUT_FILES[%d:]' % (index, index + 1),
+                             'D200 bridge delegated file contract changed') for index in range(7))
+    delegated_faults.extend(('borrowed build file omitted %d' % index,
+                             'output_files=tuple(output_dir / name for name in BUILD_FILENAMES)',
+                             'output_files=tuple(output_dir / name for name in BUILD_FILENAMES[:%d] + BUILD_FILENAMES[%d:])' % (index, index + 1),
+                             'D200 bridge build file plan changed') for index in range(7))
+    delegated_faults.extend(('coupled source omitted %d' % index, 'sources=SOURCES,',
+                             'sources=SOURCES[:%d] + SOURCES[%d:],' % (index, index + 1),
+                             'D156 bridge delegated input plan changed') for index in range(20))
+    for label, before, after, message in delegated_faults:
+        assert coupled_text.count(before) == 1, (label, 'D200 actual coupled anchor')
+        try:
+            capture(text, coupled_text=coupled_text.replace(before, after, 1))
+        except AssertionError as error:
+            assert str(error) == message, (label, 'D200 unrelated coupled body fault', str(error))
+        else:
+            raise AssertionError((label, 'D200 coupled body fault survived'))
+    print('D200 delegated controls: %d actual coupled body reds; ordinary7/readonly20/per-build7/current library+metadata/directory plans; borrowed mutation argv has no mutable authority' % len(delegated_faults))
     print('bridge controls: original omitted plan red / two complete four-child eight-output captures / '
           'early output/file-alias and late delegated-source refusals / nine actual body reds; '
           'all nine file destinations planned; sources exact; native proof separate')

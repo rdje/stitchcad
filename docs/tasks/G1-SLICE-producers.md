@@ -61,11 +61,22 @@ coverage; .b.s owns shell/platform/raw book commands and .b.v integration. D156 
   Acceptance: validate bridge sources/directory/nine file destinations without effects before delegated module loading; retain coupled's import behavior/all20 inputs/populations/argv; producing call rechecks22-source union/output/files and retains stores. Actual full captures, early/late/file-alias refusals and body faults; real263 phase outcomes/ten reference reds plus shared26723 baseline, exact sources/current artifact before commit. Copied-book effects belong to .2; remaining destinations are P1 .p.o.f.i next.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a01.2`
-  Status: `pending`
+  Status: `in_progress`
+  Own0200: copied-book/whole retention/live/book;target/fixture-*.
   Goal: copied-book recipe fixtures and real reference consumer; static_recipe_contract.py ownership.
   Acceptance: complete public helper/source/book tree/borrowed-root review before edits; guarded creation/copy/deletion/delegation, original consumer and per-recipe controls, actual captures/body faults and focused real proof.
 
 Whole0195 receipts and original bridge inspection retained in [part247](../history/stitchcad-devnotes-part247.md).
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.v.b1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0199 owns blocking D200 bridge adapter drift before copied-book implementation, plus already-owned whole0198/wanted retention.
+  Paths: docs/tasks/artifacts/ci_environment/python_bridge_contract.py
+  Own live/book/defect/retention proof;target/fixture-*.
+  Own D201: auxiliary topology correction and complete authored old node/report retention.
+  Acceptance: actual bridge TypeError reproduction; complete coupled ordinary/per-build/current-library captures; original4 children/8 writes/nine faults and early refusals stay; current native bytes/artifact unchanged; full focused verification/commit before parent resumes.
+
+Prior authored node .a01.2.b retained whole in [part255](../history/stitchcad-devnotes-part255.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.i`
   Status: `done`
@@ -698,10 +709,9 @@ Whole original completed n13 scopes retained in [part252](../history/stitchcad-d
   Status: `done`
   Goal: complete file-destination plans for coupled static; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/static_coupled_contract.py
-  Own0198: shared/live/book/task/whole retention;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-static-validation.md;target/static-plan-*;target/window9-static-*.
-  Own book containment: docs/book/src/annexes/formula-static-signatures.md;docs/book/src/SUMMARY.md;docs/book/src/topic-index.md; whole Source matrix copy/verify before relocation.
-  Preserve first-phase borrowed build API; complete ordinary/mutation/per-label file plans and read-only/mutable inputs; current libraries; unchanged cases/argv/restoration; actual controls/native proof.
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+Whole original completed n14 scope retained in [part254](../history/stitchcad-devnotes-part254.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup2`
   Status: `done`
@@ -722,11 +732,13 @@ Whole0196 task and recipe compiler lesson retained in [part249](../history/stitc
 
 Whole0197 task and statement compiler lesson retained in [part251](../history/stitchcad-devnotes-part251.md).
 
-- [x] REPRODUCE / ISSUE: d96 static646L/helpers/driver426/bridge216/four Rust/spec/book read; absent file/mutable/library plans owned before repair. static-plan-compiler-controls.py actual main334 named body reds/four captures, rc=0.
-- [x] ROOT CAUSE: ordinary versus mutating CLI and borrowed label need distinct plans. Draft31248 precedence/10668 counter red1 consumed/fixed/uncredited. Book growth preflight refused before write; whole3634B57L Source matrix copied before relocation, rc=0, static-plan-book-retention.json.
-- [x] FIX: entry7/244 files/20 sources/4 mutable only mutation; every borrowed build7/current sources/libraries/directories pure before effects. python_producer_contract.py1125 body reds/35 classifiers/58 captures/329 physical refusals, rc=0, static-plan-shared.log.
-- [x] ADDRESSED: static_coupled_contract.py --mutations baseline26723/28Rust+6reference+3doc/restored26723; first_phase_contract.py --mutations263+10; two driver replays/93frozen/63Rust/original cases/faults/argv/bridge/current library exact, rc=0, static-plan-native{-verify,}.log.
-- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/file120owners67groups37/archive28+CLI571 across552 pass, rc=0, static-plan-{publication,coverage,census,archive}.log. Whole251/252/177 copied/read before retirement; final continuity/ledger follows below.
-- [x] LOCKSTEP: book/live/index/G1/MEMORY next .a01.2; D156 stays open,12open186sealed; fixed caps/engine/grammar/400 stay. promotion: declined (existing complete-plan/current-artifact/whole-retention rules). Final staged receipt follows; no remote verdict claimed.
-0198 final static-plan-retention-proof.py all552/prior549/40/59headers55live4retained/176pointers/3proofs/93frozen/map/caps0; ledger731real/11arms/13pointers0, static-plan-ledger.log.
-0198 staged check_doctrines.sh13 green, rc=0, target/static-plan-staged-gate.log.
+Whole0198 task and coupled static lesson retained in [part253](../history/stitchcad-devnotes-part253.md).
+
+### G1-SLICE.5b.4c.h2.b.p.v.b1
+
+- [x] REPRODUCE / ISSUE: actual Source864 adapter TypeError mutable_sources rc=1, fixture-bridge-diagnostic.log; full adapter/bridge/coupled/helpers/book read before repair.
+- [x] ROOT CAUSE: stale intercepted interface; native producer green. D201 topology Source864/current/profile-ID pass/red/pass67/29; old node255/report123 retained. Drafts diagnostic-order/helper-provenance consumed/fixed/uncredited; final native log rc=0.
+- [x] FIX: readonly7/20 import/borrowed7/current libraries/dirs; original4 children/8 writes/9 faults/argv stay. fixture-bridge-controls.log40 coupled reds+standing controls, rc=0 (98153).
+- [x] ADDRESSED: committed TypeError/intact omission red/actual disabled guard admits it, fixture-adapter-proof.log0; native263/10+26723 replay/independent95 frozen/63Rust/current producer/library exact, fixture-native-proof/verify.log, rc=0.
+- [x] NO REGRESSION: census/publication45/coverage9/archive28+CLI577/ledger738+11arms13/all558 reads pass, rc=0; fixture-{census,publication,coverage,archive,ledger,retention-proof}.log.
+- [x] LOCKSTEP: next .a01.2/book/live;12open188sealed/map/caps rc=0. promotion: declined(existing rules);400/no runner claim; staged13 rc=0, fixture-staged-gate.log.

@@ -4,19 +4,14 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0198 .n14 complete; current recording commit resolves via git log -1 (baseline d96e825).
- All552/prior549/40/header59/pointer176/three proofs/93 frozen/map/caps, ledger731/11/13
- and staged doctrine13 pass0. Commit hooks/postconditions finish the workflow; brief stays
- untracked/empty afterwards. Next queued .a01.2 only after this unit is committed clean.
- No native source fault remains; no push, cadence400 (derive ahead count from Git).
--Static ordinary7/mutation244 files/20 sources/4 mutables only mutation; every label7/current
- sources/libraries/directories pure before effects; original borrowed first-phase API preserved.
--Focused334 body reds/four captures/15 physical refusals; full shared1125/35/58/329 pass0.
--Native baseline/restored26723,28Rust/6reference/3doc and borrowed263+10 pass0; two current
- driver replays/independent93 frozen/63Rust/cases/fault data/functions/argv/bridge/current library0.
--Whole Source task1436B+lesson1384B→251/0188ledger443B→177/scopes2573B→252 retained;
- prior549/40 exact/current552. Whole book matrix3634B57L copied before relocation; both navs.
--Publication45/coverage9/census229paths288checks/file120owners67groups37/archive28+CLI5710.
- Final proof: target/static-plan-retention-proof.py; logs static-plan-*. All caps stay.
--Next queued .a01.2 copied-book recipe; only activate after0198 committed clean. D156/D34
- open/12open186sealed; engine/grammar unchanged.
+-0199 .p.v.b1 closes D200/D201: readonly7/20, borrowed7/current library+metadata/directory plans;
+ original9 plus40 actual coupled faults/two4-child8-write captures pass0. Original committed
+ TypeError/red omission/actual disabled guard admits it; fresh native263/10+26723 replay and
+ independent95 frozen/63Rust/current producer/library exact0; draft failures uncredited.
+-Source864 whole0198 task1882+lesson2397→253,0189ledger621→178/fulln14scope1069→254;
+ D200 authored report641B absentHEAD; report+closure1233B→122. Prior552/all43 exact/no seal edit; old node700→255/D201 report662B/report+closure1107B→123.
+-Next parent .a01.2 copied-book recipe; source313L/signature249L/namespace201L inspected;
+ shell public header/consumer tail/book reviewed; complete shell/helper/effect inspection
+ still required before implementation. No copied-book code changes yet.
+-12open188sealed; D156/D154 repairs continue; fixed caps/engine/grammar/400 unchanged.
+ Cleanup due2026-10-06 22:28UTC; no push before400 or unseen remote verdict.

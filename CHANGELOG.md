@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0199 — repair bridge controls
+- D200 TypeError fixed: readonly7/20, borrowed7/current libraries/dirs captured;4 children/8 writes.
+- Original9 plus40 coupled faults and actual guard-disable proof pass0.
+- Native263/10+26723 replay;95 frozen/63Rust/current producer/library exact0.
+- Whole253/254/255/178 retained; D200/D201 closures122/123. Copied-book next; caps/grammar/400 stay.
+
 ## STITCHCAD-G1-0198 - coupled static plans (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n14`)
 
 - Files7/244,20 inputs/4 mutable; borrowed7/current libraries; original cases/argv stay.
@@ -169,13 +175,6 @@ the digests afterwards.
 - Retention524/publication45/coverage9/ledger695real11arms13pointers pass0.
 - Book/live/next .n12 aligned; D156/D34 open; grammar/400 unchanged.
 
-## STITCHCAD-G1-0189 - wanted plans and D192 evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.3`)
-
-- Four inputs/20 logs/one mutable/class0; original19/joint targets/full5+5 restore0.
-- Shared659/35/50/256;17 omissions/legacy red/readonly3 links/two aliases pass0.
-- Every executed failure/current macro/74 inputs/63 Rust/current both5 exact; D195 corrected3 predictions, other16 exact;14 skipped targets scoped.
-- Whole0188/DEV229/CH168/authored230/D195117 preflight/public read before retirement.
-- D196 role repair/real689/11arms/13pointers pass0; retention519/publication45/coverage9 pass0; call next; grammar/400 stay.
 
 
 
@@ -345,3 +344,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part176](docs/history/stitchcad-changelog-part176.md) | whole0187 builtin ledger | 6 lines, 479 bytes, sha256:09460dee… |
 
 | [part177](docs/history/stitchcad-changelog-part177.md) | whole0188 operator ledger | 6 lines, 443 bytes, sha256:fcb51477… |
+
+| [part178](docs/history/stitchcad-changelog-part178.md) | whole0189 wanted ledger | 7 lines, 621 bytes, sha256:56671d47… |

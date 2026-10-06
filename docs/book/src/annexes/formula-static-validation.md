@@ -473,6 +473,13 @@ are pure and retain prepared stores. Captures exercise ordinary, mutation, early
 with restoration, and borrowed-label calls; actual source omissions and copied physical fixtures
 check the plans independently of the separate native contract-body replay.
 
+The delegated first-phase guard suite checks the same seven-file imported plan and read-only
+sources, then its borrowed seven-file build and current library/metadata/directory plans. Both
+CLI modes retain four intercepted children and eight writes. Nine standing bridge faults and
+40 actual coupled-source omissions must produce their named assertions. The current native
+263-case phase review and ten reference faults remain separate from those dispatch captures.
+
+
 This shared-case contract verifies the exercised expression, statement and complete recipe interfaces.
 D150's competing-phase controls additionally compare263 independently authored token/phase/ordinal
 cases with the actual public API and reference, across four bad literal domains, eight later syntax/
