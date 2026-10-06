@@ -208,26 +208,26 @@ Whole0213 verification retained in [part282](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a14`
   Status: `done`
-  Own0214: four literal entries, watched actual-body/physical controls, ledgers/book/live sync;
-  whole0213 task/lesson and oldest0212 ledger retention before receipt growth.
-  Paths: literal_contract.py; literal_mutations.py; canonical_literal_contract.py;
-  canonical_literal_mutations.py under docs/tasks/artifacts/formula_structure/;
-  docs/tasks/artifacts/ci_environment/python_literal_contract.py; runner/census manifests.
+  Own0214: complete scope and verification in part283.
   Goal: Literal and canonical literal libraries/fixtures; sources and kinds in the watched ledger.
-  Acceptance: public-boundary plan above; actual captures, physical refusals, faults, real suites and exact restoration before commit.
+  Acceptance: verified; complete scope retained in part283.
 
-- [x] REPRODUCE / ISSUE: python_literal_contract.py executes actual665b973 bodies; two unguarded loaders/two mkdir gaps fail independently. Original numeric suffixes/all18 CASES exact;22 actual reds, rc=0, target/literal-plan-control/control39.log.
-- [x] ROOT CAUSE: entry loads and mutation effects precede complete input/file/mutable plans. Actual read/write/child observers pinpoint omissions; complete four entries/public loaders/reference modes/book reviewed. python_literal_contract.py passes22 reds/38 physical fixtures, rc=0.
-- [x] FIX: pure input preflight; writers declare every log/source before activation and refresh edit/child/log plans. Source-only restoration retains source after late unsafe logs. python_literal_contract.py captures6/12 children,19/37 writes and two exact late-log restores, rc=0, control/control39.log.
-- [x] ADDRESSED: python_literal_contract.py --real on Python3.14/3.9 retains60 rows/361 checks,146 canonical checks and six/twelve genuine assertion reds; all15 inputs exact after each child, rc=0, target/literal-plan-real/real39.log. Four pure physical positives retain unused logs/read-only aliases.
-- [x] NO REGRESSION: publication45/census243/coverage9/archive28+627/ledger11+13/language16 all rc=0, target/literal-plan-{publication-final,census,coverage,archive,ledger,language}.log. --continuity verifies whole282/CH193/prior immutable bytes/reference inputs/canonical task graph, rc=0, continuity-final.log.
-- [x] LOCKSTEP: book/live/DEV/CH/MEMORY/ledgers/frontier route .a15; runner watches new control. python_literal_contract.py --continuity passes0; external neutral policies exact, fixed caps/grammar/400 unchanged. promotion: declined (existing pure-input, mutable-path, source-only restore and whole-retention rules). Commit: STITCHCAD-G1-0214.
-  Final staged gate13 green, rc=0, target/literal-plan-staged-gate.log.
+Whole0214 verification retained in [part283](../history/stitchcad-devnotes-part283.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a15`
-  Status: `pending`
+  Status: `done`
+  Own0215: rational pair, actual-body/physical/real controls and runner/census/docs;
+  whole0214 task/lesson and oldest0213 ledger retention before receipt growth.
   Goal: Rational library and fixtures; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+
+- [x] REPRODUCE / ISSUE: python_rational_contract.py --before executes actual0d8ef5a bodies: unguarded loader/mkdir stop at independent observers, rc=0, target/rational-plan-before.log. Full original numeric suffix/all12 CASES remain exact.
+- [x] ROOT CAUSE: standalone load/workspace effects precede complete sources/files/mutable authority. Actual-body capture locates the missing checks; complete pair/public loaders/reference contract/book reviewed. python_rational_contract.py passes11 reds/19 physical fixtures, rc=0, control/control39.log.
+- [x] FIX: pure input plans; complete producing source/log plan before activation; fresh edit/child/log and source-only restore checks. Actual12 children/37 writes, two pure positives and one late-log exact restore pass, rc=0, target/rational-plan-control/control39.log.
+- [x] ADDRESSED: python_rational_contract.py --real on Python3.14/3.9 retains61 Fraction checks/twelve genuine assertion reds; all12 scoped inputs exact after each child, rc=0, target/rational-plan-real/real39.log. Original faults and arguments unchanged; numerical reference scope only.
+- [x] NO REGRESSION: publication45/census244/coverage9/archive28+629/ledger11+13/language16 pass0, target/rational-plan-{publication,census,coverage,archive,ledger,language}.log. --continuity on both Python versions proves whole283/CH194/prior immutable/reference bytes/canonical task graph, rc=0, continuity/continuity39.log.
+- [x] LOCKSTEP: book contract remains public through original anchor/new literal section; relative navigation adapted. Live/MEMORY/ledgers/frontier route .a16; runner watches control. --continuity passes0; D34 index label corrected from665b973. Caps/grammar/400 unchanged; promotion: declined (existing pure/mutable/restore/retention rules). Commit: STITCHCAD-G1-0215.
+  Final staged gate13 green, rc=0, target/rational-plan-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a16`
   Status: `pending`

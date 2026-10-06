@@ -490,3 +490,49 @@ populations. Restoration checks only the mutable source, so a late unsafe log ca
 and physical refusals; `--real` runs the exclusive reference suites and verifies all scoped inputs
 after each child. The proof is numerical reference evidence; the remaining D156 producer audit
 and production binding/evaluation stay separate.
+
+## Reference rational-value boundaries
+
+The D83 width repair refuses reduced exact numerators or denominators wider than 128 bits with
+`formula_domain`, naming the operation, `max_rational_bits=128` and the measured width. Converted
+literal input is checked before quantum rounding: a tiny fraction must not disappear into zero and
+hide an oversized denominator. A long spelling that reduces exactly to zero or one remains legal.
+Each completed numeric expression result is checked in its kind's internal units. A later cancellation
+cannot rescue an oversized earlier sum. Raw cross-products and temporary true-unit scale conversions
+are not values under this bound; only the reduced result counts. Untaken branches are parsed and
+typed, but their arithmetic is not computed. Canonical literal conversion still checks their inputs.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_rational_mutations.sh
+```
+
+Sixty-one independent Fraction controls cover 127/128/129-bit boundaries, denominator width,
+converted input, signs, reduction, scale, selectors and lazy branches. Twelve actual mutations require
+assertion failures and exact restoration; run alone. The earlier literal/arithmetic/angle six/nine/
+seven mutation controls also pass. Angle tests require the exact pole reason: an unrelated rational
+refusal cannot count as evidence for a missing mathematical-domain guard (D88).
+
+D83's scalar/binding/literal controls have a
+[complete boundary review](formula-syntax.md#complete-reference-numeric-boundary-review).
+The syntax annex also retains the signed-angle verification. Individual product literals normalize
+explicitly, individually or across a whole syntax arena, as documented above. Full evaluation remains
+pending; the curated transcendental reference is not a production certificate.
+
+The rational contract entry validates its public loaders and five numerical chapters before loading
+the reference. It creates no stores, files or children, and ignores unused mutation log aliases.
+The mutation entry prepares all twelve logs and declares only the shell reference mutable before
+reading it or creating the workspace. It refreshes complete edit/child/log plans and passes the
+prepared environment to every child. Restoration validates the source alone, retaining exact bytes
+even when a log becomes unsafe after dispatch.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/rational_contract.py
+python3 -I -B docs/tasks/artifacts/formula_structure/rational_mutations.py
+```
+
+Run the mutation command exclusively. `python_rational_contract.py` in
+`docs/tasks/artifacts/ci_environment/` watches actual bodies, guard omissions and physical refusals;
+its `--real` mode separately runs both genuine suites and verifies every scoped input after each.
+The original61 checks and twelve faults retain their numerical meaning; production evaluation and
+the remaining D156 producer audit stay pending.

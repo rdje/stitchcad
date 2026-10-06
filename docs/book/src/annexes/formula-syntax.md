@@ -348,29 +348,8 @@ Product numeric binding/evaluation is pending.
 
 ## Reference rational-value boundaries
 
-The D83 width repair refuses reduced exact numerators or denominators wider than 128 bits with
-`formula_domain`, naming the operation, `max_rational_bits=128` and the measured width. Converted
-literal input is checked before quantum rounding: a tiny fraction must not disappear into zero and
-hide an oversized denominator. A long spelling that reduces exactly to zero or one remains legal.
-Each completed numeric expression result is checked in its kind's internal units. A later cancellation
-cannot rescue an oversized earlier sum. Raw cross-products and temporary true-unit scale conversions
-are not values under this bound; only the reduced result counts. Untaken branches are parsed and
-typed, but their arithmetic is not computed. Canonical literal conversion still checks their inputs.
-
-```bash
-bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
-bash docs/tasks/artifacts/formula_structure/run_rational_mutations.sh
-```
-
-Sixty-one independent Fraction controls cover 127/128/129-bit boundaries, denominator width,
-converted input, signs, reduction, scale, selectors and lazy branches. Twelve actual mutations require
-assertion failures and exact restoration; run alone. The earlier literal/arithmetic/angle six/nine/
-seven mutation controls also pass. Angle tests require the exact pole reason: an unrelated rational
-refusal cannot count as evidence for a missing mathematical-domain guard (D88).
-
-D83's scalar/binding/literal controls and completed scoped boundary review appear below.
-D84 signed-angle verification is reviewed below. [Individual product literals](formula-literals.md)
-now normalize explicitly, individually or across a whole syntax arena; full evaluation remains pending. The curated transcendental reference is not a production certificate.
+The [complete rational-value contract and producer plans](formula-literals.md#reference-rational-value-boundaries)
+retain the61 independent Fraction controls and twelve actual reference faults.
 
 ## Inline documentation language context
 

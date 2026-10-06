@@ -4,6 +4,6 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Next G1-SLICE.5b.4c.h2.b.p.o.a15: rational library and fixtures.
- Read complete public loaders/borrowed calls/modes/tests/book/ledgers before owning0215 changes.
+- Next G1-SLICE.5b.4c.h2.b.p.o.a16: arithmetic and angle libraries/fixtures.
+ Read complete public loaders/borrowed calls/modes/tests/book/ledgers before owning0216 changes.
 -400 push cadence; derive ahead count. Cleanup due2026-10-06 22:28UTC.

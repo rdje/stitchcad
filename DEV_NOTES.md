@@ -3,17 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — literal producer boundaries
+## _(2026-10-06 UTC)_ — rational producer boundaries
 
-Leaf .5b.4c.h2.b.p.o.a14 retains all numerical assertion bodies and six/twelve fault rows.
-Pure entries guard actual inputs before loading; writers preflight sources, mutable authority and
-every log before activation, refresh edit/child/log plans and restore with source-only authority.
-Watched python_literal_contract.py tests original bodies, actual omissions and isolated filesystem
-refusals. Python3.14/3.9 retain361/146 numerical checks and six/twelve real assertion reds; all15
-scoped inputs exact after each child. Capture results are dispatch evidence; real results are separate.
-Whole0213 task/lesson/footer282 and oldest0212 ledger193 retain exact665b973 intervals before
-retirement. Fixed ceilings and grammar unchanged; D156 remains open. Promotion declined: existing
-pure-input, mutable-path, actual-body, source-only-restoration and whole-retention principles.
+Leaf .a15 preserves the61 Fraction checks/all12 CASES. Pure loads validate actual inputs; writers
+declare complete files/mutable sources and refresh edits, children and logs. Source-only restoration
+survives a late unsafe log. Watched actual bodies expose both original gaps and11 omission reds;
+19 physical fixtures include two pure positives and one exact late restoration. Python3.9/3.14
+real suites retain61 checks/twelve reds and all12 input bytes. Whole0214 task/lesson283 and oldest
+0213 ledger194 retain exact0d8ef5a intervals. The rational contract remains public through its
+original syntax anchor and the literal annex; relative navigation is adapted. D34's stale SPINE
+index label now agrees with committed665b973; the mechanical repair remains PLANNING.5.
+Promotion declined: established pure-input/mutable/source-only-restore/whole-retention principles.
 
 Whole0210 task/lesson retained in [part278](docs/history/stitchcad-devnotes-part278.md).
 
@@ -245,3 +245,5 @@ kernel causation. Whole0211 ledger192 retained exactly before growth. G1 resumes
 Whole0213 task and lesson retained in [part282](docs/history/stitchcad-devnotes-part282.md).
 
 | [part282](docs/history/stitchcad-devnotes-part282.md) | whole0213 task and lesson | 39 lines, 4311 bytes, sha256:e20979fe… |
+
+| [part283](docs/history/stitchcad-devnotes-part283.md) | whole0214 task and lesson | 29 lines, 3518 bytes, sha256:84a862d1… |

@@ -20,6 +20,7 @@ docs/tasks/artifacts/ci_environment/python_literal_contract.py	profile	G1-SLICE.
 docs/tasks/artifacts/ci_environment/python_origin_provenance_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_payload_library_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_producer_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/ci_environment/python_rational_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_static_loader_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_structure_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
