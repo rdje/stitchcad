@@ -772,16 +772,19 @@ Whole0208 task/lesson retained in [part275](../history/stitchcad-devnotes-part27
 D208 candidate title repair verified; whole report [130](../history/stitchcad-defects-part130.md); assert-plan-title-proof.log rc=0.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h10.v`
-  Status: `pending`
+  Status: `done`
+  Own0210: target/window10-proof-*; docs/277.
   Goal: After0209 recording commit, verify actual committed window10 catalog-prose refusal, then .a11.
   Acceptance: isolated same-volume copy only; inventory green/actual immutable guard red; root HEAD/control bytes exact, terminal rc0, source-only docs commit before binding fixtures.
 
-### G1-SLICE.5b.4c.h2.b.p.o.a10
+Whole0209 task/lesson retained in [part277](../history/stitchcad-devnotes-part277.md).
 
-- [x] REPRODUCE / ISSUE: python_assertion_fixture_contract.py original import/consumer gaps; thirteen actual guard reds, rc=0, assert-plan-control.log.
-- [x] ROOT CAUSE: loader/copy/log boundaries lacked complete plans; actual body omissions discriminate each, rc=0, python_assertion_fixture_contract.py, control.log.
-- [x] FIX: BOOT4/REF9/full69-source copy/selectors/log plans; shared provider/pure calls/stores/argv preserved, rc=0, control/control39.log.
-- [x] ADDRESSED: provider red/two positives,14 physical/12 CLI/eight borrowed refusals; directory/planner omissions, rc=0, python_assertion_fixture_contract.py, control/control39.log.
-- [x] NO REGRESSION: target/assert-plan-real-proof.py rc=0 on3.14/3.9;262/eight body reds/real closure rc1/all188 inputs118Rust63 exact, real/real39.log; language16 pass0.
-- [x] LOCKSTEP: target/assert-plan-signoff.py rc=0, signoff.log; pub45/census9+9+4/coverage9/archive28+615/ledger11+13 green. All596/prior592/83 Source identities/71 headers67live4retained/proofs/nav/caps exact; D208 fixed130. promotion: declined; .f.h10.v next.
-Final staged gate13 green, rc=0, target/assert-plan-staged-gate.log.
+### G1-SLICE.5b.4c.h2.b.p.o.f.h10.v
+
+- [x] REPRODUCE / ISSUE: target/window10-proof-committed-control.py root/copy baselines0, rc=0, committed-control.log.
+- [x] ROOT CAUSE: window10-proof-committed-control.py inventory admits prose/committed guard requires exact bytes, rc=0, committed-control.log.
+- [x] FIX: window10-proof-committed-control.py copied inventory0/immutable refusal1;35 root files/HEAD exact, rc=0, committed-control.log.
+- [x] ADDRESSED: window10-proof-committed-control.py named committed-file refusal; isolated copy/root unchanged, rc=0, committed-control.log.
+- [x] NO REGRESSION: publication45/coverage9/language16 pass0; continuity597/prior596/all35 controls/72 closed headers/118Rust63/5code5 normative/proofs/nav exact0, window10-proof-*.log.
+- [x] LOCKSTEP: whole0209 three Source intervals5089B55L in277; public read before retirement, rc=0, window10-proof-retain.log. Book/frontier/live .a11; fixed caps/12open195sealed exact0, continuity.log. promotion: declined.
+Final staged gate13 green, rc=0, target/window10-proof-staged-gate.log.

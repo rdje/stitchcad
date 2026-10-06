@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0210 — committed window10 proof
+
+Leaf G1-SLICE.5b.4c.h2.b.p.o.f.h10.v observes copied inventory0/actual immutable refusal1;
+all35 archive files and37dbfcf HEAD exact. Whole0209 receipt/lesson277 retained before live growth.
+Focused publication/retrieval/continuity checks preserve fixed limits; binding fixtures next.
+
 ## STITCHCAD-G1-0209 — assertion fixture plans and window10
 
 Leaf G1-SLICE.5b.4c.h2.b.p.o.a10 guards pure loader/reference calls and complete copied-book,

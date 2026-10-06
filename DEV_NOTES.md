@@ -3,47 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — assertion fixture plans and window10
+## _(2026-10-06 UTC)_ — committed window10 immutability
 
-.a10 reviewed the complete assertion entry, public signature loader, effective shell selectors,
-original runtime book contracts and G1 requirements before edits. BOOT4 guards precede loader import;
-subsequent pure reference calls validate9 sources and use the loader's actual provider/Refusal.
-Complete producing plans cover69 sources, every copied book file/directory and false_closure.log.
-Replacement, copied-input read/edit, shell selectors/source refresh and logging have fresh boundaries.
-Import/contracts/pure plans stay inert; prepared stores, unrelated env, relative selectors and argv stay.
-Original KINDS/CLASSES/eight FAULTS,262 contract cases and every authored assertion remain exact.
+.f.h10.v used the public reader/committed guard on35 exact37dbfcf archive files and an isolated
+same-volume copy. Baseline root/copy verify-retention0. Appending copied catalog prose preserves
+inventory0 but actual verify-retention returns1: committed retained file changed. All35 root inputs,
+HEAD and copied bytes except that intentional suffix remain exact, rc0, window10-proof-committed-control.log.
+No tracked sealed file was written; the nine prior windows remain intact. This closes window10's
+post-recording obligation before binding fixtures. Ordinary retrieval still needs no historical Git.
+Whole0209 task, complete lesson and final evidence retained in277 with full Source byte intervals,
+FILE/fresh-copy/prior596/all35 controls/public read before live retirement; body5089B55L
+sha256:7ace56554d92fcb95c1ae0dc22cc57cf5cf4a025ee00e5b919e9635e5ccacfce.
+Promotion declined: existing actual committed-window/copy-before-retirement protocol.
 
-The watched python_assertion_fixture_contract.py executes actual entry/helper bodies. Six captures
-include pure calls and relative selectors; ordinary producing capture observes26 plans/67 writes/one
-intercepted child.13 guard reds and two original-gap arms discriminate loader/copy planning; the copy
-arm isolates the original consumer body under a guarded import. Actual independent module loads prove
-provider identity/delegated CLI refusal and one adoption red.14 physical refusals/pure-unused-sidebar
-positive,12 CLI/eight repeated borrowed refusals, actual directory guard/planner omissions all pass.
-An initial delete control admitted an old complete plan; adding an independent activation-generation
-checkpoint made the actual omission fail. Initial capture drafts are excluded from acceptance.
-
-Python3.14 and OS3.9 controls pass rc0, target/assert-plan-control/control39.log. Real commands also
-pass0 in assert-plan-real/real39.log:262 independently authored cases, eight intended body assertion
-failures, one actual copied closure rc1 with exact label/80000 versus40000/eps_num1. All188 frozen
-inputs/118 Rust63 production sources stay exact. Source/grammar/token/runtime engine rules unchanged.
-
-Window10 is pinned to117e165. Fresh fixture copy/materialization/all592 public reads and Source55
-proof passed before installation; payload/control copies verified before exact single-linked raw
-retirement. Nine previous windows/master ordered prefix and all83 original physical source identities
-remain reconstructible. D208: copied literal title9 made the uncommitted candidate fail the existing
-actual catalog_title check. A corrected fixture passed that function/source55 proof before candidate
-metadata replacement; all logical bytes and nine committed controls stayed exact. Whole authored
-report130 keeps both title SHA values. No legacy exception or committed-window edit was introduced.
-Its pending immutable negative belongs to .f.h10.v after the recording commit.
-
-Whole0208 receipt/lesson275,0208–0206 ledger188 and four closed original scopes276 preserve exact
-117e165 intervals and canonical fields. FILE/maxline/fresh-copy/prior/public retrieval precede each
-live retirement. An overwide0151 candidate was rejected before sealing; existing ceilings stayed.
-A route draft assumed original navigation rather than its four already-maintained routes, and another
-used the health target for a task part governed by its existing ceiling; both refused before writes.
-Final routes preserve all3 proof siblings exactly, original11675B navigation and current four routes.
-Promotion declined: existing complete-plan/shared-provider/immutable-source/separate label-proof rules.
-Focused final receipts follow below; no full Rust/CI or push (400 cadence).
+Whole0209 task/lesson retained in [part277](docs/history/stitchcad-devnotes-part277.md).
 
 Whole0208 task/lesson retained in [part275](docs/history/stitchcad-devnotes-part275.md).
 
@@ -243,8 +216,11 @@ committed table and original links. Recent records follow; older identities rema
 | [part274](docs/history/window10.md#stitchcad-devnotes-part274md) | whole0207 task/lesson | 61 lines, 5997 bytes, sha256:b45c9d9f… |
 
 | [part275](docs/history/stitchcad-devnotes-part275.md) | whole0208 task/lesson | 60 lines, 5965 bytes, sha256:1e24ecc4… |
+Whole0209 final evidence retained in [part277](docs/history/stitchcad-devnotes-part277.md).
 
-Final focused: pub45/census236paths295checks/coverage9/archive28+615/ledger786verdicts11+13,
-all rc0, target/assert-plan-* logs. Continuity596/prior592/83 Source identities/71headers67live4retained/
-187pointers/proofs/nav/map/12open195sealed/caps exact0; pressure14/22282L/1627473B/699208B.
-Signoff all188 current input identities and receipts exact0, assert-plan-signoff.log.
+| [part277](docs/history/stitchcad-devnotes-part277.md) | whole0209 task/lesson | 55 lines, 5089 bytes, sha256:7ace5655… |
+
+Final0210: pub45/coverage9/language16 rc0; continuity all597/prior596/35 committed controls/72 closed
+headers/118Rust63/5code5 normative/three proof siblings/navigation/map/12open195sealed/caps exact0,
+window10-proof-continuity.log; pressure15/22351L/1633534 logicalB/705269 residentB.
+All five terminal receipts retained, rc0, window10-proof-signoff.log.

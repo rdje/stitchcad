@@ -336,10 +336,12 @@ Maintained links now land on catalog headings, while reader identities remain th
 `bash scripts/history_archive.sh prove-source window2` repeats its source comparison when that
 Git object is available. The bounded reader and aggregate ceilings are unchanged.
 
-The watched archive CLI controls verify every logical read and materialized file against full-file
-identity, plus newest-window digest/member/catalog and cross-window collision refusals. An unrelated
-fixture prose edit remains green for inventory; committed catalogs still refuse edits through the
-retention guard. At pushed f876913, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/36989497775/job/110782133989)
+Watched CLI controls verify logical reads/materialized bytes by full-file identity,
+plus newest-window digest/member/catalog and cross-window collision refusals. In local window10's copy,
+catalog prose keeps inventory green but triggers the committed guard; root bytes stay exact.
+Title checks reject misleading labels.
+
+At pushed f876913, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/36989497775/job/110782133989)
 and [Rust job](https://github.com/rdje/stitchcad/actions/runs/36989497872/job/110782134441)
 completed successfully with all seven/nine steps successful. The archive prerequisite/enforcer and
 fmt/clippy/tests/real WASM passed;140 post-commit local CLI controls also verify newest immutable
