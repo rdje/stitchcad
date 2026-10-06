@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/stitchcad-changelog-part168.md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0193 - input plans/D197/D198 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n12.3`)
+
+- Plan8/8/4/class0; original7/filters/full5/current5/frozen75 exact.
+- Shared738/35/58/300/28 omissions; quoted macro evidence/readonly0 pass.
+- D197/D198 closed; whole reports/0183/242–243/CH172 retained; grammar/400 stay.
+
 ## STITCHCAD-G1-0192 - reduction plans and D197 repair (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n12.2`)
 
 - 4 inputs/5 logs/1 mutable/class0; original4/full6/current6/74 inputs exact0.
@@ -176,18 +182,10 @@ the digests afterwards.
 - Whole receipts/DEV219/CH162/defect110 retained;496 reads/live nav exact.
 - Book/live/exact-name next; Rust/grammar/400 stay, D156/D34 open.
 
-## STITCHCAD-G1-0183 - ordered-name plans and guards (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.2`)
+Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention-proof.md#input-review-changelog-retention---whole0183).
 
-- Three inputs/19 files/two mutables;18 faults/full8/per-body guards/full7030.
-- D186/D187 closed; shared578/35/40/218;493 retained reads exact0.
-- Book/live/.n10 aligned; D156/D34 open; grammar/400 unchanged.
 
-## STITCHCAD-G1-0182 - namespace plans and D185 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.1`)
-
-- Two inputs/18 files/one mutable; class0;17 original cases/full10 exact.
-- Shared560 reds/35 classifiers/38 captures/210 refusals; every real body current macro.
-- D185 closed; whole task/DEV217/CH160/defect107 retained;489 reads exact.
-- Book/live/ordered next; D156/D34 open; Rust/grammar/400 unchanged.
+| [part172](docs/history/stitchcad-changelog-part172.md) | whole G1-0182 ledger | 6 lines, 397 bytes, sha256:84358beb… |
 
 | [part171](docs/history/stitchcad-changelog-part171.md) | whole G1-0181 ledger | 7 lines, 489 bytes, sha256:2d3d625d… |
 

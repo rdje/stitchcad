@@ -68,7 +68,7 @@ decision = (ROOT / 'docs/decisions/decision_canonical-expression-spelling.md').r
 assert '(- child)' in decision and '(^2 child)' in decision
 assert '(^ child count:2)' in decision
 assert 'operator payload' in decision
-assert 'Statement bind/assert serialization' in decision
+# Statement/recipe byte contracts are checked by recipe_byte_contract.py.
 annex = (ROOT / 'docs/book/src/annexes/formula-literals.md').read_text()
 examples = re.findall(r'^(.*?)\s+=>\s+(.*)$', annex, re.M)
 assert len(examples) == 6

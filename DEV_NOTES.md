@@ -14,17 +14,21 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-## _(2026-10-06 UTC)_ — reduction complete modes and D197 repair
+## _(2026-10-06 UTC)_ — input complete modes and D197/D198 closure
 
-- Four inputs incl both compile-time TSVs/5 logs/1 mutable/class0; original4/two argv/exact test literal unchanged.
-- Shared709/35/56/282;17 omissions/legacy D197 red/readonly3 links/two aliases pass0.
-- Native44332/verify/artifact consumed0:original exact selection/5 filtered uncredited/
-  every failed body/current macros/full6/74 inputs/63 Rust exact.
-- Cargo-selected literal f4b7eca1a7f948e2 SHAbcf37f14 passes full6; Fraction176/103/73 witnesses pass0.
-- Whole0191/DEV240/CH171/authored241 copied/read before retirement.
-- D197 expression/reduction verified; input next, family open. Grammar/400 stay.
-- Retention533/prior529/all73/eight windows/publication45/coverage9/ledger706real11arms13pointers consumed0.
-- Promotion declined: existing complete-plan/thread/whole-record rules.
+- Plan8 inputs/8 logs/4 mutable/class0; original7/two argv/filters exact.
+- Shared738/35/58/300;28 omissions/legacy D197 red/readonly3 links/two aliases0.
+- Native10362/verify/artifact consumed0:every failed body/current quoted macro/
+  four filtered tests uncredited/full5/current5/frozen75/63 Rust/four sources exact.
+- Cargo-selected input d4bbcb3fa60b6a78 SHAd830bab7 passes current5,rc=0.
+- D198 stale decision-wording dependency removed; original predicate red/current
+  inventory/reference/original4 interpreter renderer reds/exact restoration pass0.
+- Whole2423 scopes/243 reduction/CH1720182/reports/0183 copied/read before retirement.
+  Archive64 unchanged ceiling; long report bytes live in bounded sibling;closure120.
+- Retention537/prior533/all77/12open185sealed/publication45/coverage9/ledger711real11arms13pointers pass0.
+- D197 all3 verified/D198 closed; D156/D34 open; grammar/400 stay; promotion declined.
+
+Whole reduction dated lesson retained in [part243](docs/history/stitchcad-devnotes-part243.md).
 
 Whole expression dated lesson retained in [part240](docs/history/stitchcad-devnotes-part240.md).
 

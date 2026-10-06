@@ -13,12 +13,11 @@ CANONICAL = ROOT / 'crates/sc-core/src/recipe/canonical_recipe.rs'
 NORMALIZED = ROOT / 'crates/sc-core/src/recipe/normalized_recipe.rs'
 MUTATED = (STATEMENT, ORDERED, CANONICAL, NORMALIZED)
 CONTRACT = ROOT / 'crates/sc-core/tests/formula_recipe_input_review.rs'
-SOURCES = (*MUTATED, CONTRACT)
+WORKED = ROOT / 'docs/tasks/artifacts/formula_structure/canonical_worked_recipe_cases.tsv'
+EXAMPLES = ROOT / 'docs/book/src/spec/formula-language/examples.md'
+REFUSALS = ROOT / 'docs/tasks/artifacts/formula_structure/recipe_refusal_stage_cases.tsv'
+SOURCES = (*MUTATED, CONTRACT, WORKED, EXAMPLES, REFUSALS)
 WORK = ROOT / 'target/recipe_input_review_mutations'
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=SOURCES)
-originals = {path: path.read_bytes() for path in MUTATED}
-WORK.mkdir(parents=True, exist_ok=True)
 worked = 'actual_worked_population_retains_all_headers_global_locations_and_complete_identity'
 refusal = 'later_input_refusals_abort_whole_identity_even_in_untaken_branches_and_call_arguments'
 cases = [
@@ -35,6 +34,16 @@ cases = [
      'combined_maximum_and_each_first_excess_preserve_stage_and_later_context'),
     ('normalized statement privacy', NORMALIZED, '.field("span", &self.span)', '.field("name", &self.name)', worked),
 ]
+assert sys.argv[1:] in [[], ['--classifier-only']]
+CLASSIFIER_ONLY = sys.argv[1:] == ['--classifier-only']
+OUTPUT_FILES = (() if CLASSIFIER_ONLY else
+                tuple(WORK / ('fault-%d.log' % index) for index in range(1, len(cases) + 1)) +
+                (WORK / 'restored.log',))
+MUTABLE_SOURCES = () if CLASSIFIER_ONLY else MUTATED
+runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=MUTABLE_SOURCES)
+originals = {path: path.read_bytes() for path in MUTATED}
+WORK.mkdir(parents=True, exist_ok=True)
 for name, path, before, _, _ in cases:
     assert originals[path].decode().count(before) == 1, (name, 'actual anchor not unique')
 
@@ -48,21 +57,32 @@ def assertion_sites(source, path):
 
 
 def assertion_failure(output):
+    """A failed-body thread panic must name a current guarded assertion macro."""
     parts = output.split(b'\nfailures:\n', 2)
     if len(parts) != 3:
         return False
-    locations = re.finditer(rb'panicked at ([^:\n]+):([0-9]+):([0-9]+):\n', parts[1])
-    return any((match.group(1).decode('utf-8', 'replace'), int(match.group(2)), int(match.group(3)))
-               in ASSERTION_SITES for match in locations)
+    for match in re.finditer(
+            rb'(?m)^thread\b[^\r\n]*? panicked at ([^:\r\n]+):([0-9]+):([0-9]+):\r?$', parts[1]):
+        try:
+            path = match.group(1).decode('utf-8')
+        except UnicodeDecodeError:
+            continue
+        if (path, int(match.group(2)), int(match.group(3))) in ASSERTION_SITES:
+            return True
+    return False
 
 
 ASSERTION_SITES = assertion_sites(CONTRACT.read_text(), CONTRACT.relative_to(ROOT).as_posix())
 assert ASSERTION_SITES, 'focused contract has no assertion sites'
+site = min(ASSERTION_SITES)
+location = ("\nfailures:\nthread 'fixture' panicked at %s:%d:%d:\n" % site).encode()
+assert assertion_failure(location + b'custom macro message\n\nfailures:\nfixture\n')
+assert not assertion_failure(location.replace(b"thread 'fixture'", b'compiler note:') +
+                             b'nonthread location mention\n\nfailures:\nfixture\n')
 assert not assertion_failure(b'\nfailures:\nthread panicked:\nexpect-only\n\nfailures:\nassertion_name\n')
 assert not assertion_failure(b'assertion: compiler output\n')
-assert sys.argv[1:] in [[], ['--classifier-only']]
-if sys.argv[1:] == ['--classifier-only']:
-    print('coupled recipe input fault controls:7 unique actual anchors; current test assertion sites; compiler/expect/passing-name noise refused')
+if CLASSIFIER_ONLY:
+    print('coupled recipe input fault controls:7 unique actual anchors; current test assertion sites; thread/expect/name/compiler noise refused')
     sys.exit(0)
 
 environment = dict(os.environ)
@@ -80,6 +100,7 @@ try:
 finally:
     for path, content in originals.items():
         path.write_bytes(content)
+    assert all(p.read_bytes() == content for p, content in originals.items()), 'recipe inputs not restored'
     restored = subprocess.run(['cargo', 'test', '-p', 'sc-core', '--test', 'formula_recipe_input_review'],
                               cwd=ROOT, env=environment, capture_output=True)
     (WORK / 'restored.log').write_bytes(restored.stdout + restored.stderr)

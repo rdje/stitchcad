@@ -485,3 +485,29 @@ reduction;51113B prefix preserved. Fresh inventory507/public read0. Rerun gates;
 old ledger22496 terminal0/674real9arms13pointers predates DEV224, scope retained.
 
 Staged69238 all13 doctrines green, rc=0. Ledger40159 confirmation pending.
+
+## Input-review defect reports - whole original records
+
+These historical open reports precede verified closure in defects part120.
+Whole bytes remain here because their source lines exceed the archive reader's400-byte line limit; the existing task sibling permits600. Fixed ceilings stay.
+
+Source 14e59a2a6eeb5323b5677dce0f28f7b9d66a4399:docs/tasks/PLANNING.md; bytes 80119–80779; 660B/2L/SHA2569d3bf1130b6a8d474eb808c488912bfe131f10c35e600181cb13c4866a4ba5c8.
+
+- **D197** (P1, active family G1-SLICE.5b.4c.h2.b.p.o.f.n12): original expression/reduction/recipe-input assertion predicates accept nonthread compiler-note locations at current public macros.
+Repro: read-only AST function replay at expression41:5/literal37:17/input54:5 accepts the note; independent strict thread oracle refuses it, while real-thread positive passes, rc=0. Impact: noise can certify a compiled source fault. Expression/reduction .n12.1/.2 verified: original11/4 exact filters/full15/6/current artifacts/74 inputs each exact, rc=0. Fix input next with exact thread/path/line/UTF-8 columns and legacy reds; close only after all three verified.
+
+Authored over 14e59a2a6eeb5323b5677dce0f28f7b9d66a4399; absent from Source HEAD; bytes 80780–81334; 554B/2L/SHA2562025d7ed8117dc1c9125b32fa99b9176598bfa6990d6aafa880bd8b719cfe267.
+
+- **D198** (P1, active .n12.3): canonical inventory requires obsolete decision wording and blocks recipe reference.
+Repro: local_environment.py -- recipe_input_review_reference.py exits1 at canonical_contract_inventory.py:71; current spelling decision states implemented whole identities. Impact: published independent syntax/byte verification cannot run. Own here: remove obsolete statement-availability wording from expression inventory; verify unchanged expression fixtures, original4 renderer faults and actual recipe reference before native replay.
+
+## Input-review changelog retention - whole0183
+
+Whole 14e59a2a6eeb5323b5677dce0f28f7b9d66a4399:CHANGELOG.md bytes 19308–19613/305B/5L/SHA256d2ef7134a65fb33e1d7fc78218dab115d32bcb1afe104e77bf1ad79a1fe3411a.
+Preserved here because the current archive window is at its64-file limit.
+
+## STITCHCAD-G1-0183 - ordered-name plans and guards (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.2`)
+
+- Three inputs/19 files/two mutables;18 faults/full8/per-body guards/full7030.
+- D186/D187 closed; shared578/35/40/218;493 retained reads exact0.
+- Book/live/.n10 aligned; D156/D34 open; grammar/400 unchanged.

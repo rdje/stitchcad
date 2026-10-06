@@ -422,10 +422,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
   Paths: docs/tasks/artifacts/formula_lex/formula_lex_mutations.py;docs/tasks/artifacts/formula_structure/semantic_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
-Two entries read before splitting: lexer9 faults/two mutable sources/ten logs/full13 public
-contracts with the compile-time worked-example book input; semantic10 faults/one mutable source/
-classifier-only mode/full focused target. Preserve parent paths; each child owns exact full input/
-output/current macro plans and real restoration. Grammar and machine-token rules stay unchanged.
+Whole completed n05 split scope retained in [part242](../history/stitchcad-devnotes-part242.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n05.1`
   Status: `done`
@@ -451,14 +448,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
   Paths: docs/tasks/artifacts/formula_structure/recipe_mutations.py;docs/tasks/artifacts/formula_structure/statement_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
-Own whole committed lexer-body retention before terminal split growth. First split helper
-refused size preflight before any tracked write; excluded. Correct order: whole-record copy/
-verify/retire, then fresh guarded ownership split. Original prefix diagnostic0 separately.
-
-Two complete entries reviewed before split: recipe15 ordinary/5 coupled faults/two mutable Rust
-files/full11 public target; statement15 faults/one mutable Rust file/full10 public target. Both
-have classifier-only modes. Each terminal child owns complete input/file/mutable plans/current
-macro evidence/captures/refusals/body controls/exclusive exact restoration and bounded live/book.
+Whole completed n06 split scope retained in [part242](../history/stitchcad-devnotes-part242.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n06.1`
   Status: `done`
@@ -668,7 +658,7 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Own D192 call repair/family closure.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete file-destination plans for expression/reduction/input; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/formula_expression_mutations.py;docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py;docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
@@ -687,9 +677,12 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Own0192: shared/live/book/whole retention;target/reduction-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-literals.md.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12.3`
-  Status: `pending`
+  Status: `done`
   Goal: Coupled input complete modes/inputs/8 logs/4 mutable; original7 filters/full5 restoration.
   Paths: docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
+  Own0193: shared/live/book/whole retention;target/input-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-recipe-inputs.md;D197 final repair/closure; D198 stale inventory dependency repair.
+  Own D198: docs/tasks/artifacts/formula_structure/canonical_contract_inventory.py; target/input-plan-inventory-*.
+  Own whole D197/D198 report retention: docs/tasks/G1-SLICE-retention-proof.md. Whole0183 also.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13`
   Status: `pending`
@@ -737,21 +730,22 @@ Complete committed expression verification retained in [part239](../history/stit
 
 Whole authored reduction preparation/replay retained in [part241](../history/stitchcad-devnotes-part241.md).
 
-## STITCHCAD-G1-0192 — reduction acceptance (.n12.2)
+Complete committed reduction acceptance retained in [part242](../history/stitchcad-devnotes-part242.md); canonical .n12.2 ownership remains above.
 
-- [x] REPRODUCE / ISSUE: actual original note37:17 accepted/current refused/
-  independent thread oracle refused,rc=0; shared709reds/35classifiers.
-- [x] ROOT CAUSE: native-proof.py verify:4 exact selections/every failed body current
-  thread/path/line/byte column,rc=0;5 filtered tests per fault uncredited.
-- [x] FIX:4 inputs/5 files/1 mutable/class0; original4/two argv/test literal exact,rc=0.
-- [x] ADDRESSED: shared56captures/282refusals/17 omissions/readonly3 links/two aliases0;
-  Native44332/verify/artifact consumed0:full6/74 inputs/current6 exact,rc=0.
-- [x] NO REGRESSION: python3 -I -B target/reduction-plan-retention-proof.py:
-  533/prior529/all73/eight windows/13open183sealed,rc=0;publication45/Fraction176 pass0.
-- [x] LOCKSTEP: whole239–241/CH171 exact; book/live agree,rc=0.
-  D197 expression/reduction verified; input next. Grammar/400 stay. promotion: declined.
+0193 prepared: original7/public5/four implementations read; predictions A,C,C,A,A,D,A/
+four filtered per fault. Plan8/8/4/class0;freeze75/current5/D197. DEV242 retains3 whole scopes.
 
-Coverage30610/ledger61607 terminal0:9pass/706real11arms13pointers,rc=0.
-CH draft over cap refused before writes; summary tightened.
+## STITCHCAD-G1-0193 — input acceptance (.n12.3)
 
-Staged99428 all13green,rc=0.
+- [x] REPRODUCE / ISSUE: original note54:5 true/current+oracle false,rc=0.
+- [x] ROOT CAUSE: native-proof.py verify:every failed body/current quoted macro,rc=0.
+- [x] FIX:8 inputs/8 logs/4 mutable/class0;original7/two argv/filters exact,rc=0.
+- [x] ADDRESSED: Native10362/verify/artifact consumed0;full5/current5/frozen75 exact,rc=0.
+- [x] NO REGRESSION: python3 -I -B target/input-plan-retention-proof.py rc=0;
+  shared738/35/58/300/28 omissions/readonly0/reference0/original4 inventory reds0.
+- [x] LOCKSTEP: whole242–243/CH172/reports/0183 exact;book/live sync,rc=0.
+  D197/D198 closed;D156/D34 open. Grammar/400 stay. promotion: declined.
+
+Focused48471/80585/36933/13105 terminal0:537reads/45pub/9coverage/711real11arms13pointers,rc=0.
+
+Staged19468 all13green,rc=0.

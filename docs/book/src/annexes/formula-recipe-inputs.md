@@ -299,13 +299,41 @@ Five new public controls check the actual worked/refusal populations, metadata a
 whole later literal failures, alias/order invariants and combined limits of 4096 statements, 256 nodes and 16 nested conditionals
 with first excesses. The bounded maximum serializes on a 64 KiB stack. Existing tests additionally
 exercise all 4096 assertions with both 256-node operands; neither case is a performance/browser proof.
-Seven actual production faults target metadata, missing later inputs, flattened refusal index,
+### Coupled input runner modes and evidence
+
+Seven original production faults target metadata, missing later inputs, flattened refusal index,
 recipe order, assertion operand identity, combined bound and normalized Debug privacy. Each compiles
-and fails at a current guarded test assertion macro. The entry validates all four implementations,
-current test source and output before reads/writes, preserving prepared stores and original test
-filters. It restores exact sources and rebuilds the full five-test target. D171 rejects labelled
-expect noise. The structural suite watches authored/reference populations and actual anchors;
-all four production sources retain their pre-fault bytes.
+and fails at a current guarded public assertion macro. The direct entry declares eight inputs before
+activation or reads: all four implementations, current test source, complete worked-statement TSV,
+the actual example chapter and refusal-stage TSV. Ordinary mode declares all seven numbered fault
+logs plus restored.log and all four mutable implementations. Classifier-only declares no diagnostic
+files, mutable source or native child; caller-provided valid local stores and unrelated values survive.
+
+Complete mode captures verify original case tuples, source order/bindings, exact Cargo arguments,
+filters, diagnostic bytes, per-case restoration and final byte checks before the full rebuild.
+Twenty-eight actual omissions and the legacy nonthread predicate fail independently. Physical
+controls refuse aliased endpoint logs, each hard-linked mutable source and missing late inputs
+before reads or effects. An actual copied classifier-only entry accepts an input with three hard
+links and two unused log aliases without source/output writes or child dispatch; all inputs, the
+alias victim and environment remain exact. These captures establish dispatch; real compilation
+supplies the native evidence separately.
+
+Failed-body classification requires a thread panic at a current source/path/line/UTF-8 byte-column
+assertion macro. Custom macro messages qualify; compiler-note locations, compiler/expect noise
+and passing test names do not. D197 closes only after expression, reduction and input families
+verify their original controls and current artifacts. D198 removes an obsolete statement-availability
+phrase from the expression inventory; its expression fixtures and renderer remain unchanged.
+Current inventory/reference and all four original interpreter renderer faults pass after repair.
+
+The original seven input Cargo filters are retained, including their original substring semantics;
+each currently selects exactly one public test. The four filtered tests per fault were not executed
+and receive no coverage credit. Independent review inspects every actual failed body, including
+small-stack worker evidence, against current quoted-thread macro locations. Eight local single-link
+logs, seventy-five frozen inputs, sixty-three unchanged production Rust sources, all four mutable
+implementations and the unchanged five-test source restore exactly. The full target passes after
+restoration, and a newly Cargo-selected executable independently runs all five current tests.
+The structural suite watches authored/reference populations and original actual anchors; this
+proof supplies no numerical execution or browser/performance authority.
 
 ```bash
 cargo test -p sc-core --test formula_recipe_input_review

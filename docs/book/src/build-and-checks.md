@@ -461,9 +461,9 @@ Expression retains11 exact faults/full15: [plans and proof](annexes/formula-synt
 Reduction retains4 exact faults/full6: [plans and proof](annexes/formula-literals.md#reduction-runner-modes-and-evidence).
 D170's four explicit expression refusal preconditions remain.
 
-The coupled recipe-input entry guards four implementations and its current test source, preserves
-its original test filters, proves seven current macro-site reds and rebuilds the full five-test target.
-Its five Rust sources restore byte-identically; labelled expect messages cannot certify a fault.
+Coupled input retains7 original filters/full5/current5 and complete8-input/8-log/4-mutable modes:
+[plans and proof](annexes/formula-recipe-inputs.md#coupled-input-runner-modes-and-evidence).
+D197 all3 families and D198 stale inventory dependency are verified.
 
 Recipe/statement owner compiler entries guard their source/output plans before reads or writes;
 the recipe entry also plans this book's example source. Both preserve prepared Cargo/Rustc stores

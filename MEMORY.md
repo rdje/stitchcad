@@ -4,13 +4,14 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- STITCHCAD-G1-0192/.n12.2 reduction complete; commit/postconditions finish this workflow.
-- Four inputs/5 logs/1 mutable/class0; original4/two argv/exact test literal unchanged.
-  Native44332/verify/artifact consumed0:4 exact selections/5 filtered uncredited/
-  every body/current macros/full6/current6/74 inputs/63 Rust exact.
-- Shared709/35/56/282;17 omissions/legacy D197 red/readonly0/Fraction176/103/73 pass0.
-  Retention533/prior529/all73/eight windows/publication45/coverage9/
-  ledger706real11arms13pointers terminal0 consumed.
-- Whole0191/DEV240/CH171/authored241 copied/read before retirement; fixed caps retained.
-- Next .n12.3 input; D197 expression/reduction verified, family stays open until input verified.
-  D156/D34 open; grammar/400 stay; no push.
+- STITCHCAD-G1-0193/.n12.3 input complete; commit/postconditions finish this workflow.
+- Plan8 inputs/8 logs/4 mutable/class0; original7/two argv/filters exact.
+  Native10362/verify/artifact consumed0:every failed body/current quoted macro/
+  four filtered uncredited/full5/current5/frozen75/63 Rust/four sources exact.
+- Shared738/35/58/300;28 omissions/legacy red/readonly0/reference0/original4 inventory reds0.
+- D197 all3 families verified/D198 repaired; whole original reports and0183 in bounded sibling;
+  whole242–243/CH172/closure120 copied/read before retirement; caps stay.
+- Retention48471/publication80585/coverage36933/ledger13105 terminal0 consumed:
+  537/prior533/all77/12open185sealed/45pub/9coverage/711real11arms13pointers.
+- Next .n13 owner compilers; raw archive64 requires owned window9 containment before growth.
+  D156/D34 open; grammar/400 stay; no push; no native/background job pending.
