@@ -25,6 +25,7 @@ docs/tasks/artifacts/ci_environment/local_environment_contract.py	profile	G1-SLI
 docs/tasks/artifacts/ci_environment/producer_census.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
 docs/tasks/artifacts/ci_environment/producer_census_contract.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
 docs/tasks/artifacts/ci_environment/push_cadence_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.n.h3.v.c	Guarded checker/doc source plan; readonly actual Git/count observations, shell-body faults in memory; no fixture repository or source writes.
+docs/tasks/artifacts/ci_environment/python_assertion_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	Watched assertion fixture captures, actual guard omissions and isolated physical refusals; real reference verdicts separate.
 docs/tasks/artifacts/ci_environment/python_bridge_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.o.a01.1	Guarded actual bridge dispatch captures; every output/child intercepted, native proof separate.
 docs/tasks/artifacts/ci_environment/python_inline_context_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	Actual inline copied-book and nested writer boundaries; calibrated guards and physical refusals; real verdicts separate.
 docs/tasks/artifacts/ci_environment/python_input_context_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	Actual input context/copied-book/source-writer captures and refusal control; original verdicts separate.
@@ -57,7 +58,7 @@ docs/tasks/artifacts/formula_structure/angle_math_oracle.py	reference	G1-SLICE.5
 docs/tasks/artifacts/formula_structure/angle_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/formula_structure/arithmetic_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p	Dynamic loader or child delegation retained with source; transitive effect/profile audit pending.
 docs/tasks/artifacts/formula_structure/arithmetic_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
-docs/tasks/artifacts/formula_structure/assertion_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/formula_structure/assertion_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Pure source checks/shared loader Refusal and complete copied-book/selectors/log plan; fresh replacement/child/log boundaries; original262/eight faults retained.
 docs/tasks/artifacts/formula_structure/binding_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/formula_structure/binding_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/formula_structure/binding_replay_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.

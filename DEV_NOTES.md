@@ -3,79 +3,71 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — inline context and nested classifier fixture plans
+## _(2026-10-06 UTC)_ — assertion fixture plans and window10
 
-Original inline fixtures could replace their book without complete source/output plans; the writer
-read/created fixtures on import and changed the classifier before validating its child's replacement.
-Both original gaps fail python_inline_context_contract.py; original13/five cases and all assertions
-compare exactly against6df9f5c ASTs after removing the added guards/environment adapters.
-D156 remains open for later producers. This leaf closes only .a09; classifier/grammar stay exact.
+.a10 reviewed the complete assertion entry, public signature loader, effective shell selectors,
+original runtime book contracts and G1 requirements before edits. BOOT4 guards precede loader import;
+subsequent pure reference calls validate9 sources and use the loader's actual provider/Refusal.
+Complete producing plans cover69 sources, every copied book file/directory and false_closure.log.
+Replacement, copied-input read/edit, shell selectors/source refresh and logging have fresh boundaries.
+Import/contracts/pure plans stay inert; prepared stores, unrelated env, relative selectors and argv stay.
+Original KINDS/CLASSES/eight FAULTS,262 contract cases and every authored assertion remain exact.
 
-The fixture validates BOOT3 on import. It plans the whole65-file book, one replacement tree and actual
-selectors before activation, rejects old unexpected entries/links/hardlinks/selected file or directory
-aliases, and rechecks deletion/copied inputs/child source and selectors. Pure fixture_plan(activate=False)
-returns the complete plan without effects; producing calls preserve prepared stores, argv and other
-environment values. Relative selectors match the child's repository working directory. Caller
-selector overrides can change the authored verdicts; they are preserved, never silently rewritten.
+The watched python_assertion_fixture_contract.py executes actual entry/helper bodies. Six captures
+include pure calls and relative selectors; ordinary producing capture observes26 plans/67 writes/one
+intercepted child.13 guard reds and two original-gap arms discriminate loader/copy planning; the copy
+arm isolates the original consumer body under a guarded import. Actual independent module loads prove
+provider identity/delegated CLI refusal and one adoption red.14 physical refusals/pure-unused-sidebar
+positive,12 CLI/eight repeated borrowed refusals, actual directory guard/planner omissions all pass.
+An initial delete control admitted an old complete plan; adding an independent activation-generation
+checkpoint made the actual omission fail. Initial capture drafts are excluded from acceptance.
 
-The writer validates BOOT4 before loading the inert fixture module and adopts its Refusal identity.
-Its producing plan merges the child's complete plan:69 baseline sources,65 copied files/five logs and
-one writable classifier. Child preflight runs before activation or source changes, then each source
-change/child/log gets a fresh plan. Both restoration paths validate only that writable source (D207).
-An unexpected child entry refuses before effects; disabling the actual child old-entry guard admits
-that same entry through the writer's pure planner, with the classifier/sentinel unchanged.
+Python3.14 and OS3.9 controls pass rc0, target/assert-plan-control/control39.log. Real commands also
+pass0 in assert-plan-real/real39.log:262 independently authored cases, eight intended body assertion
+failures, one actual copied closure rc1 with exact label/80000 versus40000/eps_num1. All188 frozen
+inputs/118 Rust63 production sources stay exact. Source/grammar/token/runtime engine rules unchanged.
 
-Current controls3.14/OS3.9, target/inline-plan-control/control39.log, rc=0: nine captures,20 actual guard
-reds/two original gaps; full13-copy calls perform858 real copied writes/13 intercepted children,
-writer16 modeled writes/five children, failure path restores the source. Fourteen physical refusals,
-unused-sidebar inert-import positive,14 CLI/eight repeated borrowed refusals, actual directory alias
-and profile planner omissions discriminate. Real mirrored late-log failure produces CLI2; full-plan
-restoration variants fail the source-byte assertion, source-only guards restore; mirrors/actual source
-exact. A draft symlink fixture expected the generic message instead of the earlier copied-book
-refusal; corrected from observed output before signoff. The initial retention draft's old receipt
-suffix assertion failed before any write; the actual6df source boundary supplied the correct suffix.
+Window10 is pinned to117e165. Fresh fixture copy/materialization/all592 public reads and Source55
+proof passed before installation; payload/control copies verified before exact single-linked raw
+retirement. Nine previous windows/master ordered prefix and all83 original physical source identities
+remain reconstructible. D208: copied literal title9 made the uncommitted candidate fail the existing
+actual catalog_title check. A corrected fixture passed that function/source55 proof before candidate
+metadata replacement; all logical bytes and nine committed controls stayed exact. Whole authored
+report130 keeps both title SHA values. No legacy exception or committed-window edit was introduced.
+Its pending immutable negative belongs to .f.h10.v after the recording commit.
 
-Exclusive real3.14/3.9 runs, target/inline-plan-real/real39.log, rc=0: all13 independently authored
-verdicts and five original classifier assertion reds. Terminal traceback frames name actual contract
-assertions; no SyntaxError or profile refusal counts as a red. All188 frozen inputs/118Rust63
-production stay byte-exact after each child. Captured dispatch and real reference evidence are distinct.
+Whole0208 receipt/lesson275,0208–0206 ledger188 and four closed original scopes276 preserve exact
+117e165 intervals and canonical fields. FILE/maxline/fresh-copy/prior/public retrieval precede each
+live retirement. An overwide0151 candidate was rejected before sealing; existing ceilings stayed.
+A route draft assumed original navigation rather than its four already-maintained routes, and another
+used the health target for a task part governed by its existing ceiling; both refused before writes.
+Final routes preserve all3 proof siblings exactly, original11675B navigation and current four routes.
+Promotion declined: existing complete-plan/shared-provider/immutable-source/separate label-proof rules.
+Focused final receipts follow below; no full Rust/CI or push (400 cadence).
 
-Whole0207 receipt/lesson274 and oldest0205/0204/0203 ledgers187 are exact6df intervals, complete FILE,
-fresh single-inode copies, prior590/all81 physical controls and public reads before live retirement.
-Current592/64 working Markdown; no sealed edit or ceiling increase. Three protected proof siblings,
-closed Source headers, all prior records/navigation and current library remain separately checked.
+Whole0208 task/lesson retained in [part275](docs/history/stitchcad-devnotes-part275.md).
 
-Focused closure: publication45, language16, census9/9/4 plus235 Git paths/126 file rows, coverage9,
-archive28+611 CLI/all592 reads, ledger781 real verdicts/11 arms plus13 pointer controls, all terminal
-rc=0 in target/inline-plan-{publication,language,census,coverage,archive,ledger,census-cli,continuity}.log.
-Continuity: prior590/all81 physical controls,70 original closed headers,186 CH pointers, navigation
-11675/four routes, three proof siblings/current library/caps exact; pressure64/21887L/1604763 logicalB/
-778854 residentB. Known P3 ls/head SIGPIPE noise recurred; existing .b.s ownership remains. No new defect.
+Whole0207 task/lesson retained in [part274](docs/history/window10.md#stitchcad-devnotes-part274md).
 
-Promotion declined: applies existing boundary, nested-effect, calibrated counterfactual, source-only
-restoration and whole-record retention rules. The new control is watched by the environment runner.
+Whole0205 task/lesson/scope retained in [part270](docs/history/window10.md#stitchcad-devnotes-part270md).
 
-Whole0207 task/lesson retained in [part274](docs/history/stitchcad-devnotes-part274.md).
+Whole0204 task/lesson/scope retained in [part269](docs/history/window10.md#stitchcad-devnotes-part269md).
 
-Whole0205 task/lesson/scope retained in [part270](docs/history/stitchcad-devnotes-part270.md).
+Whole0203 task and geometry/call lesson retained in [part267](docs/history/window10.md#stitchcad-devnotes-part267md).
 
-Whole0204 task/lesson/scope retained in [part269](docs/history/stitchcad-devnotes-part269.md).
+Whole0202 task and pure payload lesson retained in [part265](docs/history/window10.md#stitchcad-devnotes-part265md).
 
-Whole0203 task and geometry/call lesson retained in [part267](docs/history/stitchcad-devnotes-part267.md).
+Whole0201 task/lesson prefix retained in [part262](docs/history/window10.md#stitchcad-devnotes-part262md).
 
-Whole0202 task and pure payload lesson retained in [part265](docs/history/stitchcad-devnotes-part265.md).
+Complete0201 lesson tail retained in [part263](docs/history/window10.md#stitchcad-devnotes-part263md); prefix in part262.
 
-Whole0201 task/lesson prefix retained in [part262](docs/history/stitchcad-devnotes-part262.md).
-
-Complete0201 lesson tail retained in [part263](docs/history/stitchcad-devnotes-part263.md); prefix in part262.
-
-Whole0200 task and copied-book lesson retained in [part260](docs/history/stitchcad-devnotes-part260.md).
+Whole0200 task and copied-book lesson retained in [part260](docs/history/window10.md#stitchcad-devnotes-part260md).
 
 
 
-Whole0199 task and bridge lesson retained in [part256](docs/history/stitchcad-devnotes-part256.md).
+Whole0199 task and bridge lesson retained in [part256](docs/history/window10.md#stitchcad-devnotes-part256md).
 
-Whole0198 task and coupled static lesson retained in [part253](docs/history/stitchcad-devnotes-part253.md).
+Whole0198 task and coupled static lesson retained in [part253](docs/history/window10.md#stitchcad-devnotes-part253md).
 
 Owner compiler lesson retained in [part181](docs/history/window7.md#stitchcad-devnotes-part181md).
 
@@ -87,15 +79,15 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-Whole0197 task and statement compiler lesson retained in [part251](docs/history/stitchcad-devnotes-part251.md).
+Whole0197 task and statement compiler lesson retained in [part251](docs/history/window10.md#stitchcad-devnotes-part251md).
 
-Whole0196 task and recipe compiler lesson retained in [part249](docs/history/stitchcad-devnotes-part249.md).
+Whole0196 task and recipe compiler lesson retained in [part249](docs/history/window10.md#stitchcad-devnotes-part249md).
 
-Whole0195 receipts and original bridge inspection retained in [part247](docs/history/stitchcad-devnotes-part247.md).
+Whole0195 receipts and original bridge inspection retained in [part247](docs/history/window10.md#stitchcad-devnotes-part247md).
 
-Whole0194 task and continuity lesson retained in [part246](docs/history/stitchcad-devnotes-part246.md).
+Whole0194 task and continuity lesson retained in [part246](docs/history/window10.md#stitchcad-devnotes-part246md).
 
-Whole input modes and D197/D198 lesson retained in [part244](docs/history/stitchcad-devnotes-part244.md).
+Whole input modes and D197/D198 lesson retained in [part244](docs/history/window10.md#stitchcad-devnotes-part244md).
 
 Whole reduction dated lesson retained in [part243](docs/history/window9.md#stitchcad-devnotes-part243md).
 
@@ -178,74 +170,81 @@ Normalization/assertion/recipe lessons retained in [part187](docs/history/window
 Older formula and producer lessons retained in [part186](docs/history/window7.md#stitchcad-devnotes-part186md).
 
 
-Whole0206 task/lesson retained in [part271](docs/history/stitchcad-devnotes-part271.md).
+Whole0206 task/lesson retained in [part271](docs/history/window10.md#stitchcad-devnotes-part271md).
 
 ## Retained engineering continuity
 
 Complete retrieval: `bash scripts/history_archive.sh list` enumerates every logical record;
 `read <repository-relative-identity>` returns its complete verified bytes.
-[Exact prior navigation](docs/history/stitchcad-devnotes-part248.md) preserves the whole
+[Exact prior navigation](docs/history/window10.md#stitchcad-devnotes-part248md) preserves the whole
 committed table and original links. Recent records follow; older identities remain in the public list.
 
 | Segment | Coverage | Sealed identity |
 | --- | --- | --- |
 
-| [part247](docs/history/stitchcad-devnotes-part247.md) | whole0195 receipts and original bridge inspection | 40 lines, 2822 bytes, sha256:f32c681c… |
+| [part247](docs/history/window10.md#stitchcad-devnotes-part247md) | whole0195 receipts and original bridge inspection | 40 lines, 2822 bytes, sha256:f32c681c… |
 
-| [part248](docs/history/stitchcad-devnotes-part248.md) | whole prior navigation | 113 lines, 10385 bytes, sha256:bb5fb0dd… |
+| [part248](docs/history/window10.md#stitchcad-devnotes-part248md) | whole prior navigation | 113 lines, 10385 bytes, sha256:bb5fb0dd… |
 
-| [part249](docs/history/stitchcad-devnotes-part249.md) | whole0196 task and recipe compiler lesson | 38 lines, 2822 bytes, sha256:bff80147… |
+| [part249](docs/history/window10.md#stitchcad-devnotes-part249md) | whole0196 task and recipe compiler lesson | 38 lines, 2822 bytes, sha256:bff80147… |
 
-| [part250](docs/history/stitchcad-devnotes-part250.md) | whole completed n12 scopes | 26 lines, 2383 bytes, sha256:9b2c64f3… |
+| [part250](docs/history/window10.md#stitchcad-devnotes-part250md) | whole completed n12 scopes | 26 lines, 2383 bytes, sha256:9b2c64f3… |
 
-| [part251](docs/history/stitchcad-devnotes-part251.md) | whole0197 task and statement compiler lesson | 37 lines, 2820 bytes, sha256:2cba3977… |
+| [part251](docs/history/window10.md#stitchcad-devnotes-part251md) | whole0197 task and statement compiler lesson | 37 lines, 2820 bytes, sha256:2cba3977… |
 
-| [part252](docs/history/stitchcad-devnotes-part252.md) | whole completed n13 scopes | 32 lines, 2573 bytes, sha256:ba323f3c… |
+| [part252](docs/history/window10.md#stitchcad-devnotes-part252md) | whole completed n13 scopes | 32 lines, 2573 bytes, sha256:ba323f3c… |
 
-| [part253](docs/history/stitchcad-devnotes-part253.md) | whole0198 task and coupled static lesson | 38 lines, 4279 bytes, sha256:ce1b9a12… |
+| [part253](docs/history/window10.md#stitchcad-devnotes-part253md) | whole0198 task and coupled static lesson | 38 lines, 4279 bytes, sha256:ce1b9a12… |
 
-| [part254](docs/history/stitchcad-devnotes-part254.md) | whole completed n14 scope | 8 lines, 1069 bytes, sha256:03b0a1ef… |
+| [part254](docs/history/window10.md#stitchcad-devnotes-part254md) | whole completed n14 scope | 8 lines, 1069 bytes, sha256:03b0a1ef… |
 
-| [part255](docs/history/stitchcad-devnotes-part255.md) | whole authored old control node | 7 lines, 700 bytes, sha256:1c20d098… |
+| [part255](docs/history/window10.md#stitchcad-devnotes-part255md) | whole authored old control node | 7 lines, 700 bytes, sha256:1c20d098… |
 
-| [part256](docs/history/stitchcad-devnotes-part256.md) | whole0199 task and bridge control lesson | 37 lines, 3810 bytes, sha256:c05fe3a8… |
+| [part256](docs/history/window10.md#stitchcad-devnotes-part256md) | whole0199 task and bridge control lesson | 37 lines, 3810 bytes, sha256:c05fe3a8… |
 
-| [part257](docs/history/stitchcad-devnotes-part257.md) | whole completed profile control scope | 9 lines, 796 bytes, sha256:ed2cb337… |
+| [part257](docs/history/window10.md#stitchcad-devnotes-part257md) | whole completed profile control scope | 9 lines, 796 bytes, sha256:ed2cb337… |
 
-| [part258](docs/history/stitchcad-devnotes-part258.md) | whole completed builtin family scopes | 37 lines, 3692 bytes, sha256:d2e8489b… |
+| [part258](docs/history/window10.md#stitchcad-devnotes-part258md) | whole completed builtin family scopes | 37 lines, 3692 bytes, sha256:d2e8489b… |
 
-| [part259](docs/history/stitchcad-devnotes-part259.md) | whole completed namespace and declaration scopes | 48 lines, 4638 bytes, sha256:2f985e2b… |
+| [part259](docs/history/window10.md#stitchcad-devnotes-part259md) | whole completed namespace and declaration scopes | 48 lines, 4638 bytes, sha256:2f985e2b… |
 
-| [part260](docs/history/stitchcad-devnotes-part260.md) | whole0200 task and copied-book lesson | 49 lines, 4886 bytes, sha256:3ca9c660… |
+| [part260](docs/history/window10.md#stitchcad-devnotes-part260md) | whole0200 task and copied-book lesson | 49 lines, 4886 bytes, sha256:3ca9c660… |
 
 
-| [part261](docs/history/stitchcad-devnotes-part261.md) | whole copied-book and signature-family scopes | 73 lines, 6451 bytes, sha256:bea84f20… |
+| [part261](docs/history/window10.md#stitchcad-devnotes-part261md) | whole copied-book and signature-family scopes | 73 lines, 6451 bytes, sha256:bea84f20… |
 
-| [part262](docs/history/stitchcad-devnotes-part262.md) | whole0201 task and public-loader lesson | 40 lines, 3990 bytes, sha256:a2ca4f23… |
+| [part262](docs/history/window10.md#stitchcad-devnotes-part262md) | whole0201 task and public-loader lesson | 40 lines, 3990 bytes, sha256:a2ca4f23… |
 
-| [part263](docs/history/stitchcad-devnotes-part263.md) | complete0201 lesson tail/D205 boundary repair | 12 lines, 988 bytes, sha256:0e2987e2… |
+| [part263](docs/history/window10.md#stitchcad-devnotes-part263md) | complete0201 lesson tail/D205 boundary repair | 12 lines, 988 bytes, sha256:0e2987e2… |
 
-| [part264](docs/history/stitchcad-devnotes-part264.md) | whole public-loader/declaration/cleanup scopes | 20 lines, 2188 bytes, sha256:bc63bced… |
+| [part264](docs/history/window10.md#stitchcad-devnotes-part264md) | whole public-loader/declaration/cleanup scopes | 20 lines, 2188 bytes, sha256:bc63bced… |
 
-| [part127](docs/history/stitchcad-defects-part127.md) | D205 whole authored boundary report/verified closure | 3 lines, 786 bytes, sha256:ae7842f1… |
+| [part127](docs/history/window10.md#stitchcad-defects-part127md) | D205 whole authored boundary report/verified closure | 3 lines, 786 bytes, sha256:ae7842f1… |
 
-| [part265](docs/history/stitchcad-devnotes-part265.md) | whole0202 task and pure payload lesson | 46 lines, 4285 bytes, sha256:9c8393f1… |
+| [part265](docs/history/window10.md#stitchcad-devnotes-part265md) | whole0202 task and pure payload lesson | 46 lines, 4285 bytes, sha256:9c8393f1… |
 
-| [part266](docs/history/stitchcad-devnotes-part266.md) | whole completed payload-library scope | 8 lines, 870 bytes, sha256:93c7f85b… |
+| [part266](docs/history/window10.md#stitchcad-devnotes-part266md) | whole completed payload-library scope | 8 lines, 870 bytes, sha256:93c7f85b… |
 
-| [part267](docs/history/stitchcad-devnotes-part267.md) | whole0203 task and geometry/call lesson | 43 lines, 3882 bytes, sha256:cda30653… |
+| [part267](docs/history/window10.md#stitchcad-devnotes-part267md) | whole0203 task and geometry/call lesson | 43 lines, 3882 bytes, sha256:cda30653… |
 
-| [part268](docs/history/stitchcad-devnotes-part268.md) | whole completed geometry/call scope | 7 lines, 692 bytes, sha256:523c9127… |
+| [part268](docs/history/window10.md#stitchcad-devnotes-part268md) | whole completed geometry/call scope | 7 lines, 692 bytes, sha256:523c9127… |
 
-| [part269](docs/history/stitchcad-devnotes-part269.md) | whole0204 task/lesson/scope | 42 lines, 3893 bytes, sha256:fae39ec6… |
+| [part269](docs/history/window10.md#stitchcad-devnotes-part269md) | whole0204 task/lesson/scope | 42 lines, 3893 bytes, sha256:fae39ec6… |
 
-| [part128](docs/history/stitchcad-defects-part128.md) | D206 report/verified closure | 7 lines, 712 bytes, sha256:d12bedb6… |
+| [part128](docs/history/window10.md#stitchcad-defects-part128md) | D206 report/verified closure | 7 lines, 712 bytes, sha256:d12bedb6… |
 
-| [part270](docs/history/stitchcad-devnotes-part270.md) | whole0205 task/lesson/scope | 44 lines, 3852 bytes, sha256:5aa39fa7… |
+| [part270](docs/history/window10.md#stitchcad-devnotes-part270md) | whole0205 task/lesson/scope | 44 lines, 3852 bytes, sha256:5aa39fa7… |
 
-| [part271](docs/history/stitchcad-devnotes-part271.md) | whole0206 task/lesson | 65 lines, 5113 bytes, sha256:a271aff2… |
+| [part271](docs/history/window10.md#stitchcad-devnotes-part271md) | whole0206 task/lesson | 65 lines, 5113 bytes, sha256:a271aff2… |
 
-| [part272](docs/history/stitchcad-devnotes-part272.md) | whole original Ease receipt | 10 lines, 710 bytes, sha256:c9a97e5b… |
-| [part273](docs/history/stitchcad-devnotes-part273.md) | whole original serializer checklist | 22 lines, 2058 bytes, sha256:14b7d6df… |
+| [part272](docs/history/window10.md#stitchcad-devnotes-part272md) | whole original Ease receipt | 10 lines, 710 bytes, sha256:c9a97e5b… |
+| [part273](docs/history/window10.md#stitchcad-devnotes-part273md) | whole original serializer checklist | 22 lines, 2058 bytes, sha256:14b7d6df… |
 
-| [part274](docs/history/stitchcad-devnotes-part274.md) | whole0207 task/lesson | 61 lines, 5997 bytes, sha256:b45c9d9f… |
+| [part274](docs/history/window10.md#stitchcad-devnotes-part274md) | whole0207 task/lesson | 61 lines, 5997 bytes, sha256:b45c9d9f… |
+
+| [part275](docs/history/stitchcad-devnotes-part275.md) | whole0208 task/lesson | 60 lines, 5965 bytes, sha256:1e24ecc4… |
+
+Final focused: pub45/census236paths295checks/coverage9/archive28+615/ledger786verdicts11+13,
+all rc0, target/assert-plan-* logs. Continuity596/prior592/83 Source identities/71headers67live4retained/
+187pointers/proofs/nav/map/12open195sealed/caps exact0; pressure14/22282L/1627473B/699208B.
+Signoff all188 current input identities and receipts exact0, assert-plan-signoff.log.

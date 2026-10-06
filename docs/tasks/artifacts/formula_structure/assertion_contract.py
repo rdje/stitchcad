@@ -2,13 +2,26 @@
 from fractions import Fraction
 from pathlib import Path
 import os
+import re
 import runpy
 import shutil
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-HELPER = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'))
+HELPER_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'
+SOURCE = ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, SOURCE, HELPER_SOURCE)
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+HELPER = runpy.run_path(str(HELPER_SOURCE))
+PROFILE = HELPER['PROFILE']
+REFERENCE_INPUTS = tuple(dict.fromkeys((*BOOT_INPUTS, *HELPER['REFERENCE_INPUTS'])))
 SOURCE, BOOK = HELPER['SOURCE'], ROOT / 'docs/book/src'
 WORK = ROOT / 'target/formula_structure/assertion_refusal'
 KINDS = ('length', 'angle', 'area', 'ratio', 'count')
@@ -16,6 +29,7 @@ CLASSES = {'eps_num': 1, 'eps_geo': 10, 'eps_fmt': 25, 'eps_imp': 40, 'eps_phys'
 
 
 def contracts(replacement=None, verbose=True):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     ns, reference = HELPER['load_reference'](replacement)
     assert set(name for name in reference.reserved if name.startswith('eps_')) == set(CLASSES)
     assert reference.reserved['eps_num'][2] == 1 and reference.reserved['eps_geo'][2] == 10
@@ -102,20 +116,107 @@ def contracts(replacement=None, verbose=True):
     return checks
 
 
-def consumer():
-    WORK.mkdir(parents=True, exist_ok=True)
+def tree_plan(base, *, output=False):
+    """Walk only inspected directories; do not follow links or enter another repository."""
+    relative = PROFILE['producer_path'](ROOT, base)
+    if output:
+        PROFILE['producer_output_path'](ROOT, base)
+    PROFILE['directory'](ROOT, relative, missing_ok=output)
+    if not base.exists():
+        return (), ()
+    directories, files = [base], []
+    for folder in directories:
+        PROFILE['directory'](ROOT, folder.relative_to(ROOT).as_posix())
+        for path in sorted(folder.iterdir()):
+            PROFILE['require'](not path.is_symlink(), 'symlink copied-book entry')
+            if path.is_dir():
+                directories.append(path)
+            else:
+                files.append(path)
+    PROFILE['plan_producer'](ROOT, **{'output_files' if output else 'sources': tuple(files)})
+    return tuple(directories), tuple(files)
+
+def source_plan():
+    """Inspect the entire copied book and its loaders without creating or activating anything."""
+    directories, files = tree_plan(BOOK)
+    sources = (*BOOT_INPUTS, *files)
+    PROFILE['plan_producer'](ROOT, sources=sources)
+    return directories, files, sources
+
+def consumer_inputs(environment=None):
+    """Match the shell's effective selectors and lexical reference resolution before effects."""
+    environment = os.environ if environment is None else environment
+    book = Path(environment.get('FORMULA_BOOK') or BOOK)
+    book = book if book.is_absolute() else ROOT / book
+    parts = Path(environment.get('FORMULA_PARTS_DIR') or book / 'spec/formula-language')
+    selected = tuple(Path(environment.get(name) or default) for name, default in (
+        ('FORMULA_CONTRACT', book / 'spec/formula-language.md'),
+        ('FORMULA_GRAMMAR', parts / 'grammar.md'),
+        ('FORMULA_EXAMPLES', parts / 'examples.md'),
+        ('FORMULA_FIXTURE', book / 'spec/reference-skirt.md')))
+    # The shell runs in ROOT; keep a relative caller selector relative to that same root.
+    selected = tuple(path if path.is_absolute() else ROOT / path for path in selected)
+    parts = parts if parts.is_absolute() else ROOT / parts
+    PROFILE['directory'](ROOT, PROFILE['producer_path'](ROOT, parts))
+    PROFILE['plan_producer'](ROOT, sources=selected)
+    references = []
+    for path in selected[:3]:
+        for _, target in re.findall(r'\[([^\]]*)\]\(([^)]+)\)', path.read_text()):
+            if target.startswith(('http://', 'https://', '#')):
+                continue
+            # Concatenation intentionally matches the public resolver, including a leading slash.
+            references.append(Path(os.path.normpath(str(path.parent) + '/' + target.split('#')[0])))
+    sources = tuple(dict.fromkeys((*selected, *sorted(parts.glob('*.md')), *references)))
+    PROFILE['plan_producer'](ROOT, sources=sources)
+    return parts, sources
+
+def fixture_plan(*, activate=True):
+    """Inspect the complete book and replacement before any activation or copy effect."""
+    book_directories, book_files, sources = source_plan()
+    parts, selected = consumer_inputs(dict(os.environ, FORMULA_BOOK=str(BOOK)))
+    sources = tuple(dict.fromkeys((*sources, *selected)))
+    base = WORK / 'false_closure' / 'src'
+    file_names = {path.relative_to(BOOK) for path in book_files}
+    directory_names = {path.relative_to(BOOK) for path in book_directories}
+    PROFILE['require'](parts != base and not parts.is_relative_to(base),
+                       'copied-book output aliases selected input directory')
+    directories = (WORK, base.parent, *(base / name for name in sorted(directory_names)))
+    outputs = (*tuple(base / name for name in sorted(file_names)), WORK / 'false_closure.log')
+    PROFILE['require'](not set(outputs) & set(sources), 'copied-book output aliases selected input')
+    old_directories, old_files = tree_plan(base, output=True)
+    PROFILE['require'](all(path.relative_to(base) in directory_names for path in old_directories)
+                       and all(path.relative_to(base) in file_names for path in old_files),
+                       'unexpected copied-book fixture entry')
+    plan = dict(directories=directories, output_files=outputs, sources=sources)
+    PROFILE['plan_producer'](ROOT, **plan)
+    return PROFILE['prepare_producer'](ROOT, **plan) if activate else plan
+
+def copy_book():
+    """Freshly inspect every replacement component immediately before deleting the old copy."""
+    fixture_plan(activate=False)
     book = WORK / 'false_closure' / 'src'
     if book.exists():
         shutil.rmtree(book)
     shutil.copytree(BOOK, book)
+    _, files = tree_plan(book, output=True)
+    PROFILE['plan_producer'](ROOT, sources=(SOURCE, *files), output_files=files)
+    return book
+
+def consumer():
+    environment = fixture_plan()
+    WORK.mkdir(parents=True, exist_ok=True)
+    book = copy_book()
     examples = book / 'spec/formula-language/examples.md'
     text = examples.read_text()
     before = '== 2 * wb_width`'
     assert text.count(before) == 1, 'actual consumer assertion mutation anchor changed'
     examples.write_text(text.replace(before, '== wb_width`'))
-    result = subprocess.run(['bash', str(SOURCE)], cwd=ROOT, env=dict(os.environ, FORMULA_BOOK=str(book)),
+    source_plan()
+    consumer_inputs(dict(environment, FORMULA_BOOK=str(book)))
+    result = subprocess.run(['bash', str(SOURCE)], cwd=ROOT, env={**environment, 'FORMULA_BOOK': str(book)},
                             capture_output=True, text=True)
     output = result.stdout + result.stderr
+    fixture_plan(activate=False)
     (WORK / 'false_closure.log').write_text(output)
     assert result.returncode == 1 and 'formula_assertion' in output and 'waistband_width_closure' in output, (
         'assertion consumer token', result.returncode, output)
@@ -134,19 +235,24 @@ FAULTS = (
     ('tolerance value lost', '"tolerance_value": tol.v}', '"tolerance_value": 0}'),
 )
 if __name__ == '__main__':
-    original = SOURCE.read_bytes()
-    contracts()
-    consumer()
-    if '--mutations' in sys.argv:
-        for name, before, after in FAULTS:
-            try:
-                contracts((before, after), False)
-            except AssertionError as error:
-                assert any(marker in str(error) for marker in (
-                    'assertion token', 'assertion arguments', 'assertion accepted false or changed true tuple')), (
-                    name, 'not a body assertion red', error)
-                print('  actual compiled assertion refusal red:', name)
-            else:
-                raise AssertionError(('assertion fault escaped', name))
-        assert SOURCE.read_bytes() == original
-        print('assertion faults: %d actual body assertion reds; producer unchanged' % len(FAULTS))
+    try:
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+        original = SOURCE.read_bytes()
+        contracts()
+        consumer()
+        if '--mutations' in sys.argv:
+            for name, before, after in FAULTS:
+                try:
+                    contracts((before, after), False)
+                except AssertionError as error:
+                    assert any(marker in str(error) for marker in (
+                        'assertion token', 'assertion arguments', 'assertion accepted false or changed true tuple')), (
+                        name, 'not a body assertion red', error)
+                    print('  actual compiled assertion refusal red:', name)
+                else:
+                    raise AssertionError(('assertion fault escaped', name))
+            assert SOURCE.read_bytes() == original
+            print('assertion faults: %d actual body assertion reds; producer unchanged' % len(FAULTS))
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None

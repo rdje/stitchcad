@@ -139,7 +139,7 @@ Staged make gate→=== all doctrines green ===, rc=0; all scoped jobs observed t
 
 ### `G1-SLICE.5a.3d.2` — owned canonical expression identity
 
-Whole retained record: [part273](../history/stitchcad-devnotes-part273.md).
+Whole retained record: [part273](../history/window10.md#stitchcad-devnotes-part273md).
 
 ## Verification Log
 

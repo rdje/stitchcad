@@ -66,3 +66,30 @@ removals and isolated filesystem faults. It also removes the actual nested old-e
 that refusal depends on that boundary. Intercepted children prove dispatch; the first two commands
 provide the separate thirteen real verdicts and five actual classifier assertion failures.
 These producer plans change no annotation, vocabulary, grammar or engine rule.
+
+## Assertion reference and copied consumer plans
+
+The assertion module checks its own file, profile, shell and public signature loader before importing
+that loader. It then uses the loader's provider and Refusal class. Import and contracts() validate
+sources without creating stores, copying files or invoking a shell. The original262 assertion cases
+and eight compiled in-memory faults retain their thresholds, payloads and earlier-error precedence.
+
+consumer() prepares a complete plan for every book source, copied file, directory and false_closure.log.
+fixture_plan(activate=False) returns that plan without effects. Effective shell selectors are checked
+before replacement; selected files or parts directories inside the replacement refuse. Links,
+nonregular inputs, unexpected old entries and hardlinked outputs also refuse before activation.
+The replacement is rechecked before deletion, copied inputs before editing, source/selector plans
+before the child and the output plan before logging. Prepared stores, unrelated environment values,
+relative caller selectors and argv survive. Selector overrides can change the authored consumer verdict.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/ci_environment/python_assertion_fixture_contract.py
+```
+
+The first command supplies262 real reference cases, one actual copied-book refusal and eight intended
+body assertion failures. The second captures actual entry/helper bodies and dispatch, removes guards
+and exercises isolated filesystem refusals. Its intercepted child is dispatch evidence; it does not
+supply the first command's numerical result. Invalid CLI plans exit2 with the named local-environment
+refusal; borrowed pure calls raise the shared provider's Refusal. Assertion failures keep their original
+type. No reference source, grammar, threshold, diagnostic token or production engine rule changes.

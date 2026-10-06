@@ -34,6 +34,8 @@ book consumer reports the raised token, label, values and class through its exis
 python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mutations
 ```
 
+Its [producer plan](formula-documentation-controls.md#assertion-reference-and-copied-consumer-plans) preserves pure calls and guards copied outputs.
+
 The existing structural runner watches this producer.262 independently authored controls cover all
 five arithmetic kinds and all five classes, zero/below/at/above thresholds in both operand orders,
 signed values where permitted, unchanged caller bindings, static acceptance of false checks and

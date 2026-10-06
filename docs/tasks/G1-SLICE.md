@@ -805,7 +805,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.o.a10` | `pending` | assertion fixtures/D156 and remaining producers/D154 |
+| current | `G1-SLICE.5b.4c.h2.b.p.o.f.h10.v` | `pending` | committed window10 verification/D156 and remaining producers/D154 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
@@ -942,4 +942,4 @@ Current retention receipts live in the .h0 owning recipe node/names checklist.
 - `2026-10-03` (UTC): .5b.2c.1a/STITCHCAD-G1-0085 records D131 reserved argument conflict;121 cases/three actual reds. .1b ruling blocks namespace .2.
 - `2026-10-03` (UTC): .5b.2c.1b/STITCHCAD-G1-0086 applies delegated D131 sources;3624 argument cases/19 actual reds. Namespace .2c.2 next.
 
-Whole original Ease main-task acceptance retained in [part272](../history/stitchcad-devnotes-part272.md).
+Whole original Ease main-task acceptance retained in [part272](../history/window10.md#stitchcad-devnotes-part272md).
