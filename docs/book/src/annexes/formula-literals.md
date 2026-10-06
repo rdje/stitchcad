@@ -589,3 +589,5 @@ python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts
 The first command watches actual bodies and physical refusals. Run real mode exclusively: it keeps
 all 57 controls, eleven genuine assertion reds and every scoped input byte on Python 3.9/3.14.
 Production evaluation and the D156 producer audit continue.
+
+[Reference guards](formula-statements.md#reference-instrument-source-guards) preserve pure checks.

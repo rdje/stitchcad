@@ -8,7 +8,37 @@ FIXTURE=ROOT/'docs/tasks/artifacts/formula_structure/reduction_boundary_cases.ts
 FACTORS={'um':('length',1),'mm':('length',1000),'cm':('length',10000),
          'm':('length',1000000),'in':('length',25400),'deg':('angle',1000000),
          'pct':('ratio',10000),'':('ratio',1000000)}
-_,reference=runpy.run_path(str(ROOT/'docs/tasks/artifacts/formula_structure/formula_input.py'))['load_context']()
+HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__),
+               PROFILE_SOURCE,
+               HERE / 'formula_structure.py',
+               HERE / 'static_signature_contract.py',
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh',
+               HERE / 'formula_input.py')
+SOURCE_INPUTS = (*BOOT_INPUTS, *(ROOT / 'docs/book/src' / chapter for chapter in (
+    'spec/formula-language.md', 'spec/formula-language/grammar.md',
+    'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md')),
+    *(() if sys.argv[1:] else (FIXTURE,)))
+
+def source_plan():
+    """Validate the complete sources without activating stores or creating outputs."""
+    try:
+        PROFILE['plan_producer'](ROOT, sources=SOURCE_INPUTS)
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
+
+try:
+    source_plan()
+    CONTEXT = runpy.run_path(str(HERE / 'formula_input.py'))
+    PROFILE = CONTEXT['PROFILE']
+    source_plan()
+    _, reference = CONTEXT['load_context']()
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
 assert reference.units=={unit:(kind,Fraction(factor)) for unit,(kind,factor) in FACTORS.items() if unit}
 
 def valuation(value,prime):
@@ -49,6 +79,7 @@ if sys.argv[1:]==['--emit']:
     for row in ROWS:print('\t'.join(row))
 else:
     assert not sys.argv[1:]
+    source_plan()
     actual=[tuple(line.split('\t')) for line in FIXTURE.read_text().splitlines() if line and not line.startswith('#')]
     assert actual==ROWS,'reduction frontier fixture drift'
     accepted=sum(row[2]=='0' for row in ROWS)

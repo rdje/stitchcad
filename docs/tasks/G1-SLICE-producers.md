@@ -255,28 +255,30 @@ Whole0218 verification retained in [part287](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a19`
   Status: `done`
-  Own0220: recipe-byte pair/recipe and statement references, actual pure/classifier/writer/physical/real controls;
-  whole0219 task/lesson and ledger retention; book/runner/three ledgers/live sync. Preserve nine CASES/renderer indentation.
-  D156 caller-file gap: rows(name)/verify_fixture(name, n) plan fixed tables but read caller names unchecked.
-  Reproduce with an unsafe caller path after a valid import; impact: outside/symlink/Git-boundary read.
-  Own now: validate the exact selected path per call, preserve safe borrowed fixtures, add actual omission/refusal controls.
-  Recording control: initial plain part199 link fails ledger POINTER; restored the supported first-cell/table route before closure.
-  Goal: Recipe byte and statement/reference libraries; sources and kinds in the watched ledger.
-  Acceptance: ordered group acceptance above.
+  Goal: Recipe-byte/statement references; complete scope and proof retained in part289.
+  Acceptance: part289 verified.
 
-- [x] REPRODUCE / ISSUE: python_recipe_statement_contract.py --before exposes four actual03ebaa2 bootstrap/read gaps, rc=0, target/recipe-statement-before.log; selected callers expose two additional original gaps without unsafe reads, rc=0, caller/default logs. Complete public entries/fixtures/book/decision reviewed.
-- [x] ROOT CAUSE: fixed plans omit caller names; entry/writer effects need complete source/file/fresh checks. Actual default on3.9/3.14 passes15 guard reds plus two caller reds/six provider-adoption reds, rc=0, target/recipe-statement-controls{,39}.log; every original assertion/syntax body/classifier/nine CASES exact.
-- [x] FIX: three pure complete plans and exact selected-path checks; writer includes child inputs/nine logs/mutable source before activation. Captures0 pure effects/28 writer writes/nine children; classifier-only0 effects and injected child failure exact restore pass, rc=0, default logs. Renderer indentation remains exact.
-- [x] ADDRESSED: exclusive --real on3.9/3.14 retains16 statement-byte/nine source/twelve chunk,15 header/six refusal,13 whole-source populations and nine actual authored-byte assertion reds;23 inputs exact after each child, rc=0, target/recipe-statement-real{,39}.log. Physical42/four pure positives/32 repeated refusals, caller12/24 repeated calls and late restore red/green pass0.
-- [x] NO REGRESSION: census251/310/effect73/file142, publication45/coverage9/language16/archive28+640/ledger11+13 pass, rc=0, target/recipe-statement-{census,publication,coverage,language,archive,ledger}.log; unsupported plain pointer was corrected before this green rerun. Rust/normative inputs/numerical meaning unchanged.
-- [x] LOCKSTEP: --continuity both versions proves complete288/199/public reads/prior immutable/reference bytes/task graph exact, rc=0, target/recipe-statement-continuity{,39}.log. Receipt control12open196sealed/no overlap passes0. Book/live/runner/ledgers/MEMORY route.a20; fixed caps and400 cadence. Promotion: declined; established complete source/selected path/purity/restore rules. Commit0220.
-
-  Final staged gate13 green, rc=0, target/recipe-statement-staged-gate.log.
+Whole0220 verification retained in [part289](../history/stitchcad-devnotes-part289.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a20`
-  Status: `pending`
+  Status: `done`
+  Own0221: four expression/reduction references, complete read-only plans/pure mode/physical/real controls;
+  retain whole0220 task/lesson/ledger before growth; book source-guard section/crosslinks, runner/ledgers/live sync.
+  Preserve all original syntax/oracle bodies and reduction --emit independence from the unused TSV.
+  Own label-only changelog containment: preserve every table target/coverage/identity; shorter part labels free space without retiring facts.
+
   Goal: Expression and reduction reference libraries; sources and kinds in the watched ledger.
   Acceptance: ordered group acceptance above.
+
+- [x] REPRODUCE / ISSUE: python_expression_reduction_contract.py --before executes four actual3d1be74 bodies and stops unchecked helper loads without effects, rc=0, target/expression-reduction-before.log; complete entries/helpers/fixtures/contracts/book and emit/argument modes reviewed.
+- [x] ROOT CAUSE: delegated sources/fixture reads need complete nonmutating plans. Default on3.9/3.14 passes13 actual plan/read reds/four independently loaded provider-adoption reds, rc=0, target/expression-reduction-controls{,39}.log; original complete bodies/assertions/factors exact.
+- [x] FIX: full sources before providers, actual-profile adoption and fresh read checks; default and emit retain zero activation/files/children. Captures7/9/16/9 plans, emit8, rc=0, controls logs. Unused reduction TSV is absent from emit's source authority; duplicate weaker bootstrap was removed before final verification.
+- [x] ADDRESSED: --real both versions retains12/24 shape rows,55 bytes/all25 book expressions,176 Fraction rows103/73 and witnesses6/39/134/173; emit byte-identical;22 inputs exact after each child, rc=0, target/expression-reduction-real{,39}.log. Controls32 physical/four hardlink positives/32 repeated refusals/three unsafe-unused emit positives pass0.
+- [x] NO REGRESSION: census252/311/effect73/file143, publication45/coverage9/archive28+642/ledger11+13 pass, rc=0, target/expression-reduction-{census,publication,coverage,archive,ledger}.log; scopes are pure/no Rust changes. Old label-only actual pointer verdict was byte-identical0; targets/coverage/identities unchanged.
+- [x] LOCKSTEP: --continuity both versions proves whole289/200/public reads/prior immutable/reference bytes/task graph exact, rc=0, target/expression-reduction-continuity{,39}.log. Annex old bytes reconstruct after the one guard link; receipt12open196sealed/no overlap passes0.
+  Book/live/runner/ledgers/MEMORY route.a21; caps/400 fixed. Promotion: declined; existing source/purity/mode rules. Commit0221.
+
+  Final staged gate13 green, rc=0, target/expression-reduction-staged-gate.log;404-byte receipt folded without text loss.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a21`
   Status: `pending`

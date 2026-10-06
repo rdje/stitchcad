@@ -3,15 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — pure recipe and statement plans
+## _(2026-10-06 UTC)_ — pure expression/reduction sources
 
-.a19 keeps every assertion/syntax body/classifier/nine CASES and renderer indentation exact.
-Pure entries guard sources/selected fixture paths and adopt actual loader profiles.
-The writer declares child inputs/nine logs/one mutable source; source-only restores survive
-unsafe logs. Both Python versions pass15 guard reds/42 physical refusals/32 repeated borrowed
-refusals/six adoption reds and actual late restoration red/green; classifier-only stays pure
-with an unsafe log; caller fixtures12/24 calls/two original gaps/two reds pass. Real runs retain
-nine assertion reds;23 inputs stay exact after each child. Whole0219 task/lesson288 and ledger199
+.a20 keeps all syntax/oracle bodies and factors exact; complete plans precede loaders/reads.
+Default/emit stay pure, including three unsafe-unused TSV positives. Both versions pass13
+omission reds/32 physical/32 repeated refusals/four adoption reds. Real22 inputs/emitted176
+rows stay exact. Whole0220 retained289/200;86 label folds preserve actual pointers/identities.
+Promotion declined: established source/purity/mode rules.
+
+Whole0220 task/lesson retained in [part289](docs/history/stitchcad-devnotes-part289.md).
+
+Whole0219 task/lesson288 and ledger199
 retain exact03ebaa2 intervals/public reads. Promotion declined: existing source/purity/restore
 rules; no product or independent approval claim.
 
@@ -262,3 +264,5 @@ Whole0213 task and lesson retained in [part282](docs/history/stitchcad-devnotes-
 | [part287](docs/history/stitchcad-devnotes-part287.md) | whole0218 task and lesson | 20 lines, 1605 bytes, sha256:2b57018e… |
 
 | [part288](docs/history/stitchcad-devnotes-part288.md) | whole0219 task and lesson | 39 lines, 3459 bytes, sha256:85b81741… |
+
+| [part289](docs/history/stitchcad-devnotes-part289.md) | whole0220 task and lesson | 29 lines, 3727 bytes, sha256:7a5531ac… |

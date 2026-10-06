@@ -402,3 +402,36 @@ director may re-open the spelling. Product immutable normalization is [available
 [Coupled contract review .3f.2](formula-recipe-inputs.md#coupled-input-and-identity-review) is complete. Future .7 frames typed schema/digest domains: bind/recipe are valid
 ordinary expression call names, so canonical text is interpreted within its known identity type.
 No project format, hash, save/recovery, evaluator, MCP or production release is supplied by this record.
+
+## Reference instrument source guards
+
+The standalone expression-shape, normalized-shape, canonical-byte and reduction-frontier references
+are pure. They validate the complete loader, chapter, decision and fixture population before
+loading helpers, adopt the actual helper's refusal class, and recheck before each fixture/chapter
+read. Importing or borrowing them activates no stores, writes no files and starts no children;
+unsafe paths and invalid store/toolchain selectors return the named local-environment refusal.
+Read-only hard links remain valid inputs. Their original syntax and Fraction bodies stay unchanged.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/formula_expression_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/normalized_expression_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_expression_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/reduction_boundary_reference.py
+python3 -I -B docs/tasks/artifacts/formula_structure/reduction_boundary_reference.py --emit
+```
+
+The first three retain twelve and 24 shape/count/depth rows, 55 canonical-byte rows and all 25
+worked expressions. The reduction oracle retains 176 Fraction rows: 103 accepted zeros and
+73 denominator-width refusals, with valuation/digit/scale/workspace witnesses 6/39/134/173.
+Its --emit mode writes only stdout and does not read the checked-in reduction TSV. Missing,
+symlinked or directory-shaped unused TSVs still emit the exact same header and 176 rows.
+Default mode reads and checks that TSV through its complete source plan. Other argument lists
+retain their original assertion refusal; emission does not grant authority to overwrite a file.
+
+The CI-environment control executes the actual bodies and independent helper instances. Thirteen
+plan/read omissions, four provider-adoption omissions, 32 physical refusals, four read-only hardlink
+positives and 32 repeated borrowed refusals calibrate the guards. Three unsafe-unused emission
+positives verify its public mode boundary. Separate real runs on Python 3.9 and 3.14 retain every
+reference population and exact emitted bytes, with all 22 scoped inputs unchanged after each child.
+These source checks preserve the reference instruments' existing proof scope; product execution,
+arbitrary-input numerical correctness and release approval keep their separate owners.
