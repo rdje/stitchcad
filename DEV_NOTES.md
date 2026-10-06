@@ -3,13 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — cleanup entry authority
+## _(2026-10-06 UTC)_ — cleanup fixture authority
 
-.a22.1 guards audit/input/child authority; D210 strict process gate/D211 unique deletion links.
-Original policies/15 cases/11 reds preserved. Exact0222 task/lesson/cleanup paragraph291 and
-ledger202 kept before growth. Proof .a22.1; promotion declined: rules.
+0224 .a22.2: sources/fixtures guarded; D212 setup/D213 root/D214 fault isolation fixed; original15/11 and linked inputs pass.
+Proof .a22.2; promotion declined: existing authority/restoration rules.
 
-Whole0222 task/lesson retained in [part291](docs/history/stitchcad-devnotes-part291.md).
+Whole0223 task/lesson/book scope retained in [part293](docs/history/stitchcad-devnotes-part293.md).
 
 Whole0221 task/lesson retained in [part290](docs/history/stitchcad-devnotes-part290.md).
 

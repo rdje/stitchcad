@@ -275,7 +275,7 @@ Whole0221 verification retained in [part290](../history/stitchcad-devnotes-part2
 Whole0222 verification retained in [part291](../history/stitchcad-devnotes-part291.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a22`
-  Status: `in_progress`
+  Status: `done`
   Own0223: entry/fixture split, guarded cleanup dispatch and exact continuity retention before growth;
   read full207/140-line entry/fixtures, locality/deletion/process/record contracts and book.
   Legacy process-gate concern: apply invokes check_no_background_jobs.sh although check_handoff.sh is canonical.
@@ -287,41 +287,44 @@ Whole0222 verification retained in [part291](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a22.1`
   Status: `done`
-  Goal: STITCHCAD-G1-0223 cleanup entry complete mode/source/audit-file/child plans and strict process proof.
-  Own blocking cap retention: staged collection1502021 exceeded1500000; whole committed cleanup/window8 blocks and
-  all detached retrieval records retained292/exact public read before retirement; ceiling unchanged.
-  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup.py; new ci_environment/python_cleanup_entry_contract.py
-  Control calibration: changing HANDOFF also changed the core source population, producing an earlier core-authority red.
-  Isolate dispatch argv instead; audit-plan observations distinguish complete dynamic inputs before every creation/deletion.
-  Capture calibration: the rmtree observer must retain avoids_symlink_attacks; first capture failed before deletion
-  on the omitted observer attribute. Preserve the real runtime capability and rerun; no original guard changed.
-  Own D211 unique-link deletion admission and the fixture stat adapter field needed for its existing device faults.
-  Controlled alias.log/shared.dat st_nlink2 was admitted as one candidate without deletion; fix now, original15/11 stay.
-  Also own the one existing nonignored fixture anchor rebase needed for the explicit Git child environment;
-  all original fixture cases/guard semantics remain; complete fixture authority belongs to .2.
-  Acceptance: preserve frozen census/ignored safety/original refusals/argv/exclusive JSON files; actual captures,
-  omissions and physical refusals before effects, safe isolated real consumers, whole0222 task/lesson/ledger retention,
-  source/book/live/ledgers/control sync. No real project deletion during guard development.
+  Goal: Cleanup entry authority and D210/D211 safety verified; whole0223 scope/acceptance retained293.
+  Acceptance: complete original policy bodies, strict process/link controls and focused gates pass.
 
-- [x] REPRODUCE / ISSUE: python_cleanup_entry_contract.py --before compiles actual80e9d33 apply with a controlled frozen census; real legacy checker0/current2 on unavailable lsof reaches trapped deletion, victim/source exact, rc=0, target/cleanup-entry-before.log. Original inspect admits a two-link controlled candidate, no deletion; actual watched control
-  preserves proof.
-- [x] ROOT CAUSE: stale legacy child bypasses strict evidence; deletion file link count was absent. Actual statuses0/1/2/stale-dispatch assertion red and unique-link original admission/refusal/guard red pass both versions, rc=0, target/cleanup-entry-controls{,39}.log. D210/D211 whole authored reports/closures132 publicly exact.
-- [x] FIX: complete core/full Git-listed source/audit authority before activation; prepared read-only Git and producing process children; fresh exact audit file/removal plans; exclusive JSON/source-only metadata semantics stay. Captures41 plans/9 effects/one guarded child pass0; original complete bodies/constants/signatures/census/JSON/argv exact through
-  declared adapters.
-- [x] ADDRESSED: both versions pass14 actual CLI physical refusals/five plan/save/environment/dispatch reds, rc=0, controls logs. Real plan both preserves636 tracked inputs and removes no real project output, rc=0, target/cleanup-entry-real{,39}.log. Existing probes retain15 cases/11 compiled reds on3.9/3.14, rc=0,
-  target/cleanup-entry-original-probes{,39}.log; compatibility-only anchor/stat adapter changes owned.
-- [x] NO REGRESSION: census254/313/effect73/31groups/file145/69owners, publication45/65chapters, coverage9, archive28+648/628reads and ledger11+13 pass, rc=0, target/cleanup-entry-{census,publication,coverage,archive,ledger}.log. No Rust changes/native jobs. Receipt12open198sealed/no overlap passes0, target/cleanup-entry-receipt.log.
-- [x] LOCKSTEP: --continuity both versions proves whole291/292/202/Git intervals/public reads/132 identities/prior archives/public helpers and original task graph plus two declared children exact, rc=0, target/cleanup-entry-continuity{,39}.log. New cleanup chapter/SUMMARY/index/build link preserve old paragraph whole291. Book/live/runner/ledgers/MEMORY
-  route.a22.2; fixed caps/400 cadence. Promotion declined: existing authority/evidence/deletion rules. Commit0223.
-
-Staged doctrine gate: all13 green, rc=0, target/cleanup-entry-staged-gate.log; whole292/public read restores fixed cap.
+Whole0223 task/lesson/book scope retained in [part293](../history/stitchcad-devnotes-part293.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a22.2`
-  Status: `pending`
-  Goal: cleanup fixtures complete input/output/restoration plans and original15 cases/11 guard reds.
-  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py
-  Acceptance: full source/public API/test/book review before changes; actual capture/omission/physical and real proof,
-  preserve safe ignored fixtures, no selected real cleanup output deletion, prepared caller stores.
+  Status: `done`
+  Goal: STITCHCAD-G1-0224 cleanup fixtures complete input/output/restoration plans and original15 cases/11 reds.
+  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py;docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py
+  Own: complete current140-line fixture/258-line entry/profile APIs/strict checker and cleanup book reviewed.
+  Before effects validate all named fixture directories/files and complete sources; preserve borrowed case/name/API.
+  Empty Git markers are controlled constructors only: never initialize a repository, refuse nonempty markers before teardown.
+  Teardown plans must handle deliberate symlink/FIFO/marker fixtures without granting external or initialized-repo writes.
+  Own D212/D213/D214: actual old callback failure strands an owned directory and source alias reaches trapped rebased mkdir;
+  target/cleanup-fixture-before.log rc=0. First profile delegation also needs bounded source/parent checks.
+  Own D214 actual old linked README masks the symlink fault with the newer link guard; isolate two in-memory mutants only.
+  Mirror calibration: protected-store fault needs the public prepared mirror stores before replay; original bodies unchanged.
+  Own blocking whole committed0223 task/DEV/ledger retention before fixed-cap growth; public exact reads first.
+  Ledger calibration: first census refused an extra profile-kind effect row; remove only that row.
+  Its source/profile registration and file-authority row remain; effect ledger covers output/delegate kinds exactly.
+  Own local D34 recurrence: actual0ab index.a21/tree.a22.2 mismatch; correct this frontier at lockstep.
+  ROUTING EVIDENCE: index/tree discrepancy is docs metadata, independent of fixture runtime; broader gate remains PLANNING.5.
+  Acceptance: actual captured writes/children/removals, independent planning omissions/physical refusals and real15/11
+  both Python versions; preserve setup/guard assertions/faults/argv, source bytes and prepared stores. No project cleanup apply.
+
+
+- [x] REPRODUCE / ISSUE: --before executes actual0ab7421 bodies: callback strands a fixture, source alias reaches trapped rebased mkdir, linked README masks the symlink fault. Three original proofs pass, rc=0, target/cleanup-fixture-before.log; no outside write and source/alias bytes exact. D212/D213/D214 reports/closures whole133.
+- [x] ROOT CAUSE: setup was outside protected teardown, root used unchecked dependency, old mutants met the new link guard. Actual controls on3.9/3.14 pass, rc=0, target/cleanup-fixture-controls{,39}.log; two original-scope reds/helper alias red/root selector red/isolation red independently reproduce these causes.
+- [x] FIX: complete six-source/population plans before activation; fresh selected creation/read/write/owned marker/tree authority, entry-derived root and bounded first loader. Captures74 plans/16 activations/44 effect calls/12 prepared Git dispatches pass, rc=0; complete original AST exact through declared adapters; real inspector unchanged.
+- [x] ADDRESSED: both versions pass17 actual CLI physical refusals/eight planning reds, unowned refusal/red, actual nonempty fake-marker stop, four borrowed-name refusals/valid borrowed case and linked profile/README positives, rc=0, controls logs. Real15/11/source exact/zero residue both pass, rc=0, target/cleanup-fixture-real{,39}.log.
+- [x] NO REGRESSION: census255/314/effect73 paths31groups/file146 paths69owners37native, publication45/65chapters/67API, coverage9, archive28+651CLI/631reads pass, rc=0, target/cleanup-fixture-{census,publication,coverage,archive}.log. Receipt12open201sealed/no overlap passes0, target/cleanup-fixture-receipt.log; no Rust/cleanup apply.
+- [x] LOCKSTEP: whole293/203 source intervals/133 authored reports/public reads/prior archive bytes/task graph exact both versions, rc=0, target/cleanup-fixture-continuity{,39}.log. Book/live/runner/ledgers/index/G1/MEMORY route.a23; local D34 row repair verified, broader PLANNING.5 open. Promotion declined: existing authority/restoration rules.
+
+
+Gate calibration: first staged check refused pass0 shorthand in two fresh receipts; use observed rc=0.
+No gate changed; ledger11+13 rc=0, target/cleanup-fixture-ledger.log.
+
+Staged doctrine13 green, rc=0, target/cleanup-fixture-staged-gate.log; all results consumed. Commit0224.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23`
   Status: `pending`

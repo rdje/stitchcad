@@ -112,9 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
-## STITCHCAD-G1-0223 — cleanup entry authority
+## STITCHCAD-G1-0224 — cleanup fixture authority
 
-.a22.1: complete audit/input/child plans; strict process gate and unique-link deletion checks; original15/11 preserved.
+.a22.2: complete source/destination plans, bounded fixture teardown and callback-failure restoration; original15/11 preserved.
+
+| [203](docs/history/stitchcad-changelog-part203.md) | whole0223 | sealed |
 
 | [202](docs/history/stitchcad-changelog-part202.md) | whole0222 | sealed |
 

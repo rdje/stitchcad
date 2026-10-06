@@ -86,5 +86,54 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_entry_contract.
 python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_entry_contract.py --real
 ```
 
-Complete authority for the existing cleanup fixture producer follows in .a22.2; running its original
-cases here verifies compatibility and does not close that separate producer audit.
+## Guarded cleanup fixtures
+
+The fixture entry is docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py. Loading it runs the
+original fifteen cases and eleven in-memory guard faults. Run one real fixture consumer at a time:
+its original base is target/scratch/artifact_cleanup_probes, and each selected child must be absent.
+A successful run leaves that base empty and preserves the inspector and all six source inputs.
+
+Before the first helper executes, bounded metadata checks require a local regular profile file,
+a safe scripts parent and no Git marker there. The fixture entry derives its root from itself,
+then checks its own source, inspector, profile, canonical checker/census and README. It plans all
+fifteen possible fixture directories, their nested directories and four possible file names before
+activating stores or creating the base. Each case rechecks its selected complete plan before
+creation; source-text fault compilation and the valid fixture's second write receive fresh checks.
+Prepared local stores and unrelated caller variables survive activation and every Git dispatch.
+
+The symlinks, FIFO and empty .git markers are deliberately unsafe test data inside newly owned
+fixtures. Teardown checks the selected base and owned root before each marker removal, then checks
+the exact tree before safe recursive removal. It never initializes a repository. A nonempty marker
+stops teardown before the containing tree is removed. An unowned or aliased root refuses deletion.
+Setup and the first valid-case write run inside protected teardown scopes: callback or write failures
+remove owned test data when that data remains safe to remove. An unsafe root or failed marker removal
+stops rather than broadening authority; it may leave that controlled fixture for explicit recovery.
+
+Borrowed case(name, setup, operation, reason, mutation=None) retains its argument contract. A name
+must select one direct child of the original base; escaping, absolute, nested and .git names refuse
+before effects. The constructor covers keep, link, pipe and output.log plus the nested directory.
+Callers own any additional callback actions. A normal borrowed case can use the same public inspector:
+
+```python
+import runpy
+fixtures = runpy.run_path("docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py")
+fixtures["case"]("borrowed", lambda p: (p / "output.log").write_text("owned"),
+    lambda m, p: m["validate_plan"]({"a": 1}, {"a": 2}), "plan drift")
+```
+
+D214 calibrated two original mutants: removing the symlink or ignore guard can expose a linked
+read-only source to the newer deletion-link guard. Only those in-memory mutants isolate that later
+guard. The real inspector retains it, with D211's separate actual admission/refusal/omission proof.
+Linked read-only profile and README inputs pass all fifteen cases/eleven faults; hashes, aliases and
+link counts remain unchanged. An isolation omission reproduces the original masked fault.
+
+The watched fixture control executes the actual bodies and captures plans, activations, directory/
+file/symlink/FIFO/marker/tree calls and prepared Git dispatch. Seventeen physical CLI refusals preserve
+complete mirror snapshots. Independent plan/helper/ownership/restoration/isolation faults calibrate
+the checks; a nonempty fake marker refuses before tree deletion. Those Git ignore dispatch fixtures
+are modeled separately from real project consumers. Neither control path calls project cleanup apply.
+
+```bash
+python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py
+python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py --real
+```

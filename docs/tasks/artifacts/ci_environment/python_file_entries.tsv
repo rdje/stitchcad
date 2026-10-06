@@ -144,3 +144,4 @@ scripts/ci_environment.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 scripts/handoff_census.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 scripts/history_archive.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25
 scripts/local_environment.py	profile	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v

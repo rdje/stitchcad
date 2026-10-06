@@ -3,12 +3,94 @@ from pathlib import Path
 import os
 import runpy
 import shutil
+import sys
 import types
 from unittest.mock import patch
 
 SOURCE = Path(__file__).with_name('cleanup.py')
-ROOT = SOURCE.resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[4]
 BASE = ROOT / 'target/scratch/artifact_cleanup_probes'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+
+
+def load_profile():
+    """Check the first helper with local metadata before executing its planning API."""
+    parent = PROFILE_SOURCE.parent
+    if (parent.is_symlink() or not parent.is_dir() or parent.stat().st_dev != ROOT.stat().st_dev or
+            (parent / '.git').exists() or (parent / '.git').is_symlink() or
+            PROFILE_SOURCE.is_symlink() or not PROFILE_SOURCE.is_file() or
+            PROFILE_SOURCE.stat().st_dev != ROOT.stat().st_dev):
+        raise ValueError('unsafe cleanup fixture profile source')
+    return runpy.run_path(str(PROFILE_SOURCE))
+
+
+try:
+    PROFILE = load_profile()
+except (ValueError, OSError) as error:
+    print('cleanup fixtures refused:', error, file=sys.stderr)
+    raise SystemExit(2) from None
+SOURCES = (Path(__file__), SOURCE, PROFILE_SOURCE, ROOT / 'scripts/check_handoff.sh',
+           ROOT / 'scripts/handoff_census.py', ROOT / 'README.md')
+NAMES = ('tracked', 'symlink-entry', 'symlink-parent', 'git-boundary', 'git-descendant',
+         'nonignored', 'protected-store', 'escaping', 'absolute', 'special-file',
+         'plan-drift', 'record-locality', 'device-parent', 'device-entry', 'valid')
+FILE_NAMES = ('keep', 'link', 'pipe', 'output.log')
+OWNED = set()
+
+
+def producer_plan(*, directories=(), output_files=(), activate=False):
+    """Validate the whole selection before activating stores or touching owned fixtures."""
+    PROFILE['plan_producer'](ROOT, sources=SOURCES, directories=directories, output_files=output_files)
+    environment = PROFILE['environment_for'](ROOT, os.environ, create=activate)
+    if activate:
+        os.environ.update(environment)
+    return environment
+
+
+def fixture_path(fixture):
+    relative = PROFILE['producer_path'](ROOT, fixture)
+    path = ROOT / relative
+    PROFILE['require'](path.parent == BASE and path.name not in ('', '.', '.git'),
+                       'fixture must be a named child of the cleanup probe base')
+    return path
+
+
+def construction_plan(fixture=None, *, activate=False):
+    fixtures = tuple(BASE / name for name in NAMES) if fixture is None else (fixture_path(fixture),)
+    directories = (BASE, *(path for fixture in fixtures for path in (fixture, fixture / 'nested')))
+    files = tuple(fixture / name for fixture in fixtures for name in FILE_NAMES)
+    return producer_plan(directories=directories, output_files=files, activate=activate)
+
+
+def removal_plan(fixture):
+    """Own only the freshly created tree; deliberate unsafe children are test data."""
+    fixture = fixture_path(fixture)
+    producer_plan(directories=(BASE,))
+    PROFILE['require'](fixture in OWNED, 'fixture removal is not owned')
+    PROFILE['require'](not fixture.is_symlink() and fixture.is_dir() and
+                       fixture.stat().st_dev == ROOT.stat().st_dev, 'unsafe owned fixture root')
+    PROFILE['require'](shutil.rmtree.avoids_symlink_attacks, 'runtime lacks safe fixture removal')
+
+
+def remove_fixture(fixture):
+    removal_plan(fixture)
+    # These are empty controlled markers, never initialized repositories. rmdir
+    # refuses a nonempty marker; teardown stops before removing its containing tree.
+    for marker in fixture.rglob('.git'):
+        removal_plan(fixture)
+        PROFILE['require'](not marker.is_symlink() and marker.is_dir() and
+                           marker.stat().st_dev == ROOT.stat().st_dev, 'unsafe controlled Git marker')
+        marker.rmdir()
+    producer_plan(directories=(fixture,))
+    shutil.rmtree(fixture)
+    OWNED.remove(fixture)
+
+
+try:
+    construction_plan(activate=True)
+except (PROFILE['Refusal'], OSError) as error:
+    print('cleanup fixtures refused:', error, file=sys.stderr)
+    raise SystemExit(2) from None
 BASE.mkdir(parents=True, exist_ok=True)
 GOOD = runpy.run_path(str(SOURCE))
 PASS = 0
@@ -26,16 +108,27 @@ def refusal(module, operation, reason):
 def case(name, setup, operation, reason, mutation=None):
     global PASS
     fixture = BASE / name
+    construction_plan(fixture)
     require_absent = not fixture.exists()
     assert require_absent, ('stale controlled fixture', fixture)
+    construction_plan(fixture, activate=True)
     fixture.mkdir()
-    setup(fixture)
+    OWNED.add(fixture)
     try:
+        setup(fixture)
         refusal(GOOD, lambda module: operation(module, fixture), reason)
         if mutation:
             before, after = mutation
+            producer_plan()
             source = SOURCE.read_text()
             assert source.count(before) == 1, ('actual guard anchor', name)
+            # These original faults can expose a linked read-only source. Isolate
+            # the newer deletion-link guard in their in-memory mutants; its real
+            # policy and separate D211 controls remain enabled.
+            if name in ('symlink-entry', 'nonignored'):
+                link_guard = "require(entry.stat().st_nlink == 1, 'hard-linked entry: ' + rel)"
+                assert source.count(link_guard) == 1, ('link isolation anchor', name)
+                source = source.replace(link_guard, 'pass', 1)
             module = {'__file__': str(SOURCE), '__name__': 'cleanup_fault'}
             exec(compile(source.replace(before, after, 1), str(SOURCE), 'exec'), module)
             try:
@@ -48,10 +141,7 @@ def case(name, setup, operation, reason, mutation=None):
         print('  refusal:', name)
         PASS += 1
     finally:
-        # .git is just an empty controlled marker, never an initialized repository.
-        for marker in fixture.rglob('.git'):
-            marker.rmdir()
-        shutil.rmtree(fixture)
+        remove_fixture(fixture)
 
 
 def relative(path):
@@ -125,16 +215,19 @@ case('device-entry', lambda p: (p / 'output.log').write_text('generated'),
      ("require(entry.stat().st_dev == ROOT.stat().st_dev, 'foreign device: ' + rel)", 'pass'))
 
 fixture = BASE / 'valid'
+construction_plan(fixture, activate=True)
 fixture.mkdir()
-(fixture / 'output.log').write_text('regenerable output\n')
+OWNED.add(fixture)
 try:
+    (fixture / 'output.log').write_text('regenerable output\n')
     row = GOOD['inspect'](relative(fixture), set())
     assert row['files'] == 1 and row['bytes'] == 19 and row['kind'] == 'tree'
+    construction_plan(fixture)
     (fixture / 'output.log').write_text('changed output\n')
     assert GOOD['inspect'](relative(fixture), set())['sha256'] != row['sha256']
     GOOD['validate_plan']({'same': [1, 2]}, {'same': [1, 2]})
     PASS += 1
 finally:
-    shutil.rmtree(fixture)
+    remove_fixture(fixture)
 assert not any(BASE.iterdir())
 print('cleanup probes:', PASS, 'pass / 0 fail; 11 actual compiled assertion reds; source unchanged')

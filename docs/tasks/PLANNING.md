@@ -1058,3 +1058,5 @@ D208 whole authored candidate title repair retained in [part130](../history/stit
 D209 whole report/verified repair retained in [part131](../history/stitchcad-defects-part131.md).
 
 D210/D211 whole authored reports/verified repairs retained in [part132](../history/stitchcad-defects-part132.md).
+
+D212/D213/D214 whole authored reports/verified repairs retained in [part133](../history/stitchcad-defects-part133.md).

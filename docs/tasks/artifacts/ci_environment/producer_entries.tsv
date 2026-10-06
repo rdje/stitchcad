@@ -10,7 +10,7 @@ crates/sc-measure/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public b
 crates/sc-units/Cargo.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 docs/book/book.toml	platform	G1-SLICE.5b.4c.h2.b.s	Declarative public build/output contract; destination audit pending.
 docs/tasks/artifacts/artifact_cleanup/cleanup.py	output	G1-SLICE.5b.4c.h2.b.p	Complete audit/full tracked-source/child plans; strict process evidence and unique deletion links; original policy/census/JSON/argv verified.
-docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py	output	G1-SLICE.5b.4c.h2.b.p	Complete input/fixture/store plans, safe owned marker/tree teardown and protected setup; original15/11 and valid borrowed/linked inputs verified.
 docs/tasks/artifacts/artifact_cleanup/run_artifact_cleanup_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/book_publication/book_publication.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/book_publication/run_book_publication_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
@@ -253,3 +253,4 @@ scripts/history_archive.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/her
 scripts/local_environment.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
 scripts/run_make.sh	profile	G1-SLICE.5b.4c.h2.b.v	Primary pre-dispatch profile verified in .h2.a; final standalone/source coverage pending.
 scripts/update_scaffold.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
+docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	Actual fixture plans/effects/omissions/physical and protected setup controls; original bodies and real15/11 source/residue proof.
