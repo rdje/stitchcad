@@ -11,6 +11,7 @@ docs/tasks/artifacts/ci_environment/producer_census.py	profile	G1-SLICE.5b.4c.h2
 docs/tasks/artifacts/ci_environment/producer_census_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/push_cadence_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_bridge_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/ci_environment/python_inline_context_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_input_context_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_payload_library_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_producer_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v

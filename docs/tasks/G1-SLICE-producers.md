@@ -202,7 +202,8 @@ Whole0205 task/lesson/scope retained in [part270](../history/stitchcad-devnotes-
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a09`
-  Status: `pending`
+  Status: `done`
+  Own0208: inline context entries/control/docs; target/inline-plan-*; whole0207 task/lesson retention274 and blocking oldest ledger187.
   Goal: Inline context fixtures; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
@@ -764,12 +765,14 @@ Whole0205 task/lesson/scope retained in [part270](../history/stitchcad-devnotes-
 
 Whole0206 task/lesson retained in [part271](../history/stitchcad-devnotes-part271.md).
 
-### G1-SLICE.5b.4c.h2.b.p.o.a08
+Whole0207 task/lesson retained in [part274](../history/stitchcad-devnotes-part274.md).
 
-- [x] REPRODUCE / ISSUE: python_structure_fixture_contract.py executes8d originals; four bootstrap/read/mkdir gaps fail independent assertions; current captures pass, rc=0, target/struct-plan-control.log.
-- [x] ROOT CAUSE: actual source/body guards were absent at pure delegation and complete producer boundaries; original ASTs/cases match after guard removal. python_structure_fixture_contract.py calibrated30 omissions, rc=0, struct-plan-control/control39.log.
-- [x] FIX: BOOT4/6 and REF9/13 pure plans, complete books/selectors and10/14-input writers retain prepared stores/argv; source-only restore guards. python_structure_fixture_contract.py17 captures and both real late-fault restores, rc=0, struct-plan-control.log.
-- [x] ADDRESSED:14 physical/26 CLI/eight repeated borrowed refusals, pure-sidebar positive, actual directory/planner disables and both restoration assertion reds. python_structure_fixture_contract.py, rc=0, struct-plan-control/control39.log.
-- [x] NO REGRESSION: python3 -I -B target/struct-plan-real-proof.py, Python3.14/3.9 rc=0, struct-plan-real/real39.log; original16/two/4 and inventory7/10/2/6/4, input130/3/9, eleven consumers; all210 inputs/118Rust63 production exact. No Rust/grammar changes.
-- [x] LOCKSTEP: target/struct-plan-signoff.py rc=0, signoff.log; publication45/census9+9+4/coverage9/archive28+609/ledger11+13 green. All590/prior586/all77 controls/69 headers/185 pointers/proofs/navigation/caps exact. Book/live next.a09; promotion: declined (existing boundary/restoration/retention rules).
-Final staged gate13 green, rc=0, target/struct-plan-staged-gate.log.
+### G1-SLICE.5b.4c.h2.b.p.o.a09
+
+- [x] REPRODUCE / ISSUE: python_inline_context_contract.py executes6df originals; missing import/producing boundaries yield two actual assertion gaps, rc=0, target/inline-plan-control.log; original13/five cases and bodies exact.
+- [x] ROOT CAUSE: unplanned book replacement and classifier write precede complete child validation. python_inline_context_contract.py nested unexpected-entry refusal/actual child-guard omission admission, rc=0, inline-plan-control/control39.log.
+- [x] FIX: BOOT3/4, complete copies/selectors and merged child/writer plans before effects; fresh writer boundaries/source-only restores preserve stores/argv. python_inline_context_contract.py nine captures, rc=0, inline-plan-control.log.
+- [x] ADDRESSED:20 guard reds,14 physical/14 CLI/eight repeated borrowed refusals, pure-sidebar positive, directory/planner omissions and actual mirrored late-fault restoration red/green, rc=0, python_inline_context_contract.py, inline-plan-control/control39.log.
+- [x] NO REGRESSION: python3 -I -B target/inline-plan-real-proof.py,3.14/3.9 rc=0, inline-plan-real/real39.log; all13 authored verdicts/five intended assertion reds; all188 inputs/118Rust63 production exact. Language probes16 pass, rc=0, inline-plan-language.log.
+- [x] LOCKSTEP: target/inline-plan-signoff.py rc=0, signoff.log; publication45/census9+9+4/coverage9/archive28+611/ledger11+13 green. All592/prior590/all81 controls/70 Source headers/186 pointers/proofs/navigation/caps exact; book/live next.a10. promotion: declined (existing nested-plan/restoration/retention rules).
+Final staged gate13 green, rc=0, target/inline-plan-staged-gate.log.

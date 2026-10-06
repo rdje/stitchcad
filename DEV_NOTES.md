@@ -3,58 +3,59 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — structural and canonical inventory fixture plans
+## _(2026-10-06 UTC)_ — inline context and nested classifier fixture plans
 
-The four original entries lacked complete producing/reference boundaries: structural imports and
-borrowed calls loaded inputs without plans, while both mutation CLIs could read/create fixtures first.
-The watched python_structure_fixture_contract.py compares original AST bodies against8d1721d and
-captures actual entry bodies; four old gaps fail independent checks. Grammar and all118 Rust sources
-stay exact. Existing D156 remains open for the remaining producers; this group closes only .a08.
+Original inline fixtures could replace their book without complete source/output plans; the writer
+read/created fixtures on import and changed the classifier before validating its child's replacement.
+Both original gaps fail python_inline_context_contract.py; original13/five cases and all assertions
+compare exactly against6df9f5c ASTs after removing the added guards/environment adapters.
+D156 remains open for later producers. This leaf closes only .a09; classifier/grammar stay exact.
 
-Structure now validates BOOT4/REF9 without effects. Whole-book and effective-selector plans inspect
-all65 files, both replacement trees/logs and old entries before activation; selected file/directory
-aliases refuse before deletion. Complete copies are rechecked, and prepared stores/relative selectors
-reach the shell unchanged. Pure contracts/--contracts-only create no fixtures. Inventory validates
-BOOT6/REF13 before its input provider and each direct read, sharing the provider’s Refusal identity.
-Both writers are inert on import, plan10/14 inputs/four logs/one writable source, and freshly validate
-source writes, children and logs. Restoration guards are source-only on both paths (D207).
+The fixture validates BOOT3 on import. It plans the whole65-file book, one replacement tree and actual
+selectors before activation, rejects old unexpected entries/links/hardlinks/selected file or directory
+aliases, and rechecks deletion/copied inputs/child source and selectors. Pure fixture_plan(activate=False)
+returns the complete plan without effects; producing calls preserve prepared stores, argv and other
+environment values. Relative selectors match the child's repository working directory. Caller
+selector overrides can change the authored verdicts; they are preserved, never silently rewritten.
 
-Control calibration caught an uncommitted instrumentation error: global plan counts let nested
-provider validations refresh an inventory caller’s stale plan. target/struct-plan-fresh-trace.log
-pinpoints the missing grammar guard: inventory consumed2, nested structure plans raised total4.
-Per-caller generations now discriminate all four inventory omissions. This was a draft control error,
-not a shipped producer defect. A draft syntax paragraph exceeded its existing bound before writing;
-the shorter linked paragraph keeps the fixed ceiling. Excluded drafts provide no signoff evidence.
+The writer validates BOOT4 before loading the inert fixture module and adopts its Refusal identity.
+Its producing plan merges the child's complete plan:69 baseline sources,65 copied files/five logs and
+one writable classifier. Child preflight runs before activation or source changes, then each source
+change/child/log gets a fresh plan. Both restoration paths validate only that writable source (D207).
+An unexpected child entry refuses before effects; disabling the actual child old-entry guard admits
+that same entry through the writer's pure planner, with the classifier/sentinel unchanged.
 
-Current Python3.14/OS3.9 control logs: struct-plan-control/control39, rc=0. Seventeen positive captures,
-30 actual guard reds/four original gaps; two copies/134 writes/two intercepted children, each writer
-13 modeled writes/four children, and child-failure source restoration. Fourteen physical refusals,
-pure unused-sidebar positive,26 CLI/eight repeated borrowed refusals, actual directory guard/planner
-omissions. Both late-log faults use real mirrored source writes: full restoration plans fail source
-byte assertions; intact source-only plans restore, retaining CLI2. Mirrors/actual inputs exact.
+Current controls3.14/OS3.9, target/inline-plan-control/control39.log, rc=0: nine captures,20 actual guard
+reds/two original gaps; full13-copy calls perform858 real copied writes/13 intercepted children,
+writer16 modeled writes/five children, failure path restores the source. Fourteen physical refusals,
+unused-sidebar inert-import positive,14 CLI/eight repeated borrowed refusals, actual directory alias
+and profile planner omissions discriminate. Real mirrored late-log failure produces CLI2; full-plan
+restoration variants fail the source-byte assertion, source-only guards restore; mirrors/actual source
+exact. A draft symlink fixture expected the generic message instead of the earlier copied-book
+refusal; corrected from observed output before signoff. The initial retention draft's old receipt
+suffix assertion failed before any write; the actual6df source boundary supplied the correct suffix.
 
-Real exclusive runs: target/struct-plan-real/real39.log, rc=0. Original structure16/two copied refusals,
-four actual structural assertion reds; inventory7 roles/10 symbols/2 calls/6 authored bytes/four actual
-byte-assertion reds. Terminal frames checked against original assertion sites; no unrelated refusal
-or SyntaxError substitutes for a red. Input130/three copied refusals/nine original reds and eleven
-numerical/shape/canonical consumers pass; all210 frozen inputs/118Rust63 production exact after each
-child. Diagnostics stay observations; captured dispatch is separate from real reference evidence.
+Exclusive real3.14/3.9 runs, target/inline-plan-real/real39.log, rc=0: all13 independently authored
+verdicts and five original classifier assertion reds. Terminal traceback frames name actual contract
+assertions; no SyntaxError or profile refusal counts as a red. All188 frozen inputs/118Rust63
+production stay byte-exact after each child. Captured dispatch and real reference evidence are distinct.
 
-Whole0206 task/lesson271, Ease receipt272, original serializer checklist273 and whole0200/0199 ledger186
-are exact8d intervals: complete FILE, fresh single-inode copy, prior586/all77 physical controls and
-public retrieval before retirement. Current590; all old records, three proof siblings, Source headers,
-original navigation and fixed caps remain separately checked. No sealed record is edited.
+Whole0207 receipt/lesson274 and oldest0205/0204/0203 ledgers187 are exact6df intervals, complete FILE,
+fresh single-inode copies, prior590/all81 physical controls and public reads before live retirement.
+Current592/64 working Markdown; no sealed edit or ceiling increase. Three protected proof siblings,
+closed Source headers, all prior records/navigation and current library remain separately checked.
 
-Focused closure: publication45; census9 assertions/9 refusals/4 body reds,234 Git paths and125 file
-rows; coverage9; archive28 plus609 CLI controls/all590 reads; ledger778 real verdicts/11 arms plus
-13 independent pointers. All terminal rc=0 in target/struct-plan-{publication,census,coverage,archive,
-ledger,census-cli,continuity}.log. Continuity preserves prior586/all77 physical controls,69 original
-closed headers,185 CH pointers, navigation11675/four routes, three proof siblings and current library.
-Collection pressure62/21787L/1596651 logicalB/770742 residentB; fixed caps unchanged. Final staged
-and commit-hook verdicts follow the same13-doctrine workflow; no push/full Rust claim.
+Focused closure: publication45, language16, census9/9/4 plus235 Git paths/126 file rows, coverage9,
+archive28+611 CLI/all592 reads, ledger781 real verdicts/11 arms plus13 pointer controls, all terminal
+rc=0 in target/inline-plan-{publication,language,census,coverage,archive,ledger,census-cli,continuity}.log.
+Continuity: prior590/all81 physical controls,70 original closed headers,186 CH pointers, navigation
+11675/four routes, three proof siblings/current library/caps exact; pressure64/21887L/1604763 logicalB/
+778854 residentB. Known P3 ls/head SIGPIPE noise recurred; existing .b.s ownership remains. No new defect.
 
-Promotion declined: existing public-boundary, calibrated actual-body, source-only restoration and
-whole-record retention rules suffice. This leaf adds watched controls and applies those rules.
+Promotion declined: applies existing boundary, nested-effect, calibrated counterfactual, source-only
+restoration and whole-record retention rules. The new control is watched by the environment runner.
+
+Whole0207 task/lesson retained in [part274](docs/history/stitchcad-devnotes-part274.md).
 
 Whole0205 task/lesson/scope retained in [part270](docs/history/stitchcad-devnotes-part270.md).
 
@@ -246,3 +247,5 @@ committed table and original links. Recent records follow; older identities rema
 
 | [part272](docs/history/stitchcad-devnotes-part272.md) | whole original Ease receipt | 10 lines, 710 bytes, sha256:c9a97e5b… |
 | [part273](docs/history/stitchcad-devnotes-part273.md) | whole original serializer checklist | 22 lines, 2058 bytes, sha256:14b7d6df… |
+
+| [part274](docs/history/stitchcad-devnotes-part274.md) | whole0207 task/lesson | 61 lines, 5997 bytes, sha256:b45c9d9f… |
