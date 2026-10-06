@@ -63,8 +63,59 @@ environment handling. `--real` separately runs both modes through native childre
 checks all source and archive bytes, and requires zero fixture residue. The
 complete original case table, permutation, extraction, arguments, logs and
 assertions are also compared through the declared guard and teardown adapters.
-These controls pass on Python 3.9 and 3.14. The separate source-mutation producer
-remains owned by the next task; this entry does not run tracked-source faults.
+These controls pass on Python 3.9 and 3.14.
+
+## Source mutation evidence
+
+```bash
+python3 -I -B docs/tasks/artifacts/changelog/ledger_pointer_mutations.py
+```
+
+Run this producer exclusively: it temporarily changes the ledger shell and pointer
+helper, then restores both sources. It validates the complete seven sources and
+physical archive backing inputs, both mutable source authorities, its workspace
+and four log destinations before reading snapshots or activating stores. Fresh
+plans precede source writes, syntax checks, contract children, log writes, source
+restoration, restored reads and the final baseline. Child arguments retain the
+original `bash -n` and `python3 -I -B` interfaces and inherit prepared stores.
+
+The four original faults require these specific contract failures:
+
+| Fault | Required case | Required mismatch |
+| --- | --- | --- |
+| Filename text replaces link targets | Catalog target, short label | A valid pointer fails |
+| An unregistered catalog route is accepted | Missing catalog | An invalid pointer passes |
+| Invalid extra target status is ignored | Valid pointer plus invalid target | An invalid pointer passes |
+| A code fence is mistaken for an index | Fenced pseudo-index | An invalid pointer passes |
+
+An arbitrary assertion is insufficient. The response must identify the original
+`assert (not failures) == expected` site, the expected named case and polarity,
+and its five-field evidence tuple. Failure lines must agree with captured stdout,
+belong to the POINTER family and contradict the expected verdict. This repairs
+D216: the original classifier accepted unrelated assertions containing a filename
+and `AssertionError` token. The entry preserves its original exit/status/source
+checks and adds this stricter evidence check.
+
+The loop's protected restoration runs after a syntax-child, write or classifier
+failure. Each restoration write rechecks mutable authority. Four logs remain at
+`target/ledger_pointer_mutations/mutation-1.log` through `mutation-4.log`. A
+successful run restores exact source bytes and finishes with all thirteen native
+baseline verdicts; the contract workspace is absent afterward.
+
+```bash
+python3 -I -B docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py
+python3 -I -B docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py --real
+```
+
+Default controls capture 27 complete plans, 15 effect calls and nine prepared
+children, reproduce the original false admissions, and verify two interrupted
+restorations, six unrelated-red refusals, ten actual omission reds and thirteen
+physical CLI refusals. Their simulated child responses prove dispatch and
+classification. `--real` independently runs all four native faults exclusively,
+checks the expected assertion evidence, and verifies restored baseline/source and
+archive bytes. Both caller versions, Python 3.9 and 3.14, pass; the native child
+command remains `python3`. Full original bodies, edits, anchors, logs and arguments
+remain exact through declared plan, environment and classifier adapters.
 
 See [Governance](../governance.md) for the historical-reader and retention contract,
 and [Build and checks](../build-and-checks.md) for the broader project gates.

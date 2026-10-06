@@ -28,6 +28,7 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_input_phase_cont
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_cleanup_entry_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_ledger_fixture_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_payload_library_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py" --native

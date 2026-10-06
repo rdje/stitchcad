@@ -112,9 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
-## STITCHCAD-G1-0225 — ledger fixture authority
+## STITCHCAD-G1-0226 — ledger mutation authority
 
-.a23.1: complete source/archive/fixture plans and guarded children/teardown; original13 pointer verdicts preserved.
+.a23.2: complete mutation/file/child/restoration plans; original four pointer faults.
+
+| [205](docs/history/stitchcad-changelog-part205.md) | whole0225 | sealed |
 
 | [204](docs/history/stitchcad-changelog-part204.md) | whole0224 | sealed |
 

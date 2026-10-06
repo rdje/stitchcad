@@ -91,18 +91,8 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h`
   Status: `done`
-  Goal: blocking continuity before .f.n01: pack a new immutable history window and retain whole committed older lessons/ledgers before receipt growth; current DEV16305B/CH32663B leave79B/105B under health targets, archive63 working Markdown files leaves one slot under64.
-  Acceptance: own complete public archive/source/capture contracts before writes; exact current committed source intervals, every prior logical/control byte and actual public read/materialization verified under unchanged resident/decoded/file-count/line ceilings; regenerate map/book/live pointers and commit before native file repair.
-
-Whole retained whole window7 investigation narrative: [part279](../history/stitchcad-devnotes-part279.md).
-
-- [x] REPRODUCE / ISSUE: DEV16305B/CH32663B and63 working archive Markdown files block receipt growth under unchanged health targets. Guarded capture pinned to6d93d3d retains57 whole records; actual fixture424 reads/materialization/source proof pass, rc=0, target/window7-capture.log. Relevant public reader/capture/schema/book contracts read before writes.
-- [x] ROOT CAUSE: raw physical records exhaust the bounded working set; immutable versioned payload/catalog separation preserves logical identity. Physical source/output/victim inode3 acceptance confirmed without alias writes, rc=0, window7-hardlink-diagnostic.log; P1 .f.l owns mutable-path repair. Every actual archive rewrite/removal destination measured single-link first.
-- [x] FIX: append only window7; verify copied payload/control bytes before retiring57 matching raw records; route four live files and retain two whole lessons/three oldest ledgers. Complete6d93d3d byte intervals/hash/line proofs and prior424/six immutable controls exact, rc=0, window7-retention-proof.log. Guarded fixture source79/output448 plan precedes activation; no new persistent producer entry.
-- [x] ADDRESSED: actual public426 reads exact,57 original Git records exact/raw absent, two retained intervals exact,12open163sealed/no gaps or overlap, rc=0, window7-retention-proof.log. Standing archive28/CLI442 controls pass0; newest7 immutable refusal awaits recording commit and is owned next .f.h.v. Master old six-entry prefix preserved;9 physical/16516 decodedL/1194315 logicalB/517400 residentB.
-- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/file120paths44owners15refusals12bodyreds/ledger9+pointer13/map freshness pass, rc=0, window7-*-final logs; archive28+CLI442 pass0 in window7-archive-precommit.log. Source/window/public proofs exact; no Rust/grammar changes. P3 ls/head SIGPIPE root cause confirmed0; both failed diagnostic expectations excluded.
-- [x] LOCKSTEP: book/live/MEMORY/G1/index and maintained links route .f.h.v then .f.l; all fixed record/aggregate/document ceilings unchanged, rc=0, window7-retention-proof.log and map-final.log. promotion: declined (existing immutable-source, scoped-proof and mutable-ownership rules).400 push cadence remains; remote verdict unobserved.
-  Final staged gate13 green, rc=0, target/window7-staged-gate.log.
+  Goal: Window7 retention; complete scope/acceptance retained297.
+  Acceptance: source-complete folded [part297](../history/stitchcad-devnotes-part297.md) reconstructs exactly.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.l`
   Status: `done`
@@ -303,36 +293,42 @@ Whole0224 task/lesson retained in [part294](../history/stitchcad-devnotes-part29
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.1`
   Status: `done`
-  Goal: STITCHCAD-G1-0225 ledger pointer fixtures: complete inputs/population/files/teardown/children; original13 verdicts.
-  Paths: docs/tasks/artifacts/changelog/ledger_pointer_contract.py;docs/tasks/artifacts/ci_environment/python_ledger_fixture_contract.py
-  Own: complete entry/helper/shell/reader/API/book reviewed; --mask-first preserves its original case permutation.
-  Reader checks the whole physical archive before reading logical24; declare every backing control/catalog/payload/raw input.
-  Resolve full numbered fixture/file population before activation or old-tree teardown; guarded native Git/Bash/Python calls.
-  Preserve borrowed namespace/function extraction/public argv and exact fixture logs/refusal families; real consumer separately.
-  Own whole0224 task/lesson/ledger294/204/public reads before retirement, child ownership and source/book/live sync.
-  Own D215 actual archive-child failure strands its new empty workspace; --before rc=0, ledger-entry-before.log.
-  Calibration: independent first mkdir capture caught omitted WORK.parent; declare it before activation.
-  Whole completed cleanup parent295/public reader exact before further fixed-cap growth; no cap changed.
-  Acceptance: actual captures/omission reds/early-late input-file-store-Git-boundary refusals, original bodies/13 verdicts,
-  prepared stores and all source bytes; focused gates. No real source mutations; .2 owns exclusive native pointer faults.
+  Goal: Ledger fixture guards/D215 verified; whole0225 scope/acceptance retained296.
+  Acceptance: complete original13/native inputs/residue and focused gates pass.
 
-
-- [x] REPRODUCE / ISSUE: actual5bde archive-child error strands its empty WORK, isolated --before proof rc=0, target/ledger-entry-before.log. Only the proven empty owned mirror is removed; sources exact. Whole D215 authored report/verified closure retained134.
-- [x] ROOT CAUSE: reader setup preceded try/finally; original-scope omission reproduces its residue. Complete guards and protected-reader controls on3.9/3.14 pass, rc=0, target/ledger-entry-controls{,39}.log; seven omissions include input/file/read/write/removal/environment/scope reds.
-- [x] FIX: complete six sources/all backing inputs/41 directories/52 files before effects; bounded old-tree census and fresh effect/child/removal authority. Default/masked82 plans/121 effect calls/14 children, failure4/4/1 pass, rc=0, controls logs; original AST exact through declared adapters.
-- [x] ADDRESSED: both versions pass twelve physical CLI refusals with exact mirrors/sources, rc=0, controls logs. Native default/masked13 verdicts each and all source/archive bytes/zero residue pass, rc=0, target/ledger-entry-real{,39}.log. No real tracked-source fault or project cleanup apply.
-
-- [x] NO REGRESSION: census256/315/effect73paths33groups/file147paths71owners37native, publication45/66chapters/67API, coverage9, archive28+655CLI/635reads and ledger11+13 pass, rc=0, target/ledger-entry-{census,publication,coverage,archive,ledger}.log; receipt12open202sealed/no overlap rc=0.
-- [x] LOCKSTEP: whole294/204/295 source intervals/134 authored repair/public reads/prior archives/task graph exact on3.9/3.14, rc=0, target/ledger-entry-continuity{,39}.log. Book/live/runner/ledgers/index/G1/MEMORY route.a23.2. Promotion declined: existing authority/restoration rules; fixed caps/400 cadence unchanged.
-
-Staged doctrine13 green, rc=0, target/ledger-entry-staged-gate.log; all results consumed. Commit0225.
+Whole0225 task/lesson retained in [part296](../history/stitchcad-devnotes-part296.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.2`
-  Status: `pending`
+  Status: `done`
   Goal: Ledger pointer mutation complete mutable-source/file/child/restoration plans; original four actual reds.
-  Paths: docs/tasks/artifacts/changelog/ledger_pointer_mutations.py
+  Paths: docs/tasks/artifacts/changelog/ledger_pointer_mutations.py;docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py
   Acceptance: complete public contract review and .1 committed before exclusive source faults; exact originals restored,
   independent current assertion evidence, prepared stores and focused gates before commit.
+
+  Own0226: whole prior scope/lesson/ledger retention before fixed-cap growth.
+
+  Own: full53 mutation/148 contract/shell/helper/reader/profile/book reviewed; resolve all four faults/files.
+  Capture mutable restoration and child/env/classifier evidence without native project faults first.
+  Retention calibration: unverified297 draft rejected401/404-byte old receipts; two exact whitespace folds
+  rebuild the whole source. Public296/205/297 reads exact before retirement; prior archives unchanged.
+
+  Calibration: callback baseline-source reads must use the saved reader; ancestor frames otherwise
+  misclassify control reads as producer effects. First filename-text fault is the short-label catalog case;
+  raw link filenames still match. Native actual logs confirm the independent expected case mapping.
+  Own D216 actual original classifier admits four unrelated assertions; --before rc=0,
+  target/ledger-mutation-before.log. Exact expected case/site/tuple evidence before native signoff.
+
+
+- [x] REPRODUCE / ISSUE: actual39861d1 classifier reports four unrelated assertion responses as pointer reds; nine controlled dispatches/source restoration pass, rc=0, target/ledger-mutation-before.log. Whole D216 authored report/verified closure retained135; no real project source fault in reproduction.
+- [x] ROOT CAUSE: status/AssertionError/filename tokens lacked actual site/case/verdict. Six site/case/polarity/shape/verdict/family refusals and classifier omission red pass on3.9/3.14, rc=0, target/ledger-mutation-controls{,39}.log; original expected native assertion tuples independently confirmed.
+- [x] FIX: seven sources/all backing inputs/two mutable sources/one workspace/four logs before effects; fresh writes/children/logs/restoration/reads and prepared stores. Capture27 plans/15 effect calls/9 children, ten omission reds and original complete AST pass, rc=0, controls logs; callback-reader calibration recorded.
+- [x] ADDRESSED: two interrupted restorations/profile alias/thirteen physical CLI refusals pass both versions, rc=0, controls logs. Exclusive four current named-site verdict reds/restored native13/all core+archive bytes/zero contract residue pass, rc=0, target/ledger-mutation-real{,39}.log; .a23.1 remains unchanged.
+
+
+- [x] NO REGRESSION: census257/316/effect73paths33groups/file148paths71owners37native, publication45/66chapters/67API, coverage9, archive28+659CLI/639reads and ledger11+13 pass, rc=0, target/ledger-mutation-{census-contract,publication,coverage,archive,ledger}.log; receipt12open203sealed/no overlap rc=0.
+- [x] LOCKSTEP: whole296/205/297 committed intervals/two exact folds/135 authored repair/public reads/prior archives/task graph exact on3.9/3.14, rc=0, target/ledger-mutation-continuity{,39}.log. Book/live/runner/ledgers/index/G1/MEMORY route.a23.3. Promotion declined: existing authority/restoration rules; fixed caps/400 cadence unchanged.
+
+Staged doctrine13 green, rc=0, target/ledger-mutation-staged-gate.log; all results consumed. Commit0226.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.3`
   Status: `pending`

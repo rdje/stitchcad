@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — ledger fixture authority
+## _(2026-10-06 UTC)_ — ledger mutation authority
 
-0225 .a23.1: complete archive/fixture plans; D215 reader teardown repaired; native13 and all inputs/residue exact.
-Proof .a23.1; promotion declined: existing authority rules.
+0226 .a23.2: complete mutable/file/child/restore guards; D216 expected-site classifier fixed; four native reds verified.
+Proof .a23.2; promotion declined: existing authority rules.
 
-Whole0224 task/lesson retained in [part294](docs/history/stitchcad-devnotes-part294.md).
+Whole0225 task/lesson retained in [part296](docs/history/stitchcad-devnotes-part296.md).
 
 Whole0221 task/lesson retained in [part290](docs/history/stitchcad-devnotes-part290.md).
 
