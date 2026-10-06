@@ -2,13 +2,47 @@
 from pathlib import Path
 from fractions import Fraction
 import runpy
+import sys
 import re
 
 ROOT = Path(__file__).resolve().parents[4]
 HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
-context = runpy.run_path(str(HERE / 'formula_input.py'))
-_, reference = context['load_context']()
-inventory = runpy.run_path(str(HERE / 'canonical_contract_inventory.py'))
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, HERE / 'formula_input.py',
+               HERE / 'formula_structure.py', HERE / 'static_signature_contract.py',
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh',
+               HERE / 'canonical_contract_inventory.py')
+REFERENCE_INPUTS = (*BOOT_INPUTS, *(ROOT / 'docs/book/src' / name for name in (
+    'spec/formula-language.md', 'spec/formula-language/grammar.md',
+    'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md')),
+    ROOT / 'docs/decisions/decision_canonical-expression-spelling.md',
+    ROOT / 'docs/book/src/annexes/formula-literals.md', HERE / 'canonical_statement_cases.tsv', HERE / 'canonical_recipe_cases.tsv',
+    ROOT / 'docs/decisions/decision_recipe-bytes.md')
+
+
+def source_plan(extra=()):
+    """Validate the complete read-only population without activating stores or creating outputs."""
+    try:
+        PROFILE['plan_producer'](ROOT, sources=(*REFERENCE_INPUTS, *extra))
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
+
+
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+    context = runpy.run_path(str(HERE / 'formula_input.py'))
+    PROFILE = context['PROFILE']
+    source_plan()
+    _, reference = context['load_context']()
+    source_plan()
+    inventory = runpy.run_path(str(HERE / 'canonical_contract_inventory.py'))
+    PROFILE = inventory['PROFILE']
+    source_plan()
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
 render = inventory['canonical_bytes']
 reference.reserved = {name: ('length', True, Fraction(1))
                       for name in ['eps_num', 'eps_geo', 'eps_fmt', 'eps_imp', 'eps_phys']}
@@ -49,7 +83,9 @@ def recipe_bytes(statements):
     return '(recipe ' + ' '.join(statements) + ')'
 
 def rows(name):
-    return [line.split('\t') for line in (HERE / name).read_text().splitlines()
+    fixture_path = HERE / name
+    source_plan((fixture_path,))
+    return [line.split('\t') for line in fixture_path.read_text().splitlines()
             if line and not line.startswith('#')]
 
 def decode(source):
@@ -91,8 +127,10 @@ for source, chunks, expected in recipe_rows:
     statement_count += len(statements)
 
 # Exact templates are also required in the maintained specification and decision, not only fixtures.
+source_plan()
 grammar = (ROOT / 'docs/book/src/spec/formula-language/grammar.md').read_text()
 section = grammar.split('### 4.1 Statement and whole-recipe bytes\n', 1)[1].split('\n## 5.', 1)[0]
+source_plan()
 decision = (ROOT / 'docs/decisions/decision_recipe-bytes.md').read_text()
 for template in ['(bind NAME KIND EXPR)', '(assert NAME TOLERANCE LEFT RIGHT)',
                  '(recipe STATEMENT1 STATEMENT2 ...)', '(recipe)']:

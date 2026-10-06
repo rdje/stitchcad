@@ -373,6 +373,29 @@ python3 -I -B docs/tasks/artifacts/formula_structure/recipe_byte_contract.py
 python3 -I -B docs/tasks/artifacts/formula_structure/recipe_byte_mutations.py
 ```
 
+The recipe-byte, statement and whole-source reference instruments now validate their complete
+read-only loaders, fixtures, chapters and decisions before delegated loads or fixture reads.
+They retain pure imports and borrowed-call state: no stores are activated, files written or
+children started. Each adopts the actual loader's refusal class so invalid inputs return the
+same named refusal. The exported rows(name) and verify_fixture(name, expected_rows) readers also
+validate the exact caller-selected path on every call. Safe checkout-local borrowed fixtures keep
+their original results; outside, missing, symlink, directory and nested-repository inputs refuse
+before being read. Twelve actual path verdicts, two original gaps/two omission reds and 24 repeated
+borrowed calls check that interface separately from the fixed tables.
+The nine-fault writer declares its complete child inputs, nine logs and
+single mutable source before activation. It rechecks before edits, children and logs; source-only
+restoration succeeds even if a log becomes unsafe after an edit. The renderer's indentation
+and all nine original fault replacements remain exact, including the multiline injection.
+
+The public --classifier-only mode stays pure and can check anchors/noise with an unsafe log
+present. Full producing mode refuses that log before editing its source. The CI-environment
+control checks fifteen guard omissions, 42 physical refusals, 32 repeated borrowed refusals,
+six actual provider-adoption omissions and late restoration red/green in isolated mirrors.
+Real reference/fault runs remain separate and exclusive. Python 3.9 and 3.14 both retain the
+sixteen statement-byte/nine source/twelve chunk controls, fifteen header/six refusal controls,
+thirteen whole-source populations and nine real authored-byte assertion reds. All 23 scoped
+input bytes remain exact after each actual child; these guards add no product execution proof.
+
 D109's technical decision is docs/decisions/decision_recipe-bytes.md. The engineer authored and
 applied it under standing delegation; independent evidence approval remains unapproved and the
 director may re-open the spelling. Product immutable normalization is [available](formula-recipe-inputs.md) at .3f.1b, with [owned identity](formula-recipe-inputs.md#own-canonical-statement-and-recipe-identity) at .1c.

@@ -112,9 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
-## STITCHCAD-G1-0219 — signed-angle fixture plans
+## STITCHCAD-G1-0220 — reference plans
 
-.a18.s: copies/logs/selectors; 90 controls/15 assertion reds on3.9/3.14; exact restoration.
+Pure plans;9 real reds/23 exact inputs on3.9/3.14.
+
+| [199](docs/history/stitchcad-changelog-part199.md) | 0219 | sealed |
 
 Whole0218/0217 ledgers retained in [part198](docs/history/stitchcad-changelog-part198.md).
 

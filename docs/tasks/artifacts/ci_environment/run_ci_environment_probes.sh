@@ -22,6 +22,7 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_arithmetic_angle
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_scalar_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/receipt_retention_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_signed_angle_fixture_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_recipe_statement_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_payload_library_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py" --native

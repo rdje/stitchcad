@@ -3,18 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — complete signed-angle fixture plans
+## _(2026-10-06 UTC)_ — pure recipe and statement plans
 
-Leaf .a18.s keeps the ninety numerical/replay assertions, eight added book rows and fifteen
-compiled actual faults exact. A pure provider declares all copied files, replay/refusal logs,
-selected inputs and referenced sources before activation. Fresh plans precede remove/copy,
-copied reads/edits, shell children and logs. The writer includes nested destinations and its
-single mutable shell original; a source-only restore survives a late unsafe log. Actual bodies
-pass 22 omission reds, 33 physical refusals, 16 repeated borrowed refusals, three independent
-provider-adoption reds and late restoration red/green on both Python versions. Exclusive real
-runs retain ninety controls/fifteen assertion reds and all 73 input bytes after each child.
-Whole0217/D209 task lessons286/287 and0218/0217 ledgers198 retain exact e45c21d intervals/public reads.
-Promotion declined: complete copied-file, selector and restoration rules already apply.
+.a19 keeps every assertion/syntax body/classifier/nine CASES and renderer indentation exact.
+Pure entries guard sources/selected fixture paths and adopt actual loader profiles.
+The writer declares child inputs/nine logs/one mutable source; source-only restores survive
+unsafe logs. Both Python versions pass15 guard reds/42 physical refusals/32 repeated borrowed
+refusals/six adoption reds and actual late restoration red/green; classifier-only stays pure
+with an unsafe log; caller fixtures12/24 calls/two original gaps/two reds pass. Real runs retain
+nine assertion reds;23 inputs stay exact after each child. Whole0219 task/lesson288 and ledger199
+retain exact03ebaa2 intervals/public reads. Promotion declined: existing source/purity/restore
+rules; no product or independent approval claim.
+
+Whole0219 task/lesson retained in [part288](docs/history/stitchcad-devnotes-part288.md).
 
 Whole0217 task/lesson retained in [part286](docs/history/stitchcad-devnotes-part286.md).
 Whole0218 task/lesson retained in [part287](docs/history/stitchcad-devnotes-part287.md).
@@ -259,3 +260,5 @@ Whole0213 task and lesson retained in [part282](docs/history/stitchcad-devnotes-
 | [part286](docs/history/stitchcad-devnotes-part286.md) | whole0217 task and lesson | 30 lines, 3432 bytes, sha256:5751876e… |
 
 | [part287](docs/history/stitchcad-devnotes-part287.md) | whole0218 task and lesson | 20 lines, 1605 bytes, sha256:2b57018e… |
+
+| [part288](docs/history/stitchcad-devnotes-part288.md) | whole0219 task and lesson | 39 lines, 3459 bytes, sha256:85b81741… |

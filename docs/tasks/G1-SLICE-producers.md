@@ -237,35 +237,41 @@ Whole0217 verification retained in [part286](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a18`
   Status: `done`
-  Own0219: signed-angle pair/provider/controls; whole0217/D209 task lessons and0218/0217 ledgers retention; book/census/live sync.
-  Goal: Signed angle fixtures; sources and kinds in the watched ledger.
-  Acceptance: ordered group acceptance above.
+  Goal: Signed-angle fixtures; full scope and proof retained in part288.
+  Acceptance: part288 verified.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a18.r`
   Status: `done`
   Goal: D209 receipt width repair; complete scope/proof retained in part287.
   Acceptance: part287 verified.
 
-Whole0218 verification retained in [part287](../history/stitchcad-devnotes-part287.md).
-
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a18.s`
   Status: `done`
-  Goal: STITCHCAD-G1-0219 signed-angle pair/provider/controls after .r receipt repair.
-  Acceptance: ordered group acceptance above.
+  Goal: Signed-angle pair/provider/controls; full scope and proof retained in part288.
+  Acceptance: part288 verified.
 
-- [x] REPRODUCE / ISSUE: python_signed_angle_fixture_contract.py --before exposes actual e45c21d loader/mkdir gaps without original effects, rc=0, target/signed-plan-before.log; public pair/selectors/loader/book reviewed.
-- [x] ROOT CAUSE: actual-body/default control locates incomplete copy/child/log plans; 22 guard reds pass on3.9/3.14, rc=0, target/signed-plan-controls{,39}.log; original assertions/functions/numerical prefix/fifteen CASES exact.
-- [x] FIX: pure complete provider/copies/two logs, selector/source rechecks and nested writer plan; fresh remove/copy/read/edit/child/log guards. Captures8 pure plans/69 entry writes/two children/46 writer writes/fifteen children; injected failure restores shell, rc=0, controls logs.
-- [x] ADDRESSED: --real on3.9/3.14 retains90 controls/fifteen compiled assertion reds;73 scoped inputs exact after each child, rc=0, target/signed-plan-real{,39}.log. Default controls33 physical/16 repeated borrowed refusals/three adoption reds and actual late restoration red/green pass0.
-- [x] NO REGRESSION: census250/309/effect73/file141, publication45/coverage9/language16/archive28+638/ledger11+13 pass, rc=0, target/signed-plan-{census,publication,coverage,language,archive,ledger}.log. Rust unchanged; numerical meaning/product frontier preserved.
-- [x] LOCKSTEP: --continuity on3.9/3.14 proves whole286/287/198 public reads/prior immutable/reference bytes/task graph exact, rc=0, target/signed-plan-continuity{,39}.log; receipt control confirms12open196sealed/no overlap, rc=0. Book/live/runner/ledgers point.a19. Promotion: declined; existing complete copy/selector/restore rules. Commit0219.
-
-  Final staged gate13 green, rc=0, target/signed-plan-staged-gate.log.
+Whole0219 verification retained in [part288](../history/stitchcad-devnotes-part288.md).
+Whole0218 verification retained in [part287](../history/stitchcad-devnotes-part287.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a19`
-  Status: `pending`
+  Status: `done`
+  Own0220: recipe-byte pair/recipe and statement references, actual pure/classifier/writer/physical/real controls;
+  whole0219 task/lesson and ledger retention; book/runner/three ledgers/live sync. Preserve nine CASES/renderer indentation.
+  D156 caller-file gap: rows(name)/verify_fixture(name, n) plan fixed tables but read caller names unchecked.
+  Reproduce with an unsafe caller path after a valid import; impact: outside/symlink/Git-boundary read.
+  Own now: validate the exact selected path per call, preserve safe borrowed fixtures, add actual omission/refusal controls.
+  Recording control: initial plain part199 link fails ledger POINTER; restored the supported first-cell/table route before closure.
   Goal: Recipe byte and statement/reference libraries; sources and kinds in the watched ledger.
   Acceptance: ordered group acceptance above.
+
+- [x] REPRODUCE / ISSUE: python_recipe_statement_contract.py --before exposes four actual03ebaa2 bootstrap/read gaps, rc=0, target/recipe-statement-before.log; selected callers expose two additional original gaps without unsafe reads, rc=0, caller/default logs. Complete public entries/fixtures/book/decision reviewed.
+- [x] ROOT CAUSE: fixed plans omit caller names; entry/writer effects need complete source/file/fresh checks. Actual default on3.9/3.14 passes15 guard reds plus two caller reds/six provider-adoption reds, rc=0, target/recipe-statement-controls{,39}.log; every original assertion/syntax body/classifier/nine CASES exact.
+- [x] FIX: three pure complete plans and exact selected-path checks; writer includes child inputs/nine logs/mutable source before activation. Captures0 pure effects/28 writer writes/nine children; classifier-only0 effects and injected child failure exact restore pass, rc=0, default logs. Renderer indentation remains exact.
+- [x] ADDRESSED: exclusive --real on3.9/3.14 retains16 statement-byte/nine source/twelve chunk,15 header/six refusal,13 whole-source populations and nine actual authored-byte assertion reds;23 inputs exact after each child, rc=0, target/recipe-statement-real{,39}.log. Physical42/four pure positives/32 repeated refusals, caller12/24 repeated calls and late restore red/green pass0.
+- [x] NO REGRESSION: census251/310/effect73/file142, publication45/coverage9/language16/archive28+640/ledger11+13 pass, rc=0, target/recipe-statement-{census,publication,coverage,language,archive,ledger}.log; unsupported plain pointer was corrected before this green rerun. Rust/normative inputs/numerical meaning unchanged.
+- [x] LOCKSTEP: --continuity both versions proves complete288/199/public reads/prior immutable/reference bytes/task graph exact, rc=0, target/recipe-statement-continuity{,39}.log. Receipt control12open196sealed/no overlap passes0. Book/live/runner/ledgers/MEMORY route.a20; fixed caps and400 cadence. Promotion: declined; established complete source/selected path/purity/restore rules. Commit0220.
+
+  Final staged gate13 green, rc=0, target/recipe-statement-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a20`
   Status: `pending`

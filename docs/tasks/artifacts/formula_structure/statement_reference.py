@@ -2,11 +2,45 @@
 from pathlib import Path
 from fractions import Fraction
 import runpy
+import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-context = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/formula_input.py'))
-namespace, reference = context['load_context']()
-inventory = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/canonical_contract_inventory.py'))
+HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, HERE / 'formula_input.py',
+               HERE / 'formula_structure.py', HERE / 'static_signature_contract.py',
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh',
+               HERE / 'canonical_contract_inventory.py')
+REFERENCE_INPUTS = (*BOOT_INPUTS, *(ROOT / 'docs/book/src' / name for name in (
+    'spec/formula-language.md', 'spec/formula-language/grammar.md',
+    'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md')),
+    ROOT / 'docs/decisions/decision_canonical-expression-spelling.md',
+    ROOT / 'docs/book/src/annexes/formula-literals.md', HERE / 'statement_cases.tsv')
+
+
+def source_plan():
+    """Validate the complete read-only population without activating stores or creating outputs."""
+    try:
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
+
+
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+    context = runpy.run_path(str(HERE / 'formula_input.py'))
+    PROFILE = context['PROFILE']
+    source_plan()
+    namespace, reference = context['load_context']()
+    source_plan()
+    inventory = runpy.run_path(str(HERE / 'canonical_contract_inventory.py'))
+    PROFILE = inventory['PROFILE']
+    source_plan()
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
 render = inventory['canonical_bytes']
 reference.reserved = {name: ('length', True, Fraction(1))
                       for name in ['eps_num', 'eps_geo', 'eps_fmt', 'eps_imp', 'eps_phys']}
@@ -27,6 +61,7 @@ def stop(*args):
 reference.parse = parse
 reference.infer = stop
 reference.evaluate = stop
+source_plan()
 rows = [line.split('\t') for line in (ROOT / 'docs/tasks/artifacts/formula_structure/statement_cases.tsv').read_text().splitlines()
         if line and not line.startswith('#')]
 assert len(rows) == 15
