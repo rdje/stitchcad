@@ -24,6 +24,7 @@ docs/tasks/artifacts/ci_environment/python_producer_contract.py	profile	G1-SLICE
 docs/tasks/artifacts/ci_environment/python_rational_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_scalar_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/ci_environment/python_signed_angle_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_static_loader_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_structure_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/receipt_retention_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18.r
@@ -107,6 +108,7 @@ docs/tasks/artifacts/formula_structure/scalar_fixture.py	output	G1-SLICE.5b.4c.h
 docs/tasks/artifacts/formula_structure/scalar_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a17
 docs/tasks/artifacts/formula_structure/semantic_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n05.2
 docs/tasks/artifacts/formula_structure/signed_angle_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18.s
+docs/tasks/artifacts/formula_structure/signed_angle_fixture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18.s
 docs/tasks/artifacts/formula_structure/signed_angle_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18.s
 docs/tasks/artifacts/formula_structure/statement_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n06.2
 docs/tasks/artifacts/formula_structure/statement_owner_contract.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n13.2

@@ -3,26 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — D209 receipt width
+## _(2026-10-06 UTC)_ — complete signed-angle fixture plans
 
-A 414-byte committed receipt cannot enter the 400-byte archive. Whitespace-only folding reconstructs
-the complete original exactly. The fresh acceptance gate now checks added task lines in UTF-8 bytes;
-ASCII/Unicode boundary and multiline controls pass. D209 is sealed in part131; limits stay fixed.
-Promotion declined: existing bounded whole-retention rule, now checked before commit.
+Leaf .a18.s keeps the ninety numerical/replay assertions, eight added book rows and fifteen
+compiled actual faults exact. A pure provider declares all copied files, replay/refusal logs,
+selected inputs and referenced sources before activation. Fresh plans precede remove/copy,
+copied reads/edits, shell children and logs. The writer includes nested destinations and its
+single mutable shell original; a source-only restore survives a late unsafe log. Actual bodies
+pass 22 omission reds, 33 physical refusals, 16 repeated borrowed refusals, three independent
+provider-adoption reds and late restoration red/green on both Python versions. Exclusive real
+runs retain ninety controls/fifteen assertion reds and all 73 input bytes after each child.
+Whole0217/D209 task lessons286/287 and0218/0217 ledgers198 retain exact e45c21d intervals/public reads.
+Promotion declined: complete copied-file, selector and restoration rules already apply.
 
-## _(2026-10-06 UTC)_ — complete scalar fixture plans
-
-Leaf .a17 preserves all 57 Fraction/domain controls and eleven faults. A pure provider walks
-only inspected book directories and declares every copied file before activation; unexpected
-old entries refuse before deletion. Fresh copied read/edit and delete/copy plans precede effects.
-The writer includes nested destinations and both mutable originals. Source-only restores keep
-the shell and quiet loader exact after unsafe logs. Actual bodies verify 21 omission reds/two
-original gaps, three independently loaded provider identities, 31 physical refusals and 16 repeated
-borrowed refusals. Two actual late-log coupling reds/greens cover each mutable original. The
-observer required a fresh check between the second inline read and write; the edit now separates
-them. Both Python versions retain 57 real controls/eleven assertion reds and all 73 input bytes.
-Whole0216 task/lesson285 and oldest0214 ledger196 retain exact da61ee1 intervals/public reads.
-Promotion declined: established complete copied-file/mutable/source-only-restoration principles.
+Whole0217 task/lesson retained in [part286](docs/history/stitchcad-devnotes-part286.md).
+Whole0218 task/lesson retained in [part287](docs/history/stitchcad-devnotes-part287.md).
 
 Whole0210 task/lesson retained in [part278](docs/history/stitchcad-devnotes-part278.md).
 
@@ -260,3 +255,7 @@ Whole0213 task and lesson retained in [part282](docs/history/stitchcad-devnotes-
 | [part284](docs/history/stitchcad-devnotes-part284.md) | whole0215 task and lesson | 26 lines, 3263 bytes, sha256:b90a4ab2… |
 
 | [part285](docs/history/stitchcad-devnotes-part285.md) | whole0216 task and lesson | 27 lines, 3040 bytes, sha256:b7512a8c… |
+
+| [part286](docs/history/stitchcad-devnotes-part286.md) | whole0217 task and lesson | 30 lines, 3432 bytes, sha256:5751876e… |
+
+| [part287](docs/history/stitchcad-devnotes-part287.md) | whole0218 task and lesson | 20 lines, 1605 bytes, sha256:2b57018e… |

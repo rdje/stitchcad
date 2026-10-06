@@ -531,6 +531,20 @@ axis errors, inverse truncation and binding ties. Exact source restoration follo
 The structural suite watches the independent positive/refusal family; mutation runners run alone.
 Existing42-row/72-control/math42 angular controls and seven actual angular reds also remain required.
 
+The standalone pair now plans every copied book file, both replay logs and all fifteen mutation
+logs before creating directories or editing a source. The provider is pure on import. It checks
+effective caller selectors and referenced inputs, refuses unexpected old fixture entries before
+removal, and rechecks before deletion, copying, copied reads/edits, child calls and log writes.
+The writer declares its one mutable shell source; source-only restoration still succeeds if a
+log becomes unsafe after an edit. Every output and store remains on the checkout volume.
+
+The CI-environment control executes the actual entries with intercepted children to prove complete
+plans and 22 guard omissions. It also checks 33 physical refusals, 16 repeated borrowed-call refusals,
+three provider-adoption omissions and an actual late-log restoration red/green in isolated mirrors.
+Run the numerical/fault pair separately, alone: both Python 3.9 and 3.14 preserve ninety controls,
+fifteen compiled assertion reds and all 73 scoped input bytes after each actual child. Guard captures
+prove effect ordering; the independent numerical assertions prove the reference verdicts.
+
 This is curated reference proof, not arbitrary-input correctly rounded transcendental evaluation,
 a cross-platform certificate, entity direction integration or a production formula evaluator.
 G1-SLICE.5a.3b.3c.3 completes the final D84/reference review below; individual literals now normalize

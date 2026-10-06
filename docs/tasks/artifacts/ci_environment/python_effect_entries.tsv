@@ -1,4 +1,5 @@
 path	kind	leaf
+docs/tasks/artifacts/formula_structure/signed_angle_fixture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18.s
 docs/tasks/artifacts/ci_environment/receipt_retention_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18.r
 docs/tasks/artifacts/formula_structure/first_phase_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a01.1
 docs/tasks/artifacts/formula_structure/scalar_fixture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a17

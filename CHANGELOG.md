@@ -112,13 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
-## STITCHCAD-G1-0218 — receipt width repair
+## STITCHCAD-G1-0219 — signed-angle fixture plans
 
-D209: exact text folded; staged400-byte guard passes ASCII/UTF-8 controls; signed-angle resumes.
+.a18.s: copies/logs/selectors; 90 controls/15 assertion reds on3.9/3.14; exact restoration.
 
-## STITCHCAD-G1-0217 — scalar fixture plans
-
-.a17: complete copied files/two originals; 57 controls/11 real reds on Python 3.9/3.14; bytes exact.
+Whole0218/0217 ledgers retained in [part198](docs/history/stitchcad-changelog-part198.md).
 
 Whole retained whole0210 ledger: [part191](docs/history/stitchcad-changelog-part191.md).
 
@@ -134,20 +132,7 @@ Whole retained record: [part186](docs/history/window10.md#stitchcad-changelog-pa
 
 Whole retained whole0198 and0197 ledgers: [part189](docs/history/stitchcad-changelog-part189.md).
 
-
-
-
-
-
-
-
-
-
-
-
-
 Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention-proof.md#input-review-changelog-retention---whole0183).
-
 
 | [part172](docs/history/window9.md#stitchcad-changelog-part172md) | whole G1-0182 ledger | 6 lines, 397 bytes, sha256:84358beb… |
 
@@ -156,10 +141,6 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part170](docs/history/window9.md#stitchcad-changelog-part170md) | whole G1-0180 ledger | 7 lines, 569 bytes, sha256:61c54829… |
 
 | [part169](docs/history/window9.md#stitchcad-changelog-part169md) | whole G1-0179 ledger | 7 lines, 573 bytes, sha256:df27ee3b… |
-
-
-
-
 
 | [`part132`](docs/history/window7.md#stitchcad-changelog-part132md) | whole G1-0130 ledger | 8 lines, 682 bytes, `sha256:6e3506f0…` |
 
@@ -186,16 +167,6 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [`part121`](docs/history/window7.md#stitchcad-changelog-part121md) | G1-0117 producer profile | 8 lines, 683 bytes, `sha256:03c915a1…` |
 
 | [`part120`](docs/history/window7.md#stitchcad-changelog-part120md) | G1-0116 exact CI | 6 lines, 460 bytes, `sha256:31a25724…` |
-
-
-
-
-
-
-
-
-
-
 
 | [`stitchcad-changelog-part78.md`](docs/history/window4.md#stitchcad-changelog-part78md) | G1-0064 identity review | 13 lines, 1077 bytes, `sha256:c658f537…` |
 | [`stitchcad-changelog-part79.md`](docs/history/window4.md#stitchcad-changelog-part79md) | STITCHCAD-G1-0065 | 14 lines, 1183 bytes, `sha256:aa1df64f…` |
@@ -350,3 +321,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part196](docs/history/stitchcad-changelog-part196.md) | whole0214 ledger | 5 lines, 275 bytes, sha256:a71a4233… |
 
 | [part197](docs/history/stitchcad-changelog-part197.md) | whole0216/0215 ledgers | 7 lines, 249 bytes, sha256:c77b778e… |
+
+| [part198](docs/history/stitchcad-changelog-part198.md) | whole0218/0217 ledgers | 7 lines, 293 bytes, sha256:f965b1d7… |

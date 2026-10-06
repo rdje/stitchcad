@@ -230,45 +230,37 @@ Whole0216 verification retained in [part285](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a17`
   Status: `done`
-  Own0217: scalar pair/new pure copied-book provider and actual/physical/real controls;
-  complete nested files/two mutable sources; whole0216/oldest0214 retention and book/ledger sync.
-  Goal: Scalar fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Goal: Scalar fixtures; complete scope and proof retained in part286.
+  Acceptance: part286 verified.
 
-- [x] REPRODUCE / ISSUE: python_scalar_fixture_contract.py --before runs actual da61ee1 pair; loader/mkdir observers expose two gaps without effects, rc=0, target/scalar-plan-before.log. Public contracts/book/two originals reviewed.
-- [x] ROOT CAUSE: setup/copy/writer effects lack complete fresh plans. Actual-body control locates omissions; default on Python 3.9/3.14 passes 21 reds/31 physical refusals/16 repeated borrowed refusals, rc=0, target/scalar-plan-controls{,39}.log.
-- [x] FIX: pure provider, complete copied files/nested child destinations/two mutable originals and fresh delete/copy/read/edit/child/log checks. Capture 67 entry writes/11 children/35 writer writes; injected child failure restores both, rc=0, controls logs. Inline copied read/write split for fresh edit check.
-- [x] ADDRESSED: --real on Python 3.14/3.9 retains 57 original controls/eleven genuine assertion reds; all 73 inputs exact after each child, rc=0, target/scalar-plan-real{,39}.log. Two late-log coupling reds/greens and three actual provider-adoption reds pass0 in controls logs; assertions/functions/CASES exact.
-- [x] NO REGRESSION: census247/publication45/coverage9/language16/archive28+633/ledger11+13 pass, rc=0, target/scalar-plan-{census,publication,coverage,language,archive,ledger}.log. Focused scope only; original numerical meaning/product frontier unchanged.
-- [x] LOCKSTEP: original scalar anchor routes full literal-annex contract; book/live/runner/three ledgers/MEMORY route .a18.
-  --continuity proves whole285/196/public reads/prior immutable/reference bytes/task graph exact on both Python versions, rc=0, target/scalar-plan-continuity{,39}.log. Caps/grammar/400 unchanged; promotion: declined (existing complete copied/mutable/restore rules). Commit STITCHCAD-G1-0217.
-
-  Final staged gate13 green, rc=0, target/scalar-plan-staged-gate.log.
+Whole0217 verification retained in [part286](../history/stitchcad-devnotes-part286.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a18`
-  Status: `active`
-  Own0219: signed-angle pair/provider/controls; whole0217/oldest ledgers retention; book/census/live sync.
+  Status: `done`
+  Own0219: signed-angle pair/provider/controls; whole0217/D209 task lessons and0218/0217 ledgers retention; book/census/live sync.
   Goal: Signed angle fixtures; sources and kinds in the watched ledger.
   Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a18.r`
   Status: `done`
-  Goal: STITCHCAD-G1-0218 repairs D209 receipt archival width; preserves full text/shared scopes and guards new staged lines before parent0219.
-  Acceptance: exact original receipt reconstruction, actual400/401-byte reader/gate controls, fixed limits and focused lockstep.
+  Goal: D209 receipt width repair; complete scope/proof retained in part287.
+  Acceptance: part287 verified.
 
-- [x] REPRODUCE / ISSUE: original414-byte receipt refuses archive1; old gate admits it. receipt_retention_contract.py, rc=0.
-- [x] ROOT CAUSE: receipt_retention_contract.py exposes missing width/four old admissions/eight boundary verdicts, rc=0.
-- [x] FIX: receipt_retention_contract.py proves exact fold/shared scopes; staged400-byte guard; rc=0.
-- [x] ADDRESSED: receipt_retention_contract.py on3.9/3.14 passes ASCII/UTF-8/doc-only bounds, rc=0; D209 sealed131.
-- [x] NO REGRESSION: census248/publication45/coverage9/archive28+635/ledger11+13 pass, rc=0, target/receipt-retention-*.log.
-- [x] LOCKSTEP: receipt_retention_contract.py:12open196sealed/no overlap, rc=0; book/doctrine/live/runner/ledgers/CH197 aligned. Promotion: declined; limits fixed. Commit0218.
-
-  Final staged gate13 green, rc=0, target/receipt-retention-staged-gate.log.
+Whole0218 verification retained in [part287](../history/stitchcad-devnotes-part287.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a18.s`
-  Status: `pending`
+  Status: `done`
   Goal: STITCHCAD-G1-0219 signed-angle pair/provider/controls after .r receipt repair.
   Acceptance: ordered group acceptance above.
+
+- [x] REPRODUCE / ISSUE: python_signed_angle_fixture_contract.py --before exposes actual e45c21d loader/mkdir gaps without original effects, rc=0, target/signed-plan-before.log; public pair/selectors/loader/book reviewed.
+- [x] ROOT CAUSE: actual-body/default control locates incomplete copy/child/log plans; 22 guard reds pass on3.9/3.14, rc=0, target/signed-plan-controls{,39}.log; original assertions/functions/numerical prefix/fifteen CASES exact.
+- [x] FIX: pure complete provider/copies/two logs, selector/source rechecks and nested writer plan; fresh remove/copy/read/edit/child/log guards. Captures8 pure plans/69 entry writes/two children/46 writer writes/fifteen children; injected failure restores shell, rc=0, controls logs.
+- [x] ADDRESSED: --real on3.9/3.14 retains90 controls/fifteen compiled assertion reds;73 scoped inputs exact after each child, rc=0, target/signed-plan-real{,39}.log. Default controls33 physical/16 repeated borrowed refusals/three adoption reds and actual late restoration red/green pass0.
+- [x] NO REGRESSION: census250/309/effect73/file141, publication45/coverage9/language16/archive28+638/ledger11+13 pass, rc=0, target/signed-plan-{census,publication,coverage,language,archive,ledger}.log. Rust unchanged; numerical meaning/product frontier preserved.
+- [x] LOCKSTEP: --continuity on3.9/3.14 proves whole286/287/198 public reads/prior immutable/reference bytes/task graph exact, rc=0, target/signed-plan-continuity{,39}.log; receipt control confirms12open196sealed/no overlap, rc=0. Book/live/runner/ledgers point.a19. Promotion: declined; existing complete copy/selector/restore rules. Commit0219.
+
+  Final staged gate13 green, rc=0, target/signed-plan-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a19`
   Status: `pending`
