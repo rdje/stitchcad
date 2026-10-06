@@ -14,19 +14,19 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-## _(2026-10-06 UTC)_ — expression complete modes and D197 repair
+## _(2026-10-06 UTC)_ — reduction complete modes and D197 repair
 
-- Four inputs incl both compile-time files/12 logs/1 mutable/class0; original11/two argv AST exact.
-- Shared691/35/54/272 pass0;17 omissions/legacy D197 red/readonly3 links/two aliases pass0.
-- Native80807/verify/artifact terminal0:original exact selections/14 filtered tests uncredited;
-  every failed body/current macros/full15 restoration/74 inputs/63 Rust exact.
-- Current Cargo-selected expression df61d61a42549506 SHA4b40d958 passes full15.
-- D197 expression verified; reduction/input next, family stays open. Grammar/400 unchanged.
-- Whole0190/DEV236/authored237/call238/CH170 retained before retirement;
-  whole inline1686B28L copied/read before move, syntax anchor and SUMMARY link retained.
-- Retention529/prior524/all68/eight windows/publication45/coverage9/ledger701real11arms13pointers consumed0.
-- Publication initially refused missing topic-index entry; owned/link added, all45 pass0.
+- Four inputs incl both compile-time TSVs/5 logs/1 mutable/class0; original4/two argv/exact test literal unchanged.
+- Shared709/35/56/282;17 omissions/legacy D197 red/readonly3 links/two aliases pass0.
+- Native44332/verify/artifact consumed0:original exact selection/5 filtered uncredited/
+  every failed body/current macros/full6/74 inputs/63 Rust exact.
+- Cargo-selected literal f4b7eca1a7f948e2 SHAbcf37f14 passes full6; Fraction176/103/73 witnesses pass0.
+- Whole0191/DEV240/CH171/authored241 copied/read before retirement.
+- D197 expression/reduction verified; input next, family open. Grammar/400 stay.
+- Retention533/prior529/all73/eight windows/publication45/coverage9/ledger706real11arms13pointers consumed0.
 - Promotion declined: existing complete-plan/thread/whole-record rules.
+
+Whole expression dated lesson retained in [part240](docs/history/stitchcad-devnotes-part240.md).
 
 Whole call dated lesson retained in [part238](docs/history/stitchcad-devnotes-part238.md).
 

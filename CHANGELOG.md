@@ -112,6 +112,13 @@ the digests afterwards.
 
 | [part168](docs/history/stitchcad-changelog-part168.md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0192 - reduction plans and D197 repair (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n12.2`)
+
+- 4 inputs/5 logs/1 mutable/class0; original4/full6/current6/74 inputs exact0.
+- Shared709/35/56/282;17 omissions/legacy red/readonly/Fraction0.
+- Whole0191/DEV240/CH171/authored241 exact; book/live aligned; D197 input next.
+- Publication45/coverage9/ledger706/11/13 pass0; grammar/400 stay.
+
 ## STITCHCAD-G1-0191 - expression plans and D197 repair (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n12.1`)
 
 - Plan4 inputs/12 logs/1 mutable/class0; original11 exact filters/full15/current15/74 inputs exact.
@@ -182,13 +189,7 @@ the digests afterwards.
 - D185 closed; whole task/DEV217/CH160/defect107 retained;489 reads exact.
 - Book/live/ordered next; D156/D34 open; Rust/grammar/400 unchanged.
 
-## STITCHCAD-G1-0181 - newest committed window8 refusal (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h.v`)
-
-- Real copied prose inventory0/exact committed refusal1; root28 files/HEAD exact.
-- Whole window8 task/DEV216/CH159 retained;486 reads/prior484/all28 exact.
-- Archive28/CLI504/pub45/coverage9/census229paths288/ledger9+13 pass0.
-- New sibling/16 evidence siblings; orientation map8145B/fixed ceiling; source bytes preserved.
-- Namespace .n09.1/D156 next; Rust/reader/grammar/400 unchanged.
+| [part171](docs/history/stitchcad-changelog-part171.md) | whole G1-0181 ledger | 7 lines, 489 bytes, sha256:2d3d625d… |
 
 | [part170](docs/history/stitchcad-changelog-part170.md) | whole G1-0180 ledger | 7 lines, 569 bytes, sha256:61c54829… |
 

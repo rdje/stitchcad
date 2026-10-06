@@ -244,11 +244,38 @@ original error spans and repeated refusal. The angle cases accept scale 133 and 
 
 The producer also verifies the actual published unit factors, maximum prime valuations of six,
 39 digits for u128 MAX, and the conservative scale/workspace witnesses 134/173. Four compiled
-actual faults prematurely restrict scale/raw digits or remove mantissa/unit cancellation; each must
-fail at a current guarded test assertion macro. The runner plans implementation, test source and
-output before reads/writes, preserves prepared stores, restores exact production source and rebuilds
-the full six-test literal target. D170 removes acceptance based on unrelated assertion text or
-labelled expect panics. Rounding, individual-conversion and arena families retain separate scopes.
+actual faults prematurely restrict scale/raw digits or remove mantissa/unit cancellation.
+Their runner has the complete mode and evidence contract below. Rounding, individual-conversion
+and arena families retain separate scopes.
+
+### Reduction runner modes and evidence
+
+Both modes resolve four inputs before effects: literal implementation, current six-test public
+contract and its two compile-time TSVs (100 literal rows and 176 reduction rows). Ordinary mode
+declares mutation-1.log through mutation-4.log and restored.log, with only the literal implementation
+mutable. Classifier-only mode declares zero files, mutable sources or native children; store and
+directory preconditions still apply.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py --classifier-only
+```
+
+Seventeen actual mode omissions fail independent input/file/child/restoration assertions. Ten copied
+physical refusals test unsafe destinations and missing late inputs. The actual classifier-only body
+accepts three hard links to its read-only source and two unused log aliases without touching them.
+Simulated child/file captures certify dispatch separately from real native fault behavior.
+
+D197's reduction repair requires a failed-body thread panic at the current guarded assertion macro
+path, line and UTF-8 byte column. A nonthread note at valid coordinates refuses; custom assertion
+messages pass. D170's labelled expect/compiler/name-noise refusals remain. The original predicate's
+nonthread acceptance is independently reproduced, and restoring that behavior fails calibration.
+
+All four original faults retain their exact selected test and Cargo arguments. Each executes only
+the coupled reduction contract; five filtered tests are unexecuted and uncredited for that fault.
+Every failed body independently matches a current macro. Five logs are local regular single-link
+files. All 74 frozen inputs and 63 production Rust files restore exactly before rebuilding the full
+six-test literal target. A fresh Cargo-selected executable independently passes all six afterward.
+Run exclusively, and consume restoration and artifact verification before any other build or probe.
 
 ```bash
 cargo test -p sc-core --test formula_literal_contract coupled_reduction_frontier_preserves_valid_inputs_and_located_width_refusals -- --exact

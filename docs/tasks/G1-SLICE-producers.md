@@ -681,9 +681,10 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Own book containment: docs/book/src/annexes/formula-documentation-controls.md;docs/book/src/SUMMARY.md;docs/book/src/topic-index.md; whole inline section and preserved syntax anchor.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12.2`
-  Status: `pending`
+  Status: `done`
   Goal: Reduction complete modes/inputs/5 logs/1 mutable; original4 exact filters/full6 restoration.
   Paths: docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py
+  Own0192: shared/live/book/whole retention;target/reduction-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-literals.md.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12.3`
   Status: `pending`
@@ -732,28 +733,25 @@ Complete committed call acceptance retained in [part235](../history/stitchcad-de
 
 Whole authored expression preparation/shared terminal/native-in-flight scope retained in [part237](../history/stitchcad-devnotes-part237.md).
 
-Native80807 terminal0/verify0/artifact0 consumed: original11 exact selected tests,
-14 filtered tests per fault uncredited/every body current macro/full15 restore.
-Current expression df61d61a42549506 SHA4b40d958 passes full15;74 inputs/63 Rust exact.
-Whole inline1686B28L copied/read before move; original anchor/SUMMARY retained.
-Book candidate bounds refused before writes; compact prose preserves complete facts.
-Combined draft guard wrongly used65536 for PLANNING; no edits; actual98304 applies.
+Complete committed expression verification retained in [part239](../history/stitchcad-devnotes-part239.md); canonical .n12.1 ownership remains above.
 
-## STITCHCAD-G1-0191 — expression acceptance (.n12.1)
+Whole authored reduction preparation/replay retained in [part241](../history/stitchcad-devnotes-part241.md).
 
-- [x] REPRODUCE / ISSUE: shared691reds/35classifiers/legacy D197 red,rc=0;
-  original matcher admitted nonthread locations.
-- [x] ROOT CAUSE: native-proof.py verify:11 exact selections/every body current
-  thread/path/line/byte column,rc=0;14 filtered tests uncredited.
-- [x] FIX:4 inputs/12 files/1 mutable/class0; original11/two argv AST exact,rc=0.
-- [x] ADDRESSED: shared54captures/272refusals/17 omissions;readonly3 links/two aliases0.
-  Native80807/verify/artifact consumed0:full15/74 inputs/current15 exact,rc=0.
-- [x] NO REGRESSION: python3 -I -B target/expression-plan-retention-proof.py:
-  529/prior524/all68/eight windows/13open183sealed,rc=0;publication45 pass0.
-- [x] LOCKSTEP: whole235–238/CH170/inline1686B28L exact; book/live agree,rc=0.
-  D197 expression verified; family open. Grammar/400 stay. promotion: declined.
+## STITCHCAD-G1-0192 — reduction acceptance (.n12.2)
 
-Coverage88975/ledger70905 terminal0 consumed:9pass/701real11arms13pointers0.
-Publication INDEX_COVERAGE refused; index fixed/32990 all45pass0 consumed.
+- [x] REPRODUCE / ISSUE: actual original note37:17 accepted/current refused/
+  independent thread oracle refused,rc=0; shared709reds/35classifiers.
+- [x] ROOT CAUSE: native-proof.py verify:4 exact selections/every failed body current
+  thread/path/line/byte column,rc=0;5 filtered tests per fault uncredited.
+- [x] FIX:4 inputs/5 files/1 mutable/class0; original4/two argv/test literal exact,rc=0.
+- [x] ADDRESSED: shared56captures/282refusals/17 omissions/readonly3 links/two aliases0;
+  Native44332/verify/artifact consumed0:full6/74 inputs/current6 exact,rc=0.
+- [x] NO REGRESSION: python3 -I -B target/reduction-plan-retention-proof.py:
+  533/prior529/all73/eight windows/13open183sealed,rc=0;publication45/Fraction176 pass0.
+- [x] LOCKSTEP: whole239–241/CH171 exact; book/live agree,rc=0.
+  D197 expression/reduction verified; input next. Grammar/400 stay. promotion: declined.
 
-Staged37361 all13green,rc=0.
+Coverage30610/ledger61607 terminal0:9pass/706real11arms13pointers,rc=0.
+CH draft over cap refused before writes; summary tightened.
+
+Staged99428 all13green,rc=0.

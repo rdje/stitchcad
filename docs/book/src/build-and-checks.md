@@ -457,10 +457,9 @@ Changelog uniqueness checks changelog archives only; retained task/defect receip
 work-unit headings. Role and duplicate controls watch that boundary;
 all archive descriptors still receive digest and line-count checks.
 
-Expression plans4 inputs/12 logs/1 mutable/class0; original11/full15:
-[modes and proof](annexes/formula-syntax.md#expression-runner-modes-and-evidence).
-Reduction: four macro faults/full6; both targets/four Rust sources restore.
-D170's four explicit refusal preconditions remain.
+Expression retains11 exact faults/full15: [plans and proof](annexes/formula-syntax.md#expression-runner-modes-and-evidence).
+Reduction retains4 exact faults/full6: [plans and proof](annexes/formula-literals.md#reduction-runner-modes-and-evidence).
+D170's four explicit expression refusal preconditions remain.
 
 The coupled recipe-input entry guards four implementations and its current test source, preserves
 its original test filters, proves seven current macro-site reds and rebuilds the full five-test target.
