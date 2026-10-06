@@ -73,6 +73,7 @@
 - [Implementation status and requirement owners](annexes/implementation-status.md)
 - [Governance model](governance.md)
 - [Artifact cleanup](annexes/artifact-cleanup.md)
+- [Ledger pointer fixtures](annexes/ledger-fixtures.md)
 - [Build and check the project](build-and-checks.md)
 
 # Index

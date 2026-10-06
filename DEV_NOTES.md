@@ -3,12 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — cleanup fixture authority
+## _(2026-10-06 UTC)_ — ledger fixture authority
 
-0224 .a22.2: sources/fixtures guarded; D212 setup/D213 root/D214 fault isolation fixed; original15/11 and linked inputs pass.
-Proof .a22.2; promotion declined: existing authority/restoration rules.
+0225 .a23.1: complete archive/fixture plans; D215 reader teardown repaired; native13 and all inputs/residue exact.
+Proof .a23.1; promotion declined: existing authority rules.
 
-Whole0223 task/lesson/book scope retained in [part293](docs/history/stitchcad-devnotes-part293.md).
+Whole0224 task/lesson retained in [part294](docs/history/stitchcad-devnotes-part294.md).
 
 Whole0221 task/lesson retained in [part290](docs/history/stitchcad-devnotes-part290.md).
 

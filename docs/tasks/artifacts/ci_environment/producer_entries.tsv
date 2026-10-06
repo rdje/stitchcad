@@ -17,7 +17,7 @@ docs/tasks/artifacts/book_publication/run_book_publication_probes.sh	delegate	G1
 docs/tasks/artifacts/canvas_spike/run_spike_verdict.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/canvas_spike/run_spike_verdict_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/changelog/changelog_pointers.py	reference	G1-SLICE.5b.4c.h2.b.v	AST inventory has no direct candidate output/native dispatcher; delegated runtime behavior still reviewed separately.
-docs/tasks/artifacts/changelog/ledger_pointer_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/changelog/ledger_pointer_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Complete archive/source and bounded fixture plans; guarded children/protected reader teardown; original13 native verdicts verified.
 docs/tasks/artifacts/changelog/ledger_pointer_mutations.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/ci_environment/ci_environment_contract.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inventory instrument; ordinary source and fixture guards reviewed, final integration audit pending.
@@ -254,3 +254,4 @@ scripts/local_environment.py	profile	G1-SLICE.5b.4c.h2.b.v	Profile/capture/inven
 scripts/run_make.sh	profile	G1-SLICE.5b.4c.h2.b.v	Primary pre-dispatch profile verified in .h2.a; final standalone/source coverage pending.
 scripts/update_scaffold.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	Actual fixture plans/effects/omissions/physical and protected setup controls; original bodies and real15/11 source/residue proof.
+docs/tasks/artifacts/ci_environment/python_ledger_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	Actual ledger complete plans/effects/omissions/physical/protected-reader controls; original bodies and native13 source/residue proof.

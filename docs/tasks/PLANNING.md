@@ -1060,3 +1060,5 @@ D209 whole report/verified repair retained in [part131](../history/stitchcad-def
 D210/D211 whole authored reports/verified repairs retained in [part132](../history/stitchcad-defects-part132.md).
 
 D212/D213/D214 whole authored reports/verified repairs retained in [part133](../history/stitchcad-defects-part133.md).
+
+D215 whole authored report/verified repair retained in [part134](../history/stitchcad-defects-part134.md).

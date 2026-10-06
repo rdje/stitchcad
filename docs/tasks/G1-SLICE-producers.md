@@ -276,14 +276,8 @@ Whole0222 verification retained in [part291](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a22`
   Status: `done`
-  Own0223: entry/fixture split, guarded cleanup dispatch and exact continuity retention before growth;
-  read full207/140-line entry/fixtures, locality/deletion/process/record contracts and book.
-  Legacy process-gate concern: apply invokes check_no_background_jobs.sh although check_handoff.sh is canonical.
-  Own safe actual dispatch reproduction before deletion, then repair strict evidence if verified; fixtures follow .1.
-  D210 verified: legacy0/current2 on actual unavailable lsof; controlled actual apply reached trapped deletion,
-  victim/source exact, rc=0, target/cleanup-entry-before.log. .1 fixes before real deletion.
-  Goal: Cleanup entry and fixtures; sources and kinds in the watched ledger.
-  Acceptance: ordered group acceptance above.
+  Goal: Cleanup entry/fixtures; complete parent scope retained295.
+  Acceptance: children .1/.2 verified; whole parent [part295](../history/stitchcad-devnotes-part295.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a22.1`
   Status: `done`
@@ -294,42 +288,59 @@ Whole0223 task/lesson/book scope retained in [part293](../history/stitchcad-devn
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a22.2`
   Status: `done`
-  Goal: STITCHCAD-G1-0224 cleanup fixtures complete input/output/restoration plans and original15 cases/11 reds.
-  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py;docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py
-  Own: complete current140-line fixture/258-line entry/profile APIs/strict checker and cleanup book reviewed.
-  Before effects validate all named fixture directories/files and complete sources; preserve borrowed case/name/API.
-  Empty Git markers are controlled constructors only: never initialize a repository, refuse nonempty markers before teardown.
-  Teardown plans must handle deliberate symlink/FIFO/marker fixtures without granting external or initialized-repo writes.
-  Own D212/D213/D214: actual old callback failure strands an owned directory and source alias reaches trapped rebased mkdir;
-  target/cleanup-fixture-before.log rc=0. First profile delegation also needs bounded source/parent checks.
-  Own D214 actual old linked README masks the symlink fault with the newer link guard; isolate two in-memory mutants only.
-  Mirror calibration: protected-store fault needs the public prepared mirror stores before replay; original bodies unchanged.
-  Own blocking whole committed0223 task/DEV/ledger retention before fixed-cap growth; public exact reads first.
-  Ledger calibration: first census refused an extra profile-kind effect row; remove only that row.
-  Its source/profile registration and file-authority row remain; effect ledger covers output/delegate kinds exactly.
-  Own local D34 recurrence: actual0ab index.a21/tree.a22.2 mismatch; correct this frontier at lockstep.
-  ROUTING EVIDENCE: index/tree discrepancy is docs metadata, independent of fixture runtime; broader gate remains PLANNING.5.
-  Acceptance: actual captured writes/children/removals, independent planning omissions/physical refusals and real15/11
-  both Python versions; preserve setup/guard assertions/faults/argv, source bytes and prepared stores. No project cleanup apply.
+  Goal: Cleanup fixture authority and D212/D213/D214 repairs verified; whole0224 scope/acceptance retained294.
+  Acceptance: original15/11, linked inputs, protected setup and focused gates pass.
 
-
-- [x] REPRODUCE / ISSUE: --before executes actual0ab7421 bodies: callback strands a fixture, source alias reaches trapped rebased mkdir, linked README masks the symlink fault. Three original proofs pass, rc=0, target/cleanup-fixture-before.log; no outside write and source/alias bytes exact. D212/D213/D214 reports/closures whole133.
-- [x] ROOT CAUSE: setup was outside protected teardown, root used unchecked dependency, old mutants met the new link guard. Actual controls on3.9/3.14 pass, rc=0, target/cleanup-fixture-controls{,39}.log; two original-scope reds/helper alias red/root selector red/isolation red independently reproduce these causes.
-- [x] FIX: complete six-source/population plans before activation; fresh selected creation/read/write/owned marker/tree authority, entry-derived root and bounded first loader. Captures74 plans/16 activations/44 effect calls/12 prepared Git dispatches pass, rc=0; complete original AST exact through declared adapters; real inspector unchanged.
-- [x] ADDRESSED: both versions pass17 actual CLI physical refusals/eight planning reds, unowned refusal/red, actual nonempty fake-marker stop, four borrowed-name refusals/valid borrowed case and linked profile/README positives, rc=0, controls logs. Real15/11/source exact/zero residue both pass, rc=0, target/cleanup-fixture-real{,39}.log.
-- [x] NO REGRESSION: census255/314/effect73 paths31groups/file146 paths69owners37native, publication45/65chapters/67API, coverage9, archive28+651CLI/631reads pass, rc=0, target/cleanup-fixture-{census,publication,coverage,archive}.log. Receipt12open201sealed/no overlap passes0, target/cleanup-fixture-receipt.log; no Rust/cleanup apply.
-- [x] LOCKSTEP: whole293/203 source intervals/133 authored reports/public reads/prior archive bytes/task graph exact both versions, rc=0, target/cleanup-fixture-continuity{,39}.log. Book/live/runner/ledgers/index/G1/MEMORY route.a23; local D34 row repair verified, broader PLANNING.5 open. Promotion declined: existing authority/restoration rules.
-
-
-Gate calibration: first staged check refused pass0 shorthand in two fresh receipts; use observed rc=0.
-No gate changed; ledger11+13 rc=0, target/cleanup-fixture-ledger.log.
-
-Staged doctrine13 green, rc=0, target/cleanup-fixture-staged-gate.log; all results consumed. Commit0224.
+Whole0224 task/lesson retained in [part294](../history/stitchcad-devnotes-part294.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23`
-  Status: `pending`
+  Status: `in_progress`
+  Own0225: complete420/57/53/66-line publication/ledger/helper review, public shell/reader/contracts/book.
+  Own bounded ledger-contract/mutation/publication split and whole0224 task/lesson/ledger retention before cap growth.
   Goal: Publication and ledger fixtures; sources and kinds in the watched ledger.
   Acceptance: ordered group acceptance above.
+
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0225 ledger pointer fixtures: complete inputs/population/files/teardown/children; original13 verdicts.
+  Paths: docs/tasks/artifacts/changelog/ledger_pointer_contract.py;docs/tasks/artifacts/ci_environment/python_ledger_fixture_contract.py
+  Own: complete entry/helper/shell/reader/API/book reviewed; --mask-first preserves its original case permutation.
+  Reader checks the whole physical archive before reading logical24; declare every backing control/catalog/payload/raw input.
+  Resolve full numbered fixture/file population before activation or old-tree teardown; guarded native Git/Bash/Python calls.
+  Preserve borrowed namespace/function extraction/public argv and exact fixture logs/refusal families; real consumer separately.
+  Own whole0224 task/lesson/ledger294/204/public reads before retirement, child ownership and source/book/live sync.
+  Own D215 actual archive-child failure strands its new empty workspace; --before rc=0, ledger-entry-before.log.
+  Calibration: independent first mkdir capture caught omitted WORK.parent; declare it before activation.
+  Whole completed cleanup parent295/public reader exact before further fixed-cap growth; no cap changed.
+  Acceptance: actual captures/omission reds/early-late input-file-store-Git-boundary refusals, original bodies/13 verdicts,
+  prepared stores and all source bytes; focused gates. No real source mutations; .2 owns exclusive native pointer faults.
+
+
+- [x] REPRODUCE / ISSUE: actual5bde archive-child error strands its empty WORK, isolated --before proof rc=0, target/ledger-entry-before.log. Only the proven empty owned mirror is removed; sources exact. Whole D215 authored report/verified closure retained134.
+- [x] ROOT CAUSE: reader setup preceded try/finally; original-scope omission reproduces its residue. Complete guards and protected-reader controls on3.9/3.14 pass, rc=0, target/ledger-entry-controls{,39}.log; seven omissions include input/file/read/write/removal/environment/scope reds.
+- [x] FIX: complete six sources/all backing inputs/41 directories/52 files before effects; bounded old-tree census and fresh effect/child/removal authority. Default/masked82 plans/121 effect calls/14 children, failure4/4/1 pass, rc=0, controls logs; original AST exact through declared adapters.
+- [x] ADDRESSED: both versions pass twelve physical CLI refusals with exact mirrors/sources, rc=0, controls logs. Native default/masked13 verdicts each and all source/archive bytes/zero residue pass, rc=0, target/ledger-entry-real{,39}.log. No real tracked-source fault or project cleanup apply.
+
+- [x] NO REGRESSION: census256/315/effect73paths33groups/file147paths71owners37native, publication45/66chapters/67API, coverage9, archive28+655CLI/635reads and ledger11+13 pass, rc=0, target/ledger-entry-{census,publication,coverage,archive,ledger}.log; receipt12open202sealed/no overlap rc=0.
+- [x] LOCKSTEP: whole294/204/295 source intervals/134 authored repair/public reads/prior archives/task graph exact on3.9/3.14, rc=0, target/ledger-entry-continuity{,39}.log. Book/live/runner/ledgers/index/G1/MEMORY route.a23.2. Promotion declined: existing authority/restoration rules; fixed caps/400 cadence unchanged.
+
+Staged doctrine13 green, rc=0, target/ledger-entry-staged-gate.log; all results consumed. Commit0225.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.2`
+  Status: `pending`
+  Goal: Ledger pointer mutation complete mutable-source/file/child/restoration plans; original four actual reds.
+  Paths: docs/tasks/artifacts/changelog/ledger_pointer_mutations.py
+  Acceptance: complete public contract review and .1 committed before exclusive source faults; exact originals restored,
+  independent current assertion evidence, prepared stores and focused gates before commit.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.3`
+  Status: `pending`
+  Goal: Publication checker/build/copied fixtures with complete source/output/borrowed-root plans; original45 controls.
+  Paths: docs/tasks/artifacts/book_publication/book_publication.py
+  Acceptance: preserve pure borrowed checks and actual builder/fixture argv/refusal/rendering contracts; all inputs and
+  dynamic output files before effects. Review published docs/book/book destination and its shell/config owner .b.s;
+  no unilateral migration of the public build destination. Actual captures/omissions/physical/real proof and gates.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a24`
   Status: `pending`

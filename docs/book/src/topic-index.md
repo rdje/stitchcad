@@ -94,3 +94,4 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Working with agents](learn/agents-and-workflows.md)
 
 - [Artifact cleanup](annexes/artifact-cleanup.md)
+- [Ledger pointer fixtures](annexes/ledger-fixtures.md)
