@@ -14,23 +14,25 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-## _(2026-10-06 UTC)_ — recipe owner complete files and D199
+## _(2026-10-06 UTC)_ — statement compiler complete destination plans
 
-- Plan2 read-only authored inputs/all29 build/guard/example files before effects.
-  Public Cargo libraries/search directories receive a pure local plan before Rustc.
-- Preserve original14 calls/five strict E0451/E0515 guards/four chapter examples.
-  Compiler block56 body reds/seven early physical refusal2; named-profile4reds/two disables.
-- Shared9489 terminal0:775 body reds/35 classifiers/58 captures/307 physical refusals.
-  Native66492 terminal0:5guards/4 compiled-executed examples/4 current-binary replays;
-  all75 frozen inputs/63Rust/original fixture and argv bytes/current library SHA exact.
-- D199 Source c57 five stale parent rows reproduced; all five repaired, all other rows exact.
-  Census43340:229paths288 checks/file120owners67groups37; original committed state red.
-- Whole247/CH175/248/defects121 copied/preflight/read before live retirement.
-  Complete prior navigation preserved; current list/read remain the full retrieval contract.
-- Final546 reads/prior542/33 files/56 headers/174 pointers/nav/3proofs/map/caps exact0.
-  Archive28/CLI565/publication45/coverage9/ledger723real11arms13pointers pass0.
+- Declare one read-only source and all17 metadata/guard source/log/binary destinations
+  before reads or effects; expected compile failures still reserve their binary slots.
+- Keep original6 child calls/fixtures/strict E0451/E0515 diagnostics and prepared stores.
+  Validate every reported Cargo rlib/rmeta and library search directory without effects.
+- Both independent compiler captures require complete files/current-input/directory plans;
+  80 actual omission faults/14 physical refusal2; unique-profile4reds/two disables pass0.
+  Full shared5930 terminal0:799 body reds/35 classifiers/58 captures/314 physical refusals.
+- Native46725 and verifier0:five strict current-library guards/75 frozen/63Rust/
+  original public7-test/fixtures/argv/book examples/library SHA exact. Captures are dispatch proof.
+- Whole e76 task/lesson249,0187ledger176 and original2383B n12 scopes250 retained
+  before live retirement. Completed IDs/statuses/goals/paths/acceptance remain unchanged.
+- Final549 reads/prior546/37 controls/57 original scopes/175 pointers/nav/3proofs/caps exact0.
+  Archive28/CLI568/publication45/coverage9/ledger727real11arms13pointers pass0.
 - Promotion declined: existing complete-plan/current-artifact/whole-record rules.
-  Statement owner next; D156/D34 remain open; engine/grammar/400 unchanged.
+  D156/D34 remain open; coupled static next; engine/grammar/400 unchanged.
+
+Whole0196 task and recipe compiler lesson retained in [part249](docs/history/stitchcad-devnotes-part249.md).
 
 Whole0195 receipts and original bridge inspection retained in [part247](docs/history/stitchcad-devnotes-part247.md).
 
@@ -132,3 +134,7 @@ committed table and original links. Recent records follow; older identities rema
 | [part247](docs/history/stitchcad-devnotes-part247.md) | whole0195 receipts and original bridge inspection | 40 lines, 2822 bytes, sha256:f32c681c… |
 
 | [part248](docs/history/stitchcad-devnotes-part248.md) | whole prior navigation | 113 lines, 10385 bytes, sha256:bb5fb0dd… |
+
+| [part249](docs/history/stitchcad-devnotes-part249.md) | whole0196 task and recipe compiler lesson | 38 lines, 2822 bytes, sha256:bff80147… |
+
+| [part250](docs/history/stitchcad-devnotes-part250.md) | whole completed n12 scopes | 26 lines, 2383 bytes, sha256:9b2c64f3… |

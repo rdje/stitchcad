@@ -136,9 +136,18 @@ canonical/unknown-record ownership, direct/computed class roles, runtime-invalid
 privacy. Maximum4,096 statements,256-node operands,16 nested conditionals and4,000 grouping pairs
 pass on a64KiB stack. Five precise compiler guards in statement_owner_contract.py compile the actual documentation
 against Cargo's reported current artifact and require only E0451/E0515 for privacy/recipe/record borrows.
-That compiler entry guards its implementation source and output directory before fixture reads or
-Cargo dispatch. Cargo and Rustc preserve prepared stores; public Cargo JSON selects the current
-library and dependency search directories.
+That compiler entry declares its one read-only implementation source, output directory and all
+seventeen destinations before fixture reads, directory creation, writes or Cargo dispatch. These
+include artifacts.json/build.log and each of five guard source/log/binary paths. The binary slots
+remain declared even though an expected compile refusal leaves them absent. Invalid output types,
+symlinks and hard links, or a missing source, refuse with status2 before reads or store activation.
+Cargo and Rustc preserve prepared stores. Public Cargo JSON selects the current library and every
+reported rlib/rmeta input. A pure plan validates those files and dependency search directories
+before Rustc; it creates no directories and grants no source-write authority.
+The named profile is the unique top-level load of this repository's local_environment.py and must
+precede activation. Independent controls require all seventeen files, the sole read-only input,
+current library plan and directory plans. They intercept the original six child calls and fixture
+bytes. Captures prove dispatch; separate native execution verifies the five precise diagnostics.
 The direct entry declares all four inputs, twenty-three ordinary diagnostic files and all three
 mutable sources before reads or effects. It preserves twenty-two source bindings and count-limited
 replacements, including both canonical-owner sites. Children retain prepared stores and the full

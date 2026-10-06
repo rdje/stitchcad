@@ -4,19 +4,20 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- STITCHCAD-G1-0196/.n13.1 verified; commit workflow/postconditions finish this unit.
-- Recipe29 outputs/two read-only inputs/current Cargo library and directory pure plans.
-  Original14 calls/5 strict compiler guards/4 examples/current replays verified0.
-  Independent75 frozen/63Rust/fixtures/argv/library SHA exact0.
-- Shared9489:775 body reds/35 classifiers/58 captures/307 physical refusals,rc=0.
-  Profile4 actual reds/2 guard disables; compiler block56 faults/7 physical refusals0.
-  Earlier1798/45346 calibration reds consumed/fixed; no verification pending.
-- D199 Source c57 committed five stale parent rows red; exact5-row repair/census0;
-  whole authored report/earned closure121;12open186sealed. D156/D34 stay open.
-- Whole247/CH175/navigation248/121 copied/preflight/read before retirement;
-  retention98028:546reads/prior542/33controls/56headers/174pointers/nav/3proofs/map/caps exact0.
-  Archive28/CLI565/publication45/coverage9/ledger723real11arms13pointers pass0.
-- Next .n13.2 statement17 outputs/one read-only input/current artifact plans.
-  Entry/275L implementation/264L book read; public617L test must be read before edits.
-  Retain whole0196 receipt first for task-collection capacity; no background jobs.
-- Grammar/400 unchanged; no push (derive count).
+-0197/.n13.2 verified; parent.n13 done; commit workflow/postconditions finish this unit.
+ Statement17 files/one read-only source/current-library/directory pure plans;
+ original6 calls/five strict guards/75 frozen/63Rust/fixtures/argv/current library SHA exact0.
+-Shared5930:799 body reds/35 classifiers/58 captures/314 physical refusals,rc=0.
+ Compiler80 faults/14 physical refusal2/profile4reds/2disables0. All jobs consumed.
+-Whole Source e76 task+lesson249/0187ledger176/n12 scopes2383B250 FILE/copy/read before retire.
+ Completed IDs/statuses/goals/paths/acceptance unchanged; original Own lines retained.
+ Final87020/3624/99125/94701/24963/76108 terminal0:549reads/prior546/37files/
+ 57 Source headers54live3retained/175pointers/nav/3proofs/map/caps/12open186sealed/
+ archive28/CLI568/publication45/coverage9/ledger727real11arms13pointers/census0.
+-Next .n14 coupled static complete mode/files/current library plans. Full646L entry,
+ dimension204/review237/namespace197/signature249 helpers, first_phase216 and
+ static-validation554L book read. Driver first218/426 read; remainder and actual
+ capture/helper/spec/affected Rust inputs still required before changes.
+ Preserve borrowed first-phase build_and_check('first-phase') integration; ordinary7 files,
+ mutation244 destinations inferred from original28 faults/6 reference logs, must verify.
+-D156/D34 open; engine/grammar/400 stay. No push; derive count.

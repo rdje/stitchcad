@@ -10,9 +10,15 @@ ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-core/src/recipe/checked_statement.rs'
 SOURCES = (SOURCE,)
 WORK = ROOT / 'target/statement_owner_contract'
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=SOURCES)
 EXPECTED = ('E0451', 'E0515', 'E0451', 'E0515', 'E0515')
+OUTPUT_FILES = (
+    WORK / 'artifacts.json', WORK / 'build.log',
+    *(WORK / ('guard_%d%s' % (index, suffix))
+      for index in range(1, len(EXPECTED) + 1) for suffix in ('.rs', '.log', '')),
+)
+PROFILE = runpy.run_path(str(ROOT / 'scripts/local_environment.py'))
+PROFILE['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES)
 
 
 def codes_match(diagnostics, expected):
@@ -34,11 +40,14 @@ built = subprocess.run(['cargo', 'build', '-p', 'sc-core', '--message-format=jso
 assert built.returncode == 0, ('Cargo current artifact build failed', built.stderr)
 artifacts = set()
 library_directories = set()
+library_files = set()
 for line in built.stdout.splitlines():
     message = json.loads(line)
     if message.get('reason') == 'compiler-artifact':
         library_directories.update(Path(filename).parent for filename in message['filenames']
                                    if filename.endswith(('.rlib', '.rmeta')))
+        library_files.update(Path(filename) for filename in message['filenames']
+                             if filename.endswith(('.rlib', '.rmeta')))
     if (message.get('reason') == 'compiler-artifact' and message['target']['name'] == 'sc_core'
             and message['target']['kind'] == ['lib']):
         artifacts.update(Path(filename) for filename in message['filenames'] if filename.endswith('.rlib'))
@@ -47,6 +56,11 @@ artifact = artifacts.pop()
 assert artifact.is_relative_to(ROOT / 'target') and artifact.is_file(), 'foreign/missing compiler artifact'
 assert library_directories and all(path.is_relative_to(ROOT / 'target') and path.is_dir()
                                    for path in library_directories), 'foreign/missing dependency directory'
+# Cargo owns its build outputs. Inspect its current public metadata without creating
+# directories or changing stores before Rustc consumes any reported library.
+PROFILE['plan_producer'](ROOT, sources=(artifact, *sorted(library_files - {artifact})))
+for path in sorted(library_directories):
+    PROFILE['directory'](ROOT, path.relative_to(ROOT).as_posix())
 search_paths = [argument for path in sorted(library_directories) for argument in ('-L', 'dependency=' + str(path))]
 for index, (block, expected) in enumerate(zip(blocks, EXPECTED), 1):
     code = '\n'.join(line.removeprefix('/// ').removeprefix('///') for line in block.splitlines()) + '\nfn main() {}\n'

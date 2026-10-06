@@ -112,6 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0197 - statement compiler files (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n13.2`)
+
+- 17 files/1 input; original6 calls/5 guards/75 frozen/63Rust exact.
+- 549 reads/28+568/45/9/727+11+13 pass; whole249/250/176 retained; grammar/400 stay.
+
 ## STITCHCAD-G1-0196 - recipe owner files/D199 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n13.1`)
 
 - 2 inputs/29 files; original5 guards/4 examples/14 calls.
@@ -173,12 +178,6 @@ the digests afterwards.
 - Whole0187/ordered4596B/DEV226/CH167/authored227/defects116 retained;512 reads exact.
 - Book/live/wanted next; Rust/grammar/400 stay; D156/D34 open.
 
-## STITCHCAD-G1-0187 - builtin plans and current-thread evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.1`)
-
-- Three inputs/22 logs/one mutable/class0;21 faults/every failed body macro/full5 exact.
-- Shared625/35/46/238; D192 builtin fixed, children2–4 owned; D193 book currency closed.
-- Original case5 ABC vs actual ABD retained/root cause proved; other20 exact. Whole receipts/DEV223/CH166/defects115 retained.
-- Book/live/operator next; Rust/grammar/400 stay; D156/D34 open.
 
 
 
@@ -342,3 +341,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part173](docs/history/stitchcad-changelog-part173.md) | whole G1-0184 ledger | 6 lines, 386 bytes, sha256:fa21b2e4… |
 
 | [part175](docs/history/stitchcad-changelog-part175.md) | whole0186 cleanup ledger | 5 lines, 417 bytes, sha256:61cb12f1… |
+
+| [part176](docs/history/stitchcad-changelog-part176.md) | whole0187 builtin ledger | 6 lines, 479 bytes, sha256:09460dee… |

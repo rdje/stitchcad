@@ -651,25 +651,21 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Status: `done`
   Goal: Expression complete modes/compile-time inputs/12 logs/1 mutable; original11 exact filters/full15 restoration.
   Paths: docs/tasks/artifacts/formula_structure/formula_expression_mutations.py
-  Own0191: shared/live/book/whole retention;target/expression-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md.
-  Own book containment: docs/book/src/annexes/formula-documentation-controls.md;docs/book/src/SUMMARY.md;docs/book/src/topic-index.md; whole inline section and preserved syntax anchor.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12.2`
   Status: `done`
   Goal: Reduction complete modes/inputs/5 logs/1 mutable; original4 exact filters/full6 restoration.
   Paths: docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py
-  Own0192: shared/live/book/whole retention;target/reduction-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-literals.md.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12.3`
   Status: `done`
   Goal: Coupled input complete modes/inputs/8 logs/4 mutable; original7 filters/full5 restoration.
   Paths: docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
-  Own0193: shared/live/book/whole retention;target/input-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-recipe-inputs.md;D197 final repair/closure; D198 stale inventory dependency repair.
-  Own D198: docs/tasks/artifacts/formula_structure/canonical_contract_inventory.py; target/input-plan-inventory-*.
-  Own whole D197/D198 report retention: docs/tasks/G1-SLICE-retention-proof.md. Whole0183 also.
+
+Whole original completed n12 scopes retained in [part250](../history/stitchcad-devnotes-part250.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13`
-  Status: `in_progress`
+  Status: `done`
   Goal: complete owner-compiler plans; blocking window9/whole task retention first.
   Paths: docs/tasks/artifacts/formula_structure/recipe_owner_contract.py;docs/tasks/artifacts/formula_structure/statement_owner_contract.py
   Own .doctrine/history_archive/;docs/history/;live/book/task records;target/window9-*.
@@ -695,9 +691,11 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Acceptance: all29 outputs before effects; unchanged5 guards/4 examples/argv; dynamic current-artifact inputs; actual capture/omission/physical/native evidence.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.2`
-  Status: `pending`
+  Status: `done`
   Goal: statement owner complete input/output/native plans; original guards/artifact evidence.
   Paths: docs/tasks/artifacts/formula_structure/statement_owner_contract.py
+  Own0197: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-name-scopes.md;live/task/whole retention;target/statement-plan-*;target/window9-statement-*.
+  Acceptance: all17 files/one read-only source before effects; original6 calls/5 strict guards/argv; current libraries/directories; actual capture/omission/physical/native evidence.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n14`
   Status: `pending`
@@ -720,24 +718,25 @@ Whole0194 task and continuity lesson retained in [part246](../history/stitchcad-
 
 Whole0195 receipts and original bridge inspection retained in [part247](../history/stitchcad-devnotes-part247.md).
 
-0196 shared1798/profile AST and45346/library-plan diagnostic red1 consumed;
-exact unique early PROFILE proof and separate missing/late directory guards fixed.
-CH41B-over-cap draft refused before writes; tightened. Known P3 pipe stays .b.s.
+Whole0196 task and recipe compiler lesson retained in [part249](../history/stitchcad-devnotes-part249.md).
 
-## STITCHCAD-G1-0196 — recipe owner (.n13.1)
+0197 missing retired0186 boundary and substring-count draft controls refused before
+writes; actual whole0187 boundary/exact-line census corrected. Known P3 pipe stays .b.s.
 
-- [x] REPRODUCE / ISSUE: owner-proof.py Source c57 five parent rows red/current0,rc=0.
-- [x] ROOT CAUSE: profile-proof.py exact loader/binding/order4 reds/2 disables,rc=0.
-- [x] FIX: compiler-controls.py2 captures/56 body reds/7 physical refusal2,rc=0;
-  29 initial files/two read-only inputs/current public libraries and directories planned.
-- [x] ADDRESSED: native66492/verifier0:five exact E0451/E0515 guards/four examples,
-  four current replays/all75 frozen/63Rust/fixtures/argv exact,rc=0; library SHA
+## STITCHCAD-G1-0197 — statement compiler (.n13.2)
+
+- [x] REPRODUCE / ISSUE: compiler-controls.py actual2 captures/80 omission reds,rc=0.
+- [x] ROOT CAUSE: profile-proof.py unique exact loader/order4 reds/2 disables,rc=0.
+- [x] FIX: complete17 files/one read-only source/current public library inputs and
+  pure directory plans; actual14 physical refusal2 before reads/effects,rc=0.
+- [x] ADDRESSED: native46725/verifier0:five strict E0451/E0515 guards/original6calls/
+  fixtures/argv/75 frozen/63Rust exact,rc=0; current library SHA
   695a0cee4d315df45938902ca7ce5149c22d2a1d9c3090c6a2b888c02ad238d5.
-- [x] NO REGRESSION: python3 -I -B target/recipe-plan-final-retention-proof.py rc=0:
-  546reads/prior542/33files/56headers/174pointers/nav/3proofs/map/caps exact;
-  shared9489:775/35/58/307; census43340:229paths288checks/file120owners67groups37,rc=0.
-- [x] LOCKSTEP: archive16660:28/CLI565; publication49473:45; coverage3806:9;
-  ledger93272:723real/11arms/13pointers,rc=0. Whole247/175/248/121 retained;
-  D199 closed/12open186sealed/live/book aligned. Promotion: declined.
-  .n13.2 next; D156/D34 open; engine/grammar/400 stay; no runner claim.
-  Final staged13 green,rc=0,target/recipe-plan-staged-gate.log.
+- [x] NO REGRESSION: python3 -I -B target/statement-plan-retention-proof.py rc=0:
+  549 reads/prior546/37files/57 Source headers54live3retained/175pointers/3proofs/nav/
+  75frozen/63Rust/map/caps/12open186sealed exact. Shared5930:799/35/58/314,rc=0.
+- [x] LOCKSTEP: archive3624:28/CLI568; publication99125:45; coverage94701:9;
+  ledger24963:727real/11arms/13pointers; census76108:229paths288/file120owners67groups37,rc=0.
+  Whole249/176/2383B scopes250 retained; all n12 IDs/statuses/goals/paths unchanged.
+  Promotion: declined; .n13 done/.n14 next; D156/D34 open; engine/grammar/400 stay.
+  Final staged13 green,rc=0,target/statement-plan-staged-gate.log.
