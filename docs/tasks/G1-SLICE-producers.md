@@ -183,14 +183,15 @@ Whole0204 task/lesson/scope retained in [part269](../history/stitchcad-devnotes-
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a06`
   Status: `done`
-  Own0205: target/locator-plan-*;target/loader-*.
   Paths: docs/tasks/artifacts/formula_structure/reference_locator_contract.py; docs/tasks/artifacts/ci_environment/python_static_loader_contract.py.
   Goal: Location library; D206 selector fixed and closed in128.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
+Whole0205 task/lesson/scope retained in [part270](../history/stitchcad-devnotes-part270.md).
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a07`
-  Status: `pending`
-  Goal: Formula input and diagnostic context; sources and kinds in the watched ledger.
+  Status: `done`
+  Goal: Input/diagnostic context and D207 safe restoration; watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a08`
@@ -757,11 +758,14 @@ Whole0203 task and geometry/call lesson retained in [part267](../history/stitchc
 
 Whole0204 task/lesson/scope retained in [part269](../history/stitchcad-devnotes-part269.md).
 
-### G1-SLICE.5b.4c.h2.b.p.o.a06
-- [x] REPRODUCE: bootstrap omission red, rc=0, locator-plan-before.log.
-- [x] ROOT CAUSE: unplanned runpy/read, rc=0, locator-plan-before.log.
-- [x] FIX: plan6/11/selected source; AST exact, rc=0, locator-plan-control.log.
-- [x] ADDRESSED:25captures/14reds/28CLI+16borrow/4disable pass3.9+3.14, rc=0, locator-plan-control{,39}.log.
-- [x] NO REGRESSION: --native94+95/four faults/200inputs/118Rust63/lib exact, rc=0, locator-plan-native{,39}.log.
-- [x] LOCKSTEP: publication45/coverage9/archive28+CLI602/ledger769+11+13;583reads/prior581/all72/proofs/nav/map/caps/D206128 exact, rc=0, locator-plan-continuity.log. Docs/book/.a07;promotion declined/400.
-Final staged gate13 green, rc=0, target/locator-plan-staged-gate.log.
+Whole0205 task/lesson/scope retained in [part270](../history/stitchcad-devnotes-part270.md).
+
+### G1-SLICE.5b.4c.h2.b.p.o.a07
+
+- [x] REPRODUCE: D207 red, rc=0, target/input-plan-signoff.log.
+- [x] ROOT CAUSE:21 guard reds, rc=0, target/input-plan-signoff.log.
+- [x] FIX:5/10,6/11,11/9/1, rc=0, target/input-plan-signoff.log.
+- [x] ADDRESSED:130/3/nine reds, rc=0, target/input-plan-signoff.log.
+- [x] NO REGRESSION: all586/focused0, rc=0, target/input-plan-signoff.log.
+- [x] LOCKSTEP: .a08; promotion: declined, rc=0, target/input-plan-signoff.log.
+Final staged gate13 green, rc=0, target/input-plan-staged-gate.log.

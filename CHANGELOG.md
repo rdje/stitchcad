@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0206 — input context plans
+
+- Input5/10, diagnostic6/11 and source writer11/9/1 guarded; grammar stays.
+- Controls13/21/33+8 refusals/two admissions; real130/3/nine reds/nine consumers pass3.9/3.14.
+- D207 safe restoration fixed129; whole0205 in270/ledgers185; .a08 next. Caps/400 stay.
+
 ## STITCHCAD-G1-0205 — reference location plans
 
 - Bootstrap6/reference11; both loaders/selected mutations preserved. Controls25/14/28+16+4/native94+95/four faults pass.
@@ -127,19 +133,7 @@ the digests afterwards.
 - Pure4/9; curve3;22 captures/14 reds/40+16 refusals/4 admissions/two positives0.
 - Original97/12+166/12+3; whole265/182/266; caps/grammar/400 stay.
 
-## STITCHCAD-G1-0202 — payload plans
-
-- Pure4/5→9/10; cases/CLI/Refusal/argv stay.
-- 10 captures/6 reds/20+8 refusals/2 admissions pass3.9/3.14.
-- Real4023/3814/15+4192/16+263/10+26723;196 inputs/library exact.
-- Whole262/181/263/264/D205127; caps/grammar/400 stay.
-
-## STITCHCAD-G1-0201 — static public loader plans
-
-- Pure bootstrap3/4/5 and reference8/9/10 guards; original bodies/argv/grammar retained.
--17 captures/ten guard reds/18 physical CLI+12 borrowed refusals/three planner admissions on3.9/3.14.
-- Real263/10+26723;194 inputs/118Rust63production/current library exact; shared1125 reds pass.
-- Whole260/180/261 retained; D204 navigation fixed; book/live/caps/400 stay. Payloads next.
+Whole0202/0201 ledgers retained in [part185](docs/history/stitchcad-changelog-part185.md).
 
 ## STITCHCAD-G1-0200 — copied-book recipe plans
 
@@ -355,3 +349,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part183](docs/history/stitchcad-changelog-part183.md) | whole0194 window9 ledger | 4 lines, 216 bytes, sha256:165a4b92… |
 
 | [part184](docs/history/stitchcad-changelog-part184.md) | whole0196/0195 ledgers | 10 lines, 507 bytes, sha256:88e5570a… |
+
+| [part185](docs/history/stitchcad-changelog-part185.md) | whole0202/0201 ledgers | 13 lines, 702 bytes, sha256:5a62a9a9… |

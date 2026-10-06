@@ -142,3 +142,37 @@ prefix, and mutations(REVIEW_SOURCE, review=True) exercises the second actual lo
 create no files or child processes. The shared static-loader control covers both borrowed paths,
 repeated calls, selected-source guard omissions and physical helper/book refusals; native mode
 runs the real CLI and both prefixes' original offset/filename faults before the engine consumers.
+
+## Input context and fixture boundaries
+
+`formula_input.py` validates five bootstrap inputs before import and ten reference inputs before
+both public context loaders. These read-only calls retain the unit, arithmetic and fixture context;
+they create no stores, copies, files or children. `literal_diagnostic.py` validates six bootstrap
+inputs and eleven inputs before delegation, sharing the context provider's refusal identity.
+Its printed numerical observations remain diagnostics; exit zero alone is not a pass verdict.
+
+The input end-to-end call plans the whole book, three complete copied trees and their three logs
+before activation. It inspects old copies before replacement, rechecks deletion and copied inputs,
+and validates the actual child selectors before each shell dispatch. Caller selectors and unrelated
+environment values remain intact; local stores are passed to the child. An input or selected parts
+directory that aliases a replacement destination refuses before deletion. Links, foreign repository
+boundaries, nonregular files and hardlinked outputs also refuse before effects.
+
+The mutation entry plans eleven inputs, nine logs and the single writable reference shell before
+activation. Each source change, child, log and restoration receives a fresh plan. Importing that
+runner creates no fixtures; executing its CLI runs the original nine mutations. It restores exact
+source bytes on normal completion and child failure. Restoration validates only the writable source,
+so a late invalid log cannot prevent a safe restore (D207). Run it alone, without another reference reader.
+
+```bash
+python3 -I -B docs/tasks/artifacts/ci_environment/python_input_context_contract.py
+python3 -I -B docs/tasks/artifacts/formula_structure/formula_input.py
+bash docs/tasks/artifacts/formula_structure/run_formula_input_mutations.sh
+python3 -I -B docs/tasks/artifacts/formula_structure/literal_diagnostic.py
+```
+
+The first command captures actual pure, copied-book and source-writer boundaries, removes guards
+and tests physical refusals. Its intercepted children prove dispatch contracts; the next two commands
+supply the separate real 130 input assertions, three chapter refusals and nine failing mutations.
+The final command prints observations, including the superseded normalized-angle counterexample.
+The environment probe runner watches the capture control. These checks change no grammar rule.

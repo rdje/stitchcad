@@ -141,7 +141,8 @@ bash docs/tasks/artifacts/formula_structure/run_formula_input_mutations.sh
 
 The suite also runs 130 machine-input controls using the actual reference and all seven canonical
 unit-table entries, plus three copied-book refusal cases. The mutation command runs alone, disables
-nine actual input guards, requires assertion failures and restores exact source bytes. Existing
+nine actual input guards, requires assertion failures and restores exact source bytes.
+[Input fixture plans](formula-static-signatures.md#input-context-and-fixture-boundaries) guard these entries. Existing
 structural and numerical chapter checks retain their separate scope. The reference is a curated
 book instrument; these results are not arbitrary-input production safety, full binding/type checking,
 complete command diagnostics or a product parsing/evaluation API. Product AST work is implemented by
