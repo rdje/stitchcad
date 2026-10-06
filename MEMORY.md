@@ -4,13 +4,9 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0201 .a02 complete and locally verified. Verify HEAD0201/brief0/clean before selecting .a03.
--Next .a03 dimension/ambiguity payload libraries, docs/tasks/G1-SLICE-producers.md. Read complete
- current public callers, source/effect/borrowed interfaces and relevant book before any changes.
--Task aggregate is near the fixed1.5MB ceiling: own next work briefly, then retain whole0201 task/
- lesson/older ledger before growth. Never edit admitted seals or raise caps for ordinary receipts.
--Current proof: target/loader-{control,control39,native-proof,native39,bridge,recipe,shared,callers,
- continuity,ledger,archive,publication,census,coverage,staged-gate}.log. All terminal0 consumed.
--Source260/180/261 and D204 whole report/closure126 retained; metadata loader-retention/scope-
- retention/d204-closure.json. Current569/prior565/all56 physical exact;12open191sealed.
--Fixed caps/grammar/engine/400 stay. No push before derived400. Cleanup due2026-10-06 22:28UTC.
+-0202 .a03 complete and locally verified. Verify HEAD0202/brief0/clean before selecting .a04.
+-Verify HEAD0202/brief0/clean, then .a04 geometry/call metadata in docs/tasks/G1-SLICE-producers.md.
+ Read complete public sources/callers, source/effect/borrowed contracts and relevant book first.
+-Task aggregate near fixed1.5MB: briefly own next work, retain whole completed receipts before
+ growth. Public payload proof/retention receipts are in .a03 and target/payload-*.
+-400 push cadence stays; derive ahead count. Cleanup next due2026-10-06 22:28UTC.

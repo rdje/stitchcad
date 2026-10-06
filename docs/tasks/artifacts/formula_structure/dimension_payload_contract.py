@@ -5,7 +5,18 @@ import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-ORACLE = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'))
+HELPER = ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh', HELPER)
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+ORACLE = runpy.run_path(str(HELPER))
+PROFILE = ORACLE['PROFILE']
+REFERENCE_INPUTS = (Path(__file__), *ORACLE['REFERENCE_INPUTS'])
 SOURCE = ORACLE['SOURCE']
 KINDS, ARITH = ORACLE['KINDS'], ORACLE['ARITH']
 TOLERANCES, RESERVED = ORACLE['TOLERANCES'], ORACLE['RESERVED']
@@ -44,6 +55,7 @@ class ReservedKind:
 
 
 def contracts(replacement=None, verbose=True):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     ns, reference = ORACLE['load_reference'](replacement)
     assert set(reference.operator_signatures) == {(op, 1) for op in UNARY} | {(op, 2) for op in BINARY}, 'D138 operator wanted population'
     reference.reserved = {name: ReservedKind(kind) for name, kind in RESERVED.items()}
@@ -188,17 +200,22 @@ FAULTS = (
 
 
 if __name__ == '__main__':
-    assert sys.argv[1:] in [[], ['--mutations']]
-    original = SOURCE.read_bytes()
-    contracts()
-    if sys.argv[1:] == ['--mutations']:
-        for name, before, after in FAULTS:
-            try:
-                contracts((before, after), verbose=False)
-            except AssertionError as error:
-                assert any(marker in str(error) for marker in ('D138', 'static checker accessed non-kind metadata')), (name, 'not an actual payload/body red', error)
-                print('actual compiled dimension payload assertion red:', name)
-            else:
-                raise AssertionError(('dimension payload fault escaped', name))
-        print('dimension payload faults:%d actual compiled body assertion reds; tracked source unchanged' % len(FAULTS))
-    assert SOURCE.read_bytes() == original
+    try:
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+        assert sys.argv[1:] in [[], ['--mutations']]
+        original = SOURCE.read_bytes()
+        contracts()
+        if sys.argv[1:] == ['--mutations']:
+            for name, before, after in FAULTS:
+                try:
+                    contracts((before, after), verbose=False)
+                except AssertionError as error:
+                    assert any(marker in str(error) for marker in ('D138', 'static checker accessed non-kind metadata')), (name, 'not an actual payload/body red', error)
+                    print('actual compiled dimension payload assertion red:', name)
+                else:
+                    raise AssertionError(('dimension payload fault escaped', name))
+            print('dimension payload faults:%d actual compiled body assertion reds; tracked source unchanged' % len(FAULTS))
+        assert SOURCE.read_bytes() == original
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None

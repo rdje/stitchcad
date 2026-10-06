@@ -10,5 +10,6 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_producer_contrac
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_bridge_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_payload_library_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py" --native
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/push_cadence_contract.py"

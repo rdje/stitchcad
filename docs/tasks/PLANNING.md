@@ -1046,3 +1046,5 @@ D202 whole authored report/verified closure retained in [part124](../history/sti
 D203 whole authored report/verified closure retained in [part125](../history/stitchcad-defects-part125.md).
 
 D204 whole authored navigation report/verified closure retained in [part126](../history/stitchcad-defects-part126.md).
+
+D205 whole authored boundary report/verified closure retained in [part127](../history/stitchcad-defects-part127.md).

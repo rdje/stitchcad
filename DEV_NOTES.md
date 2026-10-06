@@ -3,50 +3,45 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — read-only public reference plans
+## _(2026-10-06 UTC)_ — pure dimension and ambiguity payload plans
 
-D156's three static libraries loaded public helpers and compiled book references without complete
-nonmutating plans. Their actual effects are reads and in-memory compilation. Imports must stay pure;
-whole-book fixture preparation or store activation would change the borrowed library contract.
-Bootstrap lists contain3/4/5 sources; fresh reference lists contain8/9/10, including the five normative
-book inputs. Namespace/review reuse the signature provider's exact Refusal class, preserving nested
-borrowed failures without catching unrelated ValueError/assertion exceptions. Standalone guarded
-failures print the existing local-environment refusal and exit2; permissive mutation argv remains.
+D156: public payload imports delegated before validating their own source closure. The watched
+control rejects both original bootstrap omissions. Dimension bootstrap4/reference9 and ambiguity
+bootstrap5/reference10 now validate before imports, borrowed calls and CLI source reads. The
+provider Refusal class is reused; only Refusal/OSError become standalone named refusals/exit2.
+Pure expanded/signature metadata helpers need no source read. Original functions/classes/FAULTS,
+CLI bodies and diagnostic populations are AST-exact after removing only added guards/wrappers.
 
-The watched actual control passes on Python3.14 and OS Python3.9.6:17 import/contract/CLI/loader/quantum/
-exception captures, ten actual guard omissions,18 physical CLI refusals and12 borrowed refusals.
-Three actual planner-body disables admit the same invalid plans in owned isolated mirrors. Per-call
-frames prove fresh complete source plans before reads/delegation; original functions, classes, authored
-populations/faults and CLI bodies are AST-exact after removing only added guards/refusal wrappers.
-Prepared stores, unrelated values, normal/exception argv identity and tracked inputs stay exact.
-The D126 quantum proof retains intentional reference numerical work; static contracts retain traps.
+Actual controls pass on Python3.14 and OS Python3.9.6:10 pure captures (including repeated calls and
+exception argv), six actual guard omissions,20 physical CLI refusals covering helper/book shapes,
+eight borrowed Refusal identity checks and two actual planner-body-disable admissions. Prepared
+stores, unrelated environment values, argv identity and tracked inputs remain exact; no activation.
+Dimension keeps4023 cases/3814 full diagnostic refusals and fifteen original body faults. Ambiguity
+keeps4192 ordered payloads and sixteen faults. Values/execution remain trapped in both.
 
-Public caller inspection found reference plans before the coupled build, after the first-phase native
-work, and after recipe pure preflight. Closed adapters assert each stage/list/sequence, retaining all
-original producing guards. Bridge40 coupled+nine body reds, recipe six captures/twelve reds/fourteen
-physical refusals, and shared1125 reds/58 complete captures/329 physical refusals pass. Eleven actual
-public callers retain their original normal results and faults; their own future locality audit remains.
+Bridge/shared adapters add only the exact initial dimension bootstrap plan; existing producing,
+file/library/current-artifact checks and original compiled faults stay. Watched native mode runs
+both real payload mutation CLIs, public263/ten competing faults and26723 coupled cases. Its complete
+196-input snapshot includes the two payloads/control,65 book files and118 Rust files (63 production
+src files); unchanged Rust matches prior HEAD and current Cargo-selected library identity is checked.
+No engine/grammar change or unobserved remote verdict.400 cadence stays. OS interpreter/stdlib are
+read-only runtime dependencies; generated data stays under repository-derived target paths.
 
-Tracked python_static_loader_contract.py --native passes263/ten reference faults and coupled26723
-cases separately from captures; the probe runner watches frozen inputs and current library identity.
-All194 frozen inputs remain exact, including118 tracked Rust files and63 production src files; current
-library15981408B has sha256:168cf69628c5c229f30cac663354ffe3a47c2e35a7e2105253031eaf20b7125f.
-No native source or grammar change. OS interpreter/stdlib are read-only dependencies; generated
-fixtures, logs and capture stores stay on the repository volume. Draft failures are excluded: wrong
-Git-boundary diagnostic wording, incomplete pre/post-native reference adapters, an authoring function
-name mismatch, and a Rust census that omitted the established /src/ filter. Tools resolved each.
+Whole Source0201 task1227/lesson prefix2763→262;0192 ledger389→CH181. D205's prefix boundary was
+caught before payload signoff:988B remained live, no loss. Exact anchored boundary replaces the
+emitting prefix. Prefix+tail263 equals the complete3751B HEAD lesson before remaining retirement.
+Whole completed scopes2188→264 and whole authored D205 report/closure786→127 were copied/inventoried/
+publicly read before retirement. Prior569 logical/all physical records and existing seals stay exact.
+An attempted division-receipt seal exceeded FILE maxline400 and wrote nothing; scope retention keeps
+canonical fields. A copied-book draft correctly refused after my book edit during its frozen-input
+check; settled-input rerun passes six dispatches/twelve guard reds/fourteen physical refusals.
+Neither draft is signoff evidence.
+External policy hashes unchanged at2026-10-06 07:55UTC; cleanup due22:28UTC.
+Promotion declined: established pure-library, fresh-plan, whole-retention and independent-body rules.
 
-Whole0200 task1458+lesson3428→260;0191 ledger476→180;completed scopes6451→261 were fully sealed,
-copied, inventoried and publicly read before retirement. Own-only dedup preserves canonical fields;
-prior565 logical/all56 physical bytes remain exact. Fixed caps stay; no existing seal changes.
-D204 was found by independent continuity, then the actual ledger gate failed9 pass/2 fail. The
-retention helper's stale part179 selector routed the exact CH180 index row into DEV instead of CH.
-Whole historical bytes were intact. Report/ownership preceded moving only that row and selecting
-by destination kind; the real public pointer set then matched all179 segments. Whole authored report
-and verified closure were copied/read in126 before live retirement. Existing pointer gates watch it.
+Whole0201 task/lesson prefix retained in [part262](docs/history/stitchcad-devnotes-part262.md).
 
-External policy hashes unchanged at2026-10-06 06:58UTC; cleanup is not due until22:28UTC.
-Promotion declined: existing pure-call, public-boundary, independent-control and continuity rules apply.
+Complete0201 lesson tail retained in [part263](docs/history/stitchcad-devnotes-part263.md); prefix in part262.
 
 Whole0200 task and copied-book lesson retained in [part260](docs/history/stitchcad-devnotes-part260.md).
 
@@ -197,3 +192,11 @@ committed table and original links. Recent records follow; older identities rema
 
 
 | [part261](docs/history/stitchcad-devnotes-part261.md) | whole copied-book and signature-family scopes | 73 lines, 6451 bytes, sha256:bea84f20… |
+
+| [part262](docs/history/stitchcad-devnotes-part262.md) | whole0201 task and public-loader lesson | 40 lines, 3990 bytes, sha256:a2ca4f23… |
+
+| [part263](docs/history/stitchcad-devnotes-part263.md) | complete0201 lesson tail/D205 boundary repair | 12 lines, 988 bytes, sha256:0e2987e2… |
+
+| [part264](docs/history/stitchcad-devnotes-part264.md) | whole public-loader/declaration/cleanup scopes | 20 lines, 2188 bytes, sha256:bc63bced… |
+
+| [part127](docs/history/stitchcad-defects-part127.md) | D205 whole authored boundary report/verified closure | 3 lines, 786 bytes, sha256:ae7842f1… |

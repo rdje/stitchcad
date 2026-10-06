@@ -77,7 +77,8 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
     signature_boot = (sig, profile_source, reference_source)
     namespace_boot = (ns, profile_source, reference_source, sig)
     review_boot = (review, profile_source, reference_source, ns, sig)
-    readonly_expected = (signature_boot, review_boot, namespace_boot, signature_boot,
+    dimension_boot = (HERE / 'dimension_payload_contract.py', profile_source, reference_source, sig)
+    readonly_expected = (dimension_boot, signature_boot, review_boot, namespace_boot, signature_boot,
                          (review, ns, *signature_boot, *book_sources))
     readonly_plans = []
     post_native_reference_plans = []

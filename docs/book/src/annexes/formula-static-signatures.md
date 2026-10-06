@@ -96,3 +96,19 @@ The static metadata contracts retain their execution traps. The review helper's 
 quantum control deliberately evaluates the reference arc-length counterexample and independent
 rational bounds; its numerical proof remains separate from product geometry signoff. The native
 bridge and copied-book instruments check nested read-only plans as well as their producing plans.
+
+The dimension- and ambiguity-payload libraries use the same pure boundary: bootstrap plans
+cover four and five sources, and fresh borrowed plans cover nine and ten. They reuse the
+provider's Refusal class. Their original diagnostic metadata, operand/source order, kind/value
+traps, case populations and CLI argument recognition remain unchanged. For example:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/dimension_payload_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/ambiguity_payload_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/ci_environment/python_payload_library_contract.py
+```
+
+The watched payload control checks repeated borrowed calls, exception-path argv restoration,
+actual guard omissions, helper/book filesystem faults and unchanged prepared environments.
+The native control above also runs both real payload mutation CLIs before the native consumers
+and verifies frozen inputs after each. Diagnostic inference remains metadata-only.

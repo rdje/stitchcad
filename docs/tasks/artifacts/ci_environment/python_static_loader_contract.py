@@ -318,22 +318,30 @@ def native():
     helpers = tuple(HERE / name for name in (
         'dimension_payload_contract.py', 'static_review_contract.py', 'static_namespace_contract.py',
         'static_signature_contract.py', 'checked_recipe_mutations.py', 'static_coupled_contract.py',
-        'first_phase_contract.py', 'static_coupled_driver.rs', 'canonical_worked_recipe_cases.tsv'))
+        'first_phase_contract.py', 'static_coupled_driver.rs', 'canonical_worked_recipe_cases.tsv',
+        'ambiguity_payload_contract.py'))
     folders, book = [ROOT / 'docs/book/src'], []
     for folder in folders:
         GOOD['directory'](ROOT, folder.relative_to(ROOT).as_posix())
         for path in sorted(folder.iterdir()):
             GOOD['require'](not path.is_symlink(), 'symlink native control book entry')
             (folders if path.is_dir() else book).append(path)
-    sources = tuple(dict.fromkeys((Path(__file__), PROFILE, SOURCE, *helpers, *book, *rust)))
+    sources = tuple(dict.fromkeys((Path(__file__),
+        Path(__file__).with_name('python_payload_library_contract.py'),
+        PROFILE, SOURCE, *helpers, *book, *rust)))
     outputs = tuple(ROOT / 'target' / name for name in (
         'loader-native-first-phase.log', 'loader-native-coupled.log',
-        'loader-native-frozen.json', 'loader-library.json'))
+        'loader-native-frozen.json', 'loader-library.json',
+        'loader-native-dimension.log', 'loader-native-ambiguity.log'))
     GOOD['enter_producer'](ROOT, sources=sources, output_files=outputs)
     frozen = {path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest() for path in sources}
     for path in rust:
         assert path.read_bytes() == subprocess.check_output(['git', 'show', BEFORE + ':' + path.relative_to(ROOT).as_posix()]), 'native Rust source changed'
     for entry, arguments, log, markers in (
+        ('dimension_payload_contract.py', ['--mutations'], outputs[4],
+         ('dimension payloads:4023 actual cases /3814', 'dimension payload faults:15')),
+        ('ambiguity_payload_contract.py', ['--mutations'], outputs[5],
+         ('D147 ambiguity contract: 4192', 'D147 faults: 16')),
         ('first_phase_contract.py', ['--mutations'], outputs[0],
          ('D150 public:263', 'D150 reference:263', 'D150 faults:10')),
         ('static_coupled_contract.py', [], outputs[1], ('coupled static review: 26723 shared cases',)),
@@ -361,7 +369,7 @@ def native():
     outputs[3].write_text(json.dumps(artifact, indent=2) + '\n')
     print('native loader proof:', len(frozen), 'inputs;', len(rust), 'tracked Rust files;',
           sum('/src/' in path.relative_to(ROOT).as_posix() for path in rust),
-          'production sources exact; 263 competing/10 faults/26723 coupled cases; current library frozen; rc=0')
+          'production sources exact; 4023/3814 dimension/15 faults/4192 ambiguity/16 faults/263 competing/10 faults/26723 coupled; current library frozen; rc=0')
 
 
 if __name__ == '__main__':

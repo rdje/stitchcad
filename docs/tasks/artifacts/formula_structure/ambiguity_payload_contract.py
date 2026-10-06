@@ -4,12 +4,24 @@ import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-ORACLE = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_namespace_contract.py'))
+HELPER = ROOT / 'docs/tasks/artifacts/formula_structure/static_namespace_contract.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh', HELPER, ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py')
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+ORACLE = runpy.run_path(str(HELPER))
+PROFILE = ORACLE['PROFILE']
+REFERENCE_INPUTS = (Path(__file__), *ORACLE['REFERENCE_INPUTS'])
 SOURCE = ORACLE['SOURCE']
 KINDS, ORIGINS, BINDABLE = ORACLE['KINDS'], ORACLE['ORIGINS'], ORACLE['BINDABLE']
 
 
 def contracts(replacement=None, verbose=True):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     ns, reference = ORACLE['LOADER']['load_reference'](replacement)
     declaration = ORACLE['Declaration']
     reference.reserved = {name: ORACLE['ReservedKind'](kind) for name, kind in ORACLE['RESERVED'].items()}
@@ -121,16 +133,21 @@ FAULTS = (
 )
 
 if __name__ == '__main__':
-    original = SOURCE.read_bytes()
-    contracts()
-    if '--mutations' in sys.argv:
-        for name, before, after in FAULTS:
-            try:
-                contracts((before, after), False)
-            except AssertionError as error:
-                assert any(marker in str(error) for marker in ('D147', 'static namespace read value/state/geometry')), (name, 'unrelated failure', error)
-                print('  actual compiled D147 body assertion red:', name)
-            else:
-                raise AssertionError(('D147 fault escaped', name))
-        assert SOURCE.read_bytes() == original, 'D147 on-disk source changed'
-        print('D147 faults: %d actual compiled body assertion reds; source unchanged' % len(FAULTS))
+    try:
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+        original = SOURCE.read_bytes()
+        contracts()
+        if '--mutations' in sys.argv:
+            for name, before, after in FAULTS:
+                try:
+                    contracts((before, after), False)
+                except AssertionError as error:
+                    assert any(marker in str(error) for marker in ('D147', 'static namespace read value/state/geometry')), (name, 'unrelated failure', error)
+                    print('  actual compiled D147 body assertion red:', name)
+                else:
+                    raise AssertionError(('D147 fault escaped', name))
+            assert SOURCE.read_bytes() == original, 'D147 on-disk source changed'
+            print('D147 faults: %d actual compiled body assertion reds; source unchanged' % len(FAULTS))
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
