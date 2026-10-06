@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0214 — literal producer plans
+
+Leaf .5b.4c.h2.b.p.o.a14 guards pure literal loads and mutable-source/log plans.
+Python3.9/3.14:361/146 checks, six/twelve real reds; late-log restore verified.
+Whole0213/oldest0212 retained; grammar unchanged; rational next.
+
 ## STITCHCAD-SPINE-0023r — handoff recurrence
 
 SPINE.23r retains sanitized missing-type OS evidence;43 fixtures/14 actual reds verify strict refusal.
@@ -121,12 +127,6 @@ Parser unchanged; full fresh census0. Whole0211 retained; G1 literal plans resum
 
 Leaf G1-SLICE.5b.4c.h2.b.p.o.a13 guards pure inputs/copied books/logs/mutants.
 Python3.9/3.14:1466/425 controls,13/26 faults; sources exact. Whole0212/oldest0210 retained; literals next.
-
-## STITCHCAD-G1-0212 — binding replay plans
-
-Leaf G1-SLICE.5b.4c.h2.b.p.o.a12 guards complete replacement/selectors/logs, nested child preflight
-and source-only restoration. Python3.9/3.14 retain19 real verdicts/nine actual assertion reds; watched
-guard/physical/late-log controls pass. Whole0211/oldest0209 retained; origin/provenance libraries next.
 
 Whole0211 ledger retained in [part192](docs/history/stitchcad-changelog-part192.md).
 
@@ -350,3 +350,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part191](docs/history/stitchcad-changelog-part191.md) | whole0210 ledger | 5 lines, 336 bytes, sha256:73d7dbf8… |
 
 | [part192](docs/history/stitchcad-changelog-part192.md) | whole0211 ledger | 6 lines, 443 bytes, sha256:531f2a44… |
+
+| [part193](docs/history/stitchcad-changelog-part193.md) | whole0212 ledger | 5 lines, 354 bytes, sha256:302f1610… |

@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-06 UTC)_ — literal producer boundaries
+
+Leaf .5b.4c.h2.b.p.o.a14 retains all numerical assertion bodies and six/twelve fault rows.
+Pure entries guard actual inputs before loading; writers preflight sources, mutable authority and
+every log before activation, refresh edit/child/log plans and restore with source-only authority.
+Watched python_literal_contract.py tests original bodies, actual omissions and isolated filesystem
+refusals. Python3.14/3.9 retain361/146 numerical checks and six/twelve real assertion reds; all15
+scoped inputs exact after each child. Capture results are dispatch evidence; real results are separate.
+Whole0213 task/lesson/footer282 and oldest0212 ledger193 retain exact665b973 intervals before
+retirement. Fixed ceilings and grammar unchanged; D156 remains open. Promotion declined: existing
+pure-input, mutable-path, actual-body, source-only-restoration and whole-retention principles.
+
 Whole0210 task/lesson retained in [part278](docs/history/stitchcad-devnotes-part278.md).
 
 Whole0209 task/lesson retained in [part277](docs/history/stitchcad-devnotes-part277.md).
@@ -138,26 +150,6 @@ Whole retained whole0211 task and lesson: [part280](docs/history/stitchcad-devno
 
 Whole retained whole0212 task and lesson: [part281](docs/history/stitchcad-devnotes-part281.md).
 
-## _(2026-10-06 UTC)_ — origin and provenance boundaries
-
-Leaf G1-SLICE.5b.4c.h2.b.p.o.a13 preserves inert library imports and pure numerical contracts;
-reference_plan() covers only actual public reference inputs. A shared pure provider adopts the public
-input planner and checks complete copies, selectors, logs and the provenance mutant before effects.
-Origin preflights both cases together. Copied reads/edits, source/selector/script dispatch and logs
-refresh their plans; compiled faults never rewrite the tracked shell.
-
-Original numerical bodies/authored data remain exact. Python3.14/3.9 watched captures exercise pure
-and CLI/borrowed calls,32 omission reds/four original gaps, independently loaded providers/six adoption
-reds,40 physical CLI/16 repeated pure refusals and four unused-output/sidebar/read-only hardlink
-positives. Actual D202 directory and planner omissions admit the same unsafe isolated fixtures.
-The copied-read observer distinguishes entry edits from selector reads; no false effect classification.
-Real1466/425 controls, thirteen/26 intended faults and copied-book runtime refusals pass0; all192
-inputs/118Rust63 production exact after each. Logs target/origin-plan-control/control39/real/real39.log.
-
-Whole0212 task/lesson/footer281 and oldest0210 ledger191 are exact7587d66 intervals; FILE/copy/prior602/
-public reads precede retirement. Source canonical .a12 header remains live; caps/grammar/400 unchanged.
-Promotion declined: existing pure-provider, public-input, actual-body and whole-retention principles.
-
 ## Retained engineering continuity
 
 Complete retrieval: `bash scripts/history_archive.sh list` enumerates every logical record;
@@ -242,11 +234,6 @@ Whole retained whole0212 task and lesson: [part281](docs/history/stitchcad-devno
 
 | [part281](docs/history/stitchcad-devnotes-part281.md) | whole0212 task and lesson | 35 lines, 3985 bytes, sha256:b4748635… |
 
-Final0213: publication45/census242/coverage9/archive28+624/ledger797+11+13/language16 all rc=0;
-continuity604/prior602/all41 archive controls/whole281CH191/75 closed headers/nav/library/192 frozen/
-118Rust63/5 code5 normative/build/12open195sealed/fixed caps exact, rc=0. Source/grammar unchanged.
-Schema-header draft refused by actual census; original headers restored before final242 proof.
-
 ## _(2026-10-06 UTC)_ — handoff recurrence
 
 SPINE.23r captured p/f4/n with no requested t field after88 bounded OS samples; name21B hash
@@ -254,3 +241,7 @@ SPINE.23r captured p/f4/n with no requested t field after88 bounded OS samples; 
 The missing-type fixture reproduces refusal2; an actual guard omission adds the fourteenth red.
 Strict parser unchanged; fresh complete census0 does not validate refused evidence or explain
 kernel causation. Whole0211 ledger192 retained exactly before growth. G1 resumes .a14.
+
+Whole0213 task and lesson retained in [part282](docs/history/stitchcad-devnotes-part282.md).
+
+| [part282](docs/history/stitchcad-devnotes-part282.md) | whole0213 task and lesson | 39 lines, 4311 bytes, sha256:e20979fe… |

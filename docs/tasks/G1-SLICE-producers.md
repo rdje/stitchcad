@@ -192,31 +192,37 @@ Whole retained whole0211 task and lesson: [part280](../history/stitchcad-devnote
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a12`
   Status: `done`
-  Own0212: replay pair/new pure provider/control/docs; whole0211 retention280/CH190; target/replay-plan-*.
+  Own0212: complete scope and verification in part281.
   Goal: Binding replay fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: verified; complete scope retained in part281.
 
 Whole retained whole0212 task and lesson: [part281](../history/stitchcad-devnotes-part281.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a13`
   Status: `done`
-  Own0213: origin/provenance pair/new pure provider/control/docs; whole0212 retention281/CH191; target/origin-plan-*.
+  Own0213: complete scope and verification in part282.
   Goal: Origin and provenance fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: verified; complete scope retained in part282.
 
-- [x] REPRODUCE / ISSUE: python_origin_provenance_contract.py executes actual7587d66 entry/consumer bodies; four original loader/delete/mkdir gaps fail independently, rc=0, target/origin-plan-control.log. Original numeric bodies and curated data remain exact.
-- [x] ROOT CAUSE: complete pair/public signature/input loaders/reference modes/book reviewed; old producing effects lack complete replacement/selector/log/mutant plans. Actual body captures/provider loads pinpoint omissions, rc=0, target/origin-plan-control/control39.log. D156 remaining producers retain their owners.
-- [x] FIX: origin_provenance_fixture.py keeps pure reference inputs separate from whole copied sources; preflights all outputs, refreshes copy/edit/child/script/log checks and adopts actual providers. python_origin_provenance_contract.py passes32 omission/six adoption reds, rc=0, target/origin-plan-control/control39.log.
-- [x] ADDRESSED: real origin/provenance --mutations on Python3.14/3.9 retain1466/425 checks and13/26 intended faults/copied runtime refusals; all192 inputs/118Rust63 exact after each, rc=0, target/origin-plan-real/real39.log. Actual40 physical CLI/16 borrowed refusals/four pure positives and D202/planner counterfactuals discriminate, rc=0.
-- [x] NO REGRESSION: publication45/census242/coverage9/archive28+624/ledger797+11+13/language16 pass0, target/origin-plan-{publication,census,coverage,archive,ledger,language}.log. origin-plan-continuity.py proves604 reads/prior602/all41 Source controls/whole281/CH191/75 headers/192 frozen inputs/nav/library/fixed caps, rc=0, target/origin-plan-continuity.log.
-- [x] LOCKSTEP: book/live/MEMORY/DEV/CH/ledgers/frontier route .a14; CI environment runner watches new control. Actual census/publication/continuity commands pass0; grammar/400 unchanged. promotion: declined (established pure/public input/actual-body/whole-retention rules).
-
-  Final staged gate13 green, rc=0, target/origin-plan-staged-gate.log.
+Whole0213 verification retained in [part282](../history/stitchcad-devnotes-part282.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a14`
-  Status: `pending`
+  Status: `done`
+  Own0214: four literal entries, watched actual-body/physical controls, ledgers/book/live sync;
+  whole0213 task/lesson and oldest0212 ledger retention before receipt growth.
+  Paths: literal_contract.py; literal_mutations.py; canonical_literal_contract.py;
+  canonical_literal_mutations.py under docs/tasks/artifacts/formula_structure/;
+  docs/tasks/artifacts/ci_environment/python_literal_contract.py; runner/census manifests.
   Goal: Literal and canonical literal libraries/fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: public-boundary plan above; actual captures, physical refusals, faults, real suites and exact restoration before commit.
+
+- [x] REPRODUCE / ISSUE: python_literal_contract.py executes actual665b973 bodies; two unguarded loaders/two mkdir gaps fail independently. Original numeric suffixes/all18 CASES exact;22 actual reds, rc=0, target/literal-plan-control/control39.log.
+- [x] ROOT CAUSE: entry loads and mutation effects precede complete input/file/mutable plans. Actual read/write/child observers pinpoint omissions; complete four entries/public loaders/reference modes/book reviewed. python_literal_contract.py passes22 reds/38 physical fixtures, rc=0.
+- [x] FIX: pure input preflight; writers declare every log/source before activation and refresh edit/child/log plans. Source-only restoration retains source after late unsafe logs. python_literal_contract.py captures6/12 children,19/37 writes and two exact late-log restores, rc=0, control/control39.log.
+- [x] ADDRESSED: python_literal_contract.py --real on Python3.14/3.9 retains60 rows/361 checks,146 canonical checks and six/twelve genuine assertion reds; all15 inputs exact after each child, rc=0, target/literal-plan-real/real39.log. Four pure physical positives retain unused logs/read-only aliases.
+- [x] NO REGRESSION: publication45/census243/coverage9/archive28+627/ledger11+13/language16 all rc=0, target/literal-plan-{publication-final,census,coverage,archive,ledger,language}.log. --continuity verifies whole282/CH193/prior immutable bytes/reference inputs/canonical task graph, rc=0, continuity-final.log.
+- [x] LOCKSTEP: book/live/DEV/CH/MEMORY/ledgers/frontier route .a15; runner watches new control. python_literal_contract.py --continuity passes0; external neutral policies exact, fixed caps/grammar/400 unchanged. promotion: declined (existing pure-input, mutable-path, source-only restore and whole-retention rules). Commit: STITCHCAD-G1-0214.
+  Final staged gate13 green, rc=0, target/literal-plan-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a15`
   Status: `pending`

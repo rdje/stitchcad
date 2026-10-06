@@ -475,3 +475,18 @@ and three-crate WASM compilation retain their scoped historical receipts. Ordere
 normalization and identity are [implemented](formula-recipe-inputs.md), with separate complete
 [name/kind proofs](formula-checked-recipes.md). Bound numeric values, evaluation, geometry, storage and
 command/API/MCP remain later work. Expressions that serialize can still be refused there.
+
+## Reference literal producer plans
+
+The literal and canonical-literal reference entries validate their loaders, five numerical chapters
+and, for the literal table, `literal_cases.tsv` before loading or reading them. Their numerical
+imports remain pure: no stores, outputs or child processes are created. Unused mutation logs and
+read-only source hard links do not prevent these checks.
+The two mutation entries instead prepare all six or twelve log destinations and declare the shell
+reference as mutable before reading it or creating their workspace. They refresh the complete plan
+before each edit, child and log write, preserving the prepared child environment and original fault
+populations. Restoration checks only the mutable source, so a late unsafe log cannot strand a mutant.
+`python_literal_contract.py` under `docs/tasks/artifacts/ci_environment/` watches actual entry bodies
+and physical refusals; `--real` runs the exclusive reference suites and verifies all scoped inputs
+after each child. The proof is numerical reference evidence; the remaining D156 producer audit
+and production binding/evaluation stay separate.
