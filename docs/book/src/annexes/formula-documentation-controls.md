@@ -179,3 +179,46 @@ independent provider loads and mirrored late-log restoration. Its intercepted ch
 dispatch; the first two commands supply the separate nineteen numerical/display verdicts and nine
 intended compiled assertion failures. No source literals, grammar, display quantum, diagnostic token
 or production engine rule changes; evaluator/geometry/API/MCP/release proof remains separately owned.
+
+
+## Origin and provenance consumer plans
+
+Both origin_value_contract.py and provenance_contract.py are inert on import. Borrowed contracts()
+validate only the public numerical reference inputs and keep the caller's environment and argv.
+They need no copied fixture or prepared stores. Unused sidebar or output faults do not affect a pure
+call; read-only source hard links remain valid. The shared origin_provenance_fixture.py provider
+checks its loaders before importing them and offers a pure reference_plan() and fixture_plan(labels).
+
+Producing consumer() calls prepare the complete replacement, selectors, logs and child stores before
+any copy, deletion, edit or shell dispatch. Origin plans both missing_size and missing_tolerance at
+once, so a bad destination in the second case refuses before the first case produces anything.
+Provenance also plans its copied mutant.sh even when the current call runs the original shell.
+Its compiled faults edit only that copy; the tracked evaluator is never rewritten.
+
+For example, an existing linked consumer.log, a nested Git boundary in a replacement, an unexpected
+copied file or an input selector pointing into a replacement raises Refusal before activation.
+A FORMULA_PARTS_DIR inside a replacement is refused even when the chosen grammar and examples come
+from valid source files. Caller selectors keep the shell's existing meaning; they are checked again
+with the actual copied book immediately before dispatch. Prepared local stores and unrelated
+variables remain in the child environment. Original argv and result checks remain unchanged.
+
+Replacement checks refresh before deletion/copying, copied inputs before edits, complete sources and
+selectors before children, and the complete producing plan before logs or mutant-script writes.
+Standalone CLIs report local-environment: REFUSED and return2 for these path/store failures;
+borrowed calls raise the adopted provider's Refusal. Numerical assertion failures keep their original
+meaning. Actual independently loaded provider classes are checked, including delegated refusals.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/ci_environment/python_origin_provenance_contract.py
+```
+
+The first two commands retain1466 origin controls and425 contribution controls, thirteen and
+26 intended faults, and the actual copied consumers described in the [runtime evidence](formula-runtime-validation.md).
+The watched environment control intercepts child dispatch separately from that numerical proof.
+It executes the actual bodies, removes guards to require independent assertion failures and exercises
+real isolated filesystem refusals, repeated pure calls and provider identity. Its pure positives also
+prove that unused linked sidebars/outputs and read-only source hard links do not introduce effects.
+Python3.9 and3.14 are verified. These are documentation instruments; production execution, real
+geometry, typed API diagnostics and garment signoff remain in their roadmap lanes.

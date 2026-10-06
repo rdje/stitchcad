@@ -16,6 +16,7 @@ docs/tasks/artifacts/ci_environment/python_binding_replay_contract.py	profile	G1
 docs/tasks/artifacts/ci_environment/python_bridge_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_inline_context_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_input_context_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/ci_environment/python_origin_provenance_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_payload_library_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_producer_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
@@ -78,6 +79,7 @@ docs/tasks/artifacts/formula_structure/normalized_expression_reference.py	delega
 docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n07.3
 docs/tasks/artifacts/formula_structure/operator_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11.2
 docs/tasks/artifacts/formula_structure/ordered_name_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n09.2
+docs/tasks/artifacts/formula_structure/origin_provenance_fixture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a13
 docs/tasks/artifacts/formula_structure/origin_value_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a13
 docs/tasks/artifacts/formula_structure/provenance_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a13
 docs/tasks/artifacts/formula_structure/rational_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a15

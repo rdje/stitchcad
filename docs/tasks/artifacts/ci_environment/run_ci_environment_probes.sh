@@ -15,6 +15,7 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_inline_context_c
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_assertion_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_binding_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_binding_replay_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_origin_provenance_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_payload_library_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py" --native

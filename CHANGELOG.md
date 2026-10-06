@@ -112,6 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0213 — origin/provenance plans
+
+Leaf G1-SLICE.5b.4c.h2.b.p.o.a13 guards pure inputs/copied books/logs/mutants.
+Python3.9/3.14:1466/425 controls,13/26 faults; sources exact. Whole0212/oldest0210 retained; literals next.
+
 ## STITCHCAD-G1-0212 — binding replay plans
 
 Leaf G1-SLICE.5b.4c.h2.b.p.o.a12 guards complete replacement/selectors/logs, nested child preflight
@@ -125,11 +130,7 @@ nested writer preflight/source-only restoration. Python3.9/3.14 retain80 checks/
 assertion reds; actual omissions/physical refusals and late-log restoration discriminate. Whole278/279/
 oldest ledger189 retained before growth. Grammar unchanged; binding replay fixtures next.
 
-## STITCHCAD-G1-0210 — committed window10 proof
-
-Leaf G1-SLICE.5b.4c.h2.b.p.o.f.h10.v observes copied inventory0/actual immutable refusal1;
-all35 archive files and37dbfcf HEAD exact. Whole0209 receipt/lesson277 retained before live growth.
-Focused publication/retrieval/continuity checks preserve fixed limits; binding fixtures next.
+Whole retained whole0210 ledger: [part191](docs/history/stitchcad-changelog-part191.md).
 
 Whole retained whole0209 ledger: [part190](docs/history/stitchcad-changelog-part190.md).
 
@@ -345,3 +346,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part189](docs/history/stitchcad-changelog-part189.md) | whole0198 and0197 ledgers | 10 lines, 605 bytes, sha256:032aed1a… |
 
 | [part190](docs/history/stitchcad-changelog-part190.md) | whole0209 ledger | 6 lines, 466 bytes, sha256:794856d3… |
+
+| [part191](docs/history/stitchcad-changelog-part191.md) | whole0210 ledger | 5 lines, 336 bytes, sha256:73d7dbf8… |

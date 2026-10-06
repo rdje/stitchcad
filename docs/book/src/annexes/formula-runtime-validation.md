@@ -99,6 +99,8 @@ numerical fixtures without state metadata remain readable; full canonical input 
 python3 -I -B docs/tasks/artifacts/formula_structure/origin_value_contract.py --mutations
 ```
 
+Its [producer plans](formula-documentation-controls.md#origin-and-provenance-consumer-plans) preserve pure calls and guard both copied books before effects.
+
 The structural runner watches1466 independent controls: nine origins/eight kinds/five missing states,
 four populated states, zero/false values, all eight reserved names, explicitly supplied contexts,
 taken-only missing reads, malformed declarations and populated-state consistency. Lazy point/edge resolution, subsequent cached
@@ -153,6 +155,8 @@ point_at and length-only edge fixtures remain arithmetic models, with no curve-a
 ```bash
 python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mutations
 ```
+
+Its [producer plans](formula-documentation-controls.md#origin-and-provenance-consumer-plans) also guard the copied mutant script; tracked reference sources stay read-only.
 
 The structural runner watches425 independent controls across all approximation signatures, five
 arithmetic kinds/classes, operand orders, named refusals, ordinary operators, stored/Boolean reads,

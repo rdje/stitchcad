@@ -4,12 +4,25 @@ from fractions import Fraction
 from pathlib import Path
 import os
 import runpy
-import shutil
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-HELPER = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'))
+HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
+PROVIDER = HERE / 'origin_provenance_fixture.py'
+SIGNATURE = HERE / 'static_signature_contract.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, PROVIDER, SIGNATURE)
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+FIXTURE = runpy.run_path(str(PROVIDER))
+PROFILE = FIXTURE['PROFILE']
+HELPER = runpy.run_path(str(SIGNATURE))
+HELPER['PROFILE'] = PROFILE
 SOURCE = HELPER['SOURCE']
 CLASSES = {'eps_num': 1, 'eps_geo': 10, 'eps_fmt': 25, 'eps_imp': 40, 'eps_phys': 100}
 # Curated exact answers authored independently of the implementation/table reader. Every declared
@@ -41,6 +54,7 @@ def entry(kind, value, sources=()):
 
 
 def contracts(replacement=None, verbose=True):
+    FIXTURE['reference_plan']()
     ns, ref = HELPER['load_reference'](replacement)
     checks = 0
     points = {'p': entry('point', (Fraction(0), Fraction(0))),
@@ -164,13 +178,9 @@ def contracts(replacement=None, verbose=True):
 
 
 def consumer(replacement=None, verbose=True):
-    work = ROOT / 'target/formula_structure/provenance_consumer'
-    book = work / 'src'
-    if book.exists():
-        assert not (book / '.git').exists(), 'provenance consumer is a Git repository'
-        shutil.rmtree(book)
-    book.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copytree(ROOT / 'docs/book/src', book)
+    environment = FIXTURE['fixture_plan'](('provenance',), activate=True)
+    book = FIXTURE['copy_book']('provenance')
+    work = book.parent
     examples = book / 'spec/formula-language/examples.md'
     text = examples.read_text()
     before = 'assert allocation_balance: eps_num = 4 * (ss_suppress + dart_intake) == garment_hip - garment_waist'
@@ -179,13 +189,19 @@ def consumer(replacement=None, verbose=True):
     script = SOURCE
     if replacement:
         before, after = replacement
+        FIXTURE['source_plan']()
         program = SOURCE.read_text()
         assert program.count(before) == 1, ('provenance consumer fault anchor', before)
         script = work / 'mutant.sh'
+        FIXTURE['fixture_plan'](('provenance',))
         script.write_text(program.replace(before, after, 1))
-    result = subprocess.run(['bash', str(script)], cwd=ROOT, env=dict(os.environ, FORMULA_BOOK=str(book)),
+    FIXTURE['source_plan']()
+    FIXTURE['consumer_inputs'](dict(environment, FORMULA_BOOK=str(book)))
+    PROFILE['plan_producer'](ROOT, sources=(script,))
+    result = subprocess.run(['bash', str(script)], cwd=ROOT, env=dict(environment, FORMULA_BOOK=str(book)),
                             capture_output=True, text=True)
     output = result.stdout + result.stderr
+    FIXTURE['fixture_plan'](('provenance',))
     (work / 'consumer.log').write_text(output)
     assert result.returncode == 1 and 'formula_domain' in output and 'allocation_balance' in output \
         and 'eps_num' in output and 'contributions=hypot' in output, ('provenance consumer refusal', result.returncode, output)
@@ -226,26 +242,31 @@ PRODUCERS = (
     'return Val(k0, rnd(Fraction(vs[0].v) / Fraction(step)) * step)',
 )
 if __name__ == '__main__':
-    original = SOURCE.read_bytes()
-    contracts()
-    consumer()
-    if '--mutations' in sys.argv:
-        faults = list(FAULTS) + [('producer %d' % i, code + '.influenced(*vs, sources=(name,))',
-                                 code + '.influenced(*vs)') for i, code in enumerate(PRODUCERS, 1)]
-        for name, before, after in faults:
+    try:
+        FIXTURE['reference_plan']()
+        original = SOURCE.read_bytes()
+        contracts()
+        consumer()
+        if '--mutations' in sys.argv:
+            faults = list(FAULTS) + [('producer %d' % i, code + '.influenced(*vs, sources=(name,))',
+                                     code + '.influenced(*vs)') for i, code in enumerate(PRODUCERS, 1)]
+            for name, before, after in faults:
+                try:
+                    contracts((before, after), False)
+                except AssertionError as error:
+                    assert 'provenance' in str(error) and 'fault anchor' not in str(error), (name, 'not a body assertion red', error)
+                    print('  actual compiled provenance red:', name)
+                else:
+                    raise AssertionError(('provenance fault escaped', name))
             try:
-                contracts((before, after), False)
+                consumer(('env[token]["sources"] = val.sources', 'env[token]["sources"] = frozenset()'), False)
             except AssertionError as error:
-                assert 'provenance' in str(error) and 'fault anchor' not in str(error), (name, 'not a body assertion red', error)
-                print('  actual compiled provenance red:', name)
+                assert 'provenance consumer refusal' in str(error), ('consumer not a body assertion red', error)
+                print('  actual compiled provenance red: consumer drops binding evidence')
             else:
-                raise AssertionError(('provenance fault escaped', name))
-        try:
-            consumer(('env[token]["sources"] = val.sources', 'env[token]["sources"] = frozenset()'), False)
-        except AssertionError as error:
-            assert 'provenance consumer refusal' in str(error), ('consumer not a body assertion red', error)
-            print('  actual compiled provenance red: consumer drops binding evidence')
-        else:
-            raise AssertionError('provenance consumer fault escaped')
-        assert SOURCE.read_bytes() == original
-        print('provenance faults: %d actual body assertion reds; source unchanged' % (len(faults) + 1))
+                raise AssertionError('provenance consumer fault escaped')
+            assert SOURCE.read_bytes() == original
+            print('provenance faults: %d actual body assertion reds; source unchanged' % (len(faults) + 1))
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None

@@ -136,23 +136,27 @@ Whole0206 task/lesson retained in [part271](docs/history/window10.md#stitchcad-d
 
 Whole retained whole0211 task and lesson: [part280](docs/history/stitchcad-devnotes-part280.md).
 
-## _(2026-10-06 UTC)_ — replay fixture boundaries
+Whole retained whole0212 task and lesson: [part281](docs/history/stitchcad-devnotes-part281.md).
 
-Leaf G1-SLICE.5b.4c.h2.b.p.o.a12 preserves producing reader/writer loads and factors a pure
-binding_replay_fixture.py provider. It reuses public input tree/selector APIs; complete source,
-replacement and log plans precede every replay. The writer preflights its child before shell edits,
-refreshes edit/child/log plans and restores with source-only authority.
+## _(2026-10-06 UTC)_ — origin and provenance boundaries
 
-Watched python_binding_replay_contract.py retains original assertions/authored rows/all9 CASES.
-Python3.14/3.9 capture17 census calls/1140 writes, nine writer calls/28 modeled writes and child-failure
-restore;21 guard reds/33 physical CLI refusals/16 borrowed refusals and actual provider/D202/planner/
-D207/nested old-entry omissions discriminate. Real runs retain19 consumer/formatter/declaration
-verdicts and nine intended compiled assertion reds; all192 inputs/118Rust63 production exact.
-Logs target/replay-plan-control/control39/real/real39.log; all rc=0. Grammar/400 cadence unchanged.
+Leaf G1-SLICE.5b.4c.h2.b.p.o.a13 preserves inert library imports and pure numerical contracts;
+reference_plan() covers only actual public reference inputs. A shared pure provider adopts the public
+input planner and checks complete copies, selectors, logs and the provenance mutant before effects.
+Origin preflights both cases together. Copied reads/edits, source/selector/script dispatch and logs
+refresh their plans; compiled faults never rewrite the tracked shell.
 
-Whole0211 task/lesson/footer280 and oldest0209 ledger190 are exact78ebaa7 intervals; FILE/copy/
-public read precede retirement. Original canonical task header remains live; fixed limits unchanged.
-Promotion declined: established pure provider/public delegation/source-only restore/whole-retention rules.
+Original numerical bodies/authored data remain exact. Python3.14/3.9 watched captures exercise pure
+and CLI/borrowed calls,32 omission reds/four original gaps, independently loaded providers/six adoption
+reds,40 physical CLI/16 repeated pure refusals and four unused-output/sidebar/read-only hardlink
+positives. Actual D202 directory and planner omissions admit the same unsafe isolated fixtures.
+The copied-read observer distinguishes entry edits from selector reads; no false effect classification.
+Real1466/425 controls, thirteen/26 intended faults and copied-book runtime refusals pass0; all192
+inputs/118Rust63 production exact after each. Logs target/origin-plan-control/control39/real/real39.log.
+
+Whole0212 task/lesson/footer281 and oldest0210 ledger191 are exact7587d66 intervals; FILE/copy/prior602/
+public reads precede retirement. Source canonical .a12 header remains live; caps/grammar/400 unchanged.
+Promotion declined: existing pure-provider, public-input, actual-body and whole-retention principles.
 
 ## Retained engineering continuity
 
@@ -234,8 +238,11 @@ Whole0210 final evidence retained in [part278](docs/history/stitchcad-devnotes-p
 Whole retained whole0211 task and lesson: [part280](docs/history/stitchcad-devnotes-part280.md).
 
 | [part280](docs/history/stitchcad-devnotes-part280.md) | whole0211 task and lesson | 35 lines, 4015 bytes, sha256:915738b0… |
+Whole retained whole0212 task and lesson: [part281](docs/history/stitchcad-devnotes-part281.md).
 
-Final0212: publication45/census240/coverage9/archive28+622/ledger794+11+13/language16 all rc=0,
-target/replay-plan-*.log. Continuity602/prior600/all39 Source identities/whole280/CH190/74 closed
-headers/189 pointers/proof siblings/all192 inputs/118Rust63/normative/build/library/nav/caps exact,
-rc=0, replay-plan-continuity.log. Full CI remains due at400; no push or unobserved runner claim.
+| [part281](docs/history/stitchcad-devnotes-part281.md) | whole0212 task and lesson | 35 lines, 3985 bytes, sha256:b4748635… |
+
+Final0213: publication45/census242/coverage9/archive28+624/ledger797+11+13/language16 all rc=0;
+continuity604/prior602/all41 archive controls/whole281CH191/75 closed headers/nav/library/192 frozen/
+118Rust63/5 code5 normative/build/12open195sealed/fixed caps exact, rc=0. Source/grammar unchanged.
+Schema-header draft refused by actual census; original headers restored before final242 proof.

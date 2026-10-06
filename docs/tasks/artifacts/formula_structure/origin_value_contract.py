@@ -4,12 +4,25 @@ from fractions import Fraction
 from pathlib import Path
 import runpy
 import os
-import shutil
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-HELPER = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'))
+HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
+PROVIDER = HERE / 'origin_provenance_fixture.py'
+SIGNATURE = HERE / 'static_signature_contract.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, PROVIDER, SIGNATURE)
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+FIXTURE = runpy.run_path(str(PROVIDER))
+PROFILE = FIXTURE['PROFILE']
+HELPER = runpy.run_path(str(SIGNATURE))
+HELPER['PROFILE'] = PROFILE
 SOURCE = HELPER['SOURCE']
 ORIGINS = ('measurement', 'ease', 'parameter', 'profile', 'material', 'geometry', 'recipe', 'size', 'tolerance')
 KINDS = ('length', 'angle', 'area', 'ratio', 'count', 'boolean', 'point', 'edge')
@@ -24,6 +37,7 @@ RESERVED = {'eps_num': ('length', 1), 'eps_geo': ('length', 10), 'eps_fmt': ('le
 
 
 def contracts(replacement=None, verbose=True):
+    FIXTURE['reference_plan']()
     ns, ref = HELPER['load_reference'](replacement)
     assert ref.origins == frozenset(ORIGINS) and set(ref.reserved) == set(RESERVED)
     checks = 0
@@ -158,26 +172,24 @@ def contracts(replacement=None, verbose=True):
 
 
 def consumer():
-    book_source = ROOT / 'docs/book/src'
-    work = ROOT / 'target/formula_structure/origin_value_consumer'
+    labels = ('missing_size', 'missing_tolerance')
+    environment = FIXTURE['fixture_plan'](labels, activate=True)
     for label, expression, token, name in [
         ('missing_size', 'size_index * waist_girth', 'formula_unbound_name', 'size_index'),
         ('missing_tolerance', 'waist_girth + eps_fmt', 'formula_tolerance_unbound', 'eps_fmt'),
     ]:
-        book = work / label / 'src'
-        if book.exists():
-            assert not (book / '.git').exists(), 'origin consumer scratch is not a Git repository'
-            shutil.rmtree(book)
-        book.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copytree(book_source, book)
+        book = FIXTURE['copy_book'](label)
         examples = book / 'spec/formula-language/examples.md'
         text = examples.read_text()
         before = '`waist_girth + ease_waist`'
         assert text.count(before) == 1, 'origin actual consumer anchor changed'
         examples.write_text(text.replace(before, '`' + expression + '`', 1))
+        FIXTURE['source_plan']()
+        FIXTURE['consumer_inputs'](dict(environment, FORMULA_BOOK=str(book)))
         result = subprocess.run(['bash', str(SOURCE)], cwd=ROOT,
-                                env=dict(os.environ, FORMULA_BOOK=str(book)), capture_output=True, text=True)
+                                env=dict(environment, FORMULA_BOOK=str(book)), capture_output=True, text=True)
         output = result.stdout + result.stderr
+        FIXTURE['fixture_plan'](labels)
         (book.parent / 'consumer.log').write_text(output)
         assert result.returncode == 1 and 'examples §2 `garment_waist`: ' + token in output and name in output, (
             'origin consumer refusal', label, result.returncode, output)
@@ -201,17 +213,22 @@ FAULTS = (
     ('missing state guard bypass', 'if state not in ("known", "assumed", "preference", "derived", "unknown"):', 'if False:'),
 )
 if __name__ == '__main__':
-    original = SOURCE.read_bytes()
-    contracts()
-    consumer()
-    if '--mutations' in sys.argv:
-        for name, before, after in FAULTS:
-            try:
-                contracts((before, after), False)
-            except AssertionError as error:
-                assert any(marker in str(error) for marker in ('origin read token', 'origin read arguments', 'origin missing read accepted', 'origin read host error')), (name, 'not an actual body assertion red', error)
-                print('  actual compiled origin refusal red:', name)
-            else:
-                raise AssertionError(('origin fault escaped', name))
-        assert SOURCE.read_bytes() == original
-        print('origin value faults: %d actual body assertion reds; source unchanged' % len(FAULTS))
+    try:
+        FIXTURE['reference_plan']()
+        original = SOURCE.read_bytes()
+        contracts()
+        consumer()
+        if '--mutations' in sys.argv:
+            for name, before, after in FAULTS:
+                try:
+                    contracts((before, after), False)
+                except AssertionError as error:
+                    assert any(marker in str(error) for marker in ('origin read token', 'origin read arguments', 'origin missing read accepted', 'origin read host error')), (name, 'not an actual body assertion red', error)
+                    print('  actual compiled origin refusal red:', name)
+                else:
+                    raise AssertionError(('origin fault escaped', name))
+            assert SOURCE.read_bytes() == original
+            print('origin value faults: %d actual body assertion reds; source unchanged' % len(FAULTS))
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
