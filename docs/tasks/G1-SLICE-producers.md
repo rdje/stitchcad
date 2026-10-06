@@ -650,7 +650,7 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
 Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-complete-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11`
-  Status: `in_progress`
+  Status: `done`
   Own STITCHCAD-G1-0187: .n11 split/whole ac005 cleanup/.f.l receipts retained;target/builtin-plan-*;live/book/shared controls;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-builtin-signatures.md;docs/tasks/PLANNING.md.
   Goal: complete file-destination plans for signature/call metadata; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py;docs/tasks/artifacts/formula_structure/operator_signature_mutations.py;docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py;docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
@@ -680,10 +680,12 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.4`
-  Status: `pending`
+  Status: `done`
   Goal: call lookup complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
   Paths: docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
   Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
+  Own0190: shared/live/book/whole retention;target/call-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-call-lookup.md.
+  Own D192 call repair/family closure.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12`
   Status: `pending`
@@ -725,24 +727,23 @@ Whole authored wanted preparation/predictions/correction/verification retained i
 
 Whole authored D196 ledger-role repair retained in [part231](../history/stitchcad-devnotes-part231.md).
 
-## STITCHCAD-G1-0189 — wanted acceptance (.n11.3)
+Complete committed wanted acceptance retained in [part232](../history/stitchcad-devnotes-part232.md); canonical .n11.3 ownership remains above.
 
-- [x] REPRODUCE / ISSUE: shared controls reproduce D192; old66525 ledger7pass2fail;
-  all19 diagnostic identifies3 false D195 predictions/74 inputs exact, rc=0.
-- [x] ROOT CAUSE: native-proof.py verify attributes public consumer paths;
-  ledger-role.py prior/current/true-duplicate pinpoints D196 role selection, rc=0.
-  Thread/path/line/UTF8 column match current macros.
-- [x] FIX: wanted4 inputs/20 files/1 mutable/class0; original19/two Cargo argv AST
-  exact0. Ledger NO-DUP selects changelog roles; all-history descriptors remain.
-- [x] ADDRESSED: shared rc=0:659reds/35classifiers/50captures/256refusals;17 omissions/
-  legacy red/readonly3 links/two aliases0. Native4265/verify/artifact19889 rc=0:
-  19 faults/every body/current full5+5/74 inputs/63 Rust exact;14 skipped scoped.
-- [x] NO REGRESSION: python3 -I -B target/wanted-plan-retention-proof.py:519/prior512/
-  all56/eight windows/nav/map/examples/13open182sealed, rc=0. Publication45/coverage9 pass0; zero unowned-orphan-dead.
-  Ledger11718 terminal0:689real/11arms/13pointers; all consumed.
-- [x] LOCKSTEP: live/book/call frontier aligned; whole0188/DEV228–231/CH168/
-  D195117/D196118 preserve prior bytes/headers. Original3 predictions corrected
-  explicitly/other16 exact. Grammar/400 stay; D192 call/D156/D34 open; prior703
-  scoped185a. promotion: declined (existing evidence/whole-record/role rules).
+Whole call preparation/predictions retained in [part234](../history/stitchcad-devnotes-part234.md).
 
-Staged37994 missed invocation; corrected60531 all13 green0.
+## STITCHCAD-G1-0190 — call acceptance (.n11.4)
+
+- [x] REPRODUCE / ISSUE: shared673reds/35classifiers/legacy D192 red,rc=0;
+  old matcher admitted nonthread notes.
+- [x] ROOT CAUSE: native-proof.py verify: all18 failed sets/every body at current
+  thread/path/line/byte column,rc=0; D192 matched nonthread notes.
+- [x] FIX:2 inputs/19 files/1 mutable/class0; original18/two Cargo argv AST exact,rc=0.
+- [x] ADDRESSED: shared52captures/262refusals/13 omissions;readonly3 links/two aliases0.
+  Native25103/verify7525/artifact66554 terminal0:full5/72 frozen/current5 exact,rc=0.
+- [x] NO REGRESSION: python3 -I -B target/call-plan-retention-proof.py:524/prior519/
+  all63/eight windows/12open183sealed,rc=0;publication45/coverage9/ledger695real/
+  11arms13pointers pass0, all consumed.
+- [x] LOCKSTEP: D192119 closed; whole232–234/CH169 exact; book/live/.n12 agree,rc=0.
+  Grammar/400 stay; D156/D34 open. promotion: declined (existing plan/thread rules).
+
+Staged24737 missed ADDRESSED rc; corrected9676 all13 green0.

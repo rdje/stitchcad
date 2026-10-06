@@ -112,6 +112,15 @@ the digests afterwards.
 
 | [part168](docs/history/stitchcad-changelog-part168.md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0190 - call plans and D192 closure (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.4`)
+
+- Two inputs/19 logs/one mutable/class0; original18/two Cargo argv unchanged.
+- Shared673/35/52/262;13 omissions/legacy red/readonly3 links/two aliases pass0.
+- Native18/every full5/failed body/current macros/72 inputs/63 Rust/current5 exact0.
+- Whole0189/DEV233/CH169/authored234/D192119 retained; D192 all four verified.
+- Retention524/publication45/coverage9/ledger695real11arms13pointers pass0.
+- Book/live/next .n12 aligned; D156/D34 open; grammar/400 unchanged.
+
 ## STITCHCAD-G1-0189 - wanted plans and D192 evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.3`)
 
 - Four inputs/20 logs/one mutable/class0; original19/joint targets/full5+5 restore0.
@@ -182,13 +191,7 @@ the digests afterwards.
 - Prior481/all484 reads/12open171sealed; archive28/CLI501/pub45/coverage9/ledger9+13 pass0.
 - D34/owner rows corrected; newest8 committed refusal next; caps/Rust/grammar/400 stay.
 
-## STITCHCAD-G1-0179 - checked recipe baseline, modes and extraction (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n08.4`)
-
-- Two inputs/21 files/one mutable; class0 effects;19 original cases/count2/baseline exact.
-- Shared546 reds/35 classifiers/36 captures/204 refusals0; real19/current macros/full7 exact.
-- Two public acceptance guards; full fmt/strict Clippy/59groups703passed0; D179/D184 closed.
-- Whole statement/DEV213/CH157/D179105/D184106 retained;481 public reads/prior477/all75 exact.
-- D156/.n09 next; archive64/window8 prerequisite before growth; grammar/engine/400 stay.
+| [part169](docs/history/stitchcad-changelog-part169.md) | whole G1-0179 ledger | 7 lines, 573 bytes, sha256:df27ee3b… |
 
 
 

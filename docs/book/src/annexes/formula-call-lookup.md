@@ -103,10 +103,37 @@ Five public contracts independently enumerate the ordinary calls, envelope alias
 reserved names, source order, alternatives, tags, privacy and borrowed query identity. Two negative
 Rustdoc examples verify private construction and refusal lifetimes. Actual compiled source faults
 must fail body assertions and restore every source byte.
-Its direct mutation entry guards implementation/test/output paths before reads or writes, preserves
-prepared child stores and rebuilds the full focused target after restoration. Eighteen native faults
-fail at assertion sites in the guarded current test source; custom messages pass while labelled
-expect/compiler/test-name noise refuses. Standing controls exercise actual classifier/site faults.
+The direct mutation entry resolves its selected mode and all paths before source reads or
+mutation. Ordinary mode declares two inputs (calls.rs and the current public test), one mutable
+implementation source, and nineteen logs: fault-1.log through fault-18.log plus restored.log.
+The test has no compile-time grammar include. Existing directory and store guards remain active;
+native children inherit prepared local stores, the selected channel and unrelated environment.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_mutations.py --classifier-only
+python3 -I -B docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
+```
+
+Classifier-only mode checks all eighteen unique fault anchors and current test macros. It declares
+zero output files and zero mutable sources, and launches no native child. Directory/store
+preconditions still run. Read-only source hard links and unused log aliases therefore grant no file
+write authority. Ordinary mode refuses a hard-linked mutable source, aliased first/restored log,
+or missing current test before source reads, mutation, logging or child dispatch.
+
+A qualifying failed-body thread panic must identify a current guarded assertion macro by exact
+path, line and UTF-8 byte column. Custom assertion messages remain valid; nonthread compiler notes,
+invalid UTF-8 paths, expect panics and test-name noise refuse. Independent controls exercise both
+modes, thirteen plan/effect omissions and the former permissive predicate; six actual copied-entry
+refusals watch the physical boundary. A separate read-only entry copy proves three source hard
+links and two unused log aliases preserve the victim, inputs and environment without file/native effects.
+
+The native entry retains all eighteen original faults and both Cargo argument lists. Each fault
+runs the full five-test public target; failed bodies must reach current assertion sites. Exact
+source restoration precedes the final full-target rebuild, including the exception path. The
+native verifier checks all failed-body sets against predictions authored before replay, freezes
+seventy-two inputs including all sixty-three production Rust files, and selects the current
+five-test executable through Cargo artifact metadata. These scoped checks do not establish
+expression execution, geometry or production approval.
 
 The independent reference producer runs 166 actual cases, with exact complete payloads and
 argument, namespace, value and execution traps. Twelve actual compiled counterfactuals prove

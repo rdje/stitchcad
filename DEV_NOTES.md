@@ -14,17 +14,18 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-## _(2026-10-06 UTC)_ — wanted plans and public consumer attribution
+## _(2026-10-06 UTC)_ — call plans and complete D192 closure
 
-- Four inputs/20 logs/one mutable/class0; original19/joint Cargo order preserved. Shared659/35/50/256;17 omissions/legacy D192 red/readonly3 links pass0.
-- Native19/full5+5/every executed failed body/current macros/74 inputs/63 Rust exact0; current operator585ab408/builtin4034e067 both pass5.
-- D195: original predictions retained; precisely3 false I attributions corrected after full19 diagnostic. Other16 exact;14 Cargo-skipped targets not credited.
-- Whole0188/DEV229/CH168/authored230/defects117 retained before retirement. D192 call next; D156/D34 open; grammar/400 unchanged.
-- D196 ledger-role repair: actual prior/current/true-duplicate0; real689/11arms/13pointers pass0. Retention519/publication45/coverage9 pass0; sealed bytes exact.
-- Promotion declined: existing evidence granularity and whole-record rules.
+- Two inputs/19 logs/one mutable/class0; original18/two Cargo argv AST identities exact.
+- Shared673/35/52/262 pass0;13 omissions/legacy D192 red/readonly3 links/two aliases pass0.
+- Native18/full5 in every case/all failed bodies/current macros/72 inputs/63 Rust exact0.
+- Current Cargo-selected call5636c6e5465e555c SHA58de145b passes full5; exact source restoration precedes rebuild.
+- Whole0189/DEV233/CH169/authored234/D192119 retained before retirement; D192 all four verified.
+- D156/D34 remain open; grammar/400 unchanged; next expression/reduction/input plans.
+- Retention524/prior519/all63/eight windows/publication45/coverage9/ledger695real11arms13pointers terminal0 consumed.
+- Promotion declined: existing complete-plan/thread/whole-record rules.
 
-Whole operator acceptance: [part228](docs/history/stitchcad-devnotes-part228.md).
-Whole authored wanted proof/correction: [part230](docs/history/stitchcad-devnotes-part230.md).
+Whole wanted dated lesson and links retained in [part233](docs/history/stitchcad-devnotes-part233.md).
 
 Whole operator and builtin dated lessons retained in [part229](docs/history/stitchcad-devnotes-part229.md).
 

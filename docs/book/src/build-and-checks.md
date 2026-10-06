@@ -450,8 +450,8 @@ Wanted plans4 inputs/20 logs/1 mutable, classifier0; original19/joint target ord
 restore. Both current test sources and compile-time grammar are guarded:
 [wanted plans and proof](annexes/formula-wanted-signatures.md#verification-and-remaining-proof).
 
-Call lookup guards current implementation/tests/output and assertion sites. Its original18/full5
-restore with prepared stores and classifier-only behavior; complete mode plans remain next.
+Call lookup plans2 inputs/19 logs/1 mutable, classifier0; original18/full5 restore:
+[mode plans and evidence](annexes/formula-call-lookup.md#verification-and-remaining-boundary).
 
 Changelog uniqueness checks changelog archives only; retained task/defect receipts may share
 work-unit headings. Role and duplicate controls watch that boundary;
@@ -490,7 +490,7 @@ The real consumer separately passes26,723 shared cases,263 public/reference phas
 reference faults; exact input bytes and the current public compiled artifact are verified afterward.
 
 Standing shared controls cover31 runtime cases,24 output-file controls,26 physical mutable-path
-controls and659 actual body faults, with35 calibrated failed-body classifiers,
+controls and673 actual body faults, with35 calibrated failed-body classifiers,
 including thirty-seven real
 entry captures at their first write. The membership native run with caller exports absent observes seven compiled
 assertion failures, then restores exact source bytes and rebuilds the current artifact with all
