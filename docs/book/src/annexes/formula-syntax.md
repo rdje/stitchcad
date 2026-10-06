@@ -311,6 +311,21 @@ These curated book controls can check their exact stated boundaries. They do not
 evaluator, cross-platform numerical signoff, command API or release certificate; those remain
 separate product obligations.
 
+Arithmetic/angle pure entries validate their script, TSV, public loaders and reference chapters
+before loading the evaluator. Mutation entries plan the mutable source, child and every log before
+activation, then recheck edits, children and outputs. Source-only restoration remains possible
+when a log becomes unsafe after a child runs; a refusal exits2. Pure inspection preserves caller
+arguments and environment. Boundary controls include actual guard omissions, borrowed-root
+refusals and two late-log restorations; numerical suites run exclusively:
+
+```bash
+python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts/ci_environment/python_arithmetic_angle_contract.py
+python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts/ci_environment/python_arithmetic_angle_contract.py --real
+```
+
+The real mode retains 162 arithmetic and 72 angle controls, nine/seven genuine assertion reds,
+and the 42-row independent angle oracle; every scoped input remains byte-identical on Python 3.9/3.14.
+
 ## Reference angle conversion and direction controls
 
 Reference D85/D86/D87 are repaired. Trigonometric input and arc_length convert internal microdegrees

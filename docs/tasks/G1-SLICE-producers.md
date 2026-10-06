@@ -216,23 +216,28 @@ Whole0214 verification retained in [part283](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a15`
   Status: `done`
-  Own0215: rational pair, actual-body/physical/real controls and runner/census/docs;
-  whole0214 task/lesson and oldest0213 ledger retention before receipt growth.
+  Own0215: complete scope and verification in part284.
   Goal: Rational library and fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: verified; complete scope retained in part284.
 
-- [x] REPRODUCE / ISSUE: python_rational_contract.py --before executes actual0d8ef5a bodies: unguarded loader/mkdir stop at independent observers, rc=0, target/rational-plan-before.log. Full original numeric suffix/all12 CASES remain exact.
-- [x] ROOT CAUSE: standalone load/workspace effects precede complete sources/files/mutable authority. Actual-body capture locates the missing checks; complete pair/public loaders/reference contract/book reviewed. python_rational_contract.py passes11 reds/19 physical fixtures, rc=0, control/control39.log.
-- [x] FIX: pure input plans; complete producing source/log plan before activation; fresh edit/child/log and source-only restore checks. Actual12 children/37 writes, two pure positives and one late-log exact restore pass, rc=0, target/rational-plan-control/control39.log.
-- [x] ADDRESSED: python_rational_contract.py --real on Python3.14/3.9 retains61 Fraction checks/twelve genuine assertion reds; all12 scoped inputs exact after each child, rc=0, target/rational-plan-real/real39.log. Original faults and arguments unchanged; numerical reference scope only.
-- [x] NO REGRESSION: publication45/census244/coverage9/archive28+629/ledger11+13/language16 pass0, target/rational-plan-{publication,census,coverage,archive,ledger,language}.log. --continuity on both Python versions proves whole283/CH194/prior immutable/reference bytes/canonical task graph, rc=0, continuity/continuity39.log.
-- [x] LOCKSTEP: book contract remains public through original anchor/new literal section; relative navigation adapted. Live/MEMORY/ledgers/frontier route .a16; runner watches control. --continuity passes0; D34 index label corrected from665b973. Caps/grammar/400 unchanged; promotion: declined (existing pure/mutable/restore/retention rules). Commit: STITCHCAD-G1-0215.
-  Final staged gate13 green, rc=0, target/rational-plan-staged-gate.log.
+Whole0215 verification retained in [part284](../history/stitchcad-devnotes-part284.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a16`
-  Status: `pending`
+  Status: `done`
+  Own0216: arithmetic/angle quartet, TSV/public-loader plans, actual/physical/real controls;
+  whole0215 task/lesson and oldest handoff ledger retention; book/runner/census/live sync.
   Goal: Arithmetic and angle libraries/fixtures; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+
+- [x] REPRODUCE / ISSUE: python_arithmetic_angle_contract.py --before executes actual 53b917e quartet; independent loader/mkdir observers expose four gaps, rc=0, target/numeric-plan-before.log. Complete public contracts/book/ledgers reviewed.
+- [x] ROOT CAUSE: loaders/effects precede complete source/file/mutable plans. Actual compiled bodies locate omissions; default control passes 22 reds / 38 physical fixtures, rc=0, target/numeric-plan-controls.log and controls-39.log.
+- [x] FIX: pure bootstrap/reference plans; complete source/log/mutable activation and fresh edit/child/log checks; source-only restores. Actual 9/7 children,28/22 writes, four pure positives/two late restores pass, rc=0, in controls logs.
+- [x] ADDRESSED: --real on Python 3.14/3.9 retains 162/72 controls, nine/seven genuine assertion reds and 42 oracle rows; all 17 inputs exact after each child, rc=0, target/numeric-plan-real-{314,39}.log. Original suffix/CASES/TSVs unchanged.
+- [x] NO REGRESSION: census245/publication45/coverage9/language16/archive28+631/ledger11+13 pass, rc=0, target/numeric-plan-{census,publication,coverage,language,archive,ledger}.log. --continuity passes0 on both versions; focused checks only, numerical/product scope unchanged.
+- [x] LOCKSTEP: syntax/book/live/runner/census/ledgers/MEMORY route .a17. --continuity on both versions proves whole284/195/prior immutable/reference bytes/task IDs exact, rc=0, target/numeric-plan-continuity{,39}.log. Caps/grammar/400 unchanged; promotion declined (existing pure/mutable/restore/retention rules). Commit STITCHCAD-G1-0216.
+
+  Initial gate refused absent explicit NO REGRESSION rc; corrected evidence.
+  Final staged gate13 green, rc=0, target/numeric-plan-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a17`
   Status: `pending`

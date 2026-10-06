@@ -2,8 +2,27 @@
 from fractions import Fraction
 from pathlib import Path
 import runpy
+import sys
+
 ROOT = Path(__file__).resolve().parents[4]
-namespace, reference = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/formula_input.py'))['load_arithmetic_context']()
+CONTEXT_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/formula_input.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, CONTEXT_SOURCE,
+               ROOT / 'docs/tasks/artifacts/formula_structure/formula_structure.py',
+               ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py',
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh',
+               ROOT / 'docs/tasks/artifacts/formula_structure/arithmetic_cases.tsv')
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+    CONTEXT = runpy.run_path(str(CONTEXT_SOURCE))
+    CONTEXT['PROFILE'] = PROFILE
+    REFERENCE_INPUTS = tuple(dict.fromkeys((*BOOT_INPUTS, *CONTEXT['REFERENCE_INPUTS'])))
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+    namespace, reference = CONTEXT['load_arithmetic_context']()
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
 checks = 0
 
 def value(source, kind, expected, env=None):

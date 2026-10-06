@@ -3,17 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — rational producer boundaries
+## _(2026-10-06 UTC)_ — arithmetic and angle producer boundaries
 
-Leaf .a15 preserves the61 Fraction checks/all12 CASES. Pure loads validate actual inputs; writers
-declare complete files/mutable sources and refresh edits, children and logs. Source-only restoration
-survives a late unsafe log. Watched actual bodies expose both original gaps and11 omission reds;
-19 physical fixtures include two pure positives and one exact late restoration. Python3.9/3.14
-real suites retain61 checks/twelve reds and all12 input bytes. Whole0214 task/lesson283 and oldest
-0213 ledger194 retain exact0d8ef5a intervals. The rational contract remains public through its
-original syntax anchor and the literal annex; relative navigation is adapted. D34's stale SPINE
-index label now agrees with committed665b973; the mechanical repair remains PLANNING.5.
-Promotion declined: established pure-input/mutable/source-only-restore/whole-retention principles.
+Leaf .a16 preserves both TSVs, all 162/72 numerical controls and nine/seven fault cases.
+Pure entries plan bootstrap/transitive inputs before loads; mutation entries declare every log,
+mutable source and child input before activation, then recheck each write/dispatch. Source-only
+restoration survives late unsafe logs. Actual bodies expose 22 reds including four original
+gaps; 38 physical fixtures retain four pure positives/two exact late restores. Python 3.9/3.14
+real suites plus42-row independent angle oracle preserve all 17 scoped inputs after each child.
+Whole0215 task/lesson284 and oldest handoff ledger195 retain exact53b917e intervals/public reads.
+Promotion declined: established pure/mutable/source-only-restore/whole-retention rules.
 
 Whole0210 task/lesson retained in [part278](docs/history/stitchcad-devnotes-part278.md).
 
@@ -247,3 +246,5 @@ Whole0213 task and lesson retained in [part282](docs/history/stitchcad-devnotes-
 | [part282](docs/history/stitchcad-devnotes-part282.md) | whole0213 task and lesson | 39 lines, 4311 bytes, sha256:e20979fe… |
 
 | [part283](docs/history/stitchcad-devnotes-part283.md) | whole0214 task and lesson | 29 lines, 3518 bytes, sha256:84a862d1… |
+
+| [part284](docs/history/stitchcad-devnotes-part284.md) | whole0215 task and lesson | 26 lines, 3263 bytes, sha256:b90a4ab2… |
