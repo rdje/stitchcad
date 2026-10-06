@@ -19,6 +19,7 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_origin_provenanc
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_literal_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_rational_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_arithmetic_angle_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_scalar_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_payload_library_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py" --native

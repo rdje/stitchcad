@@ -224,25 +224,27 @@ Whole0215 verification retained in [part284](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a16`
   Status: `done`
-  Own0216: arithmetic/angle quartet, TSV/public-loader plans, actual/physical/real controls;
-  whole0215 task/lesson and oldest handoff ledger retention; book/runner/census/live sync.
+  Own0216: complete scope and verification in part285.
   Goal: Arithmetic and angle libraries/fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: verified; complete scope retained in part285.
 
-- [x] REPRODUCE / ISSUE: python_arithmetic_angle_contract.py --before executes actual 53b917e quartet; independent loader/mkdir observers expose four gaps, rc=0, target/numeric-plan-before.log. Complete public contracts/book/ledgers reviewed.
-- [x] ROOT CAUSE: loaders/effects precede complete source/file/mutable plans. Actual compiled bodies locate omissions; default control passes 22 reds / 38 physical fixtures, rc=0, target/numeric-plan-controls.log and controls-39.log.
-- [x] FIX: pure bootstrap/reference plans; complete source/log/mutable activation and fresh edit/child/log checks; source-only restores. Actual 9/7 children,28/22 writes, four pure positives/two late restores pass, rc=0, in controls logs.
-- [x] ADDRESSED: --real on Python 3.14/3.9 retains 162/72 controls, nine/seven genuine assertion reds and 42 oracle rows; all 17 inputs exact after each child, rc=0, target/numeric-plan-real-{314,39}.log. Original suffix/CASES/TSVs unchanged.
-- [x] NO REGRESSION: census245/publication45/coverage9/language16/archive28+631/ledger11+13 pass, rc=0, target/numeric-plan-{census,publication,coverage,language,archive,ledger}.log. --continuity passes0 on both versions; focused checks only, numerical/product scope unchanged.
-- [x] LOCKSTEP: syntax/book/live/runner/census/ledgers/MEMORY route .a17. --continuity on both versions proves whole284/195/prior immutable/reference bytes/task IDs exact, rc=0, target/numeric-plan-continuity{,39}.log. Caps/grammar/400 unchanged; promotion declined (existing pure/mutable/restore/retention rules). Commit STITCHCAD-G1-0216.
-
-  Initial gate refused absent explicit NO REGRESSION rc; corrected evidence.
-  Final staged gate13 green, rc=0, target/numeric-plan-staged-gate.log.
+Whole0216 verification retained in [part285](../history/stitchcad-devnotes-part285.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a17`
-  Status: `pending`
+  Status: `done`
+  Own0217: scalar pair/new pure copied-book provider and actual/physical/real controls;
+  complete nested files/two mutable sources; whole0216/oldest0214 retention and book/ledger sync.
   Goal: Scalar fixtures; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+
+- [x] REPRODUCE / ISSUE: python_scalar_fixture_contract.py --before runs actual da61ee1 pair; loader/mkdir observers expose two gaps without effects, rc=0, target/scalar-plan-before.log. Public contracts/book/two originals reviewed.
+- [x] ROOT CAUSE: setup/copy/writer effects lack complete fresh plans. Actual-body control locates omissions; default on Python 3.9/3.14 passes 21 reds/31 physical refusals/16 repeated borrowed refusals, rc=0, target/scalar-plan-controls{,39}.log.
+- [x] FIX: pure provider, complete copied files/nested child destinations/two mutable originals and fresh delete/copy/read/edit/child/log checks. Capture 67 entry writes/11 children/35 writer writes; injected child failure restores both, rc=0, controls logs. Inline copied read/write split for fresh edit check.
+- [x] ADDRESSED: --real on Python 3.14/3.9 retains 57 original controls/eleven genuine assertion reds; all 73 inputs exact after each child, rc=0, target/scalar-plan-real{,39}.log. Two late-log coupling reds/greens and three actual provider-adoption reds pass0 in controls logs; assertions/functions/CASES exact.
+- [x] NO REGRESSION: census247/publication45/coverage9/language16/archive28+633/ledger11+13 pass, rc=0, target/scalar-plan-{census,publication,coverage,language,archive,ledger}.log. Focused scope only; original numerical meaning/product frontier unchanged.
+- [x] LOCKSTEP: original scalar anchor routes full literal-annex contract; book/live/runner/three ledgers/MEMORY route .a18. --continuity proves whole285/196/public reads/prior immutable/reference bytes/task graph exact on both Python versions, rc=0, target/scalar-plan-continuity{,39}.log. Caps/grammar/400 unchanged; promotion: declined (existing complete copied/mutable/restore rules). Commit STITCHCAD-G1-0217.
+
+  Final staged gate13 green, rc=0, target/scalar-plan-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a18`
   Status: `pending`

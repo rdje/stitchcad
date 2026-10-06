@@ -3,16 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — arithmetic and angle producer boundaries
+## _(2026-10-06 UTC)_ — complete scalar fixture plans
 
-Leaf .a16 preserves both TSVs, all 162/72 numerical controls and nine/seven fault cases.
-Pure entries plan bootstrap/transitive inputs before loads; mutation entries declare every log,
-mutable source and child input before activation, then recheck each write/dispatch. Source-only
-restoration survives late unsafe logs. Actual bodies expose 22 reds including four original
-gaps; 38 physical fixtures retain four pure positives/two exact late restores. Python 3.9/3.14
-real suites plus42-row independent angle oracle preserve all 17 scoped inputs after each child.
-Whole0215 task/lesson284 and oldest handoff ledger195 retain exact53b917e intervals/public reads.
-Promotion declined: established pure/mutable/source-only-restore/whole-retention rules.
+Leaf .a17 preserves all 57 Fraction/domain controls and eleven faults. A pure provider walks
+only inspected book directories and declares every copied file before activation; unexpected
+old entries refuse before deletion. Fresh copied read/edit and delete/copy plans precede effects.
+The writer includes nested destinations and both mutable originals. Source-only restores keep
+the shell and quiet loader exact after unsafe logs. Actual bodies verify 21 omission reds/two
+original gaps, three independently loaded provider identities, 31 physical refusals and 16 repeated
+borrowed refusals. Two actual late-log coupling reds/greens cover each mutable original. The
+observer required a fresh check between the second inline read and write; the edit now separates
+them. Both Python versions retain 57 real controls/eleven assertion reds and all 73 input bytes.
+Whole0216 task/lesson285 and oldest0214 ledger196 retain exact da61ee1 intervals/public reads.
+Promotion declined: established complete copied-file/mutable/source-only-restoration principles.
 
 Whole0210 task/lesson retained in [part278](docs/history/stitchcad-devnotes-part278.md).
 
@@ -248,3 +251,5 @@ Whole0213 task and lesson retained in [part282](docs/history/stitchcad-devnotes-
 | [part283](docs/history/stitchcad-devnotes-part283.md) | whole0214 task and lesson | 29 lines, 3518 bytes, sha256:84a862d1… |
 
 | [part284](docs/history/stitchcad-devnotes-part284.md) | whole0215 task and lesson | 26 lines, 3263 bytes, sha256:b90a4ab2… |
+
+| [part285](docs/history/stitchcad-devnotes-part285.md) | whole0216 task and lesson | 27 lines, 3040 bytes, sha256:b7512a8c… |

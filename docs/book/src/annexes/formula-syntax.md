@@ -373,41 +373,8 @@ retain the explicit Rust marker, normative-part refusals and independent positiv
 
 ## Reference scalar-domain boundaries
 
-D83 length and area results now obey the signed limits from the units chapter; count results never
-become negative. The reference reads those declarations rather than copying numeric constants.
-Reduced rational width is checked first. Canonical literals check their rounded input value even in
-untaken branches; completed expression values check their exact fraction before binding rounding.
-For example, `1000000000.4 um` rounds to a valid endpoint at input, but
-`1000000000 um + 1 um / 10` refuses before a binding can hide its excess. A count expression `0 - 1`
-also refuses, while an exact nonnegative count fraction can survive until its binding round.
-
-Every numeric name, operator and call result enters the same scalar boundary, including selectors
-and implicit tolerance reads. Refusals name the actual operation, kind, signed measured fraction and
-inclusive bounds. A lazy branch's arithmetic does not run, but its literals still canonicalize.
-Opaque point/edge references are not scalar numbers; selecting their numeric contents checks those
-returned values. This is the curated reference's limited geometry model, not geometric signoff.
-
-```bash
-bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
-bash docs/tasks/artifacts/formula_structure/run_scalar_mutations.sh
-```
-
-Fifty-seven independent Fraction/domain controls cover endpoints, fractional excess, signs,
-canonical half-quantum boundaries, calls/selectors/tolerances, lazy branches, declared-bound changes
-and quiet shared setup. Eleven actual scalar/context mutations require assertion reds and exact
-restoration; run alone. Existing twelve rational, six literal, nine arithmetic, seven angular and
-five inline-context mutation controls also pass. Width fixtures that used invalid huge lengths now
-use unrestricted kinds or tiny valid fractions, preserving their sixty-one width controls.
-
-D94 separates shared table-driven setup from arithmetic assertions: loading scalar, rational or
-angular context no longer executes another family's tests. The quiet-load control and mutation
-verify this boundary. Shared setup is not an independent numeric oracle; each family's explicit
-expected values/refusals remain independently authored.
-
-D83 binding/literal controls and completed scoped review follow; D84 signed-angle
-verification is reviewed below. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
-evaluation, real geometry, command/API/MCP and production release remain separate work.
-
+The [complete scalar-domain contract and fixture plans](formula-literals.md#reference-scalar-domain-boundaries)
+retain the 57 Fraction/domain controls, quiet setup and eleven actual faults.
 
 ## Reference numeric binding storage controls
 

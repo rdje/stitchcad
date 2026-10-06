@@ -112,6 +112,10 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0217 — scalar fixture plans
+
+.a17: complete copied files/two originals; 57 controls/11 real reds on Python 3.9/3.14; bytes exact.
+
 ## STITCHCAD-G1-0216 — arithmetic/angle plans
 
 .a16:162/72 controls,9/7 real reds; Python 3.9/3.14; exact restoration.
@@ -119,12 +123,6 @@ the digests afterwards.
 ## STITCHCAD-G1-0215 — rational producer plans
 
 .a15: guarded sources/logs;61 checks/12 reds on Python3.9/3.14; bytes exact.
-
-## STITCHCAD-G1-0214 — literal producer plans
-
-Leaf .5b.4c.h2.b.p.o.a14 guards pure literal loads and mutable-source/log plans.
-Python3.9/3.14:361/146 checks, six/twelve real reds; late-log restore verified.
-Whole0213/oldest0212 retained; grammar unchanged; rational next.
 
 Whole retained whole0210 ledger: [part191](docs/history/stitchcad-changelog-part191.md).
 
@@ -352,3 +350,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part194](docs/history/stitchcad-changelog-part194.md) | whole0213 ledger | 4 lines, 237 bytes, sha256:6a806fd0… |
 
 | [part195](docs/history/stitchcad-changelog-part195.md) | wholeSPINE.23r ledger | 4 lines, 235 bytes, sha256:b5fbaf01… |
+
+| [part196](docs/history/stitchcad-changelog-part196.md) | whole0214 ledger | 5 lines, 275 bytes, sha256:a71a4233… |

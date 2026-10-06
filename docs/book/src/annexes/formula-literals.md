@@ -536,3 +536,56 @@ Run the mutation command exclusively. `python_rational_contract.py` in
 its `--real` mode separately runs both genuine suites and verifies every scoped input after each.
 The original61 checks and twelve faults retain their numerical meaning; production evaluation and
 the remaining D156 producer audit stay pending.
+
+## Reference scalar-domain boundaries
+
+D83 length and area results now obey the signed limits from the units chapter; count results never
+become negative. The reference reads those declarations rather than copying numeric constants.
+Reduced rational width is checked first. Canonical literals check their rounded input value even in
+untaken branches; completed expression values check their exact fraction before binding rounding.
+For example, `1000000000.4 um` rounds to a valid endpoint at input, but
+`1000000000 um + 1 um / 10` refuses before a binding can hide its excess. A count expression `0 - 1`
+also refuses, while an exact nonnegative count fraction can survive until its binding round.
+
+Every numeric name, operator and call result enters the same scalar boundary, including selectors
+and implicit tolerance reads. Refusals name the actual operation, kind, signed measured fraction and
+inclusive bounds. A lazy branch's arithmetic does not run, but its literals still canonicalize.
+Opaque point/edge references are not scalar numbers; selecting their numeric contents checks those
+returned values. This is the curated reference's limited geometry model, not geometric signoff.
+
+```bash
+bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
+bash docs/tasks/artifacts/formula_structure/run_scalar_mutations.sh
+```
+
+Fifty-seven independent Fraction/domain controls cover endpoints, fractional excess, signs,
+canonical half-quantum boundaries, calls/selectors/tolerances, lazy branches, declared-bound changes
+and quiet shared setup. Eleven actual scalar/context mutations require assertion reds and exact
+restoration; run alone. Existing twelve rational, six literal, nine arithmetic, seven angular and
+five inline-context mutation controls also pass. Width fixtures that used invalid huge lengths now
+use unrestricted kinds or tiny valid fractions, preserving their sixty-one width controls.
+
+D94 separates shared table-driven setup from arithmetic assertions: loading scalar, rational or
+angular context no longer executes another family's tests. The quiet-load control and mutation
+verify this boundary. Shared setup is not an independent numeric oracle; each family's explicit
+expected values/refusals remain independently authored.
+
+The syntax annex retains [binding/literal controls and the complete review](formula-syntax.md#complete-reference-numeric-boundary-review),
+including signed-angle verification. No new magnitude limit is added to exact ratio/angle results by this scalar slice. Product
+evaluation, real geometry, command/API/MCP and production release remain separate work.
+
+The scalar entry plans the entire book copy before activation. Every source and output file is checked; links, hard-linked outputs, nested repositories
+and unexpected old fixture entries refuse before deletion. It refreshes the plan before deleting or
+copying the fixture and before copied reads and edits. The mutation entry declares all child-copy destinations, eleven logs and both mutable originals
+before reading or editing them. It refreshes edit/child/log plans and preserves the prepared child
+environment. Restoration checks each original alone, so an unsafe log cannot strand either the
+shell reference or quiet loader. Caller arguments, environment and unused selectors are preserved.
+
+```bash
+python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts/ci_environment/python_scalar_fixture_contract.py
+python3 -I -B scripts/local_environment.py -- python3 -I -B docs/tasks/artifacts/ci_environment/python_scalar_fixture_contract.py --real
+```
+
+The first command watches actual bodies and physical refusals. Run real mode exclusively: it keeps
+all 57 controls, eleven genuine assertion reds and every scoped input byte on Python 3.9/3.14.
+Production evaluation and the D156 producer audit continue.
