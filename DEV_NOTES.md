@@ -3,6 +3,59 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-06 UTC)_ — structural and canonical inventory fixture plans
+
+The four original entries lacked complete producing/reference boundaries: structural imports and
+borrowed calls loaded inputs without plans, while both mutation CLIs could read/create fixtures first.
+The watched python_structure_fixture_contract.py compares original AST bodies against8d1721d and
+captures actual entry bodies; four old gaps fail independent checks. Grammar and all118 Rust sources
+stay exact. Existing D156 remains open for the remaining producers; this group closes only .a08.
+
+Structure now validates BOOT4/REF9 without effects. Whole-book and effective-selector plans inspect
+all65 files, both replacement trees/logs and old entries before activation; selected file/directory
+aliases refuse before deletion. Complete copies are rechecked, and prepared stores/relative selectors
+reach the shell unchanged. Pure contracts/--contracts-only create no fixtures. Inventory validates
+BOOT6/REF13 before its input provider and each direct read, sharing the provider’s Refusal identity.
+Both writers are inert on import, plan10/14 inputs/four logs/one writable source, and freshly validate
+source writes, children and logs. Restoration guards are source-only on both paths (D207).
+
+Control calibration caught an uncommitted instrumentation error: global plan counts let nested
+provider validations refresh an inventory caller’s stale plan. target/struct-plan-fresh-trace.log
+pinpoints the missing grammar guard: inventory consumed2, nested structure plans raised total4.
+Per-caller generations now discriminate all four inventory omissions. This was a draft control error,
+not a shipped producer defect. A draft syntax paragraph exceeded its existing bound before writing;
+the shorter linked paragraph keeps the fixed ceiling. Excluded drafts provide no signoff evidence.
+
+Current Python3.14/OS3.9 control logs: struct-plan-control/control39, rc=0. Seventeen positive captures,
+30 actual guard reds/four original gaps; two copies/134 writes/two intercepted children, each writer
+13 modeled writes/four children, and child-failure source restoration. Fourteen physical refusals,
+pure unused-sidebar positive,26 CLI/eight repeated borrowed refusals, actual directory guard/planner
+omissions. Both late-log faults use real mirrored source writes: full restoration plans fail source
+byte assertions; intact source-only plans restore, retaining CLI2. Mirrors/actual inputs exact.
+
+Real exclusive runs: target/struct-plan-real/real39.log, rc=0. Original structure16/two copied refusals,
+four actual structural assertion reds; inventory7 roles/10 symbols/2 calls/6 authored bytes/four actual
+byte-assertion reds. Terminal frames checked against original assertion sites; no unrelated refusal
+or SyntaxError substitutes for a red. Input130/three copied refusals/nine original reds and eleven
+numerical/shape/canonical consumers pass; all210 frozen inputs/118Rust63 production exact after each
+child. Diagnostics stay observations; captured dispatch is separate from real reference evidence.
+
+Whole0206 task/lesson271, Ease receipt272, original serializer checklist273 and whole0200/0199 ledger186
+are exact8d intervals: complete FILE, fresh single-inode copy, prior586/all77 physical controls and
+public retrieval before retirement. Current590; all old records, three proof siblings, Source headers,
+original navigation and fixed caps remain separately checked. No sealed record is edited.
+
+Focused closure: publication45; census9 assertions/9 refusals/4 body reds,234 Git paths and125 file
+rows; coverage9; archive28 plus609 CLI controls/all590 reads; ledger778 real verdicts/11 arms plus
+13 independent pointers. All terminal rc=0 in target/struct-plan-{publication,census,coverage,archive,
+ledger,census-cli,continuity}.log. Continuity preserves prior586/all77 physical controls,69 original
+closed headers,185 CH pointers, navigation11675/four routes, three proof siblings and current library.
+Collection pressure62/21787L/1596651 logicalB/770742 residentB; fixed caps unchanged. Final staged
+and commit-hook verdicts follow the same13-doctrine workflow; no push/full Rust claim.
+
+Promotion declined: existing public-boundary, calibrated actual-body, source-only restoration and
+whole-record retention rules suffice. This leaf adds watched controls and applies those rules.
+
 Whole0205 task/lesson/scope retained in [part270](docs/history/stitchcad-devnotes-part270.md).
 
 Whole0204 task/lesson/scope retained in [part269](docs/history/stitchcad-devnotes-part269.md).
@@ -124,62 +177,7 @@ Normalization/assertion/recipe lessons retained in [part187](docs/history/window
 Older formula and producer lessons retained in [part186](docs/history/window7.md#stitchcad-devnotes-part186md).
 
 
-## _(2026-10-06 UTC)_ — original input-context and fixture plans
-
-Focused final checks: publication45/census9+9+4/effects67/29/files124/67/native37,
-coverage9/archive28+CLI605/ledger11+13 (actual773 verdicts)/census233 paths12290 AST calls,
-68 heredocs2649 embedded calls pass0. Continuity all586/prior583/all74 physical identities,
-three proof siblings,68 Source headers67live1retained,184 pointers,11675B navigation/four routes,
-all203 inputs/118Rust63production/grammar/current library/map/caps/12open194sealed exact, rc0.
-Final aggregation target/input-plan-signoff.log, rc0. No full Rust or unobserved remote verdict.
-
-
-Scope: .a07 owns formula_input.py, formula_input_mutations.py and literal_diagnostic.py, plus
-its watched actual control. Complete contexts, callers, source/copy/child contracts and relevant
-syntax/signature book sections reviewed first. Five bootstrap/ten reference inputs precede pure
-context delegation; the arithmetic entry rechecks before delegating. Diagnostic6/11 plans share
-its provider Refusal. Original context/130 assertions/three input faults/nine mutation cases and
-literal observation AST bodies remain exact after removing only the declared guards/adapters.
-
-Producing input calls plan the whole65-file book, three complete copies and three logs before
-activation. Each delete/copy/edited-input/child boundary is rechecked; effective lexical selectors,
-parts directory and source/output aliases are checked before replacement. Original shell argv,
-caller selectors and unrelated/prepared environment stay. Writer11 inputs/nine logs/one writable
-shell are validated before source reads or creation, with fresh plans before every write, child,
-log and restoration. Its CLI retains all nine faults; import now performs no fixture execution.
-
-Actual control13 captures/21 guard reds plus three original unguarded-entry reds pass Python3.14
-and OS Python3.9. Fourteen filesystem refusals/one pure unused-sidebar positive,19 actual CLI and
-eight borrowed context refusals, plus directory-alias and real planner-disable admissions pass.
-Child failure restores modeled source bytes and borrowed argv/environment; dispatch interception
-is not numerical proof. A draft3.9 calibration reached the first unplanned read because pathlib's
-bound mkdir accessor bypassed the os.mkdir hook. The control now intercepts both actual APIs;
-target/input-plan-control-before39.log is excluded. The earlier child-source omission calibration
-also admitted a stale pre-edit copy plan; the checkpoint now begins after each actual example edit.
-
-Separate exclusive real runs on both interpreters:130 assertions/three named chapter refusals,
-nine actual source assertion reds with terminal input-assertion sites and exact restoration. Literal
-observations remain observations. Real consumers: literal60/361, arithmetic24/100/162, angle42/72,
-rational61, canonical literal146, inventory seven roles/ten binary symbols/two named calls/six byte
-examples, scalar57, binding80 and signed-angle90; all203 inputs/118Rust63production exact afterward.
-Logs: target/input-plan-control{,39}.log and input-plan-real{,39}.log; current metadata in
-input-plan-real-frozen.json/input-plan-real-observations.json. No Rust or grammar changes.
-
-D207 found during final review: a full-output finally plan could refuse a late invalid log before
-restoring a safe reference source. The actual guarded mirror reproduces source-left-mutated with
-rc2; source-only mutable restoration fixes it while retaining the named log refusal. Watched actual
-mirror assertion red/green added. Both mirrors and tracked source are restored exactly. Complete
-report/verification retained in defects129; this code was absent from source HEAD4d3ec9f.
-The census also refused a draft registry whose header was sorted into data; original headers were
-restored before the233-path/124-file green run. That draft is excluded from verification.
-
-Continuity: whole0205 task/lesson/completed scope retained byte-exact from4d3ec9f in270 before
-retirement (3852B44L, sha256:5aa39fa7…). Whole0202/0201 ledgers retained185 (702B13L,
-sha256:5a62a9a9…); prior583/all74 physical identities preserved, current586 after D207 closure. Immutable files
-received full FILE preflight, fresh single-link copy, exact inventory and public read before
-live retirement. Fixed document/collection caps and400 cadence stay. .a08 structural/inventory
-fixtures follow this commit. Promotion declined: existing fresh-public-boundary, API-aware effect
-capture and immutable whole-unit retention doctrine already owns these implementation details.
+Whole0206 task/lesson retained in [part271](docs/history/stitchcad-devnotes-part271.md).
 
 ## Retained engineering continuity
 
@@ -243,3 +241,8 @@ committed table and original links. Recent records follow; older identities rema
 | [part128](docs/history/stitchcad-defects-part128.md) | D206 report/verified closure | 7 lines, 712 bytes, sha256:d12bedb6… |
 
 | [part270](docs/history/stitchcad-devnotes-part270.md) | whole0205 task/lesson/scope | 44 lines, 3852 bytes, sha256:5aa39fa7… |
+
+| [part271](docs/history/stitchcad-devnotes-part271.md) | whole0206 task/lesson | 65 lines, 5113 bytes, sha256:a271aff2… |
+
+| [part272](docs/history/stitchcad-devnotes-part272.md) | whole original Ease receipt | 10 lines, 710 bytes, sha256:c9a97e5b… |
+| [part273](docs/history/stitchcad-devnotes-part273.md) | whole original serializer checklist | 22 lines, 2058 bytes, sha256:14b7d6df… |

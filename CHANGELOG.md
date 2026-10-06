@@ -112,6 +112,14 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0207 — structural and inventory fixture plans
+
+Pure structure/inventory loaders, complete copied books and both exclusive writers now validate
+sources/outputs before effects and retain source-only restoration. Original assertions/cases exact;
+Python3.9/3.14 boundaries/30 guard reds/physical refusals and real four+four assertion reds pass.
+Input/numerical/shape/canonical consumers and118 Rust bytes remain exact; grammar unchanged.
+Whole271/272/273 and186 records retain exact8d bytes. Remaining producers/D156 continue .a09.
+
 ## STITCHCAD-G1-0206 — input context plans
 
 - Input5/10, diagnostic6/11 and source writer11/9/1 guarded; grammar stays.
@@ -135,18 +143,7 @@ the digests afterwards.
 
 Whole0202/0201 ledgers retained in [part185](docs/history/stitchcad-changelog-part185.md).
 
-## STITCHCAD-G1-0200 — copied-book recipe plans
-
-- Plan pure reference inputs and complete copied trees/logs before effects; preserve selectors/argv.
-- Six captures/twelve guard reds/fourteen refusals pass on Python3.9; D202/D203 fixed and retained124/125.
-- Real196/all14 faults/21 numerical statements/0 mismatches; original consumers and133 inputs exact.
-- Whole256/179/257–259 retained; grammar/engine/fixed caps/400 stay. Static public loaders next.
-
-## STITCHCAD-G1-0199 — repair bridge controls
-- D200 TypeError fixed: readonly7/20, borrowed7/current libraries/dirs captured;4 children/8 writes.
-- Original9 plus40 coupled faults and actual guard-disable proof pass0.
-- Native263/10+26723 replay;95 frozen/63Rust/current producer/library exact0.
-- Whole253/254/255/178 retained; D200/D201 closures122/123. Copied-book next; caps/grammar/400 stay.
+Whole retained record: [part186](docs/history/stitchcad-changelog-part186.md).
 
 ## STITCHCAD-G1-0198 - coupled static plans (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n14`)
 
@@ -351,3 +348,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part184](docs/history/stitchcad-changelog-part184.md) | whole0196/0195 ledgers | 10 lines, 507 bytes, sha256:88e5570a… |
 
 | [part185](docs/history/stitchcad-changelog-part185.md) | whole0202/0201 ledgers | 13 lines, 702 bytes, sha256:5a62a9a9… |
+
+| [part186](docs/history/stitchcad-changelog-part186.md) | whole0200/0199 ledgers | 12 lines, 860 bytes, sha256:95911f3c… |

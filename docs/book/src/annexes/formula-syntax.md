@@ -117,10 +117,10 @@ bash docs/tasks/artifacts/formula_structure/run_formula_structure_probes.sh
 bash docs/tasks/artifacts/formula_structure/run_formula_structure_mutations.sh
 ```
 
-The first command runs 16 structural controls/refusals and two copied-book refusal cases. The second
-runs alone: it disables four actual reference traversal/depth guards, requires assertion failures,
-and restores exact source bytes. Existing formula-language probes still verify chapter/fixture/value
-agreement. The product syntax parser below has its own boundary and stack-safety contracts.
+Sixteen structural controls and two copied-book refusals run in the suite. The exclusive writer
+requires four actual traversal/depth assertion failures and exact source restoration.
+[Fixture plans](formula-static-signatures.md#structural-and-canonical-inventory-fixtures) guard loaders,
+copies and child selectors. Chapter/value checks and product parser contracts retain separate scope.
 
 ## Reference machine-input controls
 

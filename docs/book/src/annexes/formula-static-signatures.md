@@ -176,3 +176,40 @@ and tests physical refusals. Its intercepted children prove dispatch contracts; 
 supply the separate real 130 input assertions, three chapter refusals and nine failing mutations.
 The final command prints observations, including the superseded normalized-angle counterexample.
 The environment probe runner watches the capture control. These checks change no grammar rule.
+
+## Structural and canonical inventory fixtures
+
+`formula_structure.py` validates four bootstrap sources and nine sources at each borrowed
+load_reference() call. The original sixteen structural assertions/refusals and iterative prebuilt-AST
+control stay active. Ordinary CLI execution also runs two copied-book refusals; `--contracts-only`
+skips those copies. Pure calls preserve prepared stores, unrelated environment values and caller argv.
+
+The end-to-end entry inspects the complete book, both replacement trees and logs before activation.
+It rejects unexpected old entries, links, hardlinked outputs and any selected input or parts directory
+inside a replacement destination. It rechecks before deletion, validates the copied inputs before
+editing, and checks the effective child selectors before dispatch. For example, a caller’s relative
+FORMULA_GRAMMAR is resolved from the repository root, matching the shell’s working directory.
+The child receives the prepared local stores and preserves all other caller selectors.
+
+The canonical inventory validates six bootstrap sources before loading the input provider, then
+thirteen sources before delegation and each direct grammar, decision or literal-annex read. It
+shares the input provider’s Refusal class. The original seven node roles, ten binary symbols, two
+named-call distinctions and six authored byte examples remain independent reference assertions.
+It creates no stores, files or children. Both CLIs report named local-environment refusals with exit2.
+
+The two mutation runners are inert on import. Their producing calls plan ten/fourteen inputs,
+four logs each and exactly one writable source before activation. They freshly validate each source
+change, child and log. Both restoration paths validate the writable source alone, retaining exact
+bytes even when a child fails or a log becomes invalid. Run either writer exclusively:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/formula_structure.py --contracts-only
+python3 -I -B docs/tasks/artifacts/formula_structure/formula_structure_mutations.py
+python3 -I -B docs/tasks/artifacts/formula_structure/canonical_contract_inventory_mutations.py
+python3 -I -B docs/tasks/artifacts/ci_environment/python_structure_fixture_contract.py
+```
+
+The watched final command captures actual boundaries, removes each guard, tests real filesystem
+refusals and verifies both writers’ restoration with actual mirrored source writes. Captured children
+establish dispatch behavior; the writers’ four real assertion failures each supply separate reference
+evidence. These plans change no grammar, canonical bytes, numerical rule or engine implementation.

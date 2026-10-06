@@ -4,9 +4,8 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0206 .a07 complete and locally verified. Verify HEAD0206/brief0/clean before .a08.
--Next .a08 structural/canonical inventory fixtures, docs/tasks/G1-SLICE-producers.md.
- Read complete public sources/callers, source/effect/borrowed contracts and book first; grammar stays.
--Task aggregate near fixed1.5MB: own briefly and retain whole completed receipts before growth.
- Receipts target/input-plan-*; whole0205 in270,0202/0201 ledgers185, D207 fixed129.
--400 cadence stays; derive ahead count. Cleanup next due2026-10-06 22:28UTC.
+-Next G1-SLICE.5b.4c.h2.b.p.o.a09: inline context fixtures; owner G1-SLICE-producers.md.
+ Read complete producers/public callers, roadmap/book and watched ledgers; own before edits.
+-0207 structural/inventory boundaries verified; follow COMMIT.md for its final gate/commit
+ if still uncommitted. Otherwise fresh sessions resume the next leaf from Git alone.
+-400 push cadence; derive ahead count. Cleanup due2026-10-06 22:28UTC.

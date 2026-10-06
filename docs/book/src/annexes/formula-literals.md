@@ -339,7 +339,8 @@ both distinct named-call examples and all six authored byte examples above. Its 
 uses the independent book reference, never a product arena. Four actual renderer tag/branch/argument
 faults must fail those byte assertions; the exclusive runner restores the producer byte-identically.
 These are interpreter assertion controls, not compiled product serializer proof. The structural suite
-watches the inventory. The detailed repository
+watches the inventory. [Source and restoration plans](formula-static-signatures.md#structural-and-canonical-inventory-fixtures)
+cover its provider, grammar, decision, annex and exclusive writer. The detailed repository
 decision is docs/decisions/decision_canonical-expression-spelling.md. D103 closes for the missing
 byte contract; the .3d.2 product serializer and .3d.3 identity review are complete below.
 [Ordered statement/recipe identity](formula-recipe-inputs.md) is implemented separately.
