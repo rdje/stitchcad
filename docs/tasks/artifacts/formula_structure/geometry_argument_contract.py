@@ -7,7 +7,20 @@ import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-HELPER = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'))
+HELPER_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE,
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh', HELPER_SOURCE)
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+HELPER = runpy.run_path(str(HELPER_SOURCE))
+# Nested borrowed calls retain the provider's exact refusal class.
+PROFILE = HELPER['PROFILE']
+REFERENCE_INPUTS = (Path(__file__), *HELPER['REFERENCE_INPUTS'])
 KINDS = ('length', 'angle', 'area', 'ratio', 'count', 'boolean', 'point', 'edge')
 SOURCE = HELPER['SOURCE']
 
@@ -18,6 +31,7 @@ def provider(kind, expressions):
 
 
 def contracts(replacement=None, verbose=True):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     ns, ref = HELPER['load_reference'](replacement)
     assert set(ns['kinds']) == set(KINDS), 'D140 kind population drift'
     env = {'v_' + kind: HELPER['KindOnly'](kind) for kind in KINDS}
@@ -152,6 +166,7 @@ FAULTS = (
 
 
 def mutations():
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     original = SOURCE.read_bytes()
     for label, before, after in FAULTS:
         try:
@@ -166,6 +181,11 @@ def mutations():
 
 
 if __name__ == '__main__':
-    contracts()
-    if '--mutations' in sys.argv:
-        mutations()
+    try:
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+        contracts()
+        if '--mutations' in sys.argv:
+            mutations()
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None

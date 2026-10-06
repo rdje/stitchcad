@@ -5,7 +5,21 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-LOADER = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'))
+HELPER_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE,
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh', HELPER_SOURCE)
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+LOADER = runpy.run_path(str(HELPER_SOURCE))
+# Nested borrowed calls retain the provider's exact refusal class.
+PROFILE = LOADER['PROFILE']
+REFERENCE_INPUTS = (Path(__file__), *LOADER['REFERENCE_INPUTS'])
+CURVE_INPUTS = (Path(__file__), PROFILE_SOURCE, ROOT / 'docs/book/src/spec/units-and-tolerances.md')
 SOURCE = LOADER['SOURCE']
 # Independently authored from the normative function and selector rows.
 CALLS = ('sqrt(a)', 'hypot(l,l)', 'abs(r)', 'min(l)', 'max(l,l,l)', 'clamp(l,l,l)',
@@ -38,6 +52,7 @@ class Unreadable:
 
 
 def curve_contract(replacement=None):
+    PROFILE['plan_producer'](ROOT, sources=CURVE_INPUTS)
     text = (ROOT / 'docs/book/src/spec/units-and-tolerances.md').read_text()
     if replacement:
         before, after = replacement
@@ -49,6 +64,7 @@ def curve_contract(replacement=None):
 
 
 def contracts(replacement=None, verbose=True):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     curve_contract()
     assert len(CALLS) == len(RESULTS) == 21, "D136/D137 known call oracle coverage"
     ns, reference = LOADER['load_reference'](replacement)
@@ -122,27 +138,32 @@ FAULTS = (
 
 
 if __name__ == '__main__':
-    assert sys.argv[1:] in [[], ['--mutations']]
-    before = SOURCE.read_bytes()
-    contracts()
-    if sys.argv[1:] == ['--mutations']:
-        for name, old, new in FAULTS:
-            try:
-                contracts((old, new), verbose=False)
-            except AssertionError as error:
-                assert 'D136/D137' in str(error), (name, 'not a payload/body assertion red', error)
-                print('actual compiled call payload assertion red:', name)
-            else:
-                raise AssertionError(('call payload fault escaped', name))
-        print('call payload faults:%d actual compiled body assertion reds; source bytes unchanged' % len(FAULTS))
-        for old, new in (('1. **Line segment**', '1. **NURBS**'),
-                         ('2. **Circular arc**', '**Circular arc**'),
-                         ('3. **Cubic Bézier**', '3. **Cubic Bézier**\n4. **NURBS**')):
-            try:
-                curve_contract((old, new))
-            except AssertionError as error:
-                assert 'D136/D137 normative curve set' in str(error), ('not a normative body red', error)
-            else:
-                raise AssertionError('normative curve fault escaped')
-        print('curve documentation:three actual loaded-set assertion reds; tracked book unchanged')
-    assert SOURCE.read_bytes() == before
+    try:
+        assert sys.argv[1:] in [[], ['--mutations']]
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+        before = SOURCE.read_bytes()
+        contracts()
+        if sys.argv[1:] == ['--mutations']:
+            for name, old, new in FAULTS:
+                try:
+                    contracts((old, new), verbose=False)
+                except AssertionError as error:
+                    assert 'D136/D137' in str(error), (name, 'not a payload/body assertion red', error)
+                    print('actual compiled call payload assertion red:', name)
+                else:
+                    raise AssertionError(('call payload fault escaped', name))
+            print('call payload faults:%d actual compiled body assertion reds; source bytes unchanged' % len(FAULTS))
+            for old, new in (('1. **Line segment**', '1. **NURBS**'),
+                             ('2. **Circular arc**', '**Circular arc**'),
+                             ('3. **Cubic Bézier**', '3. **Cubic Bézier**\n4. **NURBS**')):
+                try:
+                    curve_contract((old, new))
+                except AssertionError as error:
+                    assert 'D136/D137 normative curve set' in str(error), ('not a normative body red', error)
+                else:
+                    raise AssertionError('normative curve fault escaped')
+            print('curve documentation:three actual loaded-set assertion reds; tracked book unchanged')
+        assert SOURCE.read_bytes() == before
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None

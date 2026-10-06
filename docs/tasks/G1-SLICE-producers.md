@@ -159,15 +159,17 @@ Whole original completed scopes retained in [part264](../history/stitchcad-devno
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a03`
   Status: `done`
-  Own0202: payloads/control/callers/live/book/whole retention/registries; target/{payload,loader}-*.
-  Own D205: PLANNING/report/whole lesson tail seal; fix prefix boundary before payload repair.
   Paths: docs/tasks/artifacts/formula_structure/dimension_payload_contract.py;docs/tasks/artifacts/formula_structure/ambiguity_payload_contract.py.
-  Paths also: docs/tasks/artifacts/ci_environment/python_payload_library_contract.py;python_static_loader_contract.py;python_bridge_contract.py;python_producer_contract.py; producer/file registries and probe runner.
   Goal: Dimension and ambiguity payload libraries; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
+Whole original completed scopes retained in [part266](../history/stitchcad-devnotes-part266.md).
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a04`
-  Status: `pending`
+  Status: `done`
+  Own0203: geometry/call/controls/live/book/whole retention; target/geometry-call-*.
+  Paths: docs/tasks/artifacts/formula_structure/geometry_argument_contract.py;docs/tasks/artifacts/formula_structure/call_lookup_contract.py.
+  Paths also: docs/tasks/artifacts/ci_environment/python_payload_library_contract.py;python_static_loader_contract.py; producer ledger/runner; target/loader-*.
   Goal: Geometry and call metadata libraries; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
@@ -744,14 +746,14 @@ Whole0200 task and copied-book lesson retained in [part260](../history/stitchcad
 
 Whole0201 task and public-loader lesson retained in [part262](../history/stitchcad-devnotes-part262.md).
 
-### G1-SLICE.5b.4c.h2.b.p.o.a03 —0202 payload libraries
+Whole0202 task and pure payload lesson retained in [part265](../history/stitchcad-devnotes-part265.md).
 
-- [x] REPRODUCE / ISSUE: both original imports fail independent delegation-plan capture, target/payload-before.log, rc=0.
-- [x] ROOT CAUSE: complete public sources/callers/book reviewed; pure bootstrap4/5/reference9/10, target/payload-control.log, rc=0.
-- [x] FIX: fresh plans/shared Refusal/CLI wrappers; original functions/cases/faults/argv AST-exact, target/payload-control39.log, rc=0.
-- [x] ADDRESSED:10 captures/six actual omissions/20 physical+eight borrowed refusals/two planner admissions pass3.9/3.14, target/payload-control39.log, rc=0.
-- [x] NO REGRESSION: shared1125/58/329, bridge40+nine, recipe six/twelve/fourteen; real4023/3814/15+4192/16+263/10+26723,196 inputs/current library exact, target/payload-native39.log, rc=0; shared/bridge/recipe/loader logs0.
-- [x] LOCKSTEP: whole262/181/263/264/D205127/prior569/canonical scopes/nav/map/caps verified, target/payload-d205-close.log, rc=0; publication45/coverage9/archive28+CLI593 pass. promotion: declined; grammar/engine/400 stay; next.a04. Final continuity/staged gate receipt below.
+### G1-SLICE.5b.4c.h2.b.p.o.a04 —0203 geometry/call
 
-Final0202: continuity574/prior569/all60/64 headers61live3retained/180 pointers/map/caps0; ledger757/11 arms13 pointer controls0; publication45/coverage9/archive28+CLI593/census2320.
-Final staged gate13 green, rc=0, target/payload-staged-gate.log.
+- [x] REPRODUCE / ISSUE: two original bootstrap omissions fail actual capture, target/geometry-call-before.log, rc=0.
+- [x] ROOT CAUSE: complete libraries/public helper/book reviewed; bootstrap4/reference9, curve3, target/geometry-call-control.log, rc=0.
+- [x] FIX: fresh plans/shared Refusal/wrappers; original bodies/cases/CLI AST-exact, target/geometry-call-control39.log, rc=0.
+- [x] ADDRESSED:22 captures/14 omissions/40 CLI+16 borrowed refusals/four planner admissions/two curve positives pass3.9/3.14, target/geometry-call-control39.log, rc=0.
+- [x] NO REGRESSION: six real CLIs,97/12+166/12+3 and prior4023/3814/15+4192/16+263/10+26723;198 inputs/current library exact, target/geometry-call-native39.log, rc=0.
+- [x] LOCKSTEP: whole265/182/266/prior574/all65/65headers64live1retained/181pointers/map/caps0, target/geometry-call-continuity.log, rc=0; publication45/coverage9/archive28+CLI596/ledger761/census2320. promotion: declined; grammar/engine/400 stay; next.a05.
+Final staged gate13 green, rc=0, target/geometry-call-staged-gate.log.

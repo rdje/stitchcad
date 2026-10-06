@@ -13,7 +13,8 @@ ROOT = Path(__file__).resolve().parents[4]
 HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
 PROFILE = ROOT / 'scripts/local_environment.py'
 SOURCE = ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh'
-ENTRIES = tuple(HERE / (name + '_payload_contract.py') for name in ('dimension', 'ambiguity'))
+ENTRIES = tuple(HERE / name for name in ('dimension_payload_contract.py',
+    'ambiguity_payload_contract.py', 'geometry_argument_contract.py', 'call_lookup_contract.py'))
 SIGNATURE = HERE / 'static_signature_contract.py'
 NAMESPACE = HERE / 'static_namespace_contract.py'
 ALL_ENTRIES = (*ENTRIES, SIGNATURE, NAMESPACE)
@@ -23,11 +24,16 @@ BOOK_INPUTS = tuple(ROOT / 'docs/book/src' / name for name in (
 BOOT = {SIGNATURE: (SIGNATURE, PROFILE, SOURCE),
         NAMESPACE: (NAMESPACE, PROFILE, SOURCE, SIGNATURE),
         ENTRIES[0]: (ENTRIES[0], PROFILE, SOURCE, SIGNATURE),
-        ENTRIES[1]: (ENTRIES[1], PROFILE, SOURCE, NAMESPACE, SIGNATURE)}
+        ENTRIES[1]: (ENTRIES[1], PROFILE, SOURCE, NAMESPACE, SIGNATURE),
+        ENTRIES[2]: (ENTRIES[2], PROFILE, SOURCE, SIGNATURE),
+        ENTRIES[3]: (ENTRIES[3], PROFILE, SOURCE, SIGNATURE)}
 INPUTS = {SIGNATURE: (*BOOT[SIGNATURE], *BOOK_INPUTS)}
 INPUTS[NAMESPACE] = (NAMESPACE, *INPUTS[SIGNATURE])
 INPUTS[ENTRIES[0]] = (ENTRIES[0], *INPUTS[SIGNATURE])
 INPUTS[ENTRIES[1]] = (ENTRIES[1], *INPUTS[NAMESPACE])
+INPUTS[ENTRIES[2]] = (ENTRIES[2], *INPUTS[SIGNATURE])
+INPUTS[ENTRIES[3]] = (ENTRIES[3], *INPUTS[SIGNATURE])
+CURVE_INPUTS = (ENTRIES[3], PROFILE, BOOK_INPUTS[-1])
 GOOD = runpy.run_path(str(PROFILE))
 GOOD['plan_producer'](ROOT, sources=(Path(__file__), PROFILE, SOURCE, *ALL_ENTRIES, *BOOK_INPUTS))
 FROZEN = {path: path.read_bytes() for path in (PROFILE, SOURCE, *ALL_ENTRIES, *BOOK_INPUTS)}
@@ -64,7 +70,8 @@ def capture(entry, mode, texts=None):
     def plan(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
         frame, owner = caller()
         assert root == ROOT and not (directories or output_files or mutable_sources), 'payload pure plan has effects'
-        expected = (BOOT[owner], INPUTS[owner]) if frame.f_code.co_name == '<module>' else (INPUTS[owner],)
+        expected = (BOOT[owner], INPUTS[owner]) if frame.f_code.co_name == '<module>' else (
+            CURVE_INPUTS if owner == ENTRIES[3] and frame.f_code.co_name == 'curve_contract' else INPUTS[owner],)
         assert sources in expected, 'payload source plan incomplete'
         before = dict(os.environ)
         result = GOOD['plan_producer'](root, sources=sources)
@@ -75,8 +82,9 @@ def capture(entry, mode, texts=None):
 
     def read(path, binary, *args, **kwargs):
         frame, owner = caller()
-        assert frames.get(frame) == INPUTS[owner], 'payload reference read before complete fresh plan'
-        assert path in INPUTS[owner] and path in FROZEN, 'payload undeclared input read'
+        expected = CURVE_INPUTS if owner == ENTRIES[3] and frame.f_code.co_name == 'curve_contract' else INPUTS[owner]
+        assert frames.get(frame) == expected, 'payload reference read before complete fresh plan'
+        assert path in expected and path in FROZEN, 'payload undeclared input read'
         reads.append(path)
         return original[2 if binary else 1](path, *args, **kwargs)
 
@@ -116,7 +124,12 @@ def capture(entry, mode, texts=None):
                         groups, refusals = result
                         assert sum(groups.values()) == 4023 and refusals == 3814, 'payload dimension population drift'
                     else:
-                        assert result == 4192, 'payload ambiguity population drift'
+                        assert result == {ENTRIES[1]: 4192, ENTRIES[2]: 97, ENTRIES[3]: 166}[entry], 'payload case population drift'
+            elif mode == 'curve':
+                for _ in range(2):
+                    namespace['curve_contract']()
+            elif mode == 'mutations':
+                namespace['mutations']()
             elif mode == 'fault-argv':
                 try:
                     namespace['contracts'](('import pathlib, re, sys', "raise RuntimeError('payload injected execution failure')"), verbose=False)
@@ -126,7 +139,10 @@ def capture(entry, mode, texts=None):
                     raise AssertionError('payload injected failure escaped')
                 assert sys.argv is current_argv, 'payload exception lost borrowed argv'
         assert (entry, BOOT[entry]) in plans, 'payload bootstrap plan omitted'
-        if mode not in ('import', 'fault-argv'):
+        if mode.startswith('cli'):
+            assert any(frame.f_globals is namespace and frame.f_code.co_name == '<module>'
+                       and sources == INPUTS[entry] for frame, sources in frames.items()), 'payload CLI plan omitted'
+        if mode not in ('import', 'fault-argv', 'curve'):
             assert set(BOOK_INPUTS) <= set(reads), 'payload actual book reads incomplete'
         assert sys.argv is current_argv, 'payload normal call lost argv identity'
         assert dict(os.environ) == expected_environment, 'payload environment changed'
@@ -156,7 +172,7 @@ def original_bodies():
                 actual = next(n for n in current.body if type(n) is type(node) and n.name == node.name)
                 assert ast.dump(actual) == ast.dump(node), ('payload original body changed', entry.name, node.name)
             elif isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id in
-                    ('FAULTS', 'UNARY', 'BINARY') for t in node.targets):
+                    ('FAULTS', 'UNARY', 'BINARY', 'CALLS', 'RESULTS', 'UNBOUND', 'CURVES', 'CONSTRAINTS') for t in node.targets):
                 assert any(ast.dump(n) == ast.dump(node) for n in current.body), 'payload authored population changed'
         old_main = next(node for node in original.body if isinstance(node, ast.If)
                         and ast.unparse(node.test) == "__name__ == '__main__'")
@@ -184,7 +200,7 @@ def physical_controls():
         GOOD['prepare_producer'](ROOT, sources=originals, directories=tuple(sorted(directories)), output_files=tuple(mirrors.values()))
         for source, destination in mirrors.items():
             shutil.copy2(source, destination)
-        victim = mirrors[(SIGNATURE if entry == ENTRIES[0] else NAMESPACE) if case.startswith('helper-') else BOOK_INPUTS[-1]]
+        victim = mirrors[(NAMESPACE if entry == ENTRIES[1] else SIGNATURE) if case.startswith('helper-') else BOOK_INPUTS[-1]]
         fault = case.removeprefix('helper-')
         wanted = 'producer source is not a local regular file'
         extra = {}
@@ -265,6 +281,58 @@ def physical_controls():
     return total
 
 
+def curve_controls():
+    """A direct curve read needs no unrelated chapter or unused output authority."""
+    entry = ENTRIES[3]
+    generation = ROOT / 'target/payload-curve-physical' / str(os.getpid())
+    for case in ('unrelated-chapter', 'unused-output'):
+        sandbox = generation / case
+        assert not sandbox.exists(), 'curve positive fixture already exists'
+        mirrors = {path: sandbox / path.relative_to(ROOT) for path in INPUTS[entry]}
+        unused = sandbox / 'target/unused.log'
+        directories = {sandbox, unused.parent}
+        for path in mirrors.values():
+            directories.update(parent for parent in path.parents if parent.is_relative_to(sandbox))
+        GOOD['prepare_producer'](ROOT, sources=INPUTS[entry], directories=tuple(sorted(directories)),
+                                 output_files=(*mirrors.values(), unused))
+        for source, destination in mirrors.items():
+            shutil.copy2(source, destination)
+        if case == 'unrelated-chapter':
+            mirrors[BOOK_INPUTS[-2]].unlink()
+        else:
+            unused.symlink_to(mirrors[BOOK_INPUTS[-1]])
+        saved, argv = dict(os.environ), sys.argv
+        originals = (os.mkdir, Path.write_text, Path.write_bytes, subprocess.run)
+        def effect(*args, **kwargs):
+            raise AssertionError('curve positive produced effects')
+        try:
+            os.environ.update({name: str(sandbox / suffix) for name, suffix in (
+                ('CARGO_HOME', 'target/cargo-home'), ('RUSTUP_HOME', 'target/rustup'),
+                ('CARGO_TARGET_DIR', 'target/build'), ('TMPDIR', 'target/scratch'))})
+            os.environ.pop('RUSTUP_TOOLCHAIN', None)
+            expected_environment = dict(os.environ)
+            os.mkdir = Path.write_text = Path.write_bytes = subprocess.run = effect
+            namespace = runpy.run_path(str(mirrors[entry]))
+            namespace['curve_contract']()
+            if case == 'unrelated-chapter':
+                try:
+                    namespace['contracts'](verbose=False)
+                except namespace['PROFILE']['Refusal'] as error:
+                    assert str(error) == 'producer source is not a local regular file'
+                else:
+                    raise AssertionError('curve full reference omitted its required chapter')
+            assert dict(os.environ) == expected_environment and sys.argv is argv, 'curve positive changed caller state'
+        finally:
+            os.mkdir, Path.write_text, Path.write_bytes, subprocess.run = originals
+            os.environ.clear(); os.environ.update(saved); sys.argv = argv
+        for source, destination in mirrors.items():
+            if case != 'unrelated-chapter' or source != BOOK_INPUTS[-2]:
+                assert destination.read_bytes() == FROZEN[source], 'curve positive input changed'
+        if case == 'unused-output':
+            assert unused.is_symlink() and unused.read_bytes() == FROZEN[BOOK_INPUTS[-1]]
+        print('actual pure curve control:', case, 'accepted without effects; full reference dependencies retained')
+
+
 def main():
     previous = original_bodies()
     captures = reds = 0
@@ -280,8 +348,15 @@ def main():
             print('actual payload capture:', entry.name, mode, plans, 'plans', reads, 'reads')
             captures += 1
         script = TEXTS[entry]
-        for anchor, modes in (("PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)", ('import',)),
-                              ("PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)", ('contracts', 'cli'))):
+        guards = [("PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)", ('import',)),
+                  ("PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)",
+                   ('contracts', 'mutations', 'cli') if entry == ENTRIES[2] else ('contracts', 'cli'))]
+        if entry == ENTRIES[2]:
+            capture(entry, 'mutations'); captures += 1
+        if entry == ENTRIES[3]:
+            capture(entry, 'curve'); captures += 1
+            guards.append(("PROFILE['plan_producer'](ROOT, sources=CURVE_INPUTS)", ('curve',)))
+        for anchor, modes in guards:
             assert script.count(anchor) == len(modes), 'payload guard population changed'
             for index, mode in enumerate(modes):
                 parts = script.split(anchor)
@@ -290,13 +365,15 @@ def main():
                     capture(entry, mode, {entry: fault})
                 except AssertionError as error:
                     assert str(error) in ('payload bootstrap plan omitted', 'payload helper before bootstrap plan',
-                                         'payload reference read before complete fresh plan', 'payload delegation before complete fresh plan'), (entry.name, index, mode, str(error))
+                                         'payload reference read before complete fresh plan', 'payload delegation before complete fresh plan',
+                                         'payload CLI plan omitted'), (entry.name, index, mode, str(error))
                 else:
                     raise AssertionError(('payload actual guard omission escaped', entry.name, index, mode))
                 reds += 1
     physical = physical_controls()
+    curve_controls()
     print('payload library controls:', captures, 'actual pure captures;', reds, 'actual guard reds;', physical,
-          'physical CLI refusals/8 borrowed refusals/2 actual planner-disable admissions; original bodies/populations/source/argv/prepared stores exact; no activation')
+          'physical CLI refusals/16 borrowed refusals/4 actual planner-disable admissions; original bodies/populations/source/argv/prepared stores exact; no activation')
 
 
 if __name__ == '__main__':

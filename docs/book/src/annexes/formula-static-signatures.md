@@ -112,3 +112,14 @@ The watched payload control checks repeated borrowed calls, exception-path argv 
 actual guard omissions, helper/book filesystem faults and unchanged prepared environments.
 The native control above also runs both real payload mutation CLIs before the native consumers
 and verifies frozen inputs after each. Diagnostic inference remains metadata-only.
+
+The geometry-argument and call-lookup libraries also validate four bootstrap and nine reference
+inputs. Geometry's original static refusals and successful numerical cache/provenance replay both
+remain active; these in-memory checks create no files or stores. Call lookup retains callee-before-
+argument refusal and its unchanged catalog. The standalone mutation flags retain their original rules.
+
+The direct curve_contract() reader validates only its own script, the profile and the units/curve
+chapter. It can inspect that table while an unrelated reference chapter is missing or an unused
+log alias exists. A complete reference contract still refuses its missing required chapter.
+The shared payload control checks these boundaries, repeated calls, all actual guard omissions and
+physical helper/book refusals; the native control runs both original mutation CLIs before consumers.

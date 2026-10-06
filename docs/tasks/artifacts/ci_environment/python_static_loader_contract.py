@@ -319,7 +319,7 @@ def native():
         'dimension_payload_contract.py', 'static_review_contract.py', 'static_namespace_contract.py',
         'static_signature_contract.py', 'checked_recipe_mutations.py', 'static_coupled_contract.py',
         'first_phase_contract.py', 'static_coupled_driver.rs', 'canonical_worked_recipe_cases.tsv',
-        'ambiguity_payload_contract.py'))
+        'ambiguity_payload_contract.py', 'geometry_argument_contract.py', 'call_lookup_contract.py'))
     folders, book = [ROOT / 'docs/book/src'], []
     for folder in folders:
         GOOD['directory'](ROOT, folder.relative_to(ROOT).as_posix())
@@ -332,7 +332,8 @@ def native():
     outputs = tuple(ROOT / 'target' / name for name in (
         'loader-native-first-phase.log', 'loader-native-coupled.log',
         'loader-native-frozen.json', 'loader-library.json',
-        'loader-native-dimension.log', 'loader-native-ambiguity.log'))
+        'loader-native-dimension.log', 'loader-native-ambiguity.log',
+        'loader-native-geometry.log', 'loader-native-call.log'))
     GOOD['enter_producer'](ROOT, sources=sources, output_files=outputs)
     frozen = {path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest() for path in sources}
     for path in rust:
@@ -342,6 +343,10 @@ def native():
          ('dimension payloads:4023 actual cases /3814', 'dimension payload faults:15')),
         ('ambiguity_payload_contract.py', ['--mutations'], outputs[5],
          ('D147 ambiguity contract: 4192', 'D147 faults: 16')),
+        ('geometry_argument_contract.py', ['--mutations'], outputs[6],
+         ('geometry argument contracts: 97', 'geometry argument faults: 12')),
+        ('call_lookup_contract.py', ['--mutations'], outputs[7],
+         ('call payloads:166', 'call payload faults:12', 'curve documentation:three')),
         ('first_phase_contract.py', ['--mutations'], outputs[0],
          ('D150 public:263', 'D150 reference:263', 'D150 faults:10')),
         ('static_coupled_contract.py', [], outputs[1], ('coupled static review: 26723 shared cases',)),
@@ -369,7 +374,7 @@ def native():
     outputs[3].write_text(json.dumps(artifact, indent=2) + '\n')
     print('native loader proof:', len(frozen), 'inputs;', len(rust), 'tracked Rust files;',
           sum('/src/' in path.relative_to(ROOT).as_posix() for path in rust),
-          'production sources exact; 4023/3814 dimension/15 faults/4192 ambiguity/16 faults/263 competing/10 faults/26723 coupled; current library frozen; rc=0')
+          'production sources exact; 4023/3814/15 dimension;4192/16 ambiguity;97/12 geometry;166/12+3 call;263/10 competing;26723 coupled; current library frozen; rc=0')
 
 
 if __name__ == '__main__':
