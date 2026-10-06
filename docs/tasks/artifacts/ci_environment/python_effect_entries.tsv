@@ -22,6 +22,7 @@ docs/tasks/artifacts/formula_language/inline_context_contract.py	output	G1-SLICE
 docs/tasks/artifacts/formula_language/inline_context_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a09
 docs/tasks/artifacts/formula_structure/assertion_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a10
 docs/tasks/artifacts/formula_structure/binding_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a11
+docs/tasks/artifacts/formula_structure/binding_fixture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a11
 docs/tasks/artifacts/formula_structure/binding_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a11
 docs/tasks/artifacts/formula_structure/binding_replay_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a12
 docs/tasks/artifacts/formula_structure/binding_replay_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a12

@@ -4,8 +4,8 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--Next G1-SLICE.5b.4c.h2.b.p.o.a11: binding fixtures; owner G1-SLICE-producers.md.
- Read full producers/public callers, roadmap/book and watched ledgers; own before edits.
--0210 actual committed window10 guard verified; whole0209 receipt/lesson277 retained.
- Focused checks verified; follow COMMIT.md for gate/commit if still uncommitted.
+- Next G1-SLICE.5b.4c.h2.b.p.o.a12: binding_replay_contract.py and its mutation writer.
+  Read full pair/public consumer/contracts/book and watched ledgers before owning0212 changes.
+-0211 binding plans verified on Python3.9/3.14; focused checks passed.
+ Keep grammar/numeric verdicts, prepared stores/argv and exact source bytes; real writers exclusive.
 -400 push cadence; derive ahead count. Cleanup due2026-10-06 22:28UTC.

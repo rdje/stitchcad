@@ -92,37 +92,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
   Goal: blocking continuity before .f.n01: pack a new immutable history window and retain whole committed older lessons/ledgers before receipt growth; current DEV16305B/CH32663B leave79B/105B under health targets, archive63 working Markdown files leaves one slot under64.
   Acceptance: own complete public archive/source/capture contracts before writes; exact current committed source intervals, every prior logical/control byte and actual public read/materialization verified under unchanged resident/decoded/file-count/line ceilings; regenerate map/book/live pointers and commit before native file repair.
 
-STITCHCAD-G1-0154 owns .f.h. Full public reader/schema/source/materialization contract and the
-existing sixth-window capture recipe reviewed; no persistent new capture entry is required.
-Use a guarded task-local builder in target/, pinned to6d93d3d, then published prove-source/read/
-materialize operations and the existing tracked generic window controls. Nonmutating validation
-of every current input precedes raw reads; complete fixture copy/generated/recovered file paths
-are validated before activation/output. Preserve the capture source bytes and all six old controls;
-append only the new master entry. Install only after exact independent fixture source/read proof;
-retire only matching raw copies after copied payload/control bytes are verified. Route maintained
-links to new catalog headings without editing any sealed record. Whole lesson/ledger intervals
-from6d93d3d follow after space is available; prove prior424 logical bytes and all public reads exact.
-
-Before installation, .f.h owns a physical isolated inode-alias diagnostic and exclusive-link census
-of every existing tracked destination it will rewrite. Regular-file/volume checks alone may accept
-hard links; reproduce without any alias write, record exact impact and schedule the source/output
-ownership fix as .f.l if confirmed. Keep the archive transition safe with measured single-link inputs.
-
-Confirmed D156 inode-alias gap: physical isolated source/output/victim names share one regular
-inode (link count3), and the current plan accepts both destinations, rc=0,
-target/window7-hardlink-diagnostic.log. No alias byte or child was written; all fixture bytes remain
-exact. Regular type, same device and no symlink do not establish exclusive mutable ownership;
-writing through such a name changes the other names too and can cross a repository boundary.
-.f.l owns the fix next; keep read-only sources pure and adopt explicit mutable-source protection
-in each native repair. Current archive installer measured57 raw copies/four live files/master1
-single-link before their respective rewrites/removals; no other repository was touched.
-
-P3 ledger diagnostic noise is separately owned by .b.s: actual selector at shell line271 uses
-ls/head; full426-file fixture emits Broken pipe despite9-arm/13-pointer success0. Exact selector
-with harmless dot-path expansion gives20 SIGPIPE141 results and the independently sorted first
-file; short paths40 calls give0. Stderr/timing vary. Final window7-ledger-pipe-diagnostic.log0;
-failed literal-stderr/repeated-short-path expectations excluded. Repair early-closing selection
-without changing the chosen file or named refusal; no fixture bytes/native source were written.
+Whole retained whole window7 investigation narrative: [part279](../history/stitchcad-devnotes-part279.md).
 
 - [x] REPRODUCE / ISSUE: DEV16305B/CH32663B and63 working archive Markdown files block receipt growth under unchanged health targets. Guarded capture pinned to6d93d3d retains57 whole records; actual fixture424 reads/materialization/source proof pass, rc=0, target/window7-capture.log. Relevant public reader/capture/schema/book contracts read before writes.
 - [x] ROOT CAUSE: raw physical records exhaust the bounded working set; immutable versioned payload/catalog separation preserves logical identity. Physical source/output/victim inode3 acceptance confirmed without alias writes, rc=0, window7-hardlink-diagnostic.log; P1 .f.l owns mutable-path repair. Every actual archive rewrite/removal destination measured single-link first.
@@ -213,9 +183,18 @@ Whole scope retained in [part276](../history/stitchcad-devnotes-part276.md).
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a11`
-  Status: `pending`
+  Status: `done`
+  Own0211: binding pair/provider/control/docs; whole278/279/CH189 retention; target/bind-plan-*.
   Goal: Binding fixtures; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+
+- [x] REPRODUCE / ISSUE: python_binding_fixture_contract.py captures actual c65831b0 reader/writer bodies without unsafe children; unguarded loader/mkdir gaps fail independently, rc=0, target/bind-plan-control.log. Original functions/numerical/assertion bodies and12 CASES exact.
+- [x] ROOT CAUSE: actual load/effect captures show missing complete replacement/log/nested-child plans; independent real provider loads discriminate class drift, rc=0, bind-plan-control/control39.log. Public pair/loaders/shell/contracts/book reviewed; D156 remains outside this pair.
+- [x] FIX: pure binding_fixture.py provides complete source/copy/selector plans; fresh effect checks/shared provider/source-only restores. python_binding_fixture_contract.py passes21 guard reds/33 physical CLI refusals/16 borrowed refusals, rc=0, bind-plan-control/control39.log; no tracked source mutation.
+- [x] ADDRESSED: real binding_contract.py/binding_mutations.py on Python3.14/3.9 retain80 Fraction/Decimal controls/replay19 zero mismatches/twelve actual assertion reds; all192 inputs/118Rust63 production exact after each, rc=0, bind-plan-real/real39.log. Actual D202/planner omission and D207 mirrored late-log restore red/green pass0.
+- [x] NO REGRESSION: publication45/census238 paths/coverage9/archive28+620/ledger791+11+13/language16 pass, rc=0, bind-plan-{publication,census,coverage,archive,ledger,language}.log. bind-plan-continuity.py proves600 reads/prior597/all36 Source controls/whole278/279/CH189/proof siblings/73 headers/nav/current library/caps, rc=0.
+- [x] LOCKSTEP: book/live/frontier/MEMORY/DEV/CH/ledgers route .a12; python_binding_fixture_contract.py watched in CI environment runner; census/continuity commands pass0, bind-plan-census/continuity.log. Grammar/400 unchanged; promotion: declined (existing provider/restore/retention rules).
+  Final staged gate13 green, rc=0, target/bind-plan-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a12`
   Status: `pending`
@@ -779,12 +758,4 @@ D208 candidate title repair verified; whole report [130](../history/stitchcad-de
 
 Whole0209 task/lesson retained in [part277](../history/stitchcad-devnotes-part277.md).
 
-### G1-SLICE.5b.4c.h2.b.p.o.f.h10.v
-
-- [x] REPRODUCE / ISSUE: target/window10-proof-committed-control.py root/copy baselines0, rc=0, committed-control.log.
-- [x] ROOT CAUSE: window10-proof-committed-control.py inventory admits prose/committed guard requires exact bytes, rc=0, committed-control.log.
-- [x] FIX: window10-proof-committed-control.py copied inventory0/immutable refusal1;35 root files/HEAD exact, rc=0, committed-control.log.
-- [x] ADDRESSED: window10-proof-committed-control.py named committed-file refusal; isolated copy/root unchanged, rc=0, committed-control.log.
-- [x] NO REGRESSION: publication45/coverage9/language16 pass0; continuity597/prior596/all35 controls/72 closed headers/118Rust63/5code5 normative/proofs/nav exact0, window10-proof-*.log.
-- [x] LOCKSTEP: whole0209 three Source intervals5089B55L in277; public read before retirement, rc=0, window10-proof-retain.log. Book/frontier/live .a11; fixed caps/12open195sealed exact0, continuity.log. promotion: declined.
-Final staged gate13 green, rc=0, target/window10-proof-staged-gate.log.
+Whole0210 task/lesson retained in [part278](../history/stitchcad-devnotes-part278.md).

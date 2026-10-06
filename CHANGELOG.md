@@ -112,6 +112,13 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0211 — binding fixture plans
+
+Leaf G1-SLICE.5b.4c.h2.b.p.o.a11 guards pure provider, complete copied-book/selector/log effects and
+nested writer preflight/source-only restoration. Python3.9/3.14 retain80 checks/replay19 and12 real
+assertion reds; actual omissions/physical refusals and late-log restoration discriminate. Whole278/279/
+oldest ledger189 retained before growth. Grammar unchanged; binding replay fixtures next.
+
 ## STITCHCAD-G1-0210 — committed window10 proof
 
 Leaf G1-SLICE.5b.4c.h2.b.p.o.f.h10.v observes copied inventory0/actual immutable refusal1;
@@ -133,16 +140,7 @@ Whole0202/0201 ledgers retained in [part185](docs/history/window10.md#stitchcad-
 
 Whole retained record: [part186](docs/history/window10.md#stitchcad-changelog-part186md).
 
-## STITCHCAD-G1-0198 - coupled static plans (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n14`)
-
-- Files7/244,20 inputs/4 mutable; borrowed7/current libraries; original cases/argv stay.
-- Shared1125/35/58/329; native26723+28+6+3/restored/263+10;93 frozen/63Rust exact.
-- Whole251/252/177 and book matrix retained;552reads/28+571/45/9/731+11+13 pass; caps/grammar/400 stay.
-
-## STITCHCAD-G1-0197 - statement compiler files (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n13.2`)
-
-- 17 files/1 input; original6 calls/5 guards/75 frozen/63Rust exact.
-- 549 reads/28+568/45/9/727+11+13 pass; whole249/250/176 retained; grammar/400 stay.
+Whole retained whole0198 and0197 ledgers: [part189](docs/history/stitchcad-changelog-part189.md).
 
 
 
@@ -342,3 +340,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part187](docs/history/window10.md#stitchcad-changelog-part187md) | whole0205/0204/0203 ledgers | 14 lines, 612 bytes, sha256:0d29f076… |
 
 | [part188](docs/history/stitchcad-changelog-part188.md) | whole0208 through0206 ledgers | 20 lines, 1283 bytes, sha256:50381f4f… |
+
+| [part189](docs/history/stitchcad-changelog-part189.md) | whole0198 and0197 ledgers | 10 lines, 605 bytes, sha256:032aed1a… |

@@ -3,18 +3,7 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — committed window10 immutability
-
-.f.h10.v used the public reader/committed guard on35 exact37dbfcf archive files and an isolated
-same-volume copy. Baseline root/copy verify-retention0. Appending copied catalog prose preserves
-inventory0 but actual verify-retention returns1: committed retained file changed. All35 root inputs,
-HEAD and copied bytes except that intentional suffix remain exact, rc0, window10-proof-committed-control.log.
-No tracked sealed file was written; the nine prior windows remain intact. This closes window10's
-post-recording obligation before binding fixtures. Ordinary retrieval still needs no historical Git.
-Whole0209 task, complete lesson and final evidence retained in277 with full Source byte intervals,
-FILE/fresh-copy/prior596/all35 controls/public read before live retirement; body5089B55L
-sha256:7ace56554d92fcb95c1ae0dc22cc57cf5cf4a025ee00e5b919e9635e5ccacfce.
-Promotion declined: existing actual committed-window/copy-before-retirement protocol.
+Whole0210 task/lesson retained in [part278](docs/history/stitchcad-devnotes-part278.md).
 
 Whole0209 task/lesson retained in [part277](docs/history/stitchcad-devnotes-part277.md).
 
@@ -145,6 +134,24 @@ Older formula and producer lessons retained in [part186](docs/history/window7.md
 
 Whole0206 task/lesson retained in [part271](docs/history/window10.md#stitchcad-devnotes-part271md).
 
+## _(2026-10-06 UTC)_ — binding fixture boundaries
+
+Leaf G1-SLICE.5b.4c.h2.b.p.o.a11 preserves producing-on-load entries while factoring a pure
+binding_fixture.py provider. Complete source/copy/selector/log plans precede effects; the writer
+plans the child before shell changes and restores using source-only authority. Actual provider
+identity matters: independently loaded Refusal classes must be adopted, not mocked into agreement.
+
+Watched python_binding_fixture_contract.py retains original numerical/function/assertion bodies and
+all12 CASES. Python3.14/3.9 controls show21 guard reds,33 physical CLI refusals,16 repeated producing
+borrowed refusals, D202 actual directory/planner omissions and D207 mirrored late-log restore red/green.
+Real binding_contract.py and binding_mutations.py on both versions pass80 Fraction/Decimal controls,
+replay19/zero mismatches and12 intended assertion reds; all192 inputs/118Rust63 production remain exact.
+Logs target/bind-plan-control/control39/real/real39.log; all rc=0. Grammar/400 cadence unchanged.
+
+Whole0210 task/lesson278, complete window7 investigation279 and oldest0198/0197 ledgers189 are
+exact c65831b0 intervals, admitted and publicly read before live retirement; fixed bounds remain.
+Promotion declined: existing shared-provider, pure-plan, source-only restore and whole-retention rules.
+
 ## Retained engineering continuity
 
 Complete retrieval: `bash scripts/history_archive.sh list` enumerates every logical record;
@@ -219,8 +226,11 @@ committed table and original links. Recent records follow; older identities rema
 Whole0209 final evidence retained in [part277](docs/history/stitchcad-devnotes-part277.md).
 
 | [part277](docs/history/stitchcad-devnotes-part277.md) | whole0209 task/lesson | 55 lines, 5089 bytes, sha256:7ace5655… |
+Whole0210 final evidence retained in [part278](docs/history/stitchcad-devnotes-part278.md).
 
-Final0210: pub45/coverage9/language16 rc0; continuity all597/prior596/35 committed controls/72 closed
-headers/118Rust63/5code5 normative/three proof siblings/navigation/map/12open195sealed/caps exact0,
-window10-proof-continuity.log; pressure15/22351L/1633534 logicalB/705269 residentB.
-All five terminal receipts retained, rc0, window10-proof-signoff.log.
+| [part278](docs/history/stitchcad-devnotes-part278.md) | whole0210 task/lesson | 26 lines, 2430 bytes, sha256:6e9b3223… |
+
+Final0211: publication45/census238/coverage9/archive28+620/ledger791+11+13/language16 all rc=0,
+target/bind-plan-*.log. Continuity600/prior597/all36 Source identities/whole278/279/CH189/
+73 closed headers/188 pointers/proof siblings/all192 inputs/118Rust63/normative/build/library/nav/caps
+exact, rc=0, bind-plan-continuity.log. Full CI remains due at400; no push or runner claim.

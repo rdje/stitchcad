@@ -11,6 +11,7 @@ docs/tasks/artifacts/ci_environment/producer_census.py	profile	G1-SLICE.5b.4c.h2
 docs/tasks/artifacts/ci_environment/producer_census_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/push_cadence_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_assertion_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/ci_environment/python_binding_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_bridge_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_inline_context_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_input_context_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
@@ -32,6 +33,7 @@ docs/tasks/artifacts/formula_structure/arithmetic_contract.py	delegate	G1-SLICE.
 docs/tasks/artifacts/formula_structure/arithmetic_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a16
 docs/tasks/artifacts/formula_structure/assertion_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a10
 docs/tasks/artifacts/formula_structure/binding_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a11
+docs/tasks/artifacts/formula_structure/binding_fixture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a11
 docs/tasks/artifacts/formula_structure/binding_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a11
 docs/tasks/artifacts/formula_structure/binding_replay_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a12
 docs/tasks/artifacts/formula_structure/binding_replay_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a12

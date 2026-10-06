@@ -440,8 +440,8 @@ binding environments and replay. An altered copied specification supplies32-bit 
 prove the reader consumes declarations; a missing declaration refuses. Two copied-book bindings
 verify the actual census/replay consumer. Twelve compiled actual mutations cover binding bypass,
 truncation, omitted/excluded bounds, duplicated width, token/context loss, Boolean reclassification,
-caller-environment writes and altered census consumption. Each requires an assertion red and exact
-source restoration; run alone.
+caller-environment writes and altered census consumption. Require assertion reds and exact restore;
+run alone. See [plans](formula-documentation-controls.md#binding-fixture-plans).
 
 This reference statement method returns a binding without publishing it into the caller’s supplied
 environment. The curated replay caller stores that result explicitly; this is not a production
