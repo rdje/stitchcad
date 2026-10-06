@@ -1,17 +1,52 @@
 """Actual worked/refusal populations; authored bytes, reference syntax only, no execution."""
 from pathlib import Path
 import runpy
+import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
-context = runpy.run_path(str(HERE / 'recipe_byte_contract.py'))
-statement_bytes = context['statement_bytes']
-recipe_bytes = context['recipe_bytes']
-reference = context['reference']
-book = (ROOT / 'docs/book/src/spec/formula-language/examples.md').read_text()
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, HERE / 'recipe_byte_contract.py',
+               HERE / 'formula_input.py', HERE / 'formula_structure.py',
+               HERE / 'static_signature_contract.py', HERE / 'canonical_contract_inventory.py',
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh')
+REFERENCE_INPUTS = (*BOOT_INPUTS, *(ROOT / 'docs/book/src' / name for name in (
+    'spec/formula-language.md', 'spec/formula-language/grammar.md',
+    'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md')),
+    ROOT / 'docs/decisions/decision_canonical-expression-spelling.md',
+    ROOT / 'docs/decisions/decision_recipe-bytes.md', ROOT / 'docs/book/src/annexes/formula-literals.md',
+    *(HERE / name for name in ('canonical_statement_cases.tsv', 'canonical_recipe_cases.tsv',
+                              'canonical_worked_recipe_cases.tsv', 'recipe_refusal_stage_cases.tsv')))
+
+
+def source_plan(extra=()):
+    """Validate all delegated inputs and the selected borrowed fixture without producing effects."""
+    try:
+        PROFILE['plan_producer'](ROOT, sources=(*REFERENCE_INPUTS, *extra))
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
+
+
+try:
+    source_plan()
+    context = runpy.run_path(str(HERE / 'recipe_byte_contract.py'))
+    PROFILE = context['PROFILE']
+    source_plan()
+    statement_bytes = context['statement_bytes']
+    recipe_bytes = context['recipe_bytes']
+    reference = context['reference']
+    book = (ROOT / 'docs/book/src/spec/formula-language/examples.md').read_text()
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+
 
 def rows(name):
-    return [line.split('\t') for line in (HERE / name).read_text().splitlines()
+    fixture_path = HERE / name
+    source_plan((fixture_path,))
+    return [line.split('\t') for line in fixture_path.read_text().splitlines()
             if line and not line.startswith('#')]
 
 section = ''

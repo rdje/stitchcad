@@ -262,28 +262,33 @@ Whole0220 verification retained in [part289](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a20`
   Status: `done`
-  Own0221: four expression/reduction references, complete read-only plans/pure mode/physical/real controls;
-  retain whole0220 task/lesson/ledger before growth; book source-guard section/crosslinks, runner/ledgers/live sync.
-  Preserve all original syntax/oracle bodies and reduction --emit independence from the unused TSV.
-  Own label-only changelog containment: preserve every table target/coverage/identity; shorter part labels free space without retiring facts.
+  Goal: Expression/reduction references; complete scope and proof retained in part290.
+  Acceptance: part290 verified.
 
-  Goal: Expression and reduction reference libraries; sources and kinds in the watched ledger.
-  Acceptance: ordered group acceptance above.
-
-- [x] REPRODUCE / ISSUE: python_expression_reduction_contract.py --before executes four actual3d1be74 bodies and stops unchecked helper loads without effects, rc=0, target/expression-reduction-before.log; complete entries/helpers/fixtures/contracts/book and emit/argument modes reviewed.
-- [x] ROOT CAUSE: delegated sources/fixture reads need complete nonmutating plans. Default on3.9/3.14 passes13 actual plan/read reds/four independently loaded provider-adoption reds, rc=0, target/expression-reduction-controls{,39}.log; original complete bodies/assertions/factors exact.
-- [x] FIX: full sources before providers, actual-profile adoption and fresh read checks; default and emit retain zero activation/files/children. Captures7/9/16/9 plans, emit8, rc=0, controls logs. Unused reduction TSV is absent from emit's source authority; duplicate weaker bootstrap was removed before final verification.
-- [x] ADDRESSED: --real both versions retains12/24 shape rows,55 bytes/all25 book expressions,176 Fraction rows103/73 and witnesses6/39/134/173; emit byte-identical;22 inputs exact after each child, rc=0, target/expression-reduction-real{,39}.log. Controls32 physical/four hardlink positives/32 repeated refusals/three unsafe-unused emit positives pass0.
-- [x] NO REGRESSION: census252/311/effect73/file143, publication45/coverage9/archive28+642/ledger11+13 pass, rc=0, target/expression-reduction-{census,publication,coverage,archive,ledger}.log; scopes are pure/no Rust changes. Old label-only actual pointer verdict was byte-identical0; targets/coverage/identities unchanged.
-- [x] LOCKSTEP: --continuity both versions proves whole289/200/public reads/prior immutable/reference bytes/task graph exact, rc=0, target/expression-reduction-continuity{,39}.log. Annex old bytes reconstruct after the one guard link; receipt12open196sealed/no overlap passes0.
-  Book/live/runner/ledgers/MEMORY route.a21; caps/400 fixed. Promotion: declined; existing source/purity/mode rules. Commit0221.
-
-  Final staged gate13 green, rc=0, target/expression-reduction-staged-gate.log;404-byte receipt folded without text loss.
+Whole0221 verification retained in [part290](../history/stitchcad-devnotes-part290.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a21`
-  Status: `pending`
+  Status: `done`
+  Own0222: input-review/whole-phase references, full pure boot/read/borrowed-call plans and controls;
+  whole0221 task/lesson/ledger retention before growth, book/ledgers/runner/live sync.
+  Preserve original assertions, D148 contracts/FAULTS/argv, in-memory compilation and exact source bytes.
+  Control calibration: input adoption omission keeps the bootstrap profile and reaches the independent identity red;
+  it does not raise the delegated Refusal. Correct its expected verdict; whole-phase adoption still yields escaped Refusal.
+  D156 rows(name) repeats the unchecked caller-path gap: unsafe names can read outside the local source plan.
+  Own exact selected-path validation now; reproduce before any unsafe read, retain valid borrowed fixtures.
   Goal: Input and whole phase reference libraries; sources and kinds in the watched ledger.
   Acceptance: ordered group acceptance above.
+
+- [x] REPRODUCE / ISSUE: python_input_phase_contract.py --before executes both actual5a70e3d bodies and stops unchecked helper loads before effects, rc=0, target/input-phase-controls{,39}.log; full public sources/dependencies/fixtures/borrowed calls/modes/book reviewed.
+- [x] ROOT CAUSE: delegated provider and selected input authority must be planned before reads, then refreshed per call. Both versions pass9 actual guard reds/two independent provider-adoption reds; every original assertion/complete input/D148 body/eleven FAULTS/argv and selected-row renderer exact, rc=0, controls logs.
+- [x] FIX: complete20/10-source plans before providers; actual profile adoption; fresh book/table/source/borrowed-call guards. Captures29 input/7 borrowed-phase/29 CLI-mutation plans, zero effects, rc=0, controls logs. Pure modes and prepared/unrelated caller state preserved.
+- [x] ADDRESSED: actual caller gap/red stops before outside read; six selected-path verdicts/twelve repeated calls preserve safe results.16 CLI refusals/two hardlink positives/16 repeated import and16 later source-drift refusals pass0. --real both versions preserves21 statements/25 operands/13 stages,584 phase cases/eleven compiled body reds;22 bytes inputs
+  exact after every child, rc=0, target/input-phase-real{,39}.log.
+
+- [x] NO REGRESSION: census253/312/effect73/file144, publication45/coverage9/archive28+644/ledger11+13 pass, rc=0, target/input-phase-{census,publication,coverage-probes,archive,ledger}.log; receipt12open196sealed/no overlap passes0, input-phase-receipt.log. No Rust changes or native fault jobs.
+- [x] LOCKSTEP: --continuity both versions proves whole290/201/Git intervals/public reads/prior archives/reference bytes/task IDs exact, rc=0, target/input-phase-continuity{,39}.log. Book/live/runner/ledgers/MEMORY route.a22; fixed caps and400 cadence. Promotion declined: established source/purity/borrowed-call rules. Commit0222.
+
+  Final staged gate13 green, rc=0, target/input-phase-staged-gate.log; all new receipt lines within400 bytes.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a22`
   Status: `pending`

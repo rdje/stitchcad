@@ -286,6 +286,9 @@ no canonical product identity and grants no numerical/geometry execution authori
 python3 -I -B docs/tasks/artifacts/formula_structure/whole_phase_contract.py --mutations
 ```
 
+The [pure reference guards](formula-recipe-inputs.md#pure-input-review-and-phase-reference-guards)
+cover imports, borrowed calls and the in-memory mutation mode.
+
 D148's584 independent controls combine earlier missing-name, kind, callee, input-collision and
 reserved-name errors with later malformed syntax, invalid annotations, literal width and node/
 conditional/4096-statement bounds. Traces verify all input finishes before static inference or

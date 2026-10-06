@@ -112,9 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
-## STITCHCAD-G1-0221 — expression/reduction plans
+## STITCHCAD-G1-0222 — input/whole-phase plans
 
-.a20: pure guards/emit; original12/24/55+25/176 rows and22 input bytes exact on3.9/3.14.
+.a21: pure guards/borrowed callers; both versions preserve21 statements/25 operands/584 cases/11 faults and22 inputs.
+
+| [201](docs/history/stitchcad-changelog-part201.md) | whole0221 | sealed |
 
 | [199](docs/history/stitchcad-changelog-part199.md) | 0219 | sealed |
 

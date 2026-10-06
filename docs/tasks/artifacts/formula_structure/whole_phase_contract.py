@@ -4,12 +4,43 @@ import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-ORACLE = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_namespace_contract.py'))
-SOURCE = ORACLE['SOURCE']
+HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, HERE / 'static_namespace_contract.py',
+               HERE / 'static_signature_contract.py',
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh')
+REFERENCE_INPUTS = (*BOOT_INPUTS, *(ROOT / 'docs/book/src' / name for name in (
+    'spec/formula-language.md', 'spec/formula-language/grammar.md',
+    'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md')))
+
+
+def source_plan():
+    """Check complete reference authority before module loading, borrowed calls and source reads."""
+    try:
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
+
+
+try:
+    source_plan()
+    ORACLE = runpy.run_path(str(HERE / 'static_namespace_contract.py'))
+    PROFILE = ORACLE['PROFILE']
+    SOURCE = ORACLE['SOURCE']
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
 
 
 def contracts(replacement=None, verbose=True):
-    ns, reference = ORACLE['LOADER']['load_reference'](replacement)
+    source_plan()
+    try:
+        ns, reference = ORACLE['LOADER']['load_reference'](replacement)
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
     declaration = ORACLE['Declaration']
     env = [('width', declaration('length', 'measurement')),
            ('flag', declaration('boolean', 'parameter'))]
@@ -172,6 +203,7 @@ FAULTS = (
 )
 
 if __name__ == '__main__':
+    source_plan()
     original = SOURCE.read_bytes()
     contracts()
     if '--mutations' in sys.argv:
@@ -183,5 +215,6 @@ if __name__ == '__main__':
                 print('  actual compiled D148 body assertion red:', name)
             else:
                 raise AssertionError(('D148 fault escaped', name))
+        source_plan()
         assert SOURCE.read_bytes() == original, 'D148 on-disk source changed'
         print('D148 faults: %d actual compiled body assertion reds; source unchanged' % len(FAULTS))

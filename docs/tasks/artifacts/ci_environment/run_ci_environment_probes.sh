@@ -24,6 +24,7 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/receipt_retention_contr
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_signed_angle_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_recipe_statement_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_expression_reduction_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_input_phase_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_payload_library_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py" --native

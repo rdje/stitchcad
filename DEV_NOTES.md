@@ -3,13 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — pure expression/reduction sources
+## _(2026-10-06 UTC)_ — pure input/phase references
 
-.a20 keeps all syntax/oracle bodies and factors exact; complete plans precede loaders/reads.
-Default/emit stay pure, including three unsafe-unused TSV positives. Both versions pass13
-omission reds/32 physical/32 repeated refusals/four adoption reds. Real22 inputs/emitted176
-rows stay exact. Whole0220 retained289/200;86 label folds preserve actual pointers/identities.
-Promotion declined: established source/purity/mode rules.
+.a21 plans complete sources before loaders/reads and rechecks borrowed calls/selected fixture paths.
+All original input/D148 bodies,11 faults and argv stay exact; pure imports/mutations keep no outputs.
+Whole0221 retained290/201 with exact Git/public reads; proof belongs to .a21.
+Promotion declined: established source/purity/borrowed-call rules.
+
+Whole0221 task/lesson retained in [part290](docs/history/stitchcad-devnotes-part290.md).
 
 Whole0220 task/lesson retained in [part289](docs/history/stitchcad-devnotes-part289.md).
 
