@@ -175,15 +175,17 @@ Whole original completed scopes retained in [part268](../history/stitchcad-devno
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a05`
   Status: `done`
-  Own0204: reserved/control/live/book/whole retention/ledger; target/reserved-plan-*.
   Paths: docs/tasks/artifacts/formula_structure/reserved_diagnostic_review.py.
-  Paths also: docs/tasks/artifacts/ci_environment/python_payload_library_contract.py;python_static_loader_contract.py; producer ledger; target/loader-*.
   Goal: Reserved diagnostic library; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
+Whole0204 task/lesson/scope retained in [part269](../history/stitchcad-devnotes-part269.md).
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a06`
-  Status: `pending`
-  Goal: Original reference location library; sources and kinds in the watched ledger.
+  Status: `done`
+  Own0205: target/locator-plan-*;target/loader-*.
+  Paths: docs/tasks/artifacts/formula_structure/reference_locator_contract.py; docs/tasks/artifacts/ci_environment/python_static_loader_contract.py.
+  Goal: Location library; D206 selector fixed and closed in128.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a07`
@@ -753,11 +755,13 @@ Whole0202 task and pure payload lesson retained in [part265](../history/stitchca
 
 Whole0203 task and geometry/call lesson retained in [part267](../history/stitchcad-devnotes-part267.md).
 
-### G1-SLICE.5b.4c.h2.b.p.o.a05
-- [x] REPRODUCE: original import delegates before own plan, rc=0, target/reserved-plan-before.log.
-- [x] ROOT CAUSE: own bootstrap omitted before helper reads; actual red rc=0, reserved-plan-before.log.
-- [x] FIX: bootstrap4/reference9/shared Refusal, original AST/argv exact, rc=0, reserved-plan-control.log.
-- [x] ADDRESSED: python_payload_library_contract.py:27 captures/17 reds/50CLI/20borrowed/5disable pass3.9+3.14; rc=0, reserved-plan-control{,39}.log.
-- [x] NO REGRESSION: python_static_loader_contract.py --native:3624/19+263/10+26723,7CLIs/all199/118Rust63/currentlib exact; rc=0, reserved-plan-native{,39}.log.
-- [x] LOCKSTEP: publication45/census9+9+4/coverage9/archive28+CLI600/ledger767+11+13;581reads/prior577/all68/proofs3/nav/map/caps exact, rc=0, reserved-plan-continuity.log. Docs/book/next.a06;promotion declined/400 stays.
-Final staged gate13 green, rc=0, target/reserved-plan-staged-gate.log.
+Whole0204 task/lesson/scope retained in [part269](../history/stitchcad-devnotes-part269.md).
+
+### G1-SLICE.5b.4c.h2.b.p.o.a06
+- [x] REPRODUCE: bootstrap omission red, rc=0, locator-plan-before.log.
+- [x] ROOT CAUSE: unplanned runpy/read, rc=0, locator-plan-before.log.
+- [x] FIX: plan6/11/selected source; AST exact, rc=0, locator-plan-control.log.
+- [x] ADDRESSED:25captures/14reds/28CLI+16borrow/4disable pass3.9+3.14, rc=0, locator-plan-control{,39}.log.
+- [x] NO REGRESSION: --native94+95/four faults/200inputs/118Rust63/lib exact, rc=0, locator-plan-native{,39}.log.
+- [x] LOCKSTEP: publication45/coverage9/archive28+CLI602/ledger769+11+13;583reads/prior581/all72/proofs/nav/map/caps/D206128 exact, rc=0, locator-plan-continuity.log. Docs/book/.a07;promotion declined/400.
+Final staged gate13 green, rc=0, target/locator-plan-staged-gate.log.

@@ -112,6 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0205 — reference location plans
+
+- Bootstrap6/reference11; both loaders/selected mutations preserved. Controls25/14/28+16+4/native94+95/four faults pass.
+- Whole0204 retained269; D206 fixed128; .a07 next.
+
 ## STITCHCAD-G1-0204 — reserved diagnostic plans
 
 - Pure bootstrap4/reference9; D131/grammar stay. Controls27/17/50+20+5; native3624/19.

@@ -16,21 +16,34 @@ HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
 PROFILE = ROOT / 'scripts/local_environment.py'
 SOURCE = ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh'
 ENTRIES = tuple(HERE / ('static_' + name + '_contract.py')
-                for name in ('signature', 'namespace', 'review'))
+                for name in ('signature', 'namespace', 'review')) + (HERE / 'reference_locator_contract.py',)
 BOOK_INPUTS = tuple(ROOT / 'docs/book/src' / name for name in (
     'spec/formula-language.md', 'spec/formula-language/grammar.md',
     'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md'))
 BOOT = {ENTRIES[0]: (ENTRIES[0], PROFILE, SOURCE),
         ENTRIES[1]: (ENTRIES[1], PROFILE, SOURCE, ENTRIES[0]),
-        ENTRIES[2]: (ENTRIES[2], PROFILE, SOURCE, ENTRIES[1], ENTRIES[0])}
+        ENTRIES[2]: (ENTRIES[2], PROFILE, SOURCE, ENTRIES[1], ENTRIES[0]),
+        ENTRIES[3]: (ENTRIES[3], PROFILE, SOURCE, ENTRIES[0], ENTRIES[1], ENTRIES[2])}
 INPUTS = {ENTRIES[0]: (*BOOT[ENTRIES[0]], *BOOK_INPUTS)}
 INPUTS[ENTRIES[1]] = (ENTRIES[1], *INPUTS[ENTRIES[0]])
 INPUTS[ENTRIES[2]] = (ENTRIES[2], *INPUTS[ENTRIES[1]])
+INPUTS[ENTRIES[3]] = (ENTRIES[3], *INPUTS[ENTRIES[2]])
 GOOD = runpy.run_path(str(PROFILE))
 GOOD['plan_producer'](ROOT, sources=(Path(__file__), PROFILE, SOURCE, *ENTRIES, *BOOK_INPUTS))
 FROZEN = {path: path.read_bytes() for path in (PROFILE, SOURCE, *ENTRIES, *BOOK_INPUTS)}
 TEXTS = {path: FROZEN[path].decode() for path in ENTRIES}
 BEFORE = 'a265306d22dbe6c706d4524a93d534c81f5ad38c'
+
+
+def locator_population(boundary):
+    program = FROZEN[SOURCE].decode().split("<<'PY'\n", 1)[1].rsplit('\nPY', 1)[0].split(boundary, 1)[0]
+    definitions = set()
+    for node in ast.parse(program).body:
+        if isinstance(node, ast.FunctionDef):
+            definitions.add((None, node.name))
+        elif isinstance(node, ast.ClassDef):
+            definitions.update((node.name, method.name) for method in node.body if isinstance(method, ast.FunctionDef))
+    return len(definitions)
 
 
 def capture(entry, mode, texts=None):
@@ -108,18 +121,31 @@ def capture(entry, mode, texts=None):
         with contextlib.redirect_stdout(output):
             exec(compile(scripts[entry], str(entry), 'exec'), namespace)
             if mode == 'contracts':
-                assert namespace['contracts'](verbose=False) == {ENTRIES[0]: 4032, ENTRIES[1]: 1139, ENTRIES[2]: 100}[entry]
+                expected = {ENTRIES[0]: 4032, ENTRIES[1]: 1139, ENTRIES[2]: 100,
+                            ENTRIES[3]: locator_population('print("-- tables read from the chapter")')}[entry]
+                for _ in range(2):
+                    assert namespace['contracts'](verbose=False) == expected
+            elif mode == 'review-contracts':
+                for _ in range(2):
+                    assert namespace['review_contracts'](verbose=False) == locator_population('# ── L1:')
             elif mode == 'mutations':
                 namespace['mutations']()
+            elif mode == 'review-mutations':
+                namespace['mutations'](namespace['REVIEW_SOURCE'], review=True)
             elif mode == 'load':
                 namespace['load_reference' if entry == ENTRIES[0] else 'load']()
             elif mode == 'quantum':
                 namespace['parameter_quantum_contract']()
             elif mode == 'fault-argv':
-                loader = namespace['load_reference' if entry == ENTRIES[0] else 'load']
+                loader = (namespace['HELPER']['load_reference'] if entry == ENTRIES[3]
+                          else namespace['load_reference' if entry == ENTRIES[0] else 'load'])
                 current_argv = sys.argv
                 try:
-                    loader(('import pathlib, re, sys', "raise RuntimeError('loader injected execution failure')"))
+                    replacement = ('import pathlib, re, sys', "raise RuntimeError('loader injected execution failure')")
+                    if entry == ENTRIES[3]:
+                        namespace['contracts'](lambda unused=None: loader(replacement), verbose=False)
+                    else:
+                        loader(replacement)
                 except RuntimeError as error:
                     assert str(error) == 'loader injected execution failure'
                 else:
@@ -172,7 +198,9 @@ def physical_controls():
     generation = ROOT / 'target/loader-physical' / str(os.getpid())
     cases = ('missing', 'symlink', 'directory', 'nested-repo', 'symlink-store', 'invalid-toolchain')
     total = 0
-    for index, (entry, case) in enumerate((entry, case) for entry in ENTRIES for case in cases):
+    selected = [(entry, case) for entry in ENTRIES for case in cases]
+    selected += [(ENTRIES[3], 'helper-' + case) for case in cases[:4]]
+    for index, (entry, case) in enumerate(selected):
         sandbox = generation / str(index)
         assert not sandbox.exists(), 'loader physical fixture already exists'
         originals = INPUTS[entry]
@@ -183,16 +211,17 @@ def physical_controls():
         GOOD['prepare_producer'](ROOT, sources=originals, directories=tuple(sorted(directories)), output_files=tuple(mirrors.values()))
         for source, destination in mirrors.items():
             shutil.copy2(source, destination)
-        victim = mirrors[BOOK_INPUTS[-1]]
+        victim = mirrors[ENTRIES[2] if case.startswith('helper-') else BOOK_INPUTS[-1]]
+        fault_case = case.removeprefix('helper-')
         wanted = 'producer source is not a local regular file'
         extra = {}
-        if case == 'missing':
+        if fault_case == 'missing':
             victim.unlink()
-        elif case == 'symlink':
+        elif fault_case == 'symlink':
             victim.unlink(); victim.symlink_to(mirrors[SOURCE]); wanted = 'symlink producer source'
-        elif case == 'directory':
+        elif fault_case == 'directory':
             victim.unlink(); victim.mkdir()
-        elif case == 'nested-repo':
+        elif fault_case == 'nested-repo':
             marker = victim.parent / '.git'
             GOOD['directory'](ROOT, marker.parent.relative_to(ROOT).as_posix())
             marker.mkdir(); wanted = 'store crosses another Git repository'
@@ -277,11 +306,14 @@ def main():
             output, plans, reads = capture(entry, mode)
             print('actual loader capture:', entry.name, mode, plans, 'plans', reads, 'reads')
             captures += 1
-        if entry != ENTRIES[1]:
+        if entry in (ENTRIES[0], ENTRIES[2]):
             for mode in ('load', 'fault-argv'):
                 capture(entry, mode); captures += 1
         if entry == ENTRIES[2]:
             capture(entry, 'quantum'); captures += 1
+        if entry == ENTRIES[3]:
+            for mode in ('review-contracts', 'mutations', 'review-mutations', 'fault-argv'):
+                capture(entry, mode); captures += 1
         script = TEXTS[entry]
         bootstrap = "PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)"
         reference = "PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)"
@@ -306,9 +338,20 @@ def main():
                 else:
                     raise AssertionError(('loader actual guard omission escaped', entry.name, index, selected))
                 reds += 1
+        if entry == ENTRIES[3]:
+            selected_source = "PROFILE['plan_producer'](ROOT, sources=tuple(dict.fromkeys((*REFERENCE_INPUTS, source))))"
+            assert script.count(selected_source) == 1
+            for mode in ('mutations', 'review-mutations'):
+                try:
+                    capture(entry, mode, {entry: script.replace(selected_source, 'None', 1)})
+                except AssertionError as error:
+                    assert str(error) == 'loader reference read before complete fresh plan', (mode, error)
+                else:
+                    raise AssertionError(('locator selected source guard escaped', mode))
+                reds += 1
     physical = physical_controls()
     print('static loader controls:', captures, 'actual pure captures;', reds, 'actual guard reds;', physical,
-          'physical CLI refusals/12 borrowed refusals/3 actual planner-disable admissions; original bodies/populations/source/argv/prepared stores exact; no activation')
+          'physical CLI refusals/16 borrowed refusals/4 actual planner-disable admissions; original bodies/populations/source/argv/prepared stores exact; no activation')
 
 
 def native():
@@ -320,7 +363,7 @@ def native():
         'static_signature_contract.py', 'checked_recipe_mutations.py', 'static_coupled_contract.py',
         'first_phase_contract.py', 'static_coupled_driver.rs', 'canonical_worked_recipe_cases.tsv',
         'ambiguity_payload_contract.py', 'geometry_argument_contract.py', 'call_lookup_contract.py',
-        'reserved_diagnostic_review.py'))
+        'reserved_diagnostic_review.py', 'reference_locator_contract.py'))
     folders, book = [ROOT / 'docs/book/src'], []
     for folder in folders:
         GOOD['directory'](ROOT, folder.relative_to(ROOT).as_posix())
@@ -334,7 +377,8 @@ def native():
         'loader-native-first-phase.log', 'loader-native-coupled.log',
         'loader-native-frozen.json', 'loader-library.json',
         'loader-native-dimension.log', 'loader-native-ambiguity.log',
-        'loader-native-geometry.log', 'loader-native-call.log', 'loader-native-reserved.log'))
+        'loader-native-geometry.log', 'loader-native-call.log', 'loader-native-reserved.log',
+        'loader-native-locator.log'))
     GOOD['enter_producer'](ROOT, sources=sources, output_files=outputs)
     frozen = {path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest() for path in sources}
     for path in rust:
@@ -350,6 +394,8 @@ def native():
          ('call payloads:166', 'call payload faults:12', 'curve documentation:three')),
         ('reserved_diagnostic_review.py', ['--mutations'], outputs[8],
          ('D131 diagnostic contract: 3624', 'D131 diagnostic faults: 19')),
+        ('reference_locator_contract.py', ['--mutations'], outputs[9],
+         ('reference locator contracts:', 'reference locator faults:2')),
         ('first_phase_contract.py', ['--mutations'], outputs[0],
          ('D150 public:263', 'D150 reference:263', 'D150 faults:10')),
         ('static_coupled_contract.py', [], outputs[1], ('coupled static review: 26723 shared cases',)),
@@ -377,7 +423,7 @@ def native():
     outputs[3].write_text(json.dumps(artifact, indent=2) + '\n')
     print('native loader proof:', len(frozen), 'inputs;', len(rust), 'tracked Rust files;',
           sum('/src/' in path.relative_to(ROOT).as_posix() for path in rust),
-          'production sources exact; 4023/3814/15 dimension;4192/16 ambiguity;97/12 geometry;166/12+3 call;3624/19 reserved;263/10 competing;26723 coupled; current library frozen; rc=0')
+          'production sources exact; 4023/3814/15 dimension;4192/16 ambiguity;97/12 geometry;166/12+3 call;3624/19 reserved;both locator prefixes/four faults;263/10 competing;26723 coupled; current library frozen; rc=0')
 
 
 if __name__ == '__main__':

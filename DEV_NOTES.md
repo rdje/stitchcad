@@ -3,33 +3,38 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — reserved diagnostic library source plans
+## _(2026-10-06 UTC)_ — original location-library source plans
 
-Owner: G1-SLICE.5b.4c.h2.b.p.o.a05; commands and terminal outputs in its acceptance.
-Actual import capture originally delegated without its own complete source plan (reserved-plan-before.log).
-A four-source pure bootstrap now validates the library/profile/census/signature helper before delegation.
-Each contracts call and CLI validate all nine reference inputs before canonical-row or census reads;
-borrowed calls share the exact provider Refusal. D131 real-source payloads, metadata-only behavior,
-permissive mutation argv, authored case/fault bodies and grammar remain exact against historical AST.
+Owner G1-SLICE.5b.4c.h2.b.p.o.a06. Its acceptance records terminal commands/logs.
+The actual old import delegated to its signature helper before a closed source plan. It now
+validates all six bootstrap sources (own/profile/census/signature/namespace/review) before either
+helper, and all eleven reference inputs before original AST/traceback checks or loader callbacks.
+Standalone mutations also plan the selected helper before read/compile; caller-provided signature
+and review loaders remain supported. The CLI has no direct read before these guarded calls, so a
+redundant standalone plan was removed after its omission validly admitted the unchanged CLI.
+Both function bodies/catalogs/CLI recognition remain AST-exact against the historical source.
 
-python_payload_library_contract.py now covers five libraries, twice-invoked contracts and normal/fault
-argv identity:27 actual pure captures/17 omitted-guard reds/50 CLI and20 borrowed physical refusals/
-5 actual planner-disable admissions. Both Python3.14 and OS3.9 terminate0 without activation or child
-calls. Independent curve-only positives retain the unrelated-chapter/output distinctions.
-python_static_loader_contract.py --native runs seven real consumers sequentially: original3624/19
-reserved,4023/3814/15 dimension,4192/16 ambiguity,97/12 geometry,166/12+3 call,263/10 first-phase,
-26723 coupled. It rechecks all199 inputs after each child and freezes the actual current Cargo library;
-all118 tracked Rust files (63 production) remain exact. Neither this slice nor its oracle grants
-independent human approval or repairs a grammar/numerical engine contract.
+The existing watched python_static_loader_contract.py now covers four libraries. Its25 captures
+include repeated borrowed contracts, both locator prefixes and mutation sources, and custom-loader
+normal/exception argv restoration. Fourteen actual omitted guards fail,28 physical CLI and16 borrowed
+refusals are named; four disabled actual planners admit the selected invalid plan. Both Python3.14
+and OS3.9 finish0 with exact source/environment and no activation/effects. Native mode runs eight
+real CLIs:94/95 actual original locations/real traceback text/virtual frames and four loader faults,
+original diagnostic mutation populations,263/10 first-phase and26723 coupled. All200 inputs are
+rechecked after each child; all118 tracked Rust files (63 production) and current Cargo library stay.
 
-Whole0203 task/lesson267, completed scope268, whole0194 ledger183 and whole0196/0195 ledgers184
-retain SourceHEAD fb91e383e9bf28a471d9a05bd57dff47d27a0b73 intervals and identities. Full FILE validation,
-fresh single-link copy, inventory and public read precede retirement. A draft extra-ledger selector
-included already retained0194; the exact-live-copy assertion refused before writes. Selecting the
-next actual heading fixed the selector and retained only complete0196/0195 units. Final continuity
-checks prior577 logical/all68 physical, all581 public reads, closed headers, navigation, frozen inputs,
-proof siblings, map and fixed caps. .a06 takes the next frontier;400 cadence remains.
-Promotion declined: existing finite-library and immutable-retention contracts already own this work.
+D206: a draft short newline marker selected a phrase inside the0204 lesson; the Promotion assertion
+refused before retirement. An actual compiled selector control reproduces that red and proves that
+omitting completeness admits a partial lesson. The exact full navigation line selects all2332B.
+Whole0204 task947B/lesson2332B/completed scope614B retain SourceHEAD a654f5937f19a22d89796135142fb19a9bbdcb5c
+intervals in269. Full FILE validation/copy/inventory/public read preceded retirement; all canonical
+fields remain live. Authored D206 report/closure128 is explicitly absent from that SourceHEAD.
+Its draft407B report line was wrapped before admission, preserving words under the400B FILE limit.
+Prior581/all72 physical controls, protected proof siblings, navigation and fixed caps remain owned
+by the final continuity check;12 open/193 sealed re-derived. Book/live/frontier sync;400 cadence stays.
+Promotion declined: existing source-plan and complete-unit retention rules already cover this repair.
+
+Whole0204 task/lesson/scope retained in [part269](docs/history/stitchcad-devnotes-part269.md).
 
 Whole0203 task and geometry/call lesson retained in [part267](docs/history/stitchcad-devnotes-part267.md).
 
@@ -204,3 +209,7 @@ committed table and original links. Recent records follow; older identities rema
 | [part267](docs/history/stitchcad-devnotes-part267.md) | whole0203 task and geometry/call lesson | 43 lines, 3882 bytes, sha256:cda30653… |
 
 | [part268](docs/history/stitchcad-devnotes-part268.md) | whole completed geometry/call scope | 7 lines, 692 bytes, sha256:523c9127… |
+
+| [part269](docs/history/stitchcad-devnotes-part269.md) | whole0204 task/lesson/scope | 42 lines, 3893 bytes, sha256:fae39ec6… |
+
+| [part128](docs/history/stitchcad-defects-part128.md) | D206 report/verified closure | 7 lines, 712 bytes, sha256:d12bedb6… |

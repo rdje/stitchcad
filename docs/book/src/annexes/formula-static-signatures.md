@@ -82,7 +82,7 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_static_loader_contract.
 python3 -I -B docs/tasks/artifacts/ci_environment/python_static_loader_contract.py --native
 ```
 
-The watched control executes all three original bodies: imports, ordinary and mutation CLI modes,
+The watched control executes all four original bodies: imports, ordinary and mutation CLI modes,
 borrowed contracts, both reference loaders and exception-path argv restoration. Per-call source
 plans are checked independently before reads and delegation; omission of an actual guard must fail.
 Real isolated filesystem faults and disabled actual planner bodies distinguish refusal from admission.
@@ -124,10 +124,21 @@ log alias exists. A complete reference contract still refuses its missing requir
 The shared payload control checks these boundaries, repeated calls, all actual guard omissions and
 physical helper/book refusals; the native control runs both original mutation CLIs before consumers.
 
-Reserved_diagnostic_review.py applies the same four-input bootstrap and fresh nine-input borrowed
-plan before checking its canonical diagnostic row or compiling the reference. Its original3624
+`reserved_diagnostic_review.py` applies the same four-input bootstrap and fresh nine-input borrowed
+plan before checking its canonical diagnostic row or compiling the reference. Its original 3,624
 D131 source-bearing cases and nineteen faults retain formula_rebinding, actual available locations
 and metadata-only inputs. It preserves permissive mutation argv and shares the provider's Refusal.
 The payload control covers this fifth library; native mode runs its real mutation CLI too.
 The [D131 decision](formula-static-validation.md#reserved-name-diagnostic-sources), grammar and
 independent-approval boundary are unchanged by these file/source plans.
+
+The location library validates six bootstrap inputs before either helper is loaded, then eleven
+reference inputs before its original AST, traceback or delegated reference checks. Standalone
+mutations also validate the selected helper source before reading or compiling it in memory.
+Both loader parameters remain available; calls preserve caller argv and prepared stores. The
+existing real filename/line/text checks and explicitly virtual fault filenames remain active.
+For example, contracts() checks the signature prefix, review_contracts() checks the whole-review
+prefix, and mutations(REVIEW_SOURCE, review=True) exercises the second actual loader. These calls
+create no files or child processes. The shared static-loader control covers both borrowed paths,
+repeated calls, selected-source guard omissions and physical helper/book refusals; native mode
+runs the real CLI and both prefixes' original offset/filename faults before the engine consumers.

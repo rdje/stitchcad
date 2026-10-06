@@ -7,14 +7,28 @@ import traceback
 
 ROOT = Path(__file__).resolve().parents[4]
 HELPER_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'
+REVIEW_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/static_review_contract.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE,
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh',
+               HELPER_SOURCE, ROOT / 'docs/tasks/artifacts/formula_structure/static_namespace_contract.py',
+               REVIEW_SOURCE)
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
 HELPER = runpy.run_path(str(HELPER_SOURCE))
 SOURCE = HELPER['SOURCE']
-REVIEW_SOURCE = ROOT / 'docs/tasks/artifacts/formula_structure/static_review_contract.py'
 REVIEW = runpy.run_path(str(REVIEW_SOURCE))
+PROFILE = HELPER['PROFILE']
+REFERENCE_INPUTS = (Path(__file__), *REVIEW['REFERENCE_INPUTS'])
 
 
 def contracts(loader=None, verbose=True, *, boundary='print("-- tables read from the chapter")',
               fault_filename='<formula reference fault>'):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     loader = loader or HELPER['load_reference']
     original = SOURCE.read_bytes()
     header, program = original.decode().split("<<'PY'\n", 1)
@@ -76,6 +90,7 @@ def review_contracts(loader=None, verbose=True):
 
 
 def mutations(source=HELPER_SOURCE, *, review=False):
+    PROFILE['plan_producer'](ROOT, sources=tuple(dict.fromkeys((*REFERENCE_INPUTS, source))))
     original = source.read_bytes()
     for label, before, after in (
         ('omit original offset', "compile('\\n' * line_offset + prefix, filename, 'exec')", "compile(prefix, filename, 'exec')"),
@@ -101,8 +116,12 @@ def mutations(source=HELPER_SOURCE, *, review=False):
 
 
 if __name__ == '__main__':
-    contracts()
-    review_contracts()
-    if '--mutations' in sys.argv:
-        mutations()
-        mutations(REVIEW_SOURCE, review=True)
+    try:
+        contracts()
+        review_contracts()
+        if '--mutations' in sys.argv:
+            mutations()
+            mutations(REVIEW_SOURCE, review=True)
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
