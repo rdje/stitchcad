@@ -14,7 +14,8 @@ HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
 PROFILE = ROOT / 'scripts/local_environment.py'
 SOURCE = ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh'
 ENTRIES = tuple(HERE / name for name in ('dimension_payload_contract.py',
-    'ambiguity_payload_contract.py', 'geometry_argument_contract.py', 'call_lookup_contract.py'))
+    'ambiguity_payload_contract.py', 'geometry_argument_contract.py', 'call_lookup_contract.py',
+    'reserved_diagnostic_review.py'))
 SIGNATURE = HERE / 'static_signature_contract.py'
 NAMESPACE = HERE / 'static_namespace_contract.py'
 ALL_ENTRIES = (*ENTRIES, SIGNATURE, NAMESPACE)
@@ -26,13 +27,15 @@ BOOT = {SIGNATURE: (SIGNATURE, PROFILE, SOURCE),
         ENTRIES[0]: (ENTRIES[0], PROFILE, SOURCE, SIGNATURE),
         ENTRIES[1]: (ENTRIES[1], PROFILE, SOURCE, NAMESPACE, SIGNATURE),
         ENTRIES[2]: (ENTRIES[2], PROFILE, SOURCE, SIGNATURE),
-        ENTRIES[3]: (ENTRIES[3], PROFILE, SOURCE, SIGNATURE)}
+        ENTRIES[3]: (ENTRIES[3], PROFILE, SOURCE, SIGNATURE),
+        ENTRIES[4]: (ENTRIES[4], PROFILE, SOURCE, SIGNATURE)}
 INPUTS = {SIGNATURE: (*BOOT[SIGNATURE], *BOOK_INPUTS)}
 INPUTS[NAMESPACE] = (NAMESPACE, *INPUTS[SIGNATURE])
 INPUTS[ENTRIES[0]] = (ENTRIES[0], *INPUTS[SIGNATURE])
 INPUTS[ENTRIES[1]] = (ENTRIES[1], *INPUTS[NAMESPACE])
 INPUTS[ENTRIES[2]] = (ENTRIES[2], *INPUTS[SIGNATURE])
 INPUTS[ENTRIES[3]] = (ENTRIES[3], *INPUTS[SIGNATURE])
+INPUTS[ENTRIES[4]] = (ENTRIES[4], *INPUTS[SIGNATURE])
 CURVE_INPUTS = (ENTRIES[3], PROFILE, BOOK_INPUTS[-1])
 GOOD = runpy.run_path(str(PROFILE))
 GOOD['plan_producer'](ROOT, sources=(Path(__file__), PROFILE, SOURCE, *ALL_ENTRIES, *BOOK_INPUTS))
@@ -124,7 +127,7 @@ def capture(entry, mode, texts=None):
                         groups, refusals = result
                         assert sum(groups.values()) == 4023 and refusals == 3814, 'payload dimension population drift'
                     else:
-                        assert result == {ENTRIES[1]: 4192, ENTRIES[2]: 97, ENTRIES[3]: 166}[entry], 'payload case population drift'
+                        assert result == {ENTRIES[1]: 4192, ENTRIES[2]: 97, ENTRIES[3]: 166, ENTRIES[4]: 3624}[entry], 'payload case population drift'
             elif mode == 'curve':
                 for _ in range(2):
                     namespace['curve_contract']()
@@ -172,7 +175,7 @@ def original_bodies():
                 actual = next(n for n in current.body if type(n) is type(node) and n.name == node.name)
                 assert ast.dump(actual) == ast.dump(node), ('payload original body changed', entry.name, node.name)
             elif isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id in
-                    ('FAULTS', 'UNARY', 'BINARY', 'CALLS', 'RESULTS', 'UNBOUND', 'CURVES', 'CONSTRAINTS') for t in node.targets):
+                    ('FAULTS', 'UNARY', 'BINARY', 'CALLS', 'RESULTS', 'UNBOUND', 'CURVES', 'CONSTRAINTS', 'RESERVED', 'ORIGINS', 'KINDS', 'ROW') for t in node.targets):
                 assert any(ast.dump(n) == ast.dump(node) for n in current.body), 'payload authored population changed'
         old_main = next(node for node in original.body if isinstance(node, ast.If)
                         and ast.unparse(node.test) == "__name__ == '__main__'")
@@ -373,7 +376,7 @@ def main():
     physical = physical_controls()
     curve_controls()
     print('payload library controls:', captures, 'actual pure captures;', reds, 'actual guard reds;', physical,
-          'physical CLI refusals/16 borrowed refusals/4 actual planner-disable admissions; original bodies/populations/source/argv/prepared stores exact; no activation')
+          'physical CLI refusals/20 borrowed refusals/5 actual planner-disable admissions; original bodies/populations/source/argv/prepared stores exact; no activation')
 
 
 if __name__ == '__main__':

@@ -3,40 +3,35 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — geometry and call-library source plans
+## _(2026-10-06 UTC)_ — reserved diagnostic library source plans
 
-D156's two public libraries delegated without their own nonmutating source plans; the actual
-control rejects both original bootstrap omissions. Each now validates bootstrap4/reference9
-before imports, borrowed contracts and CLI delegation. Geometry mutations() validates before
-its source-byte read. Direct curve_contract() validates its own script/profile/units chapter3;
-it needs no unrelated chapter or unused output path. Provider Refusal identity is retained.
-Standalone Refusal/OSError use the existing named diagnostic/exit2; other failures retain type.
+Owner: G1-SLICE.5b.4c.h2.b.p.o.a05; commands and terminal outputs in its acceptance.
+Actual import capture originally delegated without its own complete source plan (reserved-plan-before.log).
+A four-source pure bootstrap now validates the library/profile/census/signature helper before delegation.
+Each contracts call and CLI validate all nine reference inputs before canonical-row or census reads;
+borrowed calls share the exact provider Refusal. D131 real-source payloads, metadata-only behavior,
+permissive mutation argv, authored case/fault bodies and grammar remain exact against historical AST.
 
-The shared watched control preserves all four libraries' original functions/classes/catalogs/
-faults/CLI bodies by AST comparison after removing only new guards/refusal wrappers. Its22 pure
-captures include repeated contracts, exception argv restoration, geometry mutations and direct
-curve reads. Fourteen actual guard omissions,40 physical CLI refusals,16 borrowed refusals and
-four actual shared-planner disables discriminate plans from effects. Two real curve positives
-accept an unrelated missing chapter or unused output alias without effects; the full reference
-still refuses its required missing chapter. Python3.14 and OS Python3.9.6 pass; stores/argv stay.
+python_payload_library_contract.py now covers five libraries, twice-invoked contracts and normal/fault
+argv identity:27 actual pure captures/17 omitted-guard reds/50 CLI and20 borrowed physical refusals/
+5 actual planner-disable admissions. Both Python3.14 and OS3.9 terminate0 without activation or child
+calls. Independent curve-only positives retain the unrelated-chapter/output distinctions.
+python_static_loader_contract.py --native runs seven real consumers sequentially: original3624/19
+reserved,4023/3814/15 dimension,4192/16 ambiguity,97/12 geometry,166/12+3 call,263/10 first-phase,
+26723 coupled. It rechecks all199 inputs after each child and freezes the actual current Cargo library;
+all118 tracked Rust files (63 production) remain exact. Neither this slice nor its oracle grants
+independent human approval or repairs a grammar/numerical engine contract.
 
-Geometry retains97 cases/75 complete dimension refusals, successful exact cache/provenance replay
-and twelve actual compiled faults. Call lookup retains166 cases/twelve faults/three loaded curve
-faults, complete callee/source/alternative payloads and argument/value/execution traps. This is
-reference behavior; product geometry/operation/runtime signoff remains in its existing lanes.
+Whole0203 task/lesson267, completed scope268, whole0194 ledger183 and whole0196/0195 ledgers184
+retain SourceHEAD fb91e383e9bf28a471d9a05bd57dff47d27a0b73 intervals and identities. Full FILE validation,
+fresh single-link copy, inventory and public read precede retirement. A draft extra-ledger selector
+included already retained0194; the exact-live-copy assertion refused before writes. Selecting the
+next actual heading fixed the selector and retained only complete0196/0195 units. Final continuity
+checks prior577 logical/all68 physical, all581 public reads, closed headers, navigation, frozen inputs,
+proof siblings, map and fixed caps. .a06 takes the next frontier;400 cadence remains.
+Promotion declined: existing finite-library and immutable-retention contracts already own this work.
 
-The watched native mode runs all four real reference mutation CLIs before the first-phase263/ten
-faults and26723 coupled consumer. Every198 frozen input (including118 Rust/63 production sources)
-and the Cargo-current library is verified after every child. This slice changes no engine, grammar,
-source-fault lists or native bridge/shared adapters; their unchanged consumers remain exercised.
-All project-owned files/stores/fixtures stay under repository-derived paths on the repository volume.
-
-Whole Source0202 task1358+lesson2927→265 and0193 ledger313→CH182 were FILE-checked/copied/inventoried/
-publicly read before retirement. Exact newline-anchored complete boundaries retain the final gate
-and promotion paragraphs; no ambiguous prefix. Whole completed payload scope→266 precedes Own-only
-retirement and preserves canonical ID/status/goal/paths/acceptance. Prior574/all physical bytes and
-all existing sealed records stay exact under fixed caps.400 push cadence and unobserved remote
-verdict boundary remain. Promotion declined: established pure-call/fresh-plan/whole-retention rules.
+Whole0203 task and geometry/call lesson retained in [part267](docs/history/stitchcad-devnotes-part267.md).
 
 Whole0202 task and pure payload lesson retained in [part265](docs/history/stitchcad-devnotes-part265.md).
 
@@ -205,3 +200,7 @@ committed table and original links. Recent records follow; older identities rema
 | [part265](docs/history/stitchcad-devnotes-part265.md) | whole0202 task and pure payload lesson | 46 lines, 4285 bytes, sha256:9c8393f1… |
 
 | [part266](docs/history/stitchcad-devnotes-part266.md) | whole completed payload-library scope | 8 lines, 870 bytes, sha256:93c7f85b… |
+
+| [part267](docs/history/stitchcad-devnotes-part267.md) | whole0203 task and geometry/call lesson | 43 lines, 3882 bytes, sha256:cda30653… |
+
+| [part268](docs/history/stitchcad-devnotes-part268.md) | whole completed geometry/call scope | 7 lines, 692 bytes, sha256:523c9127… |

@@ -112,6 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0204 — reserved diagnostic plans
+
+- Pure bootstrap4/reference9; D131/grammar stay. Controls27/17/50+20+5; native3624/19.
+- Retention267/268/183/184; full acceptance in .a05.
+
 ## STITCHCAD-G1-0203 — geometry/call plans
 
 - Pure4/9; curve3;22 captures/14 reds/40+16 refusals/4 admissions/two positives0.
@@ -155,22 +160,8 @@ the digests afterwards.
 - 17 files/1 input; original6 calls/5 guards/75 frozen/63Rust exact.
 - 549 reads/28+568/45/9/727+11+13 pass; whole249/250/176 retained; grammar/400 stay.
 
-## STITCHCAD-G1-0196 - recipe owner files/D199 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n13.1`)
 
-- 2 inputs/29 files; original5 guards/4 examples/14 calls.
-- Shared775/35/58/307; native5+4/75 frozen/63Rust exact.
-- D199 fixed;546reads/28+565/45/9/723+11+13 pass; caps/grammar/400 stay.
 
-## STITCHCAD-G1-0195 - committed window9 guard (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n13.h.v`)
-
-- Copied guard refusal1; root31/HEAD exact.
-- Whole246/174 retained;542 reads/caps exact.
-- 28/561/45/9/718+11+13 pass; grammar/400 stay.
-
-## STITCHCAD-G1-0194 - window9 continuity (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n13.h`)
-
-- Source56/537 exact; copy/verify before retirement; prior8 stay.
-- Whole244/245/CH173 retained; caps/engine/grammar/400 unchanged.
 
 
 
@@ -355,3 +346,7 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part181](docs/history/stitchcad-changelog-part181.md) | whole0192 reduction-plan ledger | 6 lines, 389 bytes, sha256:30f3b928… |
 
 | [part182](docs/history/stitchcad-changelog-part182.md) | whole0193 input-plan ledger | 5 lines, 313 bytes, sha256:bed0904d… |
+
+| [part183](docs/history/stitchcad-changelog-part183.md) | whole0194 window9 ledger | 4 lines, 216 bytes, sha256:165a4b92… |
+
+| [part184](docs/history/stitchcad-changelog-part184.md) | whole0196/0195 ledgers | 10 lines, 507 bytes, sha256:88e5570a… |

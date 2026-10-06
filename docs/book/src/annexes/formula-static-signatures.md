@@ -123,3 +123,11 @@ chapter. It can inspect that table while an unrelated reference chapter is missi
 log alias exists. A complete reference contract still refuses its missing required chapter.
 The shared payload control checks these boundaries, repeated calls, all actual guard omissions and
 physical helper/book refusals; the native control runs both original mutation CLIs before consumers.
+
+Reserved_diagnostic_review.py applies the same four-input bootstrap and fresh nine-input borrowed
+plan before checking its canonical diagnostic row or compiling the reference. Its original3624
+D131 source-bearing cases and nineteen faults retain formula_rebinding, actual available locations
+and metadata-only inputs. It preserves permissive mutation argv and shares the provider's Refusal.
+The payload control covers this fifth library; native mode runs its real mutation CLI too.
+The [D131 decision](formula-static-validation.md#reserved-name-diagnostic-sources), grammar and
+independent-approval boundary are unchanged by these file/source plans.

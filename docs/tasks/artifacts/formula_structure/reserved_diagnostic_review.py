@@ -9,7 +9,19 @@ import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-LOADER = runpy.run_path(str(ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'))
+HELPER = ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE,
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh', HELPER)
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+LOADER = runpy.run_path(str(HELPER))
+PROFILE = LOADER['PROFILE']
+REFERENCE_INPUTS = (Path(__file__), *LOADER['REFERENCE_INPUTS'])
 SOURCE = LOADER['SOURCE']
 CONTRACT = ROOT / 'docs/book/src/spec/formula-language.md'
 RESERVED = (
@@ -53,6 +65,7 @@ class ReservedKind:
 
 
 def contracts(replacement=None, verbose=True):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     assert ROW in CONTRACT.read_text(), 'D131 canonical diagnostic row drift'
     ns, reference = LOADER['load_reference'](replacement)
     assert {name: data[0] for name, data in reference.reserved.items()} == {
@@ -176,21 +189,26 @@ FAULTS = (
 
 
 if __name__ == '__main__':
-    original = SOURCE.read_bytes()
-    contracts()
-    if '--mutations' in sys.argv:
-        for label, before, after in FAULTS:
-            # Two reserved-case sites deliberately share the reason; target the initial guard.
-            if label == 'reserved reason':
-                before = '"name": name, "reason": "reserved_name",\n                            "reserved_source": self._reserved_source(name),\n                            "attempted_source": {"role": "initial_declaration"'
-                after = before.replace('"reserved_name"', '"recipe_name"')
-            try:
-                contracts((before, after), False)
-            except AssertionError as error:
-                assert any(marker in str(error) for marker in ('D131 refusal token', 'D131 argument payload',
-                           'D131 non-metadata read', 'D131 reserved availability/value read')), (label, error)
-                print('  actual compiled diagnostic assertion red:', label)
-            else:
-                raise AssertionError(('D131 fault escaped', label))
-        assert SOURCE.read_bytes() == original, 'D131 producer bytes changed'
-        print('D131 diagnostic faults: %d actual assertion reds; producer unchanged' % len(FAULTS))
+    try:
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+        original = SOURCE.read_bytes()
+        contracts()
+        if '--mutations' in sys.argv:
+            for label, before, after in FAULTS:
+                # Two reserved-case sites deliberately share the reason; target the initial guard.
+                if label == 'reserved reason':
+                    before = '"name": name, "reason": "reserved_name",\n                            "reserved_source": self._reserved_source(name),\n                            "attempted_source": {"role": "initial_declaration"'
+                    after = before.replace('"reserved_name"', '"recipe_name"')
+                try:
+                    contracts((before, after), False)
+                except AssertionError as error:
+                    assert any(marker in str(error) for marker in ('D131 refusal token', 'D131 argument payload',
+                               'D131 non-metadata read', 'D131 reserved availability/value read')), (label, error)
+                    print('  actual compiled diagnostic assertion red:', label)
+                else:
+                    raise AssertionError(('D131 fault escaped', label))
+            assert SOURCE.read_bytes() == original, 'D131 producer bytes changed'
+            print('D131 diagnostic faults: %d actual assertion reds; producer unchanged' % len(FAULTS))
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None

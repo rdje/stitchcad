@@ -167,14 +167,17 @@ Whole original completed scopes retained in [part266](../history/stitchcad-devno
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a04`
   Status: `done`
-  Own0203: geometry/call/controls/live/book/whole retention; target/geometry-call-*.
   Paths: docs/tasks/artifacts/formula_structure/geometry_argument_contract.py;docs/tasks/artifacts/formula_structure/call_lookup_contract.py.
-  Paths also: docs/tasks/artifacts/ci_environment/python_payload_library_contract.py;python_static_loader_contract.py; producer ledger/runner; target/loader-*.
   Goal: Geometry and call metadata libraries; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
+Whole original completed scopes retained in [part268](../history/stitchcad-devnotes-part268.md).
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a05`
-  Status: `pending`
+  Status: `done`
+  Own0204: reserved/control/live/book/whole retention/ledger; target/reserved-plan-*.
+  Paths: docs/tasks/artifacts/formula_structure/reserved_diagnostic_review.py.
+  Paths also: docs/tasks/artifacts/ci_environment/python_payload_library_contract.py;python_static_loader_contract.py; producer ledger; target/loader-*.
   Goal: Reserved diagnostic library; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
@@ -748,12 +751,13 @@ Whole0201 task and public-loader lesson retained in [part262](../history/stitchc
 
 Whole0202 task and pure payload lesson retained in [part265](../history/stitchcad-devnotes-part265.md).
 
-### G1-SLICE.5b.4c.h2.b.p.o.a04 —0203 geometry/call
+Whole0203 task and geometry/call lesson retained in [part267](../history/stitchcad-devnotes-part267.md).
 
-- [x] REPRODUCE / ISSUE: two original bootstrap omissions fail actual capture, target/geometry-call-before.log, rc=0.
-- [x] ROOT CAUSE: complete libraries/public helper/book reviewed; bootstrap4/reference9, curve3, target/geometry-call-control.log, rc=0.
-- [x] FIX: fresh plans/shared Refusal/wrappers; original bodies/cases/CLI AST-exact, target/geometry-call-control39.log, rc=0.
-- [x] ADDRESSED:22 captures/14 omissions/40 CLI+16 borrowed refusals/four planner admissions/two curve positives pass3.9/3.14, target/geometry-call-control39.log, rc=0.
-- [x] NO REGRESSION: six real CLIs,97/12+166/12+3 and prior4023/3814/15+4192/16+263/10+26723;198 inputs/current library exact, target/geometry-call-native39.log, rc=0.
-- [x] LOCKSTEP: whole265/182/266/prior574/all65/65headers64live1retained/181pointers/map/caps0, target/geometry-call-continuity.log, rc=0; publication45/coverage9/archive28+CLI596/ledger761/census2320. promotion: declined; grammar/engine/400 stay; next.a05.
-Final staged gate13 green, rc=0, target/geometry-call-staged-gate.log.
+### G1-SLICE.5b.4c.h2.b.p.o.a05
+- [x] REPRODUCE: original import delegates before own plan, rc=0, target/reserved-plan-before.log.
+- [x] ROOT CAUSE: own bootstrap omitted before helper reads; actual red rc=0, reserved-plan-before.log.
+- [x] FIX: bootstrap4/reference9/shared Refusal, original AST/argv exact, rc=0, reserved-plan-control.log.
+- [x] ADDRESSED: python_payload_library_contract.py:27 captures/17 reds/50CLI/20borrowed/5disable pass3.9+3.14; rc=0, reserved-plan-control{,39}.log.
+- [x] NO REGRESSION: python_static_loader_contract.py --native:3624/19+263/10+26723,7CLIs/all199/118Rust63/currentlib exact; rc=0, reserved-plan-native{,39}.log.
+- [x] LOCKSTEP: publication45/census9+9+4/coverage9/archive28+CLI600/ledger767+11+13;581reads/prior577/all68/proofs3/nav/map/caps exact, rc=0, reserved-plan-continuity.log. Docs/book/next.a06;promotion declined/400 stays.
+Final staged gate13 green, rc=0, target/reserved-plan-staged-gate.log.
