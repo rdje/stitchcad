@@ -3,12 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — pure input/phase references
+## _(2026-10-06 UTC)_ — cleanup entry authority
 
-.a21 plans complete sources before loaders/reads and rechecks borrowed calls/selected fixture paths.
-All original input/D148 bodies,11 faults and argv stay exact; pure imports/mutations keep no outputs.
-Whole0221 retained290/201 with exact Git/public reads; proof belongs to .a21.
-Promotion declined: established source/purity/borrowed-call rules.
+.a22.1 guards audit/input/child authority; D210 strict process gate/D211 unique deletion links.
+Original policies/15 cases/11 reds preserved. Exact0222 task/lesson/cleanup paragraph291 and
+ledger202 kept before growth. Proof .a22.1; promotion declined: rules.
+
+Whole0222 task/lesson retained in [part291](docs/history/stitchcad-devnotes-part291.md).
 
 Whole0221 task/lesson retained in [part290](docs/history/stitchcad-devnotes-part290.md).
 

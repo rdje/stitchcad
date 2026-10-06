@@ -49,11 +49,10 @@ mismatch is simulated without off-volume writes. Actual stable setup/native/WASM
 caller exports absent. D156's direct standalone native/temp producer audit under .h2.b remains
 required before closure; CI's separate prepare/verify evidence above remains valid.
 
-Daily cleanup freezes ignored outputs, verifies idle processes and preserves tracked data/stores.
-Check all selected paths absent without activating the launcher, which recreates `target/scratch`;
-only then rebuild native/WASM/book outputs and run safety controls. Concurrent creators are accepted
-only as local directories; symlink/type/volume/Git checks precede descendant creation. Latest run
-and plan/apply examples: `docs/ARTIFACT_CLEANUP.md`.
+[Daily cleanup](annexes/artifact-cleanup.md) freezes ignored outputs, proves idle processes and
+preserves tracked data/stores. Check selected paths absent before launcher activation recreates
+scratch; then rebuild native/WASM/book and run controls. Concurrent creators must remain local
+directories; link/type/volume/Git checks precede descent. Latest record: docs/ARTIFACT_CLEANUP.md.
 
 The generated Knowledge Map lists task and decision links with concise labels. Their complete
 repository-relative filenames remain in each link destination; freshness checks verify regeneration.

@@ -72,6 +72,7 @@
 - [Made-to-measure API contract](annexes/mtm-input-contract.md)
 - [Implementation status and requirement owners](annexes/implementation-status.md)
 - [Governance model](governance.md)
+- [Artifact cleanup](annexes/artifact-cleanup.md)
 - [Build and check the project](build-and-checks.md)
 
 # Index

@@ -75,7 +75,7 @@ case('git-descendant', lambda p: (p / 'nested/.git').mkdir(parents=True),
      ("require(entry.name != '.git', 'nested repository: ' + rel)", 'pass'))
 case('nonignored', lambda p: None,
      lambda m, p: m['inspect']('README.md', set()), 'not ignored',
-     ("require(subprocess.run(['git', '-C', str(ROOT), 'check-ignore', '-q', '--', name]).returncode == 0,\n            'not ignored: ' + name)", 'pass'))
+     ("require(subprocess.run(['git', '-C', str(ROOT), 'check-ignore', '-q', '--', name], env=environment).returncode == 0,\n            'not ignored: ' + name)", 'pass'))
 case('protected-store', lambda p: None,
      lambda m, p: m['inspect']('target/cargo-home', set()), 'protected output/store',
      ("require(not any(under(name, p) for p in PROTECTED), 'protected output/store: ' + name)", 'pass'))
@@ -107,7 +107,7 @@ def foreign_device(module, fixture, entry=False):
     def foreign_stat(path, *args, **kwargs):
         answer = original_stat(path, *args, **kwargs)
         if path == selected:
-            return types.SimpleNamespace(st_dev=answer.st_dev + 1, st_mode=answer.st_mode)
+            return types.SimpleNamespace(st_dev=answer.st_dev + 1, st_mode=answer.st_mode, st_nlink=answer.st_nlink)
         return answer
 
     with patch.object(Path, 'stat', foreign_stat):

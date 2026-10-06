@@ -3,11 +3,16 @@ from pathlib import Path
 import hashlib
 import json
 import os
+import runpy
 import shutil
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+HANDOFF = ROOT / 'scripts/check_handoff.sh'
+CORE_INPUTS = (Path(__file__), PROFILE_SOURCE, HANDOFF, ROOT / 'scripts/handoff_census.py')
 TREES = ('target/doctrine_scratch', 'target/scratch', 'target/tmp',
          'target/debug/incremental', 'target/wasm32-unknown-unknown/debug/incremental',
          'docs/book/book')
@@ -26,8 +31,28 @@ def require(condition, reason):
         raise Refusal(reason)
 
 
+def source_plan(*, sources=(), directories=(), output_files=(), activate=False):
+    """Check read-only authority or prepare a complete producing plan before effects."""
+    plan = dict(sources=(*CORE_INPUTS, *sources), directories=directories, output_files=output_files)
+    try:
+        PROFILE['plan_producer'](ROOT, **plan)
+        if activate:
+            return PROFILE['prepare_producer'](ROOT, **plan)
+        return PROFILE['environment_for'](ROOT, os.environ, create=False)
+    except (PROFILE['Refusal'], OSError) as error:
+        raise Refusal('producer plan: ' + str(error)) from None
+
+
+try:
+    source_plan()
+except Refusal as error:
+    print('cleanup refused:', error, file=sys.stderr)
+    raise SystemExit(2) from None
+
+
 def git(*args):
-    return subprocess.check_output(['git', '-C', str(ROOT), *args])
+    environment = source_plan()
+    return subprocess.check_output(['git', '-C', str(ROOT), *args], env=environment)
 
 
 def tracked():
@@ -56,7 +81,8 @@ def inspect(name, tracked_paths):
     path = local(Path(name))
     require(not any(under(name, p) for p in PROTECTED), 'protected output/store: ' + name)
     require(not any(under(p, name) for p in tracked_paths), 'tracked descendant: ' + name)
-    require(subprocess.run(['git', '-C', str(ROOT), 'check-ignore', '-q', '--', name]).returncode == 0,
+    environment = source_plan()
+    require(subprocess.run(['git', '-C', str(ROOT), 'check-ignore', '-q', '--', name], env=environment).returncode == 0,
             'not ignored: ' + name)
     digest = hashlib.sha256()
     files = size = 0
@@ -73,6 +99,7 @@ def inspect(name, tracked_paths):
             digest.update(b'directory\0')
             entries.extend(sorted(entry.iterdir(), reverse=True))
         else:
+            require(entry.stat().st_nlink == 1, 'hard-linked entry: ' + rel)
             digest.update(b'file\0')
             content = hashlib.sha256()
             file_size = 0
@@ -91,6 +118,7 @@ def inspect(name, tracked_paths):
 
 
 def tracked_digest(paths):
+    source_plan(sources=tuple(ROOT / name for name in paths))
     digest = hashlib.sha256()
     for name in sorted(paths):
         path = local(Path(name))
@@ -101,6 +129,7 @@ def tracked_digest(paths):
 
 
 def census():
+    source_plan()
     paths = tracked()
     candidates = []
     skipped = []
@@ -135,6 +164,7 @@ def census():
                     candidates.append(inspect(item, paths))
                 except Refusal as error:
                     skipped.append({'path': item, 'reason': str(error)})
+    source_plan()
     return {'producer_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             'head': git('rev-parse', 'HEAD').decode().strip(),
             'tracked_sha256': tracked_digest(paths),
@@ -150,6 +180,7 @@ def record_directory(name):
 
 
 def save(path, value):
+    source_plan(directories=(path.parent,), output_files=(path,))
     with path.open('x') as stream:
         json.dump(value, stream, sort_keys=True, indent=2)
         stream.write('\n')
@@ -159,17 +190,37 @@ def validate_plan(plan, current):
     require(current == plan, 'plan drift: regenerate with a fresh run identity')
 
 
+def audit_plan(directory, mode, *, activate=False):
+    """Resolve both CLI and borrowed audit authority before reads, creation or deletion."""
+    require(mode in ('plan', 'apply'), 'unknown audit mode')
+    try:
+        relative = PROFILE['producer_path'](ROOT, directory)
+    except PROFILE['Refusal'] as error:
+        raise Refusal('producer plan: ' + str(error)) from None
+    directory = record_directory(relative)
+    plan_input = (directory / 'plan.json',) if mode == 'apply' else ()
+    outputs = (directory / ('plan.json' if mode == 'plan' else 'result.json'),)
+    source_plan(sources=plan_input, directories=(directory,), output_files=outputs)
+    inputs = (*plan_input, *(ROOT / name for name in tracked()))
+    return source_plan(sources=inputs, directories=(directory,),
+                       output_files=outputs, activate=activate)
+
+
 def apply(directory):
+    audit_plan(directory, 'apply')
     plan_path = local((directory / 'plan.json').relative_to(ROOT))
     plan = json.loads(plan_path.read_text())
     require(not (directory / 'result.json').exists(), 'run already applied')
     require(shutil.rmtree.avoids_symlink_attacks, 'runtime lacks safe directory removal')
+    environment = audit_plan(directory, 'apply', activate=True)
     validate_plan(plan, census())
-    subprocess.run(['bash', str(ROOT / 'scripts/check_no_background_jobs.sh')], cwd=ROOT, check=True)
+    audit_plan(directory, 'apply')
+    subprocess.run(['bash', str(HANDOFF)], cwd=ROOT, env=environment, check=True)
     for row in plan['candidates']:
         # Recheck immediately before each removal as well as against the complete frozen census.
         require(inspect(row['path'], tracked()) == row, 'candidate drift: ' + row['path'])
         path = local(Path(row['path']))
+        audit_plan(directory, 'apply')
         if row['kind'] == 'tree':
             shutil.rmtree(path)
         else:
@@ -191,7 +242,7 @@ def main():
             'usage: cleanup.py plan|apply target/artifact_cleanup_audit/<run>')
     directory = record_directory(sys.argv[2])
     if sys.argv[1] == 'plan':
-        directory.mkdir(parents=True, exist_ok=True)
+        audit_plan(directory, 'plan', activate=True)
         value = census()
         save(directory / 'plan.json', value)
         print('cleanup plan:', len(value['candidates']), 'candidates;', len(value['skipped']), 'skipped')

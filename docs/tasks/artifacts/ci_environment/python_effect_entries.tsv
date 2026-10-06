@@ -57,8 +57,8 @@ docs/tasks/artifacts/formula_structure/canonical_expression_reference.py	delegat
 docs/tasks/artifacts/formula_structure/reduction_boundary_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a20
 docs/tasks/artifacts/formula_structure/recipe_input_review_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a21
 docs/tasks/artifacts/formula_structure/whole_phase_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a21
-docs/tasks/artifacts/artifact_cleanup/cleanup.py	output	G1-SLICE.5b.4c.h2.b.p.o.a22
-docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py	output	G1-SLICE.5b.4c.h2.b.p.o.a22
+docs/tasks/artifacts/artifact_cleanup/cleanup.py	output	G1-SLICE.5b.4c.h2.b.p.o.a22.1
+docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py	output	G1-SLICE.5b.4c.h2.b.p.o.a22.2
 docs/tasks/artifacts/book_publication/book_publication.py	output	G1-SLICE.5b.4c.h2.b.p.o.a23
 docs/tasks/artifacts/changelog/ledger_pointer_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a23
 docs/tasks/artifacts/changelog/ledger_pointer_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a23

@@ -1056,3 +1056,5 @@ D207 whole authored report/verified closure retained in [part129](../history/win
 D208 whole authored candidate title repair retained in [part130](../history/stitchcad-defects-part130.md).
 
 D209 whole report/verified repair retained in [part131](../history/stitchcad-defects-part131.md).
+
+D210/D211 whole authored reports/verified repairs retained in [part132](../history/stitchcad-defects-part132.md).

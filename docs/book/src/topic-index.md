@@ -92,3 +92,5 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Whole-expression literal normalization](annexes/formula-literals.md#normalize-every-literal-in-an-expression)
 - [Worked examples](spec/formula-language/examples.md)
 - [Working with agents](learn/agents-and-workflows.md)
+
+- [Artifact cleanup](annexes/artifact-cleanup.md)

@@ -269,31 +269,59 @@ Whole0221 verification retained in [part290](../history/stitchcad-devnotes-part2
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a21`
   Status: `done`
-  Own0222: input-review/whole-phase references, full pure boot/read/borrowed-call plans and controls;
-  whole0221 task/lesson/ledger retention before growth, book/ledgers/runner/live sync.
-  Preserve original assertions, D148 contracts/FAULTS/argv, in-memory compilation and exact source bytes.
-  Control calibration: input adoption omission keeps the bootstrap profile and reaches the independent identity red;
-  it does not raise the delegated Refusal. Correct its expected verdict; whole-phase adoption still yields escaped Refusal.
-  D156 rows(name) repeats the unchecked caller-path gap: unsafe names can read outside the local source plan.
-  Own exact selected-path validation now; reproduce before any unsafe read, retain valid borrowed fixtures.
-  Goal: Input and whole phase reference libraries; sources and kinds in the watched ledger.
-  Acceptance: ordered group acceptance above.
+  Goal: Input/whole-phase references; complete scope and proof retained in part291.
+  Acceptance: part291 verified.
 
-- [x] REPRODUCE / ISSUE: python_input_phase_contract.py --before executes both actual5a70e3d bodies and stops unchecked helper loads before effects, rc=0, target/input-phase-controls{,39}.log; full public sources/dependencies/fixtures/borrowed calls/modes/book reviewed.
-- [x] ROOT CAUSE: delegated provider and selected input authority must be planned before reads, then refreshed per call. Both versions pass9 actual guard reds/two independent provider-adoption reds; every original assertion/complete input/D148 body/eleven FAULTS/argv and selected-row renderer exact, rc=0, controls logs.
-- [x] FIX: complete20/10-source plans before providers; actual profile adoption; fresh book/table/source/borrowed-call guards. Captures29 input/7 borrowed-phase/29 CLI-mutation plans, zero effects, rc=0, controls logs. Pure modes and prepared/unrelated caller state preserved.
-- [x] ADDRESSED: actual caller gap/red stops before outside read; six selected-path verdicts/twelve repeated calls preserve safe results.16 CLI refusals/two hardlink positives/16 repeated import and16 later source-drift refusals pass0. --real both versions preserves21 statements/25 operands/13 stages,584 phase cases/eleven compiled body reds;22 bytes inputs
-  exact after every child, rc=0, target/input-phase-real{,39}.log.
-
-- [x] NO REGRESSION: census253/312/effect73/file144, publication45/coverage9/archive28+644/ledger11+13 pass, rc=0, target/input-phase-{census,publication,coverage-probes,archive,ledger}.log; receipt12open196sealed/no overlap passes0, input-phase-receipt.log. No Rust changes or native fault jobs.
-- [x] LOCKSTEP: --continuity both versions proves whole290/201/Git intervals/public reads/prior archives/reference bytes/task IDs exact, rc=0, target/input-phase-continuity{,39}.log. Book/live/runner/ledgers/MEMORY route.a22; fixed caps and400 cadence. Promotion declined: established source/purity/borrowed-call rules. Commit0222.
-
-  Final staged gate13 green, rc=0, target/input-phase-staged-gate.log; all new receipt lines within400 bytes.
+Whole0222 verification retained in [part291](../history/stitchcad-devnotes-part291.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a22`
-  Status: `pending`
+  Status: `in_progress`
+  Own0223: entry/fixture split, guarded cleanup dispatch and exact continuity retention before growth;
+  read full207/140-line entry/fixtures, locality/deletion/process/record contracts and book.
+  Legacy process-gate concern: apply invokes check_no_background_jobs.sh although check_handoff.sh is canonical.
+  Own safe actual dispatch reproduction before deletion, then repair strict evidence if verified; fixtures follow .1.
+  D210 verified: legacy0/current2 on actual unavailable lsof; controlled actual apply reached trapped deletion,
+  victim/source exact, rc=0, target/cleanup-entry-before.log. .1 fixes before real deletion.
   Goal: Cleanup entry and fixtures; sources and kinds in the watched ledger.
   Acceptance: ordered group acceptance above.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a22.1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0223 cleanup entry complete mode/source/audit-file/child plans and strict process proof.
+  Own blocking cap retention: staged collection1502021 exceeded1500000; whole committed cleanup/window8 blocks and
+  all detached retrieval records retained292/exact public read before retirement; ceiling unchanged.
+  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup.py; new ci_environment/python_cleanup_entry_contract.py
+  Control calibration: changing HANDOFF also changed the core source population, producing an earlier core-authority red.
+  Isolate dispatch argv instead; audit-plan observations distinguish complete dynamic inputs before every creation/deletion.
+  Capture calibration: the rmtree observer must retain avoids_symlink_attacks; first capture failed before deletion
+  on the omitted observer attribute. Preserve the real runtime capability and rerun; no original guard changed.
+  Own D211 unique-link deletion admission and the fixture stat adapter field needed for its existing device faults.
+  Controlled alias.log/shared.dat st_nlink2 was admitted as one candidate without deletion; fix now, original15/11 stay.
+  Also own the one existing nonignored fixture anchor rebase needed for the explicit Git child environment;
+  all original fixture cases/guard semantics remain; complete fixture authority belongs to .2.
+  Acceptance: preserve frozen census/ignored safety/original refusals/argv/exclusive JSON files; actual captures,
+  omissions and physical refusals before effects, safe isolated real consumers, whole0222 task/lesson/ledger retention,
+  source/book/live/ledgers/control sync. No real project deletion during guard development.
+
+- [x] REPRODUCE / ISSUE: python_cleanup_entry_contract.py --before compiles actual80e9d33 apply with a controlled frozen census; real legacy checker0/current2 on unavailable lsof reaches trapped deletion, victim/source exact, rc=0, target/cleanup-entry-before.log. Original inspect admits a two-link controlled candidate, no deletion; actual watched control
+  preserves proof.
+- [x] ROOT CAUSE: stale legacy child bypasses strict evidence; deletion file link count was absent. Actual statuses0/1/2/stale-dispatch assertion red and unique-link original admission/refusal/guard red pass both versions, rc=0, target/cleanup-entry-controls{,39}.log. D210/D211 whole authored reports/closures132 publicly exact.
+- [x] FIX: complete core/full Git-listed source/audit authority before activation; prepared read-only Git and producing process children; fresh exact audit file/removal plans; exclusive JSON/source-only metadata semantics stay. Captures41 plans/9 effects/one guarded child pass0; original complete bodies/constants/signatures/census/JSON/argv exact through
+  declared adapters.
+- [x] ADDRESSED: both versions pass14 actual CLI physical refusals/five plan/save/environment/dispatch reds, rc=0, controls logs. Real plan both preserves636 tracked inputs and removes no real project output, rc=0, target/cleanup-entry-real{,39}.log. Existing probes retain15 cases/11 compiled reds on3.9/3.14, rc=0,
+  target/cleanup-entry-original-probes{,39}.log; compatibility-only anchor/stat adapter changes owned.
+- [x] NO REGRESSION: census254/313/effect73/31groups/file145/69owners, publication45/65chapters, coverage9, archive28+648/628reads and ledger11+13 pass, rc=0, target/cleanup-entry-{census,publication,coverage,archive,ledger}.log. No Rust changes/native jobs. Receipt12open198sealed/no overlap passes0, target/cleanup-entry-receipt.log.
+- [x] LOCKSTEP: --continuity both versions proves whole291/292/202/Git intervals/public reads/132 identities/prior archives/public helpers and original task graph plus two declared children exact, rc=0, target/cleanup-entry-continuity{,39}.log. New cleanup chapter/SUMMARY/index/build link preserve old paragraph whole291. Book/live/runner/ledgers/MEMORY
+  route.a22.2; fixed caps/400 cadence. Promotion declined: existing authority/evidence/deletion rules. Commit0223.
+
+Staged doctrine gate: all13 green, rc=0, target/cleanup-entry-staged-gate.log; whole292/public read restores fixed cap.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a22.2`
+  Status: `pending`
+  Goal: cleanup fixtures complete input/output/restoration plans and original15 cases/11 guard reds.
+  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py
+  Acceptance: full source/public API/test/book review before changes; actual capture/omission/physical and real proof,
+  preserve safe ignored fixtures, no selected real cleanup output deletion, prepared caller stores.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23`
   Status: `pending`
@@ -594,11 +622,10 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h`
   Status: `done`
-  Goal: STITCHCAD-G1-0180 window8 continuity before .n09: pack57 complete0f223cb raw records; retain whole committed0179/task, checked-expression DEV214, lexer CH158 and window5/6 book DEV215 before growth.
-  Paths: .doctrine/history_archive/;docs/history/;docs/book/src/governance.md;DEV_NOTES.md;CHANGELOG.md;live/frontier/link records;docs/tasks/G1-SLICE-runtime-proof.md;guarded target/window8-* helpers/fixtures/logs.
-  Acceptance: complete public reader/schema/capture/CLI/book contracts; guard all inputs/destinations before effects; deterministic fixture proves481 source/read/materialized records. Single-link census/copy-verify before retiring only57 exact raw copies; prior7 windows/master prefix/source intervals/public reads/fixed caps exact; focused gates before commit. No Rust/grammar/cadence change.
+  Goal: Whole completed scope and original retrieval records retained in part292.
+  Acceptance: exact committed interval/public read verified.
 
-Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#window8-retention); canonical ownership remains above.
+Whole record retained in [part292](../history/stitchcad-devnotes-part292.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h.v`
   Status: `done`
@@ -753,46 +780,10 @@ Whole original completed n14 scope retained in [part254](../history/window10.md#
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup2`
   Status: `done`
-  Goal: STITCHCAD-G1-0186 due daily artifact cleanup; frozen plan/safe apply/exact residue.
+  Goal: Whole completed scope and original retrieval records retained in part292.
+  Acceptance: exact committed interval/public read verified.
 
-Whole original completed scopes retained in [part264](../history/window10.md#stitchcad-devnotes-part264md).
-
-Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#daily-cleanup-and-concurrent-store-verification); canonical ownership remains above.
-
-
-Whole completed n11/n12 retrieval records,0193 preparation/acceptance/gates and input lesson retained in [part244](../history/window10.md#stitchcad-devnotes-part244md); canonical ownership remains above.
-
-Whole0194 task and continuity lesson retained in [part246](../history/window10.md#stitchcad-devnotes-part246md).
-
-Whole0195 receipts and original bridge inspection retained in [part247](../history/window10.md#stitchcad-devnotes-part247md).
-
-Whole0196 task and recipe compiler lesson retained in [part249](../history/window10.md#stitchcad-devnotes-part249md).
-
-Whole0197 task and statement compiler lesson retained in [part251](../history/window10.md#stitchcad-devnotes-part251md).
-
-Whole0198 task and coupled static lesson retained in [part253](../history/window10.md#stitchcad-devnotes-part253md).
-
-Whole0199 task and bridge lesson retained in [part256](../history/window10.md#stitchcad-devnotes-part256md).
-
-Whole0200 task and copied-book lesson retained in [part260](../history/window10.md#stitchcad-devnotes-part260md).
-
-Whole0201 task and public-loader lesson retained in [part262](../history/window10.md#stitchcad-devnotes-part262md).
-
-Whole0202 task and pure payload lesson retained in [part265](../history/window10.md#stitchcad-devnotes-part265md).
-
-Whole0203 task and geometry/call lesson retained in [part267](../history/window10.md#stitchcad-devnotes-part267md).
-
-Whole0204 task/lesson/scope retained in [part269](../history/window10.md#stitchcad-devnotes-part269md).
-
-Whole0205 task/lesson/scope retained in [part270](../history/window10.md#stitchcad-devnotes-part270md).
-
-Whole0206 task/lesson retained in [part271](../history/window10.md#stitchcad-devnotes-part271md).
-
-Whole0207 task/lesson retained in [part274](../history/window10.md#stitchcad-devnotes-part274md).
-
-Whole0208 task/lesson retained in [part275](../history/stitchcad-devnotes-part275.md).
-
-D208 candidate title repair verified; whole report [130](../history/stitchcad-defects-part130.md); assert-plan-title-proof.log rc=0.
+Whole record retained in [part292](../history/stitchcad-devnotes-part292.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h10.v`
   Status: `done`

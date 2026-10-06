@@ -112,9 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
-## STITCHCAD-G1-0222 — input/whole-phase plans
+## STITCHCAD-G1-0223 — cleanup entry authority
 
-.a21: pure guards/borrowed callers; both versions preserve21 statements/25 operands/584 cases/11 faults and22 inputs.
+.a22.1: complete audit/input/child plans; strict process gate and unique-link deletion checks; original15/11 preserved.
+
+| [202](docs/history/stitchcad-changelog-part202.md) | whole0222 | sealed |
 
 | [201](docs/history/stitchcad-changelog-part201.md) | whole0221 | sealed |
 
