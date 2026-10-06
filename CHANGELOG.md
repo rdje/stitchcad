@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0198 - coupled static plans (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n14`)
+
+- Files7/244,20 inputs/4 mutable; borrowed7/current libraries; original cases/argv stay.
+- Shared1125/35/58/329; native26723+28+6+3/restored/263+10;93 frozen/63Rust exact.
+- Whole251/252/177 and book matrix retained;552reads/28+571/45/9/731+11+13 pass; caps/grammar/400 stay.
+
 ## STITCHCAD-G1-0197 - statement compiler files (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n13.2`)
 
 - 17 files/1 input; original6 calls/5 guards/75 frozen/63Rust exact.
@@ -171,12 +177,6 @@ the digests afterwards.
 - Whole0188/DEV229/CH168/authored230/D195117 preflight/public read before retirement.
 - D196 role repair/real689/11arms/13pointers pass0; retention519/publication45/coverage9 pass0; call next; grammar/400 stay.
 
-## STITCHCAD-G1-0188 - operator plans and D192 evidence (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.2`)
-
-- Three inputs/15 logs/one mutable/class0;14 original faults/every body current macro/full5 exact.
-- Shared641/35/48/246; D192 operator verified, wanted/call owned; D194 UTC correction verified.
-- Whole0187/ordered4596B/DEV226/CH167/authored227/defects116 retained;512 reads exact.
-- Book/live/wanted next; Rust/grammar/400 stay; D156/D34 open.
 
 
 
@@ -343,3 +343,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part175](docs/history/stitchcad-changelog-part175.md) | whole0186 cleanup ledger | 5 lines, 417 bytes, sha256:61cb12f1… |
 
 | [part176](docs/history/stitchcad-changelog-part176.md) | whole0187 builtin ledger | 6 lines, 479 bytes, sha256:09460dee… |
+
+| [part177](docs/history/stitchcad-changelog-part177.md) | whole0188 operator ledger | 6 lines, 443 bytes, sha256:fcb51477… |

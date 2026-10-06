@@ -4,6 +4,37 @@ Detailed technical notes — root cause, implementation, validation — per slic
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
 
+## _(2026-10-06 UTC)_ — coupled static complete plans
+
+Ordinary execution declares7 files and20 read-only inputs; mutation CLI declares244 files
+and only its4 Rust sources writable. Each build label independently plans7 outputs/current
+inputs before mkdir/Cargo, including the borrowed first-phase label. Cargo-reported libraries,
+metadata and dependency directories receive pure checks before Rustc. Prepared stores remain.
+The original26723 cases,28 Rust/six reference/three annex faults and all child arguments stay.
+Actual captures retain ordinary3/mutation90/early-refusal8/borrowed3 dispatch and restoration.
+
+The main static block supplies334 exact source-body omissions, including every initial file,
+source and writable input, each per-build output and current library plans. Physical15 CLI
+refusals precede reads/store activation/effects. Ordinary accepts all4 Rust inputs with3 links
+and ignores an unused mutation-tail alias. Profile4 binding reds/two guard-disable controls pass.
+Fresh python_producer_contract.py:1125 body reds/35 classifiers/58 captures/329 refusals, rc=0.
+
+static_coupled_contract.py --mutations passes baseline/restored26723 and28 Rust/6 reference/3
+annex reds. first_phase_contract.py --mutations passes263 public/reference cases and10 body
+reds. Independent verifier checks93 frozen inputs/63Rust, original case/fault functions/data,
+argv and bridge bytes, both26723 driver oracles,263 phase outputs and current library SHA.
+Both current driver binaries rerun exactly. Native and verifier terminal0; no compiler noise counts.
+Draft diagnostic precedence and helper-counter failures were consumed/fixed and uncredited.
+
+Before growth, whole d96 task1436B+lesson1384B→251,0188ledger443B→177 and completed n13
+scopes2573B→252 were copied/verified/read before live retirement. Prior549 identities/all40
+committed archive bytes stay. Book growth preflight refused before write: Source bytes2400–6034,
+3634B57L sha256:838ab2585ef2a6dfcfb9a82c9c4b548cd67f8003a54157ae67a73ac6b53f1023,
+are copied whole into formula-static-signatures.md before relocation, with both navigation routes.
+Final all552 reads/prior549/all40 bytes/59 Source headers55live4retained/176 pointers/three
+protected proofs/93 frozen/map/caps pass0. Ledger731 real/11 arms/13 pointers pass0.
+Current .n14 closes; .a01.2 copied-book fixtures next. D156, engine/grammar and400 cadence stay.
+
 Owner compiler lesson retained in [part181](docs/history/window7.md#stitchcad-devnotes-part181md).
 
 Window6 retention lesson retained in [part174](docs/history/window7.md#stitchcad-devnotes-part174md).
@@ -14,23 +45,7 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-## _(2026-10-06 UTC)_ — statement compiler complete destination plans
-
-- Declare one read-only source and all17 metadata/guard source/log/binary destinations
-  before reads or effects; expected compile failures still reserve their binary slots.
-- Keep original6 child calls/fixtures/strict E0451/E0515 diagnostics and prepared stores.
-  Validate every reported Cargo rlib/rmeta and library search directory without effects.
-- Both independent compiler captures require complete files/current-input/directory plans;
-  80 actual omission faults/14 physical refusal2; unique-profile4reds/two disables pass0.
-  Full shared5930 terminal0:799 body reds/35 classifiers/58 captures/314 physical refusals.
-- Native46725 and verifier0:five strict current-library guards/75 frozen/63Rust/
-  original public7-test/fixtures/argv/book examples/library SHA exact. Captures are dispatch proof.
-- Whole e76 task/lesson249,0187ledger176 and original2383B n12 scopes250 retained
-  before live retirement. Completed IDs/statuses/goals/paths/acceptance remain unchanged.
-- Final549 reads/prior546/37 controls/57 original scopes/175 pointers/nav/3proofs/caps exact0.
-  Archive28/CLI568/publication45/coverage9/ledger727real11arms13pointers pass0.
-- Promotion declined: existing complete-plan/current-artifact/whole-record rules.
-  D156/D34 remain open; coupled static next; engine/grammar/400 unchanged.
+Whole0197 task and statement compiler lesson retained in [part251](docs/history/stitchcad-devnotes-part251.md).
 
 Whole0196 task and recipe compiler lesson retained in [part249](docs/history/stitchcad-devnotes-part249.md).
 
@@ -138,3 +153,7 @@ committed table and original links. Recent records follow; older identities rema
 | [part249](docs/history/stitchcad-devnotes-part249.md) | whole0196 task and recipe compiler lesson | 38 lines, 2822 bytes, sha256:bff80147… |
 
 | [part250](docs/history/stitchcad-devnotes-part250.md) | whole completed n12 scopes | 26 lines, 2383 bytes, sha256:9b2c64f3… |
+
+| [part251](docs/history/stitchcad-devnotes-part251.md) | whole0197 task and statement compiler lesson | 37 lines, 2820 bytes, sha256:2cba3977… |
+
+| [part252](docs/history/stitchcad-devnotes-part252.md) | whole completed n13 scopes | 32 lines, 2573 bytes, sha256:ba323f3c… |

@@ -39,6 +39,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Formula syntax API](annexes/formula-syntax.md)
 - [Formula documentation controls](annexes/formula-documentation-controls.md)
 - [Static formula signature evidence](annexes/formula-static-validation.md)
+- [Reference formula signature matrix and source locations](annexes/formula-static-signatures.md)
 - [Formula namespaces and static headers](annexes/formula-static-validation.md#names-and-single-statement-static-checking)
 - [Whole-recipe static checking before execution](annexes/formula-static-validation.md#whole-recipe-before-execution)
 - [Static obligation map and remaining contracts](annexes/formula-static-validation.md#complete-static-review-and-remaining-contracts)

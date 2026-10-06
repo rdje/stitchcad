@@ -1895,8 +1895,9 @@ def driver_classifier_controls(text, path):
     assert classify(absolute + b':2:5:\ncustom\n'), 'D172 current absolute driver macro refused'
 
 
-def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
+def capture_static_entry(text, path, *, mutations=False, early_refusal=False, borrowed_label=None):
     """Actual standalone modes; all writes/children intercepted, native proof stays separate."""
+    assert borrowed_label is None or not mutations and not early_refusal, 'D156 static borrowed mode changed'
     here = ROOT / 'docs/tasks/artifacts/formula_structure'
     driver = here / 'static_coupled_driver.rs'
     mutable = tuple(ROOT / 'crates/sc-core/src/recipe' / name for name in (
@@ -1923,17 +1924,38 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
     deps = ROOT / custom['CARGO_TARGET_DIR'] / 'deps'
     GOOD['directory'](ROOT, deps.relative_to(ROOT).as_posix(), create=True)
     library = deps / 'libsc_core_dispatch_fixture.rlib'
+    dependency = deps / 'libdependency_dispatch_fixture.rmeta'
+    GOOD['plan_producer'](ROOT, output_files=(library, dependency))
     library.write_bytes(b'authored metadata fixture; never compiled')
-    metadata = json.dumps({'reason': 'compiler-artifact', 'target': {'name': 'sc_core', 'kind': ['lib']},
-                           'filenames': [str(library)]}) + '\n'
-    labels = ['baseline']
+    dependency.write_bytes(b'authored dependency metadata fixture; never compiled')
+    metadata = '\n'.join(json.dumps(message) for message in (
+        {'reason': 'compiler-artifact', 'target': {'name': 'dependency', 'kind': ['lib']},
+         'filenames': [str(dependency)]},
+        {'reason': 'compiler-artifact', 'target': {'name': 'sc_core', 'kind': ['lib']},
+         'filenames': [str(library)]})) + '\n'
+    filenames = ('cargo-artifacts.json', 'cargo.log', 'rustc.log', 'cases.hex.tsv',
+                 'driver.tsv', 'driver.log', 'driver')
+    planned_labels = ['baseline']
+    if mutations:
+        planned_labels += [f'fault-{index}' for index in range(1, 29)] + ['restored']
+    files = tuple(work / label / name for label in planned_labels for name in filenames)
+    reference_files = tuple(work / ('reference-' + name + '.log') for name in (
+        'operation-arguments', 'conditional-condition', 'variadic-consistency',
+        'complete-operand-kinds', 'metadata-value-queried', 'whole-phase-interleaved'))
+    if mutations:
+        files += tuple(work / f'fault-{index}/oracle.log' for index in range(1, 29))
+        files += reference_files
+    assert len(files) == (244 if mutations else 7), 'D156 static authored file population'
+    allowed_files = set(files)
+    labels = [borrowed_label] if borrowed_label is not None else ['baseline']
     if mutations:
         labels += ['fault-1', 'restored'] if early_refusal else [f'fault-{i}' for i in range(1, 29)] + ['restored']
-    scope = {'__file__': str(path), '__name__': '__main__'}
+    scope = {'__file__': str(path), '__name__': 'static_borrowed' if borrowed_label is not None else '__main__'}
     saved, argv = dict(os.environ), sys.argv
     mkdir, read_text, read_bytes = Path.mkdir, Path.read_text, Path.read_bytes
     write_text, write_bytes, run, run_path = Path.write_text, Path.write_bytes, subprocess.run, runpy.run_path
     observed, written, pending, plans, loads = [], {}, {}, [], []
+    build_plans, library_plans, library_directories = [], [], []
     batch, stage, outcome = 0, 0, None
 
     def environment(values):
@@ -1947,14 +1969,43 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
             loads.append(Path(file))
             return run_path(file, *args, **kwargs)
 
-        def enter(root, *, directories=(), sources=()):
+        def enter(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
             assert root == ROOT and directories == (work,), 'D156 static output plan changed'
             assert sources == tuple(originals), 'D156 static input plan changed'
+            assert output_files == files, 'D156 static file plan changed'
+            assert mutable_sources == (mutable if mutations else ()), 'D156 static mutable plan changed'
             assert not plans and not loads and not observed and not written, 'D156 static late profile'
             plans.append(True)
-            return GOOD['enter_producer'](root, directories=directories, sources=sources)
+            return GOOD['enter_producer'](root, directories=directories, output_files=output_files,
+                                          sources=sources, mutable_sources=mutable_sources)
 
-        return dict(GOOD, enter_producer=enter)
+        def plan(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
+            assert root == ROOT and not mutable_sources, 'D156 static pure plan changed'
+            label = labels[batch]
+            if directories:
+                output = work / label
+                assert stage == 0 and len(build_plans) == batch, 'D156 static build plan was late'
+                assert directories == (output,), 'D156 static build directory plan changed'
+                assert output_files == tuple(output / name for name in filenames), 'D156 static build file plan changed'
+                assert sources == tuple(originals), 'D156 static build source plan changed'
+                allowed_files.update(output_files)
+                build_plans.append(label)
+            else:
+                assert stage == 1 and len(library_plans) == batch, 'D156 static library plan was late'
+                assert not output_files, 'D156 static library plan has effects'
+                assert sources == (library, dependency), 'D156 static library inputs changed'
+                library_plans.append(label)
+            return GOOD['plan_producer'](root, directories=directories, output_files=output_files,
+                                         sources=sources)
+
+        def library_directory(root, relative, *, create=False, missing_ok=False):
+            assert root == ROOT and not create and not missing_ok, 'D156 static library directory plan has effects'
+            assert library_plans == labels[:batch + 1], 'D156 static library plan omitted'
+            assert stage == 1 and len(library_directories) == batch and ROOT / relative == deps, 'D156 static library directory changed'
+            library_directories.append(labels[batch])
+            return GOOD['directory'](root, relative)
+
+        return dict(GOOD, enter_producer=enter, plan_producer=plan, directory=library_directory)
 
     def read(path_, binary, *args, **kwargs):
         assert plans, 'D156 static read before profile'
@@ -1966,6 +2017,9 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
 
     def directory(path_, *args, **kwargs):
         assert path_ == work or path_ in {work / label for label in labels}, 'D156 static unplanned directory'
+        if path_ != work:
+            assert build_plans == labels[:batch + 1], 'D156 static build plan omitted'
+            assert stage == 0, 'D156 static build plan was late'
         environment(os.environ)
 
     def write(path_, data, *args, **kwargs):
@@ -1980,7 +2034,7 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
                 assert path_ == ROOT / relative and data == originals[path_].decode().replace(before, after, count), 'D172 static actual source fault changed'
                 pending[path_] = data
         else:
-            assert path_.parent in {work, *(work / label for label in labels)}, 'D156 static unplanned output write'
+            assert path_ in allowed_files and path_.parent in {work, *(work / label for label in labels)}, 'D156 static unplanned output write'
             assert isinstance(data, str), 'D156 static output encoding changed'
             written[path_] = data
         return len(data)
@@ -1992,6 +2046,10 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
         assert kwargs.get('capture_output') is True and kwargs.get('text') is True, 'D156 static child capture changed'
         assert batch < len(labels), 'D156 static extra child'
         label = labels[batch];output = work / label
+        assert build_plans == labels[:batch + 1], 'D156 static build plan omitted'
+        if stage:
+            assert library_plans == labels[:batch + 1], 'D156 static library plan omitted'
+            assert library_directories == labels[:batch + 1], 'D156 static library directory plan omitted'
         wanted = (
             ['cargo', 'build', '-p', 'sc-core', '--message-format=json'],
             ['rustc', '--edition=2021', '-Dwarnings', '--extern', 'sc_core=' + str(library),
@@ -2035,6 +2093,8 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
         with contextlib.redirect_stdout(io.StringIO()):
             try:
                 exec(compile(text, str(path), 'exec'), scope)
+                if borrowed_label is not None:
+                    scope['build_and_check'](borrowed_label)
             except AssertionError as error:
                 assert early_refusal and 'compiler/link/expect/noise refused' in str(error), error
     finally:
@@ -2048,6 +2108,133 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False):
     assert not pending, 'D172 static source restoration absent'
     assert batch == len(labels) and stage == 0, 'D172 static restored compiler dispatch absent'
     assert len(observed) == (8 if early_refusal else 90 if mutations else 3), 'D156 static native mode dispatch changed'
+    assert build_plans == library_plans == library_directories == labels, 'D156 static build/library plan omitted'
+
+
+
+def static_file_refusals(text, entry_path):
+    """Copied actual CLI plans refuse aliases before reads/effects; ordinary inputs stay read-only."""
+    here = ROOT / 'docs/tasks/artifacts/formula_structure'
+    mutable = tuple(ROOT / 'crates/sc-core/src/recipe' / name for name in (
+        'checked.rs', 'checked_statement.rs', 'namespace/ordered.rs', 'checked_recipe.rs'))
+    helpers = tuple(here / name for name in (
+        'dimension_payload_contract.py', 'static_review_contract.py', 'static_namespace_contract.py',
+        'static_signature_contract.py', 'checked_recipe_mutations.py'))
+    books = tuple(ROOT / 'docs/book/src' / name for name in (
+        'spec/formula-language.md', 'spec/formula-language/grammar.md',
+        'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md',
+        'annexes/formula-static-validation.md', 'annexes/formula-wanted-signatures.md',
+        'annexes/implementation-status.md'))
+    sources = (ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh',
+               here / 'static_coupled_driver.rs', here / 'canonical_worked_recipe_cases.tsv',
+               *helpers, *mutable, *books)
+    assert len(sources) == 20, 'D156 static physical source population'
+    fixtures = [(path.relative_to(ROOT), path.read_bytes()) for path in sources]
+    fixtures += [(Path('scripts/local_environment.py'), SOURCE.read_bytes()),
+                 (entry_path.relative_to(ROOT), text.encode())]
+    scratch = GOOD['directory'](ROOT, 'target/scratch/static_file_refusals', create=True)
+    saved, argv, count = dict(os.environ), sys.argv, 0
+    for mode in (False, True):
+        cases = ['first-link', 'last-link', 'first-hardlink', 'last-hardlink',
+                 'file-directory', 'late-source']
+        cases += ['driver-link', 'first-mutable-link', 'last-mutable-link'] if mode else ['readonly-links']
+        for case in cases:
+            with tempfile.TemporaryDirectory(dir=scratch) as name:
+                root = Path(name)
+                destinations = [root / path for path, _ in fixtures]
+                GOOD['plan_producer'](ROOT, output_files=destinations)
+                for (relative, data), destination in zip(fixtures, destinations):
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                    destination.write_bytes(data)
+                work = root / 'target/static_coupled_contract'
+                first = work / 'baseline/cargo-artifacts.json'
+                driver = work / 'baseline/driver'
+                last = work / 'reference-whole-phase-interleaved.log' if mode else driver
+                for destination in (first, last, driver):
+                    GOOD['plan_producer'](ROOT, output_files=(destination,))
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                victim = root / 'target/victim'
+                aliases = (root / 'target/source-alias-1', root / 'target/source-alias-2')
+                GOOD['plan_producer'](ROOT, output_files=(victim, *aliases))
+                victim.write_bytes(b'unchanged isolated static alias victim')
+                if case in ('first-link', 'last-link', 'driver-link'):
+                    destination = first if case == 'first-link' else last if case == 'last-link' else driver
+                    destination.symlink_to(victim)
+                    wanted = 'symlink producer output'
+                elif case in ('first-hardlink', 'last-hardlink'):
+                    os.link(victim, first if case == 'first-hardlink' else last)
+                    wanted = 'hard-linked producer output'
+                elif case == 'file-directory':
+                    first.mkdir()
+                    wanted = 'producer output is not a local regular file'
+                elif case == 'late-source':
+                    (root / books[-1].relative_to(ROOT)).unlink()
+                    wanted = 'producer source is not a local regular file'
+                elif case in ('first-mutable-link', 'last-mutable-link'):
+                    source = root / mutable[0 if case == 'first-mutable-link' else -1].relative_to(ROOT)
+                    for alias in aliases:
+                        os.link(source, alias)
+                    assert source.stat().st_nlink == 3
+                    wanted = 'hard-linked mutable producer source'
+                else:
+                    assert not mode
+                    for index, original in enumerate(mutable):
+                        source = root / original.relative_to(ROOT)
+                        for number in (1, 2):
+                            alias = root / ('target/readonly-%d-%d' % (index, number))
+                            GOOD['plan_producer'](ROOT, output_files=(alias,))
+                            os.link(source, alias)
+                        assert source.stat().st_nlink == 3
+                    unused = work / 'reference-whole-phase-interleaved.log'
+                    GOOD['plan_producer'](ROOT, output_files=(unused,))
+                    unused.symlink_to(victim)
+                before = {path: path.read_bytes() for path in root.rglob('*')
+                          if path.is_file() and not path.is_symlink()}
+                environment = dict(os.environ)
+                mkdir, read_text, read_bytes, write_text, write_bytes, run = (
+                    Path.mkdir, Path.read_text, Path.read_bytes, Path.write_text, Path.write_bytes, subprocess.run)
+                diagnostic = io.StringIO()
+                def no_effect(*args, **kwargs):
+                    raise AssertionError('D156 static physical plan reached a read/write/child')
+                entry = root / entry_path.relative_to(ROOT)
+                try:
+                    sys.argv = [str(entry), *(['--mutations'] if mode else [])]
+                    Path.read_text, Path.read_bytes = no_effect, no_effect
+                    Path.write_text, Path.write_bytes, subprocess.run = no_effect, no_effect, no_effect
+                    if case == 'readonly-links':
+                        tree = ast.parse(text)
+                        boundary = next(node.end_lineno for node in tree.body if isinstance(node, ast.Expr)
+                                        and isinstance(node.value, ast.Call)
+                                        and ast.unparse(node.value.func) == "PROFILE['enter_producer']")
+                        prefix = '\n'.join(text.splitlines()[:boundary]) + '\n'
+                        scope = {'__file__': str(entry), '__name__': '__main__'}
+                        exec(compile(prefix, str(entry), 'exec'), scope)
+                        assert scope['MUTABLE_SOURCES'] == () and len(scope['OUTPUT_FILES']) == 7
+                        assert (root / 'target/cargo-home').is_dir() and unused.is_symlink()
+                    else:
+                        Path.mkdir = no_effect
+                        with contextlib.redirect_stderr(diagnostic):
+                            try:
+                                exec(compile(text, str(entry), 'exec'), {'__file__': str(entry), '__name__': '__main__'})
+                            except SystemExit as error:
+                                assert error.code == 2, 'D156 static physical refusal status'
+                            else:
+                                raise AssertionError('D156 static physical invalid entry accepted')
+                finally:
+                    after_environment = dict(os.environ)
+                    Path.mkdir, Path.read_text, Path.read_bytes = mkdir, read_text, read_bytes
+                    Path.write_text, Path.write_bytes, subprocess.run = write_text, write_bytes, run
+                    os.environ.clear(); os.environ.update(saved); sys.argv = argv
+                if case != 'readonly-links':
+                    assert diagnostic.getvalue() == 'local-environment: REFUSED — ' + wanted + '\n', \
+                        ('D156 static physical refusal diagnostic', mode, case, diagnostic.getvalue())
+                    assert after_environment == environment and not (root / 'target/cargo-home').exists(), \
+                        'D156 static physical refusal activated stores'
+                    count += 1
+                assert all(path.read_bytes() == data for path, data in before.items()), \
+                    'D156 static physical plan changed bytes'
+    assert count == 15
+    return count
 
 
 def main():
@@ -3531,7 +3718,7 @@ def main():
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         profile_name = "runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer']"
         tree = ast.parse(text)
-        if path.name in ('recipe_owner_contract.py', 'statement_owner_contract.py'):
+        if path.name in ('recipe_owner_contract.py', 'statement_owner_contract.py', 'static_coupled_contract.py'):
             profile_name = "PROFILE['enter_producer']"
             bindings = [node for node in ast.walk(tree) if isinstance(node, ast.Assign)
                         and any(isinstance(target, ast.Name) and target.id == 'PROFILE'
@@ -3543,7 +3730,7 @@ def main():
                  and isinstance(node.value, ast.Call) and ast.unparse(node.value.func) == profile_name]
         assert len(calls) == 1, 'D156 Python entry profile-call identity'
         node = calls[0]
-        if path.name in ('recipe_owner_contract.py', 'statement_owner_contract.py'):
+        if path.name in ('recipe_owner_contract.py', 'statement_owner_contract.py', 'static_coupled_contract.py'):
             assert bindings[0].lineno < node.lineno, 'D156 Python entry profile binding was late'
         source_keyword = next(keyword for keyword in node.keywords if keyword.arg == 'sources')
         assert ast.unparse(source_keyword.value) == source_argument, 'D156 Python authored source population'
@@ -3570,6 +3757,9 @@ def main():
     for mode, early in ((False, False), (True, False), (True, True)):
         capture_static_entry(text, static, mutations=mode, early_refusal=early)
         static_count += 1
+    capture_static_entry(text, static, borrowed_label='first-phase')
+    static_count += 1
+    measure_physical += static_file_refusals(text, static)
     for name, before, after, mode, early, message in (
         ('complete book plan', '*BOOK_INPUTS)', '*BOOK_INPUTS[:-1])', False, False, 'D156 static input plan changed'),
         ('prepared stores', 'environment = dict(os.environ)', "environment = dict(os.environ, CARGO_HOME=str(ROOT / 'target/cargo-home'))", False, False, 'D156 static child stores lost'),
@@ -3586,6 +3776,62 @@ def main():
             red += 1
         else:
             raise AssertionError((name, 'actual static body fault survived'))
+    build_function = next(node for node in ast.parse(text).body if isinstance(node, ast.FunctionDef) and node.name == 'build_and_check')
+    build_plan = next(node for node in ast.walk(build_function) if isinstance(node, ast.Call)
+                      and ast.unparse(node.func) == "PROFILE['plan_producer']"
+                      and any(keyword.arg == 'directories' for keyword in node.keywords))
+    actual_build_plan = ast.get_source_segment(text, build_plan)
+    for mode, count in ((False, 7), (True, 244)):
+        faults = [
+            ('per-build plan', actual_build_plan, 'None', 'D156 static build plan omitted'),
+            ('complete initial files', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 static file plan changed'),
+            ('complete library inputs', 'sources=(library, *sorted(library_files - {library}))', 'sources=(library,)', 'D156 static library inputs changed'),
+            ('library plan', "PROFILE['plan_producer'](ROOT, sources=(library, *sorted(library_files - {library})))", 'None', 'D156 static library plan omitted'),
+            ('library directories', "PROFILE['directory'](ROOT, path.relative_to(ROOT).as_posix())", 'None', 'D156 static library directory plan omitted'),
+            ('per-build source plan', 'sources=SOURCES)', 'sources=())', 'D156 static build source plan changed'),
+        ]
+        faults.extend(('initial file omitted %d' % index, 'output_files=OUTPUT_FILES',
+                       'output_files=OUTPUT_FILES[:%d] + OUTPUT_FILES[%d:]' % (index, index + 1),
+                       'D156 static file plan changed') for index in range(count))
+        faults.extend(('initial source omitted %d' % index, 'sources=SOURCES,',
+                       'sources=SOURCES[:%d] + SOURCES[%d:],' % (index, index + 1),
+                       'D156 static input plan changed') for index in range(20))
+        faults.extend(('per-build file omitted %d' % index,
+                       'output_files=tuple(output_dir / name for name in BUILD_FILENAMES)',
+                       'output_files=tuple(output_dir / name for name in BUILD_FILENAMES[:%d] + BUILD_FILENAMES[%d:])' % (index, index + 1),
+                       'D156 static build file plan changed') for index in range(7))
+        if mode:
+            faults.extend(('mutable source omitted %d' % index, 'mutable_sources=MUTABLE_SOURCES',
+                           'mutable_sources=MUTABLE_SOURCES[:%d] + MUTABLE_SOURCES[%d:]' % (index, index + 1),
+                           'D156 static mutable plan changed') for index in range(4))
+        else:
+            faults.append(('ordinary mutable authority', 'mutable_sources=MUTABLE_SOURCES',
+                           'mutable_sources=MUTATED', 'D156 static mutable plan changed'))
+        for name, before, after, message in faults:
+            assert text.count(before) == 1, (name, 'actual static plan anchor')
+            try:
+                capture_static_entry(text.replace(before, after, 1), static, mutations=mode)
+            except AssertionError as error:
+                assert str(error) == message, (name, 'unrelated static plan refusal', str(error))
+                red += 1
+            else:
+                raise AssertionError((name, 'actual static plan fault survived'))
+    for name, before, after, message in (
+        ('borrowed complete build plan', actual_build_plan, 'None', 'D156 static build plan omitted'),
+        ('borrowed build sources', 'sources=SOURCES)', 'sources=())', 'D156 static build source plan changed'),
+        ('borrowed build files', 'output_files=tuple(output_dir / name for name in BUILD_FILENAMES)',
+         'output_files=()', 'D156 static build file plan changed'),
+        ('borrowed library inputs', 'sources=(library, *sorted(library_files - {library}))',
+         'sources=(library,)', 'D156 static library inputs changed'),
+    ):
+        assert text.count(before) == 1, (name, 'actual borrowed plan anchor')
+        try:
+            capture_static_entry(text.replace(before, after, 1), static, borrowed_label='first-phase')
+        except AssertionError as error:
+            assert str(error) == message, (name, 'unrelated borrowed plan refusal', str(error))
+            red += 1
+        else:
+            raise AssertionError((name, 'actual borrowed plan fault survived'))
     driver_count = 0
     driver_classifier_controls(text, static)
     driver_count += 1

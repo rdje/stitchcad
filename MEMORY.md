@@ -4,20 +4,19 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0197/.n13.2 verified; parent.n13 done; commit workflow/postconditions finish this unit.
- Statement17 files/one read-only source/current-library/directory pure plans;
- original6 calls/five strict guards/75 frozen/63Rust/fixtures/argv/current library SHA exact0.
--Shared5930:799 body reds/35 classifiers/58 captures/314 physical refusals,rc=0.
- Compiler80 faults/14 physical refusal2/profile4reds/2disables0. All jobs consumed.
--Whole Source e76 task+lesson249/0187ledger176/n12 scopes2383B250 FILE/copy/read before retire.
- Completed IDs/statuses/goals/paths/acceptance unchanged; original Own lines retained.
- Final87020/3624/99125/94701/24963/76108 terminal0:549reads/prior546/37files/
- 57 Source headers54live3retained/175pointers/nav/3proofs/map/caps/12open186sealed/
- archive28/CLI568/publication45/coverage9/ledger727real11arms13pointers/census0.
--Next .n14 coupled static complete mode/files/current library plans. Full646L entry,
- dimension204/review237/namespace197/signature249 helpers, first_phase216 and
- static-validation554L book read. Driver first218/426 read; remainder and actual
- capture/helper/spec/affected Rust inputs still required before changes.
- Preserve borrowed first-phase build_and_check('first-phase') integration; ordinary7 files,
- mutation244 destinations inferred from original28 faults/6 reference logs, must verify.
--D156/D34 open; engine/grammar/400 stay. No push; derive count.
+-0198 .n14 complete; current recording commit resolves via git log -1 (baseline d96e825).
+ All552/prior549/40/header59/pointer176/three proofs/93 frozen/map/caps, ledger731/11/13
+ and staged doctrine13 pass0. Commit hooks/postconditions finish the workflow; brief stays
+ untracked/empty afterwards. Next queued .a01.2 only after this unit is committed clean.
+ No native source fault remains; no push, cadence400 (derive ahead count from Git).
+-Static ordinary7/mutation244 files/20 sources/4 mutables only mutation; every label7/current
+ sources/libraries/directories pure before effects; original borrowed first-phase API preserved.
+-Focused334 body reds/four captures/15 physical refusals; full shared1125/35/58/329 pass0.
+-Native baseline/restored26723,28Rust/6reference/3doc and borrowed263+10 pass0; two current
+ driver replays/independent93 frozen/63Rust/cases/fault data/functions/argv/bridge/current library0.
+-Whole Source task1436B+lesson1384B→251/0188ledger443B→177/scopes2573B→252 retained;
+ prior549/40 exact/current552. Whole book matrix3634B57L copied before relocation; both navs.
+-Publication45/coverage9/census229paths288checks/file120owners67groups37/archive28+CLI5710.
+ Final proof: target/static-plan-retention-proof.py; logs static-plan-*. All caps stay.
+-Next queued .a01.2 copied-book recipe; only activate after0198 committed clean. D156/D34
+ open/12open186sealed; engine/grammar unchanged.

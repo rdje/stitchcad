@@ -668,7 +668,6 @@ Whole original completed n12 scopes retained in [part250](../history/stitchcad-d
   Status: `done`
   Goal: complete owner-compiler plans; blocking window9/whole task retention first.
   Paths: docs/tasks/artifacts/formula_structure/recipe_owner_contract.py;docs/tasks/artifacts/formula_structure/statement_owner_contract.py
-  Own .doctrine/history_archive/;docs/history/;live/book/task records;target/window9-*.
   Acceptance: complete plans/stores/public consumers; physical/omission/native/restoration proofs; published retention contracts.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.h`
@@ -679,28 +678,29 @@ Whole original completed n12 scopes retained in [part250](../history/stitchcad-d
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.h.v`
   Status: `done`
-  Own0195: live/book/task/whole retention;target/window9-post-*.
   Goal: copied newest committed window9 catalog prose refusal before compilers.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.1`
   Status: `done`
   Goal: recipe owner complete input/output/native plans; original guards/examples/artifact evidence.
   Paths: docs/tasks/artifacts/formula_structure/recipe_owner_contract.py
-  Own0196: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/book/src/annexes/formula-checked-recipes.md;live/task/whole retention;target/recipe-plan-*;target/window9-recipe-*.
-  Own D199: docs/tasks/PLANNING.md;live/task/whole defect retention; five stale child rows; fix now/P1.
   Acceptance: all29 outputs before effects; unchanged5 guards/4 examples/argv; dynamic current-artifact inputs; actual capture/omission/physical/native evidence.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.2`
   Status: `done`
   Goal: statement owner complete input/output/native plans; original guards/artifact evidence.
   Paths: docs/tasks/artifacts/formula_structure/statement_owner_contract.py
-  Own0197: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-name-scopes.md;live/task/whole retention;target/statement-plan-*;target/window9-statement-*.
   Acceptance: all17 files/one read-only source before effects; original6 calls/5 strict guards/argv; current libraries/directories; actual capture/omission/physical/native evidence.
 
+Whole original completed n13 scopes retained in [part252](../history/stitchcad-devnotes-part252.md).
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n14`
-  Status: `pending`
+  Status: `done`
   Goal: complete file-destination plans for coupled static; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/static_coupled_contract.py
+  Own0198: shared/live/book/task/whole retention;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-static-validation.md;target/static-plan-*;target/window9-static-*.
+  Own book containment: docs/book/src/annexes/formula-static-signatures.md;docs/book/src/SUMMARY.md;docs/book/src/topic-index.md; whole Source matrix copy/verify before relocation.
+  Preserve first-phase borrowed build API; complete ordinary/mutation/per-label file plans and read-only/mutable inputs; current libraries; unchanged cases/argv/restoration; actual controls/native proof.
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup2`
@@ -720,23 +720,13 @@ Whole0195 receipts and original bridge inspection retained in [part247](../histo
 
 Whole0196 task and recipe compiler lesson retained in [part249](../history/stitchcad-devnotes-part249.md).
 
-0197 missing retired0186 boundary and substring-count draft controls refused before
-writes; actual whole0187 boundary/exact-line census corrected. Known P3 pipe stays .b.s.
+Whole0197 task and statement compiler lesson retained in [part251](../history/stitchcad-devnotes-part251.md).
 
-## STITCHCAD-G1-0197 — statement compiler (.n13.2)
-
-- [x] REPRODUCE / ISSUE: compiler-controls.py actual2 captures/80 omission reds,rc=0.
-- [x] ROOT CAUSE: profile-proof.py unique exact loader/order4 reds/2 disables,rc=0.
-- [x] FIX: complete17 files/one read-only source/current public library inputs and
-  pure directory plans; actual14 physical refusal2 before reads/effects,rc=0.
-- [x] ADDRESSED: native46725/verifier0:five strict E0451/E0515 guards/original6calls/
-  fixtures/argv/75 frozen/63Rust exact,rc=0; current library SHA
-  695a0cee4d315df45938902ca7ce5149c22d2a1d9c3090c6a2b888c02ad238d5.
-- [x] NO REGRESSION: python3 -I -B target/statement-plan-retention-proof.py rc=0:
-  549 reads/prior546/37files/57 Source headers54live3retained/175pointers/3proofs/nav/
-  75frozen/63Rust/map/caps/12open186sealed exact. Shared5930:799/35/58/314,rc=0.
-- [x] LOCKSTEP: archive3624:28/CLI568; publication99125:45; coverage94701:9;
-  ledger24963:727real/11arms/13pointers; census76108:229paths288/file120owners67groups37,rc=0.
-  Whole249/176/2383B scopes250 retained; all n12 IDs/statuses/goals/paths unchanged.
-  Promotion: declined; .n13 done/.n14 next; D156/D34 open; engine/grammar/400 stay.
-  Final staged13 green,rc=0,target/statement-plan-staged-gate.log.
+- [x] REPRODUCE / ISSUE: d96 static646L/helpers/driver426/bridge216/four Rust/spec/book read; absent file/mutable/library plans owned before repair. static-plan-compiler-controls.py actual main334 named body reds/four captures, rc=0.
+- [x] ROOT CAUSE: ordinary versus mutating CLI and borrowed label need distinct plans. Draft31248 precedence/10668 counter red1 consumed/fixed/uncredited. Book growth preflight refused before write; whole3634B57L Source matrix copied before relocation, rc=0, static-plan-book-retention.json.
+- [x] FIX: entry7/244 files/20 sources/4 mutable only mutation; every borrowed build7/current sources/libraries/directories pure before effects. python_producer_contract.py1125 body reds/35 classifiers/58 captures/329 physical refusals, rc=0, static-plan-shared.log.
+- [x] ADDRESSED: static_coupled_contract.py --mutations baseline26723/28Rust+6reference+3doc/restored26723; first_phase_contract.py --mutations263+10; two driver replays/93frozen/63Rust/original cases/faults/argv/bridge/current library exact, rc=0, static-plan-native{-verify,}.log.
+- [x] NO REGRESSION: publication45/coverage9/census229paths288checks/file120owners67groups37/archive28+CLI571 across552 pass, rc=0, static-plan-{publication,coverage,census,archive}.log. Whole251/252/177 copied/read before retirement; final continuity/ledger follows below.
+- [x] LOCKSTEP: book/live/index/G1/MEMORY next .a01.2; D156 stays open,12open186sealed; fixed caps/engine/grammar/400 stay. promotion: declined (existing complete-plan/current-artifact/whole-retention rules). Final staged receipt follows; no remote verdict claimed.
+0198 final static-plan-retention-proof.py all552/prior549/40/59headers55live4retained/176pointers/3proofs/93frozen/map/caps0; ledger731real/11arms/13pointers0, static-plan-ledger.log.
+0198 staged check_doctrines.sh13 green, rc=0, target/static-plan-staged-gate.log.

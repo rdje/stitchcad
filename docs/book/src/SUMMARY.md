@@ -65,6 +65,7 @@
   - [Source-bearing call lookup](annexes/formula-call-lookup.md)
   - [Complete formula recipe proofs](annexes/formula-checked-recipes.md)
   - [Static formula validation evidence](annexes/formula-static-validation.md)
+  - [Reference formula signature evidence](annexes/formula-static-signatures.md)
   - [Runtime formula validation evidence](annexes/formula-runtime-validation.md)
   - [Formula documentation controls](annexes/formula-documentation-controls.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)

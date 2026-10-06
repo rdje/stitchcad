@@ -26,8 +26,29 @@ BOOK_INPUTS = tuple(ROOT / ('docs/book/src/' + name) for name in (
     'annexes/formula-static-validation.md', 'annexes/formula-wanted-signatures.md',
     'annexes/implementation-status.md'))
 SOURCES = (SOURCE, DRIVER, WORKED_SOURCE, *HELPERS, *MUTATED, *BOOK_INPUTS)
-runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer'](
-    ROOT, directories=(WORK,), sources=SOURCES)
+if __name__ == '__main__':
+    assert sys.argv[1:] in ([], ['--mutations']), 'coupled producer arguments'
+MUTATION_MODE = __name__ == '__main__' and sys.argv[1:] == ['--mutations']
+BUILD_FILENAMES = (
+    'cargo-artifacts.json', 'cargo.log', 'rustc.log', 'cases.hex.tsv',
+    'driver.tsv', 'driver.log', 'driver',
+)
+FAULT_LABELS = tuple('fault-%d' % index for index in range(1, 29))
+BUILD_LABELS = ('baseline', *FAULT_LABELS, 'restored') if MUTATION_MODE else ('baseline',)
+REFERENCE_FILENAMES = (
+    'reference-operation-arguments.log', 'reference-conditional-condition.log',
+    'reference-variadic-consistency.log', 'reference-complete-operand-kinds.log',
+    'reference-metadata-value-queried.log', 'reference-whole-phase-interleaved.log',
+)
+OUTPUT_FILES = tuple(WORK / label / name for label in BUILD_LABELS for name in BUILD_FILENAMES)
+if MUTATION_MODE:
+    OUTPUT_FILES += tuple(WORK / label / 'oracle.log' for label in FAULT_LABELS)
+    OUTPUT_FILES += tuple(WORK / name for name in REFERENCE_FILENAMES)
+MUTABLE_SOURCES = MUTATED if MUTATION_MODE else ()
+PROFILE = runpy.run_path(str(ROOT / 'scripts/local_environment.py'))
+PROFILE['enter_producer'](
+    ROOT, directories=(WORK,), output_files=OUTPUT_FILES, sources=SOURCES,
+    mutable_sources=MUTABLE_SOURCES)
 RULES = runpy.run_path(str(HERE / 'dimension_payload_contract.py'))
 STATIC = runpy.run_path(str(HERE / 'static_review_contract.py'))
 KINDS, ARITH, CALLS = RULES['KINDS'], RULES['ARITH'], RULES['CALL_ROWS']
@@ -481,23 +502,32 @@ def check_reference(replacement=None):
 
 def build_and_check(label="baseline"):
     output_dir = WORK / label
+    # Borrowed callers, including first-phase, supply their own label. Inspect every
+    # actual destination and current input without changing stores before effects.
+    PROFILE['plan_producer'](
+        ROOT, directories=(output_dir,),
+        output_files=tuple(output_dir / name for name in BUILD_FILENAMES), sources=SOURCES)
     output_dir.mkdir(parents=True, exist_ok=True)
     environment = dict(os.environ)
     built = subprocess.run(['cargo', 'build', '-p', 'sc-core', '--message-format=json'], cwd=ROOT, env=environment, capture_output=True, text=True)
     (output_dir / 'cargo-artifacts.json').write_text(built.stdout)
     (output_dir / 'cargo.log').write_text(built.stderr)
     assert built.returncode == 0, ('coupled Cargo build refused', built.stderr)
-    libraries, directories = set(), set()
+    libraries, directories, library_files = set(), set(), set()
     for line in built.stdout.splitlines():
         message = json.loads(line)
         if message.get('reason') != 'compiler-artifact':
             continue
         directories.update(Path(path).parent for path in message['filenames'] if path.endswith(('.rlib', '.rmeta')))
+        library_files.update(Path(path) for path in message['filenames'] if path.endswith(('.rlib', '.rmeta')))
         if message['target']['name'] == 'sc_core' and message['target']['kind'] == ['lib']:
             libraries.update(Path(path) for path in message['filenames'] if path.endswith('.rlib'))
     assert len(libraries) == 1 and directories, 'coupled current compiler artifact coverage'
     library = libraries.pop()
     assert all(path.is_relative_to(ROOT / 'target') for path in [library, *directories]), 'coupled foreign build output'
+    PROFILE['plan_producer'](ROOT, sources=(library, *sorted(library_files - {library})))
+    for path in sorted(directories):
+        PROFILE['directory'](ROOT, path.relative_to(ROOT).as_posix())
     search = [argument for path in sorted(directories) for argument in ('-L', 'dependency=' + str(path))]
     compiled = subprocess.run(['rustc', '--edition=2021', '-Dwarnings', '--extern', 'sc_core=' + str(library), *search,
                                str(DRIVER), '-o', str(output_dir / 'driver')], cwd=ROOT, env=environment, capture_output=True, text=True)
@@ -566,6 +596,10 @@ REFERENCE_FAULTS = (
     ('whole phase interleaved', 'checked = self._syntax_statement_at(src[start:end], ordinal, start, literal_inputs=False)',
      'checked = self._static_statement(src[start:end], env, ordinal, start)'),
 )
+assert len(RUST_FAULTS) == len(FAULT_LABELS), 'coupled planned fault labels changed'
+assert tuple('reference-' + name.replace(' ', '-') + '.log'
+             for name, _, _ in REFERENCE_FAULTS) == REFERENCE_FILENAMES, \
+    'coupled planned reference files changed'
 assert {ROOT / path for _, path, _, _, _ in RUST_FAULTS} == set(MUTATED), 'coupled mutable source plan changed'
 for name, path, before, _, count in RUST_FAULTS:
     assert (ROOT / path).read_text().count(before) == count, ('coupled real fault anchor', name)
