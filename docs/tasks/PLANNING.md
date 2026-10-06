@@ -1032,3 +1032,6 @@ D194 whole report/verified correction retained in [part116](../history/stitchcad
 D195 whole authored report/verified closure retained in [part117](../history/stitchcad-defects-part117.md).
 
 D196 whole authored report/focused repair retained in [part118](../history/stitchcad-defects-part118.md); full ledger confirmation is tracked by .n11.3.
+
+- **D197** (P1, active family G1-SLICE.5b.4c.h2.b.p.o.f.n12): original expression/reduction/recipe-input assertion predicates accept nonthread compiler-note locations at current public macros.
+Repro: read-only AST function replay at expression41:5/literal37:17/input54:5 accepts the note; independent strict thread oracle refuses it, while real-thread positive passes, rc=0. Impact: noise can certify a compiled source fault. Expression .n12.1 verified: original11 exact filters/full15/current artifact/74 inputs exact, rc=0. Fix reduction/input next with exact thread/path/line/UTF-8 columns and legacy reds; close only after all three verified.

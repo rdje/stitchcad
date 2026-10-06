@@ -4,12 +4,13 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Complete STITCHCAD-G1-0190 workflow before next activation. Native18/full5/every
-  failed body/72 inputs/current Cargo executable terminal0; shared673/35/52/262.
-  All production Rust and public tests restored exactly; no native job remains.
-- Next .n12: read expression/reduction/input code/public interfaces/tests/spec/book;
-  split into bounded children and complete mode/input/file/mutable plans in order.
-- Whole0189/DEV233/CH169/authored234/D192119 sealed/public-read before retirement.
-  D192 all four verified; D156/broader D34 remain open; grammar/400 stay. No push.
-- Retention524/publication45/coverage9/ledger695real11arms13pointers terminal0.
-  All focused jobs consumed; staged9676 all13 green0; pending commit/brief0/clean.
+- STITCHCAD-G1-0191/.n12.1 expression complete; commit/postconditions finish this workflow.
+- Four inputs/12 logs/1 mutable/class0; original11 exact filters/full15/current15/
+  74 inputs/63 Rust exact. All native/verify/artifact/shared jobs consumed0.
+- Shared691/35/54/272;17 omissions/legacy D197 red/readonly3 links/two aliases pass0.
+  Retention529/prior524/all68/eight windows/13open183sealed/publication45/coverage9/
+  ledger701real11arms13pointers terminal0 consumed.
+- Whole0190/DEV236/authored237/call238/CH170 retained/read before retirement.
+  Whole inline1686B28L copied to linked chapter; original syntax anchor/SUMMARY/index retained.
+- Next .n12.2 reduction, then .n12.3 input; D197 expression verified, family stays open.
+  D156/D34 open; grammar/400 stay; no push.

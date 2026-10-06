@@ -112,6 +112,13 @@ the digests afterwards.
 
 | [part168](docs/history/stitchcad-changelog-part168.md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0191 - expression plans and D197 repair (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n12.1`)
+
+- Plan4 inputs/12 logs/1 mutable/class0; original11 exact filters/full15/current15/74 inputs exact.
+- Shared691/35/54/272;17 omissions/legacy red/readonly proof pass0; D197 family remains open.
+- Whole0190/DEV236–238/CH170 retained; whole inline context moved/read exactly; book/live aligned.
+- Publication45/coverage9/ledger701/11/13 pass0; grammar/400 stay; reduction next.
+
 ## STITCHCAD-G1-0190 - call plans and D192 closure (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.4`)
 
 - Two inputs/19 logs/one mutable/class0; original18/two Cargo argv unchanged.
@@ -183,13 +190,7 @@ the digests afterwards.
 - New sibling/16 evidence siblings; orientation map8145B/fixed ceiling; source bytes preserved.
 - Namespace .n09.1/D156 next; Rust/reader/grammar/400 unchanged.
 
-## STITCHCAD-G1-0180 - window8 continuity and protected history (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h`)
-
-- Pack57 complete0f records; fixture481 source/read/materialized exact; seven windows preserved.
-- Copy/verify before57 raw retirements; six live routes/master1 single-link;11 working files.
-- Retain whole recipe/DEV214/CH158/book215; protected proof prefixes/current aliases exact.
-- Prior481/all484 reads/12open171sealed; archive28/CLI501/pub45/coverage9/ledger9+13 pass0.
-- D34/owner rows corrected; newest8 committed refusal next; caps/Rust/grammar/400 stay.
+| [part170](docs/history/stitchcad-changelog-part170.md) | whole G1-0180 ledger | 7 lines, 569 bytes, sha256:61c54829… |
 
 | [part169](docs/history/stitchcad-changelog-part169.md) | whole G1-0179 ledger | 7 lines, 573 bytes, sha256:df27ee3b… |
 

@@ -66,6 +66,7 @@
   - [Complete formula recipe proofs](annexes/formula-checked-recipes.md)
   - [Static formula validation evidence](annexes/formula-static-validation.md)
   - [Runtime formula validation evidence](annexes/formula-runtime-validation.md)
+  - [Formula documentation controls](annexes/formula-documentation-controls.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
 - [Made-to-measure API contract](annexes/mtm-input-contract.md)
 - [Implementation status and requirement owners](annexes/implementation-status.md)

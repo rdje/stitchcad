@@ -457,9 +457,10 @@ Changelog uniqueness checks changelog archives only; retained task/defect receip
 work-unit headings. Role and duplicate controls watch that boundary;
 all archive descriptors still receive digest and line-count checks.
 
-Expression and reduction entries also guard current tests and require failed-body macro locations.
-All fifteen compiled faults pass that proof; four current Rust sources restore exactly and the
-full fifteen/six-test targets pass. Four expression refusal preconditions now assert explicitly.
+Expression plans4 inputs/12 logs/1 mutable/class0; original11/full15:
+[modes and proof](annexes/formula-syntax.md#expression-runner-modes-and-evidence).
+Reduction: four macro faults/full6; both targets/four Rust sources restore.
+D170's four explicit refusal preconditions remain.
 
 The coupled recipe-input entry guards four implementations and its current test source, preserves
 its original test filters, proves seven current macro-site reds and rebuilds the full five-test target.

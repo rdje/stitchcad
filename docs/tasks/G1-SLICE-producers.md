@@ -484,16 +484,7 @@ Complete committed verification retained in [native mode proof](G1-SLICE-runtime
   Paths: docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py;docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py;docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py;docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
-Own STITCHCAD-G1-0172 terminal split into literal/normalized-expression/normalized-recipe/
-canonical-recipe slices; all four entries read completely while c3cc51d clean/34 ahead/brief0.
-Own whole committed statement receipt copy/verify/retire into new bounded G1-SLICE-runtime-proof.md
-before live growth; register sibling via G1/map/coverage, preserve old62828B sibling byte-exact and
-fixed map8192B ceiling. Additional paths: docs/tasks/G1-SLICE-runtime-proof.md;KNOWLEDGE_MAP.md;
-docs/tasks/G1-SLICE.md;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;
-docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md.
-Own current-classifier/no-effect diagnostics before effects; log/schedule any reproducible defect
-under the affected native children before repair. Preserve original cases, modes, public Cargo
-interfaces, source restoration and D156 ownership; grammar/400 cadence unchanged.
+Whole completed n07 scope retained in [part236](../history/stitchcad-devnotes-part236.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n07.1`
   Status: `done`
@@ -534,18 +525,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
   Paths: docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_statement_mutations.py;docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
-Own STITCHCAD-G1-0176 clean0871a0c split after final post-doc ledger9/pointer13 terminal0,
-target/identity-ledger.log. Four entries read completely443L; canonical implementation144L/public
-nine tests257L/compile-time inputs/canonical/book protocol reviewed before its repair.
-Own pure current-classifier/thread-boundary diagnostics for all four children before Target outputs;
-actual source functions/current Rust macro paths only, no source effects or native dispatch.
-Log/schedule measured defects under these children before repair, preserving D178's bounded closure.
-Own mode captures/physical refusals/omission controls/exclusive native/current artifact/whole record
-retention/book/live/frontier; canonical ordinary19/coupled3 cases and full9 restoration preserved.
-Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;
-docs/tasks/PLANNING.md;docs/tasks/G1-SLICE-runtime-proof.md;docs/tasks/G1-SLICE.md;
-docs/TASK_TREE.md;MEMORY.md;DEV_NOTES.md;CHANGELOG.md;LIVE_STATUS.md;docs/book/src/annexes/formula-literals.md;
-docs/book/src/build-and-checks.md;Target diagnostic/native/retention helpers and receipts.
+Whole completed n08 scope retained in [part236](../history/stitchcad-devnotes-part236.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.1`
   Status: `done`
@@ -688,10 +668,27 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Own D192 call repair/family closure.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12`
-  Status: `pending`
+  Status: `in_progress`
   Goal: complete file-destination plans for expression/reduction/input; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/formula_expression_mutations.py;docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py;docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12.1`
+  Status: `done`
+  Goal: Expression complete modes/compile-time inputs/12 logs/1 mutable; original11 exact filters/full15 restoration.
+  Paths: docs/tasks/artifacts/formula_structure/formula_expression_mutations.py
+  Own0191: shared/live/book/whole retention;target/expression-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md.
+  Own book containment: docs/book/src/annexes/formula-documentation-controls.md;docs/book/src/SUMMARY.md;docs/book/src/topic-index.md; whole inline section and preserved syntax anchor.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12.2`
+  Status: `pending`
+  Goal: Reduction complete modes/inputs/5 logs/1 mutable; original4 exact filters/full6 restoration.
+  Paths: docs/tasks/artifacts/formula_structure/reduction_boundary_mutations.py
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12.3`
+  Status: `pending`
+  Goal: Coupled input complete modes/inputs/8 logs/4 mutable; original7 filters/full5 restoration.
+  Paths: docs/tasks/artifacts/formula_structure/recipe_input_review_mutations.py
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13`
   Status: `pending`
@@ -731,19 +728,32 @@ Complete committed wanted acceptance retained in [part232](../history/stitchcad-
 
 Whole call preparation/predictions retained in [part234](../history/stitchcad-devnotes-part234.md).
 
-## STITCHCAD-G1-0190 — call acceptance (.n11.4)
+Complete committed call acceptance retained in [part235](../history/stitchcad-devnotes-part235.md); canonical .n11.4 ownership remains above.
 
-- [x] REPRODUCE / ISSUE: shared673reds/35classifiers/legacy D192 red,rc=0;
-  old matcher admitted nonthread notes.
-- [x] ROOT CAUSE: native-proof.py verify: all18 failed sets/every body at current
-  thread/path/line/byte column,rc=0; D192 matched nonthread notes.
-- [x] FIX:2 inputs/19 files/1 mutable/class0; original18/two Cargo argv AST exact,rc=0.
-- [x] ADDRESSED: shared52captures/262refusals/13 omissions;readonly3 links/two aliases0.
-  Native25103/verify7525/artifact66554 terminal0:full5/72 frozen/current5 exact,rc=0.
-- [x] NO REGRESSION: python3 -I -B target/call-plan-retention-proof.py:524/prior519/
-  all63/eight windows/12open183sealed,rc=0;publication45/coverage9/ledger695real/
-  11arms13pointers pass0, all consumed.
-- [x] LOCKSTEP: D192119 closed; whole232–234/CH169 exact; book/live/.n12 agree,rc=0.
-  Grammar/400 stay; D156/D34 open. promotion: declined (existing plan/thread rules).
+Whole authored expression preparation/shared terminal/native-in-flight scope retained in [part237](../history/stitchcad-devnotes-part237.md).
 
-Staged24737 missed ADDRESSED rc; corrected9676 all13 green0.
+Native80807 terminal0/verify0/artifact0 consumed: original11 exact selected tests,
+14 filtered tests per fault uncredited/every body current macro/full15 restore.
+Current expression df61d61a42549506 SHA4b40d958 passes full15;74 inputs/63 Rust exact.
+Whole inline1686B28L copied/read before move; original anchor/SUMMARY retained.
+Book candidate bounds refused before writes; compact prose preserves complete facts.
+Combined draft guard wrongly used65536 for PLANNING; no edits; actual98304 applies.
+
+## STITCHCAD-G1-0191 — expression acceptance (.n12.1)
+
+- [x] REPRODUCE / ISSUE: shared691reds/35classifiers/legacy D197 red,rc=0;
+  original matcher admitted nonthread locations.
+- [x] ROOT CAUSE: native-proof.py verify:11 exact selections/every body current
+  thread/path/line/byte column,rc=0;14 filtered tests uncredited.
+- [x] FIX:4 inputs/12 files/1 mutable/class0; original11/two argv AST exact,rc=0.
+- [x] ADDRESSED: shared54captures/272refusals/17 omissions;readonly3 links/two aliases0.
+  Native80807/verify/artifact consumed0:full15/74 inputs/current15 exact,rc=0.
+- [x] NO REGRESSION: python3 -I -B target/expression-plan-retention-proof.py:
+  529/prior524/all68/eight windows/13open183sealed,rc=0;publication45 pass0.
+- [x] LOCKSTEP: whole235–238/CH170/inline1686B28L exact; book/live agree,rc=0.
+  D197 expression verified; family open. Grammar/400 stay. promotion: declined.
+
+Coverage88975/ledger70905 terminal0 consumed:9pass/701real11arms13pointers0.
+Publication INDEX_COVERAGE refused; index fixed/32990 all45pass0 consumed.
+
+Staged37361 all13green,rc=0.

@@ -214,11 +214,34 @@ Fifteen contracts cover 17 binding expressions, eight assertion sides, three syn
 ten forms deferred to semantic owners. The 20,736-input token corpus checks internal construction
 and root reachability. Three privacy/lifetime doctests cover arena/source borrows; twelve authored
 shape/count/depth fixtures agree independently with product/reference (the structural suite).
-Eleven actual parser faults require current test macro locations, exact source bytes and full
-fifteen-test restoration. Implementation/test/output plans precede reads/writes and retain prepared
-stores. D170 replaces four labelled expect refusal preconditions with explicit assertions. Run
-alone, without concurrent builds/probes/gates. Strict native and three-library WASM pass locally;
-no browser application or new remote-CI result is implied.
+### Expression runner modes and evidence
+
+Both modes plan four inputs before effects: parser, current public test, its compile-time
+worked-example chapter and shape TSV. Ordinary mode plans mutation-1.log through mutation-11.log
+and restored.log, with only the parser mutable. Classifier-only mode has no file-writing,
+source-mutation or native-child authority:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/formula_expression_mutations.py --classifier-only
+```
+
+Directory/store preconditions still apply. Three hard-linked read-only inputs and two unused log
+aliases pass untouched; ordinary mode refuses unsafe file/mutable destinations. Seventeen mode
+omissions fail independent input/file/child/restoration assertions. Simulated child captures
+establish dispatch separately from native coverage.
+
+D197's expression repair requires a thread-qualified panic at the current guarded macro path,
+line and UTF-8 byte column. A nonthread note at valid coordinates refuses; custom macro messages
+pass. Labelled expect/compiler/name noise cannot certify a fault. D170's four explicit
+refusal preconditions remain.
+
+All eleven original faults retain exact test selections and Cargo arguments. Each selects one
+test; fourteen filtered tests are unexecuted and uncredited. Every failed body has an independently
+verified current macro location. Twelve logs are local regular single-link files. All 74 frozen
+inputs and 63 production Rust files restore before the full 15-test rebuild; a fresh Cargo-selected
+executable independently passes all 15. Run alone without overlapping builds/probes/gates.
+Strict native and three-library WASM have local proof; no browser application or remote-CI verdict
+is implied.
 
 G1-SLICE.5a.2 is complete for expression syntax. Canonical literals/recipes and statement/rational
 bounds belong to .5a.3/.4 and later numeric checking; name/type checks, exact evaluation/DAG,
@@ -350,31 +373,8 @@ now normalize explicitly, individually or across a whole syntax arena; full eval
 
 ## Inline documentation language context
 
-The book vocabulary census cannot infer a code span's language from punctuation: a Rust error-handling
-expression can resemble a formula but legitimately use a question mark. D91 supplies explicit author
-context for a single inline span in chapters outside the three normative formula parts:
-
-```markdown
-<!-- stitchcad-inline: rust -->`(left + right)?` and `waist_girth + ease_waist`
-```
-
-The marker must be exact, on the same line and immediately followed by the one backtick span (optional
-whitespace only). It excludes that Rust span from formula-vocabulary classification; the adjacent
-formula remains checked. Unknown, malformed, duplicate or detached markers refuse L6e. Normative
-formula contract/grammar/example parts reject foreign annotations, preserving their formula positions.
-Rust fences retain their existing scope. This declares author intent; it does not compile or certify
-Rust and does not extend the formula alphabet. An unannotated question mark still refuses L6b.
-
-```bash
-bash docs/tasks/artifacts/formula_language/run_formula_language_probes.sh
-bash docs/tasks/artifacts/formula_language/run_inline_context_mutations.sh
-```
-
-The watched suite includes thirteen independently authored copied-book context verdicts alongside
-its fifteen existing agreement/refusal arms. Five actual classifier mutations discriminate removed,
-whole-line or normative exemptions, missing refusal counts and unknown-language acceptance; they
-require assertion reds and byte-identical restoration. Run mutations alone. Numeric reference and
-product syntax behavior are unchanged; evaluator/API/MCP and release proof remain separately owned.
+The complete [inline context rules and controls](formula-documentation-controls.md#inline-documentation-language-context)
+retain the explicit Rust marker, normative-part refusals and independent positive/fault evidence.
 
 ## Reference scalar-domain boundaries
 

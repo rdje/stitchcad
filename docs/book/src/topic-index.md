@@ -37,6 +37,7 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Typed wanted-kind signatures](annexes/formula-wanted-signatures.md) — immutable operand/result rules for dimension diagnostics.
 - [Source-bearing call lookup](annexes/formula-call-lookup.md)
 - [Formula syntax API](annexes/formula-syntax.md)
+- [Formula documentation controls](annexes/formula-documentation-controls.md)
 - [Static formula signature evidence](annexes/formula-static-validation.md)
 - [Formula namespaces and static headers](annexes/formula-static-validation.md#names-and-single-statement-static-checking)
 - [Whole-recipe static checking before execution](annexes/formula-static-validation.md#whole-recipe-before-execution)

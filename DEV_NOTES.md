@@ -14,16 +14,21 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-## _(2026-10-06 UTC)_ — call plans and complete D192 closure
+## _(2026-10-06 UTC)_ — expression complete modes and D197 repair
 
-- Two inputs/19 logs/one mutable/class0; original18/two Cargo argv AST identities exact.
-- Shared673/35/52/262 pass0;13 omissions/legacy D192 red/readonly3 links/two aliases pass0.
-- Native18/full5 in every case/all failed bodies/current macros/72 inputs/63 Rust exact0.
-- Current Cargo-selected call5636c6e5465e555c SHA58de145b passes full5; exact source restoration precedes rebuild.
-- Whole0189/DEV233/CH169/authored234/D192119 retained before retirement; D192 all four verified.
-- D156/D34 remain open; grammar/400 unchanged; next expression/reduction/input plans.
-- Retention524/prior519/all63/eight windows/publication45/coverage9/ledger695real11arms13pointers terminal0 consumed.
+- Four inputs incl both compile-time files/12 logs/1 mutable/class0; original11/two argv AST exact.
+- Shared691/35/54/272 pass0;17 omissions/legacy D197 red/readonly3 links/two aliases pass0.
+- Native80807/verify/artifact terminal0:original exact selections/14 filtered tests uncredited;
+  every failed body/current macros/full15 restoration/74 inputs/63 Rust exact.
+- Current Cargo-selected expression df61d61a42549506 SHA4b40d958 passes full15.
+- D197 expression verified; reduction/input next, family stays open. Grammar/400 unchanged.
+- Whole0190/DEV236/authored237/call238/CH170 retained before retirement;
+  whole inline1686B28L copied/read before move, syntax anchor and SUMMARY link retained.
+- Retention529/prior524/all68/eight windows/publication45/coverage9/ledger701real11arms13pointers consumed0.
+- Publication initially refused missing topic-index entry; owned/link added, all45 pass0.
 - Promotion declined: existing complete-plan/thread/whole-record rules.
+
+Whole call dated lesson retained in [part238](docs/history/stitchcad-devnotes-part238.md).
 
 Whole wanted dated lesson and links retained in [part233](docs/history/stitchcad-devnotes-part233.md).
 
