@@ -3,36 +3,51 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-06 UTC)_ — copied-book producer plans and compatibility
 
-## _(2026-10-06 UTC)_ — D200 delegated bridge controls
+Root cause: D156's whole-recipe instrument created, deleted and copied book trees without
+complete source/output plans. Pure preflight imports the namespace/signature pair; its table
+loader reads five normative book inputs. Producing calls copy the full current book and may
+run the published shell against effective caller selectors. These are different effect scopes.
 
-Current published bridge control failed1 importing0198 coupled: adapter enter lacked
-mutable_sources and expected empty files/one pure plan. Native entry was green; watched control
-stale. Child .p.v.b1 (original .a01.2.b) repairs it before copied-book implementation. Actual imports check
-readonly baseline7/20, borrowed build7, current library+metadata and pure directory inspection.
-Both CLI modes retain4 children/8 writes; original9 fault definitions/argv exact;40 actual
-coupled faults have named assertion reds, rc=0, fixture-bridge-controls.log (98153).
-Independent committed-original TypeError/current omitted baseline red/actual guard-disable
-admitting the same bad plan prove coverage, rc=0, fixture-adapter-proof.log.
-Fresh native263/10 and26723 current replay, rc=0 (29303), fixture-native-proof.log;
-independent95 frozen/63Rust/producer bytes/9 fault AST/results/current library hash exact0,
-fixture-native-verify.log. Pre-build helper draft confused prior-input source d96 with current
-producer source864; corrected and excluded, as are two consumed diagnostic-order drafts.
-Whole Source864 task1882+lesson2397→253,0189ledger621→178/fulln14scope1069→254 had complete
-FILE/copy/inventory/public reads before live retirement. D200641B authored report absentHEAD
-and earned closure (total1233B) retained whole in122 before closure; no admitted seal edited.
-Shared/profile/Rust unchanged from0198; no full CI rerun or unseen remote verdict claimed.
-Copied-book source untouched. Fixed caps/grammar/engine/400 stay. Promotion: declined; existing
-public-interface/current-source/named-body rules govern. Final focused/gate receipts in task.
-First staged gate refused three draft evidence signatures abbreviated as log0/pass0. Add the
-explicit rc=0 in each earned box and owning leaf heading; keep the gate unchanged. Red draft
-consumed and uncredited; final staged/hook verdicts recorded in the task after passing.
-D201 census red1 arose from our auxiliary .a01.2.b placement under the exact output-owner
-terminal filter; Source864/current/profile-ID-only pass/red/pass67/29 establishes the cause.
-Move it to .p.v.b1 after full authored node700B→255/report662B/complete report+closure1107B→123 retention.
-Census guard/both owner TSVs stay exact; runtime profile audit remains pending. Draft guessed
-owner count excluded; current29 derived. D200 prior header owner remains historical, current
-node explicitly links its old authored scope. All552 prior identities/43 physical bytes stay.
+The bootstrap plans five sources before helper loading; pure contracts plans ten inputs.
+A producing plan walks inspected directories without following links, includes every current
+book file, every selected copy/log/directory and every existing deletion candidate, then activates
+local stores. Unknown fixture entries and output aliases refuse before effects. Each selected
+replacement is rechecked before deletion/copy, and copied consumer inputs before edits/execution.
+The real child uses the prepared selector snapshot and revalidates sources immediately before dispatch.
+
+Six actual captures retain ordinary/mutation argv, borrowed pure/consumer/measurement interfaces
+and relative caller selectors. Current ordinary202/mutation401 writes cover199 unique destinations;
+borrowed consumer132/measurement66 destinations omit unused fixtures. Pure196 never activates stores.
+The final minimum-runtime control89347 passes twelve named actual guard-body reds and fourteen
+physical refusals, including symlinks, hardlinks, missing inputs, unexpected entries and aliases.
+The intercepted child emits authored metrics; those are dispatch evidence, not numerical evidence.
+
+D202 reproduced an empty selected parts-directory alias with no effects; a directory guard now
+refuses it, and omitting that actual condition admits the same bad plan. D203 reproduced supported
+Python3.9.6 failures in a new hardlink API and a rigid recursive-copy call shape. os.link and public
+signature/default binding fix both; no private library implementation was inspected. The OS interpreter
+and stdlib are read-only dependencies; every created fixture, store and log remains repository-local.
+Current Python3.14 borrowed-copy proof also passes. Both whole authored reports/closures are in124/125.
+
+Real runtime25291 passes196 cases/all14 actual compiled faults and the original shell's21 statements,
+17 bindings/four assertions/13 refusals/zero mismatches. Original measurement/consumer/main bodies,
+cases/FAULTS/argv remain AST-exact apart from the planned effect wrappers. Frozen138 were exact at
+that invocation; the later compatibility control changed intentionally. Final continuity checks133
+actual numeric/book/bootstrap/Rust inputs independently, including all63 Rust sources against HEADaea.
+
+Draft calibration failures are excluded: the first copier wrapper did not accept recursive calls;
+two expected diagnostic-order assertions and one physical alias fixture reached earlier valid refusals;
+two AST normalizations omitted the original docstring/mkdir. The arity4 diagnostic guess was wrong;
+the actual probe measured three positional arguments plus dirs_exist_ok. Each was corrected with tools.
+Whole256/179/257/258/259 and defects124/125 were copied, inventoried and publicly read before live
+retirement; Own-only dedup preserved every canonical field. Fixed caps/grammar/engine/400 remain.
+Promotion declined: existing public-boundary, effect-scope, claim and continuity rules already apply.
+
+
+
+Whole0199 task and bridge lesson retained in [part256](docs/history/stitchcad-devnotes-part256.md).
 
 Whole0198 task and coupled static lesson retained in [part253](docs/history/stitchcad-devnotes-part253.md).
 
@@ -164,3 +179,11 @@ committed table and original links. Recent records follow; older identities rema
 | [part254](docs/history/stitchcad-devnotes-part254.md) | whole completed n14 scope | 8 lines, 1069 bytes, sha256:03b0a1ef… |
 
 | [part255](docs/history/stitchcad-devnotes-part255.md) | whole authored old control node | 7 lines, 700 bytes, sha256:1c20d098… |
+
+| [part256](docs/history/stitchcad-devnotes-part256.md) | whole0199 task and bridge control lesson | 37 lines, 3810 bytes, sha256:c05fe3a8… |
+
+| [part257](docs/history/stitchcad-devnotes-part257.md) | whole completed profile control scope | 9 lines, 796 bytes, sha256:ed2cb337… |
+
+| [part258](docs/history/stitchcad-devnotes-part258.md) | whole completed builtin family scopes | 37 lines, 3692 bytes, sha256:d2e8489b… |
+
+| [part259](docs/history/stitchcad-devnotes-part259.md) | whole completed namespace and declaration scopes | 48 lines, 4638 bytes, sha256:2f985e2b… |

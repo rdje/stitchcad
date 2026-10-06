@@ -8,4 +8,5 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/producer_census_contrac
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/producer_census.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_producer_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_bridge_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/push_cadence_contract.py"

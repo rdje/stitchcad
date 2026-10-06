@@ -112,6 +112,13 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0200 — copied-book recipe plans
+
+- Plan pure reference inputs and complete copied trees/logs before effects; preserve selectors/argv.
+- Six captures/twelve guard reds/fourteen refusals pass on Python3.9; D202/D203 fixed and retained124/125.
+- Real196/all14 faults/21 numerical statements/0 mismatches; original consumers and133 inputs exact.
+- Whole256/179/257–259 retained; grammar/engine/fixed caps/400 stay. Static public loaders next.
+
 ## STITCHCAD-G1-0199 — repair bridge controls
 - D200 TypeError fixed: readonly7/20, borrowed7/current libraries/dirs captured;4 children/8 writes.
 - Original9 plus40 coupled faults and actual guard-disable proof pass0.
@@ -166,14 +173,6 @@ the digests afterwards.
 - Whole0190/DEV236–238/CH170 retained; whole inline context moved/read exactly; book/live aligned.
 - Publication45/coverage9/ledger701/11/13 pass0; grammar/400 stay; reduction next.
 
-## STITCHCAD-G1-0190 - call plans and D192 closure (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n11.4`)
-
-- Two inputs/19 logs/one mutable/class0; original18/two Cargo argv unchanged.
-- Shared673/35/52/262;13 omissions/legacy red/readonly3 links/two aliases pass0.
-- Native18/every full5/failed body/current macros/72 inputs/63 Rust/current5 exact0.
-- Whole0189/DEV233/CH169/authored234/D192119 retained; D192 all four verified.
-- Retention524/publication45/coverage9/ledger695real11arms13pointers pass0.
-- Book/live/next .n12 aligned; D156/D34 open; grammar/400 unchanged.
 
 
 
@@ -346,3 +345,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part177](docs/history/stitchcad-changelog-part177.md) | whole0188 operator ledger | 6 lines, 443 bytes, sha256:fcb51477… |
 
 | [part178](docs/history/stitchcad-changelog-part178.md) | whole0189 wanted ledger | 7 lines, 621 bytes, sha256:56671d47… |
+
+| [part179](docs/history/stitchcad-changelog-part179.md) | whole0190 call-plan ledger | 8 lines, 561 bytes, sha256:6440b75c… |

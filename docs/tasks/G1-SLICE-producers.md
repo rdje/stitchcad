@@ -51,7 +51,7 @@ coverage; .b.s owns shell/platform/raw book commands and .b.v integration. D156 
 ## Ordered repair groups
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a01`
-  Status: `in_progress`
+  Status: `done`
   Goal: Static native bridge and copied recipe; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
@@ -61,8 +61,12 @@ coverage; .b.s owns shell/platform/raw book commands and .b.v integration. D156 
   Acceptance: validate bridge sources/directory/nine file destinations without effects before delegated module loading; retain coupled's import behavior/all20 inputs/populations/argv; producing call rechecks22-source union/output/files and retains stores. Actual full captures, early/late/file-alias refusals and body faults; real263 phase outcomes/ten reference reds plus shared26723 baseline, exact sources/current artifact before commit. Copied-book effects belong to .2; remaining destinations are P1 .p.o.f.i next.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a01.2`
-  Status: `in_progress`
+  Status: `done`
   Own0200: copied-book/whole retention/live/book;target/fixture-*.
+  Own D202: docs/tasks/PLANNING.md; docs/history/stitchcad-defects-part124.md; selected parts-directory alias repair/proof.
+  Own D203: docs/history/stitchcad-defects-part125.md; Python3.9 control compatibility repair/proof.
+  Own0200 controls: docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py;docs/tasks/artifacts/ci_environment/producer_entries.tsv;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh.
+  Paths: docs/tasks/artifacts/formula_structure/static_recipe_contract.py
   Goal: copied-book recipe fixtures and real reference consumer; static_recipe_contract.py ownership.
   Acceptance: complete public helper/source/book tree/borrowed-root review before edits; guarded creation/copy/deletion/delegation, original consumer and per-recipe controls, actual captures/body faults and focused real proof.
 
@@ -72,11 +76,11 @@ Whole0195 receipts and original bridge inspection retained in [part247](../histo
   Status: `done`
   Goal: STITCHCAD-G1-0199 owns blocking D200 bridge adapter drift before copied-book implementation, plus already-owned whole0198/wanted retention.
   Paths: docs/tasks/artifacts/ci_environment/python_bridge_contract.py
-  Own live/book/defect/retention proof;target/fixture-*.
-  Own D201: auxiliary topology correction and complete authored old node/report retention.
   Acceptance: actual bridge TypeError reproduction; complete coupled ordinary/per-build/current-library captures; original4 children/8 writes/nine faults and early refusals stay; current native bytes/artifact unchanged; full focused verification/commit before parent resumes.
 
 Prior authored node .a01.2.b retained whole in [part255](../history/stitchcad-devnotes-part255.md).
+
+Whole original completed control scope retained in [part257](../history/stitchcad-devnotes-part257.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.i`
   Status: `done`
@@ -569,7 +573,6 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Status: `done`
   Goal: namespace complete mode/input/file/mutable plans/current assertion evidence and real original consumer replay, after relevant contract/book review and derived task-record containment prerequisite.
   Paths: docs/tasks/artifacts/formula_structure/namespace_mutations.py
-  Own STITCHCAD-G1-0182: shared Python controls/book/live receipts; guarded target/namespace-plan-* helpers/logs/fixtures. Before receipt growth, retain whole committed .n09.h.v record in G1-SLICE-retention-proof.md; preserve Source interval/hash/canonical header/current map.
   Paths also: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-declarations.md;docs/book/src/build-and-checks.md;docs/tasks/PLANNING.md;whole committed live lesson/ledger retention if needed before cap growth.
   Acceptance: retain original cases/full argv/source restoration/current artifact; independent omissions/physical refusals/current failed-body proof; D156 remains open outside this entry.
 
@@ -600,23 +603,22 @@ canonical header/prefix retained. Own live/book/shared controls, guarded target/
   Goal: STITCHCAD-G1-0184 declaration complete mode/input/file/mutable plans and real native/negative-construction replay.
   Paths: docs/tasks/artifacts/formula_structure/declaration_mutations.py
   Paths also: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/book/src/annexes/formula-declarations.md;docs/book/src/build-and-checks.md.
-  Own live/whole lesson-ledger/report retention and existing retention sibling; guarded target/declaration-plan-* helpers/logs/fixtures.
   Acceptance: preserve original19 CASES/count2 widening/full7 native/full5 doctest argv/restoration; two inputs/22 ordinary logs/one mutable/class0; independent omissions and physical refusals; every actual failed body/current macro/frozen inputs/current artifacts.
 
 Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#declaration-complete-verification); canonical ownership remains above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n10.2`
   Status: `done`
-  Own: shared/live/book/retention;target/name-read-plan-*.
   Goal: exact-name complete mode/input/file/mutable plans/current assertions and original9 real faults/full7 restoration.
   Paths: docs/tasks/artifacts/formula_structure/name_read_mutations.py
   Acceptance: review full source/public tests/book before code; retain original cases/argv/source restoration/current artifact; independent omissions/physical refusals/every failed body; D156 remains outside this entry.
 
 Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-complete-verification); canonical ownership remains above.
 
+Whole original completed namespace/declaration scopes retained in [part259](../history/stitchcad-devnotes-part259.md).
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11`
   Status: `done`
-  Own STITCHCAD-G1-0187: .n11 split/whole ac005 cleanup/.f.l receipts retained;target/builtin-plan-*;live/book/shared controls;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/book/src/annexes/formula-builtin-signatures.md;docs/tasks/PLANNING.md.
   Goal: complete file-destination plans for signature/call metadata; retain existing source guards, prepared stores and public consumer behavior.
   Paths: docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py;docs/tasks/artifacts/formula_structure/operator_signature_mutations.py;docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py;docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
@@ -626,7 +628,6 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Goal: builtin complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
   Paths: docs/tasks/artifacts/formula_structure/builtin_signature_mutations.py
   Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
-  Own D192 builtin repair/D193 book currency;3 inputs incl native compile-time grammar/22 logs/1 mutable/classifier0;original21/full5 unchanged.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.2`
   Status: `done`
@@ -637,9 +638,6 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.3`
   Status: `done`
-  Own STITCHCAD-G1-0189: shared/live/book/whole retention;target/wanted-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-wanted-signatures.md.
-  Own full4-input/20-file/1-mutable/class0 plans and D192 wanted repair; original19/joint target order stays.
-  Own D195/D196: docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh; target/wanted-plan-ledger*; archive-role proof.
   Goal: wanted complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
   Paths: docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py
   Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
@@ -650,7 +648,8 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Paths: docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
   Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
   Own0190: shared/live/book/whole retention;target/call-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-call-lookup.md.
-  Own D192 call repair/family closure.
+
+Whole original completed builtin family scopes retained in [part258](../history/stitchcad-devnotes-part258.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12`
   Status: `done`
@@ -734,11 +733,13 @@ Whole0197 task and statement compiler lesson retained in [part251](../history/st
 
 Whole0198 task and coupled static lesson retained in [part253](../history/stitchcad-devnotes-part253.md).
 
-### G1-SLICE.5b.4c.h2.b.p.v.b1
+Whole0199 task and bridge lesson retained in [part256](../history/stitchcad-devnotes-part256.md).
 
-- [x] REPRODUCE / ISSUE: actual Source864 adapter TypeError mutable_sources rc=1, fixture-bridge-diagnostic.log; full adapter/bridge/coupled/helpers/book read before repair.
-- [x] ROOT CAUSE: stale intercepted interface; native producer green. D201 topology Source864/current/profile-ID pass/red/pass67/29; old node255/report123 retained. Drafts diagnostic-order/helper-provenance consumed/fixed/uncredited; final native log rc=0.
-- [x] FIX: readonly7/20 import/borrowed7/current libraries/dirs; original4 children/8 writes/9 faults/argv stay. fixture-bridge-controls.log40 coupled reds+standing controls, rc=0 (98153).
-- [x] ADDRESSED: committed TypeError/intact omission red/actual disabled guard admits it, fixture-adapter-proof.log0; native263/10+26723 replay/independent95 frozen/63Rust/current producer/library exact, fixture-native-proof/verify.log, rc=0.
-- [x] NO REGRESSION: census/publication45/coverage9/archive28+CLI577/ledger738+11arms13/all558 reads pass, rc=0; fixture-{census,publication,coverage,archive,ledger,retention-proof}.log.
-- [x] LOCKSTEP: next .a01.2/book/live;12open188sealed/map/caps rc=0. promotion: declined(existing rules);400/no runner claim; staged13 rc=0, fixture-staged-gate.log.
+### G1-SLICE.5b.4c.h2.b.p.o.a01.2 —0200 copied-book signoff
+
+- [x] REPRODUCE / ISSUE: original bootstrap omission red; D202 empty parts alias/D203 supported-runtime API failures measured before fixes, target/fixture-parts-alias-proof.log and fixture-copytree-api-proof.log, rc=0.
+- [x] ROOT CAUSE: pure10 versus producing whole70 require complete source/file/dir/deletion plans; actual original entry red, target/fixture-python39-fixed.log, rc=0; public helper/book/borrowed review complete.
+- [x] FIX: plan bootstrap/copies/logs/deletion candidates before effects; recheck copied inputs and prepared selectors; D202/D203 fixed, target/fixture-python39-fixed.log, rc=0; grammar unchanged.
+- [x] ADDRESSED: six captures/twelve actual guard reds/fourteen physical refusals and actual guard-disable admissions pass on3.9; current3.14 public copy also passes, target/fixture-public-copy-proof.log, rc=0.
+- [x] NO REGRESSION: real196/all14 faults/21 numerical/0mismatch; original consumer/main AST/argv/all133 inputs63Rust exact, target/fixture-reference-proof.log, rc=0; publication45/coverage9/archive28+CLI584/ledger746+11arms13/census green.
+- [x] LOCKSTEP: whole256/179/257–259/defects124125/prior558/all49/current565 reads/61 headers53live8retained/178pointers/map/caps exact, target/fixture-continuity-proof.log, rc=0;12open190sealed. Next .a02; promotion: declined;400/no runner claim. Final staged gate13 green, rc=0, target/fixture-staged-gate.log.

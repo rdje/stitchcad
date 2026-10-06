@@ -1040,3 +1040,7 @@ D199 whole authored report/verified five-row repair retained in [part121](../his
 D200 whole authored report/verified closure retained in [part122](../history/stitchcad-defects-part122.md).
 
 D201 whole authored topology report/verified closure retained in [part123](../history/stitchcad-defects-part123.md).
+
+D202 whole authored report/verified closure retained in [part124](../history/stitchcad-defects-part124.md).
+
+D203 whole authored report/verified closure retained in [part125](../history/stitchcad-defects-part125.md).

@@ -3,6 +3,7 @@ from contextlib import redirect_stdout
 from pathlib import Path
 import io
 import os
+import re
 import runpy
 import shutil
 import subprocess
@@ -10,15 +11,124 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
-HELPER = runpy.run_path(str(HERE / 'static_namespace_contract.py'))
-LOADER = HELPER['LOADER']
-SOURCE = HELPER['SOURCE']
 BOOK = ROOT / 'docs/book/src'
 WORK = ROOT / 'target/formula_structure/static_recipe'
+SOURCE = ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, SOURCE,
+               HERE / 'static_namespace_contract.py', HERE / 'static_signature_contract.py')
+REFERENCE_INPUTS = (*BOOT_INPUTS, *(BOOK / name for name in (
+    'spec/formula-language.md', 'spec/formula-language/grammar.md',
+    'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md')))
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
+HELPER = runpy.run_path(str(HERE / 'static_namespace_contract.py'))
+LOADER = HELPER['LOADER']
+assert HELPER['SOURCE'] == SOURCE, 'recipe reference source changed'
 Declaration = HELPER['Declaration']
 
 
+def tree_plan(base, *, output=False):
+    """Walk only inspected directories; do not follow links or enter another repository."""
+    relative = PROFILE['producer_path'](ROOT, base)
+    if output:
+        PROFILE['producer_output_path'](ROOT, base)
+    PROFILE['directory'](ROOT, relative, missing_ok=output)
+    if not base.exists():
+        return (), ()
+    directories, files = [base], []
+    for folder in directories:
+        PROFILE['directory'](ROOT, folder.relative_to(ROOT).as_posix())
+        for path in sorted(folder.iterdir()):
+            PROFILE['require'](not path.is_symlink(), 'symlink copied-book entry')
+            if path.is_dir():
+                directories.append(path)
+            else:
+                files.append(path)
+    PROFILE['plan_producer'](ROOT, **{'output_files' if output else 'sources': tuple(files)})
+    return tuple(directories), tuple(files)
+
+
+def source_plan():
+    """Inspect the entire copied book and its loaders without creating or activating anything."""
+    directories, files = tree_plan(BOOK)
+    sources = (*BOOT_INPUTS, *files)
+    PROFILE['plan_producer'](ROOT, sources=sources)
+    return directories, files, sources
+
+
+def consumer_inputs(environment=None):
+    """Match the shell's effective selectors and lexical reference resolution before effects."""
+    environment = os.environ if environment is None else environment
+    parts = Path(environment.get('FORMULA_PARTS_DIR') or BOOK / 'spec/formula-language')
+    selected = tuple(Path(environment.get(name) or default) for name, default in (
+        ('FORMULA_CONTRACT', BOOK / 'spec/formula-language.md'),
+        ('FORMULA_GRAMMAR', parts / 'grammar.md'),
+        ('FORMULA_EXAMPLES', parts / 'examples.md'),
+        ('FORMULA_FIXTURE', BOOK / 'spec/reference-skirt.md')))
+    # The shell runs in ROOT; keep a relative caller selector relative to that same root.
+    selected = tuple(path if path.is_absolute() else ROOT / path for path in selected)
+    parts = parts if parts.is_absolute() else ROOT / parts
+    PROFILE['directory'](ROOT, PROFILE['producer_path'](ROOT, parts))
+    PROFILE['plan_producer'](ROOT, sources=selected)
+    references = []
+    for path in selected[:3]:
+        for _, target in re.findall(r'\[([^\]]*)\]\(([^)]+)\)', path.read_text()):
+            if target.startswith(('http://', 'https://', '#')):
+                continue
+            # Concatenation intentionally matches the public resolver, including a leading slash.
+            references.append(Path(os.path.normpath(str(path.parent) + '/' + target.split('#')[0])))
+    sources = tuple(dict.fromkeys((*selected, *sorted(parts.glob('*.md')), *references)))
+    PROFILE['plan_producer'](ROOT, sources=sources)
+    return parts, sources
+
+
+def fixture_plan(labels, *, real=False, activate=True):
+    """Inspect every copied file and existing deletion candidate before activating stores."""
+    book_directories, book_files, sources = source_plan()
+    if real:
+        parts, selected_inputs = consumer_inputs()
+        sources = tuple(dict.fromkeys((*sources, *selected_inputs)))
+    file_names = {path.relative_to(BOOK) for path in book_files}
+    directory_names = {path.relative_to(BOOK) for path in book_directories}
+    bases = tuple(WORK / label / 'src' for label in labels)
+    if real:
+        PROFILE['require'](not any(parts == base or parts.is_relative_to(base) for base in bases),
+                           'copied-book output aliases selected input directory')
+    directories = (WORK, *(base / name for base in bases for name in sorted(directory_names)))
+    outputs = (*(base / name for base in bases for name in sorted(file_names)),
+               *(WORK / (label + '.log') for label in labels),
+               *((WORK / 'real.log',) if real else ()))
+    PROFILE['require'](not set(outputs) & set(sources), 'copied-book output aliases selected input')
+    for base in bases:
+        existing_directories, existing_files = tree_plan(base, output=True)
+        PROFILE['require'](all(path.relative_to(base) in directory_names for path in existing_directories)
+                           and all(path.relative_to(base) in file_names for path in existing_files),
+                           'unexpected copied-book fixture entry')
+    plan = dict(directories=directories, output_files=outputs, sources=sources)
+    PROFILE['plan_producer'](ROOT, **plan)
+    return PROFILE['prepare_producer'](ROOT, **plan) if activate else None
+
+
+def copy_book(label):
+    """Recheck the complete selected replacement immediately before deleting and copying."""
+    fixture_plan((label,), activate=False)
+    book = WORK / label / 'src'
+    if book.exists():
+        shutil.rmtree(book)
+    shutil.copytree(BOOK, book)
+    # These files now become the compiled consumer's inputs and may be edited as owned outputs.
+    _, files = tree_plan(book, output=True)
+    PROFILE['plan_producer'](ROOT, sources=(SOURCE, *files), output_files=files)
+    return book
+
+
 def contracts(replacement=None, verbose=True):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     ns, reference = LOADER['load_reference'](replacement)
     reference.reserved = {name: HELPER['ReservedKind'](kind)
                           for name, kind in HELPER['RESERVED'].items()}
@@ -161,10 +271,8 @@ def contracts(replacement=None, verbose=True):
 
 def measurement_contract(replacement=None):
     """An independent per-recipe ceiling lies between21 worked statements and34 total cases."""
-    book = WORK / 'per_recipe_measurement' / 'src'
-    if book.exists():
-        shutil.rmtree(book)
-    shutil.copytree(BOOK, book)
+    fixture_plan(('per_recipe_measurement',))
+    book = copy_book('per_recipe_measurement')
     contract = book / 'spec/formula-language.md'
     text = contract.read_text()
     before = '| `max_recipe_statements` | 4096 |'
@@ -195,7 +303,7 @@ def measurement_contract(replacement=None):
 
 
 def consumer_contracts(replacement=None, verbose=True):
-    WORK.mkdir(parents=True, exist_ok=True)
+    environment = fixture_plan(('late_kind', 'late_name'), real=verbose)
     program = SOURCE.read_text().split("<<'PY'\n", 1)[1].rsplit('\nPY', 1)[0]
     if replacement:
         before, after = replacement
@@ -213,10 +321,7 @@ for method in ("statement", "evaluate", "_evaluate", "value_of_name", "resolve_g
     # zero divisor would execute if the consumer skipped preflight or preflight returned early.
     for label, suffix, token in [('late_kind', '== size_index`', 'formula_dimension'),
                                  ('late_name', '== missing_width`', 'formula_unbound_name')]:
-        book = WORK / label / 'src'
-        if book.exists():
-            shutil.rmtree(book)
-        shutil.copytree(BOOK, book)
+        book = copy_book(label)
         examples = book / 'spec/formula-language/examples.md'
         text = examples.read_text()
         for before, after in [('`waist_girth + ease_waist`', '`waist_girth / 0`'),
@@ -246,7 +351,10 @@ for method in ("statement", "evaluate", "_evaluate", "value_of_name", "resolve_g
         checks += 1
     if verbose:
         # This arm runs the actual shell entry point, retaining the real numerical replay.
-        result = subprocess.run(['bash', str(SOURCE)], cwd=ROOT, env=dict(os.environ, FORMULA_BOOK=str(BOOK)),
+        # Revalidate effective overrides and the current book immediately before delegation.
+        source_plan()
+        consumer_inputs(environment)
+        result = subprocess.run(['bash', str(SOURCE)], cwd=ROOT, env=dict(environment, FORMULA_BOOK=str(BOOK)),
                                 capture_output=True, text=True)
         output = result.stdout + result.stderr
         (WORK / 'real.log').write_text(output)
@@ -271,7 +379,8 @@ FAULTS = [
      '            self.evaluate(self.parse("1"), env)\n            checked = self._static_statement(src[start:end], env, ordinal, start, prior_sources, checked=checked)'),
     ('input availability observed', '        boundaries, depth = [], 0', '        [entry.get("state") for entry in env.values()]\n        boundaries, depth = [], 0'),
 ]
-if __name__ == '__main__':
+def main():
+    fixture_plan(('late_kind', 'late_name', 'per_recipe_measurement'), real=True, activate=False)
     original = SOURCE.read_bytes()
     contracts()
     consumer_contracts()
@@ -310,3 +419,11 @@ if __name__ == '__main__':
             raise AssertionError('measurement fault escaped')
         assert SOURCE.read_bytes() == original
         print('static recipe faults: %d actual assertion reds; producer unchanged' % (len(FAULTS) + 3))
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None

@@ -336,6 +336,20 @@ guard faults also test whether boundary/order/limit guards or the consumer's pre
 be bypassed; the actual producer on disk stays unchanged during those controls. Fourteen actual
 guard faults must fail body assertions, including early consumer evaluation and measurement faults.
 
+The copied-book instrument plans the complete current book and every selected copy, log and
+existing deletion candidate before it activates local stores. An unknown fixture file or directory,
+a symlink, a hardlinked output, or an effective input that a copy would replace causes refusal
+before creation, deletion or delegation. Empty selected parts directories are protected too.
+Pure contracts() validates only its ten reference inputs and never activates stores; borrowed
+consumer_contracts(verbose=False) produces only the two late-error copies, and measurement_contract()
+produces only its ceiling copy. Each copy is rechecked immediately before replacement and before use.
+
+The real shell replay retains the prepared store environment and the caller's effective
+FORMULA_CONTRACT, FORMULA_GRAMMAR, FORMULA_EXAMPLES, FORMULA_FIXTURE and FORMULA_PARTS_DIR selectors.
+Its FORMULA_BOOK remains this repository's book, as before. Source inspection and child dispatch use
+the same selector snapshot. These locality controls leave the recipe grammar and196 cases unchanged;
+intercepted child output is dispatch evidence. The separate real replay supplies numerical evidence.
+
 Recipe size is measured from the accepted worked plan:21 statements. The13 separate refusal
 candidates are not appended to that recipe. D123 formerly combined them into34, falsely refusing
 a copied book with a25-statement ceiling. That independent control now passes, while restoring
