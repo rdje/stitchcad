@@ -698,7 +698,8 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Acceptance: Source56/all537 isolated deterministic capture/source/read/materialization; guarded copy/verify/exact retirement; prior8/proof prefixes/whole records/current routes/fixed caps; published probes.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.h.v`
-  Status: `pending`
+  Status: `done`
+  Own0195: live/book/task/whole retention;target/window9-post-*.
   Goal: copied newest committed window9 catalog prose refusal before compilers.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.1`
@@ -728,19 +729,22 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
 
 Whole completed n11/n12 retrieval records,0193 preparation/acceptance/gates and input lesson retained in [part244](../history/stitchcad-devnotes-part244.md); canonical ownership remains above.
 
-## STITCHCAD-G1-0194 — window9 acceptance (.n13.h)
+Whole0194 task and continuity lesson retained in [part246](../history/stitchcad-devnotes-part246.md).
 
-- [x] REPRODUCE / ISSUE: capture76032 Source56/537/64 working/deterministic,rc=0.
-- [x] ROOT CAUSE: unchanged64 limit blocks owner growth; complete schema/CLI/book read,rc=0.
-- [x] FIX: install0:3 bytes copy/verify before56 exact retire; prior8 prefix/9 working,rc=0.
-- [x] ADDRESSED: archive23205 terminal0:28/CLI558/newest digest/member/catalog/collision,rc=0.
-- [x] NO REGRESSION: python3 -I -B target/window9-final-retention-proof.py rc=0:
-  540reads/prior537/84inputs/25controls/54closed headers/63Rust/12open185sealed exact.
-- [x] LOCKSTEP: whole244/CH173/245/proof prefixes/original NAV/current routes/book sync,rc=0.
-  Publication65579/coverage87290/ledger75617 terminal0:45/9/715real11arms13pointers.
-  Caps/grammar/400 stay. promotion: declined. .h.v next; parent .n13 active.
+0195 draft .h.v: whole0185 also retired live part173; ledger26486 red1.
+Exact current row restored; sealed174 stays; fresh173-pointer/full ledger verified.
+Known P3 pipe stays .b.s. CH cap/helper syntax drafts refused before effects, corrected.
 
-DEV over-cap draft and book outside-source link refused before acceptance; corrected through
-bounded summary/public reader, no gate changes. Syntax-only helper drafts produced no writes.
+## STITCHCAD-G1-0195 — committed window9 (.n13.h.v)
 
-Staged91543 all13green,rc=0.
+- [x] REPRODUCE / ISSUE:97118 copied inventory0/guard1/root31 exact,rc=0.
+- [x] ROOT CAUSE: actual committed comparison checks prose/HEAD exact,rc=0.
+- [x] FIX: retain0 whole246/174 FILE preflight/read before retire,rc=0.
+- [x] ADDRESSED: archive73116:28/CLI561/all542/newest9 refusal,rc=0.
+- [x] NO REGRESSION: python3 -I -B target/window9-post-retention-proof.py rc=0 (74301):
+  prior540/31files/55closed/63Rust/3proofs/173pointers/nav/map/caps/12open185sealed exact.
+- [x] LOCKSTEP:46644/2744/42495:pub45/coverage9/ledger718real11arms13pointers,rc=0.
+  Earlier proof excluded after helper edit; no pending jobs. Promotion: declined.
+  .n13.1 next; engine/grammar/400 stay.
+
+Staged52893 all13green,rc=0.

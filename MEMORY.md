@@ -4,13 +4,15 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- STITCHCAD-G1-0194/.n13.h window9 complete; commit/postconditions finish this workflow.
-- Capture76032/installation0 consumed:Source56/all537 deterministic/source/read/materialization;
-  3 bytes copy/verify before56 exact retirements; previous8/master ordered prefix exact.
-- Whole tail2826B/input994B→244; CH0184→173/window8 book→245; prior identities/proof prefixes/
-  original NAV retained; current equivalent routes/aliases/book complete; fixed caps stay.
-- Focus78272/23205/65579/87290/75617 terminal0 consumed:540reads/prior537/84inputs/25controls/
-  54closed headers/63Rust/12open185sealed/archive28/CLI558/publication45/coverage9/
-  ledger715real11arms13pointers exact. No native/background job pending.
-- Next .n13.h.v actual newest committed catalog prose refusal, then .n13.1 recipe/.2 statement.
-  D197/D198 verified;D156/D34 open. Grammar/400 unchanged; no push (derive count).
+- STITCHCAD-G1-0195/.n13.h.v complete; commit workflow/postconditions finish this unit.
+- Actual committed5f6f615 copied9 prose inventory0/exact guard refusal1/root31/HEAD exact.
+- Whole0194 task1059B+lesson612B→246; whole0185 ledger+pointer450B→174.
+  Initial ledger26486 draft REAL/coverage red: current part173 row retired inside interval.
+  Restored exact live row/sealed174 stays; original/current173 pointers verified.
+- Final74301/73116/46644/2744/42495 terminal0 consumed:542reads/prior540/31controls/
+  55closed headers/63Rust/3proofs/nav/map/caps/12open185sealed/archive28/CLI561/
+  publication45/coverage9/ledger718real11arms13pointers. No pending jobs.
+- Next .n13.1 recipe owner29 outputs/current artifact plans, then .2 statement.
+  Recipe entry/322L impl/public7-test contract/215L book/shared capture read; source TSV/
+  complete controls/public spec checks still required before implementation.
+- D156/D34 open; grammar/400 unchanged; no push (derive count).

@@ -500,8 +500,13 @@ bash scripts/history_archive.sh prove-source window9
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part244.md
 ```
 
-Archive28/CLI558 controls and all540 current reads pass with prior identities and fixed bounds
-exact. Newest committed catalog refusal follows its recording commit.
+At recording5f6f615, Archive28/CLI558 and all540 reads passed. The actual copied newest
+catalog prose edit keeps inventory valid; the committed guard refuses it with
+`ARCHIVE-RETENTION: REFUSED — committed retained file changed`. Both root/copied baselines
+pass, and all31 original root archive files/HEAD stay exact. Whole0194 task/lesson and0185
+ledger are retained before new receipts; current retrieval now includes542 logical records.
+Archive28/CLI561, all542 reads, publication45, coverage9 and ledger718+11+13 pass.
+The live part173 row remains available alongside its exact copy inside the whole0185 interval.
 
 This preserves maintenance evidence. Engine/grammar behavior and the400-commit cadence stay.
 

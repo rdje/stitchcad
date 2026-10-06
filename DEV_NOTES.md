@@ -14,14 +14,14 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-## _(2026-10-06 UTC)_ — window9 continuity before owner compilers
+## _(2026-10-06 UTC)_ — committed window9 guard
 
-- Source56/537/64 working: deterministic fixture/source proof/all537 reads/materialization0.
-- New3 bytes copied/verified before56 exact single-link retirements; installed9/prior8 exact0.
-- Whole tail2826B/input994B→244; CH0184→173/book window8→245; preflight/read before retire0.
-- Old identities/proof prefixes/CH162 original navigation exact; live equivalent routes/
-  aliases outside retained task bytes. Fixed caps/engine/grammar/400 stay.
-- Post-recording guard next; promotion declined. First DEV draft refused before all writes.
+- Actual5f6f615/copied guard0; prose inventory0/exact committed refusal1.
+- Root31/HEAD exact; whole0194→246/0185→174; preflight/read before retire.
+- Draft lost part173 live row inside whole0185; ledger refused; restored/verified173 pointers.
+- Promotion declined: existing immutable-source/whole-record rules. Compilers next.
+
+Whole0194 task and continuity lesson retained in [part246](docs/history/stitchcad-devnotes-part246.md).
 
 Whole input modes and D197/D198 lesson retained in [part244](docs/history/stitchcad-devnotes-part244.md).
 
@@ -217,3 +217,5 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/window8.md#
 | [`part223`](docs/history/window9.md#stitchcad-devnotes-part223md) | whole declaration plans and negative construction lesson | 6 lines, 717 bytes, `sha256:581e057e…` |
 
 | [`part226`](docs/history/window9.md#stitchcad-devnotes-part226md) | whole daily-cleanup and exact-name lessons | 12 lines, 1315 bytes, `sha256:3b7079ff…` |
+
+| [`part246`](docs/history/stitchcad-devnotes-part246.md) | whole0194 task receipt and continuity lesson | 24 lines, 1671 bytes, `sha256:89663292…` |

@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0195 - committed window9 guard (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n13.h.v`)
+
+- Copied guard refusal1; root31/HEAD exact.
+- Whole246/174 retained;542 reads/caps exact.
+- 28/561/45/9/718+11+13 pass; grammar/400 stay.
+
 ## STITCHCAD-G1-0194 - window9 continuity (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n13.h`)
 
 - Source56/537 exact; copy/verify before retirement; prior8 stay.
@@ -174,14 +180,6 @@ the digests afterwards.
 - D191 both directory helpers repaired; local56/13+8/4, CI19/6/shared609/44/230, native7/WASM/book green.
 - Whole task/DEV222/CH165/defects114 retained; book/live/.n11 next. Rust/grammar/400 stay; D156/D34 open.
 
-## STITCHCAD-G1-0185 - exact-name plans and D189 (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n10.2`)
-
-- Two inputs/10 logs/one mutable/class0; original9/full7/every failed body macro exact.
-- Shared609/35/44/230; D189/D190 closed;500 reads/whole receipts retained.
-- Book/live/.n10 done/.n11 next; Rust/grammar/400 stay, D156/D34 open.
-
-
-| [part173](docs/history/stitchcad-changelog-part173.md) | whole G1-0184 ledger | 6 lines, 386 bytes, sha256:fa21b2e4… |
 
 Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention-proof.md#input-review-changelog-retention---whole0183).
 
@@ -338,3 +336,6 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [`part166`](docs/history/window9.md#stitchcad-changelog-part166md) | whole G1-0176 ledger | 6 lines, 498 bytes, `sha256:b78badf1…` |
 
 | [`part167`](docs/history/window9.md#stitchcad-changelog-part167md) | whole G1-0177 ledger | 7 lines, 564 bytes, `sha256:0840c5ba…` |
+
+| [`part174`](docs/history/stitchcad-changelog-part174.md) | whole0185 ledger | 8 lines, 450 bytes, `sha256:c302c5c0…` |
+| [part173](docs/history/stitchcad-changelog-part173.md) | whole G1-0184 ledger | 6 lines, 386 bytes, sha256:fa21b2e4… |
