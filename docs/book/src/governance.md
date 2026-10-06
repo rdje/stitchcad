@@ -398,7 +398,7 @@ advisory PIDs without exposing command arguments. Stop owned jobs and their chil
 shared tool infrastructure. Then rerun the census and confirm all needed tool results are terminal.
 
 The project-owned entry point replaces the inherited neutral checker for this workflow; the inherited
-copy remains unchanged as scaffold provenance.43 independent fixtures/13 actual in-memory guard faults
+copy remains unchanged as scaffold provenance.43 independent fixtures/14 actual in-memory guard faults
 and an OS-visible controlled live-file process verify this scope. This is a snapshot of this user's
 visible processes, not future-write prediction: jobs under other users and processes that close every
 handle and remove their checkout argument are outside the observation. The idle attestation concerns
@@ -410,11 +410,11 @@ and [Rust job](https://github.com/rdje/stitchcad/actions/runs/37062714007/job/11
 completed successfully with every reported step successful. The new handoff guard step executed
 43 fixtures/13 actual assertion reds, confirmed by the runner log; SPINE.23v retains the receipt.
 
-One handoff-only observation after G1-SLICE.5e.1a returned exit2 for a malformed lsof name field.
-A fresh captured census was complete with no blocking process; the canonical retry passed0.
-The first failed record was not retained, so its exact cause remains unconfirmed. SPINE.23r owns
-bounded failed-record capture and reproduction on recurrence. A later complete observation proves
-its own snapshot; it does not explain or retroactively validate the earlier refused evidence.
+SPINE.23r captured a recurrence: lsof emitted descriptor4 and a name without the requested type.
+Sanitized shape/hash evidence and the independent missing-type fixture reproduce the refusal2;
+a new actual type-guard fault requires an assertion red. No unreadable handle is exempted.
+A fresh full census then passed0. That proves its own snapshot, not the refused one. The earlier
+unretained failure remains unexplained; no kernel cause or scheduling race is inferred.
 
 ### Checkout-local CI stores
 

@@ -111,6 +111,7 @@ FAULTS=[
  ('matching launch','and tail == child.command','and True'),
  ('permissions marker',"and 'permissions.node_repl=' in launcher",'and True'),
  ('unnamed type proof',"if not value and kind not in ('PIPE', 'NPOLICY', 'NEXUS'):",'if False:'),
+ ('missing type proof','or kind is None or named:','or named:'),
  ('truncation proof','if not named or complete != seen:','if False:'),
 ]
 for name,old,new in FAULTS:

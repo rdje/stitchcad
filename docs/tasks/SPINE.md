@@ -972,12 +972,18 @@ Completed .21b acceptance is retained verbatim in [SPINE evidence](SPINE-evidenc
 - `2026-10-02`: SPINE.23v/STITCHCAD-SPINE-0023v records exact10e19f2 two jobs/all steps success; runner43/13 verified. promotion: declined (routine observed-CI receipt).
 
 - ID: `SPINE.23r`
-  Status: `pending`
-  Priority: P1; take on recurrence that blocks handoff, otherwise after current product work.
-  Goal: capture/reproduce the exact structural OS record behind an intermittent handoff refusal.
-  Baseline: G1-SLICE.5e.1a post-commit canonical census refuses2 malformed lsof name; first raw
-  record not saved. Captured fresh census and canonical retry pass0; exact initial cause unknown.
-  Acceptance: safe bounded failed-record evidence, sanitized diagnostics/no command argument dump,
-  actual OS/public lsof format reproduction and independently authored fault/refusal controls;
-  preserve fail-closed behavior and never exempt unreadable handles to manufacture green.
-  Verification: `pending`; Commit: `pending`.
+  Status: `done`
+  Own0023r: recurrence evidence/type-guard fault/book/live sync; whole0211 CH192 retention; target/handoff-recurrence-*.
+  Paths: docs/tasks/artifacts/handoff/contract.py
+  Goal: sanitized recurrence capture and strict-refusal proof.
+  Original baseline: first G1-SLICE.5e.1a malformed-name record was not retained; its cause remains unknown.
+  Observed2026-10-06: p present/f4/n21B/no t/repeated-name false;88 bounded samples, outside project name.
+  Name sha256:21cf9559c6f9bf8b9cc282dd3849ab78f15a269581f448c39aa70e717475b0ad; PID/name/argv omitted.
+  Public OS man lsof defines process/file field sets; kernel cause not inferred.
+- [x] REPRODUCE / ISSUE: actual lsof capture lacks requested type; sanitized p1/f4/n21 replay raises malformed lsof name field, refusal2. target/handoff-recurrence-record.json; bounded capture and independent replay tools exit0. Existing missing-type fixture covers this property.
+- [x] ROOT CAUSE: parse_handles rejects kind is None before publishing handles; actual fields f/n distinguish missing type from duplicate name or missing descriptor. docs/tasks/artifacts/handoff/contract.py independently verifies this refusal;43 fixtures/14 reds, rc=0; lost original record not explained.
+- [x] FIX: contract.py adds actual missing-type predicate omission to watched faults; producer/parser bytes unchanged. python3 and /usr/bin/python3 -I -B docs/tasks/artifacts/handoff/contract.py return43 fixtures/14 actual reds, rc=0, target/handoff-recurrence-contract/contract39.log.
+- [x] ADDRESSED: independently authored missing-type fixture turns red when the actual kind guard is removed; strict source passes43/14 on Python3.9/3.14, rc=0. Actual fresh OS-visible bash scripts/check_handoff.sh --idle-cua returns handoff OK0; it proves only that complete snapshot.
+- [x] NO REGRESSION: producer_census_contract.py/publication/archive/ledger give45/242/28+625/799+11+13, rc=0; target/handoff-recurrence-{publication,census,archive,ledger}.log. Whole0211/prior604/all43 controls/current605/parser/fixed caps exact, rc=0.
+- [x] LOCKSTEP: book/TOOLBOX/LIVE/DEV/CH/MEMORY synchronized; G1 .a14 resumes. Whole0211 ledger192 retained before growth, public read exact, rc=0. promotion: declined (existing incomplete-evidence policy; bounded historical observation, no new rule). Commit: STITCHCAD-SPINE-0023r.
+  Final staged gate13 green, rc=0, target/handoff-recurrence-staged-gate.log.

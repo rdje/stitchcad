@@ -246,3 +246,11 @@ Final0213: publication45/census242/coverage9/archive28+624/ledger797+11+13/langu
 continuity604/prior602/all41 archive controls/whole281CH191/75 closed headers/nav/library/192 frozen/
 118Rust63/5 code5 normative/build/12open195sealed/fixed caps exact, rc=0. Source/grammar unchanged.
 Schema-header draft refused by actual census; original headers restored before final242 proof.
+
+## _(2026-10-06 UTC)_ — handoff recurrence
+
+SPINE.23r captured p/f4/n with no requested t field after88 bounded OS samples; name21B hash
+21cf9559c6f9bf8b9cc282dd3849ab78f15a269581f448c39aa70e717475b0ad; no PID/name/argv retained.
+The missing-type fixture reproduces refusal2; an actual guard omission adds the fourteenth red.
+Strict parser unchanged; fresh complete census0 does not validate refused evidence or explain
+kernel causation. Whole0211 ledger192 retained exactly before growth. G1 resumes .a14.
