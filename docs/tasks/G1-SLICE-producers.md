@@ -62,15 +62,13 @@ coverage; .b.s owns shell/platform/raw book commands and .b.v integration. D156 
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a01.2`
   Status: `done`
-  Own0200: copied-book/whole retention/live/book;target/fixture-*.
-  Own D202: docs/tasks/PLANNING.md; docs/history/stitchcad-defects-part124.md; selected parts-directory alias repair/proof.
-  Own D203: docs/history/stitchcad-defects-part125.md; Python3.9 control compatibility repair/proof.
-  Own0200 controls: docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py;docs/tasks/artifacts/ci_environment/producer_entries.tsv;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh.
   Paths: docs/tasks/artifacts/formula_structure/static_recipe_contract.py
   Goal: copied-book recipe fixtures and real reference consumer; static_recipe_contract.py ownership.
   Acceptance: complete public helper/source/book tree/borrowed-root review before edits; guarded creation/copy/deletion/delegation, original consumer and per-recipe controls, actual captures/body faults and focused real proof.
 
 Whole0195 receipts and original bridge inspection retained in [part247](../history/stitchcad-devnotes-part247.md).
+
+Whole original completed scopes retained in [part261](../history/stitchcad-devnotes-part261.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.v.b1`
   Status: `done`
@@ -153,7 +151,12 @@ Complete committed verification retained in [runtime proof](G1-SLICE-runtime-pro
 Whole original verification is retained with the [window7/bridge record](G1-SLICE-runtime-proof.md#window7-public-verification).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a02`
-  Status: `pending`
+  Status: `done`
+  Own0201: loaders/control/callers; whole retention/live/book/ledgers; target/loader-*.
+  Own D204: docs/tasks/PLANNING.md;docs/history/stitchcad-defects-part126.md; archive pointer repair/proof.
+  Paths also: docs/tasks/artifacts/ci_environment/python_static_loader_contract.py;docs/tasks/artifacts/ci_environment/python_bridge_contract.py;docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py.
+  Paths also: docs/tasks/artifacts/ci_environment/python_producer_contract.py.
+  Own registries: docs/tasks/artifacts/ci_environment/producer_entries.tsv;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/tasks/artifacts/ci_environment/run_ci_environment_probes.sh.
   Goal: Static public reference loaders; sources and kinds in the watched ledger.
   Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
 
@@ -634,7 +637,6 @@ Whole original completed namespace/declaration scopes retained in [part259](../h
   Goal: operator complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
   Paths: docs/tasks/artifacts/formula_structure/operator_signature_mutations.py
   Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
-  Own: shared/live/book/whole retention;target/operator-plan-*.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11.3`
   Status: `done`
@@ -647,9 +649,10 @@ Whole original completed namespace/declaration scopes retained in [part259](../h
   Goal: call lookup complete mode/input/file/mutable plans/current-thread body evidence and original native restoration.
   Paths: docs/tasks/artifacts/formula_structure/call_lookup_mutations.py
   Acceptance: full affected implementation/public tests/spec/book first; unchanged cases/Cargo argv/exact restoration/current executable; omissions/physical refusals/all real failed bodies.
-  Own0190: shared/live/book/whole retention;target/call-plan-*;docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/PLANNING.md;docs/book/src/annexes/formula-call-lookup.md.
 
 Whole original completed builtin family scopes retained in [part258](../history/stitchcad-devnotes-part258.md).
+
+Whole original completed scopes retained in [part261](../history/stitchcad-devnotes-part261.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n12`
   Status: `done`
@@ -735,11 +738,13 @@ Whole0198 task and coupled static lesson retained in [part253](../history/stitch
 
 Whole0199 task and bridge lesson retained in [part256](../history/stitchcad-devnotes-part256.md).
 
-### G1-SLICE.5b.4c.h2.b.p.o.a01.2 —0200 copied-book signoff
+Whole0200 task and copied-book lesson retained in [part260](../history/stitchcad-devnotes-part260.md).
 
-- [x] REPRODUCE / ISSUE: original bootstrap omission red; D202 empty parts alias/D203 supported-runtime API failures measured before fixes, target/fixture-parts-alias-proof.log and fixture-copytree-api-proof.log, rc=0.
-- [x] ROOT CAUSE: pure10 versus producing whole70 require complete source/file/dir/deletion plans; actual original entry red, target/fixture-python39-fixed.log, rc=0; public helper/book/borrowed review complete.
-- [x] FIX: plan bootstrap/copies/logs/deletion candidates before effects; recheck copied inputs and prepared selectors; D202/D203 fixed, target/fixture-python39-fixed.log, rc=0; grammar unchanged.
-- [x] ADDRESSED: six captures/twelve actual guard reds/fourteen physical refusals and actual guard-disable admissions pass on3.9; current3.14 public copy also passes, target/fixture-public-copy-proof.log, rc=0.
-- [x] NO REGRESSION: real196/all14 faults/21 numerical/0mismatch; original consumer/main AST/argv/all133 inputs63Rust exact, target/fixture-reference-proof.log, rc=0; publication45/coverage9/archive28+CLI584/ledger746+11arms13/census green.
-- [x] LOCKSTEP: whole256/179/257–259/defects124125/prior558/all49/current565 reads/61 headers53live8retained/178pointers/map/caps exact, target/fixture-continuity-proof.log, rc=0;12open190sealed. Next .a02; promotion: declined;400/no runner claim. Final staged gate13 green, rc=0, target/fixture-staged-gate.log.
+### G1-SLICE.5b.4c.h2.b.p.o.a02 —0201 public loaders
+
+- [x] REPRODUCE / ISSUE: three original bootstrap omissions red; actual imports/reads require pure plans, target/loader-control39.log, rc=0.
+- [x] ROOT CAUSE: complete public helper/borrowed/source/book review; bootstrap3/4/5/reference8/9/10, target/loader-control39.log, rc=0.
+- [x] FIX: pure fresh per-call plans/shared Refusal identity/CLI wrapper; original bodies/populations/argv exact, target/loader-control.log, rc=0.
+- [x] ADDRESSED:17 captures/ten actual guard reds/18 physical CLI+12 borrowed refusals/three planner-disable admissions on3.9/3.14, target/loader-control39.log, rc=0.
+- [x] NO REGRESSION: bridge40+nine/recipe twelve/shared1125 original reds and11 callers pass; real263/10+26723/all194 inputs118Rust63production/current library exact, target/loader-native-proof.log, rc=0; loader-callers/shared/bridge/recipe logs0.
+- [x] LOCKSTEP: whole260/180/261/prior565/all56/current569/D204/canonical scopes/three proof siblings/nav/map/caps/census verified, target/loader-continuity.log, rc=0; publication45/coverage9/archive28+CLI588. Next .a03; promotion: declined; grammar/engine/400 stay. Final staged gate13 green, rc=0, target/loader-staged-gate.log.

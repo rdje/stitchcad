@@ -6,7 +6,19 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 HELPER = ROOT / 'docs/tasks/artifacts/formula_structure/static_signature_contract.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE,
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh', HELPER)
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
 LOADER = runpy.run_path(str(HELPER))
+# Reuse the provider's exact refusal class for nested borrowed calls.
+PROFILE = LOADER['PROFILE']
+REFERENCE_INPUTS = (Path(__file__), *LOADER['REFERENCE_INPUTS'])
 SOURCE = LOADER['SOURCE']
 ORIGINS = ('measurement', 'ease', 'parameter', 'profile', 'material', 'geometry', 'recipe', 'size', 'tolerance')
 KINDS = ('length', 'angle', 'area', 'ratio', 'count', 'boolean', 'point', 'edge')
@@ -40,6 +52,7 @@ class ReservedKind:
 
 
 def contracts(replacement=None, verbose=True):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     ns, reference = LOADER['load_reference'](replacement)
     assert reference.origins == frozenset(ORIGINS), 'origin population drift'
     assert ns['origins'] == list(ORIGINS), 'actual table origin order/population drift'
@@ -179,19 +192,24 @@ FAULTS = [
     ('numeric execution added', '            return checked\n        if role == "assert":', '            self.evaluate(node, env)\n            return checked\n        if role == "assert":'),
 ]
 if __name__ == '__main__':
-    original = SOURCE.read_bytes()
-    contracts()
-    if '--mutations' in sys.argv:
-        for name, before, after in FAULTS:
-            try:
-                contracts((before, after), False)
-            except AssertionError as error:
-                expected = ('static namespace accepted refusal', 'namespace refusal token',
-                            'namespace refusal detail', 'static namespace read value/state/geometry',
-                            'static namespace invoked execution', 'static header')
-                assert any(marker in str(error) for marker in expected), (name, 'not a body assertion red', error)
-                print('  actual compiled namespace assertion red:', name)
-            else:
-                raise AssertionError(('actual namespace fault escaped', name))
-        assert SOURCE.read_bytes() == original
-        print('static namespace faults: %d actual assertion reds; producer unchanged' % len(FAULTS))
+    try:
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+        original = SOURCE.read_bytes()
+        contracts()
+        if '--mutations' in sys.argv:
+            for name, before, after in FAULTS:
+                try:
+                    contracts((before, after), False)
+                except AssertionError as error:
+                    expected = ('static namespace accepted refusal', 'namespace refusal token',
+                                'namespace refusal detail', 'static namespace read value/state/geometry',
+                                'static namespace invoked execution', 'static header')
+                    assert any(marker in str(error) for marker in expected), (name, 'not a body assertion red', error)
+                    print('  actual compiled namespace assertion red:', name)
+                else:
+                    raise AssertionError(('actual namespace fault escaped', name))
+            assert SOURCE.read_bytes() == original
+            print('static namespace faults: %d actual assertion reds; producer unchanged' % len(FAULTS))
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None

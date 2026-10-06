@@ -3,47 +3,52 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-06 UTC)_ — copied-book producer plans and compatibility
+## _(2026-10-06 UTC)_ — read-only public reference plans
 
-Root cause: D156's whole-recipe instrument created, deleted and copied book trees without
-complete source/output plans. Pure preflight imports the namespace/signature pair; its table
-loader reads five normative book inputs. Producing calls copy the full current book and may
-run the published shell against effective caller selectors. These are different effect scopes.
+D156's three static libraries loaded public helpers and compiled book references without complete
+nonmutating plans. Their actual effects are reads and in-memory compilation. Imports must stay pure;
+whole-book fixture preparation or store activation would change the borrowed library contract.
+Bootstrap lists contain3/4/5 sources; fresh reference lists contain8/9/10, including the five normative
+book inputs. Namespace/review reuse the signature provider's exact Refusal class, preserving nested
+borrowed failures without catching unrelated ValueError/assertion exceptions. Standalone guarded
+failures print the existing local-environment refusal and exit2; permissive mutation argv remains.
 
-The bootstrap plans five sources before helper loading; pure contracts plans ten inputs.
-A producing plan walks inspected directories without following links, includes every current
-book file, every selected copy/log/directory and every existing deletion candidate, then activates
-local stores. Unknown fixture entries and output aliases refuse before effects. Each selected
-replacement is rechecked before deletion/copy, and copied consumer inputs before edits/execution.
-The real child uses the prepared selector snapshot and revalidates sources immediately before dispatch.
+The watched actual control passes on Python3.14 and OS Python3.9.6:17 import/contract/CLI/loader/quantum/
+exception captures, ten actual guard omissions,18 physical CLI refusals and12 borrowed refusals.
+Three actual planner-body disables admit the same invalid plans in owned isolated mirrors. Per-call
+frames prove fresh complete source plans before reads/delegation; original functions, classes, authored
+populations/faults and CLI bodies are AST-exact after removing only added guards/refusal wrappers.
+Prepared stores, unrelated values, normal/exception argv identity and tracked inputs stay exact.
+The D126 quantum proof retains intentional reference numerical work; static contracts retain traps.
 
-Six actual captures retain ordinary/mutation argv, borrowed pure/consumer/measurement interfaces
-and relative caller selectors. Current ordinary202/mutation401 writes cover199 unique destinations;
-borrowed consumer132/measurement66 destinations omit unused fixtures. Pure196 never activates stores.
-The final minimum-runtime control89347 passes twelve named actual guard-body reds and fourteen
-physical refusals, including symlinks, hardlinks, missing inputs, unexpected entries and aliases.
-The intercepted child emits authored metrics; those are dispatch evidence, not numerical evidence.
+Public caller inspection found reference plans before the coupled build, after the first-phase native
+work, and after recipe pure preflight. Closed adapters assert each stage/list/sequence, retaining all
+original producing guards. Bridge40 coupled+nine body reds, recipe six captures/twelve reds/fourteen
+physical refusals, and shared1125 reds/58 complete captures/329 physical refusals pass. Eleven actual
+public callers retain their original normal results and faults; their own future locality audit remains.
 
-D202 reproduced an empty selected parts-directory alias with no effects; a directory guard now
-refuses it, and omitting that actual condition admits the same bad plan. D203 reproduced supported
-Python3.9.6 failures in a new hardlink API and a rigid recursive-copy call shape. os.link and public
-signature/default binding fix both; no private library implementation was inspected. The OS interpreter
-and stdlib are read-only dependencies; every created fixture, store and log remains repository-local.
-Current Python3.14 borrowed-copy proof also passes. Both whole authored reports/closures are in124/125.
+Tracked python_static_loader_contract.py --native passes263/ten reference faults and coupled26723
+cases separately from captures; the probe runner watches frozen inputs and current library identity.
+All194 frozen inputs remain exact, including118 tracked Rust files and63 production src files; current
+library15981408B has sha256:168cf69628c5c229f30cac663354ffe3a47c2e35a7e2105253031eaf20b7125f.
+No native source or grammar change. OS interpreter/stdlib are read-only dependencies; generated
+fixtures, logs and capture stores stay on the repository volume. Draft failures are excluded: wrong
+Git-boundary diagnostic wording, incomplete pre/post-native reference adapters, an authoring function
+name mismatch, and a Rust census that omitted the established /src/ filter. Tools resolved each.
 
-Real runtime25291 passes196 cases/all14 actual compiled faults and the original shell's21 statements,
-17 bindings/four assertions/13 refusals/zero mismatches. Original measurement/consumer/main bodies,
-cases/FAULTS/argv remain AST-exact apart from the planned effect wrappers. Frozen138 were exact at
-that invocation; the later compatibility control changed intentionally. Final continuity checks133
-actual numeric/book/bootstrap/Rust inputs independently, including all63 Rust sources against HEADaea.
+Whole0200 task1458+lesson3428→260;0191 ledger476→180;completed scopes6451→261 were fully sealed,
+copied, inventoried and publicly read before retirement. Own-only dedup preserves canonical fields;
+prior565 logical/all56 physical bytes remain exact. Fixed caps stay; no existing seal changes.
+D204 was found by independent continuity, then the actual ledger gate failed9 pass/2 fail. The
+retention helper's stale part179 selector routed the exact CH180 index row into DEV instead of CH.
+Whole historical bytes were intact. Report/ownership preceded moving only that row and selecting
+by destination kind; the real public pointer set then matched all179 segments. Whole authored report
+and verified closure were copied/read in126 before live retirement. Existing pointer gates watch it.
 
-Draft calibration failures are excluded: the first copier wrapper did not accept recursive calls;
-two expected diagnostic-order assertions and one physical alias fixture reached earlier valid refusals;
-two AST normalizations omitted the original docstring/mkdir. The arity4 diagnostic guess was wrong;
-the actual probe measured three positional arguments plus dirs_exist_ok. Each was corrected with tools.
-Whole256/179/257/258/259 and defects124/125 were copied, inventoried and publicly read before live
-retirement; Own-only dedup preserved every canonical field. Fixed caps/grammar/engine/400 remain.
-Promotion declined: existing public-boundary, effect-scope, claim and continuity rules already apply.
+External policy hashes unchanged at2026-10-06 06:58UTC; cleanup is not due until22:28UTC.
+Promotion declined: existing pure-call, public-boundary, independent-control and continuity rules apply.
+
+Whole0200 task and copied-book lesson retained in [part260](docs/history/stitchcad-devnotes-part260.md).
 
 
 
@@ -187,3 +192,8 @@ committed table and original links. Recent records follow; older identities rema
 | [part258](docs/history/stitchcad-devnotes-part258.md) | whole completed builtin family scopes | 37 lines, 3692 bytes, sha256:d2e8489b… |
 
 | [part259](docs/history/stitchcad-devnotes-part259.md) | whole completed namespace and declaration scopes | 48 lines, 4638 bytes, sha256:2f985e2b… |
+
+| [part260](docs/history/stitchcad-devnotes-part260.md) | whole0200 task and copied-book lesson | 49 lines, 4886 bytes, sha256:3ca9c660… |
+
+
+| [part261](docs/history/stitchcad-devnotes-part261.md) | whole copied-book and signature-family scopes | 73 lines, 6451 bytes, sha256:bea84f20… |

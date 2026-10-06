@@ -1955,6 +1955,21 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False, bo
     mkdir, read_text, read_bytes = Path.mkdir, Path.read_text, Path.read_bytes
     write_text, write_bytes, run, run_path = Path.write_text, Path.write_bytes, subprocess.run, runpy.run_path
     observed, written, pending, plans, loads = [], {}, {}, [], []
+    sig = here / 'static_signature_contract.py'
+    ns = here / 'static_namespace_contract.py'
+    review = here / 'static_review_contract.py'
+    profile_source = ROOT / 'scripts/local_environment.py'
+    reference_source = ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh'
+    book_sources = tuple(ROOT / 'docs/book/src' / name for name in (
+        'spec/formula-language.md', 'spec/formula-language/grammar.md',
+        'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md'))
+    signature_boot = (sig, profile_source, reference_source)
+    namespace_boot = (ns, profile_source, reference_source, sig)
+    review_boot = (review, profile_source, reference_source, ns, sig)
+    readonly_expected = (signature_boot, review_boot, namespace_boot, signature_boot,
+                         (review, ns, *signature_boot, *book_sources))
+    readonly_plans = []
+    reference_plans = []
     build_plans, library_plans, library_directories = [], [], []
     batch, stage, outcome = 0, 0, None
 
@@ -1981,8 +1996,16 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False, bo
 
         def plan(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
             assert root == ROOT and not mutable_sources, 'D156 static pure plan changed'
-            label = labels[batch]
-            if directories:
+            if not directories and not output_files and sources == (*signature_boot, *book_sources):
+                assert plans == [True] and stage == 0 and not pending, 'loader static reference plan crossed native work'
+                assert (batch == 0 and not observed or mutations and batch in (1, len(labels))), 'loader static reference phase changed'
+                reference_plans.append(batch)
+            elif not directories and not output_files and sources in readonly_expected:
+                assert plans == [True] and not observed and not written, 'loader static readonly plan was late'
+                assert sources == readonly_expected[len(readonly_plans)], 'loader static readonly sequence changed'
+                readonly_plans.append(sources)
+            elif directories:
+                label = labels[batch]
                 output = work / label
                 assert stage == 0 and len(build_plans) == batch, 'D156 static build plan was late'
                 assert directories == (output,), 'D156 static build directory plan changed'
@@ -1991,6 +2014,7 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False, bo
                 allowed_files.update(output_files)
                 build_plans.append(label)
             else:
+                label = labels[batch]
                 assert stage == 1 and len(library_plans) == batch, 'D156 static library plan was late'
                 assert not output_files, 'D156 static library plan has effects'
                 assert sources == (library, dependency), 'D156 static library inputs changed'
@@ -2109,6 +2133,9 @@ def capture_static_entry(text, path, *, mutations=False, early_refusal=False, bo
     assert batch == len(labels) and stage == 0, 'D172 static restored compiler dispatch absent'
     assert len(observed) == (8 if early_refusal else 90 if mutations else 3), 'D156 static native mode dispatch changed'
     assert build_plans == library_plans == library_directories == labels, 'D156 static build/library plan omitted'
+    assert tuple(readonly_plans) == readonly_expected, 'loader static readonly coverage omitted'
+    expected_reference = [] if borrowed_label is not None else ([0] + [1] * 6 + ([] if early_refusal else [len(labels)]) if mutations else [0])
+    assert reference_plans == expected_reference, 'loader static reference coverage omitted'
 
 
 

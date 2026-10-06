@@ -10,7 +10,19 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 HERE = ROOT / 'docs/tasks/artifacts/formula_structure'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE,
+               ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh',
+               HERE / 'static_namespace_contract.py', HERE / 'static_signature_contract.py')
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
 BASE = runpy.run_path(str(HERE / 'static_namespace_contract.py'))
+PROFILE = BASE['PROFILE']
+REFERENCE_INPUTS = (Path(__file__), *BASE['REFERENCE_INPUTS'])
 SOURCE, BOOK = BASE['SOURCE'], ROOT / 'docs/book/src'
 Declaration = BASE['Declaration']
 WORKED = (
@@ -65,6 +77,7 @@ def recognition_documentation(ns, replacement=None):
 
 
 def load(replacement=None):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     header, program = SOURCE.read_text().split("<<'PY'\n", 1)
     line_offset = (header + "<<'PY'\n").count('\n')
     program = program.rsplit('\nPY', 1)[0]
@@ -179,6 +192,7 @@ FAULTS = (
 
 def parameter_quantum_contract():
     """D126: independent exact inequalities; this does not execute product geometry."""
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     ns, reference = BASE['LOADER']['load_reference']()
     assert ns['RATIO_SCALE'] == 1000000 and reference.reserved['eps_geo'][2] == 10
     units = (BOOK / 'spec/units-and-tolerances.md').read_text()
@@ -203,35 +217,40 @@ def parameter_quantum_contract():
 
 
 if __name__ == '__main__':
-    original = SOURCE.read_bytes()
-    contracts()
-    parameter_quantum_contract()
-    if '--mutations' in sys.argv:
-        for name, before, after in FAULTS:
-            try:
-                contracts((before, after), False)
-            except AssertionError as error:
-                assert any(marker in str(error) for marker in (
-                    'static review token', 'static review accepted refusal', 'worked static headers drift',
-                    'static review name/header', 'static namespace read value/state/geometry')), (name, 'not a body assertion red', error)
-                print('  actual compiled static review assertion red:', name)
-            else:
-                raise AssertionError(('static review fault escaped', name))
-        assert SOURCE.read_bytes() == original
-        print('static review faults: %d actual assertion reds; producer unchanged' % len(FAULTS))
-        namespace, _, _ = load()
-        for before, after in (
-            ('| loops, iteration, recursion | a recipe is a bounded ordered list; repetition is an operation list | unknown call: `formula_unbound_name`; malformed syntax: `formula_parse` |',
-             '| loops, iteration, recursion | a recipe is a bounded ordered list; repetition is an operation list | `formula_unsupported` |'),
-            ('| user-defined functions and macros | v1 has no function-definition or macro scope | unknown call: `formula_unbound_name`; malformed syntax: `formula_parse` |',
-             '| user-defined functions and macros | v1 has no function-definition or macro scope | `formula_unsupported` |'),
-            ('| `if` | the one special form', '| `macro` | the one special form'),
-        ):
-            try:
-                recognition_documentation(namespace, (before, after))
-            except AssertionError as error:
-                assert 'documentation' in str(error) and 'fault anchor' not in str(error), ('not a documentation body red', error)
-                print('  actual loaded documentation assertion red:', before.split('|')[1].strip())
-            else:
-                raise AssertionError('static recognition documentation fault escaped')
-        print('recognition documentation: three actual loaded-row assertion reds; tracked documents unchanged')
+    try:
+        PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
+        original = SOURCE.read_bytes()
+        contracts()
+        parameter_quantum_contract()
+        if '--mutations' in sys.argv:
+            for name, before, after in FAULTS:
+                try:
+                    contracts((before, after), False)
+                except AssertionError as error:
+                    assert any(marker in str(error) for marker in (
+                        'static review token', 'static review accepted refusal', 'worked static headers drift',
+                        'static review name/header', 'static namespace read value/state/geometry')), (name, 'not a body assertion red', error)
+                    print('  actual compiled static review assertion red:', name)
+                else:
+                    raise AssertionError(('static review fault escaped', name))
+            assert SOURCE.read_bytes() == original
+            print('static review faults: %d actual assertion reds; producer unchanged' % len(FAULTS))
+            namespace, _, _ = load()
+            for before, after in (
+                ('| loops, iteration, recursion | a recipe is a bounded ordered list; repetition is an operation list | unknown call: `formula_unbound_name`; malformed syntax: `formula_parse` |',
+                 '| loops, iteration, recursion | a recipe is a bounded ordered list; repetition is an operation list | `formula_unsupported` |'),
+                ('| user-defined functions and macros | v1 has no function-definition or macro scope | unknown call: `formula_unbound_name`; malformed syntax: `formula_parse` |',
+                 '| user-defined functions and macros | v1 has no function-definition or macro scope | `formula_unsupported` |'),
+                ('| `if` | the one special form', '| `macro` | the one special form'),
+            ):
+                try:
+                    recognition_documentation(namespace, (before, after))
+                except AssertionError as error:
+                    assert 'documentation' in str(error) and 'fault anchor' not in str(error), ('not a documentation body red', error)
+                    print('  actual loaded documentation assertion red:', before.split('|')[1].strip())
+                else:
+                    raise AssertionError('static recognition documentation fault escaped')
+            print('recognition documentation: three actual loaded-row assertion reds; tracked documents unchanged')
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None

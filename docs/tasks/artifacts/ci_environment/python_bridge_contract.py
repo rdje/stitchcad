@@ -66,6 +66,21 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
     build_filenames = ('cargo-artifacts.json', 'cargo.log', 'rustc.log', 'cases.hex.tsv',
                        'driver.tsv', 'driver.log', 'driver')
     baseline_files = tuple(WORK / 'baseline' / name for name in build_filenames)
+    sig = HERE / 'static_signature_contract.py'
+    ns = HERE / 'static_namespace_contract.py'
+    review = HERE / 'static_review_contract.py'
+    profile_source = ROOT / 'scripts/local_environment.py'
+    reference_source = ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh'
+    book_sources = tuple(ROOT / 'docs/book/src' / name for name in (
+        'spec/formula-language.md', 'spec/formula-language/grammar.md',
+        'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md'))
+    signature_boot = (sig, profile_source, reference_source)
+    namespace_boot = (ns, profile_source, reference_source, sig)
+    review_boot = (review, profile_source, reference_source, ns, sig)
+    readonly_expected = (signature_boot, review_boot, namespace_boot, signature_boot,
+                         (review, ns, *signature_boot, *book_sources))
+    readonly_plans = []
+    post_native_reference_plans = []
     build_plans, library_plans, library_directories = [], [], []
     scope = {'__file__': str(ENTRY), '__name__': '__main__'}
     loaded, planned, entered, calls, writes, directories = [], [], [], [], {}, []
@@ -93,6 +108,13 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
             assert output_files == OUTPUT_FILES, 'D156 bridge pre-file plan changed'
             assert not planned, 'D200 bridge duplicate module plan'
             planned.append(True)
+        elif not directories and not output_files and sources == (*signature_boot, *book_sources):
+            assert entered == ['coupled', 'bridge'] and len(calls) == 4 and len(writes) == 8, 'loader bridge reference plan was early'
+            post_native_reference_plans.append(sources)
+        elif not directories and not output_files and sources in readonly_expected:
+            assert entered == ['coupled'] and not calls and not writes, 'loader bridge readonly plan was late'
+            assert sources == readonly_expected[len(readonly_plans)], 'loader bridge readonly sequence changed'
+            readonly_plans.append(sources)
         elif directories:
             assert entered == ['coupled', 'bridge'], 'D156 bridge directory before guard'
             assert not calls and not writes and not build_plans, 'D200 bridge build plan was late'
@@ -250,6 +272,8 @@ def capture(text, *, mutations=False, late_source=False, output_alias=False, ear
     else:
         assert planned == [True] and entered == ['coupled', 'bridge'] and len(calls) == 4, 'D156 bridge guard/dispatch coverage'
         assert build_plans == library_plans == library_directories == [True], 'D200 bridge complete plan coverage'
+        assert tuple(readonly_plans) == readonly_expected, 'loader bridge readonly coverage omitted'
+        assert len(post_native_reference_plans) == (11 if mutations else 1), 'loader bridge reference coverage omitted'
         assert set(path.name for path in writes) == {
             'cargo-artifacts.json', 'cargo.log', 'rustc.log', 'cases.hex.tsv',
             'driver.tsv', 'driver.log', 'competing.tsv', 'competing.log'}, 'D156 bridge output coverage'

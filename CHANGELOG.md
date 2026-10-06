@@ -112,6 +112,13 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0201 — static public loader plans
+
+- Pure bootstrap3/4/5 and reference8/9/10 guards; original bodies/argv/grammar retained.
+-17 captures/ten guard reds/18 physical CLI+12 borrowed refusals/three planner admissions on3.9/3.14.
+- Real263/10+26723;194 inputs/118Rust63production/current library exact; shared1125 reds pass.
+- Whole260/180/261 retained; D204 navigation fixed; book/live/caps/400 stay. Payloads next.
+
 ## STITCHCAD-G1-0200 — copied-book recipe plans
 
 - Plan pure reference inputs and complete copied trees/logs before effects; preserve selectors/argv.
@@ -166,12 +173,6 @@ the digests afterwards.
 - Whole0191/DEV240/CH171/authored241 exact; book/live aligned; D197 input next.
 - Publication45/coverage9/ledger706/11/13 pass0; grammar/400 stay.
 
-## STITCHCAD-G1-0191 - expression plans and D197 repair (leaf `G1-SLICE.5b.4c.h2.b.p.o.f.n12.1`)
-
-- Plan4 inputs/12 logs/1 mutable/class0; original11 exact filters/full15/current15/74 inputs exact.
-- Shared691/35/54/272;17 omissions/legacy red/readonly proof pass0; D197 family remains open.
-- Whole0190/DEV236–238/CH170 retained; whole inline context moved/read exactly; book/live aligned.
-- Publication45/coverage9/ledger701/11/13 pass0; grammar/400 stay; reduction next.
 
 
 
@@ -347,3 +348,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part178](docs/history/stitchcad-changelog-part178.md) | whole0189 wanted ledger | 7 lines, 621 bytes, sha256:56671d47… |
 
 | [part179](docs/history/stitchcad-changelog-part179.md) | whole0190 call-plan ledger | 8 lines, 561 bytes, sha256:6440b75c… |
+
+| [part180](docs/history/stitchcad-changelog-part180.md) | whole0191 expression-plan ledger | 6 lines, 476 bytes, sha256:38123105… |

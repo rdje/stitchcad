@@ -59,3 +59,40 @@ the offset or impersonating the original causes body assertion failures in each 
 Sources, grammar, diagnostic arguments and results stay unchanged; structural probes watch both
 catalogs. D174 removes stale fixed totals: definitions and locations derive from current source.
 
+
+## Read-only reference plans
+
+The signature, namespace and static-review helpers inspect their own bootstrap inputs before
+loading another helper. Each borrowed reference call freshly validates the complete source list:
+the shell reference, public helper chain, local profile and five normative book files (formula
+contract, grammar, examples, reference skirt and units/tolerances). These calls create no stores,
+files or child processes, and preserve prepared store values, unrelated environment values and
+caller argv. The existing permissive `--mutations` recognition is unchanged.
+
+Standalone invalid inputs print `local-environment: REFUSED — …` and exit2. A borrowed call that
+reaches its reference plan raises the shared provider's `Refusal`; unrelated parsing/assertion
+failures retain their own type. Missing files, symlinks, directory inputs and another Git boundary
+refuse before reference reads. Invalid selected stores or toolchain names also refuse before effects.
+Pure calls use only their declared inputs: they do not validate or copy the whole book tree.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/static_namespace_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/formula_structure/static_review_contract.py --mutations
+python3 -I -B docs/tasks/artifacts/ci_environment/python_static_loader_contract.py
+python3 -I -B docs/tasks/artifacts/ci_environment/python_static_loader_contract.py --native
+```
+
+The watched control executes all three original bodies: imports, ordinary and mutation CLI modes,
+borrowed contracts, both reference loaders and exception-path argv restoration. Per-call source
+plans are checked independently before reads and delegation; omission of an actual guard must fail.
+Real isolated filesystem faults and disabled actual planner bodies distinguish refusal from admission.
+The control's `--native` mode activates guarded local stores, runs the published first-phase and
+coupled consumers, and checks every frozen input after each child. Logs, source identities and the
+Cargo-current library identity are saved under `target/loader-*`; the probe runner watches this mode.
+Every fixture and capture store stays under repository-derived `target/` on the repository volume.
+Python3.9+ and its standard library are read-only runtime dependencies.
+
+The static metadata contracts retain their execution traps. The review helper's D126 parameter
+quantum control deliberately evaluates the reference arc-length counterexample and independent
+rational bounds; its numerical proof remains separate from product geometry signoff. The native
+bridge and copied-book instruments check nested read-only plans as well as their producing plans.

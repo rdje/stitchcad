@@ -249,7 +249,9 @@ def capture(text, mutations=False, borrowed=None, selectors=None):
     assert len(written) == (6 * len(BOOK_FILES) + 11 if mutations else len(labels) * (len(BOOK_FILES) + 2) + (1 if borrowed is None else 0)), 'recipe total write population changed'
     if borrowed == 'pure':
         expected = set(BOOT) | {BOOK / p for p in ('spec/formula-language.md', 'spec/formula-language/grammar.md', 'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md')}
-        assert not prepared and not copies and not written and not children and set(plans[-1]['sources']) == expected, 'recipe pure reference plan changed'
+        signature_inputs = {BOOT[4], PROFILE_SOURCE, SOURCE} | (expected - set(BOOT))
+        assert any(set(p.get('sources', ())) == expected for p in plans), 'recipe pure reference plan changed'
+        assert not prepared and not copies and not written and not children and set(plans[-1]['sources']) == signature_inputs, 'recipe pure reference plan changed'
     print('actual recipe captured', borrowed or mutations, len(copies), len(written), len(children), 'tracked inputs exact; no numerical result inferred')
 
 

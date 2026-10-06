@@ -4,11 +4,22 @@ from contextlib import redirect_stdout
 from itertools import product
 from pathlib import Path
 import io
+import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'docs/tasks/artifacts/formula_language/run_formula_language_census.sh'
 BOOK = ROOT / 'docs/book/src'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+BOOT_INPUTS = (Path(__file__), PROFILE_SOURCE, SOURCE)
+REFERENCE_INPUTS = (*BOOT_INPUTS, *(BOOK / name for name in ('spec/formula-language.md', 'spec/formula-language/grammar.md',
+    'spec/formula-language/examples.md', 'spec/reference-skirt.md', 'spec/units-and-tolerances.md')))
+try:
+    PROFILE['plan_producer'](ROOT, sources=BOOT_INPUTS)
+except (PROFILE['Refusal'], OSError) as error:
+    print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+    raise SystemExit(2) from None
 KINDS = ('length', 'angle', 'area', 'ratio', 'count', 'boolean', 'point', 'edge')
 ARITH = KINDS[:5]
 NEGATABLE = KINDS[:4]
@@ -51,6 +62,7 @@ SIGNATURES = {
 
 
 def load_reference(replacement=None):
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     source = SOURCE.read_text()
     assert source.count("<<'PY'\n") == 1
     header, program = source.split("<<'PY'\n", 1)
@@ -224,6 +236,7 @@ FAULTS = [
 
 
 def mutations():
+    PROFILE['plan_producer'](ROOT, sources=REFERENCE_INPUTS)
     before = SOURCE.read_bytes()
     for name, old, new in FAULTS:
         # Some generic predicates appear in multiple operator branches. Scope the selected
@@ -244,6 +257,10 @@ def mutations():
 
 
 if __name__ == '__main__':
-    contracts()
-    if '--mutations' in sys.argv:
-        mutations()
+    try:
+        contracts()
+        if '--mutations' in sys.argv:
+            mutations()
+    except (PROFILE['Refusal'], OSError) as error:
+        print('local-environment: REFUSED — ' + str(error), file=sys.stderr)
+        raise SystemExit(2) from None
