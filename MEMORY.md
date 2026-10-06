@@ -4,15 +4,19 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- STITCHCAD-G1-0195/.n13.h.v complete; commit workflow/postconditions finish this unit.
-- Actual committed5f6f615 copied9 prose inventory0/exact guard refusal1/root31/HEAD exact.
-- Whole0194 task1059B+lesson612B→246; whole0185 ledger+pointer450B→174.
-  Initial ledger26486 draft REAL/coverage red: current part173 row retired inside interval.
-  Restored exact live row/sealed174 stays; original/current173 pointers verified.
-- Final74301/73116/46644/2744/42495 terminal0 consumed:542reads/prior540/31controls/
-  55closed headers/63Rust/3proofs/nav/map/caps/12open185sealed/archive28/CLI561/
-  publication45/coverage9/ledger718real11arms13pointers. No pending jobs.
-- Next .n13.1 recipe owner29 outputs/current artifact plans, then .2 statement.
-  Recipe entry/322L impl/public7-test contract/215L book/shared capture read; source TSV/
-  complete controls/public spec checks still required before implementation.
-- D156/D34 open; grammar/400 unchanged; no push (derive count).
+- STITCHCAD-G1-0196/.n13.1 verified; commit workflow/postconditions finish this unit.
+- Recipe29 outputs/two read-only inputs/current Cargo library and directory pure plans.
+  Original14 calls/5 strict compiler guards/4 examples/current replays verified0.
+  Independent75 frozen/63Rust/fixtures/argv/library SHA exact0.
+- Shared9489:775 body reds/35 classifiers/58 captures/307 physical refusals,rc=0.
+  Profile4 actual reds/2 guard disables; compiler block56 faults/7 physical refusals0.
+  Earlier1798/45346 calibration reds consumed/fixed; no verification pending.
+- D199 Source c57 committed five stale parent rows red; exact5-row repair/census0;
+  whole authored report/earned closure121;12open186sealed. D156/D34 stay open.
+- Whole247/CH175/navigation248/121 copied/preflight/read before retirement;
+  retention98028:546reads/prior542/33controls/56headers/174pointers/nav/3proofs/map/caps exact0.
+  Archive28/CLI565/publication45/coverage9/ledger723real11arms13pointers pass0.
+- Next .n13.2 statement17 outputs/one read-only input/current artifact plans.
+  Entry/275L implementation/264L book read; public617L test must be read before edits.
+  Retain whole0196 receipt first for task-collection capacity; no background jobs.
+- Grammar/400 unchanged; no push (derive count).

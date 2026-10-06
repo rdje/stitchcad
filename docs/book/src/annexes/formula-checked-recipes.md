@@ -164,9 +164,18 @@ position cases, late/untaken errors, real collisions, repeated dependencies and 
 Limits4096 statements,256-node operands,16 conditionals and4000 grouping pairs pass on a64KiB stack.
 Five actual documentation compiler guards require only E0451/E0515 for privacy and recipe/record
 borrows. The four Rust examples in this chapter compile and execute against Cargo's current library.
-The compiler entry validates its implementation source, this chapter and output directory before
-reading fixtures or invoking Cargo. Cargo, Rustc and example executions retain prepared stores;
-public Cargo JSON supplies the current library and dependency search directories.
+The compiler entry validates its implementation source, this chapter, output directory and
+all29 destinations before reading fixtures or invoking Cargo: build metadata/log, five guard
+sources/logs/binary destinations and four example sources/logs/binaries. Both authored inputs
+are read-only. Missing late input, first/last symlinks or hard links, a guard-binary symlink and
+an output directory in a file slot refuse before reads, writes, store activation or Cargo.
+Cargo owns the build outputs. Its public JSON identifies the unique current library and every
+reported library input/search directory; a nonmutating local path plan checks them before Rustc.
+Cargo, Rustc and example executions retain prepared stores. A complete intercepted capture
+preserves all14 original children and fixture bytes; every destination omission, changed library
+input, missing library/directory plan and mutable-source authority is independently refused.
+Named PROFILE binding must be the exact local loader, unique, top-level and before activation.
+These dispatch controls are separate from actual five-guard/four-example native proof.
 The direct native entry plans the implementation and current public test inputs before reads or
 effects. Ordinary mode declares all twenty-one baseline/fault/restored diagnostic files and one
 mutable implementation source. It preserves the initial full-target baseline, nineteen ordered case

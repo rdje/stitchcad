@@ -1416,6 +1416,7 @@ def fenced_blocks(text, language):
 
 def capture_compiler_entry(text, entry_path, owner):
     """Execute every actual compiler/example call; simulated output proves dispatch only."""
+    complete_files = owner == 'recipe'
     source = ROOT / f'crates/sc-core/src/recipe/checked_{owner}.rs'
     sources = [source]
     book = ROOT / 'docs/book/src/annexes/formula-checked-recipes.md'
@@ -1439,7 +1440,15 @@ def capture_compiler_entry(text, entry_path, owner):
     for path in directories:
         GOOD['directory'](ROOT, path.relative_to(ROOT).as_posix(), create=True)
     artifact = directories[1] / 'libsc_core_dispatch_fixture.rlib'
+    dependency = directories[0] / 'libfixture.rmeta'
+    GOOD['plan_producer'](ROOT, output_files=(artifact, dependency))
     artifact.write_bytes(b'authored public-metadata dispatch fixture; never compiled')
+    dependency.write_bytes(b'authored dependency input; never compiled')
+    files = (work / 'artifacts.json', work / 'build.log',
+             *(work / f'guard_{index}{suffix}' for index in range(1, 6)
+               for suffix in ('.rs', '.log', '')),
+             *(work / f'example_{index}{suffix}' for index in range(1, 5)
+               for suffix in ('.rs', '.log', ''))) if complete_files else ()
     metadata = '\n'.join(json.dumps(message) for message in (
         {'reason': 'compiler-artifact', 'target': {'name': 'fixture', 'kind': ['lib']},
          'filenames': [str(directories[0] / 'libfixture.rmeta')]},
@@ -1470,18 +1479,41 @@ def capture_compiler_entry(text, entry_path, owner):
     mkdir, read_text, write_text, write_bytes, run = Path.mkdir, Path.read_text, Path.write_text, Path.write_bytes, subprocess.run
     run_path = runpy.run_path
     observed, written, read, planned = [], {}, [], []
+    library_plans, directory_plans = [], []
 
     def observe_profile(path, *args, **kwargs):
         assert path == str(ROOT / 'scripts/local_environment.py') and not args and not kwargs, 'D156 compiler profile entry changed'
 
-        def enter(root, *, directories=(), sources=()):
+        def enter(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
             assert root == ROOT and directories == (work,), 'D156 compiler planned output changed'
             assert sources == tuple(original_sources), 'D156 compiler planned inputs changed'
+            assert output_files == files, 'D156 compiler file plan changed'
+            assert mutable_sources == (), 'D156 compiler read-only inputs changed'
             assert not planned and not read and not written and not observed, 'D156 compiler profile was late'
             planned.append(True)
-            return GOOD['enter_producer'](root, directories=directories, sources=sources)
+            return GOOD['enter_producer'](root, directories=directories, output_files=output_files,
+                                          sources=sources, mutable_sources=mutable_sources)
 
-        return dict(GOOD, enter_producer=enter)
+        def plan(root, *, directories=(), output_files=(), sources=(), mutable_sources=()):
+            assert complete_files and root == ROOT, 'D156 compiler unexpected library plan'
+            assert not directories and not output_files and not mutable_sources, 'D156 compiler library plan has effects'
+            assert sources == (artifact, dependency), 'D156 compiler library inputs changed'
+            assert observed == [expected_calls[0][0]] and len(written) == 2 and not library_plans, \
+                'D156 compiler library plan was late'
+            library_plans.append(True)
+            return GOOD['plan_producer'](root, sources=sources)
+
+        def directory(root, relative, *, create=False, missing_ok=False):
+            assert complete_files and root == ROOT and not create and not missing_ok, \
+                'D156 compiler library directory plan has effects'
+            assert library_plans == [True], 'D156 compiler library plan omitted'
+            assert observed == [expected_calls[0][0]], 'D156 compiler library directory plan was late'
+            path = ROOT / relative
+            assert path in directories and path not in directory_plans, 'D156 compiler library directory changed'
+            directory_plans.append(path)
+            return GOOD['directory'](root, relative)
+
+        return dict(GOOD, enter_producer=enter, plan_producer=plan, directory=directory)
 
     def validate_environment(environment):
         assert all(environment.get(name) == str(ROOT / value) for name, value in custom.items()), 'D156 compiler child stores lost'
@@ -1511,6 +1543,9 @@ def capture_compiler_entry(text, entry_path, owner):
         assert kwargs.get('cwd') == ROOT and not positional, 'D156 compiler child cwd changed'
         assert kwargs.get('capture_output') is True and kwargs.get('text') is True, 'D156 compiler diagnostic capture changed'
         assert len(observed) < len(expected_calls), 'D156 compiler unexpected child'
+        if complete_files and observed:
+            assert library_plans == [True], 'D156 compiler library plan omitted'
+            assert directory_plans == directories, 'D156 compiler library directory plan omitted'
         wanted, status, stdout, stderr = expected_calls[len(observed)]
         assert args == wanted, 'D156 compiler child argv changed'
         observed.append(args)
@@ -1536,6 +1571,82 @@ def capture_compiler_entry(text, entry_path, owner):
     assert written == expected_writes, 'D156 compiler output omitted'
     assert read == sources, 'D156 compiler source/book reads changed'
     assert planned == [True], 'D156 compiler complete plan omitted'
+    assert library_plans == ([True] if complete_files else []), 'D156 compiler library plan omitted'
+    assert directory_plans == (directories if complete_files else []), 'D156 compiler library directory plan omitted'
+
+
+
+def compiler_file_refusals(text, entry_path):
+    """Actual copied recipe entry refuses leaf aliases/types before input reads or Cargo."""
+    work = GOOD['directory'](ROOT, 'target/scratch/compiler_file_refusals', create=True)
+    relative = 'target/recipe_owner_contract'
+    source = 'crates/sc-core/src/recipe/checked_recipe.rs'
+    book = 'docs/book/src/annexes/formula-checked-recipes.md'
+    saved = dict(os.environ)
+    cases = ('first-link', 'last-link', 'guard-binary-link',
+             'first-hardlink', 'last-hardlink', 'file-directory', 'late-source')
+    for case in cases:
+        with tempfile.TemporaryDirectory(dir=work) as name:
+            root = Path(name)
+            entry = root / entry_path.relative_to(ROOT)
+            for path, data in ((source, (ROOT / source).read_bytes()),
+                               (book, (ROOT / book).read_bytes()),
+                               ('scripts/local_environment.py', SOURCE.read_bytes()),
+                               (entry_path.relative_to(ROOT).as_posix(), text.encode())):
+                destination = root / path
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes(data)
+            output = root / relative
+            output.mkdir(parents=True)
+            victim = root / 'victim'
+            victim.write_bytes(b'unchanged isolated compiler alias victim')
+            first, last = output / 'artifacts.json', output / 'example_4'
+            if case in ('first-link', 'last-link', 'guard-binary-link'):
+                destination = first if case == 'first-link' else last if case == 'last-link' else output / 'guard_1'
+                destination.symlink_to(victim)
+                wanted = 'symlink producer output'
+            elif case in ('first-hardlink', 'last-hardlink'):
+                os.link(victim, first if case == 'first-hardlink' else last)
+                wanted = 'hard-linked producer output'
+            elif case == 'file-directory':
+                first.mkdir()
+                wanted = 'producer output is not a local regular file'
+            else:
+                (root / book).unlink()
+                wanted = 'producer source is not a local regular file'
+            before = {path: path.read_bytes() for path in root.rglob('*')
+                      if path.is_file() and not path.is_symlink()}
+            environment = dict(os.environ)
+            mkdir, read_text, read_bytes, write_text, write_bytes, run = (
+                Path.mkdir, Path.read_text, Path.read_bytes, Path.write_text, Path.write_bytes, subprocess.run)
+
+            def no_effect(*args, **kwargs):
+                raise AssertionError('D156 compiler physical refusal reached a read/write/child')
+
+            diagnostic = io.StringIO()
+            try:
+                Path.mkdir, Path.read_text, Path.read_bytes = no_effect, no_effect, no_effect
+                Path.write_text, Path.write_bytes, subprocess.run = no_effect, no_effect, no_effect
+                with contextlib.redirect_stderr(diagnostic):
+                    try:
+                        exec(compile(text, str(entry), 'exec'), {'__file__': str(entry), '__name__': 'compiler_physical'})
+                    except SystemExit as error:
+                        assert error.code == 2, 'D156 compiler physical refusal status'
+                    else:
+                        raise AssertionError('D156 compiler physical invalid entry accepted')
+            finally:
+                after_environment = dict(os.environ)
+                Path.mkdir, Path.read_text, Path.read_bytes = mkdir, read_text, read_bytes
+                Path.write_text, Path.write_bytes, subprocess.run = write_text, write_bytes, run
+                os.environ.clear()
+                os.environ.update(saved)
+            assert diagnostic.getvalue() == 'local-environment: REFUSED — ' + wanted + '\n', \
+                ('D156 compiler physical refusal diagnostic', case, diagnostic.getvalue())
+            assert after_environment == environment and not (root / 'target/cargo-home').exists(), \
+                'D156 compiler physical refusal activated stores'
+            assert all(path.read_bytes() == data for path, data in before.items()), \
+                'D156 compiler physical refusal changed bytes'
+    return len(cases)
 
 
 def capture_child(text, entry_path, work_name, sources, test_target, *, arguments=(), first_suffix=None,
@@ -3416,10 +3527,21 @@ def main():
         }
         source_argument = 'SOURCES' if path.name in multiple_sources else '(SOURCE,)'
         profile_name = "runpy.run_path(str(ROOT / 'scripts/local_environment.py'))['enter_producer']"
-        calls = [node.value for node in ast.parse(text).body if isinstance(node, ast.Expr)
+        tree = ast.parse(text)
+        if path.name == 'recipe_owner_contract.py':
+            profile_name = "PROFILE['enter_producer']"
+            bindings = [node for node in ast.walk(tree) if isinstance(node, ast.Assign)
+                        and any(isinstance(target, ast.Name) and target.id == 'PROFILE'
+                                for target in node.targets)]
+            assert len(bindings) == 1 and bindings[0] in tree.body and \
+                ast.unparse(bindings[0].value) == "runpy.run_path(str(ROOT / 'scripts/local_environment.py'))", \
+                'D156 Python entry profile binding changed'
+        calls = [node.value for node in tree.body if isinstance(node, ast.Expr)
                  and isinstance(node.value, ast.Call) and ast.unparse(node.value.func) == profile_name]
         assert len(calls) == 1, 'D156 Python entry profile-call identity'
         node = calls[0]
+        if path.name == 'recipe_owner_contract.py':
+            assert bindings[0].lineno < node.lineno, 'D156 Python entry profile binding was late'
         source_keyword = next(keyword for keyword in node.keywords if keyword.arg == 'sources')
         assert ast.unparse(source_keyword.value) == source_argument, 'D156 Python authored source population'
         call = ast.get_source_segment(text, node)
@@ -3497,6 +3619,21 @@ def main():
             ('fixture bytes', "+ '\\nfn main() {}\\n'", "+ '\\nfn main() {panic!();}\\n'", 'D156 compiler fixture/output bytes changed'),
         ]
         if owner == 'recipe':
+            measure_physical += compiler_file_refusals(text, path)
+            faults.extend([
+                ('complete files', 'output_files=OUTPUT_FILES', 'output_files=()', 'D156 compiler file plan changed'),
+                ('guard binary files', "for suffix in ('.rs', '.log', '')", "for suffix in ('.rs', '.log')", 'D156 compiler file plan changed'),
+                ('library plan', "PROFILE['plan_producer'](ROOT, sources=(artifact, *sorted(library_files - {artifact})))", 'None', 'D156 compiler library plan omitted'),
+                ('library inputs', 'sources=(artifact, *sorted(library_files - {artifact}))', 'sources=(artifact,)', 'D156 compiler library inputs changed'),
+                ('library directory plan', "PROFILE['directory'](ROOT, path.relative_to(ROOT).as_posix())", 'None', 'D156 compiler library directory plan omitted'),
+                ('read-only sources', 'output_files=OUTPUT_FILES, sources=SOURCES)', 'output_files=OUTPUT_FILES, sources=SOURCES, mutable_sources=(SOURCE,))', 'D156 compiler read-only inputs changed'),
+            ])
+            faults.extend(('planned file omitted %d' % index, 'output_files=OUTPUT_FILES',
+                           'output_files=OUTPUT_FILES[:%d] + OUTPUT_FILES[%d:]' % (index, index + 1),
+                           'D156 compiler file plan changed') for index in range(29))
+            faults.extend(('planned source omitted %d' % index, 'sources=SOURCES',
+                           'sources=SOURCES[:%d] + SOURCES[%d:]' % (index, index + 1),
+                           'D156 compiler planned inputs changed') for index in range(2))
             faults.append(('chapter input plan', 'SOURCES = (SOURCE, BOOK)', 'SOURCES = (SOURCE,)', 'D156 compiler planned inputs changed'))
             faults.append(('book compilation', "'recipe_example_%d'", "'wrong_example_%d'", 'D156 compiler child argv changed'))
             execute = next(node for node in ast.walk(ast.parse(text)) if isinstance(node, ast.Call)

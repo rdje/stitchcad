@@ -65,23 +65,7 @@ coverage; .b.s owns shell/platform/raw book commands and .b.v integration. D156 
   Goal: copied-book recipe fixtures and real reference consumer; static_recipe_contract.py ownership.
   Acceptance: complete public helper/source/book tree/borrowed-root review before edits; guarded creation/copy/deletion/delegation, original consumer and per-recipe controls, actual captures/body faults and focused real proof.
 
-Inspection: first_phase_contract.py216L and static_recipe_contract.py312L read fully; public
-coupled input/import/build contract and namespace/signature/review loader contracts reviewed.
-The bridge currently relies on coupled's20-input module guard but never validates its own label
-directory before that module activates stores. Shared prepare_producer has no nonmutating complete
-path-plan entry for this delegation order. The copied verifier has distinct tree-copy/deletion
-and shell-consumer effects. Split before implementation; row owners move to .1/.2.
-
-.1 additionally owns blocking retention of complete committed older lessons before growing
-DEV_NOTES, with exact source intervals, prior immutable bytes/public readers and unchanged caps.
-
-D156 file-destination finding: actual isolated target/output/result.log symlink to a fixture
-victim is accepted by the directory-only plan; victim bytes unchanged, no alias/native write.
-Reproduce with the guarded shared-plan fixture; existing directory/source validation does not
-inspect undeclared leaf destinations. .1 owns nonmutating output_files validation and all nine
-bridge destinations, physical alias/type/device/parent refusals and actual omitted-file body faults.
-All other producer destinations remain unverified; prioritize their explicit finite audit before
-continuing copied-book repairs. This is additional concrete scope within open D156, never locality closure.
+Whole0195 receipts and original bridge inspection retained in [part247](../history/stitchcad-devnotes-part247.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.i`
   Status: `done`
@@ -703,9 +687,12 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Goal: copied newest committed window9 catalog prose refusal before compilers.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.1`
-  Status: `pending`
+  Status: `done`
   Goal: recipe owner complete input/output/native plans; original guards/examples/artifact evidence.
   Paths: docs/tasks/artifacts/formula_structure/recipe_owner_contract.py
+  Own0196: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;docs/book/src/annexes/formula-checked-recipes.md;live/task/whole retention;target/recipe-plan-*;target/window9-recipe-*.
+  Own D199: docs/tasks/PLANNING.md;live/task/whole defect retention; five stale child rows; fix now/P1.
+  Acceptance: all29 outputs before effects; unchanged5 guards/4 examples/argv; dynamic current-artifact inputs; actual capture/omission/physical/native evidence.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.2`
   Status: `pending`
@@ -731,20 +718,26 @@ Whole completed n11/n12 retrieval records,0193 preparation/acceptance/gates and 
 
 Whole0194 task and continuity lesson retained in [part246](../history/stitchcad-devnotes-part246.md).
 
-0195 draft .h.v: whole0185 also retired live part173; ledger26486 red1.
-Exact current row restored; sealed174 stays; fresh173-pointer/full ledger verified.
-Known P3 pipe stays .b.s. CH cap/helper syntax drafts refused before effects, corrected.
+Whole0195 receipts and original bridge inspection retained in [part247](../history/stitchcad-devnotes-part247.md).
 
-## STITCHCAD-G1-0195 — committed window9 (.n13.h.v)
+0196 shared1798/profile AST and45346/library-plan diagnostic red1 consumed;
+exact unique early PROFILE proof and separate missing/late directory guards fixed.
+CH41B-over-cap draft refused before writes; tightened. Known P3 pipe stays .b.s.
 
-- [x] REPRODUCE / ISSUE:97118 copied inventory0/guard1/root31 exact,rc=0.
-- [x] ROOT CAUSE: actual committed comparison checks prose/HEAD exact,rc=0.
-- [x] FIX: retain0 whole246/174 FILE preflight/read before retire,rc=0.
-- [x] ADDRESSED: archive73116:28/CLI561/all542/newest9 refusal,rc=0.
-- [x] NO REGRESSION: python3 -I -B target/window9-post-retention-proof.py rc=0 (74301):
-  prior540/31files/55closed/63Rust/3proofs/173pointers/nav/map/caps/12open185sealed exact.
-- [x] LOCKSTEP:46644/2744/42495:pub45/coverage9/ledger718real11arms13pointers,rc=0.
-  Earlier proof excluded after helper edit; no pending jobs. Promotion: declined.
-  .n13.1 next; engine/grammar/400 stay.
+## STITCHCAD-G1-0196 — recipe owner (.n13.1)
 
-Staged52893 all13green,rc=0.
+- [x] REPRODUCE / ISSUE: owner-proof.py Source c57 five parent rows red/current0,rc=0.
+- [x] ROOT CAUSE: profile-proof.py exact loader/binding/order4 reds/2 disables,rc=0.
+- [x] FIX: compiler-controls.py2 captures/56 body reds/7 physical refusal2,rc=0;
+  29 initial files/two read-only inputs/current public libraries and directories planned.
+- [x] ADDRESSED: native66492/verifier0:five exact E0451/E0515 guards/four examples,
+  four current replays/all75 frozen/63Rust/fixtures/argv exact,rc=0; library SHA
+  695a0cee4d315df45938902ca7ce5149c22d2a1d9c3090c6a2b888c02ad238d5.
+- [x] NO REGRESSION: python3 -I -B target/recipe-plan-final-retention-proof.py rc=0:
+  546reads/prior542/33files/56headers/174pointers/nav/3proofs/map/caps exact;
+  shared9489:775/35/58/307; census43340:229paths288checks/file120owners67groups37,rc=0.
+- [x] LOCKSTEP: archive16660:28/CLI565; publication49473:45; coverage3806:9;
+  ledger93272:723real/11arms/13pointers,rc=0. Whole247/175/248/121 retained;
+  D199 closed/12open186sealed/live/book aligned. Promotion: declined.
+  .n13.2 next; D156/D34 open; engine/grammar/400 stay; no runner claim.
+  Final staged13 green,rc=0,target/recipe-plan-staged-gate.log.

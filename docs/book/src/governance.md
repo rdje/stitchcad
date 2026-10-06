@@ -507,6 +507,8 @@ pass, and all31 original root archive files/HEAD stay exact. Whole0194 task/less
 ledger are retained before new receipts; current retrieval now includes542 logical records.
 Archive28/CLI561, all542 reads, publication45, coverage9 and ledger718+11+13 pass.
 The live part173 row remains available alongside its exact copy inside the whole0185 interval.
+Before owner receipts, whole c57 DEV navigation is retained in248. The live list/read contract
+still enumerates every identity; the complete prior table and its original links remain exact.
 
 This preserves maintenance evidence. Engine/grammar behavior and the400-commit cadence stay.
 

@@ -1034,3 +1034,5 @@ D195 whole authored report/verified closure retained in [part117](../history/win
 D196 whole authored report/focused repair retained in [part118](../history/window9.md#stitchcad-defects-part118md); full ledger confirmation is tracked by .n11.3.
 
 D197/D198 whole original reports retained in [the task record](G1-SLICE-retention-proof.md#input-review-defect-reports---whole-original-records); verified closures retained in [part120](../history/window9.md#stitchcad-defects-part120md).
+
+D199 whole authored report/verified five-row repair retained in [part121](../history/stitchcad-defects-part121.md).
