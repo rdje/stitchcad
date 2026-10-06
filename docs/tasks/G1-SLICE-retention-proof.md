@@ -511,3 +511,10 @@ Preserved here because the current archive window is at its64-file limit.
 - Three inputs/19 files/two mutables;18 faults/full8/per-body guards/full7030.
 - D186/D187 closed; shared578/35/40/218;493 retained reads exact0.
 - Book/live/.n10 aligned; D156/D34 open; grammar/400 unchanged.
+
+### Current window9 retrieval for retained source links
+
+The whole Source records above keep their original logical addresses. Current routes:
+
+[part224](../history/window9.md#stitchcad-devnotes-part224md)
+[part225](../history/window9.md#stitchcad-devnotes-part225md)

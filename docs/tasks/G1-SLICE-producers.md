@@ -422,7 +422,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
   Paths: docs/tasks/artifacts/formula_lex/formula_lex_mutations.py;docs/tasks/artifacts/formula_structure/semantic_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
-Whole completed n05 split scope retained in [part242](../history/stitchcad-devnotes-part242.md).
+Whole completed n05 split scope retained in [part242](../history/window9.md#stitchcad-devnotes-part242md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n05.1`
   Status: `done`
@@ -448,7 +448,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
   Paths: docs/tasks/artifacts/formula_structure/recipe_mutations.py;docs/tasks/artifacts/formula_structure/statement_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
-Whole completed n06 split scope retained in [part242](../history/stitchcad-devnotes-part242.md).
+Whole completed n06 split scope retained in [part242](../history/window9.md#stitchcad-devnotes-part242md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n06.1`
   Status: `done`
@@ -474,7 +474,7 @@ Complete committed verification retained in [native mode proof](G1-SLICE-runtime
   Paths: docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py;docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py;docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py;docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
-Whole completed n07 scope retained in [part236](../history/stitchcad-devnotes-part236.md).
+Whole completed n07 scope retained in [part236](../history/window9.md#stitchcad-devnotes-part236md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n07.1`
   Status: `done`
@@ -515,7 +515,7 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
   Paths: docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_statement_mutations.py;docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py
   Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
 
-Whole completed n08 scope retained in [part236](../history/stitchcad-devnotes-part236.md).
+Whole completed n08 scope retained in [part236](../history/window9.md#stitchcad-devnotes-part236md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.1`
   Status: `done`
@@ -685,10 +685,31 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
   Own whole D197/D198 report retention: docs/tasks/G1-SLICE-retention-proof.md. Whole0183 also.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13`
-  Status: `pending`
-  Goal: complete file-destination plans for owner compilers; retain existing source guards, prepared stores and public consumer behavior.
+  Status: `in_progress`
+  Goal: complete owner-compiler plans; blocking window9/whole task retention first.
   Paths: docs/tasks/artifacts/formula_structure/recipe_owner_contract.py;docs/tasks/artifacts/formula_structure/statement_owner_contract.py
-  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+  Own .doctrine/history_archive/;docs/history/;live/book/task records;target/window9-*.
+  Acceptance: complete plans/stores/public consumers; physical/omission/native/restoration proofs; published retention contracts.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.h`
+  Status: `done`
+  Goal: STITCHCAD-G1-0194 window9 continuity; whole Source tail/lesson/ledger/window8 book retention before compilers.
+  Paths: .doctrine/history_archive/;docs/history/;live/book/task records;target/window9-*;target/history_window9_capture.
+  Acceptance: Source56/all537 isolated deterministic capture/source/read/materialization; guarded copy/verify/exact retirement; prior8/proof prefixes/whole records/current routes/fixed caps; published probes.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.h.v`
+  Status: `pending`
+  Goal: copied newest committed window9 catalog prose refusal before compilers.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.1`
+  Status: `pending`
+  Goal: recipe owner complete input/output/native plans; original guards/examples/artifact evidence.
+  Paths: docs/tasks/artifacts/formula_structure/recipe_owner_contract.py
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n13.2`
+  Status: `pending`
+  Goal: statement owner complete input/output/native plans; original guards/artifact evidence.
+  Paths: docs/tasks/artifacts/formula_structure/statement_owner_contract.py
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n14`
   Status: `pending`
@@ -705,47 +726,21 @@ Complete committed verification retained in [retention proof](G1-SLICE-retention
 Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#daily-cleanup-and-concurrent-store-verification); canonical ownership remains above.
 
 
-Whole authored builtin progress/original prediction/correction retained in [retention proof](G1-SLICE-retention-proof.md#builtin-plans--authored-verification-and-prediction-correction).
+Whole completed n11/n12 retrieval records,0193 preparation/acceptance/gates and input lesson retained in [part244](../history/stitchcad-devnotes-part244.md); canonical ownership remains above.
 
-Complete committed builtin verification retained in [retention proof](G1-SLICE-retention-proof.md#builtin-completed-verification); canonical .n11.1 ownership remains above.
+## STITCHCAD-G1-0194 — window9 acceptance (.n13.h)
 
-Whole authored operator preparation/predictions/verification retained in [part227](../history/stitchcad-devnotes-part227.md).
+- [x] REPRODUCE / ISSUE: capture76032 Source56/537/64 working/deterministic,rc=0.
+- [x] ROOT CAUSE: unchanged64 limit blocks owner growth; complete schema/CLI/book read,rc=0.
+- [x] FIX: install0:3 bytes copy/verify before56 exact retire; prior8 prefix/9 working,rc=0.
+- [x] ADDRESSED: archive23205 terminal0:28/CLI558/newest digest/member/catalog/collision,rc=0.
+- [x] NO REGRESSION: python3 -I -B target/window9-final-retention-proof.py rc=0:
+  540reads/prior537/84inputs/25controls/54closed headers/63Rust/12open185sealed exact.
+- [x] LOCKSTEP: whole244/CH173/245/proof prefixes/original NAV/current routes/book sync,rc=0.
+  Publication65579/coverage87290/ledger75617 terminal0:45/9/715real11arms13pointers.
+  Caps/grammar/400 stay. promotion: declined. .h.v next; parent .n13 active.
 
-Complete committed operator acceptance retained in [part228](../history/stitchcad-devnotes-part228.md); canonical .n11.2 ownership remains above.
+DEV over-cap draft and book outside-source link refused before acceptance; corrected through
+bounded summary/public reader, no gate changes. Syntax-only helper drafts produced no writes.
 
-
-Whole authored wanted preparation/predictions/correction/verification retained in [part230](../history/stitchcad-devnotes-part230.md).
-
-Whole authored D196 ledger-role repair retained in [part231](../history/stitchcad-devnotes-part231.md).
-
-Complete committed wanted acceptance retained in [part232](../history/stitchcad-devnotes-part232.md); canonical .n11.3 ownership remains above.
-
-Whole call preparation/predictions retained in [part234](../history/stitchcad-devnotes-part234.md).
-
-Complete committed call acceptance retained in [part235](../history/stitchcad-devnotes-part235.md); canonical .n11.4 ownership remains above.
-
-Whole authored expression preparation/shared terminal/native-in-flight scope retained in [part237](../history/stitchcad-devnotes-part237.md).
-
-Complete committed expression verification retained in [part239](../history/stitchcad-devnotes-part239.md); canonical .n12.1 ownership remains above.
-
-Whole authored reduction preparation/replay retained in [part241](../history/stitchcad-devnotes-part241.md).
-
-Complete committed reduction acceptance retained in [part242](../history/stitchcad-devnotes-part242.md); canonical .n12.2 ownership remains above.
-
-0193 prepared: original7/public5/four implementations read; predictions A,C,C,A,A,D,A/
-four filtered per fault. Plan8/8/4/class0;freeze75/current5/D197. DEV242 retains3 whole scopes.
-
-## STITCHCAD-G1-0193 — input acceptance (.n12.3)
-
-- [x] REPRODUCE / ISSUE: original note54:5 true/current+oracle false,rc=0.
-- [x] ROOT CAUSE: native-proof.py verify:every failed body/current quoted macro,rc=0.
-- [x] FIX:8 inputs/8 logs/4 mutable/class0;original7/two argv/filters exact,rc=0.
-- [x] ADDRESSED: Native10362/verify/artifact consumed0;full5/current5/frozen75 exact,rc=0.
-- [x] NO REGRESSION: python3 -I -B target/input-plan-retention-proof.py rc=0;
-  shared738/35/58/300/28 omissions/readonly0/reference0/original4 inventory reds0.
-- [x] LOCKSTEP: whole242–243/CH172/reports/0183 exact;book/live sync,rc=0.
-  D197/D198 closed;D156/D34 open. Grammar/400 stay. promotion: declined.
-
-Focused48471/80585/36933/13105 terminal0:537reads/45pub/9coverage/711real11arms13pointers,rc=0.
-
-Staged19468 all13green,rc=0.
+Staged91543 all13green,rc=0.

@@ -14,49 +14,46 @@ D162 namespace guard lesson retained in [part178](docs/history/window7.md#stitch
 
 D161 statement and whole proof lesson retained in [part180](docs/history/window7.md#stitchcad-devnotes-part180md).
 
-## _(2026-10-06 UTC)_ — input complete modes and D197/D198 closure
+## _(2026-10-06 UTC)_ — window9 continuity before owner compilers
 
-- Plan8 inputs/8 logs/4 mutable/class0; original7/two argv/filters exact.
-- Shared738/35/58/300;28 omissions/legacy D197 red/readonly3 links/two aliases0.
-- Native10362/verify/artifact consumed0:every failed body/current quoted macro/
-  four filtered tests uncredited/full5/current5/frozen75/63 Rust/four sources exact.
-- Cargo-selected input d4bbcb3fa60b6a78 SHAd830bab7 passes current5,rc=0.
-- D198 stale decision-wording dependency removed; original predicate red/current
-  inventory/reference/original4 interpreter renderer reds/exact restoration pass0.
-- Whole2423 scopes/243 reduction/CH1720182/reports/0183 copied/read before retirement.
-  Archive64 unchanged ceiling; long report bytes live in bounded sibling;closure120.
-- Retention537/prior533/all77/12open185sealed/publication45/coverage9/ledger711real11arms13pointers pass0.
-- D197 all3 verified/D198 closed; D156/D34 open; grammar/400 stay; promotion declined.
+- Source56/537/64 working: deterministic fixture/source proof/all537 reads/materialization0.
+- New3 bytes copied/verified before56 exact single-link retirements; installed9/prior8 exact0.
+- Whole tail2826B/input994B→244; CH0184→173/book window8→245; preflight/read before retire0.
+- Old identities/proof prefixes/CH162 original navigation exact; live equivalent routes/
+  aliases outside retained task bytes. Fixed caps/engine/grammar/400 stay.
+- Post-recording guard next; promotion declined. First DEV draft refused before all writes.
 
-Whole reduction dated lesson retained in [part243](docs/history/stitchcad-devnotes-part243.md).
+Whole input modes and D197/D198 lesson retained in [part244](docs/history/stitchcad-devnotes-part244.md).
 
-Whole expression dated lesson retained in [part240](docs/history/stitchcad-devnotes-part240.md).
+Whole reduction dated lesson retained in [part243](docs/history/window9.md#stitchcad-devnotes-part243md).
 
-Whole call dated lesson retained in [part238](docs/history/stitchcad-devnotes-part238.md).
+Whole expression dated lesson retained in [part240](docs/history/window9.md#stitchcad-devnotes-part240md).
 
-Whole wanted dated lesson and links retained in [part233](docs/history/stitchcad-devnotes-part233.md).
+Whole call dated lesson retained in [part238](docs/history/window9.md#stitchcad-devnotes-part238md).
 
-Whole operator and builtin dated lessons retained in [part229](docs/history/stitchcad-devnotes-part229.md).
+Whole wanted dated lesson and links retained in [part233](docs/history/window9.md#stitchcad-devnotes-part233md).
 
-Whole ordered-name replay: [part225](docs/history/stitchcad-devnotes-part225.md). Seal date correction: UTC2026-10-05; immutable header says October6.
+Whole operator and builtin dated lessons retained in [part229](docs/history/window9.md#stitchcad-devnotes-part229md).
 
-Whole daily-cleanup and exact-name lessons retained in [part226](docs/history/stitchcad-devnotes-part226.md).
+Whole ordered-name replay: [part225](docs/history/window9.md#stitchcad-devnotes-part225md). Seal date correction: UTC2026-10-05; immutable header says October6.
 
-Whole declaration plans and negative construction lesson retained in [part223](docs/history/stitchcad-devnotes-part223.md).
+Whole daily-cleanup and exact-name lessons retained in [part226](docs/history/window9.md#stitchcad-devnotes-part226md).
 
-Whole ordered-name plans and guarded advances lesson retained in [part221](docs/history/stitchcad-devnotes-part221.md).
+Whole declaration plans and negative construction lesson retained in [part223](docs/history/window9.md#stitchcad-devnotes-part223md).
 
-Whole namespace plans and thread lesson retained in [part219](docs/history/stitchcad-devnotes-part219.md).
+Whole ordered-name plans and guarded advances lesson retained in [part221](docs/history/window9.md#stitchcad-devnotes-part221md).
 
-Whole window8 post-recording guard lesson retained in [part218](docs/history/stitchcad-devnotes-part218.md).
+Whole namespace plans and thread lesson retained in [part219](docs/history/window9.md#stitchcad-devnotes-part219md).
 
-Whole window8 continuity and protected history lesson retained in [part222](docs/history/stitchcad-devnotes-part222.md).
+Whole window8 post-recording guard lesson retained in [part218](docs/history/window9.md#stitchcad-devnotes-part218md).
 
-Whole checked-recipe baseline and extraction lesson retained in [part217](docs/history/stitchcad-devnotes-part217.md).
+Whole window8 continuity and protected history lesson retained in [part222](docs/history/window9.md#stitchcad-devnotes-part222md).
 
-Whole checked-statement modes and extraction lesson retained in [part216](docs/history/stitchcad-devnotes-part216.md).
+Whole checked-recipe baseline and extraction lesson retained in [part217](docs/history/window9.md#stitchcad-devnotes-part217md).
 
-Whole checked-expression modes and panic lesson retained in [part214](docs/history/stitchcad-devnotes-part214.md).
+Whole checked-statement modes and extraction lesson retained in [part216](docs/history/window9.md#stitchcad-devnotes-part216md).
+
+Whole checked-expression modes and panic lesson retained in [part214](docs/history/window9.md#stitchcad-devnotes-part214md).
 
 Whole canonical expression modes and thread lesson retained in [part213](docs/history/window8.md#stitchcad-devnotes-part213md).
 
@@ -203,20 +200,20 @@ Coupled recipe-input guard lesson retained in [part191](docs/history/window8.md#
 
 | [`part213`](docs/history/window8.md#stitchcad-devnotes-part213md) | whole canonical expression modes and thread lesson | 13 lines, 1877 bytes, `sha256:a67f7f9c…` |
 
-| [`part214`](docs/history/stitchcad-devnotes-part214.md) | whole checked expression modes and individual panic lesson | 9 lines, 1512 bytes, `sha256:b83e6791…` |
+| [`part214`](docs/history/window9.md#stitchcad-devnotes-part214md) | whole checked expression modes and individual panic lesson | 9 lines, 1512 bytes, `sha256:b83e6791…` |
 
-| [`part216`](docs/history/stitchcad-devnotes-part216.md) | whole checked statement modes and guarded extraction lesson | 8 lines, 1356 bytes, `sha256:58b80c3e…` |
+| [`part216`](docs/history/window9.md#stitchcad-devnotes-part216md) | whole checked statement modes and guarded extraction lesson | 8 lines, 1356 bytes, `sha256:58b80c3e…` |
 
-| [`part217`](docs/history/stitchcad-devnotes-part217.md) | whole checked recipe baseline modes and guarded extraction lesson | 8 lines, 1409 bytes, `sha256:79ab4f32…` |
+| [`part217`](docs/history/window9.md#stitchcad-devnotes-part217md) | whole checked recipe baseline modes and guarded extraction lesson | 8 lines, 1409 bytes, `sha256:79ab4f32…` |
 
-| [`part218`](docs/history/stitchcad-devnotes-part218.md) | whole committed window8 post-recording guard lesson | 6 lines, 950 bytes, `sha256:aa35800d…` |
+| [`part218`](docs/history/window9.md#stitchcad-devnotes-part218md) | whole committed window8 post-recording guard lesson | 6 lines, 950 bytes, `sha256:aa35800d…` |
 
-| [`part219`](docs/history/stitchcad-devnotes-part219.md) | whole namespace modes and thread evidence lesson | 6 lines, 1006 bytes, `sha256:4cf3e7a4…` |
+| [`part219`](docs/history/window9.md#stitchcad-devnotes-part219md) | whole namespace modes and thread evidence lesson | 6 lines, 1006 bytes, `sha256:4cf3e7a4…` |
 
-| [`part221`](docs/history/stitchcad-devnotes-part221.md) | whole ordered-name plans and guarded advances lesson | 6 lines, 845 bytes, `sha256:7776d33c…` |
+| [`part221`](docs/history/window9.md#stitchcad-devnotes-part221md) | whole ordered-name plans and guarded advances lesson | 6 lines, 845 bytes, `sha256:7776d33c…` |
 
-| [`part222`](docs/history/stitchcad-devnotes-part222.md) | whole window8 continuity and protected history lesson | 7 lines, 1117 bytes, `sha256:047dbc9c…` |
+| [`part222`](docs/history/window9.md#stitchcad-devnotes-part222md) | whole window8 continuity and protected history lesson | 7 lines, 1117 bytes, `sha256:047dbc9c…` |
 
-| [`part223`](docs/history/stitchcad-devnotes-part223.md) | whole declaration plans and negative construction lesson | 6 lines, 717 bytes, `sha256:581e057e…` |
+| [`part223`](docs/history/window9.md#stitchcad-devnotes-part223md) | whole declaration plans and negative construction lesson | 6 lines, 717 bytes, `sha256:581e057e…` |
 
-| [`part226`](docs/history/stitchcad-devnotes-part226.md) | whole daily-cleanup and exact-name lessons | 12 lines, 1315 bytes, `sha256:3b7079ff…` |
+| [`part226`](docs/history/window9.md#stitchcad-devnotes-part226md) | whole daily-cleanup and exact-name lessons | 12 lines, 1315 bytes, `sha256:3b7079ff…` |

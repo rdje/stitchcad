@@ -1009,28 +1009,28 @@ D183 whole report/verified closure retained in [part104](../history/window8.md#s
 
 D184 whole report/verified closure retained in [part106](../history/window8.md#stitchcad-defects-part106md).
 
-D185 whole report/verified closure retained in [part107](../history/stitchcad-defects-part107.md).
+D185 whole report/verified closure retained in [part107](../history/window9.md#stitchcad-defects-part107md).
 
-D186 whole report/verified closure retained in [part108](../history/stitchcad-defects-part108.md).
+D186 whole report/verified closure retained in [part108](../history/window9.md#stitchcad-defects-part108md).
 
-D187 whole report/verified closure retained in [part109](../history/stitchcad-defects-part109.md).
+D187 whole report/verified closure retained in [part109](../history/window9.md#stitchcad-defects-part109md).
 
-D188 whole report/verified closure retained in [part110](../history/stitchcad-defects-part110.md).
+D188 whole report/verified closure retained in [part110](../history/window9.md#stitchcad-defects-part110md).
 
-D189 whole report/verified closure retained in [part112](../history/stitchcad-defects-part112.md).
+D189 whole report/verified closure retained in [part112](../history/window9.md#stitchcad-defects-part112md).
 
-D190 whole report/verified closure retained in [part113](../history/stitchcad-defects-part113.md).
+D190 whole report/verified closure retained in [part113](../history/window9.md#stitchcad-defects-part113md).
 
-D191 whole report/verified closure retained in [part114](../history/stitchcad-defects-part114.md).
+D191 whole report/verified closure retained in [part114](../history/window9.md#stitchcad-defects-part114md).
 
-D192 whole report/verified family closure retained in [part119](../history/stitchcad-defects-part119.md).
+D192 whole report/verified family closure retained in [part119](../history/window9.md#stitchcad-defects-part119md).
 
-D193 whole report/verified closure retained in [part115](../history/stitchcad-defects-part115.md).
+D193 whole report/verified closure retained in [part115](../history/window9.md#stitchcad-defects-part115md).
 
-D194 whole report/verified correction retained in [part116](../history/stitchcad-defects-part116.md).
+D194 whole report/verified correction retained in [part116](../history/window9.md#stitchcad-defects-part116md).
 
-D195 whole authored report/verified closure retained in [part117](../history/stitchcad-defects-part117.md).
+D195 whole authored report/verified closure retained in [part117](../history/window9.md#stitchcad-defects-part117md).
 
-D196 whole authored report/focused repair retained in [part118](../history/stitchcad-defects-part118.md); full ledger confirmation is tracked by .n11.3.
+D196 whole authored report/focused repair retained in [part118](../history/window9.md#stitchcad-defects-part118md); full ledger confirmation is tracked by .n11.3.
 
-D197/D198 whole original reports retained in [the task record](G1-SLICE-retention-proof.md#input-review-defect-reports---whole-original-records); verified closures retained in [part120](../history/stitchcad-defects-part120.md).
+D197/D198 whole original reports retained in [the task record](G1-SLICE-retention-proof.md#input-review-defect-reports---whole-original-records); verified closures retained in [part120](../history/window9.md#stitchcad-defects-part120md).

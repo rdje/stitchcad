@@ -470,35 +470,40 @@ records exactly; previous six windows and logical addresses stay unchanged. Use
 Normal retrieval remains offline. Fixed bounds stay; runner evidence awaits the400-commit cadence.
 Committed catalog prose edits are refused.
 
-Window8 captures57 complete raw records from0f223cb before more producer-audit records would
-exceed the unchanged64-file working limit. The guarded isolated capture reconstructs all481
-prior logical records, including every earlier window, without Git or captured raw copies in the
-fixture. Repeated Git archive/gzip bytes agree; public source comparison proves all57 full originals.
-Installation verifies the copied payload/control bytes before retiring only those57 matching raw
-copies. All rewrite/removal paths were regular, local and single-linked before effects.
-
-Three whole committed intervals retain the checked-expression lesson, lexer ledger and original
-window5/6 book transitions. At the capture commit, all484 public reads matched their identities; eleven working
-Markdown files include eight catalogs. Prior seven windows, original logical addresses, exact
-source descriptors and fixed resident/decoded/schema limits remain unchanged.
+Window8 captured57 complete raw records from0f223cb. Its full transition, optional source
+comparison, whole-record retention and post-recording refusal evidence remain unchanged.
+Retrieve the complete record with the public reader:
 
 ```bash
-bash scripts/history_archive.sh prove-source window8
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part214.md
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part215.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part245.md
 ```
 
-Two links inside byte-exact historical task records keep their original logical addresses; current
-retrieval routes are appended outside those retained source intervals. Both protected prefixes and
-the complete checked-recipe record remain exact. Live links use window8 member headings.
-After recording d56505a, the real copied window8 catalog prose edit leaves inventory valid
-but the committed retention guard refuses it with its exact diagnostic. All28 original archive
-files/HEAD stay unchanged. Two whole lesson/ledger intervals now leave486 logical records and
-13 working Markdown files; archive28/CLI504 controls and all486 reads pass. The complete
-5306-byte window8 task record is preserved in a bounded evidence sibling. Current orientation
-remains complete with16 evidence siblings; its regenerated map stays within the fixed ceiling.
-These are structural retention proofs. New runner evidence awaits the400-commit cadence; no
-new engine or physical production approval follows.
+Original addresses and prior windows stay available offline; runner evidence follows the400-commit cadence.
+
+### Ninth retention window
+
+Window9 captures56 complete raw files from76f9217 before owner-compiler records would exceed
+working history's unchanged64-file limit. The isolated fixture reconstructs537 logical records,
+including all prior eight windows, without Git or captured raw copies. Repeated Git archive/gzip
+bytes agree; the public source proof compares every captured full file to its named source commit.
+Installation copies and verifies all new bytes before retiring only the56 exact regular,
+single-linked originals. The master keeps its previous ordered window list; schema and caps stay.
+
+Whole completed producer receipts/input lesson, the oldest live ledger and the complete window8
+book transition are retained in new records before live growth. Original task proof prefixes and
+CH162's complete original navigation stay byte-exact in their retained records. Current live
+navigation uses equivalent window9 headings; current retrieval aliases sit outside exact task
+source intervals. Ordinary reads/materialization remain offline; optional comparison:
+
+```bash
+bash scripts/history_archive.sh prove-source window9
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part244.md
+```
+
+Archive28/CLI558 controls and all540 current reads pass with prior identities and fixed bounds
+exact. Newest committed catalog refusal follows its recording commit.
+
+This preserves maintenance evidence. Engine/grammar behavior and the400-commit cadence stay.
 
 ### Local producer profile
 

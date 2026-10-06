@@ -4,14 +4,13 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- STITCHCAD-G1-0193/.n12.3 input complete; commit/postconditions finish this workflow.
-- Plan8 inputs/8 logs/4 mutable/class0; original7/two argv/filters exact.
-  Native10362/verify/artifact consumed0:every failed body/current quoted macro/
-  four filtered uncredited/full5/current5/frozen75/63 Rust/four sources exact.
-- Shared738/35/58/300;28 omissions/legacy red/readonly0/reference0/original4 inventory reds0.
-- D197 all3 families verified/D198 repaired; whole original reports and0183 in bounded sibling;
-  whole242–243/CH172/closure120 copied/read before retirement; caps stay.
-- Retention48471/publication80585/coverage36933/ledger13105 terminal0 consumed:
-  537/prior533/all77/12open185sealed/45pub/9coverage/711real11arms13pointers.
-- Next .n13 owner compilers; raw archive64 requires owned window9 containment before growth.
-  D156/D34 open; grammar/400 stay; no push; no native/background job pending.
+- STITCHCAD-G1-0194/.n13.h window9 complete; commit/postconditions finish this workflow.
+- Capture76032/installation0 consumed:Source56/all537 deterministic/source/read/materialization;
+  3 bytes copy/verify before56 exact retirements; previous8/master ordered prefix exact.
+- Whole tail2826B/input994B→244; CH0184→173/window8 book→245; prior identities/proof prefixes/
+  original NAV retained; current equivalent routes/aliases/book complete; fixed caps stay.
+- Focus78272/23205/65579/87290/75617 terminal0 consumed:540reads/prior537/84inputs/25controls/
+  54closed headers/63Rust/12open185sealed/archive28/CLI558/publication45/coverage9/
+  ledger715real11arms13pointers exact. No native/background job pending.
+- Next .n13.h.v actual newest committed catalog prose refusal, then .n13.1 recipe/.2 statement.
+  D197/D198 verified;D156/D34 open. Grammar/400 unchanged; no push (derive count).
