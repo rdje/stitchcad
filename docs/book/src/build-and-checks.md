@@ -1,5 +1,7 @@
 # Build and check the project
 
+New task lines: 400 UTF-8 bytes max.
+
 ## Local producer profile
 
 `scripts/local_environment.py` prepares the four destinations in the destination table below for

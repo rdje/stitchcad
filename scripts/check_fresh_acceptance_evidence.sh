@@ -112,6 +112,23 @@ adds_fresh_box() {
   printf '%s\n' "$bullet" | grep -qE "$3"
 }
 
+# New task text must fit the public archive's 400-byte logical line bound (D209).
+# Count bytes, including UTF-8, rather than the locale's character count. Existing
+# committed lines remain outside this staged-diff check until deliberately edited.
+added_lines_archivable() {
+  git diff --cached -U0 -- "$1" 2>/dev/null | LC_ALL=C awk -v path="$1" '
+    /^\+\+\+/ { next }
+    /^\+/ {
+      text = substr($0, 2)
+      if (length(text) > 400) {
+        printf "FRESH-ACCEPTANCE-EVIDENCE: %s adds %d-byte task line; archive limit=400\n", path, length(text) > "/dev/stderr"
+        bad = 1
+      }
+    }
+    END { exit bad ? 1 : 0 }
+  '
+}
+
 # ── ground truth: the pure verdict must discriminate, on EVERY invocation ───────────────────
 verdict_controls() {
   local spec want got misses=0
@@ -193,6 +210,11 @@ fi
 staged="$(git diff --cached --name-only --diff-filter=ACM 2>/dev/null || true)"
 [ -n "$staged" ] || { echo "FRESH-ACCEPTANCE-EVIDENCE: ok (nothing staged)"; exit 0; }
 
+leaves="$(printf '%s\n' "$staged" | grep -E '^docs/tasks/.*\.md$' | grep -vE '(^|/)TEMPLATE\.md$' || true)"
+for f in $leaves; do
+  added_lines_archivable "$f" || exit 1
+done
+
 code_staged=0
 printf '%s\n' "$staged" | grep -qE "$code_re" && code_staged=1
 [ "$code_staged" = "1" ] || { echo "FRESH-ACCEPTANCE-EVIDENCE: ok (no staged code change)"; exit 0; }
@@ -203,7 +225,6 @@ SIG="$(signature_regex "$UNIVERSAL")" || {
   exit 2
 }
 
-leaves="$(printf '%s\n' "$staged" | grep -E '^docs/tasks/.*\.md$' | grep -vE '(^|/)TEMPLATE\.md$' || true)"
 leaf_staged=0; [ -n "$leaves" ] && leaf_staged=1
 
 root_found=0; addr_found=0; reg_found=0

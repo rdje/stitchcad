@@ -50,10 +50,12 @@ coverage; .b.s owns shell/platform/raw book commands and .b.v integration. D156 
 
 ## Ordered repair groups
 
+**Ordered group acceptance:** apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a01`
   Status: `done`
   Goal: Static native bridge and copied recipe; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a01.1`
   Status: `done`
@@ -200,33 +202,29 @@ Whole retained whole0212 task and lesson: [part281](../history/stitchcad-devnote
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a13`
   Status: `done`
-  Own0213: complete scope and verification in part282.
   Goal: Origin and provenance fixtures; sources and kinds in the watched ledger.
-  Acceptance: verified; complete scope retained in part282.
+  Acceptance: part282 verified.
 
 Whole0213 verification retained in [part282](../history/stitchcad-devnotes-part282.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a14`
   Status: `done`
-  Own0214: complete scope and verification in part283.
   Goal: Literal and canonical literal libraries/fixtures; sources and kinds in the watched ledger.
-  Acceptance: verified; complete scope retained in part283.
+  Acceptance: part283 verified.
 
 Whole0214 verification retained in [part283](../history/stitchcad-devnotes-part283.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a15`
   Status: `done`
-  Own0215: complete scope and verification in part284.
   Goal: Rational library and fixtures; sources and kinds in the watched ledger.
-  Acceptance: verified; complete scope retained in part284.
+  Acceptance: part284 verified.
 
 Whole0215 verification retained in [part284](../history/stitchcad-devnotes-part284.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a16`
   Status: `done`
-  Own0216: complete scope and verification in part285.
   Goal: Arithmetic and angle libraries/fixtures; sources and kinds in the watched ledger.
-  Acceptance: verified; complete scope retained in part285.
+  Acceptance: part285 verified.
 
 Whole0216 verification retained in [part285](../history/stitchcad-devnotes-part285.md).
 
@@ -242,64 +240,85 @@ Whole0216 verification retained in [part285](../history/stitchcad-devnotes-part2
 - [x] FIX: pure provider, complete copied files/nested child destinations/two mutable originals and fresh delete/copy/read/edit/child/log checks. Capture 67 entry writes/11 children/35 writer writes; injected child failure restores both, rc=0, controls logs. Inline copied read/write split for fresh edit check.
 - [x] ADDRESSED: --real on Python 3.14/3.9 retains 57 original controls/eleven genuine assertion reds; all 73 inputs exact after each child, rc=0, target/scalar-plan-real{,39}.log. Two late-log coupling reds/greens and three actual provider-adoption reds pass0 in controls logs; assertions/functions/CASES exact.
 - [x] NO REGRESSION: census247/publication45/coverage9/language16/archive28+633/ledger11+13 pass, rc=0, target/scalar-plan-{census,publication,coverage,language,archive,ledger}.log. Focused scope only; original numerical meaning/product frontier unchanged.
-- [x] LOCKSTEP: original scalar anchor routes full literal-annex contract; book/live/runner/three ledgers/MEMORY route .a18. --continuity proves whole285/196/public reads/prior immutable/reference bytes/task graph exact on both Python versions, rc=0, target/scalar-plan-continuity{,39}.log. Caps/grammar/400 unchanged; promotion: declined (existing complete copied/mutable/restore rules). Commit STITCHCAD-G1-0217.
+- [x] LOCKSTEP: original scalar anchor routes full literal-annex contract; book/live/runner/three ledgers/MEMORY route .a18.
+  --continuity proves whole285/196/public reads/prior immutable/reference bytes/task graph exact on both Python versions, rc=0, target/scalar-plan-continuity{,39}.log. Caps/grammar/400 unchanged; promotion: declined (existing complete copied/mutable/restore rules). Commit STITCHCAD-G1-0217.
 
   Final staged gate13 green, rc=0, target/scalar-plan-staged-gate.log.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a18`
-  Status: `pending`
+  Status: `active`
+  Own0219: signed-angle pair/provider/controls; whole0217/oldest ledgers retention; book/census/live sync.
   Goal: Signed angle fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a18.r`
+  Status: `done`
+  Goal: STITCHCAD-G1-0218 repairs D209 receipt archival width; preserves full text/shared scopes and guards new staged lines before parent0219.
+  Acceptance: exact original receipt reconstruction, actual400/401-byte reader/gate controls, fixed limits and focused lockstep.
+
+- [x] REPRODUCE / ISSUE: original414-byte receipt refuses archive1; old gate admits it. receipt_retention_contract.py, rc=0.
+- [x] ROOT CAUSE: receipt_retention_contract.py exposes missing width/four old admissions/eight boundary verdicts, rc=0.
+- [x] FIX: receipt_retention_contract.py proves exact fold/shared scopes; staged400-byte guard; rc=0.
+- [x] ADDRESSED: receipt_retention_contract.py on3.9/3.14 passes ASCII/UTF-8/doc-only bounds, rc=0; D209 sealed131.
+- [x] NO REGRESSION: census248/publication45/coverage9/archive28+635/ledger11+13 pass, rc=0, target/receipt-retention-*.log.
+- [x] LOCKSTEP: receipt_retention_contract.py:12open196sealed/no overlap, rc=0; book/doctrine/live/runner/ledgers/CH197 aligned. Promotion: declined; limits fixed. Commit0218.
+
+  Final staged gate13 green, rc=0, target/receipt-retention-staged-gate.log.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a18.s`
+  Status: `pending`
+  Goal: STITCHCAD-G1-0219 signed-angle pair/provider/controls after .r receipt repair.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a19`
   Status: `pending`
   Goal: Recipe byte and statement/reference libraries; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a20`
   Status: `pending`
   Goal: Expression and reduction reference libraries; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a21`
   Status: `pending`
   Goal: Input and whole phase reference libraries; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a22`
   Status: `pending`
   Goal: Cleanup entry and fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23`
   Status: `pending`
   Goal: Publication and ledger fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a24`
   Status: `pending`
   Goal: Map and handoff fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25`
   Status: `pending`
   Goal: Archive reader and fixtures; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a26`
   Status: `pending`
   Goal: Historical archive capture2/3; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a27`
   Status: `pending`
   Goal: Historical archive capture4/5; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a28`
   Status: `pending`
   Goal: Historical archive capture6; sources and kinds in the watched ledger.
-  Acceptance: apply the public-boundary/effect/borrowed-root plan above; actual captures/faults/focused consumer and exact restoration before committing this group.
+  Acceptance: ordered group acceptance above.
 
 ## Ordered native file-destination repairs
 

@@ -3,6 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-06 UTC)_ — D209 receipt width
+
+A 414-byte committed receipt cannot enter the 400-byte archive. Whitespace-only folding reconstructs
+the complete original exactly. The fresh acceptance gate now checks added task lines in UTF-8 bytes;
+ASCII/Unicode boundary and multiline controls pass. D209 is sealed in part131; limits stay fixed.
+Promotion declined: existing bounded whole-retention rule, now checked before commit.
+
 ## _(2026-10-06 UTC)_ — complete scalar fixture plans
 
 Leaf .a17 preserves all 57 Fraction/domain controls and eleven faults. A pure provider walks

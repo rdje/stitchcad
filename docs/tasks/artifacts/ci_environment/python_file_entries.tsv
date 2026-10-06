@@ -26,6 +26,7 @@ docs/tasks/artifacts/ci_environment/python_recipe_fixture_contract.py	profile	G1
 docs/tasks/artifacts/ci_environment/python_scalar_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_static_loader_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_structure_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/ci_environment/receipt_retention_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18.r
 docs/tasks/artifacts/ease/ease_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n03.1
 docs/tasks/artifacts/ease/ease_set_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n03.2
 docs/tasks/artifacts/formula_language/inline_context_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a09
@@ -105,8 +106,8 @@ docs/tasks/artifacts/formula_structure/scalar_contract.py	output	G1-SLICE.5b.4c.
 docs/tasks/artifacts/formula_structure/scalar_fixture.py	output	G1-SLICE.5b.4c.h2.b.p.o.a17
 docs/tasks/artifacts/formula_structure/scalar_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a17
 docs/tasks/artifacts/formula_structure/semantic_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n05.2
-docs/tasks/artifacts/formula_structure/signed_angle_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18
-docs/tasks/artifacts/formula_structure/signed_angle_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18
+docs/tasks/artifacts/formula_structure/signed_angle_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18.s
+docs/tasks/artifacts/formula_structure/signed_angle_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a18.s
 docs/tasks/artifacts/formula_structure/statement_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n06.2
 docs/tasks/artifacts/formula_structure/statement_owner_contract.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n13.2
 docs/tasks/artifacts/formula_structure/statement_reference.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a19

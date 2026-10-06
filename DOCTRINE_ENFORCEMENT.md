@@ -36,6 +36,9 @@ every human, identically.
 | `KNOWLEDGE-MAP` | the derived Knowledge Map is in sync (if the subsystem exists) | `knowledge-map/scripts/check_knowledge_map.sh` |
 | `PROJECT-SPECIFIC` | this project's own doctrines | `scripts/check_doctrines.project.sh` |
 
+New staged task text is limited to 400 UTF-8 bytes per physical line by the fresh-evidence check;
+this matches the public archive boundary. Wrap long bullets with indented continuations (D209).
+
 The project slot currently registers four: `FRESH-ACCEPTANCE-EVIDENCE` (a staged code change adds its own
 ticked, evidence-backed acceptance boxes), `LIVE-DOC-SIZE` (every live document is classified and inside its
 bounds) and `TABLE-CODE-PIPE` (no raw pipe inside a code span in a staged table row — a renderer splits the
