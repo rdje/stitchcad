@@ -112,9 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
-## STITCHCAD-G1-0226 — ledger mutation authority
+## STITCHCAD-G1-0227 — copied publication fixture authority
 
-.a23.2: complete mutation/file/child/restoration plans; original four pointer faults.
+.a23.3.1: complete copied fixture/mutation input and file plans; pure checker APIs preserved.
+Recovered interrupted2026-10-06 work on2026-10-08; independent controls and original45 publication cases pass.
+
+| [206](docs/history/stitchcad-changelog-part206.md) | whole0226 | sealed |
 
 | [205](docs/history/stitchcad-changelog-part205.md) | whole0225 | sealed |
 

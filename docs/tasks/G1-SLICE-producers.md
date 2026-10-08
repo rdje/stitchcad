@@ -300,43 +300,93 @@ Whole0225 task/lesson retained in [part296](../history/stitchcad-devnotes-part29
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.2`
   Status: `done`
-  Goal: Ledger pointer mutation complete mutable-source/file/child/restoration plans; original four actual reds.
-  Paths: docs/tasks/artifacts/changelog/ledger_pointer_mutations.py;docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py
-  Acceptance: complete public contract review and .1 committed before exclusive source faults; exact originals restored,
-  independent current assertion evidence, prepared stores and focused gates before commit.
+  Goal: Ledger mutation guards/D216 verified; whole0226 scope/acceptance retained298.
+  Acceptance: original four native reds/restored13/exact sources and focused gates pass.
 
-  Own0226: whole prior scope/lesson/ledger retention before fixed-cap growth.
-
-  Own: full53 mutation/148 contract/shell/helper/reader/profile/book reviewed; resolve all four faults/files.
-  Capture mutable restoration and child/env/classifier evidence without native project faults first.
-  Retention calibration: unverified297 draft rejected401/404-byte old receipts; two exact whitespace folds
-  rebuild the whole source. Public296/205/297 reads exact before retirement; prior archives unchanged.
-
-  Calibration: callback baseline-source reads must use the saved reader; ancestor frames otherwise
-  misclassify control reads as producer effects. First filename-text fault is the short-label catalog case;
-  raw link filenames still match. Native actual logs confirm the independent expected case mapping.
-  Own D216 actual original classifier admits four unrelated assertions; --before rc=0,
-  target/ledger-mutation-before.log. Exact expected case/site/tuple evidence before native signoff.
-
-
-- [x] REPRODUCE / ISSUE: actual39861d1 classifier reports four unrelated assertion responses as pointer reds; nine controlled dispatches/source restoration pass, rc=0, target/ledger-mutation-before.log. Whole D216 authored report/verified closure retained135; no real project source fault in reproduction.
-- [x] ROOT CAUSE: status/AssertionError/filename tokens lacked actual site/case/verdict. Six site/case/polarity/shape/verdict/family refusals and classifier omission red pass on3.9/3.14, rc=0, target/ledger-mutation-controls{,39}.log; original expected native assertion tuples independently confirmed.
-- [x] FIX: seven sources/all backing inputs/two mutable sources/one workspace/four logs before effects; fresh writes/children/logs/restoration/reads and prepared stores. Capture27 plans/15 effect calls/9 children, ten omission reds and original complete AST pass, rc=0, controls logs; callback-reader calibration recorded.
-- [x] ADDRESSED: two interrupted restorations/profile alias/thirteen physical CLI refusals pass both versions, rc=0, controls logs. Exclusive four current named-site verdict reds/restored native13/all core+archive bytes/zero contract residue pass, rc=0, target/ledger-mutation-real{,39}.log; .a23.1 remains unchanged.
-
-
-- [x] NO REGRESSION: census257/316/effect73paths33groups/file148paths71owners37native, publication45/66chapters/67API, coverage9, archive28+659CLI/639reads and ledger11+13 pass, rc=0, target/ledger-mutation-{census-contract,publication,coverage,archive,ledger}.log; receipt12open203sealed/no overlap rc=0.
-- [x] LOCKSTEP: whole296/205/297 committed intervals/two exact folds/135 authored repair/public reads/prior archives/task graph exact on3.9/3.14, rc=0, target/ledger-mutation-continuity{,39}.log. Book/live/runner/ledgers/index/G1/MEMORY route.a23.3. Promotion declined: existing authority/restoration rules; fixed caps/400 cadence unchanged.
-
-Staged doctrine13 green, rc=0, target/ledger-mutation-staged-gate.log; all results consumed. Commit0226.
+Whole0226 task/lesson retained in [part298](../history/stitchcad-devnotes-part298.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: Publication checker/build/copied fixtures with complete source/output/borrowed-root plans; original45 controls.
   Paths: docs/tasks/artifacts/book_publication/book_publication.py
   Acceptance: preserve pure borrowed checks and actual builder/fixture argv/refusal/rendering contracts; all inputs and
   dynamic output files before effects. Review published docs/book/book destination and its shell/config owner .b.s;
   no unilateral migration of the public build destination. Actual captures/omissions/physical/real proof and gates.
+
+  Split0227 before edits: copied fixture/mutation authority .1, then actual builder/main .2.
+  Pure check/rows/formula scope must remain side-effect-free. Existing public build destination stays docs/book/book.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.3.1`
+  Status: `done`
+  Goal: complete copied publication fixture/replace/mutate input and file authority; preserve borrowed pure checks.
+  Paths: docs/tasks/artifacts/book_publication/book_publication.py;docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py
+  Own0227: full420-line module/status map/public book config/renderer contracts reviewed; bounded producer split.
+  Own whole0226 task/lesson/ledger retention before fixed-cap growth. Resolve copied sources/output populations,
+  every mutation branch and helper loader before effects; actual captures/omissions/physical/borrowed checks.
+  Own recovery2026-10-08: finish interrupted controls, register their watched inventory/runner, sync book/live
+  state and commit .1 before .2. Required overdue cleanup follows as a separate leaf before final handoff.
+  Ledger .1 owns the new output-producing contract; .2 retains the shared publication module's overall
+  producer signoff. Both subleaves own their declared methods; no complete-module runtime approval in .1.
+  Recovery containment: size checker measured task aggregate1500496B > fixed1500000B. Own whole f5f13dc
+  namespace/declaration scopes48218–53415 retention299/public-read verification before their projection;
+  keep all eight canonical headers/status/native Paths. Leave room for required cleanup, without cap changes.
+  Acceptance: pure APIs/original copier and mutations/45 public controls preserved; fixture sources immutable,
+  complete file/mutable/child-store authority and focused book/live/ledger/continuity gates. Builder/main remains .2.
+
+  Progress: initial guarded copied API draft45 native controls pass, rc=0,
+  target/publication-fixture-draft-real.log (before final copied-set/relative-path normalization refinements).
+  Full initial population then fresh selected guards preserve copytree creation order and bound plan cost.
+  Copied data is distinct from loader sources even if a map names a core file. Relative paths must follow actual
+  CWD for both metadata and effects; selected source/output paths are now absolute at runtime, never persisted.
+  Source subtree traversal is frozen before copy; status rows are reused after the guarded initial read.
+  Control file created: original unowned-config replace reaches trapped write/source exact; first full copied
+  capture passes, rc=0, target/publication-fixture-controls.log. Remaining mutation captures/omissions/physical,
+  borrowed pure API/whole AST/current final native/continuity gates required. No background job remains.
+
+  Recovered2026-10-08 after machine/session crash: disk diff and committed pointer identify this leaf;
+  OS-visible check_handoff.sh --idle-cua prints handoff: OK, rc=0. Initial progress above is historical.
+  Complete current controls now pass on Python3.9.6/3.14.7; no unfinished .2 edits included.
+
+- [x] REPRODUCE / ISSUE: python_publication_fixture_contract.py --before loads actual f5f13dc
+  replace and traps its unauthorized tracked-config write; source bytes exact, rc=0,
+  target/publication-fixture-controls{,39}.log. No tracked input is mutated in the reproduction.
+- [x] ROOT CAUSE: actual copier/replace/mutate lacked complete source/output/mutable authority.
+  python_publication_fixture_contract.py captures317 plans/315 direct effects/205 copied files,
+  all40 branches and relative-root dispatch; eleven actual guard omissions yield assertion reds,
+  rc=0, target/publication-fixture-controls{,39}.log. Independent effect interception is the oracle.
+- [x] FIX: frozen full copied population before activation, selected fresh effect plans and mutation
+  file/mutable plans before writes/appends/deletes. Profile loading checks local type/device/alias/Git
+  boundary. python_publication_fixture_contract.py physical12/pure APIs/whole original AST pass,
+  rc=0, target/publication-fixture-controls{,39}.log; caller stores/source bytes remain exact.
+- [x] ADDRESSED: python_publication_fixture_contract.py --real through local_environment.py runs
+  original45 current controls/66 chapters/67 API rows, actual malformed-generic warning refusal and
+  repaired rendering, rc=0, target/publication-fixture-real{,39}.log. Source bytes exact; actual
+  builder/main output/lifecycle authority remains .2, not approved by this fixture proof.
+- [x] NO REGRESSION: producer_census_contract.py derives258 paths/317 boundaries/effect74paths34groups/
+  file149paths72owners37native, rc=0, target/publication-fixture-census.log. Tree coverage9 and receipt
+  controls/12open203sealed pass, rc=0, coverage/receipt logs. Archive/ledger final results recorded below.
+- [x] LOCKSTEP: python_publication_fixture_contract.py --continuity verifies whole0226 task/lesson/
+  ledger298/206 exact intervals/digests/public reads/prior archives/declared task split, rc=0, controls logs.
+  Whole f5f13dc5197B namespace/declaration scope retained299; public read exact,2302B projection preserves
+  eight headers/status/native Paths, saving2895B. Fixed aggregate ceiling remains1500000B.
+  Book/live/runner/inventory/index/G1/MEMORY updated; .1 contract output/.2 shared-module signoff explicit.
+  promotion: declined (existing authority/pure-API/whole-record rules). Fixed caps/400 cadence preserved.
+
+  Commit0227; required overdue cleanup next, then .a23.3.2. All final gate/results consumed before commit.
+  Final archive28+662CLI/642reads and ledger852real/11arms/13pointers pass, rc=0,
+  target/publication-fixture-{archive,ledger}.log. Initial3.9 real snapshot refused after author task/docs
+  edits overlapped its input hashes; excluded. Final native/continuity runs use frozen docs.
+  One simultaneous copy capture refused a transient missing rendered source during mdBook rebuilding;
+  excluded. Renderer and copied-fixture checks now run sequentially, preserving their frozen populations.
+  All staged doctrines green, rc=0, target/publication-fixture-staged-gate.log; hook repeats final state.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.3.2`
+  Status: `pending`
+  Goal: actual publication builder/main/temporary lifecycle and public output-tree authority, after .1 committed.
+  Paths: docs/tasks/artifacts/book_publication/book_publication.py
+  Acceptance: preserve original mdbook argv/warnings/45 cases/pure APIs; resolve full public docs/book/book
+  input/output tree before effects, prepared builder stores and copied temporary lifecycles; coordinate .b.s
+  shell/config interface without unilateral output migration. Actual controls/real renderer/continuity gates.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a24`
   Status: `pending`
@@ -626,72 +676,49 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09`
   Status: `done`
-  Goal: complete file-destination plans for namespace/ordered names; retain existing source guards, prepared stores and public consumer behavior.
+  Goal: Namespace/declaration scope and proof retained299.
   Paths: docs/tasks/artifacts/formula_structure/namespace_mutations.py;docs/tasks/artifacts/formula_structure/ordered_name_mutations.py
-  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
+  Acceptance: whole committed scope verified in [part299](../history/stitchcad-devnotes-part299.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h`
   Status: `done`
-  Goal: Whole completed scope and original retrieval records retained in part292.
-  Acceptance: exact committed interval/public read verified.
-
-Whole record retained in [part292](../history/stitchcad-devnotes-part292.md).
+  Goal: Namespace/declaration scope and proof retained299.
+  Acceptance: whole committed scope verified in [part299](../history/stitchcad-devnotes-part299.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.h.v`
   Status: `done`
-  Goal: after .h commit, actual newest committed window8 catalog prose refusal in a guarded same-volume copy; full public CLI/current reads before namespace.
-  Acceptance: baseline and copied inventory green/exact retention refusal/root-HEAD-controls unchanged/no tracked sealed writes; consume all results.
-
-Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#window8-post-recording-verification); canonical ownership remains above.
+  Goal: Namespace/declaration scope and proof retained299.
+  Acceptance: whole committed scope verified in [part299](../history/stitchcad-devnotes-part299.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.1`
   Status: `done`
-  Goal: namespace complete mode/input/file/mutable plans/current assertion evidence and real original consumer replay, after relevant contract/book review and derived task-record containment prerequisite.
+  Goal: Namespace/declaration scope and proof retained299.
   Paths: docs/tasks/artifacts/formula_structure/namespace_mutations.py
-  Acceptance: retain original cases/full argv/source restoration/current artifact; independent omissions/physical refusals/current failed-body proof; D156 remains open outside this entry.
-Whole scope retained in [part276](../history/stitchcad-devnotes-part276.md).
-
-
-Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#namespace-plan-verification); canonical ownership remains above.
+  Acceptance: whole committed scope verified in [part299](../history/stitchcad-devnotes-part299.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09.2`
   Status: `done`
-  Goal: ordered-name complete mode/input/file/mutable plans/current assertion evidence and real original consumer replay after relevant contract/book review.
+  Goal: Namespace/declaration scope and proof retained299.
   Paths: docs/tasks/artifacts/formula_structure/ordered_name_mutations.py
-  Acceptance: retain original cases/full argv/source restoration/current artifact; independent omissions/physical refusals/current failed-body proof; D156 remains open outside this entry.
-Whole scope retained in [part276](../history/stitchcad-devnotes-part276.md).
-
-Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#ordered-name-verification); canonical ownership remains above.
+  Acceptance: whole committed scope verified in [part299](../history/stitchcad-devnotes-part299.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n10`
   Status: `done`
-  Goal: complete file-destination plans for declaration/exact name; retain existing source guards, prepared stores and public consumer behavior.
+  Goal: Namespace/declaration scope and proof retained299.
   Paths: docs/tasks/artifacts/formula_structure/declaration_mutations.py;docs/tasks/artifacts/formula_structure/name_read_mutations.py
-  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
-
-STITCHCAD-G1-0184 owns .n10 split and two native TSV terminal bindings; whole185a5aa
-.n09.2 receipt retained byte-exactly in existing G1-SLICE-retention-proof.md before growth;
-canonical header/prefix retained. Own live/book/shared controls, guarded target/declaration-plan-*.
+  Acceptance: whole committed scope verified in [part299](../history/stitchcad-devnotes-part299.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n10.1`
   Status: `done`
-  Goal: STITCHCAD-G1-0184 declaration complete mode/input/file/mutable plans and real native/negative-construction replay.
+  Goal: Namespace/declaration scope and proof retained299.
   Paths: docs/tasks/artifacts/formula_structure/declaration_mutations.py
-  Acceptance: preserve original19 CASES/count2 widening/full7 native/full5 doctest argv/restoration; two inputs/22 ordinary logs/one mutable/class0; independent omissions and physical refusals; every actual failed body/current macro/frozen inputs/current artifacts.
-
-Whole original completed scopes retained in [part264](../history/window10.md#stitchcad-devnotes-part264md).
-
-Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#declaration-complete-verification); canonical ownership remains above.
+  Acceptance: whole committed scope verified in [part299](../history/stitchcad-devnotes-part299.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n10.2`
   Status: `done`
-  Goal: exact-name complete mode/input/file/mutable plans/current assertions and original9 real faults/full7 restoration.
+  Goal: Namespace/declaration scope and proof retained299.
   Paths: docs/tasks/artifacts/formula_structure/name_read_mutations.py
-  Acceptance: review full source/public tests/book before code; retain original cases/argv/source restoration/current artifact; independent omissions/physical refusals/every failed body; D156 remains outside this entry.
-
-Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#exact-name-complete-verification); canonical ownership remains above.
-
-Whole original completed namespace/declaration scopes retained in [part259](../history/window10.md#stitchcad-devnotes-part259md).
+  Acceptance: whole committed scope verified in [part299](../history/stitchcad-devnotes-part299.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n11`
   Status: `done`
@@ -794,6 +821,15 @@ Whole original completed n14 scope retained in [part254](../history/window10.md#
   Acceptance: exact committed interval/public read verified.
 
 Whole record retained in [part292](../history/stitchcad-devnotes-part292.md).
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup3`
+  Status: `pending`
+  Goal: required overdue24h cleanup on recovery2026-10-08, after0227 committed and before .a23.3.2.
+  Own: docs/ARTIFACT_CLEANUP.md; target/artifact_cleanup_audit/recovery-20261008/ and ignored candidates.
+  Acceptance: preserve0227 logs in protected audit storage before deletion; inspect frozen cleanup plan,
+  apply with OS-visible idle proof; immediately verify selected absence/tracked bytes/HEAD/producer exact
+  without activation, then regenerate/check native/WASM/book and focused controls. Record latest cleanup,
+  commit clean state, no background work at final handoff. Preserve stores/deps/uncertain fixtures.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h10.v`
   Status: `done`

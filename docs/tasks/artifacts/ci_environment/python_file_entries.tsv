@@ -1,7 +1,8 @@
 path	kind	leaf
 docs/tasks/artifacts/artifact_cleanup/cleanup.py	output	G1-SLICE.5b.4c.h2.b.p.o.a22.1
 docs/tasks/artifacts/artifact_cleanup/cleanup_probes.py	output	G1-SLICE.5b.4c.h2.b.p.o.a22.2
-docs/tasks/artifacts/book_publication/book_publication.py	output	G1-SLICE.5b.4c.h2.b.p.o.a23.3
+docs/tasks/artifacts/book_publication/book_publication.py	output	G1-SLICE.5b.4c.h2.b.p.o.a23.3.2
+docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a23.3.1
 docs/tasks/artifacts/changelog/changelog_pointers.py	reference	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/changelog/ledger_pointer_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a23.1
 docs/tasks/artifacts/changelog/ledger_pointer_mutations.py	output	G1-SLICE.5b.4c.h2.b.p.o.a23.2

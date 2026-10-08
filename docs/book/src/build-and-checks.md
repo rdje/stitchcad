@@ -4,13 +4,10 @@ New task lines: 400 UTF-8 bytes max.
 
 ## Local producer profile
 
-`scripts/local_environment.py` prepares the four destinations in the destination table below for
-the Make targets listed below. The doctrine driver
-(including its hook invocation) and G0 exit review also prepare their children before running checks.
-Use `scripts/run_make.sh <target>` to prepare the profile before Make and platform tool dispatch
-start. Direct Make recipes also prepare their children, but start after the host dispatcher.
-The doctrine driver and review derive their roots from their script locations before invoking Git.
-Paths derive from the current root, so relocating the repository preserves the profile.
+`scripts/local_environment.py` prepares the four destinations below for the listed Make targets.
+Use `scripts/run_make.sh <target>` before Make/platform dispatch. Direct Make recipes prepare
+children after host dispatch; doctrine driver/hooks and G0 review also prepare their checks.
+Driver/review roots derive from script locations before Git. Root-relative paths survive relocation.
 Unset/empty values and ambient absolute paths outside the repository select local defaults.
 Overrides may name directories under `target/`, relative to the root or absolute at runtime.
 Every existing component must be a directory on the repository volume, without symlinks or Git
@@ -130,13 +127,15 @@ the remaining direct entries and output destinations are repaired and verified. 
 
 ## Direct Python producers
 
-The size-membership mutation entry now prepares the shared profile before its first owned output
-or native child. It validates every declared output directory and source file before creating any
-stores or changing the environment. Outputs must remain under target/; sources must already be
-regular files within the current workspace. Parent escapes, symlinks, Git boundaries and foreign
-volumes refuse. Invalid path types or control bytes also refuse. An invalid entry prints the
-local-environment refusal and exits2 before invoking a child. Named toolchains and unrelated
-environment values are preserved; paths still derive from the current repository root.
+Size-membership prepares the profile before outputs/children, validating sources/directories
+before store creation or environment changes. Outputs stay under target/; sources are local regular
+files. Parent escapes, symlinks, Git boundaries, foreign volumes, invalid types/control bytes refuse
+with local-environment exit2 before children. Named toolchains/unrelated variables remain;
+paths derive from the current root.
+
+Publication fixtures plan/recheck inputs and outputs;40 mutations declare mutable files. Caller
+stores/source bytes stay exact; check/rows/formula_scope stay pure. Watched controls/public45 cases
+pass. Builder/main and docs/book/book authority remain .a23.3.2; D156 stays open.
 
 Size membership additionally declares all seven numbered mutation logs and restored.log before
 reading inputs. Its implementation is an explicit mutable source; its current contract test is a

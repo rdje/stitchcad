@@ -11,6 +11,7 @@ from html.parser import HTMLParser
 import os
 from pathlib import Path
 import re
+import runpy
 import shutil
 import subprocess
 import tempfile
@@ -83,6 +84,127 @@ class Page(HTMLParser):
 def require(condition, code, detail):
     if not condition:
         raise PublicationError(f"{code}: {detail}")
+
+
+PROFILE_SOURCE = ROOT / "scripts/local_environment.py"
+
+
+def load_profile():
+    parent = PROFILE_SOURCE.parent
+    require(not parent.is_symlink() and parent.is_dir() and parent.stat().st_dev == ROOT.stat().st_dev and
+            not ((parent / ".git").exists() or (parent / ".git").is_symlink()) and
+            not PROFILE_SOURCE.is_symlink() and PROFILE_SOURCE.is_file() and
+            PROFILE_SOURCE.stat().st_dev == ROOT.stat().st_dev,
+            "FIXTURE_AUTHORITY", "unsafe publication profile source")
+    return runpy.run_path(str(PROFILE_SOURCE))
+
+
+PROFILE = load_profile()
+CORE = (Path(__file__).absolute(), PROFILE_SOURCE)
+
+
+def source_tree(path):
+    """Resolve a finite input tree without following aliases or foreign Git directories."""
+    folders, files = [Path(path).absolute()], []
+    for folder in folders:
+        PROFILE["directory"](ROOT, PROFILE["producer_path"](ROOT, folder))
+        for child in sorted(folder.iterdir()):
+            PROFILE["require"](not child.is_symlink(), "symlink publication input")
+            (folders if child.is_dir() else files).append(child)
+    return tuple(folders), tuple(files)
+
+
+def fixture_plan(root, destination):
+    """Snapshot the full copied population before the first destination effect."""
+    try:
+        root, destination = Path(root).absolute(), Path(destination).absolute()
+        PROFILE["plan_producer"](ROOT, sources=(*CORE, root / MAP))
+        current_rows = rows(root)
+        require(all(len(row) == 6 for row in current_rows), "FIXTURE_AUTHORITY", "invalid copied status row")
+        source_dirs, source_files = source_tree(root / SOURCE)
+        _, rendered = source_tree(root / HTML)
+        PROFILE["directory"](ROOT, PROFILE["producer_path"](ROOT, root / "docs/tasks"))
+        copied = {root / "docs/book/book.toml", *source_files,
+                  *(root / "docs/tasks").glob("*.md"), *(file for file in rendered if file.suffix == ".html"),
+                  root / "ROADMAP.md", root / MAP, root / "crates/sc-core/tests/formula_statement_contract.rs",
+                  *(root / row[2] for row in current_rows)}
+        for file in copied:
+            PROFILE["producer_path"](root, file)
+        inputs = {*CORE, *copied}
+        outputs = {destination / file.relative_to(root) for file in copied}
+        directories = {destination, destination / "docs/book", destination / "docs/tasks", destination / HTML,
+                       *(destination / SOURCE / folder.relative_to(root / SOURCE) for folder in source_dirs)}
+        for output in outputs:
+            parent = output.parent
+            while parent.is_relative_to(destination):
+                directories.add(parent)
+                if parent == destination:
+                    break
+                parent = parent.parent
+        require(not any(file.is_relative_to(destination) for file in inputs),
+                "FIXTURE_AUTHORITY", "copied destination overlaps inputs")
+        require(not destination.is_relative_to(root / SOURCE) and not destination.is_relative_to(root / HTML),
+                "FIXTURE_AUTHORITY", "copied destination is inside input traversal")
+        PROFILE["plan_producer"](ROOT, sources=tuple(sorted(inputs)), directories=tuple(sorted(directories)),
+                                 output_files=tuple(sorted(outputs)))
+        return dict(inputs=inputs, outputs=outputs, directories=directories, root=root,
+                    destination=destination, source_files=source_files, source_dirs=source_dirs, rows=current_rows)
+    except (PROFILE["Refusal"], OSError) as error:
+        raise PublicationError("FIXTURE_AUTHORITY: " + str(error)) from None
+
+
+def fixture_effect(plan, *, sources=(), files=(), directories=(), activate=False):
+    """Recheck the selected effect against the complete frozen copy population."""
+    try:
+        PROFILE["require"](set(sources) <= plan["inputs"] and set(files) <= plan["outputs"] and
+                           set(directories) <= plan["directories"], "publication effect outside copied population")
+        if activate:
+            sources, files, directories = plan["inputs"], plan["outputs"], plan["directories"]
+        PROFILE["plan_producer"](ROOT, sources=tuple(sorted({*CORE, plan["root"] / MAP, *sources})),
+                                 directories=tuple(sorted(directories)), output_files=tuple(sorted(files)))
+        environment = PROFILE["environment_for"](ROOT, os.environ, create=activate)
+        if activate:
+            os.environ.update(environment)
+    except (PROFILE["Refusal"], OSError) as error:
+        raise PublicationError("FIXTURE_AUTHORITY: " + str(error)) from None
+
+
+def mutation_plan(file, *, read=True, activate=False):
+    try:
+        file = Path(file).absolute()
+        sources = (*CORE, file) if read or file.exists() else CORE
+        mutable = (file,) if file in sources else ()
+        PROFILE["plan_producer"](ROOT, sources=sources, mutable_sources=mutable, output_files=(file,))
+        environment = PROFILE["environment_for"](ROOT, os.environ, create=activate)
+        if activate:
+            os.environ.update(environment)
+    except (PROFILE["Refusal"], OSError) as error:
+        raise PublicationError("FIXTURE_AUTHORITY: " + str(error)) from None
+
+
+def mutation_target(root, name):
+    if name.startswith("retired formula claim:"):
+        chapter, _ = name.removeprefix("retired formula claim:").split(":")
+        return root / SOURCE / "annexes" / f"formula-{chapter}.md"
+    if name.startswith("missing formula method:"):
+        file, _ = name.removeprefix("missing formula method:").split(":")
+        return root / "crates/sc-core/src/recipe" / file
+    paths = {
+        "missing formula proof boundary": SOURCE / "annexes/formula-runtime-validation.md",
+        "stale statement contract count": SOURCE / "annexes/formula-statements.md",
+        "missing statement contract marker": Path("crates/sc-core/tests/formula_statement_contract.rs"),
+        "unregistered chapter": SOURCE / "unregistered.md",
+        "missing indexed chapter": SOURCE / "topic-index.md",
+        "missing source target": SOURCE / "introduction.md",
+        "missing source anchor": SOURCE / "introduction.md",
+        "missing rendered chapter": HTML / "learn/design-to-pattern.html",
+        "missing rendered anchor": HTML / "introduction.html",
+        "stale G0 status": SOURCE / "introduction.md",
+        "missing public MTM API": Path("crates/sc-measure/src/mtm_chart.rs"),
+    }
+    if name not in paths:
+        raise PublicationError(f"unknown fixture mutation: {name}")
+    return root / paths[name]
 
 
 def build(root):
@@ -225,31 +347,50 @@ def check(root):
 
 
 def fixture(root, destination):
+    root, destination = Path(root).absolute(), Path(destination).absolute()
+    plan = fixture_plan(root, destination)
+    fixture_effect(plan, directories=(destination / "docs/book",), activate=True)
     (destination / "docs/book").mkdir(parents=True)
+    fixture_effect(plan, sources=(root / "docs/book/book.toml",), files=(destination / "docs/book/book.toml",))
     shutil.copy2(root / "docs/book/book.toml", destination / "docs/book/book.toml")
     for directory in (SOURCE, Path("docs/tasks")):
         # Artifacts are copied separately; evidence/tree Markdown is sufficient for ownership lookup.
         if directory == Path("docs/tasks"):
             target = destination / directory
+            fixture_effect(plan, directories=(target,))
             target.mkdir(parents=True)
             for file in (root / directory).glob("*.md"):
+                fixture_effect(plan, sources=(file,), files=(target / file.name,))
                 shutil.copy2(file, target / file.name)
         else:
+            current_dirs, current_files = source_tree(root / directory)
+            require((current_dirs, current_files) == (plan["source_dirs"], plan["source_files"]),
+                    "FIXTURE_AUTHORITY", "copied input traversal changed")
+            fixture_effect(plan, sources=current_files,
+                           files=tuple(destination / directory / file.relative_to(root / directory) for file in current_files),
+                           directories=tuple(destination / directory / folder.relative_to(root / directory) for folder in current_dirs))
             shutil.copytree(root / directory, destination / directory)
+    fixture_effect(plan, directories=(destination / HTML,))
     (destination / HTML).mkdir(parents=True)
     for file in (root / HTML).rglob("*.html"):
         target = destination / HTML / file.relative_to(root / HTML)
+        fixture_effect(plan, directories=(target.parent,))
         target.parent.mkdir(parents=True, exist_ok=True)
+        fixture_effect(plan, sources=(file,), files=(target,))
         shutil.copy2(file, target)
-    for file in [Path("ROADMAP.md"), MAP, Path("crates/sc-core/tests/formula_statement_contract.rs")] + [Path(row[2]) for row in rows(root)]:
+    for file in [Path("ROADMAP.md"), MAP, Path("crates/sc-core/tests/formula_statement_contract.rs")] + [Path(row[2]) for row in plan["rows"]]:
         target = destination / file
+        fixture_effect(plan, directories=(target.parent,))
         target.parent.mkdir(parents=True, exist_ok=True)
+        fixture_effect(plan, sources=(root / file,), files=(target,))
         shutil.copy2(root / file, target)
 
 
 def replace(file, old, new):
+    mutation_plan(file)
     text = file.read_text()
     require(text.count(old) == 1, "FIXTURE_ANCHOR", old)
+    mutation_plan(file, activate=True)
     file.write_text(text.replace(old, new, 1))
 
 
@@ -264,12 +405,15 @@ def currency_refusal(checker, root):
 
 
 def mutate(root, name):
+    selected = mutation_target(root, name)
+    mutation_plan(selected, read=name != "unregistered chapter")
     source = root / SOURCE
     if name.startswith("retired formula claim:"):
         chapter, ordinal = name.removeprefix("retired formula claim:").split(":")
         path = source / "annexes" / f"formula-{chapter}.md"
         text = path.read_text()
         intro, rest = text.split("\n## ", 1)
+        mutation_plan(path, activate=True)
         path.write_text(intro + "\n\n" + FORMULA_SCOPE[chapter][int(ordinal)] + ".\n\n## " + rest)
     elif name.startswith("missing formula method:"):
         file, method = name.removeprefix("missing formula method:").split(":")
@@ -281,6 +425,7 @@ def mutate(root, name):
         path = source / "annexes/formula-runtime-validation.md"
         text = path.read_text()
         intro, rest = text.split("\n## ", 1)
+        mutation_plan(path, activate=True)
         path.write_text(intro.replace("formula-checked-recipes.md", "formula-recipe-inputs.md") + "\n## " + rest)
     elif name == "stale statement contract count":
         replace(source / "annexes/formula-statements.md", "10 public contracts verify", "9 public contracts verify")
@@ -288,20 +433,26 @@ def mutate(root, name):
         path = root / "crates/sc-core/tests/formula_statement_contract.rs"
         text = path.read_text()
         require("#[test]\n" in text, "FIXTURE_ANCHOR", name)
+        mutation_plan(path, activate=True)
         path.write_text(text.replace("#[test]\n", "// removed test marker\n", 1))
     elif name == "unregistered chapter":
+        mutation_plan(selected, read=False, activate=True)
         (source / "unregistered.md").write_text("# Stranded reader chapter\n")
     elif name == "missing indexed chapter":
         replace(source / "topic-index.md", "- [From an idea to a pattern](learn/design-to-pattern.md)\n", "")
     elif name == "missing source target":
+        mutation_plan(selected, activate=True)
         with (source / "introduction.md").open("a") as stream:
             stream.write("\n[Missing](missing-chapter.md)\n")
     elif name == "missing source anchor":
+        mutation_plan(selected, activate=True)
         with (source / "introduction.md").open("a") as stream:
             stream.write("\n[Missing](availability.md#absent-section)\n")
     elif name == "missing rendered chapter":
+        mutation_plan(selected, activate=True)
         (root / HTML / "learn/design-to-pattern.html").unlink()
     elif name == "missing rendered anchor":
+        mutation_plan(selected, activate=True)
         with (root / HTML / "introduction.html").open("a") as stream:
             stream.write('<a href="availability.html#absent-section">Missing</a>')
     elif name == "stale G0 status":
