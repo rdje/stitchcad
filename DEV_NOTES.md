@@ -3,10 +3,11 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-08 UTC)_ — copied publication fixture authority
+## _(2026-10-08 UTC)_ — crash recovery cleanup
 
-0227 .a23.3.1 recovered after crash; complete copied inputs/files/mutations guard40 branches with pure APIs/original45 controls preserved.
-Proof .a23.3.1; promotion declined: existing authority rules.
+0228 .f.cleanup3 owns frozen ignored-output cleanup and regeneration; proof in the leaf.
+Promotion declined: existing cleanup/continuity rules.
+Whole0227 task/lesson retained in [part300](docs/history/stitchcad-devnotes-part300.md).
 
 Whole0226 task/lesson retained in [part298](docs/history/stitchcad-devnotes-part298.md).
 

@@ -112,10 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
-## STITCHCAD-G1-0227 — copied publication fixture authority
+## STITCHCAD-G1-0228 — crash recovery cleanup
 
-.a23.3.1: complete copied fixture/mutation input and file plans; pure checker APIs preserved.
-Recovered interrupted2026-10-06 work on2026-10-08; independent controls and original45 publication cases pass.
+.f.cleanup3: required overdue cleanup; preserved recovery evidence and regenerated outputs.
+
+| [207](docs/history/stitchcad-changelog-part207.md) | whole0227 | sealed |
 
 | [206](docs/history/stitchcad-changelog-part206.md) | whole0226 | sealed |
 

@@ -4,9 +4,8 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Active G1-SLICE.5b.4c.h2.b.p.o.f.cleanup3: required overdue recovery cleanup after0227.
-- Next: preserve consumed0227 logs in protected audit storage; freeze/inspect/apply cleanup,
-  verify absence/tracked bytes before activation, then regenerate native/WASM/book and commit.
-- Publication fixture leaf .a23.3.1 is complete; .a23.3.2 builder/main follows cleanup.
-- In-flight: final0227 verification/commit; see producers sibling for exact evidence.
-- Stop at the ensuing clean, committed, OS-idle handoff checkpoint as requested2026-10-08.
+- Active G1-SLICE; next frontier G1-SLICE.5b.4c.h2.b.p.o.a23.3.2 (pending).
+- Next: review the complete builder/main/temp/public docs/book/book authority contract
+  in G1-SLICE-producers.md; coordinate shell/config owner .b.s, then implement .2.
+- In-flight uncommitted: none after the final recovery/cleanup commit; no background job.
+- Requested2026-10-08 handoff checkpoint reached. Stop here; resume when requested.
