@@ -66,6 +66,21 @@ would recreate scratch. Update the single latest cadence entry in docs/ARTIFACT_
 commit its owned task. Rebuild native/WASM/book outputs and run the appropriate controls only
 after the immediate residue proof. All roots and examples remain relocatable.
 
+### Incomplete runtime observations
+
+SPINE.23r captured a recurrence: lsof emitted descriptor4 and a name without the requested type.
+Sanitized shape/hash evidence and the independent missing-type fixture reproduce the refusal2;
+a new actual type-guard fault requires an assertion red. No unreadable handle is exempted.
+A fresh full census then passed0. That proves its own snapshot, not the refused one. The earlier
+unretained failure remains unexplained; no kernel cause or scheduling race is inferred.
+
+A revoked runtime descriptor can also appear as a name without a type even when lsof exits0.
+That observation still refuses2. Cleanup then stops before deletion and its last successful
+cadence date remains unchanged. Recover the host runtime, rerun the strict census and create a
+fresh cleanup plan if HEAD, tracked inputs or candidate contents changed during diagnosis.
+The active harness must not terminate itself or exempt unreadable handles to manufacture a
+successful handoff; commit the blocker and resume instructions before requesting host recovery.
+
 ## Verification scope
 
 Actual captures execute both mode bodies: creation, two exclusive JSON writes, process dispatch

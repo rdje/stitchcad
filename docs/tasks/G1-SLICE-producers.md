@@ -769,57 +769,10 @@ Whole record retained in [part292](../history/stitchcad-devnotes-part292.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup3`
   Status: `done`
-  Goal: required overdue24h cleanup on recovery2026-10-08, after0227 committed and before .a23.3.2.
-  Own: docs/ARTIFACT_CLEANUP.md; target/artifact_cleanup_audit/recovery-20261008/ and ignored candidates.
-  Acceptance: preserve0227 logs in protected audit storage before deletion; inspect frozen cleanup plan,
-  apply with OS-visible idle proof; immediately verify selected absence/tracked bytes/HEAD/producer exact
-  without activation, then regenerate/check native/WASM/book and focused controls. Record latest cleanup,
-  commit clean state, no background work at final handoff. Preserve stores/deps/uncertain fixtures.
-  Own whole0227 scope/lesson/ledger retention before replacing live records. Its completed receipt typed
-  ledger852 while the consumed original log says850; preserve the historical receipt, correct the live
-  projection from that output and record the correction here. No producer behavior changed.
-  Apply terminal rc=0: four ignored trees/1378 logs/1504 files/11240863B removed;1382 selections absent,
-  tracked bytes/HEAD/producer exact before activation. OS-visible embedded handoff: OK, rc=0.
-  Audit target/artifact_cleanup_audit/recovery-20261008/; fourteen copied0227 logs remain exact.
-  Preserve933 unsafe/uncertain entries and protected stores/deps; native/WASM/book regeneration passes.
+  Goal: recovery cleanup verified; complete original scope/acceptance/commit receipts retained301.
+  Acceptance: exact committed source interval and public archive read verified by cleanup4.r.
 
-- [x] REPRODUCE / ISSUE: prior cleanup2026-10-05 22:28UTC is overdue at recovery2026-10-08.
-  cleanup.py plan target/artifact_cleanup_audit/recovery-20261008 derives1382 candidates/1504files/
-  11240863B/933skips, rc=0, plan-output.txt and inspected plan.json in that protected audit.
-- [x] ROOT CAUSE: cadence/policy selects four ignored trees and1378 logs; physical aliases/Git boundaries
-  are refused. Independent full plan review verifies permitted roots/protected exclusions, rc=0.
-  cleanup.py plan and preserved skip reasons pinpoint both hard-linked incremental caches; no deletion there.
-- [x] FIX: fourteen consumed0227 logs copied byte-exactly into protected audit/evidence before cleanup.
-  Whole0227 scope/lesson/ledger retained300/207 from55613e7 exact intervals/digests/public reads; prior
-  history unchanged, rc=0, continuity-final.txt. Historical852 retained; live850 independently matches
-  protected publication-fixture-ledger.txt. No code or producer behavior changes in this leaf.
-- [x] ADDRESSED: cleanup.py apply same frozen audit terminal rc=0; four trees/1378logs/1504files removed,
-  1382 selections absent/zero residue/tracked_changefalse. Independent read-only census before activation
-  verifies tracked bytes/HEAD/producer exact and fourteen retained logs, rc=0, result.json/residue-proof.txt.
-  OS-visible embedded check_handoff.sh prints handoff: OK, rc=0; all application results consumed.
-- [x] NO REGRESSION: scripts/run_make.sh check/wasm/book terminal rc=0: fmt, strict Clippy, all native tests/
-  doctests, actual three-crate WASM and mdBook regeneration. Publication45/fixture controls/cleanup15+11reds/
-  coverage9/census258 paths and archive644 records pass, rc=0, native-check.txt/wasm-check.txt/book-build.txt/
-  publication-final.txt/fixture-final.txt/cleanup-controls.txt/coverage-final.txt/census-final.txt/archive-final.txt.
-- [x] LOCKSTEP: latest cleanup record/CH/DEV/MEMORY/index/G1 frontier route .a23.3.2; whole prior records,
-  fixed caps and400 cadence preserved. Cleanup changes no LIVE_STATUS categories; G1 remains In Progress,
-  G0 Mostly Done and later lanes Not Started. promotion: declined (existing cleanup/continuity rules).
-  Ledger/final staged doctrine/OS-idle results consumed before commit0228 and requested final stop.
-  Final ledger853 real verdicts/11 arms/13 pointers and all13 staged doctrines green, rc=0,
-  protected ledger-final.txt/staged-gate.txt. Size checker OK under unchanged bounds, rc=0, size-final.txt.
-  Final pre-commit OS-visible check_handoff.sh --idle-cua: handoff: OK, rc=0. No pending jobs or CUA work.
-
-0227 commit:55613e7; subject STITCHCAD-G1-0227 (leaf G1-SLICE.5b.4c.h2.b.p.o.a23.3.1): guard copied publication fixtures.
-0227 files: CHANGELOG.md, DEV_NOTES.md, LIVE_STATUS.md, MEMORY.md, docs/TASK_TREE.md,
-docs/book/src/build-and-checks.md, docs/tasks/G1-SLICE-producers.md, docs/tasks/G1-SLICE.md;
-docs/history/stitchcad-changelog-part206.md, stitchcad-devnotes-part298.md, stitchcad-devnotes-part299.md;
-docs/tasks/artifacts/book_publication/book_publication.py; docs/tasks/artifacts/ci_environment/
-producer_entries.tsv, python_effect_entries.tsv, python_file_entries.tsv, python_publication_fixture_contract.py,
-run_ci_environment_probes.sh. The last filenames share their immediately preceding directory.
-0228 subject: STITCHCAD-G1-0228 (leaf G1-SLICE.5b.4c.h2.b.p.o.f.cleanup3): complete crash recovery cleanup.
-0228 files: CHANGELOG.md, DEV_NOTES.md, MEMORY.md, docs/ARTIFACT_CLEANUP.md, docs/TASK_TREE.md,
-docs/tasks/G1-SLICE-producers.md, docs/tasks/G1-SLICE.md, docs/history/stitchcad-changelog-part207.md,
-docs/history/stitchcad-devnotes-part300.md. Final commit ID: git log --oneline -1.
+Whole0228 task retained in [part301](../history/stitchcad-devnotes-part301.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h10.v`
   Status: `done`
@@ -830,3 +783,52 @@ docs/history/stitchcad-devnotes-part300.md. Final commit ID: git log --oneline -
 Whole0209 task/lesson retained in [part277](../history/stitchcad-devnotes-part277.md).
 
 Whole0210 task/lesson retained in [part278](../history/stitchcad-devnotes-part278.md).
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4`
+  Status: `blocked`
+  Goal: required overdue cleanup at startup2026-10-24 before publication builder authority.
+  Own: docs/ARTIFACT_CLEANUP.md; target/artifact_cleanup_audit/startup-20261024/;
+  frozen ignored candidates and whole preceding cleanup task/lesson/ledger retention if needed.
+  Acceptance: inspect frozen plan; preserve consumed evidence and protected stores/deps;
+  apply only with OS-visible idle proof, then immediate read-only selected-residue/tracked-byte
+  census before activation. Rebuild book/native/WASM and run cleanup/publication/continuity
+  controls, record terminal results and commit per COMMIT.md before returning to .a23.3.2.
+  No policy thresholds, submodule pins or other Git repository may change.
+  Blocker D217: OS-visible lsof returns descriptor10/name(revoked) without a type in Codex
+  runtime processes. Canonical handoff refuses2 before cleanup deletion. Runtime recovery needs
+  host action; do not stop the active harness from inside itself or weaken the strict checker.
+  Resume: recover runtime, require actual handoff: OK, then create a fresh cleanup plan because
+  this documentation commit invalidates the attempted plan. Complete cleanup before .a23.3.2.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.r`
+  Status: `done`
+  Goal: STITCHCAD-G1-0229 owns startup recovery, D217 diagnosis and a committed blocked handoff.
+  Own: cleanup4 task/defect/resume/live/book records; protected startup-20261024 audit evidence.
+  Acceptance: attributed refusal, no deletion, focused checks and exact bounded retention.
+  Reviewed bootstrap/README/builder/.b.s; adopted neutral policies equal read-only references.
+  DBIQNP proposals have their own nodes; no implementation pivot. Prior cleanup3 retained301;
+  governance observation moved intact to the cleanup annex. No policy/runtime changes.
+  Verification: cleanup.py apply startup-20261024 exits2 at strict handoff, before removal;
+  independent census equals frozen plan/HEAD/producer/tracked bytes and no result.json, rc=0.
+  Protected census-shape.json/missing-types.json/apply.txt retain D217 OS observations;
+  kernel cause remains unproved.
+  Existing handoff contract43 fixtures/14 actual reds and cleanup15/11 reds pass, rc=0;
+  publication45/coverage9/ledger854 real verdicts+11 arms+13 pointers pass, rc=0, *-final.txt.
+  Public archive read/verify-retention matches exact14fa282 source55737..60821/53L/5084B,
+  prior windows and whole moved governance observation, rc=0, retention-final.txt.
+  Size OK/fixed bounds, rc=0; LIVE categories/cleanup date unchanged. Jobs consumed; D217 open.
+  promotion: declined (existing incomplete-evidence/retention rules).
+
+- ID: `G1-SLICE.5b.4c.h2.b.xtask`
+  Status: `proposed`
+  Goal: director2026-10-24 DBIQNP careful incremental cargo xtask migration, as far as useful;
+  clarification confirms xtask. Current frontier stays; sequence after D156 closure.
+  Plan: inventory command contracts; small dispatcher, then one command/verified commit.
+  Compare old/new argv, statuses, artifacts and refusal cases before retiring a command.
+  Begin build/docs orchestration, then deterministic censuses; later safety/mutation tools
+  retain complete physical/omission/restoration controls. Keep numerical oracles independent.
+  Design constraint for review: guard local stores before Cargo builds/runs xtask; its own
+  Rust checks run too late to protect that bootstrap. Preserve hooks/CI/relative paths and
+  argument-vector dispatch; test platforms rather than inferring parity from Rust alone.
+  Source: https://github.com/matklad/cargo-xtask/blob/master/README.md.
+  No implementation change during discussion; split migration leaves before implementation.

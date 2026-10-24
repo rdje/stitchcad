@@ -708,6 +708,30 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Verification: `pending`
   Commit: `pending`
 
+- ID: `G1-SLICE.9.doc`
+  Status: `proposed`
+  Goal: director2026-10-24 DBIQNP rustdoc adoption and mdBook-link requirements; no pivot.
+  Plan: Cargo-generated public API reference; local artifacts; matching code/book revisions;
+  mdBook links in local/published layouts and backlinks to semantic contracts.
+  Official entry: https://doc.rust-lang.org/cargo/commands/cargo-doc.html.
+  Acceptance: documented public interfaces/runnable examples/reference and link checks;
+  deep semantic introspection through the clean API and MCP workflows covers
+  identities, types/units, uncertainty, provenance, dependencies, diagnostics and authority.
+  Runtime introspection/wire discovery retain separate typed contracts/tests under .9.
+  Schedule: after D156 closure, before .9 signoff; discussion does not revise roadmap scope.
+
+- ID: `G1-SLICE.9.plugin`
+  Status: `proposed`
+  Goal: director2026-10-24 DBIQNP StitchCAD plugin with chat and interactive UI control.
+  Plan: shared sc-api/command bus/MCP tools and ChatGPT UI; verify host UI capabilities before
+  Codex parity claims. Discover state/dependencies/uncertainty/provenance. Both paths share
+  identities/revisions/preview/commit/undo/core authority/human-only approval. Example:
+  select piece, explain measurement effect, preview delta, commit/undo; test conflict/recovery.
+  Official scope: https://developers.openai.com/plugins/build/app-quickstart;
+  https://developers.openai.com/plugins/build/chatgpt-ui.
+  Review dependency: ChatGPT connectivity versus ROADMAP §7.8/§10's stdio-only rule until G5+.
+  Schedule .9 discovery; G5 host UI/transport/threat-model/parity; no implementation change now.
+
 - ID: `G1-SLICE.10`
   Status: `pending`
   Goal: `sc-cli` — headless command replay that is deterministic: the same command script produces
@@ -805,7 +829,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.o.a23.3.2` | `pending` | publication builder/main authority; recovery checkpoint ready |
+| current | `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4` | `blocked` | D217 runtime census; cleanup before publication builder |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

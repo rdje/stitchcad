@@ -112,6 +112,14 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0229 — record blocked startup cleanup
+
+.f.cleanup4.r: captured D217 revoked runtime descriptors; strict cleanup refused before deletion.
+Committed ownership/resume/book evidence; cleanup4 awaits runtime recovery and a fresh plan.
+Recorded DBIQNP rustdoc/mdBook-link adoption item .9.doc without changing the current work.
+Plugin/chat/UI discussion .9.plugin records the existing transport/threat-model dependency.
+Cargo xtask discussion owns incremental migration with pre-Cargo locality and independent oracles.
+
 ## STITCHCAD-G1-0228 — crash recovery cleanup
 
 .f.cleanup3: required overdue cleanup; preserved recovery evidence and regenerated outputs.

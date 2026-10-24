@@ -410,11 +410,8 @@ and [Rust job](https://github.com/rdje/stitchcad/actions/runs/37062714007/job/11
 completed successfully with every reported step successful. The new handoff guard step executed
 43 fixtures/13 actual assertion reds, confirmed by the runner log; SPINE.23v retains the receipt.
 
-SPINE.23r captured a recurrence: lsof emitted descriptor4 and a name without the requested type.
-Sanitized shape/hash evidence and the independent missing-type fixture reproduce the refusal2;
-a new actual type-guard fault requires an assertion red. No unreadable handle is exempted.
-A fresh full census then passed0. That proves its own snapshot, not the refused one. The earlier
-unretained failure remains unexplained; no kernel cause or scheduling race is inferred.
+Incomplete runtime observations and their recovery rules are in the
+[cleanup annex](annexes/artifact-cleanup.md#incomplete-runtime-observations).
 
 ### Checkout-local CI stores
 

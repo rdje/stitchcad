@@ -3,6 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-24 UTC)_ — revoked runtime descriptors block cleanup
+
+0229 cleanup4.r: OS-visible lsof exits0 yet omits the type for revoked Codex runtime handles.
+parse_handles correctly refuses2. Frozen candidates and tracked fingerprints remain exact after
+the refused apply. Runtime recovery and a fresh plan are required; no cleanup date is advanced.
+Promotion declined: existing incomplete-evidence policy; D217 owns the external blocker.
+
 ## _(2026-10-08 UTC)_ — crash recovery cleanup
 
 0228 .f.cleanup3 owns frozen ignored-output cleanup and regeneration; proof in the leaf.

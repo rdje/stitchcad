@@ -1064,3 +1064,18 @@ D212/D213/D214 whole authored reports/verified repairs retained in [part133](../
 D215 whole authored report/verified repair retained in [part134](../history/stitchcad-defects-part134.md).
 
 D216 whole authored report/verified repair retained in [part135](../history/stitchcad-defects-part135.md).
+
+- **D217** — Codex runtime revoked descriptors omit the requested lsof type, blocking strict
+  cleanup and session-handoff evidence at startup2026-10-24.
+  - Reproduce: OS-visible `bash scripts/check_handoff.sh --idle-cua` returns2 with
+    `malformed lsof name field`. Three fresh `lsof -u <current-user-id> -Fpftn` observations
+    return0 but each includes descriptor10/name(revoked)/no type in two codex processes and
+    codex-code-mode-host. Sanitized shapes: target/artifact_cleanup_audit/startup-20261024/.
+  - Why/where: scripts/handoff_census.py parse_handles requires a type before each name.
+    Existing missing-type fixture and actual type-guard omission cover that refusal. Kernel
+    causation is unproved; successful lsof exit alone does not establish complete evidence.
+  - Impact: cleanup apply refuses before removal; no handoff: OK can be earned in this runtime.
+    Every frozen candidate/HEAD/producer/tracked-content fingerprint remains exact after refusal.
+  - Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4, P1 now, before .a23.3.2.
+    Requires external runtime recovery, then fresh strict census and fresh cleanup plan/apply.
+    Do not terminate the active harness or relax missing-evidence checks to obtain success.
