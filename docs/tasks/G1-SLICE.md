@@ -723,14 +723,19 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 - ID: `G1-SLICE.9.plugin`
   Status: `proposed`
   Goal: director2026-10-24 DBIQNP StitchCAD plugin with chat and interactive UI control.
-  Plan: shared sc-api/command bus/MCP tools and ChatGPT UI; verify host UI capabilities before
-  Codex parity claims. Discover state/dependencies/uncertainty/provenance. Both paths share
-  identities/revisions/preview/commit/undo/core authority/human-only approval. Example:
-  select piece, explain measurement effect, preview delta, commit/undo; test conflict/recovery.
-  Official scope: https://developers.openai.com/plugins/build/app-quickstart;
-  https://developers.openai.com/plugins/build/chatgpt-ui.
-  Review dependency: ChatGPT connectivity versus ROADMAP §7.8/§10's stdio-only rule until G5+.
-  Schedule .9 discovery; G5 host UI/transport/threat-model/parity; no implementation change now.
+  Plan: API/MCP chat and UI share the bus, identities/revisions, preview/commit/undo and
+  authority; human-only approval. .9 discovery; G5 host UI, conflict/recovery and parity tests.
+  Host options/sources: docs/book/src/spec/command-layer.md#host-connection-options-under-review.
+  Assess local/tunneled stdio, bridge trust/lifecycle/submission access; HTTP keeps §7.8/§10 gate.
+
+- ID: `G1-SLICE.9.plugin.t1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0230 owns DBIQNP proposal/book/CH/DEV transport clarification.
+  Acceptance: fetched official contracts, bounded docs and focused checks; no implementation,
+  credentials, connection, roadmap or blocked-frontier change.
+  Verified: book/publication45, command census0 failures, size OK; rc=0, protected transport-*.txt.
+  Commit: STITCHCAD-G1-0230. LIVE categories and MEMORY next action unchanged.
+  promotion: declined (scoped external compatibility research; reverify before adoption).
 
 - ID: `G1-SLICE.10`
   Status: `pending`

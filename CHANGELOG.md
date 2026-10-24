@@ -112,6 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0230 — clarify plugin transport candidates
+
+.9.plugin.t1: documented local stdio/HTTP, web HTTP/SSE and tunnel-to-stdio options;
+corrected broad HTTP prerequisite framing. Roadmap, blocked cleanup and implementation unchanged.
+
 ## STITCHCAD-G1-0229 — record blocked startup cleanup
 
 .f.cleanup4.r: captured D217 revoked runtime descriptors; strict cleanup refused before deletion.

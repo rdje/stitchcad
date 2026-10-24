@@ -3,6 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-24 UTC)_ — plugin transport research
+
+0230 .9.plugin.t1: fetched official client/tunnel/submission contracts distinguish local desktop,
+private bridge and public distribution. ChatGPT connectivity can preserve a stdio server;
+bridge authority/lifecycle and UI compatibility still need proof. No connection was configured.
+Promotion declined: scoped compatibility research, with sources in the book for adoption review.
+
 ## _(2026-10-24 UTC)_ — revoked runtime descriptors block cleanup
 
 0229 cleanup4.r: OS-visible lsof exits0 yet omits the type for revoked Codex runtime handles.

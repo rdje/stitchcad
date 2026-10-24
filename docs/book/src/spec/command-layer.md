@@ -218,6 +218,26 @@ invalid-input correction, interruption/resume and provenance explanation need ag
 and independent artifact checks (roadmap §7.8). MCP access alone is not measured stitching expertise.
 The authority contract in §7 and parity evidence requirements above still apply.
 
+### Host connection options under review
+
+DBIQNP research reviewed on 2026-10-24, owned by G1-SLICE.9.plugin, identifies candidates for
+the proposed conversational frontend. These are host capabilities, not implemented StitchCAD
+integrations. The stdio-only contract in §7 remains in force.
+
+| Host or connection path | Documented option |
+| --- | --- |
+| Local Codex and ChatGPT desktop | stdio or Streamable HTTP; [client documentation](https://learn.chatgpt.com/docs/extend/mcp?surface=cli) |
+| ChatGPT web | Remote streaming HTTP or SSE; [connection documentation](https://developers.openai.com/api/docs/guides/custom-mcp-server) |
+| Private server through Secure MCP Tunnel | Outbound HTTPS bridge to a local stdio or HTTP server, without public ingress; [tunnel documentation](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels) |
+| Desktop-only plugin distribution | Local stdio packaging; public submissions require approved-partner access; [submission documentation](https://developers.openai.com/plugins/deploy/desktop-only) |
+
+The local desktop and tunnel-to-stdio paths can preserve StitchCAD's stdio server. This corrects
+the earlier proposal's overly broad network-transport dependency. A tunnel adds a remote call
+path, credentials and lifecycle obligations; its permissions and workspace access need verification.
+Private testing and public directory distribution have different requirements. Host UI rendering
+and workflow parity also need separate tests. Assess these candidates before deciding whether
+StitchCAD needs an HTTP listener; that listener still requires the roadmap's threat-model review.
+
 ## 9. Diagnostics
 
 | Token | Raised when | Required arguments |
