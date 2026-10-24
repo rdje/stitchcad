@@ -33,6 +33,9 @@ claim labelling, one commit per leaf):
 
 ## Reserved to the director — NOT delegated
 
+The director's 2026-10-24 instruction delegates application of the MCP transport amendment only;
+see [decision_mcp-transports.md](decision_mcp-transports.md). Other roadmap changes retain this reservation.
+
 1. **Naming humans.** The project owner, the procurement owner and the sewing/factory domain reviewer are
    the director's to name. `.14` stays blocked on exactly that and nothing else; everything else in `.14`
    is drafted. D27's construction decision and the fixture's eight `assumed` constants remain subject to

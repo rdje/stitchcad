@@ -96,17 +96,13 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.l`
   Status: `done`
-  Goal: P1 after .f.h and before .f.n01: resolve the confirmed hard-link ownership gap in shared output and source-writing contracts; preserve pure/read-only source calls and every existing producer interface.
-  Acceptance: physical isolated output/source hard-link reproduction without alias writes; exact regular-file/inode/link-count root cause; bounded explicit mutable-path contract and output refusal, actual omission controls and focused integration without weakening existing source/type/device/parent checks. Schedule native source-writing adoption in each .f.n repair before effects.
-
-Complete committed verification retained in [retention proof](G1-SLICE-retention-proof.md#shared-hard-link-and-mutable-source-verification); canonical ownership remains above.
+  Goal: verified; whole original scope and proof retained302.
+  Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h.v`
   Status: `done`
-  Goal: after the .f.h recording commit, prove the newest committed window7 rejects a copied catalog prose edit through the actual public retention guard; record the terminal result before .f.l.
-  Acceptance: isolated same-volume copy only, normal inventory remains green, immutable guard refuses exactly the changed committed catalog; actual HEAD/fixture/control bytes exact, no tracked sealed write, no background result left unconsumed, local scope distinct from unobserved runner verdict.
-
-Complete committed verification retained in [runtime proof](G1-SLICE-runtime-proof.md#window7-public-verification); canonical ownership remains above.
+  Goal: verified; whole original scope and proof retained302.
+  Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
 
 ### .a01.1 verification and continuation
 
@@ -376,14 +372,9 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02`
   Status: `done`
-  Goal: complete file-destination plans for size/chart/table families; retain existing source guards, prepared stores and public consumer behavior.
+  Goal: verified; whole original scope and proof retained302.
   Paths: docs/tasks/artifacts/size_chart/size_chart_mutations.py;docs/tasks/artifacts/measurement_table/table_mutations.py;docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py;docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py
-  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
-
-Split before implementation: the four complete entries have distinct eight/eight/twelve/fourteen
-fault populations, table derives one source-dependent anchor, and collection has multi-anchor
-mutations. Each child owns its complete guards, D177 current panic sites, independent captures,
-physical refusals, exclusive native replay and exact source/full artifact restoration.
+  Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n02.1`
   Status: `done`
@@ -441,14 +432,9 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04`
   Status: `done`
-  Goal: complete file-destination plans for rounding/length/domain; retain existing source guards, prepared stores and public consumer behavior.
+  Goal: verified; whole original scope and proof retained302.
   Paths: docs/tasks/artifacts/formula_structure/round_mutations.py;docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py;docs/tasks/artifacts/formula_structure/length_operator_mutations.py;docs/tasks/artifacts/formula_structure/domain_context_mutations.py
-  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
-
-Four entries reviewed before splitting: signed5 faults, unsigned9 debug/one release plus two
-restorations, length6 faults, and domain14 faults/five mutable files/two distinct consumers.
-Each child retains its original cases/profiles/argv and owns complete source/file/mutable/current
-macro plans, independent capture/physical/body controls and exclusive source/artifact proof.
+  Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n04.1`
   Status: `done`
@@ -505,12 +491,10 @@ Complete committed verification retained in [producer proof](G1-SLICE-producer-p
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n05.2`
   Status: `done`
-  Goal: STITCHCAD-G1-0169 owns semantic-metadata files/current macros and complete ordinary/classifier-only modes.
+  Goal: verified; whole original scope and proof retained302.
   Paths: docs/tasks/artifacts/formula_structure/semantic_mutations.py
   Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/G1-SLICE-producer-proof.md
-  Acceptance: preserve10 pure cases/full5 public contract; ordinary11 logs/one mutable source, classifier-only zero files/mutable sources/no native writes; guard three inputs including canonical compile-time book before reads; complete captures/refusals/body controls and exclusive frozen inputs/current artifact.
-
-Complete committed verification retained in [producer proof](G1-SLICE-producer-proof.md#semantic-modes); canonical ownership remains above.
+  Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n06`
   Status: `done`
@@ -540,20 +524,16 @@ Complete committed verification retained in [native mode proof](G1-SLICE-runtime
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n07`
   Status: `done`
-  Goal: complete file-destination plans for literal/normalized/canonical recipes; retain existing source guards, prepared stores and public consumer behavior.
+  Goal: verified; whole original scope and proof retained302.
   Paths: docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py;docs/tasks/artifacts/formula_structure/normalized_expression_mutations.py;docs/tasks/artifacts/formula_structure/normalized_recipe_mutations.py;docs/tasks/artifacts/formula_structure/canonical_recipe_mutations.py
-  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
-
-Whole completed n07 scope retained in [part236](../history/window9.md#stitchcad-devnotes-part236md).
+  Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n07.1`
   Status: `done`
-  Goal: STITCHCAD-G1-0172: literal thirteen-case ordinary/classifier-only modes; current public contract/compile-time fixture inputs,14 ordinary files/one mutable source/classifier zero files-mutable-native effects. Independent complete captures/physical refusals/omission/classifier controls/exclusive13 genuine native faults/frozen inputs/current full target.
+  Goal: verified; whole original scope and proof retained302.
   Paths: docs/tasks/artifacts/formula_structure/literal_normalization_mutations.py
   Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/artifacts/ci_environment/python_file_entries.tsv;crates/sc-core/tests/formula_literal_contract.rs;docs/decisions/decision_literals.md
-  Acceptance: complete plans before effects; preserve public behavior/grammar, prepared stores and exact current source/artifact. D178 P1 nonthread evidence repair before signoff.
-
-Complete committed verification retained in [producer proof](G1-SLICE-runtime-proof.md#literal-mode-verification); canonical ownership remains above.
+  Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n07.2`
   Status: `done`
@@ -581,11 +561,9 @@ Complete committed verification retained in [producer proof](G1-SLICE-runtime-pr
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08`
   Status: `done`
-  Goal: complete file-destination plans for expression/statement/whole checks; retain existing source guards, prepared stores and public consumer behavior.
+  Goal: verified; whole original scope and proof retained302.
   Paths: docs/tasks/artifacts/formula_structure/canonical_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_expression_mutations.py;docs/tasks/artifacts/formula_structure/checked_statement_mutations.py;docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py
-  Acceptance: complete entry/label/helper/output resolution before effects; actual early/late file refusals and omission controls, focused real consumer and exact restoration where native jobs are required.
-
-Whole completed n08 scope retained in [part236](../history/window9.md#stitchcad-devnotes-part236md).
+  Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n08.1`
   Status: `done`
@@ -802,22 +780,8 @@ Whole0210 task/lesson retained in [part278](../history/stitchcad-devnotes-part27
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.r`
   Status: `done`
-  Goal: STITCHCAD-G1-0229 owns startup recovery, D217 diagnosis and a committed blocked handoff.
-  Own: cleanup4 task/defect/resume/live/book records; protected startup-20261024 audit evidence.
-  Acceptance: attributed refusal, no deletion, focused checks and exact bounded retention.
-  Reviewed bootstrap/README/builder/.b.s; adopted neutral policies equal read-only references.
-  DBIQNP proposals have their own nodes; no implementation pivot. Prior cleanup3 retained301;
-  governance observation moved intact to the cleanup annex. No policy/runtime changes.
-  Verification: cleanup.py apply startup-20261024 exits2 at strict handoff, before removal;
-  independent census equals frozen plan/HEAD/producer/tracked bytes and no result.json, rc=0.
-  Protected census-shape.json/missing-types.json/apply.txt retain D217 OS observations;
-  kernel cause remains unproved.
-  Existing handoff contract43 fixtures/14 actual reds and cleanup15/11 reds pass, rc=0;
-  publication45/coverage9/ledger854 real verdicts+11 arms+13 pointers pass, rc=0, *-final.txt.
-  Public archive read/verify-retention matches exact14fa282 source55737..60821/53L/5084B,
-  prior windows and whole moved governance observation, rc=0, retention-final.txt.
-  Size OK/fixed bounds, rc=0; LIVE categories/cleanup date unchanged. Jobs consumed; D217 open.
-  promotion: declined (existing incomplete-evidence/retention rules).
+  Goal: verified; whole original scope and proof retained302.
+  Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.xtask`
   Status: `proposed`

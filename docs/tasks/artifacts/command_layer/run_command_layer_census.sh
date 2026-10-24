@@ -22,6 +22,8 @@
 #   K5 diagnostics       every `command_*` token the chapter names is declared by §9, and every §9 row names
 #                        the arguments its diagnostic carries.
 #   K6 references        every link resolves, and a `§n` inside a link names a heading the target carries.
+#   K7 MCP profiles      roadmap/book profiles agree, each has a real task owner, and retired
+#                        stdio-only timing is refused in normative transport sections.
 # ADVISORY, printed and never a failure:
 #   A1 the command table as read — per class, the commands and their authority — so a human can eyeball the
 #      whole surface instead of trusting the summary line.
@@ -45,16 +47,17 @@ ROOT="${COMMAND_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || pwd)}"
 BOOK="${COMMAND_BOOK:-$ROOT/docs/book/src}"
 CHAPTER="${COMMAND_CHAPTER:-$BOOK/spec/command-layer.md}"
 ROADMAP="${COMMAND_ROADMAP:-$ROOT/ROADMAP.md}"
+TASKS="$ROOT/docs/tasks/G1-SLICE.md"
 
-for f in "$CHAPTER" "$ROADMAP"; do
+for f in "$CHAPTER" "$ROADMAP" "$TASKS"; do
   [ -f "$f" ] || { echo "command-layer census: REFUSED — $f not found" >&2; exit 2; }
 done
 command -v python3 >/dev/null 2>&1 || { echo "command-layer census: REFUSED — python3 not found" >&2; exit 2; }
 
-python3 - "$CHAPTER" "$ROADMAP" <<'PY'
+python3 - "$CHAPTER" "$ROADMAP" "$TASKS" <<'PY'
 import pathlib, re, sys
 
-CHAPTER, ROADMAP = sys.argv[1:3]
+CHAPTER, ROADMAP, TASKS = sys.argv[1:4]
 fails = 0
 def bad(msg):
     global fails
@@ -128,8 +131,8 @@ def table_in(body, first_cell):
 
 print("=== command-layer census ===")
 CH, RM = sections(CHAPTER), sections(ROADMAP)
-for name, sec, need in (("the chapter", CH, ("1", "1.1", "7", "8", "9")),
-                        ("ROADMAP.md", RM, ("4.4", "7.8"))):
+for name, sec, need in (("the chapter", CH, ("1", "1.1", "7", "7.1", "8", "9")),
+                        ("ROADMAP.md", RM, ("4.4", "7.8", "10"))):
     missing = [c for c in need if c not in sec]
     if missing:
         print("command-layer census: REFUSED — %s carries no §%s" % (name, ", §".join(missing)))
@@ -254,13 +257,64 @@ for text, target in re.findall(r"\[([^\]]*)\]\(([^)]+)\)", read(CHAPTER)):
 print("-- K6 references")
 print("  breaches: %d" % k6)
 
+def check_transport_profiles():
+    """Compare the declared profiles, not a hand-carried expected count."""
+    errors = 0
+    def issue(message):
+        nonlocal errors
+        bad("K7 " + message)
+        errors += 1
+
+    def profiles(body, width, label):
+        header, rows = table_in(body, "MCP profile")
+        result = {}
+        if len(header) != width or not rows:
+            issue(label + " profile table missing or malformed")
+        for row in rows:
+            if len(row) != width or any(not cell.strip() or cell.strip() == "—" for cell in row):
+                issue(label + " profile row malformed")
+                continue
+            name = debacktick(row[0])
+            if not re.fullmatch(r"[a-z]+(?:-[a-z]+)+", name):
+                issue(label + " profile name malformed")
+            if name in result:
+                issue(label + " duplicate profile " + name)
+            result[name] = row
+        return result
+
+    source = profiles(RM["7.8"], 2, "roadmap")
+    target = profiles(CH["7.1"], 3, "chapter")
+    for name in sorted(set(source) - set(target)):
+        issue("chapter missing roadmap profile " + name)
+    for name in sorted(set(target) - set(source)):
+        issue("chapter invents profile " + name)
+    if "local-stdio" not in source:
+        issue("local-stdio G1 baseline missing")
+    owners = set(re.findall(r"(?m)^- ID: `([^`]+)`$", read(TASKS)))
+    for name, row in sorted(target.items()):
+        if debacktick(row[2]) not in owners:
+            issue("unknown evidence owner for " + name)
+    glossary = pathlib.Path(CHAPTER).parent / "glossary/commands-and-authority.md"
+    glossary_rows = table_in(read(glossary).splitlines(), "Term")[1] if glossary.is_file() else []
+    mcp_rows = [row for row in glossary_rows if row and row[0] == "MCP"]
+    if len(mcp_rows) != 1:
+        issue("glossary MCP definition missing or duplicated")
+    normative = " ".join(RM["7.8"] + RM["10"] + CH["7"] + CH["7.1"] +
+                         [" ".join(row) for row in mcp_rows])
+    if re.search(r"\bstdio-only\s+until\b", normative, re.I):
+        issue("retired stdio-only admission rule")
+    return errors
+
+k7 = check_transport_profiles()
+print("-- K7 MCP connection profiles: breaches: %d" % k7)
+
 print("-- A1 advisory: the command surface as this run read it")
 for cls in sorted(classes):
     rows = [r for r in cmd_rows if len(r) >= 3 and debacktick(r[1]) == cls]
     print("  · %-11s %2d command(s): %s" % (cls, len(rows),
                                             " ".join(debacktick(r[0]) for r in rows)[:100]))
 
-total = k1 + k2 + k3 + k4 + k5 + k6
+total = k1 + k2 + k3 + k4 + k5 + k6 + k7
 print("command-layer census: %d commands / %d classes / %d levels / %d failure(s)"
       % (len(commands), len(classes), len(levels), total))
 sys.exit(1 if total else 0)

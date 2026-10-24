@@ -170,9 +170,33 @@ are enforced in the core, not in a tool manifest, so an adapter cannot widen one
 - **Authority is scoped, and a scope narrows.** A grant names the commands, the design and the duration;
   an agent acting under it carries the granting human's identity in the audit trail as the actor's
   principal, so responsibility is never ambiguous.
-- **MCP is stdio-only until a threat model exists** (§7.8), and its tool count is curated: a tool is a
+- **MCP is stdio-first with per-profile admission evidence** (roadmap §7.8/§10), and its tool count is curated: a tool is a
   coherent workflow, a batch operation or a query resource, never one tool per getter. A façade that
   mirrors the command set one-for-one is an API surface nobody can review.
+
+### 7.1 Connection profiles and admission
+
+Roadmap v0.4 permits the following connection profiles to land incrementally from G1. The admission
+gate follows the actual trust boundary; it does not wait for G5. Local stdio is the G1 baseline.
+Additional network and relay access is opt-in. No profile bypasses the command bus or core authority.
+
+| MCP profile | Exposure | Evidence owner |
+| --- | --- | --- |
+| `local-stdio` | Owned child process and pipes | `G1-SLICE.9.transport.stdio` |
+| `local-http` | Explicit loopback listener and client origin | `G1-SLICE.9.transport.http` |
+| `remote-http` | Authenticated network caller over TLS | `G1-SLICE.9.transport.remote` |
+| `private-bridge` | Authenticated relay and its private target | `G1-SLICE.9.transport.bridge` |
+
+Every profile needs a documented threat model and executable admission tests before enablement.
+Its record names the tested host/version, caller identity, permission and project/filesystem scopes,
+credential issue/revocation where applicable, binding/origin rules, resource bounds and lifecycle.
+Tests exercise denied access, scope escape, human-only approval, injected data, artifact overwrites,
+disconnect/retry and command-state parity. A bridge includes both its remote caller and local target;
+stdio at its inner hop grants no exemption. G5 proves host UI/workflow parity and G6 hardens security
+and reliability. Policy admission and platform compatibility alone certify no implemented profile.
+
+The command-layer census checks profile coverage against the roadmap and rejects the retired
+stdio-only/G5+ admission rule in these normative sections. Runtime evidence remains with the owners.
 
 ## 8. Workflow parity, and the table that proves it
 
@@ -222,7 +246,7 @@ The authority contract in §7 and parity evidence requirements above still apply
 
 DBIQNP research reviewed on 2026-10-24, owned by G1-SLICE.9.plugin, identifies candidates for
 the proposed conversational frontend. These are host capabilities, not implemented StitchCAD
-integrations. The stdio-only contract in §7 remains in force.
+integrations. The profile admission contract in §7.1 governs their implementation.
 
 | Host or connection path | Documented option |
 | --- | --- |
@@ -236,7 +260,8 @@ the earlier proposal's overly broad network-transport dependency. A tunnel adds 
 path, credentials and lifecycle obligations; its permissions and workspace access need verification.
 Private testing and public directory distribution have different requirements. Host UI rendering
 and workflow parity also need separate tests. Assess these candidates before deciding whether
-StitchCAD needs an HTTP listener; that listener still requires the roadmap's threat-model review.
+StitchCAD needs an HTTP listener. Every selected profile needs the admission evidence in §7.1;
+the roadmap no longer delays a ready profile until G5 because of its transport.
 
 ## 9. Diagnostics
 

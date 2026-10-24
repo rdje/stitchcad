@@ -89,6 +89,6 @@ Take the three unproven contracts early in G1 — the formula evaluator against 
 canvas spike against its protocol, one CSP constraint — rather than the plumbing. `SPINE` keeps `.5`, `.13`
 and `.19` open; .19.2 retains exact history bytes in bounded windows; otherwise product work leads. The frontier cells above are hand-kept and have
 drifted four times (defect D34); `PLANNING.5` derives them. The ruling of `2026-09-30` delegated four items — D27, D32, `.14`'s drafting and the
-containment derivation — and a second instruction delegated its three findings; all are landed, `ROADMAP.md` is
-at **v0.3** carrying G3's envelope-coverage criterion, and what remains of the ruling is the director's alone:
+containment derivation — and a second instruction delegated its three findings; all are landed. The roadmap
+also carries v0.4's MCP admission amendment; G3's envelope criterion remains. The ruling still reserves:
 naming the three humans governance §8 lists.

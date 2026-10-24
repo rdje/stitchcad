@@ -112,6 +112,14 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0231 — admit MCP connection profiles by evidence
+
+Roadmap v0.4 replaces the stdio-only/G5+ restriction with per-profile admission from G1.
+Book, decision and implementation owners cover local stdio/HTTP, remote HTTP and private bridges.
+The command census checks profiles/owners/retired policy; actual copied checker faults calibrate it.
+Nine whole completed producer records are retained302; no runtime connection is enabled or certified.
+Fixed D218's ten pre-existing tooling-vocabulary omissions; all ten copied declaration controls pass.
+
 ## STITCHCAD-G1-0230 — clarify plugin transport candidates
 
 .9.plugin.t1: documented local stdio/HTTP, web HTTP/SSE and tunnel-to-stdio options;

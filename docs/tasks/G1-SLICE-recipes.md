@@ -712,6 +712,9 @@ is required before completeness claims. No direct producer is executed with ambi
   P3 owned: ledger DIGEST-RED selector's ls/head pipeline emits Broken pipe under the426-file
   fixture; full9 arms/13 pointers pass0. Replace early-closing selection while preserving the
   chosen file and named refusal; reproduce source line271, window7-ledger-pipe-diagnostic.log.
+  Same P3 early-close family: glossary census A1 awk/head-15 can emit a stdout-close error;
+  current/head snapshots retain it in admission-glossary logs. Drain the input while preserving
+  the displayed15 advisory rows; C1 results are independently checked, not waived by this warning.
 - ID: `G1-SLICE.5b.4c.h2.b.v`
   Status: `pending`
   Goal: complete finite census/no remaining unguarded owned producer; final full gates/exact CI.

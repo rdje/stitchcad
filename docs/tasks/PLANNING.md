@@ -1,4 +1,4 @@
-# PLANNING: represent ROADMAP v0.2 as the task-tree set
+# PLANNING: represent ROADMAP as the task-tree set
 
 ## Metadata
 
@@ -10,7 +10,7 @@
 
 ## Goal
 
-Every activity, phase, gate and parallel track in `ROADMAP.md` (v0.2) is owned by a
+Every activity, phase, gate and parallel track in `ROADMAP.md` is owned by a
 registered task-tree under `docs/tasks/`, with leaves at the granularity the roadmap
 supports today, and an index (`docs/TASK_TREE.md`) a fresh session can resume from
 without reading the roadmap end to end.
@@ -1079,3 +1079,17 @@ D216 whole authored report/verified repair retained in [part135](../history/stit
   - Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4, P1 now, before .a23.3.2.
     Requires external runtime recovery, then fresh strict census and fresh cleanup plan/apply.
     Do not terminate the active harness or relax missing-evidence checks to obtain success.
+
+## Verified closure awaiting archival
+
+- **D218** — ten host-tooling identifiers in existing book prose lacked vocabulary declarations.
+  Reproduce: GLOSSARY_ROOT census of actual38100bf book/roadmap/tasks snapshot returns1 with
+  ten C1 refusals, identical to the working tree: AssertionError, HISTORY_ARCHIVE_ROOT, Refusal,
+  enter_producer, mutable_sources, output_files, plan_producer, prepare_producer, python3, sources.
+  Impact before repair: glossary/G0/full probes failed despite publication controls passing.
+  Fixed/verified by G1-SLICE.9.transport.policy in0231: actual helper/diagnostic role tables;
+  glossary suite27 pass/0fail, ten copied declaration removals each cause exactly one named C1
+  refusal with an independent retained use. No exemption or glossary-census logic changed.
+  Evidence: protected admission-glossary-head.txt; prior D155 establishes the same repair pattern.
+  Closure remains here until the next standard history window; no extra raw archive fits the
+  current64-file boundary. SPINE.19 owns its ordinary sealing; this defect's repair is complete.

@@ -6,6 +6,12 @@ through its catalog anchor. The pointer fixtures execute the public ledger verdi
 function extracted from `docs/tasks/artifacts/changelog/run_changelog_ledger_probes.sh`.
 They preserve its native Bash, archive reader and pointer helper behavior.
 
+| Tooling name | Role |
+| --- | --- |
+| `python3` | Host Python interpreter command |
+| `HISTORY_ARCHIVE_ROOT` | Local archive authority selected for the fixture |
+| `AssertionError` | Python assertion failure; its presence alone does not prove a POINTER fault |
+
 Run the thirteen independent examples from the repository root:
 
 ```bash

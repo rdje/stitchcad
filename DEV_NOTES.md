@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-24 UTC)_ — transport admission follows deployment evidence
+
+0231 .9.transport.policy applies the director-requested roadmap v0.4 amendment. The old phase
+restriction conflated transport with readiness; the new profile model preserves core authority
+and requires admission evidence from G1. Policy is applied; runtime claims remain unapproved.
+The old K1–K6 census accepted a missing bridge row. K7 compares roadmap/book profiles and real
+task owners; eight copied guard omissions admit their bad fixtures and fail the refusal controls.
+Initial schema/first-row fixtures changed a cell or split a table, respectively; corrected their
+construction before claiming the controls. Historical quotations and a future profile pass.
+Blocking D218 reproduces ten old C1 vocabulary failures in38100bf. API/tooling role tables repair
+them without exemptions. Copied declaration controls retain an independent use before removal;
+removing an otherwise unused definition alone would remove the coverage obligation too.
+Promoted to decision_mcp-transports.md. Exact source intervals in retained302 preserve complete
+old producer records while canonical IDs/path ownership remain live under unchanged bounds.
+
 ## _(2026-10-24 UTC)_ — plugin transport research
 
 0230 .9.plugin.t1: fetched official client/tunnel/submission contracts distinguish local desktop,

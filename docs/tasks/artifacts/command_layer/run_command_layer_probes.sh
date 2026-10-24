@@ -26,6 +26,7 @@
 #   LINK               a citation of a clause the target does not carry → K6
 #   CONTROL            an unrelated prose edit → still green
 #   MISSING            an absent chapter REFUSES (exit 2) instead of reporting green
+#   TRANSPORT          profile coverage/schema/owners/timing, actual guard faults and controls
 #
 # Usage:  bash docs/tasks/artifacts/command_layer/run_command_layer_probes.sh
 #         TMPDIR=<dir> bash …   (`make probes` pins it to the repository volume)
@@ -233,6 +234,104 @@ if [ "$rc" -eq 2 ] && grep -q 'REFUSED' <<<"$out"; then
   ok MISSING "an absent chapter refuses with exit=2 instead of reporting green"
 else
   bad MISSING "a missing chapter did not refuse (exit=$rc)" "$out"
+fi
+
+# Profile admission uses independently authored invalid fixtures. Mutants are copies of the
+# actual checker under this suite's existing scratch root; no tracked source is rewritten.
+if python3 - "$TOOL" "$BOOK" "$ROOT/ROADMAP.md" "$WORK" <<'PY'
+from pathlib import Path
+import os
+import shutil
+import subprocess
+import sys
+
+tool, book, roadmap, work = map(Path, sys.argv[1:])
+source = tool.read_bytes()
+chapter = (book / 'spec/command-layer.md').read_text()
+roadmap_text = roadmap.read_text()
+private = '| `private-bridge` | Authenticated relay and its private target | `G1-SLICE.9.transport.bridge` |'
+local = '| `local-stdio` | Owned child process and pipes | `G1-SLICE.9.transport.stdio` |'
+local_rm = '| `local-stdio` | A local host launches the server over process pipes |'
+extra = '| `other-pipe` | Synthetic client | `G1-SLICE.9.transport.stdio` |'
+cases = [
+    ('missing', chapter.replace(private, ''), roadmap_text, 'chapter missing roadmap profile private-bridge',
+     'for name in sorted(set(source) - set(target)):', 'for name in ():'),
+    ('extra', chapter.replace(private, private+'\n'+extra), roadmap_text, 'chapter invents profile other-pipe',
+     'for name in sorted(set(target) - set(source)):', 'for name in ():'),
+    ('schema', chapter.replace(private, private+' surplus |'), roadmap_text, 'chapter profile row malformed',
+     'if len(row) != width or any(not cell.strip() or cell.strip() == "—" for cell in row):', 'if False:'),
+    ('duplicate', chapter.replace(private, private+'\n'+private), roadmap_text, 'chapter duplicate profile private-bridge',
+     'if name in result:', 'if False:'),
+    ('owner', chapter.replace('`G1-SLICE.9.transport.bridge`', '`G1-SLICE.9.transport.absent`'), roadmap_text,
+     'unknown evidence owner for private-bridge', 'if debacktick(row[2]) not in owners:', 'if False:'),
+    ('retired', chapter, roadmap_text.replace('### 7.8 API + MCP',
+     '### 7.8 API + MCP\n\nMCP is stdio-only until a G5+ threat model exists.'),
+     'retired stdio-only admission rule',
+     r'if re.search(r"\bstdio-only\s+until\b", normative, re.I):', 'if False:'),
+    ('baseline', chapter.replace(local+'\n', ''), roadmap_text.replace(local_rm+'\n', ''), 'local-stdio G1 baseline missing',
+     'if "local-stdio" not in source:', 'if False:'),
+    ('dispatch', chapter.replace(private, ''), roadmap_text, 'chapter missing roadmap profile private-bridge',
+     'k7 = check_transport_profiles()', 'k7 = 0'),
+]
+
+def plane(label, text, rm):
+    destination = work / ('transport-'+label)
+    shutil.copytree(book, destination / 'src')
+    (destination / 'src/spec/command-layer.md').write_text(text)
+    (destination / 'ROADMAP.md').write_text(rm)
+    return destination
+
+def run(checker, destination):
+    environment = dict(os.environ, COMMAND_BOOK=str(destination/'src'),
+                       COMMAND_ROADMAP=str(destination/'ROADMAP.md'))
+    return subprocess.run(['bash', str(checker)], env=environment, capture_output=True, text=True)
+
+for label, text, rm, expected, old, new in cases:
+    assert text != chapter or rm != roadmap_text, ('fixture did not change', label)
+    destination = plane(label, text, rm)
+    result = run(tool, destination)
+    assert result.returncode == 1 and 'K7 '+expected in result.stdout, (label, result.stdout, result.stderr)
+    assert source.decode().count(old) == 1, ('guard anchor', label)
+    mutant = destination / 'census-fault.sh'
+    mutant.write_text(source.decode().replace(old, new, 1))
+    counterfactual = run(mutant, destination)
+    # Every removed guard must really admit this same bad fixture, not crash elsewhere.
+    assert counterfactual.returncode == 0, ('counterfactual did not admit fixture', label,
+                                          counterfactual.stdout, counterfactual.stderr)
+    try:
+        assert counterfactual.returncode == 1 and 'K7 '+expected in counterfactual.stdout
+    except AssertionError:
+        print('  transport refusal / actual checker-body assertion red:', label)
+    else:
+        raise AssertionError(('removed guard escaped control', label))
+
+glossary = plane('glossary', chapter, roadmap_text)
+definition = glossary / 'src/spec/glossary/commands-and-authority.md'
+text = definition.read_text()
+anchor = 'stdio-first with admitted connection profiles'
+assert text.count(anchor) == 1
+definition.write_text(text.replace(anchor, 'stdio-only until a threat model says otherwise'))
+result = run(tool, glossary)
+assert result.returncode == 1 and 'K7 retired stdio-only admission rule' in result.stdout
+print('  transport refusal: retired glossary definition')
+
+# Source-derived coverage accepts a future profile when both declarations and its owner exist.
+future_ch = private+'\n| `future-http` | Synthetic client | `G1-SLICE.9.transport.remote` |'
+future_rm = '| `private-bridge` | An authenticated relay to a private stdio or HTTP server |'
+positive = plane('future', chapter.replace(private, future_ch),
+                 roadmap_text.replace(future_rm, future_rm+'\n| `future-http` | Synthetic boundary |'))
+result = run(tool, positive)
+assert result.returncode == 0, ('future profile', result.stdout, result.stderr)
+historical = plane('historical', chapter, roadmap_text+'\nHistorical quotation: stdio-only until G5+.\n')
+result = run(tool, historical)
+assert result.returncode == 0, ('historical quotation', result.stdout, result.stderr)
+assert tool.read_bytes() == source, 'tracked checker changed'
+print('transport controls:', len(cases), 'refusals/body reds; glossary refusal; future/historical positives; source exact')
+PY
+then
+  ok TRANSPORT "profile refusals/body faults and future/historical controls pass"
+else
+  bad TRANSPORT "a profile admission control failed" ""
 fi
 
 echo

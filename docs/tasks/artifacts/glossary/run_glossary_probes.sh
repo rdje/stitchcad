@@ -126,37 +126,54 @@ else
   bad UNDECLARED "an undeclared machine token was not refused (exit=$rc)" "$out"
 fi
 
-# ---------------------------------------------------------------- D155 actual diagnostic/example declarations (C1)
+# ---------------------------------------------------------------- D155/D218 actual diagnostic/helper declarations (C1)
 # Remove each real declaration from a fresh book copy; the standing census must name it.
-while IFS=$'\t' read -r token chapter; do
-  D="$WORK/d155-$token"; mkroot "$D"
-  python3 -I -B - "$D/$chapter" "$token" <<'PY_DECLARATION'
+while IFS=$'\t' read -r family token chapter; do
+  D="$WORK/$family-$token"; mkroot "$D"
+  baseline_rc=0
+  if [ "$family" = D218 ]; then
+    # Retain an independently authored use when removing its declaration. Some API names
+    # occur only in their definition row; deleting that row alone removes both obligations.
+    printf '\nTooling usage control: `%s`.\n' "$token" >> "$D/$chapter"
+    out="$(run "$D")"; baseline_rc=$?
+  fi
+  python3 -I -B - "$D/$chapter" "$token" "$family" <<'PY_DECLARATION'
 from pathlib import Path
 import sys
-p, token = Path(sys.argv[1]), sys.argv[2]
+p, token, family = Path(sys.argv[1]), sys.argv[2], sys.argv[3]
 rows = p.read_text().splitlines(keepends=True)
 removed = [row for row in rows if row.startswith('| `' + token + '` |')]
-assert len(removed) == 1, ('D155 declaration fault anchor', token, len(removed))
+assert len(removed) == 1, ('declaration fault anchor', family, token, len(removed))
 p.write_text(''.join(row for row in rows if row not in removed))
 PY_DECLARATION
   mutation_rc=$?
   out="$(run "$D")"; rc=$?
   needle=$(printf '`%s` is used by' "$token")
-  if [ "$mutation_rc" -eq 0 ] && [ "$rc" -eq 1 ] && grep -Fq "$needle" <<<"$out" \
+  if [ "$baseline_rc" -eq 0 ] && [ "$mutation_rc" -eq 0 ] && [ "$rc" -eq 1 ] && grep -Fq "$needle" <<<"$out" \
      && grep -q 'unaccounted: 1' <<<"$out"; then
-    ok "D155-$token" "actual copied declaration removal is refused by name; exactly one unaccounted token"
+    ok "$family-$token" "actual copied declaration removal is refused by name; exactly one unaccounted token"
   else
-    bad "D155-$token" "actual declaration fault failed its named census assertion (mutation=$mutation_rc, exit=$rc)" "$out"
+    bad "$family-$token" "actual declaration fault failed its named census assertion (mutation=$mutation_rc, exit=$rc)" "$out"
   fi
-done <<'D155_DECLARATIONS'
-name	docs/book/src/spec/formula-language.md
-origins	docs/book/src/spec/formula-language.md
-prior_source	docs/book/src/spec/formula-language.md
-attempted_source	docs/book/src/spec/formula-language.md
-declaration_index	docs/book/src/spec/formula-language.md
-collision	docs/book/src/annexes/formula-static-validation.md
-eps_chord	docs/book/src/annexes/formula-static-validation.md
-D155_DECLARATIONS
+done <<'DECLARATIONS'
+D155	name	docs/book/src/spec/formula-language.md
+D155	origins	docs/book/src/spec/formula-language.md
+D155	prior_source	docs/book/src/spec/formula-language.md
+D155	attempted_source	docs/book/src/spec/formula-language.md
+D155	declaration_index	docs/book/src/spec/formula-language.md
+D155	collision	docs/book/src/annexes/formula-static-validation.md
+D155	eps_chord	docs/book/src/annexes/formula-static-validation.md
+D218	AssertionError	docs/book/src/annexes/ledger-fixtures.md
+D218	HISTORY_ARCHIVE_ROOT	docs/book/src/annexes/ledger-fixtures.md
+D218	Refusal	docs/book/src/annexes/formula-static-signatures.md
+D218	enter_producer	docs/book/src/build-and-checks.md
+D218	mutable_sources	docs/book/src/build-and-checks.md
+D218	output_files	docs/book/src/build-and-checks.md
+D218	plan_producer	docs/book/src/build-and-checks.md
+D218	prepare_producer	docs/book/src/build-and-checks.md
+D218	python3	docs/book/src/annexes/ledger-fixtures.md
+D218	sources	docs/book/src/build-and-checks.md
+DECLARATIONS
 
 # ---------------------------------------------------------------- ARITY (S1)
 D="$WORK/arity"; mkroot "$D"

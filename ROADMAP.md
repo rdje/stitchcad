@@ -1,4 +1,4 @@
-# StitchCAD — Roadmap v0.3 (functionality-first, deadline-free)
+# StitchCAD — Roadmap v0.4 (functionality-first, deadline-free)
 
 > Status: REVISED after peer review (GPT/Codex, Gemini, Grok — 2026-09-27).
 > Revision policy: this is a LIVING document. Additional reviews produce
@@ -11,6 +11,8 @@
 > their findings. v0.3 amends one gate exit (§11 G3) on the engineer's proposal
 > under the director's delegation, closing defect D32 — envelope garments no
 > exit criterion proved; it is logged in Appendix A with its source. Changes are
+> v0.4 replaces the MCP transport schedule restriction with per-profile
+> admission evidence, under the director's instruction. Changes are
 > marked conceptually via the Disposition Log
 > in the Appendix; no timestamps or deadlines exist anywhere in this
 > document — gates are functionality-defined only.
@@ -539,9 +541,27 @@ backend; PostgreSQL deferred.
 - `sc-api`: versioned *experimental* contract from G1; semver commitment only
   at G7. Transports: jsonrpsee (HTTP/WebSocket native; stdio for MCP).
   In-process Rust API distinct from wire format.
-- `sc-mcp`: stdio-only until a G5+ threat model exists for any HTTP surface
-  (tool poisoning, injected "factory feedback", artifact overwrites). Agent
-  authority is scoped from day one: inspect / propose / commit / generate /
+- `sc-mcp`: stdio-first, with the connection profiles below implemented
+  incrementally from G1. A profile becomes usable when its documented threat
+  model and admission tests pass; no profile has to wait for G5 merely
+  because of its transport. Local stdio is the G1 baseline. Host UI/workflow
+  parity remains G5 evidence; platform support is measured per host/version.
+
+| MCP profile | Connection boundary |
+| --- | --- |
+| `local-stdio` | A local host launches the server over process pipes |
+| `local-http` | Streamable HTTP on an explicitly bound loopback listener |
+| `remote-http` | Authenticated Streamable HTTP over TLS across a network |
+| `private-bridge` | An authenticated relay to a private stdio or HTTP server |
+
+- Each profile records its caller identity and permissions, data/filesystem
+  scope, credential lifecycle where applicable, binding/origin rules and
+  resource limits. Admission tests cover unauthorized access, scope escape,
+  human-only approval, injected data, artifact overwrites, disconnect/retry
+  and command-state parity. A bridge carries the end-to-end trust boundary;
+  local stdio behind it does not exempt remote callers. Network/relay access
+  is explicit opt-in. Public distribution has its own eligibility checks.
+- Agent authority is scoped from day one: inspect / propose / commit / generate /
   approve are distinct permissions; approval is a human-only capability that
   a graph mutation can never manufacture. Mutating commands carry actor
   trace. Imported files are data, never instructions.
@@ -655,7 +675,9 @@ provenance — never a substitute for observation (§2.3).
 - Scoped permissions from the first exposed API; authorization enforced in
   core logic, not tool descriptions.
 - Input validation and resource bounds (solver work, file sizes, decompression).
-- MCP stdio-only until a documented threat model permits more.
+- MCP connection profiles are admitted by documented threat models and
+  executable evidence from G1; §7.8 defines the profiles and required tests.
+  All adapters enforce the same core authority and command invariants.
 - Private data (measurements, scans, factory IP) excluded from repo,
   diagnostics, and telemetry by default; profile sharing shows a preview of
   exactly what will be shared.
@@ -845,7 +867,7 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
 | Golden-file cross-platform nondeterminism | Determinism policy §13 |
 | Fit claims outrun simulation evidence | V2 track gate: physical evidence only |
 | Eval-seat procurement slips | Named owner at G0; partner-run manual test as documented fallback |
-| MCP write tools without threat model | Stdio-only until G5+ model; scoped authority §10 |
+| MCP write tools without threat model | Per-profile admission tests; core authority and opt-in network/relay access (§7.8, §10) |
 
 ---
 
@@ -944,8 +966,20 @@ No calendar. Gates are per-capability: V-tracks never block the 2D release.
   G1-SLICE.5a.3b.3c, `docs/decisions/decision_angles.md`.
 - D95 (2026-10-02): exact128-bit literals, i64 bindings; G1-SLICE.5a.3b.3b.3, `docs/decisions/decision_literals.md`.
 
+**Amended by director instruction (v0.4):**
+- §7.8/§10 and the §14 MCP risk replace stdio-only/G5+ timing with
+  evidence-based admission for local stdio, local HTTP, remote HTTP and
+  private bridges. The director requested amending this restriction after
+  reviewing ChatGPT/Codex connection options. Source and rationale:
+  `docs/decisions/decision_mcp-transports.md`; owner `G1-SLICE.9.transport.policy`.
+  The engineer authored and applied this amendment under that instruction;
+  no runtime profile is certified by this policy change. Core-scoped
+  authority, human-only approval, injected-data handling and actor trace
+  remain requirements. G1 owns profile implementation/admission evidence;
+  G5 owns host UI/workflow parity, and G6 hardens security and reliability.
+
 ---
 
-*End of roadmap v0.3. Functionality is paramount; gates exist to protect it.
+*End of roadmap v0.4. Functionality is paramount; gates exist to protect it.
 "Implementing an exporter" and "proving its compatibility" are different
 achievements — this document tracks the second.*

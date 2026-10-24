@@ -22,7 +22,7 @@
 | idempotency | applying the same command twice has the same effect as applying it once | [command layer §5](../command-layer.md) | replay safety, once-semantics | — |
 | idempotency key | the token a mutating command carries so a transport retry applies once and a replay is reported as a replay | [command layer §5](../command-layer.md) | request key, dedup token | — |
 | inspect (authority) | the authority to read anything, which no other authority implies | [command layer §7](../command-layer.md) | read access, query right | `inspect` |
-| MCP | the agent-facing façade over the same commands, stdio-only until a threat model says otherwise | [command layer §7](../command-layer.md) | Model Context Protocol, agent surface | — |
+| MCP | the agent-facing façade over the same commands, stdio-first with admitted connection profiles | [command layer §7.1](../command-layer.md) | Model Context Protocol, agent surface | — |
 | preview / commit ⚠ | the two-phase shape of a mutation: see the result, then apply it or drop it | [command layer §4](../command-layer.md) | dry run then apply, trial and commit | — |
 | progress | a reported position in a long operation, so a caller is never left guessing | [command layer §6](../command-layer.md) | progress report, percent done | — |
 | propose (authority) | the authority to prepare a change for a human to accept, without applying it | [command layer §7](../command-layer.md) | suggest right, draft access | `propose` |

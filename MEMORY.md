@@ -8,5 +8,5 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - Next: recover the Codex runtime and obtain a complete OS-visible handoff census, then
   create a fresh cleanup plan and finish cleanup4 before publication builder .a23.3.2.
 - Owner/evidence: docs/tasks/G1-SLICE-producers.md; D217 in docs/tasks/PLANNING.md.
-- In-flight uncommitted: none after the blocker-record commit; all issued jobs consumed.
+- In-flight uncommitted: none; all issued jobs consumed.
 - Handoff remains unverified while the runtime supplies incomplete lsof records.

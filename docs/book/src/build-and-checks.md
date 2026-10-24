@@ -340,11 +340,17 @@ macro locations and calibrated failed-body controls replace message substrings a
 extraction/join panics. This closes that diagnostic defect; the remaining D156 producer plans
 continue under their owned native/fixture/delegation/shell groups.
 
-The shared Python API separates inspection from activation. `plan_producer` validates stores,
-declared source files, output directories and explicit `output_files` without creating paths or
-changing the environment. It returns the output directory names relative to the supplied root.
-`prepare_producer` rechecks that plan, creates the stores/directories and returns the prepared
-environment; `enter_producer` adds the standalone refusal diagnostic and exit2 behavior.
+The shared Python API separates inspection from activation:
+
+| API item | Contract |
+| --- | --- |
+| `plan_producer` | Validate stores/paths; return relative output-directory names; no effects |
+| `prepare_producer` | Recheck the plan, create stores/directories and return the activated environment |
+| `enter_producer` | Prepare, or print a standalone refusal and exit2 |
+| `sources` | Declared input files |
+| `output_files` | Declared individual write destinations |
+| `mutable_sources` | Writable subset of sources; each file needs link count 1 |
+
 For example, from the repository root:
 
 ```python

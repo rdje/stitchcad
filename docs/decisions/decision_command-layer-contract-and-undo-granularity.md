@@ -63,6 +63,10 @@ would be a guess in a normative font, and a guess that later has to move is a mi
 
 ## What would reverse it
 
+The transport timing in condition (3) below is superseded by the director-requested roadmap v0.4
+amendment in [decision_mcp-transports.md](decision_mcp-transports.md). Profile-specific evidence may
+admit a connection from G1; the authority levels and core enforcement above remain normative.
+
 Three conditions, each needing a recorded decision: (1) a real workflow that cannot be expressed as an
 atomic group — collaborative editing with per-field concurrency, for instance — which would make the group
 the wrong undo unit and needs its own contract; (2) evidence from G1 that a bounded undo depth cannot be

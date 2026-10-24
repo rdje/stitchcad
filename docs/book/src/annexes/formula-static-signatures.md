@@ -62,6 +62,10 @@ catalogs. D174 removes stale fixed totals: definitions and locations derive from
 
 ## Read-only reference plans
 
+| Tooling name | Role |
+| --- | --- |
+| `Refusal` | Shared local-profile validation exception, distinct from formula diagnostics |
+
 The signature, namespace and static-review helpers inspect their own bootstrap inputs before
 loading another helper. Each borrowed reference call freshly validates the complete source list:
 the shell reference, public helper chain, local profile and five normative book files (formula
