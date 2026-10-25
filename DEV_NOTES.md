@@ -45,6 +45,19 @@ That record crossed the fixed64-file resident history bound. Window11 retains al
 files (169756B) in a deterministic47725B payload; full source proof passes with no missing/extra.
 The previous ten manifests/catalogs/payloads stay exact; live public links move to the new catalog.
 Final -verified runtime captures supersede the earlier iteration logs; all three exit0/group gone.
+Post-commit fd7c41d: window_contract.py passes668 controls/647 logical reads, rc=0; a copied edit
+of the newest committed catalog passes ordinary inventory and fails the actual retention guard.
+Receipt: d217-hunt-window-committed.log in the protected startup audit. Earlier 667 lacked that
+post-commit guard arm. All diagnostic jobs consumed; production handoff still needs complete evidence.
+Next action must run from a standalone external terminal and interrupts sessions using this daemon.
+For the observed installed release, launch the restart CLI with unrelated descriptors closed:
+
+```bash
+python3 -I -B -c 'from pathlib import Path; import subprocess; subprocess.run([str(Path.home()/".codex/packages/app-server-daemon/releases/0.164.0-aarch64-apple-darwin/bin/codex"),"app-server","daemon","restart"],close_fds=True,check=True)'
+```
+
+Then resume this investigation, capture replacement descriptors before cleanup, and rerun the real
+handoff control. This tests recovery; it does not establish the original descriptor's historical owner.
 Promotion declined: bounded investigation evidence, with the unresolved cause explicitly owned.
 
 ## _(2026-10-25 UTC)_ — cleanup recheck still needs external runtime recovery

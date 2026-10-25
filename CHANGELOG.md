@@ -112,6 +112,11 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0234v — verify the committed D217 evidence checkpoint
+
+Newest committed archive guard refuses its controlled catalog edit; all668 window controls and
+647 logical reads pass. External descriptor-clearing restart command recorded for the next experiment.
+
 ## STITCHCAD-G1-0234 — instrument the D217 causal investigation
 
 .f.cleanup4.hunt: tracked native/lsof captures, two independently reproduced failure mechanisms,
