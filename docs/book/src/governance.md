@@ -484,36 +484,14 @@ Original addresses and prior windows stay available offline; runner evidence fol
 
 ### Ninth retention window
 
-Window9 captures56 complete raw files from76f9217 before owner-compiler records would exceed
-working history's unchanged64-file limit. The isolated fixture reconstructs537 logical records,
-including all prior eight windows, without Git or captured raw copies. Repeated Git archive/gzip
-bytes agree; the public source proof compares every captured full file to its named source commit.
-Installation copies and verifies all new bytes before retiring only the56 exact regular,
-single-linked originals. The master keeps its previous ordered window list; schema and caps stay.
-
-Whole completed producer receipts/input lesson, the oldest live ledger and the complete window8
-book transition are retained in new records before live growth. Original task proof prefixes and
-CH162's complete original navigation stay byte-exact in their retained records. Current live
-navigation uses equivalent window9 headings; current retrieval aliases sit outside exact task
-source intervals. Ordinary reads/materialization remain offline; optional comparison:
+Window9 retains56 complete files; its full transition/evidence narrative remains in the logical
+record docs/history/stitchcad-devnotes-part335.md. Existing identities, byte-exact retrieval and
+all fixed bounds remain unchanged. Retrieve or optionally compare the capture source:
 
 ```bash
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part335.md
 bash scripts/history_archive.sh prove-source window9
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part244.md
 ```
-
-At recording5f6f615, Archive28/CLI558 and all540 reads passed. The actual copied newest
-catalog prose edit keeps inventory valid; the committed guard refuses it with
-`ARCHIVE-RETENTION: REFUSED — committed retained file changed`. Both root/copied baselines
-pass, and all31 original root archive files/HEAD stay exact. Whole0194 task/lesson and0185
-ledger are retained before new receipts; retrieval then included542 logical records.
-Archive28/CLI561, all542 reads, publication45, coverage9 and ledger718+11+13 pass.
-The live part173 row remains available alongside its exact copy inside the whole0185 interval.
-Before owner receipts, whole c57 DEV navigation is retained in248. The live list/read contract
-still enumerates every identity; the complete prior table and its original links remain exact.
-Whole0196 receipts/lesson, completed n12 scopes and0187 ledger are retained before statement plans.
-
-This preserves maintenance evidence. Engine/grammar behavior and the400-commit cadence stay.
 
 ### Local producer profile
 
@@ -545,3 +523,19 @@ two whole lessons and the complete primary-profile narrative from committed76eaa
 front door uses the public archive list as its complete query contract, with an exact predecessor
 navigation link and recent-record table. Active task nodes stay live; public source/read/materialization
 and file-inventory comparisons verify retrieval without raising the fixed bounds.
+
+### Twelfth retention window
+
+Window12 captures53 complete records from f168eec before more numerical-feature history would
+exceed the unchanged64-file working limit. Its174350 original bytes are retained in a46666-byte
+content-addressed payload. The fresh repository-volume fixture has no Git directory or captured raw
+copies: public source comparison, read and materialization recover every captured file exactly.
+All11 prior window descriptors/catalogs/payloads stay unchanged. Installation verifies copied bytes
+before removing exactly53 unchanged regular, single-linked originals. Current links use window12
+anchors; logical read addresses and offline retrieval remain stable. No schema/cap change or new
+application dependency is introduced; whole closed scopes/journal/ledger remain retained records.
+
+```bash
+bash scripts/history_archive.sh prove-source window12
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part331.md
+```

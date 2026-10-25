@@ -343,11 +343,11 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5b.4a`
   Status: `done`
   Goal: whole-recipe proof/error/dependency API verified in0113; D152/D153 owned.
-  Acceptance: [complete original node](../history/stitchcad-devnotes-part315.md); [proof receipts](G1-SLICE-checked-recipes.md#acceptance-checklist).
+  Acceptance: [complete original node](../history/window12.md#stitchcad-devnotes-part315md); [proof receipts](G1-SLICE-checked-recipes.md#acceptance-checklist).
 - ID: `G1-SLICE.5b.4b`
   Status: `done`
   Goal: coupled whole-factory review verified in0114; D154 remains owned.
-  Acceptance: [complete original node](../history/stitchcad-devnotes-part315.md); [coupled proof](G1-SLICE-checked-recipes.md#coupled-whole-acceptance-checklist).
+  Acceptance: [complete original node](../history/window12.md#stitchcad-devnotes-part315md); [coupled proof](G1-SLICE-checked-recipes.md#coupled-whole-acceptance-checklist).
 - ID: `G1-SLICE.5b.4c`
   Status: `in_progress`
   Goal: D154 retain actual known ordinal on whole reference refusals without inventing local context.
@@ -362,13 +362,13 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5c.1`
   Status: `done`
   Goal: exact signed128-bit rational primitive; children .1/.2/.3 verified0244–0247.
-  Acceptance: [whole parent scope](../history/stitchcad-devnotes-part325.md); detailed child records below.
+  Acceptance: [whole parent scope](../history/window12.md#stitchcad-devnotes-part325md); detailed child records below.
 
 - ID: `G1-SLICE.5c.1.1`
   Status: `done`
   Goal: exact canonical signed128-magnitude value construction verified in0244.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_rational_contract.rs
-  Acceptance: whole scope and six proof boxes retained in [part314](../history/stitchcad-devnotes-part314.md).
+  Acceptance: whole scope and six proof boxes retained in [part314](../history/window12.md#stitchcad-devnotes-part314md).
 
 - ID: `G1-SLICE.5c.1.2`
   Status: `done`
@@ -381,72 +381,65 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal: exact cross-cancelled products/quotients and measured width refusals verified in0245.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/tests/formula_rational_contract.rs
-  Acceptance: whole scope/six proof boxes retained in [part316](../history/stitchcad-devnotes-part316.md).
+  Acceptance: whole scope/six proof boxes retained in [part316](../history/window12.md#stitchcad-devnotes-part316md).
 
 - ID: `G1-SLICE.5c.1.2.2`
   Status: `done`
   Goal: exact signed sums/differences, wider intermediate reduction and width refusals verified0246.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/tests/formula_rational_contract.rs;crates/sc-core/Cargo.toml;Cargo.lock
-  Acceptance: [whole scope and six proof boxes](../history/stitchcad-devnotes-part318.md).
+  Acceptance: [whole scope and six proof boxes](../history/window12.md#stitchcad-devnotes-part318md).
 
 - ID: `G1-SLICE.5c.1.3`
   Status: `done`
   Goal:34 independent Fraction fixtures/public four-operator replay verified0247; broader/platform .5c.4.
   Paths: docs/tasks/artifacts/formula_structure/rational_value_oracle.py;crates/sc-core/tests/fixtures/formula_rationals.tsv;crates/sc-core/tests/formula_rational_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part319.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part319md).
 
 - ID: `G1-SLICE.5c.2`
   Status: `done`
-  Goal: all typed rational operators and abs/min/max/clamp without implicit rounding.
-  Acceptance: dimension/scaling tables, exact fractional Count, signed length/area per-result
-  domains, literal input boundary distinct from result boundary, zero division and invalid clamp;
-  later cancellation never rescues an invalid completed intermediate. Raw formula turns preserved.
-  Children: .1 typed completed values/domains; .2 binary arithmetic/scaling; .3 unary/comparison;
-  .4 abs/min/max/clamp. Verification remains focused per feature; broad integration .5c.4.
+  Goal: all exact numeric operators/abs/min/max/clamp verified0248–0251.
+  Acceptance: [whole completed scope](../history/stitchcad-devnotes-part334.md). Children .1/.2/.3/.4 below; broad .5c.4 deferred.
 
 - ID: `G1-SLICE.5c.2.1`
   Status: `done`
   Goal: immutable completed numeric values/domains and normalized literal bridge verified0248.
   Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part320.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part320md).
 
 - ID: `G1-SLICE.5c.2.2`
   Status: `done`
   Goal: four exact quantity operators/fused ppm scaling and result domains verified0249.
   Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part321.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part321md).
 
 - ID: `G1-SLICE.5c.2.3`
   Status: `done`
   Goal: exact unary operators/total rational ordering/six same-kind comparisons verified0250.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_rational_contract.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part322.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part322md).
 
 - ID: `G1-SLICE.5c.2.4`
   Status: `done`
   Goal: exact abs/min/max/clamp with typed arity/kind/bound refusals verified0251.
   Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part323.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part323md).
 
 - ID: `G1-SLICE.5c.3`
   Status: `done`
-  Goal: explicit round_to and one binding conversion for all five numeric kinds plus Boolean.
-  Acceptance: exact ties away at authored step/binding, full i64 endpoints including MIN, wider
-  exact literal/temporary permitted, Count nonnegative and scalar bounds checked; later reads
-  use the returned stored integer. No Angle direction modulo for formula sweeps/equality.
-  Diagnostics retain binding name/kind/bounds/rounded measured result, without a silent clamp.
-  Verification: `pending`; Commit: `pending`.
+  Goal: quantization and one scalar/Boolean binding conversion verified0252–0253.
+  Acceptance: [whole completed scope](../history/stitchcad-devnotes-part334.md). Children .1/.2 below; broad .5c.4 deferred.
+
 - ID: `G1-SLICE.5c.3.1`
   Status: `done`
   Goal: exact explicit round_to with signed/fractional steps and final width/domain judgment verified0252.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part324.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part324md).
 
 - ID: `G1-SLICE.5c.3.2`
   Status: `done`
   Goal: one scalar binding conversion, both i64 endpoints/Boolean/exact refusal context verified0253.
   Paths: crates/sc-core/src/recipe/bound.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/lib.rs;crates/sc-core/Cargo.toml;crates/sc-core/tests/formula_binding_value_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part326.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part326md).
 
 - ID: `G1-SLICE.5c.4`
   Status: `pending`
@@ -473,7 +466,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal: exact root plan and25 independent fixtures verified0254; numerical decision holds full proof.
   Paths: docs/tasks/artifacts/formula_structure/root_value_oracle.py;crates/sc-core/tests/fixtures/formula_roots.tsv
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part327.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part327md).
 
 - ID: `G1-SLICE.5d.1.2`
   Status: `in_progress`
@@ -485,18 +478,25 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal: certified640-bit pi/arc plan and approved UI baseline/quality/full-agent-control records0257.
   Paths: docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py;crates/sc-core/tests/fixtures/pi640_certificate.tsv;knowledge-map/scripts/gen_knowledge_map.sh
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part331.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part331md).
 
 - ID: `G1-SLICE.5d.1.2.2`
   Status: `pending`
   Goal: exact trig/inverse interval/resource plan before code.
 
 - ID: `G1-SLICE.5d.1.2.2.h`
-  Status: `pending`
-  Goal:0259 pack history window12 before more retention at64 Markdown; retire whole oldest journal lesson.
-  Paths: docs/history/;.doctrine/history_archive/;DEV_NOTES.md
-  Acceptance: published pack/read contract, exact committed members/public read, immutable prior windows;
-  fixed caps/book/live sync; focused new-window check, no broad audit pivot.
+  Status: `done`
+  Goal:0259 pack window12; retain closed scopes/oldest journal/0258 ledger under fixed caps.
+  Paths: docs/history/;.doctrine/history_archive/;DEV_NOTES.md;docs/tasks/artifacts/history_archive/capture_window12.py
+- [x] REPRODUCE: capture_window12.py observes64 Markdown at f168eec, rc=0.
+- [x] ROOT CAUSE: same producer verifies53 raw records plus11 catalogs; working ceiling64, rc=0.
+- [x] FIX: deterministic payload/catalog/manifest; copy/verify/use before exactly53 checked removals.
+- [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/history_archive/capture_window12.py;
+  53 Git/materialize/public reads exact,11 prior windows unchanged, rc=0.
+- [x] NO REGRESSION: history_archive.py --root . prove-source window12:53 exact; verify-retention
+  archive: OK, rc=0. Broad controls deferred to integration/pre-push; no product Rust changed.
+- [x] LOCKSTEP:332–335/231 whole Git/public intervals, rc=0; live/book align.
+  Promotion declined: history-window decision already owns the unchanged contract.
 
 - ID: `G1-SLICE.5d.2`
   Status: `in_progress`
@@ -509,13 +509,13 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal: correctly rounded sqrt area/ratio with15 independent rows verified0255.
   Paths: crates/sc-core/src/recipe/roots.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_root_value_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part329.md).
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part329md).
 
 - ID: `G1-SLICE.5d.2.2`
   Status: `done`
   Goal: correctly rounded hypot/no materialized area with all25 root rows verified0256.
   Paths: crates/sc-core/src/recipe/roots.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_root_value_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part330.md); source provenance .5e.3.
+  Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part330md); source provenance .5e.3.
 
 - ID: `G1-SLICE.5d.3`
   Status: `in_progress`
@@ -527,17 +527,10 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5d.3.1`
   Status: `done`
-  Goal:0258 exact signed/full-turn arc_length using the certified pi endpoint.
+  Goal: exact signed/full-turn arc_length and23 independent cases verified0258.
   Paths: crates/sc-core/src/recipe/arc.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_arc_value_contract.rs
   Additional paths: docs/tasks/artifacts/formula_structure/arc_value_oracle.py;crates/sc-core/tests/fixtures/formula_arcs.tsv
-- [x] REPRODUCE: missing arc API at67f67d0, git source inspection0.
-- [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py
-  reproduces640-bit midpoint-exclusion certificate, rc=0 (compiled certificate test).
-- [x] FIX: exact signed product/rounding, actual kind/width/scalar errors; no dependency/modulo.
-- [x] ADDRESSED: local_environment.py cargo test --offline -p sc-core --lib
-  --test formula_arc_value_contract --test formula_numeric_contract:67/2/6 pass, rc=0;23 oracle rows.
-- [x] NO REGRESSION: same command numeric6/0 and library67/0, rc=0; broad .5d.4/pre-push, provenance .5e.3.
-- [x] LOCKSTEP:331/230 exact Git/public records, book/live align; decision implementation promoted.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part332.md); provenance .5e.3.
 - ID: `G1-SLICE.5d.3.2`
   Status: `pending`
   Goal: correctly rounded sin/cos/tan under .5d.1.2.2 plan.

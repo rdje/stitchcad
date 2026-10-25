@@ -66,18 +66,18 @@ coverage; .b.s owns shell/platform/raw book commands and .b.v integration. D156 
   Status: `done`
   Goal: verified; complete scope and proof retained303.
   Paths: docs/tasks/artifacts/formula_structure/static_recipe_contract.py
-  Acceptance: full record in [part303](../history/stitchcad-devnotes-part303.md).
+  Acceptance: full record in [part303](../history/window12.md#stitchcad-devnotes-part303md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.v.b1`
   Status: `done`
   Goal: verified; complete scope and proof retained303.
   Paths: docs/tasks/artifacts/ci_environment/python_bridge_contract.py
-  Acceptance: full record in [part303](../history/stitchcad-devnotes-part303.md).
+  Acceptance: full record in [part303](../history/window12.md#stitchcad-devnotes-part303md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.i`
   Status: `done`
   Goal: verified; complete scope and proof retained303.
-  Acceptance: full record in [part303](../history/stitchcad-devnotes-part303.md).
+  Acceptance: full record in [part303](../history/window12.md#stitchcad-devnotes-part303md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.h`
   Status: `done`
@@ -142,7 +142,7 @@ Whole original verification is retained with the [window7/bridge record](G1-SLIC
   Status: `done`
   Goal: Binding fixtures; sources and kinds in the watched ledger.
 
-Complete predecessor scopes/proofs retained in [part307](../history/stitchcad-devnotes-part307.md).
+Complete predecessor scopes/proofs retained in [part307](../history/window12.md#stitchcad-devnotes-part307md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a12`
   Status: `done`
@@ -282,7 +282,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal: verified; complete scope and proof retained303.
   Paths: docs/tasks/artifacts/book_publication/book_publication.py;docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py
-  Acceptance: full record in [part303](../history/stitchcad-devnotes-part303.md).
+  Acceptance: full record in [part303](../history/window12.md#stitchcad-devnotes-part303md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a23.3.2`
   Status: `done`
@@ -296,14 +296,14 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Paths: docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py
   Acceptance: original contracts/ten refusals/three guard reds and exact retained captures; full record retained308.
 
-[Complete publication records](../history/stitchcad-devnotes-part308.md).
+[Complete publication records](../history/window12.md#stitchcad-devnotes-part308md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a24`
   Status: `done`
   Goal: Map/handoff complete input/output plans, original contracts and native proof verified in0240.
   Paths: docs/tasks/artifacts/formula_structure/knowledge_map_contract.py;docs/tasks/artifacts/handoff/contract.py
   Paths: docs/tasks/artifacts/ci_environment/python_map_handoff_fixture_contract.py
-  Acceptance: complete scope and all six proof boxes retained exactly in [part309](../history/stitchcad-devnotes-part309.md).
+  Acceptance: complete scope and all six proof boxes retained exactly in [part309](../history/window12.md#stitchcad-devnotes-part309md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25`
   Status: `in_progress`
@@ -315,13 +315,13 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal: complete archive materialization/metadata authority and D224 verified in0242.
   Paths: scripts/history_archive.py;docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py
-  Acceptance: whole scope and all six proof boxes retained in [part312](../history/stitchcad-devnotes-part312.md).
+  Acceptance: whole scope and all six proof boxes retained in [part312](../history/window12.md#stitchcad-devnotes-part312md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.2`
   Status: `done`
   Goal: fixture authority/protected cleanup and focused native28 verified in0243; feature-first policy adopted.
   Paths: docs/tasks/artifacts/history_archive/history_archive_probes.py;docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
-  Acceptance: whole scope and six proof boxes retained in [part313](../history/stitchcad-devnotes-part313.md).
+  Acceptance: whole scope and six proof boxes retained in [part313](../history/window12.md#stitchcad-devnotes-part313md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification`
   Status: `pending`
@@ -352,7 +352,7 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal: D222 logical retained-record client and original Git provenance verified in0241.
   Paths: docs/tasks/artifacts/handoff/d217_probe.py;docs/tasks/artifacts/ci_environment/python_archive_client_contract.py
-  Acceptance: whole scope and all six proof boxes retained in [part310](../history/stitchcad-devnotes-part310.md).
+  Acceptance: whole scope and all six proof boxes retained in [part310](../history/window12.md#stitchcad-devnotes-part310md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a26`
   Status: `pending`
@@ -485,7 +485,7 @@ consume terminal results and prove exact source/full restored artifact before an
   Additional paths: docs/tasks/artifacts/ci_environment/python_producer_contract.py;docs/tasks/G1-SLICE-producer-proof.md
   Acceptance: complete predecessor scope/proof retained306; paths and completed ownership stay live.
 
-Whole completed native scopes retained in [part306](../history/stitchcad-devnotes-part306.md).
+Whole completed native scopes retained in [part306](../history/window12.md#stitchcad-devnotes-part306md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n06`
   Status: `done`
@@ -574,7 +574,7 @@ Complete committed verification retained in [native mode proof](G1-SLICE-runtime
   Paths: docs/tasks/artifacts/formula_structure/checked_recipe_mutations.py
   Acceptance: complete predecessor scope/proof retained306; paths and completed ownership stay live.
 
-Whole completed native scopes retained in [part306](../history/stitchcad-devnotes-part306.md).
+Whole completed native scopes retained in [part306](../history/window12.md#stitchcad-devnotes-part306md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n09`
   Status: `done`
@@ -691,7 +691,7 @@ Whole completed native scopes retained in [part306](../history/stitchcad-devnote
   Goal: statement owner complete input/output/native plans; original guards/artifact evidence.
   Paths: docs/tasks/artifacts/formula_structure/statement_owner_contract.py
 
-Complete predecessor scopes/proofs retained in [part307](../history/stitchcad-devnotes-part307.md).
+Complete predecessor scopes/proofs retained in [part307](../history/window12.md#stitchcad-devnotes-part307md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.n14`
   Status: `done`
@@ -744,14 +744,14 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
   Status: `done`
   Goal: unavailable-type diagnostic repaired; whole scope/proof retained303. D217 unresolved.
   Paths: scripts/handoff_census.py;docs/tasks/artifacts/handoff/contract.py;live/book records.
-  Acceptance: original complete record in [part303](../history/stitchcad-devnotes-part303.md).
+  Acceptance: original complete record in [part303](../history/window12.md#stitchcad-devnotes-part303md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt`
   Status: `done`
   Goal: D217 inheritance repair and actual host rollout verified in0236/0237.
   Paths: docs/tasks/artifacts/handoff/d217_probe.py;docs/tasks/artifacts/handoff/contract.py;docs/tasks/artifacts/handoff/run_handoff_probes.sh
   Paths: docs/tasks/artifacts/handoff/d217_daemon.py;docs/tasks/artifacts/handoff/d217_upstream.py;docs/tasks/artifacts/handoff/d217_daemon_fix.patch
-  Acceptance: complete original scope and all six proof boxes retained in [part311](../history/stitchcad-devnotes-part311.md).
+  Acceptance: complete original scope and all six proof boxes retained in [part311](../history/window12.md#stitchcad-devnotes-part311md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.xtask`
   Status: `proposed`

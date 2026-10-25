@@ -1096,7 +1096,7 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   DEV_NOTES0236 and protected recovery-20261025 audit retain source, commands and receipts.
 
 - **D220/D221** — closed by .a24; complete original reports and verified repairs retained
-  in [part136](../history/stitchcad-defects-part136.md).
+  in [part136](../history/window12.md#stitchcad-defects-part136md).
 
 
 - **D224** — committed archive guard treats unavailable Git metadata as an initial transition.

@@ -250,7 +250,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Status: `done`
   Goal: `Notch`, directed and dual-reference `Grainline`, per-edge derived `SeamAllowance`; profile
   parameters are identity references rather than invented defaults until G4 supplies parameter states.
-  Acceptance: [complete scope/verification](../history/stitchcad-devnotes-part328.md).
+  Acceptance: [complete scope/verification](../history/window12.md#stitchcad-devnotes-part328md).
   Children: `.3c.3a` (notches), `.3c.3b` (grainlines), `.3c.3c` (allowances).
 
 - ID: `G1-SLICE.3c.3a`
@@ -258,19 +258,19 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
   Goal: semantic `Notch` with stable piece/edge/parameter anchoring and symbolic Factory Profile
   bindings for style, sample/production depth/width and encoding. Bindings carry no scalar values;
   their validation is visibly `DeferredToG4`, rather than treating an unread profile as resolved.
-  Acceptance: [complete scope/verification](../history/stitchcad-devnotes-part328.md).
+  Acceptance: [complete scope/verification](../history/window12.md#stitchcad-devnotes-part328md).
 
 - ID: `G1-SLICE.3c.3b`
   Status: `done`
   Goal: directed `Grainline`, explicit parallel/off-grain angle binding and independent stripe/plaid
   references, with born-valid anchors and visible resolution/repair after topology edits.
-  Acceptance: [complete scope/verification](../history/stitchcad-devnotes-part328.md).
+  Acceptance: [complete scope/verification](../history/window12.md#stitchcad-devnotes-part328md).
 
 - ID: `G1-SLICE.3c.3c`
   Status: `done`
   Goal: per-edge derived allowance descriptors, authored width-parameter origin, explicit corner choice
   and symbolic per-profile inclusion policy; then close the marks/allowances parent.
-  Acceptance: [complete scope/verification](../history/stitchcad-devnotes-part328.md).
+  Acceptance: [complete scope/verification](../history/window12.md#stitchcad-devnotes-part328md).
 
 
 - ID: `G1-SLICE.3c.4`
@@ -718,7 +718,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal: v0.4 MCP admission policy and D218 verified in0231; runtime profiles remain unapproved.
   Paths: ROADMAP.md;docs/book/src/spec/command-layer.md;docs/tasks/artifacts/command_layer/run_command_layer_census.sh;docs/tasks/artifacts/command_layer/run_command_layer_probes.sh
   Additional paths: docs/tasks/artifacts/glossary/run_glossary_probes.sh;docs/book/src/build-and-checks.md;docs/book/src/annexes/ledger-fixtures.md;docs/book/src/annexes/formula-static-signatures.md
-  Acceptance: complete scope/six proof boxes retained in [part317](../history/stitchcad-devnotes-part317.md).
+  Acceptance: complete scope/six proof boxes retained in [part317](../history/window12.md#stitchcad-devnotes-part317md).
 
 - ID: `G1-SLICE.9.transport.stdio`
   Status: `pending`
@@ -833,7 +833,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5d.1.2.2.h` | `pending` | Pack history window12, then trig/inverse plan |
+| **next** | `G1-SLICE.5d.1.2.2` | `pending` | Correctly rounded trig/inverse interval plan |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
