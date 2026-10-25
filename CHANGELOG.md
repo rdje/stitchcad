@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0252 — exact explicit round_to quantization
+## STITCHCAD-G1-0253 — one scalar binding conversion and stored values
 
-.5c.3.1: authored same-kind fractional/signed steps, half-away ties and final reduced width/scalar
-checks, including valid256-bit quotient cancellation. Focused native target6/0; binding next.
+.5c.3.2: once-rounded signed i64/Boolean storage, both signed endpoints and actual name/kind/bound/
+rounded-value refusals. Focused native target3/0; stale crate overview repaired, execution follows.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -394,3 +394,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part223](docs/history/stitchcad-changelog-part223.md) | whole0250 | 4 lines, 269 bytes, sha256:c155719d… |
 
 | [part224](docs/history/stitchcad-changelog-part224.md) | whole0251 | 4 lines, 252 bytes, sha256:6b2e45d3… |
+
+| [part225](docs/history/stitchcad-changelog-part225.md) | whole0252 | 4 lines, 256 bytes, sha256:07c9e537… |

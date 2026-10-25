@@ -92,15 +92,15 @@ maps the four verified numeric boundaries to their independent controls. Individ
 The [coupled normalization review](../annexes/formula-literals.md#coupled-normalization-review) is complete.
 [Canonical expression serialization](../annexes/formula-literals.md#serialize-canonical-expression-identity)
 is implemented; ordered statements also have [explicit syntax inspection](../annexes/formula-statements.md#parse-an-ordered-recipe).
-Statement and whole-recipe identity are implemented and reviewed; bindings and evaluation remain
-pending. Reference instruments
+Statement and whole-recipe identity and scalar binding conversion are implemented; complete
+statement/recipe execution remains pending. Reference instruments
 supply no product execution claim.
 
 Formula angle bindings preserve sign and complete turns; equality does not apply direction modulo.
 For example, bound 360 degrees differs from zero and retains a full-turn sweep. Direction fields on
 entities normalize under [units §1.2](units-and-tolerances.md#12-angles-fixed-point-microdegrees).
 The [expert angle annex](../annexes/formula-syntax.md#reference-angle-conversion-and-direction-controls)
-records the verified D84 reference contract and its proof boundary; product numeric binding is pending.
+records D84 reference evidence. [Scalar binding conversion](../annexes/formula-rationals.md#one-binding-conversion-and-immutable-stored-values) is available; recipe execution follows.
 
 A `point` and an `edge` are values but not numbers: they may be arguments of the geometry selectors
 ([grammar §6.1](formula-language/grammar.md)) and nothing else, because only a drafting operation
@@ -172,8 +172,8 @@ cached result that differs from a fresh one is a defect.
 [Canonical rational construction and all four exact operators](../annexes/formula-rationals.md) are implemented.
 Completed numeric values enforce exact scalar domains and preserve normalized input integers.
 Binary/unary quantity operators and exact numeric comparisons implement scaling and result domains.
-Exact abs/min/max/clamp and explicit round_to are available. Binding, irrational functions and
-evaluator integration remain later work.
+Exact abs/min/max/clamp, round_to and scalar binding conversion are available. Irrational functions
+and evaluator integration remain later work.
 
 Literal input first converts once into its canonical internal integer, by
 [grammar §2](formula-language/grammar.md). That input conversion precedes expression arithmetic:

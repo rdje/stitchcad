@@ -14,7 +14,8 @@
 //! retain actual prior let declarations; closed operator/built-in/selector kind signatures and typed wanted-kind catalogs are available.
 //! Bounded initial-scope expression proofs retain kinds, typed refusals and sourced dependencies.
 //! Current scopes certify actual statements and both assertion operands. Whole-recipe proofs
-//! check every statement before exposing complete sourced dependencies; numerical evaluation follows.
+//! check every statement before exposing complete sourced dependencies. Exact numeric values,
+//! operators, authored quantization and binding conversion are available; recipe execution follows.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -39,6 +40,9 @@ pub use rational::{FormulaRational, FormulaRationalError};
 
 mod numeric;
 pub use numeric::{FormulaNumericError, FormulaNumericValue};
+
+mod bound;
+pub use bound::{FormulaBindingValueError, FormulaBindingValueRule, FormulaBoundValue};
 
 mod normalized;
 pub use normalized::{

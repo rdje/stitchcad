@@ -70,3 +70,6 @@ formula exact rational construction	annexes/formula-rationals.md	crates/sc-core/
 formula rational construction refusal	annexes/formula-rationals.md	crates/sc-core/src/recipe/rational.rs	FormulaRationalError	G1-SLICE.5c.1.1	4.2
 formula completed numeric values	annexes/formula-rationals.md	crates/sc-core/src/recipe/numeric.rs	FormulaNumericValue	G1-SLICE.5c.2.1	4.2
 formula numeric value refusals	annexes/formula-rationals.md	crates/sc-core/src/recipe/numeric.rs	FormulaNumericError	G1-SLICE.5c.2.1	4.2
+formula stored scalar values	annexes/formula-rationals.md	crates/sc-core/src/recipe/bound.rs	FormulaBoundValue	G1-SLICE.5c.3.2	4.2
+formula binding value refusal	annexes/formula-rationals.md	crates/sc-core/src/recipe/bound.rs	FormulaBindingValueError	G1-SLICE.5c.3.2	4.2
+formula binding value rules	annexes/formula-rationals.md	crates/sc-core/src/recipe/bound.rs	FormulaBindingValueRule	G1-SLICE.5c.3.2	4.2

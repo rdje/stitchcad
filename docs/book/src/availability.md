@@ -39,7 +39,7 @@ checks actual scoped operands and annotations. [Coupled static review](annexes/f
 verifies those interfaces against independent rules and the actual reference.
 [Whole recipe acceptance](annexes/formula-checked-recipes.md) returns a complete immutable static
 proof with ordered source dependencies. Independent whole-factory review is complete;
-remaining numeric functions, binding and execution remain pending.
+remaining numeric functions and recipe execution remain pending.
 
 [Canonical rational values](annexes/formula-rationals.md) can now be constructed and reduced exactly,
 with full 128-bit component magnitudes, independent sign and a typed zero-denominator refusal.
@@ -48,8 +48,9 @@ Completed numeric values now enforce exact length/area limits and nonnegative Co
 normalized-literal bridge. All four quantity operators now apply exact ppm scaling and result domains.
 Exact unary negation/square and all six numeric comparisons are available, preserving fractional
 values and raw angle turns. Exact abs/min/max/clamp are available with typed argument/bound refusals.
-Explicit round_to is also available at exact same-kind steps. Binding, irrational functions and
-recipe evaluation remain the next stages.
+Explicit round_to is available at exact same-kind steps. Binding value conversion now rounds once,
+checks signed i64 storage and preserves Boolean kind. Irrational functions and complete statement/
+recipe execution remain the next stages.
 
 ## Planned workflows
 

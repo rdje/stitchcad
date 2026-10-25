@@ -9,8 +9,9 @@
 //! Shared [`name::MachineToken`] validates stable ASCII identifiers without deriving display labels.
 //! Borrowed formula lexing/expression/ordered-statement syntax, literal normalization and canonical
 //! expression/statement/recipe identity, sourced metadata and initial namespaces, exact reads, ordered scopes, operator/built-in/selector signatures and typed wanted catalogs are
-//! implemented in [`recipe`]. Whole expression/name/type validation, evaluation and the command bus follow.
-//! The core cross-builds to `wasm32-unknown-unknown`.
+//! implemented in [`recipe`]. Complete static recipe validation, exact numeric operators and binding
+//! conversion are available; evaluation and the command bus follow. New numeric features carry focused
+//! native evidence; broader/platform verification remains owned by G1-SLICE.5c.4 and the pre-push gate.
 //!
 //! What lands here, and when:
 //!
@@ -19,14 +20,14 @@
 //! | `ontology` | identity, exact parameters, point/range topology resolution and repairs; structural pieces/copy plans, semantic notches, grainlines, allowances, construction/closure/pocket intent and sewing graphs; all four structural families complete | `G1-SLICE.3a`/`.3b`/`.3c` |
 //! | `value` | canonical length declarations with authored state/source/provenance; no unknown fallback or cached derived result | `G1-SLICE.4a.1` |
 //! | `name` | immutable ASCII lower-snake tokens, refusing grammar keywords; binding authority stays with the namespace owner | `G1-SLICE.4a.2a` |
-//! | `recipe` | borrowed syntax/spans/limits, whole recipe literal inputs and canonical identity; sourced metadata and checked initial namespaces and exact reads; ordered validation/evaluation follow | `G1-SLICE.5a`, `.5b.2a/.2b/.2c.2`; remaining `G1-SLICE.5` |
+//! | `recipe` | syntax/identity, sourced metadata, whole static recipe checking, exact numeric operators and binding conversion; execution follows | `G1-SLICE.5a/.5b/.5c`; remaining `G1-SLICE.5` |
 //! | `command` | the typed command bus: atomic groups, preview/commit, revision preconditions, idempotency, undo granularity | `G0-CONTRACT.17`, `G1-SLICE.6` |
 //! | `uncertainty` | known / assumed / unknown / preference / derived states and their artifact effects | `G0-CONTRACT.4`, `G4-PROFILES.7` |
 //!
 //! Entity numerical storage uses [`sc_units`]: lengths are signed `i64` micrometres and entity
 //! directions are normalized `i64` microdegrees. Formula literals instead retain unsigned `u128`
-//! canonical magnitudes with separate unary syntax and raw angle turns. Future numeric bindings
-//! must fit signed `i64`; tolerance-aware numerical evaluation remains a separate contract.
+//! canonical magnitudes with separate unary syntax and raw angle turns. Numeric binding conversion
+//! checks signed `i64` after one rounding; tolerance-aware recipe execution remains a separate contract.
 
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
@@ -36,7 +37,7 @@ pub mod ontology;
 /// Stable machine identifiers, distinct from localized display names and scalar text values.
 pub mod name;
 
-/// Formula syntax, inputs, identity, sourced metadata and initial namespaces; ordered validation follows.
+/// Formula syntax/identity, static checking, exact numeric operations and binding conversion.
 pub mod recipe;
 
 /// Canonical length declarations with authored state and required provenance references.

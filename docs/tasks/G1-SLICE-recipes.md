@@ -361,16 +361,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 ### Exact arithmetic and bindings
 - ID: `G1-SLICE.5c.1`
   Status: `done`
-  Goal: exact signed rational value primitive with positive denominator and reduced width128.
-  Acceptance: full unsigned magnitudes/signs, zero, reduction and cancellation before width
-  judgment, overflow-safe bounded workspace and typed numerator/denominator measured refusal.
-  Independent arbitrary-precision oracle checks arithmetic; no dependency/license/WASM guess.
-  Director2026-10-25: next independent product feature after the dirty0243 slice is committed.
-  D154/D156 and remaining audit verification stay owned; they do not block this pure primitive.
-  Start with a bounded implementation slice and one affected test; broad integration stays deferred.
-  Children: .1 canonical value construction; .2 bounded arithmetic workspace/reduced-width refusal;
-  .3 independent oracle integration. Parent stays open until all are implemented.
-  Verification: focused native target4/0 with34 Fraction rows in0247; broader/platform .5c.4.
+  Goal: exact signed128-bit rational primitive; children .1/.2/.3 verified0244–0247.
+  Acceptance: [whole parent scope](../history/stitchcad-devnotes-part325.md); detailed child records below.
 
 - ID: `G1-SLICE.5c.1.1`
   Status: `done`
@@ -437,7 +429,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part323.md).
 
 - ID: `G1-SLICE.5c.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: explicit round_to and one binding conversion for all five numeric kinds plus Boolean.
   Acceptance: exact ties away at authored step/binding, full i64 endpoints including MIN, wider
   exact literal/temporary permitted, Count nonnegative and scalar bounds checked; later reads
@@ -446,28 +438,32 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5c.3.1`
   Status: `done`
-  Goal:0252 exact round_to at authored same-kind step without intermediate width/storage refusals.
+  Goal: exact explicit round_to with signed/fractional steps and final width/domain judgment verified0252.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Own bounded wide quotient/half-away magnitude rounding and final reduced result. Zero steps
-  refuse formula_division, negative steps preserve the same multiples where their kind admits them.
-  Preserve signed ties/canonical zero/fractional steps, no ppm scaling of the step quotient; final
-  width/scalar checks occur after complete quantization. No source evaluation/provenance claim.
-  One affected numeric native target; broad/platform .5c.4/pre-push. Own completed task/ledger
-  retention323/224 and book/live/frontier sync; commit before binding conversion.
-
-
-- [x] REPRODUCE / ISSUE:dda64a5 has no round_to value method, source inspection rc=0.
-- [x] ROOT CAUSE:256-bit quotient may yield valid final multiple; cargo test --offline -p sc-core
-  --test formula_numeric_contract:6 passed/0 failed, rc=0.
-- [x] FIX: bounded wide rounding/final reduction, signed steps, canonical zero and exact refusals.
-- [x] ADDRESSED: same native target proves ties/steps/final widths/domains,6/0, rc=0.
-- [x] NO REGRESSION: same target retains earlier quantity/built-in cases,6/0, rc=0; broad work .5c.4.
-- [x] LOCKSTEP: whole323/224 Git/public bytes exact, rc=0; book/live/frontier aligned.
-  promotion: declined (established half-away/numeric contract/focused policy).
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part324.md).
 
 - ID: `G1-SLICE.5c.3.2`
-  Status: `pending`
+  Status: `done`
   Goal: one signed i64 binding conversion for numeric values plus typed Boolean/name context.
+  Own0253: immutable stored numeric/Boolean values, borrowed actual binding-name errors and focused
+  native target; full i64 endpoints, unsigned-magnitude half-away and honest rounded-value witnesses.
+  Paths: crates/sc-core/src/recipe/bound.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/lib.rs;crates/sc-core/Cargo.toml;crates/sc-core/tests/formula_binding_value_contract.rs
+  Conversion returns stored integer for later reads; no namespace mutation/rebinding/provider claim.
+  Defect owned/P2/fix now: crate lib.rs/Cargo metadata say whole checking is future; lib claims WASM
+  currency; reproduce by reading its header against completed .5b proofs/new native-only features.
+  Impact: stale API docs misstate available behavior/evidence. Update lib/recipe module summaries.
+  One affected binding native target; broad/platform .5c.4/pre-push. Retain complete scopes/ledger
+  324/325/225 under fixed caps; book/API map/live sync and commit before further features.
+
+
+- [x] REPRODUCE / ISSUE:a9d86c4 lacks bound storage; crate overview drift observed, rc=0.
+- [x] ROOT CAUSE: signed storage follows unsigned magnitude rounding; cargo test --offline -p
+  sc-core --test formula_binding_value_contract:3 passed/0 failed, rc=0.
+- [x] FIX: private integer/Boolean storage, actual name/kind/bounds/full rounded witness; overview repaired.
+- [x] ADDRESSED: same native target proves endpoints/tie neighbors/full-width errors,3/0, rc=0.
+- [x] NO REGRESSION: same target retains numeric/input/raw-turn/later-read integration,3/0, rc=0.
+- [x] LOCKSTEP:324/325/225 source/public bytes exact, rc=0; book/API/live synced. Broad/platform .5c.4.
+  promotion: declined (established binding/numeric/focused-check policy).
 
 - ID: `G1-SLICE.5c.4`
   Status: `pending`
@@ -475,6 +471,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: D83/D84/D95 product obligations match independent rational and numeric boundary
   fixtures, all roles and intermediate-first-excess cases; actual compiled faults discriminate.
   Existing curated Python reference evidence is separate from production arithmetic proof.
+  Director focused policy: defer this broad campaign to full evaluator/G1 integration or pre-push;
+  it does not block the next independent feature family .5d.
   Verification: `pending`; Commit: `pending`.
 
 ### Irrational functions

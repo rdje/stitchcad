@@ -58,7 +58,7 @@ round at their declared quantum without direction modulo, and equality compares 
 Thus a formula sweep of 360 degrees differs from zero even though both give the same direction.
 
 This is the director's D84 clarification. The normalized `sc-units::Angle` represents a direction;
-product formula storage/evaluation remains pending. The reference verifies signed inverse-trig
+formula scalar storage conversion is available; recipe evaluation remains pending. The reference verifies signed inverse-trig
 outputs, raw binding/equality and full/signed/multi-turn sweeps; D84's reference review is complete. The
 [angle annex](../annexes/formula-syntax.md#reference-angle-conversion-and-direction-controls) states
 current verification boundaries.

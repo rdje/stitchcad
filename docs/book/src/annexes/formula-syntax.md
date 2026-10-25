@@ -359,7 +359,7 @@ it to zero. `dir` still normalizes by its explicit function contract. The durabl
 G1-SLICE.5a.3b.3c.2 removes only outer inverse modulo and updates three negative inverse rows in the
 42-row oracle set to signed principal results. The signed binding/equality/sweep controls below
 verify D84 separately from D83's numeric boundaries; the final review below closes both prerequisites.
-Product numeric binding/evaluation is pending.
+Scalar binding conversion is available; complete statement/recipe evaluation remains pending.
 
 ## Reference rational-value boundaries
 

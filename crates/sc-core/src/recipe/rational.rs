@@ -171,6 +171,15 @@ impl FormulaRational {
         }
     }
 
+    /// Total internal construction of a rounded integer, including all unsigned magnitude bits.
+    pub(super) const fn from_integer_magnitude(numerator: u128, negative: bool) -> Self {
+        Self {
+            numerator,
+            denominator: 1,
+            negative: negative && numerator != 0,
+        }
+    }
+
     /// The unsigned numerator magnitude of the reduced form.
     #[must_use]
     pub const fn numerator_magnitude(self) -> u128 {

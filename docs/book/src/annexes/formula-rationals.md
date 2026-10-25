@@ -173,7 +173,7 @@ The normalized-literal bridge performs no new conversion. For example, a normali
 is already zero ppm; importing it cannot recover a hidden fraction. A normalized 720 deg input
 remains 720,000,000 microdegrees. The error contains actual kind/value/bounds; expression
 and statement context belongs to later evaluator integration. Scalar refusals retain the actual
-constructor/operator token. Binding and evaluator integration remain pending features.
+constructor/operator token. Whole-statement binding/evaluator integration remain pending features.
 
 ### Exact quantity operators
 
@@ -296,6 +296,69 @@ then its scalar domain is checked. Maximum128-bit integer rounded to step2 repor
 bits; length1,000,000,000 rounded to step6 reports exact out-of-domain1,000,000,002 micrometres.
 Signed complete angle turns survive. Source-bearing explicit-quantization provenance and tolerance
 rules are still owned by later evaluator integration; this value API does not claim that proof.
+
+### One binding conversion and immutable stored values
+
+FormulaBoundValue converts an admitted completed numeric value into its signed i64 storage form.
+It uses the shared unsigned-magnitude half-away rounding primitive, then applies signed storage
+limits. This order preserves both endpoints, including i64 MIN, without narrowing a wide positive
+literal child before unary negation. Length/area already satisfy their tighter exact integer scalar
+bounds; nearest-integer rounding cannot cross those bounds. Count remains nonnegative.
+
+| API | Available behavior |
+| --- | --- |
+| FormulaBoundValue | Private numeric integer/kind or Boolean payload |
+| from_numeric | One binding rounding/storage check with an actual supplied name |
+| from_boolean | Store Boolean directly without numeric conversion |
+| kind | Inspect the stored numeric or Boolean kind |
+| numeric_integer | Returned i64 integer, or None for Boolean |
+| boolean | Returned Boolean, or None for numeric kinds |
+| FormulaBindingValueError | Borrowed actual name, kind, typed rule and diagnostic family |
+| FormulaBindingValueRule | Rounding refusal or signed Storage bounds and exact rounded witness |
+| name / rule | Inspect the supplied MachineToken or typed refusal |
+| Storage | Inclusive minimum/maximum and measured rounded integer |
+| Rounding | Propagate the shared UnitError without substituting a fallback |
+
+```rust
+use sc_core::{name::MachineToken, recipe::{FormulaBoundValue, FormulaKind,
+    FormulaNumericValue, FormulaRational}};
+
+let name = MachineToken::new("saved_width")?;
+let exact = FormulaNumericValue::new(FormulaKind::Length, FormulaRational::new(1, 2, false)?)?;
+let stored = FormulaBoundValue::from_numeric(&name, exact)?;
+assert_eq!(stored.numeric_integer(), Some(1));
+let read = FormulaNumericValue::new(stored.kind(), FormulaRational::from_signed_integer(1))?;
+assert_eq!(read.checked_add(read)?.rational(), FormulaRational::from_signed_integer(2));
+
+let condition = FormulaBoundValue::from_boolean(true);
+assert_eq!(condition.kind(), FormulaKind::Boolean);
+assert_eq!(condition.boolean(), Some(true));
+assert_eq!(condition.numeric_integer(), None);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Subsequent reads must use the returned stored integer. Reusing the pre-binding half in this example
+would produce the wrong later sum. An exact temporary wider than i64 can cancel before binding;
+converting the oversized temporary itself refuses. Angle bindings preserve complete signed turns.
+Boolean stays Boolean and has no numeric integer payload.
+
+A Storage refusal is formula_domain and retains the actual borrowed MachineToken, kind, inclusive
+storage bounds and exact once-rounded measured integer. The witness keeps full128-bit unsigned
+magnitude and sign, so even a value beyond i128's positive range is reported without wrapping.
+Count's storage interval is zero through i64 MAX; the other numeric kinds use i64 MIN through MAX.
+No namespace mutation or partially stored value occurs. These APIs perform conversion only:
+annotation checking, reserved/repeated-name authority, environment publication, source/provenance
+and complete statement/recipe execution remain separate integration responsibilities.
+
+Check the binding boundary with its affected native target:
+
+```bash
+python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_binding_value_contract
+```
+
+The focused target passes three tests covering all numeric kinds, signed endpoint/tie neighbors,
+full-width refusal witnesses, the direct positive literal child beneath unary i64 MIN, raw turns,
+returned-integer reads and Boolean separation. Broad/platform verification remains deferred.
 
 Check this feature with the affected native target:
 
