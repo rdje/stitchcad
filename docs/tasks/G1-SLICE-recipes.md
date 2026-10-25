@@ -471,19 +471,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5d.1.1`
   Status: `done`
-  Goal:0254 exact root plan and independent fixtures before code.
+  Goal: exact root plan and25 independent fixtures verified0254; numerical decision holds full proof.
   Paths: docs/tasks/artifacts/formula_structure/root_value_oracle.py;crates/sc-core/tests/fixtures/formula_roots.tsv
-  Own decision/book/fixtures/retention326/226 and true-value float clarification.
-  Acceptance: [whole algorithm/bounds/oracle plan](../decisions/decision_numerical-contract-fixed-point.md).
-  Production roots remain .5d.2; transcendental algorithms .5d.1.2, broad/platform .5d.4/pre-push.
-
-- [x] REPRODUCE / ISSUE: root functions lack a certified algorithm; source inspection0.
-- [x] ROOT CAUSE: exact midpoint/bounds required; pure oracle CLI25 rows/authored checks, rc=0.
-- [x] FIX: integer plan and independent isqrt/Fraction fixtures, no production claim.
-- [x] ADDRESSED: oracle CLI25 expected rows/authored checks pass, rc=0.
-- [x] NO REGRESSION: same CLI25 rows, rc=0; production unchanged, broad checks .5d.4.
-- [x] LOCKSTEP:326/226 Git/public bytes exact, rc=0; book/pointers aligned.
-  promotion: numerical decision gains root-family proof/oracle plan.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part327.md).
 
 - ID: `G1-SLICE.5d.1.2`
   Status: `pending`
@@ -491,14 +481,32 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: all .5d.1 obligations for sin/cos/tan/atan/atan2/arc_length before .5d.3 code.
 
 - ID: `G1-SLICE.5d.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: correctly rounded sqrt(area/ratio) and hypot(length,length) under .1's reviewed algorithm.
   Acceptance: negative root refusal, exact square/tie neighbors, full input domains, true rounded
   quantum and hypot without materializing an out-of-domain area; irrational provenance retained.
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5d.2.1`
-  Status: `pending`
-  Goal: exact sqrt area/ratio; .5d.1.1 plan.
+  Status: `done`
+  Goal:0255 correctly rounded sqrt area/ratio via the recorded exact midpoint/bisection plan.
+  Paths: crates/sc-core/src/recipe/roots.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_root_value_contract.rs
+  Own bounded private integer root, metadata signature reuse, actual negative/kind refusals and
+  existing25-row root fixture integration (sqrt subset now, hypot .2 next). Ratio returns ppm;
+  no intermediate float/width/storage guess. Only completed rounded scalar result is checked.
+  Source-call provenance remains .5e.3; no evaluator/irrational-family closure claim. One focused
+  native root target; broad/platform/mutation .5d.4/pre-push. Own complete327/328/227 retention,
+  preserving four closed marks/allowance nodes/paths under caps; sync book/live before hypot.
+
+- [x] REPRODUCE / ISSUE:5fae1cb supplies root plan/fixtures but no production sqrt, inspection0.
+- [x] ROOT CAUSE: exact midpoint and finite integer root avoid approximation/tie errors; cargo test
+  --offline -p sc-core --test formula_root_value_contract:2 passed/0 failed, rc=0.
+- [x] FIX: bounded bisection/ratio scale and metadata signatures, actual negative/kind refusals.
+- [x] ADDRESSED: same native target replays15 independent sqrt rows and wrong-kind cases,2/0, rc=0.
+- [x] NO REGRESSION: same target exercises completed values/full widths;15 rows/2 tests, rc=0;
+  earlier arithmetic unchanged, broad/platform .5d.4/pre-push, provenance .5e.3.
+- [x] LOCKSTEP:327/328/227 whole Git/public bytes exact, rc=0; four legacy IDs/Goals retained,
+  book/live aligned and stale quantity-follow prose fixed. promotion: numerical decision gains sqrt scope.
+
 - ID: `G1-SLICE.5d.2.2`
   Status: `pending`
   Goal: exact hypot; source provenance .5e.3.

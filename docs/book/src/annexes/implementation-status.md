@@ -37,6 +37,7 @@ requires the named contracts and later proof owners.
 | Complete recipe kind proof | §4.1; G1 | sc-core recipe; G1-SLICE.5b.4a | [Atomic static acceptance](formula-checked-recipes.md) |
 | Canonical rational values and four operators | §4.2; G1 | sc-core recipe; G1-SLICE.5c.1.1/.2 | [Exact value kernel](formula-rationals.md); typed execution follows |
 | Exact numeric values/operators/binding conversion | §4.2; G1 | sc-core recipe; G1-SLICE.5c.2/.3 | [Exact and stored values](formula-rationals.md); full execution follows |
+| Correctly rounded sqrt | §4.2; G1 | sc-core recipe; G1-SLICE.5d.2.1 | [Exact root values](formula-rationals.md#correctly-rounded-sqrt-and-planned-hypot); hypot/provenance follow |
 | Formula wanted-kind catalogs | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3c.1 | [Typed expected rules](formula-wanted-signatures.md) |
 
 Reference [static signature evidence](formula-static-validation.md) covers the complete finite

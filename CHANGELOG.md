@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0254 — bounded exact root-family plan and oracle fixtures
+## STITCHCAD-G1-0255 — correctly rounded sqrt area/ratio value kernel
 
-.5d.1.1: exact squared-midpoint rounding, finite workspace/bisection proof and25 independent
-math.isqrt/Fraction fixtures before sqrt/hypot code. Transcendental algorithms remain separately owned.
+.5d.2.1: exact integer bisection/midpoint algorithm, area/ppm scaling, typed negative/kind refusals.
+Focused native target2/0 with15 independent rows; hypot and source-bearing provenance remain later work.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -398,3 +398,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part225](docs/history/stitchcad-changelog-part225.md) | whole0252 | 4 lines, 256 bytes, sha256:07c9e537… |
 
 | [part226](docs/history/stitchcad-changelog-part226.md) | whole0253 | 4 lines, 274 bytes, sha256:533a1da7… |
+
+| [part227](docs/history/stitchcad-changelog-part227.md) | whole0254 | 4 lines, 274 bytes, sha256:df952d81… |

@@ -131,6 +131,8 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | ScalarDomain | formula_domain with actual operation, kind, exact value, minimum and optional maximum |
 | BinaryDimension | formula_dimension with the actual operator and left/right kinds |
 | UnaryDimension | formula_dimension with the actual unary operator and operand kind |
+| BuiltinInputKind | formula_dimension with built-in, argument and actual kind; signatures retain wanted alternatives |
+| NegativeSquareRoot | formula_domain with the actual negative area/ratio kind and exact value |
 | BuiltinArity | formula_parse with the empty min/max built-in and actual count |
 | BuiltinDimension | formula_dimension with built-in, zero-based argument, wanted and actual kinds |
 | InvalidClamp | formula_domain with shared kind and exact low/high bounds |
@@ -148,6 +150,7 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | checked_min / checked_max | One or more homogeneous numeric operands; returns an existing operand |
 | checked_clamp | Explicit inclusive exact bounds of the same kind |
 | checked_round_to | Authored same-kind step, nearest exact multiple with ties away from zero |
+| checked_sqrt | Correctly rounded area-to-length or ratio-to-ratio square root |
 
 Length and area use inclusive signed limits of 10⁹ micrometres and 10¹⁸ square micrometres.
 The check compares the exact fraction with the bound: limit + 1/10 refuses even if binding would
@@ -379,7 +382,7 @@ python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --
 The focused public target covers construction and all four exact operations, including cancellation
 before width checks, typed numerator/denominator witnesses and zero-divisor priority. Native execution
 passes five tests, including 34 rows derived independently with Python Fraction arithmetic. The
-primitive is complete; quantity-aware operations follow. Broad/platform work remains .5c.4/pre-push.
+primitive and quantity-aware operations are available as described above. Broad/platform work remains .5c.4/pre-push.
 
 The fixture oracle imports no production arithmetic. Reproduce its expected rows with:
 
@@ -392,11 +395,29 @@ native target above. The rows cover full magnitudes, signs, canonical zero, wide
 zero division and fully reduced numerator/denominator width refusals. This is a focused comparison;
 it does not claim exhaustive arithmetic or platform verification.
 
-## Planned exact sqrt and hypot
+## Correctly rounded sqrt and planned hypot
 
-These functions are not implemented yet. The root-family algorithm is recorded before code in the
-numerical fixed-point decision, under G1-SLICE.5d.1.1. It uses exact integers with the existing private
-bigint dependency. Transcendental functions retain a separate pending algorithm obligation.
+checked_sqrt is available for area and ratio. Area returns length; ratio returns ratio in ppm.
+Negative inputs return NegativeSquareRoot with their actual kind and exact value. Other kinds,
+including zero length/angle/Count, return BuiltinInputKind with their actual argument/kind. The
+named built-in retains the complete wanted signature alternatives. The result is rounded at the function quantum;
+there is no intermediate approximation or i64 binding conversion.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational};
+
+let area = FormulaNumericValue::new(FormulaKind::Area, FormulaRational::new(9, 4, false)?)?;
+let length = area.checked_sqrt()?;
+assert_eq!(length.kind(), FormulaKind::Length);
+assert_eq!(length.rational(), FormulaRational::from_signed_integer(2)); // sqrt(9/4) = 1.5, a tie
+
+let quarter = FormulaNumericValue::new(FormulaKind::Ratio, FormulaRational::from_signed_integer(250_000))?;
+assert_eq!(quarter.checked_sqrt()?.rational(), FormulaRational::from_signed_integer(500_000));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The recorded root-family algorithm uses exact integers with the existing private bigint dependency.
+Hypot remains the next feature. Transcendental functions retain a separate pending algorithm obligation.
 
 For z=N/D>=0, find k=floor(sqrt(floor(N/D))) by bounded integer bisection. This is floor(sqrt(z))
 because comparing an integer square with z is equivalent to comparing it with floor(z). Round up
@@ -405,7 +426,7 @@ squared midpoint instead of approximating a root. Bisection halves a finite inte
 has no numerical convergence guess.
 
 Area sqrt uses its square-micrometre fraction directly. Ratio sqrt multiplies its internal ppm
-radicand by1,000,000, so the integer root returns ppm. Negative root operands refuse. Hypot forms
+radicand by1,000,000, so the integer root returns ppm. Negative root operands refuse. Planned hypot will form
 the exact squared-length sum privately and roots it without creating an area value: a sum exceeding
 the area domain can still have an admitted rounded length. Only the rounded function result is
 checked against its scalar domain; no binding narrowing occurs inside the function.
@@ -415,10 +436,16 @@ Hypot's raw numerator/denominator need at most513/512 bits; the conservative mid
 needs at most576 bits. These are workspace bounds, not additional language limits. Planned focused
 checks include exact half squares and rational neighbors, full128-bit ratio, zero/signed lengths,
 Pythagorean cases and squared sums above the area domain. Source-call provenance and broad/platform
-proof remain later owned integration work. No root implementation or complete numeric certificate
-is claimed by this plan.
+proof remain later owned integration work. Every sqrt call, including perfect roots, must retain its
+contribution in the later source-bearing evaluator. This source-free value API supplies no such proof.
 
 The pure fixture oracle is already retained at docs/tasks/artifacts/formula_structure/root_value_oracle.py.
 It uses Python math.isqrt and Fraction arithmetic;25 expected rows live in
-crates/sc-core/tests/fixtures/formula_roots.tsv, ready for the production target. Authored half-square,
-full-width and over-domain values check the oracle's role. The production functions are still pending.
+crates/sc-core/tests/fixtures/formula_roots.tsv. The focused native target passes two tests, including
+all15 sqrt rows; ten hypot rows await that feature. Exact midpoint neighbors beyond ordinary float
+precision, full128-bit ratio, negative inputs and actual kind refusals are covered. Authored half-square,
+full-width and over-domain values check the oracle's role; no broad/platform pass is claimed.
+
+```bash
+python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_root_value_contract
+```

@@ -113,3 +113,6 @@ squares and rational neighbors, including near ties beyond ordinary float precis
 Ratio, signed/zero hypot and maximum-length cases whose squared sum exceeds the area domain.
 Broader/platform/mutation work stays `.5d.4`/pre-push. Source-free numeric kernels do not attach
 provenance; later evaluator `.5e.3` must retain every root-call contribution, including perfect roots.
+
+Implementation0255: checked_sqrt now follows this plan for area/ratio; focused native2/0 includes
+15 independent fixture rows. Hypot and source-bearing evaluator provenance remain later owners.

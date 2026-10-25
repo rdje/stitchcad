@@ -1,7 +1,7 @@
 //! Completed numeric values in exact internal units, before binding or recipe execution.
 use super::{
-    FormulaBinaryOperator, FormulaBuiltin, FormulaKind, FormulaLiteral, FormulaLiteralKind,
-    FormulaRational, FormulaRationalError, FormulaUnaryOperator,
+    FormulaBinaryOperator, FormulaBuiltin, FormulaBuiltinOperand, FormulaKind, FormulaLiteral,
+    FormulaLiteralKind, FormulaRational, FormulaRationalError, FormulaUnaryOperator,
 };
 use core::fmt;
 use sc_units::{MAX_AREA_UM2, MAX_LENGTH_UM};
@@ -9,6 +9,22 @@ use sc_units::{MAX_AREA_UM2, MAX_LENGTH_UM};
 /// A typed refusal at the completed numeric-value boundary; source context belongs to evaluation.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FormulaNumericError {
+    /// A built-in operand has no permitted kind in the existing signature alternatives.
+    BuiltinInputKind {
+        /// The attempted built-in; its signatures retain the complete wanted alternatives.
+        builtin: FormulaBuiltin,
+        /// Zero-based operand position.
+        argument: usize,
+        /// Actual refused quantity kind.
+        actual: FormulaKind,
+    },
+    /// Square root has a negative exact input.
+    NegativeSquareRoot {
+        /// Admitted area or ratio kind.
+        kind: FormulaKind,
+        /// Actual negative exact value, before function rounding.
+        value: FormulaRational,
+    },
     /// A variadic numeric built-in was called without its required first operand.
     BuiltinArity {
         /// The attempted built-in.
@@ -80,7 +96,8 @@ impl FormulaNumericError {
     pub const fn diagnostic_code(self) -> &'static str {
         match self {
             Self::BuiltinArity { .. } => "formula_parse",
-            Self::BuiltinDimension { .. } => "formula_dimension",
+            Self::BuiltinDimension { .. } | Self::BuiltinInputKind { .. } => "formula_dimension",
+            Self::NegativeSquareRoot { .. } => "formula_domain",
             Self::InvalidClamp { .. } => "formula_domain",
             Self::NonNumericKind { .. }
             | Self::BinaryDimension { .. }
@@ -395,6 +412,32 @@ impl FormulaNumericValue {
         }
         let value = self.value.checked_round_to(step.value)?;
         Self::for_operation(self.kind, value, "round_to")
+    }
+
+    /// Returns sqrt(area) as length or sqrt(ratio) as ratio, at the nearest internal quantum.
+    ///
+    /// Uses exact squared-midpoint comparisons with half-away ties, not a floating approximation.
+    /// Source-call/irrational provenance belongs to the later evaluator, including perfect roots.
+    ///
+    /// # Errors
+    /// Returns BuiltinInputKind for an absent signature, NegativeSquareRoot for negative input, or
+    /// a completed rounded result's typed numeric refusal. No i64 binding conversion occurs here.
+    pub fn checked_sqrt(self) -> Result<Self, FormulaNumericError> {
+        let kind = FormulaBuiltin::Sqrt
+            .result_kind(&[FormulaBuiltinOperand::Value(self.kind)])
+            .ok_or(FormulaNumericError::BuiltinInputKind {
+                builtin: FormulaBuiltin::Sqrt,
+                argument: 0,
+                actual: self.kind,
+            })?;
+        if self.value.is_negative() {
+            return Err(FormulaNumericError::NegativeSquareRoot {
+                kind: self.kind,
+                value: self.value,
+            });
+        }
+        let value = super::roots::sqrt_value(self.value, self.kind == FormulaKind::Ratio)?;
+        Self::for_operation(kind, value, "sqrt")
     }
 
     fn extremum(values: &[Self], builtin: FormulaBuiltin) -> Result<Self, FormulaNumericError> {

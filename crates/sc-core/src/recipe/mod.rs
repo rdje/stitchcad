@@ -41,6 +41,8 @@ pub use rational::{FormulaRational, FormulaRationalError};
 mod numeric;
 pub use numeric::{FormulaNumericError, FormulaNumericValue};
 
+mod roots;
+
 mod bound;
 pub use bound::{FormulaBindingValueError, FormulaBindingValueRule, FormulaBoundValue};
 
