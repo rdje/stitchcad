@@ -230,3 +230,28 @@ fn four_operators_match_independent_fraction_fixtures() {
         assert_eq!(actual, cells[5], "{row}");
     }
 }
+
+#[test]
+#[allow(clippy::expect_used)]
+fn total_order_and_sign_reversal_preserve_full_width_and_zero() {
+    use core::cmp::Ordering;
+    let maximum = u128::MAX;
+    let left = R::new(maximum - 1, maximum, false).expect("close fraction");
+    let right = R::new(maximum - 2, maximum - 1, false).expect("close fraction");
+    // Cross-products differ by exactly one at 256-bit width; floating point would lose the order.
+    assert_eq!(left.cmp(&right), Ordering::Greater);
+    assert_eq!(left.negated().cmp(&right.negated()), Ordering::Less);
+    assert_eq!(left.partial_cmp(&right), Some(Ordering::Greater));
+    assert_eq!(left.negated().negated(), left);
+    assert_eq!(R::ZERO.negated(), R::ZERO);
+    assert!(!R::ZERO.negated().is_negative());
+    let huge = R::new(maximum, 1, false).expect("full magnitude");
+    assert!(huge.negated() < R::ZERO);
+    assert!(R::ZERO < huge);
+    assert_eq!(
+        R::new(6, 8, false)
+            .expect("fraction")
+            .cmp(&R::new(3, 4, false).expect("same value")),
+        Ordering::Equal
+    );
+}

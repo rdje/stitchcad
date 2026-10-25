@@ -1,7 +1,7 @@
 //! Completed numeric values in exact internal units, before binding or recipe execution.
 use super::{
     FormulaBinaryOperator, FormulaKind, FormulaLiteral, FormulaLiteralKind, FormulaRational,
-    FormulaRationalError,
+    FormulaRationalError, FormulaUnaryOperator,
 };
 use core::fmt;
 use sc_units::{MAX_AREA_UM2, MAX_LENGTH_UM};
@@ -9,7 +9,7 @@ use sc_units::{MAX_AREA_UM2, MAX_LENGTH_UM};
 /// A typed refusal at the completed numeric-value boundary; source context belongs to evaluation.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FormulaNumericError {
-    /// The actual numeric kinds have no signature for this binary operation.
+    /// The attempted binary operation has no accepted signature through this value API.
     BinaryDimension {
         /// The attempted operator.
         operator: FormulaBinaryOperator,
@@ -17,6 +17,13 @@ pub enum FormulaNumericError {
         left: FormulaKind,
         /// Actual right operand kind.
         right: FormulaKind,
+    },
+    /// The actual quantity kind has no signature for this unary operator.
+    UnaryDimension {
+        /// The attempted unary operator.
+        operator: FormulaUnaryOperator,
+        /// The actual operand kind.
+        kind: FormulaKind,
     },
     /// Boolean and geometry kinds cannot carry a numeric rational value.
     NonNumericKind {
@@ -45,7 +52,9 @@ impl FormulaNumericError {
     #[must_use]
     pub const fn diagnostic_code(self) -> &'static str {
         match self {
-            Self::NonNumericKind { .. } | Self::BinaryDimension { .. } => "formula_dimension",
+            Self::NonNumericKind { .. }
+            | Self::BinaryDimension { .. }
+            | Self::UnaryDimension { .. } => "formula_dimension",
             Self::ScalarDomain { .. } => "formula_domain",
             Self::Rational(error) => error.diagnostic_code(),
         }
@@ -215,6 +224,67 @@ impl FormulaNumericValue {
         self.binary(FormulaBinaryOperator::Divide, rhs)
     }
 
+    /// Negates an admitted length, area, angle or ratio; Count negation is a dimensional refusal.
+    ///
+    /// # Errors
+    /// Returns UnaryDimension for Count, including zero. No implicit rounding or direction modulo.
+    pub fn checked_neg(self) -> Result<Self, FormulaNumericError> {
+        let operator = FormulaUnaryOperator::Negate;
+        let kind = operator
+            .result_kind(self.kind)
+            .ok_or(FormulaNumericError::UnaryDimension {
+                operator,
+                kind: self.kind,
+            })?;
+        Self::for_operation(kind, self.value.negated(), operator.token())
+    }
+
+    /// Squares length, ratio or Count exactly, including the ratio's ppm scale and result domain.
+    ///
+    /// # Errors
+    /// Returns a unary dimension, reduced-width or completed scalar-domain refusal.
+    pub fn checked_square(self) -> Result<Self, FormulaNumericError> {
+        let operator = FormulaUnaryOperator::Square;
+        let kind = operator
+            .result_kind(self.kind)
+            .ok_or(FormulaNumericError::UnaryDimension {
+                operator,
+                kind: self.kind,
+            })?;
+        let value = self.scaled_product(self, kind, false)?;
+        Self::for_operation(kind, value, operator.token())
+    }
+
+    /// Evaluates one of the six exact comparison operators on same-kind numeric operands.
+    ///
+    /// # Errors
+    /// Returns BinaryDimension for different kinds or a noncomparison operator. No tolerance,
+    /// irrational provenance rule, source evaluation or Boolean binding is inferred here.
+    pub fn checked_compare(
+        self,
+        operator: FormulaBinaryOperator,
+        rhs: Self,
+    ) -> Result<bool, FormulaNumericError> {
+        let dimension = FormulaNumericError::BinaryDimension {
+            operator,
+            left: self.kind,
+            right: rhs.kind,
+        };
+        if operator.result_kind(self.kind, rhs.kind) != Some(FormulaKind::Boolean) {
+            return Err(dimension);
+        }
+        let ordering = self.value.cmp(&rhs.value);
+        match operator {
+            FormulaBinaryOperator::Equal => Ok(ordering.is_eq()),
+            FormulaBinaryOperator::NotEqual => Ok(!ordering.is_eq()),
+            FormulaBinaryOperator::Less => Ok(ordering.is_lt()),
+            FormulaBinaryOperator::LessEqual => Ok(!ordering.is_gt()),
+            FormulaBinaryOperator::Greater => Ok(ordering.is_gt()),
+            FormulaBinaryOperator::GreaterEqual => Ok(!ordering.is_lt()),
+            _ => Err(dimension),
+        }
+    }
+
     fn binary(
         self,
         operator: FormulaBinaryOperator,
@@ -230,21 +300,30 @@ impl FormulaNumericValue {
             FormulaBinaryOperator::Add => self.value.checked_add(rhs.value)?,
             FormulaBinaryOperator::Subtract => self.value.checked_sub(rhs.value)?,
             FormulaBinaryOperator::Multiply | FormulaBinaryOperator::Divide => {
-                let left_scale = ratio_scale(self.kind);
-                let right_scale = ratio_scale(rhs.kind);
-                let result_scale = ratio_scale(kind);
                 let divide = operator == FormulaBinaryOperator::Divide;
-                // Only Ratio is scaled. These products are at most 10^12 and fit u128 exactly.
-                let scale = if divide {
-                    FormulaRational::new(right_scale * result_scale, left_scale, false)?
-                } else {
-                    FormulaRational::new(result_scale, left_scale * right_scale, false)?
-                };
-                self.value.checked_scaled(rhs.value, scale, divide)?
+                self.scaled_product(rhs, kind, divide)?
             }
             _ => return Err(dimension), // Private callers supply only the four arithmetic operators.
         };
         Self::for_operation(kind, value, operator.token())
+    }
+
+    fn scaled_product(
+        self,
+        rhs: Self,
+        kind: FormulaKind,
+        divide: bool,
+    ) -> Result<FormulaRational, FormulaRationalError> {
+        let left_scale = ratio_scale(self.kind);
+        let right_scale = ratio_scale(rhs.kind);
+        let result_scale = ratio_scale(kind);
+        // Only Ratio is scaled. These products are at most 10^12 and fit u128 exactly.
+        let scale = if divide {
+            FormulaRational::new(right_scale * result_scale, left_scale, false)?
+        } else {
+            FormulaRational::new(result_scale, left_scale * right_scale, false)?
+        };
+        self.value.checked_scaled(rhs.value, scale, divide)
     }
 }
 

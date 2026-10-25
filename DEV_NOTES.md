@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — exact unary numeric operators and comparisons
+
+0250 .5c.2.3 implements negation/square through existing signatures, including Count negation
+refusal even zero, fused ratio square scaling and length-to-area. Unary errors retain actual
+operator/kind. Six same-kind comparisons return exact bool values; noncomparison operators and
+mixed kinds refuse. Rational total ordering uses at most256-bit cross-products, with reversed
+negative magnitude order. It never rounds or subtracts into a width-limited intermediate. Sign
+negation preserves canonical positive zero/full magnitudes and raw multi-turn formula angles.
+
+One focused command runs affected native numeric4/0+rational5/0, rc=0. Tests include full-width
+fractions whose256-bit cross-products differ by one, all comparison symbols, Count/angle/area
+unary refusals, fractional and scaled squares and exact width errors. Earlier34 Fraction rows
+remain green. No broad/platform/mutation pass claimed. Whole0249 task/ledger retained321/222;
+book/live/frontier align. Promotion declined: established numeric contract/focused-check policy.
+
 ## _(2026-10-25 UTC)_ — exact quantity binary operators and ppm scaling
 
 0249 .5c.2.2 adds four methods over completed numeric values, reusing kind signatures and

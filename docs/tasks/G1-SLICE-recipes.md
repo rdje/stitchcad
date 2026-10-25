@@ -420,32 +420,35 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.2.2`
   Status: `done`
-  Goal: exact four-operator quantity scaling and per-completed-result scalar domains.
-  Own0249: numeric.rs, rational.rs private scaled workspace and existing numeric/rational targets.
+  Goal: four exact quantity operators/fused ppm scaling and result domains verified0249.
   Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Reuse normative kind signatures, ppm internal units and fused scaled products/quotients. Reduce
-  the complete operator before128-bit width judgment; apply scalar domains before later rescue.
-  Typed errors retain actual binary kinds/arc_length hint and scalar operation/value/bounds.
-  One focused command for two affected native targets; broad/platform/mutation work .5c.4/pre-push.
-  Retain completed numeric task/ledger320/221 and whole oldest journal321 if needed for fixed caps;
-  sync book/live/current frontier, then commit before unary/comparison work.
-
-- [x] REPRODUCE / ISSUE: fa6009e numeric values lack operator methods; source inspection rc=0.
-- [x] ROOT CAUSE: judging unscaled ppm intermediates would falsely refuse valid results; focused
-  cargo test --offline -p sc-core --test formula_numeric_contract --test formula_rational_contract
-  proves scaled129-bit cancellation; output numeric3/0+rational4/0, rc=0.
-- [x] FIX: four quantity methods/fused scaling, reused signatures and exact completed-result domains;
-  actual dimension/scalar operation witnesses and arc_length hint, source inspection rc=0.
-- [x] ADDRESSED: same focused two-target command proves scaling, kind/zero refusal and exact
-  numerator/denominator/scalar witnesses; output7 passed/0 failed total, rc=0.
-- [x] NO REGRESSION: same target command retains constructor/literal and34 independent Fraction
-  rows,7/0 total, rc=0; broad/platform/mutation work stays .5c.4/pre-push.
-- [x] LOCKSTEP: whole320/221 source/public intervals exact, rc=0; book/live/frontier aligned.
-  promotion: declined (established numeric contract and focused-check policy).
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part321.md).
 
 - ID: `G1-SLICE.5c.2.3`
-  Status: `pending`
+  Status: `done`
   Goal: exact unary negation/square and same-kind numeric comparisons.
+  Own0250: rational sign negation/total ordering, numeric unary/comparison methods and affected targets.
+  Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_rational_contract.rs;crates/sc-core/tests/formula_numeric_contract.rs
+  Reuse unary/kind signatures: Count negation refuses even zero, square has only declared kinds,
+  ratio square keeps fused ppm scaling. Comparisons retain full signed turns and fractional values;
+  bounded wide cross-products cannot falsely refuse because a difference would exceed width128.
+  One focused two-target command; broad/platform/mutation work remains .5c.4/pre-push.
+  Retain completed binary task/ledger321/222 under fixed caps; sync book/live before built-ins.
+
+- [x] REPRODUCE / ISSUE:4e6803f lacks rational ordering and numeric unary/comparison methods;
+  source inspection confirms, rc=0.
+- [x] ROOT CAUSE: exact comparison needs wider cross-products without width-limited subtraction;
+  cargo test --offline -p sc-core --test formula_numeric_contract --test formula_rational_contract
+  distinguishes adjacent full-width fractions, output numeric4/0+rational5/0, rc=0.
+- [x] FIX: exact ordering/sign reversal plus signature-backed negation/square and six comparisons;
+  Count negation and undeclared square kinds refuse, source inspection rc=0.
+- [x] ADDRESSED: same focused two-target command proves signs/raw turns/fractions/scaled squares/
+  kind refusals/exact ordering,9 passed/0 failed total, rc=0.
+- [x] NO REGRESSION: same target command retains constructor/binary cases and34 Fraction rows,
+ 9/0 total, rc=0; broad/platform/mutation work stays .5c.4/pre-push.
+- [x] LOCKSTEP: whole321/222 source/public reads exact, rc=0; book/live/frontier aligned.
+  promotion: declined (established exact numeric contract/focused-check policy).
+
 - ID: `G1-SLICE.5c.2.4`
   Status: `pending`
   Goal: exact abs/min/max/clamp with typed kind and bound refusals.

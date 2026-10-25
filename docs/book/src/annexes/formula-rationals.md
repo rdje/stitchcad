@@ -19,6 +19,8 @@ wide-integer workspace; the public value retains its fixed 128-bit components.
 | denominator | Inspect the reduced positive denominator |
 | is_negative | Inspect the independent sign; zero is positive |
 | is_zero | Inspect canonical zero, whose components are 0/1 |
+| negated | Reverse sign exactly while preserving positive canonical zero |
+| Ord / PartialOrd | Exact total ordering with bounded cross-products |
 | checked_mul | Exact product with cross-cancellation before reduced-width checks |
 | checked_div | Exact quotient with zero-divisor validation before zero handling |
 | checked_add | Exact sum, reducing wider intermediates before checking widths |
@@ -128,6 +130,7 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | NonNumericKind | formula_dimension with the actual refused kind |
 | ScalarDomain | formula_domain with actual operation, kind, exact value, minimum and optional maximum |
 | BinaryDimension | formula_dimension with the actual operator and left/right kinds |
+| UnaryDimension | formula_dimension with the actual unary operator and operand kind |
 | arc_length_hint | Identifies the absent angle-times-length product |
 | Rational | Retains the underlying FormulaRationalError and diagnostic family |
 | kind | Inspect the admitted quantity kind |
@@ -135,6 +138,9 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | from_literal | Import a normalized literal's once-rounded integer and kind |
 | checked_add / checked_sub | Same-kind exact sum/difference with completed-result domains |
 | checked_mul / checked_div | Permitted ordered signatures and exact ppm scaling before width/domain checks |
+| checked_neg | Exact sign reversal for declared negatable kinds; Count refuses |
+| checked_square | Exact length/ratio/Count square with scaling and result limits |
+| checked_compare | One of the six exact same-kind comparisons, returning bool |
 
 Length and area use inclusive signed limits of 10⁹ micrometres and 10¹⁸ square micrometres.
 The check compares the exact fraction with the bound: limit + 1/10 refuses even if binding would
@@ -160,7 +166,7 @@ The normalized-literal bridge performs no new conversion. For example, a normali
 is already zero ppm; importing it cannot recover a hidden fraction. A normalized 720 deg input
 remains 720,000,000 microdegrees. The error contains actual kind/value/bounds; expression
 and statement context belongs to later evaluator integration. Scalar refusals retain the actual
-constructor/operator token. Unary operators, comparison, built-ins and binding remain pending features.
+constructor/operator token. Built-ins and binding remain pending features.
 
 ### Exact quantity operators
 
@@ -196,6 +202,34 @@ immediately, so a later subtraction cannot rescue it. Count 1 minus Count 2 refu
 result. Error bounds and measured values remain exact; arithmetic and scalar failures expose no
 partially computed value. Binding and whole-recipe replay remain later work.
 
+### Unary operators and exact comparisons
+
+checked_neg admits length, area, angle and ratio. Count refuses with UnaryDimension even when zero;
+its nonnegative domain does not make unary negation a permitted signature. Negative zero remains
+canonical positive zero. A formula angle preserves sign and complete turns after negation.
+checked_square admits only length, ratio and Count. Length produces area; ratio keeps exact ppm
+scaling, and fractional Count remains exact. Other unary kinds refuse before numeric execution.
+
+```rust
+use sc_core::recipe::{FormulaBinaryOperator, FormulaKind, FormulaNumericValue, FormulaRational};
+
+let count = FormulaNumericValue::new(FormulaKind::Count, FormulaRational::new(3, 2, false)?)?;
+assert_eq!(count.checked_square()?.rational(), FormulaRational::new(9, 4, false)?);
+let larger = FormulaNumericValue::new(FormulaKind::Count, FormulaRational::new(2, 1, false)?)?;
+assert!(count.checked_compare(FormulaBinaryOperator::Less, larger)?);
+assert!(count.checked_neg().is_err());
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+checked_compare accepts Equal, NotEqual, Less, LessEqual, Greater and GreaterEqual from the existing
+operator enum. Operands must have the same numeric kind; a different kind or noncomparison
+operator returns BinaryDimension. The returned bool is an exact primitive comparison, with no
+source evaluation, binding, tolerance or irrational-result provenance inferred here. A complete
+turn differs from angle zero. Comparison does not round fractions or subtract into a width-limited
+intermediate result. FormulaRational implements total Ord/PartialOrd using at most256-bit exact
+cross-products, so even near-equal full-width fractions stay ordered. Ordering allocates bounded
+private workspace; sign reversal and zero canonicalization need no allocation.
+
 Check this feature with the affected native target:
 
 ```bash
@@ -214,7 +248,7 @@ python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --
 
 The focused public target covers construction and all four exact operations, including cancellation
 before width checks, typed numerator/denominator witnesses and zero-divisor priority. Native execution
-passes four tests, including 34 rows derived independently with Python Fraction arithmetic. The
+passes five tests, including 34 rows derived independently with Python Fraction arithmetic. The
 primitive is complete; quantity-aware operations follow. Broad/platform work remains .5c.4/pre-push.
 
 The fixture oracle imports no production arithmetic. Reproduce its expected rows with:

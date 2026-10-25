@@ -4,7 +4,7 @@
 //! cross-cancel before checking reduced widths; sums use bounded private wider intermediates.
 
 use super::FormulaRationalComponent;
-use core::fmt;
+use core::{cmp::Ordering, fmt};
 use num_bigint::{BigInt, BigUint, Sign};
 
 /// A refusal while constructing or computing a canonical formula rational value.
@@ -81,6 +81,35 @@ pub struct FormulaRational {
     numerator: u128,
     denominator: u128,
     negative: bool,
+}
+
+impl Ord for FormulaRational {
+    fn cmp(&self, rhs: &Self) -> Ordering {
+        if self == rhs {
+            return Ordering::Equal;
+        }
+        match (self.negative, rhs.negative) {
+            (true, false) => return Ordering::Less,
+            (false, true) => return Ordering::Greater,
+            _ => {}
+        }
+        // Each cross-product is at most 256 bits. Ordering returns no rational result, so it must
+        // not impose the 128-bit result limit on these exact comparison intermediates.
+        let left = BigUint::from(self.numerator) * BigUint::from(rhs.denominator);
+        let right = BigUint::from(rhs.numerator) * BigUint::from(self.denominator);
+        let ordering = left.cmp(&right);
+        if self.negative {
+            ordering.reverse()
+        } else {
+            ordering
+        }
+    }
+}
+
+impl PartialOrd for FormulaRational {
+    fn partial_cmp(&self, rhs: &Self) -> Option<Ordering> {
+        Some(self.cmp(rhs))
+    }
 }
 
 impl Default for FormulaRational {
@@ -164,6 +193,15 @@ impl FormulaRational {
     #[must_use]
     pub const fn is_zero(self) -> bool {
         self.numerator == 0
+    }
+
+    /// Exact sign reversal with canonical positive zero; every admitted magnitude stays admitted.
+    #[must_use]
+    pub const fn negated(self) -> Self {
+        Self {
+            negative: !self.negative && !self.is_zero(),
+            ..self
+        }
     }
 
     /// Computes the exact product, cross-cancelling before judging the reduced component widths.

@@ -46,7 +46,8 @@ with full 128-bit component magnitudes, independent sign and a typed zero-denomi
 All four rational operators now reduce before width checks and report typed zero/width refusals.
 Completed numeric values now enforce exact length/area limits and nonnegative Count, with a
 normalized-literal bridge. All four quantity operators now apply exact ppm scaling and result domains.
-Unary operators, comparison, numeric functions and recipe evaluation remain the next stages.
+Exact unary negation/square and all six numeric comparisons are available, preserving fractional
+values and raw angle turns. Numeric functions, binding and recipe evaluation remain the next stages.
 
 ## Planned workflows
 

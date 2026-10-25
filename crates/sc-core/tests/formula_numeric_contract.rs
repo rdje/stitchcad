@@ -251,3 +251,120 @@ fn quantity_operators_scale_exactly_and_refuse_completed_excess() {
         })
     );
 }
+
+#[test]
+#[allow(clippy::expect_used)]
+fn unary_operators_and_all_comparisons_keep_exact_values_and_kinds() {
+    use sc_core::recipe::{
+        FormulaBinaryOperator as B, FormulaRationalComponent as C, FormulaRationalError,
+        FormulaUnaryOperator as U,
+    };
+    let rational = |n, d, negative| R::new(n, d, negative).expect("fixture rational");
+    let value =
+        |kind, n, d, negative| V::new(kind, rational(n, d, negative)).expect("admitted fixture");
+    let angle = value(K::Angle, 720_000_000, 1, false);
+    assert_eq!(
+        angle.checked_neg().expect("raw sweep sign").rational(),
+        rational(720_000_000, 1, true)
+    );
+    assert_eq!(
+        value(K::Length, 0, 1, false)
+            .checked_neg()
+            .expect("zero sign")
+            .rational(),
+        R::ZERO
+    );
+    for count in [value(K::Count, 0, 1, false), value(K::Count, 1, 3, false)] {
+        assert_eq!(
+            count.checked_neg(),
+            Err(Error::UnaryDimension {
+                operator: U::Negate,
+                kind: K::Count
+            })
+        );
+    }
+    let squares = [
+        (value(K::Length, 3, 2, true), K::Area, rational(9, 4, false)),
+        (
+            value(K::Ratio, 500_000, 1, false),
+            K::Ratio,
+            rational(250_000, 1, false),
+        ),
+        (
+            value(K::Ratio, 1, 2, false),
+            K::Ratio,
+            rational(1, 4_000_000, false),
+        ),
+        (
+            value(K::Count, 3, 2, false),
+            K::Count,
+            rational(9, 4, false),
+        ),
+        (
+            value(K::Length, 1_000_000_000, 1, true),
+            K::Area,
+            rational(1_000_000_000_000_000_000, 1, false),
+        ),
+    ];
+    for (input, kind, expected) in squares {
+        let result = input.checked_square().expect("declared square signature");
+        assert_eq!((result.kind(), result.rational()), (kind, expected));
+    }
+    for kind in [K::Angle, K::Area] {
+        assert_eq!(
+            value(kind, 1, 1, false).checked_square(),
+            Err(Error::UnaryDimension {
+                operator: U::Square,
+                kind
+            })
+        );
+    }
+    assert_eq!(
+        value(K::Count, u128::MAX, 1, false).checked_square(),
+        Err(Error::Rational(FormulaRationalError::RationalWidth {
+            component: C::Numerator,
+            measured_bits: 256,
+        }))
+    );
+    let smaller = value(K::Count, 1, 3, false);
+    let greater = value(K::Count, 1, 2, false);
+    for (operator, expected) in [
+        (B::Equal, false),
+        (B::NotEqual, true),
+        (B::Less, true),
+        (B::LessEqual, true),
+        (B::Greater, false),
+        (B::GreaterEqual, false),
+    ] {
+        assert_eq!(smaller.checked_compare(operator, greater), Ok(expected));
+    }
+    assert_eq!(
+        smaller.checked_compare(B::Equal, value(K::Count, 2, 6, false)),
+        Ok(true)
+    );
+    assert_eq!(
+        angle.checked_compare(B::NotEqual, value(K::Angle, 0, 1, false)),
+        Ok(true)
+    );
+    assert_eq!(
+        smaller.checked_compare(B::Equal, value(K::Ratio, 1, 3, false)),
+        Err(Error::BinaryDimension {
+            operator: B::Equal,
+            left: K::Count,
+            right: K::Ratio,
+        })
+    );
+    assert!(matches!(
+        smaller.checked_compare(B::Add, greater),
+        Err(Error::BinaryDimension {
+            operator: B::Add,
+            ..
+        })
+    ));
+    let maximum = u128::MAX;
+    assert_eq!(
+        value(K::Ratio, maximum - 1, maximum, false)
+            .checked_compare(B::Greater, value(K::Ratio, maximum - 2, maximum - 1, false)),
+        Ok(true)
+    );
+}
