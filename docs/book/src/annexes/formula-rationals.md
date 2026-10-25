@@ -147,6 +147,7 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | abs | Exact total absolute value, retaining kind and canonical zero |
 | checked_min / checked_max | One or more homogeneous numeric operands; returns an existing operand |
 | checked_clamp | Explicit inclusive exact bounds of the same kind |
+| checked_round_to | Authored same-kind step, nearest exact multiple with ties away from zero |
 
 Length and area use inclusive signed limits of 10⁹ micrometres and 10¹⁸ square micrometres.
 The check compares the exact fraction with the bound: limit + 1/10 refuses even if binding would
@@ -172,7 +173,7 @@ The normalized-literal bridge performs no new conversion. For example, a normali
 is already zero ppm; importing it cannot recover a hidden fraction. A normalized 720 deg input
 remains 720,000,000 microdegrees. The error contains actual kind/value/bounds; expression
 and statement context belongs to later evaluator integration. Scalar refusals retain the actual
-constructor/operator token. Explicit quantization, binding and evaluator integration remain pending features.
+constructor/operator token. Binding and evaluator integration remain pending features.
 
 ### Exact quantity operators
 
@@ -264,6 +265,37 @@ bounds. Inclusive equal bounds are valid. A value below low returns low; one abo
 high; otherwise the original value returns. This is explicit authored clamping. It cannot rescue
 an invalid completed operand: every supplied value has already passed its own scalar-domain check.
 Min/max/clamp return admitted operands, preserving fractions without intermediate rounding.
+
+### Explicit authored round_to
+
+checked_round_to takes a step of the same numeric kind and returns the nearest exact multiple,
+with ties away from zero. The step remains part of the authored recipe; no coarser quantum is
+introduced implicitly. Fractional steps stay fractional: Count 1/2 rounded to step 1/3 becomes
+Count 2/3. This quantization does not perform the later integer binding conversion.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational};
+
+let value = FormulaNumericValue::new(FormulaKind::Length, FormulaRational::new(1, 2, true)?)?;
+let step = FormulaNumericValue::new(FormulaKind::Length, FormulaRational::ONE)?;
+assert_eq!(value.checked_round_to(step)?.rational(), FormulaRational::from_signed_integer(-1));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+A different step kind returns BuiltinDimension at argument one. A zero step returns a rational
+zero-divisor refusal in formula_division, including zero rounded to zero step. Negative steps
+specify the same multiples as positive steps for kinds that admit negative values; Count's
+completed-value domain continues to forbid negative steps. Both signs round ties away from zero,
+and a rounded zero is canonical positive zero. Ratio steps use the same ppm internal units as
+the value; their step quotient has no extra ppm scale.
+
+The private bounded workspace rounds the exact quotient before reducing the final multiple.
+No intermediate quotient storage/128-bit bound applies: a256-bit quotient may still produce an
+admitted final result. Only the complete reduced multiple crosses the128-bit return boundary,
+then its scalar domain is checked. Maximum128-bit integer rounded to step2 reports129 numerator
+bits; length1,000,000,000 rounded to step6 reports exact out-of-domain1,000,000,002 micrometres.
+Signed complete angle turns survive. Source-bearing explicit-quantization provenance and tolerance
+rules are still owned by later evaluator integration; this value API does not claim that proof.
 
 Check this feature with the affected native target:
 

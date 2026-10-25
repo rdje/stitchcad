@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — explicit exact round_to quantization
+
+0252 .5c.3.1 rounds the exact step quotient in bounded private workspace, then reduces the final
+multiple before width/scalar judgment. Quotient/remainder stay within256 bits, the conservative
+final raw numerator within384; no intermediate u128/i64 refusal applies. The magnitude half-away
+rule matches sc-units; step sign describes the same multiples, zero step refuses formula_division
+before zero handling. Same-kind internal units cancel directly, with no extra ppm quotient scale.
+Final signed zero is canonical, fractional steps/raw turns survive, and actual round_to scalar
+witnesses are retained. Binding and source/quantization provenance remain later integration.
+
+One affected native target formula_numeric_contract passes6/0, rc=0. Cases cover all five kinds,
+signed half/neighbors/negative steps, fractional Count/ppm/raw angle outcomes,256-bit quotient with
+valid reduced result, final129-bit overflow, scalar excess, zero step and actual step-kind mismatch.
+No broad/platform/mutation pass claimed. Whole0251 task/ledger retained323/224; book/frontier align.
+Promotion declined: established half-away/exact numeric contract and focused-check policy.
+
 ## _(2026-10-25 UTC)_ — exact abs/min/max/clamp numeric built-ins
 
 0251 .5c.2.4 adds total exact abs and checked homogeneous variadic min/max plus inclusive clamp.

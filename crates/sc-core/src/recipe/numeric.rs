@@ -378,6 +378,25 @@ impl FormulaNumericValue {
         }
     }
 
+    /// Explicitly quantizes to the nearest multiple of a same-kind step, ties away from zero.
+    ///
+    /// # Errors
+    /// Returns BuiltinDimension for a different step kind, a zero-divisor refusal for zero step,
+    /// or the final reduced-width/scalar-domain refusal. Negative steps admit the same multiples.
+    /// This value API does not attach source or irrational/explicit-quantization provenance.
+    pub fn checked_round_to(self, step: Self) -> Result<Self, FormulaNumericError> {
+        if step.kind != self.kind {
+            return Err(FormulaNumericError::BuiltinDimension {
+                builtin: FormulaBuiltin::RoundTo,
+                argument: 1,
+                wanted: self.kind,
+                actual: step.kind,
+            });
+        }
+        let value = self.value.checked_round_to(step.value)?;
+        Self::for_operation(self.kind, value, "round_to")
+    }
+
     fn extremum(values: &[Self], builtin: FormulaBuiltin) -> Result<Self, FormulaNumericError> {
         let mut selected = values
             .first()

@@ -172,7 +172,7 @@ cached result that differs from a fresh one is a defect.
 [Canonical rational construction and all four exact operators](../annexes/formula-rationals.md) are implemented.
 Completed numeric values enforce exact scalar domains and preserve normalized input integers.
 Binary/unary quantity operators and exact numeric comparisons implement scaling and result domains.
-Exact abs/min/max/clamp are available. Explicit quantization, binding, irrational functions and
+Exact abs/min/max/clamp and explicit round_to are available. Binding, irrational functions and
 evaluator integration remain later work.
 
 Literal input first converts once into its canonical internal integer, by

@@ -861,7 +861,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5c.3` | `pending` | Explicit quantization and one binding conversion |
+| **next** | `G1-SLICE.5c.3.2` | `pending` | One numeric/Boolean binding conversion |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

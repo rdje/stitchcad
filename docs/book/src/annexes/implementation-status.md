@@ -36,7 +36,7 @@ requires the named contracts and later proof owners.
 | Current-statement kind proof | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3c.3b | [Actual scope checking](formula-name-scopes.md#check-the-actual-current-statement) |
 | Complete recipe kind proof | §4.1; G1 | sc-core recipe; G1-SLICE.5b.4a | [Atomic static acceptance](formula-checked-recipes.md) |
 | Canonical rational values and four operators | §4.2; G1 | sc-core recipe; G1-SLICE.5c.1.1/.2 | [Exact value kernel](formula-rationals.md); typed execution follows |
-| Exact numeric values/operators/built-ins | §4.2; G1 | sc-core recipe; G1-SLICE.5c.2 | [Exact quantity values](formula-rationals.md#completed-numeric-values-and-exact-domains); rounding/binding follow |
+| Exact numeric values/operators/built-ins/round_to | §4.2; G1 | sc-core recipe; G1-SLICE.5c.2/.3.1 | [Exact quantity values](formula-rationals.md#completed-numeric-values-and-exact-domains); binding follows |
 | Formula wanted-kind catalogs | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3c.1 | [Typed expected rules](formula-wanted-signatures.md) |
 
 Reference [static signature evidence](formula-static-validation.md) covers the complete finite

@@ -448,3 +448,94 @@ fn exact_numeric_builtins_keep_operands_and_typed_refusals() {
     assert_eq!(V::checked_min(&[near, lower]), Ok(lower));
     assert_eq!(V::checked_max(&[near, lower]), Ok(near));
 }
+
+#[test]
+#[allow(clippy::expect_used)]
+fn explicit_round_to_preserves_exact_steps_and_checks_only_the_final_result() {
+    use sc_core::recipe::{
+        FormulaBuiltin as F, FormulaRationalComponent as C, FormulaRationalError,
+    };
+    let rational = |n, d, negative| R::new(n, d, negative).expect("fixture rational");
+    let value =
+        |kind, n, d, negative| V::new(kind, rational(n, d, negative)).expect("admitted fixture");
+    for kind in [K::Length, K::Area, K::Angle, K::Ratio, K::Count] {
+        let step = value(kind, 1, 1, false);
+        for (n, d, expected) in [(3, 2, 2), (149, 100, 1), (151, 100, 2)] {
+            assert_eq!(
+                value(kind, n, d, false).checked_round_to(step),
+                Ok(value(kind, expected, 1, false))
+            );
+        }
+        if kind != K::Count {
+            let negative_step = value(kind, 1, 1, true);
+            assert_eq!(
+                value(kind, 3, 2, true).checked_round_to(step),
+                Ok(value(kind, 2, 1, true))
+            );
+            assert_eq!(
+                value(kind, 3, 2, false).checked_round_to(negative_step),
+                Ok(value(kind, 2, 1, false))
+            );
+            assert_eq!(
+                value(kind, 3, 2, true).checked_round_to(negative_step),
+                Ok(value(kind, 2, 1, true))
+            );
+            assert_eq!(
+                value(kind, 1, 3, true)
+                    .checked_round_to(step)
+                    .expect("zero quantization")
+                    .rational(),
+                R::ZERO
+            );
+        }
+        let zero = value(kind, 0, 1, false);
+        assert_eq!(
+            zero.checked_round_to(zero),
+            Err(Error::Rational(FormulaRationalError::ZeroDivisor))
+        );
+    }
+    assert_eq!(
+        value(K::Count, 1, 2, false).checked_round_to(value(K::Count, 1, 3, false)),
+        Ok(value(K::Count, 2, 3, false))
+    );
+    assert_eq!(
+        value(K::Ratio, 500_000, 1, false).checked_round_to(value(K::Ratio, 200_000, 1, false)),
+        Ok(value(K::Ratio, 600_000, 1, false))
+    );
+    assert_eq!(
+        value(K::Angle, 1_440_000_001, 2, false).checked_round_to(value(K::Angle, 1, 1, false)),
+        Ok(value(K::Angle, 720_000_001, 1, false))
+    );
+    let wide = value(K::Ratio, u128::MAX, 1, false);
+    // The quotient needs 256 bits; the final exact multiple is the original admitted value.
+    assert_eq!(
+        wide.checked_round_to(value(K::Ratio, 1, u128::MAX, false)),
+        Ok(wide)
+    );
+    assert_eq!(
+        wide.checked_round_to(value(K::Ratio, 2, 1, false)),
+        Err(Error::Rational(FormulaRationalError::RationalWidth {
+            component: C::Numerator,
+            measured_bits: 129,
+        }))
+    );
+    assert_eq!(
+        value(K::Length, 1_000_000_000, 1, false).checked_round_to(value(K::Length, 6, 1, false)),
+        Err(Error::ScalarDomain {
+            operation: "round_to",
+            kind: K::Length,
+            value: rational(1_000_000_002, 1, false),
+            minimum: -1_000_000_000,
+            maximum: Some(1_000_000_000),
+        })
+    );
+    assert_eq!(
+        value(K::Length, 1, 1, false).checked_round_to(value(K::Angle, 1, 1, false)),
+        Err(Error::BuiltinDimension {
+            builtin: F::RoundTo,
+            argument: 1,
+            wanted: K::Length,
+            actual: K::Angle,
+        })
+    );
+}

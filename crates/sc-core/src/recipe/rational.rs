@@ -325,6 +325,32 @@ impl FormulaRational {
         )
     }
 
+    /// Rounds to a step's nearest exact multiple, with ties away from zero.
+    /// A negative step describes the same set of multiples as its positive magnitude.
+    pub(super) fn checked_round_to(self, step: Self) -> Result<Self, FormulaRationalError> {
+        if step.is_zero() {
+            return Err(FormulaRationalError::ZeroDivisor);
+        }
+        let numerator = BigUint::from(self.numerator) * BigUint::from(step.denominator);
+        let denominator = BigUint::from(self.denominator) * BigUint::from(step.numerator);
+        let mut integer = &numerator / &denominator;
+        let remainder = numerator % &denominator;
+        // The same half-away magnitude rule as sc_units' unsigned primitive, in a wider workspace.
+        // Quotient/remainder need at most 256 bits; no premature rational-width or i64 check applies.
+        if remainder >= &denominator - &remainder {
+            integer += BigUint::from(1_u8);
+        }
+        if integer == BigUint::from(0_u8) {
+            return Ok(Self::ZERO);
+        }
+        // Even the conservative quotient*step bound is 384 bits. Judge only the reduced multiple.
+        Self::from_wide_parts(
+            integer * BigUint::from(step.numerator),
+            BigUint::from(step.denominator),
+            self.negative,
+        )
+    }
+
     fn from_wide_parts(
         numerator: BigUint,
         denominator: BigUint,

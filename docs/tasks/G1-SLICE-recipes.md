@@ -432,37 +432,43 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.2.4`
   Status: `done`
-  Goal: exact abs/min/max/clamp with typed kind and bound refusals.
-  Own0251: numeric.rs and existing formula_numeric_contract native target; no evaluator scaffolding.
+  Goal: exact abs/min/max/clamp with typed arity/kind/bound refusals verified0251.
   Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Absolute value preserves exact signs/zero/domains. Min/max accept one or more homogeneous numeric
-  values and return an existing exact operand; empty calls refuse formula_parse. Clamp requires
-  matching kinds and exact low<=high, returns the appropriate admitted operand without rounding.
-  Errors retain builtin, actual first mismatch/index/wanted kind or exact inverted bounds.
-  One affected native target; broad/platform/mutation work stays .5c.4/pre-push. Retain completed
-  unary task/ledger322/223 under fixed caps; book/live/frontier sync and commit before bindings.
-
-
-- [x] REPRODUCE / ISSUE:1b114c8 numeric values lack abs/min/max/clamp methods; source inspection0.
-- [x] ROOT CAUSE: exact homogeneous built-ins must preserve fractions and return admitted operands;
-  cargo test --offline -p sc-core --test formula_numeric_contract proves all outcomes,5/0, rc=0.
-- [x] FIX: total abs/checked min/max/clamp, first actual-kind/index mismatch, empty-call and exact
-  inverted-bound refusals; no rounding or evaluator dependency, source inspection rc=0.
-- [x] ADDRESSED: same native target covers full magnitudes, singleton/variadic/empty/mixed operands,
-  near-equal fractions and inclusive/inverted clamp bounds,5 passed/0 failed, rc=0.
-- [x] NO REGRESSION: same target retains constructor/literal/binary/unary/comparison cases,5/0,
-  rc=0; primitive unchanged, broad/platform/mutation checks remain .5c.4/pre-push.
-- [x] LOCKSTEP: whole322/223 source/public reads exact, rc=0; book/live/frontier aligned.
-  promotion: declined (established numeric contract/focused-check policy).
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part323.md).
 
 - ID: `G1-SLICE.5c.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: explicit round_to and one binding conversion for all five numeric kinds plus Boolean.
   Acceptance: exact ties away at authored step/binding, full i64 endpoints including MIN, wider
   exact literal/temporary permitted, Count nonnegative and scalar bounds checked; later reads
   use the returned stored integer. No Angle direction modulo for formula sweeps/equality.
   Diagnostics retain binding name/kind/bounds/rounded measured result, without a silent clamp.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5c.3.1`
+  Status: `done`
+  Goal:0252 exact round_to at authored same-kind step without intermediate width/storage refusals.
+  Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_numeric_contract.rs
+  Own bounded wide quotient/half-away magnitude rounding and final reduced result. Zero steps
+  refuse formula_division, negative steps preserve the same multiples where their kind admits them.
+  Preserve signed ties/canonical zero/fractional steps, no ppm scaling of the step quotient; final
+  width/scalar checks occur after complete quantization. No source evaluation/provenance claim.
+  One affected numeric native target; broad/platform .5c.4/pre-push. Own completed task/ledger
+  retention323/224 and book/live/frontier sync; commit before binding conversion.
+
+
+- [x] REPRODUCE / ISSUE:dda64a5 has no round_to value method, source inspection rc=0.
+- [x] ROOT CAUSE:256-bit quotient may yield valid final multiple; cargo test --offline -p sc-core
+  --test formula_numeric_contract:6 passed/0 failed, rc=0.
+- [x] FIX: bounded wide rounding/final reduction, signed steps, canonical zero and exact refusals.
+- [x] ADDRESSED: same native target proves ties/steps/final widths/domains,6/0, rc=0.
+- [x] NO REGRESSION: same target retains earlier quantity/built-in cases,6/0, rc=0; broad work .5c.4.
+- [x] LOCKSTEP: whole323/224 Git/public bytes exact, rc=0; book/live/frontier aligned.
+  promotion: declined (established half-away/numeric contract/focused policy).
+
+- ID: `G1-SLICE.5c.3.2`
+  Status: `pending`
+  Goal: one signed i64 binding conversion for numeric values plus typed Boolean/name context.
+
 - ID: `G1-SLICE.5c.4`
   Status: `pending`
   Goal: coupled reduced-width/scalar/storage/literal versus result review before replay integration.
