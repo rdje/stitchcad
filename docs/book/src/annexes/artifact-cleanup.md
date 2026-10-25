@@ -146,9 +146,9 @@ returns on SIGTERM. Both replacement processes supplied readable vnode metadata.
 census and real clear0/held-file1/restored0 passed; cleanup then applied with zero selected residue
 and unchanged tracked bytes. Protected startup/recovery-20261025 audit records retain the receipts.
 
-This proves operational recovery. The historical descriptor's identity and invalidation event
-remain unproved, so D217 stays open. Capture identity before invalidation during a recurrence,
-or obtain a vendor-level trace, before claiming permanent prevention. The checker remains strict.
+This proved operational recovery at0235. The historical descriptor's identity and invalidation
+event remain unproved. The later investigation below establishes and repairs a reproducible
+inheritance class; it does not identify the old object. The checker remains strict.
 Root owner: cleanup4.hunt in the producer task tree. Never signal a PID from an old receipt without
 fresh identity and ancestry checks, and never terminate the active harness from inside itself.
 
@@ -208,17 +208,23 @@ updates the CLI's voice-resource checksum. Its sidecar records the local patch a
 Supported native installation and exact original-version rollback pass in a fresh private home;
 the tested source selection is a separate local release and never overwrites the vendor release.
 
-**Activation changes the shared Codex daemon and pins production automatic updates.** It is
-pending the director's confirmation and must run from a standalone Terminal, from the repository
-root. The script rechecks package hashes, refuses active-harness ancestry and preserves the
+**Activation changes the shared Codex daemon and pins production automatic updates.** The
+director completed this on2026-10-25 from a standalone Terminal. For a vendor installation,
+the script rechecks package hashes, refuses active-harness ancestry and preserves the
 native installer's interactive confirmation. All Codex sessions using that daemon are interrupted.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/handoff/d217_upstream.py activate
 ```
 
-After activation, resume this conversation and capture the selected executable and descriptor
-metadata before rerunning the real handoff control. Keep D217 open until that host verdict passes.
+The installed CLI matches the tested SHA256
+3fe68efdbc14e99cbc614b2615514eaddf7520277696d7aee2eeead56dd2cd79.
+All41 package file hashes match; daemon94696 and code-mode host97349 run from the local release.
+A complete native capture finds51 readable daemon vnodes and zero host vnodes; both metadata
+flavors and lsof are clear. The first changing enumeration is retained separately. No updater
+PID or update marker remains; the original vendor binary is unchanged. After a separate DiskWatch
+scan finishes, the real handoff control passes clear0/held-file1/restored0. D217 closes for this
+verified inheritance repair; historical descriptor identity remains unknown. Cleanup is complete.
 For exact-version rollback, the original installed CLI's daemon update --from-cli command selects
 the original package through the same native installer; that selection also stays pinned. A normal
 daemon update command returns to the production update channel. The private rehearsal proves

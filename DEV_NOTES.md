@@ -3,6 +3,31 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — verify activated D217 package
+
+0237 cleanup4.hunt: the director completed external native installation; status updated,
+selected/running0.164.0, local package pinned. Read-only OS capture verifies daemon94696,
+code-mode host97349 and their executable paths in local-c908efcffa6c95317b16105e7ef593d696493975524a5bcfa09e8a8b2e23959d-aarch64-apple-darwin.
+Selected CLI SHA256 is3fe68efdbc14e99cbc614b2615514eaddf7520277696d7aee2eeead56dd2cd79;
+all41 provenance file hashes match. Patch SHA256 isab991c79e05fb9d3da3fb6a78704d9d0a89a7b0e8863c6ea877c1c85c1bc22b9.
+Original vendor CLI remains byte-exact d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf.
+No updater PID or automatic-update marker remains, consistent with native local selection.
+
+The first daemon enumeration changed during observation; all observed metadata was readable.
+That incomplete capture is retained as host-after-activation.json. The existing bounded native
+snapshot control then obtains stable enumeration:51 readable daemon vnodes, zero host vnodes,
+both native flavors complete, no ENOENT or untyped lsof marker. Complete proof is retained as
+recovery-20261025/host-after-activation-complete.json below target/artifact_cleanup_audit/.
+The strict handoff check initially refuses a separate DiskWatch scan:23927 and its du23930
+child, launched outside this task, hold the repository. The director elected to let it finish.
+Initial handoff/real-control refusals remain retained; neither foreign process was signalled.
+After those processes exit, contract.py --real passes0:49 fixtures/17 assertion reds plus native
+10 lifecycles/2 reds; real clear0/held-file1/restored0. Receipt: activation-handoff-real-final.log.
+Historical FD10 identity stays unknown; D217 closes for the verified inheritance repair:
+the reproduced inheritance class is prevented in the selected build. Full UI/model/voice
+sessions and upstream adoption are unclaimed. Cleanup remains complete; stop before publication.
+Whole0235 continuity ledger is retained209, independently checked against a65601d source bytes.
+
 ## _(2026-10-25 UTC)_ — trace and contain detached descriptor inheritance
 
 0236 cleanup4.hunt resumes on the director's instruction. The installed0.164.0 launcher gives

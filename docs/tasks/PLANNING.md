@@ -176,7 +176,8 @@ Each row: what is wrong, how to reproduce it, its impact, and the leaf that owns
 D69 is sealed in [`stitchcad-defects-part13.md`](../history/window2.md#stitchcad-defects-part13md)
 (7 lines, 672 bytes, `sha256:6ed0c7dd…`). Every cited defect
 resolves there or in git history. Derive the counts
-rather than trusting this sentence: `grep -c '^- \*\*D[0-9]' docs/tasks/PLANNING.md` for the open set and
+rather than trusting this sentence: count defect bullets before `Verified closure awaiting archival`
+for the open set, and below it separately for verified live closures. Run
 `bash scripts/history_archive.sh materialize target/defect-census` then
 `grep -hE '^(- \*\*D[0-9]+|### Defect D[0-9]+)' target/defect-census/docs/history/stitchcad-defects-part*.md | wc -l` for sealed reports. A defect closes by
 moving to a new sealed segment in the commit that fixes it, which is the per-defect status token D38 asks
@@ -1065,18 +1066,19 @@ D215 whole authored report/verified repair retained in [part134](../history/wind
 
 D216 whole authored report/verified repair retained in [part135](../history/window11.md#stitchcad-defects-part135md).
 
-- **D217** — Codex detached descriptor inheritance reproduced; tested local fix awaits activation.
+## Verified closure awaiting archival
+
+- **D217** — Codex detached descriptor inheritance repaired; actual host rollout verified.
   Original updater8048/FD10: native ENOENT, lsof untyped revoked; resource identity unknown.
   0235 recovery/cleanup verified. 0236 identifies pid_start's unfiltered spawn: same owned directory
   inode reaches server/updater without CLOEXEC; removal loses metadata; restart retains updater.
   Removed directory/revoked terminal also propagate when invalid before launch. Five shipped-build
   controls reproduce; patched release prevents all three faults and preserves both clear controls.
   Compiled guard omission fails; restored3/daemon88 pass. Private installation and exact rollback pass.
-  Owner cleanup4.hunt: external native-confirmed activation/pin, then real handoff proof. No bypass
+  0237 native installation pins tested build;41 hashes match,51 live vnodes readable. Real handoff
+  clear0/held1/restored0 passes after the separate scan exits. Owner cleanup4.hunt done. No bypass
   or active-harness termination. Original historical identity remains unknown. Book cleanup annex/
   DEV_NOTES0236 and protected recovery-20261025 audit retain source, commands and receipts.
-
-## Verified closure awaiting archival
 
 - **D218** — ten host-tooling identifiers in existing book prose lacked vocabulary declarations.
   Reproduce: GLOSSARY_ROOT census of actual38100bf book/roadmap/tasks snapshot returns1 with
@@ -1087,5 +1089,5 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   glossary suite27 pass/0fail, ten copied declaration removals each cause exactly one named C1
   refusal with an independent retained use. No exemption or glossary-census logic changed.
   Evidence: protected admission-glossary-head.txt; prior D155 establishes the same repair pattern.
-  Closure remains here until the next standard history window; no extra raw archive fits the
-  current64-file boundary. SPINE.19 owns its ordinary sealing; this defect's repair is complete.
+  D217/D218 remain here until ordinary sealing by SPINE.19; both repairs are verified.
+  No extra history window is opened for these live closure receipts.

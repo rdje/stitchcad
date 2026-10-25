@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0237 — verify activated D217 package
+
+.cleanup4.hunt: tested patch selected;41 package hashes match,51 live vnodes readable.
+Real handoff clear0/held1/restored0 passes after the separate scan exits. D217 inheritance
+repair verified; original FD10 identity unknown. Cleanup complete; stop before publication.
+
 ## STITCHCAD-G1-0236 — reproduce and contain detached descriptor inheritance
 
 .cleanup4.hunt: native identities prove the installed daemon propagates unrelated descriptors;
@@ -121,12 +127,6 @@ daemon88 tests and private supported install/exact rollback pass. Optimized cand
 external activation and its production-update pin await confirmation. Original FD10 identity unknown.
 Whole prior diagnostics retained304; canonical handoff/cleanup checker remains strict.
 
-## STITCHCAD-G1-0235 — recover runtime evidence and complete cleanup
-
-.f.cleanup4: app-server restart retained updater8048; verified graceful updater replacement
-restores native metadata and real clear0/held1/restored0. Fresh cleanup removes10060618B with
-zero selected residue, unchanged tracked inputs and237 preserved audit files. Native/WASM/book,
-cleanup/handoff/publication/continuity controls pass. D217 historical identity/trigger stays open.
 
 
 
@@ -364,3 +364,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 
 
 | [part208](docs/history/stitchcad-changelog-part208.md) | whole0234v through0228 | 49 lines, 3030 bytes, sha256:2e6922f5… |
+
+| [part209](docs/history/stitchcad-changelog-part209.md) | whole0235 | 6 lines, 453 bytes, sha256:547359ee… |
