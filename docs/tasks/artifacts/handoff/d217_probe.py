@@ -15,6 +15,7 @@ import json
 import os
 from pathlib import Path
 import platform
+import re
 import runpy
 import select
 import signal
@@ -62,7 +63,10 @@ def vnode(lib, pid, fd, flavor):
     if count == expected:
         mode = int.from_bytes(buf.raw[28:30], sys.byteorder)
         row.update(mode=oct(mode), file_type=stat.S_IFMT(mode),
-                   open_flags=int.from_bytes(buf.raw[:4], sys.byteorder))
+                   open_flags=int.from_bytes(buf.raw[:4], sys.byteorder),
+                   fd_flags=int.from_bytes(buf.raw[4:8], sys.byteorder),
+                   device=int.from_bytes(buf.raw[24:28], sys.byteorder),
+                   inode=int.from_bytes(buf.raw[32:40], sys.byteorder))
         if flavor == 2:
             path = buf.raw[176:].split(b'\0', 1)[0]
             root = os.fsencode(ROOT)
@@ -291,8 +295,10 @@ def calibrate(lib, profile):
 
 def retained(profile):
     archive = ROOT / 'docs/history/stitchcad-devnotes-part303.md'
+    followup = ROOT / 'docs/history/stitchcad-devnotes-part304.md'
+    ledger = ROOT / 'docs/history/stitchcad-changelog-part208.md'
     tree = 'docs/tasks/G1-SLICE-producers.md'
-    profile['plan_producer'](ROOT, sources=(Path(__file__), PROFILE_SOURCE, archive,
+    profile['plan_producer'](ROOT, sources=(Path(__file__), PROFILE_SOURCE, archive, followup, ledger,
                                           ROOT / 'scripts/history_archive.sh',
                                           ROOT / 'scripts/history_archive.py'))
     environment = profile['environment_for'](ROOT, dict(os.environ), create=False)
@@ -307,10 +313,28 @@ def retained(profile):
         records.append(original[start:end if end >= 0 else len(original)].rstrip(b'\n') + b'\n')
     body = archive.read_bytes().split(b'\n---\n\n', 1)[1]
     assert body == b'\n'.join(records), 'whole committed task records differ'
+    notes = subprocess.check_output(['git', 'show', 'ccc2a66:DEV_NOTES.md'], cwd=ROOT, env=environment)
+    first = notes.index('## _(2026-10-25 UTC)_ — D217 needs causal discrimination'.encode())
+    last = notes.index('## _(2026-10-24 UTC)_ — transport admission'.encode(), first)
+    old_tree = subprocess.check_output(['git', 'show', 'ccc2a66:' + tree], cwd=ROOT, env=environment)
+    start = old_tree.index(b'- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt`')
+    end = old_tree.index(b'\n- ID: ', start)
+    expected = notes[first:last].rstrip(b'\n') + b'\n\n' + old_tree[start:end].rstrip(b'\n') + b'\n'
+    retained_followup = followup.read_bytes().split(b'\n---\n\n', 1)[1]
+    assert retained_followup == expected, 'whole prior diagnostic records differ'
+    changelog = subprocess.check_output(['git', 'show', 'ccc2a66:CHANGELOG.md'], cwd=ROOT, env=environment)
+    whole_ledgers = []
+    for unit in ('0234v', '0234', '0233', '0232', '0231', '0230', '0229', '0228'):
+        start = re.search(rb'^## STITCHCAD-G1-' + unit.encode() + ' —'.encode(), changelog, re.M)
+        end = re.search(rb'^(?:## |\|)', changelog[start.end():], re.M)
+        whole_ledgers.append(changelog[start.start():start.end() + end.start()].rstrip(b'\n') + b'\n')
+    retained_ledgers = ledger.read_bytes().split(b'\n---\n\n', 1)[1]
+    assert retained_ledgers == b'\n'.join(whole_ledgers), 'whole prior continuity ledgers differ'
     subprocess.run(['bash', 'scripts/history_archive.sh', 'prove-source', 'window11'],
                    cwd=ROOT, env=environment, capture_output=True, check=True)
     return dict(complete_source_intervals=len(records), bytes=len(body), exact=True,
-                retained_window_source_exact=True)
+                retained_window_source_exact=True, followup_bytes=len(retained_followup),
+                whole_ledger_bytes=len(retained_ledgers))
 
 
 def runtime(lib, profile, executable, inherit):

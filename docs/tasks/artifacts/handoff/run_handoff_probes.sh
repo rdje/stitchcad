@@ -4,5 +4,7 @@ ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 python3 -I -B docs/tasks/artifacts/handoff/contract.py
 python3 -I -B docs/tasks/artifacts/handoff/d217_probe.py self-test
+python3 -I -B docs/tasks/artifacts/handoff/d217_daemon.py --self-test
+python3 -I -B docs/tasks/artifacts/handoff/d217_upstream.py self-test
 python3 -I -B docs/tasks/artifacts/handoff/d217_probe.py retained
 printf 'handoff probes: 1 pass / 0 fail\n'

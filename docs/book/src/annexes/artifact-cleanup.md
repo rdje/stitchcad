@@ -165,6 +165,65 @@ process group disappears. A successful diagnostic is not permission for cleanup 
 Isolation follows the documented [Codex state location](https://learn.chatgpt.com/docs/config-file/config-advanced#config-and-state-locations)
 and [app-server initialization](https://learn.chatgpt.com/docs/app-server#protocol); no inference is requested.
 
+### Reproduced launch defect and tested local candidate
+
+The 0236 investigation uses the actual installed managed-daemon launcher in private state.
+Native device/inode and descriptor flags identify the same controlled directory in both detached
+processes before deletion. The close-on-exec flag is unset. Removing the directory then produces
+the exact unavailable native/lsof metadata; restarting the app server retains the updater's fault.
+Already removed directories and freshly owned revoked terminals also propagate when supplied at
+launch. Closing unrelated descriptors or setting their close-on-exec flag prevents this chain.
+This establishes a reproducible inheritance defect; the old descriptor10's historical object and
+event remain unknown. No lsof or kernel-bug claim is needed to establish this launcher behavior.
+
+The [release-matched detached spawn](https://github.com/openai/codex/blob/rust-v0.164.0/codex-rs/app-server-daemon/src/backend/pid_start.rs)
+starts a new session without filtering unrelated inherited descriptors. The tracked patch
+docs/tasks/artifacts/handoff/d217_daemon_fix.patch sets their close-on-exec flags in the forked
+macOS child, preserving standard streams, the parent's flags and Rust's launch-error channel.
+It uses the [documented child execution approach](https://docs.rs/close_fds/0.3.2/close_fds/).
+The patch changes two source inputs in revision6aaac694803004a63c6f393d153c96d22521a6b9;
+9434 other release files remain exact. The generated dependency lock is retained separately;
+existing registry versions/checksums stay fixed, with only the pinned descriptor helper added.
+
+The optimized CLI prevents all three fault cases and preserves both clear controls in the same
+five-case installed-daemon experiment. Three compiled regression tests cover inheritance, parent
+preservation, standard streams and exec-error reporting. Omitting the actual guard fails its
+identity assertion; restoration passes. All88 daemon unit tests pass with the shorter project-local
+temporary directory target/t, avoiding the initial fixture socket pathname-limit failures.
+Pure observation/patch-selector controls run with the ordinary handoff probes. Native controls
+require Darwin and the selected installed or locally built executable; no CI-platform equivalence
+is inferred. The new private tools never request a model turn.
+
+```bash
+python3 -I -B docs/tasks/artifacts/handoff/d217_daemon.py --binary /path/to/codex
+python3 -I -B docs/tasks/artifacts/handoff/d217_daemon.py --binary /path/to/patched/codex --expect-contained
+python3 -I -B docs/tasks/artifacts/handoff/d217_upstream.py verify
+python3 -I -B docs/tasks/artifacts/handoff/d217_upstream.py calibrate
+```
+
+The retained source archive, optimized candidate and build receipts are under
+target/artifact_cleanup_audit/d217-upstream-0164; native verdicts are in recovery-20261025.
+The complete package preserves its matching companion tools/resources, replaces the CLI and
+updates the CLI's voice-resource checksum. Its sidecar records the local patch and file hashes.
+Supported native installation and exact original-version rollback pass in a fresh private home;
+the tested source selection is a separate local release and never overwrites the vendor release.
+
+**Activation changes the shared Codex daemon and pins production automatic updates.** It is
+pending the director's confirmation and must run from a standalone Terminal, from the repository
+root. The script rechecks package hashes, refuses active-harness ancestry and preserves the
+native installer's interactive confirmation. All Codex sessions using that daemon are interrupted.
+
+```bash
+python3 -I -B docs/tasks/artifacts/handoff/d217_upstream.py activate
+```
+
+After activation, resume this conversation and capture the selected executable and descriptor
+metadata before rerunning the real handoff control. Keep D217 open until that host verdict passes.
+For exact-version rollback, the original installed CLI's daemon update --from-cli command selects
+the original package through the same native installer; that selection also stays pinned. A normal
+daemon update command returns to the production update channel. The private rehearsal proves
+package switching and byte-exact rollback, without claiming unobserved UI/model/voice sessions.
+
 ## Verification scope
 
 Actual captures execute both mode bodies: creation, two exclusive JSON writes, process dispatch

@@ -1065,18 +1065,16 @@ D215 whole authored report/verified repair retained in [part134](../history/wind
 
 D216 whole authored report/verified repair retained in [part135](../history/window11.md#stitchcad-defects-part135md).
 
-- **D217** — historical Codex descriptor identity/trigger remains unknown; recovery verified.
-  Original handoff refuses2 on updater8048/FD10; both native vnode queries return ENOENT,
-  lsof0 omits type with ambiguous revoked marker. Session/code host share that signature.
-  cleanup4.fix repairs the misleading malformed diagnosis; checker stays strict.
-  Hunt0234 reproduces revoked terminal and removed event-only directory; ordinary unlink stays
-  readable. Isolated inheritance reproduces; clean/live controls pass. No original kernel proof.
-  0235: app-server restart retained updater8048 by design. Verified non-ancestor SIGTERM and
-  descriptor-closing start replace it with42768; native metadata readable, real clear0/held1/
-  restored0. Cleanup4 applied with residue0/tracked bytes exact. This proves recovery, not prevention.
-  Owner cleanup4.hunt: capture object identity before a recurrence's invalidation; no unknown-handle
-  exemption or active-harness termination. Receipts: protected startup/recovery-20261025 audit;
-  invocation/source/recovery detail: book cleanup annex; DEV_NOTES0234/0235.
+- **D217** — Codex detached descriptor inheritance reproduced; tested local fix awaits activation.
+  Original updater8048/FD10: native ENOENT, lsof untyped revoked; resource identity unknown.
+  0235 recovery/cleanup verified. 0236 identifies pid_start's unfiltered spawn: same owned directory
+  inode reaches server/updater without CLOEXEC; removal loses metadata; restart retains updater.
+  Removed directory/revoked terminal also propagate when invalid before launch. Five shipped-build
+  controls reproduce; patched release prevents all three faults and preserves both clear controls.
+  Compiled guard omission fails; restored3/daemon88 pass. Private installation and exact rollback pass.
+  Owner cleanup4.hunt: external native-confirmed activation/pin, then real handoff proof. No bypass
+  or active-harness termination. Original historical identity remains unknown. Book cleanup annex/
+  DEV_NOTES0236 and protected recovery-20261025 audit retain source, commands and receipts.
 
 ## Verified closure awaiting archival
 

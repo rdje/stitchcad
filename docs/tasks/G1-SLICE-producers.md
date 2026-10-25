@@ -772,21 +772,24 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt`
   Status: `in_progress`
-  Goal: director2026-10-25 D217 cause/repair; recovery verified, historical origin open.
+  Goal: D217 inheritance repair verified privately; external activation pending.
   Paths: docs/tasks/artifacts/handoff/d217_probe.py;docs/tasks/artifacts/handoff/contract.py;docs/tasks/artifacts/handoff/run_handoff_probes.sh
   Additional paths: docs/tasks/artifacts/ci_environment/producer_entries.tsv;docs/tasks/artifacts/ci_environment/python_file_entries.tsv
-  Acceptance: historical lifecycle proof; strict checker; recovery/cleanup evidence.
-  Plan/evidence: cleanup annex; DEV_NOTES0234/0235. Own retained303/window11, unchanged bounds.
+  Paths: docs/tasks/artifacts/handoff/d217_daemon.py;docs/tasks/artifacts/handoff/d217_upstream.py;docs/tasks/artifacts/handoff/d217_daemon_fix.patch
+  Evidence: cleanup annex; DEV_NOTES0236. Own retained303/304/window11; caps unchanged.
+  Own docs/history/stitchcad-changelog-part208.md for the whole-ledger rollover.
 
-- [x] REPRODUCE / ISSUE: native/lsof PID8048/FD10 ENOENT; d217-hunt-snapshot.json rc=0.
-  Historical identity/trigger unresolved; exact installed kernel branch unproved.
-- [x] ROOT CAUSE: d217_probe.py controls separates two mechanisms;10 observations rc=0.
-- [x] FIX: watched diagnostic; checker unchanged; retained verifies4144B rc=0.
-- [x] ADDRESSED: calibrate10/two omission reds rc=0; runtime arms exit0/group gone.
-- [x] NO REGRESSION: handoff49/17, cleanup physical14/omissions5/statuses, publication45,
-  producer259-path census/coverage rc=0 in0234. Real recovery clear0/held1/restored0 in0235.
-- [x] LOCKSTEP: book/live/frontier/DEV/CH/MEMORY synced; size rc=0 in0234.
-  promotion: declined (scoped diagnostic; original cause open).
+  Original diagnostic acceptance retained in [part304](../history/stitchcad-devnotes-part304.md).
+- [x] REPRODUCE / ISSUE: d217_daemon.py --binary ~/.codex/packages/app-server-daemon/releases/0.164.0-aarch64-apple-darwin/bin/codex;
+  five cases rc=0; three propagate bad metadata.
+- [x] ROOT CAUSE: d217_daemon.py identity/flags trace names pid_start's unfiltered spawn, rc=0.
+- [x] FIX: d217_upstream.py verify reconstructs exact two-file patch, rc=0; not yet activated.
+- [x] ADDRESSED: d217_daemon.py --binary "$PWD/target/d217-codex-build/release/codex" --expect-contained;
+  five cases rc=0; d217_upstream.py calibrate: compiled omission red/restored3 pass0.
+- [x] NO REGRESSION: upstream cargo test -p codex-app-server-daemon --lib:88 pass0;
+  d217_upstream.py rehearse: install/exact rollback rc=0; owned jobs stopped.
+- [x] LOCKSTEP: book/live/task/archive/registries synced; retained4144/8170/3030B and size rc=0.
+  promotion: declined (scoped host defect; original FD10 identity remains unknown).
 
 - ID: `G1-SLICE.5b.4c.h2.b.xtask`
   Status: `proposed`

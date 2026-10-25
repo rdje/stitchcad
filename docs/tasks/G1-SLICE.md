@@ -885,7 +885,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| current | `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt` | `in_progress` | Historical cause open; cleanup verified; stop requested |
+| current | `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt` | `in_progress` | Activate tested local D217 fix; cleanup complete |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

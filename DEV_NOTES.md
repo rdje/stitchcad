@@ -3,6 +3,52 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — trace and contain detached descriptor inheritance
+
+0236 cleanup4.hunt resumes on the director's instruction. The installed0.164.0 launcher gives
+the same controlled directory inode to its detached server and updater with close-on-exec unset.
+Removing that owned directory produces both native ENOENT replies and lsof's untyped revoked
+marker. App-server restart retains the updater and failure; replacing the updater recovers.
+This is a complete controlled causal chain. The historical FD10 pathname/event remains unknown.
+
+d217_daemon.py now records device/inode/descriptor flags before invalidation; ABI fields match
+independent local fstat/inheritance observations. Five installed-runtime arms cover inherited live
+directory, closed/cloexec controls, already removed directory and explicitly revoked owned PTY.
+Both initially invalid resources also propagate. The optimized patched build contains all three
+fault arms and preserves both clear controls; all private processes stop and parent flags survive.
+Receipts: recovery-20261025/daemon-five-installed.log and daemon-five-release.log below the audit.
+
+d217_daemon_fix.patch marks non-stdio descriptors close-on-exec in the forked child of the actual
+detached launcher; parent descriptors and Rust's exec-error pipe remain valid. Pinned dependency
+close_fds0.3.2 supplies its documented macOS child-exec operation. Source revision6aaac694803004a63c6f393d153c96d22521a6b9;
+d217_upstream.py independently reapplies both whole-file changes and proves9434 other release
+files exact. The release tag's lock normalizes workspace versions during build; registry version/
+checksum membership changes only by adding close_fds. Actual lock hash stays in the receipts.
+Patch blank-line framing is normalized for Git whitespace checks; independent application proves
+identical whole source inputs. Prior provenance is retained; the final package rehearsal repeats.
+The official latest-release API checked2026-10-25 still selects0.164.0; release-check JSON is retained.
+
+Project-local Rust1.99.1 builds debug and optimized CLI. Compiled omission fails the identity
+assertion; restoration passes3 tests, including stdio/exec-error reporting and parent preservation.
+Daemon/test strict Clippy passes0. Whole unit suite passes88 with shorter local TMPDIR target/t;
+the initial three failures name
+Unix socket pathname limits at target/scratch. No unrelated upstream code is repaired. Debug
+startup sampling identifies executable-identity hashing as its readiness delay; failed attempts
+remain retained. Readiness precedes capture; incomplete snapshots remain recorded and ENOENT
+never gets retried into a clear verdict. The first sampler selected its shell; anchored selection
+corrects it. Final optimized five-case receipts supersede those incomplete diagnostic attempts.
+
+The complete candidate preserves41 package files, replaces the CLI and updates its voice checksum;
+a sidecar labels the local patch. Supported installation and exact original-version rollback pass
+in a fresh private home, including recovery from the injected fault. All rehearsal children stop.
+Actual in-harness activation guard refuses before the installer. Native confirmation and an external
+Terminal are required; selecting the local package pins production automatic updates. The real
+runtime remains unchanged pending that decision. Sources, build/native logs and package provenance:
+target/artifact_cleanup_audit/d217-upstream-0164/ and recovery-20261025/.
+Promotion declined: scoped host repair; authoritative procedure and proof limits in cleanup annex.
+Whole prior notes/task are retained304; eight whole continuity ledgers are retained208. The watched
+retained mode compares their complete ccc2a66 source intervals, without raising a containment cap.
+
 ## _(2026-10-25 UTC)_ — complete runtime recovery and guarded cleanup
 
 0235 cleanup4: external restart reports app-server66024; direct capture finds readable vnodes,
@@ -20,88 +66,7 @@ Receipts: target/artifact_cleanup_audit/startup-20261024/d217-updater-restart.js
 target/artifact_cleanup_audit/recovery-20261025/. D217 stays open; historical proof needs identity
 before invalidation or a vendor trace. Promotion declined: scoped evidence in the owning hunt.
 
-## _(2026-10-25 UTC)_ — D217 needs causal discrimination before a permanent-fix claim
-
-0234 cleanup4.hunt instruments the unresolved production descriptor instead of inferring its
-origin from lsof's marker. Snapshot of PID8048/65756/68313 shows only descriptor10's vnode metadata
-unavailable, both native flavors returning zero/errno2, with unchanged enumerations and successful
-neighboring metadata. Enumeration stability alone cannot exclude descriptor reuse. Installed
-runtime0.164.0, Darwin27.0.0/build26A434, kernel13432.1.9; exact public kernel tag unavailable.
-Primary source bounds: Apple's process_vnode translates ENOENT to the marker before setting type;
-published pid_vnodeinfo/pid_vnodeinfopath use vnode acquisition and stat. No installed-instruction proof.
-
-Owned terminal revocation and removal of an event-only directory independently reproduce the exact
-native/lsof signature. Ordinary unlinked files/directories stay readable; a closed descriptor gives
-errno9. Local fstat distinguishes the two reproduced mechanisms (errno9 versus2); remote libproc
-cannot choose between them. The production descriptor's original identity and invalidation event
-remain unknown. Neither lsof-only failure nor the historical creator has been established.
-
-Isolated installed app-server initialization sends no thread/model request, uses empty project-owned
-state, and deliberately preserves only a selected controlled descriptor. Clean and live-directory
-arms initialize with readable vnodes; inheriting a removed event-only directory reproduces zero/
-errno2/untyped revoked. Fresh initialization alone does not imply long-term prevention. Final runtime
-children exit0 and their isolated process groups disappear. The first teardown checked immediately
-after signalling and caught a transient group; a fresh process census found no surviving diagnostic
-runtime. Bounded teardown now waits for group disappearance and refuses surviving descendants.
-
-Calibration originally counted its own fault literal as a second anchor. Restricting replacement to
-the parsed controls function fixes the calibration; two actual lifecycle omissions now fail their
-independent assertions. Pure controls reject five corrupted observation sets. Native calibration
-is watched by contract.py --real; its subsequent production baseline still refuses2, so the real
-held-file/restored proof and cleanup remain blocked. The native calibrator itself passes10 cases/
-two actual assertion reds; no production exemption or cleanup behavior change.
-
-Receipts: target/artifact_cleanup_audit/startup-20261024/d217-hunt-snapshot.json,
-d217-hunt-event-controls.json, d217-hunt-calibration-final.json, d217-hunt-runtime-none-final.json,
-d217-hunt-runtime-live-final.json, d217-hunt-runtime-removed-complete.json and d217-hunt-handoff-real.log.
-The final two runtime controls additionally record explicit process-group disappearance; no pending
-diagnostic work may outlive the checkpoint. The full test plan and remaining discrimination are in
-the cleanup annex. Five whole completed task records are retained303 from exact cdc6a77 intervals;
-the tracked diagnostic rechecks complete source membership and bytes, without raising any cap.
-That record crossed the fixed64-file resident history bound. Window11 retains all54 committed raw
-files (169756B) in a deterministic47725B payload; full source proof passes with no missing/extra.
-The previous ten manifests/catalogs/payloads stay exact; live public links move to the new catalog.
-Final -verified runtime captures supersede the earlier iteration logs; all three exit0/group gone.
-Post-commit fd7c41d: window_contract.py passes668 controls/647 logical reads, rc=0; a copied edit
-of the newest committed catalog passes ordinary inventory and fails the actual retention guard.
-Receipt: d217-hunt-window-committed.log in the protected startup audit. Earlier 667 lacked that
-post-commit guard arm. All diagnostic jobs consumed; production handoff still needs complete evidence.
-Next action must run from a standalone external terminal and interrupts sessions using this daemon.
-For the observed installed release, launch the restart CLI with unrelated descriptors closed:
-
-```bash
-python3 -I -B -c 'from pathlib import Path; import subprocess; subprocess.run([str(Path.home()/".codex/packages/app-server-daemon/releases/0.164.0-aarch64-apple-darwin/bin/codex"),"app-server","daemon","restart"],close_fds=True,check=True)'
-```
-
-Then resume this investigation, capture replacement descriptors before cleanup, and rerun the real
-handoff control. This tests recovery; it does not establish the original descriptor's historical owner.
-Promotion declined: bounded investigation evidence, with the unresolved cause explicitly owned.
-
-## _(2026-10-25 UTC)_ — cleanup recheck still needs external runtime recovery
-
-0233 cleanup4: requested OS-visible bash scripts/check_handoff.sh --idle-cua still returns2 for
-PID8048/FD10, type unavailable with the exact revoked marker. python3 -I -B
-docs/tasks/artifacts/handoff/contract.py --real passes49 fixtures/17 actual assertion reds,
-then exits1 at the same refused baseline before creating its holder. No new diagnosis or exemption;
-no fresh plan/apply, deletion or cadence advance. Cleanup4 remains blocked; finish it and stop after
-external runtime restart and complete clear/held-file/restored evidence. Promotion declined: same D217
-blocker and existing recovery procedure. Receipts in target/artifact_cleanup_audit/startup-20261024/:
-recheck-20261025-handoff.log and recheck-20261025-0953-real.log. Recheck complete; cleanup blocked.
-
-## _(2026-10-25 UTC)_ — unavailable lsof metadata needs an actionable refusal
-
-0232 cleanup4.fix: installed lsof's field-output manual permits unavailable fields to be omitted.
-Apple process_vnode maps ENOENT to an uncertain revoked marker; treating that as inert would
-discard evidence. Read-only libproc flavors1/2 also return zero with errno2 for the observed
-descriptors; ps ancestry places code-mode-host outside the caller chain. Kernel cause unproved.
-The parser now distinguishes unavailable type metadata from malformed process/file/name framing,
-reporting PID/FD and only the exact revoked marker. No success, exemption or blocking rule changes.
-Handoff controls pass49 cases/17 actual faults; three exact diagnostic checks reject wrong PID/FD,
-path leakage and marker near-matches. The real OS census still refuses2 on PID8048/FD10.
-D217 remains owned: host runtime restart, real clear/held-file/restored proof, fresh cleanup plan.
-No cleanup or cadence update. Promotion declined: existing incomplete-evidence rule; recovery and
-primary sources belong in the cleanup annex. Original0229 interpretation below is superseded only
-as to its malformed-record diagnosis: the refusal remains correct.
+Whole0234/0233/0232 notes and original diagnostic task retained in [part304](docs/history/stitchcad-devnotes-part304.md).
 
 ## _(2026-10-24 UTC)_ — transport admission follows deployment evidence
 

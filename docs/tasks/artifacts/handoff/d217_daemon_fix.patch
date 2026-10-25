@@ -1,0 +1,148 @@
+--- a/codex-rs/app-server-daemon/Cargo.toml
++++ b/codex-rs/app-server-daemon/Cargo.toml
+@@ -47,5 +47,8 @@
+ pretty_assertions = { workspace = true }
+ tracing-subscriber = { workspace = true }
+
++[target.'cfg(target_os = "macos")'.dependencies]
++close_fds = "=0.3.2"
++
+ [target.'cfg(windows)'.dependencies]
+ windows-sys = { workspace = true, features = ["Win32_Foundation", "Win32_Storage_FileSystem", "Win32_System_Console", "Win32_System_IO", "Win32_System_JobObjects", "Win32_Security", "Win32_Security_Authorization", "Win32_System_Threading"] }
+--- a/codex-rs/app-server-daemon/src/backend/pid_start.rs
++++ b/codex-rs/app-server-daemon/src/backend/pid_start.rs
+@@ -161,6 +161,8 @@
+         {
+             unsafe {
+                 command.pre_exec(|| {
++                    #[cfg(target_os = "macos")]
++                    prepare_inherited_fds_for_exec();
+                     if libc::setsid() == -1 {
+                         return Err(std::io::Error::last_os_error());
+                     }
+@@ -313,3 +315,125 @@
+         Ok(Some(pid))
+     }
+ }
++
++#[cfg(target_os = "macos")]
++fn prepare_inherited_fds_for_exec() {
++    // The detached service receives only its explicitly configured stdio. Mark
++    // other descriptors in the forked child, preserving the parent's flags and
++    // Rust's error pipe until exec. Keep libdispatch-owned descriptors valid until exec.
++    close_fds::set_fds_cloexec(3, &[]);
++}
++
++#[cfg(all(test, target_os = "macos"))]
++mod inherited_fd_tests {
++    use std::os::fd::AsRawFd;
++    use std::os::unix::fs::MetadataExt;
++    use std::os::unix::process::CommandExt;
++    use std::process::Command;
++
++    const FD: &str = "CODEX_TEST_D217_FD";
++    const DEV: &str = "CODEX_TEST_D217_DEV";
++    const INO: &str = "CODEX_TEST_D217_INO";
++
++    #[test]
++    fn child_does_not_retain_unrelated_descriptor() {
++        let Ok(value) = std::env::var(FD) else {
++            return;
++        };
++        let fd = value.parse::<i32>().expect("descriptor");
++        // SAFETY: stat is valid writable storage; fstat borrows the numeric fd.
++        let mut info: libc::stat = unsafe { std::mem::zeroed() };
++        let status = unsafe { libc::fstat(fd, &mut info) };
++        if status == 0 {
++            let expected_dev = std::env::var(DEV).unwrap().parse::<u64>().unwrap();
++            let expected_ino = std::env::var(INO).unwrap().parse::<u64>().unwrap();
++            assert_ne!(
++                (info.st_dev as u64, info.st_ino),
++                (expected_dev, expected_ino)
++            );
++        } else {
++            assert_eq!(
++                std::io::Error::last_os_error().raw_os_error(),
++                Some(libc::EBADF)
++            );
++        }
++    }
++
++    #[test]
++    fn closes_unrelated_descriptor_without_changing_parent() {
++        let file = tempfile::tempfile().expect("owned source");
++        let fd = file.as_raw_fd();
++        // SAFETY: file owns this descriptor and stays alive throughout the test.
++        assert_eq!(unsafe { libc::fcntl(fd, libc::F_SETFD, 0) }, 0);
++        let identity = file.metadata().expect("source identity");
++        let mut command = Command::new(std::env::current_exe().unwrap());
++        command.args([
++            "--exact",
++            "backend::pid::start::inherited_fd_tests::child_does_not_retain_unrelated_descriptor",
++            "--nocapture",
++        ]);
++        command.env(FD, fd.to_string());
++        command.env(DEV, identity.dev().to_string());
++        command.env(INO, identity.ino().to_string());
++        // SAFETY: only the signal-safe child descriptor preparation runs after fork.
++        unsafe {
++            command.pre_exec(|| {
++                super::prepare_inherited_fds_for_exec();
++                Ok(())
++            });
++        }
++        let output = command.output().expect("launch child");
++        assert!(output.status.success(), "{output:?}");
++        assert!(String::from_utf8_lossy(&output.stdout).contains("1 passed"));
++        assert_eq!(unsafe { libc::fcntl(fd, libc::F_GETFD) }, 0);
++        assert_eq!(file.metadata().unwrap().ino(), identity.ino());
++    }
++
++    #[test]
++    fn preserves_stdio_and_exec_error_reporting() {
++        use std::io::Write;
++        use std::process::Stdio;
++
++        let mut command = Command::new("/bin/sh");
++        command.args([
++            "-c",
++            "read -r line; printf '%s' \"$line\"; printf stderr-ok >&2",
++        ]);
++        command
++            .stdin(Stdio::piped())
++            .stdout(Stdio::piped())
++            .stderr(Stdio::piped());
++        // SAFETY: only the signal-safe child descriptor preparation runs after fork.
++        unsafe {
++            command.pre_exec(|| {
++                super::prepare_inherited_fds_for_exec();
++                Ok(())
++            });
++        }
++        let mut child = command.spawn().expect("stdio child");
++        child
++            .stdin
++            .take()
++            .unwrap()
++            .write_all(b"stdin-ok\n")
++            .unwrap();
++        let output = child.wait_with_output().unwrap();
++        assert!(output.status.success());
++        assert_eq!(output.stdout, b"stdin-ok");
++        assert_eq!(output.stderr, b"stderr-ok");
++
++        let missing = tempfile::tempdir().unwrap().path().join("absent");
++        let mut command = Command::new(missing);
++        // SAFETY: same child-only descriptor preparation, preserving Rust's error pipe.
++        unsafe {
++            command.pre_exec(|| {
++                super::prepare_inherited_fds_for_exec();
++                Ok(())
++            });
++        }
++        assert_eq!(
++            command.spawn().unwrap_err().raw_os_error(),
++            Some(libc::ENOENT)
++        );
++    }
++}

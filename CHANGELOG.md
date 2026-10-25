@@ -112,6 +112,15 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0236 — reproduce and contain detached descriptor inheritance
+
+.cleanup4.hunt: native identities prove the installed daemon propagates unrelated descriptors;
+owned invalidation reproduces D217 and restart retains the updater. A source-matched macOS
+patch prevents all three fault arms across five real controls. Compiled omission/restoration,
+daemon88 tests and private supported install/exact rollback pass. Optimized candidate prepared;
+external activation and its production-update pin await confirmation. Original FD10 identity unknown.
+Whole prior diagnostics retained304; canonical handoff/cleanup checker remains strict.
+
 ## STITCHCAD-G1-0235 — recover runtime evidence and complete cleanup
 
 .f.cleanup4: app-server restart retained updater8048; verified graceful updater replacement
@@ -119,55 +128,13 @@ restores native metadata and real clear0/held1/restored0. Fresh cleanup removes1
 zero selected residue, unchanged tracked inputs and237 preserved audit files. Native/WASM/book,
 cleanup/handoff/publication/continuity controls pass. D217 historical identity/trigger stays open.
 
-## STITCHCAD-G1-0234v — verify the committed D217 evidence checkpoint
 
-Newest committed archive guard refuses its controlled catalog edit; all668 window controls and
-647 logical reads pass. External descriptor-clearing restart command recorded for the next experiment.
 
-## STITCHCAD-G1-0234 — instrument the D217 causal investigation
 
-.f.cleanup4.hunt: tracked native/lsof captures, two independently reproduced failure mechanisms,
-calibrated lifecycle controls and isolated installed-runtime inheritance experiments. Original
-descriptor identity/trigger remains unresolved; production refusal and cleanup guard stay strict.
-Complete prior task records retained303; window11 preserves the full prior raw snapshot and public
-retrieval under unchanged bounds, with watched exact committed-source reconstruction.
 
-## STITCHCAD-G1-0233 — recheck blocked cleanup and stop
 
-.f.cleanup4: OS-visible census still refuses2 on PID8048/FD10. Real control passes49 fixtures/
-17 actual faults, then exits1 at its refused baseline; held-file/restored proof remains unavailable.
-Cleanup stays blocked; no plan/apply or deletion, cadence unchanged. Resume after external runtime restart.
 
-## STITCHCAD-G1-0232 — identify unavailable lsof descriptor metadata
 
-.f.cleanup4.fix: distinguish optional missing type metadata from malformed framing; include PID/FD
-without leaking handle paths. Handoff controls49/17 actual faults pass. Actual OS refusal remains2;
-D217 requires host runtime restart and fresh census/held-file/cleanup proof. No artifact deletion.
-
-## STITCHCAD-G1-0231 — admit MCP connection profiles by evidence
-
-Roadmap v0.4 replaces the stdio-only/G5+ restriction with per-profile admission from G1.
-Book, decision and implementation owners cover local stdio/HTTP, remote HTTP and private bridges.
-The command census checks profiles/owners/retired policy; actual copied checker faults calibrate it.
-Nine whole completed producer records are retained302; no runtime connection is enabled or certified.
-Fixed D218's ten pre-existing tooling-vocabulary omissions; all ten copied declaration controls pass.
-
-## STITCHCAD-G1-0230 — clarify plugin transport candidates
-
-.9.plugin.t1: documented local stdio/HTTP, web HTTP/SSE and tunnel-to-stdio options;
-corrected broad HTTP prerequisite framing. Roadmap, blocked cleanup and implementation unchanged.
-
-## STITCHCAD-G1-0229 — record blocked startup cleanup
-
-.f.cleanup4.r: captured D217 revoked runtime descriptors; strict cleanup refused before deletion.
-Committed ownership/resume/book evidence; cleanup4 awaits runtime recovery and a fresh plan.
-Recorded DBIQNP rustdoc/mdBook-link adoption item .9.doc without changing the current work.
-Plugin/chat/UI discussion .9.plugin records the existing transport/threat-model dependency.
-Cargo xtask discussion owns incremental migration with pre-Cargo locality and independent oracles.
-
-## STITCHCAD-G1-0228 — crash recovery cleanup
-
-.f.cleanup3: required overdue cleanup; preserved recovery evidence and regenerated outputs.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -394,3 +361,6 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part198](docs/history/window11.md#stitchcad-changelog-part198md) | whole0218/0217 ledgers | 7 lines, 293 bytes, sha256:f965b1d7… |
 
 | [200](docs/history/window11.md#stitchcad-changelog-part200md) | whole0220 | sealed |
+
+
+| [part208](docs/history/stitchcad-changelog-part208.md) | whole0234v through0228 | 49 lines, 3030 bytes, sha256:2e6922f5… |
