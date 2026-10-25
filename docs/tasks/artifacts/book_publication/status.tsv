@@ -66,3 +66,5 @@ formula whole recipe refusal owner	annexes/formula-checked-recipes.md	crates/sc-
 formula whole recipe refusal variants	annexes/formula-checked-recipes.md	crates/sc-core/src/recipe/checked_recipe.rs	FormulaRecipeCheckRefusal	G1-SLICE.5b.4a	4.1
 formula whole dependency roles	annexes/formula-checked-recipes.md	crates/sc-core/src/recipe/checked_recipe.rs	FormulaRecipeDependencyRole	G1-SLICE.5b.4a	4.1
 formula whole sourced dependency	annexes/formula-checked-recipes.md	crates/sc-core/src/recipe/checked_recipe.rs	FormulaRecipeNameDependency	G1-SLICE.5b.4a	4.1
+formula exact rational construction	annexes/formula-rationals.md	crates/sc-core/src/recipe/rational.rs	FormulaRational	G1-SLICE.5c.1.1	4.2
+formula rational construction refusal	annexes/formula-rationals.md	crates/sc-core/src/recipe/rational.rs	FormulaRationalError	G1-SLICE.5c.1.1	4.2

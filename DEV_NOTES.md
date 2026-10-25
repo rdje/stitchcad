@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — canonical exact formula rational values
+
+0244 .5c.1.1 adds FormulaRational in the recipe namespace: private reduced u128 components,
+independent sign, positive denominator, canonical positive0/1 and full signed-integer input.
+Zero denominators refuse before zero normalization through FormulaRationalError/formula_division.
+No signed narrowing, allocation, dependency, rounding, quantity domain or storage conversion occurs.
+This is the first value-construction feature; arithmetic/workspace/width refusal remain .5c.1.2,
+independent oracle integration .3, and typed operators/evaluation later owners.
+
+One focused native contract target passes1/0, rc=0. It covers reduction, both full-width signs,
+large denominators, zero0/0 refusal, canonical equality/default and i128 MIN. Rustfmt ran on the
+two new files. No full regression, Clippy or WASM pass is claimed. Book/API status and availability
+describe the exact implemented scope. Whole0243 task/ledger retained313/216 with exact source/public
+reads. Promotion declined: existing numeric contract and focused-check policy already govern this.
+
 ## _(2026-10-25 UTC)_ — finish archive fixtures and restore feature-first delivery
 
 0243 .a25.2 closes copied/fault-payload/resident/materialization plans before activation; guarded

@@ -20,8 +20,9 @@ Three properties define it:
 **Status:** executable Rust foundations are available; no user-facing application exists yet.
 The G0 semantic contract has been reviewed; human closure remains unapproved. G1 implements
 ontology, measurement inputs and borrowed/normalized formula syntax with owned identities,
-sourced namespaces and complete immutable recipe kind proofs. Whole-factory review checks source dependencies. [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks verified progress;
-the mdBook explains implemented behavior and remaining proof boundaries.
+sourced namespaces and complete immutable recipe kind proofs. Whole-factory review checks source dependencies.
+Canonical signed formula rational values can now be constructed and reduced exactly.
+[`LIVE_STATUS.md`](LIVE_STATUS.md) tracks verified progress; the mdBook explains implemented behavior and remaining proof boundaries.
 
 ## Audience and scope
 

@@ -34,6 +34,9 @@ pub use literal::{
     FormulaRationalComponent,
 };
 
+mod rational;
+pub use rational::{FormulaRational, FormulaRationalError};
+
 mod normalized;
 pub use normalized::{
     FormulaNormalizedArguments, FormulaNormalizedExpression, FormulaNormalizedNode,

@@ -127,11 +127,11 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0243 — finish archive fixtures and restore feature-first delivery
 
-.a25.2: closed fixture plans, scoped children and protected cleanup preserve original refusal
-behavior. Director2026-10-25: one focused check per feature; broad verification deferred.
-Remaining nonblocking audit/calibration stays owned; exact arithmetic is the next product feature.
+## STITCHCAD-G1-0244 — canonical exact rational values
+
+.5c.1.1: immutable signed u128 magnitudes, exact reduction/canonical zero and typed denominator
+refusal. One focused public contract passes; arithmetic follows.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -375,3 +375,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part214](docs/history/stitchcad-changelog-part214.md) | whole0241/0240 | 11 lines, 642 bytes, sha256:87131883… |
 
 | [part215](docs/history/stitchcad-changelog-part215.md) | whole0242 | 5 lines, 364 bytes, sha256:40c7cebb… |
+
+| [part216](docs/history/stitchcad-changelog-part216.md) | whole0243 | 5 lines, 368 bytes, sha256:dce8d7bb… |

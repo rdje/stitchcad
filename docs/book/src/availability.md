@@ -17,9 +17,9 @@ inputs refuse numeric fallbacks. Some complete structural inventories can still 
 values. The [implementation-status annex](annexes/implementation-status.md) links each family to its
 source, roadmap requirement and verification owner.
 
-Strict native tests and the three-library WASM cross-compilation are checked locally. Cross-compiling
-libraries is not evidence of a working browser application. Older metadata CI has been observed;
-there is no new remote-run claim for later local slices.
+Earlier slices have local strict native/WASM evidence. New rational construction has one focused
+native contract check; broader/platform verification is deferred. Cross-compiling libraries does
+not prove a working browser application. No new remote-run verdict is claimed.
 
 Whole statement/recipe [literal normalization](annexes/formula-recipe-inputs.md) preserves input
 metadata and global refusal context. The same normalized owners produce owned statement/recipe
@@ -41,6 +41,10 @@ verifies those interfaces against independent rules and the actual reference.
 proof with ordered source dependencies. Independent whole-factory review is complete;
 exact arithmetic, binding and execution remain pending.
 
+[Canonical rational values](annexes/formula-rationals.md) can now be constructed and reduced exactly,
+with full 128-bit component magnitudes, independent sign and a typed zero-denominator refusal.
+Arithmetic operators and recipe evaluation remain the next implementation stages.
+
 ## Planned workflows
 
 Recipe evaluation, geometric construction, grading, profiles, storage and crash recovery, the command
@@ -56,7 +60,7 @@ is the intended release scope, not a list of completed features.
 
 ## Reproduce the library checks
 
-Contributors can run these commands from the repository root:
+At later integration milestones, contributors can run these commands from the repository root:
 
 ```bash
 make check
@@ -64,7 +68,8 @@ make wasm
 make book
 ```
 
-They verify their documented scope. Full gate status and the next task are recorded in the
+Per-feature checks follow the [focused-check policy](annexes/checking-policy.md).
+These broader commands verify their documented scope. Full gate status and the next task are recorded in the
 repository's LIVE_STATUS.md and MEMORY.md. Feature changes update the book in the same commit.
 For an introduction, begin with [the learning path](learn/design-to-pattern.md); for a specific
 contract, use the [topic index](topic-index.md).

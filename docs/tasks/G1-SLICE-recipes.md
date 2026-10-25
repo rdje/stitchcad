@@ -367,7 +367,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 ### Exact arithmetic and bindings
 - ID: `G1-SLICE.5c.1`
-  Status: `pending`
+  Status: `in_progress`
   Goal: exact signed rational value primitive with positive denominator and reduced width128.
   Acceptance: full unsigned magnitudes/signs, zero, reduction and cancellation before width
   judgment, overflow-safe bounded workspace and typed numerator/denominator measured refusal.
@@ -375,7 +375,43 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Director2026-10-25: next independent product feature after the dirty0243 slice is committed.
   D154/D156 and remaining audit verification stay owned; they do not block this pure primitive.
   Start with a bounded implementation slice and one affected test; broad integration stays deferred.
+  Children: .1 canonical value construction; .2 bounded arithmetic workspace/reduced-width refusal;
+  .3 independent oracle integration. Parent stays open until all are implemented.
   Verification: `pending`; Commit: `pending`.
+
+- ID: `G1-SLICE.5c.1.1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0244 implements privately canonical signed128-magnitude formula rational values.
+  Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_rational_contract.rs
+  Acceptance: exact gcd reduction, positive denominator, full unsigned magnitudes with independent sign,
+  canonical positive0/1, typed zero-denominator refusal, immutable inspectors and signed-integer input.
+  No rounding, allocation, dependencies, kind/domain/storage/evaluator authority. One focused native
+  contract target; broad numerical/platform verification belongs to .5c.1.3. Update book/status map,
+  live docs and commit before arithmetic. Own whole0243 task/ledger retention313/216 under unchanged caps.
+
+- [x] REPRODUCE / ISSUE: recipe source inventory has literal/ontology rationals but no formula value
+  primitive; source/mod.rs inspection, rc=0.
+- [x] ROOT CAUSE: edge Rational is i64-bounded; literal magnitudes are input integers. New focused
+  formula_rational_contract tests full u128 components and independent sign, one pass, rc=0.
+- [x] FIX: private reduced value, canonical0/1, typed zero-denominator error and exact i128 input.
+  The focused native public contract passes1/0, rc=0; no rounding/dependency/domain/evaluator added.
+- [x] ADDRESSED: primary local profile cargo test -p sc-core --test formula_rational_contract:
+  canonical_values_preserve_sign_zero_and_full_width ok;1 passed/0 failed, rc=0.
+- [x] NO REGRESSION: focused target compiles sc-core/passes, rc=0; broader/platform checks owned by .5c.1.3.
+- [x] LOCKSTEP: whole0243 source/public task/ledger bytes match, rc=0; book/status/live/frontier
+  updated. promotion: declined (existing numeric contract/focused policy). Commit hooks required.
+
+- ID: `G1-SLICE.5c.1.2`
+  Status: `pending`
+  Goal: bounded exact arithmetic workspace and post-reduction numerator/denominator width refusal.
+  Acceptance: exact arithmetic/cancellation before128-bit result judgment, typed measured refusal;
+  no overflow/wrap or intermediate rounding. Operator kind/domain layers stay .5c.2.
+
+- ID: `G1-SLICE.5c.1.3`
+  Status: `pending`
+  Goal: independent rational oracle integration and focused primitive signoff; broad campaigns later.
+  Acceptance: independent arbitrary-precision results at full-width/cancellation/refusal boundaries,
+  stable diagnostics and original syntax/literal separation; no evaluator closure claim.
 - ID: `G1-SLICE.5c.2`
   Status: `pending`
   Goal: all typed rational operators and abs/min/max/clamp without implicit rounding.
