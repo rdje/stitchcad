@@ -4,9 +4,7 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- G1-SLICE stopped after .5b.4c.h2.b.p.o.f.cleanup4.hunt, as requested.
-- Next: await director instruction; publication builder .a23.3.2 remains proposed.
-- D217 repair/cleanup complete; local package pins production updates. See cleanup annex.
-- Owner/evidence: docs/tasks/G1-SLICE-producers.md; D217 in docs/tasks/PLANNING.md;
-  recovery commands/primary sources: docs/book/src/annexes/artifact-cleanup.md.
-- In-flight uncommitted: none after the 0237 commit workflow; no owned jobs remain.
+- PNT resumes G1-SLICE.5b.4c.h2.b.p.o.a23.3.2: publication builder/main authority.
+- Next: implement builder source/public-output/temp lifecycle guards after D219 repair .f.publication.
+- Owner/evidence: docs/tasks/G1-SLICE-producers.md; D219 in docs/tasks/PLANNING.md.
+- In-flight uncommitted: none after the 0238 workflow; no owned jobs remain.

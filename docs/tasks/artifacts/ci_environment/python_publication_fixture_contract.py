@@ -5,6 +5,7 @@ import contextlib
 import csv
 import hashlib
 import io
+import json
 import os
 import re
 import runpy
@@ -410,31 +411,165 @@ def original_body_controls():
     print('publication original AST: all pure/copier/mutation/builder/main bodies exact through declared guards/path normalization/row reuse')
 
 
-def continuity_controls():
+def continuity_controls(*, observe=None):
     reader = ROOT / 'scripts/history_archive.py'
-    for name in ('stitchcad-devnotes-part298.md', 'stitchcad-changelog-part206.md', 'stitchcad-devnotes-part299.md'):
-        path = ROOT / 'docs/history' / name
-        data = path.read_bytes(); header, body = data.split(b'\n---\n\n', 1)
+    # These are logical records: later windows may retire their physical source files.
+    archives = tuple(path for directory in (ROOT / 'docs/history', ROOT / '.doctrine/history_archive')
+                     for path in directory.rglob('*') if path.is_file())
+    PROFILE['plan_producer'](ROOT, sources=(*CORE, Path(__file__), reader, *archives))
+
+    def read(path):
+        if path.startswith('docs/history/stitchcad-'):
+            result = subprocess.run([sys.executable, '-I', '-B', str(reader), '--root', str(ROOT),
+                                     'read', path], cwd=ROOT, capture_output=True)
+            assert result.returncode == 0, ('publication archive read failed', path, result.stderr)
+            data = result.stdout
+        else:
+            data = (ROOT / path).read_bytes()
+        return observe(path, data) if observe else data
+
+    boundary = '7dfd6474cf1e974aa51163e5b68f727806cd3c1b'
+    captures = [(name, BEFORE) for name in ('stitchcad-devnotes-part298.md', 'stitchcad-changelog-part206.md',
+                                          'stitchcad-devnotes-part299.md')]
+    captures += [(name, boundary) for name in ('stitchcad-devnotes-part305.md', 'stitchcad-changelog-part210.md',
+                                             'stitchcad-devnotes-part306.md')]
+    for name, revision in captures:
+        path = 'docs/history/' + name
+        data = read(path); header, body = data.split(b'\n---\n\n', 1)
         identity = re.search(r'Sealed identity:\*\* ([0-9]+) lines, ([0-9]+) bytes, sha256:([0-9a-f]{64})', header.decode())
-        assert (body.count(b'\n'), len(body), hashlib.sha256(body).hexdigest()) == (int(identity[1]), int(identity[2]), identity[3])
+        assert (body.count(b'\n'), len(body), hashlib.sha256(body).hexdigest()) == (int(identity[1]), int(identity[2]), identity[3]), 'publication sealed record changed'
         chunks = []
         for source, start, stop, size, digest in re.findall(r'Whole source interval: ([^ ]+) bytes ([0-9]+)–([0-9]+), ([0-9]+) bytes, sha256:([0-9a-f]{64})', header.decode()):
-            chunk = subprocess.check_output(['git', 'show', BEFORE + ':' + source], cwd=ROOT)[int(start):int(stop)]
+            chunk = subprocess.check_output(['git', 'show', revision + ':' + source], cwd=ROOT)[int(start):int(stop)]
             assert len(chunk) == int(size) and hashlib.sha256(chunk).hexdigest() == digest
             chunks.append(chunk)
-        assert b''.join(chunks).rstrip(b'\n') + b'\n' == body
-        result = subprocess.run([sys.executable, '-I', '-B', str(reader), '--root', str(ROOT), 'read', path.relative_to(ROOT).as_posix()], cwd=ROOT, capture_output=True)
-        assert result.returncode == 0 and result.stdout == data, result.stderr
+        assert b''.join(chunks).rstrip(b'\n') + b'\n' == body, 'publication original source interval changed'
     paths = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', BEFORE, '--', 'docs/history', '.doctrine/history_archive'], cwd=ROOT, text=True).splitlines()
     for path in paths:
-        assert (ROOT / path).read_bytes() == subprocess.check_output(['git', 'show', BEFORE + ':' + path], cwd=ROOT)
+        previous = subprocess.check_output(['git', 'show', BEFORE + ':' + path], cwd=ROOT)
+        current = read(path)
+        if path == '.doctrine/history_archive/windows.json':
+            old, new = json.loads(previous), json.loads(current)
+            assert set(new) == set(old) and new['version'] == old['version'], 'publication archive master schema changed'
+            assert new['windows'][:len(old['windows'])] == old['windows'], 'publication prior windows changed'
+            assert len(set(new['windows'])) == len(new['windows']), 'publication duplicate window'
+        else:
+            assert current == previous, ('publication prior archive bytes changed', path)
     tree = 'docs/tasks/G1-SLICE-producers.md'
     previous = subprocess.check_output(['git', 'show', BEFORE + ':' + tree], cwd=ROOT, text=True)
     headers = lambda text: re.findall(r'^- ID: `([^`]+)`$', text, re.M)
-    assert headers((ROOT / tree).read_text()) == [value for old in headers(previous)
+    expected = [value for old in headers(previous)
         for value in ([old, old + '.1', old + '.2'] if old.endswith('a23.3') else
                       [old, old[:-1] + '3'] if old.endswith('f.cleanup2') else [old])]
-    print('publication continuity: three whole committed task/lesson/ledger/scope records/public reads/prior archives/declared task split and cleanup owner exact')
+    current = headers(read(tree).decode())
+    assert [value for value in current if value in expected] == expected, 'publication predecessor task graph changed'
+    assert len(current) == len(set(current)), 'publication duplicate task node'
+    print(f'publication continuity: {len(captures)} whole captures/public reads/prior logical archives exact; predecessor task/window order preserved with later additions')
+
+
+def continuity_refusals():
+    """Replay actual reader/Git observations; corrupt one boundary without editing retained data."""
+    originals = subprocess.run, subprocess.check_output
+    run_cache, git_cache = {}, {}
+
+    def run(argv, **kwargs):
+        key = (*argv, kwargs.get('text', False))
+        if key not in run_cache:
+            run_cache[key] = originals[0](argv, **kwargs)
+        return run_cache[key]
+
+    def git(argv, **kwargs):
+        key = (tuple(argv), kwargs.get('text', False))
+        if key not in git_cache:
+            git_cache[key] = originals[1](argv, **kwargs)
+        return git_cache[key]
+
+    record = 'docs/history/stitchcad-devnotes-part298.md'
+    master, tree = '.doctrine/history_archive/windows.json', 'docs/tasks/G1-SLICE-producers.md'
+
+    def catalog(data, mode):
+        value = json.loads(data)
+        if mode == 'remove':
+            value['windows'].pop(0)
+        elif mode == 'reorder':
+            value['windows'][:2] = reversed(value['windows'][:2])
+        elif mode == 'duplicate':
+            value['windows'].append(value['windows'][0])
+        elif mode == 'schema':
+            value['unexpected'] = True
+        return json.dumps(value).encode()
+
+    def nodes(data, mode):
+        text = data.decode()
+        markers = re.findall(r'^- ID: `[^`]+`$', text, re.M)
+        if mode == 'remove':
+            text = text.replace(markers[0], '', 1)
+        elif mode == 'reorder':
+            text = text.replace(markers[0], 'CONTROL_NODE', 1).replace(markers[1], markers[0], 1).replace('CONTROL_NODE', markers[1], 1)
+        elif mode == 'duplicate':
+            text += '\n' + markers[-1] + '\n'
+        return text.encode()
+
+    cases = [
+        (record, lambda data: data + b'corrupt', 'publication sealed record changed'),
+        ('docs/history/stitchcad-changelog-part188.md', lambda data: data + b'corrupt',
+         ('publication prior archive bytes changed', 'docs/history/stitchcad-changelog-part188.md')),
+        *[(master, lambda data, mode=mode: catalog(data, mode), reason) for mode, reason in (
+            ('remove', 'publication prior windows changed'), ('reorder', 'publication prior windows changed'),
+            ('duplicate', 'publication duplicate window'), ('schema', 'publication archive master schema changed'))],
+        *[(tree, lambda data, mode=mode: nodes(data, mode), reason) for mode, reason in (
+            ('remove', 'publication predecessor task graph changed'), ('reorder', 'publication predecessor task graph changed'),
+            ('duplicate', 'publication duplicate task node'))],
+    ]
+
+    def refuses(checker, path, change, reason):
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                checker(observe=lambda selected, data: change(data) if selected == path else data)
+        except AssertionError as error:
+            assert error.args == (reason,), (reason, error)
+        else:
+            raise AssertionError(('publication continuity corruption escaped', reason))
+
+    try:
+        subprocess.run, subprocess.check_output = run, git
+        with contextlib.redirect_stdout(io.StringIO()):
+            continuity_controls()
+        for path, change, reason in cases:
+            refuses(continuity_controls, path, change, reason)
+        selected = next(key for key in run_cache if key[-2] == record)
+        result = run_cache[selected]
+        run_cache[selected] = subprocess.CompletedProcess(result.args, 2, b'', b'controlled unavailable archive')
+        try:
+            continuity_controls()
+        except AssertionError as error:
+            assert error.args[0][:2] == ('publication archive read failed', record), error
+        else:
+            raise AssertionError('publication failed reader accepted')
+        run_cache[selected] = result
+
+        source = Path(__file__).read_text()
+        function = next(node for node in ast.parse(source).body if isinstance(node, ast.FunctionDef) and node.name == 'continuity_controls')
+        body = ast.get_source_segment(source, function)
+        faults = (
+            ("assert current == previous, ('publication prior archive bytes changed', path)", 'pass', 1),
+            ("assert new['windows'][:len(old['windows'])] == old['windows'], 'publication prior windows changed'", 'pass', 2),
+            ("assert [value for value in current if value in expected] == expected, 'publication predecessor task graph changed'", 'pass', 6),
+        )
+        for anchor, replacement, case in faults:
+            assert body.count(anchor) == 1
+            namespace = dict(globals())
+            exec(compile(body.replace(anchor, replacement, 1), __file__, 'exec'), namespace)
+            path, change, reason = cases[case]
+            try:
+                refuses(namespace['continuity_controls'], path, change, reason)
+            except AssertionError as error:
+                assert error.args[0] == ('publication continuity corruption escaped', reason), error
+            else:
+                raise AssertionError('publication continuity body fault missed')
+    finally:
+        subprocess.run, subprocess.check_output = originals
+    print('publication continuity: ten independent refusals / three compiled guard-omission assertion reds; retained files untouched')
 
 
 def real_controls():
@@ -457,6 +592,7 @@ if __name__ == '__main__':
         before_control()
     elif sys.argv[1:] == ['--continuity']:
         continuity_controls()
+        continuity_refusals()
     elif sys.argv[1:] == ['--real']:
         real_controls()
     else:
@@ -472,3 +608,4 @@ if __name__ == '__main__':
         borrowed_controls(root)
         original_body_controls()
         continuity_controls()
+        continuity_refusals()

@@ -1080,6 +1080,15 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   or active-harness termination. Original historical identity remains unknown. Book cleanup annex/
   DEV_NOTES0236 and protected recovery-20261025 audit retain source, commands and receipts.
 
+- **D219** — publication continuity controls assume physical archive files and a closed task/catalog graph.
+  Reproduce: python_publication_fixture_contract.py --continuity raises FileNotFoundError for part298;
+  current window11 public retrieval is the canonical interface. Prior graph nodes remain in order;
+  later cleanup/xtask nodes and the added window must be accepted without weakening exact history.
+  Impact: the environment probe suite cannot reach a green verdict before builder repair.
+  Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.f.publication, blocking prerequisite; repaired in0238.
+  Public logical reads preserve original intervals/prior bytes and predecessor order with later additions.
+  --continuity passes ten refusals/three compiled guard reds; full original fixture/pure/AST controls pass0.
+
 - **D218** — ten host-tooling identifiers in existing book prose lacked vocabulary declarations.
   Reproduce: GLOSSARY_ROOT census of actual38100bf book/roadmap/tasks snapshot returns1 with
   ten C1 refusals, identical to the working tree: AssertionError, HISTORY_ARCHIVE_ROOT, Refusal,

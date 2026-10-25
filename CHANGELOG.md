@@ -112,20 +112,18 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0238 — preserve publication continuity across archive rollover
+
+.f.publication: D219 logical archive retrieval and predecessor order replace physical-file/closed-graph
+assumptions. Original fixture/pure/AST checks, ten refusal controls and three actual guard reds pass.
+Whole prior journal and oldest ledger retained exactly; builder .a23.3.2 remains next.
+
 ## STITCHCAD-G1-0237 — verify activated D217 package
 
 .cleanup4.hunt: tested patch selected;41 package hashes match,51 live vnodes readable.
 Real handoff clear0/held1/restored0 passes after the separate scan exits. D217 inheritance
 repair verified; original FD10 identity unknown. Cleanup complete; stop before publication.
 
-## STITCHCAD-G1-0236 — reproduce and contain detached descriptor inheritance
-
-.cleanup4.hunt: native identities prove the installed daemon propagates unrelated descriptors;
-owned invalidation reproduces D217 and restart retains the updater. A source-matched macOS
-patch prevents all three fault arms across five real controls. Compiled omission/restoration,
-daemon88 tests and private supported install/exact rollback pass. Optimized candidate prepared;
-external activation and its production-update pin await confirmation. Original FD10 identity unknown.
-Whole prior diagnostics retained304; canonical handoff/cleanup checker remains strict.
 
 
 
@@ -366,3 +364,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part208](docs/history/stitchcad-changelog-part208.md) | whole0234v through0228 | 49 lines, 3030 bytes, sha256:2e6922f5… |
 
 | [part209](docs/history/stitchcad-changelog-part209.md) | whole0235 | 6 lines, 453 bytes, sha256:547359ee… |
+
+| [part210](docs/history/stitchcad-changelog-part210.md) | whole0236 | 8 lines, 645 bytes, sha256:a79c26a7… |
