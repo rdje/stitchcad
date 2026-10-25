@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — match general scalar metadata to its actual canonical source
+
+0263 .5e.1.3 checks general Input source, canonical target id, then actual kind before reading a
+value. Compact sealed views retain name/origin/metadata id and canonical borrow; reconstructed
+metadata preserves the original fields. Present typed values retain their source/state, including
+zero, false, signed turns and assumptions/preferences. Unknown/derived keep their exact required
+observation/formula and standard error source; Area remains computed. Wrong candidates/kinds and
+other source variants refuse without inventing registry membership, truth or statement context.
+
+The first test fixture's extend iterator required static items alongside local borrows (E0597/101);
+individual pushes permit safe lifetime coercion. Final scalar5/length3 pass0 with78 read cases,
+independent kind/mismatch tables, identity priority and all source variants. Selected strict Clippy
+passes0. No full runtime evaluator/context/approval or broad/platform verdict is claimed.
+Whole0262 scope, closed arithmetic parent and ledger retain341/342/235; book/live align.
+Promotion declined: this implements the existing sourced metadata/canonical scalar contract.
+
 ## _(2026-10-25 UTC)_ — canonical scalar content and focused lint repair
 
 0262 .5e.1.2 adds immutable canonical scalar declarations with exact authored kind/state/provenance.

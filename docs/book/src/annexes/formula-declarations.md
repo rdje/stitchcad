@@ -418,3 +418,8 @@ cargo test -p sc-core --test formula_name_read_contract
 python3 -I -B docs/tasks/artifacts/formula_structure/name_read_mutations.py --classifier-only
 python3 -I -B docs/tasks/artifacts/formula_structure/name_read_mutations.py
 ```
+
+General Input metadata can now be matched to a supplied actual canonical scalar declaration through
+the [general authored-read adapter](formula-runtime-validation.md#general-scalar-authored-reads).
+It validates source/identity/kind and preserves state; static metadata construction still fetches no
+value or registry proof. The canonical ScalarInputKind also converts explicitly to FormulaBindingKind.

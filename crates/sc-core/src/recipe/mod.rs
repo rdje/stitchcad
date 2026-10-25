@@ -101,7 +101,11 @@ pub use declaration::{
 };
 
 mod input;
-pub use input::{FormulaLengthInput, FormulaLengthInputError, FormulaLengthInputValue};
+pub use input::{
+    FormulaLengthInput, FormulaLengthInputError, FormulaLengthInputValue, FormulaScalarInput,
+    FormulaScalarInputAdapterError, FormulaScalarInputAdapterRule, FormulaScalarInputError,
+    FormulaScalarInputValue,
+};
 
 mod namespace;
 pub use namespace::{

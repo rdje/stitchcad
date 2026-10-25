@@ -6,6 +6,12 @@ use crate::ontology::EntityId;
 use crate::value::{LengthDeclaration, LengthState, LengthValueError, ValueProvenanceValidation};
 use core::fmt;
 
+mod scalar;
+pub use scalar::{
+    FormulaScalarInput, FormulaScalarInputAdapterError, FormulaScalarInputAdapterRule,
+    FormulaScalarInputError, FormulaScalarInputValue,
+};
+
 /// Read adapter for an actual borrowed canonical length declaration, with its original metadata.
 ///
 /// General scalar metadata claiming Length cannot construct this adapter. Construction does not

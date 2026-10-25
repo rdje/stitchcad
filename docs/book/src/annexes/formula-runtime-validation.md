@@ -59,6 +59,64 @@ The focused formula_length_input_contract target passes three tests covering25 o
 the scalar endpoints/zero, and every other declaration-source variant, including a generic Length
 claim. Broad integration/platform proof remains deferred.
 
+## General scalar authored reads
+
+FormulaScalarInput::from_declaration takes general Input metadata and the caller's actual
+ScalarInputDeclaration. It first checks source type, then the canonical declaration id, then the
+actual kind. The order is fixed: a wrong target wins over a wrong annotation. All six declared
+kinds and the Parameter/Profile/Material origins are supported; canonical Area remains Derived.
+Construction does not read the value, so matching Unknown/Derived declarations remain selectable.
+
+| Adapter refusal | Retained witness |
+| --- | --- |
+| NotScalarInput | Actual metadata kind/origin; a LengthInput, binding, reserved or geometry source cannot impersonate general Input |
+| CanonicalIdentity | Metadata target id and actual supplied canonical id |
+| CanonicalKind | Claimed annotation and actual canonical kind |
+
+FormulaScalarInputAdapterError also retains the actual name and candidate record. Debug omits the
+customer name; explicit name/Display access retains it. A matched view reconstructs the original
+name/origin/metadata id/target id/kind and borrows the original canonical source/state. Metadata id,
+canonical declaration id and its source id remain distinct; none is guessed from the name.
+
+Call read_authored to obtain FormulaScalarInputValue with the exact typed canonical scalar beside
+its input. Its value is ScalarInputValue: inspect numeric_integer or boolean without treating zero
+or false as absence. Signed angle turns and Ratio values remain unchanged. Unknown/Derived return
+FormulaScalarInputError with the original input and exact RequiresObservation/RequiresEvaluation
+reason; the standard error source retains that same canonical reason. Derived Area has no authored
+numeric result. General expression conversion, dependency evaluation and binding publication remain
+later evaluator responsibilities.
+
+```rust
+use sc_core::{name::MachineToken, ontology::EntityId,
+    recipe::{FormulaBindingKind, FormulaDeclaration, FormulaScalarInput, FormulaScalarInputOrigin},
+    value::{ScalarInputDeclaration, ScalarInputDeclarationDefinition, ScalarInputKind,
+        ScalarInputState, ScalarInputValue}};
+
+let name = MachineToken::new("allow_adjustment").expect("machine token");
+let record = ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
+    id: EntityId::from_bits(1), source: EntityId::from_bits(2), kind: ScalarInputKind::Boolean,
+    state: ScalarInputState::Preference {
+        value: ScalarInputValue::from_boolean(false), provenance: EntityId::from_bits(3),
+    },
+}).expect("typed preference");
+let metadata = FormulaDeclaration::input(&name, FormulaScalarInputOrigin::Parameter,
+    EntityId::from_bits(4), record.id(), FormulaBindingKind::Boolean);
+let input = FormulaScalarInput::from_declaration(metadata, &record).expect("matched id/kind");
+let read = input.read_authored().expect("present authored false");
+assert_eq!(read.value().boolean(), Some(false));
+assert!(std::ptr::eq(read.input().canonical_declaration(), &record));
+```
+
+This checks the supplied candidate's identity/kind; it does not establish registry membership,
+uniqueness, the exposing input record's validity, source truth/evidence scope, execution order or
+human/export approval. Provenance remains DeferredToDesignAndG4. A complete runtime lookup must
+supply the actual candidate and attach only its available expression/statement context.
+
+The focused scalar adapter target passes five tests, including78 origin/state reads, the independent
+six-kind table, complete kind mismatch pairs, identity priority and every other source variant.
+The affected length adapter retains three passing tests; selected strict Clippy passes. Whole
+runtime context providers/evaluation and broad/platform verification remain later owned work.
+
 ## Reference runtime assertion controls
 
 An assertion uses an inclusive tolerance: it holds when the absolute difference is at most the

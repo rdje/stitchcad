@@ -359,10 +359,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.1.2`
   Status: `done`
-  Goal: bounded exact arithmetic workspace and post-reduction numerator/denominator width refusal.
-  Acceptance: exact arithmetic/cancellation before128-bit result judgment, typed measured refusal;
-  no overflow/wrap or intermediate rounding. Operator kind/domain layers stay .5c.2.
-  Children: .1 cross-cancelled products/quotients; .2 signed sums/differences and bounded wider workspace.
+  Goal: exact reduced arithmetic/width refusals, children .1/.2 verified0245–0246.
+  Acceptance: [whole parent scope](../history/stitchcad-devnotes-part342.md); kind/domain .5c.2.
 
 - ID: `G1-SLICE.5c.1.2.1`
   Status: `done`
@@ -552,23 +550,25 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part339.md).
 - ID: `G1-SLICE.5e.1.2`
   Status: `done`
-  Goal:0262 canonical scalar state/value content and focused lint repairs.
+  Goal: canonical scalar state/value content and selected lint repair verified0262.
   Paths: crates/sc-core/src/value.rs;crates/sc-core/src/value/scalar.rs;crates/sc-core/tests/scalar_value_contract.rs;crates/sc-core/tests/formula_length_input_contract.rs
   Additional paths: crates/sc-core/src/recipe/input.rs;crates/sc-core/src/recipe/declaration.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/roots.rs
-- [x] REPRODUCE: db8aa3c lacks scalar states; selected cargo clippy --test scalar_value_contract
-  --test formula_length_input_contract -- -D warnings returns101 for3 library lint failures.
-- [x] ROOT CAUSE: Length-only state model; general metadata enum enlarges read error. Clippy output
-  identifies source/idioms, rc=101; committed test also has explicit panic against deny rule.
-- [x] FIX: typed raw scalar values, state/kind/evidence checks, Derived-only Area; compact sealed
-  length view, standard integer methods and asserted test variant; no boxing/lint suppression.
-- [x] ADDRESSED:0262 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test scalar_value_contract --test value_contract --test formula_length_input_contract
-  --test formula_numeric_contract --test formula_root_value_contract:5/8/3/6/4 pass, rc=0.
-- [x] NO REGRESSION: same native26/0; selected cargo clippy --offline -p sc-core
-  --test scalar_value_contract --test formula_length_input_contract -- -D warnings, rc=0.
-  Broad .5e.2/.5g/pre-push; general registry adapter remains .5e.1.
-- [x] LOCKSTEP:339/340/234 whole Git/public records and book render pass0; live/book align.
-  Promotion declined: implementation of existing canonical state/kind/lint contracts.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part341.md).
+- ID: `G1-SLICE.5e.1.3`
+  Status: `done`
+  Goal:0263 sourced general scalar reads with actual canonical identity/kind validation.
+  Paths: crates/sc-core/src/recipe/input.rs;crates/sc-core/src/recipe/input/scalar.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/src/recipe/declaration.rs;crates/sc-core/tests/formula_scalar_input_contract.rs
+- [x] REPRODUCE:0263 0ce3e01 supplies canonical scalar state but no metadata match/read adapter;
+  git source inspection rc=0. Initial fixture extend has E0597/101; pushes fix its lifetime coercion.
+- [x] ROOT CAUSE:0263 metadata claim cannot prove actual target/kind; the independent kind table/
+  wrong-candidate fixtures and focused native5/3 establish match/read separation, rc=0.
+- [x] FIX: source/id/kind checks in order; compact borrowed source/state, typed value/action results.
+- [x] ADDRESSED:0263 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_scalar_input_contract --test formula_length_input_contract:5/3 pass,78 reads, rc=0.
+- [x] NO REGRESSION:0263 same native8/0; cargo clippy --offline -p sc-core
+  --test formula_scalar_input_contract -- -D warnings, rc=0. Broad execution/platform .5e.2/.5g/pre-push.
+- [x] LOCKSTEP:341/342/235 whole Git/public records and book render rc=0; live/book align.
+  Promotion declined: existing metadata/canonical state contract; no registry/approval inferred.
 - ID: `G1-SLICE.5e.2`
   Status: `pending`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.

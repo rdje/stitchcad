@@ -177,6 +177,18 @@ pub struct FormulaDeclaration<'a> {
     source: FormulaDeclarationSource<'a>,
 }
 impl<'a> FormulaDeclaration<'a> {
+    pub(super) fn from_scalar_input_view(input: super::FormulaScalarInput<'a>) -> Self {
+        Self {
+            name: input.name(),
+            source: FormulaDeclarationSource::Input {
+                origin: input.origin(),
+                input: input.input_id(),
+                declaration: input.canonical_declaration().id(),
+                kind: input.canonical_declaration().kind().into(),
+            },
+        }
+    }
+
     // Only the sealed typed view can call this reconstruction path; its name/source were already
     // admitted as actual LengthInput metadata. Avoid carrying the whole general source enum in it.
     pub(super) const fn from_length_input_view(input: super::FormulaLengthInput<'a>) -> Self {
@@ -296,6 +308,20 @@ impl<'a> FormulaDeclaration<'a> {
     #[must_use]
     pub fn origin(self) -> FormulaOrigin {
         self.source.origin()
+    }
+}
+
+impl From<crate::value::ScalarInputKind> for FormulaBindingKind {
+    fn from(kind: crate::value::ScalarInputKind) -> Self {
+        use crate::value::ScalarInputKind as K;
+        match kind {
+            K::Length => Self::Length,
+            K::Angle => Self::Angle,
+            K::Area => Self::Area,
+            K::Ratio => Self::Ratio,
+            K::Count => Self::Count,
+            K::Boolean => Self::Boolean,
+        }
     }
 }
 impl fmt::Debug for FormulaDeclaration<'_> {
