@@ -126,11 +126,12 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0242 — guard archive materialization and metadata evidence
 
-.a25.1: complete source/directory/file plans precede materialization effects; readonly APIs and
-original CLI/provenance remain exact. D224 requires observed HEAD absence. Captures, physical/
-body controls and native public CLI pass; D223 is owned after .a25. Fixed caps stay unchanged.
+## STITCHCAD-G1-0243 — finish archive fixtures and restore feature-first delivery
+
+.a25.2: closed fixture plans, scoped children and protected cleanup preserve original refusal
+behavior. Director2026-10-25: one focused check per feature; broad verification deferred.
+Remaining nonblocking audit/calibration stays owned; exact arithmetic is the next product feature.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -372,3 +373,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part213](docs/history/stitchcad-changelog-part213.md) | whole0239 | 5 lines, 341 bytes, sha256:b1054b78… |
 
 | [part214](docs/history/stitchcad-changelog-part214.md) | whole0241/0240 | 11 lines, 642 bytes, sha256:87131883… |
+
+| [part215](docs/history/stitchcad-changelog-part215.md) | whole0242 | 5 lines, 364 bytes, sha256:40c7cebb… |

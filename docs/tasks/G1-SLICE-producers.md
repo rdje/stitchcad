@@ -313,43 +313,53 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.1`
   Status: `done`
-  Goal: STITCHCAD-G1-0242 guards the public archive reader's materialization and metadata children.
+  Goal: complete archive materialization/metadata authority and D224 verified in0242.
   Paths: scripts/history_archive.py;docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py
-  Acceptance: complete current reader/shell/enforcer/fixture/public-contract inspection; actual old first
-  effect trapped with stores absent before repair. Preserve pure inventory/read/list/verify behavior,
-  full record bytes/order/formats, borrowed --root and all schema/bounds/provenance predicates. Materialize
-  closes every source/directory/file destination before stores/first effect, retains valid prepared stores,
-  rechecks writes and refuses unsafe input/output/parent/Git/device authorities. Scope metadata Git children
-  without activating stores for readonly modes. Complete captures, original-body/pure controls, physical
-  refusals and actual omission reds before real public materialization/CLI/native fixture checks. Exact
-  source/history/output populations; book/live/frontier and commit before .2. Own bounded whole predecessor
-  ledger/task retention if needed under fixed caps. D223 discovery is logged and scheduled below.
-  Own D224 now: a controlled failed Git observation currently bypasses committed-history guards.
-  Require independently observed HEAD-tree absence for the first-transition exemption; metadata failure
-  must refuse. Preserve successful original comparison order and public refusal/CLI contracts.
-
-- [x] REPRODUCE / ISSUE: python_archive_reader_contract.py --before traps actual4027b36 mkdir with
-  stores absent and reproduces unavailable-HEAD acceptance (D224), rc=0; no unsafe native fault.
-- [x] ROOT CAUSE: unplanned materialization and all-nonzero first-transition exemption. Contract metadata
-  cases refuse unavailable/present-unreadable HEAD and accept independently observed absence, rc=0.
-- [x] FIX: complete backing/source/parent/file plan precedes activation; each effect rechecks authority.
-  Contract proves original pure/CLI/successful comparison AST exact, caller stores intact, rc=0.
-- [x] ADDRESSED: python3 -I -B python_archive_reader_contract.py --real (ci_environment artifact), and
-  /usr/bin/python3 equivalent:662 exact files,14 physical refusals/eight actual body reds/native CLI, rc=0.
-  Sources/backing/output exact and no residue; readonly invalid-unused-store cases pass0.
-- [x] NO REGRESSION: archive suite28 and window CLI682 controls/661 reads pass0 at their snapshot;
-  later retained records pass current662-file native proof. Publication45, glossary310/0 and coverage
-  0 unowned/orphan/dead pass0; census265 paths/325 checks/76 effect rows/36 groups, rc=0. No Rust change.
-- [x] LOCKSTEP: whole0241/0240 and archive-client/host scopes retained214/310/311 from4027b36;
-  contract public reads/source intervals/all predecessor logical/control/payload bytes exact, rc=0.
-  Book/live/frontier synchronized; D224 closed, D223 scheduled. Promotion declined: existing rules.
-  Ledger11/pointer13 and final staged gate13 green, rc=0; fixed caps/400 cadence remain.
+  Acceptance: whole scope and all six proof boxes retained in [part312](../history/stitchcad-devnotes-part312.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.2`
-  Status: `pending`
+  Status: `done`
   Goal: guard archive refusal fixtures and their complete copied/mutated/output/teardown populations.
   Paths: docs/tasks/artifacts/history_archive/history_archive_probes.py
-  Acceptance: ordered group acceptance; preserve all original schema/bound/immutable-window refusals.
+  Acceptance: director2026-10-25 focused checks below replace exhaustive group verification for this slice;
+  preserve original schema/bound/immutable-window refusals.
+  Own0243: validate reader/profile/entry/shell and complete physical backing before module loading/reads;
+  resolve copied files, all deterministic fault payload names,22 resident records and every recovered
+  logical output before effects. Pure tar/gzip construction may be extracted with original semantics.
+  Guard actual setup/copy/write/unlink/symlink/removal/children and protected teardown; refuse unknown
+  caller entries and foreign boundaries. The deliberate payload symlink has one explicit lexical/target
+  authority for safe nonfollowing teardown; all other aliases refuse. Retain prepared caller stores,
+  source/refusal argv/classification/all28 original cases, native bytes and original body adapters.
+  Paths: docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
+  Actual before/capture evidence precedes focused native28 verification; exhaustive calibration is deferred.
+  source/archive bytes exact and no fixture residue. Own necessary whole predecessor retention under
+  unchanged caps; book/live/frontier/commit before product features. Remaining audit/D223 stays owned.
+  Director2026-10-25 supersedes the broad verification schedule: finish this dirty slice with one
+  focused native check and existing capture evidence, then resume product features. Own COMMIT.md,
+  the existing product-frontier decision and book check-policy adoption here. Exhaustive fixture
+  calibration and remaining nonblocking producer audits move behind feature delivery with explicit owners.
+
+- [x] REPRODUCE / ISSUE: before_control traps actual1b8fc23 unplanned removal with stores absent, rc=0.
+- [x] ROOT CAUSE: captured411 plans/203 effects/nine simulated children expose all fixture boundaries,
+  rc=0; SOURCE/population remains fixed and the deliberate link has explicit cleanup authority.
+- [x] FIX: full source/file/parent/payload plan and protected effects; native archive producer28 pass,
+  rc=0. Prepared stores, original refusals and source bytes remain intact.
+- [x] ADDRESSED: primary local profile runs history_archive_probes.py:28 pass/0 fail, rc=0;
+  focused activation-parser regression yields its intended assertion red, rc=0.
+- [x] NO REGRESSION: scripts/run_make.sh book renders updated policy/fixture docs, rc=0.
+  Broad suites and exhaustive calibration are unrun/deferred to .f.fixture-verification.
+- [x] LOCKSTEP: three retained source intervals/descriptors/public reads exact, rc=0.
+  promotion: promoted to decision_product-work-takes-the-frontier.md (focused feature checks).
+  COMMIT/book/frontier synchronized to .5c.1; D156/D223 remain owned. Hooks required before commit.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.fixture-verification`
+  Status: `pending`
+  Goal: deferred .a25.2 exhaustive AST/physical/omission calibration at a later integration milestone,
+  before the next authorized push; director2026-10-25 focused-check ruling.
+  Paths: docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
+  Acceptance: preserve complete original cases/packer/resident/CLI predicates through declared adapters;
+  finish physical refusal and --deep calibration, including activation-omission parser regression.
+  Source/archive restoration and bounded cleanup remain mandatory. No full calibration is claimed now.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.3`
   Status: `pending`

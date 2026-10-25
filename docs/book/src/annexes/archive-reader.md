@@ -78,3 +78,27 @@ The native mode separately executes public materialization, overwrite refusal, c
 and window11 source reconstruction. Every logical output byte, backing file and producer source
 must match; owned fixtures are removed. Both Python3.9 and3.14 are checked. Full schema, decompression,
 membership and capacity controls remain in the [governance contract](../governance.md#12-historical-records-and-bounded-retention).
+
+## Refusal fixture maintenance
+
+The archive refusal producer plans its copied backing files, deterministic fault payload names,
+resident-bound fixtures and every recovered logical output before effects. Sources are validated
+before reader loading; original source bytes and input populations remain fixed during the run.
+Valid prepared stores survive, and a store inside its managed workspace refuses before activation.
+Creation, copy, write, unlink, child and removal boundaries recheck their declared authority.
+
+One filesystem-symlink case deliberately creates the known payload link to the original local
+payload. Removal has explicit authority for that exact lexical path and target, and uses a
+nonfollowing tree remover. Other links and unknown workspace entries refuse. Protected cleanup
+covers interrupted setup and copying. Child Git context is scoped to the project.
+
+```bash
+python3 -I -B docs/tasks/artifacts/history_archive/history_archive_probes.py
+python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
+```
+
+The native entry retains the original 28 calibrated cases. The companion's default mode captures
+plans/effects and simulates child responses; it proves dispatch separately from the native run.
+Its optional `--deep` campaign and further physical/original-body calibration are deferred under
+the [feature-delivery policy](checking-policy.md), owned by .f.fixture-verification. No complete
+deep-campaign pass is claimed. The activation-omission parser control has a focused regression.

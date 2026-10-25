@@ -66,8 +66,12 @@ apply to code changes.
 ## Required commit workflow (exact order)
 
 1. Ensure the task is complete and tested.
-2. Run the Rust checks when Rust files changed: `make check` (or `cargo fmt --all --check
-   && cargo clippy --all-targets -- -D warnings && cargo test`). Strict lint must pass.
+2. Run one small, focused check of the changed behavior. For Rust, select the affected package/test
+   and formatting/lint checks warranted by that change. Do not routinely run workspace-wide checks,
+   mutation campaigns, full publication probes or full CI after each feature. Defer broad verification
+   to later integration milestones and the required pre-push gate below; record its owner. This is the
+   director's `2026-10-25` feature-delivery ruling, adopted in
+   `docs/decisions/decision_product-work-takes-the-frontier.md`. Code quality and hooks remain required.
 3. Update every relevant tracked doc (`MEMORY.md`, `CHANGELOG.md`, `DEV_NOTES.md`,
    `LIVE_STATUS.md`, `README.md`, the owning `docs/tasks/<TREE>.md`, `docs/decisions/`,
    `docs/book/` as applicable). Treat markdown sync as systematic, not optional.
@@ -148,8 +152,7 @@ cat > git_message_brief.txt <<'EOF'
 - <brief bullet 2>
 EOF
 
-# 2) run checks when Rust changed
-make check
+# 2) run the focused check selected for this leaf (record invocation/result there)
 
 # 3) stage intended files only
 git add <tracked-file-1> <tracked-file-2> ...

@@ -2,6 +2,8 @@
 
 New task lines: 400 UTF-8 bytes max.
 
+[Focused checks](annexes/checking-policy.md).
+
 ## Local producer profile
 
 `scripts/local_environment.py` prepares the four destinations below for the listed Make targets.

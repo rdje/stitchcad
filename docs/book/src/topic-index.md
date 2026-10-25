@@ -96,4 +96,5 @@ and verification material are in the annexes, at their preserved chapter URLs.
 - [Artifact cleanup](annexes/artifact-cleanup.md)
 - [Ledger pointer fixtures](annexes/ledger-fixtures.md)
 - [Historical archive reader](annexes/archive-reader.md)
+- [Checks during feature delivery](annexes/checking-policy.md)
 - [Publication checks and renderer authority](annexes/publication-checks.md)

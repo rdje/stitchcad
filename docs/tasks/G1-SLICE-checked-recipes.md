@@ -956,6 +956,9 @@ rc=0. Final census/ledger/publication/full probes/staged gate still follow befor
   Children .a shared profile/primary entries, .v exact required CI, .b standalone producer audit.
   [Owned implementation protocol](G1-SLICE-recipes.md#d156-producer-profile-protocol).
   Verification: .a primary profile/entries pass; .v exact jobs verified; .b audit pending. Commits:0117/0118.
+  Director2026-10-25: nonblocking remaining audit/calibration is deferred behind feature delivery.
+  Use verified primary local-storage commands for feature checks; D156 stays open. The independent
+  exact-rational primitive .5c.1 may proceed without claiming D154/static milestone closure.
 
 
 Initial .h1 read-only Make audit0 measured Cargo/Rustup/scratch defaults outside the root/on another

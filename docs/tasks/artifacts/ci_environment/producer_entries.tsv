@@ -191,7 +191,7 @@ docs/tasks/artifacts/history_archive/capture_window3.py	output	G1-SLICE.5b.4c.h2
 docs/tasks/artifacts/history_archive/capture_window4.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/history_archive/capture_window5.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/history_archive/capture_window6.py	output	G1-SLICE.5b.4c.h2.b.p.n.h3	Guarded full current-file/fixture plan; readonly Git metadata discovery; immutable capture and public source/read/materialize proof, no install/delete.
-docs/tasks/artifacts/history_archive/history_archive_probes.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/history_archive/history_archive_probes.py	output	G1-SLICE.5b.4c.h2.b.p	Closed fixture/payload/materialization/cleanup plans; focused native28/capture verified, exhaustive calibration deferred.
 docs/tasks/artifacts/history_archive/run_history_archive_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/history_archive/window_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/i18n/run_i18n_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
@@ -264,3 +264,4 @@ docs/tasks/artifacts/ci_environment/python_publication_builder_contract.py	outpu
 docs/tasks/artifacts/ci_environment/python_map_handoff_fixture_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Actual map/handoff source/output/dispatch captures, readonly checks and isolated refusal controls.
 docs/tasks/artifacts/ci_environment/python_archive_client_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	D222 packed-record reproduction, complete readonly input/child captures, source provenance and physical/body refusal controls.
 docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	Archive pure/original-body, materialization/metadata capture, physical/body refusal and native public CLI controls.
+docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	Archive fixture focused capture and parser regression; optional exhaustive calibration deferred by director2026-10-25.

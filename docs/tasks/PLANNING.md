@@ -981,6 +981,8 @@ D155 complete closure receipt retained in [part75](../history/window6.md#stitchc
   CI's explicit prepare/verify is separate and remains valid. Own G1-SLICE.5b.4c.h2, P1 after
   .h0 commit/.h1 runner observation, before D154 native verification; establish actual durable
   producer fault controls, fix published entry-point defaults and verify native/WASM/G0 locality.
+  Director2026-10-25: verified primary entry points support feature checks; remaining nonblocking
+  audit/calibration is deferred behind features. D156 stays open; .5c.1 may proceed independently.
 
 D157–D159 complete closed receipts retained in [part78](../history/window6.md#stitchcad-defects-part78md).
 
@@ -1093,22 +1095,9 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   or active-harness termination. Original historical identity remains unknown. Book cleanup annex/
   DEV_NOTES0236 and protected recovery-20261025 audit retain source, commands and receipts.
 
-- **D220** — map's current-source reference assumes an HTML header despite accepting five header forms.
-  Reproduce: python_map_handoff_fixture_contract.py --headerless removes only the reference header in
-  memory; the actual unchanged generator preserves its body, but the old reference raises IndexError
-  at content.split('-->', 1)[1]. Impact: valid header removal breaks the watched map contract.
-  Owner: G1-SLICE.5b.4c.h2.b.p.o.a24, fix now; independent body/header controls replace the assumption.
-  Fixed: current-body reference handles all five shapes; headerless metamorphic control passes without
-  editing the curated file. Native generator retains its original five cases/two actual body reds.
+- **D220/D221** — closed by .a24; complete original reports and verified repairs retained
+  in [part136](../history/stitchcad-defects-part136.md).
 
-- **D221** — governance still says D217 blocks current live handoff proof after its verified repair.
-  Reproduce: governance.md's handoff section says blocked; committed0237 DEV_NOTES records native
-  calibration and real clear0/held1/restored0. Impact: the director's book reports an obsolete blocker.
-  Owner: G1-SLICE.5b.4c.h2.b.p.o.a24. Fixed wording names verified inheritance repair and current quiet-
-  workspace precondition. Fresh native calibration passes10 lifecycles/two reds; census evidence is
-  available, with exit1 for DiskWatch's directory handle rather than D217's old unavailable evidence.
-  After the handle closes, fresh native clear0/held1/restored0 passes with a terminal0 holder;
-  historical FD10 stays unknown. D221 closed by .a24.
 
 - **D224** — committed archive guard treats unavailable Git metadata as an initial transition.
   Reproduce: python_archive_reader_contract.py --before compiles the actual4027b36 reader and returns

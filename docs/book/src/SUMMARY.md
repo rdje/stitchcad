@@ -77,6 +77,7 @@
 - [Historical archive reader](annexes/archive-reader.md)
 - [Publication checks](annexes/publication-checks.md)
 - [Build and check the project](build-and-checks.md)
+- [Checks during feature delivery](annexes/checking-policy.md)
 
 # Index
 

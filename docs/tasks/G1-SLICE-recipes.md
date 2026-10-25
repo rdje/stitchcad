@@ -372,6 +372,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: full unsigned magnitudes/signs, zero, reduction and cancellation before width
   judgment, overflow-safe bounded workspace and typed numerator/denominator measured refusal.
   Independent arbitrary-precision oracle checks arithmetic; no dependency/license/WASM guess.
+  Director2026-10-25: next independent product feature after the dirty0243 slice is committed.
+  D154/D156 and remaining audit verification stay owned; they do not block this pure primitive.
+  Start with a bounded implementation slice and one affected test; broad integration stays deferred.
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5c.2`
   Status: `pending`
@@ -656,6 +659,8 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
   Acceptance: finite independent source/call census, actual standalone controls/body faults/source
   restoration and standing suites; close D156 only after no owned producing path remains unguarded.
   Verification/Commit: `pending`; D154 follows parent .h2 verified closure.
+  Director2026-10-25 supersedes its frontier priority: after0243, remaining nonblocking audit work
+  is deferred behind product features. D156 remains open; no closure/runtime signoff is claimed.
 
 ### D156 completed primary-profile narrative
 

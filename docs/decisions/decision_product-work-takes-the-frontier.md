@@ -7,7 +7,7 @@
   `PLANNING.4`; established by a commit census, not by impression (defect D24 in
   `docs/tasks/PLANNING.md`)
 
-answers: "what do I work on next?" · "why did the session produce no product work?" · "when is spine or governance work allowed?" · "how do I notice the frontier has drifted off the product?" · "is fixing doctrine defects a legitimate use of a slice?"
+answers: "what do I work on next?" · "why did the session produce no product work?" · "when is spine or governance work allowed?" · "how do I notice the frontier has drifted off the product?" · "is fixing doctrine defects a legitimate use of a slice?" · "how much verification follows each feature?"
 
 ## The fact / decision
 
@@ -69,3 +69,28 @@ can run.
 
 Related: [[decision_acceptance-evidence-per-leaf]] · [[decision_adopted-external-policy-references]] ·
 `docs/tasks/PLANNING.md` (defect D24) · `MEMORY.md` (the pointer that carries the frontier).
+
+## Director ruling — 2026-10-25: feature delivery and focused checks
+
+The director explicitly asks to reduce verification overhead so implementation reaches 100% feature
+coverage. After a feature addition, run one small check of its affected behavior. Broad regression,
+mutation campaigns, full publication probes and repeated platform/CI sweeps wait for a later
+integration milestone and the required pre-push gate. Escalate checking when a concrete failure or
+integration risk warrants it; do not make exhaustive calibration the default cost of each slice.
+
+This changes verification scheduling, not implementation quality. Keep contracts, readable code,
+task ownership, book synchronization, commits and the automatic doctrine hooks. Record deferred
+verification with an owner and milestone. A focused result never claims that unrun suites passed.
+The 400-commit push cadence and full pre-push gate remain unchanged.
+
+Finish the current dirty unit before switching. Then take the next implementable product feature.
+Remaining producer-audit and tooling work stays owned and pending, but does not block features
+unless it directly blocks the selected feature or can destroy/corrupt current work. D156 and D223
+remain open; deferral does not constitute repair or runtime signoff.
+
+The old commit-prefix census above cannot distinguish tooling inside a G1 task from product behavior.
+Report feature progress by implemented capabilities and roadmap acceptance, with maintenance
+progress stated separately. A G1-labelled maintenance commit does not advance feature completeness.
+
+Authority: director message in the 2026-10-25 session; adoption owned by
+`G1-SLICE.5b.4c.h2.b.p.o.a25.2`, with deferred fixture calibration owned by .f.fixture-verification.
