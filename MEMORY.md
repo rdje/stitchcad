@@ -4,9 +4,9 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- PNT frontier: G1-SLICE.5d.3.1 — bounded correctly rounded arc_length value kernel.
-- Next: use640-bit pi certificate for one exact signed product/rounding; no angle modulo/new dependency.
-- Owner/evidence: docs/tasks/G1-SLICE-recipes.md; numerical fixed-point decision and pi640 fixture.
+- Completed0258: correctly rounded signed/full-turn arc_length; native67/2/6,23 oracle rows pass.
+- Next: G1-SLICE.5d.1.2.2.h packs history window12 at64 Markdown, then trig/inverse plan .5d.1.2.2.
+- Owner/evidence: docs/tasks/G1-SLICE-recipes.md; numerical decision and arc/pi fixtures.
 - Policy: one focused check/feature; broad .5c.4/.5d.4/audits deferred to integration/pre-push.
-- In-flight: none after0257 commit; certificate/map checks0; remaining trig plan .5d.1.2.2.
 - Approved UI baseline/quality/full AI control: decision_stitchcad-ui-baseline-and-quality.md; DBIQNP/no pivot.
+- No background job. Whole0257 retained331/230; journal398 lines; pack before further retention.

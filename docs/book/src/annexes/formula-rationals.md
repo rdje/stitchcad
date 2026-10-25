@@ -152,6 +152,7 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | checked_round_to | Authored same-kind step, nearest exact multiple with ties away from zero |
 | checked_sqrt | Correctly rounded area-to-length or ratio-to-ratio square root |
 | checked_hypot | Correctly rounded signed-length hypotenuse with no intermediate Area |
+| checked_arc_length | Correctly rounded signed Angle/Length arc with full turns and certified pi |
 
 Length and area use inclusive signed limits of 10⁹ micrometres and 10¹⁸ square micrometres.
 The check compares the exact fraction with the bound: limit + 1/10 refuses even if binding would
@@ -473,12 +474,28 @@ full-width and over-domain values check the oracle's role; no broad/platform pas
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_root_value_contract
 ```
 
-## Planned bounded arc_length
+## Bounded correctly rounded arc_length
 
-Arc length is still pending implementation. The recorded plan proves correct nearest-micrometre
-rounding for every admitted Angle/Length pair using one fixed pi enclosure and the existing private
-integer dependency. It preserves signed/full turns and the signed radius product from the current
-contract. This plan covers arc_length; the other transcendental functions retain separate owners.
+checked_arc_length is available for an Angle followed by a Length radius. It returns the nearest
+micrometre, preserving signed/full turns and both operand signs. Zero products return canonical
+zero. A different kind returns BuiltinInputKind with the actual first wrong argument and kind.
+The existing integer dependency and recorded pi certificate establish exact rounding across the
+admitted input family; the remaining trigonometric/inverse functions retain separate plans.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational};
+
+let angle = FormulaNumericValue::new(FormulaKind::Angle, FormulaRational::from_signed_integer(720_000_000))?;
+let radius = FormulaNumericValue::new(FormulaKind::Length, FormulaRational::ONE)?;
+assert_eq!(angle.checked_arc_length(radius)?.rational(), FormulaRational::from_signed_integer(13));
+// Two full turns at radius 1 micrometre: round(4*pi), with no direction modulo.
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The complete exact product is rounded once at the function quantum. Excessive returned component
+width reports the exact numerator bits; an excessive rounded Length reports operation arc_length,
+its actual integer and the signed scalar bounds. There is no premature i64 binding check or
+intermediate rounding. Negative radius values follow the current signed numeric product contract.
 
 For operand magnitudes n1/d1 and n2/d2, arc length is A*pi/B with A=n1*n2<2^256 and
 B=180,000,000*d1*d2. A half-micrometre output would place pi at a rational number whose reduced
@@ -497,8 +514,21 @@ crates/sc-core/tests/fixtures/pi640_certificate.tsv. Reproduce them with:
 python3 -I -B docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py
 ```
 
-The full derivation is in the numerical fixed-point decision. Runtime work will stay below898/924
-numerator/denominator bits and use one exact division/rounding before the existing result-width and
+The full derivation is in the numerical fixed-point decision. Runtime work stays within898/924
+numerator/denominator bits and uses exact quotient/remainder rounding before result-width and
 Length-domain checks. The precision is a checked internal certificate, with no added language limit,
-platform libm dependency or empirical convergence cutoff. Production arc_length, source provenance
-and platform/broad verification remain their separate next owners.
+platform libm dependency or empirical convergence cutoff. Source-call provenance and platform/broad
+verification remain later integration owners.
+
+The compiled pi limbs are checked against the retained certificate by a native library test that
+re-runs its two-identity producer. The independent arc oracle uses a different pi identity and exact
+Fraction enclosures. Its23 rows cover signed/full turns, zero, full128-bit components,133-bit
+refusals, scalar excess and rational neighbors straddling half-micrometre boundaries. The native
+arc target passes two tests; the affected numeric target retains six passing cases. The selected
+library run also passed67 unit tests, including the new certificate check. Broad verification
+remains deferred. Future focused invocations filter that library check explicitly:
+
+```bash
+python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --lib compiled_pi_endpoint_matches_the_reproduced_certificate
+python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_arc_value_contract --test formula_numeric_contract
+```

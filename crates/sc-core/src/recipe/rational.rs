@@ -342,13 +342,8 @@ impl FormulaRational {
         }
         let numerator = BigUint::from(self.numerator) * BigUint::from(step.denominator);
         let denominator = BigUint::from(self.denominator) * BigUint::from(step.numerator);
-        let mut integer = &numerator / &denominator;
-        let remainder = numerator % &denominator;
-        // The same half-away magnitude rule as sc_units' unsigned primitive, in a wider workspace.
         // Quotient/remainder need at most 256 bits; no premature rational-width or i64 check applies.
-        if remainder >= &denominator - &remainder {
-            integer += BigUint::from(1_u8);
-        }
+        let integer = round_magnitude_wide(numerator, denominator);
         if integer == BigUint::from(0_u8) {
             return Ok(Self::ZERO);
         }
@@ -379,6 +374,16 @@ impl FormulaRational {
             negative,
         })
     }
+}
+
+/// Same half-away magnitude rule as sc_units, for sealed wider workspaces with positive denominator.
+pub(super) fn round_magnitude_wide(numerator: BigUint, denominator: BigUint) -> BigUint {
+    let mut integer = &numerator / &denominator;
+    let remainder = numerator % &denominator;
+    if remainder >= &denominator - &remainder {
+        integer += BigUint::from(1_u8);
+    }
+    integer
 }
 
 fn gcd_wide(mut lhs: BigUint, mut rhs: BigUint) -> BigUint {

@@ -159,7 +159,7 @@ is an additional endpoint check. The certificate contains the enclosure and both
 its determinant/denominator/enclosure predicates are sufficient to check midpoint exclusion.
 
 Runtime uses at most898 numerator and924 denominator bits: pi's scaled numerator fits642 bits,
-A fits256, and B fits284. There is one fixed-size exact division/half-away rounding, followed by
+A fits256, and B fits284. There is a fixed-size exact quotient/remainder rounding, followed by
 reduced128-bit and completed Length-domain checks; binding i64 remains later. Rounded magnitude
 fits at most133 bits under the admitted Angle/Length domains. No intermediate width/domain refusal
 or direction modulo is introduced. Negative coefficient signs use the same magnitude certificate.
@@ -172,3 +172,7 @@ Research also located published correctly-rounded float APIs in dashu-float and 
 They are unselected candidates for the remaining family: exact rational input enclosures,
 threshold termination, resource bounds, cached-version licenses and platform behavior still require
 review before adoption. No new dependency/license or native/WASM capability is claimed here.
+
+Implementation0258: arc_length now uses the certified endpoint, exact wide rounding and final width/
+scalar checks. Native arc2/0 with23 independent rows, numeric6/0 and selected library67/0 pass; the
+compiled endpoint is tied to the reproduced certificate. Source provenance remains .5e.3.

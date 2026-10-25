@@ -833,7 +833,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5d.3.1` | `pending` | Correctly rounded bounded arc_length value kernel |
+| **next** | `G1-SLICE.5d.1.2.2.h` | `pending` | Pack history window12, then trig/inverse plan |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

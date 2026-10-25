@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — certified exact signed arc-length values
+
+0258 .5d.3.1 implements signed/full-turn arc_length with the certified640-bit pi endpoint,
+898/924-bit product workspace and shared exact wide half-away rounding. Metadata checks actual
+kinds before zero handling; final width/scalar refusals retain measured bits or rounded value.
+One selected command passes arc2/0 with23 independent alternate-identity/hard-midpoint rows,
+numeric6/0 and library67/0 including compiled-constant/certificate reproduction. The library target
+included existing units; future commands filter its certificate test. No broad/platform pass claimed.
+No dependency, angle modulo or binding narrowing added; source provenance remains .5e.3.
+Whole0257 task/ledger retained331/230; book/live/pointers align. Promotion: numerical decision
+records the implementation scope alongside its certificate. History reaches64 MD; pack before more retention.
+
 ## _(2026-10-25 UTC)_ — bounded arc-length certificate and approved UI requirements
 
 0257 .5d.1.2.1 proves fixed-enclosure arc_length rounding for all admitted rational inputs. A's two

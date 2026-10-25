@@ -483,31 +483,20 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5d.1.2.1`
   Status: `done`
-  Goal:0257 prove bounded arc_length rounding with a fixed certified pi enclosure before code.
+  Goal: certified640-bit pi/arc plan and approved UI baseline/quality/full-agent-control records0257.
   Paths: docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py;crates/sc-core/tests/fixtures/pi640_certificate.tsv;knowledge-map/scripts/gen_knowledge_map.sh
-  Own exact Machin/Farey certificate and independent identity/rounding check, numerical decision/book,
-  complete hypot330/229 retention. No production arc or broad campaign; remaining trig/inverse .2.
-  Director DBIQNP approvals are collateral: standalone baseline/quality/critical full AI-agent control
-  retained in UI decision/INDEX/map/roadmap/book/existing .9.plugin; no UI implementation/pivot.
-  Map/roadmap growth blocks the UI record; trim redundant labels/prose, retain requirements.
-  Focused render preserves all destinations/order/path CLI at7836B, rc=0; no schema/limit change.
-
-
-- [x] REPRODUCE / ISSUE:a67f4c3 lacks arc algorithm; new UI map8277B>8192B, source/size rc=0.
-- [x] ROOT CAUSE: bounded half-target denominators allow a finite pi certificate; python3 -I -B
-  docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py proves640 bits/two identities,
-  Farey predicates/stdlib endpoints, rc=0. Map redundancy measured/corrected7836B, rc=0.
-- [x] FIX: certificate/UI record; roadmap below985L/55371B baseline, source check0.
-- [x] ADDRESSED: same certificate CLI reproduces exact artifact, rc=0; map source render/public CLI
-  and every predecessor target/order plus one new UI decision match,7836B, rc=0.
-- [x] NO REGRESSION: same certificate/map identity checks pass0; no product Rust source changed,
-  observed git diff --name-only -- '*.rs' empty, rc=0. Broad .5d.4/pre-push, UI implementation deferred.
-- [x] LOCKSTEP:330/229 whole Git/public records exact, rc=0; book/roadmap/decision/map/pointers align.
-  promotion: numerical decision gains proof; director-approved UI direction has a dedicated decision.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part331.md).
 
 - ID: `G1-SLICE.5d.1.2.2`
   Status: `pending`
   Goal: exact trig/inverse interval/resource plan before code.
+
+- ID: `G1-SLICE.5d.1.2.2.h`
+  Status: `pending`
+  Goal:0259 pack history window12 before more retention at64 Markdown; retire whole oldest journal lesson.
+  Paths: docs/history/;.doctrine/history_archive/;DEV_NOTES.md
+  Acceptance: published pack/read contract, exact committed members/public read, immutable prior windows;
+  fixed caps/book/live sync; focused new-window check, no broad audit pivot.
 
 - ID: `G1-SLICE.5d.2`
   Status: `in_progress`
@@ -529,7 +518,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part330.md); source provenance .5e.3.
 
 - ID: `G1-SLICE.5d.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: sin/cos/tan, atan, atan2 and arc_length with signed sweeps and reviewed rounding.
   Acceptance: exact odd-quarter-turn tan poles, signed principal branches, atan2(y,x)/(0,0),
   zero axis and near-axis rounded endpoints, complete turns and signed/multiple-turn sweeps;
@@ -537,8 +526,18 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Split functions into further owned children if this unit exceeds a safe implementation slice.
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5d.3.1`
-  Status: `pending`
-  Goal: bounded correctly rounded arc_length from .5d.1.2.1 certificate; no angle modulo.
+  Status: `done`
+  Goal:0258 exact signed/full-turn arc_length using the certified pi endpoint.
+  Paths: crates/sc-core/src/recipe/arc.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_arc_value_contract.rs
+  Additional paths: docs/tasks/artifacts/formula_structure/arc_value_oracle.py;crates/sc-core/tests/fixtures/formula_arcs.tsv
+- [x] REPRODUCE: missing arc API at67f67d0, git source inspection0.
+- [x] ROOT CAUSE: python3 -I -B docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py
+  reproduces640-bit midpoint-exclusion certificate, rc=0 (compiled certificate test).
+- [x] FIX: exact signed product/rounding, actual kind/width/scalar errors; no dependency/modulo.
+- [x] ADDRESSED: local_environment.py cargo test --offline -p sc-core --lib
+  --test formula_arc_value_contract --test formula_numeric_contract:67/2/6 pass, rc=0;23 oracle rows.
+- [x] NO REGRESSION: same command numeric6/0 and library67/0, rc=0; broad .5d.4/pre-push, provenance .5e.3.
+- [x] LOCKSTEP:331/230 exact Git/public records, book/live align; decision implementation promoted.
 - ID: `G1-SLICE.5d.3.2`
   Status: `pending`
   Goal: correctly rounded sin/cos/tan under .5d.1.2.2 plan.

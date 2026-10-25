@@ -470,6 +470,36 @@ impl FormulaNumericValue {
         Self::for_operation(kind, value, "hypot")
     }
 
+    /// Returns the correctly rounded signed arc length for this Angle and a Length radius.
+    ///
+    /// Full turns and both operand signs are preserved. The fixed pi enclosure carries an exact
+    /// all-admitted-midpoints certificate; source-call/irrational provenance belongs to evaluation.
+    ///
+    /// # Errors
+    /// Returns BuiltinInputKind for the first wrong operand, a reduced-width refusal or the final
+    /// rounded Length's scalar-domain refusal. No direction modulo or i64 binding narrowing occurs.
+    pub fn checked_arc_length(self, radius: Self) -> Result<Self, FormulaNumericError> {
+        let kind = FormulaBuiltin::ArcLength
+            .result_kind(&[
+                FormulaBuiltinOperand::Value(self.kind),
+                FormulaBuiltinOperand::Value(radius.kind),
+            ])
+            .ok_or_else(|| {
+                let (argument, actual) = if self.kind != FormulaKind::Angle {
+                    (0, self.kind)
+                } else {
+                    (1, radius.kind)
+                };
+                FormulaNumericError::BuiltinInputKind {
+                    builtin: FormulaBuiltin::ArcLength,
+                    argument,
+                    actual,
+                }
+            })?;
+        let value = super::arc::arc_length_value(self.value, radius.value)?;
+        Self::for_operation(kind, value, "arc_length")
+    }
+
     fn extremum(values: &[Self], builtin: FormulaBuiltin) -> Result<Self, FormulaNumericError> {
         let mut selected = values
             .first()

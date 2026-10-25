@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0257 — certified bounded arc plan and approved UI requirements
+## STITCHCAD-G1-0258 — correctly rounded signed arc-length values
 
-.5d.1.2.1:640-bit pi/Farey certificate excludes all admitted arc rounding midpoints; two exact identities
-and independent arithmetic checks pass. Director UI baseline/quality/full-agent control adopted; map fits fixed cap.
+.5d.3.1: certified pi endpoint, exact signed/full-turn product and final width/scalar diagnostics.
+Focused native arc2/0 (23 oracle rows), numeric6/0 and library67/0 pass; source provenance/broad proof remain owned.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -404,3 +404,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part228](docs/history/stitchcad-changelog-part228.md) | whole0255 | 4 lines, 279 bytes, sha256:81ffba1f… |
 
 | [part229](docs/history/stitchcad-changelog-part229.md) | whole0256 | 4 lines, 272 bytes, sha256:1eea24fc… |
+
+| [part230](docs/history/stitchcad-changelog-part230.md) | whole0257 | 4 lines, 305 bytes, sha256:bd717196… |
