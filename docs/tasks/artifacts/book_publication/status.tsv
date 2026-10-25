@@ -68,3 +68,5 @@ formula whole dependency roles	annexes/formula-checked-recipes.md	crates/sc-core
 formula whole sourced dependency	annexes/formula-checked-recipes.md	crates/sc-core/src/recipe/checked_recipe.rs	FormulaRecipeNameDependency	G1-SLICE.5b.4a	4.1
 formula exact rational construction	annexes/formula-rationals.md	crates/sc-core/src/recipe/rational.rs	FormulaRational	G1-SLICE.5c.1.1	4.2
 formula rational construction refusal	annexes/formula-rationals.md	crates/sc-core/src/recipe/rational.rs	FormulaRationalError	G1-SLICE.5c.1.1	4.2
+formula completed numeric values	annexes/formula-rationals.md	crates/sc-core/src/recipe/numeric.rs	FormulaNumericValue	G1-SLICE.5c.2.1	4.2
+formula numeric value refusals	annexes/formula-rationals.md	crates/sc-core/src/recipe/numeric.rs	FormulaNumericError	G1-SLICE.5c.2.1	4.2

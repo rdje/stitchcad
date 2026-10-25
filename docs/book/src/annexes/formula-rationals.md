@@ -115,6 +115,59 @@ It applies no quantity kind, scalar domain, signed storage conversion or source 
 Quantity-aware operator wiring and evaluator integration remain later slices.
 The 128-bit result limit remains unchanged.
 
+## Completed numeric values and exact domains
+
+FormulaNumericValue pairs an immutable quantity kind with its exact rational internal-unit value.
+Its constructor admits only length, angle, area, ratio and count. Boolean, point and edge refuse as
+nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/storage rounding.
+
+| API | Available behavior |
+| --- | --- |
+| FormulaNumericValue | Private admitted kind and exact internal-unit rational |
+| FormulaNumericError | Typed nonnumeric-kind, scalar-domain or rational refusal |
+| NonNumericKind | formula_dimension with the actual refused kind |
+| ScalarDomain | formula_domain with kind, exact value, minimum and optional maximum |
+| Rational | Retains the underlying FormulaRationalError and diagnostic family |
+| kind | Inspect the admitted quantity kind |
+| rational | Inspect the exact canonical internal-unit value |
+| from_literal | Import a normalized literal's once-rounded integer and kind |
+
+Length and area use inclusive signed limits of 10⁹ micrometres and 10¹⁸ square micrometres.
+The check compares the exact fraction with the bound: limit + 1/10 refuses even if binding would
+round it back to the limit. Negative lengths/areas are admitted inside the same symmetric limits.
+Count admits nonnegative fractions and refuses every negative fraction. An absent maximum in a
+Count refusal means no scalar upper bound; signed i64 storage is checked later at binding.
+Angle and ratio retain their full admitted rational range at this boundary. Angles preserve signed
+complete turns. Ratios are measured in parts per million, so exactly 1.0 is 1,000,000 internal units.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational};
+
+let fraction = FormulaRational::new(1, 3, false)?;
+let count = FormulaNumericValue::new(FormulaKind::Count, fraction)?;
+assert_eq!(count.rational(), fraction); // no early integer rounding
+
+let excess = FormulaRational::new(10_000_000_001, 10, false)?;
+assert!(FormulaNumericValue::new(FormulaKind::Length, excess).is_err());
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The normalized-literal bridge performs no new conversion. For example, a normalized 0.0000004 ratio
+is already zero ppm; importing it cannot recover a hidden fraction. A normalized 720 deg input
+remains 720,000,000 microdegrees. The error contains only actual kind/value/bounds; expression,
+operation and statement context belongs to later evaluator integration. Quantity-aware operators,
+comparison, built-ins and binding are still separate pending features.
+
+Check this feature with the affected native target:
+
+```bash
+python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_numeric_contract
+```
+
+The focused constructor/input cases cover signed exact limits, fractional Count, wider temporaries,
+refused geometry/Boolean kinds, normalized rounding and raw multi-turn angles. Broad verification
+remains deferred to integration/pre-push.
+
 ## Focused check
 
 ```bash

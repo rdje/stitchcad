@@ -170,6 +170,7 @@ cached result that differs from a fresh one is a defect.
 ### 4.2 Exact arithmetic, and the two places a value rounds
 
 [Canonical rational construction and all four exact operators](../annexes/formula-rationals.md) are implemented.
+Completed numeric values enforce exact scalar domains and preserve normalized input integers.
 Quantity-aware operators and evaluator integration remain later work.
 
 Literal input first converts once into its canonical internal integer, by

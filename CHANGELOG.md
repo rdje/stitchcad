@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0247 — focused independent rational oracle integration
+## STITCHCAD-G1-0248 — completed numeric values and exact scalar domains
 
-.5c.1.3:34 Python Fraction cases replay through all four public exact operators and typed refusals.
-Focused native target4/0; value kernel complete, typed operators next and broad/platform work deferred.
+.5c.2.1: immutable numeric kind/rational, exact signed length/area and nonnegative Count domains,
+normalized literal bridge and typed actual-value refusals. Focused native target2/0; operators next.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -384,3 +384,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part218](docs/history/stitchcad-changelog-part218.md) | whole0245 | 4 lines, 250 bytes, sha256:bbadee3a… |
 
 | [part219](docs/history/stitchcad-changelog-part219.md) | whole0246 | 4 lines, 266 bytes, sha256:02057330… |
+
+| [part220](docs/history/stitchcad-changelog-part220.md) | whole0247 | 4 lines, 278 bytes, sha256:df97bf2e… |

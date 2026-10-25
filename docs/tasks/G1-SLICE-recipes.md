@@ -399,34 +399,53 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.1.3`
   Status: `done`
-  Goal: independent rational oracle integration and focused primitive signoff; broad campaigns later.
-  Acceptance: independent arbitrary-precision results at full-width/cancellation/refusal boundaries,
-  stable diagnostics and original syntax/literal separation; no evaluator closure claim.
-  Own0247: add pure stdout Fraction fixture oracle and immutable expected TSV, consumed by the
-  existing public native target. Compare four-operator outputs/refusals without production bigint
-  arithmetic or new evaluator scaffolding. One affected target; broad/platform work stays .5c.4.
+  Goal:34 independent Fraction fixtures/public four-operator replay verified0247; broader/platform .5c.4.
   Paths: docs/tasks/artifacts/formula_structure/rational_value_oracle.py;crates/sc-core/tests/fixtures/formula_rationals.tsv;crates/sc-core/tests/formula_rational_contract.rs
-  Own completed sum node retention318/ledger219 if needed for fixed caps; book/live/pointer sync.
-
-- [x] REPRODUCE / ISSUE: a814dd9 contains example tests without independent arithmetic rows;
-  source inspection confirms, rc=0.
-- [x] ROOT CAUSE: independent Fraction arithmetic avoids sharing the production bigint/kernel;
-  oracle emits34 exact/sign/zero/cancellation/refusal rows, rc=0.
-- [x] FIX: pure oracle/TSV plus public four-operator replay; no production semantics changed.
-- [x] ADDRESSED: cargo test --offline -p sc-core --test formula_rational_contract:4 passed/0 failed,
-  including34 independent rows, rc=0.
-- [x] NO REGRESSION: same target retains constructor and prior operator boundaries,4/0, rc=0;
-  syntax/input code unchanged. Broad/platform/mutation campaigns remain .5c.4 and pre-push.
-- [x] LOCKSTEP: book/live/frontier/pointer aligned; whole318/219 Git/public intervals exact, rc=0.
-  promotion: declined (established independent-oracle and focused-check policies).
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part319.md).
 
 - ID: `G1-SLICE.5c.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: all typed rational operators and abs/min/max/clamp without implicit rounding.
   Acceptance: dimension/scaling tables, exact fractional Count, signed length/area per-result
   domains, literal input boundary distinct from result boundary, zero division and invalid clamp;
   later cancellation never rescues an invalid completed intermediate. Raw formula turns preserved.
-  Verification: `pending`; Commit: `pending`.
+  Children: .1 typed completed values/domains; .2 binary arithmetic/scaling; .3 unary/comparison;
+  .4 abs/min/max/clamp. Verification remains focused per feature; broad integration .5c.4.
+
+- ID: `G1-SLICE.5c.2.1`
+  Status: `done`
+  Goal: immutable completed numeric values with exact scalar-domain validation and normalized input bridge.
+  Acceptance: only five numeric kinds; length/area exact signed limits, nonnegative fractional Count,
+  Angle/Ratio retain full rational range until binding; reject before rounding or later cancellation.
+  Own0248: numeric.rs, recipe exports, new focused native formula_numeric_contract target; no evaluator
+  or binding. Typed errors retain actual kind/exact value/bounds without invented source context.
+  Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_numeric_contract.rs
+  Book/status-map/live/frontier sync; completed oracle task/ledger retained319/220 under fixed caps.
+
+
+- [x] REPRODUCE / ISSUE: predecessor6b1de3d has kind metadata and untyped rationals only;
+  numeric value source absent, source inspection rc=0.
+- [x] ROOT CAUSE: exact completed domains differ from rounded input and signed storage bounds;
+  cargo test --offline -p sc-core --test formula_numeric_contract:2 passed/0 failed, rc=0.
+- [x] FIX: immutable numeric value validates exact signed length/area and nonnegative Count;
+  normalized input bridge preserves internal integers, typed actual-kind/value/bound refusals.
+- [x] ADDRESSED: same focused native target checks inclusive bounds/fractional excess, all kinds,
+  full-width temporaries/input rounding/raw turns,2 passed/0 failed, rc=0.
+- [x] NO REGRESSION: constructor bridge exercises existing literal conversion,2/0, rc=0;
+  primitive/operator syntax unchanged; broad/platform checks remain .5c.4/pre-push.
+- [x] LOCKSTEP: source/public retained319/220 exact, rc=0; API map/book/live/frontier aligned.
+  promotion: declined (existing exact numeric contract and focused-check policy).
+
+- ID: `G1-SLICE.5c.2.2`
+  Status: `pending`
+  Goal: exact four-operator quantity scaling and per-completed-result scalar domains.
+- ID: `G1-SLICE.5c.2.3`
+  Status: `pending`
+  Goal: exact unary negation/square and same-kind numeric comparisons.
+- ID: `G1-SLICE.5c.2.4`
+  Status: `pending`
+  Goal: exact abs/min/max/clamp with typed kind and bound refusals.
+
 - ID: `G1-SLICE.5c.3`
   Status: `pending`
   Goal: explicit round_to and one binding conversion for all five numeric kinds plus Boolean.

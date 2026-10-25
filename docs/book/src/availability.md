@@ -44,7 +44,8 @@ quantity-aware arithmetic, binding and execution remain pending.
 [Canonical rational values](annexes/formula-rationals.md) can now be constructed and reduced exactly,
 with full 128-bit component magnitudes, independent sign and a typed zero-denominator refusal.
 All four rational operators now reduce before width checks and report typed zero/width refusals.
-Quantity-aware operators and recipe evaluation remain the next stages.
+Completed numeric values now enforce exact length/area limits and nonnegative Count, with a
+normalized-literal bridge. Quantity-aware operators and recipe evaluation remain the next stages.
 
 ## Planned workflows
 

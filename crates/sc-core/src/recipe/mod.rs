@@ -37,6 +37,9 @@ pub use literal::{
 mod rational;
 pub use rational::{FormulaRational, FormulaRationalError};
 
+mod numeric;
+pub use numeric::{FormulaNumericError, FormulaNumericValue};
+
 mod normalized;
 pub use normalized::{
     FormulaNormalizedArguments, FormulaNormalizedExpression, FormulaNormalizedNode,

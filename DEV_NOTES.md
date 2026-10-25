@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — completed numeric values and exact scalar domains
+
+0248 .5c.2.1 pairs a private numeric kind with the exact rational in internal units. Constructor
+checks signed length/area against exact10^9/10^18 limits and rejects negative fractional Count;
+Angle/Ratio/full nonnegative Count remain wider until binding. Quotient/remainder comparisons
+avoid overflow and reject fractional excess before rounding. Nonnumeric kinds refuse dimension;
+scalar errors retain actual kind/exact value/inclusive bounds. No expression context is invented.
+Normalized literals import their once-rounded integer; no hidden fraction, direction modulo or
+i64 narrowing. Numeric operators and binding remain later slices.
+
+One focused native formula_numeric_contract target passes2/0, rc=0. It covers inclusive signed
+limits, fractional excess, all numeric/nonnumeric kinds, full-width temporaries and normalized
+literal rounding/raw turns. No broad/platform pass claimed. Book/API status and live scope align;
+whole0247 task/ledger retained319/220 with exact intervals. Promotion declined: existing numeric
+contract and focused-check policy already specify these rules.
+
 ## _(2026-10-25 UTC)_ — independent rational value fixtures
 
 0247 .5c.1.3 adds a pure stdout Python Fraction oracle and34 retained rows consumed by the
