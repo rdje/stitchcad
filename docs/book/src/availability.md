@@ -17,8 +17,8 @@ inputs refuse numeric fallbacks. Some complete structural inventories can still 
 values. The [implementation-status annex](annexes/implementation-status.md) links each family to its
 source, roadmap requirement and verification owner.
 
-Earlier slices have local strict native/WASM evidence. New rational construction has one focused
-native contract check; broader/platform verification is deferred. Cross-compiling libraries does
+Earlier slices have local strict native/WASM evidence. New rational values have one focused
+native contract target; broader/platform verification is deferred. Cross-compiling libraries does
 not prove a working browser application. No new remote-run verdict is claimed.
 
 Whole statement/recipe [literal normalization](annexes/formula-recipe-inputs.md) preserves input
@@ -43,7 +43,8 @@ exact arithmetic, binding and execution remain pending.
 
 [Canonical rational values](annexes/formula-rationals.md) can now be constructed and reduced exactly,
 with full 128-bit component magnitudes, independent sign and a typed zero-denominator refusal.
-Arithmetic operators and recipe evaluation remain the next implementation stages.
+Exact products/quotients now cross-cancel before width checks and report typed zero/width refusals.
+Sums/differences, quantity-aware operators and recipe evaluation remain the next stages.
 
 ## Planned workflows
 

@@ -169,8 +169,8 @@ cached result that differs from a fresh one is a defect.
 
 ### 4.2 Exact arithmetic, and the two places a value rounds
 
-[Canonical rational value construction](../annexes/formula-rationals.md) is implemented.
-Arithmetic operators, wider intermediate reduction and evaluator integration remain later work.
+[Canonical rational construction and exact products/quotients](../annexes/formula-rationals.md) are implemented.
+Sums/differences, quantity-aware operators and evaluator integration remain later work.
 
 Literal input first converts once into its canonical internal integer, by
 [grammar §2](formula-language/grammar.md). That input conversion precedes expression arithmetic:

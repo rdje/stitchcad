@@ -885,7 +885,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5c.1.2` | `pending` | Exact arithmetic workspace and reduced-width refusals |
+| **next** | `G1-SLICE.5c.1.2.2` | `pending` | Exact signed sums/differences with wider intermediates |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

@@ -128,10 +128,11 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0244 — canonical exact rational values
 
-.5c.1.1: immutable signed u128 magnitudes, exact reduction/canonical zero and typed denominator
-refusal. One focused public contract passes; arithmetic follows.
+## STITCHCAD-G1-0245 — exact rational products and quotients
+
+.5c.1.2.1: cross-cancellation before widths, canonical signs/zero, typed zero divisor and exact
+reduced-component bit witnesses. Focused native target2/0; broader verification deferred.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -377,3 +378,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part215](docs/history/stitchcad-changelog-part215.md) | whole0242 | 5 lines, 364 bytes, sha256:40c7cebb… |
 
 | [part216](docs/history/stitchcad-changelog-part216.md) | whole0243 | 5 lines, 368 bytes, sha256:dce8d7bb… |
+
+| [part217](docs/history/stitchcad-changelog-part217.md) | whole0244 | 4 lines, 219 bytes, sha256:33c0c860… |

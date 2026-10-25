@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — exact rational products and quotients
+
+0245 .5c.1.2.1 cross-cancels normalized factors before checked multiplication, so oversized raw
+products can reduce to valid128-bit results. The surviving factors are pairwise coprime across the
+fraction; product widths are therefore the fully reduced widths. Division checks zero before
+forming the reduced reciprocal and reuses multiplication. Canonical zero/sign and constructor
+contracts remain intact. RationalWidth reports actual component bits and fixed128 bound/token;
+ZeroDivisor retains formula_division. Four bounded64-bit partial products recover the overflowing
+product's upper128 bits exactly; their sums fit u128 by the documented carry bound.
+One affected native target passes2/0, rc=0, covering cancellation, signs, zero priority and129/256-bit
+numerator/denominator witnesses. No full regression/Clippy/WASM/oracle-campaign pass is claimed.
+Sums/differences and typed/evaluator integration remain owned. Whole0244 task retained314; book/live
+stay aligned. Promotion declined: existing exact-numeric contract and focused-check policy.
+
 ## _(2026-10-25 UTC)_ — canonical exact formula rational values
 
 0244 .5c.1.1 adds FormulaRational in the recipe namespace: private reduced u128 components,

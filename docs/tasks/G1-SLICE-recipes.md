@@ -342,19 +342,12 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5b.4a`
   Status: `done`
-  Goal: private complete recipe proof/error, ordered typed dependencies and exact available context.
-  Acceptance: actual normalized owners and checked initial namespace; all scopes pass before return,
-  check before advance, no accepted prefix/unchecked annotation, values, geometry or caller-made proof.
-  Work unit STITCHCAD-G1-0113; predecessor d9dbe15 clean/brief0/untracked/no jobs. D152 P2 status/D153 P1 generator repair.
-  Verification/Commit: `STITCHCAD-G1-0113`; [whole proof receipts](G1-SLICE-checked-recipes.md#acceptance-checklist).
+  Goal: whole-recipe proof/error/dependency API verified in0113; D152/D153 owned.
+  Acceptance: [complete original node](../history/stitchcad-devnotes-part315.md); [proof receipts](G1-SLICE-checked-recipes.md#acceptance-checklist).
 - ID: `G1-SLICE.5b.4b`
   Status: `done`
-  Goal: coupled independent whole graph public/reference/worked/refusal review; D154 before closure.
-  Acceptance: complete graph/dependency order/real sources, early/late/untaken errors and limits;
-  current signature matrices/actual compiled faults remain effective, syntax/input priorities retained.
-  Work unit STITCHCAD-G1-0114; predecessor e379473 clean/brief0/untracked/no jobs.
-  Protocol: [coupled whole review](G1-SLICE-checked-recipes.md#coupled-whole-factory-protocol).
-  Verification/Commit: `STITCHCAD-G1-0114`; [whole coupling proof](G1-SLICE-checked-recipes.md#coupled-whole-acceptance-checklist).
+  Goal: coupled whole-factory review verified in0114; D154 remains owned.
+  Acceptance: [complete original node](../history/stitchcad-devnotes-part315.md); [coupled proof](G1-SLICE-checked-recipes.md#coupled-whole-acceptance-checklist).
 - ID: `G1-SLICE.5b.4c`
   Status: `in_progress`
   Goal: D154 retain actual known ordinal on whole reference refusals without inventing local context.
@@ -381,31 +374,43 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.1.1`
   Status: `done`
-  Goal: STITCHCAD-G1-0244 implements privately canonical signed128-magnitude formula rational values.
+  Goal: exact canonical signed128-magnitude value construction verified in0244.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_rational_contract.rs
-  Acceptance: exact gcd reduction, positive denominator, full unsigned magnitudes with independent sign,
-  canonical positive0/1, typed zero-denominator refusal, immutable inspectors and signed-integer input.
-  No rounding, allocation, dependencies, kind/domain/storage/evaluator authority. One focused native
-  contract target; broad numerical/platform verification belongs to .5c.1.3. Update book/status map,
-  live docs and commit before arithmetic. Own whole0243 task/ledger retention313/216 under unchanged caps.
-
-- [x] REPRODUCE / ISSUE: recipe source inventory has literal/ontology rationals but no formula value
-  primitive; source/mod.rs inspection, rc=0.
-- [x] ROOT CAUSE: edge Rational is i64-bounded; literal magnitudes are input integers. New focused
-  formula_rational_contract tests full u128 components and independent sign, one pass, rc=0.
-- [x] FIX: private reduced value, canonical0/1, typed zero-denominator error and exact i128 input.
-  The focused native public contract passes1/0, rc=0; no rounding/dependency/domain/evaluator added.
-- [x] ADDRESSED: primary local profile cargo test -p sc-core --test formula_rational_contract:
-  canonical_values_preserve_sign_zero_and_full_width ok;1 passed/0 failed, rc=0.
-- [x] NO REGRESSION: focused target compiles sc-core/passes, rc=0; broader/platform checks owned by .5c.1.3.
-- [x] LOCKSTEP: whole0243 source/public task/ledger bytes match, rc=0; book/status/live/frontier
-  updated. promotion: declined (existing numeric contract/focused policy). Commit hooks required.
+  Acceptance: whole scope and six proof boxes retained in [part314](../history/stitchcad-devnotes-part314.md).
 
 - ID: `G1-SLICE.5c.1.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: bounded exact arithmetic workspace and post-reduction numerator/denominator width refusal.
   Acceptance: exact arithmetic/cancellation before128-bit result judgment, typed measured refusal;
   no overflow/wrap or intermediate rounding. Operator kind/domain layers stay .5c.2.
+  Children: .1 cross-cancelled products/quotients; .2 signed sums/differences and bounded wider workspace.
+
+- ID: `G1-SLICE.5c.1.2.1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0245 delivers exact products/quotients and measured reduced-width refusals.
+  Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/tests/formula_rational_contract.rs
+  Acceptance: cross-cancel before multiplication; preserve full magnitudes/sign/canonical zero,
+  refuse zero divisors before zero shortcut. Fully reduced components above128 bits report exact
+  numerator/denominator width, fixed bound/token and formula_domain; no partial value or rounding.
+  Bounded partial products establish overflowing product width without dependencies or allocation.
+  One affected public contract target; broader/oracle/platform work stays .5c.1.3. Update book/live,
+  retain whole0244 task/ledger314/217 and completed proof nodes315 under fixed caps; commit before sums.
+
+- [x] REPRODUCE / ISSUE: predecessor67e0a41 rational.rs supplies construction only; source inspection0.
+- [x] ROOT CAUSE: cross-cancellation is required before width judgment; affected native target proves
+  admitted cancellation and exact129/256-bit refusals:2 passed, rc=0.
+- [x] FIX: checked products/quotients, zero-divisor priority and bounded exact width witness; focused
+  formula_rational_contract passes2/0, rc=0.
+- [x] ADDRESSED: primary profile cargo test -p sc-core --test formula_rational_contract:2 passed/0 failed, rc=0.
+- [x] NO REGRESSION: same focused target retains constructor cases, rc=0; broad/platform/oracle work stays .3.
+- [x] LOCKSTEP: three retained source/public intervals exact, rc=0; book/live/frontier sync.
+  promotion: declined (existing numeric/focused-check policy). Hooks required before commit.
+
+- ID: `G1-SLICE.5c.1.2.2`
+  Status: `pending`
+  Goal: signed sums/differences with bounded wider intermediate reduction before128-bit judgment.
+  Acceptance: cancellation of wide intermediate products stays exact, typed width errors reflect
+  the fully reduced result; one focused check and later .5c.1.3 oracle integration.
 
 - ID: `G1-SLICE.5c.1.3`
   Status: `pending`
