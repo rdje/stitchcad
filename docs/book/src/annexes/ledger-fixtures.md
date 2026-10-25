@@ -125,3 +125,37 @@ remain exact through declared plan, environment and classifier adapters.
 
 See [Governance](../governance.md) for the historical-reader and retention contract,
 and [Build and checks](../build-and-checks.md) for the broader project gates.
+
+## Diagnostic record continuity
+
+The current handoff suite also verifies the complete retained D217 diagnostic records.
+It obtains logical devnotes parts303/304 and changelog part208 through the public archive
+reader. A packing window may remove their physical Markdown files; their logical names
+and full bytes remain the interface. D222 repaired the former raw-file dependency.
+
+```bash
+python3 -I -B docs/tasks/artifacts/handoff/d217_probe.py retained
+python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_client_contract.py
+python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_client_contract.py --real
+```
+
+Before each child, the client declares the complete physical archive backing population,
+the required master control, its own source, the local profile and both reader sources.
+Symlink inputs, wrong source kinds, nested Git boundaries, escaping authorities and invalid
+store settings refuse before dispatch. A valid local `HISTORY_ARCHIVE_ROOT` and prepared
+stores survive; children have Git context bound to this checkout. This read-only check
+creates no stores, fixture directories or output files.
+
+The proof still compares five complete task records, the complete diagnostic followup
+and eight whole ledger entries with their original Git sources. It also runs the original
+window11 source comparison. Those provenance checks require the referenced Git objects;
+ordinary archive retrieval remains independent of historical Git.
+
+The independent controls first pack the three records in a private valid archive and
+remove their raw copies. The original client refuses that fixture; the repaired client
+passes with exact original source assertions, extraction, child arguments and result fields.
+Seven physical refusals, three same-length content changes and seven actual compiled body
+faults test complete input plans, fresh checks, Git scope, logical reads and provenance.
+The native mode separately executes all eight children against the packed fixture and
+requires exact source/archive/fixture bytes and no workspace residue. Python3.9 and3.14
+pass. The controls create no production archive window and modify no committed window.

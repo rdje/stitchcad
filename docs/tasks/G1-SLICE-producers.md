@@ -300,50 +300,55 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a24`
   Status: `done`
-  Goal: Map and handoff fixtures; sources and kinds in the watched ledger.
+  Goal: Map/handoff complete input/output plans, original contracts and native proof verified in0240.
   Paths: docs/tasks/artifacts/formula_structure/knowledge_map_contract.py;docs/tasks/artifacts/handoff/contract.py
-  Own0240: complete map generator/input inventories/ten outputs and guarded Bash dispatch; handoff readonly
-  fixtures stay pure, --real declares source/callee/held-file plans before children. Retain original five map
-  headers/two body reds and49 handoff fixtures/17 reds/native calibration/clear-held-restored semantics.
-  Inspect d217_probe public calibration API; no installed runtime mutation.
   Paths: docs/tasks/artifacts/ci_environment/python_map_handoff_fixture_contract.py
-  Add protected before/capture/physical/actual-body controls and watched metadata for this group. Fix stale governance D217 claim
-  after actual current handoff proof. Actual captures/physical and omission controls before native tests.
-  Acceptance: ordered group acceptance above.
-
-- [x] REPRODUCE / ISSUE: python_map_handoff_fixture_contract.py --before runs actual bc730f4 source and
-  traps the first unplanned map mkdir and handoff calibration child with stores absent, rc=0.
-  --headerless initially fails1 at the current-source split despite valid generator output (D220).
-- [x] ROOT CAUSE: map contracts has ten file writes/six Bash calls; handoff --real has unplanned sources,
-  held-file output and delegated calibration. The current map reference assumes one header shape.
-  python3 -I -B docs/tasks/artifacts/ci_environment/python_map_handoff_fixture_contract.py captures the
-  complete plans/calls and independent five-shape/current-headerless reference, rc=0.
-- [x] FIX: validate map sources/ten outputs and recheck writes/children; preserve caller stores and bind
-  child Git context. Handoff readonly mode validates code sources without stores; explicit live mode
-  prepares complete source/held-file plans and closes the owned child. Public source/checker/shell unchanged.
-  Original map five/two and handoff49/17 contracts pass0; current reference supports every declared header.
-- [x] ADDRESSED: /usr/bin/python3 -I -B docs/tasks/artifacts/ci_environment/python_map_handoff_fixture_contract.py
-  passes map six actual Bash children/ten writes, readonly/import isolation, intercepted live lifecycle,
-  twenty physical refusals and nine compiled actual source/file/directory/read/recheck assertion reds,
-  rc=0. Device observations simulated; no unsafe native fault or source rewrite. Caller/source bytes exact.
-- [x] NO REGRESSION: OS-visible python3 -I -B -u docs/tasks/artifacts/handoff/contract.py --real passes49/17,
-  native10 lifecycles/two actual reds, clear0/held1/restored0 with terminal0 holder, rc=0. Initial refusal
-  correctly identifies DiskWatch17532's directory handle; after release both strict census/live proof pass0.
-  Rust/generator/checker/probe sources remain unchanged. Publication45/coverage9/glossary0 failures and
-  source census263 paths/76 effect rows pass0. Ten whole source captures/public reads and archive657
-  logical records pass0; ledger11/pointer13 and scripts/run_make.sh gate13 pass0 before commit.
-- [x] LOCKSTEP: D220/D221 corrected; D222 owned by .a25 before window12. Whole bc730f4 publication records
-  and oldest continuity ledger retained308/212 with source intervals and public-reader proof; caps unchanged.
-  Book/live/MEMORY/frontier synchronized for0240. Live copied defect totals removed; canonical owners remain
-  PLANNING and D38's derived census stays pending. promotion: declined (existing complete-plan/readonly rules).
+  Acceptance: complete scope and all six proof boxes retained exactly in [part309](../history/stitchcad-devnotes-part309.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25`
   Status: `pending`
   Goal: Archive reader and fixtures; sources and kinds in the watched ledger.
-  Own D222 before window12: current d217_probe.py retained() must retrieve logical303/304/208 through
-  the public reader, preserving all original Git-bound source/ledger/window11 provenance assertions.
-  Current records exist; reproduce a copied packed/missing-raw case before changing that client.
+  D222 is split into the bounded prerequisite .f.archive-client below before this three-producer group.
   Acceptance: ordered group acceptance above.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.archive-client`
+  Status: `done`
+  Goal: STITCHCAD-G1-0241 repairs D222 before window12 and the larger archive producer group.
+  Paths: docs/tasks/artifacts/handoff/d217_probe.py;docs/tasks/artifacts/ci_environment/python_archive_client_contract.py
+  Acceptance: reproduce the original retained() failure with an isolated valid packed archive and absent
+  raw303/304/208. Retrieve logical records through the public reader, preserve every original Git-bound
+  task/diagnostic/ledger assertion and window11 source proof. Declare all backing sources before child
+  dispatch, retain prepared stores and caller authority, bind Git to this repository. Capture complete
+  inputs/dispatch, physical refusals and actual omission/body reds; native retained proof and exact source/
+  archive preservation. Update watched metadata, book/live/MEMORY and commit before .a25.
+  Own bounded live-ledger growth: retain the whole committed0239 entry with exact source interval,
+  public retrieval and predecessor-byte proof before appending0241; fixed caps remain unchanged.
+  Also retain the whole committed .a24 scope/proof before the aggregate task collection grows;
+  keep its ID/status/path ownership live and verify public bytes/source interval under the same cap.
+
+- [x] REPRODUCE / ISSUE: python_archive_client_contract.py --before runs the actual768aebe retained()
+  body against a valid packed copy with raw303/304/208 absent; its source plan refuses before any child,
+  rc=0. Current raw paths exist; this isolates future rollover failure rather than claiming present loss.
+- [x] ROOT CAUSE: the live client declared/read physical records instead of logical archive identities.
+  The public inventory recovers every original byte in the copied packed fixture, rc=0. Initial physical
+  directory fault catches missing required-master declaration; explicit master plus full enumeration fixes it.
+- [x] FIX: retained_plan validates local authority/all backing/entry/profile/reader sources before every
+  child; public reads replace three raw reads. Caller stores/authority/other values survive, Git scope is
+  checkout-bound, no stores or output created. Independent source comparison preserves original Git argv,
+  intervals/order/assertions/result fields and window11 proof, rc=0; native diagnostic bodies unchanged.
+- [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_client_contract.py --real
+  and /usr/bin/python3 equivalent pass eight real packed-reader/Git children, seven physical refusals,
+  three content refusals and seven compiled actual plan/recheck/Git/read/assertion reds, rc=0. Complete
+  source/archive/copied bytes exact and workspace absent. Capture-only mode independently passes0.
+- [x] NO REGRESSION: run_handoff_probes.sh passes original49/17 plus retained proof, rc=0. Publication45,
+  coverage9, glossary310/0 failures and census264 paths/324 checks,76 effect rows/34 groups pass0.
+  Public archive659 logical records/24 working Markdown and155 file paths/74 owners pass0.
+  Ledger11/pointer13 pass0; no Rust/native lifecycle changes.
+- [x] LOCKSTEP: whole0239 ledger retained213 exactly from768aebe; public read/source interval and every
+  predecessor logical/control/payload byte match, master-prefix extension allowed, rc=0. Whole .a24
+  scope/proof retained309 resolves aggregate cap without losing current ID/path ownership. Book/live/MEMORY/
+  owners/frontier synchronized to pending .a25; unchanged caps and400 push cadence. D222 closed. Promotion
+  declined: existing logical retrieval/complete-plan/exact provenance rules. Final staged gate13 green, rc=0.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a26`
   Status: `pending`

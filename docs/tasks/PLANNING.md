@@ -1102,8 +1102,11 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   it as a current check. All three are currently raw and retrievable; no present missing-file failure
   is claimed. A later packing window can retire them while preserving logical records, repeating D219.
   Unlike a frozen capture input, this consumer runs on the current tree and must use the public reader.
-  Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.a25, P2 before window12; prove an isolated packed/missing-path
-  case, use logical reads with complete input plans, retain Git-bound provenance assertions. Open.
+  Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.f.archive-client, P2 prerequisite of .a25 before window12;
+  fixed in0241. Actual old client refuses a valid packed/missing-raw fixture; logical reads with complete
+  backing plans pass eight native children while preserving all original source/window11 assertions.
+  Seven physical/seven compiled body and three content refusals pass on Python3.9/3.14; exact source/
+  archive/fixture bytes and no residue. Closed; no production archive window changed.
 
 - **D219** — publication continuity controls assume physical archive files and a closed task/catalog graph.
   Reproduce: python_publication_fixture_contract.py --continuity raises FileNotFoundError for part298;

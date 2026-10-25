@@ -182,7 +182,7 @@ docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh	delegate	G1-SLICE.5b.4
 docs/tasks/artifacts/glossary/run_glossary_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/glossary/run_glossary_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/handoff/contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
-docs/tasks/artifacts/handoff/d217_probe.py	platform	G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt	Darwin libproc/lsof lifecycle diagnostics and isolated installed-runtime controls; no production checker exemption.
+docs/tasks/artifacts/handoff/d217_probe.py	platform	G1-SLICE.5b.4c.h2.b.p.o.f.archive-client	D217 diagnostics retain prior native scope; D222 logical retained-record client has complete backing/child plans and exact Git provenance.
 docs/tasks/artifacts/handoff/d217_daemon.py	platform	G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt	Private installed-daemon identity/invalidation/containment controls; guarded exclusive copy and owned process teardown.
 docs/tasks/artifacts/handoff/d217_upstream.py	platform	G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt	Pinned source/patch/calibration/package controls; optional external interactive native activation and pin.
 docs/tasks/artifacts/handoff/run_handoff_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
@@ -262,3 +262,4 @@ docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py	profile	G
 docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Copied publication fixture/mutation captures, omission/physical/pure/AST controls and retained-record verification.
 docs/tasks/artifacts/ci_environment/python_publication_builder_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Actual builder/store/output/temporary captures and safe refusal/body controls; no native fault invocation.
 docs/tasks/artifacts/ci_environment/python_map_handoff_fixture_contract.py	output	G1-SLICE.5b.4c.h2.b.p	Actual map/handoff source/output/dispatch captures, readonly checks and isolated refusal controls.
+docs/tasks/artifacts/ci_environment/python_archive_client_contract.py	profile	G1-SLICE.5b.4c.h2.b.p	D222 packed-record reproduction, complete readonly input/child captures, source provenance and physical/body refusal controls.

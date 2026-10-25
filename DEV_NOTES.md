@@ -3,6 +3,33 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — retrieve diagnostic history through its public reader
+
+0241 .f.archive-client closes D222 before the larger .a25 producer group. Original retained()
+declared/read physical303/304/208 although archive rollover may retire those files. A private valid
+packed fixture preserves every byte and removes those raw paths; the actual768aebe client refuses
+its missing physical source before children. Current retained() reads all three logical identities
+through the public archive CLI. Every child revalidates all physical backing files, profile/reader/
+entry sources and local authority; prepared stores and unrelated caller values survive. No stores
+or output are created by this read-only client. Git children exclude ambient repository/config
+overrides. Original Git argv, byte slices, order, whole-record assertions, result fields and window11
+source proof remain exact through an independent source comparison.
+
+The seven physical controls caught an incomplete first plan: a required master replaced by an empty
+directory disappeared from the file enumeration. Declaring the mandatory master explicitly fixes
+that early refusal. Actual input/recheck/Git/read omissions and three provenance assertion omissions
+produce seven independent assertion reds; three same-length content changes require their original
+named refusals. Captured dispatch is separate from native packed-reader execution. Both Python3.9
+and3.14 pass the real eight-child proof with fixture/source/archive bytes exact and no scratch residue.
+The fixture also accepts records already packed by a later production window; current raw paths
+are not dependencies of its reference oracle. No production window was changed or added.
+
+Whole0239 ledger is retained213 before live growth, exactly from768aebe; all earlier archive bytes
+stay unchanged. Final gate exposes task aggregate1500520B over its unchanged1500000B cap; whole
+committed .a24 scope/proof is retained309 with ID/status/path ownership live and exact public source
+interval proof. Book explains the continuity interface and limits. Promotion declined: existing
+logical archive retrieval, complete plans and exact provenance rules already cover this repair.
+
 ## _(2026-10-25 UTC)_ — guard map and handoff fixture boundaries
 
 0240 .a24: map now resolves generator/curated/task/decision inputs and all ten header/log outputs

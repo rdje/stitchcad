@@ -317,7 +317,8 @@ storage too. Committed windows are immutable; corrections use new records.
 The first transition reconstructs all 64 source files exactly before retiring their working copies.
 `bash scripts/history_archive.sh prove-source window1` independently compares every member to its
 named capture commit when that Git object is available; ordinary retrieval does not require it.
-The existing ledger probes read recovered logical records and retain their order, uniqueness,
+The ledger probes and [D217 continuity check](annexes/ledger-fixtures.md#diagnostic-record-continuity)
+read recovered logical records and retain their order, uniqueness,
 coverage, descriptor and pointer checks. Generalizing coverage/pointers to other ledgers remains
 SPINE.19's separate obligation. Content integrity proves neither semantic truth nor physical signoff.
 

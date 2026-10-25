@@ -885,7 +885,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5b.4c.h2.b.p.o.a25` | `pending` | Archive reader/fixtures and D222 before rollover |
+| **next** | `G1-SLICE.5b.4c.h2.b.p.o.a25` | `pending` | Archive reader/fixtures; D222 prerequisite verified |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

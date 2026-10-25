@@ -293,15 +293,43 @@ def calibrate(lib, profile):
     return dict(lifecycles=len(rows), actual_assertion_reds=len(faults), producer_unchanged=True)
 
 
-def retained(profile):
-    archive = ROOT / 'docs/history/stitchcad-devnotes-part303.md'
-    followup = ROOT / 'docs/history/stitchcad-devnotes-part304.md'
-    ledger = ROOT / 'docs/history/stitchcad-changelog-part208.md'
-    tree = 'docs/tasks/G1-SLICE-producers.md'
-    profile['plan_producer'](ROOT, sources=(Path(__file__), PROFILE_SOURCE, archive, followup, ledger,
-                                          ROOT / 'scripts/history_archive.sh',
-                                          ROOT / 'scripts/history_archive.py'))
+def retained_plan(profile):
+    """Validate every physical backing input; a logical record need not be a raw file."""
+    authority = Path(os.environ.get('HISTORY_ARCHIVE_ROOT') or str(ROOT))
+    if not authority.is_absolute():
+        authority = ROOT / authority
+    profile['producer_path'](ROOT, authority)
+    profile['workspace'](authority)
+    sources = [Path(__file__), PROFILE_SOURCE, ROOT / 'scripts/history_archive.sh',
+               ROOT / 'scripts/history_archive.py', authority / '.doctrine/history_archive/windows.json']
+    folders = [authority / '.doctrine/history_archive', authority / 'docs/history']
+    for folder in folders:
+        profile['directory'](ROOT, profile['producer_path'](ROOT, folder))
+        for path in sorted(folder.iterdir()):
+            profile['require'](not path.is_symlink(), 'symlink retained archive input')
+            if path.is_dir():
+                folders.append(path)
+            elif path not in sources:
+                sources.append(path)
+    profile['plan_producer'](ROOT, sources=tuple(sources))
     environment = profile['environment_for'](ROOT, dict(os.environ), create=False)
+    environment = {name: value for name, value in environment.items() if not name.startswith('GIT_')}
+    environment.update(HISTORY_ARCHIVE_ROOT=str(authority), GIT_CONFIG_NOSYSTEM='1',
+                       GIT_CONFIG_GLOBAL=os.devnull, GIT_OPTIONAL_LOCKS='0',
+                       GIT_LITERAL_PATHSPECS='1', GIT_TERMINAL_PROMPT='0')
+    return tuple(sources), environment
+
+
+def retained(profile):
+    logical = []
+    for record in ('docs/history/stitchcad-devnotes-part303.md',
+                   'docs/history/stitchcad-devnotes-part304.md',
+                   'docs/history/stitchcad-changelog-part208.md'):
+        environment = retained_plan(profile)[1]
+        logical.append(subprocess.check_output(['bash', 'scripts/history_archive.sh', 'read', record],
+                                               cwd=ROOT, env=environment))
+    tree = 'docs/tasks/G1-SLICE-producers.md'
+    environment = retained_plan(profile)[1]
     original = subprocess.check_output(['git', 'show', 'cdc6a77:' + tree], cwd=ROOT, env=environment)
     leaves = ('G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.fix', 'G1-SLICE.5b.4c.h2.b.p.o.a01.2',
               'G1-SLICE.5b.4c.h2.b.p.v.b1', 'G1-SLICE.5b.4c.h2.b.p.o.f.i',
@@ -311,25 +339,29 @@ def retained(profile):
         start = original.index(('- ID: `' + leaf + '`').encode())
         end = original.find(b'\n- ID: ', start)
         records.append(original[start:end if end >= 0 else len(original)].rstrip(b'\n') + b'\n')
-    body = archive.read_bytes().split(b'\n---\n\n', 1)[1]
+    body = logical[0].split(b'\n---\n\n', 1)[1]
     assert body == b'\n'.join(records), 'whole committed task records differ'
+    environment = retained_plan(profile)[1]
     notes = subprocess.check_output(['git', 'show', 'ccc2a66:DEV_NOTES.md'], cwd=ROOT, env=environment)
     first = notes.index('## _(2026-10-25 UTC)_ — D217 needs causal discrimination'.encode())
     last = notes.index('## _(2026-10-24 UTC)_ — transport admission'.encode(), first)
+    environment = retained_plan(profile)[1]
     old_tree = subprocess.check_output(['git', 'show', 'ccc2a66:' + tree], cwd=ROOT, env=environment)
     start = old_tree.index(b'- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt`')
     end = old_tree.index(b'\n- ID: ', start)
     expected = notes[first:last].rstrip(b'\n') + b'\n\n' + old_tree[start:end].rstrip(b'\n') + b'\n'
-    retained_followup = followup.read_bytes().split(b'\n---\n\n', 1)[1]
+    retained_followup = logical[1].split(b'\n---\n\n', 1)[1]
     assert retained_followup == expected, 'whole prior diagnostic records differ'
+    environment = retained_plan(profile)[1]
     changelog = subprocess.check_output(['git', 'show', 'ccc2a66:CHANGELOG.md'], cwd=ROOT, env=environment)
     whole_ledgers = []
     for unit in ('0234v', '0234', '0233', '0232', '0231', '0230', '0229', '0228'):
         start = re.search(rb'^## STITCHCAD-G1-' + unit.encode() + ' —'.encode(), changelog, re.M)
         end = re.search(rb'^(?:## |\|)', changelog[start.end():], re.M)
         whole_ledgers.append(changelog[start.start():start.end() + end.start()].rstrip(b'\n') + b'\n')
-    retained_ledgers = ledger.read_bytes().split(b'\n---\n\n', 1)[1]
+    retained_ledgers = logical[2].split(b'\n---\n\n', 1)[1]
     assert retained_ledgers == b'\n'.join(whole_ledgers), 'whole prior continuity ledgers differ'
+    environment = retained_plan(profile)[1]
     subprocess.run(['bash', 'scripts/history_archive.sh', 'prove-source', 'window11'],
                    cwd=ROOT, env=environment, capture_output=True, check=True)
     return dict(complete_source_intervals=len(records), bytes=len(body), exact=True,

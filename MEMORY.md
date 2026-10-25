@@ -4,7 +4,7 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- PNT frontier: G1-SLICE.5b.4c.h2.b.p.o.a25 — archive readers/fixtures and D222.
-- Next: inspect .a25 sources; prove/fix D222's raw-path dependency before window12.
+- PNT frontier: G1-SLICE.5b.4c.h2.b.p.o.a25 — archive readers/fixtures; D222 repaired.
+- Next: split .a25 into bounded producer repairs; complete source/destination plans and public contracts.
 - Owner/evidence: docs/tasks/G1-SLICE-producers.md; D156 in docs/tasks/PLANNING.md.
-- In-flight uncommitted: none after the 0240 workflow; no owned jobs remain.
+- In-flight uncommitted: none after the0241 workflow; no owned jobs remain.
