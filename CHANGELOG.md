@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0233 — recheck blocked cleanup and stop
+
+.f.cleanup4: OS-visible census still refuses2 on PID8048/FD10. Real control passes49 fixtures/
+17 actual faults, then exits1 at its refused baseline; held-file/restored proof remains unavailable.
+Cleanup stays blocked; no plan/apply or deletion, cadence unchanged. Resume after external runtime restart.
+
 ## STITCHCAD-G1-0232 — identify unavailable lsof descriptor metadata
 
 .f.cleanup4.fix: distinguish optional missing type metadata from malformed framing; include PID/FD

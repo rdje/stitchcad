@@ -770,6 +770,7 @@ Whole0210 task/lesson retained in [part278](../history/stitchcad-devnotes-part27
   Acceptance: fresh reviewed plan after drift; OS-visible handoff OK; apply; immediate read-only
   residue/tracked-byte proof before activation; rebuild book/native/WASM; cleanup/publication/
   continuity controls; terminal receipts/commit. No deletion occurred; never exempt unknown handles.
+  0233: DEV_NOTES.md; promotion: declined (same D217).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.r`
   Status: `done`

@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — cleanup recheck still needs external runtime recovery
+
+0233 cleanup4: requested OS-visible bash scripts/check_handoff.sh --idle-cua still returns2 for
+PID8048/FD10, type unavailable with the exact revoked marker. python3 -I -B
+docs/tasks/artifacts/handoff/contract.py --real passes49 fixtures/17 actual assertion reds,
+then exits1 at the same refused baseline before creating its holder. No new diagnosis or exemption;
+no fresh plan/apply, deletion or cadence advance. Cleanup4 remains blocked; finish it and stop after
+external runtime restart and complete clear/held-file/restored evidence. Promotion declined: same D217
+blocker and existing recovery procedure. Receipts in target/artifact_cleanup_audit/startup-20261024/:
+recheck-20261025-handoff.log and recheck-20261025-0953-real.log. Recheck complete; cleanup blocked.
+
 ## _(2026-10-25 UTC)_ — unavailable lsof metadata needs an actionable refusal
 
 0232 cleanup4.fix: installed lsof's field-output manual permits unavailable fields to be omitted.
