@@ -3,6 +3,35 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — guard publication rendering and temporary authority
+
+0239 .a23.3.2: original build forwarded ambient stores directly to mdBook; main also owned
+temporary creation/deletion and two writes outside its copied-fixture guards. The builder now
+closes current configuration/source inputs, inspects existing public output and tracked membership,
+and renders into an exclusive planned target/scratch root. Generated files are enumerated before
+public replacement; warning/status/input/chapter failures retain previous public bytes. mdBook
+argv/cwd and docs/book/book stay unchanged. Source creation is disabled in the child configuration.
+
+Incoming mdBook path/command overrides and unsupported config/theme/include inputs refuse. Git
+context is bound to this checkout in child environments; parent Git/caller/store values survive.
+Fixture roots resolve their copied population before creation and recheck complete teardown files.
+Both direct main writes require mutable-file authority. Pure APIs retain their original AST.
+The first-effect probe also caught missing main reader planning; complete status/roadmap/task/Rust
+inputs are now validated, including the status-map read before it is opened.
+
+Captured children verify authority without native fault execution; real mdBook retains original45
+cases and malformed-generic repair. Mode-specific controls cover physical/source/output/device,
+controlled index failures, exceptional cleanup and actual compiled guard omissions. A store fault
+initially also removed Git context filtering; isolating it preserves independent assertion reasons.
+The shape control caught an overstrict file/directory transition; complete owned-tree replacement
+now accepts it. Directory snapshots catch empty-source additions; body OSErrors preserve their origin.
+An overlapped renderer/source-copy attempt refused a moving input and is excluded; final controls
+ran against stable rendered output. Python3.9 passes19 compiled guard reds,18 physical and two index
+refusals; real native45/fixture40/ledger11+13/coverage9/glossary/producer census pass0.
+Completed predecessor scopes and oldest activation ledger are exact8e497de intervals in307/211;
+all node IDs/path owners remain live. Publication details now have a bounded book annex.
+Promotion declined: established complete plans, closed child context and guarded fixture rules.
+
 ## _(2026-10-25 UTC)_ — retrieve publication history through its public reader
 
 0238 .f.publication repairs D219: the fixture continuity check assumed raw archive files and

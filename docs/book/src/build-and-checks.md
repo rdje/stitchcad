@@ -133,10 +133,8 @@ files. Parent escapes, symlinks, Git boundaries, foreign volumes, invalid types/
 with local-environment exit2 before children. Named toolchains/unrelated variables remain;
 paths derive from the current root.
 
-Publication fixtures plan/recheck inputs and outputs;40 mutations declare mutable files. Caller
-stores/source bytes stay exact; check/rows/formula_scope stay pure. Continuity uses public logical
-reads and exact predecessor bytes/order across rollover. Public45 cases pass; builder/main and
-docs/book/book authority remain .a23.3.2; D156 stays open.
+[Publication checks](annexes/publication-checks.md) guard renderer inputs, private output, public
+replacement and fixture lifecycles. Pure APIs and caller stores remain exact; D156 stays open.
 
 Size membership additionally declares all seven numbered mutation logs and restored.log before
 reading inputs. Its implementation is an explicit mutable source; its current contract test is a

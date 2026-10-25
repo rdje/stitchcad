@@ -4,7 +4,7 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- PNT resumes G1-SLICE.5b.4c.h2.b.p.o.a23.3.2: publication builder/main authority.
-- Next: implement builder source/public-output/temp lifecycle guards after D219 repair .f.publication.
-- Owner/evidence: docs/tasks/G1-SLICE-producers.md; D219 in docs/tasks/PLANNING.md.
-- In-flight uncommitted: none after the 0238 workflow; no owned jobs remain.
+- PNT frontier: G1-SLICE.5b.4c.h2.b.p.o.a24 — map and handoff fixtures.
+- Next: inspect complete .a24 producers/public interfaces, then repair their plans and run focused proof.
+- Owner/evidence: docs/tasks/G1-SLICE-producers.md; D156 in docs/tasks/PLANNING.md.
+- In-flight uncommitted: none after the 0239 workflow; no owned jobs remain.

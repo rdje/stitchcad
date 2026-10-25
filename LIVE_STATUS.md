@@ -16,7 +16,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
 | Defect census | In Progress | 12 open, 203 sealed; D217–D219 verified live closures. D219 publication continuity repaired; D156 producer repair active. Owners: docs/tasks/PLANNING.md |
 | G0 — product & semantic contract | Mostly Done | Every clause met and derived except evaluation-seat procurement, accepted open by ruling; closure **unapproved** (governance §6.1). `run_g0_exit_review.sh` → `18 met / 1 not met` |
-| G1 — executable architecture slice | In Progress | 5/18 top-level leaves done. Formula proofs verified. Roadmap v0.4 admits MCP profiles by evidence; implementations pending. Cleanup/rebuild and D217 repair verified. Runtime/geometry/profile/release and D70 pending |
+| G1 — executable architecture slice | In Progress | 5/18 top-level leaves done. Formula proofs verified; publication builder guarded. D156 producer audit continues. Roadmap v0.4 MCP implementations and runtime/geometry/profile/release/D70 pending |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 leaves; CSP + oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |

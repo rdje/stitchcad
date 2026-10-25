@@ -885,7 +885,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5b.4c.h2.b.p.o.a23.3.2` | `pending` | Builder/main authority after D219 continuity repair |
+| **next** | `G1-SLICE.5b.4c.h2.b.p.o.a24` | `pending` | Map/handoff fixture authority after publication builder |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

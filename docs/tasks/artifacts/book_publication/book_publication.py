@@ -7,14 +7,17 @@ Copied-fixture mutations prove the named refusals. No tracked source or other Gi
 from __future__ import annotations
 
 import csv
+from contextlib import contextmanager
+import hashlib
 from html.parser import HTMLParser
+import json
 import os
 from pathlib import Path
 import re
 import runpy
 import shutil
 import subprocess
-import tempfile
+import uuid
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -207,17 +210,144 @@ def mutation_target(root, name):
     return root / paths[name]
 
 
+@contextmanager
+def temporary_root(*, prefix, dir, fixture_root=None):
+    """Choose and validate an exclusive owned root before creation; inspect all teardown files."""
+    destination = Path(dir).absolute() / (prefix + uuid.uuid4().hex)
+    try:
+        PROFILE["plan_producer"](ROOT, sources=CORE, directories=(destination.parent, destination))
+        require(not destination.exists(), "FIXTURE_AUTHORITY", "temporary root already exists")
+        if fixture_root is not None:
+            fixture_plan(fixture_root, destination)
+        environment = PROFILE["environment_for"](ROOT, os.environ)
+        os.environ.update(environment)
+        PROFILE["directory"](ROOT, PROFILE["producer_path"](ROOT, destination.parent), create=True)
+        destination.mkdir()
+    except (PROFILE["Refusal"], OSError) as error:
+        raise PublicationError("FIXTURE_AUTHORITY: " + str(error)) from None
+    try:
+        yield destination
+    finally:
+        try:
+            folders, files = source_tree(destination)
+            PROFILE["plan_producer"](ROOT, sources=(*CORE, *files), directories=folders,
+                                     output_files=files)
+            shutil.rmtree(destination)
+        except (PROFILE["Refusal"], OSError) as error:
+            raise PublicationError("FIXTURE_AUTHORITY: " + str(error)) from None
+
+
+def build_inputs(root):
+    """Close the supported renderer input/configuration surface without activating stores."""
+    root = Path(root).absolute()
+    PROFILE["producer_path"](ROOT, root)
+    PROFILE["workspace"](root)
+    config = root / "docs/book/book.toml"
+    PROFILE["plan_producer"](ROOT, sources=(*CORE, config))
+    # The current public configuration has metadata and one built-in HTML renderer. New path or
+    # command options need their own input/delegation plan before this boundary can accept them.
+    section, seen = None, set()
+    fields = {"book": {"title", "description", "authors", "language", "src"},
+              "output.html": {"default-theme", "git-repository-url"}}
+    for line in config.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line in ("[book]", "[output.html]"):
+            section = line[1:-1]
+            require(section not in seen, "BOOK_AUTHORITY", "duplicate configuration section")
+            seen.add(section)
+            continue
+        field, separator, value = line.partition("=")
+        field = field.strip()
+        require(separator and field in fields.get(section, ()), "BOOK_AUTHORITY", "unplanned book configuration")
+        try:
+            value = json.loads(value.strip())
+        except ValueError:
+            raise PublicationError("BOOK_AUTHORITY: unsupported configuration value") from None
+        require((isinstance(value, list) and all(isinstance(item, str) for item in value)) if field == "authors"
+                else isinstance(value, str), "BOOK_AUTHORITY", "invalid book metadata type")
+        if field == "src":
+            require(value == "src", "BOOK_AUTHORITY", "unplanned source directory")
+    require(seen == set(fields), "BOOK_AUTHORITY", "missing book/HTML configuration")
+    require(not any(key.upper().startswith("MDBOOK_") and key != "MDBOOK_LOG" for key in os.environ),
+            "BOOK_AUTHORITY", "unplanned mdBook environment override")
+    theme = root / "docs/book/theme"
+    require(not theme.exists() and not theme.is_symlink(), "BOOK_AUTHORITY", "unplanned theme inputs")
+    folders, files = source_tree(root / SOURCE)
+    PROFILE["plan_producer"](ROOT, sources=(*CORE, config, *files))
+    for file in files:
+        if file.suffix == ".md":
+            require("{{#" not in file.read_text(), "BOOK_AUTHORITY", "unplanned preprocessor input")
+    for chapter in chapters((root / SOURCE / "SUMMARY.md").read_text()):
+        PROFILE["producer_path"](ROOT, root / SOURCE / chapter)
+        require(root / SOURCE / chapter in files, "BOOK_AUTHORITY", "unplanned or missing summary chapter")
+    return folders, (config, *files)
+
+
+def publication_environment(*, create=False):
+    """Keep stores/caller variables while binding child Git observations to this checkout."""
+    environment = {key: value for key, value in PROFILE["environment_for"](ROOT, os.environ, create=create).items()
+                   if not key.upper().startswith("GIT_")}
+    environment.update(GIT_CONFIG_NOSYSTEM="1", GIT_CONFIG_GLOBAL=os.devnull, GIT_OPTIONAL_LOCKS="0",
+                       GIT_LITERAL_PATHSPECS="1", GIT_TERMINAL_PROMPT="0")
+    return environment
+
+
+def publication_plan(root, stage=None):
+    """The sole public-output exception: inspect the entire exact docs/book/book tree."""
+    output = root / HTML
+    PROFILE["directory"](ROOT, PROFILE["producer_path"](ROOT, output), missing_ok=True)
+    folders, files = source_tree(output) if output.exists() else ((), ())
+    PROFILE["plan_producer"](ROOT, sources=(*CORE, *files), mutable_sources=files)
+    tracked = subprocess.check_output(["git", "ls-files", "-z", "--", PROFILE["producer_path"](ROOT, output)],
+                                      cwd=ROOT, env=publication_environment())
+    require(not tracked, "BOOK_AUTHORITY", "public output contains tracked data")
+    if stage is not None:
+        generated_dirs, generated_files = source_tree(stage)
+        PROFILE["plan_producer"](ROOT, sources=(*CORE, *generated_files), output_files=generated_files)
+        required = {stage / Path(chapter).with_suffix(".html")
+                    for chapter in chapters((root / SOURCE / "SUMMARY.md").read_text())}
+        require(required <= set(generated_files), "BOOK_BUILD", "renderer omitted a summary chapter")
+        owned = {*folders, *files}
+        for path in (*generated_dirs, *generated_files):
+            target = output / path.relative_to(stage)
+            PROFILE["producer_path"](ROOT, target)
+            # The old tree is replaced in full: an owned file may become a directory or vice versa.
+            require(not target.is_symlink() and (not target.exists() or target in owned),
+                    "BOOK_AUTHORITY", "unsafe generated publication destination")
+    return folders, files
+
+
 def build(root):
-    """Capture the actual builder; source/link topology cannot certify warning-bearing output."""
-    environment = dict(os.environ, MDBOOK_LOG="warn", RUST_LOG="warn")
-    result = subprocess.run(["mdbook", "build", "docs/book"], cwd=root, env=environment,
-                            capture_output=True, text=True)
-    diagnostic = result.stdout + result.stderr
-    require(result.returncode == 0, "BOOK_BUILD", diagnostic.strip())
-    plain = re.sub(r"\x1b\[[0-9;]*m", "", diagnostic)
-    warnings = re.findall(r"(?m)^\s*WARN\b.*$", plain)
-    require(not warnings, "BOOK_BUILD_WARNING", "\n".join(warnings))
-    return diagnostic
+    """Render privately, enumerate dynamic output, then publish to the existing public destination."""
+    try:
+        root = Path(root).absolute()
+        input_dirs, inputs = build_inputs(root)
+        identities = {file: hashlib.sha256(file.read_bytes()).digest() for file in inputs}
+        publication_plan(root)
+        with temporary_root(prefix="book-builder-", dir=ROOT / "target/scratch") as stage:
+            build_inputs(root)
+            publication_plan(root)
+            environment = dict(publication_environment(create=True), MDBOOK_LOG="warn", RUST_LOG="warn",
+                               MDBOOK_BUILD__BUILD_DIR=json.dumps(str(stage)), MDBOOK_BUILD__CREATE_MISSING="false")
+            result = subprocess.run(["mdbook", "build", "docs/book"], cwd=root, env=environment,
+                                    capture_output=True, text=True)
+            diagnostic = result.stdout + result.stderr
+            require(result.returncode == 0, "BOOK_BUILD", diagnostic.strip())
+            plain = re.sub(r"\x1b\[[0-9;]*m", "", diagnostic)
+            warnings = re.findall(r"(?m)^\s*WARN\b.*$", plain)
+            require(not warnings, "BOOK_BUILD_WARNING", "\n".join(warnings))
+            require(build_inputs(root) == (input_dirs, inputs) and all(hashlib.sha256(file.read_bytes()).digest() == digest
+                    for file, digest in identities.items()), "BOOK_AUTHORITY", "builder changed publication inputs")
+            publication_plan(root, stage)
+            if (root / HTML).exists():
+                shutil.rmtree(root / HTML)
+            publication_plan(root, stage)
+            shutil.copytree(stage, root / HTML)
+        return diagnostic
+    except (PROFILE["Refusal"], OSError, UnicodeError, subprocess.SubprocessError) as error:
+        raise PublicationError("BOOK_AUTHORITY: " + str(error)) from None
 
 
 def markdown_links(text):
@@ -463,7 +593,27 @@ def mutate(root, name):
         raise PublicationError(f"unknown fixture mutation: {name}")
 
 
+def main_inputs(root):
+    """Validate every non-rendered reader input before main's first producing call."""
+    try:
+        root = Path(root).absolute()
+        PROFILE["workspace"](root)
+        PROFILE["plan_producer"](ROOT, sources=(*CORE, root / MAP))
+        current_rows = rows(root)
+        require(all(len(row) == 6 for row in current_rows), "BOOK_AUTHORITY", "invalid status row")
+        _, source_files = source_tree(root / SOURCE)
+        PROFILE["directory"](ROOT, PROFILE["producer_path"](ROOT, root / "docs/tasks"))
+        inputs = {*CORE, root / MAP, root / "ROADMAP.md", root / "docs/book/book.toml", *source_files,
+                  *(root / "docs/tasks").glob("*.md"), root / "crates/sc-core/tests/formula_statement_contract.rs",
+                  *(root / row[2] for row in current_rows),
+                  *(root / "crates/sc-core/src/recipe" / file for file in FORMULA_METHODS)}
+        PROFILE["plan_producer"](ROOT, sources=tuple(sorted(inputs)))
+    except (PROFILE["Refusal"], OSError, UnicodeError, csv.Error) as error:
+        raise PublicationError("BOOK_AUTHORITY: " + str(error)) from None
+
+
 def main():
+    main_inputs(ROOT)
     diagnostic = build(ROOT)
     if diagnostic:
         print(diagnostic, end="" if diagnostic.endswith("\n") else "\n")
@@ -490,9 +640,8 @@ def main():
     cases["stale statement contract count"] = "FORMULA_COUNT"
     cases["missing statement contract marker"] = "FORMULA_COUNT"
     scratch = ROOT / "target/scratch"
-    scratch.mkdir(parents=True, exist_ok=True)
     for name, expected in cases.items():
-        with tempfile.TemporaryDirectory(prefix="book-publication-", dir=scratch) as directory:
+        with temporary_root(prefix="book-publication-", dir=scratch, fixture_root=ROOT) as directory:
             root = Path(directory)
             fixture(ROOT, root)
             mutate(root, name)
@@ -503,7 +652,7 @@ def main():
             else:
                 raise PublicationError(f"MISSING_REFUSAL: {name}")
         print(f"  verified refusal: {name} ({expected})")
-    with tempfile.TemporaryDirectory(prefix="formula-currency-", dir=scratch) as directory:
+    with temporary_root(prefix="formula-currency-", dir=scratch, fixture_root=ROOT) as directory:
         root = Path(directory)
         fixture(ROOT, root)
         chapter = root / SOURCE / "annexes/formula-declarations.md"
@@ -526,10 +675,11 @@ def main():
     print("  formula currency: reworded positive / actual compiled guard-omission assertion red")
     # D175's independent stale sentence is deliberately outside the map-driven case population.
     # Removing its catalog entry must still fail this control, including when placed after the intro.
-    with tempfile.TemporaryDirectory(prefix="static-currency-", dir=scratch) as directory:
+    with temporary_root(prefix="static-currency-", dir=scratch, fixture_root=ROOT) as directory:
         root = Path(directory)
         fixture(ROOT, root)
         chapter = root / SOURCE / "annexes/formula-static-validation.md"
+        mutation_plan(chapter, activate=True)
         chapter.write_text(chapter.read_text() + "\nComplete checking: complete static graph remains .5b.4.\n")
         currency_refusal(check, root)
         body = Path(__file__).read_text()
@@ -544,11 +694,12 @@ def main():
         else:
             raise PublicationError("BODY_CONTROL: actual static-scope omission escaped no assertion")
     print("  static currency: independent later-section claim / actual compiled catalog-omission assertion red")
-    with tempfile.TemporaryDirectory(prefix="book-warning-", dir=scratch) as directory:
+    with temporary_root(prefix="book-warning-", dir=scratch, fixture_root=ROOT) as directory:
         root = Path(directory)
         fixture(ROOT, root)
         chapter = root / SOURCE / "introduction.md"
         marker = "\nPublication control: Checked<UnclosedType>\n"
+        mutation_plan(chapter, activate=True)
         chapter.write_text(chapter.read_text() + marker)
         try:
             build(root)

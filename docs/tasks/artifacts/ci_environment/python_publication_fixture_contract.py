@@ -376,14 +376,24 @@ def borrowed_controls(root):
 
 def original_body_controls():
     old, current = ast.parse(OLD), ast.parse(ENTRY.read_text())
-    added = {'load_profile', 'source_tree', 'fixture_plan', 'fixture_effect', 'mutation_plan', 'mutation_target'}
+    added = {'load_profile', 'source_tree', 'fixture_plan', 'fixture_effect', 'mutation_plan', 'mutation_target',
+             'temporary_root', 'build_inputs', 'publication_environment', 'publication_plan', 'build', 'main_inputs'}
 
     class Project(ast.NodeTransformer):
         def visit_FunctionDef(self, node):
             return None if node.name in added else self.generic_visit(node)
 
         def visit_Import(self, node):
-            return None if [name.name for name in node.names] == ['runpy'] else node
+            return None if len(node.names) == 1 and node.names[0].name in {'runpy', 'hashlib', 'json', 'uuid', 'tempfile'} else node
+
+        def visit_ImportFrom(self, node):
+            return None if node.module == 'contextlib' else node
+
+        def visit_Call(self, node):
+            if isinstance(node.func, ast.Name) and node.func.id == 'temporary_root':
+                node.func = ast.Attribute(value=ast.Name(id='tempfile', ctx=ast.Load()), attr='TemporaryDirectory', ctx=ast.Load())
+                node.keywords = [keyword for keyword in node.keywords if keyword.arg != 'fixture_root']
+            return self.generic_visit(node)
 
         def visit_Assign(self, node):
             if any(isinstance(target, ast.Name) and target.id in {'PROFILE_SOURCE', 'PROFILE', 'CORE', 'plan', 'selected', 'current_dirs', 'current_files'} for target in node.targets):
@@ -394,8 +404,12 @@ def original_body_controls():
             return self.generic_visit(node)
 
         def visit_Expr(self, node):
+            if (isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Attribute) and
+                    isinstance(node.value.func.value, ast.Name) and node.value.func.value.id == 'scratch' and
+                    node.value.func.attr == 'mkdir'):
+                return None
             if isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name):
-                if node.value.func.id in {'fixture_effect', 'mutation_plan'}:
+                if node.value.func.id in {'fixture_effect', 'mutation_plan', 'main_inputs'}:
                     return None
                 if node.value.func.id == 'require' and len(node.value.args) > 1 and isinstance(node.value.args[1], ast.Constant) and node.value.args[1].value == 'FIXTURE_AUTHORITY':
                     return None
@@ -407,8 +421,8 @@ def original_body_controls():
                 return ast.Call(func=ast.Name(id='rows', ctx=ast.Load()), args=[ast.Name(id='root', ctx=ast.Load())], keywords=[])
             return self.generic_visit(node)
 
-    assert ast.dump(Project().visit(current), include_attributes=False) == ast.dump(old, include_attributes=False), 'publication original whole AST changed'
-    print('publication original AST: all pure/copier/mutation/builder/main bodies exact through declared guards/path normalization/row reuse')
+    assert ast.dump(Project().visit(current), include_attributes=False) == ast.dump(Project().visit(old), include_attributes=False), 'publication original whole AST changed'
+    print('publication original AST: pure/copier/mutation/main semantics exact through declared guards/owned temporary context; builder separately captured')
 
 
 def continuity_controls(*, observe=None):
@@ -433,6 +447,7 @@ def continuity_controls(*, observe=None):
                                           'stitchcad-devnotes-part299.md')]
     captures += [(name, boundary) for name in ('stitchcad-devnotes-part305.md', 'stitchcad-changelog-part210.md',
                                              'stitchcad-devnotes-part306.md')]
+    captures += [(name, '8e497de58f772a74c4d5e62c4489ced1569e83df') for name in ("stitchcad-devnotes-part307.md", "stitchcad-changelog-part211.md")]
     for name, revision in captures:
         path = 'docs/history/' + name
         data = read(path); header, body = data.split(b'\n---\n\n', 1)
