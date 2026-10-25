@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0256 — correctly rounded hypot value kernel
+## STITCHCAD-G1-0257 — certified bounded arc plan and approved UI requirements
 
-.5d.2.2: exact signed-length squared sum, reviewed root kernel and final rounded scalar check.
-Focused native4/0 consumes all25 root rows. Source provenance/broad proofs and transcendental plans remain owned.
+.5d.1.2.1:640-bit pi/Farey certificate excludes all admitted arc rounding midpoints; two exact identities
+and independent arithmetic checks pass. Director UI baseline/quality/full-agent control adopted; map fits fixed cap.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -402,3 +402,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part227](docs/history/stitchcad-changelog-part227.md) | whole0254 | 4 lines, 274 bytes, sha256:df952d81… |
 
 | [part228](docs/history/stitchcad-changelog-part228.md) | whole0255 | 4 lines, 279 bytes, sha256:81ffba1f… |
+
+| [part229](docs/history/stitchcad-changelog-part229.md) | whole0256 | 4 lines, 272 bytes, sha256:1eea24fc… |

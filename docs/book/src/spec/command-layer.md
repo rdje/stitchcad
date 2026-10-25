@@ -263,6 +263,58 @@ and workflow parity also need separate tests. Assess these candidates before dec
 StitchCAD needs an HTTP listener. Every selected profile needs the admission evidence in §7.1;
 the roadmap no longer delays a ready profile until G5 because of its transport.
 
+### UI surfaces and presentation quality
+
+The director's DBIQNP discussion on2026-10-25 confirms the quality bar for every selected platform:
+sleek, smooth, beautiful, efficient, engaging and precise, state-of-the-art and production-grade.
+These are future acceptance requirements; no StitchCAD application UI is implemented yet.
+
+The roadmap already plans a full native application on Windows/macOS/Linux and a WASM web app.
+ADR-0002 recommends Tauri with TypeScript/React chrome and a shared Rust domain core; the canvas
+hosting topology remains subject to G1's realistic native/browser spike. G5 owns the complete2D
+product UX. V1 adds staged3D assembly views. The web profile has an explicit capability matrix;
+quality must hold within each admitted profile, with required workflows visibly routed to an
+appropriate product surface when a host cannot support them.
+
+Current host documentation shows richer options than text-only tools. OpenAI documents interactive
+[iframe web components](https://developers.openai.com/plugins/build/app-quickstart) and
+[fullscreen editing canvases](https://developers.openai.com/plugins/build/chatgpt-ui). Anthropic
+provides [sandboxed interactive connectors](https://support.claude.com/en/articles/13454812-use-interactive-connectors-in-claude)
+and lists a [Three.js3D viewer](https://claude.com/marketplace/connectors/threejs-3d-viewer).
+These reviewed examples establish interactive host surfaces. StitchCAD's renderer, GPU access,
+input/focus behavior, persistence, large-project performance and full workflow parity still need
+per-host evidence; a generic3D demo does not establish those product capabilities.
+
+The director accepted this direction on2026-10-25: a full standalone StitchCAD interface is the product baseline,
+with chat integrations sharing its core, commands, revisions and authority. Embedded previews and
+controls can provide another access path. Host restrictions should lead to a documented fallback
+or opening the complete product view, while the shared command API retains supported operations.
+The adopted decision at docs/decisions/decision_stitchcad-ui-baseline-and-quality.md records
+the baseline and quality bar. Stack/canvas selection and host admission remain with their existing
+spikes; the implementation frontier is unchanged.
+
+Translate the quality bar into observable design and interaction criteria:
+
+- A coherent visual system: typography, spacing, hierarchy, color, legible units and accessible states.
+- Smooth pan/zoom, picking and3D camera movement, with interaction latency/frame pacing measured on
+  representative projects and declared hardware; clear progress/cancellation for expensive work.
+- Efficient keyboard/direct manipulation, predictable selection/snapping, undo/redo and recovery.
+- Precise coordinates, dimensions, tolerances and feedback; rendering precision demonstrated at
+  intended working scales, with visually clear previews and committed state.
+- Engaging, calm workflows with useful progressive disclosure and polished loading/error/empty states.
+
+The director also makes full AI coding-agent control critical across desktop, web and2D/3D graphics.
+Include view/camera/pan/zoom, picking/selection, layers/overlays, tool modes, measurement/editing,
+files/export, undo/redo and recovery. Agents must inspect document and presentation state, identify
+objects/views, discover valid actions and verify completion, diagnostics and visual/artifact results.
+Typed API/MCP/client control adapters must cover supported workflows; expose presentation controls
+alongside shared domain commands. A supported operation left reachable only through an unexposed GUI
+action does not satisfy this bar. Existing authority/revision/approval contracts still apply.
+
+G1-SLICE.9.plugin retains this direction; G1.9/.13/G5/V1 own full control contracts, state visibility
+and applicable end-to-end UI-agent workflow parity on each admitted surface.
+No UI implementation or extra broad verification is started by this DBIQNP note.
+
 ## 9. Diagnostics
 
 | Token | Raised when | Required arguments |

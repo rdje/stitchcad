@@ -678,6 +678,27 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   authority; human-only approval. .9 discovery; G5 host UI, conflict/recovery and parity tests.
   Host options/sources: docs/book/src/spec/command-layer.md#host-connection-options-under-review.
   Local/HTTP/bridge profiles follow §7.8/§10 admission evidence from G1, with host UI proof at G5.
+  Director DBIQNP2026-10-25: all chosen UI surfaces shall be sleek, smooth, beautiful, efficient,
+  engaging and precise, state-of-the-art and production-grade. Treat as observable acceptance:
+  coherent visual system, readable units/hierarchy/accessibility, responsive navigation/picking,
+  efficient keyboard/direct manipulation/undo/recovery and explicit precision feedback on realistic
+  project/hardware fixtures. G1.13 validates hosting; G5.3 owns complete 2D UX; V1 owns staged3D.
+  Roadmap already plans Tauri/TypeScript/React native-full and WASM web, with canvas topology open.
+  Director accepted the recommendation2026-10-25: full standalone product UI is the baseline; chat UIs share the core/
+  commands and can add embedded views. Host limits must not silently remove required workflows.
+  Official OpenAI UI pages establish iframe web components/fullscreen canvases; Anthropic lists a
+  Three.js3D connector. These are host examples, not measured StitchCAD GPU/performance/parity.
+  Sources/qualification: docs/book/src/spec/command-layer.md#ui-surfaces-and-presentation-quality.
+  Critical director requirement2026-10-25: desktop, web and2D/3D graphics are fully controllable by
+  AI coding agents. Typed discoverable API/MCP workflows include view/camera/pan/zoom, selection,
+  picking, layers/overlays, tools, measurements/editing, files/export, undo/recovery and result checks.
+  Inspect document plus presentation state and stable object/view identities; observe completion,
+  diagnostics and visual/artifact results. Verify end-to-end agent workflow parity on each admitted
+  surface with declared authority; UI-only unreachable supported operations do not satisfy this bar.
+  G1.9/.13 and G5 own control contracts/state visibility/real UI-agent tests; V1 owns staged3D coverage.
+  Quality/baseline/full-control direction is adopted in decision_stitchcad-ui-baseline-and-quality.md;
+  stack selection, implementation order and numerical frontier remain unchanged.
+
 
 - ID: `G1-SLICE.9.plugin.t1`
   Status: `done`
@@ -812,7 +833,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5d.1.2` | `pending` | Deterministic transcendental algorithm/termination plan |
+| **next** | `G1-SLICE.5d.3.1` | `pending` | Correctly rounded bounded arc_length value kernel |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

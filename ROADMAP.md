@@ -334,9 +334,9 @@ contributor arriving at G1 must inherit a settled license, not a default.
 
 ### ADR-0002 — UI stack and canvas hosting
 
-- Chrome: Tauri + TypeScript/React (recommended; Slint if "zero non-Rust"
-  becomes a hard constraint). Flutter rejected: second language + FFI across
-  the semantic graph, weaker CAD-viewport story.
+- Chrome: Tauri + TypeScript/React recommended; Slint for required zero non-Rust.
+  Flutter rejected: second language, semantic-graph FFI, weaker CAD viewport.
+- Standalone UI quality/full AI control: docs/decisions/decision_stitchcad-ui-baseline-and-quality.md.
 - **Canvas hosting** (the actual decision): three topologies exist — WebGPU
   inside the webview; native wgpu surface composed with HTML chrome; DOM
   canvas. A G1 executable spike (zoom/pan, snapping, picking, annotations on
@@ -344,10 +344,9 @@ contributor arriving at G1 must inherit a settled license, not a default.
   "Custom wgpu, not DOM canvas" is a hypothesis to test, not an axiom
   (coordinate precision is a renderer-design concern, not a DOM property).
 - Business/domain logic in TypeScript: prohibited by convention and CI.
-- An **egui/iced dev shell** is used for Stages 1–4 internal tools (golden
-  diff viewer, uncertainty dashboard prototype, conformance lab) so the
-  engine never blocks on the hardest integration in the repo. The dev shell
-  is explicitly not the shipped product UX.
+- **egui/iced dev shell** for Stages 1–4 internal tools: golden diff viewer,
+  uncertainty dashboard prototype, conformance lab. Core proceeds before
+  canvas integration; it is not the shipped UX.
 
 ### ADR-0003 — Drafting paradigm
 

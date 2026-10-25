@@ -476,9 +476,38 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part327.md).
 
 - ID: `G1-SLICE.5d.1.2`
+  Status: `in_progress`
+  Goal: exact deterministic transcendental algorithms and threshold/resource/license proofs.
+  Acceptance: all .5d.1 obligations before each applicable .5d.3 family; no fixed libm guess.
+  Children: .1 bounded arc_length pi certificate; .2 sin/cos/tan/atan/atan2 interval plan.
+
+- ID: `G1-SLICE.5d.1.2.1`
+  Status: `done`
+  Goal:0257 prove bounded arc_length rounding with a fixed certified pi enclosure before code.
+  Paths: docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py;crates/sc-core/tests/fixtures/pi640_certificate.tsv;knowledge-map/scripts/gen_knowledge_map.sh
+  Own exact Machin/Farey certificate and independent identity/rounding check, numerical decision/book,
+  complete hypot330/229 retention. No production arc or broad campaign; remaining trig/inverse .2.
+  Director DBIQNP approvals are collateral: standalone baseline/quality/critical full AI-agent control
+  retained in UI decision/INDEX/map/roadmap/book/existing .9.plugin; no UI implementation/pivot.
+  Map/roadmap growth blocks the UI record; trim redundant labels/prose, retain requirements.
+  Focused render preserves all destinations/order/path CLI at7836B, rc=0; no schema/limit change.
+
+
+- [x] REPRODUCE / ISSUE:a67f4c3 lacks arc algorithm; new UI map8277B>8192B, source/size rc=0.
+- [x] ROOT CAUSE: bounded half-target denominators allow a finite pi certificate; python3 -I -B
+  docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py proves640 bits/two identities,
+  Farey predicates/stdlib endpoints, rc=0. Map redundancy measured/corrected7836B, rc=0.
+- [x] FIX: certificate/UI record; roadmap below985L/55371B baseline, source check0.
+- [x] ADDRESSED: same certificate CLI reproduces exact artifact, rc=0; map source render/public CLI
+  and every predecessor target/order plus one new UI decision match,7836B, rc=0.
+- [x] NO REGRESSION: same certificate/map identity checks pass0; no product Rust source changed,
+  observed git diff --name-only -- '*.rs' empty, rc=0. Broad .5d.4/pre-push, UI implementation deferred.
+- [x] LOCKSTEP:330/229 whole Git/public records exact, rc=0; book/roadmap/decision/map/pointers align.
+  promotion: numerical decision gains proof; director-approved UI direction has a dedicated decision.
+
+- ID: `G1-SLICE.5d.1.2.2`
   Status: `pending`
-  Goal: exact deterministic transcendental algorithms, threshold termination/resource/license proof.
-  Acceptance: all .5d.1 obligations for sin/cos/tan/atan/atan2/arc_length before .5d.3 code.
+  Goal: exact trig/inverse interval/resource plan before code.
 
 - ID: `G1-SLICE.5d.2`
   Status: `in_progress`
@@ -495,24 +524,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5d.2.2`
   Status: `done`
-  Goal:0256 exact rounded hypot without materializing an area; source provenance .5e.3.
+  Goal: correctly rounded hypot/no materialized area with all25 root rows verified0256.
   Paths: crates/sc-core/src/recipe/roots.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_root_value_contract.rs
-  Own exact signed-length squared sum and reuse reviewed rounded-root helper. Validate actual
-  kinds through existing signatures, then only completed rounded Length domains; no internal area
-  or rational-width refusal. Replay ten retained hypot rows and preserve15 sqrt cases in one
-  affected native target; broad/platform/mutation .5d.4/pre-push. Keep parent open for .5e.3
-  source contribution proof. Retain whole sqrt task/ledger329/228; book/live/pointers before commit.
-
-
-- [x] REPRODUCE / ISSUE:e646da3 has no production hypot; source inspection rc=0.
-- [x] ROOT CAUSE: intermediate Area/width limits can falsely refuse an admitted rounded Length;
-  cargo test --offline -p sc-core --test formula_root_value_contract:4 passed/0 failed, rc=0.
-- [x] FIX: exact squared fractions/root reuse, metadata kinds and rounded-result scalar witnesses.
-- [x] ADDRESSED: same native target consumes ten independent hypot rows/bad-kind cases,4/0, rc=0.
-- [x] NO REGRESSION: same target retains all15 sqrt rows,25 total/4 tests, rc=0; source provenance
-  .5e.3 and broad/platform/mutation .5d.4/pre-push remain open.
-- [x] LOCKSTEP:329/228 whole Git/public records exact, rc=0; book/live/frontier aligned.
-  promotion: numerical decision records hypot value-kernel scope; parent keeps provenance pending.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part330.md); source provenance .5e.3.
 
 - ID: `G1-SLICE.5d.3`
   Status: `pending`
@@ -522,6 +536,16 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   no blanket angle normalization, quantum/source-domain errors or libm-dependent result.
   Split functions into further owned children if this unit exceeds a safe implementation slice.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5d.3.1`
+  Status: `pending`
+  Goal: bounded correctly rounded arc_length from .5d.1.2.1 certificate; no angle modulo.
+- ID: `G1-SLICE.5d.3.2`
+  Status: `pending`
+  Goal: correctly rounded sin/cos/tan under .5d.1.2.2 plan.
+- ID: `G1-SLICE.5d.3.3`
+  Status: `pending`
+  Goal: correctly rounded atan/atan2 under .5d.1.2.2 plan.
+
 - ID: `G1-SLICE.5d.4`
   Status: `pending`
   Goal: coupled complete irrational function proof and error/provenance review.

@@ -41,6 +41,8 @@ echo
 found=0
 for f in $(ls docs/decisions/*.md 2>/dev/null | LC_ALL=C sort); do
   b="$(basename "$f")"; case "$b" in INDEX.md|TEMPLATE.md) continue;; esac
-  echo "- [\`${b%.md}\`](docs/decisions/$b)"; found=1
+  # The section already names decisions; keep the complete filename only in the destination.
+  label="${b%.md}"; label="${label#decision_}"
+  echo "- [\`$label\`](docs/decisions/$b)"; found=1
 done
 if [ "$found" = 0 ]; then echo "- _none yet_"; fi

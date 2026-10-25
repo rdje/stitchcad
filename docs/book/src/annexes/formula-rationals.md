@@ -472,3 +472,33 @@ full-width and over-domain values check the oracle's role; no broad/platform pas
 ```bash
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_root_value_contract
 ```
+
+## Planned bounded arc_length
+
+Arc length is still pending implementation. The recorded plan proves correct nearest-micrometre
+rounding for every admitted Angle/Length pair using one fixed pi enclosure and the existing private
+integer dependency. It preserves signed/full turns and the signed radius product from the current
+contract. This plan covers arc_length; the other transcendental functions retain separate owners.
+
+For operand magnitudes n1/d1 and n2/d2, arc length is A*pi/B with A=n1*n2<2^256 and
+B=180,000,000*d1*d2. A half-micrometre output would place pi at a rational number whose reduced
+denominator is below2^257. The certificate encloses pi in a small interval strictly inside two
+adjacent bounded-denominator fractions. Their determinant is1 and their denominator sum exceeds
+2^257; elementary integer arithmetic then excludes every such midpoint from the entire enclosure.
+Consequently rounding either endpoint gives the same answer as rounding the true value for every
+admitted input. Zero is handled exactly and signs are restored after magnitude rounding.
+
+This converts the difficult precision question into a finite certificate. Exact alternating Fraction
+sums and a different directed-integer arctangent identity independently establish the same640-bit
+pi enclosure. Its neighbor/determinant/denominator predicates are retained in
+crates/sc-core/tests/fixtures/pi640_certificate.tsv. Reproduce them with:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/pi_rounding_certificate.py
+```
+
+The full derivation is in the numerical fixed-point decision. Runtime work will stay below898/924
+numerator/denominator bits and use one exact division/rounding before the existing result-width and
+Length-domain checks. The precision is a checked internal certificate, with no added language limit,
+platform libm dependency or empirical convergence cutoff. Production arc_length, source provenance
+and platform/broad verification remain their separate next owners.
