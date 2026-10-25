@@ -47,7 +47,8 @@ All four rational operators now reduce before width checks and report typed zero
 Completed numeric values now enforce exact length/area limits and nonnegative Count, with a
 normalized-literal bridge. All four quantity operators now apply exact ppm scaling and result domains.
 Exact unary negation/square and all six numeric comparisons are available, preserving fractional
-values and raw angle turns. Numeric functions, binding and recipe evaluation remain the next stages.
+values and raw angle turns. Exact abs/min/max/clamp are available with typed argument/bound refusals.
+Explicit rounding, binding, irrational functions and recipe evaluation remain the next stages.
 
 ## Planned workflows
 

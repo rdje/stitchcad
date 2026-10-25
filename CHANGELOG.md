@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0250 — exact unary numeric operators and comparisons
+## STITCHCAD-G1-0251 — exact abs/min/max/clamp numeric built-ins
 
-.5c.2.3: declared negation/square signatures, exact total rational ordering and six same-kind numeric
-comparisons. Focused native targets9/0, including prior Fraction rows; numeric built-ins next.
+.5c.2.4: exact numeric absolute value, homogeneous extrema and inclusive clamp with typed empty,
+kind and inverted-bound refusals. Focused native target5/0; quantization/binding next.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -390,3 +390,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part221](docs/history/stitchcad-changelog-part221.md) | whole0248 | 4 lines, 275 bytes, sha256:57ab94fe… |
 
 | [part222](docs/history/stitchcad-changelog-part222.md) | whole0249 | 4 lines, 261 bytes, sha256:7711e8a7… |
+
+| [part223](docs/history/stitchcad-changelog-part223.md) | whole0250 | 4 lines, 269 bytes, sha256:c155719d… |

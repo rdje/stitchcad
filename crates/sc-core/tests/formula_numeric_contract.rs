@@ -368,3 +368,83 @@ fn unary_operators_and_all_comparisons_keep_exact_values_and_kinds() {
         Ok(true)
     );
 }
+
+#[test]
+#[allow(clippy::expect_used)]
+fn exact_numeric_builtins_keep_operands_and_typed_refusals() {
+    use sc_core::recipe::FormulaBuiltin as F;
+    let rational = |n, d, negative| R::new(n, d, negative).expect("fixture rational");
+    let value =
+        |kind, n, d, negative| V::new(kind, rational(n, d, negative)).expect("admitted fixture");
+    for kind in [K::Length, K::Area, K::Angle, K::Ratio] {
+        let negative = value(kind, 1, 3, true);
+        assert_eq!(negative.abs(), value(kind, 1, 3, false));
+    }
+    let count = value(K::Count, 1, 3, false);
+    assert_eq!(count.abs(), count);
+    let zero = value(K::Ratio, 0, 1, false);
+    assert_eq!(zero.abs(), zero);
+    let full = value(K::Ratio, u128::MAX, 1, true);
+    assert_eq!(full.abs(), value(K::Ratio, u128::MAX, 1, false));
+    assert_eq!(V::checked_min(&[count]), Ok(count));
+    assert_eq!(V::checked_max(&[count]), Ok(count));
+    let low = value(K::Length, 1, 3, true);
+    let middle = value(K::Length, 1, 4, false);
+    let high = value(K::Length, 2, 3, false);
+    assert_eq!(V::checked_min(&[middle, high, low]), Ok(low));
+    assert_eq!(V::checked_max(&[middle, high, low]), Ok(high));
+    for (builtin, actual) in [(F::Min, V::checked_min(&[])), (F::Max, V::checked_max(&[]))] {
+        let error = actual.expect_err("one or more operands required");
+        assert_eq!(error, Error::BuiltinArity { builtin, actual: 0 });
+        assert_eq!(error.diagnostic_code(), "formula_parse");
+    }
+    assert_eq!(
+        V::checked_min(&[low, count]),
+        Err(Error::BuiltinDimension {
+            builtin: F::Min,
+            argument: 1,
+            wanted: K::Length,
+            actual: K::Count,
+        })
+    );
+    assert_eq!(middle.checked_clamp(low, high), Ok(middle));
+    assert_eq!(
+        value(K::Length, 1, 1, true).checked_clamp(low, high),
+        Ok(low)
+    );
+    assert_eq!(
+        value(K::Length, 1, 1, false).checked_clamp(low, high),
+        Ok(high)
+    );
+    assert_eq!(low.checked_clamp(low, low), Ok(low));
+    let inverted = middle
+        .checked_clamp(high, low)
+        .expect_err("inverted exact bounds");
+    assert_eq!(
+        inverted,
+        Error::InvalidClamp {
+            kind: K::Length,
+            low: high.rational(),
+            high: low.rational()
+        }
+    );
+    assert_eq!(inverted.diagnostic_code(), "formula_domain");
+    let mixed = middle
+        .checked_clamp(low, count)
+        .expect_err("bound kind mismatch");
+    assert_eq!(
+        mixed,
+        Error::BuiltinDimension {
+            builtin: F::Clamp,
+            argument: 2,
+            wanted: K::Length,
+            actual: K::Count
+        }
+    );
+    assert_eq!(mixed.diagnostic_code(), "formula_dimension");
+    let maximum = u128::MAX;
+    let near = value(K::Ratio, maximum - 1, maximum, false);
+    let lower = value(K::Ratio, maximum - 2, maximum - 1, false);
+    assert_eq!(V::checked_min(&[near, lower]), Ok(lower));
+    assert_eq!(V::checked_max(&[near, lower]), Ok(near));
+}

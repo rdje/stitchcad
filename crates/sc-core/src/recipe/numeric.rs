@@ -1,7 +1,7 @@
 //! Completed numeric values in exact internal units, before binding or recipe execution.
 use super::{
-    FormulaBinaryOperator, FormulaKind, FormulaLiteral, FormulaLiteralKind, FormulaRational,
-    FormulaRationalError, FormulaUnaryOperator,
+    FormulaBinaryOperator, FormulaBuiltin, FormulaKind, FormulaLiteral, FormulaLiteralKind,
+    FormulaRational, FormulaRationalError, FormulaUnaryOperator,
 };
 use core::fmt;
 use sc_units::{MAX_AREA_UM2, MAX_LENGTH_UM};
@@ -9,6 +9,33 @@ use sc_units::{MAX_AREA_UM2, MAX_LENGTH_UM};
 /// A typed refusal at the completed numeric-value boundary; source context belongs to evaluation.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FormulaNumericError {
+    /// A variadic numeric built-in was called without its required first operand.
+    BuiltinArity {
+        /// The attempted built-in.
+        builtin: FormulaBuiltin,
+        /// Actual operand count.
+        actual: usize,
+    },
+    /// First operand that differs from the numeric built-in's required homogeneous kind.
+    BuiltinDimension {
+        /// The attempted built-in.
+        builtin: FormulaBuiltin,
+        /// Zero-based argument position, with the principal value at zero for clamp.
+        argument: usize,
+        /// Kind of the principal or first operand.
+        wanted: FormulaKind,
+        /// Actual mismatched argument kind.
+        actual: FormulaKind,
+    },
+    /// Explicit clamp's lower bound exceeds its upper bound in exact internal units.
+    InvalidClamp {
+        /// Shared numeric kind of value and bounds.
+        kind: FormulaKind,
+        /// Exact supplied lower bound.
+        low: FormulaRational,
+        /// Exact supplied upper bound.
+        high: FormulaRational,
+    },
     /// The attempted binary operation has no accepted signature through this value API.
     BinaryDimension {
         /// The attempted operator.
@@ -52,6 +79,9 @@ impl FormulaNumericError {
     #[must_use]
     pub const fn diagnostic_code(self) -> &'static str {
         match self {
+            Self::BuiltinArity { .. } => "formula_parse",
+            Self::BuiltinDimension { .. } => "formula_dimension",
+            Self::InvalidClamp { .. } => "formula_domain",
             Self::NonNumericKind { .. }
             | Self::BinaryDimension { .. }
             | Self::UnaryDimension { .. } => "formula_dimension",
@@ -283,6 +313,96 @@ impl FormulaNumericValue {
             FormulaBinaryOperator::GreaterEqual => Ok(!ordering.is_lt()),
             _ => Err(dimension),
         }
+    }
+
+    /// Exact absolute value, with no rounding or narrowing.
+    ///
+    /// Length/area domains are symmetric; Count is already nonnegative, and angle/ratio have no
+    /// scalar bound. Every admitted input therefore has an admitted absolute value.
+    #[must_use]
+    pub const fn abs(self) -> Self {
+        Self {
+            kind: self.kind,
+            value: if self.value.is_negative() {
+                self.value.negated()
+            } else {
+                self.value
+            },
+        }
+    }
+
+    /// Returns the least of one or more exact, same-kind numeric operands.
+    ///
+    /// # Errors
+    /// Returns BuiltinArity for an empty slice or BuiltinDimension for the first mismatched kind.
+    pub fn checked_min(values: &[Self]) -> Result<Self, FormulaNumericError> {
+        Self::extremum(values, FormulaBuiltin::Min)
+    }
+
+    /// Returns the greatest of one or more exact, same-kind numeric operands.
+    ///
+    /// # Errors
+    /// Returns BuiltinArity for an empty slice or BuiltinDimension for the first mismatched kind.
+    pub fn checked_max(values: &[Self]) -> Result<Self, FormulaNumericError> {
+        Self::extremum(values, FormulaBuiltin::Max)
+    }
+
+    /// Explicitly limits this value to inclusive exact bounds of its own kind, without rounding.
+    ///
+    /// # Errors
+    /// Returns BuiltinDimension for a mismatched bound or InvalidClamp when low exceeds high.
+    pub fn checked_clamp(self, low: Self, high: Self) -> Result<Self, FormulaNumericError> {
+        for (argument, bound) in [(1, low), (2, high)] {
+            if bound.kind != self.kind {
+                return Err(FormulaNumericError::BuiltinDimension {
+                    builtin: FormulaBuiltin::Clamp,
+                    argument,
+                    wanted: self.kind,
+                    actual: bound.kind,
+                });
+            }
+        }
+        if low.value > high.value {
+            return Err(FormulaNumericError::InvalidClamp {
+                kind: self.kind,
+                low: low.value,
+                high: high.value,
+            });
+        }
+        if self.value < low.value {
+            Ok(low)
+        } else if self.value > high.value {
+            Ok(high)
+        } else {
+            Ok(self)
+        }
+    }
+
+    fn extremum(values: &[Self], builtin: FormulaBuiltin) -> Result<Self, FormulaNumericError> {
+        let mut selected = values
+            .first()
+            .copied()
+            .ok_or(FormulaNumericError::BuiltinArity {
+                builtin,
+                actual: values.len(),
+            })?;
+        for (argument, &value) in values.iter().enumerate().skip(1) {
+            if value.kind != selected.kind {
+                return Err(FormulaNumericError::BuiltinDimension {
+                    builtin,
+                    argument,
+                    wanted: selected.kind,
+                    actual: value.kind,
+                });
+            }
+            let order = value.value.cmp(&selected.value);
+            if (builtin == FormulaBuiltin::Min && order.is_lt())
+                || (builtin == FormulaBuiltin::Max && order.is_gt())
+            {
+                selected = value;
+            }
+        }
+        Ok(selected)
     }
 
     fn binary(

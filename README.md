@@ -21,7 +21,7 @@ Three properties define it:
 The G0 semantic contract has been reviewed; human closure remains unapproved. G1 implements
 ontology, measurement inputs and borrowed/normalized formula syntax with owned identities,
 sourced namespaces and complete immutable recipe kind proofs. Whole-factory review checks source dependencies.
-Exact numeric values support binary/unary quantity operators, comparisons, scaling and scalar domains.
+Exact numeric values support quantity operators, comparisons, abs/min/max/clamp and scalar domains.
 [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks verified progress; the mdBook explains implemented behavior and remaining proof boundaries.
 
 ## Audience and scope

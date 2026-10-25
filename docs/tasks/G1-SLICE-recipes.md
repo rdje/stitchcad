@@ -404,7 +404,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part319.md).
 
 - ID: `G1-SLICE.5c.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: all typed rational operators and abs/min/max/clamp without implicit rounding.
   Acceptance: dimension/scaling tables, exact fractional Count, signed length/area per-result
   domains, literal input boundary distinct from result boundary, zero division and invalid clamp;
@@ -426,32 +426,34 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.2.3`
   Status: `done`
-  Goal: exact unary negation/square and same-kind numeric comparisons.
-  Own0250: rational sign negation/total ordering, numeric unary/comparison methods and affected targets.
+  Goal: exact unary operators/total rational ordering/six same-kind comparisons verified0250.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_rational_contract.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Reuse unary/kind signatures: Count negation refuses even zero, square has only declared kinds,
-  ratio square keeps fused ppm scaling. Comparisons retain full signed turns and fractional values;
-  bounded wide cross-products cannot falsely refuse because a difference would exceed width128.
-  One focused two-target command; broad/platform/mutation work remains .5c.4/pre-push.
-  Retain completed binary task/ledger321/222 under fixed caps; sync book/live before built-ins.
-
-- [x] REPRODUCE / ISSUE:4e6803f lacks rational ordering and numeric unary/comparison methods;
-  source inspection confirms, rc=0.
-- [x] ROOT CAUSE: exact comparison needs wider cross-products without width-limited subtraction;
-  cargo test --offline -p sc-core --test formula_numeric_contract --test formula_rational_contract
-  distinguishes adjacent full-width fractions, output numeric4/0+rational5/0, rc=0.
-- [x] FIX: exact ordering/sign reversal plus signature-backed negation/square and six comparisons;
-  Count negation and undeclared square kinds refuse, source inspection rc=0.
-- [x] ADDRESSED: same focused two-target command proves signs/raw turns/fractions/scaled squares/
-  kind refusals/exact ordering,9 passed/0 failed total, rc=0.
-- [x] NO REGRESSION: same target command retains constructor/binary cases and34 Fraction rows,
- 9/0 total, rc=0; broad/platform/mutation work stays .5c.4/pre-push.
-- [x] LOCKSTEP: whole321/222 source/public reads exact, rc=0; book/live/frontier aligned.
-  promotion: declined (established exact numeric contract/focused-check policy).
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part322.md).
 
 - ID: `G1-SLICE.5c.2.4`
-  Status: `pending`
+  Status: `done`
   Goal: exact abs/min/max/clamp with typed kind and bound refusals.
+  Own0251: numeric.rs and existing formula_numeric_contract native target; no evaluator scaffolding.
+  Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_numeric_contract.rs
+  Absolute value preserves exact signs/zero/domains. Min/max accept one or more homogeneous numeric
+  values and return an existing exact operand; empty calls refuse formula_parse. Clamp requires
+  matching kinds and exact low<=high, returns the appropriate admitted operand without rounding.
+  Errors retain builtin, actual first mismatch/index/wanted kind or exact inverted bounds.
+  One affected native target; broad/platform/mutation work stays .5c.4/pre-push. Retain completed
+  unary task/ledger322/223 under fixed caps; book/live/frontier sync and commit before bindings.
+
+
+- [x] REPRODUCE / ISSUE:1b114c8 numeric values lack abs/min/max/clamp methods; source inspection0.
+- [x] ROOT CAUSE: exact homogeneous built-ins must preserve fractions and return admitted operands;
+  cargo test --offline -p sc-core --test formula_numeric_contract proves all outcomes,5/0, rc=0.
+- [x] FIX: total abs/checked min/max/clamp, first actual-kind/index mismatch, empty-call and exact
+  inverted-bound refusals; no rounding or evaluator dependency, source inspection rc=0.
+- [x] ADDRESSED: same native target covers full magnitudes, singleton/variadic/empty/mixed operands,
+  near-equal fractions and inclusive/inverted clamp bounds,5 passed/0 failed, rc=0.
+- [x] NO REGRESSION: same target retains constructor/literal/binary/unary/comparison cases,5/0,
+  rc=0; primitive unchanged, broad/platform/mutation checks remain .5c.4/pre-push.
+- [x] LOCKSTEP: whole322/223 source/public reads exact, rc=0; book/live/frontier aligned.
+  promotion: declined (established numeric contract/focused-check policy).
 
 - ID: `G1-SLICE.5c.3`
   Status: `pending`

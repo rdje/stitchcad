@@ -131,6 +131,9 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | ScalarDomain | formula_domain with actual operation, kind, exact value, minimum and optional maximum |
 | BinaryDimension | formula_dimension with the actual operator and left/right kinds |
 | UnaryDimension | formula_dimension with the actual unary operator and operand kind |
+| BuiltinArity | formula_parse with the empty min/max built-in and actual count |
+| BuiltinDimension | formula_dimension with built-in, zero-based argument, wanted and actual kinds |
+| InvalidClamp | formula_domain with shared kind and exact low/high bounds |
 | arc_length_hint | Identifies the absent angle-times-length product |
 | Rational | Retains the underlying FormulaRationalError and diagnostic family |
 | kind | Inspect the admitted quantity kind |
@@ -141,6 +144,9 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | checked_neg | Exact sign reversal for declared negatable kinds; Count refuses |
 | checked_square | Exact length/ratio/Count square with scaling and result limits |
 | checked_compare | One of the six exact same-kind comparisons, returning bool |
+| abs | Exact total absolute value, retaining kind and canonical zero |
+| checked_min / checked_max | One or more homogeneous numeric operands; returns an existing operand |
+| checked_clamp | Explicit inclusive exact bounds of the same kind |
 
 Length and area use inclusive signed limits of 10⁹ micrometres and 10¹⁸ square micrometres.
 The check compares the exact fraction with the bound: limit + 1/10 refuses even if binding would
@@ -166,7 +172,7 @@ The normalized-literal bridge performs no new conversion. For example, a normali
 is already zero ppm; importing it cannot recover a hidden fraction. A normalized 720 deg input
 remains 720,000,000 microdegrees. The error contains actual kind/value/bounds; expression
 and statement context belongs to later evaluator integration. Scalar refusals retain the actual
-constructor/operator token. Built-ins and binding remain pending features.
+constructor/operator token. Explicit quantization, binding and evaluator integration remain pending features.
 
 ### Exact quantity operators
 
@@ -229,6 +235,35 @@ turn differs from angle zero. Comparison does not round fractions or subtract in
 intermediate result. FormulaRational implements total Ord/PartialOrd using at most256-bit exact
 cross-products, so even near-equal full-width fractions stay ordered. Ordering allocates bounded
 private workspace; sign reversal and zero canonicalization need no allocation.
+
+### Exact abs, min, max and clamp
+
+abs preserves kind and exact magnitude without rounding, even for negative magnitudes above the
+signed integer range. Count is already nonnegative; zero remains positive. Length/area limits are
+symmetric, so this total operation cannot create an out-of-domain result from an admitted value.
+
+Min/max take a slice containing one or more numeric values. A single value returns itself;
+multiple values use exact ordering and must all have the first value's kind. An empty slice returns
+BuiltinArity in formula_parse. The first mismatched argument returns BuiltinDimension with its
+zero-based index, wanted kind and actual kind. These value APIs do not parse or evaluate a call.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational};
+
+let half = FormulaNumericValue::new(FormulaKind::Length, FormulaRational::new(1, 2, false)?)?;
+let third = FormulaNumericValue::new(FormulaKind::Length, FormulaRational::new(1, 3, false)?)?;
+assert_eq!(FormulaNumericValue::checked_min(&[half, third])?, third);
+assert_eq!(FormulaNumericValue::checked_max(&[half])?, half);
+assert_eq!(half.checked_clamp(third, third)?, third);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+checked_clamp checks both bounds against the principal value's kind. The principal argument is
+index zero, low is one and high is two. Exact low above high returns InvalidClamp with both supplied
+bounds. Inclusive equal bounds are valid. A value below low returns low; one above high returns
+high; otherwise the original value returns. This is explicit authored clamping. It cannot rescue
+an invalid completed operand: every supplied value has already passed its own scalar-domain check.
+Min/max/clamp return admitted operands, preserving fractions without intermediate rounding.
 
 Check this feature with the affected native target:
 
