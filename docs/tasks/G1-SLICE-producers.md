@@ -306,49 +306,72 @@ Whole0226 task/lesson retained in [part298](../history/window11.md#stitchcad-dev
   Acceptance: complete scope and all six proof boxes retained exactly in [part309](../history/stitchcad-devnotes-part309.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a25`
-  Status: `pending`
+  Status: `in_progress`
   Goal: Archive reader and fixtures; sources and kinds in the watched ledger.
   D222 is split into the bounded prerequisite .f.archive-client below before this three-producer group.
   Acceptance: ordered group acceptance above.
 
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.1`
+  Status: `done`
+  Goal: STITCHCAD-G1-0242 guards the public archive reader's materialization and metadata children.
+  Paths: scripts/history_archive.py;docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py
+  Acceptance: complete current reader/shell/enforcer/fixture/public-contract inspection; actual old first
+  effect trapped with stores absent before repair. Preserve pure inventory/read/list/verify behavior,
+  full record bytes/order/formats, borrowed --root and all schema/bounds/provenance predicates. Materialize
+  closes every source/directory/file destination before stores/first effect, retains valid prepared stores,
+  rechecks writes and refuses unsafe input/output/parent/Git/device authorities. Scope metadata Git children
+  without activating stores for readonly modes. Complete captures, original-body/pure controls, physical
+  refusals and actual omission reds before real public materialization/CLI/native fixture checks. Exact
+  source/history/output populations; book/live/frontier and commit before .2. Own bounded whole predecessor
+  ledger/task retention if needed under fixed caps. D223 discovery is logged and scheduled below.
+  Own D224 now: a controlled failed Git observation currently bypasses committed-history guards.
+  Require independently observed HEAD-tree absence for the first-transition exemption; metadata failure
+  must refuse. Preserve successful original comparison order and public refusal/CLI contracts.
+
+- [x] REPRODUCE / ISSUE: python_archive_reader_contract.py --before traps actual4027b36 mkdir with
+  stores absent and reproduces unavailable-HEAD acceptance (D224), rc=0; no unsafe native fault.
+- [x] ROOT CAUSE: unplanned materialization and all-nonzero first-transition exemption. Contract metadata
+  cases refuse unavailable/present-unreadable HEAD and accept independently observed absence, rc=0.
+- [x] FIX: complete backing/source/parent/file plan precedes activation; each effect rechecks authority.
+  Contract proves original pure/CLI/successful comparison AST exact, caller stores intact, rc=0.
+- [x] ADDRESSED: python3 -I -B python_archive_reader_contract.py --real (ci_environment artifact), and
+  /usr/bin/python3 equivalent:662 exact files,14 physical refusals/eight actual body reds/native CLI, rc=0.
+  Sources/backing/output exact and no residue; readonly invalid-unused-store cases pass0.
+- [x] NO REGRESSION: archive suite28 and window CLI682 controls/661 reads pass0 at their snapshot;
+  later retained records pass current662-file native proof. Publication45, glossary310/0 and coverage
+  0 unowned/orphan/dead pass0; census265 paths/325 checks/76 effect rows/36 groups, rc=0. No Rust change.
+- [x] LOCKSTEP: whole0241/0240 and archive-client/host scopes retained214/310/311 from4027b36;
+  contract public reads/source intervals/all predecessor logical/control/payload bytes exact, rc=0.
+  Book/live/frontier synchronized; D224 closed, D223 scheduled. Promotion declined: existing rules.
+  Ledger11/pointer13 and final staged gate13 green, rc=0; fixed caps/400 cadence remain.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.2`
+  Status: `pending`
+  Goal: guard archive refusal fixtures and their complete copied/mutated/output/teardown populations.
+  Paths: docs/tasks/artifacts/history_archive/history_archive_probes.py
+  Acceptance: ordered group acceptance; preserve all original schema/bound/immutable-window refusals.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.a25.3`
+  Status: `pending`
+  Goal: guard whole-window CLI fixtures and their complete copied/mutated/materialized/teardown populations.
+  Paths: docs/tasks/artifacts/history_archive/window_contract.py
+  Acceptance: ordered group acceptance; preserve every public read and original newest-window controls.
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.ledger-continuity`
+  Status: `pending`
+  Goal: own D223, P2 after .a25 before .a26/next capture work.
+  Paths: docs/tasks/artifacts/ci_environment/python_ledger_fixture_contract.py;docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py
+  Acceptance: reproduce both --continuity failures, inspect original current/frozen contracts and preserve
+  original source intervals, folds, authored D215/D216 identities, prior logical/control/payload bytes and
+  ordered predecessor graph. Repair raw-file/closed-graph assumptions through public logical reads; add
+  independent missing/changed/read-refused/reordered/duplicate controls and actual body omissions. Preserve
+  all default original-body/capture/physical/native producer controls, exact sources and fixed caps.
+
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.archive-client`
   Status: `done`
-  Goal: STITCHCAD-G1-0241 repairs D222 before window12 and the larger archive producer group.
+  Goal: D222 logical retained-record client and original Git provenance verified in0241.
   Paths: docs/tasks/artifacts/handoff/d217_probe.py;docs/tasks/artifacts/ci_environment/python_archive_client_contract.py
-  Acceptance: reproduce the original retained() failure with an isolated valid packed archive and absent
-  raw303/304/208. Retrieve logical records through the public reader, preserve every original Git-bound
-  task/diagnostic/ledger assertion and window11 source proof. Declare all backing sources before child
-  dispatch, retain prepared stores and caller authority, bind Git to this repository. Capture complete
-  inputs/dispatch, physical refusals and actual omission/body reds; native retained proof and exact source/
-  archive preservation. Update watched metadata, book/live/MEMORY and commit before .a25.
-  Own bounded live-ledger growth: retain the whole committed0239 entry with exact source interval,
-  public retrieval and predecessor-byte proof before appending0241; fixed caps remain unchanged.
-  Also retain the whole committed .a24 scope/proof before the aggregate task collection grows;
-  keep its ID/status/path ownership live and verify public bytes/source interval under the same cap.
-
-- [x] REPRODUCE / ISSUE: python_archive_client_contract.py --before runs the actual768aebe retained()
-  body against a valid packed copy with raw303/304/208 absent; its source plan refuses before any child,
-  rc=0. Current raw paths exist; this isolates future rollover failure rather than claiming present loss.
-- [x] ROOT CAUSE: the live client declared/read physical records instead of logical archive identities.
-  The public inventory recovers every original byte in the copied packed fixture, rc=0. Initial physical
-  directory fault catches missing required-master declaration; explicit master plus full enumeration fixes it.
-- [x] FIX: retained_plan validates local authority/all backing/entry/profile/reader sources before every
-  child; public reads replace three raw reads. Caller stores/authority/other values survive, Git scope is
-  checkout-bound, no stores or output created. Independent source comparison preserves original Git argv,
-  intervals/order/assertions/result fields and window11 proof, rc=0; native diagnostic bodies unchanged.
-- [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_client_contract.py --real
-  and /usr/bin/python3 equivalent pass eight real packed-reader/Git children, seven physical refusals,
-  three content refusals and seven compiled actual plan/recheck/Git/read/assertion reds, rc=0. Complete
-  source/archive/copied bytes exact and workspace absent. Capture-only mode independently passes0.
-- [x] NO REGRESSION: run_handoff_probes.sh passes original49/17 plus retained proof, rc=0. Publication45,
-  coverage9, glossary310/0 failures and census264 paths/324 checks,76 effect rows/34 groups pass0.
-  Public archive659 logical records/24 working Markdown and155 file paths/74 owners pass0.
-  Ledger11/pointer13 pass0; no Rust/native lifecycle changes.
-- [x] LOCKSTEP: whole0239 ledger retained213 exactly from768aebe; public read/source interval and every
-  predecessor logical/control/payload byte match, master-prefix extension allowed, rc=0. Whole .a24
-  scope/proof retained309 resolves aggregate cap without losing current ID/path ownership. Book/live/MEMORY/
-  owners/frontier synchronized to pending .a25; unchanged caps and400 push cadence. D222 closed. Promotion
-  declined: existing logical retrieval/complete-plan/exact provenance rules. Final staged gate13 green, rc=0.
+  Acceptance: whole scope and all six proof boxes retained in [part310](../history/stitchcad-devnotes-part310.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.a26`
   Status: `pending`
@@ -744,26 +767,10 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt`
   Status: `done`
-  Goal: D217 repair active/verified; stop before publication as requested.
+  Goal: D217 inheritance repair and actual host rollout verified in0236/0237.
   Paths: docs/tasks/artifacts/handoff/d217_probe.py;docs/tasks/artifacts/handoff/contract.py;docs/tasks/artifacts/handoff/run_handoff_probes.sh
-  Additional paths: docs/tasks/artifacts/ci_environment/producer_entries.tsv;docs/tasks/artifacts/ci_environment/python_file_entries.tsv
   Paths: docs/tasks/artifacts/handoff/d217_daemon.py;docs/tasks/artifacts/handoff/d217_upstream.py;docs/tasks/artifacts/handoff/d217_daemon_fix.patch
-  Evidence: cleanup annex; DEV_NOTES0236/0237. Own retained303/304/window11; caps unchanged.
-  Own docs/history/stitchcad-changelog-part208.md for the whole-ledger rollover.
-  Own docs/history/stitchcad-changelog-part209.md for whole0235 retention.
-
-  Original diagnostic acceptance retained in [part304](../history/stitchcad-devnotes-part304.md).
-- [x] REPRODUCE / ISSUE: d217_daemon.py --binary ~/.codex/packages/app-server-daemon/releases/0.164.0-aarch64-apple-darwin/bin/codex;
-  five cases rc=0; three propagate bad metadata.
-- [x] ROOT CAUSE: d217_daemon.py identity/flags trace names pid_start's unfiltered spawn, rc=0.
-- [x] FIX: d217_upstream.py verify reconstructs exact two-file patch, rc=0; selected hash verified0237.
-- [x] ADDRESSED: d217_daemon.py --binary "$PWD/target/d217-codex-build/release/codex" --expect-contained;
-  five cases rc=0; d217_upstream.py calibrate: compiled omission red/restored3 pass0.
-  0237 live hash/41 files/51 vnodes verified; contract.py --real clear0/held1/restored0, rc=0.
-- [x] NO REGRESSION: upstream cargo test -p codex-app-server-daemon --lib:88 pass0;
-  d217_upstream.py rehearse: install/exact rollback rc=0; owned jobs stopped.
-- [x] LOCKSTEP: book/live/task/archive/registries synced; retained4144/8170/3030B and size rc=0.
-  promotion: declined (scoped host defect; original FD10 identity remains unknown).
+  Acceptance: complete original scope and all six proof boxes retained in [part311](../history/stitchcad-devnotes-part311.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.xtask`
   Status: `proposed`

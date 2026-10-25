@@ -67,9 +67,9 @@ docs/tasks/artifacts/changelog/ledger_pointer_mutations.py	output	G1-SLICE.5b.4c
 docs/tasks/artifacts/formula_structure/knowledge_map_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a24
 docs/tasks/artifacts/handoff/contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a24
 docs/tasks/artifacts/ci_environment/python_map_handoff_fixture_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a24
-scripts/history_archive.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25
-docs/tasks/artifacts/history_archive/history_archive_probes.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25
-docs/tasks/artifacts/history_archive/window_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25
+scripts/history_archive.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25.1
+docs/tasks/artifacts/history_archive/history_archive_probes.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25.2
+docs/tasks/artifacts/history_archive/window_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25.3
 docs/tasks/artifacts/history_archive/capture_window2.py	output	G1-SLICE.5b.4c.h2.b.p.o.a26
 docs/tasks/artifacts/history_archive/capture_window3.py	output	G1-SLICE.5b.4c.h2.b.p.o.a26
 docs/tasks/artifacts/history_archive/capture_window4.py	output	G1-SLICE.5b.4c.h2.b.p.o.a27

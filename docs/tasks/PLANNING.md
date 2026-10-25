@@ -1066,6 +1066,19 @@ D215 whole authored report/verified repair retained in [part134](../history/wind
 
 D216 whole authored report/verified repair retained in [part135](../history/window11.md#stitchcad-defects-part135md).
 
+## Active continuity followup
+
+- **D223** — optional ledger continuity modes retain raw-file/closed-graph assumptions.
+  Reproduce: python3 -I -B docs/tasks/artifacts/ci_environment/python_ledger_fixture_contract.py --continuity
+  fails1 at missing logical part294; python_ledger_mutation_contract.py equivalent fails1 at part296.
+  Both records are packed in window11 and public retrieval remains available. Source inspection finds
+  physical predecessor reads and exact current task-graph equality as further rollover/growth assumptions.
+  Impact: these maintained explicit continuity modes cannot reverify their retained proofs on the current
+  tree. Registered default modes do not call them; no current default-suite blocker is claimed.
+  Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.f.ledger-continuity, P2 after .a25 before .a26/next capture work.
+  Preserve exact original intervals/folds/D215/D216/source identities while repairing logical retrieval and
+  ordered predecessor preservation; independent refusal/body controls and default regression required. Open.
+
 ## Verified closure awaiting archival
 
 - **D217** — Codex detached descriptor inheritance repaired; actual host rollout verified.
@@ -1096,6 +1109,16 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   available, with exit1 for DiskWatch's directory handle rather than D217's old unavailable evidence.
   After the handle closes, fresh native clear0/held1/restored0 passes with a terminal0 holder;
   historical FD10 stays unknown. D221 closed by .a24.
+
+- **D224** — committed archive guard treats unavailable Git metadata as an initial transition.
+  Reproduce: python_archive_reader_contract.py --before compiles the actual4027b36 reader and returns
+  controlled128/unavailable HEAD from its Git child; guard_committed() returns success without evidence.
+  Root cause: every nonzero git-show status takes the first-transition exemption. Impact: a failed Git
+  observation can skip committed archive immutability checks. No damaged archive is claimed.
+  Owner: G1-SLICE.5b.4c.h2.b.p.o.a25.1, P1 fixed in0242. Independent successful HEAD-tree absence
+  is now required; unavailable and present-but-unreadable observations refuse. All three cases pass
+  with original successful comparisons intact; actual absence-guard and Git-scope omissions fail their
+  independent assertions. Native retention/source proofs pass; no committed windows changed. Closed.
 
 - **D222** — live D217 retained-record check depends on raw archive paths.
   Census: d217_probe.py retained() declares/reads physical303/304/208 while run_handoff_probes.sh calls

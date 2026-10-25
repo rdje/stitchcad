@@ -112,17 +112,6 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
-## STITCHCAD-G1-0241 — retrieve diagnostic history through its public reader
-
-.f.archive-client: D222 logical303/304/208 reads have complete backing plans and scoped children.
-Git-bound source/window11 proofs stay exact. Native proof, seven physical refusals/seven
-body reds and three content refusals pass on Python3.9/3.14.
-
-## STITCHCAD-G1-0240 — guard map and handoff fixture boundaries
-
-.a24: complete map/handoff plans preserve original contracts and readonly mode. D220/D221
-corrected. Captures/physical/omission controls and native clear/held/restored pass after
-DiskWatch releases its handle. D222 owned before archive rollover.
 
 
 
@@ -136,6 +125,12 @@ DiskWatch releases its handle. D222 owned before archive rollover.
 
 
 
+
+## STITCHCAD-G1-0242 — guard archive materialization and metadata evidence
+
+.a25.1: complete source/directory/file plans precede materialization effects; readonly APIs and
+original CLI/provenance remain exact. D224 requires observed HEAD absence. Captures, physical/
+body controls and native public CLI pass; D223 is owned after .a25. Fixed caps stay unchanged.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -375,3 +370,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part212](docs/history/stitchcad-changelog-part212.md) | whole0238 | 5 lines, 375 bytes, sha256:4b8726ed… |
 
 | [part213](docs/history/stitchcad-changelog-part213.md) | whole0239 | 5 lines, 341 bytes, sha256:b1054b78… |
+
+| [part214](docs/history/stitchcad-changelog-part214.md) | whole0241/0240 | 11 lines, 642 bytes, sha256:87131883… |

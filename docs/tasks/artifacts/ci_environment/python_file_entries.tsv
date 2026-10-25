@@ -139,8 +139,8 @@ docs/tasks/artifacts/history_archive/capture_window3.py	output	G1-SLICE.5b.4c.h2
 docs/tasks/artifacts/history_archive/capture_window4.py	output	G1-SLICE.5b.4c.h2.b.p.o.a27
 docs/tasks/artifacts/history_archive/capture_window5.py	output	G1-SLICE.5b.4c.h2.b.p.o.a27
 docs/tasks/artifacts/history_archive/capture_window6.py	output	G1-SLICE.5b.4c.h2.b.p.o.a28
-docs/tasks/artifacts/history_archive/history_archive_probes.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25
-docs/tasks/artifacts/history_archive/window_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25
+docs/tasks/artifacts/history_archive/history_archive_probes.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25.2
+docs/tasks/artifacts/history_archive/window_contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25.3
 docs/tasks/artifacts/measurement_table/table_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n02.2
 docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n02.3
 docs/tasks/artifacts/size_chart/size_chart_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n02.1
@@ -148,9 +148,10 @@ docs/tasks/artifacts/size_chart_collection/size_chart_collection_mutations.py	na
 docs/tasks/artifacts/size_membership/size_membership_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n01
 scripts/ci_environment.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 scripts/handoff_census.py	reference	G1-SLICE.5b.4c.h2.b.p.v
-scripts/history_archive.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25
+scripts/history_archive.py	output	G1-SLICE.5b.4c.h2.b.p.o.a25.1
 scripts/local_environment.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_cleanup_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_ledger_fixture_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_archive_client_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
+docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v
 docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py	profile	G1-SLICE.5b.4c.h2.b.p.v

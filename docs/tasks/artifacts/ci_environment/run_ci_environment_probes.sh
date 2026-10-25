@@ -33,6 +33,7 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_publication_fixt
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_publication_builder_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_map_handoff_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_archive_client_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_payload_library_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py" --native

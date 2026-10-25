@@ -3,6 +3,36 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — guard archive materialization and metadata evidence
+
+0242 .a25.1 splits the three-producer archive group before implementation. The actual4027b36
+materialization first mkdir is trapped with stores absent. The producing entry now resolves every
+backing/source file, logical destination and implicit parent directory before activation. Each mkdir
+and exclusive output open rechecks its authority. Valid caller stores survive; stores inside outputs
+or archive backing refuse. Pure function bodies remain identical, and readonly list/read/verify ignore
+unused stores without loading the profile or starting children. Independent AST adapters retain the
+entire original CLI body/argv/formats and successful committed-comparison predicates.
+
+D224 is a distinct fail-open metadata defect: any git-show failure took the first-transition exemption.
+A controlled unavailable HEAD reproduces it in the actual predecessor body. The exemption now needs
+an independent successful tree query proving master absence. Unavailable/present-unreadable/absent
+controls pass with scoped readonly Git children and unchanged caller environment. Metadata checks
+validate complete backing sources without inspecting or activating unused stores. No bounds, schemas,
+source proof predicates or committed windows change.
+
+Captures verify the whole materialized file population, prepared stores and fresh effect checks.
+Fourteen physical refusals and eight compiled actual plan/activation/recheck/store/HEAD/Git faults
+pass; device observations are simulated. Native public materialization/overwrite/retention/window11
+proofs preserve exact source, backing and output bytes. Original archive suite passes28 and the
+whole-window CLI suite682 controls/661 logical reads at its captured population. New retained records
+are separately covered by the current native materialization and exact source/public-reader controls.
+
+D223 is owned after .a25: two optional older ledger --continuity modes fail at packed294/296 and
+also freeze whole task graphs. Their registered defaults do not call those modes. Whole committed
+0241/0240 ledgers and archive-client/host-activation scope/proofs are retained214/310/311 before bounded
+live growth, with live ownership and original source intervals intact. Promotion declined: existing
+complete authority, pure APIs, independent evidence and immutable-retention rules cover this slice.
+
 ## _(2026-10-25 UTC)_ — retrieve diagnostic history through its public reader
 
 0241 .f.archive-client closes D222 before the larger .a25 producer group. Original retained()

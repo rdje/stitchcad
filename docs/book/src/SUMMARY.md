@@ -74,6 +74,7 @@
 - [Governance model](governance.md)
 - [Artifact cleanup](annexes/artifact-cleanup.md)
 - [Ledger pointer fixtures](annexes/ledger-fixtures.md)
+- [Historical archive reader](annexes/archive-reader.md)
 - [Publication checks](annexes/publication-checks.md)
 - [Build and check the project](build-and-checks.md)
 

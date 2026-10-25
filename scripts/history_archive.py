@@ -14,6 +14,7 @@ import json
 import os
 from pathlib import Path
 import re
+import runpy
 import subprocess
 import sys
 import tarfile
@@ -25,6 +26,8 @@ TAR_BYTES = 8 * 1024 * 1024
 SEGMENT = re.compile(r'docs/history/(?:bedrock-scaffold-changelog|stitchcad-(?:changelog|devnotes|defects|g0-contract-(?:changelog|decisions|evidence))-part[1-9][0-9]*)\.md\Z')
 SHA = re.compile(r'[0-9a-f]{64}\Z')
 REV = re.compile(r'[0-9a-f]{40}\Z')
+PROJECT = Path(__file__).resolve().parent.parent
+PROFILE_SOURCE = PROJECT / 'scripts/local_environment.py'
 
 
 class Refusal(ValueError):
@@ -228,20 +231,99 @@ def inventory(root):
     return records, (working, logical_lines, logical_bytes, resident)
 
 
+def archive_root(value):
+    root = Path(value).absolute()
+    require(root == PROJECT or root.is_relative_to(PROJECT / 'target'), 'fixture root must be under project target/')
+    if root != PROJECT:
+        local_path(PROJECT, root.relative_to(PROJECT).as_posix())
+    require(root.is_dir(), 'archive root is not a directory')
+    return root
+
+
+def load_profile():
+    parent = PROFILE_SOURCE.parent
+    require(not parent.is_symlink() and parent.is_dir() and parent.stat().st_dev == PROJECT.stat().st_dev,
+            'unsafe archive profile parent')
+    marker = parent / '.git'
+    require(not (marker.exists() or marker.is_symlink()), 'archive profile crosses Git boundary')
+    require(not PROFILE_SOURCE.is_symlink() and PROFILE_SOURCE.is_file() and
+            PROFILE_SOURCE.stat().st_dev == PROJECT.stat().st_dev, 'unsafe archive profile source')
+    return runpy.run_path(str(PROFILE_SOURCE))
+
+
+def backing_sources(root, profile):
+    """Complete nonproducing input validation, independent of unused store settings."""
+    sources = [Path(__file__), PROFILE_SOURCE, root / MASTER]
+    folders = [root / '.doctrine/history_archive', root / 'docs/history']
+    for folder in folders:
+        profile['directory'](PROJECT, profile['producer_path'](PROJECT, folder))
+        for path in sorted(folder.iterdir()):
+            require(not path.is_symlink(), 'symlink archive backing input')
+            if path.is_dir():
+                folders.append(path)
+            elif path not in sources:
+                sources.append(path)
+    for path in sources:
+        relative = profile['producer_path'](PROJECT, path)
+        profile['directory'](PROJECT, Path(relative).parent.as_posix())
+        require(not path.is_symlink() and path.is_file() and path.stat().st_dev == PROJECT.stat().st_dev,
+                'archive source is not a local regular file')
+    return tuple(sources)
+
+
+def metadata_environment(root):
+    root = archive_root(root)
+    backing_sources(root, load_profile())
+    environment = {name: value for name, value in os.environ.items() if not name.startswith('GIT_')}
+    environment.update(GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
+                       GIT_OPTIONAL_LOCKS='0', GIT_LITERAL_PATHSPECS='1', GIT_TERMINAL_PROMPT='0')
+    return environment
+
+
+def materialization_plan(profile, root, destination, records, *, activate=False):
+    files = tuple(destination / name for name in sorted(records))
+    folders = {destination, *(parent for parent in destination.parents if parent.is_relative_to(PROJECT / 'target'))}
+    for path in files:
+        folders.update(parent for parent in path.parents
+                       if parent == destination or parent.is_relative_to(destination))
+    sources = backing_sources(root, profile)
+    profile['plan_producer'](PROJECT, sources=sources, directories=tuple(sorted(folders)), output_files=files)
+    environment = profile['environment_for'](PROJECT, os.environ, create=False)
+    for name in profile['STORES']:
+        store = Path(environment[name])
+        require(not store.is_relative_to(destination), 'archive destination contains a store')
+        require(not any(store.is_relative_to(root / base) for base in ('.doctrine/history_archive', 'docs/history')),
+                'archive backing contains a store')
+    if activate:
+        os.environ.update(profile['environment_for'](PROJECT, os.environ, create=True))
+
+
+def materialization_file_plan(profile, destination, output):
+    profile['plan_producer'](PROJECT, sources=(Path(__file__), PROFILE_SOURCE),
+                             directories=(destination, output.parent), output_files=(output,))
+
+
 def guard_committed(root):
     """Windows already retained at HEAD cannot disappear or be silently changed."""
-    result = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + MASTER], capture_output=True, check=False)
+    root = archive_root(root)
+    result = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + MASTER], capture_output=True,
+                            check=False, env=metadata_environment(root))
     if result.returncode:
-        return  # first transition; source reconstruction is separately proved
+        absence = subprocess.run(['git', '-C', str(root), 'ls-tree', '--name-only', 'HEAD', '--', MASTER],
+                                 capture_output=True, check=False, env=metadata_environment(root))
+        require(absence.returncode == 0 and absence.stdout == b'', 'committed HEAD metadata unavailable')
+        return  # independently observed first transition; source reconstruction is separately proved
     old = json.loads(result.stdout, object_pairs_hook=no_duplicate_keys)
     current = master(root)
     require(set(old['windows']) <= set(current), 'committed window removed')
     for path in old['windows']:
-        saved = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + path], capture_output=True, check=True).stdout
+        saved = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + path], capture_output=True,
+                               check=True, env=metadata_environment(root)).stdout
         require(local_path(root, path).read_bytes() == saved, 'committed manifest changed')
         manifest = json.loads(saved)
         for retained in (manifest['payload'], manifest['catalog']):
-            saved_bytes = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + retained], capture_output=True, check=True).stdout
+            saved_bytes = subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + retained], capture_output=True,
+                                         check=True, env=metadata_environment(root)).stdout
             require(local_path(root, retained).read_bytes() == saved_bytes, 'committed retained file changed')
 
 
@@ -252,9 +334,7 @@ def main():
     parser.add_argument('argument', nargs='?')
     args = parser.parse_args()
     project = Path(__file__).resolve().parent.parent
-    root = args.root.absolute()
-    require(root == project or root.is_relative_to(project / 'target'), 'fixture root must be under project target/')
-    require(root == local_path(project, root.relative_to(project).as_posix()) if root != project else True, 'invalid fixture root')
+    root = archive_root(args.root)
     records, pressure = inventory(root)
     if args.command in ('verify', 'verify-retention', 'list'):
         require(args.argument is None, 'unexpected argument')
@@ -273,21 +353,28 @@ def main():
         require(manifest_path in master(root), 'unknown window')
         manifest, _ = load_json(root, manifest_path, 65536)
         revision = manifest['source_revision']
-        paths = subprocess.run(['git', '-C', str(project), 'ls-tree', '-r', '--name-only', revision, 'docs/history'], capture_output=True, check=True).stdout.decode().splitlines()
+        paths = subprocess.run(['git', '-C', str(project), 'ls-tree', '-r', '--name-only', revision, 'docs/history'],
+                               capture_output=True, check=True, env=metadata_environment(root)).stdout.decode().splitlines()
         source_paths = {p for p in paths if SEGMENT.fullmatch(p)}
         require(source_paths == {row['path'] for row in manifest['members']}, 'source snapshot membership mismatch')
         for path in sorted(source_paths):
-            original = subprocess.run(['git', '-C', str(project), 'show', revision + ':' + path], capture_output=True, check=True).stdout
+            original = subprocess.run(['git', '-C', str(project), 'show', revision + ':' + path],
+                                      capture_output=True, check=True, env=metadata_environment(root)).stdout
             require(records[path] == original, 'source reconstruction mismatch: ' + path)
         print('archive source proof: %d byte-identical full files; 0 missing/extra' % len(source_paths))
     elif args.command == 'materialize':
         require(args.argument is not None and args.argument.startswith('target/'), 'destination must be under target/')
         destination = local_path(root, args.argument)
         require(not destination.exists(), 'destination exists; overwrite refused')
+        profile = load_profile()
+        materialization_plan(profile, root, destination, records, activate=True)
+        materialization_plan(profile, root, destination, records)
         destination.mkdir(parents=True)
         for path, data in sorted(records.items()):
             output = local_path(root, args.argument + '/' + path)
+            materialization_file_plan(profile, destination, output)
             output.parent.mkdir(parents=True, exist_ok=True)
+            materialization_file_plan(profile, destination, output)
             with output.open('xb') as stream:
                 stream.write(data)
         print('archive: materialized %d records at %s' % (len(records), args.argument))
