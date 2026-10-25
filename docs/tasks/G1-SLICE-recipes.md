@@ -444,26 +444,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.3.2`
   Status: `done`
-  Goal: one signed i64 binding conversion for numeric values plus typed Boolean/name context.
-  Own0253: immutable stored numeric/Boolean values, borrowed actual binding-name errors and focused
-  native target; full i64 endpoints, unsigned-magnitude half-away and honest rounded-value witnesses.
+  Goal: one scalar binding conversion, both i64 endpoints/Boolean/exact refusal context verified0253.
   Paths: crates/sc-core/src/recipe/bound.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/lib.rs;crates/sc-core/Cargo.toml;crates/sc-core/tests/formula_binding_value_contract.rs
-  Conversion returns stored integer for later reads; no namespace mutation/rebinding/provider claim.
-  Defect owned/P2/fix now: crate lib.rs/Cargo metadata say whole checking is future; lib claims WASM
-  currency; reproduce by reading its header against completed .5b proofs/new native-only features.
-  Impact: stale API docs misstate available behavior/evidence. Update lib/recipe module summaries.
-  One affected binding native target; broad/platform .5c.4/pre-push. Retain complete scopes/ledger
-  324/325/225 under fixed caps; book/API map/live sync and commit before further features.
-
-
-- [x] REPRODUCE / ISSUE:a9d86c4 lacks bound storage; crate overview drift observed, rc=0.
-- [x] ROOT CAUSE: signed storage follows unsigned magnitude rounding; cargo test --offline -p
-  sc-core --test formula_binding_value_contract:3 passed/0 failed, rc=0.
-- [x] FIX: private integer/Boolean storage, actual name/kind/bounds/full rounded witness; overview repaired.
-- [x] ADDRESSED: same native target proves endpoints/tie neighbors/full-width errors,3/0, rc=0.
-- [x] NO REGRESSION: same target retains numeric/input/raw-turn/later-read integration,3/0, rc=0.
-- [x] LOCKSTEP:324/325/225 source/public bytes exact, rc=0; book/API/live synced. Broad/platform .5c.4.
-  promotion: declined (established binding/numeric/focused-check policy).
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part326.md).
 
 - ID: `G1-SLICE.5c.4`
   Status: `pending`
@@ -477,20 +460,49 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 ### Irrational functions
 - ID: `G1-SLICE.5d.1`
-  Status: `pending`
+  Status: `in_progress`
   Goal: finalize deterministic true-value rounding algorithms and independent proof/oracle plan
-  for every admitted sqrt/hypot/trig/inverse/arc_length input before implementation.
+  for every admitted input before its function-family implementation; no cross-family certificate.
   Acceptance: rigorous rounding-boundary/termination/resource argument over width128 inputs,
   signed/multi-turn reduction, principal branches/poles, half-away rules and declared domains;
   ordinary platform libm/curated Decimal60 agreement cannot establish correct arbitrary rounding.
-  Any unresolved algorithm or dependency/license requirement is owned before implementation.
+  Children .1 exact roots, .2 transcendentals. Each implementation requires its applicable plan;
+  unresolved algorithms/dependency/license requirements stay owned before that family starts.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5d.1.1`
+  Status: `done`
+  Goal:0254 exact root plan and independent fixtures before code.
+  Paths: docs/tasks/artifacts/formula_structure/root_value_oracle.py;crates/sc-core/tests/fixtures/formula_roots.tsv
+  Own decision/book/fixtures/retention326/226 and true-value float clarification.
+  Acceptance: [whole algorithm/bounds/oracle plan](../decisions/decision_numerical-contract-fixed-point.md).
+  Production roots remain .5d.2; transcendental algorithms .5d.1.2, broad/platform .5d.4/pre-push.
+
+- [x] REPRODUCE / ISSUE: root functions lack a certified algorithm; source inspection0.
+- [x] ROOT CAUSE: exact midpoint/bounds required; pure oracle CLI25 rows/authored checks, rc=0.
+- [x] FIX: integer plan and independent isqrt/Fraction fixtures, no production claim.
+- [x] ADDRESSED: oracle CLI25 expected rows/authored checks pass, rc=0.
+- [x] NO REGRESSION: same CLI25 rows, rc=0; production unchanged, broad checks .5d.4.
+- [x] LOCKSTEP:326/226 Git/public bytes exact, rc=0; book/pointers aligned.
+  promotion: numerical decision gains root-family proof/oracle plan.
+
+- ID: `G1-SLICE.5d.1.2`
+  Status: `pending`
+  Goal: exact deterministic transcendental algorithms, threshold termination/resource/license proof.
+  Acceptance: all .5d.1 obligations for sin/cos/tan/atan/atan2/arc_length before .5d.3 code.
+
 - ID: `G1-SLICE.5d.2`
   Status: `pending`
   Goal: correctly rounded sqrt(area/ratio) and hypot(length,length) under .1's reviewed algorithm.
   Acceptance: negative root refusal, exact square/tie neighbors, full input domains, true rounded
   quantum and hypot without materializing an out-of-domain area; irrational provenance retained.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5d.2.1`
+  Status: `pending`
+  Goal: exact sqrt area/ratio; .5d.1.1 plan.
+- ID: `G1-SLICE.5d.2.2`
+  Status: `pending`
+  Goal: exact hypot; source provenance .5e.3.
+
 - ID: `G1-SLICE.5d.3`
   Status: `pending`
   Goal: sin/cos/tan, atan, atan2 and arc_length with signed sweeps and reviewed rounding.

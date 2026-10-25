@@ -48,9 +48,9 @@ turn is `360 000 000`; a right angle is `90 000 000`; a half-degree is `500 000`
 
 Microdegrees rather than radians because the domain speaks in degrees and fractions of degrees — grain
 deviation, dart intake angles, notch directions, bias at 45° — and because a rational number of degrees
-is stored **exactly**, while π-based storage would make the commonest angles approximate. Trigonometric
-functions are evaluated in `f64` at the point of use and their results are rounded into the internal
-units (§2); an angle *value* is never stored as a float.
+is stored **exactly**, while π-based storage would make the commonest angles approximate. Formula trigonometric
+results must equal the correctly rounded true value in internal units (§2); ordinary platform libm
+is not sufficient proof. An angle *value* is never stored as a float.
 
 Direction fields on entities SHALL be normalized to `[0, 360 000 000)` µ° and compared as normalized
 directions. Formula angles and sweep fields SHALL preserve sign and complete turns; formula bindings

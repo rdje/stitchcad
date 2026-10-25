@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — bounded exact root-family algorithm plan
+
+0254 .5d.1.1 selects integer bisection and exact squared-midpoint comparison before sqrt/hypot
+implementation. Floor-root of floor(N/D) is the floor-root of N/D;4N versus D(2k+1)^2 decides
+nearest/half-away exactly. Domain bounds give30/74/31 bisections for area/ratio/hypot and at most
+576-bit workspace for hypot. It never materializes an Area or uses libm/precision convergence.
+A focused symbolic-envelope/authored-midpoint Python check passes0; this checks examples/derivation,
+not production or exhaustive input coverage. A pure stdout math.isqrt/Fraction oracle retains25
+expected rows for the future native target, with authored half/full-width/domain checks, rc=0. Transcendental plans remain .5d.1.2 and broad proofs .5d.4.
+Legacy f64 summary is clarified against the existing true-value formula contract; no new function
+or scope is admitted. Whole0253 task/ledger retained326/226; book/pointers align. Promotion:
+existing numerical decision records the family algorithm, bounds, termination and oracle plan.
+
 ## _(2026-10-25 UTC)_ — one scalar binding conversion and stored values
 
 0253 .5c.3.2 introduces private numeric i64/kind or Boolean storage. Completed numeric input

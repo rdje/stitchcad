@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0253 — one scalar binding conversion and stored values
+## STITCHCAD-G1-0254 — bounded exact root-family plan and oracle fixtures
 
-.5c.3.2: once-rounded signed i64/Boolean storage, both signed endpoints and actual name/kind/bound/
-rounded-value refusals. Focused native target3/0; stale crate overview repaired, execution follows.
+.5d.1.1: exact squared-midpoint rounding, finite workspace/bisection proof and25 independent
+math.isqrt/Fraction fixtures before sqrt/hypot code. Transcendental algorithms remain separately owned.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -396,3 +396,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part224](docs/history/stitchcad-changelog-part224.md) | whole0251 | 4 lines, 252 bytes, sha256:6b2e45d3… |
 
 | [part225](docs/history/stitchcad-changelog-part225.md) | whole0252 | 4 lines, 256 bytes, sha256:07c9e537… |
+
+| [part226](docs/history/stitchcad-changelog-part226.md) | whole0253 | 4 lines, 274 bytes, sha256:533a1da7… |

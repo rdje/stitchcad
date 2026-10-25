@@ -6,15 +6,15 @@
 - **Owner / source:** repo-local workflow, leaf `G0-CONTRACT.2`; the normative specification is
   `docs/book/src/spec/units-and-tolerances.md` (roadmap §4.2, §2.7, locked decision §15.7)
 
-answers: "what unit does StitchCAD store lengths in?" · "why not floating point?" · "how are angles stored?" · "how do we round?" · "is there a global epsilon?" · "why are intersections exact?" · "what tolerance do I compare two seam lengths with?"
+answers: "what unit does StitchCAD store lengths in?" · "why not floating point?" · "how are angles stored?" · "how do we round?" · "is there a global epsilon?" · "why are intersections exact?" · "what tolerance do I compare two seam lengths with?" · "how will sqrt and hypot round exactly?"
 
 ## The fact / decision
 
 1. **Lengths are signed 64-bit integers of micrometres (µm).** One inch is `25 400` exactly; one
    millimetre is `1 000`.
 2. **Angles are signed 64-bit integers of microdegrees (µ°).** A full turn is `360 000 000`. Rational
-   degree values — the domain's own vocabulary — are stored exactly; trigonometry is evaluated in `f64`
-   at the point of use and rounded into internal units, never stored as a float.
+   degree values — the domain's own vocabulary — are stored exactly. Formula function results must
+   satisfy the true-value quantum contract; floating point alone is no rounding proof or storage form.
 3. **The declared domain is tighter than the type:** \|length\| ≤ 10⁹ µm, area ≤ 10¹⁸ µm². Exceeding it
    is a typed diagnostic, never a clamp, wrap or saturation.
 4. **Rounding is half away from zero**, and **every conversion is a single multiply-then-divide** with an
@@ -66,8 +66,8 @@ them is how a project ends up with an epsilon chosen to make a failing test pass
 ## How to apply
 
 - Reaching for a float in domain code is a design question, not a shortcut: it is allowed at format
-  boundaries and inside trigonometric evaluation, and the result is rounded back into internal units
-  immediately.
+  boundaries and inside proven trigonometric algorithms. Formula calls still require the correctly
+  rounded true value; ordinary platform libm or a fixed precision alone cannot certify that result.
 - Every comparison states its class in code and in the test that exercises it. A reviewer who cannot
   tell which class a comparison uses should treat it as a defect.
 - A new tolerance value arrives with its derivation ("the tightest consumer of this geometry is X, which
@@ -80,3 +80,36 @@ them is how a project ends up with an epsilon chosen to make a failing test pass
 Related: [[decision_product-work-takes-the-frontier]] · the normative chapter
 `docs/book/src/spec/units-and-tolerances.md` · `docs/tasks/G0-CONTRACT.md` (leaf `.2`) ·
 `docs/tasks/G1-SLICE.md` (leaf `.2`, `sc-units`).
+
+## Exact root-family algorithm — 2026-10-25
+
+Leaf `G1-SLICE.5d.1.1` selects exact integer arithmetic for sqrt/hypot before their implementation.
+The contract remains formula-language §4.2: nearest internal quantum, ties away from zero. The
+legacy float summary above is clarified against that existing formula-specific requirement.
+Transcendental algorithms stay unresolved/owned by `.5d.1.2`; this is no certificate for them.
+
+For nonnegative rational z=N/D with D>0, compute q=floor(N/D), then k=floor(sqrt(q)) by integer
+bisection. Because k² is integer, k²<=z iff k²<=q: this is also floor(sqrt(z)). Start lower=0 and
+upper=2^ceil(bits(q)/2), a strict upper root bound, including upper=1 for q=0. Each comparison of
+mid² with q preserves lower²<=q<upper² and halves the integer interval until upper-lower=1.
+Return k+1 exactly when 4N>=D(2k+1)²; equality is the positive half tie. Otherwise return k. No
+floating point, approximate root or empirical precision cutoff is involved.
+
+Area sqrt uses N=n,D=d in square-micrometre units. Ratio sqrt uses N=n*1,000,000,D=d to return
+ppm, since sqrt((n/d)/1,000,000)*1,000,000=sqrt(n*1,000,000/d). Negative operands refuse before
+root work. Hypot of signed lengths n1/d1,n2/d2 uses N=n1²*d2²+n2²*d1²,D=d1²*d2². It never
+constructs an area value or applies an area domain/width limit inside the function. Only its final
+rounded Length is checked. Both zero and exact half roots are covered by the same integer rule.
+
+Admitted operands bound all workspace. Area/ratio numerators have at most128/148 bits; their
+scalar quotient bounds require at most30/74 bisections. Hypot has at most513 numerator and512
+denominator bits; completed length domains give q<=2*10^18<2^61, hence at most31 bisections.
+Its largest conservative midpoint product is below2^576. Ratio midpoint products need at most278
+bits. All integer work is finite and bounded by admitted inputs, with no new dependency or platform
+libm. Integer outputs fit at most75 bits; binding i64 remains its own later check.
+
+Independent focused fixtures will use standard-library math.isqrt plus authored exact midpoint
+squares and rational neighbors, including near ties beyond ordinary float precision, full128-bit
+Ratio, signed/zero hypot and maximum-length cases whose squared sum exceeds the area domain.
+Broader/platform/mutation work stays `.5d.4`/pre-push. Source-free numeric kernels do not attach
+provenance; later evaluator `.5e.3` must retain every root-call contribution, including perfect roots.

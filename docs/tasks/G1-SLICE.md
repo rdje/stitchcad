@@ -861,7 +861,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5d.1` | `pending` | Correct-rounding algorithm plan by function family |
+| **next** | `G1-SLICE.5d.2.1` | `pending` | Correctly rounded sqrt area/ratio value kernel |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

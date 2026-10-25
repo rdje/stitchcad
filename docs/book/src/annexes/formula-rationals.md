@@ -391,3 +391,34 @@ Its output is retained in crates/sc-core/tests/fixtures/formula_rationals.tsv an
 native target above. The rows cover full magnitudes, signs, canonical zero, wide cancellation,
 zero division and fully reduced numerator/denominator width refusals. This is a focused comparison;
 it does not claim exhaustive arithmetic or platform verification.
+
+## Planned exact sqrt and hypot
+
+These functions are not implemented yet. The root-family algorithm is recorded before code in the
+numerical fixed-point decision, under G1-SLICE.5d.1.1. It uses exact integers with the existing private
+bigint dependency. Transcendental functions retain a separate pending algorithm obligation.
+
+For z=N/D>=0, find k=floor(sqrt(floor(N/D))) by bounded integer bisection. This is floor(sqrt(z))
+because comparing an integer square with z is equivalent to comparing it with floor(z). Round up
+exactly when 4N>=D(2k+1)²; equality is a half tie and rounds away from zero. This compares the exact
+squared midpoint instead of approximating a root. Bisection halves a finite integer interval and
+has no numerical convergence guess.
+
+Area sqrt uses its square-micrometre fraction directly. Ratio sqrt multiplies its internal ppm
+radicand by1,000,000, so the integer root returns ppm. Negative root operands refuse. Hypot forms
+the exact squared-length sum privately and roots it without creating an area value: a sum exceeding
+the area domain can still have an admitted rounded length. Only the rounded function result is
+checked against its scalar domain; no binding narrowing occurs inside the function.
+
+Input/component domains bound area, ratio and hypot bisection to30,74 and31 iterations respectively.
+Hypot's raw numerator/denominator need at most513/512 bits; the conservative midpoint comparison
+needs at most576 bits. These are workspace bounds, not additional language limits. Planned focused
+checks include exact half squares and rational neighbors, full128-bit ratio, zero/signed lengths,
+Pythagorean cases and squared sums above the area domain. Source-call provenance and broad/platform
+proof remain later owned integration work. No root implementation or complete numeric certificate
+is claimed by this plan.
+
+The pure fixture oracle is already retained at docs/tasks/artifacts/formula_structure/root_value_oracle.py.
+It uses Python math.isqrt and Fraction arithmetic;25 expected rows live in
+crates/sc-core/tests/fixtures/formula_roots.tsv, ready for the production target. Authored half-square,
+full-width and over-domain values check the oracle's role. The production functions are still pending.
