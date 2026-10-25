@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0246 — exact signed rational sums and differences
+## STITCHCAD-G1-0247 — focused independent rational oracle integration
 
-.5c.1.2.2: bounded private bigint workspace reduces before128-bit judgment, preserving cancellation
-and exact typed width witnesses. Focused native target3/0; broader/platform work stays deferred.
+.5c.1.3:34 Python Fraction cases replay through all four public exact operators and typed refusals.
+Focused native target4/0; value kernel complete, typed operators next and broad/platform work deferred.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -382,3 +382,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part217](docs/history/stitchcad-changelog-part217.md) | whole0244 | 4 lines, 219 bytes, sha256:33c0c860… |
 
 | [part218](docs/history/stitchcad-changelog-part218.md) | whole0245 | 4 lines, 250 bytes, sha256:bbadee3a… |
+
+| [part219](docs/history/stitchcad-changelog-part219.md) | whole0246 | 4 lines, 266 bytes, sha256:02057330… |

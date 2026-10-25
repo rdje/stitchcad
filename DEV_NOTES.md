@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — independent rational value fixtures
+
+0247 .5c.1.3 adds a pure stdout Python Fraction oracle and34 retained rows consumed by the
+existing public target. This independently checks full magnitudes/signs, cancellation, numerator/
+denominator widths and zero-divisor priority across all four operators. It imports no project
+arithmetic. One native target passes4/0, rc=0; no production behavior changed. Broader platform,
+mutation and integration checks remain .5c.4/pre-push. The primitive is complete; typed operators
+are next. Whole0246 task/ledger retained318/219, with exact source/public reads. Book/pointer align.
+Promotion declined: established independent-oracle and focused-check policies.
+
 ## _(2026-10-25 UTC)_ — exact signed rational sums and differences
 
 0246 .5c.1.2.2 computes signed cross-products in a private num-bigint0.4.6 workspace. Admitted

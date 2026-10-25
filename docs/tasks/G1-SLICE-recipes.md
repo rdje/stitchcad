@@ -360,7 +360,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 ### Exact arithmetic and bindings
 - ID: `G1-SLICE.5c.1`
-  Status: `in_progress`
+  Status: `done`
   Goal: exact signed rational value primitive with positive denominator and reduced width128.
   Acceptance: full unsigned magnitudes/signs, zero, reduction and cancellation before width
   judgment, overflow-safe bounded workspace and typed numerator/denominator measured refusal.
@@ -370,7 +370,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Start with a bounded implementation slice and one affected test; broad integration stays deferred.
   Children: .1 canonical value construction; .2 bounded arithmetic workspace/reduced-width refusal;
   .3 independent oracle integration. Parent stays open until all are implemented.
-  Verification: `pending`; Commit: `pending`.
+  Verification: focused native target4/0 with34 Fraction rows in0247; broader/platform .5c.4.
 
 - ID: `G1-SLICE.5c.1.1`
   Status: `done`
@@ -393,35 +393,33 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.1.2.2`
   Status: `done`
-  Goal: signed sums/differences with bounded wider intermediate reduction before128-bit judgment.
-  Acceptance: cancellation of wide intermediate products stays exact, typed width errors reflect
-  the fully reduced result; one focused check and later .5c.1.3 oracle integration.
+  Goal: exact signed sums/differences, wider intermediate reduction and width refusals verified0246.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/tests/formula_rational_contract.rs;crates/sc-core/Cargo.toml;Cargo.lock
-  Own0246: these implementation/contract/dependency files; private
-  cached num-bigint0.4.6 intermediates, published MIT OR Apache-2.0/Rust1.60/std metadata verified.
-  Admitted operands bound the raw numerator to257 bits/denominator256. Reduce before narrowing;
-  preserve canonical sign/zero and exact measured error witnesses. No numeric quantity/evaluator claim.
-  Update existing edge-rational decision with workspace separation; native one-target proof and
-  offline dependency resolution, platform/full campaigns deferred .5c.1.3. Retain completed task/
-  policy/ledger316/317/218 under fixed caps and commit before oracle integration.
-
-
-- [x] REPRODUCE / ISSUE: 6d96bc7 lacks sum/difference methods; source inspection confirms, rc=0.
-- [x] ROOT CAUSE: raw257-bit sums can reduce to admitted128-bit values; cargo test --offline -p
-  sc-core --test formula_rational_contract proves wide cancellation,3 passed/0 failed, rc=0.
-- [x] FIX: private bounded bigints reduce before narrowing; exact measured bits/sign/canonical zero.
-- [x] ADDRESSED: same focused native target covers signed differences and129/257/256-bit refusals,
-  output3 passed/0 failed, rc=0. Offline metadata resolves four MIT/Apache licensed packages, rc=0.
-- [x] NO REGRESSION: same target retains constructor/product/quotient checks,3/0, rc=0;
-  broader/platform verification and independent oracle remain .5c.1.3.
-- [x] LOCKSTEP: retained316/317/218 preserve whole Git intervals/public reads, rc=0; book render0/live/frontier synced.
-  promotion: existing edge/formula rational decision records bounded workspace/dependency choice.
+  Acceptance: [whole scope and six proof boxes](../history/stitchcad-devnotes-part318.md).
 
 - ID: `G1-SLICE.5c.1.3`
-  Status: `pending`
+  Status: `done`
   Goal: independent rational oracle integration and focused primitive signoff; broad campaigns later.
   Acceptance: independent arbitrary-precision results at full-width/cancellation/refusal boundaries,
   stable diagnostics and original syntax/literal separation; no evaluator closure claim.
+  Own0247: add pure stdout Fraction fixture oracle and immutable expected TSV, consumed by the
+  existing public native target. Compare four-operator outputs/refusals without production bigint
+  arithmetic or new evaluator scaffolding. One affected target; broad/platform work stays .5c.4.
+  Paths: docs/tasks/artifacts/formula_structure/rational_value_oracle.py;crates/sc-core/tests/fixtures/formula_rationals.tsv;crates/sc-core/tests/formula_rational_contract.rs
+  Own completed sum node retention318/ledger219 if needed for fixed caps; book/live/pointer sync.
+
+- [x] REPRODUCE / ISSUE: a814dd9 contains example tests without independent arithmetic rows;
+  source inspection confirms, rc=0.
+- [x] ROOT CAUSE: independent Fraction arithmetic avoids sharing the production bigint/kernel;
+  oracle emits34 exact/sign/zero/cancellation/refusal rows, rc=0.
+- [x] FIX: pure oracle/TSV plus public four-operator replay; no production semantics changed.
+- [x] ADDRESSED: cargo test --offline -p sc-core --test formula_rational_contract:4 passed/0 failed,
+  including34 independent rows, rc=0.
+- [x] NO REGRESSION: same target retains constructor and prior operator boundaries,4/0, rc=0;
+  syntax/input code unchanged. Broad/platform/mutation campaigns remain .5c.4 and pre-push.
+- [x] LOCKSTEP: book/live/frontier/pointer aligned; whole318/219 Git/public intervals exact, rc=0.
+  promotion: declined (established independent-oracle and focused-check policies).
+
 - ID: `G1-SLICE.5c.2`
   Status: `pending`
   Goal: all typed rational operators and abs/min/max/clamp without implicit rounding.

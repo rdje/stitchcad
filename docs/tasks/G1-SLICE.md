@@ -861,7 +861,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5c.1.3` | `pending` | Focused independent arithmetic oracle integration |
+| **next** | `G1-SLICE.5c.2` | `pending` | Quantity-aware exact operators and scalar domains |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

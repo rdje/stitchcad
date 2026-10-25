@@ -1,4 +1,4 @@
-//! Focused public construction contract for exact formula values, separate from evaluation.
+//! Focused public value contract for exact formula arithmetic, separate from evaluation.
 use sc_core::recipe::{FormulaRational as R, FormulaRationalComponent as C, FormulaRationalError};
 
 #[test]
@@ -180,5 +180,53 @@ fn signed_sums_reduce_wide_intermediates_before_limits() {
         );
         assert_eq!(error.diagnostic_code(), "formula_domain");
         assert_eq!(error.rational_bit_bound(), Some(128));
+    }
+}
+
+#[test]
+#[allow(clippy::expect_used)]
+fn four_operators_match_independent_fraction_fixtures() {
+    fn value(numerator: &str, denominator: &str) -> R {
+        let (negative, magnitude) = numerator
+            .strip_prefix('-')
+            .map_or((false, numerator), |magnitude| (true, magnitude));
+        R::new(
+            magnitude.parse().expect("fixture magnitude"),
+            denominator.parse().expect("fixture denominator"),
+            negative,
+        )
+        .expect("admitted fixture input")
+    }
+    for row in include_str!("fixtures/formula_rationals.tsv")
+        .lines()
+        .filter(|row| !row.starts_with('#'))
+    {
+        let cells: Vec<_> = row.split('\t').collect();
+        assert_eq!(cells.len(), 6, "{row}");
+        let left = value(cells[1], cells[2]);
+        let right = value(cells[3], cells[4]);
+        let result = match cells[0] {
+            "add" => Some(left.checked_add(right)),
+            "sub" => Some(left.checked_sub(right)),
+            "mul" => Some(left.checked_mul(right)),
+            "div" => Some(left.checked_div(right)),
+            _ => None,
+        }
+        .expect("known fixture operation");
+        let actual = match result {
+            Ok(result) => format!(
+                "value:{}{}/{}",
+                if result.is_negative() { "-" } else { "" },
+                result.numerator_magnitude(),
+                result.denominator()
+            ),
+            Err(FormulaRationalError::ZeroDivisor) => "ZeroDivisor".to_owned(),
+            Err(FormulaRationalError::RationalWidth {
+                component,
+                measured_bits,
+            }) => format!("{component:?}:{measured_bits}"),
+            Err(error) => format!("unexpected:{error}"),
+        };
+        assert_eq!(actual, cells[5], "{row}");
     }
 }

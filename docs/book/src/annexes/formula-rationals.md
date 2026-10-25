@@ -123,4 +123,16 @@ python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --
 
 The focused public target covers construction and all four exact operations, including cancellation
 before width checks, typed numerator/denominator witnesses and zero-divisor priority. Native execution
-passes three tests. Independent oracle integration and platform work remain owned by .5c.1.3.
+passes four tests, including 34 rows derived independently with Python Fraction arithmetic. The
+primitive is complete; quantity-aware operations follow. Broad/platform work remains .5c.4/pre-push.
+
+The fixture oracle imports no production arithmetic. Reproduce its expected rows with:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/rational_value_oracle.py
+```
+
+Its output is retained in crates/sc-core/tests/fixtures/formula_rationals.tsv and consumed by the
+native target above. The rows cover full magnitudes, signs, canonical zero, wide cancellation,
+zero division and fully reduced numerator/denominator width refusals. This is a focused comparison;
+it does not claim exhaustive arithmetic or platform verification.

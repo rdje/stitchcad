@@ -60,5 +60,5 @@ workspace. Two admitted 128-bit components give at most a 257-bit raw numerator 
 denominator. Euclidean reduction cannot increase either width. Narrow only the reduced components;
 otherwise refuse with their exact bit count. This admits wide intermediates that cancel without
 inventing a custom wide-integer kernel. The primitive exposes no dependency type and changes no
-stored edge parameter, quantity domain or binding rule. One native contract passes; independent
-oracle/platform integration is owned by `.5c.1.3`, with broad campaigns deferred by delivery policy.
+stored edge parameter, quantity domain or binding rule. The focused native target passes, including34 independent
+Fraction oracle rows in `.5c.1.3`; broader/platform integration remains `.5c.4`/pre-push.
