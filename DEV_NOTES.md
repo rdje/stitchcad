@@ -3,6 +3,25 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — guard map and handoff fixture boundaries
+
+0240 .a24: map now resolves generator/curated/task/decision inputs and all ten header/log outputs
+before writes and Bash children; child Git context is checkout-bound and valid caller stores survive.
+Handoff's ordinary49/17 mode stays readonly, including imported --real host arguments and invalid
+unused stores. Explicit real mode prepares all sources/delegates/held-file output before children.
+Actual captures/twenty physical refusals/nine compiled guard reds pass on Python3.9; sources exact.
+
+D220 was a second map reference assumption: current-body extraction required one HTML comment
+while the generator accepts five header forms. Independent five-shape and headerless metamorphic
+controls now preserve the complete body. D221's stale D217 book blocker is corrected. The native
+calibration passes10/two, but first baseline correctly blocks DiskWatch17532 FD39 at the repository
+directory. Once released, actual clear0/held1/restored0 passes and holder exits0. No foreign app was
+signalled, no checker weakened. D222 raw D217 retention dependency is owned by .a25 before window12.
+
+Whole predecessor publication records/oldest ledger retained308/212 against bc730f4; node/path
+ownership remains live. Removed unwatched copied defect totals from LIVE_STATUS; PLANNING owns
+reports and D38 still owns their derived census. Promotion declined: existing plans/readonly rules.
+
 ## _(2026-10-25 UTC)_ — guard publication rendering and temporary authority
 
 0239 .a23.3.2: original build forwarded ambient stores directly to mdBook; main also owned

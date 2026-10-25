@@ -448,6 +448,7 @@ def continuity_controls(*, observe=None):
     captures += [(name, boundary) for name in ('stitchcad-devnotes-part305.md', 'stitchcad-changelog-part210.md',
                                              'stitchcad-devnotes-part306.md')]
     captures += [(name, '8e497de58f772a74c4d5e62c4489ced1569e83df') for name in ("stitchcad-devnotes-part307.md", "stitchcad-changelog-part211.md")]
+    captures += [(name, 'bc730f49d3050531f6b39f3747b266669bf6eec1') for name in ("stitchcad-devnotes-part308.md", "stitchcad-changelog-part212.md")]
     for name, revision in captures:
         path = 'docs/history/' + name
         data = read(path); header, body = data.split(b'\n---\n\n', 1)

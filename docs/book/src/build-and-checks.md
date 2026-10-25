@@ -53,6 +53,8 @@ directories; link/type/volume/Git checks precede descent. Latest record: docs/AR
 
 The generated Knowledge Map lists task and decision links with concise labels. Their complete
 repository-relative filenames remain in each link destination; freshness checks verify regeneration.
+Map fixtures plan all ten header/log files before writes and Bash dispatch. Handoff fixtures stay
+read-only by default; their explicit live mode plans sources, child stores and the held-file output.
 
 ## Destinations
 

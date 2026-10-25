@@ -400,7 +400,7 @@ shared tool infrastructure. Then rerun the census and confirm all needed tool re
 The project-owned entry point replaces the inherited neutral checker for this workflow; the inherited
 copy remains unchanged as scaffold provenance.49 independent fixtures/17 actual in-memory guard faults
 verify framing, unavailable metadata and blocking rules. The OS-visible controlled live-file proof
-was established by SPINE.23; its current rerun is blocked by D217's unavailable runtime metadata.
+was reverified after D217's inheritance repair. A current rerun requires OS visibility and a quiet workspace.
 This is a snapshot of this user's
 visible processes, not future-write prediction: jobs under other users and processes that close every
 handle and remove their checkout argument are outside the observation. The idle attestation concerns

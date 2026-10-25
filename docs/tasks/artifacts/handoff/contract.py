@@ -8,6 +8,39 @@ from types import SimpleNamespace
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'scripts/handoff_census.py'
+PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
+HANDOFF = ROOT / 'scripts/check_handoff.sh'
+PROBE = Path(__file__).with_name('d217_probe.py')
+HELD_FILE = ROOT / 'target/handoff-real-handle.txt'
+if __name__ == '__main__' and sys.argv[1:] not in ([], ['--real']):
+    raise SystemExit('usage: contract.py [--real]')
+if (PROFILE_SOURCE.is_symlink() or not PROFILE_SOURCE.is_file() or PROFILE_SOURCE.parent.is_symlink() or
+        not PROFILE_SOURCE.parent.is_dir() or PROFILE_SOURCE.stat().st_dev != ROOT.stat().st_dev or
+        PROFILE_SOURCE.parent.stat().st_dev != ROOT.stat().st_dev or (PROFILE_SOURCE.parent / '.git').exists() or
+        (PROFILE_SOURCE.parent / '.git').is_symlink()):
+    raise SystemExit('handoff contract: unsafe profile bootstrap')
+PROFILE = runpy.run_path(str(PROFILE_SOURCE))
+
+
+def source_plan():
+    """Readonly fixtures validate code inputs without inspecting or activating unused stores."""
+    for source in (Path(__file__), PROFILE_SOURCE, SOURCE):
+        relative = PROFILE['producer_path'](ROOT, source)
+        PROFILE['directory'](ROOT, Path(relative).parent.as_posix())
+        PROFILE['require'](not source.is_symlink() and source.is_file() and
+                           source.stat().st_dev == ROOT.stat().st_dev, 'unsafe handoff contract source')
+
+
+def real_plan(*, activate=False):
+    sources = (Path(__file__), PROFILE_SOURCE, SOURCE, HANDOFF, PROBE)
+    arguments = dict(sources=sources, directories=(ROOT / 'target',), output_files=(HELD_FILE,))
+    if activate:
+        return PROFILE['prepare_producer'](ROOT, **arguments)
+    PROFILE['plan_producer'](ROOT, **arguments)
+    return PROFILE['environment_for'](ROOT, os.environ, create=False)
+
+
+source_plan()
 RAW = SOURCE.read_bytes()
 R = str(ROOT / 'target/handoff fixture')
 NODE = str(ROOT / 'target/runtime/cua_node/bin/node')
@@ -121,6 +154,7 @@ def verify(ns):
             raise AssertionError('unresolved metadata admitted')
 
 
+source_plan()
 ns=runpy.run_path(str(SOURCE));verify(ns)
 FAULTS=[
  ('nonzero evidence','if result.returncode != 0:','if False:'),
@@ -148,30 +182,39 @@ for name,old,new in FAULTS:
     try:verify(altered)
     except AssertionError:pass
     else:raise AssertionError('actual guard fault escaped: '+name)
+source_plan()
 assert SOURCE.read_bytes()==RAW
 print('handoff contract: %d fixtures / %d actual assertion reds / producer unchanged' % (len(CASES),len(FAULTS)))
 
-if sys.argv[1:] == ['--real']:
+def real_contract():
+    environment = real_plan(activate=True)
     if sys.platform == 'darwin':
+        environment = real_plan()
         subprocess.run([sys.executable, '-I', '-B', str(Path(__file__).with_name('d217_probe.py')),
-                        'calibrate'], cwd=ROOT, check=True)
-    (ROOT / 'target').mkdir(exist_ok=True)
+                        'calibrate'], cwd=ROOT, env=environment, check=True)
     entry = ['bash', 'scripts/check_handoff.sh', '--idle-cua']
-    baseline = subprocess.run(entry, cwd=ROOT, capture_output=True, text=True)
+    environment = real_plan()
+    baseline = subprocess.run(entry, cwd=ROOT, env=environment, capture_output=True, text=True)
     assert baseline.returncode == 0, ('real baseline needs no owned jobs', baseline.stdout, baseline.stderr)
+    environment = real_plan()
     child = subprocess.Popen([sys.executable, '-I', '-B', '-c',
         "import os,sys; f=open('target/handoff-real-handle.txt','w'); print(os.getpid(),flush=True); sys.stdin.read()"],
-        cwd=ROOT, stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+        cwd=ROOT, env=environment, stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
     try:
         pid = int(child.stdout.readline())
-        result = subprocess.run(entry, cwd=ROOT, capture_output=True, text=True)
+        environment = real_plan()
+        result = subprocess.run(entry, cwd=ROOT, env=environment, capture_output=True, text=True)
         assert result.returncode == 1 and ('PID %d: repo handle' % pid) in result.stdout
         print('real held-file census: blocks PID %d, exit1' % pid)
     finally:
         child.stdin.close()
         child.wait(timeout=10)
-    restored = subprocess.run(entry, cwd=ROOT, capture_output=True, text=True)
+        child.stdout.close()
+    environment = real_plan()
+    restored = subprocess.run(entry, cwd=ROOT, env=environment, capture_output=True, text=True)
     assert child.returncode == 0 and restored.returncode == 0, (restored.stdout, restored.stderr)
     print('real restored census: holder terminal0 / handoff OK0')
-elif sys.argv[1:]:
-    raise SystemExit('usage: contract.py [--real]')
+
+
+if __name__ == '__main__' and sys.argv[1:] == ['--real']:
+    real_contract()

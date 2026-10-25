@@ -1080,6 +1080,31 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   or active-harness termination. Original historical identity remains unknown. Book cleanup annex/
   DEV_NOTES0236 and protected recovery-20261025 audit retain source, commands and receipts.
 
+- **D220** — map's current-source reference assumes an HTML header despite accepting five header forms.
+  Reproduce: python_map_handoff_fixture_contract.py --headerless removes only the reference header in
+  memory; the actual unchanged generator preserves its body, but the old reference raises IndexError
+  at content.split('-->', 1)[1]. Impact: valid header removal breaks the watched map contract.
+  Owner: G1-SLICE.5b.4c.h2.b.p.o.a24, fix now; independent body/header controls replace the assumption.
+  Fixed: current-body reference handles all five shapes; headerless metamorphic control passes without
+  editing the curated file. Native generator retains its original five cases/two actual body reds.
+
+- **D221** — governance still says D217 blocks current live handoff proof after its verified repair.
+  Reproduce: governance.md's handoff section says blocked; committed0237 DEV_NOTES records native
+  calibration and real clear0/held1/restored0. Impact: the director's book reports an obsolete blocker.
+  Owner: G1-SLICE.5b.4c.h2.b.p.o.a24. Fixed wording names verified inheritance repair and current quiet-
+  workspace precondition. Fresh native calibration passes10 lifecycles/two reds; census evidence is
+  available, with exit1 for DiskWatch's directory handle rather than D217's old unavailable evidence.
+  After the handle closes, fresh native clear0/held1/restored0 passes with a terminal0 holder;
+  historical FD10 stays unknown. D221 closed by .a24.
+
+- **D222** — live D217 retained-record check depends on raw archive paths.
+  Census: d217_probe.py retained() declares/reads physical303/304/208 while run_handoff_probes.sh calls
+  it as a current check. All three are currently raw and retrievable; no present missing-file failure
+  is claimed. A later packing window can retire them while preserving logical records, repeating D219.
+  Unlike a frozen capture input, this consumer runs on the current tree and must use the public reader.
+  Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.a25, P2 before window12; prove an isolated packed/missing-path
+  case, use logical reads with complete input plans, retain Git-bound provenance assertions. Open.
+
 - **D219** — publication continuity controls assume physical archive files and a closed task/catalog graph.
   Reproduce: python_publication_fixture_contract.py --continuity raises FileNotFoundError for part298;
   current window11 public retrieval is the canonical interface. Prior graph nodes remain in order;

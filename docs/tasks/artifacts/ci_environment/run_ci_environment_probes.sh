@@ -31,6 +31,7 @@ python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_ledger_fixture_c
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_ledger_mutation_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_publication_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_publication_builder_contract.py"
+python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_map_handoff_fixture_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_payload_library_contract.py"
 python3 -I -B "$ROOT/docs/tasks/artifacts/ci_environment/python_static_loader_contract.py" --native
