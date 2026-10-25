@@ -95,8 +95,8 @@ libproc queries also returned ENOENT; one owner was outside caller ancestry. The
 cause remains unproved. The installed OS tools and libproc are required read-only host dependencies;
 diagnostic outputs stay under the repository's protected audit directory.
 
-Recovery requires restarting the affected Codex host runtime outside the active harness, then
-resuming from the committed pointer. Do not terminate the harness from inside itself. Verify:
+Restarting the affected Codex runtime outside the active harness is a recovery experiment, not
+a proved root-cause repair. Do not terminate the harness from inside itself. After recovery verify:
 
 ```bash
 bash scripts/check_handoff.sh --idle-cua
@@ -107,6 +107,52 @@ The first command needs complete OS-visible evidence and no pending CUA call/res
 must observe clear0, a controlled real held-file blocker1, then restored clear0. Only then create
 a fresh cleanup plan: HEAD, tracked inputs or candidates may have changed during diagnosis.
 Until then cleanup removes nothing and the last successful cadence date stays unchanged.
+
+### D217 investigation and discriminating tests
+
+The tracked diagnostic is docs/tasks/artifacts/handoff/d217_probe.py. Snapshot mode compares
+descriptor enumeration, both native vnode metadata queries and lsof without publishing raw paths.
+Controls use newly owned files/directories and an unattached terminal; existing descriptors are
+never revoked or closed. Calibration deliberately removes each reproducing mechanism and requires
+an assertion failure. Pure observation controls and exact committed-record retention run with the
+normal handoff probes; native calibration also runs before the real handoff baseline.
+
+| Candidate explanation | Experiment | Observation on 2026-10-25 |
+| --- | --- | --- |
+| lsof alone invents the failure | Query both native vnode flavors directly | Both return ENOENT for the affected descriptor; neighboring metadata succeeds |
+| Ordinary unlink or descriptor close explains it | Hold ordinary files/directories across deletion; compare a closed descriptor | Ordinary metadata stays readable; close returns EBADF |
+| Terminal revocation | Revoke only a newly owned unattached terminal | Both native calls return ENOENT; lsof emits the exact untyped marker |
+| Removed event-only directory | Remove only a newly owned directory held for notifications | Same native/lsof signature, from a different mechanism |
+| Every fresh installed runtime starts broken | Initialize an isolated installed app-server, without a thread or model request | Clean and live-directory controls are readable; deliberately inherited removed-directory descriptor reproduces |
+
+These tests establish mechanisms, not the historical identity or destruction event for the original
+descriptor10. Matching signatures cannot choose between those mechanisms. The observed runtime is
+Codex0.164.0 on Darwin27.0.0, kernel13432.1.9; that exact kernel source tag was unavailable during
+this investigation. Apple's published source explains the API/marker paths, without certifying the
+installed kernel's exact failing instruction: [native vnode queries](https://github.com/apple-oss-distributions/xnu/blob/main/bsd/kern/proc_info.c).
+The process lists remain stable during the production
+capture; no whole-process permission denial was observed. An equal enumeration cannot prove that
+an individual descriptor was never reused.
+
+Next, capture a replacement daemon's descriptor identities before cleanup, after starting it from
+an external terminal with unrelated descriptors closed. Compare the old/new runtime, caller tree,
+native observations and complete handoff verdict. If the failure disappears, that proves recovery;
+capture a recurrence's object identity and lifecycle before claiming permanent prevention. If it
+persists, retain the fresh capture and investigate its creator or obtain a vendor-level kernel trace.
+The cleanup checker remains strict throughout. Root owner: cleanup4.hunt in the producer task tree.
+
+```bash
+python3 -I -B docs/tasks/artifacts/handoff/d217_probe.py snapshot --pid 1234
+python3 -I -B docs/tasks/artifacts/handoff/d217_probe.py calibrate
+python3 -I -B docs/tasks/artifacts/handoff/d217_probe.py runtime --binary /path/to/installed/codex --inherit removed-event-directory
+```
+
+The PID and executable path are examples; select the observed process and installed executable.
+Runtime mode uses a fresh project-owned state directory and a separate process group. It closes
+unselected inherited descriptors, sends only initialization, and verifies its child exits and its
+process group disappears. A successful diagnostic is not permission for cleanup deletion.
+Isolation follows the documented [Codex state location](https://learn.chatgpt.com/docs/config-file/config-advanced#config-and-state-locations)
+and [app-server initialization](https://learn.chatgpt.com/docs/app-server#protocol); no inference is requested.
 
 ## Verification scope
 

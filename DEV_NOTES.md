@@ -3,6 +3,50 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — D217 needs causal discrimination before a permanent-fix claim
+
+0234 cleanup4.hunt instruments the unresolved production descriptor instead of inferring its
+origin from lsof's marker. Snapshot of PID8048/65756/68313 shows only descriptor10's vnode metadata
+unavailable, both native flavors returning zero/errno2, with unchanged enumerations and successful
+neighboring metadata. Enumeration stability alone cannot exclude descriptor reuse. Installed
+runtime0.164.0, Darwin27.0.0/build26A434, kernel13432.1.9; exact public kernel tag unavailable.
+Primary source bounds: Apple's process_vnode translates ENOENT to the marker before setting type;
+published pid_vnodeinfo/pid_vnodeinfopath use vnode acquisition and stat. No installed-instruction proof.
+
+Owned terminal revocation and removal of an event-only directory independently reproduce the exact
+native/lsof signature. Ordinary unlinked files/directories stay readable; a closed descriptor gives
+errno9. Local fstat distinguishes the two reproduced mechanisms (errno9 versus2); remote libproc
+cannot choose between them. The production descriptor's original identity and invalidation event
+remain unknown. Neither lsof-only failure nor the historical creator has been established.
+
+Isolated installed app-server initialization sends no thread/model request, uses empty project-owned
+state, and deliberately preserves only a selected controlled descriptor. Clean and live-directory
+arms initialize with readable vnodes; inheriting a removed event-only directory reproduces zero/
+errno2/untyped revoked. Fresh initialization alone does not imply long-term prevention. Final runtime
+children exit0 and their isolated process groups disappear. The first teardown checked immediately
+after signalling and caught a transient group; a fresh process census found no surviving diagnostic
+runtime. Bounded teardown now waits for group disappearance and refuses surviving descendants.
+
+Calibration originally counted its own fault literal as a second anchor. Restricting replacement to
+the parsed controls function fixes the calibration; two actual lifecycle omissions now fail their
+independent assertions. Pure controls reject five corrupted observation sets. Native calibration
+is watched by contract.py --real; its subsequent production baseline still refuses2, so the real
+held-file/restored proof and cleanup remain blocked. The native calibrator itself passes10 cases/
+two actual assertion reds; no production exemption or cleanup behavior change.
+
+Receipts: target/artifact_cleanup_audit/startup-20261024/d217-hunt-snapshot.json,
+d217-hunt-event-controls.json, d217-hunt-calibration-final.json, d217-hunt-runtime-none-final.json,
+d217-hunt-runtime-live-final.json, d217-hunt-runtime-removed-complete.json and d217-hunt-handoff-real.log.
+The final two runtime controls additionally record explicit process-group disappearance; no pending
+diagnostic work may outlive the checkpoint. The full test plan and remaining discrimination are in
+the cleanup annex. Five whole completed task records are retained303 from exact cdc6a77 intervals;
+the tracked diagnostic rechecks complete source membership and bytes, without raising any cap.
+That record crossed the fixed64-file resident history bound. Window11 retains all54 committed raw
+files (169756B) in a deterministic47725B payload; full source proof passes with no missing/extra.
+The previous ten manifests/catalogs/payloads stay exact; live public links move to the new catalog.
+Final -verified runtime captures supersede the earlier iteration logs; all three exit0/group gone.
+Promotion declined: bounded investigation evidence, with the unresolved cause explicitly owned.
+
 ## _(2026-10-25 UTC)_ — cleanup recheck still needs external runtime recovery
 
 0233 cleanup4: requested OS-visible bash scripts/check_handoff.sh --idle-cua still returns2 for
@@ -62,28 +106,28 @@ Promotion declined: existing incomplete-evidence policy; D217 owns the external 
 
 0228 .f.cleanup3 owns frozen ignored-output cleanup and regeneration; proof in the leaf.
 Promotion declined: existing cleanup/continuity rules.
-Whole0227 task/lesson retained in [part300](docs/history/stitchcad-devnotes-part300.md).
+Whole0227 task/lesson retained in [part300](docs/history/window11.md#stitchcad-devnotes-part300md).
 
-Whole0226 task/lesson retained in [part298](docs/history/stitchcad-devnotes-part298.md).
+Whole0226 task/lesson retained in [part298](docs/history/window11.md#stitchcad-devnotes-part298md).
 
-Whole0221 task/lesson retained in [part290](docs/history/stitchcad-devnotes-part290.md).
+Whole0221 task/lesson retained in [part290](docs/history/window11.md#stitchcad-devnotes-part290md).
 
-Whole0220 task/lesson retained in [part289](docs/history/stitchcad-devnotes-part289.md).
+Whole0220 task/lesson retained in [part289](docs/history/window11.md#stitchcad-devnotes-part289md).
 
 Whole0219 task/lesson288 and ledger199
 retain exact03ebaa2 intervals/public reads. Promotion declined: existing source/purity/restore
 rules; no product or independent approval claim.
 
-Whole0219 task/lesson retained in [part288](docs/history/stitchcad-devnotes-part288.md).
+Whole0219 task/lesson retained in [part288](docs/history/window11.md#stitchcad-devnotes-part288md).
 
-Whole0217 task/lesson retained in [part286](docs/history/stitchcad-devnotes-part286.md).
-Whole0218 task/lesson retained in [part287](docs/history/stitchcad-devnotes-part287.md).
+Whole0217 task/lesson retained in [part286](docs/history/window11.md#stitchcad-devnotes-part286md).
+Whole0218 task/lesson retained in [part287](docs/history/window11.md#stitchcad-devnotes-part287md).
 
-Whole0210 task/lesson retained in [part278](docs/history/stitchcad-devnotes-part278.md).
+Whole0210 task/lesson retained in [part278](docs/history/window11.md#stitchcad-devnotes-part278md).
 
-Whole0209 task/lesson retained in [part277](docs/history/stitchcad-devnotes-part277.md).
+Whole0209 task/lesson retained in [part277](docs/history/window11.md#stitchcad-devnotes-part277md).
 
-Whole0208 task/lesson retained in [part275](docs/history/stitchcad-devnotes-part275.md).
+Whole0208 task/lesson retained in [part275](docs/history/window11.md#stitchcad-devnotes-part275md).
 
 Whole0207 task/lesson retained in [part274](docs/history/window10.md#stitchcad-devnotes-part274md).
 
@@ -210,9 +254,9 @@ Older formula and producer lessons retained in [part186](docs/history/window7.md
 
 Whole0206 task/lesson retained in [part271](docs/history/window10.md#stitchcad-devnotes-part271md).
 
-Whole retained whole0211 task and lesson: [part280](docs/history/stitchcad-devnotes-part280.md).
+Whole retained whole0211 task and lesson: [part280](docs/history/window11.md#stitchcad-devnotes-part280md).
 
-Whole retained whole0212 task and lesson: [part281](docs/history/stitchcad-devnotes-part281.md).
+Whole retained whole0212 task and lesson: [part281](docs/history/window11.md#stitchcad-devnotes-part281md).
 
 ## Retained engineering continuity
 
@@ -284,19 +328,19 @@ committed table and original links. Recent records follow; older identities rema
 
 | [part274](docs/history/window10.md#stitchcad-devnotes-part274md) | whole0207 task/lesson | 61 lines, 5997 bytes, sha256:b45c9d9f… |
 
-| [part275](docs/history/stitchcad-devnotes-part275.md) | whole0208 task/lesson | 60 lines, 5965 bytes, sha256:1e24ecc4… |
-Whole0209 final evidence retained in [part277](docs/history/stitchcad-devnotes-part277.md).
+| [part275](docs/history/window11.md#stitchcad-devnotes-part275md) | whole0208 task/lesson | 60 lines, 5965 bytes, sha256:1e24ecc4… |
+Whole0209 final evidence retained in [part277](docs/history/window11.md#stitchcad-devnotes-part277md).
 
-| [part277](docs/history/stitchcad-devnotes-part277.md) | whole0209 task/lesson | 55 lines, 5089 bytes, sha256:7ace5655… |
-Whole0210 final evidence retained in [part278](docs/history/stitchcad-devnotes-part278.md).
+| [part277](docs/history/window11.md#stitchcad-devnotes-part277md) | whole0209 task/lesson | 55 lines, 5089 bytes, sha256:7ace5655… |
+Whole0210 final evidence retained in [part278](docs/history/window11.md#stitchcad-devnotes-part278md).
 
-| [part278](docs/history/stitchcad-devnotes-part278.md) | whole0210 task/lesson | 26 lines, 2430 bytes, sha256:6e9b3223… |
-Whole retained whole0211 task and lesson: [part280](docs/history/stitchcad-devnotes-part280.md).
+| [part278](docs/history/window11.md#stitchcad-devnotes-part278md) | whole0210 task/lesson | 26 lines, 2430 bytes, sha256:6e9b3223… |
+Whole retained whole0211 task and lesson: [part280](docs/history/window11.md#stitchcad-devnotes-part280md).
 
-| [part280](docs/history/stitchcad-devnotes-part280.md) | whole0211 task and lesson | 35 lines, 4015 bytes, sha256:915738b0… |
-Whole retained whole0212 task and lesson: [part281](docs/history/stitchcad-devnotes-part281.md).
+| [part280](docs/history/window11.md#stitchcad-devnotes-part280md) | whole0211 task and lesson | 35 lines, 4015 bytes, sha256:915738b0… |
+Whole retained whole0212 task and lesson: [part281](docs/history/window11.md#stitchcad-devnotes-part281md).
 
-| [part281](docs/history/stitchcad-devnotes-part281.md) | whole0212 task and lesson | 35 lines, 3985 bytes, sha256:b4748635… |
+| [part281](docs/history/window11.md#stitchcad-devnotes-part281md) | whole0212 task and lesson | 35 lines, 3985 bytes, sha256:b4748635… |
 
 ## _(2026-10-06 UTC)_ — handoff recurrence
 
@@ -306,20 +350,20 @@ The missing-type fixture reproduces refusal2; an actual guard omission adds the 
 Strict parser unchanged; fresh complete census0 does not validate refused evidence or explain
 kernel causation. Whole0211 ledger192 retained exactly before growth. G1 resumes .a14.
 
-Whole0213 task and lesson retained in [part282](docs/history/stitchcad-devnotes-part282.md).
+Whole0213 task and lesson retained in [part282](docs/history/window11.md#stitchcad-devnotes-part282md).
 
-| [part282](docs/history/stitchcad-devnotes-part282.md) | whole0213 task and lesson | 39 lines, 4311 bytes, sha256:e20979fe… |
+| [part282](docs/history/window11.md#stitchcad-devnotes-part282md) | whole0213 task and lesson | 39 lines, 4311 bytes, sha256:e20979fe… |
 
-| [part283](docs/history/stitchcad-devnotes-part283.md) | whole0214 task and lesson | 29 lines, 3518 bytes, sha256:84a862d1… |
+| [part283](docs/history/window11.md#stitchcad-devnotes-part283md) | whole0214 task and lesson | 29 lines, 3518 bytes, sha256:84a862d1… |
 
-| [part284](docs/history/stitchcad-devnotes-part284.md) | whole0215 task and lesson | 26 lines, 3263 bytes, sha256:b90a4ab2… |
+| [part284](docs/history/window11.md#stitchcad-devnotes-part284md) | whole0215 task and lesson | 26 lines, 3263 bytes, sha256:b90a4ab2… |
 
-| [part285](docs/history/stitchcad-devnotes-part285.md) | whole0216 task and lesson | 27 lines, 3040 bytes, sha256:b7512a8c… |
+| [part285](docs/history/window11.md#stitchcad-devnotes-part285md) | whole0216 task and lesson | 27 lines, 3040 bytes, sha256:b7512a8c… |
 
-| [part286](docs/history/stitchcad-devnotes-part286.md) | whole0217 task and lesson | 30 lines, 3432 bytes, sha256:5751876e… |
+| [part286](docs/history/window11.md#stitchcad-devnotes-part286md) | whole0217 task and lesson | 30 lines, 3432 bytes, sha256:5751876e… |
 
-| [part287](docs/history/stitchcad-devnotes-part287.md) | whole0218 task and lesson | 20 lines, 1605 bytes, sha256:2b57018e… |
+| [part287](docs/history/window11.md#stitchcad-devnotes-part287md) | whole0218 task and lesson | 20 lines, 1605 bytes, sha256:2b57018e… |
 
-| [part288](docs/history/stitchcad-devnotes-part288.md) | whole0219 task and lesson | 39 lines, 3459 bytes, sha256:85b81741… |
+| [part288](docs/history/window11.md#stitchcad-devnotes-part288md) | whole0219 task and lesson | 39 lines, 3459 bytes, sha256:85b81741… |
 
-| [part289](docs/history/stitchcad-devnotes-part289.md) | whole0220 task and lesson | 29 lines, 3727 bytes, sha256:7a5531ac… |
+| [part289](docs/history/window11.md#stitchcad-devnotes-part289md) | whole0220 task and lesson | 29 lines, 3727 bytes, sha256:7a5531ac… |

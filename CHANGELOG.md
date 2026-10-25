@@ -112,6 +112,14 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0234 — instrument the D217 causal investigation
+
+.f.cleanup4.hunt: tracked native/lsof captures, two independently reproduced failure mechanisms,
+calibrated lifecycle controls and isolated installed-runtime inheritance experiments. Original
+descriptor identity/trigger remains unresolved; production refusal and cleanup guard stay strict.
+Complete prior task records retained303; window11 preserves the full prior raw snapshot and public
+retrieval under unchanged bounds, with watched exact committed-source reconstruction.
+
 ## STITCHCAD-G1-0233 — recheck blocked cleanup and stop
 
 .f.cleanup4: OS-visible census still refuses2 on PID8048/FD10. Real control passes49 fixtures/
@@ -149,29 +157,29 @@ Cargo xtask discussion owns incremental migration with pre-Cargo locality and in
 
 .f.cleanup3: required overdue cleanup; preserved recovery evidence and regenerated outputs.
 
-| [207](docs/history/stitchcad-changelog-part207.md) | whole0227 | sealed |
+| [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
-| [206](docs/history/stitchcad-changelog-part206.md) | whole0226 | sealed |
+| [206](docs/history/window11.md#stitchcad-changelog-part206md) | whole0226 | sealed |
 
-| [205](docs/history/stitchcad-changelog-part205.md) | whole0225 | sealed |
+| [205](docs/history/window11.md#stitchcad-changelog-part205md) | whole0225 | sealed |
 
-| [204](docs/history/stitchcad-changelog-part204.md) | whole0224 | sealed |
+| [204](docs/history/window11.md#stitchcad-changelog-part204md) | whole0224 | sealed |
 
-| [203](docs/history/stitchcad-changelog-part203.md) | whole0223 | sealed |
+| [203](docs/history/window11.md#stitchcad-changelog-part203md) | whole0223 | sealed |
 
-| [202](docs/history/stitchcad-changelog-part202.md) | whole0222 | sealed |
+| [202](docs/history/window11.md#stitchcad-changelog-part202md) | whole0222 | sealed |
 
-| [201](docs/history/stitchcad-changelog-part201.md) | whole0221 | sealed |
+| [201](docs/history/window11.md#stitchcad-changelog-part201md) | whole0221 | sealed |
 
-| [199](docs/history/stitchcad-changelog-part199.md) | 0219 | sealed |
+| [199](docs/history/window11.md#stitchcad-changelog-part199md) | 0219 | sealed |
 
-Whole0218/0217 ledgers retained in [part198](docs/history/stitchcad-changelog-part198.md).
+Whole0218/0217 ledgers retained in [part198](docs/history/window11.md#stitchcad-changelog-part198md).
 
-Whole retained whole0210 ledger: [part191](docs/history/stitchcad-changelog-part191.md).
+Whole retained whole0210 ledger: [part191](docs/history/window11.md#stitchcad-changelog-part191md).
 
-Whole retained whole0209 ledger: [part190](docs/history/stitchcad-changelog-part190.md).
+Whole retained whole0209 ledger: [part190](docs/history/window11.md#stitchcad-changelog-part190md).
 
-Whole whole0208 through0206 ledgers retained in [stitchcad-changelog-part188](docs/history/stitchcad-changelog-part188.md).
+Whole whole0208 through0206 ledgers retained in [stitchcad-changelog-part188](docs/history/window11.md#stitchcad-changelog-part188md).
 
 Whole0205/0204/0203 ledgers retained in [part187](docs/history/window10.md#stitchcad-changelog-part187md).
 
@@ -179,7 +187,7 @@ Whole0202/0201 ledgers retained in [part185](docs/history/window10.md#stitchcad-
 
 Whole retained record: [part186](docs/history/window10.md#stitchcad-changelog-part186md).
 
-Whole retained whole0198 and0197 ledgers: [part189](docs/history/stitchcad-changelog-part189.md).
+Whole retained whole0198 and0197 ledgers: [part189](docs/history/window11.md#stitchcad-changelog-part189md).
 
 Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention-proof.md#input-review-changelog-retention---whole0183).
 
@@ -351,26 +359,26 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 
 | [part187](docs/history/window10.md#stitchcad-changelog-part187md) | whole0205/0204/0203 ledgers | 14 lines, 612 bytes, sha256:0d29f076… |
 
-| [part188](docs/history/stitchcad-changelog-part188.md) | whole0208 through0206 ledgers | 20 lines, 1283 bytes, sha256:50381f4f… |
+| [part188](docs/history/window11.md#stitchcad-changelog-part188md) | whole0208 through0206 ledgers | 20 lines, 1283 bytes, sha256:50381f4f… |
 
-| [part189](docs/history/stitchcad-changelog-part189.md) | whole0198 and0197 ledgers | 10 lines, 605 bytes, sha256:032aed1a… |
+| [part189](docs/history/window11.md#stitchcad-changelog-part189md) | whole0198 and0197 ledgers | 10 lines, 605 bytes, sha256:032aed1a… |
 
-| [part190](docs/history/stitchcad-changelog-part190.md) | whole0209 ledger | 6 lines, 466 bytes, sha256:794856d3… |
+| [part190](docs/history/window11.md#stitchcad-changelog-part190md) | whole0209 ledger | 6 lines, 466 bytes, sha256:794856d3… |
 
-| [part191](docs/history/stitchcad-changelog-part191.md) | whole0210 ledger | 5 lines, 336 bytes, sha256:73d7dbf8… |
+| [part191](docs/history/window11.md#stitchcad-changelog-part191md) | whole0210 ledger | 5 lines, 336 bytes, sha256:73d7dbf8… |
 
-| [part192](docs/history/stitchcad-changelog-part192.md) | whole0211 ledger | 6 lines, 443 bytes, sha256:531f2a44… |
+| [part192](docs/history/window11.md#stitchcad-changelog-part192md) | whole0211 ledger | 6 lines, 443 bytes, sha256:531f2a44… |
 
-| [part193](docs/history/stitchcad-changelog-part193.md) | whole0212 ledger | 5 lines, 354 bytes, sha256:302f1610… |
+| [part193](docs/history/window11.md#stitchcad-changelog-part193md) | whole0212 ledger | 5 lines, 354 bytes, sha256:302f1610… |
 
-| [part194](docs/history/stitchcad-changelog-part194.md) | whole0213 ledger | 4 lines, 237 bytes, sha256:6a806fd0… |
+| [part194](docs/history/window11.md#stitchcad-changelog-part194md) | whole0213 ledger | 4 lines, 237 bytes, sha256:6a806fd0… |
 
-| [part195](docs/history/stitchcad-changelog-part195.md) | wholeSPINE.23r ledger | 4 lines, 235 bytes, sha256:b5fbaf01… |
+| [part195](docs/history/window11.md#stitchcad-changelog-part195md) | wholeSPINE.23r ledger | 4 lines, 235 bytes, sha256:b5fbaf01… |
 
-| [part196](docs/history/stitchcad-changelog-part196.md) | whole0214 ledger | 5 lines, 275 bytes, sha256:a71a4233… |
+| [part196](docs/history/window11.md#stitchcad-changelog-part196md) | whole0214 ledger | 5 lines, 275 bytes, sha256:a71a4233… |
 
-| [part197](docs/history/stitchcad-changelog-part197.md) | whole0216/0215 ledgers | 7 lines, 249 bytes, sha256:c77b778e… |
+| [part197](docs/history/window11.md#stitchcad-changelog-part197md) | whole0216/0215 ledgers | 7 lines, 249 bytes, sha256:c77b778e… |
 
-| [part198](docs/history/stitchcad-changelog-part198.md) | whole0218/0217 ledgers | 7 lines, 293 bytes, sha256:f965b1d7… |
+| [part198](docs/history/window11.md#stitchcad-changelog-part198md) | whole0218/0217 ledgers | 7 lines, 293 bytes, sha256:f965b1d7… |
 
-| [200](docs/history/stitchcad-changelog-part200.md) | whole0220 | sealed |
+| [200](docs/history/window11.md#stitchcad-changelog-part200md) | whole0220 | sealed |

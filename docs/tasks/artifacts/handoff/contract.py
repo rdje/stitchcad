@@ -152,6 +152,9 @@ assert SOURCE.read_bytes()==RAW
 print('handoff contract: %d fixtures / %d actual assertion reds / producer unchanged' % (len(CASES),len(FAULTS)))
 
 if sys.argv[1:] == ['--real']:
+    if sys.platform == 'darwin':
+        subprocess.run([sys.executable, '-I', '-B', str(Path(__file__).with_name('d217_probe.py')),
+                        'calibrate'], cwd=ROOT, check=True)
     (ROOT / 'target').mkdir(exist_ok=True)
     entry = ['bash', 'scripts/check_handoff.sh', '--idle-cua']
     baseline = subprocess.run(entry, cwd=ROOT, capture_output=True, text=True)

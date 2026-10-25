@@ -129,6 +129,7 @@ docs/tasks/artifacts/formula_structure/unsigned_round_reference.py	reference	G1-
 docs/tasks/artifacts/formula_structure/wanted_signature_mutations.py	native	G1-SLICE.5b.4c.h2.b.p.o.f.n11.3
 docs/tasks/artifacts/formula_structure/whole_phase_contract.py	delegate	G1-SLICE.5b.4c.h2.b.p.o.a21
 docs/tasks/artifacts/handoff/contract.py	output	G1-SLICE.5b.4c.h2.b.p.o.a24
+docs/tasks/artifacts/handoff/d217_probe.py	platform	G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt
 docs/tasks/artifacts/history_archive/capture_window2.py	output	G1-SLICE.5b.4c.h2.b.p.o.a26
 docs/tasks/artifacts/history_archive/capture_window3.py	output	G1-SLICE.5b.4c.h2.b.p.o.a26
 docs/tasks/artifacts/history_archive/capture_window4.py	output	G1-SLICE.5b.4c.h2.b.p.o.a27

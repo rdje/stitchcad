@@ -182,6 +182,7 @@ docs/tasks/artifacts/g0_exit/run_g0_exit_review_probes.sh	delegate	G1-SLICE.5b.4
 docs/tasks/artifacts/glossary/run_glossary_census.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/glossary/run_glossary_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/handoff/contract.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
+docs/tasks/artifacts/handoff/d217_probe.py	platform	G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt	Darwin libproc/lsof lifecycle diagnostics and isolated installed-runtime controls; no production checker exemption.
 docs/tasks/artifacts/handoff/run_handoff_probes.sh	delegate	G1-SLICE.5b.4c.h2.b.s	Whole shell source/heredoc bodies retained; early dispatcher, temporary/output and fixture selectors audit pending.
 docs/tasks/artifacts/history_archive/capture_window2.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.
 docs/tasks/artifacts/history_archive/capture_window3.py	output	G1-SLICE.5b.4c.h2.b.p	Owned fixture/materialization/output calls; destination/component and standalone guard audit pending.

@@ -1053,17 +1053,17 @@ D206 whole authored selector report/verified closure retained in [part128](../hi
 
 D207 whole authored report/verified closure retained in [part129](../history/window10.md#stitchcad-defects-part129md).
 
-D208 whole authored candidate title repair retained in [part130](../history/stitchcad-defects-part130.md).
+D208 whole authored candidate title repair retained in [part130](../history/window11.md#stitchcad-defects-part130md).
 
-D209 whole report/verified repair retained in [part131](../history/stitchcad-defects-part131.md).
+D209 whole report/verified repair retained in [part131](../history/window11.md#stitchcad-defects-part131md).
 
-D210/D211 whole authored reports/verified repairs retained in [part132](../history/stitchcad-defects-part132.md).
+D210/D211 whole authored reports/verified repairs retained in [part132](../history/window11.md#stitchcad-defects-part132md).
 
-D212/D213/D214 whole authored reports/verified repairs retained in [part133](../history/stitchcad-defects-part133.md).
+D212/D213/D214 whole authored reports/verified repairs retained in [part133](../history/window11.md#stitchcad-defects-part133md).
 
-D215 whole authored report/verified repair retained in [part134](../history/stitchcad-defects-part134.md).
+D215 whole authored report/verified repair retained in [part134](../history/window11.md#stitchcad-defects-part134md).
 
-D216 whole authored report/verified repair retained in [part135](../history/stitchcad-defects-part135.md).
+D216 whole authored report/verified repair retained in [part135](../history/window11.md#stitchcad-defects-part135md).
 
 - **D217** — unavailable Codex descriptor identities block cleanup/handoff since2026-10-24.
   Reproduce: OS-visible `bash scripts/check_handoff.sh --idle-cua` refuses2; PID8048/FD10
@@ -1075,6 +1075,9 @@ D216 whole authored report/verified repair retained in [part135](../history/stit
   No deletion; frozen fingerprints exact. Owner cleanup4, P1 before .a23.3.2: host runtime
   restart outside active harness; complete census, real held-file control, fresh cleanup plan/apply.
   Sources/recovery: book cleanup annex. Never kill the active harness or exempt unknown handles.
+  Hunt0234: revoked owned terminal and removed event-only directory both reproduce; ordinary unlink
+  does not. Isolated runtime inherits the removed-directory failure; clean/live controls pass.
+  Original descriptor identity/trigger remains unknown. Owner cleanup4.hunt, native probe/book plan.
 
 ## Verified closure awaiting archival
 

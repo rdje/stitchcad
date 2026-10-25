@@ -4,9 +4,10 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Active G1-SLICE; frontier .5b.4c.h2.b.p.o.f.cleanup4 (blocked by D217).
-- Next: restart the affected Codex runtime outside the active harness, rerun handoff and
-  handoff contract.py --real, then finish cleanup4 with a fresh plan and stop as requested.
+- Active G1-SLICE; frontier .5b.4c.h2.b.p.o.f.cleanup4.hunt (D217 investigation).
+- Next: external daemon restart with unrelated descriptors closed, then immediately capture
+  replacement descriptors before cleanup; run handoff/contract.py --real. See cleanup annex.
+- Continue causal investigation until repair is verified; then finish cleanup4 and stop.
 - Owner/evidence: docs/tasks/G1-SLICE-producers.md; D217 in docs/tasks/PLANNING.md;
   recovery commands/primary sources: docs/book/src/annexes/artifact-cleanup.md.
 - In-flight uncommitted: none; all issued jobs consumed.
