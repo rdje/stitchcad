@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0245 — exact rational products and quotients
+## STITCHCAD-G1-0246 — exact signed rational sums and differences
 
-.5c.1.2.1: cross-cancellation before widths, canonical signs/zero, typed zero divisor and exact
-reduced-component bit witnesses. Focused native target2/0; broader verification deferred.
+.5c.1.2.2: bounded private bigint workspace reduces before128-bit judgment, preserving cancellation
+and exact typed width witnesses. Focused native target3/0; broader/platform work stays deferred.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -380,3 +380,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part216](docs/history/stitchcad-changelog-part216.md) | whole0243 | 5 lines, 368 bytes, sha256:dce8d7bb… |
 
 | [part217](docs/history/stitchcad-changelog-part217.md) | whole0244 | 4 lines, 219 bytes, sha256:33c0c860… |
+
+| [part218](docs/history/stitchcad-changelog-part218.md) | whole0245 | 4 lines, 250 bytes, sha256:bbadee3a… |

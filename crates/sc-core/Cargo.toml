@@ -11,3 +11,5 @@ workspace = true
 
 [dependencies]
 sc-units = { path = "../sc-units", version = "0.1.0" }
+# Private, input-bounded arithmetic workspace; canonical values still use u128 magnitudes.
+num-bigint = "=0.4.6"

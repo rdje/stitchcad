@@ -39,12 +39,12 @@ checks actual scoped operands and annotations. [Coupled static review](annexes/f
 verifies those interfaces against independent rules and the actual reference.
 [Whole recipe acceptance](annexes/formula-checked-recipes.md) returns a complete immutable static
 proof with ordered source dependencies. Independent whole-factory review is complete;
-exact arithmetic, binding and execution remain pending.
+quantity-aware arithmetic, binding and execution remain pending.
 
 [Canonical rational values](annexes/formula-rationals.md) can now be constructed and reduced exactly,
 with full 128-bit component magnitudes, independent sign and a typed zero-denominator refusal.
-Exact products/quotients now cross-cancel before width checks and report typed zero/width refusals.
-Sums/differences, quantity-aware operators and recipe evaluation remain the next stages.
+All four rational operators now reduce before width checks and report typed zero/width refusals.
+Quantity-aware operators and recipe evaluation remain the next stages.
 
 ## Planned workflows
 

@@ -379,7 +379,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: whole scope and six proof boxes retained in [part314](../history/stitchcad-devnotes-part314.md).
 
 - ID: `G1-SLICE.5c.1.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: bounded exact arithmetic workspace and post-reduction numerator/denominator width refusal.
   Acceptance: exact arithmetic/cancellation before128-bit result judgment, typed measured refusal;
   no overflow/wrap or intermediate rounding. Operator kind/domain layers stay .5c.2.
@@ -387,30 +387,35 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.1.2.1`
   Status: `done`
-  Goal: STITCHCAD-G1-0245 delivers exact products/quotients and measured reduced-width refusals.
+  Goal: exact cross-cancelled products/quotients and measured width refusals verified in0245.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/tests/formula_rational_contract.rs
-  Acceptance: cross-cancel before multiplication; preserve full magnitudes/sign/canonical zero,
-  refuse zero divisors before zero shortcut. Fully reduced components above128 bits report exact
-  numerator/denominator width, fixed bound/token and formula_domain; no partial value or rounding.
-  Bounded partial products establish overflowing product width without dependencies or allocation.
-  One affected public contract target; broader/oracle/platform work stays .5c.1.3. Update book/live,
-  retain whole0244 task/ledger314/217 and completed proof nodes315 under fixed caps; commit before sums.
-
-- [x] REPRODUCE / ISSUE: predecessor67e0a41 rational.rs supplies construction only; source inspection0.
-- [x] ROOT CAUSE: cross-cancellation is required before width judgment; affected native target proves
-  admitted cancellation and exact129/256-bit refusals:2 passed, rc=0.
-- [x] FIX: checked products/quotients, zero-divisor priority and bounded exact width witness; focused
-  formula_rational_contract passes2/0, rc=0.
-- [x] ADDRESSED: primary profile cargo test -p sc-core --test formula_rational_contract:2 passed/0 failed, rc=0.
-- [x] NO REGRESSION: same focused target retains constructor cases, rc=0; broad/platform/oracle work stays .3.
-- [x] LOCKSTEP: three retained source/public intervals exact, rc=0; book/live/frontier sync.
-  promotion: declined (existing numeric/focused-check policy). Hooks required before commit.
+  Acceptance: whole scope/six proof boxes retained in [part316](../history/stitchcad-devnotes-part316.md).
 
 - ID: `G1-SLICE.5c.1.2.2`
-  Status: `pending`
+  Status: `done`
   Goal: signed sums/differences with bounded wider intermediate reduction before128-bit judgment.
   Acceptance: cancellation of wide intermediate products stays exact, typed width errors reflect
   the fully reduced result; one focused check and later .5c.1.3 oracle integration.
+  Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/tests/formula_rational_contract.rs;crates/sc-core/Cargo.toml;Cargo.lock
+  Own0246: these implementation/contract/dependency files; private
+  cached num-bigint0.4.6 intermediates, published MIT OR Apache-2.0/Rust1.60/std metadata verified.
+  Admitted operands bound the raw numerator to257 bits/denominator256. Reduce before narrowing;
+  preserve canonical sign/zero and exact measured error witnesses. No numeric quantity/evaluator claim.
+  Update existing edge-rational decision with workspace separation; native one-target proof and
+  offline dependency resolution, platform/full campaigns deferred .5c.1.3. Retain completed task/
+  policy/ledger316/317/218 under fixed caps and commit before oracle integration.
+
+
+- [x] REPRODUCE / ISSUE: 6d96bc7 lacks sum/difference methods; source inspection confirms, rc=0.
+- [x] ROOT CAUSE: raw257-bit sums can reduce to admitted128-bit values; cargo test --offline -p
+  sc-core --test formula_rational_contract proves wide cancellation,3 passed/0 failed, rc=0.
+- [x] FIX: private bounded bigints reduce before narrowing; exact measured bits/sign/canonical zero.
+- [x] ADDRESSED: same focused native target covers signed differences and129/257/256-bit refusals,
+  output3 passed/0 failed, rc=0. Offline metadata resolves four MIT/Apache licensed packages, rc=0.
+- [x] NO REGRESSION: same target retains constructor/product/quotient checks,3/0, rc=0;
+  broader/platform verification and independent oracle remain .5c.1.3.
+- [x] LOCKSTEP: retained316/317/218 preserve whole Git intervals/public reads, rc=0; book render0/live/frontier synced.
+  promotion: existing edge/formula rational decision records bounded workspace/dependency choice.
 
 - ID: `G1-SLICE.5c.1.3`
   Status: `pending`

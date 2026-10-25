@@ -115,3 +115,70 @@ fn products_and_quotients_cross_cancel_before_width_refusal() {
         assert_eq!(error.diagnostic_code(), "formula_division");
     }
 }
+
+#[test]
+#[allow(clippy::expect_used)]
+fn signed_sums_reduce_wide_intermediates_before_limits() {
+    let value = |numerator, denominator, negative| {
+        R::new(numerator, denominator, negative).expect("admitted fixture value")
+    };
+    assert_eq!(
+        value(2, 3, false).checked_sub(value(1, 2, false)),
+        Ok(value(1, 6, false))
+    );
+    assert_eq!(
+        value(1, 2, false).checked_sub(value(2, 3, false)),
+        Ok(value(1, 6, true))
+    );
+    assert_eq!(
+        value(2, 3, true).checked_add(value(1, 2, true)),
+        Ok(value(7, 6, true))
+    );
+    assert_eq!(R::ZERO.checked_sub(R::ONE), Ok(R::from_signed_integer(-1)));
+    assert_eq!(R::ZERO.checked_sub(R::ZERO), Ok(R::ZERO));
+    let maximum = u128::MAX;
+    let wide = value(maximum, maximum - 1, false);
+    // The raw numerator needs 257 bits, but its reduced form fits and must remain admitted.
+    assert_eq!(
+        wide.checked_add(wide),
+        Ok(value(maximum, (maximum - 1) / 2, false))
+    );
+    assert_eq!(
+        wide.checked_add(value(maximum, maximum - 1, true)),
+        Ok(R::ZERO)
+    );
+    assert_eq!(
+        value(maximum - 1, maximum, false).checked_add(value(1, maximum, false)),
+        Ok(R::ONE)
+    );
+    assert_eq!(wide.checked_sub(value(1, maximum - 1, false)), Ok(R::ONE));
+    let failures = [
+        (
+            value(maximum, 1, false).checked_add(R::ONE),
+            C::Numerator,
+            129,
+        ),
+        (
+            wide.checked_add(value(maximum - 1, maximum - 2, false)),
+            C::Numerator,
+            257,
+        ),
+        (
+            value(1, maximum, false).checked_sub(value(1, maximum - 1, false)),
+            C::Denominator,
+            256,
+        ),
+    ];
+    for (result, component, measured_bits) in failures {
+        let error = result.expect_err("excessive fully reduced component");
+        assert_eq!(
+            error,
+            FormulaRationalError::RationalWidth {
+                component,
+                measured_bits
+            }
+        );
+        assert_eq!(error.diagnostic_code(), "formula_domain");
+        assert_eq!(error.rational_bit_bound(), Some(128));
+    }
+}

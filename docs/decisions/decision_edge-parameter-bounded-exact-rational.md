@@ -45,3 +45,20 @@ round.
   point. Do not pre-emptively widen `sc-units`.
 - Related: [[decision_numerical-contract-fixed-point]] (the ppm `Ratio` this is distinct from),
   [[decision_entity-identity-ulid-injected-generator]] (the identity this parameter attaches to).
+
+## Formula workspace implementation — 2026-10-25
+
+Leaf `G1-SLICE.5c.1.2.2` implements formula sums/differences with private num-bigint 0.4.6
+intermediates, pinned in Cargo.toml/Cargo.lock. Published cached package metadata and offline Cargo
+resolution identify MIT OR Apache-2.0 for num-bigint, num-integer and num-traits; autocfg is
+Apache-2.0 OR MIT. The package's [upstream license](https://github.com/rust-num/num-bigint)
+also offers MIT/Apache-2.0. No optional random/serialization feature is required.
+
+FormulaRational retains private canonical u128 magnitudes and an independent sign. Construction,
+products and quotients need no allocation; sums form signed cross-products in the bounded private
+workspace. Two admitted 128-bit components give at most a 257-bit raw numerator and 256-bit positive
+denominator. Euclidean reduction cannot increase either width. Narrow only the reduced components;
+otherwise refuse with their exact bit count. This admits wide intermediates that cancel without
+inventing a custom wide-integer kernel. The primitive exposes no dependency type and changes no
+stored edge parameter, quantity domain or binding rule. One native contract passes; independent
+oracle/platform integration is owned by `.5c.1.3`, with broad campaigns deferred by delivery policy.

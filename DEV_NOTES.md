@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — exact signed rational sums and differences
+
+0246 .5c.1.2.2 computes signed cross-products in a private num-bigint0.4.6 workspace. Admitted
+inputs bound numerator/denominator to257/256 bits; gcd reduction precedes the u128 return check.
+This preserves cancellation, full signs and canonical zero while reporting exact reduced-component
+widths. Construction/product/quotient paths remain allocation-free; stored ontology values and
+quantity/evaluator contracts are unchanged. Offline Cargo resolves only num-bigint0.4.6,
+num-integer0.1.46, num-traits0.2.19 and autocfg1.5.1; published metadata licenses all MIT/Apache2.
+
+One affected native target passes3/0, rc=0, including admitted257-bit intermediate cancellation,
+negative differences, zero and reduced129/257/256-bit refusals. No broad/platform pass claimed;
+independent oracle/platform integration stays .5c.1.3. Book/live scope matches all four operators.
+Whole0245 task/ledger and completed transport policy retained316/218/317 with source identities.
+Promotion: existing edge/formula rational decision records the private dependency/workspace choice.
+
 ## _(2026-10-25 UTC)_ — exact rational products and quotients
 
 0245 .5c.1.2.1 cross-cancels normalized factors before checked multiplication, so oversized raw

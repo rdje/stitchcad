@@ -1,10 +1,11 @@
 //! Canonical formula values with independent sign and full 128-bit component magnitudes.
 //!
 //! These values do not carry a formula kind, bind storage or evaluate syntax. Products and quotients
-//! cross-cancel before checking reduced widths; sums and their wider workspace remain separate work.
+//! cross-cancel before checking reduced widths; sums use bounded private wider intermediates.
 
 use super::FormulaRationalComponent;
 use core::fmt;
+use num_bigint::{BigInt, BigUint, Sign};
 
 /// A refusal while constructing or computing a canonical formula rational value.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -17,7 +18,7 @@ pub enum FormulaRationalError {
     RationalWidth {
         /// The excessive reduced component.
         component: FormulaRationalComponent,
-        /// Exact bit count of that component after cross-cancellation.
+        /// Exact bit count of that component after full reduction.
         measured_bits: u32,
     },
 }
@@ -214,6 +215,83 @@ impl FormulaRational {
             negative: rhs.negative,
         })
     }
+
+    /// Computes the exact sum and reduces wider intermediates before judging result widths.
+    ///
+    /// # Errors
+    ///
+    /// Returns [`FormulaRationalError::RationalWidth`] when a fully reduced component exceeds
+    /// 128 magnitude bits. The numerator workspace is bounded to 257 bits by the admitted operands.
+    pub fn checked_add(self, rhs: Self) -> Result<Self, FormulaRationalError> {
+        self.checked_sum(rhs, false)
+    }
+
+    /// Computes the exact difference without rounding or prematurely narrowing cancellation.
+    ///
+    /// # Errors
+    ///
+    /// Returns [`FormulaRationalError::RationalWidth`] for an excessive fully reduced component.
+    pub fn checked_sub(self, rhs: Self) -> Result<Self, FormulaRationalError> {
+        self.checked_sum(rhs, true)
+    }
+
+    fn checked_sum(self, rhs: Self, subtract: bool) -> Result<Self, FormulaRationalError> {
+        // Each cross-product has at most 256 bits; their signed sum has at most 257. No unbounded
+        // integer enters this private workspace from a caller or from source text.
+        let mut left = BigInt::from(self.numerator) * BigInt::from(rhs.denominator);
+        let mut right = BigInt::from(rhs.numerator) * BigInt::from(self.denominator);
+        if self.negative {
+            left = -left;
+        }
+        if rhs.negative ^ subtract {
+            right = -right;
+        }
+        let numerator = left + right;
+        if numerator.sign() == Sign::NoSign {
+            return Ok(Self::ZERO);
+        }
+        let negative = numerator.sign() == Sign::Minus;
+        let denominator = BigUint::from(self.denominator) * BigUint::from(rhs.denominator);
+        let divisor = gcd_wide(numerator.magnitude().clone(), denominator.clone());
+        // The denominator is positive, so the gcd is nonzero. Only the fully reduced components
+        // cross the u128 return boundary; wide intermediates cannot cause a false refusal.
+        let reduced_numerator = numerator.magnitude() / &divisor;
+        let reduced_denominator = denominator / divisor;
+        Ok(Self {
+            numerator: narrow_sum_component(
+                &reduced_numerator,
+                FormulaRationalComponent::Numerator,
+            )?,
+            denominator: narrow_sum_component(
+                &reduced_denominator,
+                FormulaRationalComponent::Denominator,
+            )?,
+            negative,
+        })
+    }
+}
+
+fn gcd_wide(mut lhs: BigUint, mut rhs: BigUint) -> BigUint {
+    let zero = BigUint::from(0_u8);
+    while rhs != zero {
+        let remainder = &lhs % &rhs;
+        lhs = rhs;
+        rhs = remainder;
+    }
+    lhs
+}
+
+// Called only on reduced components from checked_sum: reduction cannot increase their maximum
+// 257-bit width, so converting the bit count from u64 to u32 is lossless.
+#[allow(clippy::cast_possible_truncation)]
+fn narrow_sum_component(
+    value: &BigUint,
+    component: FormulaRationalComponent,
+) -> Result<u128, FormulaRationalError> {
+    u128::try_from(value).map_err(|_| FormulaRationalError::RationalWidth {
+        component,
+        measured_bits: value.bits() as u32,
+    })
 }
 
 fn checked_product(
