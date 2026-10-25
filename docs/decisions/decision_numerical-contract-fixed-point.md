@@ -176,3 +176,5 @@ review before adoption. No new dependency/license or native/WASM capability is c
 Implementation0258: arc_length now uses the certified endpoint, exact wide rounding and final width/
 scalar checks. Native arc2/0 with23 independent rows, numeric6/0 and selected library67/0 pass; the
 compiled endpoint is tied to the reproduced certificate. Source provenance remains .5e.3.
+
+Remaining trig: fact_trig-midpoints-and-resource-bound.md proves midpoint exclusion; practical resources remain .5d.1.2.2.2.

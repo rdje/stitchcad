@@ -101,3 +101,4 @@
 - [`stitchcad-ui-baseline-and-quality`](docs/decisions/decision_stitchcad-ui-baseline-and-quality.md)
 - [`table-cells-escape-pipes-render-to-settle`](docs/decisions/decision_table-cells-escape-pipes-render-to-settle.md)
 - [`unnamed-seats-acting-authority`](docs/decisions/decision_unnamed-seats-acting-authority.md)
+- [`fact_trig-midpoints-and-resource-bound`](docs/decisions/fact_trig-midpoints-and-resource-bound.md)

@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — exact trig midpoint exclusion and resource boundary
+
+0260 .5d.1.2.2.1 applies independently published rational-value restrictions to the actual ppm/
+microdegree quanta. Finite trig/inverse answers cannot equal half-output boundaries; valid shrinking
+enclosures would eventually decide each input after exact poles/branches/axes. The exact producer
+checks quantum substitutions and the scale1 counterexample,161 recurrence/binomial evaluations,
+three roots and derived width arithmetic, rc=0. The written mean-value/polynomial proof supplies a
+coarse sufficient precision bound, not a practical budget or evidence of any actual hard input.
+No production trig algorithm/precision cap is admitted. P1 .2 owns usable all-input resources before
+.5d.3.2/.3; source theorem/proof/scope are promoted to fact_trig-midpoints-and-resource-bound.md.
+Whole packing/static scope group and ledger retain336/337/232; book/map/live pointers align.
+
 ## _(2026-10-25 UTC)_ — pack history at the fixed working limit
 
 0259 .5d.1.2.2.h captures53 full committed files (174350B) in a46666B content-addressed payload.

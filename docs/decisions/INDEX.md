@@ -66,3 +66,5 @@ Records carry an `answers:` line so a question can find them — that is what ma
 | [`decision_call-lookup.md`](decision_call-lookup.md) | `decision` | exact call sources, callee-first refusal and truthful envelope alternatives; grammar unchanged |
 | [`decision_dim.md`](decision_dim.md) | `decision` | complete actual/wanted expression operands and truthful multiple-error selection; grammar unchanged |
 | [`decision_mcp-transports.md`](decision_mcp-transports.md) | `decision` | stdio-first; connection profiles admitted by evidence from G1 |
+
+| [`fact_trig-midpoints-and-resource-bound.md`](fact_trig-midpoints-and-resource-bound.md) | `fact` | exact trig midpoint exclusion; usable resource strategy remains open |

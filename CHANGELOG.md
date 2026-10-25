@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0259 — pack history before the next numerical feature
+## STITCHCAD-G1-0260 — distinguish trig midpoint termination from resource admission
 
-.5d.1.2.2.h: window12 retains53 exact committed files; public source/read/materialization pass.
-Prior11 windows unchanged; fixed caps and live navigation retained. Whole closed scopes/journal/ledger sealed.
+.5d.1.2.2.1: rational-value theorem excludes actual quantum midpoints; exact161 polynomial
+identity checks/scale falsifier pass. Practical all-input trig resources remain P1 .2; no implementation claimed.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -408,3 +408,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part230](docs/history/window12.md#stitchcad-changelog-part230md) | whole0257 | 4 lines, 305 bytes, sha256:bd717196… |
 
 | [part231](docs/history/stitchcad-changelog-part231.md) | whole0258 | 4 lines, 285 bytes, sha256:01d64e99… |
+
+| [part232](docs/history/stitchcad-changelog-part232.md) | whole0259 | 4 lines, 280 bytes, sha256:2f9a1bb3… |

@@ -306,29 +306,23 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5b.3d.a`
   Status: `done`
   Goal: D147 truthful ambiguity arguments for ordered authored pairs and input/let collisions.
-  Acceptance: name/both ordered origins and real available sources; no values or forged indices.
-  Verification/Commit: `STITCHCAD-G1-0109`; [exact proof](G1-SLICE-names.md#d147-ambiguity-argument-protocol).
+  Acceptance: [whole original scope/verification](../history/stitchcad-devnotes-part337.md).
+
 - ID: `G1-SLICE.5b.3d.b`
   Status: `done`
   Goal: D148 complete whole-source syntax/input phase before any ordered static inference.
-  Acceptance: later syntax/input defects precede earlier static defects; original spans/ordinals,
-  bounds and no partial plan; detached statement contract unchanged.
-  Verification/Commit: `STITCHCAD-G1-0110`; [exact proof](G1-SLICE-names.md#d148-whole-source-phase-protocol).
+  Acceptance: [whole original scope/verification](../history/stitchcad-devnotes-part337.md).
+
 - ID: `G1-SLICE.5b.3d.c`
   Status: `done`
   Goal: shared public/reference static case contract and D149 prerequisite status controls.
-  Acceptance: independent kinds/arguments/source order/owners, actual compiled body faults;
-  preserve scoped coverage and explicitly own D150 competing syntax/literal phase discrepancy.
-  Verification/Commit: `STITCHCAD-G1-0111`; [exact proof](G1-SLICE-names.md#shared-static-contract-protocol).
+  Acceptance: [whole original scope/verification](../history/stitchcad-devnotes-part337.md).
+
 - ID: `G1-SLICE.5b.3d.d`
   Status: `done`
   Goal: D150 complete whole syntax/structure before literal-input conversion, then static inference.
-  Acceptance: competing earlier bad literal/later syntax agrees with actual public parser; raw
-  header priorities/lexical preflight and detached scopes retained; original owners/locations.
-  P1 immediately after .c, before coupled final closure/.4; grammar/token/bounds unchanged.
-  Work unit STITCHCAD-G1-0112; predecessor3079630 clean, brief0/untracked, no pending jobs.
-  Protocol: [D150 phase plan](G1-SLICE-names.md#d150-separated-input-phases-protocol).
-  Verification/Commit: `STITCHCAD-G1-0112`; [final proof](G1-SLICE-names.md#d150-separated-input-phases-protocol).
+  Acceptance: [whole original scope/verification](../history/stitchcad-devnotes-part337.md).
+
 - ID: `G1-SLICE.5b.4`
   Status: `in_progress`
   Goal: validate the whole ordered recipe and construct its immutable typed dependency graph.
@@ -481,22 +475,31 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/window12.md#stitchcad-devnotes-part331md).
 
 - ID: `G1-SLICE.5d.1.2.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: exact trig/inverse interval/resource plan before code.
+  Children .1 midpoint/qualitative termination; .2 practical admitted-input resource strategy.
+- ID: `G1-SLICE.5d.1.2.2.1`
+  Status: `done`
+  Goal:0260 exact trig midpoint exclusion; distinguish termination from usable resources.
+  Paths: docs/tasks/artifacts/formula_structure/trig_midpoint_certificate.py;docs/decisions/fact_trig-midpoints-and-resource-bound.md
+- [x] REPRODUCE: d5ca0b7 plan lacks a trig resource strategy; git source read, rc=0.
+- [x] ROOT CAUSE: Calcut Corollary5/Nunn rational-value theorem read; exact ppm/degree substitution
+  via python3 -I -B docs/tasks/artifacts/formula_structure/trig_midpoint_certificate.py, rc=0.
+- [x] FIX: scoped midpoint/conditional termination proof and coarse resource-gap derivation in fact.
+- [x] ADDRESSED: same producer:8 theorem entries/9 axes,161 exact identities/3 roots, rc=0.
+- [x] NO REGRESSION: scale1 falsifier distinguishes the actual quantum; same producer rc=0.
+  No Rust change; practical resources P1 .2 before .5d.3.2/.3, broad .5d.4/pre-push.
+- [x] LOCKSTEP:336/337/232 whole Git/public records and book render pass0; fact/INDEX/map align.
+  Promotion: fact_trig-midpoints-and-resource-bound.md; no production trig admission claimed.
+- ID: `G1-SLICE.5d.1.2.2.2`
+  Status: `pending`
+  Goal: P1 practical trig/inverse interval/resource strategy over all admitted inputs before .5d.3.2/.3.
 
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`
-  Goal:0259 pack window12; retain closed scopes/oldest journal/0258 ledger under fixed caps.
+  Goal:0259 packed window12/whole closed scopes under fixed caps.
   Paths: docs/history/;.doctrine/history_archive/;DEV_NOTES.md;docs/tasks/artifacts/history_archive/capture_window12.py
-- [x] REPRODUCE: capture_window12.py observes64 Markdown at f168eec, rc=0.
-- [x] ROOT CAUSE: same producer verifies53 raw records plus11 catalogs; working ceiling64, rc=0.
-- [x] FIX: deterministic payload/catalog/manifest; copy/verify/use before exactly53 checked removals.
-- [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/history_archive/capture_window12.py;
-  53 Git/materialize/public reads exact,11 prior windows unchanged, rc=0.
-- [x] NO REGRESSION: history_archive.py --root . prove-source window12:53 exact; verify-retention
-  archive: OK, rc=0. Broad controls deferred to integration/pre-push; no product Rust changed.
-- [x] LOCKSTEP:332–335/231 whole Git/public intervals, rc=0; live/book align.
-  Promotion declined: history-window decision already owns the unchanged contract.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part336.md).
 
 - ID: `G1-SLICE.5d.2`
   Status: `in_progress`

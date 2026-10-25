@@ -532,3 +532,13 @@ remains deferred. Future focused invocations filter that library check explicitl
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --lib compiled_pi_endpoint_matches_the_reproduced_certificate
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_arc_value_contract --test formula_numeric_contract
 ```
+
+## Remaining trig/inverse plan
+
+Sin/cos/tan and atan/atan2 remain unimplemented. For the actual ppm/microdegree quanta,
+rational-value restrictions exclude exact rounding midpoints, so converging valid enclosures would
+eventually decide each finite admitted input after exact pole/axis/branch handling. This is a
+qualitative termination proof. A generic algebraic separation estimate gives an impractical upper
+bound; it does not establish actual hard inputs or justify an arbitrary precision cutoff.
+The full derivation/sources are in docs/decisions/fact_trig-midpoints-and-resource-bound.md;
+G1-SLICE.5d.1.2.2.2 still owns usable all-input resource accounting before implementation.
