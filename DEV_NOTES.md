@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — exact quantity binary operators and ppm scaling
+
+0249 .5c.2.2 adds four methods over completed numeric values, reusing kind signatures and
+applying scalar domains after each completed result. Ppm scales belong inside multiplication/
+division before reduction/width judgment. A private three-factor384-bit-bounded workspace avoids
+false refusal when raw multiplication exceeds128 bits but final scaling cancels it. The same
+reduction helper serves signed sums; unscaled public product/quotient paths remain allocation-free.
+Binary errors retain actual operator/kinds and the angle-length arc_length hint. Scalar errors gain
+the actual constructor/operator token; no source context is invented. Zero divisors refuse first.
+
+One focused command runs the two affected native targets: numeric3/0 and rational4/0, rc=0.
+Authored cases cover dimension/scaling combinations, raw129-bit/scaled admission, genuine numerator/
+denominator widths, zero priority and exact Count/length excess before later rescue. Existing34
+Fraction rows remain green. No broad/platform/mutation pass claimed. Book/live/frontier align;
+whole0248 task/ledger retained320/221. Promotion declined: existing numeric contract/focused policy.
+
 ## _(2026-10-25 UTC)_ — completed numeric values and exact scalar domains
 
 0248 .5c.2.1 pairs a private numeric kind with the exact rational in internal units. Constructor

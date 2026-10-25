@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0248 — completed numeric values and exact scalar domains
+## STITCHCAD-G1-0249 — exact binary quantity operators and scaling
 
-.5c.2.1: immutable numeric kind/rational, exact signed length/area and nonnegative Count domains,
-normalized literal bridge and typed actual-value refusals. Focused native target2/0; operators next.
+.5c.2.2: all four quantity operators use normative kind signatures, fused ppm scaling/reduction,
+exact result domains and typed witnesses. Focused affected targets7/0; unary/comparison next.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -386,3 +386,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part219](docs/history/stitchcad-changelog-part219.md) | whole0246 | 4 lines, 266 bytes, sha256:02057330… |
 
 | [part220](docs/history/stitchcad-changelog-part220.md) | whole0247 | 4 lines, 278 bytes, sha256:df97bf2e… |
+
+| [part221](docs/history/stitchcad-changelog-part221.md) | whole0248 | 4 lines, 275 bytes, sha256:57ab94fe… |

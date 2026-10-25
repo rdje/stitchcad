@@ -414,31 +414,35 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5c.2.1`
   Status: `done`
-  Goal: immutable completed numeric values with exact scalar-domain validation and normalized input bridge.
-  Acceptance: only five numeric kinds; length/area exact signed limits, nonnegative fractional Count,
-  Angle/Ratio retain full rational range until binding; reject before rounding or later cancellation.
-  Own0248: numeric.rs, recipe exports, new focused native formula_numeric_contract target; no evaluator
-  or binding. Typed errors retain actual kind/exact value/bounds without invented source context.
+  Goal: immutable completed numeric values/domains and normalized literal bridge verified0248.
   Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_numeric_contract.rs
-  Book/status-map/live/frontier sync; completed oracle task/ledger retained319/220 under fixed caps.
-
-
-- [x] REPRODUCE / ISSUE: predecessor6b1de3d has kind metadata and untyped rationals only;
-  numeric value source absent, source inspection rc=0.
-- [x] ROOT CAUSE: exact completed domains differ from rounded input and signed storage bounds;
-  cargo test --offline -p sc-core --test formula_numeric_contract:2 passed/0 failed, rc=0.
-- [x] FIX: immutable numeric value validates exact signed length/area and nonnegative Count;
-  normalized input bridge preserves internal integers, typed actual-kind/value/bound refusals.
-- [x] ADDRESSED: same focused native target checks inclusive bounds/fractional excess, all kinds,
-  full-width temporaries/input rounding/raw turns,2 passed/0 failed, rc=0.
-- [x] NO REGRESSION: constructor bridge exercises existing literal conversion,2/0, rc=0;
-  primitive/operator syntax unchanged; broad/platform checks remain .5c.4/pre-push.
-- [x] LOCKSTEP: source/public retained319/220 exact, rc=0; API map/book/live/frontier aligned.
-  promotion: declined (existing exact numeric contract and focused-check policy).
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part320.md).
 
 - ID: `G1-SLICE.5c.2.2`
-  Status: `pending`
+  Status: `done`
   Goal: exact four-operator quantity scaling and per-completed-result scalar domains.
+  Own0249: numeric.rs, rational.rs private scaled workspace and existing numeric/rational targets.
+  Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/tests/formula_numeric_contract.rs
+  Reuse normative kind signatures, ppm internal units and fused scaled products/quotients. Reduce
+  the complete operator before128-bit width judgment; apply scalar domains before later rescue.
+  Typed errors retain actual binary kinds/arc_length hint and scalar operation/value/bounds.
+  One focused command for two affected native targets; broad/platform/mutation work .5c.4/pre-push.
+  Retain completed numeric task/ledger320/221 and whole oldest journal321 if needed for fixed caps;
+  sync book/live/current frontier, then commit before unary/comparison work.
+
+- [x] REPRODUCE / ISSUE: fa6009e numeric values lack operator methods; source inspection rc=0.
+- [x] ROOT CAUSE: judging unscaled ppm intermediates would falsely refuse valid results; focused
+  cargo test --offline -p sc-core --test formula_numeric_contract --test formula_rational_contract
+  proves scaled129-bit cancellation; output numeric3/0+rational4/0, rc=0.
+- [x] FIX: four quantity methods/fused scaling, reused signatures and exact completed-result domains;
+  actual dimension/scalar operation witnesses and arc_length hint, source inspection rc=0.
+- [x] ADDRESSED: same focused two-target command proves scaling, kind/zero refusal and exact
+  numerator/denominator/scalar witnesses; output7 passed/0 failed total, rc=0.
+- [x] NO REGRESSION: same target command retains constructor/literal and34 independent Fraction
+  rows,7/0 total, rc=0; broad/platform/mutation work stays .5c.4/pre-push.
+- [x] LOCKSTEP: whole320/221 source/public intervals exact, rc=0; book/live/frontier aligned.
+  promotion: declined (established numeric contract and focused-check policy).
+
 - ID: `G1-SLICE.5c.2.3`
   Status: `pending`
   Goal: exact unary negation/square and same-kind numeric comparisons.

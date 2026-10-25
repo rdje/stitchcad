@@ -252,17 +252,54 @@ impl FormulaRational {
         }
         let negative = numerator.sign() == Sign::Minus;
         let denominator = BigUint::from(self.denominator) * BigUint::from(rhs.denominator);
-        let divisor = gcd_wide(numerator.magnitude().clone(), denominator.clone());
+        Self::from_wide_parts(numerator.magnitude().clone(), denominator, negative)
+    }
+
+    /// Fuses quantity scaling into a product/quotient before any reduced-width judgment.
+    /// The three admitted factors bound each raw component to 384 bits.
+    pub(super) fn checked_scaled(
+        self,
+        rhs: Self,
+        scale: Self,
+        divide: bool,
+    ) -> Result<Self, FormulaRationalError> {
+        if divide && rhs.is_zero() {
+            return Err(FormulaRationalError::ZeroDivisor);
+        }
+        if self.is_zero() || scale.is_zero() || (!divide && rhs.is_zero()) {
+            return Ok(Self::ZERO);
+        }
+        let (right_numerator, right_denominator) = if divide {
+            (rhs.denominator, rhs.numerator)
+        } else {
+            (rhs.numerator, rhs.denominator)
+        };
+        let numerator = BigUint::from(self.numerator)
+            * BigUint::from(right_numerator)
+            * BigUint::from(scale.numerator);
+        let denominator = BigUint::from(self.denominator)
+            * BigUint::from(right_denominator)
+            * BigUint::from(scale.denominator);
+        Self::from_wide_parts(
+            numerator,
+            denominator,
+            self.negative ^ rhs.negative ^ scale.negative,
+        )
+    }
+
+    fn from_wide_parts(
+        numerator: BigUint,
+        denominator: BigUint,
+        negative: bool,
+    ) -> Result<Self, FormulaRationalError> {
+        let divisor = gcd_wide(numerator.clone(), denominator.clone());
         // The denominator is positive, so the gcd is nonzero. Only the fully reduced components
         // cross the u128 return boundary; wide intermediates cannot cause a false refusal.
-        let reduced_numerator = numerator.magnitude() / &divisor;
+        let reduced_numerator = numerator / &divisor;
         let reduced_denominator = denominator / divisor;
         Ok(Self {
-            numerator: narrow_sum_component(
-                &reduced_numerator,
-                FormulaRationalComponent::Numerator,
-            )?,
-            denominator: narrow_sum_component(
+            numerator: narrow_component(&reduced_numerator, FormulaRationalComponent::Numerator)?,
+            denominator: narrow_component(
                 &reduced_denominator,
                 FormulaRationalComponent::Denominator,
             )?,
@@ -281,10 +318,10 @@ fn gcd_wide(mut lhs: BigUint, mut rhs: BigUint) -> BigUint {
     lhs
 }
 
-// Called only on reduced components from checked_sum: reduction cannot increase their maximum
-// 257-bit width, so converting the bit count from u64 to u32 is lossless.
+// Called only on reduced sums or scaled products: reduction cannot increase their maximum
+// 384-bit width, so converting the bit count from u64 to u32 is lossless.
 #[allow(clippy::cast_possible_truncation)]
-fn narrow_sum_component(
+fn narrow_component(
     value: &BigUint,
     component: FormulaRationalComponent,
 ) -> Result<u128, FormulaRationalError> {

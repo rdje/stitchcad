@@ -2,7 +2,7 @@
 
 The recipe API now constructs immutable exact rational values with independent sign and full
 128-bit numerator and denominator magnitudes. Construction reduces fractions without rounding.
-Construction and products/quotients allocate no workspace. Sums/differences use a private bounded
+FormulaRational construction and its unscaled products/quotients allocate no workspace. Sums use a private bounded
 wide-integer workspace; the public value retains its fixed 128-bit components.
 
 | API | Available behavior |
@@ -112,7 +112,7 @@ are recorded in the repository's edge/formula rational decision; platform verifi
 
 This is the value kernel for the [numeric contract](../spec/formula-language.md#42-exact-arithmetic-and-the-two-places-a-value-rounds).
 It applies no quantity kind, scalar domain, signed storage conversion or source binding.
-Quantity-aware operator wiring and evaluator integration remain later slices.
+Whole-expression numeric execution and evaluator integration remain later slices.
 The 128-bit result limit remains unchanged.
 
 ## Completed numeric values and exact domains
@@ -126,11 +126,15 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | FormulaNumericValue | Private admitted kind and exact internal-unit rational |
 | FormulaNumericError | Typed nonnumeric-kind, scalar-domain or rational refusal |
 | NonNumericKind | formula_dimension with the actual refused kind |
-| ScalarDomain | formula_domain with kind, exact value, minimum and optional maximum |
+| ScalarDomain | formula_domain with actual operation, kind, exact value, minimum and optional maximum |
+| BinaryDimension | formula_dimension with the actual operator and left/right kinds |
+| arc_length_hint | Identifies the absent angle-times-length product |
 | Rational | Retains the underlying FormulaRationalError and diagnostic family |
 | kind | Inspect the admitted quantity kind |
 | rational | Inspect the exact canonical internal-unit value |
 | from_literal | Import a normalized literal's once-rounded integer and kind |
+| checked_add / checked_sub | Same-kind exact sum/difference with completed-result domains |
+| checked_mul / checked_div | Permitted ordered signatures and exact ppm scaling before width/domain checks |
 
 Length and area use inclusive signed limits of 10⁹ micrometres and 10¹⁸ square micrometres.
 The check compares the exact fraction with the bound: limit + 1/10 refuses even if binding would
@@ -154,9 +158,43 @@ assert!(FormulaNumericValue::new(FormulaKind::Length, excess).is_err());
 
 The normalized-literal bridge performs no new conversion. For example, a normalized 0.0000004 ratio
 is already zero ppm; importing it cannot recover a hidden fraction. A normalized 720 deg input
-remains 720,000,000 microdegrees. The error contains only actual kind/value/bounds; expression,
-operation and statement context belongs to later evaluator integration. Quantity-aware operators,
-comparison, built-ins and binding are still separate pending features.
+remains 720,000,000 microdegrees. The error contains actual kind/value/bounds; expression
+and statement context belongs to later evaluator integration. Scalar refusals retain the actual
+constructor/operator token. Unary operators, comparison, built-ins and binding remain pending features.
+
+### Exact quantity operators
+
+The four methods reuse the normative kind signatures. Addition/subtraction require the same kind.
+Products can derive area from two lengths; ordered quotients can derive length from area/length or
+ratio from equal dimensions. An absent pair refuses with its actual operator and operand kinds.
+Angle times length includes the arc_length hint, even for zero values. A valid zero divisor refuses
+before a zero numerator shortcut; no zero quotient is fabricated.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational};
+
+let length = FormulaNumericValue::new(FormulaKind::Length, FormulaRational::new(1, 3, false)?)?;
+let half = FormulaNumericValue::new(FormulaKind::Ratio, FormulaRational::new(500_000, 1, false)?)?;
+assert_eq!(length.checked_mul(half)?.rational(), FormulaRational::new(1, 6, false)?);
+let quotient = length.checked_div(length)?;
+assert_eq!(quotient.kind(), FormulaKind::Ratio);
+assert_eq!(quotient.rational(), FormulaRational::from_signed_integer(1_000_000));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The quantity layer scales ratios exactly as ppm. A product of two 500,000 ppm values is 250,000 ppm;
+Count 3 divided by a 2,000,000 ppm ratio is exact Count 3/2. No implicit rounding occurs.
+Scaling and arithmetic form one completed operator result: intermediate scaling products do not
+trigger the reduced128-bit limit. A private workspace bounds three rational factors to384 bits,
+reduces the complete result, then checks the returned rational and scalar domain. For example, a
+maximum128-bit ppm numerator times 2 ppm is admitted when the scaled reduced result fits; the same
+numerator times Count 2 correctly reports129 bits. A tiny denominator can also exceed128 bits
+because ppm scaling belongs to the actual result, and must refuse with its exact measured width.
+
+Every completed result is admitted independently. Length at its limit plus 1/10 micrometre refuses
+immediately, so a later subtraction cannot rescue it. Count 1 minus Count 2 refuses a negative
+result. Error bounds and measured values remain exact; arithmetic and scalar failures expose no
+partially computed value. Binding and whole-recipe replay remain later work.
 
 Check this feature with the affected native target:
 
