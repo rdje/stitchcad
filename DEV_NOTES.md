@@ -3,6 +3,23 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — complete runtime recovery and guarded cleanup
+
+0235 cleanup4: external restart reports app-server66024; direct capture finds readable vnodes,
+but updater8048 retains unreadable FD10. The version-matched restart source keeps an enabled
+updater. Verified PID record/start time/executable, ancestry exclusion and zombie-only children
+before one graceful SIGTERM; descriptor-closing daemon start creates updater42768, retaining66024.
+Both replacements are readable; real handoff clear0/held1/restored0 passes. This establishes
+recovery and the incomplete restart's cause, not the original object's identity/invalidation.
+Fresh reviewed recovery-20261025 plan/apply removes4 trees/38 strays,143 files/10060618B.
+Immediate independent read-only proof:42 paths absent, tracked digest unchanged,237 prior audit
+files byte-exact;944 unsafe/uncertain entries preserved. Cadence advances only for this applied run.
+Native fmt/strict Clippy/tests, WASM, book, handoff49/17, cleanup14 physical/5 omission controls,
+publication45, glossary/coverage pass0. Post-build native capture shows no unreadable vnode.
+Receipts: target/artifact_cleanup_audit/startup-20261024/d217-updater-restart.json and
+target/artifact_cleanup_audit/recovery-20261025/. D217 stays open; historical proof needs identity
+before invalidation or a vendor trace. Promotion declined: scoped evidence in the owning hunt.
+
 ## _(2026-10-25 UTC)_ — D217 needs causal discrimination before a permanent-fix claim
 
 0234 cleanup4.hunt instruments the unresolved production descriptor instead of inferring its

@@ -112,6 +112,13 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0235 — recover runtime evidence and complete cleanup
+
+.f.cleanup4: app-server restart retained updater8048; verified graceful updater replacement
+restores native metadata and real clear0/held1/restored0. Fresh cleanup removes10060618B with
+zero selected residue, unchanged tracked inputs and237 preserved audit files. Native/WASM/book,
+cleanup/handoff/publication/continuity controls pass. D217 historical identity/trigger stays open.
+
 ## STITCHCAD-G1-0234v — verify the committed D217 evidence checkpoint
 
 Newest committed archive guard refuses its controlled catalog edit; all668 window controls and

@@ -1065,19 +1065,18 @@ D215 whole authored report/verified repair retained in [part134](../history/wind
 
 D216 whole authored report/verified repair retained in [part135](../history/window11.md#stitchcad-defects-part135md).
 
-- **D217** — unavailable Codex descriptor identities block cleanup/handoff since2026-10-24.
-  Reproduce: OS-visible `bash scripts/check_handoff.sh --idle-cua` refuses2; PID8048/FD10
-  is first. Initial three samples: lsof0, fd10/name(revoked)/no type in two codex processes
-  and code-mode-host. Audit: target/artifact_cleanup_audit/startup-20261024/.
-  Cause: Apple process_vnode labels ENOENT ambiguously; types may be omitted. Direct libproc
-  also returns ENOENT; code-mode-host is outside caller ancestry. Kernel cause unproved.
-  cleanup4.fix corrects parse_handles' misleading malformed diagnosis; controls preserve refusal.
-  No deletion; frozen fingerprints exact. Owner cleanup4, P1 before .a23.3.2: host runtime
-  restart outside active harness; complete census, real held-file control, fresh cleanup plan/apply.
-  Sources/recovery: book cleanup annex. Never kill the active harness or exempt unknown handles.
-  Hunt0234: revoked owned terminal and removed event-only directory both reproduce; ordinary unlink
-  does not. Isolated runtime inherits the removed-directory failure; clean/live controls pass.
-  Original descriptor identity/trigger remains unknown. Owner cleanup4.hunt, native probe/book plan.
+- **D217** — historical Codex descriptor identity/trigger remains unknown; recovery verified.
+  Original handoff refuses2 on updater8048/FD10; both native vnode queries return ENOENT,
+  lsof0 omits type with ambiguous revoked marker. Session/code host share that signature.
+  cleanup4.fix repairs the misleading malformed diagnosis; checker stays strict.
+  Hunt0234 reproduces revoked terminal and removed event-only directory; ordinary unlink stays
+  readable. Isolated inheritance reproduces; clean/live controls pass. No original kernel proof.
+  0235: app-server restart retained updater8048 by design. Verified non-ancestor SIGTERM and
+  descriptor-closing start replace it with42768; native metadata readable, real clear0/held1/
+  restored0. Cleanup4 applied with residue0/tracked bytes exact. This proves recovery, not prevention.
+  Owner cleanup4.hunt: capture object identity before a recurrence's invalidation; no unknown-handle
+  exemption or active-harness termination. Receipts: protected startup/recovery-20261025 audit;
+  invocation/source/recovery detail: book cleanup annex; DEV_NOTES0234/0235.
 
 ## Verified closure awaiting archival
 

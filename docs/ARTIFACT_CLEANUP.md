@@ -36,7 +36,7 @@ selected roots.
 
 ## Latest run
 
-- **Run:** `2026-10-08` 08:30 UTC by leaf `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup3`.
-- **Summary:** removed4 ignored trees/1378 logs (11240863B);1382 selected paths absent and tracked bytes unchanged before regeneration.
-- **Evidence:** target/artifact_cleanup_audit/recovery-20261008/;14 prior recovery logs preserved byte-exactly.
-- **Preserved:**933 unsafe/uncertain entries, including hard-linked native/WASM incremental caches; package stores and built deps remain.
+- **Run:** `2026-10-25` 13:16 UTC by leaf `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4`.
+- **Summary:** removed4 ignored trees/38 strays,143 files (10060618B);42 selected paths absent and tracked bytes unchanged before regeneration.
+- **Evidence:** target/artifact_cleanup_audit/recovery-20261025/;237 prior startup/recovery audit files preserved byte-exactly.
+- **Preserved:**944 unsafe/uncertain entries, including hard-linked native/WASM incremental caches; package stores and built deps remain.

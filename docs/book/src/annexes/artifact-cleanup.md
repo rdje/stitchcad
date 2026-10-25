@@ -134,12 +134,23 @@ The process lists remain stable during the production
 capture; no whole-process permission denial was observed. An equal enumeration cannot prove that
 an individual descriptor was never reused.
 
-Next, capture a replacement daemon's descriptor identities before cleanup, after starting it from
-an external terminal with unrelated descriptors closed. Compare the old/new runtime, caller tree,
-native observations and complete handoff verdict. If the failure disappears, that proves recovery;
-capture a recurrence's object identity and lifecycle before claiming permanent prevention. If it
-persists, retain the fresh capture and investigate its creator or obtain a vendor-level kernel trace.
-The cleanup checker remains strict throughout. Root owner: cleanup4.hunt in the producer task tree.
+The 2026-10-25 recovery experiment replaced app-server65756 with66024, whose vnode metadata was
+readable, but retained updater8048 and its unresolved descriptor. The release-matched
+[restart implementation](https://github.com/openai/codex/blob/rust-v0.164.0/codex-rs/app-server-daemon/src/lib.rs)
+keeps an enabled updater; restarting the app server alone does not reset its inherited descriptors.
+After checking executable, start time, PID record, caller ancestry and children, a single SIGTERM
+stopped that separate updater gracefully. Running the installed daemon start command with
+close_fds=True replaced it with42768 without replacing active app-server66024. The
+[updater termination handler](https://github.com/openai/codex/blob/rust-v0.164.0/codex-rs/app-server-daemon/src/update_loop.rs)
+returns on SIGTERM. Both replacement processes supplied readable vnode metadata. The full strict
+census and real clear0/held-file1/restored0 passed; cleanup then applied with zero selected residue
+and unchanged tracked bytes. Protected startup/recovery-20261025 audit records retain the receipts.
+
+This proves operational recovery. The historical descriptor's identity and invalidation event
+remain unproved, so D217 stays open. Capture identity before invalidation during a recurrence,
+or obtain a vendor-level trace, before claiming permanent prevention. The checker remains strict.
+Root owner: cleanup4.hunt in the producer task tree. Never signal a PID from an old receipt without
+fresh identity and ancestry checks, and never terminate the active harness from inside itself.
 
 ```bash
 python3 -I -B docs/tasks/artifacts/handoff/d217_probe.py snapshot --pid 1234

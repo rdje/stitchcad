@@ -750,14 +750,14 @@ Whole0209 task/lesson retained in [part277](../history/window11.md#stitchcad-dev
 Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-devnotes-part278md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4`
-  Status: `blocked`
-  Goal: overdue startup2026-10-24 cleanup before .a23.3.2; diagnose D217 first.
-  Own: docs/ARTIFACT_CLEANUP.md; target/artifact_cleanup_audit/startup-20261024/; ignored
-  candidates/required preceding receipts. Preserve evidence/stores/deps, thresholds/pins/repos.
-  Acceptance: fresh reviewed plan after drift; OS-visible handoff OK; apply; immediate read-only
-  residue/tracked-byte proof before activation; rebuild book/native/WASM; cleanup/publication/
-  continuity controls; terminal receipts/commit. No deletion occurred; never exempt unknown handles.
-  0233: DEV_NOTES.md; promotion: declined (same D217).
+  Status: `done`
+  Goal: verified cleanup/rebuild; stop before .a23.3.2.
+  Own: docs/ARTIFACT_CLEANUP.md; target/artifact_cleanup_audit/ startup/recovery receipts;
+  ignored candidates. Preserve evidence/stores/deps, thresholds/pins/repos.
+  Acceptance: reviewed fresh plan/apply removes4 trees/38 strays/10060618B; immediate independent
+  residue0, tracked bytes unchanged,237 receipts exact. Recovery real clear0/held1/restored0.
+  Native/WASM/book, cleanup/handoff/publication/continuity controls pass0. DEV_NOTES0233/0235;
+  promotion: declined (scoped cleanup; historical D217 remains owned below).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.r`
   Status: `done`
@@ -772,25 +772,20 @@ Whole0210 task/lesson retained in [part278](../history/window11.md#stitchcad-dev
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.hunt`
   Status: `in_progress`
-  Goal: director2026-10-25 D217 cause/repair, then cleanup/stop; diagnostic milestone only.
+  Goal: director2026-10-25 D217 cause/repair; recovery verified, historical origin open.
   Paths: docs/tasks/artifacts/handoff/d217_probe.py;docs/tasks/artifacts/handoff/contract.py;docs/tasks/artifacts/handoff/run_handoff_probes.sh
   Additional paths: docs/tasks/artifacts/ci_environment/producer_entries.tsv;docs/tasks/artifacts/ci_environment/python_file_entries.tsv
-  Acceptance: cause/lifecycle proof, strict refusals, real clear/held/restored and cleanup proof.
-  Plan/evidence: cleanup annex; DEV_NOTES0234. Original instance cause remains open.
-  Own five whole prior records retained303 and window11's full cdc6a77 raw snapshot, master,
-  catalog/payload/public links. Prior windows immutable; all caps fixed.
+  Acceptance: historical lifecycle proof; strict checker; recovery/cleanup evidence.
+  Plan/evidence: cleanup annex; DEV_NOTES0234/0235. Own retained303/window11, unchanged bounds.
 
-- [x] REPRODUCE / ISSUE: OS handoff refuses2 on PID8048/FD10; native both0/errno2,
-  d217-hunt-snapshot.json. Original identity/trigger unresolved.
-- [x] ROOT CAUSE: d217_probe.py controls distinguishes two mechanisms from ordinary unlink/close,
-  ten observations, rc=0. Exact installed kernel branch unproved.
-- [x] FIX: guarded native/runtime diagnostic, watched calibrations; checker unchanged.
-  Five whole records retained303; retained mode verifies4144B, rc=0.
-- [x] ADDRESSED: calibrate passes10/two actual omission reds, rc=0; three runtime arms exit0/
-  group gone. Only deliberate removed-directory inheritance fails metadata.
+- [x] REPRODUCE / ISSUE: native/lsof PID8048/FD10 ENOENT; d217-hunt-snapshot.json rc=0.
+  Historical identity/trigger unresolved; exact installed kernel branch unproved.
+- [x] ROOT CAUSE: d217_probe.py controls separates two mechanisms;10 observations rc=0.
+- [x] FIX: watched diagnostic; checker unchanged; retained verifies4144B rc=0.
+- [x] ADDRESSED: calibrate10/two omission reds rc=0; runtime arms exit0/group gone.
 - [x] NO REGRESSION: handoff49/17, cleanup physical14/omissions5/statuses, publication45,
-  producer259-path census/coverage rc=0. Real handoff still refuses2.
-- [x] LOCKSTEP: book/live/frontier/DEV/CH/MEMORY synced; size OK, rc=0.
+  producer259-path census/coverage rc=0 in0234. Real recovery clear0/held1/restored0 in0235.
+- [x] LOCKSTEP: book/live/frontier/DEV/CH/MEMORY synced; size rc=0 in0234.
   promotion: declined (scoped diagnostic; original cause open).
 
 - ID: `G1-SLICE.5b.4c.h2.b.xtask`
