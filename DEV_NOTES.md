@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — read canonical length values without losing authored state
+
+0261 .5e.1.1 selects only actual borrowed LengthInput declarations, not a general metadata kind
+claim. Immutable success/error results retain the named metadata and canonical record; assumed/
+preference/evidence references remain inspectable. Unknown retains RequiresObservation and derived
+retains RequiresEvaluation; neither gains a fallback or independent result. From<sc_units::Length>
+imports its already validated signed micrometre integer exactly, with no new rounding/check boundary.
+The focused native target passes3/0:25 origin/state pairs, source identity/pointer/immutability,
+negative/positive limits and zero, plus all other source variants including a generic Length claim.
+No source registry, truth, artifact approval or whole runtime publication is inferred. General scalar/
+size/context adapters remain .5e.1; complete evaluation .5e.2. Whole0260 task/ledger retain338/233.
+Promotion declined: this implements the existing canonical state contract, now documented in the book.
+
 ## _(2026-10-25 UTC)_ — exact trig midpoint exclusion and resource boundary
 
 0260 .5d.1.2.2.1 applies independently published rational-value restrictions to the actual ppm/

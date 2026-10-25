@@ -2,10 +2,62 @@
 
 This annex describes the book reference evaluator's runtime controls, separate from the
 [static checks](formula-static-validation.md). Product libraries currently expose syntax, input
-normalization, canonical identity and [whole recipe kind proofs](formula-checked-recipes.md);
-production execution remains G1-SLICE.5c–.5g work.
+normalization, canonical identity, [whole recipe kind proofs](formula-checked-recipes.md), exact numeric
+values and the canonical length authored-read adapter below. Complete execution remains .5e–.5g work.
 The [formula chapter](../spec/formula-language.md) supplies the normative rules. This instrument
 verifies scoped numerical examples and diagnostics; it does not certify a physical garment.
+
+## Canonical length authored reads
+
+FormulaLengthInput::from_declaration accepts an actual borrowed FormulaDeclarationSource::LengthInput.
+Its Option is None for general scalar metadata even when that metadata claims Length, prior bindings,
+reserved names and geometry. This selection reads no numeric value. All five canonical length-input
+origins retain their original name, metadata identity, canonical declaration/source and borrowed state.
+Call read_authored explicitly to read an authored value:
+
+| Canonical state | Authored-read result |
+| --- | --- |
+| Known | Exact Length with the original evidence inventory retained |
+| Assumed | Exact Length with its actual assumption reference retained |
+| Preference | Exact Length with its actual preference provenance retained |
+| Unknown | RequiresObservation with the declaration and observation identities |
+| Derived | RequiresEvaluation with the declaration and sole formula identity |
+
+A successful FormulaLengthInputValue keeps its input beside the numeric value. Inspect input().state()
+to retain the distinction between measured claims, assumptions and preferences. An unavailable read
+returns FormulaLengthInputError with the same input and exact canonical reason. Unknown never becomes
+zero; derived never becomes an independent authored or cached result. A complete evaluator must follow
+the derived dependency and attach the available expression/statement context; this read adapter does
+not execute that formula or manufacture a statement ordinal/diagnostic publication.
+
+```rust
+use sc_core::{name::MachineToken, ontology::EntityId,
+    recipe::{FormulaDeclaration, FormulaInputOrigin, FormulaLengthInput},
+    value::{LengthDeclaration, LengthDeclarationDefinition, LengthState}};
+
+let name = MachineToken::new("body_width")?;
+let record = LengthDeclaration::new(LengthDeclarationDefinition {
+    id: EntityId::from_bits(1), source: EntityId::from_bits(2),
+    state: LengthState::Unknown { observation: EntityId::from_bits(3) },
+})?;
+let metadata = FormulaDeclaration::length_input(&name, FormulaInputOrigin::Measurement,
+    EntityId::from_bits(4), &record);
+let input = FormulaLengthInput::from_declaration(metadata).expect("actual canonical length input");
+let unavailable = input.read_authored().expect_err("observation still needed");
+assert_eq!(unavailable.input().canonical_declaration().id(), EntityId::from_bits(1));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Validated sc_units::Length converts totally into FormulaNumericValue through `From<Length>`. It imports
+the signed canonical micrometre integer exactly, including zero and both scalar limits; no second
+input/binding rounding or i64 check is introduced. Reads preserve the source record unchanged.
+Readable authored claims still carry DeferredToDesignAndG4 provenance validation. This API grants no
+namespace/order/registry/evidence-scope/human/export approval. General scalar, size and optional
+context adapters and the complete evaluator remain owned by G1-SLICE.5e.
+
+The focused formula_length_input_contract target passes three tests covering25 origin/state pairs,
+the scalar endpoints/zero, and every other declaration-source variant, including a generic Length
+claim. Broad integration/platform proof remains deferred.
 
 ## Reference runtime assertion controls
 

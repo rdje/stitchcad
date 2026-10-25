@@ -833,7 +833,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5e.1` | `pending` | Canonical value adapters; trig resources P1 before calls |
+| **next** | `G1-SLICE.5e.1` | `in_progress` | Continue scalar/size/context adapters; trig resources P1 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

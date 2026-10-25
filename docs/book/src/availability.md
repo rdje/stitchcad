@@ -51,7 +51,9 @@ values and raw angle turns. Exact abs/min/max/clamp are available with typed arg
 Explicit round_to is available at exact same-kind steps. Binding value conversion now rounds once,
 checks signed i64 storage and preserves Boolean kind. Correctly rounded sqrt(area/ratio), signed-length
 hypot and signed/full-turn arc_length are available. Trigonometric/inverse functions and complete
-statement/recipe execution remain next.
+statement/recipe execution remain pending.
+[Canonical length authored reads](annexes/formula-runtime-validation.md#canonical-length-authored-reads)
+now preserve source/state beside exact values or observation/evaluation requests.
 
 ## Planned workflows
 

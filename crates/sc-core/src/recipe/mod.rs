@@ -15,7 +15,8 @@
 //! Bounded initial-scope expression proofs retain kinds, typed refusals and sourced dependencies.
 //! Current scopes certify actual statements and both assertion operands. Whole-recipe proofs
 //! check every statement before exposing complete sourced dependencies. Exact numeric values,
-//! operators, authored quantization and binding conversion are available; recipe execution follows.
+//! operators, authored quantization and binding conversion are available. Canonical length authored
+//! reads retain source/state beside exact values or required observation/evaluation; recipe execution follows.
 mod lexer;
 pub use lexer::{
     FormulaLexeme, FormulaLexemeKind, FormulaLexer, FormulaLexicalError, FormulaLexicalRule,
@@ -98,6 +99,9 @@ mod declaration;
 pub use declaration::{
     FormulaDeclaration, FormulaDeclarationSource, FormulaInputOrigin, FormulaScalarInputOrigin,
 };
+
+mod input;
+pub use input::{FormulaLengthInput, FormulaLengthInputError, FormulaLengthInputValue};
 
 mod namespace;
 pub use namespace::{

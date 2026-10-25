@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0260 — distinguish trig midpoint termination from resource admission
+## STITCHCAD-G1-0261 — canonical length authored reads
 
-.5d.1.2.2.1: rational-value theorem excludes actual quantum midpoints; exact161 polynomial
-identity checks/scale falsifier pass. Practical all-input trig resources remain P1 .2; no implementation claimed.
+.5e.1.1: actual canonical source/state beside exact values or observation/evaluation requests;
+validated Length imports totally. Focused native3/0 covers25 state/origin pairs, signed limits and source separation.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -410,3 +410,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part231](docs/history/stitchcad-changelog-part231.md) | whole0258 | 4 lines, 285 bytes, sha256:01d64e99… |
 
 | [part232](docs/history/stitchcad-changelog-part232.md) | whole0259 | 4 lines, 280 bytes, sha256:2f9a1bb3… |
+
+| [part233](docs/history/stitchcad-changelog-part233.md) | whole0260 | 4 lines, 293 bytes, sha256:5271c008… |

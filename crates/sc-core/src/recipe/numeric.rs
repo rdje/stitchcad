@@ -4,7 +4,7 @@ use super::{
     FormulaLiteralKind, FormulaRational, FormulaRationalError, FormulaUnaryOperator,
 };
 use core::fmt;
-use sc_units::{MAX_AREA_UM2, MAX_LENGTH_UM};
+use sc_units::{Length, MAX_AREA_UM2, MAX_LENGTH_UM};
 
 /// A typed refusal at the completed numeric-value boundary; source context belongs to evaluation.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -160,6 +160,17 @@ impl std::error::Error for FormulaNumericError {
 pub struct FormulaNumericValue {
     kind: FormulaKind,
     value: FormulaRational,
+}
+
+/// A validated unit Length already satisfies the identical signed scalar domain.
+/// Importing its canonical integer is total and exact, with no input or binding rounding.
+impl From<Length> for FormulaNumericValue {
+    fn from(value: Length) -> Self {
+        Self {
+            kind: FormulaKind::Length,
+            value: FormulaRational::from_signed_integer(i128::from(value.as_micrometres())),
+        }
+    }
 }
 
 impl FormulaNumericValue {

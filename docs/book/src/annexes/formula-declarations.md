@@ -362,7 +362,8 @@ Reserved names likewise retain their kinds when their runtime providers are abse
 length with export context, eps_phys is a length with profile context, and is_base_size is Boolean
 with size context. Static resolution supplies no provider-availability or canonical registry proof.
 A runtime read of an unknown fact remains formula_unknown; a missing valid tolerance provider
-remains formula_tolerance_unbound. Those runtime adapters and execution checks remain separately
+remains formula_tolerance_unbound. Canonical length authored reads now have an [explicit adapter](formula-runtime-validation.md#canonical-length-authored-reads).
+Complete runtime resolution and execution checks remain separately
 owned. This API resolves the initial namespace before statement one; [ordered metadata scopes](formula-name-scopes.md) retain prior
 recipe visibility. Expression kind checks and complete recipe proofs are available through their
 separate validation APIs; an initial read alone proves neither.

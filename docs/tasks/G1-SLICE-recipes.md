@@ -480,17 +480,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Children .1 midpoint/qualitative termination; .2 practical admitted-input resource strategy.
 - ID: `G1-SLICE.5d.1.2.2.1`
   Status: `done`
-  Goal:0260 exact trig midpoint exclusion; distinguish termination from usable resources.
+  Goal: midpoint/conditional termination proof verified0260; practical resources P1 .2.
   Paths: docs/tasks/artifacts/formula_structure/trig_midpoint_certificate.py;docs/decisions/fact_trig-midpoints-and-resource-bound.md
-- [x] REPRODUCE: d5ca0b7 plan lacks a trig resource strategy; git source read, rc=0.
-- [x] ROOT CAUSE: Calcut Corollary5/Nunn rational-value theorem read; exact ppm/degree substitution
-  via python3 -I -B docs/tasks/artifacts/formula_structure/trig_midpoint_certificate.py, rc=0.
-- [x] FIX: scoped midpoint/conditional termination proof and coarse resource-gap derivation in fact.
-- [x] ADDRESSED: same producer:8 theorem entries/9 axes,161 exact identities/3 roots, rc=0.
-- [x] NO REGRESSION: scale1 falsifier distinguishes the actual quantum; same producer rc=0.
-  No Rust change; practical resources P1 .2 before .5d.3.2/.3, broad .5d.4/pre-push.
-- [x] LOCKSTEP:336/337/232 whole Git/public records and book render pass0; fact/INDEX/map align.
-  Promotion: fact_trig-midpoints-and-resource-bound.md; no production trig admission claimed.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part338.md).
 - ID: `G1-SLICE.5d.1.2.2.2`
   Status: `pending`
   Goal: P1 practical trig/inverse interval/resource strategy over all admitted inputs before .5d.3.2/.3.
@@ -551,7 +543,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 ### Execution, uncertainty and replay
 - ID: `G1-SLICE.5e.1`
-  Status: `pending`
+  Status: `in_progress`
   D122/D127/D128 reference child .5e.1a verified; product input adapters below remain pending.
   Goal: explicit adapters for measurement/Ease/design/profile/material/size inputs and five
   authored states, preserving canonical identity, kind, source and provenance requirements.
@@ -560,6 +552,22 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Source truth/artifact blocking belongs G4; no invented policy or duplicated authored values.
   Full SizeSet/axis integration waits .4c.2 D70, without dropping size-context acceptance.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5e.1.1`
+  Status: `done`
+  Goal:0261 exact canonical length authored reads with source/state retained.
+  Paths: crates/sc-core/src/recipe/input.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_length_input_contract.rs
+- [x] REPRODUCE:9cd7936 has canonical authored lengths and metadata but no sourced numeric read;
+  git source inspection rc=0. Unknown/derived must not gain independent numeric values.
+- [x] ROOT CAUSE: actual LengthInput borrow supplies authoritative state/value; existing
+  LengthDeclaration::authored_value and typed Length domain verified by focused native3/0, rc=0.
+- [x] FIX: immutable adapter/results/refusals retain actual metadata/canonical borrow; total Length import.
+- [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_length_input_contract:3 passed/0 failed,25 origin/state pairs, rc=0.
+- [x] NO REGRESSION: same command verifies signed limits/zero, all other source variants and source
+  immutability, rc=0. Broad evaluator/platform proof .5e.2/.5g/pre-push; other adapters .5e.1.
+- [x] LOCKSTEP:338/233 Git/public bytes and book render pass0; live/book align. Promotion declined:
+  implementation of existing canonical length/state contract; no new cross-cutting policy.
+  Book warned on bare From<Length>; code spans remove the HTML warning, render rc=0.
 - ID: `G1-SLICE.5e.2`
   Status: `pending`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.

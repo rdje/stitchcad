@@ -152,6 +152,7 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | checked_round_to | Authored same-kind step, nearest exact multiple with ties away from zero |
 | checked_sqrt | Correctly rounded area-to-length or ratio-to-ratio square root |
 | checked_hypot | Correctly rounded signed-length hypotenuse with no intermediate Area |
+| `From<sc_units::Length>` | Total exact import of a validated signed micrometre integer |
 | checked_arc_length | Correctly rounded signed Angle/Length arc with full turns and certified pi |
 
 Length and area use inclusive signed limits of 10⁹ micrometres and 10¹⁸ square micrometres.
