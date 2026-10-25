@@ -54,6 +54,9 @@ hypot and signed/full-turn arc_length are available. Trigonometric/inverse funct
 statement/recipe execution remain pending.
 [Canonical length authored reads](annexes/formula-runtime-validation.md#canonical-length-authored-reads)
 now preserve source/state beside exact values or observation/evaluation requests.
+[Canonical general scalar content](spec/measurement-inputs.md#canonical-general-scalar-content)
+also retains raw angle turns, typed scalar state/provenance and computation-only Area; its general
+formula registry adapter and derived evaluation remain pending.
 
 ## Planned workflows
 

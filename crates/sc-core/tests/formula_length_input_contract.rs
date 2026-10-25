@@ -87,19 +87,19 @@ fn every_origin_and_state_retains_the_actual_source_and_unavailability_request()
             assert!(std::ptr::eq(input.state(), record.state()));
             assert_eq!(input.metadata().name(), name.as_str());
             assert_eq!(input.metadata().origin(), metadata.origin());
-            let S::LengthInput {
+            assert!(matches!(input.metadata().source(), S::LengthInput { .. }));
+            if let S::LengthInput {
                 origin: actual,
                 input: metadata_id,
                 declaration,
             } = input.metadata().source()
-            else {
-                panic!("original source variant lost");
-            };
-            assert_eq!(actual, origin);
-            assert_eq!(metadata_id, id(13));
-            assert!(std::ptr::eq(declaration, &record));
-            assert_eq!(declaration.id(), id(11));
-            assert_eq!(declaration.source(), id(12));
+            {
+                assert_eq!(actual, origin);
+                assert_eq!(metadata_id, id(13));
+                assert!(std::ptr::eq(declaration, &record));
+                assert_eq!(declaration.id(), id(11));
+                assert_eq!(declaration.source(), id(12));
+            }
             assert_eq!(
                 input.provenance_validation(),
                 ValueProvenanceValidation::DeferredToDesignAndG4

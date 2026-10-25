@@ -203,7 +203,9 @@ impl FormulaNumericValue {
                 let integer = value.numerator_magnitude() / value.denominator();
                 integer > maximum
                     || (integer == maximum
-                        && value.numerator_magnitude() % value.denominator() != 0)
+                        && !value
+                            .numerator_magnitude()
+                            .is_multiple_of(value.denominator()))
             });
             if excessive || (kind == FormulaKind::Count && value.is_negative()) {
                 return Err(FormulaNumericError::ScalarDomain {

@@ -21,8 +21,8 @@ Three properties define it:
 The G0 semantic contract has been reviewed; human closure remains unapproved. G1 implements
 ontology, measurement inputs and borrowed/normalized formula syntax with owned identities,
 sourced namespaces and complete immutable recipe kind proofs. Whole-factory review checks source dependencies.
-Exact numeric APIs support arithmetic, quantization, sqrt/hypot/arc_length and scalar binding conversion.
-Canonical length authored-read adapters retain state and source.
+Exact numeric and binding APIs plus canonical scalar state models are available.
+Length read adapters retain state/source; full recipe execution remains pending.
 [`LIVE_STATUS.md`](LIVE_STATUS.md) tracks verified progress; the mdBook explains implemented behavior and remaining proof boundaries.
 
 ## Audience and scope

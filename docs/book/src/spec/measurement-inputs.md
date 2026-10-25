@@ -35,6 +35,62 @@ field, enforced by compile-fail examples; private validated fields prevent unche
 `authored_value()` returns a typed refusal naming declaration and observation/formula when no value
 exists. This query does not evaluate a formula, resolve a profile, or authorize export.
 
+## Canonical general scalar content
+
+ScalarInputDeclaration supplies immutable canonical scalar content for the general parameter/profile/
+material integration, without a registry lookup or formula execution. Its definition carries a
+stable id, source, ScalarInputKind and exactly one ScalarInputState. It extends the same authored
+state/provenance contract used by LengthDeclaration; metadata consumers must borrow the canonical
+target rather than author an independent copy. Existing measurement/Ease Length records remain
+singly owned and retain their dedicated adapter.
+
+| Kind | Authored-value construction | Canonical content |
+| --- | --- | --- |
+| Length | `From<sc_units::Length>` | Validated signed micrometres, including zero and both scalar limits |
+| Angle | from_angle_microdegrees(i64) | Signed raw microdegrees; -720000000 retains two negative turns |
+| Ratio | from_ratio_ppm(i64) | Signed ppm; no implicit zero-to-one restriction |
+| Count | from_count(i64) | Zero through i64 MAX; negative input returns NegativeCount with its actual value |
+| Boolean | from_boolean(bool) | False and true remain Boolean values, distinct from numeric zero/one |
+| Area | No authored-value constructor | Only Derived with its sole formula identity; the result must be computed |
+
+The [formula kind contract](formula-language.md#2-values-and-kinds) makes Area a derived product,
+never an independently authored input. Accordingly an Area declaration in Known, Assumed, Unknown
+or Preference state returns AreaMustBeDerived with its actual state tag. An unknown source needed
+for an area calculation remains on its dependency; no separately entered Area substitutes for it.
+
+Known/Assumed/Preference values must match the declared kind. Unknown and Derived have no authored
+value field; their kind remains inspectable. Structural validation refuses non-derived Area first,
+then a present kind mismatch, then missing/duplicate Known evidence. Known references stay in their
+authored order; a duplicate refusal identifies the first repeated identity. All five states retain
+the same evidence/assumption/observation/preference/formula obligations described above.
+
+```rust
+use sc_core::{ontology::EntityId, value::{ScalarInputDeclaration,
+    ScalarInputDeclarationDefinition, ScalarInputKind, ScalarInputState, ScalarInputValue}};
+
+let record = ScalarInputDeclaration::new(ScalarInputDeclarationDefinition {
+    id: EntityId::from_bits(1), source: EntityId::from_bits(2),
+    kind: ScalarInputKind::Boolean,
+    state: ScalarInputState::Preference {
+        value: ScalarInputValue::from_boolean(false), provenance: EntityId::from_bits(3),
+    },
+})?;
+assert_eq!(record.authored_value()?.boolean(), Some(false));
+assert_eq!(record.kind(), ScalarInputKind::Boolean);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+A readable value is not factual certification. All declarations retain DeferredToDesignAndG4;
+registry identity/scope, human attribution, derived dependency evaluation and artifact policy remain
+separate. authored_value returns a sourced RequiresObservation or RequiresEvaluation when needed,
+with no zero/false fallback. state/definition access is immutable; editing a cloned definition and
+validating a replacement leaves the prior declaration unchanged.
+
+The focused scalar_value_contract target passes five tests: exact signed bounds/turns/false,
+26 admitted kind/state combinations, mismatches/Area refusal, evidence order and immutable
+replacement. The affected value_contract retains eight passing tests. Later general formula
+adapters must still verify actual canonical identity/kind and carry these states through evaluation.
+
 ## Evidence and computation remain distinct
 
 Every declaration reports `ValueProvenanceValidation::DeferredToDesignAndG4`. Carrying evidence ids

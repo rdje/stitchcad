@@ -40,7 +40,7 @@ fn rounded_root(
     let quotient = &numerator / &denominator;
     let one = BigUint::from(1_u8);
     let mut lower = BigUint::from(0_u8);
-    let mut upper = &one << ((quotient.bits() + 1) / 2);
+    let mut upper = &one << quotient.bits().div_ceil(2);
     while &upper - &lower > one {
         let midpoint = (&lower + &upper) >> 1_u8;
         if &midpoint * &midpoint <= quotient {

@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0261 — canonical length authored reads
+## STITCHCAD-G1-0262 — canonical scalar state/value content
 
-.5e.1.1: actual canonical source/state beside exact values or observation/evaluation requests;
-validated Length imports totally. Focused native3/0 covers25 state/origin pairs, signed limits and source separation.
+.5e.1.2: raw signed Angle/Ratio, Count/Boolean/Length and computation-only Area; kind/evidence/state
+refusals retain actual sources. Selected Clippy0 and affected native26/0 pass; three library lint defects corrected.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -412,3 +412,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part232](docs/history/stitchcad-changelog-part232.md) | whole0259 | 4 lines, 280 bytes, sha256:2f9a1bb3… |
 
 | [part233](docs/history/stitchcad-changelog-part233.md) | whole0260 | 4 lines, 293 bytes, sha256:5271c008… |
+
+| [part234](docs/history/stitchcad-changelog-part234.md) | whole0261 | 4 lines, 271 bytes, sha256:58a18fac… |

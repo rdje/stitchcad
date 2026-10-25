@@ -295,14 +295,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5b.3d`
   Status: `done`
   Goal: coupled full expression static review, normative/reference/product agreement and counterexamples.
-  Prerequisites .a/.b D147/D148 done; .c/0111 shared review and .d/0112 phase closure verified.
-  Review actual public expression/statement/ordered-scope APIs against independently authored
-  rules and actual reference: kinds/tokens/complete dimension roles, sources/priority/recognition,
-  worked recipe, runtime-invalid static cases and bounds. Cargo reports current compiler artifacts.
-  Driver checks before metadata advance; it grants no library-owned whole graph proof (.4).
-  D149 prerequisite drift fixed in .c; D150 syntax/literal priority and D151 status clarity fixed in .d.
-  Actual compiled faults must fail oracle body assertions; grammar/token set unchanged.
-  Verification/Commit: `STITCHCAD-G1-0112`; [final proof](G1-SLICE-names.md#d150-separated-input-phases-protocol).
+  Children .a/.b/.c/.d verified0109–0112; [whole scope/proof](../history/stitchcad-devnotes-part340.md).
 - ID: `G1-SLICE.5b.3d.a`
   Status: `done`
   Goal: D147 truthful ambiguity arguments for ordered authored pairs and input/let collisions.
@@ -554,20 +547,28 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5e.1.1`
   Status: `done`
-  Goal:0261 exact canonical length authored reads with source/state retained.
+  Goal: canonical length authored reads, exact source/state and25 pairs verified0261.
   Paths: crates/sc-core/src/recipe/input.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_length_input_contract.rs
-- [x] REPRODUCE:9cd7936 has canonical authored lengths and metadata but no sourced numeric read;
-  git source inspection rc=0. Unknown/derived must not gain independent numeric values.
-- [x] ROOT CAUSE: actual LengthInput borrow supplies authoritative state/value; existing
-  LengthDeclaration::authored_value and typed Length domain verified by focused native3/0, rc=0.
-- [x] FIX: immutable adapter/results/refusals retain actual metadata/canonical borrow; total Length import.
-- [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test formula_length_input_contract:3 passed/0 failed,25 origin/state pairs, rc=0.
-- [x] NO REGRESSION: same command verifies signed limits/zero, all other source variants and source
-  immutability, rc=0. Broad evaluator/platform proof .5e.2/.5g/pre-push; other adapters .5e.1.
-- [x] LOCKSTEP:338/233 Git/public bytes and book render pass0; live/book align. Promotion declined:
-  implementation of existing canonical length/state contract; no new cross-cutting policy.
-  Book warned on bare From<Length>; code spans remove the HTML warning, render rc=0.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part339.md).
+- ID: `G1-SLICE.5e.1.2`
+  Status: `done`
+  Goal:0262 canonical scalar state/value content and focused lint repairs.
+  Paths: crates/sc-core/src/value.rs;crates/sc-core/src/value/scalar.rs;crates/sc-core/tests/scalar_value_contract.rs;crates/sc-core/tests/formula_length_input_contract.rs
+  Additional paths: crates/sc-core/src/recipe/input.rs;crates/sc-core/src/recipe/declaration.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/roots.rs
+- [x] REPRODUCE: db8aa3c lacks scalar states; selected cargo clippy --test scalar_value_contract
+  --test formula_length_input_contract -- -D warnings returns101 for3 library lint failures.
+- [x] ROOT CAUSE: Length-only state model; general metadata enum enlarges read error. Clippy output
+  identifies source/idioms, rc=101; committed test also has explicit panic against deny rule.
+- [x] FIX: typed raw scalar values, state/kind/evidence checks, Derived-only Area; compact sealed
+  length view, standard integer methods and asserted test variant; no boxing/lint suppression.
+- [x] ADDRESSED:0262 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test scalar_value_contract --test value_contract --test formula_length_input_contract
+  --test formula_numeric_contract --test formula_root_value_contract:5/8/3/6/4 pass, rc=0.
+- [x] NO REGRESSION: same native26/0; selected cargo clippy --offline -p sc-core
+  --test scalar_value_contract --test formula_length_input_contract -- -D warnings, rc=0.
+  Broad .5e.2/.5g/pre-push; general registry adapter remains .5e.1.
+- [x] LOCKSTEP:339/340/234 whole Git/public records and book render pass0; live/book align.
+  Promotion declined: implementation of existing canonical state/kind/lint contracts.
 - ID: `G1-SLICE.5e.2`
   Status: `pending`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.

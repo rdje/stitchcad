@@ -177,6 +177,19 @@ pub struct FormulaDeclaration<'a> {
     source: FormulaDeclarationSource<'a>,
 }
 impl<'a> FormulaDeclaration<'a> {
+    // Only the sealed typed view can call this reconstruction path; its name/source were already
+    // admitted as actual LengthInput metadata. Avoid carrying the whole general source enum in it.
+    pub(super) const fn from_length_input_view(input: super::FormulaLengthInput<'a>) -> Self {
+        Self {
+            name: input.name(),
+            source: FormulaDeclarationSource::LengthInput {
+                origin: input.origin(),
+                input: input.input_id(),
+                declaration: input.canonical_declaration(),
+            },
+        }
+    }
+
     /// Carry an explicit input metadata claim; canonical target/kind/state validation remains separate.
     #[must_use]
     pub fn input(

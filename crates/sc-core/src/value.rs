@@ -1,8 +1,20 @@
-//! Canonical length-valued inputs: authored state/provenance, never a numeric unknown fallback.
+//! Canonical length/general scalar inputs: authored state/provenance without unknown fallbacks.
 use crate::ontology::EntityId;
 use core::fmt;
 use sc_units::Length;
 use std::collections::BTreeSet;
+
+mod scalar;
+pub use scalar::{
+    ScalarInputDeclaration, ScalarInputDeclarationDefinition, ScalarInputDeclarationError,
+    ScalarInputKind, ScalarInputReadError, ScalarInputState, ScalarInputStateTag, ScalarInputValue,
+    ScalarInputValueError,
+};
+
+fn first_duplicate(evidence: &[EntityId]) -> Option<EntityId> {
+    let mut seen = BTreeSet::new();
+    evidence.iter().copied().find(|id| !seen.insert(*id))
+}
 
 /// Authored state of a length declaration; referenced records still require their owner validation.
 /// Unknown and derived inputs cannot independently carry a numeric result.
@@ -158,14 +170,11 @@ impl LengthDeclaration {
             if evidence.is_empty() {
                 return Err(LengthDeclarationError::NoEvidence(definition.id));
             }
-            let mut seen = BTreeSet::new();
-            for id in evidence {
-                if !seen.insert(*id) {
-                    return Err(LengthDeclarationError::DuplicateEvidence {
-                        declaration: definition.id,
-                        evidence: *id,
-                    });
-                }
+            if let Some(evidence) = first_duplicate(evidence) {
+                return Err(LengthDeclarationError::DuplicateEvidence {
+                    declaration: definition.id,
+                    evidence,
+                });
             }
         }
         Ok(Self { definition })

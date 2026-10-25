@@ -70,3 +70,5 @@ requirements remain necessary. Test counts in historical review chapters are dat
 current counts are derived from current test execution rather than inferred from those chapters.
 
 | Canonical length authored-read adapter | §2/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.1 | [Source/state reads](formula-runtime-validation.md#canonical-length-authored-reads); full execution follows |
+
+| Canonical scalar state/value content | §2/§4.1; G1 | sc-core value; G1-SLICE.5e.1.2 | [Scalar content](../spec/measurement-inputs.md#canonical-general-scalar-content); registry/evaluation follows |

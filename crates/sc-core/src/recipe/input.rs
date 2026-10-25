@@ -1,5 +1,8 @@
 //! Explicit authored reads from canonical length inputs; no namespace, source-truth or replay proof.
-use super::{FormulaDeclaration, FormulaDeclarationSource, FormulaNumericValue};
+use super::{
+    FormulaDeclaration, FormulaDeclarationSource, FormulaInputOrigin, FormulaNumericValue,
+};
+use crate::ontology::EntityId;
 use crate::value::{LengthDeclaration, LengthState, LengthValueError, ValueProvenanceValidation};
 use core::fmt;
 
@@ -9,7 +12,9 @@ use core::fmt;
 /// fetch a value or validate source registries, evidence scope, operation order or human approval.
 #[derive(Clone, Copy)]
 pub struct FormulaLengthInput<'a> {
-    metadata: FormulaDeclaration<'a>,
+    name: &'a str,
+    origin: FormulaInputOrigin,
+    input: EntityId,
     declaration: &'a LengthDeclaration,
 }
 
@@ -17,19 +22,44 @@ impl<'a> FormulaLengthInput<'a> {
     /// Selects an actual LengthInput source; every other metadata variant returns None.
     #[must_use]
     pub fn from_declaration(metadata: FormulaDeclaration<'a>) -> Option<Self> {
-        let FormulaDeclarationSource::LengthInput { declaration, .. } = metadata.source() else {
+        let FormulaDeclarationSource::LengthInput {
+            origin,
+            input,
+            declaration,
+        } = metadata.source()
+        else {
             return None;
         };
         Some(Self {
-            metadata,
+            name: metadata.name(),
+            origin,
+            input,
             declaration,
         })
     }
 
-    /// Original name, origin and metadata identity; no reconstructed or guessed source context.
+    /// Original name, origin and metadata identity, reconstructed from the sealed source view.
     #[must_use]
     pub const fn metadata(self) -> FormulaDeclaration<'a> {
-        self.metadata
+        FormulaDeclaration::from_length_input_view(self)
+    }
+
+    /// Actual borrowed name from the original validated metadata.
+    #[must_use]
+    pub const fn name(self) -> &'a str {
+        self.name
+    }
+
+    /// Actual source domain from the original metadata.
+    #[must_use]
+    pub const fn origin(self) -> FormulaInputOrigin {
+        self.origin
+    }
+
+    /// Metadata record identity, distinct from the canonical value declaration.
+    #[must_use]
+    pub const fn input_id(self) -> EntityId {
+        self.input
     }
 
     /// Actual canonical record; its identity/source/value/state remain singly owned there.
@@ -74,7 +104,7 @@ impl fmt::Debug for FormulaLengthInput<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         // The metadata Debug view intentionally omits customer names and canonical state/value.
         f.debug_struct("FormulaLengthInput")
-            .field("metadata", &self.metadata)
+            .field("metadata", &self.metadata())
             .finish_non_exhaustive()
     }
 }
@@ -125,12 +155,7 @@ impl<'a> FormulaLengthInputError<'a> {
 
 impl fmt::Display for FormulaLengthInputError<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(
-            f,
-            "length input {}: {}",
-            self.input.metadata.name(),
-            self.reason
-        )
+        write!(f, "length input {}: {}", self.input.name(), self.reason)
     }
 }
 
