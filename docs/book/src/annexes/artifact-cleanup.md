@@ -74,12 +74,39 @@ a new actual type-guard fault requires an assertion red. No unreadable handle is
 A fresh full census then passed0. That proves its own snapshot, not the refused one. The earlier
 unretained failure remains unexplained; no kernel cause or scheduling race is inferred.
 
-A revoked runtime descriptor can also appear as a name without a type even when lsof exits0.
-That observation still refuses2. Cleanup then stops before deletion and its last successful
-cadence date remains unchanged. Recover the host runtime, rerun the strict census and create a
-fresh cleanup plan if HEAD, tracked inputs or candidate contents changed during diagnosis.
-The active harness must not terminate itself or exempt unreadable handles to manufacture a
-successful handoff; commit the blocker and resume instructions before requesting host recovery.
+lsof may omit unavailable fields, as its field-output manual explains. On Darwin, Apple's
+[process_vnode implementation](https://github.com/apple-oss-distributions/lsof/blob/main/lsof/dialects/darwin/libproc/dfile.c)
+prints the `(revoked)` marker after a vnode-information lookup returns ENOENT. Its own comment
+warns that this error does not always establish revocation. The marker cannot certify that a
+descriptor is harmless. See also the upstream [field-output contract](https://github.com/lsof-org/lsof/blob/master/Lsof.8).
+
+The checker distinguishes missing metadata from malformed framing. For example:
+
+```text
+handoff: REFUSED — lsof type unavailable for PID 8048 FD 10 (revoked); handle identity unresolved
+```
+
+This remains exit2. PID/FD identify the observation; raw handle names are withheld, apart from
+the exact producer marker. Missing process/file fields or duplicate names still report malformed
+framing. Caller ancestry and runtime process names do not exempt unresolved metadata.
+
+D217 reproduced this in the Codex daemon, session and code-mode host. Independent read-only
+libproc queries also returned ENOENT; one owner was outside caller ancestry. The underlying kernel
+cause remains unproved. The installed OS tools and libproc are required read-only host dependencies;
+diagnostic outputs stay under the repository's protected audit directory.
+
+Recovery requires restarting the affected Codex host runtime outside the active harness, then
+resuming from the committed pointer. Do not terminate the harness from inside itself. Verify:
+
+```bash
+bash scripts/check_handoff.sh --idle-cua
+python3 -I -B docs/tasks/artifacts/handoff/contract.py --real
+```
+
+The first command needs complete OS-visible evidence and no pending CUA call/result. The second
+must observe clear0, a controlled real held-file blocker1, then restored clear0. Only then create
+a fresh cleanup plan: HEAD, tracked inputs or candidates may have changed during diagnosis.
+Until then cleanup removes nothing and the last successful cadence date stays unchanged.
 
 ## Verification scope
 

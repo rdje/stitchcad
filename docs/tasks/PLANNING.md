@@ -1065,20 +1065,16 @@ D215 whole authored report/verified repair retained in [part134](../history/stit
 
 D216 whole authored report/verified repair retained in [part135](../history/stitchcad-defects-part135.md).
 
-- **D217** — Codex runtime revoked descriptors omit the requested lsof type, blocking strict
-  cleanup and session-handoff evidence at startup2026-10-24.
-  - Reproduce: OS-visible `bash scripts/check_handoff.sh --idle-cua` returns2 with
-    `malformed lsof name field`. Three fresh `lsof -u <current-user-id> -Fpftn` observations
-    return0 but each includes descriptor10/name(revoked)/no type in two codex processes and
-    codex-code-mode-host. Sanitized shapes: target/artifact_cleanup_audit/startup-20261024/.
-  - Why/where: scripts/handoff_census.py parse_handles requires a type before each name.
-    Existing missing-type fixture and actual type-guard omission cover that refusal. Kernel
-    causation is unproved; successful lsof exit alone does not establish complete evidence.
-  - Impact: cleanup apply refuses before removal; no handoff: OK can be earned in this runtime.
-    Every frozen candidate/HEAD/producer/tracked-content fingerprint remains exact after refusal.
-  - Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4, P1 now, before .a23.3.2.
-    Requires external runtime recovery, then fresh strict census and fresh cleanup plan/apply.
-    Do not terminate the active harness or relax missing-evidence checks to obtain success.
+- **D217** — unavailable Codex descriptor identities block cleanup/handoff since2026-10-24.
+  Reproduce: OS-visible `bash scripts/check_handoff.sh --idle-cua` refuses2; PID8048/FD10
+  is first. Initial three samples: lsof0, fd10/name(revoked)/no type in two codex processes
+  and code-mode-host. Audit: target/artifact_cleanup_audit/startup-20261024/.
+  Cause: Apple process_vnode labels ENOENT ambiguously; types may be omitted. Direct libproc
+  also returns ENOENT; code-mode-host is outside caller ancestry. Kernel cause unproved.
+  cleanup4.fix corrects parse_handles' misleading malformed diagnosis; controls preserve refusal.
+  No deletion; frozen fingerprints exact. Owner cleanup4, P1 before .a23.3.2: host runtime
+  restart outside active harness; complete census, real held-file control, fresh cleanup plan/apply.
+  Sources/recovery: book cleanup annex. Never kill the active harness or exempt unknown handles.
 
 ## Verified closure awaiting archival
 

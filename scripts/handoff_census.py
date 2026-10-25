@@ -69,8 +69,14 @@ def parse_handles(text, root):
                 raise Refusal('malformed lsof type field')
             kind = value
         elif field == 'n':
-            if pid is None or fd is None or kind is None or named:
+            if pid is None or fd is None or named:
                 raise Refusal('malformed lsof name field')
+            if kind is None:
+                # lsof omits unavailable fields. Its Darwin "(revoked)" marker
+                # reports an ENOENT lookup, not a proved harmless descriptor.
+                marker = ' (revoked)' if value == '(revoked)' else ''
+                raise Refusal('lsof type unavailable for PID %d FD %s%s; '
+                              'handle identity unresolved' % (pid, fd, marker))
             if not value and kind not in ('PIPE', 'NPOLICY', 'NEXUS'):
                 raise Refusal('unnamed filesystem/unknown lsof handle')
             named = True

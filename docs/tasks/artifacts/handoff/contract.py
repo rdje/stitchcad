@@ -67,7 +67,15 @@ case('lsof bad pid',lsof='pX\n',refusal='lsof identity')
 case('duplicate lsof pid',lsof=BASE_LSOF+BASE_LSOF,refusal='lsof identity')
 case('file without process',lsof='f3\ntREG\nnx\n',refusal='file field')
 case('name without file',lsof='p100\nnx\n',refusal='name field')
-case('missing type',lsof='p100\nf3\nnx\n',refusal='name field')
+case('missing type',lsof='p100\nf3\nnx\n',refusal='type unavailable')
+case('revoked caller handle',lsof='p100\nf10\nn(revoked)\n',refusal='type unavailable')
+case('revoked ancestor handle',lsof=BASE_LSOF+'p90\nf10\nn(revoked)\n',refusal='type unavailable')
+case('revoked unrelated runtime',ps=BASE_PS+'200 90 00:01 codex-code-mode-host\n',
+     lsof=BASE_LSOF+'p200\nf10\nn(revoked)\n',refusal='type unavailable')
+case('revoked name without file',lsof='p100\nn(revoked)\n',refusal='name field')
+case('duplicate name still malformed',lsof=BASE_LSOF+'n(revoked)\n',refusal='name field')
+case('typed marker is no exemption',ps=BASE_PS+'200 90 00:01 ordinary '+R+'\n',
+     lsof=BASE_LSOF+'p200\nf10\ntREG\nn(revoked)\n',expected=(200,))
 case('unknown field',lsof=BASE_LSOF+'Zx\n',refusal='unexpected lsof')
 case('truncated process',lsof=BASE_LSOF+'p200\n',refusal='truncated lsof process')
 case('truncated file',lsof='p100\nf3\ntREG\n',refusal='truncated lsof process')
@@ -95,6 +103,22 @@ def verify(ns):
             assert tuple(b[0] for b in blocks)==expected,(name,'blocking',blocks,expected)
             assert tuple(n[0] for n in notes)==advisory,(name,'advisory',notes,advisory)
             assert calls==['ps','lsof'],(name,'single primary snapshots',calls)
+    # Exact independently specified diagnostics: no raw handle path or arbitrary
+    # producer name is repeated, and a near-match is not labelled revoked.
+    for evidence, expected in [
+        ('p200\nf10\nn(revoked)\n',
+         'lsof type unavailable for PID 200 FD 10 (revoked); handle identity unresolved'),
+        ('p300\nf4\nn'+R+'/private.txt\n',
+         'lsof type unavailable for PID 300 FD 4; handle identity unresolved'),
+        ('p400\nf5\nn(revoked) extra\n',
+         'lsof type unavailable for PID 400 FD 5; handle identity unresolved'),
+    ]:
+        try:
+            ns['parse_handles'](evidence,R)
+        except ns['Refusal'] as error:
+            assert str(error)==expected,('exact diagnostic',str(error),expected)
+        else:
+            raise AssertionError('unresolved metadata admitted')
 
 
 ns=runpy.run_path(str(SOURCE));verify(ns)
@@ -111,7 +135,10 @@ FAULTS=[
  ('matching launch','and tail == child.command','and True'),
  ('permissions marker',"and 'permissions.node_repl=' in launcher",'and True'),
  ('unnamed type proof',"if not value and kind not in ('PIPE', 'NPOLICY', 'NEXUS'):",'if False:'),
- ('missing type proof','or kind is None or named:','or named:'),
+ ('missing type proof','if kind is None:','if False:'),
+ ('diagnostic PID','% (pid, fd, marker)','% (999, fd, marker)'),
+ ('diagnostic descriptor','% (pid, fd, marker)','% (pid, "0", marker)'),
+ ('exact revoked marker',"value == '(revoked)'","value.startswith('(revoked)')"),
  ('truncation proof','if not named or complete != seen:','if False:'),
 ]
 for name,old,new in FAULTS:

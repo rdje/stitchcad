@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — unavailable lsof metadata needs an actionable refusal
+
+0232 cleanup4.fix: installed lsof's field-output manual permits unavailable fields to be omitted.
+Apple process_vnode maps ENOENT to an uncertain revoked marker; treating that as inert would
+discard evidence. Read-only libproc flavors1/2 also return zero with errno2 for the observed
+descriptors; ps ancestry places code-mode-host outside the caller chain. Kernel cause unproved.
+The parser now distinguishes unavailable type metadata from malformed process/file/name framing,
+reporting PID/FD and only the exact revoked marker. No success, exemption or blocking rule changes.
+Handoff controls pass49 cases/17 actual faults; three exact diagnostic checks reject wrong PID/FD,
+path leakage and marker near-matches. The real OS census still refuses2 on PID8048/FD10.
+D217 remains owned: host runtime restart, real clear/held-file/restored proof, fresh cleanup plan.
+No cleanup or cadence update. Promotion declined: existing incomplete-evidence rule; recovery and
+primary sources belong in the cleanup annex. Original0229 interpretation below is superseded only
+as to its malformed-record diagnosis: the refusal remains correct.
+
 ## _(2026-10-24 UTC)_ — transport admission follows deployment evidence
 
 0231 .9.transport.policy applies the director-requested roadmap v0.4 amendment. The old phase

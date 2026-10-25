@@ -112,6 +112,12 @@ the digests afterwards.
 
 | [part168](docs/history/window9.md#stitchcad-changelog-part168md) | whole G1-0178 ledger | 7 lines, 563 bytes, sha256:444701d5… |
 
+## STITCHCAD-G1-0232 — identify unavailable lsof descriptor metadata
+
+.f.cleanup4.fix: distinguish optional missing type metadata from malformed framing; include PID/FD
+without leaking handle paths. Handoff controls49/17 actual faults pass. Actual OS refusal remains2;
+D217 requires host runtime restart and fresh census/held-file/cleanup proof. No artifact deletion.
+
 ## STITCHCAD-G1-0231 — admit MCP connection profiles by evidence
 
 Roadmap v0.4 replaces the stdio-only/G5+ restriction with per-profile admission from G1.

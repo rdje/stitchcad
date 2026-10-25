@@ -764,24 +764,34 @@ Whole0210 task/lesson retained in [part278](../history/stitchcad-devnotes-part27
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4`
   Status: `blocked`
-  Goal: required overdue cleanup at startup2026-10-24 before publication builder authority.
-  Own: docs/ARTIFACT_CLEANUP.md; target/artifact_cleanup_audit/startup-20261024/;
-  frozen ignored candidates and whole preceding cleanup task/lesson/ledger retention if needed.
-  Acceptance: inspect frozen plan; preserve consumed evidence and protected stores/deps;
-  apply only with OS-visible idle proof, then immediate read-only selected-residue/tracked-byte
-  census before activation. Rebuild book/native/WASM and run cleanup/publication/continuity
-  controls, record terminal results and commit per COMMIT.md before returning to .a23.3.2.
-  No policy thresholds, submodule pins or other Git repository may change.
-  Blocker D217: OS-visible lsof returns descriptor10/name(revoked) without a type in Codex
-  runtime processes. Canonical handoff refuses2 before cleanup deletion. Runtime recovery needs
-  host action; do not stop the active harness from inside itself or weaken the strict checker.
-  Resume: recover runtime, require actual handoff: OK, then create a fresh cleanup plan because
-  this documentation commit invalidates the attempted plan. Complete cleanup before .a23.3.2.
+  Goal: overdue startup2026-10-24 cleanup before .a23.3.2; D217 host recovery first.
+  Own: docs/ARTIFACT_CLEANUP.md; target/artifact_cleanup_audit/startup-20261024/; ignored
+  candidates/required preceding receipts. Preserve evidence/stores/deps, thresholds/pins/repos.
+  Acceptance: fresh reviewed plan after drift; OS-visible handoff OK; apply; immediate read-only
+  residue/tracked-byte proof before activation; rebuild book/native/WASM; cleanup/publication/
+  continuity controls; terminal receipts/commit. No deletion occurred; never exempt unknown handles.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.r`
   Status: `done`
   Goal: verified; whole original scope and proof retained302.
   Acceptance: complete committed record in [part302](../history/stitchcad-devnotes-part302.md).
+
+- ID: `G1-SLICE.5b.4c.h2.b.p.o.f.cleanup4.fix`
+  Status: `done`
+  Goal: D217 diagnosis/actionable refusal, strict gate preserved; host recovery remains blocked.
+  Paths: scripts/handoff_census.py;docs/tasks/artifacts/handoff/contract.py;live/book records.
+
+- [x] REPRODUCE / ISSUE: bash scripts/check_handoff.sh --idle-cua refused2: malformed name.
+- [x] ROOT CAUSE: same OS command now reports type unavailable, PID8048/FD10, rc=2.
+  parse_handles confused optional metadata with framing; Apple source warns revoked is uncertain.
+- [x] FIX: PID/FD diagnostic, no raw name except exact marker; no exemptions or success change.
+- [x] ADDRESSED: bash docs/tasks/artifacts/handoff/run_handoff_probes.sh reports49 fixtures/
+  17 actual assertion reds, rc=0; exact diagnostics cover PID/FD/privacy/near-marker.
+- [x] NO REGRESSION: python3 -I -B docs/tasks/artifacts/ci_environment/python_cleanup_entry_contract.py
+  passes physical14/omissions5/strict statuses, rc=0; book build/coverage9/glossary27 pass0.
+  Real clear/held-file/restored proof blocked by D217; host restart then fresh cleanup required.
+- [x] LOCKSTEP: live/book/task records updated; bash scripts/check_live_doc_size.sh OK, rc=0.
+  promotion: declined (existing strict evidence policy; UTC date verified). Commit0232; no cleanup/cadence change.
 
 - ID: `G1-SLICE.5b.4c.h2.b.xtask`
   Status: `proposed`
