@@ -80,3 +80,76 @@ fn sqrt_refuses_actual_undeclared_kinds_before_value_execution() {
         assert_eq!(error.diagnostic_code(), "formula_dimension");
     }
 }
+
+#[test]
+#[allow(clippy::expect_used)]
+fn hypot_matches_independent_fixtures_without_an_intermediate_area_limit() {
+    let mut rows = 0;
+    for row in include_str!("fixtures/formula_roots.tsv")
+        .lines()
+        .filter(|row| !row.starts_with('#'))
+    {
+        let cells: Vec<_> = row.split('\t').collect();
+        assert_eq!(cells.len(), 8, "{row}");
+        if cells[0] != "hypot" {
+            continue;
+        }
+        rows += 1;
+        let left = value(K::Length, cells[2], cells[3]);
+        let right = value(K::Length, cells[4], cells[5]);
+        let result = left.checked_hypot(right);
+        if let Some(integer) = cells[7].strip_prefix("integer:") {
+            let result = result.expect("admitted rounded length");
+            assert_eq!(result.kind().token(), cells[6]);
+            assert_eq!(
+                result.rational(),
+                R::new(integer.parse().expect("expected integer"), 1, false)
+                    .expect("expected rational"),
+                "{row}"
+            );
+        } else {
+            let integer = cells[7]
+                .strip_prefix("domain:")
+                .expect("exact rounded-domain witness");
+            let error = result.expect_err("rounded length exceeds scalar limit");
+            assert_eq!(
+                error,
+                Error::ScalarDomain {
+                    operation: "hypot",
+                    kind: K::Length,
+                    value: R::new(integer.parse().expect("rounded integer"), 1, false)
+                        .expect("witness rational"),
+                    minimum: -1_000_000_000,
+                    maximum: Some(1_000_000_000),
+                }
+            );
+            assert_eq!(error.diagnostic_code(), "formula_domain");
+        }
+    }
+    assert_eq!(rows, 10, "the authored hypot subset must be exercised");
+}
+
+#[test]
+#[allow(clippy::expect_used)]
+fn hypot_refuses_the_actual_first_wrong_kind_even_for_zero_values() {
+    let length = value(K::Length, "0", "1");
+    for kind in [K::Area, K::Angle, K::Ratio, K::Count] {
+        let other = value(kind, "0", "1");
+        for (argument, result) in [
+            (0, other.checked_hypot(length)),
+            (1, length.checked_hypot(other)),
+            (0, other.checked_hypot(other)),
+        ] {
+            let error = result.expect_err("hypot requires two lengths");
+            assert_eq!(
+                error,
+                Error::BuiltinInputKind {
+                    builtin: F::Hypot,
+                    argument,
+                    actual: kind
+                }
+            );
+            assert_eq!(error.diagnostic_code(), "formula_dimension");
+        }
+    }
+}

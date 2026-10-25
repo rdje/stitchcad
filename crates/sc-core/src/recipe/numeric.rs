@@ -440,6 +440,36 @@ impl FormulaNumericValue {
         Self::for_operation(kind, value, "sqrt")
     }
 
+    /// Returns the nearest-quantum hypotenuse of signed lengths without materializing an Area.
+    ///
+    /// Exact squared fractions share the reviewed root workspace. Only the rounded result has a
+    /// Length scalar-domain check; source-call/irrational provenance belongs to the later evaluator.
+    ///
+    /// # Errors
+    /// Returns BuiltinInputKind for the first non-Length operand or a typed rounded-result domain
+    /// refusal. No intermediate area-domain/128-bit limit or signed i64 binding check is applied.
+    pub fn checked_hypot(self, rhs: Self) -> Result<Self, FormulaNumericError> {
+        let kind = FormulaBuiltin::Hypot
+            .result_kind(&[
+                FormulaBuiltinOperand::Value(self.kind),
+                FormulaBuiltinOperand::Value(rhs.kind),
+            ])
+            .ok_or_else(|| {
+                let (argument, actual) = if self.kind != FormulaKind::Length {
+                    (0, self.kind)
+                } else {
+                    (1, rhs.kind)
+                };
+                FormulaNumericError::BuiltinInputKind {
+                    builtin: FormulaBuiltin::Hypot,
+                    argument,
+                    actual,
+                }
+            })?;
+        let value = super::roots::hypot_value(self.value, rhs.value)?;
+        Self::for_operation(kind, value, "hypot")
+    }
+
     fn extremum(values: &[Self], builtin: FormulaBuiltin) -> Result<Self, FormulaNumericError> {
         let mut selected = values
             .first()

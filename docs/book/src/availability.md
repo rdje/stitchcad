@@ -49,8 +49,8 @@ normalized-literal bridge. All four quantity operators now apply exact ppm scali
 Exact unary negation/square and all six numeric comparisons are available, preserving fractional
 values and raw angle turns. Exact abs/min/max/clamp are available with typed argument/bound refusals.
 Explicit round_to is available at exact same-kind steps. Binding value conversion now rounds once,
-checks signed i64 storage and preserves Boolean kind. Correctly rounded sqrt(area/ratio) is available.
-Hypot, transcendental functions and complete statement/recipe execution remain the next stages.
+checks signed i64 storage and preserves Boolean kind. Correctly rounded sqrt(area/ratio) and signed-
+length hypot are available. Transcendental functions and complete statement/recipe execution remain next.
 
 ## Planned workflows
 

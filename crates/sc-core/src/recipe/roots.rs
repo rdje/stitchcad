@@ -14,6 +14,23 @@ pub(super) fn sqrt_value(
     )
 }
 
+/// Both operands are completed Length values; signs disappear only inside this squared sum.
+pub(super) fn hypot_value(
+    left: FormulaRational,
+    right: FormulaRational,
+) -> Result<FormulaRational, FormulaRationalError> {
+    let left_n = BigUint::from(left.numerator_magnitude());
+    let left_d = BigUint::from(left.denominator());
+    let right_n = BigUint::from(right.numerator_magnitude());
+    let right_d = BigUint::from(right.denominator());
+    // At most 513 numerator/512 denominator bits. This is a function workspace, not a completed
+    // Area expression. Applying area scalar/128-bit bounds here would falsely refuse valid hypot.
+    let numerator =
+        &left_n * &left_n * &right_d * &right_d + &right_n * &right_n * &left_d * &left_d;
+    let denominator = &left_d * &left_d * &right_d * &right_d;
+    rounded_root(numerator, denominator)
+}
+
 fn rounded_root(
     numerator: BigUint,
     denominator: BigUint,
@@ -41,7 +58,7 @@ fn rounded_root(
     Ok(FormulaRational::from_integer_magnitude(magnitude, false))
 }
 
-// All callers satisfy the sealed root-family plan: sqrt's largest integer result is <=75 bits.
+// All callers satisfy the sealed root-family plan: sqrt's result is <=75 bits and hypot's <=31.
 // This also bounds the diagnostic bit-count conversion, even though narrowing never fails there.
 #[allow(clippy::cast_possible_truncation)]
 fn narrow_root(value: &BigUint) -> Result<u128, FormulaRationalError> {

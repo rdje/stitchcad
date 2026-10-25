@@ -116,3 +116,6 @@ provenance; later evaluator `.5e.3` must retain every root-call contribution, in
 
 Implementation0255: checked_sqrt now follows this plan for area/ratio; focused native2/0 includes
 15 independent fixture rows. Hypot and source-bearing evaluator provenance remain later owners.
+
+Implementation0256: checked_hypot reuses the exact root kernel on its private squared sum; focused
+native4/0 covers all25 root rows. Value kernels are available; source provenance remains .5e.3.

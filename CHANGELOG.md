@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0255 — correctly rounded sqrt area/ratio value kernel
+## STITCHCAD-G1-0256 — correctly rounded hypot value kernel
 
-.5d.2.1: exact integer bisection/midpoint algorithm, area/ppm scaling, typed negative/kind refusals.
-Focused native target2/0 with15 independent rows; hypot and source-bearing provenance remain later work.
+.5d.2.2: exact signed-length squared sum, reviewed root kernel and final rounded scalar check.
+Focused native4/0 consumes all25 root rows. Source provenance/broad proofs and transcendental plans remain owned.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -400,3 +400,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part226](docs/history/stitchcad-changelog-part226.md) | whole0253 | 4 lines, 274 bytes, sha256:533a1da7… |
 
 | [part227](docs/history/stitchcad-changelog-part227.md) | whole0254 | 4 lines, 274 bytes, sha256:df952d81… |
+
+| [part228](docs/history/stitchcad-changelog-part228.md) | whole0255 | 4 lines, 279 bytes, sha256:81ffba1f… |

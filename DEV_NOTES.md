@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-25 UTC)_ — correctly rounded hypot without a materialized area
+
+0256 .5d.2.2 forms the exact signed-length squared sum in private bounded integer workspace and
+reuses root bisection/midpoint rounding. No Area value or internal128-bit result limit is imposed.
+Admitted length domains bound the root quotient below2^61; the function's rounded Length alone
+has scalar validation. Existing signature metadata refuses actual non-Length inputs in operand
+order, including zero values; no fabricated dimension/value is introduced.
+
+One affected native root target passes4/0, rc=0, consuming all25 independent rows (15sqrt/10hypot).
+Cases include signed/zero/Pythagorean/half outcomes, maximum-length squared sum above Area bound,
+rounded scalar excess and full128-bit fraction components with513/512-bit raw workspace. Sqrt
+cases and actual bad-kind checks remain green. Source-bearing root-call contributions stay .5e.3;
+parent .5d.2 remains open for that integration. Broad/platform/mutation work stays .5d.4/pre-push.
+Whole0255 scope/ledger retained329/228; book/live/frontier align. Promotion: numerical decision
+records the implemented hypot value kernel alongside its existing algorithm proof.
+
 ## _(2026-10-25 UTC)_ — correctly rounded sqrt numeric value kernel
 
 0255 .5d.2.1 implements the recorded exact root plan in private roots.rs: integer bisection over

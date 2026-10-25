@@ -485,31 +485,34 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: correctly rounded sqrt(area/ratio) and hypot(length,length) under .1's reviewed algorithm.
   Acceptance: negative root refusal, exact square/tie neighbors, full input domains, true rounded
   quantum and hypot without materializing an out-of-domain area; irrational provenance retained.
+  Value children .1/.2 complete; parent remains in_progress for source-bearing .5e.3 integration.
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5d.2.1`
   Status: `done`
-  Goal:0255 correctly rounded sqrt area/ratio via the recorded exact midpoint/bisection plan.
+  Goal: correctly rounded sqrt area/ratio with15 independent rows verified0255.
   Paths: crates/sc-core/src/recipe/roots.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_root_value_contract.rs
-  Own bounded private integer root, metadata signature reuse, actual negative/kind refusals and
-  existing25-row root fixture integration (sqrt subset now, hypot .2 next). Ratio returns ppm;
-  no intermediate float/width/storage guess. Only completed rounded scalar result is checked.
-  Source-call provenance remains .5e.3; no evaluator/irrational-family closure claim. One focused
-  native root target; broad/platform/mutation .5d.4/pre-push. Own complete327/328/227 retention,
-  preserving four closed marks/allowance nodes/paths under caps; sync book/live before hypot.
-
-- [x] REPRODUCE / ISSUE:5fae1cb supplies root plan/fixtures but no production sqrt, inspection0.
-- [x] ROOT CAUSE: exact midpoint and finite integer root avoid approximation/tie errors; cargo test
-  --offline -p sc-core --test formula_root_value_contract:2 passed/0 failed, rc=0.
-- [x] FIX: bounded bisection/ratio scale and metadata signatures, actual negative/kind refusals.
-- [x] ADDRESSED: same native target replays15 independent sqrt rows and wrong-kind cases,2/0, rc=0.
-- [x] NO REGRESSION: same target exercises completed values/full widths;15 rows/2 tests, rc=0;
-  earlier arithmetic unchanged, broad/platform .5d.4/pre-push, provenance .5e.3.
-- [x] LOCKSTEP:327/328/227 whole Git/public bytes exact, rc=0; four legacy IDs/Goals retained,
-  book/live aligned and stale quantity-follow prose fixed. promotion: numerical decision gains sqrt scope.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part329.md).
 
 - ID: `G1-SLICE.5d.2.2`
-  Status: `pending`
-  Goal: exact hypot; source provenance .5e.3.
+  Status: `done`
+  Goal:0256 exact rounded hypot without materializing an area; source provenance .5e.3.
+  Paths: crates/sc-core/src/recipe/roots.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_root_value_contract.rs
+  Own exact signed-length squared sum and reuse reviewed rounded-root helper. Validate actual
+  kinds through existing signatures, then only completed rounded Length domains; no internal area
+  or rational-width refusal. Replay ten retained hypot rows and preserve15 sqrt cases in one
+  affected native target; broad/platform/mutation .5d.4/pre-push. Keep parent open for .5e.3
+  source contribution proof. Retain whole sqrt task/ledger329/228; book/live/pointers before commit.
+
+
+- [x] REPRODUCE / ISSUE:e646da3 has no production hypot; source inspection rc=0.
+- [x] ROOT CAUSE: intermediate Area/width limits can falsely refuse an admitted rounded Length;
+  cargo test --offline -p sc-core --test formula_root_value_contract:4 passed/0 failed, rc=0.
+- [x] FIX: exact squared fractions/root reuse, metadata kinds and rounded-result scalar witnesses.
+- [x] ADDRESSED: same native target consumes ten independent hypot rows/bad-kind cases,4/0, rc=0.
+- [x] NO REGRESSION: same target retains all15 sqrt rows,25 total/4 tests, rc=0; source provenance
+  .5e.3 and broad/platform/mutation .5d.4/pre-push remain open.
+- [x] LOCKSTEP:329/228 whole Git/public records exact, rc=0; book/live/frontier aligned.
+  promotion: numerical decision records hypot value-kernel scope; parent keeps provenance pending.
 
 - ID: `G1-SLICE.5d.3`
   Status: `pending`

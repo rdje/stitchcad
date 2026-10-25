@@ -151,6 +151,7 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | checked_clamp | Explicit inclusive exact bounds of the same kind |
 | checked_round_to | Authored same-kind step, nearest exact multiple with ties away from zero |
 | checked_sqrt | Correctly rounded area-to-length or ratio-to-ratio square root |
+| checked_hypot | Correctly rounded signed-length hypotenuse with no intermediate Area |
 
 Length and area use inclusive signed limits of 10⁹ micrometres and 10¹⁸ square micrometres.
 The check compares the exact fraction with the bound: limit + 1/10 refuses even if binding would
@@ -395,7 +396,7 @@ native target above. The rows cover full magnitudes, signs, canonical zero, wide
 zero division and fully reduced numerator/denominator width refusals. This is a focused comparison;
 it does not claim exhaustive arithmetic or platform verification.
 
-## Correctly rounded sqrt and planned hypot
+## Correctly rounded sqrt and hypot
 
 checked_sqrt is available for area and ratio. Area returns length; ratio returns ratio in ppm.
 Negative inputs return NegativeSquareRoot with their actual kind and exact value. Other kinds,
@@ -417,7 +418,8 @@ assert_eq!(quarter.checked_sqrt()?.rational(), FormulaRational::from_signed_inte
 ```
 
 The recorded root-family algorithm uses exact integers with the existing private bigint dependency.
-Hypot remains the next feature. Transcendental functions retain a separate pending algorithm obligation.
+checked_hypot is also available for two signed lengths. Transcendental functions retain a separate
+pending algorithm obligation.
 
 For z=N/D>=0, find k=floor(sqrt(floor(N/D))) by bounded integer bisection. This is floor(sqrt(z))
 because comparing an integer square with z is equivalent to comparing it with floor(z). Round up
@@ -426,23 +428,44 @@ squared midpoint instead of approximating a root. Bisection halves a finite inte
 has no numerical convergence guess.
 
 Area sqrt uses its square-micrometre fraction directly. Ratio sqrt multiplies its internal ppm
-radicand by1,000,000, so the integer root returns ppm. Negative root operands refuse. Planned hypot will form
+radicand by1,000,000, so the integer root returns ppm. Negative root operands refuse. Hypot forms
 the exact squared-length sum privately and roots it without creating an area value: a sum exceeding
 the area domain can still have an admitted rounded length. Only the rounded function result is
 checked against its scalar domain; no binding narrowing occurs inside the function.
 
 Input/component domains bound area, ratio and hypot bisection to30,74 and31 iterations respectively.
 Hypot's raw numerator/denominator need at most513/512 bits; the conservative midpoint comparison
-needs at most576 bits. These are workspace bounds, not additional language limits. Planned focused
+needs at most576 bits. These are workspace bounds, not additional language limits. Focused
 checks include exact half squares and rational neighbors, full128-bit ratio, zero/signed lengths,
 Pythagorean cases and squared sums above the area domain. Source-call provenance and broad/platform
 proof remain later owned integration work. Every sqrt call, including perfect roots, must retain its
 contribution in the later source-bearing evaluator. This source-free value API supplies no such proof.
 
+checked_hypot forms the exact squared sum from its two admitted Length operands and applies the
+same integer root rule. Sign is retained in the operands; squaring gives a nonnegative result.
+A first non-Length operand returns BuiltinInputKind with argument zero or one, including for zero
+values. Only the final rounded Length has a scalar-domain check, with operation hypot and its exact
+rounded witness. A zero pair returns canonical zero; there is no hidden area or binding conversion.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational};
+
+let x = FormulaNumericValue::new(FormulaKind::Length, FormulaRational::from_signed_integer(-3))?;
+let y = FormulaNumericValue::new(FormulaKind::Length, FormulaRational::from_signed_integer(4))?;
+assert_eq!(x.checked_hypot(y)?.rational(), FormulaRational::from_signed_integer(5));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+For example, lengths1,000,000,000 and1 micrometre have a squared sum above the Area limit, but
+hypot returns the admitted rounded1,000,000,000 micrometres. Two maximum lengths return a scalar
+refusal with rounded1,414,213,562, rather than a premature Area refusal. Near-unit fractions with
+full128-bit components also work even though their unreduced squared sum needs513/512 bits.
+Source-bearing evaluator provenance remains pending for both root methods, including perfect roots.
+
 The pure fixture oracle is already retained at docs/tasks/artifacts/formula_structure/root_value_oracle.py.
 It uses Python math.isqrt and Fraction arithmetic;25 expected rows live in
-crates/sc-core/tests/fixtures/formula_roots.tsv. The focused native target passes two tests, including
-all15 sqrt rows; ten hypot rows await that feature. Exact midpoint neighbors beyond ordinary float
+crates/sc-core/tests/fixtures/formula_roots.tsv. The focused native target passes four tests, including
+all15 sqrt and ten hypot rows. Exact midpoint neighbors beyond ordinary float
 precision, full128-bit ratio, negative inputs and actual kind refusals are covered. Authored half-square,
 full-width and over-domain values check the oracle's role; no broad/platform pass is claimed.
 

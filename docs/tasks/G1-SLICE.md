@@ -812,7 +812,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5d.2.2` | `pending` | Correctly rounded hypot value kernel |
+| **next** | `G1-SLICE.5d.1.2` | `pending` | Deterministic transcendental algorithm/termination plan |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
