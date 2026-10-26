@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0329 — combined artifact input-schema review
+## STITCHCAD-G1-0330 — detached approval identity ruling
 
-Four concrete artifact payloads match normative rows; changed native5/0, library unchanged/prior9 retained.
-Strict lint/fmt/book/publication76-95 pass0;483/301 wholea092435 exact. .6.2.2.c.2.4 input scope closes.
-G1 progress6/18 unchanged; actual generation/closure/auth/serialization and receiver proof remain later.
+D239's post-hash approval-field mutation reproduced; director chose separate immutable approval records.
+Witness3/CLI refusal/census9-6-8-0/book/publication76-95 pass;484/302/143 whole22ab074 retained exact.
+.6.2.2.c.2.5.1 done; coordinated adoption next. G0 reason records pending adoption; G1 remains6/18.
 
 # Sealed archive — earlier slices
+
+| [part302](docs/history/stitchcad-changelog-part302.md) | whole0329 | 6 lines, 383 bytes, sha256:2cc586ff… |
 
 | [part301](docs/history/stitchcad-changelog-part301.md) | whole0328 | 6 lines, 372 bytes, sha256:8c724c41… |
 

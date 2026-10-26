@@ -206,24 +206,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 - ID: `G1-SLICE.3c.2b.1`
   Status: `done`
-  Goal: immutable `CutPlan` and `CutCopy` identities supplied explicitly by the caller, each naming
-  a pattern Piece and authored/reflected orientation. Validate exact per-piece quantity, identity
-  uniqueness and mirroring distribution; never derive a persistent copy identity from array order.
-  Acceptance: copies of one Piece have distinct identities; reordering retains those identities;
-  unknown/duplicate pieces or copies, missing/excess copies, and incompatible orientations are typed
-  refusals. MirroredPairs has equal authored/reflected counts; Single and separate PairMember copies
-  retain authored orientation. Copy identities do not promise geometry or manufacture assembly state.
-  Signoff alignment: D59 reproduces 15 undeclared API tokens in committed ontology docs at
-  `6abfac3` (`GLOSSARY_ROOT` census of a `git archive` snapshot, `rc=1`); current additions also
-  need chapter-local vocabulary declarations. Fix here before commit and run the glossary census.
-  Signoff alignment: D60 is the staged gate refusing the moved historical doc-only `.1` ROOT
-  CAUSE box with no tool-output signature; `.2` has the same issue. Supplement both with re-derived
-  commit evidence in their own bullets; do not waive the gate or shadow them with a newer box.
-  Verification: nine cut-contract tests + privacy doctest, strict check, wasm, book,
-  glossary/feature/tree censuses, ledger probes and staged doctrine gate green; D59/D60 closed.
-  Commit: `STITCHCAD-G1-0010`
-  Design: `decision_physical-cut-copies-have-stable-identities.md` (director ruling, before code).
-
+  Goal: Structural sewing-side primitives complete; whole source/contracts/proofs [retained](../history/stitchcad-devnotes-part484.md).
 - ID: `G1-SLICE.3c.2b.2`
   Status: `done`
   Goal: completed copy-addressed sewing contract; [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part430md).
@@ -757,26 +740,46 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0328 canonical tech-pack source request; [whole scope/proofs](../history/stitchcad-devnotes-part483.md).
 - ID: `G1-SLICE.6.2.2.c.2.4.5`
   Status: `done`
-  Goal:0329 combined current artifact schema/source/configuration/closure review; close .4 input scope only.
-  Own existing artifact native contract adding actual four-payload construction versus normative artifact rows,
-  current artifact-book scope and parent/frontier/live records. Current registered single/graded DXF, PLT,
-  PDF settings and canonical tech-pack sources retain their own provenance/readiness/execution boundaries.
-  Additive all-contours target/mode registration remains G3-GRADING.10/G6, not an inferred writer flag.
-  Reuse0328 unchanged library/other9 native proof; run changed artifact target and selected strict lint/fmt/book/
-  publication. No geometry/unknown computation/serialization/auth/approval/handler or full-G1 closure claim.
-  Own483 whole0328 task/oldest0305 lesson and301 ledger froma092435, exact source/hash/public before retirement.
-  Full CI remains G1 integration/pre-push. Next .6.2.2.c.2.5 release candidate/human approval input schemas.
-  - [x] ROOT CAUSE (WHY + WHERE): catalog declarations alone cannot establish available input shapes;
-    actual four-payload fixtures match normative artifact rows in changed native target5/0; rc=0.
-  - [x] ADDRESSED: fixed target/carriage, actual profile/source, print setting and closure schemas reviewed;
-    selected strict lint/fmt/book/publication76 chapters/95 entries pass; rc=0.
-  - [x] NO REGRESSION: git diff a092435 over core/measure/units src and Cargo metadata empty; other9 focused
-    proofs retained;483/301 whole source/hash/public equality pass; no runtime/release claim; rc=0.
-  Commit0329; parent .4 done, next .2.5 release inputs. G1 stays6/18; full CI G1 integration/pre-push.
-  Promotion declined: existing artifact contract; new normative-row native test watches schema coverage.
+  Goal: 0329 combined artifact input-schema scope closes; whole review/proofs [retained](../history/stitchcad-devnotes-part484.md).
 - ID: `G1-SLICE.6.2.2.c.2.5`
-  Status: `pending`
+  Status: `in_progress`
   Goal: exact release candidate preparation and human approval target schemas; no authority granted by actor claims.
+  Children: .1 D239 identity-boundary diagnosis/proposal; .2 ruling adoption; .3 candidate inputs;
+  .4 human approval inputs; .5 combined release-schema review before .2.6.
+- ID: `G1-SLICE.6.2.2.c.2.5.1`
+  Status: `done`
+  Goal:0330 diagnose D239 before release schema freeze; publish concrete independent transition witness/options.
+  Roadmap9/book1-3 put approver/scope/date in immutable hashed manifest yet approval follows candidate hashing.
+  Existing decision supplies no lifecycle boundary; list census cannot decide this transition. Filling values
+  after hashing changes identity. Prebinding or detached records need an explicit normative choice.
+  Own read-only synthetic approval_identity_probe.py, existing release decision pending section, book warning,
+  PLANNING and live/task pointer; SHA256 witness is diagnostic only, no product hash or approval adopted.
+  Recommend detached immutable approval records bound to unchanged candidate digest; alternative prebinds
+  exact prospective human/scope/date before final candidate hashing/review. Director chose A; adopt under .2.
+  Own484 whole0329 task/0306 lesson/closed sewing-side task/prior release census receipt and original
+  release1-3/roadmap9/decision rules,302 ledger and143 closed D238
+  report from22ab074; exact Git/hash/public before retirement. Focus witness, existing census/book/navigation;
+  no release implementation, real approval, whole CI or numeric campaign.
+  - [x] ROOT CAUSE (WHY + WHERE): roadmap9/release1-3/active rules lack identity transition; synthetic3 cases
+    reproduce changed bytes/digest after filling approval fields. Existing list census9/6/8/0 stays green; rc=0.
+  - [x] ADDRESSED: director2026-10-26 chose “Separate immutable approval records (Recommended)”; canonical
+    decision records ruling and coordinated .2 adoption. Witness/arg refusal/book/publication76-95 pass; rc=0.
+  - [x] NO REGRESSION: git diff22ab074 over crates/Cargo empty; no real approval, product hash choice or release
+    implementation.484/302/143 whole source/hash/public exact; local producer guards before outputs; rc=0.
+  Commit0330; next .2 adoption, no director question pending. G0 MostlyDone reason updated; G1still6/18.
+  New record promotion declined: existing indexed release decision owns D239 under its approval-binding answer.
+- ID: `G1-SLICE.6.2.2.c.2.5.2`
+  Status: `pending`
+  Goal: adopt director's D239 identity/approval-boundary ruling across roadmap/book/decision/census before schemas.
+- ID: `G1-SLICE.6.2.2.c.2.5.3`
+  Status: `pending`
+  Goal: concrete nonempty canonical artifact candidate-preparation inputs under the ruled identity boundary.
+- ID: `G1-SLICE.6.2.2.c.2.5.4`
+  Status: `pending`
+  Goal: exact candidate identity/scope human approval intent; claims grant no authenticated approval capability.
+- ID: `G1-SLICE.6.2.2.c.2.5.5`
+  Status: `pending`
+  Goal: combined release-schema review with human-only metadata and no candidate/approval execution claim.
 - ID: `G1-SLICE.6.2.2.c.2.6`
   Status: `pending`
   Goal: bounded current schema/source/permission metadata review before actual authorization/handlers .6.3+.

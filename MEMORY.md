@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0329 .6.2.2.c.2.4.5 closes current artifact input-schema scope; all four normative artifact rows construct typed payloads.
-- Native changed artifact5/0; library sources byte-identicala092435, other9 prior focused proofs retained.
-- Strict selected lint/fmt/book/publication76-95 pass0; actual traversal/generation/auth/serialization still later.
--483/301 wholea092435 source/hash/public exact0. NEXT .6.2.2.c.2.5 release candidate/human approval schemas.
-- G1 In Progress6/18 unchanged; all-contours registration G3-GRADING.10/G6, remaining engine/bus/app/approval owned later.
+-0330 .6.2.2.c.2.5.1 diagnoses D239 manifest/approval identity boundary; director chose detached immutable approval records.
+- Stable manifest binding and separate human/scope/date record bind unchanged candidate digest; coordinated adoption next.
+- Guarded synthetic3/CLI-refusal, existing release census9/6/8/0 and book/publication76-95 pass0; Rust unchanged22ab074.
+-484/302/143 whole22ab074 source/hash/public exact0. NEXT .6.2.2.c.2.5.2 adopt ruling in roadmap/book/decision/census.
+- G0 MostlyDone reason notes adoption pending/closure unapproved; G1 In Progress6/18 unchanged. No question pending.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — release approval identity ruling
+
+0330 .6.2.2.c.2.5.1 finds D239: actual approval fields versus immutable hashed candidate lack transition semantics.
+Guarded historical witness3/unknown-arg2 confirms post-hash fill changes bytes/digest; existing list census9/6/8/0.
+Director chose detached immutable approval records/stable manifest binding. Coordinated adoption .2 is next;
+book/publication76-95 pass0, Rust unchanged22ab074;484/302/143 whole source/hash/public exact0.
+Promotion: existing indexed release decision records D239 ruling; no duplicate record. G1still6/18.
+
 ## _(2026-10-26 UTC)_ — artifact input-schema review
 
 0329 .6.2.2.c.2.4.5 closes .4's current registered input scope: four typed payloads match all normative artifact rows.
@@ -202,16 +210,8 @@ with scoped test-only helper/import cleanup.442/443/279 whole4ae9650 Git/hash/pu
 G1still5/18; unified family/path review .3.3 next. Promotion: existing SizeSet decision extended;
 actual numeric execution, persistence and broad integration proof remain their later owners.
 
-## _(2026-10-26 UTC)_ — composite garment SizeSet input views
-
-0306 .4c.3d.3.1 borrows original membership/axes/chart/break records with typed structural path
-requirements. Both contexts must share actual membership, measurement context and Design table;
-independent equal-id wrappers refuse. Cross-view chart/observation/table/break identity aliases
-refuse. Complete chart enables regeneration inputs; grading additionally needs break coverage.
-Drafts/Unknown retain their original gaps and value-read errors; no metadata/value copies or execution.
-Native composite5+breaks5 pass0; selected strict lint/fmt/book0.440/441/278 whole79e0f1f Git/hash/public
-exact0. Shared fixture narrowly allows the standalone context helper unused in coupled targets.
-G1still5/18; MTM .3.2 next. Promotion: existing SizeSet decision extended; broad proof remains deferred.
+[Complete garment composite-input lesson](docs/history/stitchcad-devnotes-part484.md) retains
+its original canonical source/path contracts, focused checks and remaining proof boundaries.
 
 [Complete fifteenth-window lesson](docs/history/stitchcad-devnotes-part483.md) retains
 its original immutable source/packing/refusal proofs, D229 correction and continuation.

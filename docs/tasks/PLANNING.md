@@ -1088,17 +1088,23 @@ Closed D235/D236 reports and complete0321 evidence remain whole in
 Closed D237 report and complete0325 correction evidence remain whole in
 [part142](../history/stitchcad-defects-part142.md). Current membership wording correction D238 follows.
 
-## D238 — membership frontier leaves profile intent/application ambiguous
+Closed D238 report and complete0327 correction evidence remain whole in
+[part143](../history/stitchcad-defects-part143.md). Current release identity boundary D239 follows.
 
-At516895d, size-membership's final paragraph says profile transformations remain later, without
-separating implemented immutable intent from future application. Current SizeSetResolutionIntent and
-companion chapter implement that intent. Reproduce the unqualified frontier against those actual APIs.
-Impact: primary book view can underreport structural availability. Owner G1-SLICE.6.2.2.c.2.4.3,
-P2 fix0327 while updating artifact inputs. State implemented intent and deferred actual profile application;
-retain geometry/global currentness/evidence/release boundaries. No measurement-model code changes.
-- [x] ROOT CAUSE0327: existing intent exports/source contradict unqualified pending wording; source review rc=0.
-- [x] ADDRESSED0327: membership distinguishes implemented intent from application; book/publication76/93 rc=0.
-- [x] NO REGRESSION0327: native command11/0, measure sources unchanged; physical/global/release boundaries retained, rc=0.
+## D239 — approval data versus immutable manifest identity is unspecified
+
+At22ab074, roadmap9 and release2 include approver/scope/date in the immutable manifest; release1/3
+approve a preexisting candidate by its manifest digest. The active decision fixes immutability but
+specifies neither prebinding these values nor detached approval storage. Filling unresolved metadata
+post-hash changes bytes/identity. Root: field/list closure never defined that lifecycle boundary.
+Impact: release input/approval schemas cannot be frozen safely. Owner G1-SLICE.6.2.2.c.2.5.1,
+P1 now; .2 adopts director ruling before .3/.4 implementation. Recommend detached immutable approval
+records bound to unchanged digest; alternative prebinds exact prospective metadata before final hash.
+Historical source clauses484; synthetic witness is diagnostic only, not a product hash or actual approval.
+Director2026-10-26 chose detached immutable approval records; .2 coordinates adoption next.
+- [x] ROOT CAUSE0330: current clauses and guarded synthetic3 show post-hash fill changes identity; rc=0.
+- [x] ADDRESSED0330: director chose detached records; existing decision/book record ruling, adoption owned .2; rc=0.
+- [x] NO REGRESSION0330: census9/6/8/0/book/publication76-95 pass; Rust unchanged; full fix awaits adoption, rc=0.
 
 ## Active continuity followup
 

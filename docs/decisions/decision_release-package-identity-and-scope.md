@@ -63,3 +63,34 @@ an immutable package (a system that mutates files in place), which would make th
 translation layer rather than the contract; (2) evidence from the G6 pilot that a `sidecar` disposition is
 read as a defect report by cutting rooms, which would move those cells to `block` — stricter, never
 looser, because loosening is how an unobserved value reaches fabric.
+
+## D239 ruling — detached approval, coordinated adoption next
+
+Owner: G1-SLICE.6.2.2.c.2.5.1, opened2026-10-26 before release request schemas.
+Director2026-10-26 selected “Separate immutable approval records (Recommended)”. Option A is the ruling;
+G1-SLICE.6.2.2.c.2.5.2 owns coordinated roadmap/book/census adoption next. The four invariants above remain.
+
+Roadmap9 includes approver/scope/date in the immutable manifest. Release chapter1/3 generates a candidate
+first, then approves its existing manifest digest; chapter2 permits unresolved fields until available.
+Filling an unresolved approval field after hashing changes manifest bytes and therefore the fixture's
+digest. Neither this record nor the chapter says whether those values are prebound or stored outside
+that immutable subject. The list census compares vocabulary, not that lifecycle. Source clauses are
+retained whole in docs/history/stitchcad-devnotes-part484.md.
+
+**Recommended option A — detached immutable approval records.** Keep a stable approval-binding descriptor
+in the manifest; resolve actual human/scope/date through separate immutable records bound to the
+candidate's exact identity. ApprovePackage appends such a record and never rewrites the candidate.
+The descriptor does not embed its own package digest. Changed content still creates a new candidate;
+approval withdrawal remains a separate record. Clarify roadmap/book/census field semantics together.
+An approval record is related to the content package; attaching a receipt for transport must not
+silently change the identity being approved. No real approval is created by this proposal.
+
+**Alternative B — prospective metadata fixed before final hashing.** Prepare a new candidate containing
+exact prospective human/scope/date, then have that human approve its final digest. Confirmation cannot
+fill an unresolved field or edit a prebound value. A change requires another candidate and review;
+metadata alone still grants no approval. Actual identity/scope/date must match the eventual human act.
+
+The guarded standalone approval_identity_probe.py under docs/tasks/artifacts/release_contract reproduces
+three synthetic transitions. Its SHA256/JSON serialization is diagnostic only; it chooses no production
+hash algorithm or canonical format. Both options preserve immutable subjects and human-only approval,
+and the director chose A before input/persistence contracts are frozen. The probe itself adopts no policy.

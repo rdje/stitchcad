@@ -52,6 +52,10 @@ Two rules keep the manifest honest rather than merely long:
 
 ## 3. Identity, approval and stale-ification
 
+**D239 — ruling accepted:** approval records stay separate and immutable, bound to the unchanged
+candidate digest. The manifest keeps a stable binding. Legacy field wording below awaits coordinated
+roadmap/book/census adoption at G1-SLICE.6.2.2.c.2.5.2 before release input schemas.
+
 **A package's identity is the digest of its canonical manifest**, which includes every artifact hash, so
 the identity changes if any byte of any artifact changes. Approval binds to that identity and to nothing
 else — not to a design, not to a style number, not to "the latest".
@@ -217,11 +221,8 @@ a partial package ([envelope §10](feature-matrix.md)).
 
 ## 10. Verification status of the claims in this chapter
 
-- **The manifest fields, the six acceptance states and the three artifact classes are the roadmap's**,
-  quoted in the tables above and compared against §9 and §8.2 by a tracked producer rather than by
-  reading: `docs/tasks/artifacts/release_contract/run_release_contract_census.sh` parses both roadmap
-  clauses and refuses a field, a state or an artifact class the chapter does not carry, in either
-  direction. `run_release_contract_probes.sh` is its ground truth.
+- The list census compares fields, ladder and policy vocabulary with roadmap9/8.2.
+  Original receipt: `docs/history/stitchcad-devnotes-part484.md`; these checks do not decide D239's transition.
 - **The policy matrix's cells, the four dispositions, the diagnostics, the scope axes and every rule in
   §3–§8 are project decisions**, reasoned with the alternative each rejected in
   `docs/decisions/decision_release-package-identity-and-scope.md`. The roadmap publishes the matrix as an
