@@ -97,6 +97,16 @@ a rule table *implements* them as per-point deltas.
 - a size set with no breaks can still serve path 1, and SHALL refuse path 2 with a diagnostic naming what
   is missing rather than grading by zero.
 
+### Pending break-dimension identity — D228
+
+The break schema is not yet implemented. §6's measurement-dimension language and §7's per-axis
+language leave one key unspecified: a one-axis House size range may need both waist+4cm and hip+5cm
+for the same adjacent members. An axis/pair key alone cannot distinguish those authored deltas.
+G1-SLICE.4c.3d.0 owns the director ruling before implementation. The recommendation is an explicit
+axis + named POM/dimension + adjacent-member-pair key, with a canonical signed Length source for
+each delta; axis-only is the alternative. Neither choice is adopted by this note. Adjacency remains
+the authored member order; no chart subtraction, default dimension or implicit zero is introduced.
+
 ## 7. Multi-dimensional systems
 
 Director ruling2026-10-26 resolves D70: every complete SizeSet requires at least one authored axis,

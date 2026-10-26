@@ -1061,6 +1061,20 @@ D215 whole authored report/verified repair retained in [part134](../history/wind
 
 D216 whole authored report/verified repair retained in [part135](../history/window11.md#stitchcad-defects-part135md).
 
+## D228 — size-break dimension identity needs a ruling
+
+Size-sets §6/field table defines per-dimension adjacent-member deltas, using waist as its example;
+§7 says breaks are per axis and a one-dimensional system has one axis. The contract does not say
+whether that axis owns one delta or multiple named POM/dimension deltas. Reproduce: rg the phrases
+"per dimension", "waist jump", "per axis", "single axis" in docs/book/src/spec/size-sets.md;
+reference-skirt.md:43–46/52–53 independently carries separate waist/hip/length inputs.
+Witness: one authored "House size" axis, members S/M, waist+4cm and hip+5cm. Axis/pair alone
+cannot distinguish both records unless an additional dimension key is explicit; no delta is inferred.
+Impact: guessing the key can lose a required grade dimension or create incompatible SizeSet data.
+Owner/schedule: G1-SLICE.4c.3d.0, P1 before .3d.1 implementation. Recommend axis + explicit
+POM/dimension + adjacent member pair, retaining each canonical Length state/source. Director ruling
+pending versus axis-only deltas. No schema or altered grading behavior implemented by this review.
+
 ## Active continuity followup
 
 - **D223** — optional ledger continuity modes retain raw-file/closed-graph assumptions.

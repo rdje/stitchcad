@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — break-dimension contract review
+
+0301 .4c.3d.0 logs D228 before a break schema can bake in an ambiguous key. Size-sets §6 says
+per measurement dimension, §7 per axis/single-axis representation. The existing skirt independently
+names waist/hip dimensions. Witness: one House size axis, S/M, waist+4cm and hip+5cm; axis/pair alone
+cannot distinguish both deltas. Recommend explicit axis+POM/dimension+adjacent member pair; director
+choice pending against axis-only. Book/decision/PLANNING and resume pointers expose the blocker.
+Source rg review0/book0;428/429/273/430 wholee77742e Git/hash/public exact0. No code/model change;
+G1still5/18. Promotion declined: no adopted policy, pending ruling kept in the existing SizeSet record.
+
 ## _(2026-10-26 UTC)_ — pinned canonical query requests
 
 0300 .6.2.2.c.1 adds immutable Design/actor/exact-revision query context and GetPieceList/WalkSeamSpan
@@ -271,20 +281,8 @@ Whole0276 task/old binding lesson/ledger retained370/371/249, exact Git/hash/pub
 Book/live sync. Promotion: decision_finite-threshold-feasibility.md records proposal, derivation,
 primary series sources, controls and admission boundaries so sample success cannot become signoff.
 
-## _(2026-10-26 UTC)_ — thirteenth immutable history window
-
-0276 .5e.2.h13 captures all52 raw records at64 working files from87d0987. Deterministic Git tar/
-gzip retains107786 source bytes in31312 payload bytes. The fresh local fixture has no Git directory
-or captured raw copies. Public source comparison, all52 reads and751-file materialization match;
-all12 earlier manifests/catalogs/payloads stay exact. Installed backing bytes match before exactly
-52 source-equal regular single-link originals retire. Installed retention/source checks pass0.
-
-Only live Markdown hrefs change to catalog anchors; logical read names and historical bytes remain.
-Whole0275 task/round_to lesson/ledger and full window12 book narrative retain367–369/248 with exact
-Git/hash/public reads. Book/live sync; reader/schema/caps/Rust runtime stay unchanged. Focused native
-capture/installed CLI evidence replaces no broad campaign. The new finite-threshold certificate idea
-is explicitly unverified and scheduled as P1 .5d.1.2.2.2.a after this commit, before further runtime
-integration. Promotion declined: archive contracts remain unchanged; candidate math study is owned.
+[Complete thirteenth-window lesson](docs/history/stitchcad-devnotes-part429.md) retains
+its original population/source/materialization evidence, checks and promotion decision.
 
 [Complete per-node static-certificate lesson](docs/history/stitchcad-devnotes-part427.md) retains
 its original node/role/target evidence, defects, checks and promotion decision.

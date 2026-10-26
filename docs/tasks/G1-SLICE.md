@@ -226,25 +226,7 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 
 - ID: `G1-SLICE.3c.2b.2`
   Status: `done`
-  Goal: immutable sewing graph whose sides name validated CutCopy identities and partial edge ranges;
-  explicit correspondence direction, ease declaration and stop anchors. Settle D35 before code.
-  Acceptance: partial and one-to-many spans distinguish physical copies of one Piece; graph references
-  resolve through the cut plan and owned topology; missing/duplicate references refused. Same-copy
-  seams have an explicit tested contract, positive-range interiors and endpoint choices stay visible.
-  D57 closes after sewing integration; D35 closes after its self-seam regression and documentation.
-  Verification: 18 sewing contracts + existing range/copy/notch suites, strict check, wasm,
-  book, fixture/feature/glossary censuses, ledger probes and staged doctrines green. D35/D57 closed.
-  Commit: `STITCHCAD-G1-0011`
-
-  Design: `decision_sewing-spans-address-copies-and-permit-disjoint-self-seams.md`, before code.
-  Same-copy contract (D35): legal for ranges whose current positive-length interiors are disjoint;
-  shared endpoints are legal, an overlapping/identical material interval sewn to itself is refused.
-  Different copies of the same Piece may correspond over the same source interval. Same-copy
-  disjointness is checked in resolved topology, not only by authored EdgeRef inequality.
-  Stop landmarks: semantic Notch or born-valid edge-anchored TurnPoint, named by stable id and
-  attached to an explicit span side/copy. Stops must belong to that side's current interval.
-  Ease: signed A-minus-B declaration (explicit length or symbolic parameter); uniform, weighted
-  parameter regions or between explicit notch landmarks. G2/G3 owns geometric differential checks.
+  Goal: completed copy-addressed sewing contract; [whole scope/proofs](../history/stitchcad-devnotes-part430.md).
 
 - ID: `G1-SLICE.3c.3`
   Status: `done`
@@ -443,13 +425,32 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `STITCHCAD-G1-0035` (`285e238`).
 
 - ID: `G1-SLICE.4c.3d`
-  Status: `pending`
+  Status: `blocked`
   Goal: signed canonical adjacent breaks and composite SizeSet over membership/axes/chart with source/
   state/provenance; per-axis/dimension coverage and typed path readiness under the confirmed D70 rule.
   Acceptance: authored adjacency, zero/uneven breaks, current references, missing dimension/pair and
   MTM path-2 refusal; no rounded values, generated equivalence or profile execution claimed.
   Verification: `pending`
   Commit: `pending`
+
+- ID: `G1-SLICE.4c.3d.0`
+  Status: `blocked`
+  Goal:0301 resolve D228 break-dimension identity before authoring a canonical break schema.
+  Source review: size-sets §6 uses waist/POM dimension and §7 says per-axis, while a one-dimensional set has
+  one axis. A single named size axis still needs separate waist/hip deltas; the key/cardinality is unspecified.
+  Recommend explicit axis + POM/dimension + adjacent member pair; each delta borrows canonical Length state/source.
+  Director choice needed versus axis-only deltas; no schema/model choice or inferred POM/axis until settled.
+  Own PLANNING D228, SizeSet decision/book and live pointers;428 whole0300 task,429 oldest0276 lesson,273 ledger
+  frome77742e;430 whole completed sewing scope for fixed aggregate capacity. Preserve complete bytes/hashes.
+  Acceptance0301 review (ruling pending):
+  - [x] ROOT CAUSE0301: rg size-sets -> per-dimension35/90, per-axis114/single-axis115; reference-skirt43/44/52/53 separate waist/hip, rc=0.
+  - [x] ADDRESSED0301: rg D228 -> PLANNING1064/book100/decision123, rc=0; two representations and S/M waist+4cm/hip+5cm witness durable; question accepted:true, pending.
+  - [x] NO REGRESSION0301: book build rc=0;428/429/273/430 wholee77742e Git bytes/hash/public reader exact rc=0; no code/model changed or caps raised.
+  Promotion declined: no adopted policy; ambiguity/ruling stays in the existing SizeSet decision. Review commit STITCHCAD-G1-0301.
+  Resume: director D228 answer, then align key/coverage requirements and implement .3d.1.
+- ID: `G1-SLICE.4c.3d.1`
+  Status: `pending`
+  Goal: implement sourced signed adjacent break declarations after D228, then collection/composite children.
 
 - ID: `G1-SLICE.4c.3e`
   Status: `pending`
@@ -678,17 +679,8 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Children .c.1 current canonical piece/seam queries; .c.2 concrete artifact-dependent closure and remaining classes.
 - ID: `G1-SLICE.6.2.2.c.1`
   Status: `done`
-  Goal:0300 immutable query design/actor/exact-revision context and GetPieceList/WalkSeamSpan payloads.
-  Paths: crates/sc-core/src/command/query.rs;crates/sc-core/src/command.rs;crates/sc-core/tests/command_query_contract.rs;
-  book/command decision/live docs. Query identity derives from payload; no mutation retry/group or execution grant.
-  Preserve canonical span identity without copied sewing state or assumed geometry; actual snapshot/auth/handlers later.
-  Own426 whole0299 task,427 oldest0275 static-node lesson and272 ledger from198bbb1; whole Git/hash/public checks.
-  Acceptance0300:
-  - [x] ROOT CAUSE0300: rg query declarations -> query.rs:8/51/74, rc=0; exact Design/actor/revision context and payload-derived canonical queries.
-  - [x] ADDRESSED0300: cargo test -p sc-core --test command_query_contract --test command_catalog_contract ->2+2 passed/0 failed, rc=0; large exact revisions, actor/principal and identity metadata.
-  - [x] NO REGRESSION0300: selected strict lib/two-test Clippy rc=0; fmt rc=0; census17/5/5/0 and book rc=0. No handlers/query results claimed.
-  - [x] LOCKSTEP0300:426/427/272 whole198bbb1 Git bytes/hash/public reader exact rc=0; book/decision/live aligned without raising caps.
-  Promotion: existing command decision extended; no new policy. Broad verification remains integration/pre-push.
+  Goal:0300 pinned piece/seam queries verified2+2/0/lint/fmt/census/book0.
+  Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part428.md).
   Commit: STITCHCAD-G1-0300.
 - ID: `G1-SLICE.6.2.2.c.2`
   Status: `pending`
@@ -935,7 +927,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.4c.3d` | `pending` | Canonical signed breaks and composite SizeSet inputs |
+| **next** | `G1-SLICE.4c.3d.0` | `blocked` | D228 break axis/POM dimension key needs director ruling |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

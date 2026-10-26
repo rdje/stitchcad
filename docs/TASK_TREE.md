@@ -80,7 +80,8 @@ siblings the containment registry prescribes are told from strays. In the adviso
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
 **`G1-SLICE.6.2.2.c.1`** completes pinned piece/seam query requests in0300; all mutation schemas are present.
-Next .4c.3d implements canonical signed breaks/composite SizeSet; remaining class schemas .6.2.2.c.2 follow canonical inputs.
+Next .4c.3d.0 awaits D228 axis/POM break-key ruling before canonical break implementation .3d.1.
+Remaining class schemas .6.2.2.c.2 follow canonical inputs.
 [Execution frontier](tasks/G1-SLICE-execution.md) remains .5e.2.4; SizeSet axes and paired split schema are implemented.
 Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per
 feature; broad verification and nonblocking audits remain owned for later integration/pre-push.

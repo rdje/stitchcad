@@ -4,10 +4,16 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
+-0301 .4c.3d.0 source review found D228: size-sets §6 per measurement dimension vs §7 per axis/single-axis.
+- Witness: House size axis, S/M, waist+4cm and hip+5cm; axis/pair alone cannot distinguish both.
+- Director question pending: explicit axis+named POM/dimension+adjacent member pair (recommended) vs axis/pair only.
+- No break schema/model choice adopted. PLANNING D228/SizeSet decision/book hold full source/witness/owner.
+- NEXT: consume D228 ruling, align canonical break key/coverage and implement .4c.3d.1. Do not infer missing dimensions.
+- Book build0;428/429/273/430 wholee77742e Git bytes/hash/public-reader exact0; no code or cap changes.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
 - Native query2+catalog2 pass0; selected strict lint/fmt/census17/5/5/0/book0; exact revisions beyond128bits.
-- NEXT .4c.3d: canonical signed adjacent breaks and composite SizeSet; own bounded children before changes.
+- Canonical signed breaks/composite SizeSet .4c.3d now blocked on the D228 semantic ruling above.
 - Remaining command classes and artifact-specific closure .6.2.2.c.2 follow actual canonical inputs.
 -426/427/272 whole198bbb1 retention verified byte/hash/public-reader exact0.
 -0299/198bbb1 completes all five mutation schemas; SplitSeamSpan explicit canonical target and named A/B cuts.
@@ -21,11 +27,6 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D226: SplitSeamSpan splits paired sewing correspondence at explicit cuts on both sides; schema implemented0299, actual execution remains later.
 -0296/3c85204 corrected receipt-only duplicate retry; implementation1184214 unchanged. D227 closed.
 - COMMIT binds success->brief-clear->checks in one invocation; consume terminal result before edits/retry.
--0295/1184214: CloseDart/AddNotch schemas native2+prior3/0, selected lint/fmt/book0.
--0294: ChangeMeasurement/AssignMaterial payloads; actual states/source and ordered selection retained.
--0293: typed mutation metadata, exact revisions beyond128bits, untrusted actor/principal claims.
--0292: D225 ID exhaustion fixed; next_id Result and six atomic-edit failures native3/10/compile/lint0.
--0291 catalog17 identities/book2/0; handlers/auth/replay/undo remain later .6.
 - G1 In Progress5/18; G0 Mostly Done/closure unapproved; G2 onward not started. No app/release claim.
 - Full AST execution .5e.2.4 requires remaining calls/geometry; no unimplemented-family language error.
 - Practical tangent resource plan P1 .5d.1.2.2.2.d.2 remains; no cutoff/domain narrowing/libm.
@@ -44,4 +45,4 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D156/D223 audits deferred; D224/D225/D227 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background result pending after0300 completion. Derive push count, never carry it manually.
+- No background job pending after0301 review; D228 director question remains pending. Derive push count, never carry it manually.

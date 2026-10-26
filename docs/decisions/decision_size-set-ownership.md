@@ -119,3 +119,11 @@ metadata identities/names and coordinate ownership are validated. Duplicate memb
 independently of coordinate vector order; sparse grids and unused values remain explicit. Actual
 member/canonical value records are borrowed and rechecked on query. No numeric sorting/equality or
 Cartesian expansion supplies missing data. Complete charts/breaks and path readiness remain separate.
+
+## Pending break-dimension key — D228
+
+G1-SLICE.4c.3d.0 owns the unresolved relationship between §6's POM/dimension deltas and §7's
+per-axis breaks. A one-axis House size range can need different waist/hip deltas for the same
+adjacent members. Recommendation awaiting director ruling: explicitly key each canonical signed
+Length delta by axis, named POM/dimension and adjacent member pair. Axis-only is the alternative;
+neither representation is adopted here. Names, dimensions and values remain authored, never inferred.
