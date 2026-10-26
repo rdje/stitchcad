@@ -475,12 +475,10 @@ Five aggregate contracts plus the five individual-axis contracts pass; selected 
 and book build pass. This closes the authored-axis/member-point contract. Complete charts/breaks,
 resolved profile transformations, regeneration/grading and release remain separate work.
 
-The .4c.3e scope review now closes the chart/body/break structural family. Original chart coverage,
-D70/D228 axes/breaks, shared snapshot checks and typed path requirements are aligned across the
-companion chapters. Matching local snapshots does not prove global currentness; structural coverage
-does not prove numeric availability, geometry or physical truth. Profile transformation intent .4c.4
-and combined-family review .4c.5/.4d remain pending. No unchanged native or numerical campaign was
-repeated for this documentation review; the focused implementation results remain applicable.
+The chart/body/break structural family and immutable profile transformation intent are implemented.
+Current local snapshots/coverage remain distinct from global currentness, numeric availability,
+geometry and physical truth. Combined-family review .4c.5/.4d remains pending; G3/G4 retain actual
+profile constraints, precedence and execution. See [transformation intent](size-set-transformations.md).
 
 ## 8. Size systems and what the model must express
 

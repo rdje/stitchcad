@@ -194,3 +194,6 @@ G1-SLICE.4c.4.4 adds immutable origin plus ordered transformation intent, retain
 profile pins, original/resolved refs and all states. Source/candidate bindings revalidate; cross-record
 identity aliases refuse. Empty no-override and unresolved intent remain representable. Each claim
 targets original inputs; G4 owns combined conflicts/precedence/application, with no resolved result claim.
+
+G1-SLICE.4c.4.5 closes this immutable intent representation after bounded currentness/provenance
+review; four domains/five states remain distinct from G3/G4 application/conflicts/evidence truth.

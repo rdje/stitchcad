@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0317 .4c.4.4 adds immutable exact origin/profile + ordered transformation intent, retaining all states/domains.
-- Actual source/candidate revalidation and cross-record IDs checked; empty/unresolved intent preserved, no application.
-- Focused garment21+MTM10 pass0; selected strict lint/fmt/book0. NEXT .4c.4.5 bounded scope/currentness review.
--466/467/289 whole2165f7f Git/hash/public exact0; book aggregate1199676B, fixed cap unchanged.
--0316 cleanup verified1050 selected absent/52008 preservation entries exact0; next due2026-10-27 13:40UTC.
+-0318 .4c.4.5 closes immutable profile transformation intent scope; G3/G4 application/truth/precedence remain separate.
+- D233 stale main-book frontier fixed; four domains/five states/current refs/identity/provenance boundaries align.
+- Rust identical tofb53a44; reuse31-test/strict lint/fmt proof. Book/five rendered API anchors/navigation0.
+- NEXT .4c.5 SizeSet requirements/ownership structural review, then combined .4d.2; no engine/release claim.
+-468/290/139 wholefb53a44 Git/hash/public exact0; history63/64 working. Pack before any transition exceeding64.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

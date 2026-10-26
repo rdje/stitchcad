@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — bounded profile intent scope review
+
+0318 .4c.4.5 reviews exact pins/four domains/five states/current source and candidate bindings, ordered
+empty/draft/no-op intent and identity/provenance. Actual G3/G4 numeric/profile composition/conflicts,
+evidence/global truth, storage/equivalence/approval stay separate. D233 duplicated main-book frontier
+still called intent pending; whole prior receipt retained468 and current paragraph aligns. Rust equals
+fb53a44; reuse31-test/strict lint/fmt proof. Book/five rendered anchors/navigation pass0;468/290/139
+wholefb53a44 Git/hash/public exact0, history63/64. G1still5/18; .4c.5 next. Promotion: SizeSet decision extended.
+
 ## _(2026-10-26 UTC)_ — immutable SizeSet resolution intent
 
 0317 .4c.4.4 retains exact origin/profile/target plus ordered declarations across all four domains/five states.
@@ -231,17 +240,8 @@ names/values. Current book/decision/task/status notes align; .4c.2 resumes after
 registry/auth or handler claim; G1still5/18. Rulings live in existing command/SizeSet decisions;
 technical adapter lesson promotion declined.
 
-## _(2026-10-26 UTC)_ — canonical measurement and material intents
-
-0294 .6.2.2.b.1 binds two canonical payloads to mutation context; identity comes from the variant.
-ChangeMeasurement retains real metadata/declaration/source and all five authored states. Material
-intent retains ordered distinct targets and the canonical assignment/reason rule. Native3/0 checks
-state absence/provenance, context, first duplicate and exact material text; selected strict lint/fmt,
-command census17/5/5/0 and book pass0. Review removed a draft unchanged-source assumption: canonical
-replacements may update source, which execution must validate against current records.
-411/412/413/266 retain whole history; G1still5/18.0293 brief was cleared late, before new code,
-then verified0/untracked. No registry/auth/handler claim; remaining payloads stay .b.2/.c.
-Promotion declined: existing canonical/command contracts, no new policy.
+[Complete measurement/material intent lesson](docs/history/stitchcad-devnotes-part468.md) retains
+its original assignment/canonical source contracts, checks and promotion decision.
 
 [Complete typed mutation metadata lesson](docs/history/stitchcad-devnotes-part467.md) retains
 its original exact revision/retry/actor/group contracts, checks and promotion decision.

@@ -1076,46 +1076,20 @@ axis + explicit POM/dimension + adjacent member pair, retaining each canonical s
 state/source. Semantic conflict closed; declaration/coverage/composite implementation remains .3d.
 Whole original ruling-review evidence is retained431. No break implementation is claimed by the ruling.
 
-## D229 — current book retention label lagged the actual archive
+Closed D229-D232 reports and verified repair evidence are retained whole in
+[part139](../history/stitchcad-defects-part139.md). Current doc frontier repair D233 follows below.
 
-At sourceba41e9a, the master ends in window14 while governance's Current retention window section
-still names13. Reproduce: git show ba41e9a for the master and governance; 6662298 governance delta0.
-Impact: the reviewer's book presents an old current archive, though logical records are intact.
-Owner/schedule: G1-SLICE.4c.3d.3.h15, P2 fixed0305 during required packing. Preserve the complete
-window13 narrative under its historical heading; publish current15/source/retrieval boundaries.
-Focused source comparison0/book0 and byte-exact retention proofs verify the correction; no data loss.
+## D233 — duplicated SizeSet review paragraph retained a stale profile frontier
 
-## D230 — companion sizing pages retained an obsolete implementation frontier
+At sourcefb53a44, size-sets.md's .3e review paragraph calls .4c.4 pending although0317 implements
+immutable intent and the companion chapter/top status describe it. Reproduce: rg .4c.4/pending in
+that chapter versus the actual intent API. Impact: reviewer sees contradictory current scope.
+Owner: G1-SLICE.4c.4.5, P2 fixed0318 during bounded scope review. Whole prior review receipt
+retained468; update current frontier while preserving G3/G4 execution/global/physical boundaries.
 
-At source7618d20, observation/collection pages still place axes/breaks in later slices; membership's
-footer similarly defers complete coverage. Reproduce: rg axes/breaks/coverage in those three book pages.
-Impact: the main SizeSet chapter and companion pages disagree about current implemented inputs.
-Owner/schedule: G1-SLICE.4c.3e.1, P2 fixed0309; link actual axes/break/composite behavior while retaining
-physical/global-currentness/profile/approval boundaries. Source review0/book0 verify the correction.
-
-## D231 — moved MTM Rust fixture omitted from the mutation entry's source plan
-
-After0307, the contract imports support/mtm_fixture.rs but the entry plans only implementation/root test.
-Reproduce: existing measure_refusals with an independent explicit fixture oracle; missing copied fixture
-reaches activation/effect (controlled AssertionError), rather than early exit2. Actual source bytes unchanged.
-Owner/schedule: G1-SLICE.4c.3e.1, P1 fixed0309 before scope closure. Register the read-only fixture and
-independently require it in producer controls. Complete13-child/file capture,5 physical refusals and a
-compiled actual fixture-plan omission red pass0; no full native mutation campaign or kernel rerun.
-- [x] ROOT CAUSE0309: independent missing-fixture control reaches activation/effect on the pre-repair entry; actual source bytes unchanged, rc=0.
-- [x] ADDRESSED0309: existing complete13-child/file capture and5 physical refusals pass; compiled actual fixture-plan omission red detected, rc=0.
-- [x] NO REGRESSION0309: whole D225-D227 source7618d20 bytes/hash/public exact in138, actual implementation/entry/test/fixture hashes stable and book rc=0.
-
-## D232 — cleanup cannot forward explicit idle-CUA attestation
-
-Reproduce: cleanup apply calls handoff without --idle-cua; actual default blocks4 metadata-only CUA
-processes with0 repo handles, while canonical --idle-cua passes0. All1047 selected paths remain.
-Owner: G1-SLICE.4c.4.cleanup5.a, P1 fixed0315 before fresh cleanup; explicit apply-only CLI passthrough and
-controlled intact/default/attested/refusal checks. First lsof unavailable-type refusal is separately
-observed before deletion; initial raw snapshot absent, later retries retained under SPINE.23r; no race claim. Fresh plan required after code repair.
-
-- [x] ROOT CAUSE0315: actual default4 blocks/attested0/1047 selected intact; cleanup fixed argv lacks flag, rc=0.
-- [x] ADDRESSED0315: explicit apply-only forwarding; actual captures/old refusal/2 reds/5 invalid arguments rc=0.
-- [x] NO REGRESSION0315: original policies/certificates/blocked-clear effects and49 handoff fixtures/17 reds/book rc=0.
+- [x] ROOT CAUSE0318: actual main-book .3e paragraph contradicts0317 API/top/frontier; source comparison rc=0.
+- [x] ADDRESSED0318: current frontier corrected; prior receipt byte-exact in468; book/five API anchors/nav rc=0.
+- [x] NO REGRESSION0318: Rust identical tofb53a44/31-test proof reused; whole D229-D232 retained139 rc=0.
 
 ## Active continuity followup
 

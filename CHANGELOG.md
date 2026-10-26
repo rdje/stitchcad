@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0317 — immutable SizeSet resolution intent
+## STITCHCAD-G1-0318 — immutable profile intent scope closure
 
-Exact origin/profile and authored declarations retain order/states; current source/candidate and ID conflicts recheck.
-No transformations applied. Garment21+MTM10/lint/fmt/book pass0;466/467/289 whole2165f7f retention exact0.
-G1still5/18; profile intent scope review next; full gates remain integration/pre-push.
+Exact pins/domains/states/currentness/provenance align; D233 stale book frontier fixed. Rust identical
+tofb53a44;31-test proof reused, book/five API anchors/navigation0.468/290/139 whole retention exact0.
+.4c.4 closes structurally; G1still5/18, application/approval later. SizeSet requirements review .4c.5 next.
 
 # Sealed archive — earlier slices
+
+| [part290](docs/history/stitchcad-changelog-part290.md) | whole0317 | 6 lines, 376 bytes, sha256:dd50514d… |
 
 | [part289](docs/history/stitchcad-changelog-part289.md) | whole0316 | 6 lines, 337 bytes, sha256:b3089f8f… |
 

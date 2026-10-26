@@ -485,13 +485,13 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0310.
 
 - ID: `G1-SLICE.4c.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: immutable resolved SizeSet/profile transformation intent, pinned Design reference/profile revision,
   typed label mapping/break scaling/base substitution/chart replacement with state/evidence provenance.
   Acceptance: new resolved object retains original reference and records transformation; no in-place
   mutation. Execution, precedence/hard restrictions, equivalence and release approval retain later owners.
-  Verification: `pending`
-  Commit: `pending`
+  Verification:0311–0317 focused state/binding/aggregate contracts,0318 unchanged-code/book/anchor review pass0.
+  Commit: STITCHCAD-G1-0311–0318 (includes due cleanup/D232 repair); actual G4 execution remains separate.
 
 - ID: `G1-SLICE.4c.4.1`
   Status: `done`
@@ -526,25 +526,26 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0315.
 - ID: `G1-SLICE.4c.4.4`
   Status: `done`
-  Goal:0317 immutable resolution intent combines selected-profile origin and ordered authored transformations.
-  Own size_set_resolution/intent.rs, root/module/lib exports, garment support/MTM composite tests,
-  book transformation/main, SizeSet decision and live/task docs. New/revalidate source-only and explicit
-  chart-context constructors retain original typed errors and all states without application or merging.
-  Preserve authored order/empty no-override intent; every declaration pins original source inputs. Reject
-  duplicate transformation IDs and aliases with resolved identity/origin provenance; resolved target cannot
-  alias candidate charts or transformation source records. No profile/global freshness/precedence claim.
-  Own466 whole0316 cleanup task,467 oldest0293 lesson and289 ledger from2165f7f; exact Git/hash/public
-  before retirement. Focused aggregate/state/current-source/context tests, selected strict lint/fmt/book.
-  - [x] ROOT CAUSE (WHY + WHERE): SizeSet §9 requires immutable original/profile/transformation origin; API/lib check rc=0.
-  - [x] ADDRESSED: cargo test -p sc-measure --test garment_size_set_inputs_contract --test mtm_size_set_inputs_contract gives31/0 rc=0.
-  - [x] NO REGRESSION: original composite/path/state/binding cases included; selected strict clippy/fmt/book rc=0.
-  Verification: garment21+MTM10, empty/unresolved/order/aliases/stale source/context original typed chains rc=0;
-  466/467/289 whole committed Git interval/hash/public byte equality rc=0. LIVE_STATUS G1still5/18.
-  Commit: STITCHCAD-G1-0317. Next .4c.4.5 bounded scope review; full gates integration/pre-push.
+  Goal:0317 immutable resolution intent; focused31/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part468.md).
+  Commit: STITCHCAD-G1-0317.
 - ID: `G1-SLICE.4c.4.5`
-  Status: `pending`
-  Goal: bounded profile intent/currentness/provenance scope review; actual G4 precedence/resolution stays separate.
-
+  Status: `done`
+  Goal:0318 bounded profile intent/currentness/provenance review; close .4c.4 structurally, not G4 execution.
+  Own book transformation/main status/frontiers, SizeSet decision, PLANNING and live/task pointers.
+  Review exact pins/four domains/five states, actual inputs/identity, empty/draft/no-op and preserved errors;
+  keep numeric application/combined conflicts/constraints/evidence/global freshness/storage/approval separate.
+  D233: main book's .3e review paragraph still calls .4c.4 pending after0317. Fix this duplicated frontier;
+  keep prior complete review receipt in468 alongside whole0317 task/oldest0294 lesson, sourcefb53a44.
+  Also own290 whole0317 ledger and139 whole closed D229-D232 reports fromfb53a44; exact committed
+  intervals/hash/public before retirement, no lossy prose or cap changes. Working57+3 after0317=60,
+  this3-record transition projects63/64. Next required archive packing before a transaction exceeding64.
+  Rust source/tests unchanged: reuse0317 native31/strict lint/fmt evidence; book and5 rendered anchors verify scope.
+  - [x] ROOT CAUSE (WHY + WHERE): canonical scope/current frontier review finds main-book stale .4c.4; source comparison rc=0.
+  - [x] ADDRESSED: D233 frontier aligns; book build/five rendered API anchors/main navigation rc=0.
+  - [x] NO REGRESSION: git diff fb53a44 -- crates/sc-measure empty rc=0;0317 native31/strict lint/fmt proof reused.
+  Verification: 468 three whole intervals/290 whole ledger/139 whole closed reports Git/hash/public equality rc=0;
+  public verify-retention899 logical/63 working rc=0. LIVE_STATUS reviewed: G1 In Progress5/18 unchanged.
+  Commit: STITCHCAD-G1-0318. .4c.4 closes structurally; next .4c.5, broad verification integration/pre-push.
 - ID: `G1-SLICE.4c.5`
   Status: `pending`
   Goal: review every size-sets/ownership requirement and deferred execution/proof boundary; milestone

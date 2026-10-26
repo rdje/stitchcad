@@ -1,6 +1,6 @@
 # SizeSet profile transformations
 
-> **Status:** G1-SLICE.4c.4 is implementing immutable transformation intent in `sc-measure`.
+> **Status:** G1-SLICE.4c.4 implements immutable transformation intent in `sc-measure`.
 > Selected profile labels, resolution-origin metadata and state-bearing label/base declarations are
 > executable, together with canonical break/chart bindings and an immutable resolution-intent aggregate. G4 owns actual profile lookup,
 > constraints, precedence and resolution;
