@@ -282,6 +282,32 @@ impl FormulaRational {
         self.checked_sum(rhs, true)
     }
 
+    /// Whether the exact absolute difference is at most the supplied inclusive limit.
+    ///
+    /// Negative limits accept no difference. This comparison returns no rational result, so the
+    /// difference is not subjected to the 128-bit result bound or any quantity scalar domain.
+    /// Cross-products need at most 385 bits from three admitted 128-bit component pairs.
+    #[must_use]
+    pub fn is_within(self, rhs: Self, limit: Self) -> bool {
+        if limit.negative {
+            return false;
+        }
+        let mut left = BigInt::from(self.numerator) * BigInt::from(rhs.denominator);
+        let mut right = BigInt::from(rhs.numerator) * BigInt::from(self.denominator);
+        if self.negative {
+            left = -left;
+        }
+        if rhs.negative {
+            right = -right;
+        }
+        let difference = left - right;
+        let measured = difference.magnitude() * BigUint::from(limit.denominator);
+        let allowed = BigUint::from(limit.numerator)
+            * BigUint::from(self.denominator)
+            * BigUint::from(rhs.denominator);
+        measured <= allowed
+    }
+
     fn checked_sum(self, rhs: Self, subtract: bool) -> Result<Self, FormulaRationalError> {
         // Each cross-product has at most 256 bits; their signed sum has at most 257. No unbounded
         // integer enters this private workspace from a caller or from source text.

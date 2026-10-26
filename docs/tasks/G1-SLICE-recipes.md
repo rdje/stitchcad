@@ -608,23 +608,30 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part354.md).
 - ID: `G1-SLICE.5e.3.3`
   Status: `done`
-  Goal:0270 implemented numeric built-in calls compute and retain sources automatically.
+  Goal: sourced implemented numeric call families verified0270, native5/0.
   Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/calls.rs;crates/sc-core/tests/formula_evaluated_calls_contract.rs
-  Own sqrt/hypot/abs/min/max/clamp/round_to/arc_length wrappers, all evaluated input unions,
-  exact-valued call contributions and first actual typed argument/domain/arity refusals.
-  Reuse numeric kernels; no missing trig, geometry, AST, conditional or recipe execution claim.
-  Retain354 whole0269 task,355 oldest full product/quotient lesson,242 ledger; book/live sync.
-- [x] REPRODUCE:0270 1e836c1 requires manual source attachment for numeric calls; source read rc=0.
-- [x] ROOT CAUSE:0270 returned/winning numeric values alone omit executed call/candidate/bound
-  sources. Actual eight-family wrapper native5/0 verifies automatic unions/call sources, rc=0.
-- [x] FIX: eight existing numeric kernels wrapped with complete input unions and required own sources.
-- [x] ADDRESSED:0270 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test formula_evaluated_calls_contract:5 pass/0 fail, rc=0.
-- [x] NO REGRESSION:0270 all family/input/unchanged/perfect/storage/arity/refusal controls pass;
-  cargo clippy --offline -p sc-core --test formula_evaluated_calls_contract -- -D warnings, rc=0.
-  Missing trig .5d, full .5e execution and broad .5g/pre-push remain owned; no absent call stubbed.
-- [x] LOCKSTEP:354/355/242 whole Git/hash/public records and book render rc=0; live/frontier align.
-  Promotion declined: existing numerical/D121 contracts; no new language/precision limit.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part356.md).
+- ID: `G1-SLICE.5e.3.4`
+  Status: `done`
+  Goal:0271 exact named tolerance comparison over sourced scalar values and actual context.
+  Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/tolerance.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_tolerance_comparison_contract.rs
+  Compare absolute rational difference inclusively without materializing an out-of-domain/wide
+  numeric expression; bounded exact workspace. Actual class/provider/operands and sources retained.
+  T1 contribution guard precedes threshold; no missing context/default or invented comparison label.
+  Retain356 whole0270 task,357 oldest full sum lesson,243 ledger; book/live sync.
+  Full assertion naming/AST/provider lookup/replay remains .5e.2/.3/.4; focused native/selected lint.
+- [x] REPRODUCE:0271 a88c7b7 lacks product tolerance comparisons; exact subtraction can exceed
+  width/domain despite a valid Boolean comparison. Source/native controls reproduce, rc=0.
+- [x] ROOT CAUSE:0271 comparison intermediates are not numeric expression results; exact bounded
+  absolute cross-products plus actual context and source guard solve it. Native5/0, rc=0.
+- [x] FIX: inclusive rational comparison and sourced named result/refusal; boxed complete error.
+- [x] ADDRESSED:0271 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_tolerance_comparison_contract: final5 pass/0 fail, rc=0; Fraction witnesses rc=0.
+- [x] NO REGRESSION:0271 kinds/classes/threshold/source/context/width/domain controls pass;
+  cargo clippy --offline -p sc-core --test formula_tolerance_comparison_contract -- -D warnings,
+  final rc=0 after large-error101 repair. Full assertions/AST and broad .5g/pre-push remain owned.
+- [x] LOCKSTEP:356/357/243 whole Git/hash/public records and book render rc=0; live/frontier align.
+  Promotion declined: existing exact numeric/comparison/context and formula4.2 provenance contracts.
 - ID: `G1-SLICE.5e.4`
   Status: `pending`
   Goal: atomic replay and dependency validation, including corrupted persisted cycle evidence.

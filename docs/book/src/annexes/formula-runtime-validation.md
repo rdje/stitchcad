@@ -432,6 +432,48 @@ produces no new sourced scalar. Five focused native tests cover all eight implem
 source unions, exact-valued calls through storage, singleton/extremum cases and actual refusals.
 Trig/inverse calls, geometry selectors and full AST/provider/conditional/recipe execution remain open.
 
+### Product named-tolerance comparisons
+
+`FormulaEvaluatedScalar::compare_tolerance(right, tolerance)` now compares same-kind numeric
+operands at an actual `FormulaToleranceValue` read from the explicit context. The inclusive test is
+the exact absolute difference at that class's canonical internal-unit limit. No rounding, modulo,
+ppm rescaling or numeric subtraction result is introduced. A comparison can therefore succeed even
+when materializing its difference as another expression would exceed that expression's domain or
+128-bit component bound. All five numeric kinds and all five formula classes are supported.
+
+```rust
+use sc_core::recipe::{FormulaEvaluatedScalar as V, FormulaKind as K, FormulaNumericValue as N,
+    FormulaRational as R, FormulaToleranceContext, FormulaToleranceName as T};
+
+let context = FormulaToleranceContext::empty();
+let left = V::from_numeric(N::new(K::Length, R::from_signed_integer(100))?);
+let right = V::from_numeric(N::new(K::Length, R::from_signed_integer(110))?);
+let comparison = left.compare_tolerance(right, context.read(T::Geometric)?)?;
+assert!(comparison.holds()); // exactly 10 micrometres: inclusive
+assert_eq!(comparison.value().boolean(), Some(true));
+assert_eq!(comparison.tolerance().name(), T::Geometric);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The immutable `FormulaToleranceComparison` retains both original sourced values, the exact named
+class/limit/derivation/provider/context and its Boolean outcome. `value` returns a Boolean carrying
+both operands' contributions, including a false result. Binding/read preserves those sources.
+Zero provider limits permit equality; a supplied negative limit accepts no difference. This primitive
+does not replace either value with a default or establish provider truth/physical suitability.
+
+Actual kind refusals precede the symbolic class check. T1 with any contribution refuses before the
+threshold, even for equal values. `FormulaToleranceComparisonError` retains actual operands and
+quantitative context beside the typed dimension or approximation refusal and underlying error source.
+It invents no comparison label, expression span or statement ordinal. Optional-context lookup must
+already have succeeded; the primitive cannot create the required tolerance value from an absent
+provider. A false threshold is a valid comparison outcome here; a named assertion must refuse it.
+
+Five focused native tests cover all kinds/classes, fractional threshold neighbors, both operand
+orders, exact full-width witnesses, a difference outside the Length domain, source/class priority,
+actual context, Boolean storage and explicit zero/negative providers. The wide witnesses are also
+checked independently with Python Fraction arithmetic. Complete within/assertion AST execution,
+source-order lookup, statement diagnostics and atomic publication remain later evaluator work.
+
 ### Existing reference execution controls
 
 A value retains an immutable set of approximation-producing calls in its executed dependencies.

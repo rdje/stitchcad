@@ -7,6 +7,10 @@ use super::{
 use crate::name::MachineToken;
 
 mod calls;
+mod tolerance;
+pub use tolerance::{
+    FormulaToleranceComparison, FormulaToleranceComparisonError, FormulaToleranceComparisonRefusal,
+};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 enum ScalarValue {

@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0270 — implemented numeric calls retain approximation sources
+## STITCHCAD-G1-0271 — exact named tolerance comparisons
 
-.5e.3.3: sqrt/hypot/abs/min/max/clamp/round_to/arc_length reuse actual numeric kernels and retain all inputs.
-Successful rounding calls add their source even for exact results; actual typed refusals propagate. AST/trig execution follows.
+.5e.3.4: inclusive exact absolute differences retain actual numeric operands, named quantitative context and sources.
+No wide/out-of-domain temporary result is materialized; T1 source refusals precede threshold. Full assertion/AST execution follows.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -430,3 +430,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part241](docs/history/stitchcad-changelog-part241.md) | whole0268 | 4 lines, 296 bytes, sha256:d290645e… |
 
 | [part242](docs/history/stitchcad-changelog-part242.md) | whole0269 | 4 lines, 298 bytes, sha256:f5bf9523… |
+
+| [part243](docs/history/stitchcad-changelog-part243.md) | whole0270 | 4 lines, 319 bytes, sha256:c167f912… |

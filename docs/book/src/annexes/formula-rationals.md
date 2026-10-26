@@ -21,6 +21,7 @@ wide-integer workspace; the public value retains its fixed 128-bit components.
 | is_zero | Inspect canonical zero, whose components are 0/1 |
 | negated | Reverse sign exactly while preserving positive canonical zero |
 | Ord / PartialOrd | Exact total ordering with bounded cross-products |
+| is_within | Exact inclusive absolute-difference comparison; no intermediate rational result |
 | checked_mul | Exact product with cross-cancellation before reduced-width checks |
 | checked_div | Exact quotient with zero-divisor validation before zero handling |
 | checked_add | Exact sum, reducing wider intermediates before checking widths |
@@ -536,6 +537,15 @@ remains deferred. Future focused invocations filter that library check explicitl
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --lib compiled_pi_endpoint_matches_the_reproduced_certificate
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_arc_value_contract --test formula_numeric_contract
 ```
+
+## Exact absolute-difference comparisons
+
+`FormulaRational::is_within(other, limit)` compares the exact absolute difference against an
+inclusive rational limit. A negative limit accepts no difference; zero accepts exact equality.
+The private cross-products need at most385 bits: the signed difference numerator needs at most257,
+then the limit denominator contributes at most128. No rational expression result is returned, so
+these comparison intermediates impose no128-bit result-width or quantity-domain refusal.
+The sourced named-tolerance comparison uses this primitive with the supplied context's actual limit.
 
 ## Canonical and stored numeric reads
 

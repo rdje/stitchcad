@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — exact sourced named-tolerance comparisons
+
+0271 .5e.3.4 compares the exact absolute difference without materializing a numeric subtraction.
+Private bounded cross-products return Boolean, so no temporary scalar/128-bit result bound applies.
+Actual operands, named quantitative class/provider/derivation/context and sources remain beside the
+result. Dimensions precede T1-source admission; class refusal precedes threshold. Explicit zero/
+negative limits are not replaced. False results retain all sources through Boolean storage/read.
+
+Focused native5/0 passes; independent Fraction/algebra confirms full-width threshold witnesses.
+Selected lint first flags the large comparison error (101); boxing its private complete failure
+retains all actual getters/error causes without a large Result error. Final focused native5/0 and
+selected strict Clippy0 pass. Full named assertions/AST/provider lookup/replay remain open. Whole0270
+task, oldest full sum lesson and ledger retain356/357/243 with exact Git/hash/public reads; book/live
+align. Promotion declined: existing formula3.1/4.2 and bounded exact comparison/source contracts.
+
 ## _(2026-10-26 UTC)_ — implemented numeric calls retain all evaluated sources
 
 0270 .5e.3.3 executes the existing eight numeric call families through sourced scalar wrappers.
@@ -356,20 +371,8 @@ mutation and integration checks remain .5c.4/pre-push. The primitive is complete
 are next. Whole0246 task/ledger retained318/219, with exact source/public reads. Book/pointer align.
 Promotion declined: established independent-oracle and focused-check policies.
 
-## _(2026-10-25 UTC)_ — exact signed rational sums and differences
-
-0246 .5c.1.2.2 computes signed cross-products in a private num-bigint0.4.6 workspace. Admitted
-inputs bound numerator/denominator to257/256 bits; gcd reduction precedes the u128 return check.
-This preserves cancellation, full signs and canonical zero while reporting exact reduced-component
-widths. Construction/product/quotient paths remain allocation-free; stored ontology values and
-quantity/evaluator contracts are unchanged. Offline Cargo resolves only num-bigint0.4.6,
-num-integer0.1.46, num-traits0.2.19 and autocfg1.5.1; published metadata licenses all MIT/Apache2.
-
-One affected native target passes3/0, rc=0, including admitted257-bit intermediate cancellation,
-negative differences, zero and reduced129/257/256-bit refusals. No broad/platform pass claimed;
-independent oracle/platform integration stays .5c.1.3. Book/live scope matches all four operators.
-Whole0245 task/ledger and completed transport policy retained316/218/317 with source identities.
-Promotion: existing edge/formula rational decision records the private dependency/workspace choice.
+[Complete rational sum/difference lesson](docs/history/stitchcad-devnotes-part357.md) retains
+its original scope, validation and promotion decision.
 
 [Complete rational product/quotient lesson](docs/history/stitchcad-devnotes-part355.md) retains
 its original scope, validation and promotion decision.

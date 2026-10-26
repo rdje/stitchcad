@@ -79,7 +79,7 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-**`G1-SLICE.5e`** continues after sourced implemented numeric calls0270. D70 ruling remains pending.
+**`G1-SLICE.5e`** continues after exact named tolerance comparisons0271. D70 ruling remains pending.
 Trig resource strategy .5d.1.2.2.2 stays P1 before trig calls. Director2026-10-25: one focused check per
 feature; broad verification and nonblocking audits remain owned for later integration/pre-push.
 Original historical descriptor identity remains unknown. Gate G0 has no further leaf:

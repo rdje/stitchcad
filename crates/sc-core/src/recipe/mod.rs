@@ -53,7 +53,10 @@ mod provenance;
 pub use provenance::{FormulaApproximationSources, FormulaApproximationToleranceError};
 
 mod evaluated;
-pub use evaluated::{FormulaEvaluatedBinding, FormulaEvaluatedScalar};
+pub use evaluated::{
+    FormulaEvaluatedBinding, FormulaEvaluatedScalar, FormulaToleranceComparison,
+    FormulaToleranceComparisonError, FormulaToleranceComparisonRefusal,
+};
 
 mod normalized;
 pub use normalized::{
