@@ -3,15 +3,17 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0345 — validate complete Piece companion inventories
+## STITCHCAD-G1-0346 — own canonical inputs without representation conversion
 
-- Add immutable ordered PieceInventory: unique ids, existing reciprocal pair members, opposite hands/equal quantities.
-- Preserve all authored fields/canonical borrows; empty inventories and odd per-member quantities remain legal.
-- Native8/privacy1/Piece14/CutPlan9/selected strict lint/fmt and book/publication pass; D248/D249 corrected.
-- D250 glossary census has the same132 baseline token/use failures; no new rows. Owned after .6.9 before integration/pre-push.
-- Whole prior closure496 is Git-exact across4 source spans; caps unchanged. G1still6/18; aggregate state .6.4.2 next.
+- Add immutable CanonicalInputs over dedicated-length/general-scalar records, preserving all authored state/provenance.
+- Refuse duplicate owned ids with both original family positions; retain typed canonical borrows and explicit empty drafts.
+- Native7/privacy1/length8/scalar5/strict selected lint/fmt/book/publication pass0; D251/D252 scope prose corrected.
+- D250 glossary132 remains exactly baseline; no new failure. Whole0345 continuity497 matches4 Git source spans0.
+- G1still6/18; structural state .6.4.2.b next. No full Design/execution/integration/CI claim.
 
 # Sealed archive — earlier slices
+
+| [part497](docs/history/stitchcad-devnotes-part497.md) | whole0345 Piece inventory/D248-D249 task, lesson and ledger | 63 lines, 5409 bytes, sha256:fab0f6ef… |
 
 | [part496](docs/history/stitchcad-devnotes-part496.md) | whole retention subtree/D246-D247/0344 lesson and ledger | 106 lines, 8392 bytes, sha256:dbd95028… |
 

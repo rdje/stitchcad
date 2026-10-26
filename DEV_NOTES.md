@@ -3,18 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-26 UTC)_ — complete Piece companion inventory
+## _(2026-10-26 UTC)_ — owned canonical input inventory
 
-0345 closes the D56 collection obligation through an immutable authored PieceInventory. It checks unique
-ids before companion existence/paired mode/reciprocity/opposite hands/equal quantities in authored order.
-Labels imply no hand or partner; original Piece content/borrow identity survives, including explicit
-unresolved materials. Empty inventories and equal odd member quantities are legal; no geometry or
-Design/release readiness follows. Native8/privacy1/Piece14/CutPlan9/strict selected lint/fmt pass0.
-D248/D249 stale decision/sewing prose corrected. The required glossary census exposes132 preexisting
-C1 token/use failures: sourcec588e5e and current rows match exactly. D250 owns remediation after .6.9
-before integration/pre-push; no full glossary/CI pass is claimed. New API names are locally declared.
-Whole prior subtree/reports/lesson/ledger496 matches4 Git source spans; all10 prior nodes remain live.
-Promotion: existing pair decision. G1 remains6/18; aggregate ownership/current references follow .6.4.2+.
+0346 CanonicalInputs owns original dedicated LengthDeclaration and general ScalarInputDeclaration vectors.
+One id census spans both families, preserving exact first/repeated roles and positions. Getter borrows
+refer to the stored canonical objects; general Length-kind scalars do not become dedicated lengths.
+All state/source/provenance remains authored, including unknown observations/derived formulas without
+numeric defaults. Referenced ids are not mistaken for owned records. Empty drafts remain explicit.
+Native7 covers all5 states/6 kinds, duplicates and canonical borrows; privacy1/length8/scalar5/strict
+selected lint/fmt/book/pub pass0. D251/D252 wording separates structural composition/conversion from
+pending numeric execution. D250's132 glossary rows remain exactly baseline; no full census/CI pass.
+Whole0345 task/reports/lesson/ledger497 compares4 exact Git source spans. Promotion: existing canonical
+source decision. G1still6/18; private structural state follows .6.4.2.b, without a reverse dependency.
+
+[Whole0345 Piece inventory lesson](docs/history/stitchcad-devnotes-part497.md) retains exact source/proof and D250 boundary.
 
 [Whole0344 legacy-verifier lesson](docs/history/stitchcad-devnotes-part496.md) retains exact source/proof boundaries.
 

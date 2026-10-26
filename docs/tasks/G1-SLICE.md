@@ -787,32 +787,39 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   .4 sewing/current symbolic amounts; .5 garment families; .6 focused coupled aggregate/privacy acceptance.
 - ID: `G1-SLICE.6.4.1`
   Status: `done`
-  Goal: immutable PieceInventory with authored order/identities, unique Piece ids and complete companion
-  existence/paired-mode/reciprocity/opposite-hand/equal-quantity checks. Empty inventory stays legal;
-  no IDs, labels, copies, geometry, materials or missing companions are inferred. No Design/release claim.
-  Own source/public contract tests, selected lint/fmt and local vocabulary/book sync; D248/D249 docs
-  correction in the same relevant records. Broader bus/geometry/platform verification remains later.
-  D250 baseline glossary failures are owned by .6.vocabulary; prove exact before/after failure-row equality.
-  Own complete prior subtree/report/lesson/ledger retirement496 needed for unchanged task caps.
-  - [x] REPRODUCE / ISSUE: standalone reference-skirt member test passes1/0 while companion collection
-    obligations remain explicit. New missing-target case constructs a valid Piece then refuses its inventory.
-  - [x] ROOT CAUSE (WHY + WHERE): Piece::new takes only its definition/ledger and rejects self-companions;
-    collection relations need the complete supplied Piece set. Baseline cargo test -p sc-core --test
-    piece_contract the_reference_skirts_cut_once_pair_members_print_their_own_handedness passes1, rc=0.
-  - [x] FIX: immutable authored PieceInventory and six typed relation/identity errors; canonical borrows,
-    duplicate-before-relation/authored-order checks, explicit empty legality and no geometry/release claim.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    piece_inventory_contract gives8/0, rc=0, target/piece-inventory-native-0345.log; all error payloads exact.
-  - [x] NO REGRESSION: Piece14/CutPlan9/privacy compile-fail1, selected strict Clippy and fmt pass0,
-    target/piece-inventory-*-0345.log. Glossary132 current/baseline rows exactly equal; census rc=1,
-    delta check rc=0. D250 owns baseline remediation after .6.9 before integration/pre-push, no full pass.
-  - [x] LOCKSTEP: book/API row104/decisions/status/notes/index/pointer/D248-D249 aligned; complete
-    prior subtree/reports/lesson/ledger496 matches4 Git source spans0. No ceilings raised; G1still6/18.
-    Test syntax/indexing/helper-lint setup failures corrected/excluded. promotion: declined (existing pair decision).
-    Commit0345; .6.4.2 next. Broader bus/geometry/platform/integration remains later.
+  Goal:0345 complete Piece companion checks; [whole scope/proof](../history/stitchcad-devnotes-part497.md).
 - ID: `G1-SLICE.6.4.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: privately owned canonical design state and identity registries; reuse actual core input contracts.
+  Children .a owned canonical inputs; .b structural piece/copy/topology state; remaining actual source
+  registries/recipe ownership follow their dependency contracts before .3 readiness.
+- ID: `G1-SLICE.6.4.2.a`
+  Status: `done`
+  Goal: owned CanonicalInputs over exact LengthDeclaration/ScalarInputDeclaration values, with unique
+  owned ids across both families and precise first/duplicate family positions. Preserve authored vectors,
+  states/source/provenance, typed lookups and empty drafts. No scalar-Length conversion or source/evidence
+  inference. No public mutator; sc-measure continues borrowing core records without a dependency cycle.
+  Own selected native/privacy/lint, relevant API vocabulary/book/decision/live docs; D251/D252 scope
+  corrections below. D250 remains the named preexisting glossary owner after .6.9, no blanket exemptions.
+  Own complete prior0345 task/reports/lesson/ledger retirement497 before task-cap growth.
+  - [x] REPRODUCE / ISSUE: core declaration families are already canonical/immutable; metadata borrows
+    them. Private Design ownership needs one unambiguous owned inventory without a reverse dependency.
+  - [x] ROOT CAUSE (WHY + WHERE): existing LengthDeclaration/ScalarInputDeclaration APIs store complete
+    state/source but do not jointly own ids. canonical_inputs_contract cross-family/same-family cases
+    exercise exact duplicate identity/family/position refusals while preserving references, native7/0, rc=0.
+  - [x] FIX: CanonicalInputs owns original vectors, checks ids before publication and exposes shared typed
+    views only. General scalar Length stays general; unknown/derived has no new result or fallback.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    canonical_inputs_contract gives7/0, rc=0, target/canonical-inputs-native-0346.log; all5 states/6 kinds.
+  - [x] NO REGRESSION: length8/scalar5/privacy1/strict selected Clippy/fmt pass0; book/pub77/105/1444/2358
+    pass0, target/*0346.log. Glossary132 matches baseline rows exactly, delta0; full census rc=1/D250.
+  - [x] LOCKSTEP: vocabulary/API/decision/notes/status/index/pointer/D251-D252 aligned; whole0345 task,
+    reports/lesson/ledger497 compares4 exact Git spans0. Caps unchanged; G1still6/18; .6.4.2.b next.
+    promotion: declined (existing canonical-source decision). Commit0346; full execution/CI remains later.
+- ID: `G1-SLICE.6.4.2.b`
+  Status: `pending`
+  Goal: owned structural piece/copy/topology state with exact current source/context identities;
+  all point/range/garment repairs remain explicit under .3–.5 rather than silently defaulted.
 - ID: `G1-SLICE.6.4.3`
   Status: `pending`
   Goal: actual current point and whole-range resolution/repair readiness, including lost interiors.

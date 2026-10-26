@@ -1,11 +1,9 @@
 # Canonical measurement length inputs
 
-[Ontology §2.1/§5](ontology.md) requires measurement state and provenance as content. Measurement,
-ease and chart metadata need one canonical source; `G1-SLICE.4a.1` supplies the shared length
-contract in sc-core, consumed by [sc-measure metadata](measurement-metadata.md). The measurement
-table and [Ease mappings/sets](ease-inputs.md) are implemented in sc-measure; SizeSet membership
-and garment/MTM chart foundations exist, while full composition remains owned work. No standard's measurement
-values or landmark vocabulary are invented here ([standards](standards.md)).
+[Ontology §2.1/§5](ontology.md) requires canonical state/provenance. Core owns declarations;
+[sc-measure metadata](measurement-metadata.md), tables, [Ease](ease-inputs.md) and structural SizeSet
+composition borrow them. Numeric execution/persistence remain separate. No standard's values or
+landmark vocabulary are invented ([standards](standards.md)).
 
 ## Authored value and state
 
@@ -80,42 +78,41 @@ assert_eq!(record.kind(), ScalarInputKind::Boolean);
 # Ok::<(), Box<dyn std::error::Error>>(())
 ```
 
-A readable value is not factual certification. All declarations retain DeferredToDesignAndG4;
-registry identity/scope, human attribution, derived dependency evaluation and artifact policy remain
-separate. authored_value returns a sourced RequiresObservation or RequiresEvaluation when needed,
-with no zero/false fallback. state/definition access is immutable; editing a cloned definition and
-validating a replacement leaves the prior declaration unchanged.
-
-Complete original scalar contract receipts remain in `docs/history/stitchcad-devnotes-part482.md`.
-Formula adapters must retain actual identity/kind and authored states through evaluation.
+Readability does not certify facts; the common boundary below applies to both declaration families.
 
 ## Evidence and computation remain distinct
 
-Every declaration reports `ValueProvenanceValidation::DeferredToDesignAndG4`. Carrying evidence ids
-and a declared Known state cannot establish that records exist, cover this quantity, remain valid,
-or prove the source true. Assumptions need their recorded human actor. Recipe/Design validates
-source/declaration/formula identities, kinds and dependencies; G1-SLICE.5 propagates derived state.
-G4 validates scoped evidence, preference composition and artifact-specific uncertainty closure/policy.
-A query of authored content grants neither factual certification nor release permission.
+All declarations retain `ValueProvenanceValidation::DeferredToDesignAndG4`: evidence ids do not prove
+existence, scope, validity or truth; assumptions need their human actor. Recipe/Design checks source,
+declaration and formula identities, kinds and dependencies; G1-SLICE.5 propagates derived state. G4
+checks scoped evidence, preference composition and artifact closure/policy. No authored query authorizes
+release. Core owns records; sc-measure and formula host contexts borrow them without extra value/state
+copies or a reverse crate dependency. Metadata/reference APIs exist; executed evaluation follows.
 
-The dependency direction is explicit: sc-measure consumes core identities and these inputs; core
-does not depend on sc-measure. Formula evaluation will consume its core input contract through the
-host context. Consumers borrow canonical declarations instead of keeping independent numeric/state
-copies. Structural metadata/reference APIs are available now; executed evaluation follows.
+## Owned canonical inputs
+
+`CanonicalInputs::new(lengths, scalars)` owns both exact declaration families in their authored order.
+Owned ids must be unique across both vectors; even identical duplicates refuse with
+`CanonicalInputPosition` witnesses for first/repeated family and index. Lengths are checked first.
+Source/evidence/formula references stay unchanged and are not counted as declarations owned here.
+Empty vectors are legal; no records or numeric defaults are manufactured.
+
+`lengths()`/`scalars()` and `length(id)`/`scalar(id)` borrow canonical objects. A general Length-kind
+scalar stays general: querying its id with length(id) returns None, without converting it. For example,
+a dedicated length id1 plus general scalar id1 refuses; distinct ids retain all states/provenance.
+This component grants no metadata binding, current Design revision, evidence truth or release readiness.
 
 ## Stable machine tokens
 
-Measurement metadata carries a core `MachineToken`, separate from its localized name and scalar
-input. `MachineToken::new` preserves exact ASCII lower-snake spelling or returns `MachineTokenError`:
-`InvalidSyntax` retains malformed input; `ReservedKeyword` names let/assert/if. There is no trimming,
-normalization or automatic renaming. For example, waist_girth and waist_girth_2 are valid, while
-Waist_Girth, waist__girth and a token containing a Cyrillic lookalike are refused. The exact grammar
-lives in [formula syntax §1](formula-language/grammar.md). Private representation prevents unchecked
-mutation; a validated replacement leaves the original token unchanged.
+Measurement metadata uses core `MachineToken` for exact ASCII lower-snake identifiers, separately from
+localized labels and scalar inputs. InvalidSyntax retains malformed input; ReservedKeyword names
+let/assert/if. No trim, normalization or automatic rename occurs. For example, waist_girth and
+waist_girth_2 are valid; Waist_Girth, waist__girth and Cyrillic lookalikes refuse. See
+[formula grammar](formula-language/grammar.md). Replacement cannot mutate an earlier token.
 
-The built-in eps_geo is a valid reference token. Lexical acceptance grants no permission to bind a
-new measurement to it: MachineToken.is_reserved_input_name classifies the eight built-in names;
-measurement metadata refuses their redeclaration. Recipe namespace validation retains the same rule. The token API provides no source truth, measurement value or display text.
+Lexical acceptance does not authorize binding: eps_geo is a valid reference, while
+MachineToken.is_reserved_input_name identifies the eight names metadata/recipe namespaces cannot
+rebind. Tokens prove no source truth, value or display text.
 
 | API token | Meaning in the length-input implementation |
 | --- | --- |
@@ -123,6 +120,9 @@ measurement metadata refuses their redeclaration. Recipe namespace validation re
 | `LengthDeclarationDefinition` | Editable stable id, source record and canonical length/state input |
 | `LengthDeclaration` | Immutable structurally validated input |
 | `LengthDeclarationError` | Missing/duplicate known-state evidence inventory |
+| `CanonicalInputs` | Immutable owned dedicated-length/general-scalar records |
+| `CanonicalInputsError` | Repeated owned identity with both original positions |
+| `CanonicalInputPosition` | Dedicated-length or general-scalar family and index |
 | `NoEvidence` | Claimed known value has no evidence references |
 | `DuplicateEvidence` | Known inventory repeats an evidence id |
 | `LengthValueError` | Numeric value requires observation or evaluation |

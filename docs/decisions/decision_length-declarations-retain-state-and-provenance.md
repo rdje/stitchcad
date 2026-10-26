@@ -116,3 +116,13 @@ Current lookup borrows the canonical mapping, refuses retargeting or missing ide
 selected table memberships and current Ease. Same-id intent/permission and scalar-state edits stay
 visible. Empty drafts and targeted queries do not certify complete chart/Design coverage; full set
 validation checks all entries. Identity, scope, factual evidence and evaluation remain distinct.
+
+## Canonical ownership — G1-SLICE.6.4.2.a
+
+CanonicalInputs owns exact dedicated-length and general-scalar records in authored family order.
+Owned ids are unique across both vectors, with typed first/repeated family positions. Referenced
+source/evidence/formula ids remain claims, not extra owned declarations or source-truth proof.
+General Length-kind scalars retain their representation; typed lookups never convert them into
+measurement Length declarations. Shared views borrow the canonical objects; empty drafts are legal.
+This supplies a private-Design component while preserving the one-way sc-measure dependency. It
+neither evaluates Derived/Unknown states nor certifies metadata/revision/evidence/release readiness.

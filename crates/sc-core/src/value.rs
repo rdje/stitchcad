@@ -4,6 +4,9 @@ use core::fmt;
 use sc_units::Length;
 use std::collections::BTreeSet;
 
+mod inventory;
+pub use inventory::{CanonicalInputPosition, CanonicalInputs, CanonicalInputsError};
+
 mod scalar;
 pub use scalar::{
     ScalarInputDeclaration, ScalarInputDeclarationDefinition, ScalarInputDeclarationError,

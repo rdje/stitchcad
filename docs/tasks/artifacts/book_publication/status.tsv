@@ -103,3 +103,4 @@ command scope coverage	spec/command-scopes.md	crates/sc-core/src/command/scope.r
 command grant records	spec/command-scopes.md	crates/sc-core/src/command/grant.rs	CommandGrant	G1-SLICE.6.3.2	7.8
 core command authorization	spec/command-scopes.md	crates/sc-core/src/command/authorization.rs	CommandAuthoritySource	G1-SLICE.6.3.2	10
 piece inventory	spec/ontology-implementation.md	crates/sc-core/src/ontology/piece_inventory.rs	PieceInventory	G1-SLICE.6.4.1	4.4
+canonical owned inputs	spec/measurement-inputs.md	crates/sc-core/src/value/inventory.rs	CanonicalInputs	G1-SLICE.6.4.2.a	4.4

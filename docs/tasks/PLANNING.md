@@ -1106,21 +1106,7 @@ D245 fixed0342; [complete report](../history/stitchcad-devnotes-part494.md) reta
 
 D246/D247 complete reports/0344 closure are retained in [part496](../history/stitchcad-devnotes-part496.md).
 
-## D248 — pair decision still says the settled D57 ruling awaits the director
-
-The active decision_piece-pair-members-have-explicit-handedness.md ends with D57 remaining with the
-director. The canonical physical-cut-copies decision records the director's ruling and implemented
-CutPlan/SewingGraph APIs. Reproduce: rg D57 in both decisions and src/ontology/cut.rs/sewing.rs.
-Impact: a current pairing reader is told a settled identity decision is pending. Owner G1-SLICE.6.4.1,
-P2 fixed0345: active pair decision links the settled canonical ruling; pair inventory scope is explicit.
-
-## D249 — executable copy guide still calls implemented sewing addressing the next slice
-
-ontology-implementation.md's physical-copy example says the sewing-graph slice next integrates copy
-addressing. SewingGraph::new, missing_copies and current copy-bound APIs already implement that scope;
-G1-SLICE.3c.2b.2 is done. Reproduce: rg "slice next integrates" in that chapter and public methods in
-ontology/sewing.rs. Impact: the book underreports current copy validation. Owner G1-SLICE.6.4.1,
-P2 fixed0345: guide states supplied-copy validation at construction and missing targets; bus/revisions stay pending.
+D248/D249 complete reports/0345 closure are retained in [part497](../history/stitchcad-devnotes-part497.md).
 
 ## D250 — glossary declarations lag implemented public API vocabulary
 
@@ -1137,6 +1123,22 @@ Repair canonical API/variant/local declarations without weakening C1 or adding b
 Secondary P3: baseline and current advisory awk-to-head15 pipeline prints a pipe-close I/O diagnostic;
 source tail pinpoints it, without changing C1's132 rows. Repair under the same owner after C1 closure.
 Current feature may proceed with this explicit baseline gap; no full glossary/CI pass is claimed.
+
+## D251 — canonical-input guide still defers implemented structural SizeSet composition
+
+measurement-inputs.md's opening says full composition remains owned work. SizeSetInputs and current
+Garment/Mtm input composition are implemented, reviewed under .4c.5/.4d, and sc-measure's module docs
+state that scope. Reproduce: rg "full composition" in that guide and SizeSetInputs in sc-measure.
+Impact: the canonical-input entry understates available structural inputs. Owner G1-SLICE.6.4.2.a,
+P2 fixed0346: entry reports structural composition and keeps numeric execution/persistence pending.
+
+## D252 — recipe-input annex still defers implemented numeric binding conversion
+
+formula-recipe-inputs.md's status header says numerical binding and evaluation remain later work.
+FormulaBoundValue and its binding conversion API/native contract are implemented; whole recipe execution
+remains pending. Reproduce: rg "numerical binding" in the annex and public constructors in recipe/bound.rs.
+Impact: readers cannot distinguish available conversion from unimplemented whole execution. Owner
+G1-SLICE.6.4.2.a, P2 fixed0346: header separates available conversion from pending whole execution.
 
 ## Active continuity followup
 

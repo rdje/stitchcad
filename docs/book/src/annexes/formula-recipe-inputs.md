@@ -3,7 +3,8 @@
 > **Status:** G1-SLICE.5a.3f.1b implements immutable normalized statements and complete recipes in
 > sc-core. It converts input literals and preserves syntax metadata. Statement/recipe canonical
 > serialization is implemented at .1c. [Ordered name scopes](formula-name-scopes.md) and
-> [whole recipe kind proofs](formula-checked-recipes.md) are available; numerical binding and evaluation remain later work.
+> [whole recipe kind proofs](formula-checked-recipes.md) and numeric binding conversion are available;
+> whole recipe execution remains pending.
 
 The [statement parser](formula-statements.md) records what you wrote. Input normalization then
 converts every literal to the [canonical internal units](formula-literals.md), without calculating
