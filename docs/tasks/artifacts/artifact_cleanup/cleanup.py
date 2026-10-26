@@ -18,7 +18,8 @@ TREES = ('target/doctrine_scratch', 'target/scratch', 'target/tmp',
          'docs/book/book')
 AUDIT = 'target/artifact_cleanup_audit'
 PROTECTED = (AUDIT, 'target/cargo-home', 'target/scaffold_backup',
-             'target/debug/deps', 'target/release/deps')
+             'target/debug/deps', 'target/release/deps',
+             'target/trig_forward_certificate', 'target/inverse_threshold_certificate')
 SUFFIXES = ('.log', '.bin', '.tmp', '.orig', '.rej')
 
 

@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — retain numerical proof stores through cleanup
+
+0285 .5d.1.2.2.2.b.2.b.2.h excludes both certificate stores from generic cleanup. Actual proof
+chunks refuse unchanged; fresh-file census protected2/ordinary1/actual omission-red1/restored1
+passes, rc=0. All old AST policy bodies/constants remain constrained except these exact additions.
+Initial fixture lacked prepared TMPDIR; Git warned, then created local xcrun_db after preparation.
+The control now requires existing same-volume Git TMPDIR and no startup warnings, allowing normal
+scratch caches.389/257 retain whole0284 task/ledger. Book/live align; no project cleanup/cadence reset.
+Promotion: inverse decision records the resolved defect; full45M is next, broader checks deferred.
+
 ## _(2026-10-26 UTC)_ — resumable inverse certificate controller
 
 0284 .5d.1.2.2.2.b.2.b.2.a captures170 build inputs and a byte-exact producer copy, with four

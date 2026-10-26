@@ -38,7 +38,10 @@ as the CLI; its directory must be under target/artifact_cleanup_audit with one r
 
 The census checks doctrine/scratch/tmp, Rust incremental and rendered-book trees, plus ignored
 .log, .bin, .tmp, .orig, .rej and .DS_Store strays under target. Protected stores and dependency
-binaries are pruned. Unsafe entries appear in skipped with a reason; they are never followed or
+binaries are pruned. Retained numerical proof stores target/trig_forward_certificate/ and
+target/inverse_threshold_certificate/ are also protected, including their .bin payloads,
+checkpoints, frozen sources and executable. Generic cleanup cannot retire those records;
+any later retirement needs its own task and evidence. Unsafe entries appear in skipped with a reason; they are never followed or
 removed. Nested Git markers, symlinks, foreign devices, special files, nonignored paths and tracked
 descendants refuse. A regular deletion file must have exactly one hard link. Directory link counts
 retain their normal semantics; a linked read-only input is distinct from a deletion candidate.
@@ -234,9 +237,23 @@ package switching and byte-exact rollback, without claiming unobserved UI/model/
 
 Actual captures execute both mode bodies: creation, two exclusive JSON writes, process dispatch
 and removal of isolated controlled artifacts. Independent omissions and unsafe physical audit,
-input and store fixtures calibrate the plans. Complete original policy bodies and constants remain
-exact after the declared planning, child-environment, process and unique-link adapters. The original
+input and store fixtures calibrate the plans. Original policy bodies/constants remain exact through
+the declared adapters except the two explicitly admitted numerical certificate stores. The original
 fifteen cleanup cases and eleven compiled guard-fault assertions retain their refusal families.
+
+The watched certificate-store control uses fresh owned files and the actual read-only census.
+Both proof stores refuse selection; ordinary .log and prepared scratch cleanup remain eligible.
+Removing exactly the two new protections from the compiled producer makes the same assertion fail,
+then the intact producer passes again. File/source hashes remain unchanged; project apply is never
+called. Mirrored local stores exist before Git runs, including a same-volume TMPDIR; platform SDK
+scratch caches are allowed inside that ordinary tree and startup warnings fail the control.
+
+```bash
+python3 -I -B docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py
+```
+
+The existing cleanup entry suite also runs this control and permits exactly the two declared
+store additions in its original-policy comparator. Every other old body/constant stays constrained.
 
 D210's real legacy checker returned success on unavailable lsof, and its actual apply body reached
 a trapped deletion. The canonical checker refuses that evidence; actual blocked/clear process

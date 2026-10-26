@@ -509,33 +509,34 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: after .1, source-locked complete45M controller/checkpoints/exact reader and full coverage evidence.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.a`
   Status: `done`
-  Goal:0284 complete guarded resumable inverse controller/reader; focused partial/resume/refusal before full run.
-  Own386 whole0283 task,387 oldest midpoint lesson,256 ledger before growth.
-  Also own388 whole closed .5b.4c.h2.b.p.n.m1 node/receipts for acceptance/defect tracking space.
+  Goal:0284 guarded controller/reader200k partial/resume/control checks pass0; full45M remains open.
   Paths: docs/tasks/artifacts/formula_structure/inverse_threshold_certificate.py;docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py
-  Native stdout to bounded local chunks, source/binary hashes, exclusive lock, child cleanup,
-  explicit partial manifest and independent exact row/hash/coverage reader; no full45M claim.
-  Commit verified controller before .b full job. Decision/book/live sync; output run0284 under target.
-  Acceptance0284:
-  - [x] REPRODUCE: native chunks lacked durable full-population controller/independent reader.
-  - [x] ROOT CAUSE0284: inverse_threshold_certificate.py --chunks1 --workers1 publishes100k/PARTIAL, rc=0; default full reader refuses partial. Coverage requires450 exact ranges and frozen producer provenance.
-  - [x] FIX: guarded parts/atomic manifests/source capture/verified binary copy/exclusive lock/owned-child reaping; exact Python reader.
-  - [x] ADDRESSED0284: same controller resumes1 chunk to200k/PARTIAL, rc=0; verify_inverse_certificate.py --allow-partial checks both chunks/hash/coverage, rc=0.
-  - [x] NO REGRESSION0284: reader corruption3/coverage2/source-drift1/live-read1 and actual owned-child reaping2 controls pass, rc=0. Lock absent/registry empty; no45M/native API claim; broad proof .5d.4/pre-push.
-  - [x] LOCKSTEP:386–388/256 exact Git/hash/public bytes, rc=0; decision/book/live align. Cleanup certificate deletion candidate reproduced read-only; next P1 .h owns fix before full run. G1still5/18.
-  Verification: rc=0; Commit: STITCHCAD-G1-0284.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part389.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.b`
   Status: `pending`
   Goal: complete45M native inverse population from frozen controller sources; full reader, cost/margin/hash evidence, then commit.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.h`
-  Status: `pending`
+  Status: `done`
   Goal: P1 protect retained numerical certificates from generic artifact cleanup; next after .a commit, before .b or cleanup.
   Defect0284: cleanup.py inspect accepts actual forward0278 chunk-000.bin (2080000B) and
   inverse0284 chunk-000.bin (28800000B) as deletable strays, rc=0. No deletion performed.
   Reproduce: runpy cleanup.py; inspect each path with tracked(). Generic .bin suffix has no
   certificate-store exclusion; deletion would break retained readers/checkpoint continuity.
   Paths: docs/tasks/artifacts/artifact_cleanup/cleanup.py;docs/ARTIFACT_CLEANUP.md
+  Verification paths: docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py;docs/tasks/artifacts/ci_environment/python_cleanup_entry_contract.py
+  Existing AST baseline locks PROTECTED; admit exactly two new stores while preserving all old
+  constants/bodies. New read-only actual-census/guard-omission control is watched by that entry suite.
   Fix/verify exact store protection and ordinary stray control; own until verified/closed.
+  Work unit0285 also owns389 whole0284 controller task and257 ledger before acceptance growth.
+  Focused read-only protected-store/ordinary-stray census; no cleanup run or cadence reset here.
+  Acceptance0285:
+  - [x] REPRODUCE:0284 actual cleanup inspect admitted2 retained .bin proof chunks; read-only/no deletion.
+  - [x] ROOT CAUSE0285: certificate_store_controls.py actual census and compiled omission reproduce admission when both new prefixes are absent, rc=0; generic suffix rules lacked proof-store identity.
+  - [x] FIX: protect/prune both exact stores; old-policy comparator admits precisely those2 additions and watches the new census control.
+  - [x] ADDRESSED0285: python3 -I -B docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py protected2/ordinary-stray1/omission-red1/restored1 passes, rc=0;2 actual proof files refuse unchanged.
+  - [x] NO REGRESSION0285: runpy.run_path('docs/tasks/artifacts/ci_environment/python_cleanup_entry_contract.py')['original_body_controls']() old bodies/constants exact except admitted2 stores and new control pass, rc=0. Ordinary scratch/log selection remains; fixture local Git TMPDIR prepared/no warning. Broader .5d.4/pre-push.
+  - [x] LOCKSTEP:389/257 exact Git/hash/public bytes, rc=0; policy/book/live/decision close owned defect. No project cleanup or cadence reset. G1still5/18; full inverse .b next.
+  Verification: rc=0; Commit: STITCHCAD-G1-0285.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.c`
   Status: `pending`
   Goal: native atan/atan2 branch/reduction/error/workspace admission before production code.

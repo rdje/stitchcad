@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0284 — resumable inverse certificate controller
+## STITCHCAD-G1-0285 — preserve retained numerical certificate stores
 
-.5d.1.2.2.2.b.2.b.2.a: guarded controller/exact reader pass100k→200k partial/resume and corrupt/source/child controls, rc=0.
-No full45M claim;386–388/256 retain whole history. Cleanup-certificate protection defect owned next P1 .h; book/live sync.
+.5d.1.2.2.2.b.2.b.2.h: both proof stores protected; actual census/omission/restoration and old-policy delta controls pass, rc=0.
+Actual proof bytes intact;389/257 retain whole prior task/ledger. No project cleanup/cadence reset; book/live sync.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -458,3 +458,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part255](docs/history/stitchcad-changelog-part255.md) | whole0282 | 5 lines, 277 bytes, sha256:843db70e… |
 
 | [part256](docs/history/stitchcad-changelog-part256.md) | whole0283 | 5 lines, 299 bytes, sha256:7a7d28c6… |
+
+| [part257](docs/history/stitchcad-changelog-part257.md) | whole0284 | 5 lines, 320 bytes, sha256:6a2ce4f6… |

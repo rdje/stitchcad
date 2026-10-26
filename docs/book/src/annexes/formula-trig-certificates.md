@@ -215,4 +215,6 @@ owned children; differing unpublished final bytes are preserved and refused. Com
 remains a separate task. Native inverse-function branches/error/workspace admission is still open.
 
 A read-only inspection found generic .bin cleanup would select retained certificate chunks.
-Protection is owned as P1 immediately before the full run/next cleanup; no certificate was deleted.
+Work unit0285 fixes this: both forward/inverse stores are excluded from generic cleanup, including
+their payloads and frozen provenance. The actual census/compiled omission control passes; no
+certificate was deleted. Complete45M coverage can proceed separately.

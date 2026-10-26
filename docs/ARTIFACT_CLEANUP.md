@@ -19,6 +19,9 @@ Cleanup is a normal change: it is owned by a task-tree leaf, recorded here, and 
 - Any tracked file (`git ls-files` is the authority; the census below re-proves it each run).
 - `target/debug/deps` and the built binaries — current build cache, cheap to keep and slow to rebuild.
 - Project package stores, scaffold backups and cleanup audit manifests.
+- Retained numerical certificates: target/trig_forward_certificate/ and
+  target/inverse_threshold_certificate/, including payloads, checkpoints, frozen inputs and producers.
+  These are proof records, not stray .bin files; retirement requires a separately owned decision.
 - Any shared/global cache outside the repository (cargo's registry, homebrew, system temp): populate a
   project-local cache instead, and remove only records provably owned by this project.
 

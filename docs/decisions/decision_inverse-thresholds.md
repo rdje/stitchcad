@@ -121,3 +121,9 @@ rc=0; the controller registry is empty and its lock absent. No full45M result is
 The read-only cleanup inspection also found that generic .bin cleanup accepts actual forward
 and inverse certificate chunks as deletion candidates. No deletion occurred. P1 .b.2.b.2.h owns
 protection immediately after this controller commit and before full coverage or the next cleanup.
+
+Resolved0285: both retained certificate stores are protected by cleanup classification and pruning.
+Actual proof files refuse selection unchanged. The watched fresh-file census preserves both stores
+and still selects an ordinary log/scratch tree; omitting exactly both protections fails the same
+assertion, restoration passes, rc=0. The old-policy comparator admits precisely these two additions.
+No project cleanup was applied and its last-run date is unchanged; full45M may now proceed.
