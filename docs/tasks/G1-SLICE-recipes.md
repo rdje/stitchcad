@@ -485,26 +485,28 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   No cohort/throughput extrapolation becomes all-input proof; retain coverage, margins and costs.
 - ID: `G1-SLICE.5d.1.2.2.2.b.1`
   Status: `done`
-  Goal:0278 full1M forward-band certificate, resumable chunks and independent exact gap/coverage reader.
-  Own372 whole0277 task,373 oldest root-plan lesson,250 ledger before producer growth.
+  Goal:0278 complete1M forward bands/100 chunks and independent exact gap reader pass0.
   Paths: docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py;docs/tasks/artifacts/formula_structure/verify_forward_certificate.py
-  Reuse pure explicit-pi helpers; source/profile/hash-locked checkpoints under target only.
-  Stream fixed-width exact endpoints; complete index coverage, strict margins and refusal controls.
-  No native precision admission/inverse/tangent claim. Decision/book/live sync, focused producer check.
-  Acceptance0278:
-  - [x] REPRODUCE:0277 certified38 only; no full forward population claim then.
-  - [x] ROOT CAUSE0278: forward_threshold_certificate.py --chunks1 checkpoints10k/PARTIAL, rc=0; complete-reader explicitly refuses it. Cohort coverage cannot establish1M.
-  - [x] FIX: source-locked100 chunks/exclusive run/atomic checkpoints; exact208-byte rows, independent integer gap reader.
-  - [x] ADDRESSED0278: python3 -I -B docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py resumes1 chunk then COMPLETE100/1M, rc=0. verify_forward_certificate.py checks all1M/hash/strict gaps/coverage, rc=0.
-  - [x] NO REGRESSION0278: producer distinct known/Fraction/small-Q/negative controls and3 malformed-row refusals pass, rc=0; no runtime changed. Broad/native/platform obligations .c/.5d.4/pre-push.
-  - [x] LOCKSTEP:372/373/250 exact Git/hash/public reads, rc=0; decision/book/live match full result; G1still5/18. No native/inverse/tangent admission.
-  Verification: rc=0; Commit: STITCHCAD-G1-0278.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part374.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2`
   Status: `pending`
   Goal: inverse first-octant generator and full45M threshold proof; split before implementation.
 - ID: `G1-SLICE.5d.1.2.2.2.c`
-  Status: `pending`
+  Status: `done`
   Goal: native sin/cos reduction, interval error, fixed work/workspace admission using complete forward certificate before code.
+  Work unit0279 owns374 whole0278 task,375 oldest sqrt lesson,251 ledger before growth.
+  Paths: docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py;docs/decisions/decision_finite-threshold-feasibility.md
+  Derive exact sign/period/octant folding,512-bit directed64-term series, complete error/workspace
+  and rounding argument; focused rational envelope/oracle controls. No native API added here.
+  Decision/book/live sync; primary DLMF4.19/4.21 opened2026-10-26. Inverse/tangent remain open.
+  Acceptance0279:
+  - [x] REPRODUCE: full forward certificate exists; native reduction/error/workspace remained unadmitted.
+  - [x] ROOT CAUSE0279: python3 -I -B docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py derives770*2^-512<2^-502<2^-384 and workspace<2^1026, rc=0; fixed-error proof closes the forward gap.
+  - [x] FIX: exact private sign/period/octant folding and64 directed terms at512 bits; record full invariant/rounding argument before code.
+  - [x] ADDRESSED0279: same command exact envelope/Fraction14/signed-octant50 pass, rc=0; native sin/cos plan admitted, implementation .5d.3.2.1 next.
+  - [x] NO REGRESSION0279: same command insufficient-profile2 controls pass, rc=0; forward proof sources unchanged. No runtime/platform claim; .5d.4/pre-push broad proof stays owned.
+  - [x] LOCKSTEP:374/375/251 exact Git/hash/public reads, rc=0; decision/book/live align. Inverse/tangent remain open, G1still5/18.
+  Verification: rc=0; Commit: STITCHCAD-G1-0279.
 
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`
@@ -548,6 +550,12 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5d.3.2`
   Status: `pending`
   Goal: correctly rounded sin/cos/tan under .5d.1.2.2 plan.
+- ID: `G1-SLICE.5d.3.2.1`
+  Status: `pending`
+  Goal: native sin/cos under admitted .5d.1.2.2.2.c plan, focused independent rounding/axis/width fixtures.
+- ID: `G1-SLICE.5d.3.2.2`
+  Status: `pending`
+  Goal: tangent only after its separate admitted all-input resource plan; no borrowed sin/cos certificate.
 - ID: `G1-SLICE.5d.3.3`
   Status: `pending`
   Goal: correctly rounded atan/atan2 under .5d.1.2.2 plan.

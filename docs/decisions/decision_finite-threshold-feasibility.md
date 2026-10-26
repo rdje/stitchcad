@@ -1,8 +1,8 @@
-# Investigate finite rounding-threshold certificates before admitting trig precision
+# Finite rounding-threshold certificates and the sine/cosine algorithm plan
 
 - **Type:** `decision`
 - **Date:** `2026-10-26`
-- **Status:** `active`; feasibility investigation only, no production algorithm admitted
+- **Status:** `active`; sin/cos plan admitted0279, native implementation pending; inverse/tangent unresolved
 - **Owner / source:** engineer proposal, G1-SLICE.5d.1.2.2.2.a; full populations remain .b/parent
 
 answers: "what finite certificate could help bound trig rounding work?" · "does the threshold cohort admit a runtime precision?"
@@ -145,3 +145,40 @@ coverage establishes the proposed delta=2^-384 separation from positive sine/cos
 for the stated rational phase bound. Independent full interval recomputation is not claimed.
 Native sine/cosine precision/error/workspace admission is next .c. Inverse/tangent remain open;
 neither this certificate nor its maintenance timing selects their runtime algorithms.
+
+## Native sine/cosine plan admitted — work unit0279
+
+Choose scale S=2^512 and64 directed terms after exact first-octant reduction. This is an algorithm
+budget proved against the full forward certificate, not a new language limit or precision refusal.
+Keep the rational microdegree denominator in private integer workspace. For sine, reduce its
+magnitude modulo360M*d, retaining the original sign; for cosine use evenness and an additional
+integer90M*d shift. Fold half/quadrants, then complement above45M*d and exchange sin/cos.
+Axes are exact; canonical zero has no sign. No public rational intermediate or angle binding is made.
+
+Truncate the certified640-bit pi enclosure outward to512 bits. For the folded n/d<=45M,
+x=n*pi/(180M*d) has directed scaled endpoints of width at most3 and lies in[0,1]. Its square
+Z has width at most8. Each term uses T_next=T*Z/k with a single outward division by S*k:
+k=(2j+2)(2j+3) for sine, (2j+1)(2j+2) for cosine. Start at X or exact1. All term endpoints
+stay in[0,S]. In scaled units, width_next<=(width_T+8)/2+2<=12 whenever width_T<=12.
+The64 alternating term intervals have total width at most768. Their remainder is less than
+1/128!<2^-512, so one additional unit on each side gives width at most770*2^-512<2^-502.
+Clipping the final interval to the known[0,1] function range preserves enclosure and this bound.
+
+The complete forward certificate excludes every half-ppm threshold by more than2^-384 in true
+sine value. The native enclosure is narrower than that separation, so true value and its lower
+endpoint cannot straddle a rounding boundary. Round the lower endpoint times M exactly to an
+integer ppm and apply the saved sign. This proves nearest-quantum/half-away behavior for every
+admitted Angle, without a runtime convergence loop, empirical cutoff or substituted answer.
+
+The work is fixed64 terms plus bounded integer reduction/division. All intermediate magnitudes
+are below2^1026: term/square products are at most S^2, signed partial-sum magnitudes below64S+2,
+and angle/pi, coefficient denominators and ppm-rounding work are smaller. Result magnitude<=M
+fits the existing Ratio representation. Binding and source provenance retain their own contracts.
+[DLMF4.19](https://dlmf.nist.gov/4.19) gives the series and
+[DLMF4.21](https://dlmf.nist.gov/4.21) the identities; both opened2026-10-26.
+The detailed [book derivation](../book/src/annexes/formula-trig-certificates.md) explains the bounds.
+
+python3 -I -B docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py passes the exact envelope,
+14 direct-power/factorial Fraction enclosures,50 signed octant-table comparisons and2 insufficient
+profile controls, rc=0. This is a plan/model check, not native or platform execution. Production
+sin/cos code and focused oracle fixtures follow .5d.3.2.1; broader proof stays .5d.4/pre-push.

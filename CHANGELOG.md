@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0278 — complete forward-threshold certificate
+## STITCHCAD-G1-0279 — bounded native sine/cosine plan
 
-.5d.1.2.2.2.b.1: all1M forward bands/100 source-locked chunks and independent gap reader pass, rc=0; partial/refusal/resume controls pass.
-Native budget .c, inverse/tangent remain open; book/live sync.372/373/250 retain whole prior task/lesson/ledger.
+.5d.1.2.2.2.c: admit exact folding/512-bit64-term sin/cos plan; error/workspace and Fraction14/octant50/negative2 controls pass, rc=0.
+Native code next; inverse/tangent separate.374/375/251 retain whole prior task/lesson/ledger; book/live aligned.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -446,3 +446,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part249](docs/history/stitchcad-changelog-part249.md) | whole0276 | 4 lines, 328 bytes, sha256:2ceb8c6a… |
 
 | [part250](docs/history/stitchcad-changelog-part250.md) | whole0277 | 5 lines, 316 bytes, sha256:2d41ae6f… |
+
+| [part251](docs/history/stitchcad-changelog-part251.md) | whole0278 | 5 lines, 318 bytes, sha256:0e61bea4… |

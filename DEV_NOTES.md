@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — bounded native sine/cosine plan
+
+0279 .5d.1.2.2.2.c derives exact private sign/period/octant reduction and64 directed terms at512
+bits. Width<=770 scaled units<2^-502, below the complete forward certificate's2^-384 separation;
+lower endpoint exact ppm rounding is therefore correct for all admitted angles. All workspace
+magnitudes<2^1026; no new domain/precision refusal or dependency. Focused envelope/Fraction14/
+signed-octant50/insufficient-profile2 controls pass, rc=0; this is a plan/model, not native proof.
+Sin/cos code next .5d.3.2.1; tangent/inverse remain separate, broad proof .5d.4/pre-push. Whole0278
+task/sqrt lesson/ledger retain374/375/251 with exact Git/hash/public reads. Promotion: threshold
+decision records admitted algorithm/bounds, primary sources, proof and actual verification limits.
+
 ## _(2026-10-26 UTC)_ — full forward-threshold certificate
 
 0278 .5d.1.2.2.2.b.1 adds a source-locked resumable producer and independent exact payload reader.
@@ -333,20 +344,8 @@ parent .5d.2 remains open for that integration. Broad/platform/mutation work sta
 Whole0255 scope/ledger retained329/228; book/live/frontier align. Promotion: numerical decision
 records the implemented hypot value kernel alongside its existing algorithm proof.
 
-## _(2026-10-25 UTC)_ — correctly rounded sqrt numeric value kernel
-
-0255 .5d.2.1 implements the recorded exact root plan in private roots.rs: integer bisection over
-floor(N/D), then exact squared-midpoint comparison. Ratio radicands scale by10^6 for ppm output;
-area returns length. Existing signature metadata determines result kinds; actual invalid kinds and
-negative inputs have typed witnesses. Output stays a canonical rounded integer without premature
-i64 narrowing. No float or new dependency is introduced. Source-bearing call provenance remains
-.5e.3, broad/platform proof .5d.4/pre-push; hypot is next.
-
-One focused native root target passes2/0, rc=0, including all15 independent sqrt rows: exact ties,
-very close rational neighbors, full128-bit ratio, negative values and actual kind refusals. Hypot's
-ten retained rows are not claimed as run. Book/live/API examples align; prior quantity-follow prose
-is corrected. Complete0254 task/ledger and four closed structural marks/allowance nodes are retained
-327/227/328 with live IDs/Goals/children preserved. Promotion: numerical decision records sqrt scope.
+[Complete sqrt numeric kernel lesson](docs/history/stitchcad-devnotes-part375.md) retains
+its original implementation, validation and promotion decision.
 
 [Complete bounded root-family plan lesson](docs/history/stitchcad-devnotes-part373.md) retains
 its original derivation, oracle plan, bounds and promotion decision.
