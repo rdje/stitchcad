@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0318 .4c.4.5 closes immutable profile transformation intent scope; G3/G4 application/truth/precedence remain separate.
-- D233 stale main-book frontier fixed; four domains/five states/current refs/identity/provenance boundaries align.
-- Rust identical tofb53a44; reuse31-test/strict lint/fmt proof. Book/five rendered API anchors/navigation0.
-- NEXT .4c.5 SizeSet requirements/ownership structural review, then combined .4d.2; no engine/release claim.
--468/290/139 wholefb53a44 Git/hash/public exact0; history63/64 working. Pack before any transition exceeding64.
+-0319 .4c.5.h16 packs48 committed27bff4f raw records:94681B ->28399B, old15 backing windows exact.
+- Public source48/0, full reads/materialization899 and installed48 byte comparisons0; logical addresses unchanged.
+-469/291 whole27bff4f intervals/hash/public exact0; maintained links/book current16 align. Cleanup date unchanged.
+- NEXT .4c.5 SizeSet requirements/ownership review, then .4d.2. G1still5/18; no application/release claim.
+- .4c.5.h16.capacity P1 before any further packing beyond16 slots; preserve all caps/immutable bytes/addresses.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
@@ -39,8 +39,8 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - Frozen170 build inputs/producer remain byte-exact provenance; unrelated library changes allowed.
 - Compact inverse_rounding_certificate.tsv source-gates five files; angular margin>2^-540.
 - atan_runtime_plan.py envelope/oracle controls pass0; width<2^-564/workspace<2^1154/Newton<=13.
-- Window15 payloadcc8deffb5866dc1d55decd954dd7a411decc6a49577f41dcd0fdeedf7d6aa8b7 retains sourceba41e9a.
-- capture_window14.py and capture_window15.py are FROZEN historical producers, not current-HEAD reruns.
+- Window16 payloadeb501df7dab976cce5b915492dc857b8923baf7e8df75df74006a2c578a7525f retains source27bff4f.
+- capture_window14.py, capture_window15.py and capture_window16.py are FROZEN; never current-HEAD reruns.
 - Cleanup protection0285 guards both certificate stores; latest0316 verified, due2026-10-27 13:40UTC.
 - D156/D223 audits deferred; D224/D225/D227/D229-D231 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.

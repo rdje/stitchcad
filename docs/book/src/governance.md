@@ -500,15 +500,16 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part369.md 
 
 ### Current retention window
 
-Window15 captures50 whole raw records from `ba41e9a`:90265B retained in a24702B payload.
-Source proof reports50 byte-identical files/0 missing-extra; public reads and materialization match.
-Prior14 backing windows remain byte-exact. Fixed64-file bound, reader and schema are unchanged.
+Window16 captures48 whole raw records from `27bff4f`:94681B retained in a28399B payload.
+Source proof reports48 byte-identical files/0 missing-extra; public reads and materialization match.
+Prior15 backing windows remain byte-exact. Fixed64-file bound, reader and schema are unchanged.
 
-D229 corrects the stale Current label; the complete window13 narrative remains above. Window14
-is retained as earlier backing. The frozen `capture_window15.py` requires its original source HEAD;
-use the public reader against later trees:
+Window15's complete prior current receipt is retained whole in `docs/history/stitchcad-devnotes-part469.md`.
+All16 admitted window slots are now used. G1-SLICE.4c.5.h16.capacity owns a bounded continuation
+before another packing is required; current record addresses/caps/immutability remain unchanged.
+The frozen `capture_window16.py` requires its original source HEAD; use the reader on later trees:
 
 ```bash
-bash scripts/history_archive.sh prove-source window15
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part435.md
+bash scripts/history_archive.sh prove-source window16
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part468.md
 ```

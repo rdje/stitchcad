@@ -443,7 +443,7 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0303.
 - ID: `G1-SLICE.4c.3d.2`
   Status: `done`
-  Goal:0304 required break coverage verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part437.md).
+  Goal:0304 required break coverage verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part437md).
   Commit: STITCHCAD-G1-0304.
 - ID: `G1-SLICE.4c.3d.3`
   Status: `done`
@@ -452,20 +452,20 @@ metadata signoff unchanged; the named table slice follows.
   Children .3.1 garment current-input view, .3.2 MTM body/Ease input view, .3.3 shared input/path review.
 - ID: `G1-SLICE.4c.3d.3.1`
   Status: `done`
-  Goal:0306 garment inputs verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part442.md).
+  Goal:0306 garment inputs verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part442md).
   Commit: STITCHCAD-G1-0306.
 - ID: `G1-SLICE.4c.3d.3.2`
   Status: `done`
-  Goal:0307 MTM inputs verified5+15+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part444.md).
+  Goal:0307 MTM inputs verified5+15+5/0/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part444md).
   Commit: STITCHCAD-G1-0307.
 - ID: `G1-SLICE.4c.3d.3.3`
   Status: `done`
-  Goal:0308 unified inputs verified6+6+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part446.md).
+  Goal:0308 unified inputs verified6+6+5/0/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part446md).
   Commit: STITCHCAD-G1-0308.
 
 - ID: `G1-SLICE.4c.3d.3.h15`
   Status: `done`
-  Goal:0305 window15/source/public/materialization/prior14/retention/book verified; [whole scope/proofs](../history/stitchcad-devnotes-part440.md).
+  Goal:0305 window15/source/public/materialization/prior14/retention/book verified; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part440md).
   Commit: STITCHCAD-G1-0305.
 
 - ID: `G1-SLICE.4c.3e`
@@ -477,11 +477,11 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4c.3e.1`
   Status: `done`
-  Goal:0309 D230/D231 repairs verified13-child capture/5 refusals/omission-red/book0; [whole scope/proofs](../history/stitchcad-devnotes-part448.md).
+  Goal:0309 D230/D231 repairs verified13-child capture/5 refusals/omission-red/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part448md).
   Commit: STITCHCAD-G1-0309.
 - ID: `G1-SLICE.4c.3e.2`
   Status: `done`
-  Goal:0310 chart/body/break scope closes; unchanged-code/book/anchor checks0; [whole scope/proofs](../history/stitchcad-devnotes-part450.md).
+  Goal:0310 chart/body/break scope closes; unchanged-code/book/anchor checks0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part450md).
   Commit: STITCHCAD-G1-0310.
 
 - ID: `G1-SLICE.4c.4`
@@ -495,12 +495,12 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4c.4.1`
   Status: `done`
-  Goal:0311 profile pins/origin; focused18/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part452.md).
+  Goal:0311 profile pins/origin; focused18/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part452md).
   Commit: STITCHCAD-G1-0311.
 
 - ID: `G1-SLICE.4c.4.2`
   Status: `done`
-  Goal:0312 label/base intent; focused21/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part454.md).
+  Goal:0312 label/base intent; focused21/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part454md).
   Commit: STITCHCAD-G1-0312.
 - ID: `G1-SLICE.4c.4.3`
   Status: `done`
@@ -510,42 +510,50 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0313/0314.
 - ID: `G1-SLICE.4c.4.3.1`
   Status: `done`
-  Goal:0313 canonical scaling; focused23/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part457.md).
+  Goal:0313 canonical scaling; focused23/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part457md).
   Commit: STITCHCAD-G1-0313.
 - ID: `G1-SLICE.4c.4.3.2`
   Status: `done`
-  Goal:0314 replacement charts; focused27/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part461.md).
+  Goal:0314 replacement charts; focused27/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part461md).
   Commit: STITCHCAD-G1-0314.
 - ID: `G1-SLICE.4c.4.cleanup5`
   Status: `done`
-  Goal:0316 due cleanup verified residue/preservation/book0; [whole scope/proofs](../history/stitchcad-devnotes-part466.md).
+  Goal:0316 due cleanup verified residue/preservation/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part466md).
   Commit: STITCHCAD-G1-0316.
 - ID: `G1-SLICE.4c.4.cleanup5.a`
   Status: `done`
-  Goal:0315 D232 attestation repair; focused controls/book0; [whole scope/proofs](../history/stitchcad-devnotes-part464.md).
+  Goal:0315 D232 attestation repair; focused controls/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part464md).
   Commit: STITCHCAD-G1-0315.
 - ID: `G1-SLICE.4c.4.4`
   Status: `done`
-  Goal:0317 immutable resolution intent; focused31/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part468.md).
+  Goal:0317 immutable resolution intent; focused31/lint/fmt/book0; [whole scope/proofs](../history/window16.md#stitchcad-devnotes-part468md).
   Commit: STITCHCAD-G1-0317.
 - ID: `G1-SLICE.4c.4.5`
   Status: `done`
-  Goal:0318 bounded profile intent/currentness/provenance review; close .4c.4 structurally, not G4 execution.
-  Own book transformation/main status/frontiers, SizeSet decision, PLANNING and live/task pointers.
-  Review exact pins/four domains/five states, actual inputs/identity, empty/draft/no-op and preserved errors;
-  keep numeric application/combined conflicts/constraints/evidence/global freshness/storage/approval separate.
-  D233: main book's .3e review paragraph still calls .4c.4 pending after0317. Fix this duplicated frontier;
-  keep prior complete review receipt in468 alongside whole0317 task/oldest0294 lesson, sourcefb53a44.
-  Also own290 whole0317 ledger and139 whole closed D229-D232 reports fromfb53a44; exact committed
-  intervals/hash/public before retirement, no lossy prose or cap changes. Working57+3 after0317=60,
-  this3-record transition projects63/64. Next required archive packing before a transaction exceeding64.
-  Rust source/tests unchanged: reuse0317 native31/strict lint/fmt evidence; book and5 rendered anchors verify scope.
-  - [x] ROOT CAUSE (WHY + WHERE): canonical scope/current frontier review finds main-book stale .4c.4; source comparison rc=0.
-  - [x] ADDRESSED: D233 frontier aligns; book build/five rendered API anchors/main navigation rc=0.
-  - [x] NO REGRESSION: git diff fb53a44 -- crates/sc-measure empty rc=0;0317 native31/strict lint/fmt proof reused.
-  Verification: 468 three whole intervals/290 whole ledger/139 whole closed reports Git/hash/public equality rc=0;
-  public verify-retention899 logical/63 working rc=0. LIVE_STATUS reviewed: G1 In Progress5/18 unchanged.
-  Commit: STITCHCAD-G1-0318. .4c.4 closes structurally; next .4c.5, broad verification integration/pre-push.
+  Goal:0318 profile intent scope/D233 verified book/anchors0; [whole scope/proofs](../history/stitchcad-devnotes-part469.md).
+  Commit: STITCHCAD-G1-0318.
+- ID: `G1-SLICE.4c.5.h16`
+  Status: `done`
+  Goal:0319 pack48 committed raw records from27bff4f before next mandatory3-record seal would exceed63/64.
+  Own new capture_window16.py frozen producer/target fixture, window16 manifest/catalog/payload and master append,
+  exact48 source retirement and all maintained Markdown link retargets (never sealed records/old producers).
+  Public source/read/materialization must reproduce whole files;15 prior backing windows byte-exact; no cap/schema change.
+  Own469 whole0318 task/oldest0295 lesson/whole prior current-window15 book receipt and291 ledger from27bff4f,
+  source/hash/public before retirement; book governance current16 and live/task pointers. Fresh checklist evidence
+  in every retargeted task file. Do not reset cleanup date; generated fixture stays local and ignored.
+  Capacity:16 is the final admitted window slot. Child .capacity owns a bounded forward protocol before any
+  later transaction needs window17; preserve current immutable controls/bytes and fixed retained/working budgets.
+  - [x] ROOT CAUSE (WHY + WHERE): source27bff4f has63/64 working files; next mandatory seal would exceed; reader census rc=0.
+  - [x] ADDRESSED: capture_window16.py produces48 source-identical whole files/public/materialization899; installed48 bytes exact rc=0.
+  - [x] NO REGRESSION: prior15 backing files/reader/schema/old producers unchanged;469/291 whole source/public/book rc=0.
+  Verification: public prove-source48/0; verify-retention901 logical/18 working; actual root48 reads/materialized
+  files exact to Git; bounds unchanged, book rc=0. LIVE_STATUS reviewed G1 In Progress5/18 unchanged.
+  Commit: STITCHCAD-G1-0319. Frozen producer requires27bff4f; next .4c.5, capacity child before another pack.
+- ID: `G1-SLICE.4c.5.h16.capacity`
+  Status: `pending`
+  Goal: P1 design/verify bounded retention continuation before the next packing after16; current schema refuses17.
+  Preserve immutable records/manifests, logical addresses and all independent caps; do not silently raise bounds.
+  Trigger: before future required seal exceeds64 with16 windows registered; product slices proceed meanwhile.
 - ID: `G1-SLICE.4c.5`
   Status: `pending`
   Goal: review every size-sets/ownership requirement and deferred execution/proof boundary; milestone
@@ -987,7 +995,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.i.k`
   Status: `done`
-  Goal: completed immutable bounds proof; [whole scope/evidence](../history/stitchcad-devnotes-part439.md).
+  Goal: completed immutable bounds proof; [whole scope/evidence](../history/window16.md#stitchcad-devnotes-part439md).
 
 - ID: `G1-SLICE.5e.1a.h`
   Status: `done`

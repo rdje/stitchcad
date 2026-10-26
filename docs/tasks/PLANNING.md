@@ -1077,7 +1077,7 @@ state/source. Semantic conflict closed; declaration/coverage/composite implement
 Whole original ruling-review evidence is retained431. No break implementation is claimed by the ruling.
 
 Closed D229-D232 reports and verified repair evidence are retained whole in
-[part139](../history/stitchcad-defects-part139.md). Current doc frontier repair D233 follows below.
+[part139](../history/window16.md#stitchcad-defects-part139md). Current doc frontier repair D233 follows below.
 
 ## D233 — duplicated SizeSet review paragraph retained a stale profile frontier
 
@@ -1133,7 +1133,7 @@ retained468; update current frontier while preserving G3/G4 execution/global/phy
   independent assertions. Native retention/source proofs pass; no committed windows changed. Closed.
 
 - **D225/D226/D227** closed reports and original verified repairs retained whole in
-  [part138](../history/stitchcad-defects-part138.md); canonical ID/split/commit rules remain active.
+  [part138](../history/window16.md#stitchcad-defects-part138md); canonical ID/split/commit rules remain active.
 
 - **D222** — live D217 retained-record check depends on raw archive paths.
   Census: d217_probe.py retained() declares/reads physical303/304/208 while run_handoff_probes.sh calls
@@ -1172,3 +1172,10 @@ retained468; update current frontier while preserving G3/G4 execution/global/phy
 - [x] ROOT CAUSE0305: stable ba41e9a capture has50 raw records at64 working files; capture_window15.py rc=0.
 - [x] ADDRESSED0305: source proof50 byte-identical/0 missing-extra and all50 public reads exact, rc=0; links route to the new catalog.
 - [x] NO REGRESSION0305: prior14 backing byte-equal; materialized851 logical records/public bodies exact, rc=0; semantic task/evidence unchanged.
+
+### G1-SLICE.4c.5.h16 — maintained retention pointers
+
+- [x] ROOT CAUSE (WHY + WHERE): source27bff4f mandatory seals would exceed63/64 working files; census rc=0.
+- [x] ADDRESSED: window16 source48/0/public/materialization exact; maintained links retarget headings rc=0.
+- [x] NO REGRESSION: prior15 backing files and current139 defect content unchanged; whole469/291/book rc=0.
+Capacity owner: G1-SLICE.4c.5.h16.capacity, P1 before any next packing beyond16 admitted slots; no current product block.

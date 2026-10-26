@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — sixteenth immutable history window
+
+0319 .4c.5.h16 packs48 complete raw27bff4f records,94681B into28399B payload. Public source48/0,
+reads and materialization899 match; installed48 full reads/materialized bytes match Git, prior15
+backing windows unchanged. Retired only manifest48 regular/single-link originals after proof; all
+maintained links retarget exact headings.469/291 whole task/lesson/current15 receipt/ledger exact0.
+Book0; fixed bounds/schema/reader/old producers unchanged. Last16th slot used; .capacity owns P1
+continuation before next packing. G1still5/18; SizeSet review .4c.5 next. Promotion declined: existing retention protocol.
+
 ## _(2026-10-26 UTC)_ — bounded profile intent scope review
 
 0318 .4c.4.5 reviews exact pins/four domains/five states/current source and candidate bindings, ordered
@@ -228,58 +237,49 @@ message-hook valid0/empty1 controls pass; book0.417/418/268 retain whole source1
 This is maintenance, with no product-code change; G1still5/18. Promotion declined: existing commit
 ordering, now made explicit at the invocation boundary. Axes .4c.2 remains the product frontier.
 
-## _(2026-10-26 UTC)_ — dart/notch intents and confirmed director rulings
+[Complete dart/notch intent lesson](docs/history/stitchcad-devnotes-part469.md) retains
+its original canonical targets/director rulings, checks and promotion decision.
 
-0295 .6.2.2.b.2.a adds canonical CloseDart target and AddNotch owner/anchor/profile fields.
-Notch creation waits for the bus's explicit new identity; no cached id, intake or physical profile
-default. New construction2/0 plus prior payload3/0, selected strict lint/fmt/census/book pass0.
-Director2026-10-26 resolves D226 as a paired sewing-correspondence split with explicit cuts on
-both sides, and D70 as at least one authored axis for every complete SizeSet, with no inferred
-names/values. Current book/decision/task/status notes align; .4c.2 resumes after this commit.
-414/415/416/267/137 retain whole history, including original D70 conflict. No axes/split geometry,
-registry/auth or handler claim; G1still5/18. Rulings live in existing command/SizeSet decisions;
-technical adapter lesson promotion declined.
-
-[Complete measurement/material intent lesson](docs/history/stitchcad-devnotes-part468.md) retains
+[Complete measurement/material intent lesson](docs/history/window16.md#stitchcad-devnotes-part468md) retains
 its original assignment/canonical source contracts, checks and promotion decision.
 
-[Complete typed mutation metadata lesson](docs/history/stitchcad-devnotes-part467.md) retains
+[Complete typed mutation metadata lesson](docs/history/window16.md#stitchcad-devnotes-part467md) retains
 its original exact revision/retry/actor/group contracts, checks and promotion decision.
 
-[Complete terminal ID exhaustion lesson](docs/history/stitchcad-devnotes-part465.md) retains
+[Complete terminal ID exhaustion lesson](docs/history/window16.md#stitchcad-devnotes-part465md) retains
 its original atomic failure/nonreuse contracts, checks and promotion decision.
 
-[Complete command catalog lesson](docs/history/stitchcad-devnotes-part462.md) retains
+[Complete command catalog lesson](docs/history/window16.md#stitchcad-devnotes-part462md) retains
 its original metadata/authority/retention contracts, checks and promotion decision.
 
-[Complete tangent range lesson](docs/history/stitchcad-devnotes-part458.md) retains
+[Complete tangent range lesson](docs/history/window16.md#stitchcad-devnotes-part458md) retains
 its original exact range/resource/domain evidence, checks and promotion decision.
 
-[Complete sourced inverse lesson](docs/history/stitchcad-devnotes-part455.md) retains
+[Complete sourced inverse lesson](docs/history/window16.md#stitchcad-devnotes-part455md) retains
 its original kind/source/readback behavior, checks and promotion decision.
 
-[Complete native inverse lesson](docs/history/stitchcad-devnotes-part453.md) retains
+[Complete native inverse lesson](docs/history/window16.md#stitchcad-devnotes-part453md) retains
 its original runtime/branch/rounding evidence, checks and promotion decision.
 
-[Complete bounded inverse-plan lesson](docs/history/stitchcad-devnotes-part451.md) retains
+[Complete bounded inverse-plan lesson](docs/history/window16.md#stitchcad-devnotes-part451md) retains
 its admitted precision/iterations/workspace/sign/error derivations, checks and promotion decision.
 
-[Complete inverse-population closure lesson](docs/history/stitchcad-devnotes-part449.md) retains
+[Complete inverse-population closure lesson](docs/history/window16.md#stitchcad-devnotes-part449md) retains
 its full450-chunk/source/digest/compact-witness evidence, checks and promotion decision.
 
-[Complete proof-store cleanup-protection lesson](docs/history/stitchcad-devnotes-part447.md) retains
+[Complete proof-store cleanup-protection lesson](docs/history/window16.md#stitchcad-devnotes-part447md) retains
 its original protected-store census/controls and cadence boundary, checks and promotion decision.
 
-[Complete inverse-controller lesson](docs/history/stitchcad-devnotes-part445.md) retains
+[Complete inverse-controller lesson](docs/history/window16.md#stitchcad-devnotes-part445md) retains
 its original source/checkpoint/concurrency/byte boundaries, checks and promotion decision.
 
-[Complete inverse feasibility/chunk lessons](docs/history/stitchcad-devnotes-part443.md) retain
+[Complete inverse feasibility/chunk lessons](docs/history/window16.md#stitchcad-devnotes-part443md) retain
 their original exact interval/source/format boundaries, checks and promotion decisions.
 
-[Complete sourced forward-call lesson](docs/history/stitchcad-devnotes-part441.md) retains
+[Complete sourced forward-call lesson](docs/history/window16.md#stitchcad-devnotes-part441md) retains
 its original argument/kind/source/refusal behavior, checks and promotion decision.
 
-[Complete native forward-kernel lesson](docs/history/stitchcad-devnotes-part438.md) retains
+[Complete native forward-kernel lesson](docs/history/window16.md#stitchcad-devnotes-part438md) retains
 its original exact reduction/evaluation/rounding evidence, checks and promotion decision.
 
 [Complete bounded forward-plan lesson](docs/history/window15.md#stitchcad-devnotes-part436md) retains
