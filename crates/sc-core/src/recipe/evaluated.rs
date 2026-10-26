@@ -6,7 +6,9 @@ use super::{
 };
 use crate::name::MachineToken;
 
+mod assertion;
 mod calls;
+pub use assertion::{FormulaAssertionFailure, FormulaSatisfiedAssertion};
 mod tolerance;
 pub use tolerance::{
     FormulaToleranceComparison, FormulaToleranceComparisonError, FormulaToleranceComparisonRefusal,

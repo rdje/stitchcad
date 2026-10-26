@@ -90,3 +90,5 @@ current counts are derived from current test execution rather than inferred from
 | Sourced implemented numeric calls | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.3 | [Actual kernels/input unions](formula-runtime-validation.md#product-implemented-numeric-calls); trig/AST execution follows |
 
 | Exact named tolerance comparison | §3.1/§4.2; G1 | sc-core recipe; G1-SLICE.5e.3.4 | [Actual values/context/sources](formula-runtime-validation.md#product-named-tolerance-comparisons); assertion/AST execution follows |
+
+| Named assertion value outcomes | §5.1/§5.2; G1 | sc-core recipe; G1-SLICE.5e.3.5 | [Actual true/failure records](formula-runtime-validation.md#product-named-assertion-outcomes); whole statement execution follows |

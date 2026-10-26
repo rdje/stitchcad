@@ -474,6 +474,42 @@ actual context, Boolean storage and explicit zero/negative providers. The wide w
 checked independently with Python Fraction arithmetic. Complete within/assertion AST execution,
 source-order lookup, statement diagnostics and atomic publication remain later evaluator work.
 
+### Product named assertion outcomes
+
+`FormulaToleranceComparison::assert_named(name)` now requires an already-admitted comparison to
+hold at the supplied machine-token name. A true comparison returns `FormulaSatisfiedAssertion` with
+that actual borrowed name and complete comparison. A false comparison returns `FormulaAssertionFailure`
+with formula_assertion, the original name, both sourced values and their quantitative context.
+Private construction prevents a false comparison from becoming a satisfied result.
+
+```rust
+use sc_core::{name::MachineToken, recipe::{FormulaEvaluatedScalar as V, FormulaKind as K,
+    FormulaNumericValue as N, FormulaRational as R, FormulaToleranceContext, FormulaToleranceName as T}};
+
+let name = MachineToken::new("waistband_width_closure")?;
+let context = FormulaToleranceContext::empty();
+let left = V::from_numeric(N::new(K::Length, R::from_signed_integer(80_000))?);
+let right = V::from_numeric(N::new(K::Length, R::from_signed_integer(40_000))?);
+let comparison = left.compare_tolerance(right, context.read(T::Numerical)?)?;
+let failure = comparison.assert_named(&name).expect_err("this named closure is false");
+assert_eq!(failure.diagnostic_code(), "formula_assertion");
+assert_eq!(failure.name(), &name);
+assert_eq!(failure.comparison().left(), left);
+assert_eq!(failure.comparison().right(), right);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Explicit Display reports the actual assertion name, signed exact internal-unit values and named
+class/limit. Fractions and complete angle turns are preserved; Boolean/source getters remain on the
+retained comparison. Debug omits the customer name. Failure publishes no replacement value or binding;
+earlier immutable values remain available. Dimension, class and missing-context refusals belong to
+the preceding comparison/lookup and are not relabelled as assertion failures.
+
+Four focused native tests cover all numeric kinds/classes at and beyond the threshold, the actual
+worked-book false closure, signed fractions, retained sources/context and both true/false names.
+This is a named value-level outcome. Whole statement identity, ordinals, source-order execution,
+abandoning a complete failed recipe and API/MCP diagnostic publication remain evaluator work.
+
 ### Existing reference execution controls
 
 A value retains an immutable set of approximation-producing calls in its executed dependencies.

@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — actual named assertion success or refusal
+
+0272 .5e.3.5 requires an admitted comparison to hold for its supplied machine-token name. Sealed
+satisfied/failed outcomes retain the actual borrowed name and complete sourced quantitative
+comparison. False emits formula_assertion, never a success or substituted binding. Explicit Display
+keeps signed rational/raw-turn values and class/limit; Debug omits the customer name. Earlier
+dimension/class/context failures remain their own tokens. No statement ordinal/span is fabricated.
+
+Focused native4/0 and selected strict Clippy0 pass: all numeric kinds/classes, inclusive/failed
+thresholds, actual book80000/40000 closure, signed fraction rendering and true/false source/name
+retention. Full AST/statement/atomic execution remains open. Whole0271 scope/oracle lesson/D122
+scope plus its receipts/ledger retain358–360/244 with exact Git/hash/public reads; existing unrelated
+measurement checklists/anchor routes stay live. Promotion declined: existing formula5.1/5.2/D121.
+
 ## _(2026-10-26 UTC)_ — exact sourced named-tolerance comparisons
 
 0271 .5e.3.4 compares the exact absolute difference without materializing a numeric subtraction.
@@ -361,15 +375,8 @@ literal rounding/raw turns. No broad/platform pass claimed. Book/API status and 
 whole0247 task/ledger retained319/220 with exact intervals. Promotion declined: existing numeric
 contract and focused-check policy already specify these rules.
 
-## _(2026-10-25 UTC)_ — independent rational value fixtures
-
-0247 .5c.1.3 adds a pure stdout Python Fraction oracle and34 retained rows consumed by the
-existing public target. This independently checks full magnitudes/signs, cancellation, numerator/
-denominator widths and zero-divisor priority across all four operators. It imports no project
-arithmetic. One native target passes4/0, rc=0; no production behavior changed. Broader platform,
-mutation and integration checks remain .5c.4/pre-push. The primitive is complete; typed operators
-are next. Whole0246 task/ledger retained318/219, with exact source/public reads. Book/pointer align.
-Promotion declined: established independent-oracle and focused-check policies.
+[Complete independent rational fixture lesson](docs/history/stitchcad-devnotes-part359.md) retains
+its original scope, validation and promotion decision.
 
 [Complete rational sum/difference lesson](docs/history/stitchcad-devnotes-part357.md) retains
 its original scope, validation and promotion decision.

@@ -613,25 +613,30 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part356.md).
 - ID: `G1-SLICE.5e.3.4`
   Status: `done`
-  Goal:0271 exact named tolerance comparison over sourced scalar values and actual context.
+  Goal: exact sourced named tolerance comparisons verified0271, native5/0.
   Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/tolerance.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_tolerance_comparison_contract.rs
-  Compare absolute rational difference inclusively without materializing an out-of-domain/wide
-  numeric expression; bounded exact workspace. Actual class/provider/operands and sources retained.
-  T1 contribution guard precedes threshold; no missing context/default or invented comparison label.
-  Retain356 whole0270 task,357 oldest full sum lesson,243 ledger; book/live sync.
-  Full assertion naming/AST/provider lookup/replay remains .5e.2/.3/.4; focused native/selected lint.
-- [x] REPRODUCE:0271 a88c7b7 lacks product tolerance comparisons; exact subtraction can exceed
-  width/domain despite a valid Boolean comparison. Source/native controls reproduce, rc=0.
-- [x] ROOT CAUSE:0271 comparison intermediates are not numeric expression results; exact bounded
-  absolute cross-products plus actual context and source guard solve it. Native5/0, rc=0.
-- [x] FIX: inclusive rational comparison and sourced named result/refusal; boxed complete error.
-- [x] ADDRESSED:0271 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test formula_tolerance_comparison_contract: final5 pass/0 fail, rc=0; Fraction witnesses rc=0.
-- [x] NO REGRESSION:0271 kinds/classes/threshold/source/context/width/domain controls pass;
-  cargo clippy --offline -p sc-core --test formula_tolerance_comparison_contract -- -D warnings,
-  final rc=0 after large-error101 repair. Full assertions/AST and broad .5g/pre-push remain owned.
-- [x] LOCKSTEP:356/357/243 whole Git/hash/public records and book render rc=0; live/frontier align.
-  Promotion declined: existing exact numeric/comparison/context and formula4.2 provenance contracts.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part358.md).
+- ID: `G1-SLICE.5e.3.5`
+  Status: `done`
+  Goal:0272 named assertion acceptance/failure from actual admitted tolerance comparisons.
+  Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/assertion.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_assertion_value_contract.rs
+  False emits formula_assertion with actual borrowed name/operands/class/context; true retains
+  the satisfied comparison. Sealed outcomes; no false success, substitution, AST/ordinal/atomic claim.
+  Retain358 whole0271 task,359 oldest complete oracle lesson,360 whole D122 origin/context scope
+  and own receipts in G1-SLICE-measurements.md;244 ledger. Preserve other checklists/anchor routes.
+  Focused native/selected lint and book/live sync. Full .5e.2/.3 statement execution remains open.
+- [x] REPRODUCE:0272 60bcd0e returns comparison false but no product named assertion outcome;
+  actual source read and false book closure test establish the missing layer, rc=0.
+- [x] ROOT CAUSE:0272 comparison false is valid for within but must be a named assertion refusal;
+  sealed true/false outcomes retain actual comparison/name. Focused native4/0, rc=0.
+- [x] FIX: actual named satisfied assertion or formula_assertion with exact operands/class/context.
+- [x] ADDRESSED:0272 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_assertion_value_contract:4 pass/0 fail, rc=0.
+- [x] NO REGRESSION:0272 kind/class/threshold/book/fraction/source/name controls pass;
+  cargo clippy --offline -p sc-core --test formula_assertion_value_contract -- -D warnings, rc=0.
+  Whole statement/AST/replay .5e.2/.3/.4 and broad .5g/pre-push remain owned, not inferred here.
+- [x] LOCKSTEP:358–360/244 whole Git/hash/public records and book render rc=0; live/frontier align.
+  Promotion declined: existing formula5.1/5.2 and source contracts; no fabricated statement identity.
 - ID: `G1-SLICE.5e.4`
   Status: `pending`
   Goal: atomic replay and dependency validation, including corrupted persisted cycle evidence.

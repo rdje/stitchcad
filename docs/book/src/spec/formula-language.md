@@ -250,7 +250,9 @@ the node, statement and conditional limits of §4.3.
 `formula_tolerance_unbound`, `formula_assertion`, and `formula_cycle` at load.
 
 The book's [reference assertion controls](../annexes/formula-runtime-validation.md#reference-runtime-assertion-controls)
-verify named false-assertion diagnostics and their values/class. Product evaluation remains pending.
+verify named false-assertion diagnostics and their values/class. Product
+[named assertion outcomes](../annexes/formula-runtime-validation.md#product-named-assertion-outcomes)
+are available; whole statement execution remains pending.
 
 A static refusal rejects the recipe whole: no statement is evaluated and no geometry is produced,
 which is the property the [envelope](feature-matrix.md) §10 requires of every refusal. A runtime

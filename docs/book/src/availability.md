@@ -47,7 +47,7 @@ All four rational operators now reduce before width checks and report typed zero
 Completed numeric values now enforce exact length/area limits and nonnegative Count, with a
 normalized-literal bridge. All four quantity operators now apply exact ppm scaling and result domains.
 Immutable approximation-call source sets, symbolic T1 admission checks and sourced numeric/Boolean
-operators/bindings, implemented numeric calls and exact named-tolerance comparisons are available.
+operators/bindings, implemented numeric calls, exact tolerance comparisons and named assertion outcomes are available.
 Complete AST dependency propagation remains evaluator integration.
 Exact unary negation/square and all six numeric comparisons are available, preserving fractional
 values and raw angle turns. Exact abs/min/max/clamp are available with typed argument/bound refusals.
