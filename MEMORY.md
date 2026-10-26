@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0313 .4c.4.3.1 adds explicit break-scaling bindings to actual break, dedicated Length delta and canonical Ratio.
-- Borrowed records retain all states/signed zero-negative values; missing/role/kind conflicts refuse, no multiplication.
-- Focused garment15+MTM8 pass0; selected strict lint/fmt/book0; value-less scaling observation/evaluation check0.
-- NEXT .4c.4.3.2: explicit current chart replacement bindings; then immutable intent aggregate .4.
--454/455/456/285 whole62aea02 Git interval/hash/public exact0. Profile pins/origin/label-base intent remain intact.
+-0314 .4c.4.3.2 adds explicit same-family replacement chart context over original canonical source metadata.
+- Actual candidate composites preserve source axes/breaks and path rules; bare/missing/duplicate/substituted IDs refuse.
+- Focused garment18+MTM9 pass0; strict selected lint/fmt/book0. .4c.4.3 bindings complete; no application.
+- NEXT due cleanup13:16UTC, then .4c.4.4 immutable origin + authored transformation intent aggregate.
+-457/458/459/460/286 whole8f47113 Git/hash/public exact0; retained governance chronology, current guards preserved.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

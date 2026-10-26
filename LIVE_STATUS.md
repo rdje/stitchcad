@@ -16,7 +16,7 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
 | Defect census | In Progress | D156/D223 nonblocking audits owned in PLANNING. D224/D225/D227/D229-D231 corrected; D70/D226/D228 ruled and implemented within their scopes. Canonical review owners remain tracked |
 | G0 — product & semantic contract | Mostly Done | Every clause met and derived except evaluation-seat procurement, accepted open by ruling; closure **unapproved** (governance §6.1). `run_g0_exit_review.sh` → `18 met / 1 not met` |
-| G1 — executable architecture slice | In Progress | 5/18 leaves done. Numeric/read foundations, mutation schemas, pinned queries, axes/break coverage and SizeSet inputs/profile pins/label-base/scaling intent. Full evaluation/bus pending. Focused feature checks; audits deferred. MCP/geometry/profile/release pending |
+| G1 — executable architecture slice | In Progress | 5/18 leaves done. Numeric/read foundations, mutation schemas, pinned queries, axes/break coverage and SizeSet inputs and profile transformation intent. Full evaluation/bus pending. Focused feature checks; audits deferred. MCP/geometry/profile/release pending |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 leaves; CSP + oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |

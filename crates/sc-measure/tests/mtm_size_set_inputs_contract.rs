@@ -407,3 +407,62 @@ fn singleton_transformation_intent_retains_its_body_ease_inputs_and_original_gra
         },
     );
 }
+
+#[test]
+fn body_ease_chart_replacement_uses_original_current_context_and_keeps_mtm_path_rules() {
+    let f = Fixture::new();
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let source = MtmSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("source")
+                .into();
+            let mut d = chart.definition().clone();
+            d.id = id(2010);
+            let candidate = MtmChart::new(d, chart_context).expect("current alternative");
+            let charts = [&candidate];
+            let context =
+                SizeSetChartReplacementContext::new(source, SizeSetReplacementCharts::Mtm(&charts))
+                    .expect("actual MTM inventory");
+            let binding = SizeSetChartReplacement::Mtm(id(2010));
+            let authored = SizeSetTransformationDefinition {
+                id: id(2000),
+                reference: f.membership.reference(),
+                source: id(3000),
+                kind: SizeSetTransformationKind::ChartReplacement,
+                state: SizeSetTransformationState::Known {
+                    value: SizeSetTransformationValue::ChartReplacement(binding),
+                    evidence: vec![id(3001)],
+                },
+            };
+            let intent = SizeSetTransformation::new_with_context(authored.clone(), &context)
+                .expect("current typed intent");
+            assert_eq!(intent.definition(), &authored);
+            let actual = context.resolve(binding).expect("actual candidate");
+            let actual = match actual {
+                SizeSetInputs::Mtm(value) => Some(value),
+                _ => None,
+            }
+            .expect("explicit Mtm family preserved");
+            assert!(std::ptr::eq(actual.chart(), &candidate));
+            assert!(std::ptr::eq(actual.breaks(), breaks));
+            assert_eq!(
+                actual.validate_inputs_for(SizeInstantiationPath::GradeRules),
+                Err(SizeSetInputError::Mtm(Box::new(
+                    MtmChartError::GradeRulesUnsupported {
+                        chart: id(2010),
+                        member: id(41)
+                    }
+                )))
+            );
+            assert!(std::ptr::eq(
+                actual
+                    .chart()
+                    .body_declaration(id(2), chart_context)
+                    .expect("original body"),
+                &f.declarations[0]
+            ));
+        },
+    );
+}

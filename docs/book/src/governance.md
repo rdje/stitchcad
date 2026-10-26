@@ -322,41 +322,12 @@ read recovered logical records and retain their order, uniqueness,
 coverage, descriptor and pointer checks. Generalizing coverage/pointers to other ledgers remains
 SPINE.19's separate obligation. Content integrity proves neither semantic truth nor physical signoff.
 
-For the first archive implementation head ebed2c5, the
-[doctrine run](https://github.com/rdje/stitchcad/actions/runs/36931196049) (job 110600555955) and
-[Rust run](https://github.com/rdje/stitchcad/actions/runs/36931196050) (job 110600556738) were observed
-completed successfully with every step successful, including the Python prerequisite, archive
-enforcer and native/WASM checks. Post-commit refusal probes also reject an edit to a committed
-window. This is tooling/structural evidence; it grants no domain or physical production approval.
-
-
-The second transition captures63 immutable raw records from372033f into window2. Before removing
-working copies, the installed reader/source comparison reconstructed all63 full files exactly;
-an isolated fixture read/materialized all127 logical records, including the unchanged first window.
-Maintained links now land on catalog headings, while reader identities remain the original paths.
-`bash scripts/history_archive.sh prove-source window2` repeats its source comparison when that
-Git object is available. The bounded reader and aggregate ceilings are unchanged.
-
-Watched CLI controls verify logical reads/materialized bytes by full-file identity,
-plus newest-window digest/member/catalog and cross-window collision refusals. In local window10's copy,
-catalog prose keeps inventory green but triggers the committed guard; root bytes stay exact.
-Title checks reject misleading labels.
-
-At pushed f876913, the [doctrine job](https://github.com/rdje/stitchcad/actions/runs/36989497775/job/110782133989)
-and [Rust job](https://github.com/rdje/stitchcad/actions/runs/36989497872/job/110782134441)
-completed successfully with all seven/nine steps successful. The archive prerequisite/enforcer and
-fmt/clippy/tests/real WASM passed;140 post-commit local CLI controls also verify newest immutable
-catalog refusal. G1-SLICE.5a.3b.3b.3c.1v records the exact head/job observations.
-These are retention/instrument proofs, not garment signoff.
-
-The third transition captures62 raw sealed records from af98fff before the next namespace review
-would exceed the64-file working limit. A fresh local fixture reconstructs all189 logical records
-exactly, including both previous windows. The installed reader proves each of the62 original full
-files before their working copies retire; maintained pointers land on window3's member headings.
-`bash scripts/history_archive.sh prove-source window3` repeats the capture/source comparison.
-No reader, checker, logical address, decoded record or limit changes. At exact pushed b595a37, both
-CI jobs and every reported step completed successfully. G1-SLICE.5b.1b.0v records their receipts
-and independent newest committed-catalog refusal.
+The complete first/second/third transition and observed runner receipts are retained in
+`docs/history/stitchcad-devnotes-part460.md`. Public `prove-source windowN` compares each named
+capture source when available; offline logical reads do not require Git history. Watched controls
+check exact read/materialized bytes, newest digests/member/catalog/collision refusals and misleading
+titles. Editing catalog prose can preserve inventory yet must fail committed immutability guards.
+These tooling proofs grant no garment or physical production signoff.
 
 **Correction — D141.** Window3's retained catalog has a historical heading saying “window 2”.
 Its filename, source revision, manifest, payload and member headings identify window3. The sealed
@@ -501,28 +472,9 @@ entry points are verified under G1-SLICE.5b.4c.h2.a; the standalone producer aud
 
 ### Producer-audit record retention
 
-Before the direct-producer audit, G1-SLICE.5b.4c.h2.b.h retains five complete byte intervals
-from committed40a3c0c: five oldest ledger entries, two oldest lessons and completed runner/primary
-acceptance records. Original task headings and identities stay linked; active audit requirements
-remain live. Exact source/read/materialization and descriptor/navigation checks establish retention;
-older windows and fixed bounds remain unchanged. This transition adds no product behavior.
-
-Before Python guard repairs, .h2.b.p.h retains the four complete committed D156 lessons and
-the complete census acceptance/refusal record from3e400c1. The live task heading links to its
-exact record; pending repair requirements remain live. Source and public-reader/materialization
-comparisons preserve original separators and one terminal LF, with earlier sealed bytes unchanged.
-
-Before the remaining native groups, .h2.b.p.n.h retains six complete committed a392d31
-intervals: five oldest ledger entries, three whole lessons and four acceptance records.
-Original task headings link to exact records; current nodes and further final receipts stay live.
-Public reads and materialization reproduce the sealed files, and each decoded interval matches
-its committed source. Earlier retained files and the reader's fixed bounds remain unchanged.
-
-Before unit-entry repairs, .h2.b.p.n.h2 retains the complete engineering-continuity navigation,
-two whole lessons and the complete primary-profile narrative from committed76eaaff. The live
-front door uses the public archive list as its complete query contract, with an exact predecessor
-navigation link and recent-record table. Active task nodes stay live; public source/read/materialization
-and file-inventory comparisons verify retrieval without raising the fixed bounds.
+Complete audit-retention receipts are preserved in `docs/history/stitchcad-devnotes-part459.md`.
+Original task headings retain exact record links; current requirements stay live. Public retrieval
+preserves complete committed source intervals and separators. Earlier windows and fixed bounds remain unchanged.
 
 ### Thirteenth retention window
 

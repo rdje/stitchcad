@@ -1,5 +1,8 @@
 //! Authored, state-bearing transformation intent over actual current SizeSet inputs; no application.
-use crate::{SizeBreakScaling, SizeLabel, SizeSetInputError, SizeSetInputs, SizeSetReference};
+use crate::{
+    SizeBreakScaling, SizeLabel, SizeSetChartReplacement, SizeSetChartReplacementContext,
+    SizeSetInputError, SizeSetInputs, SizeSetReference,
+};
 use core::fmt;
 use sc_core::{ontology::EntityId, value::ValueProvenanceValidation};
 
@@ -14,6 +17,8 @@ pub enum SizeSetTransformationKind {
     BaseSubstitution,
     /// Scale one signed break by an explicitly bound canonical Ratio.
     BreakScaling,
+    /// Select an explicit current replacement chart in the source family.
+    ChartReplacement,
 }
 /// One authored member-to-designation correspondence.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -32,6 +37,8 @@ pub enum SizeSetTransformationValue {
     BaseSubstitution(EntityId),
     /// Explicit actual break and canonical factor bindings, without numeric application.
     BreakScaling(SizeBreakScaling),
+    /// Explicit typed chart identity resolved through actual candidate context.
+    ChartReplacement(SizeSetChartReplacement),
 }
 impl SizeSetTransformationValue {
     /// Exact operation domain, independent of label spelling and numeric magnitude.
@@ -41,6 +48,7 @@ impl SizeSetTransformationValue {
             Self::LabelMapping(_) => SizeSetTransformationKind::LabelMapping,
             Self::BaseSubstitution(_) => SizeSetTransformationKind::BaseSubstitution,
             Self::BreakScaling(_) => SizeSetTransformationKind::BreakScaling,
+            Self::ChartReplacement(_) => SizeSetTransformationKind::ChartReplacement,
         }
     }
 }
@@ -133,6 +141,21 @@ pub enum SizeSetTransformationError {
         /// Actual declared scalar kind, even for Unknown/Derived states.
         actual: sc_core::value::ScalarInputKind,
     },
+    /// An authored chart replacement needs an actual candidate context.
+    ChartContextRequired,
+    /// Candidate inventory/binding differs from the source chart family.
+    ChartFamilyMismatch,
+    /// Candidate identity is repeated or substitutes another object for the source chart's ID.
+    DuplicateChart(EntityId),
+    /// Named chart is absent from the explicit candidate inventory.
+    MissingChart(EntityId),
+    /// Original candidate composite validation failed in the source metadata context.
+    ReplacementChart {
+        /// Actual candidate chart.
+        chart: EntityId,
+        /// Original composite contract failure, preserving its evidence chain.
+        issue: Box<SizeSetInputError>,
+    },
     /// Label mapping has no authored entries.
     EmptyMapping,
     /// Label mapping repeats a member identity.
@@ -159,6 +182,7 @@ impl std::error::Error for SizeSetTransformationError {
         match self {
             Self::Inputs(issue) => Some(issue),
             Self::Break(issue) => Some(issue),
+            Self::ReplacementChart { issue, .. } => Some(issue),
             _ => None,
         }
     }
@@ -202,6 +226,17 @@ impl SizeSetTransformation {
     ) -> Result<Self, SizeSetTransformationError> {
         let result = Self { definition };
         result.validate_current(inputs)?;
+        Ok(result)
+    }
+    /// Validate authored intent with actual current replacement-chart candidates.
+    /// # Errors
+    /// Returns original source/declaration/candidate failures, without applying any transformation.
+    pub fn new_with_context(
+        definition: SizeSetTransformationDefinition,
+        context: &SizeSetChartReplacementContext<'_>,
+    ) -> Result<Self, SizeSetTransformationError> {
+        let result = Self { definition };
+        result.validate_current_with_context(context)?;
         Ok(result)
     }
     /// Original declaration and authored order, without unchecked mutation.

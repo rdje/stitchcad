@@ -15,3 +15,7 @@ pub use transformation::{
 };
 mod break_scaling;
 pub use break_scaling::{SizeBreakScaling, SizeBreakScalingInputs};
+mod chart_replacement;
+pub use chart_replacement::{
+    SizeSetChartReplacement, SizeSetChartReplacementContext, SizeSetReplacementCharts,
+};

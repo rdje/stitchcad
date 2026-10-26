@@ -2,7 +2,7 @@
 
 > **Status:** G1-SLICE.4c.4 is implementing immutable transformation intent in `sc-measure`.
 > Selected profile labels, resolution-origin metadata and state-bearing label/base declarations are
-> executable, together with canonical break-scaling bindings. Chart replacement and the aggregate follow. G4 owns actual profile lookup,
+> executable, together with canonical break-scaling and chart-replacement bindings. The aggregate follows. G4 owns actual profile lookup,
 > constraints, precedence and resolution;
 > G3 owns numeric instantiation. This page extends [Size sets §9](size-sets.md#9-ownership-reference-and-override).
 
@@ -152,9 +152,47 @@ Unknown factor still returns its original observation refusal, and Derived still
 original formula. Known transformation evidence does not upgrade either numeric input's state.
 The same scaling domain can be declared Unknown or Derived without any binding payload.
 
+## Resolve explicit current chart replacements
+
+`SizeSetChartReplacement::Garment(chart_id)` and `::Mtm(chart_id)` retain an explicit family and
+identity. `SizeSetReplacementCharts::Garment(&charts)` or `::Mtm(&charts)` supplies actual borrowed
+candidate objects to `SizeSetChartReplacementContext::new(source_inputs, inventory)`. An inventory
+must match the source input family; this operation replaces a chart within that family. It does
+not infer body/Ease versus garment provenance or convert one input model into the other.
+
+Each candidate is validated as a composite through the source's original chart context, membership,
+axes and break inventory. Original canonical observations or body/Ease metadata remain authoritative.
+A candidate valid against a different observation inventory can therefore refuse in this context.
+Repeated candidate IDs refuse, and another object cannot substitute for the original source chart's
+ID. Explicitly selecting the original actual chart is valid intent. Candidate chart IDs also cannot
+alias a transformation's own identity.
+
+```rust,ignore
+let candidates = [&replacement_chart];
+let context = SizeSetChartReplacementContext::new(
+    source_inputs, SizeSetReplacementCharts::Garment(&candidates),
+)?;
+let binding = SizeSetChartReplacement::Garment(replacement_chart.id());
+let candidate_inputs = context.resolve(binding)?;
+```
+
+`resolve` returns an actual validated `SizeSetInputs` view borrowing the selected chart with the
+source's original membership/axes/breaks. Missing IDs and wrong families refuse explicitly. A draft
+candidate stays a draft: path completeness remains an explicit query. MTM candidates retain their
+original body/Ease sources and always refuse grading, naming the selected candidate chart/member.
+Obtaining the candidate view does not retarget or change readiness of the original source view.
+
+An authored `ChartReplacement(binding)` transformation uses the corresponding explicit kind and
+one of the five states. Construct it with `SizeSetTransformation::new_with_context` and recheck with
+`validate_current_with_context`. These methods retain exact source, declaration and candidate
+failures. The source-only methods return `ChartContextRequired` for an authored replacement; a bare
+chart ID never certifies its target. Unknown/Derived declarations have no authored binding and
+retain their original observation/evaluation refusals. Evidence and numeric states are not upgraded.
+
 ## What remains to be implemented
 
-The next bounded slices add explicit chart-replacement bindings, then an immutable aggregate retaining the original reference and ordered transformations. Numeric inputs
+The next bounded slice adds an immutable aggregate retaining the original reference and ordered
+transformations. Numeric inputs
 must remain canonical rather than copied into a second independent state/value record.
 
 Origin metadata and authored declarations are not a transformed SizeSet or transformed geometry.

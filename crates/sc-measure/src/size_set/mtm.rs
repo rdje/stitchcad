@@ -103,6 +103,10 @@ impl<'a> MtmSizeSetInputs<'a> {
         )?;
         Ok(())
     }
+    pub(crate) const fn chart_context(self) -> &'a MtmChartContext<'a> {
+        self.chart_context
+    }
+
     pub(crate) const fn break_context(self) -> &'a SizeBreakContext<'a> {
         self.break_context
     }

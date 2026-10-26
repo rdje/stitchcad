@@ -7,6 +7,22 @@ impl Transformation {
     /// # Errors
     /// Returns the original current-input failure or exact structural conflict.
     pub fn validate_current(&self, inputs: SizeSetInputs<'_>) -> Result<(), Error> {
+        self.validate_with_context(inputs, None)
+    }
+    /// Recheck original declaration and actual candidate charts in their source metadata context.
+    /// # Errors
+    /// Returns source/identity/evidence/payload or current chart binding errors without defaults.
+    pub fn validate_current_with_context(
+        &self,
+        context: &SizeSetChartReplacementContext<'_>,
+    ) -> Result<(), Error> {
+        self.validate_with_context(context.inputs(), Some(context))
+    }
+    fn validate_with_context(
+        &self,
+        inputs: SizeSetInputs<'_>,
+        context: Option<&SizeSetChartReplacementContext<'_>>,
+    ) -> Result<(), Error> {
         inputs
             .validate_current()
             .map_err(|issue| Error::Inputs(Box::new(issue)))?;
@@ -17,7 +33,10 @@ impl Transformation {
                 actual: inputs.reference(),
             });
         }
-        if definition.id == definition.source || inputs.contains_entity(definition.id) {
+        if definition.id == definition.source
+            || inputs.contains_entity(definition.id)
+            || context.is_some_and(|context| context.contains_entity(definition.id))
+        {
             return Err(Error::DuplicateIdentity(definition.id));
         }
         if let SizeSetTransformationState::Known { evidence, .. } = &definition.state {
@@ -50,6 +69,11 @@ impl Transformation {
             SizeSetTransformationValue::LabelMapping(mapping) => validate_labels(mapping, inputs)?,
             SizeSetTransformationValue::BreakScaling(binding) => {
                 binding.inputs(inputs)?;
+            }
+            SizeSetTransformationValue::ChartReplacement(binding) => {
+                context
+                    .ok_or(Error::ChartContextRequired)?
+                    .resolve(*binding)?;
             }
         }
         Ok(())

@@ -503,30 +503,34 @@ metadata signoff unchanged; the named table slice follows.
   Goal:0312 label/base intent; focused21/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part454.md).
   Commit: STITCHCAD-G1-0312.
 - ID: `G1-SLICE.4c.4.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: explicit break-scaling and chart-replacement intent with canonical numeric/input bindings and original states.
   Children: .3.1 canonical signed break/factor bindings; .3.2 explicit current replacement chart bindings.
+  Verification: current canonical break/chart bindings and original state/path contracts pass focused checks0313/0314.
+  Commit: STITCHCAD-G1-0313/0314.
 - ID: `G1-SLICE.4c.4.3.1`
   Status: `done`
-  Goal:0313 bind one actual available signed break and canonical Ratio factor, without multiplying or copying values.
-  Own size_set_resolution/break_scaling.rs, transformation domain/validation/module/lib exports, size_axis/source.rs,
-  size_break/context.rs, size_set.rs and garment/MTM helpers, support/size_set_transformations.rs and composite tests.
-  Actual shared numeric inventory supplies factor; missing/role/kind mismatches refuse. Borrow original break,
-  dedicated Length delta and scalar Ratio, including all five states and zero/negative factors without coercion.
-  Unknown/Derived transformation states have no binding payload. G4 owns numeric domain/constraints/execution.
-  Own book transformation/main, decision/live/task docs,454 whole0312 task,455 oldest0289 lesson,285 ledger
-  from62aea02; prove exact whole Git/hash/public bytes before retirement. Also own456 whole closed
-  composite-review receipt from main book: preserve Git interval/hash/public before replacing chronology with
-  a retrieval pointer; retain normative matrix/examples. Focused bindings/refusals/lint/fmt/book.
-  - [x] ROOT CAUSE (WHY + WHERE): profile intent must bind canonical numeric states; source/context API check rc=0.
-  - [x] ADDRESSED: actual break/delta/Ratio refs; missing/role/kind/all-state native garment15+MTM8 rc=0.
-  - [x] NO REGRESSION: original composite/label/base cases included; selected strict lint/fmt/book rc=0.
-  Verification: native23/0; value-less scaling focused check rc=0; lib check/strict lint/fmt/book rc=0;
-  454/455/456/285 whole committed source intervals/hash/public-reader equality rc=0. LIVE_STATUS G1still5/18.
-  Commit: STITCHCAD-G1-0313. Next .3.2; broad checks remain integration/pre-push.
+  Goal:0313 canonical scaling; focused23/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part457.md).
+  Commit: STITCHCAD-G1-0313.
 - ID: `G1-SLICE.4c.4.3.2`
-  Status: `pending`
-  Goal: explicit family/current snapshot replacement chart bindings; no chart value copies, inference or execution.
+  Status: `done`
+  Goal:0314 explicit same-family chart replacement bindings validated through actual source metadata contexts.
+  Own size_set_resolution/chart_replacement.rs, transformation/validation/lib/module, source garment/MTM context
+  accessors and composite/support tests. Replacement inventory is typed Garment/MTM, refuses duplicate IDs,
+  family conflicts and same-ID substitutions. Rebuild actual candidate composite against source's original
+  chart context/breaks; preserve source pin, axes, canonical metadata and path rules. Drafts remain drafts.
+  Authored replacement requires context, never resolves an ID by inference; Unknown/Derived remain payload-less.
+  Own book transformation/main/governance, decision/live/task docs. Retain457 whole0313 task,458 oldest0290
+  lesson,286 ledger from8f47113, plus459 whole producer-audit chronology and460 whole early archive chronology
+  from governance. Exact Git/hash/public before retirement; preserve current guards, D141 correction,
+  current window and all normative feature examples. No cap increase. Focused replacement/refusal/lint/fmt/book;
+  actual transformation, evidence/global currentness/approval remain later owners. Cleanup due13:16UTC after slice.
+  - [x] ROOT CAUSE (WHY + WHERE): canonical candidate refs require actual source context; API/lib cargo check rc=0.
+  - [x] ADDRESSED: cargo test -p sc-measure --test garment_size_set_inputs_contract --test mtm_size_set_inputs_contract gives27/0 rc=0.
+  - [x] NO REGRESSION: existing state/scaling/composite cases included; selected strict clippy/fmt/book rc=0.
+  Verification: garment18+MTM9; original values/path refusals preserved;457/458/459/460/286 whole Git/hash/public exact rc=0.
+  LIVE_STATUS reviewed: G1 In Progress5/18 unchanged. .4c.4.3 bindings close; actual application is later work.
+  Commit: STITCHCAD-G1-0314. Due cleanup then .4c.4.4; broad verification remains integration/pre-push.
 - ID: `G1-SLICE.4c.4.4`
   Status: `pending`
   Goal: immutable resolved SizeSet intent combines origin and authored transformations without applying/mutating source.

@@ -87,6 +87,7 @@ fn unknown_and_derived_have_only_the_original_request_or_formula_without_fallbac
                 SizeSetTransformationKind::LabelMapping,
                 SizeSetTransformationKind::BaseSubstitution,
                 SizeSetTransformationKind::BreakScaling,
+                SizeSetTransformationKind::ChartReplacement,
             ] {
                 for (state, refusal) in [
                     (
@@ -460,4 +461,157 @@ fn scaling_requires_available_break_and_actual_general_ratio_role_and_kind() {
             },
         );
     }
+}
+
+#[test]
+fn explicit_replacement_context_borrows_candidate_and_original_inputs_without_applying_it() {
+    let f = Fixture::new(MeasurementKind::Garment);
+    with_parts(
+        &f,
+        Options {
+            complete_breaks: true,
+            ..Options::default()
+        },
+        |chart, chart_context, breaks, break_context| {
+            let source: SizeSetInputs<'_> =
+                GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                    .expect("actual source")
+                    .into();
+            let mut d = chart.definition().clone();
+            d.id = id(2010);
+            let candidate = SizeChart::new(d, chart_context).expect("current candidate");
+            let mut draft_d = chart.definition().clone();
+            draft_d.id = id(2011);
+            draft_d.observations.pop();
+            let draft = SizeChart::new(draft_d, chart_context).expect("partial candidate");
+            let charts = [&candidate, &draft, chart];
+            let context = SizeSetChartReplacementContext::new(
+                source,
+                SizeSetReplacementCharts::Garment(&charts),
+            )
+            .expect("actual candidates");
+            let binding = SizeSetChartReplacement::Garment(id(2010));
+            let mut authored = definition(assumed(SizeSetTransformationValue::ChartReplacement(
+                binding,
+            )));
+            authored.kind = SizeSetTransformationKind::ChartReplacement;
+            assert_eq!(
+                SizeSetTransformation::new(authored.clone(), source),
+                Err(SizeSetTransformationError::ChartContextRequired)
+            );
+            let intent = SizeSetTransformation::new_with_context(authored.clone(), &context)
+                .expect("explicit current replacement");
+            assert_eq!(intent.definition(), &authored);
+            assert_eq!(intent.validate_current_with_context(&context), Ok(()));
+            let actual = context.resolve(binding).expect("candidate composite");
+            let actual = match actual {
+                SizeSetInputs::Garment(value) => Some(value),
+                _ => None,
+            }
+            .expect("explicit Garment family preserved");
+            assert!(std::ptr::eq(actual.chart(), &candidate));
+            assert!(std::ptr::eq(actual.membership(), source.membership()));
+            assert!(std::ptr::eq(actual.axes(), source.axes()));
+            assert!(std::ptr::eq(actual.breaks(), source.breaks()));
+            assert_eq!(
+                actual.validate_inputs_for(SizeInstantiationPath::GradeRules),
+                Ok(())
+            );
+            assert!(context
+                .resolve(SizeSetChartReplacement::Garment(id(2011)))
+                .expect("draft candidate")
+                .validate_inputs_for(SizeInstantiationPath::Regeneration)
+                .is_err());
+            assert_eq!(
+                source.validate_inputs_for(SizeInstantiationPath::Regeneration),
+                Ok(())
+            );
+            assert!(
+                matches!(source, SizeSetInputs::Garment(original) if std::ptr::eq(original.chart(), chart))
+            );
+            assert!(context
+                .resolve(SizeSetChartReplacement::Garment(chart.id()))
+                .is_ok());
+            let mut alias = authored;
+            alias.id = id(2010);
+            assert_eq!(
+                SizeSetTransformation::new_with_context(alias, &context),
+                Err(SizeSetTransformationError::DuplicateIdentity(id(2010)))
+            );
+        },
+    );
+}
+#[test]
+fn replacement_inventory_refuses_missing_family_duplicate_and_same_id_substitutions() {
+    let f = Fixture::new(MeasurementKind::Garment);
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let source = GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("source")
+                .into();
+            let duplicate = [chart, chart];
+            assert!(
+                matches!(SizeSetChartReplacementContext::new(source, SizeSetReplacementCharts::Garment(&duplicate)), Err(SizeSetTransformationError::DuplicateChart(identity)) if identity == chart.id())
+            );
+            let copied = chart.clone();
+            let substituted = [&copied];
+            assert!(
+                matches!(SizeSetChartReplacementContext::new(source, SizeSetReplacementCharts::Garment(&substituted)), Err(SizeSetTransformationError::DuplicateChart(identity)) if identity == chart.id())
+            );
+            assert!(matches!(
+                SizeSetChartReplacementContext::new(source, SizeSetReplacementCharts::Mtm(&[])),
+                Err(SizeSetTransformationError::ChartFamilyMismatch)
+            ));
+            let context =
+                SizeSetChartReplacementContext::new(source, SizeSetReplacementCharts::Garment(&[]))
+                    .expect("explicit empty inventory");
+            assert_eq!(
+                context
+                    .resolve(SizeSetChartReplacement::Garment(id(9999)))
+                    .expect_err("missing candidate"),
+                SizeSetTransformationError::MissingChart(id(9999))
+            );
+            assert_eq!(
+                context
+                    .resolve(SizeSetChartReplacement::Mtm(id(9999)))
+                    .expect_err("wrong family"),
+                SizeSetTransformationError::ChartFamilyMismatch
+            );
+        },
+    );
+}
+#[test]
+fn independently_valid_candidate_is_rechecked_in_actual_source_observation_context() {
+    let f = Fixture::new(MeasurementKind::Garment);
+    let candidate = with_parts(
+        &f,
+        Options {
+            chart_alias: Some(2010),
+            observation_alias: Some(2020),
+            ..Options::default()
+        },
+        |chart, _, _, _| chart.clone(),
+    );
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let source = GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("actual source")
+                .into();
+            let charts = [&candidate];
+            let error = SizeSetChartReplacementContext::new(
+                source,
+                SizeSetReplacementCharts::Garment(&charts),
+            )
+            .expect_err("candidate's external inventory cannot stand in for source");
+            assert!(error.source().is_some());
+            assert!(
+                matches!(error, SizeSetTransformationError::ReplacementChart { chart, issue }
+            if chart == id(2010) && matches!(*issue, SizeSetInputError::Chart(_)))
+            );
+        },
+    );
 }

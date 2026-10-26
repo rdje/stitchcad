@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0313 — canonical break-scaling intent
+## STITCHCAD-G1-0314 — current chart-replacement intent
 
-Actual signed break/dedicated delta and Ratio factor bindings borrow original states and provenance.
-Missing/role/kind errors refuse; no multiplication. Garment15+MTM8/lint/fmt/book pass0, value-less scaling0.
-454/455/456/285 whole62aea02 retention exact0. G1still5/18; explicit chart replacement bindings next.
+Typed actual candidate charts revalidate in original source contexts, preserving axes/breaks/path rules.
+Missing/family/duplicate/substituted bindings refuse; source intact. Garment18+MTM9/lint/fmt/book pass0.
+457/458/459/460/286 whole8f47113 retention exact0. G1still5/18; due cleanup then immutable intent aggregate.
 
 # Sealed archive — earlier slices
+
+| [part286](docs/history/stitchcad-changelog-part286.md) | whole0313 | 6 lines, 370 bytes, sha256:2d8c40da… |
 
 | [part285](docs/history/stitchcad-changelog-part285.md) | whole0312 | 6 lines, 373 bytes, sha256:7d13e2e0… |
 

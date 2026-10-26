@@ -183,3 +183,9 @@ G1-SLICE.4c.4.3.1 binds break-scaling intent to an actual available signed break
 Ratio scalar in the shared current input inventory. Original break/delta/factor records are borrowed;
 missing records, wrong roles and wrong actual kinds refuse. All canonical states and signed/zero
 factors remain intact. No multiplication, profile-domain validation or derived result is performed.
+
+G1-SLICE.4c.4.3.2 adds typed same-family chart replacement candidates through original source
+metadata, membership/axes/breaks. Candidate composites revalidate actual bindings, refuse missing/
+duplicate/substituted identities and retain draft/path rules. Authored replacement needs explicit
+context; Unknown/Derived remain payload-less. Source charts/references and canonical states stay
+unchanged. G4 profile resolution and G3 application/equivalence remain separate.

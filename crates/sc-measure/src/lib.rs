@@ -69,8 +69,9 @@ pub use size_set::{
 
 mod size_set_resolution;
 pub use size_set_resolution::{
-    SizeBreakScaling, SizeBreakScalingInputs, SizeLabelMapping, SizeSetProfilePin,
-    SizeSetProfilePinDefinition, SizeSetProfilePinError, SizeSetProfilePinField,
+    SizeBreakScaling, SizeBreakScalingInputs, SizeLabelMapping, SizeSetChartReplacement,
+    SizeSetChartReplacementContext, SizeSetProfilePin, SizeSetProfilePinDefinition,
+    SizeSetProfilePinError, SizeSetProfilePinField, SizeSetReplacementCharts,
     SizeSetResolutionOrigin, SizeSetResolutionOriginDefinition, SizeSetResolutionOriginError,
     SizeSetTransformation, SizeSetTransformationDefinition, SizeSetTransformationError,
     SizeSetTransformationKind, SizeSetTransformationReadError, SizeSetTransformationState,

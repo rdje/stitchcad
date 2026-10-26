@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — current chart-replacement intent
+
+0314 .4c.4.3.2 resolves explicit typed candidates through original chart metadata and shared axes/breaks.
+Candidate drafts/path refusals remain; missing/family/duplicate/same-ID substitutions refuse, no source mutation.
+Garment18+MTM9 pass0; strict selected lint/fmt/book0.457/458/459/460/286 whole8f47113 Git/hash/public exact0.
+Old governance chronology retires without losing current guards/D141; no cap increase. G1still5/18; .4 aggregate next.
+Promotion: existing SizeSet decision extended; execution/registry/approval and broad gates remain later owners.
+
 ## _(2026-10-26 UTC)_ — canonical break-scaling intent
 
 0313 .4c.4.3.1 binds actual available break/dedicated Length delta/general Ratio without copied values.
@@ -245,16 +253,8 @@ installed the proven payload without activating stores. Frozen capture14 is not 
 G1still5/18; .6.2–.6.9 own remaining bus execution, tangent practical plan stays P1 .d.2.
 Promotion declined: existing command contract, no new cross-cutting policy.
 
-## _(2026-10-26 UTC)_ — exact tangent range and certificate boundary
-
-0290 .5d.1.2.2.2.d.1 derives nonpole distance>=90M/(U+1),148-bit rounded tangent magnitude
-and an admitted input beyond128-bit result width. Exact poles/domain and finite overflow/width
-remain distinct.2^128 relevant positive thresholds prevent directly repeating finite sine coverage;
-the inverse half-microdegree certificate also has a different target family. A practical tangent
-rounding plan stays P1 .d.2; independent command-bus work can proceed without narrowing the language.
-Focused profile8798 independent distances/586 poles/2 negative controls/width witness and book
-pass0.398/399/400/401/262 retain whole history; no native/certificate edits, G1still5/18.
-Promotion declined: scoped derivation extends the existing midpoint fact; no policy change.
+[Complete tangent range lesson](docs/history/stitchcad-devnotes-part458.md) retains
+its original exact range/resource/domain evidence, checks and promotion decision.
 
 [Complete sourced inverse lesson](docs/history/stitchcad-devnotes-part455.md) retains
 its original kind/source/readback behavior, checks and promotion decision.
