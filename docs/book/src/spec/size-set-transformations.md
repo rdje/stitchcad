@@ -8,9 +8,10 @@
 
 ## Pin the selected profile explicitly
 
-`SizeSetProfilePin` retains three distinct authored strings: `profile_id`, `schema_version` and
-`content_version`. Roadmap §8's example selects profile `acme-cmt-pt`, schema `2.0` and content
-`1.3.0`. Updating profile content does not silently change a saved pin or its schema version.
+`sc-core::ontology::SelectedProfilePin` retains `profile_id`, `schema_version` and `content_version`.
+The sc-measure `SizeSetProfilePin` and related names remain aliases of these shared types.
+Roadmap §8 selects `acme-cmt-pt`, schema `2.0`, content `1.3.0`. Updating content never silently
+changes a saved pin or its schema version.
 
 ```rust
 use sc_measure::{SizeSetProfilePin, SizeSetProfilePinDefinition};

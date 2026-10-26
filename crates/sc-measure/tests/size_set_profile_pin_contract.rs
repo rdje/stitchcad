@@ -77,3 +77,27 @@ fn every_blank_field_is_refused_in_profile_schema_content_order_without_normaliz
         SizeSetProfilePinField::SchemaVersion
     );
 }
+
+#[test]
+fn shared_core_pin_and_legacy_measure_names_are_the_same_types_without_conversion() {
+    use sc_core::ontology::{
+        SelectedProfilePin, SelectedProfilePinDefinition, SelectedProfilePinError,
+        SelectedProfilePinField,
+    };
+    let authored: SizeSetProfilePinDefinition = SelectedProfilePinDefinition {
+        profile_id: "acme-cmt-pt".to_owned(),
+        schema_version: "2.0".to_owned(),
+        content_version: "1.3.0".to_owned(),
+    };
+    let shared = SelectedProfilePin::new(authored.clone()).expect("shared selected pin");
+    let legacy: &SizeSetProfilePin = &shared;
+    assert!(std::ptr::eq(legacy, &shared));
+    assert_eq!(legacy.definition(), &authored);
+    assert_eq!(legacy.validation(), ProfileBindingValidation::DeferredToG4);
+    let error: SizeSetProfilePinError = SelectedProfilePinError {
+        field: SelectedProfilePinField::ProfileId,
+        value: " ".to_owned(),
+    };
+    assert_eq!(error.field, SizeSetProfilePinField::ProfileId);
+    assert_eq!(error.value, " ");
+}

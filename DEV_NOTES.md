@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — shared exact selected-profile pin
+
+0322 .6.2.2.c.2.1 moves the immutable selected pin to core; measure names alias all four shared types.
+Core bus cannot depend on measure; this removes the input dependency obstacle without duplicated validation.
+Opaque strings/field order/blank refusal/G4 deferral remain; human Display prefix uses selected profile wording.
+Pin4+garment21+MTM10 pass0, strict core/measure lint/fmt/book/publication74-87 pass0;476/294 exact13b12b8.
+Promotion: existing shared ontology boundary; no new policy. Next concrete evaluation schemas; G1still6/18.
+
 ## _(2026-10-26 UTC)_ — combined structural model acceptance
 
 0321 .4d.2 closes .4: metadata16/table16/Ease14 pass0, prior model25/composite31 proof retained.
@@ -221,16 +229,8 @@ selected lint/fmt/census17/5/5/0/book0.424/425/271 whole5e15254 Git/hash/public 
 All five mutation schemas now available; no handler or split result claim. G1still5/18. Next .6.2.2.c
 other command classes. Promotion: existing command decision extended; no new policy. Broad gate deferred.
 
-## _(2026-10-26 UTC)_ — complete explicit member points
-
-0298 .4c.2.2 validates exact membership/axis pins, >=1 authored axis, distinct metadata/names and one
-complete explicit point per actual member. Foreign/missing/duplicate coordinates and repeated tuples
-refuse; sparse grids and unused values stay explicit. All authored vectors remain unchanged. Queries
-revalidate sources/coverage and borrow original member/point/canonical records. Native aggregate5 plus
-prior axis5 pass0; selected strict lint/fmt/book0.422/423/270 retain whole35cf8ac Git/hash/public bytes.
-D70 axes contract closes; no full chart/break/resolved SizeSet or path-readiness claim. G1still5/18;
-next .6.2.2.b.2.b paired split schema. Promotion: existing SizeSet decision extended, no new policy.
-Broad integration/platform verification remains deferred to its owned milestone/pre-push.
+[Complete member-point lesson](docs/history/stitchcad-devnotes-part476.md) retains
+its original D70/coverage/current-source contracts, checks and promotion decision.
 
 [Complete explicit-axis lesson](docs/history/stitchcad-devnotes-part472.md) retains
 its original role/kind/order/state contracts, checks and promotion decision.

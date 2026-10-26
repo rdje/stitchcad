@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0321 — structural measurement/Ease/SizeSet acceptance
+## STITCHCAD-G1-0322 — shared selected-profile pin
 
-Metadata16/table16/Ease14 pass0 with prior model25/composite31 proof; scoped publication74/87 pass0.
-D235 availability drift/D236 missing topic links fixed;13 principal models registered. Whole472/473/
-474/475/293/140 retention exact0. .4 closes; derived G1 progress6/18. Runtime/application/release remain later.
+Core owns the exact immutable profile/schema/content pin; measure's public names remain type aliases.
+Pin4/garment21/MTM10, strict selected lint/fmt/book/publication pass0;476/294 whole13b12b8 exact.
+G1 .6.2.2.c.2.1 done; progress6/18 unchanged; execution and profile registry validation remain later.
 
 # Sealed archive — earlier slices
+
+| [part294](docs/history/stitchcad-changelog-part294.md) | whole0321 | 6 lines, 388 bytes, sha256:9b4e1a20… |
 
 | [part293](docs/history/stitchcad-changelog-part293.md) | whole0320 | 6 lines, 379 bytes, sha256:ebea1460… |
 

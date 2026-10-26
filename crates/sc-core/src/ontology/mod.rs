@@ -29,6 +29,7 @@
 //! | [`piece`] | immutable structurally validated `Piece`, complete label view, deferred geometry | `.3c.1` |
 //! | [`id`] | `EntityId` (a ULID) and the injected `IdGenerator` | `.3a` |
 //! | [`pocket`] | physical placement/composition, symbolic opening and current source checks | `.3c.4d.1` |
+//! | [`profile_pin`] | exact selected profile/schema/content labels, with deferred G4 validation | `.6.2.2.c.2.1` |
 //! | [`range`] | whole-interval coverage and visible range repairs, distinct from endpoint queries | `.3c.2a` |
 //! | [`rational`] | the bounded exact rational a parameter is stored in | `.3a` |
 //! | [`reference`] | `EdgeRef`, `PointRef`, `LocalTag` and the `[0, 1]` `Param` | `.3a` |
@@ -50,6 +51,7 @@ pub mod notch;
 pub mod notion;
 pub mod piece;
 pub mod pocket;
+pub mod profile_pin;
 pub mod range;
 pub mod rational;
 pub mod reference;
@@ -125,4 +127,9 @@ pub use closure::{
 
 pub use pocket::{
     Pocket, PocketDefinition, PocketError, PocketOpening, PocketOpeningValidation, PocketPieceRef,
+};
+
+pub use profile_pin::{
+    SelectedProfilePin, SelectedProfilePinDefinition, SelectedProfilePinError,
+    SelectedProfilePinField,
 };

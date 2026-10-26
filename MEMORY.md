@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0321 .4d.2 closes structural measurement/Ease/SizeSet library acceptance; canonical G1 progress6/18.
-- Current metadata16/table16/Ease14 pass0; model25/composite31 proofs retained with Rust byte-identicalfb53a44.
-- D235 availability drift and D236 four missing topic links fixed; publication74 chapters/87 entries pass0.
--472/473/474/475/293/140 whole140422e Git/hash/public exact0. NEXT .6.2.2.c.2 remaining command-class schemas.
-- G1-SLICE.RETENTION-CAPACITY remains P1 before next pack; runtime/evaluator/bus/storage/app/release still owned later.
+-0322 .6.2.2.c.2.1 shares exact SelectedProfilePin in sc-core; legacy sc-measure names alias identical types.
+- Original labels/blank errors/G4 boundary preserved; human Display prefix now selected profile pin.
+- Native pin4+garment21+MTM10 pass0; selected strict lint/fmt/book/publication74-87 pass0.
+-476/294 whole13b12b8 source/hash/public exact0. NEXT .6.2.2.c.2.2 concrete evaluation snapshot/targets.
+- G1 In Progress6/18 unchanged; runtime/evaluator/bus/storage/app/release still owned later.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

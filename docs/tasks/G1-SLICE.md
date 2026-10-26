@@ -535,41 +535,8 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
 
 - ID: `G1-SLICE.4d.2`
   Status: `done`
-  Goal:0321 combined MeasurementTable/Ease/SizeSet structural acceptance; close .4 only after every child passes.
-  Own measurement metadata/Ease/main SizeSet and availability/implementation-status book scope, live/task pointers,
-  PLANNING and old .5 dependency exception. D235 overview still claims axes undecided/composition partial and
-  trig/inverse unavailable; verify actual source/approved D70 and correct all encountered availability drift.
-  Focus current measurement/table/Ease-set contracts: required landmarks/procedure and typed body/POM,
-  per-POM query, canonical source/state/current-binding behavior. Reuse0320 model25 and unchanged composite31.
-  Own book_publication/status.tsv registration of13 new principal model APIs under existing checker,
-  then scoped publication/navigation; derive canonical18 top-level statuses before/after .4 closure.
-  D236 check finds4 registered chapters absent from topic-index; own index repair and474 whole prior
-  thirteenth-window governance receipt from140422e to keep the book fixed cap before adding links.
-  Own472 whole0320 task/oldest0297 lesson/old scope paragraphs and .5 dependency exception;293 ledger
-  and140 whole closed D233/D234 reports from140422e. Own475 whole closed .4a/.4a.2/.4b parent
-  contracts/navigation from140422e to bound task aggregate; retain their live identity/status pointers.
-  Also own473 whole original numeric-availability
-  paragraph and prior .4d plan, supplementing context around472’s retained changed span,
-  exact whole Git intervals/hash/public before retirement. No numeric certificate or mutation campaign rerun.
-  Director feature-delivery ruling: focused structural acceptance now; full CI remains pre-push and G1 integration
-  (.11/.12/.16), including current WASM/runtime proof. Closure claims no complete evaluator/bus/storage/app/release.
-  - [x] ROOT CAUSE (WHY + WHERE): .4 acceptance versus actual APIs; D235 stale overview/D236 INDEX_COVERAGE reproduced; source check rc=0.
-  - [x] ADDRESSED: cargo test -p sc-measure --test measurement_contract --test table_contract --test ease_set_contract gives46/0 rc=0.
-  - [x] NO REGRESSION: source diff fb53a44 empty; prior25/31 proof retained; book/publication74 chapters/87 entries rc=0.
-  Verification: book_publication.py check(ROOT) returns(74,87,1428,2315); topic/navigation/API-source/owner/roadmap checks rc=0.
-  472/473/474/475/293/140 whole source intervals/hash/public byte equality rc=0; canonical18 census below gives6/18,
-  only.4 active->done versus140422e. LIVE_STATUS changes5/18->6/18; full runtime/CI remains named later owners.
-  Commit: STITCHCAD-G1-0321; next .6.2.2.c.2 remaining command-class schemas, no draft application/release claim.
-
-  Progress census recipe (canonical18 roadmap leaves, excluding maintenance):
-  ```python
-  import re
-  from pathlib import Path
-  text = Path('docs/tasks/G1-SLICE.md').read_text()
-  ids = ['1','2','3a','3b','3c', *map(str, range(4,17))]
-  states = [re.search(r'^- ID: `G1-SLICE\.' + re.escape(k) + r'`\n  Status: `([^`]+)`', text, re.M).group(1) for k in ids]
-  print(sum(s == 'done' for s in states), '/', len(states))
-  ```
+  Goal:0321 combined structural acceptance/native46/publication74-87/progress6-18; [whole scope/proofs](../history/stitchcad-devnotes-part476.md).
+  Commit: STITCHCAD-G1-0321.
 - ID: `G1-SLICE.5`
   Status: `in_progress`
   Children: .5a syntax done; .5b static validation, .5c exact arithmetic, .5d irrational functions,
@@ -756,10 +723,44 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part428md).
   Commit: STITCHCAD-G1-0300.
 - ID: `G1-SLICE.6.2.2.c.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: concrete evaluation/artifact/release schemas and artifact-specific GetUncertaintyClosure target.
   After canonical SizeSet/profile/artifact input work; follow actual contracts, no generic argument-map substitutes.
   Release closure depends on requested artifact's actual dependency set; no entire-design or guessed-kind closure.
+  Children: .1 shared exact selected-profile pin; .2 evaluation contexts/concrete targets; .3 profile resolution;
+  .4 concrete artifact requests/closure; .5 candidate/human approval requests; .6 combined schema review.
+- ID: `G1-SLICE.6.2.2.c.2.1`
+  Status: `done`
+  Goal:0322 promote exact selected-profile pin to sc-core, enabling command inputs without reversing dependency DAG.
+  Own sc-core/src/ontology/profile_pin.rs and ontology/mod.rs; measure size_set_resolution/profile.rs aliases,
+  existing profile-pin compatibility tests, existing profile chapter/availability/status map and live/task docs.
+  Core SelectedProfilePin/Definition/Error/Field share the existing fields/validation; sc-measure legacy names
+  alias those exact types. Preserve opaque spelling, distinct schema/content versions and DeferredToG4 boundary.
+  Human Display prefix becomes selected-profile wording; no grammar/default/registry/authority/execution claim.
+  Own476 whole0321 task/oldest0298 lesson and294 ledger from13b12b8; exact Git/hash/public before retirement.
+  Focus actual alias interoperability and original pin/composite contracts; selected strict lint/fmt/publication.
+  - [x] ROOT CAUSE (WHY + WHERE): core command layer cannot import dependent measure; shared pin removes cycle.
+    Public type aliases compile, preserve exact objects and prior field semantics; native focused35/0, rc=0.
+  - [x] ADDRESSED: shared core pin and four legacy aliases; interoperability and original pin/current composite
+    contracts pass4+21+10/0; strict core/measure lint/fmt/book/publication74/87 pass; rc=0.
+  - [x] NO REGRESSION: original blank/opaque/G4/current path behavior retained; no dependency changes or handlers.
+   476/294 whole13b12b8 Git intervals/hash/public equality pass; progress6/18 unchanged; rc=0.
+  Commit0322; next .6.2.2.c.2.2. Broad CI remains G1 integration/pre-push, not rerun for this promotion.
+- ID: `G1-SLICE.6.2.2.c.2.2`
+  Status: `pending`
+  Goal: exact evaluation snapshot context and concrete EvaluateInstance/GradeSize inputs from canonical paths.
+- ID: `G1-SLICE.6.2.2.c.2.3`
+  Status: `pending`
+  Goal: actual selected-profile ResolveProfile input, preserving source snapshots and symbolic parameter boundaries.
+- ID: `G1-SLICE.6.2.2.c.2.4`
+  Status: `pending`
+  Goal: concrete DXF/PLT/PDF/tech-pack requests and artifact-dependent closure binding; no guessed global closure.
+- ID: `G1-SLICE.6.2.2.c.2.5`
+  Status: `pending`
+  Goal: exact release candidate preparation and human approval target schemas; no authority granted by actor claims.
+- ID: `G1-SLICE.6.2.2.c.2.6`
+  Status: `pending`
+  Goal: bounded current schema/source/permission metadata review before actual authorization/handlers .6.3+.
 - ID: `G1-SLICE.6.3`
   Status: `pending`
   Goal: core-scoped authority/grant validation, human-only approval, actual actor/principal and denial tests.
