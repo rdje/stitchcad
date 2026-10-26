@@ -439,23 +439,24 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0302.
 - ID: `G1-SLICE.4c.3d.1`
   Status: `done`
-  Goal:0303 immutable signed break declarations keyed by actual axis, named measurement binding and authored adjacent pair.
-  Paths: crates/sc-measure/src/size_break.rs;crates/sc-measure/src/size_break/;crates/sc-measure/src/size_axis/source.rs;
-  crates/sc-measure/src/lib.rs;crates/sc-measure/Cargo.toml;crates/sc-measure/tests/size_break_contract.rs; book/decision/live docs.
-  Shared canonical inventory retains delta/source/state; actual membership/axes/table/measurement contexts and exact pins
-  validate references, adjacency and saved dimension binding. Reject metadata/source conflicts, never subtract chart values.
-  Focused native break/axis targets, selected lint/fmt/book. Own433 whole0302 task,434 oldest0278 lesson,275 ledger
-  from7e0ca8d with whole Git/hash/public comparisons before retirement. Collection/composite readiness follows children.
-  Acceptance0303:
-  - [x] ROOT CAUSE0303: rg definitions -> size_break.rs:13/34, context.rs:15/117 and table.rs:9, rc=0; canonical binding and authored adjacency explicit.
-  - [x] ADDRESSED0303: cargo test -p sc-measure --test size_break_contract --test size_axes_contract ->5+5 passed/0 failed, rc=0; signed values/all states/current sources and key refusals.
-  - [x] NO REGRESSION0303: selected lib/two-test strict Clippy rc=0; fmt rc=0; book rc=0; original source/error borrows and cross-inventory conflicts checked.
-  - [x] LOCKSTEP0303:433/434/275 whole7e0ca8d Git/hash/public exact rc=0; book/decision/live align, no coverage/path-readiness claim.
-  Promotion: existing SizeSet decision extended. Commit: STITCHCAD-G1-0303. Next .3d.2 required break coverage.
+  Goal:0303 individual signed breaks verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part435.md).
+  Commit: STITCHCAD-G1-0303.
 - ID: `G1-SLICE.4c.3d.2`
-  Status: `pending`
+  Status: `done`
   Goal: explicit required axis/dimension inventory and per-adjacent-pair break coverage; partial drafts remain explicit;
   missing dimension/pair diagnostic, singleton MTM path-2 refusal, exact current break/source pins.
+  Unit0304 paths: crates/sc-measure/src/size_breaks.rs;crates/sc-measure/src/size_breaks/;
+  crates/sc-measure/src/size_break/context.rs;crates/sc-measure/src/lib.rs;crates/sc-measure/tests/size_breaks_contract.rs;
+  crates/sc-measure/tests/support/size_break_fixture.rs;crates/sc-measure/tests/size_break_contract.rs; book/decision/live docs.
+  Partial drafts allowed; coverage never inferred from available records or chart arithmetic. Preserve authored vectors,
+  all states and actual declarations. Own435 whole0303 task,436 oldest0279 lesson,276 ledger from28caa22; whole Git/hash/public proof.
+  Focused new/affected native tests, selected strict lint/fmt/book; full CI deferred to integration/pre-push.
+  Acceptance0304:
+  - [x] ROOT CAUSE0304: rg required/available declarations -> size_breaks.rs:10/40/51 and coverage83/110, rc=0; independent requirements, no inferred dimensions.
+  - [x] ADDRESSED0304: cargo test -p sc-measure --test size_breaks_contract --test size_break_contract ->5+5 passed/0 failed, rc=0; exact gaps/duplicates/singletons/current sources.
+  - [x] NO REGRESSION0304: selected lib/two-test strict Clippy rc=0 after unused fixture imports removed; fmt rc=0; book rc=0. Shared validation preserves prior declaration tests.
+  - [x] LOCKSTEP0304:435/436/276 whole28caa22 Git/hash/public exact rc=0; book/decision/live aligned. No numeric grading or composite readiness claim.
+  Promotion: existing SizeSet decision extended. Commit: STITCHCAD-G1-0304. Next .3d.3 composition; archive working64 requires window15 before further retirements.
 - ID: `G1-SLICE.4c.3d.3`
   Status: `pending`
   Goal: composite membership/axes/garment-or-MTM chart/break inputs and typed structural path readiness;
@@ -936,7 +937,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.4c.3d.2` | `pending` | Explicit required dimensions and adjacent-pair break coverage |
+| **next** | `G1-SLICE.4c.3d.3` | `pending` | Composite current SizeSet inputs; pack history before growth |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

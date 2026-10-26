@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0303 — canonical signed adjacent size breaks
+## STITCHCAD-G1-0304 — explicit required break coverage
 
-SizeBreak validates explicit axis/POM/ordered adjacent pair and borrows original canonical signed Length state/source.
-Native break5+axes5/0, selected strict lint/fmt/book0; whole433/434/275 retention exact. Zero/negative/uneven
-steps and all states remain explicit. G1 remains5/18; required coverage/composite readiness follow.
+SizeBreaks preserves independent required dimensions/available declarations; exact current gaps and singleton grading refusal.
+Native collection5+declaration5/0, selected strict lint/fmt/book0; whole435/436/276 retention exact. Unknowns stay
+unresolved and duplicate/undeclared cells refuse. G1 remains5/18; composite SizeSet inputs next.
 
 # Sealed archive — earlier slices
+
+| [part276](docs/history/stitchcad-changelog-part276.md) | whole0303 | 6 lines, 394 bytes, sha256:07bc26e6… |
 
 | [part275](docs/history/stitchcad-changelog-part275.md) | whole0302 | 6 lines, 361 bytes, sha256:fe6e3333… |
 

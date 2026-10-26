@@ -71,7 +71,8 @@ verifies their public behavior and the actual reference; [whole recipe proofs](f
 
 Individual [signed size breaks](../spec/size-sets.md#executable-individual-breaks--g1-slice4c3d1) now bind
 actual axes, named measurement dimensions and authored adjacent member pairs, borrowing canonical
-Length state/source. Required coverage and composite SizeSet/path readiness remain .4c.3d.2/.3.
+Length state/source. Explicit required dimensions, current adjacent-pair coverage and singleton grading
+refusal are implemented at .4c.3d.2; composite SizeSet/path inputs remain .4c.3d.3.
 
 ## Remaining proofs
 

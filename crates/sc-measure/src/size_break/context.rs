@@ -99,44 +99,9 @@ impl<'a> SizeBreakContext<'a> {
         {
             return Err(Error::DuplicateIdentity(definition.id));
         }
-        if !self
-            .axes
-            .definition()
-            .axes
-            .iter()
-            .any(|axis| axis.definition().id == definition.axis)
-        {
-            return Err(Error::MissingAxis(definition.axis));
-        }
-        self.membership
-            .member(definition.from)
-            .map_err(Error::Member)?;
-        self.membership
-            .member(definition.to)
-            .map_err(Error::Member)?;
-        let adjacent = self.membership.definition().members.windows(2).any(|pair| {
-            matches!(pair, [from, to] if from.id == definition.from && to.id == definition.to)
-        });
-        if !adjacent {
-            return Err(Error::NotAdjacent {
-                set: definition.reference.id,
-                from: definition.from,
-                to: definition.to,
-            });
-        }
-        if definition.dimension_table != self.table.id() {
-            return Err(Error::TableMismatch {
-                expected: definition.dimension_table,
-                actual: self.table.id(),
-            });
-        }
-        let actual = MeasurementBinding::from(self.dimension(definition.dimension.measurement)?);
-        if actual != definition.dimension {
-            return Err(Error::DimensionMismatch {
-                expected: Box::new(definition.dimension.clone()),
-                actual: Box::new(actual),
-            });
-        }
+        self.require_axis(definition.axis)?;
+        self.validate_pair(definition.from, definition.to)?;
+        self.require_dimension(definition.dimension_table, &definition.dimension)?;
         self.sources.length(definition.delta).ok_or_else(|| {
             if self.sources.contains(definition.delta) {
                 Error::DeltaRole(definition.delta)
@@ -144,5 +109,67 @@ impl<'a> SizeBreakContext<'a> {
                 Error::MissingDelta(definition.delta)
             }
         })
+    }
+    fn require_axis(&self, axis: EntityId) -> Result<(), Error> {
+        if !self
+            .axes
+            .definition()
+            .axes
+            .iter()
+            .any(|value| value.definition().id == axis)
+        {
+            return Err(Error::MissingAxis(axis));
+        }
+        Ok(())
+    }
+
+    pub(crate) fn validate_pair(&self, from: EntityId, to: EntityId) -> Result<(), Error> {
+        self.membership.member(from).map_err(Error::Member)?;
+        self.membership.member(to).map_err(Error::Member)?;
+        if !self
+            .membership
+            .definition()
+            .members
+            .windows(2)
+            .any(|pair| matches!(pair, [a, b] if a.id == from && b.id == to))
+        {
+            return Err(Error::NotAdjacent {
+                set: self.membership.reference().id,
+                from,
+                to,
+            });
+        }
+        Ok(())
+    }
+
+    pub(crate) fn validate_dimension(
+        &self,
+        axis: EntityId,
+        table: EntityId,
+        binding: &MeasurementBinding,
+    ) -> Result<(), Error> {
+        self.require_axis(axis)?;
+        self.require_dimension(table, binding)
+    }
+
+    fn require_dimension(
+        &self,
+        table: EntityId,
+        binding: &MeasurementBinding,
+    ) -> Result<(), Error> {
+        if table != self.table.id() {
+            return Err(Error::TableMismatch {
+                expected: table,
+                actual: self.table.id(),
+            });
+        }
+        let actual = MeasurementBinding::from(self.dimension(binding.measurement)?);
+        if actual != *binding {
+            return Err(Error::DimensionMismatch {
+                expected: Box::new(binding.clone()),
+                actual: Box::new(actual),
+            });
+        }
+        Ok(())
     }
 }

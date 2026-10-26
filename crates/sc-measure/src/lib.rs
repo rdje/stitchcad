@@ -9,7 +9,8 @@
 //! Design/member coverage. MTM charts retain custom single-member body/Ease inputs. Individual size
 //! axes have explicit ordered values over borrowed canonical inputs. Complete member points require
 //! at least one authored axis. Individual signed breaks bind explicit axes/POMs/adjacent pairs;
-//! complete coverage, SizeSet composition and resolution contracts follow in owned slices.
+//! explicit required dimensions and current adjacent coverage are implemented. SizeSet composition
+//! and resolution contracts follow in owned slices.
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
@@ -52,6 +53,11 @@ pub use size_axes::{
 
 mod size_break;
 pub use size_break::{SizeBreak, SizeBreakContext, SizeBreakDefinition, SizeBreakError};
+
+mod size_breaks;
+pub use size_breaks::{
+    SizeBreakCell, SizeBreakDimension, SizeBreaks, SizeBreaksDefinition, SizeBreaksError,
+};
 
 mod size_chart;
 pub use size_chart::{

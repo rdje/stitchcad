@@ -162,8 +162,59 @@ borrowed with its actual current source/state; the earlier immutable snapshot re
 
 Five focused break contracts plus the five axes contracts pass, with selected strict lint/formatting
 and book build. This establishes individual declarations. Required axis/dimension inventories,
-complete adjacent-pair coverage, singleton grading refusal and composite SizeSet/path readiness
-remain G1-SLICE.4c.3d.2/.3; one valid declaration does not certify those later contracts.
+complete adjacent-pair coverage and singleton grading refusal are implemented by the collection
+below; composite SizeSet/path inputs remain .4c.3d.3.
+
+### Explicit break requirements and coverage — G1-SLICE.4c.3d.2
+
+`SizeBreaks` now keeps two independent authored vectors: required `SizeBreakDimension` entries and
+available `SizeBreak` declarations. Each requirement explicitly names an axis, dimension table and
+exact measurement binding. Required dimensions never come from whichever break records happen to
+be present. Both vectors preserve their original order. A partial or empty draft is representable;
+construction validates every supplied reference and declaration without claiming complete coverage.
+
+For a three-member range S/M/L with waist and hip required on its House size axis, four cells are
+required: waist S→M, waist M→L, hip S→M and hip M→L. If only waist S→M exists, `missing` returns the
+other three exact axis/measurement/from/to identities. Gaps follow requirement order, then authored
+member-pair order. An absent declaration stays absent; no numeric zero or chart difference is stored.
+Only explicitly required axis/dimension pairs participate, not a Cartesian product of axis catalogs.
+
+```rust
+use sc_measure::{SizeBreakDimension, SizeBreaks, SizeBreaksDefinition};
+// `context`, axis/table ids, `waist`/`hip` and `waist_step` are actual authored records.
+let required = |measurement| SizeBreakDimension {
+    axis: house_size_axis_id, dimension_table: design_measurements_id,
+    dimension: MeasurementBinding::from(measurement),
+};
+let breaks = SizeBreaks::new(SizeBreaksDefinition {
+    reference: context.membership().reference(),
+    dimensions: vec![required(waist), required(hip)], breaks: vec![waist_step],
+}, &context).expect("structurally valid partial draft");
+let gaps = breaks.missing(&context).expect("actual current gaps");
+let coverage = breaks.require_grade_coverage(&context); // names the first missing cell
+```
+
+`require_grade_coverage` rechecks the whole supplied inventory before requiring a multi-member range,
+nonempty explicit requirements and every required adjacent cell. With no authored dimensions it
+returns `MissingDimensions`; it never chooses a POM from available records. A singleton returns
+`Singleton { set, member }`, even when the gap list is empty. That preserves MTM's path-2 refusal.
+Missing break coverage does not itself forbid path 1; its chart/input contract is separate.
+
+Coverage is structural: Unknown/Derived deltas still name present authored declarations. Requiring
+coverage does not evaluate them, fabricate values, certify actual grading or apply an artifact policy.
+When a value is needed, the original `SizeBreak` read continues to require observation/evaluation.
+A same-id delta replacement contributes its actual current source/state, while a reordered membership
+or changed saved binding refuses before gaps are reported; no old completeness result is cached.
+
+Duplicate required axis/dimension pairs, repeated declaration ids, duplicate cells and undeclared
+dimensions refuse. Every requirement is checked even without a corresponding break. Original
+context/declaration errors remain standard error sources and preserve the failing declaration id.
+`declaration(cell, context)` borrows the actual authored declaration after whole-inventory validation;
+it refuses an undeclared dimension, invalid member pair or exact missing cell without a fallback.
+
+Five collection tests and the five affected declaration tests pass, with selected strict lint,
+formatting and book build. These prove current requirements/coverage and singleton refusal; composite
+SizeSet chart/path inputs, numeric execution and geometric equivalence remain .4c.3d.3 and later gates.
 
 ## 7. Multi-dimensional systems
 

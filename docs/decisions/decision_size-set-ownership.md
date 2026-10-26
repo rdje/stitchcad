@@ -136,3 +136,9 @@ is borrowed from a dedicated canonical Length record, with original Unknown/Deri
 Cross-inventory identities/content are consistent before lookup; same-id delta replacements retain
 the actual current state/source. Five break plus five axis contracts pass. Required coverage and
 composite/path readiness remain .3d.2/.3; declared deltas are not generated equivalence evidence.
+
+G1-SLICE.4c.3d.2 adds an independent explicit required axis/dimension inventory and available break
+records. Partial drafts remain valid; coverage names exact missing cells in authored order and
+refuses singleton grading even when there are no gaps. Duplicate/undeclared requirements or cells
+refuse. Coverage never means numeric availability: Unknown/Derived sources keep their original reads.
+Five collection plus five declaration contracts pass; composite/path inputs remain .3d.3.

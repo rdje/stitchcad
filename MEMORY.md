@@ -4,11 +4,12 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0303 .4c.3d.1 implements explicit axis/POM/dimension/adjacent-pair break declarations under approved D228.
-- Exact current pins/bindings/adjacency and cross-inventory identity/content validated; delta is an original Length borrow.
-- Native break5+axes5 pass0; selected strict lib/two-test lint/fmt/book0. Signed zero/negative/uneven and all states retained.
-- NEXT .4c.3d.2: explicit required dimension inventory and adjacent-pair coverage; composite/path readiness .3d.3 follows.
--433/434/275 whole7e0ca8d Git/hash/public exact0; no full coverage/grading/geometry or release claim.
+-0304 .4c.3d.2 implements explicit required dimensions/available break inventories and current exact gap reporting.
+- Partial drafts preserve absence; duplicates/undeclared cells refuse; singletons refuse grading even with no gaps.
+- Unknown/Derived remain present declarations with original reads; current membership/key errors precede coverage.
+- Native collection5+declaration5 pass0; selected strict lib/two-test lint/fmt/book0; shared fixture preserves original tests.
+- NEXT .4c.3d.3 composite SizeSet inputs. Working history64 requires a window15 capture from stable HEAD before growth.
+-435/436/276 whole28caa22 Git/hash/public exact0.0303/28caa22 implements original sourced signed break declarations.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
 - Native query2+catalog2 pass0; selected strict lint/fmt/census17/5/5/0/book0; exact revisions beyond128bits.
@@ -44,4 +45,4 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D156/D223 audits deferred; D224/D225/D227 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background job or pending director question after0303. Derive push count, never carry it manually.
+- No background job or pending director question after0304. Derive push count, never carry it manually.

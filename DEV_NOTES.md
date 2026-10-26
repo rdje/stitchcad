@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — explicit required break coverage
+
+0304 .4c.3d.2 separates ordered required axis/dimension bindings from available declarations. Partial
+or empty drafts preserve absence; current coverage reports every exact missing cell without zero or
+chart arithmetic. Duplicate requirements/ids/cells and undeclared dimensions refuse. Singleton grading
+refuses even with no gaps. Unknown deltas remain present declarations whose original reads still fail;
+reordered membership/current binding errors precede gap reporting. Shared actual fixture and context
+validation preserve prior contracts. Native collection5+declaration5 pass0; selected strict lint/fmt/book0.
+435/436/276 whole28caa22 Git/hash/public exact0. G1still5/18; composite/path inputs .3d.3 next. Working
+archive64 requires window15 before more retirement. Promotion: existing SizeSet decision extended.
+
 ## _(2026-10-26 UTC)_ — canonical signed adjacent break declarations
 
 0303 .4c.3d.1 implements D228 keys over actual axis/member/table/measurement bindings. Delta borrows
@@ -266,16 +277,8 @@ warnings; checked array destructuring fixes the owned defect, arc2/0 and lint no
 task/hypot lesson/closed syntax receipts/ledger retain376–378/252 byte-exact. Book/live sync; source
 calls/full execution/platform proof remain owned. Promotion: threshold decision records native scope.
 
-## _(2026-10-26 UTC)_ — bounded native sine/cosine plan
-
-0279 .5d.1.2.2.2.c derives exact private sign/period/octant reduction and64 directed terms at512
-bits. Width<=770 scaled units<2^-502, below the complete forward certificate's2^-384 separation;
-lower endpoint exact ppm rounding is therefore correct for all admitted angles. All workspace
-magnitudes<2^1026; no new domain/precision refusal or dependency. Focused envelope/Fraction14/
-signed-octant50/insufficient-profile2 controls pass, rc=0; this is a plan/model, not native proof.
-Sin/cos code next .5d.3.2.1; tangent/inverse remain separate, broad proof .5d.4/pre-push. Whole0278
-task/sqrt lesson/ledger retain374/375/251 with exact Git/hash/public reads. Promotion: threshold
-decision records admitted algorithm/bounds, primary sources, proof and actual verification limits.
+[Complete bounded forward-plan lesson](docs/history/stitchcad-devnotes-part436.md) retains
+its original reduction/budget/rounding derivation, checks and promotion decision.
 
 [Complete forward-threshold certificate lesson](docs/history/stitchcad-devnotes-part434.md) retains
 its original producer/reader/source/coverage evidence, checks and promotion decision.
