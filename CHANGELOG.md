@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0326 — explicit graded DXF request inputs
+## STITCHCAD-G1-0327 — concrete plotter and vector-print requests
 
-Registered AAMA/base-plus-rules and ASTM/embedded requests retain base, rules and ordered pinned members.
-Single-size API/closure remain; native4+2+2/strict lint/fmt/book/publication76-90 pass0;480/298 exact06dfb78.
-.6.2.2.c.2.4.2 done; G1 progress6/18 unchanged; actual grading/export/provenance checks remain later.
+PLT pins actual profile/result; PDF retains explicit paper/orientation/order/positive square and overlap.
+Native3+4+2+2/strict selected lint/fmt/book/publication76-93 pass0; D238 intent/application wording fixed.
+481/299/142 whole516895d exact; .6.2.2.c.2.4.3 done, G1 progress6/18 unchanged; rendering/handlers later.
 
 # Sealed archive — earlier slices
+
+| [part299](docs/history/stitchcad-changelog-part299.md) | whole0326 | 6 lines, 380 bytes, sha256:332bd419… |
 
 | [part298](docs/history/stitchcad-changelog-part298.md) | whole0325 | 6 lines, 387 bytes, sha256:702b0db9… |
 

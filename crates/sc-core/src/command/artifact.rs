@@ -1,5 +1,5 @@
 //! Concrete artifact intents and shared snapshot binding, before generation or dependency traversal.
-use super::{CommandId, CommandSnapshotContext, GradedSizeSelection};
+use super::{CommandId, CommandSnapshotContext, ExportPdf, ExportPlt, GradedSizeSelection};
 use crate::ontology::{EntityId, SelectedProfilePin};
 
 /// Registered DXF dialect identities, not writer flags or evidence of receiver compatibility.
@@ -145,6 +145,10 @@ impl ExportDxf {
 pub enum ArtifactPayload {
     /// Explicit named-target DXF and any requested rule-table companion.
     ExportDxf(ExportDxf),
+    /// Named plotter target and actual selected plotter parameter result.
+    ExportPlt(ExportPlt),
+    /// Exact vector-print settings and logical/factory source selection.
+    ExportPdf(ExportPdf),
 }
 impl ArtifactPayload {
     /// The typed artifact determines identity, never an independently asserted command name.
@@ -152,6 +156,8 @@ impl ArtifactPayload {
     pub const fn command_id(&self) -> CommandId {
         match self {
             Self::ExportDxf(_) => CommandId::ExportDxf,
+            Self::ExportPlt(_) => CommandId::ExportPlt,
+            Self::ExportPdf(_) => CommandId::ExportPdf,
         }
     }
 }

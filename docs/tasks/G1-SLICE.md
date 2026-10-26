@@ -748,25 +748,27 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0325 exact single-instance DXF/closure and D237 correction; [whole scope/proofs](../history/stitchcad-devnotes-part480.md).
 - ID: `G1-SLICE.6.2.2.c.2.4.2`
   Status: `done`
-  Goal:0326 explicit registered base-plus-rules/AAMA and embedded-rules/ASTM request inputs.
-  Own core command grading selection/artifact/reexports, existing artifact contracts and artifact book.
-  Nonempty ordered distinct member IDs share exact set/Count revision; no sorting, label/base inference.
-  Graded constructors retain explicit base Instance/rule table/selection/profile/result and fix registered
-  target pairing; existing single_instance API preserved. Closure carries same full graded inputs.
-  Actual membership/base/rule/break/profile provenance and serialization remain handlers/G3, no readiness proof.
-  Own480 whole0325 task/oldest0303-0302 lessons/prior chart/Ease verification receipts and298 ledger from
-  06dfb78, exact source/hash/public before retirement; retain current diagnostic rules and phase boundaries.
-  Focus artifact/query/catalog contracts, selected strict lint/fmt/book/publication; broad CI later.
-  - [x] ROOT CAUSE (WHY + WHERE): registered graded carriages require explicit base/rule/set/member inputs;
-    single-size payload could not name them. Native artifact4/query2/catalog2 pass8/0; rc=0.
-  - [x] ADDRESSED: exact ordered selection/refusals, fixed registered carriage pairing, same closure payload;
-    selected strict lint/fmt/book/publication76 chapters/90 entries pass; rc=0.
-  - [x] NO REGRESSION: existing single/query/catalog contracts retained; no implicit base/deltas/defaults,
-    source lookup or serialization.480/298 whole06dfb78 Git/hash/public equality pass; rc=0.
-  Commit0326; next .4.3 PLT/PDF. Promotion declined: existing registry/grading contracts; broad CI later.
+  Goal:0326 explicit registered graded DXF inputs; [whole scope/proofs](../history/stitchcad-devnotes-part481.md).
 - ID: `G1-SLICE.6.2.2.c.2.4.3`
-  Status: `pending`
-  Goal: PLT/PDF requests retain actual pen/scale/page/scale-square configuration and artifact-specific bindings.
+  Status: `done`
+  Goal:0327 PLT profile-result and explicit validated PDF print-setting requests; same actual closure payloads.
+  Own core command plot/print/print-settings/artifact/reexports and focused format/artifact/query/catalog tests.
+  PLT retains instance/profile/result supplying actual pen map/declared scale; no copied observed pen values.
+  PDF retains instance, explicit logical/factory selection, A0 or tiled A3/A4, portrait/landscape, authored
+  tile overlap/order and scale-square size. Positive square/overlap required; no arbitrary max or fit/scale.
+  Row-major/column-major are explicit choices; registration marks/piece identity are required writer output.
+  D238 membership final frontier ambiguously defers implemented profile intent; distinguish actual application.
+  Own artifact book/current membership wording/publication and481 whole0326 task/prior metadata/membership
+  verification/inverse-controller receipts,299 ledger and142 closed D237 report from516895d, exact Git/hash/
+  public proof before retirement; retain operational local-profile/certificate/cleanup/phase requirements.
+  Focus typed format boundaries and retained requests, strict selected lint/fmt/book/publication; broad CI later.
+  - [x] ROOT CAUSE (WHY + WHERE): plot/print requests need actual profile inputs and authored print choices;
+    no generic flags/defaults. Native print-plot3/artifact4/query2/catalog2 pass11/0; rc=0.
+  - [x] ADDRESSED: exact settings/refusals/closure; two fixture helpers scope expect allowances after lint3;
+    final strict selected lint/fmt/book/publication76 chapters/93 entries pass; rc=0.
+  - [x] NO REGRESSION: prior DXF/query/catalog remain green; D238 current source/wording aligns; no measurement
+    or numeric kernel edits.481/299/142 whole516895d Git/hash/public equality pass; rc=0.
+  Commit0327; next .4.4 tech pack. Promotion declined: existing contracts; full CI integration/pre-push.
 - ID: `G1-SLICE.6.2.2.c.2.4.4`
   Status: `pending`
   Goal: tech pack names actual canonical Design/instances/profile inputs; missing Order quantities stay unresolved.

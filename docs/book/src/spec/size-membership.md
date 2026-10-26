@@ -117,20 +117,13 @@ same-label cross-set refusal. Selected strict Clippy passes; broad/platform proo
 
 ## Verification and current boundary
 
-Twelve contracts cover human labels, order/base separation, stable identity under reorder/removal,
-unique identities/labels, missing lookups, distinct sets, all system choices, a custom member of one
-and checked revision overflow. Compile-fail tests cover private label/membership mutation and an
-attempt to add quantity data. Seven real production mutations must fail regression assertions,
-including an introduced lexical sort and a wrapped revision fallback, then restore exact source.
-The verifier guards its mutable implementation and current read-only test source before effects,
-and plans all eight log files. Each real failure must identify a current test assertion macro by
-source, line and byte column; a panic message containing "assertion" supplies no proof by itself.
-The restored public Cargo artifact runs the complete12-test target successfully.
-The standard strict Rust gate runs these contracts; native/WASM integration is checked locally.
+Contracts/privacy and watched mutations cover label/order/base, identity, explicit quantity exclusion and
+revision behavior. The local-profile diagnostic requires current assertion locations and restored source/
+artifacts; complete original verification receipts remain in `docs/history/stitchcad-devnotes-part481.md`.
 
 D70's director ruling2026-10-26 requires at least one authored axis for every complete SizeSet.
 G1-SLICE.4c.2 implements explicit names, ordered values and complete member coordinates. This membership
 foundation creates no implicit axis or numeric default. Individual [garment chart observations](size-chart-observations.md) now borrow current metadata;
 complete chart/break coverage and [typed structural path inputs](size-sets.md#unified-current-input-family--g1-slice4c3d33)
-are now available. Profile transformations, actual geometry, equivalence, global currentness, evidence
-scope and release remain later owned proofs.
+are now available. [Immutable profile intent](size-set-transformations.md) is implemented; actual
+profile application, geometry, equivalence, global currentness, evidence scope and release remain later proofs.

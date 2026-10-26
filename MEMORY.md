@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0326 .6.2.2.c.2.4.2 adds explicit AAMA base-plus-rules and ASTM embedded-rule requests.
-- Nonempty distinct ordered member claims retain exact set/Count revision; actual base/rule/break bindings checked later.
-- Existing single-instance inputs/closure preserved; native artifact4/query2/catalog2 + strict lint/fmt/book/publication76-90 pass0.
--480/298 whole06dfb78 source/hash/public exact0. NEXT .6.2.2.c.2.4.3 concrete PLT/PDF configuration requests.
-- G1 In Progress6/18 unchanged; handler/serializer/policy/evidence/approval and complete engine remain owned later.
+-0327 .6.2.2.c.2.4.3 adds PLT profile-result and explicit validated PDF print choices; same artifact closure inputs.
+- A0 or tiled A3/A4, orientation/order, exact positive overlap/square; actual rendering/scale/unknown policy deferred.
+- Native print-plot3/artifact4/query2/catalog2 + strict selected lint/fmt/book/publication76-93 pass0; D238 wording fixed.
+-481/299/142 whole516895d source/hash/public exact0. NEXT .6.2.2.c.2.4.4 canonical tech-pack inputs.
+- G1 In Progress6/18 unchanged; full engine/handlers/serialization/evidence/approval remain owned later.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

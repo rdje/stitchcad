@@ -1085,19 +1085,20 @@ Closed D233/D234 reports and verified repair evidence remain whole in
 Closed D235/D236 reports and complete0321 evidence remain whole in
 [part141](../history/stitchcad-defects-part141.md). Current trig status correction D237 follows.
 
-## D237 — trig certificate chapter retains superseded inverse status
+Closed D237 report and complete0325 correction evidence remain whole in
+[part142](../history/stitchcad-defects-part142.md). Current membership wording correction D238 follows.
 
-At8827a23, intro says atan/atan2 unimplemented; earlier forward/chunk/controller sections say inverse
-coverage/API/admission open. Later same chapter records complete0286 certificate/admitted0287 plan/
-native0288 API, and actual numeric.rs exports checked_atan/atan2. Reproduce those conflicting phrases.
-Impact: mdBook primary view contradicts implemented capabilities and itself. Root: staged pilot prose
-remained in present tense after later completion; overview-only D235 repair missed this annex.
-Owner: G1-SLICE.6.2.2.c.2.4.1, P1 fix0325 with actual source/current chapter review; retain whole old
-chapter479 before condensing historical pilot receipts. Preserve tangent resource/full-AST/platform
-boundaries and complete mature algorithms/certificate/cleanup rules. No massive certificate rerun.
-- [x] ROOT CAUSE0325: checked_atan/atan2 and mature sections contradict original pending claims; source review rc=0.
-- [x] ADDRESSED0325: current status aligns; whole prior chapter479 exact; book/publication76/89 rc=0.
-- [x] NO REGRESSION0325: native command6/0; kernels/certificate sources unchanged; math/runtime rules retained, rc=0.
+## D238 — membership frontier leaves profile intent/application ambiguous
+
+At516895d, size-membership's final paragraph says profile transformations remain later, without
+separating implemented immutable intent from future application. Current SizeSetResolutionIntent and
+companion chapter implement that intent. Reproduce the unqualified frontier against those actual APIs.
+Impact: primary book view can underreport structural availability. Owner G1-SLICE.6.2.2.c.2.4.3,
+P2 fix0327 while updating artifact inputs. State implemented intent and deferred actual profile application;
+retain geometry/global currentness/evidence/release boundaries. No measurement-model code changes.
+- [x] ROOT CAUSE0327: existing intent exports/source contradict unqualified pending wording; source review rc=0.
+- [x] ADDRESSED0327: membership distinguishes implemented intent from application; book/publication76/93 rc=0.
+- [x] NO REGRESSION0327: native command11/0, measure sources unchanged; physical/global/release boundaries retained, rc=0.
 
 ## Active continuity followup
 

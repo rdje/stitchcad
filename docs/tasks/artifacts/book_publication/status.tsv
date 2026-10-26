@@ -89,3 +89,6 @@ immutable SizeSet resolution intent	spec/size-set-transformations.md	crates/sc-m
 command evaluation requests	spec/evaluation-requests.md	crates/sc-core/src/command/evaluation.rs	CommandEvaluation	G1-SLICE.6.2.2.c.2.2	4.4
 command artifact requests	spec/artifact-requests.md	crates/sc-core/src/command/artifact.rs	CommandArtifact	G1-SLICE.6.2.2.c.2.4.1	4.4
 graded artifact size selection	spec/artifact-requests.md	crates/sc-core/src/command/grading_selection.rs	GradedSizeSelection	G1-SLICE.6.2.2.c.2.4.2	4.4
+plot artifact requests	spec/artifact-requests.md	crates/sc-core/src/command/plot.rs	ExportPlt	G1-SLICE.6.2.2.c.2.4.3	7.5
+print artifact requests	spec/artifact-requests.md	crates/sc-core/src/command/print.rs	ExportPdf	G1-SLICE.6.2.2.c.2.4.3	7.5
+authored print settings	spec/artifact-requests.md	crates/sc-core/src/command/pdf_print.rs	PdfPrintSettings	G1-SLICE.6.2.2.c.2.4.3	7.5

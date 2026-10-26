@@ -9,6 +9,9 @@ mod context;
 mod evaluation;
 mod grading_selection;
 mod payload;
+mod pdf_print;
+mod plot;
+mod print;
 mod query;
 mod snapshot;
 pub use artifact::{ArtifactPayload, CommandArtifact, DxfGrading, DxfTarget, ExportDxf};
@@ -26,6 +29,11 @@ pub use payload::{
     AssignMaterial, AssignMaterialError, ChangeMeasurement, CommandMutation, MutationPayload,
     PieceSelection, PieceSelectionError,
 };
+pub use pdf_print::{
+    PdfLayout, PdfOrientation, PdfPrintSettings, PdfPrintSettingsError, PdfTileOrder, PdfTilePaper,
+};
+pub use plot::ExportPlt;
+pub use print::ExportPdf;
 pub use query::{CommandQuery, CommandQueryContext, QueryPayload};
 pub use snapshot::CommandSnapshotContext;
 

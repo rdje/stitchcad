@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — plotter and vector-print requests
+
+0327 .6.2.2.c.2.4.3 retains PLT profile/result bindings and PDF logical/factory inputs plus authored print choices.
+A0/tiled A3/A4, orientation/order and positive overlap/scale-square are explicit; invalid lengths retain values.
+Native3+4+2+2 pass0; initial helper-expect lint3 resolved by two fixture-only allowances, final strict lint/fmt0.
+Book/publication76-93 pass0; D238 clarifies implemented intent versus application;481/299/142 exact516895d.
+Promotion declined: existing print/profile contracts. G1still6/18; tech pack next, full CI integration/pre-push.
+
 ## _(2026-10-26 UTC)_ — explicit graded DXF carriage
 
 0326 .6.2.2.c.2.4.2 preserves ordered distinct member claims at one SizeSet/Count revision; empty/duplicate

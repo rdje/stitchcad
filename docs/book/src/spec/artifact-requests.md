@@ -1,6 +1,6 @@
 # Typed artifact requests
 
-sc-core provides explicit DXF carriages and per-artifact uncertainty query schemas.
+sc-core provides DXF, PLT and PDF request schemas and per-artifact uncertainty inspection.
 [Interchange](interchange-dialects.md) defines future writer behavior.
 
 ## Request one named DXF target
@@ -41,7 +41,7 @@ It names the configuration; a format token or all Design unknowns cannot substit
 A future handler must compute and record that closure. This constructor creates no files or observable cache.
 
 Closure inspection requires inspect; generation requires generate. Both preserve exact snapshot claims.
-Other formats follow; constructors grant no authority and execute no handler.
+Tech-pack requests follow; constructors grant no authority and execute no handler.
 
 ## Registered graded carriages
 
@@ -63,3 +63,32 @@ Single-instance requests retain `SingleSize`. Closure inspection carries these s
 Execution must validate actual membership, base/rule/break provenance and profile bindings before
 serialization. No deltas are derived from chart differences. All-contours needs its separately
 registered/validated target; no writer flag silently adds one.
+
+## Plotter and vector-print requests
+
+`ExportPlt::new(instance, selected_pin, parameters)` names target `plt` and the exact resolved profile
+result supplying pen-per-function mapping, declared scale and calibration. The request copies no pen
+values or uncertainty states. Execution must validate those actual bindings and provenance.
+
+`ExportPdf::new(instance, settings, profile)` names `pdf-a0`, whose contract also admits tiled A3/A4.
+The profile choice is explicit `EvaluationProfile::Logical` or `FactoryResolved`; logical selection
+supplies no unbound factory quantity. `PdfPrintSettings::new(layout, orientation, scale_square)` retains:
+
+- `PdfLayout::A0`, or `Tiled { paper, overlap, order }` with A3/A4 paper;
+- portrait/landscape orientation and row-major/column-major tile traversal;
+- positive overlap for tiling and an exact positive scale-square side, both as `Length`.
+
+```rust
+use sc_core::command::{PdfLayout, PdfOrientation, PdfPrintSettings, PdfTileOrder, PdfTilePaper};
+use sc_units::Length;
+let settings = PdfPrintSettings::new(PdfLayout::Tiled { paper: PdfTilePaper::A4,
+    overlap: Length::from_micrometres(15_000)?, order: PdfTileOrder::RowMajor },
+    PdfOrientation::Portrait, Length::from_micrometres(100_000)?)?;
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+`NonPositiveScaleSquare` and `NonPositiveOverlap` retain refused values, with no clamping.
+These are authored output choices. They certify neither page fit nor printer calibration.
+The writer must preserve 1:1 geometry, registration marks, page order and piece identity; a nonfitting
+A0 piece refuses instead of silent fitting. Rendering, physical scale checks and unknown-value policy
+remain later work. PLT/PDF closure queries carry the same concrete input/settings as generation.
