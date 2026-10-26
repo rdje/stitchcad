@@ -190,3 +190,42 @@ fn approval_intent_binds_exact_candidate_scope_and_human_only_metadata_without_t
     }
     Ok(())
 }
+
+#[test]
+fn every_normative_release_command_has_a_concrete_constructible_payload(
+) -> Result<(), Box<dyn std::error::Error>> {
+    use sc_core::{
+        command::{ApprovalScopeTarget, ApprovePackage},
+        ontology::PackageIdentity,
+    };
+    let actual = [
+        ReleasePayload::PrepareRelease(PrepareRelease::new(artifacts()?)?),
+        ReleasePayload::ApprovePackage(ApprovePackage::new(
+            PackageIdentity::new("fixture_algorithm".to_owned(), vec![0, 255, 1])?,
+            ApprovalScopeTarget::from_entity_id(Id::from_bits(50)),
+        )),
+    ];
+    let book = include_str!("../../../docs/book/src/spec/command-layer.md")
+        .split("### 1.1 The commands")
+        .nth(1)
+        .ok_or("command table absent")?
+        .split("## 2.")
+        .next()
+        .ok_or("command table boundary absent")?;
+    let expected: Vec<_> = book
+        .lines()
+        .filter(|line| line.contains("| `release` |"))
+        .map(|line| line.split('`').nth(1).ok_or("release identity absent"))
+        .collect::<Result<_, _>>()?;
+    assert_eq!(
+        actual
+            .iter()
+            .map(|payload| payload.command_id().token())
+            .collect::<Vec<_>>(),
+        expected
+    );
+    assert!(actual
+        .iter()
+        .all(|payload| payload.command_id().class() == CommandClass::Release));
+    Ok(())
+}

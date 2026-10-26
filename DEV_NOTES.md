@@ -3,6 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — release input-schema review
+
+0334 .6.2.2.c.2.5.5 closes two concrete release inputs against normative book rows; changed target6/0.
+Library identical5a30f12; other9 proofs retained, strict lint/fmt/book/publication76-99/census9-6-8-0 pass0.
+488/306 whole5a30f12 exact0; actual authorization, hashing, scope/date/records stay handlers. G1still6/18.
+Promotion declined: existing ruled boundary; combined schema review next, full CI integration/pre-push.
+
 ## _(2026-10-26 UTC)_ — exact detached approval intent
 
 0333 .6.2.2.c.2.5.4 adds shared exact opaque algorithm/digest identity; blank/empty fields refuse original content.
@@ -192,14 +199,8 @@ Origin checks actual source revision and separate target against garment/MTM rec
 no source mutation, allocator or transformed output. Pin3+garment8+MTM7 pass0; strict lint/fmt/book0.
 450/451/283 whole5a87ed0 Git/hash/public exact0. G1still5/18; .4.2 payloads next. Promotion: existing SizeSet decision; broad checks remain integration/pre-push.
 
-## _(2026-10-26 UTC)_ — chart/body/break structural scope closure
-
-0310 .4c.3e.2 reviews roadmap3.4 and canonical membership/axis/chart/body-Ease/break/composite
-contracts after D230/D231 repairs. Local supplied snapshots/coverage remain separate from global
-Design truth, numeric execution, physical equivalence, profile resolution, storage and approval.
-Main/companion book and decision boundaries align. Rust sources equal7618d20 and current HEAD,
-so focused17-test evidence is reused; book and three exact rendered target anchors pass0.448/449/
-282 whole19dbadc Git/hash/public exact0. .4c.3/.3e close structurally; profile intent .4 next; .5/.4d later. G1still5/18. Promotion: existing SizeSet decision extended; no broad rerun.
+[Complete chart/body/break scope lesson](docs/history/stitchcad-devnotes-part488.md) retains
+its original acceptance, retained proof, fixes and remaining intent/execution boundaries.
 
 [Complete MTM fixture-plan integration lesson](docs/history/stitchcad-devnotes-part487.md)
 retains original D230/D231 reproduction, exact producer/input proofs and remaining verification owners.

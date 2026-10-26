@@ -728,7 +728,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal: 0329 combined artifact input-schema scope closes; whole review/proofs [retained](../history/stitchcad-devnotes-part484.md).
 - ID: `G1-SLICE.6.2.2.c.2.5`
-  Status: `in_progress`
+  Status: `done`
   Goal: exact release candidate preparation and human approval target schemas; no authority granted by actor claims.
   Children: .1 D239 identity-boundary diagnosis/proposal; .2 ruling adoption; .3 candidate inputs;
   .4 human approval inputs; .5 combined release-schema review before .2.6.
@@ -743,27 +743,24 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0332 explicit candidate request inputs; [whole scope/proofs](../history/stitchcad-devnotes-part487.md).
 - ID: `G1-SLICE.6.2.2.c.2.5.4`
   Status: `done`
-  Goal:0333 exact PackageIdentity/scope approval intent with no grant or detached-record creation.
-  Own core ontology package_identity/reexport, command approval/release/reexports and existing release tests.
-  Identity preserves opaque algorithm label and nonempty digest bytes; blank label/empty digest refuse,
-  without choosing/normalizing algorithm or claiming width/hash/candidate validity. Core shares the value.
-  ApprovalScopeTarget names actual immutable scope record; lookup/tuple/evidence/package coverage deferred.
-  ApprovePackage carries exact identity/scope only; shared context retains untrusted actor/principal/revision.
-  Both claim kinds may construct data; core .6.3 must require actual authenticated human/approve grant.
-  No caller date/approval fact/hash generation; actual human-act date belongs to detached execution record.
-  Own487 whole0332 task/oldest0309 lesson/prior inverse native proof receipt,305 ledger from022b66d;
-  exact Git/hash/public before retirement. Own release-book/publication/live records and focused release/
-  catalog/query/artifact tests, selected strict lint/fmt/book/census; full CI integration/pre-push.
-  - [x] ROOT CAUSE (WHY + WHERE): approval must name exact content identity and reviewed scope, not a Design/
-    latest lookup or caller approval fact. Native release5/artifact5/query2/catalog2 pass14/0; rc=0.
-  - [x] ADDRESSED: opaque exact identity/refusals and explicit scope retain all claims; metadata separates
-    approve from generate; selected strict lint/fmt/book/publication76/99/census9/6/8/0 pass; rc=0.
-  - [x] NO REGRESSION: existing candidate/artifact/query/catalog green; no algorithm choice/normalization,
-    hash/record/date/authority generated.487/305 whole022b66d Git/hash/public equality pass; rc=0.
-  Commit0333; next .2.5.5 release review. Promotion declined: existing ruled contract; full CI integration/pre-push.
+  Goal:0333 exact candidate/scope approval intent; [whole scope/proofs](../history/stitchcad-devnotes-part488.md).
 - ID: `G1-SLICE.6.2.2.c.2.5.5`
-  Status: `pending`
-  Goal: combined release-schema review with human-only metadata and no candidate/approval execution claim.
+  Status: `done`
+  Goal:0334 combined ruled release input review; actual two-payload construction matches normative release rows.
+  Own existing release native target, release-book scope and parent/frontier/live records. Verify candidate
+  content/snapshot, exact opaque identity/scope claims, generate versus human-only approve and detached boundary.
+  New native row coverage watches concrete schemas; actual hashing/auth/subject/scope/date/records still handlers.
+  Reuse0333 unchanged library/other9 focused proof; changed native release target, strict selected lint/fmt,
+  book/publication/census. No real approval or full bus/exit claim. Full CI stays integration/pre-push.
+  Own488 whole0333 task/oldest0310 lesson and306 ledger from5a30f12, exact source/hash/public before retirement.
+  Close .2.5 input scope only; next .2.6 combined schema/source/permission review before actual .6.3 authority.
+  - [x] ROOT CAUSE (WHY + WHERE): final ruled release input inventory requires concrete schema coverage;
+    native release6/0 constructs both normative commands and checks exact class identity; rc=0.
+  - [x] ADDRESSED: candidate/approval inputs retain content, snapshots and exact identity/scope claims;
+    selected strict lint/fmt/book/publication76/99/census9/6/8/0 pass; rc=0.
+  - [x] NO REGRESSION: library byte-identical5a30f12, other9 focused proofs retained;488/306 exact Git/hash/
+    public equality pass. No approval/hash/date/record execution claimed; rc=0.
+  Commit0334; .2.5 input scope done. Promotion declined: existing ruled boundary; full CI integration/pre-push.
 - ID: `G1-SLICE.6.2.2.c.2.6`
   Status: `pending`
   Goal: bounded current schema/source/permission metadata review before actual authorization/handlers .6.3+.

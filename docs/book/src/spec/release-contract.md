@@ -79,7 +79,7 @@ ApprovePackage appends the record without rewriting the manifest or artifact set
 for delivery does not put its bytes into that content identity. Withdrawal appends another record;
 prior records remain readable. Values in a record cannot grant human authority by themselves.
 
-**Implemented candidate request schema.** sc-core `PrepareRelease::new(artifacts)` requires a nonempty
+**Reviewed release input schemas.** sc-core `PrepareRelease::new(artifacts)` requires a nonempty
 ordered `Vec<ArtifactPayload>`; empty input returns `NoArtifacts`. Order and repetition stay explicit.
 `CommandRelease` binds `ReleasePayload::PrepareRelease` to the shared exact Design/actor/revision snapshot.
 Its identity derives release/generate metadata, without mutation retry/group fields or an approval grant.

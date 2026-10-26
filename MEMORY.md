@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0333 .6.2.2.c.2.5.4 adds opaque exact PackageIdentity and explicit scope approval intent; no grant/record/date generated.
-- Blank algorithm/empty digest refuse; case/spacing/bytes retained. Actual algorithm/width/hash/scope/human checks deferred.
-- Native release5/artifact5/query2/catalog2 + strict selected lint/fmt/book/publication76-99/census9-6-8-0 pass0.
--487/305 whole022b66d source/hash/public exact0. NEXT .6.2.2.c.2.5.5 combined release-schema review.
-- G0 MostlyDone/closure unapproved; G1 In Progress6/18 unchanged. Human actor claims alone confer no approval authority.
+-0334 .6.2.2.c.2.5.5 closes current release input schemas; both concrete payloads match normative book rows.
+- Candidate/snapshot and exact identity/scope claims retain detached approval boundary; actual handlers/auth remain.
+- Changed release6/0; library identical5a30f12/other9 proofs retained. Strict lint/fmt/book/pub76-99/census0.
+-488/306 whole5a30f12 source/hash/public exact0. NEXT .6.2.2.c.2.6 combined schema/source/permission review.
+- G0 MostlyDone/closure unapproved; G1 In Progress6/18 unchanged. Actor claims confer no approval authority.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
