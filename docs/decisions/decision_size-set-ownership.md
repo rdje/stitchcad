@@ -155,3 +155,9 @@ The custom singleton keeps its authored axis/point. Regeneration requires comple
 grading preserves the original chart/member refusal after current metadata checks. Numeric source
 state remains borrowed without body-plus-Ease evaluation. Five new MTM, fifteen original MTM and
 five garment contracts pass; unified-family review remains .3.3, execution/persistence separate.
+
+G1-SLICE.4c.3d.3.3 adds explicit SizeSetInputs::Garment/Mtm variants over the actual validated views.
+Common record/path access delegates without inferring a family from labels/system/singleton count;
+a one-member garment chart remains garment provenance. Current focused review passes6 garment,
+6 MTM and5 break contracts, selected lint/fmt/book. Signed-break/composite-input implementation is
+complete; .4c.3e reviews scope, .4c.4 owns transformations, later owners retain execution/storage.

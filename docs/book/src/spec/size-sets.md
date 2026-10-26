@@ -262,9 +262,9 @@ Unknown; Derived values still require formula evaluation. Original records can b
 borrowed chart/break APIs and their supplied contexts, with their original observation/formula errors.
 The view does not manufacture a value, base instance, grade rules, geometry, equivalence result,
 profile decision or release approval. MTM body/Ease composition is implemented below; the
-shared-family review .3.3, actual instantiation and persisted storage remain separately owned.
+unified entry point is implemented below. Actual instantiation and persisted storage remain separate.
 
-Five composite garment tests plus the five break collection tests pass; selected strict lint,
+Six composite garment tests plus the five break collection tests pass; selected strict lint,
 formatting and book build pass. Tests include actual record borrows, both structural paths, draft gaps,
 three mismatched snapshot components, cross-inventory aliases and preserved unavailable numeric input.
 
@@ -304,9 +304,55 @@ require observation/evaluation. Structural input coverage does not certify numer
 profile resolution, an evaluated instance or release approval. Reconstruct the view for replacement
 snapshots; global currentness is still a separate Design/registry obligation.
 
-Five MTM composite, fifteen existing MTM chart and five garment composite tests pass, with selected
-strict lint/formatting and book build. The original MTM fixture is shared without changing its fifteen
-contracts. Unified family/path review remains .4c.3d.3.3; these are input views, not persisted storage.
+Six MTM composite and six garment composite contracts now pass with the five break collection tests.
+The fifteen original MTM chart contracts passed after fixture sharing in0307. Selected strict lint/
+formatting and book build pass; the unified entry point below retains these input-view boundaries.
+
+### Unified current input family — G1-SLICE.4c.3d.3.3
+
+`SizeSetInputs` is the common typed entry point over validated garment or MTM views. Its explicit
+`Garment` and `Mtm` variants retain the original chart family. `From` conversions accept actual
+`GarmentSizeSetInputs`/`MtmSizeSetInputs` records; no family is inferred from a label, `custom` system
+or singleton count. A custom one-member garment chart remains a garment chart. MTM means its authored
+body/Ease correspondence, with the original MTM grading refusal.
+
+```rust
+use sc_measure::{SizeSetInputs, SizeInstantiationPath};
+// `garment_inputs` was built from the actual shared chart/break contexts above.
+let inputs = SizeSetInputs::from(garment_inputs);
+let reference = inputs.reference();
+let membership = inputs.membership(); // same actual borrowed record
+let axes = inputs.axes();
+let breaks = inputs.breaks();
+let result = inputs.validate_inputs_for(SizeInstantiationPath::Regeneration);
+// Match the explicit variant when using a family-specific chart/body/Ease API.
+```
+
+The common getters borrow the original membership/axes/breaks. `validate_current` and
+`validate_inputs_for` delegate to the selected family's original checks, preserving exact missing
+cells, mapping errors, snapshot conflicts and MTM refusal. The enum introduces no wire format,
+persisted container, numeric cache or alternative validation path.
+
+The bounded structural review keeps these requirements distinct:
+
+| Requirement | Implemented boundary |
+| --- | --- |
+| D70 authored axes/member points | Complete current axes, including at least one explicit singleton axis |
+| D228 signed breaks | Explicit axis/POM/adjacent pair and canonical state/source |
+| Required dimensions and gaps | Independent authored inventory; absence never becomes zero |
+| Garment path inputs | Complete current chart; grading also requires explicit break coverage |
+| MTM path inputs | Complete body/Ease mappings for regeneration; original grading refusal |
+| Current snapshots/identity | Shared actual inputs; cross-view aliases and replaced bindings refuse |
+| Family selection | Explicit validated view, never inferred from labels/system/member count |
+
+The current focused gate runs six garment composite, six MTM composite and five break collection
+contracts:17 passed/0 failed. Selected strict lint/formatting and book build pass. Earlier child
+records retain axis/member, signed-state and original chart proofs; broad platform/physical/
+serialization verification is deferred to its named integration and later-gate owners.
+
+This closes the signed-break/composite-input implementation slice. Chart/body/break scope review
+continues at .4c.3e; immutable profile transformation intent remains .4c.4. Numeric execution,
+regeneration/grading geometry, equivalence, profile precedence, storage and release are still separate.
 
 ## 7. Multi-dimensional systems
 

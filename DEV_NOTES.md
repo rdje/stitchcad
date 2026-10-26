@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — unified current SizeSet input family
+
+0308 .4c.3d.3.3 wraps actual validated garment/MTM views in explicit SizeSetInputs variants. Common
+reference/record/path access delegates without cloning metadata or inferring provenance from labels,
+custom system or singleton count. A one-member garment chart stays Garment; original MTM refusal
+and canonical body/Ease sources survive. Native garment6+MTM6+breaks5 pass0; strict selected lint/
+fmt/book0. Bounded book review distinguishes D70/D228 identity, coverage, paths and shared snapshots
+from numeric/physical/global-currentness/storage/approval proof.444/445/280 whole478ffe7 Git/hash/
+public exact0. .3d implementation closes; .3e scope review next, profiles .4 later. G1still5/18.
+Promotion: existing SizeSet decision extended; broad verification remains its integration/pre-push owner.
+
 ## _(2026-10-26 UTC)_ — composite MTM body/Ease SizeSet inputs
 
 0307 .4c.3d.3.2 composes the actual custom singleton/axis/body-Ease chart/break inputs. Shared
@@ -254,17 +265,8 @@ The control now requires existing same-volume Git TMPDIR and no startup warnings
 scratch caches.389/257 retain whole0284 task/ledger. Book/live align; no project cleanup/cadence reset.
 Promotion: inverse decision records the resolved defect; full45M is next, broader checks deferred.
 
-## _(2026-10-26 UTC)_ — resumable inverse certificate controller
-
-0284 .5d.1.2.2.2.b.2.b.2.a captures170 build inputs and a byte-exact producer copy, with four
-critical live math/coverage sources checked separately. Bounded native parts publish only after
-terminal success/exact reading; manifest completion requires all450 ranges.100k then resumed200k
-and independent partial reader pass0; full-reader partial refusal, corrupted-row3/coverage2/
-source-drift1/prohibited-live-read1/actual owned-child reaping2 controls pass, rc=0. Lock absent,
-registry empty. Full45M remains .b; inverse runtime admission separate.386–388/256 retain exact
-whole task/lesson/closed repair scope/ledger. Promotion: inverse decision records custody and scope.
-Read-only cleanup inspect accepts actual certificate .bin chunks: defect owned P1 .h immediately
-after this commit, before full coverage or cleanup. No deletion; book/live/task preserve the finding.
+[Complete inverse-controller lesson](docs/history/stitchcad-devnotes-part445.md) retains
+its original source/checkpoint/concurrency/byte boundaries, checks and promotion decision.
 
 [Complete inverse feasibility/chunk lessons](docs/history/stitchcad-devnotes-part443.md) retain
 their original exact interval/source/format boundaries, checks and promotion decisions.

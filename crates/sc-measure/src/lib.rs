@@ -64,7 +64,7 @@ pub use size_breaks::{
 mod size_set;
 pub use size_set::{
     GarmentSizeSetInputs, MtmSizeSetInputs, SizeInstantiationPath, SizeSetInputError,
-    SizeSetSnapshot,
+    SizeSetInputs, SizeSetSnapshot,
 };
 
 mod size_chart;

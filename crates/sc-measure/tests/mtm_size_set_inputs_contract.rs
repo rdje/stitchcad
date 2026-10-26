@@ -286,3 +286,39 @@ fn structural_regeneration_does_not_evaluate_or_default_unknown_body_inputs() {
         },
     );
 }
+
+#[test]
+fn unified_mtm_family_keeps_original_paths_and_canonical_borrows() {
+    let f = Fixture::new();
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let inputs = MtmSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("actual body/Ease inputs");
+            let family = SizeSetInputs::from(inputs);
+            assert!(matches!(family, SizeSetInputs::Mtm(_)));
+            assert_eq!(family.reference(), inputs.reference());
+            assert!(std::ptr::eq(family.membership(), inputs.membership()));
+            assert!(std::ptr::eq(family.axes(), inputs.axes()));
+            assert!(std::ptr::eq(family.breaks(), inputs.breaks()));
+            assert_eq!(family.validate_current(), inputs.validate_current());
+            for path in [
+                SizeInstantiationPath::Regeneration,
+                SizeInstantiationPath::GradeRules,
+            ] {
+                assert_eq!(
+                    family.validate_inputs_for(path),
+                    inputs.validate_inputs_for(path)
+                );
+            }
+            assert!(std::ptr::eq(
+                inputs
+                    .chart()
+                    .body_declaration(id(2), chart_context)
+                    .expect("original body"),
+                &f.declarations[0]
+            ));
+        },
+    );
+}

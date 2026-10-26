@@ -425,13 +425,13 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `STITCHCAD-G1-0035` (`285e238`).
 
 - ID: `G1-SLICE.4c.3d`
-  Status: `in_progress`
+  Status: `done`
   Goal: signed canonical adjacent breaks and composite SizeSet over membership/axes/chart with source/
   state/provenance; per-axis/dimension coverage and typed path readiness under the confirmed D70 rule.
   Acceptance: authored adjacency, zero/uneven breaks, current references, missing dimension/pair and
   MTM path-2 refusal; no rounded values, generated equivalence or profile execution claimed.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: focused declaration/coverage/composite children0303/0304/0306–0308 pass0; structural scope only.
+  Commit: STITCHCAD-G1-0303/0304/0306/0307/0308.
 
 - ID: `G1-SLICE.4c.3d.0`
   Status: `done`
@@ -446,7 +446,7 @@ metadata signoff unchanged; the named table slice follows.
   Goal:0304 required break coverage verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part437.md).
   Commit: STITCHCAD-G1-0304.
 - ID: `G1-SLICE.4c.3d.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: composite membership/axes/garment-or-MTM chart/break inputs and typed structural path readiness;
   no generated equivalence, profile execution or physical/release certification.
   Children .3.1 garment current-input view, .3.2 MTM body/Ease input view, .3.3 shared input/path review.
@@ -456,24 +456,26 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0306.
 - ID: `G1-SLICE.4c.3d.3.2`
   Status: `done`
-  Goal:0307 composite custom singleton body/Ease inputs, shared actual snapshots and original typed path-2 refusal.
-  Paths: crates/sc-measure/src/size_set.rs;crates/sc-measure/src/size_set/;crates/sc-measure/src/lib.rs;
-  crates/sc-measure/src/mtm_chart.rs;crates/sc-measure/src/ease_set.rs;crates/sc-measure/tests/mtm_size_set_inputs_contract.rs;
-  crates/sc-measure/tests/mtm_chart_contract.rs;crates/sc-measure/tests/support/mtm_fixture.rs; book/decision/live docs.
-  Share snapshot/identity validation with garment view; require complete body/Ease inputs for regeneration without
-  adding them or inventing a garment value. Retain original MTM grading refusal after current metadata validation.
-  Own442 whole0306 task,443 whole oldest0282-0283 lesson group and279 ledger from4ae9650; whole Git/hash/public proof.
-  Focused MTM/new garment regression targets, selected strict lint/fmt/book; no full CI or numeric kernel campaign.
-  Acceptance0307:
-  - [x] ROOT CAUSE0307: rg MtmSizeSetInputs/path -> mtm.rs:12/110, shared snapshot/identity helpers:9/26, rc=0; original body/Ease source and singleton refusal retained.
-  - [x] ADDRESSED0307: cargo test -p sc-measure --test mtm_size_set_inputs_contract --test mtm_chart_contract --test garment_size_set_inputs_contract ->5+15+5 passed/0 failed, rc=0.
-  - [x] NO REGRESSION0307: selected lib/three-test strict Clippy rc=0 after fixture import cleanup; fmt rc=0; book rc=0. Shared validators preserve garment contracts and original fifteen MTM tests.
-  - [x] LOCKSTEP0307:442/443/279 whole4ae9650 Git/hash/public exact rc=0; book/decision/live aligned; no body-plus-Ease arithmetic/execution/approval claim.
-  Promotion: existing SizeSet decision extended. Commit: STITCHCAD-G1-0307. Next .3.3 unified family/path review.
-
+  Goal:0307 MTM inputs verified5+15+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part444.md).
+  Commit: STITCHCAD-G1-0307.
 - ID: `G1-SLICE.4c.3d.3.3`
-  Status: `pending`
-  Goal: coherent garment/MTM typed SizeSet input entry point and bounded combined structural requirement review.
+  Status: `done`
+  Goal:0308 explicit typed garment/MTM SizeSet input family and bounded structural path review.
+  Paths: crates/sc-measure/src/size_set.rs;crates/sc-measure/src/lib.rs;
+  crates/sc-measure/tests/garment_size_set_inputs_contract.rs;crates/sc-measure/tests/mtm_size_set_inputs_contract.rs;
+  book/decision/live docs. Select the family from an actual validated view, never labels/system/member count.
+  Common getters/path checks borrow and delegate actual records/errors; no numeric/cache/storage/approval claim.
+  Review D70/D228 identities, current snapshots, sparse/member order, chart coverage, signed breaks and MTM refusal
+  against owned focused evidence; broad physical/platform/serialization proof stays later .4d/integration owners.
+  Own444 whole0307 task,445 oldest0284 lesson and280 ledger from478ffe7; whole Git/hash/public checks.
+  Focused garment/MTM composite and break-collection targets, selected strict lint/fmt/book.
+  Acceptance0308:
+  - [x] ROOT CAUSE0308: rg typed family/current/path -> size_set.rs:34/86/96, rc=0; From variants wrap actual validated views, no family inference.
+  - [x] ADDRESSED0308: cargo test -p sc-measure --test garment_size_set_inputs_contract --test mtm_size_set_inputs_contract --test size_breaks_contract ->6+6+5 passed/0 failed, rc=0.
+  - [x] NO REGRESSION0308: selected lib/three-test strict Clippy rc=0; fmt rc=0; book rc=0. Custom singleton garment remains Garment; original MTM refusal/record borrows preserved.
+  - [x] LOCKSTEP0308:444/445/280 whole478ffe7 Git/hash/public exact rc=0; bounded book matrix separates D70/D228/chart/coverage/path/snapshot/family requirements from later physical/storage proof.
+  Promotion: existing SizeSet decision extended. Commit: STITCHCAD-G1-0308. .3d/.3d.3 implementation complete; .3e scope review next.
+
 
 
 - ID: `G1-SLICE.4c.3d.3.h15`

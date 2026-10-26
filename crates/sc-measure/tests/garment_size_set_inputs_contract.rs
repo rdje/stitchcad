@@ -149,6 +149,23 @@ fn complete_current_view_borrows_actual_records_and_validates_both_structural_pa
             let inputs = GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
                 .expect("one actual snapshot");
             assert_eq!(inputs.reference(), f.membership.reference());
+            let family = SizeSetInputs::from(inputs);
+            assert!(matches!(family, SizeSetInputs::Garment(_)));
+            assert_eq!(family.reference(), inputs.reference());
+            assert!(std::ptr::eq(family.membership(), inputs.membership()));
+            assert!(std::ptr::eq(family.axes(), inputs.axes()));
+            assert!(std::ptr::eq(family.breaks(), inputs.breaks()));
+            assert_eq!(family.validate_current(), inputs.validate_current());
+            for path in [
+                SizeInstantiationPath::Regeneration,
+                SizeInstantiationPath::GradeRules,
+            ] {
+                assert_eq!(
+                    family.validate_inputs_for(path),
+                    inputs.validate_inputs_for(path)
+                );
+            }
+
             assert!(std::ptr::eq(inputs.membership(), &f.membership));
             assert!(std::ptr::eq(inputs.axes(), &f.axes));
             assert!(std::ptr::eq(inputs.chart(), chart));
@@ -306,6 +323,44 @@ fn structural_path_checks_preserve_original_unavailable_numeric_inputs() {
                         observation: id(8888)
                     }
                 ))
+            );
+        },
+    );
+}
+
+#[test]
+fn explicit_garment_family_does_not_infer_mtm_from_custom_singleton_membership() {
+    let mut f = Fixture::new(MeasurementKind::Garment);
+    let mut members = f.membership.definition().clone();
+    members.members.truncate(1);
+    members.base = id(2);
+    f.membership = SizeMembership::new(members).expect("authored custom singleton");
+    let mut axes = f.axes.definition().clone();
+    axes.points.retain(|point| point.member == id(2));
+    let refs = f.lengths.iter().collect::<Vec<_>>();
+    let sources = SizeAxisSourceContext::new(&refs, &[]).expect("canonical records");
+    f.axes = SizeAxes::new(axes, &f.membership, &sources).expect("explicit singleton axis");
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let family = SizeSetInputs::from(
+                GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                    .expect("actual garment-chart provenance"),
+            );
+            assert!(matches!(family, SizeSetInputs::Garment(_)));
+            assert_eq!(
+                family.validate_inputs_for(SizeInstantiationPath::Regeneration),
+                Ok(())
+            );
+            assert_eq!(
+                family.validate_inputs_for(SizeInstantiationPath::GradeRules),
+                Err(SizeSetInputError::Breaks(Box::new(
+                    SizeBreaksError::Singleton {
+                        set: id(1),
+                        member: id(2)
+                    }
+                )))
             );
         },
     );

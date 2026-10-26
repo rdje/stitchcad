@@ -74,7 +74,8 @@ actual axes, named measurement dimensions and authored adjacent member pairs, bo
 Length state/source. Explicit required dimensions, current adjacent-pair coverage and singleton grading
 refusal are implemented at .4c.3d.2. [Garment SizeSet input views](../spec/size-sets.md#composite-garment-sizeset-inputs--g1-slice4c3d31)
 now compose shared current snapshots and typed structural paths. [MTM body/Ease composition](../spec/size-sets.md#composite-mtm-bodyease-inputs--g1-slice4c3d32)
-preserves singleton grading refusal. Unified input-family review remains .4c.3d.3.3.
+preserves singleton grading refusal. The [unified input family](../spec/size-sets.md#unified-current-input-family--g1-slice4c3d33)
+now preserves explicit chart kinds and shared path checks; scope review/profile transformations remain .4c.3e/.4.
 
 ## Remaining proofs
 
@@ -84,8 +85,9 @@ tangent's separate resource plan and implementation remain open.
 
 Individual named axes with explicit ordered values and canonical source/state borrows are available
 ([contract](../spec/size-sets.md#executable-individual-axes--g1-slice4c21)). [Complete member coordinates](../spec/size-sets.md#complete-axismember-points--g1-slice4c22)
-require >=1 explicit axis, including singletons. Full SizeSet breaks/composition and resolved profile
-intent remain G1-SLICE.4c work. D70 requires at least one authored axis per complete set. Recipe evaluation is .5, bus/undo .6, storage .7, constraints .8,
+require >=1 explicit axis, including singletons. Signed breaks, explicit coverage and composite current
+inputs are implemented. Scope review and resolved profile intent remain G1-SLICE.4c.3e/.4.
+Recipe evaluation is .5, bus/undo .6, storage .7, constraints .8,
 API/MCP .9 and CLI .10; browser/runtime/canvas/license proofs and full G1 exit remain later children.
 The current ontology supports authored operation identities; that is not an executed recipe.
 

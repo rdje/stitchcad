@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0307 — composite current MTM SizeSet inputs
+## STITCHCAD-G1-0308 — unified current SizeSet input family
 
-Original singleton/axis/body-Ease/break records share actual snapshots; regeneration coverage and original MTM grading refusal preserved.
-Native new MTM5+original15+garment5/0, selected strict lint/fmt/book0; whole442/443/279 retention exact.
-No numeric garment result/execution claim; G1 remains5/18. Unified input-family review next.
+Explicit garment/MTM variants preserve actual records, provenance and original typed path errors without family inference.
+Native garment6+MTM6+breaks5/0, selected strict lint/fmt/book0; bounded structural review and whole444/445/280
+retention exact. Signed-break/composite implementation closes; G1 remains5/18, scope review/profiles next.
 
 # Sealed archive — earlier slices
+
+| [part280](docs/history/stitchcad-changelog-part280.md) | whole0307 | 6 lines, 400 bytes, sha256:ca7fd54d… |
 
 | [part279](docs/history/stitchcad-changelog-part279.md) | whole0306 | 6 lines, 374 bytes, sha256:e746014e… |
 
