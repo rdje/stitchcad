@@ -3,17 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-26 UTC)_ — v2-compatible legacy verification
+## _(2026-10-26 UTC)_ — complete Piece companion inventory
 
-0344 keeps original old-reader traps and refusal producer on exact v1 fixtures. Current reader materializes
-v2; original predecessor controls/payloads resolve through backing rows. Git at the original v1 capture
-remains the fixture oracle, with all97 data paths/bytes exact. Original CLI/provenance assertions remain.
-D246's deliberate raw-read fault gets exact logical bytes so the original child-dispatch assertion fires;
-D247 routes the book through the maintained legacy entry. Native reader949/14 physical/8 body and
-client8 children/7 physical/7 body/3 content, fixture capture and original28 pass0, target/*0344.log.
-Whole prior closure/0343 continuity is retained495; records494/495 prove3/4 exact Git spans and a byte-fault
-control. Promotion: existing history decision. Retention parent closes; next product .6.4, G1still6/18.
-Focused3.14 only; optional deep fixture/platform/full integration/CI stays deferred.
+0345 closes the D56 collection obligation through an immutable authored PieceInventory. It checks unique
+ids before companion existence/paired mode/reciprocity/opposite hands/equal quantities in authored order.
+Labels imply no hand or partner; original Piece content/borrow identity survives, including explicit
+unresolved materials. Empty inventories and equal odd member quantities are legal; no geometry or
+Design/release readiness follows. Native8/privacy1/Piece14/CutPlan9/strict selected lint/fmt pass0.
+D248/D249 stale decision/sewing prose corrected. The required glossary census exposes132 preexisting
+C1 token/use failures: sourcec588e5e and current rows match exactly. D250 owns remediation after .6.9
+before integration/pre-push; no full glossary/CI pass is claimed. New API names are locally declared.
+Whole prior subtree/reports/lesson/ledger496 matches4 Git source spans; all10 prior nodes remain live.
+Promotion: existing pair decision. G1 remains6/18; aggregate ownership/current references follow .6.4.2+.
+
+[Whole0344 legacy-verifier lesson](docs/history/stitchcad-devnotes-part496.md) retains exact source/proof boundaries.
 
 [Whole0343 migration lesson](docs/history/stitchcad-devnotes-part495.md) retains source/proof boundaries.
 

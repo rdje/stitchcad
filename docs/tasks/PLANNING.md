@@ -1104,28 +1104,39 @@ D244 fixed0341; [complete report](../history/stitchcad-devnotes-part494.md) reta
 
 D245 fixed0342; [complete report](../history/stitchcad-devnotes-part494.md) retained until494.
 
-## D246 — packed-record omission control escapes its intended assertion
+D246/D247 complete reports/0344 closure are retained in [part496](../history/stitchcad-devnotes-part496.md).
 
-Default python_archive_client_contract.py fails1 in omission_controls: its deliberate replacement of
-public logical reads with (ROOT / record).read_bytes() raises FileNotFoundError for packed part303,
-instead of reaching the required "D222 logical read omitted" assertion. Actual retained client capture
-and seven physical refusals pass first. Source55ed18e Git cat-file -e part303 also fails128: the raw
-path was absent before the v2 transition. Impact: this verifier cannot complete its named logical-read
-fault calibration after ordinary packing; no retained-byte loss or product-client failure is claimed.
-Owner G1-SLICE.RETENTION-CAPACITY.2.c.2.b, P2 immediate: supply exact logical bytes only to that
-controlled raw fallback so the independent dispatched-child population assertion remains the oracle.
-Fixed0344: default/native client reaches all7 intended body reds and3 content refusals with8 real
-children; source/backing/provenance exact, rc=0, target/v2-archive-native-0344.log.
+## D248 — pair decision still says the settled D57 ruling awaits the director
 
-## D247 — archive guide invokes the v1-only refusal producer directly
+The active decision_piece-pair-members-have-explicit-handedness.md ends with D57 remaining with the
+director. The canonical physical-cut-copies decision records the director's ruling and implemented
+CutPlan/SewingGraph APIs. Reproduce: rg D57 in both decisions and src/ontology/cut.rs/sewing.rs.
+Impact: a current pairing reader is told a settled identity decision is pending. Owner G1-SLICE.6.4.1,
+P2 fixed0345: active pair decision links the settled canonical ruling; pair inventory scope is explicit.
 
-The archive-reader annex still publishes history_archive_probes.py as the native command after v2.
-Actual invocation returns1 at window1.json absence before fixture effects, target/archive-book-before-0344.log.
-The original producer is intentionally v1-only; the maintained legacy_refusals.py entry reconstructs its
-exact v1 inputs. Owner G1-SLICE.RETENTION-CAPACITY.2.c.2.b, P2 immediate: route the published command
-through that adapter and execute it; preserve original producer bytes and all28 native refusal cases.
-Fixed0344: published legacy_refusals.py returns original28/0 with source bytes unchanged, rc=0,
-target/v2-legacy-native-0344.log.
+## D249 — executable copy guide still calls implemented sewing addressing the next slice
+
+ontology-implementation.md's physical-copy example says the sewing-graph slice next integrates copy
+addressing. SewingGraph::new, missing_copies and current copy-bound APIs already implement that scope;
+G1-SLICE.3c.2b.2 is done. Reproduce: rg "slice next integrates" in that chapter and public methods in
+ontology/sewing.rs. Impact: the book underreports current copy validation. Owner G1-SLICE.6.4.1,
+P2 fixed0345: guide states supplied-copy validation at construction and missing targets; bus/revisions stay pending.
+
+## D250 — glossary declarations lag implemented public API vocabulary
+
+Census reports132 unaccounted token/use rows, not132 unique defects. All structure/ownership/reference/
+index checks pass. The working slice's two new API names are declared locally; exact C1 rows match
+sourcec588e5e across a110-Markdown-file Git-archive fixture (both rc=1). Example stale declarations:
+CommandRequest in command-layer.md; CommandAuthoritySnapshot in command-scopes.md; FormulaBoundValue
+in formula-rationals.md. Reproduce baseline via Git archivec588e5e ROADMAP.md/docs/book/src/docs/tasks
+Markdown to target/scratch/, then GLOSSARY_ROOT=<fixture> run_glossary_census.sh; compare its x rows
+with target/piece-inventory-glossary-0345.log. Baseline log: target/piece-inventory-glossary-baseline-0345.log.
+Impact: the full glossary/G0/probe gate cannot pass despite current scoped feature checks. Owner
+G1-SLICE.6.vocabulary, P2 after .6.9 feature implementation and before G1 .11/integration/pre-push.
+Repair canonical API/variant/local declarations without weakening C1 or adding blanket exemptions.
+Secondary P3: baseline and current advisory awk-to-head15 pipeline prints a pipe-close I/O diagnostic;
+source tail pinpoints it, without changing C1's132 rows. Repair under the same owner after C1 closure.
+Current feature may proceed with this explicit baseline gap; no full glossary/CI pass is claimed.
 
 ## Active continuity followup
 

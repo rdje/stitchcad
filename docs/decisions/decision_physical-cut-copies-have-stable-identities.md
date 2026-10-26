@@ -25,7 +25,8 @@ Validate the complete plan against the supplied Piece collection. Piece ids and 
 and disjoint; every copy names an existing Piece; counts exactly equal each Piece's cut quantity.
 `MirroredPairs` requires half authored and half reflected copies. `Single` and separate `PairMember`
 definitions require authored copies, because their own geometry already carries their handedness.
-Companion existence/reciprocity remains the design-collection obligation owned by `.6`.
+PieceInventory now checks companion existence/reciprocity/opposite hands/equal quantities under .6.4.1;
+global Design identity and current-reference readiness remain separate.
 
 The sewing graph will name copy ids plus edge ranges. Existing identities survive plan reordering;
 quantity edits require an explicit replacement that retains surviving identities. A removed copy

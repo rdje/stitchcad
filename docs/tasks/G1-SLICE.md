@@ -476,66 +476,34 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Commit: STITCHCAD-G1-0319.
 - ID: `G1-SLICE.RETENTION-CAPACITY`
   Status: `done`
-  Goal: P1 design/verify bounded retention continuation before the next packing after16; current schema refuses17.
-  Preserve immutable records/manifests, logical addresses and all independent caps; do not silently raise bounds.
-  Trigger: before future required seal exceeds64 with16 windows registered; product slices proceed meanwhile.
-  Origin: renamed pending maintenance followup from .4c.5.h16.capacity, whose whole declaration remains
-  [retained471](../history/window20.md#stitchcad-devnotes-part471md); independent of completed product-review acceptance.
-  Candidate for falsification: flat re-packing of logical records plus byte-exact legacy control/payload
-  evidence into fresh bounded packets; prove every existing cap before adoption. No protocol change is adopted by this structural review.
+  Goal: [whole completed subtree/0344 proof](../history/stitchcad-devnotes-part496.md).
 - ID: `G1-SLICE.RETENTION-CAPACITY.1`
   Status: `done`
-  Goal:0339 capacity feasibility checked; [whole transitional receipt](../history/stitchcad-devnotes-part494.md).
+  Goal: complete scope/proof retained496.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2`
   Status: `done`
-  Goal: versioned immutable-byte transition under the [recorded draft](../decisions/decision_history-windows-retain-self-contained-bytes.md).
-  Children .a bounded reader; .b committed-byte/source/backing controls; .c guarded migration and consumers.
-  Keep all caps/v1 behavior/frozen producers. Pack committed64-file baseline before creating494.
+  Goal: complete scope/proof retained496.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.a`
   Status: `done`
-  Goal:0340 bounded v2 reader verified; [whole transitional receipt](../history/stitchcad-devnotes-part494.md).
+  Goal: complete scope/proof retained496.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.b`
   Status: `done`
-  Goal:0341 exact relocation/source/future guards; [whole receipt](../history/stitchcad-devnotes-part494.md).
+  Goal: complete scope/proof retained496.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c`
   Status: `done`
-  Goal: guarded atomic copy/verify/use/delete migration with rollback; offline/materialization/current consumers
-  and all archive refusal controls, then494 whole transition receipts and product .6.4 resumes.
-  Children .c.1 committed installer/recovery and consumer support; .c.2 current-HEAD installation/proofs/494.
+  Goal: complete scope/proof retained496.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c.1`
   Status: `done`
-  Goal:0342 recoverable installer/consumer controls; [whole receipt](../history/stitchcad-devnotes-part494.md).
+  Goal: complete scope/proof retained496.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c.2`
   Status: `done`
-  Goal: children .a installs/retains494; .b adapts legacy verifiers before closure/product .6.4.
+  Goal: complete scope/proof retained496.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c.2.a`
   Status: `done`
-  Goal:0343 installed-byte/source/public proof; [whole receipt](../history/stitchcad-devnotes-part495.md).
+  Goal: complete scope/proof retained496.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c.2.b`
   Status: `done`
-  Goal: adapt current archive-client/reader/fixture predecessor controls to retained v1 evidence and
-  complete v2 inventories, preserving original predicates/authority; focused native checks before .6.4.
-  Own whole prior closure495 before doc growth; D246 owns packed-record omission-control classification.
-  - [x] REPRODUCE / ISSUE: three default verifier entries fail1 after v2; D246 raw-read fault raises
-    FileNotFoundError before its dispatch assertion, also absent at source55ed18e. D247 book entry fails1.
-  - [x] ROOT CAUSE (WHY + WHERE): at dd20dc5, python3 -I -B
-    docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py fails in old-body/v2 trap;
-    fixture bootstrap reads retired window1.json and predecessors read physical controls. Before logs
-    target/*before-0344.log give rc=1; original failure sites match the source adapters.
-  - [x] FIX: old reader/producer use exact retained-v1 fixtures; current reader tests v2. Original Git
-    capture remains independent; all97 snapshot paths/bytes match. D246 raw fault reaches dispatch oracle;
-    D247 book invokes legacy_refusals.py. Whole prior closures/0343 continuity retained495 before growth.
-  - [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py
-    --real gives949 exact files/14 physical/8 body reds;
-    python_archive_client_contract.py --real preserves8 real children/7 physical/7 body/3 content refusals;
-    fixture default capture411 plans/203 effects/9 children passes, rc=0, target/v2-*-0344.log.
-  - [x] NO REGRESSION: python3 -I -B docs/tasks/artifacts/history_archive/legacy_refusals.py gives
-    original28/0, original source/provenance/CLI exact; no residue,
-    rc=0, target/v2-legacy-native-0344.log. transition_receipts.py records494/495 proves3/4 whole Git spans
-    plus9 receipt hashes/8 nested Git intervals; changed-byte comparison refuses, rc=0.
-  - [x] LOCKSTEP: book/decision/status/notes/index/pointer/D246-D247 aligned; all caps unchanged;
-    G1still6/18. Commit0344 closes retention parent; next .6.4. promotion: declined (existing decision).
-    Focused native3.14 proof only; optional deep fixture/platform/full integration/CI remain deferred.
+  Goal: complete scope/proof retained496.
 - ID: `G1-SLICE.4c.5`
   Status: `done`
   Goal:0320 SizeSet scope/current25/unchanged31/book0; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part472md).
@@ -813,8 +781,55 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0338 native authority scope/freshness reviewed; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part493md).
 - ID: `G1-SLICE.6.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: privately mutated design aggregate; actual reference/pair/sewing/pocket/closure/layer readiness.
+  Children .1 complete Piece inventory; .2 owned canonical state; .3 point/range readiness;
+  .4 sewing/current symbolic amounts; .5 garment families; .6 focused coupled aggregate/privacy acceptance.
+- ID: `G1-SLICE.6.4.1`
+  Status: `done`
+  Goal: immutable PieceInventory with authored order/identities, unique Piece ids and complete companion
+  existence/paired-mode/reciprocity/opposite-hand/equal-quantity checks. Empty inventory stays legal;
+  no IDs, labels, copies, geometry, materials or missing companions are inferred. No Design/release claim.
+  Own source/public contract tests, selected lint/fmt and local vocabulary/book sync; D248/D249 docs
+  correction in the same relevant records. Broader bus/geometry/platform verification remains later.
+  D250 baseline glossary failures are owned by .6.vocabulary; prove exact before/after failure-row equality.
+  Own complete prior subtree/report/lesson/ledger retirement496 needed for unchanged task caps.
+  - [x] REPRODUCE / ISSUE: standalone reference-skirt member test passes1/0 while companion collection
+    obligations remain explicit. New missing-target case constructs a valid Piece then refuses its inventory.
+  - [x] ROOT CAUSE (WHY + WHERE): Piece::new takes only its definition/ledger and rejects self-companions;
+    collection relations need the complete supplied Piece set. Baseline cargo test -p sc-core --test
+    piece_contract the_reference_skirts_cut_once_pair_members_print_their_own_handedness passes1, rc=0.
+  - [x] FIX: immutable authored PieceInventory and six typed relation/identity errors; canonical borrows,
+    duplicate-before-relation/authored-order checks, explicit empty legality and no geometry/release claim.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    piece_inventory_contract gives8/0, rc=0, target/piece-inventory-native-0345.log; all error payloads exact.
+  - [x] NO REGRESSION: Piece14/CutPlan9/privacy compile-fail1, selected strict Clippy and fmt pass0,
+    target/piece-inventory-*-0345.log. Glossary132 current/baseline rows exactly equal; census rc=1,
+    delta check rc=0. D250 owns baseline remediation after .6.9 before integration/pre-push, no full pass.
+  - [x] LOCKSTEP: book/API row104/decisions/status/notes/index/pointer/D248-D249 aligned; complete
+    prior subtree/reports/lesson/ledger496 matches4 Git source spans0. No ceilings raised; G1still6/18.
+    Test syntax/indexing/helper-lint setup failures corrected/excluded. promotion: declined (existing pair decision).
+    Commit0345; .6.4.2 next. Broader bus/geometry/platform/integration remains later.
+- ID: `G1-SLICE.6.4.2`
+  Status: `pending`
+  Goal: privately owned canonical design state and identity registries; reuse actual core input contracts.
+- ID: `G1-SLICE.6.4.3`
+  Status: `pending`
+  Goal: actual current point and whole-range resolution/repair readiness, including lost interiors.
+- ID: `G1-SLICE.6.4.4`
+  Status: `pending`
+  Goal: current sewing copy/landmark targets and actual length-valued declaration sources.
+- ID: `G1-SLICE.6.4.5`
+  Status: `pending`
+  Goal: current pocket/closure/notion/layer/declaration sources with explicit geometric deferrals.
+- ID: `G1-SLICE.6.4.6`
+  Status: `pending`
+  Goal: focused coupled aggregate and public-mutator privacy acceptance; full runtime integration later.
+- ID: `G1-SLICE.6.vocabulary`
+  Status: `pending`
+  Goal: P2 D250 repair preexisting public API/variant/local token declarations by canonical meaning;
+  schedule after .6.9 implementation, before G1 .11/integration/pre-push. Current .6.4.1 adds no C1 rows.
+  Scope includes separate P3 advisory awk/head pipe-close diagnostic cleanup after C1 closure.
 - ID: `G1-SLICE.6.5`
   Status: `pending`
   Goal: nonmutating preview/atomic commit and semantic group rollback with actual failing-command context.

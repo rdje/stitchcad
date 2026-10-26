@@ -1,8 +1,8 @@
 //! `sc-core` — the garment ontology, the construction recipe and the command bus.
 //!
 //! **Status:** identity, point/range reference resolution, structural pieces/copy plans, semantic
-//! notches, directed grainlines, allowance descriptors, construction/closure/pocket intent and
-//! copy-addressed sewing graphs are implemented in [`ontology`]. Geometric correctness,
+//! notches, pair-consistent Piece inventories, directed grainlines, allowance descriptors and
+//! construction/closure/pocket intent with copy-addressed sewing graphs are implemented in [`ontology`]. Geometric correctness,
 //! realized ease and target-profile binding validation remain explicit deferred obligations.
 //! Canonical length declarations retain authored state/source/provenance in [`value`], without
 //! default unknowns or cached derived results; registry/evidence proof remains Design/G4.

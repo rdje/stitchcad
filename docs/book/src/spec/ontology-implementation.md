@@ -1,8 +1,7 @@
 # Executable ontology at G1
 
-The implementation companion to the [garment ontology](ontology.md). The normative object clauses
-remain there; this chapter describes the running structural API, examples, repair evidence and
-explicit deferred obligations. Geometry, realized ease and resolved profile values are not G1 claims.
+This chapter covers executable structural APIs for the [garment ontology](ontology.md), including
+examples and repair evidence. Geometry, realized ease and resolved profile values remain deferred.
 
 `sc_core::ontology::piece` implements §4.1's **structural** content (`G1-SLICE.3c.1`).
 `Piece::new(PieceDefinition, &IdentityLedger)` returns an immutable `Piece` or a typed `PieceError`
@@ -20,9 +19,11 @@ quantity; `Mirroring::MirroredPairs` requires an even quantity (two means one L/
 piece definition). Separate cut-once L/R members use `Mirroring::PairMember { handedness, companion }`:
 quantity counts this member's copies, the handedness is explicitly left or right, and the companion is
 another Piece identity. This is the reference skirt §6's back-piece form. A member cannot name itself
-as its companion; companion existence, reciprocity, opposite hands and equal quantities are checked
-at design-collection validation (`G1-SLICE.6`), not guessed by the standalone constructor. Actual
-geometric mirroring stays G2's obligation. A cut-on-fold
+as its companion. `PieceInventory::new(pieces)` now checks unique Piece ids, existing reciprocal
+pair-member companions, opposite hands and equal quantities. It preserves authored order and every
+Piece field; `pieces()` and `piece(id)` borrow canonical members. Labels supply no hand or partner.
+Empty inventories are legal; typed refusals retain actual ids/values. Geometry remains G2's obligation.
+A cut-on-fold
 piece declares exactly one fold edge on its outer boundary; other pieces declare none. The fabric
 side and assembly layer index are explicit content. Material assignment is either a material id or
 `Unresolved(reason)` with a nonblank explanation: an unresolved assignment is not defaulted to fabric.
@@ -32,8 +33,9 @@ Printed labels carry nonblank name, size, fabric and colorway text. Their cut qu
 fold indicator derive from the cut plan rather than being separately editable inputs. For example:
 
 - One mirrored-pair definition with quantity `2` prints cut two, pair L/R.
-- Separate `skirt_back_right` and `skirt_back_left` definitions with quantity `1` each carry opposite
-  handedness and reciprocal companion ids, and print their own cut-one R / cut-one L labels.
+- `skirt_back_right`/`skirt_back_left`, quantity `1` each with opposite hands and reciprocal ids,
+  print cut-one R/L. `PieceInventory::new(vec![right, left])` accepts either order; unequal quantities
+  refuse. Equal odd member quantities are legal.
 - A single front on fold with quantity `1` and one boundary fold edge prints cut one on fold.
 - A material awaiting selection may carry the explicit reason "awaiting fabric selection" and print
   "unassigned woven fabric" / "undetermined" for fabric and colorway. This is inspectable content,
@@ -119,11 +121,9 @@ ids from ordinals or generates missing copies. Each `CutCopyDefinition` supplies
 Piece id and `CopyOrientation::Authored` or `Reflected`. `copy(id)` addresses a physical copy;
 `copies_for_piece(piece_id)` finds its siblings without collapsing their identities.
 
-For a single pattern Piece requesting two authored copies, supply ids A and B with the
-same Piece id. Reordering A/B to B/A retains each identity and orientation.
-Replacing B with a newly identified C leaves B absent; its seams must not silently
-transfer to C. The sewing-graph slice next integrates this addressing contract and exposes
-missing copy references; the command bus later owns atomic replacements and revision checks.
+Copies A/B of one Piece keep distinct ids when reordered. Replacing B with C leaves B missing;
+seams cannot silently transfer. SewingGraph validates supplied copies at construction and exposes
+missing targets; the bus owns atomic replacements and revision checks.
 
 Piece ids and copy ids must be unique and disjoint, every named Piece must exist, and counts must
 exactly equal each Piece's cut quantity. A `MirroredPairs` request has equal authored and reflected
@@ -135,17 +135,18 @@ front's fabric-fold contour does not create a second physical copy.
 Copy orientation is independent of topological traversal direction. Copy edges use the pattern's
 source frame; G2/V1 applies the physical reflection transform. `CutPlan` exposes shared immutable
 copies and always reports `GeometricValidation::DeferredToG2`; it certifies no contour, placement,
-cutting or release result. Companion reciprocity and design-wide identity checks remain `.6` duties.
+cutting or release result. PieceInventory checks pair metadata; design-wide identity/readiness follows.
 See `decision_physical-cut-copies-have-stable-identities.md` for the identity and replacement rule.
 
-**Implementation vocabulary.** These are API names used in the executable examples above,
-distinct from the garment concepts the glossary defines. The table declares their local meaning;
-it supplies no new validation or physical-output claim.
+**Implementation vocabulary.** API names supplement the garment glossary; declarations confer
+no physical validation.
 
 | API token | Meaning here |
 | --- | --- |
 | `PieceDefinition` | Editable structural input, validated to construct a Piece |
 | `PieceError` | Typed structural Piece refusal |
+| `PieceInventory` | Immutable ordered Pieces with complete companion metadata checks |
+| `PieceInventoryError` | Actual duplicate or invalid companion identities/values |
 | `DirectedEdge` | Held edge identity plus authored traversal |
 | `Direction` | Original or accumulated reversed traversal |
 | `Single` | Piece cut mode retaining its authored handedness |

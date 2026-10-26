@@ -3,15 +3,17 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0344 — preserve verification authority across flat retention
+## STITCHCAD-G1-0345 — validate complete Piece companion inventories
 
-- Adapt old-reader/producer fixtures and predecessor comparisons to exact retained v1 bytes; current native reads use v2.
-- D246 restores the intended raw-read fault assertion; D247 publishes the valid legacy native command.
-- Native reader949/14 physical/8 body, client8 children/7 physical/7 body/3 content, fixture capture and original28 pass0.
-- Whole prior closures/0343 retained495;494/495 exact Git spans3/4 verified. Retention closes; product .6.4 next.
-- G1 remains6/18. Focused3.14 proof; optional deep fixture/platform/full integration/CI remains deferred.
+- Add immutable ordered PieceInventory: unique ids, existing reciprocal pair members, opposite hands/equal quantities.
+- Preserve all authored fields/canonical borrows; empty inventories and odd per-member quantities remain legal.
+- Native8/privacy1/Piece14/CutPlan9/selected strict lint/fmt and book/publication pass; D248/D249 corrected.
+- D250 glossary census has the same132 baseline token/use failures; no new rows. Owned after .6.9 before integration/pre-push.
+- Whole prior closure496 is Git-exact across4 source spans; caps unchanged. G1still6/18; aggregate state .6.4.2 next.
 
 # Sealed archive — earlier slices
+
+| [part496](docs/history/stitchcad-devnotes-part496.md) | whole retention subtree/D246-D247/0344 lesson and ledger | 106 lines, 8392 bytes, sha256:dbd95028… |
 
 | [part495](docs/history/stitchcad-devnotes-part495.md) | whole prior closures/0343 migration task, lesson and ledger | 93 lines, 7573 bytes, sha256:90276b75… |
 

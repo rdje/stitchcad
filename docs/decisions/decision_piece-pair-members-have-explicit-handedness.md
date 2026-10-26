@@ -27,7 +27,7 @@ A member cannot name itself as its companion.
 - A cut-once right/left fixture pair is expressible without changing its geometry, cut quantities or
   Piece identities. Existing even-total pair requests retain their original meaning.
 - Companion existence, reciprocal identity, opposite handedness and equal member quantities are
-  design-collection invariants. `G1-SLICE.6` validates them; a standalone constructor can prove only
-  that the companion differs from itself. G2 still verifies actual geometric mirroring.
-- This corrects pair metadata; it does not settle the separate D57 question of how the sewing graph
-  addresses multiple physical copies. That decision remains with the director, asked explicitly.
+  design-collection invariants, implemented by PieceInventory in G1-SLICE.6.4.1. A standalone Piece
+  can prove only that its companion differs from itself; G2 still verifies actual geometric mirroring.
+- D57 was separately settled by the director's [physical-copy identity ruling](decision_physical-cut-copies-have-stable-identities.md).
+  CutPlan/SewingGraph implement that addressing; inventory validation creates no copies or geometry.

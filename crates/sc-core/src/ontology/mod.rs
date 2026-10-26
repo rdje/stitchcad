@@ -26,6 +26,7 @@
 //! | [`layer`] | served layer/recipe/material intent; explicit lining execution-scope refusal | `.3c.4b.1` |
 //! | [`notion`] | physical-copy placements, owned anchors/orientation and current target validation | `.3c.4c.1a` |
 //! | [`notch`] | immutable semantic anchors and symbolic profile bindings, deferred physical validation | `.3c.3a` |
+//! | [`piece_inventory`] | immutable authored Piece collection; reciprocal opposite-hand/equal-quantity pair checks | `.6.4.1` |
 //! | [`piece`] | immutable structurally validated `Piece`, complete label view, deferred geometry | `.3c.1` |
 //! | [`id`] | `EntityId` (a ULID) and the injected `IdGenerator` | `.3a` |
 //! | [`pocket`] | physical placement/composition, symbolic opening and current source checks | `.3c.4d.1` |
@@ -52,6 +53,7 @@ pub mod notch;
 pub mod notion;
 pub mod package_identity;
 pub mod piece;
+pub mod piece_inventory;
 pub mod pocket;
 pub mod profile_pin;
 pub mod range;
@@ -73,6 +75,8 @@ pub use piece::{
     CuttingSide, DirectedEdge, GeometricValidation, Handedness, LabelField, LabelText,
     LoopLocation, MaterialAssignment, Mirroring, Piece, PieceDefinition, PieceError, PrintedLabel,
 };
+
+pub use piece_inventory::{PieceInventory, PieceInventoryError};
 
 pub use range::{
     EdgeRange, RangeError, RangeIssue, RangePortion, RangeRepairTask, RangeResolution,
