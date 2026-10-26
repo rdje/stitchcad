@@ -6,6 +6,7 @@
 mod construction;
 mod context;
 mod payload;
+mod query;
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
@@ -15,6 +16,7 @@ pub use payload::{
     AssignMaterial, AssignMaterialError, ChangeMeasurement, CommandMutation, MutationPayload,
     PieceSelection, PieceSelectionError,
 };
+pub use query::{CommandQuery, CommandQueryContext, QueryPayload};
 
 /// The five command classes fixed by the shared command-layer contract.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]

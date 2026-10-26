@@ -665,30 +665,36 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part417.md).
 - ID: `G1-SLICE.6.2.2.b.2.b`
   Status: `done`
-  Goal:0299 D226 paired correspondence intent targets canonical SeamSpan with explicit persistent side-A/side-B cuts.
-  Paths: crates/sc-core/src/command/construction.rs;crates/sc-core/src/command/payload.rs;crates/sc-core/src/command.rs;
-  crates/sc-core/tests/command_construction_payload_contract.rs; command book/decision/live docs.
-  No new result identity, copied ease/stops or guessed side mapping. Execution validates actual canonical
-  copy/range/direction/ease/stops and allocates lineage-preserving outputs atomically under later .6/G2/G3.
-  Own424 whole0298 task,425 oldest0274 lesson and271 ledger from5e15254; preserve whole Git/hash/public bytes.
-  Acceptance0299:
-  - [x] ROOT CAUSE0299: rg actual structs -> construction.rs:8, sewing.rs:184, anchor.rs:7, rc=0; span owns copies/ease/stops, anchors retain exact source frames.
-  - [x] ADDRESSED0299: cargo test -p sc-core --test command_construction_payload_contract --test command_payload_contract ->4+3 passed/0 failed, rc=0; two named cuts/unequal parameters/swaps/metadata preserved.
-  - [x] NO REGRESSION0299: selected strict lib/two-test Clippy rc=0; fmt rc=0; census17 commands/5 classes/5 levels/0 failures and book rc=0.
-  - [x] LOCKSTEP0299:424/425/271 whole5e15254 Git bytes/hash/public reader exact rc=0; book/decision/live aligned. No handler/registry/geometric outcome.
-  Promotion: existing command decision extended; no new policy. Full integration/platform verification deferred to .6.9/pre-push.
+  Goal:0299 paired sewing split schema verified4+3/0/lint/fmt/census/book0.
+  Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part426.md).
   Commit: STITCHCAD-G1-0299.
-  Source census: rg -n 'SplitSeamSpan|split.*(seam|span|correspondence)' ROADMAP.md docs/book/src docs/decisions crates --glob '*.md' --glob '*.rs'.
-  The command row names a span split; SeamSpanDefinition has paired a/b/ease/stops, while
-  IdentityLedger::split edits one EdgeRef at Param. Director2026-10-26 chose paired sewing split;
-  exact cut/reference/ease/identity validation remains the executing operation's obligation.
 - ID: `G1-SLICE.6.2.2.b.2.a.receipt`
   Status: `done`
   Goal:0296 unique metadata receipt preserves1184214; same-invocation commit/clear/check guard.
   Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part419.md).
 - ID: `G1-SLICE.6.2.2.c`
-  Status: `pending`
+  Status: `in_progress`
   Goal: remaining query/evaluation/artifact/release request contexts and immutable payload binding.
+  Children .c.1 current canonical piece/seam queries; .c.2 concrete artifact-dependent closure and remaining classes.
+- ID: `G1-SLICE.6.2.2.c.1`
+  Status: `done`
+  Goal:0300 immutable query design/actor/exact-revision context and GetPieceList/WalkSeamSpan payloads.
+  Paths: crates/sc-core/src/command/query.rs;crates/sc-core/src/command.rs;crates/sc-core/tests/command_query_contract.rs;
+  book/command decision/live docs. Query identity derives from payload; no mutation retry/group or execution grant.
+  Preserve canonical span identity without copied sewing state or assumed geometry; actual snapshot/auth/handlers later.
+  Own426 whole0299 task,427 oldest0275 static-node lesson and272 ledger from198bbb1; whole Git/hash/public checks.
+  Acceptance0300:
+  - [x] ROOT CAUSE0300: rg query declarations -> query.rs:8/51/74, rc=0; exact Design/actor/revision context and payload-derived canonical queries.
+  - [x] ADDRESSED0300: cargo test -p sc-core --test command_query_contract --test command_catalog_contract ->2+2 passed/0 failed, rc=0; large exact revisions, actor/principal and identity metadata.
+  - [x] NO REGRESSION0300: selected strict lib/two-test Clippy rc=0; fmt rc=0; census17/5/5/0 and book rc=0. No handlers/query results claimed.
+  - [x] LOCKSTEP0300:426/427/272 whole198bbb1 Git bytes/hash/public reader exact rc=0; book/decision/live aligned without raising caps.
+  Promotion: existing command decision extended; no new policy. Broad verification remains integration/pre-push.
+  Commit: STITCHCAD-G1-0300.
+- ID: `G1-SLICE.6.2.2.c.2`
+  Status: `pending`
+  Goal: concrete evaluation/artifact/release schemas and artifact-specific GetUncertaintyClosure target.
+  After canonical SizeSet/profile/artifact input work; follow actual contracts, no generic argument-map substitutes.
+  Release closure depends on requested artifact's actual dependency set; no entire-design or guessed-kind closure.
 - ID: `G1-SLICE.6.3`
   Status: `pending`
   Goal: core-scoped authority/grant validation, human-only approval, actual actor/principal and denial tests.
@@ -929,7 +935,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.6.2.2.c` | `pending` | Other command-class schemas over actual canonical interfaces |
+| **next** | `G1-SLICE.4c.3d` | `pending` | Canonical signed breaks and composite SizeSet inputs |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0299 — paired sewing split intent
+## STITCHCAD-G1-0300 — pinned canonical query requests
 
-SplitSeamSpan preserves the canonical span target and both explicit A/B source-frame cuts under D226.
-All five mutation schemas available; handlers remain pending. Native construction4+payload3/0,
-selected strict lint/fmt/census17/5/5/0/book0; whole424/425/271 retention exact. G1 remains5/18.
+GetPieceList/WalkSeamSpan bind explicit Design/actor/exact revision, deriving identity from payload.
+Native query2+catalog2/0, selected strict lint/fmt/census17/5/5/0/book0; whole426/427/272 retention exact.
+No handler/result claim. G1 remains5/18; canonical signed breaks/SizeSet next, other request classes owned.
 
 # Sealed archive — earlier slices
+
+| [part272](docs/history/stitchcad-changelog-part272.md) | whole0299 | 6 lines, 348 bytes, sha256:2611e18e… |
 
 | [part271](docs/history/stitchcad-changelog-part271.md) | whole0298 | 6 lines, 377 bytes, sha256:c6d24c13… |
 

@@ -118,6 +118,37 @@ order, class, authority, reversibility and undo grouping. It also checks strict 
 preparation versus human approval. This supports core metadata consistency; it proves no handler
 availability, authenticated authority enforcement or executed UI/API/MCP workflow.
 
+### Implemented initial query requests
+
+`CommandQueryContext` now carries the explicit Design identity, unauthenticated actor/principal claim
+and exact requested `DesignRevision`. The revision is mandatory, including revision0 and exact values
+beyond128 bits; no query silently chooses a latest snapshot. Currentness and scoped inspect authority
+must be checked by execution. Queries carry no mutation replay key or undo-group membership.
+
+`CommandQuery` binds this immutable context to `QueryPayload`. `GetPieceList` requests the Design's
+canonical piece list, including multiplicity, pairing and material. `WalkSeamSpan { span }` names the
+canonical sewing correspondence whose length differential/ease attribution is requested; copies,
+ranges, direction, ease and stops come from that actual target, rather than duplicated arguments.
+The concrete variant determines the command identity and its catalog metadata remains query/inspect.
+
+```rust
+use sc_core::{command::{CommandActorClaim, CommandQuery, CommandQueryContext,
+    DesignRevision, QueryPayload, CommandId}, ontology::EntityId};
+let id = EntityId::from_bits;
+let request = CommandQuery::new(CommandQueryContext::new(id(1),
+    CommandActorClaim::Human(id(2)), DesignRevision::from_counter(7)),
+    QueryPayload::WalkSeamSpan { span: id(3) });
+assert_eq!(request.command_id(), CommandId::WalkSeamSpan);
+```
+
+Two focused query contracts cover exact revisions, actor/principal roles, unchanged context/targets,
+identity and inspect/reversibility/undo metadata; the two normative catalog contracts also pass.
+Selected strict lint/fmt, command census and book checks pass. These are request schemas; no piece-list
+result, geometric seam walk, authenticated authority, revision validation or observable cache is
+produced by constructing them. Artifact-specific GetUncertaintyClosure and the other command classes
+remain owned by G1-SLICE.6.2.2.c.2. Its closure must use the concrete requested artifact's actual
+dependencies ([release §8](release-contract.md)), rather than all unknowns in a Design.
+
 ### Implemented mutation context
 
 CommandMutationContext retains a target design identity, CommandActorClaim, expected DesignRevision,

@@ -4,11 +4,15 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0299 completes all five mutation schemas. SplitSeamSpan holds canonical span and explicit named A/B EdgeAnchors.
-- Original source frames/cuts retained without inferred correspondence, result IDs or copied ease/stops.
-- Native construction4+prior payload3 pass0; selected strict lib/test Clippy/fmt/census17/5/5/0/book0.
-- NEXT .6.2.2.c: other command-class schemas/contexts over actual canonical interfaces; own bounded children.
--424/425/271 whole5e15254 retention verified byte/hash/public-reader exact0.
+-0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
+- Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
+- Native query2+catalog2 pass0; selected strict lint/fmt/census17/5/5/0/book0; exact revisions beyond128bits.
+- NEXT .4c.3d: canonical signed adjacent breaks and composite SizeSet; own bounded children before changes.
+- Remaining command classes and artifact-specific closure .6.2.2.c.2 follow actual canonical inputs.
+-426/427/272 whole198bbb1 retention verified byte/hash/public-reader exact0.
+-0299/198bbb1 completes all five mutation schemas; SplitSeamSpan explicit canonical target and named A/B cuts.
+- Original edge/parameter frames retained; no copied ease/stops or inferred correspondence/result IDs.
+- Native construction4+payload3 pass0; selected strict lint/fmt/census/book0.
 -0298/5e15254 .4c.2 completes explicit axis/member points; exact pins/current sources/coverage, >=1 axis even singleton.
 - All authored vectors retained; sparse grids/unused values explicit; original member/point/value borrows.
 - Native aggregate5+axis5 pass0, selected strict lint/fmt/book0. No full SizeSet/chart/break/path claim.
@@ -40,4 +44,4 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D156/D223 audits deferred; D224/D225/D227 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background result pending after0299 completion. Derive push count, never carry it manually.
+- No background result pending after0300 completion. Derive push count, never carry it manually.

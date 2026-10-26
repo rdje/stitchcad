@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; catalog/request foundations0291–0294 implemented, bus handlers pending
+- **Status:** `active`; catalog/request foundations through0300 implemented, bus handlers pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -103,3 +103,9 @@ Original edge/parameter frames survive without inferred correspondence or result
 supplies copies, direction, ease and stops; their current validation and lineage-preserving atomic split
 remain execution obligations. Native construction4/0 plus prior payload3/0 pass. All five mutation
 schemas are present; no handler, geometric conservation or authorization is claimed.
+
+0300 .6.2.2.c.1 adds exact snapshot/actor claims for queries and concrete GetPieceList/WalkSeamSpan
+payloads. Variant-derived identity stays query/inspect; no mutation replay/group fields or grants.
+Native query2/0 plus catalog2/0 check original contexts/targets and metadata, including exact revision
+values beyond128 bits. Artifact-specific uncertainty closure follows actual concrete artifact inputs;
+this foundation produces no result, geometric walk, mutable cache or authenticated authority.

@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — pinned canonical query requests
+
+0300 .6.2.2.c.1 adds immutable Design/actor/exact-revision query context and GetPieceList/WalkSeamSpan
+payloads. Variant determines identity; canonical span supplies its own sewing content. No mutation
+retry/group fields, result, geometry, mutable cache or grant. Native query2+catalog2 pass0, including
+revisions beyond128bits and actor/principal roles; selected strict lint/fmt/census17/5/5/0/book0.
+426/427/272 retain whole198bbb1 Git/hash/public bytes. G1still5/18. Remaining classes/uncertainty closure
+follow concrete artifact dependencies under .c.2; canonical signed breaks/SizeSet .4c.3d next.
+Promotion: existing command decision extended, no new policy. Broad checks remain deferred.
+
 ## _(2026-10-26 UTC)_ — paired sewing split intent
 
 0299 .6.2.2.b.2.b implements the D226 SplitSeamSpan request: actual canonical span identity plus two
@@ -276,20 +286,8 @@ capture/installed CLI evidence replaces no broad campaign. The new finite-thresh
 is explicitly unverified and scheduled as P1 .5d.1.2.2.2.a after this commit, before further runtime
 integration. Promotion declined: archive contracts remain unchanged; candidate math study is owned.
 
-## _(2026-10-26 UTC)_ — actual per-node static certificates
-
-0275 .5e.2.3 retains every successful node's inferred role, actual name dependency and resolved
-builtin beside the existing root/dependency API. Typed child/argument views borrow the complete
-proof and original arena; no foreign node/index or detached proof can be attached. Traversal/error
-order remains value-free; direct tolerance roles survive grouping and computed roots stay ordinary.
-Views/destruction stay flat; Debug omits authored tokens while explicit form inspection retains them.
-
-Focused new6/existing expression7, selected strict Clippy and8 scoped privacy/lifetime docs pass0.
-Actual owners/spans, Unknown source borrows, eight kinds, closed callees, source order, whole-statement
-prior sources and256 nodes are covered. A scoped book check finds implementation-map rows rendered
-as pipe paragraphs after blank table breaks. Join all original rows/cells under one header; actual
-rendered family/order/four-cell checks now pass0. Whole0274/old built-in lesson/ledger365/366/247
-retain exact Git/hash/public bytes. Promotion declined: existing static owner/role/source contracts.
+[Complete per-node static-certificate lesson](docs/history/stitchcad-devnotes-part427.md) retains
+its original node/role/target evidence, defects, checks and promotion decision.
 
 [Complete checked runtime-sequence lesson](docs/history/stitchcad-devnotes-part425.md) retains
 its original bounded execution ownership, source obligations, checks and promotion decision.

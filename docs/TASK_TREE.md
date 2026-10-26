@@ -79,8 +79,8 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-**`G1-SLICE.6.2.2.b`** completes all five mutation schemas in0299 after the D70 axes contract0297/0298.
-Next .6.2.2.c owns query/evaluation/artifact/release request contexts and payloads.
+**`G1-SLICE.6.2.2.c.1`** completes pinned piece/seam query requests in0300; all mutation schemas are present.
+Next .4c.3d implements canonical signed breaks/composite SizeSet; remaining class schemas .6.2.2.c.2 follow canonical inputs.
 [Execution frontier](tasks/G1-SLICE-execution.md) remains .5e.2.4; SizeSet axes and paired split schema are implemented.
 Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per
 feature; broad verification and nonblocking audits remain owned for later integration/pre-push.

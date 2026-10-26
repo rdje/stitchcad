@@ -10,6 +10,7 @@ requires the named contracts and later proof owners.
 | --- | --- | --- | --- |
 | Units/tolerances | §4.2; G0/G1 | sc-units; G1-SLICE.2/.5a.3c.1 | [Numerical contract](../spec/units-and-tolerances.md), [wide rounding](numeric-rounding.md) |
 | Declared command catalog | §4.4/§7.8; G1 | sc-core command; G1-SLICE.6.1 | [Typed discovery](../spec/command-layer.md#implemented-typed-catalog); handlers/authority execution follow |
+| Initial query requests | §4.4; G1 | sc-core command; G1-SLICE.6.2.2.c.1 | [Pinned piece/seam intents](../spec/command-layer.md#implemented-initial-query-requests); auth/handlers follow |
 | Mutation request metadata | §4.4/§10; G1 | sc-core command; G1-SLICE.6.2.2.a | [Actor/revision/retry/group context](../spec/command-layer.md#implemented-mutation-context); validation/execution follows |
 | Initial mutation payloads | §4.4; G1 | sc-core command; G1-SLICE.6.2.2.b.1 | [Measurement/material intents](../spec/command-layer.md#implemented-initial-mutation-payloads); registry/auth/handlers follow |
 | Construction payloads | §4.4; G1 | sc-core command; G1-SLICE.6.2.2.b.2 | [Paired split/dart/notch intents](../spec/command-layer.md#implemented-initial-mutation-payloads); geometry/auth/handlers follow |
