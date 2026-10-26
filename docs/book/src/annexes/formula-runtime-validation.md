@@ -171,6 +171,50 @@ values, all eight optional-provider combinations with absent/nonempty/empty labe
 quantitative classes against each external slot, refusal priority, explicit zero and immutable
 replacement. Selected strict Clippy passes; broad integration/platform proof remains deferred.
 
+## Core size context frames
+
+FormulaSizeName provides Index, Count and IsBaseSize roles over the existing size_index, size_count
+and is_base_size reserved names. FormulaReservedName::size_name selects only these three roles;
+tolerance names cannot enter this read interface. No new spelling, text value or size label is added.
+
+FormulaSizeContext::new takes a supplied FormulaSizeContextSource and unsigned128-bit index/count.
+The source retains set id, exact Count revision, selected member id and explicit base id. Validation
+refuses set/member-or-base aliases first, then empty/out-of-range one-based counts, then a singleton
+whose selected member differs from its base. This validates supplied structural facts. It does not
+prove actual authored membership/order, pin currentness, axes, charts or path readiness. The host
+membership bridge remains G1-SLICE.5e.1.5.2; D70's axis decision is unchanged.
+
+```rust
+use sc_core::{ontology::EntityId, recipe::{FormulaSizeContext, FormulaSizeContextSource,
+    FormulaSizeName, FormulaRational}};
+use sc_units::Count;
+
+let source = FormulaSizeContextSource { set: EntityId::from_bits(1), revision: Count::new(0),
+    member: EntityId::from_bits(2), base: EntityId::from_bits(3) };
+let context = FormulaSizeContext::new(source, 2, 3).expect("supplied structural frame");
+let index = context.read(FormulaSizeName::Index).expect("present context");
+assert_eq!(index.numeric_value().expect("Count").rational(), FormulaRational::from_signed_integer(2));
+assert_eq!(context.read(FormulaSizeName::IsBaseSize).expect("present false").boolean(), Some(false));
+```
+
+Each FormulaSizeValue retains its requested role and source. Index/count return exact Count values;
+is_base_size returns the actual identity comparison, independent of ordinal or label. False is a
+present Boolean; numeric_value is None for Boolean and boolean is None for Count. The empty/default
+context instead returns FormulaSizeReadError with the actual requested name and formula_unbound_name.
+It supplies no zero/false, guessed member, source/search scope or statement ordinal.
+
+FormulaNumericValue::from_unsigned_count imports every unsigned128-bit integer exactly, including
+zero and the maximum magnitude, without rounding or premature signed-i64 checks. A wide size-frame
+count stays valid until an actual binding enforces its storage range. This is not a claim that an
+arbitrarily large native membership was allocated; the core frame is a host-supplied value boundary.
+Replacing a frame leaves prior pin/values unchanged. A membership adapter must derive source, ordinal,
+count and base from the actual immutable authored membership and compare its expected pin.
+
+The focused formula_size_context_contract target passes five tests for role closure, absence,
+source/Count/false/base behavior, exact invalid witnesses/priority, wide binding refusal and immutable
+replacement. Selected strict Clippy passes; full membership/registry/axis and broad/platform proof
+remain their distinct owners.
+
 ## Reference runtime assertion controls
 
 An assertion uses an inclusive tolerance: it holds when the absolute difference is at most the

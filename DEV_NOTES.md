@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — supplied size frames without premature Count storage checks
+
+0265 .5e.1.5.1 introduces the three existing size roles and core source/value frame. Source retains
+set/revision/selected/base ids. Constructor checks aliases, one-based range, then singleton/base;
+these are supplied structural facts, not actual membership/currentness/axes proof. Empty context
+returns the actual size name with formula_unbound_name. Present false remains Boolean; base is
+identity equality, not an ordinal or label inference. from_unsigned_count is total/exact over128 bits;
+actual binding alone enforces signed storage. Frame replacement leaves prior source/values intact.
+
+Focused native5/0 and selected strict Clippy0 pass: role closure, absence, exact kinds/pins/false,
+invalid witnesses/priority, singleton, full-width Count and later binding refusal. Actual immutable
+membership/pin derivation is .5e.1.5.2 next, preserving core->units and measure->core direction.
+Whole0264 scope/closed primary-profile scope/ledger retain345/346/237. Book/live align; promotion
+is declined because existing formula3.1/size membership/binding contracts govern this implementation.
+
 ## _(2026-10-26 UTC)_ — explicit tolerance context values and absence
 
 0264 .5e.1.4 uses the units intrinsic1/10 and three explicit optional provider slots. Each provider

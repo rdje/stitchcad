@@ -62,6 +62,9 @@ and derived evaluation remain pending.
 [Explicit tolerance contexts](annexes/formula-runtime-validation.md#explicit-tolerance-contexts)
 now provide fixed numerical/geometric values and class-checked optional format/importer/physical
 providers. Missing optional values refuse with their actual name/context label.
+[Core size-context frames](annexes/formula-runtime-validation.md#core-size-context-frames) now read
+structurally checked supplied ordinal/count/base values or named absence. Derivation from actual
+authored membership/pin remains the next bridge; axes and full SizeSet proof remain pending.
 
 ## Planned workflows
 

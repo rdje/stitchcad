@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0264 — explicit intrinsic and optional tolerance contexts
+## STITCHCAD-G1-0265 — core size context frames and exact reserved reads
 
-.5e.1.4: fixed1/10 and class-checked sourced format/importer/physical providers, exact Length reads;
-absent optional values retain name/context and formula_tolerance_unbound. Focused native5/0 and strict Clippy0 pass.
+.5e.1.5.1: supplied pinned source/range checks, exact wide Count/Boolean and named missing context.
+Native5/0 and selected strict Clippy0 pass. Actual authored-membership derivation remains .2; no axis/currentness claim.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -418,3 +418,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part235](docs/history/stitchcad-changelog-part235.md) | whole0262 | 4 lines, 281 bytes, sha256:d737946d… |
 
 | [part236](docs/history/stitchcad-changelog-part236.md) | whole0263 | 4 lines, 274 bytes, sha256:2138cbcc… |
+
+| [part237](docs/history/stitchcad-changelog-part237.md) | whole0264 | 4 lines, 295 bytes, sha256:f4684655… |

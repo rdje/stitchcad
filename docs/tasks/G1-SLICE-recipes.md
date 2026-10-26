@@ -557,20 +557,33 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part343.md).
 - ID: `G1-SLICE.5e.1.4`
   Status: `done`
-  Goal:0264 intrinsic1/10 and explicit sourced optional tolerance contexts.
+  Goal: intrinsic/explicit sourced optional tolerance reads verified0264, native5/0.
   Paths: crates/sc-core/src/recipe/context.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_tolerance_context_contract.rs
-- [x] REPRODUCE:0264 72cc909 has reserved tolerance metadata but no explicit value-context adapter;
-  git source inspection rc=0. Formula3.1 forbids optional export/profile defaults.
-- [x] ROOT CAUSE:0264 static visibility differs from provider availability; actual Tolerance classes/
-  borrowed source ids preserve the required separation. Focused native5/0, rc=0.
-- [x] FIX: immutable class-checked optional providers; intrinsic units defaults; exact Length read,
-  source/derivation/actual label and typed unbound refusal. No G4 registry/physical approval inferred.
-- [x] ADDRESSED:0264 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test formula_tolerance_context_contract:5 pass/0 fail, rc=0.
-- [x] NO REGRESSION:0264 same target covers masks/classes/zero/replacement; cargo clippy --offline
-  -p sc-core --test formula_tolerance_context_contract -- -D warnings, rc=0; broad .5e.3/.5g/pre-push.
-- [x] LOCKSTEP:343/344/236 whole Git/public records and book render rc=0; live/book align.
-  Promotion declined: existing formula3.1/units3 provider contracts; size/full execution pending.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part345.md).
+- ID: `G1-SLICE.5e.1.5`
+  Status: `in_progress`
+  Goal: pinned authored-membership size_index/size_count/is_base_size, without labels or axes.
+  Children .1 core range/source/value context; .2 actual sc-measure membership bridge. D70 unchanged.
+- ID: `G1-SLICE.5e.1.5.1`
+  Status: `done`
+  Goal:0265 core size source/range/value frame and unsigned Count bridge.
+  Paths: crates/sc-core/src/recipe/context.rs;crates/sc-core/src/recipe/context/size.rs;crates/sc-core/src/recipe/semantic.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs
+  Additional paths: crates/sc-core/tests/formula_size_context_contract.rs
+- [x] REPRODUCE:0265 5b8af44 has size metadata without a value context; git source read, rc=0.
+- [x] ROOT CAUSE:0265 supplied source/range facts differ from canonical membership/currentness;
+  one-based range and identity base plus wide Count avoid inference/narrowing. Native5/0, rc=0.
+- [x] FIX: closed size roles; immutable checked frame, exact Count/Boolean/source and named absence.
+- [x] ADDRESSED:0265 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_size_context_contract:5 pass/0 fail, rc=0.
+- [x] NO REGRESSION:0265 role closure/false/missing/pins/invalid/full-width/binding controls pass0;
+  cargo clippy --offline -p sc-core --test formula_size_context_contract -- -D warnings, rc=0.
+  Canonical membership bridge .2; full registry/axes/broad .5g/pre-push remain owned.
+- [x] LOCKSTEP:345/346/237 whole Git/public records and book render rc=0; live/book align.
+  Promotion declined: existing formula3.1/membership/binding contracts; no actual membership claim.
+- ID: `G1-SLICE.5e.1.5.2`
+  Status: `pending`
+  Goal: derive context from actual immutable sc-measure membership/pinned reference and selected id;
+  preserve authored order/base under reorder, no label parsing or axis selection.
 - ID: `G1-SLICE.5e.2`
   Status: `pending`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.
@@ -757,30 +770,9 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 ## D156 producer profile protocol
 - ID: `G1-SLICE.5b.4c.h2.a`
   Status: `done`
-  Goal: guarded local profile and Make/G0/doctrine entry-point defaults before native producer audit.
-  Acceptance: four stores derive from root/target catalog; ambient outside-root values replaced,
-  eligible local overrides guarded component-by-component before mkdir/exec. Reject parent escapes,
-  symlinks, files, foreign-device/Git boundaries and source-tree stores; no shared cache deletion.
-  Preserve named toolchain override and rust-toolchain.toml stable contract. Disable implicit
-  toolchain installation; explicit make toolchain uses published active-channel install with
-  rustfmt/Clippy/WASM/minimal/--no-self-update, never self-update or mutate global stores.
-  A single exec wrapper retains argument bytes/status and environment; guarded shell re-entry
-  verifies freshly, never trusts a marker. Make native/book/probe/gate and G0/hook-doctrine paths
-  inherit profile; no grammar/crate change, no storage claims for unaudited standalone tools.
-  Independent actual environment capture before implementation must redact absolute inherited paths
-  while proving baseline off-volume defaults; provider/exec stubs perform no external store writes.
-  Real profile controls and compiled body faults cover defaults, overrides, guard order, no effects
-  on refusal, command arguments/status/toolchain setup; Windows not claimed by POSIX wrappers.
-  Required root registry containment before Toolbox/lesson growth, exact full old records retained.
-  Read README/ROADMAP G1 CI, COMMIT/data-locality policy, Make/G0/doctrine/hooks/CI helper+probes,
-  Rustup public env/basic docs and installed1.29.1 help; primitive/locality interfaces scoped.
-  Work unit STITCHCAD-G1-0117; predecessor a1b021f clean/brief0/no jobs, no exceptional push due.
-  Verification: focused/native/full28 pass0; commit STITCHCAD-G1-0117 below.
-- ID: `G1-SLICE.5b.4c.h2.v`
-  Status: `done`
-  Goal: exact-head job/every-step observations after required doctrine-entry push.
-  Acceptance: full local push gates, actual job proof and no inferred runner success; repair/own
-  failures before .b. Verification: actual jobs/logs pass0; commit STITCHCAD-G1-0118 below.
+  Goal: guarded local profile/Make/G0/doctrine defaults before standalone audit, verified0117.
+  Acceptance: [whole original requirements/verification](../history/stitchcad-devnotes-part346.md).
+
 - ID: `G1-SLICE.5b.4c.h2.b`
   Status: `in_progress`
   Goal: audit direct standalone Cargo/Rustc and temporary producers; apply shared profile before

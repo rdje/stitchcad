@@ -174,6 +174,16 @@ impl From<Length> for FormulaNumericValue {
 }
 
 impl FormulaNumericValue {
+    /// Exact nonnegative integer Count across the full admitted unsigned128-bit magnitude.
+    /// This performs no rounding or signed-i64 binding check; that boundary remains explicit.
+    #[must_use]
+    pub const fn from_unsigned_count(value: u128) -> Self {
+        Self {
+            kind: FormulaKind::Count,
+            value: FormulaRational::from_integer_magnitude(value, false),
+        }
+    }
+
     /// Validates an exact completed value without rounding, clamping or signed narrowing.
     ///
     /// # Errors

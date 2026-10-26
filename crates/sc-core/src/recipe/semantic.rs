@@ -154,6 +154,38 @@ pub enum FormulaReservedContext {
     Size,
 }
 
+/// The three size-context roles; labels and tolerance names are not size values.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
+pub enum FormulaSizeName {
+    /// One-based position in authored membership order.
+    Index,
+    /// Number of authored members.
+    Count,
+    /// Whether the selected stable identity is the explicit base.
+    IsBaseSize,
+}
+
+impl FormulaSizeName {
+    /// Complete size-value population in language table order.
+    pub const ALL: [Self; 3] = [Self::Index, Self::Count, Self::IsBaseSize];
+
+    /// The existing reserved name, without introducing another spelling or namespace.
+    #[must_use]
+    pub const fn reserved_name(self) -> FormulaReservedName {
+        match self {
+            Self::Index => FormulaReservedName::SizeIndex,
+            Self::Count => FormulaReservedName::SizeCount,
+            Self::IsBaseSize => FormulaReservedName::IsBaseSize,
+        }
+    }
+
+    /// Existing machine spelling.
+    #[must_use]
+    pub const fn token(self) -> &'static str {
+        self.reserved_name().token()
+    }
+}
+
 /// Closed built-in namespace. A spelling remains visible even when its required context is absent.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FormulaReservedName {
@@ -236,6 +268,17 @@ impl FormulaReservedName {
         match self {
             Self::Tolerance(name) => Some(name),
             Self::SizeIndex | Self::SizeCount | Self::IsBaseSize => None,
+        }
+    }
+
+    /// Size-value role; tolerance names cannot enter the size-context read interface.
+    #[must_use]
+    pub const fn size_name(self) -> Option<FormulaSizeName> {
+        match self {
+            Self::SizeIndex => Some(FormulaSizeName::Index),
+            Self::SizeCount => Some(FormulaSizeName::Count),
+            Self::IsBaseSize => Some(FormulaSizeName::IsBaseSize),
+            Self::Tolerance(_) => None,
         }
     }
 }

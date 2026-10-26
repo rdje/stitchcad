@@ -77,7 +77,9 @@ mod canonical_recipe;
 pub use canonical_recipe::{FormulaCanonicalRecipe, FormulaCanonicalStatement};
 
 mod semantic;
-pub use semantic::{FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName};
+pub use semantic::{
+    FormulaKind, FormulaOrigin, FormulaReservedContext, FormulaReservedName, FormulaSizeName,
+};
 
 mod operators;
 pub use operators::FormulaUnaryOperator;
@@ -109,6 +111,8 @@ pub use input::{
 
 mod context;
 pub use context::{
+    FormulaSizeContext, FormulaSizeContextError, FormulaSizeContextSource, FormulaSizeReadError,
+    FormulaSizeValue,
     FormulaToleranceContext, FormulaToleranceContextDefinition, FormulaToleranceProvider,
     FormulaToleranceProviderError, FormulaToleranceReadError, FormulaToleranceValue,
     FormulaToleranceValueSource,

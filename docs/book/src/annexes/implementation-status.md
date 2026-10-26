@@ -76,3 +76,5 @@ current counts are derived from current test execution rather than inferred from
 | General scalar authored-read adapter | §2/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.3 | [Actual target/kind reads](formula-runtime-validation.md#general-scalar-authored-reads); registry/context execution follows |
 
 | Explicit reserved tolerance contexts | §3.1/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.4 | [Intrinsic/optional providers](formula-runtime-validation.md#explicit-tolerance-contexts); source approval/execution follows |
+
+| Core size-context frames/reads | §3.1/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.5.1 | [Supplied source/range values](formula-runtime-validation.md#core-size-context-frames); canonical membership bridge follows |

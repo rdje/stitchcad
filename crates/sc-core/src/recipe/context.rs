@@ -6,6 +6,12 @@ use crate::ontology::EntityId;
 use core::fmt;
 use sc_units::{Tolerance, ToleranceClass, UnitError};
 
+mod size;
+pub use size::{
+    FormulaSizeContext, FormulaSizeContextError, FormulaSizeContextSource, FormulaSizeReadError,
+    FormulaSizeValue,
+};
+
 /// Caller-supplied quantitative tolerance and its actual source-record identity.
 /// The context validates the class; registry membership and derivation/evidence truth stay separate.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
