@@ -64,7 +64,8 @@ not promote them to factual certainty. Physical procedure domains are a separate
 Definitions are cloneable inputs; validated observations are private and immutable. An explicit
 replacement can update references and provenance without rewriting the old observation. Collection
 identity uniqueness, member/POM completeness and explicit sharing are implemented at .4c.3b; MTM
-body/Ease inputs at .3c. Break/composite .3d remains owned. No axis model is chosen while D70 is pending.
+body/Ease inputs at .3c. Break/composite .3d remains owned. D70 now requires authored axes for every
+complete set; the axis implementation is .4c.2.
 
 ## Public API vocabulary
 

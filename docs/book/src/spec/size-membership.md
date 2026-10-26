@@ -106,7 +106,8 @@ sources retain the actual underlying membership/core refusal. Debug omits human 
 member access retains them for presentation.
 
 Matching the supplied pin is not global registry/currentness certification, complete SizeSet,
-axes/charts/break/path readiness, profile transformation or release approval. D70 stays unchanged.
+axes/charts/break/path readiness, profile transformation or release approval. The confirmed D70 axis rule
+is implemented separately under .4c.2.
 The dependency remains sc-measure to sc-core; core imports no measurement implementation.
 Five focused formula_size_membership_contract tests pass: all designation intents/actual pointer
 borrows, pin-before-member priority, authored reorder/stable base, singleton revision boundaries and
@@ -125,9 +126,8 @@ source, line and byte column; a panic message containing "assertion" supplies no
 The restored public Cargo artifact runs the complete12-test target successfully.
 The standard strict Rust gate runs these contracts; native/WASM integration is checked locally.
 
-D70 records a conflict in the normative axes requirements: the field table says optional and only
-multidimensional, while §7 says a one-dimensional set has one axis and no second representation.
-G1-SLICE.4c.2 awaits the director's cardinality ruling. This foundation creates no implicit axis or
-numeric default. Individual [garment chart observations](size-chart-observations.md) now borrow current metadata;
+D70's director ruling2026-10-26 requires at least one authored axis for every complete SizeSet.
+G1-SLICE.4c.2 implements explicit names, ordered values and member coordinates. This membership
+foundation creates no implicit axis or numeric default. Individual [garment chart observations](size-chart-observations.md) now borrow current metadata;
 complete coverage, break/path readiness and profile transformation intent,
 actual geometry, equivalence, evidence scope and release remain later owned proofs.

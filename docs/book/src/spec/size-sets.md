@@ -33,7 +33,7 @@ stale-ify approvals that geometry never touched (roadmap §9).
 | `base_size` | one label | yes | the base size; SHALL be a member (§4) |
 | `chart` | per member, the POMs | yes | values with units, landmarks and states (§5) |
 | `breaks` | per dimension, per adjacent pair | yes for path 2 | the deltas between neighbours (§6) |
-| `axes` | named dimensions | no | present only in a multi-dimensional system (§7) |
+| `axes` | named dimensions | yes | at least one authored axis for every complete set (§7) |
 | `provenance` | source, state, evidence | yes | where the chart came from, and whether it is `known` |
 | `transformation` | record | resolved sets only | what a profile override did, to whom, with what evidence (§9) |
 
@@ -99,9 +99,10 @@ a rule table *implements* them as per-point deltas.
 
 ## 7. Multi-dimensional systems
 
-**Implementation conflict D70:** §2 calls axes optional and multidimensional-only; this section requires
-one axis for one-dimensional sets and no second representation. G1-SLICE.4c.2 awaits a director ruling
-on cardinality before implementing axes. The requirements below are retained for that decision.
+Director ruling2026-10-26 resolves D70: every complete SizeSet requires at least one authored axis,
+including one-dimensional and singleton sets. Axis names and ordered values are explicit, never
+inferred from labels or silently defaulted. Membership alone remains a foundation; G1-SLICE.4c.2
+implements the axis contract before a complete set can be accepted.
 
 Some systems designate a size by two or more body dimensions rather than one label. The model expresses
 that without inventing a second mechanism:

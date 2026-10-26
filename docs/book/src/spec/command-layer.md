@@ -36,7 +36,7 @@ The Reversible column is a closed vocabulary, and §1.1 draws its values from it
 
 Three rules bind the classes:
 
-- **A mutation is expressed in the recipe, never as a geometry edit.** `SplitSeamSpan` splits a span and the
+- **A mutation is expressed in the recipe, never as a geometry edit.** `SplitSeamSpan` splits a sewing correspondence and the
   identity contract (ontology §1.1) says what happens to the references; a command that wrote coordinates
   directly would create geometry no operation owns, which is what the formula language refuses too
   ([formula language §2](formula-language.md)).
@@ -59,7 +59,7 @@ The roadmap names five of them (§4.4) and all five are carried here.
 | `GetUncertaintyClosure` | `query` | `inspect` | `not applicable` | `not applicable` | the unknowns that affect one requested artifact ([release §8](release-contract.md)) |
 | `ChangeMeasurement` | `mutation` | `commit` | `yes` | one group per measurement changed | sets a measurement, which re-evaluates the recipe |
 | `AssignMaterial` | `mutation` | `commit` | `yes` | one group | assigns a material to one or more pieces |
-| `SplitSeamSpan` | `mutation` | `commit` | `yes` | one group, however many references move | splits a span, resolving every reference by the identity contract |
+| `SplitSeamSpan` | `mutation` | `commit` | `yes` | one group, however many references move | splits a sewing correspondence at explicit cuts on both sides, preserving reference obligations |
 | `CloseDart` | `mutation` | `commit` | `yes` | one group: centre, two legs, intake, truing | closes a dart, conserving its intake (ontology §4.3) |
 | `AddNotch` | `mutation` | `commit` | `yes` | one group | adds a notch at an edge and a parameter (ontology §4.5) |
 | `EvaluateInstance` | `evaluation` | `generate` | `discarded` | `not applicable` | evaluates the recipe for one size |
@@ -158,7 +158,7 @@ idempotency replay and atomic group execution remain G1-SLICE.6.2.2.b/.6.3/.6.5/
 
 ### Implemented initial mutation payloads
 
-MutationPayload currently carries ChangeMeasurement or AssignMaterial. CommandMutation binds that
+MutationPayload carries ChangeMeasurement, AssignMaterial, CloseDart or AddNotch. CommandMutation binds that
 concrete payload to CommandMutationContext. Its command_id() is derived from the variant; there is
 no separate caller-supplied command identity that could misclassify the request. These are typed
 request shapes; handlers and current registry/authority checks remain later bus work.
@@ -195,8 +195,29 @@ existence, kind and truth still need the actual registry and provenance checks.
 
 The focused payload target covers all five canonical states, immutable context binding, exact
 identity/source retention, original selection order/first duplicate and shared material rules.
-It establishes two payload schemas, with no command execution or approval claim. Remaining mutation
+That target covers the first two schemas, with no command execution or approval claim. Remaining mutation
 schemas are owned by G1-SLICE.6.2.2.b; other command classes remain .6.2.2.c.
+
+CloseDart and AddNotch payloads are also available. CloseDart names the canonical dart: the bus
+resolves its held closing operation, intake and references rather than accepting copied geometry
+or a replacement intake. The target's existence/currentness and the operation's kind remain
+execution checks, and no closure or conservation result is produced by constructing the intent.
+
+AddNotch carries the requested owning piece, persistent EdgeAnchor and complete symbolic
+NotchProfileBindings. Style/encoding and separate sample/production dimension references survive
+exactly; no physical profile value or default is supplied. The request carries no new notch id.
+definition_with_id composes a canonical NotchDefinition with an explicit identity supplied by the
+executing bus. It allocates nothing: the bus must allocate a fresh id and validate the actual
+piece, current anchor and profile obligations before accepting the new entity.
+
+The focused construction-payload target checks both identities, exact anchors/all bindings and
+two explicit allocated identities without caching one in the request. The earlier measurement/
+material target stays green. Four mutation schemas are available; handlers remain pending.
+
+Director ruling2026-10-26 resolves D226: SplitSeamSpan splits the paired sewing correspondence
+at explicit cuts on both sides. Its schema remains G1-SLICE.6.2.2.b.2.b, after the unblocked SizeSet
+axes work. Actual execution must preserve cut/reference/ease/identity obligations; no split outcome
+or implicit correspondence mapping is supplied by the current payloads.
 
 ## 3. Atomic groups, and the granularity of undo
 

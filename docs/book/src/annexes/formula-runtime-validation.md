@@ -186,7 +186,8 @@ The source retains set id, exact Count revision, selected member id and explicit
 refuses set/member-or-base aliases first, then empty/out-of-range one-based counts, then a singleton
 whose selected member differs from its base. This validates supplied structural facts. It does not
 prove actual authored membership/order, pin currentness, axes, charts or path readiness. The [membership bridge](../spec/size-membership.md#formula-size-context) now derives the actual
-authored source/order/count/base after matching the expected pin. D70's axis decision is unchanged.
+authored source/order/count/base after matching the expected pin. D70's minimum authored-axis rule
+is confirmed; complete axis validation remains .4c.2.
 
 ```rust
 use sc_core::{ontology::EntityId, recipe::{FormulaSizeContext, FormulaSizeContextSource,

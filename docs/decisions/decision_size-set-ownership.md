@@ -66,7 +66,7 @@ promise, the V1 assembly view and the reference fixture, none of which have a fa
 ## Consequences
 
 - **For the model:** `SizeSet` gains identity, revision, member labels, an explicit order, one base size, a
-  size-system enumeration, per-size charts, per-dimension breaks, and multi-dimensional axes. A `Design`
+  size-system enumeration, per-size charts, per-dimension breaks, and authored axes for every complete set. A `Design`
   holds a reference, not a list. A resolved size set carries a transformation record.
 - **For profiles:** an override is a typed parameter with a domain (label mapping, break scaling, base-size
   substitution, chart replacement) and it carries state and evidence like any other parameter — so an
@@ -95,8 +95,8 @@ The base names one existing member identity; labels have no numeric, machine-tok
 semantics. Empty/duplicate membership or absent base refuses. A custom member of one establishes only
 membership, not MTM body-chart provenance. Pinned SizeSetReference uses Count revision; a successor
 retains identity and refuses overflow. Currentness/authorized monotonic transitions remain registry/
-command obligations. Axes/chart/break/resolution contracts remain separate; D70's axes cardinality
-conflict requires a ruling before .4c.2, and no axis representation is selected by this foundation.
+command obligations. Axes/chart/break/resolution contracts remain separate; D70's ruling below
+unblocks .4c.2, while this membership foundation still selects no implicit axis representation.
 
 ## Chart observations — G1-SLICE.4c.3a
 
@@ -105,3 +105,11 @@ Design role is a logical authored input, not a regenerated result: base inputs m
 without duplicating their scalar. Current metadata/state/source is borrowed; retargeting requires
 explicit replacement. Correspondence provenance does not prove physical equivalence; G3/G4 own that
 proof. Chart completeness, MTM body/Ease inputs, breaks and resolution remain separate owned slices.
+
+## Authored-axis cardinality — director ruling2026-10-26
+
+Every complete SizeSet has at least one authored axis, including a one-dimensional range or singleton.
+Axis names and ordered values are explicit, never inferred from labels or supplied as silent defaults.
+This resolves D70's optional-field versus universal-axis conflict; normative §2 and §7 now agree.
+G1-SLICE.4c.2 implements axes next after the current command-payload slice. Membership remains a
+partial foundation and does not certify complete axes/charts/breaks or path readiness.

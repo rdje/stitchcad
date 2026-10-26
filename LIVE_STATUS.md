@@ -14,9 +14,9 @@ Notes cells here stay short — this is a bounded snapshot, not a journal.
 | Roadmap → task-trees (`PLANNING`) | Done | All 10 lanes owned — 13 trees, 16 evidence siblings, `0 unowned / 0 orphan(s) / 0 dead link(s)`, derived by `run_tree_coverage_census.sh` and watched by its probes |
 | Repo identity & policy (`SPINE`) | In Progress | containment, the acceptance gates, the push cadence and the table convention are enforced or written where authors look. Open: `.5`, `.13`, `.19`, `.22`; handoff .23/.23v verified; .23r captured missing OS type; strict refusal verified |
 | Adopted policy set | Done | README policy, claim verification and containment are in-repo; containment is **enforced** by `LIVE-DOC-SIZE`, with revision-aware baselines and table-shape targets |
-| Defect census | In Progress | D156/D223 nonblocking work deferred; D224/D225 corrected. Numerical certificate cleanup protection and ID-exhaustion propagation verified; canonical audit owners remain in PLANNING |
+| Defect census | In Progress | D156/D223 nonblocking work deferred; D224/D225 corrected, D70/D226 ruled and docs aligned. Numerical proof cleanup/ID exhaustion verified; canonical audit owners remain in PLANNING |
 | G0 — product & semantic contract | Mostly Done | Every clause met and derived except evaluation-seat procurement, accepted open by ruling; closure **unapproved** (governance §6.1). `run_g0_exit_review.sh` → `18 met / 1 not met` |
-| G1 — executable architecture slice | In Progress | 5/18 top-level leaves done. Numeric/read foundations and initial typed command requests available; full evaluation/bus pending. One focused check per feature; audits deferred. MCP/geometry/profile/release/D70 pending |
+| G1 — executable architecture slice | In Progress | 5/18 top-level leaves done. Numeric/read foundations and initial typed requests available; evaluation/bus pending. D70 ruled; axes next. One focused check per feature; audits deferred. MCP/geometry/profile/release pending |
 | G2 — correct 2D slice | Not Started | 14 leaves; offsets + pathology corpus, canonicalizer, DXF/PDF, print check, agent gate |
 | G3 — construction & grading | Not Started | 14 leaves; bodice + set-in sleeve, both instantiation paths, `.rul` interchange |
 | G4 — profiles & uncertainty | Not Started | 14 leaves; CSP + oracle, evidence store, policy matrix, HPGL, minimal Profile Editor |

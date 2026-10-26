@@ -12,6 +12,7 @@ requires the named contracts and later proof owners.
 | Declared command catalog | §4.4/§7.8; G1 | sc-core command; G1-SLICE.6.1 | [Typed discovery](../spec/command-layer.md#implemented-typed-catalog); handlers/authority execution follow |
 | Mutation request metadata | §4.4/§10; G1 | sc-core command; G1-SLICE.6.2.2.a | [Actor/revision/retry/group context](../spec/command-layer.md#implemented-mutation-context); validation/execution follows |
 | Initial mutation payloads | §4.4; G1 | sc-core command; G1-SLICE.6.2.2.b.1 | [Measurement/material intents](../spec/command-layer.md#implemented-initial-mutation-payloads); registry/auth/handlers follow |
+| Dart/notch payloads | §4.4; G1 | sc-core command; G1-SLICE.6.2.2.b.2.a | [Canonical target/creation fields](../spec/command-layer.md#implemented-initial-mutation-payloads); geometry/auth/handlers follow |
 | Identity/references | §4.1; G1 | sc-core ontology; G1-SLICE.3a/.3b | [Model and current repairs](../spec/ontology-implementation.md) |
 | Pieces/copies, sewing, marks/allowances | §3.1/§4.1; G1 | sc-core ontology; G1-SLICE.3c.1–.3 | [Executable ontology](../spec/ontology-implementation.md) |
 | Garment constructions/closures | §3.1; G1 | sc-core ontology; G1-SLICE.3c.4 | [Constructions](../spec/ontology-constructions.md), [closures](../spec/ontology-closures.md), [review](../spec/ontology-review.md) |
@@ -73,8 +74,8 @@ The [trig threshold certificates](formula-trig-certificates.md) cover all1M forw
 targets with exact full readers. Sin/cos and atan/atan2 value kernels are implemented;
 tangent's separate resource plan and implementation remain open.
 
-Full SizeSet axes/breaks/composition and resolved profile intent remain G1-SLICE.4c work. D70's axes
-cardinality ruling is pending. Recipe evaluation is .5, bus/undo .6, storage .7, constraints .8,
+Full SizeSet axes/breaks/composition and resolved profile intent remain G1-SLICE.4c work. D70 now
+requires at least one authored axis per complete set; .4c.2 is unblocked. Recipe evaluation is .5, bus/undo .6, storage .7, constraints .8,
 API/MCP .9 and CLI .10; browser/runtime/canvas/license proofs and full G1 exit remain later children.
 The current ontology supports authored operation identities; that is not an executed recipe.
 

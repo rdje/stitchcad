@@ -3,8 +3,10 @@
 //! Catalog membership declares a command; it does not make a handler available or grant authority.
 //! Execution, scoped authorization, transactions and workflow parity remain separate bus owners.
 
+mod construction;
 mod context;
 mod payload;
+pub use construction::{AddNotch, CloseDart};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
     DesignRevision,

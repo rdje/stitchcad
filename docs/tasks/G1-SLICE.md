@@ -393,7 +393,7 @@ metadata signoff unchanged; the named table slice follows.
 - ID: `G1-SLICE.4c.2`
   Status: `pending`
   Goal: axes with ordered values and member coordinate references; incomplete grids remain explicit.
-  Resolve D70's optional-versus-universal-axis specification conflict before choosing its representation.
+  Director2026-10-26 resolves D70: every complete set has >=1 authored axis; never infer names/values.
   Acceptance: current axis/value identities and complete member points validated, no grid interpolation;
   no label-derived body measurements or silent axis defaults. Preserve source/state for numeric axes.
   Verification: `pending`
@@ -402,7 +402,7 @@ metadata signoff unchanged; the named table slice follows.
 - ID: `G1-SLICE.4c.3`
   Status: `in_progress`
   Children: .4c.3a (garment chart observations), .3b (chart collection), .3c (MTM body inputs),
-  .3d (breaks/composite SizeSet), .3e (review). .3a can proceed independently of D70 axes cardinality.
+  .3d (breaks/composite SizeSet), .3e (review). .3a is independent of axis implementation.
   Goal: complete SizeSet chart/break object over membership/axes, canonical per-member POM scalars,
   landmarks/procedures/state/provenance and adjacent signed breaks; current references and path readiness.
   Acceptance: chart and generated POMs distinct; missing breaks name dimension/pair and refuse path 2;
@@ -433,7 +433,7 @@ metadata signoff unchanged; the named table slice follows.
 - ID: `G1-SLICE.4c.3d`
   Status: `pending`
   Goal: signed canonical adjacent breaks and composite SizeSet over membership/axes/chart with source/
-  state/provenance; per-axis/dimension coverage and typed path readiness, after D70 axes ruling.
+  state/provenance; per-axis/dimension coverage and typed path readiness under the confirmed D70 rule.
   Acceptance: authored adjacency, zero/uneven breaks, current references, missing dimension/pair and
   MTM path-2 refusal; no rounded values, generated equivalence or profile execution claimed.
   Verification: `pending`
@@ -487,7 +487,7 @@ metadata signoff unchanged; the named table slice follows.
   Status: `in_progress`
   Children: .5a syntax done; .5b static validation, .5c exact arithmetic, .5d irrational functions,
   .5e execution/replay, .5f operations and .5g full acceptance pending.
-  Dependency boundary: syntax/static foundations proceed while D70 blocks complete SizeSet. Membership/table/Ease
+  Dependency boundary: syntax/static foundations proceed while complete SizeSet axes remain pending. Membership/table/Ease
   foundations are implemented; expression syntax consumes no axis or full SizeSet representation.
   This dependency exception leaves .4's remaining children owned and unclosed.
   Goal: formula graph + construction-recipe evaluation — acyclic dependency graph, single
@@ -642,24 +642,38 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal: concrete typed command payload schemas from actual canonical interfaces, no caller placeholders.
 - ID: `G1-SLICE.6.2.2.b.1`
   Status: `done`
-  Goal:0294 ChangeMeasurement/AssignMaterial canonical payloads bound to mutation context without caller command-ID override.
-  Paths: crates/sc-core/src/command.rs;crates/sc-core/src/command/payload.rs;crates/sc-core/src/lib.rs;crates/sc-core/Cargo.toml
-  Tests: crates/sc-core/tests/command_payload_contract.rs; reuse actual LengthDeclaration/MaterialAssignment contracts.
-  Preserve target/declaration/source/state, ordered nonempty unique Piece selection, shared material reason rule.
-  Own411 whole0293 task,412 oldest0269 lesson,266 whole0293 ledger before live growth.
-  Also own413 whole five completed sourced-adapter summaries before task acceptance growth.
-  Focused payload/native/selected lint/fmt/book; actual registry/auth/execution remains .6.3–.6.6.
-  Acceptance0294:
-  - [x] REPRODUCE: mutation context lacked canonical measurement/material payload binding.
-  - [x] ROOT CAUSE0294: cargo test -p sc-core --test command_payload_contract:3/0, rc=0; payloads derive real command IDs and retain original canonical data.
-  - [x] FIX: two typed intents, ordered distinct selection and shared reason predicate; canonical source replacements remain allowed, no draft immutability restriction.
-  - [x] ADDRESSED0294: same native3/0 all five states/context/first duplicate/material rules pass, rc=0.
-  - [x] NO REGRESSION0294: selected lib/test strict Clippy/fmt, command census17/5/5/0 failures pass, rc=0; broad integration/pre-push.
-  - [x] LOCKSTEP:411/412/413/266 whole Git/hash/public exact and book build rc=0; G1still5/18.0293 brief cleared late before code, verified0/untracked.
-  Promotion declined: existing canonical/command contracts. Commit: STITCHCAD-G1-0294.
+  Goal:0294 measurement/material schemas verified native3/0/lint/census/book0.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part414.md).
 - ID: `G1-SLICE.6.2.2.b.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: remaining SplitSeamSpan/CloseDart/AddNotch schemas from published canonical references and creation rules.
+- ID: `G1-SLICE.6.2.2.b.2.a`
+  Status: `done`
+  Goal:0295 CloseDart canonical target and AddNotch creation fields, with bus-supplied new identity.
+  Paths: crates/sc-core/src/command/payload.rs;crates/sc-core/src/command/construction.rs;crates/sc-core/src/command.rs
+  Tests: crates/sc-core/tests/command_construction_payload_contract.rs.
+  Reuse EdgeAnchor/NotchProfileBindings and Dart's referenced closure; no copied intake/profile defaults.
+  Own414 whole0294 task,415 oldest0270 lesson,267 whole0294 ledger,416 whole completed execution-prerequisite summaries.
+  D226 paired-cut split schema remains separate .b; this slice completes dart/notch. Focused native/lint/book.
+  Director2026-10-26 confirms D226 paired correspondence with explicit cuts on both sides;
+  D70 requires at least one authored axis per complete SizeSet. Record rulings; finish this slice,
+  then resume .4c.2 before split payload work. No axes code in the current slice.
+  Own whole prior D70 defect record137 and current book/decision ruling sync before edits.
+  Acceptance0295:
+  - [x] REPRODUCE: dart/notch intents were absent; D70/D226 needed actual director rulings.
+  - [x] ROOT CAUSE0295: cargo test -p sc-core --test command_construction_payload_contract --test command_payload_contract:2+3/0, rc=0; canonical target/creation fields bind real command variants.
+  - [x] FIX: canonical dart target and exact notch anchor/bindings; bus supplies new id. Record both confirmed rulings without axes/split implementation.
+  - [x] ADDRESSED0295: same tests preserve target, all bindings, explicit fresh identities and prior payloads, rc=0.
+  - [x] NO REGRESSION0295: selected lib/two-test strict Clippy/fmt and command census17/5/5/0 pass, rc=0; broad integration/pre-push.
+  - [x] LOCKSTEP:414/415/416/267/137 whole Git/hash/public exact; book/ruling field/section check rc=0. D70/D226 resolved, G1still5/18; .4c.2 next.
+  Promotion declined: existing canonical/command contracts plus explicit director rulings. Commit: STITCHCAD-G1-0295.
+- ID: `G1-SLICE.6.2.2.b.2.b`
+  Status: `pending`
+  Goal: D226 ruled paired correspondence split with explicit side-A/side-B cuts; implement schema after .4c.2.
+  Source census: rg -n 'SplitSeamSpan|split.*(seam|span|correspondence)' ROADMAP.md docs/book/src docs/decisions crates --glob '*.md' --glob '*.rs'.
+  The command row names a span split; SeamSpanDefinition has paired a/b/ease/stops, while
+  IdentityLedger::split edits one EdgeRef at Param. Director2026-10-26 chose paired sewing split;
+  exact cut/reference/ease/identity validation remains the executing operation's obligation.
 - ID: `G1-SLICE.6.2.2.c`
   Status: `pending`
   Goal: remaining query/evaluation/artifact/release request contexts and immutable payload binding.
@@ -915,7 +929,7 @@ retains exact D72/D67 diagnostics and ownership.
 [Historical design boundaries](G1-SLICE-journal.md#ontology-design-decisions--preserved-from-f70edf7)
 retain exact committed notes and their canonical decision links. D84 director ruling preserves signed/
 multi-turn formula values and normalizes entity directions; [decision](../decisions/decision_angles.md).
-.5a.3b.3c verification is complete. D70 SizeSet axes remains pending under .4c.2.
+.5a.3b.3c verification is complete. SizeSet axes implementation remains .4c.2 under the confirmed D70 rule.
 
 ## Open Questions
 
@@ -924,7 +938,7 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Blockers
 
-- D70 awaits director decision for complete SizeSet under .4c.2. D83/D84 scoped reference review
+- D70 minimum authored-axis rule is confirmed; complete SizeSet axes remain .4c.2. D83/D84 scoped reference review
   is complete; production literal/binding/evaluation proof remains separate.
 - D131 decision/repair .5b.2c.1b verified under engineering delegation2026-10-03; actual source
   arguments are documented before product namespace .2c.2. No diagnostic decision blocker.

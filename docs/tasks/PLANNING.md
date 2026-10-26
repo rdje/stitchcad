@@ -441,17 +441,10 @@ spec asks for `\|`; the inherited arity checker treats a code span as protective
     verified by `run_changelog_ledger_probes.sh` → `9 pass / 0 fail`.
 
 
-- **D70** — SizeSet axes cardinality has conflicting normative requirements.
-  - Reproduce: rg -n 'axes|single axis|two representations' docs/book/src/spec/size-sets.md reports
-    .2 field row: axes optional and present only for multidimensional systems; .7: one-dimensional
-    system has a single axis and the model does not carry two representations. Ownership decision
-    names multidimensional axes but does not resolve this cardinality contradiction.
-  - Impact: a production schema cannot decide whether an ordinary one-dimensional range requires
-    an explicit axis or may omit it; the choice changes authored data, validation and agent APIs.
-  - Owner/schedule: G1-SLICE.4c.2 before axes implementation; director ruling requested. Independent
-    membership .4c.1 proceeds, chart/resolution contracts remain fully owned. No axis default invented.
-  - Decision requested: explicit axes for every range (including one-dimensional; recommended) versus
-    allowing one-dimensional ranges to omit axes, with explicit axes required for multidimensional sets.
+- **D70** — resolved by director2026-10-26: every complete SizeSet requires at least one authored axis.
+  Names/ordered values are explicit, never inferred. Normative field/§7 and ownership record align.
+  Owner/schedule: G1-SLICE.4c.2 next after current command-payload slice; axes code remains pending.
+  [Whole original conflict/reproduction](../history/stitchcad-defects-part137.md) retained exactly. Closed.
 
 D71 and D72 are sealed in [`stitchcad-defects-part14.md`](../history/window2.md#stitchcad-defects-part14md).
 G1-SLICE.4d.1 fixes stale book status and the archive probe's production-sized fixture; source/rendered
@@ -1114,6 +1107,12 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   Owner/schedule: G1-SLICE.6.2.1, P1 fixed0292 before envelopes. Red101→focused3/0; terminal typed
   exhaustion and original error propagation preserve all six edits' complete ledger state. Unit10/0,
   affected target compilation and selected strict lint pass0. All actual callers migrated. Closed.
+
+- **D226** — SplitSeamSpan semantic ambiguity, resolved by director2026-10-26.
+  Reproduce: command-layer §1.1 versus SeamSpanDefinition {a,b,ease,stops} and IdentityLedger::split(edge,Param).
+  Ruling: split the paired sewing correspondence at explicit cuts on both sides. Command contract
+  now states this meaning. Owner/schedule: G1-SLICE.6.2.2.b.2.b schema after .4c.2; execution still
+  must preserve actual cut/ease/reference/identity obligations. Semantic conflict closed.
 
 - **D222** — live D217 retained-record check depends on raw archive paths.
   Census: d217_probe.py retained() declares/reads physical303/304/208 while run_handoff_probes.sh calls

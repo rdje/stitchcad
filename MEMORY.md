@@ -4,9 +4,14 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
+-0295 .6.2.2.b.2.a complete: canonical CloseDart/AddNotch payloads; native2+3/0, selected lint/fmt/census/book0.
+- Director2026-10-26 confirmed D70 >=1 authored axis per complete SizeSet, no inferred names/values.
+- D226 confirmed paired sewing-correspondence split with explicit cuts on both sides. Both book/contracts align.
+- NEXT .4c.2: inspect axis/value/member contracts, own bounded implementation children before code.
+- No axes code yet; membership/chart/MTM are foundations, not a complete SizeSet. Split schema follows axes.
+-414/415/416/267/137 retain whole0294 task/0270 lesson/execution summaries/0294 ledger/original D70 conflict.
 -0294 .6.2.2.b.1 complete: ChangeMeasurement/AssignMaterial payloads bind immutable mutation context.
 - Native payload3/0, selected strict Clippy/fmt, census17/5/5/0/book pass0. G1still5/18.
-- Next .6.2.2.b.2: inspect/own remaining mutation schemas against canonical refs/creation rules.
 - Measurement intent retains actual target/declaration/source/five states; source replacements are allowed.
 - Material intent preserves ordered distinct nonempty selection and shared nonblank unresolved reason.
 - No request supplies its own command-ID assertion. Actual registry/auth/execution remain .6.3–.6.6.
@@ -15,7 +20,6 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - Catalog0291 native17 identities/book2/0; handlers remain later .6.
 - Window14 packs50 b49128e raw records:93940B→27917B, source/materialize/public exact; prior13 unchanged.
 - Frozen capture_window14.py is a historical producer, not a current-HEAD rerun.
--411/412/413/266 retain whole0293 task/0269 lesson/closed source summaries/0293 ledger exactly.
 - Tangent .5d.1.2.2.2.d.1 gives distance>=90M/(U+1),148bit output; focused8798/586/2 pass0.
 - Practical tangent rounding plan P1 .d.2 pending; no domain narrowing, cutoff or borrowed certificate.
 -0288 native inverse3/0 with27/54 oracle values;0289 sourced inverse call target8/0/lint0.
@@ -29,5 +33,5 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - Certificate cleanup protection0285 fixed; no cleanup/cadence reset. Cleanup due2026-10-26 13:16UTC.
 - Tangent resource plan remains P1; no borrowed inverse rounding proof or precision cutoffs.
 - Native/sourced sin/cos available. Whole actual checked AST execution .5e.2.4 requires remaining calls/geometry.
-- D70 ruling pending; no axes implementation. Approved full AI UI control remains recorded; no UI pivot.
+- D70 ruling received; no axes implementation yet. Approved full AI UI control remains recorded.
 - Broad verification deferred to .5d.4/integration/pre-push. No background result pending.

@@ -58,7 +58,7 @@ owners; a readable value is not approval or evidence-scope validation.
 
 Reserved tolerances use the explicit context and its actual quantitative provider. Optional classes
 remain absent until supplied. Size values come from actual pinned membership/order/base identity;
-axes still await the D70 ruling. Static availability metadata never supplies a missing runtime value.
+axes remain .4c.2 under D70's confirmed minimum-one rule. Static availability metadata never supplies a missing runtime value.
 
 Geometry reads retain real point/edge references and the published operation/selector contracts
 under .5f.3. Point coordinates need separate approximation-source sets. Direction normalization is

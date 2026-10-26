@@ -12,7 +12,7 @@ The original working execution block was copied byte-for-byte; later entries rem
   Acceptance: unknown has no value, derived reads follow their dependencies, assumed/preference
   remain labelled; all six bindable kinds supported, optional tolerance context explicit.
   Source truth/artifact blocking belongs G4; no invented policy or duplicated authored values.
-  Full SizeSet/axis integration waits .4c.2 D70, without dropping size-context acceptance.
+  Full SizeSet/axis integration waits .4c.2 under confirmed D70, preserving size-context acceptance.
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5e.1.1`
   Status: `done`
@@ -38,7 +38,7 @@ The original working execution block was copied byte-for-byte; later entries rem
 - ID: `G1-SLICE.5e.1.5`
   Status: `done`
   Goal: pinned authored-membership size_index/size_count/is_base_size, without labels or axes.
-  Children .1 core range/source/value context; .2 actual sc-measure membership bridge. D70 unchanged.
+  Children .1 core range/source/value context; .2 actual sc-measure membership bridge. Axes remain .4c.2.
 - ID: `G1-SLICE.5e.1.5.1`
   Status: `done`
   Goal: core size source/range/value frame and wide Count bridge verified0265.
@@ -64,26 +64,20 @@ The original working execution block was copied byte-for-byte; later entries rem
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5e.2.1`
   Status: `done`
-  Goal: lazy conditional value kinds/selected errors/sources verified0273, native4/0.
-  Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/conditional.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_conditional_value_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part363md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part416.md).
 - ID: `G1-SLICE.5e.2.2`
   Status: `done`
-  Goal: checked node/expression/statement/atomic execution sequence recorded0274.
-  Paths: docs/book/src/annexes/formula-execution-plan.md;docs/book/src/SUMMARY.md
-  Acceptance: [whole scope/receipts/partition proof](../history/window13.md#stitchcad-devnotes-part365md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part416.md).
 - ID: `G1-SLICE.5e.2.3`
   Status: `done`
-  Goal: actual per-node kind/role/source/callee certificates verified0275, native6+7/docs8.
-  Paths: crates/sc-core/src/recipe/checked.rs;crates/sc-core/src/recipe/checked/nodes.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_checked_node_contract.rs
-  Acceptance: [whole scope/six proof boxes/book-map repair](../history/window14.md#stitchcad-devnotes-part367md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part416.md).
 - ID: `G1-SLICE.5e.2.h13`
   Status: `done`
-  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part408.md).
-  Retention0292 owned .6.2.1:
-  - [x] ROOT CAUSE0292: git show6662298 whole sourced-call/archive13 records retained407/408; Python byte/hash comparison rc=0.
-  - [x] ADDRESSED0292: whole source/hash exact in407/408, Python comparison rc=0.
-  - [x] NO REGRESSION0292: scripts/history_archive.py --root . read407/408 whole public files exact, Python comparison rc=0; no reader change.
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part416.md).
+  Retention0295 owned .6.2.2.b.2.a:
+  - [x] ROOT CAUSE0295: git showe95fa7a whole four execution-prerequisite summaries retained416; Python byte/hash comparison rc=0.
+  - [x] ADDRESSED0295: whole source/hash exact in416, Python comparison rc=0.
+  - [x] NO REGRESSION0295: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part416.md whole public file exact, Python comparison rc=0; no reader change.
 - ID: `G1-SLICE.5e.2.4`
   Status: `pending`
   Goal: bounded source-order expression execution consuming actual node proofs and sourced values.

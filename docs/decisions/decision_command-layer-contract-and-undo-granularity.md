@@ -94,3 +94,9 @@ identity from the concrete variant. Canonical LengthDeclaration retains all auth
 source/provenance. Ordered nonempty distinct PieceSelection and canonical MaterialAssignment share
 the existing nonblank unresolved-reason rule. Actual registry binding, auth and execution remain
 later bus owners. The focused native3/0 target checks those payload boundaries.
+
+0295 .6.2.2.b.2.a adds CloseDart's canonical target and AddNotch's anchor/profile creation fields,
+with an explicitly bus-supplied new identity; native construction2/0 and prior payload3/0 pass.
+Director2026-10-26 resolves D226: SplitSeamSpan splits the sewing correspondence at explicit cuts
+on both sides. Its schema follows .4c.2; execution preserves actual ease/stops/reference/identity
+obligations. Ruling narrows the previously ambiguous command meaning; no handler is claimed.

@@ -71,7 +71,8 @@ it does not authorize recipe execution, establish numeric readiness or validate 
 MTM is a regeneration input. The explicit grade-rule-input query always refuses with chart and sole
 member identities, including for an empty draft. It certifies no currentness or regeneration readiness.
 No breaks are stored or invented in this object; the complete SizeSet must preserve the empty-break/
-path-2 refusal when the composite lands. Axes remain independent and await D70's director ruling.
+path-2 refusal when the composite lands. D70 requires at least one authored axis, including singleton
+sets; axis implementation remains independently owned by .4c.2.
 
 Definitions are cloneable inputs and validated charts are private and immutable. Reconstruction is
 explicit: the old chart retains its prior targets and refuses against retargeted current records.

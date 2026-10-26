@@ -5,11 +5,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
-## STITCHCAD-G1-0294 — canonical measurement and material intents
+## STITCHCAD-G1-0295 — dart/notch intents and D70/D226 rulings
 
-.6.2.2.b.1: derive command identity from real canonical payloads; retain five states and ordered material targets.
-Focused3/0, selected strict lint/fmt/census/book pass0;411/412/413/266 preserve whole history.
-Registry/auth/handlers remain owned; no source-change restriction. G1still5/18.
+.6.2.2.b.2.a: canonical dart/notch request schemas, focused2+3/0/lint/fmt/census/book pass0.
+Director confirms authored axes for every complete set and paired seam splits with explicit side cuts.
+414/415/416/267/137 retain whole history; book/live align. Axes .4c.2 next; G1still5/18.
+
+| [part267](docs/history/stitchcad-changelog-part267.md) | whole0294 | 6 lines, 360 bytes, sha256:ca19a138… |
 
 | [part266](docs/history/stitchcad-changelog-part266.md) | whole0293 | 6 lines, 324 bytes, sha256:564069d8… |
 

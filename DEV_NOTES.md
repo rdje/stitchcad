@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — dart/notch intents and confirmed director rulings
+
+0295 .6.2.2.b.2.a adds canonical CloseDart target and AddNotch owner/anchor/profile fields.
+Notch creation waits for the bus's explicit new identity; no cached id, intake or physical profile
+default. New construction2/0 plus prior payload3/0, selected strict lint/fmt/census/book pass0.
+Director2026-10-26 resolves D226 as a paired sewing-correspondence split with explicit cuts on
+both sides, and D70 as at least one authored axis for every complete SizeSet, with no inferred
+names/values. Current book/decision/task/status notes align; .4c.2 resumes after this commit.
+414/415/416/267/137 retain whole history, including original D70 conflict. No axes/split geometry,
+registry/auth or handler claim; G1still5/18. Promotion declined: existing contracts and direct rulings.
+
 ## _(2026-10-26 UTC)_ — canonical measurement and material intents
 
 0294 .6.2.2.b.1 binds two canonical payloads to mutation context; identity comes from the variant.
@@ -292,19 +303,8 @@ selected strict Clippy0 pass. Full named assertions/AST/provider lookup/replay r
 task, oldest full sum lesson and ledger retain356/357/243 with exact Git/hash/public reads; book/live
 align. Promotion declined: existing formula3.1/4.2 and bounded exact comparison/source contracts.
 
-## _(2026-10-26 UTC)_ — implemented numeric calls retain all evaluated sources
-
-0270 .5e.3.3 executes the existing eight numeric call families through sourced scalar wrappers.
-Every successful call merges all evaluated inputs, not just a winning candidate/bound. Sqrt/hypot/
-arc_length/round_to add their own sources even for zero/perfect/unchanged results; abs/min/max/clamp
-add none. Kind checks retain first argument priority, including Boolean versus earlier bad numeric
-kinds. Existing domain/arity/bounds/step refusals propagate without any replacement value.
-
-Focused native5/0 and selected strict Clippy0 pass: all eight families, full input unions, exact-
-valued call contributions through cancellation/storage/read, singleton/empty extrema and typed
-refusals. Trig/geometry/AST/provider/conditional/replay remain open. Whole0269 task, oldest product/
-quotient lesson and ledger retain354/355/242 with exact Git/hash/public reads; book/live align.
-Promotion declined: existing numerical and D121 source contracts govern these implementations.
+[Complete sourced numeric-call lesson](docs/history/stitchcad-devnotes-part415.md) retains
+its original operand/call propagation, actual failures, checks and promotion decision.
 
 [Complete sourced scalar-operator/binding lesson](docs/history/stitchcad-devnotes-part412.md) retains
 its original exact-flow/source behavior, typed failures, checks and promotion decision.

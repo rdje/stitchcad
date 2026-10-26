@@ -401,7 +401,7 @@ Each stage has owned children in docs/tasks/G1-SLICE-recipes.md. Static obligati
 scoped checks and [whole recipe proofs](formula-checked-recipes.md) are implemented; coupled whole
 review .5b.4b is complete; arithmetic .5c follows.
 Unknown inputs retain declared kinds but no invented numeric value. Factory artifact blocking
-remains G4's policy; size-axis integration still waits for D70. Command atomicity/localization (.6),
+remains G4's policy; size-axis integration remains .4c.2 under the confirmed D70 rule. Command atomicity/localization (.6),
 typed project fields/digests and cycle loading (.7), API/MCP (.9), browser execution (.12), geometry
 (G2/G3) and human production approval (G7) remain separately required. Closing syntax closes none
 of these later obligations.
