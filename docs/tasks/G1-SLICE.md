@@ -734,30 +734,24 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0322 shared exact core profile pin; [whole implementation/proofs](../history/stitchcad-devnotes-part477.md).
 - ID: `G1-SLICE.6.2.2.c.2.2`
   Status: `done`
-  Goal:0323 exact shared snapshot context and distinct concrete regeneration/grade-rule requests.
-  Own core command snapshot/evaluation/query modules/reexports and evaluation/query/catalog focused tests.
-  Snapshot holds exact Design/revision/actor; query legacy context aliases shared type; no mutation key/group.
-  Regeneration names member/set revision, explicit garment/MTM chart and logical or factory-resolved input.
-  Actual chart bindings supply the measurement tables and (MTM) Ease; never duplicate canonical mapping/value state.
-  Factory input pins all three profile labels and resolved-parameter identity, conferring no validation proof.
-  Logical mode preserves factory-free design evaluation; missing required quantities remain errors, never defaults.
-  GradeSize names base Instance, rule table and exact target member/set breaks; recipe/profile not substituted.
-  IDs are claims resolved against actual current records at execution; no new results/handlers/auth or readiness.
-  Own evaluation-request book chapter/SUMMARY/topic index, command-layer context crosslinks and publication map.
-  Own477 whole0322 task/0300-0299 lessons/prior governance and command verification receipts,295 ledger from a423713,
-  with exact committed source/hash/public-reader verification before retirement; preserve current rules/anchors.
-  Focus native request/query/catalog contracts, strict selected lint/fmt/book/scoped publication; broad CI later.
-  - [x] ROOT CAUSE (WHY + WHERE): canonical paths require distinct actual inputs; shared snapshot prevents
-    divergent query/evaluation revision semantics. Native evaluation3/query2/catalog2 pass; rc=0.
-  - [x] ADDRESSED: concrete chart/profile or base/rules/target inputs retain exact claims; core strict selected
-    lint/fmt/book/publication75 chapters/88 entries pass; rc=0. No lookup/value extraction/handler introduced.
-  - [x] NO REGRESSION: existing query and normative catalog2+2 pass; beyond128-bit Design counters and Count
-    set revisions retained.477/295 wholea423713 source/hash/public equality pass; rc=0.
-  Commit0323; next .6.2.2.c.2.3. Lesson promotion declined: applies existing canonical contracts, no new policy.
-  Broad CI/engine/authority/physical signoff retain G1 integration/pre-push and later gate owners.
+  Goal:0323 shared snapshot/distinct instantiation inputs; [whole implementation/proofs](../history/stitchcad-devnotes-part478.md).
 - ID: `G1-SLICE.6.2.2.c.2.3`
-  Status: `pending`
-  Goal: actual selected-profile ResolveProfile input, preserving source snapshots and symbolic parameter boundaries.
+  Status: `done`
+  Goal:0324 concrete ResolveProfile request over shared exact Design snapshot and selected profile pin.
+  Own core command evaluation module/reexport/existing native target and evaluation-request book section.
+  Explicit pin names actual authored profile/schema/content target; source bindings come from pinned Design.
+  No free argument map, copied parameter values/constraint strings, default profile or preallocated result.
+  Actual profile lookup/grammar/typed constraints/evidence/composition remain G4. Preserve symbolic uncertainty.
+  Own478 whole0323 task and prior chart verification receipt,296 ledger from9210e03; verify Git/hash/public
+  before retirement, preserve operational chart-probe obligations in current book summary. Focus8 native
+  evaluation/query/catalog contracts, strict selected lint/fmt/book/scoped publication; full CI later.
+  - [x] ROOT CAUSE (WHY + WHERE): selected profile resolution needs exact pin and Design bindings, not copied
+    states/free-string constraints. New native contract plus query/catalog/regeneration/grading pass8/0; rc=0.
+  - [x] ADDRESSED: concrete ResolveProfile shares snapshot and derives evaluation/generate/discarded metadata;
+    selected strict lint/fmt/book/publication75 chapters/88 entries pass; rc=0.
+  - [x] NO REGRESSION: same three instantiation/query/catalog contracts remain green; exact authored Unicode/
+    schema/content retained.478/296 whole9210e03 Git/hash/public equality pass; rc=0.
+  Commit0324; next .6.2.2.c.2.4. Promotion declined: existing canonical contracts; full CI G1 integration/pre-push.
 - ID: `G1-SLICE.6.2.2.c.2.4`
   Status: `pending`
   Goal: concrete DXF/PLT/PDF/tech-pack requests and artifact-dependent closure binding; no guessed global closure.

@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0323 — distinct typed instantiation requests
+## STITCHCAD-G1-0324 — selected profile resolution request
 
-Shared exact snapshot preserves query compatibility. Regeneration names chart/profile selections;
-grading retains base Instance/rules/target breaks. Native3+2+2/lint/fmt/book/publication75-88 pass0.
-477/295 wholea423713 source/hash/public exact0; G1 .6.2.2.c.2.2 done, progress6/18 unchanged.
+ResolveProfile retains exact selection and shared Design snapshot without copying symbolic states.
+Native4+2+2/strict selected lint/fmt/book/publication75-88 pass0;478/296 whole9210e03 exact.
+G1 .6.2.2.c.2.3 done;6/18 unchanged. Actual constraints/profile resolution remain G4.
 
 # Sealed archive — earlier slices
+
+| [part296](docs/history/stitchcad-changelog-part296.md) | whole0323 | 6 lines, 358 bytes, sha256:eaa69b20… |
 
 | [part295](docs/history/stitchcad-changelog-part295.md) | whole0322 | 6 lines, 357 bytes, sha256:41bd774e… |
 

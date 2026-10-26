@@ -143,13 +143,34 @@ impl GradeSize {
     }
 }
 
-/// Implemented evaluation input schemas; profile-resolution selection follows its own contract.
+/// Resolve the exact selected profile against its constraints and the requested Design's bindings.
+/// The snapshot context supplies the source Design revision; no symbolic parameter state is copied here.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct ResolveProfile {
+    selected: SelectedProfilePin,
+}
+impl ResolveProfile {
+    /// Preserve explicit profile/schema/content labels; actual lookup/constraint validation remains G4.
+    #[must_use]
+    pub const fn new(selected: SelectedProfilePin) -> Self {
+        Self { selected }
+    }
+    /// Exact authored selection, never a default or latest-profile lookup.
+    #[must_use]
+    pub const fn selected(&self) -> &SelectedProfilePin {
+        &self.selected
+    }
+}
+
+/// Concrete evaluation input schemas; execution, registry binding and constraint solving are separate.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum EvaluationPayload {
     /// Measurement-driven recipe regeneration.
     EvaluateInstance(EvaluateInstance),
     /// Base-instance and grade-rule instantiation.
     GradeSize(GradeSize),
+    /// Selected profile parameter/constraint resolution against the pinned Design.
+    ResolveProfile(ResolveProfile),
 }
 impl EvaluationPayload {
     /// Concrete payload determines identity and the existing evaluation/generate/discarded metadata.
@@ -158,6 +179,7 @@ impl EvaluationPayload {
         match self {
             Self::EvaluateInstance(_) => CommandId::EvaluateInstance,
             Self::GradeSize(_) => CommandId::GradeSize,
+            Self::ResolveProfile(_) => CommandId::ResolveProfile,
         }
     }
 }

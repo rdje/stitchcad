@@ -4,7 +4,7 @@ use sc_core::{
         CommandActorClaim as Actor, CommandAuthority, CommandClass, CommandEvaluation, CommandId,
         CommandQueryContext, CommandReversibility, CommandSnapshotContext, CommandUndoGranularity,
         DesignRevision, EvaluateInstance, EvaluationPayload, EvaluationProfile, GradeSize,
-        RegenerationChart, SizeMemberTarget,
+        RegenerationChart, ResolveProfile, SizeMemberTarget,
     },
     ontology::{EntityId as Id, SelectedProfilePin, SelectedProfilePinDefinition},
 };
@@ -104,4 +104,29 @@ fn assert_evaluation(payload: EvaluationPayload, id: CommandId) {
     assert_eq!(id.required_authority(), CommandAuthority::Generate);
     assert_eq!(id.reversibility(), CommandReversibility::Discarded);
     assert_eq!(id.undo_granularity(), CommandUndoGranularity::NotApplicable);
+}
+
+#[test]
+fn profile_resolution_retains_exact_selection_and_uses_evaluation_snapshot_metadata() {
+    let authored = SelectedProfilePinDefinition {
+        profile_id: " House/É ".to_owned(),
+        schema_version: "02.0".to_owned(),
+        content_version: "content+001".to_owned(),
+    };
+    let pin = SelectedProfilePin::new(authored.clone()).expect("authored profile labels");
+    let input = ResolveProfile::new(pin.clone());
+    assert_eq!(input.selected(), &pin);
+    assert_eq!(input.selected().definition(), &authored);
+    let changed = ResolveProfile::new(
+        SelectedProfilePin::new(SelectedProfilePinDefinition {
+            content_version: "content+002".to_owned(),
+            ..authored
+        })
+        .expect("next explicit selection"),
+    );
+    assert_ne!(input, changed);
+    assert_evaluation(
+        EvaluationPayload::ResolveProfile(input),
+        CommandId::ResolveProfile,
+    );
 }

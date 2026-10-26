@@ -16,7 +16,7 @@ pub use context::{
 };
 pub use evaluation::{
     CommandEvaluation, EvaluateInstance, EvaluationPayload, EvaluationProfile, GradeSize,
-    RegenerationChart, SizeMemberTarget,
+    RegenerationChart, ResolveProfile, SizeMemberTarget,
 };
 pub use payload::{
     AssignMaterial, AssignMaterialError, ChangeMeasurement, CommandMutation, MutationPayload,

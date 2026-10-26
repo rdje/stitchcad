@@ -78,13 +78,8 @@ authored axes for every complete set, implemented at .4c.2; physical/global curr
 | `SizeChartRole` | Logical Design POM or authored garment observation |
 | `SizeChartError` | Scoped identity, kind, membership, table, binding or unresolved-value refusal |
 
-Sixteen contracts and a privacy compile-fail test cover borrowing, missing/replaced identities,
-revision/domain checks, explicit table/observation retargeting, current metadata and unresolved values.
-Eight deliberate production mutations must fail actual regression assertions and restore exact source.
-The diagnostic prepares the [local producer profile](../build-and-checks.md#direct-python-producers)
-before any input read, output or native child. It declares all eight numbered logs and restored.log,
-the current test input and its mutable implementation. Physical file aliases and missing inputs refuse
-before activation. Failed-body panic locations must match current assertion macro byte positions;
-passed assertion names or expect messages provide no evidence. Independent controls capture all nine
-children/files; real replay verifies eight macro failures and the restored current sixteen-test artifact.
-The strict native/WASM gates and warning-free book check the integration; the API is not an app or MCP server.
+Contract/privacy tests cover current identity, domain, binding, borrowing and unresolved-value behavior.
+Watched mutations require actual regression assertions and source restoration. The diagnostic uses the
+[local producer profile](../build-and-checks.md#direct-python-producers), validates its input/output
+inventory and aliases before activation, and checks current panic assertion locations. Complete prior
+verification receipts remain in `docs/history/stitchcad-devnotes-part478.md`; no app/MCP claim follows.

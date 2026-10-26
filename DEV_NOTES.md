@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — selected profile resolution request
+
+0324 .6.2.2.c.2.3 binds exact profile/schema/content labels to shared Design snapshot through ResolveProfile.
+Canonical Design/profile records supply inputs; no generic maps, copied states, constraint strings or defaults.
+Native evaluation4/query2/catalog2, selected strict lint/fmt/book/publication75-88 pass0;478/296 exact9210e03.
+G4 owns registry/AST/solver/evidence/composition; no executable result or grant. G1still6/18, artifacts next.
+Promotion declined: existing profile/command contracts; no new policy. Broad CI remains integration/pre-push.
+
 ## _(2026-10-26 UTC)_ — distinct instantiation requests
 
 0323 .6.2.2.c.2.2 shares Design/actor/exact-revision snapshot; legacy query context remains same type.

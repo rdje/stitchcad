@@ -61,5 +61,13 @@ its grade-rule refusal.
 Reconstruction and equivalence checks remain G3.
 
 Payloads determine identity and evaluation/generate/discarded metadata, without design undo grouping.
-Native contracts check input preservation. [Remaining command owners](command-layer.md) cover profile
-resolution, artifacts, uncertainty closure, release and execution.
+Native contracts check input preservation. [Bus execution, artifact and release owners](command-layer.md)
+remain separate.
+
+## Resolve a selected profile
+
+`EvaluationPayload::ResolveProfile(ResolveProfile::new(selected_pin))` requests parameter resolution
+for the exact profile/schema/content pin against the shared Design snapshot. Actual measurement,
+material and SizeSet bindings come from that Design revision; no input map or constraint string
+substitutes for canonical records. The constructor preserves symbolic states and allocates no result.
+Registry/grammar, typed constraints, evidence, precedence and composition checks remain G4.

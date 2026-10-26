@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0323 .6.2.2.c.2.2 adds shared exact snapshot and distinct regeneration/grade-rule request inputs.
-- Query context aliases shared type; garment/MTM charts supply original measurement/Ease bindings.
-- Explicit logical/factory pin+resolved parameters; grading names base/rules/target break snapshot; handlers later.
-- Native evaluation3/query2/catalog2 and selected strict lint/fmt/book/publication75-88 pass0;477/295 exacta423713.
-- NEXT .6.2.2.c.2.3 ResolveProfile schema. G1 In Progress6/18 unchanged; remaining engine/bus/app/release owned later.
+-0324 .6.2.2.c.2.3 adds concrete ResolveProfile with exact selected profile/schema/content pin.
+- Shared Design snapshot supplies canonical source bindings; no copied values, generic maps or constraint strings.
+- Native evaluation4/query2/catalog2 and selected strict lint/fmt/book/publication75-88 pass0.
+-478/296 whole9210e03 source/hash/public exact0. NEXT .6.2.2.c.2.4 actual artifact requests/dependency closure.
+- G1 In Progress6/18 unchanged; G4 owns registry/constraint/evidence validation, remaining engine/bus/app later.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
