@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — exact DXF and uncertainty requests
+
+0325 .6.2.2.c.2.4.1 adds named single-instance DXF/profile-result inputs and identical artifact closure payload.
+Generate versus inspect metadata stays distinct; neither performs lookup/traversal/writes or grants authority.
+Native artifact2/query2/catalog2 pass0; initial test lint5 fixed with checked columns/matches, final strict lint0.
+Fmt/book/publication76-89 pass0; D237 stale inverse intro/pilot status corrected, full prior chapter retained.
+479/297/141 whole8827a23 Git/hash/public exact0. Promotion declined: existing contracts; G1still6/18, graded next.
+
 ## _(2026-10-26 UTC)_ — selected profile resolution request
 
 0324 .6.2.2.c.2.3 binds exact profile/schema/content labels to shared Design snapshot through ResolveProfile.
@@ -215,15 +223,8 @@ pointers align. Book0;431/432/274 retain whole5b13daf Git/hash/public bytes exac
 closed; sourced declarations .3d.1 next. No code/schema or path-readiness claim; G1still5/18.
 Promotion: existing SizeSet decision updated; no unrelated policy or verification expansion.
 
-## _(2026-10-26 UTC)_ — break-dimension contract review
-
-0301 .4c.3d.0 logs D228 before a break schema can bake in an ambiguous key. Size-sets §6 says
-per measurement dimension, §7 per axis/single-axis representation. The existing skirt independently
-names waist/hip dimensions. Witness: one House size axis, S/M, waist+4cm and hip+5cm; axis/pair alone
-cannot distinguish both deltas. Recommend explicit axis+POM/dimension+adjacent member pair; director
-choice pending against axis-only. Book/decision/PLANNING and resume pointers expose the blocker.
-Source rg review0/book0;428/429/273/430 wholee77742e Git/hash/public exact0. No code/model change;
-G1still5/18. Promotion declined: no adopted policy, pending ruling kept in the existing SizeSet record.
+[Complete break-key review lesson](docs/history/stitchcad-devnotes-part479.md) retains
+its original D228 witness, pending ruling and ownership; the later approved key remains implemented.
 
 [Complete query/paired-split lessons](docs/history/stitchcad-devnotes-part477.md) preserve
 their original contracts, focused evidence, promotion and remaining execution owners.

@@ -1,0 +1,397 @@
+# Sealed archive — whole0324 task,0301 lesson and prior trig certificate chapter
+
+Immutable historical segment, sealed by leaf `G1-SLICE.6.2.2.c.2.4.1` on `2026-10-26` (UTC).
+
+- **Sealed identity:** 383 lines, 25437 bytes, sha256:a6a5e2d86fe5827b4f9834fdce5b3dca26e439e7cecf9c51f77b1ef6b58d27b2
+- **Coverage:** whole committed intervals from 8827a23456684799be497ebb53a08151d333d8da.
+- Whole source interval: docs/tasks/G1-SLICE.md bytes 44831–46457, 1626 bytes, sha256:eb83377a41185bff2353ca13528490ce99365e744f11fc2d4a9f4a0cebbf5972
+- Whole source interval: DEV_NOTES.md bytes 16719–17478, 759 bytes, sha256:fbb9caf238bc7bbd07bccafc26ee15cfff17fec66878e59af3c086effbc3386d
+- Whole source interval: docs/book/src/annexes/formula-trig-certificates.md bytes 0–23052, 23052 bytes, sha256:2d262c1e532aa943117326560a855a15010c1b3a6aa5fd4ae702a1cdce1c010b
+- **Retrieval:** bytes below the first rule and blank line; original terminal newlines retained.
+- **Write policy:** none; corrections belong in a later record.
+
+---
+
+- ID: `G1-SLICE.6.2.2.c.2.3`
+  Status: `done`
+  Goal:0324 concrete ResolveProfile request over shared exact Design snapshot and selected profile pin.
+  Own core command evaluation module/reexport/existing native target and evaluation-request book section.
+  Explicit pin names actual authored profile/schema/content target; source bindings come from pinned Design.
+  No free argument map, copied parameter values/constraint strings, default profile or preallocated result.
+  Actual profile lookup/grammar/typed constraints/evidence/composition remain G4. Preserve symbolic uncertainty.
+  Own478 whole0323 task and prior chart verification receipt,296 ledger from9210e03; verify Git/hash/public
+  before retirement, preserve operational chart-probe obligations in current book summary. Focus8 native
+  evaluation/query/catalog contracts, strict selected lint/fmt/book/scoped publication; full CI later.
+  - [x] ROOT CAUSE (WHY + WHERE): selected profile resolution needs exact pin and Design bindings, not copied
+    states/free-string constraints. New native contract plus query/catalog/regeneration/grading pass8/0; rc=0.
+  - [x] ADDRESSED: concrete ResolveProfile shares snapshot and derives evaluation/generate/discarded metadata;
+    selected strict lint/fmt/book/publication75 chapters/88 entries pass; rc=0.
+  - [x] NO REGRESSION: same three instantiation/query/catalog contracts remain green; exact authored Unicode/
+    schema/content retained.478/296 whole9210e03 Git/hash/public equality pass; rc=0.
+  Commit0324; next .6.2.2.c.2.4. Promotion declined: existing canonical contracts; full CI G1 integration/pre-push.
+## _(2026-10-26 UTC)_ — break-dimension contract review
+
+0301 .4c.3d.0 logs D228 before a break schema can bake in an ambiguous key. Size-sets §6 says
+per measurement dimension, §7 per axis/single-axis representation. The existing skirt independently
+names waist/hip dimensions. Witness: one House size axis, S/M, waist+4cm and hip+5cm; axis/pair alone
+cannot distinguish both deltas. Recommend explicit axis+POM/dimension+adjacent member pair; director
+choice pending against axis-only. Book/decision/PLANNING and resume pointers expose the blocker.
+Source rg review0/book0;428/429/273/430 wholee77742e Git/hash/public exact0. No code/model change;
+G1still5/18. Promotion declined: no adopted policy, pending ruling kept in the existing SizeSet record.
+
+# Annex: investigating bounded trig rounding certificates
+
+The sin/cos value kernel is implemented under the certificate and admitted plan below;
+tan and atan/atan2 remain unimplemented. Whole formula execution is still pending. The plan owner is
+G1-SLICE.5d.1.2.2.2; full execution also retains the other dependencies in the
+[execution plan](formula-execution-plan.md).
+
+## Why output thresholds might help
+
+Sine and cosine produce ratios rounded to integer parts per million. Their positive rounding
+midpoints are (2j+1)/2,000,000 for j from0 through999,999: one million thresholds. For example,
+the first midpoint is0.0000005 and the last is0.9999995. Symmetry covers negative results.
+
+An admitted rational angle has at most128-bit numerator/denominator magnitudes in microdegrees.
+Writing it in turns gives a denominator bounded by Q=360,000,000*(2^128-1), a157-bit integer.
+Integer-microdegree period/quadrant/octant reductions preserve this bound. This is an input
+denominator bound, not a runtime precision choice.
+
+For each output midpoint r, enclose both inverse values asin(r-delta)/(2*pi) and
+asin(r+delta)/(2*pi). If the entire interval lies strictly between a/b and c/d where
+bc-ad=1, both denominators are at most Q, and b+d>Q, then it contains no admitted rational phase.
+Indeed any strictly intermediate rational p/q has
+q=d*(bp-aq)+b*(cq-dp)>=b+d>Q. Both integer factors are positive.
+This would prove every true admitted sine stays more than delta away from that midpoint.
+
+Once every threshold passes, a separately justified runtime sine enclosure narrower than delta
+could round unambiguously. Neither the candidate interval constructor nor a small sample closes
+that complete argument by itself.
+
+## What the feasibility cohort establishes
+
+The tracked Python producer uses directed512-bit integer intervals, the existing certified640-bit
+pi enclosure, integer square roots, half-angle identities and an alternating arctangent series.
+The candidate value band is delta=2^-384. These are experimental certificate parameters.
+The independent oracle uses exact Fraction arithmetic and a different, positive arcsine series.
+The series are documented by [NIST DLMF4.24](https://dlmf.nist.gov/4.24).
+
+Run from the repository root:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/finite_threshold_feasibility.py
+```
+
+Work unit0277 certified38 sampled forward bands. Controls cover three exact inverse values,
+four independent series enclosures, exhaustive rational checks at32 small denominator bounds,
+and two required refusals. One refusal deliberately places the real sin30-degree value1/2
+inside a band; another uses a band wide enough to contain admitted inputs.
+The report explicitly says feasibility_cohort_only and retains exact endpoints and source hashes
+under target/trig_threshold_feasibility/0277/. It does not claim the full million thresholds.
+
+## Remaining admission work
+
+The full forward producer is a separate source-locked, resumable command:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py --chunks 1
+python3 -I -B docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py
+python3 -I -B docs/tasks/artifacts/formula_structure/verify_forward_certificate.py
+```
+
+It writes100 contiguous10,000-row chunks and a manifest under target/trig_forward_certificate/0278/.
+Every row retains exact phase endpoints and rational gap components. Resume verifies existing
+chunks and refuses changed source hashes. The independent reader checks all gap predicates and
+contiguous coverage, without importing the inverse-interval constructor. That constructor retains
+its separate derivation/oracle obligations. Work unit0278 completed all1,000,000 bands, and the
+independent reader passed all100 chunks, rc=0. A deliberately stopped one-chunk run was correctly
+refused as complete evidence before a verified resume. This closes the forward population step;
+the native error/workspace plan and implementation are recorded below. Never remove an active.lock merely to
+bypass a running producer: after an interrupted process, establish that its recorded PID is gone
+before removing that project-owned lock and resuming.
+
+The complete forward certificate retains exact predicates, source identity and measured cost.
+A native kernel also needs its own complete error, termination and workspace argument, followed
+by focused integration evidence; sin/cos now provide those below. A failed experimental gap cannot become a new language input
+restriction or a silently substituted numeric answer.
+
+Inverse angle rounding has45 million half-microdegree thresholds in its first octant after
+sign/quadrant/reciprocal symmetry. Exact atan2 slopes can require256-bit denominators in private
+workspace; a tangent-of-angle-band certificate must account for that bound. Its bounded generator
+cohort is available below; complete inverse coverage remains open. Axes, poles and
+signed principal branches still need their existing exact rules. Tangent's much larger output
+threshold population retains a separate practical resource obligation.
+
+## Admitted sine/cosine runtime plan
+
+Work unit0279 admits the following algorithm plan; work unit0280 implements the native value API. There is
+no new dependency, input restriction or language precision limit. This closes only the forward
+resource-plan obligation, using the complete certificate above.
+
+Keep angle numerator/denominator in private integer workspace. For sine, reduce the magnitude
+modulo360,000,000*d and retain its original sign. Cosine is even: reduce the magnitude, add the
+integer90,000,000*d quarter turn, and reduce again. Fold at180 and90 degrees, toggling the sine
+sign in the negative half. Above45 degrees, complement against90 and exchange sin/cos.
+This leaves a first-octant angle without constructing a narrower public rational or binding it.
+For example, sin(-450 degrees) becomes negative cos(0); cos(-180 degrees) becomes negative cos(0).
+Zero and quadrant axes retain their exact values; a zero result has canonical positive sign.
+
+At scale S=2^512, truncate the existing certified pi enclosure outward. For folded microdegrees
+n/d<=45,000,000, set X to the floor/ceiling enclosure of n*pi/(180,000,000*d).
+Its scaled integer width is at most3: the pi coefficient is at most1/4, with less than two units
+of endpoint rounding. Since pi<4, X lies in[0,S]. The directed square Z has width at most8:
+(X_high^2-X_low^2)/S<=2*(X_high-X_low), plus at most two outward rounding units.
+
+Start the sine term at X and cosine at exact S. The next positive term interval divides the
+endpoint product T*Z once by S*k, outward in each direction. Sine uses
+k=(2j+2)(2j+3), cosine uses k=(2j+1)(2j+2). All endpoints stay in[0,S], and k>=2, so
+
+```text
+width_next <= (width_T + width_Z)/k + 2
+           <= (12 + 8)/2 + 2 = 12.
+```
+
+This invariant covers every term. Summing64 alternating intervals gives width at most768 scaled
+units. On[0,1], the alternating remainder magnitude is below the next term, hence below1/128!.
+The exact factorial exceeds2^512; widening by one scaled unit on both sides is sufficient.
+The resulting width is at most770*2^-512, strictly below2^-502 and the certificate's2^-384 band.
+Clipping to the known nonnegative function range[0,1] preserves the true value and narrows width.
+The [NIST series](https://dlmf.nist.gov/4.19) and
+[addition identities](https://dlmf.nist.gov/4.21) underlie these derivations.
+
+Every true admitted sine is more than2^-384 away from a half-ppm threshold. A valid interval
+narrower than that distance cannot place a threshold between its lower endpoint and the true
+value. Exact integer rounding of the lower endpoint times1,000,000 therefore yields the true
+nearest ppm; restoring the sign preserves half-away symmetry. The argument applies to cosine
+through its exact quarter-turn identity. There is no adaptive loop or precision-failure result.
+
+The operation count is64 series terms plus fixed bounded reduction, products and divisions.
+Term/square products are at most S^2; partial-sum magnitudes are below64S+2; coefficient,
+angle/pi and ppm-rounding products are smaller than the conservative2^1026 workspace bound.
+Every result magnitude is at most1,000,000ppm. This bounds private workspace without imposing
+the public128-bit rational-result limit on internal reduction or series arithmetic.
+
+The focused plan instrument is:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py
+```
+
+It checks the exact envelope inequalities and factorial,14 direct-power/factorial Fraction
+enclosures,50 comparisons against a distinct signed eight-octant table, and two deliberately
+insufficient profiles. Full-width rational/turn/near-axis cases are included. These support the
+derivation; they are not themselves native or cross-platform evidence. The
+[native API and focused fixture results](formula-rationals.md#correctly-rounded-sine-and-cosine)
+are available separately. Sourced sin/cos calls are also available; whole execution and broader integration stay owned.
+
+## Inverse certificate feasibility
+
+The inverse experiment encloses tangent over a2^-600-turn band on either side of each
+half-microdegree target, using640-bit directed sine/cosine intervals and their quotient.
+The candidate uses64 terms with the certified pi input; its positive cosine denominator and
+alternating tail are checked. Strict rational-gap predicates use Q=(2^128-1)^2, covering the
+private full-width atan2 slope. These are experimental certificate parameters.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py
+```
+
+Work unit0282 passes38 sampled bands, four independent algebraic tangent enclosures and two
+exact Fraction-arctangent checks. The controls reject a band containing rational tan45=1 and
+a deliberately wide band. The project-local report under target/trig_inverse_feasibility/0282/
+explicitly says inverse_feasibility_cohort_only, retaining exact endpoints and source hashes.
+
+This cohort alone proves neither complete45-million-threshold coverage nor native atan/atan2.
+Complete coverage is now verified below. Native sign/reciprocal/
+quadrant/axis/principal-branch handling, error and workspace remain separate admission work.
+Production tangent has a separate resource obligation; this experiment does not close it.
+
+## Native inverse chunk probe
+
+Work unit0283 adds a diagnostic Rust chunk generator and a guarded Python probe:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/native_inverse_probe.py
+```
+
+It builds the example with project-local stores and uses the artifact path reported by Cargo.
+The Rust child reads only its protocol on stdin and emits exact288-byte rows on stdout.
+Each row contains two slope endpoints and four rational gap components. The child is bounded
+to100,000 rows; this is a diagnostic chunk boundary, not a formula-language restriction.
+
+Instead of evaluating tangent twice, it encloses the center and widens by16*2^-600 in slope.
+Every complete target angle band stays in the first octant, where tan'=sec^2<=2;2*pi<8 then
+bounds the whole displacement by that padding. The Python check confirms that the native band
+contains the endpoint-based band, rather than requiring their different enclosures to be equal.
+
+The bounded probe passes10,035 exact row checks,67 Python-band comparisons and five actual
+invalid-input refusals before output. The report/prefix/build log is under target/native_inverse_probe/0283/.
+This probe supplies generator/parity/cost evidence only. Full45M coverage is verified below;
+native atan/atan2 admission remains open. No inverse formula API is available yet.
+
+## Resumable inverse controller and exact reader
+
+The controller retains450 chunks of100,000 rows, frozen build inputs, a verified producer copy,
+source/binary hashes and an atomic manifest under target/inverse_threshold_certificate/0284/.
+It can use up to four owned children. Only completed chunks that pass independent exact reading
+enter the manifest; resume rechecks published bytes. A partial manifest never becomes complete
+merely because an invocation exits successfully.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/inverse_threshold_certificate.py --chunks 1 --workers 1
+python3 -I -B docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py --allow-partial
+# After full coverage, require the default complete-population reader:
+python3 -I -B docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py
+```
+
+Work unit0284 exercises one100k chunk, a verified resume to200k, partial reading and the default
+reader's required refusal. Corrupted-row/coverage/source and owned-child cleanup controls pass.
+The frozen executable/build inputs preserve actual provenance when unrelated features later
+change. Live native source, pi fixture, controller and reader must still match their recorded basis.
+This does not claim that the reader independently recomputes every tangent enclosure.
+
+An interrupted run leaves an exclusive lock and child registry. Establish that the recorded
+processes are gone before removing its project-owned lock and resuming. Error cleanup reaps
+owned children; differing unpublished final bytes are preserved and refused. Full coverage is
+verified below. Native inverse-function branches/error/workspace admission is still open.
+
+A read-only inspection found generic .bin cleanup would select retained certificate chunks.
+Work unit0285 fixes this: both forward/inverse stores are excluded from generic cleanup, including
+their payloads and frozen provenance. The actual census/compiled omission control passes; no
+certificate was deleted.
+
+## Complete inverse certificate
+
+Work unit0286 completes all45,000,000 targets in450 chunks and passes the default full reader,
+rc=0. Every encoded strict gap, payload hash, contiguous index range and cross-chunk order is
+checked. Frozen producer/build provenance and critical source identity remain exact; the lock
+is absent and no owned child remains. The retained payload is12.96GB on the repository volume.
+
+The minimum slope margin is20936389198509991007691322699578 scaled by2^640, greater than2^104.
+An admitted rational slope cannot lie inside its target's gap. Its distance from the true target
+tangent is therefore greater than2^-536. Throughout the folded slope range[0,1], the derivative
+of atan(r)/(2*pi) is at least1/(4*pi)>1/16. The mean-value theorem gives a uniform angular
+distance greater than2^-540 turns from each half-microdegree target. The
+[NIST derivative](https://dlmf.nist.gov/4.24.E9) supports that last conversion.
+
+A compact witness is tracked at crates/sc-core/tests/fixtures/inverse_rounding_certificate.tsv.
+It records population, minimum, combined payload digest and exact source identities. The tracked
+inverse_certificate_witness.py reproduces it from complete metadata, without replacing the full
+reader. Later budget checks can use this source-gated witness instead of repeating full coverage
+after every ordinary feature. The full reader remains available for deliberate re-verification.
+
+This closes inverse population coverage. The concrete algorithm plan below uses its stronger
+margin; native implementation evidence follows below. Production tangent and whole execution remain open.
+
+## Admitted atan/atan2 runtime plan
+
+Work unit0287 admits576 fractional bits, five half-angle steps and64 directed terms against the
+verified2^-540-turn threshold margin. The plan instrument checks the compact witness's exact
+profile and five source hashes. This is not a new language input limit or precision-refusal rule.
+
+Atan's internal ppm Ratio becomes real n/(1,000,000*d). Atan2 forms y/x privately from two
+homogeneous Length or Ratio operands; it never constructs a public128-bit Ratio intermediate.
+The private products fit256 bits, covered by the certificate. Fold positive slopes above1 by
+reciprocal, then complement the base turn against1/4. Atan restores its sign. Atan2 reconstructs
+its first quadrant, complements against1/2 for negative x, then restores y's sign.
+
+Axes use exact values. Zero y with negative x gives+180 degrees; a small negative y may round
+to-180. Both-zero atan2 refuses formula_domain. The functions preserve the signed principal
+answer without direction modulo, checking actual argument kinds before value special cases.
+
+At scale S=2^576, enclose the folded rational by outward integer division. Each step applies
+x/(1+sqrt(1+x^2)). For the radical's lower scaled input N_lo, integer Newton computes its
+floor root r. For upper input N_hi, r+ceil((N_hi-r^2)/(2r)) is a valid upper root bound.
+Squaring it proves containment. This needs one bounded Newton solve per half-angle step.
+
+All root inputs are in[S^2,2S^2]. Newton starts at2S and decreases above the floor root.
+Its error recurrence e_next<=floor(e^2/(2S))+1 reaches at most1 after11 updates; one exact
+floor-root step and a stopping test give at most13 divisions. No iteration cutoff is introduced.
+
+If the current scaled x width is at most11, its square width is at most2w+2, radical width
+at mostw+2, and next x width at mostw/2+(w+2)/4+2<=11. Upper endpoints halve; after five
+steps they are at most S/32. The direct alternating atan series then has initial power width11,
+later powers width3, and total64-term interval width at most328 units including its tail.
+The tail is smaller than(1/32)^129/129<2^-645, hence smaller than one576-bit unit.
+
+The base turn equals16*atan(final)/pi. Its outward quotient width is below4096 scaled units,
+or2^-564 turns. Exact complements and sign preserve that width. It is narrower than the certified
+distance from every rounding threshold, so exact half-away rounding of its magnitude endpoint
+times360,000,000 gives the true nearest microdegree. No libm, adaptive precision failure or
+premature public-width refusal is involved. All intermediate magnitudes are below2^1154.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/atan_runtime_plan.py
+```
+
+This focused model passes14 atan and16 atan2 comparisons against an independent768-bit
+rational-addition/series oracle, two zero-vector refusals, four standard-library integer-root
+comparisons and two insufficient-budget controls. The oracle uses a distinct pi identity and
+no Newton/half-angle reduction. Exact inequalities support the whole admitted argument family;
+the sample checks support transcription. Native code is available below; platform evidence remains pending.
+
+## Native inverse values
+
+FormulaNumericValue::checked_atan() accepts a Ratio in internal ppm and returns an Angle rounded
+to the nearest integer microdegree. Thus1,000,000ppm represents real1 and returns45,000,000µdeg;
+500,000ppm returns26,565,051µdeg. Negative inputs retain their sign. Tiny inputs may round to
+canonical zero and very large finite inputs may round to a signed90-degree endpoint.
+
+FormulaNumericValue::checked_atan2(x) treats its receiver as y. Both operands must be Lengths
+or both Ratios. Common units cancel; there is no ppm rescaling of y/x. The exact quotient stays
+private even when it needs256-bit components, so admitted full-width operands do not fail at a
+public Ratio intermediate. Results follow the principal branch(-180,+180] degrees before rounding.
+
+```rust
+use sc_core::recipe::{FormulaKind as K, FormulaNumericValue as V, FormulaRational as R};
+let ratio = V::new(K::Ratio, R::from_signed_integer(1_000_000))?;
+assert_eq!(ratio.checked_atan()?.rational(), R::from_signed_integer(45_000_000));
+let y = V::new(K::Length, R::from_signed_integer(-1))?;
+let x = V::new(K::Length, R::from_signed_integer(-1))?;
+assert_eq!(y.checked_atan2(x)?.rational(), R::from_signed_integer(-135_000_000));
+let zero = V::new(K::Length, R::ZERO)?;
+assert_eq!(zero.checked_atan2(x)?.rational(), R::from_signed_integer(180_000_000));
+assert_eq!(zero.checked_atan2(zero).unwrap_err().diagnostic_code(), "formula_domain");
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Exact axes are0,+180 or signed90 degrees. A tiny negative y with negative x may round to-180;
+that signed rounded endpoint is preserved. No angle modulo changes it into+180. Both-zero inputs
+return Atan2ZeroVector with the actual homogeneous kind and both exact operands, diagnostic
+formula_domain. Kinds are checked first in argument order, including zero-valued arguments:
+checked_atan rejects a non-Ratio with BuiltinInputKind; checked_atan2 rejects an unsupported first
+kind with BuiltinInputKind and a differing second kind with BuiltinDimension. Both are
+formula_dimension. No source expression or statement identity is invented at this value boundary.
+
+The native implementation follows the576-bit/five-half-angle/64-term plan above. It uses the
+shared certified pi endpoint, directed private integer arithmetic and integer Newton; no platform
+libm or new precision-refusal rule is involved. Binding remains separate. [Source-bearing inverse
+calls](formula-runtime-validation.md#product-implemented-numeric-calls) are available; whole AST
+execution retains its later .5e owner.
+
+Work unit0288's focused formula_inverse_value_contract target checks27 atan and54 atan2 values,
+reproduces the retained fixture, and checks wrong-kind/zero-vector priority. Its independent
+768-bit oracle uses addition around atan(1/2),512 terms and a separate exact pi identity, without
+the native root/half-angle reduction. Direct sin/cos enclosures construct close rational neighbors
+on both sides of three half-microdegree thresholds, with both signs. Full-width values, private
+256-bit quotients, all quadrants, exact axes and both signed rounded endpoints are included.
+This is focused native evidence; coupled/platform checks remain .5d.4/integration/pre-push.
+
+## Tangent resource boundary
+
+Tangent remains unimplemented. With M=1,000,000 and U=2^128-1, an admitted nonpole rational
+microdegree input is at least90M/(U+1) microdegrees from its nearest pole. This bounds rounded
+ppm output magnitude to148 bits, while the public result component limit remains128 bits.
+For example d=floor((U+1)/(90M)), n=90M*d-1 is admitted yet its true tangent rounds beyond U:
+its correct refusal is formula_rational_width. Exact poles instead refuse formula_domain.
+
+This magnitude bound does not resolve correct rounding. There are2^128 relevant positive
+half-ppm thresholds including the final width boundary, so direct enumeration would differ
+radically from the completed1M sine and45M inverse certificates. Inverse coverage concerns
+half-integer microdegree targets; tangent's rational angles need their own argument.
+
+The universal integer/elementary proof is recorded in
+docs/decisions/fact_trig-midpoints-and-resource-bound.md. Its focused tangent_resource_profile.py
+checks exact width/pole witnesses,8798 independently enumerated nonpole distances,586 exact
+poles and2 negative controls. These support transcription; no practical runtime precision or
+latency bound is claimed. P1 .5d.1.2.2.2.d.2 owns the remaining tangent strategy before its kernel.

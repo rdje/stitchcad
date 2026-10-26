@@ -1082,25 +1082,22 @@ Closed D229-D232 reports and verified repair evidence are retained whole in
 Closed D233/D234 reports and verified repair evidence remain whole in
 [part140](../history/stitchcad-defects-part140.md). D235 current overview repair follows.
 
-## D235 — global availability and metadata summaries lag completed foundations
+Closed D235/D236 reports and complete0321 evidence remain whole in
+[part141](../history/stitchcad-defects-part141.md). Current trig status correction D237 follows.
 
-At140422e, availability still says axes undecided/SizeSet partial and trig/inverse pending; metadata
-and implementation summaries also defer completed model families. Actual source exports SizeAxes,
-resolution intent and checked sin/cos/atan/atan2; D70 is ruled/implemented. Reproduce those phrases
-against current APIs/decision. Impact: user's primary book view underreports implemented foundations.
-Owner: G1-SLICE.4d.2, P1 fixed0321 before phase closure; retain old paragraphs472, align current
-scope while preserving actual G1 evaluator/bus/storage/app and G3/G4 execution/approval boundaries.
+## D237 — trig certificate chapter retains superseded inverse status
 
-## D236 — topic index omitted four registered publication chapters
-
-At140422e, book_publication.check refuses INDEX_COVERAGE for formula-checked-nodes, execution-plan,
-trig-certificates and size-set-transformations. SUMMARY registered them but the topic index did not.
-Owner: G1-SLICE.4d.2, P1 fixed0321 before publication acceptance. Add4 topic links, retain whole
-older governance receipt474 to bound book growth; rerun the scoped publication/navigation check.
-
-- [x] ROOT CAUSE0321: D235 overview phrases contradict source; D236 publication INDEX_COVERAGE names4 missing links, rc=0.
-- [x] ADDRESSED0321: scopes/index corrected, old complete paragraphs472/473/474 exact; publication74/87 rc=0.
-- [x] NO REGRESSION0321: native46/prior25+31, Rust unchanged, whole retired source records/public reads rc=0.
+At8827a23, intro says atan/atan2 unimplemented; earlier forward/chunk/controller sections say inverse
+coverage/API/admission open. Later same chapter records complete0286 certificate/admitted0287 plan/
+native0288 API, and actual numeric.rs exports checked_atan/atan2. Reproduce those conflicting phrases.
+Impact: mdBook primary view contradicts implemented capabilities and itself. Root: staged pilot prose
+remained in present tense after later completion; overview-only D235 repair missed this annex.
+Owner: G1-SLICE.6.2.2.c.2.4.1, P1 fix0325 with actual source/current chapter review; retain whole old
+chapter479 before condensing historical pilot receipts. Preserve tangent resource/full-AST/platform
+boundaries and complete mature algorithms/certificate/cleanup rules. No massive certificate rerun.
+- [x] ROOT CAUSE0325: checked_atan/atan2 and mature sections contradict original pending claims; source review rc=0.
+- [x] ADDRESSED0325: current status aligns; whole prior chapter479 exact; book/publication76/89 rc=0.
+- [x] NO REGRESSION0325: native command6/0; kernels/certificate sources unchanged; math/runtime rules retained, rc=0.
 
 ## Active continuity followup
 

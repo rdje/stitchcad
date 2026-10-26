@@ -77,6 +77,9 @@ immutable authored order/base after explicit pin matching. [Authored axes/breaks
 [immutable profile intent](spec/size-set-transformations.md) are implemented. Structural coverage
 does not prove numeric availability, physical truth or applied profile effects.
 
+[Typed artifact requests](spec/artifact-requests.md) name single-instance DXF inputs and the same
+artifact-specific uncertainty inspection target. These declarations generate no files or closure.
+
 ## Planned workflows
 
 Recipe evaluation, geometric construction, grading, profiles, storage and crash recovery, the command

@@ -138,7 +138,7 @@ let request = CommandQuery::new(CommandQueryContext::new(id(1),
 assert_eq!(request.command_id(), CommandId::WalkSeamSpan);
 ```
 
-Artifact-specific closure and remaining command schemas follow their canonical input contracts.
+Artifact-specific closure now carries the [same concrete artifact request](artifact-requests.md).
 See [evaluation requests](evaluation-requests.md) for shared snapshots and both instantiation paths.
 
 ### Implemented mutation context

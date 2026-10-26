@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0324 .6.2.2.c.2.3 adds concrete ResolveProfile with exact selected profile/schema/content pin.
-- Shared Design snapshot supplies canonical source bindings; no copied values, generic maps or constraint strings.
-- Native evaluation4/query2/catalog2 and selected strict lint/fmt/book/publication75-88 pass0.
--478/296 whole9210e03 source/hash/public exact0. NEXT .6.2.2.c.2.4 actual artifact requests/dependency closure.
-- G1 In Progress6/18 unchanged; G4 owns registry/constraint/evidence validation, remaining engine/bus/app later.
+-0325 .6.2.2.c.2.4.1 adds explicit single-instance DXF and same-payload artifact uncertainty query.
+- Named AAMA/R12 or ASTM/R13, exact instance/profile/result and shared Design snapshot; no file/closure execution.
+- Native artifact2/query2/catalog2 + selected strict lint/fmt/book/publication76-89 pass0; D237 stale inverse scope fixed.
+-479/297/141 whole8827a23 source/hash/public exact0. NEXT .6.2.2.c.2.4.2 registered graded DXF inputs.
+- G1 In Progress6/18 unchanged; other artifacts, handlers/policy/evidence/approval and full engine remain owned later.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

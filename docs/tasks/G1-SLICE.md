@@ -737,24 +737,41 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0323 shared snapshot/distinct instantiation inputs; [whole implementation/proofs](../history/stitchcad-devnotes-part478.md).
 - ID: `G1-SLICE.6.2.2.c.2.3`
   Status: `done`
-  Goal:0324 concrete ResolveProfile request over shared exact Design snapshot and selected profile pin.
-  Own core command evaluation module/reexport/existing native target and evaluation-request book section.
-  Explicit pin names actual authored profile/schema/content target; source bindings come from pinned Design.
-  No free argument map, copied parameter values/constraint strings, default profile or preallocated result.
-  Actual profile lookup/grammar/typed constraints/evidence/composition remain G4. Preserve symbolic uncertainty.
-  Own478 whole0323 task and prior chart verification receipt,296 ledger from9210e03; verify Git/hash/public
-  before retirement, preserve operational chart-probe obligations in current book summary. Focus8 native
-  evaluation/query/catalog contracts, strict selected lint/fmt/book/scoped publication; full CI later.
-  - [x] ROOT CAUSE (WHY + WHERE): selected profile resolution needs exact pin and Design bindings, not copied
-    states/free-string constraints. New native contract plus query/catalog/regeneration/grading pass8/0; rc=0.
-  - [x] ADDRESSED: concrete ResolveProfile shares snapshot and derives evaluation/generate/discarded metadata;
-    selected strict lint/fmt/book/publication75 chapters/88 entries pass; rc=0.
-  - [x] NO REGRESSION: same three instantiation/query/catalog contracts remain green; exact authored Unicode/
-    schema/content retained.478/296 whole9210e03 Git/hash/public equality pass; rc=0.
-  Commit0324; next .6.2.2.c.2.4. Promotion declined: existing canonical contracts; full CI G1 integration/pre-push.
+  Goal:0324 exact selected-profile resolution request; [whole implementation/proofs](../history/stitchcad-devnotes-part479.md).
 - ID: `G1-SLICE.6.2.2.c.2.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: concrete DXF/PLT/PDF/tech-pack requests and artifact-dependent closure binding; no guessed global closure.
+  Children: .1 single-instance DXF/exact closure target; .2 explicit graded carriages; .3 PLT/PDF;
+  .4 tech-pack canonical sources; .5 combined artifact schema review before release inputs.
+- ID: `G1-SLICE.6.2.2.c.2.4.1`
+  Status: `done`
+  Goal:0325 exact single-instance DXF and same-payload GetUncertaintyClosure, no guessed global closure.
+  Own core command artifact/reexport/query modules, artifact/query/catalog contracts and artifact book/nav/map.
+  Explicit AAMA/R12 or ASTM/R13 target, instance, profile/schema/content/result and shared Design snapshot;
+  all physical axes/uncertainty remain canonical result bindings, no writer defaults or copied scalar states.
+  Generate versus inspect metadata; constructors perform no lookup, closure, file write, grant or receiver proof.
+  D237 stale inverse intro/earlier pending claims repaired from actual API/later mature certificate sections.
+  Whole prior trig chapter479 preserves pilot receipts/commands; current math/runtime/cleanup rules retained.
+  Own479 whole0324 task/0301 lesson/trig chapter,297 ledger/141 closed D235/D236 reports from8827a23.
+  - [x] ROOT CAUSE (WHY + WHERE): actual requested artifact must bind instance/profile/configuration; D237
+    early prose contradicts checked_atan/atan2 and later complete certificate/native sections; source review rc=0.
+  - [x] ADDRESSED: native artifact2/query2/catalog2 pass6/0; test lint5 repaired, final strict selected lint/fmt/
+    book/publication76 chapters/89 entries pass; D237 current scope aligns; rc=0.
+  - [x] NO REGRESSION: original query/catalog preserve exact snapshot/authority; no numeric kernel/certificate
+    edits or huge rerun.479/297/141 whole8827a23 Git/hash/public equality pass; rc=0.
+  Commit0325; .4.2 registered graded DXF next. Promotion declined: existing contracts; full CI integration/pre-push.
+- ID: `G1-SLICE.6.2.2.c.2.4.2`
+  Status: `pending`
+  Goal: explicit base/rule/set inputs for registered graded DXF carriages; no inferred all-contours target.
+- ID: `G1-SLICE.6.2.2.c.2.4.3`
+  Status: `pending`
+  Goal: PLT/PDF requests retain actual pen/scale/page/scale-square configuration and artifact-specific bindings.
+- ID: `G1-SLICE.6.2.2.c.2.4.4`
+  Status: `pending`
+  Goal: tech pack names actual canonical Design/instances/profile inputs; missing Order quantities stay unresolved.
+- ID: `G1-SLICE.6.2.2.c.2.4.5`
+  Status: `pending`
+  Goal: combined exact artifact configuration and dependency-closure request review; execution remains later.
 - ID: `G1-SLICE.6.2.2.c.2.5`
   Status: `pending`
   Goal: exact release candidate preparation and human approval target schemas; no authority granted by actor claims.

@@ -1,16 +1,22 @@
 //! Typed read intents bound to an exact requested Design snapshot, without execution or grants.
-use super::CommandId;
+use super::{ArtifactPayload, CommandId};
 use crate::ontology::EntityId;
 
 /// Compatibility name for the shared exact nonmutating snapshot context.
 pub use super::CommandSnapshotContext as CommandQueryContext;
 
 /// Implemented query schemas over current canonical entities; handler availability is separate.
-/// Artifact-specific uncertainty-closure input follows the concrete artifact request contracts.
+/// Uncertainty inspection names the complete concrete artifact input, never a guessed global closure.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum QueryPayload {
     /// Read every canonical piece's multiplicity, pairing and material within the requested Design.
     GetPieceList,
+    /// Inspect only unknowns affecting this exact requested artifact and configuration.
+    /// A handler must traverse its actual dependencies; this payload does not compute the closure.
+    GetUncertaintyClosure {
+        /// Identical concrete input schema used to request generation of the artifact.
+        artifact: ArtifactPayload,
+    },
     /// Read the named canonical correspondence's differential and declared ease attribution.
     /// Canonical copies/ranges/direction/ease/stops are resolved by execution, never copied here.
     WalkSeamSpan {
@@ -24,6 +30,7 @@ impl QueryPayload {
     pub const fn command_id(&self) -> CommandId {
         match self {
             Self::GetPieceList => CommandId::GetPieceList,
+            Self::GetUncertaintyClosure { .. } => CommandId::GetUncertaintyClosure,
             Self::WalkSeamSpan { .. } => CommandId::WalkSeamSpan,
         }
     }

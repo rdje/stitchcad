@@ -1,9 +1,8 @@
 # Annex: investigating bounded trig rounding certificates
 
-The sin/cos value kernel is implemented under the certificate and admitted plan below;
-tan and atan/atan2 remain unimplemented. Whole formula execution is still pending. The plan owner is
-G1-SLICE.5d.1.2.2.2; full execution also retains the other dependencies in the
-[execution plan](formula-execution-plan.md).
+Native sin/cos and atan/atan2 values are implemented under the complete certificates and admitted
+plans below. Tangent remains unimplemented with a practical resource-plan obligation. Whole formula
+execution and platform evidence remain separate [execution-plan](formula-execution-plan.md) work.
 
 ## Why output thresholds might help
 
@@ -29,26 +28,13 @@ that complete argument by itself.
 
 ## What the feasibility cohort establishes
 
-The tracked Python producer uses directed512-bit integer intervals, the existing certified640-bit
-pi enclosure, integer square roots, half-angle identities and an alternating arctangent series.
-The candidate value band is delta=2^-384. These are experimental certificate parameters.
-The independent oracle uses exact Fraction arithmetic and a different, positive arcsine series.
-The series are documented by [NIST DLMF4.24](https://dlmf.nist.gov/4.24).
+The complete original forward feasibility derivation, command, source/endpoint receipts and controls
+are retained whole in `docs/history/stitchcad-devnotes-part479.md`. That sampled pilot was preliminary;
+the complete certificate and admitted runtime plan below supply the later coverage and native API.
 
-Run from the repository root:
+<a id="remaining-admission-work"></a>
 
-```bash
-python3 -I -B docs/tasks/artifacts/formula_structure/finite_threshold_feasibility.py
-```
-
-Work unit0277 certified38 sampled forward bands. Controls cover three exact inverse values,
-four independent series enclosures, exhaustive rational checks at32 small denominator bounds,
-and two required refusals. One refusal deliberately places the real sin30-degree value1/2
-inside a band; another uses a band wide enough to contain admitted inputs.
-The report explicitly says feasibility_cohort_only and retains exact endpoints and source hashes
-under target/trig_threshold_feasibility/0277/. It does not claim the full million thresholds.
-
-## Remaining admission work
+## Forward coverage and remaining boundaries
 
 The full forward producer is a separate source-locked, resumable command:
 
@@ -76,10 +62,9 @@ restriction or a silently substituted numeric answer.
 
 Inverse angle rounding has45 million half-microdegree thresholds in its first octant after
 sign/quadrant/reciprocal symmetry. Exact atan2 slopes can require256-bit denominators in private
-workspace; a tangent-of-angle-band certificate must account for that bound. Its bounded generator
-cohort is available below; complete inverse coverage remains open. Axes, poles and
-signed principal branches still need their existing exact rules. Tangent's much larger output
-threshold population retains a separate practical resource obligation.
+workspace; the complete inverse certificate below accounts for that bound. Its admitted native plan
+also covers axes and signed principal branches. Tangent's much larger output threshold population
+retains a separate practical resource obligation.
 
 ## Admitted sine/cosine runtime plan
 
@@ -145,48 +130,15 @@ are available separately. Sourced sin/cos calls are also available; whole execut
 
 ## Inverse certificate feasibility
 
-The inverse experiment encloses tangent over a2^-600-turn band on either side of each
-half-microdegree target, using640-bit directed sine/cosine intervals and their quotient.
-The candidate uses64 terms with the certified pi input; its positive cosine denominator and
-alternating tail are checked. Strict rational-gap predicates use Q=(2^128-1)^2, covering the
-private full-width atan2 slope. These are experimental certificate parameters.
-
-```bash
-python3 -I -B docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py
-```
-
-Work unit0282 passes38 sampled bands, four independent algebraic tangent enclosures and two
-exact Fraction-arctangent checks. The controls reject a band containing rational tan45=1 and
-a deliberately wide band. The project-local report under target/trig_inverse_feasibility/0282/
-explicitly says inverse_feasibility_cohort_only, retaining exact endpoints and source hashes.
-
-This cohort alone proves neither complete45-million-threshold coverage nor native atan/atan2.
-Complete coverage is now verified below. Native sign/reciprocal/
-quadrant/axis/principal-branch handling, error and workspace remain separate admission work.
-Production tangent has a separate resource obligation; this experiment does not close it.
+The original sampled inverse derivation, exact gap bound, probe command and controls remain whole
+in `docs/history/stitchcad-devnotes-part479.md`. The pilot supplied no native API or complete coverage;
+those were subsequently completed and are documented below.
 
 ## Native inverse chunk probe
 
-Work unit0283 adds a diagnostic Rust chunk generator and a guarded Python probe:
-
-```bash
-python3 -I -B docs/tasks/artifacts/formula_structure/native_inverse_probe.py
-```
-
-It builds the example with project-local stores and uses the artifact path reported by Cargo.
-The Rust child reads only its protocol on stdin and emits exact288-byte rows on stdout.
-Each row contains two slope endpoints and four rational gap components. The child is bounded
-to100,000 rows; this is a diagnostic chunk boundary, not a formula-language restriction.
-
-Instead of evaluating tangent twice, it encloses the center and widens by16*2^-600 in slope.
-Every complete target angle band stays in the first octant, where tan'=sec^2<=2;2*pi<8 then
-bounds the whole displacement by that padding. The Python check confirms that the native band
-contains the endpoint-based band, rather than requiring their different enclosures to be equal.
-
-The bounded probe passes10,035 exact row checks,67 Python-band comparisons and five actual
-invalid-input refusals before output. The report/prefix/build log is under target/native_inverse_probe/0283/.
-This probe supplies generator/parity/cost evidence only. Full45M coverage is verified below;
-native atan/atan2 admission remains open. No inverse formula API is available yet.
+The original bounded diagnostic protocol, enclosure argument, parity/cost receipts and invalid-input
+controls remain whole in `docs/history/stitchcad-devnotes-part479.md`. This was generator evidence;
+the subsequent complete certificate, admitted plan and native API below supersede its pending status.
 
 ## Resumable inverse controller and exact reader
 
@@ -212,7 +164,7 @@ This does not claim that the reader independently recomputes every tangent enclo
 An interrupted run leaves an exclusive lock and child registry. Establish that the recorded
 processes are gone before removing its project-owned lock and resuming. Error cleanup reaps
 owned children; differing unpublished final bytes are preserved and refused. Full coverage is
-verified below. Native inverse-function branches/error/workspace admission is still open.
+verified below. The subsequently admitted native branches/error/workspace plan is documented below.
 
 A read-only inspection found generic .bin cleanup would select retained certificate chunks.
 Work unit0285 fixes this: both forward/inverse stores are excluded from generic cleanup, including

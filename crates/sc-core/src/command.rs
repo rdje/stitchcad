@@ -3,12 +3,14 @@
 //! Catalog membership declares a command; it does not make a handler available or grant authority.
 //! Execution, scoped authorization, transactions and workflow parity remain separate bus owners.
 
+mod artifact;
 mod construction;
 mod context;
 mod evaluation;
 mod payload;
 mod query;
 mod snapshot;
+pub use artifact::{ArtifactPayload, CommandArtifact, DxfTarget, ExportDxf};
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,

@@ -47,6 +47,7 @@
   - [Release and approval](spec/release-contract.md)
   - [The command layer](spec/command-layer.md)
     - [Typed evaluation requests](spec/evaluation-requests.md)
+    - [Typed artifact requests](spec/artifact-requests.md)
   - [Internationalization](spec/i18n-architecture.md)
   - [The supported envelope](spec/feature-matrix.md)
   - [Instantiation paths](spec/instantiation-paths.md)
