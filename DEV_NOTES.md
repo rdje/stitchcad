@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — exact canonical and stored numeric reads
+
+0267 .5e.1.6 converts canonical scalar payloads or once-rounded bindings into exact numeric values.
+Actual kinds/internal integer units survive, including signed raw turns and i64 MIN; no second
+rounding, ppm scaling, modulo or pre-binding fraction appears. Boolean false/true both refuse
+numeric conversion. The caller retains its original source/state wrapper and binding provenance;
+these source-free conversions invent no identity, statement context or approval.
+
+Five focused native tests and selected strict Clippy pass0. The previous test output was lost at
+compaction; OS-visible census found no remaining check, then the focused rerun established this
+verdict. The stale LIVE_STATUS “sums next” note was reproduced by reading its row and corrected
+to actual full-evaluation scope in this leaf. Whole0266 task/ledger retain348/239 with exact Git/
+hash/public reads; book/live align. Promotion declined: existing numeric and binding contracts.
+
 ## _(2026-10-26 UTC)_ — derive reserved size values from actual pinned membership
 
 0266 .5e.1.5.2 matches the explicit expected set/revision before selected-id lookup. The canonical

@@ -572,19 +572,28 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part347.md).
 - ID: `G1-SLICE.5e.1.5.2`
   Status: `done`
-  Goal:0266 actual pinned membership/selected-id bridge to exact core size reads.
+  Goal: actual pinned membership/selected-id size bridge verified0266, native5/0.
   Paths: crates/sc-measure/src/size_membership.rs;crates/sc-measure/src/size_membership/formula.rs;crates/sc-measure/src/lib.rs;crates/sc-measure/tests/formula_size_membership_contract.rs
-- [x] REPRODUCE:0266 bf8f4c2 has core supplied frames but no actual membership bridge; source read rc=0.
-- [x] ROOT CAUSE:0266 canonical vector/base/pin differ from label/ordinal inference; actual borrowed
-  membership and explicit expected reference supply the values. Focused native5/0, rc=0.
-- [x] FIX: expected pin before selected-id lookup, exact ordinal/count/base, original borrows and causes.
-- [x] ADDRESSED:0266 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-measure
-  --test formula_size_membership_contract:5 pass/0 fail, rc=0.
-- [x] NO REGRESSION:0266 all intents/pins/reorder/base/singleton/cross-set identities pass0; cargo
-  clippy --offline -p sc-measure --test formula_size_membership_contract -- -D warnings, rc=0.
-  D70/current-registry/full SizeSet/path and broad .5g/pre-push remain owned, not inferred here.
-- [x] LOCKSTEP:347/238 whole Git/public records and book render rc=0; live/book/frontier align.
-  Promotion declined: existing authored-order/pin/base/formula3.1 contracts govern this bridge.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part348.md).
+- ID: `G1-SLICE.5e.1.6`
+  Status: `done`
+  Goal:0267 canonical/stored scalar-to-numeric expression bridges, without extra rounding/scaling.
+  Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_value_read_bridge_contract.rs
+  Own typed TryFrom conversions, raw turns/exact internal units, signed endpoints and explicit
+  Boolean nonnumeric refusal. Stored reads use the once-rounded integer, never the old fraction.
+  Focused native/selected lint; retain348/239 whole0266 and book/live sync. Source/provenance stays
+  with existing read wrappers and later .5e.3. D70 question pending; no axis change.
+- [x] REPRODUCE:0267 eed45a4 lacks typed canonical/stored numeric conversions; source read rc=0.
+- [x] ROOT CAUSE:0267 input units and stored integer are exact; neither is an old expression
+  fraction or Boolean coercion. Focused native kind/fraction/endpoints witnesses pass5/0, rc=0.
+- [x] FIX: typed TryFroms retain units/kinds/raw turns and refuse Boolean; source wrapper stays caller-owned.
+- [x] ADDRESSED:0267 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_value_read_bridge_contract:5 pass/0 fail, rc=0; lost prior output recovered by rerun.
+- [x] NO REGRESSION:0267 all numeric kind/limit, once-rounded fraction and false/true controls pass;
+  cargo clippy --offline -p sc-core --test formula_value_read_bridge_contract -- -D warnings, rc=0.
+  Broad .5g/pre-push and source propagation .5e.3 retain their owners. Stale status note fixed here.
+- [x] LOCKSTEP:348/239 whole Git/hash/public reads and warning-free book render rc=0; live align.
+  Promotion declined: existing numeric/binding contracts; no new source or execution proof claimed.
 - ID: `G1-SLICE.5e.2`
   Status: `pending`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.

@@ -83,8 +83,10 @@ its input. Its value is ScalarInputValue: inspect numeric_integer or boolean wit
 or false as absence. Signed angle turns and Ratio values remain unchanged. Unknown/Derived return
 FormulaScalarInputError with the original input and exact RequiresObservation/RequiresEvaluation
 reason; the standard error source retains that same canonical reason. Derived Area has no authored
-numeric result. General expression conversion, dependency evaluation and binding publication remain
-later evaluator responsibilities.
+numeric result. Convert a present numeric payload exactly with
+`FormulaNumericValue::try_from(read.value())`, keeping the original read wrapper for source/state.
+Boolean conversion refuses; inspect boolean separately. Dependency evaluation, source propagation
+and binding publication remain later evaluator responsibilities.
 
 ```rust
 use sc_core::{name::MachineToken, ontology::EntityId,

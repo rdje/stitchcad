@@ -141,6 +141,8 @@ nonnumeric kinds. The quantity layer preserves fractions; it applies no binding/
 | kind | Inspect the admitted quantity kind |
 | rational | Inspect the exact canonical internal-unit value |
 | from_literal | Import a normalized literal's once-rounded integer and kind |
+| `TryFrom<ScalarInputValue>` | Exact canonical numeric scalar read; Boolean refuses |
+| `TryFrom<FormulaBoundValue>` | Exact stored integer read after binding; Boolean refuses |
 | checked_add / checked_sub | Same-kind exact sum/difference with completed-result domains |
 | checked_mul / checked_div | Permitted ordered signatures and exact ppm scaling before width/domain checks |
 | checked_neg | Exact sign reversal for declared negatable kinds; Count refuses |
@@ -534,6 +536,32 @@ remains deferred. Future focused invocations filter that library check explicitl
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --lib compiled_pi_endpoint_matches_the_reproduced_certificate
 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core --test formula_arc_value_contract --test formula_numeric_contract
 ```
+
+## Canonical and stored numeric reads
+
+`FormulaNumericValue::try_from` accepts canonical `ScalarInputValue` or stored
+`FormulaBoundValue`. It preserves the actual kind and integer in internal units, without another
+rounding or scale conversion. Signed Angle values retain complete turns; Ratio integers remain ppm.
+Boolean false and true both return NonNumericKind with formula_dimension, rather than numeric0/1.
+Canonical Area remains derived; stored Area values are readable after their original computation.
+
+```rust
+use sc_core::{name::MachineToken, recipe::{FormulaBoundValue, FormulaNumericValue, FormulaRational},
+    value::ScalarInputValue};
+
+let name = MachineToken::new("ratio_value")?;
+let exact = FormulaNumericValue::try_from(ScalarInputValue::from_ratio_ppm(1_500_000))?;
+let stored = FormulaBoundValue::from_numeric(&name, exact)?;
+assert_eq!(FormulaNumericValue::try_from(stored)?.rational(),
+    FormulaRational::from_signed_integer(1_500_000));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+A later binding read uses the stored integer: an exact Ratio of3/2ppm binds to2ppm, then reads as
+exact2ppm. The earlier fraction cannot reappear. Numeric conversion carries no source identity;
+retain the authored-read wrapper or binding provenance beside it. Complete execution and source
+propagation remain separate owners. The focused formula_value_read_bridge_contract target passes
+five tests covering signed endpoints, all numeric kinds, stored fractions and Boolean refusals.
 
 ## Remaining trig/inverse plan
 

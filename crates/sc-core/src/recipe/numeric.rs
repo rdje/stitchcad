@@ -1,8 +1,10 @@
 //! Completed numeric values in exact internal units, before binding or recipe execution.
 use super::{
-    FormulaBinaryOperator, FormulaBuiltin, FormulaBuiltinOperand, FormulaKind, FormulaLiteral,
-    FormulaLiteralKind, FormulaRational, FormulaRationalError, FormulaUnaryOperator,
+    FormulaBinaryOperator, FormulaBindingKind, FormulaBoundValue, FormulaBuiltin,
+    FormulaBuiltinOperand, FormulaKind, FormulaLiteral, FormulaLiteralKind, FormulaRational,
+    FormulaRationalError, FormulaUnaryOperator,
 };
+use crate::value::ScalarInputValue;
 use core::fmt;
 use sc_units::{Length, MAX_AREA_UM2, MAX_LENGTH_UM};
 
@@ -170,6 +172,40 @@ impl From<Length> for FormulaNumericValue {
             kind: FormulaKind::Length,
             value: FormulaRational::from_signed_integer(i128::from(value.as_micrometres())),
         }
+    }
+}
+
+/// Exact canonical scalar input read; Boolean remains explicitly nonnumeric.
+impl TryFrom<ScalarInputValue> for FormulaNumericValue {
+    type Error = FormulaNumericError;
+
+    fn try_from(value: ScalarInputValue) -> Result<Self, Self::Error> {
+        let kind = FormulaKind::from(FormulaBindingKind::from(value.kind()));
+        let integer = value
+            .numeric_integer()
+            .ok_or(FormulaNumericError::NonNumericKind { kind })?;
+        Self::for_operation(
+            kind,
+            FormulaRational::from_signed_integer(i128::from(integer)),
+            "scalar_input_read",
+        )
+    }
+}
+
+/// Reads the once-rounded stored integer, without retaining a pre-binding fraction or rounding again.
+impl TryFrom<FormulaBoundValue> for FormulaNumericValue {
+    type Error = FormulaNumericError;
+
+    fn try_from(value: FormulaBoundValue) -> Result<Self, Self::Error> {
+        let kind = value.kind();
+        let integer = value
+            .numeric_integer()
+            .ok_or(FormulaNumericError::NonNumericKind { kind })?;
+        Self::for_operation(
+            kind,
+            FormulaRational::from_signed_integer(i128::from(integer)),
+            "binding_read",
+        )
     }
 }
 
