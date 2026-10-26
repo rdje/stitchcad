@@ -164,3 +164,26 @@ This is neither complete45-million-threshold coverage nor a native atan/atan2 im
 Full coverage needs its own resumable certificate and exact reader. Native sign/reciprocal/
 quadrant/axis/principal-branch handling, error and workspace remain separate admission work.
 Production tangent has a separate resource obligation; this experiment does not close it.
+
+## Native inverse chunk probe
+
+Work unit0283 adds a diagnostic Rust chunk generator and a guarded Python probe:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/native_inverse_probe.py
+```
+
+It builds the example with project-local stores and uses the artifact path reported by Cargo.
+The Rust child reads only its protocol on stdin and emits exact288-byte rows on stdout.
+Each row contains two slope endpoints and four rational gap components. The child is bounded
+to100,000 rows; this is a diagnostic chunk boundary, not a formula-language restriction.
+
+Instead of evaluating tangent twice, it encloses the center and widens by16*2^-600 in slope.
+Every complete target angle band stays in the first octant, where tan'=sec^2<=2;2*pi<8 then
+bounds the whole displacement by that padding. The Python check confirms that the native band
+contains the endpoint-based band, rather than requiring their different enclosures to be equal.
+
+The bounded probe passes10,035 exact row checks,67 Python-band comparisons and five actual
+invalid-input refusals before output. The report/prefix/build log is under target/native_inverse_probe/0283/.
+This supplies generator/parity/cost evidence only. Complete45M coverage, resumable checkpoint
+publication and native atan/atan2 admission remain open; no inverse formula API is available yet.

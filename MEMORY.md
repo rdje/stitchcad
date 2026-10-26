@@ -4,16 +4,14 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0282 .5d.1.2.2.2.b.2.a complete: inverse38/algebraic4/Fraction-atan2/negative2 controls pass0.
-- inverse_threshold_feasibility.py pure explicit-pi helpers; decision_inverse-thresholds.md.
-- Candidate640-bit64-term quotient/2^-600-turn bands/Q256; no full45M/native admission.
-- Next .b.2.b: split/own full inverse producer; assess native generator cost/parity before long run.
-- Sourced sin/cos0281 native6/0/lint0 available; actual pipeline/storage/T1 preserved.
-- Expression .5e.2.4 still owned, requires real remaining call/geometry contracts; no placeholders.
-- forward_threshold_certificate.py / verify_forward_certificate.py and pure0277 helpers frozen by manifest.
-- target/trig_forward_certificate/0278/manifest.json complete;208MB payload, lock absent.
--381/382/254 retain whole0281 task/arc implementation lesson/ledger, exact Git/hash/public reads.
-- Independent reader checks every exact gap/hash/coverage; interval validity remains derived producer + oracle controls.
-- Native width<=770*2^-512<2^-502<2^-384, workspace<2^1026. Broader/platform evidence deferred.
-- D70 ruling pending, no axes. Full UI AI control approved; integration/pre-push broad proof deferred.
-- Cleanup due2026-10-26 13:16UTC. No background job; all outputs project-local.
+-0283 .5d.1.2.2.2.b.2.b.1 complete: native rows10035/Python-band67/invalid-input5/lint pass0.
+- crates/sc-core/examples/inverse_threshold_chunk.rs emits288-byte exact rows, no filesystem writes.
+- native_inverse_probe.py guards source/output/Cargo plan, verifies10k prefix + Python-band cohort and5 bad inputs.
+- Candidate center tangent +16*2^-600 slope padding; derivative<=2/pi<4 justifies superset.
+- Observed10k wall765937250ns excludes build/Python checks; no guaranteed full duration.
+- Next .b.2.b.2: own complete45M resumable controller/independent reader before long run.
+- No full45M/native inverse API admission; center/padding prototype scope only.
+-383–385/255 retain whole0282 task/old packing lesson/closed guard scope/ledger exact Git/hash/public.
+- Forward all1M cert and native/sourced sin/cos remain committed; expression .5e.2.4 still requires real remaining calls/geometry.
+- D70 ruling pending; full UI AI control approved. Broad integration/pre-push deferred.
+- Cleanup due2026-10-26 13:16UTC; project-local target artifacts only. No job running.

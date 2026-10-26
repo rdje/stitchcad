@@ -493,23 +493,34 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: inverse first-octant generator and full45M threshold proof; split before implementation.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.a`
   Status: `done`
-  Goal:0282 bounded inverse threshold/Farey feasibility cohort, not full45M/runtime admission.
-  Own381 whole0281 task,382 oldest arc implementation lesson,254 ledger before growth.
+  Goal:0282 inverse38/algebraic4/Fraction-atan2/negative2 feasibility controls pass0.
   Paths: docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py;docs/decisions/decision_inverse-thresholds.md
-  Candidate640-bit directed sin/cos quotient,64 terms,2^-600-turn bands/Q_slope256. Check exact
-  algebraic tangents, independent Fraction atan enclosure and rational/wide-band refusals.
-  Decision/index/map/book/live sync; full coverage and native inverse error/workspace stay separate.
-  Acceptance0282:
-  - [x] REPRODUCE: inverse45M generator/usable margin unverified; forward proof covers another function family.
-  - [x] ROOT CAUSE0282: python3 -I -B docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py derives640bit/64terms/Q256 profile and checks128!>2^640, rc=0; inverse target bands need their own slope proof.
-  - [x] FIX: directed sin/cos quotient and exact gaps over bounded inverse cohort, explicit pi input.
-  - [x] ADDRESSED0282: same command38 bands/algebraic4/Fraction-atan2/negative2 pass, rc=0; scope inverse_feasibility_cohort_only, no full45M/native admission.
-  - [x] NO REGRESSION0282: same controls pass, rc=0; runpy import with Path.read_text patched to refuse passes, rc=0. Existing forward/runtime sources unchanged; broad proof .5d.4/pre-push.
-  - [x] LOCKSTEP:381/382/254 exact Git/hash/public reads, rc=0; decision/index/map/book/live match scope. G1still5/18; full inverse .b/native .c/tangent open.
-  Verification: rc=0; Commit: STITCHCAD-G1-0282.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part383.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b`
-  Status: `pending`
+  Status: `in_progress`
   Goal: after successful cohort, full45M certificate with bounded local chunks/source lock and independent exact reader; consider native producer for cost.
+- ID: `G1-SLICE.5d.1.2.2.2.b.2.b.1`
+  Status: `done`
+  Goal:0283 native pure-stdout inverse chunk prototype, Python interval/gap parity and measured cost before full run.
+  Own383 whole0282 task,384 oldest history-packing lesson,255 ledger before growth.
+  Also own385 whole closed .5b.4c.h2.b.p.n.h node/receipts to retain native acceptance space.
+  Paths: crates/sc-core/examples/inverse_threshold_chunk.rs;docs/tasks/artifacts/formula_structure/native_inverse_probe.py
+  Guard full source/output plan before Cargo/child dispatch, project-local build/stores/artifacts.
+  Fixed640-bit64-term center tangent plus16*2^-600 slope padding: tan derivative<=2 on the
+  complete first-octant angle band and pi<4 justify this superset. Python endpoint bands must fit.
+  Exact native Farey predicates/288-byte rows; bounded prefix/spread/native invalid-input controls.
+  No full45M/native inverse API claim; book/decision/live sync. Future full controller remains .2.
+  Acceptance0283:
+  - [x] REPRODUCE: Python inverse cohort had no measured native chunk producer.
+  - [x] ROOT CAUSE0283: python3 -I -B docs/tasks/artifacts/formula_structure/native_inverse_probe.py builds actual native artifact under guarded stores, rows10035/Python-band67 pass, rc=0; justified padding avoids duplicate series work.
+  - [x] FIX: bounded pure-stdout native640-bit64-term generator, exact gap checks/288-byte rows; complete guarded build/child/output plan and source/binary identity.
+  - [x] ADDRESSED0283: same command rows10035/parity67/invalid-input5 pass, rc=0; observed10k765937250ns, no full-run guarantee or45M claim.
+  - [x] NO REGRESSION0283: same command preserves source/binary hashes and Python controls, rc=0; cargo clippy -p sc-core --example inverse_threshold_chunk -- -D warnings passes, rc=0. Product code unchanged; broad proof .5d.4/pre-push.
+  - [x] LOCKSTEP:383–385/255 exact Git/hash/public reads, rc=0; decision/book/live scope align. G1still5/18; full controller .2/native inverse .c pending.
+  Verification: rc=0; Commit: STITCHCAD-G1-0283.
+- ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2`
+  Status: `pending`
+  Goal: after .1, source-locked complete45M controller/checkpoints/exact reader and full coverage evidence.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.c`
   Status: `pending`
   Goal: native atan/atan2 branch/reduction/error/workspace admission before production code.
@@ -879,30 +890,12 @@ below because recipes957L approaches its fixed1000L split trigger before another
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h`
   Status: `done`
-  Goal: retain complete committed repair records/lessons before remaining native group growth.
-  Acceptance: exact whole committed source intervals, IDs/proxies/public read/materialize/hash,
-  earlier immutable bytes/fixed caps preserved; ledger/coverage/book/gate then next chart group.
-  Work unit STITCHCAD-G1-0124; exact committed a392d31 records; no code/native change.
-
-Final ledger9/pointer13, coverage10/13/12/zero gaps and glossary17, rc=0,
-target/d156-ease-{ledger,coverage,glossary}.log. No push due; status counts unchanged.
-
-Final staged gate13green, rc=0, target/d156-ease-staged-gate.log; cached diff0.
-Explicit12 owned paths; hook/brief0/clean precede bounded continuity retention.
-
+  Goal:0124 whole native guard record/lesson retention verified, fixed caps preserved.
+  Acceptance: [whole scope/receipts](../history/stitchcad-devnotes-part385.md).
 
 ### G1-SLICE.5b.4c.h2.b.p.n.h
 
-Sourcea392d31: recipes992L/1000 split trigger, DEV_NOTES16025B/16384 and CHANGELOG32531B/32768.
-Six exact whole byte intervals: changelog113 five oldest0109..0105 entries; devnotes132 three
-lessons; devnotes133 completed audit retention;134 Python continuity;135 shared entry acceptance;
-136 Ease acceptance. Original separators/single terminal LF and linked task headings retained.
-Further final receipts/current nodes remain live. No earlier file, reader, schema or bound changes.
-Public read/materialize327/source/sha/line/byte/LF proof rc=0; all28 earlier paths exact,
-target/d156-native-retention-proof.log. Metadata target/d156-native-retention.json.
-Initial proxy placement assertion refuses1 after sealing; its next anchor was also sealed.
-Rebuild the live view from exact committed source with each replacement at its original position;
-verify all six intervals/retrieval again0. The failed attempt is not counted as proof.
+[Whole original protocol and receipts](../history/stitchcad-devnotes-part385.md) retained byte-exact.
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.m2`
   Status: `done`

@@ -60,3 +60,30 @@ Complete45M coverage, its retained cost/source/hash evidence and an independent 
 reader remain .b.2.b. Native atan/atan2 folding/branches/error/workspace admission remains .b.2.c,
 then implementation .5d.3.3. No native inverse function, full recipe execution or platform claim
 is made by this cohort. The existing forward certificate and sin/cos APIs remain unchanged.
+
+## Native chunk prototype — work unit0283
+
+The pure-stdout Rust diagnostic example inverse_threshold_chunk accepts start/count and the
+certified pi endpoints on stdin. It emits288-byte rows: two640-bit slope endpoints and four
+256-bit rational-gap components. Count is bounded to100,000 rows per child, a diagnostic chunk
+contract rather than a language input limit. It does not read/write project files or implement
+an inverse formula API. Every exact gap predicate is checked before its row is emitted.
+
+Evaluate tangent once at the target center and widen by16*2^-600 in slope. Every target angle
+band lies inside the first octant because2^-600<1/(720M). There tan'=sec^2<=2 and2*pi<8, so
+the displacement from center is strictly below16*2^-600. Directed center enclosures plus that
+exact padding therefore contain both endpoint images. This replaces duplicate series work with
+a justified wider certificate band; it does not change the required angle margin.
+
+Run python3 -I -B docs/tasks/artifacts/formula_structure/native_inverse_probe.py.
+It validates the full local source/output/store plan before Cargo dispatch, uses Cargo's actual
+reported release artifact, and checks its hash plus source hashes around execution. Its Python
+reader independently checks10,035 rows' exact gap predicates.67 prefix/spread cases contain the
+separate Python endpoint bands; five actual invalid native inputs refuse before any output.
+The native probe and selected strict example lint pass, rc=0. An actual10,000-row call took
+765,937,250ns on this run, excluding build and Python reading. This is not a duration guarantee.
+
+The report/prefix/build record stays under target/native_inverse_probe/0283/. No full45M result
+or native inverse error/workspace/branch admission is claimed. Full controller/source-locked
+checkpoints/coverage reader follow .b.2.b.2; runtime admission remains .b.2.c. Broad verification
+stays .5d.4/pre-push. The previous forward certificate and product sin/cos code remain unchanged.

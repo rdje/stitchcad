@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0282 — inverse threshold certificate feasibility
+## STITCHCAD-G1-0283 — native inverse certificate chunk prototype
 
-.5d.1.2.2.2.b.2.a: inverse38/algebraic4/Fraction-atan2/negative2 controls pass, rc=0; no full45M/native admission.
-Candidate decision/book/live retain exact scope;381/382/254 retain whole task/lesson/ledger.
+.5d.1.2.2.2.b.2.b.1: native exact rows10035/Python-band67/actual invalid-input5 and selected example lint pass, rc=0.
+Bounded chunk only; no full45M/native inverse API.383–385/255 retain whole history; decision/book/live sync.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -454,3 +454,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part253](docs/history/stitchcad-changelog-part253.md) | whole0280 | 5 lines, 305 bytes, sha256:50272c6f… |
 
 | [part254](docs/history/stitchcad-changelog-part254.md) | whole0281 | 5 lines, 314 bytes, sha256:4716c6a7… |
+
+| [part255](docs/history/stitchcad-changelog-part255.md) | whole0282 | 5 lines, 277 bytes, sha256:843db70e… |

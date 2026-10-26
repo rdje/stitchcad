@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — native inverse certificate chunk probe
+
+0283 .5d.1.2.2.2.b.2.b.1 adds a pure-stdout Rust diagnostic and a guarded Cargo/artifact/row probe.
+A derivative bound widens one center tangent by16*2^-600; native bands contain separate Python
+endpoint bands.10,035 exact rows/67 parity/5 actual invalid-input refusals and selected example
+lint pass, rc=0. The source plan covers169 tracked/new workspace inputs; binary/source hashes
+stay exact around execution. Observed10k wall765937250ns excludes build/Python checks; no total
+duration promise. Full45M controller/reader and native inverse admission remain open.383–385/255
+retain whole prior task/lesson/closed guard scope/ledger with exact Git/hash/public reads. Book/live
+align, G1still5/18. Promotion: inverse decision records padding proof, format, scope and evidence.
+
 ## _(2026-10-26 UTC)_ — inverse threshold certificate feasibility
 
 0282 .5d.1.2.2.2.b.2.a tests640-bit64-term directed sine/cosine quotients over2^-600-turn bands.
@@ -318,15 +329,8 @@ No production trig algorithm/precision cap is admitted. P1 .2 owns usable all-in
 .5d.3.2/.3; source theorem/proof/scope are promoted to fact_trig-midpoints-and-resource-bound.md.
 Whole packing/static scope group and ledger retain336/337/232; book/map/live pointers align.
 
-## _(2026-10-25 UTC)_ — pack history at the fixed working limit
-
-0259 .5d.1.2.2.h captures53 full committed files (174350B) in a46666B content-addressed payload.
-The isolated public reader/source/materializer proves exact bytes before53 checked originals retire.
-Prior11 windows remain byte-exact; installed source/retention checks pass0. Live link destinations
-move to window12 anchors; logical read addresses remain stable. Completed0258 and closed numeric
-scopes retain332/334; oldest whole journal group333 and ledger231 release fixed-cap working room.
-Book/live pointers align; no application behavior or broad audit changed. Promotion declined:
-existing history-window decision remains authoritative; this is another execution of its contract.
+[Complete twelfth archive packing lesson](docs/history/stitchcad-devnotes-part384.md) retains
+its original scope, source/read validation and promotion decision.
 
 [Complete certified arc implementation lesson](docs/history/stitchcad-devnotes-part382.md) retains
 its original scope, verification and promotion decision.
