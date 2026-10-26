@@ -221,3 +221,60 @@ fn graded_carriages_fix_registered_pairings_and_closure_retains_base_rules_and_o
     let single = ExportDxf::single_instance(base, DxfTarget::AamaNamedR12, pin, parameters);
     assert_eq!(single.grading(), &DxfGrading::SingleSize);
 }
+
+#[test]
+fn every_normative_artifact_command_has_a_concrete_constructible_payload(
+) -> Result<(), Box<dyn std::error::Error>> {
+    use sc_core::command::{
+        EvaluationProfile, ExportPdf, ExportPlt, GenerateTechPack, InstanceSelection, PdfLayout,
+        PdfOrientation, PdfPrintSettings,
+    };
+    use sc_units::Length;
+    let instance = Id::from_bits(3);
+    let pin = SelectedProfilePin::new(SelectedProfilePinDefinition {
+        profile_id: "acme-cmt-pt".to_owned(),
+        schema_version: "2.0".to_owned(),
+        content_version: "1.3.0".to_owned(),
+    })?;
+    let parameters = Id::from_bits(4);
+    let print = PdfPrintSettings::new(
+        PdfLayout::A0,
+        PdfOrientation::Portrait,
+        Length::from_micrometres(100_000)?,
+    )?;
+    let actual = [
+        ArtifactPayload::ExportDxf(ExportDxf::single_instance(
+            instance,
+            DxfTarget::AamaNamedR12,
+            pin.clone(),
+            parameters,
+        )),
+        ArtifactPayload::ExportPlt(ExportPlt::new(instance, pin, parameters)),
+        ArtifactPayload::ExportPdf(ExportPdf::new(instance, print, EvaluationProfile::Logical)),
+        ArtifactPayload::GenerateTechPack(GenerateTechPack::new(
+            InstanceSelection::new(vec![instance])?,
+            EvaluationProfile::Logical,
+        )),
+    ];
+    let book = include_str!("../../../docs/book/src/spec/command-layer.md")
+        .split("### 1.1 The commands")
+        .nth(1)
+        .ok_or("command table absent")?
+        .split("## 2.")
+        .next()
+        .ok_or("command table boundary absent")?;
+    let expected: Vec<_> = book
+        .lines()
+        .filter(|line| line.contains("| `artifact` |"))
+        .map(|line| line.split('`').nth(1).ok_or("artifact identity absent"))
+        .collect::<Result<_, _>>()?;
+    let identities: Vec<_> = actual
+        .iter()
+        .map(|payload| payload.command_id().token())
+        .collect();
+    assert_eq!(identities, expected);
+    assert!(actual
+        .iter()
+        .all(|payload| payload.command_id().class() == CommandClass::Artifact));
+    Ok(())
+}

@@ -1,7 +1,7 @@
 # Typed artifact requests
 
-sc-core provides DXF, PLT, PDF and tech-pack request schemas plus per-artifact uncertainty inspection.
-[Interchange](interchange-dialects.md) defines future writer behavior.
+Four sc-core artifact schemas preserve exact snapshot, source and configuration claims.
+[Interchange](interchange-dialects.md) owns writer semantics; generation and closure execution remain pending.
 
 ## Request one named DXF target
 

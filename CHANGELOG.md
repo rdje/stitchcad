@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0328 — canonical tech-pack source request
+## STITCHCAD-G1-0329 — combined artifact input-schema review
 
-Exact Design/profile and ordered evaluated Instance inputs preserve canonical report knowledge and closure.
-Native2+3+4+2+2/strict lint/fmt/book/publication76-95 pass0;482/300 whole48a06ba retained exact.
-.6.2.2.c.2.4.4 done; G1 progress6/18 unchanged; content validation/report generation remain handlers/G5.
+Four concrete artifact payloads match normative rows; changed native5/0, library unchanged/prior9 retained.
+Strict lint/fmt/book/publication76-95 pass0;483/301 wholea092435 exact. .6.2.2.c.2.4 input scope closes.
+G1 progress6/18 unchanged; actual generation/closure/auth/serialization and receiver proof remain later.
 
 # Sealed archive — earlier slices
+
+| [part301](docs/history/stitchcad-changelog-part301.md) | whole0328 | 6 lines, 372 bytes, sha256:8c724c41… |
 
 | [part300](docs/history/stitchcad-changelog-part300.md) | whole0327 | 6 lines, 389 bytes, sha256:75de9577… |
 

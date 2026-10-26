@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — artifact input-schema review
+
+0329 .6.2.2.c.2.4.5 closes .4's current registered input scope: four typed payloads match all normative artifact rows.
+Changed artifact target5/0; library sources identicala092435, other9 focused proofs retained. Strict lint/fmt/
+book/publication76-95 pass0; generation, closure traversal, policy/auth and serializer truth remain later work.
+483/301 wholea092435 source/hash/public exact0. G3.10/G6 owns all-contours registration/receiver evidence.
+Promotion declined: existing artifact contract, watched native row coverage. G1still6/18; release schemas next.
+
 ## _(2026-10-26 UTC)_ — canonical tech-pack source request
 
 0328 .6.2.2.c.2.4.4 keeps nonempty distinct Instance IDs in authored order with exact profile and Design snapshot.
@@ -205,16 +213,8 @@ Native composite5+breaks5 pass0; selected strict lint/fmt/book0.440/441/278 whol
 exact0. Shared fixture narrowly allows the standalone context helper unused in coupled targets.
 G1still5/18; MTM .3.2 next. Promotion: existing SizeSet decision extended; broad proof remains deferred.
 
-## _(2026-10-26 UTC)_ — fifteenth immutable history window
-
-0305 .4c.3d.3.h15 frees the fixed64-file working boundary before composite SizeSet work. Frozen
-sourceba41e9a capture packs all50 raw records90265B into24702B payloadcc8deffb…; all50 source/public/
-materialized bytes exact0, prior14 backing unchanged. Fixture851 records materialized; installed
-retention855 logical/19 working passes0 after437/438/277/439 whole source/hash/public retirements.
-Only maintained links retarget; sealed bytes/producers and reader/schema/caps unchanged. D229 found
-source master14 while book Current label13 (transition governance delta0); old narrative retained,
-current15 guidance/book0 now correct. No product behavior/count change; G1still5/18, composition next.
-Promotion declined: existing archive protocol, identities/catalogs hold storage evidence; no new policy.
+[Complete fifteenth-window lesson](docs/history/stitchcad-devnotes-part483.md) retains
+its original immutable source/packing/refusal proofs, D229 correction and continuation.
 
 [Complete required-break coverage lesson](docs/history/stitchcad-devnotes-part482.md) retains
 its original draft/explicit-gap/current-source contracts, checks and promotion.

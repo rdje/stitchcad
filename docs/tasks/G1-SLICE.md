@@ -739,7 +739,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0324 exact selected-profile resolution request; [whole implementation/proofs](../history/stitchcad-devnotes-part479.md).
 - ID: `G1-SLICE.6.2.2.c.2.4`
-  Status: `in_progress`
+  Status: `done`
   Goal: concrete DXF/PLT/PDF/tech-pack requests and artifact-dependent closure binding; no guessed global closure.
   Children: .1 single-instance DXF/exact closure target; .2 explicit graded carriages; .3 PLT/PDF;
   .4 tech-pack canonical sources; .5 combined artifact schema review before release inputs.
@@ -754,26 +754,26 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0327 exact PLT/PDF and print settings, D238 wording; [whole scope/proofs](../history/stitchcad-devnotes-part482.md).
 - ID: `G1-SLICE.6.2.2.c.2.4.4`
   Status: `done`
-  Goal:0328 exact canonical tech-pack request over shared Design snapshot, ordered actual instances and profile choice.
-  Own core command tech_pack/artifact/reexports and focused tech-pack/artifact/print/query/catalog contracts.
-  Nonempty distinct immutable instance identities retain authored order; lookup/provenance/coverage remain execution.
-  Canonical Design supplies human-authored materials/trims/notes/stitch/POM knowledge; instances supply evaluated
-  content. No copied prose/POM values or report edits. Piece cut quantities retain cut-plan sources;
-  unavailable Order size-run quantities stay unresolved, never inferred from member order or multiplicity.
-  Own artifact chapter/availability/publication and482 whole0327 task/oldest0304 lesson/prior reference-runtime/
-  scalar verification receipts,300 ledger from48a06ba; exact Git/hash/public proof before retirement.
-  Retain current approximation/state/refusal rules and full-execution boundary. Focus typed identities/order/
-  actual closure and retained class metadata; strict selected lint/fmt/book/publication, broad CI later.
-  - [x] ROOT CAUSE (WHY + WHERE): canonical tech pack needs exact authored/evaluated sources, not copied report
-    fields or guessed instances. Native tech-pack2/print3/artifact4/query2/catalog2 pass13/0; rc=0.
-  - [x] ADDRESSED: ordered distinct actual source claims/profile/snapshot and same closure payload; selected
-    strict lint/fmt/book/publication76 chapters/95 entries pass; rc=0.
-  - [x] NO REGRESSION: retained DXF/PLT/PDF/query/catalog contracts pass; no scalar/model/report execution
-    or invented quantities.482/300 whole48a06ba Git/hash/public equality pass; rc=0.
-  Commit0328; next .4.5 artifact review. Promotion declined: existing contract; full CI G1 integration/pre-push.
+  Goal:0328 canonical tech-pack source request; [whole scope/proofs](../history/stitchcad-devnotes-part483.md).
 - ID: `G1-SLICE.6.2.2.c.2.4.5`
-  Status: `pending`
-  Goal: combined exact artifact configuration and dependency-closure request review; execution remains later.
+  Status: `done`
+  Goal:0329 combined current artifact schema/source/configuration/closure review; close .4 input scope only.
+  Own existing artifact native contract adding actual four-payload construction versus normative artifact rows,
+  current artifact-book scope and parent/frontier/live records. Current registered single/graded DXF, PLT,
+  PDF settings and canonical tech-pack sources retain their own provenance/readiness/execution boundaries.
+  Additive all-contours target/mode registration remains G3-GRADING.10/G6, not an inferred writer flag.
+  Reuse0328 unchanged library/other9 native proof; run changed artifact target and selected strict lint/fmt/book/
+  publication. No geometry/unknown computation/serialization/auth/approval/handler or full-G1 closure claim.
+  Own483 whole0328 task/oldest0305 lesson and301 ledger froma092435, exact source/hash/public before retirement.
+  Full CI remains G1 integration/pre-push. Next .6.2.2.c.2.5 release candidate/human approval input schemas.
+  - [x] ROOT CAUSE (WHY + WHERE): catalog declarations alone cannot establish available input shapes;
+    actual four-payload fixtures match normative artifact rows in changed native target5/0; rc=0.
+  - [x] ADDRESSED: fixed target/carriage, actual profile/source, print setting and closure schemas reviewed;
+    selected strict lint/fmt/book/publication76 chapters/95 entries pass; rc=0.
+  - [x] NO REGRESSION: git diff a092435 over core/measure/units src and Cargo metadata empty; other9 focused
+    proofs retained;483/301 whole source/hash/public equality pass; no runtime/release claim; rc=0.
+  Commit0329; parent .4 done, next .2.5 release inputs. G1 stays6/18; full CI G1 integration/pre-push.
+  Promotion declined: existing artifact contract; new normative-row native test watches schema coverage.
 - ID: `G1-SLICE.6.2.2.c.2.5`
   Status: `pending`
   Goal: exact release candidate preparation and human approval target schemas; no authority granted by actor claims.

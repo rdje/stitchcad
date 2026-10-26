@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0328 .6.2.2.c.2.4.4 adds canonical tech-pack source requests: ordered actual instances/profile and Design snapshot.
-- Empty/repeated inventories refuse; no report edits or inferred Order quantities. Actual content/provenance checks deferred.
-- Native tech-pack2/print3/artifact4/query2/catalog2 + strict selected lint/fmt/book/publication76-95 pass0.
--482/300 whole48a06ba source/hash/public exact0. NEXT .6.2.2.c.2.4.5 combined artifact schema review.
-- G1 In Progress6/18 unchanged; serialization/handlers/policy/evidence/approval and full engine remain owned later.
+-0329 .6.2.2.c.2.4.5 closes current artifact input-schema scope; all four normative artifact rows construct typed payloads.
+- Native changed artifact5/0; library sources byte-identicala092435, other9 prior focused proofs retained.
+- Strict selected lint/fmt/book/publication76-95 pass0; actual traversal/generation/auth/serialization still later.
+-483/301 wholea092435 source/hash/public exact0. NEXT .6.2.2.c.2.5 release candidate/human approval schemas.
+- G1 In Progress6/18 unchanged; all-contours registration G3-GRADING.10/G6, remaining engine/bus/app/approval owned later.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
