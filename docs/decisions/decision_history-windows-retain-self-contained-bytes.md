@@ -54,7 +54,7 @@ historical, source-HEAD-bound and must never be rerun against a later HEAD. No c
 - Active manifests retain the v1 fields with version2. Each member adds kind=record or backing;
   at most256 members, bounded paths/integers and exact full-file digest remain mandatory.
 - Records keep their original logical names and bytes. Backings retain the original v1 master,
-  sixteen manifests and sixteen compressed payloads as33 opaque byte members. Default decoding is
+  sixteen manifests and sixteen compressed payloads as33 exact byte members. Default decoding is
   one flat level; original payloads are evidence, not recursive active compression containers.
 - Keep original catalogs physically present, byte-exact against pinned master rows. New catalogs
   cover the new active manifests. Their bytes and every opaque backing count in total decoded/
@@ -77,3 +77,16 @@ historical, source-HEAD-bound and must never be rerun against a later HEAD. No c
 These are implementation requirements, not permission to bypass the current guard. The actual
 migration must remeasure its newer source, including0339's retained record; prototype metrics apply
 only to ad3f8fc. No broader or unbounded retention capacity is claimed.
+
+## Reader support0340
+
+Capacity.2.a adds strict flat-v2 decoding and public read/list/materialize for isolated candidates.
+Original v1 functions remain byte-for-byte in AST after their explicit version-branch rename; current
+v1 CLI, purity, metadata authority and materialization controls remain applicable. Live storage stays v1;
+committed-byte guard/source proofs and installation remain capacity.2.b/.c. No old backing is relocated.
+During this bounded transition, complete completed-unit receipts may stay in their existing changelog
+sections, with original Git interval/hash, until494 is sealed after packing. This avoids a65th raw file.
+Only duplicate DEV_NOTES navigation is curated; original archived lesson bodies remain retrievable.
+
+The v2 reader validates retained JSON metadata and binds original logical identities; compressed
+legacy payloads remain opaque and are never recursively decompressed during ordinary reading.

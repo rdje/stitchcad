@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — bounded flat-v2 reader
+
+0340 capacity.2.a strictly decodes kinds/legacy bindings and counts all evidence; old payloads stay compressed.
+V2 22 calibrated/0, native tar/public materialization946 exact; v1 pure AST/CLI/metadata and28 probes pass0.
+Fixture fixes: virtual payload directory entries reconciled; full planned copy target remains absent until child.
+No live relocation/guard exception;947/64/16 unchanged. Whole0339 task exact in CHANGELOG until494.
+Promotion: existing history decision; duplicate navigation only pruned. Book/pub77-103 pass0, .2.b next.
+
 ## _(2026-10-26 UTC)_ — bounded retention continuation feasibility
 
 0339 capacity.1 sourcead3f8fc: native tar979 exact,946 records/33 old backings/16 unchanged catalogs in4 candidates.
@@ -375,15 +383,6 @@ its original scope, validation and promotion decision.
 
 [Complete binary-operator/numeric-domain lessons](docs/history/window13.md#stitchcad-devnotes-part362md) retain
 both original scopes, validation and promotion decisions.
-
-[Complete independent rational fixture lesson](docs/history/window13.md#stitchcad-devnotes-part359md) retains
-its original scope, validation and promotion decision.
-
-[Complete rational sum/difference lesson](docs/history/window13.md#stitchcad-devnotes-part357md) retains
-its original scope, validation and promotion decision.
-
-[Complete rational product/quotient lesson](docs/history/window13.md#stitchcad-devnotes-part355md) retains
-its original scope, validation and promotion decision.
 
 [Complete rational construction lesson](docs/history/window13.md#stitchcad-devnotes-part353md) retains
 its original scope, validation and promotion decision.

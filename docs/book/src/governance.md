@@ -452,5 +452,5 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part468.md
 The historical0339 probe packs946 logical records plus33 exact v1 backing files into four candidate
 windows, preserving16 physical catalogs. Native tar recovers all979 members exactly; all existing
 caps fit, including3583027 decoded bytes with evidence and221328 active control bytes.
-This is a prototype: the installed v1 reader refuses it. G1-SLICE.RETENTION-CAPACITY.2 owns a versioned
-reader, immutable-byte migration and refusal/offline proofs before any live retirement. No ceiling rises.
+The v2 decoder passes isolated refusal/materialization checks; live storage remains v1.
+Capacity.2.b/.c own source/immutable-byte guards and migration before any live retirement. No ceiling rises.

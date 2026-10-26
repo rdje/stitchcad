@@ -91,7 +91,7 @@ def load_json(root, path, maximum):
     return json.loads(data, object_pairs_hook=no_duplicate_keys), len(data)
 
 
-def master(root):
+def _master_v1(root):
     obj, _ = load_json(root, MASTER, 8192)
     fields(obj, 'version windows')
     require(type(obj['version']) is int and obj['version'] == 1, 'unsupported schema version')
@@ -109,7 +109,7 @@ def record_stats(data):
     return data.count(b'\n'), len(data), digest(data)
 
 
-def inventory(root):
+def _inventory_v1(root):
     """Return complete verified logical bytes and actual resident pressure."""
     windows = master(root)
     records = {}
@@ -229,6 +229,253 @@ def inventory(root):
     require(logical_bytes <= MAX_BYTES and logical_lines <= MAX_LINES, 'decoded history aggregate bound exceeded')
     require(resident <= MAX_BYTES, 'resident history aggregate bound exceeded')
     return records, (working, logical_lines, logical_bytes, resident)
+
+
+
+def _v2_json(root, path, maximum):
+    data = bounded_read(local_path(root, path), maximum)
+    require(data.count(b'\n') <= 2200, 'control line bound exceeded')
+    require(max((len(line) for line in data.split(b'\n')), default=0) <= 400, 'control maxline bound exceeded')
+    return json.loads(data, object_pairs_hook=no_duplicate_keys), data
+
+
+def _row_identity(row, *, maximum=160000, lines=2000):
+    text(row['path'], 200)
+    integer(row['lines'], lines)
+    integer(row['bytes'], maximum)
+    require(type(row['sha256']) is str and SHA.fullmatch(row['sha256']), 'invalid member digest')
+
+
+def _master_v2(root):
+    document, data = _v2_json(root, MASTER, 8192)
+    fields(document, 'version windows legacy_catalogs')
+    require(type(document['version']) is int and document['version'] == 2, 'unsupported schema version')
+    windows = document['windows']
+    require(type(windows) is list and 1 <= len(windows) <= 16, 'window count bound')
+    require(all(type(path) is str and re.fullmatch(r'\.doctrine/history_archive/window[1-9][0-9]*\.json', path)
+                for path in windows), 'invalid manifest path')
+    require(len(set(windows)) == len(windows), 'duplicate window')
+    legacy = document['legacy_catalogs']
+    require(type(legacy) is list and len(legacy) == 16, 'legacy catalog count bound')
+    paths = set()
+    for row in legacy:
+        fields(row, 'path lines bytes sha256')
+        _row_identity(row)
+        require(re.fullmatch(r'docs/history/window[1-9][0-9]*\.md', row['path']), 'invalid legacy catalog path')
+        require(row['path'] not in paths, 'duplicate legacy catalog')
+        paths.add(row['path'])
+    return document, data
+
+
+def master(root):
+    """Validated active window paths for either schema; the original v1 validator is unchanged."""
+    document, _ = load_json(root, MASTER, 8192)
+    if type(document) is dict and type(document.get('version')) is int and document['version'] == 2:
+        return _master_v2(root)[0]['windows']
+    return _master_v1(root)
+
+
+def _backing_limit(path):
+    if path == MASTER:
+        return 8192
+    if re.fullmatch(r'\.doctrine/history_archive/window[1-9][0-9]*\.json', path):
+        return 65536
+    if re.fullmatch(r'docs/history/payloads/[0-9a-f]{64}\.tar\.gz', path):
+        return 1048576
+    raise Refusal('invalid backing path')
+
+
+def _validate_legacy_evidence(records, backings, legacy_catalogs):
+    """Validate original metadata and byte bindings without decompressing any old payload."""
+    require(MASTER in backings, 'missing legacy master')
+    original = json.loads(backings[MASTER], object_pairs_hook=no_duplicate_keys)
+    fields(original, 'version windows')
+    require(type(original['version']) is int and original['version'] == 1, 'invalid legacy schema')
+    windows = original['windows']
+    require(type(windows) is list and len(windows) == 16, 'legacy window count bound')
+    require(all(type(path) is str and re.fullmatch(r'\.doctrine/history_archive/window[1-9][0-9]*\.json', path)
+                for path in windows), 'invalid legacy manifest path')
+    require(len(set(windows)) == len(windows), 'duplicate legacy window')
+    expected = {MASTER, *windows}
+    catalogs, logical = set(), set()
+    controls = len(backings[MASTER])
+    control_lines = backings[MASTER].count(b'\n')
+    for control in (MASTER, *windows):
+        require(control in backings, 'missing legacy control')
+        data = backings[control]
+        require(data.count(b'\n') <= 2200, 'legacy control line bound exceeded')
+        require(max((len(line) for line in data.split(b'\n')), default=0) <= 400, 'legacy control maxline bound exceeded')
+    for path in windows:
+        require(path in backings, 'missing legacy manifest')
+        controls += len(backings[path])
+        control_lines += backings[path].count(b'\n')
+        manifest = json.loads(backings[path], object_pairs_hook=no_duplicate_keys)
+        fields(manifest, 'version id source_revision created owner reason payload payload_sha256 catalog members')
+        require(type(manifest['version']) is int and manifest['version'] == 1, 'invalid legacy manifest version')
+        require(manifest['id'] == Path(path).stem, 'legacy window identity mismatch')
+        require(type(manifest['source_revision']) is str and REV.fullmatch(manifest['source_revision']), 'invalid source revision')
+        require(type(manifest['created']) is str and re.fullmatch(r'[0-9]{4}-[0-9]{2}-[0-9]{2}', manifest['created']), 'invalid date')
+        datetime.date.fromisoformat(manifest['created'])
+        text(manifest['owner'], 80)
+        text(manifest['reason'], 400)
+        payload, checksum = manifest['payload'], manifest['payload_sha256']
+        require(type(checksum) is str and SHA.fullmatch(checksum), 'invalid payload digest')
+        require(payload == 'docs/history/payloads/' + checksum + '.tar.gz', 'content-address mismatch')
+        require(payload not in expected, 'duplicate legacy payload')
+        expected.add(payload)
+        require(payload in backings and digest(backings[payload]) == checksum, 'legacy payload identity mismatch')
+        catalog = manifest['catalog']
+        require(catalog == 'docs/history/' + manifest['id'] + '.md', 'legacy catalog identity mismatch')
+        catalogs.add(catalog)
+        members = manifest['members']
+        require(type(members) is list and 1 <= len(members) <= 256, 'member count bound')
+        for row in members:
+            fields(row, 'path lines bytes sha256')
+            _row_identity(row)
+            require(SEGMENT.fullmatch(row['path']), 'invalid logical path')
+            require(row['path'] not in logical, 'duplicate legacy logical identity')
+            logical.add(row['path'])
+            require(row['path'] in records and record_stats(records[row['path']]) ==
+                    (row['lines'], row['bytes'], row['sha256']), 'legacy logical identity mismatch')
+    require(set(backings) == expected, 'legacy backing membership mismatch')
+    require(catalogs == set(legacy_catalogs), 'legacy catalog membership mismatch')
+    require(controls <= 262144 and control_lines <= 20000, 'legacy control bound exceeded')
+
+
+def _inventory_v2(root):
+    """Decode one flat level; old compressed payloads remain opaque retained evidence."""
+    document, master_data = _master_v2(root)
+    records, backings, manifests = {}, {}, {}
+    controls, payloads, catalogs = {MASTER}, set(), {}
+    control_bytes = len(master_data)
+    control_lines = master_data.count(b'\n')
+    decoded_bytes, decoded_lines = 0, 0
+    indexed = set()
+    for manifest_path in document['windows']:
+        manifest, control = _v2_json(root, manifest_path, 65536)
+        control_bytes += len(control)
+        control_lines += control.count(b'\n')
+        controls.add(manifest_path)
+        fields(manifest, 'version id source_revision created owner reason payload payload_sha256 catalog members')
+        require(type(manifest['version']) is int and manifest['version'] == 2, 'unsupported manifest version')
+        identifier = Path(manifest_path).stem
+        require(manifest['id'] == identifier, 'window identity mismatch')
+        require(type(manifest['source_revision']) is str and REV.fullmatch(manifest['source_revision']), 'invalid source revision')
+        require(type(manifest['created']) is str and re.fullmatch(r'[0-9]{4}-[0-9]{2}-[0-9]{2}', manifest['created']), 'invalid date')
+        datetime.date.fromisoformat(manifest['created'])
+        text(manifest['owner'], 80)
+        text(manifest['reason'], 400)
+        checksum, payload, catalog = manifest['payload_sha256'], manifest['payload'], manifest['catalog']
+        require(type(checksum) is str and SHA.fullmatch(checksum), 'invalid payload digest')
+        require(payload == 'docs/history/payloads/' + checksum + '.tar.gz', 'content-address mismatch')
+        require(payload not in payloads, 'duplicate payload')
+        payloads.add(payload)
+        require(catalog == 'docs/history/' + identifier + '.md', 'catalog identity mismatch')
+        catalog_data = bounded_read(local_path(root, catalog), 160000)
+        record_stats(catalog_data)
+        catalogs[catalog] = catalog_data
+        members = manifest['members']
+        require(type(members) is list and 1 <= len(members) <= 256, 'member count bound')
+        expected = {}
+        for row in members:
+            fields(row, 'path lines bytes sha256 kind')
+            require(type(row['kind']) is str and row['kind'] in ('record', 'backing'), 'invalid member kind')
+            text(row['path'], 200)
+            if row['kind'] == 'record':
+                require(SEGMENT.fullmatch(row['path']), 'invalid logical path')
+                _row_identity(row)
+            else:
+                _row_identity(row, maximum=_backing_limit(row['path']), lines=MAX_LINES)
+            require(row['path'] not in indexed, 'duplicate logical identity')
+            indexed.add(row['path'])
+            expected[row['path']] = row
+        headings = re.findall(rb'^### (.+)$', catalog_data, re.M)
+        require(headings == [Path(path).name.encode() for path in expected], 'catalog membership/order mismatch')
+        packed = bounded_read(local_path(root, payload), 1048576)
+        require(digest(packed) == checksum, 'payload digest mismatch')
+        with gzip.GzipFile(fileobj=io.BytesIO(packed)) as stream:
+            raw = stream.read(TAR_BYTES + 1)
+        require(len(raw) <= TAR_BYTES, 'decompressed tar bound exceeded')
+        seen, directories = set(), set()
+        with tarfile.open(fileobj=io.BytesIO(raw), mode='r:') as archive:
+            for member in archive:
+                require(member.name not in seen, 'duplicate tar member')
+                seen.add(member.name)
+                if member.isdir():
+                    require(member.name in ('docs', 'docs/history', 'docs/history/payloads',
+                                             '.doctrine', '.doctrine/history_archive'), 'unexpected tar directory')
+                    directories.add(member.name)
+                    continue
+                require(member.type in (tarfile.REGTYPE, tarfile.AREGTYPE) and member.name in expected, 'unexpected/unsafe tar member')
+                row = expected[member.name]
+                require(member.size == row['bytes'], 'tar/member size mismatch')
+                stream = archive.extractfile(member)
+                require(stream is not None, 'unreadable member')
+                with stream:
+                    data = stream.read(row['bytes'] + 1)
+                require((data.count(b'\n'), len(data), digest(data)) ==
+                        (row['lines'], row['bytes'], row['sha256']), 'member identity mismatch')
+                if row['kind'] == 'record':
+                    record_stats(data)
+                    records[member.name] = data
+                else:
+                    backings[member.name] = data
+                decoded_bytes += len(data)
+                decoded_lines += data.count(b'\n')
+                require(decoded_bytes <= MAX_BYTES and decoded_lines <= MAX_LINES, 'decoded history aggregate bound exceeded')
+            require(not raw[archive.offset:].strip(b'\0'), 'unparsed nonzero tar tail')
+        require(seen == set(expected) | directories, 'tar membership mismatch')
+        manifests[manifest_path] = manifest
+    require(control_bytes <= 262144 and control_lines <= 20000, 'aggregate control bound exceeded')
+    legacy_catalogs = {}
+    for row in document['legacy_catalogs']:
+        require(row['path'] not in catalogs, 'legacy/active catalog collision')
+        data = bounded_read(local_path(root, row['path']), 160000)
+        require(record_stats(data) == (row['lines'], row['bytes'], row['sha256']), 'legacy catalog identity mismatch')
+        legacy_catalogs[row['path']] = data
+    catalogs.update(legacy_catalogs)
+    for path in (root / '.doctrine/history_archive').rglob('*'):
+        local_path(root, path.relative_to(root).as_posix())
+    actual_controls = {path.relative_to(root).as_posix() for path in (root / '.doctrine/history_archive').rglob('*') if path.is_file()}
+    require(actual_controls == controls, 'orphan/missing archive control')
+    actual_payloads = {path.relative_to(root).as_posix() for path in (root / 'docs/history/payloads').rglob('*') if path.is_file()}
+    require(actual_payloads == payloads, 'orphan/missing payload')
+    resident, working = control_bytes, 0
+    for path in (root / 'docs/history').rglob('*'):
+        relative = path.relative_to(root).as_posix()
+        require(not path.is_symlink(), 'symlink in history')
+        if not path.is_file():
+            continue
+        local_path(root, relative)
+        resident += path.stat().st_size
+        if relative in payloads:
+            continue
+        require(relative in catalogs or SEGMENT.fullmatch(relative), 'unclassified resident history file')
+        working += 1
+        data = bounded_read(path, 160000)
+        record_stats(data)
+        if relative in catalogs:
+            continue
+        require(relative not in records, 'raw/packed duplicate logical identity')
+        records[relative] = data
+        decoded_bytes += len(data)
+        decoded_lines += data.count(b'\n')
+    decoded_bytes += sum(map(len, catalogs.values()))
+    decoded_lines += sum(data.count(b'\n') for data in catalogs.values())
+    require(working <= 64, 'working Markdown count bound exceeded')
+    require(decoded_bytes <= MAX_BYTES and decoded_lines <= MAX_LINES, 'decoded history aggregate bound exceeded')
+    require(resident <= MAX_BYTES, 'resident history aggregate bound exceeded')
+    _validate_legacy_evidence(records, backings, legacy_catalogs)
+    return records, (working, decoded_lines, decoded_bytes, resident), backings, manifests
+
+
+def inventory(root):
+    """Return verified logical bytes/pressure; v1 and v2 retain the same public return shape."""
+    document, _ = load_json(root, MASTER, 8192)
+    if type(document) is dict and type(document.get('version')) is int and document['version'] == 2:
+        records, pressure, _backings, _manifests = _inventory_v2(root)
+        return records, pressure
+    return _inventory_v1(root)
 
 
 def archive_root(value):

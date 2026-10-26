@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0339 RETENTION-CAPACITY.1 proves isolated ad3f8fc flat-v2 feasibility; live v1/schema/backings unchanged.
-- Native tar979 exact:946 records+33 backing files,16 original catalogs; all caps fit (decoded3583027B).
-- Guarded producer/syntax/book/pub77-103 pass0; v1 candidate refusal1/unknownarg2 expected. Probe is FROZEN atad3f8fc.
--493 wholead3f8fc exact0; current v1 now947 logical/64 working/16 windows. G1still6/18; G0 closure unapproved.
-- NEXT RETENTION-CAPACITY.2 versioned migration; draft contract in existing history decision. Pack committed baseline before next seal, then .6.4.
+-0340 capacity.2.a adds strict flat-v2 read/list/materialize; original v1 functions retained behind dispatch.
+- V2 22 calibrated/0, native tar/public materialization946 exact; original v1 purity/CLI/metadata and28 probes pass0.
+- Live v1 still947 logical/64 working/16 windows; no backing/control relocation or guard exception. G1still6/18.
+- Whole0339 task moved Git/hash/byte-exact into its CHANGELOG entry until494; only redundant lesson navigation pruned.
+- NEXT capacity.2.b committed/source/backing controls, then .2.c migration before another seal. Frozen ad3f8fc probe unchanged.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

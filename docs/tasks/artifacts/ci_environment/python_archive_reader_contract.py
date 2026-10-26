@@ -118,8 +118,15 @@ def pure_controls():
     old = subprocess.check_output(['git', 'show', BEFORE + ':scripts/history_archive.py'], cwd=ROOT, text=True)
     definitions = lambda source: {node.name: ast.dump(node, include_attributes=False)
                                   for node in ast.parse(source).body if isinstance(node, ast.FunctionDef)}
-    previous, current = definitions(old), definitions(ENTRY.read_text())
-    assert all(current[name] == body for name, body in previous.items() if name not in ('guard_committed', 'main')), 'archive pure original bodies changed'
+    previous = definitions(old)
+    for name, body in previous.items():
+        if name in ('guard_committed', 'main'):
+            continue
+        target = {'master': '_master_v1', 'inventory': '_inventory_v1'}.get(name, name)
+        node = next(node for node in ast.parse(ENTRY.read_text()).body
+                    if isinstance(node, ast.FunctionDef) and node.name == target)
+        node.name = name  # Original v1 bodies remain exact behind explicit version dispatch.
+        assert ast.dump(node, include_attributes=False) == body, ('archive pure original body changed', name)
     records, _ = ns['inventory'](ROOT)
     name = sorted(records)[0]
     saved_env = dict(os.environ)

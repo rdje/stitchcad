@@ -3,11 +3,47 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0340 — bounded flat-v2 reader support
+
+- Strict record/backing kinds, old metadata bindings and complete byte budgets; live storage/guards remain v1.
+- V2 22 calibrated/0 with native tar/public946 materialized exact; original v1 purity/CLI/metadata and28 probes pass0.
+- Book/pub77-103 pass0; complete0339 task preserved below, no new raw file. .2.b source/byte guards next; G1still6/18.
+
 ## STITCHCAD-G1-0339 — bounded retention continuation measured
 
 - Sourcead3f8fc prototype packs946 records/33 exact backings into4 windows, preserves16 catalogs; native tar979 exact.
 - All existing caps fit; guarded producer/syntax/book/pub77-103 pass0, v1 refusal1/unknownarg2 expected.
 -493 whole source/hash/public0; live947/64/16 unchanged protocol. Draft migration contract recorded, capacity.2 next.
+
+### Transitional receipt — capacity feasibility0339
+
+This complete committed task remains here until capacity.2.c seals the transition after packing.
+Source: 65e36fd287d7381da579902e03ef07dc3a2b7e76, docs/tasks/G1-SLICE.md bytes 28468–30590; 2122 bytes, sha256:6b008e2056ab66981cb5f9b385beff8202cfa9424164ea48bf8003833e0f99f3.
+
+```text
+- ID: `G1-SLICE.RETENTION-CAPACITY.1`
+  Status: `done`
+  Goal:0339 falsify bounded v2 flat re-packing at committedad3f8fc before choosing a migration.
+  Own guarded historical capacity probe under artifacts/history_archive and one fresh target fixture.
+  Preserve logical record bytes, original v1 master/manifests/payloads as opaque evidence and16 unchanged
+  physical catalogs. Prototype active manifests/payloads/catalogs are separate same-volume outputs only.
+  Count all bytes including legacy evidence against decoded/resident limits; preserve all per-file/member/
+  window/control/working bounds. Native OS tar via PATH is a required read-only independent archive oracle.
+  Actual current reader must refuse candidate v2; no live schema/guard/backing change or adoption here.
+  Own493 whole0338 task/ledger/oldest0317 lesson and closed proof receipts if book room requires; exact
+  source/hash/public before retirement. This uses last raw slot; .2 must pack committed source before another seal.
+  Next .2 implements/tests explicit v1->v2 immutable-byte transition only if measured caps fit; otherwise
+  own a concrete blocker/alternative. No cap rise or silent committed-window exception. Full CI pre-push.
+  - [x] ROOT CAUSE (WHY + WHERE): v1 has16 immutable windows, source63 raw slots; new format refuses1.
+    Guarded source-bound prototype preserves every original member; native OS tar979 exact, rc=0.
+  - [x] ADDRESSED: four candidate windows keep all existing caps: decoded3583027B/47932 lines,
+    resident1966510B, active controls221328B, max gzip851673B. Probe failures0; rc=0.
+  - [x] NO REGRESSION: original source bytes unchanged,493 whole Git/hash/public exact; live v1
+    census947/64/16, book/pub77/103 and syntax pass. Unknown arg2/stdout empty expected; rc=0.
+  Commit0339; existing history decision records feasibility/draft transition, no live protocol adopted.
+  Frozen producer retention_capacity_probe.py requiresad3f8fc; output target/history_capacity/0339-final/report.json.
+  Next capacity.2 before another seal; immutable-byte compatibility/caps/offline/source controls are mandatory.
+```
 
 # Sealed archive — earlier slices
 

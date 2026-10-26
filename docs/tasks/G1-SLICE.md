@@ -485,30 +485,34 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   evidence into fresh bounded packets; prove every existing cap before adoption. No protocol change is adopted by this structural review.
 - ID: `G1-SLICE.RETENTION-CAPACITY.1`
   Status: `done`
-  Goal:0339 falsify bounded v2 flat re-packing at committedad3f8fc before choosing a migration.
-  Own guarded historical capacity probe under artifacts/history_archive and one fresh target fixture.
-  Preserve logical record bytes, original v1 master/manifests/payloads as opaque evidence and16 unchanged
-  physical catalogs. Prototype active manifests/payloads/catalogs are separate same-volume outputs only.
-  Count all bytes including legacy evidence against decoded/resident limits; preserve all per-file/member/
-  window/control/working bounds. Native OS tar via PATH is a required read-only independent archive oracle.
-  Actual current reader must refuse candidate v2; no live schema/guard/backing change or adoption here.
-  Own493 whole0338 task/ledger/oldest0317 lesson and closed proof receipts if book room requires; exact
-  source/hash/public before retirement. This uses last raw slot; .2 must pack committed source before another seal.
-  Next .2 implements/tests explicit v1->v2 immutable-byte transition only if measured caps fit; otherwise
-  own a concrete blocker/alternative. No cap rise or silent committed-window exception. Full CI pre-push.
-  - [x] ROOT CAUSE (WHY + WHERE): v1 has16 immutable windows, source63 raw slots; new format refuses1.
-    Guarded source-bound prototype preserves every original member; native OS tar979 exact, rc=0.
-  - [x] ADDRESSED: four candidate windows keep all existing caps: decoded3583027B/47932 lines,
-    resident1966510B, active controls221328B, max gzip851673B. Probe failures0; rc=0.
-  - [x] NO REGRESSION: original source bytes unchanged,493 whole Git/hash/public exact; live v1
-    census947/64/16, book/pub77/103 and syntax pass. Unknown arg2/stdout empty expected; rc=0.
-  Commit0339; existing history decision records feasibility/draft transition, no live protocol adopted.
-  Frozen producer retention_capacity_probe.py requiresad3f8fc; output target/history_capacity/0339-final/report.json.
-  Next capacity.2 before another seal; immutable-byte compatibility/caps/offline/source controls are mandatory.
+  Goal:0339 capacity feasibility checked; [whole transitional receipt](../../CHANGELOG.md#transitional-receipt--capacity-feasibility0339).
 - ID: `G1-SLICE.RETENTION-CAPACITY.2`
+  Status: `in_progress`
+  Goal: versioned immutable-byte transition under the [recorded draft](../decisions/decision_history-windows-retain-self-contained-bytes.md).
+  Children .a bounded reader; .b committed-byte/source/backing controls; .c guarded migration and consumers.
+  Keep all caps/v1 behavior/frozen producers. Pack committed64-file baseline before creating494.
+- ID: `G1-SLICE.RETENTION-CAPACITY.2.a`
+  Status: `done`
+  Goal:0340 bounded read-only v2 decoding, strict kinds/legacy catalogs/opaque backing accounting.
+  Own reader and focused v2 controls plus existing readonly compatibility projections where version dispatch
+  changes syntax. Preserve exact original v1 functions/behavior. No committed-guard exception or live migration.
+  Own bounded live notes/navigation curation while64 raw files prohibit another seal; keep every existing
+  lesson and record byte. Close prototype receipt may move whole into its existing bounded changelog entry,
+  with Git/hash/equality proof, until .c retires transition receipts into494 after packing. Full CI pre-push.
+  - [x] ROOT CAUSE (WHY + WHERE): v1 cannot read candidate v2; explicit dispatch retains original v1
+    AST/CLI/purity. Fixture orphan/destination-exists diagnostics traced to incomplete staging; final22/0, rc=0.
+  - [x] ADDRESSED: strict schemas/kinds/legacy identity and complete budgets; native tar/public materialization
+    all946 candidate records exact. No recursive old-payload decoding, no live transition; rc=0.
+  - [x] NO REGRESSION: original readonly/CLI/metadata controls and28 v1 probes pass; whole0339 Git/hash/
+    copy exact in bounded CHANGELOG, archived lessons unchanged; book/pub77/103 and syntax pass, rc=0.
+  Commit0340; promotion: existing history decision. .2.b guard/source CLI next; .2.c packs before494.
+- ID: `G1-SLICE.RETENTION-CAPACITY.2.b`
   Status: `pending`
-  Goal: implement admitted bounded reader/transition, exact old-byte source/public/offline/materialization
-  proofs and refusal controls, then copy/verify/use/delete only source-pinned backing/raw files; retain all caps.
+  Goal: exact committed v1->v2 byte guard, legacy backing access and old/new optional source proofs.
+- ID: `G1-SLICE.RETENTION-CAPACITY.2.c`
+  Status: `pending`
+  Goal: guarded atomic copy/verify/use/delete migration with rollback; offline/materialization/current consumers
+  and all archive refusal controls, then494 whole transition receipts and product .6.4 resumes.
 - ID: `G1-SLICE.4c.5`
   Status: `done`
   Goal:0320 SizeSet scope/current25/unchanged31/book0; [whole scope/proofs](../history/stitchcad-devnotes-part472.md).
