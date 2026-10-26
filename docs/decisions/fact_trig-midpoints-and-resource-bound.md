@@ -2,8 +2,8 @@
 
 - **Type:** `fact`
 - **Date:** `2026-10-25`
-- **Status:** `active`; no production trig algorithm admitted
-- **Owner / source:** G1-SLICE.5d.1.2.2.1; resource strategy .5d.1.2.2.2 is P1 before .5d.3.2/.3.
+- **Status:** `active`; sin/cos and inverses implemented; tangent resources remain open
+- **Owner / source:** G1-SLICE.5d.1.2.2.1; remaining tangent strategy .5d.1.2.2.2.d.2 is P1.
 
 answers: "can trigonometric formula results land exactly on a rounding midpoint?" · "does convergence prove usable trig resources?"
 
@@ -20,7 +20,7 @@ establish the rational-value restriction at rational multiples of pi: sine/cosin
 only at0, ±1/2, ±1; finite rational tangent values can only be0, ±1. These are theorem sources,
 not numerical samples. NIST supplies [principal inverse branches](https://dlmf.nist.gov/4.23)
 and [arctangent series/identities](https://dlmf.nist.gov/4.24); it does not certify StitchCAD's
-unimplemented interval error accounting or resource bounds. Sources actually opened2026-10-25.
+interval error accounting or resource bounds. Sources actually opened2026-10-25.
 
 ## Consequence for the actual language quanta
 
@@ -77,7 +77,40 @@ the exact quantum substitutions, the scale1 falsifier, the width-bound arithmeti
 These finite checks support the algebraic derivation; the cited theorem supplies completeness.
 They do not constitute an all-input runtime/performance test. No new dependency is selected.
 
-G1-SLICE.5d.1.2.2.2 owns a practical, justified interval/termination/resource strategy before
-production sin/cos/tan/atan/atan2. A sharper certificate or validated adaptive method must meet the
+G1-SLICE.5d.1.2.2.2 owns each practical interval/termination/resource strategy before its kernel.
+Sin/cos and inverse plans/kernels are now implemented; tangent remains .d.2. A sharper certificate or validated adaptive method must meet the
 existing admitted domains and refusal contracts; changing them would require its own decision.
 Root/arc features and independent evaluator-adapter work can proceed while that obligation is open.
+
+## Tangent range and certificate boundary0290
+
+Set A=90M microdegrees, U=2^128-1. For an admitted magnitude n/d, choose its nearest pole
+p=A*(2j+1)>0. If it is not a pole, m=abs(n-p*d)>=1 and distance delta=m/d<=A.
+Since p*d<=n+m<=U+m, delta>=p*m/(U+m)>=p/(U+1)>=A/(U+1).
+This uses both public component bounds; an angle A-1/U would have numerator A*U-1>U and is
+not an admitted worst-case witness. Signs and whole periods do not weaken this integer proof.
+
+Let t=pi*delta/(2A). For0<t<pi/2, tan(t)>=t by its derivative>=1, so
+abs(tan(angle))=cot(t)<=1/t<2*(U+1)/3, using pi>3. At t=pi/2 the result is zero.
+Thus its rounded integer ppm magnitude is below ceil(2M*(U+1)/3)+1, a148-bit bound.
+This bounds output magnitude; it does not bound the precision needed to decide rounding.
+
+Finite admitted tangent inputs can legitimately exceed the reduced128-bit result limit. Choose
+d=floor((U+1)/A), n=A*d-1: both components are admitted and delta=1/d. Here
+t=pi/(2A*d)<2/(A*d)<1/2. The elementary series bounds sin(t)<=t and cos(t)>=1/2 give
+M*cot(t)>A*M*d/4>U+1/2, so the rounded result requires formula_rational_width, not formula_domain.
+Exact poles retain their distinct formula_domain refusal; this adds no language restriction.
+
+Representable positive-output midpoint levels k+1/2 cover k=0,...,U, including the final width
+boundary U+1/2:2^128 targets. Their number differs fundamentally from the1M sine thresholds.
+The45M inverse certificate excludes rational slopes near half-integer microdegree angles; tangent
+accepts arbitrary admitted rational microdegrees, such as1/3. It cannot directly supply their
+rounding certificate. This explains why simply repeating the existing finite population method
+does not produce a practical tangent plan. It is not an impossibility proof for sharper methods.
+
+python3 -I -B docs/tasks/artifacts/formula_structure/tangent_resource_profile.py verifies these
+exact bounds/witnesses,8798 finite-model nonpole distances against independent direct pole
+enumeration,586 exact poles and2 negative controls, rc=0. The algebra/elementary inequalities
+provide the universal derivation; the small enumeration supports transcription only.
+P1 .5d.1.2.2.2.d.2 owns the practical rounding/termination/resource plan before .5d.3.2.2.
+Independent command-bus work can proceed while the tangent prerequisite remains open.

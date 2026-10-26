@@ -533,6 +533,27 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Paths: docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py;docs/decisions/decision_finite-threshold-feasibility.md
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part376.md).
 
+- ID: `G1-SLICE.5d.1.2.2.2.d.1`
+  Status: `done`
+  Goal:0290 characterize tangent pole distance/output range/threshold coverage before runtime plan.
+  Paths: docs/tasks/artifacts/formula_structure/tangent_resource_profile.py;docs/decisions/fact_trig-midpoints-and-resource-bound.md
+  Own398 whole0289 source task,399 oldest0265 lesson,262 whole0289 ledger before live growth.
+  Also own400 whole0280 summary/retention and401 whole0288 summary/retention before task growth.
+  Exact arithmetic/independent small-domain enumeration and width witness; no production admission.
+  Sync formula spec/book/live; retain separate P1 practical rounding/resource owner .d.2.
+  Acceptance0290:
+  - [x] REPRODUCE: existing certificates cover different tangent thresholds; no tangent plan admitted.
+  - [x] ROOT CAUSE0290: tangent_resource_profile.py exact pole/range/2^128-level characterization passes, rc=0; finite sine enumeration does not transfer.
+  - [x] FIX: derive actual128-bit input pole distance and148-bit output bound; retain overflow/pole distinction and P1 plan owner.
+  - [x] ADDRESSED0290: same command8798 independent distances/586 poles/2 negative controls and full-width overflow witness pass, rc=0.
+  - [x] NO REGRESSION0290: same exact controls rc=0; no native/certificate edits; runtime admission stays .d.2, broad .5d.4/pre-push.
+  - [x] LOCKSTEP:398/399/400/401/262 exact Git/hash/public bytes rc=0; book build rc=0. Formula availability corrected; G1still5/18.
+  Promotion declined: scoped derivation extends existing midpoint fact; no policy change. Commit: STITCHCAD-G1-0290.
+- ID: `G1-SLICE.5d.1.2.2.2.d.2`
+  Status: `pending`
+  Goal: P1 practical all-input tangent rounding/termination/resource plan before .5d.3.2.2.
+  Need sharper certified strategy or validated adaptive proof; no arbitrary cutoff/new domain.
+
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`
   Goal:0259 packed window12/whole closed scopes under fixed caps.
@@ -577,13 +598,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: correctly rounded sin/cos/tan under .5d.1.2.2 plan.
 - ID: `G1-SLICE.5d.3.2.1`
   Status: `done`
-  Goal:0280 native sin/cos3/0 with44 independent angles; shared pi1/0, arc2/0/lint0.
-  Paths: crates/sc-core/src/recipe/trig.rs;crates/sc-core/src/recipe/pi.rs;crates/sc-core/tests/formula_sincos_value_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part379.md).
-  Retention0281, owned .5e.3.6:
-  - [x] ROOT CAUSE0281: git show89e0e87 complete native node source interval retained379; Python byte/hash comparison rc=0.
-  - [x] ADDRESSED0281: whole node/source/hash exact in379, Python comparison rc=0.
-  - [x] NO REGRESSION0281: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part379.md whole file exact, Python comparison rc=0; no reader change.
+  Goal:0280 native sin/cos verified3/0; original scope379, whole retention below.
+  Acceptance: [whole summary/provenance](../history/stitchcad-devnotes-part400.md).
 - ID: `G1-SLICE.5d.3.2.2`
   Status: `pending`
   Goal: tangent only after its separate admitted all-input resource plan; no borrowed sin/cos certificate.
@@ -592,13 +608,8 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: correctly rounded atan/atan2 under .5d.1.2.2 plan.
 - ID: `G1-SLICE.5d.3.3.1`
   Status: `done`
-  Goal:0288 native inverse3/0 with independent27/54 fixtures/live oracle/lint0.
-  Paths: crates/sc-core/src/recipe/inverse.rs;crates/sc-core/tests/formula_inverse_value_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part396.md).
-  Retention0289 owned .5e.3.7:
-  - [x] ROOT CAUSE0289: git show3219d3f whole0288 node retained396; Python source/hash comparison rc=0.
-  - [x] ADDRESSED0289: whole node/source/hash exact in396, Python comparison rc=0.
-  - [x] NO REGRESSION0289: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part396.md exact whole file, Python comparison rc=0; no reader change.
+  Goal:0288 native inverses verified3/0; original scope396, whole retention below.
+  Acceptance: [whole summary/provenance](../history/stitchcad-devnotes-part401.md).
 - ID: `G1-SLICE.5d.4`
   Status: `pending`
   Goal: coupled complete irrational function proof and error/provenance review.

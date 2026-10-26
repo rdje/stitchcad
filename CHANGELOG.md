@@ -5,11 +5,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
-## STITCHCAD-G1-0289 — sourced inverse calls
+## STITCHCAD-G1-0290 — exact tangent range and certificate boundary
 
-.5e.3.7: atan/atan2 preserve actual argument priority, all operand sources and call contributions.
-Focused call target8/0, selected strict lint/fmt/book pass0;396/397/261 retain whole history.
-Native/certificate sources unchanged; AST/tangent/broad proof remain owned.
+.5d.1.2.2.2.d.1: prove pole distance/output width and actual overflow witness; focused profile8798/586/2/book pass0.
+Tangent runtime plan remains P1 .d.2; no input narrowing.398/399/400/401/262 preserve whole history.
+
+| [part262](docs/history/stitchcad-changelog-part262.md) | whole0289 | 6 lines, 318 bytes, sha256:619cd47f… |
 
 | [part261](docs/history/stitchcad-changelog-part261.md) | whole0288 | 6 lines, 376 bytes, sha256:f30d81e8… |
 

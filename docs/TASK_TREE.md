@@ -79,7 +79,7 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-**`G1-SLICE.5e.3.7`** adds sourced atan/atan2 after certified native values; tangent resources next.
+**`G1-SLICE.5d.1.2.2.2.d.1`** bounds tangent pole/output range; practical rounding .d.2 remains P1.
 [Execution frontier](tasks/G1-SLICE-execution.md) resumes at .5e.2.4; D70 ruling remains pending.
 Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per
 feature; broad verification and nonblocking audits remain owned for later integration/pre-push.

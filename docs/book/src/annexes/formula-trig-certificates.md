@@ -335,3 +335,22 @@ the native root/half-angle reduction. Direct sin/cos enclosures construct close 
 on both sides of three half-microdegree thresholds, with both signs. Full-width values, private
 256-bit quotients, all quadrants, exact axes and both signed rounded endpoints are included.
 This is focused native evidence; coupled/platform checks remain .5d.4/integration/pre-push.
+
+## Tangent resource boundary
+
+Tangent remains unimplemented. With M=1,000,000 and U=2^128-1, an admitted nonpole rational
+microdegree input is at least90M/(U+1) microdegrees from its nearest pole. This bounds rounded
+ppm output magnitude to148 bits, while the public result component limit remains128 bits.
+For example d=floor((U+1)/(90M)), n=90M*d-1 is admitted yet its true tangent rounds beyond U:
+its correct refusal is formula_rational_width. Exact poles instead refuse formula_domain.
+
+This magnitude bound does not resolve correct rounding. There are2^128 relevant positive
+half-ppm thresholds including the final width boundary, so direct enumeration would differ
+radically from the completed1M sine and45M inverse certificates. Inverse coverage concerns
+half-integer microdegree targets; tangent's rational angles need their own argument.
+
+The universal integer/elementary proof is recorded in
+docs/decisions/fact_trig-midpoints-and-resource-bound.md. Its focused tangent_resource_profile.py
+checks exact width/pole witnesses,8798 independently enumerated nonpole distances,586 exact
+poles and2 negative controls. These support transcription; no practical runtime precision or
+latency bound is claimed. P1 .5d.1.2.2.2.d.2 owns the remaining tangent strategy before its kernel.

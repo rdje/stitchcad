@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — exact tangent range and certificate boundary
+
+0290 .5d.1.2.2.2.d.1 derives nonpole distance>=90M/(U+1),148-bit rounded tangent magnitude
+and an admitted input beyond128-bit result width. Exact poles/domain and finite overflow/width
+remain distinct.2^128 relevant positive thresholds prevent directly repeating finite sine coverage;
+the inverse half-microdegree certificate also has a different target family. A practical tangent
+rounding plan stays P1 .d.2; independent command-bus work can proceed without narrowing the language.
+Focused profile8798 independent distances/586 poles/2 negative controls/width witness and book
+pass0.398/399/400/401/262 retain whole history; no native/certificate edits, G1still5/18.
+Promotion declined: scoped derivation extends the existing midpoint fact; no policy change.
+
 ## _(2026-10-26 UTC)_ — sourced inverse calls
 
 0289 .5e.3.7 adds supplied-scalar checked_atan/checked_atan2 over the certified native values.
@@ -303,20 +314,8 @@ currentness, axes/complete SizeSet/path/profile/approval proof is claimed. The b
 is complete; broader .5e and D70 remain open. Whole0265 scope/ledger retain347/238; book/live align.
 Promotion declined: existing authored-order/pin/base and formula3.1 contracts govern this bridge.
 
-## _(2026-10-26 UTC)_ — supplied size frames without premature Count storage checks
-
-0265 .5e.1.5.1 introduces the three existing size roles and core source/value frame. Source retains
-set/revision/selected/base ids. Constructor checks aliases, one-based range, then singleton/base;
-these are supplied structural facts, not actual membership/currentness/axes proof. Empty context
-returns the actual size name with formula_unbound_name. Present false remains Boolean; base is
-identity equality, not an ordinal or label inference. from_unsigned_count is total/exact over128 bits;
-actual binding alone enforces signed storage. Frame replacement leaves prior source/values intact.
-
-Focused native5/0 and selected strict Clippy0 pass: role closure, absence, exact kinds/pins/false,
-invalid witnesses/priority, singleton, full-width Count and later binding refusal. Actual immutable
-membership/pin derivation is .5e.1.5.2 next, preserving core->units and measure->core direction.
-Whole0264 scope/closed primary-profile scope/ledger retain345/346/237. Book/live align; promotion
-is declined because existing formula3.1/size membership/binding contracts govern this implementation.
+[Complete supplied size-frame lesson](docs/history/stitchcad-devnotes-part399.md) retains
+its original identity/range/storage boundaries, checks and promotion decision.
 
 [Complete explicit tolerance-context lesson](docs/history/stitchcad-devnotes-part397.md) retains
 its original provider/absence behavior, focused checks and promotion decision.
