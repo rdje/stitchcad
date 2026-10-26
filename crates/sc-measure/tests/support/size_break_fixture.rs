@@ -205,6 +205,8 @@ impl Fixture {
             delta: id(100),
         }
     }
+    // Coupled-input targets build their own contexts; standalone targets use this helper.
+    #[allow(dead_code)]
     pub(crate) fn with_context<T>(&self, run: impl FnOnce(&SizeBreakContext<'_>) -> T) -> T {
         let records = MeasurementContext::new(&self.lengths, &self.landmarks, &self.procedures)
             .expect("records");

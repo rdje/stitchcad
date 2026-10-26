@@ -103,6 +103,9 @@ impl<'a> SizeChartContext<'a> {
             || self.tables.contains_key(&id)
             || self.measurements.contains(id)
     }
+    pub(crate) fn tables(&self) -> impl Iterator<Item = &'a MeasurementTable> + '_ {
+        self.tables.values().copied()
+    }
     pub(crate) const fn membership(&self) -> &'a SizeMembership {
         self.membership
     }

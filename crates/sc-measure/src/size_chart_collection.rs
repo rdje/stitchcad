@@ -91,6 +91,12 @@ impl<'a> SizeChartCollectionContext<'a> {
             records,
         })
     }
+    pub(crate) const fn records(&self) -> &'a SizeChartContext<'a> {
+        self.records
+    }
+    pub(crate) fn observation_ids(&self) -> impl Iterator<Item = EntityId> + '_ {
+        self.observations.keys().copied()
+    }
     fn contains(&self, id: EntityId) -> bool {
         self.observations.contains_key(&id) || self.records.contains(id)
     }

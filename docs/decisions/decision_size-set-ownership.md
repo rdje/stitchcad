@@ -142,3 +142,10 @@ records. Partial drafts remain valid; coverage names exact missing cells in auth
 refuses singleton grading even when there are no gaps. Duplicate/undeclared requirements or cells
 refuse. Coverage never means numeric availability: Unknown/Derived sources keep their original reads.
 Five collection plus five declaration contracts pass; composite/path inputs remain .3d.3.
+
+G1-SLICE.4c.3d.3.1 composes actual garment SizeSet inputs by borrow, with one shared membership,
+measurement context and Design table across chart/break layers. Equal-id independent wrappers do not
+unify snapshots. Cross-view identity aliases refuse; nested errors remain original. Regeneration
+requires full chart coverage; grading additionally requires break coverage. No numeric availability,
+execution or approval follows from these structural checks. Five composite plus five break tests
+pass; MTM composition/shared review remains .3.2/.3.3 and persistence remains its later owner.

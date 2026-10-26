@@ -10,7 +10,8 @@
 //! axes have explicit ordered values over borrowed canonical inputs. Complete member points require
 //! at least one authored axis. Individual signed breaks bind explicit axes/POMs/adjacent pairs;
 //! explicit required dimensions and current adjacent coverage are implemented. SizeSet composition
-//! and resolution contracts follow in owned slices.
+//! and resolution contracts follow in owned slices. Garment input views compose shared current
+//! snapshots with typed structural path requirements; MTM composition follows separately.
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
@@ -57,6 +58,11 @@ pub use size_break::{SizeBreak, SizeBreakContext, SizeBreakDefinition, SizeBreak
 mod size_breaks;
 pub use size_breaks::{
     SizeBreakCell, SizeBreakDimension, SizeBreaks, SizeBreaksDefinition, SizeBreaksError,
+};
+
+mod size_set;
+pub use size_set::{
+    GarmentSizeSetInputs, SizeInstantiationPath, SizeSetInputError, SizeSetSnapshot,
 };
 
 mod size_chart;

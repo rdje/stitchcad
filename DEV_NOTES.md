@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — composite garment SizeSet input views
+
+0306 .4c.3d.3.1 borrows original membership/axes/chart/break records with typed structural path
+requirements. Both contexts must share actual membership, measurement context and Design table;
+independent equal-id wrappers refuse. Cross-view chart/observation/table/break identity aliases
+refuse. Complete chart enables regeneration inputs; grading additionally needs break coverage.
+Drafts/Unknown retain their original gaps and value-read errors; no metadata/value copies or execution.
+Native composite5+breaks5 pass0; selected strict lint/fmt/book0.440/441/278 whole79e0f1f Git/hash/public
+exact0. Shared fixture narrowly allows the standalone context helper unused in coupled targets.
+G1still5/18; MTM .3.2 next. Promotion: existing SizeSet decision extended; broad proof remains deferred.
+
 ## _(2026-10-26 UTC)_ — fifteenth immutable history window
 
 0305 .4c.3d.3.h15 frees the fixed64-file working boundary before composite SizeSet work. Frozen
@@ -265,15 +276,8 @@ stays separate.381/382/254 retain whole0281 task/old arc lesson/ledger exact Git
 Book/live align; G1still5/18. Promotion: decision_inverse-thresholds.md retains proposal, parameters,
 independent controls and explicit admission gaps. No existing forward proof/runtime source changes.
 
-## _(2026-10-26 UTC)_ — sourced sine/cosine calls
-
-0281 .5e.3.6 adds supplied-value checked_sin/checked_cos adapters over the certified native kernels.
-All real input sources and each call contribution survive exact axes, cancellation and stored reads;
-Boolean/numeric wrong kinds retain actual diagnostics. Focused sourced-call target6/0 and selected
-strict library/target lint pass, rc=0. Tests use actual upstream Angle round_to, including exact
-axis outputs; no synthetic AST/derived-source result is claimed. Full execution and inverse/tangent
-remain open. Whole0280 node/old arc+UI lesson/ledger retain379/380/253 exact Git/hash/public bytes;
-book/live sync, G1still5/18. Promotion declined: existing source-set/class/native contracts unchanged.
+[Complete sourced forward-call lesson](docs/history/stitchcad-devnotes-part441.md) retains
+its original argument/kind/source/refusal behavior, checks and promotion decision.
 
 [Complete native forward-kernel lesson](docs/history/stitchcad-devnotes-part438.md) retains
 its original exact reduction/evaluation/rounding evidence, checks and promotion decision.

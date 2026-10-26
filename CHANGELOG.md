@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0305 — fifteenth immutable history window
+## STITCHCAD-G1-0306 — composite current garment SizeSet inputs
 
-All50 committed raw files pack90265B->24702B with exact source/public/materialized bytes; prior14 unchanged.
-Retention855 logical/19 working and book0; whole437/438/277/439 source retention exact. D229 fixes the stale
-current-window book label while preserving its old narrative. No product behavior change; G1 remains5/18.
+Borrowed membership/axes/chart/break views share actual snapshots and reject cross-view identity aliases.
+Typed regeneration/grading checks preserve drafts/gaps/Unknown; native composite5+breaks5/0, selected strict
+lint/fmt/book0. Whole440/441/278 retention exact; G1 remains5/18. MTM composition follows.
 
 # Sealed archive — earlier slices
+
+| [part278](docs/history/stitchcad-changelog-part278.md) | whole0305 | 6 lines, 386 bytes, sha256:dfc16e35… |
 
 | [part277](docs/history/stitchcad-changelog-part277.md) | whole0304 | 6 lines, 399 bytes, sha256:cb53c33e… |
 

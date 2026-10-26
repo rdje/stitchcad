@@ -216,6 +216,58 @@ Five collection tests and the five affected declaration tests pass, with selecte
 formatting and book build. These prove current requirements/coverage and singleton refusal; composite
 SizeSet chart/path inputs, numeric execution and geometric equivalence remain .4c.3d.3 and later gates.
 
+### Composite garment SizeSet inputs — G1-SLICE.4c.3d.3.1
+
+`GarmentSizeSetInputs` now composes the actual membership, complete axes, garment chart and required/
+available break inventories as borrowed inputs. Its identity/revision comes from that canonical
+membership; labels, order, base, coordinates, observations and delta state/source are not copied.
+This is a current input view, not a persisted container or an executed instance.
+
+Construct it from the actual `SizeChart`, `SizeChartCollectionContext`, `SizeBreaks` and
+`SizeBreakContext`. The contexts must reuse the same membership object, measurement-record context
+and logical Design measurement table. Equal ids on independently assembled wrappers do not establish
+one shared snapshot. `SizeSetInputError::SharedSnapshot` names the component that must be shared:
+Membership, Measurements or DesignTable. Reconstruct a view when supplying replacement snapshots;
+matching supplied records remains separate from global Design/registry currentness or approval.
+
+The composite also rejects cross-view identity aliases. A chart or observation cannot reuse an axis,
+coordinate, canonical-source or break identity, and other supplied chart tables cannot alias the
+break inventory's objects. Each layer's ordinary current-reference checks still apply first; nested
+chart/break errors retain the original source evidence. None of these checks infers a missing value.
+
+```rust
+use sc_measure::{GarmentSizeSetInputs, SizeInstantiationPath};
+// All four arguments are actual current records; both contexts share their canonical inputs.
+let inputs = GarmentSizeSetInputs::new(&chart, &chart_context, &breaks, &break_context)
+    .expect("one consistent current snapshot");
+let membership = inputs.membership(); // original authored members/order/base
+let axes = inputs.axes();             // original authored axes/member coordinates
+let reference = inputs.reference();   // exact canonical set id/revision
+let regeneration = inputs.validate_inputs_for(SizeInstantiationPath::Regeneration);
+let grading = inputs.validate_inputs_for(SizeInstantiationPath::GradeRules);
+```
+
+| Typed path | Required structural coverage |
+| --- | --- |
+| `Regeneration` | Complete current garment chart for the actual Design POMs and members |
+| `GradeRules` | The same complete chart plus explicit complete break requirements/adjacent cells |
+
+The constructor permits structurally valid draft charts or break inventories. Path checks first
+revalidate the complete composite, then require the relevant coverage. A missing break refuses
+GradeRules with the original exact cell while leaving Regeneration structurally available. A missing
+chart cell refuses both paths. Singletons retain the break layer's explicit grading refusal.
+
+Structural input coverage is not numeric availability. Unknown chart or delta declarations remain
+Unknown; Derived values still require formula evaluation. Original records can be read through the
+borrowed chart/break APIs and their supplied contexts, with their original observation/formula errors.
+The view does not manufacture a value, base instance, grade rules, geometry, equivalence result,
+profile decision or release approval. MTM body/Ease composition remains .4c.3d.3.2, followed by the
+shared-family review .3.3; actual instantiation and persisted storage remain their later owners.
+
+Five composite garment tests plus the five break collection tests pass; selected strict lint,
+formatting and book build pass. Tests include actual record borrows, both structural paths, draft gaps,
+three mismatched snapshot components, cross-inventory aliases and preserved unavailable numeric input.
+
 ## 7. Multi-dimensional systems
 
 Director ruling2026-10-26 resolves D70: every complete SizeSet requires at least one authored axis,

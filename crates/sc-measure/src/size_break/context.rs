@@ -77,6 +77,21 @@ impl<'a> SizeBreakContext<'a> {
         self.membership
     }
 
+    pub(crate) const fn axes(&self) -> &'a SizeAxes {
+        self.axes
+    }
+    pub(crate) const fn table(&self) -> &'a MeasurementTable {
+        self.table
+    }
+    pub(crate) const fn measurements(&self) -> &'a MeasurementTableContext<'a> {
+        self.measurements
+    }
+    pub(crate) fn contains_entity(&self, identity: EntityId) -> bool {
+        self.metadata.contains(&identity)
+            || self.measurements.contains(identity)
+            || self.sources.contains(identity)
+    }
+
     pub(super) fn dimension(&self, identity: EntityId) -> Result<&'a Measurement, Error> {
         self.table
             .measurement_by_id(identity, self.measurements)

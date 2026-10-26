@@ -446,27 +446,40 @@ metadata signoff unchanged; the named table slice follows.
   Goal:0304 required break coverage verified5+5/0/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part437.md).
   Commit: STITCHCAD-G1-0304.
 - ID: `G1-SLICE.4c.3d.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: composite membership/axes/garment-or-MTM chart/break inputs and typed structural path readiness;
   no generated equivalence, profile execution or physical/release certification.
+  Children .3.1 garment current-input view, .3.2 MTM body/Ease input view, .3.3 shared input/path review.
+- ID: `G1-SLICE.4c.3d.3.1`
+  Status: `done`
+  Goal:0306 garment SizeSet input view borrows actual membership/axes/chart/breaks and typed structural path requirements.
+  Paths: crates/sc-measure/src/size_set.rs;crates/sc-measure/src/size_set/;crates/sc-measure/src/lib.rs;
+  crates/sc-measure/src/size_break/context.rs;crates/sc-measure/src/size_chart.rs;crates/sc-measure/src/size_chart_collection.rs;
+  crates/sc-measure/tests/garment_size_set_inputs_contract.rs;crates/sc-measure/tests/support/size_break_fixture.rs; book/decision/live docs.
+  Require shared actual membership, measurement context and Design table snapshots across views; reject cross-inventory
+  identity conflicts. Draft structure remains explicit; regeneration needs complete chart, grading also break coverage.
+  No value/state copies, registry/approval/geometry or numeric-execution claim. MTM integration remains .3.2.
+  Own440 whole0305 scope,441 oldest0281 lesson,278 ledger from79e0f1f, exact whole Git/hash/public before retirement.
+  Focused new garment-input/prior break collection targets, selected strict lint/fmt/book; broad checks deferred.
+  Acceptance0306:
+  - [x] ROOT CAUSE0306: rg composite/path/snapshot -> garment.rs:14/122 and size_set.rs:9/18, rc=0; actual shared context records, no metadata reconstruction.
+  - [x] ADDRESSED0306: cargo test -p sc-measure --test garment_size_set_inputs_contract --test size_breaks_contract ->5+5 passed/0 failed, rc=0; borrows/paths/gaps/snapshots/aliases/Unknown preserved.
+  - [x] NO REGRESSION0306: selected lib/two-test strict Clippy rc=0; fmt rc=0; book rc=0. Shared fixture has a scoped unused-helper allowance for coupled contexts.
+  - [x] LOCKSTEP0306:440/441/278 whole79e0f1f Git/hash/public exact rc=0; book/decision/live aligned; MTM and actual execution remain owned.
+  Promotion: existing SizeSet decision extended. Commit: STITCHCAD-G1-0306. Next .3.2 MTM inputs.
+
+- ID: `G1-SLICE.4c.3d.3.2`
+  Status: `pending`
+  Goal: composite custom singleton body/Ease chart current inputs, shared snapshots and typed path-2 refusal.
+- ID: `G1-SLICE.4c.3d.3.3`
+  Status: `pending`
+  Goal: coherent garment/MTM typed SizeSet input entry point and bounded combined structural requirement review.
+
 
 - ID: `G1-SLICE.4c.3d.3.h15`
   Status: `done`
-  Goal:0305 fixed-bound history prerequisite before composite SizeSet growth. Capture all50 committed raw files
-  at ba41e9a into immutable window15, preserving prior14 windows and public logical source/materialization bytes.
-  Paths: docs/tasks/artifacts/history_archive/capture_window15.py;.doctrine/history_archive/windows.json;
-  .doctrine/history_archive/window15.json;docs/history/window15.md;docs/history/payloads/; captured raw files.
-  Own437 whole0304 task,438 oldest0280 lesson,277 ledger and439 whole closed bounds-proof scope fromba41e9a.
-  Retarget only maintained Markdown retrieval links, never sealed records/producers. No cap/reader/schema change.
-  Own D229: governance current-window label stayed13 after14; retain the old narrative and advance current guidance.
-  Focused new capture/source/materialization/public comparisons, prior backing equality, retention and book checks.
-  Acceptance0305:
-  - [x] ROOT CAUSE0305: capture_window15.py sourceba41e9a requires50 raw/14 catalogs=64; source checks rc=0. D229 source master14/current book13, transition governance delta0.
-  - [x] ADDRESSED0305: tracked capture/source/materialization/all50 public reads exact rc=0;90265B->24702B, payloadcc8deffb…; prior14 backing byte-equal rc=0.
-  - [x] NO REGRESSION0305: source proof50 exact/0 missing-extra, fixture851 materialized, retention855 logical/19 working, book rc=0; reader/schema/caps unchanged.
-  - [x] LOCKSTEP0305:437/438/277/439 wholeba41e9a Git/hash/public exact rc=0; maintained links route current catalog; D229 preserves old narrative and fixes current guidance.
-  Promotion declined: existing immutable archive contract, no new policy. Commit: STITCHCAD-G1-0305; composition .3d.3 resumes next.
-
+  Goal:0305 window15/source/public/materialization/prior14/retention/book verified; [whole scope/proofs](../history/stitchcad-devnotes-part440.md).
+  Commit: STITCHCAD-G1-0305.
 
 - ID: `G1-SLICE.4c.3e`
   Status: `pending`
