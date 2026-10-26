@@ -405,10 +405,10 @@ publication remain the full evaluator's responsibilities.
 
 ### Product implemented numeric calls
 
-The sourced scalar value now executes checked_sin, checked_cos, checked_abs, checked_sqrt, checked_hypot, checked_arc_length,
+The sourced scalar value now executes checked_atan, checked_atan2, checked_sin, checked_cos, checked_abs, checked_sqrt, checked_hypot, checked_arc_length,
 checked_min, checked_max, checked_clamp and checked_round_to through the existing numerical kernels.
 Successful calls automatically union every evaluated argument's sources and add their own source
-when the contract requires it. Abs/min/max/clamp add no new contribution. Sin/cos/sqrt/hypot/arc_length and
+when the contract requires it. Abs/min/max/clamp add no new contribution. Atan/atan2/sin/cos/sqrt/hypot/arc_length and
 round_to do, including zero, perfect roots and values unchanged by the requested step.
 
 ```rust
@@ -430,13 +430,19 @@ API. These calls operate on supplied values; the caller still evaluates argument
 Wrong input kinds retain the first actual argument position; homogeneous calls retain the wanted
 and actual kind. Empty min/max, negative sqrt, invalid clamp bounds, zero quantization step and
 numeric result refusals propagate their typed failures without a substitute value. A failed call
-produces no new sourced scalar. Six focused native tests cover all ten implemented call families,
+produces no new sourced scalar. Eight focused native tests cover all twelve implemented call families,
 source unions, exact-valued calls through storage, singleton/extremum cases and actual refusals.
 Sin/cos retain their own contribution even when the actual answer is exactly zero or one. A real
 upstream round_to Angle contributes its source through either call; cancelling the result to zero
 and binding/reading it preserves both sources and T1 refusal. Their supplied-value APIs delegate
 to the [certified native kernels](formula-rationals.md#correctly-rounded-sine-and-cosine).
-Tangent/inverse calls, geometry selectors and full AST/provider/recipe execution remain open.
+Inverse calls delegate to the [certified inverse kernels](formula-trig-certificates.md#native-inverse-values).
+Atan retains its input and call source; atan2 retains both inputs and its call source, including
+zero-axis/exact-angle answers. Actual upstream sqrt/hypot/round_to contributions survive unchanged.
+Cancellation, binding and reads preserve T1 refusal; T2 admits the source guard. The adapters check
+actual argument kinds before zero-vector handling, including a wrong first kind before a Boolean
+second argument. Atan2ZeroVector retains actual homogeneous kind and zero operands.
+Tangent, geometry selectors and full AST/provider/recipe execution remain open.
 
 ### Product named-tolerance comparisons
 

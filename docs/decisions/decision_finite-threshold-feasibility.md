@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-26`
-- **Status:** `active`; sin/cos plan admitted0279/value kernel0280; integration and inverse/tangent unresolved
+- **Status:** `active`; sin/cos values/sources0280/0281, inverse values/sources0288/0289; tangent open
 - **Owner / source:** engineer proposal, G1-SLICE.5d.1.2.2.2.a; full populations remain .b/parent
 
 answers: "what finite certificate could help bound trig rounding work?" · "does the threshold cohort admit a runtime precision?"

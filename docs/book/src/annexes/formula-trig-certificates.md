@@ -324,8 +324,9 @@ formula_dimension. No source expression or statement identity is invented at thi
 
 The native implementation follows the576-bit/five-half-angle/64-term plan above. It uses the
 shared certified pi endpoint, directed private integer arithmetic and integer Newton; no platform
-libm or new precision-refusal rule is involved. Binding remains separate. Source-bearing inverse
-calls and whole AST execution retain their later .5e owners.
+libm or new precision-refusal rule is involved. Binding remains separate. [Source-bearing inverse
+calls](formula-runtime-validation.md#product-implemented-numeric-calls) are available; whole AST
+execution retains its later .5e owner.
 
 Work unit0288's focused formula_inverse_value_contract target checks27 atan and54 atan2 values,
 reproduces the retained fixture, and checks wrong-kind/zero-vector priority. Its independent

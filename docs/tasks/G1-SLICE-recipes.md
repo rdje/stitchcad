@@ -480,7 +480,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Paths: docs/tasks/artifacts/formula_structure/finite_threshold_feasibility.py;docs/decisions/decision_finite-threshold-feasibility.md
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part372.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b`
-  Status: `in_progress`
+  Status: `done`
   Goal: if .a succeeds, complete and independently verify the full applicable threshold population.
   No cohort/throughput extrapolation becomes all-input proof; retain coverage, margins and costs.
 - ID: `G1-SLICE.5d.1.2.2.2.b.1`
@@ -489,7 +489,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Paths: docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py;docs/tasks/artifacts/formula_structure/verify_forward_certificate.py
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part374.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: inverse first-octant generator and full45M threshold proof; split before implementation.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.a`
   Status: `done`
@@ -592,21 +592,13 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: correctly rounded atan/atan2 under .5d.1.2.2 plan.
 - ID: `G1-SLICE.5d.3.3.1`
   Status: `done`
-  Goal: native atan/atan2 under admitted .b.2.c plan; actual kinds/zero vector/signed axes/full-width hard midpoint fixtures.
-  Work unit0288 owns inverse.rs, recipe/mod.rs/numeric.rs, formula_inverse_value_contract.rs,
-  fixtures/formula_inverse.tsv and formula_structure/inverse_value_oracle.py before implementation.
-  Own394 whole0287 task,395 oldest0263 lesson,260 whole0287 ledger before bounded live growth.
-  Implement576-bit/five-half/64-term plan, private256-bit slopes, exact axes and actual refusals.
-  Focused native/oracle/format/selected Clippy; book/live/decision sync. Broad .5d.4/pre-push.
-  Acceptance0288:
-  - [x] REPRODUCE: admitted inverse plan existed; public numeric inverse calls were absent.
-  - [x] ROOT CAUSE0288: cargo check -p sc-core --lib passes, rc=0; native transcription was the missing value boundary.
-  - [x] FIX:576-bit directed kernels and actual kind/zero-vector errors; no new input limit or public quotient.
-  - [x] ADDRESSED0288: local_environment.py -- cargo test -p sc-core --test formula_inverse_value_contract:3/0, rc=0; independent atan27/atan254/live fixture and actual kind priority pass.
-  - [x] NO REGRESSION0288: selected lib/test Clippy -D warnings and fmt pass, rc=0; atan_runtime_plan.py source/margin/envelope/oracle controls pass, rc=0. Broad .5d.4/pre-push.
-  - [x] LOCKSTEP: book build rc=0;394/395/260 exact Git/hash/public bytes rc=0. Initial260 selector included catalog rows; corrected to whole5-line ledger before commit. G1still5/18; sources/AST/platform open.
-  Promotion: existing admitted plan updated; no new cross-cutting rule. Verification: rc=0; Commit: STITCHCAD-G1-0288.
-
+  Goal:0288 native inverse3/0 with independent27/54 fixtures/live oracle/lint0.
+  Paths: crates/sc-core/src/recipe/inverse.rs;crates/sc-core/tests/formula_inverse_value_contract.rs
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part396.md).
+  Retention0289 owned .5e.3.7:
+  - [x] ROOT CAUSE0289: git show3219d3f whole0288 node retained396; Python source/hash comparison rc=0.
+  - [x] ADDRESSED0289: whole node/source/hash exact in396, Python comparison rc=0.
+  - [x] NO REGRESSION0289: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part396.md exact whole file, Python comparison rc=0; no reader change.
 - ID: `G1-SLICE.5d.4`
   Status: `pending`
   Goal: coupled complete irrational function proof and error/provenance review.

@@ -36,10 +36,10 @@ requires the named contracts and later proof owners.
 | Complete recipe kind proof | §4.1; G1 | sc-core recipe; G1-SLICE.5b.4a | [Atomic static acceptance](formula-checked-recipes.md) |
 | Canonical rational values and four operators | §4.2; G1 | sc-core recipe; G1-SLICE.5c.1.1/.2 | [Exact value kernel](formula-rationals.md); typed execution follows |
 | Exact numeric values/operators/binding conversion | §4.2; G1 | sc-core recipe; G1-SLICE.5c.2/.3 | [Exact and stored values](formula-rationals.md); full execution follows |
-| Correctly rounded sqrt/hypot | §4.2; G1 | sc-core recipe; G1-SLICE.5d.2.1/.2 | [Exact root values](formula-rationals.md#correctly-rounded-sqrt-and-hypot); source provenance follows |
-| Correctly rounded arc_length | §4.2; G1 | sc-core recipe; G1-SLICE.5d.3.1 | [Certified arc values](formula-rationals.md#bounded-correctly-rounded-arc_length); source provenance follows |
+| Correctly rounded sqrt/hypot | §4.2; G1 | sc-core recipe; G1-SLICE.5d.2.1/.2 | [Exact root values](formula-rationals.md#correctly-rounded-sqrt-and-hypot); source provenance available |
+| Correctly rounded arc_length | §4.2; G1 | sc-core recipe; G1-SLICE.5d.3.1 | [Certified arc values](formula-rationals.md#bounded-correctly-rounded-arc_length); source provenance available |
 | Correctly rounded sin/cos | §4.2; G1 | sc-core recipe; G1-SLICE.5d.3.2.1 | [Certified trigonometric values](formula-rationals.md#correctly-rounded-sine-and-cosine); sourced calls available |
-| Correctly rounded atan/atan2 | §4.2; G1 | sc-core recipe; G1-SLICE.5d.3.3.1 | [Native inverse values](formula-trig-certificates.md#native-inverse-values); sourced calls follow |
+| Correctly rounded atan/atan2 | §4.2; G1 | sc-core recipe; G1-SLICE.5d.3.3.1 | [Native inverse values](formula-trig-certificates.md#native-inverse-values); sourced calls available |
 | Formula wanted-kind catalogs | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3c.1 | [Typed expected rules](formula-wanted-signatures.md) |
 | Canonical length authored-read adapter | §2/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.1 | [Source/state reads](formula-runtime-validation.md#canonical-length-authored-reads); full execution follows |
 | Canonical scalar state/value content | §2/§4.1; G1 | sc-core value; G1-SLICE.5e.1.2 | [Scalar content](../spec/measurement-inputs.md#canonical-general-scalar-content); registry/evaluation follows |

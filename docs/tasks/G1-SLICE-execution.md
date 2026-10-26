@@ -148,3 +148,19 @@ The original working execution block was copied byte-for-byte; later entries rem
   - [x] ROOT CAUSE0282: git show83de197 whole sourced sincos node retained381; Python source/hash comparison rc=0.
   - [x] ADDRESSED0282: complete node381/source/hash byte equality, Python comparison rc=0.
   - [x] NO REGRESSION0282: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part381.md whole file exact, Python comparison rc=0; no reader change.
+
+- ID: `G1-SLICE.5e.3.7`
+  Status: `done`
+  Goal:0289 sourced atan/atan2 retain every actual operand/call source and exact refusal priority.
+  Paths: crates/sc-core/src/recipe/evaluated/calls.rs;crates/sc-core/tests/formula_evaluated_calls_contract.rs
+  Own396 whole0288 native task,397 oldest0264 lesson,261 whole0288 ledger before live growth.
+  Focused supplied-value/native/source/storage/T1 checks; book/live sync, broad .5d.4/pre-push.
+  Acceptance0289:
+  - [x] REPRODUCE: native inverse values existed without supplied-scalar call/source adapters.
+  - [x] ROOT CAUSE0289: read numeric/provenance/calls contracts; cargo test -p sc-core --test formula_evaluated_calls_contract:8/0, rc=0, confirms source attachment is the missing boundary.
+  - [x] FIX: delegate actual kinds/values to native inverses; union both operands and own call source, even exact axes.
+  - [x] ADDRESSED0289: same focused target actual round_to/sqrt/hypot inputs, cancellation/storage/read/T1 and6x6 kind priority pass, rc=0.
+  - [x] NO REGRESSION0289: existing six call tests plus two inverse tests8/0; selected lib/test strict Clippy and fmt pass, rc=0. No native/certificate source edits; broad .5d.4/pre-push.
+  - [x] LOCKSTEP:396/397/261 whole Git/hash/public exact, Python comparisons rc=0; book build rc=0; live/decision align, G1still5/18.
+  Promotion declined: existing numerical/provenance contracts; no new cross-cutting rule.
+  Verification: rc=0; Commit: STITCHCAD-G1-0289.

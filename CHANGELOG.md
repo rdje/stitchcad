@@ -5,11 +5,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
-## STITCHCAD-G1-0288 — correctly rounded native inverse values
+## STITCHCAD-G1-0289 — sourced inverse calls
 
-.5d.3.3.1: checked_atan/checked_atan2 preserve actual kinds, private full-width slopes and signed branches.
-Independent27/54 fixtures/live oracle/native3/0, selected strict lint/fmt/book pass0; broad proof later.
-394/395/260 preserve whole history; book/live/decision sync. Source-bearing inverse calls next.
+.5e.3.7: atan/atan2 preserve actual argument priority, all operand sources and call contributions.
+Focused call target8/0, selected strict lint/fmt/book pass0;396/397/261 retain whole history.
+Native/certificate sources unchanged; AST/tangent/broad proof remain owned.
+
+| [part261](docs/history/stitchcad-changelog-part261.md) | whole0288 | 6 lines, 376 bytes, sha256:f30d81e8… |
 
 | Segment | Coverage | Sealed identity |
 | --- | --- | --- |

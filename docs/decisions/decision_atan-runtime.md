@@ -90,7 +90,7 @@ python3 -I -B docs/tasks/artifacts/formula_structure/atan_runtime_plan.py passes
 budget controls, rc=0. Observed maximum Newton steps is11;13 is the proved bound. Full-width
 private slopes, signed quadrants, axes and near negative-axis endpoints are included. This is
 plan/model evidence, separate from the native implementation receipt below.
-source-bearing calls/AST and broader/platform proof retain .5e/.5d.4/pre-push ownership.
+Source-bearing calls are implemented0289; AST and broader/platform proof retain .5e/.5d.4 ownership.
 
 ## Native transcription0288
 
@@ -100,3 +100,7 @@ priority and typed Atan2ZeroVector precede numeric special cases. The native tar
 independent values, signed principal endpoints, full-width private slopes and hard midpoint neighbors.
 Its standalone768-bit addition oracle uses no native root/half-angle path and reproduces the fixture.
 Focused native/format/selected strict Clippy evidence belongs to G1-SLICE.5d.3.3.1.
+
+0289 .5e.3.7 adds sourced atan/atan2 adapters. Both preserve actual argument priority, every input
+contribution and their call source even at exact axes, through cancellation/binding/readback/T1.
+The focused supplied-call target passes8/0 with selected strict Clippy/fmt; full AST stays open.

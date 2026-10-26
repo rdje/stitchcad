@@ -5,6 +5,33 @@ use crate::recipe::{
 };
 
 impl V {
+    /// Correctly rounded inverse tangent, retaining the Ratio input and atan call source.
+    /// # Errors
+    /// Propagates the actual non-Ratio argument refusal, including Boolean and zero values.
+    pub fn checked_atan(self) -> Result<Self, E> {
+        let value = self
+            .numeric_kind_argument(B::Atan, 0, K::Ratio)?
+            .checked_atan()?;
+        Ok(call_result(B::Atan, value, &[self]))
+    }
+
+    /// Principal atan2(self, x), retaining both operands and the atan2 call source.
+    /// # Errors
+    /// Checks homogeneous Length or Ratio kinds in argument order before the zero-vector domain.
+    pub fn checked_atan2(self, x: Self) -> Result<Self, E> {
+        if !matches!(self.kind(), K::Length | K::Ratio) {
+            return Err(E::BuiltinInputKind {
+                builtin: B::Atan2,
+                argument: 0,
+                actual: self.kind(),
+            });
+        }
+        let y_value = self.numeric_argument(B::Atan2, 0)?;
+        let x_value = x.homogeneous_argument(B::Atan2, 1, y_value.kind())?;
+        let value = y_value.checked_atan2(x_value)?;
+        Ok(call_result(B::Atan2, value, &[self, x]))
+    }
+
     /// Correctly rounded sine, retaining the input and sin source even for exact axis results.
     /// # Errors
     /// Propagates the actual non-Angle argument refusal from the numeric value kernel.

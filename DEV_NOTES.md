@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — sourced inverse calls
+
+0289 .5e.3.7 adds supplied-scalar checked_atan/checked_atan2 over the certified native values.
+Actual kind order includes Boolean operands before zero-vector handling. Every argument source and
+the call source survive exact axes, cancellation, binding/readback and T1 refusal. Real upstream
+round_to/sqrt/hypot contributions verify both operands independently. Existing six call tests plus
+two inverse tests pass8/0; selected strict Clippy/fmt/book pass0.396/397/261 retain whole history.
+No kernel/certificate changes, broad/platform verdict or whole AST execution. G1still5/18.
+Promotion declined: existing numerical/provenance contracts determine this adapter.
+
 ## _(2026-10-26 UTC)_ — correctly rounded native inverse values
 
 0288 .5d.3.3.1 transcribes the admitted576-bit/five-half/64-term plan into private inverse.rs.
@@ -308,21 +318,8 @@ membership/pin derivation is .5e.1.5.2 next, preserving core->units and measure-
 Whole0264 scope/closed primary-profile scope/ledger retain345/346/237. Book/live align; promotion
 is declined because existing formula3.1/size membership/binding contracts govern this implementation.
 
-## _(2026-10-26 UTC)_ — explicit tolerance context values and absence
-
-0264 .5e.1.4 uses the units intrinsic1/10 and three explicit optional provider slots. Each provider
-borrows its actual quantitative tolerance and retains its source id; construction checks the declared
-format/importer/physical class in order. No optional value or target label is guessed. Exact reads
-retain name/class/limit/derivation/source and the caller label; zero remains present. Missing optional
-class returns formula_tolerance_unbound with actual name/label and known required context category.
-Unit failures constructing intrinsics propagate. Registry/derivation/evidence truth and physical/
-artifact suitability remain G4; this read adapter grants no approval or full execution.
-
-One focused native target passes5/0: intrinsic defaults, all8 optional masks with three label forms,
-all6 classes against each slot, first refusal, explicit zero and immutable replacement. Selected strict
-Clippy passes0. Broad/platform and within/assertion/size-context work remain their later owners.
-Whole0263 scope/closed static parent/ledger retain343/344/236. Promotion declined: implementation of
-existing formula3.1/units3 provider contracts, now documented in the book.
+[Complete explicit tolerance-context lesson](docs/history/stitchcad-devnotes-part397.md) retains
+its original provider/absence behavior, focused checks and promotion decision.
 
 [Complete general scalar authored-read lesson](docs/history/stitchcad-devnotes-part395.md) retains
 its original identity checks, lifetime repair, validation and promotion decision.
