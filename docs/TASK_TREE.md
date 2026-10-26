@@ -79,12 +79,9 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-**`G1-SLICE.6.2.2.c.1`** completes pinned piece/seam query requests in0300; all mutation schemas are present.
-D228 axis+POM/dimension+adjacent member pair is implemented by individual sourced breaks0303;
-required dimensions/adjacent-pair coverage0304 now available. Unified current SizeSet inputs0308 preserve explicit garment/MTM provenance and typed paths;
-signed-break/composite implementation .4c.3d is complete. D230/D231 integration repairs0309 close;
-next .4c.3e.2 reviews chart/body/break scope before profile transformations.
-Remaining class schemas .6.2.2.c.2 follow canonical inputs.
+**`G1-SLICE.4c.3`** chart/body/break structural input scope closes in0310 after D230/D231 repairs.
+Current SizeSet inputs preserve explicit garment/MTM provenance, canonical sources and typed paths.
+Next .4c.4 owns immutable pinned profile transformation intent; command-class schemas follow canonical inputs.
 [Execution frontier](tasks/G1-SLICE-execution.md) remains .5e.2.4; SizeSet axes and paired split schema are implemented.
 Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per
 feature; broad verification and nonblocking audits remain owned for later integration/pre-push.

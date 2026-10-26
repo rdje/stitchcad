@@ -161,3 +161,8 @@ Common record/path access delegates without inferring a family from labels/syste
 a one-member garment chart remains garment provenance. Current focused review passes6 garment,
 6 MTM and5 break contracts, selected lint/fmt/book. Signed-break/composite-input implementation is
 complete; .4c.3e reviews scope, .4c.4 owns transformations, later owners retain execution/storage.
+
+G1-SLICE.4c.3e closes the chart/body/break structural input scope after D230/D231 integration repairs.
+Current local metadata/coverage is distinct from numeric, physical and global Design truth. Existing
+focused code evidence remains unchanged; profile transformation .4c.4 and combined-family .5/.4d
+review remain pending. This closure adds no numeric execution, persisted container or approval claim.

@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — chart/body/break structural scope closure
+
+0310 .4c.3e.2 reviews roadmap3.4 and canonical membership/axis/chart/body-Ease/break/composite
+contracts after D230/D231 repairs. Local supplied snapshots/coverage remain separate from global
+Design truth, numeric execution, physical equivalence, profile resolution, storage and approval.
+Main/companion book and decision boundaries align. Rust sources equal7618d20 and current HEAD,
+so focused17-test evidence is reused; book and three exact rendered target anchors pass0.448/449/
+282 whole19dbadc Git/hash/public exact0. .4c.3/.3e close structurally; profile intent .4 next; .5/.4d later. G1still5/18. Promotion: existing SizeSet decision extended; no broad rerun.
+
 ## _(2026-10-26 UTC)_ — imported MTM fixture plan and sizing doc integration
 
 0309 .4c.3e.1 fixes D231: moving the Rust fixture left the mutation entry planning only implementation/
@@ -256,15 +265,8 @@ zero-vector2/root4/insufficient2 checks pass0. Native code next; no runtime/plat
 392/393/259 retain whole prior task/scalar lesson/ledger. Curated-map styling removes36 bytes with
 all text/path/order exact; new record fits fixed cap. Promotion: decision_atan-runtime.md owns proof.
 
-## _(2026-10-26 UTC)_ — complete inverse threshold population
-
-0286 .5d.1.2.2.2.b.2.b.2.b completes45M/450 chunks and the independent full reader, rc=0.
-All strict gaps/hash/coverage/order and frozen source/binary identities pass; lock absent/children
-empty.12.96GB payload stays protected/local. Compact tracked witness reproduces byte-exactly;
-its metadata producer supplements full reading. Minimum>2^104 at scale2^640 gives slope margin
->2^-536 and derivative>1/16 gives phase margin>2^-540. Native budget/branches/workspace remain
-.b.2.c; tangent/AST/platform separate.390/391/258 retain whole task/lesson/ledger. Book/live sync;
-promotion: inverse decision records full evidence, source gates, derived margin and admission limits.
+[Complete inverse-population closure lesson](docs/history/stitchcad-devnotes-part449.md) retains
+its full450-chunk/source/digest/compact-witness evidence, checks and promotion decision.
 
 [Complete proof-store cleanup-protection lesson](docs/history/stitchcad-devnotes-part447.md) retains
 its original protected-store census/controls and cadence boundary, checks and promotion decision.

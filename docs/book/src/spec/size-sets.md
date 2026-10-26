@@ -2,7 +2,8 @@
 
 > **Status:** normative specification, gate **G0** (roadmap §3.4, §7.5, §8). Implemented by `sc-measure` at
 > gate **G1** (leaf `G1-SLICE.4`) and consumed by both instantiation paths at **G3**. The
-> [membership foundation](size-membership.md) is executable; full SizeSet implementation remains in progress. The ownership
+> [membership foundation](size-membership.md), chart families, axes, signed breaks and current composite input views
+> are executable; profile transformations and complete-family review remain in progress. The ownership
 > question roadmap §3.4 leaves open is decided here and recorded as
 > `docs/decisions/decision_size-set-ownership.md`. Terms are in the [glossary](glossary.md).
 
@@ -74,7 +75,7 @@ the size whose instance a `.rul` table is relative to. Rules:
 
 [Garment chart observations](size-chart-observations.md) now implement individual current member/POM
 correspondences; [chart collections](size-chart-collections.md) now check exact current Design/member
-coverage. The remaining SizeSet contracts are still in progress.
+coverage. Current composite inputs join them to axes/breaks; profile transformations remain in progress.
 
 Per member, the chart carries the garment's points of measure — the same POMs the design's measurement
 table names, with landmarks and procedures (ontology §2.1). Two rules make it useful rather than decorative:
@@ -477,6 +478,13 @@ Five aggregate contracts plus the five individual-axis contracts pass; selected 
 and book build pass. This closes the authored-axis/member-point contract. Complete charts/breaks,
 resolved profile transformations, regeneration/grading and release remain separate work.
 
+The .4c.3e scope review now closes the chart/body/break structural family. Original chart coverage,
+D70/D228 axes/breaks, shared snapshot checks and typed path requirements are aligned across the
+companion chapters. Matching local snapshots does not prove global currentness; structural coverage
+does not prove numeric availability, geometry or physical truth. Profile transformation intent .4c.4
+and combined-family review .4c.5/.4d remain pending. No unchanged native or numerical campaign was
+repeated for this documentation review; the focused implementation results remain applicable.
+
 ## 8. Size systems and what the model must express
 
 | `size_system` | What the model must express | Verification status |
@@ -523,7 +531,8 @@ Both paths report against the **resolved** set, which is why the report names it
 ## 11. Made-to-measure is a size set of one
 
 [MTM input charts](mtm-input-charts.md) now implement current single-member body/Ease correspondence
-and explicit Design-POM coverage. Composite SizeSet and actual regeneration remain later work.
+and explicit Design-POM coverage. Composite MTM input views are implemented above; profile
+transformations, persisted ownership and actual regeneration remain later work.
 
 An MTM instance is a `custom` size set with a single member, whose base is that member, whose chart comes
 from body measurements taken with landmarks and procedures (ontology §2.1), and whose breaks are empty — so

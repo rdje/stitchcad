@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0309 — MTM fixture planning and companion sizing docs
+## STITCHCAD-G1-0310 — chart/body/break structural scope closure
 
-D231 fixes missing read-only fixture registration before producer effects; controlled13-child/file capture,
-5 physical refusals and compiled omission red pass0, actual source hashes unchanged. D230 sizing status drift
-corrected; book0 and whole446/447/281/138 retention exact. No product behavior/count change; G1 remains5/18.
+Current chart/body/axis/break/composite contracts and proof boundaries align after D230/D231 repairs.
+Rust unchanged since focused17-test evidence; book/three rendered target anchors0, whole448/449/282 retention exact.
+.4c.3/.3e closes structurally; G1 remains5/18. Pinned profile transformation intent .4 next.
 
 # Sealed archive — earlier slices
+
+| [part282](docs/history/stitchcad-changelog-part282.md) | whole0309 | 6 lines, 401 bytes, sha256:378f9ec8… |
 
 | [part281](docs/history/stitchcad-changelog-part281.md) | whole0308 | 6 lines, 405 bytes, sha256:e483c1ca… |
 

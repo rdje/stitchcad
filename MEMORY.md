@@ -4,12 +4,12 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0309 .4c.3e.1 fixes D231 imported MTM fixture source planning; missing helper formerly reached activation/effect.
-- Controlled capture13 children/files,5 physical refusals and actual compiled fixture-plan omission red pass0; source hashes stable.
-- No real twelve-mutation replay; broad/native campaigns remain integration/pre-push. D230 companion sizing status drift fixed.
-- NEXT .4c.3e.2 chart/body/break/currentness scope closure, then .4c.4 profile transformation intent.
--446/447/281/138 whole7618d20 Git/hash/public exact0; D225-D227 whole reports retained138; book0.
--0308/7618d20 unified current SizeSet inputs: explicit provenance/borrowed records; garment6+MTM6+breaks5/lint/fmt/book0.
+-0310 .4c.3e.2 closes chart/body/break structural input scope after D230/D231 integration repairs.
+- Main/companion book and decision align; global/numeric/physical/profile/storage/approval boundaries explicit.
+- Rust unchanged since7618d20 focused17-test proof; book/three exact rendered anchors0. .4c.3/.3e complete.
+- NEXT .4c.4: inspect pinned profile/version/transformation contracts and own bounded immutable intent children.
+-448/449/282 whole19dbadc Git/hash/public exact0.0309/19dbadc fixture-plan13-child/5-refusal/omission-red checks0.
+-0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
 - Native query2+catalog2 pass0; selected strict lint/fmt/census17/5/5/0/book0; exact revisions beyond128bits.
@@ -45,4 +45,4 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D156/D223 audits deferred; D224/D225/D227/D229-D231 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background job or pending director question after0309. Derive push count, never carry it manually.
+- No background job or pending director question after0310. Derive push count, never carry it manually.

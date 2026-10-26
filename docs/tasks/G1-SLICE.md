@@ -394,15 +394,15 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0298.
 
 - ID: `G1-SLICE.4c.3`
-  Status: `in_progress`
+  Status: `done`
   Children: .4c.3a (garment chart observations), .3b (chart collection), .3c (MTM body inputs),
   .3d (breaks/composite SizeSet), .3e (review). .3a is independent of axis implementation.
   Goal: complete SizeSet chart/break object over membership/axes, canonical per-member POM scalars,
   landmarks/procedures/state/provenance and adjacent signed breaks; current references and path readiness.
   Acceptance: chart and generated POMs distinct; missing breaks name dimension/pair and refuse path 2;
   zero/uneven breaks legal; MTM of one uses body provenance and only path 1; no quantity/default values.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: chart/MTM originals and0303–0310 focused declaration/coverage/composite evidence; scope closure .3e.
+  Commit: original0033–0035 and STITCHCAD-G1-0303–0310 structural scope.
 
 - ID: `G1-SLICE.4c.3a`
   Status: `done`
@@ -469,33 +469,31 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0305.
 
 - ID: `G1-SLICE.4c.3e`
-  Status: `in_progress`
+  Status: `done`
   Goal: chart/body/break/currentness requirement review and milestone checks before closing .3;
   remaining profile transformation .4 and full SizeSet .5/.4d stay owned.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: D230/D231 source/producer repairs0309, unchanged-code/book/targeted-anchor review0310.
+  Commit: STITCHCAD-G1-0309/0310.
 
 - ID: `G1-SLICE.4c.3e.1`
   Status: `done`
-  Goal:0309 diagnose/repair MTM mutation-entry planning after its Rust fixture became a shared module.
-  Paths: docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py;
-  docs/tasks/artifacts/ci_environment/python_producer_contract.py; expert MTM annex/decision/live docs.
-  Current entry plans implementation/test root only; the imported fixture is now required before any activation/effect.
-  Use existing independent capture/physical-refusal controls with an explicit fixture oracle, not full native mutation replay.
-  Own D230 companion observation/collection/membership/MTM book status sync during this integration repair.
-  Own446 whole0308 task,447 oldest0285 lesson,281 ledger and138 whole closed D225-D227 from7618d20.
-  Verify whole Git/hash/public bytes, focused pre-repair failure/post-repair controls and book build.
-  Acceptance0309:
-  - [x] ROOT CAUSE0309: existing measure_refusals with independent fixture oracle reproduces actual pre-repair missing-fixture activation/effect; controlled red, source hashes unchanged, rc=0.
-  - [x] ADDRESSED0309: explicit read-only fixture plan and independent expected input; existing capture validates13 children/files,5 physical refusals pass and compiled omission red fails, rc=0.
-  - [x] NO REGRESSION0309: actual implementation/entry/root-test/fixture before-after hashes equal; no real Rust mutation campaign. D230 source-status links align; book rc=0.
-  - [x] LOCKSTEP0309:446/447/281/138 whole7618d20 Git/hash/public exact rc=0; PLANNING/book/live align. Existing full mutation replay remains integration/pre-push.
-  Promotion declined: existing complete-input producer contract and current documentation boundaries; no new policy. Commit: STITCHCAD-G1-0309; .3e.2 scope review next.
-
+  Goal:0309 D230/D231 repairs verified13-child capture/5 refusals/omission-red/book0; [whole scope/proofs](../history/stitchcad-devnotes-part448.md).
+  Commit: STITCHCAD-G1-0309.
 - ID: `G1-SLICE.4c.3e.2`
-  Status: `pending`
-  Goal: review chart/body/break/currentness boundaries after D230 status sync and D231 fixture-plan repair;
-  close .3 structurally with focused current integration evidence; profile transformations remain .4.
+  Status: `done`
+  Goal:0310 chart/body/break/currentness scope closure after D230/D231 repairs; profiles remain .4.
+  Own the relevant book scope matrix, SizeSet decision and live/task pointers. Retain448 whole0309 task,
+  449 oldest0286 complete inverse lesson and282 ledger from19dbadc, exact whole Git/hash/public before removal.
+  Review roadmap3.4, chart/MTM/member/axes/break/composite public contracts and original focused results.
+  Focused book/source/link checks; no unchanged native/mutation/kernel campaign repetition or full CI.
+  Acceptance0310:
+  - [x] ROOT CAUSE0310: roadmap3.4 and chart/body/axis/break/composite public scope reviewed; stale frontier-pattern rg on three companion pages rc=1/no matches after D230, as expected.
+  - [x] ADDRESSED0310: git diff --quiet 7618d20 HEAD and HEAD/worktree for crates/sc-measure both rc=0; unchanged focused17-test code proof applies without repetition.
+  - [x] NO REGRESSION0310: book rc=0; rg exact rendered unified/garment/MTM anchor ids each found, rc=0. Profile/global/numeric/physical/storage/approval boundaries stay explicit.
+  - [x] LOCKSTEP0310:448/449/282 whole19dbadc Git/hash/public exact rc=0; main/companion book and decision/live pointers align. .3 chart/body/break scope closes; .4/.5/.4d remain.
+  Promotion: existing SizeSet decision extended with scope boundary. Commit: STITCHCAD-G1-0310.
+
+
 
 - ID: `G1-SLICE.4c.4`
   Status: `pending`
