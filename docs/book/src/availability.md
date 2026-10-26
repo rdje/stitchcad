@@ -50,6 +50,8 @@ Immutable approximation-call source sets, symbolic T1 admission checks and sourc
 operators/bindings, implemented numeric calls, exact tolerance comparisons, named assertion outcomes
 and lazy conditional value control are available.
 Complete AST dependency propagation remains evaluator integration.
+The [checked-runtime sequence](annexes/formula-execution-plan.md) names the bounded next slices and
+remaining numerical/source/geometry dependencies; it is a plan, not whole-runtime availability.
 Exact unary negation/square and all six numeric comparisons are available, preserving fractional
 values and raw angle turns. Exact abs/min/max/clamp are available with typed argument/bound refusals.
 Explicit round_to is available at exact same-kind steps. Binding value conversion now rounds once,

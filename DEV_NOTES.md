@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — checked runtime execution sequence and bounded frontier
+
+0274 .5e.2.2 reviews actual normalized/checked expression, statement and recipe owners before
+joining the sourced value primitives. Next: per-node kind/role certificates, bounded sourced AST
+execution, then actual declaration-order statements and atomic/replay acceptance. Current expression
+proof retains root kind/dependencies; supplied conditional kinds are not a complete branch proof.
+Remaining canonical/derived source, trig resource/implementation and geometry obligations stay
+explicit. No replacement backend, precision cutoff or whole runtime is introduced by this plan.
+
+The execution frontier is moved byte-exact into its linked sibling before more task growth; main
+task/routes/map remain aligned. Whole0273/unary lesson/ledger retain363/364/246 with exact Git/hash/
+public reads. Focused book render passes0; no code changed or new runtime test verdict claimed.
+Promotion declined: existing checked-owner/static-before-value/atomic and numerical source contracts.
+
 ## _(2026-10-26 UTC)_ — lazy supplied-value conditional control
 
 0273 .5e.2.1 checks the Boolean condition and both supplied branch kinds before callbacks. It
@@ -341,20 +355,8 @@ multiple operands, empty/mixed-kind calls, exact adjacent fractions and all clam
 No broad/platform/mutation pass claimed. Whole0250 task/ledger retained322/223; book/live/frontier
 align. Promotion declined: existing exact numeric contract/focused-check policy.
 
-## _(2026-10-25 UTC)_ — exact unary numeric operators and comparisons
-
-0250 .5c.2.3 implements negation/square through existing signatures, including Count negation
-refusal even zero, fused ratio square scaling and length-to-area. Unary errors retain actual
-operator/kind. Six same-kind comparisons return exact bool values; noncomparison operators and
-mixed kinds refuse. Rational total ordering uses at most256-bit cross-products, with reversed
-negative magnitude order. It never rounds or subtracts into a width-limited intermediate. Sign
-negation preserves canonical positive zero/full magnitudes and raw multi-turn formula angles.
-
-One focused command runs affected native numeric4/0+rational5/0, rc=0. Tests include full-width
-fractions whose256-bit cross-products differ by one, all comparison symbols, Count/angle/area
-unary refusals, fractional and scaled squares and exact width errors. Earlier34 Fraction rows
-remain green. No broad/platform/mutation pass claimed. Whole0249 task/ledger retained321/222;
-book/live/frontier align. Promotion declined: established numeric contract/focused-check policy.
+[Complete unary/comparison lesson](docs/history/stitchcad-devnotes-part364.md) retains
+its original scope, validation and promotion decision.
 
 [Complete binary-operator/numeric-domain lessons](docs/history/stitchcad-devnotes-part362.md) retain
 both original scopes, validation and promotion decisions.

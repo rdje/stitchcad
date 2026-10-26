@@ -68,6 +68,7 @@
   - [Static formula validation evidence](annexes/formula-static-validation.md)
   - [Reference formula signature evidence](annexes/formula-static-signatures.md)
   - [Runtime formula validation evidence](annexes/formula-runtime-validation.md)
+  - [Joining the checked formula runtime](annexes/formula-execution-plan.md)
   - [Formula documentation controls](annexes/formula-documentation-controls.md)
 - [Exact rounding of wide magnitudes](annexes/numeric-rounding.md)
 - [Made-to-measure API contract](annexes/mtm-input-contract.md)

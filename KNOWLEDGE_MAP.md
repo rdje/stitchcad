@@ -27,6 +27,7 @@
 - [`G1-SLICE-checked-recipes`](docs/tasks/G1-SLICE-checked-recipes.md)
 - [`G1-SLICE-constructions`](docs/tasks/G1-SLICE-constructions.md)
 - [`G1-SLICE-evidence`](docs/tasks/G1-SLICE-evidence.md)
+- [`G1-SLICE-execution`](docs/tasks/G1-SLICE-execution.md)
 - [`G1-SLICE-formulas`](docs/tasks/G1-SLICE-formulas.md)
 - [`G1-SLICE-journal`](docs/tasks/G1-SLICE-journal.md)
 - [`G1-SLICE-measurements`](docs/tasks/G1-SLICE-measurements.md)

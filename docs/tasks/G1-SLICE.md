@@ -562,7 +562,8 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Children: .5e.1 canonical input/state adapters; .2 ordered lazy execution;
   .3 within/assertions/irrational provenance; .4 atomic deterministic replay/DAG review.
   Acceptance: prior values only, unknown reads never default, static checks before execution,
-  no partial accepted result and same canonical bound output on replay. See G1-SLICE-recipes.md.
+  no partial accepted result and same canonical bound output on replay.
+  [Execution children and receipts](G1-SLICE-execution.md) retain the current frontier.
   Verification: `pending`; Commit: `pending`.
 
 - ID: `G1-SLICE.5f`
@@ -833,7 +834,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5e` | `in_progress` | Carry values/sources through execution; D70/trig resources owned |
+| **next** | `G1-SLICE.5e.2` | `in_progress` | Actual per-node certificates next; D70/trig resources owned |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

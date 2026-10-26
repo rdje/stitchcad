@@ -6,6 +6,8 @@ normalization, canonical identity, [whole recipe kind proofs](formula-checked-re
 values and the canonical length authored-read adapter below. Complete execution remains .5e–.5g work.
 The [formula chapter](../spec/formula-language.md) supplies the normative rules. This instrument
 verifies scoped numerical examples and diagnostics; it does not certify a physical garment.
+The [checked-runtime implementation sequence](formula-execution-plan.md) records the next source,
+node-proof and statement integration steps and their remaining dependencies.
 
 ## Canonical length authored reads
 

@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0273 — lazy conditional value control
+## STITCHCAD-G1-0274 — checked runtime execution sequence
 
-.5e.2.1: check supplied Boolean/equal-numeric branch kinds before callbacks, then run only the selected branch.
-Keep condition/taken sources and actual body/output-kind failures; untaken Unknown is unread. Whole AST execution remains open.
+.5e.2.2: record actual node-proof/expression/statement/atomic boundaries and remaining numeric/source/geometry dependencies.
+Whole execution frontier moves intact into a linked bounded sibling; no new runtime or mathematical backend is claimed.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -436,3 +436,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part244](docs/history/stitchcad-changelog-part244.md) | whole0271 | 4 lines, 310 bytes, sha256:7d4f813c… |
 
 | [part245](docs/history/stitchcad-changelog-part245.md) | whole0272 | 4 lines, 271 bytes, sha256:d5e0f82c… |
+
+| [part246](docs/history/stitchcad-changelog-part246.md) | whole0273 | 4 lines, 297 bytes, sha256:5926347a… |
