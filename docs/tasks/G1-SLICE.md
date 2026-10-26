@@ -514,23 +514,34 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0313.
 - ID: `G1-SLICE.4c.4.3.2`
   Status: `done`
-  Goal:0314 explicit same-family chart replacement bindings validated through actual source metadata contexts.
-  Own size_set_resolution/chart_replacement.rs, transformation/validation/lib/module, source garment/MTM context
-  accessors and composite/support tests. Replacement inventory is typed Garment/MTM, refuses duplicate IDs,
-  family conflicts and same-ID substitutions. Rebuild actual candidate composite against source's original
-  chart context/breaks; preserve source pin, axes, canonical metadata and path rules. Drafts remain drafts.
-  Authored replacement requires context, never resolves an ID by inference; Unknown/Derived remain payload-less.
-  Own book transformation/main/governance, decision/live/task docs. Retain457 whole0313 task,458 oldest0290
-  lesson,286 ledger from8f47113, plus459 whole producer-audit chronology and460 whole early archive chronology
-  from governance. Exact Git/hash/public before retirement; preserve current guards, D141 correction,
-  current window and all normative feature examples. No cap increase. Focused replacement/refusal/lint/fmt/book;
-  actual transformation, evidence/global currentness/approval remain later owners. Cleanup due13:16UTC after slice.
-  - [x] ROOT CAUSE (WHY + WHERE): canonical candidate refs require actual source context; API/lib cargo check rc=0.
-  - [x] ADDRESSED: cargo test -p sc-measure --test garment_size_set_inputs_contract --test mtm_size_set_inputs_contract gives27/0 rc=0.
-  - [x] NO REGRESSION: existing state/scaling/composite cases included; selected strict clippy/fmt/book rc=0.
-  Verification: garment18+MTM9; original values/path refusals preserved;457/458/459/460/286 whole Git/hash/public exact rc=0.
-  LIVE_STATUS reviewed: G1 In Progress5/18 unchanged. .4c.4.3 bindings close; actual application is later work.
-  Commit: STITCHCAD-G1-0314. Due cleanup then .4c.4.4; broad verification remains integration/pre-push.
+  Goal:0314 replacement charts; focused27/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part461.md).
+  Commit: STITCHCAD-G1-0314.
+- ID: `G1-SLICE.4c.4.cleanup5`
+  Status: `in_progress`
+  Goal:0315 due daily safe generated-artifact cleanup after0314, without touching retained proof stores.
+  Own docs/ARTIFACT_CLEANUP.md, governance upkeep/latest summary and live/task pointers; generated audit under
+  target/artifact_cleanup_audit/feature-20261026. Use existing frozen plan/apply producer unchanged.
+  Inspect selected/skipped paths and proof-store exclusions before removal. Apply requires no live project job,
+  exact source/HEAD/plan fingerprints; immediate independent residue/tracked-byte census before regeneration.
+  Preserve prior audit records/certificate manifests exactly. Book rebuild only after absence proof.
+  Broad CI not warranted for artifact-only cleanup; original feature27-test evidence remains current.
+- ID: `G1-SLICE.4c.4.cleanup5.a`
+  Status: `done`
+  Goal:0315 fix D232: cleanup apply lacks canonical --idle-cua attestation passthrough; actual default blocks4
+  metadata-only processes while attested handoff passes0. First unavailable-type refusal occurred before deletion;
+  selected1047 paths remain, raw ps/lsof/retry receipts retained in feature-20261026 audit. SPINE.23r owns
+  intermittent unavailable-type capture/root cause; do not classify its uncaptured original as a proven race.
+  Own cleanup.py apply/main CLI, python_cleanup_entry_contract.py capture/projection controls and focused
+  attestation tests there; docs/ARTIFACT_CLEANUP.md, governance/PLANNING/live/task docs. No checker policy changes.
+  Attestation is explicit apply-only; no default/env inference, real handles/workers remain blocking.
+  Retain461 whole0314 task,462 oldest0291 lesson,287 ledger and463 old governance cleanup-run receipt from
+  aba572c, exact whole Git/hash/public before retirement. Fresh plan after committed tool repair owns actual deletion.
+  - [x] ROOT CAUSE (WHY + WHERE): actual default blocks4 metadata-only PIDs; --idle-cua passes;1047 candidates intact rc=0.
+  - [x] ADDRESSED: idle_attestation_controls default/explicit captures, old refusal,2 reds/5 invalid CLI refusals rc=0.
+  - [x] NO REGRESSION: original_body_controls/certificate/blocked-clear controls rc=0; handoff49 fixtures/17 reds/book rc=0.
+  Verification: direct focused functions in python_cleanup_entry_contract.py and handoff/contract.py rc=0;
+  461/462/463/287 whole Git intervals/hash/public reader equality rc=0. LIVE_STATUS G1still5/18.
+  Commit: STITCHCAD-G1-0315; cleanup5 remains in progress, fresh plan after commit; broad gates later.
 - ID: `G1-SLICE.4c.4.4`
   Status: `pending`
   Goal: immutable resolved SizeSet intent combines origin and authored transformations without applying/mutating source.

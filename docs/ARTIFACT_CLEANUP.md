@@ -29,6 +29,8 @@ Cleanup is a normal change: it is owned by a task-tree leaf, recorded here, and 
 
 Run python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py with plan or apply and
 one run directory: target/artifact_cleanup_audit/<run>. Inspect plan.json before apply.
+Append --idle-cua to apply only when no CUA call/result is pending. The canonical checker still
+blocks real jobs or file handles; the flag is never inferred. Replan after any source/HEAD drift.
 The frozen plan covers candidate content, tracked inputs, HEAD and producer identity; any drift
 refuses. No tracked input, protected store, link, special file, Git boundary or other volume is deleted.
 Apply rechecks each path, verifies no live project job, checks residue and tracked content, then

@@ -1105,6 +1105,18 @@ compiled actual fixture-plan omission red pass0; no full native mutation campaig
 - [x] ADDRESSED0309: existing complete13-child/file capture and5 physical refusals pass; compiled actual fixture-plan omission red detected, rc=0.
 - [x] NO REGRESSION0309: whole D225-D227 source7618d20 bytes/hash/public exact in138, actual implementation/entry/test/fixture hashes stable and book rc=0.
 
+## D232 — cleanup cannot forward explicit idle-CUA attestation
+
+Reproduce: cleanup apply calls handoff without --idle-cua; actual default blocks4 metadata-only CUA
+processes with0 repo handles, while canonical --idle-cua passes0. All1047 selected paths remain.
+Owner: G1-SLICE.4c.4.cleanup5.a, P1 fixed0315 before fresh cleanup; explicit apply-only CLI passthrough and
+controlled intact/default/attested/refusal checks. First lsof unavailable-type refusal is separately
+observed before deletion; initial raw snapshot absent, later retries retained under SPINE.23r; no race claim. Fresh plan required after code repair.
+
+- [x] ROOT CAUSE0315: actual default4 blocks/attested0/1047 selected intact; cleanup fixed argv lacks flag, rc=0.
+- [x] ADDRESSED0315: explicit apply-only forwarding; actual captures/old refusal/2 reds/5 invalid arguments rc=0.
+- [x] NO REGRESSION0315: original policies/certificates/blocked-clear effects and49 handoff fixtures/17 reds/book rc=0.
+
 ## Active continuity followup
 
 - **D223** — optional ledger continuity modes retain raw-file/closed-graph assumptions.

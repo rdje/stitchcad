@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0314 — current chart-replacement intent
+## STITCHCAD-G1-0315 — explicit cleanup idle-CUA attestation
 
-Typed actual candidate charts revalidate in original source contexts, preserving axes/breaks/path rules.
-Missing/family/duplicate/substituted bindings refuse; source intact. Garment18+MTM9/lint/fmt/book pass0.
-457/458/459/460/286 whole8f47113 retention exact0. G1still5/18; due cleanup then immutable intent aggregate.
+Apply-only --idle-cua forwards canonical attestation; default, live-job/file guards and policies stay strict.
+Default/explicit captures, old refusal/2 reds/5 invalid CLI controls, blocked/clear effects,49 handoff
+fixtures/17 reds and certificate/policy/book pass0.461/462/463/287 retention exact0; fresh cleanup plan next.
 
 # Sealed archive — earlier slices
+
+| [part287](docs/history/stitchcad-changelog-part287.md) | whole0314 | 6 lines, 379 bytes, sha256:bad42b63… |
 
 | [part286](docs/history/stitchcad-changelog-part286.md) | whole0313 | 6 lines, 370 bytes, sha256:2d8c40da… |
 

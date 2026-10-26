@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — explicit cleanup idle-CUA attestation
+
+0315 .4c.4.cleanup5.a fixes D232: cleanup always called strict handoff without its explicit idle flag,
+so four metadata-only CUA processes blocked a due run. First unavailable-type refusal occurred before
+removal; initial raw snapshot absent, later ps/lsof/default/attested receipts retained; SPINE.23r owns root cause.
+Apply-only --idle-cua now forwards explicit attestation; no default/env inference or checker policy change.
+Actual default/attested captures, old refusal,2 dispatch reds/5 CLI refusals, blocked/clear effects pass0;
+49 handoff fixtures/17 reds and original-body/certificate protections pass0. Book0; fresh plan next.
+461/462/463/287 wholeaba572c Git/hash/public exact0. Promotion declined: existing canonical idle policy; no new authority.
+
 ## _(2026-10-26 UTC)_ — current chart-replacement intent
 
 0314 .4c.4.3.2 resolves explicit typed candidates through original chart metadata and shared axes/breaks.
@@ -239,19 +249,8 @@ selected lib/changed-test strict Clippy/fmt/book pass0. Broader runtime/platform
 405/406/407/408/264 retain whole history; G1still5/18, no persisted identity/clock change.
 Promotion declined: repair to the existing nonreuse contract; identity decision documents the API.
 
-## _(2026-10-26 UTC)_ — typed declared command catalog
-
-0291 .6.1 exposes17 stable command IDs with typed class, required permission, reversibility and
-undo grouping. Native tests compare the actual book table, not another manually authored registry;
-strict lookup and preparation/approval separation pass2/0. Selected strict Clippy/fmt, command
-census17/5/5/0 failures and book pass0. Catalog metadata grants no authority or handler availability.
-Before code, retaining403 exceeded the fixed64-file reader bound. Window14 packs50 committed
-full files from b49128e:93940 bytes to27917 bytes; source/materialization/public reads exact,
-prior13 unchanged. Reader/caps unchanged;402/403/404/263 whole records retained exactly.
-The artifact-output guard correctly refused a tracked installation; normal owned file edits
-installed the proven payload without activating stores. Frozen capture14 is not a current-HEAD rerun.
-G1still5/18; .6.2–.6.9 own remaining bus execution, tangent practical plan stays P1 .d.2.
-Promotion declined: existing command contract, no new cross-cutting policy.
+[Complete command catalog lesson](docs/history/stitchcad-devnotes-part462.md) retains
+its original metadata/authority/retention contracts, checks and promotion decision.
 
 [Complete tangent range lesson](docs/history/stitchcad-devnotes-part458.md) retains
 its original exact range/resource/domain evidence, checks and promotion decision.

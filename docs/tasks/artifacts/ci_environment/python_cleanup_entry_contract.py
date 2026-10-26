@@ -165,7 +165,7 @@ def isolated(sandbox):
         os.environ.clear(); os.environ.update(saved); sys.argv = argv
 
 
-def capture(label, *, text=None, mutation=None):
+def capture(label, *, text=None, mutation=None, idle_cua=False):
     """Execute actual plan/apply bodies with all writes/deletions observed and native children intercepted."""
     sandbox, mapping, readme, victim = mirror(label)
     entry = mapping[SOURCE]
@@ -218,7 +218,7 @@ def capture(label, *, text=None, mutation=None):
         if command[:3] == ['git', '-C', str(sandbox)]:
             assert command[3:6] == ['check-ignore', '-q', '--'] and len(command) == 7, command
             return subprocess.CompletedProcess(command, 0 if command[-1].startswith('target/') else 1)
-        assert command == ['bash', str(mapping[CURRENT])], 'cleanup dispatched stale process checker'
+        assert command == ['bash', str(mapping[CURRENT]), *(['--idle-cua'] if idle_cua else [])], 'cleanup dispatched stale process checker'
         complete_output(audit / 'result.json', deletion=True)
         children.append(command)
         return subprocess.CompletedProcess(command, 0)
@@ -262,14 +262,14 @@ def capture(label, *, text=None, mutation=None):
             plan = json.loads((audit / 'plan.json').read_text())
             assert {row['path'] for row in plan['candidates']} == {'target/scratch', 'target/victim.log'}
             phase[0] = 'apply'
-            sys.argv = [str(entry), 'apply', audit.relative_to(sandbox).as_posix()]
+            sys.argv = [str(entry), 'apply', audit.relative_to(sandbox).as_posix(), *(['--idle-cua'] if idle_cua else [])]
             namespace['main']()
             result = json.loads((audit / 'result.json').read_text())
             assert (result['removed_trees'], result['removed_strays'], result['removed_files'], result['removed_bytes']) == (1, 1, 1, 29)
             assert result['residue'] == 0 and result['tracked_change'] is False and result['skipped'] == []
             assert not victim.exists() and not (sandbox / 'target/scratch').exists(), 'cleanup selected residue changed'
             assert all(path.read_bytes() == data for path, data in frozen.items()), 'cleanup capture changed tracked fixture bytes'
-            assert children == [['bash', str(mapping[CURRENT])]], 'cleanup process dispatch population changed'
+            assert children == [['bash', str(mapping[CURRENT]), *(['--idle-cua'] if idle_cua else [])]], 'cleanup process dispatch population changed'
             assert sum(kind == 'write' for kind, _ in effects) == 2, 'cleanup audit population changed'
         return len(plans), len(effects), len(children)
     finally:
@@ -380,7 +380,7 @@ def omission_controls():
         ('sources=inputs, directories=(directory,)', 'sources=plan_input, directories=(directory,)', 'cleanup effect omitted complete input authority'),
         ('    source_plan(directories=(path.parent,), output_files=(path,))\n', '', 'cleanup audit write recheck omitted'),
         ('environment = source_plan()\n    return subprocess.check_output', 'environment = {}\n    return subprocess.check_output', 'cleanup Git environment omitted'),
-        ("subprocess.run(['bash', str(HANDOFF)],", "subprocess.run(['bash', str(ROOT / 'scripts/handoff_census.py')],", 'cleanup dispatched stale process checker'),
+        ("subprocess.run(['bash', str(HANDOFF),", "subprocess.run(['bash', str(ROOT / 'scripts/handoff_census.py'),", 'cleanup dispatched stale process checker'),
     )
     for index, (before, after, wanted) in enumerate(faults):
         try:
@@ -392,12 +392,62 @@ def omission_controls():
     print('cleanup omissions:', len(faults), 'actual complete-plan/save/environment/process dispatch reds; rc=0')
 
 
+def idle_attestation_controls():
+    """Execute actual mode bodies; explicit attestation changes only canonical checker argv."""
+    print('cleanup default capture:', capture('idle-default'))
+    print('cleanup attested capture:', capture('idle-attested', idle_cua=True))
+    old = subprocess.check_output(['git', 'show', 'aba572c:' + SOURCE.relative_to(ROOT).as_posix()]).decode()
+    try:
+        capture('idle-before', text=old, idle_cua=True)
+    except Exception as error:
+        assert type(error).__name__ == 'Refusal' and 'usage:' in str(error), error
+    else:
+        raise AssertionError('cleanup old CLI unexpectedly accepts explicit attestation')
+    assert (WORK / 'idle-before/target/victim.log').is_file()
+    for label, before, after, attested in (
+        ('idle-omission', "*(['--idle-cua'] if idle_cua else [])", "*[]", True),
+        ('idle-inferred', "if idle_cua else []", "if True else []", False),
+    ):
+        try:
+            capture(label, mutation=(before, after), idle_cua=attested)
+        except AssertionError as error:
+            assert str(error) == 'cleanup dispatched stale process checker', error
+        else:
+            raise AssertionError('cleanup attestation fault escaped: ' + label)
+    module = runpy.run_path(str(SOURCE))
+    saved = sys.argv
+    calls = []
+    module['main'].__globals__['audit_plan'] = lambda *args, **kwargs: calls.append((args, kwargs))
+    invalid = (['entry'], ['entry', 'plan', 'target/artifact_cleanup_audit/run', '--idle-cua'],
+               ['entry', 'apply', 'target/artifact_cleanup_audit/run', '--unknown'],
+               ['entry', 'apply', '--idle-cua', 'target/artifact_cleanup_audit/run'],
+               ['entry', 'apply', 'target/artifact_cleanup_audit/run', '--idle-cua', '--idle-cua'])
+    try:
+        for arguments in invalid:
+            sys.argv = arguments
+            try:
+                module['main']()
+            except module['Refusal'] as error:
+                assert 'usage:' in str(error), error
+            else:
+                raise AssertionError('cleanup invalid CLI admitted')
+    finally:
+        sys.argv = saved
+    assert not calls, 'invalid CLI reached audit activation'
+    assert SOURCE.read_bytes() == ORIGINAL
+    print('cleanup idle attestation: default/explicit actual captures, original CLI refusal, 2 dispatch reds, 5 argument refusals; rc=0')
+
+
 def original_body_controls():
     """Project only the added planning/environment/strict-dispatch adapters; preserve original policies."""
     class Project(ast.NodeTransformer):
         function = None
         def visit_FunctionDef(self, node):
             self.function = node.name
+            if node.name == 'apply':
+                assert [arg.arg for arg in node.args.kwonlyargs] == ['idle_cua']
+                assert ast.dump(node.args.kw_defaults[0]) == ast.dump(ast.Constant(value=False))
+                node.args.kwonlyargs = []; node.args.kw_defaults = []
             return self.generic_visit(node)
         def visit_Assign(self, node):
             if (len(node.targets) == 1 and isinstance(node.targets[0], ast.Name)
@@ -421,6 +471,15 @@ def original_body_controls():
         def visit_Call(self, node):
             node = self.generic_visit(node)
             node.keywords = [keyword for keyword in node.keywords if keyword.arg != 'env']
+            if isinstance(node.func, ast.Name) and node.func.id == 'apply':
+                assert [keyword.arg for keyword in node.keywords] == ['idle_cua']
+                assert ast.dump(node.keywords[0].value) == ast.dump(ast.parse('len(sys.argv) == 4', mode='eval').body)
+                node.keywords = []
+            if self.function == 'main' and isinstance(node.func, ast.Name) and node.func.id == 'require':
+                admitted = ast.parse("(len(sys.argv) == 3 or (len(sys.argv) == 4 and sys.argv[1] == 'apply' and sys.argv[3] == '--idle-cua')) and sys.argv[1] in ('plan', 'apply')", mode='eval').body
+                assert ast.dump(node.args[0]) == ast.dump(admitted), 'cleanup unadmitted CLI grammar'
+                assert node.args[1].value == 'usage: cleanup.py plan|apply target/artifact_cleanup_audit/<run> [--idle-cua (apply only)]'
+                node.args = ast.parse("require(len(sys.argv) == 3 and sys.argv[1] in ('plan', 'apply'), 'usage: cleanup.py plan|apply target/artifact_cleanup_audit/<run>')", mode='eval').body.args
             if (isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Name)
                     and node.func.value.id == 'subprocess' and node.func.attr == 'run'
                     and node.args and isinstance(node.args[0], ast.List)
@@ -581,6 +640,7 @@ if __name__ == '__main__':
         missing_evidence_controls()
     if not any(option in sys.argv for option in ('--before', '--real', '--continuity')):
         process_repair_controls()
+        idle_attestation_controls()
         print('cleanup complete mode capture:', capture('complete'))
         physical_controls()
         omission_controls()

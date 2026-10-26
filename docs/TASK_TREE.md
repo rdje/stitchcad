@@ -81,7 +81,7 @@ than roadmap clauses is expected (a tree may split one clause into several leave
 
 **`G1-SLICE.4c.3`** chart/body/break structural input scope closes in0310 after D230/D231 repairs.
 Current SizeSet inputs preserve explicit garment/MTM provenance, canonical sources and typed paths.
-0314 .4c.4.3.2 adds current chart replacement; due cleanup then .4c.4.4 immutable intent aggregate.
+0315 repairs D232 cleanup attestation; fresh daily cleanup then .4c.4.4 immutable intent aggregate.
 Command-class schemas follow canonical inputs.
 [Execution frontier](tasks/G1-SLICE-execution.md) remains .5e.2.4; SizeSet axes and paired split schema are implemented.
 Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per

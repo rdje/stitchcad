@@ -207,7 +207,7 @@ def audit_plan(directory, mode, *, activate=False):
                        output_files=outputs, activate=activate)
 
 
-def apply(directory):
+def apply(directory, *, idle_cua=False):
     audit_plan(directory, 'apply')
     plan_path = local((directory / 'plan.json').relative_to(ROOT))
     plan = json.loads(plan_path.read_text())
@@ -216,7 +216,8 @@ def apply(directory):
     environment = audit_plan(directory, 'apply', activate=True)
     validate_plan(plan, census())
     audit_plan(directory, 'apply')
-    subprocess.run(['bash', str(HANDOFF)], cwd=ROOT, env=environment, check=True)
+    subprocess.run(['bash', str(HANDOFF), *(['--idle-cua'] if idle_cua else [])],
+                   cwd=ROOT, env=environment, check=True)
     for row in plan['candidates']:
         # Recheck immediately before each removal as well as against the complete frozen census.
         require(inspect(row['path'], tracked()) == row, 'candidate drift: ' + row['path'])
@@ -239,8 +240,10 @@ def apply(directory):
 
 
 def main():
-    require(len(sys.argv) == 3 and sys.argv[1] in ('plan', 'apply'),
-            'usage: cleanup.py plan|apply target/artifact_cleanup_audit/<run>')
+    require((len(sys.argv) == 3 or (len(sys.argv) == 4 and sys.argv[1] == 'apply'
+                                    and sys.argv[3] == '--idle-cua'))
+            and sys.argv[1] in ('plan', 'apply'),
+            'usage: cleanup.py plan|apply target/artifact_cleanup_audit/<run> [--idle-cua (apply only)]')
     directory = record_directory(sys.argv[2])
     if sys.argv[1] == 'plan':
         audit_plan(directory, 'plan', activate=True)
@@ -248,7 +251,7 @@ def main():
         save(directory / 'plan.json', value)
         print('cleanup plan:', len(value['candidates']), 'candidates;', len(value['skipped']), 'skipped')
     else:
-        print('cleanup result:', json.dumps(apply(directory), sort_keys=True))
+        print('cleanup result:', json.dumps(apply(directory, idle_cua=len(sys.argv) == 4), sort_keys=True))
 
 
 if __name__ == '__main__':
