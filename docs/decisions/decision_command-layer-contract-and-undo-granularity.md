@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; typed catalog metadata implemented0291, bus handlers pending
+- **Status:** `active`; catalog/context metadata implemented0291/0293, bus handlers pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -82,3 +82,9 @@ The focused native target compares every row against the normative book table an
 strict selected Clippy/fmt and command census17/5/5/0 failures pass, rc=0.
 Metadata confers no authenticated grant or handler availability. Payloads, scoped authority,
 aggregate mutation, transactions, retry/audit, history and cancellation retain .6.2–.6.9 ownership.
+
+0293 .6.2.2.a adds immutable mutation context with explicit design, untrusted actor/principal claim,
+expected exact revision, typed retry key and optional group. Initial revision0 has exact successors
+in private BigUint workspace, including beyond128 bits; no undocumented counter limit or clock.
+No wire format, currentness, grant, replay or handler is implied by constructing metadata.
+Focused native2/0 retains full identities/counters and standalone/explicit group semantics.

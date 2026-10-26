@@ -118,6 +118,44 @@ order, class, authority, reversibility and undo grouping. It also checks strict 
 preparation versus human approval. This supports core metadata consistency; it proves no handler
 availability, authenticated authority enforcement or executed UI/API/MCP workflow.
 
+### Implemented mutation context
+
+CommandMutationContext retains a target design identity, CommandActorClaim, expected DesignRevision,
+mandatory CommandIdempotencyKey and optional CommandGroupId. Fields are private and exposed through
+read-only getters. Retry and group identities have different Rust types; neither is silently minted
+from a design or actor identity. None for the group requests the standalone group-of-one case.
+
+An actor claim distinguishes a human initiator from an agent acting for a declared human principal.
+Both initiator and principal survive unchanged for later audit and grant validation. A claim is
+caller-supplied data: constructing Human or reading principal() authenticates nobody and grants no
+permission, including approval. Core authorization must bind it to verified identity and scope.
+
+```rust
+use sc_core::command::{CommandActorClaim, CommandIdempotencyKey, CommandMutationContext, DesignRevision};
+use sc_core::ontology::EntityId;
+let agent = EntityId::from_bits(7);
+let principal = EntityId::from_bits(17);
+let revision = DesignRevision::initial();
+let context = CommandMutationContext::new(EntityId::from_bits(21),
+    CommandActorClaim::Agent { identity: agent, principal }, revision.clone(),
+    CommandIdempotencyKey::from_entity_id(EntityId::from_bits(31)), None);
+assert_eq!(context.actor().initiator(), agent);
+assert_eq!(context.actor().principal(), principal);
+assert_eq!(context.expected_revision(), &revision);
+assert_eq!(context.group(), None);
+```
+
+DesignRevision is an exact nonnegative counter with private integer workspace. initial()/default()
+represent zero; from_counter preserves an explicit u128 value; successor() computes the next counter
+without changing the source or committing a command. It continues beyond u128::MAX without wrap or
+a new revision limit. Decimal Display retains the exact value; the wire/persistence schema is still
+owned by its later implementation. Undo's revision restoration remains §3, not an automatic increment.
+
+The focused context target checks distinct agent/principal identities, mandatory retry identity,
+explicit versus standalone groups, immutable snapshots and exact counters beyond u128. This is
+request metadata only: actual design membership/currentness, authenticated authority, payloads,
+idempotency replay and atomic group execution remain G1-SLICE.6.2.2.b/.6.3/.6.5/.6.6 work.
+
 ## 3. Atomic groups, and the granularity of undo
 
 **One undo reverses one atomic group, never part of one.** A group is the unit a user means: "add a dart"

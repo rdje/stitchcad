@@ -626,25 +626,34 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal: typed payload/envelope, actor/revision/key/group/effect identities and actual canonical argument contracts.
 - ID: `G1-SLICE.6.2.1`
   Status: `done`
-  Goal:0292 own D225 generator exhaustion before command identities; reproduce MAX→0 wrap then typed refusal.
-  Paths: crates/sc-core/src/ontology/id.rs;crates/sc-core/src/ontology/topology.rs;crates/sc-core/src/ontology/mod.rs
-  Own affected crates/sc-core tests/callers and crates/sc-core/tests/id_exhaustion_contract.rs.
-  Additional source caller: crates/sc-core/src/ontology/reference.rs.
-  Audit actual call sites; make allocation fallible and preserve ledger state on exhaustion.
-  Own405 whole0291 catalog task,406 oldest0267 lesson,264 whole0291 ledger before live growth.
-  Also own407 whole sourced-call summaries/retentions and408 whole archive13 summary/retention.
-  Focused allocator/ledger boundary checks and affected compile/lint; book/live/identity decision sync.
-  Acceptance0292:
-  - [x] REPRODUCE: native id_exhaustion_contract fails101 with MAX→0, before the fix.
-  - [x] ROOT CAUSE0292: cargo test -p sc-core --test id_exhaustion_contract red101; wrapping_add and infallible IdGenerator could not represent exhaustion.
-  - [x] FIX: fallible allocation, terminal optional counter and original error propagation before six ledger edits; actual callers migrated.
-  - [x] ADDRESSED0292: same focused target3/0, rc=0; MAX/MAX-1 terminal cases, twelve allocator refusals and six precondition-priority cases preserve complete state.
-  - [x] NO REGRESSION0292: ontology::id unit10/0; sc-core --all-targets --no-run and selected lib/changed-test strict Clippy/fmt pass, rc=0. No full runtime suite; integration/pre-push owns broad checks.
-  - [x] LOCKSTEP:405/406/407/408/264 whole Git/hash/public exact rc=0; book build rc=0. D225 closed, G1still5/18; no persisted identity change.
-  Promotion declined: repair to existing nonreuse contract. Commit: STITCHCAD-G1-0292.
+  Goal:0292 D225 terminal allocation/atomic ledger refusal verified3/10/compile/lint0.
+  Paths: crates/sc-core/src/ontology/id.rs;crates/sc-core/tests/id_exhaustion_contract.rs
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part409.md).
 - ID: `G1-SLICE.6.2.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: bounded command envelope/principal/identity contract and actual typed payload schema, after D225.
+- ID: `G1-SLICE.6.2.2.a`
+  Status: `done`
+  Goal:0293 typed mutation context with actor/principal claims, exact unbounded revision, retry/group identities.
+  Paths: crates/sc-core/src/command.rs;crates/sc-core/src/command/context.rs;crates/sc-core/tests/command_context_contract.rs
+  Additional paths: crates/sc-core/src/lib.rs;crates/sc-core/Cargo.toml.
+  Claims confer no authority/currentness/registry proof; no payload/handler or wire-format claim.
+  Own409 whole0292 task,410 oldest0268 lesson,265 whole0292 ledger before growth.
+  Focused full-width counter/context checks, selected lint/fmt/book; .6.3/.6.5/.6.6 validate execution.
+  Acceptance0293:
+  - [x] REPRODUCE: catalog existed without typed actor/revision/retry/group mutation metadata.
+  - [x] ROOT CAUSE0293: cargo test -p sc-core --test command_context_contract:2/0, rc=0; exact request metadata was the missing boundary.
+  - [x] FIX: immutable typed context, distinct agent/principal, mandatory revision/key, private exact counter successors; no trust or execution implied.
+  - [x] ADDRESSED0293: same native2/0 exact identities/groups and beyond-u128 counters pass, rc=0.
+  - [x] NO REGRESSION0293: selected lib/test strict Clippy/fmt and command census17/5/5/0 failures pass, rc=0; broad integration/pre-push.
+  - [x] LOCKSTEP:409/410/265 exact Git/hash/public bytes and book build rc=0; G1still5/18, actor claims remain untrusted.
+  Promotion declined: existing command metadata contract. Commit: STITCHCAD-G1-0293.
+- ID: `G1-SLICE.6.2.2.b`
+  Status: `pending`
+  Goal: concrete typed command payload schemas from actual canonical interfaces, no caller placeholders.
+- ID: `G1-SLICE.6.2.2.c`
+  Status: `pending`
+  Goal: remaining query/evaluation/artifact/release request contexts and immutable payload binding.
 - ID: `G1-SLICE.6.3`
   Status: `pending`
   Goal: core-scoped authority/grant validation, human-only approval, actual actor/principal and denial tests.

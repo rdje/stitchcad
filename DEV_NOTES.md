@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — typed mutation metadata and exact revisions
+
+0293 .6.2.2.a adds immutable mutation context: design, actor/principal claim, expected revision,
+mandatory typed retry key and optional typed group. Claims confer no authenticated identity or grant.
+Revision successors use private exact integers beyond128 bits without changing their source; no
+undocumented counter cap, clock or wire-format promise. Native2/0 preserves full identities,
+agent/principal separation, groups and immutable large counters; selected strict lint/fmt, command
+census17/5/5/0 and book pass0.409/410/265 retain whole history; G1still5/18.
+Payloads/currentness/auth/replay/transactions remain later owners. Promotion declined: existing
+command metadata contract; its decision records the chosen representation and boundary.
+
 ## _(2026-10-26 UTC)_ — terminal ID exhaustion and atomic ledger refusal
 
 0292 .6.2.1 owns D225: from_start(MAX) yielded MAX then0; the public regression failed101.
@@ -297,19 +308,8 @@ storage refusals with unchanged prior bindings. No AST/conditional/call/provider
 atomic replay proof is claimed. Whole0268 scope, oldest rational lesson and ledger retain352/353/241
 with exact Git/hash/public reads; book/live align. Promotion declined: existing formula4.2/D121.
 
-## _(2026-10-26 UTC)_ — immutable approximation-call source metadata
-
-0268 .5e.3.1 retains all11 normative irrational/quantization call sources in a sealed immutable
-set. Union is idempotent/order-independent; iteration uses lexical existing tokens. Exact calls
-introduce no source, while exact-valued rounding calls still do. Symbolic eps_num refuses every
-nonempty set with formula_domain, actual class and complete sources. The helper has no provider,
-numeric limit, comparison label or ordinal; actual execution and propagation remain .5e.2/.3.
-
-The first test attempted a nonexistent ToleranceName::ALL (E0599/101); explicit independent five-
-class fixtures repair it. Final native4/0 and selected strict Clippy0 pass; tests cover all built-ins,
-unions/immutability and supplied condition/taken-branch examples without claiming branch execution.
-Whole0267/.o.h task scopes, oldest whole journal group and0267 ledger retain349–351/240 with exact
-Git/hash/public reads. Book/live sync; promotion declined: existing formula4.2 and D121 contracts.
+[Complete immutable approximation-source lesson](docs/history/stitchcad-devnotes-part410.md) retains
+its original call inventory, source-only T1 boundary, checks and promotion decision.
 
 [Complete canonical/stored numeric-read lesson](docs/history/stitchcad-devnotes-part406.md) retains
 its original exact conversion boundaries, source separation, checks and promotion decision.

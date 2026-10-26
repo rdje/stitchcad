@@ -5,11 +5,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
-## STITCHCAD-G1-0292 — terminal identity allocation and atomic refusal
+## STITCHCAD-G1-0293 — typed mutation request metadata
 
-.6.2.1 closes D225 MAX→0 wrap: typed terminal exhaustion and original allocator errors before six ledger edits.
-Focused3/0, id10/0, affected target compilation/selected lint/fmt/book pass0; all callers migrated.
-405/406/407/408/264 retain whole history. Command envelopes next; no persisted identity change.
+.6.2.2.a: immutable actor/principal/revision/retry/group context; exact counters extend beyond128 bits.
+Focused2/0, selected strict lint/fmt/census/book pass0;409/410/265 preserve whole history.
+No grant/handler/currentness claim; typed payloads next. G1still5/18.
+
+| [part265](docs/history/stitchcad-changelog-part265.md) | whole0292 | 6 lines, 385 bytes, sha256:aae9c8cf… |
 
 | [part264](docs/history/stitchcad-changelog-part264.md) | whole0291 | 6 lines, 350 bytes, sha256:ccd9ded0… |
 

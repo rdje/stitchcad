@@ -3,6 +3,12 @@
 //! Catalog membership declares a command; it does not make a handler available or grant authority.
 //! Execution, scoped authorization, transactions and workflow parity remain separate bus owners.
 
+mod context;
+pub use context::{
+    CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
+    DesignRevision,
+};
+
 /// The five command classes fixed by the shared command-layer contract.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 pub enum CommandClass {
