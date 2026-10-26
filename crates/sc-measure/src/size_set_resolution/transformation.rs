@@ -1,5 +1,5 @@
 //! Authored, state-bearing transformation intent over actual current SizeSet inputs; no application.
-use crate::{SizeLabel, SizeSetInputError, SizeSetInputs, SizeSetReference};
+use crate::{SizeBreakScaling, SizeLabel, SizeSetInputError, SizeSetInputs, SizeSetReference};
 use core::fmt;
 use sc_core::{ontology::EntityId, value::ValueProvenanceValidation};
 
@@ -12,6 +12,8 @@ pub enum SizeSetTransformationKind {
     LabelMapping,
     /// Select an existing member as the proposed base.
     BaseSubstitution,
+    /// Scale one signed break by an explicitly bound canonical Ratio.
+    BreakScaling,
 }
 /// One authored member-to-designation correspondence.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -28,6 +30,8 @@ pub enum SizeSetTransformationValue {
     LabelMapping(Vec<SizeLabelMapping>),
     /// Explicit existing member identity, even when already the base.
     BaseSubstitution(EntityId),
+    /// Explicit actual break and canonical factor bindings, without numeric application.
+    BreakScaling(SizeBreakScaling),
 }
 impl SizeSetTransformationValue {
     /// Exact operation domain, independent of label spelling and numeric magnitude.
@@ -36,6 +40,7 @@ impl SizeSetTransformationValue {
         match self {
             Self::LabelMapping(_) => SizeSetTransformationKind::LabelMapping,
             Self::BaseSubstitution(_) => SizeSetTransformationKind::BaseSubstitution,
+            Self::BreakScaling(_) => SizeSetTransformationKind::BreakScaling,
         }
     }
 }
@@ -113,6 +118,21 @@ pub enum SizeSetTransformationError {
         /// Actual payload domain.
         actual: SizeSetTransformationKind,
     },
+    /// Original current signed-break binding refusal.
+    Break(Box<crate::SizeBreakError>),
+    /// Named break is absent from the actual available break inventory.
+    MissingBreak(EntityId),
+    /// Named factor is absent from all supplied input records.
+    MissingFactor(EntityId),
+    /// Named factor is an actual supplied record but not a general scalar declaration.
+    FactorRole(EntityId),
+    /// Actual general scalar declaration is not Ratio.
+    FactorKind {
+        /// Named factor declaration.
+        factor: EntityId,
+        /// Actual declared scalar kind, even for Unknown/Derived states.
+        actual: sc_core::value::ScalarInputKind,
+    },
     /// Label mapping has no authored entries.
     EmptyMapping,
     /// Label mapping repeats a member identity.
@@ -138,6 +158,7 @@ impl std::error::Error for SizeSetTransformationError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
             Self::Inputs(issue) => Some(issue),
+            Self::Break(issue) => Some(issue),
             _ => None,
         }
     }

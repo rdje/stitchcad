@@ -103,6 +103,10 @@ impl<'a> MtmSizeSetInputs<'a> {
         )?;
         Ok(())
     }
+    pub(crate) const fn break_context(self) -> &'a SizeBreakContext<'a> {
+        self.break_context
+    }
+
     pub(crate) fn contains_entity(self, identity: sc_core::ontology::EntityId) -> bool {
         identity == self.chart.id()
             || self.chart_context.contains(identity)

@@ -178,3 +178,8 @@ requires distinct nonempty evidence; Unknown/Derived have no payload. Partial ma
 member/mapping order and exact labels, refusing collisions with unchanged members; simultaneous
 swaps remain valid. Proposed bases name actual members. These immutable declarations never apply
 a profile or change path readiness. Break/chart bindings and immutable aggregate remain .3/.4.
+
+G1-SLICE.4c.4.3.1 binds break-scaling intent to an actual available signed break and canonical
+Ratio scalar in the shared current input inventory. Original break/delta/factor records are borrowed;
+missing records, wrong roles and wrong actual kinds refuse. All canonical states and signed/zero
+factors remain intact. No multiplication, profile-domain validation or derived result is performed.

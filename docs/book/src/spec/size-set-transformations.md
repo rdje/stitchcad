@@ -2,7 +2,7 @@
 
 > **Status:** G1-SLICE.4c.4 is implementing immutable transformation intent in `sc-measure`.
 > Selected profile labels, resolution-origin metadata and state-bearing label/base declarations are
-> executable. Break/chart bindings and their aggregate follow. G4 owns actual profile lookup,
+> executable, together with canonical break-scaling bindings. Chart replacement and the aggregate follow. G4 owns actual profile lookup,
 > constraints, precedence and resolution;
 > G3 owns numeric instantiation. This page extends [Size sets §9](size-sets.md#9-ownership-reference-and-override).
 
@@ -118,10 +118,43 @@ let definition = SizeSetTransformationDefinition {
 let intent = SizeSetTransformation::new(definition, inputs)?;
 ```
 
+## Bind break scaling to canonical records
+
+`SizeSetTransformationKind::BreakScaling` uses a `SizeBreakScaling { size_break, factor }` payload.
+The break identity must exist in the actual available break inventory. Its existing axis, named
+POM/dimension, adjacent-member pair and dedicated canonical Length delta remain the source of truth;
+there is no label-derived or reconstructed break key.
+
+The factor must be an actual general `ScalarInputDeclaration` of kind `Ratio` in the shared current
+numeric inventory supplied through `SizeBreakContext`. It need not be an axis coordinate. A missing
+factor returns `MissingFactor`; a supplied record of another role, including a dedicated Length,
+returns `FactorRole`. A general scalar of another kind returns `FactorKind` with its actual kind,
+even for an Unknown or Derived declaration. Missing available breaks return `MissingBreak`.
+
+```rust,ignore
+let binding = SizeBreakScaling { size_break: break_id, factor: ratio_declaration_id };
+let records = binding.inputs(inputs)?;
+// These are the original canonical records, preserving state/source/provenance.
+let original_delta = records.delta;
+let original_factor = records.factor;
+```
+
+`binding.inputs(inputs)` rechecks current inputs and borrows the actual break, Length delta and
+Ratio declaration in `SizeBreakScalingInputs`. The transformation constructor validates this binding
+for an authored payload. Calling either API does not multiply values, round a result, fill a missing
+break or create an independent state/value copy. A replacement input snapshot is rechecked through
+the same lookup, so changing a factor's actual kind cannot preserve an earlier successful binding.
+
+Zero and negative signed factors are retained, as are factors above one. This local structural API
+imposes no invented positivity constraint; G4's actual profile domain and hard restrictions decide
+whether proposed intent may be executed. All five factor/delta states remain canonical. Reading an
+Unknown factor still returns its original observation refusal, and Derived still requires its
+original formula. Known transformation evidence does not upgrade either numeric input's state.
+The same scaling domain can be declared Unknown or Derived without any binding payload.
+
 ## What remains to be implemented
 
-The next bounded slices add canonical break-scaling and chart-replacement bindings, then an
-immutable aggregate retaining the original reference and ordered transformations. Numeric inputs
+The next bounded slices add explicit chart-replacement bindings, then an immutable aggregate retaining the original reference and ordered transformations. Numeric inputs
 must remain canonical rather than copied into a second independent state/value record.
 
 Origin metadata and authored declarations are not a transformed SizeSet or transformed geometry.

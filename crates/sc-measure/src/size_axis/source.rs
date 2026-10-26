@@ -93,6 +93,13 @@ impl<'a> SizeAxisSourceContext<'a> {
         }
     }
 
+    pub(crate) fn scalar(&self, identity: EntityId) -> Option<&'a ScalarInputDeclaration> {
+        match self.records.get(&identity)? {
+            Record::Scalar(value) => Some(*value),
+            Record::Length(_) => None,
+        }
+    }
+
     pub(crate) fn conflicts_with(
         &self,
         context: &crate::MeasurementTableContext<'_>,

@@ -3,8 +3,8 @@
 > **Status:** normative specification, gate **G0** (roadmap §3.4, §7.5, §8). Implemented by `sc-measure` at
 > gate **G1** (leaf `G1-SLICE.4`) and consumed by both instantiation paths at **G3**. The
 > [membership foundation](size-membership.md), chart families, axes, signed breaks and current composite input views
-> are executable. [Profile pins, origin and label/base intent](size-set-transformations.md) are available;
-> break/chart payloads and complete-family review remain in progress. The ownership
+> are executable. [Profile pins, origin and transformation intent](size-set-transformations.md) are available;
+> break scaling is bound to canonical inputs; chart replacement and complete-family review remain in progress. The ownership
 > question roadmap §3.4 leaves open is decided here and recorded as
 > `docs/decisions/decision_size-set-ownership.md`. Terms are in the [glossary](glossary.md).
 
@@ -347,14 +347,10 @@ The bounded structural review keeps these requirements distinct:
 | Current snapshots/identity | Shared actual inputs; cross-view aliases and replaced bindings refuse |
 | Family selection | Explicit validated view, never inferred from labels/system/member count |
 
-The current focused gate runs six garment composite, six MTM composite and five break collection
-contracts:17 passed/0 failed. Selected strict lint/formatting and book build pass. Earlier child
-records retain axis/member, signed-state and original chart proofs; broad platform/physical/
-serialization verification is deferred to its named integration and later-gate owners.
-
-This closes the signed-break/composite-input implementation slice. Chart/body/break scope review
-closed at .4c.3e; [profile transformation intent](size-set-transformations.md) is in progress at .4c.4. Numeric execution,
-regeneration/grading geometry, equivalence, profile precedence, storage and release are still separate.
+Chart/body/break structural input review is complete. Numeric execution, geometry/equivalence,
+profile precedence, storage and release remain separate. Current transformation intent is documented
+in [SizeSet profile transformations](size-set-transformations.md). The closed review receipt is
+retained whole in `docs/history/stitchcad-devnotes-part456.md` (public history reader).
 
 ## 7. Multi-dimensional systems
 

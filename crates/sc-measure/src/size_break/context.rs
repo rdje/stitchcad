@@ -77,6 +77,9 @@ impl<'a> SizeBreakContext<'a> {
         self.membership
     }
 
+    pub(crate) const fn sources(&self) -> &'a SizeAxisSourceContext<'a> {
+        self.sources
+    }
     pub(crate) const fn axes(&self) -> &'a SizeAxes {
         self.axes
     }

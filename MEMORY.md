@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0312 .4c.4.2 adds state-bearing label/base transformation intent; exact source and typed domain required.
-- Partial/simultaneous label mappings preserve authored order; effective label collisions/missing members refuse.
-- Unknown/Derived contain only original observation/formula; original inputs unchanged, no profile execution.
-- Focused garment13+MTM8 pass0; selected strict lint/fmt/book0. NEXT .4c.4.3 canonical break/chart bindings.
--452/453/284 whole214c80a Git interval/hash/public exact0.0311 profile pins/origin remain immutable/G4-deferred.
+-0313 .4c.4.3.1 adds explicit break-scaling bindings to actual break, dedicated Length delta and canonical Ratio.
+- Borrowed records retain all states/signed zero-negative values; missing/role/kind conflicts refuse, no multiplication.
+- Focused garment15+MTM8 pass0; selected strict lint/fmt/book0; value-less scaling observation/evaluation check0.
+- NEXT .4c.4.3.2: explicit current chart replacement bindings; then immutable intent aggregate .4.
+-454/455/456/285 whole62aea02 Git interval/hash/public exact0. Profile pins/origin/label-base intent remain intact.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

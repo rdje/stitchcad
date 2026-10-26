@@ -89,6 +89,12 @@ impl<'a> SizeSetInputs<'a> {
             Self::Mtm(value) => value.validate_current(),
         }
     }
+    pub(crate) fn break_context(self) -> &'a crate::SizeBreakContext<'a> {
+        match self {
+            Self::Garment(value) => value.break_context(),
+            Self::Mtm(value) => value.break_context(),
+        }
+    }
     pub(crate) fn contains_entity(self, identity: sc_core::ontology::EntityId) -> bool {
         match self {
             Self::Garment(value) => value.contains_entity(identity),

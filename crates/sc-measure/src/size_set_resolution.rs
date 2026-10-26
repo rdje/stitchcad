@@ -13,3 +13,5 @@ pub use transformation::{
     SizeSetTransformationError, SizeSetTransformationKind, SizeSetTransformationReadError,
     SizeSetTransformationState, SizeSetTransformationValue,
 };
+mod break_scaling;
+pub use break_scaling::{SizeBreakScaling, SizeBreakScalingInputs};

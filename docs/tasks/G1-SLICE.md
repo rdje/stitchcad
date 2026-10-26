@@ -500,26 +500,33 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4c.4.2`
   Status: `done`
-  Goal:0312 typed transformation declarations retaining authored state/evidence, label mappings and base substitution.
-  Own src/size_set_resolution/transformation.rs and transformation/ helpers, lib/module exports,
-  garment/MTM composite tests and tests/support/size_set_transformations.rs; transformation/main book,
-  decision and live/task pointers.
-  Every declaration pins actual SizeSet inputs and explicit domain; Known evidence is nonempty/distinct,
-  Assumed/Preference retain source refs, Unknown/Derived have no authored payload. No state/default coercion.
-  Label mappings name existing members, preserve vector order and exact target labels, and reject effective
-  label collisions; explicit base must be an actual member. Source inputs are never edited or sorted.
-  Own452 whole0311 task,453 whole oldest0288 lesson,284 ledger from214c80a; prove exact Git/hash/public
-  before removal. Also correct transformation page's actual §9 anchor. Focused state/domain checks/lint/fmt/book;
-  execution, profile constraints, global provenance/registry validation remain G3/G4/integration owners.
-  - [x] ROOT CAUSE (WHY + WHERE): SizeSet §9/roadmap8 require typed state/evidence; canonical state API review rc=0.
-  - [x] ADDRESSED: label/base/source/evidence state contract; garment13+MTM8 focused tests rc=0.
-  - [x] NO REGRESSION: original composite/path cases included; selected strict clippy/fmt/book rc=0.
-  Verification: native21/0; strict selected lint/fmt/book rc=0;452/453/284 whole Git/hash/public byte equality rc=0.
-  LIVE_STATUS reviewed: G1 In Progress5/18 unchanged; profile execution/approval remain later gates.
-  Commit: STITCHCAD-G1-0312. Next .4c.4.3; broad checks remain integration/pre-push.
+  Goal:0312 label/base intent; focused21/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part454.md).
+  Commit: STITCHCAD-G1-0312.
 - ID: `G1-SLICE.4c.4.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: explicit break-scaling and chart-replacement intent with canonical numeric/input bindings and original states.
+  Children: .3.1 canonical signed break/factor bindings; .3.2 explicit current replacement chart bindings.
+- ID: `G1-SLICE.4c.4.3.1`
+  Status: `done`
+  Goal:0313 bind one actual available signed break and canonical Ratio factor, without multiplying or copying values.
+  Own size_set_resolution/break_scaling.rs, transformation domain/validation/module/lib exports, size_axis/source.rs,
+  size_break/context.rs, size_set.rs and garment/MTM helpers, support/size_set_transformations.rs and composite tests.
+  Actual shared numeric inventory supplies factor; missing/role/kind mismatches refuse. Borrow original break,
+  dedicated Length delta and scalar Ratio, including all five states and zero/negative factors without coercion.
+  Unknown/Derived transformation states have no binding payload. G4 owns numeric domain/constraints/execution.
+  Own book transformation/main, decision/live/task docs,454 whole0312 task,455 oldest0289 lesson,285 ledger
+  from62aea02; prove exact whole Git/hash/public bytes before retirement. Also own456 whole closed
+  composite-review receipt from main book: preserve Git interval/hash/public before replacing chronology with
+  a retrieval pointer; retain normative matrix/examples. Focused bindings/refusals/lint/fmt/book.
+  - [x] ROOT CAUSE (WHY + WHERE): profile intent must bind canonical numeric states; source/context API check rc=0.
+  - [x] ADDRESSED: actual break/delta/Ratio refs; missing/role/kind/all-state native garment15+MTM8 rc=0.
+  - [x] NO REGRESSION: original composite/label/base cases included; selected strict lint/fmt/book rc=0.
+  Verification: native23/0; value-less scaling focused check rc=0; lib check/strict lint/fmt/book rc=0;
+  454/455/456/285 whole committed source intervals/hash/public-reader equality rc=0. LIVE_STATUS G1still5/18.
+  Commit: STITCHCAD-G1-0313. Next .3.2; broad checks remain integration/pre-push.
+- ID: `G1-SLICE.4c.4.3.2`
+  Status: `pending`
+  Goal: explicit family/current snapshot replacement chart bindings; no chart value copies, inference or execution.
 - ID: `G1-SLICE.4c.4.4`
   Status: `pending`
   Goal: immutable resolved SizeSet intent combines origin and authored transformations without applying/mutating source.

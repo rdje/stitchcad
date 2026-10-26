@@ -69,11 +69,12 @@ pub use size_set::{
 
 mod size_set_resolution;
 pub use size_set_resolution::{
-    SizeLabelMapping, SizeSetProfilePin, SizeSetProfilePinDefinition, SizeSetProfilePinError,
-    SizeSetProfilePinField, SizeSetResolutionOrigin, SizeSetResolutionOriginDefinition,
-    SizeSetResolutionOriginError, SizeSetTransformation, SizeSetTransformationDefinition,
-    SizeSetTransformationError, SizeSetTransformationKind, SizeSetTransformationReadError,
-    SizeSetTransformationState, SizeSetTransformationValue,
+    SizeBreakScaling, SizeBreakScalingInputs, SizeLabelMapping, SizeSetProfilePin,
+    SizeSetProfilePinDefinition, SizeSetProfilePinError, SizeSetProfilePinField,
+    SizeSetResolutionOrigin, SizeSetResolutionOriginDefinition, SizeSetResolutionOriginError,
+    SizeSetTransformation, SizeSetTransformationDefinition, SizeSetTransformationError,
+    SizeSetTransformationKind, SizeSetTransformationReadError, SizeSetTransformationState,
+    SizeSetTransformationValue,
 };
 
 mod size_chart;

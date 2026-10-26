@@ -48,6 +48,9 @@ impl Transformation {
                     .map_err(|_| Error::MissingMember(*member))?;
             }
             SizeSetTransformationValue::LabelMapping(mapping) => validate_labels(mapping, inputs)?,
+            SizeSetTransformationValue::BreakScaling(binding) => {
+                binding.inputs(inputs)?;
+            }
         }
         Ok(())
     }

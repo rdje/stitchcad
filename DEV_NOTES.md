@@ -3,6 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — canonical break-scaling intent
+
+0313 .4c.4.3.1 binds actual available break/dedicated Length delta/general Ratio without copied values.
+Missing break/factor and wrong role/kind refuse; all canonical states and zero/negative factors survive.
+Garment15+MTM8 pass0; selected strict lint/fmt/book0; value-less scaling observation/evaluation check0.
+454/455/456/285 whole62aea02 Git/hash/public exact0. G1still5/18; chart replacement .3.2 next. Promotion: existing SizeSet decision extended; G3/G4 own multiplication, constraints and truth; broad gates later.
+
 ## _(2026-10-26 UTC)_ — authored label and base transformation intent
 
 0312 .4c.4.2 validates exact source/domain, identity/evidence and explicit member label/base payloads.
@@ -249,15 +256,8 @@ Focused profile8798 independent distances/586 poles/2 negative controls/width wi
 pass0.398/399/400/401/262 retain whole history; no native/certificate edits, G1still5/18.
 Promotion declined: scoped derivation extends the existing midpoint fact; no policy change.
 
-## _(2026-10-26 UTC)_ — sourced inverse calls
-
-0289 .5e.3.7 adds supplied-scalar checked_atan/checked_atan2 over the certified native values.
-Actual kind order includes Boolean operands before zero-vector handling. Every argument source and
-the call source survive exact axes, cancellation, binding/readback and T1 refusal. Real upstream
-round_to/sqrt/hypot contributions verify both operands independently. Existing six call tests plus
-two inverse tests pass8/0; selected strict Clippy/fmt/book pass0.396/397/261 retain whole history.
-No kernel/certificate changes, broad/platform verdict or whole AST execution. G1still5/18.
-Promotion declined: existing numerical/provenance contracts determine this adapter.
+[Complete sourced inverse lesson](docs/history/stitchcad-devnotes-part455.md) retains
+its original kind/source/readback behavior, checks and promotion decision.
 
 [Complete native inverse lesson](docs/history/stitchcad-devnotes-part453.md) retains
 its original runtime/branch/rounding evidence, checks and promotion decision.
