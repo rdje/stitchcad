@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0319 — sixteenth immutable retention window
+## STITCHCAD-G1-0320 — SizeSet structural requirements closure
 
-48 whole27bff4f records94681B retained in28399B; public source/read/materialization exact, prior15
-backing windows unchanged.469/291 full records exact0; maintained links/current16/book align0.
-No reader/schema/cap changes. G1still5/18; SizeSet review next; capacity owner precedes another packing.
+Identity/order/base/system, axes/breaks, canonical charts/paths and immutable profile intent align.
+D234 old frontiers fixed; focused25 pass0, unchanged31 proof retained, book/navigation0.470/471/292
+whole retention exact0. .4c closes; combined .4d.2 remains; G1still5/18. Capacity followup remains independent.
 
 # Sealed archive — earlier slices
+
+| [part292](docs/history/stitchcad-changelog-part292.md) | whole0319 | 6 lines, 363 bytes, sha256:a521793d… |
 
 | [part291](docs/history/stitchcad-changelog-part291.md) | whole0318 | 6 lines, 379 bytes, sha256:03d89223… |
 

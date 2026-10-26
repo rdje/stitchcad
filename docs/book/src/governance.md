@@ -505,7 +505,7 @@ Source proof reports48 byte-identical files/0 missing-extra; public reads and ma
 Prior15 backing windows remain byte-exact. Fixed64-file bound, reader and schema are unchanged.
 
 Window15's complete prior current receipt is retained whole in `docs/history/stitchcad-devnotes-part469.md`.
-All16 admitted window slots are now used. G1-SLICE.4c.5.h16.capacity owns a bounded continuation
+All16 admitted window slots are now used. G1-SLICE.RETENTION-CAPACITY owns a bounded continuation
 before another packing is required; current record addresses/caps/immutability remain unchanged.
 The frozen `capture_window16.py` requires its original source HEAD; use the reader on later trees:
 

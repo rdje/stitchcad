@@ -4,7 +4,8 @@
 > gate **G1** (leaf `G1-SLICE.4`) and consumed by both instantiation paths at **G3**. The
 > [membership foundation](size-membership.md), chart families, axes, signed breaks and current composite input views
 > are executable. [Profile pins, origin and transformation intent](size-set-transformations.md) are available;
-> break/chart bindings and immutable intent aggregation are executable; complete-family review remains in progress. The ownership
+> break/chart bindings and immutable intent aggregation are executable; SizeSet structural review is complete.
+> Combined measurement/Ease/SizeSet signoff remains .4d. The ownership
 > question roadmap §3.4 leaves open is decided here and recorded as
 > `docs/decisions/decision_size-set-ownership.md`. Terms are in the [glossary](glossary.md).
 
@@ -74,9 +75,9 @@ the size whose instance a `.rul` table is relative to. Rules:
 
 ## 5. The chart
 
-[Garment chart observations](size-chart-observations.md) now implement individual current member/POM
-correspondences; [chart collections](size-chart-collections.md) now check exact current Design/member
-coverage. Current composite inputs join them to axes/breaks; profile transformations remain in progress.
+[Garment chart observations](size-chart-observations.md) implement current member/POM correspondence;
+[collections](size-chart-collections.md) check Design/member coverage. Composite inputs join axes/breaks;
+[immutable profile intent](size-set-transformations.md) records proposed overrides without applying them.
 
 Per member, the chart carries the garment's points of measure — the same POMs the design's measurement
 table names, with landmarks and procedures (ontology §2.1). Two rules make it useful rather than decorative:
@@ -107,10 +108,9 @@ waist+4cm and hip+5cm as separate authored breaks. Each delta refers to one cano
 record, retaining its state, source and provenance rather than copying a chart result. Both body
 measurement dimensions and garment POMs retain their explicitly declared domain.
 
-Adjacency follows the authored `members` sequence (§3). Axis association, measurement identity and
-delta are explicit: no label parsing, chart subtraction, inferred dimension, implicit zero or choice
-of first axis supplies missing data. G1-SLICE.4c.3d.1 implements this ruled key; chart/break coverage,
-path readiness and full SizeSet composition follow in separately owned children.
+Adjacency follows the authored `members` sequence (§3). Axis, measurement and delta are explicit;
+no label parsing, chart subtraction, inferred dimension, implicit zero or first-axis choice supplies
+missing data. Individual breaks, coverage and current composite/path checks are implemented below.
 
 ### Executable individual breaks — G1-SLICE.4c.3d.1
 
@@ -162,10 +162,8 @@ identities must exist and form an immediate ordered pair in `members`. Reversing
 refuses, independently of their labels or axis-value order. A same-id canonical delta replacement is
 borrowed with its actual current source/state; the earlier immutable snapshot remains unchanged.
 
-Five focused break contracts plus the five axes contracts pass, with selected strict lint/formatting
-and book build. This establishes individual declarations. Required axis/dimension inventories,
-complete adjacent-pair coverage and singleton grading refusal are implemented by the collection
-below; composite SizeSet/path inputs remain .4c.3d.3.
+Individual declarations retain their focused proof in the task records. Required dimensions, adjacent
+coverage and singleton refusals are implemented below, followed by current composite/path inputs.
 
 ### Explicit break requirements and coverage — G1-SLICE.4c.3d.2
 
@@ -214,9 +212,8 @@ context/declaration errors remain standard error sources and preserve the failin
 `declaration(cell, context)` borrows the actual authored declaration after whole-inventory validation;
 it refuses an undeclared dimension, invalid member pair or exact missing cell without a fallback.
 
-Five collection tests and the five affected declaration tests pass, with selected strict lint,
-formatting and book build. These prove current requirements/coverage and singleton refusal; composite
-SizeSet chart/path inputs, numeric execution and geometric equivalence remain .4c.3d.3 and later gates.
+Current requirements/coverage and singleton refusal have focused contract evidence. Composite inputs
+are implemented below; numeric instantiation and geometric equivalence remain G3 work.
 
 ### Composite garment SizeSet inputs — G1-SLICE.4c.3d.3.1
 
@@ -346,6 +343,8 @@ The bounded structural review keeps these requirements distinct:
 | MTM path inputs | Complete body/Ease mappings for regeneration; original grading refusal |
 | Current snapshots/identity | Shared actual inputs; cross-view aliases and replaced bindings refuse |
 | Family selection | Explicit validated view, never inferred from labels/system/member count |
+| Identity/order/base/system | Exact SizeSet pin and authored membership; quantities remain order data |
+| Profile intent | Exact selected profile, four domains/five states, immutable source/target origin |
 
 Chart/body/break structural input review is complete. Numeric execution, geometry/equivalence,
 profile precedence, storage and release remain separate. Current transformation intent is documented
@@ -414,10 +413,9 @@ axis references against the supplied inventory, so a same-id replacement with a 
 The authored order remains unchanged. Shared canonical numeric records are borrowed, never cached or
 claimed to be independent measurements.
 
-Five focused native contracts pass, with selected strict lint and formatting. These checks establish
-individual local axes; they do not certify global registry currentness, evidence truth, complete member
-points or a complete SizeSet. The complete axis/member aggregate is implemented below. Charts, breaks, resolution and path
-readiness remain separately owned.
+Individual-axis checks do not certify global registry currentness or evidence truth. Complete
+axis/member points follow below; charts/breaks, typed composite inputs and immutable profile intent
+are also implemented in this chapter and its companion. Actual instantiation stays separate.
 
 ### Complete axis/member points — G1-SLICE.4c.2.2
 
@@ -471,13 +469,13 @@ actual member and original coordinate record. Coordinate views borrow the origin
 content; no value/state/source is copied. Original nested axis/membership errors remain standard error
 sources. Matching supplied pins is local validation, not global registry currentness or approval.
 
-Five aggregate contracts plus the five individual-axis contracts pass; selected strict lint, formatting
-and book build pass. This closes the authored-axis/member-point contract. Complete charts/breaks,
-resolved profile transformations, regeneration/grading and release remain separate work.
+The authored-axis/member-point contract and current chart/break composites are implemented.
+Immutable profile intent records proposed overrides; applying them, regeneration/grading and release
+retain G3/G4 and integration owners. Original child proof receipts remain available in the task tree.
 
 The chart/body/break structural family and immutable profile transformation intent are implemented.
 Current local snapshots/coverage remain distinct from global currentness, numeric availability,
-geometry and physical truth. Combined-family review .4c.5/.4d remains pending; G3/G4 retain actual
+geometry and physical truth. SizeSet review .4c.5 is complete; combined signoff .4d remains. G3/G4 retain actual
 profile constraints, precedence and execution. See [transformation intent](size-set-transformations.md).
 
 ## 8. Size systems and what the model must express
@@ -525,9 +523,9 @@ Both paths report against the **resolved** set, which is why the report names it
 
 ## 11. Made-to-measure is a size set of one
 
-[MTM input charts](mtm-input-charts.md) now implement current single-member body/Ease correspondence
-and explicit Design-POM coverage. Composite MTM input views are implemented above; profile
-transformations, persisted ownership and actual regeneration remain later work.
+[MTM input charts](mtm-input-charts.md) implement current singleton body/Ease correspondence and
+Design-POM coverage. Composite inputs and [profile intent](size-set-transformations.md) are
+implemented; persisted ownership, actual profile resolution and regeneration remain later work.
 
 An MTM instance is a `custom` size set with a single member, whose base is that member, whose chart comes
 from body measurements taken with landmarks and procedures (ontology §2.1), and whose breaks are empty — so

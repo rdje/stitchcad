@@ -57,7 +57,7 @@ explain that distinction. Negative Ease requires explicit compression intent in 
 the supported v1 garment envelope still excludes negative-Ease execution.
 
 Continue with [garment chart observations](size-chart-observations.md) to compare authored garment
-inputs, or use the [expert annex](../annexes/mtm-input-contract.md) for identity, current-reference,
-API and verification details. The [size-set contract](size-sets.md#composite-mtm-bodyease-inputs--g1-slice4c3d32) now includes current
-composite MTM inputs with an authored axis and typed regeneration/grading checks. Those checks preserve
-original body/Ease sources; profile transformations and actual garment generation remain later work.
+inputs, or the [expert annex](../annexes/mtm-input-contract.md) for identity/current-reference/API
+details. [Composite MTM inputs](size-sets.md#composite-mtm-bodyease-inputs--g1-slice4c3d32) include an
+authored axis and typed path checks. [Immutable profile intent](size-set-transformations.md) is
+implemented; original body/Ease sources remain unchanged, while actual resolution/generation is later work.

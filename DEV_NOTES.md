@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — complete SizeSet structural requirements review
+
+0320 .4c.5 reviews identity/revision/system, labels/order/base, D70 axes, D228 signed breaks,
+canonical garment/MTM states and paths, immutable profile intent and excluded quantities. D234 older
+paragraphs still deferred completed inputs/intent; current main/member/MTM frontiers now align.
+Member12+axes5+break-coverage5+pin3 pass0; Rust unchangedfb53a44 composite31 proof retained. Book/
+rendered navigation/intent anchor0;470/471/292 whole44ec7d0 source/hash/public exact0. G1still5/18;
+.4c closes, combined .4d.2 next. Capacity goal moves unchanged to RETENTION-CAPACITY (old declaration471). Promotion: existing SizeSet decision; full CI remains pre-push/G1 integration.
+
 ## _(2026-10-26 UTC)_ — sixteenth immutable history window
 
 0319 .4c.5.h16 packs48 complete raw27bff4f records,94681B into28399B payload. Public source48/0,
@@ -226,16 +235,8 @@ test-only panic lint allowed explicitly.419/420/269/421 retain whole committed i
 public reader exact0. G1still5/18; member-coordinate aggregation/minimum axis count next .4c.2.2.
 Promotion: existing SizeSet decision extended; no new policy. Broad proof deferred to integration/push.
 
-## _(2026-10-26 UTC)_ — completion-receipt correction
-
-0296 .6.2.2.b.2.a.receipt owns D227. An unread successful commit was retried, producing a second
-0295 subject whose only delta was DEV_NOTES/MEMORY. Preflight proves that latest metadata receipt
-is unpublished and unreferenced; implementation1184214 and protected archives stay unchanged.
-Correct the latest receipt to its own0296 identity. COMMIT/book now bind success->clear->verification
-in one invocation and require terminal tool results before edits/retries. Shell syntax0 and actual
-message-hook valid0/empty1 controls pass; book0.417/418/268 retain whole source1184214 records.
-This is maintenance, with no product-code change; G1still5/18. Promotion declined: existing commit
-ordering, now made explicit at the invocation boundary. Axes .4c.2 remains the product frontier.
+[Complete receipt-correction lesson](docs/history/stitchcad-devnotes-part470.md) retains
+its original unread-result/duplicate metadata repair, checks and promotion decision.
 
 [Complete dart/notch intent lesson](docs/history/stitchcad-devnotes-part469.md) retains
 its original canonical targets/director rulings, checks and promotion decision.

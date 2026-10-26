@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0319 .4c.5.h16 packs48 committed27bff4f raw records:94681B ->28399B, old15 backing windows exact.
-- Public source48/0, full reads/materialization899 and installed48 byte comparisons0; logical addresses unchanged.
--469/291 whole27bff4f intervals/hash/public exact0; maintained links/book current16 align. Cleanup date unchanged.
-- NEXT .4c.5 SizeSet requirements/ownership review, then .4d.2. G1still5/18; no application/release claim.
-- .4c.5.h16.capacity P1 before any further packing beyond16 slots; preserve all caps/immutable bytes/addresses.
+-0320 .4c.5 closes SizeSet structural requirements/ownership review; D234 old sibling/child frontier paragraphs align.
+- Focused member12+axes5+break-coverage5+profile-pin3 pass0; unchangedfb53a44 composite31 proof retained.
+- Book/rendered navigation/intent anchor0;470/471/292 whole44ec7d0 Git intervals/hash/public exact0.
+- NEXT .4d.2 combined MeasurementTable/Ease/SizeSet acceptance; .4 remains open until signoff. G1still5/18.
+- G1-SLICE.RETENTION-CAPACITY P1 before next packing; old pending child preserved471, independent of closed SizeSet scope.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

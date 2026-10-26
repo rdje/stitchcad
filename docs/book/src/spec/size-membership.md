@@ -1,9 +1,9 @@
 # Executable size membership foundation
 
 G1-SLICE.4c.1 implements the identity, label, order, system and base-member foundation in sc-measure.
-The normative contract is [size sets §2–§4](size-sets.md), with ownership recorded separately. This
-foundation alone does not certify axes/charts/breaks. Those current input families are implemented
-separately in .4c.2/.3; resolved-profile transformations remain .4c.4. .4c.5 and .4d review the families.
+The normative contract is [size sets §2–§4](size-sets.md), with ownership recorded separately.
+Membership alone does not certify axes/charts/breaks. Current input families and
+[immutable profile intent](size-set-transformations.md) are implemented separately; .4d owns combined signoff.
 
 ## Labels, identities and authored order
 

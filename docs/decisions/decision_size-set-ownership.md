@@ -195,5 +195,6 @@ profile pins, original/resolved refs and all states. Source/candidate bindings r
 identity aliases refuse. Empty no-override and unresolved intent remain representable. Each claim
 targets original inputs; G4 owns combined conflicts/precedence/application, with no resolved result claim.
 
-G1-SLICE.4c.4.5 closes this immutable intent representation after bounded currentness/provenance
-review; four domains/five states remain distinct from G3/G4 application/conflicts/evidence truth.
+G1-SLICE.4c.4.5 closes immutable intent; .4c.5 closes the SizeSet structural family after requirements review.
+Four domains/five states remain distinct from G3/G4 application/conflicts/evidence truth. Combined
+measurement/Ease/SizeSet signoff .4d remains separate.

@@ -356,7 +356,7 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `STITCHCAD-G1-0031`
 
 - ID: `G1-SLICE.4c`
-  Status: `in_progress`
+  Status: `done`
   Children: .4c.1 (membership), .4c.2 (axes), .4c.3 (chart/breaks), .4c.4 (resolution), .4c.5 (review).
   Goal: SizeSet identity/revision/system, authored ordered labels/base, chart/state/provenance, adjacent
   breaks and axes; immutable profile resolution/transformation intent per canonical SizeSet decision.
@@ -534,33 +534,37 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0318.
 - ID: `G1-SLICE.4c.5.h16`
   Status: `done`
-  Goal:0319 pack48 committed raw records from27bff4f before next mandatory3-record seal would exceed63/64.
-  Own new capture_window16.py frozen producer/target fixture, window16 manifest/catalog/payload and master append,
-  exact48 source retirement and all maintained Markdown link retargets (never sealed records/old producers).
-  Public source/read/materialization must reproduce whole files;15 prior backing windows byte-exact; no cap/schema change.
-  Own469 whole0318 task/oldest0295 lesson/whole prior current-window15 book receipt and291 ledger from27bff4f,
-  source/hash/public before retirement; book governance current16 and live/task pointers. Fresh checklist evidence
-  in every retargeted task file. Do not reset cleanup date; generated fixture stays local and ignored.
-  Capacity:16 is the final admitted window slot. Child .capacity owns a bounded forward protocol before any
-  later transaction needs window17; preserve current immutable controls/bytes and fixed retained/working budgets.
-  - [x] ROOT CAUSE (WHY + WHERE): source27bff4f has63/64 working files; next mandatory seal would exceed; reader census rc=0.
-  - [x] ADDRESSED: capture_window16.py produces48 source-identical whole files/public/materialization899; installed48 bytes exact rc=0.
-  - [x] NO REGRESSION: prior15 backing files/reader/schema/old producers unchanged;469/291 whole source/public/book rc=0.
-  Verification: public prove-source48/0; verify-retention901 logical/18 working; actual root48 reads/materialized
-  files exact to Git; bounds unchanged, book rc=0. LIVE_STATUS reviewed G1 In Progress5/18 unchanged.
-  Commit: STITCHCAD-G1-0319. Frozen producer requires27bff4f; next .4c.5, capacity child before another pack.
-- ID: `G1-SLICE.4c.5.h16.capacity`
+  Goal:0319 window16 whole48/source/read/materialization/prior15/book0; [whole scope/proofs](../history/stitchcad-devnotes-part470.md).
+  Commit: STITCHCAD-G1-0319.
+- ID: `G1-SLICE.RETENTION-CAPACITY`
   Status: `pending`
   Goal: P1 design/verify bounded retention continuation before the next packing after16; current schema refuses17.
   Preserve immutable records/manifests, logical addresses and all independent caps; do not silently raise bounds.
   Trigger: before future required seal exceeds64 with16 windows registered; product slices proceed meanwhile.
+  Origin: renamed pending maintenance followup from .4c.5.h16.capacity, whose whole declaration remains
+  [retained471](../history/stitchcad-devnotes-part471.md); independent of completed product-review acceptance.
 - ID: `G1-SLICE.4c.5`
-  Status: `pending`
-  Goal: review every size-sets/ownership requirement and deferred execution/proof boundary; milestone
-  checks and book sync before closing .4c structurally, then combined measurement/Ease/SizeSet .4d review.
-  Verification: `pending`
-  Commit: `pending`
-
+  Status: `done`
+  Goal:0320 SizeSet requirements/ownership structural review; close .4c, keep .4d.2 combined signoff separate.
+  Own main SizeSet, membership, MTM and transformation chapter frontiers, existing SizeSet decision,
+  PLANNING/live/task docs. D234 old child receipt/status paragraphs still defer completed inputs/intent.
+  Verify identity/revision/system, explicit labels/order/base, chart/body-Ease canonical state/provenance,
+  D70 axes/member points, D228 adjacent axis/POM breaks, typed paths and immutable profile intent.
+  Quantities excluded; standards content, global registry, applied geometry/equivalence, real profile
+  constraints/precedence, persistence/approvals retain their named later owners. No first-class Design/store claim.
+  Own470 whole0319 task/oldest0296 lesson and whole stale book receipt paragraphs;292 whole ledger from44ec7d0.
+  Prove exact whole committed intervals/hash/public before replacement; no feature/example loss or cap increase.
+  Own471 whole old pending capacity declaration from44ec7d0 and route its unchanged goal to independent
+  G1-SLICE.RETENTION-CAPACITY, so a future hygiene trigger does not remain under completed product review.
+  Own corresponding governance/current-pointer retargets; preserve historical IDs/bytes in471.
+  Small current membership/axes/break-coverage/profile-pin check plus book; reuse unchanged0317 composite31
+  and child numeric-state proofs. Full CI remains explicit pre-push/G1 integration owner under director ruling.
+  - [x] ROOT CAUSE (WHY + WHERE): canonical SizeSet requirements versus current APIs/book; D234 stale receipt scopes reproduced rc=0.
+  - [x] ADDRESSED: cargo test -p sc-measure selects membership12/axes5/breaks5/profile-pin3,25 passed rc=0; current book fronts align.
+  - [x] NO REGRESSION: Rust diff fb53a44 empty/composite31 proof retained; book/rendered main/member/MTM nav+intent anchor rc=0.
+  Verification:470 twelve whole committed intervals/471 whole old pending declaration/292 ledger Git/hash/public equality rc=0.
+  LIVE_STATUS G1 In Progress5/18 unchanged. All .4c acceptance covered structurally; actual application/storage/approval separate.
+  Commit: STITCHCAD-G1-0320; next .4d.2 combined acceptance. Independent capacity goal retains P1 trigger, no closed-parent debt.
 - ID: `G1-SLICE.4d`
   Status: `pending`
   Children: `.4d.1` book publication/alignment, `.4d.2` combined structural exit review.

@@ -1091,6 +1091,18 @@ retained468; update current frontier while preserving G3/G4 execution/global/phy
 - [x] ADDRESSED0318: current frontier corrected; prior receipt byte-exact in468; book/five API anchors/nav rc=0.
 - [x] NO REGRESSION0318: Rust identical tofb53a44/31-test proof reused; whole D229-D232 retained139 rc=0.
 
+## D234 — older sizing paragraphs still defer implemented structural contracts
+
+At44ec7d0, main size-set break/axis receipts defer composite inputs, and chart/membership/MTM
+frontiers defer or blur implemented profile intent with G4 application. Reproduce: rg follow/remain
+in those chapters against current SizeSet input/intent APIs. Impact: contradictory reader scope.
+Owner: G1-SLICE.4c.5, P2 fixed0320 in complete-family review. Retain whole prior receipts470,
+update current status/links and preserve all normative/example content plus G3/G4 execution boundaries.
+
+- [x] ROOT CAUSE0320: main/member/MTM old frontier paragraphs defer completed inputs/intent; source comparison rc=0.
+- [x] ADDRESSED0320: current frontiers aligned; complete old paragraphs preserved470; focused25/book/navigation rc=0.
+- [x] NO REGRESSION0320: Rust unchangedfb53a44/composite31 proof retained;470/471/292 whole source/public exact rc=0.
+
 ## Active continuity followup
 
 - **D223** — optional ledger continuity modes retain raw-file/closed-graph assumptions.
@@ -1178,4 +1190,4 @@ retained468; update current frontier while preserving G3/G4 execution/global/phy
 - [x] ROOT CAUSE (WHY + WHERE): source27bff4f mandatory seals would exceed63/64 working files; census rc=0.
 - [x] ADDRESSED: window16 source48/0/public/materialization exact; maintained links retarget headings rc=0.
 - [x] NO REGRESSION: prior15 backing files and current139 defect content unchanged; whole469/291/book rc=0.
-Capacity owner: G1-SLICE.4c.5.h16.capacity, P1 before any next packing beyond16 admitted slots; no current product block.
+Capacity owner: G1-SLICE.RETENTION-CAPACITY, P1 before any next packing beyond16 admitted slots; no current product block.
