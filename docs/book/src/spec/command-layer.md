@@ -212,12 +212,27 @@ piece, current anchor and profile obligations before accepting the new entity.
 
 The focused construction-payload target checks both identities, exact anchors/all bindings and
 two explicit allocated identities without caching one in the request. The earlier measurement/
-material target stays green. Four mutation schemas are available; handlers remain pending.
+material target stays green. All five declared mutation schemas are now available; handlers remain pending.
 
 Director ruling2026-10-26 resolves D226: SplitSeamSpan splits the paired sewing correspondence
-at explicit cuts on both sides. Its schema remains G1-SLICE.6.2.2.b.2.b, after the unblocked SizeSet
-axes work. Actual execution must preserve cut/reference/ease/identity obligations; no split outcome
-or implicit correspondence mapping is supplied by the current payloads.
+at explicit cuts on both sides. G1-SLICE.6.2.2.b.2.b implements `SplitSeamSpan::new(span, side_a, side_b)`.
+The target is a canonical SeamSpan identity. Both cuts are explicit `EdgeAnchor` values retaining their
+original persistent edge and exact rational source-frame parameter. `cut(SeamSideId::A/B)` returns the
+named cut unchanged; unequal parameters are allowed in the request, and swapping sides changes intent.
+No missing cut is synthesized, mirrored, projected or inferred from the other side.
+
+For example, an A cut at2/3 on one source edge and B cut at1/5 on another retains both fractions;
+only actual sewing/geometry checks can establish whether they correspond. Equal source anchors do not
+establish equal physical copies: the canonical span supplies the copy identities. Construction also
+retains endpoint parameters without claiming they are valid interior cuts of the actual span.
+
+The actual target supplies copy/range ownership, direction, signed ease/distribution and semantic
+stops. The request neither duplicates those records nor supplies new result identities. Before any
+mutation, execution must resolve the current span and cuts, establish strict interior paired cuts,
+preserve reference/ease/stop obligations and allocate lineage-preserving outputs atomically. The payload
+does not edit a drafting edge or produce a split result. Four construction tests and the three existing
+measurement/material tests pass; selected strict lint/fmt and book checks pass. The canonical mutation
+variant supplies CommandId::SplitSeamSpan; no caller-provided command identity can retag it.
 
 ## 3. Atomic groups, and the granularity of undo
 

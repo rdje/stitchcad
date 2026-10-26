@@ -1,5 +1,5 @@
 //! Canonical mutation intents; concrete payloads determine their own command identity.
-use super::{AddNotch, CloseDart, CommandId, CommandMutationContext};
+use super::{AddNotch, CloseDart, CommandId, CommandMutationContext, SplitSeamSpan};
 use crate::{
     ontology::{EntityId, MaterialAssignment},
     value::LengthDeclaration,
@@ -169,6 +169,8 @@ impl AssignMaterial {
 /// Implemented canonical mutation payload schemas; this is not handler availability.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum MutationPayload {
+    /// Split a canonical sewing correspondence with explicit cuts on both sides.
+    SplitSeamSpan(SplitSeamSpan),
     /// Set a measurement's canonical length declaration.
     ChangeMeasurement(ChangeMeasurement),
     /// Set explicit material intent on the selected pieces.
@@ -184,6 +186,7 @@ impl MutationPayload {
     #[must_use]
     pub const fn command_id(&self) -> CommandId {
         match self {
+            Self::SplitSeamSpan(_) => CommandId::SplitSeamSpan,
             Self::ChangeMeasurement(_) => CommandId::ChangeMeasurement,
             Self::AssignMaterial(_) => CommandId::AssignMaterial,
             Self::CloseDart(_) => CommandId::CloseDart,

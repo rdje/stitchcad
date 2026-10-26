@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — paired sewing split intent
+
+0299 .6.2.2.b.2.b implements the D226 SplitSeamSpan request: actual canonical span identity plus two
+explicit named A/B EdgeAnchors. Each original edge/rational parameter survives; no inferred mapping,
+result id or copied ease/stops. Canonical copies/ranges/direction/ease/stops and interior paired cuts
+remain registry/geometry/execution obligations. Native construction4+prior payload3 pass0; strict
+selected lint/fmt/census17/5/5/0/book0.424/425/271 whole5e15254 Git/hash/public bytes retained exactly.
+All five mutation schemas now available; no handler or split result claim. G1still5/18. Next .6.2.2.c
+other command classes. Promotion: existing command decision extended; no new policy. Broad gate deferred.
+
 ## _(2026-10-26 UTC)_ — complete explicit member points
 
 0298 .4c.2.2 validates exact membership/axis pins, >=1 authored axis, distinct metadata/names and one
@@ -281,19 +291,8 @@ as pipe paragraphs after blank table breaks. Join all original rows/cells under 
 rendered family/order/four-cell checks now pass0. Whole0274/old built-in lesson/ledger365/366/247
 retain exact Git/hash/public bytes. Promotion declined: existing static owner/role/source contracts.
 
-## _(2026-10-26 UTC)_ — checked runtime execution sequence and bounded frontier
-
-0274 .5e.2.2 reviews actual normalized/checked expression, statement and recipe owners before
-joining the sourced value primitives. Next: per-node kind/role certificates, bounded sourced AST
-execution, then actual declaration-order statements and atomic/replay acceptance. Current expression
-proof retains root kind/dependencies; supplied conditional kinds are not a complete branch proof.
-Remaining canonical/derived source, trig resource/implementation and geometry obligations stay
-explicit. No replacement backend, precision cutoff or whole runtime is introduced by this plan.
-
-The execution frontier is moved byte-exact into its linked sibling before more task growth; main
-task/routes/map remain aligned. Whole0273/unary lesson/ledger retain363/364/246 with exact Git/hash/
-public reads. Focused book render passes0; no code changed or new runtime test verdict claimed.
-Promotion declined: existing checked-owner/static-before-value/atomic and numerical source contracts.
+[Complete checked runtime-sequence lesson](docs/history/stitchcad-devnotes-part425.md) retains
+its original bounded execution ownership, source obligations, checks and promotion decision.
 
 [Complete lazy supplied-value conditional lesson](docs/history/stitchcad-devnotes-part423.md) retains
 its original kind/laziness/source/refusal behavior, checks and promotion decision.

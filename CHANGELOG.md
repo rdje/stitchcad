@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0298 — complete explicit axis/member points
+## STITCHCAD-G1-0299 — paired sewing split intent
 
-SizeAxes requires authored axes and complete distinct current member coordinates, including singletons.
-Sparse grids remain explicit; actual member/source records are borrowed. Focused aggregate5+axis5/0,
-selected strict lint/fmt/book0. Whole422/423/270 retention exact; G1 remains5/18, paired split schema next.
+SplitSeamSpan preserves the canonical span target and both explicit A/B source-frame cuts under D226.
+All five mutation schemas available; handlers remain pending. Native construction4+payload3/0,
+selected strict lint/fmt/census17/5/5/0/book0; whole424/425/271 retention exact. G1 remains5/18.
 
 # Sealed archive — earlier slices
+
+| [part271](docs/history/stitchcad-changelog-part271.md) | whole0298 | 6 lines, 377 bytes, sha256:c6d24c13… |
 
 | [part270](docs/history/stitchcad-changelog-part270.md) | whole0297 | 6 lines, 350 bytes, sha256:43dce1b8… |
 

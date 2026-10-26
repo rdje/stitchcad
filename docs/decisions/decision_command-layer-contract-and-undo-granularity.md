@@ -98,5 +98,8 @@ later bus owners. The focused native3/0 target checks those payload boundaries.
 0295 .6.2.2.b.2.a adds CloseDart's canonical target and AddNotch's anchor/profile creation fields,
 with an explicitly bus-supplied new identity; native construction2/0 and prior payload3/0 pass.
 Director2026-10-26 resolves D226: SplitSeamSpan splits the sewing correspondence at explicit cuts
-on both sides. Its schema follows .4c.2; execution preserves actual ease/stops/reference/identity
-obligations. Ruling narrows the previously ambiguous command meaning; no handler is claimed.
+on both sides.0299 .6.2.2.b.2.b supplies the canonical span identity and explicit named A/B EdgeAnchors.
+Original edge/parameter frames survive without inferred correspondence or result identities. The target
+supplies copies, direction, ease and stops; their current validation and lineage-preserving atomic split
+remain execution obligations. Native construction4/0 plus prior payload3/0 pass. All five mutation
+schemas are present; no handler, geometric conservation or authorization is claimed.

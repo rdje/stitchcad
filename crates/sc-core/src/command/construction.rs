@@ -1,5 +1,44 @@
 //! Construction intents reference canonical content; actual geometry and registry checks follow.
-use crate::ontology::{EdgeAnchor, EntityId, NotchDefinition, NotchProfileBindings};
+use crate::ontology::{EdgeAnchor, EntityId, NotchDefinition, NotchProfileBindings, SeamSideId};
+
+/// Split a canonical sewing correspondence at explicit source-frame anchors on both named sides.
+/// The original span supplies physical copies, ranges, direction, ease and stops. This intent does
+/// not allocate result identities or assume that equal parameters imply sewing correspondence.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct SplitSeamSpan {
+    span: EntityId,
+    side_a: EdgeAnchor,
+    side_b: EdgeAnchor,
+}
+
+impl SplitSeamSpan {
+    /// Retain both explicit cuts without changing either original edge/parameter frame.
+    /// Current span/copy ownership, strict interior cuts, paired correspondence and ease/stop/lineage
+    /// preservation require actual registry and geometric validation before execution can mutate.
+    #[must_use]
+    pub const fn new(span: EntityId, side_a: EdgeAnchor, side_b: EdgeAnchor) -> Self {
+        Self {
+            span,
+            side_a,
+            side_b,
+        }
+    }
+
+    /// Canonical sewing correspondence to resolve; this is not a drafting-edge split target.
+    #[must_use]
+    pub const fn span(self) -> EntityId {
+        self.span
+    }
+
+    /// Exact anchor for the named canonical side, without direction/reflection remapping.
+    #[must_use]
+    pub const fn cut(self, side: SeamSideId) -> EdgeAnchor {
+        match side {
+            SeamSideId::A => self.side_a,
+            SeamSideId::B => self.side_b,
+        }
+    }
+}
 
 /// Request closure of the named canonical dart, using its held operation, intake and references.
 /// No caller-copied geometry or resolved intake substitutes for that canonical content.

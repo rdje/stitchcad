@@ -6,7 +6,7 @@
 mod construction;
 mod context;
 mod payload;
-pub use construction::{AddNotch, CloseDart};
+pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
     DesignRevision,
