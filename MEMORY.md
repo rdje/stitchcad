@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0310 .4c.3e.2 closes chart/body/break structural input scope after D230/D231 integration repairs.
-- Main/companion book and decision align; global/numeric/physical/profile/storage/approval boundaries explicit.
-- Rust unchanged since7618d20 focused17-test proof; book/three exact rendered anchors0. .4c.3/.3e complete.
-- NEXT .4c.4: inspect pinned profile/version/transformation contracts and own bounded immutable intent children.
--448/449/282 whole19dbadc Git/hash/public exact0.0309/19dbadc fixture-plan13-child/5-refusal/omission-red checks0.
+-0311 .4c.4.1 adds exact selected profile/schema/content pins and immutable source/resolved origin.
+- Current source pin and target nonaliasing rechecked against actual garment/MTM input records; no source mutation.
+- Focused pin3+garment8+MTM7 pass0; selected strict lint/fmt/book0. G4 grammar/registry/execution separate.
+- NEXT .4c.4.2: authored transformation states/evidence, explicit label mappings and base substitution.
+-450/451/283 whole5a87ed0 Git interval/hash/public exact0. .4c.3/.3e structurally complete.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

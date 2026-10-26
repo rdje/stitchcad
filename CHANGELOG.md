@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0310 — chart/body/break structural scope closure
+## STITCHCAD-G1-0311 — selected profile pin and immutable SizeSet origin
 
-Current chart/body/axis/break/composite contracts and proof boundaries align after D230/D231 repairs.
-Rust unchanged since focused17-test evidence; book/three rendered target anchors0, whole448/449/282 retention exact.
-.4c.3/.3e closes structurally; G1 remains5/18. Pinned profile transformation intent .4 next.
+Exact profile/schema/content labels and source/resolved/provenance metadata preserve original inputs.
+Current source and target namespace checks pass pin3+garment8+MTM7; selected lint/fmt/book0.
+450/451/283 whole5a87ed0 retention exact0. G1still5/18; authored transformation payloads next.
 
 # Sealed archive — earlier slices
+
+| [part283](docs/history/stitchcad-changelog-part283.md) | whole0310 | 6 lines, 381 bytes, sha256:e73fcf61… |
 
 | [part282](docs/history/stitchcad-changelog-part282.md) | whole0309 | 6 lines, 401 bytes, sha256:378f9ec8… |
 

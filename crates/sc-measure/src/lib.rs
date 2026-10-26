@@ -67,6 +67,12 @@ pub use size_set::{
     SizeSetInputs, SizeSetSnapshot,
 };
 
+mod size_set_resolution;
+pub use size_set_resolution::{
+    SizeSetProfilePin, SizeSetProfilePinDefinition, SizeSetProfilePinError, SizeSetProfilePinField,
+    SizeSetResolutionOrigin, SizeSetResolutionOriginDefinition, SizeSetResolutionOriginError,
+};
+
 mod size_chart;
 pub use size_chart::{
     SizeChartContext, SizeChartError, SizeChartObservation, SizeChartObservationDefinition,

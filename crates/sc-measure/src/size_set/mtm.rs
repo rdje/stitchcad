@@ -103,6 +103,18 @@ impl<'a> MtmSizeSetInputs<'a> {
         )?;
         Ok(())
     }
+    pub(crate) fn contains_entity(self, identity: sc_core::ontology::EntityId) -> bool {
+        identity == self.chart.id()
+            || self.chart_context.contains(identity)
+            || self.break_context.contains_entity(identity)
+            || self
+                .breaks
+                .definition()
+                .breaks
+                .iter()
+                .any(|value| value.definition().id == identity)
+    }
+
     /// Require complete body/Ease mappings for regeneration; always retain MTM's typed grading refusal.
     /// Numeric body-plus-Ease execution, physical fit, profile policy and approval remain separate.
     /// # Errors

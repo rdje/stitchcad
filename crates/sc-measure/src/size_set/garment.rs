@@ -97,6 +97,18 @@ impl<'a> GarmentSizeSetInputs<'a> {
         Ok(())
     }
 
+    pub(crate) fn contains_entity(self, identity: sc_core::ontology::EntityId) -> bool {
+        identity == self.chart.id()
+            || self.chart_context.contains(identity)
+            || self.break_context.contains_entity(identity)
+            || self
+                .breaks
+                .definition()
+                .breaks
+                .iter()
+                .any(|value| value.definition().id == identity)
+    }
+
     /// Require current structural chart coverage, and additionally complete break coverage for grading.
     /// Missing breaks do not block regeneration. Numeric availability, actual recipe/grade execution,
     /// geometry/equivalence, profile policy and release approval remain separate obligations.

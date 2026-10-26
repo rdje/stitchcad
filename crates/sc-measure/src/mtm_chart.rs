@@ -93,7 +93,7 @@ impl<'a> MtmChartContext<'a> {
     pub(crate) fn set_ids(&self) -> impl Iterator<Item = EntityId> + '_ {
         self.sets.keys().copied()
     }
-    fn contains(&self, id: EntityId) -> bool {
+    pub(crate) fn contains(&self, id: EntityId) -> bool {
         self.membership.reference().id == id
             || self
                 .membership

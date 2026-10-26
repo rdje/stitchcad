@@ -3,6 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — selected profile pin and immutable SizeSet origin
+
+0311 .4c.4.1 retains exact distinct profile/schema/content labels, with G4 validation explicit.
+Origin checks actual source revision and separate target against garment/MTM record identities;
+no source mutation, allocator or transformed output. Pin3+garment8+MTM7 pass0; strict lint/fmt/book0.
+450/451/283 whole5a87ed0 Git/hash/public exact0. G1still5/18; .4.2 payloads next. Promotion: existing SizeSet decision; broad checks remain integration/pre-push.
+
 ## _(2026-10-26 UTC)_ — chart/body/break structural scope closure
 
 0310 .4c.3e.2 reviews roadmap3.4 and canonical membership/axis/chart/body-Ease/break/composite
@@ -255,15 +262,8 @@ and strict lint diagnosed both, corrected before final focused passes.394/395/26
 whole history. Source propagation/AST/platform remain later owners; G1still5/18.
 Promotion: existing atan decision updated; no new cross-cutting doctrine.
 
-## _(2026-10-26 UTC)_ — bounded native inverse algorithm plan
-
-0287 .5d.1.2.2.2.b.2.c admits576-bit/five-half-angle/64-term atan/atan2 after source-gating the
-complete inverse witness. One Newton floor root plus an algebraic upper enclosure per step gives
-fixed work; proved13 Newton divisions, turn width<2^-564, magnitudes<2^1154. Actual signed branches,
-axes/negative rounded endpoint and private256-bit slope remain explicit. Focused oracle14/16,
-zero-vector2/root4/insufficient2 checks pass0. Native code next; no runtime/platform verdict claimed.
-392/393/259 retain whole prior task/scalar lesson/ledger. Curated-map styling removes36 bytes with
-all text/path/order exact; new record fits fixed cap. Promotion: decision_atan-runtime.md owns proof.
+[Complete bounded inverse-plan lesson](docs/history/stitchcad-devnotes-part451.md) retains
+its admitted precision/iterations/workspace/sign/error derivations, checks and promotion decision.
 
 [Complete inverse-population closure lesson](docs/history/stitchcad-devnotes-part449.md) retains
 its full450-chunk/source/digest/compact-witness evidence, checks and promotion decision.

@@ -481,28 +481,50 @@ metadata signoff unchanged; the named table slice follows.
   Commit: STITCHCAD-G1-0309.
 - ID: `G1-SLICE.4c.3e.2`
   Status: `done`
-  Goal:0310 chart/body/break/currentness scope closure after D230/D231 repairs; profiles remain .4.
-  Own the relevant book scope matrix, SizeSet decision and live/task pointers. Retain448 whole0309 task,
-  449 oldest0286 complete inverse lesson and282 ledger from19dbadc, exact whole Git/hash/public before removal.
-  Review roadmap3.4, chart/MTM/member/axes/break/composite public contracts and original focused results.
-  Focused book/source/link checks; no unchanged native/mutation/kernel campaign repetition or full CI.
-  Acceptance0310:
-  - [x] ROOT CAUSE0310: roadmap3.4 and chart/body/axis/break/composite public scope reviewed; stale frontier-pattern rg on three companion pages rc=1/no matches after D230, as expected.
-  - [x] ADDRESSED0310: git diff --quiet 7618d20 HEAD and HEAD/worktree for crates/sc-measure both rc=0; unchanged focused17-test code proof applies without repetition.
-  - [x] NO REGRESSION0310: book rc=0; rg exact rendered unified/garment/MTM anchor ids each found, rc=0. Profile/global/numeric/physical/storage/approval boundaries stay explicit.
-  - [x] LOCKSTEP0310:448/449/282 whole19dbadc Git/hash/public exact rc=0; main/companion book and decision/live pointers align. .3 chart/body/break scope closes; .4/.5/.4d remain.
-  Promotion: existing SizeSet decision extended with scope boundary. Commit: STITCHCAD-G1-0310.
-
-
+  Goal:0310 chart/body/break scope closes; unchanged-code/book/anchor checks0; [whole scope/proofs](../history/stitchcad-devnotes-part450.md).
+  Commit: STITCHCAD-G1-0310.
 
 - ID: `G1-SLICE.4c.4`
-  Status: `pending`
+  Status: `in_progress`
   Goal: immutable resolved SizeSet/profile transformation intent, pinned Design reference/profile revision,
   typed label mapping/break scaling/base substitution/chart replacement with state/evidence provenance.
   Acceptance: new resolved object retains original reference and records transformation; no in-place
   mutation. Execution, precedence/hard restrictions, equivalence and release approval retain later owners.
   Verification: `pending`
   Commit: `pending`
+
+- ID: `G1-SLICE.4c.4.1`
+  Status: `done`
+  Goal:0311 exact selected profile/schema/content labels and immutable source/resolved SizeSet origin metadata.
+  Paths: crates/sc-measure/src/size_set_resolution.rs;crates/sc-measure/src/size_set_resolution/;
+  crates/sc-measure/src/size_set.rs;crates/sc-measure/src/size_set/;crates/sc-measure/src/lib.rs;
+  crates/sc-measure/src/size_chart_collection.rs;crates/sc-measure/src/mtm_chart.rs;
+  crates/sc-measure/tests/size_set_profile_pin_contract.rs; garment/MTM composite tests;
+  docs/book/src/spec/size-set-transformations.md;book SUMMARY/status/main/decision/live docs.
+  Roadmap8's schema/content versions stay distinct and opaque here; G4 owns grammar/registry/profile validation.
+  Source reference must match actual current inputs; allocated resolved identity cannot alias known source entities
+  or provenance. No allocator, transformed output, numeric/default/profile resolution or approval claim.
+  Own450 whole0310 task,451 oldest0287 lesson and283 ledger from5a87ed0; whole Git/hash/public before retirement.
+  Focused pin/origin and affected composite tests, selected strict lint/fmt/book.
+  - [x] ROOT CAUSE (WHY + WHERE): roadmap8 separates schema/content; existing symbolic bindings stay G4-deferred; API check rc=0.
+  - [x] ADDRESSED: exact pins/origin refuse stale source and input/provenance target aliases; native18 rc=0.
+  - [x] NO REGRESSION: affected garment8/MTM7 included; strict selected lint/fmt/book rc=0.
+  Verification: profile3+garment8+MTM7 contracts18/0; cargo check/lib, strict clippy and fmt rc=0;
+  book rc=0;450/451/283 whole source intervals/hash/public-reader byte equality rc=0.
+  LIVE_STATUS reviewed: G1 In Progress5/18 unchanged; G0 closure unapproved, later gates not started.
+  Commit: STITCHCAD-G1-0311. Next .4c.4.2; broad verification remains integration/pre-push.
+- ID: `G1-SLICE.4c.4.2`
+  Status: `pending`
+  Goal: typed transformation declarations retaining authored state/evidence, explicit label mappings and base substitution.
+- ID: `G1-SLICE.4c.4.3`
+  Status: `pending`
+  Goal: explicit break-scaling and chart-replacement intent with canonical numeric/input bindings and original states.
+- ID: `G1-SLICE.4c.4.4`
+  Status: `pending`
+  Goal: immutable resolved SizeSet intent combines origin and authored transformations without applying/mutating source.
+- ID: `G1-SLICE.4c.4.5`
+  Status: `pending`
+  Goal: bounded profile intent/currentness/provenance scope review; actual G4 precedence/resolution stays separate.
 
 - ID: `G1-SLICE.4c.5`
   Status: `pending`

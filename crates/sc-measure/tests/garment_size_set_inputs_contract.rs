@@ -365,3 +365,89 @@ fn explicit_garment_family_does_not_infer_mtm_from_custom_singleton_membership()
         },
     );
 }
+
+#[test]
+fn resolution_origin_pins_actual_source_and_separate_target_without_mutating_inputs() {
+    let f = Fixture::new(MeasurementKind::Garment);
+    let before = f.membership.clone();
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let inputs = GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("actual garment inputs")
+                .into();
+            let authored = SizeSetResolutionOriginDefinition {
+                source: f.membership.reference(),
+                profile: SizeSetProfilePin::new(SizeSetProfilePinDefinition {
+                    profile_id: "acme-cmt-pt".to_owned(),
+                    schema_version: "2.0".to_owned(),
+                    content_version: "1.3.0".to_owned(),
+                })
+                .expect("selected pin"),
+                resolved: SizeSetReference {
+                    id: id(2000),
+                    revision: sc_units::Count::new(0),
+                },
+                provenance: id(3000),
+            };
+            let origin =
+                SizeSetResolutionOrigin::new(authored.clone(), inputs).expect("explicit origin");
+            assert_eq!(origin.definition(), &authored);
+            assert_eq!(origin.validate_current(inputs), Ok(()));
+            let mut stale = authored;
+            stale.source.revision = sc_units::Count::new(4);
+            assert_eq!(
+                SizeSetResolutionOrigin::new(stale.clone(), inputs),
+                Err(SizeSetResolutionOriginError::SourceMismatch {
+                    expected: stale.source,
+                    actual: f.membership.reference(),
+                })
+            );
+        },
+    );
+    assert_eq!(f.membership, before);
+}
+
+#[test]
+fn resolved_identity_cannot_alias_any_supplied_garment_namespace_or_its_provenance() {
+    let f = Fixture::new(MeasurementKind::Garment);
+    with_parts(
+        &f,
+        Options {
+            complete_breaks: true,
+            ..Options::default()
+        },
+        |chart, chart_context, breaks, break_context| {
+            let inputs = GarmentSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("actual garment inputs")
+                .into();
+            for identity in [
+                1, 2, 3, 4, 10, 11, 12, 13, 100, 101, 102, 103, 150, 151, 200, 201, 300, 301, 400,
+                500, 600, 700, 701, 702, 703, 800, 805, 3000,
+            ] {
+                let authored = SizeSetResolutionOriginDefinition {
+                    source: f.membership.reference(),
+                    profile: SizeSetProfilePin::new(SizeSetProfilePinDefinition {
+                        profile_id: "profile".to_owned(),
+                        schema_version: "schema".to_owned(),
+                        content_version: "content".to_owned(),
+                    })
+                    .expect("explicit pin"),
+                    resolved: SizeSetReference {
+                        id: id(identity),
+                        revision: sc_units::Count::new(0),
+                    },
+                    provenance: id(3000),
+                };
+                assert_eq!(
+                    SizeSetResolutionOrigin::new(authored, inputs),
+                    Err(SizeSetResolutionOriginError::DuplicateIdentity(id(
+                        identity
+                    ))),
+                    "identity {identity}"
+                );
+            }
+        },
+    );
+}

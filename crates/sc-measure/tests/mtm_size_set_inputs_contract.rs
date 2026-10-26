@@ -322,3 +322,51 @@ fn unified_mtm_family_keeps_original_paths_and_canonical_borrows() {
         },
     );
 }
+
+#[test]
+fn mtm_resolution_origin_preserves_source_and_refuses_body_ease_and_axis_aliases() {
+    let f = Fixture::new();
+    let before = f.membership.clone();
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let inputs = MtmSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                .expect("actual singleton inputs")
+                .into();
+            let authored = SizeSetResolutionOriginDefinition {
+                source: f.membership.reference(),
+                profile: SizeSetProfilePin::new(SizeSetProfilePinDefinition {
+                    profile_id: "acme-cmt-pt".to_owned(),
+                    schema_version: "2.0".to_owned(),
+                    content_version: "1.3.0".to_owned(),
+                })
+                .expect("selected pin"),
+                resolved: SizeSetReference {
+                    id: id(2000),
+                    revision: sc_units::Count::new(0),
+                },
+                provenance: id(3000),
+            };
+            let origin =
+                SizeSetResolutionOrigin::new(authored.clone(), inputs).expect("new target");
+            assert_eq!(origin.definition(), &authored);
+            assert_eq!(origin.validate_current(inputs), Ok(()));
+            for identity in [
+                1, 2, 3, 10, 11, 12, 13, 14, 20, 23, 24, 25, 30, 31, 40, 41, 50, 51, 60, 70, 80,
+                81, 3000,
+            ] {
+                let mut alias = authored.clone();
+                alias.resolved.id = id(identity);
+                assert_eq!(
+                    SizeSetResolutionOrigin::new(alias, inputs),
+                    Err(SizeSetResolutionOriginError::DuplicateIdentity(id(
+                        identity
+                    ))),
+                    "identity {identity}"
+                );
+            }
+        },
+    );
+    assert_eq!(f.membership, before);
+}

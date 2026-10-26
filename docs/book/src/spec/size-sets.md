@@ -3,7 +3,8 @@
 > **Status:** normative specification, gate **G0** (roadmap §3.4, §7.5, §8). Implemented by `sc-measure` at
 > gate **G1** (leaf `G1-SLICE.4`) and consumed by both instantiation paths at **G3**. The
 > [membership foundation](size-membership.md), chart families, axes, signed breaks and current composite input views
-> are executable; profile transformations and complete-family review remain in progress. The ownership
+> are executable; [profile pins/origin](size-set-transformations.md) are available; transformation
+> payloads and complete-family review remain in progress. The ownership
 > question roadmap §3.4 leaves open is decided here and recorded as
 > `docs/decisions/decision_size-set-ownership.md`. Terms are in the [glossary](glossary.md).
 
@@ -352,7 +353,7 @@ records retain axis/member, signed-state and original chart proofs; broad platfo
 serialization verification is deferred to its named integration and later-gate owners.
 
 This closes the signed-break/composite-input implementation slice. Chart/body/break scope review
-continues at .4c.3e; immutable profile transformation intent remains .4c.4. Numeric execution,
+closed at .4c.3e; [profile transformation intent](size-set-transformations.md) is in progress at .4c.4. Numeric execution,
 regeneration/grading geometry, equivalence, profile precedence, storage and release are still separate.
 
 ## 7. Multi-dimensional systems

@@ -89,6 +89,13 @@ impl<'a> SizeSetInputs<'a> {
             Self::Mtm(value) => value.validate_current(),
         }
     }
+    pub(crate) fn contains_entity(self, identity: sc_core::ontology::EntityId) -> bool {
+        match self {
+            Self::Garment(value) => value.contains_entity(identity),
+            Self::Mtm(value) => value.contains_entity(identity),
+        }
+    }
+
     /// Require the selected family's original structural inputs for the explicit path.
     /// Numeric availability, actual instantiation, global currentness and approval remain separate.
     /// # Errors

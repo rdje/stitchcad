@@ -166,3 +166,9 @@ G1-SLICE.4c.3e closes the chart/body/break structural input scope after D230/D23
 Current local metadata/coverage is distinct from numeric, physical and global Design truth. Existing
 focused code evidence remains unchanged; profile transformation .4c.4 and combined-family .5/.4d
 review remain pending. This closure adds no numeric execution, persisted container or approval claim.
+
+G1-SLICE.4c.4.1 adds exact selected profile/schema/content labels and immutable resolution origin.
+G1 requires nonblank opaque labels, leaving grammar/registry validation to G4. Actual source
+identity/revision must match the supplied garment/MTM input view; a separately allocated target
+cannot alias supplied records or origin provenance. Source objects are unchanged. No transformed
+output, global freshness, profile execution or approval is certified. Typed transformations follow.
