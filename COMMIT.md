@@ -84,6 +84,11 @@ apply to code changes.
    - `git ls-files --error-unmatch git_message_brief.txt` must FAIL (untracked),
    - `wc -c git_message_brief.txt` must be `0`,
    - `git status --short` shows only the expected state.
+
+   Run successful commit, brief clearing and these post-conditions in one shell invocation.
+   If a tool yields a running session, consume its terminal result before editing, retrying or
+   selecting another slice. Before any retry, inspect HEAD, status and the brief; an unconsumed
+   result does not mean the commit failed. D227 records the observed duplicate-retry failure.
 9. In the completion message, report: the commit ID, the exact commit message, the tracked
    files in the commit, the current `LIVE_STATUS.md` snapshot, and whether it changed.
 
@@ -157,14 +162,19 @@ EOF
 # 3) stage intended files only
 git add <tracked-file-1> <tracked-file-2> ...
 
-# 4) commit  (hooks run the doctrine enforcer)
-git commit -F git_message_brief.txt
-
-# 5) clear message file
-: > git_message_brief.txt
-
-# 6) verify
-wc -c git_message_brief.txt
-git ls-files --error-unmatch git_message_brief.txt >/dev/null 2>&1; echo $?
-git status --short
+# 4–6) commit, then clear and verify in the same invocation
+if git commit -F git_message_brief.txt; then
+  : > git_message_brief.txt
+  wc -c git_message_brief.txt
+  test ! -s git_message_brief.txt || exit 1
+  if git ls-files --error-unmatch git_message_brief.txt >/dev/null 2>&1; then
+    exit 1
+  else
+    commit_brief_status=$?
+    test "$commit_brief_status" -eq 1 || exit 1
+  fi
+  git status --short
+else
+  exit 1
+fi
 ```

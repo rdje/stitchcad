@@ -1114,6 +1114,12 @@ D216 whole authored report/verified repair retained in [part135](../history/wind
   now states this meaning. Owner/schedule: G1-SLICE.6.2.2.b.2.b schema after .4c.2; execution still
   must preserve actual cut/ease/reference/identity obligations. Semantic conflict closed.
 
+- **D227** — an unconsumed successful commit was retried with the same work-unit message.
+  Before repair: latest two subjects repeated0295; second changed only DEV_NOTES/MEMORY.
+  Owner/schedule: G1-SLICE.6.2.2.b.2.a.receipt, P1 corrected0296 before axes. Only the owned unpublished
+  metadata receipt is relabelled; implementation1184214 remains unchanged. Commit/clear/verification
+  now share one invocation; terminal results precede retries. Syntax/hook controls and book pass0. Closed.
+
 - **D222** — live D217 retained-record check depends on raw archive paths.
   Census: d217_probe.py retained() declares/reads physical303/304/208 while run_handoff_probes.sh calls
   it as a current check. All three are currently raw and retrievable; no present missing-file failure

@@ -21,3 +21,9 @@ progress is reported separately, including maintenance tracked inside a G1 task.
 
 This policy adopts the director's 2026-10-25 ruling. The canonical decision is
 `docs/decisions/decision_product-work-takes-the-frontier.md`; `COMMIT.md` defines the workflow.
+
+Run commit, successful brief clearing and post-condition checks in one shell invocation. When a tool
+reports a running session, consume its terminal result before changing files, retrying the commit or
+selecting another slice. An unread result may already have committed successfully. Before a retry,
+inspect HEAD, Git status and the brief. A failed commit retains its brief for diagnosis; a successful
+one clears it immediately. D227's duplicate receipt led to this explicit operational guard.

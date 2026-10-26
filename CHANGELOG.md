@@ -5,11 +5,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
-## STITCHCAD-G1-0295 — dart/notch intents and D70/D226 rulings
+## STITCHCAD-G1-0296 — correct completion receipt
 
-.6.2.2.b.2.a: canonical dart/notch request schemas, focused2+3/0/lint/fmt/census/book pass0.
-Director confirms authored axes for every complete set and paired seam splits with explicit side cuts.
-414/415/416/267/137 retain whole history; book/live align. Axes .4c.2 next; G1still5/18.
+.6.2.2.b.2.a.receipt: preserve implementation1184214; relabel only the owned unpublished metadata follow-up.
+Bind successful commit/clear/verification; syntax/hook controls/book pass0.417/418/268 retain whole history.
+D227 closed; no product-code change. Axes .4c.2 remains next.
+
+| [part268](docs/history/stitchcad-changelog-part268.md) | whole0295 | 6 lines, 352 bytes, sha256:3636af5f… |
 
 | [part267](docs/history/stitchcad-changelog-part267.md) | whole0294 | 6 lines, 360 bytes, sha256:ca19a138… |
 

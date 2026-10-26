@@ -4,12 +4,15 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0295 .6.2.2.b.2.a complete: canonical CloseDart/AddNotch payloads; native2+3/0, selected lint/fmt/census/book0.
-- Director2026-10-26 confirmed D70 >=1 authored axis per complete SizeSet, no inferred names/values.
-- D226 confirmed paired sewing-correspondence split with explicit cuts on both sides. Both book/contracts align.
-- NEXT .4c.2: inspect axis/value/member contracts, own bounded implementation children before code.
-- No axes code yet; membership/chart/MTM are foundations, not a complete SizeSet. Split schema follows axes.
--414/415/416/267/137 retain whole0294 task/0270 lesson/execution summaries/0294 ledger/original D70 conflict.
+-0296 .6.2.2.b.2.a.receipt corrects unpublished metadata follow-up; implementation1184214 is unchanged.
+- D227: unconsumed successful commit retried; unique receipt identity plus same-invocation commit/clear/checks.
+- Consume terminal tool results before any edits/retries/task switches. COMMIT template records the guard.
+- Syntax0, existing message hook valid0/empty1, book0; no product code/protected archive changes.
+-0295 code1184214: CloseDart/AddNotch schemas native2+3/0, selected strict lint/fmt/census/book0.
+- D70 confirmed: >=1 authored axis per complete SizeSet, never infer names/values. No axes code yet.
+- D226 confirmed paired sewing-correspondence split with explicit cuts on both sides; schema follows axes.
+- NEXT .4c.2: inspect canonical axis/value/member contracts and own bounded implementation children.
+-417/418/268 retain whole0295 scope/0271 lesson/0295 ledger from reachable implementation1184214.
 -0294 .6.2.2.b.1 complete: ChangeMeasurement/AssignMaterial payloads bind immutable mutation context.
 - Native payload3/0, selected strict Clippy/fmt, census17/5/5/0/book pass0. G1still5/18.
 - Measurement intent retains actual target/declaration/source/five states; source replacements are allowed.

@@ -649,24 +649,8 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal: remaining SplitSeamSpan/CloseDart/AddNotch schemas from published canonical references and creation rules.
 - ID: `G1-SLICE.6.2.2.b.2.a`
   Status: `done`
-  Goal:0295 CloseDart canonical target and AddNotch creation fields, with bus-supplied new identity.
-  Paths: crates/sc-core/src/command/payload.rs;crates/sc-core/src/command/construction.rs;crates/sc-core/src/command.rs
-  Tests: crates/sc-core/tests/command_construction_payload_contract.rs.
-  Reuse EdgeAnchor/NotchProfileBindings and Dart's referenced closure; no copied intake/profile defaults.
-  Own414 whole0294 task,415 oldest0270 lesson,267 whole0294 ledger,416 whole completed execution-prerequisite summaries.
-  D226 paired-cut split schema remains separate .b; this slice completes dart/notch. Focused native/lint/book.
-  Director2026-10-26 confirms D226 paired correspondence with explicit cuts on both sides;
-  D70 requires at least one authored axis per complete SizeSet. Record rulings; finish this slice,
-  then resume .4c.2 before split payload work. No axes code in the current slice.
-  Own whole prior D70 defect record137 and current book/decision ruling sync before edits.
-  Acceptance0295:
-  - [x] REPRODUCE: dart/notch intents were absent; D70/D226 needed actual director rulings.
-  - [x] ROOT CAUSE0295: cargo test -p sc-core --test command_construction_payload_contract --test command_payload_contract:2+3/0, rc=0; canonical target/creation fields bind real command variants.
-  - [x] FIX: canonical dart target and exact notch anchor/bindings; bus supplies new id. Record both confirmed rulings without axes/split implementation.
-  - [x] ADDRESSED0295: same tests preserve target, all bindings, explicit fresh identities and prior payloads, rc=0.
-  - [x] NO REGRESSION0295: selected lib/two-test strict Clippy/fmt and command census17/5/5/0 pass, rc=0; broad integration/pre-push.
-  - [x] LOCKSTEP:414/415/416/267/137 whole Git/hash/public exact; book/ruling field/section check rc=0. D70/D226 resolved, G1still5/18; .4c.2 next.
-  Promotion declined: existing canonical/command contracts plus explicit director rulings. Commit: STITCHCAD-G1-0295.
+  Goal:0295 construction intents and D70/D226 rulings verified2+3/0/lint/book0 in1184214.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part417.md).
 - ID: `G1-SLICE.6.2.2.b.2.b`
   Status: `pending`
   Goal: D226 ruled paired correspondence split with explicit side-A/side-B cuts; implement schema after .4c.2.
@@ -674,6 +658,19 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   The command row names a span split; SeamSpanDefinition has paired a/b/ease/stops, while
   IdentityLedger::split edits one EdgeRef at Param. Director2026-10-26 chose paired sewing split;
   exact cut/reference/ease/identity validation remains the executing operation's obligation.
+- ID: `G1-SLICE.6.2.2.b.2.a.receipt`
+  Status: `done`
+  Goal:0296 correct the latest unpublished metadata receipt identity after an unconsumed commit completion was retried.
+  Own COMMIT.md, checking-policy book, live/receipt records and417 whole0295 task/418 oldest0271 lesson/268 ledger.
+  Preserve implementation1184214. Verify latest follow-up only touched DEV_NOTES/MEMORY, is unpushed,
+  has no maintained/frozen source references; amend only that owned metadata receipt to unique0296.
+  Same-invocation success->brief-clear/verification and terminal-result consumption guard retries.
+  Acceptance0296:
+  - [x] ROOT CAUSE0296: git log/show confirms duplicated0295 subject, second only DEV_NOTES/MEMORY; no remote/tag/other-head or maintained/frozen reference, rc=0.
+  - [x] ADDRESSED0296: unique0296 receipt prepared; bash -n operative template tail0, existing message hook valid0/empty1 controls pass.
+  - [x] NO REGRESSION0296: git diff1184214 for crates/protected archives empty, rc=0; book build0. No product code or broad verification.
+  - [x] LOCKSTEP:417/418/268 whole Git/hash/public exact0; latest-only metadata relabel preserves1184214. Commit invocation verifies parent/identity/brief/clean state.
+  Promotion declined: operational correction to existing commit-order rule. Commit: STITCHCAD-G1-0296.
 - ID: `G1-SLICE.6.2.2.c`
   Status: `pending`
   Goal: remaining query/evaluation/artifact/release request contexts and immutable payload binding.

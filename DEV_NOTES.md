@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — completion-receipt correction
+
+0296 .6.2.2.b.2.a.receipt owns D227. An unread successful commit was retried, producing a second
+0295 subject whose only delta was DEV_NOTES/MEMORY. Preflight proves that latest metadata receipt
+is unpublished and unreferenced; implementation1184214 and protected archives stay unchanged.
+Correct the latest receipt to its own0296 identity. COMMIT/book now bind success->clear->verification
+in one invocation and require terminal tool results before edits/retries. Shell syntax0 and actual
+message-hook valid0/empty1 controls pass; book0.417/418/268 retain whole source1184214 records.
+This is maintenance, with no product-code change; G1still5/18. Promotion declined: existing commit
+ordering, now made explicit at the invocation boundary. Axes .4c.2 remains the product frontier.
+
 ## _(2026-10-26 UTC)_ — dart/notch intents and confirmed director rulings
 
 0295 .6.2.2.b.2.a adds canonical CloseDart target and AddNotch owner/anchor/profile fields.
@@ -12,7 +23,8 @@ Director2026-10-26 resolves D226 as a paired sewing-correspondence split with ex
 both sides, and D70 as at least one authored axis for every complete SizeSet, with no inferred
 names/values. Current book/decision/task/status notes align; .4c.2 resumes after this commit.
 414/415/416/267/137 retain whole history, including original D70 conflict. No axes/split geometry,
-registry/auth or handler claim; G1still5/18. Promotion declined: existing contracts and direct rulings.
+registry/auth or handler claim; G1still5/18. Rulings live in existing command/SizeSet decisions;
+technical adapter lesson promotion declined.
 
 ## _(2026-10-26 UTC)_ — canonical measurement and material intents
 
@@ -288,20 +300,8 @@ retention. Full AST/statement/atomic execution remains open. Whole0271 scope/ora
 scope plus its receipts/ledger retain358–360/244 with exact Git/hash/public reads; existing unrelated
 measurement checklists/anchor routes stay live. Promotion declined: existing formula5.1/5.2/D121.
 
-## _(2026-10-26 UTC)_ — exact sourced named-tolerance comparisons
-
-0271 .5e.3.4 compares the exact absolute difference without materializing a numeric subtraction.
-Private bounded cross-products return Boolean, so no temporary scalar/128-bit result bound applies.
-Actual operands, named quantitative class/provider/derivation/context and sources remain beside the
-result. Dimensions precede T1-source admission; class refusal precedes threshold. Explicit zero/
-negative limits are not replaced. False results retain all sources through Boolean storage/read.
-
-Focused native5/0 passes; independent Fraction/algebra confirms full-width threshold witnesses.
-Selected lint first flags the large comparison error (101); boxing its private complete failure
-retains all actual getters/error causes without a large Result error. Final focused native5/0 and
-selected strict Clippy0 pass. Full named assertions/AST/provider lookup/replay remain open. Whole0270
-task, oldest full sum lesson and ledger retain356/357/243 with exact Git/hash/public reads; book/live
-align. Promotion declined: existing formula3.1/4.2 and bounded exact comparison/source contracts.
+[Complete sourced named-tolerance lesson](docs/history/stitchcad-devnotes-part418.md) retains
+its original exact comparison/source/limit behavior, checks and promotion decision.
 
 [Complete sourced numeric-call lesson](docs/history/stitchcad-devnotes-part415.md) retains
 its original operand/call propagation, actual failures, checks and promotion decision.
