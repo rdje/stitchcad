@@ -603,23 +603,28 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part352.md).
 - ID: `G1-SLICE.5e.3.2`
   Status: `done`
-  Goal:0269 immutable numeric/Boolean values, operators and bindings retain approximation sources.
+  Goal: sourced numeric/Boolean operators/bindings verified0269, native5/0.
   Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_evaluated_scalar_contract.rs
-  Reuse exact numeric unary/binary/comparison and binding/read boundaries; no Boolean coercion.
-  Union all evaluated operands, including cancellation/Boolean results, retain once-rounded reads.
-  Source attachment is explicit; no AST/name/provider/conditional execution or atomic replay claim.
-  Retain352 whole0268 task,353 whole oldest rational lesson,241 ledger; book/live sync.
-- [x] REPRODUCE:0269 1542f44 has source sets without scalar operator/binding retention; source read rc=0.
-- [x] ROOT CAUSE:0269 exact equality/zero and stored rounding cannot erase executed dependencies;
-  payload/source pairs plus operator unions and stored-only reads retain them. Native5/0, rc=0.
-- [x] FIX: immutable numeric/Boolean scalar, exact operators, sourced once-rounded binding/read.
-- [x] ADDRESSED:0269 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test formula_evaluated_scalar_contract:5 pass/0 fail, rc=0.
-- [x] NO REGRESSION:0269 every operator/cancellation/Boolean/fraction/refusal case passes;
-  cargo clippy --offline -p sc-core --test formula_evaluated_scalar_contract -- -D warnings, rc=0.
-  Full .5e.2/.3 AST/call/conditional/assertion execution and broad .5g/pre-push remain owned.
-- [x] LOCKSTEP:352/353/241 whole Git/hash/public records and book render rc=0; live/frontier align.
-  Promotion declined: existing formula4.2/D121; supplied call sources grant no execution proof.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part354.md).
+- ID: `G1-SLICE.5e.3.3`
+  Status: `done`
+  Goal:0270 implemented numeric built-in calls compute and retain sources automatically.
+  Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/calls.rs;crates/sc-core/tests/formula_evaluated_calls_contract.rs
+  Own sqrt/hypot/abs/min/max/clamp/round_to/arc_length wrappers, all evaluated input unions,
+  exact-valued call contributions and first actual typed argument/domain/arity refusals.
+  Reuse numeric kernels; no missing trig, geometry, AST, conditional or recipe execution claim.
+  Retain354 whole0269 task,355 oldest full product/quotient lesson,242 ledger; book/live sync.
+- [x] REPRODUCE:0270 1e836c1 requires manual source attachment for numeric calls; source read rc=0.
+- [x] ROOT CAUSE:0270 returned/winning numeric values alone omit executed call/candidate/bound
+  sources. Actual eight-family wrapper native5/0 verifies automatic unions/call sources, rc=0.
+- [x] FIX: eight existing numeric kernels wrapped with complete input unions and required own sources.
+- [x] ADDRESSED:0270 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_evaluated_calls_contract:5 pass/0 fail, rc=0.
+- [x] NO REGRESSION:0270 all family/input/unchanged/perfect/storage/arity/refusal controls pass;
+  cargo clippy --offline -p sc-core --test formula_evaluated_calls_contract -- -D warnings, rc=0.
+  Missing trig .5d, full .5e execution and broad .5g/pre-push remain owned; no absent call stubbed.
+- [x] LOCKSTEP:354/355/242 whole Git/hash/public records and book render rc=0; live/frontier align.
+  Promotion declined: existing numerical/D121 contracts; no new language/precision limit.
 - ID: `G1-SLICE.5e.4`
   Status: `pending`
   Goal: atomic replay and dependency validation, including corrupted persisted cycle evidence.

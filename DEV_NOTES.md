@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — implemented numeric calls retain all evaluated sources
+
+0270 .5e.3.3 executes the existing eight numeric call families through sourced scalar wrappers.
+Every successful call merges all evaluated inputs, not just a winning candidate/bound. Sqrt/hypot/
+arc_length/round_to add their own sources even for zero/perfect/unchanged results; abs/min/max/clamp
+add none. Kind checks retain first argument priority, including Boolean versus earlier bad numeric
+kinds. Existing domain/arity/bounds/step refusals propagate without any replacement value.
+
+Focused native5/0 and selected strict Clippy0 pass: all eight families, full input unions, exact-
+valued call contributions through cancellation/storage/read, singleton/empty extrema and typed
+refusals. Trig/geometry/AST/provider/conditional/replay remain open. Whole0269 task, oldest product/
+quotient lesson and ledger retain354/355/242 with exact Git/hash/public reads; book/live align.
+Promotion declined: existing numerical and D121 source contracts govern these implementations.
+
 ## _(2026-10-26 UTC)_ — scalar operators and bindings retain their sources
 
 0269 .5e.3.2 keeps numeric/Boolean payloads beside immutable source sets. Unary/binary operators
@@ -357,19 +371,8 @@ independent oracle/platform integration stays .5c.1.3. Book/live scope matches a
 Whole0245 task/ledger and completed transport policy retained316/218/317 with source identities.
 Promotion: existing edge/formula rational decision records the private dependency/workspace choice.
 
-## _(2026-10-25 UTC)_ — exact rational products and quotients
-
-0245 .5c.1.2.1 cross-cancels normalized factors before checked multiplication, so oversized raw
-products can reduce to valid128-bit results. The surviving factors are pairwise coprime across the
-fraction; product widths are therefore the fully reduced widths. Division checks zero before
-forming the reduced reciprocal and reuses multiplication. Canonical zero/sign and constructor
-contracts remain intact. RationalWidth reports actual component bits and fixed128 bound/token;
-ZeroDivisor retains formula_division. Four bounded64-bit partial products recover the overflowing
-product's upper128 bits exactly; their sums fit u128 by the documented carry bound.
-One affected native target passes2/0, rc=0, covering cancellation, signs, zero priority and129/256-bit
-numerator/denominator witnesses. No full regression/Clippy/WASM/oracle-campaign pass is claimed.
-Sums/differences and typed/evaluator integration remain owned. Whole0244 task retained314; book/live
-stay aligned. Promotion declined: existing exact-numeric contract and focused-check policy.
+[Complete rational product/quotient lesson](docs/history/stitchcad-devnotes-part355.md) retains
+its original scope, validation and promotion decision.
 
 [Complete rational construction lesson](docs/history/stitchcad-devnotes-part353.md) retains
 its original scope, validation and promotion decision.

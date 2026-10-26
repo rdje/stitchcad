@@ -86,3 +86,5 @@ current counts are derived from current test execution rather than inferred from
 | Approximation-source set/class guard | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.1 | [Immutable sources/T1 refusal](formula-runtime-validation.md#product-source-set-primitive); full propagation follows |
 
 | Sourced scalar operators/bindings | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.2 | [Numeric/Boolean sources and reads](formula-runtime-validation.md#product-scalar-operators-and-bindings); AST execution follows |
+
+| Sourced implemented numeric calls | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.3 | [Actual kernels/input unions](formula-runtime-validation.md#product-implemented-numeric-calls); trig/AST execution follows |

@@ -401,6 +401,37 @@ This executes value operators, not parsed expressions or statements. Namespace/p
 call execution, selected-branch control, point-coordinate provenance, assertions and atomic recipe
 publication remain the full evaluator's responsibilities.
 
+### Product implemented numeric calls
+
+The sourced scalar value now executes checked_abs, checked_sqrt, checked_hypot, checked_arc_length,
+checked_min, checked_max, checked_clamp and checked_round_to through the existing numerical kernels.
+Successful calls automatically union every evaluated argument's sources and add their own source
+when the contract requires it. Abs/min/max/clamp add no new contribution. Sqrt/hypot/arc_length and
+round_to do, including zero, perfect roots and values unchanged by the requested step.
+
+```rust
+use sc_core::recipe::{FormulaEvaluatedScalar as V, FormulaKind as K, FormulaNumericValue as N,
+    FormulaRational as R, FormulaToleranceName as T};
+
+let area = V::from_numeric(N::new(K::Area, R::from_signed_integer(9))?);
+let root = area.checked_sqrt()?;
+assert_eq!(root.numeric().expect("numeric root").rational(), R::from_signed_integer(3));
+assert!(root.sources().check_tolerance(T::Numerical).is_err()); // perfect root still carries sqrt
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Min/max keep every evaluated candidate's sources even when another value wins. Clamp retains both
+bounds as well as its principal value. Explicit round_to retains the step's sources. Function result
+sources survive ordinary arithmetic, cancellation, binding and later reads through the same scalar
+API. These calls operate on supplied values; the caller still evaluates arguments in source order.
+
+Wrong input kinds retain the first actual argument position; homogeneous calls retain the wanted
+and actual kind. Empty min/max, negative sqrt, invalid clamp bounds, zero quantization step and
+numeric result refusals propagate their typed failures without a substitute value. A failed call
+produces no new sourced scalar. Five focused native tests cover all eight implemented call families,
+source unions, exact-valued calls through storage, singleton/extremum cases and actual refusals.
+Trig/inverse calls, geometry selectors and full AST/provider/conditional/recipe execution remain open.
+
 ### Existing reference execution controls
 
 A value retains an immutable set of approximation-producing calls in its executed dependencies.

@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0269 — sourced scalar operators and stored reads
+## STITCHCAD-G1-0270 — implemented numeric calls retain approximation sources
 
-.5e.3.2: numeric/Boolean value operators preserve all evaluated source contributions through binding/read.
-Exact cancellation and Boolean results retain sources; numeric storage still rounds only once. Full AST execution follows.
+.5e.3.3: sqrt/hypot/abs/min/max/clamp/round_to/arc_length reuse actual numeric kernels and retain all inputs.
+Successful rounding calls add their source even for exact results; actual typed refusals propagate. AST/trig execution follows.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -428,3 +428,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part240](docs/history/stitchcad-changelog-part240.md) | whole0267 | 4 lines, 285 bytes, sha256:341f9904… |
 
 | [part241](docs/history/stitchcad-changelog-part241.md) | whole0268 | 4 lines, 296 bytes, sha256:d290645e… |
+
+| [part242](docs/history/stitchcad-changelog-part242.md) | whole0269 | 4 lines, 298 bytes, sha256:f5bf9523… |

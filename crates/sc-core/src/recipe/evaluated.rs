@@ -6,6 +6,8 @@ use super::{
 };
 use crate::name::MachineToken;
 
+mod calls;
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 enum ScalarValue {
     Numeric(FormulaNumericValue),
