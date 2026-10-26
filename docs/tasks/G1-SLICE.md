@@ -391,13 +391,32 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `STITCHCAD-G1-0032`
 
 - ID: `G1-SLICE.4c.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: axes with ordered values and member coordinate references; incomplete grids remain explicit.
   Director2026-10-26 resolves D70: every complete set has >=1 authored axis; never infer names/values.
   Acceptance: current axis/value identities and complete member points validated, no grid interpolation;
   no label-derived body measurements or silent axis defaults. Preserve source/state for numeric axes.
   Verification: `pending`
   Commit: `pending`
+
+- ID: `G1-SLICE.4c.2.1`
+  Status: `done`
+  Goal:0297 explicit named axis/ordered value definitions, typed categorical/scalar sources and actual canonical borrows.
+  Paths: crates/sc-measure/src/size_axis.rs;crates/sc-measure/src/size_axis/source.rs;crates/sc-measure/src/lib.rs;crates/sc-measure/Cargo.toml
+  Tests: crates/sc-measure/tests/size_axis_contract.rs. No labels/order inferred; numeric state/source stays singly owned.
+  Local identity/name/value/kind/current-source checks; supplied pins are not registry certification.
+  Own419 whole0296 receipt task,420 oldest0272 lesson,269 ledger and421 whole completed input-adapter summaries.
+  Acceptance0297:
+  - [x] ROOT CAUSE0297: rg canonical struct declarations -> value.rs:88/scalar.rs:227, rc=0; private records own source/state; metadata borrows actual records.
+  - [x] ADDRESSED0297: cargo test -p sc-measure --test size_axis_contract:5 passed/0 failed, rc=0; exact order/borrows/all kinds/states and current-source refusals.
+  - [x] NO REGRESSION0297: selected lib/test strict Clippy rc=0 (test-only panic lint explicitly allowed); cargo fmt rc=0; book build rc=0.
+  - [x] LOCKSTEP0297:419/420/269/421 whole committed Git bytes/hash/public reader exact rc=0; book/decision/live pointers aligned.
+  Promotion: existing SizeSet decision extended; no new policy. Complete member points/minimum-axis aggregate next .2.
+  Commit: STITCHCAD-G1-0297.
+- ID: `G1-SLICE.4c.2.2`
+  Status: `pending`
+  Goal: complete axes over actual pinned membership, >=1 authored axis, explicit complete member coordinates,
+  current values, no grid interpolation, no implicit axis/value/base/order and full numeric source retention.
 
 - ID: `G1-SLICE.4c.3`
   Status: `in_progress`
@@ -660,17 +679,8 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   exact cut/reference/ease/identity validation remains the executing operation's obligation.
 - ID: `G1-SLICE.6.2.2.b.2.a.receipt`
   Status: `done`
-  Goal:0296 correct the latest unpublished metadata receipt identity after an unconsumed commit completion was retried.
-  Own COMMIT.md, checking-policy book, live/receipt records and417 whole0295 task/418 oldest0271 lesson/268 ledger.
-  Preserve implementation1184214. Verify latest follow-up only touched DEV_NOTES/MEMORY, is unpushed,
-  has no maintained/frozen source references; amend only that owned metadata receipt to unique0296.
-  Same-invocation success->brief-clear/verification and terminal-result consumption guard retries.
-  Acceptance0296:
-  - [x] ROOT CAUSE0296: git log/show confirms duplicated0295 subject, second only DEV_NOTES/MEMORY; no remote/tag/other-head or maintained/frozen reference, rc=0.
-  - [x] ADDRESSED0296: unique0296 receipt prepared; bash -n operative template tail0, existing message hook valid0/empty1 controls pass.
-  - [x] NO REGRESSION0296: git diff1184214 for crates/protected archives empty, rc=0; book build0. No product code or broad verification.
-  - [x] LOCKSTEP:417/418/268 whole Git/hash/public exact0; latest-only metadata relabel preserves1184214. Commit invocation verifies parent/identity/brief/clean state.
-  Promotion declined: operational correction to existing commit-order rule. Commit: STITCHCAD-G1-0296.
+  Goal:0296 unique metadata receipt preserves1184214; same-invocation commit/clear/check guard.
+  Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part419.md).
 - ID: `G1-SLICE.6.2.2.c`
   Status: `pending`
   Goal: remaining query/evaluation/artifact/release request contexts and immutable payload binding.
@@ -914,7 +924,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5d.1.2.2.2` | `pending` | P1 finite-threshold feasibility; then sourced expression execution |
+| **next** | `G1-SLICE.4c.2.2` | `pending` | Complete explicit member points and require authored axes |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

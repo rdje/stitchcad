@@ -111,5 +111,7 @@ proof. Chart completeness, MTM body/Ease inputs, breaks and resolution remain se
 Every complete SizeSet has at least one authored axis, including a one-dimensional range or singleton.
 Axis names and ordered values are explicit, never inferred from labels or supplied as silent defaults.
 This resolves D70's optional-field versus universal-axis conflict; normative §2 and §7 now agree.
-G1-SLICE.4c.2 implements axes next after the current command-payload slice. Membership remains a
-partial foundation and does not certify complete axes/charts/breaks or path readiness.
+G1-SLICE.4c.2.1 implements individual axes with explicit names, ordered coordinate identities and
+label/canonical numeric sources. Current canonical records are borrowed and their kind/role rechecked;
+state/value/provenance are not duplicated. Member-coordinate coverage and >=1 axis aggregation follow
+in .4c.2.2. Membership/individual axes do not certify complete charts/breaks or path readiness.

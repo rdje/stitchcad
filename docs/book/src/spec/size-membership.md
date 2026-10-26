@@ -107,7 +107,8 @@ member access retains them for presentation.
 
 Matching the supplied pin is not global registry/currentness certification, complete SizeSet,
 axes/charts/break/path readiness, profile transformation or release approval. The confirmed D70 axis rule
-is implemented separately under .4c.2.
+is implemented separately under .4c.2; [individual axes](size-sets.md#executable-individual-axes--g1-slice4c21)
+now preserve explicit names/order and canonical source records. Member coordinates follow.
 The dependency remains sc-measure to sc-core; core imports no measurement implementation.
 Five focused formula_size_membership_contract tests pass: all designation intents/actual pointer
 borrows, pin-before-member priority, authored reorder/stable base, singleton revision boundaries and

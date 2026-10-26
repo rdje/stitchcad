@@ -6,8 +6,9 @@
 //! MeasurementTable and individual Ease mappings pin stable bindings over borrowed current records.
 //! Ease sets validate current per-POM mappings/table membership. Size membership is implemented;
 //! garment chart observations borrow current member/POM inputs. Chart collections validate exact
-//! Design/member coverage. MTM charts retain custom single-member body/Ease inputs. Complete SizeSet
-//! axes/break/resolution contracts follow in owned slices.
+//! Design/member coverage. MTM charts retain custom single-member body/Ease inputs. Individual size
+//! axes have explicit ordered values over borrowed canonical inputs. Complete member coordinates,
+//! breaks and resolution contracts follow in owned slices.
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
@@ -33,6 +34,13 @@ mod size_membership;
 pub use size_membership::{
     SizeFormulaContext, SizeFormulaContextError, SizeLabel, SizeMember, SizeMembership,
     SizeMembershipDefinition, SizeMembershipError, SizeSetReference, SizeSystem,
+};
+
+mod size_axis;
+pub use size_axis::{
+    SizeAxis, SizeAxisDefinition, SizeAxisError, SizeAxisInputRole, SizeAxisKind,
+    SizeAxisSourceContext, SizeAxisValueContent, SizeAxisValueDefinition, SizeAxisValueSource,
+    SizeAxisValueView,
 };
 
 mod size_chart;

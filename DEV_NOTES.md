@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — explicit authored axis values
+
+0297 .4c.2.1 introduces immutable named axes and explicit ordered coordinate identities. Labels retain
+exact text; dedicated/general numeric sources borrow original records and preserve kind/state/source.
+No parsing, sorting, numeric cache or Unknown/Derived evaluation. Each lookup rechecks current source
+roles/kinds; metadata/source identity aliases refuse. Native axis5/0 covers actual pointer identity,
+all six scalar kinds, five states, false and missing/retargeted records. Selected strict Clippy/fmt/book0;
+test-only panic lint allowed explicitly.419/420/269/421 retain whole committed intervals, byte/hash/
+public reader exact0. G1still5/18; member-coordinate aggregation/minimum axis count next .4c.2.2.
+Promotion: existing SizeSet decision extended; no new policy. Broad proof deferred to integration/push.
+
 ## _(2026-10-26 UTC)_ — completion-receipt correction
 
 0296 .6.2.2.b.2.a.receipt owns D227. An unread successful commit was retried, producing a second
@@ -286,19 +297,8 @@ output-kind violations and condition/taken-only sources. No full expression/prov
 atomic execution claim. Whole0272 task, oldest binary/domain lesson group and ledger retain361/362/245
 with exact Git/hash/public reads; book/live align. Promotion declined: existing grammar7/D121.
 
-## _(2026-10-26 UTC)_ — actual named assertion success or refusal
-
-0272 .5e.3.5 requires an admitted comparison to hold for its supplied machine-token name. Sealed
-satisfied/failed outcomes retain the actual borrowed name and complete sourced quantitative
-comparison. False emits formula_assertion, never a success or substituted binding. Explicit Display
-keeps signed rational/raw-turn values and class/limit; Debug omits the customer name. Earlier
-dimension/class/context failures remain their own tokens. No statement ordinal/span is fabricated.
-
-Focused native4/0 and selected strict Clippy0 pass: all numeric kinds/classes, inclusive/failed
-thresholds, actual book80000/40000 closure, signed fraction rendering and true/false source/name
-retention. Full AST/statement/atomic execution remains open. Whole0271 scope/oracle lesson/D122
-scope plus its receipts/ledger retain358–360/244 with exact Git/hash/public reads; existing unrelated
-measurement checklists/anchor routes stay live. Promotion declined: existing formula5.1/5.2/D121.
+[Complete named assertion-outcome lesson](docs/history/stitchcad-devnotes-part420.md) retains
+its original actual identity/context/source results, checks and promotion decision.
 
 [Complete sourced named-tolerance lesson](docs/history/stitchcad-devnotes-part418.md) retains
 its original exact comparison/source/limit behavior, checks and promotion decision.

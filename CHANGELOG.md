@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0297 — explicit authored axis values
+
+Individual SizeAxis records preserve explicit names/value order and actual canonical source/state borrows.
+Focused axis5/0, selected strict lint/fmt/book0; member points and minimum-axis aggregate follow .4c.2.2.
+Whole419/420/269/421 retention is Git/hash/public-reader exact; G1 remains5/18.
+
 # Sealed archive — earlier slices
 
-## STITCHCAD-G1-0296 — correct completion receipt
-
-.6.2.2.b.2.a.receipt: preserve implementation1184214; relabel only the owned unpublished metadata follow-up.
-Bind successful commit/clear/verification; syntax/hook controls/book pass0.417/418/268 retain whole history.
-D227 closed; no product-code change. Axes .4c.2 remains next.
+| [part269](docs/history/stitchcad-changelog-part269.md) | whole0296 | 6 lines, 334 bytes, sha256:026487eb… |
 
 | [part268](docs/history/stitchcad-changelog-part268.md) | whole0295 | 6 lines, 352 bytes, sha256:3636af5f… |
 

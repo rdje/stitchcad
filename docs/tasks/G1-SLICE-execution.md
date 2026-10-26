@@ -16,45 +16,32 @@ The original working execution block was copied byte-for-byte; later entries rem
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5e.1.1`
   Status: `done`
-  Goal: canonical length authored reads, exact source/state and25 pairs verified0261.
-  Paths: crates/sc-core/src/recipe/input.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_length_input_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part339md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
 - ID: `G1-SLICE.5e.1.2`
   Status: `done`
-  Goal: canonical scalar state/value content and selected lint repair verified0262.
-  Paths: crates/sc-core/src/value.rs;crates/sc-core/src/value/scalar.rs;crates/sc-core/tests/scalar_value_contract.rs;crates/sc-core/tests/formula_length_input_contract.rs
-  Additional paths: crates/sc-core/src/recipe/input.rs;crates/sc-core/src/recipe/declaration.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/roots.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part341md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
 - ID: `G1-SLICE.5e.1.3`
   Status: `done`
-  Goal: sourced general scalar reads/actual target-kind checks verified0263, native5/3.
-  Paths: crates/sc-core/src/recipe/input.rs;crates/sc-core/src/recipe/input/scalar.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/src/recipe/declaration.rs;crates/sc-core/tests/formula_scalar_input_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part343md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
 - ID: `G1-SLICE.5e.1.4`
   Status: `done`
-  Goal: intrinsic/explicit sourced optional tolerance reads verified0264, native5/0.
-  Paths: crates/sc-core/src/recipe/context.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_tolerance_context_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part345md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
 - ID: `G1-SLICE.5e.1.5`
   Status: `done`
-  Goal: pinned authored-membership size_index/size_count/is_base_size, without labels or axes.
-  Children .1 core range/source/value context; .2 actual sc-measure membership bridge. Axes remain .4c.2.
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
 - ID: `G1-SLICE.5e.1.5.1`
   Status: `done`
-  Goal: core size source/range/value frame and wide Count bridge verified0265.
-  Paths: crates/sc-core/src/recipe/context.rs;crates/sc-core/src/recipe/context/size.rs;crates/sc-core/src/recipe/semantic.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs
-  Additional paths: crates/sc-core/tests/formula_size_context_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part347md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
 - ID: `G1-SLICE.5e.1.5.2`
   Status: `done`
-  Goal: actual pinned membership/selected-id size bridge verified0266, native5/0.
-  Paths: crates/sc-measure/src/size_membership.rs;crates/sc-measure/src/size_membership/formula.rs;crates/sc-measure/src/lib.rs;crates/sc-measure/tests/formula_size_membership_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part348md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
 - ID: `G1-SLICE.5e.1.6`
   Status: `done`
-  Goal: exact canonical/stored scalar numeric bridges verified0267, native5/0.
-  Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_value_read_bridge_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part349md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part421.md).
+  Retention0297 owned .4c.2.1:
+  - [x] ROOT CAUSE0297: git show3c85204 whole completed input-adapter summaries retained421; Python byte/hash comparison rc=0.
+  - [x] ADDRESSED0297: whole source/hash exact in421, Python comparison rc=0.
+  - [x] NO REGRESSION0297: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part421.md whole public file exact, Python comparison rc=0; no reader change.
 - ID: `G1-SLICE.5e.2`
   Status: `in_progress`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.

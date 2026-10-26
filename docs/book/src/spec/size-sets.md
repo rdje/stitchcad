@@ -115,6 +115,55 @@ that without inventing a second mechanism:
 - a one-dimensional system is the same object with a single axis, which is why the model does not carry two
   representations.
 
+### Executable individual axes — G1-SLICE.4c.2.1
+
+`sc-measure` now provides immutable `SizeAxis` records. `SizeAxisDefinition` carries the explicit
+set/revision pin, axis identity, nonblank name, kind and ordered nonempty value list. Names preserve
+Unicode, case and spacing. `SizeAxisValueDefinition` assigns each coordinate a stable identity and an
+explicit source: an exact `SizeLabel`, a dedicated canonical length declaration, or a general scalar
+declaration. Neither labels nor magnitudes choose an axis name, value order or numeric kind.
+
+```rust
+use sc_core::ontology::EntityId;
+use sc_measure::{SizeAxis, SizeAxisDefinition, SizeAxisKind, SizeAxisSourceContext,
+    SizeAxisValueDefinition, SizeAxisValueSource, SizeLabel, SizeSetReference};
+use sc_units::Count;
+let id = EntityId::from_bits;
+let sources = SizeAxisSourceContext::new(&[], &[]).expect("no numeric sources needed");
+let coordinate = |n, text: &str| SizeAxisValueDefinition {
+    id: id(n), source: SizeAxisValueSource::Label(
+        SizeLabel::new(text.to_owned()).expect("nonblank authored value")),
+};
+let axis = SizeAxis::new(SizeAxisDefinition {
+    reference: SizeSetReference { id: id(1), revision: Count::new(0) },
+    id: id(10), name: "House size".to_owned(), kind: SizeAxisKind::Label,
+    values: vec![coordinate(11, "2XL"), coordinate(12, "S")],
+}, &sources).expect("explicit order");
+assert_eq!(axis.definition().values[0].id, id(11));
+let value = axis.value(id(12), &sources).expect("actual coordinate identity");
+assert_eq!(value.axis(), id(10));
+```
+
+For numeric axes, use `SizeAxisKind::Scalar(kind)` and an explicit `Length(declaration_id)` or
+`Scalar(declaration_id)` source. The context borrows actual canonical declarations; lookup returns
+`SizeAxisValueContent::Length(&LengthDeclaration)` or `Scalar(&ScalarInputDeclaration)`. Source,
+state and provenance remain on that original record. Unknown/Derived coordinates can be represented
+without evaluating them: their original value-read refusal still applies. Boolean false remains a
+present Boolean. General scalar kinds include Length, Angle, derived Area, Ratio, Count and Boolean;
+this local layer imposes no numeric monotonicity or physical meaning on an authored dimension.
+
+Construction refuses blank names, empty values, conflicting metadata/source identities, exact duplicate
+labels, absent sources, wrong canonical-record roles and mismatched scalar kinds. A dedicated-length
+reference cannot silently use a general Length scalar record. `validate_current` and `value` recheck all
+axis references against the supplied inventory, so a same-id replacement with a different kind refuses.
+The authored order remains unchanged. Shared canonical numeric records are borrowed, never cached or
+claimed to be independent measurements.
+
+Five focused native contracts pass, with selected strict lint and formatting. These checks establish
+individual local axes; they do not certify global registry currentness, evidence truth, complete member
+points or a complete SizeSet. The minimum-one-axis aggregate and member-coordinate coverage are the
+next slice, G1-SLICE.4c.2.2. Charts, breaks, resolution and path readiness remain separately owned.
+
 ## 8. Size systems and what the model must express
 
 | `size_system` | What the model must express | Verification status |

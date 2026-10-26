@@ -74,8 +74,10 @@ The [trig threshold certificates](formula-trig-certificates.md) cover all1M forw
 targets with exact full readers. Sin/cos and atan/atan2 value kernels are implemented;
 tangent's separate resource plan and implementation remain open.
 
-Full SizeSet axes/breaks/composition and resolved profile intent remain G1-SLICE.4c work. D70 now
-requires at least one authored axis per complete set; .4c.2 is unblocked. Recipe evaluation is .5, bus/undo .6, storage .7, constraints .8,
+Individual named axes with explicit ordered values and canonical source/state borrows are available
+([contract](../spec/size-sets.md#executable-individual-axes--g1-slice4c21)). Member coordinates and the
+minimum-one-axis aggregate follow in .4c.2.2. Full SizeSet breaks/composition and resolved profile
+intent remain G1-SLICE.4c work. D70 requires at least one authored axis per complete set. Recipe evaluation is .5, bus/undo .6, storage .7, constraints .8,
 API/MCP .9 and CLI .10; browser/runtime/canvas/license proofs and full G1 exit remain later children.
 The current ontology supports authored operation identities; that is not an executed recipe.
 
