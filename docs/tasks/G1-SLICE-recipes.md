@@ -476,32 +476,35 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 - ID: `G1-SLICE.5d.1.2.2.2.a`
   Status: `done`
-  Goal: P1 finite-output-threshold/Farey-cell certificate feasibility, proposed2026-10-26.
-  Own the unverified idea surfaced during0276: sin/cos bounded ppm outputs and inverse angle
-  quanta have finite midpoint populations. Enclose inverse midpoint bands in Farey gaps whose
-  denominator sum exceeds the admitted rational input bound; this could certify a uniform margin
-  without enumerating all inputs. Derive bounds/symmetries first; measure rigorous interval cost.
-  Candidate: directed integer sqrt/half-angle/atan enclosures using certified pi, then exact
-  continued-fraction neighbors. No all-input result, precision budget or production algorithm admitted.
-  Tangent's large output population remains separate. Parent .2 stays open until its whole obligations.
-  Next after clean .5e.2.h13; own a decision/prototype before implementation. No new input limit.
-  Work unit0277 first owns370 whole0276 archive task,371 oldest binding lesson,249 ledger; then decision/prototype.
+  Goal:0277 finite forward certificate cohort38/controls verified; production admission remains open.
   Paths: docs/tasks/artifacts/formula_structure/finite_threshold_feasibility.py;docs/decisions/decision_finite-threshold-feasibility.md
-  Source: existing pi640 certificate; directed positive integer intervals and exact Fraction oracle/
-  known inverse values; scale1 midpoint and coarse-band refusal controls. Only bounded cohort here.
-  Decision/index/map/book/live sync; no production math/backend/precision or input-domain change.
-  Acceptance0277:
-  - [x] REPRODUCE: generic bound impractical; no finite forward-margin certificate existed.
-  - [x] ROOT CAUSE0277: python3 -I -B docs/tasks/artifacts/formula_structure/finite_threshold_feasibility.py derives Q_phase157/Q_slope256 and populations1M/45M, rc=0; output thresholds finite despite rational input space.
-  - [x] FIX: explicit-pi directed512-bit intervals, exact Farey predicates, bounded cohort only.
-  - [x] ADDRESSED0277: same command certifies38 bands; known3/Fraction4/small-Q32/negative2 pass, rc=0. Report scope feasibility_cohort_only; full populations/native budget not admitted.
-  - [x] NO REGRESSION0277: same command controls pass, rc=0; runpy import with Path.read_text patched to refuse passes, rc=0. No runtime changed; broad proof .5d.4/pre-push.
-  - [x] LOCKSTEP: decision/index/map/book/live sync;370/371/249 exact retained scopes. G1 remains5/18; .b next, tangent/inverse separately open.
-  Verification: rc=0; Commit: STITCHCAD-G1-0277.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part372.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b`
-  Status: `pending`
+  Status: `in_progress`
   Goal: if .a succeeds, complete and independently verify the full applicable threshold population.
   No cohort/throughput extrapolation becomes all-input proof; retain coverage, margins and costs.
+- ID: `G1-SLICE.5d.1.2.2.2.b.1`
+  Status: `done`
+  Goal:0278 full1M forward-band certificate, resumable chunks and independent exact gap/coverage reader.
+  Own372 whole0277 task,373 oldest root-plan lesson,250 ledger before producer growth.
+  Paths: docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py;docs/tasks/artifacts/formula_structure/verify_forward_certificate.py
+  Reuse pure explicit-pi helpers; source/profile/hash-locked checkpoints under target only.
+  Stream fixed-width exact endpoints; complete index coverage, strict margins and refusal controls.
+  No native precision admission/inverse/tangent claim. Decision/book/live sync, focused producer check.
+  Acceptance0278:
+  - [x] REPRODUCE:0277 certified38 only; no full forward population claim then.
+  - [x] ROOT CAUSE0278: forward_threshold_certificate.py --chunks1 checkpoints10k/PARTIAL, rc=0; complete-reader explicitly refuses it. Cohort coverage cannot establish1M.
+  - [x] FIX: source-locked100 chunks/exclusive run/atomic checkpoints; exact208-byte rows, independent integer gap reader.
+  - [x] ADDRESSED0278: python3 -I -B docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py resumes1 chunk then COMPLETE100/1M, rc=0. verify_forward_certificate.py checks all1M/hash/strict gaps/coverage, rc=0.
+  - [x] NO REGRESSION0278: producer distinct known/Fraction/small-Q/negative controls and3 malformed-row refusals pass, rc=0; no runtime changed. Broad/native/platform obligations .c/.5d.4/pre-push.
+  - [x] LOCKSTEP:372/373/250 exact Git/hash/public reads, rc=0; decision/book/live match full result; G1still5/18. No native/inverse/tangent admission.
+  Verification: rc=0; Commit: STITCHCAD-G1-0278.
+- ID: `G1-SLICE.5d.1.2.2.2.b.2`
+  Status: `pending`
+  Goal: inverse first-octant generator and full45M threshold proof; split before implementation.
+- ID: `G1-SLICE.5d.1.2.2.2.c`
+  Status: `pending`
+  Goal: native sin/cos reduction, interval error, fixed work/workspace admission using complete forward certificate before code.
 
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`

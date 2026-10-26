@@ -50,7 +50,26 @@ under target/trig_threshold_feasibility/0277/. It does not claim the full millio
 
 ## Remaining admission work
 
-Complete forward coverage must retain exact predicates, source identity and measured cost.
+The full forward producer is a separate source-locked, resumable command:
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py --chunks 1
+python3 -I -B docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py
+python3 -I -B docs/tasks/artifacts/formula_structure/verify_forward_certificate.py
+```
+
+It writes100 contiguous10,000-row chunks and a manifest under target/trig_forward_certificate/0278/.
+Every row retains exact phase endpoints and rational gap components. Resume verifies existing
+chunks and refuses changed source hashes. The independent reader checks all gap predicates and
+contiguous coverage, without importing the inverse-interval constructor. That constructor retains
+its separate derivation/oracle obligations. Work unit0278 completed all1,000,000 bands, and the
+independent reader passed all100 chunks, rc=0. A deliberately stopped one-chunk run was correctly
+refused as complete evidence before a verified resume. This closes the forward population step;
+the native kernel's error/workspace admission remains open. Never remove an active.lock merely to
+bypass a running producer: after an interrupted process, establish that its recorded PID is gone
+before removing that project-owned lock and resuming.
+
+The complete forward certificate retains exact predicates, source identity and measured cost.
 A native kernel still needs its own complete error, termination and workspace argument, followed
 by focused integration evidence. A failed experimental gap cannot become a new language input
 restriction or a silently substituted numeric answer.

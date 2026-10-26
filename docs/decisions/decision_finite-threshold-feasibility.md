@@ -106,4 +106,42 @@ It is an observation, not a throughput guarantee. The report retains exact inter
 candidate parameters and producer/pi hashes under target/trig_threshold_feasibility/0277/.
 An import with pathlib.Path.read_text patched to refuse passes, rc=0: helpers require explicit
 pi bounds and neither activate the producer profile nor read input/output content on import.
-Complete forward coverage remains .b; inverse generation/coverage and tangent resources remain open.
+At0277, complete forward coverage remained .b; inverse generation/coverage and tangent resources remain open.
+
+## Full forward producer — work unit0278
+
+The .b.1 producer iterates every j=0,...,999999 directly, with no interpolation or sampled skips.
+It retains100 contiguous10,000-row chunks under target/trig_forward_certificate/0278/. Each208-byte
+row stores both512-bit phase endpoints and four160-bit Farey components. Source hashes bind the
+producer, pure helpers, independent reader, local-environment profile and pi fixture. A manifest
+checkpoint publishes only after the chunk passes exact reading; resume rechecks every published
+chunk and refuses changed sources. A stopped partial run never counts as complete evidence.
+
+The independent reader imports no interval constructor. It checks every encoded size/hash,
+contiguous index range, determinant, denominator bound/sum, strict containment and positive phase
+range. It does not independently recompute asin enclosures; those remain the directed arithmetic
+derivation and distinct oracle/control evidence. Implicit payload row order is bound to actual
+threshold indices by the retained producer, rather than an unrelated list of passing gaps.
+
+Run python3 -I -B docs/tasks/artifacts/formula_structure/forward_threshold_certificate.py.
+The optional --chunks1 deliberately stops after one new chunk. Re-run without it to resume.
+Then run python3 -I -B docs/tasks/artifacts/formula_structure/verify_forward_certificate.py.
+Both commands completed, rc=0:1,000,000 rows/100 contiguous chunks, every strict gap passing.
+The one-chunk stop/resume and complete-reader's partial refusal were exercised before completion;
+three corrupted-row controls were also rejected. The final lock is absent. The retained payload
+is208,000,000 bytes. Recorded generation-loop intervals sum to363,094,133,583ns on this run;
+this excludes setup/resume/reader costs and is not a performance guarantee.
+
+The independent reader's minimum integer scaled phase margin is
+2580829885918382794552188695284784878828128897754713946, strictly positive. The scale is2^512;
+this is distance from an encoded phase band to its gap boundary, not a native sine error budget.
+SHA256 of the concatenated100 binary chunk digests in index order is
+90f7f6cc9fb3ae3f84ad3389454d6dfc1f3d391038697b068397968f7e6d2406.
+The manifest retains each digest and all five source hashes. The producer/reader are tracked;
+regeneration and source/hash refusal make this reproducible rather than a sampled extrapolation.
+
+Together with the directed interval derivation and distinct oracle controls, complete forward
+coverage establishes the proposed delta=2^-384 separation from positive sine/cosine ppm thresholds
+for the stated rational phase bound. Independent full interval recomputation is not claimed.
+Native sine/cosine precision/error/workspace admission is next .c. Inverse/tangent remain open;
+neither this certificate nor its maintenance timing selects their runtime algorithms.

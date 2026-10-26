@@ -64,8 +64,8 @@ verifies their public behavior and the actual reference; [whole recipe proofs](f
 
 ## Remaining proofs
 
-The [trig threshold feasibility cohort](formula-trig-certificates.md) is research evidence only:
-38 sampled forward bands pass; full population and runtime precision admission remain open.
+The [trig threshold certificate](formula-trig-certificates.md) covers all1M forward bands with an
+independent exact gap reader. Native runtime precision admission and inverse/tangent remain open.
 
 Full SizeSet axes/breaks/composition and resolved profile intent remain G1-SLICE.4c work. D70's axes
 cardinality ruling is pending. Recipe evaluation is .5, bus/undo .6, storage .7, constraints .8,

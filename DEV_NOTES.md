@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — full forward-threshold certificate
+
+0278 .5d.1.2.2.2.b.1 adds a source-locked resumable producer and independent exact payload reader.
+One10k checkpoint passed; the complete-reader refused its partial manifest, and resume rechecked
+that checkpoint before continuing. Distinct oracle/negative controls and three malformed row
+controls pass0. Full1M/100 chunks and independent reader pass, rc=0; all strict margins positive.
+208MB payload and per-chunk cost/source/hash records stay local and reproducible. The reader checks gap arithmetic, hashes and
+coverage; it does not independently recompute asin intervals. Native error/workspace .c, inverse45M
+and tangent remain open. Whole0277 task/old root-plan lesson/ledger retain372/373/250 byte-exact,
+with all three public reads equal, rc=0. Promotion: existing threshold decision records the exact
+format, source identity, checkpoint/coverage boundary and separate interval-proof obligation.
+
 ## _(2026-10-26 UTC)_ — finite-threshold certificate feasibility
 
 0277 .5d.1.2.2.2.a derives exact finite rounding-target populations and rational denominator
@@ -336,18 +348,8 @@ ten retained rows are not claimed as run. Book/live/API examples align; prior qu
 is corrected. Complete0254 task/ledger and four closed structural marks/allowance nodes are retained
 327/227/328 with live IDs/Goals/children preserved. Promotion: numerical decision records sqrt scope.
 
-## _(2026-10-25 UTC)_ — bounded exact root-family algorithm plan
-
-0254 .5d.1.1 selects integer bisection and exact squared-midpoint comparison before sqrt/hypot
-implementation. Floor-root of floor(N/D) is the floor-root of N/D;4N versus D(2k+1)^2 decides
-nearest/half-away exactly. Domain bounds give30/74/31 bisections for area/ratio/hypot and at most
-576-bit workspace for hypot. It never materializes an Area or uses libm/precision convergence.
-A focused symbolic-envelope/authored-midpoint Python check passes0; this checks examples/derivation,
-not production or exhaustive input coverage. A pure stdout math.isqrt/Fraction oracle retains25
-expected rows for the future native target, with authored half/full-width/domain checks, rc=0. Transcendental plans remain .5d.1.2 and broad proofs .5d.4.
-Legacy f64 summary is clarified against the existing true-value formula contract; no new function
-or scope is admitted. Whole0253 task/ledger retained326/226; book/pointers align. Promotion:
-existing numerical decision records the family algorithm, bounds, termination and oracle plan.
+[Complete bounded root-family plan lesson](docs/history/stitchcad-devnotes-part373.md) retains
+its original derivation, oracle plan, bounds and promotion decision.
 
 [Complete binding conversion lesson](docs/history/stitchcad-devnotes-part371.md) retains
 its original scope, validation and promotion decision.

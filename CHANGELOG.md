@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0277 — finite-threshold certificate feasibility
+## STITCHCAD-G1-0278 — complete forward-threshold certificate
 
-.5d.1.2.2.2.a: directed interval/Farey feasibility passes38 bands and independent/negative controls, rc=0.
-Research decision/book retain bounds and limits; full population/native budget/inverse/tangent remain open.370/371/249 retain whole history.
+.5d.1.2.2.2.b.1: all1M forward bands/100 source-locked chunks and independent gap reader pass, rc=0; partial/refusal/resume controls pass.
+Native budget .c, inverse/tangent remain open; book/live sync.372/373/250 retain whole prior task/lesson/ledger.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -444,3 +444,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part248](docs/history/stitchcad-changelog-part248.md) | whole0275 | 4 lines, 291 bytes, sha256:60356880… |
 
 | [part249](docs/history/stitchcad-changelog-part249.md) | whole0276 | 4 lines, 328 bytes, sha256:2ceb8c6a… |
+
+| [part250](docs/history/stitchcad-changelog-part250.md) | whole0277 | 5 lines, 316 bytes, sha256:2d41ae6f… |
