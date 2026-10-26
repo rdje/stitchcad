@@ -96,3 +96,5 @@ canonical tech-pack request	spec/artifact-requests.md	crates/sc-core/src/command
 evaluated instance selection	spec/artifact-requests.md	crates/sc-core/src/command/tech_pack.rs	InstanceSelection	G1-SLICE.6.2.2.c.2.4.4	7.5
 release request snapshot	spec/release-contract.md	crates/sc-core/src/command/release.rs	CommandRelease	G1-SLICE.6.2.2.c.2.5.3	4.4
 candidate preparation inputs	spec/release-contract.md	crates/sc-core/src/command/release.rs	PrepareRelease	G1-SLICE.6.2.2.c.2.5.3	4.4
+package identity claim	spec/release-contract.md	crates/sc-core/src/ontology/package_identity.rs	PackageIdentity	G1-SLICE.6.2.2.c.2.5.4	9
+exact approval intent	spec/release-contract.md	crates/sc-core/src/command/approval.rs	ApprovePackage	G1-SLICE.6.2.2.c.2.5.4	9

@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0332 — concrete release candidate request inputs
+## STITCHCAD-G1-0333 — exact candidate and scope approval intent
 
-PrepareRelease retains explicit ordered nonempty artifact requests and shared exact snapshot; identity requires generate.
-Native2+5+2+2/strict lint/fmt/book/publication76-97/census9-6-8-0 pass0;486/304 exact5d3a9e2.
-.6.2.2.c.2.5.3 done; G1still6/18. Actual candidate generation/sealing/approval and output checks remain handlers.
+Opaque algorithm/digest claims and explicit scope reference bind ApprovePackage; metadata requires approve.
+Native5+5+2+2/strict lint/fmt/book/publication76-99/census9-6-8-0 pass0;487/305 exact022b66d.
+.6.2.2.c.2.5.4 done; G1still6/18. Hash/subject/scope/auth validation and actual human records remain handlers.
 
 # Sealed archive — earlier slices
+
+| [part305](docs/history/stitchcad-changelog-part305.md) | whole0332 | 6 lines, 399 bytes, sha256:720bc151… |
 
 | [part304](docs/history/stitchcad-changelog-part304.md) | whole0331 | 6 lines, 395 bytes, sha256:f116aa6d… |
 

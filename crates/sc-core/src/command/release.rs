@@ -1,5 +1,5 @@
 //! Candidate preparation inputs; generated content and detached human approval remain separate effects.
-use super::{ArtifactPayload, CommandId, CommandSnapshotContext};
+use super::{ApprovePackage, ArtifactPayload, CommandId, CommandSnapshotContext};
 use core::fmt;
 
 /// Prepare one immutable content candidate from explicit canonical artifact requests.
@@ -43,11 +43,13 @@ impl PrepareRelease {
     }
 }
 
-/// Implemented release input schemas; detached human approval follows its exact subject/scope contract.
+/// Concrete release input schemas; actual generation, human authorization and records remain separate.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum ReleasePayload {
     /// Generate/check/seal a candidate; no approval metadata or actor-held grant is supplied here.
     PrepareRelease(PrepareRelease),
+    /// Exact subject/scope approval intent; untrusted claims provide no human approval capability.
+    ApprovePackage(ApprovePackage),
 }
 impl ReleasePayload {
     /// Command identity fixed by the actual typed request.
@@ -55,6 +57,7 @@ impl ReleasePayload {
     pub const fn command_id(&self) -> CommandId {
         match self {
             Self::PrepareRelease(_) => CommandId::PrepareRelease,
+            Self::ApprovePackage(_) => CommandId::ApprovePackage,
         }
     }
 }
@@ -81,7 +84,7 @@ impl CommandRelease {
     pub const fn payload(&self) -> &ReleasePayload {
         &self.payload
     }
-    /// Actual command identity and its required generate permission metadata.
+    /// Actual command identity and its required generate or human-only approve metadata.
     #[must_use]
     pub const fn command_id(&self) -> CommandId {
         self.payload.command_id()

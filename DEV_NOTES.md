@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — exact detached approval intent
+
+0333 .6.2.2.c.2.5.4 adds shared exact opaque algorithm/digest identity; blank/empty fields refuse original content.
+ApprovePackage retains candidate/scope targets under shared claims; metadata requires human-only approve.
+No actor claim authenticates a human, no algorithm/width/hash validity or approval/date/manifest change is produced.
+Native release5/artifact5/query2/catalog2, strict selected lint/fmt/book/publication76-99/census9-6-8-0 pass0.
+487/305 whole022b66d exact0. Promotion declined: existing ruled identity boundary. G1still6/18; release review next.
+
 ## _(2026-10-26 UTC)_ — explicit release candidate inputs
 
 0332 .6.2.2.c.2.5.3 adds nonempty PrepareRelease/ReleasePayload/CommandRelease with exact Design/actor/revision.
@@ -193,16 +201,8 @@ Main/companion book and decision boundaries align. Rust sources equal7618d20 and
 so focused17-test evidence is reused; book and three exact rendered target anchors pass0.448/449/
 282 whole19dbadc Git/hash/public exact0. .4c.3/.3e close structurally; profile intent .4 next; .5/.4d later. G1still5/18. Promotion: existing SizeSet decision extended; no broad rerun.
 
-## _(2026-10-26 UTC)_ — imported MTM fixture plan and sizing doc integration
-
-0309 .4c.3e.1 fixes D231: moving the Rust fixture left the mutation entry planning only implementation/
-root test. An independent missing-fixture control reproduces pre-repair activation/effect instead of
-refusal. Explicit read-only fixture planning plus the independent expected source fixes it: complete
-13-child/file capture,5 physical refusals and an actual compiled plan-omission red pass0. All actual
-source hashes stay exact; no native twelve-mutation replay. D230 companion pages still deferred
-implemented axes/breaks; status links/boundaries now align with the main chapter. Book0;446/447/281/
-138 whole7618d20 Git/hash/public exact0. G1still5/18; scope review .3e.2 next. Promotion declined:
-existing complete-input/source-currentness rules; broad/native replay remains integration/pre-push.
+[Complete MTM fixture-plan integration lesson](docs/history/stitchcad-devnotes-part487.md)
+retains original D230/D231 reproduction, exact producer/input proofs and remaining verification owners.
 
 [Complete unified SizeSet input lesson](docs/history/stitchcad-devnotes-part486.md) retains
 its original family/provenance/current-reference contracts and focused native proof.

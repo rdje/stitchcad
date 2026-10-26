@@ -86,6 +86,13 @@ Its identity derives release/generate metadata, without mutation retry/group fie
 Execution must check actual outputs/companions, collisions/completeness and production policy/dispositions,
 then seal the fixed binding and compute identity. Constructors create no files, candidate or approval.
 
+**Implemented approval intent.** `PackageIdentity::new(algorithm, digest)` preserves an opaque label
+and exact bytes; `BlankAlgorithm`/`EmptyDigest` refuse missing content. Support/width/hash truth needs
+actual candidate lookup. `ApprovePackage::new(identity, ApprovalScopeTarget::from_entity_id(scope))`
+retains an exact scope record (§6). ReleasePayload derives human-only approve metadata. Actor claims
+remain untrusted, including Human; execution must verify actual identity/grant/evidence/scope.
+Constructors create no approval/date or manifest edit. The human-act date belongs to the detached record.
+
 - **Any input or artifact change creates a new candidate** and stale-ifies the prior approval. A stale
   approval is not deleted: it remains as a record of what was approved, when, by whom and over what
   scope, and it is *void* for the new candidate.

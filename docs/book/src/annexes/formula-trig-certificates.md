@@ -268,13 +268,8 @@ libm or new precision-refusal rule is involved. Binding remains separate. [Sourc
 calls](formula-runtime-validation.md#product-implemented-numeric-calls) are available; whole AST
 execution retains its later .5e owner.
 
-Work unit0288's focused formula_inverse_value_contract target checks27 atan and54 atan2 values,
-reproduces the retained fixture, and checks wrong-kind/zero-vector priority. Its independent
-768-bit oracle uses addition around atan(1/2),512 terms and a separate exact pi identity, without
-the native root/half-angle reduction. Direct sin/cos enclosures construct close rational neighbors
-on both sides of three half-microdegree thresholds, with both signs. Full-width values, private
-256-bit quotients, all quadrants, exact axes and both signed rounded endpoints are included.
-This is focused native evidence; coupled/platform checks remain .5d.4/integration/pre-push.
+Complete0288 native inverse/oracle/threshold-neighbor receipts remain in
+`docs/history/stitchcad-devnotes-part487.md`. Coupled/platform proof remains .5d.4/integration/pre-push.
 
 ## Tangent resource boundary
 
