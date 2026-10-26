@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — authored label and base transformation intent
+
+0312 .4c.4.2 validates exact source/domain, identity/evidence and explicit member label/base payloads.
+Partial mappings preserve vector/member order and exact labels; final collisions refuse, swaps work.
+Five states retain evidence/assumption/request/provenance/formula; Unknown/Derived lack payloads.
+Garment13+MTM8 pass0; strict selected lint/fmt/book0. Source stays unchanged, MTM grading still refuses.
+452/453/284 whole214c80a Git/hash/public exact0. G1still5/18; canonical break/chart bindings .3 next.
+Promotion: existing SizeSet decision extended; execution/registry/evidence truth and broad gates retain later owners.
+
 ## _(2026-10-26 UTC)_ — selected profile pin and immutable SizeSet origin
 
 0311 .4c.4.1 retains exact distinct profile/schema/content labels, with G4 validation explicit.
@@ -250,17 +259,8 @@ two inverse tests pass8/0; selected strict Clippy/fmt/book pass0.396/397/261 ret
 No kernel/certificate changes, broad/platform verdict or whole AST execution. G1still5/18.
 Promotion declined: existing numerical/provenance contracts determine this adapter.
 
-## _(2026-10-26 UTC)_ — correctly rounded native inverse values
-
-0288 .5d.3.3.1 transcribes the admitted576-bit/five-half/64-term plan into private inverse.rs.
-Numeric checked_atan/checked_atan2 retain ppm scaling, homogeneous actual kinds,256-bit private
-quotients, exact axes, signed rounded endpoints and actual typed zero-vector data. No new domain,
-precision failure, dependency or libm. Independent addition/series oracle reproduces27/54 values
-including signed near-midpoints and full widths; native3/0, selected strict Clippy/fmt/book pass0.
-The first fixture parser used i64 instead of R's i128 constructor and explicit panic arms; compiler
-and strict lint diagnosed both, corrected before final focused passes.394/395/260 retain exact
-whole history. Source propagation/AST/platform remain later owners; G1still5/18.
-Promotion: existing atan decision updated; no new cross-cutting doctrine.
+[Complete native inverse lesson](docs/history/stitchcad-devnotes-part453.md) retains
+its original runtime/branch/rounding evidence, checks and promotion decision.
 
 [Complete bounded inverse-plan lesson](docs/history/stitchcad-devnotes-part451.md) retains
 its admitted precision/iterations/workspace/sign/error derivations, checks and promotion decision.

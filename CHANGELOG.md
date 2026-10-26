@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0311 — selected profile pin and immutable SizeSet origin
+## STITCHCAD-G1-0312 — authored label/base transformation intent
 
-Exact profile/schema/content labels and source/resolved/provenance metadata preserve original inputs.
-Current source and target namespace checks pass pin3+garment8+MTM7; selected lint/fmt/book0.
-450/451/283 whole5a87ed0 retention exact0. G1still5/18; authored transformation payloads next.
+State-bearing declarations retain exact source/domain/evidence and explicit member mappings/base.
+Partial mappings/swaps preserve order; collisions/refusals keep source intact. Garment13+MTM8 pass0,
+strict lint/fmt/book0;452/453/284 whole214c80a retention exact0. G1still5/18; break/chart bindings next.
 
 # Sealed archive — earlier slices
+
+| [part284](docs/history/stitchcad-changelog-part284.md) | whole0311 | 6 lines, 367 bytes, sha256:33313b96… |
 
 | [part283](docs/history/stitchcad-changelog-part283.md) | whole0310 | 6 lines, 381 bytes, sha256:e73fcf61… |
 

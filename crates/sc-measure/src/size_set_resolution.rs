@@ -7,3 +7,9 @@ pub use origin::{
 pub use profile::{
     SizeSetProfilePin, SizeSetProfilePinDefinition, SizeSetProfilePinError, SizeSetProfilePinField,
 };
+mod transformation;
+pub use transformation::{
+    SizeLabelMapping, SizeSetTransformation, SizeSetTransformationDefinition,
+    SizeSetTransformationError, SizeSetTransformationKind, SizeSetTransformationReadError,
+    SizeSetTransformationState, SizeSetTransformationValue,
+};

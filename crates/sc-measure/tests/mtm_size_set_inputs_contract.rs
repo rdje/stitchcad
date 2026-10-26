@@ -370,3 +370,40 @@ fn mtm_resolution_origin_preserves_source_and_refuses_body_ease_and_axis_aliases
     );
     assert_eq!(f.membership, before);
 }
+
+#[test]
+fn singleton_transformation_intent_retains_its_body_ease_inputs_and_original_grading_refusal() {
+    let f = Fixture::new();
+    with_parts(
+        &f,
+        Options::default(),
+        |chart, chart_context, breaks, break_context| {
+            let inputs: SizeSetInputs<'_> =
+                MtmSizeSetInputs::new(chart, chart_context, breaks, break_context)
+                    .expect("actual singleton inputs")
+                    .into();
+            let definition = SizeSetTransformationDefinition {
+                id: id(2000),
+                reference: inputs.reference(),
+                source: id(3000),
+                kind: SizeSetTransformationKind::BaseSubstitution,
+                state: SizeSetTransformationState::Preference {
+                    value: SizeSetTransformationValue::BaseSubstitution(id(41)),
+                    provenance: id(3001),
+                },
+            };
+            let result = SizeSetTransformation::new(definition.clone(), inputs)
+                .expect("explicit current base");
+            assert_eq!(result.definition(), &definition);
+            assert_eq!(
+                inputs.validate_inputs_for(SizeInstantiationPath::GradeRules),
+                Err(SizeSetInputError::Mtm(Box::new(
+                    MtmChartError::GradeRulesUnsupported {
+                        chart: id(70),
+                        member: id(41)
+                    }
+                )))
+            );
+        },
+    );
+}

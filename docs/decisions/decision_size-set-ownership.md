@@ -172,3 +172,9 @@ G1 requires nonblank opaque labels, leaving grammar/registry validation to G4. A
 identity/revision must match the supplied garment/MTM input view; a separately allocated target
 cannot alias supplied records or origin provenance. Source objects are unchanged. No transformed
 output, global freshness, profile execution or approval is certified. Typed transformations follow.
+
+G1-SLICE.4c.4.2 adds typed state-bearing label/base intent pinned to actual source inputs. Known
+requires distinct nonempty evidence; Unknown/Derived have no payload. Partial mappings preserve
+member/mapping order and exact labels, refusing collisions with unchanged members; simultaneous
+swaps remain valid. Proposed bases name actual members. These immutable declarations never apply
+a profile or change path readiness. Break/chart bindings and immutable aggregate remain .3/.4.

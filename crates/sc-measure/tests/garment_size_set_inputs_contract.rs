@@ -451,3 +451,6 @@ fn resolved_identity_cannot_alias_any_supplied_garment_namespace_or_its_provenan
         },
     );
 }
+
+#[path = "support/size_set_transformations.rs"]
+mod transformations;

@@ -495,27 +495,28 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4c.4.1`
   Status: `done`
-  Goal:0311 exact selected profile/schema/content labels and immutable source/resolved SizeSet origin metadata.
-  Paths: crates/sc-measure/src/size_set_resolution.rs;crates/sc-measure/src/size_set_resolution/;
-  crates/sc-measure/src/size_set.rs;crates/sc-measure/src/size_set/;crates/sc-measure/src/lib.rs;
-  crates/sc-measure/src/size_chart_collection.rs;crates/sc-measure/src/mtm_chart.rs;
-  crates/sc-measure/tests/size_set_profile_pin_contract.rs; garment/MTM composite tests;
-  docs/book/src/spec/size-set-transformations.md;book SUMMARY/status/main/decision/live docs.
-  Roadmap8's schema/content versions stay distinct and opaque here; G4 owns grammar/registry/profile validation.
-  Source reference must match actual current inputs; allocated resolved identity cannot alias known source entities
-  or provenance. No allocator, transformed output, numeric/default/profile resolution or approval claim.
-  Own450 whole0310 task,451 oldest0287 lesson and283 ledger from5a87ed0; whole Git/hash/public before retirement.
-  Focused pin/origin and affected composite tests, selected strict lint/fmt/book.
-  - [x] ROOT CAUSE (WHY + WHERE): roadmap8 separates schema/content; existing symbolic bindings stay G4-deferred; API check rc=0.
-  - [x] ADDRESSED: exact pins/origin refuse stale source and input/provenance target aliases; native18 rc=0.
-  - [x] NO REGRESSION: affected garment8/MTM7 included; strict selected lint/fmt/book rc=0.
-  Verification: profile3+garment8+MTM7 contracts18/0; cargo check/lib, strict clippy and fmt rc=0;
-  book rc=0;450/451/283 whole source intervals/hash/public-reader byte equality rc=0.
-  LIVE_STATUS reviewed: G1 In Progress5/18 unchanged; G0 closure unapproved, later gates not started.
-  Commit: STITCHCAD-G1-0311. Next .4c.4.2; broad verification remains integration/pre-push.
+  Goal:0311 profile pins/origin; focused18/lint/fmt/book0; [whole scope/proofs](../history/stitchcad-devnotes-part452.md).
+  Commit: STITCHCAD-G1-0311.
+
 - ID: `G1-SLICE.4c.4.2`
-  Status: `pending`
-  Goal: typed transformation declarations retaining authored state/evidence, explicit label mappings and base substitution.
+  Status: `done`
+  Goal:0312 typed transformation declarations retaining authored state/evidence, label mappings and base substitution.
+  Own src/size_set_resolution/transformation.rs and transformation/ helpers, lib/module exports,
+  garment/MTM composite tests and tests/support/size_set_transformations.rs; transformation/main book,
+  decision and live/task pointers.
+  Every declaration pins actual SizeSet inputs and explicit domain; Known evidence is nonempty/distinct,
+  Assumed/Preference retain source refs, Unknown/Derived have no authored payload. No state/default coercion.
+  Label mappings name existing members, preserve vector order and exact target labels, and reject effective
+  label collisions; explicit base must be an actual member. Source inputs are never edited or sorted.
+  Own452 whole0311 task,453 whole oldest0288 lesson,284 ledger from214c80a; prove exact Git/hash/public
+  before removal. Also correct transformation page's actual §9 anchor. Focused state/domain checks/lint/fmt/book;
+  execution, profile constraints, global provenance/registry validation remain G3/G4/integration owners.
+  - [x] ROOT CAUSE (WHY + WHERE): SizeSet §9/roadmap8 require typed state/evidence; canonical state API review rc=0.
+  - [x] ADDRESSED: label/base/source/evidence state contract; garment13+MTM8 focused tests rc=0.
+  - [x] NO REGRESSION: original composite/path cases included; selected strict clippy/fmt/book rc=0.
+  Verification: native21/0; strict selected lint/fmt/book rc=0;452/453/284 whole Git/hash/public byte equality rc=0.
+  LIVE_STATUS reviewed: G1 In Progress5/18 unchanged; profile execution/approval remain later gates.
+  Commit: STITCHCAD-G1-0312. Next .4c.4.3; broad checks remain integration/pre-push.
 - ID: `G1-SLICE.4c.4.3`
   Status: `pending`
   Goal: explicit break-scaling and chart-replacement intent with canonical numeric/input bindings and original states.

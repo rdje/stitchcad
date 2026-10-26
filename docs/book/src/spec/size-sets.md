@@ -3,8 +3,8 @@
 > **Status:** normative specification, gate **G0** (roadmap §3.4, §7.5, §8). Implemented by `sc-measure` at
 > gate **G1** (leaf `G1-SLICE.4`) and consumed by both instantiation paths at **G3**. The
 > [membership foundation](size-membership.md), chart families, axes, signed breaks and current composite input views
-> are executable; [profile pins/origin](size-set-transformations.md) are available; transformation
-> payloads and complete-family review remain in progress. The ownership
+> are executable. [Profile pins, origin and label/base intent](size-set-transformations.md) are available;
+> break/chart payloads and complete-family review remain in progress. The ownership
 > question roadmap §3.4 leaves open is decided here and recorded as
 > `docs/decisions/decision_size-set-ownership.md`. Terms are in the [glossary](glossary.md).
 
