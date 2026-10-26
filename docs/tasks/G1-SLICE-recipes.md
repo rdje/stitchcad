@@ -581,12 +581,32 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_value_read_bridge_contract.rs
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part349.md).
 - ID: `G1-SLICE.5e.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.
   Acceptance: always-visible versus prior names, stored numeric/Boolean reads, both-branch static
   validation but taken-only computation, unknown untaken succeeds/taken refuses with full context.
   Numeric domain/division/width errors occur at the actual completed operation; no reordering.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5e.2.1`
+  Status: `done`
+  Goal:0273 lazy conditional value control with both branch kinds checked before callbacks.
+  Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/conditional.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_conditional_value_contract.rs
+  Boolean condition, equal numeric branch metadata, selected callback once, untouched untaken
+  callback, actual body failure and output-kind validation; merge condition and taken sources only.
+  Full checked-AST names/structure/branch proofs must precede this supplied-value primitive.
+  Retain361 whole0272 task,362 oldest whole numeric-domain/binary lesson group,245 ledger.
+  Native/selected lint and book/live sync; full expression/statement/atomic execution stays open.
+- [x] REPRODUCE:0273 f67ed36 has sourced values but no lazy value conditional; source read rc=0.
+- [x] ROOT CAUSE:0273 evaluating both callbacks would read untaken Unknowns and contaminate
+  sources; supplied kinds must be checked first, then only one callback. Native4/0, rc=0.
+- [x] FIX: actual Boolean/equal-numeric metadata guard, selected callback/result kind and source union.
+- [x] ADDRESSED:0273 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_conditional_value_contract:4 pass/0 fail, rc=0.
+- [x] NO REGRESSION:0273 full kind matrix/counts/actual Unknown/error/output/source controls pass;
+  cargo clippy --offline -p sc-core --test formula_conditional_value_contract -- -D warnings, rc=0.
+  Full AST static names/structure and expression/statement/atomic .5e.2/.4 remain owned prerequisites.
+- [x] LOCKSTEP:361/362/245 whole Git/hash/public records and book render rc=0; live/frontier align.
+  Promotion declined: existing grammar7/D121; no supplied metadata promoted to a whole AST proof.
 - ID: `G1-SLICE.5e.3`
   Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.
@@ -618,25 +638,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part358.md).
 - ID: `G1-SLICE.5e.3.5`
   Status: `done`
-  Goal:0272 named assertion acceptance/failure from actual admitted tolerance comparisons.
+  Goal: actual named assertion success/refusal verified0272, native4/0.
   Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/assertion.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_assertion_value_contract.rs
-  False emits formula_assertion with actual borrowed name/operands/class/context; true retains
-  the satisfied comparison. Sealed outcomes; no false success, substitution, AST/ordinal/atomic claim.
-  Retain358 whole0271 task,359 oldest complete oracle lesson,360 whole D122 origin/context scope
-  and own receipts in G1-SLICE-measurements.md;244 ledger. Preserve other checklists/anchor routes.
-  Focused native/selected lint and book/live sync. Full .5e.2/.3 statement execution remains open.
-- [x] REPRODUCE:0272 60bcd0e returns comparison false but no product named assertion outcome;
-  actual source read and false book closure test establish the missing layer, rc=0.
-- [x] ROOT CAUSE:0272 comparison false is valid for within but must be a named assertion refusal;
-  sealed true/false outcomes retain actual comparison/name. Focused native4/0, rc=0.
-- [x] FIX: actual named satisfied assertion or formula_assertion with exact operands/class/context.
-- [x] ADDRESSED:0272 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test formula_assertion_value_contract:4 pass/0 fail, rc=0.
-- [x] NO REGRESSION:0272 kind/class/threshold/book/fraction/source/name controls pass;
-  cargo clippy --offline -p sc-core --test formula_assertion_value_contract -- -D warnings, rc=0.
-  Whole statement/AST/replay .5e.2/.3/.4 and broad .5g/pre-push remain owned, not inferred here.
-- [x] LOCKSTEP:358–360/244 whole Git/hash/public records and book render rc=0; live/frontier align.
-  Promotion declined: existing formula5.1/5.2 and source contracts; no fabricated statement identity.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part361.md).
 - ID: `G1-SLICE.5e.4`
   Status: `pending`
   Goal: atomic replay and dependency validation, including corrupted persisted cycle evidence.

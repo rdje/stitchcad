@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0272 — actual named assertion outcomes
+## STITCHCAD-G1-0273 — lazy conditional value control
 
-.5e.3.5: satisfied assertions retain the true comparison; false returns formula_assertion with actual name,
-values, quantitative context and sources. No accepted false, substitution or invented statement context.
+.5e.2.1: check supplied Boolean/equal-numeric branch kinds before callbacks, then run only the selected branch.
+Keep condition/taken sources and actual body/output-kind failures; untaken Unknown is unread. Whole AST execution remains open.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -434,3 +434,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part243](docs/history/stitchcad-changelog-part243.md) | whole0270 | 4 lines, 319 bytes, sha256:c167f912… |
 
 | [part244](docs/history/stitchcad-changelog-part244.md) | whole0271 | 4 lines, 310 bytes, sha256:7d4f813c… |
+
+| [part245](docs/history/stitchcad-changelog-part245.md) | whole0272 | 4 lines, 271 bytes, sha256:d5e0f82c… |

@@ -8,7 +8,9 @@ use crate::name::MachineToken;
 
 mod assertion;
 mod calls;
+mod conditional;
 pub use assertion::{FormulaAssertionFailure, FormulaSatisfiedAssertion};
+pub use conditional::{FormulaConditionalBranch, FormulaConditionalValueError};
 mod tolerance;
 pub use tolerance::{
     FormulaToleranceComparison, FormulaToleranceComparisonError, FormulaToleranceComparisonRefusal,

@@ -510,6 +510,37 @@ worked-book false closure, signed fractions, retained sources/context and both t
 This is a named value-level outcome. Whole statement identity, ordinals, source-order execution,
 abandoning a complete failed recipe and API/MCP diagnostic publication remain evaluator work.
 
+### Product lazy conditional value control
+
+`FormulaEvaluatedScalar::checked_if` accepts supplied then/else static kinds and two lazy callbacks.
+It checks the actual Boolean condition and equal numeric branch kinds before either callback runs.
+It then calls only the selected branch, once, validates that returned kind and merges condition and
+selected-result sources. Untaken input reads, failures and contributions remain untouched.
+
+```rust
+use sc_core::recipe::{FormulaBuiltin as B, FormulaEvaluatedScalar as V, FormulaKind as K,
+    FormulaNumericValue as N, FormulaRational as R};
+
+let left = V::from_numeric(N::new(K::Length, R::from_signed_integer(3))?);
+let right = V::from_numeric(N::new(K::Length, R::from_signed_integer(4))?);
+let condition = V::from_boolean(false).with_call_source(B::Sin);
+let chosen = condition.checked_if(K::Length, K::Length,
+    || left.checked_hypot(right), || left.checked_abs())?;
+assert_eq!(chosen.numeric().expect("Length").rational(), R::from_signed_integer(3));
+assert!(chosen.sources().contains(B::Sin));
+assert!(!chosen.sources().contains(B::Hypot)); // untaken call never ran
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+`FormulaConditionalValueError` retains actual input-kind metadata, the selected branch's original
+computation error, or its declared/actual output-kind violation. Kind failures use formula_dimension;
+the generic body error keeps its own diagnostics through computation_error and, for an owned error,
+the standard source chain. No invented error token or replacement result is supplied.
+
+This helper checks supplied kinds, not AST names/structure. Both full branch proofs must precede it;
+whole expression/provider/statement execution remains open. Four focused native tests cover all
+supplied kind combinations, callback counts, actual Unknown reads, result-kind violations and sources.
+
 ### Existing reference execution controls
 
 A value retains an immutable set of approximation-producing calls in its executed dependencies.

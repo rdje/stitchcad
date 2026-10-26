@@ -54,9 +54,9 @@ pub use provenance::{FormulaApproximationSources, FormulaApproximationToleranceE
 
 mod evaluated;
 pub use evaluated::{
-    FormulaAssertionFailure, FormulaEvaluatedBinding, FormulaEvaluatedScalar,
-    FormulaSatisfiedAssertion, FormulaToleranceComparison, FormulaToleranceComparisonError,
-    FormulaToleranceComparisonRefusal,
+    FormulaAssertionFailure, FormulaConditionalBranch, FormulaConditionalValueError,
+    FormulaEvaluatedBinding, FormulaEvaluatedScalar, FormulaSatisfiedAssertion,
+    FormulaToleranceComparison, FormulaToleranceComparisonError, FormulaToleranceComparisonRefusal,
 };
 
 mod normalized;

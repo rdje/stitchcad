@@ -92,3 +92,5 @@ current counts are derived from current test execution rather than inferred from
 | Exact named tolerance comparison | §3.1/§4.2; G1 | sc-core recipe; G1-SLICE.5e.3.4 | [Actual values/context/sources](formula-runtime-validation.md#product-named-tolerance-comparisons); assertion/AST execution follows |
 
 | Named assertion value outcomes | §5.1/§5.2; G1 | sc-core recipe; G1-SLICE.5e.3.5 | [Actual true/failure records](formula-runtime-validation.md#product-named-assertion-outcomes); whole statement execution follows |
+
+| Lazy conditional value control | grammar§7; G1 | sc-core recipe; G1-SLICE.5e.2.1 | [Selected callback/source retention](formula-runtime-validation.md#product-lazy-conditional-value-control); full AST proof/execution follows |
