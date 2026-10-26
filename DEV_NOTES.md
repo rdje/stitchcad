@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — composite MTM body/Ease SizeSet inputs
+
+0307 .4c.3d.3.2 composes the actual custom singleton/axis/body-Ease chart/break inputs. Shared
+snapshot/identity checks now serve both chart families. Complete mappings enable regeneration
+inputs; grading retains the original chart/member GradeRulesUnsupported after current validation,
+even for drafts or empty gaps. Body/Ease values remain original and uncomputed. New MTM5, original
+MTM15 and garment5 pass0; selected strict lint/fmt/book0. The original fixture is shared unchanged,
+with scoped test-only helper/import cleanup.442/443/279 whole4ae9650 Git/hash/public exact0.
+G1still5/18; unified family/path review .3.3 next. Promotion: existing SizeSet decision extended;
+actual numeric execution, persistence and broad integration proof remain their later owners.
+
 ## _(2026-10-26 UTC)_ — composite garment SizeSet input views
 
 0306 .4c.3d.3.1 borrows original membership/axes/chart/break records with typed structural path
@@ -255,26 +266,8 @@ whole task/lesson/closed repair scope/ledger. Promotion: inverse decision record
 Read-only cleanup inspect accepts actual certificate .bin chunks: defect owned P1 .h immediately
 after this commit, before full coverage or cleanup. No deletion; book/live/task preserve the finding.
 
-## _(2026-10-26 UTC)_ — native inverse certificate chunk probe
-
-0283 .5d.1.2.2.2.b.2.b.1 adds a pure-stdout Rust diagnostic and a guarded Cargo/artifact/row probe.
-A derivative bound widens one center tangent by16*2^-600; native bands contain separate Python
-endpoint bands.10,035 exact rows/67 parity/5 actual invalid-input refusals and selected example
-lint pass, rc=0. The source plan covers169 tracked/new workspace inputs; binary/source hashes
-stay exact around execution. Observed10k wall765937250ns excludes build/Python checks; no total
-duration promise. Full45M controller/reader and native inverse admission remain open.383–385/255
-retain whole prior task/lesson/closed guard scope/ledger with exact Git/hash/public reads. Book/live
-align, G1still5/18. Promotion: inverse decision records padding proof, format, scope and evidence.
-
-## _(2026-10-26 UTC)_ — inverse threshold certificate feasibility
-
-0282 .5d.1.2.2.2.b.2.a tests640-bit64-term directed sine/cosine quotients over2^-600-turn bands.
-Inverse38-band cohort/algebraic4/Fraction-atan2/negative2 controls pass, rc=0; pure import performs
-no data reads. The exact factorial/width argument supports the prototype, not a native budget.
-Complete45M/source-locked reader .b and native branch/error/workspace .c remain open; tangent
-stays separate.381/382/254 retain whole0281 task/old arc lesson/ledger exact Git/hash/public bytes.
-Book/live align; G1still5/18. Promotion: decision_inverse-thresholds.md retains proposal, parameters,
-independent controls and explicit admission gaps. No existing forward proof/runtime source changes.
+[Complete inverse feasibility/chunk lessons](docs/history/stitchcad-devnotes-part443.md) retain
+their original exact interval/source/format boundaries, checks and promotion decisions.
 
 [Complete sourced forward-call lesson](docs/history/stitchcad-devnotes-part441.md) retains
 its original argument/kind/source/refusal behavior, checks and promotion decision.

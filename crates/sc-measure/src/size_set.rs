@@ -1,8 +1,11 @@
 //! Composite current SizeSet input views; path checks are structural, not numeric execution or approval.
 mod error;
 mod garment;
+mod mtm;
+mod shared;
 pub use error::SizeSetInputError;
 pub use garment::GarmentSizeSetInputs;
+pub use mtm::MtmSizeSetInputs;
 
 /// Explicit instantiation path whose current authored inputs are requested.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

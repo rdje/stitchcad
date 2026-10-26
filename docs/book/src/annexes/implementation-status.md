@@ -73,7 +73,8 @@ Individual [signed size breaks](../spec/size-sets.md#executable-individual-break
 actual axes, named measurement dimensions and authored adjacent member pairs, borrowing canonical
 Length state/source. Explicit required dimensions, current adjacent-pair coverage and singleton grading
 refusal are implemented at .4c.3d.2. [Garment SizeSet input views](../spec/size-sets.md#composite-garment-sizeset-inputs--g1-slice4c3d31)
-now compose shared current snapshots and typed structural paths. MTM composition/shared review remain .3.2/.3.3.
+now compose shared current snapshots and typed structural paths. [MTM body/Ease composition](../spec/size-sets.md#composite-mtm-bodyease-inputs--g1-slice4c3d32)
+preserves singleton grading refusal. Unified input-family review remains .4c.3d.3.3.
 
 ## Remaining proofs
 

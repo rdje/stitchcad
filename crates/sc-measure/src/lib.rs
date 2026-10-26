@@ -11,7 +11,8 @@
 //! at least one authored axis. Individual signed breaks bind explicit axes/POMs/adjacent pairs;
 //! explicit required dimensions and current adjacent coverage are implemented. SizeSet composition
 //! and resolution contracts follow in owned slices. Garment input views compose shared current
-//! snapshots with typed structural path requirements; MTM composition follows separately.
+//! snapshots with typed structural path requirements. MTM views preserve canonical body/Ease inputs
+//! and explicit singleton grading refusal; numeric execution and persistence remain separate.
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
@@ -62,7 +63,8 @@ pub use size_breaks::{
 
 mod size_set;
 pub use size_set::{
-    GarmentSizeSetInputs, SizeInstantiationPath, SizeSetInputError, SizeSetSnapshot,
+    GarmentSizeSetInputs, MtmSizeSetInputs, SizeInstantiationPath, SizeSetInputError,
+    SizeSetSnapshot,
 };
 
 mod size_chart;

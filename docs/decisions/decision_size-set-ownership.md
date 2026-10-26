@@ -149,3 +149,9 @@ unify snapshots. Cross-view identity aliases refuse; nested errors remain origin
 requires full chart coverage; grading additionally requires break coverage. No numeric availability,
 execution or approval follows from these structural checks. Five composite plus five break tests
 pass; MTM composition/shared review remains .3.2/.3.3 and persistence remains its later owner.
+
+G1-SLICE.4c.3d.3.2 adds composite MTM body/Ease inputs using the same shared snapshot/identity checks.
+The custom singleton keeps its authored axis/point. Regeneration requires complete mappings;
+grading preserves the original chart/member refusal after current metadata checks. Numeric source
+state remains borrowed without body-plus-Ease evaluation. Five new MTM, fifteen original MTM and
+five garment contracts pass; unified-family review remains .3.3, execution/persistence separate.

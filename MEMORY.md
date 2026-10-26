@@ -4,12 +4,12 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0306 .4c.3d.3.1 composes borrowed garment SizeSet inputs with typed structural regeneration/grading requirements.
-- Actual membership/measurement-context/Design-table objects must be shared; cross-view aliases refuse.
-- Complete chart enables regeneration inputs; grading also needs break coverage. Unknown/drafts remain explicit.
-- Native composite5+breaks5 pass0; selected strict lib/test lint/fmt/book0; no numeric execution/storage/approval claim.
-- NEXT .4c.3d.3.2 MTM body/Ease composition, then shared family/path review .3.3.
--440/441/278 whole79e0f1f Git/hash/public exact0.0305/79e0f1f window15 packing keeps prior14 byte-exact.
+-0307 .4c.3d.3.2 composes borrowed MTM singleton/axis/body-Ease inputs using shared snapshot/identity validation.
+- Regeneration requires complete mappings; grading retains original chart/member refusal after current metadata checks.
+- Native new MTM5+original MTM15+garment5 pass0; selected strict lib/three-test lint/fmt/book0; no numeric sum/execution.
+- NEXT .4c.3d.3.3: coherent typed input-family entry point and bounded structural path review.
+-442/443/279 whole4ae9650 Git/hash/public exact0; original MTM fixture shared without changing its fifteen contracts.
+-0306/4ae9650 garment input views preserve drafts/Unknown and require complete breaks only for grading.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
 - Native query2+catalog2 pass0; selected strict lint/fmt/census17/5/5/0/book0; exact revisions beyond128bits.
@@ -45,4 +45,4 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D156/D223 audits deferred; D224/D225/D227/D229 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background job or pending director question after0306. Derive push count, never carry it manually.
+- No background job or pending director question after0307. Derive push count, never carry it manually.

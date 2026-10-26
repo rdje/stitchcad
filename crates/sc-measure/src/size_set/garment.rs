@@ -1,10 +1,9 @@
 //! Actual garment chart, membership/axes and break inputs from one shared current snapshot.
-use super::{SizeInstantiationPath, SizeSetInputError as Error, SizeSetSnapshot};
+use super::{shared, SizeInstantiationPath, SizeSetInputError as Error};
 use crate::{
     SizeAxes, SizeBreakContext, SizeBreaks, SizeChart, SizeChartCollectionContext,
     SizeChartCollectionError, SizeMembership, SizeSetReference,
 };
-use std::{collections::BTreeSet, ptr};
 
 /// Borrowed composite garment SizeSet inputs, retaining original records and every canonical state.
 /// Draft chart/break inventories remain representable; explicit path validation requires coverage.
@@ -74,12 +73,6 @@ impl<'a> GarmentSizeSetInputs<'a> {
             .validate_current(self.break_context)
             .map_err(|issue| Error::Breaks(Box::new(issue)))?;
         let records = self.chart_context.records();
-        if !ptr::eq(records.membership(), self.membership()) {
-            return Err(Error::SharedSnapshot(SizeSetSnapshot::Membership));
-        }
-        if !ptr::eq(records.measurements(), self.break_context.measurements()) {
-            return Err(Error::SharedSnapshot(SizeSetSnapshot::Measurements));
-        }
         let design_table = records
             .table(self.chart.definition().design_table)
             .ok_or_else(|| {
@@ -88,29 +81,19 @@ impl<'a> GarmentSizeSetInputs<'a> {
                     table: self.chart.definition().design_table,
                 }))
             })?;
-        if !ptr::eq(design_table, self.break_context.table()) {
-            return Err(Error::SharedSnapshot(SizeSetSnapshot::DesignTable));
-        }
-        let break_ids = self
-            .breaks
-            .definition()
-            .breaks
-            .iter()
-            .map(|value| value.definition().id)
-            .collect::<BTreeSet<_>>();
-        for identity in std::iter::once(self.chart.id()).chain(self.chart_context.observation_ids())
-        {
-            if self.break_context.contains_entity(identity) || break_ids.contains(&identity) {
-                return Err(Error::DuplicateIdentity(identity));
-            }
-        }
-        for table in records.tables() {
-            if break_ids.contains(&table.id())
-                || (!ptr::eq(table, design_table) && self.break_context.contains_entity(table.id()))
-            {
-                return Err(Error::DuplicateIdentity(table.id()));
-            }
-        }
+        shared::validate_snapshot(
+            records.membership(),
+            records.measurements(),
+            design_table,
+            self.break_context,
+        )?;
+        shared::validate_entities(
+            self.chart.id(),
+            self.chart_context.observation_ids(),
+            records.tables(),
+            self.breaks,
+            self.break_context,
+        )?;
         Ok(())
     }
 

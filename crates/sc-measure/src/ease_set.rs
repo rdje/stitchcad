@@ -98,6 +98,12 @@ impl<'a> EaseSetContext<'a> {
     pub const fn measurements(&self) -> &'a MeasurementTableContext<'a> {
         self.measurements
     }
+    pub(crate) fn tables(&self) -> impl Iterator<Item = &'a MeasurementTable> + '_ {
+        self.tables.values().copied()
+    }
+    pub(crate) fn ease_ids(&self) -> impl Iterator<Item = EntityId> + '_ {
+        self.eases.keys().copied()
+    }
     pub(crate) fn contains(&self, id: EntityId) -> bool {
         self.tables.contains_key(&id)
             || self.eases.contains_key(&id)

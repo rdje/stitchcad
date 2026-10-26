@@ -84,6 +84,15 @@ impl<'a> MtmChartContext<'a> {
             eases,
         })
     }
+    pub(crate) const fn membership(&self) -> &'a SizeMembership {
+        self.membership
+    }
+    pub(crate) const fn eases(&self) -> &'a EaseSetContext<'a> {
+        self.eases
+    }
+    pub(crate) fn set_ids(&self) -> impl Iterator<Item = EntityId> + '_ {
+        self.sets.keys().copied()
+    }
     fn contains(&self, id: EntityId) -> bool {
         self.membership.reference().id == id
             || self

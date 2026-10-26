@@ -261,12 +261,52 @@ Structural input coverage is not numeric availability. Unknown chart or delta de
 Unknown; Derived values still require formula evaluation. Original records can be read through the
 borrowed chart/break APIs and their supplied contexts, with their original observation/formula errors.
 The view does not manufacture a value, base instance, grade rules, geometry, equivalence result,
-profile decision or release approval. MTM body/Ease composition remains .4c.3d.3.2, followed by the
-shared-family review .3.3; actual instantiation and persisted storage remain their later owners.
+profile decision or release approval. MTM body/Ease composition is implemented below; the
+shared-family review .3.3, actual instantiation and persisted storage remain separately owned.
 
 Five composite garment tests plus the five break collection tests pass; selected strict lint,
 formatting and book build pass. Tests include actual record borrows, both structural paths, draft gaps,
 three mismatched snapshot components, cross-inventory aliases and preserved unavailable numeric input.
+
+### Composite MTM body/Ease inputs — G1-SLICE.4c.3d.3.2
+
+`MtmSizeSetInputs` now composes the actual custom singleton membership, authored axis/member point,
+MTM body/Ease chart and break inventory by borrow. The singleton's axis and coordinate must be
+explicitly authored before a valid `SizeBreakContext` exists; the MTM view creates neither. Its set
+identity/revision, label/base, chart and source records remain the original canonical inputs.
+
+Construct it from an actual `MtmChart`, `MtmChartContext`, `SizeBreaks` and `SizeBreakContext`.
+As with garment inputs, both contexts must share the actual membership object, measurement-record
+context and logical garment Design table. The body table is separately explicit. The same shared
+snapshot/identity validator serves both families: chart, Ease-set, Ease and table identities cannot
+alias axes, coordinates, break records or other canonical inputs. Matching ids on separate wrappers
+remain insufficient; original chart/break source errors survive in `SizeSetInputError`.
+
+```rust
+use sc_measure::{MtmSizeSetInputs, SizeInstantiationPath};
+// The contexts contain the same actual singleton and canonical measurement records.
+let inputs = MtmSizeSetInputs::new(&chart, &mtm_context, &breaks, &break_context)
+    .expect("consistent current body/Ease inputs");
+let regeneration = inputs.validate_inputs_for(SizeInstantiationPath::Regeneration);
+let grading = inputs.validate_inputs_for(SizeInstantiationPath::GradeRules);
+// `grading` retains MtmChartError::GradeRulesUnsupported with the original chart/member ids.
+```
+
+Regeneration input validation requires complete current body/Ease mappings for every actual Design
+POM, using the MTM chart's existing coverage contract. Partial mappings remain valid drafts and
+return their original completeness error when regeneration inputs are requested. GradeRules always
+retains the MTM chart's explicit `GradeRulesUnsupported { chart, member }` refusal after current
+metadata/snapshot validation, including a draft or a singleton with an empty break/gap list.
+
+No body-plus-Ease arithmetic happens here and no garment numeric result is manufactured. Unknown
+body inputs or Derived Ease remain on the original records; their explicit numeric reads still
+require observation/evaluation. Structural input coverage does not certify numeric execution, fit,
+profile resolution, an evaluated instance or release approval. Reconstruct the view for replacement
+snapshots; global currentness is still a separate Design/registry obligation.
+
+Five MTM composite, fifteen existing MTM chart and five garment composite tests pass, with selected
+strict lint/formatting and book build. The original MTM fixture is shared without changing its fifteen
+contracts. Unified family/path review remains .4c.3d.3.3; these are input views, not persisted storage.
 
 ## 7. Multi-dimensional systems
 
