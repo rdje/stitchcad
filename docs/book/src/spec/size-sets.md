@@ -32,7 +32,7 @@ stale-ify approvals that geometry never touched (roadmap §9).
 | `members` | ordered list of labels | yes | the sizes, in **instantiation order** — not sorted, not derived |
 | `base_size` | one label | yes | the base size; SHALL be a member (§4) |
 | `chart` | per member, the POMs | yes | values with units, landmarks and states (§5) |
-| `breaks` | per dimension, per adjacent pair | yes for path 2 | the deltas between neighbours (§6) |
+| `breaks` | per axis/POM and adjacent pair | yes for path 2 | the deltas between neighbours (§6) |
 | `axes` | named dimensions | yes | at least one authored axis for every complete set (§7) |
 | `provenance` | source, state, evidence | yes | where the chart came from, and whether it is `known` |
 | `transformation` | record | resolved sets only | what a profile override did, to whom, with what evidence (§9) |
@@ -97,15 +97,18 @@ a rule table *implements* them as per-point deltas.
 - a size set with no breaks can still serve path 1, and SHALL refuse path 2 with a diagnostic naming what
   is missing rather than grading by zero.
 
-### Pending break-dimension identity — D228
+### Authored break key — D228 ruling2026-10-26
 
-The break schema is not yet implemented. §6's measurement-dimension language and §7's per-axis
-language leave one key unspecified: a one-axis House size range may need both waist+4cm and hip+5cm
-for the same adjacent members. An axis/pair key alone cannot distinguish those authored deltas.
-G1-SLICE.4c.3d.0 owns the director ruling before implementation. The recommendation is an explicit
-axis + named POM/dimension + adjacent-member-pair key, with a canonical signed Length source for
-each delta; axis-only is the alternative. Neither choice is adopted by this note. Adjacency remains
-the authored member order; no chart subtraction, default dimension or implicit zero is introduced.
+The director approved an explicit **axis + named POM/dimension + adjacent member pair** key.
+An axis can have several measurement dimensions: the same House size step from S to M may carry
+waist+4cm and hip+5cm as separate authored breaks. Each delta refers to one canonical signed Length
+record, retaining its state, source and provenance rather than copying a chart result. Both body
+measurement dimensions and garment POMs retain their explicitly declared domain.
+
+Adjacency follows the authored `members` sequence (§3). Axis association, measurement identity and
+delta are explicit: no label parsing, chart subtraction, inferred dimension, implicit zero or choice
+of first axis supplies missing data. G1-SLICE.4c.3d.1 implements this ruled key; chart/break coverage,
+path readiness and full SizeSet composition follow in separately owned children.
 
 ## 7. Multi-dimensional systems
 
@@ -121,7 +124,7 @@ that without inventing a second mechanism:
 - **a member is a point on the axes**, and its label is the designation that point carries;
 - **not every grid point need exist.** A set declares the members it has; an absent combination is absent,
   never interpolated silently;
-- **breaks are per axis**, so a range can step in height without stepping in chest;
+- **breaks name an axis and measurement dimension**, so a range can step in height without stepping in chest;
 - a one-dimensional system is the same object with a single axis, which is why the model does not carry two
   representations.
 

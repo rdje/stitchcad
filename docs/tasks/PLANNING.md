@@ -1061,7 +1061,7 @@ D215 whole authored report/verified repair retained in [part134](../history/wind
 
 D216 whole authored report/verified repair retained in [part135](../history/window11.md#stitchcad-defects-part135md).
 
-## D228 — size-break dimension identity needs a ruling
+## D228 — size-break dimension identity resolved2026-10-26
 
 Size-sets §6/field table defines per-dimension adjacent-member deltas, using waist as its example;
 §7 says breaks are per axis and a one-dimensional system has one axis. The contract does not say
@@ -1071,9 +1071,10 @@ reference-skirt.md:43–46/52–53 independently carries separate waist/hip/leng
 Witness: one authored "House size" axis, members S/M, waist+4cm and hip+5cm. Axis/pair alone
 cannot distinguish both records unless an additional dimension key is explicit; no delta is inferred.
 Impact: guessing the key can lose a required grade dimension or create incompatible SizeSet data.
-Owner/schedule: G1-SLICE.4c.3d.0, P1 before .3d.1 implementation. Recommend axis + explicit
-POM/dimension + adjacent member pair, retaining each canonical Length state/source. Director ruling
-pending versus axis-only deltas. No schema or altered grading behavior implemented by this review.
+Owner/schedule: G1-SLICE.4c.3d.0, P1 ruled0302 before .3d.1 implementation. Director approved
+axis + explicit POM/dimension + adjacent member pair, retaining each canonical signed Length
+state/source. Semantic conflict closed; declaration/coverage/composite implementation remains .3d.
+Whole original ruling-review evidence is retained431. No break implementation is claimed by the ruling.
 
 ## Active continuity followup
 

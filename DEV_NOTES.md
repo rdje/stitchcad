@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — explicit break-dimension key approved
+
+0302 .4c.3d.0 adopts the director's D228 recommendation: explicit axis, named POM/dimension and
+adjacent member pair. Body/garment domain remains canonical; signed delta state/source is borrowed,
+not inferred from chart arithmetic or labels. Normative field/§6/§7, decision, PLANNING and resume
+pointers align. Book0;431/432/274 retain whole5b13daf Git/hash/public bytes exactly. Semantic blocker
+closed; sourced declarations .3d.1 next. No code/schema or path-readiness claim; G1still5/18.
+Promotion: existing SizeSet decision updated; no unrelated policy or verification expansion.
+
 ## _(2026-10-26 UTC)_ — break-dimension contract review
 
 0301 .4c.3d.0 logs D228 before a break schema can bake in an ambiguous key. Size-sets §6 says
@@ -269,17 +278,8 @@ and tangent remain open. Whole0277 task/old root-plan lesson/ledger retain372/37
 with all three public reads equal, rc=0. Promotion: existing threshold decision records the exact
 format, source identity, checkpoint/coverage boundary and separate interval-proof obligation.
 
-## _(2026-10-26 UTC)_ — finite-threshold certificate feasibility
-
-0277 .5d.1.2.2.2.a derives exact finite rounding-target populations and rational denominator
-bounds before implementing a directed integer half-angle/atan prototype. Forward38-band cohort,
-known3/Fraction4/small-Q32/negative2 controls pass, rc=0. Pure import with read_text refusing
-passes0; pi bounds remain explicit helper input. The candidate512-bit/2^-384 profile is research,
-not a production budget. Full forward population remains .b; inverse generator/coverage, native
-error/workspace and tangent strategy stay open. No production math, input limit or backend changes.
-Whole0276 task/old binding lesson/ledger retained370/371/249, exact Git/hash/public reads verified.
-Book/live sync. Promotion: decision_finite-threshold-feasibility.md records proposal, derivation,
-primary series sources, controls and admission boundaries so sample success cannot become signoff.
+[Complete finite-threshold feasibility lesson](docs/history/stitchcad-devnotes-part432.md) retains
+its original populations/profile/proof boundaries, checks and promotion decision.
 
 [Complete thirteenth-window lesson](docs/history/stitchcad-devnotes-part429.md) retains
 its original population/source/materialization evidence, checks and promotion decision.

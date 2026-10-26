@@ -120,10 +120,12 @@ independently of coordinate vector order; sparse grids and unused values remain 
 member/canonical value records are borrowed and rechecked on query. No numeric sorting/equality or
 Cartesian expansion supplies missing data. Complete charts/breaks and path readiness remain separate.
 
-## Pending break-dimension key — D228
+## Authored break key — director ruling2026-10-26 (D228)
 
-G1-SLICE.4c.3d.0 owns the unresolved relationship between §6's POM/dimension deltas and §7's
-per-axis breaks. A one-axis House size range can need different waist/hip deltas for the same
-adjacent members. Recommendation awaiting director ruling: explicitly key each canonical signed
-Length delta by axis, named POM/dimension and adjacent member pair. Axis-only is the alternative;
-neither representation is adopted here. Names, dimensions and values remain authored, never inferred.
+The director approved explicit axis + named POM/dimension + adjacent member pair. Multiple measurement
+dimensions can belong to the same axis step: a House size S/M pair can carry separate waist+4cm and
+hip+5cm breaks. Both body dimensions and garment POMs retain their canonical measurement domain.
+Each signed Length delta borrows its original canonical state/source/provenance. Membership order
+defines adjacency; dimensions, axis associations and values are never inferred from labels or charts.
+G1-SLICE.4c.3d.0 resolves the semantic gap; .3d.1 implements declarations before collection/composition.
+The whole original conflict/witness remains retained431; the choice itself does not certify readiness.

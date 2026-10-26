@@ -425,7 +425,7 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `STITCHCAD-G1-0035` (`285e238`).
 
 - ID: `G1-SLICE.4c.3d`
-  Status: `blocked`
+  Status: `in_progress`
   Goal: signed canonical adjacent breaks and composite SizeSet over membership/axes/chart with source/
   state/provenance; per-axis/dimension coverage and typed path readiness under the confirmed D70 rule.
   Acceptance: authored adjacency, zero/uneven breaks, current references, missing dimension/pair and
@@ -434,20 +434,15 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `pending`
 
 - ID: `G1-SLICE.4c.3d.0`
-  Status: `blocked`
-  Goal:0301 resolve D228 break-dimension identity before authoring a canonical break schema.
-  Source review: size-sets §6 uses waist/POM dimension and §7 says per-axis, while a one-dimensional set has
-  one axis. A single named size axis still needs separate waist/hip deltas; the key/cardinality is unspecified.
-  Recommend explicit axis + POM/dimension + adjacent member pair; each delta borrows canonical Length state/source.
-  Director choice needed versus axis-only deltas; no schema/model choice or inferred POM/axis until settled.
-  Own PLANNING D228, SizeSet decision/book and live pointers;428 whole0300 task,429 oldest0276 lesson,273 ledger
-  frome77742e;430 whole completed sewing scope for fixed aggregate capacity. Preserve complete bytes/hashes.
-  Acceptance0301 review (ruling pending):
-  - [x] ROOT CAUSE0301: rg size-sets -> per-dimension35/90, per-axis114/single-axis115; reference-skirt43/44/52/53 separate waist/hip, rc=0.
-  - [x] ADDRESSED0301: rg D228 -> PLANNING1064/book100/decision123, rc=0; two representations and S/M waist+4cm/hip+5cm witness durable; question accepted:true, pending.
-  - [x] NO REGRESSION0301: book build rc=0;428/429/273/430 wholee77742e Git bytes/hash/public reader exact rc=0; no code/model changed or caps raised.
-  Promotion declined: no adopted policy; ambiguity/ruling stays in the existing SizeSet decision. Review commit STITCHCAD-G1-0301.
-  Resume: director D228 answer, then align key/coverage requirements and implement .3d.1.
+  Status: `done`
+  Goal:0302 adopt director2026-10-26 D228 ruling: explicit axis + named POM/dimension + adjacent member pair.
+  Each delta borrows its canonical signed Length state/source; no dimension/axis/value inferred.
+  Prior ambiguity/source witness: [whole0301 review](../history/stitchcad-devnotes-part431.md).
+  Acceptance0302:
+  - [x] ROOT CAUSE0302: director approves the exact D228 recommendation; prior witness/source/hash retained431, public read rc=0.
+  - [x] ADDRESSED0302: normative SizeSet field/§6/§7 and existing decision/PLANNING adopt the same key; source review rc=0.
+  - [x] NO REGRESSION0302: book build rc=0;431/432/274 whole5b13daf Git/hash/public reads exact rc=0; no code/schema implementation claim.
+  Promotion: existing SizeSet decision updated. Commit: STITCHCAD-G1-0302. Next .3d.1 implements sourced declarations.
 - ID: `G1-SLICE.4c.3d.1`
   Status: `pending`
   Goal: implement sourced signed adjacent break declarations after D228, then collection/composite children.
@@ -927,7 +922,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.4c.3d.0` | `blocked` | D228 break axis/POM dimension key needs director ruling |
+| **next** | `G1-SLICE.4c.3d.1` | `pending` | Sourced signed breaks under the approved D228 key |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

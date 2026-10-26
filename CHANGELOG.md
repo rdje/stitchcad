@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0301 — record the break-dimension ruling needed
+## STITCHCAD-G1-0302 — adopt the explicit size-break key
 
-D228 tracks the per-POM/dimension versus per-axis break-key ambiguity before implementation.
-Director question submitted; source review/book0, whole428/429/273/430 retention exact. No code/model
-change or adopted key; G1 remains5/18. Resume .4c.3d.0 on the ruling, then implement sourced breaks.
+Director approves axis + named POM/dimension + adjacent member pair, preserving canonical signed Length state/source.
+D228 semantic blocker closed; book/decision/live sync and book0. Whole431/432/274 retention exact.
+No break implementation claim; G1 remains5/18. Sourced declarations .4c.3d.1 next.
 
 # Sealed archive — earlier slices
+
+| [part274](docs/history/stitchcad-changelog-part274.md) | whole0301 | 6 lines, 364 bytes, sha256:ac747382… |
 
 | [part273](docs/history/stitchcad-changelog-part273.md) | whole0300 | 6 lines, 375 bytes, sha256:028a6e02… |
 

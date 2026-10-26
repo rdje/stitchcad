@@ -4,16 +4,15 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0301 .4c.3d.0 source review found D228: size-sets §6 per measurement dimension vs §7 per axis/single-axis.
-- Witness: House size axis, S/M, waist+4cm and hip+5cm; axis/pair alone cannot distinguish both.
-- Director question pending: explicit axis+named POM/dimension+adjacent member pair (recommended) vs axis/pair only.
-- No break schema/model choice adopted. PLANNING D228/SizeSet decision/book hold full source/witness/owner.
-- NEXT: consume D228 ruling, align canonical break key/coverage and implement .4c.3d.1. Do not infer missing dimensions.
-- Book build0;428/429/273/430 wholee77742e Git bytes/hash/public-reader exact0; no code or cap changes.
+-0302 .4c.3d.0 records approved D228: explicit axis+named POM/dimension+adjacent member pair.
+- Signed Length delta retains original canonical state/source; no axis/dimension/value inferred.
+- D228 semantic blocker closed; normative book/SizeSet decision/PLANNING agree. No break code yet.
+- NEXT .4c.3d.1: implement sourced signed adjacent break declarations; own paths before changes.
+- Book0;431/432/274 whole5b13daf Git/hash/public exact0; .3d parent resumed in progress.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
 - Native query2+catalog2 pass0; selected strict lint/fmt/census17/5/5/0/book0; exact revisions beyond128bits.
-- Canonical signed breaks/composite SizeSet .4c.3d now blocked on the D228 semantic ruling above.
+- Canonical signed breaks/composite SizeSet .4c.3d follows the approved D228 key above.
 - Remaining command classes and artifact-specific closure .6.2.2.c.2 follow actual canonical inputs.
 -426/427/272 whole198bbb1 retention verified byte/hash/public-reader exact0.
 -0299/198bbb1 completes all five mutation schemas; SplitSeamSpan explicit canonical target and named A/B cuts.
@@ -45,4 +44,4 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D156/D223 audits deferred; D224/D225/D227 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background job pending after0301 review; D228 director question remains pending. Derive push count, never carry it manually.
+- No background job or pending director question after0302. Derive push count, never carry it manually.
