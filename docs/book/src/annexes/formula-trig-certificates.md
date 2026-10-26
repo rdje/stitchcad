@@ -141,4 +141,4 @@ enclosures,50 comparisons against a distinct signed eight-octant table, and two 
 insufficient profiles. Full-width rational/turn/near-axis cases are included. These support the
 derivation; they are not themselves native or cross-platform evidence. The
 [native API and focused fixture results](formula-rationals.md#correctly-rounded-sine-and-cosine)
-are available separately; source propagation, whole execution and broader integration stay owned.
+are available separately. Sourced sin/cos calls are also available; whole execution and broader integration stay owned.

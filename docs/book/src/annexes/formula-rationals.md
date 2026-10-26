@@ -624,5 +624,5 @@ and live oracle reproduction. That oracle uses a different pi identity,768-bit d
 factorials over the full signed principal interval,128 terms and its own remainder enclosure.
 It covers exact values, signed/full turns, full-width inputs, near axes and rational neighbors
 on both sides of rounding thresholds. This is native value evidence; actual cross-platform
-execution and broader coupled checks remain .5d.4/pre-push. Sourced call propagation and full AST
-execution remain .5e; tangent and inverse functions keep separate resource/implementation owners.
+execution and broader coupled checks remain .5d.4/pre-push. [Sourced sin/cos calls](formula-runtime-validation.md#product-implemented-numeric-calls)
+are available; full AST execution remains .5e. Tangent and inverse functions keep separate owners.

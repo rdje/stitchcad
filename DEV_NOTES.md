@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — sourced sine/cosine calls
+
+0281 .5e.3.6 adds supplied-value checked_sin/checked_cos adapters over the certified native kernels.
+All real input sources and each call contribution survive exact axes, cancellation and stored reads;
+Boolean/numeric wrong kinds retain actual diagnostics. Focused sourced-call target6/0 and selected
+strict library/target lint pass, rc=0. Tests use actual upstream Angle round_to, including exact
+axis outputs; no synthetic AST/derived-source result is claimed. Full execution and inverse/tangent
+remain open. Whole0280 node/old arc+UI lesson/ledger retain379/380/253 exact Git/hash/public bytes;
+book/live sync, G1still5/18. Promotion declined: existing source-set/class/native contracts unchanged.
+
 ## _(2026-10-26 UTC)_ — correctly rounded native sine/cosine values
 
 0280 .5d.3.2.1 implements the admitted private full-width folding/512-bit64-term plan and exposes
@@ -320,26 +330,8 @@ No dependency, angle modulo or binding narrowing added; source provenance remain
 Whole0257 task/ledger retained331/230; book/live/pointers align. Promotion: numerical decision
 records the implementation scope alongside its certificate. History reaches64 MD; pack before more retention.
 
-## _(2026-10-25 UTC)_ — bounded arc-length certificate and approved UI requirements
-
-0257 .5d.1.2.1 proves fixed-enclosure arc_length rounding for all admitted rational inputs. A's two
-u128 magnitudes bound every pi half-output target denominator below2^257. A640-bit pi enclosure
-lies strictly inside a determinant-one adjacent-fraction cell whose denominator sum exceeds that
-bound. Thus no target midpoint lies inside: one endpoint's exact rounding is sufficient for every
-admitted A/B. Two exact identities/arithmetic paths independently certify the pi floor; the pure
-producer verifies cell predicates and standard-library endpoint checks, rc=0. Runtime stays within
-898/924-bit workspace. This is the algorithm/certificate plan; arc code is next, other trig plans
-remain open. No new dependency or broad/platform correctness claim is made.
-
-Director DBIQNP discussion and explicit agreement adopt a complete standalone UI baseline,
-production quality on every admitted surface and critical full AI coding-agent control of desktop,
-web and2D/3D graphics, including presentation state and workflow verification. Roadmap/book/future
-.9.plugin ownership and a dedicated decision record retain these requirements without a UI pivot.
-Official OpenAI/Anthropic host UI examples were fetched; no StitchCAD host performance is inferred.
-The added decision exceeds the fixed map ceiling:8277B. Removing redundant decision category labels
-from the same-repo generator yields7836B with every target/order/public path CLI unchanged, rc=0;
-no cap/schema/exclusion changes or full campaign. Completed hypot task/ledger retained330/229.
-Promotion: numerical decision gains the certificate; approved UI direction has its own decision.
+[Complete bounded arc certificate/approved UI lesson](docs/history/stitchcad-devnotes-part380.md) retains
+its full proof, director requirements, verification and promotion decisions.
 
 [Complete hypot numeric kernel lesson](docs/history/stitchcad-devnotes-part377.md) retains
 its original implementation, validation and promotion decision.

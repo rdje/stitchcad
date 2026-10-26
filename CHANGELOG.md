@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0280 — correctly rounded sine/cosine values
+## STITCHCAD-G1-0281 — sourced sine/cosine value calls
 
-.5d.3.2.1: native sin/cos3/0 (44 independent angles), shared pi1/0, arc2/0 and selected strict lint pass, rc=0.
-Full-width/axes/true ppm rounding available; repair old arc fixture indexing.376–378/252 retain whole history; book/live sync.
+.5e.3.6: sourced sin/cos retain real input/call contributions through exact axes/cancellation/storage/T1; native6/0 and selected strict lint pass, rc=0.
+Full AST and inverse/tangent remain open;379/380/253 retain whole task/lesson/ledger; book/live sync.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -450,3 +450,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part251](docs/history/stitchcad-changelog-part251.md) | whole0278 | 5 lines, 318 bytes, sha256:0e61bea4… |
 
 | [part252](docs/history/stitchcad-changelog-part252.md) | whole0279 | 5 lines, 307 bytes, sha256:c27c2447… |
+
+| [part253](docs/history/stitchcad-changelog-part253.md) | whole0280 | 5 lines, 305 bytes, sha256:50272c6f… |

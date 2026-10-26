@@ -49,7 +49,7 @@ requires the named contracts and later proof owners.
 | Canonical/stored numeric reads | §4.2; G1 | sc-core recipe; G1-SLICE.5e.1.6 | [Exact integer bridges](formula-rationals.md#canonical-and-stored-numeric-reads); source propagation follows |
 | Approximation-source set/class guard | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.1 | [Immutable sources/T1 refusal](formula-runtime-validation.md#product-source-set-primitive); full propagation follows |
 | Sourced scalar operators/bindings | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.2 | [Numeric/Boolean sources and reads](formula-runtime-validation.md#product-scalar-operators-and-bindings); AST execution follows |
-| Sourced implemented numeric calls | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.3 | [Actual kernels/input unions](formula-runtime-validation.md#product-implemented-numeric-calls); trig/AST execution follows |
+| Sourced implemented numeric calls | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.3/.6 | [Actual kernels/input unions](formula-runtime-validation.md#product-implemented-numeric-calls); tangent/inverse/AST follow |
 | Exact named tolerance comparison | §3.1/§4.2; G1 | sc-core recipe; G1-SLICE.5e.3.4 | [Actual values/context/sources](formula-runtime-validation.md#product-named-tolerance-comparisons); assertion/AST execution follows |
 | Named assertion value outcomes | §5.1/§5.2; G1 | sc-core recipe; G1-SLICE.5e.3.5 | [Actual true/failure records](formula-runtime-validation.md#product-named-assertion-outcomes); whole statement execution follows |
 | Lazy conditional value control | grammar§7; G1 | sc-core recipe; G1-SLICE.5e.2.1 | [Selected callback/source retention](formula-runtime-validation.md#product-lazy-conditional-value-control); full AST proof/execution follows |

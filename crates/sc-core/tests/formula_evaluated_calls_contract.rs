@@ -305,3 +305,65 @@ fn extrema_arity_singletons_and_first_mismatched_kinds_are_explicit() {
         );
     }
 }
+
+#[test]
+fn sincos_retain_real_upstream_and_own_sources_through_storage_and_tolerance() {
+    let name = MachineToken::new("trig_result").expect("name");
+    for (degrees, sine, cosine) in [
+        (0, 0, 1_000_000),
+        (30, 500_000, 866_025),
+        (45, 707_107, 707_107),
+        (-450, -1_000_000, 0),
+    ] {
+        let angle = value(K::Angle, degrees * 1_000_000)
+            .checked_round_to(value(K::Angle, 1))
+            .expect("real upstream quantization");
+        for (result, integer, builtin) in [
+            (angle.checked_sin(), sine, B::Sin),
+            (angle.checked_cos(), cosine, B::Cos),
+        ] {
+            let computed = result.expect("actual native call");
+            let expected = if builtin == B::Sin {
+                vec!["round_to", "sin"]
+            } else {
+                vec!["cos", "round_to"]
+            };
+            assert_value(computed, K::Ratio, integer, &expected);
+            let cancelled = computed
+                .checked_binary(Op::Subtract, computed)
+                .expect("cancel");
+            let read = cancelled.bind(&name).expect("bind").read().expect("read");
+            assert_value(read, K::Ratio, 0, &expected);
+            let failure = read
+                .sources()
+                .check_tolerance(T::Numerical)
+                .expect_err("T1 retains call");
+            assert_eq!(failure.sources(), computed.sources());
+            read.sources()
+                .check_tolerance(T::Geometric)
+                .expect("T2 class guard");
+        }
+        assert_eq!(
+            names(angle),
+            ["round_to"],
+            "original input remains immutable"
+        );
+    }
+    for input in [
+        V::from_boolean(false),
+        value(K::Length, 0),
+        value(K::Ratio, 0),
+    ] {
+        for (result, builtin) in [(input.checked_sin(), B::Sin), (input.checked_cos(), B::Cos)] {
+            assert_eq!(
+                result,
+                Err(E::BuiltinInputKind {
+                    builtin,
+                    argument: 0,
+                    actual: input.kind()
+                })
+            );
+        }
+        assert!(input.sources().is_empty());
+    }
+}

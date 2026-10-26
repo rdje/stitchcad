@@ -5,6 +5,22 @@ use crate::recipe::{
 };
 
 impl V {
+    /// Correctly rounded sine, retaining the input and sin source even for exact axis results.
+    /// # Errors
+    /// Propagates the actual non-Angle argument refusal from the numeric value kernel.
+    pub fn checked_sin(self) -> Result<Self, E> {
+        let value = self.numeric_argument(B::Sin, 0)?.checked_sin()?;
+        Ok(call_result(B::Sin, value, &[self]))
+    }
+
+    /// Correctly rounded cosine, retaining the input and cos source even for exact axis results.
+    /// # Errors
+    /// Propagates the actual non-Angle argument refusal from the numeric value kernel.
+    pub fn checked_cos(self) -> Result<Self, E> {
+        let value = self.numeric_argument(B::Cos, 0)?.checked_cos()?;
+        Ok(call_result(B::Cos, value, &[self]))
+    }
+
     /// Exact absolute value retaining all dependencies, without adding a rounding-call source.
     /// # Errors
     /// Returns the actual nonnumeric input kind.
