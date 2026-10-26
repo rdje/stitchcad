@@ -3,6 +3,22 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — explicit tolerance context values and absence
+
+0264 .5e.1.4 uses the units intrinsic1/10 and three explicit optional provider slots. Each provider
+borrows its actual quantitative tolerance and retains its source id; construction checks the declared
+format/importer/physical class in order. No optional value or target label is guessed. Exact reads
+retain name/class/limit/derivation/source and the caller label; zero remains present. Missing optional
+class returns formula_tolerance_unbound with actual name/label and known required context category.
+Unit failures constructing intrinsics propagate. Registry/derivation/evidence truth and physical/
+artifact suitability remain G4; this read adapter grants no approval or full execution.
+
+One focused native target passes5/0: intrinsic defaults, all8 optional masks with three label forms,
+all6 classes against each slot, first refusal, explicit zero and immutable replacement. Selected strict
+Clippy passes0. Broad/platform and within/assertion/size-context work remain their later owners.
+Whole0263 scope/closed static parent/ledger retain343/344/236. Promotion declined: implementation of
+existing formula3.1/units3 provider contracts, now documented in the book.
+
 ## _(2026-10-25 UTC)_ — match general scalar metadata to its actual canonical source
 
 0263 .5e.1.3 checks general Input source, canonical target id, then actual kind before reading a

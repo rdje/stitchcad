@@ -126,7 +126,9 @@ from and what happens when there is none:
 | `tolerance` | a reserved name (§3.1) | `formula_tolerance_unbound` |
 
 The book reference has [scoped origin/context read controls](../annexes/formula-runtime-validation.md#missing-values-by-origin),
-including supplied optional contexts and named missing-value refusals. Product adapters remain pending.
+including supplied optional contexts and named missing-value refusals. Product canonical input and
+[tolerance adapters](../annexes/formula-runtime-validation.md#explicit-tolerance-contexts) are available;
+complete runtime/context resolution and execution remain pending.
 
 Three rules make the namespace safe rather than convenient. A name is bound **once** per recipe — a
 second `let` for it is `formula_rebinding` — because a recipe is a history and a name that changes

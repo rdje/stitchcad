@@ -59,6 +59,9 @@ also retains raw angle turns, typed scalar state/provenance and computation-only
 [general scalar read adapter](annexes/formula-runtime-validation.md#general-scalar-authored-reads)
 now verifies the supplied canonical target/kind and retains state. Full registry/context resolution
 and derived evaluation remain pending.
+[Explicit tolerance contexts](annexes/formula-runtime-validation.md#explicit-tolerance-contexts)
+now provide fixed numerical/geometric values and class-checked optional format/importer/physical
+providers. Missing optional values refuse with their actual name/context label.
 
 ## Planned workflows
 

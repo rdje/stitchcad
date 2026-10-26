@@ -117,6 +117,60 @@ six-kind table, complete kind mismatch pairs, identity priority and every other 
 The affected length adapter retains three passing tests; selected strict Clippy passes. Whole
 runtime context providers/evaluation and broad/platform verification remain later owned work.
 
+## Explicit tolerance contexts
+
+FormulaToleranceContext makes all five reserved tolerance reads explicit. Empty/default contexts
+supply eps_num=1µm and eps_geo=10µm from the existing units API. The optional format, importer and
+physical slots have no default values. Each provided FormulaToleranceProvider borrows the actual
+Tolerance and retains its caller-supplied source-record identity.
+
+FormulaToleranceContext::new checks actual quantitative classes in format/importer/physical order:
+FormatQuantization, ImporterComparison and PhysicalAcceptance respectively. A wrong-class provider
+returns FormulaToleranceProviderError with the actual name, expected class, source and content.
+The100µm geometric chordal sibling cannot impersonate another class. The definition has no fields
+for replacing the fixed numerical/internal geometric intrinsics.
+
+```rust
+use sc_core::{ontology::EntityId, recipe::{FormulaToleranceContext,
+    FormulaToleranceContextDefinition, FormulaToleranceName, FormulaToleranceProvider}};
+use sc_units::{Length, Tolerance, ToleranceClass};
+
+let format = Tolerance::new(ToleranceClass::FormatQuantization,
+    Length::from_micrometres(25).expect("fixture Length"),
+    "explicit fixture writer quantum; not a product default").expect("derivation");
+let context = FormulaToleranceContext::new(FormulaToleranceContextDefinition {
+    label: Some("explicit_fixture_export"),
+    format: Some(FormulaToleranceProvider { source: EntityId::from_bits(1), tolerance: &format }),
+    ..FormulaToleranceContextDefinition::default()
+}).expect("format class");
+assert_eq!(context.read(FormulaToleranceName::Format).expect("provided quantum")
+    .value().rational().numerator_magnitude(), 25);
+assert_eq!(context.read(FormulaToleranceName::Physical).expect_err("profile absent")
+    .diagnostic_code(), "formula_tolerance_unbound");
+```
+
+A successful FormulaToleranceValue retains its name, exact completed Length, quantitative class/
+limit/derivation and FormulaToleranceValueSource. Intrinsic identifies language content; Provider
+retains the original borrowed object/source id. Reading adds no input/binding rounding. A supplied
+zero remains a present value. Cloning/editing a definition and validating a new context cannot
+mutate the prior one.
+
+Missing optional providers return FormulaToleranceReadError::MissingContext with the actual name
+and optional caller label; None and an explicitly supplied empty label remain distinct. The error
+reports formula_tolerance_unbound and the language-required Export/Profile category, without
+inventing a target name or statement ordinal. Intrinsic unit-construction errors propagate with
+their actual source and formula_domain family; no constant is unwrapped or substituted.
+
+Class matching and typed content do not prove registry membership, derivation/evidence truth,
+physical suitability or export approval. Source ids/labels are supplied explicitly by the host;
+G4/context integration retains those validation obligations. Runtime within/assertion provenance
+and size contexts remain separate owners.
+
+The focused formula_tolerance_context_contract target passes five tests covering both intrinsic
+values, all eight optional-provider combinations with absent/nonempty/empty labels, all six
+quantitative classes against each external slot, refusal priority, explicit zero and immutable
+replacement. Selected strict Clippy passes; broad integration/platform proof remains deferred.
+
 ## Reference runtime assertion controls
 
 An assertion uses an inclusive tolerance: it holds when the absolute difference is at most the

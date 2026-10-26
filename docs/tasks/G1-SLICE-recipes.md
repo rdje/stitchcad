@@ -200,13 +200,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   [Exact protocol](G1-SLICE-names.md#completed-built-in-signatures-protocol--preserved-from-c98dc54) retained.
 - ID: `G1-SLICE.5b.3c`
   Status: `done`
-  Goal: bounded normalized expression checking with typed real source/operand/wanted-rule refusals;
-  every branch/argument/name dependency checked before any whole acceptance or execution.
-  Children: .1 typed wanted-kind catalog; .2 context-free expression/error/checked-owner integration;
-  .3 actual statement operands/annotations/assertions and truthful available ordinal context.
-  No forged canonical/statement context; current grammar and named envelope precedence preserved.
-  Verification: all expression/current-statement children verified; coupled .3d complete.
-  Commit: `STITCHCAD-G1-0105`, `STITCHCAD-G1-0108`, `STITCHCAD-G1-0112`.
+  Goal: bounded normalized checking with truthful sourced kind/operand/wanted-rule refusals.
+  Children .1/.2/.3 verified0105/0108; coupled .3d verified0112.
+  Acceptance: [whole parent scope](../history/stitchcad-devnotes-part344.md).
 - ID: `G1-SLICE.5b.3c.1`
   Status: `done`
   Goal: typed wanted-kind catalogs; verified, commit `STITCHCAD-G1-0093`.
@@ -556,19 +552,25 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part341.md).
 - ID: `G1-SLICE.5e.1.3`
   Status: `done`
-  Goal:0263 sourced general scalar reads with actual canonical identity/kind validation.
+  Goal: sourced general scalar reads/actual target-kind checks verified0263, native5/3.
   Paths: crates/sc-core/src/recipe/input.rs;crates/sc-core/src/recipe/input/scalar.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/src/recipe/declaration.rs;crates/sc-core/tests/formula_scalar_input_contract.rs
-- [x] REPRODUCE:0263 0ce3e01 supplies canonical scalar state but no metadata match/read adapter;
-  git source inspection rc=0. Initial fixture extend has E0597/101; pushes fix its lifetime coercion.
-- [x] ROOT CAUSE:0263 metadata claim cannot prove actual target/kind; the independent kind table/
-  wrong-candidate fixtures and focused native5/3 establish match/read separation, rc=0.
-- [x] FIX: source/id/kind checks in order; compact borrowed source/state, typed value/action results.
-- [x] ADDRESSED:0263 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test formula_scalar_input_contract --test formula_length_input_contract:5/3 pass,78 reads, rc=0.
-- [x] NO REGRESSION:0263 same native8/0; cargo clippy --offline -p sc-core
-  --test formula_scalar_input_contract -- -D warnings, rc=0. Broad execution/platform .5e.2/.5g/pre-push.
-- [x] LOCKSTEP:341/342/235 whole Git/public records and book render rc=0; live/book align.
-  Promotion declined: existing metadata/canonical state contract; no registry/approval inferred.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part343.md).
+- ID: `G1-SLICE.5e.1.4`
+  Status: `done`
+  Goal:0264 intrinsic1/10 and explicit sourced optional tolerance contexts.
+  Paths: crates/sc-core/src/recipe/context.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_tolerance_context_contract.rs
+- [x] REPRODUCE:0264 72cc909 has reserved tolerance metadata but no explicit value-context adapter;
+  git source inspection rc=0. Formula3.1 forbids optional export/profile defaults.
+- [x] ROOT CAUSE:0264 static visibility differs from provider availability; actual Tolerance classes/
+  borrowed source ids preserve the required separation. Focused native5/0, rc=0.
+- [x] FIX: immutable class-checked optional providers; intrinsic units defaults; exact Length read,
+  source/derivation/actual label and typed unbound refusal. No G4 registry/physical approval inferred.
+- [x] ADDRESSED:0264 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_tolerance_context_contract:5 pass/0 fail, rc=0.
+- [x] NO REGRESSION:0264 same target covers masks/classes/zero/replacement; cargo clippy --offline
+  -p sc-core --test formula_tolerance_context_contract -- -D warnings, rc=0; broad .5e.3/.5g/pre-push.
+- [x] LOCKSTEP:343/344/236 whole Git/public records and book render rc=0; live/book align.
+  Promotion declined: existing formula3.1/units3 provider contracts; size/full execution pending.
 - ID: `G1-SLICE.5e.2`
   Status: `pending`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.

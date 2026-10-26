@@ -107,6 +107,13 @@ pub use input::{
     FormulaScalarInputValue,
 };
 
+mod context;
+pub use context::{
+    FormulaToleranceContext, FormulaToleranceContextDefinition, FormulaToleranceProvider,
+    FormulaToleranceProviderError, FormulaToleranceReadError, FormulaToleranceValue,
+    FormulaToleranceValueSource,
+};
+
 mod namespace;
 pub use namespace::{
     FormulaInitialDeclaration, FormulaNameCursor, FormulaNamespace, FormulaNamespaceError,
