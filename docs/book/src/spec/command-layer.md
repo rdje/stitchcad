@@ -361,6 +361,9 @@ and reliability. Policy admission and platform compatibility alone certify no im
 The command-layer census checks profile coverage against the roadmap and rejects the retired
 stdio-only/G5+ admission rule in these normative sections. Runtime evidence remains with the owners.
 
+The core now provides [exact command scopes and checked narrowing](command-scopes.md).
+Actor/permission/revocation enforcement remains with the next bus slice.
+
 ## 8. Workflow parity, and the table that proves it
 
 **UI ↔ API ↔ MCP workflow parity is the invariant**: a workflow a user can complete in the UI can be

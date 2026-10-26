@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0335 — one typed core command input
+## STITCHCAD-G1-0336 — exact command scope coverage and narrowing
 
-- CommandRequest preserves all five family inputs and derives identity; exact claims/mutation-only metadata remain.
-- Native request2/catalog2/query2/release6, strict lint/fmt/book/pub76-100/census17-5-5-0 pass0; D241 wording fixed.
--489/307/145 whole3419ed3 exact0; .6.2 input scope done, .6.3 actual authorization next. G1still6/18.
+- Explicit Design/commands/finite validity retain authored inputs; narrowing refuses expansions without clipping.
+- Native scope3/request2/catalog2, strict selected lint/fmt/book/publication77-101 pass0; topic index synced.
+-490 whole0812151 exact0, retention944/61 pass0; no grant/authentication claim. .6.3.2 next; G1still6/18.
 
 # Sealed archive — earlier slices
+
+| [part490](docs/history/stitchcad-devnotes-part490.md) | whole0335 ledger/task and prior lessons/proofs | 68 lines, 5673 bytes, sha256:7b008353… |
 
 | [part307](docs/history/stitchcad-changelog-part307.md) | whole0334 | 6 lines, 399 bytes, sha256:659480ad… |
 

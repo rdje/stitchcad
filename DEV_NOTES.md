@@ -3,6 +3,12 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — exact command scope coverage
+
+0336 .6.3.1 checks explicit Design/commands/start-inclusive end-exclusive time; widening refuses exact inputs.
+Native scope3/request2/catalog2, strict lint/fmt/book/publication77-101 pass0; initial missing topic index fixed.
+490 whole0812151 source/hash/public exact0, retention944/61 pass0. Scope grants no authority; .6.3.2 next. Promotion declined: existing scoped-authority contract. G1still6/18; full CI integration/pre-push.
+
 ## _(2026-10-26 UTC)_ — one typed command input surface
 
 0335 .6.2.2.c.2.6 wraps all five original families with payload-derived identity and exact shared claims.
@@ -184,12 +190,8 @@ Garment18+MTM9 pass0; strict selected lint/fmt/book0.457/458/459/460/286 whole8f
 Old governance chronology retires without losing current guards/D141; no cap increase. G1still5/18; .4 aggregate next.
 Promotion: existing SizeSet decision extended; execution/registry/approval and broad gates remain later owners.
 
-## _(2026-10-26 UTC)_ — canonical break-scaling intent
-
-0313 .4c.4.3.1 binds actual available break/dedicated Length delta/general Ratio without copied values.
-Missing break/factor and wrong role/kind refuse; all canonical states and zero/negative factors survive.
-Garment15+MTM8 pass0; selected strict lint/fmt/book0; value-less scaling observation/evaluation check0.
-454/455/456/285 whole62aea02 Git/hash/public exact0. G1still5/18; chart replacement .3.2 next. Promotion: existing SizeSet decision extended; G3/G4 own multiplication, constraints and truth; broad gates later.
+[Complete break-scaling intent lesson](docs/history/stitchcad-devnotes-part490.md) retains
+original canonical states, reference checks and remaining numeric execution obligations.
 
 [Complete label/base intent lesson](docs/history/stitchcad-devnotes-part489.md) retains
 original input/validation boundaries, exact source and focused proofs.

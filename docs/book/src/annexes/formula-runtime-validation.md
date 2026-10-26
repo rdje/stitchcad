@@ -57,9 +57,7 @@ Readable authored claims still carry DeferredToDesignAndG4 provenance validation
 namespace/order/registry/evidence-scope/human/export approval. General scalar, size and optional
 context adapters and the complete evaluator remain owned by G1-SLICE.5e.
 
-The focused formula_length_input_contract target passes three tests covering25 origin/state pairs,
-the scalar endpoints/zero, and every other declaration-source variant, including a generic Length
-claim. Broad integration/platform proof remains deferred.
+Focused adapter receipts remain whole in `docs/history/stitchcad-devnotes-part490.md`.
 
 ## General scalar authored reads
 
@@ -116,11 +114,6 @@ uniqueness, the exposing input record's validity, source truth/evidence scope, e
 human/export approval. Provenance remains DeferredToDesignAndG4. A complete runtime lookup must
 supply the actual candidate and attach only its available expression/statement context.
 
-The focused scalar adapter target passes five tests, including78 origin/state reads, the independent
-six-kind table, complete kind mismatch pairs, identity priority and every other source variant.
-The affected length adapter retains three passing tests; selected strict Clippy passes. Whole
-runtime context providers/evaluation and broad/platform verification remain later owned work.
-
 ## Explicit tolerance contexts
 
 FormulaToleranceContext makes all five reserved tolerance reads explicit. Empty/default contexts
@@ -170,11 +163,6 @@ physical suitability or export approval. Source ids/labels are supplied explicit
 G4/context integration retains those validation obligations. Runtime within/assertion provenance
 and size contexts remain separate owners.
 
-The focused formula_tolerance_context_contract target passes five tests covering both intrinsic
-values, all eight optional-provider combinations with absent/nonempty/empty labels, all six
-quantitative classes against each external slot, refusal priority, explicit zero and immutable
-replacement. Selected strict Clippy passes; broad integration/platform proof remains deferred.
-
 ## Core size context frames
 
 FormulaSizeName provides Index, Count and IsBaseSize roles over the existing size_index, size_count
@@ -215,11 +203,8 @@ arbitrarily large native membership was allocated; the core frame is a host-supp
 Replacing a frame leaves prior pin/values unchanged. A membership adapter must derive source, ordinal,
 count and base from the actual immutable authored membership and compare its expected pin.
 
-The focused formula_size_context_contract target passes five tests for role closure, absence,
-source/Count/false/base behavior, exact invalid witnesses/priority, wide binding refusal and immutable
-replacement. Selected strict Clippy passes. Actual authored membership/pin derivation is available through the
-[sc-measure bridge](../spec/size-membership.md#formula-size-context); global registry/axis/path and
-broad/platform proofs remain their distinct owners.
+Actual membership/pin derivation uses the [sc-measure bridge](../spec/size-membership.md#formula-size-context).
+Global registry/axis/path and broad/platform proofs retain their distinct owners.
 
 ## Reference runtime assertion controls
 
@@ -250,20 +235,8 @@ python3 -I -B docs/tasks/artifacts/formula_structure/assertion_contract.py --mut
 
 Its [producer plan](formula-documentation-controls.md#assertion-reference-and-copied-consumer-plans) preserves pure calls and guards copied outputs.
 
-The existing structural runner watches this producer.262 independently authored controls cover all
-five arithmetic kinds and all five classes, zero/below/at/above thresholds in both operand orders,
-signed values where permitted, unchanged caller bindings, static acceptance of false checks and
-earlier static/runtime errors. Context-dependent classes use explicit fixture values25/40/100;
-these are controls, not new defaults. Canonical integer input bindings divided by ratio2.0 supply
-exact half-unit results. The grammar deliberately makes Count*Ratio a Ratio and Count/Ratio a Count;
-the controls follow those declared kinds rather than changing the table to fit a fixture.
-
-A copied worked book falsifies waistband_width_closure: the actual consumer returns1 and reports
-formula_assertion with length80000 versus40000 at eps_num1. Eight actual compiled predicate/payload
-faults must fail body assertions: false guard, inclusive boundary, token, label, operand order/kind,
-class and class value. The reference source stays byte-identical during these in-memory faults.
-G1-SLICE.5e.3a owns this repair. D122 reference missing-value routing is described below.
-D121 reference contribution provenance is verified below. Product evaluation, geometry and API/MCP/release remain pending.
+Complete262-control/eight-fault assertion receipts remain in `docs/history/stitchcad-devnotes-part490.md`.
+Product named assertions are described below; AST execution, geometry and release remain pending.
 
 ## Missing values by origin
 
