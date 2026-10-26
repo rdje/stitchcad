@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — finite-threshold certificate feasibility
+
+0277 .5d.1.2.2.2.a derives exact finite rounding-target populations and rational denominator
+bounds before implementing a directed integer half-angle/atan prototype. Forward38-band cohort,
+known3/Fraction4/small-Q32/negative2 controls pass, rc=0. Pure import with read_text refusing
+passes0; pi bounds remain explicit helper input. The candidate512-bit/2^-384 profile is research,
+not a production budget. Full forward population remains .b; inverse generator/coverage, native
+error/workspace and tangent strategy stay open. No production math, input limit or backend changes.
+Whole0276 task/old binding lesson/ledger retained370/371/249, exact Git/hash/public reads verified.
+Book/live sync. Promotion: decision_finite-threshold-feasibility.md records proposal, derivation,
+primary series sources, controls and admission boundaries so sample success cannot become signoff.
+
 ## _(2026-10-26 UTC)_ — thirteenth immutable history window
 
 0276 .5e.2.h13 captures all52 raw records at64 working files from87d0987. Deterministic Git tar/
@@ -337,22 +349,8 @@ Legacy f64 summary is clarified against the existing true-value formula contract
 or scope is admitted. Whole0253 task/ledger retained326/226; book/pointers align. Promotion:
 existing numerical decision records the family algorithm, bounds, termination and oracle plan.
 
-## _(2026-10-25 UTC)_ — one scalar binding conversion and stored values
-
-0253 .5c.3.2 introduces private numeric i64/kind or Boolean storage. Completed numeric input
-rounds once via the shared full-u128 magnitude primitive, then checks signed storage including
-i64 MIN's extra negative magnitude. Refusals borrow the actual name, retain kind/rule/inclusive
-bounds and an exact full-width rounded witness; no wrap, fallback, namespace publication or
-source context is invented. Scalar length/area bounds are already exact integer bounds, so one
-nearest-integer round preserves them. Returned integers are the later-read values; Boolean stays
-Boolean. Raw angle turns and wide positive literal children beneath unary signs are retained.
-
-One focused native binding target passes3/0, rc=0, covering all kinds/scalar boundaries, both signed
-endpoints/tie neighbors, full-width failures, direct i64 MIN literal, later stored reads and Boolean.
-Stale crate/Cargo overview claims are repaired against current static/numeric behavior; new WASM
-currency is not asserted. Broader/platform/mutation checks remain .5c.4/pre-push. Whole0252 scope/
-ledger and completed primitive parent retained324/225/325; book/API map/live sync. Promotion declined:
-established binding/numeric contract and focused-check policy.
+[Complete binding conversion lesson](docs/history/stitchcad-devnotes-part371.md) retains
+its original scope, validation and promotion decision.
 
 [Complete round_to lesson](docs/history/stitchcad-devnotes-part368.md) retains
 its original scope, validation and promotion decision.

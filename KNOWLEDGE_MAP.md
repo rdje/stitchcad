@@ -70,6 +70,7 @@
 - [`director-ruling-2026-09-30-no-seats-proceed-unapproved`](docs/decisions/decision_director-ruling-2026-09-30-no-seats-proceed-unapproved.md)
 - [`edge-parameter-bounded-exact-rational`](docs/decisions/decision_edge-parameter-bounded-exact-rational.md)
 - [`entity-identity-ulid-injected-generator`](docs/decisions/decision_entity-identity-ulid-injected-generator.md)
+- [`finite-threshold-feasibility`](docs/decisions/decision_finite-threshold-feasibility.md)
 - [`fixture-oracles-derive-the-finished-dimension`](docs/decisions/decision_fixture-oracles-derive-the-finished-dimension.md)
 - [`governance-two-review-paths-and-the-unnamed-roles`](docs/decisions/decision_governance-two-review-paths-and-the-unnamed-roles.md)
 - [`history-windows-retain-self-contained-bytes`](docs/decisions/decision_history-windows-retain-self-contained-bytes.md)

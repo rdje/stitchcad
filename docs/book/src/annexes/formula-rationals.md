@@ -582,3 +582,5 @@ qualitative termination proof. A generic algebraic separation estimate gives an 
 bound; it does not establish actual hard inputs or justify an arbitrary precision cutoff.
 The full derivation/sources are in docs/decisions/fact_trig-midpoints-and-resource-bound.md;
 G1-SLICE.5d.1.2.2.2 still owns usable all-input resource accounting before implementation.
+The [finite-threshold study](formula-trig-certificates.md) has a successful bounded forward
+cohort; full coverage and native runtime admission remain separate obligations.

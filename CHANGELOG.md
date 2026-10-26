@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0276 — thirteenth immutable history window
+## STITCHCAD-G1-0277 — finite-threshold certificate feasibility
 
-.5e.2.h13: pack52 whole committed records at the fixed working cap; source/read/materialization and prior12 windows exact.
-Install verified content-addressed backing, retire exact originals, update live hrefs and retain whole closed records. Runtime code unchanged.
+.5d.1.2.2.2.a: directed interval/Farey feasibility passes38 bands and independent/negative controls, rc=0.
+Research decision/book retain bounds and limits; full population/native budget/inverse/tangent remain open.370/371/249 retain whole history.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -442,3 +442,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part247](docs/history/window13.md#stitchcad-changelog-part247md) | whole0274 | 4 lines, 306 bytes, sha256:78b624fe… |
 
 | [part248](docs/history/stitchcad-changelog-part248.md) | whole0275 | 4 lines, 291 bytes, sha256:60356880… |
+
+| [part249](docs/history/stitchcad-changelog-part249.md) | whole0276 | 4 lines, 328 bytes, sha256:2ceb8c6a… |
