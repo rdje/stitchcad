@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0315 .4c.4.cleanup5.a fixes D232: cleanup apply can explicitly pass --idle-cua; default stays strict.
-- Actual default/attested captures, original refusal,2 dispatch reds,5 arg refusals; policies/cert stores exact0.
-- Canonical blocked/clear effects0; handoff49 fixtures/17 reds0, checker unchanged. Book0; G1still5/18.
-- NEXT .4c.4.cleanup5: fresh plan/apply --idle-cua; old feature-20261026 plan aborted before deletion,1047 intact.
--461/462/463/287 wholeaba572c Git/hash/public exact0. After cleanup, .4c.4.4 immutable intent aggregate.
+-0316 .4c.4.cleanup5 completes due artifact cleanup after explicit attestation repair0315/D232.
+- Removed4 trees/1046 strays,1163 files/10476333108B;1050 selected absent and tracked bytes exact before regeneration.
+- Independent52008 preservation entries incl15 symlink metadata/certificate manifests exact0; skipped1032 unsafe.
+- NEXT .4c.4.4: immutable origin + authored transformation intent aggregate; feature27-test proof remains current.
+-464/465/288 whole35e2650 Git/hash/public exact0; book rebuild0. Cleanup next due2026-10-27 13:40UTC.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
@@ -41,7 +41,7 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - atan_runtime_plan.py envelope/oracle controls pass0; width<2^-564/workspace<2^1154/Newton<=13.
 - Window15 payloadcc8deffb5866dc1d55decd954dd7a411decc6a49577f41dcd0fdeedf7d6aa8b7 retains sourceba41e9a.
 - capture_window14.py and capture_window15.py are FROZEN historical producers, not current-HEAD reruns.
-- Cleanup protection0285 guards both certificate stores; due2026-10-26 13:16UTC; repair done, fresh run next.
+- Cleanup protection0285 guards both certificate stores; latest0316 verified, due2026-10-27 13:40UTC.
 - D156/D223 audits deferred; D224/D225/D227/D229-D231 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.

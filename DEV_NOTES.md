@@ -3,6 +3,15 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — due generated-artifact cleanup
+
+0316 .4c.4.cleanup5 applies fresh35e2650 plan with explicit idle-CUA after D232 repair.4 trees/1046
+strays remove1163 files/10476333108B. Before regeneration, independent1050-path residue and tracked
+fingerprint checks pass0;52008 preserved entries incl15 symlink records/certificate manifests match.
+1032 unsafe/uncertain entries retained; built deps/stores/proof payloads untouched. Book rebuild0.
+464/465/288 whole35e2650 Git/hash/public exact0. G1still5/18; .4c.4.4 aggregate next; due2026-10-27 13:40UTC.
+Promotion declined: recurring existing cleanup policy. No Rust change; original feature27-test proof retained.
+
 ## _(2026-10-26 UTC)_ — explicit cleanup idle-CUA attestation
 
 0315 .4c.4.cleanup5.a fixes D232: cleanup always called strict handoff without its explicit idle flag,
@@ -237,17 +246,8 @@ census17/5/5/0 and book pass0.409/410/265 retain whole history; G1still5/18.
 Payloads/currentness/auth/replay/transactions remain later owners. Promotion declined: existing
 command metadata contract; its decision records the chosen representation and boundary.
 
-## _(2026-10-26 UTC)_ — terminal ID exhaustion and atomic ledger refusal
-
-0292 .6.2.1 owns D225: from_start(MAX) yielded MAX then0; the public regression failed101.
-Infallible allocation plus wrapping_add violated nonreuse. IdGenerator now returns Result;
-the optional deterministic counter emits its final value once then permanent Exhausted. All actual
-callers handle allocation; six ledger edits propagate original IdError/source before mutation.
-Focused3/0 checks terminal seeds, twelve original allocator errors and six precondition priorities
-against complete ledger equality. Existing id units10/0, affected all-target compile-only and
-selected lib/changed-test strict Clippy/fmt/book pass0. Broader runtime/platform checks deferred.
-405/406/407/408/264 retain whole history; G1still5/18, no persisted identity/clock change.
-Promotion declined: repair to the existing nonreuse contract; identity decision documents the API.
+[Complete terminal ID exhaustion lesson](docs/history/stitchcad-devnotes-part465.md) retains
+its original atomic failure/nonreuse contracts, checks and promotion decision.
 
 [Complete command catalog lesson](docs/history/stitchcad-devnotes-part462.md) retains
 its original metadata/authority/retention contracts, checks and promotion decision.

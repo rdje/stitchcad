@@ -276,6 +276,12 @@ The latest result lives in `docs/ARTIFACT_CLEANUP.md`; the earlier run receipt i
 in `docs/history/stitchcad-devnotes-part463.md`. Explicit apply-only `--idle-cua` attests no CUA call or
 result is pending; actual project jobs and file handles remain blocking.
 
+```bash
+python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py plan target/artifact_cleanup_audit/<run>
+# Inspect the plan; attest idle CUA only if no call/result is pending.
+python3 -I -B docs/tasks/artifacts/artifact_cleanup/cleanup.py apply target/artifact_cleanup_audit/<run> --idle-cua
+```
+
 The tracked cleanup.py under docs/tasks/artifacts/artifact_cleanup/ plans before removal. Its frozen
 manifest names relative candidates and their content, tracked-input fingerprint, HEAD and producer
 identity. Drift, symlinks, special files, nested repositories and other volumes refuse; package stores,

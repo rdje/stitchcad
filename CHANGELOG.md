@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0315 — explicit cleanup idle-CUA attestation
+## STITCHCAD-G1-0316 — due generated-artifact cleanup
 
-Apply-only --idle-cua forwards canonical attestation; default, live-job/file guards and policies stay strict.
-Default/explicit captures, old refusal/2 reds/5 invalid CLI controls, blocked/clear effects,49 handoff
-fixtures/17 reds and certificate/policy/book pass0.461/462/463/287 retention exact0; fresh cleanup plan next.
+Fresh plan removes4 trees/1046 strays,1163 files/10476333108B; independent1050-path absence/tracked
+bytes and52008 preserved entries pass0 before regeneration. Book0;464/465/288 retention exact0.
+G1still5/18; immutable intent aggregate next. Next cleanup due2026-10-27 13:40UTC.
 
 # Sealed archive — earlier slices
+
+| [part288](docs/history/stitchcad-changelog-part288.md) | whole0315 | 6 lines, 388 bytes, sha256:4427fc96… |
 
 | [part287](docs/history/stitchcad-changelog-part287.md) | whole0314 | 6 lines, 379 bytes, sha256:bad42b63… |
 
