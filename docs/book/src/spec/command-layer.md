@@ -362,7 +362,7 @@ The command-layer census checks profile coverage against the roadmap and rejects
 stdio-only/G5+ admission rule in these normative sections. Runtime evidence remains with the owners.
 
 The core now provides [exact command scopes and checked narrowing](command-scopes.md).
-Actor/permission/revocation enforcement remains with the next bus slice.
+Core actor/permission/revocation checks use a [trusted host snapshot](command-scopes.md#core-authorization).
 
 ## 8. Workflow parity, and the table that proves it
 

@@ -100,3 +100,5 @@ package identity claim	spec/release-contract.md	crates/sc-core/src/ontology/pack
 exact approval intent	spec/release-contract.md	crates/sc-core/src/command/approval.rs	ApprovePackage	G1-SLICE.6.2.2.c.2.5.4	9
 unified command request	spec/command-layer.md	crates/sc-core/src/command/request.rs	CommandRequest	G1-SLICE.6.2.2.c.2.6	4.4
 command scope coverage	spec/command-scopes.md	crates/sc-core/src/command/scope.rs	CommandScope	G1-SLICE.6.3.1	7.8
+command grant records	spec/command-scopes.md	crates/sc-core/src/command/grant.rs	CommandGrant	G1-SLICE.6.3.2	7.8
+core command authorization	spec/command-scopes.md	crates/sc-core/src/command/authorization.rs	CommandAuthoritySource	G1-SLICE.6.3.2	10

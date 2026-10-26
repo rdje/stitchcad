@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; all17 typed request schemas and shared core input implemented; bus handlers pending
+- **Status:** `active`; all17 typed inputs and trusted-host core authorization implemented; bus handlers pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -115,3 +115,10 @@ Identity is payload-derived; Design/actor/revision and mutation-only retry/group
 Core owns authorization and invariants; sc-api is an adapter. No wire codec, grant or handler follows
 from constructing data. Evaluation/artifact/release schemas, including D239 detached approval intent,
 are now present; actual source validation, execution and human approval remain .6.3+ obligations.
+
+0337 .6.3.2 checks one trusted host snapshot, matching exact submitted actor/role/principal and one live
+permission/Design/command/time grant. Permissions are explicit; grants never combine to widen coverage.
+Agents cannot hold/issue approval; mutation preview needs inspect. Transport providers must authenticate
+sessions and validate human grant issuance; submitted claims never become their own authority source.
+Returned decisions describe a snapshot, not future execution or approval; effects must reauthorize and
+validate actual sources/revisions, subjects/evidence/scope. No handler, human record or server is claimed.

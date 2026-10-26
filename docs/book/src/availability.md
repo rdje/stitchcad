@@ -80,6 +80,9 @@ does not prove numeric availability, physical truth or applied profile effects.
 [Typed artifact requests](spec/artifact-requests.md) name explicit DXF/PLT/PDF/tech-pack inputs and the same
 artifact-specific uncertainty inspection target. These declarations generate no files or closure.
 
+[Core authorization](spec/command-scopes.md#core-authorization) checks trusted host identity/grants,
+exact scopes and human-only approval permission. Transport authentication and handlers remain pending.
+
 ## Planned workflows
 
 Recipe evaluation, geometric construction, grading, profiles, storage and crash recovery, the command

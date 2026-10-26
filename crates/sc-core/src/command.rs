@@ -1,14 +1,16 @@
-//! Typed command inputs and catalog metadata; handlers and authenticated grants remain separate.
+//! Typed command inputs and core authorization over trusted host identity/grant snapshots.
 //!
 //! Catalog membership declares a command; it does not make a handler available or grant authority.
-//! Execution, scoped authorization, transactions and workflow parity remain separate bus owners.
+//! Transport authentication, execution, transactions and workflow parity remain separate owners.
 
 mod approval;
 mod artifact;
+mod authorization;
 mod construction;
 mod context;
 mod evaluation;
 mod grading_selection;
+mod grant;
 mod payload;
 mod pdf_print;
 mod plot;
@@ -21,6 +23,11 @@ mod snapshot;
 mod tech_pack;
 pub use approval::{ApprovalScopeTarget, ApprovePackage};
 pub use artifact::{ArtifactPayload, CommandArtifact, DxfGrading, DxfTarget, ExportDxf};
+pub use authorization::{
+    authorize_command, CommandAuthoritySnapshot, CommandAuthoritySource, CommandAuthorization,
+    CommandAuthorizationError, CommandAuthorizationMode, CommandGrantRefusal,
+    CommandGrantRejection,
+};
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
@@ -31,6 +38,7 @@ pub use evaluation::{
     RegenerationChart, ResolveProfile, SizeMemberTarget,
 };
 pub use grading_selection::{GradedSizeSelection, GradedSizeSelectionError};
+pub use grant::{AgentApprovalGrantError, CommandGrant, CommandGrantStatus};
 pub use payload::{
     AssignMaterial, AssignMaterialError, ChangeMeasurement, CommandMutation, MutationPayload,
     PieceSelection, PieceSelectionError,

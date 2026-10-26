@@ -99,20 +99,13 @@ evaluation, value reads and geometry callbacks.
 python3 -I -B docs/tasks/artifacts/formula_structure/geometry_argument_contract.py --mutations
 ```
 
-The97 independent cases cover all64 ordered point kind pairs and all eight edge kinds;70 invalid
-named combinations expose only kind and trap execution. Literal/computed refusals and child-error
-priority include an early zero divisor, approximation calls, syntax errors and an untaken branch.
-Seventy-five complete provider dimension payloads are checked. Successful point/edge cache replay
-verifies exact values, source unions, asymmetric per-coordinate sources and contributions inherited
-from named values. Twelve compiled actual source faults must fail body assertions: guard bypass,
-omitted y, execution during kind checking, reversed kinds/order, fabricated kinds, missing argument,
-wrong wanted kinds/scope, premature cache publication, lost coordinate/edge sources and swapped
-coordinate sources. The reference on disk remains unchanged by these faults.
+Complete97-case/75-payload/12-fault local geometry-reference receipts remain in
+`docs/history/stitchcad-devnotes-part491.md`.
 
 D140 is repaired in this local reference adapter. These controls do not validate arbitrary provider
 metadata, persisted graphs, whole-recipe runtime rollback, product operation identity or physical
-geometry. Product selectors/operation-argument integration remain .5f.3b/G2, and complete product
-static recipe acceptance remains .5b.4. The grammar and stable diagnostic token set are unchanged.
+geometry. Product selectors/operation-argument execution remains .5f.3b/G2; complete product static
+recipe acceptance is implemented below. The grammar and stable diagnostic token set are unchanged.
 
 ## Binding-header diagnostic arguments
 
@@ -325,19 +318,7 @@ and never calls numerical evaluation, binding storage or geometry resolution.
 python3 -I -B docs/tasks/artifacts/formula_structure/static_recipe_contract.py --mutations
 ```
 
-The196 independently authored whole-source controls cover original slices and headers, all nine
-origins, all81 ordered origin collisions, reserved declarations, unknown context values, declaration
-order and late refusals. Actual recipe lengths4095/4096 succeed and statement4097 fails for either
-header. Expressions at255/256 nodes and conditionals at15/16 levels succeed; node257 and depth17
-fail before execution. Metadata-only inputs and trapped callbacks make forbidden reads observable.
-
-The book consumer now preflights all17 bindings and four assertions together before L2 numerical
-replay. Two copied books combine an early zero divisor with a last-assertion kind/name error;
-the actual consumer refuses before any statement callback. The unmodified shell entry point still
-computes all published values and raises all13 expected refusal diagnostics. Compiled in-memory
-guard faults also test whether boundary/order/limit guards or the consumer's preflight call can
-be bypassed; the actual producer on disk stays unchanged during those controls. Fourteen actual
-guard faults must fail body assertions, including early consumer evaluation and measurement faults.
+Complete196-case/consumer/fault receipts remain in `docs/history/stitchcad-devnotes-part491.md`.
 
 The copied-book instrument plans the complete current book and every selected copy, log and
 existing deletion candidate before it activates local stores. An unknown fixture file or directory,
@@ -452,27 +433,10 @@ the loader/replay obligation at .5e.4/.7; ordinary forward/self names remain unb
 python3 -I -B docs/tasks/artifacts/formula_structure/static_coupled_contract.py --mutations
 ```
 
-The producer checks26723 shared source cases against independently authored rules, the actual
-book reference and a compiled public Rust adapter. Cargo supplies the current library and dependency
-paths; compiler/link failures never count as failed contract-body assertions. The matrix covers all
-ordered operator kinds, fixed and variadic function signatures (through four arguments), if/within
-roles and kinds, every binding annotation and all five assertion classes, call/child priority,
-ordinary excluded-form names under the unchanged grammar, and runtime-invalid static expressions.
-Both variadic functions retain the255-argument boundary and first excess.
+The shared structural oracle compares independently authored rules, the actual reference and current
+public Rust interfaces. Complete26723-case/source/fault receipts remain in
+`docs/history/stitchcad-devnotes-part491.md`.
 
-It also checks the complete published17-binding/four-assertion recipe, its13 refusal examples,
-ordered prior/self/forward/colliding names and D148's later-input priority. Reference name-read
-traces and public dependency sources agree with independently authored occurrence order, including
-repetition and untaken branches. Public proofs retain their actual normalized owner and canonical
-identity; the recipe adapter calls the actual whole factory, which checks before advancing metadata. Unknown measurement/Ease
-records remain borrowed; no missing value is defaulted into a result. Numerical/reference provider
-queries are trapped. Different source capabilities retain their own scopes: reference tuples have
-no canonical product record identity, and initial authored declarations have no recipe ordinal.
-
-Six faults compiled into the real reference and28 compiled into the actual Rust implementation
-must trigger oracle or running-driver body assertions. All five source files are restored byte-exact,
-and the restored Rust artifact must pass again. Three actual copied-annex status faults also refuse,
-preventing D149's obsolete claims and D151's ambiguous reference/product proof wording.
 The [standalone guard contract](../build-and-checks.md#direct-python-producers) covers all20
 inputs, prepared child stores, current driver assertion sites and unconditional artifact restoration.
 Ordinary execution declares seven destinations for its baseline build. Mutation execution declares

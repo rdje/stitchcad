@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — trusted-host core authorization
+
+0337 .6.3.2 checks one verified session/time/grant snapshot; exact actor/principal and same-grant scope/permission.
+Agent approval refuses; inspect-only mutation preview stays separate. No transport, handler or approval record.
+D243 actual duplicate-active/revoked grant control red0/1 rc101; upfront uniqueness fixes both orders.
+Native auth7/scope3/request2/catalog2/release6 pass20/0, strict lint/fmt/book/pub77-103 pass0; D242 text fixed.
+491 wholecd41993 source/hash/public exact0. Promotion: existing command decision; .6.3.3 review, capacity P1.
+
 ## _(2026-10-26 UTC)_ — exact command scope coverage
 
 0336 .6.3.1 checks explicit Design/commands/start-inclusive end-exclusive time; widening refuses exact inputs.
@@ -172,23 +180,11 @@ fingerprint checks pass0;52008 preserved entries incl15 symlink records/certific
 464/465/288 whole35e2650 Git/hash/public exact0. G1still5/18; .4c.4.4 aggregate next; due2026-10-27 13:40UTC.
 Promotion declined: recurring existing cleanup policy. No Rust change; original feature27-test proof retained.
 
-## _(2026-10-26 UTC)_ — explicit cleanup idle-CUA attestation
+[Complete explicit cleanup attestation lesson](docs/history/stitchcad-devnotes-part491.md) retains
+D232 reproduction/repair, original dispatch/protection receipts and SPINE.23r boundary.
 
-0315 .4c.4.cleanup5.a fixes D232: cleanup always called strict handoff without its explicit idle flag,
-so four metadata-only CUA processes blocked a due run. First unavailable-type refusal occurred before
-removal; initial raw snapshot absent, later ps/lsof/default/attested receipts retained; SPINE.23r owns root cause.
-Apply-only --idle-cua now forwards explicit attestation; no default/env inference or checker policy change.
-Actual default/attested captures, old refusal,2 dispatch reds/5 CLI refusals, blocked/clear effects pass0;
-49 handoff fixtures/17 reds and original-body/certificate protections pass0. Book0; fresh plan next.
-461/462/463/287 wholeaba572c Git/hash/public exact0. Promotion declined: existing canonical idle policy; no new authority.
-
-## _(2026-10-26 UTC)_ — current chart-replacement intent
-
-0314 .4c.4.3.2 resolves explicit typed candidates through original chart metadata and shared axes/breaks.
-Candidate drafts/path refusals remain; missing/family/duplicate/same-ID substitutions refuse, no source mutation.
-Garment18+MTM9 pass0; strict selected lint/fmt/book0.457/458/459/460/286 whole8f47113 Git/hash/public exact0.
-Old governance chronology retires without losing current guards/D141; no cap increase. G1still5/18; .4 aggregate next.
-Promotion: existing SizeSet decision extended; execution/registry/approval and broad gates remain later owners.
+[Complete chart replacement lesson](docs/history/stitchcad-devnotes-part491.md) retains
+original source/candidate validation, exact proofs and execution obligations.
 
 [Complete break-scaling intent lesson](docs/history/stitchcad-devnotes-part490.md) retains
 original canonical states, reference checks and remaining numeric execution obligations.

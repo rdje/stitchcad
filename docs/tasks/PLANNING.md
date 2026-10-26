@@ -1094,14 +1094,21 @@ Closed D238 report and complete0327 correction evidence remain whole in
 Closed D239/D240 reports and complete0331 repair evidence remain whole in
 [part145](../history/stitchcad-defects-part145.md). Detached binding/records remain current.
 
-## D241 — command overview lagged current core request schemas
+Closed D241 command overview report and0335 verification remain whole in
+[part491](../history/stitchcad-devnotes-part491.md). Current core ownership/input boundary remains.
 
-Reproduce3419ed3 command-layer introduction: bus assigned to sc-api; mutation paragraph omits SplitSeamSpan
-and says completed schemas remain later. Current core types and active command decision contradict both.
-Root: introductory/early implementation text was not reconciled after family additions; reader can infer
-wrong ownership or missing inputs. Owner G1-SLICE.6.2.2.c.2.6, P2 fixed0335: core ownership and all17 input scope now align.
-Native request2/catalog2/query2/release6 and command census17/5/5/0, strict lint/book/publication76/100
-pass rc=0; normative command table unchanged. No executed bus or adapter parity claimed. Closed.
+## D242 — local reference geometry tail deferred completed product static acceptance
+
+Reproducecd41993 formula-static-validation D140 tail: complete product static recipe acceptance remains .5b.4.
+Actual whole checked-recipe APIs and the same chapter document implemented acceptance. Root: historical local
+reference boundary was not reconciled after product closure; impact is a false implementation frontier.
+Owner G1-SLICE.6.3.2, P2 fixed0337: tail now distinguishes implemented static acceptance from pending
+selector/operation execution. Whole prior receipts retained491; scoped publication/book checked with
+actual source registry, no runtime/geometry claim. Closed; final command results in owning leaf.
+
+D243 — duplicate grant identities hid revocation behind an earlier authorization success; actual new
+native control failed0/1, rc101. Owner G1-SLICE.6.3.2, P1 fixed0337: reject whole ambiguous snapshot
+before success; both record orders are watched. Final results in owner. No real grant/approval occurred.
 
 ## Active continuity followup
 

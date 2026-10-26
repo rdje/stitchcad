@@ -684,8 +684,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Acceptance: [whole scope/proofs](../history/window15.md#stitchcad-devnotes-part419md).
 - ID: `G1-SLICE.6.2.2.c`
   Status: `done`
-  Goal: remaining query/evaluation/artifact/release request contexts and immutable payload binding.
-  Children .c.1 current canonical piece/seam queries; .c.2 concrete artifact-dependent closure and remaining classes.
+  Goal: remaining typed input families complete; [whole goals](../history/stitchcad-devnotes-part491.md).
 - ID: `G1-SLICE.6.2.2.c.1`
   Status: `done`
   Goal:0300 pinned piece/seam queries verified2+2/0/lint/fmt/census/book0.
@@ -693,11 +692,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Commit: STITCHCAD-G1-0300.
 - ID: `G1-SLICE.6.2.2.c.2`
   Status: `done`
-  Goal: concrete evaluation/artifact/release schemas and artifact-specific GetUncertaintyClosure target.
-  After canonical SizeSet/profile/artifact input work; follow actual contracts, no generic argument-map substitutes.
-  Release closure depends on requested artifact's actual dependency set; no entire-design or guessed-kind closure.
-  Children: .1 shared exact selected-profile pin; .2 evaluation contexts/concrete targets; .3 profile resolution;
-  .4 concrete artifact requests/closure; .5 candidate/human approval requests; .6 combined schema review.
+  Goal: concrete evaluation/artifact/release and exact closure inputs complete; [whole goals](../history/stitchcad-devnotes-part491.md).
 - ID: `G1-SLICE.6.2.2.c.2.1`
   Status: `done`
   Goal:0322 shared exact core profile pin; [whole implementation/proofs](../history/stitchcad-devnotes-part477.md).
@@ -757,26 +752,30 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   .3 coupled authority acceptance before aggregate execution. No transport authentication claim without its provider.
 - ID: `G1-SLICE.6.3.1`
   Status: `done`
-  Goal:0336 immutable explicit command/Design/finite-time scope with checked narrowing and exact refusal data.
-  Own command scope module/reexports/tests and book/publication/live records. Use explicit SystemTime values;
-  read no ambient clock. Scope coverage is a predicate, never an actor-held grant or authentication proof.
-  Preserve authored command order/repetition; empty inventory denies all. Valid windows are start-inclusive/
-  end-exclusive with start<end. Narrowing refuses changed Design, added commands or enlarged time window;
-  no intersection/clipping silently repairs a wider request. Actor/permission/revocation checks remain .2.
-  Own490 whole0335 task/ledger, oldest0313 lesson and closed runtime adapter/assertion proof paragraphs from0812151;
-  verify original Git/hash/public bytes before retirement. One combined retained record, no duplicated ledger.
-  Focused scope/request/catalog tests, strict selected lint/fmt/book/publication; broad CI integration/pre-push.
-  - [x] ROOT CAUSE (WHY + WHERE): scope requires explicit Design/command/duration predicates and checked
-    delegation; native scope3/request2/catalog2 pass7/0, including same-class/empty/time boundary controls; rc=0.
-  - [x] ADDRESSED: immutable exact scope and child-subset validation reject each widening dimension;
-    selected strict lint/fmt/book/publication77/101 pass. Initial INDEX_COVERAGE new chapter omission fixed; rc=0.
-  - [x] NO REGRESSION: original request/catalog proofs green; parent unchanged after valid/refused children,
-    no actor grant/ambient clock supplied.490 whole0812151 Git/hash/public and retention944/61 pass; rc=0.
-  Commit0336; .6.3.2 trusted-source identity/permissions next. Promotion declined: existing authority contract.
+  Goal:0336 exact command/Design/time scope and narrowing; [whole scope/proofs](../history/stitchcad-devnotes-part491.md).
 - ID: `G1-SLICE.6.3.2`
-  Status: `pending`
-  Goal: actual core permission/actor/principal/design/command/time/revocation checks using trusted host source;
-  reject unverified claims and agent approval, preserve structured denials; provider authentication stays adapters.
+  Status: `done`
+  Goal:0337 core authorization against one trusted host snapshot, separate from submitted actor claims.
+  Own core grant/authorization modules/reexports and focused tests, existing scoped-command book/map/live records.
+  Snapshot supplies authenticated actor/principal, trusted time and authoritative grants; no wire/session provider
+  is implemented or inferred. Exact actor-role/principal binding, explicit permission and same-grant Design/
+  command/time/live status must all hold. Agents cannot hold approve; only a verified human can request it.
+  Mutation preview requires inspect, execution uses catalog permission; no preview escape for other classes.
+  Return readonly snapshot decision, not cached execution/approval proof. Source/subject/revision/evidence checks
+  and effects remain handlers; transport identity/grant provisioning retain .9/.10 adapter ownership.
+  Own491 whole0336 task/ledger,0314–0315 lessons, closed input parent goals, reference static receipts/D241
+  fromcd41993; verify original Git/hash/public before retirement. D242 stale local geometry-reference tail
+  defers completed product static recipe acceptance; log/fix from actual checked interfaces, no broader audit.
+  D243 own duplicate current grant-ID ambiguity: a first successful record can hide a conflicting revoked
+  record; reproduce with actual authorization target, then reject the inconsistent snapshot before success.
+  Native authorization/scope/request/catalog/release and strict selected lint/fmt/book/publication; broad CI later.
+  - [x] ROOT CAUSE (WHY + WHERE): claims/catalog confer no authority; source snapshot and complete single-
+    grant checks are required. Auth negative cases pass7/0, rc=0; D243 red0/1 rc101 exposed hidden revocation.
+  - [x] ADDRESSED: verified binding, explicit permission/live scope, human-only approval, inspect preview and
+    duplicate-ID refusal pass native auth7/scope3/request2/catalog2/release6,20/0; rc=0.
+  - [x] NO REGRESSION: original scopes/requests/catalog/release green; strict selected lint/fmt/book/pub77/103,
+    491 source/hash/public equality pass. D242 corrected, source/transport/effects remain explicit; rc=0.
+  Commit0337; .6.3.3 combined authority review next. Promotion: existing command decision; full CI integration/pre-push.
 - ID: `G1-SLICE.6.3.3`
   Status: `pending`
   Goal: combined authority acceptance and current contract review before .6.4 design aggregate execution.

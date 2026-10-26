@@ -26,8 +26,8 @@ these behaviors; fluent sewing advice alone does not establish technical control
 
 Inspection, proposing, committing and generating are separate permissions. Human approval is a
 separate capability: an agent can prepare evidence but cannot approve its own garment, factory
-compatibility claim or production release. That boundary is enforced by the planned core authority
-model rather than inferred from a conversation.
+compatibility claim or production release. [Core authorization](../spec/command-scopes.md#core-authorization)
+rejects agent approval; authenticated adapters and actual release handlers remain planned.
 
 There is no current MCP connection to configure. Check [availability](../availability.md) for the
 implementation frontier. Experts can use the [command-layer contract](../spec/command-layer.md),
