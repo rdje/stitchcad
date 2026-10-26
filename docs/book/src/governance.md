@@ -342,8 +342,8 @@ Use the public archive reader; historical build evidence grants no physical appr
 The changelog archive index resolves actual raw-file or registered catalog link destinations. Its
 labels are display text: short or mistaken labels do not change the retained identity. Filename text
 in prose, code or comments cannot establish coverage, and a valid link cannot mask an extra broken
-index target. Thirteen independent verdicts and four actual checker fault controls verify this D96
-repair while preserving the earlier nine ledger arms and historical descriptor exemption.
+index target. Independent verdicts and checker fault controls verify D96. D245 also accepts valid
+non-changelog records while counting only changelog rows; unknown targets still refuse.
 
 For push-status automation, use `bash scripts/check_push_due.sh`: exit0 means no exceptional push
 is due, exit1 means due, and exit2 means the comparison was refused. `make push-due` is a diagnostic
@@ -415,27 +415,11 @@ runner's effective paths and job/step verdicts before D143 closes.
 Historical transition and runner receipts remain complete in `docs/history/stitchcad-devnotes-part477.md`.
 Use the public archive reader; historical build evidence grants no physical approval.
 
-### Ninth retention window
-
-Its complete transition/proof and retrieval commands remain in the same record.
-
 ### Local producer profile
 
 The [build and command reference](build-and-checks.md) documents guarded defaults, overrides,
 explicit toolchain setup and the launcher that prepares storage before Make starts. Primary
 entry points are verified under G1-SLICE.5b.4c.h2.a; the standalone producer audit remains open.
-
-### Producer-audit record retention
-
-Complete audit-retention receipts are preserved in `docs/history/stitchcad-devnotes-part459.md`.
-Original task headings retain exact record links; current requirements stay live. Public retrieval
-preserves complete committed source intervals and separators. Earlier windows and fixed bounds remain unchanged.
-
-### Thirteenth retention window
-
-Its complete transition/proof/retrieval narrative is preserved in logical record
-`docs/history/stitchcad-devnotes-part474.md`. Use the published archive reader; original addresses
-and all earlier immutable backing windows remain unchanged.
 
 ### Current retention window
 
@@ -454,5 +438,6 @@ The historical0339 probe packs946 logical records plus33 exact v1 backing files 
 windows, preserving16 physical catalogs. Native tar recovers all979 members exactly; all existing
 caps fit, including3583027 decoded bytes with evidence and221328 active control bytes.
 V2 read/refusal/materialization checks pass; live storage remains v1.
-Candidate byte and source checks pass; capacity.2.c owns installation.
+Candidate byte and source checks pass; guarded installer/recovery and consumer controls now pass.
+Capacity.2.c.2 owns live installation at committed HEAD; live storage remains v1.
 D244 fixes fixture Git path scope.

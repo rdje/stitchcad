@@ -17,7 +17,7 @@ CASES = [
     ]),
     ('unregistered catalog route accepted', helper, [
         ('elif target in routes:', 'elif target in routes or target.startswith("docs/history/window999.md#"):'),
-        ('pointed.add(routes[target])', 'pointed.add(routes.get(target, "stitchcad-changelog-part24.md"))'),
+        ('name = routes[target]', 'name = routes.get(target, "stitchcad-changelog-part24.md")'),
     ]),
     ('invalid extra target status ignored', shell, [
         ('if [ "$target_rc" -eq 0 ] && [ -z "${missing// /}" ]', 'if [ -z "${missing// /}" ]'),

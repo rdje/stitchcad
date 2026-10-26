@@ -496,24 +496,35 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal:0340 bounded v2 reader verified; [whole transitional receipt](../../CHANGELOG.md#transitional-receipt--flat-reader0340).
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.b`
   Status: `done`
-  Goal:0341 exact v1->v2 committed logical/backing/catalog byte guard and v2 future immutability.
-  Own reader extended CLI/read-backing/cohort and legacy source proofs, guarded fixture producer and focused
-  controls; retain original v1 CLI/success predicates behind declared dispatch and shared metadata authority.
-  Use current committed source for positive transition; old prototype must fail missing-current-record checks.
-  D244 owns actual fixture-relative tree query0/79 discrepancy and failed-show absence control; fix root
-  scope with --full-tree before source/transition acceptance. No live backing change. Keep bounded transitional receipts in existing changelog sections until .c/494;
-  only duplicate note navigation may be pruned. Book/decision/pointers stay aligned; full CI pre-push.
-  - [x] ROOT CAUSE (WHY + WHERE): v2 relocation must preserve committed logical/backing/catalog bytes;
-    D244 actual fixture0/79 query and compiled full-tree omission control are reproduced/refused, rc=0.
-  - [x] ADDRESSED: transition45/0, all33 public backings exact, current947 cohort/source and legacy48 proofs
-    pass; old946 prototype refuses missing committed data. Extended help and v1 backing check pass, rc=0.
-  - [x] NO REGRESSION: reader22/0, original v1 purity/CLI/metadata controls, syntax/book/pub77/103 pass;
-    whole0340 Git/hash/copy exact; live947/64/16 remains v1 with no relocation, rc=0.
-  Commit0341; promotion: existing history decision. .2.c finalizes install/consumers, then packs before494.
+  Goal:0341 exact relocation/source/future guards; [whole receipt](../../CHANGELOG.md#transitional-receipt--byte-guard0341).
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c`
-  Status: `pending`
+  Status: `in_progress`
   Goal: guarded atomic copy/verify/use/delete migration with rollback; offline/materialization/current consumers
   and all archive refusal controls, then494 whole transition receipts and product .6.4 resumes.
+  Children .c.1 committed installer/recovery and consumer support; .c.2 current-HEAD installation/proofs/494.
+- ID: `G1-SLICE.RETENTION-CAPACITY.2.c.1`
+  Status: `done`
+  Goal: fixed archive namespace/source/hash preflight, journaled directory swaps and explicit recovery;
+  preserve v1 refusal sources and legacy routes. D245 fixes non-changelog POINTER rows. No live install.
+  Own complete transition-receipt relocation and duplicate book history curation needed to pass fixed caps.
+  - [x] REPRODUCE / ISSUE: v1 has64 working files/16 slots; D245 actual POINTER rejects valid devnotes, rc=1.
+  - [x] ROOT CAUSE (WHY + WHERE): v2_install_contract.py source133d23c reaches four real rename boundaries
+    and abrupt child exit73; exact recovery rc=0. POINTER's changelog-only classifier rejects other rows.
+  - [x] FIX: exact-source staging/journal/swap/recovery; retained-v1 fixture and kind/catalog consumers.
+  - [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/history_archive/v2_install_contract.py
+    target/history-v2-install-support-0342 gives16 controls/0, rc=0, target/v2-install-0342.log:
+    native tar/all947 materialized records/all33 backings/ledger exact; ambiguous recovery bytes refuse.
+    Final live source/mutable-input plan dry-check passes0 with no effects.
+  - [x] NO REGRESSION: legacy_refusals.py --root target/history-v2-install-support-0342/candidate
+    original28/0; ledger_pointer_contract.py16/0; syntax/diff/book/publication77/103/1444/2358 pass0,
+    target/*0342.log, rc=0. Mutation anchor/syntax checked; native campaign/full integration remain pre-push.
+  - [x] LOCKSTEP: whole0341/D244/D245 and curated historical book paragraphs retained in CHANGELOG
+    until494; transition_receipts.py:9 hashes/8 Git intervals exact0. Book/decision/notes/pointer aligned, v1 unchanged,
+    G1still6/18. Neutral policies match0. promotion: declined (existing history decision). Commit0342.
+- ID: `G1-SLICE.RETENTION-CAPACITY.2.c.2`
+  Status: `pending`
+  Goal: prepare at committed installer HEAD, verify all source/public/offline/native-tar bytes, install,
+  prove current consumers and original refusal controls, retain rollback evidence, then seal494 before product .6.4.
 - ID: `G1-SLICE.4c.5`
   Status: `done`
   Goal:0320 SizeSet scope/current25/unchanged31/book0; [whole scope/proofs](../history/stitchcad-devnotes-part472.md).

@@ -2,17 +2,25 @@
 from pathlib import Path
 import json
 import re
+import runpy
 import sys
 
 root, authority = map(Path, sys.argv[1:])
 master = json.loads((authority / '.doctrine/history_archive/windows.json').read_text())
+reader = runpy.run_path(str(Path(__file__).resolve().parents[4] / 'scripts/history_archive.py'))
+records = reader['inventory'](authority)[0]
 routes = {}
-for manifest_path in master['windows']:
-    manifest = json.loads((authority / manifest_path).read_text())
+manifests = [json.loads((authority / path).read_text()) for path in master['windows']]
+if master['version'] == 2:
+    backings = reader['backing_inventory'](authority)
+    legacy = json.loads(backings[reader['MASTER']])
+    manifests.extend(json.loads(backings[path]) for path in legacy['windows'])
+for manifest in manifests:
     for row in manifest['members']:
+        if row.get('kind', 'record') != 'record':
+            continue
         name = Path(row['path']).name
-        if re.fullmatch(r'stitchcad-changelog-part[1-9][0-9]*\.md', name):
-            routes[manifest['catalog'] + '#' + name.replace('.', '')] = name
+        routes[manifest['catalog'] + '#' + name.replace('.', '')] = name
 
 # The ledger's archive index has a link in its first table cell. Code examples and HTML comments
 # are not index entries. Labels can contain ordinary inline code or escaped punctuation.
@@ -53,13 +61,16 @@ for original in (root / 'CHANGELOG.md').read_text().splitlines():
     if match is None:
         continue
     target = match[1]
-    raw = re.fullmatch(r'docs/history/(stitchcad-changelog-part[1-9][0-9]*\.md)', target)
-    if raw and (root / target).is_file():
-        pointed.add(raw[1])
+    raw = reader['SEGMENT'].fullmatch(target)
+    name = None
+    if raw and ((root / target).is_file() or target in records):
+        name = Path(target).name
     elif target in routes:
-        pointed.add(routes[target])
+        name = routes[target]
     else:
         invalid.append(target)
+    if name and re.fullmatch(r'stitchcad-changelog-part[1-9][0-9]*\.md', name):
+        pointed.add(name)
 print('\n'.join(sorted(pointed)))
 if invalid:
     print('POINTER invalid archive-index target(s): ' + ', '.join(invalid), file=sys.stderr)

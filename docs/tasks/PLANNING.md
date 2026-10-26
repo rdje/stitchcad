@@ -1100,14 +1100,9 @@ Closed D241 command overview report and0335 verification remain whole in
 Closed D242/D243 reports and0337 verification remain whole in
 [part492](../history/stitchcad-devnotes-part492.md); current authorization rejects duplicate grant IDs.
 
-## D244 — fixture-relative Git tree pathspecs hid repository files
+D244 fixed0341; [complete report](../../CHANGELOG.md#transitional-receipt--d244-complete-report) retained until494.
 
-Native git -C target/history_capacity/0339-final ls-tree reports0 history entries/absent master;
---full-tree reports79 and the existing master. Root: tree pathspecs inherited fixture cwd prefix.
-Impact: v2 source comparisons fail; a controlled failed show can make the shared absence check
-misobserve a present master from a fixture. Normal root queries/data are unchanged; no data loss claimed.
-Owner G1-SLICE.RETENTION-CAPACITY.2.b, P1 fixed0341: explicit full-tree source/absence queries.
-Actual failed-show fixture and compiled flag omission are watched; transition45/0 and source947/33/16 pass0.
+D245 fixed0342; [complete report](../../CHANGELOG.md#transitional-receipt--d245-complete-report) retained until494.
 
 ## Active continuity followup
 

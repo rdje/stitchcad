@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — guarded archive installation tooling
+
+0342 adds source-pinned same-volume staging, a flushed journal, directory swaps and explicit recovery.
+Each rename is atomic; readers must be idle across the transaction. Original source trees remain in
+local backups, and unknown recovery bytes refuse. No power-loss or live-installation claim is made.
+D245 exposed valid devnotes rows rejected by the changelog-only pointer classifier; other retained
+records are validated without entering changelog counts. Legacy v1 fixture sources remain unchanged.
+Installer16 controls/public947/native tar, original v1 refusals28 and POINTER16 pass0; book/publication0.
+Only duplicate historical navigation below was curated; all original lesson records remain retained.
+Promotion: existing history decision. G1 remains6/18; installation and494 belong to capacity.2.c.2.
+
 ## _(2026-10-26 UTC)_ — exact versioned archive byte guards
 
 0341 capacity.2.b adds relocation/future/raw byte guards and legacy/cohort/read-backing CLI; no live install.
@@ -367,30 +378,6 @@ its original scope, verification and promotion decision.
 
 [Complete bounded arc certificate/approved UI lesson](docs/history/window14.md#stitchcad-devnotes-part380md) retains
 its full proof, director requirements, verification and promotion decisions.
-
-[Complete hypot numeric kernel lesson](docs/history/window14.md#stitchcad-devnotes-part377md) retains
-its original implementation, validation and promotion decision.
-
-[Complete sqrt numeric kernel lesson](docs/history/window14.md#stitchcad-devnotes-part375md) retains
-its original implementation, validation and promotion decision.
-
-[Complete bounded root-family plan lesson](docs/history/window14.md#stitchcad-devnotes-part373md) retains
-its original derivation, oracle plan, bounds and promotion decision.
-
-[Complete binding conversion lesson](docs/history/window14.md#stitchcad-devnotes-part371md) retains
-its original scope, validation and promotion decision.
-
-[Complete binary-operator/numeric-domain lessons](docs/history/window13.md#stitchcad-devnotes-part362md) retain
-both original scopes, validation and promotion decisions.
-
-[Complete rational construction lesson](docs/history/window13.md#stitchcad-devnotes-part353md) retains
-its original scope, validation and promotion decision.
-
-[Complete archive/feature-delivery lesson](docs/history/window13.md#stitchcad-devnotes-part351md) retains
-its original failure, repair, validation and director ruling.
-
-[Whole oldest maintenance lessons](docs/history/window13.md#stitchcad-devnotes-part333md) retain the complete
-committed source group; no lesson is summarized away.
 
 ## Retained engineering continuity
 

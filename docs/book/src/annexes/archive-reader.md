@@ -4,10 +4,6 @@ Historical records keep stable logical names when their physical Markdown files 
 The reader validates the complete backing archive before listing, reading or materializing records.
 It uses Python3.9+ and the standard library; ordinary retrieval needs no historical Git objects.
 
-Window14 retains50 complete committed records from b49128e, packed before command-catalog work
-exceeded the fixed64-file working bound. Source comparison, exact materialization and every public
-read passed; prior13 windows remain unchanged. Retrieval commands and capacity limits are unchanged.
-
 ```bash
 bash scripts/history_archive.sh list
 bash scripts/history_archive.sh read docs/history/stitchcad-changelog-part1.md
@@ -70,19 +66,6 @@ python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_reader_contract
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py --real
 ```
 
-The original first producing effect is trapped with stores absent. The original pure function
-bodies and complete CLI body remain exact through declared planning, root-validation and child-
-environment adapters. Successful committed-history comparison predicates also remain exact.
-Captured materialization checks every planned file and directory, fresh effect checks, prepared
-stores and exact output bytes. Fourteen physical refusals and eight actual compiled body faults
-test source/output/store/parent authority, activation, rechecks and HEAD evidence. Device observations
-are simulated in private fixtures.
-
-The native mode separately executes public materialization, overwrite refusal, committed retention
-and window11 source reconstruction. Every logical output byte, backing file and producer source
-must match; owned fixtures are removed. Both Python3.9 and3.14 are checked. Full schema, decompression,
-membership and capacity controls remain in the [governance contract](../governance.md#12-historical-records-and-bounded-retention).
-
 ## Refusal fixture maintenance
 
 The archive refusal producer plans its copied backing files, deterministic fault payload names,
@@ -106,3 +89,29 @@ plans/effects and simulates child responses; it proves dispatch separately from 
 Its optional `--deep` campaign and further physical/original-body calibration are deferred under
 the [feature-delivery policy](checking-policy.md), owned by .f.fixture-verification. No complete
 deep-campaign pass is claimed. The activation-omission parser control has a focused regression.
+
+## Guarded migration tooling
+
+The v2 installer prepares two complete same-volume directory trees before touching live storage.
+It verifies the source HEAD, producer identities, exact source population and candidate bytes.
+A flushed journal precedes the first rename. Each directory rename is atomic; the two-directory
+transaction requires idle readers. Ordinary archive commands must wait until installation or
+recovery finishes. This is a maintenance operation, separate from ordinary read/materialize commands.
+
+```bash
+python3 -I -B docs/tasks/artifacts/history_archive/v2_migration.py prepare target/history-v2-migration
+python3 -I -B docs/tasks/artifacts/history_archive/v2_install.py install target/history-v2-migration
+# After interruption, before any archive use:
+python3 -I -B docs/tasks/artifacts/history_archive/v2_install.py recover target/history-v2-migration
+```
+
+Recovery classifies both directory trees before changing either. It accepts only exact original,
+staged and installed bytes from the prepared transaction; source, candidate, journal or HEAD drift
+refuses. Original source directories remain in the transaction backup, and the verified candidate
+remains available after rollback. An incomplete staging phase has not touched live storage.
+This protocol handles interrupted processes; no machine power-loss guarantee is claimed.
+
+The original v1 refusal producer runs unchanged against a reconstructed retained-v1 fixture after
+repacking. Only its Git HEAD observations are pinned to that original capture. Public window checks
+separate logical records from opaque backing members, and ledger pointers accept original catalog
+routes while counting only changelog records. Live installation remains the next owned slice.

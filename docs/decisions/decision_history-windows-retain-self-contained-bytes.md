@@ -103,3 +103,15 @@ a controlled failed show and actual compiled omission reproduce/refuse the old b
 The guarded v2_migration.py prepare command creates a fresh source-pinned candidate only.45 transition
 controls and33 public backing comparisons pass; the older946-record prototype correctly refuses
 against the newer947-record HEAD. No live archive has moved; installation remains capacity.2.c.
+
+## Installer and consumer support0342
+
+Capacity.2.c.1 adds a journaled two-directory installation with explicit recovery. Each rename is
+atomic; ordinary readers must be idle until the whole operation or recovery finishes. Exact original
+source trees remain in repository-local target/ backups. Recovery preflights both trees and refuses
+unknown bytes or changed HEAD/producer/candidate identities. This is process-interruption recovery,
+not a machine power-loss guarantee. Ordinary producer output authority remains restricted to target/;
+this maintenance entry alone owns the two fixed archive directory renames after exact-byte proof.
+Ledger consumers resolve retained original catalogs and distinguish non-changelog receipts. V1 refusal
+sources stay unchanged in a reconstructed fixture with explicit capture-pinned Git observations.
+Tooling support does not install the candidate; capacity.2.c.2 owns current-HEAD preparation and use.

@@ -3,6 +3,146 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
+## STITCHCAD-G1-0342 — guarded archive installer and consumers
+
+- Add exact-source staging, journaled directory swaps and fail-closed recovery; keep original trees for rollback.
+- Adapt retained catalog/member consumers and preserve the original v1 refusal producer in an exact fixture.
+- D245 fixed; installer16 controls/native tar/947 materialized bytes, original v1 refusals28 and POINTER16 pass0.
+- Fixed documentation caps blocked the first hook; complete transition receipts retained below and duplicate book history curated.
+- Live archive remains v1; current-HEAD installation/494 is capacity.2.c.2. G1 remains6/18; full CI deferred.
+
+
+### Transitional receipt — byte guard0341
+
+Complete source retained until capacity.2.c.2 seals494 after packing.
+Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/tasks/G1-SLICE.md bytes 29257–30837; 1580 bytes, sha256:b0948c049bdcfa0f8809e17762455d766fd74d2bf947e3c7838bf8ba3443ba71.
+
+```text
+- ID: `G1-SLICE.RETENTION-CAPACITY.2.b`
+  Status: `done`
+  Goal:0341 exact v1->v2 committed logical/backing/catalog byte guard and v2 future immutability.
+  Own reader extended CLI/read-backing/cohort and legacy source proofs, guarded fixture producer and focused
+  controls; retain original v1 CLI/success predicates behind declared dispatch and shared metadata authority.
+  Use current committed source for positive transition; old prototype must fail missing-current-record checks.
+  D244 owns actual fixture-relative tree query0/79 discrepancy and failed-show absence control; fix root
+  scope with --full-tree before source/transition acceptance. No live backing change. Keep bounded transitional receipts in existing changelog sections until .c/494;
+  only duplicate note navigation may be pruned. Book/decision/pointers stay aligned; full CI pre-push.
+  - [x] ROOT CAUSE (WHY + WHERE): v2 relocation must preserve committed logical/backing/catalog bytes;
+    D244 actual fixture0/79 query and compiled full-tree omission control are reproduced/refused, rc=0.
+  - [x] ADDRESSED: transition45/0, all33 public backings exact, current947 cohort/source and legacy48 proofs
+    pass; old946 prototype refuses missing committed data. Extended help and v1 backing check pass, rc=0.
+  - [x] NO REGRESSION: reader22/0, original v1 purity/CLI/metadata controls, syntax/book/pub77/103 pass;
+    whole0340 Git/hash/copy exact; live947/64/16 remains v1 with no relocation, rc=0.
+  Commit0341; promotion: existing history decision. .2.c finalizes install/consumers, then packs before494.
+```
+
+
+### Transitional receipt — D244 complete report
+
+Complete source retained until capacity.2.c.2 seals494 after packing.
+Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/tasks/PLANNING.md bytes 84541–85213; 672 bytes, sha256:a8dca282772787c042537722f2a035868ffc98bcaf88196a26064d2dab7352fa.
+
+```text
+## D244 — fixture-relative Git tree pathspecs hid repository files
+
+Native git -C target/history_capacity/0339-final ls-tree reports0 history entries/absent master;
+--full-tree reports79 and the existing master. Root: tree pathspecs inherited fixture cwd prefix.
+Impact: v2 source comparisons fail; a controlled failed show can make the shared absence check
+misobserve a present master from a fixture. Normal root queries/data are unchanged; no data loss claimed.
+Owner G1-SLICE.RETENTION-CAPACITY.2.b, P1 fixed0341: explicit full-tree source/absence queries.
+Actual failed-show fixture and compiled flag omission are watched; transition45/0 and source947/33/16 pass0.
+
+```
+
+
+### Transitional receipt — D245 complete report
+
+Complete source retained until capacity.2.c.2 seals494 after packing.
+Pre-commit0342 source, docs/tasks/PLANNING.md bytes 85213–86051; 838 bytes, sha256:5708c7a7094ba9c1ae253141800413cdb174d85cee351323b96835ba563e87b8.
+
+```text
+## D245 — changelog pointer helper rejects other retained record rows
+
+Reproduce: python3 -I -B docs/tasks/artifacts/changelog/changelog_pointers.py . . returns1,
+rejecting four real devnotes part490–493 links in CHANGELOG's retained index. The v1 path
+recognizer only admits changelog rows although the live index contains whole task/lesson receipts.
+Impact: an unrelated valid retained-record row makes POINTER fail; the migration consumer check
+exposed it before installation. Owner G1-SLICE.RETENTION-CAPACITY.2.c.1, P2 immediate repair:
+validate other registered records while counting only changelog records; retain unknown-target reds.
+Fixed0342: original real invocation now passes;16 independent pointer verdicts include valid catalog/logical
+lesson rows and an unknown lesson refusal, rc=0, target/ledger-pointer-0342.log.
+
+```
+
+
+### Transitional receipt — archive reader historical proof 3787
+
+Complete source retained until capacity.2.c.2 seals494 after packing.
+Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/book/src/annexes/archive-reader.md bytes 3789–4834; 1045 bytes, sha256:a650f98a1982cbd967cbccc77091e2c8d1d0cc4d98de5095736c979878ee1c05.
+
+```text
+The original first producing effect is trapped with stores absent. The original pure function
+bodies and complete CLI body remain exact through declared planning, root-validation and child-
+environment adapters. Successful committed-history comparison predicates also remain exact.
+Captured materialization checks every planned file and directory, fresh effect checks, prepared
+stores and exact output bytes. Fourteen physical refusals and eight actual compiled body faults
+test source/output/store/parent authority, activation, rechecks and HEAD evidence. Device observations
+are simulated in private fixtures.
+
+The native mode separately executes public materialization, overwrite refusal, committed retention
+and window11 source reconstruction. Every logical output byte, backing file and producer source
+must match; owned fixtures are removed. Both Python3.9 and3.14 are checked. Full schema, decompression,
+membership and capacity controls remain in the [governance contract](../governance.md#12-historical-records-and-bounded-retention).
+
+```
+
+
+### Transitional receipt — archive reader historical proof 319
+
+Complete source retained until capacity.2.c.2 seals494 after packing.
+Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/book/src/annexes/archive-reader.md bytes 319–615; 296 bytes, sha256:df38c5631f7b24e45a71da6dd9d433229247f1b8a171e61d3959eb38818ebddc.
+
+```text
+Window14 retains50 complete committed records from b49128e, packed before command-catalog work
+exceeded the fixed64-file working bound. Source comparison, exact materialization and every public
+read passed; prior13 windows remain unchanged. Retrieval commands and capacity limits are unchanged.
+
+```
+
+
+### Transitional receipt — ninth window navigation
+
+Complete source retained until capacity.2.c.2 seals494 after packing.
+Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/book/src/governance.md bytes 32080–32189; 109 bytes, sha256:fd8524863abec5e6c40f6f567eef8109e27b925a4037221a716e6a2ab79f7113.
+
+```text
+### Ninth retention window
+
+Its complete transition/proof and retrieval commands remain in the same record.
+
+```
+
+
+### Transitional receipt — audit and thirteenth window navigation
+
+Complete source retained until capacity.2.c.2 seals494 after packing.
+Source: 133d23c35326ad5c6ea176a45d01132ce61f3066, docs/book/src/governance.md bytes 32501–33122; 621 bytes, sha256:80b69859ef956947ef7811fbbdc3c9f3b31fa9fa62ca6ce07e3c737aace56458.
+
+```text
+### Producer-audit record retention
+
+Complete audit-retention receipts are preserved in `docs/history/stitchcad-devnotes-part459.md`.
+Original task headings retain exact record links; current requirements stay live. Public retrieval
+preserves complete committed source intervals and separators. Earlier windows and fixed bounds remain unchanged.
+
+### Thirteenth retention window
+
+Its complete transition/proof/retrieval narrative is preserved in logical record
+`docs/history/stitchcad-devnotes-part474.md`. Use the published archive reader; original addresses
+and all earlier immutable backing windows remain unchanged.
+
+```
+
 ## STITCHCAD-G1-0341 — exact versioned archive byte guards
 
 - Preserve committed logical/backing/catalog bytes across relocation; add public backing access and source proofs.
