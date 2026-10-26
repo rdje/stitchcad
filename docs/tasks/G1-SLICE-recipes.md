@@ -202,7 +202,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal: bounded normalized checking with truthful sourced kind/operand/wanted-rule refusals.
   Children .1/.2/.3 verified0105/0108; coupled .3d verified0112.
-  Acceptance: [whole parent scope](../history/stitchcad-devnotes-part344.md).
+  Acceptance: [whole parent scope](../history/window13.md#stitchcad-devnotes-part344md).
 - ID: `G1-SLICE.5b.3c.1`
   Status: `done`
   Goal: typed wanted-kind catalogs; verified, commit `STITCHCAD-G1-0093`.
@@ -291,26 +291,26 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5b.3d`
   Status: `done`
   Goal: coupled full expression static review, normative/reference/product agreement and counterexamples.
-  Children .a/.b/.c/.d verified0109–0112; [whole scope/proof](../history/stitchcad-devnotes-part340.md).
+  Children .a/.b/.c/.d verified0109–0112; [whole scope/proof](../history/window13.md#stitchcad-devnotes-part340md).
 - ID: `G1-SLICE.5b.3d.a`
   Status: `done`
   Goal: D147 truthful ambiguity arguments for ordered authored pairs and input/let collisions.
-  Acceptance: [whole original scope/verification](../history/stitchcad-devnotes-part337.md).
+  Acceptance: [whole original scope/verification](../history/window13.md#stitchcad-devnotes-part337md).
 
 - ID: `G1-SLICE.5b.3d.b`
   Status: `done`
   Goal: D148 complete whole-source syntax/input phase before any ordered static inference.
-  Acceptance: [whole original scope/verification](../history/stitchcad-devnotes-part337.md).
+  Acceptance: [whole original scope/verification](../history/window13.md#stitchcad-devnotes-part337md).
 
 - ID: `G1-SLICE.5b.3d.c`
   Status: `done`
   Goal: shared public/reference static case contract and D149 prerequisite status controls.
-  Acceptance: [whole original scope/verification](../history/stitchcad-devnotes-part337.md).
+  Acceptance: [whole original scope/verification](../history/window13.md#stitchcad-devnotes-part337md).
 
 - ID: `G1-SLICE.5b.3d.d`
   Status: `done`
   Goal: D150 complete whole syntax/structure before literal-input conversion, then static inference.
-  Acceptance: [whole original scope/verification](../history/stitchcad-devnotes-part337.md).
+  Acceptance: [whole original scope/verification](../history/window13.md#stitchcad-devnotes-part337md).
 
 - ID: `G1-SLICE.5b.4`
   Status: `in_progress`
@@ -356,7 +356,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5c.1.2`
   Status: `done`
   Goal: exact reduced arithmetic/width refusals, children .1/.2 verified0245–0246.
-  Acceptance: [whole parent scope](../history/stitchcad-devnotes-part342.md); kind/domain .5c.2.
+  Acceptance: [whole parent scope](../history/window13.md#stitchcad-devnotes-part342md); kind/domain .5c.2.
 
 - ID: `G1-SLICE.5c.1.2.1`
   Status: `done`
@@ -379,7 +379,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5c.2`
   Status: `done`
   Goal: all exact numeric operators/abs/min/max/clamp verified0248–0251.
-  Acceptance: [whole completed scope](../history/stitchcad-devnotes-part334.md). Children .1/.2/.3/.4 below; broad .5c.4 deferred.
+  Acceptance: [whole completed scope](../history/window13.md#stitchcad-devnotes-part334md). Children .1/.2/.3/.4 below; broad .5c.4 deferred.
 
 - ID: `G1-SLICE.5c.2.1`
   Status: `done`
@@ -408,7 +408,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 - ID: `G1-SLICE.5c.3`
   Status: `done`
   Goal: quantization and one scalar/Boolean binding conversion verified0252–0253.
-  Acceptance: [whole completed scope](../history/stitchcad-devnotes-part334.md). Children .1/.2 below; broad .5c.4 deferred.
+  Acceptance: [whole completed scope](../history/window13.md#stitchcad-devnotes-part334md). Children .1/.2 below; broad .5c.4 deferred.
 
 - ID: `G1-SLICE.5c.3.1`
   Status: `done`
@@ -469,16 +469,32 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `done`
   Goal: midpoint/conditional termination proof verified0260; practical resources P1 .2.
   Paths: docs/tasks/artifacts/formula_structure/trig_midpoint_certificate.py;docs/decisions/fact_trig-midpoints-and-resource-bound.md
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part338.md).
+  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part338md).
 - ID: `G1-SLICE.5d.1.2.2.2`
   Status: `pending`
   Goal: P1 practical trig/inverse interval/resource strategy over all admitted inputs before .5d.3.2/.3.
+
+- ID: `G1-SLICE.5d.1.2.2.2.a`
+  Status: `pending`
+  Goal: P1 finite-output-threshold/Farey-cell certificate feasibility, proposed2026-10-26.
+  Own the unverified idea surfaced during0276: sin/cos bounded ppm outputs and inverse angle
+  quanta have finite midpoint populations. Enclose inverse midpoint bands in Farey gaps whose
+  denominator sum exceeds the admitted rational input bound; this could certify a uniform margin
+  without enumerating all inputs. Derive bounds/symmetries first; measure rigorous interval cost.
+  Candidate: directed integer sqrt/half-angle/atan enclosures using certified pi, then exact
+  continued-fraction neighbors. No all-input result, precision budget or production algorithm admitted.
+  Tangent's large output population remains separate. Parent .2 stays open until its whole obligations.
+  Next after clean .5e.2.h13; own a decision/prototype before implementation. No new input limit.
+- ID: `G1-SLICE.5d.1.2.2.2.b`
+  Status: `pending`
+  Goal: if .a succeeds, complete and independently verify the full applicable threshold population.
+  No cohort/throughput extrapolation becomes all-input proof; retain coverage, margins and costs.
 
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`
   Goal:0259 packed window12/whole closed scopes under fixed caps.
   Paths: docs/history/;.doctrine/history_archive/;DEV_NOTES.md;docs/tasks/artifacts/history_archive/capture_window12.py
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part336.md).
+  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part336md).
 
 - ID: `G1-SLICE.5d.2`
   Status: `in_progress`
@@ -512,7 +528,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: exact signed/full-turn arc_length and23 independent cases verified0258.
   Paths: crates/sc-core/src/recipe/arc.rs;crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_arc_value_contract.rs
   Additional paths: docs/tasks/artifacts/formula_structure/arc_value_oracle.py;crates/sc-core/tests/fixtures/formula_arcs.tsv
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part332.md); provenance .5e.3.
+  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part332md); provenance .5e.3.
 - ID: `G1-SLICE.5d.3.2`
   Status: `pending`
   Goal: correctly rounded sin/cos/tan under .5d.1.2.2 plan.
@@ -695,7 +711,7 @@ gaps complete in one set-e shell, rc=0. No verification handle remains live befo
 - ID: `G1-SLICE.5b.4c.h2.a`
   Status: `done`
   Goal: guarded local profile/Make/G0/doctrine defaults before standalone audit, verified0117.
-  Acceptance: [whole original requirements/verification](../history/stitchcad-devnotes-part346.md).
+  Acceptance: [whole original requirements/verification](../history/window13.md#stitchcad-devnotes-part346md).
 
 - ID: `G1-SLICE.5b.4c.h2.b`
   Status: `in_progress`
@@ -1037,6 +1053,6 @@ Native baseline log replay1 excluded: old signature fault logs absent (actual di
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.h`
   Status: `done`
   Goal:0149 whole committed output-audit retention completed.
-  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part350.md).
+  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part350md).
 
 Output/delegation division and groups continue in [the bounded producer sibling](G1-SLICE-producers.md).

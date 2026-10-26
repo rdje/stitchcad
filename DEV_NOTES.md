@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — thirteenth immutable history window
+
+0276 .5e.2.h13 captures all52 raw records at64 working files from87d0987. Deterministic Git tar/
+gzip retains107786 source bytes in31312 payload bytes. The fresh local fixture has no Git directory
+or captured raw copies. Public source comparison, all52 reads and751-file materialization match;
+all12 earlier manifests/catalogs/payloads stay exact. Installed backing bytes match before exactly
+52 source-equal regular single-link originals retire. Installed retention/source checks pass0.
+
+Only live Markdown hrefs change to catalog anchors; logical read names and historical bytes remain.
+Whole0275 task/round_to lesson/ledger and full window12 book narrative retain367–369/248 with exact
+Git/hash/public reads. Book/live sync; reader/schema/caps/Rust runtime stay unchanged. Focused native
+capture/installed CLI evidence replaces no broad campaign. The new finite-threshold certificate idea
+is explicitly unverified and scheduled as P1 .5d.1.2.2.2.a after this commit, before further runtime
+integration. Promotion declined: archive contracts remain unchanged; candidate math study is owned.
+
 ## _(2026-10-26 UTC)_ — actual per-node static certificates
 
 0275 .5e.2.3 retains every successful node's inferred role, actual name dependency and resolved
@@ -339,47 +354,34 @@ currency is not asserted. Broader/platform/mutation checks remain .5c.4/pre-push
 ledger and completed primitive parent retained324/225/325; book/API map/live sync. Promotion declined:
 established binding/numeric contract and focused-check policy.
 
-## _(2026-10-25 UTC)_ — explicit exact round_to quantization
-
-0252 .5c.3.1 rounds the exact step quotient in bounded private workspace, then reduces the final
-multiple before width/scalar judgment. Quotient/remainder stay within256 bits, the conservative
-final raw numerator within384; no intermediate u128/i64 refusal applies. The magnitude half-away
-rule matches sc-units; step sign describes the same multiples, zero step refuses formula_division
-before zero handling. Same-kind internal units cancel directly, with no extra ppm quotient scale.
-Final signed zero is canonical, fractional steps/raw turns survive, and actual round_to scalar
-witnesses are retained. Binding and source/quantization provenance remain later integration.
-
-One affected native target formula_numeric_contract passes6/0, rc=0. Cases cover all five kinds,
-signed half/neighbors/negative steps, fractional Count/ppm/raw angle outcomes,256-bit quotient with
-valid reduced result, final129-bit overflow, scalar excess, zero step and actual step-kind mismatch.
-No broad/platform/mutation pass claimed. Whole0251 task/ledger retained323/224; book/frontier align.
-Promotion declined: established half-away/exact numeric contract and focused-check policy.
-
-[Complete exact built-in lesson](docs/history/stitchcad-devnotes-part366.md) retains
+[Complete round_to lesson](docs/history/stitchcad-devnotes-part368.md) retains
 its original scope, validation and promotion decision.
 
-[Complete unary/comparison lesson](docs/history/stitchcad-devnotes-part364.md) retains
+[Complete exact built-in lesson](docs/history/window13.md#stitchcad-devnotes-part366md) retains
 its original scope, validation and promotion decision.
 
-[Complete binary-operator/numeric-domain lessons](docs/history/stitchcad-devnotes-part362.md) retain
+[Complete unary/comparison lesson](docs/history/window13.md#stitchcad-devnotes-part364md) retains
+its original scope, validation and promotion decision.
+
+[Complete binary-operator/numeric-domain lessons](docs/history/window13.md#stitchcad-devnotes-part362md) retain
 both original scopes, validation and promotion decisions.
 
-[Complete independent rational fixture lesson](docs/history/stitchcad-devnotes-part359.md) retains
+[Complete independent rational fixture lesson](docs/history/window13.md#stitchcad-devnotes-part359md) retains
 its original scope, validation and promotion decision.
 
-[Complete rational sum/difference lesson](docs/history/stitchcad-devnotes-part357.md) retains
+[Complete rational sum/difference lesson](docs/history/window13.md#stitchcad-devnotes-part357md) retains
 its original scope, validation and promotion decision.
 
-[Complete rational product/quotient lesson](docs/history/stitchcad-devnotes-part355.md) retains
+[Complete rational product/quotient lesson](docs/history/window13.md#stitchcad-devnotes-part355md) retains
 its original scope, validation and promotion decision.
 
-[Complete rational construction lesson](docs/history/stitchcad-devnotes-part353.md) retains
+[Complete rational construction lesson](docs/history/window13.md#stitchcad-devnotes-part353md) retains
 its original scope, validation and promotion decision.
 
-[Complete archive/feature-delivery lesson](docs/history/stitchcad-devnotes-part351.md) retains
+[Complete archive/feature-delivery lesson](docs/history/window13.md#stitchcad-devnotes-part351md) retains
 its original failure, repair, validation and director ruling.
 
-[Whole oldest maintenance lessons](docs/history/stitchcad-devnotes-part333.md) retain the complete
+[Whole oldest maintenance lessons](docs/history/window13.md#stitchcad-devnotes-part333md) retain the complete
 committed source group; no lesson is summarized away.
 
 ## Retained engineering continuity

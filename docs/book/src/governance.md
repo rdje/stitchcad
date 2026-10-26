@@ -524,18 +524,19 @@ front door uses the public archive list as its complete query contract, with an 
 navigation link and recent-record table. Active task nodes stay live; public source/read/materialization
 and file-inventory comparisons verify retrieval without raising the fixed bounds.
 
-### Twelfth retention window
+### Current retention window
 
-Window12 captures53 complete records from f168eec before more numerical-feature history would
-exceed the unchanged64-file working limit. Its174350 original bytes are retained in a46666-byte
-content-addressed payload. The fresh repository-volume fixture has no Git directory or captured raw
-copies: public source comparison, read and materialization recover every captured file exactly.
-All11 prior window descriptors/catalogs/payloads stay unchanged. Installation verifies copied bytes
-before removing exactly53 unchanged regular, single-linked originals. Current links use window12
-anchors; logical read addresses and offline retrieval remain stable. No schema/cap change or new
-application dependency is introduced; whole closed scopes/journal/ledger remain retained records.
+Window 13 captures 52 complete records from `87d0987` at the unchanged limit of 64 working files.
+Its 107786 original bytes are retained in a 31312-byte payload. The fresh local fixture has no
+Git directory or raw captured copies; public source/read/materialization recover every file exactly.
+All 12 earlier manifests/catalogs/payloads remain byte-identical. Verified installation retires only
+52 unchanged regular single-link originals. Live links use window13 anchors; logical read addresses
+and offline retrieval remain stable. No schema/cap or application dependency changes.
+
+The complete window 12 narrative remains available through the [archive reader](annexes/archive-reader.md).
 
 ```bash
-bash scripts/history_archive.sh prove-source window12
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part331.md
+bash scripts/history_archive.sh prove-source window13
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part365.md
+bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part369.md  # complete window 12 narrative
 ```

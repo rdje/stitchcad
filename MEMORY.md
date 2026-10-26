@@ -4,12 +4,12 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Completed0275: .5e.2.3 actual per-node static kinds/roles/sources/callees and pinned typed views.
-- New6/existing expression7, selected lint0 and8 scoped docs pass; book/rendered map fixed and checked.
-- Owner/frontier: docs/tasks/G1-SLICE-execution.md. Whole0274/old lesson/ledger365/366/247 retained.
-- Next .5e.2.h13: archive window13 packing BEFORE more history growth; working MD reached fixed64 cap.
-- Preserve prior12 windows/source/public reads; use repo-local capture/materialization and no cap increase.
-- Then .5e.2.4: actual checked-node sourced expression execution; full runtime/geometry/trig still open.
-- D70 actual ruling remains pending; no axes work. P1 .5d.1.2.2.2 owns usable trig resources.
-- Approved UI/full AI control: decision_stitchcad-ui-baseline-and-quality.md; no UI pivot.
+- Completed0276 .5e.2.h13: immutable window13,52 source files107786B ->31312B; prior12 windows exact.
+- Native fixture source/read/materialize and installed retention/source checks0; records367–369/248 exact.
+- Next P1 .5d.1.2.2.2.a: finite-output-threshold/Farey certificate FEASIBILITY, unverified idea in recipes tree.
+- Derive sin/cos/inverse finite midpoint populations and rational denominator bounds; prototype directed sqrt/atan intervals.
+- Own a decision/prototype before code; no admitted precision/input/backend change. Tangent remains separate.
+- Resume .5e.2.4 afterward; typed-node API0275/native13/lint/docs8 verified, full runtime still open.
+- D70 actual ruling pending; no axes. Approved UI/full AI control decision retained, no UI pivot.
 - One focused check/feature; broad integration/pre-push. No background job.
+- Cleanup last2026-10-25 13:16UTC; next due2026-10-26 13:16UTC. All fixtures remain project-local.

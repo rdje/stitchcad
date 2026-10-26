@@ -772,11 +772,11 @@ Publication continuation is owned by the current parent frontier.
 - ID: `G1-SLICE.5e.1a`
   Status: `done`
   Goal: D122/D127/D128 reference origin/context/malformed-state routing verified0080.
-  Acceptance: [whole scope and original receipts](../history/stitchcad-devnotes-part360.md).
+  Acceptance: [whole scope and original receipts](../history/window13.md#stitchcad-devnotes-part360md).
 
 ### Origin/context receipts — `G1-SLICE.5e.1a`, `2026-10-02` (UTC)
 
-[Complete original receipts](../history/stitchcad-devnotes-part360.md) retain every failure/repair/proof.
+[Complete original receipts](../history/window13.md#stitchcad-devnotes-part360md) retain every failure/repair/proof.
 
 
 ## Completed assertion checklist — preserved from dab0ee4

@@ -834,7 +834,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5e.2` | `in_progress` | Pack history before more growth, then sourced expression execution |
+| **next** | `G1-SLICE.5d.1.2.2.2` | `pending` | P1 finite-threshold feasibility; then sourced expression execution |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
