@@ -497,7 +497,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Paths: docs/tasks/artifacts/formula_structure/inverse_threshold_feasibility.py;docs/decisions/decision_inverse-thresholds.md
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part383.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b`
-  Status: `in_progress`
+  Status: `done`
   Goal: after successful cohort, full45M certificate with bounded local chunks/source lock and independent exact reader; consider native producer for cost.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.1`
   Status: `done`
@@ -505,7 +505,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Paths: crates/sc-core/examples/inverse_threshold_chunk.rs;docs/tasks/artifacts/formula_structure/native_inverse_probe.py
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part386.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: after .1, source-locked complete45M controller/checkpoints/exact reader and full coverage evidence.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.a`
   Status: `done`
@@ -513,33 +513,38 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Paths: docs/tasks/artifacts/formula_structure/inverse_threshold_certificate.py;docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part389.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.b`
-  Status: `pending`
+  Status: `done`
   Goal: complete45M native inverse population from frozen controller sources; full reader, cost/margin/hash evidence, then commit.
+  Work unit0286 owns390 whole0285 protection task,391 oldest canonical-length lesson,258 ledger before growth.
+  Invoke unchanged inverse_threshold_certificate.py --workers4, resume200k; no critical source edits.
+  Verify all450 chunks with default complete reader. Retain exact coverage/strict gaps/source and
+  payload root/cost metadata; inverse runtime/branches remain .b.2.c, tangent separate.
+  All outputs stay in protected target/inverse_threshold_certificate/0284; do not hand off during job.
+  Also own crates/sc-core/tests/fixtures/inverse_rounding_certificate.tsv: compact verified
+  population/margin/digest/source witness for later budget checks without repeating the full run.
+  Witness adapter: docs/tasks/artifacts/formula_structure/inverse_certificate_witness.py,
+  tracked pure stdout metadata producer; it supplements and never replaces full payload reading.
+  Acceptance0286:
+  - [x] REPRODUCE:200k partial/control evidence existed;45M complete population remained unverified.
+  - [x] ROOT CAUSE0286: inverse_threshold_certificate.py --workers4 resumes2 chunks and completes45M/450, rc=0; all targets require actual source-locked coverage.
+  - [x] FIX: run frozen producer to completion; retain full data/provenance and compact tracked witness, no native API or precision limit.
+  - [x] ADDRESSED0286: python3 -I -B docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py COMPLETE45M/450 exact gaps/hash/coverage/order pass, rc=0; frozen sources/binary exact.
+  - [x] NO REGRESSION0286: full reader terminal0/lock absent/child registry empty; inverse_certificate_witness.py reproduces fixture byte-exactly, rc=0. Min>2^104 derives phase margin>2^-540; native budget not admitted. Broad .5d.4/pre-push.
+  - [x] LOCKSTEP:390/391/258 exact Git/hash/public bytes, rc=0; book/decision/live match complete proof. G1still5/18; .b.2.c next, tangent/AST/platform open.
+  Verification: rc=0; Commit: STITCHCAD-G1-0286.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.h`
   Status: `done`
-  Goal: P1 protect retained numerical certificates from generic artifact cleanup; next after .a commit, before .b or cleanup.
-  Defect0284: cleanup.py inspect accepts actual forward0278 chunk-000.bin (2080000B) and
-  inverse0284 chunk-000.bin (28800000B) as deletable strays, rc=0. No deletion performed.
-  Reproduce: runpy cleanup.py; inspect each path with tracked(). Generic .bin suffix has no
-  certificate-store exclusion; deletion would break retained readers/checkpoint continuity.
-  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup.py;docs/ARTIFACT_CLEANUP.md
-  Verification paths: docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py;docs/tasks/artifacts/ci_environment/python_cleanup_entry_contract.py
-  Existing AST baseline locks PROTECTED; admit exactly two new stores while preserving all old
-  constants/bodies. New read-only actual-census/guard-omission control is watched by that entry suite.
-  Fix/verify exact store protection and ordinary stray control; own until verified/closed.
-  Work unit0285 also owns389 whole0284 controller task and257 ledger before acceptance growth.
-  Focused read-only protected-store/ordinary-stray census; no cleanup run or cadence reset here.
-  Acceptance0285:
-  - [x] REPRODUCE:0284 actual cleanup inspect admitted2 retained .bin proof chunks; read-only/no deletion.
-  - [x] ROOT CAUSE0285: certificate_store_controls.py actual census and compiled omission reproduce admission when both new prefixes are absent, rc=0; generic suffix rules lacked proof-store identity.
-  - [x] FIX: protect/prune both exact stores; old-policy comparator admits precisely those2 additions and watches the new census control.
-  - [x] ADDRESSED0285: python3 -I -B docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py protected2/ordinary-stray1/omission-red1/restored1 passes, rc=0;2 actual proof files refuse unchanged.
-  - [x] NO REGRESSION0285: runpy.run_path('docs/tasks/artifacts/ci_environment/python_cleanup_entry_contract.py')['original_body_controls']() old bodies/constants exact except admitted2 stores and new control pass, rc=0. Ordinary scratch/log selection remains; fixture local Git TMPDIR prepared/no warning. Broader .5d.4/pre-push.
-  - [x] LOCKSTEP:389/257 exact Git/hash/public bytes, rc=0; policy/book/live/decision close owned defect. No project cleanup or cadence reset. G1still5/18; full inverse .b next.
-  Verification: rc=0; Commit: STITCHCAD-G1-0285.
+  Goal:0285 retained forward/inverse stores protected; actual census/omission/restoration and policy controls pass0.
+  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup.py;docs/tasks/artifacts/artifact_cleanup/certificate_store_controls.py
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part390.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.c`
   Status: `pending`
   Goal: native atan/atan2 branch/reduction/error/workspace admission before production code.
+  Candidate study after full certificate: exact reciprocal/quarter/quadrant folding, fixed-point
+  half-angle roots and atan series. Prove integer Newton termination and directed error/workspace;
+  compare independent rational addition/series oracles. Scratch consistency checks are not admission.
+  Planned producer: docs/tasks/artifacts/formula_structure/atan_runtime_plan.py; keep original
+  atan2 signed endpoints/zero-axis rules and no intermediate public128-bit ratio construction.
 - ID: `G1-SLICE.5d.1.2.2.2.c`
   Status: `done`
   Goal:0279 admits exact sin/cos folding/512-bit64-term error/workspace plan; native next.

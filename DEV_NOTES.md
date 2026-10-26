@@ -3,6 +3,16 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — complete inverse threshold population
+
+0286 .5d.1.2.2.2.b.2.b.2.b completes45M/450 chunks and the independent full reader, rc=0.
+All strict gaps/hash/coverage/order and frozen source/binary identities pass; lock absent/children
+empty.12.96GB payload stays protected/local. Compact tracked witness reproduces byte-exactly;
+its metadata producer supplements full reading. Minimum>2^104 at scale2^640 gives slope margin
+>2^-536 and derivative>1/16 gives phase margin>2^-540. Native budget/branches/workspace remain
+.b.2.c; tangent/AST/platform separate.390/391/258 retain whole task/lesson/ledger. Book/live sync;
+promotion: inverse decision records full evidence, source gates, derived margin and admission limits.
+
 ## _(2026-10-26 UTC)_ — retain numerical proof stores through cleanup
 
 0285 .5d.1.2.2.2.b.2.b.2.h excludes both certificate stores from generic cleanup. Actual proof
@@ -326,18 +336,8 @@ native5+8+3+6+4=26/0 pass. These repairs expand focused checks; no broad campaig
 Whole0261/closed static parent/ledger retain339/340/234. Promotion declined: existing canonical state,
 formula kind and repository lint contracts suffice; book/live record the new public API and repairs.
 
-## _(2026-10-25 UTC)_ — read canonical length values without losing authored state
-
-0261 .5e.1.1 selects only actual borrowed LengthInput declarations, not a general metadata kind
-claim. Immutable success/error results retain the named metadata and canonical record; assumed/
-preference/evidence references remain inspectable. Unknown retains RequiresObservation and derived
-retains RequiresEvaluation; neither gains a fallback or independent result. From<sc_units::Length>
-imports its already validated signed micrometre integer exactly, with no new rounding/check boundary.
-The focused native target passes3/0:25 origin/state pairs, source identity/pointer/immutability,
-negative/positive limits and zero, plus all other source variants including a generic Length claim.
-No source registry, truth, artifact approval or whole runtime publication is inferred. General scalar/
-size/context adapters remain .5e.1; complete evaluation .5e.2. Whole0260 task/ledger retain338/233.
-Promotion declined: this implements the existing canonical state contract, now documented in the book.
+[Complete canonical length authored-read lesson](docs/history/stitchcad-devnotes-part391.md) retains
+its actual source/state behavior, validation and promotion decision.
 
 [Complete exact trig midpoint/resource lesson](docs/history/stitchcad-devnotes-part387.md) retains
 its original theorem/proof, resource boundary and promotion decision.

@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0285 — preserve retained numerical certificate stores
+## STITCHCAD-G1-0286 — complete inverse threshold population
 
-.5d.1.2.2.2.b.2.b.2.h: both proof stores protected; actual census/omission/restoration and old-policy delta controls pass, rc=0.
-Actual proof bytes intact;389/257 retain whole prior task/ledger. No project cleanup/cadence reset; book/live sync.
+.5d.1.2.2.2.b.2.b.2.b: complete45M/450 and independent full reader pass, rc=0; compact source-gated witness reproduces exactly.
+Derived phase margin>2^-540; native budget/admission still next.390/391/258 retain whole history; book/live sync.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -460,3 +460,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part256](docs/history/stitchcad-changelog-part256.md) | whole0283 | 5 lines, 299 bytes, sha256:7a7d28c6… |
 
 | [part257](docs/history/stitchcad-changelog-part257.md) | whole0284 | 5 lines, 320 bytes, sha256:6a2ce4f6… |
+
+| [part258](docs/history/stitchcad-changelog-part258.md) | whole0285 | 5 lines, 319 bytes, sha256:368f1fbb… |

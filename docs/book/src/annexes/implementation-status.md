@@ -65,8 +65,8 @@ verifies their public behavior and the actual reference; [whole recipe proofs](f
 
 ## Remaining proofs
 
-The [trig threshold certificate](formula-trig-certificates.md) covers all1M forward bands with an
-independent exact gap reader. The bounded sin/cos value kernel is implemented; inverse/tangent remain open.
+The [trig threshold certificates](formula-trig-certificates.md) cover all1M forward and45M inverse
+targets with exact full readers. Sin/cos are implemented; native inverse admission and tangent remain open.
 
 Full SizeSet axes/breaks/composition and resolved profile intent remain G1-SLICE.4c work. D70's axes
 cardinality ruling is pending. Recipe evaluation is .5, bus/undo .6, storage .7, constraints .8,

@@ -127,3 +127,31 @@ Actual proof files refuse selection unchanged. The watched fresh-file census pre
 and still selects an ordinary log/scratch tree; omitting exactly both protections fails the same
 assertion, restoration passes, rc=0. The old-policy comparator admits precisely these two additions.
 No project cleanup was applied and its last-run date is unchanged; full45M may now proceed.
+
+## Complete inverse population — work unit0286
+
+The frozen controller resumes the verified200k prefix and completes all45,000,000 rows in450
+contiguous100,000-row chunks, rc=0. The default independent reader then checks every row, payload
+hash, strict gap, index range and cross-chunk order, rc=0. Frozen170 workspace inputs and the
+producer remain exact; the lock is absent and child registry empty. No native inverse API is
+claimed by this result. The payload is12,960,000,000 bytes in the protected project-local store.
+Sum of recorded per-chunk wall intervals is5,441,718,357,844ns, including overlap/verification
+overhead; this is neither elapsed run time nor CPU cost nor a future-duration guarantee.
+
+SHA256 of concatenated450 raw chunk digests in index order is
+fa1c1159d7d6d736200bb6b51a0b186d665052748558f0d76b9bd341c7f07dbe.
+Producer SHA256 is78654f91cb3d12c87fb4306c43eca6ab8641d621262764f180dd90e9fb8cfbdc.
+The compact tracked witness crates/sc-core/tests/fixtures/inverse_rounding_certificate.tsv
+reproduces byte-exactly from the tracked pure-stdout inverse_certificate_witness.py, rc=0.
+This metadata adapter checks complete metadata/source identity; it never substitutes for full
+payload reading. Its source hash joins the four critical source hashes in the witness.
+
+The full reader's minimum scaled slope margin is20936389198509991007691322699578>2^104,
+at scale2^640. Any admitted folded slope r in[0,1] is outside its strict certified gap, so its
+distance from the target tangent is greater than2^-536. On[0,1], the derivative of
+atan(r)/(2*pi) is1/(2*pi*(1+r^2))>=1/(4*pi)>1/16. The mean-value theorem therefore gives
+a uniform inverse-answer distance greater than2^-540 turns from every folded half-microdegree
+threshold. [DLMF4.24.9](https://dlmf.nist.gov/4.24.E9), reopened2026-10-26, supplies the derivative.
+This stronger derived margin is a certificate fact, not yet a native error/precision budget.
+Next .b.2.c must prove the concrete branch/reduction/rounding/workspace algorithm before code.
+Tangent, full expression execution and platform proof retain their existing separate owners.

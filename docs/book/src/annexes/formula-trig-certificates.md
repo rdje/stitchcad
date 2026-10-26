@@ -160,8 +160,8 @@ exact Fraction-arctangent checks. The controls reject a band containing rational
 a deliberately wide band. The project-local report under target/trig_inverse_feasibility/0282/
 explicitly says inverse_feasibility_cohort_only, retaining exact endpoints and source hashes.
 
-This is neither complete45-million-threshold coverage nor a native atan/atan2 implementation.
-Full coverage uses the resumable controller below. Native sign/reciprocal/
+This cohort alone proves neither complete45-million-threshold coverage nor native atan/atan2.
+Complete coverage is now verified below. Native sign/reciprocal/
 quadrant/axis/principal-branch handling, error and workspace remain separate admission work.
 Production tangent has a separate resource obligation; this experiment does not close it.
 
@@ -185,8 +185,8 @@ contains the endpoint-based band, rather than requiring their different enclosur
 
 The bounded probe passes10,035 exact row checks,67 Python-band comparisons and five actual
 invalid-input refusals before output. The report/prefix/build log is under target/native_inverse_probe/0283/.
-This supplies generator/parity/cost evidence only. The resumable controller is available below;
-complete45M coverage and native atan/atan2 admission remain open. No inverse formula API is available yet.
+This probe supplies generator/parity/cost evidence only. Full45M coverage is verified below;
+native atan/atan2 admission remains open. No inverse formula API is available yet.
 
 ## Resumable inverse controller and exact reader
 
@@ -211,10 +211,35 @@ This does not claim that the reader independently recomputes every tangent enclo
 
 An interrupted run leaves an exclusive lock and child registry. Establish that the recorded
 processes are gone before removing its project-owned lock and resuming. Error cleanup reaps
-owned children; differing unpublished final bytes are preserved and refused. Complete45M coverage
-remains a separate task. Native inverse-function branches/error/workspace admission is still open.
+owned children; differing unpublished final bytes are preserved and refused. Full coverage is
+verified below. Native inverse-function branches/error/workspace admission is still open.
 
 A read-only inspection found generic .bin cleanup would select retained certificate chunks.
 Work unit0285 fixes this: both forward/inverse stores are excluded from generic cleanup, including
 their payloads and frozen provenance. The actual census/compiled omission control passes; no
-certificate was deleted. Complete45M coverage can proceed separately.
+certificate was deleted.
+
+## Complete inverse certificate
+
+Work unit0286 completes all45,000,000 targets in450 chunks and passes the default full reader,
+rc=0. Every encoded strict gap, payload hash, contiguous index range and cross-chunk order is
+checked. Frozen producer/build provenance and critical source identity remain exact; the lock
+is absent and no owned child remains. The retained payload is12.96GB on the repository volume.
+
+The minimum slope margin is20936389198509991007691322699578 scaled by2^640, greater than2^104.
+An admitted rational slope cannot lie inside its target's gap. Its distance from the true target
+tangent is therefore greater than2^-536. Throughout the folded slope range[0,1], the derivative
+of atan(r)/(2*pi) is at least1/(4*pi)>1/16. The mean-value theorem gives a uniform angular
+distance greater than2^-540 turns from each half-microdegree target. The
+[NIST derivative](https://dlmf.nist.gov/4.24.E9) supports that last conversion.
+
+A compact witness is tracked at crates/sc-core/tests/fixtures/inverse_rounding_certificate.tsv.
+It records population, minimum, combined payload digest and exact source identities. The tracked
+inverse_certificate_witness.py reproduces it from complete metadata, without replacing the full
+reader. Later budget checks can use this source-gated witness instead of repeating full coverage
+after every ordinary feature. The full reader remains available for deliberate re-verification.
+
+This closes inverse population coverage. A concrete native atan/atan2 algorithm still needs its
+own signed branches, axes, private-width reduction, error and workspace argument, then focused
+implementation evidence. The stronger angular margin may permit a smaller fixed budget; none
+is admitted by this certificate step. Production tangent and whole formula execution remain open.
