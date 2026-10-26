@@ -96,6 +96,11 @@ The mutation diagnostic uses the [local producer profile](../build-and-checks.md
 before its first output or native child, then rebuilds the restored complete MTM test target.
 It plans all twelve numbered logs and restored.log, the mutable implementation and the read-only
 current contract test before reading inputs. Failed-body evidence must identify a current assertion
-macro's source, line and byte column. Complete thirteen-child/file captures and four physical
-alias/missing-input refusals verify dispatch guards separately. Real replay verifies all twelve
+macro's source, line and byte column. Complete thirteen-child/file captures and five physical
+alias/missing-input refusals verify dispatch guards separately, including a missing shared fixture. Real replay verifies all twelve
 macro failures, exact input restoration and the public current artifact's fifteen passing tests.
+
+0309 repairs D231 after fixture sharing: the read-only Rust fixture is explicitly planned before
+activation or effects. Focused existing controls capture13 children/files, refuse5 physical cases,
+and reject an actual compiled omission of that fixture plan. These checks preserve actual source
+bytes; the twelve-real-mutation campaign remains deferred to its integration/pre-push owner.

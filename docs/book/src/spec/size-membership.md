@@ -2,8 +2,8 @@
 
 G1-SLICE.4c.1 implements the identity, label, order, system and base-member foundation in sc-measure.
 The normative contract is [size sets §2–§4](size-sets.md), with ownership recorded separately. This
-foundation is not yet a complete SizeSet: axes, complete charts, breaks and resolved-profile
-transformation records remain owned by .4c.2/.3/.4; .4c.5 and .4d review the completed families.
+foundation alone does not certify axes/charts/breaks. Those current input families are implemented
+separately in .4c.2/.3; resolved-profile transformations remain .4c.4. .4c.5 and .4d review the families.
 
 ## Labels, identities and authored order
 
@@ -131,5 +131,6 @@ The standard strict Rust gate runs these contracts; native/WASM integration is c
 D70's director ruling2026-10-26 requires at least one authored axis for every complete SizeSet.
 G1-SLICE.4c.2 implements explicit names, ordered values and complete member coordinates. This membership
 foundation creates no implicit axis or numeric default. Individual [garment chart observations](size-chart-observations.md) now borrow current metadata;
-complete coverage, break/path readiness and profile transformation intent,
-actual geometry, equivalence, evidence scope and release remain later owned proofs.
+complete chart/break coverage and [typed structural path inputs](size-sets.md#unified-current-input-family--g1-slice4c3d33)
+are now available. Profile transformations, actual geometry, equivalence, global currentness, evidence
+scope and release remain later owned proofs.

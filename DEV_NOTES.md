@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — imported MTM fixture plan and sizing doc integration
+
+0309 .4c.3e.1 fixes D231: moving the Rust fixture left the mutation entry planning only implementation/
+root test. An independent missing-fixture control reproduces pre-repair activation/effect instead of
+refusal. Explicit read-only fixture planning plus the independent expected source fixes it: complete
+13-child/file capture,5 physical refusals and an actual compiled plan-omission red pass0. All actual
+source hashes stay exact; no native twelve-mutation replay. D230 companion pages still deferred
+implemented axes/breaks; status links/boundaries now align with the main chapter. Book0;446/447/281/
+138 whole7618d20 Git/hash/public exact0. G1still5/18; scope review .3e.2 next. Promotion declined:
+existing complete-input/source-currentness rules; broad/native replay remains integration/pre-push.
+
 ## _(2026-10-26 UTC)_ — unified current SizeSet input family
 
 0308 .4c.3d.3.3 wraps actual validated garment/MTM views in explicit SizeSetInputs variants. Common
@@ -255,15 +266,8 @@ its metadata producer supplements full reading. Minimum>2^104 at scale2^640 give
 .b.2.c; tangent/AST/platform separate.390/391/258 retain whole task/lesson/ledger. Book/live sync;
 promotion: inverse decision records full evidence, source gates, derived margin and admission limits.
 
-## _(2026-10-26 UTC)_ — retain numerical proof stores through cleanup
-
-0285 .5d.1.2.2.2.b.2.b.2.h excludes both certificate stores from generic cleanup. Actual proof
-chunks refuse unchanged; fresh-file census protected2/ordinary1/actual omission-red1/restored1
-passes, rc=0. All old AST policy bodies/constants remain constrained except these exact additions.
-Initial fixture lacked prepared TMPDIR; Git warned, then created local xcrun_db after preparation.
-The control now requires existing same-volume Git TMPDIR and no startup warnings, allowing normal
-scratch caches.389/257 retain whole0284 task/ledger. Book/live align; no project cleanup/cadence reset.
-Promotion: inverse decision records the resolved defect; full45M is next, broader checks deferred.
+[Complete proof-store cleanup-protection lesson](docs/history/stitchcad-devnotes-part447.md) retains
+its original protected-store census/controls and cadence boundary, checks and promotion decision.
 
 [Complete inverse-controller lesson](docs/history/stitchcad-devnotes-part445.md) retains
 its original source/checkpoint/concurrency/byte boundaries, checks and promotion decision.

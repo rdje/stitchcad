@@ -1141,6 +1141,8 @@ def measure_fixture(entry_path):
 
 
 def measure_extra_sources(entry_path):
+    if entry_path == ROOT / 'docs/tasks/artifacts/mtm_chart/mtm_chart_mutations.py':
+        return (ROOT / 'crates/sc-measure/tests/support/mtm_fixture.rs',)
     if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/round_mutations.py':
         return (ROOT / 'docs/tasks/artifacts/formula_structure/round_cases.tsv',)
     if entry_path == ROOT / 'docs/tasks/artifacts/formula_structure/unsigned_round_mutations.py':

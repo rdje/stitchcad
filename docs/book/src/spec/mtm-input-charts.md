@@ -58,4 +58,6 @@ the supported v1 garment envelope still excludes negative-Ease execution.
 
 Continue with [garment chart observations](size-chart-observations.md) to compare authored garment
 inputs, or use the [expert annex](../annexes/mtm-input-contract.md) for identity, current-reference,
-API and verification details. The [size-set contract](size-sets.md) describes the complete planned model.
+API and verification details. The [size-set contract](size-sets.md#composite-mtm-bodyease-inputs--g1-slice4c3d32) now includes current
+composite MTM inputs with an authored axis and typed regeneration/grading checks. Those checks preserve
+original body/Ease sources; profile transformations and actual garment generation remain later work.

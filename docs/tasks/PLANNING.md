@@ -1085,6 +1085,26 @@ Owner/schedule: G1-SLICE.4c.3d.3.h15, P2 fixed0305 during required packing. Pres
 window13 narrative under its historical heading; publish current15/source/retrieval boundaries.
 Focused source comparison0/book0 and byte-exact retention proofs verify the correction; no data loss.
 
+## D230 — companion sizing pages retained an obsolete implementation frontier
+
+At source7618d20, observation/collection pages still place axes/breaks in later slices; membership's
+footer similarly defers complete coverage. Reproduce: rg axes/breaks/coverage in those three book pages.
+Impact: the main SizeSet chapter and companion pages disagree about current implemented inputs.
+Owner/schedule: G1-SLICE.4c.3e.1, P2 fixed0309; link actual axes/break/composite behavior while retaining
+physical/global-currentness/profile/approval boundaries. Source review0/book0 verify the correction.
+
+## D231 — moved MTM Rust fixture omitted from the mutation entry's source plan
+
+After0307, the contract imports support/mtm_fixture.rs but the entry plans only implementation/root test.
+Reproduce: existing measure_refusals with an independent explicit fixture oracle; missing copied fixture
+reaches activation/effect (controlled AssertionError), rather than early exit2. Actual source bytes unchanged.
+Owner/schedule: G1-SLICE.4c.3e.1, P1 fixed0309 before scope closure. Register the read-only fixture and
+independently require it in producer controls. Complete13-child/file capture,5 physical refusals and a
+compiled actual fixture-plan omission red pass0; no full native mutation campaign or kernel rerun.
+- [x] ROOT CAUSE0309: independent missing-fixture control reaches activation/effect on the pre-repair entry; actual source bytes unchanged, rc=0.
+- [x] ADDRESSED0309: existing complete13-child/file capture and5 physical refusals pass; compiled actual fixture-plan omission red detected, rc=0.
+- [x] NO REGRESSION0309: whole D225-D227 source7618d20 bytes/hash/public exact in138, actual implementation/entry/test/fixture hashes stable and book rc=0.
+
 ## Active continuity followup
 
 - **D223** — optional ledger continuity modes retain raw-file/closed-graph assumptions.
@@ -1126,23 +1146,8 @@ Focused source comparison0/book0 and byte-exact retention proofs verify the corr
   with original successful comparisons intact; actual absence-guard and Git-scope omissions fail their
   independent assertions. Native retention/source proofs pass; no committed windows changed. Closed.
 
-- **D225** — deterministic ID allocation wraps at u128::MAX, violating monotonic nonreuse.
-  Reproduce: from_start(u128::MAX), call next_id twice; the counter uses wrapping_add and yields MAX then0.
-  Owner/schedule: G1-SLICE.6.2.1, P1 fixed0292 before envelopes. Red101→focused3/0; terminal typed
-  exhaustion and original error propagation preserve all six edits' complete ledger state. Unit10/0,
-  affected target compilation and selected strict lint pass0. All actual callers migrated. Closed.
-
-- **D226** — SplitSeamSpan semantic ambiguity, resolved by director2026-10-26.
-  Reproduce: command-layer §1.1 versus SeamSpanDefinition {a,b,ease,stops} and IdentityLedger::split(edge,Param).
-  Ruling: split the paired sewing correspondence at explicit cuts on both sides. Command contract
-  now states this meaning. Owner/schedule: G1-SLICE.6.2.2.b.2.b schema after .4c.2; execution still
-  must preserve actual cut/ease/reference/identity obligations. Semantic conflict closed.
-
-- **D227** — an unconsumed successful commit was retried with the same work-unit message.
-  Before repair: latest two subjects repeated0295; second changed only DEV_NOTES/MEMORY.
-  Owner/schedule: G1-SLICE.6.2.2.b.2.a.receipt, P1 corrected0296 before axes. Only the owned unpublished
-  metadata receipt is relabelled; implementation1184214 remains unchanged. Commit/clear/verification
-  now share one invocation; terminal results precede retries. Syntax/hook controls and book pass0. Closed.
+- **D225/D226/D227** closed reports and original verified repairs retained whole in
+  [part138](../history/stitchcad-defects-part138.md); canonical ID/split/commit rules remain active.
 
 - **D222** — live D217 retained-record check depends on raw archive paths.
   Census: d217_probe.py retained() declares/reads physical303/304/208 while run_handoff_probes.sh calls

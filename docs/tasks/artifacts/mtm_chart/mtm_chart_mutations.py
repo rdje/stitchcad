@@ -6,7 +6,8 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / 'crates/sc-measure/src/mtm_chart.rs'
 TEST_SOURCE = ROOT / 'crates/sc-measure/tests/mtm_chart_contract.rs'
-SOURCES = (SOURCE, TEST_SOURCE)
+TEST_FIXTURE = ROOT / 'crates/sc-measure/tests/support/mtm_fixture.rs'
+SOURCES = (SOURCE, TEST_SOURCE, TEST_FIXTURE)
 WORK = ROOT / 'target/mtm_chart_mutations'
 CASES = [
     ('set/member context identity', 'if eases.contains(id) {', 'if false && eases.contains(id) {', 'chart_and_context_identities_cannot_alias_members_sets_or_canonical_records'),

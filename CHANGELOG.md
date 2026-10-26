@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0308 — unified current SizeSet input family
+## STITCHCAD-G1-0309 — MTM fixture planning and companion sizing docs
 
-Explicit garment/MTM variants preserve actual records, provenance and original typed path errors without family inference.
-Native garment6+MTM6+breaks5/0, selected strict lint/fmt/book0; bounded structural review and whole444/445/280
-retention exact. Signed-break/composite implementation closes; G1 remains5/18, scope review/profiles next.
+D231 fixes missing read-only fixture registration before producer effects; controlled13-child/file capture,
+5 physical refusals and compiled omission red pass0, actual source hashes unchanged. D230 sizing status drift
+corrected; book0 and whole446/447/281/138 retention exact. No product behavior/count change; G1 remains5/18.
 
 # Sealed archive — earlier slices
+
+| [part281](docs/history/stitchcad-changelog-part281.md) | whole0308 | 6 lines, 405 bytes, sha256:e483c1ca… |
 
 | [part280](docs/history/stitchcad-changelog-part280.md) | whole0307 | 6 lines, 400 bytes, sha256:ca7fd54d… |
 

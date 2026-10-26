@@ -4,12 +4,12 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0308 .4c.3d.3.3 unifies actual garment/MTM SizeSet input views; variants preserve explicit provenance and original paths.
-- Common record/reference access borrows originals; custom singleton garment stays Garment. No kind inferred from labels/count.
-- Native garment6+MTM6+breaks5 pass0; selected strict lib/three-test lint/fmt/book0; bounded structural book review.
-- NEXT .4c.3e chart/body/break/currentness scope review, then .4c.4 immutable profile transformation intent.
--444/445/280 whole478ffe7 Git/hash/public exact0. .3d/.3d.3 signed-break/composite-input implementation complete.
--0307/478ffe7 MTM body/Ease and0306/4ae9650 garment views share actual snapshots and retain drafts/Unknown.
+-0309 .4c.3e.1 fixes D231 imported MTM fixture source planning; missing helper formerly reached activation/effect.
+- Controlled capture13 children/files,5 physical refusals and actual compiled fixture-plan omission red pass0; source hashes stable.
+- No real twelve-mutation replay; broad/native campaigns remain integration/pre-push. D230 companion sizing status drift fixed.
+- NEXT .4c.3e.2 chart/body/break/currentness scope closure, then .4c.4 profile transformation intent.
+-446/447/281/138 whole7618d20 Git/hash/public exact0; D225-D227 whole reports retained138; book0.
+-0308/7618d20 unified current SizeSet inputs: explicit provenance/borrowed records; garment6+MTM6+breaks5/lint/fmt/book0.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
 - Native query2+catalog2 pass0; selected strict lint/fmt/census17/5/5/0/book0; exact revisions beyond128bits.
@@ -42,7 +42,7 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - Window15 payloadcc8deffb5866dc1d55decd954dd7a411decc6a49577f41dcd0fdeedf7d6aa8b7 retains sourceba41e9a.
 - capture_window14.py and capture_window15.py are FROZEN historical producers, not current-HEAD reruns.
 - Cleanup protection0285 guards both certificate stores; due2026-10-26 13:16UTC, do not reset early.
-- D156/D223 audits deferred; D224/D225/D227/D229 corrected; D70/D226 rulings implemented under owners.
+- D156/D223 audits deferred; D224/D225/D227/D229-D231 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background job or pending director question after0308. Derive push count, never carry it manually.
+- No background job or pending director question after0309. Derive push count, never carry it manually.
