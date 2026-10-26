@@ -49,6 +49,9 @@ mod arc;
 mod bound;
 pub use bound::{FormulaBindingValueError, FormulaBindingValueRule, FormulaBoundValue};
 
+mod provenance;
+pub use provenance::{FormulaApproximationSources, FormulaApproximationToleranceError};
+
 mod normalized;
 pub use normalized::{
     FormulaNormalizedArguments, FormulaNormalizedExpression, FormulaNormalizedNode,
@@ -112,10 +115,9 @@ pub use input::{
 mod context;
 pub use context::{
     FormulaSizeContext, FormulaSizeContextError, FormulaSizeContextSource, FormulaSizeReadError,
-    FormulaSizeValue,
-    FormulaToleranceContext, FormulaToleranceContextDefinition, FormulaToleranceProvider,
-    FormulaToleranceProviderError, FormulaToleranceReadError, FormulaToleranceValue,
-    FormulaToleranceValueSource,
+    FormulaSizeValue, FormulaToleranceContext, FormulaToleranceContextDefinition,
+    FormulaToleranceProvider, FormulaToleranceProviderError, FormulaToleranceReadError,
+    FormulaToleranceValue, FormulaToleranceValueSource,
 };
 
 mod namespace;

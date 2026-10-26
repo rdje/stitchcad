@@ -4,11 +4,10 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Completed0267: G1-SLICE.5e.1.6 — exact canonical/stored numeric read bridges; native5/0, selected lint0.
-- Whole0266 task/ledger retain348/239; book/live align. Numeric conversion preserves units/raw turns.
-- Next: .5e execution/input protocol; read checked AST/provider contracts before owning the next slice.
-- Full execution/derived registry/provenance remains open; source wrappers retain authored context.
-- D70 ruling question renewed2026-10-26: >=1 authored axis for every complete set recommended vs multidimensional-only.
-- Await actual answer; no axis implementation/assumed approval. P1 .5d.1.2.2.2 practical trig resources.
-- One focused check/feature; broad gates deferred to integration/pre-push. Approved full UI/AI control decision retained.
-- No background job.
+- Completed0268: .5e.3.1 immutable approximation-call source sets/T1 guard; native4/0 and selected lint0.
+- Whole0267/.o.h/journal/ledger retain349–351/240; book/live align. Full propagation remains open.
+- Next .5e: immutable numeric/Boolean runtime values and bindings carrying their source sets.
+- Read recipe/provenance.rs, numeric.rs, bound.rs and formula4.2/runtime D121 before owning next leaf.
+- D70 actual ruling remains pending; no axes work. P1 .5d.1.2.2.2 owns usable trig resources.
+- Approved UI/full AI control: decision_stitchcad-ui-baseline-and-quality.md; no UI pivot.
+- One focused check/feature; broad verification remains integration/pre-push. No background job.

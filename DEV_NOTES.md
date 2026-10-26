@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — immutable approximation-call source metadata
+
+0268 .5e.3.1 retains all11 normative irrational/quantization call sources in a sealed immutable
+set. Union is idempotent/order-independent; iteration uses lexical existing tokens. Exact calls
+introduce no source, while exact-valued rounding calls still do. Symbolic eps_num refuses every
+nonempty set with formula_domain, actual class and complete sources. The helper has no provider,
+numeric limit, comparison label or ordinal; actual execution and propagation remain .5e.2/.3.
+
+The first test attempted a nonexistent ToleranceName::ALL (E0599/101); explicit independent five-
+class fixtures repair it. Final native4/0 and selected strict Clippy0 pass; tests cover all built-ins,
+unions/immutability and supplied condition/taken-branch examples without claiming branch execution.
+Whole0267/.o.h task scopes, oldest whole journal group and0267 ledger retain349–351/240 with exact
+Git/hash/public reads. Book/live sync; promotion declined: existing formula4.2 and D121 contracts.
+
 ## _(2026-10-26 UTC)_ — exact canonical and stored numeric reads
 
 0267 .5e.1.6 converts canonical scalar payloads or once-rounded bindings into exact numeric values.
@@ -358,25 +372,8 @@ two new files. No full regression, Clippy or WASM pass is claimed. Book/API stat
 describe the exact implemented scope. Whole0243 task/ledger retained313/216 with exact source/public
 reads. Promotion declined: existing numeric contract and focused-check policy already govern this.
 
-## _(2026-10-25 UTC)_ — finish archive fixtures and restore feature-first delivery
-
-0243 .a25.2 closes copied/fault-payload/resident/materialization plans before activation; guarded
-effects and nonfollowing teardown preserve the exact deliberate payload-link authority. Captured
-normal execution records411 plans/203 effects/nine simulated children; interrupted copying cleans
-its partial workspace. Focused native history_archive_probes.py retains all28 cases, rc=0.
-The optional deep campaign later exposes its controller's activation-omission parser StopIteration:
-bootstrap searched for the deliberately removed call. It now splits at the stable protected body;
-one focused regression gets the intended activation assertion red, rc=0. Full deep calibration
-is deferred and no complete pass is claimed. Native sources/backing and final workspace stay exact.
-
-The director explicitly changes verification scheduling to accelerate100% feature implementation:
-one small affected check after each feature; broad suites/campaigns wait for later integration and
-the required pre-push gate. Finish this dirty unit, then resume independent exact arithmetic .5c.1.
-Remaining nonblocking D156/audit/D223 work stays open/owned; .f.fixture-verification owns exhaustive
-fixture followup. Quality, locality, task tracking, book sync, commits and hooks remain required.
-COMMIT and the existing product-frontier decision now adopt this ruling. G1-labelled maintenance
-commits do not measure feature completeness. Promotion: product-frontier decision gains the policy.
-Whole0242/.a25.1/D220-D221 records retained215/312/136; focused source/descriptor/public reads pass0.
+[Complete archive/feature-delivery lesson](docs/history/stitchcad-devnotes-part351.md) retains
+its original failure, repair, validation and director ruling.
 
 [Whole oldest maintenance lessons](docs/history/stitchcad-devnotes-part333.md) retain the complete
 committed source group; no lesson is summarized away.

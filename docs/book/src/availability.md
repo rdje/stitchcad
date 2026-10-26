@@ -46,6 +46,8 @@ with full 128-bit component magnitudes, independent sign and a typed zero-denomi
 All four rational operators now reduce before width checks and report typed zero/width refusals.
 Completed numeric values now enforce exact length/area limits and nonnegative Count, with a
 normalized-literal bridge. All four quantity operators now apply exact ppm scaling and result domains.
+Immutable approximation-call source sets and symbolic T1 admission checks are available; complete
+executed dependency propagation remains part of evaluator integration.
 Exact unary negation/square and all six numeric comparisons are available, preserving fractional
 values and raw angle turns. Exact abs/min/max/clamp are available with typed argument/bound refusals.
 Explicit round_to is available at exact same-kind steps. Binding value conversion now rounds once,

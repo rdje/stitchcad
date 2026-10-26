@@ -833,7 +833,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.5e` | `in_progress` | Continue execution adapters; D70/trig resources remain owned |
+| **next** | `G1-SLICE.5e` | `in_progress` | Carry values/sources through execution; D70/trig resources owned |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 

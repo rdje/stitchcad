@@ -327,6 +327,40 @@ adapters and complete production diagnostic/provenance context retain their sepa
 
 ## Approximation contributions and admissible classes
 
+### Product source-set primitive
+
+`FormulaApproximationSources` now supplies an immutable, deduplicated set of existing built-ins.
+`for_call` introduces the source of sqrt, hypot, sin, cos, tan, atan, atan2, arc_length, dist, dir
+or round_to. Other calls introduce no source themselves. `union` merges executed dependencies;
+`with_call` then adds the current call. `iter` reports distinct sources in lexical machine-token
+order, independently of the signature table's grouping. Copies and merges leave earlier sets intact.
+
+```rust
+use sc_core::recipe::{FormulaApproximationSources as Sources, FormulaBuiltin as B,
+    FormulaToleranceName as T};
+
+let sources = Sources::for_call(B::Hypot).with_call(B::RoundTo);
+let refusal = sources.check_tolerance(T::Numerical).expect_err("T1 cannot admit these sources");
+assert_eq!(refusal.tolerance(), T::Numerical);
+assert_eq!(refusal.sources(), sources);
+assert_eq!(refusal.diagnostic_code(), "formula_domain");
+sources.check_tolerance(T::Geometric).expect("class admission only");
+```
+
+The helper checks the symbolic class alone. It neither reads a provider nor compares values, so
+an admitted class still needs its actual context and threshold. The refusal keeps the requested
+class and complete supplied source set. The enclosing evaluator must attach the actual comparison
+and statement context. There is no fabricated label or statement ordinal.
+
+The caller must supply the dependencies that actually executed: both arithmetic operands, every
+evaluated min/max/clamp candidate, and a conditional's condition plus its selected branch. Point
+coordinates require separate sets. Binding and later reads must retain the set even after exact
+cancellation or an integer result. These propagation rules remain full evaluator work; this helper
+does not execute a conditional, numerical call, binding or geometry query. Four focused native
+tests cover every built-in, all five classes, immutable unions and explicit selected-source examples.
+
+### Existing reference execution controls
+
 A value retains an immutable set of approximation-producing calls in its executed dependencies.
 The set is evidence about how the result was obtained: sin(90 deg) remains a sine contribution
 even though its rounded answer equals ratio1.0. Named T1 comparisons require an empty set.

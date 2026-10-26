@@ -577,23 +577,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part348.md).
 - ID: `G1-SLICE.5e.1.6`
   Status: `done`
-  Goal:0267 canonical/stored scalar-to-numeric expression bridges, without extra rounding/scaling.
+  Goal: exact canonical/stored scalar numeric bridges verified0267, native5/0.
   Paths: crates/sc-core/src/recipe/numeric.rs;crates/sc-core/tests/formula_value_read_bridge_contract.rs
-  Own typed TryFrom conversions, raw turns/exact internal units, signed endpoints and explicit
-  Boolean nonnumeric refusal. Stored reads use the once-rounded integer, never the old fraction.
-  Focused native/selected lint; retain348/239 whole0266 and book/live sync. Source/provenance stays
-  with existing read wrappers and later .5e.3. D70 question pending; no axis change.
-- [x] REPRODUCE:0267 eed45a4 lacks typed canonical/stored numeric conversions; source read rc=0.
-- [x] ROOT CAUSE:0267 input units and stored integer are exact; neither is an old expression
-  fraction or Boolean coercion. Focused native kind/fraction/endpoints witnesses pass5/0, rc=0.
-- [x] FIX: typed TryFroms retain units/kinds/raw turns and refuse Boolean; source wrapper stays caller-owned.
-- [x] ADDRESSED:0267 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
-  --test formula_value_read_bridge_contract:5 pass/0 fail, rc=0; lost prior output recovered by rerun.
-- [x] NO REGRESSION:0267 all numeric kind/limit, once-rounded fraction and false/true controls pass;
-  cargo clippy --offline -p sc-core --test formula_value_read_bridge_contract -- -D warnings, rc=0.
-  Broad .5g/pre-push and source propagation .5e.3 retain their owners. Stale status note fixed here.
-- [x] LOCKSTEP:348/239 whole Git/hash/public reads and warning-free book render rc=0; live align.
-  Promotion declined: existing numeric/binding contracts; no new source or execution proof claimed.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part349.md).
 - ID: `G1-SLICE.5e.2`
   Status: `pending`
   Goal: single-pass declaration-order evaluator over statically validated graphs using .5c/.5d.
@@ -602,7 +588,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Numeric domain/division/width errors occur at the actual completed operation; no reordering.
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5e.3`
-  Status: `pending`
+  Status: `in_progress`
   Goal: within/assertion execution and tolerance/irrational-result provenance propagation.
   D121 reference provenance .5e.3b verified; D125 reference assertions .3a verified.
   Independent reference D125 repair .5e.3a is verified; D124 recognition closes at .5b.1c.2.
@@ -610,6 +596,25 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   irrational result contributes (including subsequent binding/reads), exact bare comparisons,
   assertion failure values/class/name and no substituted value/geometry after failure.
   Verification: `pending`; Commit: `pending`.
+- ID: `G1-SLICE.5e.3.1`
+  Status: `done`
+  Goal:0268 immutable executed approximation-source sets and symbolic T1 admission guard.
+  Paths: crates/sc-core/src/recipe/provenance.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_approximation_sources_contract.rs
+  Keep all11 normative rounding/irrational call sources, even exact-valued calls; exact operations
+  add none. Deterministic deduplicated union, all five symbolic classes; no value/provider execution.
+  Retain349/350 whole0267/closed .o.h scope,351 oldest complete journal group,240 whole0267 ledger.
+  Book/live sync; full evaluator/propagation and diagnostic comparison context remain .5e.2/.3.
+- [x] REPRODUCE:0268 b01a2e4 has value/read APIs without product call-source sets; source read rc=0.
+- [x] ROOT CAUSE:0268 provenance follows executed calls/dependencies, not accidental integer
+  equality or numeric epsilon. All22 built-ins/5 classes in focused native4/0, rc=0.
+- [x] FIX: sealed immutable source union/lexical inspection and symbolic T1 refusal with actual sources.
+- [x] ADDRESSED:0268 python3 -I -B scripts/local_environment.py -- cargo test --offline -p sc-core
+  --test formula_approximation_sources_contract:4 pass/0 fail, rc=0; fixture E0599/101 repaired.
+- [x] NO REGRESSION:0268 unions/old copies/class matrix and explicit selected-source examples pass;
+  cargo clippy --offline -p sc-core --test formula_approximation_sources_contract -- -D warnings, rc=0.
+  Full .5e.2/.3 execution/propagation and broad .5g/pre-push remain owned, not claimed here.
+- [x] LOCKSTEP:349–351/240 whole Git/hash/public reads and book render rc=0; live/frontier align.
+  Promotion declined: existing formula4.2/D121; no invented source, provider or comparison context.
 - ID: `G1-SLICE.5e.4`
   Status: `pending`
   Goal: atomic replay and dependency validation, including corrupted persisted cycle evidence.
@@ -1122,14 +1127,7 @@ Native baseline log replay1 excluded: old signature fault logs absent (actual di
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.o.h`
   Status: `done`
-  Goal: STITCHCAD-G1-0149 owns parent-planned blocking whole committed record retention before output/delegation audit growth.
-  Acceptance: exact source intervals/proxies/prior415 bytes/six windows/public readers/fixed caps; live/book/frontier sync and focused checks before .p.o.i.
-
-- [x] REPRODUCE / ISSUE: frozen HEAD49007a3 recipes999L/DEV_NOTES16382B block the next acceptance/audit records; actual source/registry measured before growth, rc=0.
-- [x] ROOT CAUSE (WHY + WHERE): completed live protocols/lessons/oldest ledgers occupy bounded working sets; output-retention-proof.log five whole committed intervals/prior415 hashes/six windows+master exact, rc=0; initial absent final heading1 diagnosed at observed table boundary.
-- [x] FIX: retain complete normalization requirements/routing, signature final receipts, static lesson/promotion/failed checks and two complete ledger entries; every node/proxy/date correction retained, exact Git source/hash/L/B/LF proof, rc=0.
-- [x] ADDRESSED (verified): output-retention-proof.log420 actual public reader results/exact source intervals/prior415 identities/59working MD/16093 decodedL/1172478B/550854 residentB/12open162sealed/no gaps/overlap, rc=0; fixed ceilings unchanged.
-- [x] NO REGRESSION: run_book_publication_probes.sh probes:45 pass/0 fail; archive28+CLI436/420 reads/ledger9+pointer13/coverage9 all terminal0 consumed, rc=0, output-publication/archive/ledger/coverage logs; no producer/Rust/grammar changes.
-- [x] LOCKSTEP: book describes pending module/borrowed-root audit; MEMORY/index/G1 frontier .p.o.i synced. Initial helper1 excluded; corrected interval boundaries proven, rc=0. promotion: declined (existing whole-retention/public-entry/borrowed-root rules). Final staged gate13green, rc=0, output-staged-gate.log.
+  Goal:0149 whole committed output-audit retention completed.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part350.md).
 
 Output/delegation division and groups continue in [the bounded producer sibling](G1-SLICE-producers.md).

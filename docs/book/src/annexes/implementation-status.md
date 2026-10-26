@@ -82,3 +82,5 @@ current counts are derived from current test execution rather than inferred from
 | Authored membership to size context | §3.1/§3.4; G1 | sc-measure membership; G1-SLICE.5e.1.5.2 | [Exact pin/member/order bridge](../spec/size-membership.md#formula-size-context); axes/global registry follow |
 
 | Canonical/stored numeric reads | §4.2; G1 | sc-core recipe; G1-SLICE.5e.1.6 | [Exact integer bridges](formula-rationals.md#canonical-and-stored-numeric-reads); source propagation follows |
+
+| Approximation-source set/class guard | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.1 | [Immutable sources/T1 refusal](formula-runtime-validation.md#product-source-set-primitive); full propagation follows |

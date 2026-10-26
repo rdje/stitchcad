@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0267 — exact canonical and stored scalar reads
+## STITCHCAD-G1-0268 — approximation-call sources and symbolic tolerance admission
 
-.5e.1.6: typed numeric bridges preserve internal units/raw turns and once-rounded stored integers.
-Boolean stays nonnumeric; five focused tests and selected strict Clippy pass. Full evaluation/provenance remains owned.
+.5e.3.1: immutable deduplicated executed-source unions retain all11 rounding/irrational calls.
+Symbolic T1 refuses contributed values independently of the numeric threshold; full evaluator propagation follows.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -424,3 +424,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part238](docs/history/stitchcad-changelog-part238.md) | whole0265 | 4 lines, 297 bytes, sha256:9531ba4e… |
 
 | [part239](docs/history/stitchcad-changelog-part239.md) | whole0266 | 4 lines, 291 bytes, sha256:5b24dd6c… |
+
+| [part240](docs/history/stitchcad-changelog-part240.md) | whole0267 | 4 lines, 285 bytes, sha256:341f9904… |
