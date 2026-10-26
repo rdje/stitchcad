@@ -575,7 +575,7 @@ five tests covering signed endpoints, all numeric kinds, stored fractions and Bo
 
 ## Remaining trig/inverse plan
 
-Sin/cos/tan and atan/atan2 remain unimplemented. For the actual ppm/microdegree quanta,
+Sin/cos value kernels are available below; tan and atan/atan2 remain unimplemented. For the actual ppm/microdegree quanta,
 rational-value restrictions exclude exact rounding midpoints, so converging valid enclosures would
 eventually decide each finite admitted input after exact pole/axis/branch handling. This is a
 qualitative termination proof. A generic algebraic separation estimate gives an impractical upper
@@ -583,4 +583,46 @@ bound; it does not establish actual hard inputs or justify an arbitrary precisio
 The full derivation/sources are in docs/decisions/fact_trig-midpoints-and-resource-bound.md;
 G1-SLICE.5d.1.2.2.2 still owns usable all-input resource accounting before implementation.
 The [finite-threshold study](formula-trig-certificates.md) covers all1M forward bands with exact
-gap verification; native runtime admission and inverse/tangent resources remain separate obligations.
+gap verification. The native sin/cos plan and kernel are implemented; inverse/tangent resources remain open.
+
+## Correctly rounded sine and cosine
+
+FormulaNumericValue::checked_sin() and checked_cos() require an Angle and return a Ratio rounded
+to the nearest integer ppm of the true function value. The actual input kind is checked even for
+zero. A different numeric kind returns BuiltinInputKind with the actual call, argument0 and kind,
+diagnostic formula_dimension. There is no implicit angle/ratio conversion.
+
+```rust
+use sc_core::recipe::{FormulaKind, FormulaNumericValue, FormulaRational};
+
+let angle = FormulaNumericValue::new(FormulaKind::Angle,
+    FormulaRational::from_signed_integer(-450_000_000))?;
+assert_eq!(angle.checked_sin()?.rational(),
+    FormulaRational::from_signed_integer(-1_000_000));
+assert_eq!(angle.checked_cos()?.rational(), FormulaRational::ZERO);
+
+let thirty = FormulaNumericValue::new(FormulaKind::Angle,
+    FormulaRational::from_signed_integer(30_000_000))?;
+assert_eq!(thirty.checked_sin()?.rational(),
+    FormulaRational::from_signed_integer(500_000));
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Full128-bit rational magnitudes are admitted, including tiny fractions, huge signed turn counts
+and angles immediately beside axes or output rounding thresholds. Period/quadrant/octant
+reduction stays in private wider integer workspace; it neither binds the angle nor changes the
+authored value. Exact axes return canonical integer results, with no negative zero.
+
+The [complete threshold certificate and runtime derivation](formula-trig-certificates.md) justify
+the fixed512-bit64-term directed series. Its error is bounded below the certified distance to
+every half-ppm threshold. This proves correct rounding without platform libm, empirical precision
+cutoffs or a new input refusal. The shared compiled pi endpoint remains tied to its independent
+certificate. Result magnitudes are at most1,000,000ppm, without premature storage narrowing.
+
+Work unit0280's focused native target passes3 tests, including44 independent angles/88 outputs
+and live oracle reproduction. That oracle uses a different pi identity,768-bit direct powers and
+factorials over the full signed principal interval,128 terms and its own remainder enclosure.
+It covers exact values, signed/full turns, full-width inputs, near axes and rational neighbors
+on both sides of rounding thresholds. This is native value evidence; actual cross-platform
+execution and broader coupled checks remain .5d.4/pre-push. Sourced call propagation and full AST
+execution remain .5e; tangent and inverse functions keep separate resource/implementation owners.

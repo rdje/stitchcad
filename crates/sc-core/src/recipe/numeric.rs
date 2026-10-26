@@ -361,6 +361,45 @@ impl FormulaNumericValue {
         Self::for_operation(kind, value, operator.token())
     }
 
+    /// Returns the correctly rounded sine of an Angle as integer parts per million.
+    ///
+    /// Exact rational period/quadrant folding preserves full input widths. A complete threshold
+    /// certificate and bounded directed series determine nearest-quantum rounding without libm.
+    /// Source-call contributions belong to the later source-bearing evaluator.
+    ///
+    /// # Errors
+    /// Returns BuiltinInputKind for an actual non-Angle operand, including zero values.
+    pub fn checked_sin(self) -> Result<Self, FormulaNumericError> {
+        self.checked_sin_cos(false)
+    }
+
+    /// Returns the correctly rounded cosine of an Angle as integer parts per million.
+    ///
+    /// Uses exact evenness/quarter-turn folding and the same certified bound as checked_sin.
+    ///
+    /// # Errors
+    /// Returns BuiltinInputKind for an actual non-Angle operand, including zero values.
+    pub fn checked_cos(self) -> Result<Self, FormulaNumericError> {
+        self.checked_sin_cos(true)
+    }
+
+    fn checked_sin_cos(self, cosine: bool) -> Result<Self, FormulaNumericError> {
+        let builtin = if cosine {
+            FormulaBuiltin::Cos
+        } else {
+            FormulaBuiltin::Sin
+        };
+        let kind = builtin
+            .result_kind(&[FormulaBuiltinOperand::Value(self.kind)])
+            .ok_or(FormulaNumericError::BuiltinInputKind {
+                builtin,
+                argument: 0,
+                actual: self.kind,
+            })?;
+        let value = super::trig::sin_cos_value(self.value, cosine)?;
+        Self::for_operation(kind, value, builtin.token())
+    }
+
     /// Evaluates one of the six exact comparison operators on same-kind numeric operands.
     ///
     /// # Errors

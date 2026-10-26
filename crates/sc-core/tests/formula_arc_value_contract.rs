@@ -29,12 +29,16 @@ fn arcs_match_independent_signed_turn_and_hard_midpoint_fixtures() {
         .lines()
         .filter(|row| !row.starts_with('#'))
     {
-        let cells: Vec<_> = row.split('\t').collect();
-        assert_eq!(cells.len(), 5, "{row}");
-        let angle = value(K::Angle, cells[0], cells[1]);
-        let radius = value(K::Length, cells[2], cells[3]);
+        let cells: [&str; 5] = row
+            .split('\t')
+            .collect::<Vec<_>>()
+            .try_into()
+            .expect("five arc fixture columns");
+        let [angle_n, angle_d, radius_n, radius_d, expected] = cells;
+        let angle = value(K::Angle, angle_n, angle_d);
+        let radius = value(K::Length, radius_n, radius_d);
         let actual = angle.checked_arc_length(radius);
-        if let Some(integer) = cells[4].strip_prefix("integer:") {
+        if let Some(integer) = expected.strip_prefix("integer:") {
             let result = actual.expect("admitted rounded arc");
             assert_eq!(result.kind(), K::Length);
             assert_eq!(
@@ -42,7 +46,7 @@ fn arcs_match_independent_signed_turn_and_hard_midpoint_fixtures() {
                 R::from_signed_integer(integer.parse().expect("expected integer")),
                 "{row}"
             );
-        } else if let Some(integer) = cells[4].strip_prefix("domain:") {
+        } else if let Some(integer) = expected.strip_prefix("domain:") {
             let error = actual.expect_err("rounded scalar excess");
             assert_eq!(
                 error,
@@ -57,7 +61,7 @@ fn arcs_match_independent_signed_turn_and_hard_midpoint_fixtures() {
             );
             assert_eq!(error.diagnostic_code(), "formula_domain");
         } else {
-            let bits = cells[4]
+            let bits = expected
                 .strip_prefix("width:")
                 .expect("width fixture")
                 .parse()

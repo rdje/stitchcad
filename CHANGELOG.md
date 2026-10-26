@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0279 — bounded native sine/cosine plan
+## STITCHCAD-G1-0280 — correctly rounded sine/cosine values
 
-.5d.1.2.2.2.c: admit exact folding/512-bit64-term sin/cos plan; error/workspace and Fraction14/octant50/negative2 controls pass, rc=0.
-Native code next; inverse/tangent separate.374/375/251 retain whole prior task/lesson/ledger; book/live aligned.
+.5d.3.2.1: native sin/cos3/0 (44 independent angles), shared pi1/0, arc2/0 and selected strict lint pass, rc=0.
+Full-width/axes/true ppm rounding available; repair old arc fixture indexing.376–378/252 retain whole history; book/live sync.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -448,3 +448,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part250](docs/history/stitchcad-changelog-part250.md) | whole0277 | 5 lines, 316 bytes, sha256:2d41ae6f… |
 
 | [part251](docs/history/stitchcad-changelog-part251.md) | whole0278 | 5 lines, 318 bytes, sha256:0e61bea4… |
+
+| [part252](docs/history/stitchcad-changelog-part252.md) | whole0279 | 5 lines, 307 bytes, sha256:c27c2447… |

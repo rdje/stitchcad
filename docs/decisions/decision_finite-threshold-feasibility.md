@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-26`
-- **Status:** `active`; sin/cos plan admitted0279, native implementation pending; inverse/tangent unresolved
+- **Status:** `active`; sin/cos plan admitted0279/value kernel0280; integration and inverse/tangent unresolved
 - **Owner / source:** engineer proposal, G1-SLICE.5d.1.2.2.2.a; full populations remain .b/parent
 
 answers: "what finite certificate could help bound trig rounding work?" · "does the threshold cohort admit a runtime precision?"
@@ -143,7 +143,7 @@ regeneration and source/hash refusal make this reproducible rather than a sample
 Together with the directed interval derivation and distinct oracle controls, complete forward
 coverage establishes the proposed delta=2^-384 separation from positive sine/cosine ppm thresholds
 for the stated rational phase bound. Independent full interval recomputation is not claimed.
-Native sine/cosine precision/error/workspace admission is next .c. Inverse/tangent remain open;
+At0278 native sine/cosine admission was next .c, now complete below. Inverse/tangent remain open;
 neither this certificate nor its maintenance timing selects their runtime algorithms.
 
 ## Native sine/cosine plan admitted — work unit0279
@@ -181,4 +181,11 @@ The detailed [book derivation](../book/src/annexes/formula-trig-certificates.md)
 python3 -I -B docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py passes the exact envelope,
 14 direct-power/factorial Fraction enclosures,50 signed octant-table comparisons and2 insufficient
 profile controls, rc=0. This is a plan/model check, not native or platform execution. Production
-sin/cos code and focused oracle fixtures follow .5d.3.2.1; broader proof stays .5d.4/pre-push.
+sin/cos code/fixtures follow below at .5d.3.2.1; broader proof stays .5d.4/pre-push.
+
+Implementation0280: checked_sin/checked_cos follow the admitted plan, retaining full rational
+widths and exact axes. Native3/0 covers44 independent angles/88 outputs and live oracle reproduction;
+shared compiled pi1/0 and existing arc2/0 pass, rc=0. Selected strict library/two-target lint passes0.
+The independent oracle uses the distinct1/2+1/3 pi identity,768-bit direct powers/factorials and128
+terms over the full signed principal interval. Source-bearing calls/whole execution and broader
+platform proof remain .5e/.5d.4/pre-push; tangent/inverse admission is unchanged.

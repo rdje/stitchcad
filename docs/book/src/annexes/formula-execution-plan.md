@@ -67,9 +67,9 @@ parameter/geometry error budget uses actual edge length, not an inferred boundin
 
 ## Dependencies that still prevent full runtime closure
 
-The exact numerical kernels already cover rational arithmetic, quantization, roots and arc_length.
-Sin/cos/tan and atan/atan2 still require the practical all-input resource strategy and implementations
-owned by .5d.1.2.2.2 and .5d.3.2/.3. This plan selects no replacement math backend, precision cutoff or
+The numerical kernels cover rational arithmetic, quantization, roots, arc_length and certified sin/cos.
+Tan and atan/atan2 still require the practical all-input resource strategy and implementations
+owned by .5d.1.2.2.2 and .5d.3.2.2/.3. This plan selects no replacement math backend, precision cutoff or
 caller placeholder. An admitted function with an unfinished implementation cannot be silently
 reclassified as a language refusal or published as a canonical computed result.
 

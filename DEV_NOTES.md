@@ -3,6 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — correctly rounded native sine/cosine values
+
+0280 .5d.3.2.1 implements the admitted private full-width folding/512-bit64-term plan and exposes
+checked_sin/checked_cos. Exact axes and canonical zero bypass series; all other results use the
+certified lower endpoint's exact ppm rounding. Kind refusals retain actual call/operand. Shared
+pi limbs and reproduction test move intact to pi.rs, with arc behavior preserved. Native3/0 covers
+44 independent angles/88 outputs and live oracle reproduction; shared pi1/0 and arc2/0 pass, rc=0.
+The oracle uses distinct pi identity/direct768-bit powers/factorials over signed principal turns,
+including hard threshold neighbors. Selected strict lint exposed7 existing arc fixture indexing
+warnings; checked array destructuring fixes the owned defect, arc2/0 and lint now pass0. Whole0279
+task/hypot lesson/closed syntax receipts/ledger retain376–378/252 byte-exact. Book/live sync; source
+calls/full execution/platform proof remain owned. Promotion: threshold decision records native scope.
+
 ## _(2026-10-26 UTC)_ — bounded native sine/cosine plan
 
 0279 .5d.1.2.2.2.c derives exact private sign/period/octant reduction and64 directed terms at512
@@ -328,21 +341,8 @@ from the same-repo generator yields7836B with every target/order/public path CLI
 no cap/schema/exclusion changes or full campaign. Completed hypot task/ledger retained330/229.
 Promotion: numerical decision gains the certificate; approved UI direction has its own decision.
 
-## _(2026-10-25 UTC)_ — correctly rounded hypot without a materialized area
-
-0256 .5d.2.2 forms the exact signed-length squared sum in private bounded integer workspace and
-reuses root bisection/midpoint rounding. No Area value or internal128-bit result limit is imposed.
-Admitted length domains bound the root quotient below2^61; the function's rounded Length alone
-has scalar validation. Existing signature metadata refuses actual non-Length inputs in operand
-order, including zero values; no fabricated dimension/value is introduced.
-
-One affected native root target passes4/0, rc=0, consuming all25 independent rows (15sqrt/10hypot).
-Cases include signed/zero/Pythagorean/half outcomes, maximum-length squared sum above Area bound,
-rounded scalar excess and full128-bit fraction components with513/512-bit raw workspace. Sqrt
-cases and actual bad-kind checks remain green. Source-bearing root-call contributions stay .5e.3;
-parent .5d.2 remains open for that integration. Broad/platform/mutation work stays .5d.4/pre-push.
-Whole0255 scope/ledger retained329/228; book/live/frontier align. Promotion: numerical decision
-records the implemented hypot value kernel alongside its existing algorithm proof.
+[Complete hypot numeric kernel lesson](docs/history/stitchcad-devnotes-part377.md) retains
+its original implementation, validation and promotion decision.
 
 [Complete sqrt numeric kernel lesson](docs/history/stitchcad-devnotes-part375.md) retains
 its original implementation, validation and promotion decision.

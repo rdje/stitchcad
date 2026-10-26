@@ -493,20 +493,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: inverse first-octant generator and full45M threshold proof; split before implementation.
 - ID: `G1-SLICE.5d.1.2.2.2.c`
   Status: `done`
-  Goal: native sin/cos reduction, interval error, fixed work/workspace admission using complete forward certificate before code.
-  Work unit0279 owns374 whole0278 task,375 oldest sqrt lesson,251 ledger before growth.
+  Goal:0279 admits exact sin/cos folding/512-bit64-term error/workspace plan; native next.
   Paths: docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py;docs/decisions/decision_finite-threshold-feasibility.md
-  Derive exact sign/period/octant folding,512-bit directed64-term series, complete error/workspace
-  and rounding argument; focused rational envelope/oracle controls. No native API added here.
-  Decision/book/live sync; primary DLMF4.19/4.21 opened2026-10-26. Inverse/tangent remain open.
-  Acceptance0279:
-  - [x] REPRODUCE: full forward certificate exists; native reduction/error/workspace remained unadmitted.
-  - [x] ROOT CAUSE0279: python3 -I -B docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py derives770*2^-512<2^-502<2^-384 and workspace<2^1026, rc=0; fixed-error proof closes the forward gap.
-  - [x] FIX: exact private sign/period/octant folding and64 directed terms at512 bits; record full invariant/rounding argument before code.
-  - [x] ADDRESSED0279: same command exact envelope/Fraction14/signed-octant50 pass, rc=0; native sin/cos plan admitted, implementation .5d.3.2.1 next.
-  - [x] NO REGRESSION0279: same command insufficient-profile2 controls pass, rc=0; forward proof sources unchanged. No runtime/platform claim; .5d.4/pre-push broad proof stays owned.
-  - [x] LOCKSTEP:374/375/251 exact Git/hash/public reads, rc=0; decision/book/live align. Inverse/tangent remain open, G1still5/18.
-  Verification: rc=0; Commit: STITCHCAD-G1-0279.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part376.md).
 
 - ID: `G1-SLICE.5d.1.2.2.h`
   Status: `done`
@@ -548,11 +537,29 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Additional paths: docs/tasks/artifacts/formula_structure/arc_value_oracle.py;crates/sc-core/tests/fixtures/formula_arcs.tsv
   Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part332md); provenance .5e.3.
 - ID: `G1-SLICE.5d.3.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: correctly rounded sin/cos/tan under .5d.1.2.2 plan.
 - ID: `G1-SLICE.5d.3.2.1`
-  Status: `pending`
+  Status: `done`
   Goal: native sin/cos under admitted .5d.1.2.2.2.c plan, focused independent rounding/axis/width fixtures.
+  Work unit0280 owns376 whole0279 plan task,377 oldest hypot lesson,252 ledger before growth.
+  Also owns378 whole closed syntax-milestone receipts to leave space for native acceptance evidence.
+  Encountered existing arc fixture lint: selected Clippy refuses7 unchecked Vec indices after
+  length assertion. Own crates/sc-core/tests/formula_arc_value_contract.rs; replace with checked
+  five-cell array destructuring now, then rerun affected arc target/lint. Product behavior unchanged.
+  Paths: crates/sc-core/src/recipe/trig.rs;crates/sc-core/src/recipe/pi.rs;crates/sc-core/src/recipe/arc.rs;crates/sc-core/src/recipe/numeric.rs;crates/sc-core/src/recipe/mod.rs
+  Tests/oracle: crates/sc-core/tests/formula_sincos_value_contract.rs;crates/sc-core/tests/fixtures/formula_sincos.tsv;docs/tasks/artifacts/formula_structure/sincos_value_oracle.py
+  Share certified pi endpoint with arc; native full-width folding/64-term directed512-bit kernel.
+  Independent signed full-turn/axis/near-midpoint fixtures and actual kind refusals; focused native/lint.
+  Value API only; sourced calls .5e.3 next. Book/live sync, broader/platform .5d.4/pre-push.
+  Acceptance0280:
+  - [x] REPRODUCE: sin/cos plan admitted, native APIs absent before this leaf; old arc test selected lint returned7 indexing errors.
+  - [x] ROOT CAUSE0280: cargo test -p sc-core --test formula_sincos_value_contract --test formula_arc_value_contract gives3/0+2/0, rc=0; native implementation supplies missing value kernels. Selected Clippy's7 arc Vec-index refusals locate the fixture defect.
+  - [x] FIX: exact private folding/directed64 terms/ppm rounding; shared pi; checked arc fixture array; no new input/precision limit or dependency.
+  - [x] ADDRESSED0280: same targeted native command passes44 oracle angles/88 results and fresh independent producer, rc=0; --lib recipe::pi::tests:: gives1/0, rc=0.
+  - [x] NO REGRESSION0280: affected arc rerun2/0, rc=0; cargo clippy -p sc-core --lib --test formula_sincos_value_contract --test formula_arc_value_contract -- -D warnings passes, rc=0. Broad/platform .5d.4/pre-push; no unobserved result claimed.
+  - [x] LOCKSTEP:376–378/252 exact Git/hash/public reads, book build rc=0; decision/book/live align. Source-bearing calls and AST remain .5e; G1still5/18.
+  Verification: rc=0; Commit: STITCHCAD-G1-0280.
 - ID: `G1-SLICE.5d.3.2.2`
   Status: `pending`
   Goal: tangent only after its separate admitted all-input resource plan; no borrowed sin/cos certificate.
@@ -647,33 +654,7 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
 
 ## Syntax milestone verification receipts
 
-Full make check:591 passing native tests/48 groups, zero failures; make wasm:three foundation libs,
-compile-only; make probes:25 suites green. All three commands finished in one set-e shell, rc=0.
-Coupled recipe input fault runner:seven actual compiled assertion reds, rc=0, exact four-source
-restoration. Restored public review:five tests pass. Existing earlier fault receipts are unchanged.
-Post-book-edit language16/publication9 pass; publication52 chapters/25 scoped API rows/1093 source
-links/1688 rendered links. Tree10lanes/13trees/10siblings/zero unowned/orphan/dead targets.
-Independent git-show comparison: every tracked crate source/manifest/test equals ee42f5d bytes;
-complete syntax node graph11075B and predecessor closure1912B preserved exactly. G1-0052 ledger
-844B and G1-0070 lesson2039B compare exact complete HEAD payloads. Initial dev-note delimiter lookup
-failed before that file was written; explicit archive-heading boundary and equality fix it.
-D111 closes only the stale current-status sentence; original report sealed unchanged. D34's
-six-versus-ten sibling example is corrected; PLANNING.5 retains derivation ownership.
-All three adopted external policy neutral bodies compare exact with their read-only sources.
-Cleanup became due during this milestone; finish this leaf/clean commit before the next SPINE.21
-cleanup leaf, then .5b.1. No background process or unsaved verification survives the handoff.
-Final ledger/retention/materialized defect census and staged doctrine receipt follow below.
-
-First staged gate correctly refused the new lesson because its task decline used an em dash;
-the required promotion: declined (<reason>) spelling now records the same routine decision.
-No gate or doctrine requirement is changed; rerun precedes commit.
-
-Final staged make gate:all doctrines green, rc=0. Ledger:nine arms/thirteen independent pointer
-verdicts pass0. Archive CLI:193 controls/184 full logical reads, rc=0. Retention:184 logical records,
-59 working Markdown,8950 decoded lines,691041 decoded bytes,347363 resident bytes, rc=0.
-Fresh materialized defect census:10 open/100 unique sealed/zero duplicates or overlap; D111 closed.
-Post-edit make check repeats native591/48groups/zero failures; publication9 and tree10/13/10/zero
-gaps complete in one set-e shell, rc=0. No verification handle remains live before commit.
+[Whole committed receipts](../history/stitchcad-devnotes-part378.md) retain every original verdict and limit.
 
 ### `G1-SLICE.5b.1a` — complete finite static signature evidence
 

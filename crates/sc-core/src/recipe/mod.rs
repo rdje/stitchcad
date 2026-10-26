@@ -45,6 +45,8 @@ pub use numeric::{FormulaNumericError, FormulaNumericValue};
 mod roots;
 
 mod arc;
+mod pi;
+mod trig;
 
 mod bound;
 pub use bound::{FormulaBindingValueError, FormulaBindingValueRule, FormulaBoundValue};

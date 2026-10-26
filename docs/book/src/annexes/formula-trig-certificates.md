@@ -1,7 +1,7 @@
 # Annex: investigating bounded trig rounding certificates
 
-Sin/cos/tan and atan/atan2 are specified but remain unimplemented. The following is a research
-result, not an available formula operation or an admitted runtime precision. Its owner is
+The sin/cos value kernel is implemented under the certificate and admitted plan below;
+tan and atan/atan2 remain unimplemented. Whole formula execution is still pending. The plan owner is
 G1-SLICE.5d.1.2.2.2; full execution also retains the other dependencies in the
 [execution plan](formula-execution-plan.md).
 
@@ -65,13 +65,13 @@ contiguous coverage, without importing the inverse-interval constructor. That co
 its separate derivation/oracle obligations. Work unit0278 completed all1,000,000 bands, and the
 independent reader passed all100 chunks, rc=0. A deliberately stopped one-chunk run was correctly
 refused as complete evidence before a verified resume. This closes the forward population step;
-the native kernel's error/workspace admission remains open. Never remove an active.lock merely to
+the native error/workspace plan and implementation are recorded below. Never remove an active.lock merely to
 bypass a running producer: after an interrupted process, establish that its recorded PID is gone
 before removing that project-owned lock and resuming.
 
 The complete forward certificate retains exact predicates, source identity and measured cost.
-A native kernel still needs its own complete error, termination and workspace argument, followed
-by focused integration evidence. A failed experimental gap cannot become a new language input
+A native kernel also needs its own complete error, termination and workspace argument, followed
+by focused integration evidence; sin/cos now provide those below. A failed experimental gap cannot become a new language input
 restriction or a silently substituted numeric answer.
 
 Inverse angle rounding has45 million half-microdegree thresholds in its first octant after
@@ -83,7 +83,7 @@ threshold population retains a separate practical resource obligation.
 
 ## Admitted sine/cosine runtime plan
 
-Work unit0279 admits the following algorithm plan; the native API is still pending. There is
+Work unit0279 admits the following algorithm plan; work unit0280 implements the native value API. There is
 no new dependency, input restriction or language precision limit. This closes only the forward
 resource-plan obligation, using the complete certificate above.
 
@@ -139,5 +139,6 @@ python3 -I -B docs/tasks/artifacts/formula_structure/sincos_runtime_plan.py
 It checks the exact envelope inequalities and factorial,14 direct-power/factorial Fraction
 enclosures,50 comparisons against a distinct signed eight-octant table, and two deliberately
 insufficient profiles. Full-width rational/turn/near-axis cases are included. These support the
-derivation; they are not a native implementation or cross-platform result. Production code and
-focused fixtures are next; source propagation, whole execution and broader integration stay owned.
+derivation; they are not themselves native or cross-platform evidence. The
+[native API and focused fixture results](formula-rationals.md#correctly-rounded-sine-and-cosine)
+are available separately; source propagation, whole execution and broader integration stay owned.
