@@ -737,30 +737,26 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal: 0330 D239 diagnosed/director detached-record ruling recorded; [whole scope/proofs](../history/stitchcad-devnotes-part485.md).
 - ID: `G1-SLICE.6.2.2.c.2.5.2`
   Status: `done`
-  Goal:0331 adopt approved D239 detached-record boundary across roadmap/book/decision/census and focused probes.
-  Own ROADMAP9/disposition, release/command chapters/glossary/decision, census C7/probes and live/task records.
-  Immutable content manifest keeps approval_binding kind=detached, never human values or self digest;
-  external immutable record names exact candidate identity/authenticated human/scope/act date. Transport
-  receipt is separate from content identity; acceptance views/late records do not rewrite sealed fields.
-  Preserve all nine roadmap field obligations, human-only grants, scope/ladder/unknown rules and no inheritance.
-  Census checks placement/type skeleton; targeted copied-book faults exercise misplaced/missing fields and
-  binding corruption without product approval/hash-algorithm adoption. Existing list diagnostics stay exact; own D240 duplicate manifest-token refusal/control, found in C1.
-  Own485 whole0330 task/0307 lesson/closed Piece task/prior checked statement-expression build receipts,
-  prior D239 proposal and full v0.4 disposition receipt,303 ledger and144 D239 diagnosis snapshot from120cc6e;
-  source/hash/public before
-  retirement. Condense only closed receipts, keep current guard/transport requirements and fixed caps.
-  Focus current census/release probe suite/historical witness/book/publication; no workspace/numeric campaign.
-  - [x] ROOT CAUSE (WHY + WHERE): ruled D239 placement lacked enforcement; C7 null red23/1 and D240 duplicate
-    token red24/1 reproduce actual guard gaps. Parsing-success flag/C1 uniqueness repair them; rc=0.
-  - [x] ADDRESSED: roadmap/book/glossary/command/decision and stable detached skeleton align; focused release
-    probes25/0, witness3, census9/6/8/0, book/publication76 chapters/95 entries pass; rc=0.
-  - [x] NO REGRESSION: original14 verdict arms retained; Rust unchanged120cc6e;485/303/144 whole Git/hash/public
-    exact. Fixed caps hold; no runtime hash/auth/date codec or real approval claimed; rc=0.
-  Commit0331; next .2.5.3 candidate inputs. D239/D240 closed at declared-spec/checker scope; full CI integration/pre-push.
-  New record promotion declined: indexed release decision already owns this ruling and its adopted field placement.
+  Goal:0331 detached-record boundary adopted, D239/D240 fixed; [whole scope/proofs](../history/stitchcad-devnotes-part486.md).
 - ID: `G1-SLICE.6.2.2.c.2.5.3`
-  Status: `pending`
-  Goal: concrete nonempty canonical artifact candidate-preparation inputs under the ruled identity boundary.
+  Status: `done`
+  Goal:0332 concrete PrepareRelease over nonempty ordered actual ArtifactPayloads and shared exact snapshot.
+  Own core command release/reexports, new focused release contract and artifact/book/publication/live records.
+  Preserve request order/repetition exactly; outputs form immutable content set after execution validates
+  actual artifact hashes/paths/companions, provenance/completeness/production policy and dispositions.
+  No caller-supplied approval fields/binding override; handler seals fixed detached binding and computes identity.
+  ReleasePayload derives command identity; wrapper carries exact Design/actor/revision claims, no mutation keys/groups.
+  Constructors allocate no artifacts, candidate/hash, record or privilege. Dates/approvals remain detached human-act output.
+  Own486 whole0331 task/oldest0308 lesson and304 ledger from5d3a9e2, exact Git/hash/public before retirement.
+  Focus new release plus retained artifact/query/catalog contracts, strict selected lint/fmt/book/publication.
+  Full CI stays G1 integration/pre-push; next .2.5.4 exact candidate/scope approval intent.
+  - [x] ROOT CAUSE (WHY + WHERE): candidate preparation needs actual typed artifact claims, not inferred
+    targets/files or approval metadata. Native release2/artifact5/query2/catalog2 pass11/0; rc=0.
+  - [x] ADDRESSED: nonempty ordered/repeated requests and exact context retained, identity derives generate;
+    selected strict lint/fmt/book/publication76 chapters/97 entries/census9/6/8/0 pass; rc=0.
+  - [x] NO REGRESSION: retained artifact/query/catalog green; no outputs/hash/approval/grant or defaulted
+    quantities.486/304 whole5d3a9e2 Git/hash/public exact; production/full-runtime owners unchanged; rc=0.
+  Commit0332; next .2.5.4 approval intent. Promotion declined: existing ruled contract; full CI integration/pre-push.
 - ID: `G1-SLICE.6.2.2.c.2.5.4`
   Status: `pending`
   Goal: exact candidate identity/scope human approval intent; claims grant no authenticated approval capability.

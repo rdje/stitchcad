@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0331 .6.2.2.c.2.5.2 adopts D239: fixed approval_binding kind=detached; separate identity/human/scope/date records.
-- Roadmap/book/decision/census agree; focused probes25/0 include null-parser and D240 duplicate-field reds/fixes.
-- Historical witness3/census9-6-8-0/book/publication76-95 pass0; Rust unchanged120cc6e, no actual approval.
--485/303/144 whole120cc6e source/hash/public exact0. NEXT .6.2.2.c.2.5.3 concrete release candidate request inputs.
-- G0 MostlyDone/closure unapproved; D239 adoption done. G1 In Progress6/18 unchanged; no director question pending.
+-0332 .6.2.2.c.2.5.3 adds PrepareRelease: explicit nonempty ordered ArtifactPayloads and exact shared snapshot.
+- Request order/repetition retained; execution checks outputs/companions/completeness/production policy before sealing.
+- Native release2/artifact5/query2/catalog2 + strict selected lint/fmt/book/publication76-97/census9-6-8-0 pass0.
+-486/304 whole5d3a9e2 source/hash/public exact0. NEXT .6.2.2.c.2.5.4 exact candidate/scope approval intent.
+- G0 MostlyDone/closure unapproved; G1 In Progress6/18 unchanged. No package/hash/approval/grant produced by schema.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

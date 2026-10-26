@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — explicit release candidate inputs
+
+0332 .6.2.2.c.2.5.3 adds nonempty PrepareRelease/ReleasePayload/CommandRelease with exact Design/actor/revision.
+Ordered artifact requests, including repetitions, reach execution unchanged; no default outputs or approval fields.
+Generate metadata is separate from approve; output collisions/completeness/production policy and sealing remain handlers.
+Native release2/artifact5/query2/catalog2, strict selected lint/fmt/book/publication76-97/census9-6-8-0 pass0.
+486/304 whole5d3a9e2 exact0. Promotion declined: existing ruled release contract. G1still6/18; approval intent next.
+
 ## _(2026-10-26 UTC)_ — detached approval boundary adopted
 
 0331 .6.2.2.c.2.5.2 aligns roadmap9/book/decision with approved D239: fixed binding, separate human/scope/date record.
@@ -196,16 +204,8 @@ implemented axes/breaks; status links/boundaries now align with the main chapter
 138 whole7618d20 Git/hash/public exact0. G1still5/18; scope review .3e.2 next. Promotion declined:
 existing complete-input/source-currentness rules; broad/native replay remains integration/pre-push.
 
-## _(2026-10-26 UTC)_ — unified current SizeSet input family
-
-0308 .4c.3d.3.3 wraps actual validated garment/MTM views in explicit SizeSetInputs variants. Common
-reference/record/path access delegates without cloning metadata or inferring provenance from labels,
-custom system or singleton count. A one-member garment chart stays Garment; original MTM refusal
-and canonical body/Ease sources survive. Native garment6+MTM6+breaks5 pass0; strict selected lint/
-fmt/book0. Bounded book review distinguishes D70/D228 identity, coverage, paths and shared snapshots
-from numeric/physical/global-currentness/storage/approval proof.444/445/280 whole478ffe7 Git/hash/
-public exact0. .3d implementation closes; .3e scope review next, profiles .4 later. G1still5/18.
-Promotion: existing SizeSet decision extended; broad verification remains its integration/pre-push owner.
+[Complete unified SizeSet input lesson](docs/history/stitchcad-devnotes-part486.md) retains
+its original family/provenance/current-reference contracts and focused native proof.
 
 [Complete MTM composite-input lesson](docs/history/stitchcad-devnotes-part485.md) retains
 its original body/Ease/Design-source, path and focused-proof boundaries.

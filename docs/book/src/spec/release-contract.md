@@ -79,6 +79,13 @@ ApprovePackage appends the record without rewriting the manifest or artifact set
 for delivery does not put its bytes into that content identity. Withdrawal appends another record;
 prior records remain readable. Values in a record cannot grant human authority by themselves.
 
+**Implemented candidate request schema.** sc-core `PrepareRelease::new(artifacts)` requires a nonempty
+ordered `Vec<ArtifactPayload>`; empty input returns `NoArtifacts`. Order and repetition stay explicit.
+`CommandRelease` binds `ReleasePayload::PrepareRelease` to the shared exact Design/actor/revision snapshot.
+Its identity derives release/generate metadata, without mutation retry/group fields or an approval grant.
+Execution must check actual outputs/companions, collisions/completeness and production policy/dispositions,
+then seal the fixed binding and compute identity. Constructors create no files, candidate or approval.
+
 - **Any input or artifact change creates a new candidate** and stale-ifies the prior approval. A stale
   approval is not deleted: it remains as a record of what was approved, when, by whom and over what
   scope, and it is *void* for the new candidate.

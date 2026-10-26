@@ -94,3 +94,5 @@ print artifact requests	spec/artifact-requests.md	crates/sc-core/src/command/pri
 authored print settings	spec/artifact-requests.md	crates/sc-core/src/command/pdf_print.rs	PdfPrintSettings	G1-SLICE.6.2.2.c.2.4.3	7.5
 canonical tech-pack request	spec/artifact-requests.md	crates/sc-core/src/command/tech_pack.rs	GenerateTechPack	G1-SLICE.6.2.2.c.2.4.4	7.5
 evaluated instance selection	spec/artifact-requests.md	crates/sc-core/src/command/tech_pack.rs	InstanceSelection	G1-SLICE.6.2.2.c.2.4.4	7.5
+release request snapshot	spec/release-contract.md	crates/sc-core/src/command/release.rs	CommandRelease	G1-SLICE.6.2.2.c.2.5.3	4.4
+candidate preparation inputs	spec/release-contract.md	crates/sc-core/src/command/release.rs	PrepareRelease	G1-SLICE.6.2.2.c.2.5.3	4.4

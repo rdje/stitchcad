@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0331 — detached approval boundary adopted
+## STITCHCAD-G1-0332 — concrete release candidate request inputs
 
-D239 ruling aligned across roadmap/book/decision and C7; human approval records bind unchanged candidate identity.
-Focused25/0 includes null and D240 duplicate-field refusals; witness3/census9-6-8-0/book/publication76-95 pass.
-485/303/144 exact120cc6e; .6.2.2.c.2.5.2 done, G1still6/18; actual release/approval implementation later.
+PrepareRelease retains explicit ordered nonempty artifact requests and shared exact snapshot; identity requires generate.
+Native2+5+2+2/strict lint/fmt/book/publication76-97/census9-6-8-0 pass0;486/304 exact5d3a9e2.
+.6.2.2.c.2.5.3 done; G1still6/18. Actual candidate generation/sealing/approval and output checks remain handlers.
 
 # Sealed archive — earlier slices
+
+| [part304](docs/history/stitchcad-changelog-part304.md) | whole0331 | 6 lines, 395 bytes, sha256:f116aa6d… |
 
 | [part303](docs/history/stitchcad-changelog-part303.md) | whole0330 | 6 lines, 369 bytes, sha256:1e0ab832… |
 

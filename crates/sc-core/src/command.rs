@@ -13,6 +13,7 @@ mod pdf_print;
 mod plot;
 mod print;
 mod query;
+mod release;
 mod snapshot;
 mod tech_pack;
 pub use artifact::{ArtifactPayload, CommandArtifact, DxfGrading, DxfTarget, ExportDxf};
@@ -36,6 +37,7 @@ pub use pdf_print::{
 pub use plot::ExportPlt;
 pub use print::ExportPdf;
 pub use query::{CommandQuery, CommandQueryContext, QueryPayload};
+pub use release::{CommandRelease, PrepareRelease, PrepareReleaseError, ReleasePayload};
 pub use snapshot::CommandSnapshotContext;
 pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};
 
