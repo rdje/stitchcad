@@ -438,16 +438,19 @@ and all earlier immutable backing windows remain unchanged.
 
 ### Current retention window
 
-Window16 captures48 whole raw records from `27bff4f`:94681B retained in a28399B payload.
-Source proof reports48 byte-identical files/0 missing-extra; public reads and materialization match.
-Prior15 backing windows remain byte-exact. Fixed64-file bound, reader and schema are unchanged.
-
-Window15's complete prior current receipt is retained whole in `docs/history/stitchcad-devnotes-part469.md`.
-All16 admitted window slots are now used. G1-SLICE.RETENTION-CAPACITY owns a bounded continuation
-before another packing is required; current record addresses/caps/immutability remain unchanged.
-The frozen `capture_window16.py` requires its original source HEAD; use the reader on later trees:
+All16 immutable v1 windows remain installed; window16's complete source/read/materialization receipt
+is preserved in `docs/history/stitchcad-devnotes-part493.md`. Logical addresses and fixed caps remain.
+Its frozen capture producer requires the original HEAD. Current readers can still run:
 
 ```bash
 bash scripts/history_archive.sh prove-source window16
 bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part468.md
 ```
+
+### Capacity continuation under implementation
+
+The historical0339 probe packs946 logical records plus33 exact v1 backing files into four candidate
+windows, preserving16 physical catalogs. Native tar recovers all979 members exactly; all existing
+caps fit, including3583027 decoded bytes with evidence and221328 active control bytes.
+This is a prototype: the installed v1 reader refuses it. G1-SLICE.RETENTION-CAPACITY.2 owns a versioned
+reader, immutable-byte migration and refusal/offline proofs before any live retirement. No ceiling rises.

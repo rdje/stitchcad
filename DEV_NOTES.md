@@ -3,6 +3,13 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — bounded retention continuation feasibility
+
+0339 capacity.1 sourcead3f8fc: native tar979 exact,946 records/33 old backings/16 unchanged catalogs in4 candidates.
+All unchanged caps fit: decoded3583027B, resident1966510B, active controls221328B; no live adoption.
+Guarded producer/syntax/book/pub77-103 pass0; v1 refusal1/unknownarg2 expected.493 whole source/hash/public0.
+Live v1 now947/64/16, no Rust change. Promotion: existing history decision; capacity.2 migration next, G1still6/18.
+
 ## _(2026-10-26 UTC)_ — native authority scope review
 
 0338 .6.3.3 closes core predicate scope; same request rechecks revoked/expired grants after earlier success.
@@ -171,13 +178,8 @@ still called intent pending; whole prior receipt retained468 and current paragra
 fb53a44; reuse31-test/strict lint/fmt proof. Book/five rendered anchors/navigation pass0;468/290/139
 wholefb53a44 Git/hash/public exact0, history63/64. G1still5/18; .4c.5 next. Promotion: SizeSet decision extended.
 
-## _(2026-10-26 UTC)_ — immutable SizeSet resolution intent
-
-0317 .4c.4.4 retains exact origin/profile/target plus ordered declarations across all four domains/five states.
-Source/candidate bindings revalidate; duplicate/cross-record aliases refuse. Empty/unresolved intent stays
-explicit, original inputs unchanged. Garment21+MTM10 pass0; selected strict lint/fmt/book0. No combined
-profile effect/application/evidence truth claim.466/467/289 whole2165f7f Git/hash/public exact0.
-G1still5/18; .4.5 scope review next. Promotion: existing SizeSet decision; broad gates remain integration/pre-push.
+[Complete immutable profile intent lesson](docs/history/stitchcad-devnotes-part493.md) retains
+original four-domain/five-state validation and numeric/profile/approval boundaries.
 
 [Complete0316 cleanup lesson](docs/history/stitchcad-devnotes-part492.md) retains
 exact deletion/preservation receipts, due date and next feature owner.

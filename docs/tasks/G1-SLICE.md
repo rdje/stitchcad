@@ -475,7 +475,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal:0319 window16 whole48/source/read/materialization/prior15/book0; [whole scope/proofs](../history/stitchcad-devnotes-part470.md).
   Commit: STITCHCAD-G1-0319.
 - ID: `G1-SLICE.RETENTION-CAPACITY`
-  Status: `pending`
+  Status: `in_progress`
   Goal: P1 design/verify bounded retention continuation before the next packing after16; current schema refuses17.
   Preserve immutable records/manifests, logical addresses and all independent caps; do not silently raise bounds.
   Trigger: before future required seal exceeds64 with16 windows registered; product slices proceed meanwhile.
@@ -483,6 +483,32 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   [retained471](../history/stitchcad-devnotes-part471.md); independent of completed product-review acceptance.
   Candidate for falsification: flat re-packing of logical records plus byte-exact legacy control/payload
   evidence into fresh bounded packets; prove every existing cap before adoption. No protocol change is adopted by this structural review.
+- ID: `G1-SLICE.RETENTION-CAPACITY.1`
+  Status: `done`
+  Goal:0339 falsify bounded v2 flat re-packing at committedad3f8fc before choosing a migration.
+  Own guarded historical capacity probe under artifacts/history_archive and one fresh target fixture.
+  Preserve logical record bytes, original v1 master/manifests/payloads as opaque evidence and16 unchanged
+  physical catalogs. Prototype active manifests/payloads/catalogs are separate same-volume outputs only.
+  Count all bytes including legacy evidence against decoded/resident limits; preserve all per-file/member/
+  window/control/working bounds. Native OS tar via PATH is a required read-only independent archive oracle.
+  Actual current reader must refuse candidate v2; no live schema/guard/backing change or adoption here.
+  Own493 whole0338 task/ledger/oldest0317 lesson and closed proof receipts if book room requires; exact
+  source/hash/public before retirement. This uses last raw slot; .2 must pack committed source before another seal.
+  Next .2 implements/tests explicit v1->v2 immutable-byte transition only if measured caps fit; otherwise
+  own a concrete blocker/alternative. No cap rise or silent committed-window exception. Full CI pre-push.
+  - [x] ROOT CAUSE (WHY + WHERE): v1 has16 immutable windows, source63 raw slots; new format refuses1.
+    Guarded source-bound prototype preserves every original member; native OS tar979 exact, rc=0.
+  - [x] ADDRESSED: four candidate windows keep all existing caps: decoded3583027B/47932 lines,
+    resident1966510B, active controls221328B, max gzip851673B. Probe failures0; rc=0.
+  - [x] NO REGRESSION: original source bytes unchanged,493 whole Git/hash/public exact; live v1
+    census947/64/16, book/pub77/103 and syntax pass. Unknown arg2/stdout empty expected; rc=0.
+  Commit0339; existing history decision records feasibility/draft transition, no live protocol adopted.
+  Frozen producer retention_capacity_probe.py requiresad3f8fc; output target/history_capacity/0339-final/report.json.
+  Next capacity.2 before another seal; immutable-byte compatibility/caps/offline/source controls are mandatory.
+- ID: `G1-SLICE.RETENTION-CAPACITY.2`
+  Status: `pending`
+  Goal: implement admitted bounded reader/transition, exact old-byte source/public/offline/materialization
+  proofs and refusal controls, then copy/verify/use/delete only source-pinned backing/raw files; retain all caps.
 - ID: `G1-SLICE.4c.5`
   Status: `done`
   Goal:0320 SizeSet scope/current25/unchanged31/book0; [whole scope/proofs](../history/stitchcad-devnotes-part472.md).
@@ -758,21 +784,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0337 scoped trusted-host authorization/D242-D243 fixed; [whole scope/proofs](../history/stitchcad-devnotes-part492.md).
 - ID: `G1-SLICE.6.3.3`
   Status: `done`
-  Goal:0338 close current native authority scope against command4.4/7.8/10 and actual trusted-source interfaces.
-  Own final native authorization freshness control: same immutable request must recheck revoked/expired host
-  state, not reuse a prior successful snapshot. No handler/effect or transport-authentication claim.
-  Core library unchanged6ad19c7; retain other13 focused proofs, rerun changed auth target/strict lint/fmt.
-  Own existing authority-book review scope,492 whole0337 task/ledger/oldest0316 lesson and closed D242/D243
-  from6ad19c7; source/hash/public equality before retirement. Book/publication and live pointers stay aligned.
-  Close .6.3 predicate scope only. .6.4 actual aggregate/effects and .9/.10 trusted providers remain owners.
-  Capacity P1 next before remaining raw slots strand the two-step retention transition. Full CI integration/pre-push.
-  - [x] ROOT CAUSE (WHY + WHERE): authorization describes one host snapshot; same request must recheck
-    current revocation/time. Changed native auth8/0 watches first success, revoked/expired refusals and recovery; rc=0.
-  - [x] ADDRESSED: .6.3 scope/permission/trust boundaries match actual core and canonical contracts;
-    selected strict lint/fmt/book/publication77/103 pass. No provider/handler/effect claimed; rc=0.
-  - [x] NO REGRESSION: libraries byte-identical6ad19c7/other13 focused proofs retained;492 Git/hash/public
-    exact and retention946 logical/63 working/16 windows pass. G1still6/18; rc=0.
-  Commit0338; native .6.3 done. Promotion declined: existing authority contract. Capacity next, then .6.4.
+  Goal:0338 native authority scope/freshness reviewed; [whole scope/proofs](../history/stitchcad-devnotes-part493.md).
 - ID: `G1-SLICE.6.4`
   Status: `pending`
   Goal: privately mutated design aggregate; actual reference/pair/sewing/pocket/closure/layer readiness.

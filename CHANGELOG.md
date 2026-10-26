@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0338 — current native authority scope reviewed
+## STITCHCAD-G1-0339 — bounded retention continuation measured
 
-- Same-request decisions recheck revocation/expiry; actual providers/handlers/effects retain their owners.
-- Changed auth8/0, unchanged libraries/other13 proofs retained; strict lint/fmt/book/pub77-103 pass0.
--492 whole6ad19c7 exact0, retention946/63/16 pass0. .6.3 scope done; capacity then .6.4, G1still6/18.
+- Sourcead3f8fc prototype packs946 records/33 exact backings into4 windows, preserves16 catalogs; native tar979 exact.
+- All existing caps fit; guarded producer/syntax/book/pub77-103 pass0, v1 refusal1/unknownarg2 expected.
+-493 whole source/hash/public0; live947/64/16 unchanged protocol. Draft migration contract recorded, capacity.2 next.
 
 # Sealed archive — earlier slices
+
+| [part493](docs/history/stitchcad-devnotes-part493.md) | whole0338 ledger/task and prior lesson/receipt | 46 lines, 3481 bytes, sha256:565061ce… |
 
 | [part492](docs/history/stitchcad-devnotes-part492.md) | whole0337 ledger/task and prior lessons/proofs | 51 lines, 4461 bytes, sha256:c3a44f28… |
 

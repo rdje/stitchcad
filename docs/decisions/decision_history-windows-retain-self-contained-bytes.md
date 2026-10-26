@@ -33,3 +33,47 @@ in an isolated repository-volume fixture before the exact source copies are remo
 checks consume the reconstructed logical inventory and retain their mutation arms. Source identity,
 content identity, coverage, navigation and size are distinct claims. A digest cannot establish semantic
 truth, and this tooling does not settle D40's ledger-agnostic coverage/pointer obligations.
+
+## Capacity feasibility0339
+
+All16 v1 slots are occupied. The source-ad3f8fc prototype retains946 logical records and33 exact
+old master/manifest/payload files;16 original catalogs stay physical. Four candidate windows contain
+979 members. Native OS tar listing/content matches every original byte, independently of the writer.
+Including opaque evidence, decoded pressure is3583027B/47932 lines; resident1966510B, active controls
+221328B, maximum payload851673B. All existing independent caps fit this snapshot; growth remains bounded.
+The installed v1 reader correctly refuses the prototype. No schema/guard/live backing changed.
+G1-SLICE.RETENTION-CAPACITY.2 must implement a versioned transition, preserve logical addresses and
+original backing/catalog bytes, maintain offline retrieval, and verify before exact source retirement.
+The guarded producer is retention_capacity_probe.py under docs/tasks/artifacts/history_archive; it is
+historical, source-HEAD-bound and must never be rerun against a later HEAD. No cap rise is adopted.
+
+### Draft transition requirements for capacity.2
+
+- The v2 master has exactly version/windows/legacy_catalogs. Active windows remain at most16;
+  legacy_catalogs has the16 original catalog path/lines/bytes/sha256 rows, pinned at transition.
+- Active manifests retain the v1 fields with version2. Each member adds kind=record or backing;
+  at most256 members, bounded paths/integers and exact full-file digest remain mandatory.
+- Records keep their original logical names and bytes. Backings retain the original v1 master,
+  sixteen manifests and sixteen compressed payloads as33 opaque byte members. Default decoding is
+  one flat level; original payloads are evidence, not recursive active compression containers.
+- Keep original catalogs physically present, byte-exact against pinned master rows. New catalogs
+  cover the new active manifests. Their bytes and every opaque backing count in total decoded/
+  resident pressure; active controls/payloads retain their separate existing limits.
+- Keep public list/read/materialize and inventory(root)'s return shape. A separate read-backing
+  operation may expose exact old files. No historical Git dependency is added to ordinary reads.
+- v1 remains readable. Transition guard must reconstruct every committed v1 control/payload and
+  compare exact catalogs before permitting physical relocation. Future guards preserve every
+  committed v2 active manifest/payload/catalog and the original catalog descriptor rows unchanged.
+- Optional source proofs retain original legacy-window comparisons. Initial repack windows share
+  one committed v1 source revision: verify the complete cohort against that source's logical records,
+  all33 original backing files and16 catalogs. Future ordinary captures compare committed raw input.
+- Implement refusal controls for both schemas, paths, kinds, membership, digests, budgets and immutable
+  relocation. Adapt current archive consumers to distinguish record/backing rows and legacy catalogs;
+  frozen capture_window14/15/16 and this historical capacity probe must remain unchanged.
+- In a repository-volume fixture, prove full public/offline retrieval and materialization first.
+  Then install the verified candidate, verify again, and delete only source-pinned original paths.
+  At64 raw files, pack the committed baseline before creating the migration's next retained record.
+
+These are implementation requirements, not permission to bypass the current guard. The actual
+migration must remeasure its newer source, including0339's retained record; prototype metrics apply
+only to ad3f8fc. No broader or unbounded retention capacity is claimed.
