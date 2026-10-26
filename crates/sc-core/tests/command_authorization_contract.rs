@@ -485,3 +485,70 @@ fn duplicate_current_grant_identity_cannot_hide_revocation_after_an_earlier_succ
     }
     Ok(())
 }
+
+#[test]
+fn subsequent_decisions_recheck_revocation_and_time_instead_of_reusing_prior_success(
+) -> Result<(), Box<dyn std::error::Error>> {
+    let request = query(agent());
+    let active = CommandGrant::new(
+        Id::from_bits(19),
+        agent(),
+        vec![P::Inspect],
+        scope(vec![C::GetPieceList])?,
+        Status::Active,
+    )?;
+    let mut host = Host::new(Some(agent()), vec![active.clone()]);
+    let prior = authorize_command(&request, Mode::Execute, &host)?;
+    host.grants = vec![CommandGrant::new(
+        Id::from_bits(19),
+        agent(),
+        vec![P::Inspect],
+        scope(vec![C::GetPieceList])?,
+        Status::Revoked,
+    )?];
+    assert_eq!(
+        authorize_command(&request, Mode::Execute, &host),
+        Err(Denial::NoMatchingGrant {
+            actor: agent(),
+            design: Id::from_bits(1),
+            command: C::GetPieceList,
+            required: P::Inspect,
+            rejections: vec![CommandGrantRejection {
+                grant: Id::from_bits(19),
+                reason: Refusal::Revoked
+            }],
+        })
+    );
+    host.grants = vec![active];
+    host.now = at(20);
+    assert_eq!(
+        authorize_command(&request, Mode::Execute, &host),
+        Err(Denial::NoMatchingGrant {
+            actor: agent(),
+            design: Id::from_bits(1),
+            command: C::GetPieceList,
+            required: P::Inspect,
+            rejections: vec![CommandGrantRejection {
+                grant: Id::from_bits(19),
+                reason: Refusal::Scope(CommandScopeRefusal::Expired {
+                    at: at(20),
+                    valid_until: at(20)
+                })
+            }],
+        })
+    );
+    assert_eq!(host.reads.get(), 3);
+    assert_eq!(
+        prior.checked_at(),
+        at(15),
+        "earlier decision describes only its original observation"
+    );
+    assert!(std::ptr::eq(prior.request(), &request));
+    host.now = at(19);
+    assert_eq!(
+        authorize_command(&request, Mode::Execute, &host)?.checked_at(),
+        at(19)
+    );
+    assert_eq!(host.reads.get(), 4);
+    Ok(())
+}

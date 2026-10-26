@@ -38,6 +38,9 @@ preview/commit execution and human approval remain separate work.
 
 ## Core authorization
 
+Repeated decisions re-read current host state. Native freshness controls refuse revoked or expired
+grants after an earlier success for the same request; the earlier decision remains only its original snapshot.
+
 `CommandAuthoritySource` is a trusted host dependency, separate from command input. Its one consistent
 `CommandAuthoritySnapshot` supplies the authenticated actor/principal, trusted observation time and
 current human-issued grants. Adapters must establish session identity and valid human delegation;

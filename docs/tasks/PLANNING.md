@@ -1097,18 +1097,8 @@ Closed D239/D240 reports and complete0331 repair evidence remain whole in
 Closed D241 command overview report and0335 verification remain whole in
 [part491](../history/stitchcad-devnotes-part491.md). Current core ownership/input boundary remains.
 
-## D242 — local reference geometry tail deferred completed product static acceptance
-
-Reproducecd41993 formula-static-validation D140 tail: complete product static recipe acceptance remains .5b.4.
-Actual whole checked-recipe APIs and the same chapter document implemented acceptance. Root: historical local
-reference boundary was not reconciled after product closure; impact is a false implementation frontier.
-Owner G1-SLICE.6.3.2, P2 fixed0337: tail now distinguishes implemented static acceptance from pending
-selector/operation execution. Whole prior receipts retained491; scoped publication/book checked with
-actual source registry, no runtime/geometry claim. Closed; final command results in owning leaf.
-
-D243 — duplicate grant identities hid revocation behind an earlier authorization success; actual new
-native control failed0/1, rc101. Owner G1-SLICE.6.3.2, P1 fixed0337: reject whole ambiguous snapshot
-before success; both record orders are watched. Final results in owner. No real grant/approval occurred.
+Closed D242/D243 reports and0337 verification remain whole in
+[part492](../history/stitchcad-devnotes-part492.md); current authorization rejects duplicate grant IDs.
 
 ## Active continuity followup
 

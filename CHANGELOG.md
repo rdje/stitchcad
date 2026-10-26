@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0337 — core scoped authorization against trusted host state
+## STITCHCAD-G1-0338 — current native authority scope reviewed
 
-- Verified actor/principal and one live exact permission/scope grant required; agent approval refuses, preview needs inspect.
-- Native auth7/scope3/request2/catalog2/release6 pass20/0, strict lint/fmt/book/pub77-103 pass0; D242/D243 fixed.
--491 wholecd41993 exact0. Trusted adapters/handlers remain; G1still6/18 notes updated, .6.3.3 review next.
+- Same-request decisions recheck revocation/expiry; actual providers/handlers/effects retain their owners.
+- Changed auth8/0, unchanged libraries/other13 proofs retained; strict lint/fmt/book/pub77-103 pass0.
+-492 whole6ad19c7 exact0, retention946/63/16 pass0. .6.3 scope done; capacity then .6.4, G1still6/18.
 
 # Sealed archive — earlier slices
+
+| [part492](docs/history/stitchcad-devnotes-part492.md) | whole0337 ledger/task and prior lessons/proofs | 51 lines, 4461 bytes, sha256:c3a44f28… |
 
 | [part491](docs/history/stitchcad-devnotes-part491.md) | whole0336 ledger/task and prior lessons/proofs | 107 lines, 9103 bytes, sha256:8743e7d7… |
 

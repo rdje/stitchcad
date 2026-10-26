@@ -746,7 +746,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Status: `done`
   Goal:0335 shared typed core request/input scope complete; [whole scope/proofs](../history/stitchcad-devnotes-part490.md).
 - ID: `G1-SLICE.6.3`
-  Status: `in_progress`
+  Status: `done`
   Goal: core-scoped authority/grant validation, human-only approval, actual actor/principal and denial tests.
   Children .1 exact command/Design/time scopes and narrowing; .2 trusted-source identity/grant checks;
   .3 coupled authority acceptance before aggregate execution. No transport authentication claim without its provider.
@@ -755,30 +755,24 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0336 exact command/Design/time scope and narrowing; [whole scope/proofs](../history/stitchcad-devnotes-part491.md).
 - ID: `G1-SLICE.6.3.2`
   Status: `done`
-  Goal:0337 core authorization against one trusted host snapshot, separate from submitted actor claims.
-  Own core grant/authorization modules/reexports and focused tests, existing scoped-command book/map/live records.
-  Snapshot supplies authenticated actor/principal, trusted time and authoritative grants; no wire/session provider
-  is implemented or inferred. Exact actor-role/principal binding, explicit permission and same-grant Design/
-  command/time/live status must all hold. Agents cannot hold approve; only a verified human can request it.
-  Mutation preview requires inspect, execution uses catalog permission; no preview escape for other classes.
-  Return readonly snapshot decision, not cached execution/approval proof. Source/subject/revision/evidence checks
-  and effects remain handlers; transport identity/grant provisioning retain .9/.10 adapter ownership.
-  Own491 whole0336 task/ledger,0314–0315 lessons, closed input parent goals, reference static receipts/D241
-  fromcd41993; verify original Git/hash/public before retirement. D242 stale local geometry-reference tail
-  defers completed product static recipe acceptance; log/fix from actual checked interfaces, no broader audit.
-  D243 own duplicate current grant-ID ambiguity: a first successful record can hide a conflicting revoked
-  record; reproduce with actual authorization target, then reject the inconsistent snapshot before success.
-  Native authorization/scope/request/catalog/release and strict selected lint/fmt/book/publication; broad CI later.
-  - [x] ROOT CAUSE (WHY + WHERE): claims/catalog confer no authority; source snapshot and complete single-
-    grant checks are required. Auth negative cases pass7/0, rc=0; D243 red0/1 rc101 exposed hidden revocation.
-  - [x] ADDRESSED: verified binding, explicit permission/live scope, human-only approval, inspect preview and
-    duplicate-ID refusal pass native auth7/scope3/request2/catalog2/release6,20/0; rc=0.
-  - [x] NO REGRESSION: original scopes/requests/catalog/release green; strict selected lint/fmt/book/pub77/103,
-    491 source/hash/public equality pass. D242 corrected, source/transport/effects remain explicit; rc=0.
-  Commit0337; .6.3.3 combined authority review next. Promotion: existing command decision; full CI integration/pre-push.
+  Goal:0337 scoped trusted-host authorization/D242-D243 fixed; [whole scope/proofs](../history/stitchcad-devnotes-part492.md).
 - ID: `G1-SLICE.6.3.3`
-  Status: `pending`
-  Goal: combined authority acceptance and current contract review before .6.4 design aggregate execution.
+  Status: `done`
+  Goal:0338 close current native authority scope against command4.4/7.8/10 and actual trusted-source interfaces.
+  Own final native authorization freshness control: same immutable request must recheck revoked/expired host
+  state, not reuse a prior successful snapshot. No handler/effect or transport-authentication claim.
+  Core library unchanged6ad19c7; retain other13 focused proofs, rerun changed auth target/strict lint/fmt.
+  Own existing authority-book review scope,492 whole0337 task/ledger/oldest0316 lesson and closed D242/D243
+  from6ad19c7; source/hash/public equality before retirement. Book/publication and live pointers stay aligned.
+  Close .6.3 predicate scope only. .6.4 actual aggregate/effects and .9/.10 trusted providers remain owners.
+  Capacity P1 next before remaining raw slots strand the two-step retention transition. Full CI integration/pre-push.
+  - [x] ROOT CAUSE (WHY + WHERE): authorization describes one host snapshot; same request must recheck
+    current revocation/time. Changed native auth8/0 watches first success, revoked/expired refusals and recovery; rc=0.
+  - [x] ADDRESSED: .6.3 scope/permission/trust boundaries match actual core and canonical contracts;
+    selected strict lint/fmt/book/publication77/103 pass. No provider/handler/effect claimed; rc=0.
+  - [x] NO REGRESSION: libraries byte-identical6ad19c7/other13 focused proofs retained;492 Git/hash/public
+    exact and retention946 logical/63 working/16 windows pass. G1still6/18; rc=0.
+  Commit0338; native .6.3 done. Promotion declined: existing authority contract. Capacity next, then .6.4.
 - ID: `G1-SLICE.6.4`
   Status: `pending`
   Goal: privately mutated design aggregate; actual reference/pair/sewing/pocket/closure/layer readiness.

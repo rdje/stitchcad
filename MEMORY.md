@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0337 .6.3.2 enforces exact verified actor/principal and one live permission/Design/command/time grant.
-- Agents cannot hold/issue approve; mutation preview requires inspect. Decisions are snapshots, not effects.
-- Native auth7/scope3/request2/catalog2/release6 pass20/0; strict lint/fmt/book/pub77-103 pass0. D242/D243 fixed.
--491 wholecd41993 source/hash/public exact0; retention62 working/16 windows. NEXT .6.3.3 review; capacity P1.
-- G0 MostlyDone/closure unapproved; G1 In Progress6/18 unchanged, notes updated. No transport/provider/handler claim.
+-0338 .6.3.3 closes native authority predicate scope: same request rechecks revoked/expired host grants.
+- Changed auth8/0; libraries identical6ad19c7/other13 proofs retained. Strict lint/fmt/book/pub77-103 pass0.
+-492 whole6ad19c7 source/hash/public exact0; retention946 logical/63 working/16 immutable windows pass0.
+- NEXT RETENTION-CAPACITY before feature continuation can strand required seals. Then .6.4 aggregate/effects.
+- G0 MostlyDone/closure unapproved; G1 In Progress6/18 unchanged. Transport providers/handlers remain pending.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

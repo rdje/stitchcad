@@ -82,7 +82,7 @@ than roadmap clauses is expected (a tree may split one clause into several leave
 **`G1-SLICE.4c.3`** chart/body/break structural input scope closes in0310 after D230/D231 repairs.
 Current SizeSet inputs preserve explicit garment/MTM provenance, canonical sources and typed paths.
 0321 closes structural measurement/Ease/SizeSet acceptance; G1 progress6/18.
-0337 enforces trusted-host core authorization; next .6.3.3 reviews current scope before aggregate execution.
+0338 closes native .6.3 authority scope; retention capacity P1 next at63/64 raw slots, then .6.4 aggregate.
 Capacity continuation G1-SLICE.RETENTION-CAPACITY is P1 before another packing beyond16 slots.
 Command-class schemas follow canonical inputs.
 [Execution frontier](tasks/G1-SLICE-execution.md) remains .5e.2.4; SizeSet axes and paired split schema are implemented.

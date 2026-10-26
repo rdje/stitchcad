@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — native authority scope review
+
+0338 .6.3.3 closes core predicate scope; same request rechecks revoked/expired grants after earlier success.
+Changed auth8/0, libraries identical6ad19c7/other13 proofs retained; strict lint/fmt/book/pub77-103 pass0.
+492 whole6ad19c7 exact Git/hash/public0; retention946 logical/63 working/16 immutable windows pass0.
+No provider, handler, source/revision/evidence or effect proof claimed. .6.4 owns aggregate execution.
+Promotion declined: existing authority decision; capacity P1 next before more seals. G1still6/18.
+
 ## _(2026-10-26 UTC)_ — trusted-host core authorization
 
 0337 .6.3.2 checks one verified session/time/grant snapshot; exact actor/principal and same-grant scope/permission.
@@ -171,14 +179,8 @@ explicit, original inputs unchanged. Garment21+MTM10 pass0; selected strict lint
 profile effect/application/evidence truth claim.466/467/289 whole2165f7f Git/hash/public exact0.
 G1still5/18; .4.5 scope review next. Promotion: existing SizeSet decision; broad gates remain integration/pre-push.
 
-## _(2026-10-26 UTC)_ — due generated-artifact cleanup
-
-0316 .4c.4.cleanup5 applies fresh35e2650 plan with explicit idle-CUA after D232 repair.4 trees/1046
-strays remove1163 files/10476333108B. Before regeneration, independent1050-path residue and tracked
-fingerprint checks pass0;52008 preserved entries incl15 symlink records/certificate manifests match.
-1032 unsafe/uncertain entries retained; built deps/stores/proof payloads untouched. Book rebuild0.
-464/465/288 whole35e2650 Git/hash/public exact0. G1still5/18; .4c.4.4 aggregate next; due2026-10-27 13:40UTC.
-Promotion declined: recurring existing cleanup policy. No Rust change; original feature27-test proof retained.
+[Complete0316 cleanup lesson](docs/history/stitchcad-devnotes-part492.md) retains
+exact deletion/preservation receipts, due date and next feature owner.
 
 [Complete explicit cleanup attestation lesson](docs/history/stitchcad-devnotes-part491.md) retains
 D232 reproduction/repair, original dispatch/protection receipts and SPINE.23r boundary.
