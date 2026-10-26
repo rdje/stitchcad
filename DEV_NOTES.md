@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — canonical tech-pack source request
+
+0328 .6.2.2.c.2.4.4 keeps nonempty distinct Instance IDs in authored order with exact profile and Design snapshot.
+Design owns authored knowledge; evaluated sources retain actual content/provenance checks. No report edits,
+latest-instance fallback or fabricated Order quantities; piece cut quantities retain canonical cut-plan sources.
+Native tech-pack2/print3/artifact4/query2/catalog2, selected strict lint/fmt/book/publication76-95 pass0.
+482/300 whole48a06ba exact0. Promotion declined: existing canonical tech-pack contract; G1still6/18, review next.
+
 ## _(2026-10-26 UTC)_ — plotter and vector-print requests
 
 0327 .6.2.2.c.2.4.3 retains PLT profile/result bindings and PDF logical/factory inputs plus authored print choices.
@@ -208,16 +216,8 @@ source master14 while book Current label13 (transition governance delta0); old n
 current15 guidance/book0 now correct. No product behavior/count change; G1still5/18, composition next.
 Promotion declined: existing archive protocol, identities/catalogs hold storage evidence; no new policy.
 
-## _(2026-10-26 UTC)_ — explicit required break coverage
-
-0304 .4c.3d.2 separates ordered required axis/dimension bindings from available declarations. Partial
-or empty drafts preserve absence; current coverage reports every exact missing cell without zero or
-chart arithmetic. Duplicate requirements/ids/cells and undeclared dimensions refuse. Singleton grading
-refuses even with no gaps. Unknown deltas remain present declarations whose original reads still fail;
-reordered membership/current binding errors precede gap reporting. Shared actual fixture and context
-validation preserve prior contracts. Native collection5+declaration5 pass0; selected strict lint/fmt/book0.
-435/436/276 whole28caa22 Git/hash/public exact0. G1still5/18; composite/path inputs .3d.3 next. Working
-archive64 requires window15 before more retirement. Promotion: existing SizeSet decision extended.
+[Complete required-break coverage lesson](docs/history/stitchcad-devnotes-part482.md) retains
+its original draft/explicit-gap/current-source contracts, checks and promotion.
 
 [Complete signed-break and approved-key lessons](docs/history/stitchcad-devnotes-part480.md)
 retain their original D228 contract, numeric-state boundaries and focused proof.

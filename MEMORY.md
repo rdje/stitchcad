@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0327 .6.2.2.c.2.4.3 adds PLT profile-result and explicit validated PDF print choices; same artifact closure inputs.
-- A0 or tiled A3/A4, orientation/order, exact positive overlap/square; actual rendering/scale/unknown policy deferred.
-- Native print-plot3/artifact4/query2/catalog2 + strict selected lint/fmt/book/publication76-93 pass0; D238 wording fixed.
--481/299/142 whole516895d source/hash/public exact0. NEXT .6.2.2.c.2.4.4 canonical tech-pack inputs.
-- G1 In Progress6/18 unchanged; full engine/handlers/serialization/evidence/approval remain owned later.
+-0328 .6.2.2.c.2.4.4 adds canonical tech-pack source requests: ordered actual instances/profile and Design snapshot.
+- Empty/repeated inventories refuse; no report edits or inferred Order quantities. Actual content/provenance checks deferred.
+- Native tech-pack2/print3/artifact4/query2/catalog2 + strict selected lint/fmt/book/publication76-95 pass0.
+-482/300 whole48a06ba source/hash/public exact0. NEXT .6.2.2.c.2.4.5 combined artifact schema review.
+- G1 In Progress6/18 unchanged; serialization/handlers/policy/evidence/approval and full engine remain owned later.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.

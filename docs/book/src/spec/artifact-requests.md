@@ -1,6 +1,6 @@
 # Typed artifact requests
 
-sc-core provides DXF, PLT and PDF request schemas and per-artifact uncertainty inspection.
+sc-core provides DXF, PLT, PDF and tech-pack request schemas plus per-artifact uncertainty inspection.
 [Interchange](interchange-dialects.md) defines future writer behavior.
 
 ## Request one named DXF target
@@ -41,7 +41,7 @@ It names the configuration; a format token or all Design unknowns cannot substit
 A future handler must compute and record that closure. This constructor creates no files or observable cache.
 
 Closure inspection requires inspect; generation requires generate. Both preserve exact snapshot claims.
-Tech-pack requests follow; constructors grant no authority and execute no handler.
+Constructors grant no authority and execute no handler.
 
 ## Registered graded carriages
 
@@ -92,3 +92,14 @@ These are authored output choices. They certify neither page fit nor printer cal
 The writer must preserve 1:1 geometry, registration marks, page order and piece identity; a nonfitting
 A0 piece refuses instead of silent fitting. Rendering, physical scale checks and unknown-value policy
 remain later work. PLT/PDF closure queries carry the same concrete input/settings as generation.
+
+## Canonical tech-pack inputs
+
+`GenerateTechPack::new(InstanceSelection::new(ids)?, profile)` names ordered evaluated sources and an
+explicit logical/factory selection. `NoInstances` refuses empty input; `DuplicateInstance` retains the
+first repeated id/positions. Lookup, provenance and content coverage remain execution checks.
+
+The shared Design snapshot supplies authored materials/trims, notes, stitch/SPI and POM knowledge;
+actual Instances supply evaluated content. The request carries no report edits or invented values.
+Piece cut quantities come from cut plans. Unavailable Order size-run quantities remain unresolved.
+Generation/closure retain the same inputs; required missing content must produce a diagnostic.

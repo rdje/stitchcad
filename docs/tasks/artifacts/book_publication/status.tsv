@@ -92,3 +92,5 @@ graded artifact size selection	spec/artifact-requests.md	crates/sc-core/src/comm
 plot artifact requests	spec/artifact-requests.md	crates/sc-core/src/command/plot.rs	ExportPlt	G1-SLICE.6.2.2.c.2.4.3	7.5
 print artifact requests	spec/artifact-requests.md	crates/sc-core/src/command/print.rs	ExportPdf	G1-SLICE.6.2.2.c.2.4.3	7.5
 authored print settings	spec/artifact-requests.md	crates/sc-core/src/command/pdf_print.rs	PdfPrintSettings	G1-SLICE.6.2.2.c.2.4.3	7.5
+canonical tech-pack request	spec/artifact-requests.md	crates/sc-core/src/command/tech_pack.rs	GenerateTechPack	G1-SLICE.6.2.2.c.2.4.4	7.5
+evaluated instance selection	spec/artifact-requests.md	crates/sc-core/src/command/tech_pack.rs	InstanceSelection	G1-SLICE.6.2.2.c.2.4.4	7.5

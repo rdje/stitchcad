@@ -14,6 +14,7 @@ mod plot;
 mod print;
 mod query;
 mod snapshot;
+mod tech_pack;
 pub use artifact::{ArtifactPayload, CommandArtifact, DxfGrading, DxfTarget, ExportDxf};
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
@@ -36,6 +37,7 @@ pub use plot::ExportPlt;
 pub use print::ExportPdf;
 pub use query::{CommandQuery, CommandQueryContext, QueryPayload};
 pub use snapshot::CommandSnapshotContext;
+pub use tech_pack::{GenerateTechPack, InstanceSelection, InstanceSelectionError};
 
 /// The five command classes fixed by the shared command-layer contract.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]

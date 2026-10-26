@@ -751,27 +751,26 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal:0326 explicit registered graded DXF inputs; [whole scope/proofs](../history/stitchcad-devnotes-part481.md).
 - ID: `G1-SLICE.6.2.2.c.2.4.3`
   Status: `done`
-  Goal:0327 PLT profile-result and explicit validated PDF print-setting requests; same actual closure payloads.
-  Own core command plot/print/print-settings/artifact/reexports and focused format/artifact/query/catalog tests.
-  PLT retains instance/profile/result supplying actual pen map/declared scale; no copied observed pen values.
-  PDF retains instance, explicit logical/factory selection, A0 or tiled A3/A4, portrait/landscape, authored
-  tile overlap/order and scale-square size. Positive square/overlap required; no arbitrary max or fit/scale.
-  Row-major/column-major are explicit choices; registration marks/piece identity are required writer output.
-  D238 membership final frontier ambiguously defers implemented profile intent; distinguish actual application.
-  Own artifact book/current membership wording/publication and481 whole0326 task/prior metadata/membership
-  verification/inverse-controller receipts,299 ledger and142 closed D237 report from516895d, exact Git/hash/
-  public proof before retirement; retain operational local-profile/certificate/cleanup/phase requirements.
-  Focus typed format boundaries and retained requests, strict selected lint/fmt/book/publication; broad CI later.
-  - [x] ROOT CAUSE (WHY + WHERE): plot/print requests need actual profile inputs and authored print choices;
-    no generic flags/defaults. Native print-plot3/artifact4/query2/catalog2 pass11/0; rc=0.
-  - [x] ADDRESSED: exact settings/refusals/closure; two fixture helpers scope expect allowances after lint3;
-    final strict selected lint/fmt/book/publication76 chapters/93 entries pass; rc=0.
-  - [x] NO REGRESSION: prior DXF/query/catalog remain green; D238 current source/wording aligns; no measurement
-    or numeric kernel edits.481/299/142 whole516895d Git/hash/public equality pass; rc=0.
-  Commit0327; next .4.4 tech pack. Promotion declined: existing contracts; full CI integration/pre-push.
+  Goal:0327 exact PLT/PDF and print settings, D238 wording; [whole scope/proofs](../history/stitchcad-devnotes-part482.md).
 - ID: `G1-SLICE.6.2.2.c.2.4.4`
-  Status: `pending`
-  Goal: tech pack names actual canonical Design/instances/profile inputs; missing Order quantities stay unresolved.
+  Status: `done`
+  Goal:0328 exact canonical tech-pack request over shared Design snapshot, ordered actual instances and profile choice.
+  Own core command tech_pack/artifact/reexports and focused tech-pack/artifact/print/query/catalog contracts.
+  Nonempty distinct immutable instance identities retain authored order; lookup/provenance/coverage remain execution.
+  Canonical Design supplies human-authored materials/trims/notes/stitch/POM knowledge; instances supply evaluated
+  content. No copied prose/POM values or report edits. Piece cut quantities retain cut-plan sources;
+  unavailable Order size-run quantities stay unresolved, never inferred from member order or multiplicity.
+  Own artifact chapter/availability/publication and482 whole0327 task/oldest0304 lesson/prior reference-runtime/
+  scalar verification receipts,300 ledger from48a06ba; exact Git/hash/public proof before retirement.
+  Retain current approximation/state/refusal rules and full-execution boundary. Focus typed identities/order/
+  actual closure and retained class metadata; strict selected lint/fmt/book/publication, broad CI later.
+  - [x] ROOT CAUSE (WHY + WHERE): canonical tech pack needs exact authored/evaluated sources, not copied report
+    fields or guessed instances. Native tech-pack2/print3/artifact4/query2/catalog2 pass13/0; rc=0.
+  - [x] ADDRESSED: ordered distinct actual source claims/profile/snapshot and same closure payload; selected
+    strict lint/fmt/book/publication76 chapters/95 entries pass; rc=0.
+  - [x] NO REGRESSION: retained DXF/PLT/PDF/query/catalog contracts pass; no scalar/model/report execution
+    or invented quantities.482/300 whole48a06ba Git/hash/public equality pass; rc=0.
+  Commit0328; next .4.5 artifact review. Promotion declined: existing contract; full CI G1 integration/pre-push.
 - ID: `G1-SLICE.6.2.2.c.2.4.5`
   Status: `pending`
   Goal: combined exact artifact configuration and dependency-closure request review; execution remains later.

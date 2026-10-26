@@ -598,11 +598,5 @@ python3 -I -B docs/tasks/artifacts/formula_structure/provenance_contract.py --mu
 
 Its [producer plans](formula-documentation-controls.md#origin-and-provenance-consumer-plans) also guard the copied mutant script; tracked reference sources stay read-only.
 
-The structural runner watches425 independent controls across all approximation signatures, five
-arithmetic kinds/classes, operand orders, named refusals, ordinary operators, stored/Boolean reads,
-lazy branches, geometry/cache/coordinate separation, earlier errors and exact controls. A copied
-worked book compares equal side_seam_length bindings at T1: all21 statements preflight, then the
-actual consumer refuses with allocation_balance, eps_num and hypot.26 compiled actual guard/source/
-cache/consumer faults must fail body assertions; the reference source remains byte-identical.
-G1-SLICE.5e.3b closes D121's reference scope. Arbitrary-input transcendental rounding, product
-execution, real geometry, replay, API/MCP and release correctness remain separate obligations.
+Complete reference approximation-control/consumer receipts remain in `docs/history/stitchcad-devnotes-part482.md`.
+The reference preserves D121 source/class rules above; product execution, geometry/replay and release remain separate.

@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0327 — concrete plotter and vector-print requests
+## STITCHCAD-G1-0328 — canonical tech-pack source request
 
-PLT pins actual profile/result; PDF retains explicit paper/orientation/order/positive square and overlap.
-Native3+4+2+2/strict selected lint/fmt/book/publication76-93 pass0; D238 intent/application wording fixed.
-481/299/142 whole516895d exact; .6.2.2.c.2.4.3 done, G1 progress6/18 unchanged; rendering/handlers later.
+Exact Design/profile and ordered evaluated Instance inputs preserve canonical report knowledge and closure.
+Native2+3+4+2+2/strict lint/fmt/book/publication76-95 pass0;482/300 whole48a06ba retained exact.
+.6.2.2.c.2.4.4 done; G1 progress6/18 unchanged; content validation/report generation remain handlers/G5.
 
 # Sealed archive — earlier slices
+
+| [part300](docs/history/stitchcad-changelog-part300.md) | whole0327 | 6 lines, 389 bytes, sha256:75de9577… |
 
 | [part299](docs/history/stitchcad-changelog-part299.md) | whole0326 | 6 lines, 380 bytes, sha256:332bd419… |
 

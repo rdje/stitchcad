@@ -1,5 +1,7 @@
 //! Concrete artifact intents and shared snapshot binding, before generation or dependency traversal.
-use super::{CommandId, CommandSnapshotContext, ExportPdf, ExportPlt, GradedSizeSelection};
+use super::{
+    CommandId, CommandSnapshotContext, ExportPdf, ExportPlt, GenerateTechPack, GradedSizeSelection,
+};
 use crate::ontology::{EntityId, SelectedProfilePin};
 
 /// Registered DXF dialect identities, not writer flags or evidence of receiver compatibility.
@@ -140,7 +142,7 @@ impl ExportDxf {
     }
 }
 
-/// Available concrete artifact schemas; other formats retain separate owners.
+/// Concrete artifact schemas; handlers, serialization and receiver validation remain separate.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum ArtifactPayload {
     /// Explicit named-target DXF and any requested rule-table companion.
@@ -149,6 +151,8 @@ pub enum ArtifactPayload {
     ExportPlt(ExportPlt),
     /// Exact vector-print settings and logical/factory source selection.
     ExportPdf(ExportPdf),
+    /// Canonical structured tech-pack content from authored and evaluated sources.
+    GenerateTechPack(GenerateTechPack),
 }
 impl ArtifactPayload {
     /// The typed artifact determines identity, never an independently asserted command name.
@@ -158,6 +162,7 @@ impl ArtifactPayload {
             Self::ExportDxf(_) => CommandId::ExportDxf,
             Self::ExportPlt(_) => CommandId::ExportPlt,
             Self::ExportPdf(_) => CommandId::ExportPdf,
+            Self::GenerateTechPack(_) => CommandId::GenerateTechPack,
         }
     }
 }

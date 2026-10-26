@@ -86,10 +86,8 @@ separate. authored_value returns a sourced RequiresObservation or RequiresEvalua
 with no zero/false fallback. state/definition access is immutable; editing a cloned definition and
 validating a replacement leaves the prior declaration unchanged.
 
-The focused scalar_value_contract target passes five tests: exact signed bounds/turns/false,
-26 admitted kind/state combinations, mismatches/Area refusal, evidence order and immutable
-replacement. The affected value_contract retains eight passing tests. Later general formula
-adapters must still verify actual canonical identity/kind and carry these states through evaluation.
+Complete original scalar contract receipts remain in `docs/history/stitchcad-devnotes-part482.md`.
+Formula adapters must retain actual identity/kind and authored states through evaluation.
 
 ## Evidence and computation remain distinct
 
