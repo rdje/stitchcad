@@ -391,32 +391,36 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `STITCHCAD-G1-0032`
 
 - ID: `G1-SLICE.4c.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: axes with ordered values and member coordinate references; incomplete grids remain explicit.
   Director2026-10-26 resolves D70: every complete set has >=1 authored axis; never infer names/values.
   Acceptance: current axis/value identities and complete member points validated, no grid interpolation;
   no label-derived body measurements or silent axis defaults. Preserve source/state for numeric axes.
-  Verification: `pending`
-  Commit: `pending`
+  Verification: individual5/0 + aggregate5/0; selected strict lint/fmt/book0.
+  Commit: STITCHCAD-G1-0297/0298.
 
 - ID: `G1-SLICE.4c.2.1`
   Status: `done`
-  Goal:0297 explicit named axis/ordered value definitions, typed categorical/scalar sources and actual canonical borrows.
-  Paths: crates/sc-measure/src/size_axis.rs;crates/sc-measure/src/size_axis/source.rs;crates/sc-measure/src/lib.rs;crates/sc-measure/Cargo.toml
-  Tests: crates/sc-measure/tests/size_axis_contract.rs. No labels/order inferred; numeric state/source stays singly owned.
-  Local identity/name/value/kind/current-source checks; supplied pins are not registry certification.
-  Own419 whole0296 receipt task,420 oldest0272 lesson,269 ledger and421 whole completed input-adapter summaries.
-  Acceptance0297:
-  - [x] ROOT CAUSE0297: rg canonical struct declarations -> value.rs:88/scalar.rs:227, rc=0; private records own source/state; metadata borrows actual records.
-  - [x] ADDRESSED0297: cargo test -p sc-measure --test size_axis_contract:5 passed/0 failed, rc=0; exact order/borrows/all kinds/states and current-source refusals.
-  - [x] NO REGRESSION0297: selected lib/test strict Clippy rc=0 (test-only panic lint explicitly allowed); cargo fmt rc=0; book build rc=0.
-  - [x] LOCKSTEP0297:419/420/269/421 whole committed Git bytes/hash/public reader exact rc=0; book/decision/live pointers aligned.
-  Promotion: existing SizeSet decision extended; no new policy. Complete member points/minimum-axis aggregate next .2.
+  Goal:0297 individual axes verified5/0/lint/fmt/book0.
+  Acceptance: [whole scope/proofs](../history/stitchcad-devnotes-part422.md).
   Commit: STITCHCAD-G1-0297.
+
 - ID: `G1-SLICE.4c.2.2`
-  Status: `pending`
-  Goal: complete axes over actual pinned membership, >=1 authored axis, explicit complete member coordinates,
+  Status: `done`
+  Goal:0298 complete axes over actual pinned membership, >=1 authored axis, explicit complete member coordinates,
   current values, no grid interpolation, no implicit axis/value/base/order and full numeric source retention.
+  Paths: crates/sc-measure/src/size_axes.rs;crates/sc-measure/src/size_axes/;crates/sc-measure/src/lib.rs;
+  crates/sc-measure/src/size_axis/source.rs;crates/sc-measure/tests/size_axes_contract.rs; crate metadata/book/live docs.
+  Validate exact pins, global local identities/names, complete member-axis coverage, coordinate ownership and
+  distinct member points; retain authored vectors and actual member/value borrows. No Cartesian fill or numeric sorting.
+  Own422 whole0297 task,423 oldest0273 lesson and270 ledger from35cf8ac; whole source/hash/public checks before removal.
+  Acceptance0298:
+  - [x] ROOT CAUSE0298: rg SizeAxes/SizeMemberPoint -> size_axes.rs:23/32/43/49 and validation.rs:7, rc=0; explicit coordinates over actual membership, not labels.
+  - [x] ADDRESSED0298: cargo test -p sc-measure --test size_axes_contract --test size_axis_contract ->5+5 passed/0 failed, rc=0; sparse/singleton/current source and refusal cases.
+  - [x] NO REGRESSION0298: selected lib/two-test strict Clippy rc=0, formatting rc=0 and book rc=0; nested error sources/original record borrows checked.
+  - [x] LOCKSTEP0298:422/423/270 whole35cf8ac Git bytes/hash/public reader exact rc=0; no cap raised, book/live/decision aligned.
+  Promotion: existing SizeSet decision extended; no new policy. Complete SizeSet chart/break/resolution remains .4c.3/.4.
+  Commit: STITCHCAD-G1-0298.
 
 - ID: `G1-SLICE.4c.3`
   Status: `in_progress`
@@ -924,7 +928,7 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
 
 | Order | Leaf | Status | Why next |
 | --- | --- | --- | --- |
-| **next** | `G1-SLICE.4c.2.2` | `pending` | Complete explicit member points and require authored axes |
+| **next** | `G1-SLICE.6.2.2.b.2.b` | `pending` | Typed paired sewing split under D226 |
 
 [Completed frontier receipts](G1-SLICE-checked-recipes.md#completed-frontier--retained-from-c91cdf5).
 
@@ -936,7 +940,7 @@ retains exact D72/D67 diagnostics and ownership.
 [Historical design boundaries](G1-SLICE-journal.md#ontology-design-decisions--preserved-from-f70edf7)
 retain exact committed notes and their canonical decision links. D84 director ruling preserves signed/
 multi-turn formula values and normalizes entity directions; [decision](../decisions/decision_angles.md).
-.5a.3b.3c verification is complete. SizeSet axes implementation remains .4c.2 under the confirmed D70 rule.
+.5a.3b.3c verification is complete. SizeSet axes/member points are implemented at .4c.2 under the confirmed D70 rule.
 
 ## Open Questions
 
@@ -945,7 +949,7 @@ multi-turn formula values and normalizes entity directions; [decision](../decisi
 
 ## Blockers
 
-- D70 minimum authored-axis rule is confirmed; complete SizeSet axes remain .4c.2. D83/D84 scoped reference review
+- D70 minimum authored-axis rule is implemented by .4c.2; full SizeSet remains .4c.3/.4. D83/D84 scoped reference review
   is complete; production literal/binding/evaluation proof remains separate.
 - D131 decision/repair .5b.2c.1b verified under engineering delegation2026-10-03; actual source
   arguments are documented before product namespace .2c.2. No diagnostic decision blocker.

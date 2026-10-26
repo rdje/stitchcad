@@ -79,9 +79,9 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-**`G1-SLICE.4c.2.1`** is complete in0297: individual named axes/ordered values borrow canonical inputs.
-Next .4c.2.2 validates complete member points and requires >=1 authored axis.
-[Execution frontier](tasks/G1-SLICE-execution.md) remains .5e.2.4; SizeSet axes are unblocked, split schema follows.
+**`G1-SLICE.4c.2`** is complete in0297/0298: explicit axes/current member points, including singleton axis rule.
+Next .6.2.2.b.2.b implements the D226 paired sewing-correspondence split schema.
+[Execution frontier](tasks/G1-SLICE-execution.md) remains .5e.2.4; SizeSet axes are implemented; paired split schema follows.
 Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per
 feature; broad verification and nonblocking audits remain owned for later integration/pre-push.
 Original historical descriptor identity remains unknown. Gate G0 has no further leaf:

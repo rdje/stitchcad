@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0297 — explicit authored axis values
+## STITCHCAD-G1-0298 — complete explicit axis/member points
 
-Individual SizeAxis records preserve explicit names/value order and actual canonical source/state borrows.
-Focused axis5/0, selected strict lint/fmt/book0; member points and minimum-axis aggregate follow .4c.2.2.
-Whole419/420/269/421 retention is Git/hash/public-reader exact; G1 remains5/18.
+SizeAxes requires authored axes and complete distinct current member coordinates, including singletons.
+Sparse grids remain explicit; actual member/source records are borrowed. Focused aggregate5+axis5/0,
+selected strict lint/fmt/book0. Whole422/423/270 retention exact; G1 remains5/18, paired split schema next.
 
 # Sealed archive — earlier slices
+
+| [part270](docs/history/stitchcad-changelog-part270.md) | whole0297 | 6 lines, 350 bytes, sha256:43dce1b8… |
 
 | [part269](docs/history/stitchcad-changelog-part269.md) | whole0296 | 6 lines, 334 bytes, sha256:026487eb… |
 

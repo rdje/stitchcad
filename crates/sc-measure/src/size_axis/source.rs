@@ -82,7 +82,7 @@ impl<'a> SizeAxisSourceContext<'a> {
         Ok(Self { records })
     }
 
-    pub(super) fn contains(&self, identity: EntityId) -> bool {
+    pub(crate) fn contains(&self, identity: EntityId) -> bool {
         self.records.contains_key(&identity)
     }
 

@@ -113,5 +113,9 @@ Axis names and ordered values are explicit, never inferred from labels or suppli
 This resolves D70's optional-field versus universal-axis conflict; normative §2 and §7 now agree.
 G1-SLICE.4c.2.1 implements individual axes with explicit names, ordered coordinate identities and
 label/canonical numeric sources. Current canonical records are borrowed and their kind/role rechecked;
-state/value/provenance are not duplicated. Member-coordinate coverage and >=1 axis aggregation follow
-in .4c.2.2. Membership/individual axes do not certify complete charts/breaks or path readiness.
+state/value/provenance are not duplicated. G1-SLICE.4c.2.2 now enforces >=1 axis and exactly one
+complete point per actual current member, with one explicit value per axis. Exact set/revision pins,
+metadata identities/names and coordinate ownership are validated. Duplicate member tuples refuse
+independently of coordinate vector order; sparse grids and unused values remain explicit. Actual
+member/canonical value records are borrowed and rechecked on query. No numeric sorting/equality or
+Cartesian expansion supplies missing data. Complete charts/breaks and path readiness remain separate.

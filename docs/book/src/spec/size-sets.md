@@ -161,8 +161,64 @@ claimed to be independent measurements.
 
 Five focused native contracts pass, with selected strict lint and formatting. These checks establish
 individual local axes; they do not certify global registry currentness, evidence truth, complete member
-points or a complete SizeSet. The minimum-one-axis aggregate and member-coordinate coverage are the
-next slice, G1-SLICE.4c.2.2. Charts, breaks, resolution and path readiness remain separately owned.
+points or a complete SizeSet. The complete axis/member aggregate is implemented below. Charts, breaks, resolution and path
+readiness remain separately owned.
+
+### Complete axis/member points — G1-SLICE.4c.2.2
+
+`SizeAxes` now validates the axis portion of a SizeSet against an actual `SizeMembership` and current
+canonical sources. Its definition contains the exact set/revision pin, a nonempty authored vector of
+`SizeAxis` records and explicit `SizeMemberPoint` records. Every current member needs exactly one
+point; each point needs exactly one `SizeAxisCoordinate { axis, value }` for every axis. A coordinate's
+value must belong to that particular axis. A singleton also needs at least one authored axis and an
+explicit coordinate; no name, ordinal or member label supplies it.
+
+For example, extend the labelled axis from the preceding example with two explicitly mapped members:
+
+```rust
+use sc_measure::{SizeAxes, SizeAxesDefinition, SizeAxisCoordinate, SizeMember,
+    SizeMemberPoint, SizeMembership, SizeMembershipDefinition, SizeSystem};
+// `axis`, `id` and `sources` are the explicit records from the preceding example.
+let reference = axis.definition().reference;
+let membership = SizeMembership::new(SizeMembershipDefinition {
+    reference, system: SizeSystem::Custom, base: id(2),
+    members: vec![
+        SizeMember { id: id(3), label: SizeLabel::new("House 12".to_owned()).expect("label") },
+        SizeMember { id: id(2), label: SizeLabel::new("House 2XL".to_owned()).expect("label") },
+    ],
+}).expect("authored member order and base");
+let point = |member, value| SizeMemberPoint { member: id(member),
+    coordinates: vec![SizeAxisCoordinate { axis: id(10), value: id(value) }] };
+let axes = SizeAxes::new(SizeAxesDefinition {
+    reference, axes: vec![axis], points: vec![point(2, 11), point(3, 12)],
+}, &membership, &sources).expect("explicit complete member points");
+let view = axes.point(id(2), &membership, &sources).expect("current member");
+assert_eq!(view.member().label.as_str(), "House 2XL");
+assert_eq!(axes.coordinate(id(2), id(10), &membership, &sources)
+    .expect("explicit coordinate").definition().id, id(11));
+```
+
+Axis order, value order, member order, point-record order and each point's coordinate order remain
+authored and independent. A two-axis catalog with two values per axis can contain just two diagonal
+members: the other two combinations stay absent. Unused catalog values are allowed. No Cartesian
+expansion, interpolation, label parsing, sorting or automatic base choice occurs.
+
+The aggregate rejects duplicate metadata identities across set/members/axes/values/current sources,
+exact duplicate axis names, missing/foreign members, duplicate point records, missing/foreign axes,
+duplicate coordinates and values from another axis. Two members cannot designate the same tuple of
+axis/value identities, even with reversed coordinate-vector order. This compares authored identities,
+not numeric equality of independent canonical inputs. Names differing in case or spacing remain distinct.
+
+`validate_current`, `point` and `coordinate` revalidate the complete aggregate before lookup. The
+membership pin is checked first; each axis must match it. A supplied membership replacement contributes
+its actual member labels/order/base, while missing member coverage refuses. Point views borrow the
+actual member and original coordinate record. Coordinate views borrow the original canonical numeric
+content; no value/state/source is copied. Original nested axis/membership errors remain standard error
+sources. Matching supplied pins is local validation, not global registry currentness or approval.
+
+Five aggregate contracts plus the five individual-axis contracts pass; selected strict lint, formatting
+and book build pass. This closes the authored-axis/member-point contract. Complete charts/breaks,
+resolved profile transformations, regeneration/grading and release remain separate work.
 
 ## 8. Size systems and what the model must express
 

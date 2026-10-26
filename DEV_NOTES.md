@@ -3,6 +3,17 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — complete explicit member points
+
+0298 .4c.2.2 validates exact membership/axis pins, >=1 authored axis, distinct metadata/names and one
+complete explicit point per actual member. Foreign/missing/duplicate coordinates and repeated tuples
+refuse; sparse grids and unused values stay explicit. All authored vectors remain unchanged. Queries
+revalidate sources/coverage and borrow original member/point/canonical records. Native aggregate5 plus
+prior axis5 pass0; selected strict lint/fmt/book0.422/423/270 retain whole35cf8ac Git/hash/public bytes.
+D70 axes contract closes; no full chart/break/resolved SizeSet or path-readiness claim. G1still5/18;
+next .6.2.2.b.2.b paired split schema. Promotion: existing SizeSet decision extended, no new policy.
+Broad integration/platform verification remains deferred to its owned milestone/pre-push.
+
 ## _(2026-10-26 UTC)_ — explicit authored axis values
 
 0297 .4c.2.1 introduces immutable named axes and explicit ordered coordinate identities. Labels retain
@@ -284,18 +295,8 @@ task/routes/map remain aligned. Whole0273/unary lesson/ledger retain363/364/246 
 public reads. Focused book render passes0; no code changed or new runtime test verdict claimed.
 Promotion declined: existing checked-owner/static-before-value/atomic and numerical source contracts.
 
-## _(2026-10-26 UTC)_ — lazy supplied-value conditional control
-
-0273 .5e.2.1 checks the Boolean condition and both supplied branch kinds before callbacks. It
-executes only the selected callback once, checks its returned kind, and merges condition/taken
-sources. Actual body errors survive without a guessed token; metadata/output-kind failures retain
-their actual kinds/branch. Full AST names/structure/both-branch proofs remain caller prerequisites.
-
-Focused native4/0 and selected strict Clippy0 pass: all supplied kind combinations, selected counts,
-actual canonical Unknown unread when skipped and original observation failure when selected,
-output-kind violations and condition/taken-only sources. No full expression/provider/statement/
-atomic execution claim. Whole0272 task, oldest binary/domain lesson group and ledger retain361/362/245
-with exact Git/hash/public reads; book/live align. Promotion declined: existing grammar7/D121.
+[Complete lazy supplied-value conditional lesson](docs/history/stitchcad-devnotes-part423.md) retains
+its original kind/laziness/source/refusal behavior, checks and promotion decision.
 
 [Complete named assertion-outcome lesson](docs/history/stitchcad-devnotes-part420.md) retains
 its original actual identity/context/source results, checks and promotion decision.

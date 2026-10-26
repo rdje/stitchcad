@@ -4,11 +4,13 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0297 .4c.2.1 completes individual authored SizeAxis records; explicit names/kinds/order/value identities.
-- Labels retained exactly; Length/Scalar canonical source roles and actual record borrows preserve state.
-- Axis native5/0, selected strict lib/test Clippy/fmt/book0; test-only panic allowance explicit.
-- NEXT .4c.2.2: complete member coordinates/current pins and >=1 authored axis per complete axes aggregate.
--419/420/269/421 whole source3c85204 retention verified byte/hash/public-reader exact0.
+-0298 .4c.2 completes explicit axes/member points; exact pins/current sources/coverage, >=1 axis even singleton.
+- All authored vectors retained; missing/foreign/duplicate coordinates and repeated member tuples refuse.
+- Sparse grids and unused axis values stay explicit. Original actual member/point/numeric content borrowed.
+- Native aggregate5+axis5 pass0, selected strict lib/two-test Clippy/fmt/book0; no full SizeSet/path claim.
+- NEXT .6.2.2.b.2.b: implement paired SplitSeamSpan schema with explicit side-A and side-B cuts under D226.
+-422/423/270 whole35cf8ac retention verified byte/hash/public-reader exact0.
+-0297/35cf8ac individual named axes/kinds/order/value identities; all six kinds/five states retained.
 - D70: every complete SizeSet requires >=1 authored axis; names/values never inferred or defaulted.
 - D226: SplitSeamSpan splits paired sewing correspondence at explicit cuts on both sides; schema follows axes.
 -0296/3c85204 corrected receipt-only duplicate retry; implementation1184214 unchanged. D227 closed.
@@ -36,4 +38,4 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D156/D223 audits deferred; D224/D225/D227 corrected; D70/D226 rulings implemented under owners.
 - Approved standalone UI baseline and full AI agent Desktop/Web/Graphics control remain recorded.
 - Focused feature checks only; broad verification deferred to integration/pre-push at400 commits.
-- No background result pending after0297 completion. Derive push count, never carry it manually.
+- No background result pending after0298 completion. Derive push count, never carry it manually.
