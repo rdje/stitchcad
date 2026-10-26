@@ -65,6 +65,7 @@
   - [Typed wanted-kind signatures](annexes/formula-wanted-signatures.md)
   - [Source-bearing call lookup](annexes/formula-call-lookup.md)
   - [Complete formula recipe proofs](annexes/formula-checked-recipes.md)
+  - [Actual checked formula nodes](annexes/formula-checked-nodes.md)
   - [Static formula validation evidence](annexes/formula-static-validation.md)
   - [Reference formula signature evidence](annexes/formula-static-signatures.md)
   - [Runtime formula validation evidence](annexes/formula-runtime-validation.md)

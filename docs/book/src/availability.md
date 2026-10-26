@@ -52,6 +52,8 @@ and lazy conditional value control are available.
 Complete AST dependency propagation remains evaluator integration.
 The [checked-runtime sequence](annexes/formula-execution-plan.md) names the bounded next slices and
 remaining numerical/source/geometry dependencies; it is a plan, not whole-runtime availability.
+[Actual per-node certificates](annexes/formula-checked-nodes.md) now retain kinds, symbolic roles,
+resolved source/callee identities and typed children in the same successful static owner.
 Exact unary negation/square and all six numeric comparisons are available, preserving fractional
 values and raw angle turns. Exact abs/min/max/clamp are available with typed argument/bound refusals.
 Explicit round_to is available at exact same-kind steps. Binding value conversion now rounds once,

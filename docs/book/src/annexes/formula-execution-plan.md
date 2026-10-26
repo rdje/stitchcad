@@ -11,25 +11,25 @@ without treating supplied value metadata as proof of an actual expression or sta
 | Boundary | Available contract | Execution must retain |
 | --- | --- | --- |
 | Normalized expression | Private flat arena, original source spans and structural edges | Exact node owner; no substitute syntax or recursive destruction |
-| Checked expression | Actual normalized owner, root kind and ordered sourced name uses | Both branches passed static checks before a value/provider read |
+| Checked expression | Actual normalized owner, per-node kinds/roles and ordered sourced name uses | Both branches passed static checks before a value/provider read |
 | Checked statement | Exact let/assert operand proofs and actual one-based recipe position | Original name/annotation/class and available canonical identity |
 | Checked recipe | Complete immutable statement proofs in authored order | No accepted prefix after a later static error |
 | Sourced values | Exact operators, implemented calls, stored reads and comparison outcomes | All executed inputs, condition/taken sources, actual failure data |
 
 The source APIs are crates/sc-core/src/recipe/checked.rs,
 crates/sc-core/src/recipe/checked_statement.rs, crates/sc-core/src/recipe/checked_recipe.rs and
-crates/sc-core/src/recipe/normalized.rs. The static checker computes intermediate kinds on a heap stack; its current
-expression proof retains expression, root kind and dependencies. Runtime code needs an immutable
-certificate for the actual selected branch's nodes, rather than caller-supplied branch annotations.
+crates/sc-core/src/recipe/normalized.rs. The static checker computes intermediate kinds on a heap
+stack and now retains [actual per-node certificates](formula-checked-nodes.md) beside the expression,
+root kind and dependencies. Runtime code can consume the selected branch's real node proof.
 
 ## Next implementation slices
 
-1. **Actual per-node certificates — .5e.2.3.** Retain each successful node's inferred kind and
+1. **Actual per-node certificates — .5e.2.3, implemented0275.** Each successful node retains its inferred kind and
    direct symbolic tolerance role in the checked owner. Child views must stay pinned to that owner
    and its original spans. Neither a foreign arena nor a supplied index may forge a certificate.
    Name dependencies, wanted-kind alternatives and first static error ordering stay unchanged.
    No value, input state, tolerance provider or geometry query enters this static phase.
-2. **Bounded sourced expression execution — .5e.2.4.** Consume those node proofs in source order.
+2. **Bounded sourced expression execution — .5e.2.4, next.** Consume those node proofs in source order.
    Use the existing exact value kernels and real declaration-source adapters. A conditional checks
    both complete branch proofs, then evaluates only its condition and selected branch. All evaluated
    call operands contribute, including candidates or bounds whose numeric value is not returned.

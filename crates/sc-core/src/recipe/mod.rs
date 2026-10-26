@@ -135,8 +135,9 @@ pub use namespace::{
 
 mod checked;
 pub use checked::{
-    FormulaCheckedExpression, FormulaCheckedOperation, FormulaDimensionRefusal,
-    FormulaExpressionCheckError, FormulaExpressionCheckRefusal, FormulaNameDependency,
+    FormulaCheckedArguments, FormulaCheckedExpression, FormulaCheckedNode, FormulaCheckedNodeForm,
+    FormulaCheckedOperation, FormulaDimensionRefusal, FormulaExpressionCheckError,
+    FormulaExpressionCheckRefusal, FormulaNameDependency,
 };
 
 mod checked_statement;

@@ -8,6 +8,16 @@ use super::{
 };
 use core::fmt;
 
+mod nodes;
+pub use nodes::{FormulaCheckedArguments, FormulaCheckedNode, FormulaCheckedNodeForm};
+
+#[derive(Clone, Copy)]
+struct NodeCertificate {
+    operand: FormulaBuiltinOperand,
+    dependency: Option<usize>,
+    builtin: Option<FormulaBuiltin>,
+}
+
 /// Actual closed operation at a dimension refusal, preserving unary/binary arity and call identity.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FormulaCheckedOperation {
@@ -211,7 +221,8 @@ impl fmt::Debug for FormulaNameDependency<'_> {
 /// fn forge<'e, 's>(expression: &'e sc_core::recipe::FormulaNormalizedExpression<'s>)
 ///     -> sc_core::recipe::FormulaCheckedExpression<'e, 's, 'static> {
 ///     use sc_core::recipe::*;
-///     FormulaCheckedExpression { expression, kind: FormulaKind::Length, dependencies: vec![] }
+///     FormulaCheckedExpression { expression, kind: FormulaKind::Length, dependencies: vec![],
+///         certificates: vec![] }
 /// }
 /// ```
 /// ```compile_fail
@@ -239,24 +250,13 @@ pub struct FormulaCheckedExpression<'e, 's, 'd> {
     expression: &'e FormulaNormalizedExpression<'s>,
     kind: FormulaKind,
     dependencies: Vec<FormulaNameDependency<'d>>,
+    certificates: Vec<NodeCertificate>,
 }
 impl<'e, 's, 'd> FormulaCheckedExpression<'e, 's, 'd> {
     /// Only a direct normalized name root can retain a reserved class role through grouping.
     /// Its sole dependency was resolved during checking; computed roots remain ordinary values.
     pub(super) fn root_operand(&self) -> FormulaBuiltinOperand {
-        if matches!(
-            self.expression.root().kind(),
-            super::FormulaNormalizedNodeKind::Name(_)
-        ) {
-            if let Some(dependency) = self.dependencies.first() {
-                if let FormulaDeclarationSource::Reserved(FormulaReservedName::Tolerance(name)) =
-                    dependency.declaration.source()
-                {
-                    return FormulaBuiltinOperand::Tolerance(name);
-                }
-            }
-        }
-        FormulaBuiltinOperand::Value(self.kind)
+        self.root().operand()
     }
     /// Exact expression owner certified by this proof; no replacement syntax can be attached.
     #[must_use]
@@ -267,6 +267,16 @@ impl<'e, 's, 'd> FormulaCheckedExpression<'e, 's, 'd> {
     #[must_use]
     pub const fn kind(&self) -> FormulaKind {
         self.kind
+    }
+    /// Certified root and typed child views, borrowing this complete proof and its actual owner.
+    #[must_use]
+    pub fn root(&self) -> FormulaCheckedNode<'_, 'd> {
+        FormulaCheckedNode::root(self.expression, &self.certificates, &self.dependencies)
+    }
+    /// Exactly one certificate for every node in the successful connected normalized arena.
+    #[must_use]
+    pub fn node_count(&self) -> usize {
+        self.certificates.len()
     }
     /// Every ordered name use and source, with repetitions and untaken branches retained.
     #[must_use]
@@ -325,6 +335,7 @@ impl<'s> FormulaNormalizedExpression<'s> {
         let mut pending = vec![Action::Enter(self.root)];
         let mut kinds = Vec::with_capacity(self.nodes.len());
         let mut dependencies = Vec::new();
+        let mut certificates = vec![None; self.nodes.len()];
         let refuse = |index: usize, refusal| FormulaExpressionCheckError {
             expression: self,
             span: self.nodes[index].span,
@@ -353,7 +364,16 @@ impl<'s> FormulaNormalizedExpression<'s> {
                         ));
                     };
                     // Computed results never acquire the direct-name tolerance role.
-                    kinds.push(O::Value(kind));
+                    let operand = O::Value(kind);
+                    certificates[index] = Some(NodeCertificate {
+                        operand,
+                        dependency: None,
+                        builtin: match operation {
+                            Op::Builtin(builtin) => Some(builtin),
+                            _ => None,
+                        },
+                    });
+                    kinds.push(operand);
                 }
                 Action::Enter(index) => match &self.nodes[index].data {
                     NormalizedData::Literal(literal) => {
@@ -363,7 +383,13 @@ impl<'s> FormulaNormalizedExpression<'s> {
                             FormulaLiteralKind::Ratio => FormulaKind::Ratio,
                             FormulaLiteralKind::Count => FormulaKind::Count,
                         };
-                        kinds.push(O::Value(kind));
+                        let operand = O::Value(kind);
+                        certificates[index] = Some(NodeCertificate {
+                            operand,
+                            dependency: None,
+                            builtin: None,
+                        });
+                        kinds.push(operand);
                     }
                     NormalizedData::Name(name) => {
                         let declaration = namespace.resolve_name(name).map_err(|error| {
@@ -375,9 +401,15 @@ impl<'s> FormulaNormalizedExpression<'s> {
                             )) => O::Tolerance(class),
                             _ => O::Value(declaration.kind()),
                         };
+                        let dependency = dependencies.len();
                         dependencies.push(FormulaNameDependency {
                             span: self.nodes[index].span,
                             declaration,
+                        });
+                        certificates[index] = Some(NodeCertificate {
+                            operand,
+                            dependency: Some(dependency),
+                            builtin: None,
                         });
                         kinds.push(operand);
                     }
@@ -443,6 +475,15 @@ impl<'s> FormulaNormalizedExpression<'s> {
             expression: self,
             kind: kinds[0].kind(),
             dependencies,
+            certificates: certificates
+                .into_iter()
+                .map(|certificate| match certificate {
+                    Some(certificate) => certificate,
+                    None => unreachable!(
+                        "successful traversal certifies every node of the private connected arena"
+                    ),
+                })
+                .collect(),
         })
     }
 }

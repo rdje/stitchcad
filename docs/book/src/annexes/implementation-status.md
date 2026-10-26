@@ -18,7 +18,6 @@ requires the named contracts and later proof owners.
 | Size membership | §3.4; G1 | sc-measure; G1-SLICE.4c.1 | [Membership](../spec/size-membership.md) |
 | Garment chart observations/collections | §3.3/§3.4; G1 | sc-measure; G1-SLICE.4c.3a/.3b | [Observations](../spec/size-chart-observations.md), [collections](../spec/size-chart-collections.md) |
 | MTM inputs | §3.3/§3.4; G1 | sc-measure; G1-SLICE.4c.3c | [MTM introduction](../spec/mtm-input-charts.md), [API](mtm-input-contract.md) |
-
 | Formula literal inputs/normalized arenas | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3c.2/.3 | [Literal normalization](formula-literals.md) |
 | Canonical expression identity | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3d.2/.3 | [Owned canonical bytes](formula-literals.md#serialize-canonical-expression-identity) |
 | Single formula statement syntax | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3e.1 | [Statement API](formula-statements.md) |
@@ -40,6 +39,20 @@ requires the named contracts and later proof owners.
 | Correctly rounded sqrt/hypot | §4.2; G1 | sc-core recipe; G1-SLICE.5d.2.1/.2 | [Exact root values](formula-rationals.md#correctly-rounded-sqrt-and-hypot); source provenance follows |
 | Correctly rounded arc_length | §4.2; G1 | sc-core recipe; G1-SLICE.5d.3.1 | [Certified arc values](formula-rationals.md#bounded-correctly-rounded-arc_length); source provenance follows |
 | Formula wanted-kind catalogs | §4.1; G1 | sc-core recipe; G1-SLICE.5b.3c.1 | [Typed expected rules](formula-wanted-signatures.md) |
+| Canonical length authored-read adapter | §2/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.1 | [Source/state reads](formula-runtime-validation.md#canonical-length-authored-reads); full execution follows |
+| Canonical scalar state/value content | §2/§4.1; G1 | sc-core value; G1-SLICE.5e.1.2 | [Scalar content](../spec/measurement-inputs.md#canonical-general-scalar-content); registry/evaluation follows |
+| General scalar authored-read adapter | §2/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.3 | [Actual target/kind reads](formula-runtime-validation.md#general-scalar-authored-reads); registry/context execution follows |
+| Explicit reserved tolerance contexts | §3.1/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.4 | [Intrinsic/optional providers](formula-runtime-validation.md#explicit-tolerance-contexts); source approval/execution follows |
+| Core size-context frames/reads | §3.1/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.5.1 | [Supplied source/range values](formula-runtime-validation.md#core-size-context-frames); actual membership bridge below |
+| Authored membership to size context | §3.1/§3.4; G1 | sc-measure membership; G1-SLICE.5e.1.5.2 | [Exact pin/member/order bridge](../spec/size-membership.md#formula-size-context); axes/global registry follow |
+| Canonical/stored numeric reads | §4.2; G1 | sc-core recipe; G1-SLICE.5e.1.6 | [Exact integer bridges](formula-rationals.md#canonical-and-stored-numeric-reads); source propagation follows |
+| Approximation-source set/class guard | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.1 | [Immutable sources/T1 refusal](formula-runtime-validation.md#product-source-set-primitive); full propagation follows |
+| Sourced scalar operators/bindings | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.2 | [Numeric/Boolean sources and reads](formula-runtime-validation.md#product-scalar-operators-and-bindings); AST execution follows |
+| Sourced implemented numeric calls | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.3 | [Actual kernels/input unions](formula-runtime-validation.md#product-implemented-numeric-calls); trig/AST execution follows |
+| Exact named tolerance comparison | §3.1/§4.2; G1 | sc-core recipe; G1-SLICE.5e.3.4 | [Actual values/context/sources](formula-runtime-validation.md#product-named-tolerance-comparisons); assertion/AST execution follows |
+| Named assertion value outcomes | §5.1/§5.2; G1 | sc-core recipe; G1-SLICE.5e.3.5 | [Actual true/failure records](formula-runtime-validation.md#product-named-assertion-outcomes); whole statement execution follows |
+| Lazy conditional value control | grammar§7; G1 | sc-core recipe; G1-SLICE.5e.2.1 | [Selected callback/source retention](formula-runtime-validation.md#product-lazy-conditional-value-control); full AST proof/execution follows |
+| Actual per-node static certificates | §4.1/grammar§7; G1 | sc-core recipe; G1-SLICE.5e.2.3 | [Pinned kinds/roles/sources](formula-checked-nodes.md); expression/statement execution follows |
 
 Reference [static signature evidence](formula-static-validation.md) covers the complete finite
 kind/function matrix without executing values. Reference namespace/preflight/full static review
@@ -68,29 +81,3 @@ by `docs/tasks/artifacts/book_publication/run_book_publication_probes.sh` from t
 The map does not prove all semantics by matching API names: canonical tests and explicit deferred
 requirements remain necessary. Test counts in historical review chapters are dated review snapshots;
 current counts are derived from current test execution rather than inferred from those chapters.
-
-| Canonical length authored-read adapter | §2/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.1 | [Source/state reads](formula-runtime-validation.md#canonical-length-authored-reads); full execution follows |
-
-| Canonical scalar state/value content | §2/§4.1; G1 | sc-core value; G1-SLICE.5e.1.2 | [Scalar content](../spec/measurement-inputs.md#canonical-general-scalar-content); registry/evaluation follows |
-
-| General scalar authored-read adapter | §2/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.3 | [Actual target/kind reads](formula-runtime-validation.md#general-scalar-authored-reads); registry/context execution follows |
-
-| Explicit reserved tolerance contexts | §3.1/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.4 | [Intrinsic/optional providers](formula-runtime-validation.md#explicit-tolerance-contexts); source approval/execution follows |
-
-| Core size-context frames/reads | §3.1/§4.1; G1 | sc-core recipe; G1-SLICE.5e.1.5.1 | [Supplied source/range values](formula-runtime-validation.md#core-size-context-frames); actual membership bridge below |
-
-| Authored membership to size context | §3.1/§3.4; G1 | sc-measure membership; G1-SLICE.5e.1.5.2 | [Exact pin/member/order bridge](../spec/size-membership.md#formula-size-context); axes/global registry follow |
-
-| Canonical/stored numeric reads | §4.2; G1 | sc-core recipe; G1-SLICE.5e.1.6 | [Exact integer bridges](formula-rationals.md#canonical-and-stored-numeric-reads); source propagation follows |
-
-| Approximation-source set/class guard | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.1 | [Immutable sources/T1 refusal](formula-runtime-validation.md#product-source-set-primitive); full propagation follows |
-
-| Sourced scalar operators/bindings | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.2 | [Numeric/Boolean sources and reads](formula-runtime-validation.md#product-scalar-operators-and-bindings); AST execution follows |
-
-| Sourced implemented numeric calls | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.3 | [Actual kernels/input unions](formula-runtime-validation.md#product-implemented-numeric-calls); trig/AST execution follows |
-
-| Exact named tolerance comparison | §3.1/§4.2; G1 | sc-core recipe; G1-SLICE.5e.3.4 | [Actual values/context/sources](formula-runtime-validation.md#product-named-tolerance-comparisons); assertion/AST execution follows |
-
-| Named assertion value outcomes | §5.1/§5.2; G1 | sc-core recipe; G1-SLICE.5e.3.5 | [Actual true/failure records](formula-runtime-validation.md#product-named-assertion-outcomes); whole statement execution follows |
-
-| Lazy conditional value control | grammar§7; G1 | sc-core recipe; G1-SLICE.5e.2.1 | [Selected callback/source retention](formula-runtime-validation.md#product-lazy-conditional-value-control); full AST proof/execution follows |

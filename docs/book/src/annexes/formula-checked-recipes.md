@@ -154,8 +154,8 @@ Explicit source/name/canonical getters deliberately expose authored content to t
 ## Verification and remaining authority
 
 The [execution sequence](formula-execution-plan.md) joins these actual static owners to sourced value
-primitives. Per-node certificates and expression/statement execution are the next implementation
-slices; neither current proof construction nor supplied-value callbacks execute a whole recipe.
+primitives. [Actual per-node certificates](formula-checked-nodes.md) are available; expression/statement
+execution comes next. Neither proof construction nor supplied-value callbacks execute a whole recipe.
 
 ```bash
 cargo test -p sc-core --test formula_checked_recipe_contract -- --nocapture

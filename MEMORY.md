@@ -4,12 +4,12 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
-- Completed0274: .5e.2.2 checked-AST execution sequence; book render0, no new runtime claimed.
-- Canonical execution/input frontier: docs/tasks/G1-SLICE-execution.md; whole block copied exact.
-- Next .5e.2.3: actual per-node kind/symbolic-role certificates pinned to checked expressions.
-- Read checked.rs/normalized.rs and formula-execution-plan.md; preserve metadata-only error order and lifetimes.
-- Whole0273/unary lesson/ledger363/364/246 retained. Runtime annex near40KB; keep additions bounded.
+- Completed0275: .5e.2.3 actual per-node static kinds/roles/sources/callees and pinned typed views.
+- New6/existing expression7, selected lint0 and8 scoped docs pass; book/rendered map fixed and checked.
+- Owner/frontier: docs/tasks/G1-SLICE-execution.md. Whole0274/old lesson/ledger365/366/247 retained.
+- Next .5e.2.h13: archive window13 packing BEFORE more history growth; working MD reached fixed64 cap.
+- Preserve prior12 windows/source/public reads; use repo-local capture/materialization and no cap increase.
+- Then .5e.2.4: actual checked-node sourced expression execution; full runtime/geometry/trig still open.
 - D70 actual ruling remains pending; no axes work. P1 .5d.1.2.2.2 owns usable trig resources.
 - Approved UI/full AI control: decision_stitchcad-ui-baseline-and-quality.md; no UI pivot.
-- One focused check/feature; broad integration/pre-push. Full AST/statement/atomic execution remains open.
-- No background job. Derive history working count before more records; fixed cap64, window13 not yet owned.
+- One focused check/feature; broad integration/pre-push. No background job.

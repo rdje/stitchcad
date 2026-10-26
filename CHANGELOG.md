@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0274 — checked runtime execution sequence
+## STITCHCAD-G1-0275 — actual per-node static certificates
 
-.5e.2.2: record actual node-proof/expression/statement/atomic boundaries and remaining numeric/source/geometry dependencies.
-Whole execution frontier moves intact into a linked bounded sibling; no new runtime or mathematical backend is claimed.
+.5e.2.3: successful checked expressions retain every actual node kind, symbolic role, name source and builtin.
+Pinned typed children/arguments preserve source spans/order without runtime reads; existing root API/refusals remain.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -438,3 +438,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part245](docs/history/stitchcad-changelog-part245.md) | whole0272 | 4 lines, 271 bytes, sha256:d5e0f82c… |
 
 | [part246](docs/history/stitchcad-changelog-part246.md) | whole0273 | 4 lines, 297 bytes, sha256:5926347a… |
+
+| [part247](docs/history/stitchcad-changelog-part247.md) | whole0274 | 4 lines, 306 bytes, sha256:78b624fe… |

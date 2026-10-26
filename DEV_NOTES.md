@@ -3,6 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — actual per-node static certificates
+
+0275 .5e.2.3 retains every successful node's inferred role, actual name dependency and resolved
+builtin beside the existing root/dependency API. Typed child/argument views borrow the complete
+proof and original arena; no foreign node/index or detached proof can be attached. Traversal/error
+order remains value-free; direct tolerance roles survive grouping and computed roots stay ordinary.
+Views/destruction stay flat; Debug omits authored tokens while explicit form inspection retains them.
+
+Focused new6/existing expression7, selected strict Clippy and8 scoped privacy/lifetime docs pass0.
+Actual owners/spans, Unknown source borrows, eight kinds, closed callees, source order, whole-statement
+prior sources and256 nodes are covered. A scoped book check finds implementation-map rows rendered
+as pipe paragraphs after blank table breaks. Join all original rows/cells under one header; actual
+rendered family/order/four-cell checks now pass0. Whole0274/old built-in lesson/ledger365/366/247
+retain exact Git/hash/public bytes. Promotion declined: existing static owner/role/source contracts.
+
 ## _(2026-10-26 UTC)_ — checked runtime execution sequence and bounded frontier
 
 0274 .5e.2.2 reviews actual normalized/checked expression, statement and recipe owners before
@@ -340,20 +355,8 @@ valid reduced result, final129-bit overflow, scalar excess, zero step and actual
 No broad/platform/mutation pass claimed. Whole0251 task/ledger retained323/224; book/frontier align.
 Promotion declined: established half-away/exact numeric contract and focused-check policy.
 
-## _(2026-10-25 UTC)_ — exact abs/min/max/clamp numeric built-ins
-
-0251 .5c.2.4 adds total exact abs and checked homogeneous variadic min/max plus inclusive clamp.
-Abs preserves canonical zero/full signed magnitudes; symmetric scalar domains/nonnegative Count
-make every output admitted. Min/max/clamp select existing exact operands, without rounding or
-rescuing invalid completed values. Empty min/max calls retain formula_parse/builtin/count;
-first kind mismatches retain builtin/zero-based argument/wanted/actual kind; inverted clamp bounds
-retain formula_domain/shared kind/exact low/high. No call evaluation or binding is implied.
-
-One affected native formula_numeric_contract target passes5/0, rc=0, including prior constructor,
-binary/unary/comparison cases. New cases cover full magnitudes, all absolute kinds, single and
-multiple operands, empty/mixed-kind calls, exact adjacent fractions and all clamp outcomes/bounds.
-No broad/platform/mutation pass claimed. Whole0250 task/ledger retained322/223; book/live/frontier
-align. Promotion declined: existing exact numeric contract/focused-check policy.
+[Complete exact built-in lesson](docs/history/stitchcad-devnotes-part366.md) retains
+its original scope, validation and promotion decision.
 
 [Complete unary/comparison lesson](docs/history/stitchcad-devnotes-part364.md) retains
 its original scope, validation and promotion decision.
