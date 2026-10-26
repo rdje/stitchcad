@@ -1124,21 +1124,7 @@ Secondary P3: baseline and current advisory awk-to-head15 pipeline prints a pipe
 source tail pinpoints it, without changing C1's132 rows. Repair under the same owner after C1 closure.
 Current feature may proceed with this explicit baseline gap; no full glossary/CI pass is claimed.
 
-## D251 — canonical-input guide still defers implemented structural SizeSet composition
-
-measurement-inputs.md's opening says full composition remains owned work. SizeSetInputs and current
-Garment/Mtm input composition are implemented, reviewed under .4c.5/.4d, and sc-measure's module docs
-state that scope. Reproduce: rg "full composition" in that guide and SizeSetInputs in sc-measure.
-Impact: the canonical-input entry understates available structural inputs. Owner G1-SLICE.6.4.2.a,
-P2 fixed0346: entry reports structural composition and keeps numeric execution/persistence pending.
-
-## D252 — recipe-input annex still defers implemented numeric binding conversion
-
-formula-recipe-inputs.md's status header says numerical binding and evaluation remain later work.
-FormulaBoundValue and its binding conversion API/native contract are implemented; whole recipe execution
-remains pending. Reproduce: rg "numerical binding" in the annex and public constructors in recipe/bound.rs.
-Impact: readers cannot distinguish available conversion from unimplemented whole execution. Owner
-G1-SLICE.6.4.2.a, P2 fixed0346: header separates available conversion from pending whole execution.
+Verified D251/D252 scope corrections retained whole in [part498](../history/stitchcad-devnotes-part498.md).
 
 ## Active continuity followup
 

@@ -3,15 +3,17 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0346 — own canonical inputs without representation conversion
+## STITCHCAD-G1-0347 — own current structural Design components
 
-- Add immutable CanonicalInputs over dedicated-length/general-scalar records, preserving all authored state/provenance.
-- Refuse duplicate owned ids with both original family positions; retain typed canonical borrows and explicit empty drafts.
-- Native7/privacy1/length8/scalar5/strict selected lint/fmt/book/publication pass0; D251/D252 scope prose corrected.
-- D250 glossary132 remains exactly baseline; no new failure. Whole0345 continuity497 matches4 Git source spans0.
-- G1still6/18; structural state .6.4.2.b next. No full Design/execution/integration/CI claim.
+- Add immutable DesignStructure over exact id/revision, declarations, Pieces, physical copies and topology.
+- Check cross-role owned identities and actual current copy/Piece consistency; retain historical repairs and choices.
+- Native8/privacy2/strict selected lint/fmt/book/publication pass0. D250132 glossary rows exactly baseline, delta0.
+- Whole0346 continuity498 matches4 Git spans; caps unchanged. G1still6/18; recipe/source ownership next.
+- Full Design/combined readiness/bus/integration/CI remains pending; no release claim.
 
 # Sealed archive — earlier slices
+
+| [part498](docs/history/stitchcad-devnotes-part498.md) | whole0346 canonical inputs/D251-D252 task, lesson and ledger | 61 lines, 5171 bytes, sha256:56d7ea2b… |
 
 | [part497](docs/history/stitchcad-devnotes-part497.md) | whole0345 Piece inventory/D248-D249 task, lesson and ledger | 63 lines, 5409 bytes, sha256:fab0f6ef… |
 

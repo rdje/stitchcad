@@ -3,18 +3,21 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-26 UTC)_ — owned canonical input inventory
+## _(2026-10-26 UTC)_ — owned structural Design component
 
-0346 CanonicalInputs owns original dedicated LengthDeclaration and general ScalarInputDeclaration vectors.
-One id census spans both families, preserving exact first/repeated roles and positions. Getter borrows
-refer to the stored canonical objects; general Length-kind scalars do not become dedicated lengths.
-All state/source/provenance remains authored, including unknown observations/derived formulas without
-numeric defaults. Referenced ids are not mistaken for owned records. Empty drafts remain explicit.
-Native7 covers all5 states/6 kinds, duplicates and canonical borrows; privacy1/length8/scalar5/strict
-selected lint/fmt/book/pub pass0. D251/D252 wording separates structural composition/conversion from
-pending numeric execution. D250's132 glossary rows remain exactly baseline; no full census/CI pass.
-Whole0345 task/reports/lesson/ledger497 compares4 exact Git source spans. Promotion: existing canonical
-source decision. G1still6/18; private structural state follows .6.4.2.b, without a reverse dependency.
+0347 DesignStructure privately owns explicit identity/revision, canonical inputs, pair-consistent Pieces,
+physical copies and exact topology journal/registrations. An owned-id census distinguishes role/index
+from referenced ids; then existing CutPlan validation rechecks actual Pieces. A plan built against old
+quantity/mirroring cannot carry its old proof into current composition. Original objects/order survive.
+Historical Pieces are deliberately not reconstructed against current live edges: deleted ranges must
+remain inspectable repair content. No registration, copy or revision is generated. Empty drafts accept;
+source/evidence truth, recipe/metadata/garment registries, complete readiness and execution remain later.
+Native8/privacy2/strict selected lint/fmt/book/publication pass0. D250's132 glossary rows remain baseline,
+delta0; no full glossary/CI pass. Whole0346 continuity498 compares4 exact Git spans0. Shortened repeated
+normative Piece/range prose with all existing examples/boundaries retained. Promotion: existing structural,
+identity and core-source decisions. G1still6/18; .6.4.2.c recipe ownership next, .d source bindings follows.
+
+[Whole0346 canonical input lesson](docs/history/stitchcad-devnotes-part498.md) retains exact scope/proof boundaries.
 
 [Whole0345 Piece inventory lesson](docs/history/stitchcad-devnotes-part497.md) retains exact source/proof and D250 boundary.
 

@@ -795,31 +795,40 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   registries/recipe ownership follow their dependency contracts before .3 readiness.
 - ID: `G1-SLICE.6.4.2.a`
   Status: `done`
-  Goal: owned CanonicalInputs over exact LengthDeclaration/ScalarInputDeclaration values, with unique
-  owned ids across both families and precise first/duplicate family positions. Preserve authored vectors,
-  states/source/provenance, typed lookups and empty drafts. No scalar-Length conversion or source/evidence
-  inference. No public mutator; sc-measure continues borrowing core records without a dependency cycle.
-  Own selected native/privacy/lint, relevant API vocabulary/book/decision/live docs; D251/D252 scope
-  corrections below. D250 remains the named preexisting glossary owner after .6.9, no blanket exemptions.
-  Own complete prior0345 task/reports/lesson/ledger retirement497 before task-cap growth.
-  - [x] REPRODUCE / ISSUE: core declaration families are already canonical/immutable; metadata borrows
-    them. Private Design ownership needs one unambiguous owned inventory without a reverse dependency.
-  - [x] ROOT CAUSE (WHY + WHERE): existing LengthDeclaration/ScalarInputDeclaration APIs store complete
-    state/source but do not jointly own ids. canonical_inputs_contract cross-family/same-family cases
-    exercise exact duplicate identity/family/position refusals while preserving references, native7/0, rc=0.
-  - [x] FIX: CanonicalInputs owns original vectors, checks ids before publication and exposes shared typed
-    views only. General scalar Length stays general; unknown/derived has no new result or fallback.
-  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
-    canonical_inputs_contract gives7/0, rc=0, target/canonical-inputs-native-0346.log; all5 states/6 kinds.
-  - [x] NO REGRESSION: length8/scalar5/privacy1/strict selected Clippy/fmt pass0; book/pub77/105/1444/2358
-    pass0, target/*0346.log. Glossary132 matches baseline rows exactly, delta0; full census rc=1/D250.
-  - [x] LOCKSTEP: vocabulary/API/decision/notes/status/index/pointer/D251-D252 aligned; whole0345 task,
-    reports/lesson/ledger497 compares4 exact Git spans0. Caps unchanged; G1still6/18; .6.4.2.b next.
-    promotion: declined (existing canonical-source decision). Commit0346; full execution/CI remains later.
+  Goal:0346 owned CanonicalInputs; [whole scope/proof](../history/stitchcad-devnotes-part498.md).
 - ID: `G1-SLICE.6.4.2.b`
+  Status: `done`
+  Goal: immutable DesignStructure owns explicit identity/revision, CanonicalInputs, PieceInventory,
+  CutPlan and IdentityLedger. Check cross-role owned ids and revalidate copies against actual Pieces;
+  retain exact authored inputs/history/registrations and historical references with visible repairs.
+  No auto registration, source/evidence truth, geometry, full Design, bus or release readiness claim.
+  Own focused native/privacy/lint/book/API sync and complete0346 continuity498 before cap growth.
+  Existing D250 and full integration verification retain their later owners.
+  - [x] REPRODUCE / ISSUE: separately validated inputs/Pieces/copies/ledger have no joint owner;
+    new native stale-quantity/orientation/missing-Piece cases require current composition refusals.
+  - [x] ROOT CAUSE (WHY + WHERE): CutPlan::new validates its supplied Pieces only; independently
+    replacing that inventory does not carry the prior proof. DesignStructure reuses this constructor;
+    cargo test -p sc-core --test design_structure_contract gives8 passed/0 failed, rc=0, including
+    stale quantity/orientation/missing-Piece refusals in target/design-structure-native-0347.log.
+  - [x] FIX: private exact definition, shared canonical getters, complete owned-id census with role/index
+    witnesses; current copies validated, historical Piece references and registration choices retained.
+  - [x] ADDRESSED: python3 -I -B scripts/local_environment.py -- cargo test -p sc-core --test
+    design_structure_contract gives8/0, rc=0, target/design-structure-native-0347.log.
+  - [x] NO REGRESSION: privacy compile-fail2/strict selected Clippy/fmt/book/publication pass0,
+    target/design-structure-*-0347.log. D250132 failure rows exactly baseline, delta0; census rc=1.
+  - [x] LOCKSTEP: API vocabulary/status/notes/index/pointer aligned; prior0346 continuity498 compares4
+    exact Git spans0. Caps unchanged; G1still6/18. Initial test's private-field typo corrected/excluded.
+    promotion: declined (existing structural/identity/core-source decisions). Commit0347; recipe ownership
+    .6.4.2.c next; source registries .d before .3 readiness. Full Design/bus/integration/CI remains later.
+- ID: `G1-SLICE.6.4.2.c`
   Status: `pending`
-  Goal: owned structural piece/copy/topology state with exact current source/context identities;
-  all point/range/garment repairs remain explicit under .3–.5 rather than silently defaulted.
+  Goal: owned immutable authored recipe source and actual normalized/canonical syntax views without
+  self-referential storage, invented source spans, execution or static-check proof. Reuse parser and
+  literal normalization contracts; retain typed refusal and private replacement boundaries.
+- ID: `G1-SLICE.6.4.2.d`
+  Status: `pending`
+  Goal: exact current source/metadata identity registries across canonical input domains, preserving
+  one-way sc-measure dependency and singly owned values; actual host bindings before .3 readiness.
 - ID: `G1-SLICE.6.4.3`
   Status: `pending`
   Goal: actual current point and whole-range resolution/repair readiness, including lost interiors.

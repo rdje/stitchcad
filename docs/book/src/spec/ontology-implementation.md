@@ -1,90 +1,85 @@
 # Executable ontology at G1
 
-This chapter covers executable structural APIs for the [garment ontology](ontology.md), including
-examples and repair evidence. Geometry, realized ease and resolved profile values remain deferred.
+Structural APIs implement the [garment ontology](ontology.md). Geometry, realized ease and resolved
+profile values remain deferred.
 
-`sc_core::ontology::piece` implements §4.1's **structural** content (`G1-SLICE.3c.1`).
-`Piece::new(PieceDefinition, &IdentityLedger)` returns an immutable `Piece` or a typed `PieceError`
-naming the failed invariant. `PieceDefinition` is editable input; it is not a validated domain object.
-A command replaces a piece through this constructor rather than modifying its validated fields.
-
-The boundary and each hole are cyclic sequences of `DirectedEdge { edge, direction }`. The last edge
-implicitly precedes the first; **do not repeat the first edge at the end**. Empty loops, repeated cut
-edges (including an edge shared by two cut loops), and references absent from the current ledger are
-rejected. Construction lines must also name live edges. A cyclic list does not prove that geometric
-endpoints coincide: even a one-edge curve loop still requires G2's closure check.
-
-The cut quantity is the **total number of physical copies**. `Mirroring::Single` accepts any positive
-quantity; `Mirroring::MirroredPairs` requires an even quantity (two means one L/R pair within one
-piece definition). Separate cut-once L/R members use `Mirroring::PairMember { handedness, companion }`:
-quantity counts this member's copies, the handedness is explicitly left or right, and the companion is
-another Piece identity. This is the reference skirt §6's back-piece form. A member cannot name itself
-as its companion. `PieceInventory::new(pieces)` now checks unique Piece ids, existing reciprocal
-pair-member companions, opposite hands and equal quantities. It preserves authored order and every
-Piece field; `pieces()` and `piece(id)` borrow canonical members. Labels supply no hand or partner.
-Empty inventories are legal; typed refusals retain actual ids/values. Geometry remains G2's obligation.
-A cut-on-fold
-piece declares exactly one fold edge on its outer boundary; other pieces declare none. The fabric
-side and assembly layer index are explicit content. Material assignment is either a material id or
-`Unresolved(reason)` with a nonblank explanation: an unresolved assignment is not defaulted to fabric.
-The design will validate material identities against its material collection when that collection lands.
-
-Printed labels carry nonblank name, size, fabric and colorway text. Their cut quantity, pair L/R and
-fold indicator derive from the cut plan rather than being separately editable inputs. For example:
-
-- One mirrored-pair definition with quantity `2` prints cut two, pair L/R.
-- `skirt_back_right`/`skirt_back_left`, quantity `1` each with opposite hands and reciprocal ids,
-  print cut-one R/L. `PieceInventory::new(vec![right, left])` accepts either order; unequal quantities
-  refuse. Equal odd member quantities are legal.
-- A single front on fold with quantity `1` and one boundary fold edge prints cut one on fold.
-- A material awaiting selection may carry the explicit reason "awaiting fabric selection" and print
-  "unassigned woven fabric" / "undetermined" for fabric and colorway. This is inspectable content,
-  not evidence that a production release is acceptable.
-
-`definition()` exposes authored content by shared reference; editing a clone does not change the
-validated piece. `edges()` includes boundary, hole and construction-line references. After a ledger
-edit, `endpoint_resolutions()` resolves the held traversal endpoints and exposes `Resolution` values,
-including repair tasks; it never rewrites the authored references. `endpoint_references()` supplies
-an endpoint inventory for the command bus's future atomic registration step. Endpoint queries **do not
-certify complete-edge integrity**: deleting an interior split fragment can leave both original endpoints
-resolvable. Whole-interval evidence now answers that separate question, as described below. Full
-recipe/geometry validation remains required before release.
-
-Every piece reports `GeometricValidation::DeferredToG2`. This is deliberately **not** a valid-geometry
-badge. Endpoint closure, CCW outer winding, opposite hole winding, simplicity, holes strictly inside
-and non-intersecting, and intake conservation remain `G2-2D.1`'s obligations. G1 has no constructor
-that marks these checks passed; this implements the boundary recorded in
+**Pieces and inventories.** `Piece::new(PieceDefinition, &IdentityLedger)` validates editable input
+into immutable content or a typed `PieceError`. Boundaries and holes are cyclic `DirectedEdge` lists;
+the last edge precedes the first, without repeating it. Empty loops, repeated cut edges across any
+loops, and nonlive boundary/hole/construction references refuse. Even a one-edge loop still needs G2
+endpoint closure, winding, simplicity, hole containment/nonintersection and intake conservation.
+Every Piece reports `GeometricValidation::DeferredToG2`, never a geometry badge; see
 `decision_ontology-invariants-structural-g1-geometric-g2.md`.
 
-**Whole-interval queries (`G1-SLICE.3c.2a`).** `EdgeRange::new(edge, from, to)` requires exact
-ascending bounds `from < to`; `EdgeRange::whole(edge)` covers `[0,1]`. A zero-length anchor is a
-point reference. `IdentityLedger::resolve_range` partitions the entire interval through each journal
-edit, with no grid or endpoint sampling. Its `RangeResolution` retains every `RangePortion`, in the
-held edge's original forward traversal: live portions carry the current edge, local bounds and
-`Direction`; lost portions carry a `RangeRepairTask` naming the original held range, affected local
-interval and the orphaning operation/cause. Existing causes have no candidate interval mapping;
-endpoint ambiguity carries its candidates in the separate point-resolution answer.
+Quantity is total physical copies. `Mirroring::Single` accepts any positive quantity;
+`MirroredPairs` requires an even quantity. Separate `PairMember { handedness, companion }` content
+requires an explicit other Piece and left/right hand; quantity counts this member's copies.
+`PieceInventory::new(pieces)` checks unique ids, companion existence/paired mode/reciprocity,
+opposite hands and equal quantities. It retains authored order/fields, with shared pieces()/piece(id)
+borrows and typed actual-value refusals. Empty inventories and equal odd member quantities are legal;
+labels imply no hand or partner. A member cannot name itself.
 
-For example, split a boundary edge into three equal fragments and delete the middle. Resolving the
-original endpoints still succeeds, but resolving the entire edge returns live first fragment, a
-repair for the deleted middle fragment, live last fragment. `has_full_coverage()` is false. The same
-query on a sub-range entirely inside the first surviving third has full coverage. An offset gap,
-however narrow, likewise becomes an explicit uncovered interval; exact-arithmetic overflow becomes a
-recomputation repair, never an approximation. An edge never created in the ledger is `UnknownSource`.
+A cut-on-fold Piece declares exactly one outer-boundary fold edge; other Pieces declare none.
+Cutting side and layer index are explicit. MaterialAssignment is an id or nonblank Unresolved(reason);
+material identity validation awaits the Design material collection. Labels require nonblank name,
+size, fabric and colorway. Quantity, L/R and fold indicators derive from the cut plan:
 
-`start()` and `end()` on the range result are the original endpoint **point** resolutions. A bound
-exactly at a split point can still offer both sides; a bound on a shared offset boundary can still be
-ambiguous. Full positive-length coverage does not resolve those choices. It also does not prove
-continuity, winding or geometric validity, and grants no approval. A repair remains visible after
-later edits: a surviving endpoint or new unrelated edge cannot silently reattach lost interval content.
+- One mirrored-pair definition, quantity2: cut two, pair L/R.
+- Reference-skirt skirt_back_right/left, quantity1 each: cut-one R/L. Either inventory order accepts;
+  unequal quantities refuse, equal odd member quantities accept.
+- Single front, quantity1, one boundary fold edge: cut one on fold.
+- Awaiting selection can retain "awaiting fabric selection", "unassigned woven fabric" and
+  "undetermined". Inspectable unresolved content does not establish production readiness.
 
-`Piece::range_resolutions()` supplies this full-edge evidence for boundary, holes and construction
-lines, alongside each authored `DirectedEdge`. Range portions are ordered forward in the stored edge's
-frame; a reversed authored traversal consumes that sequence backwards and reverses the fragment
-directions. The future command bus must consider range repairs **as well as** point repairs. The
-existing point-only registration verdict keeps its narrower meaning until design-level registration
-and validation land. The interval contract and its limits are recorded in
+Shared definition() access and editing a clone cannot mutate a validated Piece. edges() includes
+boundary, holes and construction lines; endpoint_references() inventories traversal endpoints for
+later atomic bus registration. endpoint_resolutions() exposes current point evidence without
+rewriting held references. Endpoint success alone cannot certify an entire edge.
+
+**Whole intervals.** `EdgeRange::new(edge, from, to)` requires exact ascending bounds; whole(edge)
+covers [0,1]. A zero-length anchor is a point. `IdentityLedger::resolve_range` partitions the entire
+interval through the journal, without sampling. `RangeResolution` retains ordered `RangePortion`s:
+live portions carry current edge/local bounds/Direction; lost portions retain a `RangeRepairTask`
+with held range, affected interval and orphaning operation/cause. Current repair causes have no
+candidate interval mapping; point ambiguity retains its separate candidates.
+
+Split an edge into thirds and delete the middle: both original endpoints still resolve, but the
+whole range returns live/repair/live and has_full_coverage() is false. A sub-range inside the first
+third retains full coverage. Arbitrarily narrow offset gaps remain uncovered; exact overflow creates
+a recomputation repair. A never-created edge is UnknownSource. start()/end() retain original point
+resolutions, including split/shared-offset-boundary choices. Positive-length coverage settles neither
+those choices nor continuity, winding, geometry or approval. Later unrelated edges cannot reattach
+lost content.
+
+`Piece::range_resolutions()` returns every full held edge with its authored DirectedEdge. Portions
+run forward in the stored frame; reversed traversal consumes them backwards with reversed fragment
+directions. The bus must consider interval repairs and point repairs. The existing point-registration
+verdict remains narrower; full recipe/geometry/release checks remain separate. See
 `decision_range-resolution-preserves-entire-interval.md`.
+
+**Owned structural state (`G1-SLICE.6.4.2.b`).** `sc_core::design::DesignStructure::new(definition)`
+owns the explicit Design identity, exact DesignRevision, CanonicalInputs, PieceInventory, CutPlan and
+IdentityLedger. No record, revision, copy or registration is generated. definition() and the typed
+component getters return shared canonical borrows; editing a detached definition does not change state.
+An explicit empty draft accepts, including revision0; a counter beyond u128 remains exact.
+
+Owned ids are checked in deterministic order: Design, lengths, scalars, Pieces, copies, journal
+operations, with each family's original order retained. DuplicateIdentity reports both
+DesignStructurePosition witnesses, including retired creating operations. Source/evidence/formula,
+edge-creator and registration-owner references are legitimate uses rather than additional owners.
+For example, a length id aliasing a Piece id refuses; a length's source naming that Piece is retained
+without claiming the source exists in the correct registry or proves its value.
+
+The original copy definitions are revalidated against this actual Piece inventory using CutPlan's
+existing rules. A plan built for quantity1 refuses beside the same Piece's quantity2 state; a
+previously allowed reflected copy refuses if its Piece now requires authored-only copies. The nested
+CutPlan error retains actual ids and quantities. No copy is minted to repair the disagreement.
+
+Pieces are not reconstructed against the current ledger. An old boundary whose interior or entire
+edge was deleted stays inspectable through its held references and point/range repair evidence.
+Existing journal/registration choices remain exact; construction neither reattaches nor registers
+references. This structural component is not the complete Design: recipe/metadata/material/garment
+registries, current source truth, combined readiness, command execution and release remain later work.
 
 **Semantic notches (`G1-SLICE.3c.3a`).** `Notch::new(definition, &piece, &ledger)` stores an
 immutable semantic matching mark with a piece identity and an exact `EdgeAnchor { edge, param }`.
@@ -135,7 +130,7 @@ front's fabric-fold contour does not create a second physical copy.
 Copy orientation is independent of topological traversal direction. Copy edges use the pattern's
 source frame; G2/V1 applies the physical reflection transform. `CutPlan` exposes shared immutable
 copies and always reports `GeometricValidation::DeferredToG2`; it certifies no contour, placement,
-cutting or release result. PieceInventory checks pair metadata; design-wide identity/readiness follows.
+cutting or release result. PieceInventory checks pair metadata; DesignStructure checks owned ids/current copies; readiness follows.
 See `decision_physical-cut-copies-have-stable-identities.md` for the identity and replacement rule.
 
 **Implementation vocabulary.** API names supplement the garment glossary; declarations confer
@@ -147,6 +142,10 @@ no physical validation.
 | `PieceError` | Typed structural Piece refusal |
 | `PieceInventory` | Immutable ordered Pieces with complete companion metadata checks |
 | `PieceInventoryError` | Actual duplicate or invalid companion identities/values |
+| `DesignStructure` | Immutable owned structural component, without full Design/readiness claims |
+| `DesignStructureDefinition` | Explicit identity/revision, inputs, Pieces, copies and topology |
+| `DesignStructurePosition` | Original role/index of an owned structural entity |
+| `DesignStructureError` | DuplicateIdentity witnesses or nested current CutPlan refusal |
 | `DirectedEdge` | Held edge identity plus authored traversal |
 | `Direction` | Original or accumulated reversed traversal |
 | `Single` | Piece cut mode retaining its authored handedness |

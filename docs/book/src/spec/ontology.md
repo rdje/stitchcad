@@ -332,7 +332,7 @@ bounded; all existing examples and local API vocabulary are preserved there.
 | Content | Implemented scope | Deferred obligation |
 | --- | --- | --- |
 | MeasurementTable | Named stable bindings, canonical current inputs, unique id/token inventory | Design/evidence registry; evaluator; physical repeatability; G4 release policy |
-| Piece | Immutable structural content/labels and pair-consistent inventories | G2 geometry; aggregate readiness |
+| Piece | Immutable content/labels, pair-consistent inventories and owned structural state | G2 geometry; aggregate readiness |
 | Point and range references | Journal resolution, endpoint choices and interval repairs | G2 geometric continuity; design/release validation |
 | Physical cut copies | Explicit identities, exact quantity/orientation plan | G2/V1 physical transforms |
 | Notch | Semantic anchor, symbolic profile bindings | G4 physical geometry/encoding |
