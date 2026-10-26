@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0325 — concrete DXF and artifact closure requests
+## STITCHCAD-G1-0326 — explicit graded DXF request inputs
 
-Single-instance named DXF retains exact instance/profile/result; closure inspection carries identical payload.
-Native2+2+2/strict lint/fmt/book/publication76-89 pass0; D237 stale inverse chapter scope corrected.
-479/297/141 whole8827a23 retained exact; .6.2.2.c.2.4.1 done, G1 progress6/18 unchanged; handlers later.
+Registered AAMA/base-plus-rules and ASTM/embedded requests retain base, rules and ordered pinned members.
+Single-size API/closure remain; native4+2+2/strict lint/fmt/book/publication76-90 pass0;480/298 exact06dfb78.
+.6.2.2.c.2.4.2 done; G1 progress6/18 unchanged; actual grading/export/provenance checks remain later.
 
 # Sealed archive — earlier slices
+
+| [part298](docs/history/stitchcad-changelog-part298.md) | whole0325 | 6 lines, 387 bytes, sha256:702b0db9… |
 
 | [part297](docs/history/stitchcad-changelog-part297.md) | whole0324 | 6 lines, 341 bytes, sha256:e6312a2d… |
 

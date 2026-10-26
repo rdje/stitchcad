@@ -7,10 +7,11 @@ mod artifact;
 mod construction;
 mod context;
 mod evaluation;
+mod grading_selection;
 mod payload;
 mod query;
 mod snapshot;
-pub use artifact::{ArtifactPayload, CommandArtifact, DxfTarget, ExportDxf};
+pub use artifact::{ArtifactPayload, CommandArtifact, DxfGrading, DxfTarget, ExportDxf};
 pub use construction::{AddNotch, CloseDart, SplitSeamSpan};
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
@@ -20,6 +21,7 @@ pub use evaluation::{
     CommandEvaluation, EvaluateInstance, EvaluationPayload, EvaluationProfile, GradeSize,
     RegenerationChart, ResolveProfile, SizeMemberTarget,
 };
+pub use grading_selection::{GradedSizeSelection, GradedSizeSelectionError};
 pub use payload::{
     AssignMaterial, AssignMaterialError, ChangeMeasurement, CommandMutation, MutationPayload,
     PieceSelection, PieceSelectionError,

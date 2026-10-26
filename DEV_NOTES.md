@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — explicit graded DXF carriage
+
+0326 .6.2.2.c.2.4.2 preserves ordered distinct member claims at one SizeSet/Count revision; empty/duplicate
+inventories refuse with original positions. Explicit base/rules/selection pair AAMA companion or ASTM embedded.
+Single-instance API/closure stay intact; no base inference, chart subtraction or readiness/serialization claim.
+Native artifact4/query2/catalog2 and selected strict lint/fmt/book/publication76-90 pass0;480/298 exact06dfb78.
+Promotion declined: existing grading/registry contracts. G1still6/18, PLT/PDF next; broad CI integration/pre-push.
+
 ## _(2026-10-26 UTC)_ — exact DXF and uncertainty requests
 
 0325 .6.2.2.c.2.4.1 adds named single-instance DXF/profile-result inputs and identical artifact closure payload.
@@ -203,25 +211,8 @@ validation preserve prior contracts. Native collection5+declaration5 pass0; sele
 435/436/276 whole28caa22 Git/hash/public exact0. G1still5/18; composite/path inputs .3d.3 next. Working
 archive64 requires window15 before more retirement. Promotion: existing SizeSet decision extended.
 
-## _(2026-10-26 UTC)_ — canonical signed adjacent break declarations
-
-0303 .4c.3d.1 implements D228 keys over actual axis/member/table/measurement bindings. Delta borrows
-its dedicated canonical signed Length; no chart subtraction/cache/default. All states, source updates,
-zero/negative/uneven steps and distinct waist/hip dimensions survive. Contexts reject ambiguous IDs or
-disagreeing shared canonical content/roles. Every query validates the original key/current snapshot;
-reordered/nonadjacent members and changed bindings refuse with original nested errors. Native break5
-plus axes5 pass0; selected strict lint/fmt/book0.433/434/275 whole7e0ca8d Git/hash/public exact0.
-G1still5/18; required coverage .3d.2 and composite/path readiness .3d.3 remain. Promotion: existing
-SizeSet decision extended; broad integration/platform proof deferred to milestone/pre-push.
-
-## _(2026-10-26 UTC)_ — explicit break-dimension key approved
-
-0302 .4c.3d.0 adopts the director's D228 recommendation: explicit axis, named POM/dimension and
-adjacent member pair. Body/garment domain remains canonical; signed delta state/source is borrowed,
-not inferred from chart arithmetic or labels. Normative field/§6/§7, decision, PLANNING and resume
-pointers align. Book0;431/432/274 retain whole5b13daf Git/hash/public bytes exactly. Semantic blocker
-closed; sourced declarations .3d.1 next. No code/schema or path-readiness claim; G1still5/18.
-Promotion: existing SizeSet decision updated; no unrelated policy or verification expansion.
+[Complete signed-break and approved-key lessons](docs/history/stitchcad-devnotes-part480.md)
+retain their original D228 contract, numeric-state boundaries and focused proof.
 
 [Complete break-key review lesson](docs/history/stitchcad-devnotes-part479.md) retains
 its original D228 witness, pending ruling and ownership; the later approved key remains implemented.

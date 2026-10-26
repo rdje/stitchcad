@@ -87,15 +87,7 @@ still refuse against a retargeted current inventory; reconstruction does not rew
 | `SizeChartCollectionContext` | Borrowed canonical observations and current metadata context |
 | `SizeChartCollectionError` | Typed identity, domain, current-target or coverage refusal |
 
-Eighteen contracts/privacy and fourteen deliberate production mutations check coverage/currentness,
-including a deliberately reduced target inventory, valid duplicate cells, table expansion and an
-introduced numeric zero fallback. Exact source restoration, strict native/WASM checks, a warning-free
-book and focused doctrine checks verify this integration. No app, command bus or MCP server is claimed.
-The mutation diagnostic prepares the [local producer profile](../build-and-checks.md#direct-python-producers)
-before output or child dispatch, then rebuilds the restored focused target before returning.
-It plans all fourteen numbered logs and restored.log, the mutable implementation and current
-read-only test input before reads. Failed-body evidence must name a current assertion macro's
-source, line and byte column, including inline closure assertions. Complete fifteen-child/file
-captures and four physical alias/missing-input refusals verify dispatch separately. The two-anchor
-uniqueness mutation remains ordered and complete; an actual second-anchor omission fails the capture.
-Real replay verifies all fourteen macro failures, exact inputs and the public artifact's eighteen tests.
+Contracts/privacy and watched source mutations cover actual coverage/currentness and numeric-refusal behavior.
+The [local producer profile](../build-and-checks.md#direct-python-producers) guards inputs/outputs/aliases;
+mutation evidence names current assertion locations and rebuilds restored artifacts. Complete original
+receipts remain in `docs/history/stitchcad-devnotes-part480.md`; they establish no app or receiver proof.

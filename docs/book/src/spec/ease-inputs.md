@@ -170,16 +170,10 @@ G1-SLICE.4b.3 reviews the individual and set APIs against ontology §2.2:
 | Provenance | Amount source/state records, mapping and compression references | References retained; existence/scope/truth/human attribution deferred to Design/G4 |
 | Per-POM relationship | EaseSet bound to current mappings and table identities | POM/id/token lookup, unique targets and explicit replacement; no inferred complete chart coverage |
 
-The Rust contracts and privacy tests prove the structural family. The tracked guard diagnostics
-have observed seven individual and ten set guard removals failing assertions, then restored exact
-source. Their regression tests run in the standard Rust gate; the destructive mutation diagnostics
-must run sequentially before a restored build. The milestone probe suite additionally verifies the
-repository/spec instruments, including formula, glossary, uncertainty, feature and release contracts.
-
-The direct Python diagnostics now prepare the shared local producer profile and validate their
-declared output/source paths before the first write or native child. Their final restoration builds
-also restore the current compiled artifacts; exact source restoration alone is insufficient.
-The [developer checks](../build-and-checks.md#direct-python-producers) describe this bounded contract.
+Contracts/privacy and sequential watched mutations verify structural mappings and restored source/artifacts.
+The [local producer profile](../build-and-checks.md#direct-python-producers) guards diagnostic source/output
+paths before writes/children. Complete original verification receipts remain whole in
+`docs/history/stitchcad-devnotes-part480.md`.
 
 Ease and SizeSet structural families are reviewed together at G1-SLICE.4d.2. Actual
 body-plus-ease evaluation/current Design registry belongs to G1 .5/.6; chart reconciliation and

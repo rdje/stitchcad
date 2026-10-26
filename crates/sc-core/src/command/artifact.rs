@@ -1,5 +1,5 @@
 //! Concrete artifact intents and shared snapshot binding, before generation or dependency traversal.
-use super::{CommandId, CommandSnapshotContext};
+use super::{CommandId, CommandSnapshotContext, GradedSizeSelection};
 use crate::ontology::{EntityId, SelectedProfilePin};
 
 /// Registered DXF dialect identities, not writer flags or evidence of receiver compatibility.
@@ -29,7 +29,28 @@ impl DxfTarget {
     }
 }
 
-/// Single-instance DXF request with explicit selected profile and resolved parameter-result claims.
+/// Explicit carriage of a requested DXF; actual grade rules retain stable point references and states.
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum DxfGrading {
+    /// Serialize the one supplied Instance; no rule table or size range is inferred.
+    SingleSize,
+    /// AAMA base geometry plus a separate rule table; the companion is part of the requested artifact.
+    BasePlusRules {
+        /// Actual grade-rule table identity, not deltas computed from chart subtraction.
+        rule_table: EntityId,
+        /// Explicit target members under one set snapshot.
+        sizes: GradedSizeSelection,
+    },
+    /// ASTM base geometry with its named rule table embedded in the DXF.
+    EmbeddedRules {
+        /// Actual grade-rule table identity.
+        rule_table: EntityId,
+        /// Explicit target members under one set snapshot.
+        sizes: GradedSizeSelection,
+    },
+}
+
+/// DXF request with explicit carriage, selected profile and resolved parameter-result claims.
 /// Actual result bindings supply units, line semantics and allowance policy without copied defaults.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct ExportDxf {
@@ -37,6 +58,7 @@ pub struct ExportDxf {
     target: DxfTarget,
     selected: SelectedProfilePin,
     parameters: EntityId,
+    grading: DxfGrading,
 }
 impl ExportDxf {
     /// Request one complete Instance in a named single-size dialect; allocates no file or result.
@@ -53,9 +75,50 @@ impl ExportDxf {
             target,
             selected,
             parameters,
+            grading: DxfGrading::SingleSize,
         }
     }
-    /// Actual immutable Instance identity, not an inferred latest evaluation of the Design.
+    /// Request the registered AAMA/R12 base-plus-rules carriage, including its companion rule table.
+    /// Execution must check actual base/member/rule/break provenance; no complete-range claim is inferred.
+    #[must_use]
+    pub const fn base_plus_rules(
+        base_instance: EntityId,
+        rule_table: EntityId,
+        sizes: GradedSizeSelection,
+        selected: SelectedProfilePin,
+        parameters: EntityId,
+    ) -> Self {
+        Self {
+            instance: base_instance,
+            target: DxfTarget::AamaNamedR12,
+            selected,
+            parameters,
+            grading: DxfGrading::BasePlusRules { rule_table, sizes },
+        }
+    }
+    /// Request the registered ASTM/R13 embedded-rule carriage with an explicit base and size selection.
+    #[must_use]
+    pub const fn embedded_rules(
+        base_instance: EntityId,
+        rule_table: EntityId,
+        sizes: GradedSizeSelection,
+        selected: SelectedProfilePin,
+        parameters: EntityId,
+    ) -> Self {
+        Self {
+            instance: base_instance,
+            target: DxfTarget::AstmNumberedR13,
+            selected,
+            parameters,
+            grading: DxfGrading::EmbeddedRules { rule_table, sizes },
+        }
+    }
+    /// Exact carriage, rule table and target size selection, before any serialization or traversal.
+    #[must_use]
+    pub const fn grading(&self) -> &DxfGrading {
+        &self.grading
+    }
+    /// Supplied Instance: serialized alone or used as the explicit base of the selected graded carriage.
     #[must_use]
     pub const fn instance(&self) -> EntityId {
         self.instance
@@ -77,10 +140,10 @@ impl ExportDxf {
     }
 }
 
-/// Available concrete artifact schemas; other formats and graded carriages retain separate owners.
+/// Available concrete artifact schemas; other formats retain separate owners.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum ArtifactPayload {
-    /// Explicit named-target single-instance DXF generation.
+    /// Explicit named-target DXF and any requested rule-table companion.
     ExportDxf(ExportDxf),
 }
 impl ArtifactPayload {

@@ -745,24 +745,25 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   .4 tech-pack canonical sources; .5 combined artifact schema review before release inputs.
 - ID: `G1-SLICE.6.2.2.c.2.4.1`
   Status: `done`
-  Goal:0325 exact single-instance DXF and same-payload GetUncertaintyClosure, no guessed global closure.
-  Own core command artifact/reexport/query modules, artifact/query/catalog contracts and artifact book/nav/map.
-  Explicit AAMA/R12 or ASTM/R13 target, instance, profile/schema/content/result and shared Design snapshot;
-  all physical axes/uncertainty remain canonical result bindings, no writer defaults or copied scalar states.
-  Generate versus inspect metadata; constructors perform no lookup, closure, file write, grant or receiver proof.
-  D237 stale inverse intro/earlier pending claims repaired from actual API/later mature certificate sections.
-  Whole prior trig chapter479 preserves pilot receipts/commands; current math/runtime/cleanup rules retained.
-  Own479 whole0324 task/0301 lesson/trig chapter,297 ledger/141 closed D235/D236 reports from8827a23.
-  - [x] ROOT CAUSE (WHY + WHERE): actual requested artifact must bind instance/profile/configuration; D237
-    early prose contradicts checked_atan/atan2 and later complete certificate/native sections; source review rc=0.
-  - [x] ADDRESSED: native artifact2/query2/catalog2 pass6/0; test lint5 repaired, final strict selected lint/fmt/
-    book/publication76 chapters/89 entries pass; D237 current scope aligns; rc=0.
-  - [x] NO REGRESSION: original query/catalog preserve exact snapshot/authority; no numeric kernel/certificate
-    edits or huge rerun.479/297/141 whole8827a23 Git/hash/public equality pass; rc=0.
-  Commit0325; .4.2 registered graded DXF next. Promotion declined: existing contracts; full CI integration/pre-push.
+  Goal:0325 exact single-instance DXF/closure and D237 correction; [whole scope/proofs](../history/stitchcad-devnotes-part480.md).
 - ID: `G1-SLICE.6.2.2.c.2.4.2`
-  Status: `pending`
-  Goal: explicit base/rule/set inputs for registered graded DXF carriages; no inferred all-contours target.
+  Status: `done`
+  Goal:0326 explicit registered base-plus-rules/AAMA and embedded-rules/ASTM request inputs.
+  Own core command grading selection/artifact/reexports, existing artifact contracts and artifact book.
+  Nonempty ordered distinct member IDs share exact set/Count revision; no sorting, label/base inference.
+  Graded constructors retain explicit base Instance/rule table/selection/profile/result and fix registered
+  target pairing; existing single_instance API preserved. Closure carries same full graded inputs.
+  Actual membership/base/rule/break/profile provenance and serialization remain handlers/G3, no readiness proof.
+  Own480 whole0325 task/oldest0303-0302 lessons/prior chart/Ease verification receipts and298 ledger from
+  06dfb78, exact source/hash/public before retirement; retain current diagnostic rules and phase boundaries.
+  Focus artifact/query/catalog contracts, selected strict lint/fmt/book/publication; broad CI later.
+  - [x] ROOT CAUSE (WHY + WHERE): registered graded carriages require explicit base/rule/set/member inputs;
+    single-size payload could not name them. Native artifact4/query2/catalog2 pass8/0; rc=0.
+  - [x] ADDRESSED: exact ordered selection/refusals, fixed registered carriage pairing, same closure payload;
+    selected strict lint/fmt/book/publication76 chapters/90 entries pass; rc=0.
+  - [x] NO REGRESSION: existing single/query/catalog contracts retained; no implicit base/deltas/defaults,
+    source lookup or serialization.480/298 whole06dfb78 Git/hash/public equality pass; rc=0.
+  Commit0326; next .4.3 PLT/PDF. Promotion declined: existing registry/grading contracts; broad CI later.
 - ID: `G1-SLICE.6.2.2.c.2.4.3`
   Status: `pending`
   Goal: PLT/PDF requests retain actual pen/scale/page/scale-square configuration and artifact-specific bindings.

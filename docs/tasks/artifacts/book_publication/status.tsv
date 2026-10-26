@@ -88,3 +88,4 @@ current chart replacement	spec/size-set-transformations.md	crates/sc-measure/src
 immutable SizeSet resolution intent	spec/size-set-transformations.md	crates/sc-measure/src/size_set_resolution/intent.rs	SizeSetResolutionIntent	G1-SLICE.4c.4.4	8
 command evaluation requests	spec/evaluation-requests.md	crates/sc-core/src/command/evaluation.rs	CommandEvaluation	G1-SLICE.6.2.2.c.2.2	4.4
 command artifact requests	spec/artifact-requests.md	crates/sc-core/src/command/artifact.rs	CommandArtifact	G1-SLICE.6.2.2.c.2.4.1	4.4
+graded artifact size selection	spec/artifact-requests.md	crates/sc-core/src/command/grading_selection.rs	GradedSizeSelection	G1-SLICE.6.2.2.c.2.4.2	4.4
