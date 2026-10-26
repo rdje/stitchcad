@@ -5,6 +5,12 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
+## STITCHCAD-G1-0288 — correctly rounded native inverse values
+
+.5d.3.3.1: checked_atan/checked_atan2 preserve actual kinds, private full-width slopes and signed branches.
+Independent27/54 fixtures/live oracle/native3/0, selected strict lint/fmt/book pass0; broad proof later.
+394/395/260 preserve whole history; book/live/decision sync. Source-bearing inverse calls next.
+
 | Segment | Coverage | Sealed identity |
 | --- | --- | --- |
 | [part1](docs/history/window1.md#stitchcad-changelog-part1md) | slices 1–15, `STITCHCAD-PLANNING-0001` … `STITCHCAD-SPINE-0004b` | 365 lines, 30452 bytes, `sha256:f4aec75a…` |
@@ -129,10 +135,7 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0287 — bounded native inverse algorithm plan
-
-.5d.1.2.2.2.b.2.c: admit bounded576-bit inverse plan; independent atan14/atan216/zero2/root4/insufficient2 pass, rc=0.
-Native code next;392/393/259 retain whole history. Map styling compacted without text/path loss; decision/book/live sync.
+| [part260](docs/history/stitchcad-changelog-part260.md) | whole0287 | 5 lines, 306 bytes, sha256:7a164200… |
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 

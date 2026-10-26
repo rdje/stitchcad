@@ -240,7 +240,7 @@ reader. Later budget checks can use this source-gated witness instead of repeati
 after every ordinary feature. The full reader remains available for deliberate re-verification.
 
 This closes inverse population coverage. The concrete algorithm plan below uses its stronger
-margin; native implementation evidence still follows. Production tangent and whole execution remain open.
+margin; native implementation evidence follows below. Production tangent and whole execution remain open.
 
 ## Admitted atan/atan2 runtime plan
 
@@ -287,4 +287,50 @@ This focused model passes14 atan and16 atan2 comparisons against an independent7
 rational-addition/series oracle, two zero-vector refusals, four standard-library integer-root
 comparisons and two insufficient-budget controls. The oracle uses a distinct pi identity and
 no Newton/half-angle reduction. Exact inequalities support the whole admitted argument family;
-the sample checks support transcription. Native code and platform evidence are still pending.
+the sample checks support transcription. Native code is available below; platform evidence remains pending.
+
+## Native inverse values
+
+FormulaNumericValue::checked_atan() accepts a Ratio in internal ppm and returns an Angle rounded
+to the nearest integer microdegree. Thus1,000,000ppm represents real1 and returns45,000,000µdeg;
+500,000ppm returns26,565,051µdeg. Negative inputs retain their sign. Tiny inputs may round to
+canonical zero and very large finite inputs may round to a signed90-degree endpoint.
+
+FormulaNumericValue::checked_atan2(x) treats its receiver as y. Both operands must be Lengths
+or both Ratios. Common units cancel; there is no ppm rescaling of y/x. The exact quotient stays
+private even when it needs256-bit components, so admitted full-width operands do not fail at a
+public Ratio intermediate. Results follow the principal branch(-180,+180] degrees before rounding.
+
+```rust
+use sc_core::recipe::{FormulaKind as K, FormulaNumericValue as V, FormulaRational as R};
+let ratio = V::new(K::Ratio, R::from_signed_integer(1_000_000))?;
+assert_eq!(ratio.checked_atan()?.rational(), R::from_signed_integer(45_000_000));
+let y = V::new(K::Length, R::from_signed_integer(-1))?;
+let x = V::new(K::Length, R::from_signed_integer(-1))?;
+assert_eq!(y.checked_atan2(x)?.rational(), R::from_signed_integer(-135_000_000));
+let zero = V::new(K::Length, R::ZERO)?;
+assert_eq!(zero.checked_atan2(x)?.rational(), R::from_signed_integer(180_000_000));
+assert_eq!(zero.checked_atan2(zero).unwrap_err().diagnostic_code(), "formula_domain");
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+Exact axes are0,+180 or signed90 degrees. A tiny negative y with negative x may round to-180;
+that signed rounded endpoint is preserved. No angle modulo changes it into+180. Both-zero inputs
+return Atan2ZeroVector with the actual homogeneous kind and both exact operands, diagnostic
+formula_domain. Kinds are checked first in argument order, including zero-valued arguments:
+checked_atan rejects a non-Ratio with BuiltinInputKind; checked_atan2 rejects an unsupported first
+kind with BuiltinInputKind and a differing second kind with BuiltinDimension. Both are
+formula_dimension. No source expression or statement identity is invented at this value boundary.
+
+The native implementation follows the576-bit/five-half-angle/64-term plan above. It uses the
+shared certified pi endpoint, directed private integer arithmetic and integer Newton; no platform
+libm or new precision-refusal rule is involved. Binding remains separate. Source-bearing inverse
+calls and whole AST execution retain their later .5e owners.
+
+Work unit0288's focused formula_inverse_value_contract target checks27 atan and54 atan2 values,
+reproduces the retained fixture, and checks wrong-kind/zero-vector priority. Its independent
+768-bit oracle uses addition around atan(1/2),512 terms and a separate exact pi identity, without
+the native root/half-angle reduction. Direct sin/cos enclosures construct close rational neighbors
+on both sides of three half-microdegree thresholds, with both signs. Full-width values, private
+256-bit quotients, all quadrants, exact axes and both signed rounded endpoints are included.
+This is focused native evidence; coupled/platform checks remain .5d.4/integration/pre-push.

@@ -575,7 +575,7 @@ five tests covering signed endpoints, all numeric kinds, stored fractions and Bo
 
 ## Remaining trig/inverse plan
 
-Sin/cos value kernels are available below; tan and atan/atan2 remain unimplemented. For the actual ppm/microdegree quanta,
+Sin/cos and [atan/atan2](formula-trig-certificates.md#native-inverse-values) value kernels are available; tan remains unimplemented. For the actual quanta,
 rational-value restrictions exclude exact rounding midpoints, so converging valid enclosures would
 eventually decide each finite admitted input after exact pole/axis/branch handling. This is a
 qualitative termination proof. A generic algebraic separation estimate gives an impractical upper
@@ -583,7 +583,7 @@ bound; it does not establish actual hard inputs or justify an arbitrary precisio
 The full derivation/sources are in docs/decisions/fact_trig-midpoints-and-resource-bound.md;
 G1-SLICE.5d.1.2.2.2 still owns usable all-input resource accounting before implementation.
 The [finite-threshold study](formula-trig-certificates.md) covers all1M forward bands with exact
-gap verification. The native sin/cos plan and kernel are implemented; inverse/tangent resources remain open.
+gap verification. Sin/cos and inverse kernels have bounded certified plans; tangent resources remain open.
 
 ## Correctly rounded sine and cosine
 
@@ -625,4 +625,4 @@ factorials over the full signed principal interval,128 terms and its own remaind
 It covers exact values, signed/full turns, full-width inputs, near axes and rational neighbors
 on both sides of rounding thresholds. This is native value evidence; actual cross-platform
 execution and broader coupled checks remain .5d.4/pre-push. [Sourced sin/cos calls](formula-runtime-validation.md#product-implemented-numeric-calls)
-are available; full AST execution remains .5e. Tangent and inverse functions keep separate owners.
+are available; full AST execution remains .5e. Tangent retains its separate resource owner.

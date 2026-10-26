@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — correctly rounded native inverse values
+
+0288 .5d.3.3.1 transcribes the admitted576-bit/five-half/64-term plan into private inverse.rs.
+Numeric checked_atan/checked_atan2 retain ppm scaling, homogeneous actual kinds,256-bit private
+quotients, exact axes, signed rounded endpoints and actual typed zero-vector data. No new domain,
+precision failure, dependency or libm. Independent addition/series oracle reproduces27/54 values
+including signed near-midpoints and full widths; native3/0, selected strict Clippy/fmt/book pass0.
+The first fixture parser used i64 instead of R's i128 constructor and explicit panic arms; compiler
+and strict lint diagnosed both, corrected before final focused passes.394/395/260 retain exact
+whole history. Source propagation/AST/platform remain later owners; G1still5/18.
+Promotion: existing atan decision updated; no new cross-cutting doctrine.
+
 ## _(2026-10-26 UTC)_ — bounded native inverse algorithm plan
 
 0287 .5d.1.2.2.2.b.2.c admits576-bit/five-half-angle/64-term atan/atan2 after source-gating the
@@ -312,21 +324,8 @@ Clippy passes0. Broad/platform and within/assertion/size-context work remain the
 Whole0263 scope/closed static parent/ledger retain343/344/236. Promotion declined: implementation of
 existing formula3.1/units3 provider contracts, now documented in the book.
 
-## _(2026-10-25 UTC)_ — match general scalar metadata to its actual canonical source
-
-0263 .5e.1.3 checks general Input source, canonical target id, then actual kind before reading a
-value. Compact sealed views retain name/origin/metadata id and canonical borrow; reconstructed
-metadata preserves the original fields. Present typed values retain their source/state, including
-zero, false, signed turns and assumptions/preferences. Unknown/derived keep their exact required
-observation/formula and standard error source; Area remains computed. Wrong candidates/kinds and
-other source variants refuse without inventing registry membership, truth or statement context.
-
-The first test fixture's extend iterator required static items alongside local borrows (E0597/101);
-individual pushes permit safe lifetime coercion. Final scalar5/length3 pass0 with78 read cases,
-independent kind/mismatch tables, identity priority and all source variants. Selected strict Clippy
-passes0. No full runtime evaluator/context/approval or broad/platform verdict is claimed.
-Whole0262 scope, closed arithmetic parent and ledger retain341/342/235; book/live align.
-Promotion declined: this implements the existing sourced metadata/canonical scalar contract.
+[Complete general scalar authored-read lesson](docs/history/stitchcad-devnotes-part395.md) retains
+its original identity checks, lifetime repair, validation and promotion decision.
 
 [Complete canonical scalar-content lesson](docs/history/stitchcad-devnotes-part393.md) retains
 its original model, lint repair, validation and promotion decision.

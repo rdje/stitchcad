@@ -2,7 +2,7 @@
 
 - **Type:** `decision`
 - **Date:** `2026-10-26`
-- **Status:** `active`; algorithm plan admitted, native implementation pending
+- **Status:** `active`; algorithm plan admitted and native values implemented0288
 - **Owner / source:** G1-SLICE.5d.1.2.2.2.b.2.c, after complete inverse certificate0286
 
 answers: "how will atan and atan2 round without precision cutoffs?" · "what bounds inverse workspace?" · "how are principal branches retained?"
@@ -89,5 +89,14 @@ python3 -I -B docs/tasks/artifacts/formula_structure/atan_runtime_plan.py passes
 14 atan/16 atan2 oracle cases,2 zero-vector refusals,4 math.isqrt comparisons and2 insufficient
 budget controls, rc=0. Observed maximum Newton steps is11;13 is the proved bound. Full-width
 private slopes, signed quadrants, axes and near negative-axis endpoints are included. This is
-plan/model evidence, not native or cross-platform execution. Production .5d.3.3.1 follows;
+plan/model evidence, separate from the native implementation receipt below.
 source-bearing calls/AST and broader/platform proof retain .5e/.5d.4/pre-push ownership.
+
+## Native transcription0288
+
+Private recipe/inverse.rs follows the admitted plan with shared pi endpoints and no new dependency
+or precision/domain refusal. FormulaNumericValue exposes checked_atan/checked_atan2; actual kind
+priority and typed Atan2ZeroVector precede numeric special cases. The native target checks27/54
+independent values, signed principal endpoints, full-width private slopes and hard midpoint neighbors.
+Its standalone768-bit addition oracle uses no native root/half-angle path and reproduces the fixture.
+Focused native/format/selected strict Clippy evidence belongs to G1-SLICE.5d.3.3.1.

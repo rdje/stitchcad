@@ -524,25 +524,9 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part390.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.c`
   Status: `done`
-  Goal: native atan/atan2 branch/reduction/error/workspace admission before production code.
-  Candidate study after full certificate: exact reciprocal/quarter/quadrant folding, fixed-point
-  half-angle roots and atan series. Prove integer Newton termination and directed error/workspace;
-  compare independent rational addition/series oracles. Scratch consistency checks are not admission.
-  Planned producer: docs/tasks/artifacts/formula_structure/atan_runtime_plan.py; keep original
-  atan2 signed endpoints/zero-axis rules and no intermediate public128-bit ratio construction.
-  Work unit0287 owns392 whole0286 task,393 oldest scalar-model lesson,259 ledger before growth.
-  Additional paths: docs/decisions/decision_atan-runtime.md;knowledge-map/subsystems.md
-  Use source-gated compact witness; derive runtime precision from verified angular margin.
-  Before new record, compact redundant curated-map Markdown styling with every token/path/order
-  retained, no cap/schema/exclusion change. Decision/index/map/book/live sync; focused model only.
-  Acceptance0287:
-  - [x] REPRODUCE: full inverse certificate existed, native error/workspace/branch plan remained unadmitted.
-  - [x] ROOT CAUSE0287: python3 -I -B docs/tasks/artifacts/formula_structure/atan_runtime_plan.py proves width<2^-564/workspace<2^1154/Newton<=13 against source-gated margin540, rc=0; concrete bounded construction closes the plan gap.
-  - [x] FIX:576-bit exact folds/five half angles/one Newton+algebraic upper per step/direct64-term interval; no new dependency/input or precision refusal.
-  - [x] ADDRESSED0287: same command oracle atan14/atan216/zero-vector2/root4/insufficient2 pass, rc=0. Actual principal axes/endpoints retained; native code next.
-  - [x] NO REGRESSION0287: same source/profile gates and independent root/addition controls pass, rc=0; curated map text/path/order equals prior text after styling removal, Python comparison rc=0. No critical certificate/runtime source edits; broad .5d.4/pre-push.
-  - [x] LOCKSTEP:392/393/259 exact Git/hash/public bytes, rc=0; decision/index/map/book/live align. G1still5/18; production .5d.3.3.1, source/AST/platform remain open.
-  Verification: rc=0; Commit: STITCHCAD-G1-0287.
+  Goal:0287 bounded576-bit/five-half/64-term atan/atan2 plan admitted; native next.
+  Paths: docs/tasks/artifacts/formula_structure/atan_runtime_plan.py;docs/decisions/decision_atan-runtime.md
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part394.md).
 - ID: `G1-SLICE.5d.1.2.2.2.c`
   Status: `done`
   Goal:0279 admits exact sin/cos folding/512-bit64-term error/workspace plan; native next.
@@ -604,11 +588,24 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Status: `pending`
   Goal: tangent only after its separate admitted all-input resource plan; no borrowed sin/cos certificate.
 - ID: `G1-SLICE.5d.3.3`
-  Status: `pending`
+  Status: `done`
   Goal: correctly rounded atan/atan2 under .5d.1.2.2 plan.
 - ID: `G1-SLICE.5d.3.3.1`
-  Status: `pending`
+  Status: `done`
   Goal: native atan/atan2 under admitted .b.2.c plan; actual kinds/zero vector/signed axes/full-width hard midpoint fixtures.
+  Work unit0288 owns inverse.rs, recipe/mod.rs/numeric.rs, formula_inverse_value_contract.rs,
+  fixtures/formula_inverse.tsv and formula_structure/inverse_value_oracle.py before implementation.
+  Own394 whole0287 task,395 oldest0263 lesson,260 whole0287 ledger before bounded live growth.
+  Implement576-bit/five-half/64-term plan, private256-bit slopes, exact axes and actual refusals.
+  Focused native/oracle/format/selected Clippy; book/live/decision sync. Broad .5d.4/pre-push.
+  Acceptance0288:
+  - [x] REPRODUCE: admitted inverse plan existed; public numeric inverse calls were absent.
+  - [x] ROOT CAUSE0288: cargo check -p sc-core --lib passes, rc=0; native transcription was the missing value boundary.
+  - [x] FIX:576-bit directed kernels and actual kind/zero-vector errors; no new input limit or public quotient.
+  - [x] ADDRESSED0288: local_environment.py -- cargo test -p sc-core --test formula_inverse_value_contract:3/0, rc=0; independent atan27/atan254/live fixture and actual kind priority pass.
+  - [x] NO REGRESSION0288: selected lib/test Clippy -D warnings and fmt pass, rc=0; atan_runtime_plan.py source/margin/envelope/oracle controls pass, rc=0. Broad .5d.4/pre-push.
+  - [x] LOCKSTEP: book build rc=0;394/395/260 exact Git/hash/public bytes rc=0. Initial260 selector included catalog rows; corrected to whole5-line ledger before commit. G1still5/18; sources/AST/platform open.
+  Promotion: existing admitted plan updated; no new cross-cutting rule. Verification: rc=0; Commit: STITCHCAD-G1-0288.
 
 - ID: `G1-SLICE.5d.4`
   Status: `pending`

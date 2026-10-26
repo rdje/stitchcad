@@ -27,6 +27,15 @@ pub enum FormulaNumericError {
         /// Actual negative exact value, before function rounding.
         value: FormulaRational,
     },
+    /// Homogeneous atan2 operands are both exactly zero, so no direction exists.
+    Atan2ZeroVector {
+        /// Actual shared Length or Ratio kind.
+        kind: FormulaKind,
+        /// Actual first operand.
+        y: FormulaRational,
+        /// Actual second operand.
+        x: FormulaRational,
+    },
     /// A variadic numeric built-in was called without its required first operand.
     BuiltinArity {
         /// The attempted built-in.
@@ -99,7 +108,7 @@ impl FormulaNumericError {
         match self {
             Self::BuiltinArity { .. } => "formula_parse",
             Self::BuiltinDimension { .. } | Self::BuiltinInputKind { .. } => "formula_dimension",
-            Self::NegativeSquareRoot { .. } => "formula_domain",
+            Self::NegativeSquareRoot { .. } | Self::Atan2ZeroVector { .. } => "formula_domain",
             Self::InvalidClamp { .. } => "formula_domain",
             Self::NonNumericKind { .. }
             | Self::BinaryDimension { .. }
@@ -398,6 +407,59 @@ impl FormulaNumericValue {
             })?;
         let value = super::trig::sin_cos_value(self.value, cosine)?;
         Self::for_operation(kind, value, builtin.token())
+    }
+
+    /// Returns atan of a Ratio, rounded to the nearest integer microdegree as an Angle.
+    ///
+    /// Raw Ratio values are ppm. Exact input signs and full rational component widths survive
+    /// private reciprocal/half-angle reductions; binding and source contributions are separate.
+    ///
+    /// # Errors
+    /// Returns BuiltinInputKind for an actual non-Ratio operand, even when zero.
+    pub fn checked_atan(self) -> Result<Self, FormulaNumericError> {
+        if self.kind != FormulaKind::Ratio {
+            return Err(FormulaNumericError::BuiltinInputKind {
+                builtin: FormulaBuiltin::Atan,
+                argument: 0,
+                actual: self.kind,
+            });
+        }
+        let value = super::inverse::atan_value(self.value)?;
+        Self::for_operation(FormulaKind::Angle, value, "atan")
+    }
+
+    /// Returns atan2(self, x) of homogeneous Length or Ratio operands, in integer microdegrees.
+    ///
+    /// The true principal branch is(-180,+180] degrees. Rounding may also produce-180 degrees;
+    /// no direction modulo changes that signed endpoint. The private quotient may need256 bits.
+    ///
+    /// # Errors
+    /// Checks actual kinds in argument order before Atan2ZeroVector; no intermediate public
+    /// Ratio or new precision/domain limit is introduced by inverse evaluation.
+    pub fn checked_atan2(self, x: Self) -> Result<Self, FormulaNumericError> {
+        if !matches!(self.kind, FormulaKind::Length | FormulaKind::Ratio) {
+            return Err(FormulaNumericError::BuiltinInputKind {
+                builtin: FormulaBuiltin::Atan2,
+                argument: 0,
+                actual: self.kind,
+            });
+        }
+        if x.kind != self.kind {
+            return Err(FormulaNumericError::BuiltinDimension {
+                builtin: FormulaBuiltin::Atan2,
+                argument: 1,
+                wanted: self.kind,
+                actual: x.kind,
+            });
+        }
+        let phase = super::inverse::atan2_phase(self.value, x.value).ok_or(
+            FormulaNumericError::Atan2ZeroVector {
+                kind: self.kind,
+                y: self.value,
+                x: x.value,
+            },
+        )?;
+        Self::for_operation(FormulaKind::Angle, phase.rounded()?, "atan2")
     }
 
     /// Evaluates one of the six exact comparison operators on same-kind numeric operands.

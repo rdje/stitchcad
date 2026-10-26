@@ -45,6 +45,7 @@ pub use numeric::{FormulaNumericError, FormulaNumericValue};
 mod roots;
 
 mod arc;
+mod inverse;
 mod pi;
 mod trig;
 

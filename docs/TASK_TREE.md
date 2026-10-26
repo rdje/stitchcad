@@ -79,9 +79,9 @@ is registered here with a declared lane — plus the advisory clause-versus-leaf
 siblings the containment registry prescribes are told from strays. In the advisory table, more clause rows
 than roadmap clauses is expected (a tree may split one clause into several leaves); fewer is the alarm.
 
-**`G1-SLICE.5d.1.2.2.2.a`** investigates the unverified finite-threshold certificate idea after archive0276.
+**`G1-SLICE.5d.3.3.1`** implements certified native atan/atan2; sourced inverse calls follow.
 [Execution frontier](tasks/G1-SLICE-execution.md) resumes at .5e.2.4; D70 ruling remains pending.
-Trig resource strategy .5d.1.2.2.2 stays P1 before trig calls. Director2026-10-25: one focused check per
+Tangent resource strategy .5d.1.2.2.2 stays P1 before its implementation. Director2026-10-25: one focused check per
 feature; broad verification and nonblocking audits remain owned for later integration/pre-push.
 Original historical descriptor identity remains unknown. Gate G0 has no further leaf:
 its review is derived (`bash docs/tasks/artifacts/g0_exit/run_g0_exit_review.sh` → `18 met / 1 not met /
