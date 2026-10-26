@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — resumable inverse certificate controller
+
+0284 .5d.1.2.2.2.b.2.b.2.a captures170 build inputs and a byte-exact producer copy, with four
+critical live math/coverage sources checked separately. Bounded native parts publish only after
+terminal success/exact reading; manifest completion requires all450 ranges.100k then resumed200k
+and independent partial reader pass0; full-reader partial refusal, corrupted-row3/coverage2/
+source-drift1/prohibited-live-read1/actual owned-child reaping2 controls pass, rc=0. Lock absent,
+registry empty. Full45M remains .b; inverse runtime admission separate.386–388/256 retain exact
+whole task/lesson/closed repair scope/ledger. Promotion: inverse decision records custody and scope.
+Read-only cleanup inspect accepts actual certificate .bin chunks: defect owned P1 .h immediately
+after this commit, before full coverage or cleanup. No deletion; book/live/task preserve the finding.
+
 ## _(2026-10-26 UTC)_ — native inverse certificate chunk probe
 
 0283 .5d.1.2.2.2.b.2.b.1 adds a pure-stdout Rust diagnostic and a guarded Cargo/artifact/row probe.
@@ -317,17 +329,8 @@ No source registry, truth, artifact approval or whole runtime publication is inf
 size/context adapters remain .5e.1; complete evaluation .5e.2. Whole0260 task/ledger retain338/233.
 Promotion declined: this implements the existing canonical state contract, now documented in the book.
 
-## _(2026-10-25 UTC)_ — exact trig midpoint exclusion and resource boundary
-
-0260 .5d.1.2.2.1 applies independently published rational-value restrictions to the actual ppm/
-microdegree quanta. Finite trig/inverse answers cannot equal half-output boundaries; valid shrinking
-enclosures would eventually decide each input after exact poles/branches/axes. The exact producer
-checks quantum substitutions and the scale1 counterexample,161 recurrence/binomial evaluations,
-three roots and derived width arithmetic, rc=0. The written mean-value/polynomial proof supplies a
-coarse sufficient precision bound, not a practical budget or evidence of any actual hard input.
-No production trig algorithm/precision cap is admitted. P1 .2 owns usable all-input resources before
-.5d.3.2/.3; source theorem/proof/scope are promoted to fact_trig-midpoints-and-resource-bound.md.
-Whole packing/static scope group and ledger retain336/337/232; book/map/live pointers align.
+[Complete exact trig midpoint/resource lesson](docs/history/stitchcad-devnotes-part387.md) retains
+its original theorem/proof, resource boundary and promotion decision.
 
 [Complete twelfth archive packing lesson](docs/history/stitchcad-devnotes-part384.md) retains
 its original scope, source/read validation and promotion decision.

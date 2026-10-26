@@ -161,7 +161,7 @@ a deliberately wide band. The project-local report under target/trig_inverse_fea
 explicitly says inverse_feasibility_cohort_only, retaining exact endpoints and source hashes.
 
 This is neither complete45-million-threshold coverage nor a native atan/atan2 implementation.
-Full coverage needs its own resumable certificate and exact reader. Native sign/reciprocal/
+Full coverage uses the resumable controller below. Native sign/reciprocal/
 quadrant/axis/principal-branch handling, error and workspace remain separate admission work.
 Production tangent has a separate resource obligation; this experiment does not close it.
 
@@ -185,5 +185,34 @@ contains the endpoint-based band, rather than requiring their different enclosur
 
 The bounded probe passes10,035 exact row checks,67 Python-band comparisons and five actual
 invalid-input refusals before output. The report/prefix/build log is under target/native_inverse_probe/0283/.
-This supplies generator/parity/cost evidence only. Complete45M coverage, resumable checkpoint
-publication and native atan/atan2 admission remain open; no inverse formula API is available yet.
+This supplies generator/parity/cost evidence only. The resumable controller is available below;
+complete45M coverage and native atan/atan2 admission remain open. No inverse formula API is available yet.
+
+## Resumable inverse controller and exact reader
+
+The controller retains450 chunks of100,000 rows, frozen build inputs, a verified producer copy,
+source/binary hashes and an atomic manifest under target/inverse_threshold_certificate/0284/.
+It can use up to four owned children. Only completed chunks that pass independent exact reading
+enter the manifest; resume rechecks published bytes. A partial manifest never becomes complete
+merely because an invocation exits successfully.
+
+```bash
+python3 -I -B docs/tasks/artifacts/formula_structure/inverse_threshold_certificate.py --chunks 1 --workers 1
+python3 -I -B docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py --allow-partial
+# After full coverage, require the default complete-population reader:
+python3 -I -B docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py
+```
+
+Work unit0284 exercises one100k chunk, a verified resume to200k, partial reading and the default
+reader's required refusal. Corrupted-row/coverage/source and owned-child cleanup controls pass.
+The frozen executable/build inputs preserve actual provenance when unrelated features later
+change. Live native source, pi fixture, controller and reader must still match their recorded basis.
+This does not claim that the reader independently recomputes every tangent enclosure.
+
+An interrupted run leaves an exclusive lock and child registry. Establish that the recorded
+processes are gone before removing its project-owned lock and resuming. Error cleanup reaps
+owned children; differing unpublished final bytes are preserved and refused. Complete45M coverage
+remains a separate task. Native inverse-function branches/error/workspace admission is still open.
+
+A read-only inspection found generic .bin cleanup would select retained certificate chunks.
+Protection is owned as P1 immediately before the full run/next cleanup; no certificate was deleted.

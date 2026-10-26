@@ -501,26 +501,41 @@ focused checks, book/live sync and per-leaf commit before selecting the next chi
   Goal: after successful cohort, full45M certificate with bounded local chunks/source lock and independent exact reader; consider native producer for cost.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.1`
   Status: `done`
-  Goal:0283 native pure-stdout inverse chunk prototype, Python interval/gap parity and measured cost before full run.
-  Own383 whole0282 task,384 oldest history-packing lesson,255 ledger before growth.
-  Also own385 whole closed .5b.4c.h2.b.p.n.h node/receipts to retain native acceptance space.
+  Goal:0283 native10035/Python-band67/invalid-input5/lint0; bounded chunk only.
   Paths: crates/sc-core/examples/inverse_threshold_chunk.rs;docs/tasks/artifacts/formula_structure/native_inverse_probe.py
-  Guard full source/output plan before Cargo/child dispatch, project-local build/stores/artifacts.
-  Fixed640-bit64-term center tangent plus16*2^-600 slope padding: tan derivative<=2 on the
-  complete first-octant angle band and pi<4 justify this superset. Python endpoint bands must fit.
-  Exact native Farey predicates/288-byte rows; bounded prefix/spread/native invalid-input controls.
-  No full45M/native inverse API claim; book/decision/live sync. Future full controller remains .2.
-  Acceptance0283:
-  - [x] REPRODUCE: Python inverse cohort had no measured native chunk producer.
-  - [x] ROOT CAUSE0283: python3 -I -B docs/tasks/artifacts/formula_structure/native_inverse_probe.py builds actual native artifact under guarded stores, rows10035/Python-band67 pass, rc=0; justified padding avoids duplicate series work.
-  - [x] FIX: bounded pure-stdout native640-bit64-term generator, exact gap checks/288-byte rows; complete guarded build/child/output plan and source/binary identity.
-  - [x] ADDRESSED0283: same command rows10035/parity67/invalid-input5 pass, rc=0; observed10k765937250ns, no full-run guarantee or45M claim.
-  - [x] NO REGRESSION0283: same command preserves source/binary hashes and Python controls, rc=0; cargo clippy -p sc-core --example inverse_threshold_chunk -- -D warnings passes, rc=0. Product code unchanged; broad proof .5d.4/pre-push.
-  - [x] LOCKSTEP:383–385/255 exact Git/hash/public reads, rc=0; decision/book/live scope align. G1still5/18; full controller .2/native inverse .c pending.
-  Verification: rc=0; Commit: STITCHCAD-G1-0283.
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part386.md).
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2`
-  Status: `pending`
+  Status: `in_progress`
   Goal: after .1, source-locked complete45M controller/checkpoints/exact reader and full coverage evidence.
+- ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.a`
+  Status: `done`
+  Goal:0284 complete guarded resumable inverse controller/reader; focused partial/resume/refusal before full run.
+  Own386 whole0283 task,387 oldest midpoint lesson,256 ledger before growth.
+  Also own388 whole closed .5b.4c.h2.b.p.n.m1 node/receipts for acceptance/defect tracking space.
+  Paths: docs/tasks/artifacts/formula_structure/inverse_threshold_certificate.py;docs/tasks/artifacts/formula_structure/verify_inverse_certificate.py
+  Native stdout to bounded local chunks, source/binary hashes, exclusive lock, child cleanup,
+  explicit partial manifest and independent exact row/hash/coverage reader; no full45M claim.
+  Commit verified controller before .b full job. Decision/book/live sync; output run0284 under target.
+  Acceptance0284:
+  - [x] REPRODUCE: native chunks lacked durable full-population controller/independent reader.
+  - [x] ROOT CAUSE0284: inverse_threshold_certificate.py --chunks1 --workers1 publishes100k/PARTIAL, rc=0; default full reader refuses partial. Coverage requires450 exact ranges and frozen producer provenance.
+  - [x] FIX: guarded parts/atomic manifests/source capture/verified binary copy/exclusive lock/owned-child reaping; exact Python reader.
+  - [x] ADDRESSED0284: same controller resumes1 chunk to200k/PARTIAL, rc=0; verify_inverse_certificate.py --allow-partial checks both chunks/hash/coverage, rc=0.
+  - [x] NO REGRESSION0284: reader corruption3/coverage2/source-drift1/live-read1 and actual owned-child reaping2 controls pass, rc=0. Lock absent/registry empty; no45M/native API claim; broad proof .5d.4/pre-push.
+  - [x] LOCKSTEP:386–388/256 exact Git/hash/public bytes, rc=0; decision/book/live align. Cleanup certificate deletion candidate reproduced read-only; next P1 .h owns fix before full run. G1still5/18.
+  Verification: rc=0; Commit: STITCHCAD-G1-0284.
+- ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.b`
+  Status: `pending`
+  Goal: complete45M native inverse population from frozen controller sources; full reader, cost/margin/hash evidence, then commit.
+- ID: `G1-SLICE.5d.1.2.2.2.b.2.b.2.h`
+  Status: `pending`
+  Goal: P1 protect retained numerical certificates from generic artifact cleanup; next after .a commit, before .b or cleanup.
+  Defect0284: cleanup.py inspect accepts actual forward0278 chunk-000.bin (2080000B) and
+  inverse0284 chunk-000.bin (28800000B) as deletable strays, rc=0. No deletion performed.
+  Reproduce: runpy cleanup.py; inspect each path with tracked(). Generic .bin suffix has no
+  certificate-store exclusion; deletion would break retained readers/checkpoint continuity.
+  Paths: docs/tasks/artifacts/artifact_cleanup/cleanup.py;docs/ARTIFACT_CLEANUP.md
+  Fix/verify exact store protection and ordinary stray control; own until verified/closed.
 - ID: `G1-SLICE.5d.1.2.2.2.b.2.c`
   Status: `pending`
   Goal: native atan/atan2 branch/reduction/error/workspace admission before production code.
@@ -864,29 +879,8 @@ is required before completeness claims. No direct producer is executed with ambi
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.m1`
   Status: `done`
-  Goal: two Ease native mutation entries adopt the shared declared-path/profile contract.
-  Acceptance: both actual standalone prefixes/late refusals/activation omission reds, unchanged
-  native argv; exclusive real mutation assertions and exact source/current artifact restoration.
-  Work unit STITCHCAD-G1-0123; finite ledger ownership transfers before edits. Then membership-chart
-  native groups and formula/unit native groups, split before implementation.
-
-Final live ledger9/pointer13 and coverage10/13/12/zero gaps, rc=0,
-target/d156-python-entry-{ledger,coverage}.log; Rust diff empty. Full CI not due.
-
-First staged gate refuses1: G1 status row331B exceeds fixed320B ceiling. Tighten the
-summary cell; full scope remains in owner. Preserve target/d156-python-entry-staged-gate.log;
-final gate must pass before commit. No ceiling or schema change.
-
-Final staged gate13green, rc=0, target/d156-python-entry-staged-gate-final.log; cached diff0.
-Explicit14 owned paths; Rust diff empty. Hook/brief0/clean precede Ease conversion.
-
-### G1-SLICE.5b.4c.h2.b.p.n.m1
-
-[Exact complete record](../history/window6.md#stitchcad-devnotes-part136md); 16L/1326B/sha256:759fad703ee99ec3c62fd3ff137b95033fbc948617d6239094b81a918cb5cbfe.
-
-Session health: focus drift noticed after verified native runs. Finish this bounded unit and
-handoff check before fresh context; no source/native job is left running. Next retention is owned
-below because recipes957L approaches its fixed1000L split trigger before another repair receipt.
+  Goal:0123 two Ease native entries adopted shared guards; actual faults/restoration retained.
+  Acceptance: [whole scope/receipts](../history/stitchcad-devnotes-part388.md).
 
 - ID: `G1-SLICE.5b.4c.h2.b.p.n.h`
   Status: `done`

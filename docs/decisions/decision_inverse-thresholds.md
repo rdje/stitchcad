@@ -87,3 +87,37 @@ The report/prefix/build record stays under target/native_inverse_probe/0283/. No
 or native inverse error/workspace/branch admission is claimed. Full controller/source-locked
 checkpoints/coverage reader follow .b.2.b.2; runtime admission remains .b.2.c. Broad verification
 stays .5d.4/pre-push. The previous forward certificate and product sin/cos code remain unchanged.
+
+## Resumable controller and frozen provenance — work unit0284
+
+inverse_threshold_certificate.py owns450 bounded100,000-row chunks under
+target/inverse_threshold_certificate/0284/. It guards every source/store/output before producers,
+captures all build-source bytes, verifies the actual Cargo executable, copies it byte-exact with
+its execution permissions, and records hashes. Frozen build inputs remain beside the retained
+producer so future unrelated library work cannot overwrite or ambiguously stale this provenance.
+Live native source, pi fixture, controller and reader are the critical math/coverage basis and
+must still match. Frozen inputs and producer are rechecked before dispatch and publication.
+This separates captured build history from dependencies of the current mathematical claim.
+
+An exclusive run lock and owned-child registry prevent concurrent controllers. Children write
+unpublished parts; only terminal success plus independent exact row/size/hash checks publishes
+a chunk, followed by an atomic manifest. Completion means all450 unique contiguous ranges.
+Resume verifies every published chunk. Unpublished final bytes are replaced only by identical
+regeneration; differing bytes are preserved and refused. Error cleanup terminates/reaps only the
+controller's owned children. After abrupt interruption, inspect recorded processes before removing
+its lock; partial chunks may be regenerated, published evidence may not be silently trusted.
+
+Run the controller with --chunks1 --workers1 to bound one invocation; use
+verify_inverse_certificate.py --allow-partial for explicitly partial evidence. Without that flag,
+the reader refuses any incomplete population. The full controller defaults to at most4 workers;
+this is maintenance concurrency, not a formula-language parameter or native inverse admission.
+
+Focused runs produce100k then resume to200k in2 chunks, rc=0; independent partial reading passes.
+Default full reading correctly refuses partial coverage. Controls reject3 corrupted rows,
+2 bad completion/coverage records and1 stale source hash. A prohibited unrelated-live-source read
+does not affect frozen-source verification. Two actual owned test children are terminated/reaped,
+rc=0; the controller registry is empty and its lock absent. No full45M result is claimed.
+
+The read-only cleanup inspection also found that generic .bin cleanup accepts actual forward
+and inverse certificate chunks as deletion candidates. No deletion occurred. P1 .b.2.b.2.h owns
+protection immediately after this controller commit and before full coverage or the next cleanup.
