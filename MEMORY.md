@@ -4,16 +4,18 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0293 .6.2.2.a complete: immutable mutation context with untrusted actor/principal, exact revision/retry/group.
-- Native context2/0, selected strict Clippy/fmt, command census17/5/5/0 and book pass0. G1still5/18.
-- Next .6.2.2.b: inspect/own concrete typed payload schemas from actual canonical interfaces, no placeholders.
-- DesignRevision exact private integer successor extends beyond128bits; construction grants no currentness.
-- Actor claims confer no auth/approval. Actual authority/replay/transactions remain .6.3/.6.5/.6.6.
+-0294 .6.2.2.b.1 complete: ChangeMeasurement/AssignMaterial payloads bind immutable mutation context.
+- Native payload3/0, selected strict Clippy/fmt, census17/5/5/0/book pass0. G1still5/18.
+- Next .6.2.2.b.2: inspect/own remaining mutation schemas against canonical refs/creation rules.
+- Measurement intent retains actual target/declaration/source/five states; source replacements are allowed.
+- Material intent preserves ordered distinct nonempty selection and shared nonblank unresolved reason.
+- No request supplies its own command-ID assertion. Actual registry/auth/execution remain .6.3–.6.6.
+-0293 context2/0: exact revisions beyond128bits, untrusted actor/principal, retry/group identities.
 -0292 D225 fixed: IdGenerator::next_id returns Result, six edits refuse atomically;3/10/compile/lint0.
 - Catalog0291 native17 identities/book2/0; handlers remain later .6.
 - Window14 packs50 b49128e raw records:93940B→27917B, source/materialize/public exact; prior13 unchanged.
 - Frozen capture_window14.py is a historical producer, not a current-HEAD rerun.
--409/410/265 retain whole0292 task/0268 lesson/0292 ledger exactly, Git/hash/public reads.
+-411/412/413/266 retain whole0293 task/0269 lesson/closed source summaries/0293 ledger exactly.
 - Tangent .5d.1.2.2.2.d.1 gives distance>=90M/(U+1),148bit output; focused8798/586/2 pass0.
 - Practical tangent rounding plan P1 .d.2 pending; no domain narrowing, cutoff or borrowed certificate.
 -0288 native inverse3/0 with27/54 oracle values;0289 sourced inverse call target8/0/lint0.

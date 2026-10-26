@@ -156,6 +156,48 @@ explicit versus standalone groups, immutable snapshots and exact counters beyond
 request metadata only: actual design membership/currentness, authenticated authority, payloads,
 idempotency replay and atomic group execution remain G1-SLICE.6.2.2.b/.6.3/.6.5/.6.6 work.
 
+### Implemented initial mutation payloads
+
+MutationPayload currently carries ChangeMeasurement or AssignMaterial. CommandMutation binds that
+concrete payload to CommandMutationContext. Its command_id() is derived from the variant; there is
+no separate caller-supplied command identity that could misclassify the request. These are typed
+request shapes; handlers and current registry/authority checks remain later bus work.
+
+ChangeMeasurement carries the measurement metadata identity and an immutable replacement
+LengthDeclaration. Measurement and declaration identities are distinct. The replacement retains
+its own declaration/source identity and exactly one authored state with its original provenance:
+known, assumed, unknown, preference or derived. Constructing the request reads no numeric value,
+so an observation request or formula reference survives without a fabricated cached result.
+Execution must check the actual measurement-to-declaration binding, stable declaration identity
+and proposed source/provenance against current records before accepting the replacement.
+Changing the supplied source is not implicitly forbidden; the payload preserves it for validation.
+
+AssignMaterial carries a PieceSelection and the canonical MaterialAssignment. Selection requires
+one or more distinct identities, retaining authored order. NoPieces refuses an empty list;
+DuplicatePiece retains the actual identity and zero-based first/repeated positions at the first
+duplicate. It neither silently deduplicates nor sorts the request.
+
+```rust
+use sc_core::command::{AssignMaterial, PieceSelection, MutationPayload, CommandId};
+use sc_core::ontology::{EntityId, MaterialAssignment};
+let pieces = PieceSelection::new(vec![EntityId::from_bits(9), EntityId::from_bits(4)])?;
+let intent = AssignMaterial::new(pieces,
+    MaterialAssignment::Unresolved("factory selection pending".to_owned()))?;
+assert_eq!(intent.pieces().pieces(), &[EntityId::from_bits(9), EntityId::from_bits(4)]);
+assert_eq!(MutationPayload::AssignMaterial(intent).command_id(), CommandId::AssignMaterial);
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+An assignment preserves the assigned material identity or explicit unresolved reason. The same
+local reason predicate used by canonical Piece construction rejects blank unresolved text;
+AssignMaterialError retains the original whitespace. A nonblank reason is kept exactly. Material
+existence, kind and truth still need the actual registry and provenance checks.
+
+The focused payload target covers all five canonical states, immutable context binding, exact
+identity/source retention, original selection order/first duplicate and shared material rules.
+It establishes two payload schemas, with no command execution or approval claim. Remaining mutation
+schemas are owned by G1-SLICE.6.2.2.b; other command classes remain .6.2.2.c.
+
 ## 3. Atomic groups, and the granularity of undo
 
 **One undo reverses one atomic group, never part of one.** A group is the unit a user means: "add a dart"

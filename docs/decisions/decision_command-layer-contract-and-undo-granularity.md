@@ -3,7 +3,7 @@
 - **Type:** `decision`
 - **Date:** `2026-09-30` (absolute); roadmap §4.4 requires undo/redo semantics to be defined **at G0**, and
   §7.8 requires the authority levels to be scoped from day one
-- **Status:** `active`; catalog/context metadata implemented0291/0293, bus handlers pending
+- **Status:** `active`; catalog/request foundations0291–0294 implemented, bus handlers pending
 - **Owner / source:** leaf `G0-CONTRACT.17`, from roadmap §4.4, §7.8, §10 and §11's G0 and G1 exit clauses;
   the normative text is `docs/book/src/spec/command-layer.md`
 
@@ -88,3 +88,9 @@ expected exact revision, typed retry key and optional group. Initial revision0 h
 in private BigUint workspace, including beyond128 bits; no undocumented counter limit or clock.
 No wire format, currentness, grant, replay or handler is implied by constructing metadata.
 Focused native2/0 retains full identities/counters and standalone/explicit group semantics.
+
+0294 .6.2.2.b.1 binds ChangeMeasurement/AssignMaterial payloads to that context, deriving command
+identity from the concrete variant. Canonical LengthDeclaration retains all authored states and
+source/provenance. Ordered nonempty distinct PieceSelection and canonical MaterialAssignment share
+the existing nonblank unresolved-reason rule. Actual registry binding, auth and execution remain
+later bus owners. The focused native3/0 target checks those payload boundaries.

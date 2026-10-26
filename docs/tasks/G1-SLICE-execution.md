@@ -106,29 +106,23 @@ The original working execution block was copied byte-for-byte; later entries rem
   Verification: `pending`; Commit: `pending`.
 - ID: `G1-SLICE.5e.3.1`
   Status: `done`
-  Goal: immutable approximation-source sets/T1 guard verified0268, native4/0.
-  Paths: crates/sc-core/src/recipe/provenance.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_approximation_sources_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part352md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
 - ID: `G1-SLICE.5e.3.2`
   Status: `done`
-  Goal: sourced numeric/Boolean operators/bindings verified0269, native5/0.
-  Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_evaluated_scalar_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part354md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
 - ID: `G1-SLICE.5e.3.3`
   Status: `done`
-  Goal: sourced implemented numeric call families verified0270, native5/0.
-  Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/calls.rs;crates/sc-core/tests/formula_evaluated_calls_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part356md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
 - ID: `G1-SLICE.5e.3.4`
   Status: `done`
-  Goal: exact sourced named tolerance comparisons verified0271, native5/0.
-  Paths: crates/sc-core/src/recipe/rational.rs;crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/tolerance.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_tolerance_comparison_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part358md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
 - ID: `G1-SLICE.5e.3.5`
   Status: `done`
-  Goal: actual named assertion success/refusal verified0272, native4/0.
-  Paths: crates/sc-core/src/recipe/evaluated.rs;crates/sc-core/src/recipe/evaluated/assertion.rs;crates/sc-core/src/recipe/mod.rs;crates/sc-core/tests/formula_assertion_value_contract.rs
-  Acceptance: [whole scope/six proof boxes](../history/window13.md#stitchcad-devnotes-part361md).
+  Goal: verified; [whole scope/provenance](../history/stitchcad-devnotes-part413.md).
+  Retention0294 owned .6.2.2.b.1:
+  - [x] ROOT CAUSE0294: git show4e98649 whole five completed adapter summaries retained413; Python byte/hash comparison rc=0.
+  - [x] ADDRESSED0294: whole source/hash exact in413, Python comparison rc=0.
+  - [x] NO REGRESSION0294: scripts/history_archive.py --root . read docs/history/stitchcad-devnotes-part413.md whole public file exact, Python comparison rc=0; no reader change.
 - ID: `G1-SLICE.5e.4`
   Status: `pending`
   Goal: atomic replay and dependency validation, including corrupted persisted cycle evidence.

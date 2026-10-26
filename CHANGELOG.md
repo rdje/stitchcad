@@ -5,11 +5,13 @@ segments under `docs/history/`, each named below with its identity and retrieval
 
 # Sealed archive — earlier slices
 
-## STITCHCAD-G1-0293 — typed mutation request metadata
+## STITCHCAD-G1-0294 — canonical measurement and material intents
 
-.6.2.2.a: immutable actor/principal/revision/retry/group context; exact counters extend beyond128 bits.
-Focused2/0, selected strict lint/fmt/census/book pass0;409/410/265 preserve whole history.
-No grant/handler/currentness claim; typed payloads next. G1still5/18.
+.6.2.2.b.1: derive command identity from real canonical payloads; retain five states and ordered material targets.
+Focused3/0, selected strict lint/fmt/census/book pass0;411/412/413/266 preserve whole history.
+Registry/auth/handlers remain owned; no source-change restriction. G1still5/18.
+
+| [part266](docs/history/stitchcad-changelog-part266.md) | whole0293 | 6 lines, 324 bytes, sha256:564069d8… |
 
 | [part265](docs/history/stitchcad-changelog-part265.md) | whole0292 | 6 lines, 385 bytes, sha256:aae9c8cf… |
 

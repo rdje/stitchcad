@@ -3,6 +3,18 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — canonical measurement and material intents
+
+0294 .6.2.2.b.1 binds two canonical payloads to mutation context; identity comes from the variant.
+ChangeMeasurement retains real metadata/declaration/source and all five authored states. Material
+intent retains ordered distinct targets and the canonical assignment/reason rule. Native3/0 checks
+state absence/provenance, context, first duplicate and exact material text; selected strict lint/fmt,
+command census17/5/5/0 and book pass0. Review removed a draft unchanged-source assumption: canonical
+replacements may update source, which execution must validate against current records.
+411/412/413/266 retain whole history; G1still5/18.0293 brief was cleared late, before new code,
+then verified0/untracked. No registry/auth/handler claim; remaining payloads stay .b.2/.c.
+Promotion declined: existing canonical/command contracts, no new policy.
+
 ## _(2026-10-26 UTC)_ — typed mutation metadata and exact revisions
 
 0293 .6.2.2.a adds immutable mutation context: design, actor/principal claim, expected revision,
@@ -294,19 +306,8 @@ refusals. Trig/geometry/AST/provider/conditional/replay remain open. Whole0269 t
 quotient lesson and ledger retain354/355/242 with exact Git/hash/public reads; book/live align.
 Promotion declined: existing numerical and D121 source contracts govern these implementations.
 
-## _(2026-10-26 UTC)_ — scalar operators and bindings retain their sources
-
-0269 .5e.3.2 keeps numeric/Boolean payloads beside immutable source sets. Unary/binary operators
-reuse exact kernels and union executed operands automatically, including cancellation and Boolean
-comparison results. Explicit source attachment only unions; it cannot remove an existing source.
-Binding rounds numeric values once, retains Boolean values, and keeps all sources beside only the
-stored integer/Boolean. Later reads preserve sources and cannot resurrect an earlier fraction.
-
-Focused native5/0 and selected strict Clippy0 pass: every ordinary operator, exact/bare comparison,
-cancellation, all numeric kind fractions, Boolean false/true reads and actual dimension/division/
-storage refusals with unchanged prior bindings. No AST/conditional/call/provider/namespace or
-atomic replay proof is claimed. Whole0268 scope, oldest rational lesson and ledger retain352/353/241
-with exact Git/hash/public reads; book/live align. Promotion declined: existing formula4.2/D121.
+[Complete sourced scalar-operator/binding lesson](docs/history/stitchcad-devnotes-part412.md) retains
+its original exact-flow/source behavior, typed failures, checks and promotion decision.
 
 [Complete immutable approximation-source lesson](docs/history/stitchcad-devnotes-part410.md) retains
 its original call inventory, source-only T1 boundary, checks and promotion decision.

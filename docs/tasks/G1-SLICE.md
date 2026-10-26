@@ -634,23 +634,32 @@ Retention evidence: [G1-SLICE-retention-proof](G1-SLICE-retention-proof.md).
   Goal: bounded command envelope/principal/identity contract and actual typed payload schema, after D225.
 - ID: `G1-SLICE.6.2.2.a`
   Status: `done`
-  Goal:0293 typed mutation context with actor/principal claims, exact unbounded revision, retry/group identities.
-  Paths: crates/sc-core/src/command.rs;crates/sc-core/src/command/context.rs;crates/sc-core/tests/command_context_contract.rs
-  Additional paths: crates/sc-core/src/lib.rs;crates/sc-core/Cargo.toml.
-  Claims confer no authority/currentness/registry proof; no payload/handler or wire-format claim.
-  Own409 whole0292 task,410 oldest0268 lesson,265 whole0292 ledger before growth.
-  Focused full-width counter/context checks, selected lint/fmt/book; .6.3/.6.5/.6.6 validate execution.
-  Acceptance0293:
-  - [x] REPRODUCE: catalog existed without typed actor/revision/retry/group mutation metadata.
-  - [x] ROOT CAUSE0293: cargo test -p sc-core --test command_context_contract:2/0, rc=0; exact request metadata was the missing boundary.
-  - [x] FIX: immutable typed context, distinct agent/principal, mandatory revision/key, private exact counter successors; no trust or execution implied.
-  - [x] ADDRESSED0293: same native2/0 exact identities/groups and beyond-u128 counters pass, rc=0.
-  - [x] NO REGRESSION0293: selected lib/test strict Clippy/fmt and command census17/5/5/0 failures pass, rc=0; broad integration/pre-push.
-  - [x] LOCKSTEP:409/410/265 exact Git/hash/public bytes and book build rc=0; G1still5/18, actor claims remain untrusted.
-  Promotion declined: existing command metadata contract. Commit: STITCHCAD-G1-0293.
+  Goal:0293 actor/revision/retry/group context verified native2/0/lint/census/book0.
+  Paths: crates/sc-core/src/command/context.rs;crates/sc-core/tests/command_context_contract.rs
+  Acceptance: [whole scope/six proof boxes](../history/stitchcad-devnotes-part411.md).
 - ID: `G1-SLICE.6.2.2.b`
-  Status: `pending`
+  Status: `in_progress`
   Goal: concrete typed command payload schemas from actual canonical interfaces, no caller placeholders.
+- ID: `G1-SLICE.6.2.2.b.1`
+  Status: `done`
+  Goal:0294 ChangeMeasurement/AssignMaterial canonical payloads bound to mutation context without caller command-ID override.
+  Paths: crates/sc-core/src/command.rs;crates/sc-core/src/command/payload.rs;crates/sc-core/src/lib.rs;crates/sc-core/Cargo.toml
+  Tests: crates/sc-core/tests/command_payload_contract.rs; reuse actual LengthDeclaration/MaterialAssignment contracts.
+  Preserve target/declaration/source/state, ordered nonempty unique Piece selection, shared material reason rule.
+  Own411 whole0293 task,412 oldest0269 lesson,266 whole0293 ledger before live growth.
+  Also own413 whole five completed sourced-adapter summaries before task acceptance growth.
+  Focused payload/native/selected lint/fmt/book; actual registry/auth/execution remains .6.3–.6.6.
+  Acceptance0294:
+  - [x] REPRODUCE: mutation context lacked canonical measurement/material payload binding.
+  - [x] ROOT CAUSE0294: cargo test -p sc-core --test command_payload_contract:3/0, rc=0; payloads derive real command IDs and retain original canonical data.
+  - [x] FIX: two typed intents, ordered distinct selection and shared reason predicate; canonical source replacements remain allowed, no draft immutability restriction.
+  - [x] ADDRESSED0294: same native3/0 all five states/context/first duplicate/material rules pass, rc=0.
+  - [x] NO REGRESSION0294: selected lib/test strict Clippy/fmt, command census17/5/5/0 failures pass, rc=0; broad integration/pre-push.
+  - [x] LOCKSTEP:411/412/413/266 whole Git/hash/public exact and book build rc=0; G1still5/18.0293 brief cleared late before code, verified0/untracked.
+  Promotion declined: existing canonical/command contracts. Commit: STITCHCAD-G1-0294.
+- ID: `G1-SLICE.6.2.2.b.2`
+  Status: `pending`
+  Goal: remaining SplitSeamSpan/CloseDart/AddNotch schemas from published canonical references and creation rules.
 - ID: `G1-SLICE.6.2.2.c`
   Status: `pending`
   Goal: remaining query/evaluation/artifact/release request contexts and immutable payload binding.

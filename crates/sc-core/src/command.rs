@@ -4,9 +4,14 @@
 //! Execution, scoped authorization, transactions and workflow parity remain separate bus owners.
 
 mod context;
+mod payload;
 pub use context::{
     CommandActorClaim, CommandGroupId, CommandIdempotencyKey, CommandMutationContext,
     DesignRevision,
+};
+pub use payload::{
+    AssignMaterial, AssignMaterialError, ChangeMeasurement, CommandMutation, MutationPayload,
+    PieceSelection, PieceSelectionError,
 };
 
 /// The five command classes fixed by the shared command-layer contract.

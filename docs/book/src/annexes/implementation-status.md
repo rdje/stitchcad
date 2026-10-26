@@ -11,6 +11,7 @@ requires the named contracts and later proof owners.
 | Units/tolerances | §4.2; G0/G1 | sc-units; G1-SLICE.2/.5a.3c.1 | [Numerical contract](../spec/units-and-tolerances.md), [wide rounding](numeric-rounding.md) |
 | Declared command catalog | §4.4/§7.8; G1 | sc-core command; G1-SLICE.6.1 | [Typed discovery](../spec/command-layer.md#implemented-typed-catalog); handlers/authority execution follow |
 | Mutation request metadata | §4.4/§10; G1 | sc-core command; G1-SLICE.6.2.2.a | [Actor/revision/retry/group context](../spec/command-layer.md#implemented-mutation-context); validation/execution follows |
+| Initial mutation payloads | §4.4; G1 | sc-core command; G1-SLICE.6.2.2.b.1 | [Measurement/material intents](../spec/command-layer.md#implemented-initial-mutation-payloads); registry/auth/handlers follow |
 | Identity/references | §4.1; G1 | sc-core ontology; G1-SLICE.3a/.3b | [Model and current repairs](../spec/ontology-implementation.md) |
 | Pieces/copies, sewing, marks/allowances | §3.1/§4.1; G1 | sc-core ontology; G1-SLICE.3c.1–.3 | [Executable ontology](../spec/ontology-implementation.md) |
 | Garment constructions/closures | §3.1; G1 | sc-core ontology; G1-SLICE.3c.4 | [Constructions](../spec/ontology-constructions.md), [closures](../spec/ontology-closures.md), [review](../spec/ontology-review.md) |
