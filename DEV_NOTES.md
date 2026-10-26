@@ -3,6 +3,20 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — scalar operators and bindings retain their sources
+
+0269 .5e.3.2 keeps numeric/Boolean payloads beside immutable source sets. Unary/binary operators
+reuse exact kernels and union executed operands automatically, including cancellation and Boolean
+comparison results. Explicit source attachment only unions; it cannot remove an existing source.
+Binding rounds numeric values once, retains Boolean values, and keeps all sources beside only the
+stored integer/Boolean. Later reads preserve sources and cannot resurrect an earlier fraction.
+
+Focused native5/0 and selected strict Clippy0 pass: every ordinary operator, exact/bare comparison,
+cancellation, all numeric kind fractions, Boolean false/true reads and actual dimension/division/
+storage refusals with unchanged prior bindings. No AST/conditional/call/provider/namespace or
+atomic replay proof is claimed. Whole0268 scope, oldest rational lesson and ledger retain352/353/241
+with exact Git/hash/public reads; book/live align. Promotion declined: existing formula4.2/D121.
+
 ## _(2026-10-26 UTC)_ — immutable approximation-call source metadata
 
 0268 .5e.3.1 retains all11 normative irrational/quantization call sources in a sealed immutable
@@ -357,20 +371,8 @@ numerator/denominator witnesses. No full regression/Clippy/WASM/oracle-campaign 
 Sums/differences and typed/evaluator integration remain owned. Whole0244 task retained314; book/live
 stay aligned. Promotion declined: existing exact-numeric contract and focused-check policy.
 
-## _(2026-10-25 UTC)_ — canonical exact formula rational values
-
-0244 .5c.1.1 adds FormulaRational in the recipe namespace: private reduced u128 components,
-independent sign, positive denominator, canonical positive0/1 and full signed-integer input.
-Zero denominators refuse before zero normalization through FormulaRationalError/formula_division.
-No signed narrowing, allocation, dependency, rounding, quantity domain or storage conversion occurs.
-This is the first value-construction feature; arithmetic/workspace/width refusal remain .5c.1.2,
-independent oracle integration .3, and typed operators/evaluation later owners.
-
-One focused native contract target passes1/0, rc=0. It covers reduction, both full-width signs,
-large denominators, zero0/0 refusal, canonical equality/default and i128 MIN. Rustfmt ran on the
-two new files. No full regression, Clippy or WASM pass is claimed. Book/API status and availability
-describe the exact implemented scope. Whole0243 task/ledger retained313/216 with exact source/public
-reads. Promotion declined: existing numeric contract and focused-check policy already govern this.
+[Complete rational construction lesson](docs/history/stitchcad-devnotes-part353.md) retains
+its original scope, validation and promotion decision.
 
 [Complete archive/feature-delivery lesson](docs/history/stitchcad-devnotes-part351.md) retains
 its original failure, repair, validation and director ruling.

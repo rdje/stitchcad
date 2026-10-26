@@ -129,10 +129,10 @@ the digests afterwards.
 
 
 
-## STITCHCAD-G1-0268 — approximation-call sources and symbolic tolerance admission
+## STITCHCAD-G1-0269 — sourced scalar operators and stored reads
 
-.5e.3.1: immutable deduplicated executed-source unions retain all11 rounding/irrational calls.
-Symbolic T1 refuses contributed values independently of the numeric threshold; full evaluator propagation follows.
+.5e.3.2: numeric/Boolean value operators preserve all evaluated source contributions through binding/read.
+Exact cancellation and Boolean results retain sources; numeric storage still rounds only once. Full AST execution follows.
 
 | [207](docs/history/window11.md#stitchcad-changelog-part207md) | whole0227 | sealed |
 
@@ -426,3 +426,5 @@ Whole G1-0183 ledger retained in [the task record](docs/tasks/G1-SLICE-retention
 | [part239](docs/history/stitchcad-changelog-part239.md) | whole0266 | 4 lines, 291 bytes, sha256:5b24dd6c… |
 
 | [part240](docs/history/stitchcad-changelog-part240.md) | whole0267 | 4 lines, 285 bytes, sha256:341f9904… |
+
+| [part241](docs/history/stitchcad-changelog-part241.md) | whole0268 | 4 lines, 296 bytes, sha256:d290645e… |

@@ -84,3 +84,5 @@ current counts are derived from current test execution rather than inferred from
 | Canonical/stored numeric reads | §4.2; G1 | sc-core recipe; G1-SLICE.5e.1.6 | [Exact integer bridges](formula-rationals.md#canonical-and-stored-numeric-reads); source propagation follows |
 
 | Approximation-source set/class guard | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.1 | [Immutable sources/T1 refusal](formula-runtime-validation.md#product-source-set-primitive); full propagation follows |
+
+| Sourced scalar operators/bindings | §4.2; G1 | sc-core recipe; G1-SLICE.5e.3.2 | [Numeric/Boolean sources and reads](formula-runtime-validation.md#product-scalar-operators-and-bindings); AST execution follows |

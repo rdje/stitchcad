@@ -52,6 +52,9 @@ pub use bound::{FormulaBindingValueError, FormulaBindingValueRule, FormulaBoundV
 mod provenance;
 pub use provenance::{FormulaApproximationSources, FormulaApproximationToleranceError};
 
+mod evaluated;
+pub use evaluated::{FormulaEvaluatedBinding, FormulaEvaluatedScalar};
+
 mod normalized;
 pub use normalized::{
     FormulaNormalizedArguments, FormulaNormalizedExpression, FormulaNormalizedNode,

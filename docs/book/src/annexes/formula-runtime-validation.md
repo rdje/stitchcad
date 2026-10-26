@@ -359,6 +359,48 @@ cancellation or an integer result. These propagation rules remain full evaluator
 does not execute a conditional, numerical call, binding or geometry query. Four focused native
 tests cover every built-in, all five classes, immutable unions and explicit selected-source examples.
 
+### Product scalar operators and bindings
+
+`FormulaEvaluatedScalar` now retains a numeric or Boolean payload beside its approximation sources.
+`from_numeric` and `from_boolean` start with no contributions. Attach successful call sources
+explicitly with `with_call_source`, and merge additional executed dependencies with `influenced_by`.
+Neither operation removes earlier sources or certifies that a call actually ran.
+
+`checked_unary` and `checked_binary` compute the existing exact numeric operators. Unary results
+keep their input set; binary results keep both sets. All six bare comparisons return a Boolean
+with the same union. They apply no tolerance rule. Boolean arithmetic/comparison has no admitted
+signature and refuses with actual kinds. Count negation, domain, width and division refusals retain
+their existing numeric errors. Cancellation to zero cannot erase how a value was obtained.
+
+```rust
+use sc_core::{name::MachineToken, recipe::{FormulaBinaryOperator as B, FormulaBuiltin as Call,
+    FormulaEvaluatedScalar as V, FormulaKind as K, FormulaNumericValue as N, FormulaRational as R,
+    FormulaToleranceName as T}};
+
+let value = V::from_numeric(N::new(K::Ratio, R::new(3, 2, false))?)
+    .with_call_source(Call::RoundTo); // caller attaches an already-executed dependency
+let name = MachineToken::new("stored_ratio")?;
+let binding = value.bind(&name)?;
+assert_eq!(binding.value().numeric_integer(), Some(2)); // 2ppm, once-rounded from 3/2ppm
+let read = binding.read()?;
+let equal = read.checked_binary(B::Equal, read)?;
+assert_eq!(equal.boolean(), Some(true));
+assert!(equal.sources().check_tolerance(T::Numerical).is_err());
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+`bind` produces a private `FormulaEvaluatedBinding`: numeric values use the existing single binding
+round/storage check, while Boolean values remain Boolean. The binding keeps its original source set
+and only the stored integer/Boolean. `read` returns that stored payload with every source retained;
+the old fraction is absent. Failed binding returns the actual name/kind/rounded storage refusal and
+no replacement binding. Earlier immutable bindings remain usable.
+
+Five focused native tests verify numeric/Boolean presence, all ordinary operators, cancellation,
+bare-comparison contributions, sourced numeric/Boolean binding reads and actual typed refusals.
+This executes value operators, not parsed expressions or statements. Namespace/provider lookup,
+call execution, selected-branch control, point-coordinate provenance, assertions and atomic recipe
+publication remain the full evaluator's responsibilities.
+
 ### Existing reference execution controls
 
 A value retains an immutable set of approximation-producing calls in its executed dependencies.
