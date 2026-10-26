@@ -156,6 +156,5 @@ remove their raw copies. The original client refuses that fixture; the repaired 
 passes with exact original source assertions, extraction, child arguments and result fields.
 Seven physical refusals, three same-length content changes and seven actual compiled body
 faults test complete input plans, fresh checks, Git scope, logical reads and provenance.
-The native mode separately executes all eight children against the packed fixture and
-requires exact source/archive/fixture bytes and no workspace residue. Python3.9 and3.14
-pass. The controls create no production archive window and modify no committed window.
+Native mode runs all eight children, requiring exact source/archive/fixture bytes and no residue.
+Earlier3.9/3.14 receipts stay historical; the v2 adapter run used3.14. The controls create no production archive window and modify no committed window.

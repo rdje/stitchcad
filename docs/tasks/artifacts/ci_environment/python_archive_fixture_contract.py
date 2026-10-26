@@ -15,7 +15,8 @@ PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 READER = ROOT / 'scripts/history_archive.py'
 SHELL = ROOT / 'scripts/history_archive.sh'
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
-CORE = (Path(__file__), ENTRY, PROFILE_SOURCE, READER, SHELL)
+LEGACY = ROOT / 'docs/tasks/artifacts/history_archive/legacy_refusals.py'
+CORE = (Path(__file__), ENTRY, PROFILE_SOURCE, READER, SHELL, LEGACY)
 WORK = ROOT / 'target/archive-fixture-controls' / str(os.getpid())
 BEFORE = '1b8fc23'
 
@@ -72,7 +73,11 @@ def mirror(label):
             assert not path.is_symlink()
             (folders if path.is_dir() else inputs).append(path)
     inputs = tuple(dict.fromkeys(inputs))
-    files = tuple(root / path.relative_to(ROOT) for path in inputs)
+    PROFILE['plan_producer'](ROOT, sources=inputs)
+    reader = runpy.run_path(str(READER))
+    contents = runpy.run_path(str(LEGACY))['baseline'](reader, ROOT)
+    contents.update({path.relative_to(ROOT).as_posix(): path.read_bytes() for path in CORE})
+    files = tuple(root / name for name in contents)
     directories = {WORK, root}
     for path in files:
         directories.update(parent for parent in path.parents if parent == root or parent.is_relative_to(root))
@@ -80,9 +85,9 @@ def mirror(label):
     assert not root.exists() and not root.is_symlink()
     PROFILE['prepare_producer'](ROOT, **plan)
     try:
-        for source, output in zip(inputs, files):
+        for name, output in zip(contents, files):
             PROFILE['plan_producer'](ROOT, **plan)
-            output.write_bytes(source.read_bytes())
+            output.write_bytes(contents[name])
         yield root
     finally:
         files, folders = [], [root]
@@ -109,11 +114,26 @@ def capture(label, source=None, *, metadata_mode=None, interrupt=False):
                             *(path for folder in (root / '.doctrine/history_archive', root / 'docs/history')
                               for path in folder.rglob('*') if path.is_file())}
         frozen = {path: path.read_bytes() for path in expected_sources}
-        names = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', 'HEAD', '--',
+        # Keep Git as the independent comparison authority. Under v2, the original v1
+        # capture revision belongs to the immutable cohort containing backing members.
+        reader = runpy.run_path(str(READER))
+        revision = 'HEAD'
+        if reader['_uses_v2'](ROOT):
+            master = reader['_master_v2'](ROOT)[0]
+            manifests = [reader['load_json'](ROOT, name, 65536)[0] for name in master['windows']]
+            revision = next(value['source_revision'] for value in manifests
+                            if any(row['kind'] == 'backing' for row in value['members']))
+        names = subprocess.check_output(['git', 'ls-tree', '--full-tree', '-r', '--name-only', revision, '--',
                                          '.doctrine/history_archive', 'docs/history'], cwd=ROOT,
-                                        env={name: value for name, value in saved_env.items() if not name.startswith('GIT_')}).decode().splitlines()
-        git = {name: subprocess.check_output(['git', 'show', 'HEAD:' + name], cwd=ROOT,
-                                             env={key: value for key, value in saved_env.items() if not key.startswith('GIT_')}) for name in names}
+                                        env=reader['metadata_environment'](ROOT)).decode().splitlines()
+        git = {name: reader['_git_blob'](ROOT, revision, name,
+                                       160000 if name.endswith('.md') else reader['_backing_limit'](name))
+               for name in names}
+        population = {path.relative_to(root).as_posix() for folder in
+                      (root / '.doctrine/history_archive', root / 'docs/history')
+                      for path in folder.rglob('*') if path.is_file()}
+        assert population == set(git), 'retained v1 source membership mismatch'
+        assert all((root / name).read_bytes() == data for name, data in git.items()), 'retained v1 source mismatch'
         originals = (runpy.run_path, Path.mkdir, Path.write_bytes, Path.write_text, Path.unlink,
                      Path.symlink_to, shutil.rmtree, shutil.copytree, subprocess.run)
         namespace, latest = {}, {}
@@ -326,10 +346,12 @@ if __name__ == '__main__':
     PROFILE['prepare_producer'](ROOT, sources=CORE, directories=(WORK,))
     before_control()
     if sys.argv[1:] != ['--before']:
-        ns, _ = bootstrap()
-        assert not ns['WORK'].exists(), 'native fixture workspace must remain absent'
-        assert ns['OWNED_LINK'] in ns['FILES']
-        print('closed pure population:', len(ns['DIRECTORIES']), 'directories /', len(ns['FILES']), 'files; no producer effects')
+        with mirror('population') as root:
+            ns, _ = bootstrap(entry=root / ENTRY.relative_to(ROOT))
+            assert not ns['WORK'].exists(), 'native fixture workspace must remain absent'
+            assert ns['OWNED_LINK'] in ns['FILES']
+            print('closed pure population:', len(ns['DIRECTORIES']), 'directories /', len(ns['FILES']),
+                  'files; no effects during bootstrap; retained v1 fixture')
         if sys.argv[1:] in ([], ['--deep']):
             print('actual archive fixture capture:', capture('positive'))
         if sys.argv[1:] == ['--deep']:

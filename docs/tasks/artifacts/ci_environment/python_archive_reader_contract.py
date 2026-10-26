@@ -14,7 +14,8 @@ ENTRY = ROOT / 'scripts/history_archive.py'
 PROFILE_SOURCE = ROOT / 'scripts/local_environment.py'
 PROFILE = runpy.run_path(str(PROFILE_SOURCE))
 WORK = ROOT / 'target/archive-reader-controls' / str(os.getpid())
-CORE = (Path(__file__), ENTRY, PROFILE_SOURCE)
+LEGACY = ROOT / 'docs/tasks/artifacts/history_archive/legacy_refusals.py'
+CORE = (Path(__file__), ENTRY, PROFILE_SOURCE, LEGACY)
 BEFORE = '4027b36'
 
 
@@ -44,7 +45,7 @@ def cli(ns, root, mode, argument=None):
 
 
 @contextlib.contextmanager
-def fixture(label):
+def fixture(label, *, legacy=False):
     root = WORK / label
     files = []
     directories = {WORK, root}
@@ -54,7 +55,12 @@ def fixture(label):
             for name in dirs:
                 PROFILE['directory'](ROOT, (Path(folder) / name).relative_to(ROOT).as_posix())
             files.extend(Path(folder) / name for name in leaves)
-    destinations = {path: root / path.relative_to(ROOT) for path in files}
+    contents = {path.relative_to(ROOT).as_posix(): path.read_bytes() for path in files}
+    if legacy:
+        PROFILE['plan_producer'](ROOT, sources=(*CORE, *files))
+        reader = module()
+        contents = runpy.run_path(str(LEGACY))['baseline'](reader, ROOT)
+    destinations = {name: root / name for name in contents}
     for path in destinations.values():
         directories.update(parent for parent in path.parents if parent == root or parent.is_relative_to(root))
     plan = dict(sources=(*CORE, *files), directories=tuple(sorted(directories)),
@@ -62,9 +68,9 @@ def fixture(label):
     PROFILE['require'](not root.exists() and not root.is_symlink(), 'archive reader fixture must be fresh')
     PROFILE['prepare_producer'](ROOT, **plan)
     try:
-        for source, destination in destinations.items():
+        for name, destination in destinations.items():
             PROFILE['plan_producer'](ROOT, **plan)
-            destination.write_bytes(source.read_bytes())
+            destination.write_bytes(contents[name])
         yield root
     finally:
         # Materialization intentionally creates additional files. Inspect every actual entry before
@@ -80,7 +86,7 @@ def fixture(label):
         shutil.rmtree(root)
 
 
-def before_controls():
+def before_controls_at(authority):
     old = subprocess.check_output(['git', 'show', BEFORE + ':scripts/history_archive.py'], cwd=ROOT, text=True)
     ns = module(old)
     saved_env = dict(os.environ)
@@ -99,18 +105,23 @@ def before_controls():
             os.environ.pop(name, None)
         Path.mkdir = trap
         try:
-            cli(ns, ROOT, 'materialize', 'target/archive-reader-before-' + str(os.getpid()))
+            cli(ns, authority, 'materialize', 'target/archive-reader-before-' + str(os.getpid()))
         except Trapped:
             pass
         else:
             raise AssertionError('old archive materialization first effect escaped')
-        assert len(seen) == 1 and seen[0].parent == ROOT / 'target'
+        assert len(seen) == 1 and seen[0].parent == authority / 'target'
         subprocess.run = lambda *args, **kwargs: subprocess.CompletedProcess(args[0], 128, b'', b'controlled unavailable HEAD')
-        assert ns['guard_committed'](ROOT) is None, 'old metadata failure did not reproduce'
+        assert ns['guard_committed'](authority) is None, 'old metadata failure did not reproduce'
     finally:
         Path.mkdir, subprocess.run = mkdir, run
         os.environ.clear(); os.environ.update(saved_env)
     print('original materialization mkdir trapped without stores; unavailable Git HEAD incorrectly accepted')
+
+
+def before_controls():
+    with fixture('v1-before', legacy=True) as authority:
+        before_controls_at(authority)
 
 
 def pure_controls():
@@ -487,17 +498,18 @@ def retention_controls():
         start = old.index(body)
         assert '%s bytes %d–%d, %d bytes, sha256:%s' % (
             source, start, start + len(body), len(body), ns['digest'](body)) in header.decode()
+    backings = ns['backing_inventory'](ROOT)
     paths = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', BEFORE, '--',
                                     'docs/history', '.doctrine/history_archive'], cwd=ROOT).decode().splitlines()
     for name in paths:
         old = subprocess.check_output(['git', 'show', BEFORE + ':' + name], cwd=ROOT)
         if name == ns['MASTER']:
             windows = ns['json'].loads(old)['windows']
-            assert ns['master'](ROOT)[:len(windows)] == windows
+            assert ns['json'].loads(backings[name])['windows'][:len(windows)] == windows
         elif ns['SEGMENT'].fullmatch(name):
             assert logical[name] == old, name
         else:
-            assert (ROOT / name).read_bytes() == old, name
+            assert (backings[name] if name in backings else (ROOT / name).read_bytes()) == old, name
     print('archive exact whole predecessor task/ledgers and public reads; all previous logical/control/payload bytes preserved')
 
 

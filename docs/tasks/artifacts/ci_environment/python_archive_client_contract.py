@@ -146,7 +146,7 @@ def capture(source=None, *, live=False, corrupt=None):
     expected = {ENTRY, PROFILE_SOURCE, SHELL, READER,
                 *(AUTHORITY / name for name in inputs_relative())}
     plans, children = [], []
-    original = subprocess.check_output, subprocess.run, Path.mkdir, Path.write_bytes
+    original = subprocess.check_output, subprocess.run, Path.mkdir, Path.write_bytes, Path.read_bytes
     checkpoint = 0
     reference = reference_records()
     real_environment = PROFILE['environment_for'](ROOT, os.environ, create=False)
@@ -186,12 +186,21 @@ def capture(source=None, *, live=False, corrupt=None):
         assert command == ['bash', 'scripts/history_archive.sh', 'prove-source', 'window11']
         return original[1](command, **kwargs) if live else subprocess.CompletedProcess(command, 0)
 
+    def raw_fallback(path, *args, **kwargs):
+        # Feed the deliberate raw-read fault exact logical bytes so the original child-dispatch
+        # assertion, rather than FileNotFoundError after packing, remains the independent oracle.
+        for name, content in reference.items():
+            if path == ROOT / name:
+                return content
+        return original[4](path, *args, **kwargs)
+
     def no_write(*args, **kwargs):
         raise AssertionError('D222 readonly client created output')
 
     try:
         subprocess.check_output, subprocess.run = output, run
         Path.mkdir = Path.write_bytes = no_write
+        Path.read_bytes = raw_fallback
         result = ns['retained'](dict(PROFILE, plan_producer=plan))
         assert result == dict(complete_source_intervals=5, bytes=4144, exact=True,
                               retained_window_source_exact=True, followup_bytes=8170, whole_ledger_bytes=3030), result
@@ -201,7 +210,7 @@ def capture(source=None, *, live=False, corrupt=None):
         assert dict(os.environ) == dict(saved_env, HISTORY_ARCHIVE_ROOT=str(AUTHORITY),
                                         ARCHIVE_CLIENT_CALLER='preserved', GIT_DIR=str(WORK / 'foreign-git'))
     finally:
-        subprocess.check_output, subprocess.run, Path.mkdir, Path.write_bytes = original
+        subprocess.check_output, subprocess.run, Path.mkdir, Path.write_bytes, Path.read_bytes = original
         os.environ.clear(); os.environ.update(saved_env)
     return result
 
@@ -347,15 +356,16 @@ def retention():
                                        'docs/history', '.doctrine/history_archive'], cwd=ROOT).decode().splitlines()
     history = runpy.run_path(str(READER))
     logical, _ = history['inventory'](ROOT)
+    backings = history['backing_inventory'](ROOT)
     for name in earlier:
         old = subprocess.check_output(['git', 'show', BEFORE + ':' + name], cwd=ROOT)
         if name == history['MASTER']:
             windows = json.loads(old)['windows']
-            assert json.loads((ROOT / name).read_bytes())['windows'][:len(windows)] == windows
+            assert json.loads(backings[name])['windows'][:len(windows)] == windows
         elif history['SEGMENT'].fullmatch(name):
             assert logical[name] == old, name
         else:
-            assert (ROOT / name).read_bytes() == old, name
+            assert (backings[name] if name in backings else (ROOT / name).read_bytes()) == old, name
     print('D222 whole0239/a24 retained/public-read exact; predecessor logical/control/payload bytes unchanged')
 
 

@@ -3,14 +3,17 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0343 — install bounded flat-v2 retention
+## STITCHCAD-G1-0344 — preserve verification authority across flat retention
 
-- Install source55ed18e in four v2 windows; preserve all947 old logical records/33 backing files/16 catalogs exactly.
-- Retain original trees for recovery; repair78 live links and seal whole0339–0342 receipts/task/lessons in494.
-- Focused v2 refusal22/native tar/materialization948, retention/source proofs and public window961/0 pass.
-- Legacy verification-client adapters remain immediate .c.2.b; full integration/CI deferred. G1still6/18.
+- Adapt old-reader/producer fixtures and predecessor comparisons to exact retained v1 bytes; current native reads use v2.
+- D246 restores the intended raw-read fault assertion; D247 publishes the valid legacy native command.
+- Native reader949/14 physical/8 body, client8 children/7 physical/7 body/3 content, fixture capture and original28 pass0.
+- Whole prior closures/0343 retained495;494/495 exact Git spans3/4 verified. Retention closes; product .6.4 next.
+- G1 remains6/18. Focused3.14 proof; optional deep fixture/platform/full integration/CI remains deferred.
 
 # Sealed archive — earlier slices
+
+| [part495](docs/history/stitchcad-devnotes-part495.md) | whole prior closures/0343 migration task, lesson and ledger | 93 lines, 7573 bytes, sha256:90276b75… |
 
 | [part494](docs/history/stitchcad-devnotes-part494.md) | whole0339–0342 transition receipts/task/lessons | 265 lines, 17959 bytes, sha256:9bdbdd08… |
 

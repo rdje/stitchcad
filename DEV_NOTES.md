@@ -3,15 +3,19 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
-## _(2026-10-26 UTC)_ — installed flat-v2 retention
+## _(2026-10-26 UTC)_ — v2-compatible legacy verification
 
-0343 installs four source55ed18e windows with947 old logical records/33 original backings/16 catalogs exact.
-Original directory trees remain in the same-volume transaction backup; recovery refuses later drift.
-Sealed494 retains whole committed transition receipts, installer task and four lessons, with exact source
-intervals.78 maintained links now reach new catalog headings; historical logical names are unchanged.
-V2 refusal22/native tar/public materialization948 pass0; source/reader evidence is recorded in the leaf.
-Remaining legacy verification adapters are immediate .c.2.b before .6.4; no full integration/CI claim.
-Promotion: existing history decision. G1 remains6/18; all independent archive/document caps unchanged.
+0344 keeps original old-reader traps and refusal producer on exact v1 fixtures. Current reader materializes
+v2; original predecessor controls/payloads resolve through backing rows. Git at the original v1 capture
+remains the fixture oracle, with all97 data paths/bytes exact. Original CLI/provenance assertions remain.
+D246's deliberate raw-read fault gets exact logical bytes so the original child-dispatch assertion fires;
+D247 routes the book through the maintained legacy entry. Native reader949/14 physical/8 body and
+client8 children/7 physical/7 body/3 content, fixture capture and original28 pass0, target/*0344.log.
+Whole prior closure/0343 continuity is retained495; records494/495 prove3/4 exact Git spans and a byte-fault
+control. Promotion: existing history decision. Retention parent closes; next product .6.4, G1still6/18.
+Focused3.14 only; optional deep fixture/platform/full integration/CI stays deferred.
+
+[Whole0343 migration lesson](docs/history/stitchcad-devnotes-part495.md) retains source/proof boundaries.
 
 [Whole0339–0342 transition lessons](docs/history/stitchcad-devnotes-part494.md) retain original proofs and promotion decisions.
 

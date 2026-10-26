@@ -126,3 +126,12 @@ explicit Git operations. All independent caps are unchanged; subsequent raw reco
 Existing v1-only verification-client assumptions are owned by immediate capacity.2.c.2.b before
 product work; focused migration proof does not claim full integration/CI. Later archive edits or HEAD
 changes correctly refuse the source-pinned recovery command; the backup remains exact evidence.
+
+## Verifier compatibility0344
+
+Old-reader and original-refusal traps use exact retained v1 inputs. Current materialization and native
+client checks use v2, while predecessor comparisons read original backing rows. Fixture Git comparisons
+remain bound to the original v1 capture and prove complete path/byte membership independently.
+D246 preserves the original missing-public-read assertion after packing; D247 publishes the legacy entry.
+Focused native3.14 proof closes this retention continuation. Deep fixture/platform/full integration/CI
+remain separately owned. Future aggregate exhaustion still requires a new decision; no cap was raised.

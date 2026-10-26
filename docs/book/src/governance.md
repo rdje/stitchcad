@@ -437,5 +437,5 @@ bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part494.md
 ```
 
 The public reader accepts both schemas. The migration passed focused byte/source, native-tar,
-materialization and v2 refusal checks. Original-v1 verification adapters remain owned by
-G1-SLICE.RETENTION-CAPACITY.2.c.2.b before product work resumes; full integration/CI stays deferred.
+materialization and v2 refusal checks. Native reader/client proof and retained-v1 fixture capture pass.
+Full integration/CI and the optional deep fixture campaign remain deferred.

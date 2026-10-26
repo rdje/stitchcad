@@ -80,7 +80,7 @@ nonfollowing tree remover. Other links and unknown workspace entries refuse. Pro
 covers interrupted setup and copying. Child Git context is scoped to the project.
 
 ```bash
-python3 -I -B docs/tasks/artifacts/history_archive/history_archive_probes.py
+python3 -I -B docs/tasks/artifacts/history_archive/legacy_refusals.py
 python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_fixture_contract.py
 ```
 
@@ -109,11 +109,11 @@ refuses. Original source directories remain in the transaction backup, and the v
 remains available after rollback. An incomplete staging phase has not touched live storage.
 This protocol handles interrupted processes; no machine power-loss guarantee is claimed.
 
-The original v1 refusal producer runs unchanged against a reconstructed retained-v1 fixture after
-repacking. Only its Git HEAD observations are pinned to that original capture. Public window checks
-separate logical records from opaque backing members, and ledger pointers accept original catalog
-routes while counting only changelog records. The live archive now uses v2; remaining older
-verification-client adapters are owned by capacity.2.c.2.b.
+The original v1 refusal producer runs unchanged in an exact retained-v1 fixture, with Git observations
+pinned to its capture. Historical reader traps use v1 data; current materialization uses v2. Reader/client
+native controls and fixture capture preserve original provenance through retained backing bytes.
+D246 feeds only deliberate raw-read faults exact logical bytes; the original child-dispatch assertion
+still rejects the missing public read. Legacy catalogs and non-changelog ledger rows remain valid.
 
 The commands above describe the one-time v1 transition: preparation requires a v1 source and a fresh
 workspace. Recovery requires its original source HEAD and recognized archive bytes. Later records

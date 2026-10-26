@@ -38,6 +38,38 @@ def check(data):
     return len(headings), git_backed
 
 
+def check_source_spans(data):
+    """New composite records retain their declared whole Git intervals as an exact prefix."""
+    if b'\n---\n\n' not in data:
+        return 0
+    header, body = data.split(b'\n---\n\n', 1)
+    rows = re.findall(rb'^- Whole source interval: ([A-Za-z0-9_./-]+) bytes ([0-9]+)'
+                      + '–'.encode() + rb'([0-9]+), ([0-9]+) bytes, sha256:([0-9a-f]{64})$', header, re.M)
+    if not rows:
+        return 0
+    authority = re.search(rb'^- \*\*Coverage:\*\* .+ from ([0-9a-f]{40})\.$', header, re.M)
+    assert authority, 'composite source revision missing'
+    reader = runpy.run_path(str(ROOT / 'scripts/history_archive.py'))
+    environment = reader['metadata_environment'](ROOT)
+    offset = 0
+    for name, begin, end, size, checksum in rows:
+        path = Path(name.decode())
+        assert not path.is_absolute() and '..' not in path.parts and '.git' not in path.parts
+        assert path.suffix == '.md', 'unsafe composite source path'
+        begin, end, size = int(begin), int(end), int(size)
+        assert 0 <= begin < end <= 160000 and size == end - begin, 'composite extent mismatch'
+        object_name = authority[1].decode() + ':' + path.as_posix()
+        count = subprocess.check_output(['git', 'cat-file', '-s', object_name], cwd=ROOT, env=environment)
+        assert re.fullmatch(rb'[0-9]+\n', count) and int(count) <= 160000, 'composite source bound'
+        original = subprocess.check_output(['git', 'show', object_name], cwd=ROOT, env=environment)
+        assert len(original) == int(count), 'composite source size drift'
+        segment = original[begin:end]
+        assert hashlib.sha256(segment).hexdigest().encode() == checksum, 'composite source hash mismatch'
+        assert body[offset:offset + size] == segment, 'composite source bytes/order mismatch'
+        offset += size
+    return len(rows)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--record', help='retained logical record instead of live CHANGELOG.md')
@@ -48,6 +80,8 @@ def main():
     else:
         data = (ROOT / 'CHANGELOG.md').read_bytes()
     total, backed = check(data)
+    spans = check_source_spans(data)
+    print('composite source intervals: %d exact Git spans; rc=0' % spans)
     print('transition receipts: %d exact hashes/extents; %d exact Git intervals; %d pre-commit authored capture; rc=0' %
           (total, backed, total - backed))
 

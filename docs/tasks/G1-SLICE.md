@@ -475,7 +475,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Goal:0319 window16 whole48/source/read/materialization/prior15/book0; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part470md).
   Commit: STITCHCAD-G1-0319.
 - ID: `G1-SLICE.RETENTION-CAPACITY`
-  Status: `in_progress`
+  Status: `done`
   Goal: P1 design/verify bounded retention continuation before the next packing after16; current schema refuses17.
   Preserve immutable records/manifests, logical addresses and all independent caps; do not silently raise bounds.
   Trigger: before future required seal exceeds64 with16 windows registered; product slices proceed meanwhile.
@@ -487,7 +487,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0339 capacity feasibility checked; [whole transitional receipt](../history/stitchcad-devnotes-part494.md).
 - ID: `G1-SLICE.RETENTION-CAPACITY.2`
-  Status: `in_progress`
+  Status: `done`
   Goal: versioned immutable-byte transition under the [recorded draft](../decisions/decision_history-windows-retain-self-contained-bytes.md).
   Children .a bounded reader; .b committed-byte/source/backing controls; .c guarded migration and consumers.
   Keep all caps/v1 behavior/frozen producers. Pack committed64-file baseline before creating494.
@@ -498,7 +498,7 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0341 exact relocation/source/future guards; [whole receipt](../history/stitchcad-devnotes-part494.md).
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c`
-  Status: `in_progress`
+  Status: `done`
   Goal: guarded atomic copy/verify/use/delete migration with rollback; offline/materialization/current consumers
   and all archive refusal controls, then494 whole transition receipts and product .6.4 resumes.
   Children .c.1 committed installer/recovery and consumer support; .c.2 current-HEAD installation/proofs/494.
@@ -506,24 +506,36 @@ are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-
   Status: `done`
   Goal:0342 recoverable installer/consumer controls; [whole receipt](../history/stitchcad-devnotes-part494.md).
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c.2`
-  Status: `active`
+  Status: `done`
   Goal: children .a installs/retains494; .b adapts legacy verifiers before closure/product .6.4.
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c.2.a`
   Status: `done`
-  Goal: source55ed18e installed-byte/retrieval/494 proof; .b owns remaining legacy verifier adapters.
-  - [x] REPRODUCE / ISSUE: v1 at64 files/16 slots blocks494; prepared947/33/16 proves source bytes, rc=0.
-  - [x] ROOT CAUSE (WHY + WHERE): v2_install.py source55ed18e exact-source swap/retention passes, rc=0.
-  - [x] FIX: four flat packets, original trees retained,78 live links repaired; whole receipts/task/lessons494.
-  - [x] ADDRESSED: v2_reader_contract.py22/0/native tar/public948 materialized exact, rc=0;
-    transition_receipts.py --record docs/history/stitchcad-devnotes-part494.md gives9 hashes/8 Git exact0.
-  - [x] NO REGRESSION: verify-retention948/21; source947/33/16 and legacy48 exact, rc=0,
-    target/v2-*-0343.log. Public window961/0; .b owns older v1-only verifier adapters.
-  - [x] LOCKSTEP: book/pub77/103/1444/2357/notes/decision aligned0; G1still6/18. Commit0343.
-    promotion: declined (existing history decision). Full integration/CI deferred.
+  Goal:0343 installed-byte/source/public proof; [whole receipt](../history/stitchcad-devnotes-part495.md).
 - ID: `G1-SLICE.RETENTION-CAPACITY.2.c.2.b`
-  Status: `pending`
+  Status: `done`
   Goal: adapt current archive-client/reader/fixture predecessor controls to retained v1 evidence and
   complete v2 inventories, preserving original predicates/authority; focused native checks before .6.4.
+  Own whole prior closure495 before doc growth; D246 owns packed-record omission-control classification.
+  - [x] REPRODUCE / ISSUE: three default verifier entries fail1 after v2; D246 raw-read fault raises
+    FileNotFoundError before its dispatch assertion, also absent at source55ed18e. D247 book entry fails1.
+  - [x] ROOT CAUSE (WHY + WHERE): at dd20dc5, python3 -I -B
+    docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py fails in old-body/v2 trap;
+    fixture bootstrap reads retired window1.json and predecessors read physical controls. Before logs
+    target/*before-0344.log give rc=1; original failure sites match the source adapters.
+  - [x] FIX: old reader/producer use exact retained-v1 fixtures; current reader tests v2. Original Git
+    capture remains independent; all97 snapshot paths/bytes match. D246 raw fault reaches dispatch oracle;
+    D247 book invokes legacy_refusals.py. Whole prior closures/0343 continuity retained495 before growth.
+  - [x] ADDRESSED: python3 -I -B docs/tasks/artifacts/ci_environment/python_archive_reader_contract.py
+    --real gives949 exact files/14 physical/8 body reds;
+    python_archive_client_contract.py --real preserves8 real children/7 physical/7 body/3 content refusals;
+    fixture default capture411 plans/203 effects/9 children passes, rc=0, target/v2-*-0344.log.
+  - [x] NO REGRESSION: python3 -I -B docs/tasks/artifacts/history_archive/legacy_refusals.py gives
+    original28/0, original source/provenance/CLI exact; no residue,
+    rc=0, target/v2-legacy-native-0344.log. transition_receipts.py records494/495 proves3/4 whole Git spans
+    plus9 receipt hashes/8 nested Git intervals; changed-byte comparison refuses, rc=0.
+  - [x] LOCKSTEP: book/decision/status/notes/index/pointer/D246-D247 aligned; all caps unchanged;
+    G1still6/18. Commit0344 closes retention parent; next .6.4. promotion: declined (existing decision).
+    Focused native3.14 proof only; optional deep fixture/platform/full integration/CI remain deferred.
 - ID: `G1-SLICE.4c.5`
   Status: `done`
   Goal:0320 SizeSet scope/current25/unchanged31/book0; [whole scope/proofs](../history/window20.md#stitchcad-devnotes-part472md).

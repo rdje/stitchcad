@@ -1104,6 +1104,29 @@ D244 fixed0341; [complete report](../history/stitchcad-devnotes-part494.md) reta
 
 D245 fixed0342; [complete report](../history/stitchcad-devnotes-part494.md) retained until494.
 
+## D246 — packed-record omission control escapes its intended assertion
+
+Default python_archive_client_contract.py fails1 in omission_controls: its deliberate replacement of
+public logical reads with (ROOT / record).read_bytes() raises FileNotFoundError for packed part303,
+instead of reaching the required "D222 logical read omitted" assertion. Actual retained client capture
+and seven physical refusals pass first. Source55ed18e Git cat-file -e part303 also fails128: the raw
+path was absent before the v2 transition. Impact: this verifier cannot complete its named logical-read
+fault calibration after ordinary packing; no retained-byte loss or product-client failure is claimed.
+Owner G1-SLICE.RETENTION-CAPACITY.2.c.2.b, P2 immediate: supply exact logical bytes only to that
+controlled raw fallback so the independent dispatched-child population assertion remains the oracle.
+Fixed0344: default/native client reaches all7 intended body reds and3 content refusals with8 real
+children; source/backing/provenance exact, rc=0, target/v2-archive-native-0344.log.
+
+## D247 — archive guide invokes the v1-only refusal producer directly
+
+The archive-reader annex still publishes history_archive_probes.py as the native command after v2.
+Actual invocation returns1 at window1.json absence before fixture effects, target/archive-book-before-0344.log.
+The original producer is intentionally v1-only; the maintained legacy_refusals.py entry reconstructs its
+exact v1 inputs. Owner G1-SLICE.RETENTION-CAPACITY.2.c.2.b, P2 immediate: route the published command
+through that adapter and execute it; preserve original producer bytes and all28 native refusal cases.
+Fixed0344: published legacy_refusals.py returns original28/0 with source bytes unchanged, rc=0,
+target/v2-legacy-native-0344.log.
+
 ## Active continuity followup
 
 - **D223** — optional ledger continuity modes retain raw-file/closed-graph assumptions.
@@ -1117,68 +1140,8 @@ D245 fixed0342; [complete report](../history/stitchcad-devnotes-part494.md) reta
   Preserve exact original intervals/folds/D215/D216/source identities while repairing logical retrieval and
   ordered predecessor preservation; independent refusal/body controls and default regression required. Open.
 
-## Verified closure awaiting archival
-
-- **D217** — Codex detached descriptor inheritance repaired; actual host rollout verified.
-  Original updater8048/FD10: native ENOENT, lsof untyped revoked; resource identity unknown.
-  0235 recovery/cleanup verified. 0236 identifies pid_start's unfiltered spawn: same owned directory
-  inode reaches server/updater without CLOEXEC; removal loses metadata; restart retains updater.
-  Removed directory/revoked terminal also propagate when invalid before launch. Five shipped-build
-  controls reproduce; patched release prevents all three faults and preserves both clear controls.
-  Compiled guard omission fails; restored3/daemon88 pass. Private installation and exact rollback pass.
-  0237 native installation pins tested build;41 hashes match,51 live vnodes readable. Real handoff
-  clear0/held1/restored0 passes after the separate scan exits. Owner cleanup4.hunt done. No bypass
-  or active-harness termination. Original historical identity remains unknown. Book cleanup annex/
-  DEV_NOTES0236 and protected recovery-20261025 audit retain source, commands and receipts.
-
-- **D220/D221** — closed by .a24; complete original reports and verified repairs retained
-  in [part136](../history/window12.md#stitchcad-defects-part136md).
-
-
-- **D224** — committed archive guard treats unavailable Git metadata as an initial transition.
-  Reproduce: python_archive_reader_contract.py --before compiles the actual4027b36 reader and returns
-  controlled128/unavailable HEAD from its Git child; guard_committed() returns success without evidence.
-  Root cause: every nonzero git-show status takes the first-transition exemption. Impact: a failed Git
-  observation can skip committed archive immutability checks. No damaged archive is claimed.
-  Owner: G1-SLICE.5b.4c.h2.b.p.o.a25.1, P1 fixed in0242. Independent successful HEAD-tree absence
-  is now required; unavailable and present-but-unreadable observations refuse. All three cases pass
-  with original successful comparisons intact; actual absence-guard and Git-scope omissions fail their
-  independent assertions. Native retention/source proofs pass; no committed windows changed. Closed.
-
-- **D225/D226/D227** closed reports and original verified repairs retained whole in
-  [part138](../history/window16.md#stitchcad-defects-part138md); canonical ID/split/commit rules remain active.
-
-- **D222** — live D217 retained-record check depends on raw archive paths.
-  Census: d217_probe.py retained() declares/reads physical303/304/208 while run_handoff_probes.sh calls
-  it as a current check. All three are currently raw and retrievable; no present missing-file failure
-  is claimed. A later packing window can retire them while preserving logical records, repeating D219.
-  Unlike a frozen capture input, this consumer runs on the current tree and must use the public reader.
-  Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.f.archive-client, P2 prerequisite of .a25 before window12;
-  fixed in0241. Actual old client refuses a valid packed/missing-raw fixture; logical reads with complete
-  backing plans pass eight native children while preserving all original source/window11 assertions.
-  Seven physical/seven compiled body and three content refusals pass on Python3.9/3.14; exact source/
-  archive/fixture bytes and no residue. Closed; no production archive window changed.
-
-- **D219** — publication continuity controls assume physical archive files and a closed task/catalog graph.
-  Reproduce: python_publication_fixture_contract.py --continuity raises FileNotFoundError for part298;
-  current window11 public retrieval is the canonical interface. Prior graph nodes remain in order;
-  later cleanup/xtask nodes and the added window must be accepted without weakening exact history.
-  Impact: the environment probe suite cannot reach a green verdict before builder repair.
-  Owner/schedule: G1-SLICE.5b.4c.h2.b.p.o.f.publication, blocking prerequisite; repaired in0238.
-  Public logical reads preserve original intervals/prior bytes and predecessor order with later additions.
-  --continuity passes ten refusals/three compiled guard reds; full original fixture/pure/AST controls pass0.
-
-- **D218** — ten host-tooling identifiers in existing book prose lacked vocabulary declarations.
-  Reproduce: GLOSSARY_ROOT census of actual38100bf book/roadmap/tasks snapshot returns1 with
-  ten C1 refusals, identical to the working tree: AssertionError, HISTORY_ARCHIVE_ROOT, Refusal,
-  enter_producer, mutable_sources, output_files, plan_producer, prepare_producer, python3, sources.
-  Impact before repair: glossary/G0/full probes failed despite publication controls passing.
-  Fixed/verified by G1-SLICE.9.transport.policy in0231: actual helper/diagnostic role tables;
-  glossary suite27 pass/0fail, ten copied declaration removals each cause exactly one named C1
-  refusal with an independent retained use. No exemption or glossary-census logic changed.
-  Evidence: protected admission-glossary-head.txt; prior D155 establishes the same repair pattern.
-  D217/D218 remain here until ordinary sealing by SPINE.19; both repairs are verified.
-  No extra history window is opened for these live closure receipts.
+Verified D217–D225 closure reports retained whole in [part495](../history/stitchcad-devnotes-part495.md);
+original unknown descriptor identity remains unknown; current handoff rules remain binding.
 
 ## Window15 retrieval routing —0305
 
