@@ -21,6 +21,7 @@ requires the named contracts and later proof owners.
 | Measurement metadata/tables | §3.1/§3.4; G1 | sc-measure; G1-SLICE.4a.2/.3 | [Measurements](../spec/measurement-metadata.md) |
 | Ease mappings/sets | §3.1/§3.3; G1 | sc-measure; G1-SLICE.4b | [Ease](../spec/ease-inputs.md) |
 | Size membership | §3.4; G1 | sc-measure; G1-SLICE.4c.1 | [Membership](../spec/size-membership.md) |
+| SizeSet inputs/profile intent | §3.4/§8; G1 | sc-measure; G1-SLICE.4c/.4d.2 | [Axes/breaks/composites](../spec/size-sets.md), [immutable intent](../spec/size-set-transformations.md) |
 | Garment chart observations/collections | §3.3/§3.4; G1 | sc-measure; G1-SLICE.4c.3a/.3b | [Observations](../spec/size-chart-observations.md), [collections](../spec/size-chart-collections.md) |
 | MTM inputs | §3.3/§3.4; G1 | sc-measure; G1-SLICE.4c.3c | [MTM introduction](../spec/mtm-input-charts.md), [API](mtm-input-contract.md) |
 | Formula literal inputs/normalized arenas | §4.1; G1 | sc-core recipe; G1-SLICE.5a.3c.2/.3 | [Literal normalization](formula-literals.md) |
@@ -75,8 +76,9 @@ Length state/source. Explicit required dimensions, current adjacent-pair coverag
 refusal are implemented at .4c.3d.2. [Garment SizeSet input views](../spec/size-sets.md#composite-garment-sizeset-inputs--g1-slice4c3d31)
 now compose shared current snapshots and typed structural paths. [MTM body/Ease composition](../spec/size-sets.md#composite-mtm-bodyease-inputs--g1-slice4c3d32)
 preserves singleton grading refusal. The [unified input family](../spec/size-sets.md#unified-current-input-family--g1-slice4c3d33)
-now preserves explicit chart kinds and shared path checks. Chart/body/break scope review .4c.3e is complete;
-profile transformations and combined-family review remain .4c.4/.5/.4d.
+now preserves explicit chart kinds and shared path checks. [Immutable profile intent](../spec/size-set-transformations.md) records exact selected pins and
+state-bearing label/base/break/chart proposals. The structural measurement/Ease/SizeSet family is
+reviewed at .4d.2; actual profile application, geometry, global truth and approval remain later proofs.
 
 ## Remaining proofs
 

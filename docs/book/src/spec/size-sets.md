@@ -5,7 +5,7 @@
 > [membership foundation](size-membership.md), chart families, axes, signed breaks and current composite input views
 > are executable. [Profile pins, origin and transformation intent](size-set-transformations.md) are available;
 > break/chart bindings and immutable intent aggregation are executable; SizeSet structural review is complete.
-> Combined measurement/Ease/SizeSet signoff remains .4d. The ownership
+> Combined structural acceptance is reviewed at .4d.2; execution and runtime integration remain later work. The ownership
 > question roadmap §3.4 leaves open is decided here and recorded as
 > `docs/decisions/decision_size-set-ownership.md`. Terms are in the [glossary](glossary.md).
 
@@ -475,7 +475,7 @@ retain G3/G4 and integration owners. Original child proof receipts remain availa
 
 The chart/body/break structural family and immutable profile transformation intent are implemented.
 Current local snapshots/coverage remain distinct from global currentness, numeric availability,
-geometry and physical truth. SizeSet review .4c.5 is complete; combined signoff .4d remains. G3/G4 retain actual
+geometry and physical truth. SizeSet review .4c.5 is complete; combined structural acceptance .4d.2 is reviewed. G3/G4 retain actual
 profile constraints, precedence and execution. See [transformation intent](size-set-transformations.md).
 
 ## 8. Size systems and what the model must express

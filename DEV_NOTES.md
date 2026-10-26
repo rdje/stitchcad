@@ -3,6 +3,14 @@
 Detailed technical notes — root cause, implementation, validation — per slice. The
 engineering-continuity surface (not the public docs; that's `docs/book/`). Newest first.
 
+## _(2026-10-26 UTC)_ — combined structural model acceptance
+
+0321 .4d.2 closes .4: metadata16/table16/Ease14 pass0, prior model25/composite31 proof retained.
+D235 overview/metadata claims lagged models/native trig; D236 topic index missed4 chapters; both fixed.
+Publication74 chapters/87 scoped entries pass0;13 principal model APIs registered. No fresh platform/engine claim.
+472/473/474/475/293/140 whole140422e Git/hash/public exact0; canonical18 census changes only.4 to done,6/18.
+Promotion declined: existing publication policy; include overview/index in feature sync. Next .6.2.2.c.2 schemas.
+
 ## _(2026-10-26 UTC)_ — complete SizeSet structural requirements review
 
 0320 .4c.5 reviews identity/revision/system, labels/order/base, D70 axes, D228 signed breaks,
@@ -224,16 +232,8 @@ D70 axes contract closes; no full chart/break/resolved SizeSet or path-readiness
 next .6.2.2.b.2.b paired split schema. Promotion: existing SizeSet decision extended, no new policy.
 Broad integration/platform verification remains deferred to its owned milestone/pre-push.
 
-## _(2026-10-26 UTC)_ — explicit authored axis values
-
-0297 .4c.2.1 introduces immutable named axes and explicit ordered coordinate identities. Labels retain
-exact text; dedicated/general numeric sources borrow original records and preserve kind/state/source.
-No parsing, sorting, numeric cache or Unknown/Derived evaluation. Each lookup rechecks current source
-roles/kinds; metadata/source identity aliases refuse. Native axis5/0 covers actual pointer identity,
-all six scalar kinds, five states, false and missing/retargeted records. Selected strict Clippy/fmt/book0;
-test-only panic lint allowed explicitly.419/420/269/421 retain whole committed intervals, byte/hash/
-public reader exact0. G1still5/18; member-coordinate aggregation/minimum axis count next .4c.2.2.
-Promotion: existing SizeSet decision extended; no new policy. Broad proof deferred to integration/push.
+[Complete explicit-axis lesson](docs/history/stitchcad-devnotes-part472.md) retains
+its original role/kind/order/state contracts, checks and promotion decision.
 
 [Complete receipt-correction lesson](docs/history/stitchcad-devnotes-part470.md) retains
 its original unread-result/duplicate metadata repair, checks and promotion decision.

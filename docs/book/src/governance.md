@@ -483,20 +483,9 @@ preserves complete committed source intervals and separators. Earlier windows an
 
 ### Thirteenth retention window
 
-Window 13 captures 52 complete records from `87d0987` at the unchanged limit of 64 working files.
-Its 107786 original bytes are retained in a 31312-byte payload. The fresh local fixture has no
-Git directory or raw captured copies; public source/read/materialization recover every file exactly.
-All 12 earlier manifests/catalogs/payloads remain byte-identical. Verified installation retires only
-52 unchanged regular single-link originals. Live links use window13 anchors; logical read addresses
-and offline retrieval remain stable. No schema/cap or application dependency changes.
-
-The complete window 12 narrative remains available through the [archive reader](annexes/archive-reader.md).
-
-```bash
-bash scripts/history_archive.sh prove-source window13
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part365.md
-bash scripts/history_archive.sh read docs/history/stitchcad-devnotes-part369.md  # complete window 12 narrative
-```
+Its complete transition/proof/retrieval narrative is preserved in logical record
+`docs/history/stitchcad-devnotes-part474.md`. Use the published archive reader; original addresses
+and all earlier immutable backing windows remain unchanged.
 
 ### Current retention window
 

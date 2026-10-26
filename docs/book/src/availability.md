@@ -10,7 +10,7 @@ G0 contract review is mostly complete with human closure unapproved. G1 remains 
 | --- | --- |
 | sc-units | Fixed-point units, explicit conversions, rounding and typed tolerances/errors |
 | sc-core | Stable identities/references, structural garment objects, physical copy identities, canonical length inputs, borrowed formula lexing, bounded expression/ordered-recipe syntax, whole-recipe literal normalization and owned expression/statement/recipe identity |
-| sc-measure | Body/garment metadata and tables, Ease mappings/sets, size membership and authored garment/MTM charts |
+| sc-measure | Body/garment metadata/tables, Ease sets, membership/axes/breaks, garment/MTM inputs and immutable profile intent |
 
 These APIs can inspect authored content and refuse invalid current references. Unknown/derived scalar
 inputs refuse numeric fallbacks. Some complete structural inventories can still contain unresolved
@@ -24,7 +24,7 @@ not prove a working browser application. No new remote-run verdict is claimed.
 Whole statement/recipe [literal normalization](annexes/formula-recipe-inputs.md) preserves input
 metadata and global refusal context. The same normalized owners produce owned statement/recipe
 identity bytes for comparison; [the example](annexes/formula-recipe-inputs.md#own-canonical-statement-and-recipe-identity)
-shows alias equality and preserved order. Binding, numerical execution and project storage follow.
+shows alias equality and preserved order. Complete AST/recipe execution and project storage follow.
 
 [Formula declaration metadata](annexes/formula-declarations.md) describes kinds, origins and the
 contexts that supply reserved names. Immutable declarations retain canonical input identities and
@@ -38,7 +38,7 @@ retains complete kinds, refusals and sourced dependencies.
 checks actual scoped operands and annotations. [Coupled static review](annexes/formula-static-validation.md#coupled-public-static-review)
 verifies those interfaces against independent rules and the actual reference.
 [Whole recipe acceptance](annexes/formula-checked-recipes.md) returns a complete immutable static
-proof with ordered source dependencies. Independent whole-factory review is complete;
+proof with ordered source dependencies. Independent static whole-recipe review is complete;
 remaining numeric functions and recipe execution remain pending.
 
 [Canonical rational values](annexes/formula-rationals.md) can now be constructed and reduced exactly,
@@ -58,8 +58,8 @@ Exact unary negation/square and all six numeric comparisons are available, prese
 values and raw angle turns. Exact abs/min/max/clamp are available with typed argument/bound refusals.
 Explicit round_to is available at exact same-kind steps. Binding value conversion now rounds once,
 checks signed i64 storage and preserves Boolean kind. Correctly rounded sqrt(area/ratio), signed-length
-hypot and signed/full-turn arc_length are available. Trigonometric/inverse functions and complete
-statement/recipe execution remain pending.
+hypot and signed/full-turn arc_length are available. Native sin/cos/atan/atan2 kernels and supplied-scalar adapters are available. Tangent and complete
+AST/statement/recipe execution remain later work.
 [Canonical length authored reads](annexes/formula-runtime-validation.md#canonical-length-authored-reads)
 now preserve source/state beside exact values or observation/evaluation requests.
 [Canonical general scalar content](spec/measurement-inputs.md#canonical-general-scalar-content)
@@ -73,15 +73,17 @@ providers. Missing optional values refuse with their actual name/context label.
 [Core size-context frames](annexes/formula-runtime-validation.md#core-size-context-frames) now read
 structurally checked supplied ordinal/count/base values or named absence. The
 [actual membership bridge](spec/size-membership.md#formula-size-context) now derives them from
-immutable authored order/base after explicit pin matching. Axes and full SizeSet proof remain pending.
+immutable authored order/base after explicit pin matching. [Authored axes/breaks/composite inputs](spec/size-sets.md) and
+[immutable profile intent](spec/size-set-transformations.md) are implemented. Structural coverage
+does not prove numeric availability, physical truth or applied profile effects.
 
 ## Planned workflows
 
 Recipe evaluation, geometric construction, grading, profiles, storage and crash recovery, the command
 bus/API/MCP server, CLI and native/browser applications remain unimplemented as complete workflows.
-Complete SizeSet composition is still partial work; no axis representation is selected while its
-specification decision is pending. Exporters, factory acceptance and production approval remain later
-proofs, with human review and scoped evidence required.
+The measurement/Ease/SizeSet structural library is reviewed at G1-SLICE.4d.2; it supplies
+authored inputs/intent. Exporters, factory acceptance and production approval retain later proof
+owners, human review and scoped evidence.
 
 The detailed [model](spec/ontology.md), [command](spec/command-layer.md) and
 [release](spec/release-contract.md) annexes specify intended behavior. A normative requirement in an

@@ -4,11 +4,11 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 
 ## Current state
 
--0320 .4c.5 closes SizeSet structural requirements/ownership review; D234 old sibling/child frontier paragraphs align.
-- Focused member12+axes5+break-coverage5+profile-pin3 pass0; unchangedfb53a44 composite31 proof retained.
-- Book/rendered navigation/intent anchor0;470/471/292 whole44ec7d0 Git intervals/hash/public exact0.
-- NEXT .4d.2 combined MeasurementTable/Ease/SizeSet acceptance; .4 remains open until signoff. G1still5/18.
-- G1-SLICE.RETENTION-CAPACITY P1 before next packing; old pending child preserved471, independent of closed SizeSet scope.
+-0321 .4d.2 closes structural measurement/Ease/SizeSet library acceptance; canonical G1 progress6/18.
+- Current metadata16/table16/Ease14 pass0; model25/composite31 proofs retained with Rust byte-identicalfb53a44.
+- D235 availability drift and D236 four missing topic links fixed; publication74 chapters/87 entries pass0.
+-472/473/474/475/293/140 whole140422e Git/hash/public exact0. NEXT .6.2.2.c.2 remaining command-class schemas.
+- G1-SLICE.RETENTION-CAPACITY remains P1 before next pack; runtime/evaluator/bus/storage/app/release still owned later.
 -0308/7618d20 unified actual SizeSet inputs preserve typed provenance/canonical records; no numeric execution or persistence.
 -0300 .6.2.2.c.1 completes pinned GetPieceList/WalkSeamSpan schemas with exact Design/actor/revision.
 - Query identities derive from payload; no mutation replay/group fields, grants, results or handlers.
@@ -27,7 +27,7 @@ Read CLAUDE.md/README.md and doctrine pointers. Latest commit: git log --oneline
 - D226: SplitSeamSpan splits paired sewing correspondence at explicit cuts on both sides; schema implemented0299, actual execution remains later.
 -0296/3c85204 corrected receipt-only duplicate retry; implementation1184214 unchanged. D227 closed.
 - COMMIT binds success->brief-clear->checks in one invocation; consume terminal result before edits/retry.
-- G1 In Progress5/18; G0 Mostly Done/closure unapproved; G2 onward not started. No app/release claim.
+- G1 In Progress6/18; G0 Mostly Done/closure unapproved; G2 onward not started. No app/release claim.
 - Full AST execution .5e.2.4 requires remaining calls/geometry; no unimplemented-family language error.
 - Practical tangent resource plan P1 .5d.1.2.2.2.d.2 remains; no cutoff/domain narrowing/libm.
 - Tangent exact resource profile: distance>=90M/(U+1),148bit output; focused8798/586/2 passed.

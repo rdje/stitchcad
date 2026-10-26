@@ -1,11 +1,11 @@
 # Measurement metadata: body quantities and garment POMs
 
-sc-measure implements standalone immutable Measurement metadata and current references at
-G1-SLICE.4a.2b, consuming [core length inputs](measurement-inputs.md). G1-SLICE.4a.3 adds the
-named MeasurementTable. [Per-POM Ease mappings/sets](ease-inputs.md) are implemented separately; SizeSet follows.
-This family does not close G1-SLICE.4.
-[Ontology §2.1](ontology.md) remains the normative field contract. These libraries compile on the
-native and WASM targets; the command/API/MCP facade follows in its owned G1 slices.
+sc-measure implements immutable Measurement metadata and named tables, consuming
+[canonical inputs](measurement-inputs.md). [Per-POM Ease mappings/sets](ease-inputs.md),
+[SizeSet inputs](size-sets.md) and [immutable profile intent](size-set-transformations.md) complete
+the structural family reviewed at G1-SLICE.4d.2. [Ontology §2.1](ontology.md) owns the field contract.
+Earlier metadata work has native/WASM evidence; current additions have focused native contracts.
+Complete runtime-profile proof and the command/API/MCP facade retain their G1 integration owners.
 
 Runtime review captured at bf29b03: the [Rust run](https://github.com/rdje/stitchcad/actions/runs/36921077740)
 and [doctrine run](https://github.com/rdje/stitchcad/actions/runs/36921077711) completed successfully;

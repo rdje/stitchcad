@@ -3,13 +3,15 @@
 Newest first: one section per completed slice, in commit order. Older slices live in sealed, immutable
 segments under `docs/history/`, each named below with its identity and retrieval path.
 
-## STITCHCAD-G1-0320 — SizeSet structural requirements closure
+## STITCHCAD-G1-0321 — structural measurement/Ease/SizeSet acceptance
 
-Identity/order/base/system, axes/breaks, canonical charts/paths and immutable profile intent align.
-D234 old frontiers fixed; focused25 pass0, unchanged31 proof retained, book/navigation0.470/471/292
-whole retention exact0. .4c closes; combined .4d.2 remains; G1still5/18. Capacity followup remains independent.
+Metadata16/table16/Ease14 pass0 with prior model25/composite31 proof; scoped publication74/87 pass0.
+D235 availability drift/D236 missing topic links fixed;13 principal models registered. Whole472/473/
+474/475/293/140 retention exact0. .4 closes; derived G1 progress6/18. Runtime/application/release remain later.
 
 # Sealed archive — earlier slices
+
+| [part293](docs/history/stitchcad-changelog-part293.md) | whole0320 | 6 lines, 379 bytes, sha256:ebea1460… |
 
 | [part292](docs/history/stitchcad-changelog-part292.md) | whole0319 | 6 lines, 363 bytes, sha256:a521793d… |
 

@@ -181,7 +181,7 @@ declared output/source paths before the first write or native child. Their final
 also restore the current compiled artifacts; exact source restoration alone is insufficient.
 The [developer checks](../build-and-checks.md#direct-python-producers) describe this bounded contract.
 
-This closes .4b's structural scope, not G1-SLICE.4: SizeSet and combined family review remain. Actual
+Ease and SizeSet structural families are reviewed together at G1-SLICE.4d.2. Actual
 body-plus-ease evaluation/current Design registry belongs to G1 .5/.6; chart reconciliation and
 physical fit to G2/G3; scoped evidence and envelope/export policy to G3/G4; independent conformance
 and production declaration to G6/G7. Local native/WASM proof is not a remote-CI verdict or permission

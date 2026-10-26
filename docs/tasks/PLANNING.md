@@ -1079,29 +1079,28 @@ Whole original ruling-review evidence is retained431. No break implementation is
 Closed D229-D232 reports and verified repair evidence are retained whole in
 [part139](../history/window16.md#stitchcad-defects-part139md). Current doc frontier repair D233 follows below.
 
-## D233 — duplicated SizeSet review paragraph retained a stale profile frontier
+Closed D233/D234 reports and verified repair evidence remain whole in
+[part140](../history/stitchcad-defects-part140.md). D235 current overview repair follows.
 
-At sourcefb53a44, size-sets.md's .3e review paragraph calls .4c.4 pending although0317 implements
-immutable intent and the companion chapter/top status describe it. Reproduce: rg .4c.4/pending in
-that chapter versus the actual intent API. Impact: reviewer sees contradictory current scope.
-Owner: G1-SLICE.4c.4.5, P2 fixed0318 during bounded scope review. Whole prior review receipt
-retained468; update current frontier while preserving G3/G4 execution/global/physical boundaries.
+## D235 — global availability and metadata summaries lag completed foundations
 
-- [x] ROOT CAUSE0318: actual main-book .3e paragraph contradicts0317 API/top/frontier; source comparison rc=0.
-- [x] ADDRESSED0318: current frontier corrected; prior receipt byte-exact in468; book/five API anchors/nav rc=0.
-- [x] NO REGRESSION0318: Rust identical tofb53a44/31-test proof reused; whole D229-D232 retained139 rc=0.
+At140422e, availability still says axes undecided/SizeSet partial and trig/inverse pending; metadata
+and implementation summaries also defer completed model families. Actual source exports SizeAxes,
+resolution intent and checked sin/cos/atan/atan2; D70 is ruled/implemented. Reproduce those phrases
+against current APIs/decision. Impact: user's primary book view underreports implemented foundations.
+Owner: G1-SLICE.4d.2, P1 fixed0321 before phase closure; retain old paragraphs472, align current
+scope while preserving actual G1 evaluator/bus/storage/app and G3/G4 execution/approval boundaries.
 
-## D234 — older sizing paragraphs still defer implemented structural contracts
+## D236 — topic index omitted four registered publication chapters
 
-At44ec7d0, main size-set break/axis receipts defer composite inputs, and chart/membership/MTM
-frontiers defer or blur implemented profile intent with G4 application. Reproduce: rg follow/remain
-in those chapters against current SizeSet input/intent APIs. Impact: contradictory reader scope.
-Owner: G1-SLICE.4c.5, P2 fixed0320 in complete-family review. Retain whole prior receipts470,
-update current status/links and preserve all normative/example content plus G3/G4 execution boundaries.
+At140422e, book_publication.check refuses INDEX_COVERAGE for formula-checked-nodes, execution-plan,
+trig-certificates and size-set-transformations. SUMMARY registered them but the topic index did not.
+Owner: G1-SLICE.4d.2, P1 fixed0321 before publication acceptance. Add4 topic links, retain whole
+older governance receipt474 to bound book growth; rerun the scoped publication/navigation check.
 
-- [x] ROOT CAUSE0320: main/member/MTM old frontier paragraphs defer completed inputs/intent; source comparison rc=0.
-- [x] ADDRESSED0320: current frontiers aligned; complete old paragraphs preserved470; focused25/book/navigation rc=0.
-- [x] NO REGRESSION0320: Rust unchangedfb53a44/composite31 proof retained;470/471/292 whole source/public exact rc=0.
+- [x] ROOT CAUSE0321: D235 overview phrases contradict source; D236 publication INDEX_COVERAGE names4 missing links, rc=0.
+- [x] ADDRESSED0321: scopes/index corrected, old complete paragraphs472/473/474 exact; publication74/87 rc=0.
+- [x] NO REGRESSION0321: native46/prior25+31, Rust unchanged, whole retired source records/public reads rc=0.
 
 ## Active continuity followup
 

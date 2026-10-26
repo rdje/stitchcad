@@ -274,50 +274,25 @@ starter crate is retired and the roadmap §4.3 crate layout appears (defect D10)
 are preserved unchanged in a bounded sibling; .3c.4 remains closed by STITCHCAD-G1-0023.
 
 - ID: `G1-SLICE.4`
-  Status: `active`
+  Status: `done`
   Goal: `sc-measure` — MeasurementTable (body vs garment POM, landmarks, source, procedure),
   Ease as a first-class body→garment mapping with fit intent, and SizeSet (implements
   `G0-CONTRACT.4`/`.6`).
   Acceptance: a POM without a landmark or procedure is rejected; ease is queryable per POM;
   size labels vs order vs base size are distinct fields with tested semantics.
   Children: .4a (measurement declarations/tables), .4b (per-POM ease), .4c (SizeSet), .4d (signoff).
-  Verification: `pending`
-  Commit: `pending`
+  Verification: child contracts plus0321 measurement16/table16/Ease14,0320 model25 and unchanged composite31; publication74/87 pass0.
+  Commit: STITCHCAD-G1-0321 (structural library); runtime/application/registry proof remains G1/G3/G4 work.
 
 - ID: `G1-SLICE.4a`
   Status: `done`
-  Goal: canonical value/state/provenance plus MeasurementTable body/POM metadata and reference registries.
-  Children: .4a.1 (shared length declarations), .4a.2 (measurement metadata/context), .4a.3 (table/signoff).
-  Acceptance: all ontology .2.1 fields present; unknowns supply no numeric value; stable landmark/
-  procedure references, kind separation and current context validation are explicit and tested.
-  Verification: .4a.1/.2/.3 supply canonical length state/source, metadata/targets and named unique
-  current table bindings; all ontology .2.1 fields covered structurally. Native/WASM checked,
-  metadata runner proof captured; source/physical/formula/profile/release proof remains deferred.
-  Commit: children `STITCHCAD-G1-0024` … `STITCHCAD-G1-0028`
-
-[Completed .4a.1 contract and evidence](G1-SLICE-measurements.md) retain the shared length input
-boundary unchanged; current metadata children remain below.
+  Goal: complete preserved structural contracts/proofs/navigation in [part475](../history/stitchcad-devnotes-part475.md).
+  Commit: .4a children0024–0028/.4b0031; whole originals retained.
 
 - ID: `G1-SLICE.4a.2`
   Status: `done`
-  Goal: immutable body/garment measurement metadata with stable lower-snake token, entered unit,
-  canonical declaration link, two landmark references, procedure and source; typed current registries.
-  Children: .4a.2a (shared machine tokens), .4a.2b (metadata/records + runtime integration),
-  .4a.2c (observed CI and metadata signoff).
-  Acceptance: missing/foreign/ambiguous landmark/procedure metadata refuses; body/POM never interchanged;
-  declaration borrowing preserves source/state without a duplicate value cache. No standards data invented.
-  Verification: shared tokens and all metadata/reference fields covered by child contracts;
-  observed bf29b03 Rust/doctrine jobs and all steps completed success. Physical/source proof deferred.
-  Commit: children `STITCHCAD-G1-0025` … `STITCHCAD-G1-0027`
-
-[Completed .4a.2a contract/evidence](G1-SLICE-measurements.md) preserves the shared token grammar
-unchanged; the metadata/runtime child below remains the current unit.
-
-[Completed .4a.2b contract/evidence](G1-SLICE-measurements.md) retains metadata/runtime
-implementation scope unchanged; the observed-CI signoff below completes the parent.
-
-[Completed .4a.2c observed-CI contract/evidence](G1-SLICE-measurements.md) preserves its exact
-metadata signoff unchanged; the named table slice follows.
+  Goal: complete preserved structural contracts/proofs/navigation in [part475](../history/stitchcad-devnotes-part475.md).
+  Commit: .4a children0024–0028/.4b0031; whole originals retained.
 
 - ID: `G1-SLICE.4a.3`
   Status: `done`
@@ -327,14 +302,8 @@ metadata signoff unchanged; the named table slice follows.
 
 - ID: `G1-SLICE.4b`
   Status: `done`
-  Children: .4b.1 (individual intent), .4b.2 (set/membership), .4b.3 (structural review).
-  Goal: first-class body-to-garment per-POM Ease, signed Length declaration and ordered close/semi/loose
-  fit intent; explicit negative-ease authorization, canonical source/state/provenance and current links.
-  Acceptance: lookup per POM, kind correctness, declared compression and no default unknown; only typed
-  intent here, actual garment fit/physical construction remains G2/G3. Split safely before code if needed.
-  Verification: individual .4b.1 and set .4b.2 contracts/mutations plus .4b.3 structural field review
-  and full 23-suite milestone green; evaluation/physical/source/release proofs explicitly deferred.
-  Commit: `STITCHCAD-G1-0031`
+  Goal: complete preserved structural contracts/proofs/navigation in [part475](../history/stitchcad-devnotes-part475.md).
+  Commit: .4a children0024–0028/.4b0031; whole originals retained.
 
 - ID: `G1-SLICE.4b.1`
   Status: `done`
@@ -543,35 +512,20 @@ metadata signoff unchanged; the named table slice follows.
   Trigger: before future required seal exceeds64 with16 windows registered; product slices proceed meanwhile.
   Origin: renamed pending maintenance followup from .4c.5.h16.capacity, whose whole declaration remains
   [retained471](../history/stitchcad-devnotes-part471.md); independent of completed product-review acceptance.
+  Candidate for falsification: flat re-packing of logical records plus byte-exact legacy control/payload
+  evidence into fresh bounded packets; prove every existing cap before adoption. No protocol change is adopted by this structural review.
 - ID: `G1-SLICE.4c.5`
   Status: `done`
-  Goal:0320 SizeSet requirements/ownership structural review; close .4c, keep .4d.2 combined signoff separate.
-  Own main SizeSet, membership, MTM and transformation chapter frontiers, existing SizeSet decision,
-  PLANNING/live/task docs. D234 old child receipt/status paragraphs still defer completed inputs/intent.
-  Verify identity/revision/system, explicit labels/order/base, chart/body-Ease canonical state/provenance,
-  D70 axes/member points, D228 adjacent axis/POM breaks, typed paths and immutable profile intent.
-  Quantities excluded; standards content, global registry, applied geometry/equivalence, real profile
-  constraints/precedence, persistence/approvals retain their named later owners. No first-class Design/store claim.
-  Own470 whole0319 task/oldest0296 lesson and whole stale book receipt paragraphs;292 whole ledger from44ec7d0.
-  Prove exact whole committed intervals/hash/public before replacement; no feature/example loss or cap increase.
-  Own471 whole old pending capacity declaration from44ec7d0 and route its unchanged goal to independent
-  G1-SLICE.RETENTION-CAPACITY, so a future hygiene trigger does not remain under completed product review.
-  Own corresponding governance/current-pointer retargets; preserve historical IDs/bytes in471.
-  Small current membership/axes/break-coverage/profile-pin check plus book; reuse unchanged0317 composite31
-  and child numeric-state proofs. Full CI remains explicit pre-push/G1 integration owner under director ruling.
-  - [x] ROOT CAUSE (WHY + WHERE): canonical SizeSet requirements versus current APIs/book; D234 stale receipt scopes reproduced rc=0.
-  - [x] ADDRESSED: cargo test -p sc-measure selects membership12/axes5/breaks5/profile-pin3,25 passed rc=0; current book fronts align.
-  - [x] NO REGRESSION: Rust diff fb53a44 empty/composite31 proof retained; book/rendered main/member/MTM nav+intent anchor rc=0.
-  Verification:470 twelve whole committed intervals/471 whole old pending declaration/292 ledger Git/hash/public equality rc=0.
-  LIVE_STATUS G1 In Progress5/18 unchanged. All .4c acceptance covered structurally; actual application/storage/approval separate.
-  Commit: STITCHCAD-G1-0320; next .4d.2 combined acceptance. Independent capacity goal retains P1 trigger, no closed-parent debt.
+  Goal:0320 SizeSet scope/current25/unchanged31/book0; [whole scope/proofs](../history/stitchcad-devnotes-part472.md).
+  Commit: STITCHCAD-G1-0320.
 - ID: `G1-SLICE.4d`
-  Status: `pending`
+  Status: `done`
   Children: `.4d.1` book publication/alignment, `.4d.2` combined structural exit review.
   Goal: re-derive measurement/ease/size structural requirements, current reference contracts and book
-  evidence; full milestone verification, close .4 only after every child acceptance is verified.
-  Verification: `pending`
-  Commit: `pending`
+  evidence; focused structural acceptance under the director ruling, close .4 only after all child acceptance.
+  Full integration/runtime/CI retains G1 .11/.12/.16 and pre-push ownership.
+  Verification:0321 focused native acceptance and scoped publication74 chapters/87 entries pass0; no fresh platform claim.
+  Commit: STITCHCAD-G1-0321; full runtime/integration/CI retains later owners.
 
 - ID: `G1-SLICE.4d.1`
   Status: `done`
@@ -580,19 +534,48 @@ metadata signoff unchanged; the named table slice follows.
   Commit: `STITCHCAD-G1-0036`.
 
 - ID: `G1-SLICE.4d.2`
-  Status: `pending`
-  Goal: perform .4d's combined measurement/Ease/SizeSet structural exit review only after all .4
-  implementation children pass; publication improvements do not close this separate requirement.
-  Verification: `pending`
-  Commit: `pending`
+  Status: `done`
+  Goal:0321 combined MeasurementTable/Ease/SizeSet structural acceptance; close .4 only after every child passes.
+  Own measurement metadata/Ease/main SizeSet and availability/implementation-status book scope, live/task pointers,
+  PLANNING and old .5 dependency exception. D235 overview still claims axes undecided/composition partial and
+  trig/inverse unavailable; verify actual source/approved D70 and correct all encountered availability drift.
+  Focus current measurement/table/Ease-set contracts: required landmarks/procedure and typed body/POM,
+  per-POM query, canonical source/state/current-binding behavior. Reuse0320 model25 and unchanged composite31.
+  Own book_publication/status.tsv registration of13 new principal model APIs under existing checker,
+  then scoped publication/navigation; derive canonical18 top-level statuses before/after .4 closure.
+  D236 check finds4 registered chapters absent from topic-index; own index repair and474 whole prior
+  thirteenth-window governance receipt from140422e to keep the book fixed cap before adding links.
+  Own472 whole0320 task/oldest0297 lesson/old scope paragraphs and .5 dependency exception;293 ledger
+  and140 whole closed D233/D234 reports from140422e. Own475 whole closed .4a/.4a.2/.4b parent
+  contracts/navigation from140422e to bound task aggregate; retain their live identity/status pointers.
+  Also own473 whole original numeric-availability
+  paragraph and prior .4d plan, supplementing context around472’s retained changed span,
+  exact whole Git intervals/hash/public before retirement. No numeric certificate or mutation campaign rerun.
+  Director feature-delivery ruling: focused structural acceptance now; full CI remains pre-push and G1 integration
+  (.11/.12/.16), including current WASM/runtime proof. Closure claims no complete evaluator/bus/storage/app/release.
+  - [x] ROOT CAUSE (WHY + WHERE): .4 acceptance versus actual APIs; D235 stale overview/D236 INDEX_COVERAGE reproduced; source check rc=0.
+  - [x] ADDRESSED: cargo test -p sc-measure --test measurement_contract --test table_contract --test ease_set_contract gives46/0 rc=0.
+  - [x] NO REGRESSION: source diff fb53a44 empty; prior25/31 proof retained; book/publication74 chapters/87 entries rc=0.
+  Verification: book_publication.py check(ROOT) returns(74,87,1428,2315); topic/navigation/API-source/owner/roadmap checks rc=0.
+  472/473/474/475/293/140 whole source intervals/hash/public byte equality rc=0; canonical18 census below gives6/18,
+  only.4 active->done versus140422e. LIVE_STATUS changes5/18->6/18; full runtime/CI remains named later owners.
+  Commit: STITCHCAD-G1-0321; next .6.2.2.c.2 remaining command-class schemas, no draft application/release claim.
 
+  Progress census recipe (canonical18 roadmap leaves, excluding maintenance):
+  ```python
+  import re
+  from pathlib import Path
+  text = Path('docs/tasks/G1-SLICE.md').read_text()
+  ids = ['1','2','3a','3b','3c', *map(str, range(4,17))]
+  states = [re.search(r'^- ID: `G1-SLICE\.' + re.escape(k) + r'`\n  Status: `([^`]+)`', text, re.M).group(1) for k in ids]
+  print(sum(s == 'done' for s in states), '/', len(states))
+  ```
 - ID: `G1-SLICE.5`
   Status: `in_progress`
   Children: .5a syntax done; .5b static validation, .5c exact arithmetic, .5d irrational functions,
   .5e execution/replay, .5f operations and .5g full acceptance pending.
-  Dependency boundary: syntax/static foundations proceed while complete SizeSet axes remain pending. Membership/table/Ease
-  foundations are implemented; expression syntax consumes no axis or full SizeSet representation.
-  This dependency exception leaves .4's remaining children owned and unclosed.
+  Dependency boundary: actual measurement/Ease/SizeSet inputs and immutable profile intent are now implemented.
+  Full AST .5e.2.4 and remaining functions/geometry retain .5 owners; the earlier incomplete-axis exception is retired.
   Goal: formula graph + construction-recipe evaluation — acyclic dependency graph, single
   deterministic pass, name binding (measurements, prior points/lengths/angles, profile
   parameters), conditionals, units inside expressions (implements the `G0-CONTRACT.9` language).
